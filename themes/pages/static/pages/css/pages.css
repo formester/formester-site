@@ -444,6 +444,7 @@ body.pace-white .pace .pace-progress {
   font-family: 'Montserrat';
   padding-right: 21px;
   display: block;
+  font-weight: 600;
 }
 .header .menu > li > a span {
   margin-bottom: 7px;
@@ -783,7 +784,7 @@ body.pace-white .pace .pace-progress {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   opacity: 1;
-  width: 15px;
+  width: 20px;
   height: 15px;
   margin-top: 22.5px;
   display: inline-block;
@@ -797,7 +798,7 @@ body.pace-white .pace .pace-progress {
   width: 100%;
   height: 2px;
   background: black;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   backface-visibility: hidden;
@@ -1865,6 +1866,9 @@ hr.dotted {
 .bold {
   font-weight: bold !important;
 }
+.normal-bold {
+  font-weight: 600 !important;
+}
 .light {
   font-weight: 300 !important;
 }
@@ -2295,6 +2299,7 @@ hr.dotted {
   h3 {
     font-size: 24px;
     line-height: 35.88px;
+    font-weight: 500;
   }
   h4 {
     font-size: 18px;
@@ -2308,6 +2313,15 @@ hr.dotted {
   .small {
     font-size: 89%;
     line-height: 17px;
+  }
+  .xs-m-b-20 {
+    margin-bottom: 20px !important;
+  }
+  .md-padding-12-20 {
+    padding: 12px 20px !important;
+  }
+  .font-size-create {
+    font-size: 28px;
   }
 }
 /*------------------------------------------------------------------
@@ -4954,7 +4968,7 @@ fieldset[disabled] .form-control {
   background-color: #fff;
   position: relative;
   border: 1px solid rgba(0, 0, 0, 0.07);
-  border-radius: 2px;
+  border-radius: 7px;
   padding-top: 7px;
   padding-left: 12px;
   padding-right: 12px;
@@ -7423,6 +7437,18 @@ sup.dollar {
 .demo-screenshot img {
   width: 100%;
 }
+@media only screen and (max-width: 991px) {
+  .text-align-center {
+    text-align: center;
+  }
+  .text-align-center h4{
+    max-width: unset !important;
+  }
+  .contact-us {
+    width: 100% !important;
+  }
+}
+
 @media (max-width: 768px) {
   #demo-content-1 .inner {
     margin-top: -300px;
@@ -8455,8 +8481,17 @@ sup.dollar {
     font-size: 1.5vh;
     line-height: 1.8vh;
   }
+  .text-align-center {
+    text-align: center;
+  }
 }
 @media (max-width: 480px) {
+  .font-size-create {
+    font-size: 24px;
+  }
+  .text-align-center h1{
+    font-size: 48px !important;
+  }
   .xs-p-t-0 {
     padding-top: 0px !important;
   }
@@ -8476,10 +8511,10 @@ sup.dollar {
     padding-top: 5px !important;
   }
   .xs-p-r-5 {
-    padding-right: 5px !important;
+    padding-right: 15px !important;
   }
   .xs-p-l-5 {
-    padding-left: 5px !important;
+    padding-left: 15px !important;
   }
   .xs-p-b-5 {
     padding-bottom: 5px !important;
