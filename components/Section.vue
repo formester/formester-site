@@ -4,8 +4,13 @@
       <div
         class="
           col-md-5
+<<<<<<< HEAD
           d-flex
           order-md-last
+=======
+          order-md-last
+          d-flex
+>>>>>>> a0efaa25e66ebeff56389521506a6b2abe438801
           flex-column
           justify-content-center
           align-items-md-start align-items-center
@@ -32,7 +37,7 @@
 
 <script>
 export default {
-  props: ['heading', 'content', 'imageName', 'alter'],
+  props: ['heading', 'content', 'imageName'],
 }
 </script>
 
