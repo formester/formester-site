@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+/* === COLORS ===*/
+:root {
+  --clr-primary: hsla(255, 45%, 40%, 1);
+  --clr-primary-light: hsla(277, 100%, 93%, 1);
+  --clr-dark: hsla(255, 56%, 18%, 1);
+}
+
+/* === FONTS === */
+:root {
+  --ft-big-heading: 3.75rem;
+  --ft-df-heading: 3rem;
+  --ft-subtitle: 1.5rem;
+  --ft-big-body: 1.25rem;
+  --ft-df-body: 1.125rem;
+  --ft-small-body: 1rem;
+
+  --ft-bigger-body: 1.875rem;
+  --ft-lg-btn: 1.125rem;
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --ft-big-heading: 3rem;
+    --ft-df-heading: 2.5rem;
+    --ft-subtitle: 1.25rem;
+    --ft-big-body: 1.12rem;
+    --ft-df-body: 1rem;
+    --ft-small-body: 0.9rem;
+
+    --ft-bigger-body: 1.5rem;
+    --ft-lg-btn: 1rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: var(--ft-df-body);
+  line-height: 28px;
+  color: var(--clr-dark);
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-dark);
+}
+
+a:hover {
+  color: var(--clr-dark);
+}
+
+.section__heading {
+  font-size: var(--ft-df-heading);
+  font-weight: 700;
+}

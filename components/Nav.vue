@@ -1,0 +1,244 @@
+<template>
+  <header>
+    <nav class="nav__container d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a href="index.html" class="nav__logo">FORMESTER</a>
+        <input type="checkbox" id="check" />
+        <label for="check" class="menu__btn">
+          <i class="ri-menu-3-line">
+            <img src="assets/menu.svg" alt="Nav-menu-button" />
+          </i>
+        </label>
+        <div class="nav__items">
+          <li><a href="index.html" class="nav__link active">Home</a></li>
+          <li class="dropdown">
+            <label for="dropdown__input" class="dropdown__label">
+              Features
+            </label>
+            <a class="dropbtn">Our Projects</a>
+            <input
+              type="checkbox"
+              id="dropdown__input"
+              class="dropdown__input"
+            />
+            <div class="dropdown__content">
+              <a href="">Html Form</a>
+              <a href="">Auto Responder</a>
+              <a href="">Integration</a>
+              <a href="">Spam Protection</a>
+            </div>
+          </li>
+          <li><a href="" class="nav__link">Template</a></li>
+          <li><a href="" class="nav__link">Pricing</a></li>
+          <li><a href="" class="nav__link">Contact us</a></li>
+          <li><a href="" class="nav__link nav__button">Sign in</a></li>
+        </div>
+      </div>
+    </nav>
+  </header>
+</template>
+
+<script>
+export default {}
+</script>
+
+<style scoped>
+.nav__container {
+  height: 75px;
+  background-color: var(--clr-bg);
+  box-shadow: 0 2px 10px rgba(136, 130, 130, 0.15);
+}
+
+.social__icons a:hover {
+  transform: scale(1.1);
+}
+
+.nav__logo {
+  font-size: var(--ft-subtitle);
+  font-weight: 600;
+}
+
+.nav__items {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-size: var(--ft-small-body);
+}
+
+.nav__link,
+.nav__link:after,
+.nav__link:before {
+  transition: all 0.5s;
+}
+
+.nav__items li {
+  margin: 0 12px;
+}
+
+.nav__link {
+  font-weight: 500;
+  position: relative;
+  display: block;
+  padding: 7px;
+}
+
+.nav__link.active {
+  font-weight: 700;
+}
+
+/* NAV LINK HOVER EFFECT */
+
+.nav__link:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+
+.nav__link:hover:after {
+  width: 100%;
+}
+
+.nav__link.nav__button:hover:after {
+  width: 0%;
+}
+
+.nav__button {
+  background-color: var(--clr-primary);
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: white;
+}
+
+.nav__button:hover {
+  opacity: 0.9;
+  color: white;
+}
+
+.nav__container .menu__btn i {
+  display: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.nav__container #check {
+  display: none;
+}
+
+/* DROPDOWN */
+
+.dropbtn {
+  background-color: var(--clr-bg);
+  font-weight: 500;
+}
+
+.dropdown__content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown__content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown__content a:hover {
+  background-color: var(--clr-primary-light);
+}
+
+.dropdown:hover .dropdown__content {
+  display: block;
+}
+
+.dropdown__label,
+.dropdown__input {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  .nav__items {
+    position: fixed;
+    flex-direction: column;
+    align-items: stretch;
+    top: 75px;
+    left: -110%;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--clr-bg);
+    text-align: center;
+    z-index: -10;
+    transition: all 400ms ease-in-out;
+    background-color: white;
+  }
+
+  .nav__link {
+    display: block;
+    padding: 1em 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  .nav__link:hover {
+    background-color: var(--clr-dark);
+    color: var(--clr-primary-light);
+  }
+
+  .nav__link:hover:after {
+    width: 0%;
+  }
+
+  .nav__container .menu__btn i.ri-menu-3-line {
+    display: inline;
+  }
+
+  #check:checked ~ div.nav__items {
+    left: 0;
+    z-index: 100;
+  }
+
+  .nav__btn {
+    background-color: red;
+  }
+
+  .dropbtn {
+    display: none;
+  }
+
+  #dropdown__input:checked + .dropdown__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    box-shadow: none;
+    background-color: var(--clr-bg);
+  }
+
+  .dropdown:hover .dropdown__content {
+    display: none;
+  }
+
+  .dropdown__label {
+    display: inline;
+    display: block;
+    padding: 1em 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+}
+</style>
