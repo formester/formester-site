@@ -32,7 +32,7 @@
 
 <script>
 export default {
-  props: ['heading', 'content', 'imageName', 'alter'],
+  props: ['heading', 'content', 'imageName'],
 }
 </script>
 
