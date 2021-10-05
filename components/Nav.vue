@@ -6,7 +6,7 @@
         <input type="checkbox" id="check" />
         <label for="check" class="menu__btn">
           <i class="ri-menu-3-line">
-            <img src="assets/menu.svg" alt="Nav-menu-button" />
+            <img src="@/assets/images/menu.svg" alt="Nav-menu-button" />
           </i>
         </label>
         <div class="nav__items">
