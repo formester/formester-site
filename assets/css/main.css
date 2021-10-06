@@ -60,3 +60,7 @@ a:hover {
   font-size: var(--ft-df-heading);
   font-weight: 700;
 }
+
+.hglight {
+  color: var(--clr-primary);
+}
