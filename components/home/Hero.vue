@@ -14,7 +14,8 @@
           "
         >
           <h1 class="hero__heading">
-            Build and Customize Online Forms Made Easy
+            Build and Customize Online <span class="hglight">Forms</span> Made
+            Easy
           </h1>
           <p class="hero__subheading mt-3">
             Create customized online forms quickly and easily without wasting
