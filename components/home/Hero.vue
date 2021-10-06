@@ -17,8 +17,8 @@
             Build and Customize Online Forms Made Easy
           </h1>
           <p class="hero__subheading mt-3">
-            A step towards Change in Society with the help of the blooming Youth
-            , to spread New Ray of Hope.
+            Create customized online forms quickly and easily without wasting
+            any time or energy
           </p>
           <a href="#" class="button hero__button mt-4">Get Started</a>
         </div>
