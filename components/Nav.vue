@@ -2,7 +2,11 @@
   <header>
     <nav class="nav__container d-flex align-items-center">
       <div class="container d-flex align-items-center justify-content-between">
+<<<<<<< HEAD
         <a class="nav__logo">FORMESTER</a>
+=======
+        <router-link to="/" class="nav__logo">FORMESTER</router-link>
+>>>>>>> 8d80df59262b82f53816e1ce104de5a5e59051f6
         <input type="checkbox" id="check" />
         <label for="check" class="menu__btn">
           <i class="ri-menu-3-line">
@@ -11,7 +15,11 @@
         </label>
         <div class="nav__items">
           <li>
+<<<<<<< HEAD
             <a class="nav__link active">Home</a>
+=======
+            <router-link to="/" class="nav__link active">Home</router-link>
+>>>>>>> 8d80df59262b82f53816e1ce104de5a5e59051f6
           </li>
           <li class="dropdown">
             <label for="dropdown__input" class="dropdown__label">
@@ -24,6 +32,7 @@
               class="dropdown__input"
             />
             <div class="dropdown__content">
+<<<<<<< HEAD
               <a>Html Form</a>
               <a>Auto Responder</a>
               <a>Integration</a>
@@ -37,6 +46,21 @@
           </li>
           <li>
             <a class="nav__link nav__button">Sign in</a>
+=======
+              <router-link to="#">Html Form</router-link>
+              <router-link to="#">Auto Responder</router-link>
+              <router-link to="#">Integration</router-link>
+              <router-link to="#">Spam Protection</router-link>
+            </div>
+          </li>
+          <li><router-link to="#" class="nav__link">Template</router-link></li>
+          <li><router-link to="#" class="nav__link">Pricing</router-link></li>
+          <li>
+            <router-link to="#" class="nav__link">Contact us</router-link>
+          </li>
+          <li>
+            <router-link to="#" class="nav__link nav__button">Sign in</router-link>
+>>>>>>> 8d80df59262b82f53816e1ce104de5a5e59051f6
           </li>
         </div>
       </div>
