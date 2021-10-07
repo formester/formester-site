@@ -38,7 +38,7 @@ export default {
 }
 
 .nav__link.active {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .nav__link svg {
@@ -57,14 +57,6 @@ export default {
   transform: translate(-50%, -50%);
   transition: stroke-dashoffset 0s 0.2s, opacity 0.2s;
   z-index: -1;
-}
-
-.nav__link.active svg {
-  stroke: var(--clr-primary);
-  stroke-dashoffset: 0;
-  opacity: 1;
-  transition: opacity 0s,
-    stroke-dashoffset 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 /* NAV HOVER */
@@ -91,10 +83,6 @@ export default {
 
   .nav__link:hover:after {
     width: 0%;
-  }
-
-  .nav__link.active svg {
-    opacity: 0;
   }
 
   .nav__link:hover svg {
