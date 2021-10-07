@@ -10,14 +10,12 @@
           </i>
         </label>
         <div class="nav__items">
-          <li>
-            <a class="nav__link active">Home</a>
-          </li>
+          <NavItem navName="Home" :isActive="true" />
           <li class="dropdown">
             <label for="dropdown__input" class="dropdown__label">
               Features
             </label>
-            <a class="dropbtn">Our Projects</a>
+            <a class="dropbtn">Our Projects </a>
             <input
               type="checkbox"
               id="dropdown__input"
@@ -30,11 +28,9 @@
               <a>Spam Protection</a>
             </div>
           </li>
-          <li><a class="nav__link">Template</a></li>
-          <li><a class="nav__link">Pricing</a></li>
-          <li>
-            <a class="nav__link">Contact us</a>
-          </li>
+          <NavItem navName="Templates" />
+          <NavItem navName="Pricing" />
+          <NavItem navName="Contact" />
           <li>
             <a class="nav__link nav__button">Sign in</a>
           </li>
@@ -45,7 +41,12 @@
 </template>
 
 <script>
-export default {}
+import NavItem from './NavItem.vue'
+export default {
+  components: {
+    NavItem,
+  },
+}
 </script>
 
 <style scoped>
@@ -53,10 +54,6 @@ export default {}
   height: 75px;
   background-color: var(--clr-bg);
   box-shadow: 0 2px 10px rgba(136, 130, 130, 0.15);
-}
-
-.social__icons a:hover {
-  transform: scale(1.1);
 }
 
 .nav__logo {
@@ -71,48 +68,8 @@ export default {}
   font-size: var(--ft-small-body);
 }
 
-.nav__link,
-.nav__link:after,
-.nav__link:before {
-  transition: all 0.5s;
-}
-
 .nav__items li {
   margin: 0 12px;
-}
-
-.nav__link {
-  font-weight: 500;
-  position: relative;
-  display: block;
-  padding: 7px;
-}
-
-.nav__link.active {
-  font-weight: 700;
-}
-
-/* NAV LINK HOVER EFFECT */
-
-.nav__link:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 0%;
-  content: '';
-  color: transparent;
-  background: #aaa;
-  height: 1px;
-}
-
-.nav__link:hover:after {
-  width: 100%;
-}
-
-.nav__link.nav__button:hover:after {
-  width: 0%;
 }
 
 .nav__button {
@@ -128,7 +85,7 @@ export default {}
   color: white;
 }
 
-.nav__container .menu__btn i {
+.menu__btn i {
   display: none;
   font-size: 1.6rem;
   cursor: pointer;
@@ -192,23 +149,7 @@ export default {}
     background-color: white;
   }
 
-  .nav__link {
-    display: block;
-    padding: 1em 0;
-    font-size: 1.4rem;
-    font-weight: 600;
-  }
-
-  .nav__link:hover {
-    background-color: var(--clr-dark);
-    color: var(--clr-primary-light);
-  }
-
-  .nav__link:hover:after {
-    width: 0%;
-  }
-
-  .nav__container .menu__btn i.ri-menu-3-line {
+  .menu__btn i.ri-menu-3-line {
     display: inline;
   }
 
@@ -217,8 +158,11 @@ export default {}
     z-index: 100;
   }
 
-  .nav__btn {
-    background-color: red;
+  .nav__button {
+    display: block;
+    padding: 1em 0;
+    font-size: 1.4rem;
+    font-weight: 600;
   }
 
   .dropbtn {
