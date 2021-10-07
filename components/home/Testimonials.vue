@@ -54,7 +54,7 @@ export default {}
   font-size: var(--ft-bigger-body);
   line-height: 40px;
   max-width: 750px;
-  margin-top: 1.6em;
+  margin: 1.6em 1.5em 0;
 }
 
 .testimonial__person {

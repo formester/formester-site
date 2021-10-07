@@ -63,7 +63,7 @@ export default {}
 <style scoped>
 .howitworks__card::before {
   position: absolute;
-  left: -10%;
+  left: -12%;
   background-color: var(--clr-primary-light);
   width: 30px;
   line-height: 30px;
