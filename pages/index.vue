@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Nav from '../components/Nav.vue'
+import Nav from '../components/nav/Nav.vue'
 import Footer from '../components/Footer.vue'
 import Hero from '../components/home/Hero.vue'
 import Features from '../components/home/Features.vue'

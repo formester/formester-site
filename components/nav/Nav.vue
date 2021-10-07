@@ -10,14 +10,12 @@
           </i>
         </label>
         <div class="nav__items">
-          <li>
-            <a class="nav__link active">Home</a>
-          </li>
+          <NavItem navName="Home" :isActive="true" />
           <li class="dropdown">
             <label for="dropdown__input" class="dropdown__label">
               Features
             </label>
-            <a class="dropbtn">Our Projects</a>
+            <a class="dropbtn">Our Projects </a>
             <input
               type="checkbox"
               id="dropdown__input"
@@ -30,11 +28,9 @@
               <a>Spam Protection</a>
             </div>
           </li>
-          <li><a class="nav__link">Template</a></li>
-          <li><a class="nav__link">Pricing</a></li>
-          <li>
-            <a class="nav__link">Contact us</a>
-          </li>
+          <NavItem navName="Templates" />
+          <NavItem navName="Pricing" />
+          <NavItem navName="Contact" />
           <li>
             <a class="nav__link nav__button">Sign in</a>
           </li>
@@ -45,7 +41,12 @@
 </template>
 
 <script>
-export default {}
+import NavItem from './NavItem.vue'
+export default {
+  components: {
+    NavItem,
+  },
+}
 </script>
 
 <style scoped>
@@ -79,40 +80,6 @@ export default {}
 
 .nav__items li {
   margin: 0 12px;
-}
-
-.nav__link {
-  font-weight: 500;
-  position: relative;
-  display: block;
-  padding: 7px;
-}
-
-.nav__link.active {
-  font-weight: 700;
-}
-
-/* NAV LINK HOVER EFFECT */
-
-.nav__link:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 0%;
-  content: '';
-  color: transparent;
-  background: #aaa;
-  height: 1px;
-}
-
-.nav__link:hover:after {
-  width: 100%;
-}
-
-.nav__link.nav__button:hover:after {
-  width: 0%;
 }
 
 .nav__button {

@@ -1,12 +1,7 @@
-<template>
-  
-</template>
+<template></template>
 
 <script>
-
 export default {
-  components: {
-
-  },
+  components: {},
 }
 </script>
