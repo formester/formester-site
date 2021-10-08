@@ -32,7 +32,9 @@
           <NavItem navName="Pricing" />
           <NavItem navName="Contact" />
           <li>
-            <a class="nav__link nav__button">Sign in</a>
+            <nuxt-link to="/auth/login" class="nav__link nav__button"
+              >Sign in</nuxt-link
+            >
           </li>
         </div>
       </div>
