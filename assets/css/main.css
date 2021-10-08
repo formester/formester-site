@@ -11,6 +11,7 @@
 :root {
   --ft-big-heading: 3.75rem;
   --ft-df-heading: 3rem;
+  --ft-sm-heading: 2.24rem;
   --ft-subtitle: 1.5rem;
   --ft-big-body: 1.25rem;
   --ft-df-body: 1.125rem;
@@ -33,6 +34,10 @@
     --ft-lg-btn: 1rem;
   }
 }
+/* ====== OTHERS ==== */
+:root {
+  --df-brd-rd: 8px;
+}
 
 * {
   margin: 0;
@@ -54,6 +59,12 @@ a {
 
 a:hover {
   color: var(--clr-dark);
+}
+
+.button {
+  outline: none;
+  box-shadow: none;
+  border: none;
 }
 
 .section__heading {
