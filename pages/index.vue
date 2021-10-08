@@ -1,12 +1,13 @@
 <template>
   <div>
-    <Nav />
+    <!-- <Nav />
     <Hero />
     <Features />
     <Testimonials />
     <HowItWorks />
     <OtherSection />
-    <Footer />
+    <Footer /> -->
+    <AuthContainer />
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import Features from '../components/home/Features.vue'
 import Testimonials from '../components/home/Testimonials.vue'
 import HowItWorks from '../components/home/HowItWorks.vue'
 import OtherSection from '../components/home/OtherSection.vue'
+import AuthContainer from '../components/auth/AuthContainer.vue'
 
 export default {
   components: {
@@ -28,6 +30,7 @@ export default {
     Testimonials,
     HowItWorks,
     OtherSection,
+    AuthContainer,
   },
 }
 </script>
