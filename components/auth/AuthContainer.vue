@@ -7,7 +7,11 @@
         <slot></slot>
       </form>
     </div>
-    <img src="../../assets/images/auth_svg.png" alt="NA" class="auth__svg" />
+    <img
+      src="../../assets/images/auth_svg.png"
+      alt="NA"
+      class="auth__svg img-fluid"
+    />
   </div>
 </template>
 
