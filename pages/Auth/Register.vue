@@ -18,7 +18,7 @@
       />
     </div>
     <div class="mb-3 text-start">
-      <label for="confirmpassword" class="form-label">Password</label>
+      <label for="confirmpassword" class="form-label">Confirm Password</label>
       <input
         type="password"
         class="form-control auth__inputField"
@@ -41,6 +41,4 @@ export default {
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
