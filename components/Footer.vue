@@ -42,6 +42,10 @@ export default {}
 </script>
 
 <style scoped>
+ul {
+  padding: 0;
+}
+
 .footer__container {
   background-color: var(--clr-primary);
   color: var(--clr-primary-light);
