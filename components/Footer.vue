@@ -42,6 +42,7 @@ export default {}
 </script>
 
 <style scoped>
+/* TODO: check this out */
 ul {
   padding: 0;
 }
