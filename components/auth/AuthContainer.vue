@@ -31,7 +31,7 @@ export default {
 .auth__container {
   max-width: 800px;
   box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.1);
-  border-radius: var(--df-brd-rd);
+  border-radius: var(--brd-df-rd);
   padding: 2.5em 4em;
   background-color: white;
 }
@@ -77,7 +77,7 @@ export default {
   font-size: var(--ft-small-body);
   font-weight: 700;
   padding: 0.7em;
-  border-radius: var(--df-brd-rd);
+  border-radius: var(--brd-df-rd);
 }
 
 .auth__bottom {

@@ -1,6 +1,10 @@
 <template>
   <li>
-    <a class="nav__link" :class="{ active: isActive }">
+    <a
+      href="http://localhost:3000/pricing"
+      class="nav__link"
+      :class="{ active: isActive }"
+    >
       {{ navName }}
       <svg
         version="1.1"
@@ -23,6 +27,7 @@
 export default {
   props: {
     navName: String,
+    navLink: String,
     isActive: Boolean,
   },
 }
