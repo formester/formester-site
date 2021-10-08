@@ -4,24 +4,7 @@
       <h3 class="logo">Formester</h3>
       <h4 class="auth__title mt-4">Login</h4>
       <form class="d-flex flex-column mt-5">
-        <div class="mb-3 text-start">
-          <label for="email" class="form-label">Email address</label>
-          <input
-            type="email"
-            class="form-control auth__inputField"
-            id="email"
-            aria-describedby="emailHelp"
-          />
-        </div>
-        <div class="mb-3 text-start">
-          <label for="password" class="form-label">Password</label>
-          <input
-            type="password"
-            class="form-control auth__inputField"
-            id="password"
-          />
-        </div>
-        <button type="submit" class="button auth__button mt-4">Submit</button>
+        <slot></slot>
       </form>
     </div>
     <img src="../../assets/images/auth_svg.png" alt="NA" class="auth__svg" />
@@ -58,6 +41,15 @@ export default {
   font-weight: 600;
 }
 
+.auth__svg {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* SLOT */
 .form-label {
   font-size: var(--ft-small-body);
 }
@@ -84,11 +76,11 @@ export default {
   border-radius: var(--df-brd-rd);
 }
 
-.auth__svg {
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.auth__bottom {
+  font-size: var(--ft-small-body);
+}
+
+.auth__bottom a {
+  text-decoration: underline;
 }
 </style>
