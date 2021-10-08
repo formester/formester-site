@@ -1,13 +1,17 @@
 <template>
   <div class="auth">
     <div class="auth__container text-center">
-      <h3 class="logo">Formester</h3>
+      <h3><nuxt-link to="/" class="logo">Formester</nuxt-link></h3>
       <h4 class="auth__title mt-4">Login</h4>
       <form class="d-flex flex-column mt-5">
         <slot></slot>
       </form>
     </div>
-    <img src="../../assets/images/auth_svg.png" alt="NA" class="auth__svg" />
+    <img
+      src="../../assets/images/auth_svg.png"
+      alt="NA"
+      class="auth__svg img-fluid"
+    />
   </div>
 </template>
 
