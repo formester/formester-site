@@ -1,0 +1,9 @@
+.fs-21 {
+  font-size: 21px;
+}
+
+@media (max-width: 768px) {
+  .white-overlay-65 {
+    background: rgba(255, 255, 255, 0.65);
+  }
+}

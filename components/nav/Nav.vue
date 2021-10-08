@@ -72,6 +72,7 @@ export default {
 
 .nav__items li {
   margin: 0 12px;
+  cursor: pointer;
 }
 
 .nav__button {
