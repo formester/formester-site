@@ -4,13 +4,13 @@
       <div class="row">
         <div
           class="
-            col-md-5
+            col-lg-5
             d-flex
             flex-column
             justify-content-center
-            align-items-md-start align-items-center
-            text-center text-md-start
-            mt-md-0 mt-5
+            align-items-lg-start align-items-center
+            text-center text-lg-start
+            mt-lg-0 mt-5
           "
         >
           <h1 class="hero__heading">
@@ -25,11 +25,11 @@
         </div>
         <div
           class="
-            col-md-7
+            col-lg-7
             d-flex
             align-items-center
             justify-content-center
-            mt-md-0 mt-5
+            mt-lg-0 mt-5
           "
         >
           <img
