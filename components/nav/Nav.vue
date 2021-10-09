@@ -2,7 +2,7 @@
   <header>
     <nav class="nav__container d-flex align-items-center">
       <div class="container d-flex align-items-center justify-content-between">
-        <a class="nav__logo">FORMESTER</a>
+        <nuxt-link to="/" class="nav__logo">FORMESTER</nuxt-link>
         <input type="checkbox" id="check" />
         <label for="check" class="menu__btn">
           <i class="ri-menu-3-line">
@@ -10,7 +10,7 @@
           </i>
         </label>
         <div class="nav__items">
-          <NavItem navName="Home" :isActive="true" />
+          <NavItem navName="Home" :isActive="true" navLink="/" />
           <li class="dropdown">
             <label for="dropdown__input" class="dropdown__label">
               Features
@@ -28,9 +28,9 @@
               <a>Spam Protection</a>
             </div>
           </li>
-          <NavItem navName="Templates" />
-          <NavItem navName="Pricing" />
-          <NavItem navName="Contact" />
+          <NavItem navName="Templates" navLink="/" />
+          <NavItem navName="Pricing" navLink="/pricing" />
+          <NavItem navName="Contact" navLink="/" />
           <li>
             <nuxt-link to="/auth/login" class="nav__link nav__button"
               >Sign in</nuxt-link
