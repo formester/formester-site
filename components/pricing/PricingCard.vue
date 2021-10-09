@@ -8,8 +8,8 @@
       <h2 class="pricing__amount">${{ amount }}</h2>
       <span class="pricing__timeline">/mo</span>
     </div>
-    <ul class="pricing__features mt-3">
-      <li v-for="(feature, index) in features" :key="index">
+    <ul class="pricing__features mt-3 text-start">
+      <li v-for="(feature, index) in features" :key="index" class="mt-2">
         {{ feature }}
       </li>
     </ul>
@@ -33,6 +33,7 @@ export default {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: var(--brd-df-rd);
   padding: 1.9em 2.5em;
+  margin: 1em;
 }
 
 .pricing__category {
@@ -63,5 +64,9 @@ export default {
 .pricing__card.hglt .pricing__button {
   background-color: var(--clr-primary);
   color: white;
+}
+
+.pricing__features {
+  list-style: url('../../assets/images/check.svg');
 }
 </style>
