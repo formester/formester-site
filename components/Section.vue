@@ -21,7 +21,7 @@
       </div>
       <div class="col-md-6 d-flex justify-content-center mt-md-0 mt-5">
         <img
-          :src="require('@/assets/images' + imgName + '')"
+          src="require(`~/assets/images/${imgName}`)"
           alt="Hero-Image"
           class="img-fluid"
         />
