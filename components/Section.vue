@@ -21,7 +21,11 @@
       </div>
       <div class="col-md-6 d-flex justify-content-center mt-md-0 mt-5">
         <img
+<<<<<<< HEAD
           src="require(`../assets/images/${imgName}`)"
+=======
+          src="require(`~/assets/images/${imgName}`)"
+>>>>>>> 29f91a96859f096f7ba67203ee1f2928c864f60b
           alt="Hero-Image"
           class="img-fluid"
         />
