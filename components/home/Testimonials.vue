@@ -46,11 +46,11 @@
       </div>
       <div class="col-md-8 d-flex justify-content-center mt-md-0 mt-5 position-relative overflow-hidden">
        <div class="testimonials d-flex flex-column">
-         <p>I really enjoy Formester. It’s clean and straightforward and it does well it is supposed to do. </p>
-         <span class="testimonial__person-name">
+         <p class="testimonial__content">I really enjoy Formester. It’s clean and straightforward and it does well it is supposed to do. </p>
+         <span class="testimonial__person--name">
             Thibaud Martinez
          </span>
-         <span class="testimonial__person-post">
+         <span class="testimonial__person--post">
             Organizer
          </span>
          <img src="../../assets/images/tedx.png" alt="Brand-Logo" height="40" width="110">
@@ -68,8 +68,8 @@ export default {}
 
 <style scoped>
 .testimonials {
-  padding: 7em 0;
-  color: var(--clr-primary-light);
+  padding: 7em;
+  color: white;
 }
 
 .testimonial-bg {
@@ -85,24 +85,20 @@ export default {}
 
 .testimonial__content {
   font-size: var(--ft-bigger-body);
-  line-height: 40px;
-  max-width: 750px;
-  margin: 1.6em 1.5em 0;
-}
-
-.testimonial__person {
-  margin-top: 1.6em;
+  line-height: 48px;
 }
 
 .testimonial__person--name {
   font-size: var(--ft-big-body);
+  font-weight: 900;
+  margin-top: 1.6em;
 }
+
 
 .testimonial__person--post {
   font-size: var(--ft-df-body);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-top: -0.4em;
+  letter-spacing: 2%;
+  color: var(--clr-primary-light);
 }
 
 .quotes {
