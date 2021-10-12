@@ -22,7 +22,7 @@ export default {
           content:
             'Creating a form has never been simpler. Just point your form to our endpoint and start getting submissions in a matter of minutes. If you are a power user you get complete control over how the form looks.',
           alter: false,
-          imgName: 'auto-response.png',
+          imgName: 'easy-web-forms.png',
         },
         {
           id: 1,
@@ -38,7 +38,7 @@ export default {
           content:
             'The web form is an easy target for spam. Use our one-click Recaptcha to curb spam and keep your list clean. You can customise this to meet the look and feel of your app.',
           alter: false,
-          imgName: 'auto-response.png',
+          imgName: 'spam-protection.png',
         },
         {
           id: 3,
@@ -46,7 +46,7 @@ export default {
           content:
             'Understand how users are interacting with your form. Get insights on ways to improve engagement on your form. Identify trends to see when you get most responses.',
           alter: true,
-          imgName: 'auto-response.png',
+          imgName: 'powerful-analytics.png',
         },
       ],
     }
