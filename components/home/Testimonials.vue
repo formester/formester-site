@@ -37,6 +37,7 @@
           align-items-md-start align-items-center
           text-center text-md-start
           ms-md-5
+          light-bg
         "
       >
         <h3 class="section__heading">Testimonials</h3>
@@ -46,15 +47,16 @@
       </div>
       <div class="col-md-8 d-flex justify-content-center mt-md-0 mt-5 position-relative overflow-hidden">
        <div class="testimonials d-flex flex-column">
-         <p>I really enjoy Formester. It’s clean and straightforward and it does well it is supposed to do. </p>
-         <span class="testimonial__person-name">
+         <p class="testimonial__content">I really enjoy Formester. It’s clean and straightforward and it does well it is supposed to do. </p>
+         <span class="testimonial__person--name">
             Thibaud Martinez
          </span>
-         <span class="testimonial__person-post">
+         <span class="testimonial__person--post">
             Organizer
          </span>
-         <img src="../../assets/images/tedx.png" alt="Brand-Logo" height="40" width="110">
+         <img src="../../assets/images/tedx.png" alt="Brand-Logo" height="40" width="110" class="mt-3">
        </div>
+       <div class="light-bg-container"></div>
        <img src="../../assets/images/testimonial.svg" alt="NA" class="testimonial-bg">
        <img src="../../assets/images/quotes.svg" alt="NA" class="quotes">
       </div>
@@ -67,16 +69,29 @@ export default {}
 </script>
 
 <style scoped>
+.light-bg {
+  background: #F7F4FF;
+  color: var(--clr-dark);
+  padding-left: 2em;
+}
+.light-bg-container {
+  position: absolute;
+  background: #F7F4FF;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+}
+
 .testimonials {
-  padding: 7em 0;
-  color: var(--clr-primary-light);
+  padding: 7em;
+  color: white;
 }
 
 .testimonial-bg {
   position: absolute;
-  top: -85%;
+  top: -65%;
   right: -50%;
-  z-index: -100;
+  z-index: -10;
 }
 
 .testimonials__heading {
@@ -85,24 +100,20 @@ export default {}
 
 .testimonial__content {
   font-size: var(--ft-bigger-body);
-  line-height: 40px;
-  max-width: 750px;
-  margin: 1.6em 1.5em 0;
-}
-
-.testimonial__person {
-  margin-top: 1.6em;
+  line-height: 48px;
 }
 
 .testimonial__person--name {
   font-size: var(--ft-big-body);
+  font-weight: 900;
+  margin-top: 1.6em;
 }
+
 
 .testimonial__person--post {
   font-size: var(--ft-df-body);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-top: -0.4em;
+  letter-spacing: 2%;
+  color: var(--clr-primary-light);
 }
 
 .quotes {
