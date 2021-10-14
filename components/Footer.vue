@@ -12,11 +12,11 @@
           mt-4
         "
       >
-        <li><a href="" class="footer__link ms-md-3">Features</a></li>
-        <li><a href="" class="footer__link ms-md-3">Template</a></li>
-        <li><a href="" class="footer__link ms-md-3">Pricing</a></li>
-        <li><a href="" class="footer__link ms-md-3">Contact</a></li>
-        <li><a href="" class="footer__link ms-md-3">Privacy Policy</a></li>
+        <li><nuxt-link to="/" class="footer__link ms-md-3">Features</nuxt-link></li>
+        <li><nuxt-link to="/template" class="footer__link ms-md-3">Template</nuxt-link></li>
+        <li><nuxt-link to="/pricing" class="footer__link ms-md-3">Pricing</nuxt-link></li>
+        <li><nuxt-link to="/contact" class="footer__link ms-md-3">Contact</nuxt-link></li>
+        <li><nuxt-link to="/policy" class="footer__link ms-md-3">Privacy Policy</nuxt-link></li>
       </ul>
       <div class="socials mt-3">
         <a href="" class="mx-1"
