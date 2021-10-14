@@ -18,7 +18,8 @@ export default {
       features: [
         {
           id: 0,
-          heading: 'Easy Web forms',
+          // heading: 'Easy Web forms',
+          heading: '<span class="hglt">Easy</span> Web Forms',
           content:
             'Creating a form has never been simpler. Just point your form to our endpoint and start getting submissions in a matter of minutes. If you are a power user you get complete control over how the form looks.',
           alter: false,
@@ -26,7 +27,7 @@ export default {
         },
         {
           id: 1,
-          heading: 'Auto Responser',
+          heading: '<span class="hglt">Auto</span> Responser',
           content:
             'Respond to the customer as soon as you get a submission. The email is easy to create with our intuitive editor. Sending customised HTML email is also an option for the power user.',
           alter: true,
@@ -34,7 +35,7 @@ export default {
         },
         {
           id: 2,
-          heading: 'Spam Protection',
+          heading: '<span class="hglt">Spam</span> Protection',
           content:
             'The web form is an easy target for spam. Use our one-click Recaptcha to curb spam and keep your list clean. You can customise this to meet the look and feel of your app.',
           alter: false,
@@ -42,7 +43,7 @@ export default {
         },
         {
           id: 3,
-          heading: 'Powerful Analytics',
+          heading: '<span class="hglt">Powerful</span> Analytics',
           content:
             'Understand how users are interacting with your form. Get insights on ways to improve engagement on your form. Identify trends to see when you get most responses.',
           alter: true,

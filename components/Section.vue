@@ -13,9 +13,7 @@
         "
         :class="{ 'order-md-last': !feature.alter }"
       >
-        <h3 class="section__heading" ref="featureHeading">
-          {{ feature.heading }}
-        </h3>
+        <h3 class="section__heading" v-html="feature.heading"></h3>
         <p class="mt-3">
           {{ feature.content }}
         </p>
@@ -35,14 +33,6 @@
 <script>
 export default {
   props: ['feature'],
-  mounted() {
-    if (this.$refs.featureHeading) {
-      let featureHeading = this.$refs.featureHeading
-      let target = featureHeading.innerText.split(' ')
-      featureHeading.innerHTML =
-        '<span class="hglt">' + target.shift() + '</span> ' + target.join(' ')
-    }
-  },
 }
 </script>
 
