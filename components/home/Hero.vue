@@ -1,6 +1,6 @@
 <template>
   <section class="hero">
-    <div class="container">
+    <div class="container horizontal__padding">
       <div class="row">
         <div
           class="
@@ -10,7 +10,7 @@
             justify-content-center
             align-items-lg-start align-items-center
             text-center text-lg-start
-            mt-lg-0 mt-5
+            mt-xl-0 mt-5
           "
         >
           <h1 class="hero__heading">
@@ -48,6 +48,7 @@ export default {}
 </script>
 
 <style scoped>
+
 .hero__heading {
   font-size: var(--ft-big-heading);
   font-weight: 700;
@@ -72,4 +73,5 @@ export default {}
   color: white;
   opacity: 0.9;
 }
+
 </style>
