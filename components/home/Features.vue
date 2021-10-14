@@ -54,3 +54,9 @@ export default {
   },
 }
 </script>
+
+<style>
+.hglt {
+  color: var(--clr-primary);
+}
+</style>
