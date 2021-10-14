@@ -53,13 +53,16 @@
         <table></table>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import PricingCard from '../components/pricing/PricingCard.vue'
+import Footer from '../components/Footer.vue'
+
 export default {
-  components: { PricingCard },
+  components: { PricingCard, Footer },
   data: function () {
     return {
       features1: [
