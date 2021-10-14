@@ -67,6 +67,12 @@ a:hover {
   border: none;
 }
 
+.container {
+  padding: 0 3em;
+}
+
+
+
 .section__heading {
   font-size: var(--ft-df-heading);
   font-weight: 700;
@@ -74,4 +80,10 @@ a:hover {
 
 .hglight {
   color: var(--clr-primary);
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    padding: 0 1em;
+  }
 }
