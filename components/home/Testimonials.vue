@@ -26,39 +26,69 @@
       class="position-absolute testimonial__svg"
     />
   </section> -->
-   <section class="container my-5">
-    <div class="row gx-5">
-      <div
-        class="
-          col-md-3
-          d-flex
-          flex-column
-          justify-content-center
-          align-items-md-start align-items-center
-          text-center text-md-start
-          ms-md-5
-          light-bg
-        "
-      >
-        <h3 class="section__heading">Testimonials</h3>
-        <p class="mt-3">
-          Here’s What Some of Our Happy Customer Have to Say About Us!
-        </p>
+   <!-- <section class="testimonials">
+    <div class="container">
+      <div class="row gx-5">
+        <div
+          class="
+            col-lg-3
+            d-flex
+            align-items-center
+            justify-content-center
+            flex-column
+            testimonial-left
+           "
+        >
+          <h3 class="section__heading">Testimonials</h3>
+          <p class="mt-3">
+            Here’s What Some of Our Happy Customer Have to Say About Us!
+          </p>
+        </div>
+        <div class="col-lg-6 d-flex align-items-center justify-content-center position-relative">
+         <div class="d-flex flex-column">
+           <p class="testimonial__content">I really enjoy Formester. It’s clean and straight-forward and it does well it is supposed to do. </p>
+           <span class="testimonial__person--name">
+              Thibaud Martinez
+           </span>
+           <span class="testimonial__person--post">
+              Organizer
+           </span>
+           <img src="../../assets/images/tedx.png" alt="Brand-Logo" height="40" width="110" class="mt-3">
+         </div>
+         <img src="../../assets/images/quotes.svg" alt="NA" class="quotes">
+        </div>
       </div>
-      <div class="col-md-8 d-flex justify-content-center mt-md-0 mt-5 position-relative overflow-hidden">
-       <div class="testimonials d-flex flex-column">
-         <p class="testimonial__content">I really enjoy Formester. It’s clean and straightforward and it does well it is supposed to do. </p>
-         <span class="testimonial__person--name">
-            Thibaud Martinez
-         </span>
-         <span class="testimonial__person--post">
-            Organizer
-         </span>
-         <img src="../../assets/images/tedx.png" alt="Brand-Logo" height="40" width="110" class="mt-3">
-       </div>
-       <div class="light-bg-container"></div>
-       <img src="../../assets/images/testimonial.svg" alt="NA" class="testimonial-bg">
-       <img src="../../assets/images/quotes.svg" alt="NA" class="quotes">
+    </div>
+  </section> -->
+  <section class="testimonials-bg">
+    <div class="container">
+      <div class="row">
+        <div
+          class="
+            col-lg-4
+            d-flex
+            flex-column
+            align-items-start
+            justify-content-center
+            testimonials__heading--section
+          "
+        >
+          <h3 class="section__heading">Testimonials</h3>
+          <p class="mt-3">
+             Here’s What Some of Our Happy Customer Have to Say About Us!
+          </p>
+        </div>
+        <div class="testmonial__container col-lg-6 d-flex flex-column mt-lg-0 mt-5 position-relative">
+        <p class="testimonial__content">I really enjoy Formester. It’s clean and straight-forward and it does well it is supposed to do. </p>
+             <span class="testimonial__person--name">
+                Thibaud Martinez
+             </span>
+             <span class="testimonial__person--post">
+                Organizer
+             </span>
+             <img src="../../assets/images/tedx.png" alt="Brand-Logo" height="40" width="110" class="mt-3">
+            <img src="../../assets/images/quotes.svg" alt="NA" class="position-absolute quotes" height=200 width=200>
+        </div>
       </div>
     </div>
   </section>
@@ -69,33 +99,22 @@ export default {}
 </script>
 
 <style scoped>
-.light-bg {
-  background: #F7F4FF;
-  color: var(--clr-dark);
-  padding-left: 2em;
-}
-.light-bg-container {
-  position: absolute;
-  background: #F7F4FF;
-  height: 100%;
-  width: 100%;
-  z-index: -100;
-}
 
-.testimonials {
-  padding: 7em;
+.testimonials-bg {
+  margin-top: 3em;
+  background: var(--clr-primary);
   color: white;
 }
 
-.testimonial-bg {
-  position: absolute;
-  top: -65%;
-  right: -50%;
-  z-index: -10;
+.testimonials__heading--section {
+  background: linear-gradient(270deg, #6448B7 -2.64%, rgba(100, 72, 183, 0) 102.28%);;
+  padding: 8em 3em;
 }
 
-.testimonials__heading {
-  color: white;
+
+.testmonial__container {
+  margin-left: 7em;
+  padding: 8em 0;
 }
 
 .testimonial__content {
@@ -109,7 +128,6 @@ export default {}
   margin-top: 1.6em;
 }
 
-
 .testimonial__person--post {
   font-size: var(--ft-df-body);
   letter-spacing: 2%;
@@ -118,8 +136,15 @@ export default {}
 
 .quotes {
   position: absolute;
-  top: 10%;
-  right: -10%;
-  z-index: -1;
+  top: 5%;
+  right: -30%;
+  z-index: 0;
+}
+
+@media (max-width: 992px) {
+  .testmonial__container {
+    margin: 0;
+      padding: 4em 2em;
+  }
 }
 </style>

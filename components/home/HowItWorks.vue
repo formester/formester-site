@@ -61,6 +61,10 @@ export default {}
 </script>
 
 <style scoped>
+.how-it-works {
+  margin-top: 5em;
+}
+
 .howitworks__card::before {
   position: absolute;
   left: -12%;

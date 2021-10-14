@@ -1,5 +1,5 @@
 <template>
-  <section class="container my-5">
+  <section class="container">
     <div class="row gx-5" v-if="feature">
       <div
         class="
