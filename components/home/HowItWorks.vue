@@ -5,7 +5,7 @@
       <div class="row text-start mt-5">
         <div
           class="
-            col-md-3
+            col-lg-3
             mx-auto
             howitworks__card howitworks__card--1
             position-relative
@@ -21,7 +21,7 @@
         </div>
         <div
           class="
-            col-md-3
+            col-lg-3
             mx-auto
             howitworks__card howitworks__card--2
             position-relative
@@ -37,7 +37,7 @@
         </div>
         <div
           class="
-            col-md-3
+            col-lg-3
             mx-auto
             howitworks__card howitworks__card--3
             position-relative
