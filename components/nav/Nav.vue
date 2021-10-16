@@ -1,8 +1,8 @@
 <template>
   <header>
     <nav class="nav__container d-flex align-items-center">
-      <div class="container d-flex align-items-center justify-content-between">
-        <nuxt-link to="/" class="nav__logo">FORMESTER</nuxt-link>
+      <div class="container horizontal__padding d-flex align-items-center justify-content-between">
+        <nuxt-link to="/" class="nav__logo"><img src="../../assets/images/logo.png" alt="Fromester"></nuxt-link>
         <input type="checkbox" id="check" />
         <label for="check" class="menu__btn">
           <i class="ri-menu-3-line">
@@ -52,6 +52,7 @@ export default {
 </script>
 
 <style scoped>
+
 .nav__container {
   height: 75px;
   background-color: var(--clr-bg);
@@ -194,4 +195,5 @@ export default {
     font-weight: 600;
   }
 }
+
 </style>
