@@ -4,52 +4,18 @@
       <h3 class="section__heading">How it <span>works</span></h3>
       <div class="row text-start mt-5">
         <div
+          v-for="step in steps"
+          :key="step.step"
           class="
             col-lg-3
             mx-auto
-            howitworks__card howitworks__card--1
+            howitworks__card
             position-relative
           "
+          :class="stepNumberClass(step)"
         >
-          <h6>Create a form</h6>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur
-            quis sapiente sunt ullam omnis esse, repudiandae ipsum voluptatibus
-            cumque excepturi nulla ut, deserunt consequuntur optio soluta
-            voluptatem minima. Ab, possimus?
-          </p>
-        </div>
-        <div
-          class="
-            col-lg-3
-            mx-auto
-            howitworks__card howitworks__card--2
-            position-relative
-          "
-        >
-          <h6>Share it</h6>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-            nesciunt facilis voluptates rem corrupti maiores, fuga error iure
-            magnam, consequuntur pariatur odio aliquam! Magnam voluptate
-            quisquam nostrum quos unde iusto?
-          </p>
-        </div>
-        <div
-          class="
-            col-lg-3
-            mx-auto
-            howitworks__card howitworks__card--3
-            position-relative
-          "
-        >
-          <h6>See results</h6>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae
-            at optio doloribus suscipit! Sed architecto quidem, obcaecati ea
-            earum saepe, nulla voluptatibus aspernatur laborum vel accusantium
-            itaque aut quisquam!
-          </p>
+          <h6>{{ step.heading }}</h6>
+          <p>{{ step.description }}</p>
         </div>
       </div>
     </div>
@@ -57,7 +23,34 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      steps: [
+        {
+          step: 1,
+          heading: 'Create a form',
+          description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur quis sapiente sunt ullam omnis esse, repudiandae ipsum voluptatibus cumque excepturi nulla ut, deserunt consequuntur optio soluta voluptatem minima. Ab, possimus?'
+        },
+        {
+          step: 2,
+          heading: 'Share it',
+          description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur quis sapiente sunt ullam omnis esse, repudiandae ipsum voluptatibus cumque excepturi nulla ut, deserunt consequuntur optio soluta voluptatem minima. Ab, possimus?'
+        },
+        {
+          step: 3,
+          heading: 'See results',
+          description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur quis sapiente sunt ullam omnis esse, repudiandae ipsum voluptatibus cumque excepturi nulla ut, deserunt consequuntur optio soluta voluptatem minima. Ab, possimus?'
+        }
+      ]
+    }
+  },
+  methods: {
+    stepNumberClass(step) {
+      return `howitworks__card--` + step.step;
+    }
+  }
+}
 </script>
 
 <style scoped>
