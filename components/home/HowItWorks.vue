@@ -12,7 +12,7 @@
             howitworks__card
             position-relative
           "
-          :class="stepNumberClass(step)"
+          :class="'howitworks__card--' + step.step"
         >
           <h6>{{ step.heading }}</h6>
           <p>{{ step.description }}</p>
@@ -43,11 +43,6 @@ export default {
           description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur quis sapiente sunt ullam omnis esse, repudiandae ipsum voluptatibus cumque excepturi nulla ut, deserunt consequuntur optio soluta voluptatem minima. Ab, possimus?'
         }
       ]
-    }
-  },
-  methods: {
-    stepNumberClass(step) {
-      return `howitworks__card--` + step.step;
     }
   }
 }
