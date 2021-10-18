@@ -1,5 +1,6 @@
 <template>
   <AuthContainer>
+    <h4 class="auth__title mb-4">Register</h4>
     <div class="mb-3 text-start">
       <label for="email" class="form-label">Email address</label>
       <input

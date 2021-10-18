@@ -2,8 +2,7 @@
   <div class="auth">
     <div class="auth__container text-center">
       <h3><nuxt-link to="/" class="logo">Formester</nuxt-link></h3>
-      <h4 class="auth__title mt-4">Login</h4>
-      <form class="d-flex flex-column mt-5">
+      <form class="d-flex flex-column mt-4">
         <slot></slot>
       </form>
     </div>
