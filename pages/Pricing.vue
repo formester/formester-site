@@ -101,4 +101,8 @@ export default {
   font-size: var(--ft-subtitle);
   font-weight: 600;
 }
+
+thead th {
+  border: none;
+}
 </style>
