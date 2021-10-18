@@ -1,7 +1,9 @@
 <template>
   <footer>
     <div class="footer__container text-center">
-      <div class="footer__logo">formester</div>
+      <div class="footer__logo">
+        <img src="../assets/images/logo-light.svg" alt="Formester">
+        </div>
       <ul
         class="
           footer__items

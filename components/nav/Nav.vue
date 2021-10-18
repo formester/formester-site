@@ -2,7 +2,7 @@
   <header>
     <nav class="nav__container d-flex align-items-center">
       <div class="container horizontal__padding d-flex align-items-center justify-content-between">
-        <nuxt-link to="/" class="nav__logo"><img src="../../assets/images/logo.png" alt="Fromester"></nuxt-link>
+        <nuxt-link to="/" class="nav__logo"><img src="../../assets/images/logo.svg" alt="Fromester"></nuxt-link>
         <input type="checkbox" id="check" />
         <label for="check" class="menu__btn">
           <i class="ri-menu-3-line">
