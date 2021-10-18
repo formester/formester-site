@@ -21,7 +21,7 @@
         </div>
         <div class="col-lg-6 position-relative">
          <div class="d-flex flex-column">
-           <p class="testimonial__content">I really enjoy Formester. It’s clean and straight-forward and it does well it is supposed to do. </p>
+           <p class="testimonial__content">I really enjoy Formester. It’s clean and straight-forward and it does well, what it is supposed to do. </p>
            <span class="testimonial__person--name">
               Thibaud Martinez
            </span>
