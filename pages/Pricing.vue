@@ -16,42 +16,7 @@
         />
         <PricingCard category="Business" :amount="49" :features="features3" />
       </div>
-      <div class="ftcmp mx-auto mt-5">
-        <h5 class="ftcmp__heading">Feature Comparision</h5>
-        <div class="table-responsive mt-4">
-          <table class="table text-start">
-            <thead>
-              <tr>
-                <th scope="col"></th>
-                <th scope="col">Free</th>
-                <th scope="col">Personal</th>
-                <th scope="col">Business</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Price</th>
-                <td><img src="../assets/images/cross.svg" alt="NA" /></td>
-                <td>$13/mo</td>
-                <td>$49/mo</td>
-              </tr>
-              <tr>
-                <th scope="row">No. of forms</th>
-                <td>3</td>
-                <td>5</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <th scope="row">No. of submissions per month</th>
-                <td>100</td>
-                <td>5000</td>
-                <td>15000</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <table></table>
-      </div>
+      <PricingComparision />
     </div>
     <Footer />
   </div>
@@ -60,9 +25,10 @@
 <script>
 import PricingCard from '../components/pricing/PricingCard.vue'
 import Footer from '../components/Footer.vue'
+import PricingComparision from '../components/pricing/PricingComparision.vue'
 
 export default {
-  components: { PricingCard, Footer },
+  components: { PricingCard, Footer, PricingComparision },
   data: function () {
     return {
       features1: [
@@ -93,16 +59,5 @@ export default {
   font-size: var(--ft-bigger-body);
   font-weight: 600;
 }
-.ftcmp {
-  max-width: 900px;
-}
 
-.ftcmp__heading {
-  font-size: var(--ft-subtitle);
-  font-weight: 600;
-}
-
-thead th {
-  border: none;
-}
 </style>
