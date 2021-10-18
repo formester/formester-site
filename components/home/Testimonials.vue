@@ -44,6 +44,7 @@ export default {}
 <style scoped>
 
 .testimonials {
+  margin-top: 3em;
   background: var(--clr-primary);
   padding: 8em 3em;
   z-index: -100;
