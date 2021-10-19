@@ -20,7 +20,7 @@ export default {
         id: 0,
         heading: '<span class="hglt">Powerful</span> Integration',
         content: 'Connect your form with Slack, Google Sheets, Salesforce or anything else with our Zapier integration. Use our webhooks to notify any other app when a submission arrives.',
-        imgName: 'integration.png'
+        imgName: 'integration-2.png'
         }
       ]
     }
