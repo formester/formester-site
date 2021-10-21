@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="my-5">
     <div v-for="feature in features" :key="feature.id">
       <Section :feature="feature" /> 
     </div>
