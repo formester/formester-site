@@ -43,7 +43,7 @@ export default {}
 
 <style scoped>
 .ftcmp {
-  max-width: 900px;
+  max-width: 900px; 
 }
 
 .ftcmp__heading {

@@ -13,13 +13,19 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+      // Custom Javascript
+  script: [
+    {
+      src: '/bootstrap.min.js',
+    },
+  ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/css/bootstrap.min.css',
-    '@/assets/css/main.css',
+    '~/assets/css/bootstrap.min.css',
+    '~/assets/css/main.css',
 
   ],
 

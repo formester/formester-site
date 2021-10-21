@@ -17,6 +17,7 @@
         <PricingCard category="Business" :amount="49" :features="features3" />
       </div>
       <PricingComparision />
+      <Faq />
     </div>
     <Footer />
   </div>
@@ -26,9 +27,10 @@
 import PricingCard from '../components/pricing/PricingCard.vue'
 import Footer from '../components/Footer.vue'
 import PricingComparision from '../components/pricing/PricingComparision.vue'
+import Faq from '../components/pricing/Faq.vue'
 
 export default {
-  components: { PricingCard, Footer, PricingComparision },
+  components: { PricingCard, Footer, PricingComparision, Faq },
   data: function () {
     return {
       features1: [
