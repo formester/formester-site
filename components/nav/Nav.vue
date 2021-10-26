@@ -10,7 +10,7 @@
           </i>
         </label>
         <div class="nav__items">
-          <NavItem navName="Home" :isActive="true" navLink="/" />
+          <NavItem navName="Home" navLink="/" />
           <li class="dropdown">
             <label for="dropdown__input" class="dropdown__label">
               Features
@@ -28,9 +28,9 @@
               <a>Spam Protection</a>
             </div>
           </li>
-          <NavItem navName="Templates" navLink="/" />
+          <NavItem navName="Templates" navLink="/templates" />
           <NavItem navName="Pricing" navLink="/pricing" />
-          <NavItem navName="Contact" navLink="/" />
+          <NavItem navName="Contact" navLink="/contact" />
           <li>
             <nuxt-link to="/auth/login" class="nav__link nav__button"
               >Sign in</nuxt-link

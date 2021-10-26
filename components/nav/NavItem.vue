@@ -1,6 +1,6 @@
 <template>
   <li>
-    <nuxt-link :to="navLink" class="nav__link" :class="{ active: isActive }">
+    <nuxt-link :to="navLink" class="nav__link">
       {{ navName }}
       <svg
         version="1.1"
@@ -24,7 +24,6 @@ export default {
   props: {
     navName: String,
     navLink: String,
-    isActive: Boolean,
   },
 }
 </script>
@@ -38,7 +37,7 @@ export default {
   position: relative;
 }
 
-.nav__link.active {
+a.nuxt-link-exact-active {
   font-weight: 700;
 }
 
