@@ -11,7 +11,7 @@
         </label>
         <div class="nav__items">
           <NavItem navName="Home" navLink="/" />
-          <li class="dropdown">
+          <!-- <li class="dropdown">
             <label for="dropdown__input" class="dropdown__label">
               Features
             </label>
@@ -27,14 +27,12 @@
               <a>Integration</a>
               <a>Spam Protection</a>
             </div>
-          </li>
-          <NavItem navName="Templates" navLink="/templates" />
+          </li> -->
+          <!-- <NavItem navName="Templates" navLink="/templates" /> -->
           <NavItem navName="Pricing" navLink="/pricing" />
-          <NavItem navName="Contact" navLink="/contact" />
+          <!-- <NavItem navName="Contact" navLink="/contact" /> -->
           <li>
-            <nuxt-link to="/auth/login" class="nav__link nav__button"
-              >Sign in</nuxt-link
-            >
+            <a href="https://app.formester.com/users/sign_in" class="nav__link nav__button">Sign in</a>
           </li>
         </div>
       </div>
@@ -56,7 +54,7 @@ export default {
 .nav__container {
   height: 75px;
   background-color: var(--clr-bg);
-  box-shadow: 0 2px 10px rgba(136, 130, 130, 0.15);
+  /* box-shadow: 0 2px 10px rgba(136, 130, 130, 0.15); */
 }
 
 .nav__logo {
