@@ -15,7 +15,7 @@
         >
           <h3 class="section__heading">Testimonials</h3>
           <p class="mt-3">
-            Here’s What Some of Our Happy Customer Have to Say About Us!
+            Here’s what some of our happy customer have to say about us!
           </p>
           <img src="~/assets/images/home/testimonials-heading-bg.png" alt="NA" class="position-absolute testimonials-heading-bg">
         </div>
@@ -28,7 +28,7 @@
            <span class="testimonial__person--post">
               Organizer
            </span>
-           <img src="~/assets/images/tedx.png" alt="Brand-Logo" height="40" width="110" class="mt-3">
+           <img src="~/assets/images/tedx.png" alt="Tedx Paris Organizer" height="35" width="110" class="mt-3">
          </div>
          <img src="~/assets/images/quotes.svg" alt="NA" class="quotes">
         </div>
