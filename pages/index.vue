@@ -5,7 +5,8 @@
     <HowItWorks />
     <!-- <Features /> -->
     <Testimonials />
-    <OtherSection />
+    <!-- <OtherSection /> -->
+    <CallToActionSection />
     <Footer />
   </div>
 </template>

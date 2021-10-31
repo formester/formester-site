@@ -5,7 +5,7 @@
       <div
         v-for="step in steps"
         :key="step.step"
-        class="col-lg-3 mx-auto howitworks__card position-relative"
+        class="mt-4 col-lg-3 mx-auto howitworks__card position-relative"
         :data-step="step.step"
       >
         <h6>{{ step.heading }}</h6>
