@@ -1,22 +1,15 @@
 <template>
   <section class="how-it-works container">
-    <div class="text-center">
-      <h3 class="section__heading">How it <span>works</span></h3>
-      <div class="row text-start mt-5">
-        <div
-          v-for="step in steps"
-          :key="step.step"
-          class="
-            col-lg-3
-            mx-auto
-            howitworks__card
-            position-relative
-          "
-          :class="'howitworks__card--' + step.step"
-        >
-          <h6>{{ step.heading }}</h6>
-          <p>{{ step.description }}</p>
-        </div>
+    <h3 class="section__heading text-center">How it <span>works</span></h3>
+    <div class="row text-start mt-5">
+      <div
+        v-for="step in steps"
+        :key="step.step"
+        class="col-lg-3 mx-auto howitworks__card position-relative"
+        :data-step="step.step"
+      >
+        <h6>{{ step.heading }}</h6>
+        <p>{{ step.description }}</p>
       </div>
     </div>
   </section>
@@ -30,30 +23,34 @@ export default {
         {
           step: 1,
           heading: 'Create a form',
-          description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur quis sapiente sunt ullam omnis esse, repudiandae ipsum voluptatibus cumque excepturi nulla ut, deserunt consequuntur optio soluta voluptatem minima. Ab, possimus?'
+          description: `Power an existing form on your website using the Formester link or create a sharable hosted form using our builder tool.`,
         },
         {
           step: 2,
-          heading: 'Share it',
-          description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur quis sapiente sunt ullam omnis esse, repudiandae ipsum voluptatibus cumque excepturi nulla ut, deserunt consequuntur optio soluta voluptatem minima. Ab, possimus?'
+          heading: 'Spam filtering',
+          description:
+            'Easily filter out spam using ReCaptcha. It takes a few clicks to configure while allowing you to control all settings when you have to. No expert knowledge is required.',
         },
         {
           step: 3,
-          heading: 'See results',
-          description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur quis sapiente sunt ullam omnis esse, repudiandae ipsum voluptatibus cumque excepturi nulla ut, deserunt consequuntur optio soluta voluptatem minima. Ab, possimus?'
+          heading: 'Automatic response',
+          description:
+            'Replying to submissions is automatic. You can create and configure emails to go to your users on submission. We also notify you via email, Slack or any other way you like.',
         }
-      ]
+      ],
     }
-  }
+  },
 }
 </script>
 
 <style scoped>
 .how-it-works {
   margin-top: 5em;
+  margin-bottom: 5em;
 }
 
 .howitworks__card::before {
+  content: attr(data-step);
   position: absolute;
   left: -12%;
   background-color: var(--clr-primary-light);
@@ -61,16 +58,6 @@ export default {
   line-height: 30px;
   border-radius: 50%;
   text-align: center;
-}
-
-.howitworks__card--1::before {
-  content: '1';
-}
-.howitworks__card--2::before {
-  content: '2';
-}
-.howitworks__card--3::before {
-  content: '3';
 }
 
 .howitworks__card h6 {

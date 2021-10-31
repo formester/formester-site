@@ -2,9 +2,9 @@
   <div>
     <Nav />
     <Hero />
-    <Features />
-    <Testimonials />
     <HowItWorks />
+    <!-- <Features /> -->
+    <Testimonials />
     <OtherSection />
     <Footer />
   </div>

@@ -16,9 +16,9 @@
           <h1 class="hero__heading">
             <span class="hglight">Form</span> Solution For Your Business
           </h1>
-          <h2 class="hero__subheading mt-3">
+          <p class="hero__subheading mt-3">
             Build forms in minutes using our drag and drop builder or integrate with your existing HTML form.
-          </h2>
+          </p>
           <a href="https://app.formester.com/users/sign_up" class="button hero__button mt-4">Create Your Form</a>
         </div>
         <div
