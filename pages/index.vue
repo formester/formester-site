@@ -2,10 +2,11 @@
   <div>
     <Nav />
     <Hero />
-    <Features />
-    <Testimonials />
     <HowItWorks />
-    <OtherSection />
+    <!-- <Features /> -->
+    <Testimonials />
+    <!-- <OtherSection /> -->
+    <CallToActionSection />
     <Footer />
   </div>
 </template>

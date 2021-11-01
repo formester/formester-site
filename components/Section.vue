@@ -43,13 +43,13 @@ export default {
 
 @media (max-width: 992px) {
   .vertical__margin {
-    margin: 6em auto; 
+    margin: 6em auto;
   }
 }
 
 @media (max-width: 768px) {
   .vertical__margin {
-    margin: 3em auto; 
+    margin: 3em auto;
   }
 }
 </style>

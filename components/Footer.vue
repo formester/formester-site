@@ -14,11 +14,12 @@
           mt-4
         "
       >
-        <li><nuxt-link to="/" class="footer__link ms-md-3">Features</nuxt-link></li>
-        <li><nuxt-link to="/template" class="footer__link ms-md-3">Template</nuxt-link></li>
-        <li><nuxt-link to="/pricing" class="footer__link ms-md-3">Pricing</nuxt-link></li>
-        <li><nuxt-link to="/contact" class="footer__link ms-md-3">Contact</nuxt-link></li>
-        <li><nuxt-link to="/policy" class="footer__link ms-md-3">Privacy Policy</nuxt-link></li>
+        <!-- <li><nuxt-link to="/" class="footer__link ms-md-3">Features</nuxt-link></li> -->
+        <!-- <li><nuxt-link to="/template" class="footer__link ms-md-3">Template</nuxt-link></li> -->
+        <!-- <li><nuxt-link to="/pricing" class="footer__link ms-md-3">Pricing</nuxt-link></li> -->
+        <!-- <li><nuxt-link to="/contact" class="footer__link ms-md-3">Contact</nuxt-link></li> -->
+        <li><nuxt-link to="/terms" class="footer__link ms-md-3">Terms</nuxt-link></li>
+        <li><nuxt-link to="/privacy-policy" class="footer__link ms-md-3">Privacy Policy</nuxt-link></li>
       </ul>
       <div class="socials mt-3">
         <a href="" class="mx-1"
@@ -33,7 +34,7 @@
       </div>
       <div class="divider mt-4"></div>
       <div class="d-flex justify-content-center mt-3">
-        © 2021 Formester. All rights reserved
+        © 2021 Acorn Globus. All rights reserved
       </div>
     </div>
   </footer>

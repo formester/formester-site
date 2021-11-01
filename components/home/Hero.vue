@@ -14,14 +14,12 @@
           "
         >
           <h1 class="hero__heading">
-            Build and Customize Online <span class="hglight">Forms</span> Made
-            Easy
+            <span class="hglight">Form</span> Solution For Your Business
           </h1>
           <p class="hero__subheading mt-3">
-            Create customized online forms quickly and easily without wasting
-            any time or energy
+            Build forms in minutes using our drag and drop builder or integrate with your existing HTML form.
           </p>
-          <a href="#" class="button hero__button mt-4">Get Started</a>
+          <a href="https://app.formester.com/users/sign_up" class="button hero__button mt-4">Create Your Form</a>
         </div>
         <div
           class="
