@@ -18,7 +18,6 @@ export default {
       features: [
         {
           id: 0,
-          // heading: 'Easy Web forms',
           heading: '<span class="hglt">Easy</span> Web Forms',
           content:
             'Creating a form has never been simpler. Just point your form to our endpoint and start getting submissions in a matter of minutes. If you are a power user you get complete control over how the form looks.',

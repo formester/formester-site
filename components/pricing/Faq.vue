@@ -55,28 +55,23 @@ export default {}
   max-width: 900px;
   margin-top: 3em;
 }
-
 .faq__heading {
   font-size: var(--ft-subtitle);
   font-weight: 600;
 }
-
 .accordion-button {
   font-size: var(--ft-df-body);
   font-weight: 600;
   color: rgb(70, 70, 70);
 }
-
 .accordion-item {
   border: none;
   font-size: var(--ft-small-body);
 }
-
 .accordion-button:focus {
   box-shadow: none;
   background: none;
 }
-
 .accordion-body {
   padding: 0 1.25rem;
   width: 80%;
