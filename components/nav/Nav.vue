@@ -1,67 +1,58 @@
 <template>
-  <header>
-    <nav class="nav__container d-flex align-items-center">
-      <div
-        class="
-          container
-          horizontal__padding
-          d-flex
-          align-items-center
-          justify-content-between
-        "
-      >
-        <nuxt-link to="/" class="nav__logo"
-          ><img src="../../assets/images/logo.svg" alt="Fromester"
-        /></nuxt-link>
-        <input type="checkbox" id="check" />
-        <label for="check" class="menu__btn">
-          <i class="ri-menu-3-line">
-            <img src="@/assets/images/menu.svg" alt="Nav-menu-button" />
-          </i>
-        </label>
-        <div class="nav__items">
-          <NavItem navName="Home" navLink="/" />
-          <li class="dropdown">
-            <!-- <label for="dropdown__input" class="dropdown__label">
-              Features
-            </label> -->
-            <a class="dropbtn">Features</a>
-            <input
-              type="checkbox"
-              id="dropdown__input"
-              class="dropdown__input"
-            />
-            <div class="dropdown__content">
-              <NavItem navName="Html Forms" navLink="/features/html-forms" />
-              <NavItem
-                navName="Auto Responder"
-                navLink="/features/auto-responder"
-              />
-              <NavItem navName="Integration" navLink="/features/integration" />
-              <NavItem
-                navName="Spam Protection"
-                navLink="/features/spam-protection"
-              />
-              <!-- <a>Html Form</a>
-              <a>Auto Responder</a>
-              <a>Integration</a>
-              <a>Spam Protection</a> -->
-            </div>
-          </li>
-          <!-- <NavItem navName="Templates" navLink="/templates" /> -->
-          <NavItem navName="Pricing" navLink="/pricing" />
-          <!-- <NavItem navName="Contact" navLink="/contact" /> -->
-          <li>
-            <a
-              href="https://app.formester.com/users/sign_in"
-              class="nav__link nav__button"
-              >Sign in</a
-            >
-          </li>
-        </div>
+  <nav class="nav__container d-flex align-items-center">
+    <div
+      class="
+        container
+        horizontal__padding
+        d-flex
+        align-items-center
+        justify-content-between
+      "
+    >
+      <NuxtLink to="/" class="nav__logo"
+        ><img src="../../assets/images/logo.svg" alt="Fromester"
+      /></NuxtLink>
+      <input type="checkbox" id="check" />
+      <label for="check" class="menu__btn">
+        <i class="ri-menu-3-line">
+          <img src="@/assets/images/menu.svg" alt="Nav-menu-button" />
+        </i>
+      </label>
+      <div class="nav__items">
+        <NuxtLink to="/">
+          <NavItem navName="Home" />
+        </NuxtLink>
+        <li class="dropdown">
+          <a class="dropbtn">Features</a>
+          <input type="checkbox" id="dropdown__input" class="dropdown__input" />
+          <div class="dropdown__content">
+            <NuxtLink to="/features/html-forms">
+              <NavItem navName="Html Forms" />
+            </NuxtLink>
+            <NuxtLink to="/features/auto-responder">
+              <NavItem navName="Auto Responder" />
+            </NuxtLink>
+            <NuxtLink to="/features/integration">
+              <NavItem navName="Integration" />
+            </NuxtLink>
+            <NuxtLink to="/features/spam-protection">
+              <NavItem navName="Spam Protection" />
+            </NuxtLink>
+          </div>
+        </li>
+        <NuxtLink to="/pricing">
+          <NavItem navName="Pricing" />
+        </NuxtLink>
+        <li>
+          <a
+            href="https://app.formester.com/users/sign_in"
+            class="nav__link nav__button"
+            >Sign in</a
+          >
+        </li>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
 </template>
 
 <script>
@@ -74,6 +65,10 @@ export default {
 </script>
 
 <style scoped>
+a.nuxt-link-exact-active {
+  font-weight: 700;
+}
+
 .nav__container {
   height: 75px;
   background-color: var(--clr-bg);

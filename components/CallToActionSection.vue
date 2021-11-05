@@ -4,11 +4,12 @@
       <div class="row">
         <div class="col-md-12">
           <div class="call-to-action-content text-center mx-2 my-5">
-            <h2 class="section__heading">Create a <span class="hglt">Formester</span> Account</h2>
+            <h2 class="section__heading">
+              Create a <span class="hglt">Formester</span> Account
+            </h2>
             <p class="cta-bullets">
-              No credit card is required.  
-              The basic plan is always free.
-              Take your data with you, no lock-in.
+              No credit card is required. The basic plan is always free. Take
+              your data with you, no lock-in.
             </p>
             <!-- <ul class="cta-bullets">
               <li>No credit card is required</li>
@@ -16,7 +17,9 @@
               <li>Take your data with you, no lock-in</li>
             </ul> -->
             <div class="mt-5">
-              <a href="/signup" class="button cta-button">Register Now</a>
+              <a href="/auth/register" class="button cta-button"
+                >Register Now</a
+              >
             </div>
           </div>
         </div>
