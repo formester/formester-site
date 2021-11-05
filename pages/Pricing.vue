@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Nav />
     <div class="text-center mt-5">
       <h4 class="pricing__heading">Pricing that feels just right</h4>
       <h6 class="pricing__subheading">Start with our free plan</h6>
@@ -19,18 +18,16 @@
       <PricingComparision />
       <Faq />
     </div>
-    <Footer />
   </div>
 </template>
 
 <script>
 import PricingCard from '../components/pricing/PricingCard.vue'
-import Footer from '../components/Footer.vue'
 import PricingComparision from '../components/pricing/PricingComparision.vue'
 import Faq from '../components/pricing/Faq.vue'
 
 export default {
-  components: { PricingCard, Footer, PricingComparision, Faq },
+  components: { PricingCard, PricingComparision, Faq },
   data: function () {
     return {
       features1: [
@@ -61,5 +58,4 @@ export default {
   font-size: var(--ft-bigger-body);
   font-weight: 600;
 }
-
 </style>

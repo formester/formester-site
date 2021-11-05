@@ -38,6 +38,7 @@
 import AuthContainer from '../../components/auth/AuthContainer.vue'
 
 export default {
+  layout: 'auth',
   components: { AuthContainer },
 }
 </script>
