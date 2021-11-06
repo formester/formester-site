@@ -67,6 +67,32 @@ a:hover {
   border: none;
 }
 
+.hero__button {
+  background-color: var(--clr-primary);
+  font-size: var(--ft-lg-btn);
+  padding: 1em 2em;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+}
+
+.hero__button:hover {
+  color: white;
+  opacity: 0.9;
+}
+
+.hero__invert__button {
+  background-color: white;
+  font-weight: 700;
+  padding: 1em 2em;
+  border-radius: 8px;
+  color: var(--clr-primary);
+}
+
+.hero__invert__button:hover {
+  background: rgb(248, 240, 253);
+}
+
 .container {
   padding: 0 3em;
 }

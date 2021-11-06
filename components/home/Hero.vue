@@ -17,9 +17,14 @@
             <span class="hglight">Form</span> Solution For Your Business
           </h1>
           <p class="hero__subheading mt-3">
-            Build forms in minutes using our drag and drop builder or integrate with your existing HTML form.
+            Build forms in minutes using our drag and drop builder or integrate
+            with your existing HTML form.
           </p>
-          <a href="https://app.formester.com/users/sign_up" class="button hero__button mt-4">Create Your Form</a>
+          <a
+            href="https://app.formester.com/users/sign_up"
+            class="button hero__button mt-4"
+            >Create Your Form</a
+          >
         </div>
         <div
           class="
@@ -46,7 +51,6 @@ export default {}
 </script>
 
 <style scoped>
-
 .hero__heading {
   font-size: var(--ft-big-heading);
   font-weight: 700;
@@ -57,19 +61,4 @@ export default {}
   font-size: var(--ft-big-body);
   line-height: 30px;
 }
-
-.hero__button {
-  background-color: var(--clr-primary);
-  font-size: var(--ft-lg-btn);
-  padding: 1em 2em;
-  border-radius: 8px;
-  color: white;
-  font-weight: 700;
-}
-
-.hero__button:hover {
-  color: white;
-  opacity: 0.9;
-}
-
 </style>

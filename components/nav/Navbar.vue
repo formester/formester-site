@@ -1,7 +1,9 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <NuxtLink class="navbar-brand" to="/">Formester</NuxtLink>
+      <NuxtLink class="navbar-brand" to="/">
+        <img src="@/assets/images/logo.svg" alt="Fromester" />
+      </NuxtLink>
       <button
         class="navbar-toggler"
         type="button"
@@ -50,7 +52,6 @@
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
-              href="#"
               id="navbarDropdown"
               role="button"
               data-bs-toggle="dropdown"
@@ -65,18 +66,18 @@
                 >
               </li>
               <li>
-                <NuxtLink class="dropdown-item" to="/features/html-forms"
-                  >Html Forms</NuxtLink
-                >
-              </li>
-              <li>
-                <NuxtLink class="dropdown-item" to="/features/integration"
-                  >Integration</NuxtLink
+                <NuxtLink class="dropdown-item" to="/features/easy-web-forms"
+                  >Easy Web Forms</NuxtLink
                 >
               </li>
               <li>
                 <NuxtLink class="dropdown-item" to="/features/spam-protection"
                   >Spam Protection</NuxtLink
+                >
+              </li>
+              <li>
+                <NuxtLink class="dropdown-item" to="/features/integration"
+                  >Integration</NuxtLink
                 >
               </li>
             </ul>
