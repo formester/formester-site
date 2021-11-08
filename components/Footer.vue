@@ -2,8 +2,8 @@
   <footer>
     <div class="footer__container text-center">
       <div class="footer__logo">
-        <img src="../assets/images/logo-light.svg" alt="Formester">
-        </div>
+        <img src="../assets/images/logo-light.svg" alt="Formester" />
+      </div>
       <ul
         class="
           footer__items
@@ -18,8 +18,8 @@
         <!-- <li><nuxt-link to="/template" class="footer__link ms-md-3">Template</nuxt-link></li> -->
         <!-- <li><nuxt-link to="/pricing" class="footer__link ms-md-3">Pricing</nuxt-link></li> -->
         <!-- <li><nuxt-link to="/contact" class="footer__link ms-md-3">Contact</nuxt-link></li> -->
-        <li><nuxt-link to="/terms" class="footer__link ms-md-3">Terms</nuxt-link></li>
-        <li><nuxt-link to="/privacy-policy" class="footer__link ms-md-3">Privacy Policy</nuxt-link></li>
+        <!-- <li><nuxt-link to="/terms" class="footer__link ms-md-3">Terms</nuxt-link></li> -->
+        <!-- <li><nuxt-link to="/privacy-policy" class="footer__link ms-md-3">Privacy Policy</nuxt-link></li> -->
       </ul>
       <div class="socials mt-3">
         <a href="" class="mx-1"
