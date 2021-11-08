@@ -43,9 +43,9 @@
     </div>
     <div class="container py-5">
       <div class="row py-5">
-        <div class="col-md-6">
+        <div class="col-md-6 my-3">
           <img
-            src="@/assets/images/features/one click re-captcha illus.png"
+            src="@/assets/images/features/one-click-re-captcha-illus.png"
             alt=""
             class="img-fluid"
           />
@@ -56,9 +56,9 @@
             verified as humans
           </p>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 my-3">
           <img
-            src="@/assets/images/features/custom re-captcha illus.png"
+            src="@/assets/images/features/custom-re-captcha-illus.png"
             alt=""
             class="img-fluid"
           />
@@ -69,9 +69,9 @@
             give enough control for those who need it.
           </p>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 my-3">
           <img
-            src="@/assets/images/features/smart filters illus.png"
+            src="@/assets/images/features/smart-filters-illus.png"
             alt=""
             class="img-fluid"
           />
@@ -108,5 +108,6 @@ export default {}
 .feature__heading {
   font-size: 2.25rem;
   line-height: 44px;
+  font-weight: 700;
 }
 </style>

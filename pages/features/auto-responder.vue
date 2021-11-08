@@ -48,52 +48,52 @@
     </div>
     <div class="container py-5">
       <div class="row py-5">
-        <div class="col-md-6">
+        <div class="col-md-6 my-3">
           <img
             src="@/assets/images/features/white-label-illus.png"
-            alt=""
+            alt="White-Label"
             class="img-fluid"
           />
-          <h5 class="text-center feature__heading">White Label</h5>
+          <h5 class="feature__heading">White Label</h5>
           <p>
             We make your email look humane. All emails are delivered using your
             official email address. Look more professional without all the
             hassles.
           </p>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 my-3">
           <img
             src="@/assets/images/features/easy-email-builder-illus.png"
             alt=""
             class="img-fluid"
           />
-          <h5 class="text-center feature__heading">Easy Email Builder</h5>
+          <h5 class="feature__heading">Easy Email Builder</h5>
           <p>
             Creating beautiful response has never been simpler. Our easy to use
             editor enables you to write powerful content. Add images, links or
             videos in a matter of click.
           </p>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 my-3">
           <img
             src="@/assets/images/features/personalised-response-illus.png"
             alt=""
             class="img-fluid"
           />
-          <h5 class="text-center feature__heading">Personalised Response</h5>
+          <h5 class="feature__heading">Personalised Response</h5>
           <p>
             Getting attention is difficult as every brand fights for users
             attention. Personalisation can increase your chance of engaging
             users. Use fields from your form to make your email more relevant.
           </p>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 my-3">
           <img
             src="@/assets/images/features/realtime-tracking-illus.png"
             alt=""
             class="img-fluid"
           />
-          <h5 class="text-center feature__heading">Realtime Tracking</h5>
+          <h5 class="feature__heading">Realtime Tracking</h5>
           <p>
             Monitor how people are reacting to your response. Analyse useful
             metrics like open rate and link clicks to get insights into users
@@ -126,5 +126,6 @@ export default {}
 .feature__heading {
   font-size: 2.25rem;
   line-height: 44px;
+  font-weight: 700;
 }
 </style>
