@@ -43,44 +43,12 @@
     </div>
     <div class="container py-5">
       <div class="row py-5">
-        <div class="col-md-6 my-3">
-          <img
-            src="@/assets/images/features/one-click-re-captcha-illus.png"
-            alt=""
-            class="img-fluid"
-          />
-          <h5 class="text-center feature__heading">One Click Re-Captcha</h5>
-          <p>
-            With our one-click ReCaptcha feature, prevent spam in under 2
-            minutes. Send user to a clean page on formester where they are
-            verified as humans
-          </p>
-        </div>
-        <div class="col-md-6 my-3">
-          <img
-            src="@/assets/images/features/custom-re-captcha-illus.png"
-            alt=""
-            class="img-fluid"
-          />
-          <h5 class="text-center feature__heading">Custom Re-Captcha</h5>
-          <p>
-            Keep user on the same page and increase the chance of the
-            conversion. Our philosophy has always been to keep things simple but
-            give enough control for those who need it.
-          </p>
-        </div>
-        <div class="col-md-6 my-3">
-          <img
-            src="@/assets/images/features/smart-filters-illus.png"
-            alt=""
-            class="img-fluid"
-          />
-          <h5 class="text-center feature__heading">Smart Filters</h5>
-          <p>
-            Our database is getting smarter each day. We use machine learning to
-            predict spam submissions. Your every form will improve our
-            prediction.
-          </p>
+        <div
+          class="col-md-6 my-3"
+          v-for="feature in features"
+          :key="feature.id"
+        >
+          <FeatureDetail :feature="feature" />
         </div>
       </div>
     </div>
@@ -88,26 +56,44 @@
 </template>
 
 <script>
-export default {}
+import FeatureDetail from '../../components/FeatureDetail.vue'
+
+export default {
+  components: { FeatureDetail },
+  data() {
+    return {
+      features: [
+        {
+          id: 0,
+          title: 'One Click Re-Captcha',
+          description:
+            'With our one-click ReCaptcha feature, prevent spam in under minutes. Send user to a clean page on formester where they are verified as humans',
+          src: 'one-click-re-captcha-illus.png',
+        },
+        {
+          id: 1,
+          title: 'Custom Re-Captcha',
+          description:
+            'Keep user on the same page and increase the chance of the conversion. Our philosophy has always been to keep things simple but give enough control for those who need it.',
+          src: 'custom-re-captcha-illus.png',
+        },
+        {
+          id: 2,
+          title: 'Smart Filters',
+          description:
+            'Our database is getting smarter each day. We use machine learning to predict spam submissions. Your every form will improve our prediction.',
+          src: 'smart-filters-illus.png',
+        },
+      ],
+    }
+  },
+}
 </script>
 
 <style scoped>
-/* .pr__button {
-  background-color: var(--clr-primary);
-  font-weight: 600;
-  padding: 8px 16px;
-  border-radius: 8px;
-  color: white;
-} */
-
 .feature__hero {
   padding: 8em 0;
   background: var(--clr-primary);
   color: white;
-}
-.feature__heading {
-  font-size: 2.25rem;
-  line-height: 44px;
-  font-weight: 700;
 }
 </style>
