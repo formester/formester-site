@@ -22,7 +22,7 @@
         <NuxtLink to="/">
           <NavItem navName="Home" />
         </NuxtLink>
-        <li class="dropdown">
+        <!-- <li class="dropdown">
           <a class="dropbtn">Features</a>
           <input type="checkbox" id="dropdown__input" class="dropdown__input" />
           <div class="dropdown__content">
@@ -39,7 +39,7 @@
               <NavItem navName="Spam Protection" />
             </NuxtLink>
           </div>
-        </li>
+        </li> -->
         <NuxtLink to="/pricing">
           <NavItem navName="Pricing" />
         </NuxtLink>
@@ -109,7 +109,7 @@ a.nuxt-link-exact-active {
   display: none;
   font-size: 1.6rem;
   cursor: pointer;
-}
+} 
 
 .nav__container #check {
   display: none;
@@ -117,7 +117,7 @@ a.nuxt-link-exact-active {
 
 /* DROPDOWN */
 
-.dropbtn {
+/* .dropbtn {
   background-color: var(--clr-bg);
   font-weight: 500;
 }
@@ -151,7 +151,7 @@ a.nuxt-link-exact-active {
 .dropdown__label,
 .dropdown__input {
   display: none;
-}
+} */
 
 @media screen and (max-width: 991px) {
   .nav__items {
@@ -185,7 +185,7 @@ a.nuxt-link-exact-active {
     font-weight: 600;
   }
 
-  .dropbtn {
+  /* .dropbtn {
     display: none;
   }
 
@@ -209,6 +209,6 @@ a.nuxt-link-exact-active {
     padding: 1em 0;
     font-size: 1.4rem;
     font-weight: 600;
-  }
+  } */
 }
 </style>

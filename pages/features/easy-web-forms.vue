@@ -42,59 +42,8 @@
     </div>
     <div class="container py-5">
       <div class="row py-5">
-        <div class="col-md-6 my-3">
-          <img
-            src="@/assets/images/features/control-illus.png"
-            alt=""
-            class="img-fluid"
-          />
-          <h5 class="feature__heading">Complete Control</h5>
-          <p>
-            Never worry about your form not looking perfect like your website.
-            With Formester you have everything under control. Style the forms
-            and make it look the way you want it. No embedding or JavaScript
-            required.
-          </p>
-        </div>
-        <div class="col-md-6 my-3">
-          <img
-            src="@/assets/images/features/embedding-illus.png"
-            alt=""
-            class="img-fluid"
-          />
-          <h5 class="feature__heading">Easy Embedding</h5>
-          <p>
-            If you are looking a form that just works out of the box, Formester
-            is for you. Just copy our snippet and get started. It takes less
-            than 5 minutes to make a working form on your website.
-          </p>
-        </div>
-        <div class="col-md-6 my-3">
-          <img
-            src="@/assets/images/features/notification.png"
-            alt=""
-            class="img-fluid"
-          />
-          <h5 class="feature__heading">Realtime Notification</h5>
-          <p>
-            Get a real-time notification on form submission. Stay on top of your
-            business. You can configure Formester to notify you on Slack, Gmail
-            or anywhere else.
-          </p>
-        </div>
-        <div class="col-md-6 my-3">
-          <img
-            src="@/assets/images/features/export-illus.png"
-            alt=""
-            class="img-fluid"
-          />
-          <h5 class="feature__heading">Export/Import</h5>
-          <p>
-            You own your data. We offer zero friction data import and export. If
-            you decide to move on you can take everything with you. We also
-            offer guided migration from other tools. Our team will do the work
-            for you.
-          </p>
+        <div class="col-md-6 my-3" v-for="feature in features" :key="feature.id">
+          <FeatureDetail :feature="feature" />
         </div>
       </div>
     </div>
@@ -102,7 +51,40 @@
 </template>
 
 <script>
-export default {}
+import FeatureDetail from '../../components/FeatureDetail.vue'
+
+export default {
+  data() {
+    return {
+      features: [
+        {
+          id: 0,
+          title: 'Complete Control',
+          description: 'Never worry about your form not looking perfect like your website. With Formester you have everything under control. Style the forms and make it look the way you want it. No embedding or JavaScript required.',
+          src: 'control-illus.png',
+        },
+        {
+          id: 1,
+          title: 'Easy Embedding',
+          description: 'If you are looking a form that just works out of the box, Formester is for you. Just copy our snippet and get started. It takes less than 5 minutes to make a working form on your website.',
+          src: 'embedding-illus.png',
+        },
+        {
+          id: 2,
+          title: 'Realtime Notification',
+          description: 'Get a real-time notification on form submission. Stay on top of your business. You can configure Formester to notify you on Slack, Gmail or anywhere else.',
+          src: 'notification.png',
+        },
+        {
+          id: 3,
+          title: 'Export/Import',
+          description: 'You own your data. We offer zero friction data import and export. If you decide to move on you can take everything with you. We also offer guided migration from other tools. Our team will do the work for you.',
+          src: 'export-illus.png',
+        },
+      ]
+    }
+  }
+}
 </script>
 
 <style scoped>
