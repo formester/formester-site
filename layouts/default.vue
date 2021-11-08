@@ -1,19 +1,19 @@
 <template>
   <div>
-    <!-- <Navbar /> -->
-    <Nav />
+    <Navbar />
+    <!-- <Nav /> -->
     <Nuxt />
     <Footer />
   </div>
 </template>
 
 <script>
-import Nav from '../components/nav/Nav.vue'
 import Navbar from '../components/nav/Navbar.vue'
+import Navbar2 from '../components/nav/Navbar2.vue'
 import Footer from '../components/Footer.vue'
 
 export default {
-  components: { Nav, Footer, Navbar },
+  components: { Footer, Navbar },
 }
 </script>
 
