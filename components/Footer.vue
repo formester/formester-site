@@ -14,22 +14,22 @@
           mt-4
         "
       >
-        <!-- <li><nuxt-link to="/" class="footer__link ms-md-3">Features</nuxt-link></li> -->
-        <!-- <li><nuxt-link to="/template" class="footer__link ms-md-3">Template</nuxt-link></li> -->
-        <!-- <li><nuxt-link to="/pricing" class="footer__link ms-md-3">Pricing</nuxt-link></li> -->
-        <!-- <li><nuxt-link to="/contact" class="footer__link ms-md-3">Contact</nuxt-link></li> -->
-        <!-- <li><nuxt-link to="/terms" class="footer__link ms-md-3">Terms</nuxt-link></li> -->
-        <!-- <li><nuxt-link to="/privacy-policy" class="footer__link ms-md-3">Privacy Policy</nuxt-link></li> -->
+        <li class="mx-3">Features</li>
+        <li class="mx-3">Template</li>
+        <li class="mx-3">Pricing</li>
+        <li class="mx-3">Contact</li>
+        <li class="mx-3">Terms</li>
+        <li class="mx-3">Privacy Policy</li>
       </ul>
       <div class="socials mt-3">
-        <a href="" class="mx-1"
-          ><img src="assets/socials/Social Icons.png" alt=""
+        <a href="#" class="mx-1"
+          ><img src="@/assets/images/social/instagram.svg" alt=""
         /></a>
-        <a href="" class="mx-1"
-          ><img src="assets/socials/Social Icons-1.png" alt=""
+        <a href="#" class="mx-1"
+          ><img src="@/assets/images/social/twitter.svg" alt=""
         /></a>
-        <a href="" class="mx-1"
-          ><img src="assets/socials/Social Icons-2.png" alt=""
+        <a href="#" class="mx-1"
+          ><img src="@/assets/images/social/youtube.svg" alt=""
         /></a>
       </div>
       <div class="divider mt-4"></div>

@@ -2,9 +2,9 @@
   <div>
     <Hero />
     <HowItWorks />
-    <!-- <Features /> -->
+    <Features />
     <Testimonials />
-    <!-- <OtherSection /> -->
+    <OtherSection />
     <CallToActionSection />
   </div>
 </template>

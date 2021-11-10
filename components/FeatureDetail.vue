@@ -1,6 +1,9 @@
 <template>
   <div class="px-5">
-    <img :src="require(`../assets/images/features/${feature.src}`)" class="img-fluid" />
+    <img
+      :src="require(`../assets/images/features/${feature.src}`)"
+      class="img-fluid"
+    />
     <h5 class="feature__heading">{{ feature.title }}</h5>
     <p>
       {{ feature.description }}

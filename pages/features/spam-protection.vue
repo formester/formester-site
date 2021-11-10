@@ -22,6 +22,11 @@
               Do all this while not looking like a bot. We guarantee to make you
               look human.
             </p>
+            <a
+              href="https://app.formester.com/users/sign_up"
+              class="hero__invert__button mt-4"
+              >Create Your Form</a
+            >
           </div>
           <div
             class="
@@ -43,13 +48,13 @@
     </div>
     <div class="container py-5">
       <div class="row py-5">
-        <div
+        <FeatureDetail
+          :feature="feature"
           class="col-md-6 my-3"
+          :class="{ 'mx-auto': feature.isCenter }"
           v-for="feature in features"
-          :key="feature.id"
-        >
-          <FeatureDetail :feature="feature" />
-        </div>
+          :key="feature.title"
+        />
       </div>
     </div>
   </div>
@@ -64,25 +69,23 @@ export default {
     return {
       features: [
         {
-          id: 0,
           title: 'One Click Re-Captcha',
           description:
             'With our one-click ReCaptcha feature, prevent spam in under minutes. Send user to a clean page on formester where they are verified as humans',
           src: 'one-click-re-captcha-illus.png',
         },
         {
-          id: 1,
           title: 'Custom Re-Captcha',
           description:
             'Keep user on the same page and increase the chance of the conversion. Our philosophy has always been to keep things simple but give enough control for those who need it.',
           src: 'custom-re-captcha-illus.png',
         },
         {
-          id: 2,
           title: 'Smart Filters',
           description:
             'Our database is getting smarter each day. We use machine learning to predict spam submissions. Your every form will improve our prediction.',
           src: 'smart-filters-illus.png',
+          isCenter: true,
         },
       ],
     }
