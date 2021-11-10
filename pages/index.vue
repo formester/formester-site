@@ -1,9 +1,9 @@
 <template>
   <div>
     <Hero />
-    <HowItWorks />
-    <Features />
+    <!-- <Features /> -->
     <Testimonials />
+    <HowItWorks />
     <OtherSection />
     <CallToActionSection />
   </div>
