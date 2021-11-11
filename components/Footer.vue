@@ -16,8 +16,10 @@
       >
         <li class="mx-3">Features</li>
         <li class="mx-3">Template</li>
-        <li class="mx-3">Pricing</li>
-        <li class="mx-3">Contact</li>
+        <NuxtLink to="/pricing">
+          <li class="mx-3 footer__link">Pricing</li>
+        </NuxtLink>
+        <li class="mx-3">Contact us</li>
         <li class="mx-3">Terms</li>
         <li class="mx-3">Privacy Policy</li>
       </ul>
