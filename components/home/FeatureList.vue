@@ -1,5 +1,9 @@
 <template>
-  <div class="container">
+  <div class="container mt-3">
+    <h3 class="text-center">FEATURES</h3>
+    <h1 class="text-center section__heading">
+      Services We <span class="hglt">Provide</span>
+    </h1>
     <div class="row my-2">
       <FeatureCard
         v-for="feature in features"
