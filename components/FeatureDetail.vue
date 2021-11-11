@@ -25,16 +25,6 @@ export default {
   font-weight: 700;
 }
 
-/* img {
-  padding: 0 2em 2em 4em;
-}
-
-@media (max-width: 1200px) {
-  img {
-    padding-bottom: 3em;
-  }
-} */
-
 img {
   padding-bottom: 2em;
 }
