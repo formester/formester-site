@@ -14,14 +14,16 @@
           mt-4
         "
       >
-        <li class="mx-3">Features</li>
-        <li class="mx-3">Template</li>
+        <NuxtLink to="/features/easy-web-forms">
+          <li class="mx-3 footer__link">Features</li>
+        </NuxtLink>
+        <!-- <li class="mx-3">Template</li> -->
         <NuxtLink to="/pricing">
           <li class="mx-3 footer__link">Pricing</li>
         </NuxtLink>
-        <li class="mx-3">Contact us</li>
-        <li class="mx-3">Terms</li>
-        <li class="mx-3">Privacy Policy</li>
+        <!-- <li class="mx-3">Contact us</li> -->
+        <!-- <li class="mx-3">Terms</li> -->
+        <!-- <li class="mx-3">Privacy Policy</li> -->
       </ul>
       <div class="socials mt-3">
         <a href="#" class="mx-1"
