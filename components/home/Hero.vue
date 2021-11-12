@@ -61,4 +61,10 @@ export default {}
   font-size: var(--ft-big-body);
   line-height: 30px;
 }
+
+@media (max-width: 500px) {
+  .hero__heading {
+    line-height: 62px;
+  }
+}
 </style>
