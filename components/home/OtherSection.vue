@@ -1,7 +1,7 @@
 <template>
   <div class="my-5">
     <div v-for="feature in features" :key="feature.id">
-      <Section :feature="feature" /> 
+      <Section :feature="feature" />
     </div>
   </div>
 </template>
@@ -17,13 +17,15 @@ export default {
     return {
       features: [
         {
-        id: 0,
-        heading: '<span class="hglt">Powerful</span> Integration',
-        content: 'Connect your form with Slack, Google Sheets, Salesforce or anything else with our Zapier integration. Use our webhooks to notify any other app when a submission arrives.',
-        imgName: 'integration.png'
-        }
-      ]
+          id: 0,
+          heading: '<span class="hglt">Powerful</span> Integration',
+          content:
+            'Connect your form with Slack, Google Sheets, Salesforce or anything else with our Zapier integration. Use our webhooks to notify any other app when a submission arrives.',
+          imgName: 'integration.png',
+          alter: true,
+        },
+      ],
     }
-  }
+  },
 }
 </script>

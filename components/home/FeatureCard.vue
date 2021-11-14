@@ -1,12 +1,12 @@
 <template>
   <div class="px-5">
     <img
-      :src="require(`../assets/images/features/${feature.src}`)"
+      :src="require(`@/assets/images/home/${feature.imgName}`)"
       class="img-fluid"
     />
-    <h5 class="feature__heading">{{ feature.title }}</h5>
+    <h5 class="feature__heading" v-html="feature.heading"></h5>
     <p>
-      {{ feature.description }}
+      {{ feature.content }}
     </p>
   </div>
 </template>
@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
 .feature__heading {
-  font-size: 2.25rem;
+  font-size: 2rem;
   line-height: 44px;
   font-weight: 700;
 }

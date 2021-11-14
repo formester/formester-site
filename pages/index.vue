@@ -1,17 +1,17 @@
 <template>
   <div>
     <Hero />
-    <HowItWorks />
-    <!-- <Features /> -->
+    <FeatureList />
     <Testimonials />
-    <!-- <OtherSection /> -->
+    <HowItWorks />
+    <OtherSection />
     <CallToActionSection />
   </div>
 </template>
 
 <script>
 import Hero from '../components/home/Hero.vue'
-import Features from '../components/home/Features.vue'
+import FeatureList from '../components/home/FeatureList.vue'
 import Testimonials from '../components/home/Testimonials.vue'
 import HowItWorks from '../components/home/HowItWorks.vue'
 import OtherSection from '../components/home/OtherSection.vue'
@@ -19,7 +19,7 @@ import OtherSection from '../components/home/OtherSection.vue'
 export default {
   components: {
     Hero,
-    Features,
+    FeatureList,
     Testimonials,
     HowItWorks,
     OtherSection,

@@ -48,9 +48,12 @@
     </div>
     <div class="container py-5">
       <div class="row py-5">
-        <div class="col-md-6 my-3" v-for="feature in features" :key="feature.id">
-          <FeatureDetail :feature="feature" />
-        </div>
+        <FeatureDetail
+          :feature="feature"
+          class="col-md-6 my-3"
+          v-for="feature in features"
+          :key="feature.title"
+        />
       </div>
     </div>
   </div>
@@ -64,32 +67,32 @@ export default {
     return {
       features: [
         {
-         id: 0,
-         title: 'White Label',
-         description: 'We make your email look humane. All emails are delivered using your official email address. Look more professional without all the hassles.',
-         src: 'white-label-illus.png' 
+          title: 'White Label',
+          description:
+            'We make your email look humane. All emails are delivered using your official email address. Look more professional without all the hassles.',
+          src: 'white-label-illus.png',
         },
         {
-         id: 1,
-         title: 'Easy Email Builder',
-         description: 'Creating beautiful response has never been simpler. Our easy to use editor enables you to write powerful content. Add images, links or videos in a matter of click.',
-         src: 'easy-email-builder-illus.png' 
+          title: 'Easy Email Builder',
+          description:
+            'Creating beautiful response has never been simpler. Our easy to use editor enables you to write powerful content. Add images, links or videos in a matter of click.',
+          src: 'easy-email-builder-illus.png',
         },
         {
-         id: 2,
-         title: 'Personalised Response',
-         description: 'Getting attention is difficult as every brand fights for users attention. Personalisation can increase your chance of engaging users. Use fields from your form to make your email more relevant.',
-         src: 'personalised-response-illus.png' 
+          title: 'Personalised Response',
+          description:
+            'Getting attention is difficult as every brand fights for users attention. Personalisation can increase your chance of engaging users. Use fields from your form to make your email more relevant.',
+          src: 'personalised-response-illus.png',
         },
         {
-         id: 3,
-         title: 'Realtime Tracking',
-         description: 'Monitor how people are reacting to your response. Analyse useful metrics like open rate and link clicks to get insights into users behaviour. Use this data to make changes to your communication.',
-         src: 'realtime-tracking-illus.png' 
-        }
-      ]
+          title: 'Realtime Tracking',
+          description:
+            'Monitor how people are reacting to your response. Analyse useful metrics like open rate and link clicks to get insights into users behaviour. Use this data to make changes to your communication.',
+          src: 'realtime-tracking-illus.png',
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 
@@ -99,5 +102,4 @@ export default {
   background: var(--clr-primary);
   color: white;
 }
-
 </style>
