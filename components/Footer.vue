@@ -20,12 +20,9 @@
         <NuxtLink to="/features/easy-web-forms">
           <li class="mx-3 footer__link">Features</li>
         </NuxtLink>
-        <!-- <li class="mx-3">Template</li> -->
         <NuxtLink to="/pricing">
           <li class="mx-3 footer__link">Pricing</li>
         </NuxtLink>
-        <!-- <li class="mx-3">Contact us</li> -->
-        <!-- <li class="mx-3">Terms</li> -->
         <NuxtLink to="/privacy">
           <li class="mx-3 footer__link">Privacy Policy</li>
         </NuxtLink>
@@ -41,16 +38,22 @@
           href="https://instagram.com/_formester_?utm_medium=copy_link"
           class="mx-1"
           target="_blank"
-          ><img src="@/assets/images/social/instagram.svg" alt="NA"
+          ><img
+            src="@/assets/images/social/instagram.svg"
+            alt="Fomester instagram page"
         /></a>
         <a
           href="https://twitter.com/_Formester_?t=-m1pNwXvxR6KOf9kfPi9lQ&s=09"
           class="mx-1"
           target="_blank"
-          ><img src="@/assets/images/social/twitter.svg" alt="NA"
+          ><img
+            src="@/assets/images/social/twitter.svg"
+            alt="Formester twitter page"
         /></a>
         <a href="#" class="mx-1" target="_blank"
-          ><img src="@/assets/images/social/youtube.svg" alt="NA"
+          ><img
+            src="@/assets/images/social/youtube.svg"
+            alt="Formester youtube page"
         /></a>
       </div>
       <div class="divider mt-4"></div>

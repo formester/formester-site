@@ -8,11 +8,6 @@
             <h4 class="section__heading">
               <span class="hglt">Register with us Now.</span>
             </h4>
-            <!-- <div class="mt-5">
-              <a href="/auth/register" class="button cta-button"
-                >Register Now</a
-              >
-            </div> -->
             <div class="mt-5">
               <div class="d-inline p-2 mx-2">
                 <a
