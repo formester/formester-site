@@ -16,18 +16,20 @@
         <PricingCard category="Business" :amount="49" :features="features3" />
       </div>
       <PricingComparision />
+      <CallToActionSection />
       <Faq />
     </div>
   </div>
 </template>
 
 <script>
+import CallToActionSection from '@/components/CallToActionSection.vue'
 import PricingCard from '../components/pricing/PricingCard.vue'
 import PricingComparision from '../components/pricing/PricingComparision.vue'
 import Faq from '../components/pricing/Faq.vue'
 
 export default {
-  components: { PricingCard, PricingComparision, Faq },
+  components: { PricingCard, PricingComparision, Faq, CallToActionSection },
   data: function () {
     return {
       features1: [
