@@ -13,7 +13,7 @@
             position-relative
            "
         >
-          <h3 class="section__heading">Testimonials</h3>
+          <h2 class="section__heading">Testimonials</h2>
           <p class="mt-3">
             Here’s what some of our happy customer have to say about us!
           </p>

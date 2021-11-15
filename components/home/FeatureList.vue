@@ -1,9 +1,9 @@
 <template>
   <div class="container mt-3">
-    <h3 class="text-center">FEATURES</h3>
-    <h1 class="text-center section__heading">
+    <div class="text-center features">FEATURES</div>
+    <h2 class="text-center section__heading">
       Services We <span class="hglt">Provide</span>
-    </h1>
+    </h2>
     <div class="row my-2">
       <FeatureCard
         v-for="feature in features"
@@ -62,6 +62,11 @@ export default {
 </script>
 
 <style>
+.features {
+  font-size: calc(1.3rem + .6vw);
+  font-weight: 500;
+  line-height: 1.2;
+}
 .hglt {
   color: var(--clr-primary);
 }

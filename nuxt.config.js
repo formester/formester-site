@@ -8,7 +8,49 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Form solution for your business that is easy to work for everyone' },
+      { 
+        hid: 'og:title', 
+        name: 'og:title', 
+        content: 'Formester' 
+      },
+      { 
+        hid: 'twitter:title', 
+        name: 'twitter:title', 
+        content: 'Formester' 
+      },
+      { 
+        hid: 'og:site_name', 
+        name: 'og:site_name', 
+        content: 'Formester' 
+      },
+      { 
+        hid: 'apple-mobile-web-app-title', 
+        name: 'apple-mobile-web-app-title', 
+        content: 'Formester' 
+      },
+      { 
+        hid: 'description', 
+        name: 'description', 
+        content: 'Form solution for your business that is easy to use. Formester provides an interactive drag and drop builder to create amazing survey forms.' 
+      },
+      { 
+        hid: 'og:description', 
+        name: 'og:description', 
+        content: 'Form solution for your business that is easy to use. Formester provides an interactive drag and drop builder to create amazing survey forms.' 
+      },
+      { 
+        hid: 'twitter:description', 
+        name: 'twitter:description', 
+        content: 'Form solution for your business that is easy to use. Formester provides an interactive drag and drop builder to create amazing survey forms.' 
+      },
+      { 
+        name: 'twitter:site', 
+        content: '_formester_' 
+      },
+      { 
+        name: 'robots', 
+        content: 'index, follow' 
+      },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [

@@ -5,7 +5,7 @@
       class="img-fluid"
       :alt="feature.alt"
     />
-    <h5 class="feature__heading" v-html="feature.heading"></h5>
+    <h3 class="feature__heading" v-html="feature.heading"></h3>
     <p>
       {{ feature.content }}
     </p>
