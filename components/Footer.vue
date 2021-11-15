@@ -37,14 +37,20 @@
         </a>
       </ul>
       <div class="socials mt-3">
-        <a href="#" class="mx-1"
-          ><img src="@/assets/images/social/instagram.svg" alt=""
+        <a
+          href="https://instagram.com/_formester_?utm_medium=copy_link"
+          class="mx-1"
+          target="_blank"
+          ><img src="@/assets/images/social/instagram.svg" alt="NA"
         /></a>
-        <a href="#" class="mx-1"
-          ><img src="@/assets/images/social/twitter.svg" alt=""
+        <a
+          href="https://twitter.com/_Formester_?t=-m1pNwXvxR6KOf9kfPi9lQ&s=09"
+          class="mx-1"
+          target="_blank"
+          ><img src="@/assets/images/social/twitter.svg" alt="NA"
         /></a>
-        <a href="#" class="mx-1"
-          ><img src="@/assets/images/social/youtube.svg" alt=""
+        <a href="#" class="mx-1" target="_blank"
+          ><img src="@/assets/images/social/youtube.svg" alt="NA"
         /></a>
       </div>
       <div class="divider mt-4"></div>
