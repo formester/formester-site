@@ -57,12 +57,17 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap' }
     ],
-      // Custom Javascript
-  script: [
-    {
-      src: '/bootstrap.min.js',
-    },
-  ],
+    // Custom Javascript
+    script: [
+      {
+        src: '/bootstrap.min.js',
+      },
+    ],
+  },
+
+  robots: {
+    UserAgent: '*',
+    Disallow: '/'
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -85,6 +90,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/robots',
     // https://go.nuxtjs.dev/bootstrap
     // 'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
