@@ -57,14 +57,16 @@
         />
       </div>
     </div>
+    <CallToActionSection />
   </div>
 </template>
 
 <script>
+import CallToActionSection from '@/components/CallToActionSection.vue'
 import FeatureDetail from '../../components/FeatureDetail.vue'
 
 export default {
-  components: { FeatureDetail },
+  components: { FeatureDetail, CallToActionSection },
   data() {
     return {
       features: [
