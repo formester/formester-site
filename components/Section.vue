@@ -16,7 +16,7 @@
         <p class="mt-3">
           {{ feature.content }}
         </p>
-        <a href="" class="feature__button">Learn more</a>
+        <a v-if="feature.link" href="" class="feature__button">Learn more</a>
       </div>
       <div class="col-md-6 d-flex justify-content-center mt-md-0 mt-5">
         <img
