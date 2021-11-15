@@ -55,8 +55,15 @@
         <li>
           <a
             href="https://app.formester.com/users/sign_in"
-            class="nav__link nav__button"
+            class="nav__link nav__outline__button"
             >Sign in</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://app.formester.com/users/sign_up"
+            class="nav__link nav__button"
+            >Sign up</a
           >
         </li>
       </div>
@@ -112,6 +119,14 @@ a.nuxt-link-exact-active {
 .nav__button:hover {
   opacity: 0.9;
   color: white;
+}
+
+.nav__outline__button {
+  background-color: #eee8ff;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: var(--clr-primary);
 }
 
 .menu__btn i {

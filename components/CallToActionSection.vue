@@ -23,7 +23,9 @@
                 >
               </div>
               <div class="d-inline p-2 mx-2">
-                <a href="#" class="button cta-button__invert">Contact Us</a>
+                <NuxtLink to="/contact" class="button cta-button__invert"
+                  >Contact Us</NuxtLink
+                >
               </div>
             </div>
           </div>

@@ -13,7 +13,11 @@
         {{ feature }}
       </li>
     </ul>
-    <button class="button pricing__button">Get Started</button>
+    <a
+      class="button pricing__button d-block"
+      href="https://app.formester.com/users/sign_up"
+      >Get Started</a
+    >
   </div>
 </template>
 
