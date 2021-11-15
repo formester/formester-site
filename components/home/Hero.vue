@@ -37,7 +37,7 @@
         >
           <img
             src="@/assets/images/hero-image.png"
-            alt="Hero-Image"
+            alt="Formester form building with drag and drop interface"
             class="img-fluid hero__image"
           />
         </div>

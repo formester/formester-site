@@ -33,7 +33,7 @@
           <li class="mx-3 footer__link">Support Us</li>
         </a>
       </ul>
-      <div class="socials mt-3">
+      <div class="socials mt-4">
         <a
           href="https://instagram.com/_formester_?utm_medium=copy_link"
           class="mx-1"
@@ -57,7 +57,7 @@
         /></a>
       </div>
       <div class="divider mt-4"></div>
-      <div class="d-flex justify-content-center mt-3">
+      <div class="copyright d-flex justify-content-center mt-3">
         © 2021 Acorn Globus. All rights reserved
       </div>
     </div>
@@ -91,6 +91,7 @@ ul {
 }
 
 .footer__link {
+  font-size: 14px;
   color: var(--clr-primary-light);
 }
 
@@ -103,5 +104,9 @@ ul {
   background-color: rgba(146, 146, 146, 0.2);
   height: 2px;
   margin: auto;
+}
+
+.copyright {
+  font-size: 14px;
 }
 </style>

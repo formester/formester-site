@@ -3,6 +3,7 @@
     <img
       :src="require(`@/assets/images/home/${feature.imgName}`)"
       class="img-fluid"
+      :alt="feature.alt"
     />
     <h5 class="feature__heading" v-html="feature.heading"></h5>
     <p>
