@@ -70,6 +70,10 @@ export default {
     Disallow: '/'
   },
 
+  sitemap: {
+    hostname: 'https://www.formester.com',
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '~/assets/css/bootstrap.min.css',
