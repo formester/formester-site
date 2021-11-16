@@ -90,6 +90,9 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-99986844-1'
+    }]
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
