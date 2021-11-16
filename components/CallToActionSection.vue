@@ -8,11 +8,6 @@
             <h4 class="section__heading">
               <span class="hglt">Register with us Now.</span>
             </h4>
-            <!-- <div class="mt-5">
-              <a href="/auth/register" class="button cta-button"
-                >Register Now</a
-              >
-            </div> -->
             <div class="mt-5">
               <div class="d-inline p-2 mx-2">
                 <a
@@ -23,7 +18,9 @@
                 >
               </div>
               <div class="d-inline p-2 mx-2">
-                <a href="#" class="button cta-button__invert">Contact Us</a>
+                <NuxtLink to="/contact" class="button cta-button__invert"
+                  >Contact Us</NuxtLink
+                >
               </div>
             </div>
             <img src="@/assets/images/plane.png" alt="NA" class="plane position-absolute">

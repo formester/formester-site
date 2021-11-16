@@ -79,10 +79,6 @@ export default {
   border-radius: var(--brd-df-rd);
 }
 
-.auth__bottom {
-  font-size: var(--ft-small-body);
-}
-
 .auth__bottom a {
   text-decoration: underline;
 }
