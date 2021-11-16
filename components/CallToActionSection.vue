@@ -23,7 +23,7 @@
                 >
               </div>
             </div>
-            <img src="@/assets/images/plane.png" alt="NA" class="plane position-absolute">
+            <img src="@/assets/images/plane.png" alt="plane image on call to action section" class="plane position-absolute">
           </div>
         </div>
       </div>
