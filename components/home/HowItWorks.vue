@@ -1,6 +1,6 @@
 <template>
   <section class="how-it-works container">
-    <h3 class="section__heading text-center">How it <span>works</span></h3>
+    <h2 class="section__heading text-center">How it <span>works</span></h2>
     <div class="row text-start mt-5">
       <div
         v-for="step in steps"

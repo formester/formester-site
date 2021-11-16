@@ -13,11 +13,11 @@
             position-relative
            "
         >
-          <h3 class="section__heading">Testimonials</h3>
+          <h2 class="section__heading">Testimonials</h2>
           <p class="mt-3">
             Here’s what some of our happy customer have to say about us!
           </p>
-          <img src="~/assets/images/home/testimonials-heading-bg.png" alt="NA" class="position-absolute testimonials-heading-bg">
+          <img src="~/assets/images/home/testimonials-heading-bg.png" alt="Testimonial background vector image" class="position-absolute testimonials-heading-bg">
         </div>
         <div class="col-lg-6 position-relative">
          <div class="d-flex flex-column">
@@ -30,7 +30,7 @@
            </span>
            <img src="~/assets/images/tedx.png" alt="Tedx Paris Organizer" height="35" width="110" class="mt-3">
          </div>
-         <img src="~/assets/images/quotes.svg" alt="NA" class="quotes">
+         <img src="~/assets/images/quotes.svg" alt="Quotes background image" class="quotes">
         </div>
       </div>
     </div>
