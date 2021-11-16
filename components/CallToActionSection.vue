@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="call-to-action-content text-center mx-2 my-5">
+          <div class="call-to-action-content text-center mx-2 my-5 position-relative">
             <h3 class="section__heading">Ready to dive in?</h3>
             <h2 class="section__heading">
               <span class="hglt">Register with us Now.</span>
@@ -23,6 +23,7 @@
                 >
               </div>
             </div>
+            <img src="@/assets/images/plane.png" alt="NA" class="plane position-absolute">
           </div>
         </div>
       </div>
@@ -63,5 +64,33 @@
 .cta-button:hover {
   color: white;
   opacity: 0.9;
+}
+
+.plane {
+  right: -10%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+@media (max-width: 1456px) {
+  .plane {
+    right: -5%;
+  }
+}
+@media (max-width: 1400px) {
+  .plane {
+    right: -7%;
+  }
+}
+@media (max-width: 1200px) {
+  .plane {
+    right: -10%;
+  }
+}
+@media (max-width: 1017px) {
+  .plane {
+    display: none;
+  }
 }
 </style>
