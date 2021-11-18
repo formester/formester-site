@@ -4,10 +4,10 @@
       <div class="row">
         <div class="col-md-12">
           <div class="call-to-action-content text-center mx-2 my-5 position-relative">
-            <h5 class="section__heading">Ready to dive in?</h5>
-            <h4 class="section__heading">
+            <h3 class="section__heading">Ready to dive in?</h3>
+            <h2 class="section__heading">
               <span class="hglt">Register with us Now.</span>
-            </h4>
+            </h2>
             <div class="mt-5">
               <div class="d-inline p-2 mx-2">
                 <a
