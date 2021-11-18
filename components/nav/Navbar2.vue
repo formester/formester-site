@@ -1,8 +1,8 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
       <NuxtLink class="navbar-brand" to="/">
-        <img src="@/assets/images/logo.svg" alt="Fromester" />
+        <img src="@/assets/images/logo.svg" alt="Formester" />
       </NuxtLink>
       <button
         class="navbar-toggler"
@@ -13,45 +13,32 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <img src="@/assets/images/menu.svg" alt="Nav-menu-button" />
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
-        </ul> -->
         <ul class="navbar-nav ms-auto">
           <li class="nav-item me-3">
-            <NuxtLink to="/" class="nav-link">Home</NuxtLink>
+            <NuxtLink to="/" class="nav-link">
+              Home
+              <svg
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 152.9 43.4"
+                style="enable-background: new 0 0 152.9 43.4"
+                xml:space="preserve"
+              >
+                <path
+                  d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"
+                />
+              </svg>
+            </NuxtLink>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown me-3">
             <a
-              class="nav-link dropdown-toggle"
+              class="nav-link"
               id="navbarDropdown"
               role="button"
               data-bs-toggle="dropdown"
@@ -62,8 +49,8 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>
                 <NuxtLink class="dropdown-item" to="/features/auto-responder"
-                  >Auto Responder</NuxtLink
-                >
+                  >Auto Responder
+                </NuxtLink>
               </li>
               <li>
                 <NuxtLink class="dropdown-item" to="/features/easy-web-forms"
@@ -75,20 +62,41 @@
                   >Spam Protection</NuxtLink
                 >
               </li>
-              <li>
+              <!-- <li>
                 <NuxtLink class="dropdown-item" to="/features/integration"
                   >Integration</NuxtLink
                 >
-              </li>
+              </li> -->
             </ul>
           </li>
-          <li class="nav-item me-3">
-            <NuxtLink to="/pricing" class="nav-link">Pricing</NuxtLink>
+          <li class="nav-item me-4">
+            <NuxtLink to="/pricing" class="nav-link"
+              >Pricing
+              <svg
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 152.9 43.4"
+                style="enable-background: new 0 0 152.9 43.4"
+                xml:space="preserve"
+              >
+                <path
+                  d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"
+                />
+              </svg>
+            </NuxtLink>
           </li>
           <!-- <li class="nav-item">Contact us</li> -->
-          <li class="nav-item me-3">
+          <li class="nav-item me-4">
             <NuxtLink to="/auth/login">
-              <button class="btn nav__button">Sign In</button>
+              <button class="btn nav__outline__button">Login</button>
+            </NuxtLink>
+          </li>
+          <li class="nav-item">
+            <NuxtLink to="/auth/login">
+              <button class="btn nav__button">Register</button>
             </NuxtLink>
           </li>
         </ul>
@@ -107,6 +115,10 @@ export default {
 </script>
 
 <style scoped>
+nav {
+  padding: 1em 0;
+}
+
 a.nuxt-link-exact-active {
   font-weight: 700;
 }
@@ -117,5 +129,69 @@ a.nuxt-link-exact-active {
   padding: 8px 16px;
   border-radius: 8px;
   color: white;
+}
+
+.nav__outline__button {
+  background-color: #eee8ff;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: var(--clr-primary);
+}
+
+.nav-link {
+  color: var(--clr-dark);
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* .nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+} */
+
+.dropdown-item:hover {
+  background: var(--clr-primary-light);
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item svg {
+  fill: none;
+  stroke: hsla(277, 100%, 83%, 1);
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 338;
+  stroke-dashoffset: 338;
+  stroke-linecap: round;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% + 25px);
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: stroke-dashoffset 0s 0.2s, opacity 0.2s;
+  z-index: -1;
+}
+
+/* NAV HOVER */
+
+.nav-item:hover svg {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  transition: opacity 0s,
+    stroke-dashoffset 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+@media (max-width: 992px) {
+  .nav-item:hover svg {
+    opacity: 0;
+  }
 }
 </style>

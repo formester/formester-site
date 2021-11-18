@@ -34,7 +34,6 @@ export default {
   position: relative;
   display: block;
   padding: 7px;
-  position: relative;
 }
 
 .nav__link svg {
