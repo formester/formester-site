@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-md">
     <div class="container">
       <NuxtLink class="navbar-brand" to="/">
         <img src="@/assets/images/logo.svg" alt="Formester" />
@@ -90,14 +90,14 @@
           </li>
           <!-- <li class="nav-item">Contact us</li> -->
           <li class="nav-item me-4">
-            <NuxtLink to="/auth/login">
-              <button class="btn nav__outline__button">Login</button>
-            </NuxtLink>
+            <a href="https://app.formester.com/users/sign_in">
+              <button class="nav__outline__button">Login</button>
+            </a>
           </li>
           <li class="nav-item">
-            <NuxtLink to="/auth/login">
-              <button class="btn nav__button">Register</button>
-            </NuxtLink>
+            <a href="https://app.formester.com/users/sign_up">
+              <button class="nav__button">Register</button>
+            </a>
           </li>
         </ul>
       </div>
@@ -189,9 +189,23 @@ a.nuxt-link-exact-active {
     stroke-dashoffset 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .nav-item:hover svg {
     opacity: 0;
+  }
+
+  .nav-item {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 0.5em;
+  }
+
+  .nav__outline__button {
+    margin-bottom: 10px;
+  }
+
+  .dropdown-menu {
+    border: none;
   }
 }
 </style>
