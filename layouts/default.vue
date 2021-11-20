@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar />
+    <Navbar2 />
     <Nuxt />
     <Footer />
   </div>
@@ -12,7 +12,7 @@ import Navbar2 from '../components/nav/Navbar2.vue'
 import Footer from '../components/Footer.vue'
 
 export default {
-  components: { Footer, Navbar },
+  components: { Footer, Navbar, Navbar2 },
 }
 </script>
 
