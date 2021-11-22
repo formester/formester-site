@@ -13,7 +13,7 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <img src="@/assets/images/menu.svg" alt="Nav-menu-button" />
+        <img src="@/assets/images/toggle.svg" alt="Nav-menu-button" />
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto">
@@ -110,6 +110,11 @@ import NavItem from './NavItem.vue'
 export default {
   components: {
     NavItem,
+  },
+  methods: {
+    handleNav(e) {
+      console.log(e)
+    },
   },
 }
 </script>
