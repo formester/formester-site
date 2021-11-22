@@ -1,9 +1,11 @@
 <template>
   <footer>
     <div class="footer__container text-center">
-      <div class="footer__logo">
-        <img src="../assets/images/logo-light.svg" alt="Formester" />
-      </div>
+      <NuxtLink to="/">
+        <div class="footer__logo">
+          <img src="../assets/images/logo-light.svg" alt="Formester" />
+        </div>
+      </NuxtLink>
       <ul
         class="
           footer__items
