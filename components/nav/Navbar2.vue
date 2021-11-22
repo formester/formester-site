@@ -111,6 +111,11 @@ export default {
   components: {
     NavItem,
   },
+  methods: {
+    handleNav(e) {
+      console.log(e)
+    },
+  },
 }
 </script>
 
