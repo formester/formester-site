@@ -24,5 +24,21 @@ export default {
     HowItWorks,
     OtherSection,
   },
+  jsonld() {
+    return {
+      "@context": "http://schema.org",
+      "@type": "Corporation",
+      "name": "Formester",
+      "description": "Form solution for your business that is easy to use. Formester provides an interactive drag and drop builder to create amazing survey forms.",
+      "logo": "https://formester.com/logo.png",
+      "url": "https://formester.com",
+      "sameAs": ["https://twitter.com/_formester_", "https://www.instagram.com/_formester_/"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dalaware",
+        "addressCountry": "United States"
+      }
+    }
+  }
 }
 </script>

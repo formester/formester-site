@@ -52,11 +52,11 @@
             src="@/assets/images/social/twitter.svg"
             alt="Formester twitter page"
         /></a>
-        <a href="#" class="mx-1" target="_blank"
+        <!-- <a href="#" class="mx-1" target="_blank"
           ><img
             src="@/assets/images/social/youtube.svg"
             alt="Formester youtube page"
-        /></a>
+        /></a> -->
       </div>
       <div class="divider mt-4"></div>
       <div class="copyright d-flex justify-content-center mt-3">
