@@ -100,7 +100,6 @@
         </form>
       </div>
     </div>
-    <CallToActionSection />
   </div>
 </template>
 
