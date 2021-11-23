@@ -100,8 +100,14 @@ export default {
 
 <style scoped>
 .feature__hero {
-  padding: 8em 0;
+  padding-block: 8em;
   background: var(--clr-primary);
   color: white;
+}
+
+@media (max-width: 992px) {
+  .feature__hero {
+    padding-block: 4em;
+  }
 }
 </style>
