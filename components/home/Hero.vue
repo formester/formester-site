@@ -65,6 +65,7 @@ export default {}
 @media (max-width: 500px) {
   .hero__heading {
     line-height: 62px;
+    font-size: 2.5rem;
   }
 }
 </style>

@@ -46,7 +46,7 @@ export default {
       ],
       features3: [
         '10 number of forms',
-        '15000 submissions per month',
+        '30000 submissions per month',
         'Drip campaigns',
         'Prospect new customers',
       ],

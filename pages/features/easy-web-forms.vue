@@ -11,7 +11,7 @@
               justify-content-center
               align-items-lg-start align-items-center
               text-center text-lg-start
-              mt-xl-0 mt-5
+              mt-xl-0 mt-md-5
             "
           >
             <h3 class="section__heading">Easy Web forms</h3>
@@ -100,8 +100,14 @@ export default {
 
 <style scoped>
 .feature__hero {
-  padding: 8em 0;
+  padding-block: 8em;
   background: var(--clr-primary);
   color: white;
+}
+
+@media (max-width: 992px) {
+  .feature__hero {
+    padding-block: 4em;
+  }
 }
 </style>

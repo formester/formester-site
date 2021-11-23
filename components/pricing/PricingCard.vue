@@ -1,7 +1,9 @@
 <template>
   <div
+    @mouseenter="addHighlight"
+    @mouseleave="removeHighlight"
     class="pricing__card d-flex flex-column"
-    :class="{ hglt: isHighlighted }"
+    :class="{ hglt: highlight }"
   >
     <h6 class="pricing__category text-start">{{ category }}</h6>
     <div class="d-flex align-items-baseline">
@@ -28,6 +30,19 @@ export default {
     amount: Number,
     features: Array,
     isHighlighted: Boolean,
+  },
+  data() {
+    return {
+      highlight: this.isHighlighted,
+    }
+  },
+  methods: {
+    addHighlight() {
+      this.highlight = true
+    },
+    removeHighlight() {
+      this.highlight = false
+    },
   },
 }
 </script>
