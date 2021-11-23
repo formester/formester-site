@@ -61,6 +61,8 @@ export default {
     script: [
       {
         src: '/bootstrap.min.js',
+        defer: true,
+        async: true
       },
     ],
   },
