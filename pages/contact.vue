@@ -111,6 +111,15 @@ export default {
   components: {
     CallToStackSection,
   },
+  jsonld() {
+    return {
+      "@context": "http://schema.org/",
+      "@type": "ContactPage",
+      "name": "Formester contact page",
+      "description": "Formester support to help you with any questions that you may have",
+      "url" : "https://formester.com/contact"
+    } 
+  }
 }
 </script>
 
