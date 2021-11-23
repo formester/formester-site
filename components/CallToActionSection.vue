@@ -17,16 +17,16 @@
               <span class="hglt">Register with us Now.</span>
             </h2>
             <div class="mt-5">
-              <div class="d-inline p-2 mx-2">
+              <div class="d-inline p-2 mx-2 mt-5">
                 <a
                   href="https://app.formester.com/users/sign_up"
-                  class="button cta-button"
+                  class="btn button cta-button"
                   target="_blank"
                   >Sign Up</a
                 >
               </div>
-              <div class="d-inline p-2 mx-2">
-                <NuxtLink to="/contact" class="button cta-button__invert"
+              <div class="d-inline p-2 mx-2 mt-5">
+                <NuxtLink to="/contact" class="btn button cta-button__invert"
                   >Contact Us</NuxtLink
                 >
               </div>

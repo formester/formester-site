@@ -22,7 +22,7 @@
           </p>
           <a
             href="https://app.formester.com/users/sign_up"
-            class="button hero__button mt-4"
+            class="btn button hero__button mt-4"
             >Create Your Form</a
           >
         </div>
