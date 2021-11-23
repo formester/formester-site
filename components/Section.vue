@@ -1,6 +1,6 @@
 <template>
   <section class="container vertical__margin">
-    <div class="row gx-5" v-if="feature">
+    <div class="row" v-if="feature">
       <div
         class="
           col-md-5
