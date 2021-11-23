@@ -19,7 +19,7 @@
         <NuxtLink to="/">
           <li class="mx-3 footer__link">Home</li>
         </NuxtLink>
-        <NuxtLink to="/features/easy-web-forms">
+        <NuxtLink to="/features/html-form-backend">
           <li class="mx-3 footer__link">Features</li>
         </NuxtLink>
         <NuxtLink to="/pricing">

@@ -46,8 +46,8 @@
         <NuxtLink to="/features/auto-responder">
           <NavItem navName="Auto Responder" />
         </NuxtLink>
-        <NuxtLink to="/features/easy-web-forms">
-          <NavItem navName="Web Forms" />
+        <NuxtLink to="/features/html-form-backend">
+          <NavItem navName="HTML form" />
         </NuxtLink>
         <NuxtLink to="/features/spam-protection">
           <NavItem navName="Spam Protection" />

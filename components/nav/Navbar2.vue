@@ -53,8 +53,8 @@
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink class="dropdown-item" to="/features/easy-web-forms"
-                  >Easy Web Forms</NuxtLink
+                <NuxtLink class="dropdown-item" to="/features/html-form-backend"
+                  >HTML Form Backend</NuxtLink
                 >
               </li>
               <li>
