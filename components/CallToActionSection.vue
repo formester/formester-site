@@ -3,7 +3,15 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="call-to-action-content text-center mx-2 my-5 position-relative">
+          <div
+            class="
+              call-to-action-content
+              text-center
+              mx-2
+              my-5
+              position-relative
+            "
+          >
             <h3 class="section__heading">Ready to dive in?</h3>
             <h2 class="section__heading">
               <span class="hglt">Register with us Now.</span>
@@ -23,7 +31,11 @@
                 >
               </div>
             </div>
-            <img src="@/assets/images/plane.png" alt="plane image on call to action section" class="plane position-absolute">
+            <img
+              src="@/assets/images/plane.png"
+              alt="plane image on call to action section"
+              class="plane position-absolute"
+            />
           </div>
         </div>
       </div>
@@ -91,6 +103,12 @@
 @media (max-width: 1017px) {
   .plane {
     display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .section__heading {
+    font-size: 2rem;
   }
 }
 </style>
