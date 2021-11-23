@@ -52,6 +52,114 @@ export default {
       ],
     }
   },
+  jsonld() {
+    return [
+      {
+        '@context': 'http://schema.org',
+        '@type': 'WebApplication',
+        '@id': 'kwfinder',
+        applicationCategory: 'BusinessApplication',
+        name: 'Formester - HTML Form Backend',
+        operatingSystem: 'all',
+        browserRequirements: 'Requires Javascript and HTML5 support',
+        url: 'https://www.formester.com',
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '4.8',
+          reviewCount: '8',
+        },
+        offers: {
+          '@type': 'AggregateOffer',
+          offeredBy: {
+            '@type': 'Organization',
+            name: 'Formester',
+          },
+          highPrice: '49.00',
+          lowPrice: '0',
+          offerCount: '3',
+          priceCurrency: 'USD',
+          priceSpecification: [
+            {
+              '@type': 'UnitPriceSpecification',
+              price: '0.00',
+              priceCurrency: 'USD',
+              name: 'Formester FREE subscription',
+              referenceQuantity: {
+                '@type': 'QuantitativeValue',
+                value: '100',
+                unitCode: 'SUB',
+                unitText: 'Submissions',
+              },
+            },
+            {
+              '@type': 'UnitPriceSpecification',
+              price: '13.00',
+              priceCurrency: 'USD',
+              name: 'Formester personal subscription',
+              referenceQuantity: {
+                '@type': 'QuantitativeValue',
+                value: '5000',
+                unitCode: 'SUB',
+                unitText: 'Submissions',
+              },
+            },
+            {
+              '@type': 'UnitPriceSpecification',
+              price: '49.00',
+              priceCurrency: 'USD',
+              name: 'Formester business subscription',
+              referenceQuantity: {
+                '@type': 'QuantitativeValue',
+                value: '30000',
+                unitCode: 'SUB',
+                unitText: 'Submissions',
+              },
+            },
+          ],
+        },
+        creator: {
+          '@type': 'Organization',
+          '@id': '#organization',
+          url: 'https://formester.com/',
+          name: 'Formester',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://formester.com/logo.png',
+          },
+        },
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Can I try before I buy?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'It’s free to set up an account and create a campaign. But to get more than 100 submissions, you’ll need to choose a plan.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I change plans at anytime?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Formester is a pay-as-you-go service and you can upgrade, downgrade or cancel at any time. You can upgrade anytime right from your account page.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: "What happpens if I don't like the service?",
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: "Don't worry, if you are ever unhappy with our service and wish to cancel, we'll happily reimburse your last month -- no questions asked.",
+            },
+          },
+        ],
+      },
+    ]
+  },
 }
 </script>
 
