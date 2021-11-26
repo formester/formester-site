@@ -107,25 +107,25 @@ export default {
         {
           title: 'Complete Control',
           description:
-            'Never worry about your form not looking perfect like your website. With Formester you have everything under control. Style the forms and make it look the way you want it. No embedding or JavaScript required.',
+            'For those who like to take control, never again worry about your form not blending perfectly with your website. You do the styling and use our form endpoint to start receiving submissions.',
           src: 'control-illus.png',
         },
         {
           title: 'Easy Embedding',
           description:
-            'If you are looking a form that just works out of the box, Formester is for you. Just copy our snippet and get started. It takes less than 5 minutes to make a working form on your website.',
+            'Have a form up and running on your website quickly and with minimal coding. Select an existing template, modify it to match your brand theme, add your required data fields and paste our link on your webpage. Simple?',
           src: 'embedding-illus.png',
         },
         {
           title: 'Realtime Notification',
           description:
-            'Get a real-time notification on form submission. Stay on top of your business. You can configure Formester to notify you on Slack, Gmail or anywhere else.',
+            "On new submissions, Formester ensures that you get informed in real-time for you to stay on top of what's essential for your business. Notifications are delivered where they matter - Slack, email or 100+ apps.",
           src: 'notification.png',
         },
         {
-          title: 'Export/Import',
+          title: 'Own Your Data',
           description:
-            'You own your data. We offer zero friction data import and export. If you decide to move on you can take everything with you. We also offer guided migration from other tools. Our team will do the work for you.',
+            'We offer zero-friction data import & export. If you decide to move on, you can take everything with you. We also provide guided migration from other tools. Our team will ensure the transition is seamless.',
           src: 'export-illus.png',
         },
       ],

@@ -4,7 +4,7 @@
       :src="require(`../assets/images/features/${feature.src}`)"
       class="img-fluid"
     />
-    <h5 class="feature__heading">{{ feature.title }}</h5>
+    <h2 class="feature__heading">{{ feature.title }}</h2>
     <p>
       {{ feature.description }}
     </p>
