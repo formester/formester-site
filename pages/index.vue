@@ -24,6 +24,9 @@ export default {
     HowItWorks,
     OtherSection,
   },
+  head: {
+    link: [{ rel: 'canonical', href: 'https://formester.com' }]
+  },
   jsonld() {
     return {
       "@context": "http://schema.org",
