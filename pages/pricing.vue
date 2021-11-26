@@ -33,19 +33,19 @@ export default {
   data: function () {
     return {
       features1: [
-        '3 number of forms',
+        '3 forms',
         '100 submissions per month',
         'Spam Protection',
         'API Integrations',
       ],
       features2: [
-        '5 number of forms',
+        '5 forms',
         '5000 submissions per month',
         'Campaign Analytics',
         'Drip campaigns',
       ],
       features3: [
-        '10 number of forms',
+        'Unlimited forms',
         '30000 submissions per month',
         'Drip campaigns',
         'Prospect new customers',

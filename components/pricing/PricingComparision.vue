@@ -22,7 +22,7 @@
             <th scope="row">No. of forms</th>
             <td>3</td>
             <td>5</td>
-            <td>10</td>
+            <td>Unlimited</td>
           </tr>
           <tr>
             <th scope="row">No. of submissions per month</th>
