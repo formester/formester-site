@@ -28,7 +28,7 @@ export default {
     return {
       features: [
         {
-          heading: '<span class="hglt">Easy</span> Web Forms',
+          heading: '<span class="hglt">HTML</span> Form Backend',
           content:
             'Creating a form has never been simpler. Just point your form to our endpoint and start getting submissions in a matter of minutes. If you are a power user you get complete control over how the form looks.',
           imgName: 'easy-web-form-illus.png',
