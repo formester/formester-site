@@ -1,6 +1,6 @@
 <template>
   <div class="ftcmp mx-auto mt-5">
-    <h5 class="ftcmp__heading">Feature Comparision</h5>
+    <h3 class="ftcmp__heading">Feature Comparision</h3>
     <div class="table-responsive mt-4">
       <table class="table text-start">
         <thead>

@@ -8,7 +8,7 @@
     <h2 class="pricing__category text-start">{{ category }}</h2>
     <div class="d-flex align-items-baseline">
       <h2 class="pricing__amount">${{ amount }}</h2>
-      <span class="pricing__timeline">/mo</span>
+      <span class="pricing__timeline"> / month</span>
     </div>
     <ul class="pricing__features mt-3 text-start">
       <li v-for="(feature, index) in features" :key="index" class="mt-2">
@@ -78,6 +78,12 @@ export default {
 
 .pricing__card.focused {
   transform: translateY(-20px);
+}
+
+@media (max-width: 1200px) {
+  .pricing__card.focused {
+    transform: translateY(0);
+  }
 }
 
 /* HIGHLIGHT CARD */
