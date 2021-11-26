@@ -14,9 +14,9 @@
         <tbody>
           <tr>
             <th scope="row">Price</th>
-            <td><img src="~/assets/images/cross.svg" alt="NA" /></td>
-            <td>$13/mo</td>
-            <td>$49/mo</td>
+            <td>$0 / month</td>
+            <td>$13 / month</td>
+            <td>$49 / month</td>
           </tr>
           <tr>
             <th scope="row">No. of forms</th>
@@ -27,8 +27,8 @@
           <tr>
             <th scope="row">No. of submissions per month</th>
             <td>100</td>
-            <td>5000</td>
-            <td>15000</td>
+            <td>5,000</td>
+            <td>30,000</td>
           </tr>
         </tbody>
       </table>

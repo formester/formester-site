@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="text-center mt-5">
-      <h4 class="pricing__heading">Pricing that feels just right</h4>
-      <h6 class="pricing__subheading">Start with our free plan</h6>
+      <h1 class="pricing__heading">Pricing that feels just right</h1>
+      <p class="pricing__subheading">Start with our free plan</p>
       <div
         class="d-flex align-items-center justify-content-center flex-wrap mt-4"
       >
@@ -51,6 +51,9 @@ export default {
         'Prospect new customers',
       ],
     }
+  },
+  head: {
+    link: [{ rel: 'canonical', href: 'https://formester.com/pricing' }]
   },
   jsonld() {
     return [

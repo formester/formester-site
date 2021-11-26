@@ -3,9 +3,9 @@
     @mouseenter="addHighlight"
     @mouseleave="removeHighlight"
     class="pricing__card d-flex flex-column"
-    :class="{ hglt: highlight }"
+    :class="{ hglt: highlight, 'focused': isHighlighted }"
   >
-    <h6 class="pricing__category text-start">{{ category }}</h6>
+    <h2 class="pricing__category text-start">{{ category }}</h2>
     <div class="d-flex align-items-baseline">
       <h2 class="pricing__amount">${{ amount }}</h2>
       <span class="pricing__timeline">/mo</span>
@@ -53,6 +53,7 @@ export default {
   border-radius: var(--brd-df-rd);
   padding: 1.9em 2.5em;
   margin: 1em;
+  border-top: 3px solid #eee8ff;
 }
 
 .pricing__category {
@@ -75,10 +76,15 @@ export default {
   border-radius: var(--brd-df-rd);
 }
 
+.pricing__card.focused {
+  transform: translateY(-20px);
+}
+
 /* HIGHLIGHT CARD */
 .pricing__card.hglt {
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
 }
+
 
 .pricing__card.hglt .pricing__button {
   background-color: var(--clr-primary);
