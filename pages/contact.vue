@@ -2,14 +2,12 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6">
-        <h1 class="section__heading">Interested in getting touch with us?</h1>
+        <h1 class="section__heading">We are happy to help</h1>
         <p>
-          Need more imformation about Formester, Pricing, or want to build
-          custom form for your business. Simply fill out the form and we'll be
-          in touch shortly.
+          Need more information about our product, pricing or anything else? Fill out the form, and we'll be in touch shortly.
         </p>
         <div class="">
-          <div class="div my-5">
+          <div class="div mt-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -26,7 +24,7 @@
               /></svg
             ><a href="mailto:support@formester.com">support@formester.com</a>
           </div>
-          <div class="div my-5">
+          <div class="div my-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -41,7 +39,7 @@
               <path
                 d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
               /></svg
-            >2035 Sunset Lake
+            >2035 Sunset Lake, Delaware
           </div>
         </div>
       </div>
@@ -110,6 +108,9 @@ export default {
   name: 'Contact',
   components: {
     CallToStackSection,
+  },
+  head: {
+    link: [{ rel: 'canonical', href: 'https://formester.com/contact' }]
   },
   jsonld() {
     return {

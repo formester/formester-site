@@ -65,7 +65,7 @@ export default {
         name: 'Formester - HTML Form Backend',
         operatingSystem: 'all',
         browserRequirements: 'Requires Javascript and HTML5 support',
-        url: 'https://www.formester.com',
+        url: 'https://formester.com',
         aggregateRating: {
           '@type': 'AggregateRating',
           ratingValue: '4.8',
