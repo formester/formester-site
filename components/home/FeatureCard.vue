@@ -28,5 +28,6 @@ export default {
 
 img {
   padding-bottom: 2em;
+  max-width: 100%;
 }
 </style>

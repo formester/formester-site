@@ -4,7 +4,6 @@
     <FeatureList />
     <Testimonials />
     <HowItWorks />
-    <OtherSection />
     <CallToActionSection />
   </div>
 </template>
@@ -14,7 +13,6 @@ import Hero from '../components/home/Hero.vue'
 import FeatureList from '../components/home/FeatureList.vue'
 import Testimonials from '../components/home/Testimonials.vue'
 import HowItWorks from '../components/home/HowItWorks.vue'
-import OtherSection from '../components/home/OtherSection.vue'
 
 export default {
   components: {
@@ -22,7 +20,6 @@ export default {
     FeatureList,
     Testimonials,
     HowItWorks,
-    OtherSection,
   },
   head: {
     link: [{ rel: 'canonical', href: 'https://formester.com' }]

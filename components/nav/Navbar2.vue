@@ -48,14 +48,14 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>
-                <NuxtLink class="dropdown-item" to="/features/auto-responder"
-                  >Auto Responder
-                </NuxtLink>
-              </li>
-              <li>
                 <NuxtLink class="dropdown-item" to="/features/html-form-backend"
                   >HTML Form Backend</NuxtLink
                 >
+              </li>
+              <li>
+                <NuxtLink class="dropdown-item" to="/features/auto-responder"
+                  >Auto Responder
+                </NuxtLink>
               </li>
               <li>
                 <NuxtLink class="dropdown-item" to="/features/spam-protection"

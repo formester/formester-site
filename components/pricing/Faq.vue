@@ -25,7 +25,7 @@
         <div class="accordion-item">
       <h6 class="accordion-header" id="flush-headingThree">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-          What happpens if I don't like the service?
+          What happens if I don't like the service?
         </button>
       </h6>
       <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">

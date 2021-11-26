@@ -153,7 +153,7 @@ export default {
           },
           {
             '@type': 'Question',
-            name: "What happpens if I don't like the service?",
+            name: "What happens if I don't like the service?",
             acceptedAnswer: {
               '@type': 'Answer',
               text: "Don't worry, if you are ever unhappy with our service and wish to cancel, we'll happily reimburse your last month -- no questions asked.",

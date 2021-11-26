@@ -23,7 +23,7 @@ export default {
         {
           step: 1,
           heading: 'Create a form',
-          description: `Power an existing form on your website using the Formester link or create a sharable hosted form using our builder tool.`,
+          description: `Use Formester backend link to power any existing HTML form on the web or create a sharable hosted form using our form builder tool.`,
         },
         {
           step: 2,

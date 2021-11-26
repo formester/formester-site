@@ -73,7 +73,7 @@ export default {
         {
           title: 'One Click Re-Captcha',
           description:
-            'With our one-click ReCaptcha feature, prevent spam in under minutes. Send user to a clean page on formester where they are verified as humans',
+            'With our one-click ReCaptcha feature, prevent spam in under minutes. Send user to a clean page on Formester where they are verified as humans',
           src: 'one-click-re-captcha-illus.png',
         },
         {
