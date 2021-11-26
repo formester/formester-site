@@ -16,10 +16,7 @@
           >
             <h1 class="section__heading">HTML Form Backend</h1>
             <p class="hero__subheading mt-3">
-              Creating a form has never been simpler. Just point your form to
-              our endpoint and start getting submissions in a matter of minutes.
-              If you are a power user you get complete control over how the form
-              looks.
+              Making your HTML forms work has never been more straightforward. Just point your form to our endpoint and start getting submissions in a matter of minutes. As a power user, you get complete control over the look and feel of your web form.
             </p>
             <a
               href="https://app.formester.com/users/sign_up"
@@ -65,6 +62,45 @@ import FeatureDetail from '../../components/FeatureDetail.vue'
 
 export default {
   components: { FeatureDetail, CallToActionSection },
+  head: {
+    title: 'Formester | HTML Form Backend',
+    meta: [
+      { 
+        hid: 'og:title', 
+        name: 'og:title', 
+        content: 'Formester | HTML Form Backend' 
+      },
+      { 
+        hid: 'twitter:title', 
+        name: 'twitter:title', 
+        content: 'Formester | HTML Form Backend' 
+      },
+      { 
+        hid: 'og:site_name', 
+        name: 'og:site_name', 
+        content: 'Formester | HTML Form Backend' 
+      },
+      { 
+        hid: 'description', 
+        name: 'description', 
+        content: 'Making your HTML forms work has never been more straightforward. Just point your form to our endpoint and start getting submissions in a matter of minutes. As a power user, you get complete control over the look and feel of your web form.' 
+      },
+      { 
+        hid: 'og:description', 
+        name: 'og:description', 
+        content: 'Making your HTML forms work has never been more straightforward. Just point your form to our endpoint and start getting submissions in a matter of minutes. As a power user, you get complete control over the look and feel of your web form.' 
+      },
+      { 
+        hid: 'twitter:description', 
+        name: 'twitter:description', 
+        content: 'Making your HTML forms work has never been more straightforward. Just point your form to our endpoint and start getting submissions in a matter of minutes. As a power user, you get complete control over the look and feel of your web form.' 
+      },
+    ],
+    link: [{ rel: 'canonical', href: 'https://formester.com/features/html-form-backend' }]
+  },
+  jsonld() {
+    return {}
+  },
   data() {
     return {
       features: [

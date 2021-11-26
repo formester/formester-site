@@ -16,11 +16,7 @@
           >
             <h1 class="section__heading">Auto Responder</h1>
             <p class="hero__subheading mt-3">
-              The first response is critical to any business. Formester makes it
-              dead easy to respond to any form submission. With our
-              autoresponder, you can send personalised emails to your customers.
-              Do all this while not looking like a bot. We guarantee to make you
-              look human.
+              Respond to the customer as soon as you get a form submission. Personalised emails are easy to create with our intuitive email builder with an option to use your official email to improve delivery and conversion.
             </p>
             <a
               href="https://app.formester.com/users/sign_up"
@@ -65,6 +61,45 @@ import CallToActionSection from '@/components/CallToActionSection.vue'
 import FeatureDetail from '../../components/FeatureDetail.vue'
 export default {
   components: { FeatureDetail, CallToActionSection },
+  head: {
+    title: 'Formester | Personalised Email Responder',
+    meta: [
+      { 
+        hid: 'og:title', 
+        name: 'og:title', 
+        content: 'Formester | Personalised Email Responder' 
+      },
+      { 
+        hid: 'twitter:title', 
+        name: 'twitter:title', 
+        content: 'Formester | Personalised Email Responder' 
+      },
+      { 
+        hid: 'og:site_name', 
+        name: 'og:site_name', 
+        content: 'Formester | Personalised Email Responder' 
+      },
+      { 
+        hid: 'description', 
+        name: 'description', 
+        content: 'Respond to the customer as soon as you get a form submission. Personalised emails are easy to create with our intuitive email builder with an option to use your official email to improve delivery and conversion.' 
+      },
+      { 
+        hid: 'og:description', 
+        name: 'og:description', 
+        content: 'Respond to the customer as soon as you get a form submission. Personalised emails are easy to create with our intuitive email builder with an option to use your official email to improve delivery and conversion.' 
+      },
+      { 
+        hid: 'twitter:description', 
+        name: 'twitter:description', 
+        content: 'Respond to the customer as soon as you get a form submission. Personalised emails are easy to create with our intuitive email builder with an option to use your official email to improve delivery and conversion.' 
+      },
+    ],
+    link: [{ rel: 'canonical', href: 'https://formester.com/features/auto-responder' }]
+  },
+  jsonld() {
+    return {}
+  },
   data() {
     return {
       features: [

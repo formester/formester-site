@@ -16,11 +16,7 @@
           >
             <h1 class="section__heading">Spam Protection</h1>
             <p class="hero__subheading mt-3">
-              The first response is critical to any business. Formester makes it
-              dead easy to respond to any form submission. With our
-              autoresponder, you can send personalised emails to your customers.
-              Do all this while not looking like a bot. We guarantee to make you
-              look human.
+              Web forms are an easy target for spam. Use our one-click Recaptcha to curb spam and keep your list clean, along with an option to configure your own Google Re-Captcha for greater control.
             </p>
             <a
               href="https://app.formester.com/users/sign_up"
@@ -67,6 +63,45 @@ import FeatureDetail from '../../components/FeatureDetail.vue'
 
 export default {
   components: { FeatureDetail, CallToActionSection },
+  head: {
+    title: 'Formester | Spam Protection',
+    meta: [
+      { 
+        hid: 'og:title', 
+        name: 'og:title', 
+        content: 'Formester | Spam Protection' 
+      },
+      { 
+        hid: 'twitter:title', 
+        name: 'twitter:title', 
+        content: 'Formester | Spam Protection' 
+      },
+      { 
+        hid: 'og:site_name', 
+        name: 'og:site_name', 
+        content: 'Formester | Spam Protection' 
+      },
+      { 
+        hid: 'description', 
+        name: 'description', 
+        content: 'Web forms are an easy target for spam. Use our one-click Recaptcha to curb spam and keep your list clean, along with an option to configure your own Google Re-Captcha for greater control.' 
+      },
+      { 
+        hid: 'og:description', 
+        name: 'og:description', 
+        content: 'Web forms are an easy target for spam. Use our one-click Recaptcha to curb spam and keep your list clean, along with an option to configure your own Google Re-Captcha for greater control.' 
+      },
+      { 
+        hid: 'twitter:description', 
+        name: 'twitter:description', 
+        content: 'Web forms are an easy target for spam. Use our one-click Recaptcha to curb spam and keep your list clean, along with an option to configure your own Google Re-Captcha for greater control.' 
+      },
+    ],
+    link: [{ rel: 'canonical', href: 'https://formester.com/features/spam-protection' }]
+  },
+  jsonld() {
+    return {}
+  },
   data() {
     return {
       features: [

@@ -4,24 +4,24 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Formester | HTML Form Backend',
+    title: 'Formester | HTML Form Backend & Form Builder',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { 
         hid: 'og:title', 
         name: 'og:title', 
-        content: 'Formester' 
+        content: 'Formester | HTML Form Backend & Form Builder' 
       },
       { 
         hid: 'twitter:title', 
         name: 'twitter:title', 
-        content: 'Formester' 
+        content: 'Formester | HTML Form Backend & Form Builder' 
       },
       { 
         hid: 'og:site_name', 
         name: 'og:site_name', 
-        content: 'Formester' 
+        content: 'Formester | HTML Form Backend & Form Builder' 
       },
       { 
         hid: 'apple-mobile-web-app-title', 
