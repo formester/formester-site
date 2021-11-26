@@ -72,7 +72,7 @@ export default {
   },
 
   sitemap: {
-    hostname: 'https://www.formester.com',
+    hostname: 'https://formester.com',
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
