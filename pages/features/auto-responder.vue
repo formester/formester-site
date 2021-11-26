@@ -14,7 +14,7 @@
               mt-xl-0 mt-md-5
             "
           >
-            <h3 class="section__heading">Auto Responder</h3>
+            <h1 class="section__heading">Auto Responder</h1>
             <p class="hero__subheading mt-3">
               The first response is critical to any business. Formester makes it
               dead easy to respond to any form submission. With our

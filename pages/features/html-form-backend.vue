@@ -14,7 +14,7 @@
               mt-xl-0 mt-5
             "
           >
-            <h3 class="section__heading">HTML Form Backend</h3>
+            <h1 class="section__heading">HTML Form Backend</h1>
             <p class="hero__subheading mt-3">
               Creating a form has never been simpler. Just point your form to
               our endpoint and start getting submissions in a matter of minutes.
