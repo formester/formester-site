@@ -34,7 +34,7 @@
             "
           >
             <img
-              src="@/assets/images/features/auto-responder-message.svg"
+              src="@/assets/images/features/auto-responder/auto-responder-message.svg"
               alt="Hero-Image"
               class="img-fluid hero__image"
             />
@@ -107,25 +107,25 @@ export default {
           title: 'White Label',
           description:
             'Make your emails look personal by using using your company email address. You also get an option to choose between HTML and text-based emails.',
-          src: 'white-label-illus.svg',
+          src: 'auto-responder/white-label-illus.svg',
         },
         {
           title: 'Easy Email Builder',
           description:
             'Creating a captivating response has never been simpler. Our easy to use editor enables you to write compelling content. Add images, links or videos in a matter of a click.',
-          src: 'easy-email-builder-illus.svg',
+          src: 'auto-responder/easy-email-builder-illus.svg',
         },
         {
           title: 'Personalised Response',
           description:
             'Notifications can be personalised to include fields from the submissions. Make your users feel unique with messages which seem to be coming from actual humans and not a bot.',
-          src: 'personalised-response.svg',
+          src: 'auto-responder/personalised-response.svg',
         },
         {
           title: 'Realtime Tracking',
           description:
             'Monitor how people are interacting with your auto-response. Analyse useful metrics like open rate and link clicks to get insights into users behaviour. Use this data to make changes to your communication.',
-          src: 'realtime-tracking-illus.svg',
+          src: 'auto-responder/realtime-tracking-illus.svg',
         },
       ],
     }

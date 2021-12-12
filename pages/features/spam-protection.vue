@@ -34,7 +34,7 @@
             "
           >
             <img
-              src="@/assets/images/features/spam-protection.svg"
+              src="@/assets/images/features/spam-protection/spam-protection.svg"
               alt="Hero-Image"
               class="img-fluid hero__image"
             />
@@ -109,19 +109,19 @@ export default {
           title: 'One Click Re-Captcha',
           description:
             'With our one-click ReCaptcha feature, prevent spam in under minutes. Send user to a clean page on Formester where they are verified as humans',
-          src: 'one-click-re-captcha-illus.png',
+          src: 'spam-protection/one-click-re-captcha-illus.svg',
         },
         {
           title: 'Custom Re-Captcha',
           description:
             'Keep user on the same page and increase the chance of the conversion. Our philosophy has always been to keep things simple but give enough control for those who need it.',
-          src: 'custom-re-captcha-illus.png',
+          src: 'spam-protection/custom-re-captcha-illus.svg',
         },
         {
           title: 'Smart Filters',
           description:
             'Our database is getting smarter each day. We use machine learning to predict spam submissions. Your every form will improve our prediction.',
-          src: 'smart-filters-illus.png',
+          src: 'spam-protection/smart-filters-illus.svg',
           isCenter: true,
         },
       ],
