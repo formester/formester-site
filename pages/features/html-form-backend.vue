@@ -34,7 +34,7 @@
             "
           >
             <img
-              src="@/assets/images/features/easy-web-form.png"
+              src="@/assets/images/features/easy-web-form.svg"
               alt="Hero-Image"
               class="img-fluid hero__image"
             />

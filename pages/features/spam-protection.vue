@@ -34,7 +34,7 @@
             "
           >
             <img
-              src="@/assets/images/features/spam-protection.png"
+              src="@/assets/images/features/spam-protection.svg"
               alt="Hero-Image"
               class="img-fluid hero__image"
             />
@@ -131,6 +131,10 @@ export default {
 </script>
 
 <style scoped>
+.hero__image {
+  height: 100%;
+}
+
 .feature__hero {
   padding-block: 8em;
   background: var(--clr-primary);

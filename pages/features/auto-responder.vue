@@ -34,7 +34,7 @@
             "
           >
             <img
-              src="@/assets/images/features/auto-responder-illus.png"
+              src="@/assets/images/features/auto-responder-message.svg"
               alt="Hero-Image"
               class="img-fluid hero__image"
             />
@@ -138,6 +138,10 @@ export default {
   padding-block: 8em;
   background: var(--clr-primary);
   color: white;
+}
+
+.hero__image {
+  height: 100%;
 }
 
 @media (max-width: 992px) {

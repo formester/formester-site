@@ -5,6 +5,7 @@
         <div
           class="
             col-lg-5
+            col-xl-4
             d-flex
             flex-column
             justify-content-center
@@ -29,6 +30,7 @@
         <div
           class="
             col-lg-7
+            col-xl-8
             d-flex
             align-items-center
             justify-content-center
@@ -36,7 +38,7 @@
           "
         >
           <img
-            src="@/assets/images/hero-image.png"
+            src="@/assets/images/home/hero.svg"
             alt="Formester form building with drag and drop interface"
             class="img-fluid hero__image"
           />
@@ -51,6 +53,14 @@ export default {}
 </script>
 
 <style scoped>
+.hero {
+  margin-bottom: 74px;
+}
+
+.hero__image {
+  padding-left: 30px;
+}
+
 .hero__heading {
   font-size: var(--ft-big-heading);
   font-weight: 700;
