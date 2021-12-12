@@ -16,7 +16,7 @@
           >
             <h1 class="section__heading">Auto Responder</h1>
             <p class="hero__subheading mt-3">
-              Respond to the customer as soon as you get a form submission. Personalised emails are easy to create with our intuitive email builder with an option to use your official email to improve delivery and conversion.
+              Send personalised replies automatically to your customers on form submission. Emails are easy to create using our intuitive email builder. You can also customise the emails to go from your personal email account.
             </p>
             <a
               href="https://app.formester.com/users/sign_up"
@@ -106,26 +106,26 @@ export default {
         {
           title: 'White Label',
           description:
-            'We make your email look humane. All emails are delivered using your official email address. Look more professional without all the hassles.',
-          src: 'white-label-illus.png',
+            'Make your emails look personal by using using your company email address. You also get an option to choose between HTML and text-based emails.',
+          src: 'white-label-illus.svg',
         },
         {
           title: 'Easy Email Builder',
           description:
-            'Creating beautiful response has never been simpler. Our easy to use editor enables you to write powerful content. Add images, links or videos in a matter of click.',
-          src: 'easy-email-builder-illus.png',
+            'Creating a captivating response has never been simpler. Our easy to use editor enables you to write compelling content. Add images, links or videos in a matter of a click.',
+          src: 'easy-email-builder-illus.svg',
         },
         {
           title: 'Personalised Response',
           description:
-            'Getting attention is difficult as every brand fights for users attention. Personalisation can increase your chance of engaging users. Use fields from your form to make your email more relevant.',
-          src: 'personalised-response-illus.png',
+            'Notifications can be personalised to include fields from the submissions. Make your users feel unique with messages which seem to be coming from actual humans and not a bot.',
+          src: 'personalised-response.svg',
         },
         {
           title: 'Realtime Tracking',
           description:
-            'Monitor how people are reacting to your response. Analyse useful metrics like open rate and link clicks to get insights into users behaviour. Use this data to make changes to your communication.',
-          src: 'realtime-tracking-illus.png',
+            'Monitor how people are interacting with your auto-response. Analyse useful metrics like open rate and link clicks to get insights into users behaviour. Use this data to make changes to your communication.',
+          src: 'realtime-tracking-illus.svg',
         },
       ],
     }
