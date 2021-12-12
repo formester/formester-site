@@ -110,7 +110,8 @@ export default {
     CallToStackSection,
   },
   head: {
-    link: [{ rel: 'canonical', href: 'https://formester.com/contact' }]
+    link: [{ rel: 'canonical', href: 'https://formester.com/contact' }],
+    title: 'Formester | Contact',
   },
   jsonld() {
     return {

@@ -53,7 +53,8 @@ export default {
     }
   },
   head: {
-    link: [{ rel: 'canonical', href: 'https://formester.com/pricing' }]
+    link: [{ rel: 'canonical', href: 'https://formester.com/pricing' }],
+    title: 'Formester | Formester',
   },
   jsonld() {
     return [
