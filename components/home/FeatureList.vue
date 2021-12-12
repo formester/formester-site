@@ -60,7 +60,7 @@ export default {
           content:
             'Connect your form with Slack, Google Sheets, Salesforce or anything else with our Zapier integration. Use our webhooks to notify any other app when a submission arrives. Create flows that solve your business needs.',
           imgName: 'integrations.svg',
-          alt: 'Online tools which Formester integrates with'
+          alt: 'Online tools which Formester integrates with',
         },
         {
           heading: '<span class="hglt">Powerful</span> Analytics',
