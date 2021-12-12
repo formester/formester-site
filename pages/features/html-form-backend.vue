@@ -108,25 +108,25 @@ export default {
           title: 'Complete Control',
           description:
             'For those who like to take control, never again worry about your form not blending perfectly with your website. You do the styling and use our form endpoint to start receiving submissions.',
-          src: 'control-illus.png',
+          src: 'control-illus.svg',
         },
         {
           title: 'Easy Embedding',
           description:
             'Have a form up and running on your website quickly and with minimal coding. Select an existing template, modify it to match your brand theme, add your required data fields and paste our link on your webpage. Simple?',
-          src: 'embedding-illus.png',
+          src: 'embedding-illus.svg',
         },
         {
           title: 'Realtime Notification',
           description:
             "On new submissions, Formester ensures that you get informed in real-time for you to stay on top of what's essential for your business. Notifications are delivered where they matter - Slack, email or 100+ apps.",
-          src: 'notification.png',
+          src: 'notification.svg',
         },
         {
           title: 'Own Your Data',
           description:
             'We offer zero-friction data import & export. If you decide to move on, you can take everything with you. We also provide guided migration from other tools. Our team will ensure the transition is seamless.',
-          src: 'export-illus.png',
+          src: 'export-illus.svg',
         },
       ],
     }
