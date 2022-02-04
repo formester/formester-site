@@ -100,7 +100,7 @@
 @media only screen and (max-width: 768px) {
   .message {
     font-size: 96px;
-    line-height: 128px;
+    line-height: 116px;
   }
   .message-detail {
     font-size: 24px;
@@ -119,7 +119,7 @@
 @media only screen and (max-width: 576px) {
   .message {
     font-size: 64px;
-    line-height: 96px;
+    line-height: 72px;
   }
   .message-detail {
     font-size: 20px;
