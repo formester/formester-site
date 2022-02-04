@@ -117,5 +117,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+  // For catching 404 pages
+  generate: {
+    fallback: true
   }
 }
