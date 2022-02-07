@@ -2,7 +2,7 @@
   <div class="message-block">
     <h1 class="message-thank-you">Thank You</h1>
     <h4 class="message-detail">for choosing Formester</h4>
-    <button class="navigate-btn" @click="$router.push('/')">Home</button>
+    <!-- <button class="navigate-btn" @click="$router.push('/')">Home</button> -->
     <img class="abs corner-design" src="../assets/images/leaf/corner-design.png" alt="">
     <img class="abs l1" src="../assets/images/leaf/leaf-1.png" alt="">
     <img class="abs l2" src="../assets/images/leaf/leaf-2.png" alt="">
