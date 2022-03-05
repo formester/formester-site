@@ -47,7 +47,7 @@ export default {
       // Twitter
       {
         name: 'twitter:site',
-        content: '_formester_'
+        content: '@_formester_'
       },
       {
         hid: 'twitter:title',
