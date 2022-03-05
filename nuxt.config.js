@@ -63,7 +63,7 @@ export default {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: 'https://formester.com/_nuxt/img/Formester-image.png'
+        content: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg'
       },
       {
         hid: 'twitter:card',
