@@ -38,7 +38,7 @@ export default {
         hid: 'og:image',
         name: 'og:image',
         // content: 'https://formester.com/_nuxt/img/Formester-image.png'
-        content: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg'
+        content: 'https://events.silicon.ac.in/piyush/formester-image.png'
       },
       {
         hid: 'og:image:alt',
@@ -63,7 +63,7 @@ export default {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg'
+        content: 'https://events.silicon.ac.in/piyush/formester-image.png'
       },
       {
         hid: 'twitter:card',
