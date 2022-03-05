@@ -37,7 +37,7 @@ export default {
       {
         hid: 'og:image',
         name: 'og:image',
-        content: '/formester-form-builder-background.png'
+        content: 'https://formester.com/formester-form-builder-background.png'
       },
       {
         hid: 'og:image:alt',
@@ -62,7 +62,7 @@ export default {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: '/formester-form-builder-background.png'
+        content: 'https://formester.com/formester-form-builder-background.png'
       },
       {
         hid: 'twitter:card',
