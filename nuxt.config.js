@@ -8,48 +8,80 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      // Facebook
       { 
-        hid: 'og:title', 
-        name: 'og:title', 
-        content: 'Formester | HTML Form Backend & Form Builder' 
+        hid: 'og:type',
+        name: 'og:type',
+        content: 'website'
       },
       { 
-        hid: 'twitter:title', 
-        name: 'twitter:title', 
-        content: 'Formester | HTML Form Backend & Form Builder' 
+        hid: 'og:title',
+        name: 'og:title',
+        content: 'Formester | HTML Form Backend & Form Builder'
       },
       { 
-        hid: 'og:site_name', 
-        name: 'og:site_name', 
-        content: 'Formester | HTML Form Backend & Form Builder' 
+        hid: 'og:site_name',
+        name: 'og:site_name',
+        content: 'Formester | HTML Form Backend & Form Builder'
       },
       { 
-        hid: 'apple-mobile-web-app-title', 
-        name: 'apple-mobile-web-app-title', 
-        content: 'Formester' 
+        hid: 'og:description',
+        name: 'og:description',
+        content: 'Form solution for your business that is easy to use. Formester provides an interactive drag and drop builder to create amazing survey forms.'
       },
       { 
-        hid: 'description', 
-        name: 'description', 
-        content: 'Form solution for your business that is easy to use. Formester provides an interactive drag and drop builder to create amazing survey forms.' 
+        hid: 'og:url',
+        name: 'og:url',
+        content: 'https://formester.com/'
       },
-      { 
-        hid: 'og:description', 
-        name: 'og:description', 
-        content: 'Form solution for your business that is easy to use. Formester provides an interactive drag and drop builder to create amazing survey forms.' 
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        content: 'https://formester.com/_nuxt/img/Formester-image.png'
       },
-      { 
-        hid: 'twitter:description', 
-        name: 'twitter:description', 
-        content: 'Form solution for your business that is easy to use. Formester provides an interactive drag and drop builder to create amazing survey forms.' 
+      {
+        hid: 'og:image:alt',
+        name: 'og:image:alt',
+        content: 'Site Banner Image'
       },
-      { 
-        name: 'twitter:site', 
-        content: '_formester_' 
+      // Twitter
+      {
+        name: 'twitter:site',
+        content: '_formester_'
       },
-      { 
-        name: 'robots', 
-        content: 'index, follow' 
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: 'Formester | HTML Form Backend & Form Builder'
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content: 'Form solution for your business that is easy to use. Formester provides an interactive drag and drop builder to create amazing survey forms.'
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: 'https://formester.com/_nuxt/img/Formester-image.png'
+      },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      },
+      {
+        hid: 'apple-mobile-web-app-title',
+        name: 'apple-mobile-web-app-title',
+        content: 'Formester'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Form solution for your business that is easy to use. Formester provides an interactive drag and drop builder to create amazing survey forms.'
+      },
+      {
+        name: 'robots',
+        content: 'index, follow'
       },
       { name: 'format-detection', content: 'telephone=no' }
     ],
