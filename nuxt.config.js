@@ -37,12 +37,12 @@ export default {
       {
         hid: 'og:image',
         name: 'og:image',
-        content: 'https://formester.com/_nuxt/img/Formester-image.png'
+        content: '/formester-form-builder-background.png'
       },
       {
         hid: 'og:image:alt',
         name: 'og:image:alt',
-        content: 'Site Banner Image'
+        content: 'Form builder showing drag and drop functionality'
       },
       // Twitter
       {
@@ -62,7 +62,7 @@ export default {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: 'https://formester.com/_nuxt/img/Formester-image.png'
+        content: '/formester-form-builder-background.png'
       },
       {
         hid: 'twitter:card',
