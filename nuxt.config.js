@@ -69,6 +69,13 @@ export default {
         name: 'twitter:card',
         content: 'summary_large_image'
       },
+      // Linkedin
+      {
+        hid: 'image',
+        name: 'image',
+        property: 'og:image',
+        content: 'https://formester.com/formester-form-builder-background.png'
+      },
       {
         hid: 'apple-mobile-web-app-title',
         name: 'apple-mobile-web-app-title',
