@@ -120,7 +120,7 @@ export default {
               name: 'Formester personal subscription',
               referenceQuantity: {
                 '@type': 'QuantitativeValue',
-                value: '5000',
+                value: '1000',
                 unitCode: 'SUB',
                 unitText: 'Submissions',
               },
@@ -132,7 +132,7 @@ export default {
               name: 'Formester business subscription',
               referenceQuantity: {
                 '@type': 'QuantitativeValue',
-                value: '30000',
+                value: '15000',
                 unitCode: 'SUB',
                 unitText: 'Submissions',
               },
