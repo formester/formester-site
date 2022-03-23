@@ -39,6 +39,9 @@
        url('~assets/fonts/nunito-v16-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+/* ===== GOOGLE FONT - INTER  ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 /* === COLORS ===*/
 :root {
   --clr-primary: hsla(255, 45%, 40%, 1);
@@ -86,7 +89,7 @@
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: var(--ft-df-body);
   line-height: 28px;
   color: var(--clr-dark);
