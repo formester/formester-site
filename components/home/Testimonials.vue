@@ -23,7 +23,7 @@
             class="position-absolute testimonials-heading-bg"
           />
         </div>
-        <div class="col-lg-6 position-relative">
+        <!-- <div class="col-lg-6 position-relative">
           <div class="d-flex flex-column">
             <p class="testimonial__content mt-2 mt-lg-0">
               I really enjoy Formester. It’s clean and straight-forward and it
@@ -44,7 +44,67 @@
             alt="Quotes background image"
             class="quotes"
           />
+        </div> -->
+        
+
+        <div class="col-lg-7 position-relative">
+          <div id="carouselTestimonial" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner border border-primary">
+              <div class="carousel-item active" data-bs-interval="5000">
+                <div class="d-flex flex-column">
+                  <p class="testimonial__content mt-2 mt-lg-0">
+                    I really enjoy Formester. It’s clean and straight-forward and it
+                    does well, what it is supposed to do.
+                  </p>
+                  <span class="testimonial__person--name"> Thibaud Martinez </span>
+                  <span class="testimonial__person--post"> Organizer </span>
+                  <img
+                    src="~/assets/images/tedx.png"
+                    alt="Tedx Paris Organizer"
+                    height="35"
+                    width="110"
+                    class="mt-3"
+                  />
+                </div>
+                <img
+                  src="~/assets/images/quotes.svg"
+                  alt="Quotes background image"
+                  class="quotes"
+                />
+              </div>
+              <div class="carousel-item" data-bs-interval="5000">
+                <div class="d-flex flex-column">
+                  <p class="testimonial__content mt-2 mt-lg-0">
+                    At Rumie we use Formester to get feedback from our educators and volunteers. It's intuitive, fast and easy to share. The ability to customise it as per our branding is a great feature too!
+                  </p>
+                  <span class="testimonial__person--name"> Bogdan Arsenie </span>
+                  <span class="testimonial__person--post"> Chief Technology Officer </span>
+                  <img
+                    src="~/assets/images/rumie-owl.png"
+                    alt="Rumie Logo"
+                    height="35"
+                    width="110"
+                    class="mt-3"
+                  />
+                </div>
+                <img
+                  src="~/assets/images/quotes.svg"
+                  alt="Quotes background image"
+                  class="quotes"
+                />
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonial" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonial" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
+    
       </div>
     </div>
   </section>
