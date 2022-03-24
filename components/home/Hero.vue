@@ -59,7 +59,7 @@ export default {}
 
 .hero__heading {
   font-size: var(--ft-big-heading);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 72px;
 }
 
