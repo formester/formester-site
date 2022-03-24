@@ -1,17 +1,15 @@
 <template>
   <section class="hero">
     <div class="container horizontal__padding">
-      <div class="row">
+      <div class="row my-5">
         <div
           class="
             col-lg-5
-            col-xl-4
             d-flex
             flex-column
             justify-content-center
             align-items-lg-start align-items-center
             text-center text-lg-start
-            mt-xl-0 mt-5
           "
         >
           <h1 class="hero__heading">
@@ -30,11 +28,9 @@
         <div
           class="
             col-lg-7
-            col-xl-8
             d-flex
             align-items-center
             justify-content-center
-            mt-lg-0 mt-5
           "
         >
           <img

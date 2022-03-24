@@ -34,7 +34,7 @@
 }
 .message-detail {
   color: var(--clr-primary);
-  font-family: Nunito;
+  font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
@@ -64,7 +64,7 @@
   margin: 32px 0px;
   background: white;  
   color: var(--clr-primary);
-  font-family: Nunito;
+  font-family: Inter;
   cursor: pointer;
 }
 .abs {
