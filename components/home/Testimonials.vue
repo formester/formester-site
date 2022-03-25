@@ -22,86 +22,57 @@
             alt="Testimonial background vector image"
             class="position-absolute testimonials-heading-bg"
           />
-        </div>
-        <!-- <div class="col-lg-6 position-relative">
-          <div class="d-flex flex-column">
-            <p class="testimonial__content mt-2 mt-lg-0">
-              I really enjoy Formester. It’s clean and straight-forward and it
-              does well, what it is supposed to do.
-            </p>
-            <span class="testimonial__person--name"> Thibaud Martinez </span>
-            <span class="testimonial__person--post"> Organizer </span>
-            <img
-              src="~/assets/images/tedx.png"
-              alt="Tedx Paris Organizer"
-              height="35"
-              width="110"
-              class="mt-3"
-            />
-          </div>
-          <img
-            src="~/assets/images/quotes.svg"
-            alt="Quotes background image"
-            class="quotes"
-          />
-        </div> -->
-        
+        </div>     
 
-        <div class="col-lg-7 position-relative">
+        <div class="col-lg-6 position-relative">
           <div id="carouselTestimonial" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner border border-primary">
+            <div class="carousel-inner">
               <div class="carousel-item active" data-bs-interval="5000">
                 <div class="d-flex flex-column">
                   <p class="testimonial__content mt-2 mt-lg-0">
                     I really enjoy Formester. It’s clean and straight-forward and it
                     does well, what it is supposed to do.
                   </p>
-                  <span class="testimonial__person--name"> Thibaud Martinez </span>
-                  <span class="testimonial__person--post"> Organizer </span>
-                  <img
-                    src="~/assets/images/tedx.png"
-                    alt="Tedx Paris Organizer"
-                    height="35"
-                    width="110"
-                    class="mt-3"
-                  />
+                  <div class="d-flex testimonial__person">
+                    <div class="d-flex flex-column">
+                      <span class="testimonial__person--name"> Thibaud Martinez </span>
+                      <span class="testimonial__person--post"> Organizer </span>
+                    </div>
+                    <img
+                      src="~/assets/images/tedx.png"
+                      alt="Tedx Paris Organizer"
+                      width="110"
+                      class="company__logo"
+                    />
+                  </div>
                 </div>
-                <img
-                  src="~/assets/images/quotes.svg"
-                  alt="Quotes background image"
-                  class="quotes"
-                />
+
               </div>
               <div class="carousel-item" data-bs-interval="5000">
                 <div class="d-flex flex-column">
                   <p class="testimonial__content mt-2 mt-lg-0">
-                    At Rumie we use Formester to get feedback from our educators and volunteers. It's intuitive, fast and easy to share. The ability to customise it as per our branding is a great feature too!
+                    At Rumie we use Formester to get feedback from our educators and volunteers. It's intuitive, fast and easy to share. 
                   </p>
-                  <span class="testimonial__person--name"> Bogdan Arsenie </span>
-                  <span class="testimonial__person--post"> Chief Technology Officer </span>
-                  <img
-                    src="~/assets/images/rumie-owl.png"
-                    alt="Rumie Logo"
-                    height="35"
-                    width="110"
-                    class="mt-3"
-                  />
+                  <div class="d-flex testimonial__person">
+                    <div class="d-flex flex-column">
+                      <span class="testimonial__person--name"> Bogdan Arsenie </span>
+                      <span class="testimonial__person--post"> Chief Technology Officer </span>
+                    </div>
+                    <img
+                      src="~/assets/images/rumie-1.png"
+                      alt="Rumie Logo"
+                      width="150"
+                      class="company__logo"
+                    />
+                  </div>
                 </div>
-                <img
-                  src="~/assets/images/quotes.svg"
-                  alt="Quotes background image"
-                  class="quotes"
-                />
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonial" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonial" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+            <img
+              src="~/assets/images/quotes.svg"
+              alt="Quotes background image"
+              class="quotes"
+            />
           </div>
         </div>
     
@@ -137,10 +108,15 @@ export default {}
   line-height: 48px;
 }
 
+.testimonial__person {
+  margin-top: 1.6em;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .testimonial__person--name {
   font-size: var(--ft-big-body);
   font-weight: 900;
-  margin-top: 1.6em;
 }
 
 .testimonial__person--post {
@@ -152,7 +128,7 @@ export default {}
 .quotes {
   position: absolute;
   top: 5%;
-  right: -30%;
+  right: -20%;
   z-index: -1;
 }
 
@@ -181,17 +157,27 @@ export default {}
 }
 
 @media (max-width: 580px) {
+  .testimonial__person {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
   .testimonials-heading-bg {
     display: none;
   }
 
   .quotes {
     right: -15%;
-    top: 45%;
+    top: 30%;
   }
 
   .testimonial__content {
     line-height: 36px;
+  }
+
+  .company__logo {
+    margin-top: 1rem;
   }
 }
 </style>
