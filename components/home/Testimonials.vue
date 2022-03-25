@@ -59,7 +59,7 @@
                       <span class="testimonial__person--post"> Chief Technology Officer </span>
                     </div>
                     <img
-                      src="~/assets/images/rumie-1.png"
+                      src="~/assets/images/rumie.png"
                       alt="Rumie Logo"
                       width="150"
                       class="company__logo"
