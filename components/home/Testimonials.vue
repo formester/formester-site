@@ -24,7 +24,7 @@
           />
         </div>     
 
-        <div class="col-lg-6 position-relative">
+        <div class="col-lg-7 position-relative">
           <div id="carouselTestimonial" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active" data-bs-interval="5000">
@@ -133,6 +133,9 @@ export default {}
 }
 
 @media (max-width: 1400px) {
+  .col-lg-7 {
+    width: 50%;
+  }
   .testimonials-heading-bg {
     left: -165%;
   }
@@ -153,6 +156,12 @@ export default {}
   .quotes {
     right: -10%;
     top: 25%;
+  }
+}
+
+@media (max-width: 992px) {
+  .col-lg-7 {
+    width: 100%;
   }
 }
 
