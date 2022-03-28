@@ -24,10 +24,14 @@
           />
         </div>     
 
-        <div class="col-lg-7 position-relative">
+        <div class="col-lg-7 position-relative product-testimonials">
           <div id="carouselTestimonial" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselTestimonial" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselTestimonial" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
             <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="5000">
+              <div class="carousel-item active">
                 <div class="d-flex flex-column">
                   <p class="testimonial__content mt-2 mt-lg-0">
                     I really enjoy Formester. It’s clean and straight-forward and it
@@ -46,9 +50,8 @@
                     />
                   </div>
                 </div>
-
               </div>
-              <div class="carousel-item" data-bs-interval="5000">
+              <div class="carousel-item">
                 <div class="d-flex flex-column">
                   <p class="testimonial__content mt-2 mt-lg-0">
                     At Rumie we use Formester to get feedback from our educators and volunteers. It's intuitive, fast and easy to share. 
@@ -86,11 +89,22 @@ export default {}
 </script>
 
 <style scoped>
+.product-testimonials {
+  display: flex;
+  padding-top: 4rem;
+  box-sizing: border-box;
+  min-height: 400px;
+}
+
+.carousel-indicators {
+  top: 350px;
+}
+
 .testimonials {
   margin-top: 3em;
   background: var(--clr-primary);
   padding: 8em 3em;
-  z-index: -100;
+  z-index: 0;
   color: white;
 }
 
@@ -134,7 +148,7 @@ export default {}
 
 @media (max-width: 1400px) {
   .col-lg-7 {
-    width: 50%;
+    width: 55%;
   }
   .testimonials-heading-bg {
     left: -165%;
@@ -143,6 +157,9 @@ export default {}
 @media (max-width: 1200px) {
   .testimonials-heading-bg {
     left: -207%;
+  }
+  .product-testimonials {
+    padding-top: 3rem;
   }
 }
 
@@ -162,6 +179,12 @@ export default {}
 @media (max-width: 992px) {
   .col-lg-7 {
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-testimonials {
+    padding-top: 2rem;
   }
 }
 
@@ -187,6 +210,14 @@ export default {}
 
   .company__logo {
     margin-top: 1rem;
+  }
+
+  .product-testimonials {
+    min-height: 500px;
+  }
+
+  .carousel-indicators {
+    top: 480px;
   }
 }
 </style>
