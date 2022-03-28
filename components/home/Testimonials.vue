@@ -71,14 +71,6 @@
                 </div>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonial" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonial" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
             <img
               src="~/assets/images/quotes.svg"
               alt="Quotes background image"
@@ -102,14 +94,6 @@ export default {}
   padding-top: 4rem;
   box-sizing: border-box;
   min-height: 400px;
-}
-
-.carousel-control-prev {
-  margin-left: -100px;
-}
-
-.carousel-control-next {
-  margin-right: -100px;
 }
 
 .carousel-indicators {
@@ -196,24 +180,9 @@ export default {}
   .col-lg-7 {
     width: 100%;
   }
-  .carousel-control-prev {
-    margin-left: -80px;
-  }
-
-  .carousel-control-next {
-    margin-right: -80px;
-  }
 }
 
 @media (max-width: 768px) {
-  .carousel-control-prev {
-    margin-left: -70px;
-  }
-
-  .carousel-control-next {
-    margin-right: -70px;
-  }
-
   .product-testimonials {
     padding-top: 2rem;
   }
@@ -249,14 +218,6 @@ export default {}
 
   .carousel-indicators {
     top: 480px;
-  }
-
-  .carousel-control-prev {
-    margin-left: -60px;
-  }
-
-  .carousel-control-next {
-    margin-right: -60px;
   }
 }
 </style>
