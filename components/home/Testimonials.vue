@@ -26,8 +26,12 @@
 
         <div class="col-lg-7 position-relative">
           <div id="carouselTestimonial" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselTestimonial" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselTestimonial" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
             <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="5000">
+              <div class="carousel-item active">
                 <div class="d-flex flex-column">
                   <p class="testimonial__content mt-2 mt-lg-0">
                     I really enjoy Formester. It’s clean and straight-forward and it
@@ -46,9 +50,8 @@
                     />
                   </div>
                 </div>
-
               </div>
-              <div class="carousel-item" data-bs-interval="5000">
+              <div class="carousel-item">
                 <div class="d-flex flex-column">
                   <p class="testimonial__content mt-2 mt-lg-0">
                     At Rumie we use Formester to get feedback from our educators and volunteers. It's intuitive, fast and easy to share. 
@@ -68,6 +71,14 @@
                 </div>
               </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonial" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonial" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
             <img
               src="~/assets/images/quotes.svg"
               alt="Quotes background image"
@@ -90,7 +101,7 @@ export default {}
   margin-top: 3em;
   background: var(--clr-primary);
   padding: 8em 3em;
-  z-index: -100;
+  z-index: 0;
   color: white;
 }
 
