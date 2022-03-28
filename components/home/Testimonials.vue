@@ -24,7 +24,7 @@
           />
         </div>     
 
-        <div class="col-lg-7 position-relative">
+        <div class="col-lg-7 position-relative product-testimonials">
           <div id="carouselTestimonial" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselTestimonial" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -97,6 +97,25 @@ export default {}
 </script>
 
 <style scoped>
+.product-testimonials {
+  display: flex;
+  padding-top: 4rem;
+  box-sizing: border-box;
+  min-height: 400px;
+}
+
+.carousel-control-prev {
+  margin-left: -100px;
+}
+
+.carousel-control-next {
+  margin-right: -100px;
+}
+
+.carousel-indicators {
+  top: 350px;
+}
+
 .testimonials {
   margin-top: 3em;
   background: var(--clr-primary);
@@ -145,7 +164,7 @@ export default {}
 
 @media (max-width: 1400px) {
   .col-lg-7 {
-    width: 50%;
+    width: 55%;
   }
   .testimonials-heading-bg {
     left: -165%;
@@ -154,6 +173,9 @@ export default {}
 @media (max-width: 1200px) {
   .testimonials-heading-bg {
     left: -207%;
+  }
+  .product-testimonials {
+    padding-top: 3rem;
   }
 }
 
@@ -173,6 +195,27 @@ export default {}
 @media (max-width: 992px) {
   .col-lg-7 {
     width: 100%;
+  }
+  .carousel-control-prev {
+    margin-left: -80px;
+  }
+
+  .carousel-control-next {
+    margin-right: -80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-control-prev {
+    margin-left: -70px;
+  }
+
+  .carousel-control-next {
+    margin-right: -70px;
+  }
+
+  .product-testimonials {
+    padding-top: 2rem;
   }
 }
 
@@ -198,6 +241,14 @@ export default {}
 
   .company__logo {
     margin-top: 1rem;
+  }
+
+  .product-testimonials {
+    min-height: 500px;
+  }
+
+  .carousel-indicators {
+    top: 480px;
   }
 }
 </style>
