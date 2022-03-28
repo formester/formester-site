@@ -250,5 +250,13 @@ export default {}
   .carousel-indicators {
     top: 480px;
   }
+
+  .carousel-control-prev {
+    margin-left: -60px;
+  }
+
+  .carousel-control-next {
+    margin-right: -60px;
+  }
 }
 </style>
