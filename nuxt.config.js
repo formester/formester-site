@@ -161,5 +161,8 @@ export default {
   // For catching 404 pages
   generate: {
     fallback: true
-  }
+  },
+  content: {
+    liveEdit: false
+  },
 }
