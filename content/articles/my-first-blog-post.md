@@ -1,8 +1,6 @@
 ---
 title: How to make your form more engaging?
-description: Learning how to use @nuxt/content to create a blog
-img: first-blog-post.jpg
-alt: my first blog post
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus tristique ultrices pharetra viverra purus libero. Eu consectetur neque quisque sit ultrices semper pharetra, proin.
 author: Sadanand Saha
 timeToRead: 5
 ---

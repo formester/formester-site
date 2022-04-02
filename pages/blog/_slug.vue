@@ -1,5 +1,5 @@
 <template>
-  <article class="container mw-840">
+  <article class="container mw-840 mt-8rem">
     <h1 class="mb-1 article__heading">{{ article.title }}</h1>
     <div class="d-flex sm-text my-2 datentimeToRead">
       <span>{{ formatDate(article.createdAt) }}</span>
@@ -15,7 +15,6 @@
       by <span class="article__author">{{ article.author }}</span>
     </div>
     <p class="article__desc mt-4">{{ article.description }}</p>
-    <img :src="article.img" :alt="article.alt" />
     <nuxt-content :document="article"/>
     <!-- <pre> {{ article }} </pre> -->
   </article>
@@ -23,17 +22,20 @@
 
 <script>
   export default {
+    content: {
+      liveEdit: false
+    },
     async asyncData({ $content, params }) {
       const article = await $content('articles', params.slug).fetch()
 
       return { article }
     },
     methods: {
-    formatDate(date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' }
-      return new Date(date).toLocaleDateString('en', options)
-    }
- }
+      formatDate(date) {
+        const options = { year: 'numeric', month: 'long', day: 'numeric' }
+        return new Date(date).toLocaleDateString('en', options)
+      }
+    },
   }
 </script>
 
@@ -46,8 +48,8 @@
 }
 
 .nuxt-content h2 {
-  font-size: 1.875rem;
-  font-weight: 600; 
+  font-size: 1.5rem;
+  font-weight: 500; 
   line-height: 40px;
   color: hsla(0, 0%, 20%, 1);
 }
@@ -70,6 +72,10 @@
 
 .mw-840 {
   max-width: 840px;
+}
+
+.mt-8rem {
+  margin-block: 8rem;
 }
 
 .datentimeToRead {
