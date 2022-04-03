@@ -60,6 +60,11 @@
   color: hsla(0, 0%, 31%, 1);
 }
 
+.nuxt-content img {
+  height: auto;
+  width: 100%;
+}
+
 .sm-text {
   font-size: 14px;
   line-height: 21px;
