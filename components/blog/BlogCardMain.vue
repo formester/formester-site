@@ -6,7 +6,7 @@
         alt="NA" 
         />
         <div class="col-6 d-flex flex-column align-items-start">
-            <span class="blog__date">{{ formatDate(heroarticle.date) }}</span>
+            <span class="blog__date">{{ formatDate(heroarticle.createdAt) }}</span>
             <div class="mt-2">
                 <h3 class="blog__title">{{ heroarticle.title }}</h3>
                 <p class="mt-1 blog__desc">{{ heroarticle.description }}
@@ -25,7 +25,7 @@
                         fill="#828282"
                     />
                 </svg>
-                {{ heroarticle.timeToRead }}} min read
+                {{ heroarticle.timeToRead }} min read
             </span>
         </div>
     </div>
