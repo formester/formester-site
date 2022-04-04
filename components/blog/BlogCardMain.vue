@@ -1,17 +1,15 @@
 <template>
     <div class="row">
         <img 
-        :src="require(`@/assets/images/blog/blog-img-1.png`)"
+        :src="require(`@/assets/images/blog/${heroarticle.coverImg}`)"
         class="rounded col-6"
         alt="NA" 
         />
         <div class="col-6 d-flex flex-column align-items-start">
-            <span class="blog__date">1 Feb 2022</span>
+            <span class="blog__date">{{ formatDate(heroarticle.date) }}</span>
             <div class="mt-2">
-                <h3 class="blog__title">Get started with Formester</h3>
-                <p class="mt-1 blog__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam nihil nisi architecto voluptate hic quaerat neque eum, earum sunt at saepe dicta enim eius maxime non tempore. Quibusdam, rem quas!
-                </p>
-                <p class="mt-2 blog__desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, harum beatae? Corporis, autem. Quas adipisci expedita, beatae impedit ratione debitis.
+                <h3 class="blog__title">{{ heroarticle.title }}</h3>
+                <p class="mt-1 blog__desc">{{ heroarticle.description }}
                 </p>
             </div>
             <span class="mt-2 blog__timetoRead">
@@ -27,7 +25,7 @@
                         fill="#828282"
                     />
                 </svg>
-                6 min read
+                {{ heroarticle.timeToRead }}} min read
             </span>
         </div>
     </div>
@@ -36,10 +34,13 @@
 <script>
     export default {
         name: 'Blog',
-        props: ['blog'],
-        mounted() {
-            console.log(this.blog)
-        }
+        props: ['heroarticle'],
+        methods: {
+            formatDate(date) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' }
+            return new Date(date).toLocaleDateString('en', options)
+            }
+        },
     }
 </script>
 

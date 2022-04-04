@@ -1,15 +1,16 @@
 ---
-title: Home
+title: This is a some article
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus tristique ultrices pharetra viverra purus libero. Eu consectetur neque quisque sit ultrices semper pharetra, proin.
+author: Sadanand Saha
+timeToRead: 1
+coverImg: blog-img-1.png
 ---
 
-## Links
+![alt text](https://nirman.netlify.app/assets/images/nirman.png)
+## Welcome to my first blog post using content module
 
-<nuxt-link to="/articles">Nuxt Link to Blog</nuxt-link>
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore omnis sapiente possimus in, vero earum qui quasi aspernatur! Incidunt tempora cupiditate doloremque esse ipsum quos, earum et hic, iusto animi maxime deserunt aliquam quas dolores eos impedit inventore repellendus harum corporis consectetur architecto? Vel dolorum distinctio explicabo, ea unde itaque.
 
-<a href="/articles">Html Link to Blog</a>
+## Sada pro
 
-[Markdown Link to Blog](/articles)
-
-<a href="https://nuxtjs.org">External link html</a>
-
-[External Link markdown](https://nuxtjs.org)
+I am god at everything      

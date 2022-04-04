@@ -1,17 +1,17 @@
 <template>
     <div class="col-4 d-flex flex-column">
         <img 
-        :src="require(`@/assets/images/blog/${blog.imgName}`)"
+        :src="require(`@/assets/images/blog/${article.coverImg}`)"
         class="rounded"
         alt="NA" 
         />
         <div class="d-flex flex-column align-items-start">
-            <span class="blog__date mt-3">{{ blog.date }}</span>
+            <span class="blog__date mt-3">{{ formatDate(article.createdAt) }}</span>
             <div class="mt-2">
-                <h3 class="blog__title">{{ blog.title }}</h3>
+                <h3 class="blog__title">{{ article.title }}</h3>
                 <p
                     class="mt-1 blog__desc"
-                >{{ blog.desc }}</p>
+                >{{ article.description }}</p>
             </div>
             <span class="mt-2 blog__timetoRead">
                 <svg
@@ -26,7 +26,7 @@
                         fill="#828282"
                     />
                 </svg>
-                {{ blog.timetoRead }} min read
+                {{ article.timeToRead }} min read
             </span>
         </div>
     </div>
@@ -35,10 +35,13 @@
 <script>
     export default {
         name: 'Blog',
-        props: ['blog'],
-        mounted() {
-            console.log(this.blog)
-        }
+        props: ['article'],
+        methods: {
+            formatDate(date) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' }
+            return new Date(date).toLocaleDateString('en', options)
+            }
+        },
     }
 </script>
 
