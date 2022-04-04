@@ -1,19 +1,15 @@
 <template>
   <div class="container">
-      <BlogCardMain
-        v-for="article in heroArticles"
+    <BlogCardMain v-for="article in heroArticles" :key="article.slug" :heroarticle="article" />
+    <div class="row mt-4">
+      <BlogCard
+        v-for="article in articles"
         :key="article.slug"
-        :heroarticle="article"
+        class="col-md-4 my-3"
+        :article="article"
       />
-      <div class="row mt-4">
-        <BlogCard
-          v-for="article in articles"
-          :key="article.slug"
-          class="col-md-4 my-3"
-          :article="article"
-        />
-          </div>
-      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -33,8 +29,6 @@ export default {
     const heroArticles = await $content('hero-articles')
       .sortBy('createdAt', 'asc')
       .fetch()
-    
-    // const heroArticle = await $content('heroArticle').fetch()[0]
 
     return {
       articles,
@@ -71,6 +65,6 @@ export default {
   font-size: 0.875rem;
   line-height: 21px;
   color: hsla(0, 0%, 51%, 1);
-  gap: .5rem;
+  gap: 0.5rem;
 }
 </style>
