@@ -1,8 +1,10 @@
 <template>
   <div class="container">
-      <!-- <BlogCardMain 
-        :heroarticle="heroArticle"
-      /> -->
+      <BlogCardMain
+        v-for="article in heroArticles"
+        :key="article.slug"
+        :heroarticle="article"
+      />
       <div class="row mt-4">
         <BlogCard
           v-for="article in articles"
@@ -27,11 +29,16 @@ export default {
     const articles = await $content('articles')
       .sortBy('createdAt', 'asc')
       .fetch()
+
+    const heroArticles = await $content('hero-articles')
+      .sortBy('createdAt', 'asc')
+      .fetch()
     
     // const heroArticle = await $content('heroArticle').fetch()[0]
 
     return {
-      articles
+      articles,
+      heroArticles
     }
   },
 }
