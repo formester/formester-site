@@ -1,8 +1,8 @@
 ---
-title: How to make your form more engaging?
+title: This is the second article
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus tristique ultrices pharetra viverra purus libero. Eu consectetur neque quisque sit ultrices semper pharetra, proin.
 author: Sadanand Saha
-timeToRead: 5
+timeToRead: 2
 coverImg: blog-img-1.png
 ---
 
@@ -13,4 +13,4 @@ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore omnis sapiente 
 
 ## Sada pro
 
-I am god at everything      
+I am god at everything
