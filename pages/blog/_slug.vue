@@ -24,8 +24,6 @@
       by
       <span class="article__author">{{ article.author }}</span>
     </div>
-    <img :src="require(`@/assets/images/blog/${article.coverImg}`)" class="rounded" alt="NA" />
-
     <p class="article__desc mt-4">{{ article.description }}</p>
     <nuxt-content :document="article" />
     <!-- <pre> {{ article }} </pre> -->

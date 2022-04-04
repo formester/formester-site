@@ -1,5 +1,5 @@
 <template>
-    <div class="col-4 d-flex flex-column">
+    <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
         <img 
         :src="require(`@/assets/images/blog/${article.coverImg}`)"
         class="rounded"
@@ -29,7 +29,7 @@
                 {{ article.timeToRead }} min read
             </span>
         </div>
-    </div>
+    </NuxtLink>
 </template>
 
 <script>
