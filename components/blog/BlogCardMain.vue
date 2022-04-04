@@ -1,16 +1,15 @@
 <template>
     <NuxtLink :to="{ name: 'blog-slug', params: { slug: heroarticle.slug } }" class="row">
-        <img 
-        :src="require(`@/assets/images/blog/${heroarticle.coverImg}`)"
-        class="rounded col-6"
-        alt="NA" 
+        <img
+            :src="require(`@/assets/images/blog/${heroarticle.coverImg}`)"
+            class="col-lg-6 rounded img-fluid"
+            alt="NA"
         />
-        <div class="col-6 d-flex flex-column align-items-start">
+        <div class="col-lg-6 d-flex flex-column align-items-start mt-3 mt-lg-0">
             <span class="blog__date">{{ formatDate(heroarticle.createdAt) }}</span>
             <div class="mt-2">
                 <h3 class="blog__title">{{ heroarticle.title }}</h3>
-                <p class="mt-1 blog__desc">{{ heroarticle.description }}
-                </p>
+                <p class="mt-1 blog__desc">{{ heroarticle.description }}</p>
             </div>
             <span class="mt-2 blog__timetoRead">
                 <svg
@@ -32,16 +31,16 @@
 </template>
 
 <script>
-    export default {
-        name: 'Blog',
-        props: ['heroarticle'],
-        methods: {
-            formatDate(date) {
+export default {
+    name: 'Blog',
+    props: ['heroarticle'],
+    methods: {
+        formatDate(date) {
             const options = { year: 'numeric', month: 'long', day: 'numeric' }
             return new Date(date).toLocaleDateString('en', options)
-            }
-        },
-    }
+        }
+    },
+}
 </script>
 
 <style>

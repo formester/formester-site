@@ -1,11 +1,11 @@
 <template>
-  <div class="container">
+  <div class="container mt-5">
     <BlogCardMain v-for="article in heroArticles" :key="article.slug" :heroarticle="article" />
     <div class="row mt-4">
       <BlogCard
         v-for="article in articles"
         :key="article.slug"
-        class="col-md-4 my-3"
+        class="col-lg-4 my-3"
         :article="article"
       />
     </div>

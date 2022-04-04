@@ -1,6 +1,6 @@
 ---
 title: This is a some article
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus tristique ultrices pharetra viverra purus libero. Eu consectetur neque quisque sit ultrices semper pharetra, proin.
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus tristique ultrices pharetra viverra purus libero. Eu consectetur neque quisque sit ultrices semper pharetra, proin. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
 author: Sadanand Saha
 timeToRead: 1
 coverImg: blog-img-1.png

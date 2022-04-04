@@ -2,7 +2,7 @@
     <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
         <img 
         :src="require(`@/assets/images/blog/${article.coverImg}`)"
-        class="rounded"
+        class="rounded img-fluid"
         alt="NA" 
         />
         <div class="d-flex flex-column align-items-start">
