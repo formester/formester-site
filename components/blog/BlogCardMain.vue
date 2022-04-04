@@ -1,5 +1,5 @@
 <template>
-    <div class="row">
+    <NuxtLink :to="{ name: 'blog-slug', params: { slug: heroarticle.slug } }" class="row">
         <img 
         :src="require(`@/assets/images/blog/${heroarticle.coverImg}`)"
         class="rounded col-6"
@@ -28,7 +28,7 @@
                 {{ heroarticle.timeToRead }} min read
             </span>
         </div>
-    </div>
+    </NuxtLink>
 </template>
 
 <script>
