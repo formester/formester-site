@@ -1,11 +1,16 @@
 <template>
   <div class="container mt-5">
-    <BlogCardMain v-for="article in heroArticles" :key="article.slug" :heroarticle="article" />
+    <BlogCardMain
+      v-for="article in heroArticles"
+      :key="article.slug"
+      :heroarticle="article" 
+      class="my-4"
+    />
     <div class="row mt-4">
       <BlogCard
         v-for="article in articles"
         :key="article.slug"
-        class="col-lg-4 my-3"
+        class="col-lg-4 mt-3 mb-5"
         :article="article"
       />
     </div>
