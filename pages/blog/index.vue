@@ -1,6 +1,6 @@
 <template>
   <div class="container mt-5">
-    <BlogCardMain
+    <BlogFeatured
       v-for="article in heroArticles"
       :key="article.slug"
       :heroarticle="article" 
@@ -19,13 +19,13 @@
 
 <script>
 import BlogCard from '../../components/blog/BlogCard.vue'
-import BlogCardMain from '../../components/blog/BlogCardMain.vue'
+import BlogFeatured from '../../components/blog/BlogFeatured.vue'
 
 export default {
   components: {
     BlogCard,
-    BlogCardMain
-  },
+    BlogFeatured
+},
   async asyncData({ $content }) {
     const articles = await $content('articles')
       .sortBy('createdAt', 'asc')

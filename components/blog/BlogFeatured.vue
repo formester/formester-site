@@ -32,7 +32,7 @@
 
 <script>
 export default {
-    name: 'Blog',
+    name: 'BlogFeatured',
     props: ['heroarticle'],
     methods: {
         formatDate(date) {

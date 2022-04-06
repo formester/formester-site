@@ -34,7 +34,7 @@
 
 <script>
     export default {
-        name: 'Blog',
+        name: 'BlogCard',
         props: ['article'],
         methods: {
             formatDate(date) {
