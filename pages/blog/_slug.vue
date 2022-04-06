@@ -77,10 +77,24 @@ export default {
   color: hsla(0, 0%, 20%, 1);
 }
 
+.nuxt-content h1 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  line-height: 40px;
+  color: hsla(0, 0%, 20%, 1);
+}
+
 .nuxt-content h2 {
   font-size: 1.5rem;
   font-weight: 600;
-  line-height: 40px;
+  line-height: 36px;
+  color: hsla(0, 0%, 20%, 1);
+}
+
+.nuxt-content h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 24px;
   color: hsla(0, 0%, 20%, 1);
 }
 
