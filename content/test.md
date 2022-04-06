@@ -1,9 +1,10 @@
 ---
-title: This is a some article
+title: This is a hero article
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus tristique ultrices pharetra viverra purus libero. Eu consectetur neque quisque sit ultrices semper pharetra, proin.
 author: Sadanand Saha
 timeToRead: 1
 coverImg: blog-img-1.png
+featured: false
 ---
 
 ![alt text](https://nirman.netlify.app/assets/images/nirman.png)

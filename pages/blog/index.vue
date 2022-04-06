@@ -3,7 +3,7 @@
     <BlogFeatured
       v-for="article in heroArticles"
       :key="article.slug"
-      :heroarticle="article" 
+      :heroarticle="article"
       class="my-4"
     />
     <div class="row mt-4">
@@ -25,13 +25,19 @@ export default {
   components: {
     BlogCard,
     BlogFeatured
-},
+  },
   async asyncData({ $content }) {
     const articles = await $content('articles')
+      .where({
+        'featured': false
+      })
       .sortBy('createdAt', 'asc')
       .fetch()
 
-    const heroArticles = await $content('hero-articles')
+    const heroArticles = await $content('articles')
+      .where({
+        'featured': true
+      })
       .sortBy('createdAt', 'asc')
       .fetch()
 
