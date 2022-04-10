@@ -27,15 +27,17 @@ export default {
     BlogFeatured
   },
   async asyncData({ $content }) {
-    const articles = await $content('articles')
+    const articles = await $content('blogs')
       .where({
+        'published': true,
         'featured': false
       })
       .sortBy('createdAt', 'asc')
       .fetch()
 
-    const heroArticles = await $content('articles')
+    const heroArticles = await $content('blogs')
       .where({
+        'published': true,
         'featured': true
       })
       .sortBy('createdAt', 'asc')
