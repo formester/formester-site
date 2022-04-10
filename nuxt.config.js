@@ -142,6 +142,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
+    '@nuxt/content',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -160,5 +161,8 @@ export default {
   // For catching 404 pages
   generate: {
     fallback: true
-  }
+  },
+  content: {
+    liveEdit: false
+  },
 }
