@@ -1,10 +1,12 @@
 ---
-title: This is a hero article
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus tristique ultrices pharetra viverra purus libero. Eu consectetur neque quisque sit ultrices semper pharetra, proin.
-author: Sadanand Saha
-timeToRead: 1
+title: Uploading files with Formester
+description: Uploading files with Formester is easy, convinient and fast. You
+author: Ankit Singhaniya
+timeToRead: 4
 coverImg: blog-img-1.png
-featured: false
+featured: true
+published: false
+createdAt: '2022-04-10'
 ---
 
 ![alt text](https://nirman.netlify.app/assets/images/nirman.png)
