@@ -2,10 +2,10 @@
     <NuxtLink :to="{ name: 'blog-slug', params: { slug: heroarticle.slug } }" class="row">
         <img
             :src="require(`@/assets/images/blog/${heroarticle.coverImg}`)"
-            class="col-lg-6 rounded img-fluid"
+            class="col-lg-6 rounded img-fluid featured__blog-img"
             alt="NA"
         />
-        <div class="col-lg-6 d-flex flex-column align-items-start mt-3 mt-lg-0">
+        <div class="col-lg-6 d-flex flex-column align-items-start mt-3 mt-lg-0 ps-0 ps-lg-4">
             <span class="blog__date">{{ formatDate(heroarticle.createdAt) }}</span>
             <div class="mt-2">
                 <h3 class="blog__title">{{ heroarticle.title }}</h3>
@@ -44,4 +44,7 @@ export default {
 </script>
 
 <style>
+.featured__blog-img {
+    padding: 0;
+}
 </style>
