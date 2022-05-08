@@ -47,8 +47,8 @@
 
 <style>
 .blog__date {
-    background: #e0e0e0;
-    color: hsla(0, 0%, 20%, 1);
+    background: hsla(0, 0%, 96%, 1);
+    color: hsla(0, 0%, 31%, 1);
     padding: 0.5rem;
     font-size: 0.875rem;
     line-height: 14px;
