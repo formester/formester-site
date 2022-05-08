@@ -10,7 +10,7 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 .message-block {
-  margin: 0 auto;
+  margin: 0 0;
   padding: 0;
   height: 100vh;
   width: 100%;
