@@ -4,8 +4,8 @@ description: Different approaches to building web forms with formester
 author: Piyush Singhania
 timeToRead: 10
 coverImg: blog-img-1.png
-featured: true
-published: false
+featured: false
+published: true
 createdAt: '2022-05-10'
 ---
 
