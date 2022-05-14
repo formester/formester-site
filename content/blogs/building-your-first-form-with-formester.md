@@ -121,7 +121,7 @@ Once you are satisfied use the publish button to get the form link along with so
 All the submissions you receive will show up in the submissions tab in formester, from where you can easily access them.
 
 <br><br>
-![Form Example](/blogs/building-your-first-form-with-formester/build-example.png)
+![Form Example](/blogs/building-your-first-form-with-formester/form-example.png)
 <br><br>
 
 Here is a simple example of a form that was built using formester. Hope you find this helpful, thanks for reading.
