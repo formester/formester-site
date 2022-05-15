@@ -116,7 +116,7 @@ Switch between in-form and out-form logo positions and a lot more.
 At Formester, we provide element-level customization and settings too. The different elements which you drop into the form come along with their individual settings. You can access those settings by clicking on the element once you have added them to the form. Once you click on an element you have added to the form, a new element settings bar will transition from the left side. This element-level settings bar carries along with it a bunch of additional customizations and settings for individual form elements. Apart from this the element settings bar is also very important from the perspective of adding and editing questions or labels in the form.
 
 While doing all of this, you can simultaneously save and preview the form by using the preview feature. This will help you to build the form better and will keep you in sync with how the form is emerging. 
-Once you are satisfied use the publish button to get the form link along with some quick social media actions links. Copy the form link from there and **That’s it!** Now you are good to share the link onsingle-form-vs-mult-form.md any channel you want. You can also embed this link to CTA buttons on your own website.
+Once you are satisfied use the publish button to get the form link along with some quick social media actions links. Copy the form link from there and **That’s it!** Now you are good to share the link on any channel you want. You can also embed this link to CTA buttons on your own website.
 
 All the submissions you receive will show up in the submissions tab in formester, from where you can easily access them.
 
