@@ -3,21 +3,26 @@ title: Single Page vs Multi Page Forms
 description: Do you need a single-page form or a multi-page form? There has been much debate about which provides a better user experience. However, the answer may not be so definitive. There are advantages and disadvantages to both. Deciding which is most appropriate depends on the context of your form.
 author: Piyush Singhania
 timeToRead: 7
-coverImg: blog-img-1.png
+coverImg: single-page-vs-multi-page.svg
 featured: false
 published: true
 createdAt: '2022-05-15'
 ---
 
-# Different approaches to building web forms:
+<br><br>
+![Single Page vs Multi Page](/blogs/single-page-vs-multi-form/single-page-vs-multi-page.svg)
+<br><br>
 
-**Single Page Form -**
+# Different approaches to building web forms:<br><br>
 
-<u>Easy to edit fields</u> - Single page forms are easy to edit as the data is not spread into multiple pages. And navigating to the field you want to edit is easier. All you need is to scroll up to the field. While in multi page forms one has to navigate back and forth to edit fields.
+## Single Page Form -
+<br>
 
-<!-- <br><br>
-![Easy to edit fields](/blogs/single-page-vs-multi-form/easy-to-edit.png)
-<br><br> -->
+**Easy to edit fields** - Single page forms are easy to edit as the data is not spread into multiple pages. And navigating to the field you want to edit is easier. All you need is to scroll up to the field. While in multi page forms one has to navigate back and forth to edit fields.
+
+<br><br>
+![Easy to edit fields](/blogs/single-page-vs-multi-form/easy-to-edit.svg)
+<br><br>
 
 For forms that contain interrelated fields, it’s advisable to use single-page forms. It will make it much easier to edit and change.
 
@@ -25,27 +30,41 @@ Also, people tend to change or update entries for fields that take input based o
 
 For example - It’s less likely that one will change their name or dob, whereas fields like quantity or size are more likely to be updated by the user.
 
-<u>Taking the single type of information</u> - When you have to take a single type of information in your form then it’s good to use a single-page form. This also gives the user complete transparency about what you will be asking them.
+**Taking the single type of information** - When you have to take a single type of information in your form then it’s good to use a single-page form. This also gives the user complete transparency about what you will be asking them.
 
-<u>Less loading time</u> - In the case of single-page forms, only one page needs to be loaded, whereas for multiple page forms slow loading pages can lead to loss of customers.
+**Less loading time** - In the case of single-page forms, only one page needs to be loaded, whereas for multiple page forms slow loading pages can lead to loss of customers.
 
-In formester in the case of multi-page forms, we use the component-based approach, i.e. we load the entire form at a time and then break it into multiple pages. So on the user end, switching between pages is seamless and this problem doesn’t persist in our case.
+<br><br>
+![Loading time](/blogs/single-page-vs-multi-form/loading-time.svg)
+<br><br>
 
-**Multi Page Form -**
+In formester in the case of multi-page forms, we use the component-based approach, i.e. we load the entire form at a time and then break it into multiple pages. So on the user end, switching between pages is seamless and this problem doesn’t persist in our case.<br><br>
 
-<u>Less overwhelming</u> - Many times when you open up a URL to fill up a form and unlike your expectation, you find it quite long and daunting at the first glance, then it's more likely that you will not even start with it. And that’s the case with long single-page forms.
+## Multi Page Form -
+<br>
+
+**Less overwhelming** - Many times when you open up a URL to fill up a form and unlike your expectation, you find it quite long and daunting at the first glance, then it's more likely that you will not even start with it. And that’s the case with long single-page forms.
 
 Here, Multi Page forms come as a savior. One can easily spread the different questions and form elements over multiple pages and this will help the form look less overwhelming.
 
-<u>Good for reasonably long form</u> - When the form is reasonably long with a lot of questions and elements then it is good to use a multi-page form. As we have discussed that Multi Page form helps in spreading the questions over multiple pages, this will help in combating such long forms.
+<br><br>
+![Less overwhelming](/blogs/single-page-vs-multi-form/less-overwhelming.svg)
+<br><br>
 
-<u>Helps in grouping similar questions</u>- With a multi-page form, one can group questions under similar topic clusters. One can break the form into different pages, with each page containing similar types of questions.
+**Good for reasonably long form** - When the form is reasonably long with a lot of questions and elements then it is good to use a multi-page form. As we have discussed that Multi Page form helps in spreading the questions over multiple pages, this will help in combating such long forms.
+
+**Helps in grouping similar questions**- With a multi-page form, one can group questions under similar topic clusters. One can break the form into different pages, with each page containing similar types of questions.
+
+<br><br>
+![Grouping similar questions](/blogs/single-page-vs-multi-form/similar-questions.svg)
+<br><br>
 
 This will enhance the user experience and will help users to fill out forms faster and in a more engaging way.
 
-<u>Length</u> - Having a progress bar on a multi-page form allows the customer to know their progress along the process of filling out the form. It gives an overview of the overall form length and also helps in proper navigation. Having quite a few pages where you might only be asking single questions can sometimes intimidate users due to the overall length.
+**Length**- Having a progress bar on a multi-page form allows the customer to know their progress along the process of filling out the form. It gives an overview of the overall form length and also helps in proper navigation. Having quite a few pages where you might only be asking single questions can sometimes intimidate users due to the overall length.<br><br>
 
 ## Single Page and Multi Page Forms in Formester -
+<br>
 
 With Formester you can switch between the different types of forms with just a click of a button.
 <br><br>
