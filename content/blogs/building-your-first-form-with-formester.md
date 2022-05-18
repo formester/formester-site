@@ -118,14 +118,16 @@ At Formester, we provide element-level customization and settings too. The diffe
 While doing all of this, you can simultaneously save and preview the form by using the preview feature. This will help you to build the form better and will keep you in sync with how the form is emerging. 
 Once you are satisfied use the publish button to get the form link along with some quick social media actions links. Copy the form link from there and **That’s it!** Now you are good to share the link on any channel you want. You can also embed this link to CTA buttons on your own website.
 
-All the submissions you receive will show up in the submissions tab in formester, from where you can easily access them.
-
 <br><br>
 ![Form Example](/blogs/building-your-first-form-with-formester/form-example.png)
 <br><br>
 
-Here is a simple example of a form that was built using formester. Hope you find this helpful, thanks for reading.
+Each submission you receive will appear in the Submissions tab of Formester, from where you can access it easily.
+
+Here's an example of a form built using Formester
 
 <br><br>
 ![Final Output Form](/blogs/building-your-first-form-with-formester/final-form.png)
 <br><br>
+
+It is my hope that this blog is helpful to you, and that now you have all the information you need to **build your first form with Formester**.

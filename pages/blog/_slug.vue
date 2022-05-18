@@ -138,6 +138,6 @@ export default {
 
 .blog__back {
   position: absolute;
-  top: -15%;
+  top: -1%;
 }
 </style>
