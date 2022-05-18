@@ -6,14 +6,22 @@
       <div
         class="d-flex align-items-center justify-content-center flex-wrap mt-4"
       >
-        <PricingCard category="Free" :amount="0" :features="features1" />
+        <PricingCard
+          category="Free"
+          :amount="0"
+          :features="freePlanFeatures"
+        />
         <PricingCard
           category="Personal"
           :amount="13"
-          :features="features2"
+          :features="personalPlanFeatures"
           :isHighlighted="true"
         />
-        <PricingCard category="Business" :amount="49" :features="features3" />
+        <PricingCard
+          category="Business"
+          :amount="49"
+          :features="businessPlanFeatures"
+        />
       </div>
       <PricingComparision />
       <CallToActionSection />
@@ -32,42 +40,56 @@ export default {
   components: { PricingCard, PricingComparision, Faq, CallToActionSection },
   data: function () {
     return {
-      features1: [
-        'Unlimited forms',
-        '100 submissions per month',
-        'Form Builder',
-        'Self Email Notifications',
-        'Respondent Email Notifications',
-        'Spam Protection',
-        'API Integrations',
-        'Zapier Connectors',
-        'Analytics',
-      ],
-      features2: [
-        'Unlimited forms',
-        '1k submissions per month',
-        'Form Builder',
-        'Self Email Notifications',
-        'Respondent Email Notifications',
-        'Spam Protection',
-        'API Integrations',
-        'Zapier Connectors',
-        'Analytics',
-        '1 GB File Uploads'
-      ],
-      features3: [
-        'Unlimited forms',
-        '25k submissions per month',
-        'Form Builder',
-        'Self Email Notifications',
-        'Respondent Email Notifications',
-        'Spam Protection',
-        'API Integrations',
-        'Zapier Connectors',
-        'Analytics',
-        '5 GB File Uploads',       
-        'White Label',
-      ],
+      freePlanFeatures: {
+        available: [
+          'Unlimited forms',
+          '100 submissions per month',
+          'Form Builder',
+          'Self Email Notifications',
+          'Respondent Email Notifications',
+          'Spam Protection',
+          'API Integrations',
+          'Zapier Connectors',
+          'Analytics',
+        ],
+        unavailable: [
+          'File Uploads',
+          'White Label',
+        ]
+      },
+      personalPlanFeatures: {
+        available: [
+          'Unlimited forms',
+          '1k submissions per month',
+          'Form Builder',
+          'Self Email Notifications',
+          'Respondent Email Notifications',
+          'Spam Protection',
+          'API Integrations',
+          'Zapier Connectors',
+          'Analytics',
+          '1 GB File Uploads',
+        ],
+        unavailable: [
+          'White Label',
+        ]
+      },
+      businessPlanFeatures: {
+        available: [
+          'Unlimited forms',
+          '25k submissions per month',
+          'Form Builder',
+          'Self Email Notifications',
+          'Respondent Email Notifications',
+          'Spam Protection',
+          'API Integrations',
+          'Zapier Connectors',
+          'Analytics',
+          '5 GB File Uploads',       
+          'White Label',
+        ],
+        unavailable: []
+      },
     }
   },
   head: {
