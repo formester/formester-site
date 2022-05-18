@@ -10,8 +10,11 @@
       <h2 class="pricing__amount">${{ amount }}</h2>
       <span class="pricing__timeline">/mo</span>
     </div>
-    <ul class="pricing__features mt-3 text-start">
-      <li v-for="(feature, index) in features" :key="index" class="mt-2">
+    <ul class="mt-3 text-start">
+      <li v-for="(feature, index) in features.available" :key="index" class="mt-2 pricing__features">
+        {{ feature }}
+      </li>
+      <li v-for="(feature, index) in features.unavailable" :key="index" class="mt-2 pricing__unavailable__features">
         {{ feature }}
       </li>
     </ul>
@@ -28,7 +31,7 @@ export default {
   props: {
     category: String,
     amount: Number,
-    features: Array,
+    features: Object,
     isHighlighted: Boolean,
   },
   data() {
@@ -87,5 +90,11 @@ export default {
 
 .pricing__features {
   list-style: url('../../assets/images/check.svg');
+}
+
+.pricing__unavailable__features {
+  list-style: url('../../assets/images/cross.svg');
+  text-decoration: line-through;
+  opacity: 0.7;
 }
 </style>
