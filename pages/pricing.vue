@@ -77,7 +77,7 @@ export default {
       businessPlanFeatures: {
         available: [
           'Unlimited forms',
-          '25k submissions per month',
+          '15k submissions per month',
           'Form Builder',
           'Self Email Notifications',
           'Respondent Email Notifications',
