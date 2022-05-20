@@ -72,26 +72,42 @@ export default {
         {
           name: 'Slack',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt tristique facilisis erat magna cras leo. Aliquam nec in in dui tincidunt.',
+          img: 'slack.svg',
         },
         {
           name: 'Discord',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt tristique facilisis erat magna cras leo. Aliquam nec in in dui tincidunt.',
+          img: 'discord.svg',
         },
         {
           name: 'Salesforce',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt tristique facilisis erat magna cras leo. Aliquam nec in in dui tincidunt.',
+          img: 'salesforce.svg',
         },
         {
-          name: 'Slack',
+          name: 'Calendy',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt tristique facilisis erat magna cras leo. Aliquam nec in in dui tincidunt.',
+          img: 'calendly.svg',
         },
         {
-          name: 'Discord',
+          name: 'Google Sheets',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt tristique facilisis erat magna cras leo. Aliquam nec in in dui tincidunt.',
+          img: 'google-sheets.svg',
         },
         {
-          name: 'Salesforce',
+          name: 'Hotspot',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt tristique facilisis erat magna cras leo. Aliquam nec in in dui tincidunt.',
+          img: 'hubspot.svg',
+        },
+        {
+          name: 'Gdrive',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt tristique facilisis erat magna cras leo. Aliquam nec in in dui tincidunt.',
+          img: 'gdrive.svg',
+        },
+        {
+          name: 'Notion',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt tristique facilisis erat magna cras leo. Aliquam nec in in dui tincidunt.',
+          img: 'notion.svg',
         },
       ],
     }

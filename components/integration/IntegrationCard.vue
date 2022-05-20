@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex flex-column align-items-start">
     <div class="img__box">
-      <img src="@/assets/images/integration/slack.svg" />
+      <img :src="require(`@/assets/images/integration/${app.img}`)" />
     </div>
     <h5 class="mt-4 app__name">{{ app.name }}</h5>
     <p>{{ app.desc }}</p>
