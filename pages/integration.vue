@@ -37,7 +37,7 @@
             "
           >
             <img
-              src="@/assets/images/integration-hero.svg"
+              src="@/assets/images/integration-hero.png"
               alt="Hero-Image"
               class="img-fluid hero__image"
             />
@@ -72,42 +72,42 @@ export default {
         {
           name: 'Slack',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt tristique facilisis erat magna cras leo. Aliquam nec in in dui tincidunt.',
-          img: 'slack.svg',
+          img: 'slack.png',
         },
         {
           name: 'Discord',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt tristique facilisis erat magna cras leo. Aliquam nec in in dui tincidunt.',
-          img: 'discord.svg',
+          img: 'discord.png',
         },
         {
           name: 'Salesforce',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt tristique facilisis erat magna cras leo. Aliquam nec in in dui tincidunt.',
-          img: 'salesforce.svg',
+          img: 'salesforce.png',
         },
         {
           name: 'Calendy',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt tristique facilisis erat magna cras leo. Aliquam nec in in dui tincidunt.',
-          img: 'calendly.svg',
+          img: 'calendly.png',
         },
         {
           name: 'Google Sheets',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt tristique facilisis erat magna cras leo. Aliquam nec in in dui tincidunt.',
-          img: 'google-sheets.svg',
+          img: 'google-sheets.png',
         },
         {
           name: 'Hotspot',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt tristique facilisis erat magna cras leo. Aliquam nec in in dui tincidunt.',
-          img: 'hubspot.svg',
+          img: 'hubspot.png',
         },
         {
           name: 'Gdrive',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt tristique facilisis erat magna cras leo. Aliquam nec in in dui tincidunt.',
-          img: 'gdrive.svg',
+          img: 'gdrive.png',
         },
         {
           name: 'Notion',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt tristique facilisis erat magna cras leo. Aliquam nec in in dui tincidunt.',
-          img: 'notion.svg',
+          img: 'notion.png',
         },
       ],
     }
