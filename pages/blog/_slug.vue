@@ -4,7 +4,7 @@
       <NuxtLink :to="`/blog`" class="blog__back" :class="article.toc.length ? 'blog__back__margin' : ''">
         <span>← Back</span>
       </NuxtLink>
-      <nav v-if="article.toc.length" class="navbar navbar-expand-lg bg-light sticky-top py-3">
+      <nav v-if="article.toc.length" class="navbar navbar-expand bg-light sticky-top py-3">
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
@@ -147,11 +147,19 @@ export default {
   position: absolute;
   color: #777;
 }
+
 .blog__back__margin {
   margin-top: -3rem;
 }
+
 #tocMenuLink {
   color: #777;
   font-size: 16px;
+}
+
+@media only screen and (max-width: 576px) {
+  .dropdown-menu {
+    max-width: 300px;
+  }
 }
 </style>
