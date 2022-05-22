@@ -15,7 +15,7 @@ createdAt: '2022-05-15'
 
 # Different approaches to building web forms:<br><br>
 
-## Single Page Form -
+## Single Page Form
 <br>
 
 **Easy to edit fields** - Single page forms are easy to edit as the data is not spread into multiple pages. And navigating to the field you want to edit is easier. All you need is to scroll up to the field. While in multi page forms one has to navigate back and forth to edit fields.
@@ -40,7 +40,7 @@ For example - It’s less likely that one will change their name or dob, whereas
 
 In formester in the case of multi-page forms, we use the component-based approach, i.e. we load the entire form at a time and then break it into multiple pages. So on the user end, switching between pages is seamless and this problem doesn’t persist in our case.<br><br>
 
-## Multi Page Form -
+## Multi Page Form
 <br>
 
 **Less overwhelming** - Many times when you open up a URL to fill up a form and unlike your expectation, you find it quite long and daunting at the first glance, then it's more likely that you will not even start with it. And that’s the case with long single-page forms.
@@ -63,7 +63,7 @@ This will enhance the user experience and will help users to fill out forms fast
 
 **Length**- Having a progress bar on a multi-page form allows the customer to know their progress along the process of filling out the form. It gives an overview of the overall form length and also helps in proper navigation. Having quite a few pages where you might only be asking single questions can sometimes intimidate users due to the overall length.<br><br>
 
-## Single Page and Multi Page Forms in Formester -
+## Single Page and Multi Page Forms in Formester
 <br>
 
 With Formester you can switch between the different types of forms with just a click of a button.

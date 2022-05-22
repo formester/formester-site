@@ -11,7 +11,7 @@ createdAt: '2022-05-10'
 
 ![alt text](https://formester.com/formester-form-builder-background.png)
 
-## Backend as a service -
+## Backend as a service
 
 With formester, you can integrate your excellent web forms to our robust backend. Building web forms has always been a challenge. Each time you build a web form for your website, you need a backend along with a database for your form. And building a backend just for your web forms doesn’t sound justified.
 
@@ -59,7 +59,7 @@ Though it is optional and can be left blank. By doing so the users will be redir
 ![Action url](/blogs/building-your-first-form-with-formester/action-url.png)
 <br><br>
 
-## Build forms with drag and drop -
+## Build forms with drag and drop
 
 With Formester, we provide an interactive, easy-to-use drag and drop interface. Create surveys, registration forms, and a lot more with our form builder. It also comes with a live preview feature to test what you create, on the fly.
 
