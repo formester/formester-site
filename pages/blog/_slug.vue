@@ -178,10 +178,4 @@ export default {
   width: 100%;
   display: block;
 }
-
-@media only screen and (max-width: 576px) {
-  .dropdown-menu {
-    max-width: 300px;
-  }
-}
 </style>
