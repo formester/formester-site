@@ -85,7 +85,6 @@ export default {
     },
     to() {
       this.$router.back()
-      console.log('to is working')
     },
   },
 }
