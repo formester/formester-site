@@ -1,19 +1,33 @@
 <template>
   <div class="container position-relative">
     <article class="container mw-840 mt-8rem">
-      <NuxtLink :to="`/blog`" class="blog__back" :class="article.toc.length ? 'blog__back__margin' : ''">
+      <NuxtLink
+        :to="`/blog`"
+        class="blog__back"
+        :class="article.toc.length ? 'blog__back__margin' : ''"
+      >
         <span>← Back</span>
       </NuxtLink>
-      <nav v-if="article.toc.length" class="navbar navbar-expand bg-light sticky-top py-3">
+      <nav
+        v-if="article.toc.length"
+        class="navbar navbar-expand bg-light sticky-top py-3"
+      >
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
-              <a class="dropdown-toggle" href="#" id="tocMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a
+                class="dropdown-toggle"
+                href="#"
+                id="tocMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 Table of Contents
               </a>
               <ul class="dropdown-menu" aria-labelledby="tocMenuLink">
                 <li v-for="link of article.toc" :key="link.id">
-                  <NuxtLink class="dropdown-item" :to="`#${link.id}`">
+                  <NuxtLink class="dropdown-link" :to="`#${link.id}`">
                     {{ link.text }}
                   </NuxtLink>
                 </li>
@@ -26,7 +40,9 @@
       <div class="d-flex sm-text my-2 datentimeToRead">
         <span>{{ formatDate(article.createdAt) }}</span>
         <span>|</span>
-        <div class="d-flex align-items-center justify-content-center timeToRead">
+        <div
+          class="d-flex align-items-center justify-content-center timeToRead"
+        >
           <svg
             width="16"
             height="17"
@@ -55,7 +71,7 @@
 <script>
 export default {
   content: {
-    liveEdit: false
+    liveEdit: false,
   },
   async asyncData({ $content, params }) {
     const article = await $content('blogs', params.slug).fetch()
@@ -69,7 +85,7 @@ export default {
     },
     to() {
       this.$router.back()
-      console.log("to is working")
+      console.log('to is working')
     },
   },
 }
@@ -155,6 +171,13 @@ export default {
 #tocMenuLink {
   color: #777;
   font-size: 16px;
+}
+
+.dropdown-link {
+  padding: 0.5em;
+  min-width: 250px;
+  width: 100%;
+  display: block;
 }
 
 @media only screen and (max-width: 576px) {
