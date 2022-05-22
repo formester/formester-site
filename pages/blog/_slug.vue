@@ -151,6 +151,7 @@ export default {
   margin-top: -3rem;
 }
 #tocMenuLink {
+  color: #777;
   font-size: 16px;
 }
 </style>
