@@ -1,9 +1,27 @@
 <template>
   <div class="container position-relative">
     <article class="container mw-840 mt-8rem">
-      <NuxtLink :to="`/blog`" class="blog__back">
+      <NuxtLink :to="`/blog`" class="blog__back" :class="article.toc.length ? 'blog__back__margin' : ''">
         <span>← Back</span>
       </NuxtLink>
+      <nav v-if="article.toc.length" class="navbar navbar-expand-lg bg-light sticky-top py-3">
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="dropdown-toggle" href="#" id="tocMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Table of Contents
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="tocMenuLink">
+                <li v-for="link of article.toc" :key="link.id">
+                  <NuxtLink class="dropdown-item" :to="`#${link.id}`">
+                    {{ link.text }}
+                  </NuxtLink>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
       <h1 class="mb-1 article__heading">{{ article.title }}</h1>
       <div class="d-flex sm-text my-2 datentimeToRead">
         <span>{{ formatDate(article.createdAt) }}</span>
@@ -128,5 +146,11 @@ export default {
   margin-top: -4rem;
   position: absolute;
   color: #777;
+}
+.blog__back__margin {
+  margin-top: -3rem;
+}
+#tocMenuLink {
+  font-size: 16px;
 }
 </style>
