@@ -5,7 +5,7 @@
         <div class="row">
           <div
             class="
-              col-lg-5
+              col-lg-6
               d-flex
               flex-column
               justify-content-center
@@ -14,7 +14,7 @@
               mt-xl-0 mt-md-5
             "
           >
-            <h1 class="section__heading">Integration</h1>
+            <h1 class="section__heading">Seamless Integration</h1>
             <p class="hero__subheading mt-3">
               Collecting data is one battle won. Formester integrates with tools
               like Slack, Google Sheets and Salesforce. Send data anywhere you
@@ -29,7 +29,7 @@
           </div>
           <div
             class="
-              col-lg-7
+              col-lg-6
               d-flex
               align-items-center
               justify-content-center
