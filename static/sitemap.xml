@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://formester.com/</loc>
+  <lastmod>2022-05-22T09:11:08+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://formester.com/features/html-form-backend/</loc>
+  <lastmod>2022-05-22T09:11:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://formester.com/features/auto-responder/</loc>
+  <lastmod>2022-05-22T09:11:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://formester.com/features/spam-protection/</loc>
+  <lastmod>2022-05-22T09:11:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://formester.com/pricing/</loc>
+  <lastmod>2022-05-22T09:11:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://formester.com/blog/</loc>
+  <lastmod>2022-05-22T09:11:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://formester.com/contact/</loc>
+  <lastmod>2022-05-22T09:11:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://formester.com/privacy/</loc>
+  <lastmod>2022-05-22T09:11:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://formester.com/blog/building-your-first-form-with-formester/</loc>
+  <lastmod>2022-05-22T09:11:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://formester.com/blog/single-form-vs-multi-form/</loc>
+  <lastmod>2022-05-22T09:11:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
