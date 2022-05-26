@@ -71,42 +71,42 @@ export default {
       apps: [
         {
           name: 'Slack',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt tristique facilisis erat magna cras leo. Aliquam nec in in dui tincidunt.',
+          desc: 'Slack channels will receive form submissions.',
           img: 'slack.png',
         },
         {
           name: 'Discord',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt tristique facilisis erat magna cras leo. Aliquam nec in in dui tincidunt.',
+          desc: 'Discord will receive a notification of submission.',
           img: 'discord.png',
         },
         {
           name: 'Salesforce',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt tristique facilisis erat magna cras leo. Aliquam nec in in dui tincidunt.',
+          desc: 'Manage sales, campaigns, and customer relations.',
           img: 'salesforce.png',
         },
         {
-          name: 'Calendy',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt tristique facilisis erat magna cras leo. Aliquam nec in in dui tincidunt.',
-          img: 'calendly.png',
+          name: 'Mailchimp',
+          desc: 'Keep your email lists up to date by adding and updating contacts.',
+          img: 'mailchimp.png',
         },
         {
           name: 'Google Sheets',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt tristique facilisis erat magna cras leo. Aliquam nec in in dui tincidunt.',
+          desc: 'Add form data to your spreadsheet quickly.',
           img: 'google-sheets.png',
         },
         {
           name: 'Hotspot',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt tristique facilisis erat magna cras leo. Aliquam nec in in dui tincidunt.',
+          desc: 'Create new deals with new contacts in your CRM.',
           img: 'hubspot.png',
         },
         {
           name: 'Gdrive',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt tristique facilisis erat magna cras leo. Aliquam nec in in dui tincidunt.',
+          desc: 'Google Drive integration for file uploads and form submissions.',
           img: 'gdrive.png',
         },
         {
           name: 'Notion',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt tristique facilisis erat magna cras leo. Aliquam nec in in dui tincidunt.',
+          desc: 'Create, collaborate, and share in one place.',
           img: 'notion.png',
         },
       ],
