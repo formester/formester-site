@@ -1,26 +1,48 @@
 <template>
   <div class="container position-relative">
-    <NuxtLink :to="`/blog`" class="blog__back">
-      <svg
-        width="32"
-        height="32"
-        viewBox="0 0 32 32"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M18.4401 25.3334C18.2409 25.3341 18.044 25.2901 17.8641 25.2047C17.6841 25.1193 17.5255 24.9947 17.4001 24.84L10.9601 16.84C10.7639 16.6015 10.6567 16.3022 10.6567 15.9934C10.6567 15.6845 10.7639 15.3853 10.9601 15.1467L17.6267 7.14671C17.853 6.87442 18.1783 6.70319 18.5308 6.67068C18.8834 6.63817 19.2344 6.74706 19.5067 6.97338C19.779 7.19969 19.9502 7.52491 19.9827 7.87748C20.0153 8.23005 19.9064 8.58109 19.6801 8.85338L13.7201 16L19.4801 23.1467C19.6431 23.3424 19.7467 23.5807 19.7785 23.8335C19.8103 24.0862 19.7691 24.3428 19.6597 24.5728C19.5503 24.8028 19.3773 24.9967 19.1611 25.1315C18.945 25.2663 18.6948 25.3364 18.4401 25.3334Z"
-          fill="black"
-        />
-      </svg>
-      <span class="ml-2">Back</span>
-    </NuxtLink>
     <article class="container mw-840 mt-8rem">
+      <NuxtLink
+        :to="`/blog`"
+        class="blog__back"
+        :class="article.toc.length ? 'blog__back__margin' : ''"
+      >
+        <span>← Back</span>
+      </NuxtLink>
+      <nav
+        v-if="article.toc.length"
+        class="navbar navbar-expand bg-light sticky-top py-3"
+      >
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a
+                class="dropdown-toggle"
+                href="#"
+                id="tocMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Table of Contents
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="tocMenuLink">
+                <li v-for="link of article.toc" :key="link.id">
+                  <NuxtLink class="dropdown-link" :to="`#${link.id}`">
+                    {{ link.text }}
+                  </NuxtLink>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
       <h1 class="mb-1 article__heading">{{ article.title }}</h1>
       <div class="d-flex sm-text my-2 datentimeToRead">
         <span>{{ formatDate(article.createdAt) }}</span>
         <span>|</span>
-        <div class="d-flex align-items-center justify-content-center timeToRead">
+        <div
+          class="d-flex align-items-center justify-content-center timeToRead"
+        >
           <svg
             width="16"
             height="17"
@@ -49,7 +71,7 @@
 <script>
 export default {
   content: {
-    liveEdit: false
+    liveEdit: false,
   },
   async asyncData({ $content, params }) {
     const article = await $content('blogs', params.slug).fetch()
@@ -63,7 +85,6 @@ export default {
     },
     to() {
       this.$router.back()
-      console.log("to is working")
     },
   },
 }
@@ -137,7 +158,24 @@ export default {
 }
 
 .blog__back {
+  margin-top: -4rem;
   position: absolute;
-  top: -1%;
+  color: #777;
+}
+
+.blog__back__margin {
+  margin-top: -3rem;
+}
+
+#tocMenuLink {
+  color: #777;
+  font-size: 16px;
+}
+
+.dropdown-link {
+  padding: 0.5em;
+  min-width: 250px;
+  width: 100%;
+  display: block;
 }
 </style>

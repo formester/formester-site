@@ -1,3 +1,5 @@
+import getRoutes from "./utils/getRoutes";
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -112,6 +114,9 @@ export default {
 
   sitemap: {
     hostname: 'https://formester.com',
+    routes() {
+      return getRoutes();
+    },
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -141,8 +146,8 @@ export default {
     '@nuxtjs/robots',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/sitemap',
     '@nuxt/content',
+    '@nuxtjs/sitemap',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
