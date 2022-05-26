@@ -28,6 +28,9 @@
         <NuxtLink to="/blog">
           <li class="mx-3 footer__link">Blogs</li>
         </NuxtLink>
+        <NuxtLink to="/integrations">
+          <li class="mx-3 footer__link">Integrations</li>
+        </NuxtLink>
         <NuxtLink to="/privacy">
           <li class="mx-3 footer__link">Privacy Policy</li>
         </NuxtLink>
