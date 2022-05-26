@@ -62,9 +62,12 @@
 
 <script>
 import IntegrationCard from '../components/integrations/IntegrationCard.vue'
+import CallToActionSection from '../components/CallToActionSection.vue'
+
 export default {
   components: {
     IntegrationCard,
+    CallToActionSection
   },
   data() {
     return {
