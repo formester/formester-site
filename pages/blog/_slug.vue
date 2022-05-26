@@ -10,7 +10,7 @@
       </NuxtLink>
       <nav
         v-if="article.toc.length"
-        class="navbar navbar-expand bg-light sticky-top py-3"
+        class="navbar navbar-expand bg-white sticky-top py-3"
       >
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav">
