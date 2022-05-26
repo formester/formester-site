@@ -32,9 +32,6 @@
             <NuxtLink to="/features/auto-responder">
               <NavItem navName="Auto Responder" />
             </NuxtLink>
-            <NuxtLink to="/features/integration">
-              <NavItem navName="Integration" />
-            </NuxtLink>
             <NuxtLink to="/features/spam-protection">
               <NavItem navName="Spam Protection" />
             </NuxtLink>

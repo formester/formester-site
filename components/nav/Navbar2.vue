@@ -62,11 +62,6 @@
                   >Spam Protection</NuxtLink
                 >
               </li>
-              <!-- <li>
-                <NuxtLink class="dropdown-item" to="/features/integration"
-                  >Integration</NuxtLink
-                >
-              </li> -->
             </ul>
           </li>
           <li class="nav-item me-4">
@@ -108,8 +103,8 @@
             </NuxtLink>
           </li>
           <li class="nav-item me-4">
-            <NuxtLink to="/integration" class="nav-link"
-              >Integration
+            <NuxtLink to="/integrations" class="nav-link"
+              >Integrations
               <svg
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"

@@ -61,7 +61,7 @@
 </template>
 
 <script>
-import IntegrationCard from '../components/integration/IntegrationCard.vue'
+import IntegrationCard from '../components/integrations/IntegrationCard.vue'
 export default {
   components: {
     IntegrationCard,
