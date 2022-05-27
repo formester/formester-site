@@ -1,7 +1,7 @@
 <template>
-    <NuxtLink :to="{ name: 'blog-slug', params: { slug: heroarticle.slug } }" class="row">
+    <NuxtLink :to="{ name: 'blogs-slug', params: { slug: heroarticle.slug } }" class="row">
         <img
-            :src="require(`@/assets/images/blog/${heroarticle.coverImg}`)"
+            :src="require(`@/assets/images/blogs/${heroarticle.coverImg}`)"
             class="col-lg-6 rounded img-fluid featured__blog-img"
             alt="NA"
         />
