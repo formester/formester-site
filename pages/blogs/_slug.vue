@@ -69,7 +69,7 @@
 </template>
 
 <script>
-import getSiteMeta from '../../utils/getSiteMeta';
+import getSiteMeta from '../../utils/getSiteMeta'
 
 export default {
   content: {
@@ -92,15 +92,19 @@ export default {
   computed: {
     meta() {
       const metaData = {
-        type: "article",
+        type: 'article',
         url: `https://formester.com/blogs/${this.$route.params.slug}`,
         title: this.article.title,
         description: this.article.description,
-        mainImage: this.article.coverImg,
-        mainImageAlt: this.article.coverImgAlt,
-      };
-      return getSiteMeta(metaData);
-    }
+        mainImage: this.article.coverImg
+          ? `https://formester.com/_nuxt/img/${this.article.coverImg}`
+          : 'https://formester.com/formester-form-builder-background.png',
+        mainImageAlt:
+          this.article.coverImgAlt ||
+          'Form builder showing drag and drop functionality',
+      }
+      return getSiteMeta(metaData)
+    },
   },
   head() {
     return {
@@ -126,7 +130,7 @@ export default {
         },
       ],
     }
-  }
+  },
 }
 </script>
 

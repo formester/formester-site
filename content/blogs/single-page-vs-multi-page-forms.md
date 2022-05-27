@@ -4,6 +4,7 @@ description: Do you need a single-page form or a multi-page form? There has been
 author: Piyush Singhania
 timeToRead: 7
 coverImg: single-page-vs-multi-page-forms.svg
+coverImgAlt: Illustration of single page vs multi page form
 featured: false
 published: true
 createdAt: '2022-05-15'
