@@ -14,21 +14,6 @@ export default {
       ...meta,
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      // Twitter
-      {
-        name: 'twitter:site',
-        content: '@_formester_'
-      },
-      {
-        hid: 'twitter:card',
-        name: 'twitter:card',
-        content: 'summary_large_image'
-      },
-      {
-        hid: 'apple-mobile-web-app-title',
-        name: 'apple-mobile-web-app-title',
-        content: 'Formester'
-      },
       {
         name: 'robots',
         content: 'index, follow'

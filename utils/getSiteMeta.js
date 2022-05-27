@@ -49,6 +49,7 @@ export default (meta) => {
       name: 'og:image:alt',
       content: (meta && meta.mainImageAlt) || mainImageAlt,
     },
+    // Twitter
     {
       hid: 'twitter:url',
       name: 'twitter:url',
@@ -68,6 +69,20 @@ export default (meta) => {
       hid: 'twitter:image',
       name: 'twitter:image',
       content: (meta && meta.mainImage) || mainImage,
+    },
+    {
+      name: 'twitter:site',
+      content: '@_formester_'
+    },
+    {
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image'
+    },
+    {
+      hid: 'apple-mobile-web-app-title',
+      name: 'apple-mobile-web-app-title',
+      content: 'Formester'
     },
     // Linkedin
     {
