@@ -1,15 +1,16 @@
-const type = "website";
-const url = "https://formester.com";
-const title = "Formester | HTML Form Backend & Form Builder";
-const description = "Form solution for your business that is easy to use. Formester provides an interactive drag and drop builder to create amazing survey forms.";
-const mainImage = "https://formester.com/formester-form-builder-background.png";
-const mainImageAlt = "Form builder showing drag and drop functionality";
+const type = 'website'
+const url = 'https://formester.com'
+const title = 'Formester | HTML Form Backend & Form Builder'
+const description =
+  'Form solution for your business that is easy to use. Formester provides an interactive drag and drop builder to create amazing survey forms.'
+const mainImage = 'https://formester.com/formester-form-builder-background.png'
+const mainImageAlt = 'Form builder showing drag and drop functionality'
 
 export default (meta) => {
   return [
     {
-      hid: "description",
-      name: "description",
+      hid: 'description',
+      name: 'description',
       content: (meta && meta.description) || description,
     },
     // Facebook
@@ -19,28 +20,28 @@ export default (meta) => {
       content: (meta && meta.title) || title,
     },
     {
-      hid: "og:type",
-      property: "og:type",
+      hid: 'og:type',
+      property: 'og:type',
       content: (meta && meta.type) || type,
     },
     {
-      hid: "og:url",
-      property: "og:url",
+      hid: 'og:url',
+      property: 'og:url',
       content: (meta && meta.url) || url,
     },
     {
-      hid: "og:title",
-      property: "og:title",
+      hid: 'og:title',
+      property: 'og:title',
       content: (meta && meta.title) || title,
     },
     {
-      hid: "og:description",
-      property: "og:description",
+      hid: 'og:description',
+      property: 'og:description',
       content: (meta && meta.description) || description,
     },
     {
-      hid: "og:image",
-      property: "og:image",
+      hid: 'og:image',
+      property: 'og:image',
       content: (meta && meta.mainImage) || mainImage,
     },
     {
@@ -49,23 +50,23 @@ export default (meta) => {
       content: (meta && meta.mainImageAlt) || mainImageAlt,
     },
     {
-      hid: "twitter:url",
-      name: "twitter:url",
+      hid: 'twitter:url',
+      name: 'twitter:url',
       content: (meta && meta.url) || url,
     },
     {
-      hid: "twitter:title",
-      name: "twitter:title",
+      hid: 'twitter:title',
+      name: 'twitter:title',
       content: (meta && meta.title) || title,
     },
     {
-      hid: "twitter:description",
-      name: "twitter:description",
+      hid: 'twitter:description',
+      name: 'twitter:description',
       content: (meta && meta.description) || description,
     },
     {
-      hid: "twitter:image",
-      name: "twitter:image",
+      hid: 'twitter:image',
+      name: 'twitter:image',
       content: (meta && meta.mainImage) || mainImage,
     },
     // Linkedin
@@ -75,5 +76,5 @@ export default (meta) => {
       property: 'og:image',
       content: (meta && meta.mainImage) || mainImage,
     },
-  ];
-};
+  ]
+}
