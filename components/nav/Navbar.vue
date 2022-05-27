@@ -1,68 +1,87 @@
 <template>
-  <nav class="nav__container d-flex align-items-center">
-    <div
-      class="
-        container
-        horizontal__padding
-        d-flex
-        align-items-center
-        justify-content-between
-      "
-    >
-      <NuxtLink to="/" class="nav__logo"
-        ><img src="../../assets/images/logo.svg" alt="Fromester"
-      /></NuxtLink>
-      <input type="checkbox" id="check" />
-      <label for="check" class="menu__btn">
-        <i class="ri-menu-3-line">
-          <img src="@/assets/images/menu.svg" alt="Nav-menu-button" />
-        </i>
-      </label>
-      <div class="nav__items">
-        <NuxtLink to="/">
-          <NavItem navName="Home" />
-        </NuxtLink>
-        <!-- <li class="dropdown">
-          <a class="dropbtn">Features</a>
-          <input type="checkbox" id="dropdown__input" class="dropdown__input" />
-          <div class="dropdown__content">
-            <NuxtLink to="/features/html-forms">
-              <NavItem navName="Html Forms" />
+  <nav class="navbar navbar-expand-md">
+    <div class="container">
+      <NuxtLink class="navbar-brand" to="/">
+        <img src="@/assets/images/logo.svg" alt="Formester" />
+      </NuxtLink>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <img src="@/assets/images/toggle.svg" alt="Nav-menu-button" />
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item me-3">
+            <NuxtLink to="/" class="nav-link">
+              Home
+              <HoverSvg />
             </NuxtLink>
-            <NuxtLink to="/features/auto-responder">
-              <NavItem navName="Auto Responder" />
+          </li>
+          <li class="nav-item dropdown me-3">
+            <a
+              class="nav-link"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Features
+              <HoverSvg />
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <NuxtLink class="dropdown-item" to="/features/html-form-backend"
+                  >HTML Form Backend</NuxtLink
+                >
+              </li>
+              <li>
+                <NuxtLink class="dropdown-item" to="/features/auto-responder"
+                  >Auto Responder
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink class="dropdown-item" to="/features/spam-protection"
+                  >Spam Protection</NuxtLink
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item me-4">
+            <NuxtLink to="/pricing" class="nav-link">
+              Pricing
+              <HoverSvg />
             </NuxtLink>
-            <NuxtLink to="/features/spam-protection">
-              <NavItem navName="Spam Protection" />
+          </li>
+          <li class="nav-item me-4">
+            <NuxtLink to="/blog" class="nav-link"
+              >Blogs
+              <HoverSvg />
             </NuxtLink>
-          </div>
-        </li> -->
-        <NuxtLink to="/pricing">
-          <NavItem navName="Pricing" />
-        </NuxtLink>
-        <NuxtLink to="/features/auto-responder">
-          <NavItem navName="Auto Responder" />
-        </NuxtLink>
-        <NuxtLink to="/features/html-form-backend">
-          <NavItem navName="HTML form" />
-        </NuxtLink>
-        <NuxtLink to="/features/spam-protection">
-          <NavItem navName="Spam Protection" />
-        </NuxtLink>
-        <li>
-          <a
-            href="https://app.formester.com/users/sign_in"
-            class="nav__link nav__outline__button"
-            >Sign in</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://app.formester.com/users/sign_up"
-            class="nav__link nav__button"
-            >Sign up</a
-          >
-        </li>
+          </li>
+          <li class="nav-item me-4">
+            <NuxtLink to="/integrations" class="nav-link"
+              >Integrations
+              <HoverSvg />
+            </NuxtLink>
+          </li>
+          <!-- <li class="nav-item">Contact us</li> -->
+          <li class="nav-item me-4">
+            <a href="https://app.formester.com/users/sign_in">
+              <button class="nav__outline__button">Login</button>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://app.formester.com/users/sign_up">
+              <button class="nav__button">Register</button>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
@@ -70,39 +89,22 @@
 
 <script>
 import NavItem from './NavItem.vue'
+import HoverSvg from './HoverSvg.vue'
 export default {
   components: {
     NavItem,
+    HoverSvg
   },
 }
 </script>
 
 <style scoped>
+nav {
+  padding: 1em 0;
+}
+
 a.nuxt-link-exact-active {
   font-weight: 700;
-}
-
-.nav__container {
-  height: 75px;
-  background-color: var(--clr-bg);
-  /* box-shadow: 0 2px 10px rgba(136, 130, 130, 0.15); */
-}
-
-.nav__logo {
-  font-size: var(--ft-subtitle);
-  font-weight: 600;
-}
-
-.nav__items {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  font-size: var(--ft-small-body);
-}
-
-.nav__items li {
-  margin: 0 12px;
-  cursor: pointer;
 }
 
 .nav__button {
@@ -110,11 +112,6 @@ a.nuxt-link-exact-active {
   font-weight: 600;
   padding: 8px 16px;
   border-radius: 8px;
-  color: white;
-}
-
-.nav__button:hover {
-  opacity: 0.9;
   color: white;
 }
 
@@ -126,110 +123,73 @@ a.nuxt-link-exact-active {
   color: var(--clr-primary);
 }
 
-.menu__btn i {
-  display: none;
-  font-size: 1.6rem;
-  cursor: pointer;
+.nav-link {
+  color: var(--clr-dark);
 }
 
-.nav__container #check {
-  display: none;
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
-/* DROPDOWN */
-
-/* .dropbtn {
-  background-color: var(--clr-bg);
-  font-weight: 500;
-}
-
-.dropdown__content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown__content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
+/* .nav-item.dropdown:hover .dropdown-menu {
   display: block;
-  text-align: left;
-}
-
-.dropdown__content a:hover {
-  background-color: var(--clr-primary-light);
-}
-
-.dropdown:hover .dropdown__content {
-  display: block;
-}
-
-.dropdown__label,
-.dropdown__input {
-  display: none;
 } */
 
-@media screen and (max-width: 991px) {
-  .nav__items {
-    position: fixed;
-    flex-direction: column;
-    align-items: stretch;
-    top: 75px;
-    left: -110%;
-    height: 100vh;
-    width: 100vw;
-    background-color: var(--clr-bg);
-    text-align: center;
-    z-index: -10;
-    transition: all 400ms ease-in-out;
-    background-color: white;
+.dropdown-item:hover {
+  background: var(--clr-primary-light);
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item svg {
+  fill: none;
+  stroke: hsla(277, 100%, 83%, 1);
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 338;
+  stroke-dashoffset: 338;
+  stroke-linecap: round;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% + 25px);
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: stroke-dashoffset 0s 0.2s, opacity 0.2s;
+  z-index: -1;
+}
+
+/* NAV HOVER */
+
+.nav-item:hover svg {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  transition: opacity 0s,
+    stroke-dashoffset 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+@media (max-width: 768px) {
+  .nav-item:hover svg {
+    opacity: 0;
   }
 
-  .menu__btn i.ri-menu-3-line {
-    display: inline;
-  }
-
-  #check:checked ~ div.nav__items {
-    left: 0;
-    z-index: 100;
-  }
-
-  .nav__button {
-    display: block;
-    padding: 1em 0;
-    font-size: 1.4rem;
+  .nav-item {
+    font-size: 1.2rem;
     font-weight: 600;
+    margin-top: 0.5em;
   }
 
-  /* .dropbtn {
-    display: none;
+  .nav__outline__button {
+    margin-bottom: 10px;
   }
 
-  #dropdown__input:checked + .dropdown__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: static;
-    box-shadow: none;
-    background-color: var(--clr-bg);
+  .dropdown-menu {
+    border: none;
   }
-
-  .dropdown:hover .dropdown__content {
-    display: none;
-  }
-
-  .dropdown__label {
-    display: inline;
-    display: block;
-    padding: 1em 0;
-    font-size: 1.4rem;
-    font-weight: 600;
-  } */
 }
 </style>
