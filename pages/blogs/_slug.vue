@@ -69,6 +69,8 @@
 </template>
 
 <script>
+import getSiteMeta from '../../utils/getSiteMeta';
+
 export default {
   content: {
     liveEdit: false,
@@ -87,6 +89,44 @@ export default {
       this.$router.back()
     },
   },
+  computed: {
+    meta() {
+      const metaData = {
+        type: "article",
+        url: `https://formester.com/blogs/${this.$route.params.slug}`,
+        title: this.article.title,
+        description: this.article.description,
+        mainImage: this.article.coverImg,
+        mainImageAlt: this.article.coverImgAlt,
+      };
+      return getSiteMeta(metaData);
+    }
+  },
+  head() {
+    return {
+      title: this.article.title,
+      meta: [
+        ...this.meta,
+        {
+          property: 'article:published_time',
+          content: this.article.createdAt,
+        },
+        {
+          property: 'article:modified_time',
+          content: this.article.updatedAt,
+        },
+        { name: 'twitter:label1', content: 'Written by' },
+        { name: 'twitter:data1', content: this.article.author },
+      ],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: `https://formester.com/blogs/${this.$route.params.slug}`,
+        },
+      ],
+    }
+  }
 }
 </script>
 
