@@ -97,7 +97,7 @@ export default {
         title: this.article.title,
         description: this.article.description,
         mainImage: this.article.coverImg
-          ? `https://formester.com/_nuxt/img/${this.article.coverImg}`
+          ? `https://formester.com/${this.article.coverImg}`
           : 'https://formester.com/formester-form-builder-background.png',
         mainImageAlt:
           this.article.coverImgAlt ||
