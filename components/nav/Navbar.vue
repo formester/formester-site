@@ -59,7 +59,7 @@
             </NuxtLink>
           </li>
           <li class="nav-item me-4">
-            <NuxtLink to="/blog" class="nav-link"
+            <NuxtLink to="/blogs" class="nav-link"
               >Blogs
               <HoverSvg />
             </NuxtLink>
