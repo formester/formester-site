@@ -81,6 +81,16 @@ export default {
     '@nuxtjs/sitemap',
   ],
 
+  // Hooks configuration - https://content.nuxtjs.org/advanced/
+  hooks: {
+    'content:file:beforeInsert': (document) => {
+      if (document.extension === ".md") {
+        const stats = require('reading-time')(document.text)
+        document.readingStats = stats
+      }
+    }
+  },
+
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 

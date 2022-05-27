@@ -6,7 +6,8 @@
     <img
       :src="require(`@/assets/images/blogs/${heroarticle.coverImg}`)"
       class="col-lg-6 rounded img-fluid featured__blog-img"
-      alt="NA"
+      :alt="article.coverImgAlt"
+      :title="article.coverImgAlt"
     />
     <div
       class="

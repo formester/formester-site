@@ -55,7 +55,7 @@
               fill="#4F4F4F"
             />
           </svg>
-          <span>{{ article.timeToRead }} min read</span>
+          <span>{{ article.readingStats.text }}</span>
         </div>
       </div>
       <div class="sm-text mt-1">

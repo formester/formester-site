@@ -3,7 +3,8 @@
     <img
       :src="require(`@/assets/images/blogs/${article.coverImg}`)"
       class="rounded img-fluid"
-      alt="NA"
+      :alt="article.coverImgAlt"
+      :title="article.coverImgAlt"
     />
     <div class="d-flex flex-column align-items-start">
       <span class="blog__date mt-3">{{ formatDate(article.createdAt) }}</span>

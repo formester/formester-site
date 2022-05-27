@@ -10,7 +10,7 @@ published: true
 createdAt: '2022-05-10'
 ---
 
-![alt text](https://formester.com/formester-form-builder-background.png)
+![Illustration of formester form builder](https://formester.com/formester-form-builder-background.png "Illustration of formester form builder")
 
 ## Backend as a service
 
