@@ -25,8 +25,11 @@
         <NuxtLink to="/pricing">
           <li class="mx-3 footer__link">Pricing</li>
         </NuxtLink>
-        <NuxtLink to="/blog">
+        <NuxtLink to="/blogs">
           <li class="mx-3 footer__link">Blogs</li>
+        </NuxtLink>
+        <NuxtLink to="/integrations">
+          <li class="mx-3 footer__link">Integrations</li>
         </NuxtLink>
         <NuxtLink to="/privacy">
           <li class="mx-3 footer__link">Privacy Policy</li>
