@@ -4,7 +4,7 @@ description: Different approaches to building web forms with formester
 author: Piyush Singhania
 timeToRead: 10
 coverImg: formester-form-builder-background.png
-coverImgAlt: Illustration of formester form builder
+coverImgAlt: Cover image for the blog, "Building your first form with formester"
 featured: false
 published: true
 createdAt: '2022-05-10'
