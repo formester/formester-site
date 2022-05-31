@@ -125,8 +125,14 @@ export default {
         {
           hid: 'author',
           name: 'author',
+          property: 'article:author',
           content: this.article.author,
         },
+        {
+          name: 'publish_date',
+          property: 'og:publish_date',
+          content: this.article.createdAt
+        }
       ],
       link: [
         {
