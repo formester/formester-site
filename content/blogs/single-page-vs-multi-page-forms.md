@@ -14,8 +14,6 @@ createdAt: '2022-05-15'
 ![Illustration of Single Page vs Multi Page Forms](/blogs/single-page-vs-multi-page-forms/single-page-vs-multi-page-forms.svg "Illustration of Single Page vs Multi Page Forms")
 <br><br>
 
-# Different approaches to building web forms:<br><br>
-
 ## Single Page Form
 <br>
 
