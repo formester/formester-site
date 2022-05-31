@@ -121,6 +121,12 @@ export default {
         },
         { name: 'twitter:label1', content: 'Written by' },
         { name: 'twitter:data1', content: this.article.author },
+        // Linkedin
+        {
+          hid: 'author',
+          name: 'author',
+          content: this.article.author,
+        },
       ],
       link: [
         {

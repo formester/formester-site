@@ -71,6 +71,11 @@ export default (meta) => {
       content: (meta && meta.mainImage) || mainImage,
     },
     {
+      hid: 'twitter:image:alt',
+      name: 'twitter:image:alt',
+      content: (meta && meta.mainImageAlt) || mainImageAlt,
+    },
+    {
       name: 'twitter:site',
       content: '@_formester_'
     },
