@@ -1,4 +1,7 @@
 import getRoutes from "./utils/getRoutes";
+import getSiteMeta from "./utils/getSiteMeta";
+
+const meta = getSiteMeta();
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -8,86 +11,9 @@ export default {
   head: {
     title: 'Formester | HTML Form Backend & Form Builder',
     meta: [
+      ...meta,
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      // Facebook
-      { 
-        hid: 'og:type',
-        name: 'og:type',
-        content: 'website'
-      },
-      { 
-        hid: 'og:title',
-        name: 'og:title',
-        content: 'Formester | HTML Form Backend & Form Builder'
-      },
-      { 
-        hid: 'og:site_name',
-        name: 'og:site_name',
-        content: 'Formester | HTML Form Backend & Form Builder'
-      },
-      { 
-        hid: 'og:description',
-        name: 'og:description',
-        content: 'Form solution for your business that is easy to use. Formester provides an interactive drag and drop builder to create amazing survey forms.'
-      },
-      { 
-        hid: 'og:url',
-        name: 'og:url',
-        content: 'https://formester.com/'
-      },
-      {
-        hid: 'og:image',
-        name: 'og:image',
-        content: 'https://formester.com/formester-form-builder-background.png'
-      },
-      {
-        hid: 'og:image:alt',
-        name: 'og:image:alt',
-        content: 'Form builder showing drag and drop functionality'
-      },
-      // Twitter
-      {
-        name: 'twitter:site',
-        content: '@_formester_'
-      },
-      {
-        hid: 'twitter:title',
-        name: 'twitter:title',
-        content: 'Formester | HTML Form Backend & Form Builder'
-      },
-      {
-        hid: 'twitter:description',
-        name: 'twitter:description',
-        content: 'Form solution for your business that is easy to use. Formester provides an interactive drag and drop builder to create amazing survey forms.'
-      },
-      {
-        hid: 'twitter:image',
-        name: 'twitter:image',
-        content: 'https://formester.com/formester-form-builder-background.png'
-      },
-      {
-        hid: 'twitter:card',
-        name: 'twitter:card',
-        content: 'summary_large_image'
-      },
-      // Linkedin
-      {
-        hid: 'image',
-        name: 'image',
-        property: 'og:image',
-        content: 'https://formester.com/formester-form-builder-background.png'
-      },
-      {
-        hid: 'apple-mobile-web-app-title',
-        name: 'apple-mobile-web-app-title',
-        content: 'Formester'
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'Form solution for your business that is easy to use. Formester provides an interactive drag and drop builder to create amazing survey forms.'
-      },
       {
         name: 'robots',
         content: 'index, follow'
@@ -96,6 +22,11 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        hid: "canonical",
+        rel: "canonical",
+        href: "https://formester.com",
+      },
     ],
     // Custom Javascript
     script: [
@@ -149,6 +80,16 @@ export default {
     '@nuxt/content',
     '@nuxtjs/sitemap',
   ],
+
+  // Hooks configuration - https://content.nuxtjs.org/advanced/
+  hooks: {
+    'content:file:beforeInsert': (document) => {
+      if (document.extension === ".md") {
+        const stats = require('reading-time')(document.text)
+        document.readingStats = stats
+      }
+    }
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},

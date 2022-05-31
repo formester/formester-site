@@ -1,6 +1,7 @@
 export default async () => {
   const { $content } = require("@nuxt/content");
-  const files = await $content({ deep: true }).only(["path"]).fetch();
+  let files = await $content({ deep: true }).only(["path", "published"]).fetch();
+  files = files.filter(file => file.published)
 
   return files.map((file) => (file.path === "/index" ? "/" : file.path));
 };

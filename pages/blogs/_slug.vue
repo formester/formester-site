@@ -55,7 +55,7 @@
               fill="#4F4F4F"
             />
           </svg>
-          <span>{{ article.timeToRead }} min read</span>
+          <span>{{ article.readingStats.text }}</span>
         </div>
       </div>
       <div class="sm-text mt-1">
@@ -69,6 +69,8 @@
 </template>
 
 <script>
+import getSiteMeta from '../../utils/getSiteMeta'
+
 export default {
   content: {
     liveEdit: false,
@@ -86,6 +88,48 @@ export default {
     to() {
       this.$router.back()
     },
+  },
+  computed: {
+    meta() {
+      const metaData = {
+        type: 'article',
+        url: `https://formester.com/blogs/${this.$route.params.slug}`,
+        title: this.article.title,
+        description: this.article.description,
+        mainImage: this.article.coverImg
+          ? `https://formester.com/${this.article.coverImg}`
+          : 'https://formester.com/formester-form-builder-background.png',
+        mainImageAlt:
+          this.article.coverImgAlt ||
+          'Form builder showing drag and drop functionality',
+      }
+      return getSiteMeta(metaData)
+    },
+  },
+  head() {
+    return {
+      title: this.article.title,
+      meta: [
+        ...this.meta,
+        {
+          property: 'article:published_time',
+          content: this.article.createdAt,
+        },
+        {
+          property: 'article:modified_time',
+          content: this.article.updatedAt,
+        },
+        { name: 'twitter:label1', content: 'Written by' },
+        { name: 'twitter:data1', content: this.article.author },
+      ],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: `https://formester.com/blogs/${this.$route.params.slug}`,
+        },
+      ],
+    }
   },
 }
 </script>
