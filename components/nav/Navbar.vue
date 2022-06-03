@@ -142,6 +142,10 @@ a.nuxt-link-exact-active {
   background: var(--clr-primary-light);
 }
 
+.dropdown-item:active {
+  color: #212529;
+}
+
 .nav-item {
   position: relative;
 }
