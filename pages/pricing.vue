@@ -44,7 +44,7 @@ export default {
         available: [
           'Unlimited forms',
           '100 submissions per month',
-          'Form Builder',
+          'Question Branching & Logic Jumps',
           'Self Email Notifications',
           'Respondent Email Notifications',
           'Spam Protection',
@@ -61,14 +61,14 @@ export default {
         available: [
           'Unlimited forms',
           '1k submissions per month',
-          'Form Builder',
+          'Question Branching & Logic Jumps',
           'Self Email Notifications',
           'Respondent Email Notifications',
           'Spam Protection',
-          'API Integrations',
+          'Api Integrations',
           'Zapier Connectors',
           'Analytics',
-          '1 GB File Uploads',
+          '1 Gb File Uploads',
         ],
         unavailable: [
           'White Label',
@@ -78,7 +78,7 @@ export default {
         available: [
           'Unlimited forms',
           '15k submissions per month',
-          'Form Builder',
+          'Question Branching & Logic Jumps',
           'Self Email Notifications',
           'Respondent Email Notifications',
           'Spam Protection',

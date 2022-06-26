@@ -32,6 +32,7 @@ export default {
         ['Price', '$0 / month', '$13 / month', '$49 / month'],
         ['No. of submissions per month', '100', '1,000', '15,000'],
         ['Form builder', 'Yes', 'Yes', 'Yes'],
+        ['Question Branching & Logic Jumps', 'Yes', 'Yes', 'Yes'],
         ['Self email notification', 'Yes', 'Yes', 'Yes'],
         ['Respondent email notification', 'Yes', 'Yes', 'Yes'],
         ['Spam protection', 'Yes', 'Yes', 'Yes'],
