@@ -4,19 +4,13 @@
       <div class="container">
         <div class="row">
           <div
-            class="
-              col-lg-5
-              d-flex
-              flex-column
-              justify-content-center
-              align-items-lg-start align-items-center
-              text-center text-lg-start
-              mt-xl-0 mt-md-5
-            "
+            class="col-lg-5 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start mt-xl-0 mt-md-5"
           >
             <h1 class="section__heading">Spam Protection</h1>
             <p class="hero__subheading mt-3">
-              Web forms are an easy target for spam. Use our one-click Recaptcha to curb spam and keep your list clean, along with an option to configure your own Google Re-Captcha for greater control.
+              Web forms are an easy target for spam. Use our one-click Recaptcha
+              to curb spam and keep your list clean, along with an option to
+              configure your own Google Re-Captcha for greater control.
             </p>
             <a
               href="https://app.formester.com/users/sign_up"
@@ -25,13 +19,7 @@
             >
           </div>
           <div
-            class="
-              col-lg-7
-              d-flex
-              align-items-center
-              justify-content-center
-              mt-lg-0 mt-5
-            "
+            class="col-lg-7 d-flex align-items-center justify-content-center mt-lg-0 mt-5"
           >
             <img
               src="@/assets/images/features/spam-protection/spam-protection.svg"
@@ -61,43 +49,38 @@
 import CallToActionSection from '@/components/CallToActionSection.vue'
 import FeatureDetail from '../../components/FeatureDetail.vue'
 
+// MetaTags
+import getSiteMeta from '../../utils/getSiteMeta'
+
 export default {
   components: { FeatureDetail, CallToActionSection },
-  head: {
-    title: 'Formester | Spam Protection',
-    meta: [
-      { 
-        hid: 'og:title', 
-        name: 'og:title', 
-        content: 'Formester | Spam Protection' 
-      },
-      { 
-        hid: 'twitter:title', 
-        name: 'twitter:title', 
-        content: 'Formester | Spam Protection' 
-      },
-      { 
-        hid: 'og:site_name', 
-        name: 'og:site_name', 
-        content: 'Formester | Spam Protection' 
-      },
-      { 
-        hid: 'description', 
-        name: 'description', 
-        content: 'Web forms are an easy target for spam. Use our one-click Recaptcha to curb spam and keep your list clean, along with an option to configure your own Google Re-Captcha for greater control.' 
-      },
-      { 
-        hid: 'og:description', 
-        name: 'og:description', 
-        content: 'Web forms are an easy target for spam. Use our one-click Recaptcha to curb spam and keep your list clean, along with an option to configure your own Google Re-Captcha for greater control.' 
-      },
-      { 
-        hid: 'twitter:description', 
-        name: 'twitter:description', 
-        content: 'Web forms are an easy target for spam. Use our one-click Recaptcha to curb spam and keep your list clean, along with an option to configure your own Google Re-Captcha for greater control.' 
-      },
-    ],
-    link: [{ rel: 'canonical', href: 'https://formester.com/features/spam-protection' }]
+  computed: {
+    meta() {
+      const metaData = {
+        type: 'website',
+        url: 'https://formester.com/features/spam-protection',
+        title: 'Spam Protection | Formester',
+        description:
+          'Web forms are an easy target for spam. Use our one-click Recaptcha to curb spam and keep your list clean, along with an option to configure your own Google Re-Captcha for greater control.',
+        mainImage:
+          'https://formester.com/formester-form-builder-background.png', // need to update with spam-protection page image
+        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with spam-protection page image alt
+      }
+      return getSiteMeta(metaData)
+    },
+  },
+  head() {
+    return {
+      title: 'Spam Protection | Formester',
+      meta: [...this.meta],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://formester.com/features/spam-protection',
+        },
+      ],
+    }
   },
   jsonld() {
     return {}
