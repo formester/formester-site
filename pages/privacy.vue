@@ -77,8 +77,39 @@
 </template>
 
 <script>
-export default {}
+// MetaTags
+import getSiteMeta from '../utils/getSiteMeta'
+
+export default {
+  computed: {
+    meta() {
+      const metaData = {
+        type: 'website',
+        url: 'https://formester.com/privacy',
+        title: 'Privacy Policy | Formester',
+        description:
+          'Formester uses collected information for the following general purposes: products and services provision, billing, identification and authentication, services improvement, contact, and research.',
+        mainImage:
+          'https://formester.com/formester-form-builder-background.png', // need to update with privacy page image
+        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with privacy page image alt
+      }
+      return getSiteMeta(metaData)
+    },
+  },
+  head() {
+    return {
+      title: 'Privacy Policy | Formester',
+      meta: [...this.meta],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://formester.com/privacy',
+        },
+      ],
+    }
+  },
+}
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
