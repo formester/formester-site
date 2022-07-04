@@ -3,27 +3,61 @@
     <h1 class="message-thank-you">Thank You</h1>
     <h4 class="message-detail">for choosing Formester</h4>
     <!-- <button class="navigate-btn" @click="$router.push('/')">Home</button> -->
-    <img class="abs corner-design" src="../assets/images/leaf/corner-design.png" alt="">
-    <img class="abs l1" src="../assets/images/leaf/leaf-1.png" alt="">
-    <img class="abs l2" src="../assets/images/leaf/leaf-2.png" alt="">
-    <img class="abs l3" src="../assets/images/leaf/leaf-3.png" alt="">
-    <img class="abs l4" src="../assets/images/leaf/leaf-4.png" alt="">
-    <img class="abs l5" src="../assets/images/leaf/leaf-5.png" alt="">
-    <img class="abs l6" src="../assets/images/leaf/leaf-6.png" alt="">
-    <img class="abs l7" src="../assets/images/leaf/leaf-7.png" alt="">
-    <img class="abs l8" src="../assets/images/leaf/leaf-8.png" alt="">
-    <img class="abs l9" src="../assets/images/leaf/leaf-9.png" alt="">
-    <img class="abs l10" src="../assets/images/leaf/leaf-10.png" alt="">
-    <img class="abs l11" src="../assets/images/leaf/leaf-11.png" alt="">
-    <img class="abs l12" src="../assets/images/leaf/leaf-12.png" alt="">
-    <img class="abs l13" src="../assets/images/leaf/leaf-13.png" alt="">
-    <img class="abs l14" src="../assets/images/leaf/leaf-14.png" alt="">
+    <img
+      class="abs corner-design"
+      src="../assets/images/leaf/corner-design.png"
+      alt=""
+    />
+    <img class="abs l1" src="../assets/images/leaf/leaf-1.png" alt="" />
+    <img class="abs l2" src="../assets/images/leaf/leaf-2.png" alt="" />
+    <img class="abs l3" src="../assets/images/leaf/leaf-3.png" alt="" />
+    <img class="abs l4" src="../assets/images/leaf/leaf-4.png" alt="" />
+    <img class="abs l5" src="../assets/images/leaf/leaf-5.png" alt="" />
+    <img class="abs l6" src="../assets/images/leaf/leaf-6.png" alt="" />
+    <img class="abs l7" src="../assets/images/leaf/leaf-7.png" alt="" />
+    <img class="abs l8" src="../assets/images/leaf/leaf-8.png" alt="" />
+    <img class="abs l9" src="../assets/images/leaf/leaf-9.png" alt="" />
+    <img class="abs l10" src="../assets/images/leaf/leaf-10.png" alt="" />
+    <img class="abs l11" src="../assets/images/leaf/leaf-11.png" alt="" />
+    <img class="abs l12" src="../assets/images/leaf/leaf-12.png" alt="" />
+    <img class="abs l13" src="../assets/images/leaf/leaf-13.png" alt="" />
+    <img class="abs l14" src="../assets/images/leaf/leaf-14.png" alt="" />
   </div>
 </template>
 
 <script>
+// MetaTags
+import getSiteMeta from '../utils/getSiteMeta'
+
 export default {
-  layout: 'message'
+  layout: 'message',
+  computed: {
+    meta() {
+      const metaData = {
+        type: 'website',
+        url: 'https://formester.com/thank-you',
+        title: 'Thank You | Formester',
+        description: 'Thank You for choosing Formester',
+        mainImage:
+          'https://formester.com/formester-form-builder-background.png', // need to update with thank-you page image
+        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with thank-you page image alt
+      }
+      return getSiteMeta(metaData)
+    },
+  },
+  head() {
+    return {
+      title: 'Thank You | Formester',
+      meta: [...this.meta],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://formester.com/thank-you',
+        },
+      ],
+    }
+  },
 }
 </script>
 
@@ -94,10 +128,8 @@ export default {
   top: 210px;
 }
 @media only screen and (max-width: 1350px) {
-  
 }
 @media only screen and (max-width: 1200px) {
-  
 }
 @media only screen and (max-width: 992px) {
   .message-thank-you {
@@ -115,7 +147,7 @@ export default {
   .l5 {
     left: 450px;
   }
-  .l6{
+  .l6 {
     display: none;
   }
   .l11 {
