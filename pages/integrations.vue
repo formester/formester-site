@@ -4,15 +4,7 @@
       <div class="container">
         <div class="row">
           <div
-            class="
-              col-lg-6
-              d-flex
-              flex-column
-              justify-content-center
-              align-items-lg-start align-items-center
-              text-center text-lg-start
-              mt-xl-0 mt-md-5
-            "
+            class="col-lg-6 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start mt-xl-0 mt-md-5"
           >
             <h1 class="section__heading">Seamless Integration</h1>
             <p class="hero__subheading mt-3">
@@ -28,13 +20,7 @@
             >
           </div>
           <div
-            class="
-              col-lg-6
-              d-flex
-              align-items-center
-              justify-content-center
-              mt-lg-0 mt-5
-            "
+            class="col-lg-6 d-flex align-items-center justify-content-center mt-lg-0 mt-5"
           >
             <img
               src="@/assets/images/integration-hero.png"
@@ -64,10 +50,13 @@
 import IntegrationCard from '../components/integrations/IntegrationCard.vue'
 import CallToActionSection from '../components/CallToActionSection.vue'
 
+// MetaTags
+import getSiteMeta from '../utils/getSiteMeta'
+
 export default {
   components: {
     IntegrationCard,
-    CallToActionSection
+    CallToActionSection,
   },
   data() {
     return {
@@ -111,6 +100,34 @@ export default {
           name: 'Notion',
           desc: 'Create, collaborate, and share in one place.',
           img: 'notion.png',
+        },
+      ],
+    }
+  },
+  computed: {
+    meta() {
+      const metaData = {
+        type: 'website',
+        url: 'https://formester.com/integrations',
+        title: 'Seamless Integration | Formester',
+        description:
+          'Formester integrates with tools like Slack, Google Sheets and Salesforce. Send data anywhere you like. Getting started just takes few minutes with our pre-build templates.',
+        mainImage:
+          'https://formester.com/formester-form-builder-background.png', // need to update with pricing page image
+        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with pricing page image alt
+      }
+      return getSiteMeta(metaData)
+    },
+  },
+  head() {
+    return {
+      title: 'Seamless Integration | Formester',
+      meta: [...this.meta],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://formester.com/integrations',
         },
       ],
     }
