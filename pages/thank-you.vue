@@ -36,8 +36,8 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/thank-you',
-        title: 'Thank You | Formester',
-        description: 'Thank You for choosing Formester',
+        title: 'Thank You for choosing Formester',
+        description: 'Thank you for choosing us! We appreciate it.',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with thank-you page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with thank-you page image alt

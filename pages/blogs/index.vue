@@ -21,35 +21,65 @@
 import BlogCard from '../../components/blogs/BlogCard.vue'
 import BlogFeatured from '../../components/blogs/BlogFeatured.vue'
 
+// MetaTags
+import getSiteMeta from '../../utils/getSiteMeta'
+
 export default {
   components: {
     BlogCard,
-    BlogFeatured
+    BlogFeatured,
   },
   async asyncData({ $content }) {
     const articles = await $content('blogs')
       .where({
-        'published': true,
-        'featured': false
+        published: true,
+        featured: false,
       })
       .sortBy('createdAt', 'asc')
       .fetch()
 
     const heroArticles = await $content('blogs')
       .where({
-        'published': true,
-        'featured': true
+        published: true,
+        featured: true,
       })
       .sortBy('createdAt', 'asc')
       .fetch()
 
     return {
       articles,
-      heroArticles
+      heroArticles,
+    }
+  },
+  computed: {
+    meta() {
+      const metaData = {
+        type: 'website',
+        url: 'https://formester.com/blogs',
+        title: 'The Formester Blog',
+        description:
+          'Find helpful online form tips for creating top-notch forms. Thought-provoking. Quick and Easy. A little SaaSy. Sometimes inspirational. This is the Formester blog.',
+        mainImage:
+          'https://formester.com/formester-form-builder-background.png', // need to update with blogs page image
+        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with blogs page image alt
+      }
+      return getSiteMeta(metaData)
+    },
+  },
+  head() {
+    return {
+      title: 'Blogs | Formester',
+      meta: [...this.meta],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://formester.com/blogs',
+        },
+      ],
     }
   },
 }
 </script>
 
-<style>
-</style>
+<style></style>

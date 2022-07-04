@@ -128,7 +128,7 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/contact',
-        title: 'Contact | Formester',
+        title: 'We are happy to help',
         description:
           'Formester support to help you with any questions that you may have',
         mainImage:

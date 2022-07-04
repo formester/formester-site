@@ -91,8 +91,8 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/pricing',
-        title: 'Plans & Pricing | Formester',
-        description: 'Pricing that feels just right',
+        title: 'Pricing that feels just right',
+        description: 'Start with our free plan',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with pricing page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with pricing page image alt

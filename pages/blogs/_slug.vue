@@ -69,6 +69,7 @@
 </template>
 
 <script>
+// MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
 
 export default {
@@ -131,8 +132,8 @@ export default {
         {
           name: 'publish_date',
           property: 'og:publish_date',
-          content: this.article.createdAt
-        }
+          content: this.article.createdAt,
+        },
       ],
       link: [
         {
