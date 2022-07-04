@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-    :to="{ name: 'blogs-slug', params: { slug: heroarticle.slug } }"
+    :to="{ name: 'blog-slug', params: { slug: heroarticle.slug } }"
     class="row"
   >
     <img
@@ -10,14 +10,7 @@
       :title="article.coverImgAlt"
     />
     <div
-      class="
-        col-lg-6
-        d-flex
-        flex-column
-        align-items-start
-        mt-3 mt-lg-0
-        ps-0 ps-lg-4
-      "
+      class="col-lg-6 d-flex flex-column align-items-start mt-3 mt-lg-0 ps-0 ps-lg-4"
     >
       <span class="blog__date">{{ formatDate(heroarticle.createdAt) }}</span>
       <div class="mt-2">

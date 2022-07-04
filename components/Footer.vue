@@ -7,14 +7,7 @@
         </div>
       </NuxtLink>
       <ul
-        class="
-          footer__items
-          d-flex
-          flex-column flex-md-row
-          align-items-center
-          justify-content-center
-          mt-4
-        "
+        class="footer__items d-flex flex-column flex-md-row align-items-center justify-content-center mt-4"
       >
         <NuxtLink to="/">
           <li class="mx-3 footer__link">Home</li>
@@ -25,8 +18,8 @@
         <NuxtLink to="/pricing">
           <li class="mx-3 footer__link">Pricing</li>
         </NuxtLink>
-        <NuxtLink to="/blogs">
-          <li class="mx-3 footer__link">Blogs</li>
+        <NuxtLink to="/blog">
+          <li class="mx-3 footer__link">Blog</li>
         </NuxtLink>
         <NuxtLink to="/integrations">
           <li class="mx-3 footer__link">Integrations</li>

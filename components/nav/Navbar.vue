@@ -59,8 +59,8 @@
             </NuxtLink>
           </li>
           <li class="nav-item me-4">
-            <NuxtLink to="/blogs" class="nav-link"
-              >Blogs
+            <NuxtLink to="/blog" class="nav-link"
+              >Blog
               <HoverSvg />
             </NuxtLink>
           </li>
@@ -93,7 +93,7 @@ import HoverSvg from './HoverSvg.vue'
 export default {
   components: {
     NavItem,
-    HoverSvg
+    HoverSvg,
   },
 }
 </script>

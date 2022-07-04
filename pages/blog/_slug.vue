@@ -2,7 +2,7 @@
   <div class="container position-relative">
     <article class="container mw-840 mt-8rem">
       <NuxtLink
-        :to="`/blogs`"
+        :to="`/blog`"
         class="blog__back"
         :class="article.toc.length ? 'blog__back__margin' : ''"
       >
