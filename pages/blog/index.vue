@@ -30,7 +30,7 @@ export default {
     BlogFeatured,
   },
   async asyncData({ $content }) {
-    const articles = await $content('blogs')
+    const articles = await $content('blog')
       .where({
         published: true,
         featured: false,
@@ -38,7 +38,7 @@ export default {
       .sortBy('createdAt', 'asc')
       .fetch()
 
-    const heroArticles = await $content('blogs')
+    const heroArticles = await $content('blog')
       .where({
         published: true,
         featured: true,
@@ -55,26 +55,26 @@ export default {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/blogs',
+        url: 'https://formester.com/blog',
         title: 'The Formester Blog',
         description:
           'Find helpful online form tips for creating top-notch forms. Thought-provoking. Quick and Easy. A little SaaSy. Sometimes inspirational. This is the Formester blog.',
         mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with blogs page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with blogs page image alt
+          'https://formester.com/formester-form-builder-background.png', // need to update with blog page image
+        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with blog page image alt
       }
       return getSiteMeta(metaData)
     },
   },
   head() {
     return {
-      title: 'Blogs | Formester',
+      title: 'Blog | Formester',
       meta: [...this.meta],
       link: [
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/blogs',
+          href: 'https://formester.com/blog',
         },
       ],
     }
