@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import BlogCard from '../../components/blogs/BlogCard.vue'
-import BlogFeatured from '../../components/blogs/BlogFeatured.vue'
+import BlogCard from '../../components/blog/BlogCard.vue'
+import BlogFeatured from '../../components/blog/BlogFeatured.vue'
 
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
