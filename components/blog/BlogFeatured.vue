@@ -4,7 +4,7 @@
     class="row"
   >
     <img
-      :src="require(`@/assets/images/blogs/${heroarticle.coverImg}`)"
+      :src="require(`@/assets/images/blog/${heroarticle.coverImg}`)"
       class="col-lg-6 rounded img-fluid featured__blog-img"
       :alt="article.coverImgAlt"
       :title="article.coverImgAlt"
