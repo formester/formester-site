@@ -6,11 +6,7 @@
       <div
         class="d-flex align-items-center justify-content-center flex-wrap mt-4"
       >
-        <PricingCard
-          category="Free"
-          :amount="0"
-          :features="freePlanFeatures"
-        />
+        <PricingCard category="Free" :amount="0" :features="freePlanFeatures" />
         <PricingCard
           category="Personal"
           :amount="13"
@@ -36,9 +32,12 @@ import PricingCard from '../components/pricing/PricingCard.vue'
 import PricingComparision from '../components/pricing/PricingComparision.vue'
 import Faq from '../components/pricing/Faq.vue'
 
+// MetaTags
+import getSiteMeta from '../utils/getSiteMeta'
+
 export default {
   components: { PricingCard, PricingComparision, Faq, CallToActionSection },
-  data: function () {
+  data() {
     return {
       freePlanFeatures: {
         available: [
@@ -52,10 +51,7 @@ export default {
           'Zapier Connectors',
           'Analytics',
         ],
-        unavailable: [
-          'File Uploads',
-          'White Label',
-        ]
+        unavailable: ['File Uploads', 'White Label'],
       },
       personalPlanFeatures: {
         available: [
@@ -70,9 +66,7 @@ export default {
           'Analytics',
           '1 Gb File Uploads',
         ],
-        unavailable: [
-          'White Label',
-        ]
+        unavailable: ['White Label'],
       },
       businessPlanFeatures: {
         available: [
@@ -85,16 +79,39 @@ export default {
           'API Integrations',
           'Zapier Connectors',
           'Analytics',
-          '5 GB File Uploads',       
+          '5 GB File Uploads',
           'White Label',
         ],
-        unavailable: []
+        unavailable: [],
       },
     }
   },
-  head: {
-    link: [{ rel: 'canonical', href: 'https://formester.com/pricing' }],
-    title: 'Formester | Formester',
+  computed: {
+    meta() {
+      const metaData = {
+        type: 'website',
+        url: 'https://formester.com/pricing',
+        title: 'Pricing that feels just right',
+        description: 'Start with our free plan',
+        mainImage:
+          'https://formester.com/formester-form-builder-background.png', // need to update with pricing page image
+        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with pricing page image alt
+      }
+      return getSiteMeta(metaData)
+    },
+  },
+  head() {
+    return {
+      title: 'Plans & Pricing | Formester',
+      meta: [...this.meta],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://formester.com/pricing',
+        },
+      ],
+    }
   },
   jsonld() {
     return [

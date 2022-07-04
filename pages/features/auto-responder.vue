@@ -4,19 +4,14 @@
       <div class="container">
         <div class="row">
           <div
-            class="
-              col-lg-5
-              d-flex
-              flex-column
-              justify-content-center
-              align-items-lg-start align-items-center
-              text-center text-lg-start
-              mt-xl-0 mt-md-5
-            "
+            class="col-lg-5 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start mt-xl-0 mt-md-5"
           >
             <h1 class="section__heading">Auto Responder</h1>
             <p class="hero__subheading mt-3">
-              Send personalised replies automatically to your customers on form submission. Emails are easy to create using our intuitive email builder. You can also customise the emails to go from your personal email account.
+              Send personalised replies automatically to your customers on form
+              submission. Emails are easy to create using our intuitive email
+              builder. You can also customise the emails to go from your
+              personal email account.
             </p>
             <a
               href="https://app.formester.com/users/sign_up"
@@ -25,13 +20,7 @@
             >
           </div>
           <div
-            class="
-              col-lg-7
-              d-flex
-              align-items-center
-              justify-content-center
-              mt-lg-0 mt-5
-            "
+            class="col-lg-7 d-flex align-items-center justify-content-center mt-lg-0 mt-5"
           >
             <img
               src="@/assets/images/features/auto-responder/auto-responder-message.svg"
@@ -59,43 +48,39 @@
 <script>
 import CallToActionSection from '@/components/CallToActionSection.vue'
 import FeatureDetail from '../../components/FeatureDetail.vue'
+
+// MetaTags
+import getSiteMeta from '../../utils/getSiteMeta'
+
 export default {
   components: { FeatureDetail, CallToActionSection },
-  head: {
-    title: 'Formester | Personalised Email Responder',
-    meta: [
-      { 
-        hid: 'og:title', 
-        name: 'og:title', 
-        content: 'Formester | Personalised Email Responder' 
-      },
-      { 
-        hid: 'twitter:title', 
-        name: 'twitter:title', 
-        content: 'Formester | Personalised Email Responder' 
-      },
-      { 
-        hid: 'og:site_name', 
-        name: 'og:site_name', 
-        content: 'Formester | Personalised Email Responder' 
-      },
-      { 
-        hid: 'description', 
-        name: 'description', 
-        content: 'Respond to the customer as soon as you get a form submission. Personalised emails are easy to create with our intuitive email builder with an option to use your official email to improve delivery and conversion.' 
-      },
-      { 
-        hid: 'og:description', 
-        name: 'og:description', 
-        content: 'Respond to the customer as soon as you get a form submission. Personalised emails are easy to create with our intuitive email builder with an option to use your official email to improve delivery and conversion.' 
-      },
-      { 
-        hid: 'twitter:description', 
-        name: 'twitter:description', 
-        content: 'Respond to the customer as soon as you get a form submission. Personalised emails are easy to create with our intuitive email builder with an option to use your official email to improve delivery and conversion.' 
-      },
-    ],
-    link: [{ rel: 'canonical', href: 'https://formester.com/features/auto-responder' }]
+  computed: {
+    meta() {
+      const metaData = {
+        type: 'website',
+        url: 'https://formester.com/features/auto-responder',
+        title: 'Personalised Email Responder | Formester',
+        description:
+          'Respond to the customer as soon as you get a form submission. Personalised emails are easy to create with our intuitive email builder with an option to use your official email to improve delivery and conversion.',
+        mainImage:
+          'https://formester.com/formester-form-builder-background.png', // need to update with auto-responder page image
+        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
+      }
+      return getSiteMeta(metaData)
+    },
+  },
+  head() {
+    return {
+      title: 'Personalised Email Responder | Formester',
+      meta: [...this.meta],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://formester.com/features/auto-responder',
+        },
+      ],
+    }
   },
   jsonld() {
     return {}
