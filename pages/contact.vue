@@ -4,7 +4,8 @@
       <div class="col-lg-6">
         <h1 class="section__heading">We are happy to help</h1>
         <p>
-          Need more information about our product, pricing or anything else? Fill out the form, and we'll be in touch shortly.
+          Need more information about our product, pricing or anything else?
+          Fill out the form, and we'll be in touch shortly.
         </p>
         <div class="">
           <div class="div mt-5">
@@ -104,24 +105,52 @@
 <script>
 import CallToStackSection from '@/components/CallToActionSection.vue'
 
+// MetaTags
+import getSiteMeta from '../utils/getSiteMeta'
+
 export default {
   name: 'Contact',
   components: {
     CallToStackSection,
   },
-  head: {
-    link: [{ rel: 'canonical', href: 'https://formester.com/contact' }],
-    title: 'Formester | Contact',
-  },
   jsonld() {
     return {
-      "@context": "http://schema.org/",
-      "@type": "ContactPage",
-      "name": "Formester contact page",
-      "description": "Formester support to help you with any questions that you may have",
-      "url" : "https://formester.com/contact"
-    } 
-  }
+      '@context': 'http://schema.org/',
+      '@type': 'ContactPage',
+      name: 'Formester contact page',
+      description:
+        'Formester support to help you with any questions that you may have',
+      url: 'https://formester.com/contact',
+    }
+  },
+  computed: {
+    meta() {
+      const metaData = {
+        type: 'website',
+        url: 'https://formester.com/contact',
+        title: 'Contact | Formester',
+        description:
+          'Formester support to help you with any questions that you may have',
+        mainImage:
+          'https://formester.com/formester-form-builder-background.png', // need to update with contact page image
+        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with contact page image alt
+      }
+      return getSiteMeta(metaData)
+    },
+  },
+  head() {
+    return {
+      title: 'Contact | Formester',
+      meta: [...this.meta],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://formester.com/contact',
+        },
+      ],
+    }
+  },
 }
 </script>
 
