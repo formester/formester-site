@@ -1,28 +1,16 @@
 <template>
-  <NuxtLink
-    :to="{ name: 'blogs-slug', params: { slug: heroarticle.slug } }"
-    class="row"
-  >
+  <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
     <img
-      :src="require(`@/assets/images/blogs/${heroarticle.coverImg}`)"
-      class="col-lg-6 rounded img-fluid featured__blog-img"
+      :src="require(`@/assets/images/blog/${article.coverImg}`)"
+      class="rounded img-fluid"
       :alt="article.coverImgAlt"
       :title="article.coverImgAlt"
     />
-    <div
-      class="
-        col-lg-6
-        d-flex
-        flex-column
-        align-items-start
-        mt-3 mt-lg-0
-        ps-0 ps-lg-4
-      "
-    >
-      <span class="blog__date">{{ formatDate(heroarticle.createdAt) }}</span>
+    <div class="d-flex flex-column align-items-start">
+      <span class="blog__date mt-3">{{ formatDate(article.createdAt) }}</span>
       <div class="mt-2">
-        <h3 class="blog__title">{{ heroarticle.title }}</h3>
-        <p class="mt-1 blog__desc">{{ heroarticle.description }}</p>
+        <h3 class="blog__title">{{ article.title }}</h3>
+        <p class="mt-1 blog__desc">{{ article.description }}</p>
       </div>
       <span class="mt-2 blog__timetoRead">
         <svg
@@ -37,7 +25,7 @@
             fill="#828282"
           />
         </svg>
-        {{ heroarticle.timeToRead }} min read
+        {{ article.timeToRead }} min read
       </span>
     </div>
   </NuxtLink>
@@ -45,8 +33,8 @@
 
 <script>
 export default {
-  name: 'BlogFeatured',
-  props: ['heroarticle'],
+  name: 'BlogCard',
+  props: ['article'],
   methods: {
     formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
@@ -57,7 +45,31 @@ export default {
 </script>
 
 <style>
-.featured__blog-img {
-  padding: 0;
+.blog__date {
+  background: hsla(0, 0%, 96%, 1);
+  color: hsla(0, 0%, 31%, 1);
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 14px;
+  border-radius: 0.25rem;
+}
+.blog__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 32px;
+  color: hsla(0, 0%, 20%, 1);
+}
+
+.blog__desc {
+  font-size: 1rem;
+  line-height: 24px;
+  color: hsla(0, 0%, 31%, 1);
+  margin: 0;
+}
+
+.blog__timetoRead {
+  font-size: 0.875rem;
+  line-height: 21px;
+  color: hsla(0, 0%, 51%, 1);
 }
 </style>

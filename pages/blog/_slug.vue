@@ -2,7 +2,7 @@
   <div class="container position-relative">
     <article class="container mw-840 mt-8rem">
       <NuxtLink
-        :to="`/blogs`"
+        :to="`/blog`"
         class="blog__back"
         :class="article.toc.length ? 'blog__back__margin' : ''"
       >
@@ -77,7 +77,7 @@ export default {
     liveEdit: false,
   },
   async asyncData({ $content, params }) {
-    const article = await $content('blogs', params.slug).fetch()
+    const article = await $content('blog', params.slug).fetch()
 
     return { article }
   },
@@ -94,7 +94,7 @@ export default {
     meta() {
       const metaData = {
         type: 'article',
-        url: `https://formester.com/blogs/${this.$route.params.slug}`,
+        url: `https://formester.com/blog/${this.$route.params.slug}`,
         title: this.article.title,
         description: this.article.description,
         mainImage: this.article.coverImg
@@ -139,7 +139,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: `https://formester.com/blogs/${this.$route.params.slug}`,
+          href: `https://formester.com/blog/${this.$route.params.slug}`,
         },
       ],
     }
