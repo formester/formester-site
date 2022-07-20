@@ -1,7 +1,10 @@
 <template>
   <div>
     <div class="container position-relative">
-      <article class="container mw-840 mt-8rem mb-5rem">
+      <article
+        class="container mw-840 mt-8rem"
+        :class="article.cta && article.cta.hidden ? '' : 'mb-5rem'"
+      >
         <NuxtLink
           :to="`/blog`"
           class="blog__back"
