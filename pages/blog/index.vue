@@ -35,7 +35,7 @@ export default {
         published: true,
         featured: false,
       })
-      .sortBy('createdAt', 'asc')
+      .sortBy('createdAt', 'desc')
       .fetch()
 
     const heroArticles = await $content('blog')
@@ -43,7 +43,7 @@ export default {
         published: true,
         featured: true,
       })
-      .sortBy('createdAt', 'asc')
+      .sortBy('createdAt', 'desc')
       .fetch()
 
     return {
