@@ -169,11 +169,16 @@ export default {
   color: hsla(0, 0%, 20%, 1);
 }
 
-.nuxt-content h2 {
+.nuxt-content h3 {
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 24px;
   color: hsla(0, 0%, 20%, 1);
+}
+
+.nuxt-content a {
+  color: #0d6efd;
+  text-decoration: underline;
 }
 
 .nuxt-content p,
@@ -231,8 +236,18 @@ export default {
 
 .dropdown-link {
   padding: 0.5em;
-  min-width: 250px;
+  min-width: 400px;
   width: 100%;
   display: block;
+}
+@media only screen and (max-width: 576px) {
+  .dropdown-link {
+    min-width: 300px;
+  }
+}
+@media only screen and (max-width: 432px) {
+  .dropdown-link {
+    min-width: 250px;
+  }
 }
 </style>

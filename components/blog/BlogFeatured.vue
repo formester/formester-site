@@ -30,7 +30,7 @@
             fill="#828282"
           />
         </svg>
-        {{ heroarticle.timeToRead }} min read
+        {{ heroarticle.readingStats.text }}
       </span>
     </div>
   </NuxtLink>
