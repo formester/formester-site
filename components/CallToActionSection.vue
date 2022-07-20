@@ -1,5 +1,5 @@
 <template>
-  <section class="call-to-action-section" :class="content.hidden ? 'd-none' : ''">
+  <section class="call-to-action-section" :class="{ 'd-none': content.hidden }">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -7,34 +7,29 @@
             class="call-to-action-content text-center mx-2 my-5 position-relative"
           >
             <h3 class="section__heading">
-              {{ content.heading ? content.heading : 'Ready to dive in?' }}
+              {{ content.heading || 'Ready to dive in?' }}
             </h3>
             <h2 class="section__heading">
-              <span class="hglt">{{
-                content.subHeading
-                  ? content.subHeading
-                  : 'Register with us Now.'
-              }}</span>
+              <span class="hglt">
+                {{ content.subHeading || 'Register with us Now.' }}
+              </span>
             </h2>
             <div class="mt-5">
               <div class="d-inline p-2 mx-2 mt-5">
                 <a
-                  :href="
-                    content.btnPrimaryLink
-                      ? content.btnPrimaryLink
-                      : 'https://app.formester.com/users/sign_up'
-                  "
+                  :href="content.btnPrimaryLink ||'https://app.formester.com/users/sign_up'"
                   class="btn button cta-button"
                   target="_blank"
                 >
-                  {{ content.btnPrimary ? content.btnPrimary : 'Sign Up' }}
+                  {{ content.btnPrimary || 'Sign Up' }}
                 </a>
               </div>
               <div class="d-inline p-2 mx-2 mt-5">
-                <NuxtLink :to="content.btnSecondaryLink ? content.btnSecondaryLink : '/contact'" class="btn button cta-button__invert">
-                  {{
-                    content.btnSecondary ? content.btnSecondary : 'Contact Us'
-                  }}
+                <NuxtLink
+                  :to="content.btnSecondaryLink || '/contact'"
+                  class="btn button cta-button__invert"
+                >
+                  {{ content.btnSecondary || 'Contact Us' }}
                 </NuxtLink>
               </div>
             </div>

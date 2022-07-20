@@ -3,7 +3,7 @@
     <div class="container position-relative">
       <article
         class="container mw-840 mt-8rem"
-        :class="article.cta && article.cta.hidden ? '' : 'mb-5rem'"
+        :class="{ 'mb-5rem': !(article.cta && article.cta.hidden) }"
       >
         <NuxtLink
           :to="`/blog`"
