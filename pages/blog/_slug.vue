@@ -177,7 +177,7 @@ export default {
 }
 
 .nuxt-content a {
-  color: #0d6efd;
+  color: var(--clr-primary);
   text-decoration: underline;
 }
 
