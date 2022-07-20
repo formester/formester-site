@@ -4,7 +4,7 @@ description: There’s no limit to the number of ways you can utilize online sur
 author: Vivek Badani
 coverImg: seven-assured-ways-to-improve-your-online-surveys.png
 coverImgAlt: Cover image for the blog, "Seven Assured Ways to Improve Your Online Surveys"
-featured: true
+featured: false
 published: true
 createdAt: '2022-07-20'
 ---
