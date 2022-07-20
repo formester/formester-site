@@ -43,18 +43,7 @@
         <div
           class="d-flex align-items-center justify-content-center timeToRead"
         >
-          <svg
-            width="16"
-            height="17"
-            viewBox="0 0 16 17"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7.99992 1.83337C11.6799 1.83337 14.6666 4.82004 14.6666 8.50004C14.6666 12.18 11.6799 15.1667 7.99992 15.1667C4.31992 15.1667 1.33325 12.18 1.33325 8.50004C1.33325 4.82004 4.31992 1.83337 7.99992 1.83337ZM7.99992 13.8334C10.9466 13.8334 13.3333 11.4467 13.3333 8.50004C13.3333 5.55337 10.9466 3.16671 7.99992 3.16671C5.05325 3.16671 2.66659 5.55337 2.66659 8.50004C2.66659 11.4467 5.05325 13.8334 7.99992 13.8334ZM10.3573 5.20004L11.2999 6.14271L7.99992 9.44271L7.05725 8.50004L10.3573 5.20004Z"
-              fill="#4F4F4F"
-            />
-          </svg>
+          <ClockIcon color="#4f4f4f" />
           <span>{{ article.readingStats.text }}</span>
         </div>
       </div>
@@ -69,10 +58,15 @@
 </template>
 
 <script>
+import ClockIcon from '../../components/icons/ClockIcon.vue'
+
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
 
 export default {
+  components: {
+    ClockIcon
+  },
   content: {
     liveEdit: false,
   },
