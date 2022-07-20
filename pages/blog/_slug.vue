@@ -1,78 +1,78 @@
 <template>
-  <div class="container position-relative">
-    <article class="container mw-840 mt-8rem">
-      <NuxtLink
-        :to="`/blog`"
-        class="blog__back"
-        :class="article.toc.length ? 'blog__back__margin' : ''"
+  <div>
+    <div class="container position-relative">
+      <article
+        class="container mw-840 mt-8rem"
+        :class="{ 'mb-5rem': !(article.cta && article.cta.hidden) }"
       >
-        <span>← Back</span>
-      </NuxtLink>
-      <nav
-        v-if="article.toc.length"
-        class="navbar navbar-expand bg-white sticky-top py-3"
-      >
-        <div class="collapse navbar-collapse">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <a
-                class="dropdown-toggle"
-                href="#"
-                id="tocMenuLink"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Table of Contents
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="tocMenuLink">
-                <li v-for="link of article.toc" :key="link.id">
-                  <NuxtLink class="dropdown-link" :to="`#${link.id}`">
-                    {{ link.text }}
-                  </NuxtLink>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <h1 class="mb-1 article__heading">{{ article.title }}</h1>
-      <div class="d-flex sm-text my-2 datentimeToRead">
-        <span>{{ formatDate(article.createdAt) }}</span>
-        <span>|</span>
-        <div
-          class="d-flex align-items-center justify-content-center timeToRead"
+        <NuxtLink
+          :to="`/blog`"
+          class="blog__back"
+          :class="article.toc.length ? 'blog__back__margin' : ''"
         >
-          <svg
-            width="16"
-            height="17"
-            viewBox="0 0 16 17"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+          <span>← Back</span>
+        </NuxtLink>
+        <nav
+          v-if="article.toc.length"
+          class="navbar navbar-expand bg-white sticky-top py-3"
+        >
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a
+                  class="dropdown-toggle"
+                  href="#"
+                  id="tocMenuLink"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Table of Contents
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="tocMenuLink">
+                  <li v-for="link of article.toc" :key="link.id">
+                    <NuxtLink class="dropdown-link" :to="`#${link.id}`">
+                      {{ link.text }}
+                    </NuxtLink>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <h1 class="mb-1 article__heading">{{ article.title }}</h1>
+        <div class="d-flex sm-text my-2 datentimeToRead">
+          <span>{{ formatDate(article.createdAt) }}</span>
+          <span>|</span>
+          <div
+            class="d-flex align-items-center justify-content-center timeToRead"
           >
-            <path
-              d="M7.99992 1.83337C11.6799 1.83337 14.6666 4.82004 14.6666 8.50004C14.6666 12.18 11.6799 15.1667 7.99992 15.1667C4.31992 15.1667 1.33325 12.18 1.33325 8.50004C1.33325 4.82004 4.31992 1.83337 7.99992 1.83337ZM7.99992 13.8334C10.9466 13.8334 13.3333 11.4467 13.3333 8.50004C13.3333 5.55337 10.9466 3.16671 7.99992 3.16671C5.05325 3.16671 2.66659 5.55337 2.66659 8.50004C2.66659 11.4467 5.05325 13.8334 7.99992 13.8334ZM10.3573 5.20004L11.2999 6.14271L7.99992 9.44271L7.05725 8.50004L10.3573 5.20004Z"
-              fill="#4F4F4F"
-            />
-          </svg>
-          <span>{{ article.readingStats.text }}</span>
+            <ClockIcon color="#4f4f4f" />
+            <span>{{ article.readingStats.text }}</span>
+          </div>
         </div>
-      </div>
-      <div class="sm-text mt-1">
-        by
-        <span class="article__author">{{ article.author }}</span>
-      </div>
-      <p class="article__desc mt-4">{{ article.description }}</p>
-      <nuxt-content :document="article" />
-    </article>
+        <div class="sm-text mt-1">
+          by
+          <span class="article__author">{{ article.author }}</span>
+        </div>
+        <p class="article__desc mt-4">{{ article.description }}</p>
+        <nuxt-content :document="article" />
+      </article>
+    </div>
+    <CallToActionSection :content="article.cta" />
   </div>
 </template>
 
 <script>
+import ClockIcon from '../../components/icons/ClockIcon.vue'
+
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
 
 export default {
+  components: {
+    ClockIcon,
+  },
   content: {
     liveEdit: false,
   },
@@ -209,6 +209,10 @@ export default {
 
 .mt-8rem {
   margin-block: 8rem;
+}
+
+.mb-5rem {
+  margin-bottom: 5rem;
 }
 
 .datentimeToRead {

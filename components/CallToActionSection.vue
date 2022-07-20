@@ -1,34 +1,36 @@
 <template>
-  <section class="call-to-action-section">
+  <section class="call-to-action-section" :class="{ 'd-none': content.hidden }">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div
-            class="
-              call-to-action-content
-              text-center
-              mx-2
-              my-5
-              position-relative
-            "
+            class="call-to-action-content text-center mx-2 my-5 position-relative"
           >
-            <h3 class="section__heading">Ready to dive in?</h3>
+            <h3 class="section__heading">
+              {{ content.heading || 'Ready to dive in?' }}
+            </h3>
             <h2 class="section__heading">
-              <span class="hglt">Register with us Now.</span>
+              <span class="hglt">
+                {{ content.subHeading || 'Register with us Now.' }}
+              </span>
             </h2>
             <div class="mt-5">
               <div class="d-inline p-2 mx-2 mt-5">
                 <a
-                  href="https://app.formester.com/users/sign_up"
+                  :href="content.btnPrimaryLink ||'https://app.formester.com/users/sign_up'"
                   class="btn button cta-button"
                   target="_blank"
-                  >Sign Up</a
                 >
+                  {{ content.btnPrimary || 'Sign Up' }}
+                </a>
               </div>
               <div class="d-inline p-2 mx-2 mt-5">
-                <NuxtLink to="/contact" class="btn button cta-button__invert"
-                  >Contact Us</NuxtLink
+                <NuxtLink
+                  :to="content.btnSecondaryLink || '/contact'"
+                  class="btn button cta-button__invert"
                 >
+                  {{ content.btnSecondary || 'Contact Us' }}
+                </NuxtLink>
               </div>
             </div>
             <img
@@ -42,6 +44,17 @@
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  props: {
+    content: {
+      type: Object,
+      default: {},
+    },
+  },
+}
+</script>
 
 <style scoped>
 .call-to-action-section {

@@ -3,7 +3,7 @@
     <BlogFeatured
       v-for="article in heroArticles"
       :key="article.slug"
-      :heroarticle="article"
+      :article="article"
       class="my-4"
     />
     <div class="row mt-4">
@@ -35,7 +35,7 @@ export default {
         published: true,
         featured: false,
       })
-      .sortBy('createdAt', 'asc')
+      .sortBy('createdAt', 'desc')
       .fetch()
 
     const heroArticles = await $content('blog')
@@ -43,7 +43,7 @@ export default {
         published: true,
         featured: true,
       })
-      .sortBy('createdAt', 'asc')
+      .sortBy('createdAt', 'desc')
       .fetch()
 
     return {
