@@ -3,7 +3,7 @@
     <BlogFeatured
       v-for="article in heroArticles"
       :key="article.slug"
-      :heroarticle="article"
+      :article="article"
       class="my-4"
     />
     <div class="row mt-4">

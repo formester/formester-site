@@ -1,10 +1,10 @@
 <template>
   <NuxtLink
-    :to="{ name: 'blog-slug', params: { slug: heroarticle.slug } }"
+    :to="{ name: 'blog-slug', params: { slug: article.slug } }"
     class="row"
   >
     <img
-      :src="require(`@/assets/images/blog/${heroarticle.coverImg}`)"
+      :src="require(`@/assets/images/blog/${article.coverImg}`)"
       class="col-lg-6 rounded img-fluid featured__blog-img"
       :alt="article.coverImgAlt"
       :title="article.coverImgAlt"
@@ -12,10 +12,10 @@
     <div
       class="col-lg-6 d-flex flex-column align-items-start mt-3 mt-lg-0 ps-0 ps-lg-4"
     >
-      <span class="blog__date">{{ formatDate(heroarticle.createdAt) }}</span>
+      <span class="blog__date">{{ formatDate(article.createdAt) }}</span>
       <div class="mt-2">
-        <h3 class="blog__title">{{ heroarticle.title }}</h3>
-        <p class="mt-1 blog__desc">{{ heroarticle.description }}</p>
+        <h3 class="blog__title">{{ article.title }}</h3>
+        <p class="mt-1 blog__desc">{{ article.description }}</p>
       </div>
       <span class="mt-2 blog__timetoRead">
         <svg
@@ -30,7 +30,7 @@
             fill="#828282"
           />
         </svg>
-        {{ heroarticle.readingStats.text }}
+        {{ article.readingStats.text }}
       </span>
     </div>
   </NuxtLink>
@@ -39,7 +39,7 @@
 <script>
 export default {
   name: 'BlogFeatured',
-  props: ['heroarticle'],
+  props: ['article'],
   methods: {
     formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
