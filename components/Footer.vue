@@ -31,7 +31,7 @@
           <li class="mx-3 footer__link">Contact Us</li>
         </NuxtLink>
         <a href="mailto:support@formester.com">
-          <li class="mx-3 footer__link">Support Us</li>
+          <li class="mx-3 footer__link">Get Support</li>
         </a>
       </ul>
       <div class="socials mt-4">
