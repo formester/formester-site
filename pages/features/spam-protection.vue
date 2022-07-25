@@ -35,7 +35,6 @@
         <FeatureDetail
           :feature="feature"
           class="col-md-6 my-3"
-          :class="{ 'mx-auto': feature.isCenter }"
           v-for="feature in features"
           :key="feature.title"
         />
@@ -105,7 +104,6 @@ export default {
           description:
             'Our database is getting smarter each day. We use machine learning to predict spam submissions. Your every form will improve our prediction.',
           src: 'spam-protection/smart-filters-illus.svg',
-          isCenter: true,
         },
       ],
     }
