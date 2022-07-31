@@ -27,6 +27,9 @@
         <NuxtLink to="/privacy">
           <li class="mx-3 footer__link">Privacy Policy</li>
         </NuxtLink>
+        <NuxtLink to="/terms-of-service">
+          <li class="mx-3 footer__link">Terms of Service</li>
+        </NuxtLink>
         <NuxtLink to="/contact">
           <li class="mx-3 footer__link">Contact Us</li>
         </NuxtLink>
