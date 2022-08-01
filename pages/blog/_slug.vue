@@ -3,7 +3,7 @@
     <div class="container position-relative">
       <article
         class="container mw-840 mt-8rem"
-        :class="{ 'mb-5rem': !(article.cta && article.cta.hidden) }"
+        :class="{ 'mb-3rem': !(article.cta && article.cta.hidden) }"
       >
         <NuxtLink
           :to="`/blog`"
@@ -211,8 +211,8 @@ export default {
   margin-block: 8rem;
 }
 
-.mb-5rem {
-  margin-bottom: 5rem;
+.mb-3rem {
+  margin-bottom: 3rem;
 }
 
 .datentimeToRead {
