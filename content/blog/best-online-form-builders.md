@@ -27,6 +27,8 @@ Let’s take a look at the best online form builders currently and find out how 
 
 [Formester](https://formester.com/) is the one and only combined solution for online forms and HTML form backend (more on this later). The most critical aspect of any online form builder is the ease and convenience that it offers – and our platform ensures that. Creating a form for your surveys, feedback, registration, lead generation, events and a number of other applications, is comprehensively simple. The drag-and-drop interface helps you build your online form in minutes so that you can focus on efficient distribution and maximize your ROI. Further, our solution enables you to manage the collected data and access the form analytics for a detailed study of your responses.
 
+![TEDx organiser Thibaud Martinez saying that he enjoys the clean and straight forward nature of formester](/blog/best-online-form-builders/formester-testimonial.jpg 'TEDx organiser Thibaud Martinez saying that he enjoys the clean and straight forward nature of formester')
+
 Effective user experience along with eye-catching design is the key to maximizing your online form engagement today. And here’s how Formester caters to your user end of the form:
 
 - Completely flexible form building with numerous question types, conditional logic and more deep configurations
@@ -55,6 +57,8 @@ Read more: [Here’s how Formester helps you create interactive and experiential
 
 ### 2. Hubspot Form Builder:
 
+![Hubspot forms landing page](/blog/best-online-form-builders/hubspot.png 'Hubspot forms landing page')
+
 More popularly known as a CRM tool, Hubspot also has a form builder which can be connected with the Hubspot CRM. Although a basic form builder, this solution allows creating forms with a drag and drop interface. Curating an online form as per dynamic requirements through conditional logic is possible with the tool.
 
 Similar to other online form builders, Hubspot also can be used for creating a form with various question fields and creating embedded or standalone forms. The tool looks powerful if integrated with Hubspot’s CRM so that users can directly transmit the form data into the CRM. You can then leverage this data directly to run marketing campaigns.
@@ -62,6 +66,8 @@ Similar to other online form builders, Hubspot also can be used for creating a f
 **Pricing**: Free Basic Plan; $50/month for automation and marketing integration
 
 ### 3. Google Forms:
+
+![Google forms landing page](/blog/best-online-form-builders/googleform.png 'Google forms landing page')
 
 A simple and quick form builder from Google, it is a free and efficient tool, especially for small applications. The forms can either be accessed through a link or embedded on a web page. It is a free tool and is good to begin with for users having immensely basic requirements.
 
@@ -71,11 +77,15 @@ However, Google Forms do not enable full customization, and there’s no option 
 
 ### 4. Paperform:
 
+![Paperform landing page](/blog/best-online-form-builders/paperform.png 'Paperform landing page')
+
 Paperform makes online forms look like landing pages. Users can add photos, videos, headings and detailed long-form content to create a blog-like structure too. The tool is extensively used for creating product catalogues as it also allows users to take online payments. So an online form along with payments integration can be a handy combination for e-commerce and other online businesses.
 
 **Pricing**: Basic plan starts at $240/year
 
 ### 5. Typeform:
+
+![Typeform landing page](/blog/best-online-form-builders/typeform.png 'Typeform landing page')
 
 A conversational styled experience delivering tool, Typeform is a popular form builder and allows users to choose from various form design templates. Further, forms made using Typeform can have images, GIFs and videos too for enhanced engagement.
 
@@ -87,6 +97,8 @@ The most talked about aspect of Typeform - one question at a time, is a nice fea
 
 ### 6. Jotform:
 
+![Jotform landing page](/blog/best-online-form-builders/jotform.png 'Jotform landing page')
+
 One of the early online form building tools, Jotform offers a huge number of form templates for users. It enables users to heavily customize their forms based on the requirements. Numerous widgets can be used to create online forms from scratch. For those who love using templates - Jotform has a mix of both free and paid ones.
 
 Apart from conventional features like conditional logic and form database, Jotform allows building PDF forms too. It’s a good platform for small business to get started, but the lack of proper guidance on using the tool makes it difficult for users. The free plan consists of very limited features which aren’t usually enough.
@@ -94,6 +106,8 @@ Apart from conventional features like conditional logic and form database, Jotfo
 **Pricing**: The Bronze plan starts at $29/month
 
 ### 7. Formsite:
+
+![Formsite landing page](/blog/best-online-form-builders/formsite.png 'Formsite landing page')
 
 The tool was launched in 1999, when people didn’t even know much about the existence of online forms. Formsite encrypts the data filled in online forms and that adds an extra layer of security. Specifically designed for critical information, users can also connect the forms to payment gateways like Stripe and Paypal. Some more useful features include linking multiple forms together and saving created blocks of form.
 
