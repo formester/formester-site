@@ -54,6 +54,14 @@
             src="@/assets/images/social/twitter.svg"
             alt="Formester twitter page"
         /></a>
+        <a
+          href="https://www.facebook.com/formester"
+          class="mx-1"
+          target="_blank"
+          ><img
+            src="@/assets/images/social/facebook.svg"
+            alt="Fomester facebook page"
+        /></a>
         <!-- <a href="#" class="mx-1" target="_blank"
           ><img
             src="@/assets/images/social/youtube.svg"
