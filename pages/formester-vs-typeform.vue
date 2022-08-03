@@ -31,7 +31,7 @@
             class="col-lg-7 d-flex align-items-center justify-content-center"
           >
             <img
-              src="@/assets/images/formestervstypeform-hero-img.svg"
+              src="@/assets/images/formester-vs-typeform-hero-img.svg"
               alt="Formester form building with drag and drop interface"
               class="img-fluid hero__image"
             />
@@ -76,7 +76,7 @@
         </div>
       </div>
     </section>
-    
+
     <section class="container my-5 py-5">
       <h2 class="section__heading">
         Create Solutions with Formester, Not Mere Forms
@@ -181,10 +181,10 @@
       </div>
     </section>
 
-    
+
     <CallToActionSection />
   </div>
-</template> 
+</template>
 
 <script>
 import Hero from '../components/home/Hero.vue'
@@ -254,7 +254,7 @@ export default {
   },
 }
 </script>
- 
+
  <style scoped>
 /* HERO */
 .hero {
