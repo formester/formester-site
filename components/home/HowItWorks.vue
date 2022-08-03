@@ -36,14 +36,14 @@ export default {
           heading: 'Automatic response',
           description:
             'Replying to submissions is automatic. You can create and configure emails to go to your users on submission. We also notify you via email, Slack or any other way you like.',
-        }
+        },
       ],
     }
   },
 }
 </script>
 
-<style scoped>
+<style>
 .how-it-works {
   margin-top: 5em;
   margin-bottom: 5em;

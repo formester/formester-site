@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Hero />
+    <Hero heading="some" subtitle="some" />
     <FeatureList />
     <Testimonials />
     <HowItWorks />
@@ -22,23 +22,27 @@ export default {
     HowItWorks,
   },
   head: {
-    link: [{ rel: 'canonical', href: 'https://formester.com' }]
+    link: [{ rel: 'canonical', href: 'https://formester.com' }],
   },
   jsonld() {
     return {
-      "@context": "http://schema.org",
-      "@type": "Corporation",
-      "name": "Formester",
-      "description": "Form solution for your business that is easy to use. Formester provides an interactive drag and drop builder to create amazing survey forms.",
-      "logo": "https://formester.com/logo.png",
-      "url": "https://formester.com",
-      "sameAs": ["https://twitter.com/_formester_", "https://www.instagram.com/_formester_/"],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Dalaware",
-        "addressCountry": "United States"
-      }
+      '@context': 'http://schema.org',
+      '@type': 'Corporation',
+      name: 'Formester',
+      description:
+        'Form solution for your business that is easy to use. Formester provides an interactive drag and drop builder to create amazing survey forms.',
+      logo: 'https://formester.com/logo.png',
+      url: 'https://formester.com',
+      sameAs: [
+        'https://twitter.com/_formester_',
+        'https://www.instagram.com/_formester_/',
+      ],
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Dalaware',
+        addressCountry: 'United States',
+      },
     }
-  }
+  },
 }
 </script>

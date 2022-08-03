@@ -136,6 +136,10 @@ button {
   border: none;
 }
 
+.bg__light-primary {
+  background: var(--clr-primary-light);
+}
+
 .hero__button {
   background-color: var(--clr-primary);
   font-size: var(--ft-lg-btn);
