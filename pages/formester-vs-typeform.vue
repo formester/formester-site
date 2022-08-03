@@ -39,6 +39,27 @@
         </div>
       </div>
     </section>
+
+    <section class="container text-center">
+      <h2 class="section__heading">Formester vs. Typeform: Head To Head</h2>
+      <table class="table text-start comparision__table mx-auto">
+        <thead class="bg__light-primary">
+          <tr>
+            <th scope="col">Feature</th>
+            <th scope="col">Free</th>
+            <th scope="col">Personal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="c of comparisions" :key="c[0]">
+            <td style="font-weight: 600;">{{ c[0] }}</td>
+            <td>{{ c[1] }}</td>
+            <td>{{ c[2] }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
     <section class="how-it-works container">
       <h2 class="section__heading text-center">
         3 Reasons Why You Will Love Formester
@@ -55,6 +76,54 @@
         </div>
       </div>
     </section>
+    
+    <section class="container my-5 py-5">
+      <h2 class="section__heading">
+        Create Solutions with Formester, Not Mere Forms
+      </h2>
+      <p class="section__subtitle mb-5">
+        Remarkable experience for your users and comprehensive solution for your
+        data-collection needs, Formester enables you to go beyond building
+        forms.
+      </p>
+      <div class="row">
+        <div class="col-md-5 d-flex flex-column gap-5">
+          <div class="d-flex flex-column">
+            <h3 class="section__subheading">Spam Protection</h3>
+            <p class="section__subheading-content">
+              You don’t want spammers to spill water in your data collection
+              efforts. It just takes a click with Formester to safeguard your
+              forms from them. Enable captcha and you’re good to go!
+            </p>
+          </div>
+          <div class="d-flex flex-column">
+            <h3 class="section__subheading">Cloud Integrations</h3>
+            <p class="section__subheading-content">
+              Slack, Google Sheets, Salesforce and numerous other Zapier
+              integrations make work easier for you. Don’t just create forms,
+              but solve your problems – Formester lets you add any number of
+              integrations seamlessly.
+            </p>
+          </div>
+          <div class="d-flex flex-column">
+            <h3 class="section__subheading">Many Forms, One Builder</h3>
+            <p class="section__subheading-content">
+              Wish to choose from single-page or multi-page forms? Want to share
+              standalone forms or integrate them into your website? We have good
+              news, you don’t need multiple form builders, Formester does it
+              all.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <img
+            src="@/assets/images/create-solution-with-formester.svg"
+            alt="Create Design with Formester"
+          />
+        </div>
+      </div>
+    </section>
+
     <section class="container testimonials text-center my-5 py-5">
       <h2 class="section__heading">Testimonials</h2>
       <p class="section__subtitle mb-5">
@@ -111,71 +180,8 @@
         </div>
       </div>
     </section>
-    <section class="container my-5 py-5">
-      <h2 class="section__heading">
-        Create Solutions with Formester, Not Mere Forms
-      </h2>
-      <p class="section__subtitle mb-5">
-        Remarkable experience for your users and comprehensive solution for your
-        data-collection needs, Formester enables you to go beyond building
-        forms.
-      </p>
-      <div class="row">
-        <div class="col-md-5 d-flex flex-column gap-5">
-          <div class="d-flex flex-column">
-            <h3 class="section__subheading">Spam Protection</h3>
-            <p class="section__subheading-content">
-              You don’t want spammers to spill water in your data collection
-              efforts. It just takes a click with Formester to safeguard your
-              forms from them. Enable captcha and you’re good to go!
-            </p>
-          </div>
-          <div class="d-flex flex-column">
-            <h3 class="section__subheading">Cloud Integrations</h3>
-            <p class="section__subheading-content">
-              Slack, Google Sheets, Salesforce and numerous other Zapier
-              integrations make work easier for you. Don’t just create forms,
-              but solve your problems – Formester lets you add any number of
-              integrations seamlessly.
-            </p>
-          </div>
-          <div class="d-flex flex-column">
-            <h3 class="section__subheading">Many Forms, One Builder</h3>
-            <p class="section__subheading-content">
-              Wish to choose from single-page or multi-page forms? Want to share
-              standalone forms or integrate them into your website? We have good
-              news, you don’t need multiple form builders, Formester does it
-              all.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-7">
-          <img
-            src="@/assets/images/create-solution-with-formester.svg"
-            alt="Create Design with Formester"
-          />
-        </div>
-      </div>
-    </section>
-    <section class="container text-center">
-      <h2 class="section__heading">Formester vs. Typeform: Head To Head</h2>
-      <table class="table text-start comparision__table mx-auto">
-        <thead class="bg__light-primary">
-          <tr>
-            <th scope="col">Feature</th>
-            <th scope="col">Free</th>
-            <th scope="col">Personal</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="c of comparisions" :key="c[0]">
-            <td>{{ c[0] }}</td>
-            <td>{{ c[1] }}</td>
-            <td>{{ c[2] }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+
+    
     <CallToActionSection />
   </div>
 </template> 

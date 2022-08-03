@@ -12,9 +12,6 @@
         <NuxtLink to="/">
           <li class="mx-3 footer__link">Home</li>
         </NuxtLink>
-        <NuxtLink to="/features/html-form-backend">
-          <li class="mx-3 footer__link">Features</li>
-        </NuxtLink>
         <NuxtLink to="/pricing">
           <li class="mx-3 footer__link">Pricing</li>
         </NuxtLink>
@@ -23,6 +20,9 @@
         </NuxtLink>
         <NuxtLink to="/integrations">
           <li class="mx-3 footer__link">Integrations</li>
+        </NuxtLink>
+        <NuxtLink to="/formester-vs-typeform">
+          <li class="mx-3 footer__link">Formester vs Typeform</li>
         </NuxtLink>
         <NuxtLink to="/privacy">
           <li class="mx-3 footer__link">Privacy Policy</li>
