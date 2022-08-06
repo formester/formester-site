@@ -11,10 +11,18 @@
       <span class="pricing__timeline">/mo</span>
     </div>
     <ul class="mt-3 text-start">
-      <li v-for="(feature, index) in features.available" :key="index" class="mt-2 pricing__features">
+      <li
+        v-for="(feature, index) in features.available"
+        :key="feature + index"
+        class="mt-2 pricing__features"
+      >
         {{ feature }}
       </li>
-      <li v-for="(feature, index) in features.unavailable" :key="index" class="mt-2 pricing__unavailable__features">
+      <li
+        v-for="(feature, index) in features.unavailable"
+        :key="feature + index"
+        class="mt-2 pricing__unavailable__features"
+      >
         {{ feature }}
       </li>
     </ul>

@@ -15,9 +15,13 @@
       >
         <img src="@/assets/images/toggle.svg" alt="Nav-menu-button" />
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div
+        class="collapse navbar-collapse"
+        ref="siteNav"
+        id="navbarSupportedContent"
+      >
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item me-3">
+          <li class="nav-item me-3" @click="collapseNav">
             <NuxtLink to="/" class="nav-link">
               Home
               <HoverSvg />
@@ -35,49 +39,54 @@
               <HoverSvg />
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li>
+              <li @click="collapseNav">
                 <NuxtLink class="dropdown-item" to="/features/html-form-backend"
                   >HTML Form Backend</NuxtLink
                 >
               </li>
-              <li>
+              <li @click="collapseNav">
                 <NuxtLink class="dropdown-item" to="/features/auto-responder"
                   >Auto Responder
                 </NuxtLink>
               </li>
-              <li>
+              <li @click="collapseNav">
                 <NuxtLink class="dropdown-item" to="/features/spam-protection"
                   >Spam Protection</NuxtLink
                 >
               </li>
             </ul>
           </li>
-          <li class="nav-item me-4">
+          <li class="nav-item me-4" @click="collapseNav">
             <NuxtLink to="/pricing" class="nav-link">
               Pricing
               <HoverSvg />
             </NuxtLink>
           </li>
-          <li class="nav-item me-4">
+          <li class="nav-item me-4" @click="collapseNav">
             <NuxtLink to="/blog" class="nav-link"
               >Blog
               <HoverSvg />
             </NuxtLink>
           </li>
-          <li class="nav-item me-4">
+          <li class="nav-item me-4" @click="collapseNav">
             <NuxtLink to="/integrations" class="nav-link"
               >Integrations
               <HoverSvg />
             </NuxtLink>
           </li>
-          <!-- <li class="nav-item">Contact us</li> -->
           <li class="nav-item me-4">
-            <a href="https://app.formester.com/users/sign_in">
+            <a
+              href="https://app.formester.com/users/sign_in"
+              @click="collapseNav"
+            >
               <button class="nav__outline__button">Login</button>
             </a>
           </li>
           <li class="nav-item">
-            <a href="https://app.formester.com/users/sign_up">
+            <a
+              href="https://app.formester.com/users/sign_up"
+              @click="collapseNav"
+            >
               <button class="nav__button">Register</button>
             </a>
           </li>
@@ -94,6 +103,13 @@ export default {
   components: {
     NavItem,
     HoverSvg,
+  },
+  methods: {
+    collapseNav() {
+      if (window.screen.width >= 992) return
+      const bsCollapse = new bootstrap.Collapse(this.$refs.siteNav)
+      bsCollapse.toggle()
+    },
   },
 }
 </script>
