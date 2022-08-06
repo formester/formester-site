@@ -9,7 +9,7 @@ published: true
 createdAt: '2022-08-01'
 ---
 
-![Best online form builders 2022](/blog/best-online-form-builders/best-online-form-builders.png 'Best online form builders 2022')
+![Best online form builders 2022](/blog/cover-images/best-online-form-builders.png 'Best online form builders 2022')
 
 The core aim of online forms is to collect data and organize it efficiently, but the user experience is something you just cannot ignore in order to sustain a business. Amidst the intense competition, organizations need to be more consumer-centric than ever before.
 

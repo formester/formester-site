@@ -9,7 +9,7 @@ published: true
 createdAt: '2022-07-20'
 ---
 
-![Seven assured ways to imporve your online surveys](/blog/seven-assured-ways-to-improve-your-online-surveys/seven-assured-ways-to-improve-your-online-surveys.png 'Seven assured ways to imporve your online surveys')
+![Seven assured ways to imporve your online surveys](/blog/cover-images/seven-assured-ways-to-improve-your-online-surveys.png 'Seven assured ways to imporve your online surveys')
 
 But even after spending enough time in creating, designing and spreading your online surveys - how often does your target audience actively engage with them? What’s the average response rate? Probably not as much as you expect, right?
 
@@ -43,7 +43,7 @@ The overall average online survey response rate is 33% which is way lower than t
 
 ![Different survey techniques such as in-person, email and telephone surveys are used to calculate the average response rate](/blog/seven-assured-ways-to-improve-your-online-surveys/average-survey-response-rate.png 'Different survey techniques such as in-person, email and telephone surveys are used to calculate the average response rate')
 
-Image [Source](https://pointerpro.com/blog/average-survey-response-rate "Pointerpro blog on average survey response rate")
+Image [Source](https://pointerpro.com/blog/average-survey-response-rate 'Pointerpro blog on average survey response rate')
 
 It’s clear that a majority of the online survey forms are still unoptimized and need to be improved. With the same objective, we have shortlisted the top 7 ways you can utilize to enhance your online surveys and boost your online survey response rate by curating survey forms optimally.
 

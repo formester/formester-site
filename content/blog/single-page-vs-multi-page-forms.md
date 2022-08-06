@@ -10,7 +10,7 @@ createdAt: '2022-05-15'
 ---
 
 <br><br>
-![Illustration of Single Page vs Multi Page Forms](/blog/single-page-vs-multi-page-forms/single-page-vs-multi-page-forms.svg 'Illustration of Single Page vs Multi Page Forms')
+![Illustration of Single Page vs Multi Page Forms](/blog/cover-images/single-page-vs-multi-page-forms.png 'Illustration of Single Page vs Multi Page Forms')
 <br><br>
 
 ## Single Page Form

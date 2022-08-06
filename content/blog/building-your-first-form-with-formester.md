@@ -9,7 +9,7 @@ published: true
 createdAt: '2022-05-10'
 ---
 
-![Form builder showing drag and drop functionality](https://formester.com/formester-form-builder-background.png 'Form builder showing drag and drop functionality')
+![Form builder showing drag and drop functionality](/blog/cover-images/formester-form-builder-background.png 'Form builder showing drag and drop functionality')
 
 ## Backend as a service
 
