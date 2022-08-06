@@ -4,27 +4,23 @@
       <div class="container horizontal__padding">
         <div class="row my-5">
           <div
-            class="
-              col-lg-5
-              d-flex
-              flex-column
-              justify-content-center
-              align-items-lg-start align-items-center
-              text-center text-lg-start
-            "
+            class="col-lg-5 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start"
           >
             <h1 class="section__heading">
               Looking for a <span class="hglight">Powerful</span> Typeform
               Alternative? Look No Further
             </h1>
             <p class="section__subtitle mt-3">
-              Creating a form has never been simpler. If you are a power user
-              you get complete control over how the form looks.
+              Good-looking forms don’t solve your problem. Dynamic, customizable
+              and experience-driven ones do. With Formester, you can now make
+              your forms ‘work’ for you. Our deep form features - analytics,
+              productive integrations and HTML form backend helps you collect
+              and analyze your audience’s data like never before.
             </p>
             <a
               href="https://app.formester.com/users/sign_up"
               class="btn button hero__button mt-4"
-              >Create Your Form</a
+              >Start a Free Trial</a
             >
           </div>
           <div
@@ -45,14 +41,14 @@
       <table class="table text-start comparision__table mx-auto">
         <thead class="bg__light-primary">
           <tr>
-            <th scope="col">Feature</th>
-            <th scope="col">Free</th>
-            <th scope="col">Personal</th>
+            <th scope="col">Features</th>
+            <th scope="col">Formester</th>
+            <th scope="col">Typeform</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="c of comparisions" :key="c[0]">
-            <td style="font-weight: 600;">{{ c[0] }}</td>
+            <td style="font-weight: 600">{{ c[0] }}</td>
             <td>{{ c[1] }}</td>
             <td>{{ c[2] }}</td>
           </tr>
@@ -181,7 +177,6 @@
       </div>
     </section>
 
-
     <CallToActionSection />
   </div>
 </template>
@@ -202,8 +197,8 @@ export default {
       steps: [
         {
           step: 1,
-          heading: 'Create Multi-purpose Form',
-          description: `It takes minutes, not hours to create forms using Formester. You can customize them the way you want and use them as standalone or web-integrated forms. Just drag and drop to build a form as per your requirements or integrate an existing HTML form’s backend. `,
+          heading: 'Multi-Purpose Form Creation Made Easy',
+          description: `It takes minutes, not hours to create forms using Formester. You can customize them the way you want and use them as standalone or web-integrated forms. Just drag and drop to build a form as per your requirements or integrate an existing HTML form’s backend.`,
         },
         {
           step: 2,
@@ -220,6 +215,16 @@ export default {
       ],
       comparisions: [
         [
+          'Pricing',
+          'Starts for free, $13/month for a Personal User with 1000 submissions',
+          'Starts at $29/month for 100 submissions',
+        ],
+        [
+          'Redirection on Submission',
+          'Customization available even with the basic plan',
+          '-',
+        ],
+        [
           'Website Embedment',
           'Web forms can be easily and quickly created',
           'Typeform forms can also be embedded into website',
@@ -234,12 +239,12 @@ export default {
           'Perfectly mobile-first',
           'Design-heavy forms are problematic while using on mobile',
         ],
-        ['Add Media to Forms', 'Present', 'Present'],
         [
-          'Redirection on Submission',
-          'Customization available even with the basic plan',
-          '-',
+          'Storage',
+          'Minimum Storage - 1GB: comes with Basic Plan - $13/month. Business plan - 5GB: $49/month',
+          'Minimum Storage - 1GB: comes with Basic Plan - $25/month. Business Plan - 5GB: $83/month',
         ],
+        ['Add Media to Forms', 'Present', 'Present'],
         ['Conditional Logic', 'Present', 'Present'],
         ['Spam Protection', 'Present', 'Present but difficult to execute'],
         [
@@ -249,13 +254,21 @@ export default {
         ],
         ['HTML Form Backend Service', 'Present', '-'],
         ['Cloud Integrations with Zapier', 'Present', 'Present'],
+        ['Deep Performance Analytics', 'Present', 'Basic'],
+        ['White Labelled Surveys Creation', 'Present', '-'],
+        [
+          'Logo addition to form',
+          'Available and can be used by free users too',
+          'A $99 feature',
+        ],
+        ['End-to-End Design Customization', 'Present', 'Minimal customization'],
       ],
     }
   },
 }
 </script>
 
- <style scoped>
+<style scoped>
 /* HERO */
 .hero {
   margin-bottom: 74px;

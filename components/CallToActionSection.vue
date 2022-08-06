@@ -17,7 +17,10 @@
             <div class="mt-5">
               <div class="d-inline p-2 mx-2 mt-5">
                 <a
-                  :href="content.btnPrimaryLink ||'https://app.formester.com/users/sign_up'"
+                  :href="
+                    content.btnPrimaryLink ||
+                    'https://app.formester.com/users/sign_up'
+                  "
                   class="btn button cta-button"
                   target="_blank"
                 >
