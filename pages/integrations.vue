@@ -87,12 +87,12 @@ export default {
           img: 'google-sheets.png',
         },
         {
-          name: 'Hotspot',
+          name: 'HubSpot',
           desc: 'Create new deals with new contacts in your CRM.',
           img: 'hubspot.png',
         },
         {
-          name: 'Gdrive',
+          name: 'Google Drive',
           desc: 'Google Drive integration for file uploads and form submissions.',
           img: 'gdrive.png',
         },
