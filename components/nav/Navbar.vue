@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-md">
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
       <NuxtLink class="navbar-brand" to="/">
         <img src="@/assets/images/logo.svg" alt="Formester" />
@@ -177,7 +177,7 @@ a.nuxt-link-exact-active {
     stroke-dashoffset 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .nav-item:hover svg {
     opacity: 0;
   }

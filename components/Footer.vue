@@ -7,7 +7,7 @@
         </div>
       </NuxtLink>
       <ul
-        class="footer__items d-flex flex-column flex-md-row align-items-center justify-content-center mt-4"
+        class="footer__items d-flex flex-column flex-lg-row align-items-center justify-content-center mt-4"
       >
         <NuxtLink to="/">
           <li class="mx-3 footer__link">Home</li>
@@ -120,5 +120,11 @@ ul {
 
 .copyright {
   font-size: 14px;
+}
+
+@media only screen and (max-width: 992px) {
+  .footer__link {
+    margin: 0.25rem 0px;
+  }
 }
 </style>

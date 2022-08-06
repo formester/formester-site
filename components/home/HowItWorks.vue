@@ -1,6 +1,6 @@
 <template>
   <section class="how-it-works container">
-    <h2 class="section__heading text-center">How it <span>works</span></h2>
+    <h2 class="section__heading text-center">How it works</h2>
     <div class="row text-start mt-5">
       <div
         v-for="step in steps"
@@ -65,7 +65,14 @@ export default {
   font-weight: 600;
   color: var(--clr-primary);
 }
+
 .howitworks__card p {
   font-size: var(--ft-small-body);
+}
+
+@media only screen and (max-width: 992px) {
+  .howitworks__card::before {
+    display: none;
+  }
 }
 </style>

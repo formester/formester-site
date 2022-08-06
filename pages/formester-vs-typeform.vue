@@ -113,6 +113,7 @@
         </div>
         <div class="col-md-7">
           <img
+            class="img-fluid"
             src="@/assets/images/create-solution-with-formester.svg"
             alt="Create Design with Formester"
           />
@@ -125,7 +126,9 @@
       <p class="section__subtitle mb-5">
         Here’s what some of our happy customer have to say about us!
       </p>
-      <div class="d-flex gap-5 justify-content-center mt-5">
+      <div
+        class="d-flex flex-column flex-lg-row gap-5 justify-content-center align-items-center mt-5"
+      >
         <div
           class="gradient-testimonial__container text-start position-relative"
         >
@@ -358,5 +361,21 @@ export default {
 
 thead th {
   border: none;
+}
+
+@media only screen and (max-width: 992px) {
+  .comparision__table {
+    max-width: 45rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .comparision__table {
+    max-width: 32rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .comparision__table {
+    max-width: 20rem;
+  }
 }
 </style>
