@@ -91,19 +91,19 @@ export default {
         {
           title: 'Skip to other pages',
           description:
-            'The data can be filtered by traffic source, device, location, browser, operating system, and other crucial factors. Using your analytics account, you can analyze user behavior and statistics over time.',
+            "In order to collect the most accurate data for your research, you can ask questions that don't apply to each user, allowing them to skip irrelevant pages in your survey.",
           src: 'conditional-logic/skip-to-other-pages.svg',
         },
         {
           title: 'Skip to follow up questions',
           description:
-            'You can see in detail where your visitors are coming from, what technology platforms they use, and which devices they are using to interact with your form in the traffic panel.',
+            'For best results, allow your respondents to skip irrelevant questions in your survey.',
           src: 'conditional-logic/skip-to-follow-up-questions.svg',
         },
         {
           title: 'Skip Logic',
           description:
-            'Conversion rate is crucial. When your conversion rate is low, you have a high view rate but little interaction. This indicates that your questions are too long or that there is room for improvement.',
+            'Display only the questions your respondents must answer. You simply need to specify the conditions and choose the fields to hide from the drop-down list.',
           src: 'conditional-logic/skip-logic.svg',
         },
       ],
