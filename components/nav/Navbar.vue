@@ -54,6 +54,18 @@
                   >Spam Protection</NuxtLink
                 >
               </li>
+              <li @click="collapseNav">
+                <NuxtLink
+                  class="dropdown-item"
+                  to="/features/powerful-analytics"
+                  >Powerful Analytics</NuxtLink
+                >
+              </li>
+              <li @click="collapseNav">
+                <NuxtLink class="dropdown-item" to="/features/conditional-logic"
+                  >Conditional Logic</NuxtLink
+                >
+              </li>
             </ul>
           </li>
           <li class="nav-item me-4" @click="collapseNav">
