@@ -221,7 +221,7 @@ export default {
         [
           'Redirection on Submission',
           'Customization available even with the basic plan',
-          '-',
+          'Not available',
         ],
         [
           'Website Embedment',
@@ -251,10 +251,10 @@ export default {
           'Present with custom integration',
           'Only in paid plans',
         ],
-        ['HTML Form Backend Service', 'Present', '-'],
+        ['HTML Form Backend Service', 'Present', 'Not available'],
         ['Cloud Integrations with Zapier', 'Present', 'Present'],
         ['Deep Performance Analytics', 'Present', 'Basic'],
-        ['White Labelled Surveys Creation', 'Present', '-'],
+        ['White Labeled Surveys Creation', 'Present', 'Missing'],
         [
           'Logo addition to form',
           'Available and can be used by free users too',
@@ -270,7 +270,8 @@ export default {
         type: 'website',
         url: 'https://formester.com/formester-vs-typeform',
         title: 'Looking for a Powerful Typeform Alternative? Look No Further',
-        description: "Good-looking forms don't solve your problem. Dynamic, customizable and experience-driven ones do.",
+        description:
+          "Good-looking forms don't solve your problem. Dynamic, customizable and experience-driven ones do.",
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with formester vs typeform page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs typeform page image alt
