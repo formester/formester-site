@@ -187,6 +187,9 @@
 </template>
 
 <script>
+// MetaTags
+import getSiteMeta from '../utils/getSiteMeta'
+
 export default {
   data() {
     return {
@@ -258,6 +261,33 @@ export default {
           'A $99 feature',
         ],
         ['End-to-End Design Customization', 'Present', 'Minimal customization'],
+      ],
+    }
+  },
+  computed: {
+    meta() {
+      const metaData = {
+        type: 'website',
+        url: 'https://formester.com/formester-vs-typeform',
+        title: 'Looking for a Powerful Typeform Alternative? Look No Further',
+        description: "Good-looking forms don't solve your problem. Dynamic, customizable and experience-driven ones do.",
+        mainImage:
+          'https://formester.com/formester-form-builder-background.png', // need to update with formester vs typeform page image
+        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs typeform page image alt
+      }
+      return getSiteMeta(metaData)
+    },
+  },
+  head() {
+    return {
+      title: 'Formester vs Typeform | Formester',
+      meta: [...this.meta],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://formester.com/formester-vs-typeform',
+        },
       ],
     }
   },
