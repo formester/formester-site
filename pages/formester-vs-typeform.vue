@@ -187,16 +187,7 @@
 </template>
 
 <script>
-import Hero from '../components/home/Hero.vue'
-import FeatureList from '../components/home/FeatureList.vue'
-import HowItWorks from '../components/home/HowItWorks.vue'
-
 export default {
-  components: {
-    Hero,
-    FeatureList,
-    HowItWorks,
-  },
   data() {
     return {
       steps: [
