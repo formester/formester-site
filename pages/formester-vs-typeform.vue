@@ -298,10 +298,10 @@ export default {
   line-height: 30px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .section__heading {
-    line-height: 62px;
-    font-size: 2.5rem;
+    line-height: 52px;
+    font-size: 2rem;
   }
 }
 
