@@ -62,8 +62,8 @@ export default {
         description:
           'Understand how users interact with your form. Get insights on ways to improve engagement and increase conversion. Identify trends to see where users are dropping off and what works for you.',
         mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with Html Form Backend page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with Html Form Bakend page image alt
+          'https://formester.com/formester-form-builder-background.png', // need to update with powerful analytics page image
+        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with powerful analytics page image alt
       }
       return getSiteMeta(metaData)
     },

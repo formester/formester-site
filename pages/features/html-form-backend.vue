@@ -64,7 +64,7 @@ export default {
           'Making your HTML forms work has never been more straightforward. Just point your form to our endpoint and start getting submissions in a matter of minutes. As a power user, you get complete control over the look and feel of your web form.',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with Html Form Backend page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with Html Form Bakend page image alt
+        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with Html Form Backend page image alt
       }
       return getSiteMeta(metaData)
     },
