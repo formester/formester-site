@@ -38,22 +38,24 @@
 
     <section class="container text-center">
       <h2 class="section__heading">Formester vs. Typeform: Head To Head</h2>
-      <table class="table text-start comparision__table mx-auto">
-        <thead class="bg__light-primary">
-          <tr>
-            <th scope="col">Features</th>
-            <th scope="col">Formester</th>
-            <th scope="col">Typeform</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="c of comparisions" :key="c[0]">
-            <td style="font-weight: 600">{{ c[0] }}</td>
-            <td>{{ c[1] }}</td>
-            <td>{{ c[2] }}</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="table text-start comparision__table mx-auto">
+          <thead class="bg__light-primary">
+            <tr>
+              <th scope="col">Features</th>
+              <th scope="col">Formester</th>
+              <th scope="col">Typeform</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="c of comparisions" :key="c[0]">
+              <td style="font-weight: 600">{{ c[0] }}</td>
+              <td>{{ c[1] }}</td>
+              <td>{{ c[2] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <section class="how-it-works container">
@@ -138,8 +140,8 @@
             class="quotes__watermark position-absolute"
           />
           <p class="testimonial__content">
-            At Rumie we use Formester to get feedback from our educators and
-            volunteers. It's intuitive, fast and easy to share.
+            I really enjoy Formester. It’s clean and straightforward and it does
+            well it is supposed to do.
           </p>
           <div class="d-flex flex-column mt-4">
             <span class="testimonial__person--name">Thibaud Martinez</span>
@@ -161,8 +163,8 @@
             class="quotes__watermark position-absolute"
           />
           <p class="testimonial__content">
-            I really enjoy Formester. It’s clean and straightforward and it does
-            well it is supposed to do.
+            At Rumie we use Formester to get feedback from our educators and
+            volunteers. It's intuitive, fast and easy to share.
           </p>
           <div class="d-flex flex-column mt-4">
             <span class="testimonial__person--name">Bogdan Arsenie</span>
@@ -185,16 +187,7 @@
 </template>
 
 <script>
-import Hero from '../components/home/Hero.vue'
-import FeatureList from '../components/home/FeatureList.vue'
-import HowItWorks from '../components/home/HowItWorks.vue'
-
 export default {
-  components: {
-    Hero,
-    FeatureList,
-    HowItWorks,
-  },
   data() {
     return {
       steps: [
