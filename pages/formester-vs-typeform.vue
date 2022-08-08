@@ -38,22 +38,24 @@
 
     <section class="container text-center">
       <h2 class="section__heading">Formester vs. Typeform: Head To Head</h2>
-      <table class="table text-start comparision__table mx-auto">
-        <thead class="bg__light-primary">
-          <tr>
-            <th scope="col">Features</th>
-            <th scope="col">Formester</th>
-            <th scope="col">Typeform</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="c of comparisions" :key="c[0]">
-            <td style="font-weight: 600">{{ c[0] }}</td>
-            <td>{{ c[1] }}</td>
-            <td>{{ c[2] }}</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="table text-start comparision__table mx-auto">
+          <thead class="bg__light-primary">
+            <tr>
+              <th scope="col">Features</th>
+              <th scope="col">Formester</th>
+              <th scope="col">Typeform</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="c of comparisions" :key="c[0]">
+              <td style="font-weight: 600">{{ c[0] }}</td>
+              <td>{{ c[1] }}</td>
+              <td>{{ c[2] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <section class="how-it-works container">
