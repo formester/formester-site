@@ -140,8 +140,8 @@
             class="quotes__watermark position-absolute"
           />
           <p class="testimonial__content">
-            At Rumie we use Formester to get feedback from our educators and
-            volunteers. It's intuitive, fast and easy to share.
+            I really enjoy Formester. It’s clean and straightforward and it does
+            well it is supposed to do.
           </p>
           <div class="d-flex flex-column mt-4">
             <span class="testimonial__person--name">Thibaud Martinez</span>
@@ -163,8 +163,8 @@
             class="quotes__watermark position-absolute"
           />
           <p class="testimonial__content">
-            I really enjoy Formester. It’s clean and straightforward and it does
-            well it is supposed to do.
+            At Rumie we use Formester to get feedback from our educators and
+            volunteers. It's intuitive, fast and easy to share.
           </p>
           <div class="d-flex flex-column mt-4">
             <span class="testimonial__person--name">Bogdan Arsenie</span>
