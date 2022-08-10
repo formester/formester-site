@@ -402,4 +402,15 @@ thead th {
     max-width: 20rem;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .comparision__table {
+    font-size: 12px;
+    line-height: 20px;
+    max-width: 20rem;
+  }
+  .comparision__table td {
+    padding: 0.5em;
+  }
+}
 </style>
