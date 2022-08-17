@@ -26,10 +26,15 @@ Some of the most effective fundamental survey questions to ask individuals are d
 Because [online surveys](https://formester.com/blog/seven-assured-ways-to-improve-your-online-surveys 'Severn assured ways to improve your online surveys') are not conducted in person, it is sometimes necessary to ask the user obvious questions about themselves for data collection. You can add
 
 - What is your age/date of birth?
+
 - What is your gender, ethnicity, or religion?
+
 - What is your educational qualification?
+
 - Tell us your current employment status and monthly income.
+
 - Where is your residence? (Street no., city, state, country)
+
 - Tell us your marital status.
 
 But some of these questions can be hard to answer. Therefore, you should request to reply to these questions. Only ask for what you really need.
@@ -109,8 +114,11 @@ Offer an incentive to get more users to take your survey. It can be a gift vouch
 Use a password to protect your form and make it available only to those who really want to take it. These forms are made to gather data from a small group, like employees or students, etc.
 
 - Be clear about the length and duration of your survey.
+
 - Keep matrix questions short so users don't repeat answers.
+
 - Conditional logic shows or hides questions based on user answers.
+
 - Properly outline your survey form
 
 First, outline your survey. Survey Design Methodology advises creating a logical survey. Consider the overall structure, number of questions, order, and flow of topics. Stick with a survey design that flows well to avoid choppy questions.

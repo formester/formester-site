@@ -242,6 +242,9 @@ export default {
   border: 0 solid #e4e4e7;
   backdrop-filter: blur(12px);
   background-color: rgba(255, 255, 255, 0.8);
+  max-height: 450px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .dropdown-link {
