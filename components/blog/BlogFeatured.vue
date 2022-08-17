@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     :to="{ name: 'blog-slug', params: { slug: article.slug } }"
-    class="row"
+    class="row px-3 px-lg-0"
   >
     <img
       :src="require(`@/assets/images/blog/${article.coverImg}`)"
@@ -32,7 +32,7 @@ export default {
   name: 'BlogFeatured',
   props: ['article'],
   components: {
-    ClockIcon
+    ClockIcon,
   },
   methods: {
     formatDate(date) {
