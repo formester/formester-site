@@ -238,18 +238,39 @@ export default {
   font-size: 16px;
 }
 
+.dropdown-menu {
+  border: 0 solid #e4e4e7;
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 .dropdown-link {
   padding: 0.5em;
-  min-width: 400px;
+  min-width: 750px;
   width: 100%;
   display: block;
 }
+@media only screen and (max-width: 992px) {
+  .dropdown-link {
+    min-width: 680px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .dropdown-link {
+    min-width: 480px;
+  }
+}
 @media only screen and (max-width: 576px) {
   .dropdown-link {
-    min-width: 300px;
+    min-width: 370px;
   }
 }
 @media only screen and (max-width: 432px) {
+  .dropdown-link {
+    min-width: 320px;
+  }
+}
+@media only screen and (max-width: 360px) {
   .dropdown-link {
     min-width: 250px;
   }
