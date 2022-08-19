@@ -160,7 +160,15 @@
                     target="_blank"
                     ><img
                       src="@/assets/images/social/facebook.svg"
-                      alt="Fomester facebook page"
+                      alt="Formester facebook page"
+                  /></a>
+                  <a
+                    href="https://www.linkedin.com/company/formester-inc/"
+                    class="mx-1"
+                    target="_blank"
+                    ><img
+                      src="@/assets/images/social/linkedin.svg"
+                      alt="Formester linkedin page"
                   /></a>
                 </div>
               </li>
