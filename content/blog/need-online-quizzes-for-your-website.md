@@ -1,6 +1,6 @@
 ---
 title: Why Do You Need Online Quizzes for Your Website? 
-description: Grabbing your customer's attention and holding on to their interest can be a bit hard today. Everyone is somehow a part of marketing 24*7, but the average attention span of customers has dropped to only eight secondonds. 
+description: Grabbing your customer's attention and holding on to their interest can be a bit hard today. Everyone is somehow a part of marketing 24*7, but the average attention span of customers has dropped to only eight seconds. 
 author: Vivek Badani
 coverImg: why-do-you-need-online-quizzes-for-your-website.png
 coverImgAlt: Cover image for the blog, "Why Do You Need Online Quizzes for Your Website?"
