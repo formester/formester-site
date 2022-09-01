@@ -85,7 +85,7 @@ export default {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/privacy',
+        url: 'https://formester.com/privacy/',
         title: 'Privacy Policy | Formester',
         description:
           'Formester uses collected information for the following general purposes: products and services provision, billing, identification and authentication, services improvement, contact, and research.',
@@ -104,7 +104,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/privacy',
+          href: 'https://formester.com/privacy/',
         },
       ],
     }

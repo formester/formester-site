@@ -58,7 +58,7 @@ export default {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/features/html-form-backend',
+        url: 'https://formester.com/features/html-form-backend/',
         title: 'HTML Form Backend | Formester',
         description:
           'Making your HTML forms work has never been more straightforward. Just point your form to our endpoint and start getting submissions in a matter of minutes. As a power user, you get complete control over the look and feel of your web form.',
@@ -77,7 +77,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/features/html-form-backend',
+          href: 'https://formester.com/features/html-form-backend/',
         },
       ],
     }

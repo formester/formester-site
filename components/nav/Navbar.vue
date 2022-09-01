@@ -40,48 +40,48 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li @click="collapseNav">
-                <NuxtLink class="dropdown-item" to="/features/html-form-backend"
+                <NuxtLink class="dropdown-item" to="/features/html-form-backend/"
                   >HTML Form Backend</NuxtLink
                 >
               </li>
               <li @click="collapseNav">
-                <NuxtLink class="dropdown-item" to="/features/auto-responder"
+                <NuxtLink class="dropdown-item" to="/features/auto-responder/"
                   >Auto Responder
                 </NuxtLink>
               </li>
               <li @click="collapseNav">
-                <NuxtLink class="dropdown-item" to="/features/spam-protection"
+                <NuxtLink class="dropdown-item" to="/features/spam-protection/"
                   >Spam Protection</NuxtLink
                 >
               </li>
               <li @click="collapseNav">
                 <NuxtLink
                   class="dropdown-item"
-                  to="/features/powerful-analytics"
+                  to="/features/powerful-analytics/"
                   >Powerful Analytics</NuxtLink
                 >
               </li>
               <li @click="collapseNav">
-                <NuxtLink class="dropdown-item" to="/features/conditional-logic"
+                <NuxtLink class="dropdown-item" to="/features/conditional-logic/"
                   >Conditional Logic</NuxtLink
                 >
               </li>
             </ul>
           </li>
           <li class="nav-item me-4" @click="collapseNav">
-            <NuxtLink to="/pricing" class="nav-link">
+            <NuxtLink to="/pricing/" class="nav-link">
               Pricing
               <HoverSvg />
             </NuxtLink>
           </li>
           <li class="nav-item me-4" @click="collapseNav">
-            <NuxtLink to="/blog" class="nav-link"
+            <NuxtLink to="/blog/" class="nav-link"
               >Blog
               <HoverSvg />
             </NuxtLink>
           </li>
           <li class="nav-item me-4" @click="collapseNav">
-            <NuxtLink to="/integrations" class="nav-link"
+            <NuxtLink to="/integrations/" class="nav-link"
               >Integrations
               <HoverSvg />
             </NuxtLink>

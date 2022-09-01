@@ -57,7 +57,7 @@ export default {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/features/powerful-analytics',
+        url: 'https://formester.com/features/powerful-analytics/',
         title: 'Powerful Analytics | Formester',
         description:
           'Understand how users interact with your form. Get insights on ways to improve engagement and increase conversion. Identify trends to see where users are dropping off and what works for you.',
@@ -76,7 +76,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/features/powerful-analytics',
+          href: 'https://formester.com/features/powerful-analytics/',
         },
       ],
     }

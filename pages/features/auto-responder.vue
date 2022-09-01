@@ -58,7 +58,7 @@ export default {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/features/auto-responder',
+        url: 'https://formester.com/features/auto-responder/',
         title: 'Personalised Email Responder | Formester',
         description:
           'Respond to the customer as soon as you get a form submission. Personalised emails are easy to create with our intuitive email builder with an option to use your official email to improve delivery and conversion.',
@@ -77,7 +77,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/features/auto-responder',
+          href: 'https://formester.com/features/auto-responder/',
         },
       ],
     }

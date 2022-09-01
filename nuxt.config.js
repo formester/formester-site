@@ -25,7 +25,7 @@ export default {
       {
         hid: "canonical",
         rel: "canonical",
-        href: "https://formester.com",
+        href: "https://formester.com/",
       },
     ],
     // Custom Javascript
@@ -38,6 +38,10 @@ export default {
     ],
   },
 
+  router: {
+    trailingSlash: true
+  },
+
   robots: {
     UserAgent: '*',
     Disallow: ''
@@ -45,6 +49,7 @@ export default {
 
   sitemap: {
     hostname: 'https://formester.com',
+    trailingSlash: true,
     routes() {
       return getRoutes();
     },

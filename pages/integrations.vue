@@ -108,7 +108,7 @@ export default {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/integrations',
+        url: 'https://formester.com/integrations/',
         title: 'Connect beautiful, interactive forms to your favorite apps',
         description:
           'Formester integrates with tools like Slack, Google Sheets and Salesforce. Send data anywhere you like. Getting started just takes few minutes with our pre-build templates.',
@@ -127,7 +127,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/integrations',
+          href: 'https://formester.com/integrations/',
         },
       ],
     }

@@ -35,7 +35,7 @@ export default {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/thank-you',
+        url: 'https://formester.com/thank-you/',
         title: 'Thank You for choosing Formester',
         description: 'Thank you for choosing us! We appreciate it.',
         mainImage:
@@ -53,7 +53,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/thank-you',
+          href: 'https://formester.com/thank-you/',
         },
       ],
     }
