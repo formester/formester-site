@@ -268,7 +268,7 @@ export default {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/formester-vs-typeform',
+        url: 'https://formester.com/formester-vs-typeform/',
         title: 'Looking for a Powerful Typeform Alternative? Look No Further',
         description:
           "Good-looking forms don't solve your problem. Dynamic, customizable and experience-driven ones do.",
@@ -287,7 +287,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/formester-vs-typeform',
+          href: 'https://formester.com/formester-vs-typeform/',
         },
       ],
     }

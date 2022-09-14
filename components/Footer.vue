@@ -18,13 +18,13 @@
                 <NuxtLink to="/" class="footer__link">Home</NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/pricing" class="footer__link">Pricing</NuxtLink>
+                <NuxtLink to="/pricing/" class="footer__link">Pricing</NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/blog" class="footer__link">Blog</NuxtLink>
+                <NuxtLink to="/blog/" class="footer__link">Blog</NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/integrations" class="footer__link"
+                <NuxtLink to="/integrations/" class="footer__link"
                   >Integrations</NuxtLink
                 >
               </li>
@@ -38,27 +38,27 @@
 
             <ul class="list-unstyled mt-2">
               <li class="mt-2">
-                <NuxtLink to="/features/html-form-backend" class="footer__link"
+                <NuxtLink to="/features/html-form-backend/" class="footer__link"
                   >HTML Form Backend</NuxtLink
                 >
               </li>
               <li class="mt-2">
-                <NuxtLink to="/features/auto-responder" class="footer__link"
+                <NuxtLink to="/features/auto-responder/" class="footer__link"
                   >Auto Responder</NuxtLink
                 >
               </li>
               <li class="mt-2">
-                <NuxtLink to="/features/spam-protection" class="footer__link"
+                <NuxtLink to="/features/spam-protection/" class="footer__link"
                   >Spam Protection</NuxtLink
                 >
               </li>
               <li class="mt-2">
-                <NuxtLink to="/features/powerful-analytics" class="footer__link"
+                <NuxtLink to="/features/powerful-analytics/" class="footer__link"
                   >Powerful Protection</NuxtLink
                 >
               </li>
               <li class="mt-2">
-                <NuxtLink to="/features/conditional-logic" class="footer__link"
+                <NuxtLink to="/features/conditional-logic/" class="footer__link"
                   >Conditional Logic</NuxtLink
                 >
               </li>
@@ -72,17 +72,17 @@
 
             <ul class="list-unstyled mt-2">
               <li class="mt-2">
-                <NuxtLink to="/privacy" class="footer__link"
+                <NuxtLink to="/privacy/" class="footer__link"
                   >Privacy Policy</NuxtLink
                 >
               </li>
               <li class="mt-2">
-                <NuxtLink to="/terms-of-service" class="footer__link"
+                <NuxtLink to="/terms-of-service/" class="footer__link"
                   >Terms of Service</NuxtLink
                 >
               </li>
               <li class="mt-2">
-                <NuxtLink to="/contact" class="footer__link"
+                <NuxtLink to="/contact/" class="footer__link"
                   >Contact Us</NuxtLink
                 >
               </li>
@@ -101,7 +101,7 @@
 
             <ul class="list-unstyled mt-2">
               <li class="mt-2">
-                <NuxtLink to="/formester-vs-typeform" class="footer__link"
+                <NuxtLink to="/formester-vs-typeform/" class="footer__link"
                   >Formester vs Typeform</NuxtLink
                 >
               </li>

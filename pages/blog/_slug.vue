@@ -6,7 +6,7 @@
         :class="{ 'mb-3rem': !(article.cta && article.cta.hidden) }"
       >
         <NuxtLink
-          :to="`/blog`"
+          :to="`/blog/`"
           class="blog__back"
           :class="article.toc.length ? 'blog__back__margin' : ''"
         >
@@ -94,7 +94,7 @@ export default {
     meta() {
       const metaData = {
         type: 'article',
-        url: `https://formester.com/blog/${this.$route.params.slug}`,
+        url: `https://formester.com/blog/${this.$route.params.slug}/`,
         title: this.article.title,
         description: this.article.description,
         mainImage: this.article.coverImg
@@ -139,7 +139,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: `https://formester.com/blog/${this.$route.params.slug}`,
+          href: `https://formester.com/blog/${this.$route.params.slug}/`,
         },
       ],
     }

@@ -55,7 +55,7 @@ export default {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/blog',
+        url: 'https://formester.com/blog/',
         title: 'The Formester Blog',
         description:
           'Find helpful online form tips for creating top-notch forms. Thought-provoking. Quick and Easy. A little SaaSy. Sometimes inspirational. This is the Formester blog.',
@@ -74,7 +74,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/blog',
+          href: 'https://formester.com/blog/',
         },
       ],
     }

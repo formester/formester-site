@@ -29,7 +29,7 @@
               </div>
               <div class="d-inline p-2 mx-2 mt-5">
                 <NuxtLink
-                  :to="content.btnSecondaryLink || '/contact'"
+                  :to="content.btnSecondaryLink || '/contact/'"
                   class="btn button cta-button__invert"
                 >
                   {{ content.btnSecondary || 'Contact Us' }}

@@ -90,7 +90,7 @@ export default {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/pricing',
+        url: 'https://formester.com/pricing/',
         title: 'Pricing that feels just right',
         description: 'Start with our free plan',
         mainImage:
@@ -108,7 +108,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/pricing',
+          href: 'https://formester.com/pricing/',
         },
       ],
     }

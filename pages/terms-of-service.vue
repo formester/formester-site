@@ -124,7 +124,7 @@
     <p>
       Prices of all Service, including but not limited to monthly subscription plan fees to the Service, are subject to
       change upon 30-day's notice from us. Such notice may be provided at any time by posting the changes to the
-      Formester Site (https://formester.com/terms-of-service) or the Service itself.
+      Formester Site (https://formester.com/terms-of-service/) or the Service itself.
     </p>
     <p>
       Formester shall not be liable to you or to any third party for any modification, price change, suspension or
@@ -206,7 +206,7 @@ export default {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/terms-of-service',
+        url: 'https://formester.com/terms-of-service/',
         title: 'Terms of Service | Formester',
         description:
           'Formester terms of service. Read our terms of service and privacy policy.',
@@ -225,7 +225,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/terms-of-service',
+          href: 'https://formester.com/terms-of-service/',
         },
       ],
     }

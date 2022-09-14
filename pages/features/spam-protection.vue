@@ -57,7 +57,7 @@ export default {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/features/spam-protection',
+        url: 'https://formester.com/features/spam-protection/',
         title: 'Spam Protection | Formester',
         description:
           'Web forms are an easy target for spam. Use our one-click Recaptcha to curb spam and keep your list clean, along with an option to configure your own Google Re-Captcha for greater control.',
@@ -76,7 +76,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/features/spam-protection',
+          href: 'https://formester.com/features/spam-protection/',
         },
       ],
     }

@@ -137,14 +137,14 @@ export default {
       name: 'Formester contact page',
       description:
         'Formester support to help you with any questions that you may have',
-      url: 'https://formester.com/contact',
+      url: 'https://formester.com/contact/',
     }
   },
   computed: {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/contact',
+        url: 'https://formester.com/contact/',
         title: 'We are happy to help',
         description:
           'Formester support to help you with any questions that you may have',
@@ -163,7 +163,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/contact',
+          href: 'https://formester.com/contact/',
         },
       ],
     }
