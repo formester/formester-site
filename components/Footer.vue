@@ -6,37 +6,6 @@
           <img src="../assets/images/logo-light.svg" alt="Formester" />
         </div>
       </NuxtLink>
-      <!-- <ul
-        class="footer__items d-flex flex-column flex-lg-row align-items-center justify-content-center mt-4"
-      >
-        <NuxtLink to="/">
-          <li class="mx-3 footer__link">Home</li>
-        </NuxtLink>
-        <NuxtLink to="/pricing">
-          <li class="mx-3 footer__link">Pricing</li>
-        </NuxtLink>
-        <NuxtLink to="/blog">
-          <li class="mx-3 footer__link">Blog</li>
-        </NuxtLink>
-        <NuxtLink to="/integrations">
-          <li class="mx-3 footer__link">Integrations</li>
-        </NuxtLink>
-        <NuxtLink to="/formester-vs-typeform">
-          <li class="mx-3 footer__link">Formester vs Typeform</li>
-        </NuxtLink>
-        <NuxtLink to="/privacy">
-          <li class="mx-3 footer__link">Privacy Policy</li>
-        </NuxtLink>
-        <NuxtLink to="/terms-of-service">
-          <li class="mx-3 footer__link">Terms of Service</li>
-        </NuxtLink>
-        <NuxtLink to="/contact">
-          <li class="mx-3 footer__link">Contact Us</li>
-        </NuxtLink>
-        <a href="mailto:support@formester.com">
-          <li class="mx-3 footer__link">Get Support</li>
-        </a>
-      </ul> -->
       <section class="mt-5 container">
         <div class="row">
           <div class="col-lg-3 col-sm-6 mb-4 mb-md-0 text-lg-start">
@@ -170,7 +139,32 @@
                       src="@/assets/images/social/linkedin.svg"
                       alt="Formester linkedin page"
                   /></a>
+                  <a
+                    href="https://www.youtube.com/channel/UCVfBesiZINubCEC9Xu5Z6gQ"
+                    class="mx-1"
+                    target="_blank"
+                    ><img
+                      src="@/assets/images/social/youtube.svg"
+                      alt="Formester youtube page"
+                  /></a>
                 </div>
+              </li>
+              <li class="mt-3">
+                <!-- Begin SF Tag -->
+                <div
+                  class="sf-root"
+                  data-id="2969654"
+                  data-badge="light-default"
+                  data-variant-id="sf"
+                  style="width: 90px"
+                >
+                  <a
+                    href="https://sourceforge.net/software/product/Formester/"
+                    target="_blank"
+                    >Formester Reviews</a
+                  >
+                </div>
+                <!-- End SF Tag -->
               </li>
             </ul>
           </div>
@@ -185,7 +179,14 @@
 </template>
 
 <script>
-export default {}
+export default {
+  mounted() {
+    let sc = document.createElement('script')
+    sc.src = 'https://b.sf-syn.com/badge_js?sf_id=2969654&variant_id=sf'
+    let p = document.getElementsByTagName('script')[0]
+    p.parentNode.insertBefore(sc, p)
+  },
+}
 </script>
 
 <style scoped>
