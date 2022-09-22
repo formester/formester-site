@@ -149,23 +149,6 @@
                   /></a>
                 </div>
               </li>
-              <li class="mt-3">
-                <!-- Begin SF Tag -->
-                <div
-                  class="sf-root"
-                  data-id="2969654"
-                  data-badge="light-default"
-                  data-variant-id="sf"
-                  style="width: 90px"
-                >
-                  <a
-                    href="https://sourceforge.net/software/product/Formester/"
-                    target="_blank"
-                    >Formester Reviews</a
-                  >
-                </div>
-                <!-- End SF Tag -->
-              </li>
             </ul>
           </div>
         </div>
@@ -180,12 +163,6 @@
 
 <script>
 export default {
-  mounted() {
-    let sc = document.createElement('script')
-    sc.src = 'https://b.sf-syn.com/badge_js?sf_id=2969654&variant_id=sf'
-    let p = document.getElementsByTagName('script')[0]
-    p.parentNode.insertBefore(sc, p)
-  },
 }
 </script>
 
