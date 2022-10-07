@@ -39,7 +39,7 @@
                   </p>
                   <div class="d-flex testimonial__person">
                     <div class="d-flex align-items-center">
-                      <img src="~/assets/images/testimonials/Jilson.png" alt="Jilson">
+                      <img src="~/assets/images/testimonials/jilson.png" alt="Jilson">
                       <div class="d-flex flex-column align-items-start ms-3">
                         <span class="testimonial__person--name">Jilson</span>
                         <span class="testimonial__person--post">Vue Toronto</span>
