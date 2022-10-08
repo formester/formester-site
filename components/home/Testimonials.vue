@@ -42,7 +42,7 @@
                       <img src="~/assets/images/testimonials/jilson.png" alt="Jilson">
                       <div class="d-flex flex-column align-items-start ms-3">
                         <span class="testimonial__person--name">Jilson</span>
-                        <span class="testimonial__person--post">Vue Toronto</span>
+                        <span class="testimonial__person--post">Organiser</span>
                       </div>
                     </div>
                     <img
@@ -221,6 +221,15 @@ export default {}
 }
 
 @media (max-width: 580px) {
+  .testimonials {
+    padding: 5em 0.75em;
+  }
+  .product-testimonials {
+    padding-top: 1em;
+  }
+  .mt-4r {
+    margin-top: 1rem !important;
+  }
   .testimonial__person {
     flex-direction: column;
     align-items: flex-start;
