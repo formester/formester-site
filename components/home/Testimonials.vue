@@ -14,7 +14,7 @@
           "
         >
           <h2 class="section__heading">Testimonials</h2>
-          <p class="mt-lg-3">
+          <p class="mt-lg-3 section__subtitle">
             Here’s what some of our happy customer have to say about us!
           </p>
           <img
@@ -48,7 +48,6 @@
                     <img
                       src="~/assets/images/vueconf.svg"
                       alt="Rumie Logo"
-                      width="150"
                       class="company__logo"
                     />
                   </div>
@@ -222,7 +221,7 @@ export default {}
 
 @media (max-width: 580px) {
   .testimonials {
-    padding: 5em 0.75em;
+    padding: 5em 0.75em 3.5em 0.75em;
   }
   .product-testimonials {
     padding-top: 1em;
@@ -240,17 +239,24 @@ export default {}
     display: none;
   }
 
+  .section__subtitle {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
   .quotes {
     right: -15%;
     top: 30%;
   }
 
   .testimonial__content {
-    line-height: 36px;
+    font-size: 20px;
+    line-height: 32px;
   }
 
   .company__logo {
     margin-top: 1rem;
+    height: 48px;
   }
 
   .product-testimonials {
