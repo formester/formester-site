@@ -1,5 +1,5 @@
 <template>
-  <div class="px-5">
+  <div class="px-sm-5 px-3">
     <img
       :src="require(`@/assets/images/home/${feature.imgName}`)"
       class="img-fluid"
