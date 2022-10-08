@@ -221,7 +221,7 @@ export default {}
 
 @media (max-width: 580px) {
   .testimonials {
-    padding: 5em 0.75em 3.5em 0.75em;
+    padding: 5em 0.75em 0em 0.75em;
   }
   .product-testimonials {
     padding-top: 1em;
@@ -264,7 +264,7 @@ export default {}
   }
 
   .carousel-indicators {
-    top: 480px;
+    top: 420px;
   }
 }
 </style>
