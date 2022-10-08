@@ -14,7 +14,7 @@
           "
         >
           <h2 class="section__heading">Testimonials</h2>
-          <p class="mt-lg-3">
+          <p class="mt-lg-3 section__subtitle">
             Here’s what some of our happy customer have to say about us!
           </p>
           <img
@@ -42,13 +42,12 @@
                       <img src="~/assets/images/testimonials/jilson.png" alt="Jilson">
                       <div class="d-flex flex-column align-items-start ms-3">
                         <span class="testimonial__person--name">Jilson</span>
-                        <span class="testimonial__person--post">Vue Toronto</span>
+                        <span class="testimonial__person--post">Organiser</span>
                       </div>
                     </div>
                     <img
                       src="~/assets/images/vueconf.svg"
                       alt="Rumie Logo"
-                      width="150"
                       class="company__logo"
                     />
                   </div>
@@ -221,6 +220,15 @@ export default {}
 }
 
 @media (max-width: 580px) {
+  .testimonials {
+    padding: 5em 0.75em 0em 0.75em;
+  }
+  .product-testimonials {
+    padding-top: 1em;
+  }
+  .mt-4r {
+    margin-top: 1rem !important;
+  }
   .testimonial__person {
     flex-direction: column;
     align-items: flex-start;
@@ -231,17 +239,24 @@ export default {}
     display: none;
   }
 
+  .section__subtitle {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
   .quotes {
     right: -15%;
     top: 30%;
   }
 
   .testimonial__content {
-    line-height: 36px;
+    font-size: 20px;
+    line-height: 32px;
   }
 
   .company__logo {
     margin-top: 1rem;
+    height: 48px;
   }
 
   .product-testimonials {
@@ -249,7 +264,7 @@ export default {}
   }
 
   .carousel-indicators {
-    top: 480px;
+    top: 420px;
   }
 }
 </style>

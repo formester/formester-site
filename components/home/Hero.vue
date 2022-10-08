@@ -21,7 +21,7 @@
           </p>
           <a
             href="https://app.formester.com/users/sign_up"
-            class="btn button hero__button mt-4"
+            class="btn button hero__button mt-4 mb-4 mb-lg-0"
             >Create Your Form</a
           >
         </div>
