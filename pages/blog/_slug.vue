@@ -185,6 +185,7 @@ export default {
 .article__desc {
   font-size: 1rem;
   line-height: 24px;
+  letter-spacing: 0.2px;
   color: hsla(0, 0%, 31%, 1);
 }
 
