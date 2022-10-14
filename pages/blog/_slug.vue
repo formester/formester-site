@@ -51,7 +51,7 @@
             <span>{{ article.readingStats.text }}</span>
           </div>
         </div>
-        <div class="sm-text mt-1">
+        <div class="sm-text mt-1 article__author-section">
           by
           <span class="article__author">{{ article.author }}</span>
         </div>
@@ -216,8 +216,13 @@ export default {
   margin-bottom: 3rem;
 }
 
+.article__author-section {
+  opacity: 0.75;
+}
+
 .datentimeToRead {
   gap: 0.75rem;
+  opacity: 0.5;
 }
 
 .timeToRead {
