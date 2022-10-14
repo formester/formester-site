@@ -43,7 +43,7 @@ export default {
   background: hsla(0, 0%, 96%, 1);
   color: hsla(0, 0%, 31%, 1);
   padding: 0.5rem;
-  font-size: 0.875rem;
+  font-size: 12px;
   line-height: 14px;
   border-radius: 0.25rem;
 }
@@ -62,7 +62,7 @@ export default {
 }
 
 .blog__timetoRead {
-  font-size: 0.875rem;
+  font-size: 12px;
   line-height: 21px;
   color: hsla(0, 0%, 51%, 1);
 }
