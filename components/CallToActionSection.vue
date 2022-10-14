@@ -7,11 +7,17 @@
             class="call-to-action-content text-center mx-2 my-5 position-relative"
           >
             <h3 class="section__heading">
-              {{ content.heading || 'Ready to dive in?' }}
+              <span v-if="content.heading">{{content.heading}}</span>
+              <span v-else>
+                Build <span class="hglt">Impactful forms</span> within minutes
+              </span>
             </h3>
-            <h2 class="section__heading">
+            <h2 class="section__subtitle mt-3">
               <span class="hglt">
-                {{ content.subHeading || 'Register with us Now.' }}
+                {{
+                  content.subHeading ||
+                  'With Formester, creating forms is easier than ever'
+                }}
               </span>
             </h2>
             <div class="mt-5">
@@ -24,7 +30,7 @@
                   class="btn button cta-button"
                   target="_blank"
                 >
-                  {{ content.btnPrimary || 'Sign Up' }}
+                  {{ content.btnPrimary || 'Create Now' }}
                 </a>
               </div>
               <div class="d-inline p-2 mx-2 mt-5">
@@ -60,6 +66,14 @@ export default {
 </script>
 
 <style scoped>
+.section__heading {
+  font-size: 40px;
+}
+
+.section__subtitle  {
+  font-size: 20px;
+}
+
 .call-to-action-section {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -124,7 +138,10 @@ export default {
 
 @media (max-width: 575px) {
   .section__heading {
-    font-size: 2rem;
+    font-size: 30px;
+  }
+  .section__subtitle {
+    font-size: 16px;
   }
 }
 </style>
