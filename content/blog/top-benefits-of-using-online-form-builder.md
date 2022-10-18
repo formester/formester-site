@@ -4,7 +4,7 @@ description: As we grow our business, so do our clients or customers. Eventually
 author: Vivek Badani
 coverImg: top-benefits-of-using-online-form-builder.png
 coverImgAlt: Cover image for the blog, "Top benefits of using online form builder"
-featured: true
+featured: false
 published: true
 createdAt: '2022-10-18'
 ---
