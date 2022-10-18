@@ -68,13 +68,14 @@ By now, we all know that online form builders are great for creating forms witho
 
 - Finally, make sure you test your form thoroughly. It may seem obvious, but testing your form is important because it helps you identify problems before they become major issues.
 
-In the Formester blog, we have already covered this topic — ["Best Online Form Builders 2022: How to Choose the Ideal One?"](https://formester.com/blog/best-online-form-builders/). We have listed out the factors to consider before you choose which tool will be the right choice for you.
+In the Formester blog, we have already covered this topic - [Best Online Form Builders 2022: How to Choose the Ideal One?](https://formester.com/blog/best-online-form-builders/ 'Best online form builders 2022'). We have listed out the factors to consider before you choose which tool will be the right choice for you.
 
 ## Why should you opt Formester
 
-![Formester website](/blog/top-benefits-of-using-online-form-builder/top-benefits-of-using-online-form-builder.png 'Formester website')
-
 While there are plenty of options available for users to select any of the top listed online form builders, here are some key reasons you should consider using Formester to build your first ever form for your business.
+<br><br>
+
+![A screenshot of the Formester landing page showing a drag-and-drop form builder](/blog/top-benefits-of-using-online-form-builder/formester-landing-page.png 'A screenshot of the Formester landing page showing a drag-and-drop form builder')
 
 ### 1. You get full control
 
@@ -82,7 +83,7 @@ Each online form builder that’s available has its own pros and cons. But one o
 
 ### 2. Easy to build
 
-The other major pluses of using Formester is its ease to build drag-and-drop features that require little to no instructions. The [text-easy HTML form builder](https://formester.com/) dashboard is designed in such a way that a user can explore the different tools that’s available without feeling overwhelmed.
+The other major pluses of using Formester is its ease to build drag-and-drop features that require little to no instructions. The [text-easy HTML form builder](https://formester.com/ 'Formester') dashboard is designed in such a way that a user can explore the different tools that’s available without feeling overwhelmed.
 
 ### 3. Easy to embed
 
