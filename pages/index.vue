@@ -1,6 +1,7 @@
 <template>
   <div>
     <Hero heading="some" subtitle="some" />
+    <TrustSeals />
     <FeatureList />
     <Testimonials />
     <HowItWorks />
@@ -10,6 +11,7 @@
 
 <script>
 import Hero from '../components/home/Hero.vue'
+import TrustSeals from '../components/home/TrustSeals.vue';
 import FeatureList from '../components/home/FeatureList.vue'
 import Testimonials from '../components/home/Testimonials.vue'
 import HowItWorks from '../components/home/HowItWorks.vue'
@@ -17,6 +19,7 @@ import HowItWorks from '../components/home/HowItWorks.vue'
 export default {
   components: {
     Hero,
+    TrustSeals,
     FeatureList,
     Testimonials,
     HowItWorks,
@@ -27,7 +30,7 @@ export default {
       '@type': 'Corporation',
       name: 'Formester',
       description:
-        'Form solution for your business that is easy to use. Formester provides an interactive drag and drop builder to create amazing survey forms.',
+        'Formester provides an interactive drag and drop builder to create amazing survey forms and quizes.',
       logo: 'https://formester.com/logo.png',
       url: 'https://formester.com',
       sameAs: [

@@ -53,10 +53,6 @@ export default {}
 </script>
 
 <style scoped>
-.hero {
-  margin-bottom: 74px;
-}
-
 .hero__image {
   padding-left: 30px;
 }
