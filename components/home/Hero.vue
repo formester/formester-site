@@ -4,7 +4,7 @@
       <div class="row my-5">
         <div
           class="
-            col-lg-5
+            col-lg-6
             d-flex
             flex-column
             justify-content-center
@@ -13,7 +13,7 @@
           "
         >
           <h1 class="hero__heading">
-            <span class="hglight">Form</span> Solution For Your Business
+            The Only No-Code <span class="hglight">Form</span> Builder You Need
           </h1>
           <p class="hero__subheading mt-3">
             Build forms in minutes using our drag and drop builder or integrate
@@ -22,12 +22,16 @@
           <a
             href="https://app.formester.com/users/sign_up"
             class="btn button hero__button mt-4 mb-4 mb-lg-0"
-            >Create Your Form</a
+            >Create Form for Free</a
           >
+          <div class="hint">
+            <div>✓ &nbsp; No credit card required</div>
+            <div>✓ &nbsp; Unlimited forms</div>
+          </div>
         </div>
         <div
           class="
-            col-lg-7
+            col-lg-6
             d-flex
             align-items-center
             justify-content-center
@@ -55,6 +59,13 @@ export default {}
 
 .hero__image {
   padding-left: 30px;
+}
+
+.hint {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-left: 8px;
+  margin-top: 10px;
 }
 
 .hero__heading {
