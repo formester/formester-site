@@ -9,7 +9,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Formester | HTML Form Backend & Form Builder',
+    title: 'No-code Survey Form and Quiz Builder | Formester',
     meta: [
       ...meta,
       { charset: 'utf-8' },

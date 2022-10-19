@@ -1,10 +1,10 @@
 const type = 'website'
 const url = 'https://formester.com'
-const title = 'Formester | HTML Form Backend & Form Builder'
+const title = 'No-code Survey Form and Quiz Builder | Formester'
 const description =
-  'Form solution for your business that is easy to use. Formester provides an interactive drag and drop builder to create amazing survey forms.'
+  'Build responsive forms using drag and drop builder. The free plan is powerful to get you started. Integrate with 3rd party application and review performance with analytics.'
 const mainImage = 'https://formester.com/formester-form-builder-background.png'
-const mainImageAlt = 'Form builder showing drag and drop functionality'
+const mainImageAlt = 'Form builder showing drag and drop functionality in Formester'
 
 export default (meta) => {
   return [

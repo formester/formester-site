@@ -149,8 +149,9 @@ export default {}
 }
 
 .testimonial__content {
-  font-size: var(--ft-bigger-body);
-  line-height: 48px;
+  font-size: 24px;
+  letter-spacing: 0.4px;
+  line-height: 32px;
 }
 
 .testimonial__person {
@@ -250,8 +251,8 @@ export default {}
   }
 
   .testimonial__content {
-    font-size: 20px;
-    line-height: 32px;
+    font-size: 18px;
+    line-height: 28px;
   }
 
   .company__logo {

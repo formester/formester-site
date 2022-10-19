@@ -1,8 +1,7 @@
 <template>
   <div class="container mt-3">
-    <div class="text-center features">FEATURES</div>
     <h2 class="text-center section__heading">
-      Services We <span class="hglt">Provide</span>
+      Most Used <span class="hglt">Features</span>
     </h2>
     <div class="row my-2">
       <FeatureCard
