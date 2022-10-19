@@ -16,7 +16,7 @@
             <a
               href="https://app.formester.com/users/sign_up"
               class="hero__invert__button mt-4"
-              >Create Your Form</a
+              >Get Started - it's Free</a
             >
           </div>
           <div
