@@ -99,7 +99,7 @@
               href="https://app.formester.com/users/sign_up"
               @click="collapseNav"
             >
-              <button class="nav__button">Register</button>
+              <button class="nav__button">Sign Up Free</button>
             </a>
           </li>
         </ul>
