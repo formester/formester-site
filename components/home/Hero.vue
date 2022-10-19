@@ -53,6 +53,10 @@ export default {}
 </script>
 
 <style scoped>
+.hero {
+  margin-top: 130px;
+  margin-bottom: 100px;
+}
 .hero__image {
   padding-left: 30px;
 }
@@ -76,6 +80,11 @@ export default {}
 }
 
 @media (max-width: 500px) {
+  .hero {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
   .hero__heading {
     line-height: 48px;
     font-size: 2.5rem;
