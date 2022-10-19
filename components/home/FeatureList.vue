@@ -1,9 +1,9 @@
 <template>
-  <div class="container mt-3">
+  <section class="container features-section">
     <h2 class="text-center section__heading">
       Most Used <span class="hglt">Features</span>
     </h2>
-    <div class="row my-2">
+    <div class="row my-2 mt-4">
       <FeatureCard
         v-for="feature in features"
         :key="feature.heading"
@@ -11,7 +11,7 @@
         :feature="feature"
       />
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -75,13 +75,10 @@ export default {
 </script>
 
 <style>
-.features {
-  font-size: calc(0.8rem + 0.6vw);
-  font-weight: 500;
-  color: var(--clr-primary);
-  letter-spacing: 2%;
-  line-height: 1.5;
+.features-section {
+  margin-top: 100px;
 }
+
 .hglt {
   color: var(--clr-primary);
 }

@@ -2,8 +2,8 @@
   <div>
     <Hero heading="some" subtitle="some" />
     <TrustSeals />
-    <FeatureList />
     <Testimonials />
+    <FeatureList />
     <HowItWorks />
     <CallToActionSection />
   </div>
