@@ -157,7 +157,7 @@ export default {
   jsonld() {
     return {
       '@context': 'https://schema.org',
-      '@type': 'Article',
+      '@type': 'BlogPosting',
       mainEntityOfPage: {
         '@type': 'WebPage',
         '@id': `https://formester.com/blog/${this.article.slug}/`,
