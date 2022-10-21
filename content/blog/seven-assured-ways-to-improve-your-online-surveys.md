@@ -7,6 +7,7 @@ coverImgAlt: Cover image for the blog, "Seven Assured Ways to Improve Your Onlin
 featured: false
 published: true
 createdAt: '2022-07-20'
+keywords: online survey, online survey for business, know your customer, survey form
 ---
 
 ![Seven assured ways to imporve your online surveys](/blog/cover-images/seven-assured-ways-to-improve-your-online-surveys.png 'Seven assured ways to imporve your online surveys')

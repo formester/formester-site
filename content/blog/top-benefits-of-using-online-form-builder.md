@@ -7,6 +7,7 @@ coverImgAlt: Cover image for the blog, "Top benefits of using online form builde
 featured: true
 published: true
 createdAt: '2022-10-18'
+keywords: online form builder, form builder, benefits of online form builder, benefits of form builder
 ---
 
 Having such information is crucial to keep a record of whom we work with and also what we can do to offer better services for long term business relationships.

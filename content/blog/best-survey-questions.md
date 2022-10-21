@@ -7,6 +7,7 @@ coverImgAlt: Cover image for the blog, "The Best Survey Questions in 2022"
 featured: false
 published: true
 createdAt: '2022-08-17'
+keywords: survey questions examples, survey questions, survey form, types of survey questions, good survey questions, good survey questions examples
 ---
 
 Surveys can be used to determine respondents' perspectives and experiences. With analytical data, an accurate survey can provide a blueprint for how to proceed to achieve the goal. This analytical data, which represents the behaviour and opinions of the surveyed census, aids in the development of important strategies.
