@@ -7,6 +7,7 @@ coverImgAlt: Cover image for the blog, "single page vs multi page form"
 featured: false
 published: true
 createdAt: '2022-05-15'
+keywords: single page, multi page, single page vs multi page, single page form, multi page form
 ---
 
 <br><br>

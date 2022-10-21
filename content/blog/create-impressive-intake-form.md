@@ -7,6 +7,7 @@ coverImgAlt: Cover image for the blog, "How to Create an Impressive Intake Form"
 featured: false
 published: true
 createdAt: '2022-10-13'
+keywords: intake form, client intake form, create an intake form, create form
 ---
 
 It helps you gather information about the client, understand their needs, plan strategies based on this information and document progress along the way. Having such detail is essential for you to provide the best service possible.

@@ -7,6 +7,7 @@ coverImgAlt: Cover image for the blog, "How to Create a Lead Capture Form Effect
 featured: false
 published: true
 createdAt: '2022-08-22'
+keywords: lead capture form, create lead capture form, lead acquisition, lead generation, lead form
 ---
 
 ![Create a Lead Capture Form Effectively](/blog/cover-images/create-lead-capture-form-effectively.png 'How to Create a Lead Capture Form Effectively?')

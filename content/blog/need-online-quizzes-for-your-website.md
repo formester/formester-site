@@ -7,6 +7,7 @@ coverImgAlt: Cover image for the blog, "Why Do You Need Online Quizzes for Your 
 featured: false
 published: true
 createdAt: '2022-08-25'
+keywords: online quiz, online quiz for business, audience engagement, create online quiz, educate your customers with quiz
 ---
 
 ![Why Do You Need Online Quizzes for Your Website?](/blog/cover-images/why-do-you-need-online-quizzes-for-your-website.png 'Why Do You Need Online Quizzes for Your Website? ')

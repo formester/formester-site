@@ -130,10 +130,20 @@ export default {
           content: this.article.author,
         },
         {
+          hid: 'publisher',
+          name: 'publisher',
+          property: 'article:publisher',
+          content: 'Formester',
+        },
+        {
           name: 'publish_date',
           property: 'og:publish_date',
           content: this.article.createdAt,
         },
+        {
+          name: 'keywords',
+          content: this.article.keywords,
+        }
       ],
       link: [
         {
@@ -142,6 +152,34 @@ export default {
           href: `https://formester.com/blog/${this.$route.params.slug}/`,
         },
       ],
+    }
+  },
+  jsonld() {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': `https://formester.com/blog/${this.article.slug}/`,
+      },
+      headline: this.article.title,
+      description: this.article.description,
+      image: this.article.coverImg
+        ? `https://formester.com/blog/cover-images/${this.article.coverImg}`
+        : 'https://formester.com/formester-form-builder-background.png',
+      author: {
+        '@type': 'Person',
+        name: this.article.author,
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Formester',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://formester.com/logo.png',
+        },
+      },
+      datePublished: this.article.createdAt
     }
   },
 }
