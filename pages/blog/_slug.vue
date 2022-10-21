@@ -176,7 +176,7 @@ export default {
         name: 'Formester',
         logo: {
           '@type': 'ImageObject',
-          url: 'https://formester.com/_nuxt/img/logo.5f4f1b9.svg',
+          url: 'https://formester.com/logo.png',
         },
       },
       datePublished: this.article.createdAt
