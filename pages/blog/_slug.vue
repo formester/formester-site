@@ -160,7 +160,7 @@ export default {
       '@type': 'Article',
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': `https://formester.com/blog/${this.article.slug}`,
+        '@id': `https://formester.com/blog/${this.article.slug}/`,
       },
       headline: this.article.title,
       description: this.article.description,
