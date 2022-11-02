@@ -24,6 +24,11 @@ export default {
     Testimonials,
     HowItWorks,
   },
+  head() {
+    return {
+      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
+    };
+  },
   jsonld() {
     return {
       '@context': 'http://schema.org',
