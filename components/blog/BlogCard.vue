@@ -1,7 +1,7 @@
 <template>
   <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
     <img
-      :src="require(`@/assets/images/blog/${article.coverImg}`)"
+      :src="`/img/${article.coverImg}`"
       class="rounded img-fluid"
       :alt="article.coverImgAlt"
       :title="article.coverImgAlt"
