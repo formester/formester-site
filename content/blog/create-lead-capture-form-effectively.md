@@ -1,5 +1,5 @@
 ---
-title: How to Create a Lead Capture Form Effectively
+title: How to Create a Lead Capture Form Effectively?
 description: There are just way too many ways through which you can get leads.
   But, it is important that you capture them as well through an effective lead
   capture form. Amidst high competition and greater customer awareness,
