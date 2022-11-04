@@ -1,5 +1,5 @@
 ---
-title: "Best Online Form Builders 2022: How to Choose the Ideal One?"
+title: "Best Online Form Builders 2022: How to Choose the Ideal One"
 description: Online forms are the go-to solution for a variety of your needs -
   from marketing surveys to lead generation, feedback collection and more. The
   ability to capture data is vital for organizations regardless of their
