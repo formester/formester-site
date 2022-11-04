@@ -141,7 +141,7 @@
           />
           <p class="testimonial__content">
             I really enjoy Formester. It’s clean and straightforward and it does
-            well it is supposed to do.
+            well what it is supposed to do.
           </p>
           <div class="d-flex flex-column mt-4">
             <span class="testimonial__person--name">Thibaud Martinez</span>
