@@ -1,13 +1,18 @@
 ---
-title: How to Create a Lead Capture Form Effectively?
-description: There are just way too many ways through which you can get leads. But, it is important that you capture them as well through an effective lead capture form. Amidst high competition and greater customer awareness, businesses depend significantly on their lead generation strategy to turn leads into customers and eventually drive revenue for a business.
+title: How to Create a Lead Capture Form Effectively
+description: There are just way too many ways through which you can get leads.
+  But, it is important that you capture them as well through an effective lead
+  capture form. Amidst high competition and greater customer awareness,
+  businesses depend significantly on their lead generation strategy to turn
+  leads into customers and eventually drive revenue for a business.
+keywords: lead capture form, create lead capture form, lead acquisition, lead
+  generation, lead form
 author: Vivek Badani
+createdAt: 2022-08-22
 coverImg: create-lead-capture-form-effectively.png
 coverImgAlt: Cover image for the blog, "How to Create a Lead Capture Form Effectively?"
 featured: false
 published: true
-createdAt: '2022-08-22'
-keywords: lead capture form, create lead capture form, lead acquisition, lead generation, lead form
 ---
 
 ![Create a Lead Capture Form Effectively](/blog/cover-images/create-lead-capture-form-effectively.png 'How to Create a Lead Capture Form Effectively?')
