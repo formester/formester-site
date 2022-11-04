@@ -1,5 +1,5 @@
 ---
-title: How to Create a Form or Survey Using an Easy Form Builder
+title: How to Create a Form or Survey Using an Easy Form Builder?
 description: We are living in a digitally-driven world and online forms are
   needed in a majority of business and user activities. From asking users to
   sign up to booking events, generating leads, purchasing products, performing
