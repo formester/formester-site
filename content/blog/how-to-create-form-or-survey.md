@@ -15,8 +15,8 @@ coverImgAlt: Cover image for the blog, "How to create a form or survey using for
 featured: false
 published: true
 ---
+![How to create a form or survey using form builder](/img/how-to-create-a-form__how-to-create-form-or-survey.png)
 
-![How to create a form or survey using form builder](/blog/cover-images/how-to-create-form-or-survey.png 'How to create a form or survey using form builder')
 <br><br>
 
 While creating online forms, integrating them to your website, and storing collected data automatically were quite hectic tasks earlier, it’s not the case anymore. With tools like Formester which are extensively easy to use and make it possible to build effective online forms within minutes – user interactions and data collection activities have become significantly more convenient.
@@ -31,7 +31,7 @@ A comprehensive online form building tool enables you to cater to different busi
 
 <br>
 
-Let’s now begin with a stepwise guide to creating your online form. In our discussion, we will share the numerous touchpoints you need to know for [building your first form with Formester](https://formester.com/blog/building-your-first-form-with-formester/ 'Build your first form with Formester') .
+Let’s now begin with a stepwise guide to creating your online form. In our discussion, we will share the numerous touchpoints you need to know for [building your first form with Formester](https://formester.com/blog/building-your-first-form-with-formester/ "Build your first form with Formester") .
 
 <br>
 
@@ -44,18 +44,17 @@ Remember to keep it short, simple, and effective. Put yourself in the user’s o
 
 ### Step 2: Sign Up and Begin With the Form Heading
 
-If you don’t have an account already - sign up to [Formester: Easy HTML form builder](https://formester.com/ 'Formester') and create your first form.
+If you don’t have an account already - sign up to [Formester: Easy HTML form builder](https://formester.com/ "Formester") and create your first form.
 
 Before you structure your form, you need to give it a suitable form name and enter a few details:
 
-- **Redirect URL -** the site address where you want the respondents to land up after submitting your form.
-
-- **Email notifications -** the email addresses that you want to use for receiving submission notifications.
-
-- **Type of service -** Choose drag and drop to create your forms unless you’re just looking for backend services only and have your online form in place.
+* **Redirect URL -** the site address where you want the respondents to land up after submitting your form.
+* **Email notifications -** the email addresses that you want to use for receiving submission notifications.
+* **Type of service -** Choose drag and drop to create your forms unless you’re just looking for backend services only and have your online form in place.
   <br><br>
 
-![Form accepting details like form name, redirection url for creating your new form](/blog/how-to-create-form-or-survey/form-details.png 'Form accepting details like form name, redirection url for creating your new form')
+![Form accepting details like form name, redirection url for creating your new form](/img/how-to-create-a-form__form-details.png)
+
 <br><br>
 
 ## Step 3: Choose Form Fields and Add Them to Your Form
@@ -65,7 +64,8 @@ Once you create a form and enter the form name along with other primary details 
 For example - for building a lead generation form, you would need basic client details like their name, email address, contact details, business requirements, the industry they operate in, and more. Subsequently, you can choose from different form fields in terms of the type of data (text, multiple-choice, numerical, URL, email address, date, rating etc).
 <br><br>
 
-![Form builder being used for quickly creating intake form with name, email and phone number fields](/blog/how-to-create-form-or-survey/choose-form-fields.png 'Form builder being used for quickly creating intake form with name, email and phone number fields')
+![Form builder being used for quickly creating intake form with name, email and phone number fields](/img/how-to-create-a-form__choose-form-fields.png)
+
 <br><br>
 
 ## Step 4: Set up Each Form Field
@@ -73,7 +73,8 @@ For example - for building a lead generation form, you would need basic client d
 Formester’s no-code drag and drop form builder is not only comprehensive and simple to use, but also allows you to set up your form design as you like it to be. It’s a completely flexible dashboard that enables you to adjust the font style, font size, heading and sub-heading text, font weights, placeholder text and more.
 <br><br>
 
-![Formester dashboard allowing font size, font weights, and headings to be adjusted](/blog/how-to-create-form-or-survey/customise-font-and-heading.png 'Formester dashboard allowing font size, font weights, and headings to be adjusted')
+![Formester dashboard allowing font size, font weights, and headings to be adjusted](/img/how-to-create-a-form__customise-font-and-heading.png)
+
 <br><br>
 
 ## Step 5: Publish the Form and Get Shareable Link or Embed it to Your Website
@@ -81,7 +82,8 @@ Formester’s no-code drag and drop form builder is not only comprehensive and s
 Once you have finalized the form structure and created the form fields as per the use-case objectives, it’s now time to make it live. Note that you can either share the link to your standalone form or embed the form to your website. Choose among the available options and move forward with sharing and promoting the form proactively.
 <br><br>
 
-![The form is published and the URL is copied](/blog/how-to-create-form-or-survey/publishing-form-after-creation.png 'The form is published and the URL is copied')
+![The form is published and the URL is copied](/img/how-to-create-a-form__publishing-form-after-creation.png)
+
 <br><br>
 
 ## Summing Up
@@ -89,4 +91,4 @@ Once you have finalized the form structure and created the form fields as per th
 Formester is a one-stop solution for building forms using an extensively easy, no-code interface. You can now conduct surveys, collect information from you website visitors, enable smooth user journeys for lead generation and purchases with a drag and drop form builder which doesn’t require tech expertise at all.
 
 Ready to delight your users and grow your business efficiently?
-[Build forms in minutes using our drag and drop builder or integrate with your existing HTML form](https://app.formester.com/users/sign_up 'Sign up at Formester').
+[Build forms in minutes using our drag and drop builder or integrate with your existing HTML form](https://app.formester.com/users/sign_up "Sign up at Formester").
