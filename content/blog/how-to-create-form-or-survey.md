@@ -1,13 +1,19 @@
 ---
-title: 'How to Create a Form or Survey Using an Easy Form Builder?'
-description: We are living in a digitally-driven world and online forms are needed in a majority of business and user activities. From asking users to sign up to booking events, generating leads, purchasing products, performing payments, conducting surveys, and more – applications of both standalone and web forms are truly endless. No doubt online forms play an important role for businesses by boosting interactivity and information sharing.
+title: How to Create a Form or Survey Using an Easy Form Builder?
+description: We are living in a digitally-driven world and online forms are
+  needed in a majority of business and user activities. From asking users to
+  sign up to booking events, generating leads, purchasing products, performing
+  payments, conducting surveys, and more – applications of both standalone and
+  web forms are truly endless. No doubt online forms play an important role for
+  businesses by boosting interactivity and information sharing.
+keywords: create a form, create a survey, best form builder, drag and drop form,
+  free online form builder, easy form builder
 author: Vivek Badani
+createdAt: 2022-11-02
 coverImg: how-to-create-form-or-survey.png
 coverImgAlt: Cover image for the blog, "How to create a form or survey using form builder"
 featured: false
 published: true
-createdAt: '2022-11-02'
-keywords: create a form, create a survey, best form builder, drag and drop form, free online form builder, easy form builder
 ---
 
 ![How to create a form or survey using form builder](/blog/cover-images/how-to-create-form-or-survey.png 'How to create a form or survey using form builder')
