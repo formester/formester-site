@@ -10,7 +10,7 @@ keywords: create a form, create a survey, best form builder, drag and drop form,
   free online form builder, easy form builder
 author: Vivek Badani
 createdAt: 2022-11-02
-coverImg: how-to-create-form-or-survey.png
+coverImg: /img/how-to-create-a-form__how-to-create-form-or-survey.png
 coverImgAlt: Cover image for the blog, "How to create a form or survey using form builder"
 featured: false
 published: true
