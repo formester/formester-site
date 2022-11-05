@@ -1,16 +1,16 @@
 ---
 title: Building your first form with formester
 description: Different approaches to building web forms with formester
+keywords: create form, build your first form, backend as a service, drag and
+  drop form, free form builder, free online form builder
 author: Piyush Singhania
-coverImg: formester-form-builder-background.png
+createdAt: 2022-05-10
+coverImg: /img/building-your-first-form-with-formester__formester-form-builder-background-cover.png
 coverImgAlt: Cover image for the blog, "Building your first form with formester"
 featured: false
 published: true
-createdAt: '2022-05-10'
-keywords: create form, build your first form, backend as a service, drag and drop form, free form builder, free online form builder
 ---
-
-![Form builder showing drag and drop functionality](/blog/cover-images/formester-form-builder-background.png 'Form builder showing drag and drop functionality')
+![Form builder showing drag and drop functionality](/img/building-your-first-form-with-formester__formester-form-builder-background.png)
 
 ## Backend as a service
 
@@ -22,42 +22,52 @@ Steps to use formester only as backend:-
 
 **Step one** - Signup for formester and you will land at the forms page, which will look something like this -
 
-<br><br>
-![Forms page showing create your first form button](/blog/building-your-first-form-with-formester/create-your-first-form.png 'Forms page showing create your first form button')
-<br><br>
+<br>
+
+![Forms page showing create your first form button](/img/building-your-first-form-with-formester__formester-form-builder-background.png "Forms page showing create your first form button")
+
+<br>
 
 **Click** the **create form** button.
 
 **Step two** - You need to fill in some details for creating the form, this includes the form name, redirection URL, email notification, and type of service.
 
-<br><br>
-![Form accepting details like form name, redirection url for creating your new form](/blog/building-your-first-form-with-formester/form-details.png 'Form accepting details like form name, redirection url for creating your new form')
-<br><br>
+<br>
 
-**Form name** - This refers to the form name which you would like to create  
+![Form accepting details like form name, redirection url for creating your new form](/img/building-your-first-form-with-formester__form-details.png "Form accepting details like form name, redirection url for creating your new form")
+
+<br>
+
+**Form name** - This refers to the form name which you would like to create\
 (example - Hiring Form)
 **Redirection URL** - This is the URL where the target audience will be redirected once they submit your form.
-(example - [https://www.acornglobus.com/](https://www.acornglobus.com/))
+(example - <https://www.acornglobus.com/>)
 
 Though it is optional and can be left blank. By doing so the users will be redirected to a cool thank-you page.
 
-<br><br>
-![Formester default thank you page](/blog/building-your-first-form-with-formester/thank-you.png 'Formester default thank you page')
-<br><br>
+<br>
+
+![Formester default thank you page](/img/building-your-first-form-with-formester__thank-you.png "Formester default thank you page")
+
+<br>
 
 **Email Notification** - This is the email address, where you will receive notifications related to the form, like submissions.
 
 **Type of Service** - Here you can select either the **default** or **Backend only** option. In this case, you should select **Backend only** for using formester as a backend service in your web form. The default option comes up with the form builder. We will talk about it in the next approach.
 
-<br><br>
-!["Backend only" option selected while form creation](/blog/building-your-first-form-with-formester/service-one-example.png 'Backend only option selected while form creation')
-<br><br>
+<br>
+
+!["Backend only" option selected while form creation](/img/building-your-first-form-with-formester__service-one-example.png "Backend only option selected while form creation")
+
+<br>
 
 **Step Three** - Once you have filled out the form details. You will land up in the configure page. There you will find a couple of options, the main thing is to copy the action URL and add it to your web form code. You can refer to the code samples you will get there. **That’s it!** Now you are good to receive submissions in your web form and can view all of them under the submissions section.
 
-<br><br>
-![Configuration page showing multiple options](/blog/building-your-first-form-with-formester/action-url.png 'Configuration page showing multiple options')
-<br><br>
+<br>
+
+![Configuration page showing multiple options](/img/building-your-first-form-with-formester__action-url.png "Configuration page showing multiple options")
+
+<br>
 
 ## Build forms with drag and drop
 
@@ -67,42 +77,52 @@ Steps to build forms with form builder:-
 
 **Step one** - Sign Up for formester and you will land at the forms page, which will look something like this -
 
-<br><br>
-![Forms page showing create your first form button](/blog/building-your-first-form-with-formester/create-your-first-form.png 'Forms page showing create your first form button')
-<br><br>
+<br>
+
+![Forms page showing create your first form button](/img/building-your-first-form-with-formester__create-your-first-form.png "Forms page showing create your first form button")
+
+<br>
 
 **Click** the **create form** button.
 
 **Step two** - You need to fill in some details for creating the form, this includes the form name, redirection URL, email notification, and type of service.
 
-<br><br>
-![Form accepting details like form name, redirection url for creating your new form](/blog/building-your-first-form-with-formester/form-details.png 'Form accepting details like form name, redirection url for creating your new form')
-<br><br>
+<br>
 
-**Form name** - This refers to the form name which you would like to create  
+![Form accepting details like form name, redirection url for creating your new form](/img/building-your-first-form-with-formester__form-details.png "Form accepting details like form name, redirection url for creating your new form")
+
+<br>
+
+**Form name** - This refers to the form name which you would like to create\
 (example - Hiring Form)
 **Redirection URL** - This is the URL where the target audience will be redirected once they submit your form.
-(example - [https://www.acornglobus.com/](https://www.acornglobus.com/))
+(example - <https://www.acornglobus.com/>)
 
 Though it is optional and can be left blank. By doing so the users will be redirected to a cool thank-you page.
 
-<br><br>
-![Formester default thank you page](/blog/building-your-first-form-with-formester/thank-you.png 'Formester default thank you page')
-<br><br>
+<br>
+
+![Formester default thank you page](/img/building-your-first-form-with-formester__thank-you.png "Formester default thank you page")
+
+<br>
 
 **Email Notification** - This is the email address, where you will receive notifications related to the form, like submissions.
 
 **Type of Service** - Here you can select either the **Default** or **Backend only** option. In this case, you should select the **Default** option for using the form builder feature.
 
-<br><br>
-!["Default" option selected while form creation](/blog/building-your-first-form-with-formester/service-two-example.png 'Default option selected while form creation')
-<br><br>
+<br>
+
+!["Default" option selected while form creation](/img/building-your-first-form-with-formester__service-two-example.png "Default option selected while form creation")
+
+<br>
 
 **Step three** - Now you will land into an interactive drag and drop builder. Get started by dragging your first question or form component from the component bar on the left side, and dropping it into the form section in the middle.
 
-<br><br>
-![Formester form builder page](/blog/building-your-first-form-with-formester/builder.png 'Formester form builder page')
-<br><br>
+<br>
+
+![Formester form builder page](/img/building-your-first-form-with-formester__builder.png "Formester form builder page")
+
+<br>
 
 Drop more components from a varied range of choices ranging from email, name, date, and time to complex fields like address, star rating, file uploader, image, and a lot more.
 
@@ -117,16 +137,20 @@ At Formester, we provide element-level customization and settings too. The diffe
 While doing all of this, you can simultaneously save and preview the form by using the preview feature. This will help you to build the form better and will keep you in sync with how the form is emerging.
 Once you are satisfied use the publish button to get the form link along with some quick social media actions links. Copy the form link from there and **That’s it!** Now you are good to share the link on any channel you want. You can also embed this link to CTA buttons on your own website.
 
-<br><br>
-![Form builder being used for creating and publishing form](/blog/building-your-first-form-with-formester/form-example.png 'Form builder being used for creating and publishing form')
-<br><br>
+<br>
+
+![Form builder being used for creating and publishing form](/img/building-your-first-form-with-formester__form-example.png "Form builder being used for creating and publishing form")
+
+<br>
 
 Each submission you receive will appear in the Submissions tab of Formester, from where you can access it easily.
 
 Here's an example of a form built using Formester
 
-<br><br>
-![Form example built using formester](/blog/building-your-first-form-with-formester/final-form.png 'Form example built using formester')
-<br><br>
+<br>
+
+![Form example built using formester](/img/building-your-first-form-with-formester__final-form.png "Form example built using formester")
+
+<br>
 
 It is my hope that this blog is helpful to you, and that now you have all the information you need to **build your first form with Formester**.
