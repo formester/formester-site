@@ -1,22 +1,24 @@
 ---
-title: Why Do You Need Online Quizzes for Your Website? 
-description: Grabbing your customer's attention and holding on to their interest can be a bit hard today. Everyone is somehow a part of marketing 24*7, but the average attention span of customers has dropped to only eight seconds. 
+title: Why Do You Need Online Quizzes for Your Website?
+description: Grabbing your customer's attention and holding on to their interest
+  can be a bit hard today. Everyone is somehow a part of marketing 24*7, but the
+  average attention span of customers has dropped to only eight seconds.
+keywords: online quiz, online quiz for business, audience engagement, create
+  online quiz, educate your customers with quiz
 author: Vivek Badani
-coverImg: why-do-you-need-online-quizzes-for-your-website.png
+createdAt: 2022-08-25
+coverImg: /img/why-do-you-need-online-quizzes__why-do-you-need-online-quizzes-for-your-website.png
 coverImgAlt: Cover image for the blog, "Why Do You Need Online Quizzes for Your Website?"
 featured: false
 published: true
-createdAt: '2022-08-25'
-keywords: online quiz, online quiz for business, audience engagement, create online quiz, educate your customers with quiz
 ---
-
-![Why Do You Need Online Quizzes for Your Website?](/blog/cover-images/why-do-you-need-online-quizzes-for-your-website.png 'Why Do You Need Online Quizzes for Your Website? ')
+![Why Do You Need Online Quizzes for Your Website?](/img/why-do-you-need-online-quizzes__why-do-you-need-online-quizzes-for-your-website.png)
 
 If you're worried that you will lose customers, you need to stay one step ahead of them. Now, you may think, how do I do it? Well, there are various strategies that you can implement on your website to attract the attention of your customers. An online quiz is one of those. 
 
 Online quizzes bring business growth. It is high time we start accepting online quizzes as an efficient way to build a business, not just some unproductive effect. 
 
-## Online Quiz- Key To Attract the Attention of Customers 
+## Online Quiz- Key To Attract the Attention of Customers
 
 Online quizzes can be pretty addictive. You will likely boost customer engagement if you use one on your website. Moreover, hosting regular online quizzes will help you stay relevant among the customers. The online quizzes have a high engagement rate, as most customers complete at least [81% of personalized quizzes](https://www.slideshare.net/Qzzr/qzzr-vwokillerconversionrates). If they want to buy a product you provide, compared to your competitors, your consumers will go for you. 
 
@@ -54,13 +56,13 @@ Education can be the key to converting leads for specific niche brands. Naturall
 
 They create a form that contains detailed information to guide customers about their hair needs. Once the brand educates the customers, it makes them feel understood and empowered. When you help your customers, the customer loyalty for your brand eventually increases, just like NaturallyCurly. 
 
-### 5. Boost Brand Awareness 
+### 5. Boost Brand Awareness
 
 Not every online quiz should educate customers just about the products. Some brands use these online quizzes to increase their relevance and connect with the audience. INH Hair is one of the leading eCommerce brands doing so. 
 
 They used an online quiz maker to create engaging online quizzes to know about their customers' interests. Ultimately, the quiz will capture emails and offer coupons to the ones who took the quiz. They provide "Care Bear Style" tips as a token of appreciation. Not only does the brand make itself relevant to pop culture, but it also makes shopping a fun experience for customers. 
 
-### 5. Generate Leads 
+### 5. Generate Leads
 
 Online quizzes can be a great way to increase the email list and get leads. eCommerce beauty brands are likely to benefit the most from it. If they provide a one-on-one consultation with experts at the end of a brand like Soko Glam, the leads will increase. 
 
