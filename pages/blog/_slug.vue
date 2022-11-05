@@ -98,7 +98,7 @@ export default {
         title: this.article.title,
         description: this.article.description,
         mainImage: this.article.coverImg
-          ? `https://formester.com/img/${this.article.coverImg}`
+          ? `https://formester.com/${this.article.coverImg}`
           : 'https://formester.com/formester-form-builder-background.png',
         mainImageAlt:
           this.article.coverImgAlt ||
@@ -165,7 +165,7 @@ export default {
       headline: this.article.title,
       description: this.article.description,
       image: this.article.coverImg
-        ? `https://formester.com/img/${this.article.coverImg}`
+        ? `https://formester.com/${this.article.coverImg}`
         : 'https://formester.com/formester-form-builder-background.png',
       author: {
         '@type': 'Person',

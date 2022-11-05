@@ -4,7 +4,7 @@
     class="row px-3 px-lg-0"
   >
     <img
-      :src="`/img/${article.coverImg}`"
+      :src="article.coverImg"
       class="col-lg-6 rounded img-fluid featured__blog-img"
       :alt="article.coverImgAlt"
       :title="article.coverImgAlt"
