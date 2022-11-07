@@ -10,7 +10,7 @@ coverImgAlt: Cover image for the blog, "Building your first form with formester"
 featured: false
 published: true
 ---
-![Form builder showing drag and drop functionality](/img/building-your-first-form-with-formester__formester-form-builder-background.png)
+![Form builder showing drag and drop functionality](/img/building-your-first-form-with-formester__formester-form-builder-background.png "Form builder showing drag and drop functionality")
 
 ## Backend as a service
 
