@@ -25,15 +25,19 @@ These submissions are useless and increase the time to go through the accurate d
 
 Understanding the source of form spam can help you reduce these submissions in your forms.
 
-* **Manual Spamming** - Manually spamming involves humans filling out forms with false information and harmful links. They do so primarily to establish backlinks to their site, which may help them in search engine results. Sometimes these links can be malicious and feed the users with malware. Other times they may steal other users' personal information or scam them for money. This all reduces your website reputation and hampers user interaction. Since human spammers can bypass almost all validations, there is a tiny that one can do to stop them.
-* **Spam Bots** - These are pre-programmed bots to search for forms and input fields around the web and fill them with keywords or links. The number of submissions they can make can be significant as they are automated; hence, they are the most irritating. These bots have hundreds of variations; applying a single static technique to filter them all is impossible. One has to follow efficient methods to filter maximum spam bots.
+* **M﻿anual Spamming** - Manually spamming involves humans filling out forms with false information and harmful links. They do so primarily to establish backlinks to their site, which may help them in search engine results. Sometimes these links can be malicious and feed the users with malware. Other times they may steal other users' personal information or scam them for money. This all reduces your website reputation and hampers user interaction. Since human spammers can bypass almost all validations, there is a tiny that one can do to stop them.
+* **S﻿pam Bots** - These are pre-programmed bots to search for forms and input fields around the web and fill them with keywords or links. The number of submissions they can make can be significant as they are automated; hence, they are the most irritating. These bots have hundreds of variations; applying a single static technique to filter them all is impossible. One has to follow efficient methods to filter maximum spam bots.
+
+
 
 ## Is it essential for your business to stop form spam?
 
 Whether it's a WordPress site or a website built from the ground up with the help of web development languages. If a business depends on this website, it's essential and beneficial to prevent spam. Some of the major issues which a business face because of spam:-
 
-* **M﻿anual spamming -** Manually spamming involves humans filling out forms with false information and harmful links. They do so primarily to establish backlinks to their site, which may help them in search engine results. Sometimes these links can be malicious and feed the users with malware. Other times they may steal other users' personal information or scam them for money. This all reduces your website reputation and hampers user interaction. Since human spammers can bypass almost all validations, there is a tiny that one can do to stop them.
-* **S﻿pam Bots** - These are pre-programmed bots to search for forms and input fields around the web and fill them with keywords or links. The number of submissions they can make can be significant as they are automated; hence, they are the most irritating. These bots have hundreds of variations; applying a single static technique to filter them all is impossible. One has to follow efficient methods to filter maximum spam bots.
+* **S﻿low Response time** - If your forms are blotted with spam, for example, your website's contact form,  then the time to respond to genuine users will increase. Someone must manually go through the submissions pile to filter out the genuine ones. Slow response, in turn, might cause inconvenience to the users and may lead to customer loss. Slow response time irritates real users, and in the era where every other thing has an alternative, your users will start moving to search for another solution.
+* **B﻿ad user experience and reduced brand value** - A webpage with a poorly controlled comment section is often full of spam comments. For example, links to other websites, hate speech, links left by scammers, and much more. All of these factors contribute to a bad user experience and a loss of brand reputation.
+* **S﻿afety and security concerns** - Sometimes, the links posted by the spammers on your site lead to malware; hence, ensuring your visitors' safety becomes very important.
+* **H﻿ampered Analytics** - Form spam artificially increases the number of website visits, making it difficult to differentiate between genuine and spam visits. It hampers analytics and our understanding of the organic traffic the website is attracting.
 
 
 
