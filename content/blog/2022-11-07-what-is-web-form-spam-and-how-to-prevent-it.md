@@ -59,10 +59,11 @@ In addition to being unwanted, form spam is also harmful. It is, therefore, impe
 * **Not allowing links** - If unnecessary, one should avoid taking in links since the spammers' primary goal is to establish website backlinks or to leave malicious URLs. Not allowing links will reduce the number of spam.
 * **Blocking or limiting IP Addresses** - IP addresses can be restricted to prevent spam if many submissions come from a single source over a given period. Such activities are usually malicious and shall be blocked.
 * **Adding questions in form submissions** - Putting a simple question field can help identify spam submissions. Questions like the *"Number of days in a week"* or mathematical questions like *"10 + 20"* are simple and can be answered by anyone. When robots fill these fields with random keywords, it becomes easier to distinguish legitimate submissions from spam submissions.
-* **Anti-spam plugins** - If you are running a WordPress site, you can easily find many anti-spam plugins. These plugins can help you protect your contact forms, comment sections, registration form, and more from spam. Installing and setting them up is usually relatively easy. Some of the popular anti-spam plugins are:- 
-  a. ["Spam protection, AntiSpam, FireWall by CleanTalk," ](https://wordpress.org/plugins/cleantalk-spam-protect/)
-  b. ["Akismet Spam Protection."](https://wordpress.org/plugins/akismet/)
-  c. ["WP Armour – Honeypot Anti Spam."](https://wordpress.org/plugins/honeypot/)
+* **Anti-spam plugins** - If you are running a WordPress site, you can easily find many anti-spam plugins. These plugins can help you protect your contact forms, comment sections, registration form, and more from spam. Installing and setting them up is usually relatively easy. Some of the popular anti-spam plugins are:-  
+
+  * a.["Spam protection, AntiSpam, FireWall by CleanTalk," ](https://wordpress.org/plugins/cleantalk-spam-protect/) 
+  * b. ["Akismet Spam Protection."](https://wordpress.org/plugins/akismet/) 
+  * c. ["WP Armour – Honeypot Anti Spam."](https://wordpress.org/plugins/honeypot/) 
 
 ## Can Formster help you fight form spam?
 
