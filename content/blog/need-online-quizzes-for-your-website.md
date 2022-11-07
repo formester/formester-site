@@ -12,7 +12,7 @@ coverImgAlt: Cover image for the blog, "Why Do You Need Online Quizzes for Your 
 featured: false
 published: true
 ---
-![Why Do You Need Online Quizzes for Your Website?](/img/why-do-you-need-online-quizzes__why-do-you-need-online-quizzes-for-your-website.png)
+![Why Do You Need Online Quizzes for Your Website?](/img/why-do-you-need-online-quizzes__why-do-you-need-online-quizzes-for-your-website.png "Why Do You Need Online Quizzes for Your Website?")
 
 If you're worried that you will lose customers, you need to stay one step ahead of them. Now, you may think, how do I do it? Well, there are various strategies that you can implement on your website to attract the attention of your customers. An online quiz is one of those. 
 
