@@ -14,9 +14,9 @@ published: true
 ---
 It helps you gather information about the client, understand their needs, plan strategies based on this information and document progress along the way. Having such detail is essential for you to provide the best service possible.
 
-![How to create an impressive intake form in five easy steps](/img/how-to-create-an-impressive-intake__create-impressive-intake-form.png)
+![How to create an impressive intake form in five easy steps](/img/how-to-create-an-impressive-intake__create-impressive-intake-form.png "How to create an impressive intake form in five easy steps")
 
-<br><br>
+<br>
 
 ## Pro tips for producing an effective intake form
 
@@ -86,7 +86,7 @@ After you sign up for formester, you will reach the forms page. Here, click the 
 
 ![Form accepting details like form name, redirect url and type of service for creating new form](/img/how-to-create-an-impressive-intake__create-new-form-page.png "Form accepting details like form name, redirect url and type of service for creating new form")
 
-<br><br>
+<br>
 
 ### Step 2: Ask the obvious
 
@@ -95,40 +95,40 @@ Formester has a simple drag and drop feature that lets you quickly use it withou
 
 ![Form builder being used for quickly creating form intake with name, email and phone number fields](/img/how-to-create-an-impressive-intake__ask-the-obvious.png "Form builder being used for quickly creating intake form with name, email and phone number fields")
 
-<br><br>
+<br>
 
 You also have the option to add titles to your form. Clicking on the ‘heading text’ box allows you to add your own words. Give an appropriate title based on your target clients or theme of the services you provide.
-<br><br>
+<br>
 
 ![Updating form heading with an appropriate title](/img/how-to-create-an-impressive-intake__add-relevant-form-heading.png "Updating form heading with an appropriate title")
 
-<br><br>
+<br>
 
 ### Step 3: Simplify
 
 You also have the option to include ‘multi-choice questions’. This is ideally used to filter the type of clients you receive. The left hand side of the dashboard helps you rearrange the choices or even choose the on/off option for ‘required’ questions.
-<br><br>
+<br>
 
 ![Left sidebar showing toggle button to mark question as required](/img/how-to-create-an-impressive-intake__make-it-easy-for-them.png "Left sidebar showing toggle button to mark question as required")
 
-<br><br>
+<br>
 
 ### Step 4: Go long for more
 
 ‘Long text’ box helps you include questions that require longer answers. This is suitable to understand and gather a quick picture of what your client expects from your services.
-<br><br>
+<br>
 
 ![Taking in longer answers is made easier with the long text box on the intake form](/img/how-to-create-an-impressive-intake__go-long-for-more.png "Taking in longer answers is made easier with the long text box on the intake form")
 
-<br><br>
+<br>
 
 Also consider including a question that allows you to understand the goals of your clients. This ensures you to offer services that suit their needs.
-<br><br>
+<br>
 
-![Including the question "What are your goals for the project?" to better understand the client's objective](/img/how-to-create-an-impressive-intake__go-long-for-more.png)
+![Including the question "What are your goals for the project?" to better understand the client's objective](/img/how-to-create-an-impressive-intake__go-long-for-more.png "Including the question \"What are your goals for the project?\" to better understand the client's objective")
 
-<br><br>
+<br>
 
 ### Step 5: Publish!
 
-![The form is published and the URL is copied](/img/how-to-create-an-impressive-intake__publishing-form-after-creation.png)
+![The form is published and the URL is copied](/img/how-to-create-an-impressive-intake__publishing-form-after-creation.png "The form is published and the URL is copied")
