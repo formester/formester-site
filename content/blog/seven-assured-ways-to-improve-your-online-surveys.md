@@ -13,7 +13,7 @@ coverImgAlt: Cover image for the blog, "Seven Assured Ways to Improve Your Onlin
 featured: false
 published: true
 ---
-![Seven assured ways to imporve your online surveys](/img/seven-assured-way-to-improve__seven-assured-ways-to-improve-your-online-surveys.png)
+![Seven assured ways to imporve your online surveys](/img/seven-assured-way-to-improve__seven-assured-ways-to-improve-your-online-surveys.png "Seven assured ways to imporve your online surveys")
 
 But even after spending enough time in creating, designing and spreading your online surveys - how often does your target audience actively engage with them? What’s the average response rate? Probably not as much as you expect, right?
 
@@ -41,7 +41,7 @@ There’a direct correlation between the improvement in online surveys and growt
 
 The overall average online survey response rate is 33% which is way lower than the range considered to be reasonably good which is 50 - 60%.
 
-![Different survey techniques such as in-person, email and telephone surveys are used to calculate the average response rate](/img/seven-assured-way-to-improve__average-survey-response-rate.png)
+![Different survey techniques such as in-person, email and telephone surveys are used to calculate the average response rate](/img/seven-assured-way-to-improve__average-survey-response-rate.png "Different survey techniques such as in-person, email and telephone surveys are used to calculate the average response rate")
 
 Image [Source](https://pointerpro.com/blog/average-survey-response-rate "Pointerpro blog on average survey response rate")
 
@@ -89,6 +89,6 @@ As a rule of thumb, a survey with 10-15 questions is considered to be ideal but 
 
 ## Ace Your Online Surveys with Formester
 
-![An online survey form is being created using Formster](/img/seven-assured-way-to-improve__survey-form.svg)
+![An online survey form is being created using Formster](/img/seven-assured-way-to-improve__survey-form.svg "An online survey form is being created using Formster")
 
 Now that you know the best practices needed to deliver a fascinating online survey experience, it’s high time you up your game with an easy yet effective online survey form builder. If you believe creating online survey forms is a complex task, you’ve probably not used the right tool. [Formester](https://formester.com/) helps create online forms that are flexible, engaging and adaptive to your use-case environment. From web forms to independently designed survey forms and a lot more, Formester enables you to build online forms in a jiffy.
