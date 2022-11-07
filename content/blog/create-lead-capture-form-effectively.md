@@ -14,7 +14,9 @@ coverImgAlt: Cover image for the blog, "How to Create a Lead Capture Form Effect
 featured: false
 published: true
 ---
-![Create a Lead Capture Form Effectively](/img/how-to-create-a-lead-capture-form__create-lead-capture-form-effectively.png)
+![Create a Lead Capture Form Effectively](/img/how-to-create-a-lead-capture-form__create-lead-capture-form-effectively.png "Create a Lead Capture Form Effectively")
+
+<﻿br>
 
 The lead acquisition can be time-consuming and expensive- there's no shortcut. Whether investing in affiliate partnerships or referral campaigns, the best lead capture form out there will help you drive the high-converting leads that your business needs. 
 
