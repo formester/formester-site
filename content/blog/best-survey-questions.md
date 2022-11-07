@@ -13,7 +13,7 @@ published: true
 ---
 Surveys can be used to determine respondents' perspectives and experiences. With analytical data, an accurate survey can provide a blueprint for how to proceed to achieve the goal. This analytical data, which represents the behaviour and opinions of the surveyed census, aids in the development of important strategies.
 
-![The best survey questions in 2022](/img/the-best-survey-question-2022__best-survey-questions.png)
+![The best survey questions in 2022](/img/the-best-survey-question-2022__best-survey-questions.png "The best survey questions in 2022")
 
 To ensure the effectiveness of the survey, it is important to determine the survey questions. The quality of the result highly depends upon the types of survey questions you choose.
 
@@ -54,7 +54,7 @@ You can create an online survey to learn about your products and services. A sur
 
 Here are some tips for writing a good survey question:
 
-* **Specify your questions** To get useful data from users, you should be as precise and specific as possible. This will help them to be honest and provide more information.
+* **Specify your questions:** To get useful data from users, you should be as precise and specific as possible. This will help them to be honest and provide more information.
 * **Clarify your motives:** Be direct to keep visitors' attention.
 * **Don't insist on users answering the questions:** Choose your survey questions carefully to avoid losing users who don’t want to share their secrets.
 * **Use closed-ended questions:** On longer surveys, like multi-step ones, try to limit open-ended questions to 1–5.
