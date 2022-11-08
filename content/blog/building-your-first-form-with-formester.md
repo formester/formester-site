@@ -10,7 +10,8 @@ coverImgAlt: Cover image for the blog, "Building your first form with formester"
 featured: false
 published: true
 ---
-![Form builder showing drag and drop functionality](/img/building-your-first-form-with-formester__formester-form-builder-background.png "Form builder showing drag and drop functionality")
+
+![Form builder showing drag and drop functionality](/img/building-your-first-form-with-formester__formester-form-builder-background.png 'Form builder showing drag and drop functionality')
 
 ## Backend as a service
 
@@ -24,7 +25,7 @@ Steps to use formester only as backend:-
 
 <br>
 
-![Forms page showing create your first form button](/img/building-your-first-form-with-formester__formester-form-builder-background.png "Forms page showing create your first form button")
+![Forms page showing create your first form button](/img/building-your-first-form-with-formester__formester-form-builder-background.png 'Forms page showing create your first form button')
 
 <br>
 
@@ -34,7 +35,7 @@ Steps to use formester only as backend:-
 
 <br>
 
-![Form accepting details like form name, redirection url for creating your new form](/img/building-your-first-form-with-formester__form-details.png "Form accepting details like form name, redirection url for creating your new form")
+![Form accepting details like form name, redirection url for creating your new form](/img/building-your-first-form-with-formester__form-details.png 'Form accepting details like form name, redirection url for creating your new form')
 
 <br>
 
@@ -47,7 +48,7 @@ Though it is optional and can be left blank. By doing so the users will be redir
 
 <br>
 
-![Formester default thank you page](/img/building-your-first-form-with-formester__thank-you.png "Formester default thank you page")
+![Formester default thank you page](/img/building-your-first-form-with-formester__thank-you.png 'Formester default thank you page')
 
 <br>
 
@@ -57,7 +58,7 @@ Though it is optional and can be left blank. By doing so the users will be redir
 
 <br>
 
-!["Backend only" option selected while form creation](/img/building-your-first-form-with-formester__service-one-example.png "Backend only option selected while form creation")
+!["Backend only" option selected while form creation](/img/building-your-first-form-with-formester__service-one-example.png 'Backend only option selected while form creation')
 
 <br>
 
@@ -65,7 +66,7 @@ Though it is optional and can be left blank. By doing so the users will be redir
 
 <br>
 
-![Configuration page showing multiple options](/img/building-your-first-form-with-formester__action-url.png "Configuration page showing multiple options")
+![Configuration page showing multiple options](/img/building-your-first-form-with-formester__action-url.png 'Configuration page showing multiple options')
 
 <br>
 
@@ -79,7 +80,7 @@ Steps to build forms with form builder:-
 
 <br>
 
-![Forms page showing create your first form button](/img/building-your-first-form-with-formester__create-your-first-form.png "Forms page showing create your first form button")
+![Forms page showing create your first form button](/img/building-your-first-form-with-formester__create-your-first-form.png 'Forms page showing create your first form button')
 
 <br>
 
@@ -89,7 +90,7 @@ Steps to build forms with form builder:-
 
 <br>
 
-![Form accepting details like form name, redirection url for creating your new form](/img/building-your-first-form-with-formester__form-details.png "Form accepting details like form name, redirection url for creating your new form")
+![Form accepting details like form name, redirection url for creating your new form](/img/building-your-first-form-with-formester__form-details.png 'Form accepting details like form name, redirection url for creating your new form')
 
 <br>
 
@@ -102,7 +103,7 @@ Though it is optional and can be left blank. By doing so the users will be redir
 
 <br>
 
-![Formester default thank you page](/img/building-your-first-form-with-formester__thank-you.png "Formester default thank you page")
+![Formester default thank you page](/img/building-your-first-form-with-formester__thank-you.png 'Formester default thank you page')
 
 <br>
 
@@ -112,7 +113,7 @@ Though it is optional and can be left blank. By doing so the users will be redir
 
 <br>
 
-!["Default" option selected while form creation](/img/building-your-first-form-with-formester__service-two-example.png "Default option selected while form creation")
+!["Default" option selected while form creation](/img/building-your-first-form-with-formester__service-two-example.png 'Default option selected while form creation')
 
 <br>
 
@@ -120,7 +121,7 @@ Though it is optional and can be left blank. By doing so the users will be redir
 
 <br>
 
-![Formester form builder page](/img/building-your-first-form-with-formester__builder.png "Formester form builder page")
+![Formester form builder page](/img/building-your-first-form-with-formester__builder.png 'Formester form builder page')
 
 <br>
 
@@ -139,7 +140,7 @@ Once you are satisfied use the publish button to get the form link along with so
 
 <br>
 
-![Form builder being used for creating and publishing form](/img/building-your-first-form-with-formester__form-example.png "Form builder being used for creating and publishing form")
+![Form builder being used for creating and publishing form](/img/building-your-first-form-with-formester__form-example.png 'Form builder being used for creating and publishing form')
 
 <br>
 
@@ -149,7 +150,7 @@ Here's an example of a form built using Formester
 
 <br>
 
-![Form example built using formester](/img/building-your-first-form-with-formester__final-form.png "Form example built using formester")
+![Form example built using formester](/img/building-your-first-form-with-formester__final-form.png 'Form example built using formester')
 
 <br>
 

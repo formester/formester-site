@@ -13,9 +13,10 @@ coverImgAlt: Cover image for the blog, "single page vs multi page form"
 featured: false
 published: true
 ---
+
 <br>
 
-![Illustration of Single Page vs Multi Page Forms](/img/single-page-vs-multi__single-page-vs-multi-page-forms.png "Illustration of Single Page vs Multi Page Forms")
+![Illustration of Single Page vs Multi Page Forms](/img/single-page-vs-multi__single-page-vs-multi-page-forms.png 'Illustration of Single Page vs Multi Page Forms')
 
 <br>
 
@@ -27,7 +28,7 @@ published: true
 
 <br>
 
-![Scroll up to edit in single-page form while use prev button to edit in mulit-page form](/img/single-page-vs-multi__easy-to-edit.svg "Scroll up to edit in single-page form while use prev button to edit in mulit-page form")
+![Scroll up to edit in single-page form while use prev button to edit in mulit-page form](/img/single-page-vs-multi__easy-to-edit.svg 'Scroll up to edit in single-page form while use prev button to edit in mulit-page form')
 
 <br>
 
@@ -43,7 +44,7 @@ For example - It’s less likely that one will change their name or dob, whereas
 
 <br>
 
-![Multi-page form taking longer time to load then single-page form](/img/single-page-vs-multi__less-overwhelming.svg "Multi-page form taking longer time to load then single-page form")
+![Multi-page form taking longer time to load then single-page form](/img/single-page-vs-multi__less-overwhelming.svg 'Multi-page form taking longer time to load then single-page form')
 
 <br>
 
@@ -59,7 +60,7 @@ Here, Multi Page forms come as a savior. One can easily spread the different que
 
 <br>
 
-![Single-page form looking more overwhelming then multi-page form](/img/single-page-vs-multi__less-overwhelming.svg "Single-page form looking more overwhelming then multi-page form")
+![Single-page form looking more overwhelming then multi-page form](/img/single-page-vs-multi__less-overwhelming.svg 'Single-page form looking more overwhelming then multi-page form')
 
 <br>
 
@@ -69,7 +70,7 @@ Here, Multi Page forms come as a savior. One can easily spread the different que
 
 <br>
 
-![Multi-page form with similar questions grouped together](/img/single-page-vs-multi__less-overwhelming.svg "Multi-page form with similar questions grouped together")
+![Multi-page form with similar questions grouped together](/img/single-page-vs-multi__less-overwhelming.svg 'Multi-page form with similar questions grouped together')
 
 <br>
 
@@ -84,7 +85,7 @@ This will enhance the user experience and will help users to fill out forms fast
 With Formester you can switch between the different types of forms with just a click of a button.
 <br>
 
-![Formester form builder showing toggle button to switch between form types](/img/single-page-vs-multi__toggle-form-type.png "Formester form builder showing toggle button to switch between form types")
+![Formester form builder showing toggle button to switch between form types](/img/single-page-vs-multi__toggle-form-type.png 'Formester form builder showing toggle button to switch between form types')
 
 <br>
 
@@ -92,7 +93,7 @@ By default, any form is a single page form and you can switch to the multi page 
 
 <br>
 
-![Formester is being used to create a multi-page form](/img/single-page-vs-multi__multiple-page-form.png "Formester is being used to create a multi-page form")
+![Formester is being used to create a multi-page form](/img/single-page-vs-multi__multiple-page-form.png 'Formester is being used to create a multi-page form')
 
 <br>
 
@@ -100,7 +101,7 @@ When it’s ready you can either preview or publish it directly, and your form w
 
 <br>
 
-![Formester multi-page form with progress bar](/img/single-page-vs-multi__multi-page-form-example.png "Formester multi-page form with progress bar")
+![Formester multi-page form with progress bar](/img/single-page-vs-multi__multi-page-form-example.png 'Formester multi-page form with progress bar')
 
 <br>
 
