@@ -111,7 +111,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;  
+  font-family: 'Inter', sans-serif;
   font-size: var(--ft-df-body);
   line-height: 28px;
   color: var(--clr-dark);
