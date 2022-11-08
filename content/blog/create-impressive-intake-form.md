@@ -1,19 +1,22 @@
 ---
 title: How to Create an Impressive Intake Form in 5 Easy Steps
-description: An intake form is a document that helps you gather information about your client. This can be used to collect personal information as well as questions about the client's goals, project preferences, experience, skills and budget.
+description: An intake form is a document that helps you gather information
+  about your client. This can be used to collect personal information as well as
+  questions about the client's goals, project preferences, experience, skills
+  and budget.
+keywords: intake form, client intake form, create an intake form, create form
 author: Vivek Badani
-coverImg: create-impressive-intake-form.png
+createdAt: 2022-10-13
+coverImg: /img/how-to-create-an-impressive-intake__create-impressive-intake-form.png
 coverImgAlt: Cover image for the blog, "How to Create an Impressive Intake Form"
 featured: false
 published: true
-createdAt: '2022-10-13'
-keywords: intake form, client intake form, create an intake form, create form
 ---
-
 It helps you gather information about the client, understand their needs, plan strategies based on this information and document progress along the way. Having such detail is essential for you to provide the best service possible.
 
-![How to create an impressive intake form in five easy steps](/blog/cover-images/create-impressive-intake-form.png 'How to create an impressive intake form in five easy steps')
-<br><br>
+![How to create an impressive intake form in five easy steps](/img/how-to-create-an-impressive-intake__create-impressive-intake-form.png "How to create an impressive intake form in five easy steps")
+
+<br>
 
 ## Pro tips for producing an effective intake form
 
@@ -45,37 +48,28 @@ This is the most important thing to keep in mind when creating your intake form:
 
 It is natural that when you first consider to include an intake form in your website, blog or share it across your social media accounts, you might be at a loss. That’s when it's ideal (and even a safe bet) to include the most obvious and basic questions. You could ask:
 
-- Your client’s name
-
-- Their age
-
-- Their gender
-
-- Phone number
-
-- Email address
+* Your client’s name
+* Their age
+* Their gender
+* Phone number
+* Email address
   <br>
 
 ## Go deeper
 
 Once you are done with the basics, it’s time to consider asking questions that will help you to get to know your client in detail.
 
-- Ask the scope of the project they would like you to undertake or the service you can provide.
-
-- It’s also advisable to check with your client if they have worked with any other businesses who provide the same services such as yourself. (This may help you know your competitors).
-
-- If a client has been referred by another provider or organization, it will be helpful to ask them questions about their previous experiences with other providers. (This gives you insight into what kind of services they expect and how best you can offer them the best experience).
+* Ask the scope of the project they would like you to undertake or the service you can provide.
+* It’s also advisable to check with your client if they have worked with any other businesses who provide the same services such as yourself. (This may help you know your competitors).
+* If a client has been referred by another provider or organization, it will be helpful to ask them questions about their previous experiences with other providers. (This gives you insight into what kind of services they expect and how best you can offer them the best experience).
   <br>
 
 ## Winning points in a nutshell
 
-- Keep it simple, use a single page, and make it easy to read.
-
-- Don't make the client scroll; use graphics and images when needed.
-
-- Use conversational language rather than complex terms.
-
-- Be upfront about how you’ll use their information, who will have access to it, and what they can do if they have concerns or need assistance.
+* Keep it simple, use a single page, and make it easy to read.
+* Don't make the client scroll; use graphics and images when needed.
+* Use conversational language rather than complex terms.
+* Be upfront about how you’ll use their information, who will have access to it, and what they can do if they have concerns or need assistance.
   <br>
 
 ## How to Create an Impressive Intake Form in 5 Easy Steps with Formester
@@ -90,45 +84,51 @@ To streamline the process, you finally decide to use a simple client intake form
 After you sign up for formester, you will reach the forms page. Here, click the 'create form' button. You can then start including the name of the form (example: New Client List), the URL (ideally your company website) which your customers will reach after they fill the form, the email that has to be alerted when a client enters his/her details. You can then opt for ‘Drag & Drop’.
 <br><br>
 
-![Form accepting details like form name, redirect url and type of service for creating new form](/blog/create-impressive-take-form/create-new-form-page.png 'Form accepting details like form name, redirect url and type of service for creating new form')
-<br><br>
+![Form accepting details like form name, redirect url and type of service for creating new form](/img/how-to-create-an-impressive-intake__create-new-form-page.png "Form accepting details like form name, redirect url and type of service for creating new form")
+
+<br>
 
 ### Step 2: Ask the obvious
 
 Formester has a simple drag and drop feature that lets you quickly use it without any assistance. It’s always crucial to start your form with the most basic and obvious questions. Asking for their email addresses or phone numbers will help you reach them out.
 <br><br>
 
-![Form builder being used for quickly creating form intake with name, email and phone number fields](/blog/create-impressive-take-form/ask-the-obvious.png 'Form builder being used for quickly creating intake form with name, email and phone number fields')
-<br><br>
+![Form builder being used for quickly creating form intake with name, email and phone number fields](/img/how-to-create-an-impressive-intake__ask-the-obvious.png "Form builder being used for quickly creating intake form with name, email and phone number fields")
+
+<br>
 
 You also have the option to add titles to your form. Clicking on the ‘heading text’ box allows you to add your own words. Give an appropriate title based on your target clients or theme of the services you provide.
-<br><br>
+<br>
 
-![Updating form heading with an appropriate title](/blog/create-impressive-take-form/add-relevant-form-heading.png 'Updating form heading with an appropriate title')
-<br><br>
+![Updating form heading with an appropriate title](/img/how-to-create-an-impressive-intake__add-relevant-form-heading.png "Updating form heading with an appropriate title")
+
+<br>
 
 ### Step 3: Simplify
 
 You also have the option to include ‘multi-choice questions’. This is ideally used to filter the type of clients you receive. The left hand side of the dashboard helps you rearrange the choices or even choose the on/off option for ‘required’ questions.
-<br><br>
+<br>
 
-![Left sidebar showing toggle button to mark question as required](/blog/create-impressive-take-form/make-it-easy-for-them.png 'Left sidebar showing toggle button to mark question as required')
-<br><br>
+![Left sidebar showing toggle button to mark question as required](/img/how-to-create-an-impressive-intake__make-it-easy-for-them.png "Left sidebar showing toggle button to mark question as required")
+
+<br>
 
 ### Step 4: Go long for more
 
 ‘Long text’ box helps you include questions that require longer answers. This is suitable to understand and gather a quick picture of what your client expects from your services.
-<br><br>
+<br>
 
-![Taking in longer answers is made easier with the long text box on the intake form](/blog/create-impressive-take-form/go-long-for-more.png 'Taking in longer answers is made easier with the long text box on the intake form')
-<br><br>
+![Taking in longer answers is made easier with the long text box on the intake form](/img/how-to-create-an-impressive-intake__go-long-for-more.png "Taking in longer answers is made easier with the long text box on the intake form")
+
+<br>
 
 Also consider including a question that allows you to understand the goals of your clients. This ensures you to offer services that suit their needs.
-<br><br>
+<br>
 
-![Including the question "What are your goals for the project?" to better understand the client's objective](/blog/create-impressive-take-form/what-would-you-like-to-achieve.png (Including the question "What are your goals for the project?" to better understand the client's objective))
-<br><br>
+![Including the question "What are your goals for the project?" to better understand the client's objective](/img/how-to-create-an-impressive-intake__go-long-for-more.png "Including the question \"What are your goals for the project?\" to better understand the client's objective")
+
+<br>
 
 ### Step 5: Publish!
 
-![The form is published and the URL is copied](/blog/create-impressive-take-form/publishing-form-after-creation.png 'The form is published and the URL is copied')
+![The form is published and the URL is copied](/img/how-to-create-an-impressive-intake__publishing-form-after-creation.png "The form is published and the URL is copied")
