@@ -49,7 +49,7 @@ Let us now consider the type of questions to ask and the set scenarios of when t
 3. **Open-ended questions** - These questions require time and thought as they have no pre-fixed answers. They give the respondent the chance to explain their likes/dislikes and views/comments in detail for a better and more comprehensive understanding of the researcher.
 
    - _One-line answers_ - These questions require a brief answer based on the personal experience of the respondent. For eg. - What did you like the most about our product?/Which product did you like the most and why?
-   - Subjective brief answers - These types of questions require a detailed answer from the respondent. They help the researcher identify the loopholes and offer a chance to make the experience of their customers better than before. For eg.- What was the purpose of your visit?/How can we make your experience better at the _company name_?
+   - _Subjective brief answers_ - These types of questions require a detailed answer from the respondent. They help the researcher identify the loopholes and offer a chance to make the experience of their customers better than before. For eg.- What was the purpose of your visit?/How can we make your experience better at the _company name_?
 
 Once the researcher is clear about the type of questions they want to fit in the questionnaire is when they must decide on exactly what question to ask to get the best results. Let us consider a business event or visit, online/offline, and look at the apt set of questions to be asked from the client to achieve interesting feedback.
 
