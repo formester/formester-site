@@ -3,14 +3,7 @@
     <div class="container horizontal__padding">
       <div class="row my-5">
         <div
-          class="
-            col-lg-6
-            d-flex
-            flex-column
-            justify-content-center
-            align-items-lg-start align-items-center
-            text-center text-lg-start
-          "
+          class="col-lg-6 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start"
         >
           <h1 class="hero__heading">
             The Only No-Code <span class="hglight">Form</span> Builder You Need
@@ -29,19 +22,15 @@
             <div>✓ &nbsp; Unlimited forms</div>
           </div>
         </div>
-        <div
-          class="
-            col-lg-6
-            d-flex
-            align-items-center
-            justify-content-center
-          "
-        >
-          <img
+        <div class="col-lg-6 d-flex align-items-center justify-content-center">
+          <!-- <img
             src="@/assets/images/home/hero.svg"
             alt="Formester form building with drag and drop interface"
             class="img-fluid hero__image"
-          />
+          /> -->
+          <video loop muted autoplay playsinline style="max-width: 130%">
+            <source src="@/assets/video/hero.webm" type="video/webm" />
+          </video>
         </div>
       </div>
     </div>
