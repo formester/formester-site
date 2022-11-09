@@ -221,7 +221,7 @@ export default {
   font-weight: 500;
   line-height: 24px;
   color: hsla(0, 0%, 20%, 1);
-  margin-top: 16px;
+  margin-top: 20px;
   margin-bottom: 16px;
 }
 
@@ -319,6 +319,10 @@ export default {
   }
 
   .nuxt-content h2 {
+    margin-top: 16px;
+  }
+
+  .nuxt-content h3 {
     margin-top: 16px;
   }
 
