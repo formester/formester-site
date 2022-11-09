@@ -21,8 +21,6 @@ To make our jobs easier, we use an online form builder that helps us create a si
 
 ![Top benefits of using online form builder](/img/top-benefits-of-using-online__top-benefits-of-using-online-form-builder.png 'Top benefits of using online form builder')
 
-<br>
-
 ## Why should you use an online form builder
 
 There are a number of benefits to using an online form builder. If you have ever been in charge of creating a form and collecting data from customers, then this will help you understand the importance of using an online form builder.
@@ -80,7 +78,6 @@ In the Formester blog, we have already covered this topic - [Best Online Form Bu
 ## Why should you opt Formester
 
 While there are plenty of options available for users to select any of the top listed online form builders, here are some key reasons you should consider using Formester to build your first ever form for your business.
-<br>
 
 ![A screenshot of the Formester landing page showing a drag-and-drop form builder](/img/top-benefits-of-using-online__formester-landing-page.png 'A screenshot of the Formester landing page showing a drag-and-drop form builder')
 

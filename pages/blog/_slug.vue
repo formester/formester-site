@@ -143,7 +143,7 @@ export default {
         {
           name: 'keywords',
           content: this.article.keywords,
-        }
+        },
       ],
       link: [
         {
@@ -179,7 +179,7 @@ export default {
           url: 'https://formester.com/logo.png',
         },
       },
-      datePublished: this.article.createdAt
+      datePublished: this.article.createdAt,
     }
   },
 }
@@ -193,33 +193,6 @@ export default {
   color: hsla(0, 0%, 20%, 1);
 }
 
-.nuxt-content h1 {
-  font-size: 1.875rem;
-  font-weight: 600;
-  line-height: 40px;
-  color: hsla(0, 0%, 20%, 1);
-}
-
-.nuxt-content h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 36px;
-  color: hsla(0, 0%, 20%, 1);
-}
-
-.nuxt-content h3 {
-  font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 24px;
-  color: hsla(0, 0%, 20%, 1);
-}
-
-.nuxt-content a {
-  color: var(--clr-primary);
-  text-decoration: underline;
-}
-
-.nuxt-content p,
 .article__desc {
   font-size: 1rem;
   line-height: 24px;
@@ -227,9 +200,47 @@ export default {
   color: hsla(0, 0%, 31%, 1);
 }
 
+.nuxt-content {
+  font-size: 1rem;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: hsla(0, 0%, 31%, 1);
+}
+
+.nuxt-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 36px;
+  color: hsla(0, 0%, 20%, 1);
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.nuxt-content h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 24px;
+  color: hsla(0, 0%, 20%, 1);
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.nuxt-content a {
+  color: var(--clr-primary);
+  text-decoration: underline;
+}
+
 .nuxt-content img {
   height: auto;
   width: 100%;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.nuxt-content ul li,
+.nuxt-content ol li {
+  margin-top: 0px;
+  margin-bottom: 16px;
 }
 
 .sm-text {
@@ -305,6 +316,15 @@ export default {
 @media only screen and (max-width: 768px) {
   .dropdown-link {
     min-width: 480px;
+  }
+
+  .nuxt-content h2 {
+    margin-top: 16px;
+  }
+
+  .nuxt-content img {
+    margin-top: 8px;
+    margin-bottom: 12px;
   }
 }
 @media only screen and (max-width: 576px) {
