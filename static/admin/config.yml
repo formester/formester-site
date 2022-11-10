@@ -5,6 +5,12 @@ backend:
 media_folder: static/img
 public_folder: /img
 
+site_url: https://formester.com
+display_url: https://formester.com
+logo_url: https://formester.com/logo.png
+publish_mode: editorial_workflow
+show_preview_links: true
+
 collections:
   - name: 'blog'
     label: 'Blog'
@@ -12,6 +18,7 @@ collections:
     format: 'frontmatter'
     create: true
     slug: '{{slug}}'
+    preview_path: blog/{{slug}}
     editor:
       preview: false
     fields:
@@ -22,6 +29,6 @@ collections:
       - { label: 'Publish Date', name: 'createdAt', widget: 'datetime' }
       - { label: 'Cover Image', name: 'coverImg', widget: 'image' }
       - { label: 'Cover Image Alt Text', name: 'coverImgAlt', widget: 'string' }
-      - { label: 'Featured', name: 'featured', widget: 'boolean' }
-      - { label: 'Published', name: 'published', widget: 'boolean' }
+      - { label: 'Featured', name: 'featured', widget: 'boolean', default: false }
+      - { label: 'Published', name: 'published', widget: 'boolean', default: false }
       - { label: 'Body', name: 'body', widget: 'markdown' }
