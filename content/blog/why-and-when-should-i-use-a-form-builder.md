@@ -9,7 +9,7 @@ keywords: why use online form builder, reasons to use online form builder, using
   html form builder
 author: Vivek Badani
 createdAt: 2022-11-10T07:23:29.651Z
-coverImg: /img/best-online-form-builder__formester-form-builder-background.png
+coverImg: /img/why-and-when-should-i-use-a-form-builder__hero.png
 coverImgAlt: Hero image for blog title why and when should I use a html form builder
 featured: false
 published: false
