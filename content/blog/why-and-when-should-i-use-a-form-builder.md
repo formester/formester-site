@@ -12,7 +12,7 @@ createdAt: 2022-11-10T07:23:29.651Z
 coverImg: /img/why-and-when-should-i-use-a-form-builder__hero.png
 coverImgAlt: Hero image for blog title why and when should I use a html form builder
 featured: false
-published: false
+published: true
 ---
 No matter which part of the business you work in, you always need to collect data. In order to extract insights, you need to organize it in a meaningful way. Manually collecting data is too cumbersome to scale, so we have forms that streamline the process. As you need to conduct surveys, generate leads, onboard customers, accept applications, collect employee data and perform a whole lot of similar tasks to run a business – online forms are something you cannot do efficiently without.
 
