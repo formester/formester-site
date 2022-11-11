@@ -219,6 +219,27 @@ export default {
           'Starts for free, $39/month for a Bronze User with 1000 submissions',
         ],
         [
+          'Form Limit',
+          'Unlimited even for free users',
+          'Limited Forms - 5 Forms for free, $129/month for Unlimited Forms',
+        ],
+        [
+          'Monthly Form Views',
+          'Unlimited even for free users',
+          'Limited Form Views - 1000 views for free, $49/month for Unlimited Views',
+        ],
+        [
+          'Total Submission Storage',
+          'Unlimited even for free users',
+          '500 Total Submission Storage for free, $39/month for Unlimited',
+        ],
+        [
+          'Branding',
+          'No Formester Branding even in the free plan',
+          'Jotform Branding in free plan, $39/month for No Branding',
+        ],
+        ['HTML Form Backend Service', 'Present', 'Not available'],
+        [
           'Redirection on Submission',
           'Customization available even with the basic plan',
           'Jotform forms also allows redirection',
@@ -251,11 +272,15 @@ export default {
         ],
         ['Spam Protection', 'Present', 'Present'],
         [
+          'Monthly Payment Submissions',
+          'Build in Progress',
+          '$39/month for 100 Monthly Payment Submissions',
+        ],
+        [
           'Automated Email Responses',
           'Present with custom integration',
           'Only in paid plans',
         ],
-        ['HTML Form Backend Service', 'Present', 'Not available'],
         ['Cloud Integrations with Zapier', 'Present', 'Present'],
         ['Deep Performance Analytics', 'Present', 'Present'],
         ['White Labeled Surveys Creation', 'Present', 'Present'],
