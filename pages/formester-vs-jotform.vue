@@ -7,21 +7,22 @@
             class="col-lg-5 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start"
           >
             <h1 class="section__heading">
-              Looking for a <span class="hglight">Powerful</span> Jotform
-              Alternative? Look No Further
+              Jotform Alternative that Gives <span class="hglight">More</span>
             </h1>
             <p class="section__subtitle mt-3">
-              Good-looking forms don’t solve your problem. Dynamic, customizable
-              and experience-driven ones do. With Formester, you can now make
-              your forms ‘work’ for you. Our deep form features - analytics,
-              productive integrations and HTML form backend helps you collect
-              and analyze your audience’s data like never before.
+              Declutter your work with a faster and intuitive form builder.
+              Build good looking forms without fighting the system. With
+              Formester, you can now make your forms ‘work’ for you. Our deep
+              form features - analytics, productive integrations and HTML form
+              backend helps you collect and analyze your audience’s data like
+              never before.
             </p>
             <a
               href="https://app.formester.com/users/sign_up"
               class="btn button hero__button mt-4"
-              >Start a Free Trial</a
             >
+              Try for Free
+            </a>
           </div>
           <div
             class="col-lg-7 d-flex align-items-center justify-content-center"
