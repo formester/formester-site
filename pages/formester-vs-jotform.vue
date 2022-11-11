@@ -231,7 +231,7 @@ export default {
         [
           'Best For',
           'All types of forms and applications including survey lead generation, feedback etc',
-          'Suited for short forms like lead generation. Long/complex forms using Typeform might confuse the users ',
+          'Suited for short forms like lead generation. Long/complex forms using Jotform might confuse the users ',
         ],
         [
           'Mobile First UX',
