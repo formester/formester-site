@@ -27,7 +27,7 @@
             class="col-lg-7 d-flex align-items-center justify-content-center"
           >
             <img
-              src="@/assets/images/formester-vs-typeform-hero-img.svg"
+              src="@/assets/images/formester-vs-page-hero-img.svg"
               alt="Formester form building with drag and drop interface"
               class="img-fluid hero__image"
             />
