@@ -7,7 +7,7 @@
             class="col-lg-5 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start"
           >
             <h1 class="section__heading">
-              Looking for a <span class="hglight">Powerful</span> Typeform
+              Looking for a <span class="hglight">Powerful</span> Jotform
               Alternative? Look No Further
             </h1>
             <p class="section__subtitle mt-3">
@@ -37,14 +37,14 @@
     </section>
 
     <section class="container text-center">
-      <h2 class="section__heading">Formester vs. Typeform: Head To Head</h2>
+      <h2 class="section__heading">Formester vs. Jotform: Head To Head</h2>
       <div class="table-responsive">
         <table class="table text-start comparision__table mx-auto">
           <thead class="bg__light-primary">
             <tr>
               <th scope="col">Features</th>
               <th scope="col">Formester</th>
-              <th scope="col">Typeform</th>
+              <th scope="col">Jotform</th>
             </tr>
           </thead>
           <tbody>
@@ -216,22 +216,43 @@ export default {
         [
           'Pricing',
           'Starts for free, $13/month for a Personal User with 1000 submissions',
-          'Starts at $29/month for 100 submissions',
+          'Starts for free, $39/month for a Bronze User with 1000 submissions',
         ],
+        [
+          'Form Limit',
+          'Unlimited even for free users',
+          'Limited Forms - 5 Forms for free, $129/month for Unlimited Forms',
+        ],
+        [
+          'Monthly Form Views',
+          'Unlimited even for free users',
+          'Limited Form Views - 1000 views for free, $49/month for Unlimited Views',
+        ],
+        [
+          'Total Submission Storage',
+          'Unlimited even for free users',
+          '500 Total Submission Storage for free, $39/month for Unlimited',
+        ],
+        [
+          'Branding',
+          'No Formester Branding even in the free plan',
+          'Jotform Branding in free plan, $39/month for No Branding',
+        ],
+        ['HTML Form Backend Service', 'Present', 'Not available'],
         [
           'Redirection on Submission',
           'Customization available even with the basic plan',
-          'Not available',
+          'Jotform forms also allows redirection',
         ],
         [
           'Website Embedment',
-          'Web forms can be easily and quickly created',
-          'Typeform forms can also be embedded into website',
+          'Web forms can be easily and quickly embedded',
+          'Present but difficult to execute',
         ],
         [
           'Best For',
           'All types of forms and applications including survey lead generation, feedback etc',
-          'Suited for short forms like lead generation. Long/complex forms using Typeform might confuse the users ',
+          'Suited for short forms like lead generation. Long/complex forms using Jotform might confuse the users ',
         ],
         [
           'Mobile First UX',
@@ -241,24 +262,32 @@ export default {
         [
           'Storage',
           'Minimum Storage - 1GB: comes with Basic Plan - $13/month. Business plan - 5GB: $49/month',
-          'Minimum Storage - 1GB: comes with Basic Plan - $25/month. Business Plan - 5GB: $83/month',
+          'Minimum Storage - 10GB: comes with Bronze Plan - $39/month. Silver Plan - 100GB: $49/month',
         ],
         ['Add Media to Forms', 'Present', 'Present'],
-        ['Conditional Logic', 'Present', 'Present'],
-        ['Spam Protection', 'Present', 'Present but difficult to execute'],
+        [
+          'Conditional Logic',
+          'Present',
+          'Present with a lower degree of flexibility',
+        ],
+        ['Spam Protection', 'Present', 'Present'],
+        [
+          'Monthly Payment Submissions',
+          'Build in Progress',
+          '$39/month for 100 Monthly Payment Submissions',
+        ],
         [
           'Automated Email Responses',
           'Present with custom integration',
           'Only in paid plans',
         ],
-        ['HTML Form Backend Service', 'Present', 'Not available'],
         ['Cloud Integrations with Zapier', 'Present', 'Present'],
-        ['Deep Performance Analytics', 'Present', 'Basic'],
-        ['White Labeled Surveys Creation', 'Present', 'Missing'],
+        ['Deep Performance Analytics', 'Present', 'Present'],
+        ['White Labeled Surveys Creation', 'Present', 'Present'],
         [
           'Logo addition to form',
           'Available and can be used by free users too',
-          'A $99 feature',
+          'Available only on single page forms',
         ],
         ['End-to-End Design Customization', 'Present', 'Minimal customization'],
       ],
@@ -268,26 +297,26 @@ export default {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/formester-vs-typeform/',
-        title: 'Looking for a Powerful Typeform Alternative? Look No Further',
+        url: 'https://formester.com/formester-vs-jotform/',
+        title: 'Looking for a Powerful Jotform Alternative? Look No Further',
         description:
           "Good-looking forms don't solve your problem. Dynamic, customizable and experience-driven ones do.",
         mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with formester vs typeform page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs typeform page image alt
+          'https://formester.com/formester-form-builder-background.png', // need to update with formester vs jotform page image
+        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs jotform page image alt
       }
       return getSiteMeta(metaData)
     },
   },
   head() {
     return {
-      title: 'Formester vs Typeform | Formester',
+      title: 'Formester vs Jotform | Formester',
       meta: [...this.meta],
       link: [
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/formester-vs-typeform/',
+          href: 'https://formester.com/formester-vs-jotform/',
         },
       ],
     }

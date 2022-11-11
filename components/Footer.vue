@@ -53,7 +53,9 @@
                 >
               </li>
               <li class="mt-2">
-                <NuxtLink to="/features/powerful-analytics/" class="footer__link"
+                <NuxtLink
+                  to="/features/powerful-analytics/"
+                  class="footer__link"
                   >Powerful Protection</NuxtLink
                 >
               </li>
@@ -103,6 +105,11 @@
               <li class="mt-2">
                 <NuxtLink to="/formester-vs-typeform/" class="footer__link"
                   >Formester vs Typeform</NuxtLink
+                >
+              </li>
+              <li class="mt-2">
+                <NuxtLink to="/formester-vs-jotform/" class="footer__link"
+                  >Formester vs Jotform</NuxtLink
                 >
               </li>
               <li class="mt-2">
@@ -162,8 +169,7 @@
 </template>
 
 <script>
-export default {
-}
+export default {}
 </script>
 
 <style scoped>
