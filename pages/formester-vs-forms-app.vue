@@ -7,7 +7,7 @@
             class="col-lg-5 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start"
           >
             <h1 class="section__heading">
-              Jotform Alternative that Gives <span class="hglight">More</span>
+              Forms.App Alternative that Gives <span class="hglight">More</span>
             </h1>
             <p class="section__subtitle mt-3">
               Declutter your work with a faster and intuitive form builder.
@@ -38,14 +38,14 @@
     </section>
 
     <section class="container text-center">
-      <h2 class="section__heading">Formester vs. Jotform: Head To Head</h2>
+      <h2 class="section__heading">Formester vs. Forms.App: Head To Head</h2>
       <div class="table-responsive">
         <table class="table text-start comparision__table mx-auto">
           <thead class="bg__light-primary">
             <tr>
               <th scope="col">Features</th>
               <th scope="col">Formester</th>
-              <th scope="col">Jotform</th>
+              <th scope="col">Forms.App</th>
             </tr>
           </thead>
           <tbody>
@@ -217,33 +217,33 @@ export default {
         [
           'Pricing',
           'Starts for free, $13/month for a Personal User with 1000 submissions',
-          'Starts for free, $39/month for a Bronze User with 1000 submissions',
+          'Starts for free, $19/month for a Basic User with 1000 submissions',
         ],
         [
           'Form Limit',
           'Unlimited even for free users',
-          'Limited Forms - 5 Forms for free, $129/month for Unlimited Forms',
+          'Limited Forms - 10 Forms for free, $29/month for Unlimited Forms',
         ],
         [
           'Monthly Form Views',
           'Unlimited even for free users',
-          'Limited Form Views - 1000 views for free, $49/month for Unlimited Views',
+          'Limited Form Views - 1000 views for free, $29/month for Unlimited Views',
         ],
         [
           'Total Submission Storage',
           'Unlimited even for free users',
-          '500 Total Submission Storage for free, $39/month for Unlimited',
+          '1000 Total Submission Storage for free, $19/month for Unlimited',
         ],
         [
           'Branding',
           'No Formester Branding even in the free plan',
-          'Jotform Branding in free plan, $39/month for No Branding',
+          'Forms.App Branding in free plan, $19/month for No Branding',
         ],
         ['HTML Form Backend Service', 'Present', 'Not available'],
         [
           'Redirection on Submission',
           'Customization available even with the basic plan',
-          'Jotform forms also allows redirection',
+          'Only in paid plans',
         ],
         [
           'Website Embedment',
@@ -253,7 +253,7 @@ export default {
         [
           'Best For',
           'All types of forms and applications including survey lead generation, feedback etc',
-          'Suited for short forms like lead generation. Long/complex forms using Jotform might confuse the users ',
+          'Suited for short forms like contact us form and registration form. Long/complex forms using Forms.app might confuse the users ',
         ],
         [
           'Mobile First UX',
@@ -263,7 +263,7 @@ export default {
         [
           'Storage',
           'Minimum Storage - 1GB: comes with Basic Plan - $13/month. Business plan - 5GB: $49/month',
-          'Minimum Storage - 10GB: comes with Bronze Plan - $39/month. Silver Plan - 100GB: $49/month',
+          'Minimum Storage - 10GB: comes with Basic Plan - $19/month. Pro Plan - 100GB: $29/month',
         ],
         ['Add Media to Forms', 'Present', 'Present'],
         [
@@ -271,24 +271,24 @@ export default {
           'Present',
           'Present with a lower degree of flexibility',
         ],
-        ['Spam Protection', 'Present', 'Present'],
+        ['Spam Protection', 'Present', 'Basic'],
         [
           'Monthly Payment Submissions',
           'Build in Progress',
-          '$39/month for 100 Monthly Payment Submissions',
+          '$19/month for 100 Monthly Payment Submissions',
         ],
         [
           'Automated Email Responses',
           'Present with custom integration',
-          'Only in paid plans',
+          '25 email notification/month for free, $19/month for unlimited email notifications',
         ],
         ['Cloud Integrations with Zapier', 'Present', 'Present'],
-        ['Deep Performance Analytics', 'Present', 'Present'],
-        ['White Labeled Surveys Creation', 'Present', 'Present'],
+        ['Deep Performance Analytics', 'Present', 'Basic'],
+        ['White Labeled Surveys Creation', 'Present', 'Not Available'],
         [
           'Logo addition to form',
           'Available and can be used by free users too',
-          'Available only on single page forms',
+          'Not Available',
         ],
         ['End-to-End Design Customization', 'Present', 'Minimal customization'],
       ],
@@ -298,26 +298,26 @@ export default {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/formester-vs-jotform/',
-        title: 'Jotform Alternative that Gives More',
+        url: 'https://formester.com/formester-vs-forms-app/',
+        title: 'Forms.App Alternative that Gives More',
         description:
           'Declutter your work with a faster and intuitive form builder. Build good looking forms without fighting the system.',
         mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with formester vs jotform page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs jotform page image alt
+          'https://formester.com/formester-form-builder-background.png', // need to update with formester vs forms.app page image
+        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs forms.app page image alt
       }
       return getSiteMeta(metaData)
     },
   },
   head() {
     return {
-      title: 'Formester vs Jotform | Formester',
+      title: 'Formester vs Forms.App | Formester',
       meta: [...this.meta],
       link: [
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/formester-vs-jotform/',
+          href: 'https://formester.com/formester-vs-forms-app/',
         },
       ],
     }
