@@ -103,14 +103,19 @@
 
             <ul class="list-unstyled mt-2">
               <li class="mt-2">
-                <NuxtLink to="/formester-vs-typeform/" class="footer__link"
-                  >Formester vs Typeform</NuxtLink
-                >
+                <NuxtLink to="/formester-vs-typeform/" class="footer__link">
+                  Formester vs Typeform
+                </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/formester-vs-jotform/" class="footer__link"
-                  >Formester vs Jotform</NuxtLink
-                >
+                <NuxtLink to="/formester-vs-jotform/" class="footer__link">
+                  Formester vs Jotform
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
+                <NuxtLink to="/formester-vs-forms-app/" class="footer__link">
+                  Formester vs Forms app
+                </NuxtLink>
               </li>
               <li class="mt-2">
                 <div class="socials mt-4">
