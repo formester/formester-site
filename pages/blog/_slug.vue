@@ -185,7 +185,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+p {
+  margin-bottom: 2rem;
+
+}
 .article__heading {
   font-size: 2.25rem;
   font-weight: 700;
@@ -194,17 +198,20 @@ export default {
 }
 
 .article__desc {
-  font-size: 1rem;
-  line-height: 24px;
-  letter-spacing: 0.2px;
+  font-size: 17px;
+  line-height: 31px;
   color: hsla(0, 0%, 31%, 1);
 }
 
 .nuxt-content {
-  font-size: 1rem;
-  line-height: 24px;
+  font-size: 17px;
+  line-height: 31px;
   letter-spacing: 0.2px;
   color: hsla(0, 0%, 31%, 1);
+}
+
+.nuxt-content p {
+  margin-bottom: 1.2rem;
 }
 
 .nuxt-content h2 {

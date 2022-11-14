@@ -14,7 +14,8 @@ coverImgAlt: Cover image for the blog, "Top 8 Survey Questions to Ask"
 featured: false
 published: true
 ---
-![Hero image for blog Top survey questions to ask](/img/top-eight-survey-question-to-ask__cover-image.png 'Top survey questions to ask' "Hero image for blog Top survey questions to ask")
+
+![Hero image for blog Top survey questions to ask](/img/top-eight-survey-question-to-ask__cover-image.png 'Top survey questions to ask')
 
 Throwing light on how our lives, in general, feel like a constant race it is essential to invest in less time-consuming things. To carry out an authentic survey, the researcher must carefully examine all angles of their survey to attract the attention of the audience, keep them hooked to the questionnaire, and achieve success in the first hit without wasting any time or effort.
 
