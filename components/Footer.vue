@@ -128,6 +128,11 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
+                <NuxtLink to="/formester-vs-formstack/" class="footer__link">
+                  Formester vs Formstack
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
                 <div class="socials mt-4">
                   <a
                     href="https://instagram.com/_formester_?utm_medium=copy_link"

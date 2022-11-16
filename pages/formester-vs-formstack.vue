@@ -7,7 +7,7 @@
             class="col-lg-5 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start"
           >
             <h1 class="section__heading">
-              Paperform Alternative that Gives <span class="hglight">More</span>
+              Formstack Alternative that Gives <span class="hglight">More</span>
             </h1>
             <p class="section__subtitle mt-3">
               Declutter your work with a faster and intuitive form builder.
@@ -38,14 +38,14 @@
     </section>
 
     <section class="container text-center">
-      <h2 class="section__heading">Formester vs. Paperform: Head To Head</h2>
+      <h2 class="section__heading">Formester vs. Formstack: Head To Head</h2>
       <div class="table-responsive">
         <table class="table text-start comparision__table mx-auto">
           <thead class="bg__light-primary">
             <tr>
               <th scope="col">Features</th>
               <th scope="col">Formester</th>
-              <th scope="col">Paperform</th>
+              <th scope="col">Formstack</th>
             </tr>
           </thead>
           <tbody>
@@ -217,33 +217,34 @@ export default {
         [
           'Pricing',
           'Starts for free, $13/month for a Personal User with 1000 submissions',
-          'Starts at $24/month for 1000 submissions',
+          'Starts for free, $59/month for a Starter Plan with 1000 submissions',
         ],
         [
-          'Monthly Form Views',
+          'Form Limit',
           'Unlimited even for free users',
-          'Limited Form Views - 10000 views for $24/month, $49/month for Unlimited Views',
+          'Limited Forms - 20 Forms for $59/month, $99/month for 100 forms',
         ],
         [
           'Collaborators',
           'Allows collaborators even in free plan',
-          'Single user upto $49/month, 5 users in $159/month',
+          'Single user in $59/month, 5 users in $99/month',
         ],
         [
-          'Total Submission Storage',
-          'Unlimited even for free users',
-          '1000 Total Submission Storage in $24/month, $159/month for Unlimited',
+          'Storage',
+          'Minimum Storage - 1GB: comes with Basic Plan - $13/month. Business plan - 5GB: $49/month',
+          'Minimum Storage - 1GB: comes with Starter Plan - $59/month. Teams Plan - 2GB: $99/month',
         ],
+        ['Add Media to Forms', 'Mutliple Options', 'Only Background Image'],
         [
           'Branding',
           'No Formester Branding even in the free plan',
-          'Paperform Branding upto $24/month, $49/month for No Branding',
+          'No Branding in paid plans',
         ],
         ['HTML Form Backend Service', 'Present', 'Not available'],
         [
           'Redirection on Submission',
           'Customization available even with the basic plan',
-          'Paperform forms also allows redirection',
+          'Formstack forms also allows redirection',
         ],
         [
           'Website Embedment',
@@ -254,37 +255,36 @@ export default {
         [
           'Best For',
           'All types of forms and applications including survey lead generation, feedback etc',
-          'Suited for short forms like lead generation. Form genrated from Paperform have weak design, long/complex forms using Paperform might confuse the users ',
+          'Suited for short forms like lead generation. Form genrated from Formstack have weak design, long/complex forms using Formstack might confuse the users ',
         ],
         [
           'Mobile First UX',
           'Perfectly mobile-first',
-          'Weak-design forms are problematic while using on mobile',
+          'Weak-design forms forms are problematic while using on mobile',
         ],
-        ['Add Media to Forms', 'Present', 'Present'],
         [
           'Conditional Logic',
           'Present',
           'Present with a lower degree of flexibility',
         ],
         ['Spam Protection', 'Present', 'Present'],
-        [
-          'Monthly Payment Submissions',
-          'Build in Progress',
-          '$24/month for 1 Payment Account',
-        ],
+        ['Monthly Payment Submissions', 'Build in Progress', 'Available'],
         [
           'Automated Email Responses',
           'Present with custom integration',
           'Only in paid plans',
         ],
-        ['Cloud Integrations with Zapier', 'Present', 'Present'],
+        [
+          'Cloud Integrations with Zapier',
+          'Present',
+          'Basic Integration, Zapier Not Available',
+        ],
         ['Deep Performance Analytics', 'Present', 'Basic'],
         ['White Labeled Surveys Creation', 'Present', 'Not Available'],
         [
           'Logo addition to form',
           'Available and can be used by free users too',
-          'Not Available specifically',
+          'Not Available',
         ],
       ],
     }
@@ -293,26 +293,26 @@ export default {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/formester-vs-paperform/',
-        title: 'Paperform Alternative that Gives More',
+        url: 'https://formester.com/formester-vs-formstack/',
+        title: 'Formstack Alternative that Gives More',
         description:
           'Declutter your work with a faster and intuitive form builder. Build good looking forms without fighting the system.',
         mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with formester vs paperform page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs paperform page image alt
+          'https://formester.com/formester-form-builder-background.png', // need to update with formester vs formstack page image
+        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs formstack page image alt
       }
       return getSiteMeta(metaData)
     },
   },
   head() {
     return {
-      title: 'Formester vs Paperform | Formester',
+      title: 'Formester vs Formstack | Formester',
       meta: [...this.meta],
       link: [
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/formester-vs-paperform/',
+          href: 'https://formester.com/formester-vs-formstack/',
         },
       ],
     }
