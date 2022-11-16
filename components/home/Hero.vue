@@ -28,7 +28,7 @@
             alt="Formester form building with drag and drop interface"
             class="img-fluid hero__image"
           /> -->
-          <video loop muted autoplay playsinline style="max-width: 130%">
+          <video loop muted autoplay playsinline style="max-width: 90%">
             <source src="@/assets/video/hero.webm" type="video/webm" />
           </video>
         </div>
@@ -42,6 +42,10 @@ export default {}
 </script>
 
 <style scoped>
+video {
+  padding-right: -10rem;
+}
+
 .hero {
   margin-top: 130px;
   margin-bottom: 100px;
