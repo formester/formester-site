@@ -29,7 +29,7 @@
             class="img-fluid hero__image"
           /> -->
           <video loop muted autoplay playsinline style="max-width: 90%">
-            <source src="@/assets/video/hero.webm" type="video/webm" />
+            <source src="@/assets/videos/hero.webm" type="video/webm" />
           </video>
         </div>
       </div>
