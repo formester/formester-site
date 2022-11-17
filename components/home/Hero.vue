@@ -23,13 +23,8 @@
           </div>
         </div>
         <div class="col-lg-6 d-flex align-items-center justify-content-center">
-          <!-- <img
-            src="@/assets/images/home/hero.svg"
-            alt="Formester form building with drag and drop interface"
-            class="img-fluid hero__image"
-          /> -->
-          <video loop muted autoplay playsinline style="max-width: 90%">
-            <source src="@/assets/videos/hero.webm" type="video/webm" />
+          <video loop muted autoplay playsinline style="max-width: 98%">
+            <source src="/videos/hero.webm" type="video/webm" />
           </video>
         </div>
       </div>
