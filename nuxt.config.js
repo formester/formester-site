@@ -41,6 +41,13 @@ export default {
       },
       {
         src: 'js/ga.js',
+        defer: true,
+        async: true,
+      },
+      {
+        src: 'js/hotjar.js',
+        defer: true,
+        async: true,
       },
     ],
   },
