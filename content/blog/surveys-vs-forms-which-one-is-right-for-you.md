@@ -12,7 +12,7 @@ createdAt: 2022-11-24T06:45:26.363Z
 coverImg: /img/best-online-form-builder__formester-form-builder-background.png
 coverImgAlt: Image showing how to create forms and surveys using Formester
 featured: false
-published: false
+published: true
 ---
 Surveys and forms are the two most frequently used methods to carry out any research on the internet. Businesses, marketers, academics, and users from every field need some data points to guide their decision, and forms and surveys are the tools for the job.
 
