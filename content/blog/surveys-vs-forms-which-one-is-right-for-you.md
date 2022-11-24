@@ -71,7 +71,6 @@ Don’t worry, we’ve got you covered!
 
 ### Based on Reliability
 
-\
 Surveys are more reliable as compared to forms because they consist of carefully examined data as compared to the latter. Surveys also clarify the accurate motivation, opinion, and views of the individual to not leave any disparity in research. Consider research being done on why people in a particular area do not like to send their children to school. A survey will capture every aspect of this research subjectively whereas a form will only contain the views of individuals.
 
 ### Based on the availability of Time
