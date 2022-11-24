@@ -101,6 +101,6 @@ Surveys present you with deeper insights as the data is collected from a group o
 
 Surveys require investment and are costly as compared to forms. When building surveys it’s you who will be reaching out to your target audience whereas forms are for people who naturally come to your business and you want to engage with them. For eg: If an individual wants to register for an event, he/she will approach the authority or visit the website to fill out the form whereas if you want feedback on the whole event through a survey then you approach the attendees.
 
-### C﻿onclusion
+## C﻿onclusion
 
 After carefully examining the two methods of data collection, one thing can be designated: surely, these two terms, Surveys, and Forms, cannot be used interchangeably. They are extremely different from one another and serve varying purposes. Being clear about the meaning of the two gives the researcher as well as the participants a clear idea of the purpose of the questions being asked. Surveys and forms have proved to be a successful way to engage your customers to give voice to their concerns and also help any business to thrive with engagement, further lowering the chances of them spending their time and money elsewhere. Forms and surveys have become a building block for the entire user experience workflow. Data collection methods like surveys and forms make your website look intriguing and active as compared to static content.
