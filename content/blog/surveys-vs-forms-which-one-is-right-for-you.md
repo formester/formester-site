@@ -9,7 +9,7 @@ keywords: surveys, forms, how is a form different from survey, key differences
   between form and survey
 author: Mriganka Chandra
 createdAt: 2022-11-24T06:45:26.363Z
-coverImg: /img/best-online-form-builder__formester-form-builder-background.png
+coverImg: /img/survey-vs-forms__hero.png
 coverImgAlt: Image showing how to create forms and surveys using Formester
 featured: false
 published: true
@@ -23,6 +23,8 @@ We’ve carefully put together constructive points to clarify any confusion abou
 A survey is a collection of detailed, organized, analyzed, and comprehensive questions collecting all the significant details that are required for the research and also to draft the final feedback. There are [several ways to create or build a survey](https://www.qualtrics.com/blog/how-to-create-a-survey/) that fulfills the purpose throughout the research. These surveys can go on for a longer time depending upon the observation and analysis required to complete and execute them. 
 
 A form, on the other hand, is similar to a survey but is more precise and less detailed. It is a culmination of close-ended as well as subjective, open-ended questions. A form is primarily used for quantitative data collection.
+
+![Survey vs Forms Infographics - showing comparison](/img/survey-vs-forms__infographic.png "Survey vs Forms Infographics - showing comparison")
 
 Want to create your desired Form or Survey using simple steps? **[Click here](https://app.formester.com/users/sign_in)**.
 
@@ -61,8 +63,6 @@ Forms are quick to fill, efficient, and fulfill the purpose of a quick plan of a
 15. Simple and efficient appointment setting
 16. Attendance purposes
 
-
-
 ## Comparative analysis of Surveys and Forms
 
 Are you also confused as to when one should rely on survey research or when to choose to get a simple form filled out? 
@@ -74,35 +74,33 @@ Don’t worry, we’ve got you covered!
 \
 Surveys are more reliable as compared to forms because they consist of carefully examined data as compared to the latter. Surveys also clarify the accurate motivation, opinion, and views of the individual to not leave any disparity in research. Consider research being done on why people in a particular area do not like to send their children to school. A survey will capture every aspect of this research subjectively whereas a form will only contain the views of individuals.
 
-### Based on the availability of Time 
+### Based on the availability of Time
 
 Surveys are generally longer and ask more questions as compared to a form whose job is to task minimum required information and move you to the next step. Consider a situation where a business owner wants to take a quick poll on how the customers are reacting to a particular new product that was launched as a trial product, in such a scenario a form works best whereas a survey will not be a good fit.
 
-### Based on Efficiency 
+### Based on Efficiency
 
 Forms save loads of paperwork by finishing the entire process smoothly on any online platform and compiling results in one document to avoid any further confusion as compared to surveys which require a lot of paperwork, for example, a business owner wants to initiate research on their bridal collection for a month by taking feedback from clients, the most efficient way would be a combination of forms, questionnaire, and a comprehensive survey.
 
-### Based on Detail 
+### Based on Detail
 
 Surveys present you with comprehensive, detailed, and subjective data as compared to forms. For instance - If a school/college wants to conduct a study on the participation of students in co-curricular vs academics, a survey would present all the facts in detail whereas a form will present opinionated reviews.
 
-### Professional purposes 
+### Professional purposes
 
 The method should be chosen depending on the needs of the employer and their audience. For example - forms make the hiring process super efficient for the employer as well as saves the time of both the parties involved whereas for a specific investment a survey holds higher importance and fetches the employer far greater results in terms of accuracy and information.
 
-### Based on accuracy 
+### Based on accuracy
 
 Surveys are more accurate as compared to forms as they have been conducted with due time and diligence by considering far more elements than those involved in forms. Accuracy is directly proportional to the cross-checking of the data in the research hence surveys stand a higher chance as compared to forms. 
 
-### Based on the individual 
+### Based on the individual
 
 Surveys present you with deeper insights as the data is collected from a group of people instead of a single individual as is the general case with data collection in forms. 
 
-### Based on cost 
+### Based on cost
 
 Surveys require investment and are costly as compared to forms. When building surveys it’s you who will be reaching out to your target audience whereas forms are for people who naturally come to your business and you want to engage with them. For eg: If an individual wants to register for an event, he/she will approach the authority or visit the website to fill out the form whereas if you want feedback on the whole event through a survey then you approach the attendees.
-
-
 
 ### C﻿onclusion
 
