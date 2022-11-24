@@ -55,7 +55,6 @@
           by
           <span class="article__author">{{ article.author }}</span>
         </div>
-        <p class="article__desc mt-4">{{ article.description }}</p>
         <nuxt-content :document="article" />
       </article>
     </div>
