@@ -14,6 +14,12 @@ featured: false
 published: true
 ---
 
+There’s no limit to the number of ways you can utilize online
+surveys. From market research to feedback and insights for improving your
+product – we need them everywhere. Amidst the information age of today,
+businesses deeply depend on the data received and analyzed through online
+surveys.
+
 ![Seven assured ways to imporve your online surveys](/img/seven-assured-way-to-improve__seven-assured-ways-to-improve-your-online-surveys.png 'Seven assured ways to imporve your online surveys')
 
 But even after spending enough time in creating, designing and spreading your online surveys - how often does your target audience actively engage with them? What’s the average response rate? Probably not as much as you expect, right?

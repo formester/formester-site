@@ -13,6 +13,11 @@ featured: false
 published: true
 ---
 
+An intake form is a document that helps you gather information
+about your client. This can be used to collect personal information as well as
+questions about the client's goals, project preferences, experience, skills
+and budget.
+
 It helps you gather information about the client, understand their needs, plan strategies based on this information and document progress along the way. Having such detail is essential for you to provide the best service possible.
 
 ![How to create an impressive intake form in five easy steps](/img/how-to-create-an-impressive-intake__create-impressive-intake-form.png 'How to create an impressive intake form in five easy steps')

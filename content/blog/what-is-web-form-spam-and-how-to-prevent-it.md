@@ -16,6 +16,12 @@ featured: false
 published: true
 ---
 
+Websites have been here for a while, and so are web forms.
+Businesses use web forms for various use cases ranging from lead generation,
+feedback, newsletter signup, and even for taking customer order details.
+Despite forms being very useful, they also serve as a breeding ground for
+pests — electronic pests, which we can call bots.
+
 ![What is web form spam and how to prevent it?](/img/what-is-web-form-spam-and-how-to-prevent-it.png 'What is web form spam and how to prevent it?')
 
 These bots are pre-programmed with keywords and a list of forum or website URLs. They crawl or visit these URLs and fill in the web forms with these keywords. These are useless submissions for the business, and this is what we call **SPAM**.

@@ -15,6 +15,12 @@ featured: false
 published: true
 ---
 
+As we grow our business, so do our clients or customers. Eventually
+it becomes hard to keep a track of them. Collecting and maintaining their
+details such as name, email addresses, phone numbers, project preferences,
+budget, and among other things helps us analyze our clientele over a period of
+time.
+
 Having such information is crucial to keep a record of whom we work with and also what we can do to offer better services for long term business relationships.
 
 To make our jobs easier, we use an online form builder that helps us create a simple data collection form such as surveys or registration documents.

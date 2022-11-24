@@ -16,6 +16,13 @@ featured: false
 published: true
 ---
 
+We are living in a digitally-driven world and online forms are
+needed in a majority of business and user activities. From asking users to
+sign up to booking events, generating leads, purchasing products, performing
+payments, conducting surveys, and more – applications of both standalone and
+web forms are truly endless. No doubt online forms play an important role for
+businesses by boosting interactivity and information sharing.
+
 ![How to create a form or survey using form builder](/img/how-to-create-a-form__how-to-create-form-or-survey.png 'How to create a form or survey using form builder')
 
 While creating online forms, integrating them to your website, and storing collected data automatically were quite hectic tasks earlier, it’s not the case anymore. With tools like Formester which are extensively easy to use and make it possible to build effective online forms within minutes – user interactions and data collection activities have become significantly more convenient.
