@@ -19,8 +19,6 @@ Digital forms have reduced effort, time, and difficulty levels by 10x ratios. We
 
 [Click here](https://app.formester.com) to access the one-stop solution to all your form drafting requirements!!
 
-
-
 ## Major benefits of Digital Forms
 
 1. Supports any work situation - these forms are designed to be readily accessed as well as assessed by individuals while working from home, in remote-area, in office cabins, or while on the move.
@@ -42,9 +40,9 @@ Let us now hop on to discuss the pros and cons of both alternatives:
 4. Efficiency (Higher in mobile phones and lower in desktops) - It is easier to work on a keyboard through the desktop rather than on a keypad on the mobile phone, making the job of filling the form smooth and more efficient for the user through the desktop.
 5. Depending upon the external elements (Higher in desktops and lower in mobile phones) - On a desktop, you have a mouse to navigate the cursor easily on the screen whereas a mobile phone does not give you this option making screen navigation problematic.
 6. Depending upon Adaptability (Higher on desktops and lower on mobile phones) - All online forms designed by businesses are desktop-friendly whereas some of them are not aligned to work on a mobile phone. 
-7. Depending upon Accessibility (Higher in mobile phones and lower in desktops)- Mobile phones are considered more accessible as far as productivity is concerned including remote area accessibility when compared to desktops. Forms filled on mobile phones require a desk-free scenario and can be easily converted into PDFs and shared instantly for data analysis. 
+7. Depending upon Accessibility (Higher in mobile phones and lower in desktops)- Mobile phones are considered more accessible as far as productivity is concerned including remote area accessibility when compared to desktops. Forms filled on mobile phones require a desk-free scenario and can be easily converted into PDFs and shared instantly for data analysis.
 
-
+Once you have determined your need for mobile/desktop forms you should also read [how single page forms and different from mutlipage forms](https://formester.com/blog/single-page-vs-multi-page-forms/) and when you should use them.
 
 ## C﻿onclusion
 
