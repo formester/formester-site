@@ -17,6 +17,8 @@ published: true
 
 Digital forms have reduced effort, time, and difficulty levels by 10x ratios. We must also consider how sustainability has taken over our lives with a blissful whip and how these digital forms have proved to be the best way for businesses to save paper and replace the traditional methods of drafting, printing, and collecting data physically. Digital forms effortlessly capture information in real-time to assist in the immediate review of the data collected. In the next segment let us cover the benefits of digital forms and justify how they have made our lives efficient and simpler.
 
+![Mobile forms vs Desktop Forms - Pros and Cons of each form type](/img/mobile-form-vs-desktop-form__hero.png "Mobile forms vs Desktop Forms - Pros and Cons of each form type")
+
 [Click here](https://app.formester.com) to access the one-stop solution to all your form drafting requirements!!
 
 ## Major benefits of Digital Forms
