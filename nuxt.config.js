@@ -73,7 +73,11 @@ export default {
   css: ['~/assets/css/bootstrap.min.css', '~/assets/css/main.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~plugins/jsonld'],
+  plugins: [
+    '~plugins/jsonld',
+    { src: '~/plugins/notifications-ssr', ssr: true },
+    { src: '~/plugins/notifications-client', ssr: false }
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -126,4 +130,10 @@ export default {
   content: {
     liveEdit: false,
   },
+
+  // Enviornment variable for the base url of the app
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+  }
+
 }

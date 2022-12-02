@@ -5,6 +5,7 @@
         class="container mw-840 mt-8rem"
         :class="{ 'mb-3rem': !(article.cta && article.cta.hidden) }"
       >
+      <div class="blog__header">
         <NuxtLink
           :to="`/blog/`"
           class="blog__back"
@@ -12,6 +13,21 @@
         >
           <span>← Back</span>
         </NuxtLink>
+        <div class="social__links">
+          <a :href="`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${article.title} by @_Formester_ `" class="social-icons" target="_blank">
+            <TwitterIcon class="social-icons"/>
+          </a>
+          <a  :href="`https://www.facebook.com/sharer.php?u=${encodedUrl}`" class="social-icons" target="_blank">
+            <FacebookIcon class="social-icons"/>
+          </a>
+          <a  :href="`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}`" class="social-icons" target="_blank">
+            <LinkdinIcon class="social-icons"/>
+          </a>
+          <span class="social-icons" @click="copyToClipboard">
+            <CopyLinkIcon class="social-icons"/>
+          </span>
+        </div>
+      </div>
         <nav
           v-if="article.toc.length"
           class="navbar navbar-expand bg-white sticky-top py-3"
@@ -56,6 +72,7 @@
           <span class="article__author">{{ article.author }}</span>
         </div>
         <nuxt-content :document="article" />
+        <notifications position="bottom right" class="my-notification"/>
       </article>
     </div>
     <CallToActionSection :content="article.cta" />
@@ -64,13 +81,20 @@
 
 <script>
 import ClockIcon from '../../components/icons/ClockIcon.vue'
-
+import TwitterIcon from '../../components/icons/twitter.vue'
+import FacebookIcon from '../../components/icons/facebook.vue'
+import LinkdinIcon from '../../components/icons/linkdin.vue'
+import CopyLinkIcon from '../../components/icons/copyLink.vue'
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
 
 export default {
   components: {
     ClockIcon,
+    TwitterIcon,
+    FacebookIcon,
+    LinkdinIcon,
+    CopyLinkIcon
   },
   content: {
     liveEdit: false,
@@ -88,6 +112,13 @@ export default {
     to() {
       this.$router.back()
     },
+    copyToClipboard(){ 
+      if (process.client) {
+        navigator.clipboard.writeText(window.location.href).then(()=>{
+          this.$notify({ type: 'success', text: 'Link copied to clipboard' })
+        });
+      }
+    }
   },
   computed: {
     meta() {
@@ -105,6 +136,9 @@ export default {
       }
       return getSiteMeta(metaData)
     },
+    encodedUrl(){
+      return encodeURIComponent(process.env.baseUrl + this.$route.fullPath);
+    }
   },
   head() {
     return {
@@ -284,15 +318,6 @@ p {
   gap: 0.5rem;
 }
 
-.blog__back {
-  margin-top: -4rem;
-  position: absolute;
-  color: #777;
-}
-
-.blog__back__margin {
-  margin-top: -3rem;
-}
 
 #tocMenuLink {
   color: #777;
@@ -313,6 +338,22 @@ p {
   min-width: 750px;
   width: 100%;
   display: block;
+}
+
+.blog__header{
+  margin-top: -4rem;
+  justify-content: space-between;
+  display: flex;
+}
+.blog__header span{
+  color: #777;
+}
+.social__links{
+  display: flex;
+}
+.social-icons{
+  margin: 0 3px;
+  cursor: pointer;
 }
 @media only screen and (max-width: 992px) {
   .dropdown-link {
@@ -337,6 +378,7 @@ p {
     margin-bottom: 12px;
   }
 }
+
 @media only screen and (max-width: 576px) {
   .dropdown-link {
     min-width: 370px;
