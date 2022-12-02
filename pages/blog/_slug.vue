@@ -15,16 +15,16 @@
         </NuxtLink>
         <div class="social__links">
           <a :href="`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${article.title} by @_Formester_ `" class="social-icons" target="_blank">
-            <TwitterIcon class="social-icons"/>
+            <TwitterIcon />
           </a>
           <a  :href="`https://www.facebook.com/sharer.php?u=${encodedUrl}`" class="social-icons" target="_blank">
-            <FacebookIcon class="social-icons"/>
+            <FacebookIcon />
           </a>
           <a  :href="`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}`" class="social-icons" target="_blank">
-            <LinkdinIcon class="social-icons"/>
+            <LinkdinIcon />
           </a>
           <span class="social-icons" @click="copyToClipboard">
-            <CopyLinkIcon class="social-icons"/>
+            <CopyLinkIcon />
           </span>
         </div>
       </div>
@@ -352,8 +352,11 @@ p {
   display: flex;
 }
 .social-icons{
-  margin: 0 3px;
+  margin: 0 6px;
   cursor: pointer;
+}
+.social-icons{
+  fill: #000;
 }
 @media only screen and (max-width: 992px) {
   .dropdown-link {

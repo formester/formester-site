@@ -75,7 +75,6 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~plugins/jsonld',
-    { src: '~/plugins/notifications-ssr', ssr: true },
     { src: '~/plugins/notifications-client', ssr: false }
   ],
 
