@@ -132,7 +132,7 @@ export default {
 
   // Enviornment variable for the base url of the app
   env: {
-    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+    baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'http://localhost:3000'
   }
 
 }
