@@ -237,6 +237,7 @@ p {
 }
 
 .nuxt-content {
+  margin-top: 18px;
   font-size: 17px;
   line-height: 31px;
   letter-spacing: 0.2px;
