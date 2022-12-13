@@ -36,7 +36,7 @@ If you aren’t utilizing online surveys already, it’s high time you start doi
 
 - **Automated data handling:** The biggest benefit of using online surveys is storing the responses automatically in a database. Additionally, it’s easy to handle with minimal chance of errors.
 
-- **Functional & design flexibility:** As surveys are often designed as [online forms](https://formester.com/blog/building-your-first-form-with-formester/ 'Building your first form with formester'), they can be curated as per your requirements. From different types of question responses to flexible design elements, an online survey is completely flexible for you to deliver a creative interaction.
+- **Functional & design flexibility:** As surveys are often designed as [online forms](/blog/building-your-first-form-with-formester/ 'Building your first form with formester'), they can be curated as per your requirements. From different types of question responses to flexible design elements, an online survey is completely flexible for you to deliver a creative interaction.
 
 - **Economical:** Before online surveys, collecting data from audiences was not only tedious - it was expensive too. Now as online surveys can be independently shared, and embedded in websites and emails - they’re way more economical.
 
@@ -102,4 +102,4 @@ As a rule of thumb, a survey with 10-15 questions is considered to be ideal but 
 
 ![An online survey form is being created using Formster](/img/seven-assured-way-to-improve__survey-form.svg 'An online survey form is being created using Formster')
 
-Now that you know the best practices needed to deliver a fascinating online survey experience, it’s high time you up your game with an easy yet effective online survey form builder. If you believe creating online survey forms is a complex task, you’ve probably not used the right tool. [Formester](https://formester.com/) helps create online forms that are flexible, engaging and adaptive to your use-case environment. From web forms to independently designed survey forms and a lot more, Formester enables you to build online forms in a jiffy.
+Now that you know the best practices needed to deliver a fascinating online survey experience, it’s high time you up your game with an easy yet effective online survey form builder. If you believe creating online survey forms is a complex task, you’ve probably not used the right tool. [Formester](/) helps create online forms that are flexible, engaging and adaptive to your use-case environment. From web forms to independently designed survey forms and a lot more, Formester enables you to build online forms in a jiffy.

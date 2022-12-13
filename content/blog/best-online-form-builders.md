@@ -39,7 +39,7 @@ Let’s take a look at the best online form builders currently and find out how 
 
 ![Form builder showing drag and drop functionality](/img/best-online-form-builder__formester-form-builder-background.png 'Form builder showing drag and drop functionality')
 
-[Formester](https://formester.com/) is the one and only combined solution for online forms and HTML form backend (more on this later). The most critical aspect of any online form builder is the ease and convenience that it offers – and our platform ensures that. Creating a form for your surveys, feedback, registration, lead generation, events and a number of other applications, is comprehensively simple. The drag-and-drop interface helps you build your online form in minutes so that you can focus on efficient distribution and maximize your ROI. Further, our solution enables you to manage the collected data and access the form analytics for a detailed study of your responses.
+[Formester](/) is the one and only combined solution for online forms and HTML form backend (more on this later). The most critical aspect of any online form builder is the ease and convenience that it offers – and our platform ensures that. Creating a form for your surveys, feedback, registration, lead generation, events and a number of other applications, is comprehensively simple. The drag-and-drop interface helps you build your online form in minutes so that you can focus on efficient distribution and maximize your ROI. Further, our solution enables you to manage the collected data and access the form analytics for a detailed study of your responses.
 
 ![TEDx organiser Thibaud Martinez saying that he enjoys the clean and straight forward nature of formester](/img/best-online-form-builder__formester-testimonial.png 'TEDx organiser Thibaud Martinez saying that he enjoys the clean and straight forward nature of formester')
 
@@ -65,7 +65,7 @@ Tailoring your form and its user experience is vital, after all, that’s what y
 
 Do you want to learn to create online forms using Formester?
 
-Read more: [Here’s how Formester helps you create interactive and experiential online forms within minutes in a hassle-free way.](https://formester.com/blog/building-your-first-form-with-formester/ 'Building your first form with formester')
+Read more: [Here’s how Formester helps you create interactive and experiential online forms within minutes in a hassle-free way.](/blog/building-your-first-form-with-formester/ 'Building your first form with formester')
 
 **Pricing**: Starts free; Personal plan begins at $13/month
 
@@ -131,4 +131,4 @@ Formsite is an expensive solution as it allows a very limited number of forms to
 
 ## Which Online Form Builder Should You Choose?
 
-The answer to this question is subjective to your requirements. Analyze if you’re looking for a free or paid solution, and what are your form requirements. For a very basic form with no specific design needs – you can go with Google Forms. And if you want to deliver a prolific user experience through your online forms, [Formester](https://formester.com/) can be your perfect destination. The plans at Formester start for free and it’s one of the most economical, yet comprehensive online form builders.
+The answer to this question is subjective to your requirements. Analyze if you’re looking for a free or paid solution, and what are your form requirements. For a very basic form with no specific design needs – you can go with Google Forms. And if you want to deliver a prolific user experience through your online forms, [Formester](/) can be your perfect destination. The plans at Formester start for free and it’s one of the most economical, yet comprehensive online form builders.
