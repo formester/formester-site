@@ -40,12 +40,12 @@ export default {
         async: true,
       },
       {
-        src: 'js/ga.js',
+        src: '/js/ga.js',
         defer: true,
         async: true,
       },
       {
-        src: 'js/hotjar.js',
+        src: '/js/hotjar.js',
         defer: true,
         async: true,
       },
