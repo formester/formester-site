@@ -60,7 +60,7 @@ We saw what a form builder is along with the core features you can expect. Letâ€
 
 ## Applications of a Form Builder
 
-The potential users of an [easy HTML form builder](http://formester.com) are infinite. From marketers to salespeople, recruiters, executives, students, teachers, small business owners, and numerous other professionals might need it usually. While there are a lot of use cases for online forms and form-building tools, here are the most prominent applications.
+The potential users of an [easy HTML form builder](https://formester.com) are infinite. From marketers to salespeople, recruiters, executives, students, teachers, small business owners, and numerous other professionals might need it usually. While there are a lot of use cases for online forms and form-building tools, here are the most prominent applications.
 
 ### \#1 Lead Generation
 
