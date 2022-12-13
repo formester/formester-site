@@ -80,7 +80,7 @@ Once you are done with the basics, it’s time to consider asking questions that
 
 Let’s assume you run an online digital company that offers services such as content writing, digital marketing, graphic designing or website creation. As you get more and more customers, it is becoming a hassle for you to keep track of new clients reaching out to you.
 
-To streamline the process, you finally decide to use a simple client intake form that helps you ease out the rush and filter data. Here’s how you can create a form in six simple steps using [Formester](https://formester.com/).
+To streamline the process, you finally decide to use a simple client intake form that helps you ease out the rush and filter data. Here’s how you can create a form in six simple steps using [Formester](/).
 
 ### Step 1: Set it up
 

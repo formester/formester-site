@@ -44,7 +44,7 @@ Let us now hop on to discuss the pros and cons of both alternatives:
 6. Depending upon Adaptability (Higher on desktops and lower on mobile phones) - All online forms designed by businesses are desktop-friendly whereas some of them are not aligned to work on a mobile phone. 
 7. Depending upon Accessibility (Higher in mobile phones and lower in desktops)- Mobile phones are considered more accessible as far as productivity is concerned including remote area accessibility when compared to desktops. Forms filled on mobile phones require a desk-free scenario and can be easily converted into PDFs and shared instantly for data analysis.
 
-Once you have determined your need for mobile/desktop forms you should also read [how single page forms are different from multipage forms](https://formester.com/blog/single-page-vs-multi-page-forms/) and when you should use them.
+Once you have determined your need for mobile/desktop forms you should also read [how single page forms are different from multipage forms](/blog/single-page-vs-multi-page-forms/) and when you should use them.
 
 ## C﻿onclusion
 

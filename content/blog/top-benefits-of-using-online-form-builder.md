@@ -45,7 +45,7 @@ With an online form builder however there are no limits whatsoever; all types of
 
 Creating mobile friendly online forms means that when someone visits your site on their smartphone or tablet device they'll see exactly what they expect — something readable without any unnecessary distractions detracting from its functionality.
 
-Tools such as [Formester](https://formester.com/) make it super easy for you to build an online form that is not just compatible with desktop browsers but also for mobiles or tablets.
+Tools such as [Formester](/) make it super easy for you to build an online form that is not just compatible with desktop browsers but also for mobiles or tablets.
 
 ### 3. Responsive design
 
@@ -79,7 +79,7 @@ By now, we all know that online form builders are great for creating forms witho
 
 - Finally, make sure you test your form thoroughly. It may seem obvious, but testing your form is important because it helps you identify problems before they become major issues.
 
-In the Formester blog, we have already covered this topic - [Best Online Form Builders 2022: How to Choose the Ideal One?](https://formester.com/blog/best-online-form-builders/ 'Best online form builders 2022'). We have listed out the factors to consider before you choose which tool will be the right choice for you.
+In the Formester blog, we have already covered this topic - [Best Online Form Builders 2022: How to Choose the Ideal One?](/blog/best-online-form-builders/ 'Best online form builders 2022'). We have listed out the factors to consider before you choose which tool will be the right choice for you.
 
 ## Why should you opt Formester
 
@@ -93,7 +93,7 @@ Each online form builder that’s available has its own pros and cons. But one o
 
 ### 2. Easy to build
 
-The other major pluses of using Formester is its ease to build drag-and-drop features that require little to no instructions. The [text-easy HTML form builder](https://formester.com/ 'Formester') dashboard is designed in such a way that a user can explore the different tools that’s available without feeling overwhelmed.
+The other major pluses of using Formester is its ease to build drag-and-drop features that require little to no instructions. The [text-easy HTML form builder](/ 'Formester') dashboard is designed in such a way that a user can explore the different tools that’s available without feeling overwhelmed.
 
 ### 3. Easy to embed
 

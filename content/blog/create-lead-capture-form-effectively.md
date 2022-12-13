@@ -77,4 +77,4 @@ Various paid lead gen form platforms allow you to make multiple versions of the 
 
 ## Step Up Your Form Building Game With Formester
 
-Now that you're aware of how to create the lead gen form, you might as well want to level up your game with a one-stop solution for building forms. If you think creating the lead generation form is too much of a task, using the right tool for your business can change your mind. [Formester](https://formester.com/) comes in as the saviour that will help you create engaging, interactive, and adaptive forms per your business requirements.
+Now that you're aware of how to create the lead gen form, you might as well want to level up your game with a one-stop solution for building forms. If you think creating the lead generation form is too much of a task, using the right tool for your business can change your mind. [Formester](/) comes in as the saviour that will help you create engaging, interactive, and adaptive forms per your business requirements.
