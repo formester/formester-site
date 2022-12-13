@@ -70,7 +70,7 @@ They used an online quiz maker to create engaging online quizzes to know about t
 
 Online quizzes can be a great way to increase the email list and get leads. eCommerce beauty brands are likely to benefit the most from it. If they provide a one-on-one consultation with experts at the end of a brand like Soko Glam, the leads will increase.
 
-Customers who want to book a consultation will provide an email to receive the invite. Therefore, you can use the email for [lead-capturing purposes](https://formester.com/blog/create-lead-capture-form-effectively). When you help your potential customers, they will likely remain more loyal to your brand than your competitors.
+Customers who want to book a consultation will provide an email to receive the invite. Therefore, you can use the email for [lead-capturing purposes](https://formester.com/blog/create-lead-capture-form-effectively/). When you help your potential customers, they will likely remain more loyal to your brand than your competitors.
 
 ## Conclusion
 
