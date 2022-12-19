@@ -50,11 +50,14 @@ published: false
 
 **Use**
 
+```
+Use:
 * Name – Can be anything of your choice
 * SMTP server - smtp.sendgrid.net
 * Port - 587  ( Some users may have different ports do checkout other ports as well 25/465/587/2525)
-*   Username - apikey
-*   Password - password created at the time of apikey generation
-*   From email – your SendGrid account id
+* Username - apikey
+* Password - password created at the time of apikey generation
+* From email – your SendGrid account id
+```
 
 Add your credentials and click on three dots at the end of the mail account and select the Test option. Wait for a few seconds for the result.
