@@ -9,7 +9,7 @@ createdAt: 2022-12-19T04:14:23.956Z
 coverImg: /img/how-to-integrate-google-smtp-with-formester.png
 coverImgAlt: How to integrate Google SMTP with formester
 featured: false
-published: false
+published: true
 ---
 **Step 1:** [Visit](https://myaccount.google.com/u/1/?hl=en&utm_source=OGB&utm_medium=act "Google Login Account") and login to your Google Account
 
