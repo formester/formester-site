@@ -11,6 +11,8 @@ coverImgAlt: How to integrate Google SMTP with formester
 featured: false
 published: true
 ---
+**How to use Google SMTP Server**
+
 **Step 1:** [Visit ](https://myaccount.google.com/u/1/?hl=en&utm_source=OGB&utm_medium=act "Google Login Account") and login to your Google Account
 
 ![Login to your google account](/img/how-to-integrate-google-smtp-with-formester__home-screen.png "Login to your google account")
@@ -40,7 +42,7 @@ published: true
 ![Visit Formester's SMTP Integration section add a new account and test it](/img/test-credentails.png "Visit Formester's SMTP Integration section add a new account and test it")
 
 ```
-Use:
+Fill in the required fiels as mentioned below:
 * Name – Can be anything of your choice  
 * SMTP server - smtp.gmail.com
 * Port - 587  ( Some users may have different ports do checkout other ports as well 25/465/587/2525)
