@@ -66,6 +66,16 @@
                   >Conditional Logic</NuxtLink
                 >
               </li>
+              <li @click="collapseNav">
+                <NuxtLink class="dropdown-item" to="/features/online-payment/"
+                  >Online Payment</NuxtLink
+                >
+              </li>
+              <li @click="collapseNav">
+                <NuxtLink class="dropdown-item" to="/features/digital-signature/"
+                  >Digital Signature</NuxtLink
+                >
+              </li>
             </ul>
           </li>
           <li class="nav-item me-4" @click="collapseNav">
