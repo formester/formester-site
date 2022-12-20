@@ -9,7 +9,7 @@ createdAt: 2022-12-19T05:18:45.522Z
 coverImg: /img/how-to-integrate-sendgrid-smtp-with-formester.png
 coverImgAlt: How to Integrate SendGrid SMTP with Formester
 featured: false
-published: false
+published: true
 ---
 **How to use SendGrid SMTP Server**
 [SendGrid](https://sendgrid.com/ "SendGrid") is a great option for sending large volumes of emails. For instance, this service would work well if you have to email an entire mailing list manually. It can be time-consuming and difficult to send a lot of emails all at once
