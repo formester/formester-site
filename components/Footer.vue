@@ -64,6 +64,16 @@
                   >Conditional Logic</NuxtLink
                 >
               </li>
+              <li class="mt-2">
+                <NuxtLink to="/features/online-payment/" class="footer__link"
+                  >Online Payment</NuxtLink
+                >
+              </li>
+              <li class="mt-2">
+                <NuxtLink to="/features/digital-signature/" class="footer__link"
+                  >Digital Signature</NuxtLink
+                >
+              </li>
             </ul>
           </div>
 
