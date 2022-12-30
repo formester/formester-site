@@ -123,21 +123,17 @@ export default {
         document.querySelector('.popup_img img').alt = image.getAttribute('alt')
       }
     })
-
     document.querySelector('.popup_img img').onclick = () => {
       document.querySelector('.popup_img ').style.display = 'none'
     }
-
     document.querySelector('.popup_img span').onclick = () => {
       document.querySelector('.popup_img ').style.display = 'none'
     }
-
     document.onkeydown = function(evt) {
       if (evt.keyCode === 27) {
         document.querySelector('.popup_img ').style.display = 'none'
       }
     };
-
   },
   methods: {
     formatDate(date) {
