@@ -71,17 +71,15 @@
           by
           <span class="article__author">{{ article.author }}</span>
         </div>
-        <div class="images-wrapper">
-          <div class="image_container">
-            <nuxt-content :document="article" />
-              <div class="popup_img">
-                <span>&times;</span>
-                <img
-                  src=""
-                  alt=""
-                />
-              </div>
-          </div>
+        <div class="blog__content">
+          <nuxt-content :document="article" />
+            <div class="popup__img">
+              <span class="image-preview-close">&times;</span>
+              <img
+                src=""
+                alt=""
+              />
+            </div>
         </div>
         <notifications position="bottom right" class="my-notification"/>
       </article>
@@ -116,22 +114,22 @@ export default {
     return { article }
   },
   mounted() {
-    document.querySelectorAll('.image_container img').forEach(image => {
+    document.querySelectorAll('.blog__content img').forEach(image => {
       image.onclick = () => {
-        document.querySelector('.popup_img').style.display = 'block';
-        document.querySelector('.popup_img img').src = image.getAttribute('src')
-        document.querySelector('.popup_img img').alt = image.getAttribute('alt')
+        document.querySelector('.popup__img').style.display = 'block';
+        document.querySelector('.popup__img img').src = image.getAttribute('src')
+        document.querySelector('.popup__img img').alt = image.getAttribute('alt')
       }
     })
-    document.querySelector('.popup_img img').onclick = () => {
-      document.querySelector('.popup_img ').style.display = 'none'
+    document.querySelector('.popup__img img').onclick = () => {
+      document.querySelector('.popup__img ').style.display = 'none'
     }
-    document.querySelector('.popup_img span').onclick = () => {
-      document.querySelector('.popup_img ').style.display = 'none'
+    document.querySelector('.image-preview-close').onclick = () => {
+      document.querySelector('.popup__img ').style.display = 'none'
     }
     document.onkeydown = function(evt) {
       if (evt.keyCode === 27) {
-        document.querySelector('.popup_img ').style.display = 'none'
+        document.querySelector('.popup__img ').style.display = 'none'
       }
     };
   },
@@ -391,11 +389,11 @@ p {
   fill: #000;
 }
 
-.image_container img {
+.blog__content img {
   cursor: zoom-in;
 }
 
-.popup_img {
+.popup__img {
   position: fixed;
   top: 0;
   left: 0;
@@ -406,7 +404,7 @@ p {
   display: none;
 }
 
-.popup_img span {
+.popup__img span {
   position: absolute;
   top: 0;
   right: 10px;
@@ -417,7 +415,7 @@ p {
   z-index: 1;
 }
 
-.popup_img img {
+.popup__img img {
   cursor: zoom-out;
   position: absolute;
   top: 50%;
@@ -450,7 +448,7 @@ p {
     margin-bottom: 12px;
   }
 
-  .popup_img img {
+  .popup__img img {
     width: 90%;
   }
 }
