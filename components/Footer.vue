@@ -10,7 +10,7 @@
         <div class="row">
           <div class="col-lg-3 col-sm-6 mb-4 mb-md-0 text-lg-start">
             <h5 class="text-uppercase footer__items--heading mb-3">
-              Foremster
+              Formester
             </h5>
 
             <ul class="list-unstyled mt-2">
