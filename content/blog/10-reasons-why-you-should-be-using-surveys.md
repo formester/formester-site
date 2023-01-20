@@ -23,7 +23,7 @@ Surveys are an incredible way to have your customers give you valuable feedback 
 
 ## 2. Understand the requirements of your clientele 
 
-There are plenty of reasons why you should start doing surveys on your product or service. They help you to develop a better understanding of your customers and their exact requirements. For me, this is an important thing because as a provider, I want to know what my clients expect from my products or my service offering. Read this to know how surveys influence your customers.
+There are plenty of reasons why you should start doing surveys on your product or service. They help you to develop a better understanding of your customers and their exact requirements. For me, this is an important thing because as a provider, I want to know what my clients expect from my products or my service offering. [Read this to know how surveys influence your customers.](https://hbr.org/2002/05/how-surveys-influence-customers)
 
 
 ## 3. Surveys help develop new products and improvise the older ones
@@ -44,7 +44,7 @@ Surveys are an integral part of the marketing strategy. However, most companies 
 
 ## 6. Asking the right questions in a survey
 
-A good survey is built of questions that help your customer give an appropriate response as well as serve your purpose as an employer. It’s always significant to ask the right questions while conducting a survey, such as great design and smart technology. With well-designed surveys, you can easily ask a few questions that get you the desired results. 
+A good survey is built of questions that help your customer give an appropriate response as well as serve your purpose as an employer. It’s always significant to [ask the right questions](https://refiner.io/blog/product-survey-questions/) while conducting a survey, such as great design and smart technology. With well-designed surveys, you can easily ask a few questions that get you the desired results. 
 
 
 ## 7. Surveys are the first step towards starting a new business from scratch 
@@ -54,7 +54,7 @@ Surveys are the perfect first step to start any kind of new business as it assis
 
 ## 8. Target the right audience and make productive changes! 
 
-Corporations need to ask their customers’ opinions. It's required by law, after all! But how do you know what to ask when you don't even know who your audience is? It is fruitful if you prepare a rough sketch of the target audience beforehand and then proceed with your survey research. The key is to interview both customers and non-customers. By combining these two groups, you'll get a fuller picture of what's going on. Read this to know how to target non-customers in a survey.
+Corporations need to ask their customers’ opinions. It's required by law, after all! But how do you know what to ask when you don't even know who your audience is? It is fruitful if you prepare a rough sketch of the target audience beforehand and then proceed with your survey research. The key is to interview both customers and non-customers. By combining these two groups, you'll get a fuller picture of what's going on. [Read this to know how to target non-customers in a survey](https://www.driveresearch.com/how-to-survey-non-customers/#:~:text=The%20answers%20to%20non%2Dcustomer,than%20campaigns%20based%20on%20assumptions.).
 
 ![A person making changes in the survey according to the target audience](/blog/10-reasons-why-you-should-be-using-surveys/target-the-right-audience-and-make-productive-changes.png 'A person making changes in the survey according to the target audience')
 
@@ -66,7 +66,7 @@ If you can't put your finger on why customers aren't buying your product, do sur
 
 ## 10. Find the right tool to create useful survey tools
 
-Only some have the time and idea of how to create a survey appropriate to their use. If you're looking for survey tools that are easy to use and create results that are actionable and useful you've come to the right place. We make it easy to ask questions and get answers at Formester.
+Only some have the time and idea of how to create a survey appropriate to their use. If you're looking for survey tools that are easy to use and create results that are actionable and useful you've come to the right place. We make it easy to ask questions and get answers at [Formester](/).
 
 
 ## Conclusion
