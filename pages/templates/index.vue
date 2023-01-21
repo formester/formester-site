@@ -6,18 +6,19 @@
           class="category-heading__container"
           data-bs-toggle="collapse"
           data-bs-target="#categories"
-          aria-controls="categories"
-          :aria-expanded="showCategories"
-          aria-label="Toggle Category Menu"
         >
           <h5 class="category-heading">Category</h5>
-            <img
-              class="category-menu-btn"
-              src="@/assets/images/filter_icon.svg"
-              alt="category-menu-button"
-            />
+          <img
+            class="category-menu-btn"
+            src="@/assets/images/filter_icon.svg"
+            alt="category-menu-button"
+          />
         </div>
-        <div class="categories" id="categories">
+        <div
+          class="categories collapse"
+          id="categories"
+          :class="{ show: showCategories }"
+        >
           <div
             class="category"
             :class="{ active: activeCategory === null }"
