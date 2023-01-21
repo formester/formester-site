@@ -123,7 +123,7 @@ export default {
       }
       try {
         const { data } = await this.$axios.get(
-          'http://localhost:5000/templates.json',
+          'https://app.formester.com/templates.json',
           { params: params }
         )
         this.templates = data
@@ -134,11 +134,10 @@ export default {
     async getTemplateCategories() {
       try {
         const { data } = await this.$axios.get(
-          'http://localhost:5000/template_categories.json'
+          'https://app.formester.com/template_categories.json'
         )
         this.templateCategories = data
       } catch (error) {
-        console.log(error)
         this.templateCategories = []
       }
     },

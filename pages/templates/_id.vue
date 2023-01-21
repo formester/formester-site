@@ -76,7 +76,7 @@ export default {
     async getTemplate() {
       try {
         const { data } = await this.$axios.get(
-          `http://localhost:5000/templates/${this.$route.params.id}.json`
+          `https://app.formester.com/templates/${this.$route.params.id}.json`
         )
         this.template = data
       } catch (error) {
