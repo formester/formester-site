@@ -42,13 +42,13 @@ export default {
     }
   },
   mounted() {
-    this.getTemplate()
+    this.getTemplate();
   },
   computed: {
     meta() {
       const metaData = {
         type: 'website',
-        url: `https://formester.com/templates/${this.$route.params.id}/`,
+        url: `https://formester.com/templates/${this.$route.params.slug}/`,
         title: this.template?.name || 'Formester',
         description: this.template?.description,
         mainImage: this.template?.previewImageUrl
@@ -67,7 +67,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: `https://formester.com/blog/${this.$route.params.id}/`,
+          href: `https://formester.com/blog/${this.$route.params.slug}/`,
         },
       ],
     }
@@ -76,7 +76,7 @@ export default {
     async getTemplate() {
       try {
         const { data } = await this.$axios.get(
-          `https://app.formester.com/templates/${this.$route.params.id}.json`
+          `https://app.formester.com/templates/${this.$route.params.slug}.json`
         )
         this.template = data
       } catch (error) {

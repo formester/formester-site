@@ -15,7 +15,7 @@ export default {
   computed: {
     isTemplateDetailPage() {
       return (
-        this.$route.path.startsWith('/templates/') && this.$route.params?.id
+        this.$route.path.startsWith('/templates/') && this.$route.params?.slug
       )
     },
   },

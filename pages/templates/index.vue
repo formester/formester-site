@@ -40,7 +40,7 @@
     </div>
     <div v-if="templates.length" class="templates">
       <div v-for="(template, idx) in templates" :key="idx" class="template">
-        <NuxtLink :to="{ name: 'templates-id', params: { id: template.id } }">
+        <NuxtLink :to="{ name: 'templates-slug', params: { slug: template.slug } }">
           <img
             v-if="template.previewImageUrl"
             class="img-fluid pointer"

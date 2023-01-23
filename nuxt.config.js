@@ -1,6 +1,7 @@
 import getRoutes from './utils/getRoutes'
 import getSiteMeta from './utils/getSiteMeta'
 
+const axios = require('axios')
 const meta = getSiteMeta()
 
 export default {
@@ -64,8 +65,15 @@ export default {
   sitemap: {
     hostname: 'https://formester.com',
     trailingSlash: true,
-    routes() {
-      return getRoutes()
+    routes: async () => {
+      let { data } = await axios.get('https://app.formester.com/templates.json')
+      let templates = data.map((template) => {
+        return {
+          url: `/templates/${template.slug}`,
+        }
+      })
+      const blogs = await getRoutes()
+      return [...blogs, ...templates]
     },
   },
 
