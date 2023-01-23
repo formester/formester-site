@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Navbar v-if="!isTemplateDetailPage" />
+    <Navbar />
     <Nuxt />
-    <Footer v-if="!isTemplateDetailPage" />
+    <Footer />
   </div>
 </template>
 
@@ -12,13 +12,6 @@ import Footer from '../components/Footer.vue'
 
 export default {
   components: { Footer, Navbar },
-  computed: {
-    isTemplateDetailPage() {
-      return (
-        this.$route.path.startsWith('/templates/') && this.$route.params?.slug
-      )
-    },
-  },
 }
 </script>
 

@@ -35,14 +35,14 @@
 import getSiteMeta from '../../utils/getSiteMeta'
 
 export default {
-  components: {},
+  layout: 'message',
   data() {
     return {
       template: {},
     }
   },
   mounted() {
-    this.getTemplate();
+    this.getTemplate()
   },
   computed: {
     meta() {
@@ -67,7 +67,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: `https://formester.com/blog/${this.$route.params.slug}/`,
+          href: `https://formester.com/templates/${this.$route.params.slug}/`,
         },
       ],
     }
@@ -84,7 +84,10 @@ export default {
       }
     },
     redirectTo(id) {
-      window.location.href = `https://app.formester.com/forms/new?template_id=${id}`
+      window.open(
+        `https://app.formester.com/forms/new?template_id=${id}`,
+        '_blank'
+      )
     },
   },
 }
