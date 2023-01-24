@@ -133,10 +133,15 @@ export default {
   // For catching 404 pages
   generate: {
     routes: async () => {
-      let { data } = await axios.get('https://app.formester.com/templates.json')
-      data.map((template) => {
-        return `/templates/${template.slug}`
-      })
+      try {
+        let { data } = await axios.get('https://app.formester.com/templates.json')
+        let templatesRoute = data.map((template) => {
+          return `/templates/${template.slug}`
+        })
+        return templatesRoute
+      } catch (error) {
+        return [];
+      }
     },
     fallback: true,
   },
