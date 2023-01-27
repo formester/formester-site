@@ -27,7 +27,7 @@ This post has a list of the best survey questions to ask, along with some exampl
 
 Some of the most effective fundamental survey questions to ask individuals are demographic questions.
 
-Because [online surveys](https://formester.com/blog/seven-assured-ways-to-improve-your-online-surveys/ 'Severn assured ways to improve your online surveys') are not conducted in person, it is sometimes necessary to ask the user obvious questions about themselves for data collection. You can add
+Because [online surveys](/blog/seven-assured-ways-to-improve-your-online-surveys/ 'Severn assured ways to improve your online surveys') are not conducted in person, it is sometimes necessary to ask the user obvious questions about themselves for data collection. You can add
 
 - What is your age/date of birth?
 
@@ -129,4 +129,4 @@ First, outline your survey. Survey Design Methodology advises creating a logical
 
 ## Creating Survey Forms is Easier with Formester
 
-Creating a survey form isn’t just about planning your survey questions as per the requirements. To maximize your response rate, you need to create survey forms that not only engage the user with the look and feel, but also perform the required task of data collection efficiently and seamlessly. [Formester](https://formester.com/) is a one-stop solution for all your [survey form creation](https://formester.com/blog/building-your-first-form-with-formester/ 'Building your first form with formester') needs. Whether you want to create a standalone online form or an embedded form for your website, the platform caters to all your needs. Additionally, collecting data and building HTML form backend can be done in a jiffy with Formester.
+Creating a survey form isn’t just about planning your survey questions as per the requirements. To maximize your response rate, you need to create survey forms that not only engage the user with the look and feel, but also perform the required task of data collection efficiently and seamlessly. [Formester](/) is a one-stop solution for all your [survey form creation](/blog/building-your-first-form-with-formester/ 'Building your first form with formester') needs. Whether you want to create a standalone online form or an embedded form for your website, the platform caters to all your needs. Additionally, collecting data and building HTML form backend can be done in a jiffy with Formester.

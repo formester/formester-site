@@ -39,7 +39,7 @@ You must have filled out some surveys and would have come across various types o
 
 Now can you identify a difference in the structure or framing of these questions? The first one is a close-ended question with a straight answer while the second one is an open-ended question requiring a subjective answer.
 
-Good survey researchers keep a culmination of [different types of questions](https://formester.com/blog/best-survey-questions/) that are required to come to an effective conclusion to call it successful research.
+Good survey researchers keep a culmination of [different types of questions](/blog/best-survey-questions/) that are required to come to an effective conclusion to call it successful research.
 
 Let us now consider the type of questions to ask and the set scenarios of when to ask those questions:
 

@@ -78,4 +78,4 @@ In addition to being unwanted, form spam is also harmful. It is, therefore, impe
 
 ## Can Formster help you fight form spam?
 
-Formester forms come with spam protection built in. A form created with Formster is significantly more secure thanks to features such as ReCaptcha, IP address limitations, and data validation. If adding preventive measures to your forms manually looks daunting, you can give Formester a spin. [Building forms with formester](https://formester.com/blog/how-to-create-form-or-survey/) is painless and can be done in minutes.
+Formester forms come with spam protection built in. A form created with Formster is significantly more secure thanks to features such as ReCaptcha, IP address limitations, and data validation. If adding preventive measures to your forms manually looks daunting, you can give Formester a spin. [Building forms with formester](/blog/how-to-create-form-or-survey/) is painless and can be done in minutes.
