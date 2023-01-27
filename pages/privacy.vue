@@ -94,7 +94,7 @@
         <li>The right to request correction or deletion of their personal data</li>
         <li>The right to object to the processing of their personal data</li>
         <li>The right to request that their personal data be transferred to another organization</li>
-        <li>Users and customers can exercise their rights by contacting us at [email address].</li>
+        <li>Users and customers can exercise their rights by contacting us at support@formester.com.</li>
       </ul>
     </p>
 
