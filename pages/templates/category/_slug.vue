@@ -1,5 +1,5 @@
 <template>
-  <Templates :activeCategory="null" />
+  <Templates :activeCategory="$route.params.slug" />
 </template>
 
 <script>
