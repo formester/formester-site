@@ -1,6 +1,7 @@
 import getRoutes from './utils/getRoutes'
 import getSiteMeta from './utils/getSiteMeta'
 
+const axios = require('axios')
 const meta = getSiteMeta()
 
 export default {
@@ -64,18 +65,29 @@ export default {
   sitemap: {
     hostname: 'https://formester.com',
     trailingSlash: true,
-    routes() {
-      return getRoutes()
+    routes: async () => {
+      let { data } = await axios.get('https://app.formester.com/templates.json')
+      let templates = data.map((template) => {
+        return {
+          url: `/templates/${template.slug}`,
+        }
+      })
+      let { data: response } = await axios.get('https://app.formester.com/template_categories.json')
+        let categories = response.map((category) => {
+          return `/templates/categories/${category.slug}`
+        })
+      const blogs = await getRoutes()
+      return blogs.concat(templates, categories)
     },
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
+  // Global CSS: https://go.nuxtjs.dev/config-css 
   css: ['~/assets/css/bootstrap.min.css', '~/assets/css/main.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~plugins/jsonld',
-    { src: '~/plugins/notifications-client', ssr: false }
+    { src: '~/plugins/notifications-client', ssr: false },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -124,6 +136,21 @@ export default {
   build: {},
   // For catching 404 pages
   generate: {
+    routes: async () => {
+      try {
+        let { data } = await axios.get('https://app.formester.com/templates.json')
+        let templatesRoute = data.map((template) => {
+          return `/templates/${template.slug}`
+        })
+        let { data: response } = await axios.get('https://app.formester.com/template_categories.json')
+        let categoriesRoute = response.map((category) => {
+          return `/templates/categories/${category.slug}`
+        })
+        return [...templatesRoute, ...categoriesRoute]
+      } catch (error) {
+        return [];
+      }
+    },
     fallback: true,
   },
   content: {
@@ -132,7 +159,6 @@ export default {
 
   // Enviornment variable for the base url of the app
   env: {
-    baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'http://localhost:3000'
-  }
-
+    baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'http://localhost:3000',
+  },
 }

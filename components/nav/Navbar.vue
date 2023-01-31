@@ -21,13 +21,13 @@
         id="navbarSupportedContent"
       >
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item me-3" @click="collapseNav">
+          <li class="nav-item me-2" @click="collapseNav">
             <NuxtLink to="/" class="nav-link">
               Home
               <HoverSvg />
             </NuxtLink>
           </li>
-          <li class="nav-item dropdown me-3">
+          <li class="nav-item dropdown me-2">
             <a
               class="nav-link"
               id="navbarDropdown"
@@ -78,15 +78,21 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item me-4" @click="collapseNav">
+          <li class="nav-item me-2" @click="collapseNav">
             <NuxtLink to="/pricing/" class="nav-link">
               Pricing
               <HoverSvg />
             </NuxtLink>
           </li>
-          <li class="nav-item me-4" @click="collapseNav">
+          <li class="nav-item me-2" @click="collapseNav">
             <NuxtLink to="/blog/" class="nav-link"
               >Blog
+              <HoverSvg />
+            </NuxtLink>
+          </li>
+          <li class="nav-item me-2" @click="collapseNav">
+            <NuxtLink to="/templates/" class="nav-link">
+              Templates
               <HoverSvg />
             </NuxtLink>
           </li>
@@ -96,7 +102,7 @@
               <HoverSvg />
             </NuxtLink>
           </li>
-          <li class="nav-item me-4">
+          <li class="nav-item me-2">
             <a
               href="https://app.formester.com/users/sign_in"
               @click="collapseNav"
