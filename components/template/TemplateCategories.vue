@@ -5,7 +5,7 @@
       data-bs-toggle="collapse"
       data-bs-target="#categories"
     >
-      <h5 class="category-heading">Category</h5>
+      <h1 class="category-heading">Category</h1>
       <img
         class="category-menu-btn"
         src="@/assets/images/filter_icon.svg"
@@ -22,9 +22,9 @@
           name: 'templates',
         }"
       >
-        <div class="category" :class="{ active: activeCategory === null }">
+        <h2 class="category" :class="{ active: activeCategory === null }">
           All Categories
-        </div>
+        </h2>
       </NuxtLink>
       <NuxtLink
         v-for="category in templateCategories"
@@ -34,12 +34,12 @@
           params: { slug: category.slug },
         }"
       >
-        <div
+        <h2
           class="category"
           :class="{ active: activeCategory === category.slug }"
         >
           {{ category.name }}
-        </div>
+        </h2>
       </NuxtLink>
     </div>
   </div>
@@ -94,6 +94,8 @@ export default {
   color: #171717;
   user-select: none;
   transition: all 2s ease-in-out;
+  margin-bottom: 0;
+  font-weight: normal;
 }
 .category.active {
   background-color: #f7f5ff;

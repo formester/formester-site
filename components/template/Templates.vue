@@ -3,36 +3,44 @@
     <div class="left-sidebar">
       <TemplateCategories :activeCategory="activeCategory" />
     </div>
-    <div v-if="templates.length" class="templates">
-      <div v-for="(template, idx) in templates" :key="idx" class="template">
-        <NuxtLink
-          :to="{ name: 'templates-slug', params: { slug: template.slug } }"
-        >
-          <img
-            v-if="template.previewImageUrl"
-            class="img-fluid pointer"
-            :src="template.previewImageUrl"
-            :alt="template.name"
-          />
-          <img
-            v-else
-            class="img-fluid"
-            src="@/assets/images/templates/create_form.png"
-            alt="Template placeholder image"
-          />
-          <h6 class="template-name pointer">
-            {{ template.name }}
-          </h6>
-        </NuxtLink>
+    <div class="w-100">
+      <h1 class="heading">
+        {{
+          $route.params.slug ? $route.params.slug.replace('-', ' ') : ''
+        }}
+        Templates
+      </h1>
+      <div v-if="templates.length" class="templates">
+        <div v-for="(template, idx) in templates" :key="idx" class="template">
+          <NuxtLink
+            :to="{ name: 'templates-slug', params: { slug: template.slug } }"
+          >
+            <img
+              v-if="template.previewImageUrl"
+              class="img-fluid pointer"
+              :src="template.previewImageUrl"
+              :alt="template.name"
+            />
+            <img
+              v-else
+              class="img-fluid"
+              src="@/assets/images/templates/create_form.png"
+              alt="Template placeholder image"
+            />
+            <h2 class="template-name pointer">
+              {{ template.name }}
+            </h2>
+          </NuxtLink>
+        </div>
       </div>
-    </div>
-    <div v-else class="no-template">
-      <img
-        class="img-fluid"
-        src="@/assets/images/templates/no-template.svg"
-        alt="No Template Illustration"
-      />
-      <h4>No Template Available</h4>
+      <div v-else class="no-template">
+        <img
+          class="img-fluid"
+          src="@/assets/images/templates/no-template.svg"
+          alt="No Template Illustration"
+        />
+        <h4>No Template Available</h4>
+      </div>
     </div>
   </div>
 </template>
@@ -78,10 +86,14 @@ export default {
   overflow-y: auto;
   box-shadow: 5px 10px 10px 1px rgba(0, 0, 0, 0.05);
 }
-
+.heading {
+  text-transform: capitalize;
+  padding: 1rem 1.5rem 0;
+  font-size: var(--ft-bigger-body);
+}
 .templates {
   width: 100%;
-  padding: 2rem 1.5rem;
+  padding: 1.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: min-content;
@@ -104,8 +116,8 @@ export default {
 .template-name {
   font-weight: 500;
   font-size: 16px;
-  margin-top: 8px;
-  line-height: 32px;
+  margin-top: 14px;
+  line-height: 24px;
   color: #211447;
   user-select: none;
 }

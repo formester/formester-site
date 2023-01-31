@@ -14,7 +14,7 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/templates/',
-        title: 'The Formester Templates',
+        title: `${this.$route.params.slug.replace('-',' ')}`,
         description: `Find the perfect template for ${this.$route.params.slug.replace('-',' ')} with Formester's comprehensive library. Choose from a variety of customizable designs and create a professional look in no time.`,
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with blog page image
