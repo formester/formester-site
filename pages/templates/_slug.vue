@@ -50,7 +50,8 @@ export default {
         type: 'website',
         url: `https://formester.com/templates/${this.$route.params.slug}/`,
         title: this.template?.name || 'Formester',
-        description: this.template?.description,
+        description:
+          this.template?.description || this.template?.name,
         mainImage: this.template?.previewImageUrl
           ? this.template.previewImageUrl
           : 'https://formester.com/formester-form-builder-background.png',

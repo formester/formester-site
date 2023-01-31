@@ -15,8 +15,7 @@ export default {
         type: 'website',
         url: 'https://formester.com/templates/',
         title: 'The Formester Templates',
-        description:
-          'Use our Formester form templates including surveys, reviews, registrations, & more for any industry! Automate workflows with online templates.',
+        description: `Find the perfect template for ${this.$route.params.slug.replace('-',' ')} with Formester's comprehensive library. Choose from a variety of customizable designs and create a professional look in no time.`,
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with blog page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with blog page image alt
@@ -26,7 +25,7 @@ export default {
   },
   head() {
     return {
-      title: 'Templates | Formester',
+      title: `${this.$route.params.slug.replace('-',' ')} Templates | Formester`,
       meta: [...this.meta],
       link: [
         {
