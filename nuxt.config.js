@@ -74,7 +74,7 @@ export default {
       })
       let { data: response } = await axios.get('https://app.formester.com/template_categories.json')
         let categories = response.map((category) => {
-          return `/templates/category/${category.slug}`
+          return `/templates/categories/${category.slug}`
         })
       const blogs = await getRoutes()
       return blogs.concat(templates, categories)
@@ -144,7 +144,7 @@ export default {
         })
         let { data: response } = await axios.get('https://app.formester.com/template_categories.json')
         let categoriesRoute = response.map((category) => {
-          return `/templates/category/${category.slug}`
+          return `/templates/categories/${category.slug}`
         })
         return [...templatesRoute, ...categoriesRoute]
       } catch (error) {

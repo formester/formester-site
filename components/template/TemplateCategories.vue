@@ -30,7 +30,7 @@
         v-for="category in templateCategories"
         :key="category.id"
         :to="{
-          name: 'templates-category-slug',
+          name: 'templates-categories-slug',
           params: { slug: category.slug },
         }"
       >
@@ -56,7 +56,7 @@ export default {
   },
   mounted() {
     this.getTemplateCategories()
-    if (window.innerWidth <= 724) this.showCategories = false
+    if (window.innerWidth <= 840) this.showCategories = false
   },
   methods: {
     async getTemplateCategories() {

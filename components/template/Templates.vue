@@ -94,6 +94,7 @@ export default {
   padding: 12px;
   transition: all 500ms ease;
   box-shadow: 0px 0px 10px 0px rgba(79, 56, 149, 0.15);
+  min-height: 130px;
 }
 
 .template:hover {
