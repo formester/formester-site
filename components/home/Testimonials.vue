@@ -148,4 +148,53 @@ export default {
   color: #333333;
   z-index: 2;
 }
+@media only screen and (max-width: 1200px) {
+  .testimonials-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding-top: 60px;
+    padding-bottom: 0px;
+  }
+  .testimonials-heading {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .testimonial-content-wrapper {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .quote-illustraion {
+    width: 90px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .testimonials-section {
+    gap: 40px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px auto;
+  }
+  .quote-illustraion {
+    width: 75px;
+  }
+  .user {
+    padding: 16px 22px;
+  }
+  .user img {
+    height: auto;
+    width: 65px;
+  }
+  .user .name {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .user .designation {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .testimonial-content-wrapper {
+    font-size: 18px;
+    line-height: 28px ;
+  }
+}
 </style>
