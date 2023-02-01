@@ -183,6 +183,18 @@
       </div>
     </section>
 
+    <section class="container text-center">
+      <h2 class="section__heading">Other Comparisons</h2>
+      <div class="row mt-4 px-2">
+        <RelatedArticleCard
+          v-for="(relatedComparison, index) in relatedComparisons"
+          :key="index"
+          :article="relatedComparison"
+          class="col-lg-4 related-article-card"
+        />
+      </div>
+    </section>
+    
     <CallToActionSection />
   </div>
 </template>
@@ -190,6 +202,7 @@
 <script>
 // MetaTags
 import getSiteMeta from '../utils/getSiteMeta'
+import RelatedArticleCard from '@/components/RelatedArticleCard.vue'
 
 export default {
   data() {
@@ -286,6 +299,29 @@ export default {
           'Available and can be used by free users too',
           'Not Available specifically',
         ],
+      ],
+      relatedComparisons: [
+        {
+          title: 'Formester vs Jotform',
+          coverImg: '/img/formester-vs-jotform.png',
+          coverImgAlt: 'Formester vs Jotform',
+          link: { name: 'formester-vs-jotform' },
+          type: 'comparison',
+        },
+        {
+          title: 'Formester vs Zoho Form',
+          coverImg: '/img/formester-vs-zoho-form.png',
+          coverImgAlt: 'Formester vs Zoho Form',
+          link: { name: 'formester-vs-zoho-form' },
+          type: 'comparison',
+        },
+        {
+          title: 'Formester vs Typeform',
+          coverImg: '/img/formester-vs-typeform.png',
+          coverImgAlt: 'Formester vs Typeform',
+          link: { name: 'formester-vs-typeform' },
+          type: 'comparison',
+        },
       ],
     }
   },

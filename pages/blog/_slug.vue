@@ -82,6 +82,18 @@
             </div>
         </div>
         <notifications position="bottom right" class="my-notification"/>
+
+        <div v-if="relatedArticles" class="mt-5">
+          <h2 class="article__heading">Related Blogs</h2>
+          <div class="row mt-4">
+            <RelatedArticleCard
+              v-for="relatedArticle in relatedArticles"
+              :key="relatedArticle.slug"
+              :article="relatedArticle"
+              class="col-lg-6 related-article-card"
+            />
+          </div>
+        </div>
       </article>
     </div>
     <CallToActionSection :content="article.cta" />
@@ -111,7 +123,11 @@ export default {
   async asyncData({ $content, params }) {
     const article = await $content('blog', params.slug).fetch()
 
-    return { article }
+    let relatedArticles = await $content('blog').fetch()
+    relatedArticles = relatedArticles.filter(relatedArticle => article.slug !== relatedArticle.slug)
+    const randIndex = Math.floor(Math.random() * (relatedArticles.length - 2))
+    relatedArticles = relatedArticles.slice(randIndex,  randIndex + 2);
+    return { article, relatedArticles}
   },
   mounted() {
     document.querySelectorAll('.blog__content img').forEach(image => {

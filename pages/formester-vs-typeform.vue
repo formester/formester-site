@@ -182,6 +182,18 @@
       </div>
     </section>
 
+    <section class="container text-center">
+      <h2 class="section__heading">Other Comparisons</h2>
+      <div class="row mt-4 px-2">
+        <RelatedArticleCard
+          v-for="(relatedComparison, index) in relatedComparisons"
+          :key="index"
+          :article="relatedComparison"
+          class="col-lg-4 related-article-card"
+        />
+      </div>
+    </section>
+    
     <CallToActionSection />
   </div>
 </template>
@@ -189,6 +201,7 @@
 <script>
 // MetaTags
 import getSiteMeta from '../utils/getSiteMeta'
+import RelatedArticleCard from '@/components/RelatedArticleCard.vue'
 
 export default {
   data() {
@@ -261,6 +274,29 @@ export default {
           'A $99 feature',
         ],
         ['End-to-End Design Customization', 'Present', 'Minimal customization'],
+      ],
+      relatedComparisons: [
+        {
+          title: 'Formester vs Paperform',
+          coverImg: '/img/formester-vs-paperform.png',
+          coverImgAlt: 'Formester vs Paperform',
+          link: { name: 'formester-vs-paperform' },
+          type: 'comparison',
+        },
+        {
+          title: 'Formester vs Jotform',
+          coverImg: '/img/formester-vs-jotform.png',
+          coverImgAlt: 'Formester vs Jotform',
+          link: { name: 'formester-vs-jotform' },
+          type: 'comparison',
+        },
+        {
+          title: 'Formester vs Forms App',
+          coverImg: '/img/formester-vs-forms-app.png',
+          coverImgAlt: 'Formester vs Forms App',
+          link: { name: 'formester-vs-forms-app' },
+          type: 'comparison',
+        },
       ],
     }
   },
