@@ -10,7 +10,7 @@
         <div class="row">
           <div class="col-lg-3 col-sm-6 mb-4 mb-md-0 text-lg-start">
             <h5 class="text-uppercase footer__items--heading mb-3">
-              Foremster
+              Formester
             </h5>
 
             <ul class="list-unstyled mt-2">
@@ -62,6 +62,16 @@
               <li class="mt-2">
                 <NuxtLink to="/features/conditional-logic/" class="footer__link"
                   >Conditional Logic</NuxtLink
+                >
+              </li>
+              <li class="mt-2">
+                <NuxtLink to="/features/online-payment/" class="footer__link"
+                  >Online Payment</NuxtLink
+                >
+              </li>
+              <li class="mt-2">
+                <NuxtLink to="/features/digital-signature/" class="footer__link"
+                  >Digital Signature</NuxtLink
                 >
               </li>
             </ul>

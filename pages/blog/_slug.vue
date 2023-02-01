@@ -71,7 +71,16 @@
           by
           <span class="article__author">{{ article.author }}</span>
         </div>
-        <nuxt-content :document="article" />
+        <div class="blog__content">
+          <nuxt-content :document="article" />
+            <div class="popup__img">
+              <span class="image-preview-close">&times;</span>
+              <img
+                src=""
+                alt=""
+              />
+            </div>
+        </div>
         <notifications position="bottom right" class="my-notification"/>
       </article>
     </div>
@@ -103,6 +112,26 @@ export default {
     const article = await $content('blog', params.slug).fetch()
 
     return { article }
+  },
+  mounted() {
+    document.querySelectorAll('.blog__content img').forEach(image => {
+      image.onclick = () => {
+        document.querySelector('.popup__img').style.display = 'block';
+        document.querySelector('.popup__img img').src = image.getAttribute('src')
+        document.querySelector('.popup__img img').alt = image.getAttribute('alt')
+      }
+    })
+    document.querySelector('.popup__img img').onclick = () => {
+      document.querySelector('.popup__img ').style.display = 'none'
+    }
+    document.querySelector('.image-preview-close').onclick = () => {
+      document.querySelector('.popup__img ').style.display = 'none'
+    }
+    document.onkeydown = function(evt) {
+      if (evt.keyCode === 27) {
+        document.querySelector('.popup__img ').style.display = 'none'
+      }
+    };
   },
   methods: {
     formatDate(date) {
@@ -359,6 +388,43 @@ p {
 .social-icons{
   fill: #000;
 }
+
+.blog__content img {
+  cursor: zoom-in;
+}
+
+.popup__img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(90, 90, 90, 0.96);
+  height: 100%;
+  width: 100%;
+  z-index: 1022;
+  display: none;
+}
+
+.popup__img span {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 30px;
+  font-weight: bolder;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.popup__img img {
+  cursor: zoom-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  object-fit: cover;
+}
+
 @media only screen and (max-width: 992px) {
   .dropdown-link {
     min-width: 680px;
@@ -380,6 +446,10 @@ p {
   .nuxt-content img {
     margin-top: 8px;
     margin-bottom: 12px;
+  }
+
+  .popup__img img {
+    width: 90%;
   }
 }
 
