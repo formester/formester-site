@@ -264,8 +264,8 @@ export default {
   }
   .testimonials-heading {
     margin-bottom: 48px;
-    font-size: 48px;
-    line-height: 56px;
+    line-height: 52px;
+    font-size: 2rem;
   }
   .mobile-testimonial-content-wrapper {
     display: flex;
