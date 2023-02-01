@@ -1,44 +1,104 @@
 <template>
-  <div class="container testimonials-section">
-    <div>
-      <h2 class="testimonials-heading">Testimonials</h2>
-      <div class="d-flex flex-column">
-        <div
-          v-for="testimonial in testimonials"
-          :key="testimonial.id"
-          class="user d-flex align-items-center"
-          :class="{ active: active === testimonial.id }"
-          @click="active = testimonial.id"
-        >
+  <div class="container">
+    <!-- Desktop View -->
+    <div class="d-none d-md-grid testimonials-section">
+      <div>
+        <h2 class="testimonials-heading">Testimonials</h2>
+        <div class="d-flex flex-column">
+          <div
+            v-for="testimonial in testimonials"
+            :key="testimonial.id"
+            class="user d-flex align-items-center"
+            :class="{ active: active === testimonial.id }"
+            @click="active = testimonial.id"
+          >
+            <img
+              :src="
+                require(`~/assets/images/testimonials/${testimonial.picture}`)
+              "
+              :alt="testimonial.picture"
+            />
+            <div>
+              <h6 class="name">{{ testimonial.user }}</h6>
+              <span class="designation">{{ testimonial.designation }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-content-wrapper">
+        <p class="mb-5">{{ activeTestimonial.content }}</p>
+        <div class="d-flex justify-content-end">
           <img
             :src="
-              require(`~/assets/images/testimonials/${testimonial.picture}`)
+              require(`~/assets/images/testimonials/${activeTestimonial.logo}`)
             "
-            :alt="testimonial.picture"
+            :alt="activeTestimonial.logoAlt"
           />
-          <div>
-            <h6 class="name">{{ testimonial.user }}</h6>
-            <span class="designation">{{ testimonial.designation }}</span>
+        </div>
+      </div>
+
+      <img
+        src="~/assets/images/testimonials/quote.svg"
+        class="quote-illustraion"
+        alt="Quote illustration"
+      />
+    </div>
+
+    <!-- Mobile view -->
+    <div class="d-flex flex-column align-items-center d-md-none">
+      <h2 class="testimonials-heading">Testimonials</h2>
+      <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+          <button
+            v-for="(testimonial, idx) in testimonials"
+            :key="testimonial.id"
+            type="button"
+            data-bs-target="#testimonialsCarousel"
+            :data-bs-slide-to="idx"
+            class="indicator"
+            :class="{'active': idx === 0}"
+            aria-current="true"
+            :aria-label="`Slide ${idx + 1}`"
+          ></button>
+        </div>
+        <!-- Carousel Content -->
+        <div class="carousel-inner">
+          <div
+            v-for="(testimonial, idx) in testimonials"
+            class="carousel-item"
+            :class="{'active': idx === 0}"
+          >
+            <div class="mobile-testimonial-content-wrapper">
+              <p>{{ testimonial.content }}</p>
+
+              <div class="user d-flex align-items-center">
+                <img
+                  :src="
+                    require(`~/assets/images/testimonials/${testimonial.picture}`)
+                  "
+                  :alt="testimonial.picture"
+                />
+                <div>
+                  <h6 class="name">{{ testimonial.user }}</h6>
+                  <span class="designation">{{ testimonial.designation }}</span>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-start">
+                <img
+                  :src="
+                    require(`~/assets/images/testimonials/${testimonial.logo}`)
+                  "
+                  :alt="testimonial.logoAlt"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="testimonial-content-wrapper">
-      <p class="mb-5">{{ activeTestimonial.content }}</p>
-      <div class="d-flex justify-content-end">
-        <img
-          :src="
-            require(`~/assets/images/testimonials/${activeTestimonial.logo}`)
-          "
-          :alt="activeTestimonial.logoAlt"
-        />
-      </div>
-    </div>
-    <img
-      src="~/assets/images/testimonials/quote.svg"
-      class="quote-illustraion"
-      alt="Quote illustration"
-    />
   </div>
 </template>
 
@@ -100,7 +160,7 @@ export default {
   align-items: center;
   gap: 150px;
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 40px;
 }
 .testimonials-heading {
   font-weight: 700;
@@ -195,6 +255,44 @@ export default {
   .testimonial-content-wrapper {
     font-size: 18px;
     line-height: 28px ;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #testimonialsCarousel {
+    min-height: 500px;
+    width: 100%;
+  }
+  .testimonials-heading {
+    margin-bottom: 48px;
+    font-size: 48px;
+    line-height: 56px;
+  }
+  .mobile-testimonial-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+    font-size: 24px;
+    line-height: 38px;
+    color: #333333;
+  }
+  .user {
+    padding: 0px;
+    margin-top: 24px;
+    margin-bottom: 40px;
+  }
+  .user .name {
+    margin: 0;
+  }
+  .carousel-indicators .indicator {
+    background-color: #E5DEF9;
+  }
+  .carousel-indicators .active {
+    background-color: #4F3895;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #testimonialsCarousel {
+    min-height: 600px;
   }
 }
 </style>
