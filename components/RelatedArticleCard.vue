@@ -48,7 +48,7 @@ export default {
 
 @media only screen and (max-width: 992px) {
   .related-article-card {
-    padding: 1rem 0;
+    padding: 1rem auto;
   }
 }
 </style>
