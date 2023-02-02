@@ -261,7 +261,7 @@ export default {
     padding-bottom: 0;
   }
   #testimonialsCarousel {
-    min-height: 500px;
+    min-height: 480px;
     width: 100%;
   }
   .testimonials-heading {
@@ -273,8 +273,8 @@ export default {
     display: flex;
     flex-direction: column;
     margin: 0px 20px;
-    font-size: 24px;
-    line-height: 38px;
+    font-size: 20px;
+    line-height: 36px;
     color: #333333;
   }
   .user {
@@ -294,7 +294,7 @@ export default {
 }
 @media only screen and (max-width: 576px) {
   #testimonialsCarousel {
-    min-height: 600px;
+    min-height: 560px;
   }
 }
 </style>
