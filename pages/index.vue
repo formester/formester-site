@@ -11,7 +11,7 @@
 
 <script>
 import Hero from '../components/home/Hero.vue'
-import TrustSeals from '../components/home/TrustSeals.vue';
+import TrustSeals from '../components/home/TrustSeals.vue'
 import FeatureList from '../components/home/FeatureList.vue'
 import Testimonials from '../components/home/Testimonials.vue'
 import HowItWorks from '../components/home/HowItWorks.vue'
@@ -26,8 +26,10 @@ export default {
   },
   head() {
     return {
-      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
-    };
+      script: [
+        { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
+      ],
+    }
   },
   jsonld() {
     return {
