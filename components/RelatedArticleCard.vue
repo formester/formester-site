@@ -6,10 +6,8 @@
       :alt="article.coverImgAlt"
       :title="article.coverImgAlt"
     />
-    <div class="d-flex flex-column align-items-start">
-      <div class="mt-2">
-        <h3 class="article__title">{{ article.title }}</h3>
-      </div>
+    <div class="d-flex flex-column align-items-start mt-2">
+      <h3 class="article__title">{{ article.title }}</h3>
     </div>
   </NuxtLink>
 </template>
@@ -43,14 +41,14 @@ export default {
 <style>
 .article__title {
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 30px;
   color: hsla(0, 0%, 20%, 1);
 }
 
-@media only screen and (max-width: 992px){
-    .related-article-card {
-        padding: 1rem 0;
-    }
+@media only screen and (max-width: 992px) {
+  .related-article-card {
+    padding: 1rem 0;
+  }
 }
 </style>

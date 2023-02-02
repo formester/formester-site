@@ -84,7 +84,7 @@
         <notifications position="bottom right" class="my-notification"/>
 
         <div v-if="relatedArticles" class="mt-5">
-          <h2 class="article__heading">Related Blogs</h2>
+          <h2 class="article__sub-heading">Related Blogs</h2>
           <div class="row mt-4">
             <RelatedArticleCard
               v-for="relatedArticle in relatedArticles"
@@ -272,6 +272,13 @@ p {
   font-size: 2.25rem;
   font-weight: 700;
   line-height: 44px;
+  color: hsla(0, 0%, 20%, 1);
+}
+
+.article__sub-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 36px;
   color: hsla(0, 0%, 20%, 1);
 }
 
