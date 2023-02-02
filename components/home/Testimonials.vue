@@ -83,14 +83,6 @@
                     <span class="designation">{{ testimonial.designation }}</span>
                   </div>
                 </div>
-                <div class="d-flex flex-column align-items-start justify-content-center testimonial-logo">
-                  <img
-                    :src="
-                      require(`~/assets/images/testimonials/${testimonial.logo}`)
-                    "
-                    :alt="testimonial.logoAlt"
-                  />
-                </div>
               </div>
             </div>
           </div>
@@ -115,6 +107,7 @@ export default {
                         does well, what it is supposed to do.`,
           logo: 'tedx.png',
           logoAlt: 'Tedx logo',
+          company: "Tedx",
         },
         {
           id: 2,
@@ -124,6 +117,7 @@ export default {
           content: `Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.`,
           logo: 'vueconf.svg',
           logoAlt: 'Vue conference logo',
+          company: "Vue Conference"
         },
         {
           id: 3,
@@ -134,6 +128,7 @@ export default {
           volunteers. It's intuitive, fast and easy to share.`,
           logo: 'rumie.svg',
           logoAlt: 'Rumie logo',
+          company: "Rumie",
         },
         {
           id: 4,
@@ -143,6 +138,7 @@ export default {
           content: `Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.`,
           logo: 'wato-coding-hub.svg',
           logoAlt: 'Wato coding hub logo',
+          company: "Wato Coding Hub"
         },
       ],
     }
@@ -299,9 +295,6 @@ export default {
   }
   .user .name {
     margin: 0;
-  }
-  .mobile-testimonial-wrapper .testimonial-logo {
-    min-height: 85px;
   }
   .carousel-indicators .indicator {
     background-color: #E5DEF9;
