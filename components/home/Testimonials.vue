@@ -37,6 +37,11 @@
               :alt="activeTestimonial.logoAlt"
             />
           </div>
+          <img
+            src="~/assets/images/testimonials/quotation.svg"
+            class="quotation-marks"
+            alt="Quotation marks"
+          />
         </div>
         <img
           src="~/assets/images/testimonials/quote.svg"
@@ -180,6 +185,13 @@ export default {
   top: 0;
   right: 46%;
 }
+.quotation-marks {
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  top: -25px;
+  left: -45px;
+}
 .user {
   padding: 20px 28px;
   border-radius: 8px;
@@ -209,6 +221,7 @@ export default {
   color: #828282;
 }
 .testimonial-content-wrapper {
+  position: relative;
   font-size: 24px;
   line-height: 38px;
   color: #333333;
