@@ -7,7 +7,8 @@
           <h2 class="testimonials-heading">Testimonials</h2>
           <div class="d-flex flex-column">
             <div
-              v-for="testimonial in testimonials"
+              v-for="(testimonial, idx) in testimonials"
+              v-if="idx < 3"
               :key="testimonial.id"
               class="user d-flex align-items-center"
               :class="{ active: active === testimonial.id }"
@@ -68,8 +69,8 @@
               class="carousel-item"
               :class="{'active': idx === 0}"
             >
-              <div class="mobile-testimonial-content-wrapper">
-                <p>{{ testimonial.content }}</p>
+              <div class="mobile-testimonial-wrapper">
+                <p class="content">{{ testimonial.content }}</p>
                 <div class="user d-flex align-items-center">
                   <img
                     :src="
@@ -82,7 +83,7 @@
                     <span class="designation">{{ testimonial.designation }}</span>
                   </div>
                 </div>
-                <div class="d-flex justify-content-start">
+                <div class="d-flex flex-column align-items-start justify-content-center testimonial-logo">
                   <img
                     :src="
                       require(`~/assets/images/testimonials/${testimonial.logo}`)
@@ -133,6 +134,15 @@ export default {
           volunteers. It's intuitive, fast and easy to share.`,
           logo: 'rumie.svg',
           logoAlt: 'Rumie logo',
+        },
+        {
+          id: 4,
+          user: 'Costanza Casullo',
+          designation: 'Volunteer',
+          picture: 'costanza.png',
+          content: `Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.`,
+          logo: 'wato-coding-hub.svg',
+          logoAlt: 'Wato coding hub logo',
         },
       ],
     }
@@ -259,23 +269,28 @@ export default {
 @media only screen and (max-width: 768px) {
   .testimonials-section {
     padding-bottom: 0;
+    gap: 0px;
   }
   #testimonialsCarousel {
     min-height: 480px;
     width: 100%;
+    padding-bottom: 60px;
   }
   .testimonials-heading {
-    margin-bottom: 48px;
+    margin-bottom: 36px;
     line-height: 52px;
     font-size: 2rem;
   }
-  .mobile-testimonial-content-wrapper {
+  .mobile-testimonial-wrapper {
     display: flex;
     flex-direction: column;
     margin: 0px 20px;
     font-size: 20px;
     line-height: 36px;
     color: #333333;
+  }
+  .mobile-testimonial-wrapper .content {
+    min-height: 300px;
   }
   .user {
     padding: 0px;
@@ -284,6 +299,9 @@ export default {
   }
   .user .name {
     margin: 0;
+  }
+  .mobile-testimonial-wrapper .testimonial-logo {
+    min-height: 85px;
   }
   .carousel-indicators .indicator {
     background-color: #E5DEF9;
@@ -294,7 +312,14 @@ export default {
 }
 @media only screen and (max-width: 576px) {
   #testimonialsCarousel {
-    min-height: 560px;
+    min-height: 580px;
+  }
+  .mobile-testimonial-wrapper .content {
+    min-height: 400px;
+  }
+  .user {
+    margin-top: 8px;
+    margin-bottom: 24px;
   }
 }
 </style>
