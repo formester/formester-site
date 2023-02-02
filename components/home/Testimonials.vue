@@ -85,7 +85,8 @@
                   />
                   <div>
                     <h6 class="name">{{ testimonial.user }}</h6>
-                    <span class="designation">{{ testimonial.designation }}</span>
+                    <p class="designation my-0">{{ testimonial.designation }}</p>
+                    <p class="company my-0">{{ testimonial.company }}</p>
                   </div>
                 </div>
               </div>
@@ -308,6 +309,11 @@ export default {
   }
   .user .name {
     margin: 0;
+  }
+  .user .company {
+    font-size: 14px;
+    line-height: 22px;
+    color: #333333;
   }
   .carousel-indicators .indicator {
     background-color: #E5DEF9;
