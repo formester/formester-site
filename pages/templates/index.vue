@@ -1,5 +1,5 @@
 <template>
-  <Templates :activeCategory="null" />
+  <Templates :activeCategory="null" :templates="templates" :templateCategories="categories" />
 </template>
 
 <script>
@@ -9,6 +9,17 @@ import Templates from '@/components/template/Templates.vue'
 
 export default {
   components: { Templates },
+  async asyncData({ $axios }) {
+    const { data: templates } = await $axios.get(
+      'https://app.formester.com/templates.json'
+    )
+
+    const { data: categories } = await $axios.get(
+      'https://app.formester.com/template_categories.json',
+    )
+
+    return {templates, categories}
+  },
   computed: {
     meta() {
       const metaData = {

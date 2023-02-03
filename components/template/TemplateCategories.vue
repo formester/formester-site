@@ -47,28 +47,14 @@
 
 <script>
 export default {
-  props: ['activeCategory'],
+  props: ['activeCategory', 'templateCategories'],
   data() {
     return {
-      templateCategories: [],
       showCategories: true,
     }
   },
   mounted() {
-    this.getTemplateCategories()
     if (window.innerWidth <= 840) this.showCategories = false
-  },
-  methods: {
-    async getTemplateCategories() {
-      try {
-        const { data } = await this.$axios.get(
-          'https://app.formester.com/template_categories.json',
-        )
-        this.templateCategories = data
-      } catch (error) {
-        this.templateCategories = []
-      }
-    },
   },
 }
 </script>
