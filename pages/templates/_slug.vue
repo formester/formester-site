@@ -36,13 +36,11 @@ import getSiteMeta from '../../utils/getSiteMeta'
 
 export default {
   layout: 'message',
-  data() {
-    return {
-      template: {},
-    }
-  },
-  mounted() {
-    this.getTemplate()
+  async asyncData({ $axios,  params }) {
+    const { data: template } = await $axios.get(
+      `https://app.formester.com/templates/${params.slug}.json`
+    )
+    return { template }
   },
   computed: {
     meta() {
@@ -74,16 +72,6 @@ export default {
     }
   },
   methods: {
-    async getTemplate() {
-      try {
-        const { data } = await this.$axios.get(
-          `https://app.formester.com/templates/${this.$route.params.slug}.json`
-        )
-        this.template = data
-      } catch (error) {
-        this.template = null
-      }
-    },
     redirectTo(id) {
       window.open(
         `https://app.formester.com/forms/new?template_id=${id}`,
