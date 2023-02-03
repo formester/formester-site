@@ -24,6 +24,9 @@
                 <NuxtLink to="/blog/" class="footer__link">Blog</NuxtLink>
               </li>
               <li class="mt-2">
+                <NuxtLink to="/templates/" class="footer__link">Templates</NuxtLink>
+              </li>
+              <li class="mt-2">
                 <NuxtLink to="/integrations/" class="footer__link"
                   >Integrations</NuxtLink
                 >

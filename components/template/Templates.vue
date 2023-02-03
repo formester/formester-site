@@ -1,7 +1,7 @@
 <template>
   <div class="template_container d-flex">
     <div class="left-sidebar">
-      <TemplateCategories :activeCategory="activeCategory" />
+      <TemplateCategories :activeCategory="activeCategory" :templateCategories="templateCategories" />
     </div>
     <div class="w-100">
       <h1 class="heading">
@@ -10,7 +10,7 @@
         }}
         Templates
       </h1>
-      <div v-if="templates.length" class="templates">
+      <div v-if="templates && templates.length" class="templates">
         <div v-for="(template, idx) in templates" :key="idx" class="template">
           <NuxtLink
             :to="{ name: 'templates-slug', params: { slug: template.slug } }"
@@ -49,32 +49,7 @@
 import TemplateCategories from './TemplateCategories.vue'
 export default {
   components: { TemplateCategories },
-  props: ['activeCategory'],
-  data() {
-    return {
-      templates: [],
-    }
-  },
-  mounted() {
-    this.getTemplates()
-  },
-  methods: {
-    async getTemplates() {
-      let params = {}
-      if (this.$route.params.slug) {
-        params.category_slug = this.$route.params.slug
-      }
-      try {
-        const { data } = await this.$axios.get(
-          'https://app.formester.com/templates.json',
-          { params: params }
-        )
-        this.templates = data
-      } catch (error) {
-        this.templates = []
-      }
-    },
-  },
+  props: ['activeCategory', 'templates', 'templateCategories'],
 }
 </script>
 
