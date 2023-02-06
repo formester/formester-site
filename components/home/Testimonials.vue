@@ -32,7 +32,7 @@
           </div>
         </div>
         <div class="testimonial-content-wrapper">
-          <p class="mb-5">{{ activeTestimonial.content }}</p>
+          <p class="mb-3">{{ activeTestimonial.content }}</p>
           <div class="d-flex justify-content-end">
             <img
               :src="
