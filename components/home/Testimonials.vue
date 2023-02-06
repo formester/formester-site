@@ -5,24 +5,28 @@
       <div class="d-none d-md-grid testimonials-section">
         <div>
           <h2 class="testimonials-heading">Testimonials</h2>
-          <div class="d-flex flex-column">
+          <div class="users">
             <div
-              v-for="(testimonial, idx) in testimonials"
-              v-if="idx < 3"
-              :key="testimonial.id"
-              class="user d-flex align-items-center"
-              :class="{ active: active === testimonial.id }"
-              @click="active = testimonial.id"
+              class="d-flex flex-column users-wrapper"
+              :style="usersWrapperStyling"
             >
-              <img
-                :src="
-                  require(`~/assets/images/testimonials/${testimonial.picture}`)
-                "
-                :alt="testimonial.picture"
-              />
-              <div>
-                <h6 class="name">{{ testimonial.user }}</h6>
-                <span class="designation">{{ testimonial.designation }}</span>
+              <div
+                v-for="(testimonial, idx) in testimonials"
+                :key="testimonial.id"
+                class="user d-flex align-items-center"
+                :class="{ active: active === testimonial.id }"
+                @click="updateActive(testimonial.id)"
+              >
+                <img
+                  :src="
+                    require(`~/assets/images/testimonials/${testimonial.picture}`)
+                  "
+                  :alt="testimonial.picture"
+                />
+                <div>
+                  <h6 class="name">{{ testimonial.user }}</h6>
+                  <span class="designation">{{ testimonial.designation }}</span>
+                </div>
               </div>
             </div>
           </div>
@@ -50,9 +54,15 @@
         />
       </div>
       <!-- Mobile view -->
-      <div class="d-flex flex-column align-items-center d-md-none testimonials-section">
+      <div
+        class="d-flex flex-column align-items-center d-md-none testimonials-section"
+      >
         <h2 class="testimonials-heading">Testimonials</h2>
-        <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div
+          id="testimonialsCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
           <!-- Carousel Indicators -->
           <div class="carousel-indicators">
             <button
@@ -62,7 +72,7 @@
               data-bs-target="#testimonialsCarousel"
               :data-bs-slide-to="idx"
               class="indicator"
-              :class="{'active': idx === 0}"
+              :class="{ active: idx === 0 }"
               aria-current="true"
               :aria-label="`Slide ${idx + 1}`"
             ></button>
@@ -72,7 +82,7 @@
             <div
               v-for="(testimonial, idx) in testimonials"
               class="carousel-item"
-              :class="{'active': idx === 0}"
+              :class="{ active: idx === 0 }"
             >
               <div class="mobile-testimonial-wrapper">
                 <p class="content">{{ testimonial.content }}</p>
@@ -85,7 +95,9 @@
                   />
                   <div>
                     <h6 class="name">{{ testimonial.user }}</h6>
-                    <p class="designation my-0">{{ testimonial.designation }}</p>
+                    <p class="designation my-0">
+                      {{ testimonial.designation }}
+                    </p>
                     <p class="company my-0">{{ testimonial.company }}</p>
                   </div>
                 </div>
@@ -102,7 +114,10 @@
 export default {
   data() {
     return {
-      active: 1,
+      active: 2,
+      prevActive: 2,
+      pixels: 0,
+      userHeight: 136,
       testimonials: [
         {
           id: 1,
@@ -113,7 +128,7 @@ export default {
                         does well, what it is supposed to do.`,
           logo: 'tedx.png',
           logoAlt: 'Tedx logo',
-          company: "Tedx",
+          company: 'Tedx',
         },
         {
           id: 2,
@@ -123,18 +138,18 @@ export default {
           content: `Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.`,
           logo: 'vueconf.svg',
           logoAlt: 'Vue conference logo',
-          company: "Vue Conference"
+          company: 'Vue Conference',
         },
         {
           id: 3,
           user: 'Bogdan Arsenie',
-          designation: 'Chief Technology Officer',
+          designation: 'CTO',
           picture: 'bogdan.png',
           content: `At Rumie we use Formester to get feedback from our educators and
           volunteers. It's intuitive, fast and easy to share.`,
           logo: 'rumie.svg',
           logoAlt: 'Rumie logo',
-          company: "Rumie",
+          company: 'Rumie',
         },
         {
           id: 4,
@@ -144,7 +159,7 @@ export default {
           content: `Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.`,
           logo: 'wato-coding-hub.svg',
           logoAlt: 'Wato coding hub logo',
-          company: "Wato Coding Hub"
+          company: 'Wato Coding Hub',
         },
       ],
     }
@@ -155,13 +170,57 @@ export default {
         (testimonial) => testimonial.id === this.active
       )
     },
+    usersWrapperStyling() {
+      if (this.active <= 2) return
+
+      // Go Down
+      if (this.prevActive < this.active) {
+        if (this.active + 1 <= this.testimonials.length) {
+          this.pixels = -this.userHeight * (this.active - 2)
+        }
+        return {
+          transform: `translateY(${this.pixels}px)`,
+        }
+      }
+
+      // Go Up
+      else if (this.prevActive > this.active) {
+        if (this.active > 3) {
+          this.pixels = this.pixels + this.userHeight
+        }
+        return {
+          transform: `translateY(${this.pixels}px)`,
+        }
+      }
+    },
+  },
+  methods: {
+    updateActive(id) {
+      this.prevActive = this.active
+      this.active = id
+    },
+    onResize() {
+      if (window.innerWidth <= 992) {
+        this.userHeight = 113
+      } else {
+        this.userHeight = 136
+      }
+    },
+  },
+  mounted() {
+    this.$nextTick(() => {
+      window && window.addEventListener('resize', this.onResize)
+    })
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.onResize)
   },
 }
 </script>
 
 <style>
 .bg-magnolia {
-  background-color: #F7F5FF;
+  background-color: #f7f5ff;
 }
 
 .testimonials-section {
@@ -193,6 +252,13 @@ export default {
   top: -25px;
   left: -45px;
 }
+.users {
+  height: 408px;
+  overflow: hidden;
+}
+.users-wrapper {
+  transition: ease-in-out all 0.4s;
+}
 .user {
   padding: 20px 28px;
   border-radius: 8px;
@@ -207,6 +273,12 @@ export default {
   box-shadow: 0px 17px 80px rgba(0, 0, 0, 0.03),
     0px 11.0185px 46.8519px rgba(0, 0, 0, 0.0227778),
     0px 6.54815px 25.4815px rgba(0, 0, 0, 0.0182222),
+    0px 3.4px 13px rgba(0, 0, 0, 0.015),
+    0px 1.38519px 6.51852px rgba(0, 0, 0, 0.0117778),
+    0px 0.314815px 3.14815px rgba(0, 0, 0, 0.00722222);
+}
+.user:last-child.active {
+  box-shadow: 0px 6.54815px 25.4815px rgba(0, 0, 0, 0.0182222),
     0px 3.4px 13px rgba(0, 0, 0, 0.015),
     0px 1.38519px 6.51852px rgba(0, 0, 0, 0.0117778),
     0px 0.314815px 3.14815px rgba(0, 0, 0, 0.00722222);
@@ -256,6 +328,9 @@ export default {
   .quote-illustraion {
     width: 75px;
   }
+  .users {
+    height: 339px;
+  }
   .user {
     padding: 16px 22px;
   }
@@ -273,7 +348,7 @@ export default {
   }
   .testimonial-content-wrapper {
     font-size: 18px;
-    line-height: 28px ;
+    line-height: 28px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -316,10 +391,10 @@ export default {
     color: #333333;
   }
   .carousel-indicators .indicator {
-    background-color: #E5DEF9;
+    background-color: #e5def9;
   }
   .carousel-indicators .active {
-    background-color: #4F3895;
+    background-color: #4f3895;
   }
 }
 @media only screen and (max-width: 576px) {
