@@ -13,16 +13,14 @@
         </thead>
         <tbody>
           <tr>
-            <th scope="row">{{ amount[0] }}</th>
-            <td> {{showPrice(amount[1])}}</td>
-            <td> {{showPrice(amount[2])}}</td>
-            <td> {{showPrice(amount[3])}}</td>
+            <th scope="row">Price</th>
+            <td v-for="price in pricing" :key="price"> {{showPrice(price)}}</td>
           </tr>
-          <tr v-for="p of pricing" :key="p[0]">
-            <th scope="row">{{ p[0] }}</th>
-            <td>{{ p[1] }}</td>
-            <td>{{ p[2] }}</td>
-            <td>{{ p[3] }}</td>
+          <tr v-for="data of tableData" :key="data[0]">
+            <th scope="row">{{ data[0] }}</th>
+            <td>{{ data[1] }}</td>
+            <td>{{ data[2] }}</td>
+            <td>{{ data[3] }}</td>
           </tr>
         </tbody>
       </table>
@@ -37,8 +35,8 @@ export default {
   },
   data() {
     return {
-      amount: ['Price', 0, 13, 49],
-      pricing: [
+      pricing: [0, 13, 49],
+      tableData: [
         ['No. of submissions per month', '100', '1,000', '15,000'],
         ['Form builder', 'Yes', 'Yes', 'Yes'],
         ['Question Branching & Logic Jumps', 'Yes', 'Yes', 'Yes'],

@@ -4,34 +4,35 @@
       <h1 class="pricing__heading">Pricing that feels just right</h1>
       <p class="pricing__subheading">Start with our free plan</p>
 
-      <div class="d-flex justify-content-center align-items-center plan_toggle__switch">
+      <div
+        class="d-flex justify-content-center align-items-center plan_toggle__switch"
+      >
         <span>Monthly</span>
         <label class="switch">
-          <input type="checkbox" class="plan_toggle" v-model="isYearly">
+          <input type="checkbox" class="plan_toggle" v-model="isYearly" />
           <div class="slider round"></div>
         </label>
         <span>Yearly</span>
       </div>
 
       <div
+        v-if="!isYearly"
         class="d-flex align-items-center justify-content-center flex-wrap mt-4"
       >
-        <PricingCard category="Free" :amount="0" :features="freePlanFeatures" :isYearly="isYearly" />
-        <PricingCard
-          category="Personal"
-          :amount="13"
-          :features="personalPlanFeatures"
-          :isHighlighted="true"
-          :isYearly="isYearly"
-        />
-        <PricingCard
-          category="Business"
-          :amount="49"
-          :features="businessPlanFeatures"
-          :isYearly="isYearly"
-        />
+        <PricingCard :plan="free" />
+        <PricingCard :plan="personalMonthly" :isHighlighted="true" />
+        <PricingCard :plan="businessMonthly" />
       </div>
-      <PricingComparision :isYearly="isYearly"/>
+
+      <div
+        v-if="isYearly"
+        class="d-flex align-items-center justify-content-center flex-wrap mt-4"
+      >
+        <PricingCard :plan="free" />
+        <PricingCard :plan="personalYearly" :isHighlighted="true" />
+        <PricingCard :plan="businessYearly" />
+      </div>
+      <PricingComparision :isYearly="isYearly" />
       <CallToActionSection />
       <Faq />
     </div>
@@ -43,6 +44,14 @@ import CallToActionSection from '@/components/CallToActionSection.vue'
 import PricingCard from '../components/pricing/PricingCard.vue'
 import PricingComparision from '../components/pricing/PricingComparision.vue'
 import Faq from '../components/pricing/Faq.vue'
+import {
+  free,
+  personalMonthly,
+  businessMonthly,
+  freeYearly,
+  personalYearly,
+  businessYearly,
+} from '../constants/plan'
 
 // MetaTags
 import getSiteMeta from '../utils/getSiteMeta'
@@ -52,54 +61,12 @@ export default {
   data() {
     return {
       isYearly: false,
-      freePlanFeatures: {
-        available: [
-          'Unlimited forms',
-          '100 submissions per month',
-          'Question Branching & Logic Jumps',
-          'Self Email Notifications',
-          'Respondent Email Notifications',
-          'Unlimited Collaborators',
-          'Spam Protection',
-          'API Integrations',
-          'Zapier Connectors',
-          'Analytics',
-        ],
-        unavailable: ['File Uploads', 'White Label'],
-      },
-      personalPlanFeatures: {
-        available: [
-          'Unlimited forms',
-          '1k submissions per month',
-          'Question Branching & Logic Jumps',
-          'Self Email Notifications',
-          'Respondent Email Notifications',
-          'Unlimited Collaborators',
-          'Spam Protection',
-          'Api Integrations',
-          'Zapier Connectors',
-          'Analytics',
-          '1 Gb File Uploads',
-        ],
-        unavailable: ['White Label'],
-      },
-      businessPlanFeatures: {
-        available: [
-          'Unlimited forms',
-          '15k submissions per month',
-          'Question Branching & Logic Jumps',
-          'Self Email Notifications',
-          'Respondent Email Notifications',
-          'Unlimited Collaborators',
-          'Spam Protection',
-          'API Integrations',
-          'Zapier Connectors',
-          'Analytics',
-          '5 GB File Uploads',
-          'White Label',
-        ],
-        unavailable: [],
-      },
+      free,
+      personalMonthly,
+      businessMonthly,
+      freeYearly,
+      personalYearly,
+      businessYearly,
     }
   },
   computed: {
@@ -251,6 +218,7 @@ export default {
   gap: 18px;
   font-size: var(--ft-subtitle);
   font-weight: 500;
+  line-height: normal;
 }
 
 /* Toggle Button */
@@ -280,7 +248,7 @@ export default {
 
 .slider:before {
   position: absolute;
-  content: "";
+  content: '';
   height: 20px;
   width: 20px;
   left: 4px;
