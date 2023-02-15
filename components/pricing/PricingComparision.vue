@@ -12,6 +12,12 @@
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <th scope="row">{{ amount[0] }}</th>
+            <td> {{showPrice(amount[1])}}</td>
+            <td> {{showPrice(amount[2])}}</td>
+            <td> {{showPrice(amount[3])}}</td>
+          </tr>
           <tr v-for="p of pricing" :key="p[0]">
             <th scope="row">{{ p[0] }}</th>
             <td>{{ p[1] }}</td>
@@ -26,10 +32,13 @@
 
 <script>
 export default {
+  props: {
+    isYearly: Boolean,
+  },
   data() {
     return {
+      amount: ['Price', 0, 13, 49],
       pricing: [
-        ['Price', '$0 / month', '$13 / month', '$49 / month'],
         ['No. of submissions per month', '100', '1,000', '15,000'],
         ['Form builder', 'Yes', 'Yes', 'Yes'],
         ['Question Branching & Logic Jumps', 'Yes', 'Yes', 'Yes'],
@@ -43,6 +52,15 @@ export default {
         ['White Label', '-', '-', 'Yes'],
       ]
     } 
+  },
+  methods: {
+    showPrice(amount){
+      if(this.isYearly){
+        return `${amount * 11} / year`;
+      }
+
+      return `${amount} / month`;
+    }
   }
 }
 </script>

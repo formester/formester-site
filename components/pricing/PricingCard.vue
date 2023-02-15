@@ -7,8 +7,9 @@
   >
     <h6 class="pricing__category text-start">{{ category }}</h6>
     <div class="d-flex align-items-baseline">
-      <h2 class="pricing__amount">${{ amount }}</h2>
-      <span class="pricing__timeline">/mo</span>
+      <div v-if="isYearly && amount > 0" class="original-price"><s>${{originalPrice}}</s></div>
+      <h2 class="pricing__amount">${{ isYearly ? yearlyPrice : amount}}</h2>
+      <span class="pricing__timeline">{{isYearly ? "/y" : "/mo"}}</span>
     </div>
     <ul class="mt-3 text-start">
       <li
@@ -41,10 +42,19 @@ export default {
     amount: Number,
     features: Object,
     isHighlighted: Boolean,
+    isYearly: Boolean,
   },
   data() {
     return {
       highlight: this.isHighlighted,
+    }
+  },
+  computed: {
+    yearlyPrice(){
+      return this.amount * 11;
+    },
+    originalPrice(){
+      return this.amount * 12;
     }
   },
   methods: {
@@ -69,6 +79,13 @@ export default {
 .pricing__category {
   font-size: var(--ft-subtitle);
   color: #695e8c;
+}
+
+.original-price {
+  font-size: var(--ft-subtitle);
+  font-weight: 300;
+  color: #5e5e5e;
+  margin-right: 10px;
 }
 
 .pricing__amount {
