@@ -3,23 +3,36 @@
     <div class="text-center mt-5">
       <h1 class="pricing__heading">Pricing that feels just right</h1>
       <p class="pricing__subheading">Start with our free plan</p>
+
       <div
+        class="d-flex justify-content-center align-items-center plan_toggle__switch"
+      >
+        <span>Monthly</span>
+        <label class="switch">
+          <input type="checkbox" class="plan_toggle" v-model="isYearly" />
+          <div class="slider round"></div>
+        </label>
+        <span>Yearly</span>
+      </div>
+
+      <div
+        v-if="!isYearly"
         class="d-flex align-items-center justify-content-center flex-wrap mt-4"
       >
-        <PricingCard category="Free" :amount="0" :features="freePlanFeatures" />
-        <PricingCard
-          category="Personal"
-          :amount="13"
-          :features="personalPlanFeatures"
-          :isHighlighted="true"
-        />
-        <PricingCard
-          category="Business"
-          :amount="49"
-          :features="businessPlanFeatures"
-        />
+        <PricingCard :plan="free" />
+        <PricingCard :plan="personalMonthly" :isHighlighted="true" />
+        <PricingCard :plan="businessMonthly" />
       </div>
-      <PricingComparision />
+
+      <div
+        v-if="isYearly"
+        class="d-flex align-items-center justify-content-center flex-wrap mt-4"
+      >
+        <PricingCard :plan="free" />
+        <PricingCard :plan="personalYearly" :isHighlighted="true" />
+        <PricingCard :plan="businessYearly" />
+      </div>
+      <PricingComparision :isYearly="isYearly" />
       <CallToActionSection />
       <Faq />
     </div>
@@ -31,6 +44,14 @@ import CallToActionSection from '@/components/CallToActionSection.vue'
 import PricingCard from '../components/pricing/PricingCard.vue'
 import PricingComparision from '../components/pricing/PricingComparision.vue'
 import Faq from '../components/pricing/Faq.vue'
+import {
+  free,
+  personalMonthly,
+  businessMonthly,
+  freeYearly,
+  personalYearly,
+  businessYearly,
+} from '../constants/plan'
 
 // MetaTags
 import getSiteMeta from '../utils/getSiteMeta'
@@ -39,54 +60,13 @@ export default {
   components: { PricingCard, PricingComparision, Faq, CallToActionSection },
   data() {
     return {
-      freePlanFeatures: {
-        available: [
-          'Unlimited forms',
-          '100 submissions per month',
-          'Question Branching & Logic Jumps',
-          'Self Email Notifications',
-          'Respondent Email Notifications',
-          'Unlimited Collaborators',
-          'Spam Protection',
-          'API Integrations',
-          'Zapier Connectors',
-          'Analytics',
-        ],
-        unavailable: ['File Uploads', 'White Label'],
-      },
-      personalPlanFeatures: {
-        available: [
-          'Unlimited forms',
-          '1k submissions per month',
-          'Question Branching & Logic Jumps',
-          'Self Email Notifications',
-          'Respondent Email Notifications',
-          'Unlimited Collaborators',
-          'Spam Protection',
-          'Api Integrations',
-          'Zapier Connectors',
-          'Analytics',
-          '1 Gb File Uploads',
-        ],
-        unavailable: ['White Label'],
-      },
-      businessPlanFeatures: {
-        available: [
-          'Unlimited forms',
-          '15k submissions per month',
-          'Question Branching & Logic Jumps',
-          'Self Email Notifications',
-          'Respondent Email Notifications',
-          'Unlimited Collaborators',
-          'Spam Protection',
-          'API Integrations',
-          'Zapier Connectors',
-          'Analytics',
-          '5 GB File Uploads',
-          'White Label',
-        ],
-        unavailable: [],
-      },
+      isYearly: false,
+      free,
+      personalMonthly,
+      businessMonthly,
+      freeYearly,
+      personalYearly,
+      businessYearly,
     }
   },
   computed: {
@@ -231,5 +211,72 @@ export default {
 .pricing__heading {
   font-size: var(--ft-bigger-body);
   font-weight: 600;
+}
+
+.plan_toggle__switch {
+  margin-top: 3rem;
+  gap: 18px;
+  font-size: var(--ft-subtitle);
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* Toggle Button */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 27px;
+  margin-bottom: 0px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #6d5eac;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #6d5eac;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 </style>

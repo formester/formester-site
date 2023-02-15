@@ -5,21 +5,22 @@
     class="pricing__card d-flex flex-column"
     :class="{ hglt: highlight }"
   >
-    <h6 class="pricing__category text-start">{{ category }}</h6>
+    <h6 class="pricing__category text-start">{{ plan.name }}</h6>
     <div class="d-flex align-items-baseline">
-      <h2 class="pricing__amount">${{ amount }}</h2>
-      <span class="pricing__timeline">/mo</span>
+      <h2 class="pricing__amount">${{ plan.price }}</h2>
+      <span class="pricing__timeline">{{ priceTimeline }}</span>
+      <div v-if="plan.type === 'Yearly' && plan.price > 0" class="original-price"><s>${{ plan.originalPrice }}</s></div>
     </div>
     <ul class="mt-3 text-start">
       <li
-        v-for="(feature, index) in features.available"
+        v-for="(feature, index) in plan.features.available"
         :key="feature + index"
         class="mt-2 pricing__features"
       >
         {{ feature }}
       </li>
       <li
-        v-for="(feature, index) in features.unavailable"
+        v-for="(feature, index) in plan.features.unavailable"
         :key="feature + index"
         class="mt-2 pricing__unavailable__features"
       >
@@ -37,14 +38,17 @@
 <script>
 export default {
   props: {
-    category: String,
-    amount: Number,
-    features: Object,
+    plan: Object,
     isHighlighted: Boolean,
   },
   data() {
     return {
       highlight: this.isHighlighted,
+    }
+  },
+  computed: {
+    priceTimeline(){
+      return this.plan.type === "Yearly" ? "/y" : "/mo";
     }
   },
   methods: {
@@ -69,6 +73,13 @@ export default {
 .pricing__category {
   font-size: var(--ft-subtitle);
   color: #695e8c;
+}
+
+.original-price {
+  font-size: var(--ft-subtitle);
+  font-weight: lighter;
+  color: #5e5e5e;
+  margin-left: 10px;
 }
 
 .pricing__amount {
