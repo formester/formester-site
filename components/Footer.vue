@@ -106,6 +106,11 @@
                   >Get Support</a
                 >
               </li>
+               <li class="mt-2">
+                <a href="https://status.formester.com" class="footer__link"
+                  >Status</a
+                >
+              </li>
             </ul>
           </div>
 
