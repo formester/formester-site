@@ -21,7 +21,7 @@
       </div>
 
       <iframe
-        :src="template.surveyUrl"
+        :src="template.survey_url"
         frameborder="0"
         width="100%"
         class="template-preview"
@@ -50,8 +50,8 @@ export default {
         title: this.template?.name || 'Formester',
         description:
           this.template?.description || this.template?.name,
-        mainImage: this.template?.previewImageUrl
-          ? this.template.previewImageUrl
+        mainImage: this.template?.preview_image_url
+          ? this.template.preview_image_url
           : 'https://formester.com/formester-form-builder-background.png',
         mainImageAlt: 'Formester Template',
       }
