@@ -1,8 +1,6 @@
 ---
-title: How to integrate Google SMTP with Formester
-description: This guide helps you configure SMTP settings for Gmail SMTP on
-  Formester. You can then start sending all emails through your personalized
-  emails and receive responses directly in your inbox
+title: How To Integrate Google SMTP With Formester | How To Use Gmail SMTP Server For Sending Mail - Formester
+description: Learn how to use the Gmail SMTP server to send mail with Formester. This guide will show you how to integrate Gmail SMTP server and use it to send mail.
 keywords: smtp, google smtp, google smtp integration, google smtp credentials
 author: Ravindra Kumar Verma
 createdAt: 2022-12-19T04:14:23.956Z

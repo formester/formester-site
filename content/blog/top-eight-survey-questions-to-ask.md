@@ -1,9 +1,6 @@
 ---
-title: Top 8 Survey Questions to Ask
-description: Do you wish to ace your feedback questionnaire to achieve the best
-  results? What is it that you look for while drafting a questionnaire for your
-  desired survey research? Let us assist you with simple tips on the best
-  questions to ask in a survey.
+title: Top 8 Survey Questions To Ask Customers | Here Are The Important Questions You Should Ask Your Customer - Formester
+description: Are you looking for the most important questions to ask your customers in a survey? Formester's blog has compiled a list of the top 8 survey questions to ask customers. Read more now.
 keywords: top survey questions to ask customers, what questions to ask for
   survey, best questions to ask on a survey, most popular survey questions, how
   to ask good survey questions, basic survey questions
