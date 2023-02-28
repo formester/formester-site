@@ -1,9 +1,6 @@
 ---
 title: 5 Things You Can Do With Survey Forms
-description: There are seven wonders in the world, seventh is compunding and
-  eighth is a survey form. The amount of automation and insigts a nicely built
-  survey can bring into any business is mind boggling. In this article we talk
-  about five things you can do with your survey forms.
+description: There are seven wonders in the world, seventh is compunding and eighth is a survey form. The amount of automation and insigts a nicely built survey can bring into any business is mind boggling. In this article we talk about five things you can do with your survey forms.
 keywords: uses of survey, things to do with survey
 author: Mriganka Chandra
 createdAt: 2022-12-08T05:38:26.147Z

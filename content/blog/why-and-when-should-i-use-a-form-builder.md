@@ -1,6 +1,8 @@
 ---
-title: Why And When Should I Use A Form Builder? | Benefits Of Using An Online Form Builder - Formester
-description: Discover the benefits of using an online form builder for your business. Learn why and when you should use a form builder to improve customer engagement and streamline operations with Formester.
+metaTitle: Why And When Should I Use A Form Builder? | Benefits Of Using An Online Form Builder - Formester
+metaDescription: Discover the benefits of using an online form builder for your business. Learn why and when you should use a form builder to improve customer engagement and streamline operations with Formester.
+title: Why and When Should I Use a Form Builder?
+description: Forms enable you to scale your data accumulation and make it extensively faster and simpler, but also play a huge role in streamlining your business operations. How? By allowing your audience to enter relevant data rather than collecting it from them, you eliminate a great chunk of the hassle caused by repeated mundane tasks.
 keywords: why use online form builder, reasons to use online form builder, using
   html form builder
 author: Vivek Badani
