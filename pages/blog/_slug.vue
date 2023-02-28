@@ -171,6 +171,8 @@ export default {
         type: 'article',
         url: `https://formester.com/blog/${this.$route.params.slug}/`,
         title: this.article.title,
+        metaTitle: this.article.metaTitle,
+        metaDescription: this.article.metaDescription,
         description: this.article.description,
         mainImage: this.article.coverImg
           ? `https://formester.com/${this.article.coverImg}`
@@ -242,6 +244,8 @@ export default {
       },
       headline: this.article.title,
       description: this.article.description,
+      metaTitle: this.article.metaTitle,
+      metaDescription: this.article.metaDescription,
       image: this.article.coverImg
         ? `https://formester.com/${this.article.coverImg}`
         : 'https://formester.com/formester-form-builder-background.png',
