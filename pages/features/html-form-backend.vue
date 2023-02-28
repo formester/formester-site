@@ -59,9 +59,9 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/features/html-form-backend/',
-        title: 'HTML Form Attributes | HTML Form Backend - Formester',
+        title: 'HTML Form Backend | Formester',
         description:
-          "Maximize your website's potential with Formester's HTML form attributes and backend. Start converting leads into customers today. Get Started now!",
+          'Making your HTML forms work has never been more straightforward. Just point your form to our endpoint and start getting submissions in a matter of minutes. As a power user, you get complete control over the look and feel of your web form.',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with Html Form Backend page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with Html Form Backend page image alt
@@ -71,7 +71,7 @@ export default {
   },
   head() {
     return {
-      title: 'HTML Form Attributes | HTML Form Backend - Formester',
+      title: 'HTML Form Backend | Formester',
       meta: [...this.meta],
       link: [
         {

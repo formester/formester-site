@@ -109,9 +109,9 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/integrations/',
-        title: 'Slack Integration | Google Sheets Integration - Formester',
+        title: 'Connect beautiful, interactive forms to your favorite apps',
         description:
-          'Streamline your workflow with our Slack and Google Sheets integration. Try Formester today and boost productivity in just a few clicks! Get started today.',
+          'Formester integrates with tools like Slack, Google Sheets and Salesforce. Send data anywhere you like. Getting started just takes few minutes with our pre-build templates.',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with integrations page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with integrations page image alt
@@ -121,7 +121,7 @@ export default {
   },
   head() {
     return {
-      title: 'Slack Integration | Google Sheets Integration - Formester',
+      title: 'Seamless Integration | Formester',
       meta: [...this.meta],
       link: [
         {

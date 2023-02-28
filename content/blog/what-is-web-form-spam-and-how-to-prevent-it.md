@@ -1,6 +1,10 @@
 ---
-title: How To Stop Spam From Website Contact Form - Formester
-description: Formester's blog has a great article on how to stop spam from website contact form. This is essential for keeping your website clean and your visitors safe. Read more here.
+title: What is web form spam, and how to prevent it?
+description: Websites have been here for a while, and so are web forms.
+  Businesses use web forms for various use cases ranging from lead generation,
+  feedback, newsletter signup, and even for taking customer order details.
+  Despite forms being very useful, they also serve as a breeding ground for
+  pests — electronic pests, which we can call bots.
 keywords: prevent contact form spam without captcha, form spam bot, how to spam
   a form, how to block spam on website, why do bots spam contact forms, how to
   stop contact form spam wordpress, contact form spam

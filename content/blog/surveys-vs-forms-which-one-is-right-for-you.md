@@ -1,6 +1,10 @@
 ---
-title: Surveys vs Forms Which One Is Right For You | Benefits Of Forms And Surveys - Formester
-description: Not sure if you should use a survey or a form for your next project? Check out Formester's blog post to learn about the benefits of form and surveys and which one is right for you.
+title: "Surveys vs Forms: Which one is right for you?"
+description: Surveys and forms are the two most frequently used methods to carry
+  out any research on the internet. While people repeatedly get confused between
+  the two and use the terms interchangeably, one must recognize the distinction
+  to carry out accurate research or even to choose the right method of data
+  collection.
 keywords: surveys, forms, how is a form different from survey, key differences
   between form and survey
 author: Mriganka Chandra

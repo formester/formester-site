@@ -56,7 +56,7 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/features/online-payment/',
-        title: 'Online Forms With Signature | Online Form Builder With Signature - Formester',
+        title: 'Digital Signature | Formester',
         description:
           'Add e-sign to your online form easily using formester. E-sign has become increasingly popular in recent years as it offers a convenient and efficient way to sign documents. Traditional handwritten signatures can most often be replaced by electronic signatures.',
         mainImage:
@@ -68,7 +68,7 @@ export default {
   },
   head() {
     return {
-      title: 'Online Forms With Signature | Online Form Builder With Signature - Formester',
+      title: 'HTML Form Backend | Formester',
       meta: [...this.meta],
       link: [
         {

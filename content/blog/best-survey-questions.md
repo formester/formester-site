@@ -1,6 +1,7 @@
 ---
-title: Examples Of A Good Survey Questionnaire | How To Write Good Survey Questions - Formester
-description: Learn How to create effective survey questions with our examples of good survey questionnaire. Formester's article will help you write surveys that get results!
+title: The Best Survey Questions in 2022 (With Examples)
+description: If you want to accelerate your business, you must understand the
+  nerves of your customers. The Survey plays a vital role here.
 keywords: survey questions examples, survey questions, survey form, types of
   survey questions, good survey questions, good survey questions examples
 author: Vivek Badani

@@ -305,9 +305,9 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/formester-vs-typeform/',
-        title: 'Typeform Alternative | Formester vs Typeform - Formester',
+        title: 'Looking for a Powerful Typeform Alternative? Look No Further',
         description:
-          "Looking for a Typeform alternative? Check out Formester! With advanced features and an easy-to-use interface, Formester is the perfect choice for your form building needs. Sign up now.",
+          "Good-looking forms don't solve your problem. Dynamic, customizable and experience-driven ones do.",
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with formester vs typeform page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs typeform page image alt
@@ -317,7 +317,7 @@ export default {
   },
   head() {
     return {
-      title: 'Typeform Alternative | Formester vs Typeform - Formester',
+      title: 'Formester vs Typeform | Formester',
       meta: [...this.meta],
       link: [
         {
