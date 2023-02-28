@@ -330,9 +330,9 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/formester-vs-zoho-form/',
-        title: 'Zoho Form Alternative that Gives More',
+        title: 'Formester vs Zoho Forms | Zoho Forms Alternative - Formester',
         description:
-          'Declutter your work with a faster and intuitive form builder. Build good looking forms without fighting the system.',
+          'Looking for a powerful Zoho Forms alternative? Try Formester for advanced form building features and intuitive user experience. Start your free trial today!',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with formester vs zoho form page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs zoho form page image alt
@@ -342,7 +342,7 @@ export default {
   },
   head() {
     return {
-      title: 'Formester vs Zoho Form | Formester',
+      title: 'Formester vs Zoho Forms | Zoho Forms Alternative - Formester',
       meta: [...this.meta],
       link: [
         {

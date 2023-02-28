@@ -336,9 +336,9 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/formester-vs-forms-app/',
-        title: 'Forms.App Alternative that Gives More',
+        title: 'Formester vs Forms App | Forms App Alternative - Formester',
         description:
-          'Declutter your work with a faster and intuitive form builder. Build good looking forms without fighting the system.',
+          "Trying to decide between Formester vs Forms App? Both are great form builders, but which one is right for you? We've put together a side-by-side comparison choose and get started today!",
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with formester vs forms.app page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs forms.app page image alt
@@ -348,7 +348,7 @@ export default {
   },
   head() {
     return {
-      title: 'Formester vs Forms.App | Formester',
+      title: 'Formester vs Forms App | Forms App Alternative - Formester',
       meta: [...this.meta],
       link: [
         {

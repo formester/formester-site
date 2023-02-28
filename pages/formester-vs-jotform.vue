@@ -335,9 +335,9 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/formester-vs-jotform/',
-        title: 'Jotform Alternative that Gives More',
+        title: 'Jotform Alternative | Formester vs Jotform - Formester',
         description:
-          'Declutter your work with a faster and intuitive form builder. Build good looking forms without fighting the system.',
+          'Discover a powerful Jotform alternative with Formester. Create custom forms, collect data and grow your business. Try it now and see the difference. Sign up today.',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with formester vs jotform page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs jotform page image alt
@@ -347,7 +347,7 @@ export default {
   },
   head() {
     return {
-      title: 'Formester vs Jotform | Formester',
+      title: 'Jotform Alternative | Formester vs Jotform - Formester',
       meta: [...this.meta],
       link: [
         {

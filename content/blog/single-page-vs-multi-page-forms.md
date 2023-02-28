@@ -1,9 +1,6 @@
 ---
-title: Single Page vs Multi Page Forms
-description: Do you need a single-page form or a multi-page form? There has been
-  much debate about which provides a better user experience. However, the answer
-  may not be so definitive. There are advantages and disadvantages to both.
-  Deciding which is most appropriate depends on the context of your form.
+title: Key Benefits Of Single Page Forms | Single Page vs Multi Page Forms What To Choose?  - Formester
+description: Trying to decide between single page and multi page forms? Check out our blog post to see the key benefits of single page forms and see if they're right for you.
 keywords: single page, multi page, single page vs multi page, single page form, multi page form, single page form vs multi page form, single page vs multi page forms
 author: Piyush Singhania
 createdAt: 2022-05-15
