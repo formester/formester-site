@@ -330,9 +330,9 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/formester-vs-formstack/',
-        title: 'Formstack Alternative that Gives More',
+        title: 'Formester vs Formstack | Formstack Alternative - Formester',
         description:
-          'Declutter your work with a faster and intuitive form builder. Build good looking forms without fighting the system.',
+          'Looking for a Formstack alternative? Try Formester! Our user-friendly form builder and integrations make collecting and managing data a breeze. Sign up today!',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with formester vs formstack page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs formstack page image alt
@@ -342,7 +342,7 @@ export default {
   },
   head() {
     return {
-      title: 'Formester vs Formstack | Formester',
+      title: 'Formester vs Formstack | Formstack Alternative - Formester',
       meta: [...this.meta],
       link: [
         {

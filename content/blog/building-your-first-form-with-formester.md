@@ -1,6 +1,6 @@
 ---
-title: Building your first form with formester
-description: Different approaches to building web forms with formester
+title: How To Build Your First Form With Formester | How To Build Your First Web Form - Formester
+description: Learn how to build your first web form with Formester! Our step-by-step guide makes it easy to build your first forms for any website or business. Start today!
 keywords: create form, build your first form, backend as a service, drag and
   drop form, free form builder, free online form builder
 author: Piyush Singhania

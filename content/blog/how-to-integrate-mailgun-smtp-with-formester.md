@@ -1,8 +1,6 @@
 ---
-title: How to integrate MailGun SMTP with Formester
-description: This guide helps you configure SMTP settings for MailGun SMTP on
-  Formester. You can then start sending all emails through your personalized
-  emails and receive response directly in your inbox
+title: How To Integrate Mailgun SMTP With Formester | SMTP Configuration For Mailgun - Formester
+description: Learn how to integrate Mailgun SMTP with Formester to easily send emails from your application. This guide provides step-by-step instructions on configuring Mailgun SMTP with Formester.
 keywords: smtp, mailgun smtp, mailgun smtp integration, mailgun smtp credentials
 author: Ravindra Kumar Verma
 createdAt: 2022-12-19T11:20:02.681Z

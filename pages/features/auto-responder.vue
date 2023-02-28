@@ -59,9 +59,9 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/features/auto-responder/',
-        title: 'Personalised Email Responder | Formester',
+        title: 'Email Autoresponder Message | Personalised Email Responder - Formester',
         description:
-          'Respond to the customer as soon as you get a form submission. Personalised emails are easy to create with our intuitive email builder with an option to use your official email to improve delivery and conversion.',
+          'Boost your email marketing with a personalised email autoresponder message. Try Formester and engage your subscribers today! Sign up now.',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with auto-responder page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
@@ -71,7 +71,7 @@ export default {
   },
   head() {
     return {
-      title: 'Personalised Email Responder | Formester',
+      title: 'Email Autoresponder Message | Personalised Email Responder - Formester',
       meta: [...this.meta],
       link: [
         {
