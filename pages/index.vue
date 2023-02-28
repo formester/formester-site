@@ -37,7 +37,7 @@ export default {
       '@type': 'Corporation',
       name: 'Formester',
       description:
-        "Sign up now for the best No Code Form Builder! Create stunning HTML Forms with Formester's easy-to-use Online HTML Form Builder. Start building today!",
+        'Formester provides an interactive drag and drop builder to create amazing survey forms and quizes.',
       logo: 'https://formester.com/logo.png',
       url: 'https://formester.com',
       sameAs: [

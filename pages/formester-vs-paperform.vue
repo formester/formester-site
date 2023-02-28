@@ -330,9 +330,9 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/formester-vs-paperform/',
-        title: 'Formester vs Paperform | Paperform Alternative - Formester',
+        title: 'Paperform Alternative that Gives More',
         description:
-          'Discover a powerful Paperform alternative with Formester! Boost your form building and automation game with ease. Try Formester today.',
+          'Declutter your work with a faster and intuitive form builder. Build good looking forms without fighting the system.',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with formester vs paperform page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs paperform page image alt
@@ -342,7 +342,7 @@ export default {
   },
   head() {
     return {
-      title: 'Formester vs Paperform | Paperform Alternative - Formester',
+      title: 'Formester vs Paperform | Formester',
       meta: [...this.meta],
       link: [
         {

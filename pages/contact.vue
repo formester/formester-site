@@ -134,9 +134,9 @@ export default {
     return {
       '@context': 'http://schema.org/',
       '@type': 'ContactPage',
-      name: 'Contact | Online Form Builder - Formester',
+      name: 'Formester contact page',
       description:
-        'Create custom online forms with ease using Formester - the top-rated online form builder. Contact us today to start building your perfect form!',
+        'Formester support to help you with any questions that you may have',
       url: 'https://formester.com/contact/',
     }
   },
@@ -145,9 +145,9 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/contact/',
-        title: 'Contact | Online Form Builder - Formester',
+        title: 'We are happy to help',
         description:
-          'Create custom online forms with ease using Formester - the top-rated online form builder. Contact us today to start building your perfect form!',
+          'Formester support to help you with any questions that you may have',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with contact page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with contact page image alt
@@ -157,7 +157,7 @@ export default {
   },
   head() {
     return {
-      title: 'Contact | Online Form Builder - Formester',
+      title: 'Contact | Formester',
       meta: [...this.meta],
       link: [
         {

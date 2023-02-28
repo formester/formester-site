@@ -121,13 +121,14 @@ export default {
       testimonials: [
         {
           id: 1,
-          user: 'Dr. Michele Ross',
-          designation: 'Founder',
-          picture: 'Dr_Michele.webp',
-          content: `I'm migrating my forms from Paperform, where I've been a user for over 4 years. Loving the software so far! I've already replaced Paperform form embeds & popups on my sites & my husband's websites with Formester forms`,
-          logo: 'dr._michelelogo.webp',
-          logoAlt: 'Dr. michele ross logo',
-          company: 'Infused Health',
+          user: 'Thibaud Martinez',
+          designation: 'Organiser',
+          picture: 'thibaud.webp',
+          content: `I really enjoy Formester. It’s clean and straight-forward and it
+                        does well, what it is supposed to do.`,
+          logo: 'tedx.webp',
+          logoAlt: 'Tedx logo',
+          company: 'Tedx',
         },
         {
           id: 2,
@@ -172,13 +173,13 @@ export default {
         },
         {
           id: 6,
-          user: 'Thibaud Martinez',
-          designation: 'Organiser',
-          picture: 'thibaud.webp',
-          content: `I really enjoy Formester. It’s clean and straight-forward and it does well, what it is supposed to do.`,
-          logo: 'tedx.webp',
-          logoAlt: 'Tedx logo',
-          company: 'Tedx',
+          user: 'Dr. Michele Ross',
+          designation: 'Founder',
+          picture: 'Dr_Michele.webp',
+          content: `I'm migrating my forms from Paperform, where I've been a user for over 4 years. Loving the software so far! I've already replaced Paperform form embeds & popups on my sites & my husband's websites with Formester forms`,
+          logo: 'dr._michelelogo.webp',
+          logoAlt: 'Dr. michele ross logo',
+          company: 'Infused Health',
         },
       ],
     }

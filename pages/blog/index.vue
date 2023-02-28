@@ -56,9 +56,9 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/blog/',
-        title: 'Latest form Builder Software in 2023 | Best Online Form Builder to Use in 2023 - Formester',
+        title: 'The Formester Blog',
         description:
-          'Discover the Latest Form Builder Software in 2023 with Formester. Get the Best Online Form Builder to Use in 2023, with easy to use features and advanced customization options. Read more now!',
+          'Find helpful online form tips for creating top-notch forms. Thought-provoking. Quick and Easy. A little SaaSy. Sometimes inspirational. This is the Formester blog.',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with blog page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with blog page image alt
@@ -68,7 +68,7 @@ export default {
   },
   head() {
     return {
-      title: 'Latest form Builder Software in 2023 | Best Online Form Builder to Use in 2023 - Formester',
+      title: 'Blog | Formester',
       meta: [...this.meta],
       link: [
         {

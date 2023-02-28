@@ -1,6 +1,11 @@
 ---
-title: How To Create A Form Or Survey Using An Easy Form Builder | Steps To Build Your Online Form With Form Builder - Formester
-description: Learn how to create a custom a form or survey using an easy form builder. Follow the step-by-step guide and build your own online form with Formester.
+title: How to Create a Form or Survey Using an Easy Form Builder?
+description: We are living in a digitally-driven world and online forms are
+  needed in a majority of business and user activities. From asking users to
+  sign up to booking events, generating leads, purchasing products, performing
+  payments, conducting surveys, and more – applications of both standalone and
+  web forms are truly endless. No doubt online forms play an important role for
+  businesses by boosting interactivity and information sharing.
 keywords: create a form, create a survey, best form builder, drag and drop form,
   free online form builder, easy form builder
 author: Vivek Badani
