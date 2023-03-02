@@ -56,9 +56,9 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/features/online-payment/',
-        title: 'Online Payment | Formester',
+        title: 'Online Payment Form | Secure Online Payment - Formester',
         description:
-          'Featuring secure PCI compliance, a responsive interface, and no additional charges, Formester makes receiving payments online more convenient than ever.',
+          "Experience secure online payments with Formester's user-friendly online payment form. Start accepting payments today. Try now!",
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with Html Form Backend page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with Html Form Backend page image alt
@@ -68,7 +68,7 @@ export default {
   },
   head() {
     return {
-      title: 'HTML Form Backend | Formester',
+      title: 'Online Payment Form | Secure Online Payment - Formester',
       meta: [...this.meta],
       link: [
         {

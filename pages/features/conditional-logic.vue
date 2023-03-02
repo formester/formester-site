@@ -59,9 +59,9 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/features/conditional-logic/',
-        title: 'Conditional Logic | Formester',
+        title: 'Conditional Logic Forms Builder - Formester',
         description:
-          'Understand how users interact with your form. Get insights on ways to improve engagement and increase conversion. Identify trends to see where users are dropping off and what works for you.',
+          "Easily create custom forms with Conditional Logic Forms Builder - Formester. Get started today and optimize your website's lead generation!",
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with conditional page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with conditional page image alt
@@ -71,7 +71,7 @@ export default {
   },
   head() {
     return {
-      title: 'Conditional Logic | Formester',
+      title: 'Conditional Logic Forms Builder - Formester',
       meta: [...this.meta],
       link: [
         {

@@ -58,9 +58,9 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/features/powerful-analytics/',
-        title: 'Powerful Analytics | Formester',
+        title: 'Form Analytics Software | Google Form Analytics - Formester',
         description:
-          'Understand how users interact with your form. Get insights on ways to improve engagement and increase conversion. Identify trends to see where users are dropping off and what works for you.',
+          "Get valuable insights into your Google Forms data with Formester's powerful Form Analytics software. Sign up for free now to optimize your forms!",
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with powerful analytics page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with powerful analytics page image alt
@@ -70,7 +70,7 @@ export default {
   },
   head() {
     return {
-      title: 'Powerful Analytics | Formester',
+      title: 'Form Analytics Software | Google Form Analytics - Formester',
       meta: [...this.meta],
       link: [
         {

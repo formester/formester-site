@@ -58,9 +58,9 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/features/spam-protection/',
-        title: 'Spam Protection | Formester',
+        title: 'Spam Protection | Spam Protection in Web Form - Formester',
         description:
-          'Web forms are an easy target for spam. Use our one-click Recaptcha to curb spam and keep your list clean, along with an option to configure your own Google Re-Captcha for greater control.',
+          'Looking for a spam protection solution for your web forms? Protect your web forms from spam with Formester. Say goodbye to unwanted submissions and improve your user experience. Try it now!',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with spam-protection page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with spam-protection page image alt
@@ -70,7 +70,7 @@ export default {
   },
   head() {
     return {
-      title: 'Spam Protection | Formester',
+      title: 'Spam Protection | Spam Protection in Web Form - Formester',
       meta: [...this.meta],
       link: [
         {

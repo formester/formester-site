@@ -170,8 +170,8 @@ export default {
       const metaData = {
         type: 'article',
         url: `https://formester.com/blog/${this.$route.params.slug}/`,
-        title: this.article.title,
-        description: this.article.description,
+        title: this.article.metaTitle,
+        description: this.article.metaDescription,
         mainImage: this.article.coverImg
           ? `https://formester.com/${this.article.coverImg}`
           : 'https://formester.com/formester-form-builder-background.png',
@@ -187,7 +187,7 @@ export default {
   },
   head() {
     return {
-      title: this.article.title,
+      title: this.article.metaTitle,
       meta: [
         ...this.meta,
         {
@@ -242,6 +242,8 @@ export default {
       },
       headline: this.article.title,
       description: this.article.description,
+      metaTitle: this.article.metaTitle,
+      metaDescription: this.article.metaDescription,
       image: this.article.coverImg
         ? `https://formester.com/${this.article.coverImg}`
         : 'https://formester.com/formester-form-builder-background.png',

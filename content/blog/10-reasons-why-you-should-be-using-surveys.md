@@ -1,4 +1,6 @@
 ---
+metaTitle: How do Surveys Help Businesses | How to Use Customer Feedback to Improve Service - Formester
+metaDescription: Discover How Surveys can Benefit Businesses and learn How to Use Customer Feedback to Improve Service. Get the inside scoop with Formester's guide.
 title: 10 Reasons Why You Are Still Not Doing Surveys - Good idea for any business
 description: Surveys are the most cost-effective way to comprehend what your target market wants. The sole problem is, most people do not do them. If you crack the code to the right survey you’re bound to do surveys more often as you’ll see the results it brings your way. In this blog, we’ve put together ten reasons why you are still not doing surveys and how they can help your business improve.
 keywords: uses of survey, why to use surveys    
