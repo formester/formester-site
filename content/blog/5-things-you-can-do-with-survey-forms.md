@@ -5,7 +5,7 @@ keywords: uses of survey, things to do with survey
 author: Mriganka Chandra
 createdAt: 2022-12-08T05:38:26.147Z
 coverImg: /img/five_things_you_can_do_with_survey__hero.png
-coverImgAlt: Give things you can do with a survey form
+coverImgAlt: Five things you can do with a survey form
 featured: false
 published: true
 ---

@@ -7,7 +7,7 @@ keywords: uses of survey, why to use surveys
 author: Mriganka Chandra
 createdAt: 2023-01-20
 coverImg: /img/10-reasons-why-you-are-still-not-doing-surveys.png
-coverImgAlt: Give things you can do with a survey form
+coverImgAlt: Ten reasons why you are still not doing surveys
 featured: false
 published: true
 ---
