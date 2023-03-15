@@ -37,16 +37,17 @@ export default {
         async: true,
       },
       {
-        src: 'https://www.googletagmanager.com/gtag/js?id=G-3VH96Q1Z02',
-        async: true,
-      },
-      {
         src: '/js/ga.js',
         defer: true,
         async: true,
       },
       {
         src: '/js/hotjar.js',
+        defer: true,
+        async: true,
+      },
+      {
+        src: '/js/tawk.js',
         defer: true,
         async: true,
       },
