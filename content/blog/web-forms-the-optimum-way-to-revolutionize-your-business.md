@@ -37,7 +37,7 @@ Web Forms can be of several kinds depending upon the information the business is
 
 Although there is no limitation or a defined scope as regards the appearance, length, content-type, format, layout, design, etc., of a form, it should fundamentally be user-centric; as in understandable by the user, possessing only relevant fields, simple with a glitch-free and smooth interface.
 
-IMPACT OF WEB FORMS ON BUSINESSES
+# How Does Setting Up Web Forms Help Your Business?
 
 Web Forms, as the name itself suggests, are web based and so are the data storage & analysis systems associated with them. Not only do they make obtaining the information easy, but also help in storing & analysing it in a more organized and efficient manner.
 
@@ -64,9 +64,7 @@ With [CMS & SAP systems](https://sapinsider.org/topic/sap-application-developmen
 
 Needless to say, they **save the time, effort and resources of the organization**.
 
-But the real deal is, 
-
-WHY SHOULD YOUR BUSINESS USE FORMS? 
+# What Are The 6 Important Places Where Your Business Should Be Using A Web Forms?
 
 ![Create a Database-Driven Online Form Builder | Caspio](https://lh4.googleusercontent.com/Jwj1wKP6U70s9XaZHHq02QNWkOW-CUH-IaBlQeCT7cHSDV1mmrliKthrRjib7Y-tZbUOAr-JQgGuO8J2CYRl1Xfh8tzyDsAtxaCFRWBJmuH2rCb8N0xpD_CQxRq_VrNHRGoB-EKt-qg1Ur_To1-7zVg "Web Forms - Use Cases | Image Courtesy: Caspio")
 
