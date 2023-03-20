@@ -14,13 +14,13 @@
           <span>← Back</span>
         </NuxtLink>
         <div class="social__links">
-          <a :href="`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${article.title} by @_Formester_ `" class="social-icons" target="_blank">
+          <a :href="`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${article.title} by @_Formester_ `" @click="googleAnalytics('twitter')" class="social-icons" target="_blank">
             <TwitterIcon />
           </a>
-          <a  :href="`https://www.facebook.com/sharer.php?u=${encodedUrl}`" class="social-icons" target="_blank">
+          <a  :href="`https://www.facebook.com/sharer.php?u=${encodedUrl}`" @click="googleAnalytics('facebook')" class="social-icons" target="_blank">
             <FacebookIcon />
           </a>
-          <a  :href="`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}`" class="social-icons" target="_blank">
+          <a  :href="`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}`" @click="googleAnalytics('linkedin')" class="social-icons" target="_blank">
             <LinkdinIcon />
           </a>
           <span class="social-icons" @click="copyToClipboard">
@@ -163,6 +163,14 @@ export default {
           this.$notify({ type: 'success', text: 'Link copied to clipboard' })
         });
       }
+      this.googleAnalytics('custom_link')
+    },
+    googleAnalytics(platform){
+      gtag("event", "share", {
+        "method": platform,
+        "content_type": "blog",
+        "item_id": this.article.title
+      })
     }
   },
   computed: {
