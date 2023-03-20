@@ -24,6 +24,8 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'string' }
+      - { lable: 'MetaTitle', name: 'metaTitle', widget: 'string'}
+      - { lable: 'MetaDescription', name: 'metaDescription', widget: 'string'}
       - { label: 'Keywords', name: 'keywords', widget: 'string' }
       - { label: 'Author', name: 'author', widget: 'string' }
       - { label: 'Publish Date', name: 'createdAt', widget: 'datetime' }
