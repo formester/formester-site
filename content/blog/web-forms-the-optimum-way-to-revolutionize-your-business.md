@@ -19,7 +19,7 @@ Does that mean [mass lay-offs](https://news.crunchbase.com/startups/tech-layoffs
 
 ![](https://lh6.googleusercontent.com/k70_WnaD_juBpNqPHaLPFuiNasBkrVxHkr8AN-RU2edV3IbTKPaIOu8-9PSGUO_VaL5U0i3bX9A09eZ4kiCxyXGoe8tczw4RgoO3HzNNw0ohg9JC2rS4YJOXK3m3Cstj0wbVOJsXYJ2fLjUCJ4d-Efo)
 
-But, does that mean businesses can expect newer & more efficient ways to operate and optimize their processes? 
+**But, does that mean businesses can *expect newer & more efficient ways* to *operate and optimize their processes*?** 
 
 ![Marketing gif 9 » GIF Images Download](https://lh6.googleusercontent.com/WynTfdX6ZY2gkI9wdyCWKoIZuNWKYDvgnTYKSCdRhiQd33fEL_ewNCVZ3qhsKsOVLmLtsUee1HQo8FRFXv_Nw6QUqzQcpnhyUH3zRmZhP-J6HCtE8MN6ssNOBW1szz28BZgQ-6tFQ24WJP8o0wug4nA)
 
