@@ -166,7 +166,7 @@ export default {
       this.googleAnalytics('custom_link')
     },
     googleAnalytics(platform){
-      gtag("event", "share", {
+      gtag && gtag("event", "share", {
         "method": platform,
         "content_type": "blog",
         "item_id": this.article.title
