@@ -17,23 +17,23 @@ published: true
 
 Does that mean [mass lay-offs](https://news.crunchbase.com/startups/tech-layoffs/)? Well, that’s a different subject of discussion.
 
-![](https://lh6.googleusercontent.com/k70_WnaD_juBpNqPHaLPFuiNasBkrVxHkr8AN-RU2edV3IbTKPaIOu8-9PSGUO_VaL5U0i3bX9A09eZ4kiCxyXGoe8tczw4RgoO3HzNNw0ohg9JC2rS4YJOXK3m3Cstj0wbVOJsXYJ2fLjUCJ4d-Efo)
+![The layoff wave has swept not only startups and mid-sized firms, but also big tech companies such as Amazon, Microsoft, and Google parent Alphabet, among others](https://lh6.googleusercontent.com/k70_WnaD_juBpNqPHaLPFuiNasBkrVxHkr8AN-RU2edV3IbTKPaIOu8-9PSGUO_VaL5U0i3bX9A09eZ4kiCxyXGoe8tczw4RgoO3HzNNw0ohg9JC2rS4YJOXK3m3Cstj0wbVOJsXYJ2fLjUCJ4d-Efo "Michael Scott fires")
 
 **But, does that mean businesses can *expect newer & more efficient ways* to *operate and optimize their processes*?** 
 
-![Marketing gif 9 » GIF Images Download](https://lh6.googleusercontent.com/WynTfdX6ZY2gkI9wdyCWKoIZuNWKYDvgnTYKSCdRhiQd33fEL_ewNCVZ3qhsKsOVLmLtsUee1HQo8FRFXv_Nw6QUqzQcpnhyUH3zRmZhP-J6HCtE8MN6ssNOBW1szz28BZgQ-6tFQ24WJP8o0wug4nA)
+![Optimization of Business Processes Gif](https://lh6.googleusercontent.com/WynTfdX6ZY2gkI9wdyCWKoIZuNWKYDvgnTYKSCdRhiQd33fEL_ewNCVZ3qhsKsOVLmLtsUee1HQo8FRFXv_Nw6QUqzQcpnhyUH3zRmZhP-J6HCtE8MN6ssNOBW1szz28BZgQ-6tFQ24WJP8o0wug4nA "Web Forms & Optimization of Business Processes")
 
 Yes! And that’s what [digital transformation](https://enterprisersproject.com/what-is-digital-transformation) is all about. And today we are going to discuss one of the most important elements of digital transformation: **WEB FORMS**.
 
 # What is a WEB FORM?
 
-![How Web Forms Can Help Your Website Generate Leads - Proof Branding](https://lh6.googleusercontent.com/v2XsjwbRh9ayqrPp2MD816IJoHNIl6kmAtZtD49Z4W1-Q7GfkPvp2NKxlPAQZ4zba0VkjbifR7Aqj1aWmV6H11UswOU5OmPr71nGlO5Ts09dFZQ78sn1gPKqzNtKBkkQtcFw6pB8DEZOGCrwcnD44Yo)
+![How Web Forms Can Help Your Website Generate Leads - Proof Branding](https://lh6.googleusercontent.com/v2XsjwbRh9ayqrPp2MD816IJoHNIl6kmAtZtD49Z4W1-Q7GfkPvp2NKxlPAQZ4zba0VkjbifR7Aqj1aWmV6H11UswOU5OmPr71nGlO5Ts09dFZQ78sn1gPKqzNtKBkkQtcFw6pB8DEZOGCrwcnD44Yo "Web Form - Basics")
 
-A Web Form, or an [HTML Form](https://www.geeksforgeeks.org/html-forms/) (as the tech nerds you know like to call it) is an online page/document which allows the website on which they are hosted, to gather data/input/personal information from its users and subsequently transfer it to a server for processing.
+A **Web Form**, or an [HTML Form](https://www.geeksforgeeks.org/html-forms/) (as the tech nerds you know like to call it) is an online page/document which allows the website on which they are hosted, to gather data/input/personal information from its users and subsequently transfer it to a server for processing.
 
 Web Forms can be of several kinds depending upon the information the business is required to obtain from its users.
 
-![5 Most Important Web Forms and How to Build Them With a Single App -  SmashingApps.com](https://lh6.googleusercontent.com/E3VEyY9f6dafVAbK28JkQq2dWjcrVumRLEq3y7E-diXWA0M6nUXLiQVd8yW8CCZwFhmnf216IAK06XUhTlVX18ZsOzDcuzyz_-AIKImOChpVgLLcyOmWo5qA_mHhwHeF7kqtsHI1QPKcDNasmncUfKk)
+![Most Important Types of Web Forms ](https://lh6.googleusercontent.com/E3VEyY9f6dafVAbK28JkQq2dWjcrVumRLEq3y7E-diXWA0M6nUXLiQVd8yW8CCZwFhmnf216IAK06XUhTlVX18ZsOzDcuzyz_-AIKImOChpVgLLcyOmWo5qA_mHhwHeF7kqtsHI1QPKcDNasmncUfKk "Types of Web Forms ")
 
 Although there is no limitation or a defined scope as regards the appearance, length, content-type, format, layout, design, etc., of a form, it should fundamentally be user-centric; as in understandable by the user, possessing only relevant fields, simple with a glitch-free and smooth interface.
 
@@ -43,9 +43,11 @@ Web Forms, as the name itself suggests, are web based and so are the data storag
 
 Quoting [HubSpot’s 2022 marketing statistics](https://www.hubspot.com/marketing-statistics) – ***“28% of marketers say the right form fields help improve lead scoring, which means more qualified leads.”***
 
-![109 Online Form Abandonment Statistics: 2023 Data, Trends & Impact -  Financesonline.com](https://lh6.googleusercontent.com/JadVbn8wYq0o0SOsAwScqcmOfaN__ePQoTRjzAYxpnIhNJ9JXXzIStTUbO2ccUGKiPx8mSt7caC_8eDqNp9PlyFauUXghsltq8GGBTVaOkjuAFCSgGiETwBu_ed_rtVOSbWrCV2SehH3AxFFlQnmxOc)
+![109 Online Form Abandonment Statistics: 2023 Data, Trends & Impact -  Financesonline.com](https://lh6.googleusercontent.com/JadVbn8wYq0o0SOsAwScqcmOfaN__ePQoTRjzAYxpnIhNJ9JXXzIStTUbO2ccUGKiPx8mSt7caC_8eDqNp9PlyFauUXghsltq8GGBTVaOkjuAFCSgGiETwBu_ed_rtVOSbWrCV2SehH3AxFFlQnmxOc "Conversion Rates as a result of Using Forms")
 
 They are a paper-free and economic solution for gathering, storing and analysing user/client data making them sustainable both for the economy & the ecology. (Well, kind of a threat to Dunder-Mifflin!)
+
+![Dunder Mifflin Logo](https://upload.wikimedia.org/wikipedia/commons/9/9c/Dunder_Mifflin%2C_Inc.svg "A Paper Company faces threat because of Web Forms")
 
 
 
