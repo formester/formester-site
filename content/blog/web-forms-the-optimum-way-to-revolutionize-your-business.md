@@ -1,6 +1,8 @@
 ---
 title: "Web Forms: How & Where To Use Them For Your Business"
-description: How Web Forms can Grow your Business
+description: This blog discusses Web Forms; from their basics to how they can
+  prove to be a game-changer in the business world! Towards the end, we also
+  discuss 6 ways how web forms can help your business.
 keywords: webforms, website forms, contact form for website
 author: Navni Dighe
 createdAt: 2023-03-20T10:27:47.265Z
