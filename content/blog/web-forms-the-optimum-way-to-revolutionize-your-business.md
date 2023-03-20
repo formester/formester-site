@@ -4,7 +4,7 @@ description: This blog discusses Web Forms; from their basics to how they can
   prove to be a game-changer in the business world! Towards the end, we also
   discuss 6 ways how web forms can help your business.
 metaTitle: "Web Forms: Fundamentals for Lead Generation"
-metaDescription: Basics of Web Forms and how they help in growing your business
+metaDescription: Basics of Web Forms and how they help in lead acquisition and business growth
 keywords: webforms, website forms, web forms builder, what are web forms, web
   forms builder free, free web forms, simple web forms, online web forms, html
   forms, formester, codefree forms, form templates, contact form for website,
