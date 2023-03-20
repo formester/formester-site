@@ -3,7 +3,13 @@ title: "Web Forms: How And Where To Use Them For Your Business"
 description: This blog discusses Web Forms; from their basics to how they can
   prove to be a game-changer in the business world! Towards the end, we also
   discuss 6 ways how web forms can help your business.
-keywords: webforms, website forms, contact form for website
+metaTitle: "Web Forms: Fundamentals for Lead Generation"
+metaDescription: Basics of Web Forms and how they help in growing your business
+keywords: webforms, website forms, web forms builder, what are web forms, web
+  forms builder free, free web forms, simple web forms, online web forms, html
+  forms, formester, codefree forms, form templates, contact form for website,
+  what are web forms, web forms for business, easy web forms, interactive web
+  forms
 author: Navni Dighe
 createdAt: 2023-03-20T10:27:47.265Z
 coverImg: /img/download.png
