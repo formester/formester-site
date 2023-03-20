@@ -1,5 +1,5 @@
 ---
-title: "WEB FORMS: The Optimum Way to Revolutionize your Business"
+title: Web Forms & Lead Generation 101
 description: How Web Forms can Grow your Business
 keywords: webforms, website forms, contact form for website
 author: Navni Dighe
@@ -7,7 +7,7 @@ createdAt: 2023-03-20T10:27:47.265Z
 coverImg: /img/download.png
 coverImgAlt: This is a temporary Cover Image
 featured: false
-published: false
+published: true
 ---
 ![Customisable Form by Gur Margalit for Wix Design Team on Dribbble](https://lh3.googleusercontent.com/oBV3K4ELY5MA4jURhkD0uBH3eoj-19JxBN68mLKCXTgG3NhSGuf8CZNl4gg21ZN-aw4PJjXNkP_Q7PKmHLdtAc7tBxhdLuL5m3PxnLNaFvIIvmbKq1G8KzZFNi4g-GOsE_guSQsxHRpPbwugla6c1x4)
 
