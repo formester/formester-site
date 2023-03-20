@@ -1,5 +1,5 @@
 ---
-title: "Web Forms: How & Where To Use Them For Your Business"
+title: "Web Forms: How And Where To Use Them For Your Business"
 description: This blog discusses Web Forms; from their basics to how they can
   prove to be a game-changer in the business world! Towards the end, we also
   discuss 6 ways how web forms can help your business.
@@ -96,7 +96,7 @@ A few ways on how forms can help your business are discussed below:
 
 ![Survey Forms](https://lh4.googleusercontent.com/J6_hwebdxJZ8hGN12XGnnzPNe3FaWAPm2jbjB1ZmzTUjPPOCHNmW2Al__j8niiXg0i-xtHd8S-wVZ4B0l-2PPcXYSRBZpXfpIr70Zj2R4SEww318600KMMg99fqzeA3HaQvzj7RIA-5c5quHlWwxyUs "Web Forms & Surveys")
 
-H﻿OW WEB FORMS CAN BE THE GAME-CHANGER FOR YOUR BUSINESS
+# H﻿OW WEB FORMS CAN BE THE GAME-CHANGER FOR YOUR BUSINESS?
 
 ![Web Forms as the Game-Changers for the Business World](https://lh3.googleusercontent.com/NOH_B0RxEcOhnbBcD_ygBBAiR_50lmnN71zUVPqS72LIqMlson6DkOo72NoIaK8AVo-WfnMlQb4ER25j6bwDtWoQAaLXGQq3MdGAHSv757Qbb9ttcWQXWWkr3zDbAm8l4sj8fBlDXlVUfe3FtL0Ogog "Web Forms as the Game-Changers for the Business World")
 
