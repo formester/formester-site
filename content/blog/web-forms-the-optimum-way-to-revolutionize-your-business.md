@@ -15,7 +15,7 @@ published: true
 
 In today’s era of technology, digitization & the internet, rapid & immense industrial growth is no longer a distant dream for businesses. With the emergence of more & more, unique *AI driven solutions*, like [ChatGPT](https://openai.com/blog/chatgpt), [OpenAI Codex](https://openai.com/blog/openai-codex), etc., we are at the threshold of a disruption to the conventional & long-established business styles.
 
-\    ![](https://lh5.googleusercontent.com/C9Obl_T9MLcHGy7R1MM37XlUS3SAWA78jcuQEkXzZQnM9_mDCwmei7j40YWQxEfv-Mx6-4zVXBg-s6PnBu5c6LSrq9etuPmvpfXq2kq_JtCf1wXSk_B4dVcNg3syWQy3iiA_0ZoMxdA0GbjMvEBEb_o)
+![ChatGPT & OpenAI ](https://content.pymnts.com/wp-content/uploads/2023/01/OpenAI-768x461.jpg "ChatGPT & OpenAI ")
 
 Does that mean [mass lay-offs](https://news.crunchbase.com/startups/tech-layoffs/)? Well, that’s a different subject of discussion.
 
