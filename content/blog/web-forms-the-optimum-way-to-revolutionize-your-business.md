@@ -13,7 +13,7 @@ published: true
 ---
 ![Customisable Form by Gur Margalit for Wix Design Team on Dribbble](https://lh3.googleusercontent.com/oBV3K4ELY5MA4jURhkD0uBH3eoj-19JxBN68mLKCXTgG3NhSGuf8CZNl4gg21ZN-aw4PJjXNkP_Q7PKmHLdtAc7tBxhdLuL5m3PxnLNaFvIIvmbKq1G8KzZFNi4g-GOsE_guSQsxHRpPbwugla6c1x4 "Web Form Gif")
 
-**In today’s era of technology, digitization & the internet, rapid & immense industrial growth is no longer a distant dream for businesses. With the emergence of more & more, unique *AI driven solutions*, like [ChatGPT](https://openai.com/blog/chatgpt), [OpenAI Codex](https://openai.com/blog/openai-codex), etc., we are at the threshold of a disruption to the conventional & long-established business styles.**
+In today’s era of technology, digitization & the internet, rapid & immense industrial growth is no longer a distant dream for businesses. With the emergence of more & more, unique *AI driven solutions*, like [ChatGPT](https://openai.com/blog/chatgpt), [OpenAI Codex](https://openai.com/blog/openai-codex), etc., we are at the threshold of a disruption to the conventional & long-established business styles.
 
 \    ![](https://lh5.googleusercontent.com/C9Obl_T9MLcHGy7R1MM37XlUS3SAWA78jcuQEkXzZQnM9_mDCwmei7j40YWQxEfv-Mx6-4zVXBg-s6PnBu5c6LSrq9etuPmvpfXq2kq_JtCf1wXSk_B4dVcNg3syWQy3iiA_0ZoMxdA0GbjMvEBEb_o)
 
@@ -39,7 +39,7 @@ Web Forms can be of several kinds depending upon the information the business is
 
 Although there is no limitation or a defined scope as regards the appearance, length, content-type, format, layout, design, etc., of a form, it should fundamentally be user-centric; as in understandable by the user, possessing only relevant fields, simple with a glitch-free and smooth interface.
 
-# How Does Setting Up Web Forms Help Your Business?
+## How Does Setting Up Web Forms Help Your Business?
 
 Web Forms, as the name itself suggests, are web based and so are the data storage & analysis systems associated with them. Not only do they make obtaining the information easy, but also help in storing & analysing it in a more organized and efficient manner.
 
@@ -66,7 +66,7 @@ With [CMS & SAP systems](https://sapinsider.org/topic/sap-application-developmen
 
 Needless to say, they **save the time, effort and resources of the organization**.
 
-# What Are The 6 Important Places Where Your Business Should Be Using A Web Forms?
+## What Are The 6 Important Places Where Your Business Should Be Using A Web Forms?
 
 ![Create a Database-Driven Online Form Builder | Caspio](https://lh4.googleusercontent.com/Jwj1wKP6U70s9XaZHHq02QNWkOW-CUH-IaBlQeCT7cHSDV1mmrliKthrRjib7Y-tZbUOAr-JQgGuO8J2CYRl1Xfh8tzyDsAtxaCFRWBJmuH2rCb8N0xpD_CQxRq_VrNHRGoB-EKt-qg1Ur_To1-7zVg "Web Forms - Use Cases | Image Courtesy: Caspio")
 
@@ -96,7 +96,7 @@ A few ways on how forms can help your business are discussed below:
 
 ![Survey Forms](https://lh4.googleusercontent.com/J6_hwebdxJZ8hGN12XGnnzPNe3FaWAPm2jbjB1ZmzTUjPPOCHNmW2Al__j8niiXg0i-xtHd8S-wVZ4B0l-2PPcXYSRBZpXfpIr70Zj2R4SEww318600KMMg99fqzeA3HaQvzj7RIA-5c5quHlWwxyUs "Web Forms & Surveys")
 
-# H﻿OW WEB FORMS CAN BE THE GAME-CHANGER FOR YOUR BUSINESS?
+## H﻿OW WEB FORMS CAN BE THE GAME-CHANGER FOR YOUR BUSINESS?
 
 ![Web Forms as the Game-Changers for the Business World](https://lh3.googleusercontent.com/NOH_B0RxEcOhnbBcD_ygBBAiR_50lmnN71zUVPqS72LIqMlson6DkOo72NoIaK8AVo-WfnMlQb4ER25j6bwDtWoQAaLXGQq3MdGAHSv757Qbb9ttcWQXWWkr3zDbAm8l4sj8fBlDXlVUfe3FtL0Ogog "Web Forms as the Game-Changers for the Business World")
 
