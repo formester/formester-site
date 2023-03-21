@@ -43,7 +43,7 @@ Web Forms, as the name itself suggests, are web based and so are the data storag
 
 Quoting [HubSpot’s 2022 marketing statistics](https://www.hubspot.com/marketing-statistics) – **“28% of marketers say the right form fields help improve lead scoring, which means more qualified leads.”**
 
-![109 Online Form Abandonment Statistics: 2023 Data, Trends & Impact -  Financesonline.com](https://lh6.googleusercontent.com/JadVbn8wYq0o0SOsAwScqcmOfaN__ePQoTRjzAYxpnIhNJ9JXXzIStTUbO2ccUGKiPx8mSt7caC_8eDqNp9PlyFauUXghsltq8GGBTVaOkjuAFCSgGiETwBu_ed_rtVOSbWrCV2SehH3AxFFlQnmxOc "Conversion Rates as a result of Using Forms")
+![Conversion Rates as a result of Using Forms](/img/conversion-rates-as-a-result-of-using-web-forms-1-.png "Conversion Rates as a result of Using Forms")
 
 They are a paper-free and economic solution for gathering, storing and analysing user/client data making them sustainable both for the economy & the ecology. (Well, kind of a threat to Dunder-Mifflin!)
 
