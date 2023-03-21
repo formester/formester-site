@@ -37,7 +37,7 @@ Web Forms can be of several kinds depending upon the information the business is
 
 Although there is no limitation or a defined scope as regards the appearance, length, content-type, format, layout, design, etc., of a form, it should fundamentally be user-centric; as in understandable by the user, possessing only relevant fields, simple with a glitch-free and smooth interface.
 
-### How Does Setting Up Web Forms Help Your Business?
+## How Does Setting Up Web Forms Help Your Business?
 
 Web Forms, as the name itself suggests, are web based and so are the data storage & analysis systems associated with them. Not only do they make obtaining the information easy, but also help in storing & analysing it in a more organized and efficient manner.
 
@@ -58,7 +58,7 @@ With [CMS & SAP systems](https://sapinsider.org/topic/sap-application-developmen
 
 Needless to say, they **save the time, effort and resources of the organization**.
 
-### What Are The 6 Important Places Where Your Business Should Be Using A Web Forms?
+## What Are The 6 Important Places Where Your Business Should Be Using A Web Forms?
 
 ![Web Forms - Use Cases ](/img/untitled-design-1-.png "Web Forms - Use Cases ")
 
@@ -78,7 +78,7 @@ A few ways on how forms can help your business are discussed below:
 
 **6. SURVEYS:** Gone are the days, where surveys were conducted by going door-to-door. Surveys are now-a-days not only conducted for government/official/institutional purposes but also serve as a resource for case-studies, researches and large-scale studies. Large websites like [HubSpot](https://blog.hubspot.com/service/surveys), [Ahrefs](https://ahrefs.com/), etc. often have annual blogs showcasing statistics for various topics. These statistics are indeed obtained through survey forms & their analysis. This also improves the user engagement on the website.
 
-### H﻿OW WEB FORMS CAN BE THE GAME-CHANGER FOR YOUR BUSINESS?
+## H﻿ow Web Forms Can Be The Game Changer For Your Business?
 
 Forms are one of the most essential & economic tools as regards digital transformation of a business. They are effective sources of data collection, storage & management. They help streamline business processes thereby improving overall efficiency of the organization. 
 
