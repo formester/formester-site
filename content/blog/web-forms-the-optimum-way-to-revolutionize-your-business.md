@@ -27,7 +27,7 @@ Does that mean [mass lay-offs](https://news.crunchbase.com/startups/tech-layoffs
 
 Yes! And that’s what [digital transformation](https://enterprisersproject.com/what-is-digital-transformation) is all about. And today we are going to discuss one of the most important elements of digital transformation: **WEB FORMS**.
 
-# What is a WEB FORM?
+## What is a WEB FORM?
 
 A **Web Form**, or an [HTML Form](https://www.geeksforgeeks.org/html-forms/) (as the tech nerds you know like to call it) is an online page/document which allows the website on which they are hosted, to gather data/input/personal information from its users and subsequently transfer it to a server for processing.
 
@@ -37,7 +37,7 @@ Web Forms can be of several kinds depending upon the information the business is
 
 Although there is no limitation or a defined scope as regards the appearance, length, content-type, format, layout, design, etc., of a form, it should fundamentally be user-centric; as in understandable by the user, possessing only relevant fields, simple with a glitch-free and smooth interface.
 
-## How Does Setting Up Web Forms Help Your Business?
+### How Does Setting Up Web Forms Help Your Business?
 
 Web Forms, as the name itself suggests, are web based and so are the data storage & analysis systems associated with them. Not only do they make obtaining the information easy, but also help in storing & analysing it in a more organized and efficient manner.
 
@@ -58,7 +58,7 @@ With [CMS & SAP systems](https://sapinsider.org/topic/sap-application-developmen
 
 Needless to say, they **save the time, effort and resources of the organization**.
 
-## What Are The 6 Important Places Where Your Business Should Be Using A Web Forms?
+### What Are The 6 Important Places Where Your Business Should Be Using A Web Forms?
 
 ![Create a Database-Driven Online Form Builder | Caspio](https://lh4.googleusercontent.com/Jwj1wKP6U70s9XaZHHq02QNWkOW-CUH-IaBlQeCT7cHSDV1mmrliKthrRjib7Y-tZbUOAr-JQgGuO8J2CYRl1Xfh8tzyDsAtxaCFRWBJmuH2rCb8N0xpD_CQxRq_VrNHRGoB-EKt-qg1Ur_To1-7zVg "Web Forms - Use Cases | Image Courtesy: Caspio")
 
@@ -76,7 +76,7 @@ A few ways on how forms can help your business are discussed below:
 
 **6. SURVEYS:** Gone are the days, where surveys were conducted by going door-to-door. Surveys are now-a-days not only conducted for government/official/institutional purposes but also serve as a resource for case-studies, researches and large-scale studies. Large websites like [HubSpot](https://blog.hubspot.com/service/surveys), [Ahrefs](https://ahrefs.com/), etc. often have **annual blogs showcasing statistics for various topics**. These statistics are indeed obtained through survey forms & their analysis. This also improves the **user engagement** on the website.
 
-## H﻿OW WEB FORMS CAN BE THE GAME-CHANGER FOR YOUR BUSINESS?
+### H﻿OW WEB FORMS CAN BE THE GAME-CHANGER FOR YOUR BUSINESS?
 
 Forms are one of the most **essential & economic tools** as regards digital transformation of a business. They are **effective sources of data collection, storage & management**. They help **streamline business processes** thereby **improving overall efficiency of the organization**. 
 
