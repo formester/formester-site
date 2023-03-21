@@ -17,7 +17,7 @@ coverImgAlt: This is a temporary Cover Image
 featured: false
 published: true
 ---
-![Customisable Form by Gur Margalit for Wix Design Team on Dribbble](https://lh3.googleusercontent.com/oBV3K4ELY5MA4jURhkD0uBH3eoj-19JxBN68mLKCXTgG3NhSGuf8CZNl4gg21ZN-aw4PJjXNkP_Q7PKmHLdtAc7tBxhdLuL5m3PxnLNaFvIIvmbKq1G8KzZFNi4g-GOsE_guSQsxHRpPbwugla6c1x4 "Web Form Gif")
+![Web Forms: How And Where to Use Them For Your Business](/img/web-forms-lead-generation-101.png "Web Forms: How And Where to Use Them For Your Business")
 
 In today’s era of technology, digitization & the internet, rapid & immense industrial growth is no longer a distant dream for businesses. With the emergence of more & more, unique AI driven solutions, like [ChatGPT](https://openai.com/blog/chatgpt), [OpenAI Codex](https://openai.com/blog/openai-codex), etc., we are at the threshold of a disruption to the conventional & long-established business styles.
 
@@ -33,7 +33,7 @@ A **Web Form**, or an [HTML Form](https://www.geeksforgeeks.org/html-forms/) (as
 
 Web Forms can be of several kinds depending upon the information the business is required to obtain from its users.
 
-![Most Important Types of Web Forms ](https://lh6.googleusercontent.com/E3VEyY9f6dafVAbK28JkQq2dWjcrVumRLEq3y7E-diXWA0M6nUXLiQVd8yW8CCZwFhmnf216IAK06XUhTlVX18ZsOzDcuzyz_-AIKImOChpVgLLcyOmWo5qA_mHhwHeF7kqtsHI1QPKcDNasmncUfKk "Types of Web Forms ")
+![Some Important Types of Web Forms ](/img/web-form-1.png "Types of Web Forms ")
 
 Although there is no limitation or a defined scope as regards the appearance, length, content-type, format, layout, design, etc., of a form, it should fundamentally be user-centric; as in understandable by the user, possessing only relevant fields, simple with a glitch-free and smooth interface.
 
@@ -49,7 +49,7 @@ They are a paper-free and economic solution for gathering, storing and analysing
 
 Since it’s all web based, **tracking and accessing any updates and change**s becomes **real-time** and **synchronized**. Not only does **capturing information become easy**, but so does **validating**, **authenticating** and **integrating** it with the **crucial business systems**. The business processes, in general become streamlined and lead to **improved & accelerated customer service & satisfaction**, **feasible operational costs and reduced cycle times,** mutually benefiting the business and its client.
 
-![Top Things to Know About Real-Time Data Processing - Axual](https://lh4.googleusercontent.com/ls8vj3bFec5DYTvtX6XEEoAWs_ak_Mwr2iiMmD0oMKcy236iV6X9oAMCKN102Z1EVkOwH3EU2Cxo3qrCi-XsY1G6TeandbYb0A6rM2vm15-jLAcb4Cr-_Q_pot0FPc-s9-EJ_iD168Q7qP8uUIlgHT0)
+![Real-Time & Synchronized Updation](https://lh4.googleusercontent.com/ls8vj3bFec5DYTvtX6XEEoAWs_ak_Mwr2iiMmD0oMKcy236iV6X9oAMCKN102Z1EVkOwH3EU2Cxo3qrCi-XsY1G6TeandbYb0A6rM2vm15-jLAcb4Cr-_Q_pot0FPc-s9-EJ_iD168Q7qP8uUIlgHT0 "Real-Time & Synchronized Updation")
 
 \
 As the information entered by the user directly gets stored on the server, the **errors** caused due to manual data entry and its associated transmission, become almost **negligible**. **The information obtained therefore, is based on accurate and reliable analysis and can be used for making well-informed and largely unambiguous business decisions.**
