@@ -47,7 +47,7 @@ Quoting [HubSpot’s 2022 marketing statistics](https://www.hubspot.com/marketin
 
 They are a paper-free and economic solution for gathering, storing and analysing user/client data making them sustainable both for the economy & the ecology. (Well, kind of a threat to Dunder-Mifflin!)
 
-Since it’s all web based, tracking and accessing any updates and changes becomes real-time and synchronized. Not only does **capturing information become easy**, but so does validating, authenticating and integrating it with the crucial business systems. The business processes, in general become streamlined and lead to improved & accelerated customer service & satisfaction, feasible operational costs and reduced cycle times, mutually benefiting the business and its client.
+Since it’s all web based, tracking and accessing any updates and changes becomes real-time and synchronized. Not only does capturing information become easy, but so does validating, authenticating and integrating it with the crucial business systems. The business processes, in general become streamlined and lead to improved & accelerated customer service & satisfaction, feasible operational costs and reduced cycle times, mutually benefiting the business and its client.
 
 ![Real-Time & Synchronized Updation](https://lh4.googleusercontent.com/ls8vj3bFec5DYTvtX6XEEoAWs_ak_Mwr2iiMmD0oMKcy236iV6X9oAMCKN102Z1EVkOwH3EU2Cxo3qrCi-XsY1G6TeandbYb0A6rM2vm15-jLAcb4Cr-_Q_pot0FPc-s9-EJ_iD168Q7qP8uUIlgHT0 "Real-Time & Synchronized Updation")
 
@@ -62,7 +62,7 @@ Needless to say, they **save the time, effort and resources of the organization*
 
 ![Web Forms - Use Cases ](/img/untitled-design-1-.png "Web Forms - Use Cases ")
 
-Well, the thing about ‘tech’ is, it sort of expands to all areas. Whether you’re a tech company offering [SaaS, IaaS, PaaS solutions](https://www.geeksforgeeks.org/difference-between-iaas-paas-and-saas/); a clothing/fashion brand looking to expand through their website; a restaurant; or even an education-service based company; it doesn’t matter. **If you have a website & are looking to expand, web forms will cater to you!**
+Well, the thing about ‘tech’ is, it sort of expands to all areas. Whether you’re a tech company offering [SaaS, IaaS, PaaS solutions](https://www.geeksforgeeks.org/difference-between-iaas-paas-and-saas/); a clothing/fashion brand looking to expand through their website; a restaurant; or even an education-service based company; it doesn’t matter. If you have a website & are looking to expand, web forms will cater to you!
 
 A few ways on how forms can help your business are discussed below:
 
