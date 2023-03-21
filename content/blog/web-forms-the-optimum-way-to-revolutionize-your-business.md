@@ -60,7 +60,7 @@ Needless to say, they **save the time, effort and resources of the organization*
 
 ### What Are The 6 Important Places Where Your Business Should Be Using A Web Forms?
 
-![Create a Database-Driven Online Form Builder | Caspio](https://lh4.googleusercontent.com/Jwj1wKP6U70s9XaZHHq02QNWkOW-CUH-IaBlQeCT7cHSDV1mmrliKthrRjib7Y-tZbUOAr-JQgGuO8J2CYRl1Xfh8tzyDsAtxaCFRWBJmuH2rCb8N0xpD_CQxRq_VrNHRGoB-EKt-qg1Ur_To1-7zVg "Web Forms - Use Cases | Image Courtesy: Caspio")
+![Web Forms - Use Cases ](/img/untitled-design-1-.png "Web Forms - Use Cases ")
 
 Well, the thing about ‘tech’ is, it sort of expands to all areas. Whether you’re a tech company offering [SaaS, IaaS, PaaS solutions](https://www.geeksforgeeks.org/difference-between-iaas-paas-and-saas/); a clothing/fashion brand looking to expand through their website; a restaurant; or even an education-service based company; it doesn’t matter. **If you have a website & are looking to expand, web forms will cater to you!**
 
