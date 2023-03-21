@@ -19,23 +19,15 @@ published: true
 ---
 ![Customisable Form by Gur Margalit for Wix Design Team on Dribbble](https://lh3.googleusercontent.com/oBV3K4ELY5MA4jURhkD0uBH3eoj-19JxBN68mLKCXTgG3NhSGuf8CZNl4gg21ZN-aw4PJjXNkP_Q7PKmHLdtAc7tBxhdLuL5m3PxnLNaFvIIvmbKq1G8KzZFNi4g-GOsE_guSQsxHRpPbwugla6c1x4 "Web Form Gif")
 
-In today’s era of technology, digitization & the internet, rapid & immense industrial growth is no longer a distant dream for businesses. With the emergence of more & more, unique *AI driven solutions*, like [ChatGPT](https://openai.com/blog/chatgpt), [OpenAI Codex](https://openai.com/blog/openai-codex), etc., we are at the threshold of a disruption to the conventional & long-established business styles.
-
-![ChatGPT & OpenAI ](https://content.pymnts.com/wp-content/uploads/2023/01/OpenAI-768x461.jpg "ChatGPT & OpenAI ")
+In today’s era of technology, digitization & the internet, rapid & immense industrial growth is no longer a distant dream for businesses. With the emergence of more & more, unique AI driven solutions, like [ChatGPT](https://openai.com/blog/chatgpt), [OpenAI Codex](https://openai.com/blog/openai-codex), etc., we are at the threshold of a disruption to the conventional & long-established business styles.
 
 Does that mean [mass lay-offs](https://news.crunchbase.com/startups/tech-layoffs/)? Well, that’s a different subject of discussion.
 
-![The layoff wave has swept not only startups and mid-sized firms, but also big tech companies such as Amazon, Microsoft, and Google parent Alphabet, among others](https://lh6.googleusercontent.com/k70_WnaD_juBpNqPHaLPFuiNasBkrVxHkr8AN-RU2edV3IbTKPaIOu8-9PSGUO_VaL5U0i3bX9A09eZ4kiCxyXGoe8tczw4RgoO3HzNNw0ohg9JC2rS4YJOXK3m3Cstj0wbVOJsXYJ2fLjUCJ4d-Efo "Michael Scott fires")
-
 **But, does that mean businesses can *expect newer & more efficient ways* to *operate and optimize their processes*?** 
-
-![Optimization of Business Processes Gif](https://lh6.googleusercontent.com/WynTfdX6ZY2gkI9wdyCWKoIZuNWKYDvgnTYKSCdRhiQd33fEL_ewNCVZ3qhsKsOVLmLtsUee1HQo8FRFXv_Nw6QUqzQcpnhyUH3zRmZhP-J6HCtE8MN6ssNOBW1szz28BZgQ-6tFQ24WJP8o0wug4nA "Web Forms & Optimization of Business Processes")
 
 Yes! And that’s what [digital transformation](https://enterprisersproject.com/what-is-digital-transformation) is all about. And today we are going to discuss one of the most important elements of digital transformation: **WEB FORMS**.
 
 # What is a WEB FORM?
-
-![How Web Forms Can Help Your Website Generate Leads - Proof Branding](https://lh6.googleusercontent.com/v2XsjwbRh9ayqrPp2MD816IJoHNIl6kmAtZtD49Z4W1-Q7GfkPvp2NKxlPAQZ4zba0VkjbifR7Aqj1aWmV6H11UswOU5OmPr71nGlO5Ts09dFZQ78sn1gPKqzNtKBkkQtcFw6pB8DEZOGCrwcnD44Yo "Web Form - Basics")
 
 A **Web Form**, or an [HTML Form](https://www.geeksforgeeks.org/html-forms/) (as the tech nerds you know like to call it) is an online page/document which allows the website on which they are hosted, to gather data/input/personal information from its users and subsequently transfer it to a server for processing.
 
@@ -55,18 +47,12 @@ Quoting [HubSpot’s 2022 marketing statistics](https://www.hubspot.com/marketin
 
 They are a paper-free and economic solution for gathering, storing and analysing user/client data making them sustainable both for the economy & the ecology. (Well, kind of a threat to Dunder-Mifflin!)
 
-![Dunder Mifflin Logo](https://upload.wikimedia.org/wikipedia/commons/9/9c/Dunder_Mifflin%2C_Inc.svg "A Paper Company faces threat because of Web Forms")
-
-
-
 Since it’s all web based, **tracking and accessing any updates and change**s becomes **real-time** and **synchronized**. Not only does **capturing information become easy**, but so does **validating**, **authenticating** and **integrating** it with the **crucial business systems**. The business processes, in general become streamlined and lead to **improved & accelerated customer service & satisfaction**, **feasible operational costs and reduced cycle times,** mutually benefiting the business and its client.
 
 ![Top Things to Know About Real-Time Data Processing - Axual](https://lh4.googleusercontent.com/ls8vj3bFec5DYTvtX6XEEoAWs_ak_Mwr2iiMmD0oMKcy236iV6X9oAMCKN102Z1EVkOwH3EU2Cxo3qrCi-XsY1G6TeandbYb0A6rM2vm15-jLAcb4Cr-_Q_pot0FPc-s9-EJ_iD168Q7qP8uUIlgHT0)
 
 \
 As the information entered by the user directly gets stored on the server, the **errors** caused due to manual data entry and its associated transmission, become almost **negligible**. ***The information obtained therefore, is based on accurate and reliable analysis and can be used for making well-informed and largely unambiguous business decisions.***
-
-![How Web Forms lead to Informed Decision Making](https://lh4.googleusercontent.com/0-TUgzunr9PW81ZPm76j3s4J3cTEa4h6VCMQHyFE6OuZikSLJs9En2YM63uxrfAQFO6YYmBPL0MiQ3VJZDYAE96M_aYy_Qjbq5Zg1L0zUG6XCjWJJcaL7igMnf56XOho76e3TvGxhFd8ypeNHOvhnTM "How Web Forms lead to Informed Decision Making")
 
 With [CMS & SAP systems](https://sapinsider.org/topic/sap-application-development-integration/sap-cms/) in place, submitted forms find **secured storage, sharing & management**.
 
