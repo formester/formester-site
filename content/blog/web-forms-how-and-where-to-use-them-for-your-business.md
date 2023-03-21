@@ -66,7 +66,7 @@ Well, the thing about ‘tech’ is, it sort of expands to all areas. Whether yo
 
 A few ways on how forms can help your business are discussed below:
 
-**1. ACQUIRING LEADS:** The most important functionality of web-forms is undoubtedly, **acquiring leads**. If you set up a [contact form](https://formester.com/templates/) and ask your potential clients for their emails, you can easily create an extensive **emailing-list**. Adding a checkbox asking your users to subscribe to your **monetized newsletter** or even for simply allowing that they receive your **promotional offers**, can go a long way with regard to both **traffic** to your website as well as [brand-building](https://freshsparks.com/successful-brand-building-process/).
+**1. ACQUIRING LEADS:** The most important functionality of web-forms is undoubtedly, **acquiring leads**. If you set up a [contact form](/templates/) and ask your potential clients for their emails, you can easily create an extensive **emailing-list**. Adding a checkbox asking your users to subscribe to your **monetized newsletter** or even for simply allowing that they receive your **promotional offers**, can go a long way with regard to both **traffic** to your website as well as [brand-building](https://freshsparks.com/successful-brand-building-process/).
 
 **2. GATHERING FEEDBACK:** The most important thing after acquiring a customer, is to get them to give you feedback. They can be used in the form of **testimonials** and can be helpful for **showcasing your performance**. Also, worthwhile feedback from even a small percentage of your customer base, might just end up giving you the breakthrough you were seeking for your product. Besides, it helps you to **connect better with your customers** and they feel a better sense of connection with your brand. **Value the customers & they value your brand!**
 
@@ -82,6 +82,6 @@ Forms are one of the most **essential & economic tools** as regards digital tran
 
 **As simple as they are in terms of usage, they go a long way in building a solid customer base, contact list and branding!**
 
-Wish to start your [Forms journey](https://formester.com/)?
+Wish to [start your Forms journey](/)?
 
-We **@[Formester](https://formester.com/)** are in perfect form to get it done for you!
+We Formester are in perfect form to get it done for you!
