@@ -105,6 +105,13 @@
       violate the Terms of Service.
     </p>
 
+    <p>
+      Our app comply with the 
+      <a class="text-decoration-underline" href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API Services User Data Policy</a>,
+      including the Limited Use requirements. This means that we only use the data we collect for the purposes of providing our app's features and functionality, 
+      and we do not share this data with any third parties. 
+    </p>
+
     <h3 class="mt-3"><strong>Changes</strong></h3>
     <p>
       Formester may periodically update this policy. We will notify you about
