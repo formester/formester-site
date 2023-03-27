@@ -32,7 +32,6 @@
         <PricingCard :plan="personalYearly" :isHighlighted="true" />
         <PricingCard :plan="businessYearly" />
       </div>
-      <PricingComparision :isYearly="isYearly" />
       <CallToActionSection />
       <Faq />
     </div>
@@ -42,7 +41,6 @@
 <script>
 import CallToActionSection from '@/components/CallToActionSection.vue'
 import PricingCard from '../components/pricing/PricingCard.vue'
-import PricingComparision from '../components/pricing/PricingComparision.vue'
 import Faq from '../components/pricing/Faq.vue'
 import {
   free,
@@ -57,10 +55,10 @@ import {
 import getSiteMeta from '../utils/getSiteMeta'
 
 export default {
-  components: { PricingCard, PricingComparision, Faq, CallToActionSection },
+  components: { PricingCard, Faq, CallToActionSection },
   data() {
     return {
-      isYearly: false,
+      isYearly: true,
       free,
       personalMonthly,
       businessMonthly,

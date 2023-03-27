@@ -89,13 +89,109 @@
             aria-expanded="false"
             aria-controls="flush-collapseFour"
           >
-            I have more questions.
+            Do I get a discount on yearly plan
           </button>
         </h6>
         <div
           id="flush-collapseFour"
           class="accordion-collapse collapse"
           aria-labelledby="flush-headingFour"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            You do, If you buy yearly plan you only have to pay for 11 months and you get 1 month free
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h6 class="accordion-header" id="flush-headingFive">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFive"
+            aria-expanded="false"
+            aria-controls="flush-collapseFive"
+          >
+            Is there an referral/affiliate program?
+          </button>
+        </h6>
+        <div
+          id="flush-collapseFive"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingFive"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            Yes we do. It's an invite only program. If you need access to this please reach out to our support
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h6 class="accordion-header" id="flush-headingSix">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseSix"
+            aria-expanded="false"
+            aria-controls="flush-collapseSix"
+          >
+            Do you offer discount for NGO and school
+          </button>
+        </h6>
+        <div
+          id="flush-collapseSix"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingSix"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            Yes. Get in touch and we’ll help you out.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h6 class="accordion-header" id="flush-headingSeven">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseSeven"
+            aria-expanded="false"
+            aria-controls="flush-collapseSeven"
+          >
+            What if I want a reseller account?
+          </button>
+        </h6>
+        <div
+          id="flush-collapseSeven"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingSeven"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            We do support resellers. Please reach out to us at support@formester.com and we will love to help you.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h6 class="accordion-header" id="flush-headingEight">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseEight"
+            aria-expanded="false"
+            aria-controls="flush-collapseEight"
+          >
+            I have more questions.
+          </button>
+        </h6>
+        <div
+          id="flush-collapseEight"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingEight"
           data-bs-parent="#accordionFlushExample"
         >
           <div class="accordion-body">
