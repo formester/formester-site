@@ -8,9 +8,9 @@
     <h6 class="pricing__category text-start">{{ plan.name }}</h6>
     <div class="d-flex align-items-baseline">
       <h2 class="pricing__amount">${{ plan.price }}</h2>
-      <span class="pricing__timeline">{{ priceTimeline }}</span>
-      <div v-if="plan.type === 'Yearly' && plan.price > 0" class="original-price"><s>${{ plan.originalPrice }}</s></div>
+      <span class="pricing__timeline">/mo</span>
     </div>
+    <div class="billing-timeline text-start">{{ billingTimeline }}</div>
     <ul class="mt-3 text-start">
       <li
         v-for="(feature, index) in plan.features.available"
@@ -47,8 +47,9 @@ export default {
     }
   },
   computed: {
-    priceTimeline(){
-      return this.plan.type === "Yearly" ? "/y" : "/mo";
+    billingTimeline(){
+      if (this.plan.price === 0) return " "
+      return this.plan.type === "Yearly" ? "Billed yearly" : "Billed monthly";
     }
   },
   methods: {
@@ -75,19 +76,12 @@ export default {
   color: #695e8c;
 }
 
-.original-price {
-  font-size: var(--ft-subtitle);
-  font-weight: lighter;
-  color: #5e5e5e;
-  margin-left: 10px;
-}
-
 .pricing__amount {
   font-size: var(--ft-df-heading);
   font-weight: 700;
 }
 
-.pricing__timelinev {
+.pricing__timeline {
   font-size: var(--ft-big-body);
 }
 
@@ -95,6 +89,12 @@ export default {
   background-color: var(--clr-primary-light);
   padding: 0.8em 0;
   border-radius: var(--brd-df-rd);
+}
+
+.billing-timeline {
+  line-height: 1.5;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 /* HIGHLIGHT CARD */
