@@ -89,7 +89,7 @@
             aria-expanded="false"
             aria-controls="flush-collapseFour"
           >
-            Do I get a discount on yearly plan
+            Do I get a discount on yearly plan?
           </button>
         </h6>
         <div
@@ -99,7 +99,7 @@
           data-bs-parent="#accordionFlushExample"
         >
           <div class="accordion-body">
-            You do, If you buy yearly plan you only have to pay for 11 months and you get 1 month free
+            You do, If you buy yearly plan you only have to pay for 11 months and you get 1 month free.
           </div>
         </div>
       </div>
@@ -123,7 +123,7 @@
           data-bs-parent="#accordionFlushExample"
         >
           <div class="accordion-body">
-            Yes we do. It's an invite only program. If you need access to this please reach out to our support
+            Yes we do. It's an invite only program. If you need access to this please reach out to our support.
           </div>
         </div>
       </div>
@@ -137,7 +137,7 @@
             aria-expanded="false"
             aria-controls="flush-collapseSix"
           >
-            Do you offer discount for NGO and school
+            Do you offer discount for NGO and School?
           </button>
         </h6>
         <div
@@ -185,7 +185,7 @@
             aria-expanded="false"
             aria-controls="flush-collapseEight"
           >
-            I have more questions.
+            I have more questions
           </button>
         </h6>
         <div
