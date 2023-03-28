@@ -198,6 +198,46 @@ export default {
               text: "Don't worry, if you are ever unhappy with our service and wish to cancel, we'll happily reimburse your last month -- no questions asked.",
             },
           },
+          {
+            '@type': 'Question',
+            name: "Do I get a discount on yearly plan?",
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: "You do, If you buy yearly plan you only have to pay for 11 months and you get 1 month free.",
+            },
+          },
+          {
+            '@type': 'Question',
+            name: "Is there an referral/affiliate program?",
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: "Yes we do. It's an invite only program. If you need access to this please reach out to our support.",
+            },
+          },
+          {
+            '@type': 'Question',
+            name: "Do you offer discount for NGO and School?",
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: "Yes. Get in touch and we’ll help you out.",
+            },
+          },
+          {
+            '@type': 'Question',
+            name: "What if I want a reseller account?",
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: "We do support resellers. Please reach out to us at support@formester.com and we will love to help you.",
+            },
+          },
+          {
+            '@type': 'Question',
+            name: "I have more questions",
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: "No problem! Contact us and we'll get in touch with you shortly :)",
+            },
+          },
         ],
       },
     ]
