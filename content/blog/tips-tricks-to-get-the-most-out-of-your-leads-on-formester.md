@@ -138,7 +138,7 @@ Don’t forget to set up your [email autoresponder](https://formester.com/featur
 
 ### 7﻿. Gather more than Accurate Data
 
-Have you ever been in a situation where you thought - “If only I knew, how they would respond to this, I could ask them that!"
+Have you ever been in a situation where you thought - **If only I knew, how they would respond to this, I could ask them that!**
 
 * Would they get bored?
 * Will they complete the form?
@@ -203,7 +203,7 @@ The purpose of customer feedback is to reveal the customer’s level of satisfac
 
 Getting customer feedbacks at specific points of the way and not just at the end of each sale, can help you give your customers & audience a superb service!
 
-Also, getting  feedback from your customers helps you  know what they would rather was improved  as relating to your business or services, 
+Also, getting feedback from your customers helps you know what they would have improved regarding your business or services. 
 
 To get started, You can begin editing this [template by Formester](https://formester.com/templates/customer-satisfaction-survey-696/)![](https://t.co/ZpfvNnf26T)
 
