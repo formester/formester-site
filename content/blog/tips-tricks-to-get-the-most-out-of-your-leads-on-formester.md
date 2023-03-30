@@ -126,7 +126,7 @@ If you’re big on customer service, then you definitely don’t want to keep yo
 
 And no, you don’t have to be on your device 24/7 either. We facilitate the creation of personalized emails with our intuitive email builder and automate the response process for you!
 
-According to [HubSpot](https://blog.hubspot.com/sales/live-chat-go-to-market-flaw) - “Almost 67%  of buyers expect a response within 10 minutes to any marketing, sales, or customer service inquiry.” 
+According to [HubSpot](https://blog.hubspot.com/sales/live-chat-go-to-market-flaw) - **Almost 67%  of buyers expect a response within 10 minutes to any marketing, sales, or customer service inquiry**.
 
 Also, about 70% of buyers engage in business with a brand that responds within 5 minutes. 
 
