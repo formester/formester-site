@@ -118,7 +118,7 @@ If you are worried about random robots contaminating your list, we’re here to 
 
 To exercise greater control, we also give you the option to configure your own Google Re-Captcha. Not only is this inextricable for security, but also a prime indicator for your customers to identify your credibility and mark your attention to security as well.
 
-> Tip & Trick: For developing trust and credibility and preventing spam, conform to security measures like usage of a captcha and re-captcha in your web forms. 
+> Tip & Trick: For developing trust and credibility and preventing spam, conform to security measures like usage of captcha and re-captcha in your web forms. 
 
 ### 6﻿. Personalized Email Responder
 
