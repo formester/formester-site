@@ -62,7 +62,7 @@ Nevertheless, if you use [Formester](https://formester.com/), we’ll save you a
 
 and get them to fill your forms happily!
 
-### 1. Easy Interface: 
+### 1. Easy Interface:
 
 At Formester, we have developed a ‘no-code, drag-and-drop & intuitive’ interface.
 
@@ -90,7 +90,7 @@ Also,  while  you’re at it you can  reach out to our customer support team 
 
 **Tip & Trick : For optimal use of Formester templates, make  sure the field titles are easily comprehensible and the overall look and feel of the form is maintained as regards the spacing and alignment of the fields.**
 
-### **3﻿. Superior Customization Options:**
+### 3﻿. Superior Customization Options:
 
 We, as a brand ourselves, understand  the impact that having details like consistent brand themes, brand messaging, brand positioning & brand logo at important places across your forms  has over the customer’s trust and brand authenticity. 
 
@@ -110,7 +110,7 @@ Our webhooks can be used to notify any other app when a submission arrives. As y
 
 **Tip & Trick: Make sure your web forms are integrated and work well with all your other systems.**
 
-### **5﻿.** Security:
+### 5﻿. Security:
 
 The importance of having captcha in web forms is analogous to having the ‘s’ in ‘https’. 
 
@@ -120,7 +120,7 @@ To exercise greater control, we also give you the option to configure your own G
 
 **Tip & Trick: For developing trust and credibility and preventing spam, conform to security measures like usage of captcha and re-captcha in your web forms.**
 
-### **6﻿.** Personalized Email Responder:
+### 6﻿. Personalized Email Responder:
 
 If you’re big on customer service, then you definitely don’t want to keep your customer waiting after they’ve granted you a submission.
 
@@ -161,7 +161,7 @@ While, this feature leads to a more personalized experience on the user side, th
 
 **Tip & Trick: Keep your forms on Formester dynamic and minimal. Nobody wants to waste their time filling out information that won’t help them or they don’t consider valid to your relationship.**
 
-### **8﻿.** Actionable Insights with Analytics:
+### 8﻿. Actionable Insights with Analytics:
 
 No data is useful unless it is converted into information.
 
