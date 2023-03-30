@@ -18,7 +18,7 @@ createdAt: 2023-03-30T09:58:51.770Z
 coverImg: /img/tips-tricks-to-get-the-most-out-of-your-leads-on-formester.png
 coverImgAlt: Tips & Tricks to get the most out of your leads on Formester
 featured: false
-published: false
+published: true
 ---
 Imagine, a company Acme Inc, is ready to launch their new product. Their team has worked very hard, starting from product design to advertising and marketing. 
 
