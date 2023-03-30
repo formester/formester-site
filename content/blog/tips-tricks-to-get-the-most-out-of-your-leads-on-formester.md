@@ -92,7 +92,7 @@ Also, while you’re at it, you can reach out to our customer support team th
 
 ### 3﻿. Superior Customization Options
 
-As a brand ourselves, we understand the impact that having details like consistent brand themes, brand messaging, brand positioning & brand logo at important places across your forms, has on the customer’s trust and brand authenticity. 
+As a brand ourselves, we understand the impact, that having details like consistent brand themes, brand messaging, brand positioning & brand logo at important places across your forms, has on the customer’s trust and brand authenticity. 
 
 So, no matter how peculiar your brand theme is, at Formester, you’ll have the option to tailor all your web forms as per the theme of your own brand, with various color schemes and font options.
 
@@ -132,9 +132,9 @@ Also, about 70% of buyers engage in business with a brand that responds within 5
 
 Seems like a lot of work? Well, not to us!
 
-Don’t forget to set up your [email autoresponder](https://formester.com/features/auto-responder/) once you’re done with creating your forms with Formester.
+Don’t forget to set up your [email autoresponder](https://formester.com/features/auto-responder/) once you’re done creating your forms with Formester.
 
-> Tip & Trick: Be sure to have acknowledgement email systems in place, for after you receive any response to your web forms. Nobody likes to wait!
+> Tip & Trick: Be sure to have acknowledgement email systems in place after you receive any response to your web forms. Nobody likes to wait!
 
 ### 7﻿. Gather more than Accurate Data
 
