@@ -18,7 +18,7 @@ createdAt: 2023-03-30T09:58:51.770Z
 coverImg: /img/tips-tricks-to-get-the-most-out-of-your-leads-on-formester.png
 coverImgAlt: Tips & Tricks to get the most out of your leads on Formester
 featured: false
-published: true
+published: false
 ---
 Imagine, a company Acme Inc, is ready to launch their new product. Their team has worked very hard, starting from product design to advertising and marketing. 
 
@@ -26,7 +26,7 @@ Now, all that was left was to build an emailing list as part of their promotiona
 
 To accomplish this, they decided to create a [lead generation web form](https://formester.com/templates/lead-generation-form-700/).
 
-They were happy to see the ‘no. of  impressions’ they were getting from the various traffic sources to their landing page.
+They were happy to see the **no. of impressions** they were getting from the various traffic sources to their landing page.
 
 But after 2 days, they realized very few of these visitors were actually filling out the form. Let alone that, they were also able to track down that most of the potential leads had abandoned the form midway through.
 
