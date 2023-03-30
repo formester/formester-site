@@ -2,7 +2,7 @@
   <div>
     <div class="container position-relative">
       <article
-        class="container mw-840 mt-8rem"
+        class="container mw-920 mt-8rem"
         :class="{ 'mb-3rem': !(article.cta && article.cta.hidden) }"
       >
       <div class="blog__header">
@@ -300,18 +300,18 @@ p {
 
 .nuxt-content {
   margin-top: 18px;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 31px;
-  letter-spacing: 0.2px;
-  color: hsla(0, 0%, 31%, 1);
+  letter-spacing: 0.4px;
+  color: #0d0d0d;
 }
 
 .nuxt-content p {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.4rem;
 }
 
 .nuxt-content h2 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 600;
   line-height: 36px;
   color: hsla(0, 0%, 20%, 1);
@@ -320,7 +320,7 @@ p {
 }
 
 .nuxt-content h3 {
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   font-weight: 500;
   line-height: 24px;
   color: hsla(0, 0%, 20%, 1);
@@ -356,8 +356,8 @@ p {
   font-weight: 600;
 }
 
-.mw-840 {
-  max-width: 840px;
+.mw-920 {
+  max-width: 920px;
 }
 
 .mt-8rem {
