@@ -312,19 +312,19 @@ p {
 
 .nuxt-content h2 {
   font-size: 1.75rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 36px;
   color: hsla(0, 0%, 20%, 1);
-  margin-top: 24px;
+  margin-top: 48px;
   margin-bottom: 16px;
 }
 
 .nuxt-content h3 {
   font-size: 1.45rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 24px;
   color: hsla(0, 0%, 20%, 1);
-  margin-top: 20px;
+  margin-top: 32px;
   margin-bottom: 16px;
 }
 
