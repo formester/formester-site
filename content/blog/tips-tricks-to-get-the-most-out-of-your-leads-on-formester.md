@@ -88,7 +88,7 @@ To get your form out, instead of creating from scratch, you’ll simply be doing
 
 Also,  while  you’re at it you can  reach out to our customer support team through the chat at the lower right corner, who are more than happy to  guide you through any impediment you may have.
 
-**Tip & Trick : For optimal use of Formester templates, make  sure the field titles are easily comprehensible and the overall look and feel of the form is maintained as regards the spacing and alignment of the fields.**
+> Tip & Trick : For optimal use of Formester templates, make  sure the field titles are easily comprehensible and the overall look and feel of the form is maintained as regards the spacing and alignment of the fields.
 
 ### 3﻿. Superior Customization Options:
 
