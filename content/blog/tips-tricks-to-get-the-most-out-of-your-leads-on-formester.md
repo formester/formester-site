@@ -34,7 +34,7 @@ After doing some research and digging through their data, they found out that th
 
 1. not easy enough, 
 2. had a bad mobile interface and
-3. had too many optional fields making it l and time-consuming to fill out.engthy
+3. had too many optional fields making it lengthy and time-consuming to fill out.
 
 **Imagine losing out on potential customers just because your web form isn’t easy for customers to fill!**
 
@@ -151,27 +151,27 @@ And guess what?  These apprehensions are more than valid!
 
 You don’t want to bore your clients by asking too many questions, take up a lot of their time and eventually leave them disinterested in your services. 
 
-But you also need accurate information, so as to serve them better and of course build your business. 
+But you also need accurate information, so as to serve them better and of course, build your business. 
 
 So, how do we do that? Well, we use conditional logic for that!
 
-In layman’s terms [conditional logic](https://formester.com/features/conditional-logic/) allows for dynamism in your web form, as in, a way to create forms that change on the basis of input.
+In layman’s terms, [conditional logic](https://formester.com/features/conditional-logic/) allows for dynamism in your web form, as in, a way to create forms that change based on input.
 
-While, this feature leads to a more personalized experience on the user side, the business side gains more accurate and insightful data for analysis.
+While this feature leads to a more personalized experience on the user side, the business side gains more accurate and insightful data for analysis.
 
-> Tip & Trick: Keep your forms on Formester dynamic and minimal. Nobody wants to waste their time filling out information that won’t help them or they don’t consider valid to your relationship.
+> Tip & Trick: Keep your forms on Formester dynamic and minimal. Nobody wants to waste their time filling out information that won’t help them, or they don’t consider valid to your relationship.
 
 ### 8﻿. Actionable Insights with Analytics
 
 No data is useful unless it is converted into information.
 
-Information that can be analyzed for gaining insights into customer mindsets, demographics, trend-detection, purchase behavior and brand insights, etc.. 
+Information that can be analyzed for gaining insights into customer mindsets, demographics, trend-detection, purchase behavior, brand insights, etc. 
 
-These insights pave the way for making well-informed business decisions, determining risks while taking critical decisions and improving the course of branding strategies.
+These insights pave the way for making well-informed business decisions, determining risks while taking critical decisions and improving branding strategies.
 
 With our [free plan on Formester](https://formester.com/pricing/), you get access to the basic set of [analytics](https://formester.com/features/powerful-analytics/) to determine how your web forms are working.
 
-> Tip & Trick: Analyze the performance of your web forms. Try and test with other formats. Compare your results and make use of those insights. They aren’t just eye candy after all!
+> Tip & Trick: Analyze the performance of your web forms. Try and test with other formats. Compare your results and make use of those insights. They aren’t just eye candy, after all!
 
 Now that you know how Formester will help you with your web forms, here is a 
 
@@ -181,7 +181,7 @@ Now that you know how Formester will help you with your web forms, here is a 
 
 It's a good practice to do some market research before you create and offer any web form to your users. 
 
-Market research blends consumer behavior and trends in the economy to confirm and improve your business idea and knowing the current trend can help you surprise your customers with the latest tools & best of service!
+Market research blends consumer behavior and trends in the economy to confirm and improve your business idea, and knowing the current trend can help you surprise your customers with the latest tools & best of service!
 
 ### 2﻿. Survey Forms
 
@@ -191,15 +191,15 @@ Make sure you run a survey to know what your customers want, that they don’t y
 
 What other way can you use web forms to get into the mind of your customers?
 
-Formester has created a few drag & drop templates for you that you can use for both [Market Research & Survey](https://formester.com/templates/market-research-survey-701/).
+Formester has created a few drag & drop templates for you that you can use for both [Market Research & Surveys](https://formester.com/templates/market-research-survey-701/).
 
-### 3﻿. Customer Feedbacks
+### 3﻿. Customer Feedback
 
 Feedbacks are everything!
 
-Customer feedback is the information provided by your customers about their experience with your product or service.
+Customer feedback is the information your customers provide, about their experience with your product or service.
 
-The purpose of customer feedbacks is to reveal the customer’s level of satisfaction with your product and help the marketing team understand where there is room for improvement. 
+The purpose of customer feedback is to reveal the customer’s level of satisfaction with your product and help the marketing team understand where there is room for improvement. 
 
 Getting customer feedbacks at specific points of the way and not just at the end of each sale, can help you give your customers & audience a superb service!
 
@@ -213,4 +213,4 @@ Web forms are an effective way to get into the minds of your customers. But not 
 
 At Formester, we have kept in mind all these know-hows, so your form-creation journey becomes easy, enjoyable and most importantly, effortless. 
 
-If you’re already using formester, make sure you’re following all these tricks and getting the most out of your leads; and if not, let us change your mind!
+If you’re already using Formester, make sure you’re following all these tricks and getting the most out of your leads; and if not, let us change your mind!
