@@ -40,7 +40,7 @@ After doing some research and digging through their data, they found out that th
 
 **Imagine that Acme Inc is you & your business! Could you really afford to lose all of that?**
 
-![Intense panic induced at the thought of losing out on potential leads](/img/untitled-design.gif "Intense panic induced at the thought of losing out on potential leads")
+![Intense panic induced at the thought of losing out on potential leads](/img/untitled-design-1-.gif "Intense panic induced at the thought of losing out on potential leads")
 
 Thought as much. Since you’re done having the reaction above,
 
