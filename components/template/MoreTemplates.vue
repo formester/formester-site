@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <h1 class="section__heading text-center">Looking for more templates?</h1>
+    <h2 class="section__heading text-center">Looking for more templates?</h2>
     <p class="text-center">
       Simplify your form creation process with our range of professionally
       designed form templates. Choose from a variety of styles and designs,
