@@ -31,7 +31,16 @@
 
 <script>
 export default {
-  props: ['showPreviewModal', 'template'],
+  props: {
+    showPreviewModal: {
+      type: Boolean,
+      required: true,
+    },
+    template: {
+      type: Object,
+      required: true,
+    },
+  },
 }
 </script>
 

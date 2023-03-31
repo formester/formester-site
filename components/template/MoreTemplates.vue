@@ -83,7 +83,16 @@
 <script>
 import axios from 'axios'
 export default {
-  props: ['categories', 'templateSlug'],
+  props: {
+    categories: {
+      type: Array,
+      default: [],
+    },
+    templateSlug: {
+      type: String,
+      default: '',
+    },
+  },
   data() {
     return {
       isDragging: false,
