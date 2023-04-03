@@ -1,46 +1,84 @@
 <template>
   <div>
-    <div v-if="template" class="template-preview-container">
-      <div class="preview-heading-wrapper">
-        <NuxtLink :to="`/templates/`" class="d-flex align-items-center">
-          <img
-            class="template__back"
-            src="@/assets/images/back-arrow.svg"
-            alt="back-button"
-          />
-          <span class="preview-heading">
-            {{ template.name }}
-          </span>
-        </NuxtLink>
-        <button
-          class="preview-use-template-btn"
-          @click="redirectTo(template.id)"
-        >
-          Use Template
-        </button>
+    <!-- Hero section -->
+    <section
+      class="container d-flex flex-column-reverse flex-lg-row template_hero"
+    >
+      <div
+        class="d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start mt-xl-0 mt-md-5 hero__info_container"
+      >
+        <h1 class="section__heading">{{ template.name }}</h1>
+        <p class="hero__subheading mt-3">
+          {{ template.description }}
+        </p>
+        <div class="btns-container d-flex align-items-center mt-2">
+          <button class="btn btn-use_template" @click="redirectTo">
+            Use Template
+          </button>
+          <button class="btn btn-preview_template" @click="openPreviewModal">
+            Preview Template
+          </button>
+        </div>
       </div>
+      <div
+        class="d-flex align-items-center justify-content-center mt-lg-0 mt-4 hero__image_container"
+        @click="openPreviewModal"
+      >
+        <img
+          :src="template.preview_image_url"
+          alt="Hero-Image"
+          class="img-fluid hero__image rounded pointer"
+        />
 
-      <iframe
-        :src="template.survey_url"
-        frameborder="0"
-        width="100%"
-        class="template-preview"
-      />
-    </div>
+        <div class="template__preview-btn d-flex align-itens-center">
+          <img
+            src="@/assets/images/eye-icon.svg"
+            alt="template preview button"
+          />
+          <span class="template__preview-btn__text">Preview</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- More templates section -->
+    <more-templates :categories="categories" :template-slug="template.slug" />
+
+    <!-- Preview Template Modal -->
+    <template-preview-modal
+      :showPreviewModal="showPreviewModal"
+      :template="template"
+      @close-modal="closePreviewModal"
+      @redirect-to="redirectTo"
+    />
   </div>
 </template>
 
 <script>
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
+// Components
+import PreviewModal from '../../components/template/PreviewModal.vue'
+import MoreTemplates from '../../components/template/MoreTemplates.vue'
 
 export default {
-  layout: 'message',
-  async asyncData({ $axios,  params }) {
+  components: {
+    'template-preview-modal': PreviewModal,
+    MoreTemplates,
+  },
+  async asyncData({ $axios, params }) {
     const { data: template } = await $axios.get(
       `https://app.formester.com/templates/${params.slug}.json`
     )
-    return { template }
+
+    const { data: categories } = await $axios.get(
+      'https://app.formester.com/template_categories.json',
+    )
+    return { template, categories }
+  },
+  data() {
+    return {
+      showPreviewModal: false,
+    }
   },
   computed: {
     meta() {
@@ -48,8 +86,7 @@ export default {
         type: 'website',
         url: `https://formester.com/templates/${this.$route.params.slug}/`,
         title: this.template?.name || 'Formester',
-        description:
-          this.template?.description || this.template?.name,
+        description: this.template?.description || this.template?.name,
         mainImage: this.template?.preview_image_url
           ? this.template.preview_image_url
           : 'https://formester.com/formester-form-builder-background.png',
@@ -72,84 +109,109 @@ export default {
     }
   },
   methods: {
-    redirectTo(id) {
+    redirectTo() {
       window.open(
-        `https://app.formester.com/forms/new?template_id=${id}`,
+        `https://app.formester.com/forms/new?template_id=${this.template.id}`,
         '_blank'
       )
+    },
+    openPreviewModal() {
+      this.showPreviewModal = true
+    },
+    closePreviewModal() {
+      this.showPreviewModal = false
     },
   },
 }
 </script>
 
 <style scoped>
-.template-preview-container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+.template_hero {
+  gap: 2rem;
+  margin: 6.5rem auto;
 }
-.preview-heading-wrapper {
-  display: flex;
-  flex-direction: row;
-  padding: 1rem 2rem;
+
+.hero__info_container {
+  flex: 0.85;
 }
-.template__back {
-  width: 21px;
-  margin-right: 10px;
+
+.hero__image_container {
+  position: relative;
+  flex: 1;
 }
-.preview-heading {
-  font-weight: 600;
-  font-size: 21px;
-  line-height: 40px;
-  color: #211447;
-  user-select: none;
+
+.hero__image {
+  transition: all 0.3s ease-in;
 }
-.preview-use-template-btn {
-  margin-left: auto;
-  cursor: pointer;
+.hero__image:hover {
+  filter: blur(1px) brightness(40%);
+}
+
+.template__preview-btn {
+  pointer-events: none;
+  opacity: 0;
+  gap: 6px;
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+  color: #fff;
+}
+.hero__image:hover + .template__preview-btn {
+  opacity: 1;
+}
+
+.btns-container {
+  gap: 1rem;
+}
+
+.btn {
   padding: 12px 16px;
-  background: #4f3895;
   border-radius: 4px;
-  color: white;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
+  transition: all 0.2s ease-out;
 }
-.template-preview {
-  min-height: 520px;
-  height: 100%;
-  overflow-y: auto;
+.btn-use_template {
+  background: #4f3895;
+  color: white;
 }
 
-@media only screen and (max-width: 778px) {
-  .preview-heading {
-    font-size: 18px;
-  }
-  .preview-use-template-btn {
-    font-size: 13px;
+.btn-use_template:hover {
+  background: #4f3895eb;
+}
+
+.btn-preview_template {
+  background: transparent;
+  border: 1px solid #4f3895;
+  color: #4f3895;
+}
+
+.btn-preview_template:hover {
+  background: #eee8ff47;
+}
+
+@media only screen and (max-width: 991px) {
+  .template_hero {
+    margin: 1rem auto 5rem;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .preview-heading-wrapper {
+  .btns-container {
+    gap: 1.5rem;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
   }
 
-  .template__back {
-    margin-right: 5px;
-  }
-
-  .preview-heading {
+  .btn-use_template,
+  .btn-preview_template {
+    width: 100%;
+    padding: 18px;
     font-size: 16px;
-  }
-
-  .preview-use-template-btn {
-    font-size: 12px;
-    margin-left: 0px;
-    padding: 8px 12px;
-    margin-top: 5px;
   }
 }
 </style>
