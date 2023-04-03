@@ -20,8 +20,9 @@
         <ul class="tabs-box" ref="tabsBox">
           <li
             class="tab"
+            id="recommend"
             :class="{ active: activeTab === null }"
-            @click="setActiveTab(200)"
+            @click="setActiveTab()"
           >
             Recommend
           </li>
@@ -29,6 +30,7 @@
             class="tab"
             v-for="category in categories"
             :key="category.id"
+            :id="category.slug"
             :class="{ active: activeTab === category.id }"
             @click="setActiveTab(category)"
           >
@@ -71,18 +73,25 @@
         </div>
       </div>
       <div
-        v-else
+        v-if="!loading && templates.length == 0"
         class="d-flex align-items-center justify-content-center mt-5 p-5"
       >
         No Templates
       </div>
+
+      <!-- Loader -->
+      <Loader :loading="loading" class="mt-5 p-5" />
     </div>
   </section>
 </template>
 
 <script>
 import axios from 'axios'
+import Loader from '../Loader.vue'
 export default {
+  components: {
+    Loader,
+  },
   props: {
     categories: {
       type: Array,
@@ -98,6 +107,7 @@ export default {
       isDragging: false,
       activeTab: null,
       templates: [],
+      loading: false,
     }
   },
   mounted() {
@@ -135,21 +145,38 @@ export default {
       }, 300)
     },
     setActiveTab(tab) {
+      const id = tab ? tab.slug : 'recommend'
       this.activeTab = tab?.id || null
       this.getTemplates(tab?.slug || null)
+      const element = document.getElementById(id)
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'center',
+      })
+      clearTimeout(timeout)
+      const timeout = setTimeout(() => {
+        this.handleIcons()
+      }, 300)
     },
     async getTemplates(categorySlug) {
       const params = {}
       if (categorySlug) {
         params.category_slug = categorySlug
       }
-
-      const { data: templates } = await axios(
-        'https://app.formester.com/templates.json',
-        { params }
-      )
-      this.templates = templates.filter((el) => el.slug !== this.templateSlug)
-      this.templates = this.templates.splice(0, 6)
+      this.loading = true
+      try {
+        const { data: templates } = await axios(
+          'https://app.formester.com/templates.json',
+          { params }
+        )
+        this.templates = templates.filter((el) => el.slug !== this.templateSlug)
+        this.templates = this.templates.splice(0, 6)
+        this.loading = false
+      } catch (err) {
+        console.error(err)
+        this.loading = false
+      }
     },
   },
 }
@@ -206,10 +233,6 @@ export default {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-}
-
-.tabs-box.dragging {
-  scroll-behavior: auto;
 }
 
 .tabs-box .tab {
