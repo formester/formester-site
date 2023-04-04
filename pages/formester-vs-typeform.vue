@@ -48,10 +48,37 @@
             </tr>
           </thead>
           <tbody>
+            <tr v-for="c of notPresent" :key="c[0]">
+              <td style="font-weight: 600">{{ c[0] }}</td>
+              <td style="color: #27AE60; font-weight: 500">{{ c[1] }}</td>
+              <td style="color: #ee2e2e; font-weight: 500">{{ c[2] }}</td>
+            </tr>
             <tr v-for="c of comparisions" :key="c[0]">
               <td style="font-weight: 600">{{ c[0] }}</td>
-              <td>{{ c[1] }}</td>
-              <td>{{ c[2] }}</td>
+              <td style="color: #27AE60; font-weight: 500">{{ c[1] }}</td>
+              <td style="color: #27AE60; font-weight: 500">{{ c[2] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="container text-center">
+      <h3 class="section__heading">Pricing</h3>
+      <div class="table-responsive">
+        <table class="table text-start comparision__table-pricing mx-auto">
+          <thead class="bg__light-primary">
+            <tr>
+              <th scope="col">Features</th>
+              <th scope="col">Formester</th>
+              <th scope="col">Typeform</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="c of pricing" :key="c[0]">
+              <td style="font-weight: 600">{{ c[0] }}</td>
+              <td style="color: #27AE60; font-weight: 500">{{ c[1] }}</td>
+              <td style="color: #ee2e2e; font-weight: 500">{{ c[2] }}</td>
             </tr>
           </tbody>
         </table>
@@ -225,55 +252,66 @@ export default {
             'Just collecting data isn’t enough. Unless you extract meaningful insights from your form responses, your business isn’t going to benefit. Formester serves powerful analytics that are easier to comprehend and help you study engagement and conversions. Analyze your performance to act towards reducing your drop-offs.',
         },
       ],
-      comparisions: [
-        [
-          'Pricing',
-          'Starts for free, $13/month for a Personal User with 1000 submissions',
-          'Starts at $29/month for 100 submissions',
-        ],
+      notPresent: [
         [
           'Redirection on Submission',
-          'Customization available even with the basic plan',
+          'Customization available even with the free plan',
           'Not available',
         ],
+        ['HTML Form Backend Service', 'Present', 'Not available'],
+        ['White Labeled Surveys Creation', 'Present', 'Not available'],
+        ['Spam Protection', 'Present', 'Difficult to execute'],
+        ['End-to-End Design Customization', 'Present', 'Minimal customization'],
         [
-          'Website Embedment',
-          'Web forms can be easily and quickly created',
-          'Typeform forms can also be embedded into website',
+          'Logo addition to form',
+          'Present with free plan',
+          'A $99 feature',
         ],
-        [
-          'Best For',
-          'All types of forms and applications including survey lead generation, feedback etc',
-          'Suited for short forms like lead generation. Long/complex forms using Typeform might confuse the users ',
-        ],
-        [
-          'Mobile First UX',
-          'Perfectly mobile-first',
-          'Design-heavy forms are problematic while using on mobile',
-        ],
-        [
-          'Storage',
-          'Minimum Storage - 1GB: comes with Basic Plan - $13/month. Business plan - 5GB: $49/month',
-          'Minimum Storage - 1GB: comes with Basic Plan - $25/month. Business Plan - 5GB: $83/month',
-        ],
-        ['Add Media to Forms', 'Present', 'Present'],
-        ['Conditional Logic', 'Present', 'Present'],
-        ['Spam Protection', 'Present', 'Present but difficult to execute'],
         [
           'Automated Email Responses',
           'Present with custom integration',
           'Only in paid plans',
         ],
-        ['HTML Form Backend Service', 'Present', 'Not available'],
-        ['Cloud Integrations with Zapier', 'Present', 'Present'],
-        ['Deep Performance Analytics', 'Present', 'Basic'],
-        ['White Labeled Surveys Creation', 'Present', 'Missing'],
+        ['Deep Performance Analytics', 'Present', 'Only in paid plans'],
         [
-          'Logo addition to form',
-          'Available and can be used by free users too',
-          'A $99 feature',
+          'Website Embedment',
+          'Quick & Easy Integration',
+          'Time-consuming & arduous Integration',
         ],
-        ['End-to-End Design Customization', 'Present', 'Minimal customization'],
+        [
+          'Best Application',
+          'All kinds of forms and applications including survey lead generation, feedback etc',
+           'Not suitable for long forms',
+        ],
+        [
+          'Mobile First UX',
+          'Perfectly mobile-first',
+          'Complicated for design-heavy forms',
+        ],
+      ],
+      comparisions: [
+        ['Cloud Integrations with Zapier', 'Present', 'Present'],
+        ['Add Media to Forms', 'Present', 'Present'],
+        ['Conditional Logic', 'Present', 'Present'],
+        [
+          'Storage',
+          'Basic Plan: $13/month & Minimum Storage: 1GB. Business Plan: $49/month & Minimum Storage: 5GB',
+          'Minimum Storage - 1GB: comes with Basic Plan - $25/month. Business Plan - 5GB: $83/month',
+        ],
+      ],
+      pricing:[
+        ['Free',
+          'Starts free for 100 submissions',
+          '$29/month for 100 submissions',
+        ],
+        ['Personal',
+          '$13/month for 1000 submissions',
+          '$59/month for 1000 submissions',
+        ],
+        ['Bussiness',
+          '$49/month for 15k submissions',
+          '$99/month for 10k submissions',
+        ]
       ],
       relatedComparisons: [
         {
@@ -410,6 +448,12 @@ export default {
 /* COMPARISION */
 .comparision__table {
   margin-top: 3.5rem;
+  max-width: 60rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
+  border-radius: 8px;
+}
+.comparision__table-pricing {
+  margin-top: 10px;
   max-width: 60rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
   border-radius: 8px;
