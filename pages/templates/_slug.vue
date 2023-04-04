@@ -40,6 +40,8 @@
       </div>
     </section>
 
+    <Faq v-if="template.faqs" :faqs="template.faqs" />
+
     <!-- More templates section -->
     <more-templates :categories="categories" :template-slug="template.slug" />
 
@@ -59,11 +61,13 @@ import getSiteMeta from '../../utils/getSiteMeta'
 // Components
 import PreviewModal from '../../components/template/PreviewModal.vue'
 import MoreTemplates from '../../components/template/MoreTemplates.vue'
+import Faq from '../../components/template/Faq.vue'
 
 export default {
   components: {
     'template-preview-modal': PreviewModal,
     MoreTemplates,
+    Faq,
   },
   async asyncData({ $axios, params }) {
     const { data: template } = await $axios.get(
@@ -71,7 +75,7 @@ export default {
     )
 
     const { data: categories } = await $axios.get(
-      'https://app.formester.com/template_categories.json',
+      'https://app.formester.com/template_categories.json'
     )
     return { template, categories }
   },
@@ -94,6 +98,22 @@ export default {
       }
       return getSiteMeta(metaData)
     },
+    faqsSchema() {
+      if (!this.template.faqs) {
+        return []
+      }
+
+      return this.template.faqs.map((faq) => {
+        return {
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        }
+      })
+    },
   },
   head() {
     return {
@@ -107,6 +127,42 @@ export default {
         },
       ],
     }
+  },
+  jsonld() {
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: this.template?.name,
+        description: this.template?.description,
+        image: this.template?.preview_image_url,
+        url: `https://formester.com/templates/${this.$route.params.slug}/`,
+        mainEntity: {
+          '@type': 'CreativeWork',
+          name: this.template?.name,
+          description: this.template?.description,
+          image: this.template?.preview_image_url,
+          url: `https://formester.com/templates/${this.$route.params.slug}/`,
+          author: {
+            '@type': 'Organization',
+            name: 'Formester',
+            url: 'https://formester.com/',
+          },
+        },
+        isPartOf: {
+          '@type': 'CollectionPage',
+          name: this.template?.category?.name,
+          url: `https://formester.com/templates/categories/${this.template?.category?.slug}/`,
+          description:
+            'Browse our collection of Research Form templates for free.',
+        },
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: this.faqsSchema,
+      },
+    ]
   },
   methods: {
     redirectTo() {
