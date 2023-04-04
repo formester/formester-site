@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="container py-2 py-lg-5">
     <h2 class="section__heading text-center">Looking for more templates?</h2>
     <p class="text-center">
       Simplify your form creation process with our range of professionally
@@ -71,6 +71,11 @@
             </h2>
           </NuxtLink>
         </div>
+      </div>
+      <div v-if="templates && templates.length" class="d-flex align-items-center justify-content-center mt-4">
+        <NuxtLink :to="`/templates/`">
+          <button class="btn-all-templates">View All Templates</button>
+        </NuxtLink>
       </div>
       <div
         v-if="!loading && templates.length == 0"
@@ -288,6 +293,21 @@ export default {
   line-height: 24px;
   color: #211447;
   user-select: none;
+}
+
+.btn-all-templates {
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  transition: all 0.2s ease-out;
+  background: #4f3895;
+  color: white;
+}
+
+.btn-all-templates:hover {
+  background: #4f3895eb;
 }
 
 @media (max-width: 991px) {

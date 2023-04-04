@@ -1,5 +1,9 @@
 <template>
-  <Templates :activeCategory="$route.params.slug" :templates="templates" :templateCategories="categories" />
+  <Templates
+    :activeCategory="$route.params.slug"
+    :templates="templates"
+    :templateCategories="categories"
+  />
 </template>
 
 <script>
@@ -12,19 +16,21 @@ export default {
   async asyncData({ $axios, params }) {
     const { data: templates } = await $axios.get(
       'https://app.formester.com/templates.json',
-      { params: { category_slug: params.slug }}
+      { params: { category_slug: params.slug } }
     )
 
     const { data: categories } = await $axios.get(
-      'https://app.formester.com/template_categories.json',
+      'https://app.formester.com/template_categories.json'
     )
-    
-    return {templates, categories}
+
+    return { templates, categories }
   },
   computed: {
-    currentCategory(){
-      const [ currentCategory ] = this.categories.filter(cate => cate.slug === this.$route.params.slug);
-      return currentCategory.name;
+    currentCategory() {
+      const [currentCategory] = this.categories.filter(
+        (cate) => cate.slug === this.$route.params.slug
+      )
+      return currentCategory.name
     },
     meta() {
       const metaData = {
@@ -37,6 +43,18 @@ export default {
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with blog page image alt
       }
       return getSiteMeta(metaData)
+    },
+    listItems() {
+      return this.templates.map((template, index) => {
+        return {
+          '@type': 'ListItem',
+          position: index + 1,
+          url: `https://formester.com/templates/${template.slug}`,
+          name: template.name,
+          image: template.previewImageUrl,
+          description: template.description,
+        }
+      })
     },
   },
   head() {
@@ -51,6 +69,17 @@ export default {
         },
       ],
     }
+  },
+  jsonld() {
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: this.currentCategory,
+        description: `Find the perfect template for ${this.currentCategory} with Formester's comprehensive library. Choose from a variety of customizable designs and create a professional look in no time.`,
+        itemListElement: this.listItems,
+      },
+    ]
   },
 }
 </script>

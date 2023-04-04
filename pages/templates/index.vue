@@ -1,5 +1,9 @@
 <template>
-  <Templates :activeCategory="null" :templates="templates" :templateCategories="categories" />
+  <Templates
+    :activeCategory="null"
+    :templates="templates"
+    :templateCategories="categories"
+  />
 </template>
 
 <script>
@@ -15,10 +19,10 @@ export default {
     )
 
     const { data: categories } = await $axios.get(
-      'https://app.formester.com/template_categories.json',
+      'https://app.formester.com/template_categories.json'
     )
 
-    return {templates, categories}
+    return { templates, categories }
   },
   computed: {
     meta() {
@@ -34,6 +38,18 @@ export default {
       }
       return getSiteMeta(metaData)
     },
+    listItems() {
+      return this.templates.map((template, index) => {
+        return {
+          '@type': 'ListItem',
+          position: index + 1,
+          url: `https://formester.com/templates/${template.slug}`,
+          name: template.name,
+          image: template.previewImageUrl,
+          description: template.description,
+        }
+      })
+    },
   },
   head() {
     return {
@@ -47,6 +63,18 @@ export default {
         },
       ],
     }
+  },
+  jsonld() {
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'All Templates',
+        description:
+          'Use our Formester form templates including surveys, reviews, registrations, & more for any industry! Automate workflows with online templates.',
+        itemListElement: this.listItems,
+      },
+    ]
   },
 }
 </script>
