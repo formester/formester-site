@@ -3,7 +3,7 @@
     <h2 class="text-center section__heading">Frequently Asked Questions</h2>
     <div class="accordion accordion-flush my-5" id="accordionFaqs">
       <div v-for="(faq, index) in faqs" :key="index" class="accordion-item">
-        <h2 class="accordion-header" :id="`heading${index}`">
+        <h2 class="accordion-header">
           <button
             class="accordion-button collapsed"
             type="button"
@@ -18,7 +18,6 @@
         <div
           :id="`collapse${index}`"
           class="accordion-collapse collapse"
-          :aria-labelledby="`heading${index}`"
           data-bs-parent="#accordionFaqs"
         >
           <div class="accordion-body">

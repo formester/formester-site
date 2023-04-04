@@ -3,19 +3,10 @@
     <NuxtLink :to="{ name: 'templates-slug', params: { slug: template.slug } }">
       <div v-if="loading" class="image-skeleton"></div>
       <img
-        v-if="template.previewImageUrl"
         class="img-fluid pointer template-preview__img"
         :class="{ hidden: loading }"
-        :src="template.previewImageUrl"
+        :src="previewImageUrl"
         :alt="template.name"
-        @load="loading = false"
-      />
-      <img
-        v-else
-        class="img-fluid pointer template-preview__img"
-        :class="{ hidden: loading }"
-        src="@/assets/images/templates/create_form.png"
-        alt="Template placeholder image"
         @load="loading = false"
       />
       <h2 class="template-name pointer">
@@ -38,6 +29,11 @@ export default {
       loading: true,
     }
   },
+  computed: {
+    previewImageUrl() {
+      return this.template.previewImageUrl  || require("@/assets/images/templates/create_form.png")
+    }
+  }
 }
 </script>
 
