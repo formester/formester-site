@@ -519,3 +519,13 @@ thead th {
   }
 }
 </style>
+<style>
+.present{
+  color: #6BC8AD;
+  font-weight: 600
+}
+.absent{
+  color: #F35E54; 
+  font-weight: 600
+}
+</style>
