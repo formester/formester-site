@@ -28,25 +28,6 @@
               class="img-fluid hero__image"
             />
           </div>
-          <div class="mt-5">
-            <div class="card">
-              <div class="card-header">
-                <h3>HTML Form Backend</h3>
-              </div>
-              <div class="card-body">
-                <p class="html">
-                  &lt;form accept-charset='UTF-8' action="<mark style="background-color: #ffc7fb !important;">https://app.formester.com/forms/your@form/submissions</mark>"
-                    method="POST"&gt;<br>
-                    <span class="gray">
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="email"&gt;Email&lt;/label&gt;<br>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="email" id="email-address" name="email" placeholder="your@email.com"&gt;<br>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type="submit"&gt;Submit&lt;/button&gt;<br>
-                    </span>
-                    &lt;/form&gt;
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -194,9 +175,5 @@ export default {
   padding: 8em 0;
   background: var(--clr-primary);
   color: white;
-}
-.card {
-  color: var(--bs-dark);
-  background: var(--bs-white);
 }
 </style>
