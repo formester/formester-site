@@ -12,10 +12,7 @@
       <span class="preview-heading">
         {{ template.name }}
       </span>
-      <button
-        class="preview-use-template-btn"
-        @click="$emit('redirect-to')"
-      >
+      <button class="preview-use-template-btn" @click="$emit('redirect-to')">
         Use Template
       </button>
     </div>
@@ -56,16 +53,18 @@ export default {
 
 .close-modal {
   position: absolute;
-  top: 23px;
-  right: 23px;
-  width: 21px;
+  top: 22px;
+  right: 30px;
+  width: 30px;
 }
 
 .preview-heading-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 14px;
   padding: 1rem 2rem;
+  padding-right: 80px;
 }
 
 .preview-heading {
@@ -107,6 +106,9 @@ export default {
 }
 
 @media only screen and (max-width: 600px) {
+  .close-modal {
+    top: 18px;
+  }
   .preview-heading {
     display: none;
   }
