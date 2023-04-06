@@ -28,6 +28,25 @@
               class="img-fluid hero__image"
             />
           </div>
+          <div class="mt-5">
+            <div class="card">
+              <div class="card-header">
+                <h3>HTML Form Backend</h3>
+              </div>
+              <div class="card-body">
+                <p class="html">
+                  &lt;form accept-charset='UTF-8' action="<mark style="background-color: #ffc7fb !important;">https://app.formester.com/forms/your@form/submissions</mark>"
+                    method="POST"&gt;<br>
+                    <span class="gray">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="email"&gt;Email&lt;/label&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="email" id="email-address" name="email" placeholder="your@email.com"&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type="submit"&gt;Submit&lt;/button&gt;<br>
+                    </span>
+                    &lt;/form&gt;
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -65,6 +84,58 @@ export default {
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with Html Form Backend page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with Html Form Backend page image alt
+        keywords: [
+          'formester','form backend',
+          'form endpoint',
+          'serverless form',
+          'backendless form',
+          'html form',
+          'static form',
+          'form service',
+          'php form',
+          'forms',
+          'form',
+          'form builder',
+          'form creator',
+          'form backend service',
+          'form data',
+          'sign up form backend',
+          'node.js contact form backend',
+          'joomla contact form backend',
+          'bootstrap search form backend',
+          'how to create the backend of an html and css signup form',
+          'how to get a google form backend',
+          'gravity form backend code for selecting category',
+          'php login form backend',
+          'get information form backend to jsp',
+          'wordpress aplly shortcode form backend to the theme',
+          'siteorigin contact form backend validation',
+          'app contact form backend',
+          'form backend to frontend joomla',
+          'registration form backend',
+          'web form backend call to action crm',
+          'django form backend',
+          'how to find backend for google form',
+          'how to get to a google form backend',
+          'how to connect a form to sharepoint on the backend',
+          'how to make an online sign up form that connects to backend',
+          'php generic form backend',
+          'no code form',
+          'free form builder',
+          'free form database',
+          'free form backend',
+          'free form endpoint',
+          'free contact us form',
+          'form endpoints for designers and developers',
+          'website form backend service',
+          'website form backend send to google sheets',
+          'how to make an online sign up form that connects to backend',
+          'and 30 percent front end',
+          'backend deal',
+          'form endpoints for designers ',
+          'form endpoints for developers',
+          'contact form backend'
+        ]
       }
       return getSiteMeta(metaData)
     },
@@ -123,5 +194,9 @@ export default {
   padding: 8em 0;
   background: var(--clr-primary);
   color: white;
+}
+.card {
+  color: var(--bs-dark);
+  background: var(--bs-white);
 }
 </style>

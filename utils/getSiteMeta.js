@@ -5,6 +5,7 @@ const description =
   'Build responsive forms using drag and drop builder. The free plan is powerful to get you started. Integrate with 3rd party application and review performance with analytics.'
 const mainImage = 'https://formester.com/formester-form-builder-background.png'
 const mainImageAlt = 'Form builder showing drag and drop functionality in Formester'
+const keywords = [' web form', 'formester', 'web forms', 'forms', 'online form builder', 'online form builder software', 'typeform alternative', 'jotform alternative', 'free typeform alternative', 'free jotform alternative', 'html form builder', 'no code form builder', 'drag and drop form builder', 'free form builder']
 
 export default (meta) => {
   return [
@@ -95,6 +96,11 @@ export default (meta) => {
       name: 'image',
       property: 'og:image',
       content: (meta && meta.mainImage) || mainImage,
+    },
+    {
+      hid: 'keywords',
+      name: 'keywords',
+      content: (meta && meta.keywords) || keywords,
     },
   ]
 }
