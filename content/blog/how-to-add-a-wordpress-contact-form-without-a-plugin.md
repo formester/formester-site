@@ -9,7 +9,7 @@ createdAt: 2023-04-05T13:10:43.760Z
 coverImg: /img/how-to-add-a-wordpress-contact-form-without-a-plugin.png
 coverImgAlt: How to add a WordPress Contact Form without a Plugin
 featured: false
-published: false
+published: true
 ---
 In today's era, having a successful business isn't just about having an excellent product or service to offer, infact, it's more about how you reach your audience with what you have to offer.
 
