@@ -63,12 +63,12 @@
       <i class="fa-solid fa-angle-up"></i>
       <h3 class="section__heading">Pricing</h3>
       <div class="table-responsive">
-        <table class="table text-start comparision__table-pricing mx-auto">
+        <table class="table text-start comparision__table comparision__table-pricing mx-auto">
           <thead class="bg__light-primary">
             <tr>
               <th scope="col">Features</th>
               <th scope="col">Formester</th>
-              <th scope="col">Typeform</th>
+              <th scope="col">Zoho Form</th>
             </tr>
           </thead>
           <tbody>
@@ -454,12 +454,6 @@ export default {
   font-size: var(--ft-big-body);
   line-height: 30px;
 }
-.comparision__table-pricing {
-  margin-top: 10px;
-  max-width: 60rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
-  border-radius: 8px;
-}
 
 @media (max-width: 768px) {
   .section__heading {
@@ -510,7 +504,9 @@ export default {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
   border-radius: 8px;
 }
-
+.comparision__table-pricing {
+  margin-top: 10px;
+}
 .table > :not(caption) > * > * {
   padding: 1rem;
 }

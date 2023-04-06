@@ -67,7 +67,7 @@
             <tr>
               <th scope="col">Features</th>
               <th scope="col">Formester</th>
-              <th scope="col">Typeform</th>
+              <th scope="col">Jotform</th>
             </tr>
           </thead>
           <tbody>

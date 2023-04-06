@@ -67,7 +67,7 @@
             <tr>
               <th scope="col">Features</th>
               <th scope="col">Formester</th>
-              <th scope="col">Typeform</th>
+              <th scope="col">Paperform</th>
             </tr>
           </thead>
           <tbody>
@@ -453,9 +453,6 @@ export default {
   font-size: var(--ft-big-body);
   line-height: 30px;
 }
-.comparision__table-pricing {
-  margin-top: 10px;
-}
 
 @media (max-width: 768px) {
   .section__heading {
@@ -505,6 +502,10 @@ export default {
   max-width: 60rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
   border-radius: 8px;
+}
+
+.comparision__table-pricing {
+  margin-top: 10px;
 }
 
 .table > :not(caption) > * > * {
