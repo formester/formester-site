@@ -82,4 +82,12 @@ export default {
 .hglt {
   color: var(--clr-primary);
 }
+.present{
+  color: #27AE60;
+  font-weight: 600
+}
+.absent{
+  color: #ee2e2e; 
+  font-weight: 600
+}
 </style>

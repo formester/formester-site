@@ -50,9 +50,32 @@
           </thead>
           <tbody>
             <tr v-for="c of comparisions" :key="c[0]">
-              <td style="font-weight: 600">{{ c[0] }}</td>
-              <td>{{ c[1] }}</td>
-              <td>{{ c[2] }}</td>
+              <td style="font-weight: 600" v-html="c.title"></td>
+              <td v-html="c.formester"></td>
+              <td v-html="c.forms"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="container text-center">
+      <i class="fa-solid fa-angle-up"></i>
+      <h3 class="section__heading">Pricing</h3>
+      <div class="table-responsive">
+        <table class="table text-start comparision__table comparision__table-pricing mx-auto">
+          <thead class="bg__light-primary">
+            <tr>
+              <th scope="col">Features</th>
+              <th scope="col">Formester</th>
+              <th scope="col">Typeform</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="p of pricing" :key="p[0]">
+              <td style="font-weight: 600" v-html="p.title"></td>
+              <td v-html="p.formester"></td>
+              <td v-html="p.forms"></td>
             </tr>
           </tbody>
         </table>
@@ -228,83 +251,123 @@ export default {
         },
       ],
       comparisions: [
-        [
-          'Pricing',
-          'Starts for free, $13/month for a Personal User with 1000 submissions',
-          'Starts for free, $19/month for a Basic User with 1000 submissions',
-        ],
-        [
-          'Form Limit',
-          'Unlimited even for free users',
-          'Limited Forms - 10 Forms for free, $29/month for Unlimited Forms',
-        ],
-        [
-          'Monthly Form Views',
-          'Unlimited even for free users',
-          'Limited Form Views - 1000 views for free, $29/month for Unlimited Views',
-        ],
-        [
-          'Total Submission Storage',
-          'Unlimited even for free users',
-          '1000 Total Submission Storage for free, $19/month for Unlimited',
-        ],
-        [
-          'Branding',
-          'No Formester Branding even in the free plan',
-          'Forms.App Branding in free plan, $19/month for No Branding',
-        ],
-        ['HTML Form Backend Service', 'Present', 'Not available'],
-        [
-          'Redirection on Submission',
-          'Customization available even with the basic plan',
-          'Only in paid plans',
-        ],
-        [
-          'Website Embedment',
-          'Web forms can be easily and quickly embedded',
-          'Present but difficult to execute',
-        ],
-        [
-          'Best For',
-          'All types of forms and applications including survey lead generation, feedback etc',
-          'Suited for short forms like contact us form and registration form. Long/complex forms using Forms.app might confuse the users ',
-        ],
-        [
-          'Mobile First UX',
-          'Perfectly mobile-first',
-          'Design-heavy forms are problematic while using on mobile',
-        ],
-        [
-          'Storage',
-          'Minimum Storage - 1GB: comes with Basic Plan - $13/month. Business plan - 5GB: $49/month',
-          'Minimum Storage - 10GB: comes with Basic Plan - $19/month. Pro Plan - 100GB: $29/month',
-        ],
-        ['Add Media to Forms', 'Present', 'Present'],
-        [
-          'Conditional Logic',
-          'Present',
-          'Present with a lower degree of flexibility',
-        ],
-        ['Spam Protection', 'Present', 'Basic'],
-        [
-          'Monthly Payment Submissions',
-          'Build in Progress',
-          '$19/month for 100 Monthly Payment Submissions',
-        ],
-        [
-          'Automated Email Responses',
-          'Present with custom integration',
-          '25 email notification/month for free, $19/month for unlimited email notifications',
-        ],
-        ['Cloud Integrations with Zapier', 'Present', 'Present'],
-        ['Deep Performance Analytics', 'Present', 'Basic'],
-        ['White Labeled Surveys Creation', 'Present', 'Not Available'],
-        [
-          'Logo addition to form',
-          'Available and can be used by free users too',
-          'Not Available',
-        ],
-        ['End-to-End Design Customization', 'Present', 'Minimal customization'],
+        {
+          title: 'White Labeled Surveys Creation', 
+          formester: '<span class="present">Present</span>',
+          forms: '<span class="absent">Not Available</span>'
+        },
+        {
+          title: 'Logo addition to form',
+          formester: '<span class="present">Available</span> and can be used by <span class="present">free</span> users too',
+          forms: '<span class="absent">Not Available</span>',
+        },
+        {
+          title: 'HTML Form Backend Service',
+          formester: '<span class="present">Present</span>', 
+          forms: '<span class="absent">Not Available</span>'
+        },
+        {
+          title: 'Spam Protection',
+          formester: '<span class="present">Present</span>',
+          forms: '<span class="absent">Basic</span>'
+        },
+        {
+          title: 'Deep Performance Analytics', 
+          formester: '<span class="present">Present</span>',
+          forms: '<span class="absent">Basic</span>'
+        },
+        {
+          title: 'Redirection on Submission',
+          formester: '<span class="present">Customization</span> available even with the <span class="present">basic</span> plan',
+          forms: 'Only in <span class="absent">paid</span> plans',
+        },
+        {
+          title: 'Website Embedment',
+          formester: 'Web forms can be <span class="present">easily and quickly</span> embedded',
+          forms: 'Present but <span class="absent">difficult</span> to execute',
+        },
+        {
+          title: 'End-to-End Design Customization', 
+          formester: '<span class="present">Present</span>', 
+          forms: '<span class="absent">Minimal</span> customization'
+        },
+        {
+          title: 'Mobile First UX',
+          formester: '<span class="present">Perfectly</span> mobile-first',
+          forms: '<span class="absent">Complicated</span> for design-heavy forms',
+        },
+        {
+          title: 'Conditional Logic',
+          formester: '<span class="present">Present</span>',
+          forms: 'Present with a <span class="absent">lower degree</span> of flexibility',
+        },
+        {
+          title: 'Form Limit',
+          formester: '<span class="present">Unlimited</span> even for <span class="present">free</span> users',
+          forms: '<span class="absent">Limited</span> Forms - 10 Forms for free, <span class="absent">$29/month</span> for Unlimited Forms',
+        },
+        {
+          title: 'Monthly Form Views',
+          formester: '<span class="present">Unlimited</span> even for <span class="present">free</span> users',
+          forms: '<span class="absent">Limited</span> Form Views - 1000 views for free, <span class="absent">$29/month</span> for Unlimited Views',
+        },
+        {
+          title: 'Total Submission Storage',
+          formester: '<span class="present">Unlimited</span> even for <span class="present">free</span> users',
+          forms: '<span class="absent">1000</span> Total Submission Storage for free, <span class="absent">$19/month</span> for Unlimited',
+        },
+        {
+          title: 'Branding',
+          formester: '<span class="present">No Formester Branding</span> even in the <span class="present">free</span> plan',
+          forms: 'Forms.App Branding in free plan, <span class="absent">Basic</span>$19/month for No Branding',
+        },
+        {
+          title: 'Best For',
+          formester: 'All types of forms and applications including survey lead generation, feedback etc',
+          forms: 'Suited for short forms like contact us form and registration form. Long/complex forms using Forms.app might confuse the users ',
+        },
+        {
+          title: 'Storage',
+          formester: 'Basic Plan: $13/month  & Minimum Storage: 1GB.<span></br></span>Business Plan: $49/month & Minimum Storage: 5GB',
+          forms: 'Basic Plan: $19/month  & Minimum Storage: 10GB.<span></br></span> Pro Plan: $29/month & Minimum Storage 100GB  ',
+        },
+        {
+          title: 'Monthly Payment Submissions',
+          formester: 'Build in Progress',
+          forms: '$19/month for 100 Monthly Payment Submissions',
+        },
+        {
+          title: 'Automated Email Responses',
+          formester: '<span class="present">Present</span> with custom integration',
+          forms: '<span class="absent">25</span> email notification/month for free, <span class="absent">$19/month</span> for unlimited email notifications',
+        },
+        {
+          title: 'Add Media to Forms',
+          formester: '<span class="present">Present</span>',
+          forms: '<span class="present">Present</span>'
+        },
+        {
+          title: 'Cloud Integrations with Zapier', 
+          formester: '<span class="present">Present</span>',
+          forms: '<span class="present">Present</span>'
+        },
+      ],
+      pricing:[
+        { 
+          title: 'Free',
+          formester:'Starts free for 100 submissions',
+          forms: 'Starts free for 100 submissions',
+        },
+        {
+          title: 'Personal',
+          formester:'<span class="present">$13/month</span> for 1000 submissions',
+          forms: '<span class="absent">$19/month </span> for 1000 submissions',
+        },
+        {
+          title: 'Bussiness',
+          formester:'<span class="present">$49/month</span> for <span class="present">15k </span>submissions',
+          forms: '<span class="absent">$59/month</span> for <span class="absent">100k </span>',
+        }
       ],
       relatedComparisons: [
         {
@@ -446,6 +509,9 @@ export default {
   border-radius: 8px;
 }
 
+.comparision__table-pricing {
+  margin-top: 10px;
+}
 .table > :not(caption) > * > * {
   padding: 1rem;
 }
