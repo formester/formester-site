@@ -21,7 +21,7 @@ Knowing this, how often have you wondered about having a sophisticated yet simpl
 
 Asides reaching out to your clients, have you ever considered, if your clients also have an easy, neat and efficient means to reach you whenever they wish to do so?
 
-If yes, then chances are you are aware of the existence & importance of contact forms.
+If yes, then chances are you are aware of the existence & importance of [contact forms](https://fluentforms.com/why-you-need-contact-form/).
 
 ![Contact Forms are more common than you think!](/img/no-one-users-whenever-they-encounter-a-contact-form.png "Contact Forms are more common than you think!")
 
@@ -43,11 +43,11 @@ According to statistics available on [Colorlib](https://colorlib.com/wp/wordpres
 
 If you've read this far, we believe you already have a WordPress website but aren't sure about your contact forms integrating with it;
 
-If not, WordPress, here's a shoutout: Build a clean and smooth website with WordPress; 
+If not, [WordPress](https://wordpress.com/?aff=15767&cid=1654213), here's a shoutout: Build a clean and smooth website with WordPress; 
 
-& integrate it with a no code, drag-and-drop and easy to make Contact Form using Formester!
+& integrate it with a no code, [drag-and-drop and easy to make Contact Form](https://formester.com/templates/categories/contact-forms/) using Formester!
 
-Although, contact forms can be integrated with your WordPress website by using or not using a plug-in; working with plug-ins isn't always a fun game. 
+Although, contact forms can be integrated with your WordPress website by using or not using a plug-in; working with [plug-ins](https://www.computerhope.com/jargon/p/plugin.htm) isn't always a fun game. 
 
 For certain features, such as the one under discussion, the usage of plug-ins can result in: 
 
@@ -57,7 +57,7 @@ For certain features, such as the one under discussion, the usage of plug-ins ca
 
   ![Plug-in Usage: Pros & Cons](/img/plugin-dos-and-donts.png "Plug-in Usage: Pros & Cons")
 
-  Besides, there are quite a few awesome form-builders (such as Formester), who cater to the businesses' specific customization and design requirements.
+  Besides, there are quite a few awesome form-builders (such as [Formester](https://formester.com/)), who cater to the businesses' specific customization and design requirements.
 
   Having said this, let's discuss how to…
 
@@ -65,7 +65,7 @@ For certain features, such as the one under discussion, the usage of plug-ins ca
 
   ### Step 1 - Sign-up on Formester
 
-  Go to the formester sign-up page and create an account. If you're already with us, great, you have one step less to go.
+  Go to the [formester sign-up page](https://app.formester.com/users/sign_up) and create an account. If you're already with us, great, you have one step less to go.
 
   ![Formester's Sign-up page](/img/formester-sign-up.png "Formester's Sign-up page")
 
@@ -73,17 +73,17 @@ For certain features, such as the one under discussion, the usage of plug-ins ca
 
 Log in to your Formester account, click on the Create Form button, right infront of you; 
 
-Or customize with the pre-made templates. Either way, once you have your form, hit the submit button.
+Or customize with the pre-made [templates](https://formester.com/templates/). Either way, once you have your form, hit the submit button.
 
 ![Create a form on Formester](/img/create-form.png "Create a form on Formester")
 
 Next, you'll have a unique form embed code for your newly created form. Copy this embed code.
 
-Design Tip: Make sure the form that you create is consistent with regard to your branding and messaging theme. Don't forget to add your logo as well! 
-
-Also ensure that you only use a limited number of form fields and ask for only relevant information that  revolve around your target for submission. 
-
-These small tweaks go a long way in helping you gain more submissions. 
+> Design Tip: Make sure the form that you create is consistent with regard to your branding and messaging theme. Don't forget to add your logo as well! 
+>
+> Also ensure that you only use a limited number of form fields and ask for only relevant information that  revolve around your target for submission. 
+>
+> These small tweaks go a long way in helping you gain more submissions. 
 
 ### Step 3 - Add your Form to a WordPress Page
 
@@ -100,7 +100,7 @@ In the **Add HTML** section, under the Title field, paste the embed code you cop
 
 ![Paste the embed code in the **Add HTML** section](/img/wp-img-2.png "Paste the embed code in the **Add HTML** section")
 
-It is noteworthy here, that depending on the HTML Editor you use, there will be different ways to introduce the **Add HTML** section. (ADD link to blog post)
+It is noteworthy here, that depending on the HTML Editor you use, there will be [different ways to introduce the Add HTML section](https://www.wonderplugin.com/wordpress-tutorials/how-to-add-html-code-to-a-wordpress-post-or-page/). 
 
 ### Step 5 - Hit Publish, Gather Submissions, Create Another Form, Repeat
 
@@ -112,13 +112,13 @@ Or in the meantime, work on creating your next form on Formester!
 
 ![Hit Publish!](/img/wp-img-3.png "Hit Publish!")
 
-Pro Tip: After successfully setting up your form on WordPress, don't forget to initiate Formester's auto-responder.
+> Pro Tip: After successfully setting up your form on WordPress, don't forget to initiate [Formester's auto-responder](https://formester.com/features/auto-responder/).
 
 Upon receiving new submissions, Formester ensures that you get informed in real-time so that you stay on top of what's essential for your business. 
 
-Notifications are delivered where they matter - Slack, email or 100+ apps.
+**Notifications are delivered where they matter - Slack, email or 100+ apps.**
 
-P.S., we also keep your forms spam-proof by using captcha and reCaptcha integrations.
+P.S., we also keep your forms [spam-proof](https://formester.com/features/spam-protection/) by using captcha and reCaptcha integrations.
 
 Still wondering if you really need Contact Forms?
 
@@ -165,8 +165,8 @@ A﻿ fair share of the website e-commerce industry, is held by WordPress.
 
 Brand customized and tailored contact forms can be added to WordPress websites even without the usage of plug-ins;
 
-and to reiterate, these contact forms come with plenty of advantages for your business!
+and to reiterate, these contact forms bring plenty of advantages to your business!
 
-So what are you waiting for? Build your first Contact form for your WordPress website with Formester;
+So what are you waiting for? Build your first Contact form for your WordPress website with [Formester](https://formester.com/);
 
-Where Forms are made fun and easy!
+**Where Forms are made fun and easy!**
