@@ -87,5 +87,86 @@ These small tweaks go a long way in helping you gain more submissions. 
 
 ### Step 3 - Add your Form to a WordPress Page
 
-From your WordPress dashboard, click Pages and select Add New.
+From your WordPress dashboard, click **Pages** and select **Add New**.
 Give the page a befitting title.
+
+![Click **Pages** and select **Add New**](/img/wp-img-1.png "Click **Pages** and select **Add New**")
+
+### Step 4 - Final Setup
+
+Add an HTML block to your page.
+
+In the **Add HTML** section, under the Title field, paste the embed code you copied in Step 3. 
+
+![Paste the embed code in the **Add HTML** section](/img/wp-img-2.png "Paste the embed code in the **Add HTML** section")
+
+It is noteworthy here, that depending on the HTML Editor you use, there will be different ways to introduce the **Add HTML** section. (ADD link to blog post)
+
+### Step 5 - Hit Publish, Gather Submissions, Create Another Form, Repeat
+
+Once you have added your HTML embed code, just hit publish and you're done! 
+
+Relax and wait for your submissions;
+
+Or in the meantime, work on creating your next form on Formester!
+
+![Hit Publish!](/img/wp-img-3.png "Hit Publish!")
+
+Pro Tip: After successfully setting up your form on WordPress, don't forget to initiate Formester's auto-responder.
+
+Upon receiving new submissions, Formester ensures that you get informed in real-time so that you stay on top of what's essential for your business. 
+
+Notifications are delivered where they matter - Slack, email or 100+ apps.
+
+P.S., we also keep your forms spam-proof by using captcha and reCaptcha integrations.
+
+Still wondering if you really need Contact Forms?
+
+Allow us to give you…
+
+## The Top 5 Reasons you should have Contact Forms on your website
+
+(before you go)
+
+![Top 5 Reasons you should have Contact Forms on your website](/img/last-image-final.png "Top 5 Reasons you should have Contact Forms on your website")
+
+### 1. User-Centric
+
+Contact forms are simple and easy to use. If more comfortable doing so, your customers can write to you rather than talk. 
+
+They also get the opportunity to explain their details and queries more elaborately. 
+
+### 2. Marketing, Advertising & Promotion
+
+Once you have the contact details of your audience, you can open the doors to personalized marketing in the form of newsletters, events, promotional offers and the list goes on!
+
+### 3. Spam-Proofing
+
+Providing email addresses and phone numbers for business communications, has a high chance of bringing in spam emails, calls and other junk with itself. 
+
+Contact Forms, on the other hand, can be set-up for preventing and blocking spam bots from entering your lists. 
+
+### 4. Coherent Information Sources
+
+Contact Forms provide your clients with the opportunity to illustrate their details, queries, problems and reasons for contact, in a much more crisp, to-the-point and specific (yet elaborative when required) fashion. 
+
+### 5. Resource Saving
+
+By employing contact forms, your business saves time, energy and money spent on manual labor for queries that can be resolved using auto-responders, spam prevention and protection and providing intelligent and efficient responses to customers. 
+
+All this in turn, leads to improved resource utilization and establishment of better customer relationships as well!
+
+## C﻿onclusion
+
+C﻿ontact forms are an elegant and sophisticated means of acquiring key information from your clients.\
+A﻿t the same time, they also help in establishing more meaningful connections with your clients.
+
+A﻿ fair share of the website e-commerce industry, is held by WordPress.
+
+Brand customized and tailored contact forms can be added to WordPress websites even without the usage of plug-ins;
+
+and to reiterate, these contact forms come with plenty of advantages for your business!
+
+So what are you waiting for? Build your first Contact form for your WordPress website with Formester;
+
+Where Forms are made fun and easy!
