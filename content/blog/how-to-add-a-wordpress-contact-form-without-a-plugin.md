@@ -18,7 +18,7 @@ keywords: How to add a WordPress contact form without a plug-in, Formester Blog,
   jotform alternative, typeform alternative, wordpress forms without plugins
 author: Navni Dighe
 createdAt: 2023-04-05T13:10:43.760Z
-coverImg: /img/how-to-add-a-wordpress-contact-form-without-a-plugin-1-.png
+coverImg: /img/how-to-add-a-wordpress-contact-form-without-a-plugin-2-.png
 coverImgAlt: How to add a WordPress Contact Form without a Plugin
 featured: false
 published: true
@@ -51,7 +51,7 @@ Its simple, easy-to-use, articulate and coherent build makes it a popular choice
 
 According to statistics available on [Colorlib](https://colorlib.com/wp/wordpress-statistics/)- **810 million websites use WordPress, which is 43% of all the websites on the internet.**
 
-![WordPress Market Share in E-Commerce](/img/pie-chart.png "WordPress Market Share in E-Commerce")
+![A pie-chart showing market share of WordPress in the e-commerce website industry which stands at 43%. It also shows that WooCommerce has 30% while, Shopify has 18% ownership. The remaining 9% is attributed to other sources.](/img/pie-chart.png "WordPress Market Share in E-Commerce")
 
 If you've read this far, we believe you already have a WordPress website but aren't sure about your contact forms integrating with it;
 
@@ -67,7 +67,7 @@ For certain features, such as the one under discussion, the usage of plug-ins ca
 * slowed website performance, 
 * and even put your website at risk of security threats such as data theft, malware and viruses.
 
-  ![Plug-in Usage: Pros & Cons](/img/plugin-dos-and-donts.png "Plug-in Usage: Pros & Cons")
+  ![A comparison table showing the pros and cons of using plug-ins for creating web forms in WordPress](/img/plugin-dos-and-donts.png "Plug-in Usage: Pros & Cons")
 
   Besides, there are quite a few awesome form-builders (such as [Formester](https://formester.com/)), who cater to the businesses' specific customization and design requirements.
 
@@ -79,15 +79,15 @@ For certain features, such as the one under discussion, the usage of plug-ins ca
 
   Go to the [formester sign-up page](https://app.formester.com/users/sign_up) and create an account. If you're already with us, great, you have one step less to go.
 
-  ![Formester's Sign-up page](/img/formester-sign-up.png "Formester's Sign-up page")
+  ![Formester's Sign-up page to create a free account](/img/formester-sign-up.png "Formester's Sign-up page")
 
 ### Step 2 - Build a new form on Formester
 
 Log in to your Formester account, click on the Create Form button, right infront of you; 
 
-Or customize with the pre-made [templates](https://formester.com/templates/). Either way, once you have your form, hit the submit button.
+Or customize one from our [free form template library](https://formester.com/templates/). Either way, once you have your form, hit the submit button.
 
-![Create a form on Formester](/img/create-form.png "Create a form on Formester")
+![Create a form on Formester using the **Create Form** button, or opt the route of easy customization using the **Templates** section](/img/create-form.png "Create a form on Formester")
 
 Next, you'll have a unique form embed code for your newly created form. Copy this embed code.
 
@@ -102,7 +102,7 @@ Next, you'll have a unique form embed code for your newly created form. Copy thi
 From your WordPress dashboard, click **Pages** and select **Add New**.
 Give the page a befitting title.
 
-![Click **Pages** and select **Add New**](/img/wp-img-1.png "Click **Pages** and select **Add New**")
+![Click **Pages** and select **Add New** on the WordPress dashboard of your website](/img/wp-img-1.png "Click **Pages** and select **Add New**")
 
 ### Step 4 - Final Setup
 
@@ -110,7 +110,7 @@ Add an HTML block to your page.
 
 In the **Add HTML** section, under the Title field, paste the embed code you copied in Step 3. 
 
-![Paste the embed code in the **Add HTML** section](/img/wp-img-2.png "Paste the embed code in the **Add HTML** section")
+![Paste the copied embed code in the **Add HTML** section on the new page you added in step 3](/img/wp-img-2.png "Paste the embed code in the **Add HTML** section")
 
 It is noteworthy here, that depending on the HTML Editor you use, there will be [different ways to introduce the Add HTML section](https://www.wonderplugin.com/wordpress-tutorials/how-to-add-html-code-to-a-wordpress-post-or-page/). 
 
@@ -122,15 +122,13 @@ Relax and wait for your submissions;
 
 Or in the meantime, work on creating your next form on Formester!
 
-![Hit Publish!](/img/wp-img-3.png "Hit Publish!")
+![Hit Publish once you've pasted the HTML embed code!](/img/wp-img-3.png "Hit Publish!")
 
-> Pro Tip: After successfully setting up your form on WordPress, don't forget to initiate [Formester's auto-responder](https://formester.com/features/auto-responder/).
-
-Upon receiving new submissions, Formester ensures that you get informed in real-time so that you stay on top of what's essential for your business. 
+> Pro Tip: After successfully setting up your form on WordPress, once you start receiving new submissions, [Formester ensures that you get informed in real-time](https://formester.com/features/auto-responder/) so that you stay on top of what's essential for your business. 
 
 **Notifications are delivered where they matter - Slack, email or 100+ apps.**
 
-P.S., we also keep your forms [spam-proof](https://formester.com/features/spam-protection/) by using captcha and reCaptcha integrations.
+P.S., we also [keep your forms spam-proof by using captcha](https://formester.com/features/spam-protection/) and reCaptcha integrations.
 
 Still wondering if you really need Contact Forms?
 
@@ -179,6 +177,6 @@ Brand customized and tailored contact forms can be added to WordPress websites e
 
 and to reiterate, these contact forms bring plenty of advantages to your business!
 
-So what are you waiting for? Build your first Contact form for your WordPress website with [Formester](https://formester.com/);
+So what are you waiting for? [Build your first Contact form for your WordPress website](https://formester.com/) with Formester;
 
 **Where Forms are made fun and easy!**
