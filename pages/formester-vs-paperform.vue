@@ -261,7 +261,7 @@ export default {
         },
         {
           title: 'Logo addition to form',
-          formester: '<span class="present">Available</span> and can be used by <span class="present">free</span> users too',
+          formester: '<span class="present">Available</span> even with the <span class="present">free</span> plan',
           paperform: '<span class="absent">Not Available</span> specifically',
         },
         {
@@ -271,8 +271,8 @@ export default {
         },
         {
           title: 'Website Embedment',
-          formester: 'Web forms can be <span class="present">easily and quickly</span> embedded',
-          paperform: 'Present but <span class="absent">difficult</span> to execute',
+          formester: '<span class="present">Easy and quickly</span> embedment',
+          paperform: '<span class="absent">Complex</span> embedment execution',
         },
         {
           title: 'End-to-End Design Customization', 
@@ -291,7 +291,7 @@ export default {
         },
         {  
           title: 'Monthly Form Views',
-          formester: '<span class="present">Unlimited</span> even for <span class="present">free</span> users',
+          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
           paperform: '<span class="absent">Limited</span> Form Views - 10000 views for <span class="absent">$24/month</span>, <span class="absent">$49/month</span> for Unlimited Views',
         },
         
@@ -302,7 +302,7 @@ export default {
         },
         {  
           title: 'Total Submission Storage',
-          formester: '<span class="present">Unlimited</span> even for <span class="present">free</span> users',
+          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
           paperform: '1000 Total Submission Storage in<span class="absent">$24/month</span>, <span class="absent">$159/month</span> for Unlimited',
         },
         {  
@@ -317,8 +317,8 @@ export default {
         },
         {
           title: 'Best For',
-          formester: 'All types of forms and applications including survey lead generation, feedback etc',
-          paperform: 'Suited for short forms like lead generation. Form genrated from Paperform have weak design, long/complex forms using Paperform might confuse the users ',
+          formester: '<span class="present">All kinds</span> of forms and applications including survey lead generation, feedback etc',
+          paperform: '<span class="absent">Not</span> suitable for long forms',
         },
         {
           title: 'Monthly Payment Submissions',

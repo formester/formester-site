@@ -266,7 +266,7 @@ export default {
         },
         {
           title: 'Logo addition to form',
-          formester: '<span class="present">Available</span> and can be used by <span class="present">free</span> users too',
+          formester: '<span class="present">Available</span> even with the <span class="present">free</span> plan',
           jotform: 'Available <span class="absent">only on single page</span> forms',
         },
         {
@@ -276,8 +276,8 @@ export default {
         },
         {  
           title: 'Website Embedment',
-          formester: 'Web forms can be <span class="present">easily and quickly embedded</span>',
-          jotform: 'Present but <span class="absent">difficult to execute</span>',
+          formester: '<span class="present">Easy and quickly</span> embedment',
+          jotform: '<span class="absent">Complex</span> embedment execution',
         },
         { 
           title: 'Mobile First UX',
@@ -286,17 +286,17 @@ export default {
         },
         {
           title: 'Form Limit',
-          formester: '<span class="present">Unlimited</span> even for <span class="present">free</span> users',
+          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
           jotform: '<span class="absent">Limited</span> Forms - 5 Forms for free, <span class="absent">$129/month</span> for Unlimited Forms',
         },
         {  
           title: 'Monthly Form Views',
-          formester: '<span class="present">Unlimited</span> even for <span class="present">free</span> users',
+          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
           jotform: 'Limited Form Views - 1000 views for free, <span class="absent">$49/month</span> for Unlimited Views',
         },
         {  
           title: 'Total Submission Storage',
-          formester: '<span class="present">Unlimited</span> even for <span class="present">free</span> users',
+          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
           jotform: '500 Total Submission Storage for free,  <span class="absent">$39/month</span> for Unlimited',
         },
         {
@@ -311,8 +311,8 @@ export default {
         },
         { 
           title: 'Best For',
-          formester: 'All types of forms and applications including survey lead generation, feedback etc',
-          jotform: 'Suited for short forms like lead generation. Long/complex forms using Jotform might confuse the users ',
+          formester: '<span class="present">All kinds</span> of forms and applications including survey lead generation, feedback etc',
+          jotform: '<span class="absent">Not</span> suitable for long forms',
         },
         {  
           title: 'Storage',

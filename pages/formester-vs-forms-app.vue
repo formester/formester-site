@@ -258,7 +258,7 @@ export default {
         },
         {
           title: 'Logo addition to form',
-          formester: '<span class="present">Available</span> and can be used by <span class="present">free</span> users too',
+          formester: '<span class="present">Available</span> even with the <span class="present">free</span> plan',
           forms: '<span class="absent">Not Available</span>',
         },
         {
@@ -283,8 +283,8 @@ export default {
         },
         {
           title: 'Website Embedment',
-          formester: 'Web forms can be <span class="present">easily and quickly</span> embedded',
-          forms: 'Present but <span class="absent">difficult</span> to execute',
+          formester: '<span class="present">Easy and quickly</span> embedment',
+          forms: '<span class="absent">Complex</span> embedment execution',
         },
         {
           title: 'End-to-End Design Customization', 
@@ -303,17 +303,17 @@ export default {
         },
         {
           title: 'Form Limit',
-          formester: '<span class="present">Unlimited</span> even for <span class="present">free</span> users',
+          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
           forms: '<span class="absent">Limited</span> Forms - 10 Forms for free, <span class="absent">$29/month</span> for Unlimited Forms',
         },
         {
           title: 'Monthly Form Views',
-          formester: '<span class="present">Unlimited</span> even for <span class="present">free</span> users',
+          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
           forms: '<span class="absent">Limited</span> Form Views - 1000 views for free, <span class="absent">$29/month</span> for Unlimited Views',
         },
         {
           title: 'Total Submission Storage',
-          formester: '<span class="present">Unlimited</span> even for <span class="present">free</span> users',
+          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
           forms: '<span class="absent">1000</span> Total Submission Storage for free, <span class="absent">$19/month</span> for Unlimited',
         },
         {
@@ -322,14 +322,9 @@ export default {
           forms: 'Forms.App Branding in free plan, <span class="absent">Basic</span>$19/month for No Branding',
         },
         {
-          title: 'Best For',
-          formester: 'All types of forms and applications including survey lead generation, feedback etc',
-          forms: 'Suited for short forms like contact us form and registration form. Long/complex forms using Forms.app might confuse the users ',
-        },
-        {
-          title: 'Storage',
-          formester: 'Basic Plan: $13/month  & Minimum Storage: 1GB.<span></br></span>Business Plan: $49/month & Minimum Storage: 5GB',
-          forms: 'Basic Plan: $19/month  & Minimum Storage: 10GB.<span></br></span> Pro Plan: $29/month & Minimum Storage 100GB  ',
+          title: 'Automated Email Responses',
+          formester: '<span class="present">Present</span> with custom integration',
+          forms: '<span class="absent">25</span> email notifications/month for free, <span class="absent">$19/month</span> for unlimited email notifications',
         },
         {
           title: 'Monthly Payment Submissions',
@@ -337,9 +332,14 @@ export default {
           forms: '$19/month for 100 Monthly Payment Submissions',
         },
         {
-          title: 'Automated Email Responses',
-          formester: '<span class="present">Present</span> with custom integration',
-          forms: '<span class="absent">25</span> email notification/month for free, <span class="absent">$19/month</span> for unlimited email notifications',
+          title: 'Best For',
+          formester: '<span class="present">All kinds</span> of forms and applications including survey lead generation, feedback etc',
+          forms: '<span class="absent">Not</span> suitable for long forms',
+        },
+        {
+          title: 'Storage',
+          formester: 'Basic Plan: $13/month  & Minimum Storage: 1GB.<span></br></span>Business Plan: $49/month & Minimum Storage: 5GB',
+          forms: 'Basic Plan: $19/month  & Minimum Storage: 10GB.<span></br></span> Pro Plan: $29/month & Minimum Storage 100GB  ',
         },
         {
           title: 'Add Media to Forms',

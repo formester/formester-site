@@ -261,7 +261,7 @@ export default {
         },
         {
           title: 'Logo addition to form',
-          formester: '<span class="present">Available</span> and can be used by <span class="present">free</span> users too',
+          formester: '<span class="present">Available</span> even with the <span class="present">free</span> plan',
           formstack: '<span class="absent">Not Available</span>',
         },
         {
@@ -296,8 +296,8 @@ export default {
         },
         {
           title: 'Website Embedment',
-          formester: 'Web forms can be <span class="present">easily and quickly</span> embedded',
-          formstack: 'Present but <span class="absent">difficult</span> to execute',
+          formester: '<span class="present">Easy and quickly</span> embedment',
+          formstack: '<span class="absent">Complex</span> embedment execution',
         },
         {
           title: 'Add Media to Forms',
@@ -311,7 +311,7 @@ export default {
         },
         {
           title: 'Form Limit',
-          formester: '<span class="present">Unlimited</span> even for free users',
+          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
           formstack: '<span class="absent">Limited</span> Forms - 20 Forms for <span class="absent">$59/month</span>, <span class="absent">$99/month</span> for 100 forms',
         },
         {
@@ -331,8 +331,8 @@ export default {
         },
         {
           title: 'Best For',
-          formester: 'All types of forms and applications including survey lead generation, feedback etc',
-          formstack: 'Suited for short forms like lead generation. Form genrated from Formstack have weak design, long/complex forms using Formstack might confuse the users ',
+          formester: '<span class="present">All kinds</span> of forms and applications including survey lead generation, feedback etc',
+          formstack: '<span class="absent">Not</span> suitable for long forms',
         },
         {
           title: 'Monthly Payment Submissions',

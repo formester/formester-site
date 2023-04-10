@@ -275,7 +275,7 @@ export default {
         },
         { 
           title: 'Logo addition to form',
-          formester: '<span class="present">Present</span> with free plan',
+          formester: '<span class="present">Present</span> even with the <span class="present">free</span> plan',
           typeform: 'A <span class="absent">$99</span> feature',
         },
         {  
@@ -290,8 +290,8 @@ export default {
         },
         {
           title: 'Website Embedment',
-          formester: '<span class="present">Quick & Easy</span> Integration',
-          typeform: '<span class="absent">Time-consuming & arduous</span> Integration',
+          formester: '<span class="present">Easy and quickly</span> embedment',
+          typeform: '<span class="absent">Complex</span> embedment execution',
         },
         {
           title: 'Best Application',

@@ -267,7 +267,7 @@ export default {
         },
         {
           title: 'Logo addition to form',
-          formester: '<span class="present">Available</span> and can be used by <span class="present">free</span> users too',
+          formester: '<span class="present">Available</span> even with the <span class="present">free</span> plan',
           zoho: '<span class="absent">Not Available</span>',
         },
         {
@@ -292,8 +292,8 @@ export default {
         },
         {
           title: 'Website Embedment',
-          formester: 'Web forms can be <span class="present">easily and quickly</span> embedded',
-          zoho: 'Present but <span class="absent">difficult</span> to execute',
+          formester: '<span class="present">Easy and quickly</span> embedment',
+          zoho: '<span class="absent">Complex</span> embedment execution',
         },
         {
           title: 'Mobile First UX',
@@ -302,7 +302,7 @@ export default {
         },
         {
           title: 'Form Limit',
-          formester: '<span class="present">Unlimited</span> even for free users',
+          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
           zoho: '<span class="absent">Limited</span> Forms - 3 Forms for free, <span class="absent">$12/month</span> for Unlimited Forms',
         },
         {
@@ -323,8 +323,8 @@ export default {
         },
         {
           title: 'Best For',
-          formester: 'All types of forms and applications including survey lead generation, feedback etc',
-          zoho: 'Suited for building short forms like lead generation. Building Long/complex forms is slow and painful.',
+          formester: '<span class="present">All kinds</span> of forms and applications including survey lead generation, feedback etc',
+          zoho: '<span class="absent">Not</span> suitable for long forms',
         },
         {
           title: 'Storage',
@@ -356,13 +356,13 @@ export default {
         },
         {
           title: 'Personal',
-          formester: '$13/month for 1000 submissions',
+          formester: '$22/month for 25k submissions',
           zoho: '$12/month for 1000 submissions',
         },
         {
           title: 'Bussiness',
           formester: '$49/month for 15k submissions',
-          zoho: '$85/month for 150k submissions',
+          zoho: '$43/month for 75k submissions',
         }
       ],
       relatedComparisons: [
