@@ -360,13 +360,13 @@ export default {
         },
         {
           title: 'Personal',
-          formester:'<span class="present">$13/month</span> for 1000 submissions',
-          forms: '<span class="absent">$19/month </span> for 1000 submissions',
+          formester:'$13/month for 1000 submissions',
+          forms: '$12/month for 1000 submissions',
         },
         {
           title: 'Bussiness',
-          formester:'<span class="present">$49/month</span> for <span class="present">15k </span>submissions',
-          forms: '<span class="absent">$59/month</span> for <span class="absent">100k </span>',
+          formester:'$49/month for 15k submissions',
+          forms: '$19/month for 100k submissions',
         }
       ],
       relatedComparisons: [
