@@ -29,55 +29,63 @@
             />
           </div>
         </div>
-        <div class="row d-flex flex-column justify-content-center align-items-center code-block">
-          <h1 class="section__heading">Easy form endpoints for your HTML forms</h1>
-          <div class="card mt-3" style="width: fit-content;">
-            <div class="card-header">
-              <h3>HTML Form Backend</h3>
+      </div>
+    </div>
+    <div class="code__container">
+      <div class="container">
+        <div class="row d-flex flex-column justify-content-center align-items-center ">
+          <div class=" col-lg-9 code-block">
+            <h1 class="section__heading">Easy form endpoints for your HTML forms</h1>
+            <div class="card mt-5">
+              <div class="card-header">
+                <h3>HTML Form Backend</h3>
+              </div>
+              <div class="card-body">
+                <p class="html">
+                  &lt;<span style="color: #27AE60!important;">form</span> <span style="color: #9B51E0!important;">accept-charset</span>='UTF-8' <span style="color: #9B51E0!important;">action</span>="https://app.formester.com/forms/your@form/submissions" <span style="color: #9B51E0!important;">method</span>="POST" &gt;<br>
+                    <span>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color: #27AE60!important;">label</span> <span style="color: #9B51E0!important;">for</span>="email"&gt;Email &lt;<span style="color: #27AE60!important;">/label</span>&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color: #27AE60!important;">input</span> <span style="color: #9B51E0!important;">type</span>="email" <span style="color: #9B51E0!important;">id</span>="email-address" <span style="color: #9B51E0!important;">name</span>="email" <span style="color: #9B51E0!important;">placeholder</span>="your@email.com" <span style="color: #27AE60!important;">/</span>&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color: #27AE60!important;">button</span> <span style="color: #9B51E0!important;">type</span>="submit"&gt;Submit &lt;<span style="color: #27AE60!important;">/button</span>&gt;<br>
+                    </span>
+                    &lt;<span style="color: #27AE60!important;">/form</span>&gt;
+                </p>
+              </div>
             </div>
-            <div class="card-body">
-              <p class="html">
-                &lt;form accept-charset='UTF-8' action="<mark style="background-color: #ffc7fb!important;">https://app.formester.com/forms/your@form/submissions</mark>"
-                  method="POST"&gt;<br>
-                  <span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="email"&gt;Email&lt;/label&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="email" id="email-address" name="email" placeholder="your@email.com"&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type="submit"&gt;Submit&lt;/button&gt;<br>
-                  </span>
-                  &lt;/form&gt;
-              </p>
-            </div>
+            <p class="hero__subheading mt-3">
+              Design a form for your site, and be sure to name all the fields. Then, just point the action to us and confirm your email address!
+            </p>
+            <h3 class="section__heading backend-steps">1. Connect Your Form</h3>
+            <p class="hero__subheading mt-1">
+              Pointing the action-attribute of your form to our URL will enable submissions to be sent to your email address.
+            </p>
+            <div class="card-body card ">
+              <span class="html">
+                &lt;<span style="color: #27AE60!important;">form </span> <span style="color: #9B51E0!important;">accept-charset</span>='UTF-8'  <span style="color: #9B51E0!important;">action</span>="https://app.formester.com/forms/your@form/submissions" <span style="color: #9B51E0!important;">method</span>="POST" &gt;  
+              </span>
+            </div>   
+            <h3 class="section__heading backend-steps">2. Add Name Attributes</h3>
+            <p class="hero__subheading mt-1">
+              Include a name attribute in all form elements (i.e. &lt;input&gt;, &lt;select&gt;, and &lt;textarea&gt;) to receive the submission data.
+            </p>
+            <div class="card-body card ">
+              <span class="html">
+                &lt;<span style="color: #27AE60!important;">input</span> <span style="color: #9B51E0!important;">type</span>="email" <span style="color: #9B51E0!important;"> name</span>="email" <span style="color: #27AE60!important;">/</span>&gt;
+              </span>
+            </div>   
+            <h3 class="section__heading backend-steps">3. Submit Aand Confirm</h3>
+            <p class="hero__subheading mt-1">
+              Submit the form once. This first-time-use will trigger an email requesting confirmation.
+            </p>
           </div>
-          <p class="hero__subheading mt-3">
-            Design a form for your site, and be sure to name all the fields. Then, just point the action to us and confirm your email address!
-          </p>
-          <h3 class="section__heading backend-steps">1. CONNECT YOUR FORM</h3>
-          <p class="hero__subheading mt-1">
-            Pointing the action-attribute of your form to our URL will enable submissions to be sent to your email address.
-          </p>
-          <div class="card-body card ">
-            <span class="html">
-              &lt;form action="<mark style="background-color: #ffc7fb!important;">https://app.formester.com/forms/your@form/submissions</mark>" method="POST" /&gt;  
-            </span>
-          </div>   
-          <h3 class="section__heading backend-steps">2. ADD NAME ATTRIBUTES</h3>
-          <p class="hero__subheading mt-1">
-            Include a name attribute in all form elements (i.e. &lt;input&gt;, &lt;select&gt;, and &lt;textarea&gt;) to receive the submission data.
-          </p>
-          <div class="card-body card ">
-            <span class="html">
-              &lt;input type="email" name="email"&gt;
-            </span>
-          </div>   
-          <h3 class="section__heading backend-steps">3. Submit AND CONFIRM</h3>
-          <p class="hero__subheading mt-1">
-            Submit the form once. This first-time-use will trigger an email requesting confirmation.
-          </p>
         </div>
       </div>
     </div>
     <div class="container py-5">
       <div class="row py-5">
+        <div class="feature__heading d-flex align-items-center justify-content-center">
+          <h1 class="section__heading">Features</h1>
+        </div>
         <FeatureDetail
           :feature="feature"
           class="col-md-6 my-3"
@@ -165,13 +173,12 @@ export default {
 
 <style scoped>
 .feature__hero {
-  padding: 8em 0 4em 0;
+  padding: 8em 0;
   background: var(--clr-primary);
   color: white;
 }
 .code-block {
   margin-top: 70px;
-  align-content: flex-start;
 }
 .card {
   font-weight: 600;
@@ -182,14 +189,14 @@ export default {
   font-weight: 700;
   width: -webkit-fill-available;
   margin: 20px 0 ;
-  margin-right: calc(var(--bs-gutter-x) * .5);
-  margin-left: calc(var(--bs-gutter-x) * .5);
+  background: var(--bs-dark);
+  color: var(--bs-white);
 }
 .card-body {
   padding: 12px 35px;
 }
 .backend-steps{
   font-size: 25px;
-  margin-top: 15px;
+  margin-top: 35px;
 }
 </style>
