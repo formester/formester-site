@@ -73,9 +73,9 @@
                 &lt;<span style="color: #27AE60!important;">input</span> <span style="color: #9B51E0!important;">type</span>="email" <span style="color: #9B51E0!important;"> name</span>="email" <span style="color: #27AE60!important;">/</span>&gt;
               </span>
             </div>   
-            <h3 class="section__heading backend-steps">3. Submit Aand Confirm</h3>
+            <h3 class="section__heading backend-steps">3. Submit and Confirm</h3>
             <p class="hero__subheading mt-1">
-              Submit the form once. This first-time-use will trigger an email requesting confirmation.
+              Submit the form and get the submissions details on your dashboard.
             </p>
           </div>
         </div>
