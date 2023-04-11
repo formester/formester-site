@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
 .feature__heading {
-  font-size: 2.25rem;
+  font-size: 28px;
   line-height: 44px;
   font-weight: 700;
 }
