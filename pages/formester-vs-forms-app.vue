@@ -327,19 +327,9 @@ export default {
           forms: '<span class="absent">25</span> email notifications/month for free, <span class="absent">$19/month</span> for unlimited email notifications',
         },
         {
-          title: 'Monthly Payment Submissions',
-          formester: 'Build in Progress',
-          forms: '$19/month for 100 Monthly Payment Submissions',
-        },
-        {
           title: 'Best For',
           formester: '<span class="present">All kinds</span> of forms and applications including survey lead generation, feedback etc',
           forms: '<span class="absent">Not</span> suitable for long forms',
-        },
-        {
-          title: 'Storage',
-          formester: 'Basic Plan: $13/month  & Minimum Storage: 1GB.<span></br></span>Business Plan: $49/month & Minimum Storage: 5GB',
-          forms: 'Basic Plan: $19/month  & Minimum Storage: 10GB.<span></br></span> Pro Plan: $29/month & Minimum Storage 100GB  ',
         },
         {
           title: 'Add Media to Forms',
@@ -351,22 +341,32 @@ export default {
           formester: '<span class="present">Present</span>',
           forms: '<span class="present">Present</span>'
         },
+        {
+          title: 'Monthly Payment Submissions',
+          formester: 'Build in <span class="absent">Progress</span>',
+          forms: '<span class="present">$19/month</span> for <span class="present">100</span> Monthly Payment Submissions',
+        },
+        {
+          title: 'Storage',
+          formester: 'Basic Plan: <span class="absent">$13/month</span> & Minimum Storage: <span class="absent">1GB</span>.<span></br></span> Business Plan: <span class="absent">$49/monthv</span> & Minimum Storage: <span class="absent">50GB</span>',
+          forms: 'Basic Plan: <span class="present">$19/month</span>  & Minimum Storage: <span class="present">10GB</span>.<span></br></span> Pro Plan: <span class="present">$29/month</span> & Minimum Storage <span class="present">100GB</span>  ',
+        },
       ],
       pricing:[
         { 
           title: 'Free',
-          formester:'Starts free for 100 submissions',
-          forms: 'Starts free for 100 submissions',
+          formester:'Starts <span class="present">free</span> for <span class="present">100</span> submissions',
+          forms: 'Starts <span class="present">free</span> for <span class="present">100</span> submissions',
         },
         {
           title: 'Personal',
-          formester:'$13/month for 1000 submissions',
-          forms: '$12/month for 1000 submissions',
+          formester:'<span class="absent">$13/month</span> for <span class="absent">1000</span> submissions',
+          forms: '<span class="present">$12/month</span> for <span class="present">1000</span> submissions',
         },
         {
           title: 'Bussiness',
-          formester:'$49/month for 15k submissions',
-          forms: '$19/month for 100k submissions',
+          formester:'<span class="absent">$49/month</span> for <span class="absent">15k</span> submissions',
+          forms: '<span class="present">$19/month</span> for <span class="present">100k</span> submissions',
         }
       ],
       relatedComparisons: [

@@ -310,20 +310,20 @@ export default {
           formester: '<span class="present">No Formester Branding</span> even in the <span class="present">free</span> plan',
           paperform: 'Paperform Branding upto <span class="absent">$24/month</span>, <span class="absent">$49/month</span> for No Branding',
         },
-        { 
-          title: 'Redirection on Submission',
-          formester: '<span class="present">Customization</span> available even with the <span class="present">free</span> plan',
-          paperform: 'Paperform forms also allows redirection',
-        },
         {
           title: 'Best For',
           formester: '<span class="present">All kinds</span> of forms and applications including survey lead generation, feedback etc',
-          paperform: '<span class="absent">Not</span> suitable for long forms',
+          paperform: '<span class="absent">Not suitable</span>  for long forms',
         },
         {
           title: 'Monthly Payment Submissions',
           formester: 'Build in Progress',
           paperform: '$24/month for 1 Payment Account',
+        },
+        { 
+          title: 'Redirection on Submission',
+          formester: '<span class="present">Customization</span> available even with the <span class="present">free</span> plan',
+          paperform: 'Paperform forms <span class="present">also allows</span> redirection',
         },
         {
           title: 'Add Media to Forms', 

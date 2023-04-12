@@ -305,8 +305,8 @@ export default {
         },
         {
           title: 'Storage',
-          formester: 'Basic Plan: $13/month  & Minimum Storage: 1GB.<span></br></span> Business Plan: $49/month & Minimum Storage: 5GB',
-          typeform: 'Basic Plan: $25/month & Minimum Storage: 1GB.<span></br></span> Business Plan: $83/month & Minimum Storage: 5GB: ',
+          formester: 'Basic Plan: <span class="present">$13/month</span>  & Minimum Storage: <span class="present">1GB</span>.<span></br></span> Business Plan: <span class="present">$49/month</span> & Minimum Storage: <span class="present">50GB</span>',
+          typeform: 'Basic Plan: <span class="absent">$25/month</span> & Minimum Storage: <span class="absent">1GB</span>.<span></br></span> Business Plan: <span class="absent">$83/month</span> & Minimum Storage: <span class="absent">5GB</span>',
         },
         {
           title: 'Cloud Integrations with Zapier', 
@@ -327,13 +327,13 @@ export default {
       pricing:[
         {
           title: 'Free',
-          formester: '<span class="present">Starts</span> free for 100 submissions',
-          typeform: '<span class="absent">$29/month</span> for 100 submissions',
+          formester: '<span class="present">Starts</span> free for <span class="present">100</span> submissions',
+          typeform: '<span class="absent">$29/month</span> for <span class="absent">100</span> submissions',
         },
         {
           title: 'Personal',
-          formester: '<span class="present">$13/month</span> for 1000 submissions',
-          typeform: '<span class="absent">$59/month</span> for 1000 submissions',
+          formester: '<span class="present">$13/month</span> for <span class="present">1000</span> submissions',
+          typeform: '<span class="absent">$59/month</span> for <span class="absent">1000</span> submissions',
         },
         {
           title: 'Bussiness',

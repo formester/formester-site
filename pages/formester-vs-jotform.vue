@@ -316,8 +316,8 @@ export default {
         },
         {  
           title: 'Storage',
-          formester: 'Basic Plan: $13/month  & Minimum Storage: 1GB.<span></br></span> Business Plan: $49/month & Minimum Storage: 5GB',
-          jotform: 'Bronze Plan: 39$/month & Minimum Storage: 10GB.<span></br></span> Silver Plan: $49/month & Minimum Storage: 100GB',
+          formester: 'Basic Plan: <span class="absent">$13/month</span> & Minimum Storage: <span class="absent">1GB</span>.<span></br></span> Business Plan: <span class="absent">$49/monthv</span> & Minimum Storage: <span class="absent">50GB</span>',
+          jotform: 'Bronze Plan: <span class="present">39$/month</span> & Minimum Storage: <span class="present">10GB</span>.<span></br></span> Silver Plan: <span class="present">$49/month</span> & Minimum Storage: <span class="present">100GB</span>',
         },
         { 
           title: 'Monthly Payment Submissions',
@@ -353,13 +353,13 @@ export default {
       pricing:[
         { 
           title: 'Free',
-          formester:'Starts <span class="present"> free </span> for 100 submissions',
-          jotform: 'Starts free for 100 submissions',
+          formester:'Starts <span class="present"> free </span> for <span class="present">100</span> submissions',
+          jotform: 'Starts <span class="present"> free </span> for <span class="present">100</span> submissions',
         },
         {
           title: 'Personal',
-          formester:'<span class="present">$13/month</span> for 1000 submissions',
-          jotform: '<span class="absent">$39/month </span> for 1000 submissions',
+          formester:'<span class="present">$13/month</span> for <span class="present">1000</span> submissions',
+          jotform: '<span class="absent">$39/month </span> for <span class="absent">1000</span> submissions',
         },
         {
           title: 'Bussiness',

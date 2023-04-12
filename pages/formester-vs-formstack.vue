@@ -321,13 +321,14 @@ export default {
         },
         {
           title: 'Storage',
-          formester: 'Minimum Storage - 1GB: comes with Basic Plan - $13/month. Business plan - 5GB: $49/month',
-          formstack: 'Minimum Storage - 1GB: comes with Starter Plan - $59/month. Teams Plan - 2GB: $99/month',
+          formester: 'Basic Plan: <span class="present">$13/month</span> & Minimum Storage: <span class="present">1GB</span>.<span></br></span> Business Plan: <span class="present">$49/month</span> & Minimum Storage: <span class="present">50GB</span>',
+          formstack: 'Basic Plan: <span class="absent">$59/month/month</span>  & Minimum Storage: <span class="absent">1GB</span>.<span></br></span> Business Plan: <span class="absent">$99/month</span> & Minimum Storage: <span class="absent">2GB</span>',
+          // formstack: 'Minimum Storage - 1GB: comes with Starter Plan - $59/month. Teams Plan - 2GB: $99/month',
         },
         {
           title: 'Redirection on Submission',
-          formester: 'Customization available even with the basic plan',
-          formstack: 'Formstack forms also allows redirection',
+          formester: 'Customization <span class="present">available</span> even with the <span class="present">free</span> plan',
+          formstack: 'Formstack forms <span class="present">also allows</span> redirection',
         },
         {
           title: 'Best For',
@@ -335,14 +336,14 @@ export default {
           formstack: '<span class="absent">Not</span> suitable for long forms',
         },
         {
-          title: 'Monthly Payment Submissions',
-          formester: 'Build in Progress',
-          formstack: 'Available'
-        },
-        {
           title: 'Spam Protection',
           formester: '<span class="present">Present</span>',
           formstack: '<span class="present">Present</span>'
+        },
+        {
+          title: 'Monthly Payment Submissions',
+          formester: 'Build in <span class="absent">Progress</span>',
+          formstack: '<span class="present">Available</span>'
         },
       ],
       pricing:[

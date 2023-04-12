@@ -351,18 +351,18 @@ export default {
       pricing:[
         {
           title: 'Free',
-          formester: 'Starts free for 100 submissions',
-          zoho: '$8/month for 10k submissions',
+          formester: 'Starts <span class="present">free</span> for 100 submissions',
+          zoho: '<span class="absent">$9/month</span> for 10k submissions',
         },
         {
           title: 'Personal',
-          formester: '$22/month for 25k submissions',
-          zoho: '$12/month for 1000 submissions',
+          formester: '<span class="absent">$13/month</span> for <span class="absent">1000</span> submissions',
+          zoho: '<span class="present">$21/month</span> for <span class="present">25k</span> submissions',
         },
         {
           title: 'Bussiness',
-          formester: '$49/month for 15k submissions',
-          zoho: '$43/month for 75k submissions',
+          formester: '<span class="absent">$49/month</span> for <span class="absent">15k </span>submissions',
+          zoho: '<span class="present">$86/month</span>for <span class="present">150k</span> submissions',
         }
       ],
       relatedComparisons: [
