@@ -35,7 +35,7 @@
       <div class="container">
         <div class="row d-flex flex-column justify-content-center align-items-center ">
           <div class=" col-lg-9 code-block">
-            <h1 class="section__heading">Easy form endpoints for your HTML forms</h1>
+            <h2 class="section__heading">Easy form endpoints for your HTML forms</h2>
             <div class="card mt-5">
               <div class="card-header">
                 <h3>HTML Form Backend</h3>
@@ -84,7 +84,7 @@
     <div class="container py-5">
       <div class="row py-5">
         <div class="feature__heading d-flex align-items-center justify-content-center">
-          <h1 class="section__heading">Features</h1>
+          <h2 class="section__heading">Features</h2>
         </div>
         <FeatureDetail
           :feature="feature"
@@ -136,7 +136,36 @@ export default {
     }
   },
   jsonld() {
-    return {}
+    return {
+      '@context': 'http://schema.org',
+      '@type': 'Corporation',
+      name: 'Formester - HTML Form Backend',
+      description:
+        "Sign up now for the best No Code Form Builder! Create stunning HTML Forms with Formester's easy-to-use Online HTML Form Builder. Start building today!",
+      logo: 'https://formester.com/logo.png',
+      url: 'https://formester.com',
+      operatingSystem: 'all',
+      browserRequirements: 'Requires Javascript and HTML5 support',
+      sameAs: [
+        'https://twitter.com/_formester_',
+        'https://www.instagram.com/_formester_/',
+      ],
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Dalaware',
+        addressCountry: 'United States',
+      },
+      creator: {
+        '@type': 'Organization',
+        '@id': '#organization',
+        url: 'https://formester.com/',
+        name: 'Formester',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://formester.com/logo.png',
+        },
+      }
+    }
   },
   data() {
     return {
