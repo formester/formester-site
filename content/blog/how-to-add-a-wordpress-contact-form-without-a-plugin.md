@@ -138,7 +138,7 @@ Allow us to give you…
 
 (before you go)
 
-![Top 5 Reasons you should have Contact Forms on your website](/img/last-image-final.png "Top 5 Reasons you should have Contact Forms on your website")
+![Top 5 Reasons you should have Contact Forms on your website](/img/use-as-needed.png "Top 5 Reasons you should have Contact Forms on your website")
 
 ### 1. User-Centric
 
