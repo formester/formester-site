@@ -317,18 +317,13 @@ export default {
           forms: '<span class="absent">1000</span> Total Submission Storage for free, <span class="absent">$19/month</span> for Unlimited',
         },
         {
-          title: 'Branding',
-          formester: '<span class="present">No Formester Branding</span> even in the <span class="present">free</span> plan',
-          forms: 'Forms.App Branding in free plan, <span class="absent">Basic</span>$19/month for No Branding',
-        },
-        {
           title: 'Automated Email Responses',
           formester: '<span class="present">Present</span> with custom integration',
           forms: '<span class="absent">25</span> email notifications/month for free, <span class="absent">$19/month</span> for unlimited email notifications',
         },
         {
           title: 'Best For',
-          formester: '<span class="present">All kinds</span> of forms and applications including survey lead generation, feedback etc',
+          formester: '<span class="present">All kinds of forms and applications</span> including survey lead generation, feedback etc',
           forms: '<span class="absent">Not</span> suitable for long forms',
         },
         {

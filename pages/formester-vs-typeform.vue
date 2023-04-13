@@ -295,7 +295,7 @@ export default {
         },
         {
           title: 'Best Application',
-          formester: 'All kinds of forms and applications including survey lead generation, feedback etc',
+          formester: '<span class="present">All kinds of forms and applications</span> including survey lead generation, feedback etc',
           typeform: '<span class="absent">Not suitable</span> for long forms',
         },
         {

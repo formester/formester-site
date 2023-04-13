@@ -305,20 +305,15 @@ export default {
           formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
           paperform: '1000 Total Submission Storage in<span class="absent">$24/month</span>, <span class="absent">$159/month</span> for Unlimited',
         },
-        {  
-          title: 'Branding',
-          formester: '<span class="present">No Formester Branding</span> even in the <span class="present">free</span> plan',
-          paperform: 'Paperform Branding upto <span class="absent">$24/month</span>, <span class="absent">$49/month</span> for No Branding',
-        },
         {
           title: 'Best For',
-          formester: '<span class="present">All kinds</span> of forms and applications including survey lead generation, feedback etc',
+          formester: '<span class="present">All kinds of forms and applications</span> including survey lead generation, feedback etc',
           paperform: '<span class="absent">Not suitable</span>  for long forms',
         },
         {
           title: 'Monthly Payment Submissions',
-          formester: 'Build in Progress',
-          paperform: '$24/month for 1 Payment Account',
+          formester: 'Build in <span class="absent">Progress</span>',
+          paperform: '<span class="present">$24/month</span> for 1 Payment Account',
         },
         { 
           title: 'Redirection on Submission',

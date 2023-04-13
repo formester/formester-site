@@ -311,30 +311,24 @@ export default {
           zoho: 'Single user in free plan, <span class="absent">$30/month</span> for 10 users',
         },
         {
-          title: 'Branding',
-          formester: '<span class="present">No Formester Branding</span> even in the <span class="present">free</span> plan',
-          zoho: 'Zoho Form Branding in free plan, <span class="absent">Paid plan for No Branding</span>',
-        },
-        
-        {
-          title: 'Redirection on Submission',
-          formester: 'Customization available even with the basic plan',
-          zoho: 'Zoho Form forms also allows redirection',
-        },
-        {
           title: 'Best For',
-          formester: '<span class="present">All kinds</span> of forms and applications including survey lead generation, feedback etc',
+          formester: '<span class="present">All kinds of forms and applications</span> including survey lead generation, feedback etc',
           zoho: '<span class="absent">Not</span> suitable for long forms',
         },
         {
           title: 'Storage',
-          formester: 'Basic Plan: <span class="present">$13/month</span>  & Minimum Storage: <span class="present">1GB</span>.<span></br></span> Business Plan: <span class="present">$49/month</span> & Minimum Storage: <span class="present">5GB</span>',
+          formester: 'Basic Plan: <span class="present">$13/month</span>  & Minimum Storage: <span class="present">1GB</span>.<span></br></span> Business Plan: <span class="present">$49/month</span> & Minimum Storage: <span class="present">50GB</span>',
           zoho: 'Basic Plan: <span class="absent">$12/month</span> & Minimum Storage: <span class="absent">500MB</span>.<span></br></span> Standard Plan: <span class="absent">$30/month</span> & Minimum Storage: <span class="absent">2GB</span> ',
         },
         {
+          title: 'Redirection on Submission',
+          formester: 'Customization <span class="present">available</span> even with the basic plan',
+          zoho: 'Zoho Form forms <span class="present">also</span> allows redirection',
+        },
+        {
           title: 'Monthly Payment Submissions',
-          formester: 'Build in Progress',
-          zoho: '10 Monthly Payments for free, paid plans for more',
+          formester: 'Build in <span class="absent">Progress</span>',
+          zoho: '<span class="present">10</span> Monthly Payments for <span class="present">free</span>, paid plans for more',
         },
         {
           title: 'Spam Protection', 

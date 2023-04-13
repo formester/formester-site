@@ -300,18 +300,13 @@ export default {
           jotform: '500 Total Submission Storage for free,  <span class="absent">$39/month</span> for Unlimited',
         },
         {
-          title: 'Branding',
-          formester: '<span class="present">No Formester Branding</span> even in the <span class="present">free</span> plan',
-          jotform: 'Jotform Branding in free plan, <span class="absent">$39/month</span> for No Branding',
-        },
-        {
           title: 'Redirection on Submission',
           formester: '<span class="present">Customization available</span> even with the <span class="present">free plan</span>',
-          jotform: 'Jotform forms also allows redirection',
+          jotform: 'Jotform forms <span class="present">also allows</span> redirection',
         },
         { 
           title: 'Best For',
-          formester: '<span class="present">All kinds</span> of forms and applications including survey lead generation, feedback etc',
+          formester: '<span class="present">All kinds of forms and applications</span> including survey lead generation, feedback etc',
           jotform: '<span class="absent">Not</span> suitable for long forms',
         },
         {  
@@ -321,8 +316,8 @@ export default {
         },
         { 
           title: 'Monthly Payment Submissions',
-          formester: 'Build in Progress',
-          jotform: '$39/month for 100 Monthly Payment Submissions',
+          formester: 'Build in <span class="absent">Progress</span>',
+          jotform: '<span class="present">39$/month</span> for <span class="present">100</span> Monthly Payment Submissions',
         },
         {
           title: 'Add Media to Forms', 

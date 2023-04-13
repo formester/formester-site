@@ -290,11 +290,6 @@ export default {
           formstack: 'Present with a <span class="absent">lower degree</span> of flexibility',
         },
         {
-          title: 'Branding',
-          formester: '<span class="present">No Formester Branding</span> even in the <span class="present">free</span> plan',
-          formstack: 'No Formstack Branding in <span class="absent">paid</span> plans',
-        },
-        {
           title: 'Website Embedment',
           formester: '<span class="present">Easy and quickly</span> embedment',
           formstack: '<span class="absent">Complex</span> embedment execution',
