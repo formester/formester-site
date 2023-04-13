@@ -171,4 +171,162 @@ Ideally, your website should load within 0-2 seconds of clicking.
 
 Also, your website should function smoothly on all kinds of devices, following appropriate dimensions. 
 
-This means the content shouldn't get cut, the scrolling function is smooth and the website doesn't crash when used on any of the devices in question.
+This means the content shouldn't get cut, the scrolling function is smooth and the website doesn't crash when used on any of the devices in question. 
+
+Pro Tip: Run a [quick and free technical SEO audit for your website](https://www.seoptimer.com/) to find out more about this!
+
+![](/img/1.png)
+
+The following questions can be asked with regard to performance and compatibility:
+
+1. On a scale of 1-10, how would you rate our website's mobile experience?
+
+2. Did the page you click on load quickly enough?
+
+3. Did you have to wait too long before you got to your desired page?
+
+4. Could you access and use our website's mobile version as easily as the desktop version?
+
+5. On a scale of 1-10, how likely are you to visit our mobile version?
+
+6. Would you rather use our website's mobile or desktop version?
+
+7. Did all our website features work as efficiently on your mobile device as they do on your desktop?
+
+8. Was there any element of this website that the desktop version featured, but the mobile version didn't?
+
+9. How was your scrolling experience on the mobile version of our website?
+
+10. On a scale of 1-10, how would you rate the smoothness of the mobile version of our website?
+
+Survey Design Tip 4: Make sure you [ask only one question at a time](https://formester.com/blog/top-eight-survey-questions-to-ask/); the more direct a question is, the simpler it is to answer.
+
+### 5. Payments and Subscriptions
+
+If your website offers products, services and subscriptions, which require fetching payments from your users, then facilitating [safe, secure, transparent and prompt transaction methods](https://formester.com/features/online-payment/) is your prime responsibility.
+
+Your website should enable the use of more than one popular payment method.
+
+Also, if any third-party redirects are in practice, their credibility and trustworthiness should not be under question. 
+
+![](/img/5.png)
+
+The following questions can be asked with regard to performance and compatibility:
+
+1. Were you able to find your preferred payment method with ease?
+
+2. On a scale of 1-10, how secure and confident did you feel when entering payment details?
+
+3. Did you think the payment process was adequately transparent?
+
+4. Did you get a payment confirmation after completing your payment?
+
+5. On a scale of 1-10, with how much ease were you able to set up a default payment method?
+
+6. Were the options for saving or not saving your card details clearly visible?
+
+7. Were you able to switch to your preferred currency with ease?
+
+8. On a scale of 1-10, how would you rate the steps (Eg., entering OTP no.) followed throughout the payment process?
+
+9. Is there any payment method you would want us to integrate with?
+
+10. On a scale of 1-10, how easily were you able to access your invoices, transaction IDs and order history, from your account?  
+
+Survey Design Tip 5: Make sure the user's responses are saved; in the event that the user wasn't able to complete the form in one go, they would be happy to return if their previous responses have been recorded and they don't have to repeat the entire process. 
+
+### 6. Accessibility
+
+Accessibility isn't just about the inclusion of the specially abled.
+
+It is, infact, about introducing [ease of use, for one and all](https://www2.stardust-testing.com/en/why-web-accessibility-important). 
+
+This involves working with features such as font, color, contrast and brightness adjustments, structured headings, usage of alt text and closed captions, etc.
+
+![](/img/6.png)
+
+The following questions can be asked with regard to accessibility:
+
+1. Were the website accessibility features such as font, contrast and brightness adjustments, easily and readily available?
+
+2. Did all the website's images, graphics and non-text elements have alt text?
+
+3. Did the alt texts have a sufficient and easily understandable description as regards their respective elements?
+
+4. On a scale of 1-10, how would you rate the keyboard-only navigation experience on our website?
+
+5. Did the page structure and layout help you reach your desired information easily using assistive technology?
+
+6. Do you think icons and clickable elements were sizable?
+
+7. Were closed captions provided for video content?
+
+8. Were all closed captions, subtitles and text captions synchronized with their respective dynamic content?
+
+9. Do you think the page can be navigated through regardless of whether or not specific colors are identifiable to some? 
+
+10. Were the downloadable files featured on the website, created in a way so as to maximize their usability for the specially abled?
+
+Survey Design Tip 6: Consider providing your [survey fillers rewards, offers and incentives](https://www.questionpro.com/blog/survey-incentives/#:~:text=Higher%20completion%20rate%3A%20When%20survey,questions%20and%20submit%20the%20survey.). It doesn't have to be extravagant; reward points, discounts, social media mentions, etc., act as feasible rewards and help make your users feel valued.
+
+### 7. General/Miscellaneous
+
+This aspect deals with the [overall website experience](https://www.usability.gov/what-and-why/user-experience.html).
+
+You may use these questions to gather data about the general user experience throughout their session.
+
+You may also take this section as the opportunity to collect valuable suggestions and feedback from your users about anything related to your website.
+
+![](/img/7.png)
+
+The following questions can be asked under this field:
+
+1. How did you find our website?
+
+2. Did you find what you were looking for on this page with ease?
+
+3. What would you improve about our website?
+
+4. Would you like to be a part of our program to test the improvements to the existing features on our website?
+
+5. Would you recommend our website to your social circle?
+
+6. Did you face any challenges while using our website or its general features?
+
+7. Do you have any suggestions, feedback and reviews for us?
+
+8. What could we have done better or differently, to serve you better?
+
+9. Was your experience with us memorable enough to make you remember us?
+
+10. At last but not the least, on a scale of 1-10, how likely are you to revisit us? 
+
+Survey Design Tip 7: Take a pre-test of your survey. Proofread it for any mistakes and corrections. Also, send it to 5-10 close associations of yours, and gather their unbiased feedback on your survey, before you release it to your users.
+
+For more [survey tips, check this out](https://formester.com/blog/10-reasons-why-you-should-be-using-surveys/)!
+
+Did you know: You could use your [NPS](https://formester.com/templates/net-promoter-score-nps-702/) to gain better insights into customer loyalty and satisfaction?
+
+Click here to [take a preview and create yours now](https://formester.com/templates/net-promoter-score-nps-702/)!
+
+## Conclusion
+
+Website Usability Surveys are the quintessential means of gathering data about your website user experience and turning them into actionable insights.
+
+At Formester, you can accomplish this in 3 simple steps:
+
+1. Create a [free account on Formester](https://app.formester.com/users/sign_up)
+
+2. Head over to our Templates section to [customize a result-driven survey form](https://formester.com/templates/)
+
+Pro Tip on What To Include: Feel free to take inspiration from this blog 
+
+3. Publish the survey form, get submissions, [analyze your data](https://formester.com/features/powerful-analytics/) and you are ready to [design, redesign or optimize your website](https://acornglobus.com/#services)
+
+![](/img/grey-3-points-process-roadmap-infographic-graph-2-.png)
+
+Still not sure about your survey form?
+
+At Formester, we deliver you the [best-in-class survey forms](https://formester.com/templates/);
+
+so you can deliver the best-in-class website user experience!
