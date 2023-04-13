@@ -50,9 +50,32 @@
           </thead>
           <tbody>
             <tr v-for="c of comparisions" :key="c[0]">
-              <td style="font-weight: 600">{{ c[0] }}</td>
-              <td>{{ c[1] }}</td>
-              <td>{{ c[2] }}</td>
+              <td style="font-weight: 600" v-html="c.title"></td>
+              <td v-html="c.formester"></td>
+              <td v-html="c.zoho"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="container text-center">
+      <i class="fa-solid fa-angle-up"></i>
+      <h3 class="section__heading">Pricing</h3>
+      <div class="table-responsive">
+        <table class="table text-start comparision__table comparision__table-pricing mx-auto">
+          <thead class="bg__light-primary">
+            <tr>
+              <th scope="col">Features</th>
+              <th scope="col">Formester</th>
+              <th scope="col">Zoho Form</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="c of pricing" :key="c[0]">
+              <td style="font-weight: 600" v-html="c.title"></td>
+              <td v-html="c.formester"></td>
+              <td v-html="c.zoho"></td>
             </tr>
           </tbody>
         </table>
@@ -227,78 +250,114 @@ export default {
         },
       ],
       comparisions: [
-        [
-          'Form Limit',
-          'Unlimited even for free users',
-          'Limited Forms - 3 Forms for free, $12/month for Unlimited Forms',
-        ],
-        [
-          'Collaborators',
-          'Allows collaborators even in free plan',
-          'Single user in free plan, $30/month for 10 users',
-        ],
-        [
-          'Branding',
-          'No Formester Branding even in the free plan',
-          'Zoho Form Branding in free plan, Paid plan for No Branding',
-        ],
-        ['HTML Form Backend Service', 'Present', 'Not available'],
-        ['Add Media to Forms', 'Present', 'Not available'],
-        [
-          'Pricing',
-          'Starts for free, $13/month for a Personal User with 1000 submissions',
-          'Starts for free, $12/month for Basic plan with 10000 submissions',
-        ],
-        [
-          'Redirection on Submission',
-          'Customization available even with the basic plan',
-          'Zoho Form forms also allows redirection',
-        ],
-        [
-          'Website Embedment',
-          'Web forms can be easily and quickly embedded',
-          'Present but difficult to execute',
-        ],
-        [
-          'Best For',
-          'All types of forms and applications including survey lead generation, feedback etc',
-          'Suited for building short forms like lead generation. Building Long/complex forms is slow and painful.',
-        ],
-        [
-          'Mobile First UX',
-          'Perfectly mobile-first',
-          'Design-heavy forms are problematic while using on mobile',
-        ],
-        [
-          'Storage',
-          'Minimum Storage - 1GB: comes with Basic Plan - $13/month. Business Plan - 5GB: $49/month',
-          'Minimum Storage - 500MB: comes with Basic Plan - $12/month. Standard Plan - 2GB: $30/month',
-        ],
-        [
-          'Conditional Logic',
-          'Present',
-          'Present with a lower degree of flexibility',
-        ],
-        ['Spam Protection', 'Present', 'Present'],
-        [
-          'Monthly Payment Submissions',
-          'Build in Progress',
-          '10 Monthly Payments for free, paid plans for more',
-        ],
-        [
-          'Automated Email Responses',
-          'Present with custom integration',
-          'Only in paid plans',
-        ],
-        ['Cloud Integrations with Zapier', 'Present', 'Present'],
-        ['Deep Performance Analytics', 'Present', 'Basic'],
-        ['White Labeled Surveys Creation', 'Present', 'Not available'],
-        [
-          'Logo addition to form',
-          'Available and can be used by free users too',
-          'Not available',
-        ],
-        ['End-to-End Design Customization', 'Present', 'Minimal customization'],
+        {
+          title: 'HTML Form Backend Service',
+          formester: '<span class="present">Present</span>', 
+          zoho: '<span class="absent">Not Available</span>'
+        },
+        {
+          title: 'Add Media to Forms', 
+          formester: '<span class="present">Present</span>', 
+          zoho: '<span class="absent">Not Available</span>'
+        },
+        {
+          title: 'White Labeled Surveys Creation', 
+          formester: '<span class="present">Present</span>', 
+          zoho: '<span class="absent">Not Available</span>'
+        },
+        {
+          title: 'Logo addition to form',
+          formester: '<span class="present">Available</span> even with the <span class="present">free</span> plan',
+          zoho: '<span class="absent">Not Available</span>',
+        },
+        {
+          title: 'Deep Performance Analytics', 
+          formester: '<span class="present">Present</span>', 
+          zoho: '<span class="absent">Basic</span>'
+        },
+        {
+          title: 'End-to-End Design Customization', 
+          formester: '<span class="present">Present</span>', 
+          zoho: '<span class="absent">Minimal</span> customization'
+        },
+        {
+          title: 'Automated Email Responses',
+          formester: '<span class="present">Present</span> with custom integration',
+          zoho: 'Only in <span class="absent">paid</span> plans',
+        },
+        {
+          title: 'Conditional Logic',
+          formester: '<span class="present">Present</span>',
+          zoho: 'Present with a <span class="absent">lower degree</span> of flexibility',
+        },
+        {
+          title: 'Website Embedment',
+          formester: '<span class="present">Easy and quickly</span> embedment',
+          zoho: '<span class="absent">Complex</span> embedment execution',
+        },
+        {
+          title: 'Mobile First UX',
+          formester: '<span class="present">Perfectly</span> mobile-first',
+          zoho: '<span class="absent">Complicated</span> for design-heavy forms',
+        },
+        {
+          title: 'Form Limit',
+          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
+          zoho: '<span class="absent">Limited</span> Forms - 3 Forms for free, <span class="absent">$12/month</span> for Unlimited Forms',
+        },
+        {
+          title: 'Collaborators',
+          formester: 'Allows collaborators even in <span class="present">free</span> plan',
+          zoho: 'Single user in free plan, <span class="absent">$30/month</span> for 10 users',
+        },
+        {
+          title: 'Best For',
+          formester: '<span class="present">All kinds of forms and applications</span> including survey lead generation, feedback etc',
+          zoho: '<span class="absent">Not</span> suitable for long forms',
+        },
+        {
+          title: 'Storage',
+          formester: 'Basic Plan: <span class="present">$13/month</span>  & Minimum Storage: <span class="present">1GB</span>.<span></br></span> Business Plan: <span class="present">$49/month</span> & Minimum Storage: <span class="present">50GB</span>',
+          zoho: 'Basic Plan: <span class="absent">$12/month</span> & Minimum Storage: <span class="absent">500MB</span>.<span></br></span> Standard Plan: <span class="absent">$30/month</span> & Minimum Storage: <span class="absent">2GB</span> ',
+        },
+        {
+          title: 'Redirection on Submission',
+          formester: 'Customization <span class="present">available</span> even with the basic plan',
+          zoho: 'Zoho Form forms <span class="present">also</span> allows redirection',
+        },
+        {
+          title: 'Monthly Payment Submissions',
+          formester: 'Build in <span class="absent">Progress</span>',
+          zoho: '<span class="present">10</span> Monthly Payments for <span class="present">free</span>, paid plans for more',
+        },
+        {
+          title: 'Spam Protection', 
+          formester: '<span class="present">Present</span>', 
+          zoho:   '<span class="present">Present</span>',
+        },
+        {
+          title: 'Cloud Integrations with Zapier', 
+          formester: '<span class="present">Present</span>', 
+          zoho: '<span class="present">Present</span>'
+        },
+      ],
+      //pricing has to be revised
+      pricing:[
+        {
+          title: 'Free',
+          formester: 'Starts <span class="present">free</span> for 100 submissions',
+          zoho: '<span class="absent">$9/month</span> for 10k submissions',
+        },
+        {
+          title: 'Personal',
+          formester: '<span class="absent">$13/month</span> for <span class="absent">1000</span> submissions',
+          zoho: '<span class="present">$21/month</span> for <span class="present">25k</span> submissions',
+        },
+        {
+          title: 'Bussiness',
+          formester: '<span class="absent">$49/month</span> for <span class="absent">15k </span>submissions',
+          zoho: '<span class="present">$86/month</span>for <span class="present">150k</span> submissions',
+        }
       ],
       relatedComparisons: [
         {
@@ -491,7 +550,9 @@ export default {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
   border-radius: 8px;
 }
-
+.comparision__table-pricing {
+  margin-top: 10px;
+}
 .table > :not(caption) > * > * {
   padding: 1rem;
 }

@@ -50,9 +50,31 @@
           </thead>
           <tbody>
             <tr v-for="c of comparisions" :key="c[0]">
-              <td style="font-weight: 600">{{ c[0] }}</td>
-              <td>{{ c[1] }}</td>
-              <td>{{ c[2] }}</td>
+              <td style="font-weight: 600" v-html="c.title"></td>
+              <td v-html="c.formester"></td>
+              <td v-html="c.paperform"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="container text-center">
+      <h3 class="section__heading">Pricing</h3>
+      <div class="table-responsive">
+        <table class="table text-start comparision__table comparision__table-pricing mx-auto">
+          <thead class="bg__light-primary">
+            <tr>
+              <th scope="col">Features</th>
+              <th scope="col">Formester</th>
+              <th scope="col">Paperform</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="c of pricing" :key="c[0]">
+              <td style="font-weight: 600" v-html="c.title"></td>
+              <td v-html="c.formester"></td>
+              <td v-html="c.paperform"></td>
             </tr>
           </tbody>
         </table>
@@ -227,78 +249,114 @@ export default {
         },
       ],
       comparisions: [
-        [
-          'Pricing',
-          'Starts for free, $13/month for a Personal User with 1000 submissions',
-          'Starts at $24/month for 1000 submissions',
-        ],
-        [
-          'Monthly Form Views',
-          'Unlimited even for free users',
-          'Limited Form Views - 10000 views for $24/month, $49/month for Unlimited Views',
-        ],
-        [
-          'Collaborators',
-          'Allows collaborators even in free plan',
-          'Single user upto $49/month, 5 users in $159/month',
-        ],
-        [
-          'Total Submission Storage',
-          'Unlimited even for free users',
-          '1000 Total Submission Storage in $24/month, $159/month for Unlimited',
-        ],
-        [
-          'Branding',
-          'No Formester Branding even in the free plan',
-          'Paperform Branding upto $24/month, $49/month for No Branding',
-        ],
-        ['HTML Form Backend Service', 'Present', 'Not available'],
-        [
-          'Redirection on Submission',
-          'Customization available even with the basic plan',
-          'Paperform forms also allows redirection',
-        ],
-        [
-          'Website Embedment',
-          'Web forms can be easily and quickly embedded',
-          'Present but difficult to execute',
-        ],
-        ['End-to-End Design Customization', 'Present', 'Minimal customization'],
-        [
-          'Best For',
-          'All types of forms and applications including survey lead generation, feedback etc',
-          'Suited for short forms like lead generation. Form genrated from Paperform have weak design, long/complex forms using Paperform might confuse the users ',
-        ],
-        [
-          'Mobile First UX',
-          'Perfectly mobile-first',
-          'Weak-design forms are problematic while using on mobile',
-        ],
-        ['Add Media to Forms', 'Present', 'Present'],
-        [
-          'Conditional Logic',
-          'Present',
-          'Present with a lower degree of flexibility',
-        ],
-        ['Spam Protection', 'Present', 'Present'],
-        [
-          'Monthly Payment Submissions',
-          'Build in Progress',
-          '$24/month for 1 Payment Account',
-        ],
-        [
-          'Automated Email Responses',
-          'Present with custom integration',
-          'Only in paid plans',
-        ],
-        ['Cloud Integrations with Zapier', 'Present', 'Present'],
-        ['Deep Performance Analytics', 'Present', 'Basic'],
-        ['White Labeled Surveys Creation', 'Present', 'Not Available'],
-        [
-          'Logo addition to form',
-          'Available and can be used by free users too',
-          'Not Available specifically',
-        ],
+        {
+          title: 'HTML Form Backend Service', 
+          formester: '<span class="present">Present</span>', 
+          paperform: '<span class="absent">Not Available</span>',
+        },
+        {
+          title: 'White Labeled Surveys Creation',
+          formester: '<span class="present">Present</span>', 
+          paperform: '<span class="absent">Not Available</span>'
+        },
+        {
+          title: 'Logo addition to form',
+          formester: '<span class="present">Available</span> even with the <span class="present">free</span> plan',
+          paperform: '<span class="absent">Not Available</span> specifically',
+        },
+        {
+          title: 'Automated Email Responses',
+          formester: '<span class="present">Present</span> with custom integration',
+          paperform: 'Only in <span class="absent">paid plans</span>',
+        },
+        {
+          title: 'Website Embedment',
+          formester: '<span class="present">Easy and quickly</span> embedment',
+          paperform: '<span class="absent">Complex</span> embedment execution',
+        },
+        {
+          title: 'End-to-End Design Customization', 
+          formester: '<span class="present">Present</span>', 
+          paperform: '<span class="absent">Minimal</span> customization',
+        },
+        {
+          title: 'Mobile First UX',
+          formester: '<span class="present">Perfectly</span> mobile-first',
+          paperform: '<span class="absent">Complicated</span> for design-heavy forms',
+        },
+        {
+          title: 'Conditional Logic',
+          formester: '<span class="present">Present</span>',
+          paperform: 'Present with a <span class="absent">lower degree</span> of flexibility',
+        },
+        {  
+          title: 'Monthly Form Views',
+          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
+          paperform: '<span class="absent">Limited</span> Form Views - 10000 views for <span class="absent">$24/month</span>, <span class="absent">$49/month</span> for Unlimited Views',
+        },
+        
+        {  
+          title: 'Collaborators',
+          formester: '<span class="present">Allow collaborators</span> even in <span class="present">free</span> plan',
+          paperform: 'Single user upto <span class="absent">$49/month</span>, 5 users in <span class="absent">$159/month</span>',
+        },
+        {  
+          title: 'Total Submission Storage',
+          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
+          paperform: '1000 Total Submission Storage in<span class="absent">$24/month</span>, <span class="absent">$159/month</span> for Unlimited',
+        },
+        {
+          title: 'Best For',
+          formester: '<span class="present">All kinds of forms and applications</span> including survey lead generation, feedback etc',
+          paperform: '<span class="absent">Not suitable</span>  for long forms',
+        },
+        {
+          title: 'Monthly Payment Submissions',
+          formester: 'Build in <span class="absent">Progress</span>',
+          paperform: '<span class="present">$24/month</span> for 1 Payment Account',
+        },
+        { 
+          title: 'Redirection on Submission',
+          formester: '<span class="present">Customization</span> available even with the <span class="present">free</span> plan',
+          paperform: 'Paperform forms <span class="present">also allows</span> redirection',
+        },
+        {
+          title: 'Add Media to Forms', 
+          formester: '<span class="present">Present</span>',
+          paperform: '<span class="present">Present</span>'
+        },
+        {
+          title: 'Spam Protection',
+          formester: '<span class="present">Present</span>',
+          paperform:   '<span class="present">Present</span>'
+        },
+        {
+          title: 'Cloud Integrations with Zapier',
+          formester: '<span class="present">Present</span>', 
+          paperform: '<span class="present">Present</span>'
+        },
+        {
+          title: 'Deep Performance Analytics',
+          formester: '<span class="present">Present</span>', 
+          paperform: '<span class="present">Present</span>'
+        },
+      ],
+      pricing:[
+        {
+          title: 'Free',
+          formester: '<span class="present">Starts</span> free for 100 submissions',
+          paperform: '<span class="absent">$24/month</span> for 1000 submissions',
+        },
+        {
+          title: 'Personal',
+          formester: '<span class="present">$13/month</span> for 1000 submissions',
+          paperform: '<span class="absent">$49/month</span> for 10k submissions',
+        },
+        {
+          title: 'Bussiness',
+          formester: '<span class="present">$49/month</span> for <span class="present">15k</span> submissions',
+          paperform: '<span class="absent">$159/month</span> for unlimited submissions',
+        }
       ],
       relatedComparisons: [
         {
@@ -323,6 +381,7 @@ export default {
           type: 'comparison',
         },
       ],
+      
     }
   },
   computed: {
@@ -490,6 +549,10 @@ export default {
   max-width: 60rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
   border-radius: 8px;
+}
+
+.comparision__table-pricing {
+  margin-top: 10px;
 }
 
 .table > :not(caption) > * > * {

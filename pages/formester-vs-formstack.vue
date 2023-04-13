@@ -50,9 +50,31 @@
           </thead>
           <tbody>
             <tr v-for="c of comparisions" :key="c[0]">
-              <td style="font-weight: 600">{{ c[0] }}</td>
-              <td>{{ c[1] }}</td>
-              <td>{{ c[2] }}</td>
+              <td style="font-weight: 600" v-html="c.title"></td>
+              <td v-html="c.formester"></td>
+              <td v-html="c.formstack"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="container text-center">
+      <h3 class="section__heading">Pricing</h3>
+      <div class="table-responsive">
+        <table class="table text-start comparision__table comparision__table-pricing mx-auto">
+          <thead class="bg__light-primary">
+            <tr>
+              <th scope="col">Features</th>
+              <th scope="col">Formester</th>
+              <th scope="col">Formstack</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="c of pricing" :key="c[0]">
+              <td style="font-weight: 600" v-html="c.title"></td>
+              <td v-html="c.formester"></td>
+              <td v-html="c.formstack"></td>
             </tr>
           </tbody>
         </table>
@@ -227,78 +249,114 @@ export default {
         },
       ],
       comparisions: [
-        [
-          'Pricing',
-          'Starts for free, $13/month for a Personal User with 1000 submissions',
-          'Starts for free, $59/month for a Starter Plan with 1000 submissions',
-        ],
-        [
-          'Form Limit',
-          'Unlimited even for free users',
-          'Limited Forms - 20 Forms for $59/month, $99/month for 100 forms',
-        ],
-        [
-          'Collaborators',
-          'Allows collaborators even in free plan',
-          'Single user in $59/month, 5 users in $99/month',
-        ],
-        [
-          'Storage',
-          'Minimum Storage - 1GB: comes with Basic Plan - $13/month. Business plan - 5GB: $49/month',
-          'Minimum Storage - 1GB: comes with Starter Plan - $59/month. Teams Plan - 2GB: $99/month',
-        ],
-        ['Add Media to Forms', 'Mutliple Options', 'Only Background Image'],
-        [
-          'Branding',
-          'No Formester Branding even in the free plan',
-          'No Branding in paid plans',
-        ],
-        ['HTML Form Backend Service', 'Present', 'Not available'],
-        [
-          'Redirection on Submission',
-          'Customization available even with the basic plan',
-          'Formstack forms also allows redirection',
-        ],
-        [
-          'Website Embedment',
-          'Web forms can be easily and quickly embedded',
-          'Present but difficult to execute',
-        ],
-        ['End-to-End Design Customization', 'Present', 'Minimal customization'],
-        [
-          'Best For',
-          'All types of forms and applications including survey lead generation, feedback etc',
-          'Suited for short forms like lead generation. Form genrated from Formstack have weak design, long/complex forms using Formstack might confuse the users ',
-        ],
-        [
-          'Mobile First UX',
-          'Perfectly mobile-first',
-          'Weak-design forms forms are problematic while using on mobile',
-        ],
-        [
-          'Conditional Logic',
-          'Present',
-          'Present with a lower degree of flexibility',
-        ],
-        ['Spam Protection', 'Present', 'Present'],
-        ['Monthly Payment Submissions', 'Build in Progress', 'Available'],
-        [
-          'Automated Email Responses',
-          'Present with custom integration',
-          'Only in paid plans',
-        ],
-        [
-          'Cloud Integrations with Zapier',
-          'Present',
-          'Basic Integration, Zapier Not Available',
-        ],
-        ['Deep Performance Analytics', 'Present', 'Basic'],
-        ['White Labeled Surveys Creation', 'Present', 'Not Available'],
-        [
-          'Logo addition to form',
-          'Available and can be used by free users too',
-          'Not Available',
-        ],
+        {
+          title: 'HTML Form Backend Service',
+          formester: '<span class="present">Present</span>',
+          formstack: '<span class="absent">Not available</span>'
+        },
+        {
+          title: 'White Labeled Surveys Creation', 
+          formester: '<span class="present">Present</span>', 
+          formstack: '<span class="absent">Not Available</span>'
+        },
+        {
+          title: 'Logo addition to form',
+          formester: '<span class="present">Available</span> even with the <span class="present">free</span> plan',
+          formstack: '<span class="absent">Not Available</span>',
+        },
+        {
+          title: 'Automated Email Responses',
+          formester: '<span class="present">Present</span> with custom integration',
+          formstack: 'Only in <span class="absent">paid</span> plans',
+        },
+        {
+          title: 'Deep Performance Analytics', 
+          formester: '<span class="present">Present</span>', 
+         formstack:  '<span class="absent">Basic</span>'
+        },
+        {
+          title: 'End-to-End Design Customization',
+          formester: '<span class="present">Present</span>',
+          formstack: '<span class="absent">Minimal</span> customization'
+        },
+        {
+          title: 'Mobile First UX',
+          formester: '<span class="present">Perfectly</span> mobile-first',
+          formstack: '<span class="absent">Complicated</span> for design-heavy forms',
+        },
+        {
+          title: 'Conditional Logic',
+          formester: '<span class="present">Present</span>',
+          formstack: 'Present with a <span class="absent">lower degree</span> of flexibility',
+        },
+        {
+          title: 'Website Embedment',
+          formester: '<span class="present">Easy and quickly</span> embedment',
+          formstack: '<span class="absent">Complex</span> embedment execution',
+        },
+        {
+          title: 'Add Media to Forms',
+          formester: '<span class="present">Mutliple</span> Options',
+          formstack: '<span class="absent">Only</span> Background Image'
+        },
+        {
+          title: 'Cloud Integrations with Zapier',
+          formester: '<span class="present">Present</span>',
+          formstack: '<span class="absent">Basic</span> Integration, Zapier <span class="absent">Not Available</span>',
+        },
+        {
+          title: 'Form Limit',
+          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
+          formstack: '<span class="absent">Limited</span> Forms - 20 Forms for <span class="absent">$59/month</span>, <span class="absent">$99/month</span> for 100 forms',
+        },
+        {
+          title: 'Collaborators',
+          formester: '<span class="present">Allows collaborators</span> even in <span class="present">free</span> plan',
+          formstack: '<span class="absent">Single</span> user in <span class="absent">$59/month</span>, 5 users in <span class="absent">$99/month</span>',
+        },
+        {
+          title: 'Storage',
+          formester: 'Basic Plan: <span class="present">$13/month</span> & Minimum Storage: <span class="present">1GB</span>.<span></br></span> Business Plan: <span class="present">$49/month</span> & Minimum Storage: <span class="present">50GB</span>',
+          formstack: 'Basic Plan: <span class="absent">$59/month/month</span>  & Minimum Storage: <span class="absent">1GB</span>.<span></br></span> Business Plan: <span class="absent">$99/month</span> & Minimum Storage: <span class="absent">2GB</span>',
+          // formstack: 'Minimum Storage - 1GB: comes with Starter Plan - $59/month. Teams Plan - 2GB: $99/month',
+        },
+        {
+          title: 'Redirection on Submission',
+          formester: 'Customization <span class="present">available</span> even with the <span class="present">free</span> plan',
+          formstack: 'Formstack forms <span class="present">also allows</span> redirection',
+        },
+        {
+          title: 'Best For',
+          formester: '<span class="present">All kinds</span> of forms and applications including survey lead generation, feedback etc',
+          formstack: '<span class="absent">Not</span> suitable for long forms',
+        },
+        {
+          title: 'Spam Protection',
+          formester: '<span class="present">Present</span>',
+          formstack: '<span class="present">Present</span>'
+        },
+        {
+          title: 'Monthly Payment Submissions',
+          formester: 'Build in <span class="absent">Progress</span>',
+          formstack: '<span class="present">Available</span>'
+        },
+      ],
+      pricing:[
+        {
+          title: 'Free',
+          formester: '<span class="present">Starts</span> free for 100 submissions',
+          formstack: '<span class="absent">$59/month</span> for 1000 submissions',
+        },
+        {
+          title: 'Personal',
+          formester: '<span class="present">$13/month</span> for 1000 submissions',
+          formstack: '<span class="absent">$250/month</span> for 6000 submissions',
+        },
+        {
+          title: 'Bussiness',
+          formester: '<span class="present">$49/month</span> for <span class="present">15k</span> submissions',
+          formstack: '<span class="absent">custom quotation/month</span> for unlimited submissions',
+        }
       ],
       relatedComparisons: [
         {
@@ -490,6 +548,9 @@ export default {
   max-width: 60rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
   border-radius: 8px;
+}
+.comparision__table-pricing {
+  margin-top: 10px;
 }
 
 .table > :not(caption) > * > * {

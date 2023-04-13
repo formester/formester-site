@@ -49,9 +49,31 @@
           </thead>
           <tbody>
             <tr v-for="c of comparisions" :key="c[0]">
-              <td style="font-weight: 600">{{ c[0] }}</td>
-              <td>{{ c[1] }}</td>
-              <td>{{ c[2] }}</td>
+              <td style="font-weight: 600" v-html="c.title"></td>
+              <td v-html="c.formester"></td>
+              <td v-html="c.typeform"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="container text-center">
+      <h3 class="section__heading">Pricing</h3>
+      <div class="table-responsive">
+        <table class="table text-start comparision__table comparision__table-pricing mx-auto">
+          <thead class="bg__light-primary">
+            <tr>
+              <th scope="col">Features</th>
+              <th scope="col">Formester</th>
+              <th scope="col">Typeform</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="c of pricing" :key="c[0]">
+              <td style="font-weight: 600" v-html="c.title"></td>
+              <td v-html="c.formester"></td>
+              <td v-html="c.typeform"></td>
             </tr>
           </tbody>
         </table>
@@ -226,54 +248,98 @@ export default {
         },
       ],
       comparisions: [
-        [
-          'Pricing',
-          'Starts for free, $13/month for a Personal User with 1000 submissions',
-          'Starts at $29/month for 100 submissions',
-        ],
-        [
-          'Redirection on Submission',
-          'Customization available even with the basic plan',
-          'Not available',
-        ],
-        [
-          'Website Embedment',
-          'Web forms can be easily and quickly created',
-          'Typeform forms can also be embedded into website',
-        ],
-        [
-          'Best For',
-          'All types of forms and applications including survey lead generation, feedback etc',
-          'Suited for short forms like lead generation. Long/complex forms using Typeform might confuse the users ',
-        ],
-        [
-          'Mobile First UX',
-          'Perfectly mobile-first',
-          'Design-heavy forms are problematic while using on mobile',
-        ],
-        [
-          'Storage',
-          'Minimum Storage - 1GB: comes with Basic Plan - $13/month. Business plan - 5GB: $49/month',
-          'Minimum Storage - 1GB: comes with Basic Plan - $25/month. Business Plan - 5GB: $83/month',
-        ],
-        ['Add Media to Forms', 'Present', 'Present'],
-        ['Conditional Logic', 'Present', 'Present'],
-        ['Spam Protection', 'Present', 'Present but difficult to execute'],
-        [
-          'Automated Email Responses',
-          'Present with custom integration',
-          'Only in paid plans',
-        ],
-        ['HTML Form Backend Service', 'Present', 'Not available'],
-        ['Cloud Integrations with Zapier', 'Present', 'Present'],
-        ['Deep Performance Analytics', 'Present', 'Basic'],
-        ['White Labeled Surveys Creation', 'Present', 'Missing'],
-        [
-          'Logo addition to form',
-          'Available and can be used by free users too',
-          'A $99 feature',
-        ],
-        ['End-to-End Design Customization', 'Present', 'Minimal customization'],
+        {
+          title: 'Redirection on Submission',
+          formester: '<span class="present">Customization available</span> even with the <span class="present">free plan</span>',
+          typeform: '<span class="absent">Not available</span>',
+        },
+        {
+          title: 'HTML Form Backend Service', 
+          formester: '<span class="present">Present</span>', 
+          typeform: '<span class="absent">Not available</span>'
+        },
+        {
+          title: 'White Labeled Surveys Creation', 
+          formester: '<span class="present">Present</span>', 
+          typeform: '<span class="absent">Not available</span>'
+        },
+        {
+          title: 'Spam Protection', 
+          formester: '<span class="present">Present</span>', 
+          typeform: '<span class="absent">Difficult</span> to execute'
+        },
+        {
+          title: 'End-to-End Design Customization', 
+          formester: '<span class="present">Present</span>', 
+          typeform: '<span class="absent">Minimal</span> customization'
+        },
+        { 
+          title: 'Logo addition to form',
+          formester: '<span class="present">Present</span> even with the <span class="present">free</span> plan',
+          typeform: 'A <span class="absent">$99</span> feature',
+        },
+        {  
+          title: 'Automated Email Responses',
+          formester: '<span class="present">Present</span> with custom integration',
+          typeform: 'Only in <span class="absent">paid plans</span>',
+        },
+        {
+          title: 'Deep Performance Analytics', 
+          formester: '<span class="present">Present</span>', 
+          typeform: 'Only in <span class="absent">paid plans</span>'
+        },
+        {
+          title: 'Website Embedment',
+          formester: '<span class="present">Easy and quickly</span> embedment',
+          typeform: '<span class="absent">Complex</span> embedment execution',
+        },
+        {
+          title: 'Best Application',
+          formester: '<span class="present">All kinds of forms and applications</span> including survey lead generation, feedback etc',
+          typeform: '<span class="absent">Not suitable</span> for long forms',
+        },
+        {
+          title: 'Mobile First UX',
+          formester: '<span class="present">Perfectly</span> mobile-first',
+          typeform: '<span class="absent">Complicated</span> for design-heavy forms',
+        },
+        {
+          title: 'Storage',
+          formester: 'Basic Plan: <span class="present">$13/month</span>  & Minimum Storage: <span class="present">1GB</span>.<span></br></span> Business Plan: <span class="present">$49/month</span> & Minimum Storage: <span class="present">50GB</span>',
+          typeform: 'Basic Plan: <span class="absent">$25/month</span> & Minimum Storage: <span class="absent">1GB</span>.<span></br></span> Business Plan: <span class="absent">$83/month</span> & Minimum Storage: <span class="absent">5GB</span>',
+        },
+        {
+          title: 'Cloud Integrations with Zapier', 
+          formester: '<span class="present">Present</span>', 
+          typeform: '<span class="present">Present</span>'
+        },
+        {
+          title: 'Add Media to Forms', 
+          formester: '<span class="present">Present</span>', 
+          typeform: '<span class="present">Present</span>'
+        },
+        {
+          title: 'Conditional Logic', 
+          formester: '<span class="present">Present</span>', 
+          typeform: '<span class="present">Present</span>'
+        },
+      ],
+      pricing:[
+        {
+          title: 'Free',
+          formester: '<span class="present">Starts</span> free for <span class="present">100</span> submissions',
+          typeform: '<span class="absent">$29/month</span> for <span class="absent">100</span> submissions',
+        },
+        {
+          title: 'Personal',
+          formester: '<span class="present">$13/month</span> for <span class="present">1000</span> submissions',
+          typeform: '<span class="absent">$59/month</span> for <span class="absent">1000</span> submissions',
+        },
+        {
+          title: 'Bussiness',
+          formester: '<span class="present">$49/month</span> for <span class="present">15k</span> submissions',
+          typeform: '<span class="absent">$99/month</span> for <span class="absent">10k</span> submissions',
+        }
       ],
       relatedComparisons: [
         {
@@ -465,6 +531,9 @@ export default {
   max-width: 60rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
   border-radius: 8px;
+}
+.comparision__table-pricing {
+  margin-top: 10px;
 }
 
 .table > :not(caption) > * > * {
