@@ -4,7 +4,7 @@
       :src="require(`../assets/images/features/${feature.src}`)"
       class="img-fluid"
     />
-    <h2 class="feature__heading">{{ feature.title }}</h2>
+    <h3 class="feature__heading">{{ feature.title }}</h3>
     <p>
       {{ feature.description }}
     </p>
@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
 .feature__heading {
-  font-size: 2.25rem;
+  font-size: 28px;
   line-height: 44px;
   font-weight: 700;
 }
