@@ -42,13 +42,13 @@
               </div>
               <div class="card-body">
                 <p class="html">
-                  &lt;<span style="color: #27AE60!important;">form</span> <span style="color: #9B51E0!important;">accept-charset</span>='UTF-8' <span style="color: #9B51E0!important;">action</span>="https://app.formester.com/forms/your@form/submissions" <span style="color: #9B51E0!important;">method</span>="POST" &gt;<br>
+                  &lt;<span style="color: #27AE60;">form</span> <span style="color: #9B51E0;">accept-charset</span>='UTF-8' <span style="color: #9B51E0;">action</span>="https://app.formester.com/forms/your@form/submissions" <span style="color: #9B51E0;">method</span>="POST" &gt;<br>
                     <span>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color: #27AE60!important;">label</span> <span style="color: #9B51E0!important;">for</span>="email"&gt;Email &lt;<span style="color: #27AE60!important;">/label</span>&gt;<br>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color: #27AE60!important;">input</span> <span style="color: #9B51E0!important;">type</span>="email" <span style="color: #9B51E0!important;">id</span>="email-address" <span style="color: #9B51E0!important;">name</span>="email" <span style="color: #9B51E0!important;">placeholder</span>="your@email.com" <span style="color: #27AE60!important;">/</span>&gt;<br>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color: #27AE60!important;">button</span> <span style="color: #9B51E0!important;">type</span>="submit"&gt;Submit &lt;<span style="color: #27AE60!important;">/button</span>&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color: #27AE60;">label</span> <span style="color: #9B51E0;">for</span>="email"&gt;Email &lt;<span style="color: #27AE60;">/label</span>&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color: #27AE60;">input</span> <span style="color: #9B51E0;">type</span>="email" <span style="color: #9B51E0;">id</span>="email-address" <span style="color: #9B51E0;">name</span>="email" <span style="color: #9B51E0;">placeholder</span>="your@email.com" <span style="color: #27AE60;">/</span>&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color: #27AE60;">button</span> <span style="color: #9B51E0;">type</span>="submit"&gt;Submit &lt;<span style="color: #27AE60;">/button</span>&gt;<br>
                     </span>
-                    &lt;<span style="color: #27AE60!important;">/form</span>&gt;
+                    &lt;<span style="color: #27AE60;">/form</span>&gt;
                 </p>
               </div>
             </div>
@@ -61,7 +61,7 @@
             </p>
             <div class="card-body card ">
               <span class="html">
-                &lt;<span style="color: #27AE60!important;">form </span> <span style="color: #9B51E0!important;">accept-charset</span>='UTF-8'  <span style="color: #9B51E0!important;">action</span>="https://app.formester.com/forms/your@form/submissions" <span style="color: #9B51E0!important;">method</span>="POST" &gt;  
+                &lt;<span style="color: #27AE60;">form </span> <span style="color: #9B51E0;">accept-charset</span>='UTF-8'  <span style="color: #9B51E0;">action</span>="https://app.formester.com/forms/your@form/submissions" <span style="color: #9B51E0;">method</span>="POST" &gt;  
               </span>
             </div>   
             <h3 class="section__heading backend-steps">2. Add Name Attributes</h3>
@@ -70,7 +70,7 @@
             </p>
             <div class="card-body card ">
               <span class="html">
-                &lt;<span style="color: #27AE60!important;">input</span> <span style="color: #9B51E0!important;">type</span>="email" <span style="color: #9B51E0!important;"> name</span>="email" <span style="color: #27AE60!important;">/</span>&gt;
+                &lt;<span style="color: #27AE60;">input</span> <span style="color: #9B51E0;">type</span>="email" <span style="color: #9B51E0;"> name</span>="email" <span style="color: #27AE60;">/</span>&gt;
               </span>
             </div>   
             <h3 class="section__heading backend-steps">3. Submit and Confirm</h3>
@@ -210,9 +210,6 @@ export default {
   margin-top: 70px;
 }
 .card {
-  font-weight: 600;
-  color: var(--bs-dark);
-  background: var(--bs-white);
   font-size: 12px;
   padding: 0;
   font-weight: 700;
