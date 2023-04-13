@@ -50,3 +50,19 @@ Having said this, who could you approach to enhance your website's user experien
 And in doing so, [we are here to assist you](https://formester.com/)!
 
 Read ahead to discover,
+
+## The 7 Most Important Types of Questions to Ask In a Website Usability Survey
+
+As mentioned already, website usability has several aspects to it. Therefore, you must consider all these aspects and [create a balanced survey](https://refiner.io/blog/product-survey-questions/#17_Do_you_consider_our_product_to_be_a_good_value_for_money) in order to gather actionable insights for designing or redesigning your website.
+
+### 1. Design
+
+This aspect relates to the color combination, themes, font size and color, as regards the website and its clickable elements. 
+
+Evidently, it should be appealing, easy on the eye and most importantly, consistent throughout the website. 
+
+The logo should be placed strategically wherever required. 
+
+Also, the menu should be available without much hassle, from any point on the website.
+
+![An infographic showing main elements of web design, namely, background theme and color, logo positioning, clickable icons, brand consistency and font size and color.](/img/2.png "An infographic showing main elements of web design")
