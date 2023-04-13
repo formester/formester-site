@@ -83,4 +83,3 @@ export default {
   color: var(--clr-primary);
 }
 </style>
-
