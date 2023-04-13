@@ -66,3 +66,109 @@ The logo should be placed strategically wherever required. 
 Also, the menu should be available without much hassle, from any point on the website.
 
 ![An infographic showing main elements of web design, namely, background theme and color, logo positioning, clickable icons, brand consistency and font size and color.](/img/2.png "An infographic showing main elements of web design")
+
+The following questions can be asked with regard to design:
+
+1. At first glance, were you able to make out what our product is, basis our website design?
+
+2. Were the clickable elements/buttons easily identifiable?
+
+3. Was the website color scheme and combination warm and appealing?
+
+4. On a scale of 1-10, how would you rate the design consistency of our website?
+
+5. Do you think the color scheme is representative of the product?
+
+6. Does the logo of our website stand out to you?
+
+7. Would you remember our website basis its aesthetic and design?
+
+8. Would you remember our website basis our logo?
+
+9. On a scale of 1-10, how likely are you to return to our website basis its design?
+
+10. Could we have used other color schemes and themes to represent our brand better?
+
+Survey Design Tip 1: Keep your survey short and simple. Too many questions are likely to [bore the respondent](https://cooltool.com/blog/too-long-and-too-boring-questionnaires-what-to-do-with-them-).
+
+### 2. Navigation 
+
+This aspect relates to the interconnectedness, and the placement and positioning of the various elements facilitating this interconnectedness, throughout the website.
+
+This includes links, accessibility to the main menu, homepage, contact information, search field, pagination, tags, icons, etc.
+
+![](/img/3.png)
+
+The following questions can be asked with regard to navigation:
+
+1. On a scale of 1-10, how would you rate the ease with which you were able to move through our website?
+
+2. If you visited a particular webpage on our website, could you reach our homepage easily, therefrom?
+
+3. Could you easily navigate to our associated web pages from our homepage?
+
+4. Do you think all the web pages are linked under the appropriate fields?
+
+5. Did all the clickable links lead you to the appropriate information?
+
+6. Were the back, forward and home buttons, accessible on all web pages?
+
+7. Were you able to set your cookie preferences with ease?
+
+8. Do you think our menu section covers all the relevant fields?
+
+9. On a scale of 1-10, how easily could you reach the information you came looking for?
+
+10. At any point in your browsing, did you feel the lack of any navigational element anywhere on the website?
+
+Survey Design Tip 2: Keep your questions [specific and easy to answer](https://www.pewresearch.org/methods/2018/03/21/methods-101-video-question-wording/). Give a choice to agree or disagree, answer in yes or no, or define a scale.
+
+### 3. Content and Visual Comprehensibility
+
+**Content is still the king**; No wonder they invented [ChatGPT](https://openai.com/product). 
+
+Not only is this important for user experience, but also for the Google crawlers to understand, rate and rank your website.
+
+Your website and web pages should feature relevant, coherent and easily comprehensible information. 
+
+Also, the visuals, graphics and imagery used, should be in accordance with the content.
+
+The idea is to provide the user with the required and right information, in a quick yet interesting fashion.
+
+![](/img/4.png)
+
+The following questions can be asked with regard to content and visual comprehensibility :
+
+1. On a scale of 1-10, how would you rate the relevance of the content you found on this page?
+
+2. Did you find what you were looking for?
+
+3. On a scale of 1-10, with how much ease could you find what you were looking for?
+
+4. Were the infographics, tables, charts and images used on this page relevant?
+
+5. Did this page's infographics, tables, charts and images help you understand the content better?
+
+6. On a scale of 1-10, how would you rate the content on this page, as compared to your competitor's page?
+
+7. On a scale of 1-10, how would you rate the presentation and format of the content on this page?
+
+8. Do you think the content was explicit or confusing?
+
+9. On a scale of 1-10, how likely are you to retain what you read on this page?
+
+10. Based on your recent experience, would you prefer to visit our website for other content?
+
+Survey Design Tip 3: Keep the wording simple and easy to understand. Users shouldn't have to invest too much time deciphering the question itself.
+
+### 4. Performance and Compatibility
+
+This aspect relates to your website's performance in terms of loading speed and device compatibility.
+
+In the age of smartphones and tablets, it is only sensible to have your website optimized for all kinds of devices (Well, obviously not the fax machine).
+
+Ideally, your website should load within 0-2 seconds of clicking.
+
+Also, your website should function smoothly on all kinds of devices, following appropriate dimensions. 
+
+This means the content shouldn't get cut, the scrolling function is smooth and the website doesn't crash when used on any of the devices in question.
