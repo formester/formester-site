@@ -191,7 +191,7 @@ This means the content shouldn't get cut, the scrolling function is smooth and t
 
 Pro Tip: Run a [quick and free technical SEO audit for your website](https://www.seoptimer.com/) to find out more about this!
 
-![An infographic showing main elements of performance and compatibility, namely, page loading speed, device compatibility, site architecture, scrolling functions and content and graphic alignment](/img/1.png "An infographic showing main elements of performance and compatibility")
+![An infographic showing main elements of performance and compatibility, namely, page loading speed, device compatibility, site architecture, scrolling functions and content and graphic alignment](/img/white-modern-illustration-creative-process-graph-6-.png "An infographic showing main elements of performance and compatibility")
 
 The following questions can be asked with regard to performance and compatibility:
 
@@ -321,7 +321,7 @@ The following questions can be asked under this field:
 
 For more [survey tips, check this out](https://formester.com/blog/10-reasons-why-you-should-be-using-surveys/)!
 
-> Did you know: You could use your [NPS](https://formester.com/templates/net-promoter-score-nps-702/) to gain better insights into customer loyalty and satisfaction?
+> Did you know: You could [create NPS survey on your website](https://formester.com/templates/net-promoter-score-nps-702/) to gain better insights into customer loyalty and satisfaction?
 >
 > Click here to [take a preview and create yours now](https://formester.com/templates/net-promoter-score-nps-702/)!
 
@@ -331,7 +331,7 @@ Website Usability Surveys are the quintessential means of gathering data about y
 
 At Formester, you can accomplish this in 3 simple steps:
 
-1. Create a [free account on Formester](https://app.formester.com/users/sign_up)
+1. Create a [create a free survey account](https://app.formester.com/users/sign_up) on Formester
 
 2. Head over to our Templates section to [customize a result-driven survey form](https://formester.com/templates/)
 
