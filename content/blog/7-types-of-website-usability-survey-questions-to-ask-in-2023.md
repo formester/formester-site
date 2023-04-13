@@ -95,9 +95,9 @@ Survey Design Tip 1: Keep your survey short and simple. Too many questions are l
 
 This aspect relates to the interconnectedness, and the placement and positioning of the various elements facilitating this interconnectedness, throughout the website.
 
-This includes links, accessibility to the main menu, homepage, contact information, search field, pagination, tags, icons, etc.
+This includes links, accessibility to the main menu, homepage, contact information, search field, pagination, tags, breadcrumbs, etc.
 
-![](/img/3.png)
+![An infographic showing main elements of navigation, namely, main-menu and homepage, search field, pagination, tags and breadcrumbs](/img/3.png "An infographic showing main elements of navigation")
 
 The following questions can be asked with regard to navigation:
 
@@ -135,7 +135,7 @@ Also, the visuals, graphics and imagery used, should be in accordance with the c
 
 The idea is to provide the user with the required and right information, in a quick yet interesting fashion.
 
-![](/img/4.png)
+![An infographic showing main elements of content and visual appeal, namely, clear and correct information, interesting presentation, enabling quick grasping, concise and relevant](/img/4.png "An infographic showing main elements of content and visual appeal")
 
 The following questions can be asked with regard to content and visual comprehensibility :
 
@@ -175,7 +175,7 @@ This means the content shouldn't get cut, the scrolling function is smooth and t
 
 Pro Tip: Run a [quick and free technical SEO audit for your website](https://www.seoptimer.com/) to find out more about this!
 
-![](/img/1.png)
+![An infographic showing main elements of performance and compatibility, namely, page loading speed, device compatibility, site architecture, scrolling functions and content and graphic alignment](/img/1.png "An infographic showing main elements of performance and compatibility")
 
 The following questions can be asked with regard to performance and compatibility:
 
@@ -209,7 +209,7 @@ Your website should enable the use of more than one popular payment method.
 
 Also, if any third-party redirects are in practice, their credibility and trustworthiness should not be under question. 
 
-![](/img/5.png)
+![An infographic showing main elements of payments and subscriptions, namely, safe and secure, transparent, prompt, third-party integrations and credible](/img/5.png "An infographic showing main elements of payments and subscriptions")
 
 The following questions can be asked with regard to performance and compatibility:
 
@@ -243,7 +243,7 @@ It is, infact, about introducing [ease of use, for one and all](https://www2.sta
 
 This involves working with features such as font, color, contrast and brightness adjustments, structured headings, usage of alt text and closed captions, etc.
 
-![](/img/6.png)
+![An infographic showing main elements of accessibility, namely, contrast and brightness adjustments, alt-text, structured headings, closed captions and sizeable icons](/img/6.png "An infographic showing main elements of accessibility")
 
 The following questions can be asked with regard to accessibility:
 
@@ -277,7 +277,7 @@ You may use these questions to gather data about the general user experience thr
 
 You may also take this section as the opportunity to collect valuable suggestions and feedback from your users about anything related to your website.
 
-![](/img/7.png)
+![An infographic showing main elements of general Web UX, namely, suggestions, feedback and testimonials, usefulness of the website, adherence to functionality, influence and visual design](/img/7.png "An infographic showing main elements of general Web UX")
 
 The following questions can be asked under this field:
 
@@ -323,7 +323,7 @@ Pro Tip on What To Include: Feel free to take inspiration from this blog 
 
 3. Publish the survey form, get submissions, [analyze your data](https://formester.com/features/powerful-analytics/) and you are ready to [design, redesign or optimize your website](https://acornglobus.com/#services)
 
-![](/img/grey-3-points-process-roadmap-infographic-graph-2-.png)
+![An infographic showing 3 simple steps to create a powerful website usability survey](/img/grey-3-points-process-roadmap-infographic-graph-2-.png "An infographic showing 3 simple steps to create a powerful website usability survey")
 
 Still not sure about your survey form?
 
