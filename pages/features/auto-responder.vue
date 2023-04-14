@@ -38,17 +38,17 @@
           <p class="hero__subheading">Unlock the Power of Automated Email Marketing for Your Business</p>
         </div>
         <div class="d-flex flex-column flex-md-row justify-content-between mt-md-5">
-          <div class="d-flex flex-column align-items-center text-center text-md-start px-4 col-md-4 my-3 mt-lg-5">
+          <div class="d-flex flex-column align-items-center align-items-md-start text-center text-md-start px-4 col-md-4 my-3 mt-lg-5">
             <img style="width: 69px;" src="@/assets/images/round-access-time.jpg" alt="Formester" />
             <h4 class="sub__section-heading mt-4">Time-saving</h4>
             <p class="subheading__text">Retain customers by sending them follow-up emails after a purchase, asking for feedback, and offering incentives for repeat purchases.</p>
           </div>
-          <div class="d-flex flex-column align-items-center text-center text-md-start px-4 col-md-4 my-3 mt-lg-5">
+          <div class="d-flex flex-column align-items-center align-items-md-start text-center text-md-start px-4 col-md-4 my-3 mt-lg-5">
             <img style="width: 69px;" src="@/assets/images/leads.jpg" alt="Formester" />
             <h4 class="sub__section-heading mt-4">Lead generation</h4>
             <p class="subheading__text">Capture leads and grow your email list by offering incentives such as free e-books, whitepapers, or exclusive discounts.</p>
           </div>
-          <div class="d-flex flex-column align-items-center text-center text-md-start px-4 col-md-4 my-3 mt-lg-5">
+          <div class="d-flex flex-column align-items-center align-items-md-start text-center text-md-start px-4 col-md-4 my-3 mt-lg-5">
             <img style="width: 69px;" src="@/assets/images/customer-support.jpg" alt="Formester" />
             <h4 class="sub__section-heading mt-4">Customer retention</h4>
             <p class="subheading__text">Automating repetitive tasks such as sending welcome emails, confirmation emails, and follow-up emails.</p>
