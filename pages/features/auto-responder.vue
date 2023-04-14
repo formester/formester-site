@@ -111,7 +111,36 @@ export default {
     }
   },
   jsonld() {
-    return {}
+    return {
+      '@context': 'http://schema.org',
+      '@type': 'Corporation',
+      name: 'Formester - Auto Responder',
+      description:
+        "Sign up now for the best No Code Form Builder! Create stunning HTML Forms with Formester's easy-to-use Online HTML Form Builder. Start building today!",
+      logo: 'https://formester.com/logo.png',
+      url: 'https://formester.com',
+      operatingSystem: 'all',
+      browserRequirements: 'Requires Javascript and HTML5 support',
+      sameAs: [
+        'https://twitter.com/_formester_',
+        'https://www.instagram.com/_formester_/',
+      ],
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Dalaware',
+        addressCountry: 'United States',
+      },
+      creator: {
+        '@type': 'Organization',
+        '@id': '#organization',
+        url: 'https://formester.com/',
+        name: 'Formester',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://formester.com/logo.png',
+        },
+      }
+    }
   },
   data() {
     return {
