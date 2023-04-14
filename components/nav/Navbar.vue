@@ -220,7 +220,13 @@ a.nuxt-link-exact-active {
   transition: opacity 0s,
     stroke-dashoffset 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-
+@media (max-width: 1199px) {
+  .nav-link {
+    font-size: 16px;
+    padding-right: 5px!important;
+    padding-left: 5px!important;
+  }
+}
 @media (max-width: 992px) {
   .nav-item:hover svg {
     opacity: 0;

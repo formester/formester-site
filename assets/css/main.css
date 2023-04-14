@@ -179,7 +179,10 @@ button {
   font-size: var(--ft-df-heading);
   font-weight: 700;
 }
-
+.sub__section-heading {
+  font-size: var(--ft-subtitle);
+  font-weight: 700;
+}
 .hglight {
   color: var(--clr-primary);
 }
