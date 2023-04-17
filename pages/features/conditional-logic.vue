@@ -41,6 +41,7 @@
         />
       </div>
     </div>
+    <Testimonial />
     <CallToActionSection />
   </div>
 </template>
@@ -48,12 +49,13 @@
 <script>
 import CallToActionSection from '@/components/CallToActionSection.vue'
 import FeatureDetail from '../../components/FeatureDetail.vue'
+import Testimonial from '@/components/Testimonial.vue'
 
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
 
 export default {
-  components: { FeatureDetail, CallToActionSection },
+  components: { FeatureDetail, CallToActionSection, Testimonial },
   computed: {
     meta() {
       const metaData = {
