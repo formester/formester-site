@@ -5,7 +5,7 @@
         <h2 class="section__heading">Customer Testimonials</h2>
         <p class="hero__subheading">Discover what our customers have to say about their experience with us</p>
       </div>
-      <div class="d-flex flex-column flex-lg-row px-5 px-md-0 justify-content-center align-items-center mt-5">
+      <div class="d-flex flex-column flex-lg-row px-3 px-md-0 justify-content-center align-items-center mt-5">
         <div class="card mt-5 mt-lg-1 p-3 me-lg-3" style="max-width: 512px;">
           <img class="quotes__logo" src="@/assets/images/quotes.svg" alt="">
           <div class="d-flex flex-column align-items-center text-center px-2 ">
@@ -64,6 +64,7 @@ export default {
 .card{
   background: linear-gradient(180deg, rgba(166,170,254,0.5047268907563025) 13%, rgba(221,200,255,0.499124649859944) 68%, rgba(255,255,255,0.510329131652661) 100%);
   border-radius: 12px;
+  border: 1px solid #E5E5E5;
 }
 .person {
   font-size: 16px;
@@ -72,5 +73,10 @@ export default {
 .designation{
   font-size: 15px;
   color: #737373;
+}
+@media (max-width: 576px) {
+  .quotes__logo {
+    left: -20px;
+  }
 }
 </style>
