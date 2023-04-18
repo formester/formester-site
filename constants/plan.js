@@ -6,6 +6,7 @@ export const free = {
     available: [
       '10 forms',
       '100 submissions per month',
+      'Formester Branding on the form',
       '0 Collaborators',
       'Spam Protection',
       'Access to Template library',
@@ -41,6 +42,7 @@ export const personalMonthly = {
     available: [
       'Unlimited forms',
       '1k submissions per month',
+      'No Formester Branding',
       '5 Collaborators',
       'Spam Protection',
       'Access to Template library',
@@ -73,6 +75,7 @@ export const businessMonthly = {
     available: [
       'Unlimited forms',
       '15k submissions per month',
+      'No Formester Branding',
       'Unlimited Collaborators',
       'Spam Protection',
       'Access to Template library',
@@ -107,6 +110,7 @@ export const freeYearly = {
     available: [
       '10 forms',
       '100 submissions per month',
+      'Formester Branding on the form',
       '0 Collaborators',
       'Spam Protection',
       'Access to Template library',
@@ -142,6 +146,7 @@ export const personalYearly = {
     available: [
       'Unlimited forms',
       '1k submissions per month',
+      'No Formester Branding',
       '5 Collaborators',
       'Spam Protection',
       'Access to Template library',
@@ -174,6 +179,7 @@ export const businessYearly = {
     available: [
       'Unlimited forms',
       '15k submissions per month',
+      'No Formester Branding',
       'Unlimited Collaborators',
       'Spam Protection',
       'Access to Template library',
