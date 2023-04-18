@@ -177,7 +177,7 @@ export default {
       ],
     }
   },
-  async asyncData({ $content, params }) {
+  async asyncData() {
     let randomTestimonials = await allTestimonials
     const randIndex = Math.floor(Math.random() * (randomTestimonials.length - 2))
     randomTestimonials = randomTestimonials.slice(randIndex,  randIndex + 2);
