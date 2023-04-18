@@ -94,7 +94,9 @@
         />
       </div>
     </div>
-    <Testimonial />
+    <Testimonial 
+      :testimonials="randomTestimonials"
+    />
     <CallToActionSection />
   </div>
 </template>
@@ -103,6 +105,7 @@
 import CallToActionSection from '@/components/CallToActionSection.vue'
 import FeatureDetail from '../../components/FeatureDetail.vue'
 import Testimonial from '@/components/Testimonial.vue'
+import { allTestimonials } from '@/constants/testimonials'
 
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
@@ -175,6 +178,12 @@ export default {
       }
       return getSiteMeta(metaData)
     },
+  },
+  async asyncData() {
+    let randomTestimonials = await allTestimonials
+    const randIndex = Math.floor(Math.random() * (randomTestimonials.length - 2))
+    randomTestimonials = randomTestimonials.slice(randIndex,  randIndex + 2);
+    return {randomTestimonials}
   },
   head() {
     return {

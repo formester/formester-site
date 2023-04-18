@@ -9,21 +9,21 @@
         <div class="card mt-5 mt-lg-1 p-3 me-lg-3" style="max-width: 512px;">
           <img class="quotes__logo" src="@/assets/images/quotes.svg" alt="">
           <div class="d-flex flex-column align-items-center text-center px-2 ">
-            <span class="quote mt-5 mb-4">{{ randomTestimonials[0].content }}</span>
+            <span class="quote mt-5 mb-4">{{ testimonials[0].content }}</span>
             <div class="my-3 d-flex flex-column align-items-center">
-              <span class="person">{{ randomTestimonials[0].user }}</span>
-              <span class="designation">{{ randomTestimonials[0].designation }}</span>
-              <img class="brand mt-4 mb-3" :src="require(`~/assets/images/testimonials/${randomTestimonials[0].logo}`)" alt="">
+              <span class="person">{{ testimonials[0].user }}</span>
+              <span class="designation">{{ testimonials[0].designation }}</span>
+              <img class="brand mt-4 mb-3" :src="require(`~/assets/images/testimonials/${testimonials[0].logo}`)" alt="">
             </div>
           </div>
         </div>
         <div class="card mt-5 mt-lg-1 p-3 ms-lg-3" style="max-width: 512px;">
           <div class="d-flex flex-column align-items-center text-center px-2 ">
-            <span class="quote mt-5 mb-4">{{ randomTestimonials[1].content }}</span>
+            <span class="quote mt-5 mb-4">{{ testimonials[1].content }}</span>
             <div class="my-3 d-flex flex-column align-items-center">
-              <span class="person">{{ randomTestimonials[1].user }}</span>
-              <span class="designation">{{ randomTestimonials[1].designation }}</span>
-              <img class="brand mt-4 mb-3" :src="require(`~/assets/images/testimonials/${randomTestimonials[1].logo}`)" alt="">
+              <span class="person">{{ testimonials[1].user }}</span>
+              <span class="designation">{{ testimonials[1].designation }}</span>
+              <img class="brand mt-4 mb-3" :src="require(`~/assets/images/testimonials/${testimonials[1].logo}`)" alt="">
             </div>
           </div>
         </div>
@@ -33,20 +33,10 @@
 </template>
 
 <script>
-import { getTwoRandomTestimonial } from '@/constants/testimonials'
-
 export default {
   props: {
     testimonials: Array
   },
-  data(){
-    return {
-      randomTestimonials: []
-    }
-  },
-  created(){
-    this.randomTestimonials= getTwoRandomTestimonial()
-  }
 }
 </script>
 

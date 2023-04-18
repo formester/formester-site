@@ -67,4 +67,4 @@ function getTwoRandomTestimonial() {
     return testimonials;
 }
 
-export { getTwoRandomTestimonial };
+export { getTwoRandomTestimonial, allTestimonials };
