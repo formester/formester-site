@@ -153,26 +153,30 @@ export default {
         {
           title: 'White Label',
           description:
-            'Make your emails look personal by using using your company email address. You also get an option to choose between HTML and text-based emails.',
+            'Make your emails look personal by using your company email address. You also get an option to choose between HTML and text-based emails.',
           src: 'auto-responder/white-label-illus.svg',
+          alt: 'Get noticed by making the email personalized'
         },
         {
           title: 'Easy Email Builder',
           description:
             'Creating a captivating response has never been simpler. Our easy to use editor enables you to write compelling content. Add images, links or videos in a matter of a click.',
           src: 'auto-responder/easy-email-builder-illus.svg',
+          alt: 'Email can be eaily build with auto responder'
         },
         {
           title: 'Personalised Response',
           description:
             'Notifications can be personalised to include fields from the submissions. Make your users feel unique with messages which seem to be coming from actual humans and not a bot.',
           src: 'auto-responder/personalised-response.svg',
+          alt: 'Have a personalised respose to end user'
         },
         {
           title: 'Realtime Tracking',
           description:
             'Monitor how people are interacting with your auto-response. Analyse useful metrics like open rate and link clicks to get insights into users behaviour. Use this data to make changes to your communication.',
           src: 'auto-responder/realtime-tracking-illus.svg',
+          alt: 'Track your forms in real time'
         },
       ],
     }

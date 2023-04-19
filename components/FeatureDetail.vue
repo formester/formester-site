@@ -3,6 +3,7 @@
     <img
       :src="require(`../assets/images/features/${feature.src}`)"
       class="img-fluid"
+      :alt="feature.alt"
     />
     <h3 class="feature__heading">{{ feature.title }}</h3>
     <p>
