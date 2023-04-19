@@ -203,7 +203,7 @@ As discussed above, there is quite a lot that goes into crafting a purposeful br
 
 At Formester, we have the perfect 3 step strategy, to get you going, right away!
 
-1. [Create an account on Formester](https://app.formester.com/users/sign_up) and upload your Brand Kit.
+1﻿. [Create an account on Formester](https://app.formester.com/users/sign_up) and upload your Brand Kit.
 
 > P.S., We also ensure you experience a [seamless integration of your survey form into your website](https://formester.com/features/html-form-backend/).
 
@@ -215,7 +215,7 @@ Make use of key features, such as conditional logic, to [ask only what is requir
 
 > Bonus Tip: Here's a guide to [60+ questions you may choose from](https://formester.com/blog/7-types-of-website-usability-survey-questions-to-ask-in-2023/), to create the perfect survey!
 
-3. Once you've gathered submissions on your surveys, use our powerful analytics system to track your metrics, gain critical insights and ofcourse, know your customers!
+3. Once you've gathered submissions on your surveys, use our powerful analytics system to track your metrics, gain critical insights and ofcourse, know your customers! 
 
 And just like that, you're all set to conduct a brand survey!
 
