@@ -7,8 +7,7 @@
             class="col-lg-5 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start"
           >
             <h1 class="section__heading">
-              Looking for a <span class="hglight">Powerful</span> Typeform
-              Alternative? Look No Further
+              Looking for a <span class="hglight">Powerful</span> Alternative to Typeform? Your Search Ends here!
             </h1>
             <p class="section__subtitle mt-3">
               Good-looking forms don’t solve your problem. Dynamic, customizable
@@ -373,7 +372,7 @@ export default {
         url: 'https://formester.com/formester-vs-typeform/',
         title: 'Typeform Alternative | Formester vs Typeform - Formester',
         description:
-          "Looking for a Typeform alternative? Check out Formester! With advanced features and an easy-to-use interface, Formester is the perfect choice for your form building needs. Sign up now.",
+          "Powerful Alternative to Typeform. With custom forms, data collection, actionable insights and affordable prices, make the most out of what you pay for a form builder.",
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with formester vs typeform page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs typeform page image alt
