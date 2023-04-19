@@ -1,9 +1,27 @@
 ---
 title: How Branded Surveys Can Help You Unlock Your Brand’s Potential
-description: abc
-metaTitle: abc
-metaDescription: abc
-keywords: abc
+description: Branded Surveys are the newest and coolest ways to uncover branding
+  secrets! Not only do they help you gain actionable insights into your branding
+  and marketing strategies, but also help you understand your customers'
+  expectations and serve them better. This blog discusses the top 6 reasons why
+  should be conducting brand surveys in 2023. It also includes a few tips, here
+  and there, to help you create the perfect survey! They are easy and
+  affordable; and at Formester, we help you make them fun and interesting, as
+  well!
+metaTitle: How Branded Surveys Can Unlock Your Brand's Potential And Skyrocket
+  Your Business
+metaDescription: "Top 6 Reasons Why You Should Conduct Brand Surveys in 2023 |
+  Skyrocket your business by unlocking your brand's potential with a branded
+  survey "
+keywords: brand surveys, branded surveys, brand surveys 2023, branded surveys
+  2023, your brand can influence consumer decisions, know how your brand can
+  influence consumer decisions, know how your brand is perceived, know your
+  brand image. brand image insights, brand surveys definition, formester brand
+  surveys, formester branded surveys, formester for brand surveys, formester for
+  branded surveys, formester, surveys, formester surveys, formester webforms and
+  surveys, formester blog, online form advice, small business tips, online form
+  software help, brand surveys and brand potential, branded surveys for brand
+  potential, conduct brand surveys in 2023, conduct branded surveys in 2023
 author: Navni Dighe
 createdAt: 2023-04-19T13:17:17.091Z
 coverImg: /img/how-branded-surveys-can-help-you-unlock-your-brand’s-potential.png
@@ -21,13 +39,11 @@ And in [building this brand](https://sendpulse.com/support/glossary/brand-buildi
 
 Sometimes, just adding a swoosh, can actually make your brand go swoosh! ![](https://lh4.googleusercontent.com/ZbSMCenMyn333b1tpjhBx7VBhKq_ep7LI01oiUElD1tR1dcb4-v_G8xt4fWtDOiaFW5HT4aWb4RAxGwJiRaMZHhGXltvNnTzYfP4DEIRACoBjJhIKhPCsHI1QaToNqeiTwBZ16TGhEI-eRJqPYjHgJ8)
 
-
-
 And in this blog, we discuss…
 
 ## How You can take your brand in the right direction?
 
-![](https://lh6.googleusercontent.com/jOjgoHGdYgyHwZTM595cnxy4Jii2f9ADS3ml_KGsK8cejXG4XFUJksV1xyxC1TAop2QfFXaknQRRJ8P9mU7wnkybTLfD5stFWYQekouWQMoV3LvqgwjtFMRUb12g2ZZz6_noICPAxJnJmHE0nmNQzg4)
+![Infographic listing questions you might be asking yourself about your company's brand power and image ](https://lh6.googleusercontent.com/jOjgoHGdYgyHwZTM595cnxy4Jii2f9ADS3ml_KGsK8cejXG4XFUJksV1xyxC1TAop2QfFXaknQRRJ8P9mU7wnkybTLfD5stFWYQekouWQMoV3LvqgwjtFMRUb12g2ZZz6_noICPAxJnJmHE0nmNQzg4 "Questions you might be asking yourself about your company's brand power and image")
 
 If you ever catch yourself, asking the following questions:
 
@@ -55,9 +71,9 @@ What makes brand surveys sui generis, is the fact that,
 * Themed as per your brand, and 
 * Ultimately cater to your brand!
 
-## Top 6 Reasons You Should Conduct Brand Surveys
+## Top 6 Reasons Why You Should Conduct Brand Surveys In 2023
 
-![](https://lh4.googleusercontent.com/43Rsn7_jdcvmvwi1Ap1VvMfM00bXcLj-ZT6qt8IGc3eMHqXV2rlFIpd73GvlxlgGhK_D43fLxCJgh1GQhehexzpHy-myLXUr8F6GytknhyOE9S0mZPPE_dmt17jKCoII_AAPT_LxWfK3RZuoAz1aT1k)
+![Infographic showing the top 6 reasons why you should conduct brand surveys in 2023](https://lh4.googleusercontent.com/43Rsn7_jdcvmvwi1Ap1VvMfM00bXcLj-ZT6qt8IGc3eMHqXV2rlFIpd73GvlxlgGhK_D43fLxCJgh1GQhehexzpHy-myLXUr8F6GytknhyOE9S0mZPPE_dmt17jKCoII_AAPT_LxWfK3RZuoAz1aT1k "Top 6 reasons why you should conduct brand surveys in 2023")
 
 ### 1. Customer Satisfaction & Loyalty
 
@@ -113,7 +129,7 @@ A Brand Kit, aka Brand Identity Kit, is a company asset that consists of design 
 
 It is a representation of the company's ideology and essence. It comprises of the following:
 
-![](https://lh6.googleusercontent.com/mqtAOdXf0Vxb1o7TWFxilYHDb7lbDVu4avUrOgWqBxx5-8s5wt8XgJb3e8ZQFr1QpBJbNRdrWla3K0UC5VVUf1Dy4dk4pe-gUTI2_4EjsIMOulzLUAPDtt0OSeIgPSli9tkoD3oi0YCQGYOf9esdRBI)
+![Infographic representing the major elements of a brand kit](https://lh6.googleusercontent.com/mqtAOdXf0Vxb1o7TWFxilYHDb7lbDVu4avUrOgWqBxx5-8s5wt8XgJb3e8ZQFr1QpBJbNRdrWla3K0UC5VVUf1Dy4dk4pe-gUTI2_4EjsIMOulzLUAPDtt0OSeIgPSli9tkoD3oi0YCQGYOf9esdRBI "Major elements of a brand kit")
 
 a) Company's Logo: Strategic logo design and placement over all products, services, content, and contributions.
 
