@@ -396,7 +396,7 @@ export default {
         url: 'https://formester.com/formester-vs-forms-app/',
         title: 'Formester vs Forms App | Forms App Alternative - Formester',
         description:
-          "Trying to decide between Formester vs Forms App? Both are great form builders, but which one is right for you? We've put together a side-by-side comparison choose and get started today!",
+          "Clear out your confusion now! With custom forms, data collection, actionable insights and affordable prices, see how Formester offers you more!",
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with formester vs forms.app page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs forms.app page image alt

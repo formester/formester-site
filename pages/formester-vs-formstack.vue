@@ -390,7 +390,7 @@ export default {
         url: 'https://formester.com/formester-vs-formstack/',
         title: 'Formester vs Formstack | Formstack Alternative - Formester',
         description:
-          'Looking for a Formstack alternative? Try Formester! Our user-friendly form builder and integrations make collecting and managing data a breeze. Sign up today!',
+          'End your Formstack alternative search! Try Formester for custom forms, data collection, actionable insights and affordable prices so you can make the most out of your form building journey. Sign-up for free, now!',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with formester vs formstack page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs formstack page image alt

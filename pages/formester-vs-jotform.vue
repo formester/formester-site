@@ -7,7 +7,7 @@
             class="col-lg-5 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start"
           >
             <h1 class="section__heading">
-              Jotform Alternative that Gives <span class="hglight">More</span>
+              Jotform  Alternative that Offers <span class="hglight">More</span>
             </h1>
             <p class="section__subtitle mt-3">
               Declutter your work with a faster and intuitive form builder.
@@ -394,7 +394,7 @@ export default {
         url: 'https://formester.com/formester-vs-jotform/',
         title: 'Jotform Alternative | Formester vs Jotform - Formester',
         description:
-          'Discover a powerful Jotform alternative with Formester. Create custom forms, collect data and grow your business. Try it now and see the difference. Sign up today.',
+          'Powerful Alternative to Jotform. Custom forms, data collection, actionable insights & more to grow your business. Start by signing-up for free!',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with formester vs jotform page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs jotform page image alt
