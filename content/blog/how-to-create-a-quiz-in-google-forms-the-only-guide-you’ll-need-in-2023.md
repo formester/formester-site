@@ -12,13 +12,23 @@ metaTitle: How to Create A Quiz in Google Forms | The Only Guide You’ll Need i
 metaDescription: The easiest way to create a quiz in Google Forms in 2023 |
   Learn about the various kinds of popular Online Quizzes | Includes 10 Tips for
   specifically creating an Educational Quiz
-keywords: xyz
+keywords: "How to create an online quiz in google forms, create an online quiz
+  in google forms, google forms score, google forms calculation, google forms
+  assessment, google forms lead scoring, formester, online quiz on formester,
+  create online quiz on formeste, How to create a quiz in Google Forms,
+  Formester Blog, online form advice, small business tips, quizzes, educational
+  use for teachers and students, or even professional use at work, surveys,
+  applications, polls, online form software help, quickest way to create a quiz,
+  make a new quiz, create a new quiz, create a new online quiz, educational
+  quiz, entertainment quiz, buzzfeed quiz, lead generation quiz, business quiz,
+  aptitude quiz,  online quiz in google forms, quiz in google forms, google
+  forms quiz, google forms "
 author: Navni Dighe
 createdAt: 2023-04-21T10:07:18.926Z
 coverImg: /img/how-to-create-a-quiz-in-google-forms_-the-only-guide-you’ll-need-in-2023.png
 coverImgAlt: "How to Create A Quiz in Google Forms: The Only Guide You’ll Need in 2023"
 featured: false
-published: false
+published: true
 ---
 Honestly, how many weekends have you spent not going out with your friends, and instead,
 
