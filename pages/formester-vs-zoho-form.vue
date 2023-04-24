@@ -147,6 +147,8 @@
       </div>
     </section>
 
+    <SwitchToFormester />
+
     <section class="container testimonials text-center my-5 py-5">
       <h2 class="section__heading">Testimonials</h2>
       <p class="section__subtitle mb-5">
