@@ -58,6 +58,10 @@ export default {
   background: #4f3895;
   color: white;
 }
+.btn-all-templates:hover {
+  color: white;
+  opacity: 0.9;
+}
 
 .templates {
   /* padding: 24px; */
