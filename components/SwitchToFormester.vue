@@ -2,7 +2,7 @@
   <div class="container py-5 px-2">
     <div class="row">
         <div class="heading d-flex flex-column align-items-center text-center">
-            <h2 class="section__heading">Why you should switch to formester</h2>
+            <h2 class="section__heading">Why you should switch to Formester</h2>
         </div>
 
         <div class="templates mt-md-5">
