@@ -96,7 +96,7 @@ export default {
     border: none;
 }
 .card:hover {
-  /* box-shadow: 0px 0px 15px 3px rgba(79, 56, 149, 0.25); */
+  transition: all ease-in-out 300ms;
   box-shadow: 0px 6px 14px 2px rgba(214,214,214,1);
   cursor: pointer;
 }
