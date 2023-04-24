@@ -40,6 +40,7 @@
         />
       </div>
     </div>
+    <SpamPreventionTipsSection />
     <Testimonial 
       :testimonials="randomTestimonials"
     />
