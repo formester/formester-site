@@ -34,42 +34,42 @@ export default {
                     title: 'Value for Money',
                     description:'At Formester, we totally believe in the concept of value for money. We take care that you are getting the best that you can, with a form builder whilst ensuring every penny you spent was worth it.',
                     imageSrc: 'icons/dollar.jpg',
-                    altText: '',
+                    altText: 'Formester values for money',
                     link: 'pricing'
                 },
                 {
                     title: 'Rapid Development Experience',
                     description:'We value your time! Bid farewell to the waiting time that comes with loading screens; And experience rapid, efficient and optimized form building with us.',
-                    imageSrc: 'icons/dollar2.jpg',
-                    altText: '',
+                    imageSrc: 'icons/lighting.jpg',
+                    altText: 'no loading screen which makes experience faster',
                     link: 'features/html-form-backend'
                 },
                 {
                     title: 'Wide Customization Scope',
                     description:'Your creativity can take full flight with us! We offer a number of templates with a wide scope of customization; even with our free plan!',
-                    imageSrc: 'icons/dollar3.jpg',
-                    altText: '',
+                    imageSrc: 'icons/brush.jpg',
+                    altText: 'we provide wide customization with numbers of templates',
                     link: 'templates'
                 },
                 {
                     title: 'Prompt Customer Support',
                     description:'From the first step of signing-up to the last step of publishing your web forms, we are here to assist you! Chat support, contact form, email communication, you name it; just choose a method you’re comfortable with, and we’ll take you from there.',
-                    imageSrc: 'icons/dollar4.jpg',
-                    altText: '',
+                    imageSrc: 'icons/helpline.jpg',
+                    altText: 'providing customer support at every step',
                     link: 'contact'
                 },
                 {
                     title: 'Top-tier Security',
                     description:'If there is one thing that every form builder, or for that matter, any data collection software must ensure is, tight security. By using captcha and re-captcha integrations, we stop bots from spamming your data and help you attain data which will yield accurate and actionable insights.',
-                    imageSrc: 'icons/dollar5.jpg',
-                    altText: '',
+                    imageSrc: 'icons/lock.jpg',
+                    altText: 'secures you data with re-captcha, no spam data',
                     link: 'features/spam-protection'
                 },
                 {
                     title: 'Seamless Integration',
                     description:'At Formester, we understand that you may already be using a range of tools to run your business. Therefore, we offer seamless integration with popular third-party apps like Zapier and Google Sheets so you can connect your form data with the tools you already use.',
-                    imageSrc: 'icons/dollar6.jpg',
-                    altText: '',
+                    imageSrc: 'icons/atom.jpg',
+                    altText: 'offer wide number of integration to connect with',
                     link: 'integrations'
                 },
             ]
