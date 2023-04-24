@@ -11,7 +11,7 @@ keywords: survey questions examples, survey questions, survey form, types of
   survey questions, good survey questions, good survey questions examples
 author: Vivek Badani
 createdAt: 2022-08-17
-coverImg: /img/the-best-survey-question-2022__best-survey-questions.png
+coverImg: /img/the-best-15-survey-questions-in-2023-with-examples-.png
 coverImgAlt: Cover image for the blog, "The Best Survey Questions in 2023"
 featured: false
 published: true
