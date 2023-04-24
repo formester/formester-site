@@ -32,25 +32,25 @@ export default {
           title: 'Thank you users',
           description: 'Send a short, simple and sweet thank you email, as soon as you receive a submission!',
           imageSrc: 'thankyou.jpg',
-          altText: 'prevent spam using google reCaptcha'
+          altText: 'thank your user for submitting form'
         },
         {
           title: 'Assign a ticket to your form users',
           description: 'Improve efficiency and get more work done by introducing structure to your queries. Mark tickets as resolved once you have attended to them.',
           imageSrc: 'ticket.jpg',
-          altText: 'have double opt-in to confirm user'
+          altText: 'assign tickets to forms users to track any quaries'
         },
         {
           title: 'Send Promotional news, Offers & more',
           description: 'Build a solid brand by sending out consistence and personalized promotional emails, newsletters, offers and more!',
           imageSrc: 'offer.jpg',
-          altText: 'have a secure web hosting'
+          altText: 'send promotional emails'
         },
         {
           title: 'Acknowledgement',
           description: 'Send out acknowledgement emails for any queries and messages you receive.',
           imageSrc: 'acknowledgement.jpg',
-          altText: 'use web application firewall to block spam '
+          altText: 'send acknowledgement emails to users'
         },
       ]
     }
