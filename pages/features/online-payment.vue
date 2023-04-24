@@ -41,6 +41,7 @@
     <Testimonial 
       :testimonials="randomTestimonials"
     />
+    <TemplateSection />
     <CallToActionSection />
   </div>
 </template>
@@ -53,9 +54,10 @@ import { allTestimonials } from '@/constants/testimonials'
 
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
+import TemplateSection from '../../components/TemplateSection.vue'
 
 export default {
-  components: { FeatureDetail, CallToActionSection, Testimonial },
+  components: { FeatureDetail, CallToActionSection, Testimonial, TemplateSection },
   computed: {
     meta() {
       const metaData = {
