@@ -207,7 +207,7 @@ At Formester, we have the perfect 3 step strategy, to get you going, right away!
 
 > P.S., We also ensure you experience a [seamless integration of your survey form into your website](https://formester.com/features/html-form-backend/).
 
-2. Avoid the brainstorming and hassle of going through numerous articles and blogs to select the right question. 
+2. Avoid the brainstorming and hassle of going through numerous articles and blogs to select the right question.
 
 Instead, choose from a variety of [pre-designed and carefully developed Survey Templates](https://formester.com/templates/) and customize them as per your choice, requirements and brand kit.
 
@@ -217,6 +217,7 @@ Make use of key features, such as conditional logic, to [ask only what is requir
 
 3. Once you've gathered submissions on your surveys, use our powerful analytics system to track your metrics, gain critical insights and ofcourse, know your customers! 
 
+\
 And just like that, you're all set to conduct a brand survey!
 
 ## Conclusion
