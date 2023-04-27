@@ -220,6 +220,8 @@ Here are the...
 
 ## **Top 6 Places where your Survey is likely to Gather Effective and Accurate Responses**
 
+![Infographic showing the Top 6 Places where your Survey is likely to Gather Effective and Accurate Responses, namely: Website, Mobile Application, Third-party Platforms, Social Media Platforms, Email Surveys and Survey Platforms](/img/6-effective-places-to-publish-your-survey.png "The Top 6 Places where your Survey is likely to Gather Effective and Accurate Responses")
+
 ### 1. Website
 
 If you already have a business with an associated website and you're looking forward to add more features or launch a child product;
