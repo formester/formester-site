@@ -217,6 +217,7 @@ Make use of key features, such as conditional logic, to [ask only what is requir
 
 3. Once you've gathered submissions on your surveys, use our powerful analytics system to track your metrics, gain critical insights and ofcourse, know your customers! 
 
+\
 And just like that, you're all set to conduct a brand survey!
 
 ## Conclusion
