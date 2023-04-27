@@ -1,9 +1,21 @@
 ---
 title: How to Create the Perfect Product Map Using Surveys in 2023
-description: abc
-metaTitle: abc
-metaDescription: abc
-keywords: abc
+description: This blog is only guide you'll need in 2023 to develop the perfect
+  Product Map. Whether you want to create a new product or improve an existing
+  one, a Product Map is the key ingredient. Gain the attention of potential
+  investors, find competitor brands' loopholes, understand customer requirements
+  and learn about the key metrics to track! Also includes, 30+ sample questions.
+metaTitle: Product Map Survey Questions 2023 | Develop Successful Products and
+  Improve Existing ones
+metaDescription: 30+ Survey Questions to develop a successful Product Map | Gain
+  the attention of Investors | Create successful products and Improve Existing
+  ones
+keywords: survey questions, product roadmap survey questions, product map survey
+  questions, product roadmap, successful product roadmap, what is a product map,
+  what is a product roadmap, how to create a product roadmap, how to create a
+  product map, how to create a product roadmap using surveys, surveys for
+  product roadmap, Formester blog, Formester surveys, survey templates, product
+  roadmap survey templates, product map survey template
 author: Navni Dighe
 createdAt: 2023-04-27T07:54:41.721Z
 coverImg: /img/how-to-create-the-perfect-product-map-using-surveys-in-2023-min.png
@@ -14,11 +26,8 @@ published: true
 The journey from an idea to a product seems complicated. There are plenty of steps involved:
 
 1. Evaluating your idea on many different levels, 
-
 2. What problems does it solve, 
-
 3. How it affects your target audience and, most importantly,
-
 4. How it will benefit your users; 
 
 These are a few crucial questions that are responsible for converting an idea into a product.
@@ -35,7 +44,7 @@ It wouldn't do justice to the term, if we merely mentioned them here, instead of
 
 No wonder, one isn't surprised when they learn about Product Managers' CTCs.
 
-![](/img/how-surveys-can-help-create-a-product-map.png)
+![Funny meme showing how Product Managers are highly paid.](/img/how-surveys-can-help-create-a-product-map.png "Why one becomes a Product Manager")
 
 Whilst there are several elements and components that go into the development of a Product Map, 
 
@@ -65,7 +74,7 @@ Having said this, let's discuss,
 
 ## How Surveys can help you along the Various Stages of developing a Product RoadMap
 
-![](/img/how-to-create-the-perfect-product-map-using-surveys-in-2023_1.png)
+![Infographic showing the 6 Stages of Product Map Development, Where Surveys Can Help, namely: The Idea Stage, The Target Audience Stage, The Feature Selection and Improvement Stage, The Timeline and Development Stage, Launch and Promotional Events, and, The Existing Product Optimization Stage](/img/how-to-create-the-perfect-product-map-using-surveys-in-2023_1.png "The 6 Stages of Product Map Development, Where Surveys Can Help")
 
 ### 1. The Idea Stage
 
@@ -84,13 +93,9 @@ Infact, you might be surprised to find more breakthroughs about it. 
 #### Example Questions
 
 1. If such a product (your product idea) were available in the market, would you buy it?
-
 2. Are you aware of any such other (To analyze competitor brand awareness) product?
-
 3. Would such a product effectively solve this problem (problem domain your idea solves)?
-
 4. What would you improve in such (your product idea) a product?
-
 5. How many people do you know of, who would be interested in such a product (your product idea)?
 
 ### 2. The Target Audience Stage
@@ -108,13 +113,9 @@ You may be pleased to see how a simple survey can bring you important data, abou
 #### Example Questions
 
 1. Would such a product interest you?
-
 2. On a scale of 1-5, how happy would you be, if this product was made available in the market?
-
 3. Would you recommend this product to your family and friends?
-
 4. On a scale of 1-10, how likely are you to use this product? 
-
 5. Why or why not, would you invest in such a product?
 
 While creating a survey to determine your target audience, ensure that you **mark fields like age, gender, occupation, interests, location, etc., as compulsory or required**;
@@ -140,13 +141,9 @@ Moreover, your audience or potential customers will be more excited and engaged 
 #### Example Questions
 
 1. Do you think the features offered by this product are sufficient?
-
 2. Are all the features easy to use?
-
 3. If there was one feature, which you could improve, what would it be and why?
-
 4. Is there any other feature that can be added?
-
 5. Which feature excites you the most?
 
 ### 4. Timeline and Development Stage
@@ -174,13 +171,9 @@ But also make your target audience aware, loyal and excited for what's coming.
 #### Example Questions
 
 1. Do you think the product is worth its price?
-
 2. Have you heard of any such other products?
-
 3. If this product was made available in the market by (timeline), would you buy it?
-
 4. How sooner would you like for this product to be made available to you?
-
 5. Do you think some of the feature developments can wait? If yes, which ones and why?
 
 ### 5. Launch and Promotional Events
@@ -198,13 +191,9 @@ Have engaging activities lined up, as part of these promotional and launch event
 #### Example Questions
 
 1. Would you rather join this event over a virtual platform or at (physical location)?
-
 2. Would you be interested in bringing your friends to this event?
-
 3. Would you like to know about the product back-story? 
-
 4. Are you curious about our brand story?
-
 5. Do you have a special association with this brand/product?
 
 ### 6. Existing Product Optimization
@@ -220,13 +209,9 @@ Once you have such insights, you always have the option to tweak your existing p
 #### Example Questions
 
 1. What made you choose us over (competitor brand)?
-
 2. What would you change about this product?
-
 3. Which feature do you use the most?
-
 4. Which feature would you have somewhat improved?
-
 5. Which features impress you the most?
 
 Once you're ready with your survey, placing it in the proper settings is the next important step.
@@ -295,7 +280,7 @@ That said, here are some of the...
 
 ## Top 4 Metrics You Should Track for a Product RoadMap Survey
 
-![](/img/how-to-create-the-perfect-product-map-2-.png)
+![Infographic showing 4 Top Metrics To Track in a Product RoadMap Survey, namely: Net Promoter Score (NPS), Customer Effort Score (CES), Customer Acquisition Cost (CAC) and Usability](/img/how-to-create-the-perfect-product-map-2-.png "The Top 4 Metrics To Track in a Product RoadMap Survey")
 
 ### 1. NPS
 
