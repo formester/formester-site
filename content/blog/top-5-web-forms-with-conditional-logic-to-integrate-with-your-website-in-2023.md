@@ -28,7 +28,7 @@ Well, aren't all these a few qualities that would encourage you to fill out a we
 
 As it is filling out a web form is a boring job;
 
-![](/img/top-5-web-forms-with-conditional-logic-to-integrate-with-your-website-in-2023.png)
+![Funny meme showing how uninterested people are to fill out web forms](/img/top-5-web-forms-with-conditional-logic-to-integrate-with-your-website-in-2023.png "Would you rather complete a web form?")
 
 And if your business wants to get this boring job done,
 
@@ -53,7 +53,7 @@ For example, Consider the following two statements:
 
 Conditional Statement: If it rains today, then we won't go out.
 
-![](/img/top-5-web-forms-with-conditional-logic-to-integrate-with-your-website-in-2023-1-.png)
+![Infographic showing Conditional Logic Example: Consider the following two statements:  1. It might rain today; 2. We won't go out; Conditional Statement: If it rains today, then we won't go out.](/img/top-5-web-forms-with-conditional-logic-to-integrate-with-your-website-in-2023-1-.png "Conditional Logic Example")
 
 It is clear that for the condition of not going out, to be met, the precondition of rain occurring, must first be met.
 
@@ -73,7 +73,7 @@ Afterall, no one wants to waste their time filling out information that won’t 
 
 ### A Few Use-Cases of Conditional Logic:
 
-![](/img/3_top-5-web-forms-with-cl.png)
+![Infographic showing a few use-cases of conditional logic: 1. Showing or hiding secondary questions depending on the users' input, 2. Allowing users to skip irrelevant pages in your survey, 3. Skip follow-up questions, 4. Curate personalized gratitude messages depending on survey results, 5. Making the Submit button appear only after all relevant and required fields have been filled](/img/3_top-5-web-forms-with-cl.png "A Few Use-Cases of Conditional Logic")
 
 1. Showing or hiding secondary questions depending on the users' input
 2. Allowing users to skip irrelevant pages in your survey
@@ -109,13 +109,13 @@ Well, time to get out and get going, because this list mentions the top 5 web fo
 
 Ready for the tour?
 
-![](/img/4_top-5-web-forms-with-cl.png)
+![Quick Comparison Chart for the Top 5 Web Forms with Conditional Logic in 2023: 1. Formester, 2. Jotform, 3. Formstack, 4. Pabbly Forms, 5. Ninja Forms ](/img/4_top-5-web-forms-with-cl.png "Quick Comparison Chart for the Top 5 Web Forms with Conditional Logic in 2023")
 
 Let’s take a detailed view at each of them…
 
 ### 1. Formester
 
-![](/img/5_top-5-web-forms-with-cl.png)
+![Infographic showing Formester's web page](/img/5_top-5-web-forms-with-cl.png "Formester Web Forms")
 
 Formester believes in making your forms fun and easy.
 
@@ -123,7 +123,7 @@ We accomplish this by providing you with a [no-code, drag-and-drop, and intuitiv
 
 #### Conditional Logic Functionalities:
 
-![](/img/6_top-5-web-forms-with-cl.png)
+![Infographic showing Formester's Conditional Logic feature page](/img/6_top-5-web-forms-with-cl.png "Formester's Conditional Logic Web Forms")
 
 * Skip to other pages
 * Skip to follow up questions
@@ -142,7 +142,7 @@ Click here for [more details](https://formester.com/features/conditional-logic/)
 
 Formester also offers [customizable, pre-designed and free Templates](https://formester.com/templates/).
 
-![](/img/7_top-5-web-forms-with-cl.png)
+![Infographic showing Formester's Template page](/img/7_top-5-web-forms-with-cl.png "Formester's Template page")
 
 #### Pricing
 
@@ -150,7 +150,7 @@ The Basic plan is free for upto 10 forms and 100 submissions, giving you the [sc
 
 ### 2. Jotform
 
-![](/img/8_top-5-web-forms-with-cl.png)
+![Infographic showing Jotform's web page](/img/8_top-5-web-forms-with-cl.png "Jotform Web Forms")
 
 [Jotform](https://www.jotform.com/) is one of the big players in the form builder software industry.
 
@@ -177,7 +177,7 @@ The Starter plan is free and includes 5 forms with upto 100 submissions.
 
 ###  3. Formstack
 
-![](/img/9_top-5-web-forms-with-cl.png)
+![Infographic showing Formstack's web page](/img/9_top-5-web-forms-with-cl.png "Formstack's Web Forms")
 
 [Formstack](https://www.formstack.com/) focuses on offering a form-builder that simplifies the process of data collection and automating processes.
 
@@ -196,7 +196,7 @@ The basic plan, named the 'Forms Starter' plan, starts at $50/month, with 20 for
 
 ### 4. Pabbly Forms
 
-![](/img/10_top-5-web-forms-with-cl.png)
+![Infographic showing Pabbly Forms' web page](/img/10_top-5-web-forms-with-cl.png "Pabbly Forms' Web Forms")
 
 [Pabbly Forms](https://www.pabbly.com/form-builder/) is a form-building software with several features.
 
@@ -217,7 +217,7 @@ The standard plan for $10/month offers 1 form with unlimited submissions and acc
 
 ### 5. Ninja Forms
 
-![](/img/11_top-5-web-forms-with-cl.png)
+![Infographic showing Ninja Forms' web page](/img/11_top-5-web-forms-with-cl.png "Ninja Forms' Web Forms")
 
 [Ninja Forms](https://ninjaforms.com/) lets you build user-friendly forms while providing easy integration with WordPress.
 
