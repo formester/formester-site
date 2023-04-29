@@ -49,7 +49,6 @@ In other words, it allows for dynamism, by executing a certain process or activi
 For example, Consider the following two statements:
 
 1. It might rain today.
-
 2. We won't go out.
 
 Conditional Statement: If it rains today, then we won't go out.
@@ -125,3 +124,129 @@ We accomplish this by providing you with a [no-code, drag-and-drop, and intuitiv
 #### Conditional Logic Functionalities:
 
 ![](/img/6_top-5-web-forms-with-cl.png)
+
+* Skip to other pages
+* Skip to follow up questions
+* Skip Logic
+
+Click here for [more details](https://formester.com/features/conditional-logic/).
+
+#### Other Features with the Basic Plan:
+
+* HTML Form Backend
+* Auto Responder
+* Spam Protection
+* Powerful Analytics
+* Online Payment
+* Digital Signature
+
+Formester also offers [customizable, pre-designed and free Templates](https://formester.com/templates/).
+
+![](/img/7_top-5-web-forms-with-cl.png)
+
+#### Pricing
+
+The Basic plan is free for upto 10 forms and 100 submissions, giving you the [scope to explore and make the right decision](https://formester.com/pricing/).
+
+### 2. Jotform
+
+![](/img/8_top-5-web-forms-with-cl.png)
+
+[Jotform](https://www.jotform.com/) is one of the big players in the form builder software industry.
+
+That said, there are plenty of advanced features to use, alongwith thorough user guides and a [range of helpful blogs](https://www.jotform.com/blog/) on diverse topics.
+
+#### Conditional Logic Functionalities:
+
+* Show/Hide Field
+* Update/Calculate Field
+* Enable/Require Field
+* Change “Thank You” Page
+* Change E-mail Recipient
+
+#### Other features with the Basic Plan:
+
+* Customize using CSS codes
+* Update Entries
+* Upload to Dropbox
+* Webhooks
+
+#### Pricing
+
+The Starter plan is free and includes 5 forms with upto 100 submissions.
+
+###  3. Formstack
+
+![](/img/9_top-5-web-forms-with-cl.png)
+
+[Formstack](https://www.formstack.com/) focuses on offering a form-builder that simplifies the process of data collection and automating processes.
+
+Formstack's conditional logic feature enables you to create versatile forms with ease and grants them a look of brevity.
+
+#### Other features with the Basic Plan:
+
+* Data Encryption
+* Save and Resume
+* File and Image Uploads
+* Drag and Drop
+
+#### Pricing
+
+The basic plan, named the 'Forms Starter' plan, starts at $50/month, with 20 forms and upto 1000 submissions.
+
+### 4. Pabbly Forms
+
+![](/img/10_top-5-web-forms-with-cl.png)
+
+[Pabbly Forms](https://www.pabbly.com/form-builder/) is a form-building software with several features.
+
+It helps you apply conditional logic to various types of forms, such as contact forms, registration forms, lead generation forms, etc.
+
+The conditional logic feature is pretty simple and provides the basic functionality of showing/hiding additional fields based on user input.
+
+#### Other Features with the Basic Plan:
+
+* Form Themes and Customization
+* Analytics
+* File Uploads
+* Form scheduling
+
+#### Pricing
+
+The standard plan for $10/month offers 1 form with unlimited submissions and access to all features.
+
+### 5. Ninja Forms
+
+![](/img/11_top-5-web-forms-with-cl.png)
+
+[Ninja Forms](https://ninjaforms.com/) lets you build user-friendly forms while providing easy integration with WordPress.
+
+Their web forms help you give a professional look to your web forms, so much so, that you won't need a developer.
+
+The conditional logic feature offers the simple functionality of showing/hiding fields based on user-input.
+
+#### Other Features with the Basic Plan:
+
+* File Uploads
+* Layout & Styles
+* Multi-Step Forms
+
+#### Pricing
+
+The basic plan starts at $99/year for 1 website.
+
+### Conclusion
+
+There are plenty of web form builders available in the form-building software industry. 
+
+However, each of them is different as regards their service.
+
+Some are cheaper than others, but don’t offer the required suite of features;
+
+And some offer advanced features but don’t fit the average budget.
+
+Under such circumstances, it is difficult to decide which one’s right for you;
+
+And we are here to [make that decision easy for you](https://app.formester.com/users/sign_up).
+
+This blog details a comprehensive list of the top 5 online form building softwares you can use in 2023 to integrate with your website and boost your business.
