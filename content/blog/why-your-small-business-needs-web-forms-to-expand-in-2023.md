@@ -1,5 +1,5 @@
 ---
-title: Why Your Small Business Needs Web Forms to Expand in 2023
+title: How to Expand Your Small Business using Web Forms in 2023
 description: The contemporary era of digitization and AI has opened doors to
   limitless possibilities for growth and expansion in unconventional ways.
   Regardless of the where you're located, what your business is about or how big
@@ -21,8 +21,8 @@ keywords: "grow your small business, web forms, small business web forms, web
   alternative, types of web forms, web form tips, html forms, free web forms "
 author: Navni Dighe
 createdAt: 2023-05-03T17:13:15.050Z
-coverImg: /img/10-reasons-why-you-are-still-not-doing-surveys.png
-coverImgAlt: Why Your Small Business Needs Web Forms to Expand in 2023
+coverImg: /img/why-your-small-business-needs-web-forms-to-expand-in-2023.png
+coverImgAlt: How to Expand Your Small Business using Web Forms in 2023
 featured: false
 published: true
 ---
