@@ -8,9 +8,17 @@ description: The contemporary era of digitization and AI has opened doors to
   business owners out there, with big ideas. It discusses one such digitization
   tool, i.e., Online Web Forms and how featuring them can positively affect your
   business in terms of various aspects.
-metaTitle: abc
-metaDescription: abc
-keywords: abc
+metaTitle: Web Forms to Expand Your Small Business | Top Digitization Tools to
+  use in 2023 | Best Form Builder
+metaDescription: How to grow your small business using web forms | Web forms as
+  a digitization tool | Small Business Growth 2023 Hack
+keywords: "grow your small business, web forms, small business web forms, web
+  form software for small business, grow your small business using web forms,
+  web forms digitization, no code form builder, drag and drop form builder,
+  small business advice, formester blog. formester, faq, business growth 2023
+  hacks, customizable form templates, free form templates, form builder, expand
+  your business, business tools, digitization, typeform alternative, jotform
+  alternative, types of web forms, web form tips, html forms, free web forms "
 author: Navni Dighe
 createdAt: 2023-05-03T17:13:15.050Z
 coverImg: /img/10-reasons-why-you-are-still-not-doing-surveys.png
