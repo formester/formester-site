@@ -1,6 +1,13 @@
 ---
 title: Why Your Small Business Needs Web Forms to Expand in 2023
-description: abc
+description: The contemporary era of digitization and AI has opened doors to
+  limitless possibilities for growth and expansion in unconventional ways.
+  Regardless of the where you're located, what your business is about or how big
+  or small it is; If you know how to use these tools effectively, your business
+  growth potential will skyrocket. This blog is dedicated to all the small
+  business owners out there, with big ideas. It discusses one such digitization
+  tool, i.e., Online Web Forms and how featuring them can positively affect your
+  business in terms of various aspects.
 metaTitle: abc
 metaDescription: abc
 keywords: abc
