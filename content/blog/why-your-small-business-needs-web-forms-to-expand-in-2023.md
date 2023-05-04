@@ -21,7 +21,7 @@ keywords: "grow your small business, web forms, small business web forms, web
   alternative, types of web forms, web form tips, html forms, free web forms "
 author: Navni Dighe
 createdAt: 2023-05-03T17:13:15.050Z
-coverImg: /img/why-your-small-business-needs-web-forms-to-expand-in-2023.png
+coverImg: /img/how_to_expand_your_small_business_using_web_forms_in_2023.png
 coverImgAlt: How to Expand Your Small Business using Web Forms in 2023
 featured: false
 published: true
