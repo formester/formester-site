@@ -6,7 +6,7 @@
         {{ feature.description }}
       </p>
       <div class="row flex justify-content-between mt-40px">
-        <div class="col-lg-6 flex flex-column">
+        <div class="col-xl-6 flex flex-column">
           <div class="feature__contentCard" :class="{ active1: activeCard === 1 }" @click="setActiveCard(1)">
             <h3>{{ feature.contents[0].title }}</h3>
             <p>{{ feature.contents[0].description }}</p>
@@ -28,16 +28,16 @@
             </svg>
           </NuxtLink>
         </div>
-        <div class="col-lg-5 position-relative">
+        <div class="col-xl-5 position-relative d-flex align-items-center justify-content-center">
           <img v-show="activeCard === 0" :src="require(`@/assets/images/features/${feature.img}.svg`)"
-            class="feature__img" />
-          <img v-show="activeCard !== 0" src="@/assets/images/features/blob.png" class="blob" />
+            class="feature__img img-fluid" />
+          <img v-show="activeCard !== 0" src="@/assets/images/features/blob.png" class="blob img-fluid" />
           <img :style="illus1Style" :src="require(`@/assets/images/features/contents/${feature.contents[0].img}.svg`)"
-            class="illus1" />
+            class="illus1 img-fluid" />
           <img :style="illus2Style" :src="require(`@/assets/images/features/contents/${feature.contents[1].img}.svg`)"
-            class="illus2" />
+            class="illus2 img-fluid" />
           <img :style="illus3Style" :src="require(`@/assets/images/features/contents/${feature.contents[2].img}.svg`)"
-            class="illus3" />
+            class="illus3 img-fluid" />
         </div>
       </div>
     </div>
@@ -141,14 +141,8 @@ export default {
   margin-right: 8px;
 }
 
-.active1.feature__contentCard {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.active2.feature__contentCard {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
+.active1.feature__contentCard,
+.active2.feature__contentCard,
 .active3.feature__contentCard {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

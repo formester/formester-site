@@ -20,8 +20,8 @@
             <div>✓ &nbsp; Unlimited forms</div>
           </div>
         </div>
-        <div class="col-lg-6 d-flex align-items-center justify-content-center">
-          <img src="@/assets/images/features/feature-hero.png" alt="Feature Hero image" />
+        <div class="col-lg-6 d-flex align-items-center justify-content-center mt-4 mt-lg-0">
+          <img src="@/assets/images/features/feature-hero.png" alt="Feature Hero image" class="img-fluid" />
         </div>
       </div>
     </div>
