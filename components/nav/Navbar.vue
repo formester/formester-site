@@ -28,16 +28,16 @@
             </NuxtLink>
           </li>
           <li class="nav-item dropdown me-2">
-            <a
+            <NuxtLink
               class="nav-link"
               id="navbarDropdown"
               role="button"
-              data-bs-toggle="dropdown"
               aria-expanded="false"
+              to="/features/"
             >
               Features
               <HoverSvg />
-            </a>
+            </NuxtLink>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li @click="collapseNav">
                 <NuxtLink class="dropdown-item" to="/features/html-form-backend/"
@@ -178,9 +178,9 @@ a.nuxt-link-exact-active {
   box-shadow: none;
 }
 
-/* .nav-item.dropdown:hover .dropdown-menu {
+.nav-item.dropdown:hover .dropdown-menu {
   display: block;
-} */
+}
 
 .dropdown-item:hover {
   background: var(--clr-primary-light);
