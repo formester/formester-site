@@ -31,7 +31,10 @@
         <div class="col-xl-5 position-relative d-flex align-items-center justify-content-center">
           <img v-show="activeCard === 0" :src="require(`@/assets/images/features/${feature.img}.svg`)"
             class="feature__img img-fluid" />
-          <img v-show="activeCard !== 0" src="@/assets/images/features/blob.png" class="blob img-fluid" />
+          <img v-show="activeCard !== 0 && !feature.bgPink" src="@/assets/images/features/blob.png"
+            class="blob img-fluid" />
+          <img v-show="activeCard !== 0 && feature.bgPink" src="@/assets/images/features/blob-2.png"
+            class="blob img-fluid" />
           <img :style="illus1Style" :src="require(`@/assets/images/features/contents/${feature.contents[0].img}.svg`)"
             class="illus1 img-fluid" />
           <img :style="illus2Style" :src="require(`@/assets/images/features/contents/${feature.contents[1].img}.svg`)"
