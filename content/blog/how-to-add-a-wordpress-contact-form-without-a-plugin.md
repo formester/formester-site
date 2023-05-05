@@ -31,7 +31,7 @@ The more access you have to your clients, the greater the scope of personalizati
 
 Knowing this, how often have you wondered about having a sophisticated yet simple solution that helps you reach your clients? 
 
-Asides reaching out to your clients, have you ever considered, if your clients also have an easy, neat and efficient means to reach you whenever they wish to do so?
+Besides reaching out to your clients, have you ever considered, if your clients also have an easy, neat and efficient means to reach you whenever they wish to do so?
 
 If yes, then chances are you are aware of the existence & importance of [contact forms](https://fluentforms.com/why-you-need-contact-form/).
 
