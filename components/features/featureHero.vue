@@ -21,7 +21,7 @@
           </div>
         </div>
         <div class="col-lg-6 d-flex align-items-center justify-content-center mt-4 mt-lg-0">
-          <img src="@/assets/images/features/feature-hero.png" alt="Feature Hero image" class="img-fluid" />
+          <img src="@/assets/images/features/feature-hero.svg" alt="Feature Hero image" class="img-fluid" />
         </div>
       </div>
     </div>
