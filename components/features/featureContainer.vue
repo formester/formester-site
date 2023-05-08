@@ -60,7 +60,9 @@ export default {
       if (this.activeCard === 1) {
         return {
           transform: 'scale(1.2)',
+          left: '3%',
           display: 'inline',
+          zIndex: '100',
         }
       }
       return this.activeCard !== 0 ? {} : { display: 'none' }
@@ -70,6 +72,8 @@ export default {
         return {
           transform: 'scale(1.2)',
           display: 'inline',
+          right: '5%',
+          zIndex: '100',
         }
       }
       return this.activeCard !== 0 ? {} : { display: 'none' }
@@ -79,6 +83,7 @@ export default {
         return {
           transform: 'scale(1.2)',
           display: 'inline',
+          zIndex: '100',
         }
       }
       return this.activeCard !== 0 ? {} : { display: 'none' }
