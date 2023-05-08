@@ -111,7 +111,7 @@ export default {
   width: 100%;
   padding: 1.5rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-auto-rows: min-content;
   gap: 24px;
 }
@@ -128,11 +128,6 @@ export default {
 
 .no__sapm-image {
   margin-left: -15px;
-}
-@media (max-width: 991px) {
-  .templates {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 @media only screen and (max-width: 765px) {
