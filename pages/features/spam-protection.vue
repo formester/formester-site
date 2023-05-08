@@ -112,6 +112,21 @@ export default {
             'Our database is getting smarter each day. We use machine learning to predict spam submissions. Your every form will improve our prediction.',
           src: 'spam-protection/smart-filters-illus.svg',
         },
+        {
+          title: 'IP/User-Agent Monitoring',
+          description:'One of the most common kinds of malicious activity involves multiple submissions from a single source over a given period. At Formester, you get to track, monitor and update your web form settings to restrict such IPs and reduce spam occurrences.',
+          src: 'spam-protection/ip-user-monitor.jpg',
+        },
+        {
+          title: 'Honeypot Integration',
+          description:'Honeypot acts as a trap to snare bots and spammers. It works by using a field that remains hidden from humans but visible to such annoyances. Web Forms at Formester can be set-up to be easily configured with Honeypot; ensuring security and convenience at one go!',
+          src: 'spam-protection/honeypot-migration.jpg',
+        },
+        {
+          title: 'Cloudflare Turnstile Integration',
+          description:"Cloudflare's popular Turnstile allows for sending traffic through Cloudflare and operates, keeping the visitors free of the hassle and frustration that comes with the need for solving over-the-top CAPTCHA, using just a simple snippet of absolutely free code. At Formester, we use this integration to provide visitors with an abuse-free experience whilst eliminating data privacy concerns for confirming real visitors and providing seamless UX for the users.",
+          src: 'spam-protection/cloudflare-integration.jpg',
+        },
       ],
     }
   },
