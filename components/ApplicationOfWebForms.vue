@@ -9,7 +9,7 @@
             <div v-for="(feature, idx) in features" :key="idx">
                 <div class="card p-3 d-flex align-items-center justify-items-center text-center align-items-md-start text-md-start">
                     <img
-                        :src="require(`../assets/images/icons/${feature.imageSrc}`)"
+                        :src="require(`../assets/images/${feature.imageSrc}`)"
                         class="img-fluid web__form-image"
                         style="width: 120px;"
                         :alt="feature.altText"
@@ -31,25 +31,25 @@ export default {
         {
           title: 'Thank you users',
           description: 'Send a short, simple and sweet thank you email, as soon as you receive a submission!',
-          imageSrc: 'thankyou.jpg',
+          imageSrc: 'icons/thankyou.jpg',
           altText: 'thank your user for submitting form'
         },
         {
           title: 'Assign a ticket to your form users',
           description: 'Improve efficiency and get more work done by introducing structure to your queries. Mark tickets as resolved once you have attended to them.',
-          imageSrc: 'ticket.jpg',
+          imageSrc: 'icons/ticket.jpg',
           altText: 'assign tickets to forms users to track any quaries'
         },
         {
           title: 'Send Promotional news, Offers & more',
           description: 'Build a solid brand by sending out consistence and personalized promotional emails, newsletters, offers and more!',
-          imageSrc: 'offer.jpg',
+          imageSrc: 'icons/offer.jpg',
           altText: 'send promotional emails'
         },
         {
           title: 'Acknowledgement',
           description: 'Send out acknowledgement emails for any queries and messages you receive.',
-          imageSrc: 'acknowledgement.jpg',
+          imageSrc: 'icons/acknowledgement.jpg',
           altText: 'send acknowledgement emails to users'
         },
       ]
@@ -63,7 +63,7 @@ export default {
   width: 100%;
   padding: 1.5rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-auto-rows: min-content;
   gap: 24px;
 }
@@ -80,11 +80,6 @@ export default {
 
 .web__form-image {
   margin-left: -15px;
-}
-@media (max-width: 991px) {
-  .templates {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 @media only screen and (max-width: 765px) {
