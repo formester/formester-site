@@ -17,6 +17,7 @@ keywords: How to add a WordPress contact form without a plug-in, Formester Blog,
   wordpress, wordpress without plug-in, forms, form builder, forms software,
   jotform alternative, typeform alternative, wordpress forms without plugins
 author: Navni Dighe
+authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-04-05T13:10:43.760Z
 coverImg: /img/how-to-add-a-wordpress-contact-form-without-a-plugin-2-.png
 coverImgAlt: How to add a WordPress Contact Form without a Plugin

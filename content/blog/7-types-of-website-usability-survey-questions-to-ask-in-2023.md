@@ -21,6 +21,7 @@ keywords: webforms, formester, survey forms, website usability survey questions
   questions and templates, survey questions and templates, website usability
   survey questions and templates
 author: Navni Dighe
+authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-04-13T13:06:06.213Z
 coverImg: /img/7-types-of-website-usability-survey-questions-to-ask-in-2023.png
 coverImgAlt: 7 Types of Website Usability Survey Questions to Ask in 2023

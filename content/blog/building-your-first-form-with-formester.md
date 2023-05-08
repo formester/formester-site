@@ -6,6 +6,7 @@ description: Different approaches to building web forms with formester
 keywords: create form, build your first form, backend as a service, drag and
   drop form, free form builder, free online form builder
 author: Piyush Singhania
+authorProfile: https://www.linkedin.com/in/piyushsinghaniya/
 createdAt: 2022-05-10
 coverImg: /img/building-your-first-form-with-formester__formester-form-builder-background-cover.png
 coverImgAlt: Cover image for the blog, "Building your first form with formester"

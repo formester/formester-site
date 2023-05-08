@@ -11,6 +11,7 @@ keywords: webforms, website forms, web forms builder, what are web forms, web
   what are web forms, web forms for business, easy web forms, interactive web
   forms
 author: Navni Dighe
+authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-03-20T10:27:47.265Z
 coverImg: /img/web-forms-lead-generation-101.png
 coverImgAlt: "Web Forms: How And Where to Use Them For Your Business"

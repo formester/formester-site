@@ -69,7 +69,14 @@
         </div>
         <div class="sm-text mt-1 article__author-section">
           by
-          <span class="article__author">{{ article.author }}</span>
+          <a
+            :href="article.authorProfile" 
+            :title="article.authorProfile"
+            target="_blank" 
+            rel="noopener"
+          >
+            <span class="article__author">{{ article.author }}</span>
+          </a>
         </div>
         <div class="blog__content">
           <nuxt-content :document="article" />

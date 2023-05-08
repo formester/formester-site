@@ -24,6 +24,7 @@ keywords: "How to create an online quiz in google forms, create an online quiz
   aptitude quiz,  online quiz in google forms, quiz in google forms, google
   forms quiz, google forms "
 author: Navni Dighe
+authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-04-24T07:41:22.594Z
 coverImg: /img/how-to-create-a-quiz-in-google-forms_-the-only-guide-you’ll-need-in-2023.png
 coverImgAlt: "How to Create A Quiz in Google Forms: The Only Guide You’ll Need in 2023"

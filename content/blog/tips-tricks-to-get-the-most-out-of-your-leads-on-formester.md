@@ -14,6 +14,7 @@ keywords: web forms, forms, no code forms, online form builders, lead generating
   form, why your web forms aren't selling, why aren't people signing up my web
   form
 author: Navni Dighe
+authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-03-30T09:58:51.770Z
 coverImg: /img/tips-tricks-to-get-the-most-out-of-your-leads-on-formester.png
 coverImgAlt: Tips & Tricks to get the most out of your leads on Formester
