@@ -6,6 +6,7 @@ description: We are living in a digitally-driven world and online forms are need
 keywords: create a form, create a survey, best form builder, drag and drop form,
   free online form builder, easy form builder
 author: Vivek Badani
+authorProfile: https://www.linkedin.com/in/vivek--badani/
 createdAt: 2022-11-02
 coverImg: /img/how-to-create-a-form__how-to-create-form-or-survey.png
 coverImgAlt: Cover image for the blog, "How to create a form or survey using form builder"

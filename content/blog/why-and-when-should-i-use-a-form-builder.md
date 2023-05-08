@@ -6,6 +6,7 @@ description: Forms enable you to scale your data accumulation and make it extens
 keywords: why use online form builder, reasons to use online form builder, using
   html form builder
 author: Vivek Badani
+authorProfile: https://www.linkedin.com/in/vivek--badani/
 createdAt: 2022-11-10T07:23:29.651Z
 coverImg: /img/why-and-when-should-i-use-a-form-builder__hero.png
 coverImgAlt: Hero image for blog title why and when should I use a html form builder

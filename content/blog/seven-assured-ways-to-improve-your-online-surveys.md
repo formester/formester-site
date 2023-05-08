@@ -5,6 +5,7 @@ title: 7 Assured Ways to Improve Your Online Surveys
 description: There’s no limit to the number of ways you can utilize online surveys. From market research to feedback and insights for improving your product – we need them everywhere. Amidst the information age of today,businesses deeply depend on the data received and analyzed through online surveys.
 keywords: online survey, online survey for business, know your customer, survey form
 author: Vivek Badani
+authorProfile: https://www.linkedin.com/in/vivek--badani/
 createdAt: 2022-07-20
 coverImg: /img/seven-assured-way-to-improve__seven-assured-ways-to-improve-your-online-surveys.png
 coverImgAlt: Cover image for the blog, "Seven Assured Ways to Improve Your Online Surveys"
