@@ -27,52 +27,53 @@
               <HoverSvg />
             </NuxtLink>
           </li>
-          <li class="nav-item dropdown me-2">
-            <a
+          <li class="nav-item dropdown me-2" @click="collapseNav">
+            <NuxtLink
               class="nav-link"
               id="navbarDropdown"
               role="button"
-              data-bs-toggle="dropdown"
               aria-expanded="false"
+              to="/features/"
             >
               Features
               <HoverSvg />
-            </a>
+            </NuxtLink>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li @click="collapseNav">
-                <NuxtLink class="dropdown-item" to="/features/html-form-backend/"
+              <li>
+                <NuxtLink class="dropdown-item" to="/features/html-form-backend/" @click="collapseNav"
                   >HTML Form Backend</NuxtLink
                 >
               </li>
-              <li @click="collapseNav">
-                <NuxtLink class="dropdown-item" to="/features/auto-responder/"
+              <li>
+                <NuxtLink class="dropdown-item" to="/features/auto-responder/" @click="collapseNav"
                   >Auto Responder
                 </NuxtLink>
               </li>
-              <li @click="collapseNav">
-                <NuxtLink class="dropdown-item" to="/features/spam-protection/"
+              <li>
+                <NuxtLink class="dropdown-item" to="/features/spam-protection/" @click="collapseNav"
                   >Spam Protection</NuxtLink
                 >
               </li>
-              <li @click="collapseNav">
+              <li>
                 <NuxtLink
                   class="dropdown-item"
                   to="/features/powerful-analytics/"
+                  @click="collapseNav"
                   >Powerful Analytics</NuxtLink
                 >
               </li>
-              <li @click="collapseNav">
-                <NuxtLink class="dropdown-item" to="/features/conditional-logic/"
+              <li>
+                <NuxtLink class="dropdown-item" to="/features/conditional-logic/" @click="collapseNav"
                   >Conditional Logic</NuxtLink
                 >
               </li>
-              <li @click="collapseNav">
-                <NuxtLink class="dropdown-item" to="/features/online-payment/"
+              <li>
+                <NuxtLink class="dropdown-item" to="/features/online-payment/" @click="collapseNav"
                   >Online Payment</NuxtLink
                 >
               </li>
-              <li @click="collapseNav">
-                <NuxtLink class="dropdown-item" to="/features/digital-signature/"
+              <li>
+                <NuxtLink class="dropdown-item" to="/features/digital-signature/" @click="collapseNav"
                   >Digital Signature</NuxtLink
                 >
               </li>
@@ -178,9 +179,9 @@ a.nuxt-link-exact-active {
   box-shadow: none;
 }
 
-/* .nav-item.dropdown:hover .dropdown-menu {
+.nav-item.dropdown:hover .dropdown-menu {
   display: block;
-} */
+}
 
 .dropdown-item:hover {
   background: var(--clr-primary-light);
@@ -244,6 +245,7 @@ a.nuxt-link-exact-active {
 
   .dropdown-menu {
     border: none;
+    display: block;
   }
 }
 </style>

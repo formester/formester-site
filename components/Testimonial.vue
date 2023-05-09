@@ -52,7 +52,6 @@ export default {
   font-weight: 500;
 }
 .card{
-  background: linear-gradient(180deg, rgba(166,170,254,0.5047268907563025) 13%, rgba(221,200,255,0.499124649859944) 68%, rgba(255,255,255,0.510329131652661) 100%);
   border-radius: 12px;
   border: 1px solid #E5E5E5;
 }
