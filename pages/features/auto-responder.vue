@@ -69,6 +69,9 @@
         />
       </div>
     </div>
+
+    <ApplicationOfWebForms />
+
     <Testimonial 
       :testimonials="randomTestimonials"
     />
@@ -86,9 +89,10 @@ import TemplateSection from '../../components/TemplateSection.vue'
 
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
+import ApplicationOfWebForms from '../../components/ApplicationOfWebForms.vue'
 
 export default {
-  components: { FeatureDetail, CallToActionSection, Testimonial, TemplateSection },
+  components: { FeatureDetail, CallToActionSection, Testimonial, TemplateSection, ApplicationOfWebForms },
   computed: {
     meta() {
       const metaData = {
