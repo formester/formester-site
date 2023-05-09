@@ -1,11 +1,13 @@
-<svg width="285" height="148" viewBox="0 0 285 148" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="285" height="152" viewBox="0 0 285 152" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <path d="M106.888 100.292C115.188 117.001 126.269 143.969 126.269 143.969L190.407 112.213C190.407 112.213 179.319 84.9305 170.981 68.0299C162.71 51.2676 147.949 26.0823 147.949 26.0823L83.2853 57.6298C83.2853 57.6298 98.5879 83.5817 106.888 100.292Z" fill="#B495F5"/>
+<g filter="url(#filter0_d_4134_7883)">
 <path d="M110.874 100.833C117.653 118.12 126.288 145.813 126.288 145.813L192.999 120.038C192.999 120.038 184.385 92.0321 177.585 74.5533C170.84 57.2175 158.38 30.9639 158.38 30.9639L91.1641 56.4858C91.1641 56.4858 104.095 83.5468 110.874 100.833Z" fill="#EDE6FA"/>
 <line x1="109.726" y1="67.4703" x2="151.999" y2="51.0796" stroke="#B596F5" stroke-width="0.758077"/>
 <line x1="114.777" y1="79.5983" x2="157.05" y2="63.2075" stroke="#B596F5" stroke-width="0.758077"/>
 <line x1="120.597" y1="93.7491" x2="162.87" y2="77.3584" stroke="#B596F5" stroke-width="0.758077"/>
 <line x1="127.925" y1="107.901" x2="170.198" y2="91.5098" stroke="#B596F5" stroke-width="0.758077"/>
-<g filter="url(#filter0_d_4134_7883)">
+</g>
+<g filter="url(#filter1_d_4134_7883)">
 <rect x="135.172" y="1.03955" width="43.9216" height="43.9216" rx="21.9608" fill="#EED2FF"/>
 <path d="M165.824 19.4426L164.548 21.3619C165.164 22.5893 165.465 23.9502 165.425 25.3226C165.385 26.6951 165.006 28.0362 164.32 29.2259H149.941C149.05 27.6802 148.681 25.8885 148.888 24.1164C149.095 22.3444 149.868 20.6863 151.092 19.388C152.316 18.0897 153.925 17.2203 155.682 16.9088C157.439 16.5972 159.249 16.8599 160.845 17.6581L162.764 16.382C160.81 15.129 158.492 14.5675 156.181 14.7874C153.87 15.0073 151.7 15.9958 150.017 17.5948C148.334 19.1939 147.237 21.3111 146.899 23.6078C146.562 25.9045 147.005 28.2479 148.156 30.2633C148.337 30.5769 148.597 30.8377 148.91 31.0197C149.223 31.2017 149.579 31.2986 149.941 31.3008H164.31C164.675 31.3023 165.035 31.2071 165.352 31.0249C165.669 30.8427 165.932 30.58 166.115 30.2633C167.071 28.6075 167.551 26.7196 167.501 24.8083C167.452 22.8969 166.875 21.0364 165.835 19.4322L165.824 19.4426ZM155.668 26.5388C155.86 26.7318 156.089 26.8848 156.341 26.9892C156.593 27.0936 156.863 27.1474 157.136 27.1474C157.408 27.1474 157.678 27.0936 157.93 26.9892C158.182 26.8848 158.411 26.7318 158.604 26.5388L164.476 17.7307L155.668 23.6028C155.475 23.7955 155.322 24.0243 155.217 24.2762C155.113 24.5281 155.059 24.7981 155.059 25.0708C155.059 25.3435 155.113 25.6135 155.217 25.8654C155.322 26.1173 155.475 26.3461 155.668 26.5388V26.5388Z" fill="#7E5BC6"/>
 </g>
@@ -13,7 +15,17 @@
 <rect x="132.977" y="120.402" width="26.3084" height="2.58084" transform="rotate(-21.3058 132.977 120.402)" fill="url(#pattern0)"/>
 <rect x="132.977" y="120.402" width="26.3084" height="2.58084" transform="rotate(-21.3058 132.977 120.402)" fill="url(#pattern1)"/>
 <defs>
-<filter id="filter0_d_4134_7883" x="133.302" y="0.104806" width="47.6609" height="47.6604" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d_4134_7883" x="87.1641" y="28.9639" width="109.836" height="122.849" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4134_7883"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4134_7883" result="shape"/>
+</filter>
+<filter id="filter1_d_4134_7883" x="133.302" y="0.104806" width="47.6609" height="47.6604" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="0.934744"/>
