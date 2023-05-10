@@ -5,6 +5,7 @@ title: How to Create an Impressive Intake Form in 5 Easy Steps
 description: An intake form is a document that helps you gather information about your client. This can be used to collect personal information as well as questions about the client's goals, project preferences, experience, skills and budget.
 keywords: intake form, client intake form, create an intake form, create form
 author: Vivek Badani
+authorProfile: https://www.linkedin.com/in/vivek--badani/
 createdAt: 2022-10-13
 coverImg: /img/how-to-create-an-impressive-intake__create-impressive-intake-form.png
 coverImgAlt: Cover image for the blog, "How to Create an Impressive Intake Form"

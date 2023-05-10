@@ -5,6 +5,7 @@ description: This guide helps you configure SMTP settings for Amazon SES SMTP on
   emails and receive responses directly in your inbox.
 keywords: amazon, smtp, amazon smtp, ses smtp integration, amazon smtp credentials
 author: Ravindra Kumar Verma
+authorProfile: https://www.linkedin.com/in/ravindraverma12/
 createdAt: 2023-03-16T10:27:12.358Z
 coverImg: /img/how-to-integrate-amazon-ses-smtp-with-formester.png
 coverImgAlt: How to integrate Amazon SES SMTP with formester

@@ -6,6 +6,7 @@ description: There are just way too many ways through which you can get leads.Bu
 keywords: lead capture form, create lead capture form, lead acquisition, lead
   generation, lead form
 author: Vivek Badani
+authorProfile: https://www.linkedin.com/in/vivek--badani/
 createdAt: 2022-08-22
 coverImg: /img/how-to-create-a-lead-capture-form__create-lead-capture-form-effectively.png
 coverImgAlt: Cover image for the blog, "How to Create a Lead Capture Form Effectively?"

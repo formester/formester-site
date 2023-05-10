@@ -10,6 +10,7 @@ metaDescription: Learn How to create effective survey questions with our
 keywords: survey questions examples, survey questions, survey form, types of
   survey questions, good survey questions, good survey questions examples
 author: Vivek Badani
+authorProfile: https://www.linkedin.com/in/vivek--badani/
 createdAt: 2022-08-17
 coverImg: /img/the-best-15-survey-questions-in-2023-with-examples-.png
 coverImgAlt: Cover image for the blog, "The Best Survey Questions in 2023"

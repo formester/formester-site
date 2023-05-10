@@ -6,6 +6,7 @@ description: As we grow our business, so do our clients or customers. Eventually
 keywords: online form builder, form builder, benefits of online form builder,
   benefits of form builder
 author: Vivek Badani
+authorProfile: https://www.linkedin.com/in/vivek--badani/
 createdAt: 2022-10-18
 coverImg: /img/top-benefits-of-using-online__top-benefits-of-using-online-form-builder.png
 coverImgAlt: Cover image for the blog, "Top benefits of using online form builder"

@@ -17,6 +17,7 @@ keywords: survey questions, product roadmap survey questions, product map survey
   product roadmap, Formester blog, Formester surveys, survey templates, product
   roadmap survey templates, product map survey template
 author: Navni Dighe
+authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-04-27T07:54:41.721Z
 coverImg: /img/how-to-create-the-perfect-product-map-using-surveys-in-2023-min.png
 coverImgAlt: How to Create the Perfect Product Map Using Surveys in 2023

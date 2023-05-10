@@ -20,6 +20,7 @@ keywords: "grow your small business, web forms, small business web forms, web
   your business, business tools, digitization, typeform alternative, jotform
   alternative, types of web forms, web form tips, html forms, free web forms "
 author: Navni Dighe
+authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-05-03T17:13:15.050Z
 coverImg: /img/how_to_expand_your_small_business_using_web_forms_in_2023.png
 coverImgAlt: How to Expand Your Small Business using Web Forms in 2023

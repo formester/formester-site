@@ -27,6 +27,7 @@ keywords: brand surveys, branded surveys, brand surveys 2023, branded surveys
   surveys and brand potential, branded surveys for brand potential, conduct
   brand surveys in 2023, conduct branded surveys in 2023
 author: Navni Dighe
+authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-04-19T13:17:17.091Z
 coverImg: /img/how-branded-surveys-can-help-you-unlock-your-brand’s-potential.png
 coverImgAlt: How Branded Surveys Can Help You Unlock Your Brand’s Potential
