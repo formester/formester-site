@@ -39,13 +39,13 @@ coverImg: /img/how-to-add-a-timer-to-your-google-quiz-_-includes-latest-alternat
 coverImgAlt: How to Add a Timer to Your Google Quiz | Includes Latest
   Alternative - Works Without Add-ons (2023)
 featured: true
-published: false
+published: true
 ---
 Web forms are becoming a rapidly growing means of data-collection.
 
 Whether it's a business or an educational institute, [every entity has its unique application of web forms](https://formester.com/blog/web-forms-how-and-where-to-use-them-for-your-business/).
 
-![](/img/14.png)
+![Infographic showing: 6 Major Use-Cases Of Web Forms & Online Quizzes, namely: Contact Forms, Registration Forms, Entertainment quizzes, Academic/Educational Quizzes, Trivia Quizzes and Survey Forms](/img/14.png "6 Major Use-Cases Of Web Forms & Online Quizzes, namely: Contact Forms, Registration Forms, Entertainment quizzes, Academic/Educational Quizzes, Trivia Quizzes and Survey Forms")
 
 ## Time-Bound Online Forms
 
@@ -61,7 +61,7 @@ In case of businesses, there are several occasions, such as:
 
 which require setting a time limit on web forms. 
 
-![](/img/advantages-of-using-time-bound-web-forms-in-a-business-context.png)
+![Infographic showing: Advantages of Using Time-Bound Web Forms In A Business Context, namely: 1. Effective Marketing Strategy, 2. Creates a Sense of Urgency, 3. Reduce Manual Work, 4. Efficient Tool for setting S-M-A-R-T (specific, measurable, achievable, relevant, and time-bound) Objectives](/img/advantages-of-using-time-bound-web-forms-in-a-business-context.png "Advantages of Using Time-Bound Web Forms In A Business Context")
 
 Whilst in an academic context, this translates as:
 
@@ -73,7 +73,7 @@ If you clicked on this blog, chances are highly likely that you are a teacher wh
 
 Without compromising on the [supervision and accountability factors](https://www.kumon.co.uk/blog/benefits-of-timing-my-childs-work/).
 
-![](/img/advantages-of-using-time-bound-quizzes-in-an-academic-context.png)
+![Infographic showing: Advantages of Using Time-Bound Quizzes In An Academic Context, namely: 1. Gather more reliable quiz results, 2. Ensure fairness by preventing learners from cheating, 3. Refined focus, 4. Enhance quick thinking](/img/advantages-of-using-time-bound-quizzes-in-an-academic-context.png "Advantages of Using Time-Bound Quizzes In An Academic Context")
 
 The utilization of online platforms, such as Google Forms, doesn't come without compromises.
 
@@ -87,9 +87,9 @@ And therefore, proves to be an effective means of administering fairness and qui
 
 P.S., if you fall under this category, share this meme with your students, so they have an idea about what's coming next!
 
-![](/img/16.png)
+![Funny meme about how students forget to turn to the next page in a timed quiz!](/img/16.png "Share this meme with your students!")
 
-## Google Forms Add ons
+## Google Forms Add-ons
 
 Although Google Forms doesn't organically provision for adding a timer to its forms;
 
@@ -105,10 +105,10 @@ That said, in today's blog, let's discuss...
 
 * Sign-in to your Google account and visit [Google Forms](https://docs.google.com/forms/u/0/).﻿﻿
 
-  ![](/img/how-to-add-a-timer-to-your-google-quiz-1.png)
+  ![Screen capture showing: Sign-up for Google Forms](/img/how-to-add-a-timer-to-your-google-quiz-1.png "Sign-up for Google Forms")
 * Click on the form you wish to add your timer to.
 
-  ![](/img/how-to-add-a-timer-to-your-google-quiz-2.png)
+  ![Screen capture showing: Select the Google form you wish to add a timer to](/img/how-to-add-a-timer-to-your-google-quiz-2.png "Select the Google form you wish to add a timer to")
 
 ### Step 2: Selecting an Add-on
 
@@ -116,52 +116,42 @@ That said, in today's blog, let's discuss...
 * Click on the More icon, and select Get add-ons from the drop-down list
 * Next, you'll be redirected to the [Google Workplace Marketplace](https://workspace.google.com/marketplace) ﻿
 
-  ![](/img/how-to-add-a-timer-to-your-google-quiz-3.png)
+  ![Screen capture showing: More icon](/img/how-to-add-a-timer-to-your-google-quiz-3.png "More icon")
 
   > Note: Since, you'll be accessing Google Workplace Marketplace, directly from Google Forms, you'll specifically be shown add-ons for just Google forms
   >
   > You can also access and explore add-ons for other Google Workspace softwares such as slides, sheets, Gmail, etc., by selecting manually from the Filter
 * In the search bar, type [Form Timer](https://workspace.google.com/marketplace/app/form_timer/620454808595)
 
-  ![](/img/how-to-add-a-timer-to-your-google-quiz-4.png)
+  ![Screen capture showing: Google Workplace Marketplace and in its search bar Form Timer](/img/how-to-add-a-timer-to-your-google-quiz-4.png "Google Workplace Marketplace and in its search bar Form Timer")
 
 ### Step 3: Installation and Set Up
 
 * Install Form Timer. You'll have to confirm the permission settings and click allow to indicate that you trust Form Timer.
 
-  ![](/img/how-to-add-a-timer-to-your-google-quiz-5.png)
-
-<!---->
-
+  ![Screen capture showing: Confirm the permission settings and click allow to indicate that you trust Form Timer](/img/how-to-add-a-timer-to-your-google-quiz-5.png "Click Allow to indicate that you trust Form Timer")
 * Switch back to your Forms tab and again click on the Add-ons icon to select configure
 
-  ![](/img/how-to-add-a-timer-to-your-google-quiz-6.png)
-
-<!---->
-
+  ![Screen capture showing: Switch back to your Forms tab and again click on the Add-ons icon to select configure](/img/how-to-add-a-timer-to-your-google-quiz-6.png "Click on the Add-ons icon again, to select configure")
 * You'll see a small window pop-up in the lower right corner;
 
   In this window, select Enable and then Continue to Form Timer 
 
-  ![](/img/how-to-add-a-timer-to-your-google-quiz-7.png)
-
-<!---->
-
+  ![Screen capture showing: Select Enable and then Continue to Form Timer](/img/how-to-add-a-timer-to-your-google-quiz-7.png "Select Enable and then Continue to Form Timer")
 * Now, you'll be redirected to the Form Timer setup page;
 
   On this page, click on set up and you'll see a Test Config window
-
-<!---->
-
 * Enter the duration of your quiz in this window
 
-  ![](/img/how-to-add-a-timer-to-your-google-quiz-8.png)
+  ![Screen capture showing: Click on set up to reach the Test Config window and Enter the duration of your quiz in this window](/img/how-to-add-a-timer-to-your-google-quiz-8.png "Click on set up to reach the Test Config window and Enter the duration of your quiz in this window")
 
 > Note: The maximum limit of the quiz duration can be 180 minutes﻿.
 >
-> In the same window, there is also a Timer Controls section, which will let you set or specify the Start and End timesDesign Tip: The Welcome Page Config Tab can be used to customize the Background and Text Color, upload your branding logo and create a notification message stating important instructions (max 400 characters)
+> In the same window, there is also a Timer Controls section, which will let you set or specify the Start and End times.
+>
+> Design Tip: The Welcome Page Config Tab can be used to customize the Background and Text Color, upload your branding logo and create a notification message stating important instructions (max 400 characters)
 
-![](/img/how-to-add-a-timer-to-your-google-quiz-9.png)
+![Screen capture showing: The Welcome Page Config Tab used to customize the Background and Text Color, upload your branding logo and create a notification message stating important instructions (max 400 characters)](/img/how-to-add-a-timer-to-your-google-quiz-9.png "Welcome Page Config Tab")
 
 ### Step 4: Publish Your Quiz
 
@@ -169,7 +159,7 @@ That said, in today's blog, let's discuss...
 * Now just hit the Save button to save your settings
 * Finally, click on the Test Link button to copy the link to your quiz and share it. 
 
-![](/img/how-to-add-a-timer-to-your-google-quiz-10.png)
+![Screen capture showing: The timer is displayed at the top of the quiz once it starts.](/img/how-to-add-a-timer-to-your-google-quiz-10.png "The timer is displayed at the top of the quiz once it starts.")
 
 The timer is displayed at the top of the quiz once it starts.
 
@@ -201,9 +191,9 @@ With Formester, you get to [design no-code, drag-and-drop and intuitive web form
 
 And setting a timer, is just a click away!
 
-### How to Create a Timed Form or Quiz using Formester in 4 simple steps
+### How to Create a Timed Form or Quiz using Formester in 4 Simple Steps Without Using Add-ons
 
-![](/img/how-to-add-a-timer-to-your-google-quiz-15.png)
+![Infographic showing 4 Simple Steps to Create a Timed Form or Quiz Using Formester Without Using Add-ons: 1. Sign-up on Formester, 2. Create your own web form Or choose from a pre-designed, customizable Templates, 3. In the Builder section, scroll down to find the Date and Time section, and, 4. Just hit publish and your form is ready to gather submissions.](/img/how-to-add-a-timer-to-your-google-quiz-15.png "4 Simple Steps to Create a Timed Form or Quiz Using Formester Without Using Add-ons")
 
 1. Sign-up on Formester: [Don't hesitate, it's free](https://app.formester.com/users/sign_in)!
 
@@ -213,13 +203,13 @@ Or choose from a [variety of pre-designed, customizable Templates](https://forme
 
 3. Once you're done creating your form, in the Builder section, scroll down to find the Date and Time section;
 
-![](/img/how-to-add-a-timer-to-your-google-quiz-11.png)
+![Screen capture showing: In the Builder section, scroll down to find the Date and Time section](/img/how-to-add-a-timer-to-your-google-quiz-11.png "In the Builder section, scroll down to find the Date and Time section")
 
 Where you can set up a start and end date and/or time, with just one click.
 
-![](/img/how-to-add-a-timer-to-your-google-quiz-12.png)
+![Screen capture showing: Set up a start and end date](/img/how-to-add-a-timer-to-your-google-quiz-12.png "Set up a start and end date")
 
-![](/img/how-to-add-a-timer-to-your-google-quiz-13.png)
+![Screen capture showing: Set up a start and end time](/img/how-to-add-a-timer-to-your-google-quiz-13.png "Set up a start and end time")
 
 4. And that's all! Just hit publish and your form is ready to gather submissions.
 
