@@ -43,6 +43,7 @@
     <Testimonial 
       :testimonials="randomTestimonials"
     />
+    <ThreeStepsCreateForm />
     <TemplateSection />
     <CallToActionSection />
   </div>

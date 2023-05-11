@@ -2,6 +2,7 @@
   <div>
     <featureHero />
     <featureContainer v-for="feature in features1" :key="feature.heading" :feature="feature" />
+    <ThreeStepsCreateForm />
     <Testimonials :testimonials="randomTestimonials" />
     <featureContainer v-for="feature in features2" :key="feature.heading" :feature="feature" />
     <TemplateSection />
