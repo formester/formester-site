@@ -1,10 +1,37 @@
 ---
-title: How to Add a Timer to Your Google Quiz | Includes Latest Alternative -
-  Works Without Add-ons (2023)
-description: abc
-metaTitle: abc
-metaDescription: abc
-keywords: abc
+title: How to Add a Timer to Your Google Quiz in 4 Simple Steps | Free
+  Alternative - Works Without Add-ons (2023)
+description: Google Forms is amongst the most popular choices for creating web
+  forms and online quizzes. Although it is a powerful software, there is no
+  in-built provision for some advanced features such as setting up a timer to
+  limit the form accessibility duration. To overcome this barrier, Google Forms
+  collaborates with several add-ons provided by third-party software platforms.
+  This blog discusses how you can setup a timer in your Google form or quiz,
+  using one such add-on, and that is Form Timer, with the help of several
+  pictorial representations for ease of understanding. In the end, it also
+  discusses a powerful alternative to Google Forms which has an organic
+  provision for timer settings, eliminating the need for add-ons and making your
+  form-building journey easy, fun and efficient!
+metaTitle: 4 Simple Steps to Add a Timer to Your Google Quiz | Latest Free
+  Alternative - Works Without Add-ons (2023)
+metaDescription: Add a Timer to Your Google Quiz in 4 Simple Steps | With
+  Pictorial Depictions | Discusses Latest Free Alternative - Works Without
+  Add-ons (2023)
+keywords: How to set time limits in Google Forms,  google form start and end
+  time,  google form timer auto submit, google form quiz timer app download,
+  google form timer, best timer for google form, Can you put a timer on Google
+  Forms?, How to make Timer Based Tests using Google Forms, Google Forms Timer
+  For online quiz and exams, Best Google Timer Apps, How can I add timer for my
+  quiz?, How can we set a timer in a Google form?, How to Add Timer to a Quiz in
+  Google Forms, What is timer function in Google?,  Timer for Google Forms, How
+  do you set a timer on Google forms?, What is quiz timer?,  create a quiz
+  assignment in Classroom where students complete and submit a Google Forms
+  quiz, Creating quizzes with a countdown timer,  How do you make a timed quiz?,
+  create an online quiz with a countdown timer, How do you make a timed quiz?,
+  What is the best timer for Google Forms?, How do you put a timer on each
+  question in Google Forms?, Formester Blog, online form advice, small business
+  tips, online form software help, How to Create Timed Quizzes in Google
+  Classroom, formester web forms, formester web forms with timer
 author: Navni Dighe
 authorProfile: https://www.linkedin.com/in/navni-dighe-375908245
 createdAt: 2023-05-11T15:55:49.878Z
