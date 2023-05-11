@@ -38,7 +38,7 @@ createdAt: 2023-05-11T15:55:49.878Z
 coverImg: /img/how-to-add-a-timer-to-your-google-quiz-_-includes-latest-alternative-works-without-add-ons-2023-1.png
 coverImgAlt: How to Add a Timer to Your Google Quiz | Includes Latest
   Alternative - Works Without Add-ons (2023)
-featured: true
+featured: false
 published: true
 ---
 Web forms are becoming a rapidly growing means of data-collection.
