@@ -77,6 +77,11 @@
                   >Digital Signature</NuxtLink
                 >
               </li>
+              <li>
+                <NuxtLink class="dropdown-item" to="/features/branding-kit/" @click="collapseNav"
+                  >Branding Kit</NuxtLink
+                >
+              </li>
             </ul>
           </li>
           <li class="nav-item me-2" @click="collapseNav">
