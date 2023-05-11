@@ -73,4 +73,85 @@ That said, in today's blog, let's discuss...
 ### Step 1: Sign-up and Select Form
 
 * Sign-in to your Google account and visit [Google Forms](https://docs.google.com/forms/u/0/).﻿﻿
-*
+
+  ![](/img/how-to-add-a-timer-to-your-google-quiz-1.png)
+* Click on the form you wish to add your timer to.
+
+  ![](/img/how-to-add-a-timer-to-your-google-quiz-2.png)
+
+### Step 2: Selecting an Add-on
+
+* Once you reach this page, at the top right corner, besides the Send button, you'll find the More Icon (Denoted by three sequential dots)
+* Click on the More icon, and select Get add-ons from the drop-down list
+* Next, you'll be redirected to the [Google Workplace Marketplace](https://workspace.google.com/marketplace) ﻿
+
+  ![](/img/how-to-add-a-timer-to-your-google-quiz-3.png)
+
+  > Note: Since, you'll be accessing Google Workplace Marketplace, directly from Google Forms, you'll specifically be shown add-ons for just Google forms
+  >
+  > You can also access and explore add-ons for other Google Workspace softwares such as slides, sheets, Gmail, etc., by selecting manually from the Filter
+* In the search bar, type [Form Timer](https://workspace.google.com/marketplace/app/form_timer/620454808595)
+
+  ![](/img/how-to-add-a-timer-to-your-google-quiz-4.png)
+
+### Step 3: Installation and Set Up
+
+* Install Form Timer. You'll have to confirm the permission settings and click allow to indicate that you trust Form Timer.
+
+  ![](/img/how-to-add-a-timer-to-your-google-quiz-5.png)
+
+<!---->
+
+* Switch back to your Forms tab and again click on the Add-ons icon to select configure
+
+  ![](/img/how-to-add-a-timer-to-your-google-quiz-6.png)
+
+<!---->
+
+* You'll see a small window pop-up in the lower right corner;
+
+  In this window, select Enable and then Continue to Form Timer 
+
+  ![](/img/how-to-add-a-timer-to-your-google-quiz-7.png)
+
+
+
+
+
+<!---->
+
+* Now, you'll be redirected to the Form Timer setup page;
+
+  On this page, click on set up and you'll see a Test Config window
+
+<!---->
+
+* Enter the duration of your quiz in this window
+
+  ![](/img/how-to-add-a-timer-to-your-google-quiz-8.png)
+
+
+
+> Note: The maximum limit of the quiz duration can be 180 minutes﻿.
+>
+> In the same window, there is also a Timer Controls section, which will let you set or specify the Start and End timesDesign Tip: The Welcome Page Config Tab can be used to customize the Background and Text Color, upload your branding logo and create a notification message stating important instructions (max 400 characters)
+
+![](/img/how-to-add-a-timer-to-your-google-quiz-9.png)
+
+### Step 4: Publish Your Quiz
+
+* And that's all with the set up;
+* Now just hit the Save button to save your settings
+* Finally, click on the Test Link button to copy the link to your quiz and share it. 
+
+![](/img/how-to-add-a-timer-to-your-google-quiz-10.png)
+
+The timer is displayed at the top of the quiz once it starts.
+
+#### Additional Information  
+
+* Depending on the intent of your quiz, you may disable the following two settings:
+
+  1. Edit after Submit: To prevent responders from editing their responses post submission
+
+  2. Show link to submit another response: To prevent the same user from sending multiple response﻿s
