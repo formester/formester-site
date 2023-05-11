@@ -168,7 +168,6 @@ The timer is displayed at the top of the quiz once it starts.
 * Depending on the intent of your quiz, you may disable the following two settings:
 
 > 1. Edit after Submit: To prevent responders from editing their responses post submission
->
 > 2. Show link to submit another response: To prevent the same user from sending multiple responses
 
 * With an average rating of 4.3 / 5 stars (as of May, 2023), Form Timer is a powerful software to say the least;
@@ -193,10 +192,9 @@ And setting a timer, is just a click away!
 
 ### How to Create a Timed Form or Quiz using Formester in 4 Simple Steps Without Using Add-ons
 
-![Infographic showing 4 Simple Steps to Create a Timed Form or Quiz Using Formester Without Using Add-ons: 1. Sign-up on Formester, 2. Create your own web form Or choose from a pre-designed, customizable Templates, 3. In the Builder section, scroll down to find the Date and Time section, and, 4. Just hit publish and your form is ready to gather submissions.](/img/how-to-add-a-timer-to-your-google-quiz-15.png "4 Simple Steps to Create a Timed Form or Quiz Using Formester Without Using Add-ons")
+![Infographic showing 4 Simple Steps to Create a Timed Form or Quiz Using Formester Without Using Add-ons: 1. Sign-up on Formester, 2. Create your own web form Or choose from a pre-designed, customizable Templates, 3. In the Builder section, scroll down to find the Date and Time section, and, 4. Just hit publish and your form is ready to gather submissions.](/img/how-to-add-a-timer-to-your-google-quiz-includes-alternative-works-without-add-ons.png "4 Simple Steps to Create a Timed Form or Quiz Using Formester Without Using Add-ons")
 
 1. Sign-up on Formester: [Don't hesitate, it's free](https://app.formester.com/users/sign_in)!
-
 2. Create your web form using an easy and intuitive drag-and-drop design;
 
 Or choose from a [variety of pre-designed, customizable Templates](https://formester.com/templates/).
