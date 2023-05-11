@@ -145,8 +145,6 @@ That said, in today's blog, let's discuss...
 
   ![Screen capture showing: Click on set up to reach the Test Config window and Enter the duration of your quiz in this window](/img/how-to-add-a-timer-to-your-google-quiz-8.png "Click on set up to reach the Test Config window and Enter the duration of your quiz in this window")
 
-
-
 > Note: The maximum limit of the quiz duration can be 180 minutes﻿.
 >
 > In the same window, there is also a **Timer Controls section**, which will let you set or **specify the Start and End times**.
@@ -171,12 +169,12 @@ The timer is displayed at the top of the quiz once it starts.
 
 #### Additional Information  
 
-* Depending on the intent of your quiz, you may disable the following two settings:
+1. Depending on the intent of your quiz, you may disable the following two settings:
 
-> 1. Edit after Submit: To prevent responders from editing their responses post submission
-> 2. Show link to submit another response: To prevent the same user from sending multiple responses
+* Edit after Submit: To prevent responders from editing their responses post submission
+* Show link to submit another response: To prevent the same user from sending multiple responses
 
-* With an average rating of 4.3 / 5 stars (as of May, 2023), Form Timer is a powerful software to say the least;
+   2. With an average rating of 4.3 / 5 stars (as of May, 2023), Form Timer is a powerful software to say the least;       
 
 > However, it still isn't devoid of a few limitations, like with every software;
 >
