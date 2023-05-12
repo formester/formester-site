@@ -129,26 +129,26 @@ export default {
         {
           title: 'Easy Brand Setup',
           description: "Formester's user-friendly interface allows you to easily establish your brand identity by linking your website, which automatically sets up your brand elements such as fonts, colors, and logo. By maintaining consistency, your customers will be able to instantly recognize your brand when interacting with your forms.",
-          src: 'brand-kit/easy-branding.jpg',
+          src: 'brand-kit/easy-branding.svg',
           alt: 'Get noticed by making the email personalized'
         },
         {
           title: 'Logo Integration',
           description:
             'Seamlessly incorporate your company logo into your forms. Ensure your brand is visible and memorable, strengthening brand recognition and trust with your customers.',
-          src: 'brand-kit/logo-integration.jpg',
+          src: 'brand-kit/logo-integration.svg',
           alt: 'Email can be eaily build with auto responder'
         },
         {
           title: 'Custom Fonts and Colors',
           description: "Select and apply your brand's fonts and colors to maintain a consistent look and feel throughout your forms. Enhance the user experience while reinforcing your brand identity.",
-          src: 'brand-kit/custom-fonts-colors.jpg',
+          src: 'brand-kit/custom-fonts-colors.png',
           alt: 'Have a personalised respose to end user'
         },
         {
           title: 'Formester Watermark Removal',
           description: 'Remove the Formester branding or watermark from your forms for a clean, professional appearance that fully showcases your brand. Enhance credibility and keep the focus on your own brand identity.',
-          src: 'brand-kit/formester-branding-removal.jpg',
+          src: 'brand-kit/formester-branding-removal.svg',
           alt: 'Track your forms in real time'
         },
       ],
