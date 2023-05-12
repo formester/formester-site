@@ -174,7 +174,7 @@ The timer is displayed at the top of the quiz once it starts.
 * Edit after Submit: To prevent responders from editing their responses post submission
 * Show link to submit another response: To prevent the same user from sending multiple responses
 
-  2. With an average rating of 4.3 / 5 stars (as of May, 2023), Form Timer is a powerful software to say the least;       
+2. With an average rating of 4.3 / 5 stars (as of May, 2023), Form Timer is a powerful software to say the least;       
 
 > However, it still isn't devoid of a few limitations, like with every software;
 >
