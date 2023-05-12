@@ -27,9 +27,7 @@
                 <NuxtLink to="/templates/" class="footer__link">Templates</NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/integrations/" class="footer__link"
-                  >Integrations</NuxtLink
-                >
+                <NuxtLink to="/integrations/" class="footer__link">Integrations</NuxtLink>
               </li>
             </ul>
           </div>
@@ -41,46 +39,47 @@
 
             <ul class="list-unstyled mt-2">
               <li class="mt-2">
-                <NuxtLink to="/features/html-form-backend/" class="footer__link"
-                  >HTML Form Backend</NuxtLink
-                >
+                <NuxtLink to="/features/html-form-backend/" class="footer__link">
+                  HTML Form Backend
+                </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/features/auto-responder/" class="footer__link"
-                  >Auto Responder</NuxtLink
-                >
+                <NuxtLink to="/features/auto-responder/" class="footer__link">
+                  Auto Responder
+                </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/features/spam-protection/" class="footer__link"
-                  >Spam Protection</NuxtLink
-                >
+                <NuxtLink to="/features/spam-protection/" class="footer__link">
+                  Spam Protection
+                </NuxtLink>
               </li>
               <li class="mt-2">
                 <NuxtLink
                   to="/features/powerful-analytics/"
                   class="footer__link"
-                  >Powerful Protection</NuxtLink
                 >
+                  Powerful Protection
+                </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/features/conditional-logic/" class="footer__link"
-                  >Conditional Logic</NuxtLink
-                >
+                <NuxtLink to="/features/conditional-logic/" class="footer__link">
+                  Conditional Logic
+                </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/features/online-payment/" class="footer__link"
-                  >Online Payment</NuxtLink
-                >
+                <NuxtLink to="/features/online-payment/" class="footer__link">
+                  Online Payment
+                </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/features/digital-signature/" class="footer__link"
-                  >Digital Signature</NuxtLink
-                >
+                <NuxtLink to="/features/digital-signature/" class="footer__link">
+                  Digital Signature
+                </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/features/branding-kit/" class="footer__link"
-                  >Branding Kit</NuxtLink
-                >
+                <NuxtLink to="/features/branding-kit/" class="footer__link">
+                  Branding Kit
+                </NuxtLink>
               </li>
             </ul>
           </div>
@@ -92,29 +91,29 @@
 
             <ul class="list-unstyled mt-2">
               <li class="mt-2">
-                <NuxtLink to="/privacy/" class="footer__link"
-                  >Privacy Policy</NuxtLink
-                >
+                <NuxtLink to="/privacy/" class="footer__link">
+                  Privacy Policy
+                </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/terms-of-service/" class="footer__link"
-                  >Terms of Service</NuxtLink
-                >
+                <NuxtLink to="/terms-of-service/" class="footer__link">
+                  Terms of Service
+                </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/contact/" class="footer__link"
-                  >Contact Us</NuxtLink
-                >
+                <NuxtLink to="/contact/" class="footer__link">
+                  Contact Us
+                </NuxtLink>
               </li>
               <li class="mt-2">
-                <a href="mailto:support@formester.com" class="footer__link"
-                  >Get Support</a
-                >
+                <a href="mailto:support@formester.com" class="footer__link">
+                  Get Support
+                </a>
               </li>
                <li class="mt-2">
-                <a href="https://status.formester.com" class="footer__link"
-                  >Status</a
-                >
+                <a href="https://status.formester.com" class="footer__link">
+                  Status
+                </a>
               </li>
             </ul>
           </div>
