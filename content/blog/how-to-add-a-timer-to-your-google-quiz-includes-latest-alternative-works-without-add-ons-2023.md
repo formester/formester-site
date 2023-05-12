@@ -1,6 +1,6 @@
 ---
-title: How to Add a Timer to Your Google Quiz in 4 Simple Steps | Free
-  Alternative - Works Without Add-ons (2023)
+title: "How to Add a Timer to Your Google Quiz in 4 Simple Steps + Free
+  Alternative: Works Without Add-ons (2023)"
 description: Google Forms is amongst the most popular choices for creating web
   forms and online quizzes. Although it is a powerful software, there is no
   in-built provision for some advanced features such as setting up a timer to
@@ -174,7 +174,7 @@ The timer is displayed at the top of the quiz once it starts.
 * Edit after Submit: To prevent responders from editing their responses post submission
 * Show link to submit another response: To prevent the same user from sending multiple responses
 
-   2. With an average rating of 4.3 / 5 stars (as of May, 2023), Form Timer is a powerful software to say the least;       
+  2. With an average rating of 4.3 / 5 stars (as of May, 2023), Form Timer is a powerful software to say the least;       
 
 > However, it still isn't devoid of a few limitations, like with every software;
 >
@@ -212,7 +212,7 @@ Where you can set up a start and end date and/or time, with just one click.
 
 ![Screen capture showing: Set up a start and end time](/img/how-to-add-a-timer-to-your-google-quiz-13.png "Set up a start and end time")
 
-4. And that's all! Just hit **publish** and your form is ready to gather submissions.
+4. And that's all! Just hit **Publish** and your form is ready to gather submissions.
 
 ### Conclusion
 
