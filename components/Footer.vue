@@ -77,6 +77,11 @@
                   >Digital Signature</NuxtLink
                 >
               </li>
+              <li class="mt-2">
+                <NuxtLink to="/features/branding-kit/" class="footer__link"
+                  >Branding Kit</NuxtLink
+                >
+              </li>
             </ul>
           </div>
 
