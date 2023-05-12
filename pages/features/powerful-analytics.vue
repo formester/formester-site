@@ -40,10 +40,10 @@
         />
       </div>
     </div>
+    <ThreeStepsCreateForm />
     <Testimonial 
       :testimonials="randomTestimonials"
     />
-    <ThreeStepsCreateForm />
     <TemplateSection />
     <CallToActionSection />
   </div>

@@ -41,10 +41,10 @@
       </div>
     </div>
     <SpamPreventionTipsSection />
+    <ThreeStepsCreateForm />
     <Testimonial 
       :testimonials="randomTestimonials"
     />
-    <ThreeStepsCreateForm />
     <TemplateSection />
     <CallToActionSection />
   </div>
