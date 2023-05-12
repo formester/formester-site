@@ -2,7 +2,7 @@
   <div class="container py-5 px-2">
     <div class="row">
         <div class="heading d-flex flex-column align-items-center text-center">
-            <h2 class="section__heading">Simple 3 step: How to create forms with Formester section</h2>
+            <h2 class="section__heading">Simple 3 step: How to create forms with Formester</h2>
             <p class="hero__subheading">Skip the hassle of learning how to create HTML forms from scratch. With Formester, you can concentrate on the questions you want to ask and easily build free online forms. Increase your response rates with our user-friendly form creator!</p>
         </div>
 

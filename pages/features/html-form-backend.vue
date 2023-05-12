@@ -249,7 +249,7 @@ export default {
           src: 'html-form-backend/embedding-illus.svg',
         },
         {
-          title: 'Realtime Notification',
+          title: 'Realtime Notifications',
           description:
             "On new submissions, Formester ensures that you get informed in real-time for you to stay on top of what's essential for your business. Notifications are delivered where they matter - Slack, email or 100+ apps.",
           src: 'html-form-backend/notification.svg',
