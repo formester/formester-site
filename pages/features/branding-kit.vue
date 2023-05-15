@@ -20,7 +20,7 @@
             <img 
               src="@/assets/images/features/brand-kit/blob.png"
               alt=""
-              class="img-fluid branding hero__image blob"
+              class="img-fluid branding blob"
             >
             <img
               src="@/assets/images/features/brand-kit/brand-kit.png"
@@ -168,13 +168,13 @@ export default {
   padding-block: 8em;
   background: var(--clr-primary);
   color: white;
-  height: 100vh;
   position: relative;
 }
 .blob{
   position: absolute;
   right: 0;
   top: 0;
+  height: 100%;
 }
 .hero__image {
   height: 100%;
