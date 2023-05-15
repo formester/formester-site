@@ -43,6 +43,7 @@
         />
       </div>
     </div>
+    <ThreeStepsCreateForm />
     <Testimonial 
       :testimonials="randomTestimonials"
     />
@@ -60,9 +61,10 @@ import TemplateSection from '../../components/TemplateSection.vue'
 
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
+import ThreeStepsCreateForm from '../../components/ThreeStepsCreateForm.vue'
 
 export default {
-  components: { FeatureDetail, CallToActionSection, Testimonial, TemplateSection },
+  components: { FeatureDetail, CallToActionSection, Testimonial, TemplateSection, ThreeStepsCreateForm },
   computed: {
     meta() {
       const metaData = {
