@@ -41,6 +41,7 @@
       </div>
     </div>
     <SpamPreventionTipsSection />
+    <ThreeStepsCreateForm />
     <Testimonial 
       :testimonials="randomTestimonials"
     />

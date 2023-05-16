@@ -71,7 +71,7 @@
     </div>
 
     <ApplicationOfWebForms />
-
+    <ThreeStepsCreateForm />
     <Testimonial 
       :testimonials="randomTestimonials"
     />
