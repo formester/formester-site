@@ -1,9 +1,35 @@
 ---
 title: "Employee Engagement Surveys: The Complete Guide to the What, Why and How! "
-description: abc
-metaTitle: abc
-metaDescription: abc
-keywords: abc
+description: "As employee ideas, perceptions and attitudes toward work and
+  organization, and related structures, policies, culture, change, Employee
+  Engagement Surveys assume a crucial role in the development of any
+  organization looking to keep-up, upgrade and optimize to make the best out of
+  this change. This blog is a complete guide to employee engagement surveys,
+  encompassing its what, why and how! It also includes detailed information
+  about the key metrics to track as well as 25 sample questions and a free
+  customizable template.  "
+metaTitle: "Employee Engagement Surveys: The Complete Guide to the What, Why and
+  How! (Includes 25 Sample Questions + Free Template)"
+metaDescription: "Employee Engagement Survey Guide: What, Why and How! | 25
+  Sample Questions | Free Customizable Template"
+keywords: Employee Engagement Survey, Employee Engagement Surveys, Employee
+  Engagement Survey Sample Questions, Employee Engagement Survey Free
+  Customizable Template, What is employee engagement survey?, Why should
+  organizations conduct employee engagement surveys?, 10 C's of Employee
+  Engagement, What is KPI for employee engagement survey?, What is employee
+  engagement in HR?, What is the purpose of employee engagement?, What is the
+  benefit of engagement survey?, What is employee engagement and how is it
+  measured?, employee engagement survey vendors, employee engagement survey
+  questionnaire, employee engagement survey examples, Employee engagement survey
+  questions and answers, Employee engagement survey questions, free employee
+  engagement survey, employee engagement survey results, best employee
+  engagement surveys, best employee survey tools, formester, formester blog,
+  employee engagement survey formester, Employee Engagement Survey Definition,
+  Questions, & More!, Employee Engagement Survey all you need to know, Sample of
+  Employee engagement survey questions, How do you survey employee engagement?,
+  What are the questions for employee engagement survey?, best employee
+  engagement surveys, surveys, survey forms, employee engagement survey form,
+  employee engagement survey forms
 author: Navni Dighe
 authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-05-19T17:54:18.910Z
