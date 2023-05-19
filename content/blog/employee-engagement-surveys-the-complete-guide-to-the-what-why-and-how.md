@@ -36,7 +36,7 @@ createdAt: 2023-05-19T17:54:18.910Z
 coverImg: /img/7-types-of-website-usability-survey-questions-to-ask-in-2023.png
 coverImgAlt: "Employee Engagement Surveys: The Complete Guide to the What, Why and How! "
 featured: false
-published: false
+published: true
 ---
 The conventional definitions of the terms, Work and Work-Life Balance, have changed drastically over the past couple of years. 
 
