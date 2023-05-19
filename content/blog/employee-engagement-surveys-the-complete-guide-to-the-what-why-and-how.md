@@ -29,7 +29,7 @@ keywords: Employee Engagement Survey, Employee Engagement Surveys, Employee
   Employee engagement survey questions, How do you survey employee engagement?,
   What are the questions for employee engagement survey?, best employee
   engagement surveys, surveys, survey forms, employee engagement survey form,
-  employee engagement survey forms
+  employee engagement survey forms, gen z, gen z in the workplace
 author: Navni Dighe
 authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-05-19T17:54:18.910Z
@@ -133,13 +133,9 @@ If the factors are limited, it becomes easier to gain an in-depth insight into e
 Note: The reason why it is recommended to conduct 4-5 employee engagement surveys per year, is because:
 
 1. Employee Engagement is Dynamic
-
 2. To oversee the effect of changes implemented based on previous surveys
-
 3. Ask multiple important questions for each individual parameter to gain deeper insights into each of them
-
 4. Gather information that identifies and isolates key problems and enables management to address them appropriately
-
 5. Maintain an adequate length for the survey 
 
 Examples of Parameters: Job Satisfaction, Career Motivations, Relationship with Authorities, co-workers and juniors, etc.
@@ -187,7 +183,7 @@ Needless to say, this also gives a clear understanding of what's working and wha
 
 When revising existing strategies and developing new ones, take into consideration the employees' suggestions. Also, it is best to include the concerned Department Heads alongside the HR department, for the same.
 
-### Step 5: Publishing Survey Results and Retain Transparency
+### Step 5: Publishing Survey Results and Retaining Transparency
 
 After obtaining the results, [share them with your employees](https://officevibe.com/blog/communicate-employee-engagement-survey-results#:~:text=The%20most%20crucial%20part%20of,develop%20a%20collaborative%20action%20plan.)!
 
@@ -212,53 +208,29 @@ Here is a list of...
 ## 25 Sample Questions to Ask in an Employee Engagement Survey
 
 1. How satisfied are you with the tasks/goals assigned to you as part of your job role?
-
 2. On a scale of 1-10, how often do you find yourself doing tasks beyond your defined scope of work?
-
 3. On a scale of 1-10, how enthusiastic are you about coming to work?
-
 4. Which mode of work do you prefer: Work from Office, Work from Home or Hybrid?
-
 5. On a scale of 1-10, how likely are you to recommend this \[organization name], to your social circle?
-
 6. Do you feel recognized and valued for the extra effort that you put in for accomplishing your goals?
-
 7. Does your superior recognize your efforts?
-
 8. On a scale of 1-10, how would you rate your professional relationships with your co-workers?
-
 9. Do you find your work challenging and meaningful?
-
 10. Do you feel there is ample scope for growth in this organization?
-
 11. Do the tools and platforms made available to you, help you perform your tasks effectively?
-
 12. On a scale of 1-10, how would you rate the culture of this organization?
-
 13. Do you feel aligned with the vision, mission and goals of the organization?
-
 14. Do you feel your superior is invested in your professional growth and development?
-
 15. If there was one thing you could change about this workplace, what would it be and why?
-
 16. Are you satisfied with the work distribution within your team and department?
-
 17. Do you feel proud about being a part of this organization?
-
 18. Do you feel comfortable giving feedback to your supervisor?
-
 19. Do you feel the organization's policies are supportive of diversity and inclusion? 
-
 20. On a scale of 1-10, how comfortable/relaxed do you feel at your work?
-
 21. Do you enjoy your work?
-
 22. Are you aware of any office politics?
-
 23. On a scale of 1-10, how satisfied are you with the company's Corporate Wellness Program?
-
 24. How often are you stressed about work targets/deadlines?
-
 25. Do you feel the organization cares about your mental and physical well-being?
 
 But the survey isn't over just after gathering responses;
