@@ -55,7 +55,7 @@ The non-acceptance of these changes and failure to optimize and upgrade your org
 
 May in fact, lead to the occurrence of such events -
 
-![](/img/employee-engagement-surveys-the-complete-guide-to-the-what-why-and-how_-meme.png)
+![Funny tweet depicting the attitude of Gen-Z in the Workplace](/img/employee-engagement-surveys-the-complete-guide-to-the-what-why-and-how_-meme.png "The attitude of Gen-Z in the Workplace")
 
 The need of the hour, therefore, is evidently to update and reform Corporate Work Strategies, to welcome the adaptation to the said changes.
 
@@ -69,7 +69,11 @@ In a much simpler sense, it is a measure of the employees' willingness to go bey
 
 Employee Engagement can be measured both qualitatively and quantitatively.
 
+![Infographic showing: 10 C's of Employee Engagement (Information Courtesy: Ivey Business Journal), namely: 1. Connection 2. Career 3. Clarity 4. Convey 5. Congratulate 6. Contribute 7. Control 8. Collaborate 9. Credibility 10. Confidence](/img/10-c’s-of-employee-engagement.png "10 C's of Employee Engagement (Information Courtesy: Ivey Business Journal)")
+
 ## Factors of Employee Engagement:
+
+![Infographic showing: Factors of Employee Engagement, namely: 1. Job Satisfaction 2. Work-Life Balance 3. Growth Opportunities 4. Reward & Recognition for Positive Performance 5. Career Motivations 6. Fair and Standard Pay Structure 7. Employee Benefit Policies 8. Company Culture 9. Transparency and Integrity 10. Relationship with Authorities, co-workers and juniors](/img/factors-of-employee-engagement.png "Factors of Employee Engagement")
 
 ### 1. Job Satisfaction
 
@@ -244,6 +248,8 @@ Here are the...
 
 ## 5 Key Metrics to Track in an Employee Engagement Survey
 
+![Infographic showing: 5 Key Metrics to Track in an Employee Engagement Survey, namely: 1. Voluntary Employee Turnover Rate 2. Employee Retention Rate 3. Absenteeism 4. Employee Net Promoter Score (eNPS) 5. Employee satisfaction](/img/key-metrics-to-track-in-an-employee-engagement-survey.png "5 Key Metrics to Track in an Employee Engagement Survey")
+
 ### 1. Voluntary Employee Turnover Rate
 
 This metric is a measure of the rate at which the employees choose to leave the company, voluntarily or out of their own free will.
@@ -291,6 +297,8 @@ The happiness and fulfillment they feel while performing the tasks, goals and ac
 But before you go, it is important to know...
 
 ## The Benefits of Measuring Employee Engagement
+
+![Infographic showing: Benefits of Measuring Employee Engagement, namely: 1. Improved Employee Efficiency and Performance 2. Enhanced Productivity 2. Improved Employee Job Satisfaction 3. Development of Finer Employee Retention Policies 4. Identification of Improvement Scope and/or Pain Points in Work Policies, Strategies and Company Culture  5. Understanding of Employee Motivations and Aims to Empower Mutual Growth 6. Healthier Work Engagements 7. Positive Organizational Growth](/img/benefits-of-measuring-employee-engagement.png "Benefits of Measuring Employee Engagement")
 
 ### 1. Improved Employee Efficiency and Performance
 
@@ -342,7 +350,7 @@ Did you know, at Formester, you could...
 
 ## Create a Free Employee Engagement Survey in 3 Simple Steps
 
-![](/img/employee-engagement-surveys-the-complete-guide-to-the-what-why-and-how_-meme-1-.png)
+![Infographic showing: How to Create a Free Employee Engagement Survey in 3 Simple Steps using Formester: 1. Sign-up for Formester 2. Create your own form or use a free template 3. Publish your survey and gather actionable insights!](/img/employee-engagement-surveys-the-complete-guide-to-the-what-why-and-how_-meme-1-.png "How to Create a Free Employee Engagement Survey in 3 Simple Steps using Formester")
 
 1. Sign-up for Formester;
 

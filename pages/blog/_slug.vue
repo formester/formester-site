@@ -181,7 +181,8 @@ export default {
       if (evt.keyCode === 27) {
         document.querySelector('.popup__img ').style.display = 'none'
       }
-    }
+    };
+    this.loadDisqus()
   },
   methods: {
     formatDate(date) {
@@ -199,13 +200,24 @@ export default {
       }
       this.googleAnalytics('custom_link')
     },
-    googleAnalytics(platform) {
-      gtag &&
-        gtag('event', 'share', {
-          method: platform,
-          content_type: 'blog',
-          item_id: this.article.title,
-        })
+    googleAnalytics(platform){
+      gtag && gtag("event", "share", {
+        "method": platform,
+        "content_type": "blog",
+        "item_id": this.article.title
+      })
+    },
+    loadDisqus() {
+      var disqus_config = function () {
+        this.page.url = `https://formester.com/blog/${this.$route.params.slug}/`
+        this.page.identifier = `${this.$route.params.slug}`
+      }
+
+      var d = document,
+        s = d.createElement('script')
+      s.src = 'https://formester.disqus.com/embed.js'
+      s.setAttribute('data-timestamp', +new Date())
+      ;(d.head || d.body).appendChild(s)
     },
   },
   computed: {
