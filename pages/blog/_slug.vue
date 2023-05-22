@@ -101,6 +101,18 @@
             />
           </div>
         </div>
+
+        <template>
+          <div class="mt-5" id="disqus_thread"></div>
+        </template>
+
+        <noscript
+          >Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript"
+            >comments powered by Disqus.</a
+          ></noscript
+        >
+
       </article>
     </div>
     <CallToActionSection :content="article.cta" />
@@ -155,6 +167,7 @@ export default {
         document.querySelector('.popup__img ').style.display = 'none'
       }
     };
+    this.loadDisqus()
   },
   methods: {
     formatDate(date) {
@@ -178,7 +191,19 @@ export default {
         "content_type": "blog",
         "item_id": this.article.title
       })
-    }
+    },
+    loadDisqus() {
+      var disqus_config = function () {
+        this.page.url = `https://formester.com/blog/${this.$route.params.slug}/`
+        this.page.identifier = `${this.$route.params.slug}`
+      }
+
+      var d = document,
+        s = d.createElement('script')
+      s.src = 'https://formester.disqus.com/embed.js'
+      s.setAttribute('data-timestamp', +new Date())
+      ;(d.head || d.body).appendChild(s)
+    },
   },
   computed: {
     meta() {
