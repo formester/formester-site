@@ -33,7 +33,7 @@ keywords: Employee Engagement Survey, Employee Engagement Surveys, Employee
 author: Navni Dighe
 authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-05-19T17:54:18.910Z
-coverImg: /img/7-types-of-website-usability-survey-questions-to-ask-in-2023.png
+coverImg: /img/employee-engagement-surveys_-the-complete-guide-to-the-what-why-and-how-.png
 coverImgAlt: "Employee Engagement Surveys: The Complete Guide to the What, Why and How! "
 featured: false
 published: true
