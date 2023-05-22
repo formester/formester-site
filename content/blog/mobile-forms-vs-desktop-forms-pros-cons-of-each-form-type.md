@@ -9,6 +9,7 @@ author: Mriganka Chandra
 createdAt: 2022-11-30T05:34:54.396Z
 coverImg: /img/mobile-form-vs-desktop-form__hero.png
 coverImgAlt: Hero image showing title mobile forms vs desktop forms
+images: https://formester.com/img/mobile-form-vs-desktop-form__hero.png
 featured: false
 published: true
 ---

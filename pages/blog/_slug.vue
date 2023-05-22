@@ -5,29 +5,44 @@
         class="container mw-920 mt-8rem"
         :class="{ 'mb-3rem': !(article.cta && article.cta.hidden) }"
       >
-      <div class="blog__header">
-        <NuxtLink
-          :to="`/blog/`"
-          class="blog__back"
-          :class="article.toc.length ? 'blog__back__margin' : ''"
-        >
-          <span>← Back</span>
-        </NuxtLink>
-        <div class="social__links">
-          <a :href="`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${article.title} by @_Formester_ `" @click="googleAnalytics('twitter')" class="social-icons" target="_blank">
-            <TwitterIcon />
-          </a>
-          <a  :href="`https://www.facebook.com/sharer.php?u=${encodedUrl}`" @click="googleAnalytics('facebook')" class="social-icons" target="_blank">
-            <FacebookIcon />
-          </a>
-          <a  :href="`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}`" @click="googleAnalytics('linkedin')" class="social-icons" target="_blank">
-            <LinkdinIcon />
-          </a>
-          <span class="social-icons" @click="copyToClipboard">
-            <CopyLinkIcon />
-          </span>
+        <div class="blog__header">
+          <NuxtLink
+            :to="`/blog/`"
+            class="blog__back"
+            :class="article.toc.length ? 'blog__back__margin' : ''"
+          >
+            <span>← Back</span>
+          </NuxtLink>
+          <div class="social__links">
+            <a
+              :href="`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${article.title} by @_Formester_ `"
+              @click="googleAnalytics('twitter')"
+              class="social-icons"
+              target="_blank"
+            >
+              <TwitterIcon />
+            </a>
+            <a
+              :href="`https://www.facebook.com/sharer.php?u=${encodedUrl}`"
+              @click="googleAnalytics('facebook')"
+              class="social-icons"
+              target="_blank"
+            >
+              <FacebookIcon />
+            </a>
+            <a
+              :href="`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}`"
+              @click="googleAnalytics('linkedin')"
+              class="social-icons"
+              target="_blank"
+            >
+              <LinkdinIcon />
+            </a>
+            <span class="social-icons" @click="copyToClipboard">
+              <CopyLinkIcon />
+            </span>
+          </div>
         </div>
-      </div>
         <nav
           v-if="article.toc.length"
           class="navbar navbar-expand bg-white sticky-top py-3"
@@ -70,9 +85,9 @@
         <div class="sm-text mt-1 article__author-section">
           by
           <a
-            :href="article.authorProfile" 
+            :href="article.authorProfile"
             :title="article.authorProfile"
-            target="_blank" 
+            target="_blank"
             rel="noopener"
           >
             <span class="article__author">{{ article.author }}</span>
@@ -80,15 +95,12 @@
         </div>
         <div class="blog__content">
           <nuxt-content :document="article" />
-            <div class="popup__img">
-              <span class="image-preview-close">&times;</span>
-              <img
-                src=""
-                alt=""
-              />
-            </div>
+          <div class="popup__img">
+            <span class="image-preview-close">&times;</span>
+            <img src="" alt="" />
+          </div>
         </div>
-        <notifications position="bottom right" class="my-notification"/>
+        <notifications position="bottom right" class="my-notification" />
 
         <div v-if="relatedArticles" class="mt-5">
           <h2 class="article__sub-heading">Related Blogs</h2>
@@ -101,6 +113,17 @@
             />
           </div>
         </div>
+
+        <template>
+          <div class="mt-5" id="disqus_thread"></div>
+        </template>
+
+        <noscript
+          >Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript"
+            >comments powered by Disqus.</a
+          ></noscript
+        >
       </article>
     </div>
     <CallToActionSection :content="article.cta" />
@@ -122,7 +145,7 @@ export default {
     TwitterIcon,
     FacebookIcon,
     LinkdinIcon,
-    CopyLinkIcon
+    CopyLinkIcon,
   },
   content: {
     liveEdit: false,
@@ -131,17 +154,21 @@ export default {
     const article = await $content('blog', params.slug).fetch()
 
     let relatedArticles = await $content('blog').fetch()
-    relatedArticles = relatedArticles.filter(relatedArticle => article.slug !== relatedArticle.slug)
+    relatedArticles = relatedArticles.filter(
+      (relatedArticle) => article.slug !== relatedArticle.slug
+    )
     const randIndex = Math.floor(Math.random() * (relatedArticles.length - 2))
-    relatedArticles = relatedArticles.slice(randIndex,  randIndex + 2);
-    return { article, relatedArticles}
+    relatedArticles = relatedArticles.slice(randIndex, randIndex + 2)
+    return { article, relatedArticles }
   },
   mounted() {
-    document.querySelectorAll('.blog__content img').forEach(image => {
+    document.querySelectorAll('.blog__content img').forEach((image) => {
       image.onclick = () => {
-        document.querySelector('.popup__img').style.display = 'block';
-        document.querySelector('.popup__img img').src = image.getAttribute('src')
-        document.querySelector('.popup__img img').alt = image.getAttribute('alt')
+        document.querySelector('.popup__img').style.display = 'block'
+        document.querySelector('.popup__img img').src =
+          image.getAttribute('src')
+        document.querySelector('.popup__img img').alt =
+          image.getAttribute('alt')
       }
     })
     document.querySelector('.popup__img img').onclick = () => {
@@ -150,11 +177,12 @@ export default {
     document.querySelector('.image-preview-close').onclick = () => {
       document.querySelector('.popup__img ').style.display = 'none'
     }
-    document.onkeydown = function(evt) {
+    document.onkeydown = function (evt) {
       if (evt.keyCode === 27) {
         document.querySelector('.popup__img ').style.display = 'none'
       }
-    };
+    }
+    this.loadDisqus()
   },
   methods: {
     formatDate(date) {
@@ -164,21 +192,34 @@ export default {
     to() {
       this.$router.back()
     },
-    copyToClipboard(){ 
+    copyToClipboard() {
       if (process.client) {
-        navigator.clipboard.writeText(window.location.href).then(()=>{
+        navigator.clipboard.writeText(window.location.href).then(() => {
           this.$notify({ type: 'success', text: 'Link copied to clipboard' })
-        });
+        })
       }
       this.googleAnalytics('custom_link')
     },
-    googleAnalytics(platform){
-      gtag && gtag("event", "share", {
-        "method": platform,
-        "content_type": "blog",
-        "item_id": this.article.title
-      })
-    }
+    googleAnalytics(platform) {
+      gtag &&
+        gtag('event', 'share', {
+          method: platform,
+          content_type: 'blog',
+          item_id: this.article.title,
+        })
+    },
+    loadDisqus() {
+      var disqus_config = function () {
+        this.page.url = `https://formester.com/blog/${this.$route.params.slug}/`
+        this.page.identifier = `${this.$route.params.slug}`
+      }
+
+      var d = document,
+        s = d.createElement('script')
+      s.src = 'https://formester.disqus.com/embed.js'
+      s.setAttribute('data-timestamp', +new Date())
+      ;(d.head || d.body).appendChild(s)
+    },
   },
   computed: {
     meta() {
@@ -196,9 +237,9 @@ export default {
       }
       return getSiteMeta(metaData)
     },
-    encodedUrl(){
-      return encodeURIComponent(process.env.baseUrl + this.$route.fullPath);
-    }
+    encodedUrl() {
+      return encodeURIComponent(process.env.baseUrl + this.$route.fullPath)
+    },
   },
   head() {
     return {
@@ -248,6 +289,16 @@ export default {
     }
   },
   jsonld() {
+    const imagesArray = []
+
+    if (this.article.coverImg) {
+      imagesArray.push(`https://formester.com${this.article.coverImg}`)
+    }
+
+    if (this.article.images && this.article.images.length > 0) {
+      imagesArray.push(...this.article.images)
+    }
+
     return {
       '@context': 'https://schema.org',
       '@type': 'BlogPosting',
@@ -259,12 +310,11 @@ export default {
       description: this.article.description,
       metaTitle: this.article.metaTitle,
       metaDescription: this.article.metaDescription,
-      image: this.article.coverImg
-        ? `https://formester.com/${this.article.coverImg}`
-        : 'https://formester.com/formester-form-builder-background.png',
+      image: imagesArray.length > 0 ? imagesArray : ['https://formester.com/formester-form-builder-background.png'],
       author: {
         '@type': 'Person',
         name: this.article.author,
+        url: this.article.authorProfile,
       },
       publisher: {
         '@type': 'Organization',
@@ -283,7 +333,6 @@ export default {
 <style scoped>
 p {
   margin-bottom: 2rem;
-
 }
 .article__heading {
   font-size: 2.25rem;
@@ -388,7 +437,6 @@ p {
   gap: 0.5rem;
 }
 
-
 #tocMenuLink {
   color: #777;
   font-size: 16px;
@@ -410,22 +458,22 @@ p {
   display: block;
 }
 
-.blog__header{
+.blog__header {
   margin-top: -4rem;
   justify-content: space-between;
   display: flex;
 }
-.blog__header span{
+.blog__header span {
   color: #777;
 }
-.social__links{
+.social__links {
   display: flex;
 }
-.social-icons{
+.social-icons {
   margin: 0 6px;
   cursor: pointer;
 }
-.social-icons{
+.social-icons {
   fill: #000;
 }
 

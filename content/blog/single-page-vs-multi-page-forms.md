@@ -9,6 +9,16 @@ authorProfile: https://www.linkedin.com/in/piyushsinghaniya/
 createdAt: 2022-05-15
 coverImg: /img/single-page-vs-multi-page-forms.png
 coverImgAlt: Cover image for the blog, "single page vs multi page form"
+images: [
+    https://formester.com/img/single-page-vs-multi-page-forms.png,
+    https://formester.com/img/single-page-vs-multi-page-forms__easy-to-edit.svg,
+    https://formester.com/img/single-page-vs-multi-page-forms__less-loading-time.svg,
+    https://formester.com/img/single-page-vs-multi-page-forms__less-overwhelming.svg,
+    https://formester.com/img/single-page-vs-multi-page-forms__similar-questions.svg,
+    https://formester.com/img/single-page-vs-multi-page-forms__toggle-form-type.png,
+    https://formester.com/img/single-page-vs-multi-page-forms__multiple-page-form.png,
+    https://formester.com/img/single-page-vs-multi-page-forms__multi-page-form-example.png
+  ]
 featured: false
 published: true
 ---

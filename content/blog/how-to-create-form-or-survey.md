@@ -10,6 +10,13 @@ authorProfile: https://www.linkedin.com/in/vivek--badani/
 createdAt: 2022-11-02
 coverImg: /img/how-to-create-a-form__how-to-create-form-or-survey.png
 coverImgAlt: Cover image for the blog, "How to create a form or survey using form builder"
+images: [
+    https://formester.com/img/how-to-create-a-form__how-to-create-form-or-survey.png,
+    https://formester.com/img/how-to-create-a-form__form-details.png,
+    https://formester.com/img/how-to-create-a-form__choose-form-fields.png,
+    https://formester.com/img/how-to-create-a-form__customise-font-and-heading.png,
+    https://formester.com/img/how-to-create-a-form__publishing-form-after-creation.png
+  ]
 featured: false
 published: true
 ---

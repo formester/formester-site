@@ -15,6 +15,12 @@ authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-03-20T10:27:47.265Z
 coverImg: /img/web-forms-lead-generation-101.png
 coverImgAlt: "Web Forms: How And Where to Use Them For Your Business"
+images: [
+    https://formester.com/img/web-form-1.png,
+    https://formester.com/img/conversion-rates-as-a-result-of-using-web-forms-1-.png,
+    https://lh4.googleusercontent.com/ls8vj3bFec5DYTvtX6XEEoAWs_ak_Mwr2iiMmD0oMKcy236iV6X9oAMCKN102Z1EVkOwH3EU2Cxo3qrCi-XsY1G6TeandbYb0A6rM2vm15-jLAcb4Cr-_Q_pot0FPc-s9-EJ_iD168Q7qP8uUIlgHT0,
+    https://formester.com/img/untitled-design-1-.png
+  ]
 featured: false
 published: true
 ---

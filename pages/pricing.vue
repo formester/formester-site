@@ -99,9 +99,9 @@ export default {
       {
         '@context': 'http://schema.org',
         '@type': 'WebApplication',
-        '@id': 'kwfinder',
+        '@id': 'https://acornglobus.com',
         applicationCategory: 'BusinessApplication',
-        name: 'Formester - HTML Form Backend',
+        name: 'Plans & Pricing | Formester',
         operatingSystem: 'all',
         browserRequirements: 'Requires Javascript and HTML5 support',
         url: 'https://formester.com',
@@ -116,7 +116,7 @@ export default {
             '@type': 'Organization',
             name: 'Formester',
           },
-          highPrice: '49.00',
+          highPrice: '45.00',
           lowPrice: '0',
           offerCount: '3',
           priceCurrency: 'USD',
@@ -135,7 +135,7 @@ export default {
             },
             {
               '@type': 'UnitPriceSpecification',
-              price: '13.00',
+              price: '12.00',
               priceCurrency: 'USD',
               name: 'Formester personal subscription',
               referenceQuantity: {
@@ -147,7 +147,7 @@ export default {
             },
             {
               '@type': 'UnitPriceSpecification',
-              price: '49.00',
+              price: '45.00',
               priceCurrency: 'USD',
               name: 'Formester business subscription',
               referenceQuantity: {
