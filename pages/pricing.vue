@@ -116,7 +116,7 @@ export default {
             '@type': 'Organization',
             name: 'Formester',
           },
-          highPrice: '45.00',
+          highPrice: '49.00',
           lowPrice: '0',
           offerCount: '3',
           priceCurrency: 'USD',
@@ -135,7 +135,7 @@ export default {
             },
             {
               '@type': 'UnitPriceSpecification',
-              price: '12.00',
+              price: '13.00',
               priceCurrency: 'USD',
               name: 'Formester personal subscription',
               referenceQuantity: {
@@ -147,7 +147,7 @@ export default {
             },
             {
               '@type': 'UnitPriceSpecification',
-              price: '45.00',
+              price: '49.00',
               priceCurrency: 'USD',
               name: 'Formester business subscription',
               referenceQuantity: {
