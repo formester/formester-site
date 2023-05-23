@@ -10,6 +10,7 @@ authorProfile: https://www.linkedin.com/in/vivek--badani/
 createdAt: 2022-08-22
 coverImg: /img/how-to-create-a-lead-capture-form__create-lead-capture-form-effectively.png
 coverImgAlt: Cover image for the blog, "How to Create a Lead Capture Form Effectively?"
+selectedImages: [https://formester.com/img/how-to-create-a-lead-capture-form__create-lead-capture-form-effectively.png]
 featured: false
 published: true
 ---

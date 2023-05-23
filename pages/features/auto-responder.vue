@@ -169,33 +169,55 @@ export default {
   jsonld() {
     return {
       '@context': 'http://schema.org',
-      '@type': 'Corporation',
-      name: 'Formester - Auto Responder',
-      description:
-        "Sign up now for the best No Code Form Builder! Create stunning HTML Forms with Formester's easy-to-use Online HTML Form Builder. Start building today!",
-      logo: 'https://formester.com/logo.png',
-      url: 'https://formester.com',
-      operatingSystem: 'all',
-      browserRequirements: 'Requires Javascript and HTML5 support',
-      sameAs: [
-        'https://twitter.com/_formester_',
-        'https://www.instagram.com/_formester_/',
-      ],
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Dalaware',
-        addressCountry: 'United States',
-      },
-      creator: {
-        '@type': 'Organization',
-        '@id': '#organization',
-        url: 'https://formester.com/',
-        name: 'Formester',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://formester.com/logo.png',
+      '@graph': [
+        {
+          '@type': 'Corporation',
+          '@id': 'https://acornglobus.com',
+          name: 'Email Autoresponder Message | Personalised Email Responder - Formester',
+          description:
+            "Boost your email marketing with a personalised email autoresponder message. Try Formester and engage your subscribers today! Sign up now.",
+          logo: 'https://formester.com/logo.png',
+          url: 'https://formester.com',
+          sameAs: [
+            'https://www.facebook.com/formester/',
+            'https://twitter.com/_formester_',
+            'https://www.instagram.com/_formester_/',
+            'https://www.linkedin.com/company/formester-inc/',
+            'https://www.producthunt.com/products/formester',
+            'https://www.softwareadvice.com/forms-automation/formester-profile/',
+            'https://www.capterra.com/p/166904/Formester/',
+            'https://www.getapp.com/website-ecommerce-software/a/formester/',
+          ],
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Delaware',
+            addressCountry: 'United States',
+          },
+          owns: {
+            '@type': 'Product',
+            name: 'Acorn Globus',
+            url: 'https://acornglobus.com',
+          }
         },
-      }
+        {
+          '@type': 'BreadcrumbList',
+          '@id': 'https://acornglobus.com',
+          itemListElement: [
+          {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Features',
+              item: 'https://formester.com/features',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Auto Responder',
+              item: 'https://formester.com/features/auto-responder/',
+            }
+          ],
+        },
+      ],
     }
   },
   data() {

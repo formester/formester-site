@@ -9,6 +9,15 @@ authorProfile: https://www.linkedin.com/in/ravindraverma12/
 createdAt: 2022-12-19T04:14:23.956Z
 coverImg: /img/how-to-integrate-google-smtp-with-formester.png
 coverImgAlt: How to integrate Google SMTP with formester
+selectedImages: [
+    https://formester.com/img/how-to-integrate-google-smtp-with-formester__home-screen.png,
+    https://formester.com/img/how-to-integrate-google-smtp-with-formester__security-option.png,
+    https://formester.com/img/how-to-integrate-google-smtp-with-formester__sign-app-account.png,
+    https://formester.com/img/how-to-integrate-google-smtp-with-formester__dropdown-option.png,
+    https://formester.com/img/how-to-integrate-google-smtp-with-formester__generate-account.png,
+    https://formester.com/img/how-to-integrate-google-smtp-with-formester__app-password.png,
+    https://formester.com/img/test-credentails.png
+  ]
 featured: false
 published: true
 ---

@@ -24,6 +24,11 @@ authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-05-03T17:13:15.050Z
 coverImg: /img/how_to_expand_your_small_business_using_web_forms_in_2023.png
 coverImgAlt: How to Expand Your Small Business using Web Forms in 2023
+selectedImages: [
+    https://formester.com/img/2_why-your-small-business-needs-web-forms.png,
+    https://formester.com/img/3_why-your-small-business-needs-web-forms.png,
+    https://formester.com/img/1_why-your-small-business-needs-web-forms.png
+  ]  
 featured: false
 published: true
 ---

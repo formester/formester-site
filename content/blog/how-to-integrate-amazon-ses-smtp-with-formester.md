@@ -9,6 +9,18 @@ authorProfile: https://www.linkedin.com/in/ravindraverma12/
 createdAt: 2023-03-16T10:27:12.358Z
 coverImg: /img/how-to-integrate-amazon-ses-smtp-with-formester.png
 coverImgAlt: How to integrate Amazon SES SMTP with formester
+selectedImages: [
+    https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_home_page.png,
+    https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_signup_for_ses.png,
+    https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_click_to_create_identity.png,
+    https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_create_verification_identity.png,
+    https://formester.com/img/_how-to-integrate-amazon-ses-smtp-with-formester_create_verification_identity_using_domain.png,
+    https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_create_verification_identity_using_email_address.png,
+    https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_check_your_domain_under_configuration.png,
+    https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_smtp_setting_option.png,
+    https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_smtp_credentials_button.png,
+    https://formester.com/img/test-credentails.png
+  ]
 featured: false
 published: true
 ---
