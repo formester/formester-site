@@ -138,6 +138,21 @@ export default {
       description:
         'Create custom online forms with ease using Formester - the top-rated online form builder. Contact us today to start building your perfect form!',
       url: 'https://formester.com/contact/',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Delaware',
+        addressCountry: 'United States',
+      },
+      creator: {
+        '@type': 'Organization',
+        '@id': '#organization',
+        url: 'https://formester.com/',
+        name: 'Formester',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://formester.com/logo.png',
+        },
+      }
     }
   },
   computed: {

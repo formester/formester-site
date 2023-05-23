@@ -10,6 +10,20 @@ authorProfile: https://www.linkedin.com/in/piyushsinghaniya/
 createdAt: 2022-05-10
 coverImg: /img/building-your-first-form-with-formester__formester-form-builder-background-cover.png
 coverImgAlt: Cover image for the blog, "Building your first form with formester"
+metaImages: [
+    https://formester.com/img/building-your-first-form-with-formester__formester-form-builder-background.png,
+    https://formester.com/img/building-your-first-form-with-formester__formester-form-builder-background.png,
+    https://formester.com/img/building-your-first-form-with-formester__form-details.png,
+    https://formester.com/img/building-your-first-form-with-formester__thank-you.png,
+    https://formester.com/img/building-your-first-form-with-formester__service-one-example.png,
+    https://formester.com/img/building-your-first-form-with-formester__action-url.png,
+    https://formester.com/img/building-your-first-form-with-formester__create-your-first-form.png,
+    https://formester.com/img/building-your-first-form-with-formester__form-details.png,
+    https://formester.com/img/building-your-first-form-with-formester__thank-you.png,
+    https://formester.com/img/building-your-first-form-with-formester__builder.png,
+    https://formester.com/img/building-your-first-form-with-formester__form-example.png,
+    https://formester.com/img/building-your-first-form-with-formester__final-form.png
+  ]
 featured: false
 published: true
 ---

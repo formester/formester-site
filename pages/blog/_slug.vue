@@ -273,6 +273,16 @@ export default {
     }
   },
   jsonld() {
+    const imagesArray = []
+
+    if (this.article.coverImg) {
+      imagesArray.push(`https://formester.com${this.article.coverImg}`)
+    }
+
+    if (this.article.metaImages && this.article.metaImages.length > 0) {
+      imagesArray.push(...this.article.metaImages)
+    }
+
     return {
       '@context': 'https://schema.org',
       '@type': 'BlogPosting',

@@ -162,6 +162,30 @@ export default {
       ],
     }
   },
+  jsonld() {
+    return {
+      '@context': 'http://schema.org',
+      '@type': 'WebApplication',
+      name: 'Privacy Policy | Formester',
+      logo: 'https://formester.com/logo.png',
+      url: 'https://formester.com',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Delaware',
+        addressCountry: 'United States',
+      },
+      creator: {
+        '@type': 'Organization',
+        '@id': '#organization',
+        url: 'https://formester.com/',
+        name: 'Formester',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://formester.com/logo.png',
+        },
+      }
+    }
+  },
 }
 </script>
 

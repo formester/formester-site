@@ -79,6 +79,50 @@ export default {
       ],
     }
   },
+  jsonld() {
+    return {
+      '@context': 'http://schema.org',
+      '@graph': [
+        {
+          '@type': 'Corporation',
+          '@id': 'https://acornglobus.com',
+          name: 'Formester',
+          description:
+            "Sign up now for the best No Code Form Builder! Create stunning HTML Forms with Formester's easy-to-use Online HTML Form Builder. Start building today!",
+          logo: 'https://formester.com/logo.png',
+          url: 'https://formester.com',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Delaware',
+            addressCountry: 'United States',
+          },
+          owns: {
+            '@type': 'Product',
+            name: 'Acorn Globus',
+            url: 'https://acornglobus.com',
+          }
+        },
+        {
+          '@type': 'BreadcrumbList',
+          '@id': 'https://acornglobus.com',
+          itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://formester.com',
+          },
+          {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Blog',
+              item: 'https://formester.com/blog',
+            },
+          ],
+        },
+      ],
+    }
+  },
 }
 </script>
 

@@ -469,6 +469,32 @@ export default {
       ],
     }
   },
+  jsonld() {
+    return {
+      '@context': 'http://schema.org',
+      '@type': 'Corporation',
+      name: 'Jotform Alternative | Formester vs Jotform - Formester',
+      description:
+        "Powerful Alternative to Jotform. Custom forms, data collection, actionable insights & more to grow your business. Start by signing-up for free!",
+      logo: 'https://formester.com/logo.png',
+      url: 'https://formester.com',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Delaware',
+        addressCountry: 'United States',
+      },
+      creator: {
+        '@type': 'Organization',
+        '@id': '#organization',
+        url: 'https://formester.com/',
+        name: 'Formester',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://formester.com/logo.png',
+        },
+      }
+    }
+  },
 }
 </script>
 

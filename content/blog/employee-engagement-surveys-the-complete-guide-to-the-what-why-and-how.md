@@ -35,6 +35,7 @@ authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-05-19T17:54:18.910Z
 coverImg: /img/employee-engagement-surveys_-the-complete-guide-to-the-what-why-and-how-.png
 coverImgAlt: "Employee Engagement Surveys: The Complete Guide to the What, Why and How! "
+metaImages: [https://formester.com/img/employee-engagement-surveys-the-complete-guide-to-the-what-why-and-how_-meme.png, https://formester.com/img/employee-engagement-surveys-the-complete-guide-to-the-what-why-and-how_-meme-1-.png]
 featured: false
 published: true
 ---
