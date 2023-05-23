@@ -11,7 +11,6 @@ authorProfile: https://www.linkedin.com/in/piyushsinghaniya/
 createdAt: 2022-11-07T19:08:25.299Z
 coverImg: /img/what-is-web-form-spam-and-how-to-prevent-it.png
 coverImgAlt: Cover image for the blog, "What is web form spam, and how to prevent it?"
-selectedImages: [https://formester.com/img/what-is-web-form-spam-and-how-to-prevent-it.png]
 featured: false
 published: true
 ---

@@ -38,26 +38,6 @@ createdAt: 2023-05-11T15:55:49.878Z
 coverImg: /img/how-to-add-a-timer-to-your-google-quiz-_-includes-latest-alternative-works-without-add-ons-2023-1.png
 coverImgAlt: How to Add a Timer to Your Google Quiz | Includes Latest
   Alternative - Works Without Add-ons (2023)
-selectedImages: [
-    https://formester.com/img/14.png,
-    https://formester.com/img/advantages-of-using-time-bound-web-forms-in-a-business-context.png,
-    https://formester.com/img/advantages-of-using-time-bound-quizzes-in-an-academic-context.png,
-    https://formester.com/img/16.png,
-    https://formester.com/img/how-to-add-a-timer-to-your-google-quiz-1.png,
-    https://formester.com/img/how-to-add-a-timer-to-your-google-quiz-2.png,
-    https://formester.com/img/how-to-add-a-timer-to-your-google-quiz-3.png,
-    https://formester.com/img/how-to-add-a-timer-to-your-google-quiz-4.png,
-    https://formester.com/img/how-to-add-a-timer-to-your-google-quiz-5.png,
-    https://formester.com/img/how-to-add-a-timer-to-your-google-quiz-6.png,
-    https://formester.com/img/how-to-add-a-timer-to-your-google-quiz-7.png,
-    https://formester.com/img/how-to-add-a-timer-to-your-google-quiz-8.png,
-    https://formester.com/img/how-to-add-a-timer-to-your-google-quiz-9.png,
-    https://formester.com/img/how-to-add-a-timer-to-your-google-quiz-10.png,
-    https://formester.com/img/how-to-add-a-timer-to-your-google-quiz-includes-alternative-works-without-add-ons.png,
-    https://formester.com/img/how-to-add-a-timer-to-your-google-quiz-11.png,
-    https://formester.com/img/how-to-add-a-timer-to-your-google-quiz-12.png,
-    https://formester.com/img/how-to-add-a-timer-to-your-google-quiz-13.png
-  ]
 featured: false
 published: true
 ---

@@ -10,10 +10,6 @@ authorProfile: https://www.linkedin.com/in/vivek--badani/
 createdAt: 2022-10-18
 coverImg: /img/top-benefits-of-using-online__top-benefits-of-using-online-form-builder.png
 coverImgAlt: Cover image for the blog, "Top benefits of using online form builder"
-selectedImages: [
-    https://formester.com/img/top-benefits-of-using-online__top-benefits-of-using-online-form-builder.png,
-    https://formester.com/img/top-benefits-of-using-online__formester-landing-page.png
-  ]
 featured: false
 published: true
 ---
