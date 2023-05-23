@@ -95,152 +95,153 @@ export default {
     }
   },
   jsonld() {
-    return [
-      {
-        '@context': 'http://schema.org',
-        '@type': 'WebApplication',
-        '@id': 'https://acornglobus.com',
-        applicationCategory: 'BusinessApplication',
-        name: 'Plans & Pricing | Formester',
-        operatingSystem: 'all',
-        browserRequirements: 'Requires Javascript and HTML5 support',
-        url: 'https://formester.com',
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: '4.8',
-          reviewCount: '8',
-        },
-        offers: {
-          '@type': 'AggregateOffer',
-          offeredBy: {
-            '@type': 'Organization',
-            name: 'Formester',
-          },
-          highPrice: '49.00',
-          lowPrice: '0',
-          offerCount: '3',
-          priceCurrency: 'USD',
-          priceSpecification: [
+    return {
+      '@context': 'http://schema.org',
+      '@graph': [
+        {
+          '@type': 'FAQPage',
+          mainEntity: [
             {
-              '@type': 'UnitPriceSpecification',
-              price: '0.00',
-              priceCurrency: 'USD',
-              name: 'Formester FREE subscription',
-              referenceQuantity: {
-                '@type': 'QuantitativeValue',
-                value: '100',
-                unitCode: 'SUB',
-                unitText: 'Submissions',
+              '@type': 'Question',
+              name: 'Can I try before I buy?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'It’s free to set up an account and create a campaign. But to get more than 100 submissions, you’ll need to choose a plan.',
               },
             },
             {
-              '@type': 'UnitPriceSpecification',
-              price: '13.00',
-              priceCurrency: 'USD',
-              name: 'Formester personal subscription',
-              referenceQuantity: {
-                '@type': 'QuantitativeValue',
-                value: '1000',
-                unitCode: 'SUB',
-                unitText: 'Submissions',
+              '@type': 'Question',
+              name: 'Can I change plans at anytime?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. Formester is a pay-as-you-go service and you can upgrade, downgrade or cancel at any time. You can upgrade anytime right from your account page.',
               },
             },
             {
-              '@type': 'UnitPriceSpecification',
-              price: '49.00',
-              priceCurrency: 'USD',
-              name: 'Formester business subscription',
-              referenceQuantity: {
-                '@type': 'QuantitativeValue',
-                value: '15000',
-                unitCode: 'SUB',
-                unitText: 'Submissions',
+              '@type': 'Question',
+              name: "What happens if I don't like the service?",
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: "Don't worry, if you are ever unhappy with our service and wish to cancel, we'll happily reimburse your last month -- no questions asked.",
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Do I get a discount on yearly plan?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'You do, If you buy yearly plan you only have to pay for 11 months and you get 1 month free.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Is there an referral/affiliate program?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: "Yes we do. It's an invite only program. If you need access to this please reach out to our support.",
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Do you offer discount for NGO and School?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. Get in touch and we’ll help you out.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'What if I want a reseller account?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'We do support resellers. Please reach out to us at support@formester.com and we will love to help you.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'I have more questions',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: "No problem! Contact us and we'll get in touch with you shortly :)",
               },
             },
           ],
         },
-        creator: {
-          '@type': 'Organization',
-          '@id': '#organization',
-          url: 'https://formester.com/',
-          name: 'Formester',
-          logo: {
-            '@type': 'ImageObject',
-            url: 'https://formester.com/logo.png',
+        {
+          '@type': 'Corporation',
+          '@id': 'https://acornglobus.com',
+          applicationCategory: 'BusinessApplication',
+          name: 'Plans & Pricing | Formester',
+          operatingSystem: 'all',
+          browserRequirements: 'Requires Javascript and HTML5 support',
+          url: 'https://formester.com',
+          aggregateRating: {
+            '@type': 'AggregateRating',
+            ratingValue: '4.8',
+            reviewCount: '8',
+          },
+          offers: {
+            '@type': 'AggregateOffer',
+            offeredBy: {
+              '@type': 'Organization',
+              name: 'Formester',
+            },
+            highPrice: '49.00',
+            lowPrice: '0',
+            offerCount: '3',
+            priceCurrency: 'USD',
+            priceSpecification: [
+              {
+                '@type': 'UnitPriceSpecification',
+                price: '0.00',
+                priceCurrency: 'USD',
+                name: 'Formester FREE subscription',
+                referenceQuantity: {
+                  '@type': 'QuantitativeValue',
+                  value: '100',
+                  unitCode: 'SUB',
+                  unitText: 'Submissions',
+                },
+              },
+              {
+                '@type': 'UnitPriceSpecification',
+                price: '13.00',
+                priceCurrency: 'USD',
+                name: 'Formester personal subscription',
+                referenceQuantity: {
+                  '@type': 'QuantitativeValue',
+                  value: '1000',
+                  unitCode: 'SUB',
+                  unitText: 'Submissions',
+                },
+              },
+              {
+                '@type': 'UnitPriceSpecification',
+                price: '49.00',
+                priceCurrency: 'USD',
+                name: 'Formester business subscription',
+                referenceQuantity: {
+                  '@type': 'QuantitativeValue',
+                  value: '15000',
+                  unitCode: 'SUB',
+                  unitText: 'Submissions',
+                },
+              },
+            ],
+          },
+          creator: {
+            '@type': 'Organization',
+            '@id': '#organization',
+            url: 'https://formester.com/',
+            name: 'Formester',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://formester.com/logo.png',
+            },
           },
         },
-      },
-      {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: [
-          {
-            '@type': 'Question',
-            name: 'Can I try before I buy?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'It’s free to set up an account and create a campaign. But to get more than 100 submissions, you’ll need to choose a plan.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Can I change plans at anytime?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Yes. Formester is a pay-as-you-go service and you can upgrade, downgrade or cancel at any time. You can upgrade anytime right from your account page.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: "What happens if I don't like the service?",
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: "Don't worry, if you are ever unhappy with our service and wish to cancel, we'll happily reimburse your last month -- no questions asked.",
-            },
-          },
-          {
-            '@type': 'Question',
-            name: "Do I get a discount on yearly plan?",
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: "You do, If you buy yearly plan you only have to pay for 11 months and you get 1 month free.",
-            },
-          },
-          {
-            '@type': 'Question',
-            name: "Is there an referral/affiliate program?",
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: "Yes we do. It's an invite only program. If you need access to this please reach out to our support.",
-            },
-          },
-          {
-            '@type': 'Question',
-            name: "Do you offer discount for NGO and School?",
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: "Yes. Get in touch and we’ll help you out.",
-            },
-          },
-          {
-            '@type': 'Question',
-            name: "What if I want a reseller account?",
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: "We do support resellers. Please reach out to us at support@formester.com and we will love to help you.",
-            },
-          },
-          {
-            '@type': 'Question',
-            name: "I have more questions",
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: "No problem! Contact us and we'll get in touch with you shortly :)",
-            },
-          },
-        ],
-      },
-    ]
+      ],
+    }
   },
 }
 </script>

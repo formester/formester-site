@@ -65,16 +65,88 @@ export default {
     }
   },
   jsonld() {
-    return [
-      {
-        '@context': 'https://schema.org',
-        '@type': 'ItemList',
-        name: 'All Templates',
-        description:
-          'Use our Formester form templates including surveys, reviews, registrations, & more for any industry! Automate workflows with online templates.',
-        itemListElement: this.listItems,
-      },
-    ]
+    return {
+      '@context': 'http://schema.org',
+      '@graph': [
+        {
+          '@type': 'Corporation',
+          '@id': 'https://acornglobus.com',
+          name: 'Formester',
+          description:
+            "Sign up now for the best No Code Form Builder! Create stunning HTML Forms with Formester's easy-to-use Online HTML Form Builder. Start building today!",
+          logo: 'https://formester.com/logo.png',
+          url: 'https://formester.com',
+          sameAs: [
+            'https://www.facebook.com/formester/',
+            'https://twitter.com/_formester_',
+            'https://www.instagram.com/_formester_/',
+            'https://www.linkedin.com/company/formester-inc/',
+            'https://www.producthunt.com/products/formester',
+            'https://www.softwareadvice.com/forms-automation/formester-profile/',
+            'https://www.capterra.com/p/166904/Formester/',
+            'https://www.getapp.com/website-ecommerce-software/a/formester/',
+          ],
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Delaware',
+            addressCountry: 'United States',
+          },
+          owns: {
+            '@type': 'Product',
+            name: 'Acorn Globus',
+            url: 'https://acornglobus.com',
+          },
+        },
+        {
+          '@type': 'BreadcrumbList',
+          '@id': 'https://acornglobus.com',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'All Categories',
+              item: 'https://formester.com/templates',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Contact Forms',
+              item: 'https://formester.com/templates/categories/contact-forms/',
+            },
+            {
+              '@type': 'ListItem',
+              position: 3,
+              name: 'Registration Forms',
+              item: 'https://formester.com/templates/categories/registration-forms/',
+            },
+            {
+              '@type': 'ListItem',
+              position: 4,
+              name: 'Feedback Forms',
+              item: 'https://formester.com/templates/categories/feedback-forms/',
+            },
+            {
+              '@type': 'ListItem',
+              position: 5,
+              name: 'Research Forms',
+              item: 'https://formester.com/templates/categories/research-forms/',
+            },
+            {
+              '@type': 'ListItem',
+              position: 6,
+              name: 'Lead Generation',
+              item: 'https://formester.com/templates/categories/lead-generation/',
+            },
+            {
+              '@type': 'ListItem',
+              position: 7,
+              name: 'Employee',
+              item: 'https://formester.com/templates/categories/employee/',
+            }
+          ],
+        },
+      ],
+    }
   },
 }
 </script>

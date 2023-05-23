@@ -203,6 +203,96 @@ export default {
     randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2);
     return { randomTestimonials }
   },
+  jsonld() {
+    return {
+      '@context': 'http://schema.org',
+      '@graph': [
+        {
+          '@type': 'Corporation',
+          '@id': 'https://acornglobus.com',
+          name: 'Formester',
+          description:
+            "Sign up now for the best No Code Form Builder! Create stunning HTML Forms with Formester's easy-to-use Online HTML Form Builder. Start building today!",
+          logo: 'https://formester.com/logo.png',
+          url: 'https://formester.com',
+          sameAs: [
+            'https://www.facebook.com/formester/',
+            'https://twitter.com/_formester_',
+            'https://www.instagram.com/_formester_/',
+            'https://www.linkedin.com/company/formester-inc/',
+            'https://www.producthunt.com/products/formester',
+            'https://www.softwareadvice.com/forms-automation/formester-profile/',
+            'https://www.capterra.com/p/166904/Formester/',
+            'https://www.getapp.com/website-ecommerce-software/a/formester/',
+          ],
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Delaware',
+            addressCountry: 'United States',
+          },
+          owns: {
+            '@type': 'Product',
+            name: 'Acorn Globus',
+            url: 'https://acornglobus.com',
+          }
+        },
+        {
+          '@type': 'BreadcrumbList',
+          '@id': 'https://acornglobus.com',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'HTML Form Backend',
+              item: 'https://formester.com/features/html-form-backend/',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Auto Responder',
+              item: 'http://formester.com/auto-responder',
+            },
+            {
+              '@type': 'ListItem',
+              position: 3,
+              name: 'Spam Protection',
+              item: 'http://formester.com/spam-protection',
+            },
+            {
+              '@type': 'ListItem',
+              position: 4,
+              name: 'Powerful Analytics',
+              item: 'http://formester.com/powerful-analytics',
+            },
+            {
+              '@type': 'ListItem',
+              position: 5,
+              name: 'Conditional Logic',
+              item: 'http://formester.com/conditional-logic',
+            },
+            {
+              '@type': 'ListItem',
+              position: 6,
+              name: 'Online Payment',
+              item: 'http://formester.com/online-payment',
+            },
+            {
+              '@type': 'ListItem',
+              position: 7,
+              name: 'Digital Signature',
+              item: 'http://formester.com/digital-signature',
+            },
+            {
+              '@type': 'ListItem',
+              position: 7,
+              name: 'Branding Kit',
+              item: 'http://formester.com/branding-kit',
+            },
+          ],
+        },
+      ],
+    }
+  },
 }
 </script>
 
