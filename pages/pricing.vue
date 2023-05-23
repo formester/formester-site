@@ -172,8 +172,6 @@ export default {
           '@id': 'https://acornglobus.com',
           applicationCategory: 'BusinessApplication',
           name: 'Plans & Pricing | Formester',
-          operatingSystem: 'all',
-          browserRequirements: 'Requires Javascript and HTML5 support',
           url: 'https://formester.com',
           aggregateRating: {
             '@type': 'AggregateRating',

@@ -21,7 +21,7 @@ authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-04-05T13:10:43.760Z
 coverImg: /img/how-to-add-a-wordpress-contact-form-without-a-plugin-2-.png
 coverImgAlt: How to add a WordPress Contact Form without a Plugin
-selectedImages: [
+metaImages: [
     https://formester.com/img/no-one-users-whenever-they-encounter-a-contact-form.png,
     https://formester.com/img/pie-chart.png,
     https://formester.com/img/plugin-dos-and-donts.png,

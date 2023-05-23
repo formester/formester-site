@@ -9,7 +9,7 @@ authorProfile: https://www.linkedin.com/in/ravindraverma12/
 createdAt: 2023-03-16T10:27:12.358Z
 coverImg: /img/how-to-integrate-amazon-ses-smtp-with-formester.png
 coverImgAlt: How to integrate Amazon SES SMTP with formester
-selectedImages: [
+metaImages: [
     https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_home_page.png,
     https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_signup_for_ses.png,
     https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_click_to_create_identity.png,

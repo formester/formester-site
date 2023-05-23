@@ -99,16 +99,6 @@ export default {
             "Add e-sign to your online form easily using formester. E-sign has become increasingly popular in recent years as it offers a convenient and efficient way to sign documents. Traditional handwritten signatures can most often be replaced by electronic signatures.",
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
-          sameAs: [
-            'https://www.facebook.com/formester/',
-            'https://twitter.com/_formester_',
-            'https://www.instagram.com/_formester_/',
-            'https://www.linkedin.com/company/formester-inc/',
-            'https://www.producthunt.com/products/formester',
-            'https://www.softwareadvice.com/forms-automation/formester-profile/',
-            'https://www.capterra.com/p/166904/Formester/',
-            'https://www.getapp.com/website-ecommerce-software/a/formester/',
-          ],
           address: {
             '@type': 'PostalAddress',
             addressLocality: 'Delaware',

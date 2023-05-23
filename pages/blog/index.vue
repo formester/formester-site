@@ -91,16 +91,6 @@ export default {
             "Sign up now for the best No Code Form Builder! Create stunning HTML Forms with Formester's easy-to-use Online HTML Form Builder. Start building today!",
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
-          sameAs: [
-            'https://www.facebook.com/formester/',
-            'https://twitter.com/_formester_',
-            'https://www.instagram.com/_formester_/',
-            'https://www.linkedin.com/company/formester-inc/',
-            'https://www.producthunt.com/products/formester',
-            'https://www.softwareadvice.com/forms-automation/formester-profile/',
-            'https://www.capterra.com/p/166904/Formester/',
-            'https://www.getapp.com/website-ecommerce-software/a/formester/',
-          ],
           address: {
             '@type': 'PostalAddress',
             addressLocality: 'Delaware',
@@ -117,8 +107,14 @@ export default {
           '@id': 'https://acornglobus.com',
           itemListElement: [
           {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://formester.com',
+          },
+          {
               '@type': 'ListItem',
-              position: 1,
+              position: 2,
               name: 'Blog',
               item: 'https://formester.com/blog',
             },

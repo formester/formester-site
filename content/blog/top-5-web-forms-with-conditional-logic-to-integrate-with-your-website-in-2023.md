@@ -26,7 +26,7 @@ authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-04-29T08:48:16.443Z
 coverImg: /img/top-5-web-forms-with-conditional-logic-to-integrate-with-your-website-in-2023-2-.png
 coverImgAlt: Top 5 Web Forms with Conditional Logic to Integrate with your Website in 2023
-selectedImages: [
+metaImages: [
     https://formester.com/img/top-5-web-forms-with-conditional-logic-to-integrate-with-your-website-in-2023.png,
     https://formester.com/img/top-5-web-forms-with-conditional-logic-to-integrate-with-your-website-in-2023-1-.png,
     https://formester.com/img/3_top-5-web-forms-with-cl.png,

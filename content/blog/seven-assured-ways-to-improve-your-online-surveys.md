@@ -9,7 +9,7 @@ authorProfile: https://www.linkedin.com/in/vivek--badani/
 createdAt: 2022-07-20
 coverImg: /img/seven-assured-way-to-improve__seven-assured-ways-to-improve-your-online-surveys.png
 coverImgAlt: Cover image for the blog, "Seven Assured Ways to Improve Your Online Surveys"
-selectedImages: [
+metaImages: [
     https://formester.com/img/seven-assured-way-to-improve__seven-assured-ways-to-improve-your-online-surveys.png,
     https://formester.com/img/seven-assured-way-to-improve__average-survey-response-rate.png,
     https://formester.com/img/seven-assured-way-to-improve__survey-form.svg

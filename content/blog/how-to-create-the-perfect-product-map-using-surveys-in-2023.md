@@ -21,7 +21,7 @@ authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-04-27T07:54:41.721Z
 coverImg: /img/how-to-create-the-perfect-product-map-using-surveys-in-2023-min.png
 coverImgAlt: How to Create the Perfect Product Map Using Surveys in 2023
-selectedImages: [
+metaImages: [
     https://formester.com/img/how-surveys-can-help-create-a-product-map.png,
     https://formester.com/img/how-to-create-the-perfect-product-map-using-surveys-in-2023_1.png,
     https://formester.com/img/6-effective-places-to-publish-your-survey.png,

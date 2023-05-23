@@ -9,7 +9,7 @@ authorProfile: https://www.linkedin.com/in/vivek--badani/
 createdAt: 2022-10-13
 coverImg: /img/how-to-create-an-impressive-intake__create-impressive-intake-form.png
 coverImgAlt: Cover image for the blog, "How to Create an Impressive Intake Form"
-selectedImages: [
+metaImages: [
     https://formester.com/img/how-to-create-an-impressive-intake__create-impressive-intake-form.png,
     https://formester.com/img/how-to-create-an-impressive-intake__create-new-form-page.png,
     https://formester.com/img/how-to-create-an-impressive-intake__ask-the-obvious.png,

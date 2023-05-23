@@ -105,16 +105,6 @@ export default {
             "Boost your trust to customer by adding your brand to form.",
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
-          sameAs: [
-            'https://www.facebook.com/formester/',
-            'https://twitter.com/_formester_',
-            'https://www.instagram.com/_formester_/',
-            'https://www.linkedin.com/company/formester-inc/',
-            'https://www.producthunt.com/products/formester',
-            'https://www.softwareadvice.com/forms-automation/formester-profile/',
-            'https://www.capterra.com/p/166904/Formester/',
-            'https://www.getapp.com/website-ecommerce-software/a/formester/',
-          ],
           address: {
             '@type': 'PostalAddress',
             addressLocality: 'Delaware',

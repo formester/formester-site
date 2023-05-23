@@ -25,7 +25,7 @@ authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-04-13T13:06:06.213Z
 coverImg: /img/7-types-of-website-usability-survey-questions-to-ask-in-2023.png
 coverImgAlt: 7 Types of Website Usability Survey Questions to Ask in 2023
-selectedImages: [
+metaImages: [
     https://formester.com/img/4.png,
     https://formester.com/img/white-modern-illustration-creative-process-graph-6-.png,
     https://formester.com/img/5.png,

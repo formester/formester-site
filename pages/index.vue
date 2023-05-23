@@ -73,37 +73,7 @@ export default {
               position: 1,
               name: 'Home',
               item: 'https://formester.com',
-            },
-            {
-              '@type': 'ListItem',
-              position: 2,
-              name: 'Features',
-              item: 'http://formester.com/features',
-            },
-            {
-              '@type': 'ListItem',
-              position: 3,
-              name: 'Pricing',
-              item: 'http://formester.com/pricing',
-            },
-            {
-              '@type': 'ListItem',
-              position: 4,
-              name: 'Blog',
-              item: 'http://formester.com/blog',
-            },
-            {
-              '@type': 'ListItem',
-              position: 5,
-              name: 'Templates',
-              item: 'http://formester.com/templates',
-            },
-            {
-              '@type': 'ListItem',
-              position: 6,
-              name: 'Integrations',
-              item: 'http://formester.com/integrations',
-            },
+            }
           ],
         },
       ],

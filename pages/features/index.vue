@@ -1,12 +1,19 @@
 <template>
   <div>
     <featureHero />
-    <featureContainer v-for="feature in features1" :key="feature.heading" :feature="feature" />
+    <featureContainer
+      v-for="feature in features1"
+      :key="feature.heading"
+      :feature="feature"
+    />
     <Testimonials :testimonials="randomTestimonials" />
-    <featureContainer v-for="feature in features2" :key="feature.heading" :feature="feature" />
+    <featureContainer
+      v-for="feature in features2"
+      :key="feature.heading"
+      :feature="feature"
+    />
     <ThreeStepsCreateForm />
     <TemplateSection />
-
   </div>
 </template>
 
@@ -17,13 +24,12 @@ import { allTestimonials } from '@/constants/testimonials'
 import Testimonials from '@/components/Testimonial.vue'
 import TemplateSection from '@/components/TemplateSection.vue'
 
-
 export default {
   components: {
     featureHero,
     featureContainer,
     Testimonials,
-    TemplateSection
+    TemplateSection,
   },
   data() {
     return {
@@ -38,19 +44,19 @@ export default {
               title: 'Complete Control',
               description:
                 'Never worry about your form not looking perfect like your website. With Formester you have everything under control. Style the forms and make it look the way you want it. No embedding or JavaScript required.',
-              img: 'control'
+              img: 'control',
             },
             {
               title: 'Realtime Notification',
               description:
                 'Get a real-time notification on form submission. Stay on top of your business. You can configure Formester to notify you on Slack, Gmail or anywhere else.',
-              img: 'notification'
+              img: 'notification',
             },
             {
               title: 'Easy Embedding',
               description:
                 'If you are looking a form that just works out of the box, Formester is for you. Just copy our snippet and get started. It takes less than 5 minutes to make a working form on your website.',
-              img: 'embedding'
+              img: 'embedding',
             },
           ],
           link: 'html-form-backend',
@@ -65,19 +71,19 @@ export default {
               title: 'White Label',
               description:
                 'Make your emails look personal by using your company email address. You also get an option to choose between HTML and text-based emails.',
-              img: 'label'
+              img: 'label',
             },
             {
               title: 'Personalised Response',
               description:
                 'Notifications can be personalised to include fields from the submissions. Make your users feel unique with messages which seem to be coming from actual humans and not a bot.',
-              img: 'response'
+              img: 'response',
             },
             {
               title: 'Realtime Tracking',
               description:
                 'Monitor how people are interacting with your auto-response. Analyse useful metrics like open rate and link clicks to get insights into users behaviour. Use this data to make changes to your communication.',
-              img: 'tracking'
+              img: 'tracking',
             },
           ],
           link: 'auto-responder',
@@ -93,19 +99,19 @@ export default {
               title: 'One Click Re-Captcha',
               description:
                 'With our one-click ReCaptcha feature, prevent spam in under minutes. Send user to a clean page on Formester where they are verified as humans.',
-              img: 'one-click-recaptcha'
+              img: 'one-click-recaptcha',
             },
             {
               title: 'Custom Re-Captcha',
               description:
                 'Keep user on the same page and increase the chance of the conversion. Our philosophy has always been to keep things simple but give enough control for those who need it.',
-              img: 'custom-recaptcha'
+              img: 'custom-recaptcha',
             },
             {
               title: 'Smart Filters',
               description:
                 'Our database is getting smarter each day. We use machine learning to predict spam submissions. Your every form will improve our prediction.',
-              img: 'filter'
+              img: 'filter',
             },
           ],
           link: 'spam-protection',
@@ -122,19 +128,19 @@ export default {
               title: 'Knowing Your Customers',
               description:
                 'The data can be filtered by traffic source, device, location, browser, operating system, and other crucial factors. Using your analytics account, you can analyze user behavior and statistics over time.',
-              img: 'knowing-your-customers'
+              img: 'knowing-your-customers',
             },
             {
               title: 'Track your traffic by analyzing it',
               description:
                 'You can see in detail where your visitors are coming from, what technology platforms they use, and which devices they are using to interact with your form in the traffic panel.',
-              img: 'analyzing-traffic'
+              img: 'analyzing-traffic',
             },
             {
               title: 'Provide critical insight',
               description:
                 'Conversion rate is crucial. When your conversion rate is low, you have a high view rate but little interaction. This indicates that your questions are too long or that there is room for improvement.',
-              img: 'insight'
+              img: 'insight',
             },
           ],
           link: 'powerful-analytics',
@@ -148,20 +154,20 @@ export default {
             {
               title: 'Skip to other pages',
               description:
-                'In order to collect the most accurate data for your research, you can ask questions that don\'t apply to each user, allowing them to skip irrelevant pages in your survey.',
-              img: 'skip-to-other-pages'
+                "In order to collect the most accurate data for your research, you can ask questions that don't apply to each user, allowing them to skip irrelevant pages in your survey.",
+              img: 'skip-to-other-pages',
             },
             {
               title: 'Skip to follow up questions',
               description:
                 'For best results, allow your respondents to skip irrelevant questions in your survey.',
-              img: 'skip-to-follow-up-questions'
+              img: 'skip-to-follow-up-questions',
             },
             {
               title: 'Skip Logic',
               description:
                 'Display only the questions your respondents must answer. You simply need to specify the conditions and choose the fields to hide from the drop-down list.',
-              img: 'skip-logic'
+              img: 'skip-logic',
             },
           ],
           link: 'conditional-logic',
@@ -177,30 +183,32 @@ export default {
               title: 'Speed and Efficiency',
               description:
                 'Getting a signature faster is one of its greatest advantages. Signing this form electronically takes just a few minutes.',
-              img: 'speed-efficiency'
+              img: 'speed-efficiency',
             },
             {
               title: 'Professional Documents',
               description:
                 'Create documents that look professional with your company branding and logo. With custom domain feature you can personalize it even further.',
-              img: 'professional-document'
+              img: 'professional-document',
             },
             {
               title: 'Easy Sharing',
               description:
                 'One click share to send documents to one or hundred users in under a minute. They get the document in their inbox with a link to sign and complete it',
-              img: 'easy-sharing'
+              img: 'easy-sharing',
             },
           ],
           link: 'digital-signature',
         },
-      ]
+      ],
     }
   },
   async asyncData() {
     let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(Math.random() * (randomTestimonials.length - 2))
-    randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2);
+    const randIndex = Math.floor(
+      Math.random() * (randomTestimonials.length - 2)
+    )
+    randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
     return { randomTestimonials }
   },
   jsonld() {
@@ -215,16 +223,6 @@ export default {
             "Sign up now for the best No Code Form Builder! Create stunning HTML Forms with Formester's easy-to-use Online HTML Form Builder. Start building today!",
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
-          sameAs: [
-            'https://www.facebook.com/formester/',
-            'https://twitter.com/_formester_',
-            'https://www.instagram.com/_formester_/',
-            'https://www.linkedin.com/company/formester-inc/',
-            'https://www.producthunt.com/products/formester',
-            'https://www.softwareadvice.com/forms-automation/formester-profile/',
-            'https://www.capterra.com/p/166904/Formester/',
-            'https://www.getapp.com/website-ecommerce-software/a/formester/',
-          ],
           address: {
             '@type': 'PostalAddress',
             addressLocality: 'Delaware',
@@ -234,18 +232,24 @@ export default {
             '@type': 'Product',
             name: 'Acorn Globus',
             url: 'https://acornglobus.com',
-          }
+          },
         },
         {
           '@type': 'BreadcrumbList',
           '@id': 'https://acornglobus.com',
           itemListElement: [
-          {
+            {
               '@type': 'ListItem',
               position: 1,
+              name: 'Home',
+              item: 'https://formester.com',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
               name: 'Features',
               item: 'https://formester.com/features',
-            }
+            },
           ],
         },
       ],
@@ -255,4 +259,3 @@ export default {
 </script>
 
 <style></style>
-
