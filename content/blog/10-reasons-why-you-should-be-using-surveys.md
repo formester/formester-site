@@ -8,7 +8,7 @@ author: Mriganka Chandra
 createdAt: 2023-01-20
 coverImg: /img/10-reasons-why-you-are-still-not-doing-surveys.png
 coverImgAlt: Ten reasons why you are still not doing surveys
-images: [
+selectedImages: [
     https://formester.com/img/10-reasons-why-you-are-still-not-doing-surveys.png,
     https://formester.com/blog/10-reasons-why-you-should-be-using-surveys/a-quick-way-to-know-what-trending-in-the-market.png",
     https://formester.com/blog/10-reasons-why-you-should-be-using-surveys/target-the-right-audience-and-make-productive-changes.png

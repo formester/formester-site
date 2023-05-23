@@ -6,7 +6,7 @@ author: Mriganka Chandra
 createdAt: 2022-12-08T05:38:26.147Z
 coverImg: /img/five_things_you_can_do_with_survey__hero.png
 coverImgAlt: Five things you can do with a survey form
-images: https://formester.com/img/five_things_you_can_do_with_survey__hero.png
+selectedImages: [https://formester.com/img/five_things_you_can_do_with_survey__hero.png]
 featured: false
 published: true
 ---

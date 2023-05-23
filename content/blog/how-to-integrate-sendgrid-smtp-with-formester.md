@@ -9,7 +9,7 @@ authorProfile: https://www.linkedin.com/in/ravindraverma12/
 createdAt: 2022-12-19T05:18:45.522Z
 coverImg: /img/how-to-integrate-sendgrid-smtp-with-formester.png
 coverImgAlt: How to Integrate SendGrid SMTP with Formester
-images: [
+selectedImages: [
     https://formester.com/img/how-to-integrate-sendgrid-smtp-with-formester__home-screen.png,
     https://formester.com/img/how-to-integrate-sendgrid-smtp-with-formester__signup.png,
     https://formester.com/img/how-to-integrate-sendgrid-smtp-with-formester__some-extra-detail.png,

@@ -294,8 +294,8 @@ export default {
       imagesArray.push(`https://formester.com${this.article.coverImg}`)
     }
 
-    if (this.article.images && this.article.images.length > 0) {
-      imagesArray.push(...this.article.images)
+    if (this.article.selectedImages && this.article.selectedImages.length > 0) {
+      imagesArray.push(...this.article.selectedImages)
     }
 
     return {

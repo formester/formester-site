@@ -28,7 +28,7 @@ authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-04-24T07:41:22.594Z
 coverImg: /img/how-to-create-a-quiz-in-google-forms_-the-only-guide-you’ll-need-in-2023.png
 coverImgAlt: "How to Create A Quiz in Google Forms: The Only Guide You’ll Need in 2023"
-images: [
+selectedImages: [
     https://formester.com/img/use-as-needed-14-.png,
     https://formester.com/img/light-blue-doodle-illustration-company-values-graph-1-.png,
     https://formester.com/img/main-features-of-google-forms.png,

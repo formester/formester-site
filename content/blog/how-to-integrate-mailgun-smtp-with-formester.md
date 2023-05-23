@@ -8,7 +8,7 @@ author: Ravindra Kumar Verma
 authorProfile: https://www.linkedin.com/in/ravindraverma12/
 createdAt: 2022-12-19T11:20:02.681Z
 coverImg: /img/how-to-integrate-mailgunsmtp-with-formester.png
-images: [
+selectedImages: [
     https://formester.com/img/how-to-integrate-mailgun-smtp-with-formester__home-page.png,
     https://formester.com/img/how-to-integrate-mailgun-smtp-with-formester__signup.png,
     https://formester.com/img/how-to-integrate-mailgun-smtp-with-formester__create-smtp.png,

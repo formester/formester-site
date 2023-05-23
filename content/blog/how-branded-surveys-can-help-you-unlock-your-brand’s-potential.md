@@ -31,12 +31,6 @@ authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-04-19T13:17:17.091Z
 coverImg: /img/how-branded-surveys-can-help-you-unlock-your-brand’s-potential.png
 coverImgAlt: How Branded Surveys Can Help You Unlock Your Brand’s Potential
-images: [
-    https://lh4.googleusercontent.com/ZbSMCenMyn333b1tpjhBx7VBhKq_ep7LI01oiUElD1tR1dcb4-v_G8xt4fWtDOiaFW5HT4aWb4RAxGwJiRaMZHhGXltvNnTzYfP4DEIRACoBjJhIKhPCsHI1QaToNqeiTwBZ16TGhEI-eRJqPYjHgJ8,
-    https://lh6.googleusercontent.com/jOjgoHGdYgyHwZTM595cnxy4Jii2f9ADS3ml_KGsK8cejXG4XFUJksV1xyxC1TAop2QfFXaknQRRJ8P9mU7wnkybTLfD5stFWYQekouWQMoV3LvqgwjtFMRUb12g2ZZz6_noICPAxJnJmHE0nmNQzg4,
-    https://lh4.googleusercontent.com/43Rsn7_jdcvmvwi1Ap1VvMfM00bXcLj-ZT6qt8IGc3eMHqXV2rlFIpd73GvlxlgGhK_D43fLxCJgh1GQhehexzpHy-myLXUr8F6GytknhyOE9S0mZPPE_dmt17jKCoII_AAPT_LxWfK3RZuoAz1aT1k,
-    https://lh6.googleusercontent.com/mqtAOdXf0Vxb1o7TWFxilYHDb7lbDVu4avUrOgWqBxx5-8s5wt8XgJb3e8ZQFr1QpBJbNRdrWla3K0UC5VVUf1Dy4dk4pe-gUTI2_4EjsIMOulzLUAPDtt0OSeIgPSli9tkoD3oi0YCQGYOf9esdRBI
-  ]
 featured: false
 published: true
 ---
