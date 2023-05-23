@@ -9,7 +9,6 @@ author: Mriganka Chandra
 createdAt: 2022-11-24T06:45:26.363Z
 coverImg: /img/survey-vs-forms__hero.png
 coverImgAlt: Image showing how to create forms and surveys using Formester
-selectedImages: [https://formester.com/img/survey-vs-forms__infographic.png]
 featured: false
 published: true
 ---

@@ -162,42 +162,6 @@ export default {
       ],
     }
   },
-  jsonld() {
-    return {
-      '@context': 'http://schema.org',
-      '@type': 'WebApplication',
-      name: 'Privacy Policy | Formester',
-      logo: 'https://formester.com/logo.png',
-      url: 'https://formester.com',
-      operatingSystem: 'all',
-      browserRequirements: 'Requires Javascript and HTML5 support',
-      sameAs: [
-        'https://www.facebook.com/formester/',
-        'https://twitter.com/_formester_',
-        'https://www.instagram.com/_formester_/',
-        'https://www.linkedin.com/company/formester-inc/',
-        'https://www.producthunt.com/products/formester',
-        'https://www.softwareadvice.com/forms-automation/formester-profile/',
-        'https://www.capterra.com/p/166904/Formester/',
-        'https://www.getapp.com/website-ecommerce-software/a/formester/'
-      ],
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Delaware',
-        addressCountry: 'United States',
-      },
-      creator: {
-        '@type': 'Organization',
-        '@id': '#organization',
-        url: 'https://formester.com/',
-        name: 'Formester',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://formester.com/logo.png',
-        },
-      }
-    }
-  },
 }
 </script>
 

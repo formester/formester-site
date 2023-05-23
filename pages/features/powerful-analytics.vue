@@ -90,58 +90,7 @@ export default {
     }
   },
   jsonld() {
-    return {
-      '@context': 'http://schema.org',
-      '@graph': [
-        {
-          '@type': 'Corporation',
-          '@id': 'https://acornglobus.com',
-          name: 'Form Analytics Software | Google Form Analytics - Formester',
-          description:
-            "Get valuable insights into your Google Forms data with Formester's powerful Form Analytics software. Sign up for free now to optimize your forms!",
-          logo: 'https://formester.com/logo.png',
-          url: 'https://formester.com',
-          sameAs: [
-            'https://www.facebook.com/formester/',
-            'https://twitter.com/_formester_',
-            'https://www.instagram.com/_formester_/',
-            'https://www.linkedin.com/company/formester-inc/',
-            'https://www.producthunt.com/products/formester',
-            'https://www.softwareadvice.com/forms-automation/formester-profile/',
-            'https://www.capterra.com/p/166904/Formester/',
-            'https://www.getapp.com/website-ecommerce-software/a/formester/',
-          ],
-          address: {
-            '@type': 'PostalAddress',
-            addressLocality: 'Delaware',
-            addressCountry: 'United States',
-          },
-          owns: {
-            '@type': 'Product',
-            name: 'Acorn Globus',
-            url: 'https://acornglobus.com',
-          }
-        },
-        {
-          '@type': 'BreadcrumbList',
-          '@id': 'https://acornglobus.com',
-          itemListElement: [
-          {
-              '@type': 'ListItem',
-              position: 1,
-              name: 'Features',
-              item: 'https://formester.com/features',
-            },
-            {
-              '@type': 'ListItem',
-              position: 2,
-              name: 'Powerful Analytics',
-              item: 'https://formester.com/features/powerful-analytics/',
-            }
-          ],
-        },
-      ],
-    }
+    return {}
   },
   data() {
     return {
