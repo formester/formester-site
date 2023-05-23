@@ -77,6 +77,11 @@ export default {
           ],
         },
       ],
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Dalaware',
+        addressCountry: 'United States',
+      },
     }
   },
 }

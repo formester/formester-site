@@ -135,6 +135,21 @@ export default {
           ],
         },
       ],
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Dalaware',
+        addressCountry: 'United States',
+      },
+      creator: {
+        '@type': 'Organization',
+        '@id': '#organization',
+        url: 'https://formester.com/',
+        name: 'Formester',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://formester.com/logo.png',
+        },
+      }
     }
   },
   data() {
