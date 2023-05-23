@@ -104,45 +104,9 @@ export default {
             {
               '@type': 'ListItem',
               position: 1,
-              name: 'All Categories',
+              name: 'All Templates',
               item: 'https://formester.com/templates',
             },
-            {
-              '@type': 'ListItem',
-              position: 2,
-              name: 'Contact Forms',
-              item: 'https://formester.com/templates/categories/contact-forms/',
-            },
-            {
-              '@type': 'ListItem',
-              position: 3,
-              name: 'Registration Forms',
-              item: 'https://formester.com/templates/categories/registration-forms/',
-            },
-            {
-              '@type': 'ListItem',
-              position: 4,
-              name: 'Feedback Forms',
-              item: 'https://formester.com/templates/categories/feedback-forms/',
-            },
-            {
-              '@type': 'ListItem',
-              position: 5,
-              name: 'Research Forms',
-              item: 'https://formester.com/templates/categories/research-forms/',
-            },
-            {
-              '@type': 'ListItem',
-              position: 6,
-              name: 'Lead Generation',
-              item: 'https://formester.com/templates/categories/lead-generation/',
-            },
-            {
-              '@type': 'ListItem',
-              position: 7,
-              name: 'Employee',
-              item: 'https://formester.com/templates/categories/employee/',
-            }
           ],
         },
       ],

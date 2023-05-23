@@ -240,54 +240,12 @@ export default {
           '@type': 'BreadcrumbList',
           '@id': 'https://acornglobus.com',
           itemListElement: [
-            {
+          {
               '@type': 'ListItem',
               position: 1,
-              name: 'HTML Form Backend',
-              item: 'https://formester.com/features/html-form-backend/',
-            },
-            {
-              '@type': 'ListItem',
-              position: 2,
-              name: 'Auto Responder',
-              item: 'http://formester.com/auto-responder',
-            },
-            {
-              '@type': 'ListItem',
-              position: 3,
-              name: 'Spam Protection',
-              item: 'http://formester.com/spam-protection',
-            },
-            {
-              '@type': 'ListItem',
-              position: 4,
-              name: 'Powerful Analytics',
-              item: 'http://formester.com/powerful-analytics',
-            },
-            {
-              '@type': 'ListItem',
-              position: 5,
-              name: 'Conditional Logic',
-              item: 'http://formester.com/conditional-logic',
-            },
-            {
-              '@type': 'ListItem',
-              position: 6,
-              name: 'Online Payment',
-              item: 'http://formester.com/online-payment',
-            },
-            {
-              '@type': 'ListItem',
-              position: 7,
-              name: 'Digital Signature',
-              item: 'http://formester.com/digital-signature',
-            },
-            {
-              '@type': 'ListItem',
-              position: 7,
-              name: 'Branding Kit',
-              item: 'http://formester.com/branding-kit',
-            },
+              name: 'Features',
+              item: 'https://formester.com/features',
+            }
           ],
         },
       ],

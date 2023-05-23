@@ -300,7 +300,9 @@ export default {
 
     return {
       '@context': 'https://schema.org',
-      '@type': 'BlogPosting',
+      '@graph': [
+        {
+          '@type': 'BlogPosting',
       mainEntityOfPage: {
         '@type': 'WebPage',
         '@id': `https://formester.com/blog/${this.article.slug}/`,
@@ -324,6 +326,27 @@ export default {
         },
       },
       datePublished: this.article.createdAt,
+        },
+        {
+          '@type': 'BreadcrumbList',
+          '@id': 'https://acornglobus.com',
+          itemListElement: [
+          {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Blog',
+              item: 'https://formester.com/blog',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: this.article.title,
+              item: `https://formester.com/blog/${this.article.slug}/`,
+            }
+          ],
+        },
+      ]
+
     }
   },
 }

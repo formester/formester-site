@@ -90,39 +90,55 @@ export default {
   jsonld() {
     return {
       '@context': 'http://schema.org',
-      '@type': 'WebApplication',
-      name: 'Online Payment Form | Secure Online Payment - Formester',
-      description:
-        "Experience secure online payments with Formester's user-friendly online payment form. Start accepting payments today. Try now!",
-      logo: 'https://formester.com/logo.png',
-      url: 'https://formester.com',
-      operatingSystem: 'all',
-      browserRequirements: 'Requires Javascript and HTML5 support',
-      sameAs: [
-        'https://www.facebook.com/formester/',
-        'https://twitter.com/_formester_',
-        'https://www.instagram.com/_formester_/',
-        'https://www.linkedin.com/company/formester-inc/',
-        'https://www.producthunt.com/products/formester',
-        'https://www.softwareadvice.com/forms-automation/formester-profile/',
-        'https://www.capterra.com/p/166904/Formester/',
-        'https://www.getapp.com/website-ecommerce-software/a/formester/'
-      ],
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Delaware',
-        addressCountry: 'United States',
-      },
-      creator: {
-        '@type': 'Organization',
-        '@id': '#organization',
-        url: 'https://formester.com/',
-        name: 'Formester',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://formester.com/logo.png',
+      '@graph': [
+        {
+          '@type': 'Corporation',
+          '@id': 'https://acornglobus.com',
+          name: 'Online Payment Form | Secure Online Payment - Formester',
+          description:
+            "Experience secure online payments with Formester's user-friendly online payment form. Start accepting payments today. Try now!",
+          logo: 'https://formester.com/logo.png',
+          url: 'https://formester.com',
+          sameAs: [
+            'https://www.facebook.com/formester/',
+            'https://twitter.com/_formester_',
+            'https://www.instagram.com/_formester_/',
+            'https://www.linkedin.com/company/formester-inc/',
+            'https://www.producthunt.com/products/formester',
+            'https://www.softwareadvice.com/forms-automation/formester-profile/',
+            'https://www.capterra.com/p/166904/Formester/',
+            'https://www.getapp.com/website-ecommerce-software/a/formester/',
+          ],
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Delaware',
+            addressCountry: 'United States',
+          },
+          owns: {
+            '@type': 'Product',
+            name: 'Acorn Globus',
+            url: 'https://acornglobus.com',
+          }
         },
-      }
+        {
+          '@type': 'BreadcrumbList',
+          '@id': 'https://acornglobus.com',
+          itemListElement: [
+          {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Features',
+              item: 'https://formester.com/features',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Online Payment',
+              item: 'https://formester.com/features/online-payment/',
+            }
+          ],
+        },
+      ],
     }
   },
   data() {
