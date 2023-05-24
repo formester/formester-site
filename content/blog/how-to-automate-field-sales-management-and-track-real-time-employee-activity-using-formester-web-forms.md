@@ -47,7 +47,7 @@ coverImgAlt: How to Automate Field Sales Management and Track Real-Time Employee
   Activity Using Formester Web Forms?
 metaImages: []
 featured: false
-published: false
+published: true
 ---
 As the era of technology, AI and digitization advances to make powerful impacts in almost every field of the Business World;
 
