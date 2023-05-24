@@ -42,7 +42,7 @@ keywords: "Field Sales Automation Without Using Expensive Software, field sales
 author: Navni Dighe
 authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-05-24T04:37:28.444Z
-coverImg: /img/10-reasons-why-you-are-still-not-doing-surveys.png
+coverImg: /img/how-to-automate-field-sales-management-and-track-real-time-employee-activity-using-formester-web-forms_-1-.png
 coverImgAlt: How to Automate Field Sales Management and Track Real-Time Employee
   Activity Using Formester Web Forms?
 metaImages: []
@@ -59,9 +59,11 @@ From tailored messaging, driving A/B Testing at scale, and generating images for
 
 However, as Jeffrey Gitomer has said - 
 
-Great salespeople are relationship builders who provide value and help their customers win.
+**Great salespeople are relationship builders who provide value and help their customers win.**
 
 And fortunately enough for sales professionals and marketers, the one thing that [AI, or any other technology for that matter, can never replace](https://bigthink.com/the-future/what-ai-cannot-do/), is the impact, value and importance offered by human connection and interactions.
+
+![Funny Tweet showing Why AI can't replace Marketers](/img/fields-included-in-the-customer-visit-record-form_2.png "Why AI can't replace Marketers")
 
 Indeed, the very core requirements of the domain of sales and marketing will always remain exceptional presentation and delivery of the product, which demands the need for talented, confident and enthusiastic sales professionals and marketers, who are able to effectively communicate the ideology behind the product.
 
@@ -166,7 +168,7 @@ On the other hand, it enables the Sales and Marketing Department Heads, and Busi
 
 #### Fields Included in the Customer Visit Record Form
 
-![]()
+![Screen Capture showing Fields Included in the Customer Visit Record Form](/img/how-to-automate-field-sales-management-and-track-real-time-employee-activity-using-formester-web-forms_1.png "Fields Included in the Customer Visit Record Form")
 
 ##### 1. Store Name
 
