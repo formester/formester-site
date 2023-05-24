@@ -100,7 +100,7 @@ That said, automation in this field, can help in tracking and monitoring employe
 
 And no unfair means or shortcuts are being used to perform them.
 
-## Field Sales Automation Software
+### Field Sales Automation Software
 
 A [Field Sales or Field Force Automation Software](https://www.leadsquared.com/learn/sales/what-is-field-force-automation/) is designed to act as an integrated platform to record, track, monitor and update the various tasks associated with field sales, enabling the business to maintain an accurate, evidence-based and real-time report on the performance of each of the employees.
 
