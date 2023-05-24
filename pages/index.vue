@@ -63,6 +63,16 @@ export default {
             name: 'Acorn Globus',
             url: 'https://acornglobus.com',
           },
+          creator: {
+            '@type': 'Organization',
+            '@id': '#organization',
+            url: 'https://formester.com/',
+            name: 'Formester',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://formester.com/logo.png',
+            },
+          },
         },
         {
           '@type': 'BreadcrumbList',
@@ -73,15 +83,10 @@ export default {
               position: 1,
               name: 'Home',
               item: 'https://formester.com',
-            }
+            },
           ],
         },
       ],
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Dalaware',
-        addressCountry: 'United States',
-      },
     }
   },
 }
