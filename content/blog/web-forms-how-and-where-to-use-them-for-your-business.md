@@ -15,13 +15,12 @@ authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-03-20T10:27:47.265Z
 coverImg: /img/web-forms-lead-generation-101.png
 coverImgAlt: "Web Forms: How And Where to Use Them For Your Business"
-metaImages: [
-    https://formester.com/img/web-form-1.png,
-    https://formester.com/img/conversion-rates-as-a-result-of-using-web-forms-1-.png,
-    https://formester.com/img/untitled-design-1-.png
-  ]
 featured: false
 published: true
+metaImages:
+  - https://formester.com/img/web-form-1.png
+  - https://formester.com/img/conversion-rates-as-a-result-of-using-web-forms-1-.png
+  - https://formester.com/img/untitled-design-1-.png
 ---
 ![Web Forms: How And Where to Use Them For Your Business](/img/web-forms-lead-generation-101.png "Web Forms: How And Where to Use Them For Your Business")
 
@@ -64,7 +63,7 @@ With [CMS & SAP systems](https://sapinsider.org/topic/sap-application-developmen
 
 Needless to say, they **save the time, effort and resources of the organization**.
 
-## What Are The 6 Important Places Where Your Business Should Be Using A Web Forms?
+## What Are The 6 Important Places Where Your Business Should Be Using Web Forms?
 
 ![Web Forms - Use Cases ](/img/untitled-design-1-.png "Web Forms - Use Cases ")
 
