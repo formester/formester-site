@@ -32,33 +32,71 @@
       </div>
     </div>
     <div class="container py-5">
-      <div class="row justify-content-center align-items-center text-center mt-5">
-        <div >
-          <h2 class="section__heading">Boost Your Business with Autoresponder</h2>
-          <p class="hero__subheading">Unlock the Power of Automated Email Marketing for Your Business</p>
+      <div
+        class="row justify-content-center align-items-center text-center mt-5"
+      >
+        <div>
+          <h2 class="section__heading">
+            Boost Your Business with Autoresponder
+          </h2>
+          <p class="hero__subheading">
+            Unlock the Power of Automated Email Marketing for Your Business
+          </p>
         </div>
-        <div class="d-flex flex-column flex-md-row justify-content-between mt-md-5">
-          <div class="d-flex flex-column align-items-center align-items-md-start text-center text-md-start px-4 col-md-4 my-3 mt-lg-5">
-            <img style="width: 69px;" src="@/assets/images/round-access-time.jpg" alt="Formester" />
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between mt-md-5"
+        >
+          <div
+            class="d-flex flex-column align-items-center align-items-md-start text-center text-md-start px-4 col-md-4 my-3 mt-lg-5"
+          >
+            <img
+              style="width: 69px"
+              src="@/assets/images/round-access-time.jpg"
+              alt="Formester"
+            />
             <h4 class="sub__section-heading mt-4">Time-saving</h4>
-            <p class="subheading__text">Retain customers by sending them follow-up emails after a purchase, asking for feedback, and offering incentives for repeat purchases.</p>
+            <p class="subheading__text">
+              Retain customers by sending them follow-up emails after a
+              purchase, asking for feedback, and offering incentives for repeat
+              purchases.
+            </p>
           </div>
-          <div class="d-flex flex-column align-items-center align-items-md-start text-center text-md-start px-4 col-md-4 my-3 mt-lg-5">
-            <img style="width: 69px;" src="@/assets/images/leads.jpg" alt="Formester" />
+          <div
+            class="d-flex flex-column align-items-center align-items-md-start text-center text-md-start px-4 col-md-4 my-3 mt-lg-5"
+          >
+            <img
+              style="width: 69px"
+              src="@/assets/images/leads.jpg"
+              alt="Formester"
+            />
             <h4 class="sub__section-heading mt-4">Lead generation</h4>
-            <p class="subheading__text">Capture leads and grow your email list by offering incentives such as free e-books, whitepapers, or exclusive discounts.</p>
+            <p class="subheading__text">
+              Capture leads and grow your email list by offering incentives such
+              as free e-books, whitepapers, or exclusive discounts.
+            </p>
           </div>
-          <div class="d-flex flex-column align-items-center align-items-md-start text-center text-md-start px-4 col-md-4 my-3 mt-lg-5">
-            <img style="width: 69px;" src="@/assets/images/customer-support.jpg" alt="Formester" />
+          <div
+            class="d-flex flex-column align-items-center align-items-md-start text-center text-md-start px-4 col-md-4 my-3 mt-lg-5"
+          >
+            <img
+              style="width: 69px"
+              src="@/assets/images/customer-support.jpg"
+              alt="Formester"
+            />
             <h4 class="sub__section-heading mt-4">Customer retention</h4>
-            <p class="subheading__text">Automating repetitive tasks such as sending welcome emails, confirmation emails, and follow-up emails.</p>
+            <p class="subheading__text">
+              Automating repetitive tasks such as sending welcome emails,
+              confirmation emails, and follow-up emails.
+            </p>
           </div>
         </div>
       </div>
     </div>
     <div class="container py-5">
       <div class="row">
-        <div class="feature__heading d-flex align-items-center justify-content-center">
+        <div
+          class="feature__heading d-flex align-items-center justify-content-center"
+        >
           <h2 class="section__heading">Features</h2>
         </div>
         <FeatureDetail
@@ -72,9 +110,7 @@
 
     <ApplicationOfWebForms />
     <ThreeStepsCreateForm />
-    <Testimonial 
-      :testimonials="randomTestimonials"
-    />
+    <Testimonial :testimonials="randomTestimonials" />
     <TemplateSection />
     <CallToActionSection />
   </div>
@@ -92,19 +128,26 @@ import getSiteMeta from '../../utils/getSiteMeta'
 import ApplicationOfWebForms from '../../components/ApplicationOfWebForms.vue'
 
 export default {
-  components: { FeatureDetail, CallToActionSection, Testimonial, TemplateSection, ApplicationOfWebForms },
+  components: {
+    FeatureDetail,
+    CallToActionSection,
+    Testimonial,
+    TemplateSection,
+    ApplicationOfWebForms,
+  },
   computed: {
     meta() {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/features/auto-responder/',
-        title: 'Email Autoresponder Message | Personalised Email Responder - Formester',
+        title:
+          'Email Autoresponder Message | Personalised Email Responder - Formester',
         description:
           'Boost your email marketing with a personalised email autoresponder message. Try Formester and engage your subscribers today! Sign up now.',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with auto-responder page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
-        keywords:[
+        keywords: [
           'formester web forms with autoresponder feature',
           'formester web forms with autorespond feature',
           'formester web form features autorespond',
@@ -148,14 +191,15 @@ export default {
           'personalized instant emails',
           'instant pre-written reply',
           'send a copy of responses to submitters',
-        ]
+        ],
       }
       return getSiteMeta(metaData)
     },
   },
   head() {
     return {
-      title: 'Email Autoresponder Message | Personalised Email Responder - Formester',
+      title:
+        'Email Autoresponder Message | Personalised Email Responder - Formester',
       meta: [...this.meta],
       link: [
         {
@@ -175,7 +219,7 @@ export default {
           '@id': 'https://acornglobus.com',
           name: 'Email Autoresponder Message | Personalised Email Responder - Formester',
           description:
-            "Boost your email marketing with a personalised email autoresponder message. Try Formester and engage your subscribers today! Sign up now.",
+            'Boost your email marketing with a personalised email autoresponder message. Try Formester and engage your subscribers today! Sign up now.',
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
           address: {
@@ -187,13 +231,13 @@ export default {
             '@type': 'Product',
             name: 'Acorn Globus',
             url: 'https://acornglobus.com',
-          }
+          },
         },
         {
           '@type': 'BreadcrumbList',
           '@id': 'https://acornglobus.com',
           itemListElement: [
-          {
+            {
               '@type': 'ListItem',
               position: 1,
               name: 'Features',
@@ -204,25 +248,10 @@ export default {
               position: 2,
               name: 'Auto Responder',
               item: 'https://formester.com/features/auto-responder/',
-            }
+            },
           ],
         },
       ],
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Dalaware',
-        addressCountry: 'United States',
-      },
-      creator: {
-        '@type': 'Organization',
-        '@id': '#organization',
-        url: 'https://formester.com/',
-        name: 'Formester',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://formester.com/logo.png',
-        },
-      }
     }
   },
   data() {
@@ -233,37 +262,39 @@ export default {
           description:
             'Make your emails look personal by using your company email address. You also get an option to choose between HTML and text-based emails.',
           src: 'auto-responder/white-label-illus.svg',
-          alt: 'Get noticed by making the email personalized'
+          alt: 'Get noticed by making the email personalized',
         },
         {
           title: 'Easy Email Builder',
           description:
             'Creating a captivating response has never been simpler. Our easy to use editor enables you to write compelling content. Add images, links or videos in a matter of a click.',
           src: 'auto-responder/easy-email-builder-illus.svg',
-          alt: 'Email can be eaily build with auto responder'
+          alt: 'Email can be eaily build with auto responder',
         },
         {
           title: 'Personalised Response',
           description:
             'Notifications can be personalised to include fields from the submissions. Make your users feel unique with messages which seem to be coming from actual humans and not a bot.',
           src: 'auto-responder/personalised-response.svg',
-          alt: 'Have a personalised respose to end user'
+          alt: 'Have a personalised respose to end user',
         },
         {
           title: 'Realtime Tracking',
           description:
             'Monitor how people are interacting with your auto-response. Analyse useful metrics like open rate and link clicks to get insights into users behaviour. Use this data to make changes to your communication.',
           src: 'auto-responder/realtime-tracking-illus.svg',
-          alt: 'Track your forms in real time'
+          alt: 'Track your forms in real time',
         },
       ],
     }
   },
   async asyncData() {
     let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(Math.random() * (randomTestimonials.length - 2))
-    randomTestimonials = randomTestimonials.slice(randIndex,  randIndex + 2);
-    return {randomTestimonials}
+    const randIndex = Math.floor(
+      Math.random() * (randomTestimonials.length - 2)
+    )
+    randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
+    return { randomTestimonials }
   },
 }
 </script>

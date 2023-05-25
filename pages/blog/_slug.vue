@@ -292,14 +292,11 @@ export default {
       },
       headline: this.article.title,
       description: this.article.description,
-      metaTitle: this.article.metaTitle,
-      metaDescription: this.article.metaDescription,
-      image: this.article.coverImg
-        ? `https://formester.com/${this.article.coverImg}`
-        : 'https://formester.com/formester-form-builder-background.png',
+      image: imagesArray,
       author: {
         '@type': 'Person',
         name: this.article.author,
+        url: this.article.authorProfile,
       },
       publisher: {
         '@type': 'Organization',
