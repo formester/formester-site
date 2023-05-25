@@ -276,7 +276,7 @@ However, these forms don't come with prices that fit the average budget.
 
 At Formester, you'll find a unique yet feasible approach to accomplish the same goals, as you would with a field sales automation software.
 
-By simply deploying our Customer Visit Record Form, you can now easily and efficiently, track and manage your employees, with real-time and accurate results;
+By simply deploying our [Customer Visit Record Form](https://formester.com/templates/customer-visit-record-form-template-1785/), you can now easily and efficiently, track and manage your employees, with real-time and accurate results;
 
 So that your business achieves optimum performance!
 
