@@ -292,7 +292,7 @@ export default {
       },
       headline: this.article.title,
       description: this.article.description,
-      image: imagesArray,
+      image: imagesArray.length > 0 ? imagesArray : ['https://formester.com/formester-form-builder-background.png'],
       author: {
         '@type': 'Person',
         name: this.article.author,
