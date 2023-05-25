@@ -57,6 +57,8 @@ From tailored messaging, driving A/B Testing at scale, and generating images for
 
 [AI is capable of doing it](https://blog.socialmediastrategiessummit.com/10-examples-of-ai-in-marketing/)!
 
+![Infographic Showing: Impact of AI on Marketing: 1. Chatbots Product Recommendations  2. Segmentation  3. Sentiment Analysis  4. Fraud detection 5. Process Automation](/img/impact-of-ai-on-marketing.png "Impact of AI on Marketing")
+
 However, as Jeffrey Gitomer has said - 
 
 **Great salespeople are relationship builders who provide value and help their customers win.**
@@ -81,9 +83,11 @@ Which brings us to...
 
 Field Sales Automation is the application of various software platforms and tools to streamline, automate and optimize monotonous tasks, activities and processes relating to marketing and sales, thereby improving the overall efficiency of the department to function more effectively.
 
-According to [Market Research Future](https://www.marketresearchfuture.com/reports/field-force-automation-market-8686) - The global Field Force Automation Market is expected to reach a value of $3.5 billion by 2023, growing at a CAGR of 15% from 2017 to 2023;
+According to [Market Research Future](https://www.marketresearchfuture.com/reports/field-force-automation-market-8686) - **The global Field Force Automation Market is expected to reach a value of $3.5 billion by 2023, growing at a CAGR of 15% from 2017 to 2023;**
 
-Owing to the increasing adoption of mobile devices, cloud-based solutions, and data analytics in the field sales monitoring process.
+**Owing to the increasing adoption of mobile devices, cloud-based solutions, and data analytics in the field sales monitoring process.**
+
+![Infographic showing: Sub-Tasks Involved in Field Sales:- 1. Setting Goals and Targets 2. Cultivating New Leads  3. Actually visiting the Client's Location 4. Creating Reports 5. Closing the sale 6. Maintaining the Associated Records 7. Managing Multiple Clients 8. Research and Analyze Market Standing and Competitors](/img/sub-tasks-involved-in-field-sales.png "Sub-Tasks Involved in Field Sales")
 
 Field Sales is a dynamic and complex operation, involving various sub-tasks such as:
 
@@ -105,6 +109,8 @@ And no unfair means or shortcuts are being used to perform them.
 A [Field Sales or Field Force Automation Software](https://www.leadsquared.com/learn/sales/what-is-field-force-automation/) is designed to act as an integrated platform to record, track, monitor and update the various tasks associated with field sales, enabling the business to maintain an accurate, evidence-based and real-time report on the performance of each of the employees.
 
 #### Features of a Field Sales Automation Software
+
+![Infographic showing: Basic Features of a Field Sales Automation Software:- 1. Assigning Goals and Targets 2. Manage Attendance 3. Location Tracking 4. Uploading Images 5. Track Performance](/img/basic-features-of-field-sales-automation-software.png "Basic Features of a Field Sales Automation Software")
 
 The fundamental features that any Field Sales Automation Software should offer, are discussed below:
 
@@ -194,6 +200,8 @@ This field lets the field agent's phone read their live location.
 
 ### Problems Solved
 
+![Infographic showing: Problems Solved by using a Customer Visit Record Form:- 1. Easy and Efficient Process 2. Target Monitoring 3. Process Automation 4. Real-Time Tracking 5. Location Verification 6. Image-based Documentation 7. Centralized Storage and Management 8. Integration with Third-Party Platforms 9. Credible and Branded Forms](/img/problems-solved-by-using-a-customer-visit-record-form.png "Problems Solved by using a Customer Visit Record Form")
+
 #### 1. Easy and Efficient Process
 
 The Customer Visit Record Form lets the field agent record and document each of his visits, by simply filling out a simple and compact web form.
@@ -233,6 +241,8 @@ Your web forms can be curated as per your brand's theme and messaging, and you a
 In other words, everything to [make your web forms credible and personalized](https://formester.com/features/branding-kit/).
 
 ### Benefits of Formester's Customer Visit Record Form
+
+![Infographics showing: Benefits of Formester's Customer Visit Record Form:- 1. Cost-Effective 2. Easy to Create 3. Easy to Fill 4. Setting Achievable and Realistic Targets 5. Real-Time Results 6. Improved Efficiency](/img/benefits-of-formester’s-customer-visit-record-form.png "Benefits of Formester's Customer Visit Record Form")
 
 #### 1. Cost-Effective
 
@@ -276,7 +286,7 @@ However, these forms don't come with prices that fit the average budget.
 
 At Formester, you'll find a unique yet feasible approach to accomplish the same goals, as you would with a field sales automation software.
 
-By simply deploying our Customer Visit Record Form, you can now easily and efficiently, track and manage your employees, with real-time and accurate results;
+By simply deploying our [Customer Visit Record Form](https://formester.com/templates/customer-visit-record-form-template-1785/), you can now easily and efficiently, track and manage your employees, with real-time and accurate results;
 
 So that your business achieves optimum performance!
 
