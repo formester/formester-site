@@ -81,11 +81,6 @@ export default {
             addressLocality: 'Delaware',
             addressCountry: 'United States',
           },
-          owns: {
-            '@type': 'Product',
-            name: 'Acorn Globus',
-            url: 'https://acornglobus.com',
-          },
         },
         {
           '@type': 'BreadcrumbList',
