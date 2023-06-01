@@ -17,7 +17,7 @@ keywords: abc
 author: Navni Dighe
 authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-06-01T11:22:58.383Z
-coverImg: /img/10-reasons-why-you-are-still-not-doing-surveys.png
+coverImg: /img/registration-forms-101_-definition-types-use-cases-more-how-to-create-free-template.png
 coverImgAlt: "Registration Forms 101: Definition, Types, Use-Cases & More + How
   to Create & Free Template"
 featured: false
@@ -189,7 +189,7 @@ That said, let's explore an easy and fun 5 step process that will let you create
 
 ### Step 1: Sign-Up on Formester
 
-![](/img/registration-forms.png)
+![Screen-capture showing: Formester's Sign-up Page](/img/registration-forms.png "Formester's Sign-up Page")
 
 Start by [signing-up and creating an account on Formester](https://app.formester.com/users/sign_up). Don't hesitate, it's free!
 
@@ -201,11 +201,11 @@ Click on the create form button to design your own form.
 
 Give it a suitable name, such as Event Registration Form.
 
-![](/img/registration-forms_1.png)
+![Screen-capture showing: New Form Title and Settings Page](/img/registration-forms_1.png "New Form Title and Settings Page")
 
 Next, simply drag-and-drop all the fields you find relevant to your form.
 
-![](/img/registration-forms_2.png)
+![Screen-capture showing: Drag-and-Drop Field Options](/img/registration-forms_2.png "Drag-and-Drop Field Options")
 
 These could include, **Name**, **Gender**, **Email Address**, **Service of Interest**, **Preferred mode of payment**, etc.
 
@@ -226,7 +226,7 @@ OR, cut down the hassle;
 
 By simply choosing a [pre-designed, customizable, free registration form template](https://formester.com/templates/categories/registration-forms/) from our Template Library and making minor edits!
 
-![](/img/registration-forms_3.png)
+![Screen-capture showing: Formester's Template Section](/img/registration-forms_3.png "Formester's Template Section")
 
 ### Step 3:  Designing the Form
 
@@ -234,7 +234,7 @@ Once you've added the required and relevant fields to your registration form, yo
 
 You may change the background colour, the form colour, the font size and type, margins, etc.
 
-![](/img/registration-forms_4.png)
+![Screen-capture showing: Customization and Personalization Options](/img/registration-forms_4.png "Customization and Personalization Options")
 
 You may also insert your company logo, to enhance form credibility.
 
@@ -244,7 +244,7 @@ Once your registration form is ready, click on the Auto-Responder Tab to create 
 
 This feature lets you [create an automatic, personalized acknowledgement message](https://formester.com/features/auto-responder/) that can be sent to the users upon receiving their submissions.
 
-![](/img/registration-forms_5.png)
+![Screen-capture showing: The Auto-Responder Section](/img/registration-forms_5.png "The Auto-Responder Section")
 
 It is a good practice for customer service and also helps users' receive confirmation of the service they’ve signed-up for.
 
@@ -252,17 +252,17 @@ It is a good practice for customer service and also helps users' receive confirm
 
 Once you've designed your form, click the preview button to view how your form will look post submission.
 
-![](/img/registration-forms_7.png)
+![Screen-capture showing: Preview of the Form](/img/registration-forms_7.png "Preview of the Form")
 
 If you are satisfied, just hit publish!
 
-![](/img/registration-forms_6.png)
+![Screen-capture showing: Preview & Publish Buttons](/img/registration-forms_6.png "Preview & Publish Buttons")
 
 Your registration form is now ready to gather responses!
 
 P.S., you may also use the Analytics feature to [analyze your form responses](https://formester.com/features/powerful-analytics/)!
 
-![](/img/registration-forms_8.png)
+![Screen-capture showing: The Analytics Section](/img/registration-forms_8.png "The Analytics Section")
 
 ## Tips to Design An Effective Registration Form
 
@@ -306,7 +306,7 @@ That said, it is important to explore and carefully design, one that serves your
 
 At Formester, you'll get a [no-code, drag-and-drop approach to form-building and also offers customization and personalization options!](https://formester.com/)
 
-![](/img/registration-form.png)
+![Screen-capture showing: Formester's Home-Page](/img/registration-form.png "Formester's Home-Page")
 
 Moreover, you get a [range of features, from basic to advanced](https://formester.com/features/);
 
