@@ -189,6 +189,8 @@ That said, let's explore an easy and fun 5 step process that will let you create
 
 ### Step 1: Sign-Up on Formester
 
+![](/img/registration-forms.png)
+
 Start by [signing-up and creating an account on Formester](https://app.formester.com/users/sign_up). Don't hesitate, it's free!
 
 If you already have one, you simply have to log-in.
@@ -199,7 +201,11 @@ Click on the create form button to design your own form.
 
 Give it a suitable name, such as Event Registration Form.
 
+![](/img/registration-forms_1.png)
+
 Next, simply drag-and-drop all the fields you find relevant to your form.
+
+![](/img/registration-forms_2.png)
 
 These could include, **Name**, **Gender**, **Email Address**, **Service of Interest**, **Preferred mode of payment**, etc.
 
@@ -220,11 +226,15 @@ OR, cut down the hassle;
 
 By simply choosing a [pre-designed, customizable, free registration form template](https://formester.com/templates/categories/registration-forms/) from our Template Library and making minor edits!
 
+![](/img/registration-forms_3.png)
+
 ### Step 3:  Designing the Form
 
 Once you've added the required and relevant fields to your registration form, you may also [personalize it as per your own branding theme and design](https://formester.com/features/branding-kit/).
 
 You may change the background colour, the form colour, the font size and type, margins, etc.
+
+![](/img/registration-forms_4.png)
 
 You may also insert your company logo, to enhance form credibility.
 
@@ -234,17 +244,25 @@ Once your registration form is ready, click on the Auto-Responder Tab to create 
 
 This feature lets you [create an automatic, personalized acknowledgement message](https://formester.com/features/auto-responder/) that can be sent to the users upon receiving their submissions.
 
-It is good practice for customer service and also helps users' receive confirmation of the service they’ve signed-up for.
+![](/img/registration-forms_5.png)
+
+It is a good practice for customer service and also helps users' receive confirmation of the service they’ve signed-up for.
 
 ### Step 5: Preview and Publish
 
 Once you've designed your form, click the preview button to view how your form will look post submission.
 
+![](/img/registration-forms_7.png)
+
 If you are satisfied, just hit publish!
+
+![](/img/registration-forms_6.png)
 
 Your registration form is now ready to gather responses!
 
 P.S., you may also use the Analytics feature to [analyze your form responses](https://formester.com/features/powerful-analytics/)!
+
+![](/img/registration-forms_8.png)
 
 ## Tips to Design An Effective Registration Form
 
@@ -268,7 +286,7 @@ Use advanced features like conditional logic to [create dynamic forms and gather
 
 ### 5. Compelling CTA
 
-Use a more compelling and well-thought CTA in place of a regular Submit or OK button. For eg., the CTA for a registration form for a Newsletter of a website that offers financial advice, could be - Yes, I wanna be rich!
+Use a more compelling and well-thought CTA in place of a regular Submit or OK button. For eg., the CTA for a registration form for a Newsletter of a website that offers financial advice, could be - **Yes, I wanna be rich!**
 
 ### 6. Third-party integrations
 
@@ -287,6 +305,8 @@ Registration Forms are of several kinds and find application in many different d
 That said, it is important to explore and carefully design, one that serves your business the best!
 
 At Formester, you'll get a [no-code, drag-and-drop approach to form-building and also offers customization and personalization options!](https://formester.com/)
+
+![](/img/registration-form.png)
 
 Moreover, you get a [range of features, from basic to advanced](https://formester.com/features/);
 
