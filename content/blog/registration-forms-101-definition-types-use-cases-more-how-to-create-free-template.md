@@ -13,7 +13,15 @@ metaTitle: "Registration Forms 101: Definition, Types, Use-Cases & More + How to
   Create & Free Template"
 metaDescription: Online Registration Forms - Definition, Types, Use-Cases | How
   to Create a Simple Registration Form + Free Template
-keywords: abc
+keywords: What is registration of a form?, How can I create a free registration
+  form?, How do I create a simple registration form?, What is Web registration
+  form?, online registration forms, registration form online free, registration
+  form template free, Simple registration form, Registration form design, What
+  is the meaning of student registration form?, Which of the forms are used for
+  registration?, form, builder, formbuilder, free form builder, survey, no code,
+  no code form builder, drag and drop form builder, typeform alternative,
+  jotform alternative, small business advice, faq, types of registration forms,
+  benefits of registration forms, formester blog
 author: Navni Dighe
 authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-06-01T11:22:58.383Z
