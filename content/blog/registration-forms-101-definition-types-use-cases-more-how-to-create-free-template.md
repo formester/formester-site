@@ -1,9 +1,18 @@
 ---
 title: "Registration Forms 101: Definition, Types, Use-Cases & More + How to
   Create & Free Template"
-description: abc
-metaTitle: abc
-metaDescription: abc
+description: "Online Registration Forms are the primary source of gathering user
+  details based on the service they want to receive from a business.
+  Registration Forms are simple and easy to use, both at the business and the
+  user front. This blog is a comprehensive guide to the fundamentals of
+  Registration Forms, starting from its definition, to its types, benefits and
+  real- world use-cases. Towards the end, it also discusses a simple yet
+  detailed 5 - step process on how to create a basic registration form and a few
+  tips on how to make it effective and response-oriented.  "
+metaTitle: "Registration Forms 101: Definition, Types, Use-Cases & More + How to
+  Create & Free Template"
+metaDescription: Online Registration Forms - Definition, Types, Use-Cases | How
+  to Create a Simple Registration Form + Free Template
 keywords: abc
 author: Navni Dighe
 authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
@@ -88,7 +97,7 @@ Membership Registration Forms are used by individual clubs, organizations, group
 
 Websites with multiple products and services, also often use a General Registration Form, to enlist all their offerings at one place in a consolidated manner, making it easy for users to have an overview and select the one that best fits their requirement.
 
-## Practical Use-Cases of Registration Forms in Various Industries
+## Real-World Use-Cases of Registration Forms in Various Industries
 
 ### 1. Medical and Healthcare  
 
