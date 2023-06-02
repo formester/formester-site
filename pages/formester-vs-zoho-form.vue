@@ -319,8 +319,8 @@ export default {
         },
         {
           title: 'Storage',
-          formester: 'Basic Plan: <span class="present">$13/month</span>  & Minimum Storage: <span class="present">1GB</span>.<span></br></span> Business Plan: <span class="present">$49/month</span> & Minimum Storage: <span class="present">50GB</span>',
-          zoho: 'Basic Plan: <span class="absent">$12/month</span> & Minimum Storage: <span class="absent">500MB</span>.<span></br></span> Standard Plan: <span class="absent">$30/month</span> & Minimum Storage: <span class="absent">2GB</span> ',
+          formester: 'Basic Plan: <span class="present">$13/month</span>  & Maximum Storage: <span class="present">1GB</span>.<span></br></span> Business Plan: <span class="present">$49/month</span> & Maximum Storage: <span class="present">50GB</span>',
+          zoho: 'Basic Plan: <span class="absent">$12/month</span> & Maximum Storage: <span class="absent">500MB</span>.<span></br></span> Standard Plan: <span class="absent">$30/month</span> & Maximum Storage: <span class="absent">2GB</span> ',
         },
         {
           title: 'Redirection on Submission',

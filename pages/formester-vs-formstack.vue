@@ -318,9 +318,9 @@ export default {
         },
         {
           title: 'Storage',
-          formester: 'Basic Plan: <span class="present">$13/month</span> & Minimum Storage: <span class="present">1GB</span>.<span></br></span> Business Plan: <span class="present">$49/month</span> & Minimum Storage: <span class="present">50GB</span>',
-          formstack: 'Basic Plan: <span class="absent">$59/month/month</span>  & Minimum Storage: <span class="absent">1GB</span>.<span></br></span> Business Plan: <span class="absent">$99/month</span> & Minimum Storage: <span class="absent">2GB</span>',
-          // formstack: 'Minimum Storage - 1GB: comes with Starter Plan - $59/month. Teams Plan - 2GB: $99/month',
+          formester: 'Basic Plan: <span class="present">$13/month</span> & Maximum Storage: <span class="present">1GB</span>.<span></br></span> Business Plan: <span class="present">$49/month</span> & Maximum Storage: <span class="present">50GB</span>',
+          formstack: 'Basic Plan: <span class="absent">$59/month/month</span>  & Maximum Storage: <span class="absent">1GB</span>.<span></br></span> Business Plan: <span class="absent">$99/month</span> & Maximum Storage: <span class="absent">2GB</span>',
+          // formstack: 'Maximum Storage - 1GB: comes with Starter Plan - $59/month. Teams Plan - 2GB: $99/month',
         },
         {
           title: 'Redirection on Submission',

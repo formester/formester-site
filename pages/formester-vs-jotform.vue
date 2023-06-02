@@ -313,8 +313,8 @@ export default {
         },
         {  
           title: 'Storage',
-          formester: 'Basic Plan: <span class="absent">$13/month</span> & Minimum Storage: <span class="absent">1GB</span>.<span></br></span> Business Plan: <span class="absent">$49/monthv</span> & Minimum Storage: <span class="absent">50GB</span>',
-          jotform: 'Bronze Plan: <span class="present">39$/month</span> & Minimum Storage: <span class="present">10GB</span>.<span></br></span> Silver Plan: <span class="present">$49/month</span> & Minimum Storage: <span class="present">100GB</span>',
+          formester: 'Basic Plan: <span class="absent">$13/month</span> & Maximum Storage: <span class="absent">1GB</span>.<span></br></span> Business Plan: <span class="absent">$49/monthv</span> & Maximum Storage: <span class="absent">50GB</span>',
+          jotform: 'Bronze Plan: <span class="present">39$/month</span> & Maximum Storage: <span class="present">10GB</span>.<span></br></span> Silver Plan: <span class="present">$49/month</span> & Maximum Storage: <span class="present">100GB</span>',
         },
         { 
           title: 'Monthly Payment Submissions',
