@@ -305,8 +305,8 @@ export default {
                 },
                 {
                     title: "Storage",
-                    formester: "Basic Plan: <span class=\"present\">$13/month</span>  & Minimum Storage: <span class=\"present\">1GB</span>.<span></br></span> Business Plan: <span class=\"present\">$49/month</span> & Minimum Storage: <span class=\"present\">50GB</span>",
-                    typeform: "Basic Plan: <span class=\"absent\">$25/month</span> & Minimum Storage: <span class=\"absent\">1GB</span>.<span></br></span> Business Plan: <span class=\"absent\">$83/month</span> & Minimum Storage: <span class=\"absent\">5GB</span>",
+                    formester: "Basic Plan: <span class=\"present\">$13/month</span>  & Maximum Storage: <span class=\"present\">1GB</span>.<span></br></span> Business Plan: <span class=\"present\">$49/month</span> & Maximum Storage: <span class=\"present\">50GB</span>",
+                    typeform: "Basic Plan: <span class=\"absent\">$25/month</span> & Maximum Storage: <span class=\"absent\">1GB</span>.<span></br></span> Business Plan: <span class=\"absent\">$83/month</span> & Maximum Storage: <span class=\"absent\">5GB</span>",
                 },
                 {
                     title: "Cloud Integrations with Zapier",

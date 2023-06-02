@@ -345,8 +345,8 @@ export default {
         },
         {
           title: 'Storage',
-          formester: 'Basic Plan: <span class="absent">$13/month</span> & Minimum Storage: <span class="absent">1GB</span>.<span></br></span> Business Plan: <span class="absent">$49/monthv</span> & Minimum Storage: <span class="absent">50GB</span>',
-          forms: 'Basic Plan: <span class="present">$19/month</span>  & Minimum Storage: <span class="present">10GB</span>.<span></br></span> Pro Plan: <span class="present">$29/month</span> & Minimum Storage <span class="present">100GB</span>  ',
+          formester: 'Basic Plan: <span class="absent">$13/month</span> & Maximum Storage: <span class="absent">1GB</span>.<span></br></span> Business Plan: <span class="absent">$49/monthv</span> & Maximum Storage: <span class="absent">50GB</span>',
+          forms: 'Basic Plan: <span class="present">$19/month</span>  & Maximum Storage: <span class="present">10GB</span>.<span></br></span> Pro Plan: <span class="present">$29/month</span> & Maximum Storage <span class="present">100GB</span>  ',
         },
       ],
       pricing:[
