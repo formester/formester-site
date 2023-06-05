@@ -63,7 +63,7 @@ And today's blog is dedicated to discussing.
 
 ### 1. Formester
 
-Formester is a no-code, intuitive, drag-and-drop form builder that lets you create fun, easy and compelling web forms!
+Formester is a [no-code, intuitive, drag-and-drop form builder](https://formester.com/) that lets you create fun, easy and compelling web forms!
 
 ![](/img/10-alternatives-to-jotform_1.png)
 
@@ -99,7 +99,7 @@ In Comparison to Jotform, Formester offers:
 
 ### 2. Forms.App
 
-Forms.App comes with a self-explicative approach to form-building.
+[Forms.App](https://forms.app/) comes with a self-explicative approach to form-building.
 
 The highlights are its advanced customization options and seamless integrations.
 
@@ -128,7 +128,7 @@ In Comparison to Jotform, Forms.App offers:
 
 ### 3. Paperform
 
-Paperform is an aesthetic focused form builder, providing the scope for designing highly visually appealing forms whilst accommodating several digital elements.
+[Paperform](https://paperform.co/) is an aesthetic focused form builder, providing the scope for designing highly visually appealing forms whilst accommodating several digital elements.
 
 ![](/img/10-alternatives-to-jotform_4.png)
 
@@ -153,7 +153,7 @@ In Comparison to Jotform, Paperform offers:
 
 ### 4. Zoho Forms 
 
-Zoho Forms is one of the many child products of Zoho Software.
+[Zoho Forms](https://www.zoho.com/forms/) is one of the many child products of Zoho Software.
 
 Fundamentally being a project-management software, all their products have a natural flair toward process automation;
 
@@ -184,7 +184,7 @@ In Comparison to Jotform, Zoho Forms offers:
 
 ### 5. Formstack 
 
-Formstack is a form builder that believes in accelerating your web form workflow by combining data capturing, document generation, and eSignature collection into a single platform.
+[Formstack](https://www.formstack.com/) is a form builder that believes in accelerating your web form workflow by combining data capturing, document generation, and eSignature collection into a single platform.
 
 ![](/img/10-alternatives-to-jotform_6.png)
 
@@ -210,7 +210,7 @@ In Comparison to Jotform, Formstack offers:
 
 ### 6. Google Forms
 
-Next is the good ol' Google Forms, from the tech giant Google family. 
+Next is the good ol' [Google Forms](https://www.google.com/forms/about/), from the tech giant Google family. 
 
 That said, the UX is fairly user-oriented and intuitive.
 
@@ -240,7 +240,7 @@ As a part of the Google Editor's Suite, it offers seamless integrations with all
 
 ### 7. WPForms
 
-WPForms is an excellent platform for creating professional and complex forms.
+[WPForms](https://wpforms.com/) is an excellent platform for creating professional and complex forms.
 
 They are also primarily a compatible plug-in for WordPress.
 
@@ -269,7 +269,7 @@ In Comparison to Jotform, WPForms offers:
 
 ### 8. Formsite
 
-Formsite is another form builder that offers a no-code approach to form-building.
+[Formsite](https://www.formsite.com/) is another form builder that offers a no-code approach to form-building.
 
 Their highlight is their Security features.
 
@@ -299,7 +299,7 @@ In Comparison to Jotform, Formsite offers:
 
 ### 9. Feathery
 
-Feathery is a quality form-builder aimed at targeting product-grade use cases, requiring advanced logic.
+[Feathery](https://www.feathery.io/) is a quality form-builder aimed at targeting product-grade use cases, requiring advanced logic.
 
 Their target audience is the Product and Engineering Teams.
 
@@ -326,7 +326,7 @@ In Comparison to Jotform, Feathery offers:
 
 ### 10. SurveySparrow
 
-SurveySparrow is a form-builder specializing in survey-oriented forms.
+[SurveySparrow](https://surveysparrow.com/) is a form-builder specializing in survey-oriented forms.
 
 That said, they have extensive survey templates along with an extensive blog resource covering survey-related information and more. 
 
@@ -360,10 +360,10 @@ H﻿owever, on the flip side, there are several limitations that users face and 
 A﻿ complex editing process, limited integrations and submissions are a few common reasons, why users are looking for Jotform's alternatives.\
 M﻿oreover, the prices aren't as compatible for small and medium sized businesses.
 
-T﻿hat said, just like for every other product, there are several alternatives available in case of form-builders.\
+T﻿hat said, just like for every other product, there are several alternatives available in case of form-builders;\
 J﻿ust as easy to use as Jotform, with a range of features, from basic to advanced and most importantly, cost-effective!\
 B﻿ut the real deal is, to decide which one's right for you! \
 T﻿hat said, this blog is here to bring clarity to your confusion as we list the top 10 form-builders that you can consider in place of Jotform. 
 
 And, don't forget to check out what makes each of these software unique in comparison to Jotform;\
-S﻿o, you can get exactly what you need and make your form-building journey, a smooth ride!
+S﻿o, you can get exactly what you need and [make your form-building journey, a smooth ride](https://formester.com/)!
