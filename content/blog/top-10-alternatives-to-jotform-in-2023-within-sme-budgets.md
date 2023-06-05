@@ -19,20 +19,14 @@ Although it is a fantastic platform and lets its users accomplish their web form
 For instance, consider these below-given reasons, based on Jotform's Users' Reviews:
 
 1. Very low submission limits with the free version
-
 2. Inability to purchase only submissions without having to upgrade the whole account
-
 3. Complex Editing Process
-
 4. Complex Widget Upgrades
-
 5. Difficult Integrations
-
 6. Review form progress
-
 7. Icon/Branding invasiveness on the free version
 
-
+   ![Funny meme showing why SMEs are looking for Jotform's alternatives!](/img/small-medium-sized-businesses-after-they-read-the-above-mentioned-reasons-and-also-find-out-the-pricing-structure.png "Why SMEs are looking for Jotform's alternatives!")
 
 Although the above-mentioned factors might not be a stumbling block for big corporations and organizations with adequate budgets for investing in the paid versions;
 
