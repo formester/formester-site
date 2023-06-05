@@ -10,7 +10,7 @@ createdAt: 2023-06-05T05:18:32.677Z
 coverImg: /img/10-reasons-why-you-are-still-not-doing-surveys.png
 coverImgAlt: Top 10 Alternatives to Jotform in 2023 | Within SME Budgets
 featured: false
-published: false
+published: true
 ---
 Jotform is undoubtedly one of the most popular and highly-selling software for creating web forms online.
 
