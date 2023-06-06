@@ -65,6 +65,8 @@ That said, registration forms serve as the primary source of finding user intere
 
 There are several kinds of registration forms designed to serve different purposes. Let's discuss a few important and commonly used Registration Forms.
 
+![Infographic showing: Types of Registration Forms, namely: 1. Event-Registration Forms 2. Subscription Registration Forms 3. Product Pre-Launch and Pre-Book Registration Forms 4. Program Registration Forms 5. Customer Registration Forms 6. Seminar/Webinar Registration Forms 7. Profile Registration Forms 8. Membership Registration Forms 9. General Registration Forms](/img/types-of-registration-forms.png "Types of Registration Forms")
+
 ### 1. Event-Registration Forms
 
 It is a known fact that many established businesses often hold different kinds of events, such as product launches and pre-launches, meet-&-greets, Q/A Sessions, promotional and media events, etc.
@@ -107,6 +109,8 @@ Websites with multiple products and services, also often use a General Registrat
 
 ## Real-World Use-Cases of Registration Forms in Various Industries
 
+![Infographic showing: Various Industries Using Registration Forms: 1. Medical and Healthcare 2. Academic Institutes  3. Clubs and Organizations 4. Product/Service-based Companies 5. E-commerce Websites 6. Program-based Businesses](/img/various-industries-using-registration-forms.png "Various Industries Using Registration Forms")
+
 ### 1. Medical and Healthcare  
 
 Hospitals, Clinics and their websites can use Patient Registration Forms to register their patients alongwith their important details, such as health records, medical history and reports, etc.
@@ -139,6 +143,8 @@ The benefits of a registration form can be observed both at the business as well
 
 ### On the Business Front:
 
+![Infographic showing: Benefits of a Registration Form On the Business Front: 1. Process Automation 2. Centralized Storage and Organization 3. Better Chance of Business 4. Better Planning & Management and Enhanced Decision-Making 5. Scope for Promotional Activity 6. Gathering Accurate User-Data](/img/benefits-of-a-registration-form-on-the-business-front.png "Benefits of a Registration Form On the Business Front")
+
 Businesses can benefit from featuring an online registration form in the following ways:
 
 #### 1. Streamlined and Automation of Monotonous Processes
@@ -170,6 +176,8 @@ It is also a good place to showcase any on-going discounts, offers, reward progr
 The chances of gathering inaccurate user-data become minimal, as the user himself fills out the form. Moreover, the loss occurring over other modes of transmission, such as IVR, are also curbed.
 
 ### On the User Front:
+
+![Infographic showing: Benefits of a Registration Form On the User Front: 1. Ease of Use and Accessibility 2. Transparent, Safe and Secure Payments 3. Receiving Early-Bird Benefits 4. Email Trails](/img/benefits-of-a-registration-form-on-the-user-front.png "Benefits of a Registration Form On the User Front")
 
 Users can benefit from an online registration form in the following ways:
 
@@ -273,6 +281,8 @@ P.S., you may also use the Analytics feature to [analyze your form responses](ht
 ![Screen-capture showing: The Analytics Section](/img/registration-forms_8.png "The Analytics Section")
 
 ## Tips to Design An Effective Registration Form
+
+![Infographic showing: Tips to Design An Effective Registration Form: 1. Short and Simple 2. Featuring at Appropriate Places 3. Use Spam-Filter 4. Employ Advanced Features 5. Compelling CTA 6. Third-party integrations](/img/tips-to-design-an-effective-registration-form.png "Tips to Design An Effective Registration Form")
 
 A registration form, if well-designed, has the capability of bringing in more sales, leads and traffic to your website. Therefore, here are a few tips that might come in handy while designing your registration form:
 
