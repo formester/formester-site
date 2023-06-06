@@ -33,47 +33,89 @@
     </div>
     <div class="code__container">
       <div class="container">
-        <div class="row d-flex flex-column justify-content-center align-items-center ">
-          <div class=" col-lg-9 code-block">
-            <h2 class="section__heading">Easy form endpoints for your HTML forms</h2>
+        <div
+          class="row d-flex flex-column justify-content-center align-items-center"
+        >
+          <div class="col-lg-9 code-block">
+            <h2 class="section__heading">
+              Easy form endpoints for your HTML forms
+            </h2>
             <div class="card mt-5">
               <div class="card-header">
                 <h3>HTML Form Backend</h3>
               </div>
               <div class="card-body">
                 <p class="html">
-                  &lt;<span style="color: #27AE60;">form</span> <span style="color: #9B51E0;">accept-charset</span>='UTF-8' <span style="color: #9B51E0;">action</span>="https://app.formester.com/forms/your@form/submissions" <span style="color: #9B51E0;">method</span>="POST" &gt;<br>
-                    <span>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color: #27AE60;">label</span> <span style="color: #9B51E0;">for</span>="email"&gt;Email &lt;<span style="color: #27AE60;">/label</span>&gt;<br>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color: #27AE60;">input</span> <span style="color: #9B51E0;">type</span>="email" <span style="color: #9B51E0;">id</span>="email-address" <span style="color: #9B51E0;">name</span>="email" <span style="color: #9B51E0;">placeholder</span>="your@email.com" <span style="color: #27AE60;">/</span>&gt;<br>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color: #27AE60;">button</span> <span style="color: #9B51E0;">type</span>="submit"&gt;Submit &lt;<span style="color: #27AE60;">/button</span>&gt;<br>
-                    </span>
-                    &lt;<span style="color: #27AE60;">/form</span>&gt;
+                  &lt;<span style="color: #27ae60">form</span>
+                  <span style="color: #9b51e0">accept-charset</span>='UTF-8'
+                  <span style="color: #9b51e0">action</span
+                  >="https://app.formester.com/forms/your@form/submissions"
+                  <span style="color: #9b51e0">method</span>="POST" &gt;<br />
+                  <span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span
+                      style="color: #27ae60"
+                      >label</span
+                    >
+                    <span style="color: #9b51e0">for</span>="email"&gt;Email
+                    &lt;<span style="color: #27ae60">/label</span>&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span
+                      style="color: #27ae60"
+                      >input</span
+                    >
+                    <span style="color: #9b51e0">type</span>="email"
+                    <span style="color: #9b51e0">id</span>="email-address"
+                    <span style="color: #9b51e0">name</span>="email"
+                    <span style="color: #9b51e0">placeholder</span
+                    >="your@email.com"
+                    <span style="color: #27ae60">/</span>&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span
+                      style="color: #27ae60"
+                      >button</span
+                    >
+                    <span style="color: #9b51e0">type</span>="submit"&gt;Submit
+                    &lt;<span style="color: #27ae60">/button</span>&gt;<br />
+                  </span>
+                  &lt;<span style="color: #27ae60">/form</span>&gt;
                 </p>
               </div>
             </div>
             <p class="hero__subheading mt-3">
-              Design a form for your site, and be sure to name all the fields. Then, just point the action to us and confirm your email address!
+              Design a form for your site, and be sure to name all the fields.
+              Then, just point the action to us and confirm your email address!
             </p>
             <h3 class="section__heading backend-steps">1. Connect Your Form</h3>
             <p class="hero__subheading mt-1">
-              Pointing the action-attribute of your form to our URL will enable submissions to be sent to your email address.
+              Pointing the action-attribute of your form to our URL will enable
+              submissions to be sent to your email address.
             </p>
-            <div class="card-body card ">
+            <div class="card-body card">
               <span class="html">
-                &lt;<span style="color: #27AE60;">form </span> <span style="color: #9B51E0;">accept-charset</span>='UTF-8'  <span style="color: #9B51E0;">action</span>="https://app.formester.com/forms/your@form/submissions" <span style="color: #9B51E0;">method</span>="POST" &gt;  
+                &lt;<span style="color: #27ae60">form </span>
+                <span style="color: #9b51e0">accept-charset</span>='UTF-8'
+                <span style="color: #9b51e0">action</span
+                >="https://app.formester.com/forms/your@form/submissions"
+                <span style="color: #9b51e0">method</span>="POST" &gt;
               </span>
-            </div>   
-            <h3 class="section__heading backend-steps">2. Add Name Attributes</h3>
+            </div>
+            <h3 class="section__heading backend-steps">
+              2. Add Name Attributes
+            </h3>
             <p class="hero__subheading mt-1">
-              Include a name attribute in all form elements (i.e. &lt;input&gt;, &lt;select&gt;, and &lt;textarea&gt;) to receive the submission data.
+              Include a name attribute in all form elements (i.e. &lt;input&gt;,
+              &lt;select&gt;, and &lt;textarea&gt;) to receive the submission
+              data.
             </p>
-            <div class="card-body card ">
+            <div class="card-body card">
               <span class="html">
-                &lt;<span style="color: #27AE60;">input</span> <span style="color: #9B51E0;">type</span>="email" <span style="color: #9B51E0;"> name</span>="email" <span style="color: #27AE60;">/</span>&gt;
+                &lt;<span style="color: #27ae60">input</span>
+                <span style="color: #9b51e0">type</span>="email"
+                <span style="color: #9b51e0"> name</span>="email"
+                <span style="color: #27ae60">/</span>&gt;
               </span>
-            </div>   
-            <h3 class="section__heading backend-steps">3. Submit and Confirm</h3>
+            </div>
+            <h3 class="section__heading backend-steps">
+              3. Submit and Confirm
+            </h3>
             <p class="hero__subheading mt-1">
               Submit the form and get the submissions details on your dashboard.
             </p>
@@ -83,7 +125,9 @@
     </div>
     <div class="container py-5">
       <div class="row py-5">
-        <div class="feature__heading d-flex align-items-center justify-content-center">
+        <div
+          class="feature__heading d-flex align-items-center justify-content-center"
+        >
           <h2 class="section__heading">Features</h2>
         </div>
         <FeatureDetail
@@ -94,9 +138,8 @@
         />
       </div>
     </div>
-    <Testimonial 
-      :testimonials="randomTestimonials"
-    />
+    <ThreeStepsCreateForm />
+    <Testimonial :testimonials="randomTestimonials" />
     <TemplateSection />
     <CallToActionSection />
   </div>
@@ -113,7 +156,12 @@ import getSiteMeta from '../../utils/getSiteMeta'
 import TemplateSection from '../../components/TemplateSection.vue'
 
 export default {
-  components: { FeatureDetail, CallToActionSection, Testimonial, TemplateSection },
+  components: {
+    FeatureDetail,
+    CallToActionSection,
+    Testimonial,
+    TemplateSection,
+  },
   computed: {
     meta() {
       const metaData = {
@@ -126,7 +174,8 @@ export default {
           'https://formester.com/formester-form-builder-background.png', // need to update with Html Form Backend page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with Html Form Backend page image alt
         keywords: [
-          'formester','form backend',
+          'formester',
+          'form backend',
           'form endpoint',
           'serverless form',
           'backendless form',
@@ -175,17 +224,19 @@ export default {
           'backend deal',
           'form endpoints for designers ',
           'form endpoints for developers',
-          'contact form backend'
-        ]
+          'contact form backend',
+        ],
       }
       return getSiteMeta(metaData)
     },
   },
   async asyncData() {
     let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(Math.random() * (randomTestimonials.length - 2))
-    randomTestimonials = randomTestimonials.slice(randIndex,  randIndex + 2);
-    return {randomTestimonials}
+    const randIndex = Math.floor(
+      Math.random() * (randomTestimonials.length - 2)
+    )
+    randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
+    return { randomTestimonials }
   },
   head() {
     return {
@@ -203,33 +254,40 @@ export default {
   jsonld() {
     return {
       '@context': 'http://schema.org',
-      '@type': 'Corporation',
-      name: 'Formester - HTML Form Backend',
-      description:
-        "Sign up now for the best No Code Form Builder! Create stunning HTML Forms with Formester's easy-to-use Online HTML Form Builder. Start building today!",
-      logo: 'https://formester.com/logo.png',
-      url: 'https://formester.com',
-      operatingSystem: 'all',
-      browserRequirements: 'Requires Javascript and HTML5 support',
-      sameAs: [
-        'https://twitter.com/_formester_',
-        'https://www.instagram.com/_formester_/',
-      ],
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Dalaware',
-        addressCountry: 'United States',
-      },
-      creator: {
-        '@type': 'Organization',
-        '@id': '#organization',
-        url: 'https://formester.com/',
-        name: 'Formester',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://formester.com/logo.png',
+      '@graph': [
+        {
+          '@type': 'Corporation',
+          '@id': 'https://acornglobus.com',
+          name: 'HTML Form Attributes | HTML Form Backend - Formester',
+          description:
+            "Maximize your website's potential with Formester's HTML form attributes and backend. Start converting leads into customers today. Get Started now!",
+          logo: 'https://formester.com/logo.png',
+          url: 'https://formester.com',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Delaware',
+            addressCountry: 'United States',
+          },
         },
-      }
+        {
+          '@type': 'BreadcrumbList',
+          '@id': 'https://acornglobus.com',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Features',
+              item: 'https://formester.com/features',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'HTML Form Backend',
+              item: 'https://formester.com/features/html-form-backend/',
+            },
+          ],
+        },
+      ],
     }
   },
   data() {
@@ -248,7 +306,7 @@ export default {
           src: 'html-form-backend/embedding-illus.svg',
         },
         {
-          title: 'Realtime Notification',
+          title: 'Realtime Notifications',
           description:
             "On new submissions, Formester ensures that you get informed in real-time for you to stay on top of what's essential for your business. Notifications are delivered where they matter - Slack, email or 100+ apps.",
           src: 'html-form-backend/notification.svg',
@@ -279,14 +337,14 @@ export default {
   padding: 0;
   font-weight: 700;
   width: -webkit-fill-available;
-  margin: 20px 0 ;
+  margin: 20px 0;
   background: var(--bs-dark);
   color: var(--bs-white);
 }
 .card-body {
   padding: 12px 35px;
 }
-.backend-steps{
+.backend-steps {
   font-size: 25px;
   margin-top: 35px;
 }

@@ -319,8 +319,8 @@ export default {
         },
         {
           title: 'Storage',
-          formester: 'Basic Plan: <span class="present">$13/month</span>  & Minimum Storage: <span class="present">1GB</span>.<span></br></span> Business Plan: <span class="present">$49/month</span> & Minimum Storage: <span class="present">50GB</span>',
-          zoho: 'Basic Plan: <span class="absent">$12/month</span> & Minimum Storage: <span class="absent">500MB</span>.<span></br></span> Standard Plan: <span class="absent">$30/month</span> & Minimum Storage: <span class="absent">2GB</span> ',
+          formester: 'Basic Plan: <span class="present">$13/month</span>  & Maximum Storage: <span class="present">1GB</span>.<span></br></span> Business Plan: <span class="present">$49/month</span> & Maximum Storage: <span class="present">50GB</span>',
+          zoho: 'Basic Plan: <span class="absent">$12/month</span> & Maximum Storage: <span class="absent">500MB</span>.<span></br></span> Standard Plan: <span class="absent">$30/month</span> & Maximum Storage: <span class="absent">2GB</span> ',
         },
         {
           title: 'Redirection on Submission',
@@ -464,6 +464,32 @@ export default {
           href: 'https://formester.com/formester-vs-zoho-form/',
         },
       ],
+    }
+  },
+  jsonld() {
+    return {
+      '@context': 'http://schema.org',
+      '@type': 'Corporation',
+      name: 'Formester vs Zoho Forms | Zoho Forms Alternative - Formester',
+      description:
+        "Powerful Alternative to Zoho Forms. Try Formester for custom forms, data collection, actionable insights, affordable prices & more! Start by signing-up for free!",
+      logo: 'https://formester.com/logo.png',
+      url: 'https://formester.com',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Delaware',
+        addressCountry: 'United States',
+      },
+      creator: {
+        '@type': 'Organization',
+        '@id': '#organization',
+        url: 'https://formester.com/',
+        name: 'Formester',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://formester.com/logo.png',
+        },
+      }
     }
   },
 }

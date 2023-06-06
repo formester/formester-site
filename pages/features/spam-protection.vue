@@ -40,6 +40,8 @@
         />
       </div>
     </div>
+    <SpamPreventionTipsSection />
+    <ThreeStepsCreateForm />
     <Testimonial 
       :testimonials="randomTestimonials"
     />
@@ -89,7 +91,43 @@ export default {
     }
   },
   jsonld() {
-    return {}
+    return {
+      '@context': 'http://schema.org',
+      '@graph': [
+        {
+          '@type': 'Corporation',
+          '@id': 'https://acornglobus.com',
+          name: 'Spam Protection | Spam Protection in Web Form - Formester',
+          description:
+            "Looking for a spam protection solution for your web forms? Protect your web forms from spam with Formester. Say goodbye to unwanted submissions and improve your user experience. Try it now!",
+          logo: 'https://formester.com/logo.png',
+          url: 'https://formester.com',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Delaware',
+            addressCountry: 'United States',
+          },
+        },
+        {
+          '@type': 'BreadcrumbList',
+          '@id': 'https://acornglobus.com',
+          itemListElement: [
+          {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Features',
+              item: 'https://formester.com/features',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Spam Protection',
+              item: 'https://formester.com/features/spam-protection/',
+            }
+          ],
+        },
+      ],
+    }
   },
   data() {
     return {

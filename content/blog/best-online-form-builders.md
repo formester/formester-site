@@ -15,9 +15,21 @@ metaDescription: Find out How to Choose the Best Online Form Builder with
 keywords: best online form builder, best form builder, formester, online form
   2023, drag and drop form, free online form builder
 author: Vivek Badani
+authorProfile: https://www.linkedin.com/in/vivek--badani/
 createdAt: 2022-08-01
 coverImg: /img/best-online-form-builders-2023_-how-to-choose-the-ideal-one_.png
 coverImgAlt: Cover image for the blog, "Best Online Form Builders 2023"
+metaImages: [
+    https://formester.com/img/best-online-form-builder__best-online-form-builders.png,
+    https://formester.com/img/best-online-form-builder__formester-form-builder-background.png,
+    https://formester.com/img/best-online-form-builder__formester-testimonial.png,
+    https://formester.com/img/best-online-form-builder__hubspot.png,
+    https://formester.com/img/best-online-form-builder__googleform.png,
+    https://formester.com/img/best-online-form-builder__paperform.png,
+    https://formester.com/img/best-online-form-builder__typeform.png,
+    https://formester.com/img/best-online-form-builder__jotform.png,
+    https://formester.com/img/best-online-form-builder__formsite.png
+  ]
 featured: true
 published: true
 ---

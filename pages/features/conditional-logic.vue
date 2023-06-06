@@ -41,6 +41,7 @@
         />
       </div>
     </div>
+    <ThreeStepsCreateForm />
     <Testimonial 
       :testimonials="randomTestimonials"
     />
@@ -90,7 +91,43 @@ export default {
     }
   },
   jsonld() {
-    return {}
+    return {
+      '@context': 'http://schema.org',
+      '@graph': [
+        {
+          '@type': 'Corporation',
+          '@id': 'https://acornglobus.com',
+          name: 'Conditional Logic Forms Builder - Formester',
+          description:
+            "Easily create custom forms with Conditional Logic Forms Builder - Formester. Get started today and optimize your website's lead generation!",
+          logo: 'https://formester.com/logo.png',
+          url: 'https://formester.com',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Delaware',
+            addressCountry: 'United States',
+          },
+        },
+        {
+          '@type': 'BreadcrumbList',
+          '@id': 'https://acornglobus.com',
+          itemListElement: [
+          {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Features',
+              item: 'https://formester.com/features',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Conditional Logic',
+              item: 'https://formester.com/features/conditional-logic/',
+            }
+          ],
+        },
+      ],
+    }
   },
   data() {
     return {

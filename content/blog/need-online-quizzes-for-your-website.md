@@ -6,9 +6,11 @@ description: Grabbing your customer's attention and holding on to their interest
 keywords: online quiz, online quiz for business, audience engagement, create
   online quiz, educate your customers with quiz
 author: Vivek Badani
+authorProfile: https://www.linkedin.com/in/vivek--badani/
 createdAt: 2022-08-25
 coverImg: /img/why-do-you-need-online-quizzes__why-do-you-need-online-quizzes-for-your-website.png
 coverImgAlt: Cover image for the blog, "Why Do You Need Online Quizzes for Your Website?"
+metaImages: [https://formester.com/img/why-do-you-need-online-quizzes__why-do-you-need-online-quizzes-for-your-website.png]
 featured: false
 published: true
 ---

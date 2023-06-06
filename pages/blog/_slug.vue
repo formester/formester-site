@@ -69,7 +69,14 @@
         </div>
         <div class="sm-text mt-1 article__author-section">
           by
-          <span class="article__author">{{ article.author }}</span>
+          <a
+            :href="article.authorProfile" 
+            :title="article.authorProfile"
+            target="_blank" 
+            rel="noopener"
+          >
+            <span class="article__author">{{ article.author }}</span>
+          </a>
         </div>
         <div class="blog__content">
           <nuxt-content :document="article" />
@@ -94,6 +101,18 @@
             />
           </div>
         </div>
+
+        <template>
+          <div class="mt-5" id="disqus_thread"></div>
+        </template>
+
+        <noscript
+          >Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript"
+            >comments powered by Disqus.</a
+          ></noscript
+        >
+
       </article>
     </div>
     <CallToActionSection :content="article.cta" />
@@ -148,6 +167,7 @@ export default {
         document.querySelector('.popup__img ').style.display = 'none'
       }
     };
+    this.loadDisqus()
   },
   methods: {
     formatDate(date) {
@@ -171,7 +191,19 @@ export default {
         "content_type": "blog",
         "item_id": this.article.title
       })
-    }
+    },
+    loadDisqus() {
+      var disqus_config = function () {
+        this.page.url = `https://formester.com/blog/${this.$route.params.slug}/`
+        this.page.identifier = `${this.$route.params.slug}`
+      }
+
+      var d = document,
+        s = d.createElement('script')
+      s.src = 'https://formester.disqus.com/embed.js'
+      s.setAttribute('data-timestamp', +new Date())
+      ;(d.head || d.body).appendChild(s)
+    },
   },
   computed: {
     meta() {
@@ -241,6 +273,16 @@ export default {
     }
   },
   jsonld() {
+    const imagesArray = []
+
+    if (this.article.coverImg) {
+      imagesArray.push(`https://formester.com${this.article.coverImg}`)
+    }
+
+    if (this.article.metaImages && this.article.metaImages.length > 0) {
+      imagesArray.push(...this.article.metaImages)
+    }
+
     return {
       '@context': 'https://schema.org',
       '@type': 'BlogPosting',
@@ -250,14 +292,11 @@ export default {
       },
       headline: this.article.title,
       description: this.article.description,
-      metaTitle: this.article.metaTitle,
-      metaDescription: this.article.metaDescription,
-      image: this.article.coverImg
-        ? `https://formester.com/${this.article.coverImg}`
-        : 'https://formester.com/formester-form-builder-background.png',
+      image: imagesArray.length > 0 ? imagesArray : ['https://formester.com/formester-form-builder-background.png'],
       author: {
         '@type': 'Person',
         name: this.article.author,
+        url: this.article.authorProfile,
       },
       publisher: {
         '@type': 'Organization',

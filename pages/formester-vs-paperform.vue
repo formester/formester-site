@@ -466,6 +466,32 @@ export default {
       ],
     }
   },
+  jsonld() {
+    return {
+      '@context': 'http://schema.org',
+      '@type': 'Corporation',
+      name: 'Formester vs Paperform | Paperform Alternative - Formester',
+      description:
+        "Powerful Alternative to Paperform. With custom forms, data collection, actionable insights and affordable prices, boost your lead generation & business automation with Formester! Sign-up for free, now!",
+      logo: 'https://formester.com/logo.png',
+      url: 'https://formester.com',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Delaware',
+        addressCountry: 'United States',
+      },
+      creator: {
+        '@type': 'Organization',
+        '@id': '#organization',
+        url: 'https://formester.com/',
+        name: 'Formester',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://formester.com/logo.png',
+        },
+      }
+    }
+  },
 }
 </script>
 

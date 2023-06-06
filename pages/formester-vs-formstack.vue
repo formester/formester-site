@@ -318,9 +318,9 @@ export default {
         },
         {
           title: 'Storage',
-          formester: 'Basic Plan: <span class="present">$13/month</span> & Minimum Storage: <span class="present">1GB</span>.<span></br></span> Business Plan: <span class="present">$49/month</span> & Minimum Storage: <span class="present">50GB</span>',
-          formstack: 'Basic Plan: <span class="absent">$59/month/month</span>  & Minimum Storage: <span class="absent">1GB</span>.<span></br></span> Business Plan: <span class="absent">$99/month</span> & Minimum Storage: <span class="absent">2GB</span>',
-          // formstack: 'Minimum Storage - 1GB: comes with Starter Plan - $59/month. Teams Plan - 2GB: $99/month',
+          formester: 'Basic Plan: <span class="present">$13/month</span> & Maximum Storage: <span class="present">1GB</span>.<span></br></span> Business Plan: <span class="present">$49/month</span> & Maximum Storage: <span class="present">50GB</span>',
+          formstack: 'Basic Plan: <span class="absent">$59/month/month</span>  & Maximum Storage: <span class="absent">1GB</span>.<span></br></span> Business Plan: <span class="absent">$99/month</span> & Maximum Storage: <span class="absent">2GB</span>',
+          // formstack: 'Maximum Storage - 1GB: comes with Starter Plan - $59/month. Teams Plan - 2GB: $99/month',
         },
         {
           title: 'Redirection on Submission',
@@ -463,6 +463,32 @@ export default {
           href: 'https://formester.com/formester-vs-formstack/',
         },
       ],
+    }
+  },
+  jsonld() {
+    return {
+      '@context': 'http://schema.org',
+      '@type': 'Corporation',
+      name: 'Formester vs Formstack | Formstack Alternative - Formester',
+      description:
+        "End your Formstack alternative search! Try Formester for custom forms, data collection, actionable insights and affordable prices so you can make the most out of your form building journey. Sign-up for free, now!",
+      logo: 'https://formester.com/logo.png',
+      url: 'https://formester.com',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Delaware',
+        addressCountry: 'United States',
+      },
+      creator: {
+        '@type': 'Organization',
+        '@id': '#organization',
+        url: 'https://formester.com/',
+        name: 'Formester',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://formester.com/logo.png',
+        },
+      }
     }
   },
 }

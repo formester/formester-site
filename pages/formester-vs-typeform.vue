@@ -305,8 +305,8 @@ export default {
                 },
                 {
                     title: "Storage",
-                    formester: "Basic Plan: <span class=\"present\">$13/month</span>  & Minimum Storage: <span class=\"present\">1GB</span>.<span></br></span> Business Plan: <span class=\"present\">$49/month</span> & Minimum Storage: <span class=\"present\">50GB</span>",
-                    typeform: "Basic Plan: <span class=\"absent\">$25/month</span> & Minimum Storage: <span class=\"absent\">1GB</span>.<span></br></span> Business Plan: <span class=\"absent\">$83/month</span> & Minimum Storage: <span class=\"absent\">5GB</span>",
+                    formester: "Basic Plan: <span class=\"present\">$13/month</span>  & Maximum Storage: <span class=\"present\">1GB</span>.<span></br></span> Business Plan: <span class=\"present\">$49/month</span> & Maximum Storage: <span class=\"present\">50GB</span>",
+                    typeform: "Basic Plan: <span class=\"absent\">$25/month</span> & Maximum Storage: <span class=\"absent\">1GB</span>.<span></br></span> Business Plan: <span class=\"absent\">$83/month</span> & Maximum Storage: <span class=\"absent\">5GB</span>",
                 },
                 {
                     title: "Cloud Integrations with Zapier",
@@ -444,6 +444,32 @@ export default {
             ],
         };
     },
+    jsonld() {
+    return {
+      '@context': 'http://schema.org',
+      '@type': 'Corporation',
+      name: 'Typeform Alternative | Formester vs Typeform - Formester',
+      description:
+        "Powerful Alternative to Typeform. With custom forms, data collection, actionable insights and affordable prices, make the most out of what you pay for a form builder.",
+      logo: 'https://formester.com/logo.png',
+      url: 'https://formester.com',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Delaware',
+        addressCountry: 'United States',
+      },
+      creator: {
+        '@type': 'Organization',
+        '@id': '#organization',
+        url: 'https://formester.com/',
+        name: 'Formester',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://formester.com/logo.png',
+        },
+      }
+    }
+  },
 }
 </script>
 

@@ -13,7 +13,22 @@ metaTitle: How Branded Surveys Can Unlock Your Brand's Potential And Skyrocket
 metaDescription: "Top 6 Reasons Why You Should Conduct Brand Surveys in 2023 |
   Skyrocket your business by unlocking your brand's potential with a branded
   survey "
-keywords: brand surveys, branded surveys, brand surveys 2023, branded surveys
+keywords: brand surveys, How are surveys important in marketing?, What is the
+  purpose of a survey?, branded surveys, What is the objective of brand survey?,
+  What is a brand impact survey?, What is the purpose of brand review?, How do i
+  survey my brand awareness, How do i survey my brand awareness, brand identity
+  survey questions, brand survey examples, brand perception survey examples,
+  brand image survey questions examples, brand perception survey questionnaire,
+  brand perception survey template, What are good survey questions for brands?,
+  How do you survey a brand image?, How to do a brand awareness survey?, How do
+  you survey a product?, understand how your brand is perceived, brand survey
+  facebook, brand perception survey questionnaire, brand survey questions for
+  customers brand survey, brand survey companies, brand image survey questions,
+  brand survey reviews employee, brand survey questions, Your Guide to Brand
+  Perception Surveys in 2023, What is a brand survey?, How do I survey my
+  brand?, What is an example of a brand survey?, What is good about branded
+  surveys?, What is the purpose of a brand survey?, Does branded surveys really
+  work?, How does branded surveys work?, brand surveys 2023, branded surveys
   2023, market research solutions help you tailor your brand identity,
   understand your target audience, use branded surveys to capture customer
   feedback, improve your business, take advantage of powerful survey tools,
@@ -27,6 +42,7 @@ keywords: brand surveys, branded surveys, brand surveys 2023, branded surveys
   surveys and brand potential, branded surveys for brand potential, conduct
   brand surveys in 2023, conduct branded surveys in 2023
 author: Navni Dighe
+authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-04-19T13:17:17.091Z
 coverImg: /img/how-branded-surveys-can-help-you-unlock-your-brand’s-potential.png
 coverImgAlt: How Branded Surveys Can Help You Unlock Your Brand’s Potential

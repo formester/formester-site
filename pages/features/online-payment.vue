@@ -38,6 +38,7 @@
         />
       </div>
     </div>
+    <ThreeStepsCreateForm />
     <Testimonial 
       :testimonials="randomTestimonials"
     />
@@ -87,7 +88,43 @@ export default {
     }
   },
   jsonld() {
-    return {}
+    return {
+      '@context': 'http://schema.org',
+      '@graph': [
+        {
+          '@type': 'Corporation',
+          '@id': 'https://acornglobus.com',
+          name: 'Online Payment Form | Secure Online Payment - Formester',
+          description:
+            "Experience secure online payments with Formester's user-friendly online payment form. Start accepting payments today. Try now!",
+          logo: 'https://formester.com/logo.png',
+          url: 'https://formester.com',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Delaware',
+            addressCountry: 'United States',
+          },
+        },
+        {
+          '@type': 'BreadcrumbList',
+          '@id': 'https://acornglobus.com',
+          itemListElement: [
+          {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Features',
+              item: 'https://formester.com/features',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Online Payment',
+              item: 'https://formester.com/features/online-payment/',
+            }
+          ],
+        },
+      ],
+    }
   },
   data() {
     return {

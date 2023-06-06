@@ -10,6 +10,7 @@ author: Mriganka Chandra
 createdAt: 2022-11-09T12:08:16.854Z
 coverImg: /img/top-eight-survey-question-to-ask__cover-image.png
 coverImgAlt: Cover image for the blog, "Top 8 Survey Questions to Ask"
+metaImages: [https://formester.com/img/top-eight-survey-question-to-ask__cover-image.png]
 featured: false
 published: true
 ---
