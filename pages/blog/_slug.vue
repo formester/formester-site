@@ -339,8 +339,8 @@ p {
 
 .nuxt-content {
   margin-top: 18px;
-  font-size: 18px;
-  line-height: 31px;
+  font-size: 17px;
+  line-height: 32px;
   letter-spacing: 0.4px;
   color: #0d0d0d;
 }
