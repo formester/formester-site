@@ -253,7 +253,7 @@ Create a new Google form including the fields as per your requirement, or select
 
   ![Screen capture showing: Create a new spreadsheet + Specify the name of the connected spreadsheet and Select existing spreadsheet buttons](/img/integrating-google-forms-google-sheets-3-.png "Create a new spreadsheet + Specify the name of the connected spreadsheet and Select existing spreadsheet buttons")
 
-   \
+  \
   **OR,**
 * Click the Select existing spreadsheet option to connect your form to an existing spreadsheet.
 
