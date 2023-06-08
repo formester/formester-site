@@ -239,13 +239,21 @@ Follow the below given simple, 2-step procedure to integrate your Google Form wi
 
 Create a new Google form including the fields as per your requirement, or select an existing form that you want to link to a Google sheet.
 
+![Screen capture showing: Create a new Google form or select an existing form options ](/img/integrating-google-forms-google-sheets.png "Step 1: Create a New Google Form or Select an Existing One")
+
 ### Step 2: Link your Form to a Spreadsheet
 
 * Once your form is ready, click on the **Responses** **Tab** in the form builder dashboard.
 * Next, click on the **Link to Sheets** (denoted by the icon of Google Sheets) button.
+
+  ![Screen capture showing: Responses Tab and Link to Sheets button](/img/integrating-google-forms-google-sheets-2-.png "Responses Tab and Link to Sheets button")
 * A popup window will appear asking you to choose either **Create a new spreadsheet** or **Select existing spreadsheet**.\
   Select the Create a new spreadsheet option to have a new and fresh spreadsheet, be created for registering your form details; \
-  You may also **specify the name of the connected spreadsheet** here; \
+  You may also **specify the name of the connected spreadsheet** here;
+
+  ![Screen capture showing: Create a new spreadsheet + Specify the name of the connected spreadsheet and Select existing spreadsheet buttons](/img/integrating-google-forms-google-sheets-3-.png "Create a new spreadsheet + Specify the name of the connected spreadsheet and Select existing spreadsheet buttons")
+
+   \
   **OR,**
 * Click the Select existing spreadsheet option to connect your form to an existing spreadsheet.
 
