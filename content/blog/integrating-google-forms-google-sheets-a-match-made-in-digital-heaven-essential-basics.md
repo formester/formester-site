@@ -216,7 +216,7 @@ Alternatively, you may also click on the **More Options** (the three vertical do
 * In Google Sheets, you can perform various operations on the collected data, such as **sorting, filtering, and data analysis** using formulas and functions. You can also create charts and reports based on the collected responses.
 * The linked Google Sheets document will be **updated in real-time** as new responses are submitted. You can collaborate with others by sharing the Google Sheets document and working together on analyzing and managing the data.
 
-Conversely, you may also 
+Conversely, you may also, 
 
 ### Link a Google Sheet to a Google Form
 
@@ -240,7 +240,7 @@ Here are some general tips and shortcuts that can be helpful when Linking Google
 
 ### 1. Stay Updated about new form responses
 
-You can remain updated about new submissions to your form, by selecting the **Get email notifications for new responses**, from the more options button in the **Responses** **Tab**.
+You can remain updated about new submissions to your form, by selecting the **Get email notifications for new responses**, from the **More Options button** in the **Responses** **Tab**.
 
 ### 2. Unlinking a Google Form from a Google Sheet
 
@@ -290,7 +290,7 @@ Responses received from a Google Form and recorded in a Google Sheet can be anal
 
 As formerly mentioned, both Google Forms and Google Sheets enable multiple users to work on them simultaneously, as collaborators.
 
-Moreover, seamless integration of the said platforms is possible with other Google productivity tools and third-party applications, to add, enhance and upgrade the functionalities.
+Moreover, integration of the said platforms is possible with other Google productivity tools and third-party applications, to add, enhance and upgrade the functionalities.
 
 ### 6. Access to Historical Data and Version Control
 
@@ -340,7 +340,7 @@ Google Forms is limited in its ability to provide [advanced question types](http
 
 Although quite a few third-party integrations are possible, the process isn't as easy and smooth to carry out. 
 
-### 4. Branding 
+### 4. Branding
 
 Google Forms has no option to provide [extensive branding and white-labeling options](https://formester.com/features/branding-kit/). Also, there is no way to remove Google's personal branding from the form.
 
