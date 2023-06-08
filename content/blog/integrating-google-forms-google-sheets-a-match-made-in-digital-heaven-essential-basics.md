@@ -1,7 +1,17 @@
 ---
 title: "Integrating Google Forms & Google Sheets: A Match Made in Digital Heaven
   + Essential Basics"
-description: abc
+description: Google Forms and Google Sheets are popular, powerful and dynamic
+  platforms in their own, unique ways, serving different goals and objectives.
+  However, they can also be integrated to work in collaboration, enabling
+  centralized gathering, storing and management of data, eventually automating
+  processes. This blog discusses a simple 2-step method to integrate Google
+  Forms with Google Sheets and vice-versa, and also the benefits of doing so.
+  Additionally, it also covers the essential fundamentals of both Google Forms
+  and Google Sheets including their main features and real-world use-cases.
+  Toward the end, to give a full-perspective and enable right-decision making
+  for users, we discuss the limitations of Google Forms and also suggest an
+  equally easy yet more efficient alternative.
 metaTitle: "Integrating Google Forms & Google Sheets: 2 Ways in 2 Simple Steps +
   Essential Basics"
 metaDescription: 2-Steps to Integrate Google Forms & Google Sheets and
@@ -230,7 +240,7 @@ Create a new Google Sheet as per your requirement, or select an existing sheet t
 #### Step 2: Link your Spreadsheet to a Form
 
 * Click on the **Tools** **button** on the **Main-menu** and select **Create a new form**.\
-  This will not only generate a new, blank form with fields corresponding to the column headers in the sheet;\
+  This will not only generate a new, blank form with fields that can be edited corresponding to the column headers in the sheet;\
   But also create a fresh Form Responses sheet in your workbook.
 
   > Note: This holds true, even if you're using an existing worksheet.
