@@ -265,8 +265,16 @@ Alternatively, you may also click on the **More Options** (the three vertical do
 ### After Linking
 
 * As responses are received, they will be **automatically populated** in the linked Google Sheets. To access the responses, open the Google Sheets document linked to your form.
+
+  ![Screen capture showing: Spreadsheet created as a result of linking a Google Form](/img/integrating-google-forms-google-sheets-4-.png "Spreadsheet created as a result of linking a Google Form")
 * In Google Sheets, you can perform various operations on the collected data, such as **sorting, filtering, and data analysis** using formulas and functions. You can also create charts and reports based on the collected responses.
 * The linked Google Sheets document will be **updated in real-time** as new responses are submitted. You can collaborate with others by sharing the Google Sheets document and working together on analyzing and managing the data.
+
+  ![Screen capture showing: Sample form with response](/img/integrating-google-forms-google-sheets-5-.png "Sample form with response")
+
+  ![Screen capture showing: Response gathered for the form](/img/integrating-google-forms-google-sheets-6-.png "Response gathered for the form")
+
+  ![Screen capture showing: Spreadsheet recording form responses](/img/integrating-google-forms-google-sheets-7-.png "Spreadsheet recording form responses")
 
 Conversely, you may also, 
 
