@@ -2,8 +2,11 @@
 title: "Integrating Google Forms & Google Sheets: A Match Made in Digital Heaven
   + Essential Basics"
 description: abc
-metaTitle: abc
-metaDescription: abc
+metaTitle: "Integrating Google Forms & Google Sheets: 2 Ways in 2 Simple Steps +
+  Essential Basics"
+metaDescription: 2-Steps to Integrate Google Forms & Google Sheets and
+  Vice-versa + Fundamentals of Google Forms & Google Sheets (Includes Main
+  Features & Real-World Use-Cases)
 keywords: abc
 author: Navni Dighe
 authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
