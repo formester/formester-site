@@ -284,11 +284,23 @@ Conversely, you may also, 
 
 Create a new Google Sheet as per your requirement, or select an existing sheet that you want to link to a Google Form.
 
+![Screen capture showing: Create a new Google Sheet and Select an existing sheet options](/img/integrating-google-forms-google-sheets-8-.png "Create a new Google Sheet and Select an existing sheet options")
+
 #### Step 2: Link your Spreadsheet to a Form
 
-* Click on the **Tools** **button** on the **Main-menu** and select **Create a new form**.\
-  This will not only generate a new, blank form with fields that can be edited corresponding to the column headers in the sheet;\
+* Click on the **Tools** **button** on the **Main-menu** and select **Create a new form**.
+
+  ![Screen capture showing: Tools button on the Main-menu and navigation to Create a new form button](/img/integrating-google-forms-google-sheets-9-.png "Create a new form button")
+
+  \
+  This will not only generate a new, blank form with fields that can be edited corresponding to the column headers in the sheet;
+
+  ![Screen capture showing: Blank form with editable fields, generated as a result of linking the spreadsheet to a form](/img/integrating-google-forms-google-sheets-10-.png "Generated Blank Form with editable fields")
+
+  \
   But also create a fresh Form Responses sheet in your workbook.
+
+  ![Screen capture showing: Fresh Form Responses Sheet generated in the Workbook](/img/integrating-google-forms-google-sheets-11-.png "Fresh Form Responses Sheet generated in the Workbook")
 
   > Note: This holds true, even if you're using an existing worksheet.
 
