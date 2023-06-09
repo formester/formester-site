@@ -91,13 +91,15 @@ Formester is a [no-code, intuitive, drag-and-drop form builder](https://formeste
 
   ![Screen Capture showing: Formester's Template Page](/img/10-alternatives-to-jotform_2.png "Formester's Template Page")
 
-#### In Comparison to Jotform 
+#### In Comparison to Jotform
+
+![Infographic showing: What Formester offers in comparison to Jotform:- * HTML form backend,  * Easy and quick embedment, * Seamless Third-party integrations, * Perfect mobile-first UX, * No branding invasiveness, * Live Chat Support](/img/in-comparison-to-jotform-formester-offers.png "What Formester offers in comparison to Jotform")
 
 In Comparison to Jotform, Formester offers:
 
 * HTML form backend 
 * Easy and quick embedment
-* Seamless Third-party integrations,
+* Seamless Third-party integrations
 * Perfect mobile-first UX
 * No branding invasiveness
 * Live Chat Support
@@ -122,7 +124,9 @@ The highlights are its advanced customization options and seamless integrations.
 * Payment Integrations
 * Language Translation
 
-#### In Comparison to Jotform 
+#### In Comparison to Jotform
+
+![Infographic showing: What Forms.App offers in comparison to Jotform:- * Easy administration, * Exceptional Analytics, * Custom Fields, * Very feasible for small businesses](/img/in-comparison-to-jotform-forms.app-offers.png "What Forms.App offers in comparison to Jotform")
 
 In Comparison to Jotform, Forms.App offers:
 
@@ -148,7 +152,9 @@ In Comparison to Jotform, Forms.App offers:
 * Scheduling
 * Analytics
 
-#### In Comparison to Jotform 
+#### In Comparison to Jotform
+
+![Infographic showing: What Paperform offers in comparison to Jotform:- * Better Visual Appeal, * Live Chat Support, * Google Pay Integration](/img/in-comparison-to-jotform-paperform-offers.png "What Paperform offers in comparison to Jotform")
 
 In Comparison to Jotform, Paperform offers:
 
@@ -178,7 +184,9 @@ And their web forms are no different.
 * Email Notifications
 * Offline Data Collection
 
-#### In Comparison to Jotform 
+#### In Comparison to Jotform
+
+![Infographic showing: What Zoho Forms offers in comparison to Jotform:- * HTML form embedding, * Easy form blocks, * Advanced Reporting, * Highly beneficial for businesses already using other Zoho products](/img/in-comparison-to-jotform-zoho-forms-offers.png "What Zoho Forms offers in comparison to Jotform")
 
 In Comparison to Jotform, Zoho Forms offers:
 
@@ -204,7 +212,9 @@ In Comparison to Jotform, Zoho Forms offers:
 * Electronic Signatures
 * Form Importer
 
-#### In Comparison to Jotform 
+#### In Comparison to Jotform
+
+![Infographic showing: What Formstack offers in comparison to Jotform:- * Flexible User Permissions, * Field Bottlenecks, * Partial Submissions, * Submissions via email](/img/in-comparison-to-jotform-formstack-offers.png "What Formstack offers in comparison to Jotform")
 
 In Comparison to Jotform, Formstack offers:
 
@@ -235,7 +245,9 @@ As a part of the Google Editor's Suite, it offers seamless integrations with all
 * Form Customization
 * Adding Media 
 
-#### In Comparison to Jotform 
+#### In Comparison to Jotform
+
+![Infographic showing: What Google Forms offers in comparison to Jotform:- * In Comparison to Jotform, Google Forms offers: * More Simplistic and Intuitive, * Free with a basic Google Account, * Unlimited Forms, * More Email Submissions](/img/in-comparison-to-jotform-formstack-offers-1.png "What Google Forms offers in comparison to Jotform")
 
 * In Comparison to Jotform, Google Forms offers:
 * More Simplistic and Intuitive
@@ -263,7 +275,9 @@ They are also primarily a compatible plug-in for WordPress.
 * Instant Notifications
 * Spam Protection
 
-### In Comparison to Jotform 
+### In Comparison to Jotform
+
+![Infographic showing: What WPForms offers in comparison to Jotform:- * Easier to Use, * Better Customer Support, * Better Offline Capability, * Embedded Forms](/img/in-comparison-to-jotform-wpforms-offers.png "What WPForms offers in comparison to Jotform")
 
 In Comparison to Jotform, WPForms offers:
 
@@ -292,7 +306,9 @@ Their highlight is their Security features.
 * Import/Export
 * Email Notifications
 
-#### In Comparison to Jotform 
+#### In Comparison to Jotform
+
+![Infographic showing: What Formsite offers in comparison to Jotform:- * Free Pro trial, * Two-factor authentication, * 508 compliant, * Create Word docs from results, * Workflow built-in](/img/in-comparison-to-jotform-formsite-offers.png "What Formsite offers in comparison to Jotform")
 
 In Comparison to Jotform, Formsite offers:
 
@@ -321,7 +337,9 @@ Their target audience is the Product and Engineering Teams.
 * Extensible developer API
 * Customizable designs
 
-#### In Comparison to Jotform 
+#### In Comparison to Jotform
+
+![Infographic showing: What Feathery offers in comparison to Jotform:- * More Submissions and Questions per step, * Comprehensive APIs for Developer Embed SDK, * More Third-Party Integrations](/img/in-comparison-to-jotform-feathery-offers.png "What Feathery offers in comparison to Jotform")
 
 In Comparison to Jotform, Feathery offers:
 
@@ -348,11 +366,13 @@ That said, they have extensive survey templates along with an extensive blog res
 * Case Management
 * Conversational surveys
 
-#### In Comparison to Jotform 
+#### In Comparison to Jotform
+
+![Infographic showing: What SurveySparrow offers in comparison to Jotform:- * Provides a finer survey experience, * Customizable Email surveys, * Reliable customer support, * Detailed reports](/img/in-comparison-to-jotform-survey-sparrow-offers.png "What SurveySparrow offers in comparison to Jotform")
 
 In Comparison to Jotform, SurveySparrow offers:
 
-* Provide a finer survey experience
+* Provides a finer survey experience
 * Customizable Email surveys
 * Reliable customer support
 * Detailed reports
