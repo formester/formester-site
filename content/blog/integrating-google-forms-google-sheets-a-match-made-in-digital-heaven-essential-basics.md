@@ -83,6 +83,8 @@ Google Forms is an [intuitive and user-friendly (much like every other Google Pr
 
 ### Key Features of Google Forms
 
+![Infographic Showing: Key Features of Google Forms:- 1. Easy & Intuitive Form Designing 2. Multiple Formats 3. Media & File Uploads 4. Team-Collaboration 5. Multiple Featuring Options 6. Range of Functionalities 7. Real-time Analytics 8. Multi-Device Compatibility 9. Google Suite Integration 10. Add-ons and Extensions](/img/key-features-of-google-forms.png "Key Features of Google Forms")
+
 The key features that Google Forms offers are as below:
 
 #### 1. Easy & Intuitive Form Designing
@@ -131,6 +133,8 @@ Google Forms supports various add-ons and extensions that upgrade its functional
 
 ### Real-World Use-Cases of Google Forms
 
+![Infographic Showing: Real-World Use-Cases of Google Forms:- 1. Medium of Contact 2. Surveys 3. Quizzes 4. Business Process Forms](/img/real-world-use-cases-of-google-forms.png "Real-World Use-Cases of Google Forms")
+
 #### 1. Medium of Contact
 
 Google Forms can be featured by any business, institute or organization, on their website to act as a means of receiving communication from their users, customers and potential leads.
@@ -166,6 +170,8 @@ The email addresses received as part of responses can be used to build an emaili
 Google Sheets, again offered as a part of the G-Suite, is a [powerful web-based spreadsheet application](https://www.google.com/sheets/about/) allowing users to create, edit, analyze and represent data in a logical manner.
 
 ### Key Features of Google Sheets
+
+![Infographic Showing: Key Features of Google Sheets:- 1. Importing Spreadsheets from other software 2. Cell-Formatting 3. Formulas and Functions 4. Team-Collaboration 5. Data Organization and Presentation 6. Data Validation 7. Add-ons and Extensions 8. Apps Script Integration 9. Data Protection and Sharing 10. Access to Previous Versions](/img/key-features-of-google-sheets.png "Key Features of Google Sheets")
 
 The key features that Google Sheets offers, are as below:
 
@@ -210,6 +216,8 @@ Google Sheets lets its users control and manage the security by allowing them to
 Google Sheets also lets its users have access to the version history to see previous versions of the spreadsheet.
 
 ### Real-World Use-Cases of Google Sheets
+
+![Infographic Showing: Real-World Use-Cases of Google Sheets:- 1. Project Management 2. Sales and CRM Tracking 3. Financial-Data Management 4. Inventory Supervision](/img/real-world-use-cases-of-google-sheets.png "Real-World Use-Cases of Google Sheets")
 
 #### 1. Project Management
 
@@ -336,11 +344,13 @@ Utilize the **QUERY** or **FILTER** functions in Google Sheets to selectively di
 
 ### 4. Form Publisher Add-On
 
-The **Form Publisher** add-on for Google Forms, allows users to automatically generate Google Sheets, Docs, or PDFs from form responses. 
+The **Form Publisher** add-on for Google Forms, [allows users to automatically generate Google Sheets, Docs, or PDFs](https://form-publisher.com/) from form responses. 
 
 Access additional tips and guidance on effectively connecting and utilizing Google Forms and Google Sheets, through the [official documentation and support resources available from Google](https://support.google.com/docs/answer/2917686?hl=en).
 
 ## Benefits of Linking Google Forms and Google Sheets
+
+![Infographic Showing: Benefits of Linking Google Forms and Google Sheets:- 1. Automating the Data Collection Process 2. Centralized Data Management 3. Real-Time Updation 4. Data Analysis and Visualization 5. Collaboration & Integration 6. Access to Historical Data and Version Control](/img/benefits-of-linking-google-forms-and-google-sheets.png "Benefits of Linking Google Forms and Google Sheets")
 
 ### 1. Automating the Data Collection Process
 
@@ -370,6 +380,8 @@ By linking Google Forms and Google Sheets, a historical record of form responses
 
 ## Real-World Use-Cases where Google Forms and Google Sheets are used in Collaboration
 
+![Infographic Showing: Real-World Use-Cases where Google Forms and Google Sheets are used in Collaboration:- 1. Academic Data 2. Order Requests 3. Surveys 4. Registrations 5. Lead Generation](/img/real-world-use-cases-where-google-forms-and-google-sheets-are-used-in-collaboration.png "Real-World Use-Cases where Google Forms and Google Sheets are used in Collaboration")
+
 Here are some common real-world use cases, where Google Forms and Google Sheets are used collaboratively:
 
 ### 1. Academic Data
@@ -397,6 +409,8 @@ However before making any crucial decisions about which software to use, it is e
 That said, let’s discuss a few..
 
 ## Limitations of Google Forms
+
+![Infographic Showing: Limitations of Google Forms:- 1. Design Customization 2. Complex Question Types 3. Difficult Third-party Integrations 4. Branding 5. Basic Analytics 6. No Way To Send Automatic Responses](/img/limitations-of-google-forms.png "Limitations of Google Forms")
 
 As incredible as Google Forms are, they don't come without a few limitations, such as:
 
