@@ -24,7 +24,7 @@
         </div>
         <div class="col-lg-6 d-flex align-items-center justify-content-center">
           <video loop muted autoplay playsinline style="max-width: 98%">
-            <source src="/videos/hero.webm" type="video/webm" />
+            <source src="/videos/hero-animation.mp4" type="video/webm" />
           </video>
         </div>
       </div>
