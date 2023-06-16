@@ -39,7 +39,7 @@ createdAt: 2023-06-16T15:32:17.326Z
 coverImg: /img/form-builders-faceoff_-jotform-vs-typeform-in-2023.png
 coverImgAlt: "Form Builders Faceoff: JotForm vs Typeform in 2023"
 featured: false
-published: false
+published: true
 ---
 When it comes to the realm of form-builders, it is inevitable to navigate without coming across [Jotform](https://www.jotform.com/) & [Typeform](https://www.typeform.com/?_gl=1*1gztno3*_up*MQ..&gclid=CjwKCAjwkLCkBhA9EiwAka9QRhAAzSc2tR9btbwQpuDSmYMZsq3a3rfokh7XBa4u8TdGAlSZ8Y63lxoCZgEQAvD_BwE&gclsrc=aw.ds&tf_campaign=asia_me-brand-english-combined_18008307797&tf_source=google&tf_medium=paid&tf_content=146466052279_651953877110&tf_term=typeform&attribution_user_id=401613a4-9ed7-49c4-b3e9-8d5fd66c761b).
 
