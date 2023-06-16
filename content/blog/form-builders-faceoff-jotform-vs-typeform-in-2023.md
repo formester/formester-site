@@ -1,8 +1,16 @@
 ---
 title: "Form Builders Faceoff: JotForm vs Typeform in 2023"
-description: abc
-metaTitle: abc
-metaDescription: abc
+description: Jotform and Typeform are one of the most popular and established
+  players of the form builder industry. However, when it comes to picking one of
+  the two, users usually end up in a fix. In this comprehensive comparison, we
+  explore the similarities and differences between JotForm and Typeform, and how
+  to choose the right one in 2023. Discover and assess the unique features,
+  customization options, user experiences and more, offered by each platform to
+  make an informed decision for your online forms.
+metaTitle: Jotform vs Typeform - Making the Right Choice in 2023
+metaDescription: Jotform, Typeform and the Ultimate Comparison to make the Right
+  Choice in 2023 - Includes Similarities, Differences, Right Place for each &
+  more!
 keywords: abc
 author: Navni Dighe
 authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
