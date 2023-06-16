@@ -295,17 +295,17 @@ Consider factors such as 
 
 Taking advantage of free trials or exploring demo versions of both platforms can also help in making an informed decision based on personal experience and preferences.
 
-Personal Suggestion
-
-If you want to feature a visually impressive form, that's going to be the first point of contact or one of the first visual elements that users will encounter on your website; then Typeform is your go-to;
-
-Typeform will captivate your users from the very first interaction!
-
-For eg.: Contact Forms, Pop-over/Pop-up Forms, Registration Forms, etc.
-
-On the other hand, if you're conducting a survey, or gathering data for any purpose, which requires heavy-duty, feature-rich, complex forms, then Jotform is what you need!
-
-For eg.: Website Usability Survey, Academic Quizzes, etc.
+> ### Personal Suggestion
+>
+> If you want to feature a visually impressive form, that's going to be the first point of contact or one of the first visual elements that users will encounter on your website; then Typeform is your go-to;
+>
+> Typeform will captivate your users from the very first interaction!
+>
+> For eg.: Contact Forms, Pop-over/Pop-up Forms, Registration Forms, etc.
+>
+> On the other hand, if you're conducting a survey, or gathering data for any purpose, which requires heavy-duty, feature-rich, complex forms, then Jotform is what you need!
+>
+> For eg.: Website Usability Survey, Academic Quizzes, etc.
 
 While JotForm and Typeform are popular choices for form creation, there's another player in the game that deserves your attention: Formester. 
 
