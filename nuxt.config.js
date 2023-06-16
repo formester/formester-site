@@ -47,7 +47,7 @@ export default {
         async: true,
       },
       {
-        src: '/js/tawk.js',
+        src: '/js/crisp.js',
         defer: true,
         async: true,
       },
