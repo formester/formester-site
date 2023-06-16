@@ -47,6 +47,8 @@ These two platforms have established their status as influential players in the 
 
 It's like they're the celebrities of the web-form world;
 
+![Funny gif showing how popular Jotform & Typeform are, in the world of form-builders! ](/img/jotform-vs-typeform_gif.gif "How popular Jotform & Typeform are, in the world of form-builders! ")
+
 Except they empower you to create impactful and meaningful web forms, instead of doling out autographs!
 
 Undoubtedly, both Jotform and Typeform are powerful form-builders, but when it comes to choosing one of them, users are usually in a spin!
@@ -288,7 +290,7 @@ Moreover, collaboration features are available exclusively in the upper-tier pla
 
 ### 23. Form Templates
 
-**Jotform:** Jotform offers a vast library of customizable form templates across various categories.
+**Jotform:** Jotform offers a vast library of over 10K customizable form templates across various categories.
 
 **Typeform:** Typeform provides a collection of stylish and modern form templates that can be customized to fit different purposes.
 
