@@ -1,6 +1,5 @@
 ---
-title: "Integrating Google Forms & Google Sheets: A Match Made in Digital Heaven
-  + Essential Basics"
+title: Integrating Google Forms & Google Sheets + Essential Basics
 description: Google Forms and Google Sheets are popular, powerful and dynamic
   platforms in their own, unique ways, serving different goals and objectives.
   However, they can also be integrated to work in collaboration, enabling
@@ -64,7 +63,7 @@ And when it comes to anything related to the web, it's nearly impossible to avoi
 
 And when these two meet, processes automate, and the tech industry calls it an automation match!
 
-Google offers [several productivity tools as part of its Editor's Suite](https://workspace.google.com/intl/en_in/lp/business/?utm_source=google&utm_medium=cpc&utm_campaign=1605214-Workspace-APAC-IN-en-BKWS-EXA-HV&utm_content=text-ad-none-none-DEV_c-CRE_608344336739-ADGP_Hybrid%20%7C%20BKWS%20-%20EXA%20%7C%20Txt_G%20Suite_1-KWID_43700071931903942-kwd-36417445044&userloc_9062142-network_g&utm_term=KW_google%20suite&gad=1&gclid=CjwKCAjw1YCkBhAOEiwA5aN4AbllmpCoqIWd2z1eldacGxBhHbhYFXy9bGvYI5gQrI1QtVVd-4B-bhoCj9sQAvD_BwE&gclsrc=aw.ds), formerly known as the G-Suite, and now as **Google Workspace**;
+[Google offers several productivity tools](https://workspace.google.com/intl/en_in/lp/business/?utm_source=google&utm_medium=cpc&utm_campaign=1605214-Workspace-APAC-IN-en-BKWS-EXA-HV&utm_content=text-ad-none-none-DEV_c-CRE_608344336739-ADGP_Hybrid%20%7C%20BKWS%20-%20EXA%20%7C%20Txt_G%20Suite_1-KWID_43700071931903942-kwd-36417445044&userloc_9062142-network_g&utm_term=KW_google%20suite&gad=1&gclid=CjwKCAjw1YCkBhAOEiwA5aN4AbllmpCoqIWd2z1eldacGxBhHbhYFXy9bGvYI5gQrI1QtVVd-4B-bhoCj9sQAvD_BwE&gclsrc=aw.ds) as part of its Editor's Suite, formerly known as the G-Suite, and now as **Google Workspace**;
 
 Google Forms and Google Sheets are the two essential tools of the same.
 
