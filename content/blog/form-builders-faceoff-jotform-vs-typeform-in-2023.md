@@ -333,9 +333,13 @@ Taking advantage of free trials or exploring demo versions of both platforms can
 >
 > Typeform will captivate your users from the very first interaction!
 >
+> ![Screenshot showing Typeform's Home-Page](/img/jotform-vs-typeform-2.png "Typeform's Home-Page")
+>
 > For eg.: Contact Forms, Pop-over/Pop-up Forms, [Registration Forms](https://formester.com/blog/registration-forms-101-definition-types-use-cases-more-how-to-create-free-template/), etc.
 >
 > On the other hand, if you're conducting a survey, or gathering data for any purpose, which requires heavy-duty, feature-rich, complex forms, then Jotform is what you need!
+>
+> ![Screenshot showing Jotform's Home-Page](/img/jotform-vs-typeform_1.png "Jotform's Home-Page")
 >
 > For eg.: [Website Usability Survey](https://formester.com/blog/7-types-of-website-usability-survey-questions-to-ask-in-2023/), [Academic Quizzes](https://formester.com/blog/how-to-add-a-timer-to-your-google-quiz-includes-latest-alternative-works-without-add-ons-2023/), etc.
 
@@ -346,6 +350,8 @@ While JotForm and Typeform are popular choices for form creation, there's anothe
 With Formester, you get:
 
 Intuitive Form Building: Effortlessly [create stunning forms with a drag-and-drop interface](https://formester.com/) or choose from a [range of customizable templates](https://formester.com/templates/).
+
+![Screenshot showing Formester's Home-Page](/img/jotform-vs-typeform-3.png "Formester's Home-Page")
 
 Advanced Feature Set: Work with powerful features like **conditional logic, payment integrations, spam protection, digital signatures, file uploads**, and more to [build dynamic, interactive and intelligent forms](https://formester.com/features/).
 
