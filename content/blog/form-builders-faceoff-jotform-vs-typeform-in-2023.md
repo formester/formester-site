@@ -303,9 +303,11 @@ Moreover, collaboration features are available exclusively in the upper-tier pla
 
 ### 25. Pricing
 
-**Jotform:** Jotform's tiered pricing structure with plans: Free, Bronze, Silver, Gold, and Enterprise.
+**Jotform:** Jotform's tiered pricing structure with plans: Free, Bronze, Silver, Gold, and Enterprise.\
+C﻿lick here for [Jotform's detailed Pricing Structure](https://www.jotform.com/pricing/).
 
-**Typeform:** Typeform's tiered pricing structure with different plans: Free, Basic, Plus, and Business.
+**Typeform:** Typeform's tiered pricing structure with different plans: Free, Basic, Plus, and Business.\
+C﻿lick here for [Typeform's detailed Pricing Structure](https://www.typeform.com/pricing/?attribution_user_id=401613a4-9ed7-49c4-b3e9-8d5fd66c761b).
 
 ### Main Difference
 
