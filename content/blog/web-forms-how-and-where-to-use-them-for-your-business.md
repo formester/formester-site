@@ -29,8 +29,6 @@ metaImages:
   - https://formester.com/img/conversion-rates-as-a-result-of-using-web-forms-1-.png
   - https://formester.com/img/untitled-design-1-.png
 ---
-![Web Forms: How And Where to Use Them For Your Business](/img/web-forms-lead-generation-101.png "Web Forms: How And Where to Use Them For Your Business")
-
 In today’s era of technology, digitization & the internet, rapid & immense industrial growth is no longer a distant dream for businesses. With the emergence of more & more, unique AI driven solutions, like [ChatGPT](https://openai.com/blog/chatgpt), [OpenAI Codex](https://openai.com/blog/openai-codex), etc., we are at the threshold of a disruption to the conventional & long-established business styles.
 
 Does that mean [mass lay-offs](https://news.crunchbase.com/startups/tech-layoffs/)? Well, that’s a different subject of discussion.
@@ -69,6 +67,11 @@ As the information entered by the user directly gets stored on the server, the e
 With [CMS & SAP systems](https://sapinsider.org/topic/sap-application-development-integration/sap-cms/) in place, submitted forms find secured storage, sharing & management.
 
 Needless to say, they **save the time, effort and resources of the organization**.
+
+C﻿heck this out for a video-based tutorial:
+
+\
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g9tCkPQG2fc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## What Are The 6 Important Places Where Your Business Should Be Using Web Forms?
 
