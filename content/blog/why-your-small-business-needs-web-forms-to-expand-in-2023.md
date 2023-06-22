@@ -7,8 +7,8 @@ description: Unlock the growth potential of your small business with the power
   journey with valuable insights in this dedicated blog for small business
   owners.
 metaTitle: Scaling Small Businesses in 2023 - Web Forms & Digital Tools
-metaDescription: "Supercharge small business growth with web forms: Digitization
-  tool to drive success and expansion in 2023"
+metaDescription: "Supercharge Small Business Growth with Web Forms: Digitization
+  tool to drive success and expansion in 2023!"
 keywords: "grow your small business, web forms, small business web forms, web
   form software for small business, grow your small business using web forms,
   web forms digitization, no code form builder, drag and drop form builder,
