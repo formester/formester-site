@@ -8,8 +8,7 @@ description: Branded Surveys are the newest and coolest ways to uncover branding
   and there, to help you create the perfect survey! They are easy and
   affordable; and at Formester, we help you make them fun and interesting, as
   well!
-metaTitle: How Branded Surveys Can Unlock Your Brand's Potential And Skyrocket
-  Your Business
+metaTitle: "Branded Surveys (2023): Unlock Your Brand's Potential"
 metaDescription: "Top 6 Reasons Why You Should Conduct Brand Surveys in 2023 |
   Skyrocket your business by unlocking your brand's potential with a branded
   survey "
