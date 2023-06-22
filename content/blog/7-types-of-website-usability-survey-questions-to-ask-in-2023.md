@@ -1,14 +1,13 @@
 ---
 title: 7 Types of Website Usability Survey Questions to Ask in 2023
-description: What's new about creating surveys? A lot! This blog includes 70
-  plus questions, following the trends of 2023, to help you create a powerful
-  survey and gather actionable insights into your website's user experience.
-  Make informed decisions and let Formester deliver you the best-in-class survey
-  forms, so you can deliver the best-in-class website user experience! P.S.,
-  some interesting survey design tips included, as well!
-metaTitle: 7 Types of Website Usability Survey Questions to Ask in 2023
-metaDescription: 70+ Website Usability Survey Questions updated for 2023 plus
-  survey design tips to serve your survey needs right!
+description: Uncover the latest in survey creation with our blog. Explore 70+
+  questions for 2023 to gather actionable insights into user experience.
+  Leverage Formester's top-notch survey forms for exceptional results. Plus, get
+  valuable survey design tips. Elevate your website experience today!
+metaTitle: "Boost UX: 7 Types of Website Usability Survey Questions "
+metaDescription: "Optimize User Experience: 70+ Website Usability Survey
+  Questions for 2023 + Design Tips for Effective Surveys - Unlock Website
+  Potential"
 keywords: webforms, website feedback form, website feedback questions, What are
   5 good survey questions?, What is website feedback tools?, What are 5 methods
   of obtaining feedback from customers?, What are the 5 steps in providing
