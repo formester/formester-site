@@ -1,21 +1,14 @@
 ---
 title: "How to Add a Timer to Your Google Quiz in 4 Simple Steps + Free
   Alternative: Works Without Add-ons (2023)"
-description: Google Forms is amongst the most popular choices for creating web
-  forms and online quizzes. Although it is a powerful software, there is no
-  in-built provision for some advanced features such as setting up a timer to
-  limit the form accessibility duration. To overcome this barrier, Google Forms
-  collaborates with several add-ons provided by third-party software platforms.
-  This blog discusses how you can setup a timer in your Google form or quiz,
-  using one such add-on, and that is Form Timer, with the help of several
-  pictorial representations for ease of understanding. In the end, it also
-  discusses a powerful alternative to Google Forms which has an organic
-  provision for timer settings, eliminating the need for add-ons and making your
-  form-building journey easy, fun and efficient!
+description: Discover how to add a timer to your Google Forms and quizzes. Learn
+  about the Form Timer add-on and its step-by-step setup process with visual
+  aids. Explore an alternative form-building solution that offers built-in timer
+  functionality for a seamless experience. Enhance your form creation journey
+  with ease, efficiency, and improved user engagement.
 metaTitle: Time your Google Quiz + Free Alternative (No Add on)
 metaDescription: Add a Timer to Your Google Quiz in 4 Simple Steps | With
-  Pictorial Depictions | Discusses Latest Free Alternative - Works Without
-  Add-ons (2023)
+  Pictorial Depictions + Latest Free Alternative - Works Without Add-ons (2023)
 keywords: How to set time limits in Google Forms,  google form start and end
   time,  google form timer auto submit, google form quiz timer app download,
   google form timer, best timer for google form, Can you put a timer on Google
