@@ -8,8 +8,7 @@ description: "As employee ideas, perceptions and attitudes toward work and
   encompassing its what, why and how! It also includes detailed information
   about the key metrics to track as well as 25 sample questions and a free
   customizable template.  "
-metaTitle: "Employee Engagement Surveys: The Complete Guide to the What, Why and
-  How! (Includes 25 Sample Questions + Free Template)"
+metaTitle: "Employee Engagement Surveys: 25 Questions + Free Template "
 metaDescription: "Employee Engagement Survey Guide: What, Why and How! | 25
   Sample Questions | Free Customizable Template"
 keywords: Employee Engagement Survey, Employee Engagement Surveys, Employee
@@ -35,9 +34,11 @@ authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-05-19T17:54:18.910Z
 coverImg: /img/employee-engagement-surveys_-the-complete-guide-to-the-what-why-and-how-.png
 coverImgAlt: "Employee Engagement Surveys: The Complete Guide to the What, Why and How! "
-metaImages: [https://formester.com/img/employee-engagement-surveys-the-complete-guide-to-the-what-why-and-how_-meme.png, https://formester.com/img/employee-engagement-surveys-the-complete-guide-to-the-what-why-and-how_-meme-1-.png]
 featured: false
 published: true
+metaImages:
+  - https://formester.com/img/employee-engagement-surveys-the-complete-guide-to-the-what-why-and-how_-meme.png
+  - https://formester.com/img/employee-engagement-surveys-the-complete-guide-to-the-what-why-and-how_-meme-1-.png
 ---
 The conventional definitions of the terms, Work and Work-Life Balance, have changed drastically over the past couple of years. 
 
