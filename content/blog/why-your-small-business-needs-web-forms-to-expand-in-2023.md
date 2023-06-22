@@ -8,8 +8,7 @@ description: The contemporary era of digitization and AI has opened doors to
   business owners out there, with big ideas. It discusses one such digitization
   tool, i.e., Online Web Forms and how featuring them can positively affect your
   business in terms of various aspects.
-metaTitle: Web Forms to Expand Your Small Business | Top Digitization Tools to
-  use in 2023 | Best Form Builder
+metaTitle: Scaling Small Businesses in 2023 - Web Forms & Digital Tools
 metaDescription: How to grow your small business using web forms | Web forms as
   a digitization tool | Small Business Growth 2023 Hack
 keywords: "grow your small business, web forms, small business web forms, web
@@ -24,13 +23,12 @@ authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-05-03T17:13:15.050Z
 coverImg: /img/how_to_expand_your_small_business_using_web_forms_in_2023.png
 coverImgAlt: How to Expand Your Small Business using Web Forms in 2023
-metaImages: [
-    https://formester.com/img/2_why-your-small-business-needs-web-forms.png,
-    https://formester.com/img/3_why-your-small-business-needs-web-forms.png,
-    https://formester.com/img/1_why-your-small-business-needs-web-forms.png
-  ]  
 featured: false
 published: true
+metaImages:
+  - https://formester.com/img/2_why-your-small-business-needs-web-forms.png
+  - https://formester.com/img/3_why-your-small-business-needs-web-forms.png
+  - https://formester.com/img/1_why-your-small-business-needs-web-forms.png
 ---
 In the contemporary day and age, thanks to digitization, artificial intelligence, and the Internet as a whole;
 
