@@ -9,8 +9,7 @@ description: "Online Registration Forms are the primary source of gathering user
   real- world use-cases. Towards the end, it also discusses a simple yet
   detailed 5 - step process on how to create a basic registration form and a few
   tips on how to make it effective and response-oriented.  "
-metaTitle: "Registration Forms 101: Definition, Types, Use-Cases & More + How to
-  Create & Free Template"
+metaTitle: "Registration Forms 101: Use-Cases, Free Template & More"
 metaDescription: Online Registration Forms - Definition, Types, Use-Cases | How
   to Create a Simple Registration Form + Free Template
 keywords: What is registration of a form?, How can I create a free registration
