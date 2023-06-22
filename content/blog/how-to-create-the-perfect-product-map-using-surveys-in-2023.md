@@ -1,14 +1,13 @@
 ---
 title: How to Create the Perfect Product Map Using Surveys in 2023
-description: This blog is only guide you'll need in 2023 to develop the perfect
-  Product Map. Whether you want to create a new product or improve an existing
-  one, a Product Map is the key ingredient. Gain the attention of potential
-  investors, find competitor brands' loopholes, understand customer requirements
-  and learn about the key metrics to track! Also includes, 30+ sample questions.
+description: Unlock your brand's potential with a comprehensive guide to Product
+  Map development Survey in 2023. Create or enhance products, attract investors,
+  and uncover competitor insights. Discover key metrics, customer requirements,
+  and 30+ sample questions to fuel your success. Maximize your impact with a
+  strategic Product Map.
 metaTitle: "Product Map Survey Questions 2023: Up Your Product Game"
-metaDescription: 30+ Survey Questions to develop a successful Product Map | Gain
-  the attention of Investors | Create successful products and Improve Existing
-  ones
+metaDescription: "Product Map Success: 30+ Survey Questions to Attract Investors
+  and Enhance Existing & New Products | Hit the Product mark!"
 keywords: survey questions, product roadmap survey questions, product map survey
   questions, product roadmap, successful product roadmap, what is a product map,
   what is a product roadmap, how to create a product roadmap, how to create a
