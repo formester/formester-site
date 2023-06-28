@@ -55,6 +55,8 @@ Undoubtedly, both Jotform and Typeform are powerful form-builders, but when it c
 
 ## Why Are People Perplexed When Choosing Between JotForm & Typeform?
 
+![Infographic showing: Top 4 Reasons why People Can’t Decide between Jotform & Typeform: 1. Akin Reputation 2. Feature Parity 3. User Priorities 4. Brand Recognition and Marketing](/img/top-4-reasons-why-people-can’t-decide-between-jotform-typeform.png "Top 4 Reasons why People Can’t Decide between Jotform & Typeform")
+
 A few key reasons one may experience confusion when choosing between JotForm and Typeform are as follows:
 
 ### 1. Akin Reputation
@@ -85,6 +87,8 @@ With that in mind, it's time to delve into a comprehensive exploration, 
 Let's dive into the comparison between JotForm and Typeform to uncover their similarities, differences, and the unique benefits they bring to the table. By exploring both the platforms in such a manner, you'll be equipped with the knowledge to choose the form builder that best suits your requirements and helps you achieve your goals effectively.
 
 ## Similarities between JotForm and Typeform
+
+![Infographic showing: Similarities between JotForm and Typeform: 1. Design Approach 2. Multiple Form Field Types 3. Multi-Device Compatibility 4. Robust Analytics 5. Form Templates 6. Team-Sharing 7. Integrations](/img/similarities-between-jotform-and-typeform.png "Similarities between JotForm and Typeform")
 
 Let's start by discussing the similarities as that will allow us to identify the core functionalities and features that both JotForm and Typeform offer. This will provide a baseline for understanding the standard capabilities of both the form builders and help establish a fair and balanced ground for evaluation. 
 
@@ -121,6 +125,8 @@ Both JotForm and Typeform offer integrations with popular third-party tools, pla
 While it is simple to identify the similarities between two competing brands within the same product category, making a well-informed decision requires a thorough understanding of their unique differences.
 
 So let's discuss in detail, the differences between Jotform and Typeform, taking into account, each of the features, from basic to advanced:
+
+![Infographic showing: Tabular Comparison of Jotform & Typeform along the following aspects: 1. Form Design Approach: Jotform - Advanced design options, Typeform - Conversational design 2. Form Layout: Jotform - Classic & card layouts, Typeform - Card layouts 3. Form Themes: Jotform - Extensive customization, Typeform - Limited customization 4. HTML Form Endpoints: Jotform - Powerful integration, Typeform - Limited integration 5. Logic and Branching Features: Jotform - Advanced logic, Typeform - Basic logic 6. Media & File Uploads: Jotform - Full file upload support, Typeform - Limited file support 7. Security and Compliance: Jotform - Strong security features, Typeform - Standard security measures 8. Branding: Jotform - Comprehensive branding, Typeform - Limited branding](/img/jotform-vs-typeform.png "Tabular Comparison of Jotform & Typeform")
 
 ### 1. Form Design Approach
 
@@ -196,6 +202,8 @@ The aspect of branding can be covered under three heads:
 
 **Typeform:** Typeform, on the other hand, has a more prominent and distinct brand presence within the form interface. While users can still add their own logos and colors, the Typeform branding remains more visible and pronounced, as a result of the unique visual style and design choices that are characteristic of Typeform's brand, which may have a stronger presence throughout the form experience.
 
+![Infographic showing: Tabular Comparison of Jotform & Typeform along the following aspects: 9. Language Localization: Jotform - Multilingual support, Typeform - Limited localization 10. Form Submissions: Jotform - 100 submissions (Free), Typeform - 10 submissions (Free) 11. Visualization: Jotform - Focused submissions, Typeform - Comprehensive visualization 12. Form Analytics: Jotform - Detailed analytics, Typeform - Basic analytics 13. Form Notifications: Jotform - Extensive notification options, Typeform - Basic email notifications 14. Auto-Responder: Jotform - Robust auto-responder, Typeform - Limited auto-responses 15. Integrations: Jotform - Numerous integrations, Typeform - Limited integrations 16. API Access: Jotform - Robust API, Typeform - Limited API 17. Custom Scripts: Jotform - Custom code support, Typeform - No custom script support](/img/jotform-vs-typeform2.png "Tabular Comparison of Jotform & Typeform")
+
 ### 9. Language Localization & Translation
 
 **Jotform:** Jotform offers multilingual form support, allowing users to create forms in multiple languages and cater to a diverse audience.
@@ -257,6 +265,8 @@ The aspect of branding can be covered under three heads:
 **Jotform:** Jotform allows users to add custom scripts and code snippets to their forms for enhanced functionality and integration with external services.
 
 **Typeform:** Typeform does not provide native support for custom scripts, limiting the ability to add advanced customizations.
+
+![Infographic showing: Tabular Comparison of Jotform & Typeform along the following aspects: 18. Data Export Options: Jotform - Various export options, Typeform - Limited export options 19. Widgets and Add-ons: Jotform - Wide range of add-ons, Typeform - Core form experience 20. Collaboration: Jotform - Robust collaboration, Typeform - Limited collaboration 21. Payment Integration: Jotform - Built-in payment options, Typeform - Limited payment integration 22. Customer Support: Jotform - Excellent support, Typeform - Varies based on plan 23. Form Templates: Jotform - 10K+ templates, Typeform - Modern form templates 24. Survey and Quiz Features: Jotform - Advanced features, Typeform - Basic features 25. Pricing: Jotform - Tiered pricing, Typeform - Tiered pricing](/img/jotform-vs-typeform3.png "Tabular Comparison of Jotform & Typeform")
 
 ### 18. Data Export Options
 
