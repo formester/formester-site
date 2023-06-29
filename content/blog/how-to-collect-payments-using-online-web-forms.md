@@ -125,7 +125,10 @@ Dedicated payment form solutions usually provide more robust reporting features,
 Google Forms provide limited customization as regards the form's design, layout, and branding which can affect the overall user experience and brand consistency. An inconsistent design and lack of branding elements such as logo, messaging, etc., may lead to users questioning the credibility and safety of your payment form.
 
 While Google Forms can be a dynamic and useful tool for accomplishing various web-form goals, when it comes to creating payment forms, it would be a more practical and wise decision, to opt for Advanced form-builder applications.\
-That said, **Formester** is a no-code (meaning: you DON'T have to have any knowledge of coding), intuitive and user-friendly form-builder, with a [drag-and-drop form design approach](https://formester.com/), that combines [advanced functionalities](https://formester.com/features/), [seamless integrations](https://formester.com/integrations/) and [top-tier security features](https://formester.com/features/spam-protection/), to bring forth powerful, dynamic, visually-appealing and yet simplistic forms!
+That said, **Formester** is a no-code (meaning: you DON'T have to have any knowledge of coding), intuitive and user-friendly form-builder:\
+With a [drag-and-drop form design approach](https://formester.com/) \
+That combines [advanced functionalities](https://formester.com/features/), [seamless integrations](https://formester.com/integrations/) and [top-tier security features](https://formester.com/features/spam-protection/)\
+To bring forth powerful, dynamic, visually-appealing and yet simplistic forms!
 
 Now let's explore,
 
@@ -133,7 +136,7 @@ Now let's explore,
 
 ### Step 1: Sign up and Create an Account
 
-Click here to sign-up for free and create an account. (If you have one already, you have one less step to go!)
+[Click here to sign-up for free](https://app.formester.com/users/sign_up) and create an account. (If you have one already, you have one less step to go!)
 
 ### Step 2: Create/Select a Form
 
@@ -145,9 +148,9 @@ You may choose from a variety of form field types (name, email ID, Address, sing
 
 You may also upload any images as required.
 
-OR
+**OR**
 
-Simply, click on the Templates button to select a pre-designed, customizable form to simply tweak and personalize it as per your specific requirements.
+Simply, click on the Templates button to select a pre-designed, customizable form and simply tweak and personalize it as per your specific requirements.
 
 ### Step 3: Adding the Payment Field
 
@@ -283,7 +286,7 @@ By integrating user-friendly payment forms, businesses can capture and retain cu
 
 Don't let complex payment methods hinder your business growth!
 
-So take the reins of your payment collection process with Formester's powerful payment forms!
+So take the reins of your payment collection process with [Formester's powerful payment forms](https://formester.com/features/online-payment/)!
 
 Offer Quick and simplified payment methods to your customers!
 
