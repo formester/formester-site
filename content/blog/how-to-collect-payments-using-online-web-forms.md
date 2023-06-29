@@ -36,7 +36,7 @@ createdAt: 2023-06-29T18:21:31.019Z
 coverImg: /img/how-to-collect-payments-using-online-web-forms.png
 coverImgAlt: How to Collect Payments Using Online Web Forms?
 featured: false
-published: false
+published: true
 ---
 Two words to grab the attention of Businesses: **Automation** & **Expansion**
 
