@@ -46,6 +46,8 @@ While businesses undoubtedly benefit from automation in various ways, perhaps th
 
 In today's fast-paced world, customers demand seamless experiences that allow them to effortlessly find what they need and navigate through a simple and intuitive journey. The beauty of automation lies in its ability to capture and retain their attention without heavy reliance on human intervention.
 
+![Funny meme showing the dominance of Automation!](/img/how-to-collect-payments-using-online-web-forms_meme.png "The Dominance of Automation!")
+
 In today's highly competitive market, where customers have countless options at their fingertips, capturing and retaining their attention for ensuring a successful sale has become more challenging than ever before. 
 
 **Imagine this scenario:** 
@@ -151,7 +153,11 @@ Dedicated payment form solutions usually provide more robust reporting features,
 Google Forms provide limited customization as regards the form's design, layout, and branding which can affect the overall user experience and brand consistency. An inconsistent design and lack of branding elements such as logo, messaging, etc., may lead to users questioning the credibility and safety of your payment form.
 
 While Google Forms can be a dynamic and useful tool for accomplishing various web-form goals, when it comes to creating payment forms, it would be a more practical and wise decision, to opt for Advanced form-builder applications.\
-That said, **Formester** is a no-code (meaning: you DON'T have to have any knowledge of coding), intuitive and user-friendly form-builder:\
+That said, **Formester** is a no-code (meaning: you DON'T have to have any knowledge of coding), intuitive and user-friendly form-builder:
+
+![Screenshot showing: Formester's Home page](/img/how-to-collect-payments-using-online-web-forms-14-.png "Formester's Home page")
+
+\
 With a [drag-and-drop form design approach](https://formester.com/) \
 That combines [advanced functionalities](https://formester.com/features/), [seamless integrations](https://formester.com/integrations/) and [top-tier security features](https://formester.com/features/spam-protection/)\
 To bring forth powerful, dynamic, visually-appealing and yet simplistic forms!
@@ -164,13 +170,21 @@ Now let's explore,
 
 [Click here to sign-up for free](https://app.formester.com/users/sign_up) and create an account. (If you have one already, you have one less step to go!)
 
+![Screenshot showing: Formester's Sign-up page](/img/how-to-collect-payments-using-online-web-forms-2-.png "Formester's Sign-up page")
+
 ### Step 2: Create/Select a Form
 
 Once you've successfully created an account, you'll be navigated to Formester's dashboard.
 
+![Screenshot showing: Formester's Dashboard with Create Form & Use Templates Buttons](/img/how-to-collect-payments-using-online-web-forms-3-.png "Formester's Dashboard")
+
 Here, you may click on the Create Form button, to design your own form from scratch.
 
+![Screenshot showing: Create Form dashboard](/img/how-to-collect-payments-using-online-web-forms-4-.png "Create Form dashboard")
+
 You may choose from a variety of form field types (name, email ID, Address, single-choice questions, multiple-choice questions, short-text questions, drop-down options, etc.), fonts, colors, etc. 
+
+![Screenshot showing: Form Builder Elements - Fields & Design](/img/how-to-collect-payments-using-online-web-forms-5-.png "Form Builder Elements - Fields & Design")
 
 You may also upload any images as required.
 
@@ -178,11 +192,17 @@ You may also upload any images as required.
 
 Simply, click on the Templates button to select a pre-designed, customizable form and simply tweak and personalize it as per your specific requirements.
 
+![Screenshot showing: Formester's Template Library](/img/how-to-collect-payments-using-online-web-forms-6-.png "Formester's Template Library")
+
 ### Step 3: Adding the Payment Field
 
 Once you've added all the required and relevant form fields, select the Payments Field, from the Others section in the builder dashboard. 
 
+![Screenshot showing: Payments Field in the Others section](/img/how-to-collect-payments-using-online-web-forms-7-.png "Payments Field in the Others section")
+
 You'll see something, as shown in the image below.
+
+![Screenshot showing: Payment Field's additional settings](/img/how-to-collect-payments-using-online-web-forms-8-.png "Payment Field's additional settings")
 
 Now, specify the name you want to give your payments section. You may also give a brief description or message.
 
@@ -196,11 +216,13 @@ If you want to collect a fixed amount, toggle the Amount Is Fixed button.
 
 Once you've designed your Payments field as required, click on the Payment Settings button, provided in the error message (You will not be able to take payments unless integration is complete) section.
 
+![Screenshot showing: Payment Settings button shown in the error message](/img/how-to-collect-payments-using-online-web-forms-9-.png "Payment Settings button shown in the error message")
+
 You'll be redirected to the Payments Integration page.
 
 Select the platform you want to integrate your payments with.
 
-You'll be redirected to the page shown below.
+![Screenshot showing: Payments Integration page](/img/payment-integration.png "Payments Integration page")
 
 Now, just complete the process by filling out the necessary details carefully.
 
@@ -210,6 +232,8 @@ Once you're done, your Formester Payment Form will be integrated with your selec
 
 Before publishing your payment form, it is good to preview and test its functionality, to ensure a smooth user experience.
 
+![Screenshot showing: Form Preview ](/img/how-to-collect-payments-using-online-web-forms-10-.png "Form Preview ")
+
 Verify that transactions are being processed correctly.
 
 ### Step 6: Publish your Form
@@ -217,6 +241,8 @@ Verify that transactions are being processed correctly.
 Once you are satisfied with the form's design, functionality and working, you may publish it wherever required.
 
 You may embed the form code on your website or share the form's URL with your customers.
+
+![Screenshot showing: Form Publish Button](/img/how-to-collect-payments-using-online-web-forms-11-.png "Form Publish Button")
 
 ### Step 7: Track and Manage Payments
 
@@ -226,7 +252,11 @@ Receive notifications for successful transactions and track payment details with
 
 In the dashboard, while the Analytics section will show and let you analyze the general performance of your form, such as No. of views, No. of submissions, etc;
 
+![Screenshot showing: Form Analytics Section](/img/how-to-collect-payments-using-online-web-forms-12-.png "Form Analytics Section")
+
 The Transactions section will show the details of the transactions that have taken place through your form.
+
+![Screenshot showing: Form Transactions Section](/img/how-to-collect-payments-using-online-web-forms-13-.png "Form Transactions Section")
 
 ### Step 8: Start Collecting Payments!
 
