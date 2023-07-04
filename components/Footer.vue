@@ -87,8 +87,8 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/features/calculation/" class="footer__link">
-                  Calculation
+                <NuxtLink to="/features/calculation-fields/" class="footer__link">
+                  Calculation Fields
                 </NuxtLink>
               </li>
             </ul>

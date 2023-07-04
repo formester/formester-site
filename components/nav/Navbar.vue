@@ -88,8 +88,8 @@
                 >
               </li>
               <li>
-                <NuxtLink class="dropdown-item" to="/features/calculation/" @click="collapseNav"
-                  >Calculation</NuxtLink
+                <NuxtLink class="dropdown-item" to="/features/calculation-fields/" @click="collapseNav"
+                  >Calculation Fields</NuxtLink
                 >
               </li>
             </ul>
