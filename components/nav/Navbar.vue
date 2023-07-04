@@ -82,6 +82,16 @@
                   >Branding Kit</NuxtLink
                 >
               </li>
+              <li>
+                <NuxtLink class="dropdown-item" to="/features/information-recall/" @click="collapseNav"
+                  >Information Recall</NuxtLink
+                >
+              </li>
+              <li>
+                <NuxtLink class="dropdown-item" to="/features/calculation-fields/" @click="collapseNav"
+                  >Calculation Fields</NuxtLink
+                >
+              </li>
             </ul>
           </li>
           <li class="nav-item me-2" @click="collapseNav">

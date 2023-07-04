@@ -165,7 +165,7 @@ export default {
           user: 'Deanna Bugalski',
           designation: 'Founder/CEO',
           picture: 'Deanna_bugalski.webp',
-          content: `I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formestar was super easy to set up, and the usability is seamless! I highly recommend!`,
+          content: `I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formester was super easy to set up, and the usability is seamless! I highly recommend!`,
           logo: 'suggesterfy_logo.webp',
           logoAlt: 'suggesterfy logo',
           company: 'Suggesterfy',

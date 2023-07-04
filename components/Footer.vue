@@ -81,6 +81,16 @@
                   Branding Kit
                 </NuxtLink>
               </li>
+              <li class="mt-2">
+                <NuxtLink to="/features/information-recall/" class="footer__link">
+                  Information Recall
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
+                <NuxtLink to="/features/calculation-fields/" class="footer__link">
+                  Calculation Fields
+                </NuxtLink>
+              </li>
             </ul>
           </div>
 
