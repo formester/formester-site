@@ -6,7 +6,7 @@
           <div
             class="col-lg-5 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start mt-xl-0 mt-md-5"
           >
-            <h1 class="section__heading">Calculation</h1>
+            <h1 class="section__heading">Calculation Fields</h1>
             <p class="hero__subheading mt-3">
               Create dynamic forms that perform calculations in real-time,
               empowering you to automate complex calculations, generate dynamic
@@ -51,7 +51,7 @@
       <div class="row">
         <div class="heading d-flex flex-column align-items-center text-center">
           <h2 class="section__heading">
-            Unleash the Advantages of Calculation Field
+            Unleash the Advantages of Calculation Fields
           </h2>
           <p>
             Efficiency, precision, and enhanced productivity at your fingertips
@@ -254,7 +254,7 @@ export default {
         {
           title: 'Automated Calculation',
           description:
-            'TThe Calculation Field feature allows you to automate complex calculations, eliminating the need for manual calculations. This saves time and ensures accuracy.',
+            'The Calculation Field feature allows you to automate complex calculations, eliminating the need for manual calculations. This saves time and ensures accuracy.',
           imageSrc: 'automated-calculation.jpg',
           altText: 'icon showing calculation',
         },
