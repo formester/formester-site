@@ -24,6 +24,8 @@ import { allTestimonials } from '@/constants/testimonials'
 import Testimonials from '@/components/Testimonial.vue'
 import TemplateSection from '@/components/TemplateSection.vue'
 
+import getSiteMeta from '../../utils/getSiteMeta'
+
 export default {
   components: {
     featureHero,
@@ -210,6 +212,34 @@ export default {
     )
     randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
     return { randomTestimonials }
+  },
+  computed: {
+    meta() {
+      const metaData = {
+        type: 'website',
+        url: 'https://formester.com/features/',
+        title: 'Feature Page - Formester',
+        description:
+          "Experience the perfect blend of simplicity and versatility, empowering you to create engaging and efficient forms effortlessly.",
+        mainImage:
+          'https://formester.com/formester-form-builder-background.png', // need to update with powerful analytics page image
+        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with powerful analytics page image alt
+      }
+      return getSiteMeta(metaData)
+    },
+  },
+  head() {
+    return {
+      title: 'Feature Page - Formester',
+      meta: [...this.meta],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://formester.com/features/',
+        },
+      ],
+    }
   },
   jsonld() {
     return {
