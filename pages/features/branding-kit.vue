@@ -35,6 +35,7 @@
     </div>
 
     <div class="container py-5">
+      <h2 class="section__heading text-center">How does Branding-Kit help?</h2>
       <div class="row">
         <FeatureDetail
           :feature="feature"
