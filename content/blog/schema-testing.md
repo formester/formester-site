@@ -10,7 +10,7 @@ createdAt: 2023-07-06T07:36:59.122Z
 coverImg: /img/11_top-5-web-forms-with-cl.png
 coverImgAlt: cover image for schema
 featured: false
-published: true
+published: false
 schema:
   - type: >-
       {
