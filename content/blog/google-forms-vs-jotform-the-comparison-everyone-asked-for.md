@@ -41,7 +41,7 @@ createdAt: 2023-07-05T19:07:52.420Z
 coverImg: /img/google-forms-vs-jotform_-the-comparison-everyone-asked-for-.png
 coverImgAlt: "Google Forms vs Jotform: The Comparison Everyone Asked For!"
 featured: false
-published: false
+published: true
 ---
 Google Forms is not only free but also comes with the trust and recognition of the big brand, Google. It's definitely something to consider if you're looking to build forms.
 
