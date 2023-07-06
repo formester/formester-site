@@ -57,6 +57,8 @@ So, let's get started and find the perfect form-building solution for you!
 
 [Google Forms](https://www.google.com/forms/about/) is a free product that offers a user-friendly interface and seamless integration with other Google services. With the trust and reliability associated with Google as a brand, it's a compelling choice for many users. 
 
+![Screenshot showing: Google Forms' Home-page](/img/google-forms-vs-jotform.png "Google Forms' Home-page")
+
 ### What makes Google Forms unique from Jotform?
 
 Google Forms has several unique features and advantages that set it apart from Jotform:
@@ -110,6 +112,8 @@ Moreover, options such as restricting form access to specific users or requiring
 ## Jotform: What Makes Users Willing to Pay?
 
 [Jotform](https://www.jotform.com/), despite being a paid service, has managed to build a dedicated user base and a strong brand reputation for itself. The reasons behind its popularity are plenty, such as advanced features, enhanced customization options, extensive integrations, the support and customer service offered and it impacts user experience.
+
+![Screenshot showing: Jotform's Home-page](/img/google-forms-vs-jotform-2-.png "Jotform's Home-page")
 
 ### What makes Jotform unique from Google Forms?
 
@@ -173,11 +177,15 @@ Now that we've discussed Google Forms and Jotform as individual platforms, let's
 
 ### 1. Form Building and Customization
 
-**Google Forms:** Provides a simple and user-friendly interface for creating forms. While it offers a variety of form-field/question types such as multiple choice, short answer, dropdowns, checkboxes, and more;
+**Google Forms:** Provides a simple and user-friendly interface for creating forms. While it offers a variety of form-field/question types such as multiple choice, short answer, dropdowns, checkboxes, and more.
+
+![Screenshot showing: Google Forms' Builder Dashboard](/img/google-forms-vs-jotform-3-.png "Google Forms' Builder Dashboard")
 
 The customization options are pretty basic and include changing the form theme, adding images or videos, and rearranging questions.
 
 **Jotform:** Jotform offers a drag-and-drop form builder that allows users to easily create and design highly customized forms. 
+
+![Screenshot showing: Jotform's Builder Dashboard](/img/google-forms-vs-jotform-4-.png "Jotform's Builder Dashboard")
 
 With Jotform you get more control over form layout, styling, and branding, including options to add custom CSS and apply themes. 
 
@@ -189,15 +197,21 @@ Jotform also provides more advanced question types, such as Likert scales, matri
 
 Also, it only supports limited conditional logic, allowing users to show or hide specific questions based on respondents' previous answers.
 
+![Screenshot showing: Google Forms' Conditional Logic](/img/google-forms-vs-jotform-5-.png "Google Forms' Conditional Logic")
+
 **Jotform:** Jotform offers a range of features that go beyond basic form functionality. 
 
 It provides extensive conditional logic capabilities, allowing users to create complex and dynamic forms, based on multiple conditions and user inputs. 
+
+![Screenshot showing: Jotform's Conditional Logic](/img/google-forms-vs-jotform-6-.png "Jotform's Conditional Logic")
 
 Also, users can set up advanced calculations within the form to perform form real-time calculations based on input values. 
 
 ### 3. Integrations
 
-**Google Forms:** While Google Forms seamlessly integrates with other native Google services, Google Sheets and Google Calendar;  
+**Google Forms:** While Google Forms seamlessly integrates with other native Google services, Google Sheets and Google Calendar.
+
+![Screenshot showing: Google Forms' Native Integrations with other Google Services](/img/google-forms-vs-jotform-7-.png "Google Forms' Native Integrations with other Google Services")
 
 In order to support third-party integrations, Google Forms offers a wide range of add-ons, which are third-party extensions that can be integrated with users' forms to enhance their functionality. 
 
@@ -205,11 +219,15 @@ These add-ons can provide additional features and integrations beyond the built-
 
 Users can find a variety of add-ons in the Google Workspace Marketplace that offer functionalities like data validation, form time-limiters, data export, advanced reporting, etc.
 
+![Screenshot showing: Add-ons for Google Forms' available in Google Marketplace](/img/google-forms-vs-jotform-8-.png "Add-ons for Google Forms' available in Google Marketplace")
+
 **Jotform:** Jotform offers a wide range of native features and integrations, reducing the need for external add-ons. 
 
 Many advanced features and functionalities, such as payment processing, conditional logic, and workflow automation, are already built into Jotform's platform. 
 
 This means users can access and utilize these features directly within the Jotform interface without the need for additional add-ons. 
+
+![Screenshot showing: Jotform's Third-party Integrations](/img/google-forms-vs-jotform-9-.png "Jotform's Third-party Integrations")
 
 Jotform's extensive list of native features saves time, money and effort in searching and installing separate add-ons.
 
@@ -219,11 +237,17 @@ Jotform's extensive list of native features saves time, money and effort in sear
 
 Users can invite other members of their team to edit or view form responses, and changes are synchronized in real-time. 
 
+![Screenshot showing: Google Forms' Add collaborators feature](/img/google-forms-vs-jotform-10-.png "Google Forms' Add collaborators feature")
+
+![Screenshot showing: Google Forms' Add Editor feature](/img/google-forms-vs-jotform_add-editor.png "Google Forms' Add Editor feature")
+
 Additionally, Google Forms supports user management options, allowing the user to control who can access and interact with the form.
 
 **Jotform:** Jotform provides robust collaboration features and user management options. 
 
 Users can not only collaborate with team members, but also assign specific tasks related to form creation or response management. 
+
+![Screenshot showing: Jotform's Add Collaborators feature](/img/google-forms-vs-jotform-11-.png "Jotform's Add Collaborators feature")
 
 Moreover, users can also assign form access permissions to different users, ensuring secure and controlled form access. This is particularly useful in situations where multiple team members are involved in form creation or when forms need to be shared with specific stakeholders or clients.
 
@@ -231,11 +255,17 @@ Moreover, users can also assign form access permissions to different users, ensu
 
 **Google Forms:** Google Forms offers automatic summary charts and graphs that provide a quick overview of form responses, in terms of data analysis and reporting. 
 
+![Screenshot showing: Google Forms' Data Analysis and Reporting Section, under the Responses Tab](/img/google-forms-vs-jotform-12-.png "Google Forms' Data Analysis and Reporting Section, under the Responses Tab")
+
 Users can view response statistics, analyze data trends, and export form responses to Google Sheets for further analysis.
+
+![Screenshot showing: Google Forms' View in Sheets option](/img/google-forms-vs-jotform_view-in-sheets.png "Google Forms' View in Sheets option")
 
 **Jotform:** Jotform provides advanced reporting features, allowing users to create customized reports with visual analytics. 
 
 Users can generate reports with charts, graphs, and tables, apply filters to analyze specific data subsets, and export reports in various formats. 
+
+![Screenshot showing: Jotform's Analytics Section](/img/google-forms-vs-jotform-13-.png "Jotform's Analytics Section")
 
 Jotform's reporting capabilities give users more flexibility in analyzing form data, generating comprehensive insights, and sharing reports with stakeholders.
 
