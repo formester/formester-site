@@ -273,6 +273,8 @@ Jotform's reporting capabilities give users more flexibility in analyzing form d
 
 **Google Forms:** Google Forms offers basic automation capabilities through integrations with other Google services. 
 
+![Screenshot showing: Example of Google Forms' Workflow Automation ](/img/google-forms-vs-jotform-14-.png "Example of Google Forms' Workflow Automation ")
+
 For example, you can set up automated data organization by linking Google Forms to Google Sheets, where form responses are automatically recorded, stored and organized in a spreadsheet.
 
 **Jotform:** Jotform provides more advanced workflow automation features. 
@@ -281,11 +283,17 @@ It allows users to set up form triggers and create automated actions based on fo
 
 Users can also configure email notifications to be sent to specific recipients, create conditional email alerts, etc.
 
+![Screenshot showing: Jotform's Workflow Automation ](/img/google-forms-vs-jotform-15-.png "Jotform's Workflow Automation ")
+
 ### 7. Mobile-Friendly Forms
 
 **Google Forms:** Google Forms is optimized for mobile devices, allowing respondents to easily fill out forms on smartphones and tablets. The forms automatically adjust to different screen sizes for a seamless user experience.
 
+![Screenshot showing: Google Forms' Capability for Mobile-Responsiveness](/img/google-forms-vs-jotform-16-.png "Google Forms' Capability for Mobile-Responsiveness")
+
 **Jotform:** Jotform too, ensures that forms are responsive and mobile-friendly, providing an optimal user experience across various devices and screen sizes. 
+
+![Screenshot showing: Jotform's Capability for Mobile-Responsiveness](/img/google-forms-vs-jotform-17-.png "Jotform's Capability for Mobile-Responsiveness")
 
 Again, the forms automatically adapt to different screen resolutions, allowing respondents to access and complete forms on any device without compromising usability.
 
@@ -293,9 +301,13 @@ Again, the forms automatically adapt to different screen resolutions, allowing r
 
 **Google Forms:** Google Forms allows respondents to upload files as part of form submissions. 
 
+![Screenshot showing: Google Forms' File Upload Feature](/img/google-forms-vs-jotform-18-.png "Google Forms' File Upload Feature")
+
 The uploaded files are stored in Google Drive, and can be accessed directly from the user's Google Forms dashboard.
 
 **Jotform:** Jotform provides file upload functionality with additional features such as setting file size limits, restricting file types, and choosing whether to store uploaded files within Jotform or integrate with popular cloud storage services like Dropbox or Google Drive.
+
+![Screenshot showing: Jotform's File Upload Feature](/img/google-forms-vs-jotform-19-.png "Jotform's File Upload Feature")
 
 This flexibility allows for seamless file collection and management within your forms.
 
@@ -303,7 +315,11 @@ This flexibility allows for seamless file collection and management within your 
 
 **Google Forms:** Google Forms does not have native payment integration capabilities. However, users can incorporate payment options indirectly by using add-ons or linking to external payment processors.
 
+![Screenshot showing: Payment Integration Add-ons for Google Forms available on Google Marketplace](/img/google-forms-vs-jotform-20-.png "Payment Integration Add-ons for Google Forms available on Google Marketplace")
+
 **Jotform:** Jotform offers built-in payment integration options, allowing users to create forms that provide secure payment collection. Users can set up product catalogs, apply pricing options, and handle transactions seamlessly within their forms. 
+
+![Screenshot showing: Jotform's Payment Integrations](/img/google-forms-vs-jotform-21-.png "Jotform's Payment Integrations")
 
 Jotform integrates with popular payment processors like PayPal, Stripe, Square, and more, providing a convenient solution for collecting payments online.
 
@@ -311,21 +327,33 @@ Jotform integrates with popular payment processors like PayPal, Stripe, Square, 
 
 **Google Forms:** Google Forms provides access control by requiring respondents to sign in with their Google accounts to access and submit forms. 
 
+![Screenshot showing: Google Forms' Form Access Control](/img/google-forms-vs-jotform-22-.png "Google Forms' Form Access Control")
+
 Additionally, specific users or groups within the users' organization, can be restricted from having access.
 
 **Jotform:** Jotform offers more advanced form access control features. Users can set password protection, form expiration dates, and even limit form submissions based on specific criteria such as IP addresses or form quotas.
+
+![Screenshot showing: Jotform's Form Access Control](/img/google-forms-vs-jotform-23-.png "Jotform's Form Access Control")
 
 ### 11. Form Widgets and Apps
 
 **Google Forms:** Offers a limited set of basic form elements and widgets for form customization.
 
+![Screenshot showing: Google Forms' Script Editor and Add-ons](/img/google-forms-vs-jotform-24-.png "Google Forms' Script Editor and Add-ons")
+
 **Jotform:** Provides an extensive library of advanced form widgets and apps, including electronic signatures, image sliders, interactive maps, social media integrations, and more, allowing for enhanced form functionality and user engagement.
+
+![Screenshot showing: Jotform's Widgets ](/img/google-forms-vs-jotform-25-.png "Jotform's Widgets")
 
 ### 12. Form Templates
 
 **Google Forms:** Provides a collection of form templates covering common and fundamental use cases such as surveys and event registrations.
 
+![Screenshot showing: Google Forms' Template Section](/img/google-forms-vs-jotform-26-.png "Google Forms' Template Section")
+
 **Jotform:** Offers a vast selection of professionally designed templates across various industries, use cases and purposes, providing users with a head start in creating highly customized and specialized forms.
+
+![Screenshot showing: Jotform's Template Section](/img/google-forms-vs-jotform-27-.png "Jotform's Template Section")
 
 ### 13. Plans & Pricing
 
@@ -480,6 +508,8 @@ On the other hand, while Jotform offers a wide range of functionalities, it migh
 Hence to strike a balance between **Sleek UX, Simplicity, Advanced  Functionalities and Economic Budgets**;
 
 Arrives Formester! A [no-code, intuitive and user-friendly form-builder, with a drag-and-drop approach to form-designing](https://formester.com/)!
+
+![Screenshot showing: Formester's Home-page](/img/google-forms-vs-jotform-28-.png "Formester's Home-page")
 
 **With Formester, you get a powerful form-building solution that combines the best of both worlds.** 
 
