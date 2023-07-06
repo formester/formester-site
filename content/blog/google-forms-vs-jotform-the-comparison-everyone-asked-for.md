@@ -217,11 +217,11 @@ In order to support third-party integrations, Google Forms offers a wide range o
 
 These add-ons can provide additional features and integrations beyond the built-in capabilities of Google Forms. 
 
-Users can find a variety of add-ons in the Google Workspace Marketplace that offer functionalities like data validation, form time-limiters, data export, advanced reporting, etc.
+Users can find a variety of add-ons in the [Google Workspace Marketplace](https://workspace.google.com/marketplace/search/?host=forms) that offer functionalities like data validation, form time-limiters, data export, advanced reporting, etc.
 
-![Screenshot showing: Add-ons for Google Forms' available in Google Marketplace](/img/google-forms-vs-jotform-8-.png "Add-ons for Google Forms' available in Google Marketplace")
+![Screenshot showing: Add-ons for Google Forms' available in Google Workspace Marketplace](/img/google-forms-vs-jotform-8-.png "Add-ons for Google Forms' available in Google Workspace Marketplace")
 
-**Jotform:** Jotform offers a wide range of native features and integrations, reducing the need for external add-ons. 
+**Jotform:** [Jotform offers a wide range of native features and integrations](https://www.jotform.com/integrations/), reducing the need for external add-ons. 
 
 Many advanced features and functionalities, such as payment processing, conditional logic, and workflow automation, are already built into Jotform's platform. 
 
@@ -233,7 +233,7 @@ Jotform's extensive list of native features saves time, money and effort in sear
 
 ### 4. Collaboration and User Management
 
-**Google Forms:** Google Forms allows for basic collaboration among multiple users. 
+**Google Forms:** [Google Forms allows for basic collaboration](https://support.google.com/docs/answer/2917111?hl=en) among multiple users. 
 
 Users can invite other members of their team to edit or view form responses, and changes are synchronized in real-time. 
 
@@ -243,7 +243,7 @@ Users can invite other members of their team to edit or view form responses, and
 
 Additionally, Google Forms supports user management options, allowing the user to control who can access and interact with the form.
 
-**Jotform:** Jotform provides robust collaboration features and user management options. 
+**Jotform:** [Jotform provides robust collaboration features](https://www.jotform.com/features/collaborative-forms/) and user management options. 
 
 Users can not only collaborate with team members, but also assign specific tasks related to form creation or response management. 
 
@@ -275,9 +275,9 @@ Jotform's reporting capabilities give users more flexibility in analyzing form d
 
 ![Screenshot showing: Example of Google Forms' Workflow Automation ](/img/google-forms-vs-jotform-14-.png "Example of Google Forms' Workflow Automation ")
 
-For example, you can set up automated data organization by linking Google Forms to Google Sheets, where form responses are automatically recorded, stored and organized in a spreadsheet.
+For example, you can set up automated data organization by [linking Google Forms to Google Sheets](https://formester.com/blog/integrating-google-forms-google-sheets-a-match-made-in-digital-heaven-essential-basics/), where form responses are automatically recorded, stored and organized in a spreadsheet.
 
-**Jotform:** Jotform provides more advanced workflow automation features. 
+**Jotform:** Jotform provides more [advanced workflow automation features](https://www.jotform.com/integrations/category/automation-integrations). 
 
 It allows users to set up form triggers and create automated actions based on form submissions. 
 
@@ -313,11 +313,11 @@ This flexibility allows for seamless file collection and management within your 
 
 ### 9. Payment Integration
 
-**Google Forms:** Google Forms does not have native payment integration capabilities. However, users can incorporate payment options indirectly by using add-ons or linking to external payment processors.
+**Google Forms:** Google Forms does not have native payment integration capabilities. However, users can [incorporate payment options indirectly by using add-ons](https://workspace.google.com/marketplace/app/payable_forms/353824655747) or linking to external payment processors.
 
 ![Screenshot showing: Payment Integration Add-ons for Google Forms available on Google Marketplace](/img/google-forms-vs-jotform-20-.png "Payment Integration Add-ons for Google Forms available on Google Marketplace")
 
-**Jotform:** Jotform offers built-in payment integration options, allowing users to create forms that provide secure payment collection. Users can set up product catalogs, apply pricing options, and handle transactions seamlessly within their forms. 
+**Jotform:** Jotform offers [built-in payment integration options](https://www.jotform.com/integrations/category/payment-processing), allowing users to create forms that provide secure payment collection. Users can set up product catalogs, apply pricing options, and handle transactions seamlessly within their forms. 
 
 ![Screenshot showing: Jotform's Payment Integrations](/img/google-forms-vs-jotform-21-.png "Jotform's Payment Integrations")
 
@@ -341,7 +341,7 @@ Additionally, specific users or groups within the users' organization, can be re
 
 ![Screenshot showing: Google Forms' Script Editor and Add-ons](/img/google-forms-vs-jotform-24-.png "Google Forms' Script Editor and Add-ons")
 
-**Jotform:** Provides an extensive library of advanced form widgets and apps, including electronic signatures, image sliders, interactive maps, social media integrations, and more, allowing for enhanced form functionality and user engagement.
+**Jotform:** Provides an [extensive library of advanced form widgets](https://www.jotform.com/widgets/) and apps, including electronic signatures, image sliders, interactive maps, social media integrations, and more, allowing for enhanced form functionality and user engagement.
 
 ![Screenshot showing: Jotform's Widgets ](/img/google-forms-vs-jotform-25-.png "Jotform's Widgets")
 
@@ -351,7 +351,7 @@ Additionally, specific users or groups within the users' organization, can be re
 
 ![Screenshot showing: Google Forms' Template Section](/img/google-forms-vs-jotform-26-.png "Google Forms' Template Section")
 
-**Jotform:** Offers a vast selection of professionally designed templates across various industries, use cases and purposes, providing users with a head start in creating highly customized and specialized forms.
+**Jotform:** Offers a vast selection of [professionally designed templates](https://www.jotform.com/form-templates/) across various industries, use cases and purposes, providing users with a head start in creating highly customized and specialized forms.
 
 ![Screenshot showing: Jotform's Template Section](/img/google-forms-vs-jotform-27-.png "Jotform's Template Section")
 
