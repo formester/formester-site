@@ -307,19 +307,22 @@ Exploring the practical applications and potential limitations of the form-build
 
 #### 1. Surveys and Feedback
 
-Google Forms is an excellent choice for conducting surveys, collecting feedback from customers or employees, and gathering data for market research. 
+Google Forms is an excellent choice for [conducting surveys](https://formester.com/blog/how-to-create-the-perfect-product-map-using-surveys-in-2023/), [collecting feedback from customers or employees](https://formester.com/blog/employee-engagement-surveys-the-complete-guide-to-the-what-why-and-how/), and [gathering data for market research](https://formester.com/blog/how-branded-surveys-can-help-you-unlock-your-brand%E2%80%99s-potential/). 
 
 Its simplicity and ease of use make it accessible to a wide range of users.
 
 #### 2. Event Registration and RSVPs
 
-Whether it's a small gathering or a large event, Google Forms are often used to create registration forms and collect RSVPs efficiently. You can customize the form to gather necessary information such as attendee details, meal preferences, or session preferences.
+Whether it's a small gathering or a large event, Google Forms are often used to create [registration forms](https://formester.com/blog/registration-forms-101-definition-types-use-cases-more-how-to-create-free-template/) and collect RSVPs efficiently. You can customize the form to gather necessary information such as attendee details, meal preferences, or session preferences.
 
 #### 3. Quizzes and Assessments
 
-Google Forms is suitable for creating quizzes, tests, and assessments. Teachers and Professors can easily create multiple-choice questions, short answers, or even grading rubrics. 
+Google Forms is suitable for [creating online quizzes, academic tests and assessments](https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-you%E2%80%99ll-need-in-2023-1/). Teachers and Professors can easily create multiple-choice questions, short answers, or even grading rubrics. 
 
-The automatic grading feature saves time and provides instant feedback to respondents.
+It is also possible to [set time limits for the completion of the quizzes or tests](https://formester.com/blog/how-to-add-a-timer-to-your-google-quiz-includes-latest-alternative-works-without-add-ons-2023/);\
+In other words, make the quiz timed!
+
+Moreover, the automatic grading feature saves time and provides instant feedback to respondents.
 
 ### Limitations of Google Forms
 
@@ -353,7 +356,7 @@ Moreover, Jotform facilitates the creation of forms that allow clients or custom
 
 #### 2. Payment Collection and Order Forms
 
-Jotform's built-in payment integration features make it suitable for creating forms that collect payments, process orders, or handle donations. You can create order forms with product catalogs, calculate totals, and accept payments securely.
+Jotform's built-in payment integration features make it suitable for creating [forms that collect payments, process orders, or handle donations](https://formester.com/features/calculation-fields/). You can create order forms with product catalogs, calculate totals, and accept payments securely.
 
 #### 3. Volunteer and Membership Forms
 
@@ -399,14 +402,14 @@ It can sometimes fail to cater to forms that require advanced logic.
 
 On the other hand, while Jotform offers a wide range of functionalities, it might not be compatible with the users' budgets sometimes.
 
-Hence to strike a balance between Sleek UX, Simplicity, Advanced  Functionalities and Economic Budgets;
+Hence to strike a balance between **Sleek UX, Simplicity, Advanced  Functionalities and Economic Budgets**;
 
-Arrives Formester! A no-code, intuitive and user-friendly form-builder, with a drag-and-drop approach to form-designing!
+Arrives Formester! A [no-code, intuitive and user-friendly form-builder, with a drag-and-drop approach to form-designing](https://formester.com/)!
 
-With Formester, you get a powerful form-building solution that combines the best of both worlds. 
+**With Formester, you get a powerful form-building solution that combines the best of both worlds.** 
 
-It empowers you to create forms that not only look professional but also function flawlessly, catering to even the most complex requirements. 
+It empowers you to create forms that not only look professional but also function flawlessly, catering to even the most [complex requirements](https://formester.com/features/). 
 
-Whether you need conditional logic, advanced reporting, payment integration, or custom branding, Formester delivers it all while ensuring it fits within your economic budget.
+Whether you need [conditional logic](https://formester.com/features/conditional-logic/), [advanced reporting](https://formester.com/features/powerful-analytics/), [payment integration](https://formester.com/features/online-payment/), or [custom branding](https://formester.com/features/branding-kit/), Formester delivers it all while ensuring it fits within your [economic budget](https://formester.com/pricing/).
 
-Sign-up on Formester for free and strike the balance today!
+[Sign-up on Formester for free](https://app.formester.com/users/sign_up) and strike the balance today!
