@@ -272,19 +272,33 @@ Google Forms:
 
 Google Forms is a free product offered by Google. It is available to anyone with a Google account at no cost. 
 
-This means you can create and use Google Forms without any limitations on the number of forms you can create or the number of responses you can receive. 
+This means you can create and use Google Forms without any limitations on the number of forms created or the number of responses received. 
 
 Google Forms provides a comprehensive set of features and basic customization options without the need for a paid subscription.
 
 Jotform:
 
-Jotform offers various pricing plans that cater to different needs and requirements. The plans are designed to provide additional features, increased form limits, more storage capacity, and priority support. Jotform's pricing plans are as follows:
+Jotform offers various pricing plans that cater to different needs and requirements. The plans are designed to provide additional features, increased form limits, more storage capacity, and priority support. 
 
-Free Plan: Jotform offers a free plan that allows you to create forms with basic features and receive up to a certain number of form submissions per month. The free plan has certain limitations on form fields, storage capacity, and advanced features. However, it serves as a good starting point for users with basic form creation needs.
+Jotform's pricing plans are as follows:
 
-Paid Plans: Jotform offers several paid plans with additional features and benefits. These plans are designed for users who require more advanced functionality, increased form limits, and enhanced support. The pricing plans vary in terms of the number of forms, form submissions, storage capacity, and available features. The paid plans provide access to advanced features like payment integration, workflow automation, advanced reporting, and customization options.
+Free Plan: Jotform offers a free plan that allows you to create upto 5 forms with 100 submissions, along with  basic features per month. 
 
-Jotform's paid plans are typically billed on a monthly or annual basis, with discounts available for annual subscriptions. The pricing plans are flexible, allowing you to choose the plan that best suits your specific requirements and budget.
+It serves as a good starting point for users with basic form creation needs.
+
+Paid Plans: Jotform offers 4 paid plans with additional features and benefits, with each upgrade. 
+
+Bronze: $39/month, with upto 25 forms and 1000 submissions
+
+Silver: $49/month, with upto 50 forms and 2500 submissions
+
+Gold:  $129/month, with upto 100 forms and 10K submissions
+
+Enterprise: Customized Pricing
+
+Jotform's paid plans are typically billed on a monthly or annual basis, with discounts available for annual subscriptions. 
+
+The pricing plans are flexible, allowing users to choose the plan that best fits their specific requirements and budget.
 
 Before reaching a final verdict, it is important to delve into two additional layers of exploration. 
 
