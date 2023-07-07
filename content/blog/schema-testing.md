@@ -76,6 +76,6 @@ schema:
 
       console.log(jsonData)
 ---
-# t﻿esting out the schema
+# t﻿esting out the schema in cms
 
 n﻿ot sure what else to write here......................
