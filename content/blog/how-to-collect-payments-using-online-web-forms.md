@@ -58,6 +58,8 @@ A difficult or confusing payment method can become a significant barrier, leadin
 
 **Did you know?**
 
+![Infographic showing: Statistics related to Payment Processes: 1. Cart Abandonment: Research suggests that around 17% of online shoppers abandon their carts due to difficulties in the payment process. 2. Conversion Rates: Studies indicate that simplifying the payment process and reducing the number of steps can lead to an increase in conversion rates by as much as 35% to 40%. 3. Payment Security: A survey conducted by Baymard Institute found that 18% of consumers abandon their purchase due to concerns about payment security. 4. Preferred Payment Methods: Research shows that offering a variety of payment options, can cater to diverse customer preferences and improve conversion rates.](/img/did-you-know_.png "Statistics related to Payment Processes")
+
 **Cart Abandonment:** Research suggests that around [17% of online shoppers abandon their carts due to difficulties in the payment process](https://baymard.com/lists/cart-abandonment-rate).
 
 **Conversion Rates:** Studies indicate that simplifying the payment process and [reducing the number of steps can lead to an increase in conversion rates by as much as 35% to 40%](https://baymard.com/lists/cart-abandonment-rate).
@@ -77,6 +79,8 @@ That said, in today's blog, we'll cover 
 ## Why are Web Forms the Optimal Choice for Collecting Payments in the Digital Age?
 
 In today's age, web forms have emerged as the best tool for collecting payments due to their numerous advantages and suitability for the digital landscape.
+
+![Infographic showing: Why should Web Forms be your First Choice for Collecting Payments in the Digital Age? 1. Seamless User Experience 2. Integration with Secure Payment Gateways 3. Customization and Flexibility 4. Efficient Data Management 5. Accessibility Across Devices 6. Improved Efficiency and Automation 7. Enhanced Customer Satisfaction 8. Scalability and Growth](/img/why-should-web-forms-be-your-first-choice-for-collecting-payments-in-the-digital-age_.png "Why should Web Forms be your First Choice for Collecting Payments in the Digital Age?")
 
 Let's discuss a few of them:
 
@@ -123,6 +127,8 @@ When it comes to online, free and user-friendly form builders, Google Forms emer
 While it offers many useful features, there are certain limitations that make it NOT the best choice for creating payment forms. 
 
 ### Limitations of Google Forms
+
+![Infographic showing: Limitations of Google Forms: 1. Lack of Built-in Payment Processing 2. Lack of  Additional Payment-specific Features 3. Limited Security Measures 4. Basic Analytics - Tracking and reporting capabilities 5. Limited Customization Options](/img/limitations-of-google-forms_collect-payments-using-web-forms.png "Limitations of Google Forms")
 
 #### 1. Lack of Built-in Payment Processing
 
@@ -264,6 +270,8 @@ Sit Back, Relax and Collect Payments!
 
 ## Essential Elements of a Well-designed and Converting Payment Form
 
+![Infographic showing: Essential Elements of a Well-designed and Converting Payment Form: 1. Defined and Clear Form Structure 2. Minimalist Design 3. Solid Call-to-Action (CTA) 4. Incorporate Visual Trust Elements 5. Error-Handling and Validation 6. Information-Recall and Save Features 7. Multi-Device Compatibility 8. Progress Indicators 9. Privacy Policy and T&C Check](/img/essential-elements-of-a-well-designed-and-converting-payment-form.png "Essential Elements of a Well-designed and Converting Payment Form")
+
 ### 1. Defined and Clear Structure
 
 Ensure that the payment form has a clean layout with defined and clear sections for entering user details, product/service purchase details and payment details. Organize the form in a logical flow to guide users through the process.
@@ -309,6 +317,8 @@ And did you know, you don't even need to have a website to feature your payment 
 On the contrary, here is a list of reasons…
 
 ## Why You Should Choose Web Forms for Payment Collection Over Websites?
+
+![Infographic showing: Benefits of Using Web Forms Over Websites For Payment Collection: 1. Cost Efficiency 2. Simplified User Experience 3. Improved Conversion Rates 4. Easier Integration with Payment Gateways 5. Extensive Customization ](/img/benefits-of-using-web-forms-over-websites-for-payment-collection.png "Benefits of Using Web Forms Over Websites For Payment Collection")
 
 ### 1. Cost Efficiency
 
