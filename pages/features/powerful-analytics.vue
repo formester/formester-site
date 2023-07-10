@@ -31,6 +31,7 @@
       </div>
     </div>
     <div class="container py-5">
+      <h2 class="section__heading text-center">How does Powerful Analytics help?</h2>
       <div class="row py-5">
         <FeatureDetail
           :feature="feature"

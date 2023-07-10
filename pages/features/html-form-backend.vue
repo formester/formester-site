@@ -128,7 +128,7 @@
         <div
           class="feature__heading d-flex align-items-center justify-content-center"
         >
-          <h2 class="section__heading">Features</h2>
+          <h2 class="section__heading">How does HTML Form Backend Help?</h2>
         </div>
         <FeatureDetail
           :feature="feature"

@@ -283,7 +283,8 @@ export default {
       imagesArray.push(...this.article.metaImages)
     }
 
-    return {
+    const jsonData = [
+      {
       '@context': 'https://schema.org',
       '@type': 'BlogPosting',
       mainEntityOfPage: {
@@ -307,7 +308,22 @@ export default {
         },
       },
       datePublished: this.article.createdAt,
+      },
+    ]
+
+     // Append schema if available
+     if (this.article.schema) {
+      try {
+        this.article.schema.forEach((s) => {
+          let parsedSchema = JSON.parse(s.type)
+          if (typeof parsedSchema == 'object') {
+            jsonData.push(parsedSchema)
+          }
+        })
+      } catch (error) {}
     }
+
+    return jsonData;
   },
 }
 </script>
