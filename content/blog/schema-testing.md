@@ -49,6 +49,7 @@ schema:
               }
             ]
           }
+  - type: jfoidoiffjd
 ---
 # t﻿esting out the schema in cms
 
