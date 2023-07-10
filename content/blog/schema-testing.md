@@ -13,26 +13,7 @@ featured: false
 published: false
 schema:
   - type: >-
-      let jsonData = {
-            '@context': 'https://schema.org',
-            '@type': 'BlogPosting',
-            mainEntityOfPage: {
-              '@type': 'WebPage',
-              '@id': `https://formester.com/blog/schema-testing/`,
-            },
-            headline: 'schema',
-            description: '................',
-            publisher: {
-              '@type': 'Organization',
-              name: 'Formester',
-              logo: {
-                '@type': 'ImageObject',
-                url: 'https://formester.com/logo.png',
-              },
-            },
-          }
-
-      let schema = `{
+      {
             "@context": "http://schema.org",
             "@graph": [
               {
@@ -67,14 +48,7 @@ schema:
                 ]
               }
             ]
-          }`
-
-      const parsedData = JSON.parse(schema)
-
-      Object.assign(jsonData, parsedData)
-
-
-      console.log(jsonData)
+          }
 ---
 # t﻿esting out the schema in cms
 
