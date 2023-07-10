@@ -24,7 +24,7 @@ import { allTestimonials } from '@/constants/testimonials'
 import Testimonials from '@/components/Testimonial.vue'
 import TemplateSection from '@/components/TemplateSection.vue'
 
-import getSiteMeta from '../../utils/getSiteMeta'
+import getSiteMeta from '@/utils/getSiteMeta'
 
 export default {
   components: {
@@ -230,7 +230,7 @@ export default {
   },
   head() {
     return {
-      title: 'Feature Page - Formester',
+      title: 'Exciting Features for your Form Builder | Formester',
       meta: [...this.meta],
       link: [
         {
