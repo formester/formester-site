@@ -309,11 +309,15 @@ export default {
       datePublished: this.article.createdAt,
     }
 
-    // Append schema if available
-    if (this.article.schema) {
+     // Append schema if available
+     if (this.article.schema) {
       try {
-        const parsedSchema = JSON.parse(this.article.schema);
-        Object.assign(jsonData, parsedSchema);
+        this.article.schema.forEach((s) => {
+          parsedSchema = JSON.parse(s)
+          if (typeof parsedSchema == 'object') {
+            jsonData.push(parsedSchema)
+          }
+        })
       } catch (error) {}
     }
 
