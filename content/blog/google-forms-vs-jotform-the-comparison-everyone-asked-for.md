@@ -61,6 +61,8 @@ So, let's get started and find the perfect form-building solution for you!
 
 ### What makes Google Forms unique from Jotform?
 
+![Infographic showing: What makes Google Forms unique from Jotform?: 1. Free and Accessible 2. User-Friendly Interface 3. Native Integration with Google Workspace 4. Real-time Collaboration 5. Offline Form Completion 6. Add-ons and Scripting 7. Voice Typing 8. Trust and Reliability 9. Data Security](/img/what-makes-google-forms-unique-from-jotform_.png "What makes Google Forms unique from Jotform?")
+
 Google Forms has several unique features and advantages that set it apart from Jotform:
 
 #### 1. Free and Accessible
@@ -116,6 +118,8 @@ Moreover, options such as restricting form access to specific users or requiring
 ![Screenshot showing: Jotform's Home-page](/img/google-forms-vs-jotform-2-.png "Jotform's Home-page")
 
 ### What makes Jotform unique from Google Forms?
+
+![Infographic showing: What makes Jotform unique from Google Forms?: 1. Advanced Customization Options 2. Advanced Form Building Features 3. Integration with Third-Party Applications 4. Workflow Automation  5. Payment Processing 6. Advanced Reporting and Analytics 7. Form Widgets and Apps 8. Extensive Template Library 9. Customer Support and Resources](/img/what-makes-jotform-unique-from-google-forms_.png "What makes Jotform unique from Google Forms?")
 
 Jotform has several unique features and advantages that differentiate it from Google Forms:
 
@@ -175,6 +179,8 @@ Now that we've discussed Google Forms and Jotform as individual platforms, let's
 
 ## Feature-Wise Comparison of Google Forms and Jotform
 
+![Infographic showing: Feature-Wise Comparison of Google Forms and Jotform: 1. Form Building: Google Forms: a) Simple interface, basic question types b) Limited customization options | Jotform: a) Drag-and-drop builder, advanced question types b) Extensive customization options, including layout control and custom CSS 2. Advanced Logic: Google Forms: a) Limited conditional logic support | Jotform: a) Extensive conditional logic capabilities b) Advanced calculations within the form 3. Integrations: Google Forms: a) Integrates with Google services and offers add-ons for third-party integrations | Jotform: a) Native integrations, reducing the need for external add-ons](/img/google-formvsjotform.png "Feature-Wise Comparison of Google Forms and Jotform: 1. Form Building 2. Advanced Logic 3. Integrations")
+
 ### 1. Form Building and Customization
 
 **Google Forms:** Provides a simple and user-friendly interface for creating forms. While it offers a variety of form-field/question types such as multiple choice, short answer, dropdowns, checkboxes, and more.
@@ -231,6 +237,8 @@ This means users can access and utilize these features directly within the Jotfo
 
 Jotform's extensive list of native features saves time, money and effort in searching and installing separate add-ons.
 
+![Infographic showing: Feature-Wise Comparison of Google Forms and Jotform:  4. Collaboration and User Management: Google Forms: Basic collaboration features, user management options | Jotform: Robust collaboration features, task assignment, user permissions  5. Data Analysis and Reporting: Google Forms: Basic data analysis tools, automatic summary charts and graphs | Jotform: Advanced reporting features, visual analytics, customized reports 6. Automation: Google Forms: Basic automation through integrations with Google services | Jotform: Advanced form triggers, automated actions, email notifications](/img/google-formvsjotform-1.png "Feature-Wise Comparison of Google Forms and Jotform: 4. Collaboration and User Management 5. Data Analysis and Reporting 6. Automation")
+
 ### 4. Collaboration and User Management
 
 **Google Forms:** [Google Forms allows for basic collaboration](https://support.google.com/docs/answer/2917111?hl=en) among multiple users. 
@@ -285,6 +293,8 @@ Users can also configure email notifications to be sent to specific recipients, 
 
 ![Screenshot showing: Jotform's Workflow Automation ](/img/google-forms-vs-jotform-15-.png "Jotform's Workflow Automation ")
 
+![Infographic showing: Feature-Wise Comparison of Google Forms and Jotform: 7. Mobile-Friendly Forms: Google Forms: Optimized for mobile devices | Jotform: Responsive and mobile-friendly forms 8. File Uploads: Google Forms: Allows file uploads, stored in Google Drive | Jotform: File upload functionality with additional features, storage options  9. Payment Integration: Google Forms: No native payment integration, indirect options available | Jotform: Built-in payment integration options, supports popular payment processors](/img/google-formvsjotform-2.png "Feature-Wise Comparison of Google Forms and Jotform: 7. Mobile-Friendly Forms 8. File Uploads 9. Payment Integration")
+
 ### 7. Mobile-Friendly Forms
 
 **Google Forms:** Google Forms is optimized for mobile devices, allowing respondents to easily fill out forms on smartphones and tablets. The forms automatically adjust to different screen sizes for a seamless user experience.
@@ -323,6 +333,8 @@ This flexibility allows for seamless file collection and management within your 
 
 Jotform integrates with popular payment processors like PayPal, Stripe, Square, and more, providing a convenient solution for collecting payments online.
 
+![Infographic showing: Feature-Wise Comparison of Google Forms and Jotform: 10. Access Control: Google Forms: Basic access control options, user authentication | Jotform: Advanced form access control features, password protection, form expiration, restrictions based on criteria  11. Form Widgets and Apps: Google Forms: Limited set of basic form elements and widgets | Jotform: Extensive library of advanced form widgets and apps](/img/google-formvsjotform-3.png "Feature-Wise Comparison of Google Forms and Jotform: 10. Access Control 11. Form Widgets and Apps")
+
 ### 10. Form Access Control
 
 **Google Forms:** Google Forms provides access control by requiring respondents to sign in with their Google accounts to access and submit forms. 
@@ -344,6 +356,8 @@ Additionally, specific users or groups within the users' organization, can be re
 **Jotform:** Provides an [extensive library of advanced form widgets](https://www.jotform.com/widgets/) and apps, including electronic signatures, image sliders, interactive maps, social media integrations, and more, allowing for enhanced form functionality and user engagement.
 
 ![Screenshot showing: Jotform's Widgets ](/img/google-forms-vs-jotform-25-.png "Jotform's Widgets")
+
+![Infographic showing: Feature-Wise Comparison of Google Forms and Jotform: 12. Form Templates: Google Forms: Collection of basic form templates | Jotform: Vast selection of professionally designed templates across industries and use cases 13. Pricing: Google Forms: Free with no limitations | Jotform: Free plan with basic features, paid plans with additional features and increased limits](/img/google-formvsjotform-4.png "Infographic showing: Feature-Wise Comparison of Google Forms and Jotform: 12. Form Templates 13. Pricing")
 
 ### 12. Form Templates
 
@@ -394,6 +408,8 @@ Exploring the practical applications and potential limitations of the form-build
 
 ### Best Use-Cases of Google Forms
 
+![Infographic showing: Best Use-Cases of Google Forms: 1. Surveys and Feedback 2. Event Registration and RSVPs 3. Quizzes and Assessments](/img/best-use-cases-of-google-forms.png "Best Use-Cases of Google Forms")
+
 #### 1. Surveys and Feedback
 
 Google Forms is an excellent choice for [conducting surveys](https://formester.com/blog/how-to-create-the-perfect-product-map-using-surveys-in-2023/), [collecting feedback from customers or employees](https://formester.com/blog/employee-engagement-surveys-the-complete-guide-to-the-what-why-and-how/), and [gathering data for market research](https://formester.com/blog/how-branded-surveys-can-help-you-unlock-your-brand%E2%80%99s-potential/). 
@@ -414,6 +430,8 @@ In other words, make the quiz timed!
 Moreover, the automatic grading feature saves time and provides instant feedback to respondents.
 
 ### Limitations of Google Forms
+
+![Infographic showing: Limitations of Google Forms: 1. Limited Customization 2. Advanced Features 3. Limited Third-Party Integrations 4. Branding Limitations](/img/limitations-of-google-forms_-google-forms-vs-jotform.png "Limitations of Google Forms")
 
 #### 1. Limited Customization
 
@@ -437,6 +455,8 @@ Google Forms prominently displays the Google logo and branding, which may not al
 
 ### Best Use-Cases of Jotform
 
+![Infographic showing: Best Use-Cases of Jotform: 1. Application and Appointment Scheduling Forms 2. Payment Collection and Order Forms 3. Volunteer and Membership Forms](/img/best-use-cases-of-jotform.png "Best Use-Cases of Jotform")
+
 #### 1. Application and Appointment Scheduling Forms
 
 Jotform is commonly used for creating application forms, membership registrations, or enrollment forms. Its advanced customization options allow you to design forms that align with your specific branding and collect information tailored to your application process.
@@ -452,6 +472,8 @@ Jotform's built-in payment integration features make it suitable for creating [f
 Jotform simplifies the process of managing volunteers and memberships. Organizations can create forms to collect volunteer availability, skills, and preferences. Similarly, membership forms can capture member information, process payments, and automate membership renewals.
 
 ### Limitations of Jotform
+
+![Infographic showing: Limitations of Jotform: 1. Pricing 2. Form Complexity 3. Dependency on Third-Party Integrations 4. Learning Curve](/img/limitations-of-jotform.png "Limitations of Jotform")
 
 #### 1. Pricing
 
@@ -506,6 +528,8 @@ It can sometimes fail to cater to forms that require advanced logic.
 On the other hand, while Jotform offers a wide range of functionalities, it might not be compatible with the users' budgets sometimes.
 
 Hence to strike a balance between **Sleek UX, Simplicity, Advanced  Functionalities and Economic Budgets**;
+
+![Infographic showing: Why Should You Switch to Formester?: Formester strikes the right balance between: 1. Sleek UX  2. Simplicity 3. Advanced Functionalities 4. Economic Budgets](/img/why-should-you-switch-to-formester_.png "Why Should You Switch to Formester?")
 
 Arrives Formester! A [no-code, intuitive and user-friendly form-builder, with a drag-and-drop approach to form-designing](https://formester.com/)!
 
