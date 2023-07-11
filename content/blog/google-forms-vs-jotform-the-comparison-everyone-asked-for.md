@@ -179,6 +179,8 @@ Now that we've discussed Google Forms and Jotform as individual platforms, let's
 
 ## Feature-Wise Comparison of Google Forms and Jotform
 
+![Infographic showing: Feature-Wise Comparison of Google Forms and Jotform: 1. Form Building: Google Forms: a) Simple interface, basic question types b) Limited customization options | Jotform: a) Drag-and-drop builder, advanced question types b) Extensive customization options, including layout control and custom CSS 2. Advanced Logic: Google Forms: a) Limited conditional logic support | Jotform: a) Extensive conditional logic capabilities b) Advanced calculations within the form 3. Integrations: Google Forms: a) Integrates with Google services and offers add-ons for third-party integrations | Jotform: a) Native integrations, reducing the need for external add-ons](/img/google-formvsjotform.png "Feature-Wise Comparison of Google Forms and Jotform: 1. Form Building 2. Advanced Logic 3. Integrations")
+
 ### 1. Form Building and Customization
 
 **Google Forms:** Provides a simple and user-friendly interface for creating forms. While it offers a variety of form-field/question types such as multiple choice, short answer, dropdowns, checkboxes, and more.
