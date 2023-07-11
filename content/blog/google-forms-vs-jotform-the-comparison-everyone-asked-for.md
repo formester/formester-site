@@ -237,7 +237,7 @@ This means users can access and utilize these features directly within the Jotfo
 
 Jotform's extensive list of native features saves time, money and effort in searching and installing separate add-ons.
 
-![Infographic showing: Feature-Wise Comparison of Google Forms and Jotform:  4. Collaboration and User Management: Google Forms: Basic collaboration features, user management options | Jotform: Robust collaboration features, task assignment, user permissions  5. Data Analysis and Reporting: Google Forms: Basic data analysis tools, automatic summary charts and graphs | Jotform: Advanced reporting features, visual analytics, customized reports 6. Automation: Google Forms: Basic automation through integrations with Google services | Jotform: Advanced form triggers, automated actions, email notifications](/img/google-formvsjotform-1.png "Feature-Wise Comparison of Google Forms and Jotform:  4. Collaboration and User Management 5. Data Analysis and Reporting 6. Automation")
+![Infographic showing: Feature-Wise Comparison of Google Forms and Jotform:  4. Collaboration and User Management: Google Forms: Basic collaboration features, user management options | Jotform: Robust collaboration features, task assignment, user permissions  5. Data Analysis and Reporting: Google Forms: Basic data analysis tools, automatic summary charts and graphs | Jotform: Advanced reporting features, visual analytics, customized reports 6. Automation: Google Forms: Basic automation through integrations with Google services | Jotform: Advanced form triggers, automated actions, email notifications](/img/google-formvsjotform-1.png "Feature-Wise Comparison of Google Forms and Jotform: 4. Collaboration and User Management 5. Data Analysis and Reporting 6. Automation")
 
 ### 4. Collaboration and User Management
 
@@ -293,6 +293,8 @@ Users can also configure email notifications to be sent to specific recipients, 
 
 ![Screenshot showing: Jotform's Workflow Automation ](/img/google-forms-vs-jotform-15-.png "Jotform's Workflow Automation ")
 
+![Infographic showing: Feature-Wise Comparison of Google Forms and Jotform: 7. Mobile-Friendly Forms: Google Forms: Optimized for mobile devices | Jotform: Responsive and mobile-friendly forms 8. File Uploads: Google Forms: Allows file uploads, stored in Google Drive | Jotform: File upload functionality with additional features, storage options  9. Payment Integration: Google Forms: No native payment integration, indirect options available | Jotform: Built-in payment integration options, supports popular payment processors](/img/google-formvsjotform-2.png "Feature-Wise Comparison of Google Forms and Jotform: 7. Mobile-Friendly Forms 8. File Uploads 9. Payment Integration")
+
 ### 7. Mobile-Friendly Forms
 
 **Google Forms:** Google Forms is optimized for mobile devices, allowing respondents to easily fill out forms on smartphones and tablets. The forms automatically adjust to different screen sizes for a seamless user experience.
@@ -331,6 +333,8 @@ This flexibility allows for seamless file collection and management within your 
 
 Jotform integrates with popular payment processors like PayPal, Stripe, Square, and more, providing a convenient solution for collecting payments online.
 
+![Infographic showing: Feature-Wise Comparison of Google Forms and Jotform: 10. Access Control: Google Forms: Basic access control options, user authentication | Jotform: Advanced form access control features, password protection, form expiration, restrictions based on criteria  11. Form Widgets and Apps: Google Forms: Limited set of basic form elements and widgets | Jotform: Extensive library of advanced form widgets and apps](/img/google-formvsjotform-3.png "Feature-Wise Comparison of Google Forms and Jotform: 10. Access Control 11. Form Widgets and Apps")
+
 ### 10. Form Access Control
 
 **Google Forms:** Google Forms provides access control by requiring respondents to sign in with their Google accounts to access and submit forms. 
@@ -352,6 +356,8 @@ Additionally, specific users or groups within the users' organization, can be re
 **Jotform:** Provides an [extensive library of advanced form widgets](https://www.jotform.com/widgets/) and apps, including electronic signatures, image sliders, interactive maps, social media integrations, and more, allowing for enhanced form functionality and user engagement.
 
 ![Screenshot showing: Jotform's Widgets ](/img/google-forms-vs-jotform-25-.png "Jotform's Widgets")
+
+![Infographic showing: Feature-Wise Comparison of Google Forms and Jotform: 12. Form Templates: Google Forms: Collection of basic form templates | Jotform: Vast selection of professionally designed templates across industries and use cases 13. Pricing: Google Forms: Free with no limitations | Jotform: Free plan with basic features, paid plans with additional features and increased limits](/img/google-formvsjotform-4.png "Infographic showing: Feature-Wise Comparison of Google Forms and Jotform: 12. Form Templates 13. Pricing")
 
 ### 12. Form Templates
 
