@@ -237,6 +237,8 @@ This means users can access and utilize these features directly within the Jotfo
 
 Jotform's extensive list of native features saves time, money and effort in searching and installing separate add-ons.
 
+![Infographic showing: Feature-Wise Comparison of Google Forms and Jotform:  4. Collaboration and User Management: Google Forms: Basic collaboration features, user management options | Jotform: Robust collaboration features, task assignment, user permissions  5. Data Analysis and Reporting: Google Forms: Basic data analysis tools, automatic summary charts and graphs | Jotform: Advanced reporting features, visual analytics, customized reports 6. Automation: Google Forms: Basic automation through integrations with Google services | Jotform: Advanced form triggers, automated actions, email notifications](/img/google-formvsjotform-1.png "Feature-Wise Comparison of Google Forms and Jotform:  4. Collaboration and User Management 5. Data Analysis and Reporting 6. Automation")
+
 ### 4. Collaboration and User Management
 
 **Google Forms:** [Google Forms allows for basic collaboration](https://support.google.com/docs/answer/2917111?hl=en) among multiple users. 
