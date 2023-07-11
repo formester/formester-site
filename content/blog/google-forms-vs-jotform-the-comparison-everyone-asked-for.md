@@ -408,6 +408,8 @@ Exploring the practical applications and potential limitations of the form-build
 
 ### Best Use-Cases of Google Forms
 
+![Infographic showing: Best Use-Cases of Google Forms: 1. Surveys and Feedback 2. Event Registration and RSVPs 3. Quizzes and Assessments](/img/best-use-cases-of-google-forms.png "Best Use-Cases of Google Forms")
+
 #### 1. Surveys and Feedback
 
 Google Forms is an excellent choice for [conducting surveys](https://formester.com/blog/how-to-create-the-perfect-product-map-using-surveys-in-2023/), [collecting feedback from customers or employees](https://formester.com/blog/employee-engagement-surveys-the-complete-guide-to-the-what-why-and-how/), and [gathering data for market research](https://formester.com/blog/how-branded-surveys-can-help-you-unlock-your-brand%E2%80%99s-potential/). 
@@ -428,6 +430,8 @@ In other words, make the quiz timed!
 Moreover, the automatic grading feature saves time and provides instant feedback to respondents.
 
 ### Limitations of Google Forms
+
+![Infographic showing: Limitations of Google Forms: 1. Limited Customization 2. Advanced Features 3. Limited Third-Party Integrations 4. Branding Limitations](/img/limitations-of-google-forms_-google-forms-vs-jotform.png "Limitations of Google Forms")
 
 #### 1. Limited Customization
 
@@ -451,6 +455,8 @@ Google Forms prominently displays the Google logo and branding, which may not al
 
 ### Best Use-Cases of Jotform
 
+![Infographic showing: Best Use-Cases of Jotform: 1. Application and Appointment Scheduling Forms 2. Payment Collection and Order Forms 3. Volunteer and Membership Forms](/img/best-use-cases-of-jotform.png "Best Use-Cases of Jotform")
+
 #### 1. Application and Appointment Scheduling Forms
 
 Jotform is commonly used for creating application forms, membership registrations, or enrollment forms. Its advanced customization options allow you to design forms that align with your specific branding and collect information tailored to your application process.
@@ -466,6 +472,8 @@ Jotform's built-in payment integration features make it suitable for creating [f
 Jotform simplifies the process of managing volunteers and memberships. Organizations can create forms to collect volunteer availability, skills, and preferences. Similarly, membership forms can capture member information, process payments, and automate membership renewals.
 
 ### Limitations of Jotform
+
+![Infographic showing: Limitations of Jotform: 1. Pricing 2. Form Complexity 3. Dependency on Third-Party Integrations 4. Learning Curve](/img/limitations-of-jotform.png "Limitations of Jotform")
 
 #### 1. Pricing
 
@@ -520,6 +528,8 @@ It can sometimes fail to cater to forms that require advanced logic.
 On the other hand, while Jotform offers a wide range of functionalities, it might not be compatible with the users' budgets sometimes.
 
 Hence to strike a balance between **Sleek UX, Simplicity, Advanced  Functionalities and Economic Budgets**;
+
+![Infographic showing: Why Should You Switch to Formester?: Formester strikes the right balance between: 1. Sleek UX  2. Simplicity 3. Advanced Functionalities 4. Economic Budgets](/img/why-should-you-switch-to-formester_.png "Why Should You Switch to Formester?")
 
 Arrives Formester! A [no-code, intuitive and user-friendly form-builder, with a drag-and-drop approach to form-designing](https://formester.com/)!
 
