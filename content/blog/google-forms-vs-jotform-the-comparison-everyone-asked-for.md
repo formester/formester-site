@@ -61,6 +61,8 @@ So, let's get started and find the perfect form-building solution for you!
 
 ### What makes Google Forms unique from Jotform?
 
+![Infographic showing: What makes Google Forms unique from Jotform?: 1. Free and Accessible 2. User-Friendly Interface 3. Native Integration with Google Workspace 4. Real-time Collaboration 5. Offline Form Completion 6. Add-ons and Scripting 7. Voice Typing 8. Trust and Reliability 9. Data Security](/img/what-makes-google-forms-unique-from-jotform_.png "What makes Google Forms unique from Jotform?")
+
 Google Forms has several unique features and advantages that set it apart from Jotform:
 
 #### 1. Free and Accessible
@@ -116,6 +118,8 @@ Moreover, options such as restricting form access to specific users or requiring
 ![Screenshot showing: Jotform's Home-page](/img/google-forms-vs-jotform-2-.png "Jotform's Home-page")
 
 ### What makes Jotform unique from Google Forms?
+
+![Infographic showing: What makes Jotform unique from Google Forms?: 1. Advanced Customization Options 2. Advanced Form Building Features 3. Integration with Third-Party Applications 4. Workflow Automation  5. Payment Processing 6. Advanced Reporting and Analytics 7. Form Widgets and Apps 8. Extensive Template Library 9. Customer Support and Resources](/img/what-makes-jotform-unique-from-google-forms_.png "What makes Jotform unique from Google Forms?")
 
 Jotform has several unique features and advantages that differentiate it from Google Forms:
 
