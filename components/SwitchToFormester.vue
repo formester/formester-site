@@ -9,11 +9,12 @@
             <div v-for="(feature, idx) in features" :key="idx">
                 <NuxtLink :to="`/${feature.link}/`">
                     <div class="card p-4 d-flex align-items-center justify-items-center text-center align-items-md-start text-md-start">
-                        <img
-                            :src="require(`../assets/images/${feature.imageSrc}`)"
+                        <nuxt-img
+                            :src="`/${feature.imageSrc}`"
                             class="img-fluid"
                             style="width: 69px;"
                             :alt="feature.altText"
+                            loading="lazy"
                         />
                         <h4 class="sub__section-heading mt-4">{{ feature.title }}</h4>
                         <p  class="subheading__text">{{ feature.description }}</p>

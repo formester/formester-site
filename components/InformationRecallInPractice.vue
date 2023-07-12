@@ -48,10 +48,11 @@
                 >
               </div>
               <div class="col-lg-5 m-auto">
-                <img
-                  src="@/assets/images/features/three-steps-create-form/step1.svg"
+                <nuxt-img
+                  src="/features/three-steps-create-form/step1.svg"
                   class="w-lg-40 d-block img-fluid my-auto"
                   alt="build your form easy with formester form builder"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -73,10 +74,11 @@
                 >
               </div>
               <div class="col-lg-5 m-auto">
-                <img
-                  src="@/assets/images/features/information-recall-in-practice/step_information_recall.svg"
+                <nuxt-img
+                  src="/features/information-recall-in-practice/step_information_recall.svg"
                   class="w-lg-40 d-block img-fluid my-auto"
                   alt="share your form"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -96,10 +98,11 @@
                 >
               </div>
               <div class="col-lg-5 m-auto">
-                <img
-                  src="@/assets/images/features/three-steps-create-form/step3.svg"
+                <nuxt-img
+                  src="/features/three-steps-create-form/step3.svg"
                   class="w-lg-40 d-block img-fluid my-auto"
                   alt="Third slide"
+                  loading="lazy" 
                 />
               </div>
             </div>

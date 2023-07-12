@@ -22,8 +22,8 @@
           <div
             class="col-lg-6 d-flex align-items-center justify-content-center mt-lg-0 mt-5"
           >
-            <img
-              src="@/assets/images/integration-hero.png"
+            <nuxt-img
+              src="/integration-hero.png"
               alt="Hero-Image"
               class="img-fluid hero__image"
             />

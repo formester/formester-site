@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex flex-column align-items-start">
     <div class="img__box">
-      <img :src="require(`@/assets/images/integrations/${app.img}`)" />
+      <nuxt-img :src="`/integrations/${app.img}`" />
     </div>
     <h5 class="mt-4 app__name">{{ app.name }}</h5>
     <p>{{ app.desc }}</p>

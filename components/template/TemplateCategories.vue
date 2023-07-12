@@ -6,9 +6,9 @@
       data-bs-target="#categories"
     >
       <h1 class="category-heading">Category</h1>
-      <img
+      <nuxt-img
         class="category-menu-btn"
-        src="@/assets/images/filter_icon.svg"
+        src="/filter_icon.svg"
         alt="category-menu-button"
       />
     </div>

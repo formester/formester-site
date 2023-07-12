@@ -22,8 +22,8 @@
           <div
             class="col-lg-7 d-flex align-items-center justify-content-center mt-lg-0 mt-5"
           >
-            <img
-              src="@/assets/images/features/html-form-backend/easy-web-form.svg"
+            <nuxt-img
+              src="/features/html-form-backend/easy-web-form.svg"
               alt="Hero-Image"
               class="img-fluid hero__image"
             />

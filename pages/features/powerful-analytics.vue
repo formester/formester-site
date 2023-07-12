@@ -21,8 +21,8 @@
           <div
             class="col-lg-7 d-flex align-items-center justify-content-center mt-lg-0 mt-5"
           >
-            <img
-              src="@/assets/images/features/powerful-analytics/powerful-analytics.svg"
+            <nuxt-img
+              src="/features/powerful-analytics/powerful-analytics.svg"
               alt="Hero-Image"
               class="img-fluid hero__image"
             />

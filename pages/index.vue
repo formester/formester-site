@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Hero heading="some" subtitle="some" />
+    <Hero />
     <TrustSeals />
     <Testimonials />
     <FeatureList />

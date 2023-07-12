@@ -8,8 +8,8 @@
         <div class="templates mt-md-5">
             <div v-for="(feature, idx) in features" :key="idx">
                 <div class="card p-3 d-flex align-items-center justify-items-center text-center align-items-md-start text-md-start">
-                    <img
-                        :src="require(`../assets/images/${feature.imageSrc}`)"
+                    <nuxt-img
+                        :src="`/${feature.imageSrc}`"
                         class="img-fluid web__form-image"
                         style="width: 120px;"
                         :alt="feature.altText"

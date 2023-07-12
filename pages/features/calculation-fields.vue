@@ -23,8 +23,8 @@
           <div
             class="col-lg-7 d-flex align-items-center justify-content-center mt-lg-0 mt-5"
           >
-            <img
-              src="@/assets/images/features/calculation/calculation.svg"
+            <nuxt-img
+              src="/features/calculation/calculation.svg"
               alt="Hero-Image"
               class="img-fluid hero__image"
             />
@@ -63,11 +63,12 @@
             <div
               class="card p-3 d-flex align-items-center justify-items-center text-center align-items-md-start text-md-start"
             >
-              <img
-                :src="require(`@/assets/images/icons/${benefit.imageSrc}`)"
+              <nuxt-img
+                :src="`/icons/${benefit.imageSrc}`"
                 class="img-fluid"
                 style="width: 69px"
                 :alt="benefit.altText"
+                loading="lazy"
               />
               <h4 class="sub__section-heading mt-4">{{ benefit.title }}</h4>
               <p class="subheading__text">{{ benefit.description }}</p>

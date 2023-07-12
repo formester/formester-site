@@ -1,9 +1,10 @@
 <template>
   <div class="px-5">
-    <img
-      :src="require(`../assets/images/features/${feature.src}`)"
+    <nuxt-img
+      :src="`/features/${feature.src}`"
       class="img-fluid"
       :alt="feature.alt"
+      loading="lazy"
     />
     <h3 class="feature__heading">{{ feature.title }}</h3>
     <p>

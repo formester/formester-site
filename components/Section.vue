@@ -19,8 +19,8 @@
         <a v-if="feature.link" href="" class="feature__button">Learn more</a>
       </div>
       <div class="col-md-6 d-flex justify-content-center mt-md-0 mt-5">
-        <img
-          :src="require(`../assets/images/${feature.imgName}`)"
+        <nuxt-img
+          :src="`/${feature.imgName}`"
           alt="Formester integration with different apps"
           class="img-fluid"
         />

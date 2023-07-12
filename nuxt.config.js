@@ -96,10 +96,11 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxt/image',
     // [
     //   '@nuxtjs/google-analytics',
     //   {
-    //     id: 'UA-99986844-1',
+    //     id: 'UA-99986844-1', 
     //   },
     // ],
   ],
@@ -156,6 +157,11 @@ export default {
   },
   content: {
     liveEdit: false,
+  },
+
+  // Nuxt Image
+  image: {
+    dir: 'assets/images'
   },
 
   // Enviornment variable for the base url of the app

@@ -42,10 +42,11 @@
                 </NuxtLink>
               </div>
             </div>
-            <img
-              src="@/assets/images/plane.png"
+            <nuxt-img
+              src="/plane.png"
               alt="plane image on call to action section"
               class="plane position-absolute"
+              loading="lazy"
             />
           </div>
         </div>

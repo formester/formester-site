@@ -3,23 +3,35 @@
     <h1 class="message">Oops</h1>
     <h4 class="message-detail">404, you seems to be lost</h4>
     <button class="navigate-btn" @click="$router.push('/')">Home</button>
-    <img
+    <nuxt-img
       class="abs corner-design"
-      src="../assets/images/error/design-404.png"
+      src="/error/design-404.png"
       alt=""
     />
-    <img class="abs q1" src="../assets/images/error/q-mark-1.png" alt="" />
-    <img class="abs q2" src="../assets/images/error/q-mark-2.png" alt="" />
-    <img class="abs q3" src="../assets/images/error/q-mark-3.png" alt="" />
-    <img class="abs q4" src="../assets/images/error/q-mark-4.png" alt="" />
-    <img class="abs q5" src="../assets/images/error/q-mark-5.png" alt="" />
-    <img class="abs q6" src="../assets/images/error/q-mark-6.png" alt="" />
-    <img class="abs q7" src="../assets/images/error/q-mark-7.png" alt="" />
-    <img class="abs q8" src="../assets/images/error/q-mark-8.png" alt="" />
-    <img class="abs q9" src="../assets/images/error/q-mark-9.png" alt="" />
-    <img class="abs q10" src="../assets/images/error/q-mark-10.png" alt="" />
-    <img class="abs q11" src="../assets/images/error/q-mark-11.png" alt="" />
-    <img class="abs q12" src="../assets/images/error/q-mark-12.png" alt="" />
+    <nuxt-img class="abs q1" src="/error/q-mark-1.png" alt="" />
+    <nuxt-img class="abs q2" src="/error/q-mark-2.png" alt="" />
+    <nuxt-img class="abs q3" src="/error/q-mark-3.png" alt="" />
+    <nuxt-img class="abs q4" src="/error/q-mark-4.png" alt="" />
+    <nuxt-img class="abs q5" src="/error/q-mark-5.png" alt="" />
+    <nuxt-img class="abs q6" src="/error/q-mark-6.png" alt="" />
+    <nuxt-img class="abs q7" src="/error/q-mark-7.png" alt="" />
+    <nuxt-img class="abs q8" src="/error/q-mark-8.png" alt="" />
+    <nuxt-img class="abs q9" src="/error/q-mark-9.png" alt="" />
+    <nuxt-img
+      class="abs q10"
+      src="/error/q-mark-10.png"
+      alt=""
+    />
+    <nuxt-img
+      class="abs q11"
+      src="/error/q-mark-11.png"
+      alt=""
+    />
+    <nuxt-img
+      class="abs q12"
+      src="/error/q-mark-12.png"
+      alt=""
+    />
   </div>
 </template>
 
