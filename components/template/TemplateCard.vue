@@ -43,7 +43,8 @@ export default {
   border-radius: 4px;
   padding: 12px;
   transition: all 500ms ease;
-  box-shadow: 0px 0px 10px 0px rgba(79, 56, 149, 0.15);
+  /* box-shadow: 0px 0px 10px 0px rgba(79, 56, 149, 0.15); */
+  border: 1px solid #f0f0f0;
   min-height: 130px;
 }
 
