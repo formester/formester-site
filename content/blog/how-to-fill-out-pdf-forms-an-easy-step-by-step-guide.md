@@ -27,9 +27,13 @@ Everyone knows how easy it is to convert a Word document into a PDF and vice-ver
 
 (And also make memes about it!)
 
+![Funny meme about how easy it is to convert a PDF to a Word Document!](/img/how-to-fill-out-pdf-forms_-an-easy-step-by-step-guide_meme.png "Why do people hate millennials?")
+
 But the same isn't true when it comes to filling out or editing PDF web forms or documents.
 
 (When you receive the offer letter; But it's in a PDF format and you don't know how to sign it!)
+
+![Funny meme showing: Converting a Doc to PDF Vs Editing a PDF](/img/how-to-fill-out-pdf-forms_-an-easy-step-by-step-guide-2-.png "Converting a Doc to PDF Vs Editing a PDF")
 
 Today's blog is here to save you from situations such as the above.
 
@@ -133,13 +137,21 @@ You may either save the PDF form by downloading it on your device or directly op
 
 Select the PDF Form you want to fill out, and **right-click** on the same.
 
+![Screenshot showing: Select the PDF Form you want to fill out, and right-click on the same](/img/how-to-fill-out-pdf-forms_-an-easy-step-by-step-guide-3-.png "Select the PDF Form you want to fill out, and right-click on the same")
+
 Now click on the **Open with** button and from the drop-down select **Adobe Acrobat Reader**.
+
+![Screenshot showing: The Open with button > Adobe Acrobat Reader](/img/how-to-fill-out-pdf-forms_-an-easy-step-by-step-guide-4-.png "The Open with button > Adobe Acrobat Reader")
 
 #### Step 2: Fill out your Form
 
 Once you've opened your PDF form in the Adobe Acrobat Reader, from the **right pane**, select the **Fill & Sign** tool.
 
+![Screenshot showing: The right pane > Fill & Sign tool](/img/how-to-fill-out-pdf-forms_-an-easy-step-by-step-guide-5-.png "The right pane > Fill & Sign tool")
+
 Now considering that the form has been made fillable, or editable for specific, required fields, you'll be able to click into such fields and enter your information.
+
+![Screenshot showing: Form edits being made by a user](/img/how-to-fill-out-pdf-forms_-an-easy-step-by-step-guide-6-.png "Form edits being made by a user")
 
 Users can also **add checkmarks** and **fill in radio buttons**.
 
@@ -150,6 +162,8 @@ Users can also **add checkmarks** and **fill in radio buttons**.
 If your form requires you to add your signature, from the **toolbar**, click **Sign**. 
 
 Users then have the option to **draw**, **type**, or **choose an image** for their signature. 
+
+![Screenshot showing: Signature Insertion](/img/how-to-fill-out-pdf-forms_-an-easy-step-by-step-guide-7-.png "Signature Insertion")
 
 Next, click **Apply** to place your signature on the form.
 
@@ -183,9 +197,15 @@ From the drop-down menu, if **Word** (MS-Word) is directly available, select it.
 
 If not, click **Choose another app**.
 
+![Screenshot showing: Right click > Choose another app](/img/how-to-fill-out-pdf-forms_-an-easy-step-by-step-guide-8-.png "Right click > Choose another app")
+
 Under the **More Options** section, scroll until you see Word, and then click OK.  
 
+![Screenshot showing: More Options > Word > OK](/img/how-to-fill-out-pdf-forms_-an-easy-step-by-step-guide-9-.png "More Options > Word > OK")
+
 Now, you'll see a dialog box that asks permission to convert the PDF to Word. Click **OK**;
+
+![Screenshot showing: Dialog box asking permission to convert the PDF to Word & OK button](/img/how-to-fill-out-pdf-forms_-an-easy-step-by-step-guide-10-.png "Dialog box asking permission to convert the PDF to Word & OK button")
 
 And Word will now automatically start converting your PDF to a Word Document.
 
@@ -193,15 +213,21 @@ And Word will now automatically start converting your PDF to a Word Document.
 
 Once you've obtained the PDF in a Word format, you may edit and fill out the fields as required.
 
+![Screenshot showing: The PDF Form in a Word format](/img/how-to-fill-out-pdf-forms_-an-easy-step-by-step-guide-11-.png "The PDF Form in a Word format")
+
 #### Step 3: Export as PDF
 
 Once you've added and edited your required details, click on **File > Export > Create PDF/XPS**.
+
+![Screenshot showing: File > Export > Create PDF/XPS](/img/how-to-fill-out-pdf-forms_-an-easy-step-by-step-guide-12-.png "File > Export > Create PDF/XPS")
 
 Select the location in your device, where you want the exported/published PDF to be saved.
 
 Also, give the document a suitable name.
 
 And, that's it, your PDF form is ready for sharing and submissions!
+
+![Screenshot showing: Word Document re-converted into a PDF format](/img/how-to-fill-out-pdf-forms_-an-easy-step-by-step-guide-13-.png "Word Document re-converted into a PDF format")
 
 However, converting a PDF form into a Word document has potential issues to consider.
 
@@ -244,6 +270,8 @@ At Formester, we specialize in all things form-building! Our platform offers you
 Excitingly, we are expanding our features to include PDF capabilities! 
 
 This means that in addition to [Formester's existing form-building functionalities](https://formester.com/features/), you will soon be able to leverage our platform to work with PDF forms as well. 
+
+![Screenshot showing: Formester's Home-page](/img/fill-out-a-pdf-form_formester-homepage.png "Formester's Home-page")
 
 We understand the importance of PDF forms in various domains, and we are dedicated to providing you with the tools you need to streamline your PDF form creation and management processes.
 
