@@ -165,7 +165,7 @@ After reviewing your responses, save the completed form to your device.
 It's wise to rename the file to reflect its content and to prevent any confusion later. \
 Additionally, if the form contains sensitive information, consider encrypting or password-protecting the PDF to ensure its security.
 
-#### Step 6: Submitting or Sharing the Form:
+#### Step 6: Submitting or Sharing the Form
 
 After you have filled out the form, depending on the purpose of the form, you may need to submit or share it with others. 
 
