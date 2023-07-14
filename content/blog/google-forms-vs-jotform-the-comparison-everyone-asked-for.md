@@ -473,7 +473,7 @@ Jotform simplifies the process of managing volunteers and memberships. Organizat
 
 ### Limitations of Jotform
 
-![Infographic showing: Limitations of Jotform: 1. Pricing 2. Form Complexity 3. Dependency on Third-Party Integrations 4. Learning Curve](/img/limitations-of-jotform.png "Limitations of Jotform")
+![Infographic showing: Limitations of Jotform: 1. Pricing 2. Form Complexity 3. Dependency on Third-Party Integrations 4. Learning Curve](/img/limitations-of-jotform_google-forms-vs-jotform_updated.png "Limitations of Jotform")
 
 #### 1. Pricing
 
