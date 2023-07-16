@@ -21,8 +21,8 @@
           <div
             class="col-lg-7 d-flex align-items-center justify-content-center mt-lg-0 mt-5"
           >
-            <img
-              src="@/assets/images/features/spam-protection/spam-protection.svg"
+            <nuxt-img
+              src="/features/spam-protection/spam-protection.svg"
               alt="Hero-Image"
               class="img-fluid hero__image"
             />

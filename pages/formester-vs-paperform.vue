@@ -27,8 +27,8 @@
           <div
             class="col-lg-7 d-flex align-items-center justify-content-center"
           >
-            <img
-              src="@/assets/images/formester-vs-page-hero-img.svg"
+            <nuxt-img
+              src="/formester-vs-page-hero-img.svg"
               alt="Formester form building with drag and drop interface"
               class="img-fluid hero__image"
             />
@@ -137,10 +137,11 @@
           </div>
         </div>
         <div class="col-md-7">
-          <img
+          <nuxt-img
             class="img-fluid"
-            src="@/assets/images/create-solution-with-formester.svg"
+            src="/create-solution-with-formester.svg"
             alt="Create Design with Formester"
+            loading="lazy"
           />
         </div>
       </div>
@@ -159,10 +160,11 @@
         <div
           class="gradient-testimonial__container text-start position-relative"
         >
-          <img
-            src="@/assets/images/quotes.svg"
+          <nuxt-img
+            src="/quotes.svg"
             alt="Quotes Watermark"
             class="quotes__watermark position-absolute"
+            loading="lazy"
           />
           <p class="testimonial__content">
             I really enjoy Formester. It’s clean and straightforward and it does
@@ -171,19 +173,20 @@
           <div class="d-flex flex-column mt-4">
             <span class="testimonial__person--name">Thibaud Martinez</span>
             <span class="testimonial__person--post mt-2">Organizer</span>
-            <img
-              src="~/assets/images/tedx.png"
+            <nuxt-img
+              src="/tedx.png"
               alt="Tedx Paris Organizer"
               width="110"
               class="company__logo mt-4"
+              loading="lazy"
             />
           </div>
         </div>
         <div
           class="gradient-testimonial__container text-start position-relative"
         >
-          <img
-            src="@/assets/images/quotes.svg"
+          <nuxt-img
+            src="/quotes.svg"
             alt="Quotes Watermark"
             class="quotes__watermark position-absolute"
           />
@@ -196,11 +199,12 @@
             <span class="testimonial__person--post mt-2"
               >Chief Technology Officer</span
             >
-            <img
-              src="~/assets/images/rumie.svg"
+            <nuxt-img
+              src="/rumie.svg"
               alt="Rumie Logo"
               width="150"
               class="company__logo mt-4"
+              loading="lazy"
             />
           </div>
         </div>

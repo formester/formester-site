@@ -17,11 +17,10 @@
                 :class="{ active: active === testimonial.id }"
                 @click="updateActive(testimonial.id)"
               >
-                <img
-                  :src="
-                    require(`~/assets/images/testimonials/${testimonial.picture}`)
-                  "
+                <nuxt-img
+                  :src="`/testimonials/${testimonial.picture}`"
                   :alt="testimonial.picture"
+                  loading="lazy"
                 />
                 <div>
                   <h6 class="name">{{ testimonial.user }}</h6>
@@ -34,23 +33,24 @@
         <div class="testimonial-content-wrapper">
           <p class="mb-3">{{ activeTestimonial.content }}</p>
           <div class="d-flex justify-content-end">
-            <img
-              :src="
-                require(`~/assets/images/testimonials/${activeTestimonial.logo}`)
-              "
+            <nuxt-img
+              :src="`/testimonials/${activeTestimonial.logo}`"
               :alt="activeTestimonial.logoAlt"
+              loading="lazy"
             />
           </div>
-          <img
-            src="~/assets/images/testimonials/quotation.svg"
+          <nuxt-img
+            src="/testimonials/quotation.svg"
             class="quotation-marks"
             alt="Quotation marks"
+            loading="lazy"
           />
         </div>
-        <img
-          src="~/assets/images/testimonials/quote.svg"
+        <nuxt-img
+          src="/testimonials/quote.svg"
           class="quote-illustraion"
           alt="Quote illustration"
+          loading="lazy"
         />
       </div>
       <!-- Mobile view -->
@@ -87,11 +87,10 @@
               <div class="mobile-testimonial-wrapper">
                 <p class="content">{{ testimonial.content }}</p>
                 <div class="user d-flex align-items-center">
-                  <img
-                    :src="
-                      require(`~/assets/images/testimonials/${testimonial.picture}`)
-                    "
+                  <nuxt-img
+                    :src="`/testimonials/${testimonial.picture}`"
                     :alt="testimonial.picture"
+                    loading="lazy"
                   />
                   <div>
                     <h6 class="name">{{ testimonial.user }}</h6>

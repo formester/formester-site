@@ -22,8 +22,8 @@
           <div
             class="col-lg-7 d-flex align-items-center justify-content-center mt-lg-0 mt-5"
           >
-            <img
-              src="@/assets/images/features/auto-responder/auto-responder-message.svg"
+            <nuxt-img
+              src="/features/auto-responder/auto-responder-message.svg"
               alt="Hero-Image"
               class="img-fluid hero__image"
             />
@@ -49,9 +49,9 @@
           <div
             class="d-flex flex-column align-items-center align-items-md-start text-center text-md-start px-4 col-md-4 my-3 mt-lg-5"
           >
-            <img
+            <nuxt-img
               style="width: 69px"
-              src="@/assets/images/round-access-time.jpg"
+              src="/round-access-time.jpg"
               alt="Formester"
             />
             <h4 class="sub__section-heading mt-4">Time-saving</h4>
@@ -64,9 +64,9 @@
           <div
             class="d-flex flex-column align-items-center align-items-md-start text-center text-md-start px-4 col-md-4 my-3 mt-lg-5"
           >
-            <img
+            <nuxt-img
               style="width: 69px"
-              src="@/assets/images/leads.jpg"
+              src="/leads.jpg"
               alt="Formester"
             />
             <h4 class="sub__section-heading mt-4">Lead generation</h4>
@@ -78,9 +78,9 @@
           <div
             class="d-flex flex-column align-items-center align-items-md-start text-center text-md-start px-4 col-md-4 my-3 mt-lg-5"
           >
-            <img
+            <nuxt-img
               style="width: 69px"
-              src="@/assets/images/customer-support.jpg"
+              src="/customer-support.jpg"
               alt="Formester"
             />
             <h4 class="sub__section-heading mt-4">Customer retention</h4>

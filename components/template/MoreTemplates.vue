@@ -11,8 +11,8 @@
     <div class="categories">
       <div class="tab-container">
         <div class="icon pointer">
-          <img
-            src="@/assets/images/arrow-icon.svg"
+          <nuxt-img
+            src="/arrow-icon.svg"
             id="left"
             @click="scrollTabs('left')"
           />
@@ -39,8 +39,8 @@
         </ul>
 
         <div class="icon pointer">
-          <img
-            src="@/assets/images/arrow-icon.svg"
+          <nuxt-img
+            src="/arrow-icon.svg"
             id="right"
             @click="scrollTabs('right')"
           />
@@ -60,10 +60,10 @@
               :src="template.previewImageUrl"
               :alt="template.name"
             />
-            <img
+            <nuxt-img
               v-else
               class="img-fluid"
-              src="@/assets/images/templates/create_form.png"
+              src="/templates/create_form.png"
               alt="Template placeholder image"
             />
             <h2 class="template-name pointer">

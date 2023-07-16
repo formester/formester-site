@@ -8,11 +8,12 @@
         <div class="templates mt-md-5">
             <div v-for="(feature, idx) in features" :key="idx">
                     <div class="card p-3 d-flex align-items-center justify-items-center text-center align-items-md-start text-md-start">
-                        <img
-                            :src="require(`../assets/images/icons/${feature.imageSrc}`)"
+                        <nuxt-img
+                            :src="`/icons/${feature.imageSrc}`"
                             class="img-fluid"
                             style="width: 69px;"
                             :alt="feature.altText"
+                            loading="lazy"
                         />
                         <h4 class="sub__section-heading mt-4">{{ feature.title }}</h4>
                         <p  class="subheading__text">{{ feature.description }}</p>
@@ -29,11 +30,12 @@
         <div class="templates mt-md-5">
             <div v-for="(noSpam, idx) in notHaving" :key="idx">
                     <div class="card p-3 d-flex align-items-center justify-items-center text-center align-items-md-start text-md-start">
-                        <img
-                            :src="require(`../assets/images/icons/${noSpam.imageSrc}`)"
+                        <nuxt-img
+                            :src="`/icons/${noSpam.imageSrc}`"
                             class="img-fluid no__sapm-image"
                             style="width: 120px;"
                             :alt="noSpam.altText"
+                            loading="lazy"
                         />
                         <h4 class="sub__section-heading mt-4">{{ noSpam.title }}</h4>
                         <p  class="subheading__text">{{ noSpam.description }}</p>

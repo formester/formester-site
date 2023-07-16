@@ -1,9 +1,9 @@
 <template>
   <div v-show="showPreviewModal" class="preview-modal">
     <!-- Close Button -->
-    <img
+    <nuxt-img
       class="close-modal pointer"
-      src="@/assets/images/close-icon.svg"
+      src="/close-icon.svg"
       alt="close-button"
       @click="$emit('close-modal')"
     />

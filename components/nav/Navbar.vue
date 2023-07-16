@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container">
       <NuxtLink class="navbar-brand" to="/">
-        <img src="@/assets/images/logo.svg" alt="Formester" />
+        <nuxt-img src="/logo.svg" alt="Formester" />
       </NuxtLink>
       <button
         class="navbar-toggler"
@@ -13,7 +13,7 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <img src="@/assets/images/toggle.svg" alt="Nav-menu-button" />
+        <nuxt-img src="/toggle.svg" alt="Nav-menu-button" />
       </button>
       <div
         class="collapse navbar-collapse"
@@ -40,17 +40,26 @@
             </NuxtLink>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>
-                <NuxtLink class="dropdown-item" to="/features/html-form-backend/" @click="collapseNav"
+                <NuxtLink
+                  class="dropdown-item"
+                  to="/features/html-form-backend/"
+                  @click="collapseNav"
                   >HTML Form Backend</NuxtLink
                 >
               </li>
               <li>
-                <NuxtLink class="dropdown-item" to="/features/auto-responder/" @click="collapseNav"
+                <NuxtLink
+                  class="dropdown-item"
+                  to="/features/auto-responder/"
+                  @click="collapseNav"
                   >Auto Responder
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink class="dropdown-item" to="/features/spam-protection/" @click="collapseNav"
+                <NuxtLink
+                  class="dropdown-item"
+                  to="/features/spam-protection/"
+                  @click="collapseNav"
                   >Spam Protection</NuxtLink
                 >
               </li>
@@ -63,32 +72,50 @@
                 >
               </li>
               <li>
-                <NuxtLink class="dropdown-item" to="/features/conditional-logic/" @click="collapseNav"
+                <NuxtLink
+                  class="dropdown-item"
+                  to="/features/conditional-logic/"
+                  @click="collapseNav"
                   >Conditional Logic</NuxtLink
                 >
               </li>
               <li>
-                <NuxtLink class="dropdown-item" to="/features/online-payment/" @click="collapseNav"
+                <NuxtLink
+                  class="dropdown-item"
+                  to="/features/online-payment/"
+                  @click="collapseNav"
                   >Online Payment</NuxtLink
                 >
               </li>
               <li>
-                <NuxtLink class="dropdown-item" to="/features/digital-signature/" @click="collapseNav"
+                <NuxtLink
+                  class="dropdown-item"
+                  to="/features/digital-signature/"
+                  @click="collapseNav"
                   >Digital Signature</NuxtLink
                 >
               </li>
               <li>
-                <NuxtLink class="dropdown-item" to="/features/branding-kit/" @click="collapseNav"
+                <NuxtLink
+                  class="dropdown-item"
+                  to="/features/branding-kit/"
+                  @click="collapseNav"
                   >Branding Kit</NuxtLink
                 >
               </li>
               <li>
-                <NuxtLink class="dropdown-item" to="/features/information-recall/" @click="collapseNav"
+                <NuxtLink
+                  class="dropdown-item"
+                  to="/features/information-recall/"
+                  @click="collapseNav"
                   >Information Recall</NuxtLink
                 >
               </li>
               <li>
-                <NuxtLink class="dropdown-item" to="/features/calculation-fields/" @click="collapseNav"
+                <NuxtLink
+                  class="dropdown-item"
+                  to="/features/calculation-fields/"
+                  @click="collapseNav"
                   >Calculation Fields</NuxtLink
                 >
               </li>
@@ -239,8 +266,8 @@ a.nuxt-link-exact-active {
 @media (max-width: 1199px) {
   .nav-link {
     font-size: 16px;
-    padding-right: 5px!important;
-    padding-left: 5px!important;
+    padding-right: 5px !important;
+    padding-left: 5px !important;
   }
 }
 @media (max-width: 992px) {

@@ -31,8 +31,8 @@
         />
 
         <div class="template__preview-btn d-flex align-itens-center">
-          <img
-            src="@/assets/images/eye-icon.svg"
+          <nuxt-img
+            src="/eye-icon.svg"
             alt="template preview button"
           />
           <span class="template__preview-btn__text">Preview</span>

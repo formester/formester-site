@@ -55,10 +55,11 @@
                 >
               </div>
               <div class="col-lg-5 m-auto">
-                <img
-                  src="@/assets/images/features/calculation-field-in-action/step1.svg"
+                <nuxt-img
+                  src="/features/calculation-field-in-action/step1.svg"
                   class="w-lg-40 d-block img-fluid my-auto"
                   alt="build your form easy with formester form builder"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -75,12 +76,13 @@
                   Simply, drag-and-drop it into your form where you want the
                   calculation to take place.</span
                 >
-              </div>
+              </div> 
               <div class="col-lg-5 m-auto">
-                <img
-                  src="@/assets/images/features/calculation-field-in-action/step2.svg"
+                <nuxt-img
+                  src="/features/calculation-field-in-action/step2.svg"
                   class="w-lg-40 d-block img-fluid my-auto"
                   alt="adding calculation field in the form"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -100,10 +102,11 @@
                 >
               </div>
               <div class="col-lg-5 m-auto">
-                <img
-                  src="@/assets/images/features/calculation-field-in-action/step3.svg"
+                <nuxt-img
+                  src="/features/calculation-field-in-action/step3.svg"
                   class="w-lg-40 d-block img-fluid my-auto"
                   alt="creating formula for the calculation field"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -122,10 +125,11 @@
                 >
               </div>
               <div class="col-lg-5 m-auto">
-                <img
-                  src="@/assets/images/features/calculation-field-in-action/step4.svg"
+                <nuxt-img
+                  src="/features/calculation-field-in-action/step4.svg"
                   class="w-lg-40 d-block img-fluid my-auto"
                   alt="publishing the form"
+                  loading="lazy"
                 />
               </div>
             </div>

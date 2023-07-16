@@ -3,8 +3,8 @@
     <div class="container">
       <div class="trust-seals">
         <div>
-          <img
-            src="~/assets/images/tedx.png"
+          <nuxt-img
+            src="/tedx.png"
             alt="Tedx Paris Organizer"
             width="110"
           />
@@ -38,14 +38,18 @@
         </div>
 
         <div>
-          <img src="~/assets/images/vueconf-black.png" alt="Rumie Logo" />
+          <nuxt-img src="/vueconf-black.png" alt="Rumie Logo" />
         </div>
         <div>
-          <img src="~/assets/images/mayple.png" alt="mayple logo" width="150" />
+          <nuxt-img
+            src="/mayple.png"
+            alt="mayple logo"
+            width="150"
+          />
         </div>
         <div>
-          <img
-            src="~/assets/images/equipment-connect.png"
+          <nuxt-img
+            src="/equipment-connect.png"
             alt="mayple logo"
             width="160"
           />

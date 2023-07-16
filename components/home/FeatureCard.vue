@@ -1,9 +1,10 @@
 <template>
   <div class="px-sm-5 px-3">
-    <img
-      :src="require(`@/assets/images/home/${feature.imgName}`)"
+    <nuxt-img
+      :src="`/home/${feature.imgName}`"
       class="img-fluid"
       :alt="feature.alt"
+      loading="lazy"
     />
     <h3 class="feature__heading" v-html="feature.heading"></h3>
     <p>

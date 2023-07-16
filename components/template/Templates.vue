@@ -15,9 +15,9 @@
         <TemplateCard v-for="(template, idx) in templates" :key="idx" :template="template" />
       </div>
       <div v-else class="no-template">
-        <img
+        <nuxt-img
           class="img-fluid"
-          src="@/assets/images/templates/no-template.svg"
+          src="/templates/no-template.svg"
           alt="No Template Illustration"
         />
         <h4>No Template Available</h4>

@@ -18,13 +18,13 @@
           <div
             class="col-lg-7 d-flex align-items-center justify-content-center mt-lg-0 mt-5"
           >
-            <img
-              src="@/assets/images/features/brand-kit/blob.png"
+            <nuxt-img
+              src="/features/brand-kit/blob.png"
               alt=""
               class="img-fluid branding blob"
             />
-            <img
-              src="@/assets/images/features/brand-kit/brand-kit.png"
+            <nuxt-img
+              src="/features/brand-kit/brand-kit.png"
               alt="Hero-Image"
               class="img-fluid hero__image"
               style="z-index: 2"

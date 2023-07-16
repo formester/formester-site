@@ -7,13 +7,13 @@
       </div>
       <div class="d-flex flex-column flex-lg-row px-3 px-md-0 justify-content-center align-items-center mt-5">
         <div class="card mt-5 mt-lg-1 p-3 me-lg-3" style="max-width: 512px;">
-          <img class="quotes__logo" src="@/assets/images/quotes.svg" alt="">
+          <nuxt-img class="quotes__logo" src="/quotes.svg" alt="" loading="lazy"/>
           <div class="d-flex flex-column align-items-center text-center px-2 ">
             <span class="quote mt-5 mb-4">{{ testimonials[0].content }}</span>
             <div class="my-3 d-flex flex-column align-items-center">
               <span class="person">{{ testimonials[0].user }}</span>
               <span class="designation">{{ testimonials[0].designation }}</span>
-              <img class="brand mt-4 mb-3" :src="require(`~/assets/images/testimonials/${testimonials[0].logo}`)" alt="">
+              <nuxt-img class="brand mt-4 mb-3" :src="`/testimonials/${testimonials[0].logo}`" alt="" loading="lazy"/>
             </div>
           </div>
         </div>
@@ -23,7 +23,7 @@
             <div class="my-3 d-flex flex-column align-items-center">
               <span class="person">{{ testimonials[1].user }}</span>
               <span class="designation">{{ testimonials[1].designation }}</span>
-              <img class="brand mt-4 mb-3" :src="require(`~/assets/images/testimonials/${testimonials[1].logo}`)" alt="">
+              <nuxt-img class="brand mt-4 mb-3" :src="`/testimonials/${testimonials[1].logo}`" alt="" loading="lazy" />
             </div>
           </div>
         </div>
