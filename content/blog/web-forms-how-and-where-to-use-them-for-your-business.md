@@ -26,9 +26,9 @@ featured: false
 published: true
 schema:
   - type: >-
-      What is a Web Form?
+      What is a Web Form? 
 
-      A Web Form, or an [HTML Form](https://www.geeksforgeeks.org/html-forms/) (as the tech nerds you know like to call it) is an online page/document which allows the website on which they are hosted, to gather data/input/personal information from its users and subsequently transfer it to a server for processing.
+      A Web Form, or an HTML Form (as the tech nerds you know like to call it) is an online page/document which allows the website on which they are hosted, to gather data/input/personal information from its users and subsequently transfer it to a server for processing.
 metaImages:
   - https://formester.com/img/web-form-1.png
   - https://formester.com/img/conversion-rates-as-a-result-of-using-web-forms-1-.png
