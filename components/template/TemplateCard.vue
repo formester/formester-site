@@ -9,9 +9,9 @@
         :alt="template.name"
         @load="loading = false"
       />
-      <h2 class="template-name pointer">
+      <h3 class="template-name pointer">
         {{ template.name }}
-      </h2>
+      </h3>
     </NuxtLink>
   </div>
 </template>
