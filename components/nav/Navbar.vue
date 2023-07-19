@@ -223,6 +223,7 @@ a.nuxt-link-exact-active {
 
 .nav-item.dropdown:hover .dropdown-menu {
   display: block;
+  z-index: 9999;
 }
 
 .dropdown-item:hover {
