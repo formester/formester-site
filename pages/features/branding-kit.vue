@@ -94,7 +94,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/features/auto-responder/',
+          href: 'https://formester.com/features/branding-kit/',
         },
       ],
     }
