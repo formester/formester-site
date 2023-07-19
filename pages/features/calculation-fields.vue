@@ -155,13 +155,13 @@ export default {
   },
   head() {
     return {
-      title: 'Calculation - Formester',
+      title: 'Calculation Fields - Formester',
       meta: [...this.meta],
       link: [
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/features/auto-responder/',
+          href: 'https://formester.com/features/calculation-fields/',
         },
       ],
     }
