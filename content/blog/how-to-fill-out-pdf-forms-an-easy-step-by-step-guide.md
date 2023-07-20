@@ -37,7 +37,7 @@ Everyone knows how easy it is to convert a Word document into a PDF and vice-ver
 
 (And also make memes about it!)
 
-![Funny meme about how easy it is to convert a PDF to a Word Document!](/img/how-to-fill-out-pdf-forms_-an-easy-step-by-step-guide_meme.png "Why do people hate millennials?")
+![Funny meme about how easy it is to convert a PDF to a Word Document!](/img/how-to-fill-out-pdf-forms-an-easy-step-by-step-guide-_meme1.png "Why do people hate millennials?")
 
 But the same isn't true when it comes to filling out or editing PDF web forms or documents.
 
