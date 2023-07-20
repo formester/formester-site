@@ -26,9 +26,41 @@ featured: false
 published: true
 schema:
   - type: >-
-      What is a Web Form? 
+      <script type="application/ld+json">
 
-      A Web Form, or an HTML Form (as the tech nerds you know like to call it) is an online page/document which allows the website on which they are hosted, to gather data/input/personal information from its users and subsequently transfer it to a server for processing.
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://formester.com/blog/web-forms-how-and-where-to-use-them-for-your-business/"
+        },
+        "headline": "Web Forms: How And Where To Use Them For Your Business",
+        "description": "This blog discusses Web Forms; from their basics to how they can prove to be a game-changer in the business world! Towards the end, we also discuss 6 ways how web forms can help your business.",
+        "image": [
+          "https://formester.com/img/web-forms-lead-generation-101.png",
+          "https://formester.com/img/web-form-1.png",
+          "https://formester.com/img/conversion-rates-as-a-result-of-using-web-forms-1-.png",
+          "https://lh4.googleusercontent.com/ls8vj3bFec5DYTvtX6XEEoAWs_ak_Mwr2iiMmD0oMKcy236iV6X9oAMCKN102Z1EVkOwH3EU2Cxo3qrCi-XsY1G6TeandbYb0A6rM2vm15-jLAcb4Cr-_Q_pot0FPc-s9-EJ_iD168Q7qP8uUIlgHT0",
+          "https://formester.com/img/untitled-design-1-.png"
+        ],  
+        "author": {
+          "@type": "Person",
+          "name": "Navni Dighe",
+          "url": "https://www.linkedin.com/in/navni-dighe-375908245/"
+        },  
+        "publisher": {
+          "@type": "Organization",
+          "name": "Formester",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://formester.com/_nuxt/image/04cde3.svg"
+          }
+        },
+        "datePublished": "2023-03-20"
+      }
+
+      </script>
 metaImages:
   - https://formester.com/img/web-form-1.png
   - https://formester.com/img/conversion-rates-as-a-result-of-using-web-forms-1-.png
