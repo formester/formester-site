@@ -7,7 +7,7 @@ keywords: abc
 author: Navni Dighe
 authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
 createdAt: 2023-07-19T18:06:39.673Z
-coverImg: /img/7-types-of-website-usability-survey-questions-to-ask-in-2023.png
+coverImg: /img/jotform-vs.-surveymonkey_-forms-surveys-or-both_.png
 coverImgAlt: "Jotform Vs SurveyMonkey: Forms, Surveys, or Both?"
 featured: false
 published: false
@@ -207,6 +207,38 @@ SurveyMonkey: SurveyMonkey has over 250 templates, but only 20 are free to use. 
 Jotform: Jotform offers customer support through email and an extensive knowledge base. Paid plans come with priority support and faster response times.
 
 SurveyMonkey: SurveyMonkey provides support through email and phone, with higher-tier plans offering priority support and dedicated customer success managers.
+
+### 13. Plans & Pricing
+
+Jotform: Jotform offers a free plan that allows you to create upto 5 forms with 100 submissions, along with basic features per month. 
+
+It serves as a good starting point for users with basic form creation needs.
+
+Paid Plans: Jotform offers 4 paid plans with additional features and benefits, with each upgrade. 
+
+1. Bronze: $39/month, with upto 25 forms and 1000 submissions
+2. Silver: $49/month, with upto 50 forms and 2500 submissions
+3. Gold:  $129/month, with upto 100 forms and 10K submissions
+4. Enterprise: Customized Pricing
+
+SurveyMonkey: SurveyMonkey offers a Basic plan for Free.
+
+Paid plans are available under three main categories, with additional features and upgrades with every higher version. The said categories are as follows:\
+\
+1. Individual: Suitable for Individuals, such as Freelancers. It has 3 categories:
+
+* Standard Monthly: Starts at $46/month with upto 1000 responses 
+* Advantage Annual:  Starts at $42/month with upto 5000 responses 
+* Premier Annual: Starts at $116/month with upto 7500 responses 
+
+2. Teams: Suitable for users who work in teams, it comes in 3 three versions:
+
+* Team Advantage Plan: Starts at $35/month with upto 10K responses 
+* Team Premier Plan: Starts at $88/month with upto 15K responses 
+
+(Note: Additional Responses can be bought at $0.80 each)
+
+3. Enterprise: Custom Pricing for Enterprises with specific requirements.
 
 With the conclusion of the comparison;
 
