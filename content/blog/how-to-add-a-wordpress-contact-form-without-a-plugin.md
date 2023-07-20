@@ -25,6 +25,43 @@ coverImg: /img/how-to-add-a-wordpress-contact-form-without-a-plugin-2-.png
 coverImgAlt: How to add a WordPress Contact Form without a Plugin
 featured: false
 published: true
+schema:
+  - type: >-
+      <script type="application/ld+json">
+
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://formester.com/blog/how-to-add-a-wordpress-contact-form-without-a-plugin/"
+        },
+        "headline": "How to add a WordPress Contact Form without a Plugin",
+        "description": "Create custom contact forms for WordPress without plugins. Follow our step-by-step guide with images to build authentic forms using Formester. Integrate seamlessly and cultivate strong client relationships for business growth.",
+        "image": [
+          "https://formester.com/img/how-to-add-a-wordpress-contact-form-without-a-plugin-2-.png",
+          "https://formester.com/img/no-one-users-whenever-they-encounter-a-contact-form.png",
+          "https://formester.com/img/pie-chart.png",
+          "https://formester.com/img/plugin-dos-and-donts.png",
+          "https://formester.com/img/use-as-needed.png"
+        ],  
+        "author": {
+          "@type": "Person",
+          "name": "Navni Dighe",
+          "url": "https://www.linkedin.com/in/navni-dighe-375908245/"
+        },  
+        "publisher": {
+          "@type": "Organization",
+          "name": "Formester",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://formester.com/_nuxt/image/04cde3.svg"
+          }
+        },
+        "datePublished": "2023-04-05"
+      }
+
+      </script>
 metaImages:
   - https://formester.com/img/no-one-users-whenever-they-encounter-a-contact-form.png
   - https://formester.com/img/pie-chart.png
