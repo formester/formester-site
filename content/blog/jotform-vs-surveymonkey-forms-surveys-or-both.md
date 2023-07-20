@@ -26,7 +26,7 @@ createdAt: 2023-07-19T18:06:39.673Z
 coverImg: /img/jotform-vs.-surveymonkey_-forms-surveys-or-both_.png
 coverImgAlt: "Jotform Vs SurveyMonkey: Forms, Surveys, or Both?"
 featured: false
-published: false
+published: true
 ---
 When it comes to choosing a form-builder, [Jotform](https://www.jotform.com/) has gained significant popularity and is often the go-to choice for many users. 
 
