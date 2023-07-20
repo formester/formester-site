@@ -376,6 +376,8 @@ At the same time, Formester incorporates the user-friendly experience and robust
 
 Additionally, Formester goes a step further by offering unique features such as seamless integration with essential apps, digital signature support, and an Information Recall feature that makes forms feel more dynamic and compelling.
 
+What’s more? A vast collection of Templates for both Web Forms and Surveys, catering to diverse needs and preferences!
+
 With Formester, businesses can enjoy the best of both worlds – the versatility and customization of Jotform and the user-friendly survey features of SurveyMonkey – all in one comprehensive platform. Whether you need to create complex forms, conduct in-depth surveys, or collect payments online, Formester is the ultimate solution for streamlining your data collection and form management processes.
 
 Unlock the full potential of your data collection and form-building with Formester. Experience a seamless blend of customization, simplicity, and advanced features – try Formester now!
