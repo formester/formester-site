@@ -49,6 +49,49 @@ coverImg: /img/7-types-of-website-usability-survey-questions-to-ask-in-2023.png
 coverImgAlt: 7 Types of Website Usability Survey Questions to Ask in 2023
 featured: false
 published: true
+schema:
+  - type: >-
+      <script type="application/ld+json">
+
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://formester.com/blog/7-types-of-website-usability-survey-questions-to-ask-in-2023/"
+        },
+        "headline": "7 Types of Website Usability Survey Questions to Ask in 2023",
+        "description": "Uncover the latest in survey creation with our blog. Explore 70+ questions for 2023 to gather actionable insights into user experience. Leverage Formester's top-notch survey forms for exceptional results. Plus, get valuable survey design tips. Elevate your website experience today!",
+        "image": [
+          "https://formester.com/img/7-types-of-website-usability-survey-questions-to-ask-in-2023.png",
+          "https://formester.com/img/img-1.png",
+          "https://formester.com/img/no-one-websites-after-creating-their-first-survey-forms.png",
+          "https://formester.com/img/2.png",
+          "https://formester.com/img/3.png",
+          "https://formester.com/img/4.png",
+          "https://formester.com/img/white-modern-illustration-creative-process-graph-6-.png",
+          "https://formester.com/img/5.png",
+          "https://formester.com/img/6.png",
+          "https://formester.com/img/7.png",
+          "https://formester.com/img/grey-3-points-process-roadmap-infographic-graph-2-.png"
+        ],  
+        "author": {
+          "@type": "Person",
+          "name": "Navni Dighe",
+          "url": "https://www.linkedin.com/in/navni-dighe-375908245/"
+        },  
+        "publisher": {
+          "@type": "Organization",
+          "name": "Formester",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://formester.com/_nuxt/image/04cde3.svg"
+          }
+        },
+        "datePublished": "2023-04-13"
+      }
+
+      </script>
 metaImages:
   - https://formester.com/img/4.png
   - https://formester.com/img/white-modern-illustration-creative-process-graph-6-.png
