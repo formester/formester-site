@@ -44,6 +44,40 @@ coverImg: /img/tips-tricks-to-get-the-most-out-of-your-leads-on-formester.png
 coverImgAlt: Tips & Tricks to get the most out of your leads on Formester
 featured: false
 published: true
+schema:
+  - type: >-
+      <script type="application/ld+json">
+
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://formester.com/blog/tips-tricks-to-get-the-most-out-of-your-leads-on-formester/"
+        },
+        "headline": "Tips & Tricks to get the most out of your leads on Formester",
+        "description": "This blog discusses some crucial tips and tricks on how you can get the most out of your leads using web forms on Formester. Whether you have experience with designing web forms, or even if you are a newbie, this blog will give you a fair idea on how to create web forms that will grant you leads.",
+        "image": [
+          "https://formester.com/img/tips-tricks-to-get-the-most-out-of-your-leads-on-formester.png",
+          "https://formester.com/img/untitled-design-1-.gif"
+        ],  
+        "author": {
+          "@type": "Person",
+          "name": "Navni Dighe",
+          "url": "https://www.linkedin.com/in/navni-dighe-375908245/"
+        },  
+        "publisher": {
+          "@type": "Organization",
+          "name": "Formester",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://formester.com/_nuxt/image/04cde3.svg"
+          }
+        },
+        "datePublished": "2023-03-30"
+      }
+
+      </script>
 metaImages:
   - https://formester.com/img/untitled-design-1-.gif
 ---
