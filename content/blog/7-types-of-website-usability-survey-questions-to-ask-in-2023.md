@@ -92,6 +92,203 @@ schema:
       }
 
       </script>
+  - type: >-
+      <script type="application/ld+json">
+
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+          "@type": "Question",
+          "name": "What is Website User Experience?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "User experience on a website refers to the kind of interface experience your website visitors and clients have, when they are browsing and/or navigating through your website via the website itself, a mobile app or while using the company's digital products or services. 
+      Quite naturally, the richness of user experience depends on a combination of various elements such as user interface, usability, content and visual appeal, navigation, accessibility, and more."
+          }
+        },{
+          "@type": "Question",
+          "name": "How You Can Find out about your Website's User Experience using Surveys?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 7 Most Important Types of Questions to Ask In a Website Usability Survey:
+      1. Design
+
+      This aspect relates to the color combination, themes, font size and color, as regards the website and its clickable elements. 
+
+      The following questions can be asked with regard to design:
+
+      1. At first glance, were you able to make out what our product is, basis our website design?
+
+      2. Were the clickable elements/buttons easily identifiable?
+
+      3. Was the website color scheme and combination warm and appealing?
+
+      4. On a scale of 1-10, how would you rate the design consistency of our website?
+
+      5. Do you think the color scheme is representative of the product?
+
+      6. Does the logo of our website stand out to you?
+
+      7. Would you remember our website basis its aesthetic and design?
+
+      8. Would you remember our website basis our logo?
+
+      9. On a scale of 1-10, how likely are you to return to our website basis its design?
+
+      10. Could we have used other color schemes and themes to represent our brand better?
+
+      2. Navigation 
+
+      This aspect relates to the interconnectedness, and the placement and positioning of the various elements facilitating this interconnectedness, throughout the website.
+
+      1. On a scale of 1-10, how would you rate the ease with which you were able to move through our website?
+
+      2. If you visited a particular webpage on our website, could you reach our homepage easily, therefrom?
+
+      3. Could you easily navigate to our associated web pages from our homepage?
+
+      4. Do you think all the web pages are linked under the appropriate fields?
+
+      5. Did all the clickable links lead you to the appropriate information?
+
+      6. Were the back, forward and home buttons, accessible on all web pages?
+
+      7. Were you able to set your cookie preferences with ease?
+
+      8. Do you think our menu section covers all the relevant fields?
+
+      9. On a scale of 1-10, how easily could you reach the information you came looking for?
+
+      10. At any point in your browsing, did you feel the lack of any navigational element anywhere on the website?
+
+      3. Content and Visual Comprehensibility
+
+      Your website and web pages should feature relevant, coherent and easily comprehensible information. 
+
+      1. On a scale of 1-10, how would you rate the relevance of the content you found on this page?
+
+      2. Did you find what you were looking for?
+
+      3. On a scale of 1-10, with how much ease could you find what you were looking for?
+
+      4. Were the infographics, tables, charts and images used on this page relevant?
+
+      5. Did this page's infographics, tables, charts and images help you understand the content better?
+
+      6. On a scale of 1-10, how would you rate the content on this page, as compared to your competitor's page?
+
+      7. On a scale of 1-10, how would you rate the presentation and format of the content on this page?
+
+      8. Do you think the content was explicit or confusing?
+
+      9. On a scale of 1-10, how likely are you to retain what you read on this page?
+
+      10. Based on your recent experience, would you prefer to visit our website for other content?
+
+      4. Performance and Compatibility
+
+      In the age of smartphones and tablets, it is only sensible to have your website optimized for all kinds of devices (Well, obviously not the fax machine).
+
+      1. On a scale of 1-10, how would you rate our website's mobile experience?
+
+      2. Did the page you click on load quickly enough?
+
+      3. Did you have to wait too long before you got to your desired page?
+
+      4. Could you access and use our website's mobile version as easily as the desktop version?
+
+      5. On a scale of 1-10, how likely are you to visit our mobile version?
+
+      6. Would you rather use our website's mobile or desktop version?
+
+      7. Did all our website features work as efficiently on your mobile device as they do on your desktop?
+
+      8. Was there any element of this website that the desktop version featured, but the mobile version didn't?
+
+      9. How was your scrolling experience on the mobile version of our website?
+
+      10. On a scale of 1-10, how would you rate the smoothness of the mobile version of our website?
+
+      5. Payments and Subscriptions
+
+      Your website should enable the use of more than one popular payment method.
+
+      1. Were you able to find your preferred payment method with ease?
+
+      2. On a scale of 1-10, how secure and confident did you feel when entering payment details?
+
+      3. Did you think the payment process was adequately transparent?
+
+      4. Did you get a payment confirmation after completing your payment?
+
+      5. On a scale of 1-10, with how much ease were you able to set up a default payment method?
+
+      6. Were the options for saving or not saving your card details clearly visible?
+
+      7. Were you able to switch to your preferred currency with ease?
+
+      8. On a scale of 1-10, how would you rate the steps (Eg., entering OTP no.) followed throughout the payment process?
+
+      9. Is there any payment method you would want us to integrate with?
+
+      10. On a scale of 1-10, how easily were you able to access your invoices, transaction IDs and order history, from your account?  
+
+      6. Accessibility
+
+      The following questions can be asked with regard to accessibility:
+
+
+      1. Were the website accessibility features such as font, contrast and brightness adjustments, easily and readily available?
+
+      2. Did all the website's images, graphics and non-text elements have alt text?
+
+      3. Did the alt texts have a sufficient and easily understandable description as regards their respective elements?
+
+      4. On a scale of 1-10, how would you rate the keyboard-only navigation experience on our website?
+
+      5. Did the page structure and layout help you reach your desired information easily using assistive technology?
+
+      6. Do you think icons and clickable elements were sizable?
+
+      7. Were closed captions provided for video content?
+
+      8. Were all closed captions, subtitles and text captions synchronized with their respective dynamic content?
+
+      9. Do you think the page can be navigated through regardless of whether or not specific colors are identifiable to some? 
+
+      10. Were the downloadable files featured on the website, created in a way so as to maximize their usability for the specially abled?
+
+      7. General/Miscellaneous
+
+      You may use these questions to gather data about the general user experience throughout their session.
+
+      The following questions can be asked under this field:
+
+      1. How did you find our website?
+
+      2. Did you find what you were looking for on this page with ease?
+
+      3. What would you improve about our website?
+
+      4. Would you like to be a part of our program to test the improvements to the existing features on our website?
+
+      5. Would you recommend our website to your social circle?
+
+      6. Did you face any challenges while using our website or its general features?
+
+      7. Do you have any suggestions, feedback and reviews for us?
+
+      8. What could we have done better or differently, to serve you better?
+
+      9. Was your experience with us memorable enough to make you remember us?
+
+      10. At last but not the least, on a scale of 1-10, how likely are you to revisit us?"
+          }
+        }]
+      }
+
+      </script>
 metaImages:
   - https://formester.com/img/4.png
   - https://formester.com/img/white-modern-illustration-creative-process-graph-6-.png
