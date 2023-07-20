@@ -107,6 +107,23 @@ schema:
       }
 
       </script>
+  - type: >-
+      <script type="application/ld+json">
+
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "H﻿ow Web Forms Can Be The Game Changer For Your Business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Forms are one of the most essential & economic tools as regards digital transformation of a business. They are effective sources of data collection, storage & management. They help streamline business processes thereby improving overall efficiency of the organization.   As simple as they are in terms of usage, they go a long way in building a solid customer base, contact list and branding!"
+          }
+        }
+      }
+
+      </script>
 metaImages:
   - https://formester.com/img/web-form-1.png
   - https://formester.com/img/conversion-rates-as-a-result-of-using-web-forms-1-.png
