@@ -239,8 +239,8 @@ Paid Plans: [Jotform offers 4 paid plans](https://www.jotform.com/pricing/) with
 
 **SurveyMonkey:** SurveyMonkey offers a Basic plan for Free.
 
-[Paid plans are available under three main categories](https://www.surveymonkey.com/pricing/?ut_source=mp&ut_source2=analyze&ut_source3=desktop-standalone-link), with additional features and upgrades with every higher version. The said categories are as follows:\
-\
+[Paid plans are available under three main categories](https://www.surveymonkey.com/pricing/?ut_source=mp&ut_source2=analyze&ut_source3=desktop-standalone-link), with additional features and upgrades with every higher version. The said categories are as follows:
+
 1. Individual: Suitable for Individuals, such as Freelancers. It has 3 categories:
 
 * Standard Monthly: Starts at $46/month with upto 1000 responses 
@@ -379,11 +379,8 @@ That said, to end your quest for the best of both worlds, Formester is here!
 Formester empowers you to:
 
 1. Design [highly customized and personalized web forms, aligning with your branding](https://formester.com/features/branding-kit/) and catering to diverse business needs.
-
 2. Create complex Survey Forms with ease, [incorporating advanced logic](https://formester.com/features/conditional-logic/), while enjoying [seamless integration with a wide range of third-party platforms](https://formester.com/integrations/).
-
 3. Leverage [robust data analytics and reporting capabilities](https://formester.com/features/powerful-analytics/) to gain valuable insights from survey responses, supporting data-driven decision-making.
-
 4. Enjoy the simplicity and user-friendliness of Formester's interface while crafting intricate survey forms and accessing comprehensive data analytics.
 
 Formester offers the versatility and advanced customization options of Jotform, allowing users to create a wide range of forms, including [surveys](https://formester.com/templates/categories/survey-forms/), [contact forms](https://formester.com/templates/categories/contact-forms/), [payment forms](https://formester.com/blog/how-to-collect-payments-using-online-web-forms/), and more. With an [intuitive drag-and-drop interface](https://formester.com/) and [powerful conditional logic](https://formester.com/features/conditional-logic/) and [calculation fields](https://formester.com/features/calculation-fields/) Formester makes form-building a breeze for users with varying levels of technical expertise.
