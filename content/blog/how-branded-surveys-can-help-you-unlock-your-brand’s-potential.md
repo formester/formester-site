@@ -246,6 +246,33 @@ schema:
 
       for at the end of the day, speaking very candidly, the power of brand building, lies very much in the hands of the customers."
           }
+        },{
+          "@type": "Question",
+          "name": "How to Create a Brand Survey?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At Formester, we have the perfect 3 step strategy, to get you going, right away!
+
+      Create an account on Formester and upload your Brand Kit.
+
+      P.S., We also ensure you experience a seamless integration of your survey form into your website.
+
+
+      Avoid the brainstorming and hassle of going through numerous articles and blogs to select the right question.
+
+      Instead, choose from a variety of pre-designed and carefully developed Survey Templates and customize them as per your choice, requirements and brand kit.
+
+
+      Make use of key features, such as conditional logic, to ask only what is required and save both your and your users' time!
+
+
+      Bonus Tip: Here's a guide to 60+ questions you may choose from, to create the perfect survey!
+
+
+      Once you've gathered submissions on your surveys, use our powerful analytics system to track your metrics, gain critical insights and ofcourse, know your customers!
+
+      And just like that, you're all set to conduct a brand survey!"
+          }
         }]
       }
 
