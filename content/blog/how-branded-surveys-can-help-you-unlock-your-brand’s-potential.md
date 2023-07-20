@@ -43,6 +43,43 @@ coverImg: /img/how-branded-surveys-can-help-you-unlock-your-brand’s-potential.
 coverImgAlt: How Branded Surveys Can Help You Unlock Your Brand’s Potential
 featured: false
 published: true
+schema:
+  - type: >-
+      <script type="application/ld+json">
+
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://formester.com/blog/how-branded-surveys-can-help-you-unlock-your-brand%E2%80%99s-potential/"
+        },
+        "headline": "How Branded Surveys Can Help You Unlock Your Brand’s Potential",
+        "description": "Unveil branding secrets with Branded Surveys! Gain actionable insights and better understand customer expectations. Explore the top 6 reasons to conduct brand surveys in 2023. Get tips for creating engaging and affordable surveys with Formester. Unlock the potential of your brand and delight your customers!",
+        "image": [
+          "https://formester.com/img/how-branded-surveys-can-help-you-unlock-your-brand%E2%80%99s-potential.png",
+          "https://lh4.googleusercontent.com/ZbSMCenMyn333b1tpjhBx7VBhKq_ep7LI01oiUElD1tR1dcb4-v_G8xt4fWtDOiaFW5HT4aWb4RAxGwJiRaMZHhGXltvNnTzYfP4DEIRACoBjJhIKhPCsHI1QaToNqeiTwBZ16TGhEI-eRJqPYjHgJ8",
+          "https://lh6.googleusercontent.com/jOjgoHGdYgyHwZTM595cnxy4Jii2f9ADS3ml_KGsK8cejXG4XFUJksV1xyxC1TAop2QfFXaknQRRJ8P9mU7wnkybTLfD5stFWYQekouWQMoV3LvqgwjtFMRUb12g2ZZz6_noICPAxJnJmHE0nmNQzg4",
+          "https://lh4.googleusercontent.com/43Rsn7_jdcvmvwi1Ap1VvMfM00bXcLj-ZT6qt8IGc3eMHqXV2rlFIpd73GvlxlgGhK_D43fLxCJgh1GQhehexzpHy-myLXUr8F6GytknhyOE9S0mZPPE_dmt17jKCoII_AAPT_LxWfK3RZuoAz1aT1k",
+          "https://lh6.googleusercontent.com/mqtAOdXf0Vxb1o7TWFxilYHDb7lbDVu4avUrOgWqBxx5-8s5wt8XgJb3e8ZQFr1QpBJbNRdrWla3K0UC5VVUf1Dy4dk4pe-gUTI2_4EjsIMOulzLUAPDtt0OSeIgPSli9tkoD3oi0YCQGYOf9esdRBI"
+        ],  
+        "author": {
+          "@type": "Person",
+          "name": "Navni Dighe",
+          "url": "https://www.linkedin.com/in/navni-dighe-375908245/"
+        },  
+        "publisher": {
+          "@type": "Organization",
+          "name": "Formester",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://formester.com/_nuxt/image/04cde3.svg"
+          }
+        },
+        "datePublished": "2023-04-19"
+      }
+
+      </script>
 ---
 Scott Cook has very rightly said - **A brand is no longer what we tell the consumer it is—it is what consumers tell each other it is.**
 
