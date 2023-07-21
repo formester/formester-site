@@ -21,6 +21,225 @@ coverImg: /img/how-to-create-the-perfect-product-map-using-surveys-in-2023-min.p
 coverImgAlt: How to Create the Perfect Product Map Using Surveys in 2023
 featured: false
 published: true
+schema:
+  - type: >-
+      <script type="application/ld+json">
+
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+          "@type": "Question",
+          "name": "What is a Product Map?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Product Map is the most objective and definitive element that answers all these questions in a practical, straightforward, simple, and transparent manner. 
+      A product map is the fundamental and primary document, usually depicting the journey of a vision in a visual format, encompassing the various building blocks, processes, strategies and the corresponding course of actions for them."
+          }
+        },{
+          "@type": "Question",
+          "name": "What are Digital Surveys?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Digital Surveys are an incredible means of approaching and collecting data from your customers, target audience and potential buyers, in a fascinating, amicable, and yet effective fashion, on almost anything relating to your business, including products, services or even ideas."
+          }
+        },{
+          "@type": "Question",
+          "name": "How Surveys can help you along the Various Stages of developing a Product RoadMap?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Survey can help along the following six major stages of developing a Product RoadMap: 
+      1. The Idea Stage:
+
+      Just put together a few crucial questions about your idea for a product/service, publish it on your website and have your users fill it.
+
+      If you don't have a website, you may also send your survey via e-mails, social media platforms and third-party platforms to gather submissions.
+
+      Once you have received submissions, analyze the data, gather insights and you'll be able to make a confident and informed decision about your idea.
+
+      Example Questions:
+
+      1. If such a product (your product idea) were available in the market, would you buy it?
+
+      2. Are you aware of any such other (To analyze competitor brand awareness) product?
+
+      3. Would such a product effectively solve this problem (problem domain your idea solves)?
+
+      4. What would you improve in such (your product idea) a product?
+
+      5. How many people do you know of, who would be interested in such a product (your product idea)?
+
+
+      2. The Target Audience Stage:
+
+      Target Audience can be described as the correct set of people, who might be interested in the kind of product/service or even idea for it.
+
+      They are your potential customers and might even prove to be your supporters, in terms of feedback, promotions and even investments.
+
+      You may be pleased to see how a simple survey can bring you important data, about the kind of audience you might want to target.
+
+      Example Questions:
+
+      1. Would such a product interest you?
+
+      2. On a scale of 1-5, how happy would you be, if this product was made available in the market?
+
+      3. Would you recommend this product to your family and friends?
+
+      4. On a scale of 1-10, how likely are you to use this product? 
+
+      5. Why or why not, would you invest in such a product?
+
+
+      3. Feature Selection and Improvement Stage:
+
+      Not only do you want to have feedback, suggestions and opinions about the features which you developed;
+
+      But also, remain open and encourage ideas, use-cases, and applications you might not have considered.
+
+      The responses received may lead to several breakthroughs and help you put your best foot forward, with the product.
+
+      Example Questions:
+
+      1. Do you think the features offered by this product are sufficient?
+
+      2. Are all the features easy to use?
+
+      3. If there was one feature, which you could improve, what would it be and why?
+
+      4. Is there any other feature that can be added?
+
+      5. Which feature excites you the most?
+
+
+      4. Timeline and Development Stage:
+
+      Once you're sure about your product, its features, and your target audience, the next phase is assessing your timelines and development strategy.
+
+      Example Questions:
+
+      1. Do you think the product is worth its price?
+
+      2. Have you heard of any such other products?
+
+      3. If this product was made available in the market by (timeline), would you buy it?
+
+      4. How sooner would you like for this product to be made available to you?
+
+      5. Do you think some of the feature developments can wait? If yes, which ones and why?
+
+
+      5. Launch and Promotional Events:
+
+      It is good to have decided on significant events, such as feature launches, product launches, promotional events, etc.
+
+
+      This is the right place to ask your audience what kind of an event they would prefer, such as a physical meet-up, virtual launch, etc.
+
+
+      Ask them, apart from the product, what else do they expect from you as a brand, and prepare for such questions.
+
+
+      Have engaging activities lined up, as part of these promotional and launch events.
+
+      Work with a Media Kit if possible.
+
+
+
+      Example Questions
+
+      1. Would you rather join this event over a virtual platform or at (physical location)?
+
+      2. Would you be interested in bringing your friends to this event?
+
+      3. Would you like to know about the product back-story? 
+
+      4. Are you curious about our brand story?
+
+      5. Do you have a special association with this brand/product?
+
+      6. Existing Product Optimization
+
+      Product maps are not just limited to new creations and ideas. If you already have products with a ready product map, you can create surveys for them as well! 
+
+      You may gather information about how your product is performing in the market, how your customers are liking it, and if they have any suggestions or feedback for the same.
+
+      Example Questions:
+
+      1. What made you choose us over (competitor brand)?
+
+      2. What would you change about this product?
+
+      3. Which feature do you use the most?
+
+      4. Which feature would you have somewhat improved?
+
+      5. Which features impress you the most?"
+          }
+        },{
+          "@type": "Question",
+          "name": "What are the Top Places where your Survey is likely to Gather Effective and Accurate Responses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1. Website
+      Considering you have some sources of pre-established and consistent traffic and a customer base, it is highly likely that you gain submissions on your website.
+
+      Assuming that your website visitors are either your customers or atleast interested in your services, the responses received here, would be highly credible.
+
+      2. Mobile Application
+
+      In a similar fashion to your website, if your business has an associated mobile app that your clients use, then as mentioned above, you may place your survey over there.
+
+      3. Third-party Platforms
+
+      You can tie-up with third-party survey distributors, who offer to advertise and feature your survey on their platforms, such as websites, apps, blogs, etc.
+
+      The concept is similar to affiliate marketing, except that they're featuring your surveys, instead of a product or website of yours.
+
+      4. Social Media Platforms
+
+      Social Media Accounts and handles can also be considerable platforms. They are popular and engaging, and people have higher retention rates there.
+
+      You can mention the link to your survey in your account bio, make a post including this survey link, and even use paid advertising to gather submissions.
+
+      5. E-mail Surveys
+
+      Suppose you have an emailing list and regularly send out newsletters, promotional advertisements, offers, etc. , in that case, you may use the same emailing list to send out your surveys as well.
+
+      6. Survey Platforms
+
+      It might or might not be news to you that there are, infact, businesses and companies that specifically feature surveys and pay people in return for genuine responses.
+
+      Branded Surveys is a popular example of such a platform."
+          }
+        },{
+          "@type": "Question",
+          "name": "What are the Top Metrics You Should Track for a Product RoadMap Survey?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Top 4 Metrics You Should Track for a Product RoadMap Survey:
+      1. NPS
+
+      Net Promoter Score, as the name itself suggests, is the metric that determines the customers' satisfaction and loyalty towards your brand and, in-turn, their likelihood of recommending, sharing or promoting your brand in their circle.
+
+      2. Customer Effort Score
+
+      This metric is used to track down the ease with which your customers are able to access or find out about your product. 
+
+      These are used to determine the points where your customers have to put in additional efforts on their end to use or find out more information about the product. 
+
+      3. Customer Acquisition Cost
+
+      This metric measures your ROI against your investments for marketing, sales, promotions, advertising and branding, cumulatively.
+
+      4. Usability
+
+      It is also important to measure the usability of the product/feature and its associated elements, such as websites, apps, etc."
+          }
+        }]
+      }
+
+      </script>
 metaImages:
   - https://formester.com/img/how-surveys-can-help-create-a-product-map.png
   - https://formester.com/img/how-to-create-the-perfect-product-map-using-surveys-in-2023_1.png
