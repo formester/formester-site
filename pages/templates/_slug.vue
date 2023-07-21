@@ -117,7 +117,7 @@ export default {
   },
   head() {
     return {
-      title: this.template?.name + '| Formester' || 'Formester',
+      title: this.template?.name ? `${this.template?.name} | Formester` : 'Formester',
       meta: [...this.meta],
       link: [
         {
