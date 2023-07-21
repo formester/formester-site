@@ -142,7 +142,7 @@ A one-on-one feature-wise comparison will help you evaluate these platforms for 
 
 **Jotform:** Jotform offers multiple kinds of form fields, a variety of customization options, and a wide range of form elements, including text inputs, images, files, dropdowns, ratings, and payments, to create versatile forms and surveys. 
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both.png)
+![Screenshot showing: Jotform's Form Builder Dashboard](/img/jotform-vs-surveymonkey_-forms-surveys-or-both.png "Jotform's Form Builder Dashboard")
 
 It provides an intuitive drag-and-drop interface for easy form building. 
 
