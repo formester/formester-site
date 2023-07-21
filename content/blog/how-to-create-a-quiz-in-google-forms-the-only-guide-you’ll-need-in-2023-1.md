@@ -36,6 +36,97 @@ coverImg: /img/how-to-create-a-quiz-in-google-forms_-the-only-guide-you’ll-nee
 coverImgAlt: "How to Create A Quiz in Google Forms: The Only Guide You’ll Need in 2023"
 featured: false
 published: true
+schema:
+  - type: >-
+      <script type="application/ld+json">
+
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+          "@type": "Question",
+          "name": "What is Google Forms?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google Forms, as the name itself suggests, is essentially a form builder tool enabling its users to create various kinds of web forms, including surveys, questionnaires, quizzes and more, online and free of cost, to collect, organize, manage and analyze the information they gather. 
+      It has several quality features, making it a popular choice, both amongst business professionals and individual users."
+          }
+        },{
+          "@type": "Question",
+          "name": "How to Create a Quiz in Google Forms?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Create a quiz in Google Forms using 6 simple steps:
+      Step 1 - Create/Sign-in to your Google account and visit Google Forms:  
+
+      Start by logging in to your existing Google account, or create one if you haven’t already.
+
+      Step 2- Create a New Form
+
+      At the top right corner, under the Start a New Form Section, click on the plus (+) icon over the Blank Form Template.
+
+      Step 3 - Form Title and Settings
+
+      Click on Untitled Form, and rename it as per a suitable title.
+
+      Click on the Settings button and toggle the Make this a quiz feature.
+
+      Step 4 - Adding Questions to Your Quiz
+
+      After you've selected the appropriate settings for your quiz, you may switch back to the Question Tab.
+
+      By default, there will be an Untitled Question section, which marks the beginning of your quiz questions.
+
+      You may start by adding your first question here.
+
+      At the top is again a plus (+) button. This button allows you to Add New Fields to your forms.
+
+      Step 5 - Add your Custom Grading Scheme
+
+      Once you've added your questions and answers, you can also add your custom grading system.
+
+      In each of the question fields, you'll find an Answer key button. Click on this button to add the correct response. 
+
+      Step 6 - Preview and Publish
+
+      Once you've added all your questions and their answer keys, click on the eye button in the top header to get a preview of your quiz.
+
+      After the preview, just click on the Send button to publish your quiz."
+          }
+        },{
+          "@type": "Question",
+          "name": "What are a few tips to create an educational quiz in Google Forms?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A few tips and tricks that come in handy when creating an Educational Quiz in Google Forms:
+      1. You may assign individual points to each question.
+
+      2. Toggle the collect email addresses button, so that the email addresses of your responders get recorded.
+
+      3. You may also allow for the responses to be edited post-submission. However, considering this is an educational quiz, this setting better remains turned off.
+
+      4. You also have the choice to release results immediately or after manual review.
+
+      5. Permit file uploads enabling your students to upload their working of a problem, diagrams, etc.
+
+      6. You can also allow for the responders, to receive a copy of their submissions, always or in the event that they wish to.
+
+      7. You might also want to limit the submissions to one per user, in order to avoid receiving multiple responses from the same user.
+
+      8. Also, you can restrict the quiz form to only the users/members of your organization to prevent circulation.
+
+      9. You can also toggle the shuffle question order so that each student receives a different order.
+
+      10. Under the Responses section, you also have the option to integrate your responses' analytics into a new or existing Google Sheets Spreadsheet. This will help you in creating your final performance report with ease. For e.g., 
+
+      a) You may easily add your mid-semester quiz results to your end-semester/final examination score sheet. 
+
+      b) You also have the opportunity to judge your students' overall performance as a class, to find out if there is a particular subject/topic, your students seem to struggle with."
+          }
+        }]
+      }
+
+      </script>
 metaImages:
   - https://formester.com/img/use-as-needed-14-.png
   - https://formester.com/img/light-blue-doodle-illustration-company-values-graph-1-.png
