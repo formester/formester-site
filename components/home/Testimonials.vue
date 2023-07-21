@@ -33,10 +33,9 @@
         <div class="testimonial-content-wrapper">
           <p class="mb-3">{{ activeTestimonial.content }}</p>
           <div class="d-flex justify-content-end">
-            <nuxt-img
-              :src="`/testimonials/${activeTestimonial.logo}`"
+            <img
+              :src="require(`@/assets/images/testimonials/${activeTestimonial.logo}`)"
               :alt="activeTestimonial.logoAlt"
-              loading="lazy"
             />
           </div>
           <nuxt-img
