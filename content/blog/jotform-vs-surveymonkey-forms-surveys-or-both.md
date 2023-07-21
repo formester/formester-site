@@ -148,139 +148,139 @@ It provides an intuitive drag-and-drop interface for easy form building. 
 
 **SurveyMonkey:** SurveyMonkey specializes in survey creation, offering a variety of question types, skip logic, and randomization, specifically for gathering feedback and insights.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-2-.png)
+![Screenshot showing: SurveyMonkey's Survey Builder Dashboard](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-2-.png "SurveyMonkey's Survey Builder Dashboard")
 
 ### 2. Customization and Branding
 
 **Jotform:** Jotform allows you to customize the look and feel of your forms with branding elements such as logos, colors, and fonts. It offers a range of design options to match your brand identity.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-3-.png)
+![Screenshot showing: Jotform's ](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-3-.png)
 
 **SurveyMonkey:** SurveyMonkey also provides customization options to align your surveys with your brand. You can add your logo, select color themes, and apply custom styling to create surveys that reflect your brand image. However, the customization options are limited, with less flexibility in terms of branding and visual customization.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-4-.png)
+![Screenshot showing: SurveyMonkey's](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-4-.png)
 
 ### 3. Question Types
 
 **Jotform:** Jotform offers a wide range of question types, including multiple-choice, dropdowns, checkboxes, text fields, file uploads, rating scales, and more.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-5-.png)
+![Screenshot showing: Jotform's ](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-5-.png)
 
 **SurveyMonkey:** SurveyMonkey provides a comprehensive selection of survey question types, including multiple-choice, ranking, matrix, slider, open-ended, and demographic questions.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-6-.png)
+![Screenshot showing: SurveyMonkey's](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-6-.png)
 
 ### 4. Integration and Collaboration
 
 **Jotform:** Jotform integrates with numerous third-party applications and services, allowing you to connect your forms with other tools in your workflow. It also offers collaboration features, enabling team members to work together on form creation.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-7-.png)
+![Screenshot showing: Jotform's ](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-7-.png)
 
 **SurveyMonkey:** SurveyMonkey provides integrations with popular business applications, making it easier to sync survey data with your existing systems. It also offers collaboration features, allowing multiple users to collaborate on survey design and analysis.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-8-.png)
+![Screenshot showing: SurveyMonkey's](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-8-.png)
 
 ### 5. Logic and Branching
 
 **Jotform:** Jotform allows you to create conditional logic and branching within your forms, enabling dynamic form experiences based on user responses.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-9-.png)
+![Screenshot showing: Jotform's ](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-9-.png)
 
 **SurveyMonkey:** SurveyMonkey offers skip logic and branching features to customize the survey flow based on participant responses.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-10-.png)
+![Screenshot showing: SurveyMonkey's](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-10-.png)
 
 ### 6. Advanced Questionnaire Options
 
 **Jotform:** Jotform provides advanced questionnaire features such as question piping, prefilling form fields, and calculations based on user input.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-11-.png)
+![Screenshot showing: Jotform's ](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-11-.png)
 
 **SurveyMonkey:** SurveyMonkey offers advanced features like question randomization, question validation, and custom survey URLs.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-12-.png)
+![Screenshot showing: SurveyMonkey's](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-12-.png)
 
-### 5. Submission Permissions
+### 7. Submission Permissions
 
 **Jotform:** Jotform allows you to set different submission permissions, including submit-only, submit and view, and submit and edit, giving you control over user access to form submissions.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-13-.png)
+![Screenshot showing: Jotform's ](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-13-.png)
 
 **SurveyMonkey:** SurveyMonkey also allows you to control user access to form submissions, ensuring privacy and data security.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-14-.png)
+![Screenshot showing: SurveyMonkey's](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-14-.png)
 
-### 6. Response Collection Methods
+### 8. Response Collection Methods
 
 **Jotform:** Jotform allows responses to be collected through embedded forms on websites, direct links, email invitations, QR codes, and social media.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-15-.png)
+![Screenshot showing: Jotform's ](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-15-.png)
 
 **SurveyMonkey:** SurveyMonkey offers various response collection methods, including email invitations, web links, social media sharing, and embedding surveys on websites.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-16-.png)
+![Screenshot showing: SurveyMonkey's](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-16-.png)
 
-### 7. Data Analysis and Reporting
+### 9. Data Analysis and Reporting
 
 **Jotform:** Jotform provides basic data analysis and reporting capabilities including summary reports and data visualizations, allowing you to view form responses in a graphical form and export them. It offers visualizations and charts to help you analyze data at a glance, in real time. Advanced reporting features, however, are available with higher-tier plans.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-17-.png)
+![Screenshot showing: Jotform's ](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-17-.png)
 
 **SurveyMonkey:** SurveyMonkey offers advanced data analysis and reporting features, including real-time results tracking, customizable dashboards, data filtering, cross-tabulation, trend analysis and custom charts.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-18-.png)
+![Screenshot showing: SurveyMonkey's](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-18-.png)
 
-### 8. Survey Accessibility
+### 10. Survey Accessibility
 
 **Jotform:** Jotform provides accessibility features to ensure compliance with WCAG 2.1 guidelines, making surveys accessible to individuals who are specially-abled.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-19-.png)
+![Screenshot showing: Jotform's ](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-19-.png)
 
 **SurveyMonkey:** SurveyMonkey offers accessibility options, including screen reader compatibility and keyboard navigation support.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-20-.png)
+![Screenshot showing: SurveyMonkey's](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-20-.png)
 
-### 9. Survey Quotas and Sample Management
+### 11. Survey Quotas and Sample Management
 
 **Jotform:** Jotform allows you to set response quotas and manage survey samples, ensuring control over the number of responses.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-21-.png)
+![Screenshot showing: Jotform's ](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-21-.png)
 
 **SurveyMonkey:** SurveyMonkey offers features for setting response quotas and managing survey samples, allowing you to control the number of responses and participant demographics.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-22-.png)
+![Screenshot showing: SurveyMonkey's](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-22-.png)
 
-### 10. Data Security and Compliance
+### 12. Data Security and Compliance
 
 **Jotform:** Jotform ensures data security with features such as SSL encryption, GDPR compliance, HIPAA compliance, and data backup options.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-23-.png)
+![Screenshot showing: Jotform's ](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-23-.png)
 
 **SurveyMonkey:** SurveyMonkey also follows industry-standard data security practices and offers features like SSL encryption, GDPR compliance, and data anonymization.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-24-.png)
+![Screenshot showing: SurveyMonkey's](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-24-.png)
 
-### 11. Form Templates
+### 13. Form Templates
 
 **Jotform:** Jotform sets a pretty high in templates, offering over 10,000 online form templates, including surveys, contact forms, and payment forms, providing users with a wide range of options.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-25-.png)
+![Screenshot showing: Jotform's ](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-25-.png)
 
 **SurveyMonkey:** SurveyMonkey has over 250 templates, but only 20 are free to use. Templates are categorized into academic, marketing, quiz, events, and more.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-26-.png)
+![Screenshot showing: SurveyMonkey's](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-26-.png)
 
-### 12. Support and Customer Service
+### 14. Support and Customer Service
 
 **Jotform:** Jotform offers customer support through email and an extensive knowledge base. Paid plans come with priority support and faster response times.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-27-.png)
+![Screenshot showing: Jotform's ](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-27-.png)
 
 **SurveyMonkey:** SurveyMonkey provides support through email and phone, with higher-tier plans offering priority support and dedicated customer success managers.
 
-![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-28-.png)
+![Screenshot showing: SurveyMonkey's](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-28-.png)
 
-### 13. Plans & Pricing
+### 15. Plans & Pricing
 
 **Jotform:** Jotform offers a free plan that allows you to create upto 5 forms with 100 submissions, along with basic features per month. 
 
@@ -293,7 +293,7 @@ Paid Plans: [Jotform offers 4 paid plans](https://www.jotform.com/pricing/) with
 3. Gold:  $129/month, with upto 100 forms and 10K submissions
 4. Enterprise: Customized Pricing
 
-   ![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-29-.png)
+   ![Screenshot showing: Jotform's ](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-29-.png)
 
 **SurveyMonkey:** SurveyMonkey offers a Basic plan for Free.
 
@@ -314,7 +314,7 @@ Paid Plans: [Jotform offers 4 paid plans](https://www.jotform.com/pricing/) with
 
 3. Enterprise: Custom Pricing for Enterprises with specific requirements.
 
-   ![](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-30-.png)
+   ![Screenshot showing: SurveyMonkey's](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-30-.png)
 
 With the conclusion of the comparison;
 
