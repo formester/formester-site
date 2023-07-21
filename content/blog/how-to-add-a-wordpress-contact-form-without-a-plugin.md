@@ -25,6 +25,116 @@ coverImg: /img/how-to-add-a-wordpress-contact-form-without-a-plugin-2-.png
 coverImgAlt: How to add a WordPress Contact Form without a Plugin
 featured: false
 published: true
+schema:
+  - type: >-
+      <script type="application/ld+json">
+
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://formester.com/blog/how-to-add-a-wordpress-contact-form-without-a-plugin/"
+        },
+        "headline": "How to add a WordPress Contact Form without a Plugin",
+        "description": "Create custom contact forms for WordPress without plugins. Follow our step-by-step guide with images to build authentic forms using Formester. Integrate seamlessly and cultivate strong client relationships for business growth.",
+        "image": [
+          "https://formester.com/img/how-to-add-a-wordpress-contact-form-without-a-plugin-2-.png",
+          "https://formester.com/img/no-one-users-whenever-they-encounter-a-contact-form.png",
+          "https://formester.com/img/pie-chart.png",
+          "https://formester.com/img/plugin-dos-and-donts.png",
+          "https://formester.com/img/use-as-needed.png"
+        ],  
+        "author": {
+          "@type": "Person",
+          "name": "Navni Dighe",
+          "url": "https://www.linkedin.com/in/navni-dighe-375908245/"
+        },  
+        "publisher": {
+          "@type": "Organization",
+          "name": "Formester",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://formester.com/_nuxt/image/04cde3.svg"
+          }
+        },
+        "datePublished": "2023-04-05"
+      }
+
+      </script>
+  - type: >-
+      <script type="application/ld+json">
+
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+          "@type": "Question",
+          "name": "How to add a WordPress Contact Form without a Plugin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Step 1 - Sign-up on Formester
+      Go to the formester sign-up page and create an account. If you're already with us, great, you have one step less to go.
+
+      Step 2 - Build a new form on Formester
+
+      Log in to your Formester account, click on the Create Form button, right infront of you;
+
+      Next, you'll have a unique form embed code for your newly created form. Copy this embed code
+
+      Step 4 - Final Setup
+
+      Add an HTML block to your page.
+
+      In the Add HTML section, under the Title field, paste the embed code you copied in Step 3. 
+
+      It is noteworthy here, that depending on the HTML Editor you use, there will be different ways to introduce the Add HTML section.
+
+
+      Step 5 - Hit Publish, Gather Submissions, Create Another Form, Repeat!
+
+      Once you have added your HTML embed code, just hit publish and you're done! 
+
+      Relax and wait for your submissions"
+          }
+        },{
+          "@type": "Question",
+          "name": "What are the Top 5 Reasons you should have Contact Forms on your website?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1. User-Centric
+      Contact forms are simple and easy to use. If more comfortable doing so, your customers can write to you rather than talk. 
+
+
+      They also get the opportunity to explain their details and queries more elaborately. 
+
+
+      2. Marketing, Advertising & Promotion
+
+      Once you have the contact details of your audience, you can open the doors to personalized marketing in the form of newsletters, events, promotional offers and the list goes on!
+
+
+      3. Spam-Proofing
+
+      Providing email addresses and phone numbers for business communications, has a high chance of bringing in spam emails, calls and other junk with itself. 
+
+
+      Contact Forms, on the other hand, can be set-up for preventing and blocking spam bots from entering your lists. 
+
+
+      4. Coherent Information Sources
+
+      Contact Forms provide your clients with the opportunity to illustrate their details, queries, problems and reasons for contact, in a much more crisp, to-the-point and specific (yet elaborative when required) fashion. 
+
+
+      5. Resource Saving
+
+      By employing contact forms, your business saves time, energy and money spent on manual labor for queries that can be resolved using auto-responders, spam prevention and protection and providing intelligent and efficient responses to customers."
+          }
+        }]
+      }
+
+      </script>
 metaImages:
   - https://formester.com/img/no-one-users-whenever-they-encounter-a-contact-form.png
   - https://formester.com/img/pie-chart.png
