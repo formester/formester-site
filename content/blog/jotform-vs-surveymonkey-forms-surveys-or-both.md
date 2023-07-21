@@ -48,6 +48,8 @@ By the end of this journey, you'll have a clearer understanding of which platfor
 
 When it comes to creating forms of diverse kinds, Jotform is your go-to solution. 
 
+![Screenshot showing: Jotform's Home-Page](/img/jotform-vs-surveymonkey_-forms-surveys-or-both__-homepage-jotform.png "Jotform's Home-Page")
+
 With its intuitive interface, comprehensive features, and unparalleled flexibility, Jotform empowers its users to design and customize forms that suit their unique needs. 
 
 Whether you're looking to create [simple contact forms](https://formester.com/templates/categories/contact-forms/) or complex surveys, Jotform offers a robust platform that ensures seamless form-building every step of the way.
@@ -87,6 +89,8 @@ These unique features make Jotform a standout choice for individuals and busines
 ## SurveyMonkey: Powerful Data Collection with SurveyMonkey's Advanced Survey Solution
 
 SurveyMonkey stands tall as a trusted and widely recognized platform, in the world of online surveys.
+
+![Screenshot showing: SurveyMonkey's Home-Page](/img/jotform-vs-surveymonkey_-forms-surveys-or-both__-homepage-surveymonkey.png "SurveyMonkey's Home-Page")
 
 With its range of advanced features and tools, SurveyMonkey offers an extensive toolkit to conduct surveys and gather valuable insights. 
 
