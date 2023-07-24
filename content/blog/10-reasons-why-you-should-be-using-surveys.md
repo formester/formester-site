@@ -1,20 +1,42 @@
 ---
-metaTitle: How do Surveys Help Businesses | How to Use Customer Feedback to Improve Service - Formester
-metaDescription: Discover How Surveys can Benefit Businesses and learn How to Use Customer Feedback to Improve Service. Get the inside scoop with Formester's guide.
 title: 10 Reasons Why You Are Still Not Doing Surveys - Good idea for any business
-description: Surveys are the most cost-effective way to comprehend what your target market wants. The sole problem is, most people do not do them. If you crack the code to the right survey you’re bound to do surveys more often as you’ll see the results it brings your way. In this blog, we’ve put together ten reasons why you are still not doing surveys and how they can help your business improve.
-keywords: uses of survey, why to use surveys    
+description: Surveys are the most cost-effective way to comprehend what your
+  target market wants. The sole problem is, most people do not do them. If you
+  crack the code to the right survey you’re bound to do surveys more often as
+  you’ll see the results it brings your way. In this blog, we’ve put together
+  ten reasons why you are still not doing surveys and how they can help your
+  business improve.
+metaTitle: How do Surveys Help Businesses | How to Use Customer Feedback to
+  Improve Service - Formester
+metaDescription: Discover How Surveys can Benefit Businesses and learn How to
+  Use Customer Feedback to Improve Service. Get the inside scoop with
+  Formester's guide.
+keywords: uses of survey, why to use surveys
 author: Mriganka Chandra
+authorProfile: Mriganka Chandra
 createdAt: 2023-01-20
 coverImg: /img/10-reasons-why-you-are-still-not-doing-surveys.png
 coverImgAlt: Ten reasons why you are still not doing surveys
-metaImages: [
-    https://formester.com/img/10-reasons-why-you-are-still-not-doing-surveys.png,
-    https://formester.com/blog/10-reasons-why-you-should-be-using-surveys/a-quick-way-to-know-what-trending-in-the-market.png",
-    https://formester.com/blog/10-reasons-why-you-should-be-using-surveys/target-the-right-audience-and-make-productive-changes.png
-  ]
 featured: false
 published: true
+schema:
+  - type: |-
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "question 1",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "question1's answer"
+          }
+        }
+      }
+metaImages:
+  - https://formester.com/img/10-reasons-why-you-are-still-not-doing-surveys.png
+  - https://formester.com/blog/10-reasons-why-you-should-be-using-surveys/a-quick-way-to-know-what-trending-in-the-market.png"
+  - https://formester.com/blog/10-reasons-why-you-should-be-using-surveys/target-the-right-audience-and-make-productive-changes.png
 ---
 
 Surveys are the most cost-effective way to comprehend what your target market wants. The sole problem is, most people do not do them. If you crack the code to the right survey you’re bound to do surveys more often as you’ll see the results it brings your way. In this blog, we’ve put together ten reasons why you are still not doing surveys and how they can help your business improve.
