@@ -417,6 +417,19 @@ schema:
           }
         }
       }
+  - type: |-
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "question 1",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "question1's answer"
+          }
+        }
+      }
 ---
 Two words to grab the attention of Businesses: **Automation** & **Expansion**
 
