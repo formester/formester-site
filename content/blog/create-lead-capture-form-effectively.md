@@ -1,8 +1,14 @@
 ---
-metaTitle: How To Create A Lead Capture Form | Tips To Improve Your Lead Capture Form Conversions - Formester
-metaDescription: Having trouble capturing leads? Learn tips to improve your lead capture form conversions with Formester. Find out how to create a lead capture form that converts visitors into leads.
 title: How to Create a Lead Capture Form Effectively?
-description: There are just way too many ways through which you can get leads.But, it is important that you capture them as well through an effective lead capture form. Amidst high competition and greater customer awareness,businesses depend significantly on their lead generation strategy to turn leads into customers and eventually drive revenue for a business.
+description: There are just way too many ways through which you can get
+  leads.But, it is important that you capture them as well through an effective
+  lead capture form. Amidst high competition and greater customer
+  awareness,businesses depend significantly on their lead generation strategy to
+  turn leads into customers and eventually drive revenue for a business.
+metaTitle: How To Create A Lead Capture Form & Get More Conversions?
+metaDescription: Having trouble capturing leads? Learn tips to improve your lead
+  capture form conversions with Formester. Find out how to create a lead capture
+  form that converts visitors into leads.
 keywords: lead capture form, create lead capture form, lead acquisition, lead
   generation, lead form
 author: Vivek Badani
@@ -10,9 +16,10 @@ authorProfile: https://www.linkedin.com/in/vivek--badani/
 createdAt: 2022-08-22
 coverImg: /img/how-to-create-a-lead-capture-form__create-lead-capture-form-effectively.png
 coverImgAlt: Cover image for the blog, "How to Create a Lead Capture Form Effectively?"
-metaImages: [https://formester.com/img/how-to-create-a-lead-capture-form__create-lead-capture-form-effectively.png]
 featured: false
 published: true
+metaImages:
+  - https://formester.com/img/how-to-create-a-lead-capture-form__create-lead-capture-form-effectively.png
 ---
 
 There are just way too many ways through which you can get leads.
