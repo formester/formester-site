@@ -1,8 +1,10 @@
 ---
-metaTitle: How To Build Your First Form With Formester | How To Build Your First Web Form - Formester
-metaDescription: Learn how to build your first web form with Formester! Our step-by-step guide makes it easy to build your first forms for any website or business. Start today!
 title: Building your first form with formester
 description: Different approaches to building web forms with formester
+metaTitle: How To Build Your First No-Code, Online Form With Formester?
+metaDescription: Learn how to build your first web form with Formester! Our
+  step-by-step guide makes it easy to build your first forms for any website or
+  business. Start today!
 keywords: create form, build your first form, backend as a service, drag and
   drop form, free form builder, free online form builder
 author: Piyush Singhania
@@ -10,22 +12,21 @@ authorProfile: https://www.linkedin.com/in/piyushsinghaniya/
 createdAt: 2022-05-10
 coverImg: /img/building-your-first-form-with-formester__formester-form-builder-background-cover.png
 coverImgAlt: Cover image for the blog, "Building your first form with formester"
-metaImages: [
-    https://formester.com/img/building-your-first-form-with-formester__formester-form-builder-background.png,
-    https://formester.com/img/building-your-first-form-with-formester__formester-form-builder-background.png,
-    https://formester.com/img/building-your-first-form-with-formester__form-details.png,
-    https://formester.com/img/building-your-first-form-with-formester__thank-you.png,
-    https://formester.com/img/building-your-first-form-with-formester__service-one-example.png,
-    https://formester.com/img/building-your-first-form-with-formester__action-url.png,
-    https://formester.com/img/building-your-first-form-with-formester__create-your-first-form.png,
-    https://formester.com/img/building-your-first-form-with-formester__form-details.png,
-    https://formester.com/img/building-your-first-form-with-formester__thank-you.png,
-    https://formester.com/img/building-your-first-form-with-formester__builder.png,
-    https://formester.com/img/building-your-first-form-with-formester__form-example.png,
-    https://formester.com/img/building-your-first-form-with-formester__final-form.png
-  ]
 featured: false
 published: true
+metaImages:
+  - https://formester.com/img/building-your-first-form-with-formester__formester-form-builder-background.png
+  - https://formester.com/img/building-your-first-form-with-formester__formester-form-builder-background.png
+  - https://formester.com/img/building-your-first-form-with-formester__form-details.png
+  - https://formester.com/img/building-your-first-form-with-formester__thank-you.png
+  - https://formester.com/img/building-your-first-form-with-formester__service-one-example.png
+  - https://formester.com/img/building-your-first-form-with-formester__action-url.png
+  - https://formester.com/img/building-your-first-form-with-formester__create-your-first-form.png
+  - https://formester.com/img/building-your-first-form-with-formester__form-details.png
+  - https://formester.com/img/building-your-first-form-with-formester__thank-you.png
+  - https://formester.com/img/building-your-first-form-with-formester__builder.png
+  - https://formester.com/img/building-your-first-form-with-formester__form-example.png
+  - https://formester.com/img/building-your-first-form-with-formester__final-form.png
 ---
 Different approaches to building web forms with formester.
 
