@@ -1,21 +1,26 @@
 ---
-metaTitle: Tips To Improve Your Online Survey | How To Improve Your Online Surveys - Formester
-metaDescription: Looking for tips to improve your online surveys? Check out formester blog for tips on how to improve your online surveys, including how to design better questions, etc. Keep reading to find out!
 title: 7 Assured Ways to Improve Your Online Surveys
-description: There’s no limit to the number of ways you can utilize online surveys. From market research to feedback and insights for improving your product – we need them everywhere. Amidst the information age of today,businesses deeply depend on the data received and analyzed through online surveys.
+description: There’s no limit to the number of ways you can utilize online
+  surveys. From market research to feedback and insights for improving your
+  product – we need them everywhere. Amidst the information age of
+  today,businesses deeply depend on the data received and analyzed through
+  online surveys.
+metaTitle: Tips To Improve Your Online Surveys & Get More Responses!
+metaDescription: Looking for tips to improve your online surveys? Check out
+  formester blog for tips on how to improve your online surveys, including how
+  to design better questions, etc. Keep reading to find out!
 keywords: online survey, online survey for business, know your customer, survey form
 author: Vivek Badani
 authorProfile: https://www.linkedin.com/in/vivek--badani/
 createdAt: 2022-07-20
 coverImg: /img/seven-assured-way-to-improve__seven-assured-ways-to-improve-your-online-surveys.png
 coverImgAlt: Cover image for the blog, "Seven Assured Ways to Improve Your Online Surveys"
-metaImages: [
-    https://formester.com/img/seven-assured-way-to-improve__seven-assured-ways-to-improve-your-online-surveys.png,
-    https://formester.com/img/seven-assured-way-to-improve__average-survey-response-rate.png,
-    https://formester.com/img/seven-assured-way-to-improve__survey-form.svg
-  ]
 featured: false
 published: true
+metaImages:
+  - https://formester.com/img/seven-assured-way-to-improve__seven-assured-ways-to-improve-your-online-surveys.png
+  - https://formester.com/img/seven-assured-way-to-improve__average-survey-response-rate.png
+  - https://formester.com/img/seven-assured-way-to-improve__survey-form.svg
 ---
 
 There’s no limit to the number of ways you can utilize online
