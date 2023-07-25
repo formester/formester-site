@@ -118,7 +118,13 @@ export default {
   head() {
     return {
       title: this.template?.name ? `${this.template?.name} | Formester` : 'Formester',
-      meta: [...this.meta],
+      meta: [
+        ...this.meta,
+        {
+          name: 'keywords',
+          content: this.template.keywords,
+        },
+      ],
       link: [
         {
           hid: 'canonical',
