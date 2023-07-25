@@ -1,8 +1,14 @@
 ---
-metaTitle: Benefits Of Using Online Form Builder | Best Online Form Builder In 2023 - Formester
-metaDescription: Are you looking for the best online form builder in 2023? Check out Formester's blog post to learn about the benefits of using an online form builder and how it can help you save time and money. 
 title: Top benefits of using online form builder
-description: As we grow our business, so do our clients or customers. Eventually it becomes hard to keep a track of them. Collecting and maintaining their details such as name, email addresses, phone numbers, project preferences, budget, and among other things helps us analyze our clientele over a period of time.
+description: As we grow our business, so do our clients or customers. Eventually
+  it becomes hard to keep a track of them. Collecting and maintaining their
+  details such as name, email addresses, phone numbers, project preferences,
+  budget, and among other things helps us analyze our clientele over a period of
+  time.
+metaTitle: Top Benefits Of Using Online, No-Code Form Builders In 2023!
+metaDescription: Are you looking for the best online form builder in 2023? Check
+  out Formester's blog post to learn about the benefits of using an online form
+  builder and how it can help you save time and money.
 keywords: online form builder, form builder, benefits of online form builder,
   benefits of form builder
 author: Vivek Badani
@@ -10,12 +16,11 @@ authorProfile: https://www.linkedin.com/in/vivek--badani/
 createdAt: 2022-10-18
 coverImg: /img/top-benefits-of-using-online__top-benefits-of-using-online-form-builder.png
 coverImgAlt: Cover image for the blog, "Top benefits of using online form builder"
-metaImages: [
-    https://formester.com/img/top-benefits-of-using-online__top-benefits-of-using-online-form-builder.png,
-    https://formester.com/img/top-benefits-of-using-online__formester-landing-page.png
-  ]
 featured: false
 published: true
+metaImages:
+  - https://formester.com/img/top-benefits-of-using-online__top-benefits-of-using-online-form-builder.png
+  - https://formester.com/img/top-benefits-of-using-online__formester-landing-page.png
 ---
 
 As we grow our business, so do our clients or customers. Eventually
