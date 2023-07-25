@@ -1,8 +1,15 @@
 ---
-metaTitle: How To Create A Form Or Survey Using An Easy Form Builder | Steps To Build Your Online Form With Form Builder - Formester
-metaDescription: Learn how to create a custom a form or survey using an easy form builder. Follow the step-by-step guide and build your own online form with Formester.
 title: How to Create a Form or Survey Using an Easy Form Builder?
-description: We are living in a digitally-driven world and online forms are needed in a majority of business and user activities. From asking users to sign up to booking events, generating leads, purchasing products, performing payments, conducting surveys, and more – applications of both standalone and web forms are truly endless. No doubt online forms play an important role for businesses by boosting interactivity and information sharing.
+description: We are living in a digitally-driven world and online forms are
+  needed in a majority of business and user activities. From asking users to
+  sign up to booking events, generating leads, purchasing products, performing
+  payments, conducting surveys, and more – applications of both standalone and
+  web forms are truly endless. No doubt online forms play an important role for
+  businesses by boosting interactivity and information sharing.
+metaTitle: How To Create A Form Or Survey Using An Online Form Builder?
+metaDescription: Learn how to create a custom a form or survey using an easy
+  form builder. Follow the step-by-step guide and build your own online form
+  with Formester.
 keywords: create a form, create a survey, best form builder, drag and drop form,
   free online form builder, easy form builder
 author: Vivek Badani
@@ -10,15 +17,14 @@ authorProfile: https://www.linkedin.com/in/vivek--badani/
 createdAt: 2022-11-02
 coverImg: /img/how-to-create-a-form__how-to-create-form-or-survey.png
 coverImgAlt: Cover image for the blog, "How to create a form or survey using form builder"
-metaImages: [
-    https://formester.com/img/how-to-create-a-form__how-to-create-form-or-survey.png,
-    https://formester.com/img/how-to-create-a-form__form-details.png,
-    https://formester.com/img/how-to-create-a-form__choose-form-fields.png,
-    https://formester.com/img/how-to-create-a-form__customise-font-and-heading.png,
-    https://formester.com/img/how-to-create-a-form__publishing-form-after-creation.png
-  ]
 featured: false
 published: true
+metaImages:
+  - https://formester.com/img/how-to-create-a-form__how-to-create-form-or-survey.png
+  - https://formester.com/img/how-to-create-a-form__form-details.png
+  - https://formester.com/img/how-to-create-a-form__choose-form-fields.png
+  - https://formester.com/img/how-to-create-a-form__customise-font-and-heading.png
+  - https://formester.com/img/how-to-create-a-form__publishing-form-after-creation.png
 ---
 
 We are living in a digitally-driven world and online forms are
