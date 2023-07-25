@@ -1,26 +1,30 @@
 ---
-metaTitle: Pro Tips For Producing An Effective Intake Form | How To Create A Project Intake Form In 5 Steps - Formester
-metaDescription: Formester's Pro Tips For Producing An Effective Intake Form will show you how to create a project intake form in 5 steps. Follow our simple guide and create your own form today!
 title: How to Create an Impressive Intake Form in 5 Easy Steps
-description: An intake form is a document that helps you gather information about your client. This can be used to collect personal information as well as questions about the client's goals, project preferences, experience, skills and budget.
+description: An intake form is a document that helps you gather information
+  about your client. This can be used to collect personal information as well as
+  questions about the client's goals, project preferences, experience, skills
+  and budget.
+metaTitle: How To Create An Effective Project Intake Form In 5 Steps?
+metaDescription: Formester's Pro Tips For Producing An Effective Intake Form
+  will show you how to create a project intake form in 5 steps. Follow our
+  simple guide and create your own form today!
 keywords: intake form, client intake form, create an intake form, create form
 author: Vivek Badani
 authorProfile: https://www.linkedin.com/in/vivek--badani/
 createdAt: 2022-10-13
 coverImg: /img/how-to-create-an-impressive-intake__create-impressive-intake-form.png
 coverImgAlt: Cover image for the blog, "How to Create an Impressive Intake Form"
-metaImages: [
-    https://formester.com/img/how-to-create-an-impressive-intake__create-impressive-intake-form.png,
-    https://formester.com/img/how-to-create-an-impressive-intake__create-new-form-page.png,
-    https://formester.com/img/how-to-create-an-impressive-intake__ask-the-obvious.png,
-    https://formester.com/img/how-to-create-an-impressive-intake__add-relevant-form-heading.png,
-    https://formester.com/img/how-to-create-an-impressive-intake__make-it-easy-for-them.png,
-    https://formester.com/img/how-to-create-an-impressive-intake__go-long-for-more.png,
-    https://formester.com/img/how-to-create-an-impressive-intake__go-long-for-more.png,
-    https://formester.com/img/how-to-create-an-impressive-intake__publishing-form-after-creation.png
-  ]
 featured: false
 published: true
+metaImages:
+  - https://formester.com/img/how-to-create-an-impressive-intake__create-impressive-intake-form.png
+  - https://formester.com/img/how-to-create-an-impressive-intake__create-new-form-page.png
+  - https://formester.com/img/how-to-create-an-impressive-intake__ask-the-obvious.png
+  - https://formester.com/img/how-to-create-an-impressive-intake__add-relevant-form-heading.png
+  - https://formester.com/img/how-to-create-an-impressive-intake__make-it-easy-for-them.png
+  - https://formester.com/img/how-to-create-an-impressive-intake__go-long-for-more.png
+  - https://formester.com/img/how-to-create-an-impressive-intake__go-long-for-more.png
+  - https://formester.com/img/how-to-create-an-impressive-intake__publishing-form-after-creation.png
 ---
 
 An intake form is a document that helps you gather information
