@@ -2,8 +2,7 @@
 title: The Best Survey Questions in 2023 (With Examples)
 description: If you want to accelerate your business, you must understand the
   nerves of your customers. The Survey plays a vital role here.
-metaTitle: Examples Of A Good Survey Questionnaire | How To Write Good Survey
-  Questions - Formester
+metaTitle: How To Write Good Survey Questions? + Survey Design Tips
 metaDescription: Learn How to create effective survey questions with our
   examples of good survey questionnaire. Formester's article will help you write
   surveys that get results!
