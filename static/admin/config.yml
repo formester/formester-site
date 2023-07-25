@@ -28,7 +28,7 @@ collections:
       - { lable: 'MetaDescription', name: 'metaDescription', widget: 'string'}
       - { label: 'Keywords', name: 'keywords', widget: 'string' }
       - { label: 'Author', name: 'author', widget: 'string' }
-      - { label: 'Author Profile', name: 'authorProfile', widget: 'string' }
+      - { label: 'Author Profile', name: 'authorProfile', widget: 'string', required: false }
       - { label: 'Publish Date', name: 'createdAt', widget: 'datetime' }
       - { label: 'Cover Image', name: 'coverImg', widget: 'image' }
       - { label: 'Cover Image Alt Text', name: 'coverImgAlt', widget: 'string' }
