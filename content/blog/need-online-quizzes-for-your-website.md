@@ -1,8 +1,12 @@
 ---
-metaTitle: Why Should You Use Interactive Quizzes For Website | Benefits Of Online Quizzes For Business - Formester
-metaDescription: Do you want to know why should you use interactive quizzes to improve your website and business? Check out this Formester's blog post to find out the benefits of online quizzes for business.
 title: Why Do You Need Online Quizzes for Your Website?
-description: Grabbing your customer's attention and holding on to their interest can be a bit hard today. Everyone is somehow a part of marketing 24*7, but the average attention span of customers has dropped to only eight seconds.
+description: Grabbing your customer's attention and holding on to their interest
+  can be a bit hard today. Everyone is somehow a part of marketing 24*7, but the
+  average attention span of customers has dropped to only eight seconds.
+metaTitle: Why and How Should Your Website Use Interactive Quizzes?
+metaDescription: Do you want to know why should you use interactive quizzes to
+  improve your website and business? Check out this Formester's blog post to
+  find out the benefits of online quizzes for business.
 keywords: online quiz, online quiz for business, audience engagement, create
   online quiz, educate your customers with quiz
 author: Vivek Badani
@@ -10,9 +14,10 @@ authorProfile: https://www.linkedin.com/in/vivek--badani/
 createdAt: 2022-08-25
 coverImg: /img/why-do-you-need-online-quizzes__why-do-you-need-online-quizzes-for-your-website.png
 coverImgAlt: Cover image for the blog, "Why Do You Need Online Quizzes for Your Website?"
-metaImages: [https://formester.com/img/why-do-you-need-online-quizzes__why-do-you-need-online-quizzes-for-your-website.png]
 featured: false
 published: true
+metaImages:
+  - https://formester.com/img/why-do-you-need-online-quizzes__why-do-you-need-online-quizzes-for-your-website.png
 ---
 Grabbing your customer's attention and holding on to their interest
 can be a bit hard today. Everyone is somehow a part of marketing 24\*7, but the
