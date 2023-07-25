@@ -4,7 +4,7 @@ description: Do you need a single-page form or a multi-page form? There has been
   much debate about which provides a better user experience. However, the answer
   may not be so definitive. There are advantages and disadvantages to both.
   Deciding which is most appropriate depends on the context of your form.
-metaTitle: "Single Page vs Multi Page Forms: Making the Right Choice!"
+metaTitle: "Single Page vs Multi Page Forms: Pick the Right Form Layout!"
 metaDescription: Trying to decide between single page and multi page forms?
   Check out our blog post to see the key benefits of single page forms and see
   if they're right for you.
