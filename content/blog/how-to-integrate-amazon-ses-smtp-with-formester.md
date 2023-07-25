@@ -3,26 +3,101 @@ title: How to integrate Amazon SES SMTP with Formester
 description: This guide helps you configure SMTP settings for Amazon SES SMTP on
   Formester. You can then start sending all emails through your personalized
   emails and receive responses directly in your inbox.
+metaTitle: How to integrate Amazon SES SMTP with Formester?
+metaDescription: How to seamlessly integrate Amazon SES SMTP with Formester for
+  efficient Email delivery | Step-by-step guide for a smooth setup process
 keywords: amazon, smtp, amazon smtp, ses smtp integration, amazon smtp credentials
 author: Ravindra Kumar Verma
 authorProfile: https://www.linkedin.com/in/ravindraverma12/
 createdAt: 2023-03-16T10:27:12.358Z
 coverImg: /img/how-to-integrate-amazon-ses-smtp-with-formester.png
 coverImgAlt: How to integrate Amazon SES SMTP with formester
-metaImages: [
-    https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_home_page.png,
-    https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_signup_for_ses.png,
-    https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_click_to_create_identity.png,
-    https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_create_verification_identity.png,
-    https://formester.com/img/_how-to-integrate-amazon-ses-smtp-with-formester_create_verification_identity_using_domain.png,
-    https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_create_verification_identity_using_email_address.png,
-    https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_check_your_domain_under_configuration.png,
-    https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_smtp_setting_option.png,
-    https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_smtp_credentials_button.png,
-    https://formester.com/img/test-credentails.png
-  ]
 featured: false
 published: true
+schema:
+  - type: >-
+      <script type="application/ld+json">
+
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "How to integrate Amazon SES SMTP with Formester?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Step 1: Visit Amazon SES and click on create an AWS account
+      Step 2:  Fill in your details, click on verify email address and complete the signup process
+
+
+      Step 3: Click on the create identity button
+
+
+      Step 4: Select either of the option to set your identity
+
+
+      Step 5: In case of creating identity using Doman enter your domain name and click on create identity;
+
+      Or in case of creating identity using an Email address enter your email address and click on create identity
+
+
+      Step 6: Check your domain or email is verified or not from the verified identities option under Configuration
+
+
+      Step 7:  Now go to SMTP settings options
+
+
+      Step 8:  Click on create SMTP credentials button
+
+
+      Step 9: Enter a name and click on create button
+
+
+      Step 10: Smtp credentials image
+
+
+      Step 11: Final step, check your integration credentials with Formester to verify if it’s working or not,
+
+
+      Login to your account -> select a form -> Click on SMTP Integration from the top -> Click on Add Account
+
+
+      Add your credentials and click on three dots at the end of the mail account and select the Test option. Wait for a few seconds for the result."
+          }
+        }
+      }
+
+      </script>
+  - type: '{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": {
+      "@type": "Question", "name": "How to integrate Amazon SES SMTP with
+      Formester?", "acceptedAnswer": { "@type": "Answer", "text": "Step 1: Visit
+      Amazon SES and click on create an AWS account Step 2: Fill in your
+      details, click on verify email address and complete the signup process
+      Step 3: Click on the create identity button Step 4: Select either of the
+      option to set your identity Step 5: In case of creating identity using
+      Doman enter your domain name and click on create identity; Or in case of
+      creating identity using an Email address enter your email address and
+      click on create identity Step 6: Check your domain or email is verified or
+      not from the verified identities option under Configuration Step 7: Now go
+      to SMTP settings options Step 8: Click on create SMTP credentials button
+      Step 9: Enter a name and click on create button Step 10: Smtp credentials
+      image Step 11: Final step, check your integration credentials with
+      Formester to verify if it’s working or not, Login to your account ->
+      select a form -> Click on SMTP Integration from the top -> Click on Add
+      Account Add your credentials and click on three dots at the end of the
+      mail account and select the Test option. Wait for a few seconds for the
+      result." } } }'
+metaImages:
+  - https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_home_page.png
+  - https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_signup_for_ses.png
+  - https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_click_to_create_identity.png
+  - https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_create_verification_identity.png
+  - https://formester.com/img/_how-to-integrate-amazon-ses-smtp-with-formester_create_verification_identity_using_domain.png
+  - https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_create_verification_identity_using_email_address.png
+  - https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_check_your_domain_under_configuration.png
+  - https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_smtp_setting_option.png
+  - https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_smtp_credentials_button.png
+  - https://formester.com/img/test-credentails.png
 ---
 If you plan to send email through the Amazon SES SMTP interface in more than one AWS Region, you must generate SMTP credentials for each Region.
 
