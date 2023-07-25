@@ -68,6 +68,25 @@ schema:
       }
 
       </script>
+  - type: '{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": {
+      "@type": "Question", "name": "How to integrate Amazon SES SMTP with
+      Formester?", "acceptedAnswer": { "@type": "Answer", "text": "Step 1: Visit
+      Amazon SES and click on create an AWS account Step 2: Fill in your
+      details, click on verify email address and complete the signup process
+      Step 3: Click on the create identity button Step 4: Select either of the
+      option to set your identity Step 5: In case of creating identity using
+      Doman enter your domain name and click on create identity; Or in case of
+      creating identity using an Email address enter your email address and
+      click on create identity Step 6: Check your domain or email is verified or
+      not from the verified identities option under Configuration Step 7: Now go
+      to SMTP settings options Step 8: Click on create SMTP credentials button
+      Step 9: Enter a name and click on create button Step 10: Smtp credentials
+      image Step 11: Final step, check your integration credentials with
+      Formester to verify if it’s working or not, Login to your account ->
+      select a form -> Click on SMTP Integration from the top -> Click on Add
+      Account Add your credentials and click on three dots at the end of the
+      mail account and select the Test option. Wait for a few seconds for the
+      result." } } }'
 metaImages:
   - https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_home_page.png
   - https://formester.com/img/how-to-integrate-amazon-ses-smtp-with-formester_signup_for_ses.png
