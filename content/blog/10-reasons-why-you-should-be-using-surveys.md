@@ -6,8 +6,7 @@ description: Surveys are the most cost-effective way to comprehend what your
   you’ll see the results it brings your way. In this blog, we’ve put together
   ten reasons why you are still not doing surveys and how they can help your
   business improve.
-metaTitle: How do Surveys Help Businesses | How to Use Customer Feedback to
-  Improve Service - Formester
+metaTitle: How to Use Customer Feedback Surveys to Improve Services?
 metaDescription: Discover How Surveys can Benefit Businesses and learn How to
   Use Customer Feedback to Improve Service. Get the inside scoop with
   Formester's guide.
