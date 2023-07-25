@@ -1,26 +1,32 @@
 ---
-metaTitle: Key Benefits Of Single Page Forms | Single Page vs Multi Page Forms What To Choose?  - Formester
-metaDescription: Trying to decide between single page and multi page forms? Check out our blog post to see the key benefits of single page forms and see if they're right for you.
 title: Single Page vs Multi Page Forms
-description: Do you need a single-page form or a multi-page form? There has been much debate about which provides a better user experience. However, the answer may not be so definitive. There are advantages and disadvantages to both. Deciding which is most appropriate depends on the context of your form.
-keywords: single page, multi page, single page vs multi page, single page form, multi page form, single page form vs multi page form, single page vs multi page forms
+description: Do you need a single-page form or a multi-page form? There has been
+  much debate about which provides a better user experience. However, the answer
+  may not be so definitive. There are advantages and disadvantages to both.
+  Deciding which is most appropriate depends on the context of your form.
+metaTitle: "Single Page vs Multi Page Forms: Making the Right Choice!"
+metaDescription: Trying to decide between single page and multi page forms?
+  Check out our blog post to see the key benefits of single page forms and see
+  if they're right for you.
+keywords: single page, multi page, single page vs multi page, single page form,
+  multi page form, single page form vs multi page form, single page vs multi
+  page forms
 author: Piyush Singhania
 authorProfile: https://www.linkedin.com/in/piyushsinghaniya/
 createdAt: 2022-05-15
 coverImg: /img/single-page-vs-multi-page-forms.png
 coverImgAlt: Cover image for the blog, "single page vs multi page form"
-metaImages: [
-    https://formester.com/img/single-page-vs-multi-page-forms.png,
-    https://formester.com/img/single-page-vs-multi-page-forms__easy-to-edit.svg,
-    https://formester.com/img/single-page-vs-multi-page-forms__less-loading-time.svg,
-    https://formester.com/img/single-page-vs-multi-page-forms__less-overwhelming.svg,
-    https://formester.com/img/single-page-vs-multi-page-forms__similar-questions.svg,
-    https://formester.com/img/single-page-vs-multi-page-forms__toggle-form-type.png,
-    https://formester.com/img/single-page-vs-multi-page-forms__multiple-page-form.png,
-    https://formester.com/img/single-page-vs-multi-page-forms__multi-page-form-example.png
-  ]
 featured: false
 published: true
+metaImages:
+  - https://formester.com/img/single-page-vs-multi-page-forms.png
+  - https://formester.com/img/single-page-vs-multi-page-forms__easy-to-edit.svg
+  - https://formester.com/img/single-page-vs-multi-page-forms__less-loading-time.svg
+  - https://formester.com/img/single-page-vs-multi-page-forms__less-overwhelming.svg
+  - https://formester.com/img/single-page-vs-multi-page-forms__similar-questions.svg
+  - https://formester.com/img/single-page-vs-multi-page-forms__toggle-form-type.png
+  - https://formester.com/img/single-page-vs-multi-page-forms__multiple-page-form.png
+  - https://formester.com/img/single-page-vs-multi-page-forms__multi-page-form-example.png
 ---
 
 Do you need a single-page form or a multi-page form? There has been
