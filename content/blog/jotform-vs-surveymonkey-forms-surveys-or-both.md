@@ -618,6 +618,8 @@ Jotform enables businesses to create order forms and payment forms for online sa
 
 ### Limitations of Jotform
 
+![Infographic showing: Limitations of Jotform: 1. Limited Advanced Analytics 2. Complex Logic Functionality 3. Limited Question Types 4. Limited Free Plan Features](/img/limitations-of-jotform_-jotform-vs-surveymonkey.png "Limitations of Jotform")
+
 #### 1. Limited Advanced Analytics
 
 Jotform's analytics capabilities are not as robust compared to SurveyMonkey, with fewer options for in-depth data analysis and reporting.
