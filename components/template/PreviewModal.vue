@@ -18,7 +18,7 @@
     </div>
 
     <iframe
-      :src="template.survey_url"
+      :src="template.surveyUrl"
       frameborder="0"
       width="100%"
       class="template-preview__iframe"
