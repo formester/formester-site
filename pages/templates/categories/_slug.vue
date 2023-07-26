@@ -65,7 +65,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: `https://formester.com/templates/${this.$route.params.slug}/`,
+          href: `https://formester.com/templates/categories/${this.$route.params.slug}/`,
         },
       ],
     }
