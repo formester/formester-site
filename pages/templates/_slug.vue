@@ -25,16 +25,13 @@
         @click="openPreviewModal"
       >
         <img
-          :src="template.preview_image_url"
+          :src="template.previewImageUrl"
           alt="Hero-Image"
           class="img-fluid hero__image rounded pointer"
         />
 
         <div class="template__preview-btn d-flex align-itens-center">
-          <nuxt-img
-            src="/eye-icon.svg"
-            alt="template preview button"
-          />
+          <nuxt-img src="/eye-icon.svg" alt="template preview button" />
           <span class="template__preview-btn__text">Preview</span>
         </div>
       </div>
@@ -89,11 +86,14 @@ export default {
       const metaData = {
         type: 'website',
         url: `https://formester.com/templates/${this.$route.params.slug}/`,
-        title: this.template?.name || 'Formester',
-        description: this.template?.description || this.template?.name,
-        mainImage: this.template?.preview_image_url
-          ? this.template.preview_image_url
-          : 'https://formester.com/formester-form-builder-background.png',
+        title: this.template?.metaTitle || this.template?.name || 'Form Template | Formester',
+        description:
+          this.template?.metaDescription ||
+          this.template?.description ||
+          "Explore Formester's no-code form templates! Create surveys, gather feedback, and manage events effortlessly. Simplify form building now!",
+        mainImage:
+          this.template?.previewImageUrl ||
+          'https://formester.com/formester-form-builder-background.png',
         mainImageAlt: 'Formester Template',
       }
       return getSiteMeta(metaData)
@@ -117,7 +117,9 @@ export default {
   },
   head() {
     return {
-      title: this.template?.name ? `${this.template?.name} | Formester` : 'Formester',
+      title: this.template?.name
+        ? `${this.template?.name} | Formester`
+        : 'Formester',
       meta: [
         ...this.meta,
         {
@@ -141,13 +143,13 @@ export default {
         '@type': 'WebPage',
         name: this.template?.name,
         description: this.template?.description,
-        image: this.template?.preview_image_url,
+        image: this.template?.previewImageUrl,
         url: `https://formester.com/templates/${this.$route.params.slug}/`,
         mainEntity: {
           '@type': 'CreativeWork',
           name: this.template?.name,
           description: this.template?.description,
-          image: this.template?.preview_image_url,
+          image: this.template?.previewImageUrl,
           url: `https://formester.com/templates/${this.$route.params.slug}/`,
           author: {
             '@type': 'Organization',
