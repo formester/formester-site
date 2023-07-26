@@ -144,7 +144,7 @@ A few ways on how forms can help your business are discussed below:
 
 **2. GATHERING FEEDBACK:** The most important thing after acquiring a customer, is to get them to give you feedback. They can be used in the form of testimonials and can be helpful for showcasing your performance. Also, worthwhile feedback from even a small percentage of your customer base, might just end up giving you the breakthrough you were seeking for your product. Besides, it helps you to connect better with your customers and they feel a better sense of connection with your brand. Value the customers & they value your brand!
 
-**3. ONLINE RETAILING:** People who don’t want to bear the expenses incurred by an e-commerce website may start selling products and services online using a form tool which allows for [payment integrations](https://formester.com/integrations/).
+**3. ONLINE RETAILING:** People who don’t want to bear the expenses incurred by an e-commerce website may start selling products and services online using a form tool which allows for [payment integrations](/integrations/).
 
 **4. LINK-BUILDING & WEBSITE TRAFFIC:**  Forms are a viable method to gain valuable input from your users, in the manner of images, feedback, reviews, comments & even entire blog posts. The responses thus received, may act as [traffic sources](https://seodesignchicago.com/marketing/what-is-a-traffic-source/) and help in [back-linking](https://moz.com/learn/seo/backlinks) as well. All this, and the users don’t even have to have access to the backend of your website.
 

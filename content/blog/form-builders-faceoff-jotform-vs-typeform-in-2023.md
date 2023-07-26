@@ -257,7 +257,7 @@ So let's discuss in detail, the differences between Jotform and Typeform, taking
 
 ### 4. HTML Form Endpoints
 
-**Jotform:** JotForm offers powerful HTML form endpoints for seamless integration with websites and applications. Users can [embed HTML forms](https://formester.com/features/html-form-backend/) and receive submissions directly to specified email addresses or view them within the JotForm dashboard.
+**Jotform:** JotForm offers powerful HTML form endpoints for seamless integration with websites and applications. Users can [embed HTML forms](/features/html-form-backend/) and receive submissions directly to specified email addresses or view them within the JotForm dashboard.
 
 **Typeform:** Typeform provides HTML form endpoints for embedding forms on websites and receiving submissions. While not as extensive as JotForm's backend options, Typeform allows users to collect and manage form responses within the platform.
 
@@ -343,7 +343,7 @@ The aspect of branding can be covered under three heads:
 
 ### 14. Auto-Responder
 
-**Jotform:** JotForm offers a robust auto-responder feature that allows users to [automatically send personalized confirmation emails](https://formester.com/features/auto-responder/) or responses to form submissions. Customization extends right from the content of the auto-responder email, to including dynamic fields to show submission details and personalized messages.
+**Jotform:** JotForm offers a robust auto-responder feature that allows users to [automatically send personalized confirmation emails](/features/auto-responder/) or responses to form submissions. Customization extends right from the content of the auto-responder email, to including dynamic fields to show submission details and personalized messages.
 
 **Typeform:** Typeform has limited provision for auto-responses compared to JotForm. While Typeform does provide an option to send a basic confirmation email to form respondents, its auto-responder feature is more focused on sending simple confirmation emails rather than advanced automation and tailored responses.
 
@@ -464,9 +464,9 @@ Intuitive Form Building: Effortlessly [create stunning forms with a drag-and-dro
 
 ![Screenshot showing Formester's Home-Page](/img/jotform-vs-typeform-3.png "Formester's Home-Page")
 
-Advanced Feature Set: Work with powerful features like **conditional logic, payment integrations, spam protection, digital signatures, file uploads**, and more to [build dynamic, interactive and intelligent forms](https://formester.com/features/).
+Advanced Feature Set: Work with powerful features like **conditional logic, payment integrations, spam protection, digital signatures, file uploads**, and more to [build dynamic, interactive and intelligent forms](/features/).
 
-Seamless Data Management: Collect, store and manage form submissions with ease, export data in various formats, and [integrate with your favorite apps for streamlined workflows](https://formester.com/integrations/).
+Seamless Data Management: Collect, store and manage form submissions with ease, export data in various formats, and [integrate with your favorite apps for streamlined workflows](/integrations/).
 
 Ready to experience the Formester magic? \
 [Sign up for a free account today and elevate your form-building game!](https://app.formester.com/users/sign_up)

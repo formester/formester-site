@@ -325,7 +325,7 @@ At Formester, we specialize in all things form-building! Our platform offers you
 
 Excitingly, we are expanding our features to include PDF capabilities! 
 
-This means that in addition to [Formester's existing form-building functionalities](https://formester.com/features/), you will soon be able to leverage our platform to work with PDF forms as well. 
+This means that in addition to [Formester's existing form-building functionalities](/features/), you will soon be able to leverage our platform to work with PDF forms as well. 
 
 ![Screenshot showing: Formester's Home-page](/img/fill-out-a-pdf-form_formester-homepage.png "Formester's Home-page")
 

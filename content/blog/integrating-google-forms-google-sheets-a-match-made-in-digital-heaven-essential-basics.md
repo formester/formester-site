@@ -411,7 +411,7 @@ Google Forms has limited design scope which doesn't help when designing more per
 
 ### 2. Complex Question Types
 
-Google Forms is limited in its ability to provide [advanced question types](https://formester.com/features/conditional-logic/) such as matrix grids, ranking-based questions and superior conditional logic.
+Google Forms is limited in its ability to provide [advanced question types](/features/conditional-logic/) such as matrix grids, ranking-based questions and superior conditional logic.
 
 ### 3. Difficult third-party Integrations
 
@@ -419,7 +419,7 @@ Although quite a few third-party integrations are possible, the process isn't as
 
 ### 4. Branding
 
-Google Forms has no option to provide [extensive branding and white-labeling options](https://formester.com/features/branding-kit/). Also, there is no way to remove Google's personal branding from the form.
+Google Forms has no option to provide [extensive branding and white-labeling options](/features/branding-kit/). Also, there is no way to remove Google's personal branding from the form.
 
 ### 5. Basic Analytics
 
@@ -427,7 +427,7 @@ The analytics system is comparatively basic when it comes to Google Forms.
 
 ### 6. No Way To Send Automatic Responses
 
-There is no way to [send out personalized, automated acknowledgment messages](https://formester.com/features/auto-responder/) to respondents.
+There is no way to [send out personalized, automated acknowledgment messages](/features/auto-responder/) to respondents.
 
 And whilst this isn't a problem when creating simple forms;
 
@@ -435,9 +435,9 @@ Google Forms may not be the best choice when it comes to crafting complex forms 
 
 Formester is a [no-code, intuitive and easy-to-use form builder with a drag-and-drop design approach](https://formester.com/), that not only offers all the features Google Forms does;
 
-But also [overcomes and provides advanced features against the limitations](https://formester.com/features/) encountered by users, in Google Forms.
+But also [overcomes and provides advanced features against the limitations](/features/) encountered by users, in Google Forms.
 
-Moreover, the [integration with third-party platforms](https://formester.com/integrations/), including Google Sheets, is a seamless process.
+Moreover, the [integration with third-party platforms](/integrations/), including Google Sheets, is a seamless process.
 
 **In other words, with Formester - the entire process is the same, just easier and more effective!**
 

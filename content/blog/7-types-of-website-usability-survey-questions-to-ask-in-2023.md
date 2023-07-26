@@ -321,7 +321,7 @@ The following questions can be asked with regard to performance and compatibilit
 
 ### 5. Payments and Subscriptions
 
-If your website offers products, services and subscriptions, which require fetching payments from your users, then facilitating [safe, secure, transparent and prompt transaction methods](https://formester.com/features/online-payment/) is your prime responsibility.
+If your website offers products, services and subscriptions, which require fetching payments from your users, then facilitating [safe, secure, transparent and prompt transaction methods](/features/online-payment/) is your prime responsibility.
 
 Your website should enable the use of more than one popular payment method.
 
@@ -412,7 +412,7 @@ At Formester, you can accomplish this in 3 simple steps:
 
 > Pro Tip on What To Include: Feel free to take inspiration from this blog!
 
-3. Publish the survey form, get submissions, [analyze your data](https://formester.com/features/powerful-analytics/) and you are ready to [design, redesign or optimize your website](https://acornglobus.com/#services)
+3. Publish the survey form, get submissions, [analyze your data](/features/powerful-analytics/) and you are ready to [design, redesign or optimize your website](https://acornglobus.com/#services)
 
 ![An infographic showing 3 simple steps to create a powerful website usability survey](/img/grey-3-points-process-roadmap-infographic-graph-2-.png "An infographic showing 3 simple steps to create a powerful website usability survey")
 

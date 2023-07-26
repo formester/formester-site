@@ -761,7 +761,7 @@ Moreover, Jotform facilitates the creation of forms that allow clients or custom
 
 #### 2. Payment Collection and Order Forms
 
-Jotform's built-in payment integration features make it suitable for creating [forms that collect payments, process orders, or handle donations](https://formester.com/features/calculation-fields/). You can create order forms with product catalogs, calculate totals, and accept payments securely.
+Jotform's built-in payment integration features make it suitable for creating [forms that collect payments, process orders, or handle donations](/features/calculation-fields/). You can create order forms with product catalogs, calculate totals, and accept payments securely.
 
 #### 3. Volunteer and Membership Forms
 
@@ -833,8 +833,8 @@ Arrives Formester! A [no-code, intuitive and user-friendly form-builder, with a 
 
 **With Formester, you get a powerful form-building solution that combines the best of both worlds.** 
 
-It empowers you to create forms that not only look professional but also function flawlessly, catering to even the most [complex requirements](https://formester.com/features/). 
+It empowers you to create forms that not only look professional but also function flawlessly, catering to even the most [complex requirements](/features/). 
 
-Whether you need [conditional logic](https://formester.com/features/conditional-logic/), [advanced reporting](https://formester.com/features/powerful-analytics/), [payment integration](https://formester.com/features/online-payment/), or [custom branding](https://formester.com/features/branding-kit/), Formester delivers it all while ensuring it fits within your [economic budget](https://formester.com/pricing/).
+Whether you need [conditional logic](/features/conditional-logic/), [advanced reporting](/features/powerful-analytics/), [payment integration](/features/online-payment/), or [custom branding](/features/branding-kit/), Formester delivers it all while ensuring it fits within your [economic budget](/pricing/).
 
 [Sign-up on Formester for free](https://app.formester.com/users/sign_up) and strike the balance today!

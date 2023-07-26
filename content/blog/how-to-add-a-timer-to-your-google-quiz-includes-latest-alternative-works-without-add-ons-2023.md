@@ -306,7 +306,7 @@ It is nevertheless time-consuming and still comes with a few limitations.
 
 Formester serves as a one-stop platform for all your form-building needs!
 
-From simple design processes and customizable templates, to setting up [advanced features like conditional logic and the much discussed date and time constraints](https://formester.com/features/);
+From simple design processes and customizable templates, to setting up [advanced features like conditional logic and the much discussed date and time constraints](/features/);
 
 Formester does it all; 
 

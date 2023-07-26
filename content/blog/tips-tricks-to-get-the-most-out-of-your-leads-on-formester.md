@@ -212,7 +212,7 @@ Plus, you also get to add your custom images and videos. Not to mention, you get
 
 We understand that businesses use various tools, apps and services for a variety of reasons.
 
-Integrating them, however, poses a problem sometimes. But by using [Zapier integration technology](https://zapier.com/how-it-works?utm_source=google&utm_medium=cpc&utm_campaign=gaw-gbl-nua-search-desktop-brand-long_tail&utm_adgroup=brand_integrations&utm_term=zapier%20integrations&utm_content=exclude&gclid=CjwKCAjw5pShBhB_EiwAvmnNV-2iUc4B2-n1pUcl4kXwl6PhvIevMp8-1pOsdr_O59rk532sfo5luRoCyvMQAvD_BwE) we ensure a smooth, efficient and easy [integration of your Formester web forms](https://formester.com/integrations/) with popular technologies like [Slack](https://slack.com/intl/en-in/features), [Google Sheets](https://g.co/kgs/NZS29o), [Salesforce](https://www.salesforce.com/in/) or anything else. 
+Integrating them, however, poses a problem sometimes. But by using [Zapier integration technology](https://zapier.com/how-it-works?utm_source=google&utm_medium=cpc&utm_campaign=gaw-gbl-nua-search-desktop-brand-long_tail&utm_adgroup=brand_integrations&utm_term=zapier%20integrations&utm_content=exclude&gclid=CjwKCAjw5pShBhB_EiwAvmnNV-2iUc4B2-n1pUcl4kXwl6PhvIevMp8-1pOsdr_O59rk532sfo5luRoCyvMQAvD_BwE) we ensure a smooth, efficient and easy [integration of your Formester web forms](/integrations/) with popular technologies like [Slack](https://slack.com/intl/en-in/features), [Google Sheets](https://g.co/kgs/NZS29o), [Salesforce](https://www.salesforce.com/in/) or anything else. 
 
 Our webhooks can be used to notify any other app when a submission arrives. As you will see, we have no problem working with others!
 
@@ -240,7 +240,7 @@ Also, about 70% of buyers engage in business with a brand that responds within 5
 
 Seems like a lot of work? Well, not to us!
 
-Don’t forget to set up your [email autoresponder](https://formester.com/features/auto-responder/) once you’re done creating your forms with Formester.
+Don’t forget to set up your [email autoresponder](/features/auto-responder/) once you’re done creating your forms with Formester.
 
 > Tip & Trick: Be sure to have acknowledgement email systems in place after you receive any response to your web forms. Nobody likes to wait!
 
@@ -263,7 +263,7 @@ But you also need accurate information, so as to serve them better and of course
 
 So, how do we do that? Well, we use conditional logic for that!
 
-In layman’s terms, [conditional logic](https://formester.com/features/conditional-logic/) allows for dynamism in your web form, as in, a way to create forms that change based on input.
+In layman’s terms, [conditional logic](/features/conditional-logic/) allows for dynamism in your web form, as in, a way to create forms that change based on input.
 
 While this feature leads to a more personalized experience on the user side, the business side gains more accurate and insightful data for analysis.
 
@@ -277,7 +277,7 @@ Information that can be analyzed for gaining insights into customer mindsets, de
 
 These insights pave the way for making well-informed business decisions, determining risks while taking critical decisions and improving branding strategies.
 
-With our [free plan on Formester](https://formester.com/pricing/), you get access to the basic set of [analytics](https://formester.com/features/powerful-analytics/) to determine how your web forms are working.
+With our [free plan on Formester](/pricing/), you get access to the basic set of [analytics](/features/powerful-analytics/) to determine how your web forms are working.
 
 > Tip & Trick: Analyze the performance of your web forms. Try and test with other formats. Compare your results and make use of those insights. They aren’t just eye candy, after all!
 

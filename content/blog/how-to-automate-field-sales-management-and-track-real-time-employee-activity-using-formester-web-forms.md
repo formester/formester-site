@@ -417,13 +417,13 @@ All the form responses are sent and stored in the Department Head's/Business Own
 
 #### 8. Integration with Third-Party Platforms
 
-For better data organization and management, this web form can be [seamlessly integrated with several third-party platforms](https://formester.com/integrations/) such as Google Sheets, Google Drive, HubSpot, Salesforce, etc. 
+For better data organization and management, this web form can be [seamlessly integrated with several third-party platforms](/integrations/) such as Google Sheets, Google Drive, HubSpot, Salesforce, etc. 
 
 #### 9. Credible and Branded Forms
 
 Your web forms can be curated as per your brand's theme and messaging, and you also have the option to include your logo.
 
-In other words, everything to [make your web forms credible and personalized](https://formester.com/features/branding-kit/).
+In other words, everything to [make your web forms credible and personalized](/features/branding-kit/).
 
 ### Benefits of Formester's Customer Visit Record Form
 
@@ -457,7 +457,7 @@ And that's how easy field sales automation can be!
 
 At Formester, [innovation leads to impactful forms](https://formester.com/)!
 
-Click here to [check out our plans and select the one that best fits your requirements](https://formester.com/pricing/).
+Click here to [check out our plans and select the one that best fits your requirements](/pricing/).
 
 ## Conclusion
 

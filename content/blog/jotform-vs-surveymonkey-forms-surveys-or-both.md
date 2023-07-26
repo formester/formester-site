@@ -668,16 +668,16 @@ That said, to end your quest for the best of both worlds, Formester is here!
 
 Formester empowers you to:
 
-1. Design [highly customized and personalized web forms, aligning with your branding](https://formester.com/features/branding-kit/) and catering to diverse business needs.
-2. Create complex Survey Forms with ease, [incorporating advanced logic](https://formester.com/features/conditional-logic/), while enjoying [seamless integration with a wide range of third-party platforms](https://formester.com/integrations/).
-3. Leverage [robust data analytics and reporting capabilities](https://formester.com/features/powerful-analytics/) to gain valuable insights from survey responses, supporting data-driven decision-making.
+1. Design [highly customized and personalized web forms, aligning with your branding](/features/branding-kit/) and catering to diverse business needs.
+2. Create complex Survey Forms with ease, [incorporating advanced logic](/features/conditional-logic/), while enjoying [seamless integration with a wide range of third-party platforms](/integrations/).
+3. Leverage [robust data analytics and reporting capabilities](/features/powerful-analytics/) to gain valuable insights from survey responses, supporting data-driven decision-making.
 4. Enjoy the simplicity and user-friendliness of Formester's interface while crafting intricate survey forms and accessing comprehensive data analytics.
 
-Formester offers the versatility and advanced customization options of Jotform, allowing users to create a wide range of forms, including [surveys](/templates/categories/survey-forms/), [contact forms](/templates/categories/contact-forms/), [payment forms](/blog/how-to-collect-payments-using-online-web-forms/), and more. With an [intuitive drag-and-drop interface](https://formester.com/) and [powerful conditional logic](https://formester.com/features/conditional-logic/) and [calculation fields](https://formester.com/features/calculation-fields/) Formester makes form-building a breeze for users with varying levels of technical expertise.
+Formester offers the versatility and advanced customization options of Jotform, allowing users to create a wide range of forms, including [surveys](/templates/categories/survey-forms/), [contact forms](/templates/categories/contact-forms/), [payment forms](/blog/how-to-collect-payments-using-online-web-forms/), and more. With an [intuitive drag-and-drop interface](https://formester.com/) and [powerful conditional logic](/features/conditional-logic/) and [calculation fields](/features/calculation-fields/) Formester makes form-building a breeze for users with varying levels of technical expertise.
 
 At the same time, Formester incorporates the user-friendly experience and robust data analysis capabilities of SurveyMonkey. It provides real-time tracking of survey responses, automatic results summaries, and various data export options, empowering users to gain valuable insights and make data-driven decisions.
 
-Additionally, Formester goes a step further by offering unique features such as seamless integration with essential apps, [digital signature support](https://formester.com/features/digital-signature/), and an [Information Recall feature](https://formester.com/features/information-recall/) that makes forms feel more dynamic and compelling.
+Additionally, Formester goes a step further by offering unique features such as seamless integration with essential apps, [digital signature support](/features/digital-signature/), and an [Information Recall feature](/features/information-recall/) that makes forms feel more dynamic and compelling.
 
 What’s more? A vast collection of [Templates for both Web Forms and Surveys](/templates/), catering to diverse needs and preferences!
 

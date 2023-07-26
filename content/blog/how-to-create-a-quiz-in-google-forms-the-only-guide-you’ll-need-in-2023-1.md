@@ -321,9 +321,9 @@ If you want to switch to an [even easier, drag-and-drop, no-code software](https
 
 ![Infographic showing:- 6 Reasons why you should switch to Formester](/img/orange-white-modern-minimal-product-features-instagram-post-2-.png "6 Reasons why you should switch to Formester")
 
-At Formester, you get a much more [straightforward, easy-to-use and effortless interface](https://formester.com/integrations/).
+At Formester, you get a much more [straightforward, easy-to-use and effortless interface](/integrations/).
 
-Finding and setting-up, all the [necessary settings will be a no-brainer](https://formester.com/features/html-form-backend/)!
+Finding and setting-up, all the [necessary settings will be a no-brainer](/features/html-form-backend/)!
 
 What's more, we have [pre-designed and customizable templates](/templates/), all set in place, to get you going, right away!
 

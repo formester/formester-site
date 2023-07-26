@@ -497,7 +497,7 @@ It is not enough to simply create and publish a survey.
 
 Once you receive responses, you have to have an efficient data analysis system in place.
 
-Such a system will help you make the most out of your survey results, by giving you [powerful and actionable insights](https://formester.com/features/powerful-analytics/) which enable you to make crucial decisions in an informed manner.
+Such a system will help you make the most out of your survey results, by giving you [powerful and actionable insights](/features/powerful-analytics/) which enable you to make crucial decisions in an informed manner.
 
 You'll be able to take calculated risks and make wiser investments.
 

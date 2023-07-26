@@ -402,7 +402,7 @@ However, the most crucial set of questions that you should take advantage of, ar
 
 To increase your affability, be sure you give thanks to your survey responders!
 
-Set-up an Auto-Responder, to [send out a quick thanks](https://formester.com/features/auto-responder/) for taking their valuable time to fill up your survey. 
+Set-up an Auto-Responder, to [send out a quick thanks](/features/auto-responder/) for taking their valuable time to fill up your survey. 
 
 ### 3. Providing a safe, smooth and effortless platform
 
@@ -410,7 +410,7 @@ Ensure your survey is published on transparent platforms whilst maintaining the 
 
 Don't have them go through complex, frustrating and time-consuming spam-protection tests;
 
-To get the most out of your submissions, provide them with a [smooth, intuitive, and spam-proof interface](https://formester.com/features/spam-protection/).
+To get the most out of your submissions, provide them with a [smooth, intuitive, and spam-proof interface](/features/spam-protection/).
 
 Ultimately, a survey is also a representation of your brand!
 
@@ -422,7 +422,7 @@ It is essential to be able to consolidate your submissions into data and eventua
 
 The insights obtained should be powerful enough to guide you toward making calculated, critical and informed decisions about your products, services and marketing strategies.
 
-Having a dynamic form builder that allows you to both [devise an effective survey and analyze its submissions](https://formester.com/features/powerful-analytics/) is, therefore, crucial.
+Having a dynamic form builder that allows you to both [devise an effective survey and analyze its submissions](/features/powerful-analytics/) is, therefore, crucial.
 
 > Bonus Tip: As a gesture of appreciation, you may include rewards for your survey fillers.
 
@@ -450,13 +450,13 @@ At Formester, we have the perfect 3 step strategy, to get you going, right away!
 
 > 1. [Create an account on Formester](https://app.formester.com/users/sign_up) and upload your Brand Kit.
 >
-> > P.S., We also ensure you experience a [seamless integration of your survey form into your website](https://formester.com/features/html-form-backend/).
+> > P.S., We also ensure you experience a [seamless integration of your survey form into your website](/features/html-form-backend/).
 
 2. Avoid the brainstorming and hassle of going through numerous articles and blogs to select the right question. 
 
 > Instead, choose from a variety of [pre-designed and carefully developed Survey Templates](/templates/) and customize them as per your choice, requirements and brand kit.
 >
-> Make use of key features, such as conditional logic, to [ask only what is required](https://formester.com/features/conditional-logic/) and save both your and your users' time!
+> Make use of key features, such as conditional logic, to [ask only what is required](/features/conditional-logic/) and save both your and your users' time!
 >
 > > Bonus Tip: Here's a guide to [60+ questions you may choose from](/blog/7-types-of-website-usability-survey-questions-to-ask-in-2023/), to create the perfect survey!
 

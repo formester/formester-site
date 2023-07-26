@@ -242,7 +242,7 @@ We accomplish this by providing you with a [no-code, drag-and-drop, and intuitiv
 * Skip to follow up questions
 * Skip Logic
 
-Click here for [more details](https://formester.com/features/conditional-logic/).
+Click here for [more details](/features/conditional-logic/).
 
 #### Other Features with the Basic Plan:
 
@@ -259,7 +259,7 @@ Formester also offers [customizable, pre-designed and free Templates](/templates
 
 #### Pricing
 
-The Basic plan is free for upto 10 forms and 100 submissions, giving you the [scope to explore and make the right decision](https://formester.com/pricing/).
+The Basic plan is free for upto 10 forms and 100 submissions, giving you the [scope to explore and make the right decision](/pricing/).
 
 ### 2. Jotform
 

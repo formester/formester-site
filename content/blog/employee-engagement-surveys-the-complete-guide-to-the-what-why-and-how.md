@@ -588,10 +588,10 @@ Did you know, at Formester, you could...
 
 It's [completely free](https://app.formester.com/users/sign_up)!
 
-2. Create a response-oriented and insightful Employee Engagement survey, using Formester's [intuitive, no-code, drag-and-drop interface](https://formester.com/features/);
+2. Create a response-oriented and insightful Employee Engagement survey, using Formester's [intuitive, no-code, drag-and-drop interface](/features/);
 
 Or, simply use this [pre-designed, customizable Employee Engagement Survey Template](/templates/employee-engagement-survey-template-1661/).
 
-3. Publish your survey and [gather actionable insights](https://formester.com/features/powerful-analytics/)!
+3. Publish your survey and [gather actionable insights](/features/powerful-analytics/)!
 
 So start your [survey journey with Formester](https://formester.com/) now!

@@ -359,7 +359,7 @@ An [extensive email list](https://www.campaignmonitor.com/blog/email-marketing/i
 
 With web forms in place, you don't even have to set-up a website to start selling.
 
-Your web forms can be integrated with several [third-party payment gateways](https://formester.com/features/online-payment/) like PayPal, Stripe, etc., so you can start receiving payments, without having to incur the cost rendered by an e-commerce website.
+Your web forms can be integrated with several [third-party payment gateways](/features/online-payment/) like PayPal, Stripe, etc., so you can start receiving payments, without having to incur the cost rendered by an e-commerce website.
 
 All you have to do is collect payments!
 
@@ -385,13 +385,13 @@ Setting up an auto-responder helps you send out instant acknowledgment messages 
 
 Moreover, with form-builders like Formester, you get Auto-Responders that allow you to curate personalized acknowledgment messages/emails.
 
-The most important contribution of an Auto-responder, therefore, is the fact that they help you [eliminate redundant processes and automate monotonous ones](https://formester.com/features/auto-responder/);
+The most important contribution of an Auto-responder, therefore, is the fact that they help you [eliminate redundant processes and automate monotonous ones](/features/auto-responder/);
 
 Thereby, increasing resource efficiency and conservation.
 
 ### 6. Platform Integrations
 
-As a business, it is understandable that you don't just deal with web forms and [work with multiple third-party platforms and applications](https://formester.com/integrations/) to fulfil your business needs.
+As a business, it is understandable that you don't just deal with web forms and [work with multiple third-party platforms and applications](/integrations/) to fulfil your business needs.
 
 You'd be delighted to know that web forms can be easily integrated with such platforms, using technologies such as Zapier integration.
 
@@ -403,7 +403,7 @@ There are plenty of web form builders available in the market.
 
 With the [no-code, drag-and-drop and intuitive interface](https://formester.com/), creating web forms becomes child's play.
 
-You [don't need to have any coding expertise](https://formester.com/features/html-form-backend/), for both creating a web form, as well as integrating it with your website.
+You [don't need to have any coding expertise](/features/html-form-backend/), for both creating a web form, as well as integrating it with your website.
 
 On the users' side, this materializes, as web forms that are easy to access and interesting to fill out. 
 
@@ -512,15 +512,15 @@ Consider form-builders that offer advanced features like conditional logic, whic
 
 ### 3. Auto-Responder
 
-Make sure your form builder also provides for setting up an auto-responder, which helps you [keep track of your submissions](https://formester.com/features/auto-responder/) and provide quality customer service.
+Make sure your form builder also provides for setting up an auto-responder, which helps you [keep track of your submissions](/features/auto-responder/) and provide quality customer service.
 
 ### 4. Robust Analytics 
 
-Have a robust analytics system in place that will help you [analyze the data you receive from your submissions](https://formester.com/features/powerful-analytics/) and gather actionable insights.
+Have a robust analytics system in place that will help you [analyze the data you receive from your submissions](/features/powerful-analytics/) and gather actionable insights.
 
 ### 5. Spam Protection 
 
-Ensure your form builder comes with a credible spam protection feature, with captcha and re-captcha integrations that [stop bot responses and other spam](https://formester.com/features/spam-protection/).
+Ensure your form builder comes with a credible spam protection feature, with captcha and re-captcha integrations that [stop bot responses and other spam](/features/spam-protection/).
 
 ### 6. Brand Theme Consistency
 
@@ -550,7 +550,7 @@ If these tools find the right usage, they can open the doors to multiple growth 
 
 One such tool for digital transformation is Online Web forms.
 
-Online forms are an [affordable, easy to use and powerful tool](https://formester.com/pricing/), one can apply to enhance their business.
+Online forms are an [affordable, easy to use and powerful tool](/pricing/), one can apply to enhance their business.
 
 They come equipped with quite a few advanced features that enable automation of business processes, allow integrations and help in establishing a more meaningful connection with the customers.
 

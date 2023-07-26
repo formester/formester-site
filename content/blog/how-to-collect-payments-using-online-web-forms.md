@@ -558,7 +558,7 @@ That said, **Formester** is a no-code (meaning: you DON'T have to have any knowl
 
 \
 With a [drag-and-drop form design approach](https://formester.com/) \
-That combines [advanced functionalities](https://formester.com/features/), [seamless integrations](https://formester.com/integrations/) and [top-tier security features](https://formester.com/features/spam-protection/)\
+That combines [advanced functionalities](/features/), [seamless integrations](/integrations/) and [top-tier security features](/features/spam-protection/)\
 To bring forth powerful, dynamic, visually-appealing and yet simplistic forms!
 
 Now let's explore,
@@ -745,7 +745,7 @@ By integrating user-friendly payment forms, businesses can capture and retain cu
 
 Don't let complex payment methods hinder your business growth!
 
-So take the reins of your payment collection process with [Formester's powerful payment forms](https://formester.com/features/online-payment/)!
+So take the reins of your payment collection process with [Formester's powerful payment forms](/features/online-payment/)!
 
 Offer Quick and simplified payment methods to your customers!
 

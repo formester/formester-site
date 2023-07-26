@@ -637,10 +637,10 @@ Form builders offer user-friendly interfaces, customization options, and versati
 
 They enable businesses to:
 
-* [Design visually appealing quizzes](https://formester.com/features/branding-kit/)
-* [Incorporate advanced logic and branching](https://formester.com/features/conditional-logic/)
+* [Design visually appealing quizzes](/features/branding-kit/)
+* [Incorporate advanced logic and branching](/features/conditional-logic/)
 * [Integrate with other third-party software, tools and platforms](https://formester.com/integrations/)
-* [Provide analytics and reporting features](https://formester.com/features/powerful-analytics/)
+* [Provide analytics and reporting features](/features/powerful-analytics/)
 
 Ready to create engaging and interactive quizzes to boost your brand's online presence? 
 

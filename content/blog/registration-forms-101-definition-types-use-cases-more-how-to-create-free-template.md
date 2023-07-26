@@ -488,7 +488,7 @@ By simply choosing a [pre-designed, customizable, free registration form templat
 
 ### Step 3:  Designing the Form
 
-Once you've added the required and relevant fields to your registration form, you may also [personalize it as per your own branding theme and design](https://formester.com/features/branding-kit/).
+Once you've added the required and relevant fields to your registration form, you may also [personalize it as per your own branding theme and design](/features/branding-kit/).
 
 You may change the background colour, the form colour, the font size and type, margins, etc.
 
@@ -500,7 +500,7 @@ You may also insert your company logo, to enhance form credibility.
 
 Once your registration form is ready, click on the Auto-Responder Tab to create an auto-response.
 
-This feature lets you [create an automatic, personalized acknowledgement message](https://formester.com/features/auto-responder/) that can be sent to the users upon receiving their submissions.
+This feature lets you [create an automatic, personalized acknowledgement message](/features/auto-responder/) that can be sent to the users upon receiving their submissions.
 
 ![Screen-capture showing: The Auto-Responder Section](/img/registration-forms_5.png "The Auto-Responder Section")
 
@@ -518,7 +518,7 @@ If you are satisfied, just hit publish!
 
 Your registration form is now ready to gather responses!
 
-P.S., you may also use the Analytics feature to [analyze your form responses](https://formester.com/features/powerful-analytics/)!
+P.S., you may also use the Analytics feature to [analyze your form responses](/features/powerful-analytics/)!
 
 ![Screen-capture showing: The Analytics Section](/img/registration-forms_8.png "The Analytics Section")
 
@@ -538,11 +538,11 @@ If the registration form is specific to a particular product or service, ensure 
 
 ### 3. Use Spam-Filter
 
-Place a spam-check, or a captcha test on your forms to make sure you [receive genuine responses only](https://formester.com/features/spam-protection/).
+Place a spam-check, or a captcha test on your forms to make sure you [receive genuine responses only](/features/spam-protection/).
 
 ### 4. Employ Advanced Features
 
-Use advanced features like conditional logic to [create dynamic forms and gather more accurate information](https://formester.com/features/conditional-logic/).
+Use advanced features like conditional logic to [create dynamic forms and gather more accurate information](/features/conditional-logic/).
 
 ### 5. Compelling CTA
 
@@ -550,7 +550,7 @@ Use a more compelling and well-thought CTA in place of a regular Submit or OK bu
 
 ### 6. Third-party integrations
 
-Make sure that the responses received on your registration form are being stored, organized and managed centrally. At Formester, we offer [integrations with several third-party platforms](https://formester.com/integrations/), such as Google Sheets, Salesforce, Slack, etc. 
+Make sure that the responses received on your registration form are being stored, organized and managed centrally. At Formester, we offer [integrations with several third-party platforms](/integrations/), such as Google Sheets, Salesforce, Slack, etc. 
 
 Click here to know more about how you can [design engaging forms, to get the most out of your leads!](/blog/tips-tricks-to-get-the-most-out-of-your-leads-on-formester/)
 
@@ -568,7 +568,7 @@ At Formester, you'll get a [no-code, drag-and-drop approach to form-building and
 
 ![Screen-capture showing: Formester's Home-Page](/img/registration-form.png "Formester's Home-Page")
 
-Moreover, you get a [range of features, from basic to advanced](https://formester.com/features/);
+Moreover, you get a [range of features, from basic to advanced](/features/);
 
 So none of your form-requirements are compromised!
 
