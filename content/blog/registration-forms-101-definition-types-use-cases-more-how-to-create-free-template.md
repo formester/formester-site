@@ -287,7 +287,7 @@ Automating business processes,
 
 Eliminating transmission based data loss,
 
-They act as an efficient, easy and accurate service finding [several applications in various domains and industries](https://formester.com/blog/web-forms-how-and-where-to-use-them-for-your-business/).
+They act as an efficient, easy and accurate service finding [several applications in various domains and industries](/blog/web-forms-how-and-where-to-use-them-for-your-business/).
 
 There are several kinds of web forms, serving different business needs.
 
@@ -482,7 +482,7 @@ Moreover, you may also choose to mark certain fields as required.
 
 OR, cut down the hassle;
 
-By simply choosing a [pre-designed, customizable, free registration form template](https://formester.com/templates/categories/registration-forms/) from our Template Library and making minor edits!
+By simply choosing a [pre-designed, customizable, free registration form template](/templates/categories/registration-forms/) from our Template Library and making minor edits!
 
 ![Screen-capture showing: Formester's Template Section](/img/registration-forms_3.png "Formester's Template Section")
 
@@ -552,7 +552,7 @@ Use a more compelling and well-thought CTA in place of a regular Submit or OK bu
 
 Make sure that the responses received on your registration form are being stored, organized and managed centrally. At Formester, we offer [integrations with several third-party platforms](https://formester.com/integrations/), such as Google Sheets, Salesforce, Slack, etc. 
 
-Click here to know more about how you can [design engaging forms, to get the most out of your leads!](https://formester.com/blog/tips-tricks-to-get-the-most-out-of-your-leads-on-formester/)
+Click here to know more about how you can [design engaging forms, to get the most out of your leads!](/blog/tips-tricks-to-get-the-most-out-of-your-leads-on-formester/)
 
 ## Conclusion
 

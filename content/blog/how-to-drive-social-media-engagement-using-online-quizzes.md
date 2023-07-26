@@ -385,7 +385,7 @@ In other words, making your content interactive.
 
 That being said, one effective approach is to incorporate online quizzes into your marketing strategy. 
 
-Online quizzes offer a fun and interactive way to connect with your target audience, [increase brand awareness](https://formester.com/blog/how-branded-surveys-can-help-you-unlock-your-brand%E2%80%99s-potential/), and drive meaningful engagement.
+Online quizzes offer a fun and interactive way to connect with your target audience, [increase brand awareness](/blog/how-branded-surveys-can-help-you-unlock-your-brand%E2%80%99s-potential/), and drive meaningful engagement.
 
 ![Infographic showing: Instagram Stories & Reels vs. Picture Posts - Comparison based on Engagement related statistics: 1. Instagram Stories & Reels generate 2x more engagement than simple picture-based posts 2. Stories & Reels offer interactive features like polls, questions, and stickers to captivate your audience 3. Stats show higher view rates, completion rates, and shares for interactive visual content: 65% increase in engagement with Instagram Stories & Reels compared to static picture posts (Source: Instagram Insights) 3. 70% of Instagram users prefer watching Stories and Reels for interactive and entertaining content (Source: Hootsuite) 4. Stories' ephemeral nature creates a fear of missing out (FOMO) effect, driving immediate engagement and higher view rates 5. Reels' short and visually appealing format grabs attention, leading to higher completion rates and shares 6. Instagram's algorithm prioritizes Stories & Reels, increasing their discoverability and reach.](/img/instagram-stories-reels-vs.-picture-posts.png "Instagram Stories & Reels vs. Picture Posts - Comparison based on Engagement related statistics")
 
@@ -459,7 +459,7 @@ Now let's get you started with actualizing all these benefits, by discussing...
 
 ### Step 1: Define your objectives & Set Realistic Goals
 
-* Determine [what you aim to achieve with your online quizzes](https://formester.com/blog/web-forms-how-and-where-to-use-them-for-your-business/). It could be increasing brand awareness, driving website traffic, generating leads, or enhancing customer engagement.
+* Determine [what you aim to achieve with your online quizzes](/blog/web-forms-how-and-where-to-use-them-for-your-business/). It could be increasing brand awareness, driving website traffic, generating leads, or enhancing customer engagement.
 * Setting specific, measurable, achievable, relevant, and time-bound (SMART) goals, will help you in a quantitative analysis of your efforts.
 
 ### Step 2: Identify your Target Audience
@@ -476,7 +476,7 @@ Now let's get you started with actualizing all these benefits, by discussing...
 
 * Develop quiz questions and content that are interesting, relevant, and related to your brand. Use a mix of fun, educational, and thought-provoking questions that eventually give you some insight into your customers' minds!
 * Ensure that your quiz aligns with your brand voice, tone, and values.
-* Consider incorporating multimedia elements such as images, videos, or audio to [make the quiz more engaging](https://formester.com/blog/tips-tricks-to-get-the-most-out-of-your-leads-on-formester/).
+* Consider incorporating multimedia elements such as images, videos, or audio to [make the quiz more engaging](/blog/tips-tricks-to-get-the-most-out-of-your-leads-on-formester/).
 
 ### Step 5: Optimize for Multiple Devices
 

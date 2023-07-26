@@ -351,7 +351,7 @@ The importance of Employee Engagement is such that [Quantum Workplace recommends
 
 And, supplementing an annual employee engagement survey with pulse and lifecycle surveys to gauge the success of HR initiatives.
 
-Hence, comes into play the need for [well-designed, thoughtful, result-oriented and insight-driven Surveys](https://formester.com/blog/seven-assured-ways-to-improve-your-online-surveys/).
+Hence, comes into play the need for [well-designed, thoughtful, result-oriented and insight-driven Surveys](/blog/seven-assured-ways-to-improve-your-online-surveys/).
 
 Having discussed the factors affecting Employee Engagement, let's dive into...
 
@@ -590,7 +590,7 @@ It's [completely free](https://app.formester.com/users/sign_up)!
 
 2. Create a response-oriented and insightful Employee Engagement survey, using Formester's [intuitive, no-code, drag-and-drop interface](https://formester.com/features/);
 
-Or, simply use this [pre-designed, customizable Employee Engagement Survey Template](https://formester.com/templates/employee-engagement-survey-template-1661/).
+Or, simply use this [pre-designed, customizable Employee Engagement Survey Template](/templates/employee-engagement-survey-template-1661/).
 
 3. Publish your survey and [gather actionable insights](https://formester.com/features/powerful-analytics/)!
 

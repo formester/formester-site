@@ -132,7 +132,7 @@ Imagine, a company Acme Inc, is ready to launch their new product. Their team ha
 
 Now, all that was left was to build an emailing list as part of their promotional strategy. They were going to use this emailing list, not only to drive traffic to their website, but also for converting their potential leads into customers.
 
-To accomplish this, they decided to create a [lead generation web form](https://formester.com/templates/lead-generation-form-700/).
+To accomplish this, they decided to create a [lead generation web form](/templates/lead-generation-form-700/).
 
 They were happy to see the **no. of impressions** they were getting from the various traffic sources to their landing page.
 
@@ -190,7 +190,7 @@ Whether you have some experience with creating forms or even if you’re a newbi
 * which form will help me acquire leads?
 * what fields should my form contain, and so on. 
 
-Hop right on to Formester’s [Templates](https://formester.com/templates/) section and choose from a variety of pre-developed templates, with a wide scope of customization. 
+Hop right on to Formester’s [Templates](/templates/) section and choose from a variety of pre-developed templates, with a wide scope of customization. 
 
 Instead of creating from scratch, you’ll simply be doing minor edits to get your form out!
 
@@ -299,7 +299,7 @@ Make sure you run a survey to know what your customers want, that they don’t y
 
 What other way can you use web forms to get into the mind of your customers?
 
-Formester has created a few drag & drop templates for you that you can use for both [Market Research & Surveys](https://formester.com/templates/market-research-survey-701/).
+Formester has created a few drag & drop templates for you that you can use for both [Market Research & Surveys](/templates/market-research-survey-701/).
 
 ### 3﻿. Customer Feedback
 
@@ -313,7 +313,7 @@ Getting customer feedbacks at specific points of the way and not just at the end
 
 Also, getting feedback from your customers helps you know what they would have improved regarding your business or services. 
 
-To get started, You can begin editing this [template by Formester](https://formester.com/templates/customer-satisfaction-survey-696/)![](https://t.co/ZpfvNnf26T)
+To get started, You can begin editing this [template by Formester](/templates/customer-satisfaction-survey-696/)![](https://t.co/ZpfvNnf26T)
 
 ## Conclusion
 

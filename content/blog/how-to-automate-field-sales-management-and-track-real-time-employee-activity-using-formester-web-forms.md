@@ -333,7 +333,7 @@ It is not a hidden fact that online web forms are one of the most efficient mean
 
 From gathering customer data, getting new users registered for a service and acquiring leads, to online quizzes and survey forms;
 
-Web forms have [multi-faceted applications in every industry](https://formester.com/blog/web-forms-how-and-where-to-use-them-for-your-business/).
+Web forms have [multi-faceted applications in every industry](/blog/web-forms-how-and-where-to-use-them-for-your-business/).
 
 Sounds interesting, right?
 
@@ -471,7 +471,7 @@ However, these forms don't come with prices that fit the average budget.
 
 At Formester, you'll find a unique yet feasible approach to accomplish the same goals, as you would with a field sales automation software.
 
-By simply deploying our [Customer Visit Record Form](https://formester.com/templates/customer-visit-record-form-template-1785/), you can now easily and efficiently, track and manage your employees, with real-time and accurate results;
+By simply deploying our [Customer Visit Record Form](/templates/customer-visit-record-form-template-1785/), you can now easily and efficiently, track and manage your employees, with real-time and accurate results;
 
 So that your business achieves optimum performance!
 

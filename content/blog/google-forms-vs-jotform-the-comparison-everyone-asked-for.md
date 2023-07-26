@@ -371,7 +371,7 @@ Google Forms offers a user-friendly and intuitive interface, making it easy for 
 
 #### 3. Native Integration with Google Workspace
 
-As a product developed by Google, to be a part of its [Google Workspace](https://workspace.google.com/intl/en_in/) (formerly, **Google Editor's Suite**) [Google Forms seamlessly integrates with other Google services such as Google Sheets](https://formester.com/blog/integrating-google-forms-google-sheets-a-match-made-in-digital-heaven-essential-basics/), Google Drive, and Google Calendar. Such integrations enable efficient data collection, storage, and scheduling, all under the same roof of the Google ecosystem.
+As a product developed by Google, to be a part of its [Google Workspace](https://workspace.google.com/intl/en_in/) (formerly, **Google Editor's Suite**) [Google Forms seamlessly integrates with other Google services such as Google Sheets](/blog/integrating-google-forms-google-sheets-a-match-made-in-digital-heaven-essential-basics/), Google Drive, and Google Calendar. Such integrations enable efficient data collection, storage, and scheduling, all under the same roof of the Google ecosystem.
 
 #### 4. Real-time Collaboration
 
@@ -579,7 +579,7 @@ Jotform's reporting capabilities give users more flexibility in analyzing form d
 
 ![Screenshot showing: Example of Google Forms' Workflow Automation ](/img/google-forms-vs-jotform-14-.png "Example of Google Forms' Workflow Automation ")
 
-For example, you can set up automated data organization by [linking Google Forms to Google Sheets](https://formester.com/blog/integrating-google-forms-google-sheets-a-match-made-in-digital-heaven-essential-basics/), where form responses are automatically recorded, stored and organized in a spreadsheet.
+For example, you can set up automated data organization by [linking Google Forms to Google Sheets](/blog/integrating-google-forms-google-sheets-a-match-made-in-digital-heaven-essential-basics/), where form responses are automatically recorded, stored and organized in a spreadsheet.
 
 **Jotform:** Jotform provides more [advanced workflow automation features](https://www.jotform.com/integrations/category/automation-integrations). 
 
@@ -708,19 +708,19 @@ Exploring the practical applications and potential limitations of the form-build
 
 #### 1. Surveys and Feedback
 
-Google Forms is an excellent choice for [conducting surveys](https://formester.com/blog/how-to-create-the-perfect-product-map-using-surveys-in-2023/), [collecting feedback from customers or employees](https://formester.com/blog/employee-engagement-surveys-the-complete-guide-to-the-what-why-and-how/), and [gathering data for market research](https://formester.com/blog/how-branded-surveys-can-help-you-unlock-your-brand%E2%80%99s-potential/). 
+Google Forms is an excellent choice for [conducting surveys](/blog/how-to-create-the-perfect-product-map-using-surveys-in-2023/), [collecting feedback from customers or employees](/blog/employee-engagement-surveys-the-complete-guide-to-the-what-why-and-how/), and [gathering data for market research](/blog/how-branded-surveys-can-help-you-unlock-your-brand%E2%80%99s-potential/). 
 
 Its simplicity and ease of use make it accessible to a wide range of users.
 
 #### 2. Event Registration and RSVPs
 
-Whether it's a small gathering or a large event, Google Forms are often used to create [registration forms](https://formester.com/blog/registration-forms-101-definition-types-use-cases-more-how-to-create-free-template/) and collect RSVPs efficiently. You can customize the form to gather necessary information such as attendee details, meal preferences, or session preferences.
+Whether it's a small gathering or a large event, Google Forms are often used to create [registration forms](/blog/registration-forms-101-definition-types-use-cases-more-how-to-create-free-template/) and collect RSVPs efficiently. You can customize the form to gather necessary information such as attendee details, meal preferences, or session preferences.
 
 #### 3. Quizzes and Assessments
 
-Google Forms is suitable for [creating online quizzes, academic tests and assessments](https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-you%E2%80%99ll-need-in-2023-1/). Teachers and Professors can easily create multiple-choice questions, short answers, or even grading rubrics. 
+Google Forms is suitable for [creating online quizzes, academic tests and assessments](/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-you%E2%80%99ll-need-in-2023-1/). Teachers and Professors can easily create multiple-choice questions, short answers, or even grading rubrics. 
 
-It is also possible to [set time limits for the completion of the quizzes or tests](https://formester.com/blog/how-to-add-a-timer-to-your-google-quiz-includes-latest-alternative-works-without-add-ons-2023/);\
+It is also possible to [set time limits for the completion of the quizzes or tests](/blog/how-to-add-a-timer-to-your-google-quiz-includes-latest-alternative-works-without-add-ons-2023/);\
 In other words, make the quiz timed!
 
 Moreover, the automatic grading feature saves time and provides instant feedback to respondents.
@@ -801,7 +801,7 @@ If you require highly customized forms with advanced styling options, complex lo
 
 On the other hand, if simplicity, ease of use, and seamless integration with Google services are more important to you, and you don't require advanced customization or extensive third-party integrations, Google Forms may be the right choice. 
 
-Google Forms is ideal for quick and straightforward [form creation, especially for individuals or organizations operating at a small or medium scale](https://formester.com/blog/why-your-small-business-needs-web-forms-to-expand-in-2023/) and within the Google ecosystem.
+Google Forms is ideal for quick and straightforward [form creation, especially for individuals or organizations operating at a small or medium scale](/blog/why-your-small-business-needs-web-forms-to-expand-in-2023/) and within the Google ecosystem.
 
 However, a notable aspect of Google Forms, similar to other Google products, is its **self-assuredness**. 
 

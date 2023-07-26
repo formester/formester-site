@@ -280,7 +280,7 @@ The **Individual Tab** will let you see each of your responders' individual resp
 
 Y﻿ou also get the option to integrate your responses into a **Google Sheets Spreadshee**t.
 
-P﻿.S., did you know, you could [also add a timer to your Google Quiz](https://formester.com/blog/how-to-add-a-timer-to-your-google-quiz-includes-latest-alternative-works-without-add-ons-2023/)!
+P﻿.S., did you know, you could [also add a timer to your Google Quiz](/blog/how-to-add-a-timer-to-your-google-quiz-includes-latest-alternative-works-without-add-ons-2023/)!
 
 ## E-Learning And Online Quizzes 
 
@@ -325,7 +325,7 @@ At Formester, you get a much more [straightforward, easy-to-use and effortless i
 
 Finding and setting-up, all the [necessary settings will be a no-brainer](https://formester.com/features/html-form-backend/)!
 
-What's more, we have [pre-designed and customizable templates](https://formester.com/templates/), all set in place, to get you going, right away!
+What's more, we have [pre-designed and customizable templates](/templates/), all set in place, to get you going, right away!
 
 So whether, you want to have some fun with your friends by using a quiz to determine what kind of pizza they are, or create an aptitude test for your career counselling business, or you are a teacher wanting to create an online quiz for your students;
 

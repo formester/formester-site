@@ -112,7 +112,7 @@ For instance, consider these below-given reasons, based on Jotform's Users' Revi
 
 Although the above-mentioned factors might not be a stumbling block for big corporations and organizations with adequate budgets for investing in the paid versions;
 
-The same isn't true with small and mid-sized businesses, who are looking to [use web forms without compromising on the quality, and while maintaining a budget](https://formester.com/blog/why-your-small-business-needs-web-forms-to-expand-in-2023/). 
+The same isn't true with small and mid-sized businesses, who are looking to [use web forms without compromising on the quality, and while maintaining a budget](/blog/why-your-small-business-needs-web-forms-to-expand-in-2023/). 
 
 And hence, the search for alternatives!
 
@@ -124,7 +124,7 @@ Some offer more advanced features and some are cost-effective.
 
 Every business is unique, not only in terms of what it has to offer, but also when it comes to its size, industry, client size, etc.
 
-That said, it becomes of utmost importance to [analyze your business requirements and choose a form builder](https://formester.com/blog/best-online-form-builders/), that fulfills these requirements in the best possible manner, whilst maintaining your budget.
+That said, it becomes of utmost importance to [analyze your business requirements and choose a form builder](/blog/best-online-form-builders/), that fulfills these requirements in the best possible manner, whilst maintaining your budget.
 
 And today's blog is dedicated to discussing.
 
@@ -149,7 +149,7 @@ Formester is a [no-code, intuitive, drag-and-drop form builder](https://formeste
 * Digital Signature
 * Third-Party Integrations
 
-  Formester also offers [pre-designed, customizable Templates](https://formester.com/templates/)!
+  Formester also offers [pre-designed, customizable Templates](/templates/)!
 
   ![Screen Capture showing: Formester's Template Page](/img/10-alternatives-to-jotform_2.png "Formester's Template Page")
 

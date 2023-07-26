@@ -454,11 +454,11 @@ At Formester, we have the perfect 3 step strategy, to get you going, right away!
 
 2. Avoid the brainstorming and hassle of going through numerous articles and blogs to select the right question. 
 
-> Instead, choose from a variety of [pre-designed and carefully developed Survey Templates](https://formester.com/templates/) and customize them as per your choice, requirements and brand kit.
+> Instead, choose from a variety of [pre-designed and carefully developed Survey Templates](/templates/) and customize them as per your choice, requirements and brand kit.
 >
 > Make use of key features, such as conditional logic, to [ask only what is required](https://formester.com/features/conditional-logic/) and save both your and your users' time!
 >
-> > Bonus Tip: Here's a guide to [60+ questions you may choose from](https://formester.com/blog/7-types-of-website-usability-survey-questions-to-ask-in-2023/), to create the perfect survey!
+> > Bonus Tip: Here's a guide to [60+ questions you may choose from](/blog/7-types-of-website-usability-survey-questions-to-ask-in-2023/), to create the perfect survey!
 
 3. Once you've gathered submissions on your surveys, use our powerful analytics system to track your metrics, gain critical insights and ofcourse, know your customers! 
 

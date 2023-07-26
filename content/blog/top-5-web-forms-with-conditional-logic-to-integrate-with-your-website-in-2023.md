@@ -145,7 +145,7 @@ As it is filling out a web form is a boring job;
 
 And if your business wants to get this boring job done,
 
-Then it would be best if you imbibed these qualities to [put out an intelligent web form](https://formester.com/blog/web-forms-how-and-where-to-use-them-for-your-business/);
+Then it would be best if you imbibed these qualities to [put out an intelligent web form](/blog/web-forms-how-and-where-to-use-them-for-your-business/);
 
 That infact, is capable of gathering responses!
 
@@ -253,7 +253,7 @@ Click here for [more details](https://formester.com/features/conditional-logic/)
 * Online Payment
 * Digital Signature
 
-Formester also offers [customizable, pre-designed and free Templates](https://formester.com/templates/).
+Formester also offers [customizable, pre-designed and free Templates](/templates/).
 
 ![Infographic showing Formester's Template page](/img/7_top-5-web-forms-with-cl.png "Formester's Template page")
 

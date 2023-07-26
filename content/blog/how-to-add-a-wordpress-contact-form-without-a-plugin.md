@@ -180,7 +180,7 @@ If you've read this far, we believe you already have a WordPress website but are
 
 If not, [WordPress](https://wordpress.com/?aff=15767&cid=1654213), here's a shoutout: Build a clean and smooth website with WordPress; 
 
-& integrate it with a no code, [drag-and-drop and easy to make Contact Form](https://formester.com/templates/categories/contact-forms/) using Formester!
+& integrate it with a no code, [drag-and-drop and easy to make Contact Form](/templates/categories/contact-forms/) using Formester!
 
 Although, contact forms can be integrated with your WordPress website by using or not using a plug-in; working with [plug-ins](https://www.computerhope.com/jargon/p/plugin.htm) isn't always a fun game. 
 
@@ -208,7 +208,7 @@ For certain features, such as the one under discussion, the usage of plug-ins ca
 
 Log in to your Formester account, click on the Create Form button, right infront of you; 
 
-Or customize one from our [free form template library](https://formester.com/templates/). Either way, once you have your form, hit the submit button.
+Or customize one from our [free form template library](/templates/). Either way, once you have your form, hit the submit button.
 
 ![Create a form on Formester using the **Create Form** button, or opt the route of easy customization using the **Templates** section](/img/create-form.png "Create a form on Formester")
 

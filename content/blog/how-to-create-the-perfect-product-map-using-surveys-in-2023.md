@@ -287,7 +287,7 @@ Let's talk about the most effective, simple and feasible way to gather data and 
 
 ## Surveys
 
-[Digital Surveys](https://formester.com/blog/10-reasons-why-you-should-be-using-surveys/) are an incredible means of approaching and collecting data from your customers, target audience and potential buyers, in a fascinating, amicable, and yet effective fashion, on almost anything relating to your business, including products, services or even ideas.
+[Digital Surveys](/blog/10-reasons-why-you-should-be-using-surveys/) are an incredible means of approaching and collecting data from your customers, target audience and potential buyers, in a fascinating, amicable, and yet effective fashion, on almost anything relating to your business, including products, services or even ideas.
 
 And whilst they are not the only mediums of data collection;
 
@@ -327,7 +327,7 @@ Having discussed the Idea stage, now you want to [find out about your target aud
 
 Target Audience can be described as the correct set of people, who might be interested in the kind of product/service or even idea for it.
 
-They are your [potential customers and might even prove to be your supporters](https://formester.com/blog/tips-tricks-to-get-the-most-out-of-your-leads-on-formester/), in terms of feedback, promotions and even investments.
+They are your [potential customers and might even prove to be your supporters](/blog/tips-tricks-to-get-the-most-out-of-your-leads-on-formester/), in terms of feedback, promotions and even investments.
 
 Platforms like [KickStarter](https://www.kickstarter.com/) and [Indiegogo](https://www.indiegogo.com/) are the best examples of this.
 
@@ -509,7 +509,7 @@ That said, here are some of the...
 
 ### 1. NPS
 
-Net Promoter Score, as the name itself suggests, is the metric that [determines the customers' satisfaction and loyalty towards your brand](https://formester.com/templates/net-promoter-score-nps-702/) and, in-turn, their likelihood of recommending, sharing or promoting your brand in their circle.
+Net Promoter Score, as the name itself suggests, is the metric that [determines the customers' satisfaction and loyalty towards your brand](/templates/net-promoter-score-nps-702/) and, in-turn, their likelihood of recommending, sharing or promoting your brand in their circle.
 
 It is an effective metric to track your performance with your established customer base, and also measure the probability of your brand growth basis their referrals.
 
@@ -531,7 +531,7 @@ When it comes to developing a product map, you may brief your respondents about 
 
 ### 3. Customer Acquisition Cost
 
-This metric [measures your ROI against your investments for marketing, sales, promotions, advertising and branding](https://formester.com/blog/how-branded-surveys-can-help-you-unlock-your-brand%E2%80%99s-potential/), cumulatively.
+This metric [measures your ROI against your investments for marketing, sales, promotions, advertising and branding](/blog/how-branded-surveys-can-help-you-unlock-your-brand%E2%80%99s-potential/), cumulatively.
 
 When developing a product roadmap, you can easily [find out which marketing strategies or sales tactics are working](https://www.productplan.com/glossary/customer-acquisition-cost/#:~:text=Customer%20Acquisition%20Cost%2C%20or%20CAC,buy%20a%20product%20or%20service.), if you focus on asking questions that help you determine, what attracted your customers to you, what made them click on your advertisement, or was there any particular content that clearly communicated to them, the product's main functionality.  
 
@@ -543,7 +543,7 @@ It is also important to measure the usability of the product/feature and its ass
 
 Although there are several elements of usability, the overall aspect primarily deals with User-experience;
 
-It can be [measured across several domains](https://formester.com/blog/7-types-of-website-usability-survey-questions-to-ask-in-2023/).
+It can be [measured across several domains](/blog/7-types-of-website-usability-survey-questions-to-ask-in-2023/).
 
 ## Conclusion
 
@@ -569,7 +569,7 @@ As many survey platforms are available today, it is challenging to choose which 
 
 And to make that decision easier for you,
 
-We at Formester, have [pre-designed customizable Templates](https://formester.com/templates/), with powerful analytics and more [advanced features, starting free](https://formester.com/);
+We at Formester, have [pre-designed customizable Templates](/templates/), with powerful analytics and more [advanced features, starting free](https://formester.com/);
 
 So you can make the most out of your Surveys!
 

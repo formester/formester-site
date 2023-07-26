@@ -317,7 +317,7 @@ The following questions can be asked with regard to performance and compatibilit
 9. How was your scrolling experience on the mobile version of our website?
 10. On a scale of 1-10, how would you rate the smoothness of the mobile version of our website?
 
-> Survey Design Tip 4: Make sure you [ask only one question at a time](https://formester.com/blog/top-eight-survey-questions-to-ask/); the more direct a question is, the simpler it is to answer.
+> Survey Design Tip 4: Make sure you [ask only one question at a time](/blog/top-eight-survey-questions-to-ask/); the more direct a question is, the simpler it is to answer.
 
 ### 5. Payments and Subscriptions
 
@@ -394,11 +394,11 @@ The following questions can be asked under this field:
 
 > Survey Design Tip 7: Take a pre-test of your survey. Proofread it for any mistakes and corrections. Also, send it to 5-10 close associations of yours, and gather their unbiased feedback on your survey, before you release it to your users.
 
-For more [survey tips, check this out](https://formester.com/blog/10-reasons-why-you-should-be-using-surveys/)!
+For more [survey tips, check this out](/blog/10-reasons-why-you-should-be-using-surveys/)!
 
-> Did you know: You could [create NPS survey on your website](https://formester.com/templates/net-promoter-score-nps-702/) to gain better insights into customer loyalty and satisfaction?
+> Did you know: You could [create NPS survey on your website](/templates/net-promoter-score-nps-702/) to gain better insights into customer loyalty and satisfaction?
 >
-> Click here to [take a preview and create yours now](https://formester.com/templates/net-promoter-score-nps-702/)!
+> Click here to [take a preview and create yours now](/templates/net-promoter-score-nps-702/)!
 
 ## Conclusion
 
@@ -408,7 +408,7 @@ At Formester, you can accomplish this in 3 simple steps:
 
 1. Create a [create a free survey account](https://app.formester.com/users/sign_up) on Formester
 
-2. Head over to our Templates section to [customize a result-driven survey form](https://formester.com/templates/)
+2. Head over to our Templates section to [customize a result-driven survey form](/templates/)
 
 > Pro Tip on What To Include: Feel free to take inspiration from this blog!
 
@@ -418,6 +418,6 @@ At Formester, you can accomplish this in 3 simple steps:
 
 Still not sure about your survey form?
 
-At Formester, we deliver you the [best-in-class survey forms](https://formester.com/templates/);
+At Formester, we deliver you the [best-in-class survey forms](/templates/);
 
 so you can deliver the best-in-class website user experience!
