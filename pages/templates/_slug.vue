@@ -115,7 +115,7 @@ export default {
     },
   },
   head() {
-    cosnt { name, keywords } = this.template || {};
+    const { name, keywords } = this.template || {};
     return {
       title: name
         ? `${name} | Formester`
