@@ -83,27 +83,26 @@ export default {
   },
   computed: {
     meta() {
+      const { name, description, metaTitle, metaDescription, previewImageUrl } =
+        this.template || {}
+
       const metaData = {
         type: 'website',
         url: `https://formester.com/templates/${this.$route.params.slug}/`,
-        title: this.template?.metaTitle || this.template?.name || 'Form Template | Formester',
+        title: metaTitle || name || 'Form Template | Formester',
         description:
-          this.template?.metaDescription ||
-          this.template?.description ||
+          metaDescription ||
+          description ||
           "Explore Formester's no-code form templates! Create surveys, gather feedback, and manage events effortlessly. Simplify form building now!",
         mainImage:
-          this.template?.previewImageUrl ||
+          previewImageUrl ||
           'https://formester.com/formester-form-builder-background.png',
         mainImageAlt: 'Formester Template',
       }
       return getSiteMeta(metaData)
     },
     faqsSchema() {
-      if (!this.template.faqs) {
-        return []
-      }
-
-      return this.template.faqs.map((faq) => {
+      return (this.template.faqs || []).map((faq) => {
         return {
           '@type': 'Question',
           name: faq.question,
@@ -116,15 +115,16 @@ export default {
     },
   },
   head() {
+    cosnt { name, keywords } = this.template || {};
     return {
-      title: this.template?.name
-        ? `${this.template?.name} | Formester`
+      title: name
+        ? `${name} | Formester`
         : 'Formester',
       meta: [
         ...this.meta,
         {
           name: 'keywords',
-          content: this.template.keywords,
+          content: keywords,
         },
       ],
       link: [
@@ -137,19 +137,20 @@ export default {
     }
   },
   jsonld() {
+    const { name, description, previewImageUrl, category  } = this.template || {}
     return [
       {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        name: this.template?.name,
-        description: this.template?.description,
-        image: this.template?.previewImageUrl,
+        name: name,
+        description: description,
+        image: previewImageUrl,
         url: `https://formester.com/templates/${this.$route.params.slug}/`,
         mainEntity: {
           '@type': 'CreativeWork',
-          name: this.template?.name,
-          description: this.template?.description,
-          image: this.template?.previewImageUrl,
+          name: name,
+          description: description,
+          image: previewImageUrl,
           url: `https://formester.com/templates/${this.$route.params.slug}/`,
           author: {
             '@type': 'Organization',
@@ -159,8 +160,8 @@ export default {
         },
         isPartOf: {
           '@type': 'CollectionPage',
-          name: this.template?.category?.name,
-          url: `https://formester.com/templates/categories/${this.template?.category?.slug}/`,
+          name: category?.name,
+          url: `https://formester.com/templates/categories/${category?.slug}/`,
           description:
             'Browse our collection of Research Form templates for free.',
         },
