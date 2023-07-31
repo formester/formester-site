@@ -19,6 +19,49 @@ coverImg: /img/how-to-create-a-form__how-to-create-form-or-survey.png
 coverImgAlt: Cover image for the blog, "How to create a form or survey using form builder"
 featured: false
 published: true
+schema:
+  - type: >-
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "What are the Steps to Build an Online Form Using a No-code Form Builder?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Step 1: Determine Your Data Collection Requirements
+      Find out your objectives with the form or survey. What do you need to ask your users? What are the different types of data you aim to collect? Conceptualize your form design and form fields. Also, figure out if you want a standalone form to share via links or integrate it into your website as per your application requirements.
+
+      Step 2: Sign Up and Begin With the Form Heading
+
+      If you don’t have an account already - sign up to Formester: Easy HTML form builder and create your first form.
+
+
+      Before you structure your form, you need to give it a suitable form name and enter a few details:
+
+
+      Redirect URL: The site address where you want the respondents to land up after submitting your form.
+
+
+      Email notifications: The email addresses that you want to use for receiving submission notifications.
+
+
+      Type of service: Choose drag and drop to create your forms unless you’re just looking for backend services only and have your online form in place.
+
+      Step 3: Choose Form Fields and Add Them to Your Form
+
+      Once you create a form and enter the form name along with other primary details – it’s now time to build exactly what your audience would be interacting with. Choose from a huge variety of form fields as per your requirements and objective with the form or survey.
+
+      Step 4: Set up Each Form Field
+
+      Formester’s no-code drag and drop form builder is not only comprehensive and simple to use, but also allows you to set up your form design as you like it to be. It’s a completely flexible dashboard that enables you to adjust the font style, font size, heading and sub-heading text, font weights, placeholder text and more.
+
+      Step 5: Publish the Form and Get Shareable Link or Embed it to Your Website
+
+      Once you have finalized the form structure and created the form fields as per the use-case objectives, it’s now time to make it live. Note that you can either share the link to your standalone form or embed the form to your website. Choose among the available options and move forward with sharing and promoting the form proactively."
+          }
+        }
+      }
 metaImages:
   - https://formester.com/img/how-to-create-a-form__how-to-create-form-or-survey.png
   - https://formester.com/img/how-to-create-a-form__form-details.png
