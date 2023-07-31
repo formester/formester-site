@@ -18,6 +18,41 @@ coverImg: /img/single-page-vs-multi-page-forms.png
 coverImgAlt: Cover image for the blog, "single page vs multi page form"
 featured: false
 published: true
+schema:
+  - type: >-
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "Single Page vs Multi Page Forms",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Single Page Form
+      Easy to edit fields - Single page forms are easy to edit as the data is not spread into multiple pages. And navigating to the field you want to edit is easier. All you need is to scroll up to the field. While in multi page forms one has to navigate back and forth to edit fields.
+
+      Taking the single type of information - When you have to take a single type of information in your form then it’s good to use a single-page form. This also gives the user complete transparency about what you will be asking them.
+
+
+      Less loading time - In the case of single-page forms, only one page needs to be loaded, whereas for multiple page forms slow loading pages can lead to loss of customers.
+
+
+      Multi Page Form
+
+      Less overwhelming - Many times when you open up a URL to fill up a form and unlike your expectation, you find it quite long and daunting at the first glance, then it's more likely that you will not even start with it. And that’s the case with long single-page forms.
+
+      Good for reasonably long form - When the form is reasonably long with a lot of questions and elements then it is good to use a multi-page form. As we have discussed that Multi Page form helps in spreading the questions over multiple pages, this will help in combating such long forms.
+
+
+      Helps in grouping similar questions- With a multi-page form, one can group questions under similar topic clusters. One can break the form into different pages, with each page containing similar types of questions.
+
+      Length- Having a progress bar on a multi-page form allows the customer to know their progress along the process of filling out the form. It gives an overview of the overall form length and also helps in proper navigation. Having quite a few pages where you might only be asking single questions can sometimes intimidate users due to the overall length.
+
+
+      The decision to use either a single-page form or a multi-page form varies from the need of business to business. Single page forms may work better for some users and multi page forms may be a better option for others."
+          }
+        }
+      }
 metaImages:
   - https://formester.com/img/single-page-vs-multi-page-forms.png
   - https://formester.com/img/single-page-vs-multi-page-forms__easy-to-edit.svg
