@@ -15,6 +15,36 @@ coverImg: /img/how-to-integrate-google-smtp-with-formester.png
 coverImgAlt: How to integrate Google SMTP with formester
 featured: false
 published: true
+schema:
+  - type: >-
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "How to integrate Google SMTP with Formester?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "How to use Google SMTP Server
+
+      Step 1: Visit and login to your Google Account
+
+      Step 2: Click on the security option and scroll down to open the App password
+
+      Step 3: Create an app for your SMTP by selecting Other from the dropdown options
+
+      Step 4: Enter a name for your app and click on generate to generate a 16-digit app password
+
+      Step 5: You will get a 16-digit auto-generated password, keep it safe as you won’t be able to see it again
+
+      Step 6: Final step, check your integration credentials with Formester to verify if it’s working or not.
+
+      Login to your account -> select a form -> Click on SMTP Integration from the top -> Click on Add Account
+
+      Add your credentials and click on three dots at the end of the mail account and select the Test option. Wait for a few seconds for the result."
+          }
+        }
+      }
 metaImages:
   - https://formester.com/img/how-to-integrate-google-smtp-with-formester__home-screen.png
   - https://formester.com/img/how-to-integrate-google-smtp-with-formester__security-option.png
