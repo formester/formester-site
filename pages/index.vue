@@ -32,11 +32,6 @@ export default {
       document.head.appendChild(script);
     },
   },
-  head() {
-    return {
-      script: [],
-    }
-  },
   jsonld() {
     return {
       '@context': 'http://schema.org',
