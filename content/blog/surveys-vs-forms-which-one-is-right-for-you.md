@@ -18,6 +18,120 @@ coverImg: /img/survey-vs-forms__hero.png
 coverImgAlt: Image showing how to create forms and surveys using Formester
 featured: false
 published: true
+schema:
+  - type: >-
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+          "@type": "Question",
+          "name": "What are the main Use-cases of Surveys?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Surveys act as the perfect channel for feedback collection and act as a middle ground for comprehensive research. Let us look at scenarios to make use of a survey:
+
+      To conduct academic research/medical research. 
+
+      To take feedback from employees/customers.
+
+      To gather the views/opinions of the general public.
+
+      To take suggestions from teachers/parents in educational institutions.
+
+      For training programs in offices.
+
+      For personalized interviews when individual opinion is needed.
+
+      To keep up with the changing trends of the time. 
+
+      To gather confidential data directly from the individual.
+
+      Collection of qualitative data."
+          }
+        },{
+          "@type": "Question",
+          "name": "What are the main Use-cases of Web Forms?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Forms are quick to fill, efficient, and fulfill the purpose of a quick plan of action required for immediate purposes. The use of forms on websites is no longer merely about collecting contact information. Some decades back a form was simply a way to cover a few formalities whereas now new businesses with smart technologies are reaping the benefits of forms in new and intriguing ways all across the globe, online and offline. Organizations have recognized that randomly collecting information often bears zero results and is a waste of time and effort. . Let us consider scenarios where forms come in handy:
+
+      Signing up for an application.
+
+      Signing up for an event.
+
+      Data collection of personal details
+
+      Easy Registrations
+
+      To fill out a job application
+
+      To fill out a quick poll 
+
+      Yes or No questions
+
+      Quick feedback from customers like in hotels/restaurants
+
+      A simple way to place an online order
+
+      To open a bank account
+
+      For educational purposes to fill out forms of admission, examination, fees, etc.
+
+      For administrative purposes to fill tax returns 
+
+      To derive contact information for future reference.
+
+      Pre-qualification before the formal meeting with customers
+
+      Simple and efficient appointment setting
+
+      Attendance purposes"
+          }
+        },{
+          "@type": "Question",
+          "name": "Should I use Surveys or Web Forms?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Based on Reliability
+      Surveys are more reliable as compared to forms because they consist of carefully examined data as compared to the latter. Surveys also clarify the accurate motivation, opinion, and views of the individual to not leave any disparity in research. Consider research being done on why people in a particular area do not like to send their children to school. A survey will capture every aspect of this research subjectively whereas a form will only contain the views of individuals.
+
+
+      Based on the availability of Time
+
+      Surveys are generally longer and ask more questions as compared to a form whose job is to task minimum required information and move you to the next step. Consider a situation where a business owner wants to take a quick poll on how the customers are reacting to a particular new product that was launched as a trial product, in such a scenario a form works best whereas a survey will not be a good fit.
+
+
+      Based on Efficiency
+
+      Forms save loads of paperwork by finishing the entire process smoothly on any online platform and compiling results in one document to avoid any further confusion as compared to surveys which require a lot of paperwork, for example, a business owner wants to initiate research on their bridal collection for a month by taking feedback from clients, the most efficient way would be a combination of forms, questionnaire, and a comprehensive survey.
+
+
+      Based on Detail
+
+      Surveys present you with comprehensive, detailed, and subjective data as compared to forms. For instance - If a school/college wants to conduct a study on the participation of students in co-curricular vs academics, a survey would present all the facts in detail whereas a form will present opinionated reviews.
+
+
+      Professional purposes
+
+      The method should be chosen depending on the needs of the employer and their audience. For example - forms make the hiring process super efficient for the employer as well as saves the time of both the parties involved whereas for a specific investment a survey holds higher importance and fetches the employer far greater results in terms of accuracy and information.
+
+
+      Based on accuracy
+
+      Surveys are more accurate as compared to forms as they have been conducted with due time and diligence by considering far more elements than those involved in forms. Accuracy is directly proportional to the cross-checking of the data in the research hence surveys stand a higher chance as compared to forms. 
+
+
+      Based on the individual
+
+      Surveys present you with deeper insights as the data is collected from a group of people instead of a single individual as is the general case with data collection in forms. 
+
+
+      Based on cost
+
+      Surveys require investment and are costly as compared to forms. When building surveys it’s you who will be reaching out to your target audience whereas forms are for people who naturally come to your business and you want to engage with them. For eg: If an individual wants to register for an event, he/she will approach the authority or visit the website to fill out the form whereas if you want feedback on the whole event through a survey then you approach the attendees."
+          }
+        }]
+      }
 metaImages:
   - https://formester.com/img/survey-vs-forms__infographic.png
 ---
