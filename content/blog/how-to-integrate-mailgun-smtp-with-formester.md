@@ -15,6 +15,38 @@ coverImg: /img/how-to-integrate-mailgunsmtp-with-formester.png
 coverImgAlt: How to integrate MailGun SMTP with Formester
 featured: false
 published: true
+schema:
+  - type: >-
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "How to integrate MailGun SMTP with Formester?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mailgun's primary purpose is to provide transactional email services for developers. But, even non-technical people can easily use their service. We'll show you exactly how easy it is in the steps below!
+
+      Step 1:  Visit MailGun and first sign up for a free account by clicking on Get Started
+
+
+      Step 2:  Fill in the required details and signup
+
+
+      Step 3: Go to the overview section from sending option and select SMTP
+
+
+      Step 4: Find your integration credentials here
+
+      Step 5: Final step, check your integration credentials with Formester to verify if it’s working or not.
+
+
+      Login to your account -> select a form -> Click on SMTP Integration from the top -> Click on Add Account
+
+      Add your credentials and click on three dots at the end of the mail account and select the Test option. Wait for a few seconds for the result."
+          }
+        }
+      }
 metaImages:
   - https://formester.com/img/how-to-integrate-mailgun-smtp-with-formester__home-page.png
   - https://formester.com/img/how-to-integrate-mailgun-smtp-with-formester__signup.png
