@@ -24,13 +24,15 @@ export default {
     Testimonials,
     HowItWorks,
   },
-  methods: {
-    deferScript(scriptUrl) {
-      const script = document.createElement('script');
-      script.src = scriptUrl;
-      script.defer = true;
-      document.head.appendChild(script);
-    },
+  head() {
+    return {
+      script: [
+      { 
+        src: 'https://identity.netlify.com/v1/netlify-identity-widget.js',
+        defer: true
+      }
+      ],
+    }
   },
   jsonld() {
     return {
@@ -85,8 +87,5 @@ export default {
       ],
     }
   },
-  mounted() {
-    this.deferScript('https://identity.netlify.com/v1/netlify-identity-widget.js')
-  }
 }
 </script>
