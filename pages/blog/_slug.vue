@@ -218,6 +218,7 @@ export default {
         mainImageAlt:
           this.article.coverImgAlt ||
           'Form builder showing drag and drop functionality',
+        keywords: this.article.keywords
       }
       return getSiteMeta(metaData)
     },
