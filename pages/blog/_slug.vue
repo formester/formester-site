@@ -259,10 +259,6 @@ export default {
           property: 'og:publish_date',
           content: this.article.createdAt,
         },
-        {
-          name: 'keywords',
-          content: this.article.keywords,
-        },
       ],
       link: [
         {
