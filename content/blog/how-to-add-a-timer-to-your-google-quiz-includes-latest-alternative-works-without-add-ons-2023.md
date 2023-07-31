@@ -97,6 +97,30 @@ schema:
       }
 
       </script>
+  - type: "{ \"@context\": \"https://schema.org\", \"@type\": \"FAQPage\",
+      \"mainEntity\": [{ \"@type\": \"Question\", \"name\": \"Where are
+      Time-Bound Online Forms used?\", \"acceptedAnswer\": { \"@type\":
+      \"Answer\", \"text\": \"In case of businesses, there are several
+      occasions, which require setting a time limit on web forms, such as: *
+      Event Registration  * Product Pre-launch Registrations * Survey data
+      collection based on a specific time duration, etc. Whilst in an academic
+      context, this translates as: * Online academic quizzes * Assignment
+      Submissions based on deadlines * Program registrations, etc.\" } },{
+      \"@type\": \"Question\", \"name\": \"## How to add a timer to your Google
+      Quiz?\", \"acceptedAnswer\": { \"@type\": \"Answer\", \"text\": \"Add a
+      timer to your Google Quiz in 4 steps: Step 1: Sign-up and Select Form Step
+      2: Selecting an Add-on * Once you reach this page, at the top right
+      corner, besides the Send button, you'll find the More Icon (Denoted by
+      three sequential dots) * Click on the More icon, and select Get add-ons
+      from the drop-down list * Next, you'll be redirected to the Google
+      Workplace Marketplace * In the search bar, type Form Timer Step 3:
+      Installation and Set Up * Install Form Timer. You'll have to confirm the
+      permission settings and click Allow to indicate that you trust Form Timer.
+      * On the Form Timer setup page, click on set up and you'll see a Test
+      Config window * Enter the duration of your quiz in this window Step 4:
+      Publish Your Quiz * And that's all with the set up. * Now just hit the
+      **Save button** to save your settings * Finally, click on the **Test Link
+      button** to copy the link to your quiz and share it.\" } }] }"
 metaImages:
   - https://formester.com/img/14.png
   - https://formester.com/img/advantages-of-using-time-bound-web-forms-in-a-business-context.png
