@@ -218,6 +218,7 @@ export default {
         mainImageAlt:
           this.article.coverImgAlt ||
           'Form builder showing drag and drop functionality',
+        keywords: this.article.keywords
       }
       return getSiteMeta(metaData)
     },
@@ -257,10 +258,6 @@ export default {
           name: 'publish_date',
           property: 'og:publish_date',
           content: this.article.createdAt,
-        },
-        {
-          name: 'keywords',
-          content: this.article.keywords,
         },
       ],
       link: [
