@@ -1,27 +1,74 @@
 ---
-metaTitle: How To Integrate Sendgrid SMTP With Formester | How To Configure Sendgrid SMTP - Formester
-metaDescription: Are you looking how to integrate Sendgrid SMTP with Formester? This blog post will show you how to configure Sendgrid SMTP so you can start using it with Formester.
 title: How to integrate SendGrid SMTP with Formester
-description: Are you looking how to integrate Sendgrid SMTP with Formester? This blog post will show you how to configure Sendgrid SMTP so you can start using it with Formester.This guide helps you configure SMTP settings for SendGrid SMTP on Formester. You can then start sending all emails through your personalized emails and receive response directly in your inbox
+description: Are you looking how to integrate Sendgrid SMTP with Formester? This
+  blog post will show you how to configure Sendgrid SMTP so you can start using
+  it with Formester.This guide helps you configure SMTP settings for SendGrid
+  SMTP on Formester. You can then start sending all emails through your
+  personalized emails and receive response directly in your inbox
+metaTitle: How To Integrate Sendgrid SMTP With Formester | How To Configure
+  Sendgrid SMTP - Formester
+metaDescription: Are you looking how to integrate Sendgrid SMTP with Formester?
+  This blog post will show you how to configure Sendgrid SMTP so you can start
+  using it with Formester.
 keywords: SendGrid SMTP, Sendgrid smtp credentials, get SendGrid smtp integration
 author: Ravindra Kumar Verma
 authorProfile: https://www.linkedin.com/in/ravindraverma12/
 createdAt: 2022-12-19T05:18:45.522Z
 coverImg: /img/how-to-integrate-sendgrid-smtp-with-formester.png
 coverImgAlt: How to Integrate SendGrid SMTP with Formester
-metaImages: [
-    https://formester.com/img/how-to-integrate-sendgrid-smtp-with-formester__home-screen.png,
-    https://formester.com/img/how-to-integrate-sendgrid-smtp-with-formester__signup.png,
-    https://formester.com/img/how-to-integrate-sendgrid-smtp-with-formester__some-extra-detail.png,
-    https://formester.com/img/how-to-integrate-sendgrid-smtp-with-formester__dashboard.png,
-    https://formester.com/img/how-to-integrate-sendgrid-smtp-with-formester__create-a-sender.png,
-    https://formester.com/img/how-to-integrate-sendgrid-smtp-with-formester__goto-smtp-relay.png,
-    https://formester.com/img/how-to-integrate-sendgrid-smtp-with-formester__create-api-key.png,
-    https://formester.com/img/how-to-integrate-sendgrid-smtp-with-formester__verify.png,
-    https://formester.com/img/test-credentails.png
-  ]
 featured: false
 published: true
+schema:
+  - type: >-
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+          "@type": "Question",
+          "name": "What is SendGrid?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SendGrid is a great option for sending large volumes of emails. For instance, this service would work well if you have to email an entire mailing list manually. It can be time-consuming and difficult to send a lot of emails all at once."
+          }
+        },{
+          "@type": "Question",
+          "name": "How to integrate SendGrid SMTP with Formester?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Step 1: Visit SendGrid and click on start for free button.
+
+      Step 2:  Create an account and in next step fill the details asked
+
+
+      S﻿tep 3: First of all verify your email and now create a single Sender
+
+
+      S﻿tep 4: Fill in the details and create a sender
+
+      S﻿tep 5: After creating a single sender, verify it by receiving an email in your provided email account.   Now go to the Integration guide option under Email API. And Select SMTP relay.
+
+
+      S﻿tep 6: Enter an API key name and click on Create Key to generate a password. And save your details somewhere. Click on Verify Integration button below to verify your integration details.
+
+      Step 7: Final step, check your integration credentials with Formester to verify if it’s working or not.
+
+
+      Login to your account -> select a form -> Click on SMTP Integration from the top -> Click on Add Account
+
+      Add your credentials and click on three dots at the end of the mail account and select the Test option. Wait for a few seconds for the result."
+          }
+        }]
+      }
+metaImages:
+  - https://formester.com/img/how-to-integrate-sendgrid-smtp-with-formester__home-screen.png
+  - https://formester.com/img/how-to-integrate-sendgrid-smtp-with-formester__signup.png
+  - https://formester.com/img/how-to-integrate-sendgrid-smtp-with-formester__some-extra-detail.png
+  - https://formester.com/img/how-to-integrate-sendgrid-smtp-with-formester__dashboard.png
+  - https://formester.com/img/how-to-integrate-sendgrid-smtp-with-formester__create-a-sender.png
+  - https://formester.com/img/how-to-integrate-sendgrid-smtp-with-formester__goto-smtp-relay.png
+  - https://formester.com/img/how-to-integrate-sendgrid-smtp-with-formester__create-api-key.png
+  - https://formester.com/img/how-to-integrate-sendgrid-smtp-with-formester__verify.png
+  - https://formester.com/img/test-credentails.png
 ---
 **How to use SendGrid SMTP Server**
 [SendGrid](https://sendgrid.com/ "SendGrid") is a great option for sending large volumes of emails. For instance, this service would work well if you have to email an entire mailing list manually. It can be time-consuming and difficult to send a lot of emails all at once
