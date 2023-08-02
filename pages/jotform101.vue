@@ -77,8 +77,7 @@ export default {
         title: 'Jotform 101 | Guide to Form Building and Surveys with Jotform',
         description:
           "Discover Jotform's full potential with Formester's guide. Unlock powerful form building features, tips & tricks!",
-        mainImage:
-          'https://formester.com/jotform101-hero-section.png', // need to update with auto-responder page image
+        mainImage: 'https://formester.com/jotform101-hero-section.png', // need to update with auto-responder page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
         keywords: [
           'Jotform',
@@ -182,6 +181,52 @@ export default {
           ],
         },
         {
+          title: 'Pricing and Support',
+          faqs: [
+            {
+              question: 'What are the available pricing plans for Jotform?',
+              answer:
+                "Jotform offers various pricing plans to cater to different needs. It has free plans with limited features, as well as paid plans that offer more advanced functionality, increased storage, higher submission limits, and priority support. Check Jotform's website for the latest pricing details.",
+            },
+            {
+              question: 'Does Jotform provide customer support and assistance?',
+              answer:
+                'Yes, Jotform offers customer support to assist users. You can reach out to their support team through email, live chat, or the support forum. They provide guidance, troubleshooting assistance, and help with any questions or issues you may have.',
+            },
+          ],
+        },
+        {
+          title: 'Integration and Embedding',
+          faqs: [
+            {
+              question: 'Can I embed Jotform forms on my website or blog?',
+              answer:
+                'Absolutely. Jotform provides embed codes that allow you to easily embed your forms on websites, blogs, or other online platforms. You can copy the code and paste it into the HTML of your web page to display the form seamlessly.',
+            },
+            {
+              question: 'Does Jotform offer offline data collection options?',
+              answer:
+                'Yes, Jotform provides offline data collection capabilities through its mobile apps for iOS and Android. You can collect form submissions even without an internet connection, and the data will sync when you regain connectivity.',
+            },
+            {
+              question:
+                'How can I automate workflows and notifications in Jotform?',
+              answer:
+                'Jotform offers workflow automation features that allow you to set up automated actions based on form submissions. You can configure email notifications, autoresponders, conditional actions, and integrations to streamline your workflows and save time.',
+            },
+          ],
+        },
+        {
+          title: 'Surveys and Quizzes',
+          faqs: [
+            {
+              question: 'Can I create surveys and quizzes using Jotform?',
+              answer:
+                'Definitely. Jotform offers survey and quiz features that allow you to create engaging and interactive forms. You can add various question types, scoring, conditional branching, and result calculations to create comprehensive surveys and quizzes.',
+            },
+          ],
+        },
+        {
           title: 'Features and Functionality',
           faqs: [
             {
@@ -241,52 +286,6 @@ export default {
                 'Does Jotform comply with data protection regulations like GDPR?Can I collect payments through Jotform forms?',
               answer:
                 'Yes, Jotform is GDPR compliant. It provides features and tools to help you comply with data protection regulations, such as obtaining consent, managing data access and retention, and enabling data subject rights.',
-            },
-          ],
-        },
-        {
-          title: 'Pricing and Support',
-          faqs: [
-            {
-              question: 'What are the available pricing plans for Jotform?',
-              answer:
-                "Jotform offers various pricing plans to cater to different needs. It has free plans with limited features, as well as paid plans that offer more advanced functionality, increased storage, higher submission limits, and priority support. Check Jotform's website for the latest pricing details.",
-            },
-            {
-              question: 'Does Jotform provide customer support and assistance?',
-              answer:
-                'Yes, Jotform offers customer support to assist users. You can reach out to their support team through email, live chat, or the support forum. They provide guidance, troubleshooting assistance, and help with any questions or issues you may have.',
-            },
-          ],
-        },
-        {
-          title: 'Integration and Embedding',
-          faqs: [
-            {
-              question: 'Can I embed Jotform forms on my website or blog?',
-              answer:
-                'Absolutely. Jotform provides embed codes that allow you to easily embed your forms on websites, blogs, or other online platforms. You can copy the code and paste it into the HTML of your web page to display the form seamlessly.',
-            },
-            {
-              question: 'Does Jotform offer offline data collection options?',
-              answer:
-                'Yes, Jotform provides offline data collection capabilities through its mobile apps for iOS and Android. You can collect form submissions even without an internet connection, and the data will sync when you regain connectivity.',
-            },
-            {
-              question:
-                'How can I automate workflows and notifications in Jotform?',
-              answer:
-                'Jotform offers workflow automation features that allow you to set up automated actions based on form submissions. You can configure email notifications, autoresponders, conditional actions, and integrations to streamline your workflows and save time.',
-            },
-          ],
-        },
-        {
-          title: 'Surveys and Quizzes',
-          faqs: [
-            {
-              question: 'Can I create surveys and quizzes using Jotform?',
-              answer:
-                'Definitely. Jotform offers survey and quiz features that allow you to create engaging and interactive forms. You can add various question types, scoring, conditional branching, and result calculations to create comprehensive surveys and quizzes.',
             },
           ],
         },
