@@ -6,7 +6,7 @@
           <div
             class="d-flex flex-column justify-content-center align-items-center text-center mt-5"
           >
-            <h1 class="section__heading">
+            <h1 class="section__heading pt-3">
               Jotform 101 - Your Complete Guide to Form Building and Surveys
               with Jotform!
             </h1>
@@ -63,6 +63,17 @@ export default {
     WhyChooseFormester,
     ComparingJotform,
     CallToActionSection,
+    FAQwithCategories,
+  },
+  data() {
+    return {
+      faqs: [
+        { question: 'd', answer: 'd' },
+        { question: '', answer: '' },
+        { question: '', answer: '' },
+        { question: '', answer: '' },
+      ],
+    }
   },
 }
 </script>
