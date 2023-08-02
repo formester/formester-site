@@ -54,6 +54,8 @@ import ComparingJotform from '../components/jotform101/comparing-jotform-with-ot
 import WhyChooseFormester from '../components/jotform101/why-choose-formester.vue'
 import CallToActionSection from '../components/CallToActionSection.vue'
 
+import getSiteMeta from '@/utils/getSiteMeta'
+
 export default {
   components: {
     WhatMakesJotformStandOut,
@@ -63,17 +65,98 @@ export default {
     WhyChooseFormester,
     ComparingJotform,
     CallToActionSection,
-    FAQwithCategories,
   },
-  data() {
+  computed: {
+    meta() {
+      const metaData = {
+        type: 'website',
+        url: 'https://formester.com/jotform101/',
+        title: 'Jotform 101 | Guide to Form Building and Surveys with Jotform',
+        description:
+          "Discover Jotform's full potential with Formester's guide. Unlock powerful form building features, tips & tricks!",
+        mainImage:
+          'https://formester.com/jotform101-hero-section.png', // need to update with auto-responder page image
+        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
+        keywords: [
+          'Jotform',
+          'Jotform101',
+          'Complete guide to form building and surveys using Jotform',
+          'web forms for customer support',
+          'web forms productivity',
+          'form builder',
+          'formester',
+          'online forms',
+          'online web forms',
+          'formester web forms',
+          'form creator',
+          'form generator',
+          'online form',
+          'web form',
+          'online forms',
+          'web forms',
+          'create form',
+          'create forms',
+          'frequently asked questions',
+          'FAQ',
+        ],
+      }
+      return getSiteMeta(metaData)
+    },
+  },
+  head() {
     return {
-      faqs: [
-        { question: 'd', answer: 'd' },
-        { question: '', answer: '' },
-        { question: '', answer: '' },
-        { question: '', answer: '' },
+      title: 'Jotform 101 | Guide to Form Building and Surveys with Jotform',
+      meta: [...this.meta],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://formester.com/jotform101/',
+        },
       ],
     }
+  },
+  jsonld() {
+    return {
+      '@context': 'http://schema.org',
+      '@graph': [
+        {
+          '@type': 'Corporation',
+          '@id': 'https://acornglobus.com',
+          name: 'Jotform 101 | Guide to Form Building and Surveys with Jotform',
+          description:
+            "Discover Jotform's full potential with Formester's guide. Unlock powerful form building features, tips & tricks!",
+          logo: 'https://formester.com/logo.png',
+          url: 'https://formester.com',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Delaware',
+            addressCountry: 'United States',
+          },
+        },
+        {
+          '@type': 'BreadcrumbList',
+          '@id': 'https://acornglobus.com',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Formester',
+              item: 'https://formester.com/',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Jotform101 - Complete Guide to Form Building by Formester',
+              item: 'https://formester.com/jotform101/',
+            },
+          ],
+        },
+      ],
+    }
+  },
+  data() {
+    return {}
   },
 }
 </script>
