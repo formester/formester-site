@@ -1,7 +1,7 @@
 <template>
   <section class="container text-center py-5 my-3">
     <h2 class="section__heading">
-      Comparing Jotform with Other Leading Form Builders
+      {{ heading }}
     </h2>
     <div class="table-responsive mt-5">
       <table class="table text-start comparision__table mx-auto">
@@ -42,6 +42,12 @@
 
 <script>
 export default {
+  props: {
+    heading: {
+      type: String,
+      required: true
+    }
+  },
   data() {
     return {
       comparisons: [

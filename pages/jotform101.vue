@@ -33,7 +33,9 @@
     <WhatMakesJotformStandOut />
     <JotformPopularUseCase />
     <JotformLimitations />
-    <ComparingJotform />
+    <FormBuilderComparisionTable
+      heading="Comparing Jotform with Other Leading Form Builders"
+    />
     <WhyChooseFormester />
     <FAQwithCategories :categories="categories" />
     <CallToActionSection
@@ -51,7 +53,7 @@ import KeyFeaturesOfJotform from '../components/jotform101/key-features-of-jotfo
 import WhatMakesJotformStandOut from '../components/jotform101/what-makes-jotform-stand-out.vue'
 import JotformPopularUseCase from '../components/jotform101/popular-use-case.vue'
 import JotformLimitations from '../components/jotform101/limitations.vue'
-import ComparingJotform from '../components/jotform101/comparing-jotform-with-others.vue'
+import FormBuilderComparisionTable from '../components/form-builders-comparision-table.vue'
 import WhyChooseFormester from '../components/jotform101/why-choose-formester.vue'
 import CallToActionSection from '../components/CallToActionSection.vue'
 import FAQwithCategories from '../components/FAQwithCategories.vue'
@@ -65,7 +67,7 @@ export default {
     JotformPopularUseCase,
     JotformLimitations,
     WhyChooseFormester,
-    ComparingJotform,
+    FormBuilderComparisionTable,
     CallToActionSection,
     FAQwithCategories,
   },
