@@ -104,6 +104,27 @@ export default {
       }
       return getSiteMeta(metaData)
     },
+    faqsSchema() {
+      const allFaqs = []
+
+      this.categories.forEach((c) => {
+        if (c.faqs) {
+          allFaqs.push(...c.faqs)
+        }
+      })
+
+      // Generate the FAQ schema
+      return allFaqs.map((faq) => {
+        return {
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        }
+      })
+    },
   },
   head() {
     return {
@@ -153,6 +174,11 @@ export default {
               item: 'https://formester.com/jotform101/',
             },
           ],
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: this.faqsSchema,
         },
       ],
     }
