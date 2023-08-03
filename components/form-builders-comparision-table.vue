@@ -45,7 +45,6 @@ export default {
   props: {
     heading: {
       type: String,
-      required: true
     }
   },
   data() {
