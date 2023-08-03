@@ -1,30 +1,28 @@
 <template>
   <div class="container py-5">
-    <div class="row">
-      <div class="heading d-flex flex-column align-items-center text-center">
-        <h2 class="section__heading">
-          The Distinctive Power of Jotform: What Makes Jotform Stand out?
-        </h2>
-      </div>
+    <div class="heading d-flex flex-column align-items-center text-center">
+      <h2 class="section__heading">
+        The Distinctive Power of Jotform: What Makes Jotform Stand out?
+      </h2>
+    </div>
 
-      <div class="row">
+    <div class="row">
+      <div
+        v-for="feature in features"
+        :key="feature.title"
+        class="col-lg-3 col-md-4 col-sm-6 mt-5"
+      >
         <div
-          v-for="feature in features"
-          :key="feature.title"
-          class="col-lg-3 col-md-4 col-sm-6 mt-5"
+          class="border-sm-none border-start ps-3 d-flex flex-column align-items-start"
         >
-          <div
-            class="border-sm-none border-start ps-3 d-flex flex-column align-items-start"
-          >
-            <nuxt-img
-              :src="`/jotform101/what-makes-jotform-stand-out/${feature.img}.svg`"
-              class="img-fluid"
-              :alt="feature.altText"
-              loading="lazy"
-            />
-            <h4 class="sub__section-heading mt-4">{{ feature.title }}</h4>
-            <p class="subheading__text">{{ feature.description }}</p>
-          </div>
+          <nuxt-img
+            :src="`/jotform101/what-makes-jotform-stand-out/${feature.img}.svg`"
+            class="img-fluid"
+            :alt="feature.altText"
+            loading="lazy"
+          />
+          <h4 class="sub__section-heading mt-4">{{ feature.title }}</h4>
+          <p class="subheading__text">{{ feature.description }}</p>
         </div>
       </div>
     </div>

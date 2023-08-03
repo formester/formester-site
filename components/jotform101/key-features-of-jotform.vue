@@ -1,27 +1,25 @@
 <template>
   <div class="container py-5 my-5">
-    <div class="row">
-      <div class="heading d-flex flex-column align-items-center text-center">
-        <h2 class="section__heading">Key Features of Jotform</h2>
-      </div>
+    <div class="heading d-flex flex-column align-items-center text-center">
+      <h2 class="section__heading">Key Features of Jotform</h2>
+    </div>
 
-      <div class="row mt-3">
-        <div
-          v-for="feature in features"
-          :key="feature.title"
-          class="col-lg-4 col-md-6 mt-4"
-        >
-          <div class="feature__card p-3 d-flex flex-column align-items-center">
-            <nuxt-img
-              :src="`/jotform101/key-features/${feature.img}.svg`"
-              class="img-fluid"
-              :alt="feature.altText"
-              loading="lazy"
-            />
-            <div class="text-start">
-              <h4 class="sub__section-heading mt-4">{{ feature.title }}</h4>
-              <p class="subheading__text">{{ feature.description }}</p>
-            </div>
+    <div class="row mt-3">
+      <div
+        v-for="feature in features"
+        :key="feature.title"
+        class="col-lg-4 col-md-6 mt-4"
+      >
+        <div class="feature__card p-3 d-flex flex-column align-items-center">
+          <nuxt-img
+            :src="`/jotform101/key-features/${feature.img}.svg`"
+            class="img-fluid"
+            :alt="feature.altText"
+            loading="lazy"
+          />
+          <div class="text-start">
+            <h4 class="sub__section-heading mt-4">{{ feature.title }}</h4>
+            <p class="subheading__text">{{ feature.description }}</p>
           </div>
         </div>
       </div>

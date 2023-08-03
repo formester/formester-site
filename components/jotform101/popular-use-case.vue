@@ -1,32 +1,30 @@
 <template>
   <div class="container py-5">
-    <div class="row">
-      <div class="heading d-flex flex-column align-items-center text-center">
-        <h2 class="section__heading">Popular Use-Cases of Jotform</h2>
-      </div>
+    <div class="heading d-flex flex-column align-items-center text-center">
+      <h2 class="section__heading">Popular Use-Cases of Jotform</h2>
+    </div>
 
-      <div class="row">
-        <div
-          v-for="feature in features"
-          :key="feature.title"
-          class="col-lg-4 col-md-6 mt-5"
-        >
-          <div class="p-3 d-flex flex-column align-items-center">
-            <nuxt-img
-              :src="`/jotform101/popular-use-case/${feature.img}.svg`"
-              class="img-fluid"
-              :alt="feature.altText"
-              loading="lazy"
-            />
-            <div class="text-start">
-              <h4 class="sub__section-heading mt-4">{{ feature.title }}</h4>
-              <p class="subheading__text">{{ feature.description }}</p>
-              <ul>
-                <li v-for="fp in features.points" :key="fp">
-                  {{ fp }}
-                </li>
-              </ul>
-            </div>
+    <div class="row">
+      <div
+        v-for="feature in features"
+        :key="feature.title"
+        class="col-lg-4 col-md-6 mt-5"
+      >
+        <div class="p-3 d-flex flex-column align-items-center">
+          <nuxt-img
+            :src="`/jotform101/popular-use-case/${feature.img}.svg`"
+            class="img-fluid"
+            :alt="feature.altText"
+            loading="lazy"
+          />
+          <div class="text-start">
+            <h4 class="sub__section-heading mt-4">{{ feature.title }}</h4>
+            <p class="subheading__text">{{ feature.description }}</p>
+            <ul>
+              <li v-for="fp in features.points" :key="fp">
+                {{ fp }}
+              </li>
+            </ul>
           </div>
         </div>
       </div>
