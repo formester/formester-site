@@ -67,7 +67,7 @@ export default {
         {
           title: 'Form Calculations',
           description:
-            'Form with Jotform can be set-up to perform real-time calculations for interactive and dynamic user experiences.',
+            'Forms with Jotform can be set-up to perform real-time calculations for interactive and dynamic user experiences.',
           img: 'calculation',
         },
         {
