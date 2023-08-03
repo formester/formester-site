@@ -7,7 +7,7 @@
             class="call-to-action-content text-center mx-2 my-5 position-relative"
           >
             <h3 class="section__heading">
-              <span v-if="content.heading">{{content.heading}}</span>
+              <span v-if="content.heading">{{ content.heading }}</span>
               <span v-else>
                 Build <span class="hglt">Impactful forms</span> within minutes
               </span>
@@ -20,27 +20,25 @@
                 }}
               </span>
             </h2>
-            <div class="mt-5">
-              <div class="d-inline p-2 mx-2 mt-5">
-                <a
-                  :href="
-                    content.btnPrimaryLink ||
-                    'https://app.formester.com/users/sign_up'
-                  "
-                  class="btn button cta-button"
-                  target="_blank"
-                >
-                  {{ content.btnPrimary || 'Create Now' }}
-                </a>
-              </div>
-              <div class="d-inline p-2 mx-2 mt-5">
-                <NuxtLink
-                  :to="content.btnSecondaryLink || '/contact/'"
-                  class="btn button cta-button__invert"
-                >
-                  {{ content.btnSecondary || 'Contact Us' }}
-                </NuxtLink>
-              </div>
+            <div
+              class="d-flex align-items-center justify-content-center flex-wrap gap-3 mt-5"
+            >
+              <a
+                :href="
+                  content.btnPrimaryLink ||
+                  'https://app.formester.com/users/sign_up'
+                "
+                class="btn button cta-button mx-2"
+                target="_blank"
+              >
+                {{ content.btnPrimary || 'Create Now' }}
+              </a>
+              <NuxtLink
+                :to="content.btnSecondaryLink || '/contact/'"
+                class="btn button cta-button__invert mx-2"
+              >
+                {{ content.btnSecondary || 'Contact Us' }}
+              </NuxtLink>
             </div>
             <nuxt-img
               src="/plane.png"
@@ -71,7 +69,7 @@ export default {
   font-size: 40px;
 }
 
-.section__subtitle  {
+.section__subtitle {
   font-size: 20px;
 }
 
@@ -114,6 +112,10 @@ export default {
   top: 50%;
   transform: translateY(-50%);
   z-index: -1;
+}
+
+.gap-3 {
+  gap: 1rem;
 }
 
 @media (max-width: 1456px) {
