@@ -2,7 +2,12 @@
   <section class="container py-2 py-lg-5">
     <h2 class="text-center section__heading">Frequently Asked Questions</h2>
     <div class="row">
-      <div v-for="(category, idx) in categories" :key="idx" class="col-md-6 my-5">
+      <div
+        v-for="(category, idx) in categories"
+        :key="idx"
+        class="my-5"
+        :class="idx === categories.length - 1 ? 'col' : 'col-md-6'"
+      >
         <h3 class="faq__heading">{{ category.title }}</h3>
         <div class="accordion accordion-flush" id="accordionFaqs">
           <div
