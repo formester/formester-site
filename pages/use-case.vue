@@ -64,6 +64,8 @@ import TemplateSection from '../components/TemplateSection.vue'
 import CallToActionSection from '@/components/CallToActionSection.vue'
 import FAQwithCategories from '../components/FAQwithCategories.vue'
 
+import getSiteMeta from '@/utils/getSiteMeta'
+
 export default {
   components: {
     WhyFormester,
@@ -83,6 +85,121 @@ export default {
     )
     randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
     return { randomTestimonials }
+  },
+  computed: {
+    meta() {
+      const metaData = {
+        type: 'website',
+        url: 'https://formester.com/use-case/',
+        title: 'Formester: Empowering Software and Technology Industries',
+        description:
+          'Formester: Revolutionize form-building, automate workflows, empower teams with no-code solutions. Streamline and grow your business!',
+        mainImage: 'https://formester.com/jotform101-hero-section.png', // need to update with auto-responder page image
+        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
+        keywords: [
+          'Formester',
+          'Formester Use Case',
+          'Formester: Empowering Software',
+          'Formester: Empowering Technology Industries',
+          'web forms for customer support',
+          'web forms productivity',
+          'form builder',
+          'formester',
+          'online forms',
+          'online web forms',
+          'formester web forms',
+          'form creator',
+          'form generator',
+          'online form',
+          'web form',
+          'online forms',
+          'web forms',
+          'create form',
+          'create forms',
+          'frequently asked questions',
+          'FAQ',
+        ],
+      }
+      return getSiteMeta(metaData)
+    },
+    faqsSchema() {
+      const allFaqs = []
+
+      this.categories.forEach((c) => {
+        if (c.faqs) {
+          allFaqs.push(...c.faqs)
+        }
+      })
+
+      // Generate the FAQ schema
+      return allFaqs.map((faq) => {
+        return {
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        }
+      })
+    },
+  },
+  head() {
+    return {
+      title: 'Formester: Empowering Software and Technology Industries',
+      meta: [...this.meta],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://formester.com/use-case/',
+        },
+      ],
+    }
+  },
+  jsonld() {
+    return {
+      '@context': 'http://schema.org',
+      '@graph': [
+        {
+          '@type': 'Corporation',
+          '@id': 'https://acornglobus.com',
+          name: 'Formester: Empowering Software and Technology Industries',
+          description:
+            'Streamline Your Workflows and Scale Your Software Business with Formester! Discover how Formester can revolutionize your form-building process, automate workflows, and drive efficiency in your organization. Empower your team with versatile, no-code solutions that save time and propel your business forward.',
+          logo: 'https://formester.com/logo.png',
+          url: 'https://formester.com',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Delaware',
+            addressCountry: 'United States',
+          },
+        },
+        {
+          '@type': 'BreadcrumbList',
+          '@id': 'https://acornglobus.com',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Formester',
+              item: 'https://formester.com/',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Formester: Empowering Software and Technology Industries',
+              item: 'https://formester.com/use-case/',
+            },
+          ],
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: this.faqsSchema,
+        },
+      ],
+    }
   },
   data() {
     return {
