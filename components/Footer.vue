@@ -33,6 +33,11 @@
                   >Integrations</NuxtLink
                 >
               </li>
+              <li class="mt-2">
+                <NuxtLink to="/use-case/" class="footer__link"
+                  >Use Case</NuxtLink
+                >
+              </li>
             </ul>
           </div>
           <!--Grid column-->
@@ -143,6 +148,18 @@
                 <a href="https://status.formester.com" class="footer__link">
                   Status
                 </a>
+              </li>
+            </ul>
+
+            <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
+              Competitor
+            </h5>
+
+            <ul class="list-unstyled mt-2">
+              <li class="mt-2">
+                <NuxtLink to="/jotform-101/" class="footer__link">
+                  Jotform
+                </NuxtLink>
               </li>
             </ul>
           </div>
