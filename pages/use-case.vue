@@ -37,12 +37,14 @@
     </div>
 
     <WhyFormester />
+    <AdvanceFeatures />
     <IndustrySpecificUseCase />
     <FormBuildersComparisionTable
       heading="Comparing Formester with Other Leading Form Builders"
     />
 
     <ThreeStepsCreateForm />
+    <Testimonial :testimonials="randomTestimonials" />
     <TemplateSection />
     <CallToActionSection />
     <FAQwithCategories :categories="categories" />
@@ -51,10 +53,13 @@
 
 <script>
 import WhyFormester from '../components/use-case/why-formester.vue'
+import AdvanceFeatures from '../components/use-case/advance-features.vue'
 import IndustrySpecificUseCase from '../components/use-case/industry-specific-use-case.vue'
 import FormBuildersComparisionTable from '../components/form-builders-comparision-table.vue'
 
 import ThreeStepsCreateForm from '../components/ThreeStepsCreateForm.vue'
+import Testimonial from '../components/Testimonial.vue'
+import { allTestimonials } from '@/constants/testimonials'
 import TemplateSection from '../components/TemplateSection.vue'
 import CallToActionSection from '@/components/CallToActionSection.vue'
 import FAQwithCategories from '../components/FAQwithCategories.vue'
@@ -62,12 +67,22 @@ import FAQwithCategories from '../components/FAQwithCategories.vue'
 export default {
   components: {
     WhyFormester,
+    AdvanceFeatures,
     IndustrySpecificUseCase,
     FormBuildersComparisionTable,
     ThreeStepsCreateForm,
+    Testimonial,
     TemplateSection,
     CallToActionSection,
     FAQwithCategories,
+  },
+  async asyncData() {
+    let randomTestimonials = await allTestimonials
+    const randIndex = Math.floor(
+      Math.random() * (randomTestimonials.length - 2)
+    )
+    randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
+    return { randomTestimonials }
   },
   data() {
     return {
