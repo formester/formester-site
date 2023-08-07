@@ -33,9 +33,18 @@
                   >Integrations</NuxtLink
                 >
               </li>
+            </ul>
+
+            <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
+              Use Case
+            </h5>
+
+            <ul class="list-unstyled mt-2">
               <li class="mt-2">
-                <NuxtLink to="/use-case/" class="footer__link"
-                  >Use Case</NuxtLink
+                <NuxtLink
+                  to="/use-case/software-and-technology/"
+                  class="footer__link"
+                  >Software and Technology</NuxtLink
                 >
               </li>
             </ul>
@@ -152,7 +161,7 @@
             </ul>
 
             <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
-              Competitor
+              Competitor Insights
             </h5>
 
             <ul class="list-unstyled mt-2">
