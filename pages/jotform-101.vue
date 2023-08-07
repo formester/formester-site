@@ -75,7 +75,7 @@ export default {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/jotform101/',
+        url: 'https://formester.com/jotform-101/',
         title: 'Jotform 101 | Guide to Form Building and Surveys with Jotform',
         description:
           "Discover Jotform's full potential with Formester's guide. Unlock powerful form building features, tips & tricks!",
@@ -136,7 +136,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/jotform101/',
+          href: 'https://formester.com/jotform-101/',
         },
       ],
     }
