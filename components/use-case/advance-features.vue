@@ -152,6 +152,8 @@ export default {
   border-radius: 32px;
   background: #f9f0ff;
   max-width: 1052px;
+  width: fit-content;
+  block-size: fit-content;
 }
 
 .toggler__container.mobile {
@@ -187,10 +189,12 @@ export default {
 
 @media screen and (max-width: 992px) {
   .toggler__container {
-    padding: 8px;
+    padding: 12px;
     overflow-x: auto;
     white-space: nowrap;
     display: none !important;
+    width: auto;
+    block-size: auto;
   }
 
   .toggler__container.mobile {
