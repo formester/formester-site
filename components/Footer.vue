@@ -124,6 +124,14 @@
                   Calculation Fields
                 </NuxtLink>
               </li>
+              <li class="mt-2">
+                <NuxtLink
+                  to="/features/collaboration/"
+                  class="footer__link"
+                >
+                  Collaboration
+                </NuxtLink>
+              </li>
             </ul>
           </div>
 
