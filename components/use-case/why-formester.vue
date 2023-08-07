@@ -13,7 +13,7 @@
         class="col-lg-3 col-md-4 col-sm-6 mt-5"
       >
         <div
-          class="border-sm-none border-start ps-3 d-flex flex-column align-items-start"
+          class="border-custom-start ps-3 d-flex flex-column align-items-start"
         >
           <nuxt-img
             :src="`/use-case/why-formester/${feature.img}.png`"
@@ -92,5 +92,9 @@ export default {
 .subheading__text {
   font-size: 14px;
   line-height: 22px;
+}
+
+.border-custom-start {
+  border-left: 1px #f1f1f1 solid;
 }
 </style>

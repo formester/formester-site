@@ -90,7 +90,7 @@
       meta() {
         const metaData = {
           type: 'website',
-          url: 'https://formester.com/use-case/',
+          url: 'https://formester.com/use-case/software-and-technology/',
           title: 'Formester: Empowering Software and Technology Industries',
           description:
             'Formester: Revolutionize form-building, automate workflows, empower teams with no-code solutions. Streamline and grow your business!',
@@ -152,7 +152,7 @@
           {
             hid: 'canonical',
             rel: 'canonical',
-            href: 'https://formester.com/use-case/',
+            href: 'https://formester.com/use-case/software-and-technology/',
           },
         ],
       }
