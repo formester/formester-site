@@ -34,6 +34,20 @@
                 >
               </li>
             </ul>
+
+            <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
+              Use Case
+            </h5>
+
+            <ul class="list-unstyled mt-2">
+              <li class="mt-2">
+                <NuxtLink
+                  to="/use-case/software-and-technology/"
+                  class="footer__link"
+                  >Software and Technology</NuxtLink
+                >
+              </li>
+            </ul>
           </div>
           <!--Grid column-->
 
@@ -143,6 +157,18 @@
                 <a href="https://status.formester.com" class="footer__link">
                   Status
                 </a>
+              </li>
+            </ul>
+
+            <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
+              Competitor Insights
+            </h5>
+
+            <ul class="list-unstyled mt-2">
+              <li class="mt-2">
+                <NuxtLink to="/jotform-101/" class="footer__link">
+                  Jotform
+                </NuxtLink>
               </li>
             </ul>
           </div>

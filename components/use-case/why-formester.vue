@@ -1,5 +1,5 @@
 <template>
-  <div class="container py-5">
+  <div class="container py-5 mt-5">
     <div class="heading d-flex flex-column align-items-center text-center">
       <h2 class="section__heading">
         Why Formester?: Experience the Form-Building Edge

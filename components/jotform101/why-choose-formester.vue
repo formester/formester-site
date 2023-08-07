@@ -5,7 +5,7 @@
         <h2 class="section__heading">
           Considering a Switch: Why Choose Formester?
         </h2>
-        <p>Experience the Formester Advantage</p>
+        <p class="section__subtitle mt-1">(Experience the Formester Advantage)</p> 
       </div>
 
       <div class="templates mt-md-5">
@@ -75,12 +75,19 @@ export default {
 </script>
 
 <style scoped>
+.section__subtitle {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.48px;
+  /* text-transform: uppercase; */
+}
+
 .templates {
   width: 100%;
   padding: 1.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: min-content;  
+  grid-auto-rows: min-content;
   gap: 24px;
 }
 

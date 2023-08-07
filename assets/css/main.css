@@ -204,6 +204,7 @@ button {
 .sub__section-heading {
   font-size: var(--ft-subtitle);
   font-weight: 700;
+  line-height: 140%;
 }
 .hglight {
   color: var(--clr-primary);
