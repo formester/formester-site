@@ -36,7 +36,7 @@ createdAt: 2023-08-02T17:39:47.429Z
 coverImg: /img/how-to-use-entertainment-quizzes-for-website-engagement-lead-generation.png
 coverImgAlt: How to Use Entertainment Quizzes for Website Engagement & Lead Generation?
 featured: false
-published: false
+published: true
 ---
 Enough of and about Academic Quizzes!
 
