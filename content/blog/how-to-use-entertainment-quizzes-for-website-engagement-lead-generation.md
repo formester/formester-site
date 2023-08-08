@@ -42,6 +42,8 @@ Enough of and about Academic Quizzes!
 
 That's what we thought when we saw this meme:
 
+![Funny meme showing students' reaction as soon as they hear the word "Quiz"!](/img/damn-here-we-go-again-.gif "Students' reaction as soon as they hear the word \"Quiz\"!")
+
 The term [Quiz is so heavily coined in the Academic World](/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-you%E2%80%99ll-need-in-2023-1/);
 
 Upon encountering this meme, we couldn't help but relate to the **heavy association of the term Quiz with academic stress**. It seems to trigger memories of countless academic quizzes and evoke a not-so-happy feeling.
