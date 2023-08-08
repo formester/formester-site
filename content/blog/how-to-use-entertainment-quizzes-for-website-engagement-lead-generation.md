@@ -42,7 +42,7 @@ Enough of and about Academic Quizzes!
 
 That's what we thought when we saw this meme:
 
-![](/img/damn-here-we-go-again-.gif)
+![Funny meme showing students' reaction as soon as they hear the word "Quiz"!](/img/damn-here-we-go-again-.gif "Students' reaction as soon as they hear the word \"Quiz\"!")
 
 The term [Quiz is so heavily coined in the Academic World](/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-you%E2%80%99ll-need-in-2023-1/);
 
