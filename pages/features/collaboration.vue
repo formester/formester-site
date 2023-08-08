@@ -113,33 +113,25 @@ export default {
         type: 'website',
         url: 'https://formester.com/features/collaboration/',
         title:
-          'Form Collaboration Made Easy: Add Multiple Team Members and Clients to View, Edit and Share Forms!',
+          'Simplified Collaboration: Form Access with Multiple Members & Clients!',
         description:
-          "Form sharing for effective collaboration and efficient team-work! Unite your team, gather valuable feedback, and unlock the true potential of form building with Formester's powerful in-built Collaboration/Add Collaborators feature!",
+          "Formester's collaborative form sharing will boost teamwork! Gather input, unite your team, and easily uncover form-building potential.",
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with auto-responder page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
         keywords: [
-          'formester web forms with autoresponder feature',
-          'formester web forms with autorespond feature',
-          'formester web form features autorespond',
-          'Autoresponder',
-          'Web forms Autoresponder',
-          'Autoresponder for web forms',
-          'Autoresponder web forms',
-          'Autoresponder feature for web forms',
-          'Autorespond feature for web forms',
-          'Automate SMS after each form submission',
-          'Automate emails after each form submission',
-          'Automate email',
-          'Automate SMS',
+          'formester web forms with collaboration feature',
+          'formester web form features collboration',
+          'collboration',
+          'Web forms collboration',
+          'collboration for web forms',
+          'collboration web forms',
+          'collboration feature for web forms',
           'web forms for customer support',
-          'Best Autoresponder Software in 2023',
-          'autoresponder software solutions to implement for your own business',
+          'Best Collaboration Software in 2023',
+          'Collaboration software solutions to implement for your own business',
           'web forms productivity',
-          'How to add Autoresponder Web Forms to your website',
-          'How to add Autoresponder to your Web Forms',
-          'best way to create an auto responder when someone completes a web form',
+          'How to add Collaborators to your Web Forms',
           'automate your workflow',
           'customized notifications',
           'form builder',
@@ -171,7 +163,7 @@ export default {
   head() {
     return {
       title:
-        'Form Collaboration Made Easy: Add Multiple Team Members and Clients to View, Edit and Share Forms!',
+        'Simplified Collaboration: Form Access with Multiple Members & Clients!',
       meta: [...this.meta],
       link: [
         {
@@ -189,9 +181,9 @@ export default {
         {
           '@type': 'Corporation',
           '@id': 'https://acornglobus.com',
-          name: 'Email Autoresponder Message | Personalised Email Responder - Formester',
+          name: 'Simplified Collaboration: Form Access with Multiple Members & Clients!',
           description:
-            'Boost your email marketing with a personalised email autoresponder message. Try Formester and engage your subscribers today! Sign up now.',
+            "Formester's collaborative form sharing will boost teamwork! Gather input, unite your team, and easily uncover form-building potential.",
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
           address: {
