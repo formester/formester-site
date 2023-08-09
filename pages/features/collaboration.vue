@@ -6,7 +6,9 @@
           <div
             class="col-lg-5 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start mt-xl-0 mt-md-5"
           >
-            <h1 class="section__heading">Collaboration</h1>
+            <h1 class="section__heading">
+              Collaboration - Add Form Collaborators
+            </h1>
             <p class="hero__subheading mt-3">
               Form sharing for effective collaboration and efficient team-work!
               Unite your team, gather valuable feedback, and unlock the true
@@ -81,11 +83,11 @@
       </div>
     </div>
 
-    <ThreeStepsCreateForm />
+    <CollaborateEffectively />
     <Testimonial :testimonials="randomTestimonials" />
     <TemplateSection />
     <CallToActionSection />
-    <FAQwithCategories :categories="categories"/>
+    <FAQwithCategories :categories="categories" />
   </div>
 </template>
 
@@ -96,6 +98,7 @@ import Testimonial from '@/components/Testimonial.vue'
 import { allTestimonials } from '@/constants/testimonials'
 import TemplateSection from '../../components/TemplateSection.vue'
 import FAQwithCategories from '../../components/FAQwithCategories.vue'
+import CollaborateEffectively from '../../components/features/collaboration/collaborate-effectively.vue'
 
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
@@ -109,6 +112,7 @@ export default {
     TemplateSection,
     ApplicationOfWebForms,
     FAQwithCategories,
+    CollaborateEffectively,
   },
   computed: {
     meta() {
@@ -368,7 +372,7 @@ export default {
               question:
                 'Can collaborators from different locations or time zones work together on forms?',
               answer:
-                'Yes, Formester\'s online platform allows collaborators from different locations and time zones to work together seamlessly.',
+                "Yes, Formester's online platform allows collaborators from different locations and time zones to work together seamlessly.",
             },
           ],
         },
@@ -385,7 +389,7 @@ export default {
               question:
                 'What happens if two collaborators try to edit the same form simultaneously?',
               answer:
-                'Formester\'s real-time collaboration ensures that changes are synchronized and conflict resolution is managed seamlessly.',
+                "Formester's real-time collaboration ensures that changes are synchronized and conflict resolution is managed seamlessly.",
             },
           ],
         },
@@ -393,16 +397,15 @@ export default {
           title: 'Others',
           faqs: [
             {
-              question:
-                'What types of forms are suitable for collaboration?',
+              question: 'What types of forms are suitable for collaboration?',
               answer:
-                'Formester\'s Collaboration feature is suitable for all types of forms, from surveys and feedback forms to registration and order forms.',
+                "Formester's Collaboration feature is suitable for all types of forms, from surveys and feedback forms to registration and order forms.",
             },
             {
               question:
                 'Can collaborators work on forms offline and then sync changes later?',
               answer:
-                'Formester\'s real-time collaboration requires an internet connection for simultaneous work. However, collaborators can save drafts offline and sync changes when online.',
+                "Formester's real-time collaboration requires an internet connection for simultaneous work. However, collaborators can save drafts offline and sync changes when online.",
             },
           ],
         },
