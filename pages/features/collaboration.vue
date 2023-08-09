@@ -85,6 +85,7 @@
     <Testimonial :testimonials="randomTestimonials" />
     <TemplateSection />
     <CallToActionSection />
+    <FAQwithCategories :categories="categories"/>
   </div>
 </template>
 
@@ -94,6 +95,7 @@ import FeatureDetail from '../../components/FeatureDetail.vue'
 import Testimonial from '@/components/Testimonial.vue'
 import { allTestimonials } from '@/constants/testimonials'
 import TemplateSection from '../../components/TemplateSection.vue'
+import FAQwithCategories from '../../components/FAQwithCategories.vue'
 
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
@@ -106,6 +108,7 @@ export default {
     Testimonial,
     TemplateSection,
     ApplicationOfWebForms,
+    FAQwithCategories,
   },
   computed: {
     meta() {
@@ -310,6 +313,98 @@ export default {
             'Collaborative form-building fosters a sense of unity and cohesion among team members. By working together towards a common goal, team members feel more engaged, motivated, and invested in the success of the project.',
           imageSrc: 'team-cohesion.jpg',
           altText: 'icon showing team cohesion',
+        },
+      ],
+      categories: [
+        {
+          title: 'General',
+          faqs: [
+            {
+              question: "What is Formester's Collaboration feature?",
+              answer:
+                "Formester's Collaboration feature allows you to invite multiple team members, colleagues, and clients to collaborate on your forms. It enables real-time collaboration, enhancing form creation and data analysis with your team.",
+            },
+            {
+              question:
+                'How can I invite team members and clients to collaborate on my forms?',
+              answer:
+                "To invite collaborators, simply access your Formester dashboard, click on the Collaborators Tab, and add the required person's email address. Once invited, they will receive an email with a link to collaborate.",
+            },
+            {
+              question:
+                'How do I ensure data security and control when collaborating on forms?',
+              answer:
+                "You can maintain control over your form's sensitive data by setting permissions and restricting access to confidential information.",
+            },
+          ],
+        },
+        {
+          title: 'Access and Permissions',
+          faqs: [
+            {
+              question:
+                'Can I limit access to sensitive or confidential form data?',
+              answer:
+                'Yes, you can assign permissions to control access to specific form data, ensuring it remains accessible only to authorized team members.',
+            },
+            {
+              question: 'Can collaborators view form responses and analytics?',
+              answer:
+                'Yes, collaborators with appropriate permissions can access form responses and analytics to gain valuable insights.',
+            },
+            {
+              question:
+                'Is there a limit to the number of collaborators I can add to a form?',
+              answer:
+                'Formester allows you to add multiple collaborators as needed, ensuring flexible and efficient collaboration.',
+            },
+            {
+              question:
+                'Can I remove access for a collaborator if they are no longer part of the team?',
+              answer:
+                'Yes, as the form owner, you have the ability to remove access for collaborators at any time.',
+            },
+            {
+              question:
+                'Can collaborators from different locations or time zones work together on forms?',
+              answer:
+                'Yes, Formester\'s online platform allows collaborators from different locations and time zones to work together seamlessly.',
+            },
+          ],
+        },
+        {
+          title: 'Real-time Collaboration',
+          faqs: [
+            {
+              question:
+                'Can multiple team members work on form design simultaneously?',
+              answer:
+                'Yes, with real-time collaboration, multiple team members can work on form design simultaneously.',
+            },
+            {
+              question:
+                'What happens if two collaborators try to edit the same form simultaneously?',
+              answer:
+                'Formester\'s real-time collaboration ensures that changes are synchronized and conflict resolution is managed seamlessly.',
+            },
+          ],
+        },
+        {
+          title: 'Others',
+          faqs: [
+            {
+              question:
+                'What types of forms are suitable for collaboration?',
+              answer:
+                'Formester\'s Collaboration feature is suitable for all types of forms, from surveys and feedback forms to registration and order forms.',
+            },
+            {
+              question:
+                'Can collaborators work on forms offline and then sync changes later?',
+              answer:
+                'Formester\'s real-time collaboration requires an internet connection for simultaneous work. However, collaborators can save drafts offline and sync changes when online.',
+            },
+          ],
         },
       ],
     }
