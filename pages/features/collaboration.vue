@@ -7,7 +7,7 @@
             class="col-lg-5 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start mt-xl-0 mt-md-5"
           >
             <h1 class="section__heading">
-              Collaboration - Add Form Collaborators
+              Add Collaborators: Share and Edit Your Forms with Multiple Users
             </h1>
             <p class="hero__subheading mt-3">
               Form sharing for effective collaboration and efficient team-work!
