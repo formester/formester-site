@@ -42,7 +42,7 @@ Enough of and about Academic Quizzes!
 
 That's what we thought when we saw this meme:
 
-![Funny meme showing students' reaction as soon as they hear the word "Quiz"!](/img/damn-here-we-go-again-.gif "Students' reaction as soon as they hear the word \"Quiz\"!")
+![Funny meme showing students' reaction as soon as they hear the word "Quiz"!](/img/damn-here-we-go-again-.gif "Students' reaction as soon as they hear the word \\\"Quiz\\\"!")
 
 The term [Quiz is so heavily coined in the Academic World](/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-you%E2%80%99ll-need-in-2023-1/);
 
@@ -62,6 +62,8 @@ Designed to engage and entertain users, these quizzes offer a lighthearted exper
 ## The Psychology Behind Entertainment Quizzes: Why are Entertainment Quizzes So Appealing to Users?
 
 The psychology behind entertainment quizzes lies in their ability to tap into several key aspects of human behavior and cognition:
+
+![Infographic showing: The Psychology Behind Entertainment Quizzes: Why are Entertainment Quizzes So Appealing to Users?: 1. Enjoyable Experience 2. Self-Discovery and Curiosity 3. Escapism and Relaxation 4. Interactive Experience 5. Social Connection 6. Cognitive Challenge 7. Low Pressure 8. Discovering New Content](/img/the-psychology-behind-entertainment-quizzes_-why-are-entertainment-quizzes-so-appealing-to-users_.png "The Psychology Behind Entertainment Quizzes: Why are Entertainment Quizzes So Appealing to Users?")
 
 ### 1. Enjoyable Experience
 
@@ -102,6 +104,8 @@ With such a diverse array of entertainment quizzes, there's something for everyo
 These quizzes offer an exciting and entertaining way to test your knowledge, learn something new, and have fun while doing it!
 
 Let's discuss some popular types of entertainment quizzes:
+
+![Infographic showing: Types of Entertainment Quizzes: 1. Pop Culture Quizzes 2. Show-Business Quizzes 3. Music Quizzes 4. Book Quizzes 5. Personality Quizzes 6. Gaming Quizzes 7. Fun Quizzes for Special Occasions 8. Knowledge & Trivia Quizzes](/img/types-of-entertainment-quizzes.png "Types of Entertainment Quizzes")
 
 ### 1. Pop Culture Quizzes
 
@@ -149,6 +153,8 @@ Using entertainment quizzes for website engagement can significantly enhance use
 
 Here's how you can effectively utilize entertainment quizzes to boost website engagement:
 
+![Infographic showing: How to Use Entertainment Quizzes for Website Engagement?: 1. Choose Engaging Quiz Topics 2. Create Visually Appealing Quizzes 3. Offer Personalized Results 4. Promote Social Sharing 5. Provide Prizes or Incentives 6. Embed Quizzes in Blog Posts 7. Showcase High Scores and Rankings 8. Regularly Update Quizzes](/img/how-to-use-entertainment-quizzes-for-website-engagement_.png "How to Use Entertainment Quizzes for Website Engagement?")
+
 ### 1. Choose Engaging Quiz Topics
 
 Select quiz topics that align with your target audience's interests and preferences. Cover a diverse range of entertaining subjects, such as pop culture, movies, music, or TV shows, to appeal to a broader audience.
@@ -193,6 +199,8 @@ Using entertainment quizzes for lead generation can be a creative and effective 
 
 Let's discuss a few ways to generate new leads using Entertainment Quizzes:
 
+![Infographic showing: How to Use Entertainment Quizzes for Lead Generation?: 1. Captivating Opt-in Forms 2. Personalized Offers 3. Social Media Promotion 4. Email Marketing 5. Segmentation and Targeting 6. Interactive Lead Magnets 7. Viral Sharing Mechanics 8. Lead Nurturing](/img/how-to-use-entertainment-quizzes-for-lead-generation_.png "How to Use Entertainment Quizzes for Lead Generation?")
+
 ### 1. Captivating Opt-in Forms
 
 Embed an [opt-in](https://formester.com/templates/optin-form-1830/) form at the end of the quiz to capture participants' contact information, such as email addresses. You may also offer an incentive, like a discount or exclusive content, in exchange for their details.
@@ -231,6 +239,8 @@ Gain inspiration for your own!
 
 ## 3 Times Brands Used Entertainment Quizzes To Engage Their Audience and Target Leads: Example Case Studies 
 
+![Infographic showing: 3 Times Brands Used Entertainment Quizzes To Engage Their Audience and Target Leads | Example Case Studies:  Example 1: Nike's "Discover Your Athletic Persona" Quiz Example 2: Spotify's "Discover Your Music Personality" Quiz Example 3: Sephora's "Find Your Perfect Makeup Look" Quiz](/img/3-times-brands-used-entertainment-quizzes-to-engage-their-audience-and-target-leads.png "3 Times Brands Used Entertainment Quizzes To Engage Their Audience and Target Leads | Example Case Studies")
+
 ### Example 1: Nike's Discover Your Athletic Persona Quiz
 
 Sportswear giant [Nike launched the Discover Your Athletic Persona quiz](https://www.nike.com/experiences). 
@@ -264,6 +274,8 @@ Sephora capitalized on the quiz's popularity by capturing user information throu
 And whilst Website Engagement and Lead generation are two key profits that businesses gain by using Entertainment Quizzes, there are several other benefits that come as well. 
 
 ## How can Businesses benefit from featuring Online Entertainment Quizzes on their Websites?
+
+![Infographic showing: How can Businesses benefit from featuring Online Entertainment Quizzes on their Websites?: 1. Audience Insights 2. Social Media Buzz 3. Brand Awareness 4. Content Marketing Strategy 5. Customer Interaction 6. Market Research 7. Repeat Visits](/img/how-can-businesses-benefit-from-featuring-online-entertainment-quizzes-on-their-websites_.png "How can Businesses benefit from featuring Online Entertainment Quizzes on their Websites?")
 
 ### 1. Audience Insights
 
