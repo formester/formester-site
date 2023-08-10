@@ -42,7 +42,7 @@ Enough of and about Academic Quizzes!
 
 That's what we thought when we saw this meme:
 
-![Funny meme showing students' reaction as soon as they hear the word "Quiz"!](/img/damn-here-we-go-again-.gif "Students' reaction as soon as they hear the word \"Quiz\"!")
+![Funny meme showing students' reaction as soon as they hear the word "Quiz"!](/img/damn-here-we-go-again-.gif "Students' reaction as soon as they hear the word \\"Quiz\\"!")
 
 The term [Quiz is so heavily coined in the Academic World](/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-you%E2%80%99ll-need-in-2023-1/);
 
@@ -62,6 +62,8 @@ Designed to engage and entertain users, these quizzes offer a lighthearted exper
 ## The Psychology Behind Entertainment Quizzes: Why are Entertainment Quizzes So Appealing to Users?
 
 The psychology behind entertainment quizzes lies in their ability to tap into several key aspects of human behavior and cognition:
+
+![Infographic showing: The Psychology Behind Entertainment Quizzes: Why are Entertainment Quizzes So Appealing to Users?: 1. Enjoyable Experience 2. Self-Discovery and Curiosity 3. Escapism and Relaxation 4. Interactive Experience 5. Social Connection 6. Cognitive Challenge 7. Low Pressure 8. Discovering New Content](/img/the-psychology-behind-entertainment-quizzes_-why-are-entertainment-quizzes-so-appealing-to-users_.png "The Psychology Behind Entertainment Quizzes: Why are Entertainment Quizzes So Appealing to Users?")
 
 ### 1. Enjoyable Experience
 
