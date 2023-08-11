@@ -43,7 +43,7 @@ createdAt: 2023-08-11T18:04:58.093Z
 coverImg: /img/how-to-protect-user-data-and-prevent-spam-in-web-forms_.png
 coverImgAlt: How to Protect User Data and Prevent Spam in Web Forms?
 featured: false
-published: false
+published: true
 ---
 Have you ever encountered a situation where you eagerly set up a [registration form](https://formester.com/blog/registration-forms-101-definition-types-use-cases-more-how-to-create-free-template/), anticipating genuine user sign-ups? 
 
