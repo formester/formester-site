@@ -67,7 +67,7 @@ export default {
         url: 'https://formester.com/features/online-payment/',
         title: 'Online Forms With Signature | Online Form Builder With Signature - Formester',
         description:
-          'Add e-sign to your online form easily using formester. E-sign has become increasingly popular in recent years as it offers a convenient and efficient way to sign documents. Traditional handwritten signatures can most often be replaced by electronic signatures.',
+          'Add e-sign to your online form easily - Formester | Document signing with secure electronic signatures (e-sign) | Formester Digital Signs',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with Html Form Backend page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with Html Form Backend page image alt
@@ -97,7 +97,7 @@ export default {
           '@id': 'https://acornglobus.com',
           name: 'Online Forms With Signature | Online Form Builder With Signature - Formester',
           description:
-            "Add e-sign to your online form easily using formester. E-sign has become increasingly popular in recent years as it offers a convenient and efficient way to sign documents. Traditional handwritten signatures can most often be replaced by electronic signatures.",
+            "Add e-sign to your online form easily - Formester | Document signing with secure electronic signatures (e-sign) | Formester Digital Signs",
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
           address: {

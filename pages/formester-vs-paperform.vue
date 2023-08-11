@@ -397,7 +397,7 @@ export default {
         url: 'https://formester.com/formester-vs-paperform/',
         title: 'Formester vs Paperform | Paperform Alternative - Formester',
         description:
-          'Powerful Alternative to Paperform. With custom forms, data collection, actionable insights and affordable prices, boost your lead generation & business automation with Formester! Sign-up for free, now!',
+          'Powerful Alternative to Paperform - Try Formester for Online, No-Code, Customizable Forms with Advanced Features | Sign-up for Free!',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with formester vs paperform page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs paperform page image alt
@@ -476,7 +476,7 @@ export default {
       '@type': 'Corporation',
       name: 'Formester vs Paperform | Paperform Alternative - Formester',
       description:
-        "Powerful Alternative to Paperform. With custom forms, data collection, actionable insights and affordable prices, boost your lead generation & business automation with Formester! Sign-up for free, now!",
+        "Powerful Alternative to Paperform - Try Formester for Online, No-Code, Customizable Forms with Advanced Features | Sign-up for Free!",
       logo: 'https://formester.com/logo.png',
       url: 'https://formester.com',
       address: {

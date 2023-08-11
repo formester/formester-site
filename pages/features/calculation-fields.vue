@@ -111,7 +111,7 @@ export default {
         url: 'https://formester.com/features/calculation/',
         title: 'Calculation - Formester',
         description:
-          'Create dynamic forms that perform calculations in real-time, empowering you to automate complex calculations, generate dynamic scores, and deliver personalized, interactive experiences. Try Formester and engage your subscribers today! Sign up now.',
+          'Dynamic Forms to Perform Real-time Complex Calculations | Dynamic Scores, Personalized & Interactive Form Experiences - Sign up now.',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with auto-responder page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
@@ -175,7 +175,7 @@ export default {
           '@id': 'https://acornglobus.com',
           name: 'Calculation - Formester',
           description:
-            'Create dynamic forms that perform calculations in real-time, empowering you to automate complex calculations, generate dynamic scores, and deliver personalized, interactive experiences. Try Formester and engage your subscribers today! Sign up now.',
+            'Dynamic Forms to Perform Real-time Complex Calculations | Dynamic Scores, Personalized & Interactive Form Experiences - Sign up now.',
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
           address: {
