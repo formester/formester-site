@@ -4,9 +4,9 @@ description: Grabbing your customer's attention and holding on to their interest
   can be a bit hard today. Everyone is somehow a part of marketing 24*7, but the
   average attention span of customers has dropped to only eight seconds.
 metaTitle: Why and How Should Your Website Use Interactive Quizzes?
-metaDescription: Do you want to know why should you use interactive quizzes to
-  improve your website and business? Check out this Formester's blog post to
-  find out the benefits of online quizzes for business.
+metaDescription: Unlock your website's potential with interactive quizzes.
+  Formester's blog explains the benefits of using online quizzes for your
+  business.
 keywords: online quiz, online quiz for business, audience engagement, create
   online quiz, educate your customers with quiz
 author: Vivek Badani
