@@ -6,9 +6,8 @@ description: There are just way too many ways through which you can get
   awareness,businesses depend significantly on their lead generation strategy to
   turn leads into customers and eventually drive revenue for a business.
 metaTitle: How To Create A Lead Capture Form & Get More Conversions?
-metaDescription: Having trouble capturing leads? Learn tips to improve your lead
-  capture form conversions with Formester. Find out how to create a lead capture
-  form that converts visitors into leads.
+metaDescription: Boost lead conversions with Formester's tips. Craft engaging
+  lead capture forms that turn visitors into valuable leads. Learn now!
 keywords: lead capture form, create lead capture form, lead acquisition, lead
   generation, lead form
 author: Vivek Badani
