@@ -5,9 +5,8 @@ description: An intake form is a document that helps you gather information
   questions about the client's goals, project preferences, experience, skills
   and budget.
 metaTitle: How To Create An Effective Project Intake Form In 5 Steps?
-metaDescription: Formester's Pro Tips For Producing An Effective Intake Form
-  will show you how to create a project intake form in 5 steps. Follow our
-  simple guide and create your own form today!
+metaDescription: Craft powerful intake forms with Formester's Pro Tips. Create
+  your project intake form in 5 simple steps. Start building now!
 keywords: intake form, client intake form, create an intake form, create form
 author: Vivek Badani
 authorProfile: https://www.linkedin.com/in/vivek--badani/
