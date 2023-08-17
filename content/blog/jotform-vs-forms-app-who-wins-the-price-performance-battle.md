@@ -28,7 +28,7 @@ createdAt: 2023-08-17T17:40:52.317Z
 coverImg: /img/jotform-vs-forms.app_-who-wins-the-price-performance-battle_.png
 coverImgAlt: "Jotform vs Forms.App: Who Wins the Price-Performance Battle?"
 featured: false
-published: false
+published: true
 ---
 So, I'm on the hunt for an online form builder. 
 
