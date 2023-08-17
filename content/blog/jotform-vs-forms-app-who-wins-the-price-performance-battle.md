@@ -1,8 +1,13 @@
 ---
 title: "Jotform vs Forms.App: Who Wins the Price-Performance Battle?"
-description: abc
+description: Delve into the ultimate face-off between Jotform and Forms.App.
+  Explore comparisons along features, similarities, differences, use-cases,
+  limitations, price and overall performance. Make an informed decision for your
+  form-building needs.
 metaTitle: "Jotform vs Forms.App: Who Wins the Price-Performance Battle?"
-metaDescription: abc
+metaDescription: "Jotform Vs Forms.App - A detailed comparison of price,
+  performance, features, use-cases, limitations and more! Make an informed
+  choice! "
 keywords: abc
 author: Navni Dighe
 authorProfile: https://www.linkedin.com/in/navni-dighe-375908245/
