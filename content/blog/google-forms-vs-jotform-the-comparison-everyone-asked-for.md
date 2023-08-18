@@ -265,7 +265,7 @@ As a product developed by Google, to be a part of its [Google Workspace](https:/
 
 #### 4. Real-time Collaboration
 
-Google Forms allows multiple users to collaborate on form creation and analysis. Team members can work together in real-time, making it convenient for group projects or in extensively collaborative settings.
+Google Forms allows [multiple users to collaborate on form creation and analysis](/features/collaboration/). Team members can work together in real-time, making it convenient for group projects or in extensively collaborative settings.
 
 #### 5. Offline Form Completion
 
@@ -319,15 +319,15 @@ Users can leverage advanced styling options and layout designs. To top that, Jot
 
 #### 2. Advanced Form Building Features
 
-Jotform offers a wide array of advanced form-building features, including conditional logic, calculation fields, form calculations, electronic signatures, and document uploads. 
+Jotform offers a wide array of advanced form-building features, including [conditional logic](/features/conditional-logic/), [calculation fields](/features/calculation-fields/), form calculations, [electronic signatures](/features/digital-signature/), and document uploads. 
 
 These features enable users to create complex and logic-driven, yet interactive forms to meet specific requirements.
 
 #### 3. Integration with Third-Party Applications
 
-Jotform supports a wide range of integrations with third-party applications, platforms and services.
+[Jotform supports a wide range of integrations](https://www.jotform.com/integrations/) with third-party applications, platforms and services.
 
-Users can seamlessly connect their forms with popular tools like Hubspot, Salesforce, Mailchimp, Zapier and more, to expand the functionality of their forms.
+Users can seamlessly connect their forms with popular tools like [Hubspot](https://www.hubspot.com/), [Salesforce](https://www.salesforce.com/in/), [Mailchimp](http://www.mailchimp.com/), [Zapier](https://zapier.com/) and more, to expand the functionality of their forms.
 
 #### 4. Workflow Automation
 
@@ -337,7 +337,7 @@ Users can set up form triggers, automate email notifications, create approval wo
 
 #### 5. Payment Processing
 
-Jotform offers built-in payment integration options, allowing users to create forms to collect payments securely and transparently. 
+Jotform offers built-in payment integration options, allowing users to [create forms to collect payments securely and transparently](/blog/how-to-collect-payments-using-online-web-forms/). 
 
 Users can set up product catalogs, calculate order totals and accept payments directly within the form.
 
@@ -353,11 +353,11 @@ These additional form widgets and apps offer greater versatility and dynamism in
 
 #### 8. Extensive Template Library
 
-Jotform provides a vast library of professionally designed templates for various industries and purposes. This saves users time and effort in creating forms from scratch and provides them with a head start in form creation.
+[Jotform provides a vast library of professionally designed templates](https://www.jotform.com/form-templates/?classic) for various industries and purposes. This saves users time and effort in creating forms from scratch and provides them with a head start in form creation.
 
 #### 9. Customer Support and Resources
 
-Jotform provides dedicated customer support through various channels, including live chat, email, and help center. 
+[Jotform provides dedicated customer support](https://www.jotform.com/contact/) through various channels, including live chat, email, and help center. 
 
 They also offer extensive documentation, a blog resource that is regularly updated, tutorials, and webinars to assist users in getting the most out of their form-building experience.
 
@@ -369,7 +369,7 @@ Now that we've discussed Google Forms and Jotform as individual platforms, let's
 
 ### 1. Form Building and Customization
 
-**Google Forms:** Provides a simple and user-friendly interface for creating forms. While it offers a variety of form-field/question types such as multiple choice, short answer, dropdowns, checkboxes, and more.
+**Google Forms:** Provides a simple and user-friendly interface for creating forms. While it offers a variety of form-field/question types such as multiple choice, short answer, dropdowns, checkboxes, and more;
 
 ![Screenshot showing: Google Forms' Builder Dashboard](/img/google-forms-vs-jotform-3-.png "Google Forms' Builder Dashboard")
 
@@ -491,7 +491,7 @@ Users can also configure email notifications to be sent to specific recipients, 
 
 ![Screenshot showing: Jotform's Capability for Mobile-Responsiveness](/img/google-forms-vs-jotform-17-.png "Jotform's Capability for Mobile-Responsiveness")
 
-Again, the forms automatically adapt to different screen resolutions, allowing respondents to access and complete forms on any device without compromising usability.
+Again, the [forms automatically adapt to different screen resolutions, allowing respondents to access and complete forms on any device](https://formester.com/blog/mobile-forms-vs-desktop-forms-pros-cons-of-each-form-type/) without compromising usability.
 
 ### 8. File Uploads
 
@@ -604,7 +604,7 @@ Its simplicity and ease of use make it accessible to a wide range of users.
 
 #### 2. Event Registration and RSVPs
 
-Whether it's a small gathering or a large event, Google Forms are often used to create [registration forms](/blog/registration-forms-101-definition-types-use-cases-more-how-to-create-free-template/) and collect RSVPs efficiently. You can customize the form to gather necessary information such as attendee details, meal preferences, or session preferences.
+Whether it's a small gathering or a large event, Google Forms are often used to create [registration forms](/blog/registration-forms-101-definition-types-use-cases-more-how-to-create-free-template/) and collect RSVPs efficiently. You can customize the form to [gather necessary information such as attendee details, meal preferences, or session preferences](/templates/event-registration-form-1827/).
 
 #### 3. Quizzes and Assessments
 
@@ -621,11 +621,11 @@ Moreover, the automatic grading feature saves time and provides instant feedback
 
 #### 1. Limited Customization
 
-Google Forms has limited customization. While you can change basic settings like colors and fonts, the overall design options are relatively limited. Customizing the layout and appearance beyond basic styling may be challenging.
+Google Forms has limited customization. While you can change basic settings like colors and fonts, the overall design options are relatively limited. [Customizing the layout and appearance beyond basic styling](/features/branding-kit/) may be challenging.
 
 #### 2. Advanced Features
 
-Google Forms offers only basic features and lacks advanced features found in other form builders. 
+Google Forms offers only basic features and lacks [advanced features found in other form builders](/blog/best-online-form-builders/). 
 
 For instance, it has limited conditional logic capabilities.
 
@@ -645,7 +645,7 @@ Google Forms prominently displays the Google logo and branding, which may not al
 
 #### 1. Application and Appointment Scheduling Forms
 
-Jotform is commonly used for creating application forms, membership registrations, or enrollment forms. Its advanced customization options allow you to design forms that align with your specific branding and collect information tailored to your application process.
+Jotform is commonly used for creating [application forms](/templates/categories/application-forms/), [membership registrations](/templates/categories/registration-forms/), or [enrollment forms](/templates/course-registration-form-1826/). Its advanced customization options allow you to [design forms that align with your specific branding and collect information tailored to your application process](/blog/how-branded-surveys-can-help-you-unlock-your-brand%E2%80%99s-potential/).
 
 Moreover, Jotform facilitates the creation of forms that allow clients or customers to select preferred dates and times, provide contact information, and mention specific requirements. Jotform integrates with calendar applications to ensure accurate scheduling.
 
@@ -655,7 +655,7 @@ Jotform's built-in payment integration features make it suitable for creating [f
 
 #### 3. Volunteer and Membership Forms
 
-Jotform simplifies the process of managing volunteers and memberships. Organizations can create forms to collect volunteer availability, skills, and preferences. Similarly, membership forms can capture member information, process payments, and automate membership renewals.
+Jotform simplifies the process of [managing volunteers](/templates/categories/donation-forms/) and [memberships](/templates/gym-registration-form-1896/). [Organizations can create forms](/templates/categories/organization-forms/) to collect volunteer availability, skills, and preferences. Similarly, membership forms can capture member information, process payments, and automate membership renewals.
 
 ### Limitations of Jotform
 
@@ -713,7 +713,7 @@ It can sometimes fail to cater to forms that require advanced logic.
 
 On the other hand, while Jotform offers a wide range of functionalities, it might not be compatible with the users' budgets sometimes.
 
-Hence to strike a balance between **Sleek UX, Simplicity, Advanced  Functionalities and Economic Budgets**;
+Hence to strike a balance between **Sleek UX, Simplicity, Advanced Functionalities and Economic Budgets**;
 
 ![Infographic showing: Why Should You Switch to Formester?: Formester strikes the right balance between: 1. Sleek UX  2. Simplicity 3. Advanced Functionalities 4. Economic Budgets](/img/why-should-you-switch-to-formester_.png "Why Should You Switch to Formester?")
 
