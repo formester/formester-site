@@ -461,9 +461,17 @@ If you are looking for a powerful, versatile, and easy-to-use form builder, Form
 Here are some of the benefits of using Formester:
 
 * Easy to use: Formester is designed to be easy to use, even for beginners. You can [create a form in minutes without any coding knowledge](https://formester.com/).
+
+  ![Screenshot showing: Formester's Home-page](/img/jotform-vs-forms.app-27-.png "Formester's Home-page")
 * Versatile: [Formester offers a wide range of features and integrations](/features/), so you can create any type of form you need.
+
+  ![Screenshot showing: Formester's Feature Page](/img/jotform-vs-forms.app-28-.png "Formester's Feature Page")
 * Detailed reporting: Formester offers detailed reporting so you can [track the performance of your forms and make informed decisions](/features/powerful-analytics/).
+
+  ![Screenshot showing: Formester's Analytics & Reporting Feature Page](/img/jotform-vs-forms.app-29-.png "Formester's Analytics & Reporting Feature Page")
 * Affordable: [Formester is an affordable form builder](/pricing/), even for businesses with a limited budget.
+
+  ![Screenshot showing: Formester's Plans & Pricing Page](/img/jotform-vs-forms.app-30-.png "Formester's Plans & Pricing Page")
 
 So whether you're wrangling [intricate forms](/blog/web-forms-how-and-where-to-use-them-for-your-business/), [diving into surveys](/blog/10-reasons-why-you-should-be-using-surveys/), or [managing payments](/blog/how-to-collect-payments-using-online-web-forms/), Formester is the ultimate key to streamlining your form game.
 
