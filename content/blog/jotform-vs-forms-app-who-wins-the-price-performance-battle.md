@@ -50,6 +50,8 @@ As a seasoned player in the realm of online form builders, [Jotform](https://www
 
 With years of experience, Jotform has established itself as a reliable platform for individuals, businesses, and organizations seeking a robust tool to create a wide range of forms. 
 
+![Screenshot showing: Jotform's Home-page](/img/jotform-vs-forms.app.png "Jotform's Home-page")
+
 Its intuitive interface and extensive feature set have made it a top choice for those who value customization, flexibility, and advanced capabilities in their form-building journey.
 
 Jotform is a trusted and reliable platform that has been used by millions of businesses and individuals around the world. 
@@ -94,6 +96,8 @@ Here are some of the unique features of Jotform:
 
 It offers a basic set of features, but it is a good option for businesses that need a simple and affordable form builder.
 
+![Screenshot showing: Forms.App Home-page](/img/jotform-vs-forms.app-2-.png "Forms.App Home-page")
+
 With a commitment to simplicity and user-friendliness, Forms.App has positioned itself as a cost-effective solution tailored to those looking to quickly design and deploy basic forms. Despite being a newer entrant, its approach resonates with users seeking a streamlined form-building experience without the complexity often associated with more established platforms.
 
 Forms.App is a newer platform than Jotform, but it has been gaining popularity in recent years. It has a [4.62-star rating on G2 Crowd](https://www.softwareadvice.com/forms-automation/forms-app-profile/vs/jotform/).
@@ -136,37 +140,61 @@ Forms.App is focused on creating simple forms, so it doesn't have all of the fea
 
 **Jotform:** Jotform offers extensive form fields, customization options, and diverse form elements for versatile forms and surveys.
 
+![Screenshot showing: Jotform's Form - Builder Dashboard](/img/jotform-vs-forms.app-3-.png "Jotform's Form - Builder Dashboard")
+
 **Forms.App:** Forms.App provides a user-friendly interface with customizable templates, allowing efficient form creation.
+
+![Screenshot showing: Forms.App Form - Builder Dashboard](/img/jotform-vs-forms.app-4-.png "Forms.App Form - Builder Dashboard")
 
 ### 2. Customization and Branding
 
 **Jotform:** JotformEnables extensive branding customization including logos, colors, and fonts. You can also add your own branding to the form confirmation page and email notifications.
 
+![Screenshot showing: Jotform's Customization and Branding Options](/img/jotform-vs-forms.app-5-.png "Jotform's Customization and Branding Options")
+
 **Forms.App:** Forms.App Offers branding options to maintain a consistent identity across forms. You can upload your own logo and choose from a variety of color schemes.
+
+![Screenshot showing: Forms.App's Customization and Branding Options](/img/jotform-vs-forms.app-6-.png "Forms.App's Customization and Branding Options")
 
 ### 3. Conditional Logic
 
 **Jotform:** Jotform allows you to create forms that change dynamically based on the user's input.
 
+![Screenshot showing: Jotform's Conditional Logic](/img/jotform-vs-forms.app-7-.png "Jotform's Conditional Logic")
+
 **Forms.App:** Forms.App also supports conditional logic, but with fewer options than Jotform.
+
+![Screenshot showing: Forms.App's Conditional Logic](/img/jotform-vs-forms.app-8-.png "Forms.App's Conditional Logic")
 
 ### 4. Integrations
 
 **Jotform:** [Jotform integrates with over 1,000 apps](https://www.jotform.com/integrations/), including CRMs, email marketing platforms, and payment processors.
 
+![Screenshot showing: Jotform's Integrations](/img/jotform-vs-forms.app-9-.png "Jotform's Integrations")
+
 **Forms.App:** [Forms.App integrates with over 50 apps](https://forms.app/en/integrations), including CRMs, email marketing platforms, and payment processors.
+
+![Screenshot showing: Forms.App's Integrations](/img/jotform-vs-forms.app-10-.png "Forms.App's Integrations")
 
 ### 5. Payment Integrations
 
 **Jotform:** [Jotform integrates with more payment gateways](https://www.jotform.com/integrations/category/payment-processing) than Forms.App, including PayPal, Stripe, Square, and Authorize.net. 
 
+![Screenshot showing: Jotform's Payment Integrations](/img/jotform-vs-forms.app-11-.png "Jotform's Payment Integrations")
+
 **Forms.App:** Forms.App only [integrates with PayPal and Stripe](https://forms.app/en/integrations/online-payments).
+
+![Screenshot showing: Forms.App's Payment Integrations](/img/jotform-vs-forms.app-12-.png "Forms.App's Payment Integrations")
 
 ### 6. Form Access Control
 
 **Jotform:** [Jotform provides advanced form access control](https://www.jotform.com/help/1205-how-to-change-the-access-settings-of-a-form/), allowing you to finely tune user permissions and access levels, ensuring data security and privacy.
 
+![]()
+
 **Forms.App:** Similarly, [Forms.App offers form access control features](https://forms.app/en/help-center/user-roles-permissions), yet not as extensive options as Jotform for tailored user access management.
+
+![]()
 
 ### 7. Data Export Options
 
