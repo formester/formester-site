@@ -190,21 +190,27 @@ Forms.App is focused on creating simple forms, so it doesn't have all of the fea
 
 **Jotform:** [Jotform provides advanced form access control](https://www.jotform.com/help/1205-how-to-change-the-access-settings-of-a-form/), allowing you to finely tune user permissions and access levels, ensuring data security and privacy.
 
-![]()
+![Screenshot showing: Jotform's Form Access Control](/img/jotform-vs-forms.app-13-.png "Jotform's Form Access Control")
 
 **Forms.App:** Similarly, [Forms.App offers form access control features](https://forms.app/en/help-center/user-roles-permissions), yet not as extensive options as Jotform for tailored user access management.
 
-![]()
+![Screenshot showing: Forms.App's Form Access Control](/img/jotform-vs-forms.app-14-.png "Forms.App's Form Access Control")
 
 ### 7. Data Export Options
 
 **Jotform:** Jotform offers a variety of export options, including PDF, Excel, CSV, XML, and JSON, facilitating easy data sharing and analysis.
 
+![Screenshot showing: Jotform's Analytics & Sharing Options](/img/jotform-vs-forms.app-15-.png "Jotform's Analytics & Sharing Options")
+
 **Forms.App:** Forms.App only offers PDF and CSV export options.
+
+![Screenshot showing: Forms.App's Analytics & Sharing Options](/img/jotform-vs-forms.app-16-.png "Forms.App's Analytics & Sharing Options")
 
 ### 8. Offline Form Access
 
 **Jotform:** [Jotform offers offline form access](https://www.jotform.com/features/offline-forms/) through its mobile app, which can be helpful if you need to collect data in areas with no internet connectivity. 
+
+![Screenshot showing: Jotform's Offline Form Access Feature](/img/jotform-vs-forms.app-17-.png "Jotform's Offline Form Access Feature")
 
 **Forms.App:** Forms.App does not offer offline form access.
 
@@ -212,17 +218,23 @@ Forms.App is focused on creating simple forms, so it doesn't have all of the fea
 
 **Jotform:** [Jotform offers submission approval workflows](https://www.jotform.com/products/approvals/), which can be helpful if you need to have someone review and approve form submissions before they are processed. 
 
+![Screenshot showing: Jotform's Submission Approval Workflow Feature](/img/jotform-vs-forms.app-18-.png "Jotform's Submission Approval Workflow Feature")
+
 **Forms.App:** Forms.App does not offer submission approval workflows.
 
 ### 10. Widget Integrations
 
 **Jotform:** [Jotform integrates with more widgets than Forms.App](https://www.jotform.com/widgets/), so you can add more functionality to your forms. 
 
+![Screenshot showing: Jotform's Widget Integrations](/img/jotform-vs-forms.app-19-.png "Jotform's Widget Integrations")
+
 **Forms.App:** Forms.App only integrates with a limited number of widgets.
 
 ### 11. Translation and Localization 
 
 **Jotform:** [Jotform offers more translation](https://www.jotform.com/features/translate-forms/) and localization options than Forms.App, so you can create forms for users in different countries or regions. 
+
+![Screenshot showing: Jotform's Translation and Localization Feature](/img/jotform-vs-forms.app-20-.png "Jotform's Translation and Localization Feature")
 
 **Forms.App:** Forms.App does not offer translation options.
 
@@ -236,19 +248,29 @@ Forms.App is focused on creating simple forms, so it doesn't have all of the fea
 
 **Jotform:** [Jotform offers a large library of pre-made form templates](https://www.jotform.com/form-templates/?classic) to get you started quickly.
 
+![Screenshot showing: Jotform's Form Template Library](/img/jotform-vs-forms.app-21-.png "Jotform's Form Template Library")
+
 **Forms.App:** Offers [a smaller library of pre-made form templates](https://forms.app/en/templates/popular-forms).
+
+![Screenshot showing: Forms.App's Form Template Library](/img/jotform-vs-forms.app-22-.png "Forms.App's Form Template Library")
 
 ### 14. Customer Support
 
 **Jotform:** [Jotform offers dedicated customer support](https://www.jotform.com/contact/) through live chat, email, and phone.
 
+![Screenshot showing: Jotform's Customer Support](/img/jotform-vs-forms.app-23-.png "Jotform's Customer Support")
+
 **Forms.App:** [Forms.App offers 24/7 customer support](https://forms.app/en/contact-us) through email and live chat.
+
+![Screenshot showing: Forms.App's Customer Support](/img/jotform-vs-forms.app-24-.png "Forms.App's Customer Support")
 
 ### 15. Plans & Pricing
 
 **Jotform:** Jotform offers a **free plan that allows you to create upto 5 forms with 100 submissions with 100MB storage, along with basic features per month.** 
 
 **Paid Plans:** [Jotform offers 4 paid plans](https://www.jotform.com/pricing/?utm_source=ss2023-pricing-nav&utm_medium=website&utm_content=featuresexport-submission-data&utm_campaign=ss2023) with additional features and benefits, with each upgrade. 
+
+![Screenshot showing: Jotform's Paid Plans & Pricing Page](/img/jotform-vs-forms.app-25-.png "Jotform's Paid Plans & Pricing Page")
 
 * **Bronze:** $34/month, with upto 25 forms and 1000 submissions
 * **Silver:** $39/month, with upto 50 forms and 2500 submissions
@@ -258,6 +280,8 @@ Forms.App is focused on creating simple forms, so it doesn't have all of the fea
 **Forms.App:** Forms.App similar to Jotform offers the **creation of upto 5 forms with 100 responses/month, however with 10MB storage and no collaborators, with its free plan.**
 
 **Paid Plans:** [Forms.App also offers 4 paid plans](https://forms.app/en/pricing) with additional features with each upgrade. 
+
+![Screenshot showing: Forms.App's Paid Plans & Pricing Page](/img/jotform-vs-forms.app-26-.png "Forms.App's Paid Plans & Pricing Page")
 
 * **Basic:** $25/month, with upto 25 forms and 1000 responses
 * **Pro:** $35/month with Unlimited forms with 10K responses
