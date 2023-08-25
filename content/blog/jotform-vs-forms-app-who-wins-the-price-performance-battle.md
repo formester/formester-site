@@ -312,6 +312,8 @@ If it aligns with your requirements, then all that's left is a comparison of the
 
 JotForm and Forms.App overlap in several areas, including:
 
+![Infographic showing: What both Jotform & Forms.App offer?: 1. Drag-and-drop interface 2. Customization 3. Question types 4. Templates 5. Integration 6. Sharing options 7. Responsive design 8. Data collection 9. Collaboration](/img/what-both-jotform-forms.app-offer_.png "What both Jotform & Forms.App offer?")
+
 ### 1. Drag-and-drop interface
 
 Both platforms provide intuitive drag-and-drop interfaces, making it easy for users to design and structure forms without any coding knowledge.
@@ -352,6 +354,8 @@ Now, let's delve into the ideal use cases where each platform shines and also di
 
 ## Best Use-Cases of Jotform
 
+![Infographic showing: Best Use-Cases of JotForm: 1. Online Surveys 2. Registrations 3. Contact Forms 4. Job Applications 5. Order Forms](/img/best-use-cases-of-jotform_-jotform-vs-forms.app.png "Best Use-Cases of JotForm")
+
 ### 1. Online Surveys
 
 JotForm is suitable for creating [surveys to gather feedback, opinions, and insights](/templates/categories/survey-forms/) from participants, making it an excellent tool for market research and customer feedback.
@@ -374,6 +378,8 @@ JotForm can be used to build [order forms for e-commerce businesses](https://www
 
 ## Limitations of Jotform
 
+![Infographic showing: Limitations of Jotform: 1. Learning Curve 2. Limited Free Plan 3. Paid Advanced Features 4. Form Styling 5. Support](/img/limitations-of-jotform_-jotform-vs-forms.app.png "Limitations of Jotform")
+
 ### 1. Learning Curve
 
 While JotForm's interface is user-friendly, creating complex forms with advanced features may require some learning, especially for new users.
@@ -395,6 +401,8 @@ Customizing the visual design of forms may have some limitations, and users may 
 Jotform's support can be slow to respond to some requests.
 
 ## Best Use-Cases of Forms.App
+
+![Infographic showing: Best Use-Cases of Forms.App: 1. Employee Feedback 2. Feedback Forms 3. Student Assessments 4. Quick Surveys 5. Appointment Scheduling](/img/best-use-cases-of-forms.app.png "Best Use-Cases of Forms.App")
 
 ### 1. Employee Feedback
 
@@ -419,6 +427,8 @@ Forms.App streamlines [appointment bookings](/templates/online-doctors-appointme
 ## Limitations of Forms.App
 
 Forms.App is a simple and affordable form builder that is easy to use. However, there are some limitations to consider when using Forms.App:
+
+![Infographic showing: Limitations of Forms.App: 1. Form Creation Flexibility 2. Complex Logic 3. Integrations 4. Reporting 5. API](/img/limitations-of-forms.app.png "Limitations of Forms.App")
 
 ### 1. Form Creation Flexibility
 
