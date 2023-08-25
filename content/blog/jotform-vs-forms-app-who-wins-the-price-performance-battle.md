@@ -232,6 +232,8 @@ Forms.App is focused on creating simple forms, so it doesn't have all of the fea
 
 **Forms.App:** Forms.App does not offer submission approval workflows.
 
+![Infographic showing: Feature-wise Comparison of Jotform & Forms.App: 10. Widget Integrations: Jotform: Integration with various widgets | Forms.App: Limited widget integrations 11. Translation and Localization: Jotform: More translation and localization options | Forms.App: No translation options 12. API: Jotform: Extensive API for integration | Forms.App: API integration available  ](/img/feature-wise-comparison-of-jotform-forms.app-3.png "Infographic showing: Feature-wise Comparison of Jotform & Forms.App: 10. Widget Integrations 11. Translation and Localization 12. API")
+
 ### 10. Widget Integrations
 
 **Jotform:** [Jotform integrates with more widgets than Forms.App](https://www.jotform.com/widgets/), so you can add more functionality to your forms. 
@@ -253,6 +255,8 @@ Forms.App is focused on creating simple forms, so it doesn't have all of the fea
 **Jotform:** Jotform boasts an extensive and versatile API, allowing seamless integration with a wide range of applications and services for enhanced functionality.
 
 **Forms.App:** Forms.App also provides API integration, although Jotform offers a more robust API environment for smoother connections with external tools.
+
+![Infographic showing: Feature-wise Comparison of Jotform & Forms.App: 13. Form Templates: Jotform: Large library of pre-made templates | Forms.App: Smaller library of pre-made templates 14. Customer Support: Jotform: Live chat, email, and phone support | Forms.App: 24/7 email and live chat support 15. Plans & Pricing: Jotform: Free plan, 4 paid plans with additional features with each upgrade | Forms.App: Free plan, 4 paid plans with addition of new features with each upgrade](/img/feature-wise-comparison-of-jotform-forms.app-4.png "Infographic showing: Feature-wise Comparison of Jotform & Forms.App: 13. Form Templates 14. Customer Support 15. Plans & Pricing")
 
 ### 13. Form Templates
 
