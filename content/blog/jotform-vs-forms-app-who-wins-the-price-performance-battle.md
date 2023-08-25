@@ -62,6 +62,8 @@ It is also a highly rated platform, with a [4.64-star rating on G2 Crowd](https:
 
 Here are some of the unique features of Jotform:
 
+![Infographic showing: Key Features of Jotform: 1. Built-in CRM 2. Survey builder 3. Versatility 4. Customization 5. Integration 6. Advanced Logic 7. Wide Range of Elements](/img/key-features-of-jotform.png "Key Features of Jotform")
+
 #### 1. Built-in CRM
 
 [Jotform has a built-in CRM](https://www.jotform.com/blog/jotform-tables-as-crm-tool/) that allows you to store and manage your leads and customers. This can be helpful if you're using your forms to generate leads or track customer interactions.
@@ -106,6 +108,8 @@ Forms.App is a newer platform than Jotform, but it has been gaining popularity i
 
 Here are some of the unique features of Forms.App:
 
+![Infographic showing: Key Features of Forms.App: 1. Unlimited form submissions 2. 24/7 customer support 3. Simplicity 4. User-Friendly 5. Cost-Effective 6. Quick Setup 7. Focused Approach](/img/key-features-of-forms.app.png "Key Features of Forms.App")
+
 #### 1. Unlimited form submissions
 
 Forms.App offers [unlimited form submissions on 2 of its paid plans](https://forms.app/en/pricing), so you don't have to worry about running out of space.
@@ -135,6 +139,8 @@ Forms.App is designed to be easy to use, even for beginners. The [interface is c
 Forms.App is focused on creating simple forms, so it doesn't have all of the features of a more comprehensive form builder like Jotform. However, [it does a great job of creating simple forms that are easy to use and effective](https://forms.app/en/blog/7-tips-on-how-to-encourage-your-customers-to-participate-in-online-forms).
 
 ## Feature-wise Comparison of Jotform & Forms.App
+
+![Infographic showing: Feature-wise Comparison of Jotform & Forms.App: 1. Form Creation Flexibility: Jotform: Extensive form fields and customization options | Forms.App: User-friendly interface with customizable templates 2. Customization and Branding: Jotform: Extensive branding customization options | Forms.App: Branding options with logo and color schemes 3. Conditional Logic: Jotform: Dynamic forms based on user input | Forms.App: Supports conditional logic with fewer options  ](/img/feature-wise-comparison-of-jotform-forms.app.png "Feature-wise Comparison of Jotform & Forms.App: 1. Form Creation Flexibility 2. Customization and Branding 3. Conditional Logic")
 
 ### 1. Form Creation Flexibility
 
@@ -166,6 +172,8 @@ Forms.App is focused on creating simple forms, so it doesn't have all of the fea
 
 ![Screenshot showing: Forms.App's Conditional Logic](/img/jotform-vs-forms.app-8-.png "Forms.App's Conditional Logic")
 
+![Infographic showing: Feature-wise Comparison of Jotform & Forms.App: 4. Integrations: Jotform: 1000+ app integrations, including CRMs and more | Forms.App: 50+ app integrations, including CRMs  5. Payment Integrations: Jotform: Multiple payment gateway integrations | Forms.App: PayPal and Stripe integrations 6. Form Access Control: Jotform: Advanced user access control and permissions | Forms.App: Limited form access control options  ](/img/feature-wise-comparison-of-jotform-forms.app-1.png "Feature-wise Comparison of Jotform & Forms.App: 4. Integrations 5. Payment Integrations 6. Form Access Control")
+
 ### 4. Integrations
 
 **Jotform:** [Jotform integrates with over 1,000 apps](https://www.jotform.com/integrations/), including CRMs, email marketing platforms, and payment processors.
@@ -195,6 +203,8 @@ Forms.App is focused on creating simple forms, so it doesn't have all of the fea
 **Forms.App:** Similarly, [Forms.App offers form access control features](https://forms.app/en/help-center/user-roles-permissions), yet not as extensive options as Jotform for tailored user access management.
 
 ![Screenshot showing: Forms.App's Form Access Control](/img/jotform-vs-forms.app-14-.png "Forms.App's Form Access Control")
+
+![Infographic showing: Feature-wise Comparison of Jotform & Forms.App: 7. Data Export Options: Jotform: PDF, Excel, CSV, XML, JSON export options | Forms.App: PDF and CSV export options 8. Offline Form Access: Jotform: Mobile app for collecting data offline | Forms.App: No offline form access 9. Submission Approval Workflow: Jotform: Submission review and approval workflows | Forms.App: No submission approval workflows  ](/img/feature-wise-comparison-of-jotform-forms.app-2.png "Feature-wise Comparison of Jotform & Forms.App: 7. Data Export Options 8. Offline Form Access 9. Submission Approval Workflow")
 
 ### 7. Data Export Options
 
