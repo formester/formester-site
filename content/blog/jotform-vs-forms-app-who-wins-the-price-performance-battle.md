@@ -62,6 +62,8 @@ It is also a highly rated platform, with a [4.64-star rating on G2 Crowd](https:
 
 Here are some of the unique features of Jotform:
 
+![Infographic showing: Key Features of Jotform: 1. Built-in CRM 2. Survey builder 3. Versatility 4. Customization 5. Integration 6. Advanced Logic 7. Wide Range of Elements](/img/key-features-of-jotform.png "Key Features of Jotform")
+
 #### 1. Built-in CRM
 
 [Jotform has a built-in CRM](https://www.jotform.com/blog/jotform-tables-as-crm-tool/) that allows you to store and manage your leads and customers. This can be helpful if you're using your forms to generate leads or track customer interactions.
@@ -106,6 +108,8 @@ Forms.App is a newer platform than Jotform, but it has been gaining popularity i
 
 Here are some of the unique features of Forms.App:
 
+![Infographic showing: Key Features of Forms.App: 1. Unlimited form submissions 2. 24/7 customer support 3. Simplicity 4. User-Friendly 5. Cost-Effective 6. Quick Setup 7. Focused Approach](/img/key-features-of-forms.app.png "Key Features of Forms.App")
+
 #### 1. Unlimited form submissions
 
 Forms.App offers [unlimited form submissions on 2 of its paid plans](https://forms.app/en/pricing), so you don't have to worry about running out of space.
@@ -135,6 +139,8 @@ Forms.App is designed to be easy to use, even for beginners. The [interface is c
 Forms.App is focused on creating simple forms, so it doesn't have all of the features of a more comprehensive form builder like Jotform. However, [it does a great job of creating simple forms that are easy to use and effective](https://forms.app/en/blog/7-tips-on-how-to-encourage-your-customers-to-participate-in-online-forms).
 
 ## Feature-wise Comparison of Jotform & Forms.App
+
+![Infographic showing: Feature-wise Comparison of Jotform & Forms.App: 1. Form Creation Flexibility: Jotform: Extensive form fields and customization options | Forms.App: User-friendly interface with customizable templates 2. Customization and Branding: Jotform: Extensive branding customization options | Forms.App: Branding options with logo and color schemes 3. Conditional Logic: Jotform: Dynamic forms based on user input | Forms.App: Supports conditional logic with fewer options  ](/img/feature-wise-comparison-of-jotform-forms.app.png "Feature-wise Comparison of Jotform & Forms.App: 1. Form Creation Flexibility 2. Customization and Branding 3. Conditional Logic")
 
 ### 1. Form Creation Flexibility
 
@@ -166,6 +172,8 @@ Forms.App is focused on creating simple forms, so it doesn't have all of the fea
 
 ![Screenshot showing: Forms.App's Conditional Logic](/img/jotform-vs-forms.app-8-.png "Forms.App's Conditional Logic")
 
+![Infographic showing: Feature-wise Comparison of Jotform & Forms.App: 4. Integrations: Jotform: 1000+ app integrations, including CRMs and more | Forms.App: 50+ app integrations, including CRMs  5. Payment Integrations: Jotform: Multiple payment gateway integrations | Forms.App: PayPal and Stripe integrations 6. Form Access Control: Jotform: Advanced user access control and permissions | Forms.App: Limited form access control options  ](/img/feature-wise-comparison-of-jotform-forms.app-1.png "Feature-wise Comparison of Jotform & Forms.App: 4. Integrations 5. Payment Integrations 6. Form Access Control")
+
 ### 4. Integrations
 
 **Jotform:** [Jotform integrates with over 1,000 apps](https://www.jotform.com/integrations/), including CRMs, email marketing platforms, and payment processors.
@@ -196,6 +204,8 @@ Forms.App is focused on creating simple forms, so it doesn't have all of the fea
 
 ![Screenshot showing: Forms.App's Form Access Control](/img/jotform-vs-forms.app-14-.png "Forms.App's Form Access Control")
 
+![Infographic showing: Feature-wise Comparison of Jotform & Forms.App: 7. Data Export Options: Jotform: PDF, Excel, CSV, XML, JSON export options | Forms.App: PDF and CSV export options 8. Offline Form Access: Jotform: Mobile app for collecting data offline | Forms.App: No offline form access 9. Submission Approval Workflow: Jotform: Submission review and approval workflows | Forms.App: No submission approval workflows  ](/img/feature-wise-comparison-of-jotform-forms.app-2.png "Feature-wise Comparison of Jotform & Forms.App: 7. Data Export Options 8. Offline Form Access 9. Submission Approval Workflow")
+
 ### 7. Data Export Options
 
 **Jotform:** Jotform offers a variety of export options, including PDF, Excel, CSV, XML, and JSON, facilitating easy data sharing and analysis.
@@ -222,6 +232,8 @@ Forms.App is focused on creating simple forms, so it doesn't have all of the fea
 
 **Forms.App:** Forms.App does not offer submission approval workflows.
 
+![Infographic showing: Feature-wise Comparison of Jotform & Forms.App: 10. Widget Integrations: Jotform: Integration with various widgets | Forms.App: Limited widget integrations 11. Translation and Localization: Jotform: More translation and localization options | Forms.App: No translation options 12. API: Jotform: Extensive API for integration | Forms.App: API integration available  ](/img/feature-wise-comparison-of-jotform-forms.app-3.png "Infographic showing: Feature-wise Comparison of Jotform & Forms.App: 10. Widget Integrations 11. Translation and Localization 12. API")
+
 ### 10. Widget Integrations
 
 **Jotform:** [Jotform integrates with more widgets than Forms.App](https://www.jotform.com/widgets/), so you can add more functionality to your forms. 
@@ -243,6 +255,8 @@ Forms.App is focused on creating simple forms, so it doesn't have all of the fea
 **Jotform:** Jotform boasts an extensive and versatile API, allowing seamless integration with a wide range of applications and services for enhanced functionality.
 
 **Forms.App:** Forms.App also provides API integration, although Jotform offers a more robust API environment for smoother connections with external tools.
+
+![Infographic showing: Feature-wise Comparison of Jotform & Forms.App: 13. Form Templates: Jotform: Large library of pre-made templates | Forms.App: Smaller library of pre-made templates 14. Customer Support: Jotform: Live chat, email, and phone support | Forms.App: 24/7 email and live chat support 15. Plans & Pricing: Jotform: Free plan, 4 paid plans with additional features with each upgrade | Forms.App: Free plan, 4 paid plans with addition of new features with each upgrade](/img/feature-wise-comparison-of-jotform-forms.app-4.png "Infographic showing: Feature-wise Comparison of Jotform & Forms.App: 13. Form Templates 14. Customer Support 15. Plans & Pricing")
 
 ### 13. Form Templates
 
@@ -298,6 +312,8 @@ If it aligns with your requirements, then all that's left is a comparison of the
 
 JotForm and Forms.App overlap in several areas, including:
 
+![Infographic showing: What both Jotform & Forms.App offer?: 1. Drag-and-drop interface 2. Customization 3. Question types 4. Templates 5. Integration 6. Sharing options 7. Responsive design 8. Data collection 9. Collaboration](/img/what-both-jotform-forms.app-offer_.png "What both Jotform & Forms.App offer?")
+
 ### 1. Drag-and-drop interface
 
 Both platforms provide intuitive drag-and-drop interfaces, making it easy for users to design and structure forms without any coding knowledge.
@@ -338,6 +354,8 @@ Now, let's delve into the ideal use cases where each platform shines and also di
 
 ## Best Use-Cases of Jotform
 
+![Infographic showing: Best Use-Cases of JotForm: 1. Online Surveys 2. Registrations 3. Contact Forms 4. Job Applications 5. Order Forms](/img/best-use-cases-of-jotform_-jotform-vs-forms.app.png "Best Use-Cases of JotForm")
+
 ### 1. Online Surveys
 
 JotForm is suitable for creating [surveys to gather feedback, opinions, and insights](/templates/categories/survey-forms/) from participants, making it an excellent tool for market research and customer feedback.
@@ -360,6 +378,8 @@ JotForm can be used to build [order forms for e-commerce businesses](https://www
 
 ## Limitations of Jotform
 
+![Infographic showing: Limitations of Jotform: 1. Learning Curve 2. Limited Free Plan 3. Paid Advanced Features 4. Form Styling 5. Support](/img/limitations-of-jotform_-jotform-vs-forms.app.png "Limitations of Jotform")
+
 ### 1. Learning Curve
 
 While JotForm's interface is user-friendly, creating complex forms with advanced features may require some learning, especially for new users.
@@ -381,6 +401,8 @@ Customizing the visual design of forms may have some limitations, and users may 
 Jotform's support can be slow to respond to some requests.
 
 ## Best Use-Cases of Forms.App
+
+![Infographic showing: Best Use-Cases of Forms.App: 1. Employee Feedback 2. Feedback Forms 3. Student Assessments 4. Quick Surveys 5. Appointment Scheduling](/img/best-use-cases-of-forms.app.png "Best Use-Cases of Forms.App")
 
 ### 1. Employee Feedback
 
@@ -405,6 +427,8 @@ Forms.App streamlines [appointment bookings](/templates/online-doctors-appointme
 ## Limitations of Forms.App
 
 Forms.App is a simple and affordable form builder that is easy to use. However, there are some limitations to consider when using Forms.App:
+
+![Infographic showing: Limitations of Forms.App: 1. Form Creation Flexibility 2. Complex Logic 3. Integrations 4. Reporting 5. API](/img/limitations-of-forms.app.png "Limitations of Forms.App")
 
 ### 1. Form Creation Flexibility
 
@@ -436,6 +460,8 @@ Ultimately, the best form builder for you will depend on your specific needs and
 
 When [choosing a form builder](/blog/best-online-form-builders/), it is important to consider the following factors:
 
+![Infographic showing: Factors to consider when choosing a form builder: 1. Features & Integrations required 2. Prices & Budgets 3. User-expertise 4. Support Requirements](/img/factors-to-consider-when-choosing-a-form-builder.png "Factors to consider when choosing a form builder")
+
 * The features and integrations that you need
 * The price or budget you've set
 * The ease of use you want
@@ -460,16 +486,18 @@ If you are looking for a powerful, versatile, and easy-to-use form builder, Form
 
 Here are some of the benefits of using Formester:
 
-* Easy to use: Formester is designed to be easy to use, even for beginners. You can [create a form in minutes without any coding knowledge](https://formester.com/).
+![]()
+
+* **Easy to use:** Formester is designed to be easy to use, even for beginners. You can [create a form in minutes without any coding knowledge](https://formester.com/).
 
   ![Screenshot showing: Formester's Home-page](/img/jotform-vs-forms.app-27-.png "Formester's Home-page")
-* Versatile: [Formester offers a wide range of features and integrations](/features/), so you can create any type of form you need.
+* **Versatile:** [Formester offers a wide range of features and integrations](/features/), so you can create any type of form you need.
 
   ![Screenshot showing: Formester's Feature Page](/img/jotform-vs-forms.app-28-.png "Formester's Feature Page")
-* Detailed reporting: Formester offers detailed reporting so you can [track the performance of your forms and make informed decisions](/features/powerful-analytics/).
+* **Detailed reporting:** Formester offers detailed reporting so you can [track the performance of your forms and make informed decisions](/features/powerful-analytics/).
 
   ![Screenshot showing: Formester's Analytics & Reporting Feature Page](/img/jotform-vs-forms.app-29-.png "Formester's Analytics & Reporting Feature Page")
-* Affordable: [Formester is an affordable form builder](/pricing/), even for businesses with a limited budget.
+* **Affordable:** [Formester is an affordable form builder](/pricing/), even for businesses with a limited budget.
 
   ![Screenshot showing: Formester's Plans & Pricing Page](/img/jotform-vs-forms.app-30-.png "Formester's Plans & Pricing Page")
 
