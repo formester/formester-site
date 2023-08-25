@@ -460,6 +460,8 @@ Ultimately, the best form builder for you will depend on your specific needs and
 
 When [choosing a form builder](/blog/best-online-form-builders/), it is important to consider the following factors:
 
+![Infographic showing: Factors to consider when choosing a form builder: 1. Features & Integrations required 2. Prices & Budgets 3. User-expertise 4. Support Requirements](/img/factors-to-consider-when-choosing-a-form-builder.png "Factors to consider when choosing a form builder")
+
 * The features and integrations that you need
 * The price or budget you've set
 * The ease of use you want
@@ -484,16 +486,18 @@ If you are looking for a powerful, versatile, and easy-to-use form builder, Form
 
 Here are some of the benefits of using Formester:
 
-* Easy to use: Formester is designed to be easy to use, even for beginners. You can [create a form in minutes without any coding knowledge](https://formester.com/).
+![]()
+
+* **Easy to use:** Formester is designed to be easy to use, even for beginners. You can [create a form in minutes without any coding knowledge](https://formester.com/).
 
   ![Screenshot showing: Formester's Home-page](/img/jotform-vs-forms.app-27-.png "Formester's Home-page")
-* Versatile: [Formester offers a wide range of features and integrations](/features/), so you can create any type of form you need.
+* **Versatile:** [Formester offers a wide range of features and integrations](/features/), so you can create any type of form you need.
 
   ![Screenshot showing: Formester's Feature Page](/img/jotform-vs-forms.app-28-.png "Formester's Feature Page")
-* Detailed reporting: Formester offers detailed reporting so you can [track the performance of your forms and make informed decisions](/features/powerful-analytics/).
+* **Detailed reporting:** Formester offers detailed reporting so you can [track the performance of your forms and make informed decisions](/features/powerful-analytics/).
 
   ![Screenshot showing: Formester's Analytics & Reporting Feature Page](/img/jotform-vs-forms.app-29-.png "Formester's Analytics & Reporting Feature Page")
-* Affordable: [Formester is an affordable form builder](/pricing/), even for businesses with a limited budget.
+* **Affordable:** [Formester is an affordable form builder](/pricing/), even for businesses with a limited budget.
 
   ![Screenshot showing: Formester's Plans & Pricing Page](/img/jotform-vs-forms.app-30-.png "Formester's Plans & Pricing Page")
 
