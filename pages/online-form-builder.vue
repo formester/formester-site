@@ -8,7 +8,7 @@
               class="col-lg-6 d-flex flex-column justify-content-center align-items-start mt-5"
             >
               <h1 class="section__heading pt-3">
-                Online Form Builders for powerful form-building.
+                Online Form Builders for <span class="hglt">Powerful</span> form-building
               </h1>
               <p class="hero__subheading">
                 Effective data collection and management for businesses and
@@ -335,4 +335,5 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+</style>

@@ -3,7 +3,7 @@
     <div class="row">
       <div class="heading d-flex flex-column align-items-center text-center">
         <h2 class="section__heading">
-          Simple 3 step: How to create forms with Formester
+          Simple 3 step: How to Create Forms with Formester
         </h2>
         <p class="hero__subheading">
           Skip the hassle of learning how to create HTML forms from scratch.
@@ -62,7 +62,7 @@
             aria-label="Step 8"
           ></li>
         </ol>
-        <div class="step__container carousel-inner">
+        <div class="step__container carousel-inner mt-3">
           <div class="carousel-item active">
             <div
               class="d-flex flex-column-reverse flex-lg-row align-items-center"
