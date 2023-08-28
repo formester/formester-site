@@ -38,8 +38,9 @@
     <KeyFeaturesForOnlineFormBuilder />
     <IdealFormBuilder />
     <BestPracticesCraftingCompellingOnlineForms />
+    <ChooseRightOnlineFormBuilder />
     <FormBuilderComparisionTable
-      heading="Comparing Jotform with Other Leading Form Builders"
+      heading="Comparision of Leading Form Builders"
     />
     <Testimonial :testimonials="randomTestimonials" />
     <FAQwithCategories :categories="categories" />
@@ -60,6 +61,7 @@ import BestPracticesCraftingCompellingOnlineForms from '../components/online-for
 import FormBuilderComparisionTable from '../components/form-builders-comparision-table.vue'
 import CallToActionSection from '../components/CallToActionSection.vue'
 import FAQwithCategories from '../components/FAQwithCategories.vue'
+import ChooseRightOnlineFormBuilder from '../components/online-form-builder/choose-right-online-form-builder.vue'
 import Testimonial from '@/components/Testimonial.vue'
 import { allTestimonials } from '@/constants/testimonials'
 
@@ -74,6 +76,7 @@ export default {
     CallToActionSection,
     FAQwithCategories,
     Testimonial,
+    ChooseRightOnlineFormBuilder
   },
   computed: {
     meta() {
