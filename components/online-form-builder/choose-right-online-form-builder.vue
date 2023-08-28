@@ -169,7 +169,7 @@
               </div>
               <div class="col-lg-5 m-auto">
                 <nuxt-img
-                  src="/online-form-builder/steps/step-1.svg"
+                  src="/online-form-builder/steps/step-2.svg"
                   class="w-lg-40 d-block img-fluid my-auto step__image"
                   alt="build your form easy with formester form builder"
                   loading="lazy"
