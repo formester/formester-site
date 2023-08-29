@@ -16,7 +16,7 @@
           class="border-sm-none border-start ps-3 d-flex flex-column align-items-start"
         >
           <nuxt-img
-            :src="`/online-form-builder/ideal-form-builder/${feature.img}.svg`"
+            :src="`/online-form-builder/ideal-form-builder/${feature.img}.png`"
             class="img-fluid"
             :alt="feature.altText"
             loading="lazy"
