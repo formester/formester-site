@@ -39,9 +39,9 @@ Wouldn't it be awesome to offer your users a simple and smooth way to get in tou
 
 And while it might not be possible for everyone to have the best solution of Pam, saying - "Dunder-Mifflin, this is Pam. How may I help you?"; There's no need to fret. 
 
-The good news is that the world hasn't run out of solutions, either. (Just probably not as dazzling as the former ;))
+**The good news is that the world hasn't run out of solutions, either. Just probably not as dazzling as the former ;)**
 
-And out of all the options that remain, Contact Forms shine the brightest. They're easy to use and incredibly efficient!
+**And out of all the options that remain, Contact Forms shine the brightest.** They're easy to use and incredibly efficient!
 
 They act as an easy and quick way for your users to ask questions, seek assistance, or simply drop you a line of appreciation!
 
