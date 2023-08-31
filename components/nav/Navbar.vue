@@ -119,6 +119,14 @@
                   >Calculation Fields</NuxtLink
                 >
               </li>
+              <li>
+                <NuxtLink
+                  class="dropdown-item"
+                  to="/features/collaboration/"
+                  @click="collapseNav"
+                  >Collaboration</NuxtLink
+                >
+              </li>
             </ul>
           </li>
           <li class="nav-item me-2" @click="collapseNav">

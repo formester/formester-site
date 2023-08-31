@@ -7,9 +7,8 @@ description: Are you looking how to integrate Sendgrid SMTP with Formester? This
   personalized emails and receive response directly in your inbox
 metaTitle: How To Integrate Sendgrid SMTP With Formester | How To Configure
   Sendgrid SMTP - Formester
-metaDescription: Are you looking how to integrate Sendgrid SMTP with Formester?
-  This blog post will show you how to configure Sendgrid SMTP so you can start
-  using it with Formester.
+metaDescription: Need help integrating Sendgrid SMTP with Formester? Our latest
+  blog post shows you the setup process for seamless email communications.
 keywords: SendGrid SMTP, Sendgrid smtp credentials, get SendGrid smtp integration
 author: Ravindra Kumar Verma
 authorProfile: https://www.linkedin.com/in/ravindraverma12/

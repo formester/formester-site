@@ -5,9 +5,8 @@ description: Do you wish to ace your feedback questionnaire to achieve the best
   desired survey research? Let us assist you with simple tips on the best
   questions to ask in a survey.
 metaTitle: Top 8 Important Survey Questions To Ask Your Customers!
-metaDescription: Are you looking for the most important questions to ask your
-  customers in a survey? Formester's blog has compiled a list of the top 8
-  survey questions to ask customers. Read more now.
+metaDescription: Seeking impactful survey questions? Formester's blog lists the
+  top 8 customer survey questions. Drive powerful insights today!
 keywords: top survey questions to ask customers, what questions to ask for
   survey, best questions to ask on a survey, most popular survey questions, how
   to ask good survey questions, basic survey questions

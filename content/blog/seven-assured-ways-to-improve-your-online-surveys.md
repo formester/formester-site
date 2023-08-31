@@ -6,9 +6,8 @@ description: There’s no limit to the number of ways you can utilize online
   today,businesses deeply depend on the data received and analyzed through
   online surveys.
 metaTitle: Tips To Improve Your Online Surveys & Get More Responses!
-metaDescription: Looking for tips to improve your online surveys? Check out
-  formester blog for tips on how to improve your online surveys, including how
-  to design better questions, etc. Keep reading to find out!
+metaDescription: Enhance your online surveys with valuable tips from Formester's
+  blog. Learn about crafting better questions & more. Keep reading for insights!
 keywords: online survey, online survey for business, know your customer, survey form
 author: Vivek Badani
 authorProfile: https://www.linkedin.com/in/vivek--badani/
