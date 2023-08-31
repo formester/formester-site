@@ -59,7 +59,9 @@ If you've faced this scenario, you don't need to wait for confirmation – it's 
 
 ![A meme from The Office showing: Just like the KGB, spam doesn't wait for anyone!](/img/protect-user-data-prevent-spam-meme_1.gif "Just like the KGB, spam doesn't wait for anyone! (For The Office Fans)")
 
-However, there's a notable distinction between KGB and spam: While the KGB might be unstoppable, spam can indeed be thwarted! 
+However, there's a notable distinction between KGB and spam: **While the KGB might be unstoppable, spam can indeed be thwarted!** 
+
+![Another KGB-Spam Meme, but for the Batman Fans: While the KGB might be unstoppable, spam can indeed be thwarted!](/img/how-to-protect-user-data-and-prevent-spam-in-web-forms_meme-2.png "Another Version but for the Batman Fans: While the KGB might be unstoppable, spam can indeed be thwarted!")
 
 With that distinction in mind, today's blog is dedicated to an essential topic: Web Form Spam. 
 
