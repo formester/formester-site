@@ -313,19 +313,19 @@ Feeling inspired to craft your very own contact forms? Let's cover that as well!
 
 ### Step 1: Sign Up and Log In
 
-Visit Formester's website (www.formester.com) and sign up for a free account (if you haven't already!). 
+Visit [Formester's website](https://formester.com/) and [sign up for a free account](https://app.formester.com/users/sign_up) (if you haven't already!). 
 
-Log in to your Formester account using your credentials.
+[Log in to your Formester account](https://app.formester.com/users/sign_in) using your credentials.
 
 ### Step 2: Create a New Form OR Choose a Template 
 
-Once logged in, you'll be directed to your Formester dashboard. Click on the "Create Form" button to start building your very own contact form, from scratch; OR
+Once logged in, you'll be directed to your Formester dashboard. Click on the **Create Form** button to [start building your very own contact form, from scratch](/blog/building-your-first-form-with-formester/); **OR**
 
-Formester offers a variety of pre-designed templates. You can choose a contact form template that suits your needs and simply make quick edits to match your branding themes and designs!
+Formester offers a [variety of pre-designed templates](/templates/). You can [choose a contact form template](/templates/categories/contact-forms/) that suits your needs and simply make quick edits to match your branding themes and designs!
 
 ### Step 3: Add Form Fields & Customize Form Fields
 
-Drag and drop form fields from the left-hand sidebar onto your form canvas. Common fields of a contact form include "Name," "Email," "Subject," and "Message." You can also add custom fields like dropdowns, checkboxes, or radio buttons.
+Drag and drop form fields from the left-hand sidebar onto your form canvas. Common fields of a contact form include **Name, Email, Subject,** and **Message**. You can also add custom fields like dropdowns, checkboxes, or radio buttons.
 
 Click on each form field to customize it. You can change labels, add placeholder text, set required fields, and adjust field types (e.g., short-answer text, long-answer text, etc.).
 
@@ -333,17 +333,17 @@ You can also rearrange the order of the fields by dragging them on the canvas.
 
 ### Step 4: Design and Styling
 
-Navigate to the "Design" or "Style" section, on the right-hand side of the dashboard, to customize the appearance of your form. You can choose colors, fonts, button colors, and other design elements that match your website's branding.
+Navigate to the **Design** section, on the right-hand side of the dashboard, to customize the appearance of your form. You can choose colors, fonts, button colors, and other design elements that match your website's branding.
 
 ### Step 5: Set up Information Recall
 
-Information recall pre-populates certain form fields based on user input. Make sure to set up the information recall feature at appropriate fields to give your users a more tailored and personalized form-filling experience. 
+Information recall pre-populates certain form fields based on user input. Make sure to [set up the information recall feature at appropriate fields to give your users a more tailored and personalized form-filling experience](/features/information-recall/). 
 
 ### Step 6: Form Settings
 
-In the "Settings" section, configure general settings for your form. Also under the Auto-responder Tab, you can set up notifications to receive an email whenever a user submits the form.
+In the **Settings** section, configure general settings for your form. Also under the Auto-responder Tab, you can set up notifications to receive an email whenever a user submits the form.
 
-You can also customize the "Thank You" message users see after submitting the form.
+You can also **customize the "Thank You" message** users see after submitting the form.
 
 ### Step 7: Integrations (Optional)
 
@@ -353,17 +353,17 @@ Formester allows you to integrate your form with other tools. For example, you c
 
 Before making the form live, it's a good idea to test it. Fill out the form fields and submit it to ensure everything is working as expected.
 
-Once you're satisfied with your form's design, settings and functioning, hit the "Publish" button.
+Once you're satisfied with your form's design, settings and functioning, hit the **Publish** button.
 
 Formester provides options to embed the form on your website using HTML code or to share a direct link to the form. 
 
 ### Step 9: Monitor Responses
 
-As users start submitting the form, you can log in to your Formester dashboard to view and manage responses. You can export responses for further analysis.
+As users start submitting the form, you can log in to your [Formester's Analytics dashboard to view and manage responses](/features/powerful-analytics/). You can export responses for further analysis.
 
 Creating a contact form using Formester is a straightforward process that allows you to tailor the form to your specific needs and branding. Remember to keep the form simple, user-friendly, and aligned with your website's goals.
 
-Before we conclude, remember that creating a contact form is only half the battle; creating an effective one is where the real magic happens. So, before we say goodbye, let's delve into the crucial aspects. We'll explore some valuable tips for designing contact forms that truly work and highlight some often underestimated mistakes that can have significant repercussions.
+Before we conclude, remember that creating a contact form is only half the battle; creating an effective one is where the real magic happens. So, before we say goodbye, let's delve into this crucial aspect. We'll explore some valuable tips for designing contact forms that truly work and highlight some often underestimated mistakes that can have significant repercussions.
 
 ## Tips for Designing Effective Contact Forms
 
@@ -467,12 +467,12 @@ If your contact form integrates with other tools (e.g., CRM, email marketing), i
 
 ## Conclusion
 
-From the basics of contact forms to their role as the friendly face of communication on websites, we've covered some ground. These simple forms are like the "knock-knock" of the digital world, giving users an easy way to say hello.
+From the basics of contact forms to their role as the friendly face of communication on websites, we've covered some ground. **These simple forms are like the "knock-knock" of the digital world, giving users an easy way to say hello.**
 
-But guess what? Contact forms are not just about saying hi; they're like secret agents for generating leads. They help businesses catch those interested folks and turn them into loyal customers. Plus, the perks are not just one-sided – users get an easy way to ask questions and share their thoughts.
+But guess what? Contact forms are not just about saying hi; they're like [secret agents for generating leads](/blog/tips-tricks-to-get-the-most-out-of-your-leads-on-formester/). They help businesses catch those interested folks and turn them into loyal customers. Plus, the perks are not just one-sided – users get an easy way to ask questions and share their thoughts.
 
 Moreover, we've also covered why they're the preferred communication method, and how to create them effortlessly using Formester. But there's more to the story.
 
 Finally we've shared some golden tips for crafting forms that truly work. So, why wait? Dive into Formester and let your contact forms do the talking, the connecting, and the growing.
 
-Ready to make those digital conversations count? Explore Formester now by signing up for free!
+Ready to make those digital conversations count? [Explore Formester now by signing up for free!](https://app.formester.com/users/sign_up)
