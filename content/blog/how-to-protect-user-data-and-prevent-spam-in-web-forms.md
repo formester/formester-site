@@ -55,7 +55,7 @@ As you're processing this oddity, something even more alarming occurs – a floo
 
 If you've faced this scenario, you don't need to wait for confirmation – it's evident that you've fallen prey to spam! 
 
-And just like the KGB, spam doesn't wait for anyone!
+**And just like the KGB, spam doesn't wait for anyone!**
 
 However, there's a notable distinction between KGB and spam: While the KGB might be unstoppable, spam can indeed be thwarted! 
 
