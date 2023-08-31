@@ -368,7 +368,7 @@ You can tie-up with [third-party survey distributors](https://www.checkmarket.co
 
 The concept is [similar to affiliate marketing](https://www.bigcommerce.com/articles/ecommerce/affiliate-marketing/), except that they're featuring your surveys, instead of a product or website of yours.
 
-Popular websites can prove to be an incredible source of response gathering and also bring valuable traction to your website.
+Popular websites can prove to be an incredible source of response gathering and also bring valuable [traction to your website](https://respona.com/blog/increase-organic-traffic/).
 
 ### 4. Social Media Platforms
 
