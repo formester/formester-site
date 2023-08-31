@@ -35,6 +35,8 @@ But wait, there's more! Let's talk about lead generation – the heartbeat of an
 
 Wouldn't it be awesome to offer your users a simple and smooth way to get in touch with you? 
 
+![The Office reference: And while it might not be possible for everyone to have the best solution of Pam, saying - "Dunder-Mifflin, this is Pam. How may I help you?"; There's no need to fret. The good news is that the world hasn't run out of solutions, either. (Just probably not as dazzling as the former ;))](/img/contact-forms_meme.gif "It might not be possible for everyone to have such a dazzling solution; there are still other options that remain!")
+
 And while it might not be possible for everyone to have the best solution of Pam, saying - "Dunder-Mifflin, this is Pam. How may I help you?"; There's no need to fret. 
 
 The good news is that the world hasn't run out of solutions, either. (Just probably not as dazzling as the former ;))
