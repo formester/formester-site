@@ -206,12 +206,16 @@ If you're looking for a powerhouse form builder, Hulk Form Builder might be your
 
 #### Unique Features
 
+![Infographic showing: Unique Features Hulk Form Builder Offers: 1. Versatility 2. Engagement Elements 3. Easy Integration 4. Analytics and Reporting](/img/unique-features-hulk-form-builder-offers.png "Unique Features Hulk Form Builder Offers")
+
 * **Versatility:** Hulk Form Builder shines with its multipurpose capabilities, ranging from interactive quizzes and polls to lead generation forms.
 * **Engagement Elements:** With interactive elements like quizzes and polls, this plugin promotes user engagement and data collection simultaneously.
 * **Easy Integration:** Seamlessly integrate with third-party tools to enhance functionality and extract maximum value from your forms.
 * **Analytics and Reporting:** Keep track of form performance with built-in analytics and reporting features.
 
 #### Specially Used for 
+
+![Infographic showing: Ideal Use-cases: Hulk Form Builder - Engaging Experiences: 1. Quizzes 2. Polls 3. Surveys](/img/ideal-use-cases_-hulk-form-builder-engaging-experiences.png "Ideal Use-cases: Hulk Form Builder - Engaging Experiences:")
 
 Hulk Form Builder is perfect for businesses looking to create engaging experiences through quizzes, polls, and surveys, making it an excellent choice for gathering feedback and insights.
 
@@ -234,12 +238,16 @@ Acerill Form Builder rounds up our top 5 with its focus on simplicity and effect
 
 #### Unique Features
 
+![Infographic showing: Unique Features Acerill Form Builder Offers: 1. Simplicity and Efficiency 2. Integration and Data Management 3. Essential Form Elements 4. Real-Time Notifications](/img/unique-features-acerill-form-builder-offers.png "Unique Features Acerill Form Builder Offers")
+
 * **Simplicity and Efficiency:** Acerill Form Builder stands out with its user-friendly interface and quick form setup, making it an ideal choice for those prioritizing efficiency.
 * **Integration and Data Management:** Seamlessly integrate with email marketing tools and CRMs, ensuring collected data is used effectively.
 * **Essential Form Elements:** This plugin provides essential form elements for capturing crucial customer information, promoting efficient lead generation.
 * **Real-Time Notifications:** Receive real-time notifications to promptly follow up with leads and enhance customer interactions.
 
 #### Specially Used for
+
+![Infographic showing: Ideal Use-cases: Acerill Form Builder - Swift Customer Data Collection: 1. Lead - generation Forms 2. Data-collection Forms](/img/ideal-use-cases_-acerill-form-builder-swift-customer-data-collection.png "Ideal Use-cases: Acerill Form Builder - Swift Customer Data Collection")
 
 Acerill Form Builder is best suited for merchants seeking to swiftly gather essential customer information, making it a great fit for lead generation and basic data collection.
 
@@ -263,12 +271,16 @@ Additionally, Acerill Form Builder offers 3 paid plans, with additional upgrades
 
 #### Unique Features
 
+![Infographic showing: Unique Features Form Builder by Arctic Grey Offers: 1. Advanced Customization 2. Conditional Logic 3. Multi-Page Forms 4. Integration and Security](/img/unique-features-form-builder-by-arctic-grey-offers.png "Unique Features Form Builder by Arctic Grey Offers")
+
 * **Advanced Customization:** Arctic Grey's plugin excels in providing extensive customization options, empowering you to design forms that match your store's aesthetics.
 * **Conditional Logic:** Implement dynamic interactions with users by using conditional logic to display or hide form fields based on previous selections.
 * **Multi-Page Forms:** For complex data collection, Form Builder by Arctic Grey supports multi-page forms to enhance user experience.
 * **Integration and Security:** Integrate seamlessly with popular email marketing services while ensuring GDPR-compliant data handling.
 
 #### Specially Used for
+
+![Infographic showing: Ideal Use-cases: Form Builder by Arctic Grey - Intricate Form Designs: 1. Order Customization Forms 2. Product Personalization based Forms 3. Detailed Customer Feedback Forms](/img/ideal-use-cases_-form-builder-by-arctic-grey-intricate-form-designs.png "Ideal Use-cases: Form Builder by Arctic Grey - Intricate Form Designs")
 
 This plugin suits merchants seeking intricate form designs, especially for scenarios involving order customization, product personalization, and detailed customer feedback.
 
