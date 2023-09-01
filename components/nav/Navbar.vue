@@ -455,6 +455,12 @@ a.nuxt-link-exact-active {
     box-shadow: none;
     grid-template-columns: repeat(2, 1fr);
     padding: 0;
+    pointer-events: none;
+  }
+
+  .nav-item.dropdown:hover .dropdown-menu {
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 0 !important;
   }
 
   .dropdown-item {
@@ -491,6 +497,10 @@ a.nuxt-link-exact-active {
 
 @media screen and (max-width: 640px) {
   .dropdown-menu {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-item.dropdown:hover .dropdown-menu {
     grid-template-columns: 1fr;
   }
 }
