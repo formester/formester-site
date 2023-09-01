@@ -30,11 +30,6 @@
               class="img-fluid hero__image"
               style="z-index: 2"
             />
-            <nuxt-img
-              src="/features/brand-kit/blob.png"
-              alt=""
-              class="img-fluid blob"
-            />
           </div>
         </div>
       </div>
@@ -432,13 +427,6 @@ export default {
 }
 
 .hero__image {
-  height: 100%;
-}
-
-.blob {
-  position: absolute;
-  right: 0;
-  top: 0;
   height: 100%;
 }
 
