@@ -456,8 +456,11 @@ a.nuxt-link-exact-active {
   }
 
   .dropdown-menu {
-    border: none;
-    display: block;
+    display: grid;
+    position: relative;
+    box-shadow: none;
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 0;
   }
 }
 
@@ -474,17 +477,8 @@ a.nuxt-link-exact-active {
   }
 }
 
-@media screen and (max-width: 992px) {
-  .nav-item.dropdown:hover .dropdown-menu {
-    position: relative;
-    box-shadow: none;
-    grid-template-columns: repeat(2, 1fr);
-    padding-inline: 0;
-  }
-}
-
 @media screen and (max-width: 640px) {
-  .nav-item.dropdown:hover .dropdown-menu {
+  .dropdown-menu {
     grid-template-columns: 1fr;
   }
 }
