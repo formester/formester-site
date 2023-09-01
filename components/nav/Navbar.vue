@@ -42,237 +42,217 @@
               <HoverSvg />
             </NuxtLink>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <div>
-                <li>
-                  <NuxtLink
-                    class="dropdown-item d-flex align-items-center"
-                    to="/features/html-form-backend/"
-                    @click="collapseNav"
-                  >
-                    <nuxt-img
-                      src="/nav-dropdown/html-form-backend.png"
-                      height="32"
-                      width="32"
-                    />
-                    <div class="d-flex flex-column ms-3">
-                      <span class="dropdown-item__title"
-                        >HTML Form Backend</span
-                      >
-                      <span class="dropdown-item__desc"
-                        >Simplify form integration</span
-                      >
-                    </div>
-                  </NuxtLink>
-                </li>
-                <li class="mt-2">
-                  <NuxtLink
-                    class="dropdown-item d-flex align-items-center"
-                    to="/features/auto-responder/"
-                    @click="collapseNav"
-                  >
-                    <nuxt-img
-                      src="/nav-dropdown/auto-responders.png"
-                      height="32"
-                      width="32"
-                    />
-                    <div class="d-flex flex-column ms-3">
-                      <span class="dropdown-item__title">Auto Responder</span>
-                      <span class="dropdown-item__desc"
-                        >Set up automated responses</span
-                      >
-                    </div>
-                  </NuxtLink>
-                </li>
-                <li class="mt-2">
-                  <NuxtLink
-                    class="dropdown-item d-flex align-items-center"
-                    to="/features/spam-protection/"
-                    @click="collapseNav"
-                  >
-                    <nuxt-img
-                      src="/nav-dropdown/spam-protection.png"
-                      height="32"
-                      width="32"
-                    />
-                    <div class="d-flex flex-column ms-3">
-                      <span class="dropdown-item__title">Spam Protection</span>
-                      <span class="dropdown-item__desc"
-                        >Protect sensitive data</span
-                      >
-                    </div>
-                  </NuxtLink>
-                </li>
-              </div>
-              <div class="ms-5">
-                <li>
-                  <NuxtLink
-                    class="dropdown-item d-flex align-items-center"
-                    to="/features/powerful-analytics/"
-                    @click="collapseNav"
-                  >
-                    <nuxt-img
-                      src="/nav-dropdown/powerful-analytics.png"
-                      height="32"
-                      width="32"
-                    />
-                    <div class="d-flex flex-column ms-3">
-                      <span class="dropdown-item__title"
-                        >Powerful Analytics</span
-                      >
-                      <span class="dropdown-item__desc"
-                        >Get Insights of Engagements</span
-                      >
-                    </div>
-                  </NuxtLink>
-                </li>
-                <li class="mt-2">
-                  <NuxtLink
-                    class="dropdown-item d-flex align-items-center"
-                    to="/features/conditional-logic/"
-                    @click="collapseNav"
-                  >
-                    <nuxt-img
-                      src="/nav-dropdown/advanced-conditional-logic.png"
-                      height="32"
-                      width="32"
-                    />
-                    <div class="d-flex flex-column ms-3">
-                      <span class="dropdown-item__title"
-                        >Conditional Logic</span
-                      >
-                      <span class="dropdown-item__desc"
-                        >Create intelligent forms</span
-                      >
-                    </div>
-                  </NuxtLink>
-                </li>
-                <li class="mt-2">
-                  <NuxtLink
-                    class="dropdown-item d-flex align-items-center"
-                    to="/features/online-payment/"
-                    @click="collapseNav"
-                  >
-                    <nuxt-img
-                      src="/nav-dropdown/collect-online-payments.png"
-                      height="32"
-                      width="32"
-                    />
-                    <div class="d-flex flex-column ms-3">
-                      <span class="dropdown-item__title">Online Payments</span>
-                      <span class="dropdown-item__desc"
-                        >Start collecting payments</span
-                      >
-                    </div>
-                  </NuxtLink>
-                </li>
-              </div>
-              <div class="ms-5">
-                <li>
-                  <NuxtLink
-                    class="dropdown-item d-flex align-items-center"
-                    to="/features/digital-signature/"
-                    @click="collapseNav"
-                  >
-                    <nuxt-img
-                      src="/nav-dropdown/digital-signature.png"
-                      height="32"
-                      width="32"
-                    />
-                    <div class="d-flex flex-column ms-3">
-                      <span class="dropdown-item__title"
-                        >Digital Signature</span
-                      >
-                      <span class="dropdown-item__desc"
-                        >Incorporate e-signatures</span
-                      >
-                    </div>
-                  </NuxtLink>
-                </li>
-                <li class="mt-2">
-                  <NuxtLink
-                    class="dropdown-item d-flex align-items-center"
-                    to="/features/branding-kit/"
-                    @click="collapseNav"
-                  >
-                    <nuxt-img
-                      src="/nav-dropdown/brand-kit.png"
-                      height="32"
-                      width="32"
-                    />
-                    <div class="d-flex flex-column ms-3">
-                      <span class="dropdown-item__title">Brand Kit</span>
-                      <span class="dropdown-item__desc"
-                        >Elevate your brand identity</span
-                      >
-                    </div>
-                  </NuxtLink>
-                </li>
-                <li class="mt-2">
-                  <NuxtLink
-                    class="dropdown-item d-flex align-items-center"
-                    to="/features/information-recall/"
-                    @click="collapseNav"
-                  >
-                    <nuxt-img
-                      src="/nav-dropdown/information-recall.png"
-                      height="32"
-                      width="32"
-                    />
-                    <div class="d-flex flex-column ms-3">
-                      <span class="dropdown-item__title"
-                        >Information Recall</span
-                      >
-                      <span class="dropdown-item__desc"
-                        >Referencing previous answers</span
-                      >
-                    </div>
-                  </NuxtLink>
-                </li>
-              </div>
-              <div class="ms-5">
-                <li>
-                  <NuxtLink
-                    class="dropdown-item d-flex align-items-center"
-                    to="/features/digital-signature/"
-                    @click="collapseNav"
-                  >
-                    <nuxt-img
-                      src="/nav-dropdown/calculation-fields.png"
-                      height="32"
-                      width="32"
-                    />
-                    <div class="d-flex flex-column ms-3">
-                      <span class="dropdown-item__title"
-                        >Calculation Fields</span
-                      >
-                      <span class="dropdown-item__desc"
-                        >Forms that perform calculations</span
-                      >
-                    </div>
-                  </NuxtLink>
-                </li>
-                <li class="mt-2">
-                  <NuxtLink
-                    class="dropdown-item d-flex align-items-center"
-                    to="/features/branding-kit/"
-                    @click="collapseNav"
-                  >
-                    <nuxt-img
-                      src="/nav-dropdown/multi-user-collaboration.png"
-                      height="32"
-                      width="32"
-                    />
-                    <div class="d-flex flex-column ms-3">
-                      <span class="dropdown-item__title"
-                        >Multi-User Collaboration</span
-                      >
-                      <span class="dropdown-item__desc"
-                        >Collaborate with team members
-                      </span>
-                    </div>
-                  </NuxtLink>
-                </li>
-              </div>
+              <li>
+                <NuxtLink
+                  class="dropdown-item d-flex align-items-center"
+                  to="/features/html-form-backend/"
+                  @click="collapseNav"
+                >
+                  <nuxt-img
+                    src="/nav-dropdown/html-form-backend.png"
+                    height="32"
+                    width="32"
+                  />
+                  <div class="d-flex flex-column ms-3">
+                    <span class="dropdown-item__title">HTML Form Backend</span>
+                    <span class="dropdown-item__desc"
+                      >Simplify form integration</span
+                    >
+                  </div>
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink
+                  class="dropdown-item d-flex align-items-center"
+                  to="/features/auto-responder/"
+                  @click="collapseNav"
+                >
+                  <nuxt-img
+                    src="/nav-dropdown/auto-responders.png"
+                    height="32"
+                    width="32"
+                  />
+                  <div class="d-flex flex-column ms-3">
+                    <span class="dropdown-item__title">Auto Responder</span>
+                    <span class="dropdown-item__desc"
+                      >Set up automated responses</span
+                    >
+                  </div>
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink
+                  class="dropdown-item d-flex align-items-center"
+                  to="/features/spam-protection/"
+                  @click="collapseNav"
+                >
+                  <nuxt-img
+                    src="/nav-dropdown/spam-protection.png"
+                    height="32"
+                    width="32"
+                  />
+                  <div class="d-flex flex-column ms-3">
+                    <span class="dropdown-item__title">Spam Protection</span>
+                    <span class="dropdown-item__desc"
+                      >Protect sensitive data</span
+                    >
+                  </div>
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink
+                  class="dropdown-item d-flex align-items-center"
+                  to="/features/powerful-analytics/"
+                  @click="collapseNav"
+                >
+                  <nuxt-img
+                    src="/nav-dropdown/powerful-analytics.png"
+                    height="32"
+                    width="32"
+                  />
+                  <div class="d-flex flex-column ms-3">
+                    <span class="dropdown-item__title">Powerful Analytics</span>
+                    <span class="dropdown-item__desc"
+                      >Get Insights of Engagements</span
+                    >
+                  </div>
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink
+                  class="dropdown-item d-flex align-items-center"
+                  to="/features/conditional-logic/"
+                  @click="collapseNav"
+                >
+                  <nuxt-img
+                    src="/nav-dropdown/advanced-conditional-logic.png"
+                    height="32"
+                    width="32"
+                  />
+                  <div class="d-flex flex-column ms-3">
+                    <span class="dropdown-item__title">Conditional Logic</span>
+                    <span class="dropdown-item__desc"
+                      >Create intelligent forms</span
+                    >
+                  </div>
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink
+                  class="dropdown-item d-flex align-items-center"
+                  to="/features/online-payment/"
+                  @click="collapseNav"
+                >
+                  <nuxt-img
+                    src="/nav-dropdown/collect-online-payments.png"
+                    height="32"
+                    width="32"
+                  />
+                  <div class="d-flex flex-column ms-3">
+                    <span class="dropdown-item__title">Online Payments</span>
+                    <span class="dropdown-item__desc"
+                      >Start collecting payments</span
+                    >
+                  </div>
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink
+                  class="dropdown-item d-flex align-items-center"
+                  to="/features/digital-signature/"
+                  @click="collapseNav"
+                >
+                  <nuxt-img
+                    src="/nav-dropdown/digital-signature.png"
+                    height="32"
+                    width="32"
+                  />
+                  <div class="d-flex flex-column ms-3">
+                    <span class="dropdown-item__title">Digital Signature</span>
+                    <span class="dropdown-item__desc"
+                      >Incorporate e-signatures</span
+                    >
+                  </div>
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink
+                  class="dropdown-item d-flex align-items-center"
+                  to="/features/branding-kit/"
+                  @click="collapseNav"
+                >
+                  <nuxt-img
+                    src="/nav-dropdown/brand-kit.png"
+                    height="32"
+                    width="32"
+                  />
+                  <div class="d-flex flex-column ms-3">
+                    <span class="dropdown-item__title">Brand Kit</span>
+                    <span class="dropdown-item__desc"
+                      >Elevate your brand identity</span
+                    >
+                  </div>
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink
+                  class="dropdown-item d-flex align-items-center"
+                  to="/features/information-recall/"
+                  @click="collapseNav"
+                >
+                  <nuxt-img
+                    src="/nav-dropdown/information-recall.png"
+                    height="32"
+                    width="32"
+                  />
+                  <div class="d-flex flex-column ms-3">
+                    <span class="dropdown-item__title">Information Recall</span>
+                    <span class="dropdown-item__desc"
+                      >Referencing previous answers</span
+                    >
+                  </div>
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink
+                  class="dropdown-item d-flex align-items-center"
+                  to="/features/digital-signature/"
+                  @click="collapseNav"
+                >
+                  <nuxt-img
+                    src="/nav-dropdown/calculation-fields.png"
+                    height="32"
+                    width="32"
+                  />
+                  <div class="d-flex flex-column ms-3">
+                    <span class="dropdown-item__title">Calculation Fields</span>
+                    <span class="dropdown-item__desc"
+                      >Forms that perform calculations</span
+                    >
+                  </div>
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink
+                  class="dropdown-item d-flex align-items-center"
+                  to="/features/branding-kit/"
+                  @click="collapseNav"
+                >
+                  <nuxt-img
+                    src="/nav-dropdown/multi-user-collaboration.png"
+                    height="32"
+                    width="32"
+                  />
+                  <div class="d-flex flex-column ms-3">
+                    <span class="dropdown-item__title"
+                      >Multi-User Collaboration</span
+                    >
+                    <span class="dropdown-item__desc"
+                      >Collaborate with team members
+                    </span>
+                  </div>
+                </NuxtLink>
+              </li>
             </ul>
           </li>
           <li class="nav-item me-2" @click="collapseNav">
@@ -376,10 +356,6 @@ a.nuxt-link-exact-active {
 }
 
 .dropdown-menu {
-  /* remove the below property */
-  /* display: flex;
-  justify-content: center; */
-  /*  */
   padding-block: 16px;
   border: none;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.05);
@@ -389,8 +365,9 @@ a.nuxt-link-exact-active {
 }
 
 .nav-item.dropdown:hover .dropdown-menu {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-inline: 9vw;
   z-index: 9999;
 }
 
@@ -481,6 +458,34 @@ a.nuxt-link-exact-active {
   .dropdown-menu {
     border: none;
     display: block;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    padding-inline: 3vw;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    grid-template-columns: repeat(3, 1fr);
+    padding-inline: 3vw;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    position: relative;
+    box-shadow: none;
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    grid-template-columns: 1fr;
   }
 }
 </style>
