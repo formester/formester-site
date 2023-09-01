@@ -50,8 +50,7 @@
                 >
                   <nuxt-img
                     src="/nav-dropdown/html-form-backend.png"
-                    height="32"
-                    width="32"
+                    class="dropdown-item__img"
                   />
                   <div class="d-flex flex-column ms-3">
                     <span class="dropdown-item__title">HTML Form Backend</span>
@@ -69,8 +68,7 @@
                 >
                   <nuxt-img
                     src="/nav-dropdown/auto-responders.png"
-                    height="32"
-                    width="32"
+                    class="dropdown-item__img"
                   />
                   <div class="d-flex flex-column ms-3">
                     <span class="dropdown-item__title">Auto Responder</span>
@@ -88,8 +86,7 @@
                 >
                   <nuxt-img
                     src="/nav-dropdown/spam-protection.png"
-                    height="32"
-                    width="32"
+                    class="dropdown-item__img"
                   />
                   <div class="d-flex flex-column ms-3">
                     <span class="dropdown-item__title">Spam Protection</span>
@@ -107,8 +104,7 @@
                 >
                   <nuxt-img
                     src="/nav-dropdown/powerful-analytics.png"
-                    height="32"
-                    width="32"
+                    class="dropdown-item__img"
                   />
                   <div class="d-flex flex-column ms-3">
                     <span class="dropdown-item__title">Powerful Analytics</span>
@@ -126,8 +122,7 @@
                 >
                   <nuxt-img
                     src="/nav-dropdown/advanced-conditional-logic.png"
-                    height="32"
-                    width="32"
+                    class="dropdown-item__img"
                   />
                   <div class="d-flex flex-column ms-3">
                     <span class="dropdown-item__title">Conditional Logic</span>
@@ -145,8 +140,7 @@
                 >
                   <nuxt-img
                     src="/nav-dropdown/collect-online-payments.png"
-                    height="32"
-                    width="32"
+                    class="dropdown-item__img"
                   />
                   <div class="d-flex flex-column ms-3">
                     <span class="dropdown-item__title">Online Payments</span>
@@ -164,8 +158,7 @@
                 >
                   <nuxt-img
                     src="/nav-dropdown/digital-signature.png"
-                    height="32"
-                    width="32"
+                    class="dropdown-item__img"
                   />
                   <div class="d-flex flex-column ms-3">
                     <span class="dropdown-item__title">Digital Signature</span>
@@ -183,8 +176,7 @@
                 >
                   <nuxt-img
                     src="/nav-dropdown/brand-kit.png"
-                    height="32"
-                    width="32"
+                    class="dropdown-item__img"
                   />
                   <div class="d-flex flex-column ms-3">
                     <span class="dropdown-item__title">Brand Kit</span>
@@ -202,8 +194,7 @@
                 >
                   <nuxt-img
                     src="/nav-dropdown/information-recall.png"
-                    height="32"
-                    width="32"
+                    class="dropdown-item__img"
                   />
                   <div class="d-flex flex-column ms-3">
                     <span class="dropdown-item__title">Information Recall</span>
@@ -221,8 +212,7 @@
                 >
                   <nuxt-img
                     src="/nav-dropdown/calculation-fields.png"
-                    height="32"
-                    width="32"
+                    class="dropdown-item__img"
                   />
                   <div class="d-flex flex-column ms-3">
                     <span class="dropdown-item__title">Calculation Fields</span>
@@ -240,8 +230,7 @@
                 >
                   <nuxt-img
                     src="/nav-dropdown/multi-user-collaboration.png"
-                    height="32"
-                    width="32"
+                    class="dropdown-item__img"
                   />
                   <div class="d-flex flex-column ms-3">
                     <span class="dropdown-item__title"
@@ -397,6 +386,11 @@ a.nuxt-link-exact-active {
   line-height: 22px;
 }
 
+.dropdown-item__img {
+  height: 32px;
+  width: 32px;
+}
+
 .nav-item {
   position: relative;
 }
@@ -456,8 +450,29 @@ a.nuxt-link-exact-active {
   }
 
   .dropdown-menu {
-    border: none;
-    display: block;
+    display: grid;
+    position: relative;
+    box-shadow: none;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+  }
+
+  .dropdown-item {
+    padding: 8px;
+  }
+
+  .dropdown-menu .dropdown-item__title {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .dropdown-menu .dropdown-item__desc {
+    display: none;
+  }
+
+  .dropdown-menu .dropdown-item__img {
+    height: 24px;
+    width: 24px;
   }
 }
 
@@ -474,17 +489,8 @@ a.nuxt-link-exact-active {
   }
 }
 
-@media screen and (max-width: 992px) {
-  .nav-item.dropdown:hover .dropdown-menu {
-    position: relative;
-    box-shadow: none;
-    grid-template-columns: repeat(2, 1fr);
-    padding-inline: 0;
-  }
-}
-
 @media screen and (max-width: 640px) {
-  .nav-item.dropdown:hover .dropdown-menu {
+  .dropdown-menu {
     grid-template-columns: 1fr;
   }
 }
