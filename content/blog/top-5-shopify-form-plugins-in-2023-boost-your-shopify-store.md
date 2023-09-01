@@ -302,6 +302,8 @@ These top 5 Shopify plugins redefine the way you engage with your customers. Fro
 
 Integrating the Formester app with your Shopify store or website is a straightforward process. Follow these steps to seamlessly incorporate powerful web forms into your platform:
 
+![Infographic showing: Steps to Integrate Formester App with your Shopify Store/Website: Step 1: Log in to Your Shopify Account Step 2: Navigate to the Shopify App Store Step 3: Search for Formester Step 4: Install the App Step 5: Connect Formester to Your Store Step 6: Customize and Create Forms Step 7: Embed Forms on Your Website Step 8: Test the Integration](/img/steps-to-integrate-formester-app-with-your-shopify-storewebsite-1.png "Steps to Integrate Formester App with your Shopify Store/Website")
+
 ### Step 1: Log in to Your Shopify Account
 
 Access your [Shopify admin panel](https://accounts.shopify.com/) using your credentials.
@@ -335,6 +337,8 @@ After creating your forms, you'll be provided with an embed code or a shortcode.
 Preview and test the forms on your website to ensure they function as intended. Make sure the fields, submission process, and notifications are working correctly.
 
 ## Additional Steps
+
+![Infographic showing: Additional Steps: Step 9: Optimize and Monitor Step 10: Manage Integrations  Step 11: Provide Support and Maintenance Step 12: Promote Your Forms](/img/steps-to-integrate-formester-app-with-your-shopify-storewebsite-2.png "Additional Steps")
 
 ### Step 9: Optimize and Monitor
 
