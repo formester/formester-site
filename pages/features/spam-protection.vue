@@ -70,7 +70,7 @@ export default {
         url: 'https://formester.com/features/spam-protection/',
         title: 'Spam Protection | Spam Protection in Web Form - Formester',
         description:
-          'Looking for a spam protection solution for your web forms? Protect your web forms from spam with Formester. Say goodbye to unwanted submissions and improve your user experience. Try it now!',
+          'Spam Protection for your Web Forms - Formester | Protect your web forms from spam | Block unwanted submissions & Improve user experience',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with spam-protection page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with spam-protection page image alt
@@ -100,7 +100,7 @@ export default {
           '@id': 'https://acornglobus.com',
           name: 'Spam Protection | Spam Protection in Web Form - Formester',
           description:
-            "Looking for a spam protection solution for your web forms? Protect your web forms from spam with Formester. Say goodbye to unwanted submissions and improve your user experience. Try it now!",
+            "Spam Protection for your Web Forms - Formester | Protect your web forms from spam | Block unwanted submissions & Improve user experience",
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
           address: {

@@ -2,7 +2,7 @@ const type = 'website'
 const url = 'https://formester.com'
 const title = 'No-code Survey Form and Quiz Builder | Formester'
 const description =
-  'Build responsive forms using drag and drop builder. The free plan is powerful to get you started. Integrate with 3rd party application and review performance with analytics.'
+  'Build online forms using a No-Code, Drag-and-Drop Form Builder - Starts Free! Advanced Features, Third-Party Integrations & Robust Analytics!'
 const mainImage = 'https://formester.com/formester-form-builder-background.png'
 const mainImageAlt = 'Form builder showing drag and drop functionality in Formester'
 const keywords = [

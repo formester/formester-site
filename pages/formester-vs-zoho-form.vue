@@ -398,7 +398,7 @@ export default {
         url: 'https://formester.com/formester-vs-zoho-form/',
         title: 'Formester vs Zoho Forms | Zoho Forms Alternative - Formester',
         description:
-          'Powerful Alternative to Zoho Forms. Try Formester for custom forms, data collection, actionable insights, affordable prices & more! Start by signing-up for free!',
+          'Powerful Alternative to Zoho Forms - Formester for Customizable Forms & Surveys, Data Collection, Insights, Affordable prices! Sign-up for free!',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with formester vs zoho form page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs zoho form page image alt
@@ -477,7 +477,7 @@ export default {
       '@type': 'Corporation',
       name: 'Formester vs Zoho Forms | Zoho Forms Alternative - Formester',
       description:
-        "Powerful Alternative to Zoho Forms. Try Formester for custom forms, data collection, actionable insights, affordable prices & more! Start by signing-up for free!",
+        "Powerful Alternative to Zoho Forms - Formester for Customizable Forms & Surveys, Data Collection, Insights, Affordable prices! Sign-up for free!",
       logo: 'https://formester.com/logo.png',
       url: 'https://formester.com',
       address: {

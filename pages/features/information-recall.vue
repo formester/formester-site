@@ -108,7 +108,7 @@ export default {
         url: 'https://formester.com/features/information-recall/',
         title: 'Information Recall - Formester',
         description:
-          "Supercharge your forms by creating engaging experiences with Formester's Information Recall feature. Try Formester and engage your subscribers today! Sign up now.",
+          "Create personalized and interactive form & survey experiences - Formester's Information Recall | Answer recall, Dynamic variables & more!",
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with auto-responder page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
@@ -171,7 +171,7 @@ export default {
           '@id': 'https://acornglobus.com',
           name: 'Information - Formester',
           description:
-            "Supercharge your forms by creating engaging experiences with Formester's Information Recall feature. Try Formester and engage your subscribers today! Sign up now.",
+            "Create personalized and interactive form & survey experiences - Formester's Information Recall | Answer recall, Dynamic variables & more!",
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
           address: {

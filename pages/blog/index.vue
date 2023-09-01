@@ -58,7 +58,7 @@ export default {
         url: 'https://formester.com/blog/',
         title: 'Latest form Builder Software in 2023 | Best Online Form Builder to Use in 2023 - Formester',
         description:
-          'Discover the Latest Form Builder Software in 2023 with Formester. Get the Best Online Form Builder to Use in 2023, with easy to use features and advanced customization options. Read more now!',
+          'Best Online, No-Code Form Builder Software in 2023 - Formester\'s Blog Resource | Discover trending content related to all things form-building.',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with blog page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with blog page image alt
@@ -88,7 +88,7 @@ export default {
           '@id': 'https://acornglobus.com',
           name: 'Formester',
           description:
-            "Sign up now for the best No Code Form Builder! Create stunning HTML Forms with Formester's easy-to-use Online HTML Form Builder. Start building today!",
+            "Best Online, No-Code Form Builder Software in 2023 - Formester's Blog Resource | Discover trending content related to all things form-building.",
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
           address: {

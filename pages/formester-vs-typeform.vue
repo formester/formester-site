@@ -377,7 +377,7 @@ export default {
                 type: "website",
                 url: "https://formester.com/formester-vs-typeform/",
                 title: "Typeform Alternative | Formester vs Typeform - Formester",
-                description: "Powerful Alternative to Typeform. With custom forms, data collection, actionable insights and affordable prices, make the most out of what you pay for a form builder.",
+                description: "Powerful Alternative to Typeform - Try Formester for Online, No-Code Forms & Surveys! Advanced Features & Integrations | Sign-up for Free!",
                 mainImage: "https://formester.com/formester-form-builder-background.png",
                 mainImageAlt: "Form builder showing drag and drop functionality",
                 keywords: [
@@ -455,7 +455,7 @@ export default {
       '@type': 'Corporation',
       name: 'Typeform Alternative | Formester vs Typeform - Formester',
       description:
-        "Powerful Alternative to Typeform. With custom forms, data collection, actionable insights and affordable prices, make the most out of what you pay for a form builder.",
+        "Powerful Alternative to Typeform - Try Formester for Online, No-Code Forms & Surveys! Advanced Features & Integrations | Sign-up for Free!",
       logo: 'https://formester.com/logo.png',
       url: 'https://formester.com',
       address: {
