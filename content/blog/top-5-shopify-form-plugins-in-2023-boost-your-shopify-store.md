@@ -360,7 +360,9 @@ Formester's advanced and comprehensive feature-set, empowers your Shopify web fo
 
 With Formester, web forms become interactive, personalized, and efficient mechanisms that enhance user engagement and drive business success.
 
-Here are the key features of the Formester app can amplify the effectiveness of your Shopify web forms
+Here are the key features of the Formester app that can amplify the effectiveness of your Shopify web forms:
+
+![Infographic showing: Form-Building Features you get with the Formester App: 1. HTML Form Backend  2. Auto Responder  3. Spam Protection  4. Powerful Analytics  5. Conditional Logic  6. Online Payment  7. Digital Signature  8. Branding Kit  9. Information Recall  10. Calculation Fields  11. Collaboration](/img/form-building-features-you-get-with-the-formester-app.png "Form-Building Features you get with the Formester App")
 
 ### 1. HTML Form Backend
 
