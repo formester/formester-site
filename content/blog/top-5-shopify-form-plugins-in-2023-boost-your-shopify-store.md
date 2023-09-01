@@ -76,6 +76,8 @@ They are a versatile tool that empower you to interact with customers in meaning
 
 Your Shopify store can reap numerous benefits from the integration of web forms. Here's how:
 
+![Infographic showing: How can your Shopify Store/Website benefit from using web forms?: 1. Efficient Data Collection 2. Streamlined Communication 3. Lead Generation Tool 4. Enhanced Checkout Experience 5. Personalization Opportunities 6. Feedback and Surveys 7. Effortless Event Registration 8. Effective Returns and Refunds 9. Data-driven Decision Making 10. Integration Possibilities 11. Professional Appearance 12. Opt-in Opportunities](/img/website-benefit-from-using-web-forms_.png "How can your Shopify Store/Website benefit from using web forms?")
+
 ### 1. Efficient Data Collection
 
 Web forms provide a structured way to collect valuable data from your customers. Whether it's their contact information, preferences, or feedback, web forms ensure accurate and organized data gathering.
