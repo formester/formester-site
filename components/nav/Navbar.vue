@@ -353,13 +353,6 @@ a.nuxt-link-exact-active {
   right: 0;
 }
 
-.nav-item.dropdown:hover .dropdown-menu {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding-inline: 9vw;
-  z-index: 9999;
-}
-
 .dropdown-item {
   padding: 12px;
 }
@@ -427,6 +420,15 @@ a.nuxt-link-exact-active {
   opacity: 0;
 }
 
+@media (hover: hover) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-inline: 9vw;
+    z-index: 9999;
+  }
+}
+
 @media (max-width: 1199px) {
   .nav-link {
     font-size: 16px;
@@ -455,10 +457,17 @@ a.nuxt-link-exact-active {
     box-shadow: none;
     grid-template-columns: repeat(2, 1fr);
     padding: 0;
+    pointer-events: none;
   }
+
+  /* .nav-item.dropdown:hover .dropdown-menu {
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 0;
+  } */
 
   .dropdown-item {
     padding: 8px;
+    border: 1px solid red;
   }
 
   .dropdown-menu .dropdown-item__title {
@@ -493,5 +502,9 @@ a.nuxt-link-exact-active {
   .dropdown-menu {
     grid-template-columns: 1fr;
   }
+
+  /* .nav-item.dropdown:hover .dropdown-menu {
+    grid-template-columns: 1fr;
+  } */
 }
 </style>
