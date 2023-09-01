@@ -76,6 +76,8 @@ They are a versatile tool that empower you to interact with customers in meaning
 
 Your Shopify store can reap numerous benefits from the integration of web forms. Here's how:
 
+![Infographic showing: How can your Shopify Store/Website benefit from using web forms?: 1. Efficient Data Collection 2. Streamlined Communication 3. Lead Generation Tool 4. Enhanced Checkout Experience 5. Personalization Opportunities 6. Feedback and Surveys 7. Effortless Event Registration 8. Effective Returns and Refunds 9. Data-driven Decision Making 10. Integration Possibilities 11. Professional Appearance 12. Opt-in Opportunities](/img/website-benefit-from-using-web-forms_.png "How can your Shopify Store/Website benefit from using web forms?")
+
 ### 1. Efficient Data Collection
 
 Web forms provide a structured way to collect valuable data from your customers. Whether it's their contact information, preferences, or feedback, web forms ensure accurate and organized data gathering.
@@ -134,6 +136,8 @@ But worry not, we've got your back! 
 
 We present to you, a comprehensive, yet extensive list of the top 5 form builder plugins based on their unique use-cases, features, pricing and more!
 
+![Infographic showing: The Top 5 Web Form Builder Plugins For Your Shopify Store in 2023: 1. Formester 2. Form Builder + Custom Form by AiTrillion 3. Hulk Form Builder 4. Acerill Form Builder 5. Form Builder by Arctic Grey](/img/the-top-5-web-form-builder-plugins-for-your-shopify-store-in-2023.png "The Top 5 Web Form Builder Plugins For Your Shopify Store in 2023")
+
 Take the time to explore their offerings, considering your specific use-cases, and choose the one that aligns best with your store's requirements:
 
 ### 1. Formester
@@ -142,7 +146,9 @@ Leading the pack is [Formester – your all-in-one solution for crafting versati
 
 With its [drag-and-drop builder and powerful integrations](https://formester.com/), Formester is here to redefine your data collection journey, on a whole new level.
 
-#### Unique Features:
+#### Unique Features
+
+![Infographic showing: Unique Features Formester Offers: 1. Advanced Customization 2. Responsive Design 3. Integration Ecosystem 4. Regular Updates and Support](/img/unique-features-formester-offers-1-.png "Unique Features Formester Offers")
 
 * **Advanced Customization:** Formester boasts an intuitive drag-and-drop builder with diverse form elements, allowing you to create visually appealing forms that align perfectly with your store's branding.
 * **Responsive Design:** Ensure a seamless experience for mobile users with Formester's responsive form designs.
@@ -150,6 +156,8 @@ With its [drag-and-drop builder and powerful integrations](https://formester.com
 * **Regular Updates and Support:** Stay up-to-date with the latest features and benefit from dedicated customer support.
 
 #### Specially Used For
+
+![Infographic showing: Ideal Use-cases: Formester - Versatile & Dynamic Forms: 1. Contact Forms 2. Event Registrations 3. Payment Forms 4. Detailed Surveys](/img/ideal-use-cases_-formester-versatile-dynamic-forms.png "Ideal Use-cases: Formester - Versatile & Dynamic Forms")
 
 Ideal for businesses seeking versatility, Formester is a powerhouse for creating contact forms, surveys, event registrations, payment forms, and much more.
 
@@ -171,12 +179,16 @@ AiTrillion brings you a form builder that's all about customization. You can cre
 
 #### Unique Features
 
+![Infographic showing: Unique Features Form Builder + Custom Form by AiTrillion Offers: 1. AI-Driven Form Creation 2. Pre-Built Templates 3. Smart Data Management 4. Real-Time Analytics](/img/unique-features-form-builder-custom-form-by-aitrillion-offers.png "Unique Features Form Builder + Custom Form by AiTrillion Offers")
+
 * **AI-Driven Form Creation:** Ai Trillion's plugin employs AI to simplify form creation and optimization, making it ideal for users seeking a time-efficient solution.
 * **Pre-Built Templates:** Choose from a range of pre-designed templates tailored for various business needs, accelerating your form setup process.
 * **Smart Data Management:** The AI-driven system assists in organizing and segmenting collected data, streamlining your follow-up strategies.
 * **Real-Time Analytics:** Gain insights into form performance through real-time analytics and make data-driven improvements.
 
 #### Specially Used For
+
+![Infographic showing: Ideal Use-cases: Form Builder + Custom Form by AiTrillion - Branded Forms: 1. Subscription Forms 2. Feedback Surveys 3. User Registrations](/img/ideal-use-cases_-form-builder-custom-form-by-aitrillion-branded-forms.png "Ideal Use-cases: Form Builder + Custom Form by AiTrillion - Branded Forms")
 
 Perfect for businesses aiming to tailor their forms to specific branding needs, AiTrillion is great for subscription forms, feedback surveys, and user registrations.
 
@@ -194,12 +206,16 @@ If you're looking for a powerhouse form builder, Hulk Form Builder might be your
 
 #### Unique Features
 
+![Infographic showing: Unique Features Hulk Form Builder Offers: 1. Versatility 2. Engagement Elements 3. Easy Integration 4. Analytics and Reporting](/img/unique-features-hulk-form-builder-offers.png "Unique Features Hulk Form Builder Offers")
+
 * **Versatility:** Hulk Form Builder shines with its multipurpose capabilities, ranging from interactive quizzes and polls to lead generation forms.
 * **Engagement Elements:** With interactive elements like quizzes and polls, this plugin promotes user engagement and data collection simultaneously.
 * **Easy Integration:** Seamlessly integrate with third-party tools to enhance functionality and extract maximum value from your forms.
 * **Analytics and Reporting:** Keep track of form performance with built-in analytics and reporting features.
 
 #### Specially Used for 
+
+![Infographic showing: Ideal Use-cases: Hulk Form Builder - Engaging Experiences: 1. Quizzes 2. Polls 3. Surveys](/img/ideal-use-cases_-hulk-form-builder-engaging-experiences.png "Ideal Use-cases: Hulk Form Builder - Engaging Experiences:")
 
 Hulk Form Builder is perfect for businesses looking to create engaging experiences through quizzes, polls, and surveys, making it an excellent choice for gathering feedback and insights.
 
@@ -222,12 +238,16 @@ Acerill Form Builder rounds up our top 5 with its focus on simplicity and effect
 
 #### Unique Features
 
+![Infographic showing: Unique Features Acerill Form Builder Offers: 1. Simplicity and Efficiency 2. Integration and Data Management 3. Essential Form Elements 4. Real-Time Notifications](/img/unique-features-acerill-form-builder-offers.png "Unique Features Acerill Form Builder Offers")
+
 * **Simplicity and Efficiency:** Acerill Form Builder stands out with its user-friendly interface and quick form setup, making it an ideal choice for those prioritizing efficiency.
 * **Integration and Data Management:** Seamlessly integrate with email marketing tools and CRMs, ensuring collected data is used effectively.
 * **Essential Form Elements:** This plugin provides essential form elements for capturing crucial customer information, promoting efficient lead generation.
 * **Real-Time Notifications:** Receive real-time notifications to promptly follow up with leads and enhance customer interactions.
 
 #### Specially Used for
+
+![Infographic showing: Ideal Use-cases: Acerill Form Builder - Swift Customer Data Collection: 1. Lead - generation Forms 2. Data-collection Forms](/img/ideal-use-cases_-acerill-form-builder-swift-customer-data-collection.png "Ideal Use-cases: Acerill Form Builder - Swift Customer Data Collection")
 
 Acerill Form Builder is best suited for merchants seeking to swiftly gather essential customer information, making it a great fit for lead generation and basic data collection.
 
@@ -251,12 +271,16 @@ Additionally, Acerill Form Builder offers 3 paid plans, with additional upgrades
 
 #### Unique Features
 
+![Infographic showing: Unique Features Form Builder by Arctic Grey Offers: 1. Advanced Customization 2. Conditional Logic 3. Multi-Page Forms 4. Integration and Security](/img/unique-features-form-builder-by-arctic-grey-offers.png "Unique Features Form Builder by Arctic Grey Offers")
+
 * **Advanced Customization:** Arctic Grey's plugin excels in providing extensive customization options, empowering you to design forms that match your store's aesthetics.
 * **Conditional Logic:** Implement dynamic interactions with users by using conditional logic to display or hide form fields based on previous selections.
 * **Multi-Page Forms:** For complex data collection, Form Builder by Arctic Grey supports multi-page forms to enhance user experience.
 * **Integration and Security:** Integrate seamlessly with popular email marketing services while ensuring GDPR-compliant data handling.
 
 #### Specially Used for
+
+![Infographic showing: Ideal Use-cases: Form Builder by Arctic Grey - Intricate Form Designs: 1. Order Customization Forms 2. Product Personalization based Forms 3. Detailed Customer Feedback Forms](/img/ideal-use-cases_-form-builder-by-arctic-grey-intricate-form-designs.png "Ideal Use-cases: Form Builder by Arctic Grey - Intricate Form Designs")
 
 This plugin suits merchants seeking intricate form designs, especially for scenarios involving order customization, product personalization, and detailed customer feedback.
 
@@ -277,6 +301,8 @@ These top 5 Shopify plugins redefine the way you engage with your customers. Fro
 ## Steps to Integrate Formester App with your Shopify Store/Website
 
 Integrating the Formester app with your Shopify store or website is a straightforward process. Follow these steps to seamlessly incorporate powerful web forms into your platform:
+
+![Infographic showing: Steps to Integrate Formester App with your Shopify Store/Website: Step 1: Log in to Your Shopify Account Step 2: Navigate to the Shopify App Store Step 3: Search for Formester Step 4: Install the App Step 5: Connect Formester to Your Store Step 6: Customize and Create Forms Step 7: Embed Forms on Your Website Step 8: Test the Integration](/img/steps-to-integrate-formester-app-with-your-shopify-storewebsite-1.png "Steps to Integrate Formester App with your Shopify Store/Website")
 
 ### Step 1: Log in to Your Shopify Account
 
@@ -312,6 +338,8 @@ Preview and test the forms on your website to ensure they function as intended. 
 
 ## Additional Steps
 
+![Infographic showing: Additional Steps: Step 9: Optimize and Monitor Step 10: Manage Integrations  Step 11: Provide Support and Maintenance Step 12: Promote Your Forms](/img/steps-to-integrate-formester-app-with-your-shopify-storewebsite-2.png "Additional Steps")
+
 ### Step 9: Optimize and Monitor
 
 Regularly monitor form submissions and gather data. Use [Formester's reporting and analytics tools to gain insights into user interactions](https://formester.com/features/powerful-analytics/). This can help you refine your forms and improve user experience.
@@ -336,7 +364,9 @@ Formester's advanced and comprehensive feature-set, empowers your Shopify web fo
 
 With Formester, web forms become interactive, personalized, and efficient mechanisms that enhance user engagement and drive business success.
 
-Here are the key features of the Formester app can amplify the effectiveness of your Shopify web forms
+Here are the key features of the Formester app that can amplify the effectiveness of your Shopify web forms:
+
+![Infographic showing: Form-Building Features you get with the Formester App: 1. HTML Form Backend  2. Auto Responder  3. Spam Protection  4. Powerful Analytics  5. Conditional Logic  6. Online Payment  7. Digital Signature  8. Branding Kit  9. Information Recall  10. Calculation Fields  11. Collaboration](/img/form-building-features-you-get-with-the-formester-app.png "Form-Building Features you get with the Formester App")
 
 ### 1. HTML Form Backend
 
