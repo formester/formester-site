@@ -136,6 +136,8 @@ But worry not, we've got your back! 
 
 We present to you, a comprehensive, yet extensive list of the top 5 form builder plugins based on their unique use-cases, features, pricing and more!
 
+![Infographic showing: The Top 5 Web Form Builder Plugins For Your Shopify Store in 2023: 1. Formester 2. Form Builder + Custom Form by AiTrillion 3. Hulk Form Builder 4. Acerill Form Builder 5. Form Builder by Arctic Grey](/img/the-top-5-web-form-builder-plugins-for-your-shopify-store-in-2023.png "The Top 5 Web Form Builder Plugins For Your Shopify Store in 2023")
+
 Take the time to explore their offerings, considering your specific use-cases, and choose the one that aligns best with your store's requirements:
 
 ### 1. Formester
@@ -144,7 +146,9 @@ Leading the pack is [Formester – your all-in-one solution for crafting versati
 
 With its [drag-and-drop builder and powerful integrations](https://formester.com/), Formester is here to redefine your data collection journey, on a whole new level.
 
-#### Unique Features:
+#### Unique Features
+
+![Infographic showing: Unique Features Formester Offers: 1. Advanced Customization 2. Responsive Design 3. Integration Ecosystem 4. Regular Updates and Support](/img/unique-features-formester-offers-1-.png "Unique Features Formester Offers")
 
 * **Advanced Customization:** Formester boasts an intuitive drag-and-drop builder with diverse form elements, allowing you to create visually appealing forms that align perfectly with your store's branding.
 * **Responsive Design:** Ensure a seamless experience for mobile users with Formester's responsive form designs.
@@ -152,6 +156,8 @@ With its [drag-and-drop builder and powerful integrations](https://formester.com
 * **Regular Updates and Support:** Stay up-to-date with the latest features and benefit from dedicated customer support.
 
 #### Specially Used For
+
+![Infographic showing: Ideal Use-cases: Formester - Versatile & Dynamic Forms: 1. Contact Forms 2. Event Registrations 3. Payment Forms 4. Detailed Surveys](/img/ideal-use-cases_-formester-versatile-dynamic-forms.png "Ideal Use-cases: Formester - Versatile & Dynamic Forms")
 
 Ideal for businesses seeking versatility, Formester is a powerhouse for creating contact forms, surveys, event registrations, payment forms, and much more.
 
@@ -173,12 +179,16 @@ AiTrillion brings you a form builder that's all about customization. You can cre
 
 #### Unique Features
 
+![Infographic showing: Unique Features Form Builder + Custom Form by AiTrillion Offers: 1. AI-Driven Form Creation 2. Pre-Built Templates 3. Smart Data Management 4. Real-Time Analytics](/img/unique-features-form-builder-custom-form-by-aitrillion-offers.png "Unique Features Form Builder + Custom Form by AiTrillion Offers")
+
 * **AI-Driven Form Creation:** Ai Trillion's plugin employs AI to simplify form creation and optimization, making it ideal for users seeking a time-efficient solution.
 * **Pre-Built Templates:** Choose from a range of pre-designed templates tailored for various business needs, accelerating your form setup process.
 * **Smart Data Management:** The AI-driven system assists in organizing and segmenting collected data, streamlining your follow-up strategies.
 * **Real-Time Analytics:** Gain insights into form performance through real-time analytics and make data-driven improvements.
 
 #### Specially Used For
+
+![Infographic showing: Ideal Use-cases: Form Builder + Custom Form by AiTrillion - Branded Forms: 1. Subscription Forms 2. Feedback Surveys 3. User Registrations](/img/ideal-use-cases_-form-builder-custom-form-by-aitrillion-branded-forms.png "Ideal Use-cases: Form Builder + Custom Form by AiTrillion - Branded Forms")
 
 Perfect for businesses aiming to tailor their forms to specific branding needs, AiTrillion is great for subscription forms, feedback surveys, and user registrations.
 
