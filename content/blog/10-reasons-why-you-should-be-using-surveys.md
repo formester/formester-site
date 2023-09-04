@@ -96,7 +96,7 @@ There are plenty of reasons why you should start doing surveys on your product o
 
 ## 3. Surveys help develop new products and improvise the older ones
 
-If you've been told that surveys are just for market research then that is completely untrue. Many businesses use them to their advantage, by using surveys to help them develop new products or improve existing ones, as well as help direct their employees and customers. 
+If you've been told that surveys are just for market research then that is completely untrue. Many businesses use them to their advantage, by using surveys to help them develop new products or improve existing ones, as well as help direct their employees and customers.
 
 ## 4. A quick way to know what’s trending in the market!
 
