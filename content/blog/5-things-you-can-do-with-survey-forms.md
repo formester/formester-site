@@ -72,19 +72,13 @@ Survey forms are an easy way to reach out to a large number of the population, e
 
 Let us look at the five most important things to do with survey forms:
 
-
-
 ## 1. Implement customer opinion 
 
 If you have a survey form, it’s always good to remind customers that their responses are valuable to your company. You can do this in multiple ways: mentioning the fact that you value input from your customers on surveys; thanking respondents for completing the survey; or even giving them a prize, if appropriate. The most effective way is probably via email, but it's important not just to say thank you once but also every time someone completes an online form.
 
-
-
 ## 2. Get their contact info 
 
-the best use of a survey is to get the personal details of your customers and establish a healthy relationship with them. For instance, offer them birthday and anniversary discounts or vouchers and connect with them via messaging or email. This information also comes in handy to assess the age group of your clientele.
-
-
+The best use of a survey is to get the personal details of your customers and establish a healthy relationship with them. For instance, offer them birthday and anniversary discounts or vouchers and connect with them via messaging or email. This information also comes in handy to assess the age group of your clientele.
 
 ## 3. Learn about their experience with your products and services 
 
@@ -96,8 +90,6 @@ You can also use surveys to find out what your customers think about your newest
 ## 4. Gathering feedback is essential to improving customer satisfaction
 
 Feedback is what makes your business increase its success rates by 10x speed. It helps you gather the changes wanted by your customers, keeps you informed of their choices, and helps you improve on products/services that can be made better to serve your clientele in the best way possible! 
-
-
 
 ## 5. Offer a freebie in exchange for their opinion 
 
