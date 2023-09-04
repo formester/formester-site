@@ -114,7 +114,7 @@ A good survey is built of questions that help your customer give an appropriate 
 
 ## 7. Surveys are the first step towards starting a new business from scratch 
 
-Surveys are the perfect first step to start any kind of new business as it assists you enormously with setting a base for your business and drafting a road map for future activities.
+Surveys are the perfect first step to start any kind of new business as they assist you enormously with setting a base for your business and drafting a road map for future activities.
 
 ## 8. Target the right audience and make productive changes! 
 
