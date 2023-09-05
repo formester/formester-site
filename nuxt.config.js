@@ -35,22 +35,7 @@ export default {
         src: '/bootstrap.min.js',
         defer: true,
         async: true,
-      },
-      {
-        src: '/js/ga.js',
-        defer: true,
-        async: true,
-      },
-      {
-        src: '/js/hotjar.js',
-        defer: true,
-        async: true,
-      },
-      {
-        src: '/js/crisp.js',
-        defer: true,
-        async: true,
-      },
+      }
     ],
   },
 
@@ -112,7 +97,14 @@ export default {
     '@nuxtjs/pwa',
     '@nuxt/content',
     '@nuxtjs/sitemap',
+    '@nuxtjs/gtm',
   ],
+
+  // GTM configuration
+  gtm: {
+    enabled: true,
+    id: 'GTM-56W9ZCR'
+  },
 
   // Hooks configuration - https://content.nuxtjs.org/advanced/
   hooks: {
