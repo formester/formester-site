@@ -41,11 +41,11 @@ export default {
         defer: true,
         async: true,
       },
-      // {
-      //   src: '/js/hotjar.js',
-      //   defer: true,
-      //   async: true,
-      // },
+      {
+        src: '/js/hotjar.js',
+        defer: true,
+        async: true,
+      },
       {
         src: '/js/crisp.js',
         defer: true,
