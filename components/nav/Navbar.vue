@@ -21,14 +21,11 @@
         id="navbarSupportedContent"
       >
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item me-2" @click="collapseNav">
-            <NuxtLink to="/" class="nav-link">
-              Home
-              <HoverSvg />
-            </NuxtLink>
+          <li class="nav-item me-3" @click="collapseNav">
+            <NuxtLink to="/" class="nav-link"> Home </NuxtLink>
           </li>
           <li
-            class="nav-item dropdown me-2 position-static"
+            class="nav-item dropdown me-3 position-static"
             @click="collapseNav"
           >
             <NuxtLink
@@ -39,7 +36,6 @@
               to="/features/"
             >
               Features
-              <HoverSvg />
             </NuxtLink>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>
@@ -244,47 +240,36 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item me-2" @click="collapseNav">
-            <NuxtLink to="/pricing/" class="nav-link">
-              Pricing
-              <HoverSvg />
-            </NuxtLink>
+          <li class="nav-item me-3" @click="collapseNav">
+            <NuxtLink to="/pricing/" class="nav-link"> Pricing </NuxtLink>
           </li>
-          <li class="nav-item me-2" @click="collapseNav">
-            <NuxtLink to="/blog/" class="nav-link"
-              >Blog
-              <HoverSvg />
-            </NuxtLink>
+          <li class="nav-item me-3" @click="collapseNav">
+            <NuxtLink to="/blog/" class="nav-link">Blog </NuxtLink>
           </li>
-          <li class="nav-item me-2" @click="collapseNav">
-            <NuxtLink to="/templates/" class="nav-link">
-              Templates
-              <HoverSvg />
-            </NuxtLink>
+          <li class="nav-item me-3" @click="collapseNav">
+            <NuxtLink to="/templates/" class="nav-link"> Templates </NuxtLink>
           </li>
           <li class="nav-item me-4" @click="collapseNav">
             <NuxtLink to="/integrations/" class="nav-link"
               >Integrations
-              <HoverSvg />
             </NuxtLink>
           </li>
-          <li class="nav-item me-2">
-            <a
-              href="https://app.formester.com/users/sign_in"
-              @click="collapseNav"
-            >
-              <button class="nav__outline__button">Login</button>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a
-              href="https://app.formester.com/users/sign_up"
-              @click="collapseNav"
-            >
-              <button class="nav__button">Sign Up Free</button>
-            </a>
-          </li>
         </ul>
+        <div>
+          <a
+            href="https://app.formester.com/users/sign_in"
+            @click="collapseNav"
+          >
+            <button class="button nav__outline__button">Login</button>
+          </a>
+          <a
+            href="https://app.formester.com/users/sign_up"
+            @click="collapseNav"
+            class="ms-3"
+          >
+            <button class="button nav__button">Sign Up Free</button>
+          </a>
+        </div>
       </div>
     </div>
   </nav>
@@ -292,11 +277,9 @@
 
 <script>
 import NavItem from './NavItem.vue'
-import HoverSvg from './HoverSvg.vue'
 export default {
   components: {
     NavItem,
-    HoverSvg,
   },
   methods: {
     collapseNav() {
@@ -313,28 +296,40 @@ nav {
   padding: 1em 0;
 }
 
-a.nuxt-link-exact-active {
-  font-weight: 700;
+.button {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
 }
 
 .nav__button {
   background-color: var(--clr-primary);
-  font-weight: 600;
-  padding: 8px 16px;
-  border-radius: 8px;
   color: white;
 }
 
+.nav__button:hover {
+  opacity: 0.9;
+}
+
 .nav__outline__button {
-  background-color: #eee8ff;
-  font-weight: 600;
-  padding: 8px 16px;
-  border-radius: 8px;
-  color: var(--clr-primary);
+  background: transparent;
+  border: 1px solid #ebebeb;
+  color: #7e7e7e;
+}
+
+.nav__outline__button:hover {
+  background: #f9f9f9;
 }
 
 .nav-link {
-  color: var(--clr-dark);
+  font-size: 16px;
+  font-weight: 500;
+  color: #7e7e7e;
+}
+
+.nav-link:hover {
+  color: var(--clr-primary);
 }
 
 .navbar-toggler:focus,
@@ -389,42 +384,6 @@ a.nuxt-link-exact-active {
 .dropdown-item__img {
   height: 32px;
   width: 32px;
-}
-
-.nav-item {
-  position: relative;
-}
-
-.nav-item svg {
-  fill: none;
-  stroke: hsla(277, 100%, 83%, 1);
-  stroke-width: 2;
-  stroke-miterlimit: 10;
-  stroke-dasharray: 338;
-  stroke-dashoffset: 338;
-  stroke-linecap: round;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: calc(100% + 25px);
-  opacity: 0;
-  transform: translate(-50%, -50%);
-  transition: stroke-dashoffset 0s 0.2s, opacity 0.2s;
-  z-index: -1;
-}
-
-/* NAV HOVER */
-
-.nav-item:hover svg {
-  stroke-dashoffset: 0;
-  opacity: 1;
-  transition: opacity 0s,
-    stroke-dashoffset 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-/* Removing the hover effect on 'feature' nav-item */
-.nav-item.position-static svg {
-  opacity: 0;
 }
 
 @media (max-width: 1199px) {
