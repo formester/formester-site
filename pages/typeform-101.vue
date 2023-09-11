@@ -36,6 +36,7 @@
       heading="Comparing Jotform with Other Leading Form Builders"
     />
     <WhyChooseFormester />
+    <FAQwithCategories :categories="typeformFaqs" />
     <CallToActionSection
       :content="{
         heading: 'Start Your Formester Journey Today',
@@ -52,9 +53,12 @@ import StandOutFeatureSection from '../components/competitors/StandOutFeatureSec
 import PopularUseCase from '../components/competitors/PopularUseCase.vue'
 import Limitations from '../components/competitors/Limitations.vue'
 import FormBuilderComparisionTable from '../components/form-builders-comparision-table.vue'
+
+import FAQwithCategories from '../components/FAQwithCategories.vue'
 import WhyChooseFormester from '../components/jotform101/why-choose-formester.vue'
 import CallToActionSection from '../components/CallToActionSection.vue'
 
+import typeformFaqs from '@/faqs/typeform-101-faqs.js'
 import getSiteMeta from '@/utils/getSiteMeta'
 
 export default {
@@ -65,6 +69,7 @@ export default {
     Limitations,
     WhyChooseFormester,
     FormBuilderComparisionTable,
+    FAQwithCategories,
     CallToActionSection,
   },
   computed: {
@@ -74,9 +79,9 @@ export default {
         url: 'https://formester.com/typeform-101/',
         title: 'Typeform 101 | Designing Forms with Visual Brilliance!',
         description:
-          "Unlock the true potential of form building with Typeform. At Formester, we're committed to providing you with a comprehensive guide to help you navigate the world of form creation. Discover the features, tips, and tricks that make Typeform a top choice for form builders!",
-        mainImage: 'https://formester.com/jotform101-hero-section.png', // need to update with auto-responder page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
+          "Use Typeform to unleash your form-building powers. Formester provides a guide to exploring Typeform's capabilities, tips, and why it excels!",
+        mainImage: 'https://formester.com/typeform-101-hero-section.png', 
+        mainImageAlt: 'screenshot showing the hero section of typeform 101 page', 
         keywords: [
           'Typeform',
           'Typeform101',
@@ -104,6 +109,27 @@ export default {
       }
       return getSiteMeta(metaData)
     },
+    faqsSchema() {
+      const allFaqs = []
+
+      this.typeformFaqs.forEach((c) => {
+        if (c.faqs) {
+          allFaqs.push(...c.faqs)
+        }
+      })
+
+      // Generate the FAQ schema
+      return allFaqs.map((faq) => {
+        return {
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        }
+      })
+    },
   },
   head() {
     return {
@@ -127,7 +153,7 @@ export default {
           '@id': 'https://acornglobus.com',
           name: 'Tyepform 101 | Guide to Form Building and Surveys with Jotform',
           description:
-            "Unlock the true potential of form building with Typeform. At Formester, we're committed to providing you with a comprehensive guide to help you navigate the world of form creation. Discover the features, tips, and tricks that make Typeform a top choice for form builders!",
+            "Use Typeform to unleash your form-building powers. Formester provides a guide to exploring Typeform's capabilities, tips, and why it excels!",
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
           address: {
@@ -153,6 +179,11 @@ export default {
               item: 'https://formester.com/typeform-101/',
             },
           ],
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: this.faqsSchema,
         },
       ],
     }
@@ -359,6 +390,7 @@ export default {
           },
         ],
       },
+      typeformFaqs: typeformFaqs,
     }
   },
 }
