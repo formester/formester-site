@@ -14,6 +14,7 @@
     />
     <ThreeStepsCreateForm />
     <TemplateSection />
+    <CallToActionSection />
   </div>
 </template>
 
