@@ -2,13 +2,13 @@
   <div class="container py-5">
     <div class="heading d-flex flex-column align-items-center text-center">
       <h2 class="section__heading">
-        {{ featureData.heading }}
+        {{ heading }}
       </h2>
     </div>
 
     <div class="row">
       <div
-        v-for="feature in featureData.features"
+        v-for="feature in features"
         :key="feature.title"
         class="col-lg-3 col-md-4 col-sm-6 mt-5"
       >
@@ -32,8 +32,12 @@
 <script>
 export default {
   props: {
-    featureData: {
-      type: Object,
+    heading: {
+      type: String,
+      required: true,
+    },
+    features: {
+      type: Array,
       required: true,
     },
   },

@@ -28,10 +28,22 @@
       </div>
     </div>
 
-    <TypeformKeyFeatures :feature-data="typeformKeyFeatures" />
-    <StandOutFeatureSection :featureData="typeformStandOutFeatures" />
-    <PopularUseCase :featureData="typeformPopularUseCases" />
-    <Limitations :featureData="typeformLimitations" />
+    <TypeformKeyFeatures
+      heading="Key Features of Typeform"
+      :keyFeatures="typeformKeyFeatures"
+    />
+    <StandOutFeatureSection
+      heading="The Distinctive Power of Typeform: What Makes Typeform Stand out?"
+      :features="typeformStandOutFeatures"
+    />
+    <PopularUseCase
+      heading="Popular Use-Cases of Typeform"
+      :useCases="typeformPopularUseCases"
+    />
+    <Limitations
+      heading="Limitations of Typeform"
+      :limitations="typeformLimitations"
+    />
     <FormBuilderComparisionTable
       heading="Comparing Jotform with Other Leading Form Builders"
     />
@@ -80,8 +92,9 @@ export default {
         title: 'Typeform 101 | Designing Forms with Visual Brilliance!',
         description:
           "Use Typeform to unleash your form-building powers. Formester provides a guide to exploring Typeform's capabilities, tips, and why it excels!",
-        mainImage: 'https://formester.com/typeform-101-hero-section.png', 
-        mainImageAlt: 'screenshot showing the hero section of typeform 101 page', 
+        mainImage: 'https://formester.com/typeform-101-hero-section.png',
+        mainImageAlt:
+          'screenshot showing the hero section of typeform 101 page',
         keywords: [
           'Typeform',
           'Typeform101',
@@ -190,206 +203,193 @@ export default {
   },
   data() {
     return {
-      typeformKeyFeatures: {
-        heading: 'Key Features of Typeform',
-        features: [
-          {
-            title: 'Beautiful and Interactive Forms',
-            description:
-              'Typeform is renowned for its visually appealing and engaging form designs. You can create forms that are not just functional but also aesthetically pleasing, leaving a lasting impression on respondents.',
-            img: 'typeform-101/key-features/beautiful-and-interactive-forms.svg',
-          },
-          {
-            title: 'Conditional Logic',
-            description:
-              "Typeform allows you to set up conditional branching, where questions or sections of your form can change dynamically based on the respondent's previous answers. Ensure a personalized and relevant experience for each user!",
-            img: 'typeform-101/key-features/conditional-logic.svg',
-          },
-          {
-            title: 'Integration Capabilities',
-            description:
-              'Typeform seamlessly integrates with a wide range of third-party apps and services. This means you can connect your forms to your favorite tools for data collection, analysis, and automation.',
-            img: 'typeform-101/key-features/integration-capabilities.svg',
-          },
-          {
-            title: 'Real-time Analytics',
-            description: 'Real-time Analytics',
-            img: 'typeform-101/key-features/real-time-analytics.svg',
-          },
-          {
-            title: 'Mobile-Optimized',
-            description:
-              "In today's mobile-centric world, Typeform ensures that your forms are not only responsive but also work flawlessly on various devices, including smartphones and tablets.",
-            img: 'typeform-101/key-features/mobile-optimized.svg',
-          },
-          {
-            title: 'Conversational Flow',
-            description:
-              "Typeform takes a conversational approach to forms, making the user feel like they're engaged in a dialogue rather than simply filling out a form. This keeps respondents more engaged and motivated to complete the survey.",
-            img: 'typeform-101/key-features/conversational-flow.svg',
-          },
-          {
-            title: 'Interactive Media',
-            description:
-              'Enhance your forms by embedding images, videos, and custom widgets. This feature allows you to create interactive and multimedia-rich surveys or questionnaires.',
-            img: 'typeform-101/key-features/interactive-media.svg',
-          },
-          {
-            title: 'Custom Branding',
-            description:
-              "Maintain your brand identity by customizing the look and feel of your forms. You can apply your logo, colors, and fonts to ensure consistency with your brand's visual style.",
-            img: 'typeform-101/key-features/custom-branding.svg',
-          },
-          {
-            title: 'Human-Centered Design',
-            description:
-              'Typeform is designed with the user experience in mind. Its user-friendly interface and intuitive form builder make it easy for both form creators and respondents to navigate and interact with forms.',
-            img: 'typeform-101/key-features/human-centered-design.svg',
-          },
-        ],
-      },
-      typeformStandOutFeatures: {
-        heading:
-          'The Distinctive Power of Typeform: What Makes Typeform Stand out?',
-        features: [
-          {
-            title: 'Visual Storytelling',
-            description:
-              "Elevate data collection with Typeform's visual storytelling, turning forms into engaging journeys that captivate respondents.",
-            img: 'typeform-101/stand-out-features/visual-storytelling.svg',
-          },
-          {
-            title: 'Conversation-Like Flow',
-            description:
-              "Typeform's unique conversational flow replaces traditional surveys with a friendly chat, guiding respondents through questions effortlessly.",
-            img: 'typeform-101/stand-out-features/conversation-like-flow.svg',
-          },
-          {
-            title: 'Seamless Integration',
-            description:
-              'Connect Typeform with your favorite tools and apps, streamlining your workflow effortlessly.',
-            img: 'typeform-101/stand-out-features/seamless-integration.svg',
-          },
-          {
-            title: 'Data-Driven Decisions',
-            description:
-              "Empower your decision-making with Typeform's real-time analytics and insights, providing valuable information at your fingertips.",
-            img: 'typeform-101/stand-out-features/data-driven-decisions.svg',
-          },
-          {
-            title: 'Intuitive AI Assistance',
-            description:
-              "Rely on Typeform's intuitive AI to assist in creating smarter forms and extracting meaningful insights from responses.",
-            img: 'typeform-101/stand-out-features/intuitive-ai-assistance.svg',
-          },
-          {
-            title: 'Multi-Device Compatibility',
-            description:
-              "Ensure your forms look and function flawlessly on all devices, from desktop to mobile, with Typeform's responsive design.",
-            img: 'typeform-101/stand-out-features/multi-device-compatibility.svg',
-          },
-        ],
-      },
-      typeformPopularUseCases: {
-        heading: 'Popular Use-Cases of Typeform',
-        features: [
-          {
-            title: 'Market Research',
-            description:
-              'Leverage Typeform to collect valuable insights and customer feedback through engaging surveys and questionnaires.',
-            img: 'typeform-101/popular-user-cases/market-research.svg',
-          },
-          {
-            title: 'Effortless Event Planning',
-            description:
-              'Streamline event registrations, collect RSVPs, and gather post-event feedback seamlessly using Typeform.',
-            img: 'typeform-101/popular-user-cases/event-planning.svg',
-          },
-          {
-            title: 'HR Solutions',
-            description:
-              'Simplify the hiring process by creating interactive application forms, onboarding surveys, and employee engagement feedback forms with Typeform.',
-            img: 'typeform-101/popular-user-cases/hr-solutions.svg',
-          },
-          {
-            title: 'E-commerce',
-            description:
-              'Create seamless product order forms, manage product catalogs, and process payments securely, all powered by Typeform.',
-            img: 'typeform-101/popular-user-cases/e-commerce.svg',
-          },
-          {
-            title: 'Interactive Educational Quizzes',
-            description:
-              'Enhance the learning experience with interactive quizzes, course evaluations, and registration forms created with Typeform.',
-            img: 'typeform-101/popular-user-cases/educational-quizzes.svg',
-          },
-          {
-            title: 'Healthcare Management',
-            description:
-              'Ensure compliance with data privacy regulations while efficiently managing patient information, appointment scheduling, and medical history collection through Typeform.',
-            img: 'typeform-101/popular-user-cases/health-management.svg',
-          },
-          {
-            title: 'Nonprofit Engagement',
-            description:
-              'Engage donors and supporters effectively by using Typeform for interactive donation forms, volunteer sign-ups, and impact assessment surveys.',
-            img: 'typeform-101/popular-user-cases/nonprofit-engagement.svg',
-          },
-          {
-            title: 'Engaging Polls',
-            description:
-              'Boost audience engagement by creating interactive quizzes, polls, and other engaging content for your website or blog using Typeform.',
-            img: 'typeform-101/popular-user-cases/polls.svg',
-          },
-        ],
-      },
-      typeformLimitations: {
-        heading: 'Limitations of Typeform',
-        limitations: [
-          {
-            title: 'Complexity for Beginners',
-            description:
-              "Typeform's unique design can be complex for those new to the platform, requiring a learning curve.",
-            img: 'typeform-101/limitations/complexity-for-beginners.svg',
-          },
-          {
-            title: 'Pricing Tiers',
-            description:
-              'Some advanced features and higher usage levels may only be available through paid plans, which may not suit all budgets.',
-            img: 'typeform-101/limitations/pricing-tiers.svg',
-          },
-          {
-            title: 'Customization Constraints',
-            description:
-              'While Typeform provides design customization options, highly specialized branding needs may have some limitations.',
-            img: 'typeform-101/limitations/customization-constraints.svg',
-          },
-          {
-            title: 'Restrictions and Upgrading',
-            description:
-              'Typeform may require users to upgrade to higher plans to access greater limits of specific features, lacking the option to purchase only required additional features.',
-            img: 'typeform-101/limitations/restrictions-and-upgrading.svg',
-          },
-          {
-            title: 'Limited Reporting and Analytics',
-            description:
-              "Typeform's reporting and analytics features are basic compared to dedicated data analysis tools.",
-            img: 'typeform-101/limitations/limited-reporting-and-analytics.svg',
-          },
-          {
-            title: 'Conditional Logic Complexity',
-            description:
-              'Implementing conditional logic in Typeform can be complex for intricate workflows.',
-            img: 'typeform-101/limitations/conditional-logic-complexity.svg',
-          },
-          {
-            title: 'File Upload Limitations',
-            description:
-              "Typeform's file upload functionality may have limitations in terms of file size and storage capacity.",
-            img: 'typeform-101/limitations/file-upload-limitations.svg',
-          },
-        ],
-      },
+      typeformKeyFeatures: [
+        {
+          title: 'Beautiful and Interactive Forms',
+          description:
+            'Typeform is renowned for its visually appealing and engaging form designs. You can create forms that are not just functional but also aesthetically pleasing, leaving a lasting impression on respondents.',
+          img: 'typeform-101/key-features/beautiful-and-interactive-forms.svg',
+        },
+        {
+          title: 'Conditional Logic',
+          description:
+            "Typeform allows you to set up conditional branching, where questions or sections of your form can change dynamically based on the respondent's previous answers. Ensure a personalized and relevant experience for each user!",
+          img: 'typeform-101/key-features/conditional-logic.svg',
+        },
+        {
+          title: 'Integration Capabilities',
+          description:
+            'Typeform seamlessly integrates with a wide range of third-party apps and services. This means you can connect your forms to your favorite tools for data collection, analysis, and automation.',
+          img: 'typeform-101/key-features/integration-capabilities.svg',
+        },
+        {
+          title: 'Real-time Analytics',
+          description: 'Real-time Analytics',
+          img: 'typeform-101/key-features/real-time-analytics.svg',
+        },
+        {
+          title: 'Mobile-Optimized',
+          description:
+            "In today's mobile-centric world, Typeform ensures that your forms are not only responsive but also work flawlessly on various devices, including smartphones and tablets.",
+          img: 'typeform-101/key-features/mobile-optimized.svg',
+        },
+        {
+          title: 'Conversational Flow',
+          description:
+            "Typeform takes a conversational approach to forms, making the user feel like they're engaged in a dialogue rather than simply filling out a form. This keeps respondents more engaged and motivated to complete the survey.",
+          img: 'typeform-101/key-features/conversational-flow.svg',
+        },
+        {
+          title: 'Interactive Media',
+          description:
+            'Enhance your forms by embedding images, videos, and custom widgets. This feature allows you to create interactive and multimedia-rich surveys or questionnaires.',
+          img: 'typeform-101/key-features/interactive-media.svg',
+        },
+        {
+          title: 'Custom Branding',
+          description:
+            "Maintain your brand identity by customizing the look and feel of your forms. You can apply your logo, colors, and fonts to ensure consistency with your brand's visual style.",
+          img: 'typeform-101/key-features/custom-branding.svg',
+        },
+        {
+          title: 'Human-Centered Design',
+          description:
+            'Typeform is designed with the user experience in mind. Its user-friendly interface and intuitive form builder make it easy for both form creators and respondents to navigate and interact with forms.',
+          img: 'typeform-101/key-features/human-centered-design.svg',
+        },
+      ],
+      typeformStandOutFeatures: [
+        {
+          title: 'Visual Storytelling',
+          description:
+            "Elevate data collection with Typeform's visual storytelling, turning forms into engaging journeys that captivate respondents.",
+          img: 'typeform-101/stand-out-features/visual-storytelling.svg',
+        },
+        {
+          title: 'Conversation-Like Flow',
+          description:
+            "Typeform's unique conversational flow replaces traditional surveys with a friendly chat, guiding respondents through questions effortlessly.",
+          img: 'typeform-101/stand-out-features/conversation-like-flow.svg',
+        },
+        {
+          title: 'Seamless Integration',
+          description:
+            'Connect Typeform with your favorite tools and apps, streamlining your workflow effortlessly.',
+          img: 'typeform-101/stand-out-features/seamless-integration.svg',
+        },
+        {
+          title: 'Data-Driven Decisions',
+          description:
+            "Empower your decision-making with Typeform's real-time analytics and insights, providing valuable information at your fingertips.",
+          img: 'typeform-101/stand-out-features/data-driven-decisions.svg',
+        },
+        {
+          title: 'Intuitive AI Assistance',
+          description:
+            "Rely on Typeform's intuitive AI to assist in creating smarter forms and extracting meaningful insights from responses.",
+          img: 'typeform-101/stand-out-features/intuitive-ai-assistance.svg',
+        },
+        {
+          title: 'Multi-Device Compatibility',
+          description:
+            "Ensure your forms look and function flawlessly on all devices, from desktop to mobile, with Typeform's responsive design.",
+          img: 'typeform-101/stand-out-features/multi-device-compatibility.svg',
+        },
+      ],
+      typeformPopularUseCases: [
+        {
+          title: 'Market Research',
+          description:
+            'Leverage Typeform to collect valuable insights and customer feedback through engaging surveys and questionnaires.',
+          img: 'typeform-101/popular-user-cases/market-research.svg',
+        },
+        {
+          title: 'Effortless Event Planning',
+          description:
+            'Streamline event registrations, collect RSVPs, and gather post-event feedback seamlessly using Typeform.',
+          img: 'typeform-101/popular-user-cases/event-planning.svg',
+        },
+        {
+          title: 'HR Solutions',
+          description:
+            'Simplify the hiring process by creating interactive application forms, onboarding surveys, and employee engagement feedback forms with Typeform.',
+          img: 'typeform-101/popular-user-cases/hr-solutions.svg',
+        },
+        {
+          title: 'E-commerce',
+          description:
+            'Create seamless product order forms, manage product catalogs, and process payments securely, all powered by Typeform.',
+          img: 'typeform-101/popular-user-cases/e-commerce.svg',
+        },
+        {
+          title: 'Interactive Educational Quizzes',
+          description:
+            'Enhance the learning experience with interactive quizzes, course evaluations, and registration forms created with Typeform.',
+          img: 'typeform-101/popular-user-cases/educational-quizzes.svg',
+        },
+        {
+          title: 'Healthcare Management',
+          description:
+            'Ensure compliance with data privacy regulations while efficiently managing patient information, appointment scheduling, and medical history collection through Typeform.',
+          img: 'typeform-101/popular-user-cases/health-management.svg',
+        },
+        {
+          title: 'Nonprofit Engagement',
+          description:
+            'Engage donors and supporters effectively by using Typeform for interactive donation forms, volunteer sign-ups, and impact assessment surveys.',
+          img: 'typeform-101/popular-user-cases/nonprofit-engagement.svg',
+        },
+        {
+          title: 'Engaging Polls',
+          description:
+            'Boost audience engagement by creating interactive quizzes, polls, and other engaging content for your website or blog using Typeform.',
+          img: 'typeform-101/popular-user-cases/polls.svg',
+        },
+      ],
+      typeformLimitations: [
+        {
+          title: 'Complexity for Beginners',
+          description:
+            "Typeform's unique design can be complex for those new to the platform, requiring a learning curve.",
+          img: 'typeform-101/limitations/complexity-for-beginners.svg',
+        },
+        {
+          title: 'Pricing Tiers',
+          description:
+            'Some advanced features and higher usage levels may only be available through paid plans, which may not suit all budgets.',
+          img: 'typeform-101/limitations/pricing-tiers.svg',
+        },
+        {
+          title: 'Customization Constraints',
+          description:
+            'While Typeform provides design customization options, highly specialized branding needs may have some limitations.',
+          img: 'typeform-101/limitations/customization-constraints.svg',
+        },
+        {
+          title: 'Restrictions and Upgrading',
+          description:
+            'Typeform may require users to upgrade to higher plans to access greater limits of specific features, lacking the option to purchase only required additional features.',
+          img: 'typeform-101/limitations/restrictions-and-upgrading.svg',
+        },
+        {
+          title: 'Limited Reporting and Analytics',
+          description:
+            "Typeform's reporting and analytics features are basic compared to dedicated data analysis tools.",
+          img: 'typeform-101/limitations/limited-reporting-and-analytics.svg',
+        },
+        {
+          title: 'Conditional Logic Complexity',
+          description:
+            'Implementing conditional logic in Typeform can be complex for intricate workflows.',
+          img: 'typeform-101/limitations/conditional-logic-complexity.svg',
+        },
+        {
+          title: 'File Upload Limitations',
+          description:
+            "Typeform's file upload functionality may have limitations in terms of file size and storage capacity.",
+          img: 'typeform-101/limitations/file-upload-limitations.svg',
+        },
+      ],
       typeformFaqs: typeformFaqs,
     }
   },

@@ -1,25 +1,25 @@
 <template>
   <div class="container py-5">
     <div class="heading d-flex flex-column align-items-center text-center">
-      <h2 class="section__heading">{{ featureData.heading }}</h2>
+      <h2 class="section__heading">{{ heading }}</h2>
     </div>
 
     <div class="row mt-4">
       <div
-        v-for="feature in featureData.features"
-        :key="feature.title"
+        v-for="useCase in useCases"
+        :key="useCase.title"
         class="col-lg-3 col-md-6"
       >
         <div class="p-3 d-flex flex-column align-items-center">
           <nuxt-img
-            :src="feature.img"
+            :src="useCase.img"
             class="img-fluid"
-            :alt="feature.altText"
+            :alt="useCase.altText"
             loading="lazy"
           />
           <div class="text-start">
-            <h4 class="sub__section-heading mt-4">{{ feature.title }}</h4>
-            <p class="subheading__text">{{ feature.description }}</p>
+            <h4 class="sub__section-heading mt-4">{{ useCase.title }}</h4>
+            <p class="subheading__text">{{ useCase.description }}</p>
           </div>
         </div>
       </div>
@@ -30,8 +30,14 @@
 <script>
 export default {
   props: {
-    featureData: {
-      type: Object,
+    heading: {
+      required: {
+        type: String,
+        required: true,
+      },
+    },
+    useCases: {
+      type: Array,
       required: true,
     },
   },

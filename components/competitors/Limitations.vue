@@ -1,11 +1,11 @@
 <template>
   <div class="container py-5">
     <div class="heading d-flex flex-column align-items-center text-center">
-      <h2 class="section__heading">{{ featureData.heading }}</h2>
+      <h2 class="section__heading">{{ heading }}</h2>
     </div>
 
     <div class="templates mt-md-5">
-      <div v-for="(limitation, idx) in featureData.limitations" :key="idx">
+      <div v-for="(limitation, idx) in limitations" :key="idx">
         <div
           class="card p-3 d-flex align-items-center justify-items-center text-center align-items-md-start text-md-start"
         >
@@ -25,8 +25,12 @@
 <script>
 export default {
   props: {
-    featureData: {
-      type: Object,
+    heading: {
+      type: String,
+      required: true,
+    },
+    limitations: {
+      type: Array,
       required: true,
     },
   },
