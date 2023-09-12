@@ -255,17 +255,18 @@
             </NuxtLink>
           </li>
         </ul>
-        <div>
+        <div class="d-flex flex-column flex-lg-row">
           <a
             href="https://app.formester.com/users/sign_in"
             @click="collapseNav"
+            class="mt-3 mt-lg-0"
           >
             <button class="button nav__outline__button">Login</button>
           </a>
           <a
             href="https://app.formester.com/users/sign_up"
             @click="collapseNav"
-            class="ms-3"
+            class="mt-3 mt-lg-0 ms-lg-3"
           >
             <button class="button nav__button">Sign Up Free</button>
           </a>
@@ -357,28 +358,25 @@ nav {
 
 .dropdown-item {
   padding: 12px;
+  border-radius: 8px;
 }
 
 .dropdown-item:hover {
-  background: #f6f6f6;
-}
-
-.dropdown-item:active {
-  color: #212529;
+  background: #f9f9f9;
 }
 
 .dropdown-item__title {
   color: var(#171717);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 140%;
 }
 
 .dropdown-item__desc {
-  color: var(#525252);
-  font-size: 14px;
+  color: #5d5d5d !important;
+  font-size: 13px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 20px;
 }
 
 .dropdown-item__img {
@@ -394,18 +392,14 @@ nav {
   }
 }
 @media (max-width: 992px) {
-  .nav-item:hover svg {
-    opacity: 0;
+  .nav-link {
+    padding-block: 0;
   }
 
   .nav-item {
     font-size: 1.2rem;
     font-weight: 600;
     margin-top: 0.5em;
-  }
-
-  .nav__outline__button {
-    margin-bottom: 10px;
   }
 
   .dropdown-menu {
