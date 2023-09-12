@@ -21,9 +21,6 @@
         id="navbarSupportedContent"
       >
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item me-3" @click="collapseNav">
-            <NuxtLink to="/" class="nav-link"> Home </NuxtLink>
-          </li>
           <li
             class="nav-item dropdown me-3 position-static"
             @click="collapseNav"
