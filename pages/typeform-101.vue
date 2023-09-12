@@ -45,7 +45,7 @@
       :limitations="typeformLimitations"
     />
     <FormBuilderComparisionTable
-      heading="Comparing Jotform with Other Leading Form Builders"
+      heading="Comparing Typeform with Other Leading Form Builders"
     />
     <WhyChooseFormester />
     <FAQwithCategories :categories="typeformFaqs" />
@@ -164,7 +164,7 @@ export default {
         {
           '@type': 'Corporation',
           '@id': 'https://acornglobus.com',
-          name: 'Tyepform 101 | Guide to Form Building and Surveys with Jotform',
+          name: 'Typeform 101 | Designing Forms with Visual Brilliance!',
           description:
             "Use Typeform to unleash your form-building powers. Formester provides a guide to exploring Typeform's capabilities, tips, and why it excels!",
           logo: 'https://formester.com/logo.png',
