@@ -29,7 +29,7 @@
       </div>
     </div>
 
-    <JotformKeyFeatures
+    <KeyFeatures
       heading="Key Features of Jotform"
       :key-features="jotformKeyFeatures"
     />
@@ -61,7 +61,7 @@
 </template>
 
 <script>
-import JotformKeyFeatures from '../components/competitors/KeyFeatures.vue'
+import KeyFeatures from '../components/competitors/KeyFeatures.vue'
 import StandOutFeatureSection from '../components/competitors/StandOutFeatureSection.vue'
 import PopularUseCase from '../components/competitors/PopularUseCase.vue'
 import Limitations from '../components/competitors/Limitations.vue'
@@ -76,7 +76,7 @@ import jotformFaqs from '@/faqs/jotform-101-faqs'
 
 export default {
   components: {
-    JotformKeyFeatures,
+    KeyFeatures,
     StandOutFeatureSection,
     PopularUseCase,
     Limitations,

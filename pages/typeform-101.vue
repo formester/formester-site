@@ -39,7 +39,7 @@
     <PopularUseCase
       heading="Popular Use-Cases of Typeform"
       :useCases="typeformPopularUseCases"
-      numberOfCol="3"
+      bootstrapColWidth="3"
     />
     <Limitations
       heading="Limitations of Typeform"
