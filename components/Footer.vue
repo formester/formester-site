@@ -178,6 +178,11 @@
                   Jotform
                 </NuxtLink>
               </li>
+              <li class="mt-2">
+                <NuxtLink to="/typeform-101/" class="footer__link">
+                  Typeform
+                </NuxtLink>
+              </li>
             </ul>
           </div>
 

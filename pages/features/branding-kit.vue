@@ -207,5 +207,9 @@ export default {
   .feature__hero {
     padding-block: 4em;
   }
+
+  .blob {
+    display: none;
+  }
 }
 </style>

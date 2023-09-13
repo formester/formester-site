@@ -21,13 +21,12 @@
         id="navbarSupportedContent"
       >
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item me-2" @click="collapseNav">
-            <NuxtLink to="/" class="nav-link">
-              Home
-              <HoverSvg />
-            </NuxtLink>
-          </li>
-          <li class="nav-item dropdown me-2" @click="collapseNav">
+          <li
+            class="nav-item dropdown me-3 position-static"
+            @click="collapseNav"
+            @mouseenter="dropdownActive = true"
+            @mouseleave="dropdownActive = false"
+          >
             <NuxtLink
               class="nav-link"
               id="navbarDropdown"
@@ -36,152 +35,130 @@
               to="/features/"
             >
               Features
-              <HoverSvg />
             </NuxtLink>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li>
-                <NuxtLink
-                  class="dropdown-item"
-                  to="/features/html-form-backend/"
-                  @click="collapseNav"
-                  >HTML Form Backend</NuxtLink
-                >
-              </li>
-              <li>
-                <NuxtLink
-                  class="dropdown-item"
-                  to="/features/auto-responder/"
-                  @click="collapseNav"
-                  >Auto Responder
-                </NuxtLink>
-              </li>
-              <li>
-                <NuxtLink
-                  class="dropdown-item"
-                  to="/features/spam-protection/"
-                  @click="collapseNav"
-                  >Spam Protection</NuxtLink
-                >
-              </li>
-              <li>
-                <NuxtLink
-                  class="dropdown-item"
-                  to="/features/powerful-analytics/"
-                  @click="collapseNav"
-                  >Powerful Analytics</NuxtLink
-                >
-              </li>
-              <li>
-                <NuxtLink
-                  class="dropdown-item"
-                  to="/features/conditional-logic/"
-                  @click="collapseNav"
-                  >Conditional Logic</NuxtLink
-                >
-              </li>
-              <li>
-                <NuxtLink
-                  class="dropdown-item"
-                  to="/features/online-payment/"
-                  @click="collapseNav"
-                  >Online Payment</NuxtLink
-                >
-              </li>
-              <li>
-                <NuxtLink
-                  class="dropdown-item"
-                  to="/features/digital-signature/"
-                  @click="collapseNav"
-                  >Digital Signature</NuxtLink
-                >
-              </li>
-              <li>
-                <NuxtLink
-                  class="dropdown-item"
-                  to="/features/branding-kit/"
-                  @click="collapseNav"
-                  >Branding Kit</NuxtLink
-                >
-              </li>
-              <li>
-                <NuxtLink
-                  class="dropdown-item"
-                  to="/features/information-recall/"
-                  @click="collapseNav"
-                  >Information Recall</NuxtLink
-                >
-              </li>
-              <li>
-                <NuxtLink
-                  class="dropdown-item"
-                  to="/features/calculation-fields/"
-                  @click="collapseNav"
-                  >Calculation Fields</NuxtLink
-                >
-              </li>
-              <li>
-                <NuxtLink
-                  class="dropdown-item"
-                  to="/features/collaboration/"
-                  @click="collapseNav"
-                  >Collaboration</NuxtLink
-                >
+            <ul
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdown"
+              :class="{ active: dropdownActive }"
+            >
+              <li
+                v-for="dropdownItem in dropdownItems"
+                :key="dropdownItem.title"
+                @click="dropdownActive = false"
+              >
+                <DropdownItem
+                  :title="dropdownItem.title"
+                  :description="dropdownItem.description"
+                  :link-name="dropdownItem.linkName"
+                />
               </li>
             </ul>
           </li>
-          <li class="nav-item me-2" @click="collapseNav">
-            <NuxtLink to="/pricing/" class="nav-link">
-              Pricing
-              <HoverSvg />
-            </NuxtLink>
+          <li class="nav-item me-3" @click="collapseNav">
+            <NuxtLink to="/pricing/" class="nav-link"> Pricing </NuxtLink>
           </li>
-          <li class="nav-item me-2" @click="collapseNav">
-            <NuxtLink to="/blog/" class="nav-link"
-              >Blog
-              <HoverSvg />
-            </NuxtLink>
+          <li class="nav-item me-3" @click="collapseNav">
+            <NuxtLink to="/blog/" class="nav-link">Blog </NuxtLink>
           </li>
-          <li class="nav-item me-2" @click="collapseNav">
-            <NuxtLink to="/templates/" class="nav-link">
-              Templates
-              <HoverSvg />
-            </NuxtLink>
+          <li class="nav-item me-3" @click="collapseNav">
+            <NuxtLink to="/templates/" class="nav-link"> Templates </NuxtLink>
           </li>
           <li class="nav-item me-4" @click="collapseNav">
             <NuxtLink to="/integrations/" class="nav-link"
               >Integrations
-              <HoverSvg />
             </NuxtLink>
           </li>
-          <li class="nav-item me-2">
-            <a
-              href="https://app.formester.com/users/sign_in"
-              @click="collapseNav"
-            >
-              <button class="nav__outline__button">Login</button>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a
-              href="https://app.formester.com/users/sign_up"
-              @click="collapseNav"
-            >
-              <button class="nav__button">Sign Up Free</button>
-            </a>
-          </li>
         </ul>
+        <div class="d-flex flex-column flex-lg-row">
+          <a
+            href="https://app.formester.com/users/sign_in"
+            @click="collapseNav"
+            class="mt-3 mt-lg-0"
+          >
+            <button class="button nav__outline__button">Login</button>
+          </a>
+          <a
+            href="https://app.formester.com/users/sign_up"
+            @click="collapseNav"
+            class="mt-3 mt-lg-0 ms-lg-3"
+          >
+            <button class="button nav__button">Sign Up Free</button>
+          </a>
+        </div>
       </div>
     </div>
   </nav>
 </template>
 
 <script>
+import DropdownItem from './DropdownItem.vue'
 import NavItem from './NavItem.vue'
-import HoverSvg from './HoverSvg.vue'
 export default {
   components: {
     NavItem,
-    HoverSvg,
+    DropdownItem,
+  },
+  data() {
+    return {
+      dropdownActive: false,
+      dropdownItems: [
+        {
+          title: 'HTML Form Backend',
+          description: 'Simplify form integration',
+          linkName: 'html-form-backend',
+        },
+        {
+          title: 'Auto Responder',
+          description: 'Set up automated responses',
+          linkName: 'auto-responder',
+        },
+        {
+          title: 'Spam Protection',
+          description: 'Protect sensitive data',
+          linkName: 'spam-protection',
+        },
+        {
+          title: 'Powerful Analytics',
+          description: 'Get Insights of Engagements',
+          linkName: 'powerful-analytics',
+        },
+        {
+          title: 'Conditional Logic',
+          description: 'Create intelligent forms',
+          linkName: 'conditional-logic',
+        },
+        {
+          title: 'Online Payments',
+          description: 'Start collecting payments',
+          linkName: 'online-payment',
+        },
+        {
+          title: 'Digital Signature',
+          description: 'Incorporate e-signatures',
+          linkName: 'digital-signature',
+        },
+        {
+          title: 'Brand Kit',
+          description: 'Elevate your brand identity',
+          linkName: 'branding-kit',
+        },
+        {
+          title: 'Information Recall',
+          description: 'Referencing previous answers',
+          linkName: 'information-recall',
+        },
+        {
+          title: 'Calculation Fields',
+          description: 'Forms that perform calculations',
+          linkName: 'calculation-fields',
+        },
+        {
+          title: 'Multi-User Collaboration',
+          description: 'Collaborate with team members',
+          linkName: 'collaboration',
+        },
+      ],
+    }
   },
   methods: {
     collapseNav() {
@@ -198,28 +175,43 @@ nav {
   padding: 1em 0;
 }
 
-a.nuxt-link-exact-active {
-  font-weight: 700;
+.button {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
 }
 
 .nav__button {
   background-color: var(--clr-primary);
-  font-weight: 600;
-  padding: 8px 16px;
-  border-radius: 8px;
   color: white;
 }
 
+.nav__button:hover {
+  opacity: 0.9;
+}
+
 .nav__outline__button {
-  background-color: #eee8ff;
-  font-weight: 600;
-  padding: 8px 16px;
-  border-radius: 8px;
-  color: var(--clr-primary);
+  background: transparent;
+  border: 1px solid #ebebeb;
+  color: #6e6e6e;
+}
+
+.nav__outline__button:hover {
+  background: #f9f9f9;
 }
 
 .nav-link {
-  color: var(--clr-dark);
+  font-size: 16px;
+  font-weight: 500;
+  color: #6e6e6e;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--clr-primary);
+  border-bottom: 2px solid var(--clr-primary);
 }
 
 .navbar-toggler:focus,
@@ -229,49 +221,22 @@ a.nuxt-link-exact-active {
   box-shadow: none;
 }
 
-.nav-item.dropdown:hover .dropdown-menu {
-  display: block;
+.dropdown-menu.active {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-inline: 9vw;
   z-index: 9999;
 }
 
-.dropdown-item:hover {
-  background: var(--clr-primary-light);
-}
-
-.dropdown-item:active {
-  color: #212529;
-}
-
-.nav-item {
-  position: relative;
-}
-
-.nav-item svg {
-  fill: none;
-  stroke: hsla(277, 100%, 83%, 1);
-  stroke-width: 2;
-  stroke-miterlimit: 10;
-  stroke-dasharray: 338;
-  stroke-dashoffset: 338;
-  stroke-linecap: round;
+.dropdown-menu {
+  padding-block: 16px;
+  border: none;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.05);
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: calc(100% + 25px);
-  opacity: 0;
-  transform: translate(-50%, -50%);
-  transition: stroke-dashoffset 0s 0.2s, opacity 0.2s;
-  z-index: -1;
+  left: 0;
+  right: 0;
 }
 
-/* NAV HOVER */
-
-.nav-item:hover svg {
-  stroke-dashoffset: 0;
-  opacity: 1;
-  transition: opacity 0s,
-    stroke-dashoffset 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
 @media (max-width: 1199px) {
   .nav-link {
     font-size: 16px;
@@ -280,8 +245,13 @@ a.nuxt-link-exact-active {
   }
 }
 @media (max-width: 992px) {
-  .nav-item:hover svg {
-    opacity: 0;
+  .nav-link {
+    padding-block: 0;
+  }
+
+  .nav-link:hover {
+    color: var(--clr-primary);
+    border-bottom: 2px solid transparent;
   }
 
   .nav-item {
@@ -290,13 +260,40 @@ a.nuxt-link-exact-active {
     margin-top: 0.5em;
   }
 
-  .nav__outline__button {
-    margin-bottom: 10px;
+  .dropdown-menu {
+    display: grid;
+    position: relative;
+    box-shadow: none;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
   }
 
+  .dropdown-menu.active {
+    grid-template-columns: repeat(2, 1fr) !important;
+    padding-inline: 0 !important;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .dropdown-menu.active {
+    padding-inline: 3vw;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .dropdown-menu.active {
+    grid-template-columns: repeat(3, 1fr);
+    padding-inline: 3vw;
+  }
+}
+
+@media screen and (max-width: 640px) {
   .dropdown-menu {
-    border: none;
-    display: block;
+    grid-template-columns: 1fr;
+  }
+
+  .dropdown-menu.active {
+    grid-template-columns: 1fr !important;
   }
 }
 </style>
