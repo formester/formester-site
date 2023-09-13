@@ -28,7 +28,7 @@
       </div>
     </div>
 
-    <TypeformKeyFeatures
+    <KeyFeatures
       heading="Key Features of Typeform"
       :keyFeatures="typeformKeyFeatures"
     />
@@ -39,7 +39,7 @@
     <PopularUseCase
       heading="Popular Use-Cases of Typeform"
       :useCases="typeformPopularUseCases"
-      numberOfCol="3"
+      bootstrapColWidth="3"
     />
     <Limitations
       heading="Limitations of Typeform"
@@ -61,7 +61,7 @@
 </template>
 
 <script>
-import TypeformKeyFeatures from '../components/competitors/KeyFeatures.vue'
+import KeyFeatures from '../components/competitors/KeyFeatures.vue'
 import StandOutFeatureSection from '../components/competitors/StandOutFeatureSection.vue'
 import PopularUseCase from '../components/competitors/PopularUseCase.vue'
 import Limitations from '../components/competitors/Limitations.vue'
@@ -76,7 +76,7 @@ import getSiteMeta from '@/utils/getSiteMeta'
 
 export default {
   components: {
-    TypeformKeyFeatures,
+    KeyFeatures,
     StandOutFeatureSection,
     PopularUseCase,
     Limitations,

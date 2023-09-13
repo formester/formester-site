@@ -9,7 +9,7 @@
         v-for="useCase in useCases"
         :key="useCase.title"
         class="col-lg-3 col-md-6"
-        :class="`col-lg-${numberOfCol}`"
+        :class="`col-lg-${bootstrapColWidth}`"
       >
         <div class="p-3 d-flex flex-column align-items-center">
           <nuxt-img
@@ -41,7 +41,7 @@ export default {
       type: Array,
       required: true,
     },
-    numberOfCol: {
+    bootstrapColWidth: {
       type: Number,
       default: 4,
     }
