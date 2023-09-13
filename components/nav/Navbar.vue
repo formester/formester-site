@@ -24,6 +24,8 @@
           <li
             class="nav-item dropdown me-3 position-static"
             @click="collapseNav"
+            @mouseenter="dropdownActive = true"
+            @mouseleave="dropdownActive = false"
           >
             <NuxtLink
               class="nav-link"
@@ -34,10 +36,15 @@
             >
               Features
             </NuxtLink>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <ul
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdown"
+              :class="{ active: dropdownActive }"
+            >
               <li
                 v-for="dropdownItem in dropdownItems"
                 :key="dropdownItem.title"
+                @click="dropdownActive = false"
               >
                 <DropdownItem
                   :title="dropdownItem.title"
@@ -93,6 +100,7 @@ export default {
   },
   data() {
     return {
+      dropdownActive: false,
       dropdownItems: [
         {
           title: 'HTML Form Backend',
@@ -108,11 +116,6 @@ export default {
           title: 'Spam Protection',
           description: 'Protect sensitive data',
           linkName: 'spam-protection',
-        },
-        {
-          title: 'Powerful Analytics',
-          description: 'Get Insights of Engagements',
-          linkName: 'powerful-analytics',
         },
         {
           title: 'Powerful Analytics',
@@ -201,11 +204,14 @@ nav {
 .nav-link {
   font-size: 16px;
   font-weight: 500;
-  color: #7e7e7e;
+  color: #6e6e6e;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
 }
 
 .nav-link:hover {
   color: var(--clr-primary);
+  border-bottom: 2px solid var(--clr-primary);
 }
 
 .navbar-toggler:focus,
@@ -215,7 +221,7 @@ nav {
   box-shadow: none;
 }
 
-.nav-item.dropdown:hover .dropdown-menu {
+.dropdown-menu.active {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding-inline: 9vw;
@@ -257,20 +263,20 @@ nav {
     padding: 0;
   }
 
-  .nav-item.dropdown:hover .dropdown-menu {
+  .dropdown-menu.active {
     grid-template-columns: repeat(2, 1fr) !important;
     padding-inline: 0 !important;
   }
 }
 
 @media screen and (max-width: 1300px) {
-  .nav-item.dropdown:hover .dropdown-menu {
+  .dropdown-menu.active {
     padding-inline: 3vw;
   }
 }
 
 @media screen and (max-width: 1170px) {
-  .nav-item.dropdown:hover .dropdown-menu {
+  .dropdown-menu.active {
     grid-template-columns: repeat(3, 1fr);
     padding-inline: 3vw;
   }
@@ -281,7 +287,7 @@ nav {
     grid-template-columns: 1fr;
   }
 
-  .nav-item.dropdown:hover .dropdown-menu {
+  .dropdown-menu.active {
     grid-template-columns: 1fr !important;
   }
 }
