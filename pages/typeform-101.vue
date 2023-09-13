@@ -39,6 +39,7 @@
     <PopularUseCase
       heading="Popular Use-Cases of Typeform"
       :useCases="typeformPopularUseCases"
+      numberOfCol="3"
     />
     <Limitations
       heading="Limitations of Typeform"
@@ -67,7 +68,7 @@ import Limitations from '../components/competitors/Limitations.vue'
 import FormBuilderComparisionTable from '../components/form-builders-comparision-table.vue'
 
 import FAQwithCategories from '../components/FAQwithCategories.vue'
-import WhyChooseFormester from '../components/jotform101/why-choose-formester.vue'
+import WhyChooseFormester from '../components/competitors/why-choose-formester.vue'
 import CallToActionSection from '../components/CallToActionSection.vue'
 
 import typeformFaqs from '@/faqs/typeform-101-faqs.js'
