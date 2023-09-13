@@ -194,7 +194,7 @@ nav {
 .nav__outline__button {
   background: transparent;
   border: 1px solid #ebebeb;
-  color: #7e7e7e;
+  color: #6e6e6e;
 }
 
 .nav__outline__button:hover {
@@ -247,6 +247,11 @@ nav {
 @media (max-width: 992px) {
   .nav-link {
     padding-block: 0;
+  }
+
+  .nav-link:hover {
+    color: var(--clr-primary);
+    border-bottom: 2px solid transparent;
   }
 
   .nav-item {
