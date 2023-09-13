@@ -28,7 +28,7 @@
       </div>
     </div>
 
-    <TypeformKeyFeatures
+    <KeyFeatures
       heading="Key Features of Typeform"
       :keyFeatures="typeformKeyFeatures"
     />
@@ -39,6 +39,7 @@
     <PopularUseCase
       heading="Popular Use-Cases of Typeform"
       :useCases="typeformPopularUseCases"
+      bootstrapColWidth="3"
     />
     <Limitations
       heading="Limitations of Typeform"
@@ -60,14 +61,14 @@
 </template>
 
 <script>
-import TypeformKeyFeatures from '../components/competitors/KeyFeatures.vue'
+import KeyFeatures from '../components/competitors/KeyFeatures.vue'
 import StandOutFeatureSection from '../components/competitors/StandOutFeatureSection.vue'
 import PopularUseCase from '../components/competitors/PopularUseCase.vue'
 import Limitations from '../components/competitors/Limitations.vue'
 import FormBuilderComparisionTable from '../components/form-builders-comparision-table.vue'
 
 import FAQwithCategories from '../components/FAQwithCategories.vue'
-import WhyChooseFormester from '../components/jotform101/why-choose-formester.vue'
+import WhyChooseFormester from '../components/competitors/why-choose-formester.vue'
 import CallToActionSection from '../components/CallToActionSection.vue'
 
 import typeformFaqs from '@/faqs/typeform-101-faqs.js'
@@ -75,7 +76,7 @@ import getSiteMeta from '@/utils/getSiteMeta'
 
 export default {
   components: {
-    TypeformKeyFeatures,
+    KeyFeatures,
     StandOutFeatureSection,
     PopularUseCase,
     Limitations,
