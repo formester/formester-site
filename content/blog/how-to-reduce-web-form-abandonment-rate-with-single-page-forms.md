@@ -28,7 +28,7 @@ createdAt: 2023-09-15T17:37:37.965Z
 coverImg: /img/how-to-reduce-web-form-abandonment-rate-with-single-page-forms_.png
 coverImgAlt: How To Reduce Web Form Abandonment Rate With Single-page Forms?
 featured: false
-published: false
+published: true
 ---
 Have you ever had a web form on your website, all set and ready for your audience to fill out, but then it just sat there, untouched? 🙄
 
