@@ -255,7 +255,7 @@ Ask yourself: What is the primary goal of this form? What information or action 
 
 Establishing a precise purpose ensures that your form is focused and aligns with your objectives.
 
-Example: This [simple Opt-in](https://formester.com/templates/optin-form-1830/) Form lets users sign-up in exchange for receiving free tips.
+**Example:** This [simple Opt-in](https://formester.com/templates/optin-form-1830/) Form lets users sign-up in exchange for receiving free tips.
 
 ### 2. Prioritize Essential Fields
 
@@ -265,7 +265,7 @@ Avoid overwhelming users with a barrage of questions that may deter them from co
 
 Prioritizing crucial information is essential for achieving a higher completion rate.
 
-Example: [PayPal's checkout form prioritizes essential fields](https://www.paypalobjects.com/devdoc/basic-bnpl-credit-debit.png) related to payment and shipping information. By emphasizing these key details, the form streamlines the online shopping process, reducing cart abandonment.
+**Example:** [PayPal's checkout form prioritizes essential fields](https://www.paypalobjects.com/devdoc/basic-bnpl-credit-debit.png) related to payment and shipping information. By emphasizing these key details, the form streamlines the online shopping process, reducing cart abandonment.
 
 ### 3. Group Related Fields
 
@@ -283,7 +283,7 @@ This strategy keeps the initial form view clean and uncluttered, adapting to use
 
 You can use conditional logic to accomplish this.
 
-Example: [SurveyMonkey's survey form employs progressive disclosure](https://help.surveymonkey.com/en/surveymonkey/create/progress-bar/#:~:text=Progress%20bars%20let%20people%20to,Click%20the%20Design%20Survey%20tab.) by revealing questions one at a time as users progress. This gradual approach minimizes cognitive load, allowing users to focus on one question at a time.
+**Example:** [SurveyMonkey's survey form employs progressive disclosure](https://help.surveymonkey.com/en/surveymonkey/create/progress-bar/#:~:text=Progress%20bars%20let%20people%20to,Click%20the%20Design%20Survey%20tab.) by revealing questions one at a time as users progress. This gradual approach minimizes cognitive load, allowing users to focus on one question at a time.
 
 ### 5. Mobile Optimization
 
@@ -295,7 +295,7 @@ Extensive testing on smartphones and tablets guarantees a seamless experience fo
 
 Enhance the visual appeal of your form with engaging elements like icons, illustrations, and carefully chosen images. Visuals not only make the form more attractive but also serve as visual cues to guide users through the form.
 
-Example: [Canva's signup form uses engaging visuals](https://www.canva.com/en_in/help/sign-up-log-in/) that reflect the platform's design-oriented brand. These visuals not only capture users' attention but also convey the platform's creative nature.
+**Example:** [Canva's signup form uses engaging visuals](https://www.canva.com/en_in/help/sign-up-log-in/) that reflect the platform's design-oriented brand. These visuals not only capture users' attention but also convey the platform's creative nature.
 
 ### 7. Clear and Concise Labels
 
@@ -303,7 +303,7 @@ Craft clear and concise labels for each field, ensuring that users immediately u
 
 Label clarity is essential for an efficient and user-friendly form.
 
-Example: [Mailchimp's email list creation form](https://kinsta.com/wp-content/uploads/2019/05/mailchimp-form-example.png) is a shining example of clear and concise labels. Each field is labeled straightforwardly, and the minimalistic design promotes user understanding and completion.
+**Example:** [Mailchimp's email list creation form](https://kinsta.com/wp-content/uploads/2019/05/mailchimp-form-example.png) is a shining example of clear and concise labels. Each field is labeled straightforwardly, and the minimalistic design promotes user understanding and completion.
 
 ### 8. Progress Indicators
 
@@ -311,7 +311,7 @@ Employ progress indicators, such as progress bars or step numbers, to inform use
 
 These indicators provide a sense of direction, achievement, and motivation to finish the form.
 
-Example: [LinkedIn's profile creation form](https://in.linkedin.com/?src=go-pa&trk=sem-ga_campid.14650114788_asid.151761418307_crid.657403558721_kw.linkedin+profile+creation_d.c_tid.kwd-331455958217_n.g_mt.e_geo.9062140&mcid=6844056167778418689&cid=&gclid=CjwKCAjwgZCoBhBnEiwAz35RwspZoXanneEPrNnRaP2vPOtCRHeGCWe86g5DxqFl96B13_KrNV7gvBoCUCAQAvD_BwE&gclsrc=aw.ds&original_referer=https%3A%2F%2Fwww.google.com%2F) prominently displays a progress bar, indicating the completion status. Users can see how much of the form they've filled out, encouraging them to complete the process.
+**Example:** [LinkedIn's profile creation form](https://in.linkedin.com/?src=go-pa&trk=sem-ga_campid.14650114788_asid.151761418307_crid.657403558721_kw.linkedin+profile+creation_d.c_tid.kwd-331455958217_n.g_mt.e_geo.9062140&mcid=6844056167778418689&cid=&gclid=CjwKCAjwgZCoBhBnEiwAz35RwspZoXanneEPrNnRaP2vPOtCRHeGCWe86g5DxqFl96B13_KrNV7gvBoCUCAQAvD_BwE&gclsrc=aw.ds&original_referer=https%3A%2F%2Fwww.google.com%2F) prominently displays a progress bar, indicating the completion status. Users can see how much of the form they've filled out, encouraging them to complete the process.
 
 ### 9. Real-Time Validation
 
@@ -319,7 +319,7 @@ Implement real-time validation to detect errors as users type. 
 
 Provide immediate feedback and suggestions for correction. This feature prevents users from submitting incorrect or incomplete information.
 
-Example: [Google's account creation form](https://accounts.google.com/signup/v2/createaccount?continue=https%3A%2F%2Fmyaccount.google.com%3Futm_source%3Daccount-marketing-page%26utm_medium%3Dcreate-account-button&theme=glif&flowName=GlifWebSignIn&flowEntry=SignUp) offers real-time validation for password strength. 
+**Example:** [Google's account creation form](https://accounts.google.com/signup/v2/createaccount?continue=https%3A%2F%2Fmyaccount.google.com%3Futm_source%3Daccount-marketing-page%26utm_medium%3Dcreate-account-button&theme=glif&flowName=GlifWebSignIn&flowEntry=SignUp) offers real-time validation for password strength. 
 
 If a user's chosen password doesn't meet security requirements, the form provides immediate feedback on how to create a stronger password.
 
@@ -329,7 +329,7 @@ Place a clear and compelling CTA button with action-oriented text that conveys w
 
 The CTA should be prominent and motivate users to take the desired action.
 
-Example: [Shopify's single-page checkout form](https://help.shopify.com/en/manual/checkout-settings/checkout-extensibility/one-page-checkout) features a prominent "Complete Purchase" CTA button. 
+**Example:** [Shopify's single-page checkout form](https://help.shopify.com/en/manual/checkout-settings/checkout-extensibility/one-page-checkout) features a prominent "Complete Purchase" CTA button. 
 
 The button's text leaves no room for ambiguity, guiding users toward the final step of completing their purchase.
 
@@ -341,7 +341,7 @@ Display trust badges or security certifications if applicable. 
 
 Building trust is crucial for encouraging users to share their information.
 
-Example: E-commerce platforms often include trust badges during checkout. For instance, a padlock icon and a statement about secure payment methods reassure users and enhance trust in the transaction.
+**Example:** E-commerce platforms often include trust badges during checkout. For instance, a padlock icon and a statement about secure payment methods reassure users and enhance trust in the transaction.
 
 ### 12. User Testing
 
@@ -385,22 +385,22 @@ Follow these step-by-step instructions to get your form up and running:
 
 ### Step 1: Sign In or Sign Up
 
-Sign In: If you already have a Formester account, just [sign in with your credentials](https://app.formester.com/users/sign_in).
+**Sign In:** If you already have a Formester account, just [sign in with your credentials](https://app.formester.com/users/sign_in).
 
-OR;
+**OR;**
 
-Sign Up: If you're new to Formester, click on the "Sign Up" button to create a new account. 
+**Sign Up:** If you're new to Formester, click on the "**Sign Up**" button to create a new account. 
 
 Follow the prompts to provide your email, password, and other required information.
 
 ### Step 2: Start a New Form
 
 1. After signing in, you'll land on your Formester dashboard. 
-2. Click the "Create New Form" button to begin creating your single-page web form.
+2. Click the "**Create New Form**" button to begin creating your single-page web form.
 
-OR;
+**OR;**
 
-Choose a Template: [Formester provides a selection of templates](https://formester.com/) to kickstart your form creation. Select any form that matches your design expectations, and simply make minor branding edits, to personalize your form as per your own brand! 
+**Choose a Template:** [Formester provides a selection of templates](https://formester.com/) to kickstart your form creation. Select any form that matches your design expectations, and simply make minor branding edits, to personalize your form as per your own brand! 
 
 ### Step 3: Select Form Type
 
@@ -410,21 +410,21 @@ Here, you may give a name to your form, and select the type of service you want 
 
 Next, under the Type of Form Section, select Single Page.
 
-Note: You may always update the above, from the settings section, on your form dashboard.
+> **Note:** You may always update the above, from the settings section, on your form dashboard.
 
 ### Step 4: Build Your Form
 
 After making the above choices and settings, all you have to do is design your form!
 
-1. Now, you'll be in the form builder interface. Here, you can add various form elements like text fields, multiple-choice questions, checkboxes, and more. 
+* Now, you'll be in the form builder interface. Here, you can add various form elements like text fields, multiple-choice questions, checkboxes, and more. 
 
 To add an element, simply drag and drop it onto your form canvas.
 
-2. Customize each form element by clicking on it. 
+* Customize each form element by clicking on it. 
 
 You can edit the question, add options, and configure conditional logic if needed.
 
-3. Continue adding and configuring elements until you've built your entire form on one page. 
+* Continue adding and configuring elements until you've built your entire form on one page. 
 
 You can arrange and organize elements as you see fit.
 
@@ -436,7 +436,7 @@ You can arrange and organize elements as you see fit.
 
 Once you've designed your form, simply hit the Save button, so your form is saved.
 
-Note: You may use the Save button at any point during your form-creation process. 
+> **Note:** You may use the Save button at any point during your form-creation process. 
 
 Next, before publishing your form, click the "Preview" button to see how it will appear to users. 
 
