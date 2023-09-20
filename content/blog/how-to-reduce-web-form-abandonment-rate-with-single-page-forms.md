@@ -56,25 +56,16 @@ Understanding these potential user sentiments can help website designers and dev
 
 Here are some things a user might say or think before abandoning a web form:
 
-1. This form is too long: Users may feel overwhelmed by the number of fields and the time it would take to complete the form.
-
-2. It's not worth the effort: Users might question whether the benefits or value they'll receive from completing the form outweigh the time and effort required.
-
-3. I don't have the information: Users may not have all the necessary information or details on hand to complete the form, leading to frustration.
-
-4. It's too confusing: Complex or poorly designed forms can confuse users, making them uncertain about how to proceed.
-
-5. I'm concerned about privacy: If the form requests sensitive or personal information and doesn't provide adequate reassurance about data security, users may hesitate to continue.
-
-6. I made a mistake: Users might realize they made a mistake while entering information and either feel unsure about how to correct it or not want to invest the effort to fix it.
-
-7. I'll do it later: Some users might intend to return to the form later but never actually come back to complete it.
-
-8. I found what I needed elsewhere: If users find an alternative solution or source that doesn't require filling out a form, they may abandon the form in favor of that.
-
-9. Technical issues: If the form or the website experiences technical problems, users may give up and abandon the process.
-
-10. I got distracted: External distractions, such as phone calls, messages, or other notifications, can divert users' attention away from the form.
+1. **This form is too long:** Users may feel overwhelmed by the number of fields and the time it would take to complete the form.
+2. **It's not worth the effort:** Users might question whether the benefits or value they'll receive from completing the form outweigh the time and effort required.
+3. **I don't have the information:** Users may not have all the necessary information or details on hand to complete the form, leading to frustration.
+4. **It's too confusing:** Complex or poorly designed forms can confuse users, making them uncertain about how to proceed.
+5. **I'm concerned about privacy:** If the form requests sensitive or personal information and doesn't provide adequate reassurance about data security, users may hesitate to continue.
+6. **I made a mistake:** Users might realize they made a mistake while entering information and either feel unsure about how to correct it or not want to invest the effort to fix it.
+7. **I'll do it later:** Some users might intend to return to the form later but never actually come back to complete it.
+8. **I found what I needed elsewhere:** If users find an alternative solution or source that doesn't require filling out a form, they may abandon the form in favor of that.
+9. **Technical issues:** If the form or the website experiences technical problems, users may give up and abandon the process.
+10. **I got distracted:** External distractions, such as phone calls, messages, or other notifications, can divert users' attention away from the form.
 
 ## How To Identify If Your Web Form Is Being Abandoned?
 
@@ -405,7 +396,6 @@ Follow the prompts to provide your email, password, and other required informati
 ### Step 2: Start a New Form
 
 1. After signing in, you'll land on your Formester dashboard. 
-
 2. Click the "Create New Form" button to begin creating your single-page web form.
 
 OR;
