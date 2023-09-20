@@ -389,7 +389,7 @@ Regularly iterate on the design and functionality based on insights from user in
 
 Moreover, it is also important to reach out to users who have abandoned their forms. Send them follow-up messages and reminders, encouraging them to complete the form.
 
-Did you know - 19% of people will return to complete a form if the company reaches out to re-engage them.
+> Did you know - **19% of people will return to complete a form if the company reaches out to re-engage them.**
 
 By providing a simplified, efficient, and engaging form-filling process, single-page forms can significantly reduce web form abandonment rates. 
 
