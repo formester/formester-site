@@ -34,6 +34,8 @@ Have you ever had a web form on your website, all set and ready for your audienc
 
 Or, to put it differently, have you ever felt a bit like this when you're waiting for responses from your web forms:
 
+![Funny meme showing how it feels like an eternity to wait on web form responses!](/img/your-paragraph-text-1-.png "POV: You're waiting on web form responses!")
+
 Well, unfortunately, you might be dealing with what we call "web form abandonment." 😔
 
 ## What Is Web Form Abandonment?
@@ -51,6 +53,8 @@ According to Baymard Institute statistics (2018), [average form abandonment rate
 Users may express various sentiments or concerns before or when they decide to abandon a web form. 
 
 These sentiments often reflect their frustrations, doubts, or reasons for not completing the form. 
+
+![Funny meme showing how it feels when a user abandons your web form!](/img/your-paragraph-text.gif "POV: A user abandoned your web form")
 
 Understanding these potential user sentiments can help website designers and developers address these issues and [optimize web forms to reduce abandonment rates](https://formester.com/blog/tips-tricks-to-get-the-most-out-of-your-leads-on-formester/) and [improve the overall user experience](https://formester.com/blog/7-types-of-website-usability-survey-questions-to-ask-in-2023/).
 
