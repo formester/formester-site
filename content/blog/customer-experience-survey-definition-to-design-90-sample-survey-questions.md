@@ -219,7 +219,7 @@ CX surveys, particularly the Net Promoter Score (NPS), aim to determine customer
 4. If you've referred others, what motivated you to do so?
 5. How can we further improve to earn your loyalty and advocacy?
 
-### 3. Identify Pain Points 
+### 3. Identify Pain Points
 
 These surveys help in pinpointing specific pain points in the customer journey. By asking targeted questions, you can identify areas where customers encounter difficulties or frustrations.
 
@@ -236,7 +236,7 @@ These surveys help in pinpointing specific pain points in the customer journey. 
 4. How would you rate our response to your previous concerns or issues? (1-5 scale)
 5. Do you feel that your feedback is valued and acted upon by our company?
 
-### 4. Improve Product/Service Quality 
+### 4. Improve Product/Service Quality
 
 CX surveys provide insights into the perceived quality of your products or services. This information is invaluable for making necessary improvements and enhancements.
 
@@ -253,7 +253,7 @@ CX surveys provide insights into the perceived quality of your products or servi
 4. What suggestions do you have to further enhance the quality of our offerings?
 5. Would you be interested in participating in beta testing for new product/service features?
 
-### 5. Enhance Customer Retention 
+### 5. Enhance Customer Retention
 
 Understanding why customers leave or churn is crucial. CX surveys, especially retention surveys, aim to gather feedback from customers who are downgrading, canceling, or returning items, helping you reduce churn rates.
 
@@ -270,7 +270,7 @@ Understanding why customers leave or churn is crucial. CX surveys, especially re
 4. If yes, what were the primary reasons for your consideration?
 5. What initiatives or changes could we implement to ensure your continued satisfaction and loyalty?
 
-### 6. Assess Support and Service 
+### 6. Assess Support and Service
 
 CX surveys can evaluate the quality of customer support and service. They measure customer satisfaction with interactions involving your support team.
 
@@ -287,7 +287,7 @@ CX surveys can evaluate the quality of customer support and service. They measur
 4. Have you encountered any challenges in getting in touch with our support team? (Yes/No)
 5. How likely are you to reach out to our support team for assistance in the future? (1-5 scale)
 
-### 7. Optimize Website and App Usability 
+### 7. Optimize Website and App Usability
 
 For digital businesses, these surveys assess the usability and effectiveness of your website or app. They help in identifying areas that need improvement to enhance the user experience.
 
@@ -304,7 +304,7 @@ For digital businesses, these surveys assess the usability and effectiveness of 
 4. Have you experienced any technical issues or glitches while using our digital platforms? (Yes/No)
 5. How often do you visit our website/app for information or purchases? (Daily, Weekly, Monthly, Rarely, Never)
 
-### 8. Refine Communication Strategies 
+### 8. Refine Communication Strategies
 
 CX surveys evaluate the effectiveness of your communication strategies and messaging. They help in understanding whether your messages resonate with customers.
 
@@ -321,7 +321,7 @@ CX surveys evaluate the effectiveness of your communication strategies and messa
 4. Do you find our social media updates relevant and engaging? (Yes/No)
 5. What suggestions do you have for improving our communication with you?
 
-### 9. Monitor Employee Performance 
+### 9. Monitor Employee Performance
 
 Some CX surveys gather feedback on the performance of employees in customer-facing roles. This information can be valuable for employee training and development.
 
@@ -338,7 +338,7 @@ Some CX surveys gather feedback on the performance of employees in customer-faci
 4. Do you have any specific feedback or recognition for any of our customer-facing employees?
 5. How likely are you to seek assistance from our customer-facing employees in the future? (1-5 scale)
 
-### 10. Enhance Operational Efficiency 
+### 10. Enhance Operational Efficiency
 
 CX surveys can also assess the efficiency of internal processes as they relate to the customer experience. This is critical for streamlining operations and improving the customer journey.
 
@@ -355,7 +355,7 @@ CX surveys can also assess the efficiency of internal processes as they relate t
 4. Have you encountered any challenges related to our internal processes while interacting with us? (Yes/No)
 5. What recommendations do you have for enhancing the efficiency of our operations?
 
-### 11. Benchmark Against Competitors 
+### 11. Benchmark Against Competitors
 
 CX surveys allow you to compare your performance and customer experience metrics against competitors. Benchmarking helps you understand your position in the market.
 
@@ -372,7 +372,7 @@ CX surveys allow you to compare your performance and customer experience metrics
 4. Do you actively compare our offerings to those of our competitors before making a decision? (Yes/No)
 5. Are there any competitors you consider as providing a better customer experience than us? (Yes/No)
 
-### 12. Gather Customer Feedback 
+### 12. Gather Customer Feedback
 
 These surveys are a means to collect specific feedback and suggestions for improvement directly from customers. They provide actionable insights for decision-making.
 
@@ -389,7 +389,7 @@ These surveys are a means to collect specific feedback and suggestions for impro
 4. How likely are you to continue providing feedback to us in the future? (Very Likely, Likely, Neutral, Unlikely, Very Unlikely)
 5. Would you appreciate more opportunities to engage in feedback sessions or beta testing of our products/services? (Yes/No)
 
-### 13. Understand Customer Expectations 
+### 13. Understand Customer Expectations
 
 CX surveys aim to understand customer expectations and whether they are being met. This helps in aligning your strategies with customer needs.
 
@@ -406,7 +406,7 @@ CX surveys aim to understand customer expectations and whether they are being me
 4. Have you noticed improvements in how well we meet your expectations over time? (Yes/No)
 5. How well do you think we understand your unique needs as a customer? (Very Well, Somewhat Well, Not Well)
 
-### 14. Map Customer Journeys 
+### 14. Map Customer Journeys
 
 CX surveys, especially when combined with customer journey mapping, help in visualizing the entire customer journey. This helps in identifying pain points and opportunities for improvement.
 
@@ -423,7 +423,7 @@ CX surveys, especially when combined with customer journey mapping, help in visu
 4. Are there specific interactions or processes that stand out as exceptional in your customer journey with us?
 5. Have you ever considered switching to a competitor due to challenges in your customer journey with us? (Yes/No)
 
-### 15. Segment and Target 
+### 15. Segment and Target
 
 Gathering demographic information through CX surveys allows you to segment and target specific customer groups more effectively.
 
@@ -440,7 +440,7 @@ Gathering demographic information through CX surveys allows you to segment and t
 4. How do you typically prefer to be contacted by us for promotions and updates? (Email, SMS, Social Media, None)
 5. Are there specific products or services you believe are most relevant to your demographic group?
 
-### 16. Calculate Customer Lifetime Value (CLV) 
+### 16. Calculate Customer Lifetime Value (CLV)
 
 CX surveys help in understanding the value a customer brings to your organization over their lifetime, enabling better resource allocation.
 
@@ -457,7 +457,7 @@ CX surveys help in understanding the value a customer brings to your organizatio
 4. Do you actively seek out and take advantage of loyalty programs or incentives offered by our company? (Yes/No)
 5. How likely are you to continue doing business with our company in the long term? (Very Likely, Likely, Neutral, Unlikely, Very Unlikely)
 
-### 17. Track CX Trends 
+### 17. Track CX Trends
 
 Over time, CX surveys can reveal trends and changes in customer preferences and behaviors, helping you adapt your strategies accordingly.
 
@@ -474,7 +474,7 @@ Over time, CX surveys can reveal trends and changes in customer preferences and 
 4. Would you say your overall customer experience with our company has evolved positively or negatively over time?
 5. How likely are you to recommend our company to others based on your recent experiences? (Very Likely, Likely, Neutral, Unlikely, Very Unlikely)
 
-### 18. Align with Company Values 
+### 18. Align with Company Values
 
 CX surveys assess how well the customer experience aligns with your company's values and mission, ensuring alignment with your organizational culture.
 
@@ -493,11 +493,11 @@ CX surveys assess how well the customer experience aligns with your company's va
 
 By serving these diverse purposes, CX surveys provide valuable insights and serve as a foundation for enhancing the overall customer experience and driving business growth.
 
-Steps To Create And Publish A Customer Experience Survey Using Formetser
+## Steps To Create And Publish A Customer Experience Survey Using Formetser
 
 Designing a customer experience (CX) survey is a crucial step in gathering valuable insights from your audience. Formetser offers powerful features to help you create engaging and effective CX surveys. Follow these steps to design a CX survey that resonates with your audience and delivers actionable feedback:
 
-Step 1: Define Your Survey Objectives
+### Step 1: Define Your Survey Objectives
 
 Before diving into survey design, clearly define your objectives. Determine what specific aspects of the customer experience you want to assess and improve. 
 
@@ -505,25 +505,25 @@ Whether it's overall satisfaction, product quality, customer support, or website
 
 You may refer to the previous section to select a purpose for your Customer Experience Survey.
 
-Step 2: Sign Up and Log In
+### Step 2: Sign Up and Log In
 
 Visit Formetser and sign up for a FREE account if you haven't already!
 
 Next, log in to your account using your credentials.
 
-Step 3: Create a New Survey
+### Step 3: Create a New Survey
 
 Once logged in, click on the "Create Form" button to begin creating a new survey.
 
-Start from Scratch:
+#### Start from Scratch
 
 Begin with a blank canvas, allowing you to build your CX survey from the ground up. 
 
 This approach provides full creative control over the design, questions, and flow.
 
-OR;
+**OR;**
 
-Choose a Survey Template 
+#### Choose a Survey Template 
 
 Formetser offers a variety of pre-designed survey templates tailored for different purposes. You can select a template that aligns with your customer experience survey goals and customize the survey template by adding your branding elements, including your logo and brand colors.
 
@@ -531,7 +531,7 @@ Edit the survey questions to align with your specific objectives. You can modify
 
 Arrange the questions in the desired order and format.
 
-Step 4: Addition Of Questions
+### Step 4: Addition Of Questions
 
 On the left side of your dashboard, you'll find the various Form Fields and Question Types, that you may include in your survey.
 
@@ -539,19 +539,13 @@ Depending on your survey objectives, choose the appropriate form fields to effec
 
 These include:
 
-Text Fields: Gather open-ended text responses for qualitative feedback.
-
-Multiple-Choice Questions: Use multiple-choice questions for single or multiple answers.
-
-Rating Scales: Implement rating scales to measure satisfaction or agreement.
-
-Dropdown Menus: Provide a list of predefined options for respondents to choose from.
-
-Checkboxes: Allow respondents to select multiple options from a list.
-
-Picture Choices: Add images as Picture-choices when required.
-
-Matrix Grid: Create matrix-style questions for assessing multiple factors in one question.
+* **Text Fields:** Gather open-ended text responses for qualitative feedback.
+* **Multiple-Choice Questions:** Use multiple-choice questions for single or multiple answers.
+* **Rating Scales:** Implement rating scales to measure satisfaction or agreement.
+* **Dropdown Menus:** Provide a list of predefined options for respondents to choose from.
+* **Checkboxes:** Allow respondents to select multiple options from a list.
+* **Picture Choices:** Add images as Picture-choices when required.
+* **Matrix Grid:** Create matrix-style questions for assessing multiple factors in one question.
 
 Write questions that are easy to understand and directly address your survey objectives. Keep questions clear, concise, and free from jargon.
 
