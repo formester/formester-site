@@ -95,6 +95,9 @@
   --clr-primary: hsla(255, 45%, 40%, 1);
   --clr-primary-light: hsla(277, 100%, 93%, 1);
   --clr-dark: hsla(255, 56%, 18%, 1);
+  --clr-neutral-900: #171717;
+  --clr-neutral-700: #404040;
+  --clr-neutral-600: #525252;
 }
 
 /* === FONTS === */
