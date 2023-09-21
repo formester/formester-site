@@ -10,9 +10,12 @@
             <span class="hglt">Lead Generation</span> Success
           </h1>
           <p class="hero__subheading mt-3">
-            Effective data collection and management for businesses and
-            individuals alike. Transform your data-collection process & derive
-            valuable insights!
+            In this case study, we'll explore how your B2B company can leverage
+            Formester to create and optimize lead generation forms, leading to
+            significant improvements in conversions and sales. This case study
+            is designed to provide insights into the strategies and tactics that
+            your organization can employ to achieve enhanced lead generation
+            results.
           </p>
           <a
             href="https://app.formester.com/users/sign_up"
@@ -33,6 +36,7 @@
     <SmallIconsFeatureSection :featureData="solutions" />
     <Results />
     <Conclusion />
+    <FAQwithCategories :categories="caseStudyOne" />
   </div>
 </template>
 
@@ -41,6 +45,10 @@ import CaseStudyOneBackground from '@/components/case-study/CaseStudyOneBackgrou
 import SmallIconsFeatureSection from '@/components/SmallIconsFeatureSection.vue'
 import Results from '@/components/case-study/Results.vue'
 import Conclusion from '@/components/case-study/Conclusion.vue'
+import FAQwithCategories from '@/components/FAQwithCategories.vue'
+
+import getSiteMeta from '@/utils/getSiteMeta'
+import caseStudyOne from '@/faqs/case-study-1'
 
 export default {
   components: {
@@ -48,6 +56,7 @@ export default {
     SmallIconsFeatureSection,
     Results,
     Conclusion,
+    FAQwithCategories,
   },
   data() {
     return {
@@ -165,6 +174,131 @@ export default {
           },
         ],
       },
+      caseStudyOne: caseStudyOne,
+    }
+  },
+  computed: {
+    meta() {
+      const metaData = {
+        type: 'website',
+        url: 'https://formester.com/case-study-1',
+        title: "Uncovering Formester's Potential for Lead Generation Success",
+        description:
+          "In this case study, we'll explore how your B2B company can leverage Formester to create and optimize lead generation forms, leading to significant improvements in conversions and sales. This case study is designed to provide insights into the strategies and tactics that your organization can employ to achieve enhanced lead generation results.",
+        keywords: [
+          'Lead Generation',
+          'Lead Generation Success',
+          'form builder',
+          'lead generation forms',
+          'lead generation results',
+          'improving conversions and sales',
+          'form creation',
+          'web forms',
+          'digital surveys',
+          'form design',
+          'form templates',
+          'data collection',
+          'online questionnaire',
+          'survey tool',
+          'custom forms',
+          'form generator',
+          'form software',
+          'online data entry',
+          'form building',
+          'form creator',
+          'form management',
+          'form solutions',
+          'digital forms',
+          'form builder app',
+          'form making',
+          'responsive forms',
+          'form design tool',
+          'electronic forms',
+          'online inquiry form',
+          'form builder software',
+          'online form creator',
+          'online form builder',
+        ],
+      }
+      return getSiteMeta(metaData)
+    },
+    faqsSchema() {
+      const allFaqs = []
+
+      this.caseStudyOne.forEach((c) => {
+        if (c.faqs) {
+          allFaqs.push(...c.faqs)
+        }
+      })
+
+      // Generate the FAQ schema
+      return allFaqs.map((faq) => {
+        return {
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        }
+      })
+    },
+  },
+  head() {
+    return {
+      title: "Uncovering Formester's Potential for Lead Generation Success",
+      meta: [...this.meta],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://formester.com/case-study-1/',
+        },
+      ],
+    }
+  },
+  jsonld() {
+    return {
+      '@context': 'http://schema.org',
+      '@graph': [
+        {
+          '@type': 'Corporation',
+          '@id': 'https://acornglobus.com',
+          name: "Uncovering Formester's Potential for Lead Generation Success",
+          description:
+            "In this case study, we'll explore how your B2B company can leverage Formester to create and optimize lead generation forms, leading to significant improvements in conversions and sales. This case study is designed to provide insights into the strategies and tactics that your organization can employ to achieve enhanced lead generation results.",
+          logo: 'https://formester.com/logo.png',
+          url: 'https://formester.com',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Delaware',
+            addressCountry: 'United States',
+          },
+        },
+        {
+          '@type': 'BreadcrumbList',
+          '@id': 'https://acornglobus.com',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Formester',
+              item: 'https://formester.com/',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: "Uncovering Formester's Potential for Lead Generation Success",
+              item: 'https://formester.com/case-study-1/',
+            },
+          ],
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: this.faqsSchema,
+        },
+      ],
     }
   },
 }
