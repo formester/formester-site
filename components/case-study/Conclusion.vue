@@ -15,7 +15,7 @@
       </p>
     </div>
 
-    <div class="row mt-4">
+    <div class="row gx-5 mt-4">
       <div v-for="feature in features" :key="feature.title" class="col-md-6">
         <div class="d-flex flex-column align-items-start mt-4">
           <nuxt-img
