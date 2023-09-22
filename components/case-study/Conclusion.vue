@@ -15,14 +15,14 @@
       </p>
     </div>
 
-    <div class="row">
+    <div class="row mt-4">
       <div v-for="feature in features" :key="feature.title" class="col-md-6">
         <div class="d-flex flex-column align-items-start mt-4">
           <nuxt-img
             :src="`case-study-1/conclusion/${convertToImageName(
               feature.title
             )}.svg`"
-            class="img-fluid"
+            class="img-fluid sub__section-img"
             :alt="feature.altText"
             loading="lazy"
           />
@@ -107,5 +107,17 @@ export default {
   color: var(--clr-neutral-600);
   font-size: 16px;
   line-height: 160%;
+}
+
+.sub__section-img {
+  display: flex;
+  width: 64px;
+  height: 64px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid rgba(79, 56, 149, 0.05);
+  background: #fafafa;
 }
 </style>
