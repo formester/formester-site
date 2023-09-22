@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="feature__hero position-relative">
+    <div class="feature__hero position-relative py-5">
       <div class="container">
         <div
           class="d-flex flex-column justify-content-center align-items-center text-center mt-5"
@@ -24,11 +24,11 @@
           >
         </div>
       </div>
-      <!-- <img
-        src="@/assets/images/case-study/case-study-hero-bg.svg"
+      <img
+        :src="require(`@/assets/images/case-study-1/case-study-hero-bg.png`)"
         alt="background showing few of the ui elements of formester"
-        class="hero__background position-absolute"
-      /> -->
+        class="hero__background position-absolute d-none d-lg-block"
+      />
     </div>
 
     <CaseStudyOneBackground />
@@ -305,6 +305,13 @@ export default {
 </script>
 
 <style scoped>
+.hero__background {
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  opacity: 30%;
+}
+
 .hero__heading {
   font-size: var(--ft-big-heading);
   font-weight: 700;
