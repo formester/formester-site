@@ -1,6 +1,6 @@
 <template>
   <div class="container py-5">
-    <div class="heading d-flex flex-column text-center">
+    <div class="heading d-flex flex-column">
       <span class="section__subtext">Results</span>
       <h2 class="section__heading">
         Transforming Lead Generation with Formester Web Forms
@@ -15,7 +15,7 @@
     <div class="templates mt-md-5">
       <div v-for="(feature, idx) in features" :key="idx">
         <div
-          class="card p-3 d-flex align-items-center justify-items-center text-center align-items-md-start text-md-start"
+          class="card d-flex align-items-center justify-items-center text-center align-items-md-start text-md-start"
         >
           <nuxt-img
             :src="`case-study-1/results/${convertToImageName(
@@ -94,7 +94,6 @@ export default {
 
 .templates {
   width: 100%;
-  padding: 1.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: min-content;
