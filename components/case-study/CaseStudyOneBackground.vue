@@ -172,12 +172,6 @@
 
 <script>
 export default {
-  props: {
-    featureData: {
-      type: Object,
-      required: true,
-    },
-  },
   methods: {
     convertToImageName(text) {
       return text.toLowerCase().replace(/&/g, 'and').replace(/ /g, '-')
