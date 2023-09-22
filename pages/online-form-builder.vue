@@ -147,7 +147,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/online-form-building/',
+          href: 'https://formester.com/online-form-builder/',
         },
       ],
     }
