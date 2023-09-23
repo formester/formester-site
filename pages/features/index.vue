@@ -34,9 +34,34 @@ export default {
     Testimonials,
     TemplateSection,
   },
-  data() {
-    return {
-      features1: [
+  setup() {
+    const randomTestimonials = ref([]);
+
+    const fetchRandomTestimonials = async () => {
+      try {
+        const testimonials = await allTestimonials;
+        const randIndex = Math.floor(Math.random() * (testimonials.length - 2));
+        randomTestimonials.value = testimonials.slice(randIndex, randIndex + 2);
+        console.log(randomTestimonials, 'random Testimonials');
+      } catch (error) {
+        console.error('Error fetching random testimonials:', error);
+      }
+    };
+
+    onMounted(() => {
+      fetchRandomTestimonials();
+    });
+
+    const meta = ref({
+      type: 'website',
+      url: 'https://formester.com/features/',
+      title: 'Feature Page - Formester',
+      description: 'Experience the perfect blend of simplicity and versatility, empowering you to create engaging and efficient forms effortlessly.',
+      mainImage: 'https://formester.com/formester-form-builder-background.png',
+      mainImageAlt: 'Form builder showing drag and drop functionality',
+    });
+
+    const features1 = ref ([
         {
           heading: 'HTML Form Backend',
           description:
@@ -119,8 +144,9 @@ export default {
           ],
           link: 'spam-protection',
         },
-      ],
-      features2: [
+      ]);
+
+      const features2 = ref ([
         {
           heading: 'Powerful Analytics',
           description:
@@ -203,31 +229,14 @@ export default {
           ],
           link: 'digital-signature',
         },
-      ],
-    }
-  },
-  async asyncData() {
-    let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(
-      Math.random() * (randomTestimonials.length - 2)
-    )
-    randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
-    return { randomTestimonials }
-  },
-  computed: {
-    meta() {
-      const metaData = {
-        type: 'website',
-        url: 'https://formester.com/features/',
-        title: 'Feature Page - Formester',
-        description:
-          "Experience the perfect blend of simplicity and versatility, empowering you to create engaging and efficient forms effortlessly.",
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with powerful analytics page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with powerful analytics page image alt
-      }
-      return getSiteMeta(metaData)
-    },
+      ])
+
+    return {
+      randomTestimonials,
+      meta,
+      features1,
+      features2
+    };
   },
   head() {
     return {
