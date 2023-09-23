@@ -4,54 +4,56 @@ import getSiteMeta from './utils/getSiteMeta'
 const axios = require('axios')
 const meta = getSiteMeta()
 
-export default {
+export default defineNuxtConfig({
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
-  head: {
-    title: 'No Code Form Builder | Online HTML Form Builder - Formester',
-    meta: [
-      ...meta,
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        name: 'robots',
-        content: 'index, follow',
-      },
-      { name: 'format-detection', content: 'telephone=no' },
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        hid: 'canonical',
-        rel: 'canonical',
-        href: 'https://formester.com/',
-      },
-    ],
-    // Custom Javascript
-    script: [
-      {
-        src: '/bootstrap.min.js',
-        defer: true,
-        async: true,
-      },
-      {
-        src: '/js/ga.js',
-        defer: true,
-        async: true,
-      },
-      // {
-      //   src: '/js/hotjar.js',
-      //   defer: true,
-      //   async: true,
-      // },
-      {
-        src: '/js/crisp.js',
-        defer: true,
-        async: true,
-      },
-    ],
+  app: {
+    head: {
+      title: 'No Code Form Builder | Online HTML Form Builder - Formester',
+      meta: [
+        ...meta,
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          name: 'robots',
+          content: 'index, follow',
+        },
+        { name: 'format-detection', content: 'telephone=no' },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://formester.com/',
+        },
+      ],
+      // Custom Javascript
+      script: [
+        {
+          src: '/bootstrap.min.js',
+          defer: true,
+          async: true,
+        },
+        {
+          src: '/js/ga.js',
+          defer: true,
+          async: true,
+        },
+        // {
+        //   src: '/js/hotjar.js',
+        //   defer: true,
+        //   async: true,
+        // },
+        {
+          src: '/js/crisp.js',
+          defer: true,
+          async: true,
+        },
+      ],
+    },
   },
 
   router: {
@@ -74,19 +76,19 @@ export default {
         }
       })
       let { data: response } = await axios.get('https://app.formester.com/template_categories.json')
-        let categories = response.map((category) => {
-          return `/templates/categories/${category.slug}`
-        })
+      let categories = response.map((category) => {
+        return `/templates/categories/${category.slug}`
+      })
       const blogs = await getRoutes()
       return blogs.concat(templates, categories)
     },
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css 
+  // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~/assets/css/bootstrap.min.css', '~/assets/css/main.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
+plugins: [
     '~plugins/jsonld',
     { src: '~/plugins/notifications-client', ssr: false },
   ],
@@ -96,24 +98,19 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxt/image',
+    '@nuxtjs/pwa',
+    '@nuxtjs/sitemap',
+
     // [
     //   '@nuxtjs/google-analytics',
     //   {
-    //     id: 'UA-99986844-1', 
+    //     id: 'UA-99986844-1',
     //   },
     // ],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    '@nuxtjs/robots',
-    '@nuxtjs/axios',
-    '@nuxtjs/pwa',
-    '@nuxt/content',
-    '@nuxtjs/sitemap',
-  ],
-
+  modules: ['@nuxtjs/robots', '@nuxt/content', '@nuxt/image'],
   // Hooks configuration - https://content.nuxtjs.org/advanced/
   hooks: {
     'content:file:beforeInsert': (document) => {
@@ -125,7 +122,7 @@ export default {
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+axios: {},
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
@@ -155,7 +152,7 @@ export default {
     },
     fallback: true,
   },
-  content: {
+content: {
     liveEdit: false,
   },
 
@@ -168,4 +165,4 @@ export default {
   env: {
     baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'http://localhost:3000',
   },
-}
+})
