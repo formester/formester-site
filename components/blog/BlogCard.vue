@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
+  <NuxtLink :to="{ name: 'blog-slug', params: { slug: article._path.replace(/^\/blog\//, '') } }">
     <img
       :src="article.coverImg"
       class="rounded img-fluid"
@@ -14,7 +14,7 @@
       </div>
       <span class="mt-2 blog__timetoRead">
         <ClockIcon color="#828282" />
-        {{ article.readingStats.text }}
+        <!-- {{ article.readingStats.text }} -->
       </span>
     </div>
   </NuxtLink>
@@ -32,6 +32,7 @@ export default {
   methods: {
     formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      console.log(this.article);
       return new Date(date).toLocaleDateString('en', options)
     },
   },
