@@ -152,6 +152,24 @@ axios: {},
     },
     fallback: true,
   },
+  router: {
+    routes: async () => {
+      try {
+        let { data } = await axios.get('https://app.formester.com/templates.json')
+        let templatesRoute = data.map((template) => {
+          return `/templates/${template.slug}`
+        })
+        let { data: response } = await axios.get('https://app.formester.com/template_categories.json')
+        let categoriesRoute = response.map((category) => {
+          return `/templates/categories/${category.slug}`
+        })
+        return [...templatesRoute, ...categoriesRoute]
+      } catch (error) {
+        return [];
+      }
+    },
+    fallback: true,
+  },
 content: {
     liveEdit: false,
   },
@@ -163,6 +181,9 @@ content: {
 
   // Enviornment variable for the base url of the app
   env: {
-    baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'http://localhost:3000',
+    baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'http://localhost:3001',
   },
+  devServer: {
+    port: 8080
+  }
 })

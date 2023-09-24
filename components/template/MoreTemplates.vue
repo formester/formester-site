@@ -51,9 +51,9 @@
     <div class="mb-5">
       <div v-if="templates && templates.length" class="templates">
         <div v-for="(template, idx) in templates" :key="idx" class="template">
-          <NuxtLink
+          <!-- <NuxtLink
             :to="{ name: 'templates-slug', params: { slug: template.slug } }"
-          >
+          > -->
             <img
               v-if="template.previewImageUrl"
               class="img-fluid pointer template_img"
@@ -69,7 +69,7 @@
             <h2 class="template-name pointer">
               {{ template.name }}
             </h2>
-          </NuxtLink>
+          <!-- </NuxtLink> -->
         </div>
       </div>
       <div v-if="templates && templates.length" class="d-flex align-items-center justify-content-center mt-4">

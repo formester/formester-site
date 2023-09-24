@@ -7,10 +7,8 @@
       <div
         class="d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start mt-xl-0 mt-md-5 hero__info_container"
       >
-        <h1 class="section__heading">{{ template.name }}</h1>
-        <p class="hero__subheading mt-3">
-          {{ template.description }}
-        </p>
+        <h1 class="section__heading">{{ template?.name }}</h1>
+        <p class="hero__subheading mt-3">{{ template?.description }}</p>
         <div class="btns-container d-flex align-items-center mt-2">
           <button class="btn btn-use_template" @click="redirectTo">
             Use Template
@@ -25,11 +23,10 @@
         @click="openPreviewModal"
       >
         <img
-          :src="template.previewImageUrl"
+          :src="template?.previewImageUrl"
           alt="Hero-Image"
           class="img-fluid hero__image rounded pointer"
         />
-
         <div class="template__preview-btn d-flex align-itens-center">
           <nuxt-img src="/eye-icon.svg" alt="template preview button" />
           <span class="template__preview-btn__text">Preview</span>
@@ -37,10 +34,10 @@
       </div>
     </section>
 
-    <Faq v-if="template.faqs" :faqs="template.faqs" />
+    <Faq v-if="template?.faqs" :faqs="template?.faqs" />
 
     <!-- More templates section -->
-    <more-templates :categories="categories" :template-slug="template.slug" />
+    <more-templates :categories="categories" :template-slug="template?.slug" />
 
     <!-- Preview Template Modal -->
     <template-preview-modal
@@ -52,10 +49,65 @@
   </div>
 </template>
 
+<script setup>
+import { ref } from 'vue'
+// import { useAxios } from '@nuxt/http';
+import getSiteMeta from '@/utils/getSiteMeta'
+
+const template = ref(null)
+const categories = ref([])
+const showPreviewModal = ref(false)
+
+const route = useRoute().params
+
+const fetchTemplate = async (slug) => {
+  try {
+    const response = await fetch(
+      `https://app.formester.com/templates/${slug}.json`
+    )
+    const data = await response.json()
+    template.value = data
+    console.log(template.value.slug);
+  } catch (error) {
+    console.error('Error fetching template:', error)
+  }
+}
+
+const fetchCategories = async () => {
+  try {
+    const response = await fetch(
+      'https://app.formester.com/template_categories.json'
+    )
+    const data = await response.json()
+    categories.value = data
+  } catch (error) {
+    console.error('Error fetching categories:', error)
+  }
+}
+
+const redirectTo = () => {
+  window.open(
+    `https://app.formester.com/forms/new?template_id=${template.value.id}`,
+    '_blank'
+  )
+}
+
+const openPreviewModal = () => {
+  showPreviewModal.value = true
+}
+
+const closePreviewModal = () => {
+  showPreviewModal.value = false
+}
+
+onMounted(() => {
+  const slug = route.slug
+  fetchTemplate(slug)
+  fetchCategories()
+})
+</script>
+
 <script>
-// MetaTags
-import getSiteMeta from '../../utils/getSiteMeta'
-// Components
 import PreviewModal from '../../components/template/PreviewModal.vue'
 import MoreTemplates from '../../components/template/MoreTemplates.vue'
 import Faq from '../../components/template/Faq.vue'
@@ -66,29 +118,38 @@ export default {
     MoreTemplates,
     Faq,
   },
-  async asyncData({ $axios, params }) {
-    const { data: template } = await $axios.get(
-      `https://app.formester.com/templates/${params.slug}.json`
-    )
-
-    const { data: categories } = await $axios.get(
-      'https://app.formester.com/template_categories.json'
-    )
-    return { template, categories }
-  },
-  data() {
+  head() {
+    const { name, keywords } = template.value || {}
     return {
-      showPreviewModal: false,
+      title: name ? `${name} | Formester` : 'Formester',
+      meta: [
+        ...(template.value ? this.meta : []),
+        {
+          name: 'keywords',
+          content: keywords,
+        },
+      ],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: template.value
+            ? `https://formester.com/templates/${this.$route.params.slug}/`
+            : '',
+        },
+      ],
     }
   },
   computed: {
     meta() {
       const { name, description, metaTitle, metaDescription, previewImageUrl } =
-        this.template || {}
+        template.value || {}
 
       const metaData = {
         type: 'website',
-        url: `https://formester.com/templates/${this.$route.params.slug}/`,
+        url: template.value
+          ? `https://formester.com/templates/${this.$route.params.slug}/`
+          : '',
         title: metaTitle || name || 'Form Template | Formester',
         description:
           metaDescription ||
@@ -102,7 +163,7 @@ export default {
       return getSiteMeta(metaData)
     },
     faqsSchema() {
-      return (this.template.faqs || []).map((faq) => {
+      return (template.value?.faqs || []).map((faq) => {
         return {
           '@type': 'Question',
           name: faq.question,
@@ -112,79 +173,6 @@ export default {
           },
         }
       })
-    },
-  },
-  head() {
-    const { name, keywords } = this.template || {};
-    return {
-      title: name
-        ? `${name} | Formester`
-        : 'Formester',
-      meta: [
-        ...this.meta,
-        {
-          name: 'keywords',
-          content: keywords,
-        },
-      ],
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: `https://formester.com/templates/${this.$route.params.slug}/`,
-        },
-      ],
-    }
-  },
-  jsonld() {
-    const { name, description, previewImageUrl, category  } = this.template || {}
-    return [
-      {
-        '@context': 'https://schema.org',
-        '@type': 'WebPage',
-        name: name,
-        description: description,
-        image: previewImageUrl,
-        url: `https://formester.com/templates/${this.$route.params.slug}/`,
-        mainEntity: {
-          '@type': 'CreativeWork',
-          name: name,
-          description: description,
-          image: previewImageUrl,
-          url: `https://formester.com/templates/${this.$route.params.slug}/`,
-          author: {
-            '@type': 'Organization',
-            name: 'Formester',
-            url: 'https://formester.com/',
-          },
-        },
-        isPartOf: {
-          '@type': 'CollectionPage',
-          name: category?.name,
-          url: `https://formester.com/templates/categories/${category?.slug}/`,
-          description:
-            'Browse our collection of Research Form templates for free.',
-        },
-      },
-      {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: this.faqsSchema,
-      },
-    ]
-  },
-  methods: {
-    redirectTo() {
-      window.open(
-        `https://app.formester.com/forms/new?template_id=${this.template.id}`,
-        '_blank'
-      )
-    },
-    openPreviewModal() {
-      this.showPreviewModal = true
-    },
-    closePreviewModal() {
-      this.showPreviewModal = false
     },
   },
 }

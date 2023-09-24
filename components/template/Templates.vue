@@ -8,7 +8,8 @@
     </div>
     <div class="w-100">
       <h1 class="heading">
-        {{ $route.params.slug ? $route.params.slug.replace('-', ' ') : '' }}
+        <!-- {{ route.slug ? route.slug.replace('-', ' ') : '' }} -->
+        {{ formattedCategoryHeading }}
         Templates
       </h1>
       <div v-if="templates && templates.length" class="templates">
@@ -26,9 +27,23 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import TemplateCategories from './TemplateCategories.vue'
 import TemplateCard from './TemplateCard.vue'
+const route = useRoute().params
+const templateCategoryHeading = ref(route.slug);
+
+const formattedCategoryHeading = computed(() => {
+  if (templateCategoryHeading.value && templateCategoryHeading.value.length > 0) {
+    const firstElement = templateCategoryHeading.value[0];
+    return firstElement.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+  }
+  return '';
+});
+
+</script>
+
+<script>
 export default {
   components: { TemplateCategories, TemplateCard },
   props: ['activeCategory', 'templates', 'templateCategories'],

@@ -1,6 +1,6 @@
 <template>
   <div class="template">
-    <NuxtLink :to="{ name: 'templates-slug', params: { slug: template.slug } }">
+    <NuxtLink :to="`/templates/${template.slug}`">
       <div v-if="loading" class="image-skeleton"></div>
       <img
         class="img-fluid pointer template-preview__img"
