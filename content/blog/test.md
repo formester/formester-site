@@ -1,6 +1,6 @@
 ---
-title: test
-description: "test "
+title: test title updated
+description: test description updated
 metaTitle: test
 metaDescription: test updated
 keywords: tes
@@ -11,4 +11,4 @@ coverImgAlt: test
 featured: false
 published: false
 ---
-t﻿est
+t﻿est body updated
