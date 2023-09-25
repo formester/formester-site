@@ -36,23 +36,23 @@
     <SmallIconsFeatureSection :featureData="solutions" />
     <Results />
     <Conclusion />
-    <FAQwithCategories :categories="caseStudyOne" />
+    <FAQwithCategories :categories="formesterLeadGenerationCaseStudy" />
   </div>
 </template>
 
 <script>
-import CaseStudyOneBackground from '@/components/case-study/CaseStudyOneBackground.vue'
+import Background from '@/components/case-study/formester-for-lead-generation-success/Background.vue'
 import SmallIconsFeatureSection from '@/components/SmallIconsFeatureSection.vue'
-import Results from '@/components/case-study/Results.vue'
-import Conclusion from '@/components/case-study/Conclusion.vue'
+import Results from '@/components/case-study/formester-for-lead-generation-success/Results.vue'
+import Conclusion from '@/components/case-study/formester-for-lead-generation-success/Conclusion.vue'
 import FAQwithCategories from '@/components/FAQwithCategories.vue'
 
 import getSiteMeta from '@/utils/getSiteMeta'
-import caseStudyOne from '@/faqs/case-study-1'
+import formesterLeadGenerationCaseStudy from '@/faqs/formester-lead-generation-case-study'
 
 export default {
   components: {
-    CaseStudyOneBackground,
+    Background,
     SmallIconsFeatureSection,
     Results,
     Conclusion,
@@ -174,14 +174,14 @@ export default {
           },
         ],
       },
-      caseStudyOne: caseStudyOne,
+      formesterLeadGenerationCaseStudy: formesterLeadGenerationCaseStudy,
     }
   },
   computed: {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/case-study-1',
+        url: 'https://formester.com/using-formester-for-lead-generation-success',
         title: "Uncovering Formester's Potential for Lead Generation Success",
         description:
           "In this case study, we'll explore how your B2B company can leverage Formester to create and optimize lead generation forms, leading to significant improvements in conversions and sales. This case study is designed to provide insights into the strategies and tactics that your organization can employ to achieve enhanced lead generation results.",
@@ -225,7 +225,7 @@ export default {
     faqsSchema() {
       const allFaqs = []
 
-      this.caseStudyOne.forEach((c) => {
+      this.formesterLeadGenerationCaseStudy.forEach((c) => {
         if (c.faqs) {
           allFaqs.push(...c.faqs)
         }
@@ -252,7 +252,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/case-study-1/',
+          href: 'https://formester.com/using-formester-for-lead-generation-success/',
         },
       ],
     }
@@ -289,7 +289,7 @@ export default {
               '@type': 'ListItem',
               position: 2,
               name: "Uncovering Formester's Potential for Lead Generation Success",
-              item: 'https://formester.com/case-study-1/',
+              item: 'https://formester.com/using-formester-for-lead-generation-success/',
             },
           ],
         },
@@ -316,6 +316,29 @@ export default {
   font-size: var(--ft-big-heading);
   font-weight: 700;
   line-height: 72px;
+}
+
+.section__subtext {
+  color: var(--clr-primary);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 160%;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+}
+
+.section__heading {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--clr-neutral-900);
+}
+
+.section__description {
+  color: var(--clr-neutral-700);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%;
 }
 
 @media screen and (max-width: 600px) {

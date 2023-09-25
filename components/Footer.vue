@@ -222,6 +222,21 @@
                   Formester vs Formstack
                 </NuxtLink>
               </li>
+            </ul>
+
+            <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
+              Case Studies
+            </h5>
+
+            <ul class="list-unstyled mt-2">
+              <li class="mt-2">
+                <NuxtLink
+                  to="/using-formester-for-lead-generation-success/"
+                  class="footer__link"
+                >
+                  Formester For Lead Generation Success
+                </NuxtLink>
+              </li>
               <li class="mt-2">
                 <div class="socials mt-4">
                   <a

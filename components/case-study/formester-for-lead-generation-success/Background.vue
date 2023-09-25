@@ -45,7 +45,7 @@
         <nuxt-img
           class="sub__section-img img-fluid"
           src="case-study-1/background/importance-of-lead-generation.png"
-        ></nuxt-img>
+        />
       </div>
     </div>
 
@@ -89,7 +89,7 @@
         <nuxt-img
           class="sub__section-img img-fluid order-xl-first"
           src="case-study-1/background/role-of-lead-generation-forms.png"
-        ></nuxt-img>
+        />
       </div>
     </div>
 
@@ -127,7 +127,7 @@
         <nuxt-img
           class="sub__section-img img-fluid"
           src="case-study-1/background/designing-effective-forms.png"
-        ></nuxt-img>
+        />
       </div>
     </div>
 
@@ -164,7 +164,7 @@
         <nuxt-img
           class="sub__section-img img-fluid order-xl-first"
           src="case-study-1/background/formester-a-valuable-tool.png"
-        ></nuxt-img>
+        />
       </div>
     </div>
   </div>
@@ -181,29 +181,6 @@ export default {
 </script>
 
 <style scoped>
-.section__subtext {
-  color: var(--clr-primary);
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 160%;
-  letter-spacing: 0.32px;
-  text-transform: uppercase;
-}
-
-.section__heading {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 150%;
-  color: var(--clr-neutral-900);
-}
-
-.section__description {
-  color: var(--clr-neutral-700);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 160%;
-}
-
 .sub__section-heading {
   color: var(--clr-neutral-900);
   font-size: 28px;

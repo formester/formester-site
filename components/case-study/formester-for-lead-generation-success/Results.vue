@@ -69,29 +69,6 @@ export default {
 </script>
 
 <style scoped>
-.section__subtext {
-  color: var(--clr-primary);
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 160%;
-  letter-spacing: 0.32px;
-  text-transform: uppercase;
-}
-
-.section__heading {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 150%;
-  color: var(--clr-neutral-900);
-}
-
-.section__description {
-  color: var(--clr-neutral-700);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 160%;
-}
-
 .templates {
   width: 100%;
   display: grid;

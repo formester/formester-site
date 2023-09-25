@@ -16,19 +16,19 @@
     </div>
 
     <div class="row gx-5 mt-4">
-      <div v-for="feature in features" :key="feature.title" class="col-md-6">
+      <div v-for="conclusion in conclusions" :key="conclusion.title" class="col-md-6">
         <div class="d-flex flex-column align-items-start mt-4">
           <nuxt-img
             :src="`case-study-1/conclusion/${convertToImageName(
-              feature.title
+              conclusion.title
             )}.svg`"
             class="img-fluid sub__section-img"
-            :alt="feature.altText"
+            :alt="conclusion.altText"
             loading="lazy"
           />
-          <h3 class="sub__section-heading mt-3 mb-2">{{ feature.title }}</h3>
-          <p class="subheading__text mt-2">{{ feature.description1 }}</p>
-          <p class="subheading__text mt-2">{{ feature.description2 }}</p>
+          <h3 class="sub__section-heading mt-3 mb-2">{{ conclusion.title }}</h3>
+          <p class="subheading__text mt-2">{{ conclusion.description1 }}</p>
+          <p class="subheading__text mt-2">{{ conclusion.description2 }}</p>
         </div>
       </div>
     </div>
@@ -39,7 +39,7 @@
 export default {
   data() {
     return {
-      features: [
+      conclusions: [
         {
           title: 'Comprehensive Solutions',
           description1:
@@ -73,29 +73,6 @@ export default {
 </script>
 
 <style scoped>
-.section__subtext {
-  color: var(--clr-primary);
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 160%;
-  letter-spacing: 0.32px;
-  text-transform: uppercase;
-}
-
-.section__heading {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 150%;
-  color: var(--clr-neutral-900);
-}
-
-.section__description {
-  color: var(--clr-neutral-700);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 160%;
-}
-
 .sub__section-heading {
   color: var(--clr-neutral-900);
   font-size: 24px;

@@ -1,4 +1,4 @@
-const caseStudyOne = [
+const formesterLeadGenerationCaseStudy = [
   {
     title: 'Formester Overview',
     faqs: [
@@ -280,4 +280,4 @@ const caseStudyOne = [
   },
 ]
 
-export default caseStudyOne
+export default formesterLeadGenerationCaseStudy 
