@@ -142,7 +142,7 @@ schema:
         }]
       }
 ---
-If you want to accelerate your business, you must understand the nerves of your customers. The Survey plays a vital role here.
+If you want us to accelerate your business, you must understand the nerves of your customers. The Survey plays a vital role here.
 
 Surveys can be used to determine respondents' perspectives and experiences. With analytical data, an accurate survey can provide a blueprint for how to proceed to achieve the goal. This analytical data, which represents the behaviour and opinions of the surveyed census, aids in the development of important strategies.
 
