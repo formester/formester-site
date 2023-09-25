@@ -164,7 +164,7 @@ export default {
   },
   head() {
     return {
-      title: 'Typeform 101: All About Typeform\'s Forms by Formester!',
+      title: "Typeform 101: All About Typeform's Forms by Formester!",
       meta: [...this.meta],
       link: [
         {
@@ -206,7 +206,7 @@ export default {
             {
               '@type': 'ListItem',
               position: 2,
-              name: 'Typeform 101: All About Typeform\'s Forms by Formester!',
+              name: "Typeform 101: All About Typeform's Forms by Formester!",
               item: 'https://formester.com/typeform-101/',
             },
           ],

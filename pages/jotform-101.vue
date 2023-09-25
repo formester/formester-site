@@ -90,7 +90,7 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/jotform-101/',
-        title: 'Jotform 101: All About Jotform’s Forms by Formester!',
+        title: "Jotform 101: All About Jotform's Forms by Formester!",
         description:
           'Discover everything about form building using Jotform: Presented by Formester, uncover Jotform’s key features, FAQs, limitations & more!',
         mainImage: 'https://formester.com/jotform101-hero-section.png', // need to update with auto-responder page image
@@ -163,7 +163,7 @@ export default {
   },
   head() {
     return {
-      title: 'Jotform 101: All About Jotform’s Forms by Formester!',
+      title: "Jotform 101: All About Jotform's Forms by Formester!",
       meta: [...this.meta],
       link: [
         {
@@ -181,7 +181,7 @@ export default {
         {
           '@type': 'Corporation',
           '@id': 'https://acornglobus.com',
-          name: 'Jotform 101: All About Jotform’s Forms by Formester!',
+        name: "Jotform 101: All About Jotform's Forms by Formester!",
           description:
             "Discover Jotform's full potential with Formester's guide. Unlock powerful form building features, tips & tricks!",
           logo: 'https://formester.com/logo.png',
@@ -205,7 +205,7 @@ export default {
             {
               '@type': 'ListItem',
               position: 2,
-              name: 'Jotform 101: All About Jotform’s Forms by Formester!',
+              name: "Jotform 101: All About Jotform’s Forms by Formester!",
               item: 'https://formester.com/jotform101/',
             },
           ],
