@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="{ name: 'blog-slug', params: { slug: article._path.replace(/^\/blog\//, '') } }">
+  <NuxtLink :to="article._path">
     <img
       :src="article.coverImg"
       class="rounded img-fluid"

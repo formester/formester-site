@@ -3,347 +3,279 @@
     <div class="container position-relative">
       <article
         class="container mw-920 mt-8rem"
-        :class="{ 'mb-3rem': !(article.cta && article.cta.hidden) }"
+        :class="{ 'mb-3rem': !(article?.cta && article?.cta.hidden) }"
       >
-      <div class="blog__header">
-        <!-- <NuxtLink
-          :to="`/blog/`"
-          class="blog__back"
-          :class="article.toc.length ? 'blog__back__margin' : ''"
-        > -->
-          <span>← Back</span>
-        <!-- </NuxtLink> -->
-        <div class="social__links">
-          <a :href="`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${article.title} by @_Formester_ `" @click="googleAnalytics('twitter')" class="social-icons" target="_blank">
-            <TwitterIcon />
-          </a>
-          <a  :href="`https://www.facebook.com/sharer.php?u=${encodedUrl}`" @click="googleAnalytics('facebook')" class="social-icons" target="_blank">
-            <FacebookIcon />
-          </a>
-          <a  :href="`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}`" @click="googleAnalytics('linkedin')" class="social-icons" target="_blank">
-            <LinkdinIcon />
-          </a>
-          <span class="social-icons" @click="copyToClipboard">
-            <CopyLinkIcon />
-          </span>
-        </div>
-      </div>
-        <!-- <nav
-          v-if="article.toc.length"
-          class="navbar navbar-expand bg-white sticky-top py-3"
-        >
-          <div class="collapse navbar-collapse">
-            <ul class="navbar-nav">
-              <li class="nav-item dropdown">
-                <a
-                  class="dropdown-toggle"
-                  href="#"
-                  id="tocMenuLink"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Table of Contents
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="tocMenuLink">
-                  <li v-for="link of article.toc" :key="link.id">
-                    <NuxtLink class="dropdown-link" :to="`#${link.id}`">
-                      {{ link.text }}
-                    </NuxtLink>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+        <ContentRenderer :value="article">
+          <!-- <ContentDoc :v-slot="{article}" > -->
+          <div class="blog__header">
+            <NuxtLink
+              :to="`/blog/`"
+              class="blog__back"
+              :class="article?.body.toc ? 'blog__back__margin' : ''"
+            >
+              <span>← Back</span>
+            </NuxtLink>
+            <div class="social__links">
+              <a
+                :href="`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${article?.title} by @_Formester_ `"
+                @click="googleAnalytics('twitter')"
+                class="social-icons"
+                target="_blank"
+              >
+                <TwitterIcon />
+              </a>
+              <a
+                :href="`https://www.facebook.com/sharer.php?u=${encodedUrl}`"
+                @click="googleAnalytics('facebook')"
+                class="social-icons"
+                target="_blank"
+              >
+                <FacebookIcon />
+              </a>
+              <a
+                :href="`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}`"
+                @click="googleAnalytics('linkedin')"
+                class="social-icons"
+                target="_blank"
+              >
+                <LinkdinIcon />
+              </a>
+              <span class="social-icons" @click="copyToClipboard">
+                <CopyLinkIcon />
+              </span>
+            </div>
           </div>
-        </nav> -->
-        <h1 class="mb-1 article__heading">{{ article.title }}</h1>
-        <div class="d-flex sm-text my-2 datentimeToRead">
-          <span>{{ formatDate(article.createdAt) }}</span>
-          <span>|</span>
-          <div
-            class="d-flex align-items-center justify-content-center timeToRead"
+          <nav
+            v-if="article?.body?.toc"
+            class="navbar navbar-expand bg-white sticky-top py-3"
           >
-            <ClockIcon color="#4f4f4f" />
-            <!-- <span>{{ article.readingStats.text }}</span> -->
+            <div class="collapse navbar-collapse">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a
+                    class="dropdown-toggle"
+                    href="#"
+                    id="tocMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Table of Contents
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="tocMenuLink">
+                    <li v-for="link of article?.body.toc.links" :key="link.id">
+                      <NuxtLink class="dropdown-link" :to="`#${link.id}`">
+                        {{ link?.text }}
+                      </NuxtLink>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <h1 class="mb-1 article__heading">{{ article?.title }}</h1>
+          <div class="d-flex sm-text my-2 datentimeToRead">
+            <span>{{ formatDate(article?.createdAt) }}</span>
+            <span>|</span>
+            <div
+              class="d-flex align-items-center justify-content-center timeToRead"
+            >
+              <ClockIcon color="#4f4f4f" />
+              <!-- <span>{{ article.readingStats.text }}</span> -->
+            </div>
           </div>
-        </div>
-        <div class="sm-text mt-1 article__author-section">
-          by
-          <a
-            :href="article.authorProfile" 
-            :title="article.authorProfile"
-            target="_blank" 
-            rel="noopener"
-          >
-            <span class="article__author">{{ article.author }}</span>
-          </a>
-        </div>
-        <div class="blog__content">
-          <!-- <nuxt-content :document="article" /> -->
-          <ContentDoc />
+          <div class="sm-text mt-1 article__author-section">
+            by
+            <a
+              :href="article?.authorProfile"
+              :title="article?.authorProfile"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="article__author">{{ article?.author }}</span>
+            </a>
+          </div>
+          <div class="blog__content">
+            <!-- <ContentRendererMarkdown :value="article" /> -->
+            <ContentDoc class="nuxt-content" />
+            <!-- <ContentRenderer /> -->
+
             <div class="popup__img">
               <span class="image-preview-close">&times;</span>
-              <img
-                src=""
-                alt=""
+              <img src="" alt="" />
+            </div>
+          </div>
+          <notifications position="bottom right" class="my-notification" />
+
+          <div v-if="relatedArticles" class="mt-5">
+            <h2 class="article__sub-heading">Related Blogs</h2>
+            <div class="row mt-4">
+              <RelatedArticleCard
+                v-for="relatedArticle in relatedArticles"
+                :key="relatedArticle._path"
+                :article="relatedArticle"
+                class="col-lg-6 related-article-card"
               />
             </div>
-        </div>
-        <notifications position="bottom right" class="my-notification"/>
-
-        <div v-if="relatedArticles" class="mt-5">
-          <h2 class="article__sub-heading">Related Blogs</h2>
-          <div class="row mt-4">
-            <RelatedArticleCard
-              v-for="relatedArticle in relatedArticles"
-              :key="relatedArticle.slug"
-              :article="relatedArticle"
-              class="col-lg-6 related-article-card"
-            />
           </div>
-        </div>
 
-        <template>
-          <div class="mt-5" id="disqus_thread"></div>
-        </template>
+          <template>
+            <div class="mt-5" id="disqus_thread"></div>
+          </template>
 
-        <noscript
-          >Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript"
-            >comments powered by Disqus.</a
-          ></noscript
-        >
-
+          <noscript
+            >Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript"
+              >comments powered by Disqus.</a
+            ></noscript
+          >
+        </ContentRenderer>
       </article>
+      <!-- </article> -->
+      <!-- </ContentDoc> -->
     </div>
-    <CallToActionSection :content="article.cta" />
+    <CallToActionSection :content="article?.cta" />
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref, onMounted } from 'vue'
 import ClockIcon from '../../components/icons/ClockIcon.vue'
 import TwitterIcon from '../../components/icons/twitter.vue'
 import FacebookIcon from '../../components/icons/facebook.vue'
 import LinkdinIcon from '../../components/icons/linkdin.vue'
 import CopyLinkIcon from '../../components/icons/copyLink.vue'
-// MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
 
-export default {
-  components: {
-    ClockIcon,
-    TwitterIcon,
-    FacebookIcon,
-    LinkdinIcon,
-    CopyLinkIcon
-  },
-  content: {
-    liveEdit: false,
-  },
-  // async setup() {
-  //   const article = await queryContent('blog').where({ title: '7 Assured Ways to Improve Your Online Surveys' }).findOne()
+const route = useRoute().params
 
-  //   return { article }
-  // },
-  // async asyncData({ queryContent, params }) {
-  //   const article = await queryContent('blog', params.slug).find()
+const article = ref()
+const relatedArticles = ref()
 
-  //   let relatedArticles = await queryContent('blog').fetch()
-  //   relatedArticles = relatedArticles.filter(relatedArticle => article.slug !== relatedArticle.slug)
-  //   const randIndex = Math.floor(Math.random() * (relatedArticles.length - 2))
-  //   relatedArticles = relatedArticles.slice(randIndex,  randIndex + 2);
-  //   console.log(article, 'article');
-  //   return { article, relatedArticles}
-  // },
-  async setup() {
-    const article = await queryContent('blog').where({ _path: '7-types-of-website-usability-survey-questions-to-ask-in-2023' }).findOne()
-    let relatedArticles = await queryContent('blog').find()
-    relatedArticles = relatedArticles.filter(relatedArticle => article._path !== relatedArticle._path)
-  },
-  mounted() {
-    document.querySelectorAll('.blog__content img').forEach(image => {
-      image.onclick = () => {
-        document.querySelector('.popup__img').style.display = 'block';
-        document.querySelector('.popup__img img').src = image.getAttribute('src')
-        document.querySelector('.popup__img img').alt = image.getAttribute('alt')
-      }
-    })
-    document.querySelector('.popup__img img').onclick = () => {
-      document.querySelector('.popup__img ').style.display = 'none'
-    }
-    document.querySelector('.image-preview-close').onclick = () => {
-      document.querySelector('.popup__img ').style.display = 'none'
-    }
-    document.onkeydown = function(evt) {
-      if (evt.keyCode === 27) {
-        document.querySelector('.popup__img ').style.display = 'none'
-      }
-    };
-    this.loadDisqus()
-  },
-  methods: {
-    formatDate(date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' }
-      return new Date(date).toLocaleDateString('en', options)
-    },
-    to() {
-      this.$router.back()
-    },
-    copyToClipboard(){ 
-      if (process.client) {
-        navigator.clipboard.writeText(window.location.href).then(()=>{
-          this.$notify({ type: 'success', text: 'Link copied to clipboard' })
-        });
-      }
-      this.googleAnalytics('custom_link')
-    },
-    googleAnalytics(platform){
-      gtag && gtag("event", "share", {
-        "method": platform,
-        "content_type": "blog",
-        "item_id": this.article.title
-      })
-    },
-    loadDisqus() {
-      var disqus_config = function () {
-        this.page.url = `https://formester.com/blog/${this.$route.params.slug}/`
-        this.page.identifier = `${this.$route.params.slug}`
-      }
-
-      var d = document,
-        s = d.createElement('script')
-      s.src = 'https://formester.disqus.com/embed.js'
-      s.setAttribute('data-timestamp', +new Date())
-      ;(d.head || d.body).appendChild(s)
-    },
-  },
-  computed: {
-    meta() {
-      const metaData = {
-        type: 'article',
-        url: `https://formester.com/blog/${this.$route.params.slug}/`,
-        title: this.article.metaTitle,
-        description: this.article.metaDescription,
-        mainImage: this.article.coverImg
-          ? `https://formester.com/${this.article.coverImg}`
-          : 'https://formester.com/formester-form-builder-background.png',
-        mainImageAlt:
-          this.article.coverImgAlt ||
-          'Form builder showing drag and drop functionality',
-      }
-      return getSiteMeta(metaData)
-    },
-    encodedUrl(){
-      return encodeURIComponent(process.env.baseUrl + this.$route.fullPath);
-    }
-  },
-  head() {
-    return {
-      title: this.article.metaTitle,
-      meta: [
-        ...this.meta,
-        {
-          property: 'article:published_time',
-          content: this.article.createdAt,
-        },
-        {
-          property: 'article:modified_time',
-          content: this.article.updatedAt,
-        },
-        { name: 'twitter:label1', content: 'Written by' },
-        { name: 'twitter:data1', content: this.article.author },
-        // Linkedin
-        {
-          hid: 'author',
-          name: 'author',
-          property: 'article:author',
-          content: this.article.author,
-        },
-        {
-          hid: 'publisher',
-          name: 'publisher',
-          property: 'article:publisher',
-          content: 'Formester',
-        },
-        {
-          name: 'publish_date',
-          property: 'og:publish_date',
-          content: this.article.createdAt,
-        },
-        {
-          name: 'keywords',
-          content: this.article.keywords,
-        },
-      ],
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: `https://formester.com/blog/${this.$route.params.slug}/`,
-        },
-      ],
-    }
-  },
-  jsonld() {
-    const imagesArray = []
-
-    if (this.article.coverImg) {
-      imagesArray.push(`https://formester.com${this.article.coverImg}`)
-    }
-
-    // if (this.article.metaImages && this.article.metaImages.length > 0) {
-    //   imagesArray.push(...this.article.metaImages)
-    // }
-
-    const jsonData = [
-      {
-      '@context': 'https://schema.org',
-      '@type': 'BlogPosting',
-      mainEntityOfPage: {
-        '@type': 'WebPage',
-        '@id': `https://formester.com/blog/${this.article.slug}/`,
-      },
-      headline: this.article.title,
-      description: this.article.description,
-      image: imagesArray.length > 0 ? imagesArray : ['https://formester.com/formester-form-builder-background.png'],
-      author: {
-        '@type': 'Person',
-        name: this.article.author,
-        url: this.article.authorProfile,
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: 'Formester',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://formester.com/logo.png',
-        },
-      },
-      datePublished: this.article.createdAt,
-      },
-    ]
-
-     // Append schema if available
-     if (this.article.schema) {
-      try {
-        this.article.schema.forEach((s) => {
-          let parsedSchema = JSON.parse(s.type)
-          if (typeof parsedSchema == 'object') {
-            jsonData.push(parsedSchema)
-          }
-        })
-      } catch (error) {}
-    }
-
-    return jsonData;
-  },
+const formatDate = (date) => {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' }
+  return new Date(date).toLocaleDateString('en', options)
 }
+
+const copyToClipboard = () => {
+  if (process.client) {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      // Notify user
+    })
+  }
+  googleAnalytics('custom_link')
+}
+
+const googleAnalytics = (platform) => {
+  gtag &&
+    gtag('event', 'share', {
+      method: platform,
+      content_type: 'blog',
+      item_id: article.value.title,
+    })
+}
+
+const loadDisqus = () => {
+  // Load Disqus
+}
+
+const encodedUrl = () => {
+  return encodeURIComponent(process.env.baseUrl + this.$route.fullPath)
+}
+
+const meta = () => {
+  const metaData = {
+    type: 'article',
+    url: `https://formester.com/blog/${this.$route.params.slug}/`,
+    title: article.value.metaTitle,
+    description: article.value.metaDescription,
+    mainImage: article.value.coverImg
+      ? `https://formester.com/${article.value.coverImg}`
+      : 'https://formester.com/formester-form-builder-background.png',
+    mainImageAlt:
+      article.value.coverImgAlt ||
+      'Form builder showing drag and drop functionality',
+  }
+  return getSiteMeta(metaData)
+}
+
+const head = () => {
+  return {
+    title: article.value.metaTitle,
+    meta: [
+      ...meta(),
+      {
+        property: 'article:published_time',
+        content: article.value.createdAt,
+      },
+      {
+        property: 'article:modified_time',
+        content: article.value.updatedAt,
+      },
+      { name: 'twitter:label1', content: 'Written by' },
+      { name: 'twitter:data1', content: article.value.author },
+      // ...other meta properties
+    ],
+    link: [
+      {
+        hid: 'canonical',
+        rel: 'canonical',
+        href: `https://formester.com/blog/${this.$route.params.slug}/`,
+      },
+    ],
+  }
+}
+
+const jsonld = () => {
+  // Construct JSON-LD data
+}
+
+const handleImagePopup = () => {
+  // Image popup functionality
+}
+
+const handleKeyboardEvents = () => {
+  // Keyboard events handling
+}
+
+onMounted(() => {
+  handleImagePopup()
+  handleKeyboardEvents()
+  loadDisqus()
+
+  // Fetch article and related articles on component initialization
+  fetchArticle()
+  fetchRelatedArticles()
+})
+
+// Fetching data
+const fetchArticle = async () => {
+  const result = await queryContent('blog')
+    .where({ _path: `/blog/` + route.slug })
+    .find()
+  article.value = result[0]
+  console.log(article.value, 'article')
+}
+
+const fetchRelatedArticles = async () => {
+  const result = await queryContent('blog').find()
+  relatedArticles.value = result.filter(
+    (relatedArticle) => article.value._path !== relatedArticle._path
+  )
+  const randIndex = Math.floor(
+    Math.random() * (relatedArticles.value.length - 2)
+  )
+  relatedArticles.value = relatedArticles.value.slice(randIndex, randIndex + 2)
+}
+
+// Fetch article and related articles on component initialization
+fetchArticle()
+fetchRelatedArticles()
 </script>
 
-<style scoped>
+<style>
 p {
   margin-bottom: 2rem;
-
 }
 .article__heading {
   font-size: 2.25rem;
@@ -448,7 +380,6 @@ p {
   gap: 0.5rem;
 }
 
-
 #tocMenuLink {
   color: #777;
   font-size: 16px;
@@ -470,22 +401,22 @@ p {
   display: block;
 }
 
-.blog__header{
+.blog__header {
   margin-top: -4rem;
   justify-content: space-between;
   display: flex;
 }
-.blog__header span{
+.blog__header span {
   color: #777;
 }
-.social__links{
+.social__links {
   display: flex;
 }
-.social-icons{
+.social-icons {
   margin: 0 6px;
   cursor: pointer;
 }
-.social-icons{
+.social-icons {
   fill: #000;
 }
 
