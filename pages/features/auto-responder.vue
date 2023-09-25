@@ -64,11 +64,7 @@
           <div
             class="d-flex flex-column align-items-center align-items-md-start text-center text-md-start px-4 col-md-4 my-3 mt-lg-5"
           >
-            <nuxt-img
-              style="width: 69px"
-              src="/leads.jpg"
-              alt="Formester"
-            />
+            <nuxt-img style="width: 69px" src="/leads.jpg" alt="Formester" />
             <h4 class="sub__section-heading mt-4">Lead generation</h4>
             <p class="subheading__text">
               Capture leads and grow your email list by offering incentives such
@@ -134,6 +130,59 @@ export default {
     Testimonial,
     TemplateSection,
     ApplicationOfWebForms,
+  },
+  setup() {
+    const features = [
+      {
+        title: 'White Label',
+        description:
+          'Make your emails look personal by using your company email address. You also get an option to choose between HTML and text-based emails.',
+        src: 'auto-responder/white-label-illus.svg',
+        alt: 'Get noticed by making the email personalized',
+      },
+      {
+        title: 'Easy Email Builder',
+        description:
+          'Creating a captivating response has never been simpler. Our easy to use editor enables you to write compelling content. Add images, links or videos in a matter of a click.',
+        src: 'auto-responder/easy-email-builder-illus.svg',
+        alt: 'Email can be eaily build with auto responder',
+      },
+      {
+        title: 'Personalised Response',
+        description:
+          'Notifications can be personalised to include fields from the submissions. Make your users feel unique with messages which seem to be coming from actual humans and not a bot.',
+        src: 'auto-responder/personalised-response.svg',
+        alt: 'Have a personalised respose to end user',
+      },
+      {
+        title: 'Realtime Tracking',
+        description:
+          'Monitor how people are interacting with your auto-response. Analyse useful metrics like open rate and link clicks to get insights into users behaviour. Use this data to make changes to your communication.',
+        src: 'auto-responder/realtime-tracking-illus.svg',
+        alt: 'Track your forms in real time',
+      },
+    ]
+
+    const randomTestimonials = ref([])
+
+    const fetchRandomTestimonials = async () => {
+      try {
+        const testimonials = await allTestimonials
+        const randIndex = Math.floor(Math.random() * (testimonials.length - 2))
+        randomTestimonials.value = testimonials.slice(randIndex, randIndex + 2)
+      } catch (error) {
+        console.error('Error fetching random testimonials:', error)
+      }
+    }
+
+    onMounted(() => {
+      fetchRandomTestimonials()
+    })
+
+    return {
+      randomTestimonials,
+      features
+    }
   },
   computed: {
     meta() {
@@ -248,48 +297,6 @@ export default {
         },
       ],
     }
-  },
-  data() {
-    return {
-      features: [
-        {
-          title: 'White Label',
-          description:
-            'Make your emails look personal by using your company email address. You also get an option to choose between HTML and text-based emails.',
-          src: 'auto-responder/white-label-illus.svg',
-          alt: 'Get noticed by making the email personalized',
-        },
-        {
-          title: 'Easy Email Builder',
-          description:
-            'Creating a captivating response has never been simpler. Our easy to use editor enables you to write compelling content. Add images, links or videos in a matter of a click.',
-          src: 'auto-responder/easy-email-builder-illus.svg',
-          alt: 'Email can be eaily build with auto responder',
-        },
-        {
-          title: 'Personalised Response',
-          description:
-            'Notifications can be personalised to include fields from the submissions. Make your users feel unique with messages which seem to be coming from actual humans and not a bot.',
-          src: 'auto-responder/personalised-response.svg',
-          alt: 'Have a personalised respose to end user',
-        },
-        {
-          title: 'Realtime Tracking',
-          description:
-            'Monitor how people are interacting with your auto-response. Analyse useful metrics like open rate and link clicks to get insights into users behaviour. Use this data to make changes to your communication.',
-          src: 'auto-responder/realtime-tracking-illus.svg',
-          alt: 'Track your forms in real time',
-        },
-      ],
-    }
-  },
-  async asyncData() {
-    let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(
-      Math.random() * (randomTestimonials.length - 2)
-    )
-    randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
-    return { randomTestimonials }
   },
 }
 </script>

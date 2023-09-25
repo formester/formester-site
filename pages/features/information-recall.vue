@@ -101,6 +101,90 @@ export default {
     TemplateSection,
     InformationRecallInPractice,
   },
+  setup() {
+    const features = ([
+      {
+        title: 'Answer Recall: Bring Conversations to Life',
+        description:
+          "Enhance the conversational experience of your webforms by referencing and utilizing answers from previous questions. By mentioning a respondent's name or other relevant information, you can create a personalized interaction that makes them feel engaged and valued.",
+        src: 'information-recall/answer-recall-bring-conversations-to-life.svg',
+        alt: "Previous answers from questions are referenced and utilized, enhancing the conversational experience. By mentioning a respondent's name a personalized interaction is created, making them feel engaged and valued.",
+      },
+      {
+        title: 'Dynamic Variables: Tailor Your Web-forms in Real-Time',
+        description:
+          'Take advantage of variables within your webforms to store and recall information throughout the form. Variables allow you to dynamically display or manipulate data based on previous answers, enabling a more tailored and customized experience for your respondents.',
+        src: 'information-recall/dynamic-variables-tailor-your-web-forms-in-real-time.svg',
+        alt: 'Variables are used to store and recall information throughout the form, allowing for dynamic display and manipulation of data based on previous answers. This enables a more tailored and customized experience for respondents.',
+      },
+      {
+        title: 'Hidden Field Capabilities: Capture Data and Personalize',
+        description:
+          'Use Hidden Fields to gather additional information and customize your forms based on respondent attributes. Track respondent sources, segment your audience, and create personalized form interactions.',
+        src: 'information-recall/hidden-field-capabilities-capture-data-and-personalize.svg',
+        alt: ' Hidden Fields are utilized to capture additional information and customize the form based on respondent attributes. This allows for tracking respondent sources, audience segmentation, and the creation of personalized form interactions.',
+      },
+      {
+        title: 'Score & Pricing Integrations: Enhanced Functionality',
+        description:
+          "Recall and display quiz results using score information in Endings or email notifications. Calculate and showcase prices based on respondents' answers, enabling dynamic pricing strategies.",
+        src: 'information-recall/score-price-integrations-enhanced-functionality.svg',
+        alt: 'The no. of travellers and and cost per person is recalled and calculation is performed based on a formula',
+      },
+    ])
+    const benefits = ([
+      {
+        title: 'Time-Saving Efficiency',
+        description:
+          'The Information Recall feature eliminates the need for repetitive data entry by automatically populating fields with previously collected information. This saves valuable time and reduces manual effort, allowing you to focus on more important tasks.',
+        imageSrc: 'time-saving.jpg',
+        altText: 'icon displaying clock symbol',
+      },
+      {
+        title: 'Enhanced Personalization',
+        description:
+          'By recalling and referencing previous responses, the Information Recall feature enables a more personalized user experience. Users feel recognized and engaged as their individual information is seamlessly incorporated into subsequent questions or actions.',
+        imageSrc: 'enhanced-personalization.jpg',
+        altText: 'icon showing personlization',
+      },
+      {
+        title: 'Improved Data Accuracy',
+        description:
+          'With Information Recall, the risk of errors in data entry is minimized. By pulling information from previous responses, the feature ensures data consistency and integrity, resulting in more accurate and reliable data collection.',
+        imageSrc: 'improved-data-accuracy.jpg',
+        altText: 'icon showing storage for storing datas',
+      },
+      {
+        title: 'Streamlined Workflows ',
+        description:
+          'The ability to recall information and pre-fill form fields simplifies the form-filling process for users. It streamlines workflows, reduces friction, and enhances overall user satisfaction, leading to higher form completion rates and improved data quality.',
+        imageSrc: 'streamlined-workflow.jpg',
+        altText: 'icon showing work flows',
+      },
+    ])
+
+    const randomTestimonials = ref([])
+
+    const fetchRandomTestimonials = async () => {
+      try {
+        const testimonials = await allTestimonials
+        const randIndex = Math.floor(Math.random() * (testimonials.length - 2))
+        randomTestimonials.value = testimonials.slice(randIndex, randIndex + 2)
+      } catch (error) {
+        console.error('Error fetching random testimonials:', error)
+      }
+    }
+
+    onMounted(() => {
+      fetchRandomTestimonials()
+    })
+
+    return {
+      randomTestimonials,
+      features,
+      benefits
+    }
+  },
   computed: {
     meta() {
       const metaData = {
@@ -200,78 +284,6 @@ export default {
         },
       ],
     }
-  },
-  data() {
-    return {
-      features: [
-        {
-          title: 'Answer Recall: Bring Conversations to Life',
-          description:
-            "Enhance the conversational experience of your webforms by referencing and utilizing answers from previous questions. By mentioning a respondent's name or other relevant information, you can create a personalized interaction that makes them feel engaged and valued.",
-          src: 'information-recall/answer-recall-bring-conversations-to-life.svg',
-          alt: "Previous answers from questions are referenced and utilized, enhancing the conversational experience. By mentioning a respondent's name a personalized interaction is created, making them feel engaged and valued.",
-        },
-        {
-          title: 'Dynamic Variables: Tailor Your Web-forms in Real-Time',
-          description:
-            'Take advantage of variables within your webforms to store and recall information throughout the form. Variables allow you to dynamically display or manipulate data based on previous answers, enabling a more tailored and customized experience for your respondents.',
-          src: 'information-recall/dynamic-variables-tailor-your-web-forms-in-real-time.svg',
-          alt: 'Variables are used to store and recall information throughout the form, allowing for dynamic display and manipulation of data based on previous answers. This enables a more tailored and customized experience for respondents.',
-        },
-        {
-          title: 'Hidden Field Capabilities: Capture Data and Personalize',
-          description:
-            'Use Hidden Fields to gather additional information and customize your forms based on respondent attributes. Track respondent sources, segment your audience, and create personalized form interactions.',
-          src: 'information-recall/hidden-field-capabilities-capture-data-and-personalize.svg',
-          alt: ' Hidden Fields are utilized to capture additional information and customize the form based on respondent attributes. This allows for tracking respondent sources, audience segmentation, and the creation of personalized form interactions.',
-        },
-        {
-          title: 'Score & Pricing Integrations: Enhanced Functionality',
-          description:
-            "Recall and display quiz results using score information in Endings or email notifications. Calculate and showcase prices based on respondents' answers, enabling dynamic pricing strategies.",
-          src: 'information-recall/score-price-integrations-enhanced-functionality.svg',
-          alt: 'The no. of travellers and and cost per person is recalled and calculation is performed based on a formula',
-        },
-      ],
-      benefits: [
-        {
-          title: 'Time-Saving Efficiency',
-          description:
-            'The Information Recall feature eliminates the need for repetitive data entry by automatically populating fields with previously collected information. This saves valuable time and reduces manual effort, allowing you to focus on more important tasks.',
-          imageSrc: 'time-saving.jpg',
-          altText: 'icon displaying clock symbol',
-        },
-        {
-          title: 'Enhanced Personalization',
-          description:
-            'By recalling and referencing previous responses, the Information Recall feature enables a more personalized user experience. Users feel recognized and engaged as their individual information is seamlessly incorporated into subsequent questions or actions.',
-          imageSrc: 'enhanced-personalization.jpg',
-          altText: 'icon showing personlization',
-        },
-        {
-          title: 'Improved Data Accuracy',
-          description:
-            'With Information Recall, the risk of errors in data entry is minimized. By pulling information from previous responses, the feature ensures data consistency and integrity, resulting in more accurate and reliable data collection.',
-          imageSrc: 'improved-data-accuracy.jpg',
-          altText: 'icon showing storage for storing datas',
-        },
-        {
-          title: 'Streamlined Workflows ',
-          description:
-            'The ability to recall information and pre-fill form fields simplifies the form-filling process for users. It streamlines workflows, reduces friction, and enhances overall user satisfaction, leading to higher form completion rates and improved data quality.',
-          imageSrc: 'streamlined-workflow.jpg',
-          altText: 'icon showing work flows',
-        },
-      ],
-    }
-  },
-  async asyncData() {
-    let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(
-      Math.random() * (randomTestimonials.length - 2)
-    )
-    randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
-    return { randomTestimonials }
   },
 }
 </script>

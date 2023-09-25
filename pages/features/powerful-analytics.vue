@@ -31,7 +31,9 @@
       </div>
     </div>
     <div class="container py-5">
-      <h2 class="section__heading text-center">How does Powerful Analytics help?</h2>
+      <h2 class="section__heading text-center">
+        How does Powerful Analytics help?
+      </h2>
       <div class="row py-5">
         <FeatureDetail
           :feature="feature"
@@ -42,9 +44,7 @@
       </div>
     </div>
     <ThreeStepsCreateForm />
-    <Testimonial 
-      :testimonials="randomTestimonials"
-    />
+    <Testimonial :testimonials="randomTestimonials" />
     <TemplateSection />
     <CallToActionSection />
   </div>
@@ -61,7 +61,55 @@ import getSiteMeta from '../../utils/getSiteMeta'
 import TemplateSection from '../../components/TemplateSection.vue'
 
 export default {
-  components: { FeatureDetail, CallToActionSection, Testimonial, TemplateSection },
+  components: {
+    FeatureDetail,
+    CallToActionSection,
+    Testimonial,
+    TemplateSection,
+  },
+  setup() {
+    const features = [
+      {
+        title: 'Knowing Your Customers',
+        description:
+          'The data can be filtered by traffic source, device, location, browser, operating system, and other crucial factors. Using your analytics account, you can analyze user behavior and statistics over time.',
+        src: 'powerful-analytics/knowing-your-customers.svg',
+      },
+      {
+        title: 'Track your traffic by analyzing it',
+        description:
+          'You can see in detail where your visitors are coming from, what technology platforms they use, and which devices they are using to interact with your form in the traffic panel.',
+        src: 'powerful-analytics/track-your-traffic-by-analyzing-it.svg',
+      },
+      {
+        title: 'Provide critical insight',
+        description:
+          'Conversion rate is crucial. When your conversion rate is low, you have a high view rate but little interaction. This indicates that your questions are too long or that there is room for improvement.',
+        src: 'powerful-analytics/provide-critical-insight.svg',
+      },
+    ]
+
+    const randomTestimonials = ref([])
+
+    const fetchRandomTestimonials = async () => {
+      try {
+        const testimonials = await allTestimonials
+        const randIndex = Math.floor(Math.random() * (testimonials.length - 2))
+        randomTestimonials.value = testimonials.slice(randIndex, randIndex + 2)
+      } catch (error) {
+        console.error('Error fetching random testimonials:', error)
+      }
+    }
+
+    onMounted(() => {
+      fetchRandomTestimonials()
+    })
+
+    return {
+      randomTestimonials,
+      features,
+    }
+  },
   computed: {
     meta() {
       const metaData = {
@@ -112,7 +160,7 @@ export default {
           '@type': 'BreadcrumbList',
           '@id': 'https://acornglobus.com',
           itemListElement: [
-          {
+            {
               '@type': 'ListItem',
               position: 1,
               name: 'Features',
@@ -123,41 +171,19 @@ export default {
               position: 2,
               name: 'Powerful Analytics',
               item: 'https://formester.com/features/powerful-analytics/',
-            }
+            },
           ],
-        },
-      ],
-    }
-  },
-  data() {
-    return {
-      features: [
-        {
-          title: 'Knowing Your Customers',
-          description:
-            'The data can be filtered by traffic source, device, location, browser, operating system, and other crucial factors. Using your analytics account, you can analyze user behavior and statistics over time.',
-          src: 'powerful-analytics/knowing-your-customers.svg',
-        },
-        {
-          title: 'Track your traffic by analyzing it',
-          description:
-            'You can see in detail where your visitors are coming from, what technology platforms they use, and which devices they are using to interact with your form in the traffic panel.',
-          src: 'powerful-analytics/track-your-traffic-by-analyzing-it.svg',
-        },
-        {
-          title: 'Provide critical insight',
-          description:
-            'Conversion rate is crucial. When your conversion rate is low, you have a high view rate but little interaction. This indicates that your questions are too long or that there is room for improvement.',
-          src: 'powerful-analytics/provide-critical-insight.svg',
         },
       ],
     }
   },
   async asyncData() {
     let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(Math.random() * (randomTestimonials.length - 2))
-    randomTestimonials = randomTestimonials.slice(randIndex,  randIndex + 2);
-    return {randomTestimonials}
+    const randIndex = Math.floor(
+      Math.random() * (randomTestimonials.length - 2)
+    )
+    randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
+    return { randomTestimonials }
   },
 }
 </script>

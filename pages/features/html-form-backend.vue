@@ -230,13 +230,55 @@ export default {
       return getSiteMeta(metaData)
     },
   },
-  async asyncData() {
-    let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(
-      Math.random() * (randomTestimonials.length - 2)
-    )
-    randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
-    return { randomTestimonials }
+  setup() {
+    const features = ref([
+        {
+          title: 'Complete Control',
+          description:
+            'For those who like to take control, never again worry about your form not blending perfectly with your website. You do the styling and use our form endpoint to start receiving submissions.',
+          src: 'html-form-backend/control-illus.svg',
+        },
+        {
+          title: 'Easy Embedding',
+          description:
+            'Have a form up and running on your website quickly and with minimal coding. Select an existing template, modify it to match your brand theme, add your required data fields and paste our link on your webpage. Simple?',
+          src: 'html-form-backend/embedding-illus.svg',
+        },
+        {
+          title: 'Realtime Notifications',
+          description:
+            "On new submissions, Formester ensures that you get informed in real-time for you to stay on top of what's essential for your business. Notifications are delivered where they matter - Slack, email or 100+ apps.",
+          src: 'html-form-backend/notification.svg',
+        },
+        {
+          title: 'Own Your Data',
+          description:
+            'We offer zero-friction data import & export. If you decide to move on, you can take everything with you. We also provide guided migration from other tools. Our team will ensure the transition is seamless.',
+          src: 'html-form-backend/export-illus.svg',
+        },
+      ])
+
+      const randomTestimonials = ref([]);
+
+      const fetchRandomTestimonials = async () => {
+      try {
+        const testimonials = await allTestimonials;
+        const randIndex = Math.floor(Math.random() * (testimonials.length - 2));
+        randomTestimonials.value = testimonials.slice(randIndex, randIndex + 2);
+      } catch (error) {
+        console.error('Error fetching random testimonials:', error);
+      }
+    };
+
+    onMounted(() => {
+      fetchRandomTestimonials();
+    });
+
+    return {
+      randomTestimonials,
+      features
+    }
+
   },
   head() {
     return {
@@ -286,36 +328,6 @@ export default {
               item: 'https://formester.com/features/html-form-backend/',
             },
           ],
-        },
-      ],
-    }
-  },
-  data() {
-    return {
-      features: [
-        {
-          title: 'Complete Control',
-          description:
-            'For those who like to take control, never again worry about your form not blending perfectly with your website. You do the styling and use our form endpoint to start receiving submissions.',
-          src: 'html-form-backend/control-illus.svg',
-        },
-        {
-          title: 'Easy Embedding',
-          description:
-            'Have a form up and running on your website quickly and with minimal coding. Select an existing template, modify it to match your brand theme, add your required data fields and paste our link on your webpage. Simple?',
-          src: 'html-form-backend/embedding-illus.svg',
-        },
-        {
-          title: 'Realtime Notifications',
-          description:
-            "On new submissions, Formester ensures that you get informed in real-time for you to stay on top of what's essential for your business. Notifications are delivered where they matter - Slack, email or 100+ apps.",
-          src: 'html-form-backend/notification.svg',
-        },
-        {
-          title: 'Own Your Data',
-          description:
-            'We offer zero-friction data import & export. If you decide to move on, you can take everything with you. We also provide guided migration from other tools. Our team will ensure the transition is seamless.',
-          src: 'html-form-backend/export-illus.svg',
         },
       ],
     }

@@ -32,7 +32,9 @@
       </div>
     </div>
     <div class="container py-5">
-      <h2 class="section__heading text-center">How does Conditional Logic help?</h2>
+      <h2 class="section__heading text-center">
+        How does Conditional Logic help?
+      </h2>
       <div class="row py-5">
         <FeatureDetail
           :feature="feature"
@@ -43,9 +45,7 @@
       </div>
     </div>
     <ThreeStepsCreateForm />
-    <Testimonial 
-      :testimonials="randomTestimonials"
-    />
+    <Testimonial :testimonials="randomTestimonials" />
     <TemplateSection />
     <CallToActionSection />
   </div>
@@ -62,7 +62,55 @@ import TemplateSection from '../../components/TemplateSection.vue'
 import getSiteMeta from '../../utils/getSiteMeta'
 
 export default {
-  components: { FeatureDetail, CallToActionSection, Testimonial, TemplateSection },
+  components: {
+    FeatureDetail,
+    CallToActionSection,
+    Testimonial,
+    TemplateSection,
+  },
+  setup() {
+    const features = [
+      {
+        title: 'Skip to other pages',
+        description:
+          "In order to collect the most accurate data for your research, you can ask questions that don't apply to each user, allowing them to skip irrelevant pages in your survey.",
+        src: 'conditional-logic/skip-to-other-pages.svg',
+      },
+      {
+        title: 'Skip to follow up questions',
+        description:
+          'For best results, allow your respondents to skip irrelevant questions in your survey.',
+        src: 'conditional-logic/skip-to-follow-up-questions.svg',
+      },
+      {
+        title: 'Skip Logic',
+        description:
+          'Display only the questions your respondents must answer. You simply need to specify the conditions and choose the fields to hide from the drop-down list.',
+        src: 'conditional-logic/skip-logic.svg',
+      },
+    ]
+
+    const randomTestimonials = ref([])
+
+    const fetchRandomTestimonials = async () => {
+      try {
+        const testimonials = await allTestimonials
+        const randIndex = Math.floor(Math.random() * (testimonials.length - 2))
+        randomTestimonials.value = testimonials.slice(randIndex, randIndex + 2)
+      } catch (error) {
+        console.error('Error fetching random testimonials:', error)
+      }
+    }
+
+    onMounted(() => {
+      fetchRandomTestimonials()
+    })
+
+    return {
+      randomTestimonials,
+      features,
+    }
+  },
   computed: {
     meta() {
       const metaData = {
@@ -113,7 +161,7 @@ export default {
           '@type': 'BreadcrumbList',
           '@id': 'https://acornglobus.com',
           itemListElement: [
-          {
+            {
               '@type': 'ListItem',
               position: 1,
               name: 'Features',
@@ -124,41 +172,11 @@ export default {
               position: 2,
               name: 'Conditional Logic',
               item: 'https://formester.com/features/conditional-logic/',
-            }
+            },
           ],
         },
       ],
     }
-  },
-  data() {
-    return {
-      features: [
-        {
-          title: 'Skip to other pages',
-          description:
-            "In order to collect the most accurate data for your research, you can ask questions that don't apply to each user, allowing them to skip irrelevant pages in your survey.",
-          src: 'conditional-logic/skip-to-other-pages.svg',
-        },
-        {
-          title: 'Skip to follow up questions',
-          description:
-            'For best results, allow your respondents to skip irrelevant questions in your survey.',
-          src: 'conditional-logic/skip-to-follow-up-questions.svg',
-        },
-        {
-          title: 'Skip Logic',
-          description:
-            'Display only the questions your respondents must answer. You simply need to specify the conditions and choose the fields to hide from the drop-down list.',
-          src: 'conditional-logic/skip-logic.svg',
-        },
-      ],
-    }
-  },
-  async asyncData() {
-    let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(Math.random() * (randomTestimonials.length - 2))
-    randomTestimonials = randomTestimonials.slice(randIndex,  randIndex + 2);
-    return {randomTestimonials}
   },
 }
 </script>

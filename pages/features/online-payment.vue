@@ -8,7 +8,9 @@
           >
             <h1 class="section__heading">Online Payment</h1>
             <p class="hero__subheading mt-3">
-              Featuring secure PCI compliance, a responsive interface, and no additional charges, Formester makes receiving payments online more convenient than ever.
+              Featuring secure PCI compliance, a responsive interface, and no
+              additional charges, Formester makes receiving payments online more
+              convenient than ever.
             </p>
             <a
               href="https://app.formester.com/users/sign_up"
@@ -29,7 +31,9 @@
       </div>
     </div>
     <div class="container py-5">
-      <h2 class="section__heading text-center">How does Online Payment help?</h2>
+      <h2 class="section__heading text-center">
+        How does Online Payment help?
+      </h2>
       <div class="row py-5">
         <FeatureDetail
           :feature="feature"
@@ -40,9 +44,7 @@
       </div>
     </div>
     <ThreeStepsCreateForm />
-    <Testimonial 
-      :testimonials="randomTestimonials"
-    />
+    <Testimonial :testimonials="randomTestimonials" />
     <TemplateSection />
     <CallToActionSection />
   </div>
@@ -59,7 +61,49 @@ import getSiteMeta from '../../utils/getSiteMeta'
 import TemplateSection from '../../components/TemplateSection.vue'
 
 export default {
-  components: { FeatureDetail, CallToActionSection, Testimonial, TemplateSection },
+  components: {
+    FeatureDetail,
+    CallToActionSection,
+    Testimonial,
+    TemplateSection,
+  },
+  setup() {
+    const features = [
+      {
+        title: 'Pay by debit or credit card',
+        description:
+          "Payments can be made online using debit or credit cards without paying extra transaction fees! When you receive payments through your online forms, Formester doesn't charge you anything; your chosen payment processor charges you the standard rate. You can collect payments from hundreds of countries and currencies with 35+ payment gateways.",
+        src: 'online-payment/payment-by-card-illus.svg',
+      },
+      {
+        title: 'Stripe Integration',
+        description:
+          'Streamline your workflow with our free form integrations. Stripe payment integration allows you to seamlessly receive payments from customers through your forms. We will be adding more integrations soon.',
+        src: 'online-payment/payment-by-stripe-illus.svg',
+      },
+    ]
+
+    const randomTestimonials = ref([])
+
+    const fetchRandomTestimonials = async () => {
+      try {
+        const testimonials = await allTestimonials
+        const randIndex = Math.floor(Math.random() * (testimonials.length - 2))
+        randomTestimonials.value = testimonials.slice(randIndex, randIndex + 2)
+      } catch (error) {
+        console.error('Error fetching random testimonials:', error)
+      }
+    }
+
+    onMounted(() => {
+      fetchRandomTestimonials()
+    })
+
+    return {
+      randomTestimonials,
+      features,
+    }
+  },
   computed: {
     meta() {
       const metaData = {
@@ -110,7 +154,7 @@ export default {
           '@type': 'BreadcrumbList',
           '@id': 'https://acornglobus.com',
           itemListElement: [
-          {
+            {
               '@type': 'ListItem',
               position: 1,
               name: 'Features',
@@ -121,35 +165,11 @@ export default {
               position: 2,
               name: 'Online Payment',
               item: 'https://formester.com/features/online-payment/',
-            }
+            },
           ],
         },
       ],
     }
-  },
-  data() {
-    return {
-      features: [
-        {
-          title: 'Pay by debit or credit card',
-          description:
-            'Payments can be made online using debit or credit cards without paying extra transaction fees! When you receive payments through your online forms, Formester doesn\'t charge you anything; your chosen payment processor charges you the standard rate. You can collect payments from hundreds of countries and currencies with 35+ payment gateways.',
-          src: 'online-payment/payment-by-card-illus.svg',
-        },
-        {
-          title: 'Stripe Integration',
-          description:
-            'Streamline your workflow with our free form integrations. Stripe payment integration allows you to seamlessly receive payments from customers through your forms. We will be adding more integrations soon.',
-          src: 'online-payment/payment-by-stripe-illus.svg',
-        },
-      ],
-    }
-  },
-  async asyncData() {
-    let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(Math.random() * (randomTestimonials.length - 2))
-    randomTestimonials = randomTestimonials.slice(randIndex,  randIndex + 2);
-    return {randomTestimonials}
   },
 }
 </script>
