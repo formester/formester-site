@@ -54,10 +54,8 @@
         <div
           class="col-lg-5 d-flex align-items-center justify-content-center mt-lg-0 mt-5"
         >
-          <img
-            :src="
-              require(`@/assets/images/features/${features[activeIndex].img}.svg`)
-            "
+          <nuxt-img
+            :src="`features/${features[activeIndex].img}.svg`"
             alt="Hero-Image"
             class="img-fluid feature__img"
           />
