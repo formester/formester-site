@@ -37,6 +37,24 @@ export default {
     featureData: {
       type: Object,
       required: true,
+      // 'featureData' prop must have the following properties:
+      // {
+      //   subtext: 'Subtext for the section', // String
+      //   heading: 'Main Heading for the section', // String
+      //   description: 'Description or content of the section', // String
+      //   imgBaseSrc: 'the base path where all the images of this component is present' // String
+      //   features: [
+      //     {
+      //       title: 'Feature Title 1', // String
+      //       description: 'Description of Feature 1', // String
+      //     },
+      //     {
+      //       title: 'Feature Title 2', // String
+      //       description: 'Description of Feature 2', // String
+      //     },
+      //     // Add more features as needed
+      //   ]
+      // }
     },
   },
   methods: {
