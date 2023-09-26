@@ -16,15 +16,11 @@ Do you have faith in your employees?
 
 Faith, that they'll treat your customers the same way you would.
 
-Are your sales reps nailing their pitches, covering all the details?
-
-Is your customer support team going above and beyond for your customers, even potential ones?
-
-Are your retention strategists exhausting all options to retain frustrated customers?
-
-Is your business analyst effectively conveying customer feedback and suggestions to the right departments?
-
-Is your brand manager ensuring your brand is portrayed as intended?
+* Are your sales reps nailing their pitches, covering all the details?
+* Is your customer support team going above and beyond for your customers, even potential ones?
+* Are your retention strategists exhausting all options to retain frustrated customers?
+* Is your business analyst effectively conveying customer feedback and suggestions to the right departments?
+* Is your brand manager ensuring your brand is portrayed as intended?
 
 Well, unfortunately, it's hard to run a business, on faith alone;
 
@@ -35,6 +31,8 @@ And how do we do that? We do that with the help of a simple [Customer Experience
 It's a survey designed for customers (or potential ones) to provide feedback on their experiences and interactions with your brand, regardless of where they are in your sales funnel, or whether they convert or not!
 
 A customer experience survey isn't just about [figuring out how your product or service is faring](https://formester.com/blog/how-to-create-the-perfect-product-map-using-surveys-in-2023/) and [assessing your brand's reputation](https://formester.com/blog/how-branded-surveys-can-help-you-unlock-your-brand%E2%80%99s-potential/). It also serves as a tool to gauge whether all your departments and employees are doing what they're supposed to do—and doing it well, I might add! In simpler terms, it's a way to see if everyone is pulling their weight and fulfilling their roles effectively.
+
+![Funny meme showing the reaction of employees when they find out their company is gonna conduct a Customer Experience Survey! (Now, everyone's gotta be on their best behaviour)](/img/employees-when-they-find-out-their-company-is-gonna-conduct-a-customer-experience-survey.gif "Employees when they find out their Company is gonna conduct a Customer Experience Survey... (Now, everyone’s gotta be on their best behaviour!)")
 
 With that in mind, in today's blog, we're going to delve into the world of Customer Experience Surveys. We'll walk you through everything, starting from understanding what they are, all the way to creating a powerful and effective one, and everything else in between!
 
