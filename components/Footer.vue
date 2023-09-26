@@ -231,7 +231,7 @@
             <ul class="list-unstyled mt-2">
               <li class="mt-2">
                 <NuxtLink
-                  to="/using-formester-for-lead-generation-success/"
+                  to="case-study/using-formester-for-lead-generation-success/"
                   class="footer__link"
                 >
                   Formester For Lead Generation Success

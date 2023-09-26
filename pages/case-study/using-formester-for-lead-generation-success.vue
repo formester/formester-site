@@ -31,7 +31,7 @@
       />
     </div>
 
-    <CaseStudyOneBackground />
+    <Background />
     <SmallIconsFeatureSection :featureData="challenges" />
     <SmallIconsFeatureSection :featureData="solutions" />
     <Results />
