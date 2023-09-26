@@ -6,7 +6,6 @@
         :class="{ 'mb-3rem': !(article?.cta && article?.cta.hidden) }"
       >
         <ContentRenderer :value="article">
-          <!-- <ContentDoc :v-slot="{article}" > -->
           <div class="blog__header">
             <NuxtLink
               :to="`/blog/`"
@@ -81,7 +80,7 @@
               class="d-flex align-items-center justify-content-center timeToRead"
             >
               <ClockIcon color="#4f4f4f" />
-              <!-- <span>{{ article.readingStats.text }}</span> -->
+              <span>{{ article?.readingTime.text }}</span>
             </div>
           </div>
           <div class="sm-text mt-1 article__author-section">
@@ -96,10 +95,7 @@
             </a>
           </div>
           <div class="blog__content">
-            <!-- <ContentRendererMarkdown :value="article" /> -->
             <ContentDoc class="nuxt-content" />
-            <!-- <ContentRenderer /> -->
-
             <div class="popup__img">
               <span class="image-preview-close">&times;</span>
               <img src="" alt="" />
@@ -131,8 +127,6 @@
           >
         </ContentRenderer>
       </article>
-      <!-- </article> -->
-      <!-- </ContentDoc> -->
     </div>
     <CallToActionSection :content="article?.cta" />
   </div>
@@ -157,6 +151,8 @@ const formatDate = (date) => {
   return new Date(date).toLocaleDateString('en', options)
 }
 
+console.log(article);
+
 const copyToClipboard = () => {
   if (process.client) {
     navigator.clipboard.writeText(window.location.href).then(() => {
@@ -176,75 +172,137 @@ const googleAnalytics = (platform) => {
 }
 
 const loadDisqus = () => {
-  // Load Disqus
+  var disqus_config = function () {
+    this.page.url = `https://formester.com/blog/${route.slug}/`
+    this.page.identifier = `${route.slug}`
+  }
+
+  var d = document,
+    s = d.createElement('script')
+  s.src = 'https://formester.disqus.com/embed.js'
+  s.setAttribute('data-timestamp', +new Date())
+  ;(d.head || d.body).appendChild(s)
 }
 
 const encodedUrl = () => {
-  return encodeURIComponent(process.env.baseUrl + this.$route.fullPath)
+  return encodeURIComponent(process.env.baseUrl + route.fullPath)
 }
 
-const meta = () => {
+const meta = (article) => {
   const metaData = {
     type: 'article',
-    url: `https://formester.com/blog/${this.$route.params.slug}/`,
-    title: article.value.metaTitle,
-    description: article.value.metaDescription,
-    mainImage: article.value.coverImg
-      ? `https://formester.com/${article.value.coverImg}`
+    url: `https://formester.com/blog/${route.slug}/`,
+    title: article?.metaTitle,
+    description: article?.metaDescription,
+    mainImage: article?.coverImg
+      ? `https://formester.com/${article?.coverImg}`
       : 'https://formester.com/formester-form-builder-background.png',
     mainImageAlt:
-      article.value.coverImgAlt ||
+      article?.coverImgAlt ||
       'Form builder showing drag and drop functionality',
   }
   return getSiteMeta(metaData)
 }
 
-const head = () => {
-  return {
-    title: article.value.metaTitle,
-    meta: [
-      ...meta(),
-      {
-        property: 'article:published_time',
-        content: article.value.createdAt,
-      },
-      {
-        property: 'article:modified_time',
-        content: article.value.updatedAt,
-      },
-      { name: 'twitter:label1', content: 'Written by' },
-      { name: 'twitter:data1', content: article.value.author },
-      // ...other meta properties
-    ],
-    link: [
-      {
-        hid: 'canonical',
-        rel: 'canonical',
-        href: `https://formester.com/blog/${this.$route.params.slug}/`,
-      },
-    ],
+useHead({
+  title: article?.metaTitle,
+  meta: [
+    ...meta(),
+    {
+      property: 'article:published_time',
+      content: article?.createdAt,
+    },
+    {
+      property: 'article:modified_time',
+      content: article?.updatedAt,
+    },
+    { name: 'twitter:label1', content: 'Written by' },
+    { name: 'twitter:data1', content: article?.author },
+    // ...other meta properties
+  ],
+  link: [
+    {
+      hid: 'canonical',
+      rel: 'canonical',
+      href: `https://formester.com/blog/${String(route.slug)}/`,
+    },
+  ],
+})
+
+useJsonld((article) => {
+  const imagesArray = []
+
+  if (article?.coverImg) {
+    imagesArray.push(`https://formester.com${article?.coverImg}`)
   }
-}
 
-const jsonld = () => {
-  // Construct JSON-LD data
-}
+  const jsonData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': `https://formester.com/blog/${article?._path}/`,
+      },
+      headline: article?.title,
+      description: article?.description,
+      image:
+        imagesArray.length > 0
+          ? imagesArray
+          : ['https://formester.com/formester-form-builder-background.png'],
+      author: {
+        '@type': 'Person',
+        name: article?.author,
+        url: article?.authorProfile,
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Formester',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://formester.com/logo.png',
+        },
+      },
+      datePublished: article?.createdAt,
+    },
+  ]
 
-const handleImagePopup = () => {
-  // Image popup functionality
-}
+  // Append schema if available
+  if (article?.value.schema) {
+    try {
+      article?.value.schema.forEach((s) => {
+        let parsedSchema = JSON.parse(s.type)
+        if (typeof parsedSchema === 'object') {
+          jsonData.push(parsedSchema)
+        }
+      })
+    } catch (error) {}
+  }
 
-const handleKeyboardEvents = () => {
-  // Keyboard events handling
-}
+  return jsonData
+})
 
 onMounted(() => {
-  handleImagePopup()
-  handleKeyboardEvents()
+  document.querySelectorAll('.blog__content img').forEach((image) => {
+    image.onclick = () => {
+      document.querySelector('.popup__img').style.display = 'block'
+      document.querySelector('.popup__img img').src = image.getAttribute('src')
+      document.querySelector('.popup__img img').alt = image.getAttribute('alt')
+    }
+  })
+  document.querySelector('.popup__img img').onclick = () => {
+    document.querySelector('.popup__img ').style.display = 'none'
+  }
+  document.querySelector('.image-preview-close').onclick = () => {
+    document.querySelector('.popup__img ').style.display = 'none'
+  }
+  document.onkeydown = function (evt) {
+    if (evt.keyCode === 27) {
+      document.querySelector('.popup__img ').style.display = 'none'
+    }
+  }
   loadDisqus()
-
-  // Fetch article and related articles on component initialization
-  fetchArticle()
+  fetchArticle() // Fetch article and related articles on component initialization
   fetchRelatedArticles()
 })
 
@@ -254,7 +312,6 @@ const fetchArticle = async () => {
     .where({ _path: `/blog/` + route.slug })
     .find()
   article.value = result[0]
-  console.log(article.value, 'article')
 }
 
 const fetchRelatedArticles = async () => {
@@ -267,10 +324,6 @@ const fetchRelatedArticles = async () => {
   )
   relatedArticles.value = relatedArticles.value.slice(randIndex, randIndex + 2)
 }
-
-// Fetch article and related articles on component initialization
-fetchArticle()
-fetchRelatedArticles()
 </script>
 
 <style>

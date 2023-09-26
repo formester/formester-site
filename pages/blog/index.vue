@@ -72,28 +72,6 @@ export default {
       meta
     };
   },
-  // async asyncData({ $content }) {
-  //   const articles = await $content('blog')
-  //     .where({
-  //       published: true,
-  //       featured: false,
-  //     })
-  //     .sortBy('createdAt', 'desc')
-  //     .fetch()
-
-  //   const heroArticles = await $content('blog')
-  //     .where({
-  //       published: true,
-  //       featured: true,
-  //     })
-  //     .sortBy('createdAt', 'desc')
-  //     .fetch()
-
-  //   return {
-  //     articles,
-  //     heroArticles,
-  //   }
-  // },
   head() {
     return {
       title:

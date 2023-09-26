@@ -110,12 +110,12 @@ export default defineNuxtConfig({
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/robots', '@nuxt/content', '@nuxt/image'],
+  modules: ['@nuxtjs/robots', '@nuxt/content', '@nuxt/image', 'nuxt-jsonld'],
   // Hooks configuration - https://content.nuxtjs.org/advanced/
   hooks: {
     'content:file:beforeInsert': (document) => {
       if (document.extension === '.md') {
-        const stats = require('reading-time')(document.text)
+        const stats = require('remark-reading-time')(document.text)
         document.readingStats = stats
       }
     },
@@ -172,6 +172,9 @@ axios: {},
   },
 content: {
     liveEdit: false,
+    markdown: {
+      remarkPlugins: ['remark-reading-time'],
+    },
   },
 
   // Nuxt Image

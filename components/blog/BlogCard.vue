@@ -14,7 +14,7 @@
       </div>
       <span class="mt-2 blog__timetoRead">
         <ClockIcon color="#828282" />
-        <!-- {{ article.readingStats.text }} -->
+        {{ article?.readingTime.text }}
       </span>
     </div>
   </NuxtLink>
