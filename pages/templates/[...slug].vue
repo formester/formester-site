@@ -53,6 +53,9 @@
 import { ref } from 'vue'
 // import { useAxios } from '@nuxt/http';
 import getSiteMeta from '@/utils/getSiteMeta'
+import PreviewModal from '../../components/template/PreviewModal.vue'
+import MoreTemplates from '../../components/template/MoreTemplates.vue'
+import Faq from '../../components/template/Faq.vue'
 
 const template = ref(null)
 const categories = ref([])
@@ -67,7 +70,7 @@ const fetchTemplate = async (slug) => {
     )
     const data = await response.json()
     template.value = data
-    console.log(template.value.slug);
+    console.log(template.value.slug)
   } catch (error) {
     console.error('Error fetching template:', error)
   }
@@ -105,63 +108,58 @@ onMounted(() => {
   fetchTemplate(slug)
   fetchCategories()
 })
+
+const meta = (template) => {
+  const { name, description, metaTitle, metaDescription, previewImageUrl } =
+    template.value || {}
+  const metaData = {
+    type: 'website',
+    url: template.value
+      ? `https://formester.com/templates/${this.$route.params.slug}/`
+      : '',
+    title: metaTitle || name || 'Form Template | Formester',
+    description:
+      metaDescription ||
+      description ||
+      "Explore Formester's no-code form templates! Create surveys, gather feedback, and manage events effortlessly. Simplify form building now!",
+    mainImage:
+      previewImageUrl ||
+      'https://formester.com/formester-form-builder-background.png',
+    mainImageAlt: 'Formester Template',
+  }
+  return getSiteMeta(metaData)
+}
+
+useHead((template) => {
+  const { name, keywords } = template || {}
+  return {
+    title: name ? `${name} | Formester` : 'Formester',
+    meta: [
+      ...(template ? meta : []),
+      {
+        name: 'keywords',
+        content: keywords,
+      },
+    ],
+    link: [
+      {
+        hid: 'canonical',
+        rel: 'canonical',
+        href: template ? `https://formester.com/templates/${route.slug}/` : '',
+      },
+    ],
+  }
+})
 </script>
 
 <script>
-import PreviewModal from '../../components/template/PreviewModal.vue'
-import MoreTemplates from '../../components/template/MoreTemplates.vue'
-import Faq from '../../components/template/Faq.vue'
-
 export default {
   components: {
     'template-preview-modal': PreviewModal,
     MoreTemplates,
     Faq,
   },
-  head() {
-    const { name, keywords } = template.value || {}
-    return {
-      title: name ? `${name} | Formester` : 'Formester',
-      meta: [
-        ...(template.value ? this.meta : []),
-        {
-          name: 'keywords',
-          content: keywords,
-        },
-      ],
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: template.value
-            ? `https://formester.com/templates/${this.$route.params.slug}/`
-            : '',
-        },
-      ],
-    }
-  },
   computed: {
-    meta() {
-      const { name, description, metaTitle, metaDescription, previewImageUrl } =
-        template.value || {}
-
-      const metaData = {
-        type: 'website',
-        url: template.value
-          ? `https://formester.com/templates/${this.$route.params.slug}/`
-          : '',
-        title: metaTitle || name || 'Form Template | Formester',
-        description:
-          metaDescription ||
-          description ||
-          "Explore Formester's no-code form templates! Create surveys, gather feedback, and manage events effortlessly. Simplify form building now!",
-        mainImage:
-          previewImageUrl ||
-          'https://formester.com/formester-form-builder-background.png',
-        mainImageAlt: 'Formester Template',
-      }
-      return getSiteMeta(metaData)
-    },
     faqsSchema() {
       return (template.value?.faqs || []).map((faq) => {
         return {
