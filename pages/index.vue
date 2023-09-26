@@ -2,6 +2,17 @@
   <div>
     <Hero />
     <TrustSeals />
+    <div class="iframe__container mx-auto position-relative">
+      <iframe
+        src="https://app.formester.com/f/6ce3db7a-94a3-48a3-8f00-d16395847a13"
+        height="100%"
+        width="100%"
+      ></iframe>
+      <nuxt-img
+        src="see-for-yourself.svg"
+        class="see-for-yourself position-absolute"
+      />
+    </div>
     <Testimonials />
     <FeatureList />
     <HowItWorks />
@@ -89,3 +100,40 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.iframe__container {
+  width: min(90%, 1200px);
+  height: 600px;
+  border-radius: 8px;
+  border: 4px solid #eee8ff;
+  margin-top: 148px;
+  margin-bottom: 48px;
+}
+
+.see-for-yourself {
+  top: -14%;
+  right: 20%;
+  animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .see-for-yourself {
+    top: -14%;
+    right: 5%;
+    animation: pulse 4s infinite;
+  }
+}
+</style>
