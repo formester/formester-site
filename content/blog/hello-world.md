@@ -1,5 +1,5 @@
 ---
-title: hello world + interesting
+title: hello world interesting
 description: "hello world "
 metaTitle: "hello world "
 metaDescription: "hello world "
