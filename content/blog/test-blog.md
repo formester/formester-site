@@ -1,5 +1,5 @@
 ---
-title: test blog
+title: title changed
 description: blog
 metaTitle: blog
 metaDescription: something
