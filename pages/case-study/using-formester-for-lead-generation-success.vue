@@ -27,7 +27,7 @@
       <img
         :src="require(`@/assets/images/case-study-1/case-study-hero-bg.png`)"
         alt="background showing few of the ui elements of formester"
-        class="hero__background position-absolute d-none d-lg-block"
+        class="position-absolute d-none d-lg-block hero-background"
       />
     </div>
 
@@ -322,11 +322,11 @@ export default {
 </script>
 
 <style scoped>
-.hero__background {
+.hero-background {
   top: 0;
   z-index: -1;
   width: 100%;
-  opacity: 30%;
+  opacity: 35%;
 }
 
 .hero__heading {
