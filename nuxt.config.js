@@ -37,21 +37,6 @@ export default defineNuxtConfig({
           defer: true,
           async: true,
         },
-        {
-          src: '/js/ga.js',
-          defer: true,
-          async: true,
-        },
-        // {
-        //   src: '/js/hotjar.js',
-        //   defer: true,
-        //   async: true,
-        // },
-        {
-          src: '/js/crisp.js',
-          defer: true,
-          async: true,
-        },
       ],
     },
   },
@@ -75,7 +60,9 @@ export default defineNuxtConfig({
           url: `/templates/${template.slug}`,
         }
       })
-      let { data: response } = await axios.get('https://app.formester.com/template_categories.json')
+      let { data: response } = await axios.get(
+        'https://app.formester.com/template_categories.json'
+      )
       let categories = response.map((category) => {
         return `/templates/categories/${category.slug}`
       })
@@ -88,10 +75,10 @@ export default defineNuxtConfig({
   css: ['~/assets/css/bootstrap.min.css', '~/assets/css/main.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-// plugins: [
-//     '~plugins/jsonld',
-//     { src: '~/plugins/notifications-client', ssr: false },
-//   ],
+  // plugins: [
+  //     '~plugins/jsonld',
+  //     { src: '~/plugins/notifications-client', ssr: false },
+  //   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -110,7 +97,7 @@ export default defineNuxtConfig({
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/robots', '@nuxt/content', '@nuxt/image', 'nuxt-jsonld'],
+  modules: ['@nuxtjs/robots', '@nuxt/content', '@nuxt/image', 'nuxt-jsonld', 'nuxt-gtag'],
   // Hooks configuration - https://content.nuxtjs.org/advanced/
   hooks: {
     'content:file:beforeInsert': (document) => {
@@ -121,8 +108,11 @@ export default defineNuxtConfig({
     },
   },
 
+  gtag: {
+    id: 'G-XXXXXXXXXX'
+  },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-axios: {},
+  axios: {},
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
@@ -137,17 +127,21 @@ axios: {},
   generate: {
     routes: async () => {
       try {
-        let { data } = await axios.get('https://app.formester.com/templates.json')
+        let { data } = await axios.get(
+          'https://app.formester.com/templates.json'
+        )
         let templatesRoute = data.map((template) => {
           return `/templates/${template.slug}`
         })
-        let { data: response } = await axios.get('https://app.formester.com/template_categories.json')
+        let { data: response } = await axios.get(
+          'https://app.formester.com/template_categories.json'
+        )
         let categoriesRoute = response.map((category) => {
           return `/templates/categories/${category.slug}`
         })
         return [...templatesRoute, ...categoriesRoute]
       } catch (error) {
-        return [];
+        return []
       }
     },
     fallback: true,
@@ -155,22 +149,26 @@ axios: {},
   router: {
     routes: async () => {
       try {
-        let { data } = await axios.get('https://app.formester.com/templates.json')
+        let { data } = await axios.get(
+          'https://app.formester.com/templates.json'
+        )
         let templatesRoute = data.map((template) => {
           return `/templates/${template.slug}`
         })
-        let { data: response } = await axios.get('https://app.formester.com/template_categories.json')
+        let { data: response } = await axios.get(
+          'https://app.formester.com/template_categories.json'
+        )
         let categoriesRoute = response.map((category) => {
           return `/templates/categories/${category.slug}`
         })
         return [...templatesRoute, ...categoriesRoute]
       } catch (error) {
-        return [];
+        return []
       }
     },
     fallback: true,
   },
-content: {
+  content: {
     liveEdit: false,
     markdown: {
       remarkPlugins: ['remark-reading-time'],
@@ -179,7 +177,7 @@ content: {
 
   // Nuxt Image
   image: {
-    dir: 'assets/images'
+    dir: 'assets/images',
   },
 
   // Enviornment variable for the base url of the app
@@ -187,6 +185,6 @@ content: {
     baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'http://localhost:3001',
   },
   devServer: {
-    port: 8080
-  }
+    port: 8080,
+  },
 })
