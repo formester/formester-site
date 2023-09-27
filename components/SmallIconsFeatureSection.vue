@@ -16,9 +16,7 @@
       >
         <div class="small-icon__card d-flex flex-column align-items-start">
           <nuxt-img
-            :src="`${featureData.imgBaseSrc}/${convertToImageName(
-              feature.title
-            )}.svg`"
+            :src="feature.imgSrc"
             class="img-fluid"
             :alt="feature.altText"
             loading="lazy"
@@ -42,24 +40,20 @@ export default {
       //   subtext: 'Subtext for the section', // String
       //   heading: 'Main Heading for the section', // String
       //   description: 'Description or content of the section', // String
-      //   imgBaseSrc: 'the base path where all the images of this component is present' // String
       //   features: [
       //     {
       //       title: 'Feature Title 1', // String
       //       description: 'Description of Feature 1', // String
+      //       imgSrc: 'src of image for feature title 1', // String
       //     },
       //     {
       //       title: 'Feature Title 2', // String
       //       description: 'Description of Feature 2', // String
+      //       imgSrc: 'src of image for feature title 2', // String
       //     },
       //     // Add more features as needed
       //   ]
       // }
-    },
-  },
-  methods: {
-    convertToImageName(text) {
-      return text.toLowerCase().replace(/&/g, 'and').replace(/ /g, '-')
     },
   },
 }

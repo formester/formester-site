@@ -65,42 +65,48 @@ export default {
         description:
           "Lead generation is an intricate process, comprising several stages that demand careful attention and strategy. These multifaceted challenges underscore the importance of not only creating lead-generation forms but also optimizing them to overcome these obstacles. To better understand the significance of these challenges, let's delve into some of the commonly faced key problems with regard to lead generation.",
         subtext: 'Challenges',
-        imgBaseSrc: 'case-study-1/challenges',
         features: [
           {
             title: 'Subpar Conversion Rates on Existing Forms',
             description:
               'One of the foremost challenges in lead generation is achieving satisfactory conversion rates on existing lead generation forms. Many businesses find themselves struggling with forms that fail to effectively convert website visitors into leads. This often results from issues such as unclear calls-to-action, uninspiring visuals, or confusing form structures.',
-          },
-          {
-            title: 'Limited Capabilities for Lead Nurturing',
-            description:
-              'One of the foremost challenges in lead generation is achieving satisfactory conversion rates on existing lead generation forms. Many businesses find themselves struggling with forms that fail to effectively convert website visitors into leads. This often results from issues such as unclear calls-to-action, uninspiring visuals, or confusing form structures.',
+            imgSrc: 'svgs/flow.svg',
           },
           {
             title: 'Lengthy and Discouraging Form Structures',
             description:
               'Lengthy and complex form structures are another significant hurdle in the lead generation process. When potential leads encounter forms that appear daunting or require extensive information input, they may become discouraged and abandon the form. This leads to missed opportunities to capture valuable leads.',
+            imgSrc: 'svgs/form.svg',
+          },
+          {
+            title: 'Limited Capabilities for Lead Nurturing',
+            description:
+              'One of the foremost challenges in lead generation is achieving satisfactory conversion rates on existing lead generation forms. Many businesses find themselves struggling with forms that fail to effectively convert website visitors into leads. This often results from issues such as unclear calls-to-action, uninspiring visuals, or confusing form structures.',
+            imgSrc: 'svgs/leads.svg',
           },
           {
             title: 'Data Management and Segmentation',
             description:
               'Managing and effectively segmenting the leads generated can be a daunting task. Without the right tools and processes in place, businesses may struggle to categorize leads based on their interests, preferences, or stage in the buying journey. This can result in sending generic or irrelevant content to leads, diminishing their engagement and trust.',
+            imgSrc: 'svgs/data.svg',
           },
           {
             title: 'Integration Challenges',
             description:
               'Many businesses operate within a tech ecosystem where various tools and platforms are used for different functions. Integrating lead generation forms seamlessly with existing systems, such as CRM software, email marketing platforms, or analytics tools, can be a complex and time-consuming endeavor. Incomplete or inefficient integrations may lead to data silos and missed opportunities for personalized lead nurturing.',
+            imgSrc: 'svgs/integration.svg',
           },
           {
             title: 'Mobile Responsiveness',
             description:
               'In an era where mobile devices are ubiquitous, lead generation forms must be fully responsive and user-friendly on all screen sizes. Creating forms that provide an optimal experience on mobile devices can be a challenge, especially if the chosen form-building solution lacks robust mobile optimization features.',
+            imgSrc: 'svgs/mobile.svg',
           },
           {
             title: 'Data-Driven Refinement',
             description:
               "The process of lead-generation doesn't end with the initial form creation. It involves continuous improvement based on data and insights. By analysing form performance and user behaviour, businesses can refine and fine-tune their forms to achieve even better results over time. Businesses may find it hard to run, manage and track the performance of each form.",
+            imgSrc: 'svgs/storage-setting.svg',
           },
         ],
       },
@@ -110,67 +116,78 @@ export default {
         description:
           "By leveraging Formester's comprehensive set of features, your B2B company can overcome these lead generation challenges, resulting in improved conversion rates, more efficient lead nurturing, and enhanced overall lead management. Formester's capabilities ensure that your lead generation forms become powerful tools in capturing and converting leads effectively.",
         subtext: 'Solutions',
-        imgBaseSrc: 'case-study-1/solutions',
         features: [
           {
             title: 'Enhanced Conversion Rate Optimization',
             description:
               "Formester's user-friendly interface empowers businesses to create lead generation forms that are not only visually appealing but also optimized for higher conversion rates. Clear and compelling calls-to-action, visually engaging designs, and streamlined form structures are easily achievable with Formester, ensuring that website visitors are more likely to become leads.",
+            imgSrc: 'svgs/flow.svg',
           },
           {
             title: 'Simplified Form Structures',
             description:
               'Formester understands the importance of user experience in lead generation. It offers intuitive tools to create forms with user-friendly, concise structures. By eliminating unnecessary fields and using conditional logic, businesses can create forms that feel effortless to complete. This significantly reduces form abandonment rates and enhances lead capture.',
+            imgSrc: 'svgs/form.svg',
           },
           {
             title: 'Robust Lead Nurturing Capabilities',
             description:
               'Beyond just collecting contact information, Formester equips businesses with the tools needed for effective lead nurturing. With seamless integrations with CRM systems and email marketing platforms, businesses can automate lead engagement, provide personalized content, and guide leads through the conversion journey. This ensures that leads are nurtured effectively, increasing the chances of conversion.',
+            imgSrc: 'svgs/leads.svg',
           },
           {
             title: 'Enhanced Lead Generation Quality & Efficiency',
             description:
               "Formester's Information Recall Feature optimizes lead generation by pre-filling known user data, streamlining the process, and fostering personalized engagement. This leads to higher-quality leads and improved conversion rates.",
+            imgSrc: 'svgs/leadership-star.svg',
           },
           {
             title: 'Dynamic Forms',
             description:
               "Formester's Conditional Logic Feature empowers the creation of dynamic forms that adjust based on user inputs. This dynamic functionality enhances user experience by displaying or hiding specific fields or sections, resulting in tailored and user-friendly forms that drive higher lead conversion rates.",
+            imgSrc: 'svgs/dynamic-feed.svg',
           },
           {
             title: 'Safe & Secure Lead Generation',
             description:
               "Formester's Spam Protection Feature acts as a shield against unwanted submissions, ensuring that your lead generation efforts are focused on genuine prospects. This safeguard results in cleaner data and more efficient lead nurturing, ultimately enhancing your conversion rates.",
+            imgSrc: 'svgs/profile-shield.svg',
           },
           {
             title: 'Instant Engagement',
             description:
               "Formester's Auto-responder Feature enables immediate interaction with leads, acknowledging their actions and providing relevant information. This swift engagement not only enhances customer satisfaction but also nurtures leads effectively, increasing the chances of conversion.",
+            imgSrc: 'svgs/love.svg',
           },
           {
             title: 'Consistent Branding',
             description:
               "Formester's Branding Kit Feature allows you to maintain a consistent brand identity across your lead generation forms. Customize forms with your logo, colors, and fonts to ensure they align seamlessly with your brand's aesthetics. This branding cohesion enhances brand recognition and trust among your potential leads.",
+            imgSrc: 'svgs/brand-unity.svg',
           },
           {
             title: 'Efficient Teamwork',
             description:
               "Formester's Collaboration Feature fosters efficient teamwork by allowing team members to collaborate seamlessly on form creation and management. With assigned roles and permissions, your team can work together smoothly, ensuring that lead generation forms are optimized effectively and in a timely manner.",
+            imgSrc: 'svgs/teamwork.svg',
           },
           {
             title: 'Seamless Integrations',
             description:
               'Formester excels in addressing integration challenges. It seamlessly integrates with various systems, including CRM software, email marketing platforms, and analytics tools. This ensures that lead data flows effortlessly across the tech ecosystem, preventing data silos and enabling personalized lead nurturing.',
+            imgSrc: 'svgs/integration.svg',
           },
           {
             title: 'Mobile Optimization',
             description:
               'Formester recognizes the importance of mobile responsiveness. All forms created with Formester are fully responsive, offering an optimal experience on all screen sizes. This ensures that leads can engage with forms comfortably on any device, increasing the chances of capturing leads, even on mobile.',
+            imgSrc: 'svgs/mobile.svg',
           },
           {
             title: 'Effortless Form Management',
             description:
               'Formester simplifies form management with an intuitive dashboard that allows businesses to easily track and monitor the performance of each form. It provides insights into submission rates, engagement metrics, user behaviour and conversion data, enabling businesses to continually improve their forms, making them even more effective over time, taking informed decisions and refine their lead generation strategy.',
+            imgSrc: 'svgs/document-copy.svg',
           },
         ],
       },

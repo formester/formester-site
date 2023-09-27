@@ -171,13 +171,7 @@
 </template>
 
 <script>
-export default {
-  methods: {
-    convertToImageName(text) {
-      return text.toLowerCase().replace(/&/g, 'and').replace(/ /g, '-')
-    },
-  },
-}
+export default {}
 </script>
 
 <style scoped>

@@ -18,9 +18,7 @@
           class="card d-flex align-items-center justify-items-center text-center align-items-md-start text-md-start"
         >
           <nuxt-img
-            :src="`case-study-1/results/${convertToImageName(
-              feature.title
-            )}.svg`"
+            :src="feature.imgSrc"
             class="img-fluid"
             loading="lazy"
           />
@@ -41,29 +39,29 @@ export default {
           title: 'Conversion Rate Surge',
           description:
             'Within the initial three months of implementing Formester, your organization can experience a remarkable 40% surge in conversion rates for lead generation forms.',
+          imgSrc: 'case-study-1/results/conversion-rate-surge.svg',
         },
         {
           title: 'Enhanced Lead Quality',
           description:
             "Formester's conditional logic feature improves lead quality by 25%, resulting in higher conversion rates and more valuable sales opportunities. Moreover, the leads captured are more qualified and engaged.",
+          imgSrc: 'case-study-1/results/enhanced-lead-quality.svg',
         },
         {
           title: 'Sales Growth',
           description:
             "As a result of the improved lead nurturing features facilitated by Formester, your organization can witness a 30% growth in sales generated from leads acquired through Formester's lead-generation forms. The enhanced engagement and personalized interactions will be translated directly into increased revenue.",
+          imgSrc: 'case-study-1/results/sales-growth.svg',
         },
         {
           title: 'Significant Time and Resource Savings',
           description:
             "Formester's user-friendly interface dramatically streamlines your form creation and modification processes, leading to a notable reduction in the time and resources required. Your team can now create and optimize lead generation forms swiftly, allowing them to allocate their efforts more effectively. This newfound efficiency ensures that your resources are allocated effectively, maximizing your overall productivity and return on investment by up to 33%.",
+          imgSrc:
+            'case-study-1/results/significant-time-and-resource-savings.svg',
         },
       ],
     }
-  },
-  methods: {
-    convertToImageName(text) {
-      return text.toLowerCase().replace(/&/g, 'and').replace(/ /g, '-')
-    },
   },
 }
 </script>
