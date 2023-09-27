@@ -326,7 +326,7 @@ export default {
   top: 0;
   z-index: -1;
   width: 100%;
-  opacity: 30%;
+  opacity: 35%;
 }
 
 .hero__heading {
