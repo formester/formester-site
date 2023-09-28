@@ -82,6 +82,8 @@ Customer Experience Surveys typically consist of a series of questions that cove
 
 Customer Experience (CX) surveys are unique in several ways:
 
+![Infographic showing: Why Do Customer Experience Surveys Stand-out?: 1. Focus on Customer Perception 2. Holistic Approach 3. Qualitative and Quantitative Insights 4. Customer-Centric 5. Relationship-Oriented 6. Real-Time Feedback 7. Benchmarking and Competitive Analysis 8. Continuous Improvement 9. Personalization 10. Measuring Emotional Experience 11. Customer-Centric Metrics 12. Link to Business Outcomes ](/img/why-do-customer-experience-surveys-stand-out_.png "Why Do Customer Experience Surveys Stand-out?")
+
 ### 1. Focus on Customer Perception
 
 CX surveys primarily focus on understanding [how customers perceive their interactions with a company, its products, and services](https://formester.com/templates/user-experience-survey-template-1663/). They delve into the emotional and psychological aspects of the customer experience.
