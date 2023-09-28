@@ -542,6 +542,8 @@ By serving these diverse purposes, CX surveys provide valuable insights and serv
 
 Designing a customer experience (CX) survey is a crucial step in gathering valuable insights from your audience. Formetser offers powerful features to help you create engaging and effective CX surveys. Follow these steps to design a CX survey that resonates with your audience and delivers actionable feedback:
 
+![Infographic showing: Steps To Create And Publish A Customer Experience Survey Using Formetser (Steps 1 - 6): Step 1: Define Your Survey Objectives | Step 2: Sign Up and Log In | Step 3: Create a New Survey | Step 4: Addition Of Questions | Step 5: Customizing The Survey Design | Step 6: Setting up Advanced Settings - Conditional Logic, Information Recall & Data Collection with Matrix Grids](/img/steps-to-create-and-publish-a-customer-experience-survey-using-formetser.png "Steps To Create And Publish A Customer Experience Survey Using Formetser (Steps 1 - 6)")
+
 ### Step 1: Define Your Survey Objectives
 
 Before diving into survey design, clearly define your objectives. Determine what specific aspects of the customer experience you want to assess and improve. 
