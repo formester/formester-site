@@ -140,6 +140,7 @@ import FacebookIcon from '../../components/icons/facebook.vue'
 import LinkdinIcon from '../../components/icons/linkdin.vue'
 import CopyLinkIcon from '../../components/icons/copyLink.vue'
 import getSiteMeta from '../../utils/getSiteMeta'
+import { fetchArticle, fetchRelatedArticles } from '../../utils/getArticles'
 
 const route = useRoute().params
 
@@ -205,7 +206,7 @@ const meta = computed((article) => {
 useHead({
   title: article?.metaTitle,
   meta: [
-    ...meta,
+    { meta },
     {
       property: 'article:published_time',
       content: article?.createdAt,
@@ -216,7 +217,6 @@ useHead({
     },
     { name: 'twitter:label1', content: 'Written by' },
     { name: 'twitter:data1', content: article?.author },
-    // ...other meta properties
   ],
   link: [
     {
@@ -300,27 +300,19 @@ onMounted(() => {
     }
   }
   loadDisqus()
-  fetchArticle() // Fetch article and related articles on component initialization
-  fetchRelatedArticles()
+  fetchBlogArticle() // Fetch article and related articles on component initialization
+  fetchBlogRelatedArticles()
 })
 
 // Fetching data
-const fetchArticle = async () => {
-  const result = await queryContent('blog')
-    .where({ _path: `/blog/` + route.slug })
-    .find()
-  article.value = result[0]
+const fetchBlogArticle = async () => {
+  const result = await fetchArticle(route)
+  article.value = result
 }
 
-const fetchRelatedArticles = async () => {
-  const result = await queryContent('blog').find()
-  relatedArticles.value = result.filter(
-    (relatedArticle) => article.value._path !== relatedArticle._path
-  )
-  const randIndex = Math.floor(
-    Math.random() * (relatedArticles.value.length - 2)
-  )
-  relatedArticles.value = relatedArticles.value.slice(randIndex, randIndex + 2)
+const fetchBlogRelatedArticles = async () => {
+  const result = fetchRelatedArticles(article.value)
+  relatedArticles.value = result
 }
 </script>
 
