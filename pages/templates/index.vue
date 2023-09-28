@@ -10,38 +10,32 @@
 import { ref, onMounted } from 'vue'
 import getSiteMeta from '@/utils/getSiteMeta'
 import Templates from '@/components/template/Templates.vue'
+import { fetchTemplateCategories, fetchTemplates } from '@/utils/getTemplates';
 
 const templates = ref([])
 const categories = ref([])
 
-const fetchTemplates = async () => {
+const getTemplates = async () => {
   try {
-    const templatesResponse = await fetch(
-      'https://app.formester.com/templates.json'
-    )
-    const templatesData = await templatesResponse.json()
+    const templatesData = await fetchTemplates()
     templates.value = templatesData
   } catch (error) {
     console.error('Error fetching templates:', error)
   }
 }
 
-const fetchCategories = async () => {
+const getTemplateCategories = async () => {
   try {
-    const categoriesResponse = await fetch(
-      'https://app.formester.com/template_categories.json'
-    )
-    const categoriesData = await categoriesResponse.json()
-    categories.value = categoriesData
-    console.log(categories.value);
+    const templateCategoriesData = await fetchTemplateCategories()
+    categories.value = templateCategoriesData
   } catch (error) {
     console.error('Error fetching categories:', error)
   }
 }
 
 onMounted(() => {
-  fetchTemplates()
-  fetchCategories()
+  getTemplates()
+  getTemplateCategories()
 })
 
 const meta = computed(() => {
