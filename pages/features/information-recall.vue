@@ -84,14 +84,14 @@
 
 <script>
 import CallToActionSection from '@/components/CallToActionSection.vue'
-import FeatureDetail from '../../components/FeatureDetail.vue'
+import FeatureDetail from '@/components/FeatureDetail.vue'
 import Testimonial from '@/components/Testimonial.vue'
-import { allTestimonials } from '@/constants/testimonials'
-import TemplateSection from '../../components/TemplateSection.vue'
-import InformationRecallInPractice from '../../components/InformationRecallInPractice.vue'
+import TemplateSection from '@/components/TemplateSection.vue'
+import InformationRecallInPractice from '@/components/InformationRecallInPractice.vue'
 
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
+import { fetchRandomTestimonials } from '@/utils/getTestimonials'
 
 export default {
   components: {
@@ -102,7 +102,7 @@ export default {
     InformationRecallInPractice,
   },
   setup() {
-    const features = ([
+    const features = [
       {
         title: 'Answer Recall: Bring Conversations to Life',
         description:
@@ -131,8 +131,8 @@ export default {
         src: 'information-recall/score-price-integrations-enhanced-functionality.svg',
         alt: 'The no. of travellers and and cost per person is recalled and calculation is performed based on a formula',
       },
-    ])
-    const benefits = ([
+    ]
+    const benefits = [
       {
         title: 'Time-Saving Efficiency',
         description:
@@ -161,22 +161,20 @@ export default {
         imageSrc: 'streamlined-workflow.jpg',
         altText: 'icon showing work flows',
       },
-    ])
+    ]
 
     const randomTestimonials = ref([])
 
-    const fetchRandomTestimonials = async () => {
+    const fetchTestimonials = async () => {
       try {
-        const testimonials = await allTestimonials
-        const randIndex = Math.floor(Math.random() * (testimonials.length - 2))
-        randomTestimonials.value = testimonials.slice(randIndex, randIndex + 2)
+        randomTestimonials.value = await fetchRandomTestimonials()
       } catch (error) {
         console.error('Error fetching random testimonials:', error)
       }
     }
 
     onMounted(() => {
-      fetchRandomTestimonials()
+      fetchTestimonials()
     })
 
     return {

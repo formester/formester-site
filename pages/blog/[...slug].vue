@@ -151,8 +151,6 @@ const formatDate = (date) => {
   return new Date(date).toLocaleDateString('en', options)
 }
 
-console.log(article);
-
 const copyToClipboard = () => {
   if (process.client) {
     navigator.clipboard.writeText(window.location.href).then(() => {
@@ -188,7 +186,7 @@ const encodedUrl = () => {
   return encodeURIComponent(process.env.baseUrl + route.fullPath)
 }
 
-const meta = (article) => {
+const meta = computed((article) => {
   const metaData = {
     type: 'article',
     url: `https://formester.com/blog/${route.slug}/`,
@@ -202,12 +200,12 @@ const meta = (article) => {
       'Form builder showing drag and drop functionality',
   }
   return getSiteMeta(metaData)
-}
+})
 
 useHead({
   title: article?.metaTitle,
   meta: [
-    ...meta(),
+    ...meta,
     {
       property: 'article:published_time',
       content: article?.createdAt,

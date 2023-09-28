@@ -53,10 +53,10 @@
 
 <script>
 import CallToActionSection from '@/components/CallToActionSection.vue'
-import FeatureDetail from '../../components/FeatureDetail.vue'
+import FeatureDetail from '@/components/FeatureDetail.vue'
 import Testimonial from '@/components/Testimonial.vue'
-import { allTestimonials } from '@/constants/testimonials'
-import TemplateSection from '../../components/TemplateSection.vue'
+import TemplateSection from '@/components/TemplateSection.vue'
+import { fetchRandomTestimonials } from '@/utils/getTestimonials'
 
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
@@ -92,18 +92,16 @@ export default {
 
     const randomTestimonials = ref([])
 
-    const fetchRandomTestimonials = async () => {
+    const fetchTestimonials = async () => {
       try {
-        const testimonials = await allTestimonials
-        const randIndex = Math.floor(Math.random() * (testimonials.length - 2))
-        randomTestimonials.value = testimonials.slice(randIndex, randIndex + 2)
+        randomTestimonials.value = await fetchRandomTestimonials()
       } catch (error) {
         console.error('Error fetching random testimonials:', error)
       }
     }
 
     onMounted(() => {
-      fetchRandomTestimonials()
+      fetchTestimonials()
     })
 
     return {

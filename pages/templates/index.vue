@@ -33,6 +33,7 @@ const fetchCategories = async () => {
     )
     const categoriesData = await categoriesResponse.json()
     categories.value = categoriesData
+    console.log(categories.value);
   } catch (error) {
     console.error('Error fetching categories:', error)
   }
@@ -44,7 +45,7 @@ onMounted(() => {
 })
 
 const meta = computed(() => {
-  return {
+  const metaData = {
     type: 'website',
     url: 'https://formester.com/templates/',
     title: 'The Formester Templates',
@@ -53,6 +54,7 @@ const meta = computed(() => {
     mainImage: 'https://formester.com/formester-form-builder-background.png',
     mainImageAlt: 'Form builder showing drag and drop functionality',
   }
+  return getSiteMeta(metaData)
 })
 
 const listItems = computed(() => {
@@ -98,22 +100,9 @@ useJsonld({
       },
     },
     {
-      '@type': 'BreadcrumbList',
+      '@type': 'ItemList',
       '@id': 'https://acornglobus.com',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Home',
-          item: 'https://formester.com',
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: 'All Templates',
-          item: 'https://formester.com/templates',
-        },
-      ],
+      itemListElement: listItems.value
     },
   ],
 })

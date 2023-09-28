@@ -9,37 +9,37 @@ export default defineNuxtConfig({
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
-  app: {
-    head: {
-      title: 'No Code Form Builder | Online HTML Form Builder - Formester',
-      meta: [
-        ...meta,
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        {
-          name: 'robots',
-          content: 'index, follow',
-        },
-        { name: 'format-detection', content: 'telephone=no' },
-      ],
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: 'https://formester.com/',
-        },
-      ],
-      // Custom Javascript
-      script: [
-        {
-          src: '/bootstrap.min.js',
-          defer: true,
-          async: true,
-        },
-      ],
-    },
+app: {
+  head: {
+    title: 'No Code Form Builder | Online HTML Form Builder - Formester',
+    meta: [
+      ...meta,
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        name: 'robots',
+        content: 'index, follow',
+      },
+      { name: 'format-detection', content: 'telephone=no' },
+    ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        hid: 'canonical',
+        rel: 'canonical',
+        href: 'https://formester.com/',
+      },
+    ],
+    // Custom Javascript
+    script: [
+      {
+        src: '/bootstrap.min.js',
+        defer: true,
+        async: true,
+      },
+    ],
   },
+},
 
   router: {
     trailingSlash: true,
@@ -74,19 +74,12 @@ export default defineNuxtConfig({
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~/assets/css/bootstrap.min.css', '~/assets/css/main.css'],
 
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  // plugins: [
-  //     '~plugins/jsonld',
-  //     { src: '~/plugins/notifications-client', ssr: false },
-  //   ],
-
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     '@nuxtjs/pwa',
-    '@nuxtjs/sitemap',
 
     // [
     //   '@nuxtjs/google-analytics',
@@ -95,9 +88,15 @@ export default defineNuxtConfig({
     //   },
     // ],
   ],
-
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/robots', '@nuxt/content', '@nuxt/image', 'nuxt-jsonld', 'nuxt-gtag'],
+  modules: [
+    '@nuxtjs/robots',
+    '@nuxt/content',
+    '@nuxt/image',
+    'nuxt-jsonld',
+    'nuxt-gtag',
+    'nuxt-simple-sitemap'
+  ],
   // Hooks configuration - https://content.nuxtjs.org/advanced/
   hooks: {
     'content:file:beforeInsert': (document) => {
@@ -108,11 +107,7 @@ export default defineNuxtConfig({
     },
   },
 
-  gtag: {
-    id: 'G-XXXXXXXXXX'
-  },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
@@ -146,28 +141,6 @@ export default defineNuxtConfig({
     },
     fallback: true,
   },
-  router: {
-    routes: async () => {
-      try {
-        let { data } = await axios.get(
-          'https://app.formester.com/templates.json'
-        )
-        let templatesRoute = data.map((template) => {
-          return `/templates/${template.slug}`
-        })
-        let { data: response } = await axios.get(
-          'https://app.formester.com/template_categories.json'
-        )
-        let categoriesRoute = response.map((category) => {
-          return `/templates/categories/${category.slug}`
-        })
-        return [...templatesRoute, ...categoriesRoute]
-      } catch (error) {
-        return []
-      }
-    },
-    fallback: true,
-  },
   content: {
     liveEdit: false,
     markdown: {
@@ -177,7 +150,7 @@ export default defineNuxtConfig({
 
   // Nuxt Image
   image: {
-    dir: 'assets/images',
+    dir: 'assets/images/',
   },
 
   // Enviornment variable for the base url of the app

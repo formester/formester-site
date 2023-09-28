@@ -52,17 +52,17 @@
 </template>
 
 <script>
-import WhyFormester from '../../components/use-case/why-formester.vue'
-import AdvanceFeatures from '../../components/use-case/advance-features.vue'
-import IndustrySpecificUseCase from '../../components/use-case/industry-specific-use-case.vue'
-import FormBuildersComparisionTable from '../../components/form-builders-comparision-table.vue'
+import WhyFormester from '@/components/use-case/why-formester.vue'
+import AdvanceFeatures from '@/components/use-case/advance-features.vue'
+import IndustrySpecificUseCase from '@/components/use-case/industry-specific-use-case.vue'
+import FormBuildersComparisionTable from '@/components/form-builders-comparision-table.vue'
 
-import ThreeStepsCreateForm from '../../components/ThreeStepsCreateForm.vue'
-import Testimonial from '../../components/Testimonial.vue'
+import ThreeStepsCreateForm from '@/components/ThreeStepsCreateForm.vue'
+import Testimonial from '@/components/Testimonial.vue'
 import { allTestimonials } from '@/constants/testimonials'
-import TemplateSection from '../../components/TemplateSection.vue'
+import TemplateSection from '@/components/TemplateSection.vue'
 import CallToActionSection from '@/components/CallToActionSection.vue'
-import FAQwithCategories from '../../components/FAQwithCategories.vue'
+import FAQwithCategories from '@/components/FAQwithCategories.vue'
 
 import getSiteMeta from '@/utils/getSiteMeta'
 

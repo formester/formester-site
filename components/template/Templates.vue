@@ -8,7 +8,6 @@
     </div>
     <div class="w-100">
       <h1 class="heading">
-        <!-- {{ route.slug ? route.slug.replace('-', ' ') : '' }} -->
         {{ formattedCategoryHeading }}
         Templates
       </h1>

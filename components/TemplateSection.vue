@@ -1,49 +1,54 @@
 <template>
-    <div class="container py-5">
-        <div class="row px-0">
-            <div class="heading d-flex flex-column align-items-center text-center">
-                <h2 class="section__heading">Pre-Designed Templates</h2>
-                <p class="hero__subheading">Get Started Quickly with Ready-Made Form Templates</p>
-            </div>
-            <div v-if="templates && templates.length" class="templates py-3">
-                <TemplateCard v-for="(template, idx) in templates" :key="idx" :template="template" />
-            </div>
-            <div class="d-flex align-items-center justify-content-center mt-4">
-                <NuxtLink :to="`/templates/`">
-                    <button class="btn-all-templates">More Templates</button>
-                </NuxtLink>
-            </div>
-        </div>
+  <div class="container py-5">
+    <div class="row px-0">
+      <div class="heading d-flex flex-column align-items-center text-center">
+        <h2 class="section__heading">Pre-Designed Templates</h2>
+        <p class="hero__subheading">
+          Get Started Quickly with Ready-Made Form Templates
+        </p>
+      </div>
+      <div v-if="templates && templates.length" class="templates py-3">
+        <TemplateCard
+          v-for="(template, idx) in templates"
+          :key="idx"
+          :template="template"
+        />
+      </div>
+      <div class="d-flex align-items-center justify-content-center mt-4">
+        <NuxtLink :to="`/templates/`">
+          <button class="btn-all-templates">More Templates</button>
+        </NuxtLink>
+      </div>
     </div>
+  </div>
 </template>
 
-<script>
+<script setup>
 import TemplateCard from './template/TemplateCard.vue'
-import axios from 'axios'
+import { ref, onMounted } from 'vue'
 
+const templates = ref([])
+
+const getTemplates = async () => {
+  try {
+    const response = await fetch('https://app.formester.com/templates.json')
+    templates.value = await response.json()
+    const randIndex = Math.floor(Math.random() * (templates.value.length - 3))
+    templates.value = templates.value.slice(randIndex,  randIndex + 3);
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+onMounted(() => {
+  getTemplates()
+})
+
+</script>
+
+<script>
 export default {
   components: { TemplateCard },
-  data() {
-    return {
-        templates: []
-    }
-  },
-  mounted(){
-    this.getTemplates()
-  },
-  methods: {
-    async getTemplates() {
-      try {
-        const { data: templates } = await axios(
-          'https://app.formester.com/templates.json',
-        )
-        const randIndex = Math.floor(Math.random() * (templates.length - 3))
-        this.templates = templates.slice(randIndex,  randIndex + 3);
-      } catch (err) {
-        console.error(err)
-      }
-    },
-  },
 }
 </script>
 
@@ -76,5 +81,4 @@ export default {
     grid-template-columns: 1fr;
   }
 }
-
 </style>

@@ -51,7 +51,6 @@
 
 <script setup>
 import { ref } from 'vue'
-// import { useAxios } from '@nuxt/http';
 import getSiteMeta from '@/utils/getSiteMeta'
 import PreviewModal from '../../components/template/PreviewModal.vue'
 import MoreTemplates from '../../components/template/MoreTemplates.vue'
@@ -109,7 +108,7 @@ onMounted(() => {
   fetchCategories()
 })
 
-const meta = (template) => {
+const meta = computed((template) => {
   const { name, description, metaTitle, metaDescription, previewImageUrl } =
     template.value || {}
   const metaData = {
@@ -128,7 +127,7 @@ const meta = (template) => {
     mainImageAlt: 'Formester Template',
   }
   return getSiteMeta(metaData)
-}
+})
 
 useHead((template) => {
   const { name, keywords } = template || {}

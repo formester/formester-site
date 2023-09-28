@@ -32,45 +32,49 @@ export default {
   setup() {
     const { data: articles } = useAsyncData(async () => {
       return await queryContent('/blog')
+        .sort({createdAt: -1})
         .where({
           published: true,
           featured: false,
         })
-        .find();
-    });
+        .find()
+    })
 
-    const { data: heroArticles } = useAsyncData(
-      async () => {
-        return await queryContent('/blog')
-          .where({
-            published: true,
-            featured: true,
-          })
-          .find();
-      }
-    );
+    const { data: heroArticles } = useAsyncData(async () => {
+      return await queryContent('/blog')
+        .sort({createdAt: -1})
+        .where({
+          published: true,
+          featured: true,
+        })
+        .find()
+    })
 
     onMounted(() => {
-      articles;
-      heroArticles;
-    });
+      articles
+      heroArticles
+    })
 
-    const meta = ref({
-      type: 'website',
-      url: 'https://formester.com/blog/',
-      title:
-        'Latest form Builder Software in 2023 | Best Online Form Builder to Use in 2023 - Formester',
-      description:
-        "Best Online, No-Code Form Builder Software in 2023 - Formester's Blog Resource | Discover trending content related to all things form-building.",
-      mainImage: 'https://formester.com/formester-form-builder-background.png', // need to update with blog page image
-      mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with blog page image alt
+    const meta = computed(() => {
+      const metaData = {
+        type: 'website',
+        url: 'https://formester.com/blog/',
+        title:
+          'Latest form Builder Software in 2023 | Best Online Form Builder to Use in 2023 - Formester',
+        description:
+          "Best Online, No-Code Form Builder Software in 2023 - Formester's Blog Resource | Discover trending content related to all things form-building.",
+        mainImage:
+          'https://formester.com/formester-form-builder-background.png', // need to update with blog page image
+        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with blog page image alt
+      }
+      return getSiteMeta(metaData)
     })
 
     return {
       articles,
       heroArticles,
-      meta
-    };
+      meta,
+    }
   },
   head() {
     return {

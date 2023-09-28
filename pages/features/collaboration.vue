@@ -98,6 +98,7 @@ import CollaborateEffectively from '../../components/features/collaboration/coll
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
 import ApplicationOfWebForms from '../../components/ApplicationOfWebForms.vue'
+import { fetchRandomTestimonials } from '@/utils/getTestimonials'
 
 export default {
   components: {
@@ -300,18 +301,16 @@ export default {
 
     const randomTestimonials = ref([])
 
-    const fetchRandomTestimonials = async () => {
+    const fetchTestimonials = async () => {
       try {
-        const testimonials = await allTestimonials
-        const randIndex = Math.floor(Math.random() * (testimonials.length - 2))
-        randomTestimonials.value = testimonials.slice(randIndex, randIndex + 2)
+        randomTestimonials.value = await fetchRandomTestimonials()
       } catch (error) {
         console.error('Error fetching random testimonials:', error)
       }
     }
 
     onMounted(() => {
-      fetchRandomTestimonials()
+      fetchTestimonials()
     })
 
     return {

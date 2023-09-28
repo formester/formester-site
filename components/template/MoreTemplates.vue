@@ -51,14 +51,12 @@
     <div class="mb-5">
       <div v-if="templates && templates.length" class="templates">
         <div v-for="(template, idx) in templates" :key="idx" class="template">
-          <!-- <NuxtLink
-            :to="{ name: 'templates-slug', params: { slug: template.slug } }"
-          > -->
+          <NuxtLink :to="`/templates/${template.slug}`">
             <img
-              v-if="template.previewImageUrl"
+              v-if="template?.previewImageUrl"
               class="img-fluid pointer template_img"
-              :src="template.previewImageUrl"
-              :alt="template.name"
+              :src="template?.previewImageUrl"
+              :alt="template?.name"
             />
             <nuxt-img
               v-else
@@ -67,12 +65,15 @@
               alt="Template placeholder image"
             />
             <h2 class="template-name pointer">
-              {{ template.name }}
+              {{ template?.name }}
             </h2>
-          <!-- </NuxtLink> -->
+          </NuxtLink>
         </div>
       </div>
-      <div v-if="templates && templates.length" class="d-flex align-items-center justify-content-center mt-4">
+      <div
+        v-if="templates && templates.length"
+        class="d-flex align-items-center justify-content-center mt-4"
+      >
         <NuxtLink :to="`/templates/`">
           <button class="btn-all-templates">View All Templates</button>
         </NuxtLink>
@@ -91,8 +92,6 @@
 </template>
 
 <script>
-import axios from 'axios'
-import Loader from '../Loader.vue'
 export default {
   components: {
     Loader,
@@ -107,84 +106,91 @@ export default {
       default: '',
     },
   },
-  data() {
-    return {
-      isDragging: false,
-      activeTab: null,
-      templates: [],
-      loading: false,
-    }
-  },
-  mounted() {
-    this.getTemplates()
-    this.handleIcons()
-  },
-  methods: {
-    handleIcons() {
-      const tabsBox = this.$refs.tabsBox
-      const leftArrow = document.querySelector('#left')
-      const rightArrow = document.querySelector('#right')
-      const scrollLeft = Math.ceil(tabsBox.scrollLeft)
-      const scrollableWidth = tabsBox.scrollWidth - tabsBox.clientWidth
-
-      leftArrow.parentElement.style.display = scrollLeft > 0 ? 'flex' : 'none'
-      rightArrow.parentElement.style.display =
-        scrollableWidth > scrollLeft ? 'flex' : 'none'
-    },
-    scrollTabs(direction) {
-      const tabsBox = this.$refs.tabsBox
-      const scrollAmount = 180
-
-      if (direction === 'left') {
-        if (tabsBox.scrollLeft <= 100) {
-          tabsBox.scrollLeft = 0
-        } else {
-          tabsBox.scrollLeft -= scrollAmount
-        }
-      } else if (direction === 'right') {
-        tabsBox.scrollLeft += scrollAmount
-      }
-
-      setTimeout(() => {
-        this.handleIcons()
-      }, 300)
-    },
-    setActiveTab(tab) {
-      const id = tab ? tab.slug : 'recommend'
-      this.activeTab = tab?.id || null
-      this.getTemplates(tab?.slug || null)
-      const element = document.getElementById(id)
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'center',
-      })
-      clearTimeout(timeout)
-      const timeout = setTimeout(() => {
-        this.handleIcons()
-      }, 300)
-    },
-    async getTemplates(categorySlug) {
-      const params = {}
-      if (categorySlug) {
-        params.category_slug = categorySlug
-      }
-      this.loading = true
-      try {
-        const { data: templates } = await axios(
-          'https://app.formester.com/templates.json',
-          { params }
-        )
-        this.templates = templates.filter((el) => el.slug !== this.templateSlug)
-        this.templates = this.templates.splice(0, 6)
-        this.loading = false
-      } catch (err) {
-        console.error(err)
-        this.loading = false
-      }
-    },
-  },
 }
+</script>
+
+<script setup>
+import Loader from '../Loader.vue'
+import { ref, onMounted, defineProps } from 'vue'
+
+const props = defineProps(['categories', 'templateSlug']);
+const templateSlug = ref(props.templateSlug);
+
+const isDragging = ref(false)
+const activeTab = ref(null)
+const templates = ref([])
+const loading = ref(false)
+const route = useRoute()
+const tabsBox = ref(null)
+
+const handleIcons = () => {
+  const leftArrow = document.querySelector('#left')
+  const rightArrow = document.querySelector('#right')
+  const scrollLeft = Math.ceil(tabsBox.value.scrollLeft)
+  const scrollableWidth = tabsBox.value.scrollWidth - tabsBox.value.clientWidth
+
+  leftArrow.parentElement.style.display = scrollLeft > 0 ? 'flex' : 'none'
+  rightArrow.parentElement.style.display =
+    scrollableWidth > scrollLeft ? 'flex' : 'none'
+}
+
+const scrollTabs = (direction) => {
+  // const tabsBox = this.$refs.tabsBox
+  const scrollAmount = 180
+
+  if (direction === 'left') {
+    if (tabsBox.value.scrollLeft <= 100) {
+      tabsBox.value.scrollLeft = 0
+    } else {
+      tabsBox.value.scrollLeft -= scrollAmount
+    }
+  } else if (direction === 'right') {
+    tabsBox.value.scrollLeft += scrollAmount
+  }
+
+  setTimeout(() => {
+    handleIcons()
+  }, 300)
+}
+
+const setActiveTab = (tab) => {
+  const id = tab ? tab.slug : 'recommend'
+  activeTab.value = tab?.id || null
+  getTemplates(tab?.slug || null)
+  const element = document.getElementById(id)
+  const timeout = setTimeout(() => {
+    handleIcons()
+  }, 300)
+  clearTimeout(timeout)
+  element.scrollIntoView({
+    behavior: 'smooth',
+    block: 'nearest',
+    inline: 'center',
+  })
+}
+
+const getTemplates = async (categorySlug) => {
+  const params = {}
+  if (categorySlug) {
+    params.category_slug = categorySlug
+  }
+  loading.value = true
+  try {
+    const {data} = await useFetch('https://app.formester.com/templates.json', {params})
+    templates.value = data.value
+    templates.value = templates.value.filter((el) => el.slug !== templateSlug.value)
+    templates.value = templates.value.splice(0, 6)
+    loading.value = false
+  } catch (err) {
+    console.error(err)
+    loading.value = false
+  }
+}
+
+onMounted(() => {
+  getTemplates()
+  handleIcons()
+})
 </script>
 
 <style scoped>

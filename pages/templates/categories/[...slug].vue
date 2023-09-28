@@ -10,12 +10,12 @@
 import { ref, onMounted, computed } from 'vue'
 import getSiteMeta from '@/utils/getSiteMeta'
 import Templates from '@/components/template/Templates.vue'
-// import { useRoute } from 'vue-router';
 
 const route = useRoute().params
 
 const templates = ref([])
 const categories = ref([])
+const selectedCategory = ref('')
 
 const fetchTemplates = async (slug) => {
   try {
@@ -36,6 +36,7 @@ const fetchCategories = async () => {
     )
     const data = await response.json()
     categories.value = data
+    return categories.value
   } catch (error) {
     console.error('Error fetching categories:', error)
   }
@@ -47,14 +48,14 @@ onMounted(() => {
   fetchCategories()
 })
 
+
 const currentCategory = computed(() => {
-  const category = categories.value.find((cate) => cate.slug === route.slug)
-  console.log(category)
+  const category = categories.value.find((cate) => cate.slug === route.slug[0])
   return category ? category.name : ''
 })
 
 const meta = computed(() => {
-  return {
+  const metaData = {
     type: 'website',
     url: 'https://formester.com/templates/',
     title: currentCategory.value,
@@ -62,6 +63,7 @@ const meta = computed(() => {
     mainImage: 'https://formester.com/formester-form-builder-background.png',
     mainImageAlt: 'Form builder showing drag and drop functionality',
   }
+  return getSiteMeta(metaData)
 })
 
 const listItems = computed(() => {

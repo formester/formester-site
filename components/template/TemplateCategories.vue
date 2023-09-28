@@ -33,7 +33,7 @@
       >
         <h3
           class="category"
-          :class="{ active: activeCategory === category.slug }"
+          :class="{ active: activeCategory === category.name }"
         >
           {{ category.name }}
         </h3>
