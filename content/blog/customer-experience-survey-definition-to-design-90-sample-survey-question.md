@@ -642,6 +642,8 @@ Next, simply customize the rows and columns as required.
 
 By configuring these advanced settings, your CX survey becomes more responsive, engaging, and efficient. Respondents receive a tailored experience, and you can collect valuable data that provides deeper insights into the customer experience.
 
+![Infographic showing: Steps To Create And Publish A Customer Experience Survey Using Formetser (Steps 7 - 10): Step 7: Organize Questions Thoughtfully | Step 8: Preview & Test Your Survey | Step 9: Publish Your Survey | Step 10: Monitor and Analyze Responses](/img/steps-to-create-and-publish-a-customer-experience-survey-using-formetser-1.png "Steps To Create And Publish A Customer Experience Survey Using Formetser (Steps 7 - 10)")
+
 ### Step 7: Organize Questions Thoughtfully
 
 Arrange survey questions in a logical order. Start with introductory and easy-to-answer questions to engage respondents. 
