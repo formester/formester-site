@@ -82,6 +82,8 @@ Customer Experience Surveys typically consist of a series of questions that cove
 
 Customer Experience (CX) surveys are unique in several ways:
 
+![Infographic showing: Why Do Customer Experience Surveys Stand-out?: 1. Focus on Customer Perception 2. Holistic Approach 3. Qualitative and Quantitative Insights 4. Customer-Centric 5. Relationship-Oriented 6. Real-Time Feedback 7. Benchmarking and Competitive Analysis 8. Continuous Improvement 9. Personalization 10. Measuring Emotional Experience 11. Customer-Centric Metrics 12. Link to Business Outcomes ](/img/why-do-customer-experience-surveys-stand-out_.png "Why Do Customer Experience Surveys Stand-out?")
+
 ### 1. Focus on Customer Perception
 
 CX surveys primarily focus on understanding [how customers perceive their interactions with a company, its products, and services](https://formester.com/templates/user-experience-survey-template-1663/). They delve into the emotional and psychological aspects of the customer experience.
@@ -140,6 +142,8 @@ Conducting a customer experience survey offers invaluable advantages to a compan
 
 In this section, we explore the substantial benefits that customer experience surveys bring to the company's table, from enhancing product offerings to bolstering brand reputation.
 
+![Infographic showing: Benefits Of Conducting A Customer Experience Survey To The Company: 1. Improved Customer Satisfaction 2. Increased Customer Loyalty 3. Enhanced Product/Service Quality 4. Competitive Advantage 5. Better Operational Efficiency 6. Targeted Marketing 7. Improved Employee Performance 8. Enhanced Brand Perception ](/img/benefits-of-conducting-a-customer-experience-survey-to-the-company.png "Benefits Of Conducting A Customer Experience Survey To The Company")
+
 ### 1. Improved Customer Satisfaction
 
 CX surveys provide insights into customer satisfaction levels, helping companies identify areas of improvement and enhance overall customer happiness.
@@ -180,6 +184,8 @@ These surveys empower individuals to voice their opinions, [influence product an
 
 In this section, we delve into the various ways in which customer experience surveys directly benefit users, from personalized services to stronger connections with brands.
 
+![Infographic showing: Benefits Of Conducting A Customer Experience Survey To The Users: 1. Better Customer Experience 2. High-Quality Products/Services 3. Increased Satisfaction 4. Personalized Marketing 5. Efficient Support 6. Enhanced Usability 7. Clear Communication 8. Voice in Decision-Making](/img/benefits-of-conducting-a-customer-experience-survey-to-the-users.png "Benefits Of Conducting A Customer Experience Survey To The Users")
+
 ### 1. Better Customer Experience 
 
 Users benefit from a more improved and tailored customer experience as companies address issues and pain points identified through surveys.
@@ -217,6 +223,8 @@ In summary, it's a win-win situation where both parties stand to gain from the i
 ## What are the Purposes and associated Metrics of a Customer Experience Survey? + Sample Survey Questions
 
 The purposes of a Customer Experience (CX) survey are multifaceted and play a critical role in understanding and enhancing the customer journey. Here are the key purposes of conducting a CX survey:
+
+![Infographic showing: What are the Purposes of a Customer Experience Survey? (Part - 1): 1. Measure Customer Satisfaction 2. Evaluate Loyalty and Advocacy 3. Identify Pain Points 4. Improve Product/Service Quality 5. Enhance Customer Retention 6. Assess Support and Service 7. Optimize Website and App Usability 8. Refine Communication Strategies 9. Monitor Employee Performance 10. Enhance Operational Efficiency](/img/what-are-the-purposes-of-a-customer-experience-survey_.png "What are the Purposes of a Customer Experience Survey? (Part - 1)")
 
 ### 1. Measure Customer Satisfaction
 
@@ -390,6 +398,8 @@ CX surveys can also assess the efficiency of internal processes as they relate t
 4. Have you encountered any challenges related to our internal processes while interacting with us? (Yes/No)
 5. What recommendations do you have for enhancing the efficiency of our operations?
 
+   ![Infographic showing: What are the Purposes of a Customer Experience Survey? (Part - 2): 11. Benchmark Against Competitors 12. Gather Customer Feedback 13. Understand Customer Expectations 14. Map Customer Journeys 15. Segment and Target 16. Calculate Customer Lifetime Value (CLV) 17. Track CX Trends 18. Align with Company Values](/img/what-are-the-purposes-of-a-customer-experience-survey_-1.png "What are the Purposes of a Customer Experience Survey? (Part - 2)")
+
 ### 11. Benchmark Against Competitors 
 
 CX surveys allow you to compare your performance and customer experience metrics against competitors. Benchmarking helps you [understand your position in the market](https://formester.com/templates/market-research-survey-701/).
@@ -532,6 +542,8 @@ By serving these diverse purposes, CX surveys provide valuable insights and serv
 
 Designing a customer experience (CX) survey is a crucial step in gathering valuable insights from your audience. Formetser offers powerful features to help you create engaging and effective CX surveys. Follow these steps to design a CX survey that resonates with your audience and delivers actionable feedback:
 
+![Infographic showing: Steps To Create And Publish A Customer Experience Survey Using Formetser (Steps 1 - 6): Step 1: Define Your Survey Objectives | Step 2: Sign Up and Log In | Step 3: Create a New Survey | Step 4: Addition Of Questions | Step 5: Customizing The Survey Design | Step 6: Setting up Advanced Settings - Conditional Logic, Information Recall & Data Collection with Matrix Grids](/img/steps-to-create-and-publish-a-customer-experience-survey-using-formetser.png "Steps To Create And Publish A Customer Experience Survey Using Formetser (Steps 1 - 6)")
+
 ### Step 1: Define Your Survey Objectives
 
 Before diving into survey design, clearly define your objectives. Determine what specific aspects of the customer experience you want to assess and improve. 
@@ -629,6 +641,8 @@ Next, simply customize the rows and columns as required.
 3. **Improved Analysis:** When analyzing data, matrix grids simplify the process of comparing and contrasting responses across different attributes. This makes it easier to identify trends and insights.
 
 By configuring these advanced settings, your CX survey becomes more responsive, engaging, and efficient. Respondents receive a tailored experience, and you can collect valuable data that provides deeper insights into the customer experience.
+
+![Infographic showing: Steps To Create And Publish A Customer Experience Survey Using Formetser (Steps 7 - 10): Step 7: Organize Questions Thoughtfully | Step 8: Preview & Test Your Survey | Step 9: Publish Your Survey | Step 10: Monitor and Analyze Responses](/img/steps-to-create-and-publish-a-customer-experience-survey-using-formetser-1.png "Steps To Create And Publish A Customer Experience Survey Using Formetser (Steps 7 - 10)")
 
 ### Step 7: Organize Questions Thoughtfully
 
