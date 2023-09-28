@@ -142,6 +142,8 @@ Conducting a customer experience survey offers invaluable advantages to a compan
 
 In this section, we explore the substantial benefits that customer experience surveys bring to the company's table, from enhancing product offerings to bolstering brand reputation.
 
+![Infographic showing: Benefits Of Conducting A Customer Experience Survey To The Company: 1. Improved Customer Satisfaction 2. Increased Customer Loyalty 3. Enhanced Product/Service Quality 4. Competitive Advantage 5. Better Operational Efficiency 6. Targeted Marketing 7. Improved Employee Performance 8. Enhanced Brand Perception ](/img/benefits-of-conducting-a-customer-experience-survey-to-the-company.png "Benefits Of Conducting A Customer Experience Survey To The Company")
+
 ### 1. Improved Customer Satisfaction
 
 CX surveys provide insights into customer satisfaction levels, helping companies identify areas of improvement and enhance overall customer happiness.
@@ -182,6 +184,8 @@ These surveys empower individuals to voice their opinions, [influence product an
 
 In this section, we delve into the various ways in which customer experience surveys directly benefit users, from personalized services to stronger connections with brands.
 
+![Infographic showing: Benefits Of Conducting A Customer Experience Survey To The Users: 1. Better Customer Experience 2. High-Quality Products/Services 3. Increased Satisfaction 4. Personalized Marketing 5. Efficient Support 6. Enhanced Usability 7. Clear Communication 8. Voice in Decision-Making](/img/benefits-of-conducting-a-customer-experience-survey-to-the-users.png "Benefits Of Conducting A Customer Experience Survey To The Users")
+
 ### 1. Better Customer Experience 
 
 Users benefit from a more improved and tailored customer experience as companies address issues and pain points identified through surveys.
@@ -219,6 +223,8 @@ In summary, it's a win-win situation where both parties stand to gain from the i
 ## What are the Purposes and associated Metrics of a Customer Experience Survey? + Sample Survey Questions
 
 The purposes of a Customer Experience (CX) survey are multifaceted and play a critical role in understanding and enhancing the customer journey. Here are the key purposes of conducting a CX survey:
+
+![Infographic showing: What are the Purposes of a Customer Experience Survey? (Part - 1): 1. Measure Customer Satisfaction 2. Evaluate Loyalty and Advocacy 3. Identify Pain Points 4. Improve Product/Service Quality 5. Enhance Customer Retention 6. Assess Support and Service 7. Optimize Website and App Usability 8. Refine Communication Strategies 9. Monitor Employee Performance 10. Enhance Operational Efficiency](/img/what-are-the-purposes-of-a-customer-experience-survey_.png "What are the Purposes of a Customer Experience Survey? (Part - 1)")
 
 ### 1. Measure Customer Satisfaction
 
@@ -391,6 +397,8 @@ CX surveys can also assess the efficiency of internal processes as they relate t
 3. How would you rate the speed and effectiveness of our order processing and delivery? (1-5 scale)
 4. Have you encountered any challenges related to our internal processes while interacting with us? (Yes/No)
 5. What recommendations do you have for enhancing the efficiency of our operations?
+
+   ![Infographic showing: What are the Purposes of a Customer Experience Survey? (Part - 2): 11. Benchmark Against Competitors 12. Gather Customer Feedback 13. Understand Customer Expectations 14. Map Customer Journeys 15. Segment and Target 16. Calculate Customer Lifetime Value (CLV) 17. Track CX Trends 18. Align with Company Values](/img/what-are-the-purposes-of-a-customer-experience-survey_-1.png "What are the Purposes of a Customer Experience Survey? (Part - 2)")
 
 ### 11. Benchmark Against Competitors 
 
