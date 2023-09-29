@@ -127,6 +127,8 @@ Whether you're a small business owner, a marketer, or an educator, [Formester's 
 
 #### Unique Features
 
+![Infographic showing: Unique Features Offered By Formester: 1. Extensive Customization & Branding Kit 2. Interactive Forms 3. Top-tier Customer Support & Custom Feature Development 4. Online Payments  5. Digital Signature 6. Multi-User Collaboration 7. Affordability](/img/unique-features-offered-by-formester-min.png "Unique Features Offered By Formester")
+
 * **Extensive Customization & Branding Kit:** It provides a wide range of customization options, alongwith the option to [create and add your Branding Kit](https://formester.com/features/branding-kit/), allowing you to infuse your unique brand identity into your forms.
 * **Interactive Forms:** Formester supports interactive features like [conditional logic](https://formester.com/features/conditional-logic/), drag-and-drop elements, and information recall, [enhancing user engagement](https://formester.com/blog/how-to-use-entertainment-quizzes-for-website-engagement-lead-generation/).
 * **Top-tier Customer Support & Custom Feature Development:** We offer customer support not only through our own product ([A Contact form made with Formester](https://formester.com/contact/)), but also via chat, e-mail, and over the phone!\
@@ -156,6 +158,8 @@ With its [extensive library of templates](https://www.jotform.com/form-templates
 
 #### Unique Features
 
+![Infographic showing: Unique Features Offered By Jotform: 1. Versatility 2. Integration Power 3. Payment Processing 4. Advanced Form Widgets](/img/unique-features-offered-by-jotform-min.png "Unique Features Offered By Jotform")
+
 * **Versatility:** Jotform excels in versatility, offering an expansive array of templates, widgets, and customization options to meet various form requirements.
 * **Integration Power:** Jotform boasts of seamless integrations with numerous third-party apps and services, enhancing data flow and automation.
 * **Payment Processing:** Jotform supports payment processing, making it a top choice for businesses that require payment collection through forms.
@@ -177,6 +181,8 @@ With its [extensive library of templates](https://www.jotform.com/form-templates
 
 #### Unique Features
 
+![Infographic showing: Unique Features Offered By Paperform: 1. Landing Page-Like Forms 2. Interactive Elements 3. Conditional Logic 4. Payment Plans and Subscriptions](/img/unique-features-offered-by-paperform-min.png "Unique Features Offered By Paperform")
+
 * **Landing Page-Like Forms:** Paperform's hallmark feature is its ability to design forms that resemble captivating landing pages, complete with rich media elements.
 * **Interactive Elements:** It allows for the integration of interactive elements and widgets, resulting in engaging and user-friendly form experiences.
 * **Conditional Logic:** Paperform supports advanced conditional logic, enabling the creation of dynamic forms that adapt based on user responses.
@@ -193,6 +199,8 @@ With its [extensive library of templates](https://www.jotform.com/form-templates
 [Zoho Forms, part of the extensive Zoho ecosystem](https://www.zoho.com/forms/), is tailored for businesses seeking seamless integration between their form-building processes and other essential business applications.
 
 #### Unique Features
+
+![Infographic showing: Unique Features Offered By Zoho Forms: 1. Zoho Integration 2. Workflow Automation 3. Advanced Analytics 4. Multi-Language Support](/img/unique-features-offered-by-zoho-forms-min.png "Unique Features Offered By Zoho Forms")
 
 * **Zoho Integration:** [Zoho Forms seamlessly integrates with other Zoho applications](https://www.zoho.com/forms/integrations.html), streamlining data flow and ensuring a cohesive business environment.
 * **Workflow Automation:** It offers workflow automation features, allowing businesses to optimize processes and reduce manual tasks.
@@ -214,6 +222,8 @@ With its [extensive library of templates](https://www.jotform.com/form-templates
 [Google Forms is a widely used and free form builder](https://www.google.com/forms/about/) integrated seamlessly with Google Workspace. It's the go-to choice for individuals, educators, and small teams looking for a straightforward and cost-effective solution.
 
 #### Unique Features
+
+![Infographic showing: Unique Features Offered By Google Forms: 1. Google Workspace Integration 2. Simplicity 3. Add-Ons and Extensions 4. Free of Cost](/img/unique-features-offered-by-google-forms-min.png "Unique Features Offered By Google Forms")
 
 * **Google Workspace Integration:** Google Forms integrates seamlessly with other [Google Workspace](https://workspace.google.com/intl/en_in/) tools, enhancing collaboration, data management, and accessibility.
 * **Simplicity:** It is renowned for its user-friendly and straightforward interface, making it ideal for quick and uncomplicated form creation.
