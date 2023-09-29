@@ -79,7 +79,7 @@
                   to="/features/powerful-analytics/"
                   class="footer__link"
                 >
-                  Powerful Protection
+                  Powerful Analytics
                 </NuxtLink>
               </li>
               <li class="mt-2">
