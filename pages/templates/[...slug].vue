@@ -108,13 +108,13 @@ onMounted(() => {
   fetchCategories()
 })
 
-const meta = computed((template) => {
+const meta = computed(() => {
   const { name, description, metaTitle, metaDescription, previewImageUrl } =
     template.value || {}
   const metaData = {
     type: 'website',
     url: template.value
-      ? `https://formester.com/templates/${this.$route.params.slug}/`
+      ? `https://formester.com/templates/${route.slug}/`
       : '',
     title: metaTitle || name || 'Form Template | Formester',
     description:

@@ -9,6 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@kyvg/vue3-notification": "^3.0.2",
     "@nuxt/content": "^2.8.2",
     "@nuxt/image": "^1.0.0-rc.2",
     "@nuxt/kit": "^3.7.3",

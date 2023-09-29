@@ -80,7 +80,7 @@ const listItems = computed(() => {
 })
 
 useHead({
-  meta: [meta.value],
+  meta: [meta],
   link: [
     {
       hid: 'canonical',

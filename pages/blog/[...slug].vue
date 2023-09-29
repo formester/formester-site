@@ -176,37 +176,36 @@ const loadDisqus = () => {
     this.page.identifier = `${route.slug}`
   }
 
-  var d = document,
-    s = d.createElement('script')
+  var d = document, s = d.createElement('script')
   s.src = 'https://formester.disqus.com/embed.js'
-  s.setAttribute('data-timestamp', +new Date())
-  ;(d.head || d.body).appendChild(s)
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s)
 }
 
 const encodedUrl = () => {
   return encodeURIComponent(process.env.baseUrl + route.fullPath)
 }
 
-const meta = computed((article) => {
+const meta = computed(() => {
   const metaData = {
     type: 'article',
     url: `https://formester.com/blog/${route.slug}/`,
-    title: article?.metaTitle,
-    description: article?.metaDescription,
-    mainImage: article?.coverImg
-      ? `https://formester.com/${article?.coverImg}`
+    title: article.value?.metaTitle,
+    description: article.value?.metaDescription,
+    mainImage: article.value?.coverImg
+      ? `https://formester.com/${article.value?.coverImg}`
       : 'https://formester.com/formester-form-builder-background.png',
     mainImageAlt:
-      article?.coverImgAlt ||
+      article.value?.coverImgAlt ||
       'Form builder showing drag and drop functionality',
   }
   return getSiteMeta(metaData)
 })
 
 useHead({
-  title: article?.metaTitle,
+  title: article.value?.metaTitle,
   meta: [
-    { meta },
+    [meta],
     {
       property: 'article:published_time',
       content: article?.createdAt,
@@ -301,7 +300,7 @@ onMounted(() => {
   }
   loadDisqus()
   fetchBlogArticle() // Fetch article and related articles on component initialization
-  fetchBlogRelatedArticles()
+  fetchRelatedBlogArticles()
 })
 
 // Fetching data
@@ -310,9 +309,15 @@ const fetchBlogArticle = async () => {
   article.value = result
 }
 
-const fetchBlogRelatedArticles = async () => {
-  const result = fetchRelatedArticles(article.value)
-  relatedArticles.value = result
+const fetchRelatedBlogArticles = async () => {
+  const result = await queryContent('blog').find()
+  relatedArticles.value = result.filter(
+    (relatedArticle) => article.value._path !== relatedArticle._path
+  )
+  const randIndex = Math.floor(
+    Math.random() * (relatedArticles.value.length - 2)
+  )
+  relatedArticles.value = relatedArticles.value.slice(randIndex, randIndex + 2)
 }
 </script>
 
