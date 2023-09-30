@@ -5,7 +5,10 @@ const axios = require('axios')
 const meta = getSiteMeta()
 
 export default defineNuxtConfig({
-// Global page headers: https://go.nuxtjs.dev/config-head
+  // Target: https://go.nuxtjs.dev/config-target
+target: 'static',
+
+  // Global page headers: https://go.nuxtjs.dev/config-head
 app: {
   head: {
     title: 'No Code Form Builder | Online HTML Form Builder - Formester',
@@ -71,11 +74,25 @@ app: {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~/assets/css/bootstrap.min.css', '~/assets/css/main.css'],
 
+  // Auto import components: https://go.nuxtjs.dev/config-components
+  components: true,
+
+  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
+  buildModules: [
+    '@nuxtjs/pwa',
+
+    // [
+    //   '@nuxtjs/google-analytics',
+    //   {
+    //     id: 'UA-99986844-1',
+    //   },
+    // ],
+  ],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/robots',
     '@nuxt/content',
-    '@nuxt/image-edge',
+    '@nuxt/image',
     'nuxt-jsonld',
     'nuxt-gtag',
     'nuxt-simple-sitemap'
@@ -134,7 +151,6 @@ app: {
   // Nuxt Image
   image: {
     dir: 'assets/images',
-    provider: 'ipx'
   },
 
   // Enviornment variable for the base url of the app
