@@ -4,7 +4,7 @@
       <div class="trust-seals">
         <div>
           <nuxt-img
-            src="assets/images/tedx.png"
+            src="~/assets/images/tedx.png"
             alt="Tedx Paris Organizer"
             width="110"
           />
@@ -38,7 +38,7 @@
         </div>
 
         <div>
-          <nuxt-img src="/vueconf-black.png" alt="Rumie Logo" />
+          <nuxt-img src="~/assets/images/vueconf-black.png" alt="Rumie Logo" />
         </div>
         <div>
           <nuxt-img
