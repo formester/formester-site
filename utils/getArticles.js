@@ -6,7 +6,7 @@ export async function fetchArticle(route) {
 
 export async function fetchRelatedArticles(article) {
     const result = await queryContent('blog').find()
-    console.log(article);
+console.log(article);
     let relatedArticlesData = result.filter((relatedArticle) => article._path !== relatedArticle._path)
     const randIndex = Math.floor(Math.random() * (relatedArticlesData.value.length - 2))
     const relatedArticles = relatedArticlesData.slice(randIndex, randIndex + 2)
