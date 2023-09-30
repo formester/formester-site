@@ -75,7 +75,6 @@ app: {
   modules: [
     '@nuxtjs/robots',
     '@nuxt/content',
-    '@nuxt/image',
     '@nuxt/image-edge',
     'nuxt-jsonld',
     'nuxt-gtag',
@@ -135,6 +134,7 @@ app: {
   // Nuxt Image
   image: {
     dir: 'assets/images',
+    provider: 'ipx'
   },
 
   // Enviornment variable for the base url of the app
