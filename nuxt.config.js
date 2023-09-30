@@ -8,6 +8,12 @@ export default defineNuxtConfig({
   // Target: https://go.nuxtjs.dev/config-target
 ssr: true,
 
+nitro: {
+  prerender: {
+    ignore: ['/blog'],
+  },
+},
+
   // Global page headers: https://go.nuxtjs.dev/config-head
 app: {
   head: {
@@ -95,7 +101,6 @@ app: {
     '@nuxt/image',
     'nuxt-jsonld',
     'nuxt-gtag',
-    'nuxt-simple-sitemap'
   ],
   // Hooks configuration - https://content.nuxtjs.org/advanced/
   hooks: {
