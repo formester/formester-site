@@ -6,7 +6,7 @@ const meta = getSiteMeta()
 
 export default defineNuxtConfig({
   // Target: https://go.nuxtjs.dev/config-target
-ssr: 'false',
+ssr: 'true',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
 app: {
