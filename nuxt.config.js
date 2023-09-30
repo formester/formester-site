@@ -92,7 +92,7 @@ app: {
   modules: [
     '@nuxtjs/robots',
     '@nuxt/content',
-    '@nuxt/image-edge',
+    '@nuxt/image',
     'nuxt-jsonld',
     'nuxt-gtag',
     'nuxt-simple-sitemap'
@@ -148,10 +148,10 @@ app: {
     },
   },
 
-  // Nuxt Image
-  image: {
-    dir: 'assets/images/',
-  },
+  // // Nuxt Image
+  // image: {
+  //   dir: 'assets/images/',
+  // },
 
   // Enviornment variable for the base url of the app
   env: {
