@@ -76,6 +76,7 @@ app: {
     '@nuxtjs/robots',
     '@nuxt/content',
     '@nuxt/image',
+    '@nuxt/image-edge',
     'nuxt-jsonld',
     'nuxt-gtag',
     'nuxt-simple-sitemap'
