@@ -4,7 +4,7 @@
       <div class="trust-seals">
         <div>
           <nuxt-img
-            src="/tedx.png"
+            src="assets/images/tedx.png"
             alt="Tedx Paris Organizer"
             width="110"
           />
