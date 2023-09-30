@@ -151,7 +151,6 @@ app: {
   // Nuxt Image
   image: {
     dir: 'assets/images',
-    ipx: false
   },
 
   // Enviornment variable for the base url of the app
