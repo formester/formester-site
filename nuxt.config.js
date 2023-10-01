@@ -144,7 +144,7 @@ app: {
     dir: 'assets/images',
     provider: 'netlify',
     netlify: {
-      baseURL: 'https://staging--formester-staging.netlify.app/assets/images'
+      baseURL: 'https://staging--formester-staging.netlify.app/assets/images',
     }
   },
   // Enviornment variable for the base url of the app
