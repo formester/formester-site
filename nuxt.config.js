@@ -5,7 +5,6 @@ const axios = require('axios')
 const meta = getSiteMeta()
 
 export default defineNuxtConfig({
-ssr: true,
 // Global page headers: https://go.nuxtjs.dev/config-head
 app: {
   head: {
@@ -143,8 +142,11 @@ app: {
   // Nuxt Image
   image: {
     dir: 'assets/images',
+    provider: 'netlify',
+    netlify: {
+      baseURl: process.env.IMAGES_URL
+    }
   },
-
   // Enviornment variable for the base url of the app
   env: {
     baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'http://localhost:3001',
