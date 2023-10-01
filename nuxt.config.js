@@ -83,7 +83,6 @@ app: {
     '@nuxt/image',
     'nuxt-jsonld',
     'nuxt-gtag',
-    '@kevinmarrec/nuxt-pwa'
   ],
   pwa: {
     workbox: {
