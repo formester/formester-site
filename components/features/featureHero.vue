@@ -25,7 +25,7 @@
             src="/features/feature-hero.svg" 
             alt="Feature Hero image" 
             class="img-fluid" 
-            sizes="100vw sm:600px md:600px lg:600px xl:600px"
+            fit="inside"
           />
         </div>
       </div>
