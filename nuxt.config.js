@@ -141,10 +141,10 @@ app: {
 
   // Nuxt Image
   image: {
-    dir: 'assets/images',
+    dir: '~assets/images',
     provider: 'netlify',
     netlify: {
-      baseURl: 'assets' + process.env.IMAGES_URL
+      baseURl: process.env.IMAGES_URL || 'assets/images/'
     }
   },
   // Enviornment variable for the base url of the app
