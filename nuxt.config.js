@@ -5,18 +5,8 @@ const axios = require('axios')
 const meta = getSiteMeta()
 
 export default defineNuxtConfig({
-  // Target: https://go.nuxtjs.dev/config-target
 ssr: true,
-
-nitro: {
-  prerender: {
-    crawlLinks: false,
-    failOnError: false,
-    autoSubfolderIndex: false,
-  },
-},
-
-  // Global page headers: https://go.nuxtjs.dev/config-head
+// Global page headers: https://go.nuxtjs.dev/config-head
 app: {
   head: {
     title: 'No Code Form Builder | Online HTML Form Builder - Formester',
@@ -86,16 +76,6 @@ app: {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    '@nuxtjs/pwa',
-
-    // [
-    //   '@nuxtjs/google-analytics',
-    //   {
-    //     id: 'UA-99986844-1',
-    //   },
-    // ],
-  ],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/robots',
@@ -103,7 +83,13 @@ app: {
     '@nuxt/image',
     'nuxt-jsonld',
     'nuxt-gtag',
+    '@kevinmarrec/nuxt-pwa'
   ],
+  pwa: {
+    workbox: {
+      enabled: true
+    }
+  },
   // Hooks configuration - https://content.nuxtjs.org/advanced/
   hooks: {
     'content:file:beforeInsert': (document) => {
