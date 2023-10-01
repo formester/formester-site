@@ -144,7 +144,7 @@ app: {
     dir: 'assets/images',
     provider: 'netlify',
     netlify: {
-      baseURL: `${process.env.IMAGES_URL}/assets/images`
+      baseURL: process.env.IMAGES_URL
     }
   },
   // Enviornment variable for the base url of the app
