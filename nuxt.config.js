@@ -1,7 +1,6 @@
 import getRoutes from './utils/getRoutes'
 import getSiteMeta from './utils/getSiteMeta'
 
-const axios = require('axios')
 const meta = getSiteMeta()
 
 export default defineNuxtConfig({
@@ -83,11 +82,6 @@ app: {
     'nuxt-jsonld',
     'nuxt-gtag',
   ],
-  pwa: {
-    workbox: {
-      enabled: true
-    }
-  },
   // Hooks configuration - https://content.nuxtjs.org/advanced/
   hooks: {
     'content:file:beforeInsert': (document) => {
@@ -141,6 +135,15 @@ app: {
 
   // Nuxt Image
   image: {
+    screens: {
+      'xs': 320,
+      'sm': 640,
+      'md': 768,
+      'lg': 1024,
+      'xl': 1280,
+      'xxl': 1536,
+      '2xl': 1536
+    },
     dir: 'assets/images',
     provider: 'netlify',
     netlify: {
