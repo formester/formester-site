@@ -22,8 +22,9 @@
         </div>
         <div class="col-lg-6 d-flex align-items-center justify-content-center mt-4 mt-lg-0">
           <nuxt-img 
-            src="assets/images/features/feature-hero.svg" 
+            src="/features/feature-hero.svg" 
             alt="Feature Hero image" 
+            :modifiers="['img-fluid']"
             class="img-fluid" 
           />
         </div>
