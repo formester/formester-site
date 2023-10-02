@@ -24,7 +24,7 @@
           >
         </div>
       </div>
-      <img
+      <nuxt-img
         src="/case-study-1/case-study-hero-bg.png"
         alt="background showing few of the ui elements of formester"
         class="position-absolute d-none d-lg-block hero-background"
