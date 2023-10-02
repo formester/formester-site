@@ -81,6 +81,7 @@ app: {
     '@nuxt/image',
     'nuxt-jsonld',
     'nuxt-gtag',
+    'nuxt-simple-sitemap'
   ],
   // Hooks configuration - https://content.nuxtjs.org/advanced/
   hooks: {
