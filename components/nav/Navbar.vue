@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container">
       <NuxtLink class="navbar-brand" to="/">
-        <nuxt-img src="/logo.svg" alt="Formester" />
+        <nuxt-img src="/logo.svg" alt="Formester" sizes="5vw" />
       </NuxtLink>
       <button
         class="navbar-toggler"

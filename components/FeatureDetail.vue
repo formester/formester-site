@@ -5,7 +5,7 @@
       class="img-fluid"
       :alt="feature.alt"
       loading="lazy"
-      sizes="90vw"
+      sizes="70vw"
     />
     <h3 class="feature__heading">{{ feature.title }}</h3>
     <p>

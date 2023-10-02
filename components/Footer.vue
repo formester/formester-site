@@ -3,7 +3,7 @@
     <div class="footer__container text-center">
       <NuxtLink to="/">
         <div class="footer__logo">
-          <nuxt-img src="/logo-light.svg" alt="Formester" />
+          <nuxt-img src="/logo-light.svg" alt="Formester" sizes="5vw"  />
         </div>
       </NuxtLink>
       <section class="mt-5 container">
@@ -231,7 +231,7 @@
             <ul class="list-unstyled mt-2">
               <li class="mt-2">
                 <NuxtLink
-                  to="case-study/using-formester-for-lead-generation-success/"
+                  to="/case-study/using-formester-for-lead-generation-success/"
                   class="footer__link"
                 >
                   Formester For Lead Generation Success

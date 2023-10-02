@@ -25,7 +25,7 @@
               src="/features/powerful-analytics/powerful-analytics.svg"
               alt="Hero-Image"
               class="img-fluid hero__image"
-              sizes="80vw"
+              sizes="60vw"
             />
           </div>
         </div>
