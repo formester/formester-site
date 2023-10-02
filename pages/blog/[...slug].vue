@@ -114,12 +114,9 @@
               />
             </div>
           </div>
-
         </ContentRenderer>
+        <DisqusComments :identifier="article._path" />
       </article>
-      <template>
-         <DisqusComments identifier="/blog/google-forms-vs-jotform-the-comparison-everyone-asked-for"/>
-      </template>
     </div>
     <CallToActionSection :content="article?.cta" />
   </div>
@@ -169,10 +166,11 @@ const loadDisqus = () => {
     this.page.identifier = `${route.slug}`
   }
 
-  var d = document, s = d.createElement('script')
+  var d = document,
+    s = d.createElement('script')
   s.src = 'https://formester.disqus.com/embed.js'
-  s.setAttribute('data-timestamp', +new Date());
-  (d.head || d.body).appendChild(s)
+  s.setAttribute('data-timestamp', +new Date())
+  ;(d.head || d.body).appendChild(s)
 }
 
 const encodedUrl = () => {
