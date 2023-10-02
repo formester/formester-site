@@ -11,7 +11,7 @@
       <nuxt-img
         src="see-for-yourself.svg"
         class="see-for-yourself position-absolute"
-        sizes="100vw"
+        sizes="10vw"
       />
     </div>
     <Testimonials />
