@@ -115,18 +115,11 @@
             </div>
           </div>
 
-          <template>
-            <div class="mt-5" id="disqus_thread"></div>
-          </template>
-
-          <noscript
-            >Please enable JavaScript to view the
-            <a href="https://disqus.com/?ref_noscript"
-              >comments powered by Disqus.</a
-            ></noscript
-          >
         </ContentRenderer>
       </article>
+      <template>
+         <DisqusComments identifier="/blog/google-forms-vs-jotform-the-comparison-everyone-asked-for"/>
+      </template>
     </div>
     <CallToActionSection :content="article?.cta" />
   </div>
