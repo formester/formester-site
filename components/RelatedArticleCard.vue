@@ -19,11 +19,10 @@ export default {
   props: ['article'],
   computed: {
     articleLink() {
-      if (this.article._type) {
-        return this.article._path
+      if (this.article.type) {
+        return this.article.link
       }
       // return { name: 'blog-slug', params: { slug: this.article.slug } }
-      console.log(this.article, 'article');
       return this.article._path
     },
   },

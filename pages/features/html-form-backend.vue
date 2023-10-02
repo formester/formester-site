@@ -26,6 +26,7 @@
               src="/features/html-form-backend/easy-web-form.svg"
               alt="Hero-Image"
               class="img-fluid hero__image"
+              sizes="100vw"
             />
           </div>
         </div>
