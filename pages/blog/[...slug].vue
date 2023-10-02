@@ -114,9 +114,8 @@
               />
             </div>
           </div>
-
         </ContentRenderer>
-        <DisqusComments identifier="/blog/google-forms-vs-jotform-the-comparison-everyone-asked-for"/>
+        <DisqusComments :identifier="article._path"/>
       </article>
     </div>
     <CallToActionSection :content="article?.cta" />
