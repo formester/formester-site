@@ -30,17 +30,17 @@
         </div>
         <div class="col-xl-5 position-relative d-flex align-items-center justify-content-center">
           <nuxt-img v-show="activeCard === 0" :src="`/features/${feature.img}.svg`"
-            class="feature__img img-fluid" loading="lazy"/>
+            class="feature__img img-fluid" loading="lazy" sizes="100vw"/>
           <nuxt-img v-show="activeCard !== 0 && !feature.bgPink" src="/features/blob.png"
-            class="blob img-fluid" loading="lazy"/>
+            class="blob img-fluid" loading="lazy" sizes="100vw"/>
           <nuxt-img v-show="activeCard !== 0 && feature.bgPink" src="/features/blob-2.png"
-            class="blob img-fluid" loading="lazy"/>
+            class="blob img-fluid" loading="lazy" sizes="100vw"/>
           <nuxt-img :style="illus1Style" :src="`/features/contents/${feature.contents[0].img}.svg`"
-            class="illus1 img-fluid" loading="lazy"/>
+            class="illus1 img-fluid" loading="lazy" sizes="100vw"/>
           <nuxt-img :style="illus2Style" :src="`/features/contents/${feature.contents[1].img}.svg`"
-            class="illus2 img-fluid" loading="lazy"/>
+            class="illus2 img-fluid" loading="lazy" sizes="100vw"/>
           <nuxt-img :style="illus3Style" :src="`/features/contents/${feature.contents[2].img}.svg`"
-            class="illus3 img-fluid" loading="lazy"/>
+            class="illus3 img-fluid" loading="lazy" sizes="100vw"/>
         </div>
       </div>
     </div>
