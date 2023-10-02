@@ -25,7 +25,7 @@
               src="/features/online-payment/online-payment-hero.svg"
               alt="Hero-Image"
               class="img-fluid hero__image"
-              sizes="100vw"
+              sizes="60vw"
             />
           </div>
         </div>

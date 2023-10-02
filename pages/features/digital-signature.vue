@@ -27,7 +27,7 @@
               src="/features/digital-signature/digital-signature-hero.svg"
               alt="Hero-Image"
               class="img-fluid hero__image"
-              sizes="100vw"
+              sizes="30vw"
             />
           </div>
         </div>
