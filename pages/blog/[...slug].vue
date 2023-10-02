@@ -115,7 +115,7 @@
             </div>
           </div>
         </ContentRenderer>
-        <DisqusComments :identifier="article._path" />
+        <DisqusComments :identifier="article?._path" />
       </article>
     </div>
     <CallToActionSection :content="article?.cta" />
