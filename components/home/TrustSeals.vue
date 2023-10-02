@@ -38,7 +38,7 @@
         </div>
 
         <div>
-          <nuxt-img src="/vueconf-black.png" alt="Rumie Logo" sizes="100vh" />
+          <nuxt-img src="/vueconf-black.png" alt="Rumie Logo" sizes="100vw" />
         </div>
         <div>
           <nuxt-img
