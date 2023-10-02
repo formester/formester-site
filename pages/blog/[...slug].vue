@@ -380,6 +380,13 @@ p {
   text-decoration: underline;
 }
 
+.nuxt-content h1 a,
+.nuxt-content h2 a,
+.nuxt-content h3 a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 .nuxt-content img {
   height: auto;
   width: 100%;
