@@ -134,12 +134,13 @@ app: {
   },
 
   // Nuxt Image
+  // please comment out the provider and netlify section while running application on local server
   image: {
-    sizes: '100vw',
     dir: 'assets/images',
     provider: 'netlify',
     netlify: {
       baseURL: 'https://staging--formester-staging.netlify.app/assets/images',
+      // baseURL: 'https://formester.com/assets/images', 
     }
   },
   // Enviornment variable for the base url of the app
