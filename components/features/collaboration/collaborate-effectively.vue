@@ -53,6 +53,7 @@
                   class="w-lg-40 d-block img-fluid my-auto"
                   alt="build your form easy with formester form builder"
                   loading="lazy"
+                  sizes="100vw"
                 />
               </div>
             </div>
@@ -82,6 +83,7 @@
                   class="w-lg-40 d-block img-fluid my-auto"
                   alt="share your form"
                   loading="lazy"
+                  sizes="100vw"
                 />
               </div>
             </div>

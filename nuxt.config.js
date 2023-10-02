@@ -5,38 +5,37 @@ const meta = getSiteMeta()
 
 export default defineNuxtConfig({
 // Global page headers: https://go.nuxtjs.dev/config-head
-app: {
-  head: {
-    title: 'No Code Form Builder | Online HTML Form Builder - Formester',
-    meta: [
-      ...meta,
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        name: 'robots',
-        content: 'index, follow',
-      },
-      { name: 'format-detection', content: 'telephone=no' },
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        hid: 'canonical',
-        rel: 'canonical',
-        href: 'https://formester.com/',
-      },
-    ],
-    // Custom Javascript
-    script: [
-      {
-        src: '/bootstrap.min.js',
-        defer: true,
-        async: true,
-      },
-    ],
+  app: {
+    head: {
+      title: 'No Code Form Builder | Online HTML Form Builder - Formester',
+      meta: [
+        ...meta,
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          name: 'robots',
+          content: 'index, follow',
+        },
+        { name: 'format-detection', content: 'telephone=no' },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://formester.com/',
+        },
+      ],
+      // Custom Javascript
+      script: [
+        {
+          src: '/bootstrap.min.js',
+          defer: true,
+          async: true,
+        },
+      ],
+    },
   },
-},
-
   router: {
     trailingSlash: true,
   },
@@ -66,7 +65,6 @@ app: {
       return blogs.concat(templates, categories)
     },
   },
-
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~/assets/css/bootstrap.min.css', '~/assets/css/main.css'],
 
@@ -92,15 +90,12 @@ app: {
     },
   },
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
       lang: 'en',
     },
   },
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
   // For catching 404 pages
@@ -135,11 +130,10 @@ app: {
 
   // Nuxt Image
   image: {
-    sizes: '100vw',
     dir: 'assets/images',
     provider: 'netlify',
     netlify: {
-      baseURL: 'https://staging--formester-staging.netlify.app/assets/images',
+      baseURL: 'http://staging--formester-staging.netlify.app/assets/images',
     }
   },
   // Enviornment variable for the base url of the app

@@ -29,6 +29,7 @@
               alt="Hero-Image"
               class="img-fluid hero__image"
               style="z-index: 2"
+              sizes="100vw"
             />
           </div>
         </div>

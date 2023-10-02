@@ -30,7 +30,7 @@
         </div>
         <div class="col-xl-5 position-relative d-flex align-items-center justify-content-center">
           <nuxt-img v-show="activeCard === 0" :src="`/features/${feature.img}.svg`"
-            class="feature__img img-fluid" loading="lazy"/>
+            class="feature__img img-fluid" loading="lazy" sizes="100vw"/>
           <nuxt-img v-show="activeCard !== 0 && !feature.bgPink" src="/features/blob.png"
             class="blob img-fluid" loading="lazy"/>
           <nuxt-img v-show="activeCard !== 0 && feature.bgPink" src="/features/blob-2.png"

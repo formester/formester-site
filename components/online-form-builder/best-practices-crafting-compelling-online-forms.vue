@@ -16,6 +16,7 @@
             :src="`/online-form-builder/best-practices-crafting-compelling-online-forms/${feature.img}.svg`"
             class="img-fluid"
             loading="lazy"
+            sizes="100vw"
           />
           <h4 class="sub__section-heading mt-4">{{ feature.title }}</h4>
           <p class="subheading__text">{{ feature.description }}</p>

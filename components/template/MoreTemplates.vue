@@ -63,6 +63,7 @@
               class="img-fluid"
               src="/templates/create_form.png"
               alt="Template placeholder image"
+              sizes="100vw"
             />
             <h2 class="template-name pointer">
               {{ template?.name }}
