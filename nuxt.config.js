@@ -81,8 +81,12 @@ app: {
     '@nuxt/image',
     'nuxt-jsonld',
     'nuxt-gtag',
-    'nuxt-simple-sitemap'
+    'nuxt-simple-sitemap',
+    'nuxt-disqus'
   ],
+  disqus: {
+    shortname: "formester",
+  },
   // Hooks configuration - https://content.nuxtjs.org/advanced/
   hooks: {
     'content:file:beforeInsert': (document) => {

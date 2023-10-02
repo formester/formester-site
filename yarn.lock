@@ -702,7 +702,7 @@
   optionalDependencies:
     ipx "^1.3.0"
 
-"@nuxt/kit@3.7.4", "@nuxt/kit@^3.0.0", "@nuxt/kit@^3.5.1", "@nuxt/kit@^3.7.1", "@nuxt/kit@^3.7.3", "@nuxt/kit@^3.7.4", "@nuxt/kit@latest":
+"@nuxt/kit@3.7.4", "@nuxt/kit@^3.0.0", "@nuxt/kit@^3.5.1", "@nuxt/kit@^3.6.2", "@nuxt/kit@^3.7.1", "@nuxt/kit@^3.7.3", "@nuxt/kit@^3.7.4", "@nuxt/kit@latest":
   version "3.7.4"
   resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.7.4.tgz#31c0bd57397cc56a1098af5d6504353cc2e855a2"
   integrity sha512-/S5abZL62BITCvC/TY3KWA6N721U1Osln3cQdBb56XHIeafZCBVqTi92Xb0o7ovl72mMRhrKwRu7elzvz9oT/g==
@@ -4620,6 +4620,15 @@ nuxi@^3.9.0:
   optionalDependencies:
     fsevents "~2.3.3"
 
+nuxt-disqus@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/nuxt-disqus/-/nuxt-disqus-1.0.1.tgz#c24707091d71ae769368c5f02a678abfb4654c2e"
+  integrity sha512-audsnAo2fXuhZFCOAcoYogwpIAs/xTfi+pUK0aarnEbiV5cFIFnITtN6u0KAqntISZBvZUzOqxoqzPjodYoMjA==
+  dependencies:
+    "@nuxt/kit" "^3.6.2"
+    defu "^6.1.2"
+    vue3-disqus "^1.0.6"
+
 nuxt-gtag@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/nuxt-gtag/-/nuxt-gtag-1.1.1.tgz#2af82e4ca7907658814d44ad6ed8a49c9e5484de"
@@ -6538,6 +6547,13 @@ vue-notification@^1.3.20:
   integrity sha512-DIUpKcyg4+PTQKfFPX88UWhlagBEBEfJ5A8XDXRJLUnZOvcpMF8o/dnL90vpVkGaPbjvXazV/rC1qBKrZlFugw==
   dependencies:
     "@vue/devtools-api" "^6.5.0"
+
+vue3-disqus@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/vue3-disqus/-/vue3-disqus-1.0.6.tgz#584a8dc952c6ec06e45549608af6b36ca2eb12ea"
+  integrity sha512-IfYHMqVklVEZVOUuQo3pjD/+I40ajph4mMfiBZdxHnGvuFO+ZEB3QjSF8e6VVVYcMWf5Tvbl6AfdLdwwRzdW5w==
+  dependencies:
+    vue "^3.3.4"
 
 vue@^3.3.4:
   version "3.3.4"
