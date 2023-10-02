@@ -160,19 +160,6 @@ const googleAnalytics = (platform) => {
     })
 }
 
-const loadDisqus = () => {
-  var disqus_config = function () {
-    this.page.url = `https://formester.com/blog/${route.slug}/`
-    this.page.identifier = `${route.slug}`
-  }
-
-  var d = document,
-    s = d.createElement('script')
-  s.src = 'https://formester.disqus.com/embed.js'
-  s.setAttribute('data-timestamp', +new Date())
-  ;(d.head || d.body).appendChild(s)
-}
-
 const encodedUrl = () => {
   return encodeURIComponent(process.env.baseUrl + route.fullPath)
 }
@@ -289,7 +276,6 @@ onMounted(() => {
       document.querySelector('.popup__img ').style.display = 'none'
     }
   }
-  loadDisqus()
   fetchBlogArticle() // Fetch article and related articles on component initialization
   fetchRelatedBlogArticles()
 })

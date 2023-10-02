@@ -4,38 +4,38 @@ import getSiteMeta from './utils/getSiteMeta'
 const meta = getSiteMeta()
 
 export default defineNuxtConfig({
-// Global page headers: https://go.nuxtjs.dev/config-head
-app: {
-  head: {
-    title: 'No Code Form Builder | Online HTML Form Builder - Formester',
-    meta: [
-      ...meta,
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        name: 'robots',
-        content: 'index, follow',
-      },
-      { name: 'format-detection', content: 'telephone=no' },
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        hid: 'canonical',
-        rel: 'canonical',
-        href: 'https://formester.com/',
-      },
-    ],
-    // Custom Javascript
-    script: [
-      {
-        src: '/bootstrap.min.js',
-        defer: true,
-        async: true,
-      },
-    ],
+  // Global page headers: https://go.nuxtjs.dev/config-head
+  app: {
+    head: {
+      title: 'No Code Form Builder | Online HTML Form Builder - Formester',
+      meta: [
+        ...meta,
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          name: 'robots',
+          content: 'index, follow',
+        },
+        { name: 'format-detection', content: 'telephone=no' },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://formester.com/',
+        },
+      ],
+      // Custom Javascript
+      script: [
+        {
+          src: '/bootstrap.min.js',
+          defer: true,
+          async: true,
+        },
+      ],
+    },
   },
-},
 
   router: {
     trailingSlash: true,
@@ -97,8 +97,6 @@ app: {
     },
   },
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
@@ -137,7 +135,6 @@ app: {
       remarkPlugins: ['remark-reading-time'],
     },
   },
-
   // Nuxt Image
   // please comment out the provider and netlify section while running application on local server
   image: {

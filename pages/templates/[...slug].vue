@@ -69,7 +69,6 @@ const fetchTemplate = async (slug) => {
     )
     const data = await response.json()
     template.value = data
-    console.log(template.value.slug)
   } catch (error) {
     console.error('Error fetching template:', error)
   }
