@@ -1,14 +1,10 @@
 import getRoutes from './utils/getRoutes'
 import getSiteMeta from './utils/getSiteMeta'
 
-const axios = require('axios')
 const meta = getSiteMeta()
 
 export default defineNuxtConfig({
-  // Target: https://go.nuxtjs.dev/config-target
-target: 'public',
-
-  // Global page headers: https://go.nuxtjs.dev/config-head
+// Global page headers: https://go.nuxtjs.dev/config-head
 app: {
   head: {
     title: 'No Code Form Builder | Online HTML Form Builder - Formester',
@@ -78,16 +74,6 @@ app: {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    '@nuxtjs/pwa',
-
-    // [
-    //   '@nuxtjs/google-analytics',
-    //   {
-    //     id: 'UA-99986844-1',
-    //   },
-    // ],
-  ],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/robots',
@@ -149,10 +135,15 @@ app: {
   },
 
   // Nuxt Image
+  // please comment out the provider and netlify section while running application on local server
   image: {
-    dir: 'assets/images/',
+    dir: 'assets/images',
+    provider: 'netlify',
+    netlify: {
+      // baseURL: 'https://staging--formester-staging.netlify.app/assets/images',  un-comment for testing images on staging
+      baseURL: 'https://formester.com/assets/images', 
+    }
   },
-
   // Enviornment variable for the base url of the app
   env: {
     baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'http://localhost:3001',
