@@ -142,12 +142,8 @@ export default defineNuxtConfig({
     provider: 'netlify',
     netlify: {
       // baseURL: 'https://staging--formester-staging.netlify.app/assets/images',  un-comment for testing images on staging
-      baseURL: 'https://formester.com/assets/images', 
+      baseURL: process.env.IMAGE_URL ||'http://localhost:8080/assets/images', 
     }
-  },
-  // Enviornment variable for the base url of the app
-  env: {
-    baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'http://localhost:3001',
   },
   devServer: {
     port: 8080,
