@@ -58,7 +58,6 @@
             :src="`features/${features[activeIndex].img}.svg`"
             alt="Hero-Image"
             class="img-fluid feature__img"
-            sizes="100vw"
           />
         </div>
       </div>

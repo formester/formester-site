@@ -27,7 +27,6 @@
             class="img-fluid sub__section-img"
             :alt="conclusion.altText"
             loading="lazy"
-            sizes="100vw"
           />
           <h3 class="sub__section-heading mt-3 mb-2">{{ conclusion.title }}</h3>
           <p class="subheading__text mt-2">{{ conclusion.description1 }}</p>

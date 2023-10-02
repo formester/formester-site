@@ -19,7 +19,6 @@
           class="img-fluid"
           src="/templates/no-template.svg"
           alt="No Template Illustration"
-          sizes="100vw"
         />
         <h4>No Template Available</h4>
       </div>

@@ -45,7 +45,6 @@
               alt="plane image on call to action section"
               class="plane position-absolute"
               loading="lazy"
-              sizes="100vw"
             />
           </div>
         </div>

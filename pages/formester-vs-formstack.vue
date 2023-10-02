@@ -31,7 +31,6 @@
               src="/formester-vs-page-hero-img.svg"
               alt="Formester form building with drag and drop interface"
               class="img-fluid hero__image"
-              sizes="100vw"
             />
           </div>
         </div>
@@ -143,7 +142,6 @@
             src="/create-solution-with-formester.svg"
             alt="Create Design with Formester"
             loading="lazy"
-            sizes="100vw"
           />
         </div>
       </div>

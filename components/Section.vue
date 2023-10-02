@@ -23,7 +23,6 @@
           :src="`/${feature.imgName}`"
           alt="Formester integration with different apps"
           class="img-fluid"
-          sizes="100vw"
         />
       </div>
     </div>

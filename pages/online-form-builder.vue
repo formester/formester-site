@@ -29,7 +29,6 @@
                 src="/online-form-builder/online-form-builder.svg"
                 alt="Hero-Image"
                 class="img-fluid hero__image"
-                sizes="100vw"
               />
             </div>
           </div>
