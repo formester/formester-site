@@ -116,10 +116,8 @@
           </div>
 
         </ContentRenderer>
+        <DisqusComments identifier="/blog/google-forms-vs-jotform-the-comparison-everyone-asked-for"/>
       </article>
-      <template>
-         <DisqusComments identifier="/blog/google-forms-vs-jotform-the-comparison-everyone-asked-for"/>
-      </template>
     </div>
     <CallToActionSection :content="article?.cta" />
   </div>
