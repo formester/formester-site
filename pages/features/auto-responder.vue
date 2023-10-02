@@ -26,7 +26,7 @@
               src="/features/auto-responder/auto-responder-message.svg"
               alt="Hero-Image"
               class="img-fluid hero__image"
-              style="width: 69px"
+              sizes="100vw"
             />
           </div>
         </div>
