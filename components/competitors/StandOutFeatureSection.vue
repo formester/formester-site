@@ -20,6 +20,7 @@
             class="img-fluid"
             :alt="feature.altText"
             loading="lazy"
+            sizes="100vw"
           />
           <h4 class="sub__section-heading mt-4">{{ feature.title }}</h4>
           <p class="subheading__text">{{ feature.description }}</p>

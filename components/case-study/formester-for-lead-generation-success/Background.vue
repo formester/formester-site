@@ -45,6 +45,7 @@
         <nuxt-img
           class="sub__section-img img-fluid"
           src="case-study-1/background/importance-of-lead-generation.png"
+          sizes="100vw"
         />
       </div>
     </div>
@@ -89,6 +90,7 @@
         <nuxt-img
           class="sub__section-img img-fluid order-xl-first"
           src="case-study-1/background/role-of-lead-generation-forms.png"
+          sizes="100vw"
         />
       </div>
     </div>
@@ -127,6 +129,7 @@
         <nuxt-img
           class="sub__section-img img-fluid"
           src="case-study-1/background/designing-effective-forms.png"
+          sizes="100vw"
         />
       </div>
     </div>
@@ -164,6 +167,7 @@
         <nuxt-img
           class="sub__section-img img-fluid order-xl-first"
           src="case-study-1/background/formester-a-valuable-tool.png"
+          sizes="100vw"
         />
       </div>
     </div>
