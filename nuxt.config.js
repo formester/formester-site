@@ -46,28 +46,6 @@ export default defineNuxtConfig({
     UserAgent: '*',
     Disallow: '',
   },
-
-  // sitemap: {
-  //   hostname: 'https://formester.com',
-  //   trailingSlash: true,
-  //   routes: async () => {
-  //     let { data } = await axios.get('https://app.formester.com/templates.json')
-  //     let templates = data.map((template) => {
-  //       return {
-  //         url: `/templates/${template.slug}`,
-  //       }
-  //     })
-  //     let { data: response } = await axios.get(
-  //       'https://app.formester.com/template_categories.json'
-  //     )
-  //     let categories = response.map((category) => {
-  //       return `/templates/categories/${category.slug}`
-  //     })
-  //     const blogs = await getRoutes()
-  //     return blogs.concat(templates, categories)
-  //   },
-  // },
-
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~/assets/css/bootstrap.min.css', '~/assets/css/main.css'],
 
@@ -87,18 +65,6 @@ export default defineNuxtConfig({
   disqus: {
     shortname: 'formester',
   },
-  // Hooks configuration - https://content.nuxtjs.org/advanced/
-  hooks: {
-    'content:file:beforeInsert': (document) => {
-      if (document.extension === '.md') {
-        const stats = require('remark-reading-time')(document.text)
-        document.readingStats = stats
-      }
-    },
-  },
-
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
@@ -137,33 +103,15 @@ export default defineNuxtConfig({
       remarkPlugins: ['remark-reading-time'],
     },
   },
-  // sitemap: {
-  //   // provide dynamic URLs to be included
-  //   urls: async () => {
-  //     let response = await fetch(
-  //       'https://app.formester.com/template_categories.json'
-  //     )
-  //     let categories = await response.json()
-  //     let categoriesURL = categories.map((category) => {
-  //       return `/templates/categories/${category.slug}`
-  //     })
-  //     return categories.map(page => ({
-  //       loc: `/templates/categories/${page.slug}`,
-  //       lastmod: page.updatedAt,
-  //       changefreq: 'daily',
-  //       priority: 0.8,
-  //     }))
-  //   },
-  // },
   // Nuxt Image
   // please comment out the provider and netlify section while running application on local server
   image: {
     dir: 'assets/images',
-    // provider: 'netlify',
-    // netlify: {
-    //   baseURL: process.env.IMAGE_URL || 'http://localhost:8080/assets/images'
-    //   // baseURL: 'https://formester.com/assets/images',
-    // }
+    provider: 'netlify',
+    netlify: {
+      baseURL: process.env.IMAGE_URL || 'http://localhost:8080/assets/images'
+      // baseURL: 'https://formester.com/assets/images',
+    }
   },
   devServer: {
     port: 8080,
