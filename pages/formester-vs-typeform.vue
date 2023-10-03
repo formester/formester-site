@@ -7,7 +7,8 @@
             class="col-lg-5 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start"
           >
             <h1 class="section__heading">
-              Looking for a <span class="hglight">Powerful</span> Alternative to Typeform? Your Search Ends here!
+              Looking for a <span class="hglight">Powerful</span> Alternative to
+              Typeform? Your Search Ends here!
             </h1>
             <p class="section__subtitle mt-3">
               Good-looking forms don’t solve your problem. Dynamic, customizable
@@ -61,7 +62,9 @@
     <section class="container text-center">
       <h3 class="section__heading">Pricing</h3>
       <div class="table-responsive">
-        <table class="table text-start comparision__table comparision__table-pricing mx-auto">
+        <table
+          class="table text-start comparision__table comparision__table-pricing mx-auto"
+        >
           <thead class="bg__light-primary">
             <tr>
               <th scope="col">Features</th>
@@ -223,7 +226,7 @@
         />
       </div>
     </section>
-    
+
     <CallToActionSection />
   </div>
 </template>
@@ -235,229 +238,241 @@ import getSiteMeta from '../utils/getSiteMeta'
 import RelatedArticleCard from '@/components/RelatedArticleCard.vue'
 
 export default {
-    data() {
-        return {
-            steps: [
-                {
-                    step: 1,
-                    heading: "Multi-Purpose Form Creation Made Easy",
-                    description: `It takes minutes, not hours to create forms using Formester. You can customize them the way you want and use them as standalone or web-integrated forms. Just drag and drop to build a form as per your requirements or integrate an existing HTML form’s backend.`,
-                },
-                {
-                    step: 2,
-                    heading: "Responses on Auto-Pilot",
-                    description: "Stop jumping from one platform to another for each of your form-related tasks. Send automated replies to your audience when they fill out your form, and never compromise on personalization. One of Formester’s unique propositions in the industry, Auto Responder allows you the convenience of two tools in one.",
-                },
-                {
-                    step: 3,
-                    heading: "End-to-End Form Analytics",
-                    description: "Just collecting data isn’t enough. Unless you extract meaningful insights from your form responses, your business isn’t going to benefit. Formester serves powerful analytics that are easier to comprehend and help you study engagement and conversions. Analyze your performance to act towards reducing your drop-offs.",
-                },
-            ],
-            comparisions: [
-                {
-                    title: "Redirection on Submission",
-                    formester: "<span class=\"present\">Customization available</span> even with the <span class=\"present\">free plan</span>",
-                    typeform: "<span class=\"absent\">Not available</span>",
-                },
-                {
-                    title: "HTML Form Backend Service",
-                    formester: "<span class=\"present\">Present</span>",
-                    typeform: "<span class=\"absent\">Not available</span>"
-                },
-                {
-                    title: "White Labeled Surveys Creation",
-                    formester: "<span class=\"present\">Present</span>",
-                    typeform: "<span class=\"absent\">Not available</span>"
-                },
-                {
-                    title: "Spam Protection",
-                    formester: "<span class=\"present\">Present</span>",
-                    typeform: "<span class=\"absent\">Difficult</span> to execute"
-                },
-                {
-                    title: "End-to-End Design Customization",
-                    formester: "<span class=\"present\">Present</span>",
-                    typeform: "<span class=\"absent\">Minimal</span> customization"
-                },
-                {
-                    title: "Logo addition to form",
-                    formester: "<span class=\"present\">Present</span> even with the <span class=\"present\">free</span> plan",
-                    typeform: "A <span class=\"absent\">$99</span> feature",
-                },
-                {
-                    title: "Automated Email Responses",
-                    formester: "<span class=\"present\">Present</span> with custom integration",
-                    typeform: "Only in <span class=\"absent\">paid plans</span>",
-                },
-                {
-                    title: "Deep Performance Analytics",
-                    formester: "<span class=\"present\">Present</span>",
-                    typeform: "Only in <span class=\"absent\">paid plans</span>"
-                },
-                {
-                    title: "Website Embedment",
-                    formester: "<span class=\"present\">Easy and quickly</span> embedment",
-                    typeform: "<span class=\"absent\">Complex</span> embedment execution",
-                },
-                {
-                    title: "Best Application",
-                    formester: "<span class=\"present\">All kinds of forms and applications</span> including survey lead generation, feedback etc",
-                    typeform: "<span class=\"absent\">Not suitable</span> for long forms",
-                },
-                {
-                    title: "Mobile First UX",
-                    formester: "<span class=\"present\">Perfectly</span> mobile-first",
-                    typeform: "<span class=\"absent\">Complicated</span> for design-heavy forms",
-                },
-                {
-                    title: "Storage",
-                    formester: "Basic Plan: <span class=\"present\">$13/month</span>  & Maximum Storage: <span class=\"present\">1GB</span>.<span></br></span> Business Plan: <span class=\"present\">$49/month</span> & Maximum Storage: <span class=\"present\">50GB</span>",
-                    typeform: "Basic Plan: <span class=\"absent\">$25/month</span> & Maximum Storage: <span class=\"absent\">1GB</span>.<span></br></span> Business Plan: <span class=\"absent\">$83/month</span> & Maximum Storage: <span class=\"absent\">5GB</span>",
-                },
-                {
-                    title: "Cloud Integrations with Zapier",
-                    formester: "<span class=\"present\">Present</span>",
-                    typeform: "<span class=\"present\">Present</span>"
-                },
-                {
-                    title: "Add Media to Forms",
-                    formester: "<span class=\"present\">Present</span>",
-                    typeform: "<span class=\"present\">Present</span>"
-                },
-                {
-                    title: "Conditional Logic",
-                    formester: "<span class=\"present\">Present</span>",
-                    typeform: "<span class=\"present\">Present</span>"
-                },
-            ],
-            pricing: [
-                {
-                    title: "Free",
-                    formester: "<span class=\"present\">Starts</span> free for <span class=\"present\">100</span> submissions",
-                    typeform: "<span class=\"absent\">$29/month</span> for <span class=\"absent\">100</span> submissions",
-                },
-                {
-                    title: "Personal",
-                    formester: "<span class=\"present\">$13/month</span> for <span class=\"present\">1000</span> submissions",
-                    typeform: "<span class=\"absent\">$59/month</span> for <span class=\"absent\">1000</span> submissions",
-                },
-                {
-                    title: "Bussiness",
-                    formester: "<span class=\"present\">$49/month</span> for <span class=\"present\">15k</span> submissions",
-                    typeform: "<span class=\"absent\">$99/month</span> for <span class=\"absent\">10k</span> submissions",
-                }
-            ],
-            relatedComparisons: [
-                {
-                    title: "Formester vs Paperform",
-                    coverImg: "/img/formester-vs-paperform.png",
-                    coverImgAlt: "Formester vs Paperform",
-                    link: { name: "formester-vs-paperform" },
-                    type: "comparison",
-                },
-                {
-                    title: "Formester vs Jotform",
-                    coverImg: "/img/formester-vs-jotform.png",
-                    coverImgAlt: "Formester vs Jotform",
-                    link: { name: "formester-vs-jotform" },
-                    type: "comparison",
-                },
-                {
-                    title: "Formester vs Forms App",
-                    coverImg: "/img/formester-vs-forms-app.png",
-                    coverImgAlt: "Formester vs Forms App",
-                    link: { name: "formester-vs-forms-app" },
-                    type: "comparison",
-                },
-            ],
-        };
-    },
-    computed: {
-        meta() {
-            const metaData = {
-                type: "website",
-                url: "https://formester.com/formester-vs-typeform/",
-                title: "Typeform Alternative | Formester vs Typeform - Formester",
-                description: "Powerful Alternative to Typeform - Try Formester for Online, No-Code Forms & Surveys! Advanced Features & Integrations | Sign-up for Free!",
-                mainImage: "https://formester.com/formester-form-builder-background.png",
-                mainImageAlt: "Form builder showing drag and drop functionality",
-                keywords: [
-                    "typeform alternative",
-                    "typeform alternative free",
-                    "typeform competitor",
-                    "free alternative to typeform",
-                    "typeform alternative open source",
-                    "typeform alternative wordpress",
-                    "typeform alternatives free",
-                    "typeform open source alternative",
-                    "best typeform alternative",
-                    "typeform wordpress alternative",
-                    "typeform alternative reddit",
-                    "typeform alternative for wordpress",
-                    "open source typeform alternative",
-                    "typeform alternative free reddit",
-                    "typeform similar free",
-                    "typeform equivalent",
-                    "wordpress typeform alternative",
-                    "free typeform alternatives",
-                    "free alternative typeform",
-                    "typeform like open source",
-                    "similar to typeform free",
-                    "privacy focused alternatives to typeform",
-                    "free typeform alternative with conditional formatting",
-                    "open source typeform alternatives",
-                    "forms",
-                    "web forms",
-                    "formester",
-                    "online forms",
-                    "online web forms",
-                    "typeform wufoo alternatives",
-                    "cheaper typeform alternative",
-                    "easier alternatives to typeform",
-                    "paid alternatives to typeform",
-                    "private alternatives to typeform",
-                    "typeform alternate thank you pages",
-                    "typeform alternates commerce",
-                    "typeform alternatives cheaper",
-                    "typeform alternative quiz",
-                    "better typeform alternatives",
-                    "completele free alternatives to typeform",
-                    "rank alternatives typeform",
-                    "typeform alternative for gravity forms",
-                    "typeform alternative for registration",
-                    "typeform alternative squarespace",
-                    "typeform alternative with branching",
-                    "typeform cheaper alternatives",
-                    "typeform wordpress alternative",
-                    "typeform alternative free reddit",
-                    "typeform alternative deutsch",
-                    "free alternatives to typeform",
-                ]
-            };
-            return getSiteMeta(metaData);
+  setup() {
+    const steps = [
+      {
+        step: 1,
+        heading: 'Multi-Purpose Form Creation Made Easy',
+        description: `It takes minutes, not hours to create forms using Formester. You can customize them the way you want and use them as standalone or web-integrated forms. Just drag and drop to build a form as per your requirements or integrate an existing HTML form’s backend.`,
+      },
+      {
+        step: 2,
+        heading: 'Responses on Auto-Pilot',
+        description:
+          'Stop jumping from one platform to another for each of your form-related tasks. Send automated replies to your audience when they fill out your form, and never compromise on personalization. One of Formester’s unique propositions in the industry, Auto Responder allows you the convenience of two tools in one.',
+      },
+      {
+        step: 3,
+        heading: 'End-to-End Form Analytics',
+        description:
+          'Just collecting data isn’t enough. Unless you extract meaningful insights from your form responses, your business isn’t going to benefit. Formester serves powerful analytics that are easier to comprehend and help you study engagement and conversions. Analyze your performance to act towards reducing your drop-offs.',
+      },
+    ]
+    const comparisions = [
+      {
+        title: 'Redirection on Submission',
+        formester:
+          '<span class="present">Customization available</span> even with the <span class="present">free plan</span>',
+        typeform: '<span class="absent">Not available</span>',
+      },
+      {
+        title: 'HTML Form Backend Service',
+        formester: '<span class="present">Present</span>',
+        typeform: '<span class="absent">Not available</span>',
+      },
+      {
+        title: 'White Labeled Surveys Creation',
+        formester: '<span class="present">Present</span>',
+        typeform: '<span class="absent">Not available</span>',
+      },
+      {
+        title: 'Spam Protection',
+        formester: '<span class="present">Present</span>',
+        typeform: '<span class="absent">Difficult</span> to execute',
+      },
+      {
+        title: 'End-to-End Design Customization',
+        formester: '<span class="present">Present</span>',
+        typeform: '<span class="absent">Minimal</span> customization',
+      },
+      {
+        title: 'Logo addition to form',
+        formester:
+          '<span class="present">Present</span> even with the <span class="present">free</span> plan',
+        typeform: 'A <span class="absent">$99</span> feature',
+      },
+      {
+        title: 'Automated Email Responses',
+        formester:
+          '<span class="present">Present</span> with custom integration',
+        typeform: 'Only in <span class="absent">paid plans</span>',
+      },
+      {
+        title: 'Deep Performance Analytics',
+        formester: '<span class="present">Present</span>',
+        typeform: 'Only in <span class="absent">paid plans</span>',
+      },
+      {
+        title: 'Website Embedment',
+        formester: '<span class="present">Easy and quickly</span> embedment',
+        typeform: '<span class="absent">Complex</span> embedment execution',
+      },
+      {
+        title: 'Best Application',
+        formester:
+          '<span class="present">All kinds of forms and applications</span> including survey lead generation, feedback etc',
+        typeform: '<span class="absent">Not suitable</span> for long forms',
+      },
+      {
+        title: 'Mobile First UX',
+        formester: '<span class="present">Perfectly</span> mobile-first',
+        typeform:
+          '<span class="absent">Complicated</span> for design-heavy forms',
+      },
+      {
+        title: 'Storage',
+        formester:
+          'Basic Plan: <span class="present">$13/month</span>  & Maximum Storage: <span class="present">1GB</span>.<span></br></span> Business Plan: <span class="present">$49/month</span> & Maximum Storage: <span class="present">50GB</span>',
+        typeform:
+          'Basic Plan: <span class="absent">$25/month</span> & Maximum Storage: <span class="absent">1GB</span>.<span></br></span> Business Plan: <span class="absent">$83/month</span> & Maximum Storage: <span class="absent">5GB</span>',
+      },
+      {
+        title: 'Cloud Integrations with Zapier',
+        formester: '<span class="present">Present</span>',
+        typeform: '<span class="present">Present</span>',
+      },
+      {
+        title: 'Add Media to Forms',
+        formester: '<span class="present">Present</span>',
+        typeform: '<span class="present">Present</span>',
+      },
+      {
+        title: 'Conditional Logic',
+        formester: '<span class="present">Present</span>',
+        typeform: '<span class="present">Present</span>',
+      },
+    ]
+    const pricing = [
+      {
+        title: 'Free',
+        formester:
+          '<span class="present">Starts</span> free for <span class="present">100</span> submissions',
+        typeform:
+          '<span class="absent">$29/month</span> for <span class="absent">100</span> submissions',
+      },
+      {
+        title: 'Personal',
+        formester:
+          '<span class="present">$13/month</span> for <span class="present">1000</span> submissions',
+        typeform:
+          '<span class="absent">$59/month</span> for <span class="absent">1000</span> submissions',
+      },
+      {
+        title: 'Bussiness',
+        formester:
+          '<span class="present">$49/month</span> for <span class="present">15k</span> submissions',
+        typeform:
+          '<span class="absent">$99/month</span> for <span class="absent">10k</span> submissions',
+      },
+    ]
+    const relatedComparisons = [
+      {
+        title: 'Formester vs Paperform',
+        coverImg: '/img/formester-vs-paperform.png',
+        coverImgAlt: 'Formester vs Paperform',
+        link: { name: 'formester-vs-paperform' },
+        type: 'comparison',
+      },
+      {
+        title: 'Formester vs Jotform',
+        coverImg: '/img/formester-vs-jotform.png',
+        coverImgAlt: 'Formester vs Jotform',
+        link: { name: 'formester-vs-jotform' },
+        type: 'comparison',
+      },
+      {
+        title: 'Formester vs Forms App',
+        coverImg: '/img/formester-vs-forms-app.png',
+        coverImgAlt: 'Formester vs Forms App',
+        link: { name: 'formester-vs-forms-app' },
+        type: 'comparison',
+      },
+    ]
+
+    const meta = computed(() => {
+      const metaData = {
+        type: 'website',
+        url: 'https://formester.com/formester-vs-typeform/',
+        title: 'Typeform Alternative | Formester vs Typeform - Formester',
+        description:
+          'Powerful Alternative to Typeform - Try Formester for Online, No-Code Forms & Surveys! Advanced Features & Integrations | Sign-up for Free!',
+        mainImage:
+          'https://formester.com/formester-form-builder-background.png',
+        mainImageAlt: 'Form builder showing drag and drop functionality',
+        keywords: [
+          'typeform alternative',
+          'typeform alternative free',
+          'typeform competitor',
+          'free alternative to typeform',
+          'typeform alternative open source',
+          'typeform alternative wordpress',
+          'typeform alternatives free',
+          'typeform open source alternative',
+          'best typeform alternative',
+          'typeform wordpress alternative',
+          'typeform alternative reddit',
+          'typeform alternative for wordpress',
+          'open source typeform alternative',
+          'typeform alternative free reddit',
+          'typeform similar free',
+          'typeform equivalent',
+          'wordpress typeform alternative',
+          'free typeform alternatives',
+          'free alternative typeform',
+          'typeform like open source',
+          'similar to typeform free',
+          'privacy focused alternatives to typeform',
+          'free typeform alternative with conditional formatting',
+          'open source typeform alternatives',
+          'forms',
+          'web forms',
+          'formester',
+          'online forms',
+          'online web forms',
+          'typeform wufoo alternatives',
+          'cheaper typeform alternative',
+          'easier alternatives to typeform',
+          'paid alternatives to typeform',
+          'private alternatives to typeform',
+          'typeform alternate thank you pages',
+          'typeform alternates commerce',
+          'typeform alternatives cheaper',
+          'typeform alternative quiz',
+          'better typeform alternatives',
+          'completele free alternatives to typeform',
+          'rank alternatives typeform',
+          'typeform alternative for gravity forms',
+          'typeform alternative for registration',
+          'typeform alternative squarespace',
+          'typeform alternative with branching',
+          'typeform cheaper alternatives',
+          'typeform wordpress alternative',
+          'typeform alternative free reddit',
+          'typeform alternative deutsch',
+          'free alternatives to typeform',
+        ],
+      }
+      return getSiteMeta(metaData)
+    })
+
+    useHead({
+      title: 'Typeform Alternative | Formester vs Typeform - Formester',
+      meta: [meta],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://formester.com/formester-vs-typeform/',
         },
-    },
-    head() {
-        return {
-            title: "Typeform Alternative | Formester vs Typeform - Formester",
-            meta: [...this.meta],
-            link: [
-                {
-                    hid: "canonical",
-                    rel: "canonical",
-                    href: "https://formester.com/formester-vs-typeform/",
-                },
-            ],
-        };
-    },
-    jsonld() {
-    return {
+      ],
+    })
+
+    useJsonld({
       '@context': 'http://schema.org',
       '@type': 'Corporation',
       name: 'Typeform Alternative | Formester vs Typeform - Formester',
       description:
-        "Powerful Alternative to Typeform - Try Formester for Online, No-Code Forms & Surveys! Advanced Features & Integrations | Sign-up for Free!",
+        'Powerful Alternative to Typeform - Try Formester for Online, No-Code Forms & Surveys! Advanced Features & Integrations | Sign-up for Free!',
       logo: 'https://formester.com/logo.png',
       url: 'https://formester.com',
       address: {
@@ -474,7 +489,14 @@ export default {
           '@type': 'ImageObject',
           url: 'https://formester.com/logo.png',
         },
-      }
+      },
+    })
+
+    return {
+      steps,
+      pricing,
+      comparisions,
+      relatedComparisons
     }
   },
 }

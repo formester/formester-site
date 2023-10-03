@@ -90,27 +90,7 @@ export default {
       },
     ]
 
-    const randomTestimonials = ref([])
-
-    const fetchTestimonials = async () => {
-      try {
-        randomTestimonials.value = await fetchRandomTestimonials()
-      } catch (error) {
-        console.error('Error fetching random testimonials:', error)
-      }
-    }
-
-    onMounted(() => {
-      fetchTestimonials()
-    })
-
-    return {
-      randomTestimonials,
-      features,
-    }
-  },
-  computed: {
-    meta() {
+    const meta = computed(() => {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/features/powerful-analytics/',
@@ -122,12 +102,11 @@ export default {
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with powerful analytics page image alt
       }
       return getSiteMeta(metaData)
-    },
-  },
-  head() {
-    return {
+    })
+
+    useHead({
       title: 'Form Analytics Software | Google Form Analytics - Formester',
-      meta: [...this.meta],
+      meta: [meta],
       link: [
         {
           hid: 'canonical',
@@ -135,10 +114,9 @@ export default {
           href: 'https://formester.com/features/powerful-analytics/',
         },
       ],
-    }
-  },
-  jsonld() {
-    return {
+    })
+
+    useJsonld({
       '@context': 'http://schema.org',
       '@graph': [
         {
@@ -174,8 +152,27 @@ export default {
           ],
         },
       ],
+    })
+
+    const randomTestimonials = ref([])
+
+    const fetchTestimonials = async () => {
+      try {
+        randomTestimonials.value = await fetchRandomTestimonials()
+      } catch (error) {
+        console.error('Error fetching random testimonials:', error)
+      }
     }
-  },
+
+    onMounted(() => {
+      fetchTestimonials()
+    })
+
+    return {
+      randomTestimonials,
+      features,
+    }
+  }
 }
 </script>
 

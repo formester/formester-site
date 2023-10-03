@@ -299,29 +299,7 @@ export default {
       },
     ]
 
-    const randomTestimonials = ref([])
-
-    const fetchTestimonials = async () => {
-      try {
-        randomTestimonials.value = await fetchRandomTestimonials()
-      } catch (error) {
-        console.error('Error fetching random testimonials:', error)
-      }
-    }
-
-    onMounted(() => {
-      fetchTestimonials()
-    })
-
-    return {
-      randomTestimonials,
-      features,
-      benefits,
-      categories
-    }
-  },
-  computed: {
-    meta() {
+    const meta = computed(() => {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/features/collaboration/',
@@ -371,13 +349,12 @@ export default {
         ],
       }
       return getSiteMeta(metaData)
-    },
-  },
-  head() {
-    return {
+    })
+
+    useHead({
       title:
         'Simplified Collaboration: Form Access with Multiple Members & Clients!',
-      meta: [...this.meta],
+      meta: [meta],
       link: [
         {
           hid: 'canonical',
@@ -385,10 +362,9 @@ export default {
           href: 'https://formester.com/features/collaboration/',
         },
       ],
-    }
-  },
-  jsonld() {
-    return {
+    })
+
+    useJsonld({
       '@context': 'http://schema.org',
       '@graph': [
         {
@@ -424,8 +400,29 @@ export default {
           ],
         },
       ],
+    })
+
+    const randomTestimonials = ref([])
+
+    const fetchTestimonials = async () => {
+      try {
+        randomTestimonials.value = await fetchRandomTestimonials()
+      } catch (error) {
+        console.error('Error fetching random testimonials:', error)
+      }
     }
-  }
+
+    onMounted(() => {
+      fetchTestimonials()
+    })
+
+    return {
+      randomTestimonials,
+      features,
+      benefits,
+      categories,
+    }
+  },
 }
 </script>
 

@@ -219,29 +219,7 @@ export default {
       },
     ]
 
-    const randomTestimonials = ref([])
-
-    const fetchRandomTestimonials = async () => {
-      try {
-        const testimonials = await allTestimonials
-        const randIndex = Math.floor(Math.random() * (testimonials.length - 2))
-        randomTestimonials.value = testimonials.slice(randIndex, randIndex + 2)
-      } catch (error) {
-        console.error('Error fetching random testimonials:', error)
-      }
-    }
-
-    onMounted(() => {
-      fetchRandomTestimonials()
-    })
-
-    return {
-      randomTestimonials,
-      categories,
-    }
-  },
-  computed: {
-    meta() {
+    const meta = computed(() => {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/use-case/software-and-technology/',
@@ -275,33 +253,11 @@ export default {
         ],
       }
       return getSiteMeta(metaData)
-    },
-    faqsSchema() {
-      const allFaqs = []
+    })
 
-      this.categories.forEach((c) => {
-        if (c.faqs) {
-          allFaqs.push(...c.faqs)
-        }
-      })
-
-      // Generate the FAQ schema
-      return allFaqs.map((faq) => {
-        return {
-          '@type': 'Question',
-          name: faq.question,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: faq.answer,
-          },
-        }
-      })
-    },
-  },
-  head() {
-    return {
+    useHead({
       title: 'Formester: Empowering Software and Technology Industries',
-      meta: [...this.meta],
+      meta: [meta],
       link: [
         {
           hid: 'canonical',
@@ -309,52 +265,96 @@ export default {
           href: 'https://formester.com/use-case/software-and-technology/',
         },
       ],
-    }
-  },
-  jsonld() {
-    return {
-      '@context': 'http://schema.org',
-      '@graph': [
-        {
-          '@type': 'Corporation',
-          '@id': 'https://acornglobus.com',
-          name: 'Formester: Empowering Software and Technology Industries',
-          description:
-            'Streamline Your Workflows and Scale Your Software Business with Formester! Discover how Formester can revolutionize your form-building process, automate workflows, and drive efficiency in your organization. Empower your team with versatile, no-code solutions that save time and propel your business forward.',
-          logo: 'https://formester.com/logo.png',
-          url: 'https://formester.com',
-          address: {
-            '@type': 'PostalAddress',
-            addressLocality: 'Delaware',
-            addressCountry: 'United States',
+    })
+
+    const faqsSchema = computed(() => {
+      const allFaqs = []
+      if (categories.value && categories.value.length > 0) {
+        categories.value.forEach((c) => {
+          if (c.faqs) {
+            allFaqs.push(...c.faqs)
+          }
+        })
+      }
+
+      // Generate the FAQ schema
+      return allFaqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
+      }))
+    })
+
+    useJsonld(() => {
+      return {
+        '@context': 'http://schema.org',
+        '@graph': [
+          {
+            '@type': 'Corporation',
+            '@id': 'https://acornglobus.com',
+            name: 'Formester: Empowering Software and Technology Industries',
+            description:
+              'Streamline Your Workflows and Scale Your Software Business with Formester! Discover how Formester can revolutionize your form-building process, automate workflows, and drive efficiency in your organization. Empower your team with versatile, no-code solutions that save time and propel your business forward.',
+            logo: 'https://formester.com/logo.png',
+            url: 'https://formester.com',
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: 'Delaware',
+              addressCountry: 'United States',
+            },
           },
-        },
-        {
-          '@type': 'BreadcrumbList',
-          '@id': 'https://acornglobus.com',
-          itemListElement: [
-            {
-              '@type': 'ListItem',
-              position: 1,
-              name: 'Formester',
-              item: 'https://formester.com/',
-            },
-            {
-              '@type': 'ListItem',
-              position: 2,
-              name: 'Formester: Empowering Software and Technology Industries',
-              item: 'https://formester.com/use-case/',
-            },
-          ],
-        },
-        {
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity: this.faqsSchema,
-        },
-      ],
+          {
+            '@type': 'BreadcrumbList',
+            '@id': 'https://acornglobus.com',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Formester',
+                item: 'https://formester.com/',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Formester: Empowering Software and Technology Industries',
+                item: 'https://formester.com/use-case/',
+              },
+            ],
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqsSchema.value,
+          },
+        ],
+      }
+    })
+
+    const randomTestimonials = ref([])
+
+    const fetchRandomTestimonials = async () => {
+      try {
+        const testimonials = await allTestimonials
+        const randIndex = Math.floor(Math.random() * (testimonials.length - 2))
+        randomTestimonials.value = testimonials.slice(randIndex, randIndex + 2)
+      } catch (error) {
+        console.error('Error fetching random testimonials:', error)
+      }
+    }
+
+    onMounted(() => {
+      fetchRandomTestimonials()
+    })
+
+    return {
+      randomTestimonials,
+      categories,
     }
   },
+  computed: {},
 }
 </script>
 

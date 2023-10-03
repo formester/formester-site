@@ -109,26 +109,7 @@ export default {
       },
     ]
 
-    const randomTestimonials = ref([])
-
-    const fetchTestimonials = async () => {
-      try {
-        randomTestimonials.value = await fetchRandomTestimonials()
-      } catch (error) {
-        console.error('Error fetching random testimonials:', error)
-      }
-    }
-    onMounted(() => {
-      fetchTestimonials()
-    })
-
-    return {
-      randomTestimonials,
-      features
-    }
-  },
-  computed: {
-    meta() {
+    const meta = computed(() => {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/features/spam-protection/',
@@ -140,12 +121,11 @@ export default {
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with spam-protection page image alt
       }
       return getSiteMeta(metaData)
-    },
-  },
-  head() {
-    return {
+    })
+
+    useHead({
       title: 'Spam Protection | Spam Protection in Web Form - Formester',
-      meta: [...this.meta],
+      meta: [meta],
       link: [
         {
           hid: 'canonical',
@@ -153,10 +133,9 @@ export default {
           href: 'https://formester.com/features/spam-protection/',
         },
       ],
-    }
-  },
-  jsonld() {
-    return {
+    })
+
+    useJsonld({
       '@context': 'http://schema.org',
       '@graph': [
         {
@@ -192,6 +171,24 @@ export default {
           ],
         },
       ],
+    })
+
+    const randomTestimonials = ref([])
+
+    const fetchTestimonials = async () => {
+      try {
+        randomTestimonials.value = await fetchRandomTestimonials()
+      } catch (error) {
+        console.error('Error fetching random testimonials:', error)
+      }
+    }
+    onMounted(() => {
+      fetchTestimonials()
+    })
+
+    return {
+      randomTestimonials,
+      features
     }
   },
 }

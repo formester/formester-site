@@ -117,9 +117,7 @@
 import CallToActionSection from '@/components/CallToActionSection.vue'
 import FeatureDetail from '@/components/FeatureDetail.vue'
 import Testimonial from '@/components/Testimonial.vue'
-import { allTestimonials } from '@/constants/testimonials'
 import TemplateSection from '@/components/TemplateSection.vue'
-
 // MetaTags
 import getSiteMeta from '@/utils/getSiteMeta'
 import ApplicationOfWebForms from '@/components/ApplicationOfWebForms.vue'
@@ -134,58 +132,7 @@ export default {
     ApplicationOfWebForms,
   },
   setup() {
-    const features = [
-      {
-        title: 'White Label',
-        description:
-          'Make your emails look personal by using your company email address. You also get an option to choose between HTML and text-based emails.',
-        src: 'auto-responder/white-label-illus.svg',
-        alt: 'Get noticed by making the email personalized',
-      },
-      {
-        title: 'Easy Email Builder',
-        description:
-          'Creating a captivating response has never been simpler. Our easy to use editor enables you to write compelling content. Add images, links or videos in a matter of a click.',
-        src: 'auto-responder/easy-email-builder-illus.svg',
-        alt: 'Email can be eaily build with auto responder',
-      },
-      {
-        title: 'Personalised Response',
-        description:
-          'Notifications can be personalised to include fields from the submissions. Make your users feel unique with messages which seem to be coming from actual humans and not a bot.',
-        src: 'auto-responder/personalised-response.svg',
-        alt: 'Have a personalised respose to end user',
-      },
-      {
-        title: 'Realtime Tracking',
-        description:
-          'Monitor how people are interacting with your auto-response. Analyse useful metrics like open rate and link clicks to get insights into users behaviour. Use this data to make changes to your communication.',
-        src: 'auto-responder/realtime-tracking-illus.svg',
-        alt: 'Track your forms in real time',
-      },
-    ]
-
-    const randomTestimonials = ref([])
-
-    const fetchTestimonials = async () => {
-      try {
-        randomTestimonials.value = await fetchRandomTestimonials()
-      } catch (error) {
-        console.error('Error fetching random testimonials:', error)
-      }
-    }
-
-    onMounted(() => {
-      fetchTestimonials()
-    })
-
-    return {
-      randomTestimonials,
-      features
-    }
-  },
-  computed: {
-    meta() {
+    const meta = computed(() => {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/features/auto-responder/',
@@ -243,13 +190,52 @@ export default {
         ],
       }
       return getSiteMeta(metaData)
-    },
-  },
-  head() {
-    return {
+    })
+    const features = [
+      {
+        title: 'White Label',
+        description:
+          'Make your emails look personal by using your company email address. You also get an option to choose between HTML and text-based emails.',
+        src: 'auto-responder/white-label-illus.svg',
+        alt: 'Get noticed by making the email personalized',
+      },
+      {
+        title: 'Easy Email Builder',
+        description:
+          'Creating a captivating response has never been simpler. Our easy to use editor enables you to write compelling content. Add images, links or videos in a matter of a click.',
+        src: 'auto-responder/easy-email-builder-illus.svg',
+        alt: 'Email can be eaily build with auto responder',
+      },
+      {
+        title: 'Personalised Response',
+        description:
+          'Notifications can be personalised to include fields from the submissions. Make your users feel unique with messages which seem to be coming from actual humans and not a bot.',
+        src: 'auto-responder/personalised-response.svg',
+        alt: 'Have a personalised respose to end user',
+      },
+      {
+        title: 'Realtime Tracking',
+        description:
+          'Monitor how people are interacting with your auto-response. Analyse useful metrics like open rate and link clicks to get insights into users behaviour. Use this data to make changes to your communication.',
+        src: 'auto-responder/realtime-tracking-illus.svg',
+        alt: 'Track your forms in real time',
+      },
+    ]
+
+    const randomTestimonials = ref([])
+
+    const fetchTestimonials = async () => {
+      try {
+        randomTestimonials.value = await fetchRandomTestimonials()
+      } catch (error) {
+        console.error('Error fetching random testimonials:', error)
+      }
+    }
+
+    useHead({
       title:
         'Email Autoresponder Message | Personalised Email Responder - Formester',
-      meta: [...this.meta],
+      meta: [meta],
       link: [
         {
           hid: 'canonical',
@@ -257,10 +243,9 @@ export default {
           href: 'https://formester.com/features/auto-responder/',
         },
       ],
-    }
-  },
-  jsonld() {
-    return {
+    })
+
+    useJsonld({
       '@context': 'http://schema.org',
       '@graph': [
         {
@@ -296,6 +281,15 @@ export default {
           ],
         },
       ],
+    })
+
+    onMounted(() => {
+      fetchTestimonials()
+    })
+
+    return {
+      randomTestimonials,
+      features
     }
   },
 }
