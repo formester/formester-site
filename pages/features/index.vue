@@ -233,17 +233,9 @@ export default {
       },
     ])
 
-    return {
-      randomTestimonials,
-      meta,
-      features1,
-      features2,
-    }
-  },
-  head() {
-    return {
+    useHead({
       title: 'Exciting Features for your Form Builder | Formester',
-      meta: [...this.meta],
+      meta: [meta],
       link: [
         {
           hid: 'canonical',
@@ -251,10 +243,9 @@ export default {
           href: 'https://formester.com/features/',
         },
       ],
-    }
-  },
-  jsonld() {
-    return {
+    })
+
+    useJsonld({
       '@context': 'http://schema.org',
       '@graph': [
         {
@@ -290,8 +281,15 @@ export default {
           ],
         },
       ],
+    })
+
+    return {
+      randomTestimonials,
+      meta,
+      features1,
+      features2,
     }
-  },
+  }
 }
 </script>
 

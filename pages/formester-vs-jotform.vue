@@ -7,7 +7,7 @@
             class="col-lg-5 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start"
           >
             <h1 class="section__heading">
-              Jotform  Alternative that Offers <span class="hglight">More</span>
+              Jotform Alternative that Offers <span class="hglight">More</span>
             </h1>
             <p class="section__subtitle mt-3">
               Declutter your work with a faster and intuitive form builder.
@@ -63,7 +63,9 @@
     <section class="container text-center">
       <h3 class="section__heading">Pricing</h3>
       <div class="table-responsive">
-        <table class="table text-start comparision__table comparision__table-pricing mx-auto">
+        <table
+          class="table text-start comparision__table comparision__table-pricing mx-auto"
+        >
           <thead class="bg__light-primary">
             <tr>
               <th scope="col">Features</th>
@@ -225,7 +227,7 @@
         />
       </div>
     </section>
-    
+
     <CallToActionSection />
   </div>
 </template>
@@ -236,168 +238,190 @@ import getSiteMeta from '../utils/getSiteMeta'
 import RelatedArticleCard from '@/components/RelatedArticleCard.vue'
 
 export default {
-  data() {
-    return {
-      steps: [
-        {
-          step: 1,
-          heading: 'Multi-Purpose Form Creation Made Easy',
-          description: `It takes minutes, not hours to create forms using Formester. You can customize them the way you want and use them as standalone or web-integrated forms. Just drag and drop to build a form as per your requirements or integrate an existing HTML form’s backend.`,
-        },
-        {
-          step: 2,
-          heading: 'Responses on Auto-Pilot',
-          description:
-            'Stop jumping from one platform to another for each of your form-related tasks. Send automated replies to your audience when they fill out your form, and never compromise on personalization. One of Formester’s unique propositions in the industry, Auto Responder allows you the convenience of two tools in one.',
-        },
-        {
-          step: 3,
-          heading: 'End-to-End Form Analytics',
-          description:
-            'Just collecting data isn’t enough. Unless you extract meaningful insights from your form responses, your business isn’t going to benefit. Formester serves powerful analytics that are easier to comprehend and help you study engagement and conversions. Analyze your performance to act towards reducing your drop-offs.',
-        },
-      ],
-      comparisions: [
-        {
-          title: 'HTML Form Backend Service', 
-          formester: '<span class="present">Present</span>', 
-          jotform: '<span class="absent">Not available</span>'
-        },
-        {
-          title: 'Automated Email Responses',
-          formester: '<span class="present">Present</span> with custom integration',
-          jotform: 'Only in <span class="absent">paid plans</span>',
-        },
-        {
-          title: 'Conditional Logic',
-          formester: '<span class="present">Present</span>',
-          jotform: 'Present with a lower <span class="absent">degree of flexibility</span>',
-        },
-        {
-          title: 'Logo addition to form',
-          formester: '<span class="present">Available</span> even with the <span class="present">free</span> plan',
-          jotform: 'Available <span class="absent">only on single page</span> forms',
-        },
-        {
-          title: 'End-to-End Design Customization', 
-          formester: '<span class="present">Present</span>', 
-          jotform: '<span class="absent">Minimal</span> customization'
-        },
-        {  
-          title: 'Website Embedment',
-          formester: '<span class="present">Easy and quickly</span> embedment',
-          jotform: '<span class="absent">Complex</span> embedment execution',
-        },
-        { 
-          title: 'Mobile First UX',
-          formester: '<span class="present">Perfectly</span> mobile-first',
-          jotform: '<span class="absent">Complicated<span> for design-heavy forms',
-        },
-        {
-          title: 'Form Limit',
-          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
-          jotform: '<span class="absent">Limited</span> Forms - 5 Forms for free, <span class="absent">$129/month</span> for Unlimited Forms',
-        },
-        {  
-          title: 'Monthly Form Views',
-          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
-          jotform: 'Limited Form Views - 1000 views for free, <span class="absent">$49/month</span> for Unlimited Views',
-        },
-        {  
-          title: 'Total Submission Storage',
-          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
-          jotform: '500 Total Submission Storage for free,  <span class="absent">$39/month</span> for Unlimited',
-        },
-        {
-          title: 'Redirection on Submission',
-          formester: '<span class="present">Customization available</span> even with the <span class="present">free plan</span>',
-          jotform: 'Jotform forms <span class="present">also allows</span> redirection',
-        },
-        { 
-          title: 'Best For',
-          formester: '<span class="present">All kinds of forms and applications</span> including survey lead generation, feedback etc',
-          jotform: '<span class="absent">Not</span> suitable for long forms',
-        },
-        {  
-          title: 'Storage',
-          formester: 'Basic Plan: <span class="absent">$13/month</span> & Maximum Storage: <span class="absent">1GB</span>.<span></br></span> Business Plan: <span class="absent">$49/monthv</span> & Maximum Storage: <span class="absent">50GB</span>',
-          jotform: 'Bronze Plan: <span class="present">39$/month</span> & Maximum Storage: <span class="present">10GB</span>.<span></br></span> Silver Plan: <span class="present">$49/month</span> & Maximum Storage: <span class="present">100GB</span>',
-        },
-        { 
-          title: 'Monthly Payment Submissions',
-          formester: 'Build in <span class="absent">Progress</span>',
-          jotform: '<span class="present">39$/month</span> for <span class="present">100</span> Monthly Payment Submissions',
-        },
-        {
-          title: 'Add Media to Forms', 
-          formester: '<span class="present">Present</span>', 
-          jotform:   '<span class="present">Present</span>'
-        },
-        {
-          title: 'Spam Protection', 
-          formester: '<span class="present">Present</span>', 
-          jotform:   '<span class="present">Present</span>'
-        },
-        {
-          title: 'Cloud Integrations with Zapier', 
-          formester: '<span class="present">Present</span>', 
-          jotform:   '<span class="present">Present</span>'
-        },
-        {
-          title: 'Deep Performance Analytics', 
-          formester: '<span class="present">Present</span>', 
-          jotform:   '<span class="present">Present</span>'
-        },
-        {
-          title: 'White Labeled Surveys Creation', 
-          formester: '<span class="present">Present</span>', 
-          jotform:   '<span class="present">Present</span>'
-        },
-      ],
-      pricing:[
-        { 
-          title: 'Free',
-          formester:'Starts <span class="present"> free </span> for <span class="present">100</span> submissions',
-          jotform: 'Starts <span class="present"> free </span> for <span class="present">100</span> submissions',
-        },
-        {
-          title: 'Personal',
-          formester:'<span class="present">$13/month</span> for <span class="present">1000</span> submissions',
-          jotform: '<span class="absent">$39/month </span> for <span class="absent">1000</span> submissions',
-        },
-        {
-          title: 'Bussiness',
-          formester:'<span class="present">$49/month</span> for <span class="present">15k </span>submissions',
-          jotform: '<span class="absent">$99/month</span> for <span class="absent">10k </span> submissions',
-        }
-      ],
-      relatedComparisons: [
-        {
-          title: 'Formester vs Typeform',
-          coverImg: '/img/formester-vs-typeform.png',
-          coverImgAlt: 'Formester vs Typeform',
-          link: { name: 'formester-vs-typeform' },
-          type: 'comparison',
-        },
-        {
-          title: 'Formester vs Formstack',
-          coverImg: '/img/formester-vs-formstack.png',
-          coverImgAlt: 'Formester vs Formstack',
-          link: { name: 'formester-vs-formstack' },
-          type: 'comparison',
-        },
-        {
-          title: 'Formester vs Paperform',
-          coverImg: '/img/formester-vs-paperform.png',
-          coverImgAlt: 'Formester vs Paperform',
-          link: { name: 'formester-vs-paperform' },
-          type: 'comparison',
-        },
-      ],
-    }
-  },
-  computed: {
-    meta() {
+  setup() {
+    const steps = [
+      {
+        step: 1,
+        heading: 'Multi-Purpose Form Creation Made Easy',
+        description: `It takes minutes, not hours to create forms using Formester. You can customize them the way you want and use them as standalone or web-integrated forms. Just drag and drop to build a form as per your requirements or integrate an existing HTML form’s backend.`,
+      },
+      {
+        step: 2,
+        heading: 'Responses on Auto-Pilot',
+        description:
+          'Stop jumping from one platform to another for each of your form-related tasks. Send automated replies to your audience when they fill out your form, and never compromise on personalization. One of Formester’s unique propositions in the industry, Auto Responder allows you the convenience of two tools in one.',
+      },
+      {
+        step: 3,
+        heading: 'End-to-End Form Analytics',
+        description:
+          'Just collecting data isn’t enough. Unless you extract meaningful insights from your form responses, your business isn’t going to benefit. Formester serves powerful analytics that are easier to comprehend and help you study engagement and conversions. Analyze your performance to act towards reducing your drop-offs.',
+      },
+    ]
+    const comparisions = [
+      {
+        title: 'HTML Form Backend Service',
+        formester: '<span class="present">Present</span>',
+        jotform: '<span class="absent">Not available</span>',
+      },
+      {
+        title: 'Automated Email Responses',
+        formester:
+          '<span class="present">Present</span> with custom integration',
+        jotform: 'Only in <span class="absent">paid plans</span>',
+      },
+      {
+        title: 'Conditional Logic',
+        formester: '<span class="present">Present</span>',
+        jotform:
+          'Present with a lower <span class="absent">degree of flexibility</span>',
+      },
+      {
+        title: 'Logo addition to form',
+        formester:
+          '<span class="present">Available</span> even with the <span class="present">free</span> plan',
+        jotform:
+          'Available <span class="absent">only on single page</span> forms',
+      },
+      {
+        title: 'End-to-End Design Customization',
+        formester: '<span class="present">Present</span>',
+        jotform: '<span class="absent">Minimal</span> customization',
+      },
+      {
+        title: 'Website Embedment',
+        formester: '<span class="present">Easy and quickly</span> embedment',
+        jotform: '<span class="absent">Complex</span> embedment execution',
+      },
+      {
+        title: 'Mobile First UX',
+        formester: '<span class="present">Perfectly</span> mobile-first',
+        jotform:
+          '<span class="absent">Complicated<span> for design-heavy forms',
+      },
+      {
+        title: 'Form Limit',
+        formester:
+          '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
+        jotform:
+          '<span class="absent">Limited</span> Forms - 5 Forms for free, <span class="absent">$129/month</span> for Unlimited Forms',
+      },
+      {
+        title: 'Monthly Form Views',
+        formester:
+          '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
+        jotform:
+          'Limited Form Views - 1000 views for free, <span class="absent">$49/month</span> for Unlimited Views',
+      },
+      {
+        title: 'Total Submission Storage',
+        formester:
+          '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
+        jotform:
+          '500 Total Submission Storage for free,  <span class="absent">$39/month</span> for Unlimited',
+      },
+      {
+        title: 'Redirection on Submission',
+        formester:
+          '<span class="present">Customization available</span> even with the <span class="present">free plan</span>',
+        jotform:
+          'Jotform forms <span class="present">also allows</span> redirection',
+      },
+      {
+        title: 'Best For',
+        formester:
+          '<span class="present">All kinds of forms and applications</span> including survey lead generation, feedback etc',
+        jotform: '<span class="absent">Not</span> suitable for long forms',
+      },
+      {
+        title: 'Storage',
+        formester:
+          'Basic Plan: <span class="absent">$13/month</span> & Maximum Storage: <span class="absent">1GB</span>.<span></br></span> Business Plan: <span class="absent">$49/monthv</span> & Maximum Storage: <span class="absent">50GB</span>',
+        jotform:
+          'Bronze Plan: <span class="present">39$/month</span> & Maximum Storage: <span class="present">10GB</span>.<span></br></span> Silver Plan: <span class="present">$49/month</span> & Maximum Storage: <span class="present">100GB</span>',
+      },
+      {
+        title: 'Monthly Payment Submissions',
+        formester: 'Build in <span class="absent">Progress</span>',
+        jotform:
+          '<span class="present">39$/month</span> for <span class="present">100</span> Monthly Payment Submissions',
+      },
+      {
+        title: 'Add Media to Forms',
+        formester: '<span class="present">Present</span>',
+        jotform: '<span class="present">Present</span>',
+      },
+      {
+        title: 'Spam Protection',
+        formester: '<span class="present">Present</span>',
+        jotform: '<span class="present">Present</span>',
+      },
+      {
+        title: 'Cloud Integrations with Zapier',
+        formester: '<span class="present">Present</span>',
+        jotform: '<span class="present">Present</span>',
+      },
+      {
+        title: 'Deep Performance Analytics',
+        formester: '<span class="present">Present</span>',
+        jotform: '<span class="present">Present</span>',
+      },
+      {
+        title: 'White Labeled Surveys Creation',
+        formester: '<span class="present">Present</span>',
+        jotform: '<span class="present">Present</span>',
+      },
+    ]
+
+    const pricing = [
+      {
+        title: 'Free',
+        formester:
+          'Starts <span class="present"> free </span> for <span class="present">100</span> submissions',
+        jotform:
+          'Starts <span class="present"> free </span> for <span class="present">100</span> submissions',
+      },
+      {
+        title: 'Personal',
+        formester:
+          '<span class="present">$13/month</span> for <span class="present">1000</span> submissions',
+        jotform:
+          '<span class="absent">$39/month </span> for <span class="absent">1000</span> submissions',
+      },
+      {
+        title: 'Bussiness',
+        formester:
+          '<span class="present">$49/month</span> for <span class="present">15k </span>submissions',
+        jotform:
+          '<span class="absent">$99/month</span> for <span class="absent">10k </span> submissions',
+      },
+    ]
+
+    const relatedComparisons = [
+      {
+        title: 'Formester vs Typeform',
+        coverImg: '/img/formester-vs-typeform.png',
+        coverImgAlt: 'Formester vs Typeform',
+        link: { name: 'formester-vs-typeform' },
+        type: 'comparison',
+      },
+      {
+        title: 'Formester vs Formstack',
+        coverImg: '/img/formester-vs-formstack.png',
+        coverImgAlt: 'Formester vs Formstack',
+        link: { name: 'formester-vs-formstack' },
+        type: 'comparison',
+      },
+      {
+        title: 'Formester vs Paperform',
+        coverImg: '/img/formester-vs-paperform.png',
+        coverImgAlt: 'Formester vs Paperform',
+        link: { name: 'formester-vs-paperform' },
+        type: 'comparison',
+      },
+    ]
+
+    const meta = computed(() => {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/formester-vs-jotform/',
@@ -458,15 +482,14 @@ export default {
           'jotform alternative free reddit',
           'jotform alternative deutsch',
           'free alternatives to jotform',
-        ]
+        ],
       }
       return getSiteMeta(metaData)
-    },
-  },
-  head() {
-    return {
+    })
+
+    useHead({
       title: 'Jotform Alternative | Formester vs Jotform - Formester',
-      meta: [...this.meta],
+      meta: [meta],
       link: [
         {
           hid: 'canonical',
@@ -474,15 +497,14 @@ export default {
           href: 'https://formester.com/formester-vs-jotform/',
         },
       ],
-    }
-  },
-  jsonld() {
-    return {
+    })
+
+    useJsonld({
       '@context': 'http://schema.org',
       '@type': 'Corporation',
       name: 'Jotform Alternative | Formester vs Jotform - Formester',
       description:
-        "Powerful Alternative to Jotform. Custom forms, data collection, actionable insights & more to grow your business. Start by signing-up for free!",
+        'Powerful Alternative to Jotform. Custom forms, data collection, actionable insights & more to grow your business. Start by signing-up for free!',
       logo: 'https://formester.com/logo.png',
       url: 'https://formester.com',
       address: {
@@ -499,7 +521,14 @@ export default {
           '@type': 'ImageObject',
           url: 'https://formester.com/logo.png',
         },
-      }
+      },
+    })
+
+    return {
+      steps,
+      pricing,
+      comparisions,
+      relatedComparisons,
     }
   },
 }

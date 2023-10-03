@@ -134,8 +134,8 @@
 import getSiteMeta from '../utils/getSiteMeta'
 
 export default {
-  computed: {
-    meta() {
+  setup() {
+    const meta = computed(() => {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/privacy/',
@@ -147,12 +147,11 @@ export default {
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with privacy page image alt
       }
       return getSiteMeta(metaData)
-    },
-  },
-  head() {
-    return {
+    })
+
+    useHead({
       title: 'Privacy Policy | Formester',
-      meta: [...this.meta],
+      meta: [meta],
       link: [
         {
           hid: 'canonical',
@@ -160,11 +159,10 @@ export default {
           href: 'https://formester.com/privacy/',
         },
       ],
-    }
-  },
-  jsonld() {
-    return {
-      '@context': 'http://schema.org',
+    })
+
+    useJsonld({
+    '@context': 'http://schema.org',
       '@type': 'WebApplication',
       name: 'Privacy Policy | Formester',
       logo: 'https://formester.com/logo.png',
@@ -184,8 +182,8 @@ export default {
           url: 'https://formester.com/logo.png',
         },
       }
-    }
-  },
+    })
+  }
 }
 </script>
 

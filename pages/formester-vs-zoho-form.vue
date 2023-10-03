@@ -64,7 +64,9 @@
       <i class="fa-solid fa-angle-up"></i>
       <h3 class="section__heading">Pricing</h3>
       <div class="table-responsive">
-        <table class="table text-start comparision__table comparision__table-pricing mx-auto">
+        <table
+          class="table text-start comparision__table comparision__table-pricing mx-auto"
+        >
           <thead class="bg__light-primary">
             <tr>
               <th scope="col">Features</th>
@@ -226,7 +228,7 @@
         />
       </div>
     </section>
-    
+
     <CallToActionSection />
   </div>
 </template>
@@ -237,164 +239,172 @@ import getSiteMeta from '../utils/getSiteMeta'
 import RelatedArticleCard from '@/components/RelatedArticleCard.vue'
 
 export default {
-  data() {
-    return {
-      steps: [
-        {
-          step: 1,
-          heading: 'Multi-Purpose Form Creation Made Easy',
-          description: `It takes minutes, not hours to create forms using Formester. You can customize them the way you want and use them as standalone or web-integrated forms. Just drag and drop to build a form as per your requirements or integrate an existing HTML form’s backend.`,
-        },
-        {
-          step: 2,
-          heading: 'Responses on Auto-Pilot',
-          description:
-            'Stop jumping from one platform to another for each of your form-related tasks. Send automated replies to your audience when they fill out your form, and never compromise on personalization. One of Formester’s unique propositions in the industry, Auto Responder allows you the convenience of two tools in one.',
-        },
-        {
-          step: 3,
-          heading: 'End-to-End Form Analytics',
-          description:
-            'Just collecting data isn’t enough. Unless you extract meaningful insights from your form responses, your business isn’t going to benefit. Formester serves powerful analytics that are easier to comprehend and help you study engagement and conversions. Analyze your performance to act towards reducing your drop-offs.',
-        },
-      ],
-      comparisions: [
-        {
-          title: 'HTML Form Backend Service',
-          formester: '<span class="present">Present</span>', 
-          zoho: '<span class="absent">Not Available</span>'
-        },
-        {
-          title: 'Add Media to Forms', 
-          formester: '<span class="present">Present</span>', 
-          zoho: '<span class="absent">Not Available</span>'
-        },
-        {
-          title: 'White Labeled Surveys Creation', 
-          formester: '<span class="present">Present</span>', 
-          zoho: '<span class="absent">Not Available</span>'
-        },
-        {
-          title: 'Logo addition to form',
-          formester: '<span class="present">Available</span> even with the <span class="present">free</span> plan',
-          zoho: '<span class="absent">Not Available</span>',
-        },
-        {
-          title: 'Deep Performance Analytics', 
-          formester: '<span class="present">Present</span>', 
-          zoho: '<span class="absent">Basic</span>'
-        },
-        {
-          title: 'End-to-End Design Customization', 
-          formester: '<span class="present">Present</span>', 
-          zoho: '<span class="absent">Minimal</span> customization'
-        },
-        {
-          title: 'Automated Email Responses',
-          formester: '<span class="present">Present</span> with custom integration',
-          zoho: 'Only in <span class="absent">paid</span> plans',
-        },
-        {
-          title: 'Conditional Logic',
-          formester: '<span class="present">Present</span>',
-          zoho: 'Present with a <span class="absent">lower degree</span> of flexibility',
-        },
-        {
-          title: 'Website Embedment',
-          formester: '<span class="present">Easy and quickly</span> embedment',
-          zoho: '<span class="absent">Complex</span> embedment execution',
-        },
-        {
-          title: 'Mobile First UX',
-          formester: '<span class="present">Perfectly</span> mobile-first',
-          zoho: '<span class="absent">Complicated</span> for design-heavy forms',
-        },
-        {
-          title: 'Form Limit',
-          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
-          zoho: '<span class="absent">Limited</span> Forms - 3 Forms for free, <span class="absent">$12/month</span> for Unlimited Forms',
-        },
-        {
-          title: 'Collaborators',
-          formester: 'Allows collaborators even in <span class="present">free</span> plan',
-          zoho: 'Single user in free plan, <span class="absent">$30/month</span> for 10 users',
-        },
-        {
-          title: 'Best For',
-          formester: '<span class="present">All kinds of forms and applications</span> including survey lead generation, feedback etc',
-          zoho: '<span class="absent">Not</span> suitable for long forms',
-        },
-        {
-          title: 'Storage',
-          formester: 'Basic Plan: <span class="present">$13/month</span>  & Maximum Storage: <span class="present">1GB</span>.<span></br></span> Business Plan: <span class="present">$49/month</span> & Maximum Storage: <span class="present">50GB</span>',
-          zoho: 'Basic Plan: <span class="absent">$12/month</span> & Maximum Storage: <span class="absent">500MB</span>.<span></br></span> Standard Plan: <span class="absent">$30/month</span> & Maximum Storage: <span class="absent">2GB</span> ',
-        },
-        {
-          title: 'Redirection on Submission',
-          formester: 'Customization <span class="present">available</span> even with the basic plan',
-          zoho: 'Zoho Form forms <span class="present">also</span> allows redirection',
-        },
-        {
-          title: 'Monthly Payment Submissions',
-          formester: 'Build in <span class="absent">Progress</span>',
-          zoho: '<span class="present">10</span> Monthly Payments for <span class="present">free</span>, paid plans for more',
-        },
-        {
-          title: 'Spam Protection', 
-          formester: '<span class="present">Present</span>', 
-          zoho:   '<span class="present">Present</span>',
-        },
-        {
-          title: 'Cloud Integrations with Zapier', 
-          formester: '<span class="present">Present</span>', 
-          zoho: '<span class="present">Present</span>'
-        },
-      ],
-      //pricing has to be revised
-      pricing:[
-        {
-          title: 'Free',
-          formester: 'Starts <span class="present">free</span> for 100 submissions',
-          zoho: '<span class="absent">$9/month</span> for 10k submissions',
-        },
-        {
-          title: 'Personal',
-          formester: '<span class="absent">$13/month</span> for <span class="absent">1000</span> submissions',
-          zoho: '<span class="present">$21/month</span> for <span class="present">25k</span> submissions',
-        },
-        {
-          title: 'Bussiness',
-          formester: '<span class="absent">$49/month</span> for <span class="absent">15k </span>submissions',
-          zoho: '<span class="present">$86/month</span>for <span class="present">150k</span> submissions',
-        }
-      ],
-      relatedComparisons: [
-        {
-          title: 'Formester vs Forms App',
-          coverImg: '/img/formester-vs-forms-app.png',
-          coverImgAlt: 'Formester vs Forms App',
-          link: { name: 'formester-vs-forms-app' },
-          type: 'comparison',
-        },
-        {
-          title: 'Formester vs Formstack',
-          coverImg: '/img/formester-vs-formstack.png',
-          coverImgAlt: 'Formester vs Formstack',
-          link: { name: 'formester-vs-formstack' },
-          type: 'comparison',
-        },
-        {
-          title: 'Formester vs Jotform',
-          coverImg: '/img/formester-vs-jotform.png',
-          coverImgAlt: 'Formester vs Jotform',
-          link: { name: 'formester-vs-jotform' },
-          type: 'comparison',
-        },
-      ],
-    }
-  },
-  computed: {
-    meta() {
+  setup() {
+    const steps = [
+      {
+        step: 1,
+        heading: 'Multi-Purpose Form Creation Made Easy',
+        description: `It takes minutes, not hours to create forms using Formester. You can customize them the way you want and use them as standalone or web-integrated forms. Just drag and drop to build a form as per your requirements or integrate an existing HTML form’s backend.`,
+      },
+      {
+        step: 2,
+        heading: 'Responses on Auto-Pilot',
+        description:
+          'Stop jumping from one platform to another for each of your form-related tasks. Send automated replies to your audience when they fill out your form, and never compromise on personalization. One of Formester’s unique propositions in the industry, Auto Responder allows you the convenience of two tools in one.',
+      },
+      {
+        step: 3,
+        heading: 'End-to-End Form Analytics',
+        description:
+          'Just collecting data isn’t enough. Unless you extract meaningful insights from your form responses, your business isn’t going to benefit. Formester serves powerful analytics that are easier to comprehend and help you study engagement and conversions. Analyze your performance to act towards reducing your drop-offs.',
+      },
+    ]
+    const comparisions = [
+      {
+        title: 'HTML Form Backend Service',
+        formester: '<span class="present">Present</span>',
+        zoho: '<span class="absent">Not Available</span>',
+      },
+      {
+        title: 'Add Media to Forms',
+        formester: '<span class="present">Present</span>',
+        zoho: '<span class="absent">Not Available</span>',
+      },
+      {
+        title: 'White Labeled Surveys Creation',
+        formester: '<span class="present">Present</span>',
+        zoho: '<span class="absent">Not Available</span>',
+      },
+      {
+        title: 'Logo addition to form',
+        formester:
+          '<span class="present">Available</span> even with the <span class="present">free</span> plan',
+        zoho: '<span class="absent">Not Available</span>',
+      },
+      {
+        title: 'Deep Performance Analytics',
+        formester: '<span class="present">Present</span>',
+        zoho: '<span class="absent">Basic</span>',
+      },
+      {
+        title: 'End-to-End Design Customization',
+        formester: '<span class="present">Present</span>',
+        zoho: '<span class="absent">Minimal</span> customization',
+      },
+      {
+        title: 'Automated Email Responses',
+        formester:
+          '<span class="present">Present</span> with custom integration',
+        zoho: 'Only in <span class="absent">paid</span> plans',
+      },
+      {
+        title: 'Conditional Logic',
+        formester: '<span class="present">Present</span>',
+        zoho: 'Present with a <span class="absent">lower degree</span> of flexibility',
+      },
+      {
+        title: 'Website Embedment',
+        formester: '<span class="present">Easy and quickly</span> embedment',
+        zoho: '<span class="absent">Complex</span> embedment execution',
+      },
+      {
+        title: 'Mobile First UX',
+        formester: '<span class="present">Perfectly</span> mobile-first',
+        zoho: '<span class="absent">Complicated</span> for design-heavy forms',
+      },
+      {
+        title: 'Form Limit',
+        formester:
+          '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
+        zoho: '<span class="absent">Limited</span> Forms - 3 Forms for free, <span class="absent">$12/month</span> for Unlimited Forms',
+      },
+      {
+        title: 'Collaborators',
+        formester:
+          'Allows collaborators even in <span class="present">free</span> plan',
+        zoho: 'Single user in free plan, <span class="absent">$30/month</span> for 10 users',
+      },
+      {
+        title: 'Best For',
+        formester:
+          '<span class="present">All kinds of forms and applications</span> including survey lead generation, feedback etc',
+        zoho: '<span class="absent">Not</span> suitable for long forms',
+      },
+      {
+        title: 'Storage',
+        formester:
+          'Basic Plan: <span class="present">$13/month</span>  & Maximum Storage: <span class="present">1GB</span>.<span></br></span> Business Plan: <span class="present">$49/month</span> & Maximum Storage: <span class="present">50GB</span>',
+        zoho: 'Basic Plan: <span class="absent">$12/month</span> & Maximum Storage: <span class="absent">500MB</span>.<span></br></span> Standard Plan: <span class="absent">$30/month</span> & Maximum Storage: <span class="absent">2GB</span> ',
+      },
+      {
+        title: 'Redirection on Submission',
+        formester:
+          'Customization <span class="present">available</span> even with the basic plan',
+        zoho: 'Zoho Form forms <span class="present">also</span> allows redirection',
+      },
+      {
+        title: 'Monthly Payment Submissions',
+        formester: 'Build in <span class="absent">Progress</span>',
+        zoho: '<span class="present">10</span> Monthly Payments for <span class="present">free</span>, paid plans for more',
+      },
+      {
+        title: 'Spam Protection',
+        formester: '<span class="present">Present</span>',
+        zoho: '<span class="present">Present</span>',
+      },
+      {
+        title: 'Cloud Integrations with Zapier',
+        formester: '<span class="present">Present</span>',
+        zoho: '<span class="present">Present</span>',
+      },
+    ]
+    //pricing has to be revised
+    const pricing = [
+      {
+        title: 'Free',
+        formester:
+          'Starts <span class="present">free</span> for 100 submissions',
+        zoho: '<span class="absent">$9/month</span> for 10k submissions',
+      },
+      {
+        title: 'Personal',
+        formester:
+          '<span class="absent">$13/month</span> for <span class="absent">1000</span> submissions',
+        zoho: '<span class="present">$21/month</span> for <span class="present">25k</span> submissions',
+      },
+      {
+        title: 'Bussiness',
+        formester:
+          '<span class="absent">$49/month</span> for <span class="absent">15k </span>submissions',
+        zoho: '<span class="present">$86/month</span>for <span class="present">150k</span> submissions',
+      },
+    ]
+
+    const relatedComparisons = [
+      {
+        title: 'Formester vs Forms App',
+        coverImg: '/img/formester-vs-forms-app.png',
+        coverImgAlt: 'Formester vs Forms App',
+        link: { name: 'formester-vs-forms-app' },
+        type: 'comparison',
+      },
+      {
+        title: 'Formester vs Formstack',
+        coverImg: '/img/formester-vs-formstack.png',
+        coverImgAlt: 'Formester vs Formstack',
+        link: { name: 'formester-vs-formstack' },
+        type: 'comparison',
+      },
+      {
+        title: 'Formester vs Jotform',
+        coverImg: '/img/formester-vs-jotform.png',
+        coverImgAlt: 'Formester vs Jotform',
+        link: { name: 'formester-vs-jotform' },
+        type: 'comparison',
+      },
+    ]
+
+    const meta = computed(() => {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/formester-vs-zoho-form/',
@@ -455,15 +465,14 @@ export default {
           'zoho form alternative free reddit',
           'zoho form alternative deutsch',
           'free alternatives to zoho form',
-        ]
+        ],
       }
       return getSiteMeta(metaData)
-    },
-  },
-  head() {
-    return {
+    })
+
+    useHead({
       title: 'Formester vs Zoho Forms | Zoho Forms Alternative - Formester',
-      meta: [...this.meta],
+      meta: [meta],
       link: [
         {
           hid: 'canonical',
@@ -471,15 +480,14 @@ export default {
           href: 'https://formester.com/formester-vs-zoho-form/',
         },
       ],
-    }
-  },
-  jsonld() {
-    return {
+    })
+
+    useJsonld({
       '@context': 'http://schema.org',
       '@type': 'Corporation',
       name: 'Formester vs Zoho Forms | Zoho Forms Alternative - Formester',
       description:
-        "Powerful Alternative to Zoho Forms - Formester for Customizable Forms & Surveys, Data Collection, Insights, Affordable prices! Sign-up for free!",
+        'Powerful Alternative to Zoho Forms - Formester for Customizable Forms & Surveys, Data Collection, Insights, Affordable prices! Sign-up for free!',
       logo: 'https://formester.com/logo.png',
       url: 'https://formester.com',
       address: {
@@ -496,7 +504,14 @@ export default {
           '@type': 'ImageObject',
           url: 'https://formester.com/logo.png',
         },
-      }
+      },
+    })
+
+    return {
+      steps,
+      pricing,
+      comparisions,
+      relatedComparisons,
     }
   },
 }

@@ -63,7 +63,9 @@
     <section class="container text-center">
       <h3 class="section__heading">Pricing</h3>
       <div class="table-responsive">
-        <table class="table text-start comparision__table comparision__table-pricing mx-auto">
+        <table
+          class="table text-start comparision__table comparision__table-pricing mx-auto"
+        >
           <thead class="bg__light-primary">
             <tr>
               <th scope="col">Features</th>
@@ -224,7 +226,7 @@
         />
       </div>
     </section>
-    
+
     <CallToActionSection />
   </div>
 </template>
@@ -235,165 +237,181 @@ import getSiteMeta from '../utils/getSiteMeta'
 import RelatedArticleCard from '@/components/RelatedArticleCard.vue'
 
 export default {
-  data() {
-    return {
-      steps: [
-        {
-          step: 1,
-          heading: 'Multi-Purpose Form Creation Made Easy',
-          description: `It takes minutes, not hours to create forms using Formester. You can customize them the way you want and use them as standalone or web-integrated forms. Just drag and drop to build a form as per your requirements or integrate an existing HTML form’s backend.`,
-        },
-        {
-          step: 2,
-          heading: 'Responses on Auto-Pilot',
-          description:
-            'Stop jumping from one platform to another for each of your form-related tasks. Send automated replies to your audience when they fill out your form, and never compromise on personalization. One of Formester’s unique propositions in the industry, Auto Responder allows you the convenience of two tools in one.',
-        },
-        {
-          step: 3,
-          heading: 'End-to-End Form Analytics',
-          description:
-            'Just collecting data isn’t enough. Unless you extract meaningful insights from your form responses, your business isn’t going to benefit. Formester serves powerful analytics that are easier to comprehend and help you study engagement and conversions. Analyze your performance to act towards reducing your drop-offs.',
-        },
-      ],
-      comparisions: [
-        {
-          title: 'HTML Form Backend Service', 
-          formester: '<span class="present">Present</span>', 
-          paperform: '<span class="absent">Not Available</span>',
-        },
-        {
-          title: 'White Labeled Surveys Creation',
-          formester: '<span class="present">Present</span>', 
-          paperform: '<span class="absent">Not Available</span>'
-        },
-        {
-          title: 'Logo addition to form',
-          formester: '<span class="present">Available</span> even with the <span class="present">free</span> plan',
-          paperform: '<span class="absent">Not Available</span> specifically',
-        },
-        {
-          title: 'Automated Email Responses',
-          formester: '<span class="present">Present</span> with custom integration',
-          paperform: 'Only in <span class="absent">paid plans</span>',
-        },
-        {
-          title: 'Website Embedment',
-          formester: '<span class="present">Easy and quickly</span> embedment',
-          paperform: '<span class="absent">Complex</span> embedment execution',
-        },
-        {
-          title: 'End-to-End Design Customization', 
-          formester: '<span class="present">Present</span>', 
-          paperform: '<span class="absent">Minimal</span> customization',
-        },
-        {
-          title: 'Mobile First UX',
-          formester: '<span class="present">Perfectly</span> mobile-first',
-          paperform: '<span class="absent">Complicated</span> for design-heavy forms',
-        },
-        {
-          title: 'Conditional Logic',
-          formester: '<span class="present">Present</span>',
-          paperform: 'Present with a <span class="absent">lower degree</span> of flexibility',
-        },
-        {  
-          title: 'Monthly Form Views',
-          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
-          paperform: '<span class="absent">Limited</span> Form Views - 10000 views for <span class="absent">$24/month</span>, <span class="absent">$49/month</span> for Unlimited Views',
-        },
-        
-        {  
-          title: 'Collaborators',
-          formester: '<span class="present">Allow collaborators</span> even in <span class="present">free</span> plan',
-          paperform: 'Single user upto <span class="absent">$49/month</span>, 5 users in <span class="absent">$159/month</span>',
-        },
-        {  
-          title: 'Total Submission Storage',
-          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
-          paperform: '1000 Total Submission Storage in<span class="absent">$24/month</span>, <span class="absent">$159/month</span> for Unlimited',
-        },
-        {
-          title: 'Best For',
-          formester: '<span class="present">All kinds of forms and applications</span> including survey lead generation, feedback etc',
-          paperform: '<span class="absent">Not suitable</span>  for long forms',
-        },
-        {
-          title: 'Monthly Payment Submissions',
-          formester: 'Build in <span class="absent">Progress</span>',
-          paperform: '<span class="present">$24/month</span> for 1 Payment Account',
-        },
-        { 
-          title: 'Redirection on Submission',
-          formester: '<span class="present">Customization</span> available even with the <span class="present">free</span> plan',
-          paperform: 'Paperform forms <span class="present">also allows</span> redirection',
-        },
-        {
-          title: 'Add Media to Forms', 
-          formester: '<span class="present">Present</span>',
-          paperform: '<span class="present">Present</span>'
-        },
-        {
-          title: 'Spam Protection',
-          formester: '<span class="present">Present</span>',
-          paperform:   '<span class="present">Present</span>'
-        },
-        {
-          title: 'Cloud Integrations with Zapier',
-          formester: '<span class="present">Present</span>', 
-          paperform: '<span class="present">Present</span>'
-        },
-        {
-          title: 'Deep Performance Analytics',
-          formester: '<span class="present">Present</span>', 
-          paperform: '<span class="present">Present</span>'
-        },
-      ],
-      pricing:[
-        {
-          title: 'Free',
-          formester: '<span class="present">Starts</span> free for 100 submissions',
-          paperform: '<span class="absent">$24/month</span> for 1000 submissions',
-        },
-        {
-          title: 'Personal',
-          formester: '<span class="present">$13/month</span> for 1000 submissions',
-          paperform: '<span class="absent">$49/month</span> for 10k submissions',
-        },
-        {
-          title: 'Bussiness',
-          formester: '<span class="present">$49/month</span> for <span class="present">15k</span> submissions',
-          paperform: '<span class="absent">$159/month</span> for unlimited submissions',
-        }
-      ],
-      relatedComparisons: [
-        {
-          title: 'Formester vs Jotform',
-          coverImg: '/img/formester-vs-jotform.png',
-          coverImgAlt: 'Formester vs Jotform',
-          link: { name: 'formester-vs-jotform' },
-          type: 'comparison',
-        },
-        {
-          title: 'Formester vs Zoho Form',
-          coverImg: '/img/formester-vs-zoho-form.png',
-          coverImgAlt: 'Formester vs Zoho Form',
-          link: { name: 'formester-vs-zoho-form' },
-          type: 'comparison',
-        },
-        {
-          title: 'Formester vs Typeform',
-          coverImg: '/img/formester-vs-typeform.png',
-          coverImgAlt: 'Formester vs Typeform',
-          link: { name: 'formester-vs-typeform' },
-          type: 'comparison',
-        },
-      ],
-      
-    }
-  },
-  computed: {
-    meta() {
+  setup() {
+    const steps = [
+      {
+        step: 1,
+        heading: 'Multi-Purpose Form Creation Made Easy',
+        description: `It takes minutes, not hours to create forms using Formester. You can customize them the way you want and use them as standalone or web-integrated forms. Just drag and drop to build a form as per your requirements or integrate an existing HTML form’s backend.`,
+      },
+      {
+        step: 2,
+        heading: 'Responses on Auto-Pilot',
+        description:
+          'Stop jumping from one platform to another for each of your form-related tasks. Send automated replies to your audience when they fill out your form, and never compromise on personalization. One of Formester’s unique propositions in the industry, Auto Responder allows you the convenience of two tools in one.',
+      },
+      {
+        step: 3,
+        heading: 'End-to-End Form Analytics',
+        description:
+          'Just collecting data isn’t enough. Unless you extract meaningful insights from your form responses, your business isn’t going to benefit. Formester serves powerful analytics that are easier to comprehend and help you study engagement and conversions. Analyze your performance to act towards reducing your drop-offs.',
+      },
+    ]
+    const comparisions = [
+      {
+        title: 'HTML Form Backend Service',
+        formester: '<span class="present">Present</span>',
+        paperform: '<span class="absent">Not Available</span>',
+      },
+      {
+        title: 'White Labeled Surveys Creation',
+        formester: '<span class="present">Present</span>',
+        paperform: '<span class="absent">Not Available</span>',
+      },
+      {
+        title: 'Logo addition to form',
+        formester:
+          '<span class="present">Available</span> even with the <span class="present">free</span> plan',
+        paperform: '<span class="absent">Not Available</span> specifically',
+      },
+      {
+        title: 'Automated Email Responses',
+        formester:
+          '<span class="present">Present</span> with custom integration',
+        paperform: 'Only in <span class="absent">paid plans</span>',
+      },
+      {
+        title: 'Website Embedment',
+        formester: '<span class="present">Easy and quickly</span> embedment',
+        paperform: '<span class="absent">Complex</span> embedment execution',
+      },
+      {
+        title: 'End-to-End Design Customization',
+        formester: '<span class="present">Present</span>',
+        paperform: '<span class="absent">Minimal</span> customization',
+      },
+      {
+        title: 'Mobile First UX',
+        formester: '<span class="present">Perfectly</span> mobile-first',
+        paperform:
+          '<span class="absent">Complicated</span> for design-heavy forms',
+      },
+      {
+        title: 'Conditional Logic',
+        formester: '<span class="present">Present</span>',
+        paperform:
+          'Present with a <span class="absent">lower degree</span> of flexibility',
+      },
+      {
+        title: 'Monthly Form Views',
+        formester:
+          '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
+        paperform:
+          '<span class="absent">Limited</span> Form Views - 10000 views for <span class="absent">$24/month</span>, <span class="absent">$49/month</span> for Unlimited Views',
+      },
+
+      {
+        title: 'Collaborators',
+        formester:
+          '<span class="present">Allow collaborators</span> even in <span class="present">free</span> plan',
+        paperform:
+          'Single user upto <span class="absent">$49/month</span>, 5 users in <span class="absent">$159/month</span>',
+      },
+      {
+        title: 'Total Submission Storage',
+        formester:
+          '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
+        paperform:
+          '1000 Total Submission Storage in<span class="absent">$24/month</span>, <span class="absent">$159/month</span> for Unlimited',
+      },
+      {
+        title: 'Best For',
+        formester:
+          '<span class="present">All kinds of forms and applications</span> including survey lead generation, feedback etc',
+        paperform: '<span class="absent">Not suitable</span>  for long forms',
+      },
+      {
+        title: 'Monthly Payment Submissions',
+        formester: 'Build in <span class="absent">Progress</span>',
+        paperform:
+          '<span class="present">$24/month</span> for 1 Payment Account',
+      },
+      {
+        title: 'Redirection on Submission',
+        formester:
+          '<span class="present">Customization</span> available even with the <span class="present">free</span> plan',
+        paperform:
+          'Paperform forms <span class="present">also allows</span> redirection',
+      },
+      {
+        title: 'Add Media to Forms',
+        formester: '<span class="present">Present</span>',
+        paperform: '<span class="present">Present</span>',
+      },
+      {
+        title: 'Spam Protection',
+        formester: '<span class="present">Present</span>',
+        paperform: '<span class="present">Present</span>',
+      },
+      {
+        title: 'Cloud Integrations with Zapier',
+        formester: '<span class="present">Present</span>',
+        paperform: '<span class="present">Present</span>',
+      },
+      {
+        title: 'Deep Performance Analytics',
+        formester: '<span class="present">Present</span>',
+        paperform: '<span class="present">Present</span>',
+      },
+    ]
+
+    const pricing = [
+      {
+        title: 'Free',
+        formester:
+          '<span class="present">Starts</span> free for 100 submissions',
+        paperform: '<span class="absent">$24/month</span> for 1000 submissions',
+      },
+      {
+        title: 'Personal',
+        formester:
+          '<span class="present">$13/month</span> for 1000 submissions',
+        paperform: '<span class="absent">$49/month</span> for 10k submissions',
+      },
+      {
+        title: 'Bussiness',
+        formester:
+          '<span class="present">$49/month</span> for <span class="present">15k</span> submissions',
+        paperform:
+          '<span class="absent">$159/month</span> for unlimited submissions',
+      },
+    ]
+
+    const relatedComparisons = [
+      {
+        title: 'Formester vs Jotform',
+        coverImg: '/img/formester-vs-jotform.png',
+        coverImgAlt: 'Formester vs Jotform',
+        link: { name: 'formester-vs-jotform' },
+        type: 'comparison',
+      },
+      {
+        title: 'Formester vs Zoho Form',
+        coverImg: '/img/formester-vs-zoho-form.png',
+        coverImgAlt: 'Formester vs Zoho Form',
+        link: { name: 'formester-vs-zoho-form' },
+        type: 'comparison',
+      },
+      {
+        title: 'Formester vs Typeform',
+        coverImg: '/img/formester-vs-typeform.png',
+        coverImgAlt: 'Formester vs Typeform',
+        link: { name: 'formester-vs-typeform' },
+        type: 'comparison',
+      },
+    ]
+
+    const meta = computed(() => {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/formester-vs-paperform/',
@@ -404,65 +422,64 @@ export default {
           'https://formester.com/formester-form-builder-background.png', // need to update with formester vs paperform page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs paperform page image alt
         keywords: [
-          'paperform alternative', 
-          'paperform alternative free', 
-          'paperform competitor', 
-          'free alternative to paperform', 
-          'paperform alternative open source', 
-          'paperform alternative wordpress', 
-          'paperform alternatives free', 
-          'paperform open source alternative', 
-          'best paperform alternative', 
-          'paperform wordpress alternative', 
-          'paperform alternative reddit', 
-          'paperform alternative for wordpress', 
-          'open source paperform alternative', 
-          'paperform alternative free reddit', 
-          'paperform similar free', 
-          'paperform equivalent', 
-          'wordpress paperform alternative', 
-          'free paperform alternatives', 
-          'free alternative paperform	', 
-          'paperform like open source	', 
-          'similar to paperform free', 
-          'privacy focused alternatives to paperform', 
-          'free paperform alternative with conditional formatting', 
-          'open source paperform alternatives', 
-          'forms', 
-          'web forms', 
-          'formester', 
-          'online forms', 
-          'online web forms', 
-          'paperform wufoo alternatives', 
-          'cheaper paperform alternative', 
-          'easier alternatives to paperform', 
-          'paid alternatives to paperform', 
-          'private alternatives to paperform', 
-          'paperform alternate thank you pages', 
-          'paperform alternates commerce', 
-          'paperform alternatives cheaper', 
-          'paperform alternative quiz', 
-          'better paperform alternatives', 
-          'completele free alternatives to paperform', 
-          'rank alternatives paperform', 
-          'paperform alternative for gravity forms', 
-          'paperform alternative for registration', 
-          'paperform alternative squarespace', 
-          'paperform alternative with branching', 
-          'paperform cheaper alternatives', 
-          'paperform wordpress alternative', 
-          'paperform alternative free reddit', 
-          'paperform alternative deutsch', 
-          'free alternatives to paperform', 
-        ]
+          'paperform alternative',
+          'paperform alternative free',
+          'paperform competitor',
+          'free alternative to paperform',
+          'paperform alternative open source',
+          'paperform alternative wordpress',
+          'paperform alternatives free',
+          'paperform open source alternative',
+          'best paperform alternative',
+          'paperform wordpress alternative',
+          'paperform alternative reddit',
+          'paperform alternative for wordpress',
+          'open source paperform alternative',
+          'paperform alternative free reddit',
+          'paperform similar free',
+          'paperform equivalent',
+          'wordpress paperform alternative',
+          'free paperform alternatives',
+          'free alternative paperform	',
+          'paperform like open source	',
+          'similar to paperform free',
+          'privacy focused alternatives to paperform',
+          'free paperform alternative with conditional formatting',
+          'open source paperform alternatives',
+          'forms',
+          'web forms',
+          'formester',
+          'online forms',
+          'online web forms',
+          'paperform wufoo alternatives',
+          'cheaper paperform alternative',
+          'easier alternatives to paperform',
+          'paid alternatives to paperform',
+          'private alternatives to paperform',
+          'paperform alternate thank you pages',
+          'paperform alternates commerce',
+          'paperform alternatives cheaper',
+          'paperform alternative quiz',
+          'better paperform alternatives',
+          'completele free alternatives to paperform',
+          'rank alternatives paperform',
+          'paperform alternative for gravity forms',
+          'paperform alternative for registration',
+          'paperform alternative squarespace',
+          'paperform alternative with branching',
+          'paperform cheaper alternatives',
+          'paperform wordpress alternative',
+          'paperform alternative free reddit',
+          'paperform alternative deutsch',
+          'free alternatives to paperform',
+        ],
       }
       return getSiteMeta(metaData)
-    },
-  },
-  head() {
-    return {
+    })
+
+    useHead({
       title: 'Formester vs Paperform | Paperform Alternative - Formester',
-      meta: [...this.meta],
+      meta: [meta],
       link: [
         {
           hid: 'canonical',
@@ -470,15 +487,14 @@ export default {
           href: 'https://formester.com/formester-vs-paperform/',
         },
       ],
-    }
-  },
-  jsonld() {
-    return {
+    })
+
+    useJsonld({
       '@context': 'http://schema.org',
       '@type': 'Corporation',
       name: 'Formester vs Paperform | Paperform Alternative - Formester',
       description:
-        "Powerful Alternative to Paperform - Try Formester for Online, No-Code, Customizable Forms with Advanced Features | Sign-up for Free!",
+        'Powerful Alternative to Paperform - Try Formester for Online, No-Code, Customizable Forms with Advanced Features | Sign-up for Free!',
       logo: 'https://formester.com/logo.png',
       url: 'https://formester.com',
       address: {
@@ -495,7 +511,14 @@ export default {
           '@type': 'ImageObject',
           url: 'https://formester.com/logo.png',
         },
-      }
+      },
+    })
+
+    return {
+      steps,
+      pricing,
+      comparisions,
+      relatedComparisons,
     }
   },
 }

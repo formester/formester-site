@@ -73,6 +73,33 @@ export default {
     ThreeStepsCreateForm,
   },
   setup() {
+
+    const meta = computed(() => {
+      const metaData = {
+        type: 'website',
+        url: 'https://formester.com/features/auto-responder/',
+        title: 'Brand Kit | Personalised Brand form - Formester',
+        description:
+          'Boost your trust to customer by adding your brand to form.',
+        mainImage:
+          'https://formester.com/formester-form-builder-background.png', // need to update with auto-responder page image
+        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
+      }
+      return getSiteMeta(metaData)
+    })
+
+    useHead({
+      title: 'Brand Kit | Personalised Brand Form - Formester',
+      meta: [meta],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://formester.com/features/branding-kit/',
+        },
+      ],
+    })
+
     const features = [
       {
         title: 'Easy Brand Setup',
@@ -104,55 +131,7 @@ export default {
       },
     ]
 
-    const randomTestimonials = ref([])
-
-    const fetchTestimonials = async () => {
-      try {
-        randomTestimonials.value = await fetchRandomTestimonials()
-      } catch (error) {
-        console.error('Error fetching random testimonials:', error)
-      }
-    }
-
-    onMounted(() => {
-      fetchTestimonials()
-    })
-
-    return {
-      randomTestimonials,
-      features,
-    }
-  },
-  computed: {
-    meta() {
-      const metaData = {
-        type: 'website',
-        url: 'https://formester.com/features/auto-responder/',
-        title: 'Brand Kit | Personalised Brand form - Formester',
-        description:
-          'Boost your trust to customer by adding your brand to form.',
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with auto-responder page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
-      }
-      return getSiteMeta(metaData)
-    },
-  },
-  head() {
-    return {
-      title: 'Brand Kit | Personalised Brand Form - Formester',
-      meta: [...this.meta],
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: 'https://formester.com/features/branding-kit/',
-        },
-      ],
-    }
-  },
-  jsonld() {
-    return {
+    useJsonld({
       '@context': 'http://schema.org',
       '@graph': [
         {
@@ -188,6 +167,25 @@ export default {
           ],
         },
       ],
+    })
+
+    const randomTestimonials = ref([])
+
+    const fetchTestimonials = async () => {
+      try {
+        randomTestimonials.value = await fetchRandomTestimonials()
+      } catch (error) {
+        console.error('Error fetching random testimonials:', error)
+      }
+    }
+
+    onMounted(() => {
+      fetchTestimonials()
+    })
+
+    return {
+      randomTestimonials,
+      features,
     }
   },
 }
