@@ -1,3 +1,4 @@
+import { fetchAllArticles } from './utils/getArticles'
 import getRoutes from './utils/getRoutes'
 import getSiteMeta from './utils/getSiteMeta'
 
@@ -81,7 +82,6 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'nuxt-jsonld',
     'nuxt-gtag',
-    'nuxt-simple-sitemap',
     'nuxt-disqus',
   ],
   disqus: {
@@ -137,9 +137,24 @@ export default defineNuxtConfig({
       remarkPlugins: ['remark-reading-time'],
     },
   },
-  sitemap: {
-    // provide dynamic URLs to be included
-  },
+  // sitemap: {
+  //   // provide dynamic URLs to be included
+  //   urls: async () => {
+  //     let response = await fetch(
+  //       'https://app.formester.com/template_categories.json'
+  //     )
+  //     let categories = await response.json()
+  //     let categoriesURL = categories.map((category) => {
+  //       return `/templates/categories/${category.slug}`
+  //     })
+  //     return categories.map(page => ({
+  //       loc: `/templates/categories/${page.slug}`,
+  //       lastmod: page.updatedAt,
+  //       changefreq: 'daily',
+  //       priority: 0.8,
+  //     }))
+  //   },
+  // },
   // Nuxt Image
   // please comment out the provider and netlify section while running application on local server
   image: {
