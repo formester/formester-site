@@ -1,14 +1,10 @@
 export default defineEventHandler(async () => {
     const [
       posts,
-      pages,
-      features
     ] = await Promise.all([
-      $fetch('/api/posts'),
-      $fetch('/api/pages'),
-      $fetch('/api/features')
+      $fetch('/api/_content'),
     ])
-    return [...posts, ...pages, ...features].map((p) => {
+    return [...posts].map((p) => {
       return { loc: p.url, lastmod: p.updatedAt }
     })
   })

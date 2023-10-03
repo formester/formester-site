@@ -4,38 +4,38 @@ import getSiteMeta from './utils/getSiteMeta'
 const meta = getSiteMeta()
 
 export default defineNuxtConfig({
-// Global page headers: https://go.nuxtjs.dev/config-head
-app: {
-  head: {
-    title: 'No Code Form Builder | Online HTML Form Builder - Formester',
-    meta: [
-      ...meta,
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        name: 'robots',
-        content: 'index, follow',
-      },
-      { name: 'format-detection', content: 'telephone=no' },
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        hid: 'canonical',
-        rel: 'canonical',
-        href: 'https://formester.com/',
-      },
-    ],
-    // Custom Javascript
-    script: [
-      {
-        src: '/bootstrap.min.js',
-        defer: true,
-        async: true,
-      },
-    ],
+  // Global page headers: https://go.nuxtjs.dev/config-head
+  app: {
+    head: {
+      title: 'No Code Form Builder | Online HTML Form Builder - Formester',
+      meta: [
+        ...meta,
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          name: 'robots',
+          content: 'index, follow',
+        },
+        { name: 'format-detection', content: 'telephone=no' },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://formester.com/',
+        },
+      ],
+      // Custom Javascript
+      script: [
+        {
+          src: '/bootstrap.min.js',
+          defer: true,
+          async: true,
+        },
+      ],
+    },
   },
-},
 
   router: {
     trailingSlash: true,
@@ -46,26 +46,26 @@ app: {
     Disallow: '',
   },
 
-  sitemap: {
-    hostname: 'https://formester.com',
-    trailingSlash: true,
-    routes: async () => {
-      let { data } = await axios.get('https://app.formester.com/templates.json')
-      let templates = data.map((template) => {
-        return {
-          url: `/templates/${template.slug}`,
-        }
-      })
-      let { data: response } = await axios.get(
-        'https://app.formester.com/template_categories.json'
-      )
-      let categories = response.map((category) => {
-        return `/templates/categories/${category.slug}`
-      })
-      const blogs = await getRoutes()
-      return blogs.concat(templates, categories)
-    },
-  },
+  // sitemap: {
+  //   hostname: 'https://formester.com',
+  //   trailingSlash: true,
+  //   routes: async () => {
+  //     let { data } = await axios.get('https://app.formester.com/templates.json')
+  //     let templates = data.map((template) => {
+  //       return {
+  //         url: `/templates/${template.slug}`,
+  //       }
+  //     })
+  //     let { data: response } = await axios.get(
+  //       'https://app.formester.com/template_categories.json'
+  //     )
+  //     let categories = response.map((category) => {
+  //       return `/templates/categories/${category.slug}`
+  //     })
+  //     const blogs = await getRoutes()
+  //     return blogs.concat(templates, categories)
+  //   },
+  // },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~/assets/css/bootstrap.min.css', '~/assets/css/main.css'],
@@ -82,10 +82,10 @@ app: {
     'nuxt-jsonld',
     'nuxt-gtag',
     'nuxt-simple-sitemap',
-    'nuxt-disqus'
+    'nuxt-disqus',
   ],
   disqus: {
-    shortname: "formester",
+    shortname: 'formester',
   },
   // Hooks configuration - https://content.nuxtjs.org/advanced/
   hooks: {
@@ -137,16 +137,18 @@ app: {
       remarkPlugins: ['remark-reading-time'],
     },
   },
-
+  sitemap: {
+    // provide dynamic URLs to be included
+  },
   // Nuxt Image
   // please comment out the provider and netlify section while running application on local server
   image: {
     dir: 'assets/images',
-    provider: 'netlify',
-    netlify: {
-      baseURL: process.env.IMAGE_URL || 'http://localhost:8080/assets/images'
-      // baseURL: 'https://formester.com/assets/images', 
-    }
+    // provider: 'netlify',
+    // netlify: {
+    //   baseURL: process.env.IMAGE_URL || 'http://localhost:8080/assets/images'
+    //   // baseURL: 'https://formester.com/assets/images',
+    // }
   },
   devServer: {
     port: 8080,
