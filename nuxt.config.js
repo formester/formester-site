@@ -61,6 +61,7 @@ export default defineNuxtConfig({
     'nuxt-jsonld',
     'nuxt-gtag',
     'nuxt-disqus',
+    'nuxt-simple-sitemap'
   ],
   disqus: {
     shortname: 'formester',
