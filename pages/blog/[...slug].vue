@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="container position-relative">
-      <div v-if="loading">
-        <Loader :loading="loading" class="mt-5 p-5" />
+      <div v-if="loadingArticle">
+        <Loader :loading="loadingArticle" class="mt-5 p-5" />
       </div>
       <div v-else>
         <article

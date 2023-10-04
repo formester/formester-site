@@ -1,18 +1,23 @@
 <template>
   <div class="container mt-5">
-    <BlogFeatured
-      v-for="article in heroArticles"
-      :key="article._path"
-      :article="article"
-      class="my-4"
-    />
-    <div class="row mt-4">
-      <BlogCard
-        v-for="article in articles"
+    <div v-if="blogsLoading || heroArticlesLoading">
+      <Loader :loading="blogsLoading" class="mt-5 p-5" />
+    </div>
+    <div v-else>
+      <BlogFeatured
+        v-for="article in heroArticles"
         :key="article._path"
-        class="col-lg-4 mt-3 mb-5"
         :article="article"
+        class="my-4"
       />
+      <div class="row mt-4">
+        <BlogCard
+          v-for="article in articles"
+          :key="article._path"
+          class="col-lg-4 mt-3 mb-5"
+          :article="article"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -20,6 +25,7 @@
 <script>
 import BlogCard from '../../components/blog/BlogCard.vue'
 import BlogFeatured from '../../components/blog/BlogFeatured.vue'
+import Loader from '../../components/Loader.vue'
 
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
@@ -30,7 +36,7 @@ export default {
     BlogFeatured,
   },
   setup() {
-    const { data: articles } = useAsyncData(async () => {
+    const { data: articles, pending: blogsLoading } = useAsyncData(async () => {
       return await queryContent('/blog')
         .sort({ createdAt: -1 })
         .where({
@@ -40,15 +46,17 @@ export default {
         .find()
     })
 
-    const { data: heroArticles } = useAsyncData(async () => {
-      return await queryContent('/blog')
-        .sort({ createdAt: -1 })
-        .where({
-          published: true,
-          featured: true,
-        })
-        .find()
-    })
+    const { data: heroArticles, pending: heroArticlesLoading } = useAsyncData(
+      async () => {
+        return await queryContent('/blog')
+          .sort({ createdAt: -1 })
+          .where({
+            published: true,
+            featured: true,
+          })
+          .find()
+      }
+    )
 
     onMounted(() => {
       articles
