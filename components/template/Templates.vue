@@ -7,20 +7,29 @@
       />
     </div>
     <div class="w-100">
-      <h1 class="heading">
-        {{ formattedCategoryHeading }}
-        Templates
-      </h1>
-      <div v-if="templates && templates.length" class="templates">
-        <TemplateCard v-for="(template, idx) in templates" :key="idx" :template="template" />
+      <div v-if="loading">
+        <Loader :loading="loading" class="mt-5 p-5" />
       </div>
-      <div v-else class="no-template">
-        <nuxt-img
-          class="img-fluid"
-          src="/templates/no-template.svg"
-          alt="No Template Illustration"
-        />
-        <h4>No Template Available</h4>
+      <div v-else>
+        <h1 class="heading">
+          {{ formattedCategoryHeading }}
+          Templates
+        </h1>
+        <div v-if="templates && templates.length" class="templates">
+          <TemplateCard
+            v-for="(template, idx) in templates"
+            :key="idx"
+            :template="template"
+          />
+        </div>
+        <div v-else class="no-template">
+          <nuxt-img
+            class="img-fluid"
+            src="/templates/no-template.svg"
+            alt="No Template Illustration"
+          />
+          <h4>No Template Available</h4>
+        </div>
       </div>
     </div>
   </div>
@@ -29,23 +38,28 @@
 <script setup>
 import TemplateCategories from './TemplateCategories.vue'
 import TemplateCard from './TemplateCard.vue'
+import Loader from '../Loader.vue'
 const route = useRoute().params
-const templateCategoryHeading = ref(route.slug);
+const templateCategoryHeading = ref(route.slug)
 
 const formattedCategoryHeading = computed(() => {
-  if (templateCategoryHeading.value && templateCategoryHeading.value.length > 0) {
-    const firstElement = templateCategoryHeading.value[0];
-    return firstElement.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+  if (
+    templateCategoryHeading.value &&
+    templateCategoryHeading.value.length > 0
+  ) {
+    const firstElement = templateCategoryHeading.value[0]
+    return firstElement
+      .replace(/-/g, ' ')
+      .replace(/\b\w/g, (c) => c.toUpperCase())
   }
-  return '';
-});
-
+  return ''
+})
 </script>
 
 <script>
 export default {
   components: { TemplateCategories, TemplateCard },
-  props: ['activeCategory', 'templates', 'templateCategories'],
+  props: ['activeCategory', 'templates', 'templateCategories', 'loading'],
 }
 </script>
 

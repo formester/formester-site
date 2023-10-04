@@ -3,40 +3,20 @@
     :activeCategory="null"
     :templates="templates"
     :templateCategories="categories"
+    :loading="pending"
   />
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
 import getSiteMeta from '@/utils/getSiteMeta'
 import Templates from '@/components/template/Templates.vue'
-import { fetchTemplateCategories, fetchTemplates } from '@/utils/getTemplates';
 
-const templates = ref([])
-const categories = ref([])
-
-const getTemplates = async () => {
-  try {
-    const templatesData = await fetchTemplates()
-    templates.value = templatesData
-  } catch (error) {
-    console.error('Error fetching templates:', error)
-  }
-}
-
-const getTemplateCategories = async () => {
-  try {
-    const templateCategoriesData = await fetchTemplateCategories()
-    categories.value = templateCategoriesData
-  } catch (error) {
-    console.error('Error fetching categories:', error)
-  }
-}
-
-onMounted(() => {
-  getTemplates()
-  getTemplateCategories()
-})
+const { pending, data: templates } = await useLazyFetch(
+  `https://app.formester.com/templates.json`
+)
+const { data: categories } = await useFetch(
+  'https://app.formester.com/template_categories.json'
+)
 
 const meta = computed(() => {
   const metaData = {
@@ -66,7 +46,7 @@ const listItems = computed(() => {
 
 useHead({
   title: 'Templates | Formester',
-  meta: [meta],
+  meta: [...meta.value],
   link: [
     {
       hid: 'canonical',
@@ -96,9 +76,8 @@ useJsonld({
     {
       '@type': 'ItemList',
       '@id': 'https://acornglobus.com',
-      itemListElement: listItems.value
+      itemListElement: listItems.value,
     },
   ],
 })
 </script>
-

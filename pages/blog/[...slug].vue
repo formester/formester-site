@@ -1,124 +1,129 @@
 <template>
   <div>
     <div class="container position-relative">
-      <article
-        class="container mw-920 mt-8rem"
-        :class="{ 'mb-3rem': !(article.cta && article.cta.hidden) }"
-      >
-        <ContentRenderer :value="article">
-          <div class="blog__header">
-            <NuxtLink
-              :to="`/blog/`"
-              class="blog__back"
-              :class="article.body.toc ? 'blog__back__margin' : ''"
-            >
-              <span>← Back</span>
-            </NuxtLink>
-            <div class="social__links">
-              <a
-                :href="`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${article.title} by @_Formester_ `"
-                @click="googleAnalytics('twitter')"
-                class="social-icons"
-                target="_blank"
+      <div v-if="loading">
+        <Loader :loading="loading" class="mt-5 p-5" />
+      </div>
+      <div v-else>
+        <article
+          class="container mw-920 mt-8rem"
+          :class="{ 'mb-3rem': !(article.cta && article.cta.hidden) }"
+        >
+          <ContentRenderer :value="article">
+            <div class="blog__header">
+              <NuxtLink
+                :to="`/blog/`"
+                class="blog__back"
+                :class="article.body.toc ? 'blog__back__margin' : ''"
               >
-                <TwitterIcon />
-              </a>
-              <a
-                :href="`https://www.facebook.com/sharer.php?u=${encodedUrl}`"
-                @click="googleAnalytics('facebook')"
-                class="social-icons"
-                target="_blank"
-              >
-                <FacebookIcon />
-              </a>
-              <a
-                :href="`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}`"
-                @click="googleAnalytics('linkedin')"
-                class="social-icons"
-                target="_blank"
-              >
-                <LinkdinIcon />
-              </a>
-              <span class="social-icons" @click="copyToClipboard">
-                <CopyLinkIcon />
-              </span>
+                <span>← Back</span>
+              </NuxtLink>
+              <div class="social__links">
+                <a
+                  :href="`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${article.title} by @_Formester_ `"
+                  @click="googleAnalytics('twitter')"
+                  class="social-icons"
+                  target="_blank"
+                >
+                  <TwitterIcon />
+                </a>
+                <a
+                  :href="`https://www.facebook.com/sharer.php?u=${encodedUrl}`"
+                  @click="googleAnalytics('facebook')"
+                  class="social-icons"
+                  target="_blank"
+                >
+                  <FacebookIcon />
+                </a>
+                <a
+                  :href="`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}`"
+                  @click="googleAnalytics('linkedin')"
+                  class="social-icons"
+                  target="_blank"
+                >
+                  <LinkdinIcon />
+                </a>
+                <span class="social-icons" @click="copyToClipboard">
+                  <CopyLinkIcon />
+                </span>
+              </div>
             </div>
-          </div>
-          <nav
-            v-if="article.body.toc"
-            class="navbar navbar-expand bg-white sticky-top py-3"
-          >
-            <div class="collapse navbar-collapse">
-              <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                  <a
-                    class="dropdown-toggle"
-                    href="#"
-                    id="tocMenuLink"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Table of Contents
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="tocMenuLink">
-                    <li v-for="link of article.body.toc.links" :key="link.id">
-                      <NuxtLink class="dropdown-link" :to="`#${link.id}`">
-                        {{ link?.text }}
-                      </NuxtLink>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </nav>
-          <h1 class="mb-1 article__heading">{{ article.title }}</h1>
-          <div class="d-flex sm-text my-2 datentimeToRead">
-            <span>{{ formatDate(article.createdAt) }}</span>
-            <span>|</span>
-            <div
-              class="d-flex align-items-center justify-content-center timeToRead"
+            <nav
+              v-if="article.body.toc"
+              class="navbar navbar-expand bg-white sticky-top py-3"
             >
-              <ClockIcon color="#4f4f4f" />
-              <span>{{ article.readingTime.text }}</span>
+              <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a
+                      class="dropdown-toggle"
+                      href="#"
+                      id="tocMenuLink"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Table of Contents
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="tocMenuLink">
+                      <li v-for="link of article.body.toc.links" :key="link.id">
+                        <NuxtLink class="dropdown-link" :to="`#${link.id}`">
+                          {{ link?.text }}
+                        </NuxtLink>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <h1 class="mb-1 article__heading">{{ article.title }}</h1>
+            <div class="d-flex sm-text my-2 datentimeToRead">
+              <span>{{ formatDate(article.createdAt) }}</span>
+              <span>|</span>
+              <div
+                class="d-flex align-items-center justify-content-center timeToRead"
+              >
+                <ClockIcon color="#4f4f4f" />
+                <span>{{ article.readingTime.text }}</span>
+              </div>
             </div>
-          </div>
-          <div class="sm-text mt-1 article__author-section">
-            by
-            <a
-              :href="article.authorProfile"
-              :title="article.authorProfile"
-              target="_blank"
-              rel="noopener"
-            >
-              <span class="article__author">{{ article.author }}</span>
-            </a>
-          </div>
-          <div class="blog__content">
-            <ContentDoc class="nuxt-content" />
-            <div class="popup__img">
-              <span class="image-preview-close">&times;</span>
-              <img src="" alt="" />
+            <div class="sm-text mt-1 article__author-section">
+              by
+              <a
+                :href="article.authorProfile"
+                :title="article.authorProfile"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="article__author">{{ article.author }}</span>
+              </a>
             </div>
-          </div>
-          <notifications position="bottom right" class="my-notification" />
+            <div class="blog__content">
+              <ContentDoc class="nuxt-content" />
+              <div class="popup__img">
+                <span class="image-preview-close">&times;</span>
+                <img src="" alt="" />
+              </div>
+            </div>
+            <notifications position="bottom right" class="my-notification" />
 
-          <div v-if="relatedArticles" class="mt-5">
-            <h2 class="article__sub-heading">Related Blogs</h2>
-            <div class="row mt-4">
-              <RelatedArticleCard
-                v-for="relatedArticle in relatedArticles"
-                :key="relatedArticle._path"
-                :article="relatedArticle"
-                class="col-lg-6 related-article-card"
-              />
+            <div v-if="relatedArticles" class="mt-5">
+              <h2 class="article__sub-heading">Related Blogs</h2>
+              <div class="row mt-4">
+                <RelatedArticleCard
+                  v-for="relatedArticle in relatedArticles"
+                  :key="relatedArticle._path"
+                  :article="relatedArticle"
+                  class="col-lg-6 related-article-card"
+                />
+              </div>
             </div>
+          </ContentRenderer>
+          <div class="mt-5">
+            <DisqusComments :identifier="article._path" />
           </div>
-        </ContentRenderer>
-        <div class="mt-5">
-          <DisqusComments :identifier="article._path" />
-        </div>
-      </article>
+        </article>
+      </div>
     </div>
     <CallToActionSection :content="article.cta" />
   </div>
@@ -126,20 +131,23 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import ClockIcon from '../../components/icons/ClockIcon.vue'
-import TwitterIcon from '../../components/icons/twitter.vue'
-import FacebookIcon from '../../components/icons/facebook.vue'
-import LinkdinIcon from '../../components/icons/linkdin.vue'
-import CopyLinkIcon from '../../components/icons/copyLink.vue'
-import getSiteMeta from '../../utils/getSiteMeta'
+import ClockIcon from '@/components/icons/ClockIcon.vue'
+import TwitterIcon from '@/components/icons/twitter.vue'
+import FacebookIcon from '@/components/icons/facebook.vue'
+import LinkdinIcon from '@/components/icons/linkdin.vue'
+import CopyLinkIcon from '@/components/icons/copyLink.vue'
+import getSiteMeta from '@/utils/getSiteMeta'
+import Loader from '@/components/Loader.vue'
 
 const route = useRoute().params
 const relatedArticles = ref()
 
-const { data: getBlog } = await useAsyncData('blog', () =>
-  queryContent('blog')
-    .where({ _path: `/blog/` + route.slug })
-    .find()
+const { pending: loadingArticle, data: getBlog } = await useLazyAsyncData(
+  'blog',
+  () =>
+    queryContent('blog')
+      .where({ _path: `/blog/` + route.slug })
+      .find()
 )
 const article = ref(getBlog.value[0])
 
