@@ -90,6 +90,7 @@
                     :src="`/testimonials/${testimonial.picture}`"
                     :alt="testimonial.picture"
                     loading="lazy"
+                    sizes="10vw"
                   />
                   <div>
                     <h6 class="name">{{ testimonial.user }}</h6>

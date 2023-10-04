@@ -241,7 +241,7 @@
                     class="mx-1"
                     target="_blank"
                     ><nuxt-img
-                      sizes="10vw"
+                      sizes="15vw"
                       src="/social/instagram.svg"
                       alt="Fomester instagram page"
                   /></a>
@@ -250,7 +250,7 @@
                     class="mx-1"
                     target="_blank"
                     ><nuxt-img
-                      sizes="10vw"
+                      sizes="15vw"
                       src="/social/twitter.svg"
                       alt="Formester twitter page"
                   /></a>
@@ -259,7 +259,7 @@
                     class="mx-1"
                     target="_blank"
                     ><nuxt-img
-                      sizes="10vw"
+                      sizes="15vw"
                       src="/social/facebook.svg"
                       alt="Formester facebook page"
                   /></a>
@@ -268,7 +268,7 @@
                     class="mx-1"
                     target="_blank"
                     ><nuxt-img
-                      sizes="10vw"
+                      sizes="15vw"
                       src="/social/linkedin.svg"
                       alt="Formester linkedin page"
                   /></a>
@@ -277,7 +277,7 @@
                     class="mx-1"
                     target="_blank"
                     ><nuxt-img
-                      sizes="10vw"
+                      sizes="15vw"
                       src="/social/youtube.svg"
                       alt="Formester youtube page"
                   /></a>
