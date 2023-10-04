@@ -1,8 +1,5 @@
 <template>
-  <div v-if="blogsLoading">
-    <Loader :loading="true" class="mt-5 p-5" />
-  </div>
-  <div class="container mt-5" v-else>
+  <div class="container mt-5">
     <BlogFeatured
       v-for="article in heroArticles"
       :key="article._path"
@@ -35,22 +32,19 @@ export default {
     Loader,
   },
   async setup() {
-    const { data: articles, pending: blogsLoading } = await useLazyAsyncData(
-      'articles',
-      () =>
-        queryContent('/blog')
-          .sort({ createdAt: -1 })
-          .where({ published: true, featured: false })
-          .find()
+    const { data: articles } = useAsyncData('articles', () =>
+      queryContent('/blog')
+        .sort({ createdAt: -1 })
+        .where({ published: true, featured: false })
+        .find()
     )
 
-    const { data: heroArticles, pending: heroArticlesLoading } =
-      await useLazyAsyncData('heroArticles', () =>
-        queryContent('/blog')
-          .sort({ createdAt: -1 })
-          .where({ published: true, featured: true })
-          .find()
-      )
+    const { data: heroArticles } = useAsyncData('heroArticles', () =>
+      queryContent('/blog')
+        .sort({ createdAt: -1 })
+        .where({ published: true, featured: true })
+        .find()
+    )
 
     onMounted(() => {
       articles
