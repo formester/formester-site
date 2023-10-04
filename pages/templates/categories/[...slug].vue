@@ -7,47 +7,14 @@
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from 'vue'
+import { onMounted, computed } from 'vue'
 import getSiteMeta from '@/utils/getSiteMeta'
 import Templates from '@/components/template/Templates.vue'
 
 const route = useRoute().params
 
-const templates = ref([])
-const categories = ref([])
-const selectedCategory = ref('')
-
-const fetchTemplates = async (slug) => {
-  try {
-    const response = await fetch(
-      `https://app.formester.com/templates.json?category_slug=${slug}`
-    )
-    const data = await response.json()
-    templates.value = data
-  } catch (error) {
-    console.error('Error fetching templates:', error)
-  }
-}
-
-const fetchCategories = async () => {
-  try {
-    const response = await fetch(
-      'https://app.formester.com/template_categories.json'
-    )
-    const data = await response.json()
-    categories.value = data
-    return categories.value
-  } catch (error) {
-    console.error('Error fetching categories:', error)
-  }
-}
-
-onMounted(() => {
-  const slug = route.slug
-  fetchTemplates(slug)
-  fetchCategories()
-})
-
+const { data: categories }  = await useFetch('https://app.formester.com/template_categories.json')
+const { data: templates }  = await useFetch( `https://app.formester.com/templates.json?category_slug=${route.slug}`)
 
 const currentCategory = computed(() => {
   const category = categories.value.find((cate) => cate.slug === route.slug[0])
@@ -58,8 +25,8 @@ const meta = computed(() => {
   const metaData = {
     type: 'website',
     url: 'https://formester.com/templates/',
-    title: currentCategory.value,
-    description: `Find the perfect template for ${currentCategory.value} with Formester's comprehensive library. Choose from a variety of customizable designs and create a professional look in no time.`,
+    title: currentCategory,
+    description: `Find the perfect template for ${currentCategory} with Formester's comprehensive library. Choose from a variety of customizable designs and create a professional look in no time.`,
     mainImage: 'https://formester.com/formester-form-builder-background.png',
     mainImageAlt: 'Form builder showing drag and drop functionality',
   }
@@ -80,6 +47,7 @@ const listItems = computed(() => {
 })
 
 useHead({
+  title: currentCategory.value ? `${currentCategory.value} Templates | Formester` : '' ,
   meta: [meta],
   link: [
     {

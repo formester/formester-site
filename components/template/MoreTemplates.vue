@@ -49,7 +49,7 @@
     </div>
 
     <div class="mb-5">
-      <div v-if="templates && templates.length" class="templates">
+      <div v-if="templates && templates?.length" class="templates">
         <div v-for="(template, idx) in templates" :key="idx" class="template">
           <NuxtLink :to="`/templates/${template.slug}`">
             <img
@@ -79,7 +79,7 @@
         </NuxtLink>
       </div>
       <div
-        v-if="!loading && templates.length == 0"
+        v-if="!loading && templates?.length == 0"
         class="d-flex align-items-center justify-content-center mt-5 p-5"
       >
         No Templates
@@ -176,10 +176,10 @@ const getTemplates = async (categorySlug) => {
   }
   loading.value = true
   try {
-    const {data} = await useFetch('https://app.formester.com/templates.json', {params})
+    const { data } = await useFetch('https://app.formester.com/templates.json', {params})
     templates.value = data.value
-    templates.value = templates.value.filter((el) => el.slug !== templateSlug.value)
-    templates.value = templates.value.splice(0, 6)
+    templates.value = templates.value?.filter((el) => el.slug !== templateSlug.value)
+    templates.value = templates.value?.splice(0, 6)
     loading.value = false
   } catch (err) {
     console.error(err)

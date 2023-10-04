@@ -56,36 +56,13 @@ import PreviewModal from '../../components/template/PreviewModal.vue'
 import MoreTemplates from '../../components/template/MoreTemplates.vue'
 import Faq from '../../components/template/Faq.vue'
 
-const template = ref(null)
-const categories = ref([])
 const showPreviewModal = ref(false)
 
 const route = useRoute().params
 
-const fetchTemplate = async (slug) => {
-  try {
-    const response = await fetch(
-      `https://app.formester.com/templates/${slug}.json`
-    )
-    const data = await response.json()
-    template.value = data
-    console.log(template.value.slug)
-  } catch (error) {
-    console.error('Error fetching template:', error)
-  }
-}
 
-const fetchCategories = async () => {
-  try {
-    const response = await fetch(
-      'https://app.formester.com/template_categories.json'
-    )
-    const data = await response.json()
-    categories.value = data
-  } catch (error) {
-    console.error('Error fetching categories:', error)
-  }
-}
+const { data: template }  = await useFetch(`https://app.formester.com/templates/${route.slug}.json`)
+const { data: categories }  = await useFetch('https://app.formester.com/template_categories.json')
 
 const redirectTo = () => {
   window.open(
@@ -101,12 +78,6 @@ const openPreviewModal = () => {
 const closePreviewModal = () => {
   showPreviewModal.value = false
 }
-
-onMounted(() => {
-  const slug = route.slug
-  fetchTemplate(slug)
-  fetchCategories()
-})
 
 const meta = computed(() => {
   const { name, description, metaTitle, metaDescription, previewImageUrl } =
@@ -129,22 +100,21 @@ const meta = computed(() => {
   return getSiteMeta(metaData)
 })
 
-useHead((template) => {
-  const { name, keywords } = template || {}
+useHead(() => {
   return {
-    title: name ? `${name} | Formester` : 'Formester',
+    title: template.value?.name ? `${template.value?.name } | Formester` : 'Formester Hello',
     meta: [
-      ...(template ? meta : []),
+      [meta],
       {
         name: 'keywords',
-        content: keywords,
+        content: template.value?.keywords,
       },
     ],
     link: [
       {
         hid: 'canonical',
         rel: 'canonical',
-        href: template ? `https://formester.com/templates/${route.slug}/` : '',
+        href: template.value ? `https://formester.com/templates/${route.slug}/` : '',
       },
     ],
   }
