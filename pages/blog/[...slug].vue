@@ -115,7 +115,9 @@
             </div>
           </div>
         </ContentRenderer>
-        <DisqusComments :identifier="article._path"/>
+        <div class="mt-5">
+          <DisqusComments :identifier="article._path" />
+        </div>
       </article>
     </div>
     <CallToActionSection :content="article.cta" />
@@ -134,7 +136,11 @@ import getSiteMeta from '../../utils/getSiteMeta'
 const route = useRoute().params
 const relatedArticles = ref()
 
-const { data: getBlog } = await useAsyncData('blog', () => queryContent('blog').where({ _path: `/blog/` + route.slug }).find())
+const { data: getBlog } = await useAsyncData('blog', () =>
+  queryContent('blog')
+    .where({ _path: `/blog/` + route.slug })
+    .find()
+)
 const article = ref(getBlog.value[0])
 
 const formatDate = (date) => {
@@ -352,7 +358,10 @@ p {
 
 .nuxt-content h1 a,
 .nuxt-content h2 a,
-.nuxt-content h3 a {
+.nuxt-content h3 a,
+.nuxt-content h4 a,
+.nuxt-content h5 a,
+.nuxt-content h6 a {
   color: inherit;
   text-decoration: inherit;
 }

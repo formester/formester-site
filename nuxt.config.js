@@ -81,22 +81,18 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'nuxt-jsonld',
     'nuxt-gtag',
+    'nuxt-disqus',
     'nuxt-simple-sitemap',
-    'nuxt-disqus'
+    '@zadigetvoltaire/nuxt-gtm',
   ],
   disqus: {
     shortname: "formester",
   },
-  // Hooks configuration - https://content.nuxtjs.org/advanced/
-  hooks: {
-    'content:file:beforeInsert': (document) => {
-      if (document.extension === '.md') {
-        const stats = require('remark-reading-time')(document.text)
-        document.readingStats = stats
-      }
-    },
-  },
 
+  // GTM configuration
+  gtm: {
+    id: 'GTM-56W9ZCR',
+  },
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
@@ -141,9 +137,9 @@ export default defineNuxtConfig({
     dir: 'assets/images',
     provider: 'netlify',
     netlify: {
-      // baseURL: 'https://staging--formester-staging.netlify.app/assets/images',  un-comment for testing images on staging
-      baseURL: process.env.IMAGE_URL ||'http://localhost:8080/assets/images', 
-    }
+      baseURL: process.env.IMAGE_URL || 'http://localhost:8080/assets/images',
+      // baseURL: 'https://formester.com/assets/images',
+    },
   },
   devServer: {
     port: 8080,
