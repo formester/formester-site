@@ -74,7 +74,6 @@ export default {
 }
 
 .call-to-action-section {
-  padding-top: 50px;
   padding-bottom: 50px;
 }
 .cta-bullets {
