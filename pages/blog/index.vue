@@ -34,29 +34,23 @@ export default {
     BlogFeatured,
     Loader,
   },
-  setup() {
-    const { data: articles, pending: blogsLoading } = useLazyAsyncData(
-      async () => {
-        return await queryContent('/blog')
+  async setup() {
+    const { data: articles, pending: blogsLoading } = await useLazyAsyncData(
+      'articles',
+      () =>
+        queryContent('/blog')
           .sort({ createdAt: -1 })
-          .where({
-            published: true,
-            featured: false,
-          })
+          .where({ published: true, featured: false })
           .find()
-      }
     )
 
     const { data: heroArticles, pending: heroArticlesLoading } =
-      useLazyAsyncData(async () => {
-        return await queryContent('/blog')
+      await useLazyAsyncData('heroArticles', () =>
+        queryContent('/blog')
           .sort({ createdAt: -1 })
-          .where({
-            published: true,
-            featured: true,
-          })
+          .where({ published: true, featured: true })
           .find()
-      })
+      )
 
     onMounted(() => {
       articles
