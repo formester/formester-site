@@ -102,7 +102,7 @@ const meta = computed(() => {
 
 useHead(() => {
   return {
-    title: template.value?.name ? `${template.value?.name } | Formester` : 'Formester Hello',
+    title: template.value?.name ? `${template.value?.name } | Formester` : 'Formester',
     meta: [
       [meta],
       {
