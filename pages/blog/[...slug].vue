@@ -3,20 +3,20 @@
     <div class="container position-relative">
       <article
         class="container mw-920 mt-8rem"
-        :class="{ 'mb-3rem': !(article?.cta && article?.cta.hidden) }"
+        :class="{ 'mb-3rem': !(article.cta && article.cta.hidden) }"
       >
         <ContentRenderer :value="article">
           <div class="blog__header">
             <NuxtLink
               :to="`/blog/`"
               class="blog__back"
-              :class="article?.body.toc ? 'blog__back__margin' : ''"
+              :class="article.body.toc ? 'blog__back__margin' : ''"
             >
               <span>← Back</span>
             </NuxtLink>
             <div class="social__links">
               <a
-                :href="`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${article?.title} by @_Formester_ `"
+                :href="`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${article.title} by @_Formester_ `"
                 @click="googleAnalytics('twitter')"
                 class="social-icons"
                 target="_blank"
@@ -45,7 +45,7 @@
             </div>
           </div>
           <nav
-            v-if="article?.body?.toc"
+            v-if="article.body.toc"
             class="navbar navbar-expand bg-white sticky-top py-3"
           >
             <div class="collapse navbar-collapse">
@@ -62,7 +62,7 @@
                     Table of Contents
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="tocMenuLink">
-                    <li v-for="link of article?.body.toc.links" :key="link.id">
+                    <li v-for="link of article.body.toc.links" :key="link.id">
                       <NuxtLink class="dropdown-link" :to="`#${link.id}`">
                         {{ link?.text }}
                       </NuxtLink>
@@ -72,26 +72,26 @@
               </ul>
             </div>
           </nav>
-          <h1 class="mb-1 article__heading">{{ article?.title }}</h1>
+          <h1 class="mb-1 article__heading">{{ article.title }}</h1>
           <div class="d-flex sm-text my-2 datentimeToRead">
-            <span>{{ formatDate(article?.createdAt) }}</span>
+            <span>{{ formatDate(article.createdAt) }}</span>
             <span>|</span>
             <div
               class="d-flex align-items-center justify-content-center timeToRead"
             >
               <ClockIcon color="#4f4f4f" />
-              <span>{{ article?.readingTime.text }}</span>
+              <span>{{ article.readingTime.text }}</span>
             </div>
           </div>
           <div class="sm-text mt-1 article__author-section">
             by
             <a
-              :href="article?.authorProfile"
-              :title="article?.authorProfile"
+              :href="article.authorProfile"
+              :title="article.authorProfile"
               target="_blank"
               rel="noopener"
             >
-              <span class="article__author">{{ article?.author }}</span>
+              <span class="article__author">{{ article.author }}</span>
             </a>
           </div>
           <div class="blog__content">
@@ -115,10 +115,10 @@
             </div>
           </div>
         </ContentRenderer>
-        <DisqusComments :identifier="article?._path"/>
+        <DisqusComments :identifier="article._path"/>
       </article>
     </div>
-    <CallToActionSection :content="article?.cta" />
+    <CallToActionSection :content="article.cta" />
   </div>
 </template>
 
@@ -130,12 +130,12 @@ import FacebookIcon from '../../components/icons/facebook.vue'
 import LinkdinIcon from '../../components/icons/linkdin.vue'
 import CopyLinkIcon from '../../components/icons/copyLink.vue'
 import getSiteMeta from '../../utils/getSiteMeta'
-import { fetchArticle, fetchRelatedArticles } from '../../utils/getArticles'
 
 const route = useRoute().params
-
-const article = ref()
 const relatedArticles = ref()
+
+const { data: getBlog } = await useAsyncData('blog', () => queryContent('blog').where({ _path: `/blog/` + route.slug }).find())
+const article = ref(getBlog.value[0])
 
 const formatDate = (date) => {
   const options = { year: 'numeric', month: 'long', day: 'numeric' }
@@ -160,18 +160,6 @@ const googleAnalytics = (platform) => {
     })
 }
 
-const loadDisqus = () => {
-  var disqus_config = function () {
-    this.page.url = `https://formester.com/blog/${route.slug}/`
-    this.page.identifier = `${route.slug}`
-  }
-
-  var d = document, s = d.createElement('script')
-  s.src = 'https://formester.disqus.com/embed.js'
-  s.setAttribute('data-timestamp', +new Date());
-  (d.head || d.body).appendChild(s)
-}
-
 const encodedUrl = () => {
   return encodeURIComponent(process.env.baseUrl + route.fullPath)
 }
@@ -183,7 +171,7 @@ const meta = computed(() => {
     title: article.value?.metaTitle,
     description: article.value?.metaDescription,
     mainImage: article.value?.coverImg
-      ? `https://formester.com/${article.value?.coverImg}`
+      ? `https://formester.com${article.value?.coverImg}`
       : 'https://formester.com/formester-form-builder-background.png',
     mainImageAlt:
       article.value?.coverImgAlt ||
@@ -195,17 +183,17 @@ const meta = computed(() => {
 useHead({
   title: article.value?.metaTitle,
   meta: [
-    [meta],
+    ...meta.value,
     {
       property: 'article:published_time',
-      content: article?.createdAt,
+      content: article.value.createdAt,
     },
     {
       property: 'article:modified_time',
-      content: article?.updatedAt,
+      content: article.value.updatedAt,
     },
     { name: 'twitter:label1', content: 'Written by' },
-    { name: 'twitter:data1', content: article?.author },
+    { name: 'twitter:data1', content: article.value.author },
   ],
   link: [
     {
@@ -216,11 +204,11 @@ useHead({
   ],
 })
 
-useJsonld((article) => {
+useJsonld(() => {
   const imagesArray = []
 
-  if (article?.coverImg) {
-    imagesArray.push(`https://formester.com${article?.coverImg}`)
+  if (article.value.coverImg) {
+    imagesArray.push(`https://formester.com${article.value.coverImg}`)
   }
 
   const jsonData = [
@@ -229,18 +217,18 @@ useJsonld((article) => {
       '@type': 'BlogPosting',
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': `https://formester.com/blog/${article?._path}/`,
+        '@id': `https://formester.com/blog/${article.value._path}/`,
       },
-      headline: article?.title,
-      description: article?.description,
+      headline: article.value.title,
+      description: article.value.description,
       image:
         imagesArray.length > 0
           ? imagesArray
           : ['https://formester.com/formester-form-builder-background.png'],
       author: {
         '@type': 'Person',
-        name: article?.author,
-        url: article?.authorProfile,
+        name: article.value.author,
+        url: article.value.authorProfile,
       },
       publisher: {
         '@type': 'Organization',
@@ -250,14 +238,14 @@ useJsonld((article) => {
           url: 'https://formester.com/logo.png',
         },
       },
-      datePublished: article?.createdAt,
+      datePublished: article.value.createdAt,
     },
   ]
 
   // Append schema if available
-  if (article?.value.schema) {
+  if (article.value.schema) {
     try {
-      article?.value.schema.forEach((s) => {
+      article.value.schema.forEach((s) => {
         let parsedSchema = JSON.parse(s.type)
         if (typeof parsedSchema === 'object') {
           jsonData.push(parsedSchema)
@@ -269,7 +257,18 @@ useJsonld((article) => {
   return jsonData
 })
 
-onMounted(() => {
+const fetchRelatedBlogArticles = async () => {
+  const result = await queryContent('blog').find()
+  relatedArticles.value = result.filter(
+    (relatedArticle) => article.value._path !== relatedArticle._path
+  )
+  const randIndex = Math.floor(
+    Math.random() * (relatedArticles.value.length - 2)
+  )
+  relatedArticles.value = relatedArticles.value.slice(randIndex, randIndex + 2)
+}
+
+onMounted(async () => {
   document.querySelectorAll('.blog__content img').forEach((image) => {
     image.onclick = () => {
       document.querySelector('.popup__img').style.display = 'block'
@@ -288,27 +287,8 @@ onMounted(() => {
       document.querySelector('.popup__img ').style.display = 'none'
     }
   }
-  loadDisqus()
-  fetchBlogArticle() // Fetch article and related articles on component initialization
   fetchRelatedBlogArticles()
 })
-
-// Fetching data
-const fetchBlogArticle = async () => {
-  const result = await fetchArticle(route)
-  article.value = result
-}
-
-const fetchRelatedBlogArticles = async () => {
-  const result = await queryContent('blog').find()
-  relatedArticles.value = result.filter(
-    (relatedArticle) => article.value._path !== relatedArticle._path
-  )
-  const randIndex = Math.floor(
-    Math.random() * (relatedArticles.value.length - 2)
-  )
-  relatedArticles.value = relatedArticles.value.slice(randIndex, randIndex + 2)
-}
 </script>
 
 <style>

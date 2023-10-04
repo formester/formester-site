@@ -7,8 +7,8 @@
       <div
         class="d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start mt-xl-0 mt-md-5 hero__info_container"
       >
-        <h1 class="section__heading">{{ template?.name }}</h1>
-        <p class="hero__subheading mt-3">{{ template?.description }}</p>
+        <h1 class="section__heading">{{ template.name }}</h1>
+        <p class="hero__subheading mt-3">{{ template.description }}</p>
         <div class="btns-container d-flex align-items-center mt-2">
           <button class="btn btn-use_template" @click="redirectTo">
             Use Template
@@ -23,7 +23,7 @@
         @click="openPreviewModal"
       >
         <img
-          :src="template?.previewImageUrl"
+          :src="template.previewImageUrl"
           alt="Hero-Image"
           class="img-fluid hero__image rounded pointer"
         />
@@ -34,10 +34,10 @@
       </div>
     </section>
 
-    <Faq v-if="template?.faqs" :faqs="template?.faqs" />
+    <Faq v-if="template.faqs" :faqs="template.faqs" />
 
     <!-- More templates section -->
-    <more-templates :categories="categories" :template-slug="template?.slug" />
+    <more-templates :categories="categories" :template-slug="template.slug" />
 
     <!-- Preview Template Modal -->
     <template-preview-modal
@@ -102,12 +102,12 @@ const meta = computed(() => {
 
 useHead(() => {
   return {
-    title: template.value?.name ? `${template.value?.name } | Formester` : 'Formester',
+    title: template.value.name ? `${template.value.name } | Formester` : 'Formester',
     meta: [
-      [meta],
+      ...meta.value,
       {
         name: 'keywords',
-        content: template.value?.keywords,
+        content: template.value.keywords,
       },
     ],
     link: [

@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-import { onMounted, computed } from 'vue'
+import { computed } from 'vue'
 import getSiteMeta from '@/utils/getSiteMeta'
 import Templates from '@/components/template/Templates.vue'
 
@@ -48,7 +48,9 @@ const listItems = computed(() => {
 
 useHead({
   title: currentCategory.value ? `${currentCategory.value} Templates | Formester` : '' ,
-  meta: [meta],
+  meta: [
+    ...meta.value
+  ],
   link: [
     {
       hid: 'canonical',
