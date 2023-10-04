@@ -1,23 +1,21 @@
 <template>
-  <div class="container mt-5">
-    <div v-if="blogsLoading || heroArticlesLoading">
-      <Loader :loading="blogsLoading" class="mt-5 p-5" />
-    </div>
-    <div v-else>
-      <BlogFeatured
-        v-for="article in heroArticles"
+  <div v-if="blogsLoading">
+    <Loader :loading="true" class="mt-5 p-5" />
+  </div>
+  <div class="container mt-5" v-else>
+    <BlogFeatured
+      v-for="article in heroArticles"
+      :key="article._path"
+      :article="article"
+      class="my-4"
+    />
+    <div class="row mt-4">
+      <BlogCard
+        v-for="article in articles"
         :key="article._path"
+        class="col-lg-4 mt-3 mb-5"
         :article="article"
-        class="my-4"
       />
-      <div class="row mt-4">
-        <BlogCard
-          v-for="article in articles"
-          :key="article._path"
-          class="col-lg-4 mt-3 mb-5"
-          :article="article"
-        />
-      </div>
     </div>
   </div>
 </template>
@@ -34,21 +32,23 @@ export default {
   components: {
     BlogCard,
     BlogFeatured,
-    Loader
+    Loader,
   },
   setup() {
-    const { data: articles, pending: blogsLoading } = useLazyAsyncData(async () => {
-      return await queryContent('/blog')
-        .sort({ createdAt: -1 })
-        .where({
-          published: true,
-          featured: false,
-        })
-        .find()
-    })
-
-    const { data: heroArticles, pending: heroArticlesLoading } = useLazyAsyncData(
+    const { data: articles, pending: blogsLoading } = useLazyAsyncData(
       async () => {
+        return await queryContent('/blog')
+          .sort({ createdAt: -1 })
+          .where({
+            published: true,
+            featured: false,
+          })
+          .find()
+      }
+    )
+
+    const { data: heroArticles, pending: heroArticlesLoading } =
+      useLazyAsyncData(async () => {
         return await queryContent('/blog')
           .sort({ createdAt: -1 })
           .where({
@@ -56,14 +56,12 @@ export default {
             featured: true,
           })
           .find()
-      }
-    )
+      })
 
     onMounted(() => {
       articles
       heroArticles
-      blogsLoading,
-      heroArticlesLoading
+      blogsLoading, heroArticlesLoading
     })
 
     const meta = computed(() => {

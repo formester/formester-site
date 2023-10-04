@@ -11,10 +11,10 @@
 import getSiteMeta from '@/utils/getSiteMeta'
 import Templates from '@/components/template/Templates.vue'
 
-const { pending, data: templates } = await useLazyFetch(
+const { pending, data: templates } = useLazyFetch(
   `https://app.formester.com/templates.json`
 )
-const { data: categories } = await useFetch(
+const { data: categories } = useFetch(
   'https://app.formester.com/template_categories.json'
 )
 

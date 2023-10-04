@@ -6,30 +6,28 @@
         :templateCategories="templateCategories"
       />
     </div>
-    <div class="w-100">
-      <div v-if="loading">
-        <Loader :loading="loading" class="mt-5 p-5" />
+    <div v-if="loading">
+      <Loader :loading="true" class="mt-5 p-5" />
+    </div>
+    <div class="w-100" v-else>
+      <h1 class="heading">
+        {{ formattedCategoryHeading }}
+        Templates
+      </h1>
+      <div v-if="templates && templates.length" class="templates">
+        <TemplateCard
+          v-for="(template, idx) in templates"
+          :key="idx"
+          :template="template"
+        />
       </div>
-      <div v-else>
-        <h1 class="heading">
-          {{ formattedCategoryHeading }}
-          Templates
-        </h1>
-        <div v-if="templates && templates.length" class="templates">
-          <TemplateCard
-            v-for="(template, idx) in templates"
-            :key="idx"
-            :template="template"
-          />
-        </div>
-        <div v-else class="no-template">
-          <nuxt-img
-            class="img-fluid"
-            src="/templates/no-template.svg"
-            alt="No Template Illustration"
-          />
-          <h4>No Template Available</h4>
-        </div>
+      <div v-else class="no-template">
+        <nuxt-img
+          class="img-fluid"
+          src="/templates/no-template.svg"
+          alt="No Template Illustration"
+        />
+        <h4>No Template Available</h4>
       </div>
     </div>
   </div>
