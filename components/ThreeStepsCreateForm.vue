@@ -20,7 +20,7 @@
                             <span class="step__description">Open the online form maker in Formester. Decide if you want to start with a blank page or use one of the available pre-designed templates. Combine blocks to create a survey, quiz, registration form, online order form, or any other custom web form. Add standard fields like Name, Email, Phone, Date, Text Input, or File Upload by simply dragging and dropping these blocks into your form. Create multiple choice questions, drop-down lists, ratings, and scales – all with just a few clicks. Once your questions are ready, open the form designer. Choose a built-in form design theme that suits your preferences. Customize the colors, fonts, and buttons until you achieve a web form design that truly represents your brand! That's it – your form is ready.</span>
                         </div>
                         <div class="col-lg-5 m-auto">
-                            <nuxt-img src="/features/three-steps-create-form/step1.svg" class="w-lg-40 d-block img-fluid my-auto" alt="build your form easy with formester form builder" loading="lazy"/>
+                            <nuxt-img src="/features/three-steps-create-form/step1.svg" class="w-lg-40 d-block img-fluid my-auto" alt="build your form easy with formester form builder" loading="lazy" sizes="100vw"/>
                         </div>
                     </div>
                 </div>
