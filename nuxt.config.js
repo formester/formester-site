@@ -61,10 +61,16 @@ export default defineNuxtConfig({
     'nuxt-jsonld',
     'nuxt-gtag',
     'nuxt-disqus',
-    'nuxt-simple-sitemap'
+    'nuxt-simple-sitemap',
+    '@zadigetvoltaire/nuxt-gtm',
   ],
   disqus: {
     shortname: 'formester',
+  },
+
+  // GTM configuration
+  gtm: {
+    id: 'GTM-56W9ZCR',
   },
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
@@ -110,9 +116,9 @@ export default defineNuxtConfig({
     dir: 'assets/images',
     provider: 'netlify',
     netlify: {
-      baseURL: process.env.IMAGE_URL || 'http://localhost:8080/assets/images'
+      baseURL: process.env.IMAGE_URL || 'http://localhost:8080/assets/images',
       // baseURL: 'https://formester.com/assets/images',
-    }
+    },
   },
   devServer: {
     port: 8080,

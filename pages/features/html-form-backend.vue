@@ -48,32 +48,32 @@
               <div class="card-body">
                 <p class="html">
                   &lt;<span style="color: #27ae60">form</span>
-                  <span style="color: #9b51e0">accept-charset</span>='UTF-8'
-                  <span style="color: #9b51e0">action</span
+                  <span style="color: #9b51e0"> accept-charset</span>='UTF-8'
+                  <span style="color: #9b51e0"> action</span
                   >="https://app.formester.com/forms/your@form/submissions"
-                  <span style="color: #9b51e0">method</span>="POST" &gt;<br />
+                  <span style="color: #9b51e0"> method</span>="POST" &gt;<br />
                   <span>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span
                       style="color: #27ae60"
                       >label</span
                     >
-                    <span style="color: #9b51e0">for</span>="email"&gt;Email
+                    <span style="color: #9b51e0"> for</span>="email"&gt;Email
                     &lt;<span style="color: #27ae60">/label</span>&gt;<br />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span
                       style="color: #27ae60"
                       >input</span
                     >
-                    <span style="color: #9b51e0">type</span>="email"
-                    <span style="color: #9b51e0">id</span>="email-address"
-                    <span style="color: #9b51e0">name</span>="email"
-                    <span style="color: #9b51e0">placeholder</span
+                    <span style="color: #9b51e0"> type</span>="email"
+                    <span style="color: #9b51e0"> id</span>="email-address"
+                    <span style="color: #9b51e0"> name</span>="email"
+                    <span style="color: #9b51e0"> placeholder</span
                     >="your@email.com"
                     <span style="color: #27ae60">/</span>&gt;<br />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span
                       style="color: #27ae60"
                       >button</span
                     >
-                    <span style="color: #9b51e0">type</span>="submit"&gt;Submit
+                    <span style="color: #9b51e0"> type</span>="submit"&gt;Submit
                     &lt;<span style="color: #27ae60">/button</span>&gt;<br />
                   </span>
                   &lt;<span style="color: #27ae60">/form</span>&gt;
@@ -92,8 +92,8 @@
             <div class="card-body card">
               <span class="html">
                 &lt;<span style="color: #27ae60">form </span>
-                <span style="color: #9b51e0">accept-charset</span>='UTF-8'
-                <span style="color: #9b51e0">action</span
+                <span style="color: #9b51e0"> accept-charset</span>='UTF-8'
+                <span style="color: #9b51e0"> action</span
                 >="https://app.formester.com/forms/your@form/submissions"
                 <span style="color: #9b51e0">method</span>="POST" &gt;
               </span>
@@ -109,7 +109,7 @@
             <div class="card-body card">
               <span class="html">
                 &lt;<span style="color: #27ae60">input</span>
-                <span style="color: #9b51e0">type</span>="email"
+                <span style="color: #9b51e0"> type</span>="email"
                 <span style="color: #9b51e0"> name</span>="email"
                 <span style="color: #27ae60">/</span>&gt;
               </span>
