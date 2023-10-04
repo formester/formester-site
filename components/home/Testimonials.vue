@@ -21,6 +21,7 @@
                   :src="`/testimonials/${testimonial.picture}`"
                   :alt="testimonial.picture"
                   loading="lazy"
+                  sizes="40vw"
                 />
                 <div>
                   <h6 class="name">{{ testimonial.user }}</h6>
@@ -36,6 +37,7 @@
             <nuxt-img
               :src="`/testimonials/${activeTestimonial.logo}`"
               :alt="activeTestimonial.logoAlt"
+              sizes="40vw"
             />
           </div>
           <nuxt-img
@@ -90,7 +92,6 @@
                     :src="`/testimonials/${testimonial.picture}`"
                     :alt="testimonial.picture"
                     loading="lazy"
-                    sizes="40vw"
                   />
                   <div>
                     <h6 class="name">{{ testimonial.user }}</h6>
