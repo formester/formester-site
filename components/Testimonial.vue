@@ -13,7 +13,7 @@
             <div class="my-3 d-flex flex-column align-items-center">
               <span class="person">{{ testimonials[0]?.user }}</span>
               <span class="designation">{{ testimonials[0]?.designation }}</span>
-              <nuxt-img class="brand mt-4 mb-3" :src="`/testimonials/${testimonials[0]?.logo}`" alt="" loading="lazy"/>
+              <nuxt-img class="brand mt-4 mb-3" sizes="10vw" :src="`/testimonials/${testimonials[0]?.logo}`" alt="" loading="lazy"/>
             </div>
           </div>
         </div>
@@ -23,7 +23,7 @@
             <div class="my-3 d-flex flex-column align-items-center">
               <span class="person">{{ testimonials[1]?.user }}</span>
               <span class="designation">{{ testimonials[1]?.designation }}</span>
-              <nuxt-img class="brand mt-4 mb-3" :src="`/testimonials/${testimonials[1]?.logo}`" alt="" loading="lazy" />
+              <nuxt-img class="brand mt-4 mb-3" sizes="10vw" :src="`/testimonials/${testimonials[1]?.logo}`" alt="" loading="lazy" />
             </div>
           </div>
         </div>

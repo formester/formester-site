@@ -3,7 +3,7 @@
     <div class="footer__container text-center">
       <NuxtLink to="/">
         <div class="footer__logo">
-          <nuxt-img src="/logo-light.svg" alt="Formester" sizes="5vw"  />
+          <nuxt-img src="/logo-light.svg" alt="Formester" sizes="5vw" />
         </div>
       </NuxtLink>
       <section class="mt-5 container">
@@ -125,10 +125,7 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink
-                  to="/features/collaboration/"
-                  class="footer__link"
-                >
+                <NuxtLink to="/features/collaboration/" class="footer__link">
                   Collaboration
                 </NuxtLink>
               </li>
@@ -244,6 +241,7 @@
                     class="mx-1"
                     target="_blank"
                     ><nuxt-img
+                      sizes="10vw"
                       src="/social/instagram.svg"
                       alt="Fomester instagram page"
                   /></a>
@@ -252,6 +250,7 @@
                     class="mx-1"
                     target="_blank"
                     ><nuxt-img
+                      sizes="10vw"
                       src="/social/twitter.svg"
                       alt="Formester twitter page"
                   /></a>
@@ -260,6 +259,7 @@
                     class="mx-1"
                     target="_blank"
                     ><nuxt-img
+                      sizes="10vw"
                       src="/social/facebook.svg"
                       alt="Formester facebook page"
                   /></a>
@@ -268,6 +268,7 @@
                     class="mx-1"
                     target="_blank"
                     ><nuxt-img
+                      sizes="10vw"
                       src="/social/linkedin.svg"
                       alt="Formester linkedin page"
                   /></a>
@@ -276,6 +277,7 @@
                     class="mx-1"
                     target="_blank"
                     ><nuxt-img
+                      sizes="10vw"
                       src="/social/youtube.svg"
                       alt="Formester youtube page"
                   /></a>
