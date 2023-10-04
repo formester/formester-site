@@ -23,9 +23,9 @@
 </template>
 
 <script>
-import BlogCard from '../../components/blog/BlogCard.vue'
-import BlogFeatured from '../../components/blog/BlogFeatured.vue'
-import Loader from '../../components/Loader.vue'
+import BlogCard from '@/components/blog/BlogCard.vue'
+import BlogFeatured from '@/components/blog/BlogFeatured.vue'
+import Loader from '@/components/Loader.vue'
 
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
@@ -34,9 +34,10 @@ export default {
   components: {
     BlogCard,
     BlogFeatured,
+    Loader
   },
   setup() {
-    const { data: articles, pending: blogsLoading } = useAsyncData(async () => {
+    const { data: articles, pending: blogsLoading } = useLazyAsyncData(async () => {
       return await queryContent('/blog')
         .sort({ createdAt: -1 })
         .where({
@@ -46,7 +47,7 @@ export default {
         .find()
     })
 
-    const { data: heroArticles, pending: heroArticlesLoading } = useAsyncData(
+    const { data: heroArticles, pending: heroArticlesLoading } = useLazyAsyncData(
       async () => {
         return await queryContent('/blog')
           .sort({ createdAt: -1 })
@@ -61,6 +62,8 @@ export default {
     onMounted(() => {
       articles
       heroArticles
+      blogsLoading,
+      heroArticlesLoading
     })
 
     const meta = computed(() => {
