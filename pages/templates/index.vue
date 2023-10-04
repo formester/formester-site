@@ -3,7 +3,6 @@
     :activeCategory="null"
     :templates="templates"
     :templateCategories="categories"
-    :loading="pending"
   />
 </template>
 
@@ -11,10 +10,10 @@
 import getSiteMeta from '@/utils/getSiteMeta'
 import Templates from '@/components/template/Templates.vue'
 
-const { pending, data: templates } = useLazyFetch(
+const { data: templates } = await useFetch(
   `https://app.formester.com/templates.json`
 )
-const { data: categories } = useFetch(
+const { data: categories } = await useFetch(
   'https://app.formester.com/template_categories.json'
 )
 

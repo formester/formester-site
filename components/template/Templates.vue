@@ -6,10 +6,7 @@
         :templateCategories="templateCategories"
       />
     </div>
-    <div v-if="loading">
-      <Loader :loading="true" class="mt-5 p-5" />
-    </div>
-    <div class="w-100" v-else>
+    <div class="w-100">
       <h1 class="heading">
         {{ formattedCategoryHeading }}
         Templates
@@ -36,7 +33,6 @@
 <script setup>
 import TemplateCategories from './TemplateCategories.vue'
 import TemplateCard from './TemplateCard.vue'
-import Loader from '../Loader.vue'
 const route = useRoute().params
 const templateCategoryHeading = ref(route.slug)
 
@@ -57,7 +53,7 @@ const formattedCategoryHeading = computed(() => {
 <script>
 export default {
   components: { TemplateCategories, TemplateCard },
-  props: ['activeCategory', 'templates', 'templateCategories', 'loading'],
+  props: ['activeCategory', 'templates', 'templateCategories'],
 }
 </script>
 
