@@ -125,7 +125,7 @@ export default {
 
     useHead({
       title: 'Spam Protection | Spam Protection in Web Form - Formester',
-      meta: [meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',

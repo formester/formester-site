@@ -100,7 +100,7 @@ export default {
 
     useHead({
       title: 'Online Payment Form | Secure Online Payment - Formester',
-      meta: [meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',

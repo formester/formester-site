@@ -41,7 +41,10 @@ export default defineNuxtConfig({
       ],
     },
   },
-
+  // Configration for sitemap, url being used for generating canonical urls
+  site: {
+    url: process.env.baseURL || 'http://localhost:8080',
+  },
   router: {
     trailingSlash: true,
   },

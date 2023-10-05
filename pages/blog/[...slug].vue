@@ -5,116 +5,114 @@
         class="container mw-920 mt-8rem"
         :class="{ 'mb-3rem': !(article.cta && article.cta.hidden) }"
       >
-        <!-- <ContentRenderer :value="article"> -->
-          <div class="blog__header">
-            <NuxtLink
-              :to="`/blog/`"
-              class="blog__back"
-              :class="article.body.toc ? 'blog__back__margin' : ''"
-            >
-              <span>← Back</span>
-            </NuxtLink>
-            <div class="social__links">
-              <a
-                :href="`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${article.title} by @_Formester_ `"
-                @click="googleAnalytics('twitter')"
-                class="social-icons"
-                target="_blank"
-              >
-                <TwitterIcon />
-              </a>
-              <a
-                :href="`https://www.facebook.com/sharer.php?u=${encodedUrl}`"
-                @click="googleAnalytics('facebook')"
-                class="social-icons"
-                target="_blank"
-              >
-                <FacebookIcon />
-              </a>
-              <a
-                :href="`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}`"
-                @click="googleAnalytics('linkedin')"
-                class="social-icons"
-                target="_blank"
-              >
-                <LinkdinIcon />
-              </a>
-              <span class="social-icons" @click="copyToClipboard">
-                <CopyLinkIcon />
-              </span>
-            </div>
-          </div>
-          <nav
-            v-if="article.body.toc"
-            class="navbar navbar-expand bg-white sticky-top py-3"
+        <div class="blog__header">
+          <NuxtLink
+            :to="`/blog/`"
+            class="blog__back"
+            :class="article.body.toc ? 'blog__back__margin' : ''"
           >
-            <div class="collapse navbar-collapse">
-              <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                  <a
-                    class="dropdown-toggle"
-                    href="#"
-                    id="tocMenuLink"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Table of Contents
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="tocMenuLink">
-                    <li v-for="link of article.body.toc.links" :key="link.id">
-                      <NuxtLink class="dropdown-link" :to="`#${link.id}`">
-                        {{ link?.text }}
-                      </NuxtLink>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </nav>
-          <h1 class="mb-1 article__heading">{{ article.title }}</h1>
-          <div class="d-flex sm-text my-2 datentimeToRead">
-            <span>{{ formatDate(article.createdAt) }}</span>
-            <span>|</span>
-            <div
-              class="d-flex align-items-center justify-content-center timeToRead"
-            >
-              <ClockIcon color="#4f4f4f" />
-              <span>{{ article.readingTime.text }}</span>
-            </div>
-          </div>
-          <div class="sm-text mt-1 article__author-section">
-            by
+            <span>← Back</span>
+          </NuxtLink>
+          <div class="social__links">
             <a
-              :href="article.authorProfile"
-              :title="article.authorProfile"
+              :href="`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${article.title} by @_Formester_ `"
+              @click="googleAnalytics('twitter')"
+              class="social-icons"
               target="_blank"
-              rel="noopener"
             >
-              <span class="article__author">{{ article.author }}</span>
+              <TwitterIcon />
             </a>
+            <a
+              :href="`https://www.facebook.com/sharer.php?u=${encodedUrl}`"
+              @click="googleAnalytics('facebook')"
+              class="social-icons"
+              target="_blank"
+            >
+              <FacebookIcon />
+            </a>
+            <a
+              :href="`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}`"
+              @click="googleAnalytics('linkedin')"
+              class="social-icons"
+              target="_blank"
+            >
+              <LinkdinIcon />
+            </a>
+            <span class="social-icons" @click="copyToClipboard">
+              <CopyLinkIcon />
+            </span>
           </div>
-          <div class="blog__content">
-            <ContentDoc class="nuxt-content" />
-            <div class="popup__img">
-              <span class="image-preview-close">&times;</span>
-              <img src="" alt="" />
-            </div>
+        </div>
+        <nav
+          v-if="article.body.toc"
+          class="navbar navbar-expand bg-white sticky-top py-3"
+        >
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a
+                  class="dropdown-toggle"
+                  href="#"
+                  id="tocMenuLink"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Table of Contents
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="tocMenuLink">
+                  <li v-for="link of article.body.toc.links" :key="link.id">
+                    <NuxtLink class="dropdown-link" :to="`#${link.id}`">
+                      {{ link?.text }}
+                    </NuxtLink>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
-          <notifications position="bottom right" class="my-notification" />
+        </nav>
+        <h1 class="mb-1 article__heading">{{ article.title }}</h1>
+        <div class="d-flex sm-text my-2 datentimeToRead">
+          <span>{{ formatDate(article.createdAt) }}</span>
+          <span>|</span>
+          <div
+            class="d-flex align-items-center justify-content-center timeToRead"
+          >
+            <ClockIcon color="#4f4f4f" />
+            <span>{{ article.readingTime.text }}</span>
+          </div>
+        </div>
+        <div class="sm-text mt-1 article__author-section">
+          by
+          <a
+            :href="article.authorProfile"
+            :title="article.authorProfile"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="article__author">{{ article.author }}</span>
+          </a>
+        </div>
+        <div class="blog__content">
+          <ContentDoc class="nuxt-content" />
+          <div class="popup__img">
+            <span class="image-preview-close">&times;</span>
+            <img src="" alt="" />
+          </div>
+        </div>
+        <notifications position="bottom right" class="my-notification" />
 
-          <div v-if="relatedArticles" class="mt-5">
-            <h2 class="article__sub-heading">Related Blogs</h2>
-            <div class="row mt-4">
-              <RelatedArticleCard
-                v-for="relatedArticle in relatedArticles"
-                :key="relatedArticle._path"
-                :article="relatedArticle"
-                class="col-lg-6 related-article-card"
-              />
-            </div>
+        <div v-if="relatedArticles" class="mt-5">
+          <h2 class="article__sub-heading">Related Blogs</h2>
+          <div class="row mt-4">
+            <RelatedArticleCard
+              v-for="relatedArticle in relatedArticles"
+              :key="relatedArticle._path"
+              :article="relatedArticle"
+              class="col-lg-6 related-article-card"
+            />
           </div>
-        <!-- </ContentRenderer> -->
+        </div>
         <div class="mt-5">
           <DisqusComments :identifier="article._path" />
         </div>
@@ -136,12 +134,10 @@ import getSiteMeta from '../../utils/getSiteMeta'
 const route = useRoute().params
 const relatedArticles = ref()
 
-const { data: getBlog } = await useAsyncData(
-  'blog',
-  () =>
-    queryContent('/blog')
-      .where({ _path: `/blog/` + route.slug })
-      .find()
+const { data: getBlog } = await useAsyncData('blog', () =>
+  queryContent('/blog')
+    .where({ _path: `/blog/` + route.slug })
+    .find()
 )
 const article = ref(getBlog.value[0])
 
@@ -184,6 +180,7 @@ const meta = computed(() => {
     mainImageAlt:
       article.value?.coverImgAlt ||
       'Form builder showing drag and drop functionality',
+    keywords: article.value.keywords,
   }
   return getSiteMeta(metaData)
 })
@@ -202,6 +199,23 @@ useHead({
     },
     { name: 'twitter:label1', content: 'Written by' },
     { name: 'twitter:data1', content: article.value.author },
+    {
+      hid: 'author',
+      name: 'author',
+      property: 'article:author',
+      content: article.value.author,
+    },
+    {
+      hid: 'publisher',
+      name: 'publisher',
+      property: 'article:publisher',
+      content: 'Formester',
+    },
+    {
+      name: 'publish_date',
+      property: 'og:publish_date',
+      content: article.value.createdAt,
+    },
   ],
   link: [
     {
@@ -218,6 +232,10 @@ useJsonld(() => {
   if (article.value.coverImg) {
     imagesArray.push(`https://formester.com${article.value.coverImg}`)
   }
+
+  if (article.value.metaImages && article.value.metaImages.length > 0) {
+      imagesArray.push(...article.value.metaImages)
+    }
 
   const jsonData = [
     {
@@ -299,7 +317,7 @@ onMounted(async () => {
 })
 </script>
 
-<style >
+<style>
 .nuxt-content {
   margin-top: 18px;
   font-size: 17px;
@@ -359,7 +377,6 @@ onMounted(async () => {
 }
 
 @media only screen and (max-width: 768px) {
-
   .nuxt-content h2 {
     margin-top: 16px;
   }
@@ -402,8 +419,6 @@ onMounted(async () => {
   line-height: 31px;
   color: hsla(0, 0%, 31%, 1);
 }
-
-
 
 .sm-text {
   font-size: 14px;

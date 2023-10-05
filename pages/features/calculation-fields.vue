@@ -232,7 +232,7 @@ export default {
 
     useHead({
       title: 'Calculation Fields - Formester',
-      meta: [meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',

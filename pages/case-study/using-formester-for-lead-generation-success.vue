@@ -261,7 +261,7 @@ export default {
 
     useHead({
       title: "Uncovering Formester's Potential for Lead Generation Success",
-      meta: [meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',
