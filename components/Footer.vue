@@ -307,6 +307,11 @@ ul {
   padding: 0;
 }
 
+.socials {
+  display: flex;
+  gap: 5px;
+}
+
 .footer__container {
   background: linear-gradient(180deg, #4f3895 0.01%, #1d1240 100%);
   color: var(--clr-primary-light);
