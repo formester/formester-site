@@ -489,7 +489,7 @@ export default {
 
     useHead({
       title: 'Jotform Alternative | Formester vs Jotform - Formester',
-      meta: [meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',

@@ -491,7 +491,7 @@ export default {
 
     useHead({
       title: 'Formester vs Forms App | Forms App Alternative - Formester',
-      meta: [meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',

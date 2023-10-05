@@ -122,7 +122,7 @@ export default {
 
     useHead({
       title: 'Slack Integration | Google Sheets Integration - Formester',
-      meta: [meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',

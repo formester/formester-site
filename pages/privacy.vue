@@ -151,7 +151,7 @@ export default {
 
     useHead({
       title: 'Privacy Policy | Formester',
-      meta: [meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',

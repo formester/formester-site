@@ -83,7 +83,7 @@ export default {
 
     useHead({
       title: 'Plans & Pricing | Formester',
-      meta: [meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',

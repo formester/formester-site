@@ -359,7 +359,7 @@ export default {
 
     useHead({
       title: "Jotform 101: All About Jotform's Forms by Formester!",
-      meta: [meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',

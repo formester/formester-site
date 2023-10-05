@@ -457,7 +457,7 @@ export default {
 
     useHead({
       title: 'Typeform Alternative | Formester vs Typeform - Formester',
-      meta: [meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',
