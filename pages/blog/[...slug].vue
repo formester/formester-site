@@ -5,7 +5,7 @@
         class="container mw-920 mt-8rem"
         :class="{ 'mb-3rem': !(article.cta && article.cta.hidden) }"
       >
-        <ContentRenderer :value="article">
+        <!-- <ContentRenderer :value="article"> -->
           <div class="blog__header">
             <NuxtLink
               :to="`/blog/`"
@@ -114,7 +114,7 @@
               />
             </div>
           </div>
-        </ContentRenderer>
+        <!-- </ContentRenderer> -->
         <div class="mt-5">
           <DisqusComments :identifier="article._path" />
         </div>
@@ -136,10 +136,12 @@ import getSiteMeta from '../../utils/getSiteMeta'
 const route = useRoute().params
 const relatedArticles = ref()
 
-const { data: getBlog } = await useAsyncData('blog', () =>
-  queryContent('blog')
-    .where({ _path: `/blog/` + route.slug })
-    .find()
+const { data: getBlog } = await useAsyncData(
+  'blog',
+  () =>
+    queryContent('/blog')
+      .where({ _path: `/blog/` + route.slug })
+      .find()
 )
 const article = ref(getBlog.value[0])
 

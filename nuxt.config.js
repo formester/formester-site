@@ -7,9 +7,7 @@ export default defineNuxtConfig({
   // Global page headers: https://go.nuxtjs.dev/config-head
   nitro: {
     prerender: {
-      crawlLinks: true,
-      failOnError: false,
-      routes: ['/sitemap.xml', '/robots.txt']
+      ignore: ['/online-form-builder', '/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-you&', '/blog/how-branded-surveys-can-help-you-unlock-your-brand&']
     }
   },
   app: {

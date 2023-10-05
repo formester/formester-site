@@ -108,7 +108,7 @@ It's like they're the celebrities of the web-form world;
 
 ![Funny gif showing how popular Jotform & Typeform are, in the world of form-builders! ](/img/jotform-vs-typeform_gif.gif "How popular Jotform & Typeform are, in the world of form-builders! ")
 
-Except they empower you to [create impactful and meaningful web forms](/blog/tips-tricks-to-get-the-most-out-of-your-leads-on-formester/), instead of doling out autographs!
+Except they empower you to [create impactful and meaningful web forms](/blog/tips-tricks-to-get-the-most-out-of-your-leads-on-formester), instead of doling out autographs!
 
 Undoubtedly, both Jotform and Typeform are powerful form-builders, but when it comes to choosing one of them, users are usually in a spin!
 
@@ -223,7 +223,7 @@ So let's discuss in detail, the differences between Jotform and Typeform, taking
 
 ### 5. Logic and Branching Features
 
-**Jotform:** Jotform Offers advanced form logic capabilities, including [conditional branching](/blog/top-5-web-forms-with-conditional-logic-to-integrate-with-your-website-in-2023/), page skipping, and advanced routing options.
+**Jotform:** Jotform Offers advanced form logic capabilities, including [conditional branching](/blog/top-5-web-forms-with-conditional-logic-to-integrate-with-your-website-in-2023), page skipping, and advanced routing options.
 
 **Typeform:** Typeform provides basic form logic features, allowing users to show or hide questions based on previous answers, but with fewer customization options compared to JotForm.
 
@@ -354,7 +354,7 @@ Moreover, collaboration features are available exclusively in the upper-tier pla
 
 ### 22. Customer Support
 
-**Jotform:** Jotform is widely known for its excellent customer support through multiple channels, including email, live chat, and a [comprehensive knowledge base](https://www.jotform.com/blog/).
+**Jotform:** Jotform is widely known for its excellent customer support through multiple channels, including email, live chat, and a [comprehensive knowledge base](https://www.jotform.com/blog).
 
 **Typeform:** Typeform's customer support may have varying levels of service depending on the plan chosen.
 
@@ -406,13 +406,13 @@ Taking advantage of free trials or exploring demo versions of both platforms can
 >
 > ![Screenshot showing Typeform's Home-Page](/img/jotform-vs-typeform-2.png "Typeform's Home-Page")
 >
-> For eg.: Contact Forms, Pop-over/Pop-up Forms, [Registration Forms](/blog/registration-forms-101-definition-types-use-cases-more-how-to-create-free-template/), etc.
+> For eg.: Contact Forms, Pop-over/Pop-up Forms, [Registration Forms](/blog/registration-forms-101-definition-types-use-cases-more-how-to-create-free-template), etc.
 >
 > On the other hand, if you're conducting a survey, or gathering data for any purpose, which requires heavy-duty, feature-rich, complex forms, then Jotform is what you need!
 >
 > ![Screenshot showing Jotform's Home-Page](/img/jotform-vs-typeform_1.png "Jotform's Home-Page")
 >
-> For eg.: [Website Usability Survey](/blog/7-types-of-website-usability-survey-questions-to-ask-in-2023/), [Academic Quizzes](/blog/how-to-add-a-timer-to-your-google-quiz-includes-latest-alternative-works-without-add-ons-2023/), etc.
+> For eg.: [Website Usability Survey](/blog/7-types-of-website-usability-survey-questions-to-ask-in-2023), [Academic Quizzes](/blog/how-to-add-a-timer-to-your-google-quiz-includes-latest-alternative-works-without-add-ons-2023), etc.
 
 While JotForm and Typeform are popular choices for form creation, there's another player in the game that deserves your attention: Formester. 
 
