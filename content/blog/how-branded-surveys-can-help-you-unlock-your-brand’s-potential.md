@@ -326,7 +326,7 @@ At Formester, we have the perfect 3 step strategy, to get you going, right away!
 >
 > Make use of key features, such as conditional logic, to [ask only what is required](/features/conditional-logic/) and save both your and your users' time!
 >
-> > Bonus Tip: Here's a guide to [60+ questions you may choose from](/blog/7-types-of-website-usability-survey-questions-to-ask-in-2023/), to create the perfect survey!
+> > Bonus Tip: Here's a guide to [60+ questions you may choose from](/blog/7-types-of-website-usability-survey-questions-to-ask-in-2023), to create the perfect survey!
 
 3. Once you've gathered submissions on your surveys, use our powerful analytics system to track your metrics, gain critical insights and ofcourse, know your customers! 
 

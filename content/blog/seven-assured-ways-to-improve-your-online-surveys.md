@@ -107,7 +107,7 @@ If you aren’t utilizing online surveys already, it’s high time you start doi
 
 - **Automated data handling:** The biggest benefit of using online surveys is storing the responses automatically in a database. Additionally, it’s easy to handle with minimal chance of errors.
 
-- **Functional & design flexibility:** As surveys are often designed as [online forms](/blog/building-your-first-form-with-formester/ 'Building your first form with formester'), they can be curated as per your requirements. From different types of question responses to flexible design elements, an online survey is completely flexible for you to deliver a creative interaction.
+- **Functional & design flexibility:** As surveys are often designed as [online forms](/blog/building-your-first-form-with-formester 'Building your first form with formester'), they can be curated as per your requirements. From different types of question responses to flexible design elements, an online survey is completely flexible for you to deliver a creative interaction.
 
 - **Economical:** Before online surveys, collecting data from audiences was not only tedious - it was expensive too. Now as online surveys can be independently shared, and embedded in websites and emails - they’re way more economical.
 

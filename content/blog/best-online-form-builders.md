@@ -72,7 +72,7 @@ Tailoring your form and its user experience is vital, after all, that’s what y
 
 Do you want to learn to create online forms using Formester?
 
-Read more: [Here’s how Formester helps you create interactive and experiential online forms within minutes in a hassle-free way.](/blog/building-your-first-form-with-formester/ "Building your first form with formester")
+Read more: [Here’s how Formester helps you create interactive and experiential online forms within minutes in a hassle-free way.](/blog/building-your-first-form-with-formester "Building your first form with formester")
 
 **Pricing**: Starts free; Personal plan begins at $13/month
 
