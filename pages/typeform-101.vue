@@ -409,6 +409,10 @@ export default {
 
     return {
       typeformFaqs: typeformFaqs,
+      typeformKeyFeatures,
+      typeformStandOutFeatures,
+      typeformPopularUseCases,
+      typeformLimitations
     }
   },
 }

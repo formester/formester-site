@@ -413,6 +413,10 @@ export default {
     })
     return {
       jotformFaqs: jotformFaqs,
+      jotformKeyFeatures,
+      jotformLimitations,
+      jotformStandOutFeatures,
+      jotformUseCases
     }
   },
 }
