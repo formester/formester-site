@@ -10,8 +10,8 @@
             </ol>
             <div class="carousel-inner px-3 py-5">
                 <div class="carousel-item active">
-                    <div class="d-flex flex-column-reverse flex-lg-row ">
-                        <div class="col-lg-6 me-lg-5 mt-5 mt-lg-0">
+                    <div class="d-flex flex-column-reverse align-items-center flex-lg-row ">
+                        <div class="col-lg-6 me-lg-5 mt-5  ">
                             <h3 class="step__section-heading"><span class="hglt">Create</span> a form</h3>
                             <span class="">Use Formester backend link to power any existing HTML form on the web or create a sharable hosted form using our form builder tool.</span>
                         </div>
@@ -21,8 +21,8 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="d-flex flex-column-reverse flex-lg-row flex-lg-row-reverse">
-                        <div class="col-lg-6 ms-lg-5 mt-5 mt-lg-0">
+                    <div class="d-flex flex-column-reverse flex-lg-row align-items-center flex-lg-row-reverse">
+                        <div class="col-lg-6 ms-lg-5 mt-5  ">
                             <h3 class="step__section-heading"><span class="hglt">Spam</span> filtering</h3>
                             <span class="">Easily filter out spam using ReCaptcha. It takes a few clicks to configure while allowing you to control all settings when you have to. No expert knowledge is required.</span>
                         </div>
@@ -32,8 +32,8 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="d-flex flex-column-reverse flex-lg-row ">
-                        <div class="col-lg-6 me-lg-5 mt-5 mt-lg-0">
+                    <div class="d-flex flex-column-reverse align-items-center flex-lg-row ">
+                        <div class="col-lg-6 me-lg-5 mt-5 ">
                             <h3 class="step__section-heading"><span class="hglt">Automatic</span> response</h3>
                             <span class="">Replying to submissions is automatic. You can create and configure emails to go to your users on submission. We also notify you via email, Slack or any other way you like.</span>
                         </div>
