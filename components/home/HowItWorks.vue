@@ -52,7 +52,7 @@
 <style scoped>
 
 .step__section-heading {
-   font-size: 2rem;
+   font-size: 1.75rem;
    font-weight: 700;
 }
 
