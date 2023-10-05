@@ -107,7 +107,7 @@ export default {
 
     useHead({
       title: 'Conditional Logic Forms Builder - Formester',
-      meta: [meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',

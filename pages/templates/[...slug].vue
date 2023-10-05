@@ -40,7 +40,7 @@
     <more-templates :categories="categories" :template-slug="template.slug" />
 
     <!-- Preview Template Modal -->
-    <template-preview-modal
+    <PreviewModal
       :showPreviewModal="showPreviewModal"
       :template="template"
       @close-modal="closePreviewModal"
@@ -60,10 +60,10 @@ const showPreviewModal = ref(false)
 
 const route = useRoute().params
 
-const { data: template } = useFetch(
+const { data: template } = await useFetch(
   `https://app.formester.com/templates/${route.slug}.json`
 )
-const { data: categories } = useFetch(
+const { data: categories } = await useFetch(
   'https://app.formester.com/template_categories.json'
 )
 
@@ -83,7 +83,7 @@ const closePreviewModal = () => {
 }
 
 const meta = computed(() => {
-  const { name, description, metaTitle, metaDescription, previewImageUrl } =
+  const { name, description, metaTitle, metaDescription, previewImageUrl, keywords } =
     template.value || {}
   const metaData = {
     type: 'website',
@@ -97,32 +97,25 @@ const meta = computed(() => {
       previewImageUrl ||
       'https://formester.com/formester-form-builder-background.png',
     mainImageAlt: 'Formester Template',
+    keywords: keywords
   }
   return getSiteMeta(metaData)
 })
 
-useHead(() => {
-  return {
-    title: template.value.name
-      ? `${template.value.name} | Formester`
-      : 'Formester',
-    meta: [
-      ...meta.value,
-      {
-        name: 'keywords',
-        content: template.value.keywords,
-      },
-    ],
-    link: [
-      {
-        hid: 'canonical',
-        rel: 'canonical',
-        href: template.value
-          ? `https://formester.com/templates/${route.slug}/`
-          : '',
-      },
-    ],
-  }
+useHead({
+  title: template.value.name
+    ? `${template.value.name} | Formester`
+    : 'Formester',
+  meta: meta,
+  link: [
+    {
+      hid: 'canonical',
+      rel: 'canonical',
+      href: template.value
+        ? `https://formester.com/templates/${route.slug}/`
+        : '',
+    },
+  ],
 })
 
 const faqsSchema = computed(() => {
@@ -138,22 +131,13 @@ const faqsSchema = computed(() => {
   })
 })
 
-useJsonld({
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [...faqsSchema.value],
+useJsonld(() => {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqsSchema.value,
+  }
 })
-</script>
-
-<script>
-export default {
-  components: {
-    'template-preview-modal': PreviewModal,
-    MoreTemplates,
-    Faq,
-  },
-  computed: {},
-}
 </script>
 
 <style scoped>

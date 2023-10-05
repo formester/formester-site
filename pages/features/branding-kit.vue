@@ -90,7 +90,7 @@ export default {
 
     useHead({
       title: 'Brand Kit | Personalised Brand Form - Formester',
-      meta: [meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',

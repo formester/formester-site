@@ -274,7 +274,7 @@ export default {
 
     useHead({
       title: 'HTML Form Attributes | HTML Form Backend - Formester',
-      meta: [meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',

@@ -212,7 +212,7 @@ export default {
 
     useHead({
       title: 'Information Recall - Formester',
-      meta: [meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',

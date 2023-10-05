@@ -122,7 +122,7 @@ export default {
     useHead({
       title:
         'Online Forms With Signature | Online Form Builder With Signature - Formester',
-      meta: [meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',

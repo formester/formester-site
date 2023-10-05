@@ -106,7 +106,7 @@ export default {
 
     useHead({
       title: 'Form Analytics Software | Google Form Analytics - Formester',
-      meta: [meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',

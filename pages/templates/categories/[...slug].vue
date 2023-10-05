@@ -48,9 +48,7 @@ const listItems = computed(() => {
 
 useHead({
   title: currentCategory.value ? `${currentCategory.value} Templates | Formester` : '' ,
-  meta: [
-    ...meta.value
-  ],
+  meta: meta,
   link: [
     {
       hid: 'canonical',

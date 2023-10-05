@@ -70,7 +70,7 @@ export default {
     useHead({
       title:
         'Latest form Builder Software in 2023 | Best Online Form Builder to Use in 2023 - Formester',
-      meta: [meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',

@@ -235,7 +235,7 @@ export default {
     useHead({
       title:
         'Email Autoresponder Message | Personalised Email Responder - Formester',
-      meta: [meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',

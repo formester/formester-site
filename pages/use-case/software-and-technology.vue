@@ -257,7 +257,7 @@ export default {
 
     useHead({
       title: 'Formester: Empowering Software and Technology Industries',
-      meta: [meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',

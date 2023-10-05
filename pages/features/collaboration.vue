@@ -354,7 +354,7 @@ export default {
     useHead({
       title:
         'Simplified Collaboration: Form Access with Multiple Members & Clients!',
-      meta: [meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',

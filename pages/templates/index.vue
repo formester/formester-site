@@ -45,7 +45,7 @@ const listItems = computed(() => {
 
 useHead({
   title: 'Templates | Formester',
-  meta: [...meta.value],
+  meta: meta,
   link: [
     {
       hid: 'canonical',

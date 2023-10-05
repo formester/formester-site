@@ -354,7 +354,7 @@ export default {
 
     useHead({
       title: "Typeform 101: All About Typeform's Forms by Formester!",
-      meta: [meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',
