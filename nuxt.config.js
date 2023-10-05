@@ -42,7 +42,9 @@ export default defineNuxtConfig({
       ],
     },
   },
-
+  content: {
+    documentDriven: true
+  },
   router: {
     trailingSlash: true,
   },
