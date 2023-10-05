@@ -482,7 +482,7 @@ export default {
           'jotform alternative free reddit',
           'jotform alternative deutsch',
           'free alternatives to jotform',
-        ],
+        ].join(','),
       }
       return getSiteMeta(metaData)
     })

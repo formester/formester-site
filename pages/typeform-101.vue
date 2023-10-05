@@ -325,7 +325,7 @@ export default {
           'form builder software',
           'online form creator',
           'online form builder',
-        ],
+        ].join(','),
       }
       return getSiteMeta(metaData)
     })

@@ -250,7 +250,7 @@ export default {
           'create forms',
           'frequently asked questions',
           'FAQ',
-        ],
+        ].join(','),
       }
       return getSiteMeta(metaData)
     })
