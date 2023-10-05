@@ -60,9 +60,12 @@ const showPreviewModal = ref(false)
 
 const route = useRoute().params
 
-
-const { data: template }  = await useFetch(`https://app.formester.com/templates/${route.slug}.json`)
-const { data: categories }  = await useFetch('https://app.formester.com/template_categories.json')
+const { data: template } = await useFetch(
+  `https://app.formester.com/templates/${route.slug}.json`
+)
+const { data: categories } = await useFetch(
+  'https://app.formester.com/template_categories.json'
+)
 
 const redirectTo = () => {
   window.open(
@@ -84,9 +87,7 @@ const meta = computed(() => {
     template.value || {}
   const metaData = {
     type: 'website',
-    url: template.value
-      ? `https://formester.com/templates/${route.slug}/`
-      : '',
+    url: template.value ? `https://formester.com/templates/${route.slug}/` : '',
     title: metaTitle || name || 'Form Template | Formester',
     description:
       metaDescription ||
@@ -102,7 +103,9 @@ const meta = computed(() => {
 
 useHead(() => {
   return {
-    title: template.value.name ? `${template.value.name } | Formester` : 'Formester',
+    title: template.value.name
+      ? `${template.value.name} | Formester`
+      : 'Formester',
     meta: [
       ...meta.value,
       {
@@ -114,10 +117,31 @@ useHead(() => {
       {
         hid: 'canonical',
         rel: 'canonical',
-        href: template.value ? `https://formester.com/templates/${route.slug}/` : '',
+        href: template.value
+          ? `https://formester.com/templates/${route.slug}/`
+          : '',
       },
     ],
   }
+})
+
+const faqsSchema = computed(() => {
+  return (template.value?.faqs || []).map((faq) => {
+    return {
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    }
+  })
+})
+
+useJsonld({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [...faqsSchema.value],
 })
 </script>
 
@@ -128,20 +152,7 @@ export default {
     MoreTemplates,
     Faq,
   },
-  computed: {
-    faqsSchema() {
-      return (template.value?.faqs || []).map((faq) => {
-        return {
-          '@type': 'Question',
-          name: faq.question,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: faq.answer,
-          },
-        }
-      })
-    },
-  },
+  computed: {},
 }
 </script>
 
