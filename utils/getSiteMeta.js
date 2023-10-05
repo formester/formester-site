@@ -185,7 +185,7 @@ export default (meta) => {
     {
       hid: 'keywords',
       name: 'keywords',
-      content: (meta && meta.keywords) || keywords,
+      content: Array.isArray(meta?.keywords) ? meta?.keywords.join(',') : meta?.keywords || keywords
     },
   ]
 }
