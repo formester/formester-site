@@ -472,7 +472,7 @@ export default {
 
     useHead({
       title: 'Formester vs Zoho Forms | Zoho Forms Alternative - Formester',
-      meta: [meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',

@@ -97,7 +97,7 @@ const meta = computed(() => {
       previewImageUrl ||
       'https://formester.com/formester-form-builder-background.png',
     mainImageAlt: 'Formester Template',
-    keywords: keywords
+    keywords: template.value.keywords,
   }
   return getSiteMeta(metaData)
 })
@@ -138,6 +138,7 @@ useJsonld(() => {
     mainEntity: faqsSchema.value,
   }
 })
+
 </script>
 
 <style scoped>

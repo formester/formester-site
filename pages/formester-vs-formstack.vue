@@ -482,7 +482,7 @@ export default {
 
     useHead({
       title: 'Formester vs Formstack | Formstack Alternative - Formester',
-      meta: [meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',
