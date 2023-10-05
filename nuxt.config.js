@@ -6,6 +6,13 @@ const meta = getSiteMeta()
 
 export default defineNuxtConfig({
   // Global page headers: https://go.nuxtjs.dev/config-head
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      failOnError: false,
+      routes: ['/sitemap.xml', '/robots.txt']
+    }
+  },
   app: {
     head: {
       title: 'No Code Form Builder | Online HTML Form Builder - Formester',
