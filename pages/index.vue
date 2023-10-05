@@ -23,17 +23,17 @@
 <script>
 import Hero from '../components/home/Hero.vue'
 import TrustSeals from '../components/home/TrustSeals.vue'
-import FeatureList from '../components/home/FeatureList.vue'
 import Testimonials from '../components/home/Testimonials.vue'
 import HowItWorks from '../components/home/HowItWorks.vue'
+import FeatureList from '../components/home/FeatureList.vue'
 
 export default {
   components: {
     Hero,
     TrustSeals,
-    FeatureList,
     Testimonials,
     HowItWorks,
+    FeatureList,
   },
   head() {
     return {
@@ -54,7 +54,7 @@ export default {
           '@id': 'https://acornglobus.com',
           name: 'Formester',
           description:
-            "Build online forms using a No-Code, Drag-and-Drop Form Builder - Starts Free! Advanced Features, Third-Party Integrations & Robust Analytics!",
+            'Build online forms using a No-Code, Drag-and-Drop Form Builder - Starts Free! Advanced Features, Third-Party Integrations & Robust Analytics!',
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
           sameAs: [
