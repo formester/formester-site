@@ -53,7 +53,6 @@
 
 <script>
 import WhyFormester from '../../components/use-case/why-formester.vue'
-// import AdvanceFeatures from '../../components/use-case/advance-features.vue'
 import FeatureToggle from '../../components/FeatureToggle.vue'
 import IndustrySpecificUseCase from '../../components/use-case/industry-specific-use-case.vue'
 import FormBuildersComparisionTable from '../../components/form-builders-comparision-table.vue'
