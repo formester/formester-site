@@ -23,7 +23,7 @@
               src="/jotform101/jotform101-hero.svg"
               alt="Hero-Image"
               class="img-fluid hero__image"
-              sizes="100vw"
+              sizes="40vw"
             />
           </div>
         </div>

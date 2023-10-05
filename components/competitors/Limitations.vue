@@ -13,7 +13,7 @@
             :src="limitation.img"
             class="img-fluid"
             loading="lazy"
-            sizes="100vw"
+            sizes="40vw"
           />
           <h4 class="sub__section-heading mt-4">{{ limitation.title }}</h4>
           <p class="subheading__text">{{ limitation.description }}</p>

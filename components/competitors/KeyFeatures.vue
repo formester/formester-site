@@ -16,7 +16,7 @@
             class="img-fluid"
             :alt="feature.altText"
             loading="lazy"
-            sizes="100vw"
+            sizes="40vw"
           />
           <div class="text-start">
             <h4 class="sub__section-heading mt-4">{{ feature.title }}</h4>
