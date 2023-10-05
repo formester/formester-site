@@ -60,10 +60,10 @@ const showPreviewModal = ref(false)
 
 const route = useRoute().params
 
-const { data: template } = await useFetch(
+const { data: template } = useFetch(
   `https://app.formester.com/templates/${route.slug}.json`
 )
-const { data: categories } = await useFetch(
+const { data: categories } = useFetch(
   'https://app.formester.com/template_categories.json'
 )
 

@@ -299,30 +299,7 @@ onMounted(async () => {
 })
 </script>
 
-<style>
-p {
-  margin-bottom: 2rem;
-}
-.article__heading {
-  font-size: 2.25rem;
-  font-weight: 700;
-  line-height: 44px;
-  color: hsla(0, 0%, 20%, 1);
-}
-
-.article__sub-heading {
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 36px;
-  color: hsla(0, 0%, 20%, 1);
-}
-
-.article__desc {
-  font-size: 17px;
-  line-height: 31px;
-  color: hsla(0, 0%, 31%, 1);
-}
-
+<style >
 .nuxt-content {
   margin-top: 18px;
   font-size: 17px;
@@ -380,6 +357,53 @@ p {
   margin-top: 0px;
   margin-bottom: 16px;
 }
+
+@media only screen and (max-width: 768px) {
+
+  .nuxt-content h2 {
+    margin-top: 16px;
+  }
+
+  .nuxt-content h3 {
+    margin-top: 16px;
+  }
+
+  .nuxt-content img {
+    margin-top: 8px;
+    margin-bottom: 12px;
+  }
+}
+
+.blog__content img {
+  cursor: zoom-in;
+}
+</style>
+
+<style scoped>
+/* p {
+  margin-bottom: 2rem;
+} */
+.article__heading {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 44px;
+  color: hsla(0, 0%, 20%, 1);
+}
+
+.article__sub-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 36px;
+  color: hsla(0, 0%, 20%, 1);
+}
+
+.article__desc {
+  font-size: 17px;
+  line-height: 31px;
+  color: hsla(0, 0%, 31%, 1);
+}
+
+
 
 .sm-text {
   font-size: 14px;
@@ -500,19 +524,6 @@ p {
 @media only screen and (max-width: 768px) {
   .dropdown-link {
     min-width: 480px;
-  }
-
-  .nuxt-content h2 {
-    margin-top: 16px;
-  }
-
-  .nuxt-content h3 {
-    margin-top: 16px;
-  }
-
-  .nuxt-content img {
-    margin-top: 8px;
-    margin-bottom: 12px;
   }
 
   .popup__img img {
