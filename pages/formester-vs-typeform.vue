@@ -450,7 +450,7 @@ export default {
           'typeform alternative free reddit',
           'typeform alternative deutsch',
           'free alternatives to typeform',
-        ],
+        ].join(','),
       }
       return getSiteMeta(metaData)
     })

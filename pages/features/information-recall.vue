@@ -205,7 +205,7 @@ export default {
           'personalized instant emails',
           'instant pre-written reply',
           'send a copy of responses to submitters',
-        ],
+        ].join(','),
       }
       return getSiteMeta(metaData)
     })

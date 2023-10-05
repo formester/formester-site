@@ -465,7 +465,7 @@ export default {
           'zoho form alternative free reddit',
           'zoho form alternative deutsch',
           'free alternatives to zoho form',
-        ],
+        ].join(','),
       }
       return getSiteMeta(metaData)
     })

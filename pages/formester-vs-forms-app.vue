@@ -484,7 +484,7 @@ export default {
           'forms app alternative free reddit',
           'forms app alternative deutsch',
           'free alternatives to forms app',
-        ],
+        ].join(','),
       }
       return getSiteMeta(metaData)
     })

@@ -475,7 +475,7 @@ export default {
           'formstack alternative free reddit',
           'formstack alternative deutsch',
           'free alternatives to formstack',
-        ],
+        ].join(','),
       }
       return getSiteMeta(metaData)
     })

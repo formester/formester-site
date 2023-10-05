@@ -472,7 +472,7 @@ export default {
           'paperform alternative free reddit',
           'paperform alternative deutsch',
           'free alternatives to paperform',
-        ],
+        ].join(','),
       }
       return getSiteMeta(metaData)
     })
