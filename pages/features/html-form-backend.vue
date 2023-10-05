@@ -226,7 +226,7 @@ export default {
           'form endpoints for designers ',
           'form endpoints for developers',
           'contact form backend',
-        ],
+        ].join(','),
       }
       return getSiteMeta(metaData)
     })
