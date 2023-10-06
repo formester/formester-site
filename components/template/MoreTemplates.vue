@@ -49,14 +49,14 @@
     </div>
 
     <div class="mb-5">
-      <div v-if="templates && templates?.length" class="templates">
+      <div v-if="templates && templates.length" class="templates">
         <div v-for="(template, idx) in templates" :key="idx" class="template">
           <NuxtLink :to="`/templates/${template.slug}`">
             <img
-              v-if="template?.previewImageUrl"
+              v-if="template.previewImageUrl"
               class="img-fluid pointer template_img"
-              :src="template?.previewImageUrl"
-              :alt="template?.name"
+              :src="template.previewImageUrl"
+              :alt="template.name"
             />
             <nuxt-img
               v-else
@@ -65,7 +65,7 @@
               alt="Template placeholder image"
             />
             <h2 class="template-name pointer">
-              {{ template?.name }}
+              {{ template.name }}
             </h2>
           </NuxtLink>
         </div>
@@ -118,7 +118,9 @@ const templateSlug = ref(props.templateSlug);
 
 const isDragging = ref(false)
 const activeTab = ref(null)
+const templates = ref()
 const loading = ref(false)
+const route = useRoute()
 const tabsBox = ref(null)
 
 const handleIcons = () => {
@@ -174,7 +176,8 @@ const getTemplates = async (categorySlug) => {
   }
   loading.value = true
   try {
-    const { data: templates } = await useFetch('https://app.formester.com/templates.json', { params })
+    const { data } = await useFetch('https://app.formester.com/templates.json', { params})
+    templates.value = data.value
     templates.value = templates.value?.filter((el) => el.slug !== templateSlug.value)
     templates.value = templates.value?.splice(0, 6)
     loading.value = false
