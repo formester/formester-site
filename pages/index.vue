@@ -14,7 +14,7 @@
       />
     </div>
     <Testimonials />
-    <FeatureToggle :features="features" :sectionHeading="sectionHeading" />
+    <FeatureToggle :features="features" sectionHeading="Most Used Features" />
     <HowItWorks />
     <CallToActionSection />
   </div>
@@ -37,7 +37,6 @@ export default {
   },
   data() {
     return {
-      sectionHeading: 'Most Used Features',
       features: [
         {
           heading: 'Online Form Builder',
