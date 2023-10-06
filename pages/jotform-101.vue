@@ -49,7 +49,7 @@
       heading="Comparing Jotform with Other Leading Form Builders"
     />
     <WhyChooseFormester />
-    <FAQwithCategories :categories="jotformFaqs" />
+    <FAQwithCategories :faqQuestions="jotformFaqs" />
     <CallToActionSection
       :content="{
         heading: 'Start Your Formester Journey Today',
@@ -181,7 +181,7 @@ export default {
         {
           '@type': 'Corporation',
           '@id': 'https://acornglobus.com',
-        name: "Jotform 101: All About Jotform's Forms by Formester!",
+          name: "Jotform 101: All About Jotform's Forms by Formester!",
           description:
             "Discover Jotform's full potential with Formester's guide. Unlock powerful form building features, tips & tricks!",
           logo: 'https://formester.com/logo.png',
@@ -205,7 +205,7 @@ export default {
             {
               '@type': 'ListItem',
               position: 2,
-              name: "Jotform 101: All About Jotform’s Forms by Formester!",
+              name: 'Jotform 101: All About Jotform’s Forms by Formester!',
               item: 'https://formester.com/jotform101/',
             },
           ],
