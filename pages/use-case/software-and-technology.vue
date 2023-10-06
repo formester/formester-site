@@ -50,7 +50,7 @@
     <Testimonial :testimonials="randomTestimonials" />
     <TemplateSection />
     <CallToActionSection />
-    <FAQwithCategories :categories="categories" />
+    <FAQwithCategories :faqQuestions="faqQuestions" />
   </div>
 </template>
 
@@ -128,7 +128,7 @@ export default {
     faqsSchema() {
       const allFaqs = []
 
-      this.categories.forEach((c) => {
+      this.faqQuestions.forEach((c) => {
         if (c.faqs) {
           allFaqs.push(...c.faqs)
         }
@@ -271,7 +271,7 @@ export default {
           alt: 'Hero-Image',
         },
       ],
-      categories: softwareAndTechnologyFaqs,
+      faqQuestions: softwareAndTechnologyFaqs,
     }
   },
 }
