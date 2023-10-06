@@ -49,7 +49,7 @@
       heading="Comparing Typeform with Other Leading Form Builders"
     />
     <WhyChooseFormester />
-    <FAQwithCategories :categories="typeformFaqs" />
+    <FAQwithCategories :faqQuestions="typeformFaqs" />
     <CallToActionSection
       :content="{
         heading: 'Start Your Formester Journey Today',
@@ -182,7 +182,7 @@ export default {
         {
           '@type': 'Corporation',
           '@id': 'https://acornglobus.com',
-          name: 'Typeform 101: All About Typeform\'s Forms by Formester!',
+          name: "Typeform 101: All About Typeform's Forms by Formester!",
           description:
             "Use Typeform to unleash your form-building powers. Formester provides a guide to exploring Typeform's capabilities, tips, and why it excels!",
           logo: 'https://formester.com/logo.png',

@@ -82,7 +82,7 @@
     <Testimonial :testimonials="randomTestimonials" />
     <TemplateSection />
     <CallToActionSection />
-    <FAQwithCategories :categories="categories" />
+    <FAQwithCategories :faqQuestions="categories" />
   </div>
 </template>
 
