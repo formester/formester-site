@@ -118,9 +118,7 @@ const templateSlug = ref(props.templateSlug);
 
 const isDragging = ref(false)
 const activeTab = ref(null)
-const templates = ref([])
 const loading = ref(false)
-const route = useRoute()
 const tabsBox = ref(null)
 
 const handleIcons = () => {
@@ -176,8 +174,7 @@ const getTemplates = async (categorySlug) => {
   }
   loading.value = true
   try {
-    const { data } = await useFetch('https://app.formester.com/templates.json', {params})
-    templates.value = data.value
+    const { data: templates } = await useFetch('https://app.formester.com/templates.json', { params })
     templates.value = templates.value?.filter((el) => el.slug !== templateSlug.value)
     templates.value = templates.value?.splice(0, 6)
     loading.value = false
