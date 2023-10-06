@@ -304,11 +304,6 @@ ul {
   padding: 0;
 }
 
-.socials {
-  display: flex;
-  gap: 5px;
-}
-
 .footer__container {
   background: linear-gradient(180deg, #4f3895 0.01%, #1d1240 100%);
   color: var(--clr-primary-light);
@@ -353,6 +348,13 @@ ul {
 @media only screen and (max-width: 992px) {
   .footer__link {
     margin: 0.25rem 0px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .socials {
+    display: flex;
+    gap: 5px;
   }
 }
 </style>
