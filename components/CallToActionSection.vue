@@ -65,9 +65,6 @@ export default {
 </script>
 
 <style scoped>
-.section__heading {
-  font-size: 40px;
-}
 
 .section__subtitle {
   font-size: 20px;
