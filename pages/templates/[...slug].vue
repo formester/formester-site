@@ -83,8 +83,14 @@ const closePreviewModal = () => {
 }
 
 const meta = computed(() => {
-  const { name, description, metaTitle, metaDescription, previewImageUrl, keywords } =
-    template.value || {}
+  const {
+    name,
+    description,
+    metaTitle,
+    metaDescription,
+    previewImageUrl,
+    keywords,
+  } = template.value || {}
   const metaData = {
     type: 'website',
     url: template.value ? `https://formester.com/templates/${route.slug}/` : '',
@@ -132,13 +138,42 @@ const faqsSchema = computed(() => {
 })
 
 useJsonld(() => {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqsSchema.value,
-  }
+  const { name, description, previewImageUrl, category  } = template.value || {}
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqsSchema.value,
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: name,
+      description: description,
+      image: previewImageUrl,
+      url: `https://formester.com/templates/${route.slug}/`,
+      mainEntity: {
+        '@type': 'CreativeWork',
+        name: name,
+        description: description,
+        image: previewImageUrl,
+        url: `https://formester.com/templates/${route.slug}/`,
+        author: {
+          '@type': 'Organization',
+          name: 'Formester',
+          url: 'https://formester.com/',
+        },
+      },
+      isPartOf: {
+        '@type': 'CollectionPage',
+        name: category?.name,
+        url: `https://formester.com/templates/categories/${category?.slug}/`,
+        description:
+          'Browse our collection of Research Form templates for free.',
+      },
+    },
+  ]
 })
-
 </script>
 
 <style scoped>
