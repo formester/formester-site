@@ -21,7 +21,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="d-flex flex-column-reverse flex-lg-row align-items-center flex-lg-row-reverse">
+                    <div class="d-flex flex-column-reverse flex-lg-row align-items-center flex-lg-row">
                         <div class="col-lg-6 ms-lg-5 mt-5  ">
                             <h3 class="step__section-heading"><span class="hglt">Spam</span> filtering</h3>
                             <span class="">Easily filter out spam using ReCaptcha. It takes a few clicks to configure while allowing you to control all settings when you have to. No expert knowledge is required.</span>
