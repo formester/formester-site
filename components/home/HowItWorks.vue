@@ -16,7 +16,7 @@
                             <span class="">Use Formester backend link to power any existing HTML form on the web or create a sharable hosted form using our form builder tool.</span>
                         </div>
                         <div class="col-lg-5 m-auto">
-                            <nuxt-img src="/features/html-form.svg" class="w-lg-40 d-block img-fluid my-auto" alt="build your form easy with formester form builder" loading="lazy"/>
+                            <nuxt-img src="/home/how-it-works/create-a-form.svg" class="w-lg-40 d-block img-fluid my-auto" alt="build your form easy with formester form builder" loading="lazy"/>
                         </div>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                             <span class="">Easily filter out spam using ReCaptcha. It takes a few clicks to configure while allowing you to control all settings when you have to. No expert knowledge is required.</span>
                         </div>
                         <div class="col-lg-5 m-auto">
-                            <nuxt-img src="/features/spam-protection.svg" class="w-lg-40 d-block img-fluid my-auto" alt="share your form" loading="lazy"/>
+                            <nuxt-img src="/home/how-it-works/spam-filtering.svg" class="w-lg-40 d-block img-fluid my-auto" alt="share your form" loading="lazy"/>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                             <span class="">Replying to submissions is automatic. You can create and configure emails to go to your users on submission. We also notify you via email, Slack or any other way you like.</span>
                         </div>
                         <div class="col-lg-5 m-auto">
-                            <nuxt-img src="/features/auto-responder.svg" class="w-lg-40 d-block img-fluid my-auto" alt="Third slide" loading="lazy"/>
+                            <nuxt-img src="/home/how-it-works/automatic-response.svg" class="w-lg-40 d-block img-fluid my-auto" alt="Third slide" loading="lazy"/>
                         </div>
                     </div>
                 </div>
