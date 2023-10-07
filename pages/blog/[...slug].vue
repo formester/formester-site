@@ -64,13 +64,13 @@
                   <li v-for="link of article.body.toc.links" :key="link.id">
                     <NuxtLink class="dropdown-link" :to="`#${link.id}`">
                       {{ link?.text }}
-                      <li
+                      <!-- <li
                         class="childrenLink"
                         v-for="children of link.children"
                         :key="children.id"
                       >
                         {{ children?.text }}
-                      </li>
+                      </li> -->
                     </NuxtLink>
                   </li>
                 </ul>
