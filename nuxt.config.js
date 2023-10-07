@@ -137,7 +137,9 @@ export default defineNuxtConfig({
     liveEdit: false,
     markdown: {
       remarkPlugins: ['remark-reading-time'],
+      toc: { depth: 5, searchDepth: 2 }
     },
+
   },
   // Nuxt Image
   // please comment out the provider and netlify section while running application on local server
