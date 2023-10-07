@@ -17,116 +17,92 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import BlogCard from '@/components/blog/BlogCard.vue'
 import BlogFeatured from '@/components/blog/BlogFeatured.vue'
-import Loader from '@/components/Loader.vue'
-
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
 
-export default {
-  components: {
-    BlogCard,
-    BlogFeatured,
-    Loader,
-  },
-  async setup() {
-    const { data: articles } = useAsyncData('articles', () =>
-      queryContent('/blog')
-        .sort({ createdAt: -1 })
-        .where({ published: true, featured: false })
-        .find()
-    )
+const { data: articles } = useAsyncData('articles', () =>
+  queryContent('/blog')
+    .sort({ createdAt: -1 })
+    .where({ published: true, featured: false })
+    .find()
+)
 
-    const { data: heroArticles } = useAsyncData('heroArticles', () =>
-      queryContent('/blog')
-        .sort({ createdAt: -1 })
-        .where({ published: true, featured: true })
-        .find()
-    )
+const { data: heroArticles } = useAsyncData('heroArticles', () =>
+  queryContent('/blog')
+    .sort({ createdAt: -1 })
+    .where({ published: true, featured: true })
+    .find()
+)
 
-    onMounted(() => {
-      articles
-      heroArticles
-      blogsLoading, heroArticlesLoading
-    })
+const meta = computed(() => {
+  const metaData = {
+    type: 'website',
+    url: 'https://formester.com/blog/',
+    title:
+      'Latest form Builder Software in 2023 | Best Online Form Builder to Use in 2023 - Formester',
+    description:
+      "Best Online, No-Code Form Builder Software in 2023 - Formester's Blog Resource | Discover trending content related to all things form-building.",
+    mainImage: 'https://formester.com/formester-form-builder-background.png', // need to update with blog page image
+    mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with blog page image alt
+  }
+  return getSiteMeta(metaData)
+})
 
-    const meta = computed(() => {
-      const metaData = {
-        type: 'website',
-        url: 'https://formester.com/blog/',
-        title:
-          'Latest form Builder Software in 2023 | Best Online Form Builder to Use in 2023 - Formester',
+useHead({
+  title:
+    'Latest form Builder Software in 2023 | Best Online Form Builder to Use in 2023 - Formester',
+  meta: meta,
+  link: [
+    {
+      hid: 'canonical',
+      rel: 'canonical',
+      href: 'https://formester.com/blog/',
+    },
+  ],
+})
+
+useJsonld(() => {
+  return {
+    '@context': 'http://schema.org',
+    '@graph': [
+      {
+        '@type': 'Corporation',
+        '@id': 'https://acornglobus.com',
+        name: 'Formester',
         description:
           "Best Online, No-Code Form Builder Software in 2023 - Formester's Blog Resource | Discover trending content related to all things form-building.",
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with blog page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with blog page image alt
-      }
-      return getSiteMeta(metaData)
-    })
-
-    useHead({
-      title:
-        'Latest form Builder Software in 2023 | Best Online Form Builder to Use in 2023 - Formester',
-      meta: meta,
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: 'https://formester.com/blog/',
+        logo: 'https://formester.com/logo.png',
+        url: 'https://formester.com',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Delaware',
+          addressCountry: 'United States',
         },
-      ],
-    })
-
-    useJsonld(() => {
-      return {
-        '@context': 'http://schema.org',
-        '@graph': [
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': 'https://acornglobus.com',
+        itemListElement: [
           {
-            '@type': 'Corporation',
-            '@id': 'https://acornglobus.com',
-            name: 'Formester',
-            description:
-              "Best Online, No-Code Form Builder Software in 2023 - Formester's Blog Resource | Discover trending content related to all things form-building.",
-            logo: 'https://formester.com/logo.png',
-            url: 'https://formester.com',
-            address: {
-              '@type': 'PostalAddress',
-              addressLocality: 'Delaware',
-              addressCountry: 'United States',
-            },
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://formester.com',
           },
           {
-            '@type': 'BreadcrumbList',
-            '@id': 'https://acornglobus.com',
-            itemListElement: [
-              {
-                '@type': 'ListItem',
-                position: 1,
-                name: 'Home',
-                item: 'https://formester.com',
-              },
-              {
-                '@type': 'ListItem',
-                position: 2,
-                name: 'Blog',
-                item: 'https://formester.com/blog',
-              },
-            ],
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Blog',
+            item: 'https://formester.com/blog',
           },
         ],
-      }
-    })
-
-    return {
-      articles,
-      heroArticles,
-      meta,
-    }
-  },
-}
+      },
+    ],
+  }
+})
 </script>
 
 <style></style>
