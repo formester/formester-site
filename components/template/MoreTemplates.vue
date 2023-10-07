@@ -113,12 +113,14 @@ export default {
 import Loader from '../Loader.vue'
 import { ref, onMounted, defineProps } from 'vue'
 
-const props = defineProps(['categories', 'templateSlug'])
-const templateSlug = ref(props.templateSlug)
+const props = defineProps(['categories', 'templateSlug']);
+const templateSlug = ref(props.templateSlug);
 
 const isDragging = ref(false)
 const activeTab = ref(null)
+const templates = ref()
 const loading = ref(false)
+const route = useRoute()
 const tabsBox = ref(null)
 
 const handleIcons = () => {
@@ -133,6 +135,7 @@ const handleIcons = () => {
 }
 
 const scrollTabs = (direction) => {
+  // const tabsBox = this.$refs.tabsBox
   const scrollAmount = 180
 
   if (direction === 'left') {
@@ -166,14 +169,6 @@ const setActiveTab = (tab) => {
   })
 }
 
-const { data: result } = await useFetch('https://app.formester.com/templates.json')
-if (result) {
-  result.value = result.value?.filter((el) => el.slug !== templateSlug.value)
-  result.value = result.value.splice(0,6)
-}
-
-const templates = ref(result.value)
-
 const getTemplates = async (categorySlug) => {
   const params = {}
   if (categorySlug) {
@@ -181,23 +176,19 @@ const getTemplates = async (categorySlug) => {
   }
   loading.value = true
   try {
-    const { data } = await useFetch(
-      'https://app.formester.com/templates.json',
-      { params }
-    )
+    const { data } = await useFetch('https://app.formester.com/templates.json', { params})
     templates.value = data.value
-    templates.value = templates.value?.filter(
-      (el) => el.slug !== templateSlug.value
-    )
+    templates.value = templates.value?.filter((el) => el.slug !== templateSlug.value)
     templates.value = templates.value?.splice(0, 6)
     loading.value = false
-  } catch (error) {
-    console.error(error)
+  } catch (err) {
+    console.error(err)
     loading.value = false
   }
 }
 
 onMounted(() => {
+  getTemplates()
   handleIcons()
 })
 </script>

@@ -64,13 +64,6 @@
                   <li v-for="link of article.body.toc.links" :key="link.id">
                     <NuxtLink class="dropdown-link" :to="`#${link.id}`">
                       {{ link?.text }}
-                      <!-- <li
-                        class="childrenLink"
-                        v-for="children of link.children"
-                        :key="children.id"
-                      >
-                        {{ children?.text }}
-                      </li> -->
                     </NuxtLink>
                   </li>
                 </ul>
@@ -139,13 +132,14 @@ import CopyLinkIcon from '@/components/icons/copyLink.vue'
 import getSiteMeta from '@/utils/getSiteMeta'
 
 const route = useRoute().params
-// const relatedArticles = ref()
+const relatedArticles = ref()
 
-const { data: article } = await useAsyncData('article', () =>
+const { data: getBlog } = await useAsyncData('article', () =>
   queryContent('blog')
     .where({ _path: `/blog/` + route.slug })
     .findOne()
 )
+const article = ref(getBlog.value[0])
 
 const formatDate = (date) => {
   const options = { year: 'numeric', month: 'long', day: 'numeric' }
@@ -240,8 +234,8 @@ useJsonld(() => {
   }
 
   if (article.value.metaImages && article.value.metaImages.length > 0) {
-    imagesArray.push(...article.value.metaImages)
-  }
+      imagesArray.push(...article.value.metaImages)
+    }
 
   const jsonData = [
     {
@@ -289,28 +283,16 @@ useJsonld(() => {
   return jsonData
 })
 
-// const fetchRelatedBlogArticles = async () => {
-//   const result = await queryContent('blog').find()
-//   relatedArticles.value = result.value.filter(
-//     (relatedArticle) => article.value._path !== relatedArticle._path
-//   )
-//   const randIndex = Math.floor(
-//     Math.random() * (relatedArticles.value.length - 2)
-//   )
-//   relatedArticles.value = relatedArticles.value.slice(randIndex, randIndex + 2)
-// }
-
-
-const { data: result } = await useAsyncData('result', () => queryContent('blog').find())
-
-if (result) {
-  result.value = result.value.filter((relatedArticle) => article.value._path !== relatedArticle._path)
-  const randIndex = Math.floor(Math.random() * (result.value.length - 2))
-  result.value = result.value.slice(randIndex, randIndex + 2)
+const fetchRelatedBlogArticles = async () => {
+  const result = await queryContent('blog').find()
+  relatedArticles.value = result.filter(
+    (relatedArticle) => article.value._path !== relatedArticle._path
+  )
+  const randIndex = Math.floor(
+    Math.random() * (relatedArticles.value.length - 2)
+  )
+  relatedArticles.value = relatedArticles.value.slice(randIndex, randIndex + 2)
 }
-
-const relatedArticles = ref()
-relatedArticles.value = result.value
 
 onMounted(async () => {
   document.querySelectorAll('.blog__content img').forEach((image) => {
@@ -331,6 +313,7 @@ onMounted(async () => {
       document.querySelector('.popup__img ').style.display = 'none'
     }
   }
+  fetchRelatedBlogArticles()
 })
 </script>
 
@@ -417,11 +400,6 @@ onMounted(async () => {
 /* p {
   margin-bottom: 2rem;
 } */
-
-.childrenLink {
-  margin-top: 6px;
-  margin-left: 6px;
-}
 .article__heading {
   font-size: 2.25rem;
   font-weight: 700;

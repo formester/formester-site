@@ -13,7 +13,7 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <nuxt-img src="/toggle.svg" sizes="5vw" alt="Nav-menu-button" />
+        <nuxt-img src="/toggle.svg" alt="Nav-menu-button" />
       </button>
       <div
         class="collapse navbar-collapse"
