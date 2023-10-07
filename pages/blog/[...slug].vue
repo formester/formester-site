@@ -303,15 +303,15 @@ useJsonld(() => {
 // }
 
 
-const { data: result } = await useAsyncData('related', () => queryContent('/blog').find())
+// const { data: result } = await useAsyncData('related', () => queryContent('/blog').find())
 
-if (result) {
-  result.value = result.value.filter((relatedArticle) => article.value._path !== relatedArticle._path)
-  const randIndex = Math.floor(Math.random() * (result.value.length - 2))
-  result.value = result.value.slice(randIndex, randIndex + 2)
-}
+// if (result) {
+//   result.value = result.value.filter((relatedArticle) => article.value._path !== relatedArticle._path)
+//   const randIndex = Math.floor(Math.random() * (result.value.length - 2))
+//   result.value = result.value.slice(randIndex, randIndex + 2)
+// }
 
-const relatedArticles = ref(result.value)
+// const relatedArticles = ref(result.value)
 
 onMounted(async () => {
   document.querySelectorAll('.blog__content img').forEach((image) => {
