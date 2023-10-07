@@ -139,7 +139,7 @@ import CopyLinkIcon from '@/components/icons/copyLink.vue'
 import getSiteMeta from '@/utils/getSiteMeta'
 
 const route = useRoute().params
-// const relatedArticles = ref()
+const relatedArticles = ref()
 
 const { data: getBlog } = await useAsyncData('blog', () =>
   queryContent('/blog')
@@ -291,16 +291,27 @@ useJsonld(() => {
   return jsonData
 })
 
-
-const { data: result } = await useAsyncData('relatedArticle', () => queryContent('blog').find())
-
-if (result) {
-  result.value = result.value?.filter((relatedArticle) => article.value._path !== relatedArticle._path)
-  const randIndex = Math.floor(Math.random() * (result.value.length - 2))
-  result.value = result.value.slice(randIndex, randIndex + 2)
+const fetchRelatedBlogArticles = async () => {
+  const result = await queryContent('blog').find()
+  relatedArticles.value = result.filter(
+    (relatedArticle) => article.value._path !== relatedArticle._path
+  )
+  const randIndex = Math.floor(
+    Math.random() * (relatedArticles.value.length - 2)
+  )
+  relatedArticles.value = relatedArticles.value.slice(randIndex, randIndex + 2)
 }
 
-const relatedArticles = ref(result.value)
+
+// const { data: result } = await useAsyncData('relatedArticle', () => queryContent('blog').find())
+
+// if (result) {
+//   result.value = result.value?.filter((relatedArticle) => article.value._path !== relatedArticle._path)
+//   const randIndex = Math.floor(Math.random() * (result.value.length - 2))
+//   result.value = result.value.slice(randIndex, randIndex + 2)
+// }
+
+// const relatedArticles = ref(result.value)
 
 
 onMounted(async () => {
@@ -322,7 +333,7 @@ onMounted(async () => {
       document.querySelector('.popup__img ').style.display = 'none'
     }
   }
-  // fetchRelatedBlogArticles()
+  fetchRelatedBlogArticles()
 })
 </script>
 
