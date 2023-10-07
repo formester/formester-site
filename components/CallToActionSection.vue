@@ -66,16 +66,12 @@ export default {
 </script>
 
 <style scoped>
-.section__heading {
-  font-size: 40px;
-}
 
 .section__subtitle {
   font-size: 20px;
 }
 
 .call-to-action-section {
-  padding-top: 50px;
   padding-bottom: 50px;
 }
 .cta-bullets {

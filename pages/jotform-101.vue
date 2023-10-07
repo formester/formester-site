@@ -50,7 +50,7 @@
       heading="Comparing Jotform with Other Leading Form Builders"
     />
     <WhyChooseFormester />
-    <FAQwithCategories :categories="jotformFaqs" />
+    <FAQwithCategories :faqQuestions="jotformFaqs" />
     <CallToActionSection
       :content="{
         heading: 'Start Your Formester Journey Today',
