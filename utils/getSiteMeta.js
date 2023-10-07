@@ -90,7 +90,7 @@ const keywords = [
   'business sign up forms to turn website visitors into subscribers forms are customizable and include pop-up and embedded options',
   'forms are customizable',
   'forms include pop-up and embedded options',
-]
+].join(',')
 
 export default (meta) => {
   return [

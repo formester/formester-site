@@ -87,14 +87,14 @@
 
 <script>
 import CallToActionSection from '@/components/CallToActionSection.vue'
-import FeatureDetail from '../../components/FeatureDetail.vue'
+import FeatureDetail from '@/components/FeatureDetail.vue'
 import Testimonial from '@/components/Testimonial.vue'
-import { allTestimonials } from '@/constants/testimonials'
-import TemplateSection from '../../components/TemplateSection.vue'
-import CalculationInAction from '../../components/CalculationInAction.vue'
+import TemplateSection from '@/components/TemplateSection.vue'
+import CalculationInAction from '@/components/CalculationInAction.vue'
 
 // MetaTags
-import getSiteMeta from '../../utils/getSiteMeta'
+import getSiteMeta from '@/utils/getSiteMeta'
+import { fetchRandomTestimonials } from '@/utils/getTestimonials'
 
 export default {
   components: {
@@ -104,8 +104,85 @@ export default {
     TemplateSection,
     CalculationInAction,
   },
-  computed: {
-    meta() {
+  setup() {
+
+    const features = [
+      {
+        title: 'Automated Score Calculation: Effortless Calculations',
+        description:
+          'Easily assign point values to answer choices and let Formester handle the calculations automatically. Streamline the process of scoring quizzes, assessments, or any other interactive form that requires scoring.',
+        src: 'calculation/effortless-calculations.svg',
+        alt: 'Point values assigned to answer choices are automatically calculated, simplifying the scoring process for quizzes, assessments, and interactive forms.',
+      },
+      {
+        title: 'Real-Time Calculations: Deliver Instant Results',
+        description:
+          'Perform calculations on-the-fly as respondents interact with your form. Enable instant feedback and dynamic scoring based on their inputs.',
+        src: 'calculation/deliver-instant-results.svg',
+        alt: 'As respondents interact with the form, calculations are performed instantly, providing instant feedback and dynamic scoring based on their inputs.',
+      },
+      {
+        title: 'Advanced Form Logic: Unlock Advanced Functionality',
+        description:
+          'Utilize powerful conditional logic within Calculation Fields to perform dynamic calculations based on specific conditions. Customize the behaviour of your forms and create personalized experiences for your respondents.',
+        src: 'calculation/unlock-advanced-functionality.svg',
+        alt: 'Calculation Fields are utilized with powerful conditional logic to perform dynamic calculations based on specific conditions.',
+      },
+      {
+        title: 'Dynamic Score Generation: Create Interactive Forms',
+        description:
+          'Automatically generate dynamic scores based on specific criteria, allowing you to assess performance, evaluate results, and provide personalized feedback.',
+        src: 'calculation/create-interactive-forms.svg',
+        alt: 'Scores are automatically generated based on specific criteria, enabling assessment of performance, result evaluation, and personalized feedback.',
+      },
+      {
+        title: 'Price Calculation: Hassle-Free Transactions',
+        description:
+          'Seamlessly calculate prices and totals within your forms using Calculation Fields. Provide accurate pricing information, dynamically adjust costs based on selected options, and create optimized shopping baskets or order forms.',
+        src: 'calculation/hassle-free-transactions.svg',
+        alt: 'Prices and totals are seamlessly calculated, ensuring accurate pricing information. Costs are dynamically adjusted based on selected options, creating optimized shopping baskets or order forms for hassle-free transactions.',
+      },
+      {
+        title: 'Personalized Experiences: Offer Personalized Form Experience',
+        description:
+          "Customize form interactions by displaying calculated results, tailored recommendations, or dynamic content based on respondents' inputs.",
+        src: 'calculation/offer-personalized-form-experience.svg',
+        alt: "Calculated results, tailored recommendations, and dynamic content are displayed based on respondents' inputs, offering a personalized form experience.",
+      },
+    ]
+
+    const benefits = [
+      {
+        title: 'Automated Calculation',
+        description:
+          'The Calculation Field feature allows you to automate complex calculations, eliminating the need for manual calculations. This saves time and ensures accuracy.',
+        imageSrc: 'automated-calculation.jpg',
+        altText: 'icon showing calculation',
+      },
+      {
+        title: 'Real-Time Results',
+        description:
+          'With real-time calculations, respondents can instantly see the results of their inputs. This provides immediate feedback and enhances the interactive experience.',
+        imageSrc: 'real-time-results.jpg',
+        altText: 'icon showing a graph, that displays the real time results',
+      },
+      {
+        title: 'Advanced Form Logic',
+        description:
+          'The Calculation Field feature enables you to apply advanced form logic, such as conditional calculations and dynamic field interactions. This flexibility allows you to create sophisticated and personalized form experiences.',
+        imageSrc: 'advanced-form-logic.jpg',
+        altText: 'icon showing form',
+      },
+      {
+        title: 'Streamlined Pricing and Data Handling',
+        description:
+          'Calculation Fields simplify price calculations, making it easy to generate totals, discounts, or taxes. Additionally, the feature facilitates efficient data handling by automatically calculating and storing important metrics for analysis and reporting.',
+        imageSrc: 'streamlined-pricing-and-data-handling.jpg',
+        altText: 'icon showing storage for handling data',
+      },
+    ]
+
+    const meta = computed(() => {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/features/calculation/',
@@ -148,15 +225,14 @@ export default {
           'personalized instant emails',
           'instant pre-written reply',
           'send a copy of responses to submitters',
-        ],
+        ].join(','),
       }
       return getSiteMeta(metaData)
-    },
-  },
-  head() {
-    return {
+    })
+
+    useHead({
       title: 'Calculation Fields - Formester',
-      meta: [...this.meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',
@@ -164,10 +240,9 @@ export default {
           href: 'https://formester.com/features/calculation-fields/',
         },
       ],
-    }
-  },
-  jsonld() {
-    return {
+    })
+
+    useJsonld({
       '@context': 'http://schema.org',
       '@graph': [
         {
@@ -203,93 +278,27 @@ export default {
           ],
         },
       ],
+    })
+
+    const randomTestimonials = ref([])
+
+    const fetchTestimonials = async () => {
+      try {
+        randomTestimonials.value = await fetchRandomTestimonials()
+      } catch (error) {
+        console.error('Error fetching random testimonials:', error)
+      }
     }
-  },
-  data() {
+
+    onMounted(() => {
+      fetchTestimonials()
+    })
+
     return {
-      features: [
-        {
-          title: 'Automated Score Calculation: Effortless Calculations',
-          description:
-            'Easily assign point values to answer choices and let Formester handle the calculations automatically. Streamline the process of scoring quizzes, assessments, or any other interactive form that requires scoring.',
-          src: 'calculation/effortless-calculations.svg',
-          alt: 'Point values assigned to answer choices are automatically calculated, simplifying the scoring process for quizzes, assessments, and interactive forms.',
-        },
-        {
-          title: 'Real-Time Calculations: Deliver Instant Results',
-          description:
-            'Perform calculations on-the-fly as respondents interact with your form. Enable instant feedback and dynamic scoring based on their inputs.',
-          src: 'calculation/deliver-instant-results.svg',
-          alt: 'As respondents interact with the form, calculations are performed instantly, providing instant feedback and dynamic scoring based on their inputs.',
-        },
-        {
-          title: 'Advanced Form Logic: Unlock Advanced Functionality',
-          description:
-            'Utilize powerful conditional logic within Calculation Fields to perform dynamic calculations based on specific conditions. Customize the behaviour of your forms and create personalized experiences for your respondents.',
-          src: 'calculation/unlock-advanced-functionality.svg',
-          alt: 'Calculation Fields are utilized with powerful conditional logic to perform dynamic calculations based on specific conditions.',
-        },
-        {
-          title: 'Dynamic Score Generation: Create Interactive Forms',
-          description:
-            'Automatically generate dynamic scores based on specific criteria, allowing you to assess performance, evaluate results, and provide personalized feedback.',
-          src: 'calculation/create-interactive-forms.svg',
-          alt: 'Scores are automatically generated based on specific criteria, enabling assessment of performance, result evaluation, and personalized feedback.',
-        },
-        {
-          title: 'Price Calculation: Hassle-Free Transactions',
-          description:
-            'Seamlessly calculate prices and totals within your forms using Calculation Fields. Provide accurate pricing information, dynamically adjust costs based on selected options, and create optimized shopping baskets or order forms.',
-          src: 'calculation/hassle-free-transactions.svg',
-          alt: 'Prices and totals are seamlessly calculated, ensuring accurate pricing information. Costs are dynamically adjusted based on selected options, creating optimized shopping baskets or order forms for hassle-free transactions.',
-        },
-        {
-          title: 'Personalized Experiences: Offer Personalized Form Experience',
-          description:
-            "Customize form interactions by displaying calculated results, tailored recommendations, or dynamic content based on respondents' inputs.",
-          src: 'calculation/offer-personalized-form-experience.svg',
-          alt: "Calculated results, tailored recommendations, and dynamic content are displayed based on respondents' inputs, offering a personalized form experience.",
-        },
-      ],
-      benefits: [
-        {
-          title: 'Automated Calculation',
-          description:
-            'The Calculation Field feature allows you to automate complex calculations, eliminating the need for manual calculations. This saves time and ensures accuracy.',
-          imageSrc: 'automated-calculation.jpg',
-          altText: 'icon showing calculation',
-        },
-        {
-          title: 'Real-Time Results',
-          description:
-            'With real-time calculations, respondents can instantly see the results of their inputs. This provides immediate feedback and enhances the interactive experience.',
-          imageSrc: 'real-time-results.jpg',
-          altText: 'icon showing a graph, that displays the real time results',
-        },
-        {
-          title: 'Advanced Form Logic',
-          description:
-            'The Calculation Field feature enables you to apply advanced form logic, such as conditional calculations and dynamic field interactions. This flexibility allows you to create sophisticated and personalized form experiences.',
-          imageSrc: 'advanced-form-logic.jpg',
-          altText: 'icon showing form',
-        },
-        {
-          title: 'Streamlined Pricing and Data Handling',
-          description:
-            'Calculation Fields simplify price calculations, making it easy to generate totals, discounts, or taxes. Additionally, the feature facilitates efficient data handling by automatically calculating and storing important metrics for analysis and reporting.',
-          imageSrc: 'streamlined-pricing-and-data-handling.jpg',
-          altText: 'icon showing storage for handling data',
-        },
-      ],
+      randomTestimonials,
+      features,
+      benefits
     }
-  },
-  async asyncData() {
-    let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(
-      Math.random() * (randomTestimonials.length - 2)
-    )
-    randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
-    return { randomTestimonials }
   },
 }
 </script>

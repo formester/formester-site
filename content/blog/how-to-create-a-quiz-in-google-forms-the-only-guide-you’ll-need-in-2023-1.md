@@ -245,7 +245,7 @@ The **Individual Tab** will let you see each of your responders' individual resp
 
 Y﻿ou also get the option to integrate your responses into a **Google Sheets Spreadshee**t.
 
-P﻿.S., did you know, you could [also add a timer to your Google Quiz](/blog/how-to-add-a-timer-to-your-google-quiz-includes-latest-alternative-works-without-add-ons-2023/)!
+P﻿.S., did you know, you could [also add a timer to your Google Quiz](/blog/how-to-add-a-timer-to-your-google-quiz-includes-latest-alternative-works-without-add-ons-2023)!
 
 ## E-Learning And Online Quizzes 
 

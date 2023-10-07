@@ -8,7 +8,11 @@
           >
             <h1 class="section__heading">Digital Signature</h1>
             <p class="hero__subheading mt-3">
-               Add e-sign to your online form easily using formester. E-sign has become increasingly popular in recent years as it offers a convenient and efficient way to sign documents. Traditional handwritten signatures can most often be replaced by electronic signatures.
+              Add e-sign to your online form easily using formester. E-sign has
+              become increasingly popular in recent years as it offers a
+              convenient and efficient way to sign documents. Traditional
+              handwritten signatures can most often be replaced by electronic
+              signatures.
             </p>
             <a
               href="https://app.formester.com/users/sign_up"
@@ -23,13 +27,16 @@
               src="/features/digital-signature/digital-signature-hero.svg"
               alt="Hero-Image"
               class="img-fluid hero__image"
+              sizes="30vw"
             />
           </div>
         </div>
       </div>
     </div>
     <div class="container py-5">
-      <h2 class="section__heading text-center">How does Digital Signature help?</h2>
+      <h2 class="section__heading text-center">
+        How does Digital Signature help?
+      </h2>
       <div class="row py-5">
         <FeatureDetail
           :feature="feature"
@@ -40,9 +47,7 @@
       </div>
     </div>
     <ThreeStepsCreateForm />
-    <Testimonial 
-      :testimonials="randomTestimonials"
-    />
+    <Testimonial :testimonials="randomTestimonials" />
     <TemplateSection />
     <CallToActionSection />
   </div>
@@ -50,22 +55,61 @@
 
 <script>
 import CallToActionSection from '@/components/CallToActionSection.vue'
-import FeatureDetail from '../../components/FeatureDetail.vue'
+import FeatureDetail from '@/components/FeatureDetail.vue'
 import Testimonial from '@/components/Testimonial.vue'
-import { allTestimonials } from '@/constants/testimonials'
-import TemplateSection from '../../components/TemplateSection.vue'
+import TemplateSection from '@/components/TemplateSection.vue'
 
 // MetaTags
-import getSiteMeta from '../../utils/getSiteMeta'
+import getSiteMeta from '@/utils/getSiteMeta'
+import { fetchRandomTestimonials } from '@/utils/getTestimonials'
 
 export default {
-  components: { FeatureDetail, CallToActionSection, Testimonial, TemplateSection },
-  computed: {
-    meta() {
+  components: {
+    FeatureDetail,
+    CallToActionSection,
+    Testimonial,
+    TemplateSection,
+  },
+  setup() {
+    const features = [
+      {
+        title: 'Speed and Efficiency',
+        description:
+          'Getting a signature faster is one of its greatest advantages. Signing this form electronically takes just a few minutes.',
+        src: 'digital-signature/speed-n-efficiency-illus.svg',
+      },
+      {
+        title: 'Security',
+        description:
+          'E-signature forms are also more secure than physical ones. There is always the possibility of losing or stealing a physical form. Electronic signatures are also harder to forge than physical ones.',
+        src: 'digital-signature/security-illus.svg',
+      },
+      {
+        title: 'Professional Documents',
+        description:
+          'Create documents that look professional with your company branding and logo. With custom domain feature you can personalize it  even further',
+        src: 'digital-signature/professional-document-illus.svg',
+      },
+      {
+        title: 'Easy Sharing',
+        description:
+          'One click share to send documents to one or hundred users in under a minute. They get the document in their inbox with a link to sign and complete it',
+        src: 'digital-signature/easy-sharing-illus.svg',
+      },
+      {
+        title: 'Completion Notification',
+        description:
+          'Once a party has completed the documented and signed it, you will get a notification alert and the other person will also get a confirmation about the document they have signed with a copy',
+        src: 'digital-signature/completion-notification-illus.svg',
+      },
+    ]
+
+    const meta = computed(() => {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/features/online-payment/',
-        title: 'Online Forms With Signature | Online Form Builder With Signature - Formester',
+        title:
+          'Online Forms With Signature | Online Form Builder With Signature - Formester',
         description:
           'Add e-sign to your online form easily - Formester | Document signing with secure electronic signatures (e-sign) | Formester Digital Signs',
         mainImage:
@@ -73,12 +117,12 @@ export default {
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with Html Form Backend page image alt
       }
       return getSiteMeta(metaData)
-    },
-  },
-  head() {
-    return {
-      title: 'Online Forms With Signature | Online Form Builder With Signature - Formester',
-      meta: [...this.meta],
+    })
+
+    useHead({
+      title:
+        'Online Forms With Signature | Online Form Builder With Signature - Formester',
+      meta: meta,
       link: [
         {
           hid: 'canonical',
@@ -86,10 +130,9 @@ export default {
           href: 'https://formester.com/features/digital-signature/',
         },
       ],
-    }
-  },
-  jsonld() {
-    return {
+    })
+
+    useJsonld({
       '@context': 'http://schema.org',
       '@graph': [
         {
@@ -97,7 +140,7 @@ export default {
           '@id': 'https://acornglobus.com',
           name: 'Online Forms With Signature | Online Form Builder With Signature - Formester',
           description:
-            "Add e-sign to your online form easily - Formester | Document signing with secure electronic signatures (e-sign) | Formester Digital Signs",
+            'Add e-sign to your online form easily - Formester | Document signing with secure electronic signatures (e-sign) | Formester Digital Signs',
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
           address: {
@@ -110,7 +153,7 @@ export default {
           '@type': 'BreadcrumbList',
           '@id': 'https://acornglobus.com',
           itemListElement: [
-          {
+            {
               '@type': 'ListItem',
               position: 1,
               name: 'Features',
@@ -121,53 +164,30 @@ export default {
               position: 2,
               name: 'Digital Signature',
               item: 'https://formester.com/features/digital-signature/',
-            }
+            },
           ],
         },
       ],
+    })
+
+    const randomTestimonials = ref([])
+
+    const fetchTestimonials = async () => {
+      try {
+        randomTestimonials.value = await fetchRandomTestimonials()
+      } catch (error) {
+        console.error('Error fetching random testimonials:', error)
+      }
     }
-  },
-  data() {
+
+    onMounted(() => {
+      fetchTestimonials()
+    })
+
     return {
-      features: [
-        {
-          title: 'Speed and Efficiency',
-          description:
-            'Getting a signature faster is one of its greatest advantages. Signing this form electronically takes just a few minutes.',
-          src: 'digital-signature/speed-n-efficiency-illus.svg',
-        },
-        {
-          title: 'Security',
-          description:
-            'E-signature forms are also more secure than physical ones. There is always the possibility of losing or stealing a physical form. Electronic signatures are also harder to forge than physical ones.',
-          src: 'digital-signature/security-illus.svg',
-        },
-        {
-          title: 'Professional Documents',
-          description:
-            'Create documents that look professional with your company branding and logo. With custom domain feature you can personalize it  even further',
-          src: 'digital-signature/professional-document-illus.svg',
-        },
-        {
-          title: 'Easy Sharing',
-          description:
-            'One click share to send documents to one or hundred users in under a minute. They get the document in their inbox with a link to sign and complete it',
-          src: 'digital-signature/easy-sharing-illus.svg',
-        },
-        {
-          title: 'Completion Notification',
-          description:
-            'Once a party has completed the documented and signed it, you will get a notification alert and the other person will also get a confirmation about the document they have signed with a copy',
-          src: 'digital-signature/completion-notification-illus.svg',
-        },
-      ],
+      randomTestimonials,
+      features,
     }
-  },
-  async asyncData() {
-    let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(Math.random() * (randomTestimonials.length - 2))
-    randomTestimonials = randomTestimonials.slice(randIndex,  randIndex + 2);
-    return {randomTestimonials}
   },
 }
 </script>

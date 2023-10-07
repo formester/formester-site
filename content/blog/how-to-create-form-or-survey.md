@@ -87,7 +87,7 @@ A comprehensive online form building tool enables you to cater to different busi
 
 ## Steps to Build Your Online Form Using Formester
 
-Let’s now begin with a stepwise guide to creating your online form. In our discussion, we will share the numerous touchpoints you need to know for [building your first form with Formester](/blog/building-your-first-form-with-formester/ 'Build your first form with Formester') .
+Let’s now begin with a stepwise guide to creating your online form. In our discussion, we will share the numerous touchpoints you need to know for [building your first form with Formester](/blog/building-your-first-form-with-formester 'Build your first form with Formester') .
 
 ### Step 1: Determine Your Data Collection Requirements
 

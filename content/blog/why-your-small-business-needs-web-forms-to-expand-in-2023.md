@@ -314,7 +314,7 @@ Now that we've discussed why your business shouldn't miss out on web forms, let'
 
 ### 1. Contact Forms
 
-Contact forms are the [most fundamental types of forms](/blog/how-to-add-a-wordpress-contact-form-without-a-plugin/) that your business's website should essentially feature.
+Contact forms are the [most fundamental types of forms](/blog/how-to-add-a-wordpress-contact-form-without-a-plugin) that your business's website should essentially feature.
 
 Apart from email ids, phone numbers, and physical addresses, contact forms are also a prime communication method, which you can offer your users.
 
@@ -341,7 +341,7 @@ You have the choice of creating separate registration forms for each of your ser
 
 ### 3. Payment Forms
 
-Payment forms are a [gem for small businesses](/blog/web-forms-how-and-where-to-use-them-for-your-business/).
+Payment forms are a [gem for small businesses](/blog/web-forms-how-and-where-to-use-them-for-your-business).
 
 Even if you don't have a website or app for your business, you can start collecting payments for your services by simply setting up a Payment form.
 
@@ -351,7 +351,7 @@ These forms help you cut down on the costs incurred by an E-commerce website.
 
 ### 4. Lead-Generation Forms
 
-Lead generation forms, as formerly discussed, are used to [convert your website visitors into leads and, ultimately, potential customers](/blog/create-lead-capture-form-effectively/).
+Lead generation forms, as formerly discussed, are used to [convert your website visitors into leads and, ultimately, potential customers](/blog/create-lead-capture-form-effectively).
 
 These forms offer an incentive or reward, in exchange for filling out the form.
 
@@ -367,7 +367,7 @@ And this is best accomplished by Customer Testimonials, Feedbacks and Reviews.
 
 Not only do they display your product value, but also help showcase your credibility and build your brand presence.
 
-Therefore, having feedback forms and requesting your customers to fill them, is a great way to [gain initial traction and build your brand](/templates/categories/feedback-forms/).
+Therefore, having feedback forms and requesting your customers to fill them, is a great way to [gain initial traction and build your brand](/templates/categories/feedback-forms).
 
 ### 6. Survey Forms
 
@@ -381,7 +381,7 @@ Survey forms are a great way to gain data about several crucial factors, such as
 * Customer Experience and Expectation
 * Product/Feature Development or Improvement
 
-Survey forms are the best way to [have your users convey what they expect from your business](/blog/7-types-of-website-usability-survey-questions-to-ask-in-2023/) or where there is scope for improvement.
+Survey forms are the best way to [have your users convey what they expect from your business](/blog/7-types-of-website-usability-survey-questions-to-ask-in-2023) or where there is scope for improvement.
 
 They are also capable of giving yo+u breakthrough ideas about new products and features, apart from optimizations for existing ones.++++++
 
@@ -395,11 +395,11 @@ The following tips should be kept in mind when creating any web form, in order t
 
 ### 1. Design and Question Formation 
 
-Create short and simple forms, with direct and open-ended questions, which don't bore the users, thereby [ensuring higher response rates](/blog/tips-tricks-to-get-the-most-out-of-your-leads-on-formester/).
+Create short and simple forms, with direct and open-ended questions, which don't bore the users, thereby [ensuring higher response rates](/blog/tips-tricks-to-get-the-most-out-of-your-leads-on-formester).
 
 ### 2. Conditional Logic
 
-Consider form-builders that offer advanced features like conditional logic, which enable the [creation of dynamic and intelligent forms](/blog/top-5-web-forms-with-conditional-logic-to-integrate-with-your-website-in-2023/).
+Consider form-builders that offer advanced features like conditional logic, which enable the [creation of dynamic and intelligent forms](/blog/top-5-web-forms-with-conditional-logic-to-integrate-with-your-website-in-2023).
 
 ### 3. Auto-Responder
 
@@ -415,7 +415,7 @@ Ensure your form builder comes with a credible spam protection feature, with cap
 
 ### 6. Brand Theme Consistency
 
-Maintain your [brand theme and messaging](/blog/how-branded-surveys-can-help-you-unlock-your-brand%E2%80%99s-potential/), consistently throughout your web forms, including strategic positioning of your brand logo.
+Maintain your [brand theme and messaging](https://formester.com/blog/how-branded-surveys-can-help-you-unlock-your-brand%E2%80%99s-potential/), consistently throughout your web forms, including strategic positioning of your brand logo.
 
 ### 7. Straight-forward CTA
 

@@ -90,7 +90,7 @@ As it is filling out a web form is a boring job;
 
 And if your business wants to get this boring job done,
 
-Then it would be best if you imbibed these qualities to [put out an intelligent web form](/blog/web-forms-how-and-where-to-use-them-for-your-business/);
+Then it would be best if you imbibed these qualities to [put out an intelligent web form](/blog/web-forms-how-and-where-to-use-them-for-your-business);
 
 That infact, is capable of gathering responses!
 

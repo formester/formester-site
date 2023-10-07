@@ -1,0 +1,268 @@
+<template>
+  <div>
+    <!-- Hero section -->
+    <section
+      class="container d-flex flex-column-reverse flex-lg-row template_hero"
+    >
+      <div
+        class="d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start mt-xl-0 mt-md-5 hero__info_container"
+      >
+        <h1 class="section__heading">{{ template.name }}</h1>
+        <p class="hero__subheading mt-3">{{ template.description }}</p>
+        <div class="btns-container d-flex align-items-center mt-2">
+          <button class="btn btn-use_template" @click="redirectTo">
+            Use Template
+          </button>
+          <button class="btn btn-preview_template" @click="openPreviewModal">
+            Preview Template
+          </button>
+        </div>
+      </div>
+      <div
+        class="d-flex align-items-center justify-content-center mt-lg-0 mt-4 hero__image_container"
+        @click="openPreviewModal"
+      >
+        <img
+          :src="template.previewImageUrl"
+          alt="Hero-Image"
+          class="img-fluid hero__image rounded pointer"
+        />
+        <div class="template__preview-btn d-flex align-itens-center">
+          <nuxt-img src="/eye-icon.svg" alt="template preview button" />
+          <span class="template__preview-btn__text">Preview</span>
+        </div>
+      </div>
+    </section>
+
+    <Faq v-if="template.faqs" :faqs="template.faqs" />
+
+    <!-- More templates section -->
+    <more-templates :categories="categories" :template-slug="template.slug" />
+
+    <!-- Preview Template Modal -->
+    <PreviewModal
+      :showPreviewModal="showPreviewModal"
+      :template="template"
+      @close-modal="closePreviewModal"
+      @redirect-to="redirectTo"
+    />
+  </div>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+import getSiteMeta from '@/utils/getSiteMeta'
+import PreviewModal from '../../components/template/PreviewModal.vue'
+import MoreTemplates from '../../components/template/MoreTemplates.vue'
+import Faq from '../../components/template/Faq.vue'
+
+const showPreviewModal = ref(false)
+
+const route = useRoute().params
+
+const { data: template } = await useFetch(
+  `https://app.formester.com/templates/${route.slug}.json`
+)
+const { data: categories } = await useFetch(
+  'https://app.formester.com/template_categories.json'
+)
+
+const redirectTo = () => {
+  window.open(
+    `https://app.formester.com/forms/new?template_id=${template.value.id}`,
+    '_blank'
+  )
+}
+
+const openPreviewModal = () => {
+  showPreviewModal.value = true
+}
+
+const closePreviewModal = () => {
+  showPreviewModal.value = false
+}
+
+const meta = computed(() => {
+  const {
+    name,
+    description,
+    metaTitle,
+    metaDescription,
+    previewImageUrl,
+    keywords,
+  } = template.value || {}
+  const metaData = {
+    type: 'website',
+    url: template.value ? `https://formester.com/templates/${route.slug}/` : '',
+    title: metaTitle || name || 'Form Template | Formester',
+    description:
+      metaDescription ||
+      description ||
+      "Explore Formester's no-code form templates! Create surveys, gather feedback, and manage events effortlessly. Simplify form building now!",
+    mainImage:
+      previewImageUrl ||
+      'https://formester.com/formester-form-builder-background.png',
+    mainImageAlt: 'Formester Template',
+    keywords: template.value.keywords,
+  }
+  return getSiteMeta(metaData)
+})
+
+useHead({
+  title: template.value.name
+    ? `${template.value.name} | Formester`
+    : 'Formester',
+  meta: meta,
+  link: [
+    {
+      hid: 'canonical',
+      rel: 'canonical',
+      href: template.value
+        ? `https://formester.com/templates/${route.slug}/`
+        : '',
+    },
+  ],
+})
+
+const faqsSchema = computed(() => {
+  return (template.value?.faqs || []).map((faq) => {
+    return {
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    }
+  })
+})
+
+useJsonld(() => {
+  const { name, description, previewImageUrl, category  } = template.value || {}
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqsSchema.value,
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: name,
+      description: description,
+      image: previewImageUrl,
+      url: `https://formester.com/templates/${route.slug}/`,
+      mainEntity: {
+        '@type': 'CreativeWork',
+        name: name,
+        description: description,
+        image: previewImageUrl,
+        url: `https://formester.com/templates/${route.slug}/`,
+        author: {
+          '@type': 'Organization',
+          name: 'Formester',
+          url: 'https://formester.com/',
+        },
+      },
+      isPartOf: {
+        '@type': 'CollectionPage',
+        name: category?.name,
+        url: `https://formester.com/templates/categories/${category?.slug}/`,
+        description:
+          'Browse our collection of Research Form templates for free.',
+      },
+    },
+  ]
+})
+</script>
+
+<style scoped>
+.template_hero {
+  gap: 2rem;
+  margin: 6.5rem auto;
+}
+
+.hero__info_container {
+  flex: 0.85;
+}
+
+.hero__image_container {
+  position: relative;
+  flex: 1;
+}
+
+.hero__image {
+  transition: all 0.3s ease-in;
+}
+.hero__image:hover {
+  filter: blur(1px) brightness(40%);
+}
+
+.template__preview-btn {
+  pointer-events: none;
+  opacity: 0;
+  gap: 6px;
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+  color: #fff;
+}
+.hero__image:hover + .template__preview-btn {
+  opacity: 1;
+}
+
+.btns-container {
+  gap: 1rem;
+}
+
+.btn {
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  transition: all 0.2s ease-out;
+}
+.btn-use_template {
+  background: #4f3895;
+  color: white;
+}
+
+.btn-use_template:hover {
+  background: #4f3895eb;
+}
+
+.btn-preview_template {
+  background: transparent;
+  border: 1px solid #4f3895;
+  color: #4f3895;
+}
+
+.btn-preview_template:hover {
+  background: #eee8ff47;
+}
+
+@media only screen and (max-width: 991px) {
+  .template_hero {
+    margin: 1rem auto 5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .btns-container {
+    gap: 1.5rem;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-use_template,
+  .btn-preview_template {
+    width: 100%;
+    padding: 18px;
+    font-size: 16px;
+  }
+}
+</style>

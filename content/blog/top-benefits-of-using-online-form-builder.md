@@ -215,7 +215,7 @@ By now, we all know that online form builders are great for creating forms witho
 
 - Finally, make sure you test your form thoroughly. It may seem obvious, but testing your form is important because it helps you identify problems before they become major issues.
 
-In the Formester blog, we have already covered this topic - [Best Online Form Builders 2022: How to Choose the Ideal One?](/blog/best-online-form-builders/ 'Best online form builders 2022'). We have listed out the factors to consider before you choose which tool will be the right choice for you.
+In the Formester blog, we have already covered this topic - [Best Online Form Builders 2022: How to Choose the Ideal One?](/blog/best-online-form-builders 'Best online form builders 2022'). We have listed out the factors to consider before you choose which tool will be the right choice for you.
 
 ## Why should you opt Formester
 

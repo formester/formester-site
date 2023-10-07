@@ -1,0 +1,580 @@
+<template>
+  <div>
+    <div class="container position-relative">
+      <article
+        class="container mw-920 mt-8rem"
+        :class="{ 'mb-3rem': !(article.cta && article.cta.hidden) }"
+      >
+        <div class="blog__header">
+          <NuxtLink
+            :to="`/blog/`"
+            class="blog__back"
+            :class="article.body.toc ? 'blog__back__margin' : ''"
+          >
+            <span>← Back</span>
+          </NuxtLink>
+          <div class="social__links">
+            <a
+              :href="`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${article.title} by @_Formester_ `"
+              @click="googleAnalytics('twitter')"
+              class="social-icons"
+              target="_blank"
+            >
+              <TwitterIcon />
+            </a>
+            <a
+              :href="`https://www.facebook.com/sharer.php?u=${encodedUrl}`"
+              @click="googleAnalytics('facebook')"
+              class="social-icons"
+              target="_blank"
+            >
+              <FacebookIcon />
+            </a>
+            <a
+              :href="`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}`"
+              @click="googleAnalytics('linkedin')"
+              class="social-icons"
+              target="_blank"
+            >
+              <LinkdinIcon />
+            </a>
+            <span class="social-icons" @click="copyToClipboard">
+              <CopyLinkIcon />
+            </span>
+          </div>
+        </div>
+        <nav
+          v-if="article.body.toc"
+          class="navbar navbar-expand bg-white sticky-top py-3"
+        >
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a
+                  class="dropdown-toggle"
+                  href="#"
+                  id="tocMenuLink"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Table of Contents
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="tocMenuLink">
+                  <li v-for="link of article.body.toc.links" :key="link.id">
+                    <NuxtLink class="dropdown-link" :to="`#${link.id}`">
+                      {{ link?.text }}
+                      <li
+                        class="childrenLink"
+                        v-for="children of link.children"
+                        :key="children.id"
+                      >
+                        {{ children?.text }}
+                      </li>
+                    </NuxtLink>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <h1 class="mb-1 article__heading">{{ article.title }}</h1>
+        <div class="d-flex sm-text my-2 datentimeToRead">
+          <span>{{ formatDate(article.createdAt) }}</span>
+          <span>|</span>
+          <div
+            class="d-flex align-items-center justify-content-center timeToRead"
+          >
+            <ClockIcon color="#4f4f4f" />
+            <span>{{ article.readingTime.text }}</span>
+          </div>
+        </div>
+        <div class="sm-text mt-1 article__author-section">
+          by
+          <a
+            :href="article.authorProfile"
+            :title="article.authorProfile"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="article__author">{{ article.author }}</span>
+          </a>
+        </div>
+        <div class="blog__content">
+          <ContentDoc class="nuxt-content" />
+          <div class="popup__img">
+            <span class="image-preview-close">&times;</span>
+            <img src="" alt="" />
+          </div>
+        </div>
+        <notifications position="bottom right" class="my-notification" />
+
+        <div v-if="relatedArticles" class="mt-5">
+          <h2 class="article__sub-heading">Related Blogs</h2>
+          <div class="row mt-4">
+            <RelatedArticleCard
+              v-for="relatedArticle in relatedArticles"
+              :key="relatedArticle._path"
+              :article="relatedArticle"
+              class="col-lg-6 related-article-card"
+            />
+          </div>
+        </div>
+        <div class="mt-5">
+          <DisqusComments :identifier="article._path" />
+        </div>
+      </article>
+    </div>
+    <CallToActionSection :content="article.cta" />
+  </div>
+</template>
+
+<script setup>
+import { ref, onMounted } from 'vue'
+import ClockIcon from '../../components/icons/ClockIcon.vue'
+import TwitterIcon from '../../components/icons/twitter.vue'
+import FacebookIcon from '../../components/icons/facebook.vue'
+import LinkdinIcon from '../../components/icons/linkdin.vue'
+import CopyLinkIcon from '../../components/icons/copyLink.vue'
+import getSiteMeta from '../../utils/getSiteMeta'
+
+const route = useRoute().params
+const slug = ref(route.slug)
+
+
+const { data: blog } = await useAsyncData(`blog:${slug.value}`, () =>
+  queryContent('/blog')
+    .where({ _path: `/blog/` + slug.value })
+    .find()
+)
+const article = ref(blog.value[0])
+
+const { data: articles } = await useAsyncData(
+  `relatedBlogs:${slug.value}`,
+  () => queryContent('/blog').find()
+)
+
+if (articles) {
+  articles.value = articles.value.filter(
+    (relatedArticle) => article.value._path !== relatedArticle._path
+  )
+  const randIndex = Math.floor(Math.random() * (articles.value.length - 2))
+  articles.value = articles.value.slice(randIndex, randIndex + 2)
+}
+
+const relatedArticles = ref(articles.value)
+
+const formatDate = (date) => {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' }
+  return new Date(date).toLocaleDateString('en', options)
+}
+
+const copyToClipboard = () => {
+  if (process.client) {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      // Notify user
+    })
+  }
+  googleAnalytics('custom_link')
+}
+
+const googleAnalytics = (platform) => {
+  gtag &&
+    gtag('event', 'share', {
+      method: platform,
+      content_type: 'blog',
+      item_id: article.value.title,
+    })
+}
+
+const encodedUrl = () => {
+  return encodeURIComponent(process.env.baseUrl + route.fullPath)
+}
+
+const meta = computed(() => {
+  const metaData = {
+    type: 'article',
+    url: `https://formester.com/blog/${route.slug}/`,
+    title: article.value?.metaTitle,
+    description: article.value?.metaDescription,
+    mainImage: article.value?.coverImg
+      ? `https://formester.com${article.value?.coverImg}`
+      : 'https://formester.com/formester-form-builder-background.png',
+    mainImageAlt:
+      article.value?.coverImgAlt ||
+      'Form builder showing drag and drop functionality',
+    keywords: article.value.keywords,
+  }
+  return getSiteMeta(metaData)
+})
+
+useHead({
+  title: article.value?.metaTitle,
+  meta: [
+    ...meta.value,
+    {
+      property: 'article:published_time',
+      content: article.value.createdAt,
+    },
+    {
+      property: 'article:modified_time',
+      content: article.value.updatedAt,
+    },
+    { name: 'twitter:label1', content: 'Written by' },
+    { name: 'twitter:data1', content: article.value.author },
+    {
+      hid: 'author',
+      name: 'author',
+      property: 'article:author',
+      content: article.value.author,
+    },
+    {
+      hid: 'publisher',
+      name: 'publisher',
+      property: 'article:publisher',
+      content: 'Formester',
+    },
+    {
+      name: 'publish_date',
+      property: 'og:publish_date',
+      content: article.value.createdAt,
+    },
+  ],
+  link: [
+    {
+      hid: 'canonical',
+      rel: 'canonical',
+      href: `https://formester.com/blog/${String(route.slug)}/`,
+    },
+  ],
+})
+
+useJsonld(() => {
+  const imagesArray = []
+
+  if (article.value.coverImg) {
+    imagesArray.push(`https://formester.com${article.value.coverImg}`)
+  }
+
+  if (article.value.metaImages && article.value.metaImages.length > 0) {
+    imagesArray.push(...article.value.metaImages)
+  }
+
+  const jsonData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': `https://formester.com/blog/${article.value._path}/`,
+      },
+      headline: article.value.title,
+      description: article.value.description,
+      image:
+        imagesArray.length > 0
+          ? imagesArray
+          : ['https://formester.com/formester-form-builder-background.png'],
+      author: {
+        '@type': 'Person',
+        name: article.value.author,
+        url: article.value.authorProfile,
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Formester',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://formester.com/logo.png',
+        },
+      },
+      datePublished: article.value.createdAt,
+    },
+  ]
+
+  // Append schema if available
+  if (article.value.schema) {
+    try {
+      article.value.schema.forEach((s) => {
+        let parsedSchema = JSON.parse(s.type)
+        if (typeof parsedSchema === 'object') {
+          jsonData.push(parsedSchema)
+        }
+      })
+    } catch (error) {}
+  }
+
+  return jsonData
+})
+
+onMounted(async () => {
+  document.querySelectorAll('.blog__content img').forEach((image) => {
+    image.onclick = () => {
+      document.querySelector('.popup__img').style.display = 'block'
+      document.querySelector('.popup__img img').src = image.getAttribute('src')
+      document.querySelector('.popup__img img').alt = image.getAttribute('alt')
+    }
+  })
+  document.querySelector('.popup__img img').onclick = () => {
+    document.querySelector('.popup__img ').style.display = 'none'
+  }
+  document.querySelector('.image-preview-close').onclick = () => {
+    document.querySelector('.popup__img ').style.display = 'none'
+  }
+  document.onkeydown = function (evt) {
+    if (evt.keyCode === 27) {
+      document.querySelector('.popup__img ').style.display = 'none'
+    }
+  }
+})
+</script>
+
+<style>
+.nuxt-content {
+  margin-top: 18px;
+  font-size: 17px;
+  line-height: 32px;
+  letter-spacing: 0.4px;
+  color: #0d0d0d;
+}
+
+.nuxt-content p {
+  margin-bottom: 1.4rem;
+}
+
+.nuxt-content h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 36px;
+  color: hsla(0, 0%, 20%, 1);
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+
+.nuxt-content h3 {
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 24px;
+  color: hsla(0, 0%, 20%, 1);
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.nuxt-content a {
+  color: var(--clr-primary);
+  text-decoration: underline;
+}
+
+.nuxt-content h1 a,
+.nuxt-content h2 a,
+.nuxt-content h3 a,
+.nuxt-content h4 a,
+.nuxt-content h5 a,
+.nuxt-content h6 a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.nuxt-content img {
+  height: auto;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.nuxt-content ul li,
+.nuxt-content ol li {
+  margin-top: 0px;
+  margin-bottom: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+  .nuxt-content h2 {
+    margin-top: 16px;
+  }
+
+  .nuxt-content h3 {
+    margin-top: 16px;
+  }
+
+  .nuxt-content img {
+    margin-top: 8px;
+    margin-bottom: 12px;
+  }
+}
+
+.blog__content img {
+  cursor: zoom-in;
+}
+</style>
+
+<style scoped>
+/* p {
+  margin-bottom: 2rem;
+} */
+
+.childrenLink {
+  margin-top: 6px;
+  margin-left: 6px;
+}
+.article__heading {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 44px;
+  color: hsla(0, 0%, 20%, 1);
+}
+
+.article__sub-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 36px;
+  color: hsla(0, 0%, 20%, 1);
+}
+
+.article__desc {
+  font-size: 17px;
+  line-height: 31px;
+  color: hsla(0, 0%, 31%, 1);
+}
+
+.sm-text {
+  font-size: 14px;
+  line-height: 21px;
+  color: hsla(0, 0%, 31%, 1);
+}
+
+.article__author {
+  font-weight: 600;
+}
+
+.mw-920 {
+  max-width: 920px;
+}
+
+.mt-8rem {
+  margin-block: 8rem;
+}
+
+.mb-3rem {
+  margin-bottom: 3rem;
+}
+
+.article__author-section {
+  opacity: 0.75;
+}
+
+.datentimeToRead {
+  gap: 0.75rem;
+  opacity: 0.5;
+}
+
+.timeToRead {
+  gap: 0.5rem;
+}
+
+#tocMenuLink {
+  color: #777;
+  font-size: 16px;
+}
+
+.dropdown-menu {
+  border: 0 solid #e4e4e7;
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.8);
+  max-height: 450px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.dropdown-link {
+  padding: 0.5em;
+  min-width: 750px;
+  width: 100%;
+  display: block;
+}
+
+.blog__header {
+  margin-top: -4rem;
+  justify-content: space-between;
+  display: flex;
+}
+.blog__header span {
+  color: #777;
+}
+.social__links {
+  display: flex;
+}
+.social-icons {
+  margin: 0 6px;
+  cursor: pointer;
+}
+.social-icons {
+  fill: #000;
+}
+
+.blog__content img {
+  cursor: zoom-in;
+}
+
+.popup__img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(90, 90, 90, 0.96);
+  height: 100%;
+  width: 100%;
+  z-index: 1022;
+  display: none;
+}
+
+.popup__img span {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 30px;
+  font-weight: bolder;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.popup__img img {
+  cursor: zoom-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 992px) {
+  .dropdown-link {
+    min-width: 680px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .dropdown-link {
+    min-width: 480px;
+  }
+
+  .popup__img img {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .dropdown-link {
+    min-width: 370px;
+  }
+}
+@media only screen and (max-width: 432px) {
+  .dropdown-link {
+    min-width: 320px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .dropdown-link {
+    min-width: 250px;
+  }
+}
+</style>

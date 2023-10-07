@@ -13,20 +13,17 @@
 </template>
 
 <script>
-import ClockIcon from './icons/ClockIcon.vue'
 
 export default {
   name: 'RelatedArticleCard',
   props: ['article'],
-  components: {
-    ClockIcon,
-  },
   computed: {
     articleLink() {
       if (this.article.type) {
         return this.article.link
       }
-      return { name: 'blog-slug', params: { slug: this.article.slug } }
+      // return { name: 'blog-slug', params: { slug: this.article.slug } }
+      return this.article._path
     },
   },
   methods: {

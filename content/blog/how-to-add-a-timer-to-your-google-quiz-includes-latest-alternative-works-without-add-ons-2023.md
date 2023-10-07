@@ -79,7 +79,7 @@ metaImages:
 ---
 Web forms are becoming a rapidly growing means of data-collection.
 
-Whether it's a business or an educational institute, [every entity has its unique application of web forms](/blog/web-forms-how-and-where-to-use-them-for-your-business/).
+Whether it's a business or an educational institute, [every entity has its unique application of web forms](/blog/web-forms-how-and-where-to-use-them-for-your-business).
 
 ![Infographic showing: 6 Major Use-Cases Of Web Forms & Online Quizzes, namely: Contact Forms, Registration Forms, Entertainment quizzes, Academic/Educational Quizzes, Trivia Quizzes and Survey Forms](/img/14.png "6 Major Use-Cases Of Web Forms & Online Quizzes, namely: Contact Forms, Registration Forms, Entertainment quizzes, Academic/Educational Quizzes, Trivia Quizzes and Survey Forms")
 
@@ -105,7 +105,7 @@ Whilst in an academic context, this translates as:
 * Assignment Submissions based on deadlines
 * Program registrations, etc.
 
-If you clicked on this blog, chances are highly likely that you are a teacher who wants to [administer online quizzes](/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-you%E2%80%99ll-need-in-2023-1/);
+If you clicked on this blog, chances are highly likely that you are a teacher who wants to [administer online quizzes](https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-you%E2%80%99ll-need-in-2023-1/);
 
 Without compromising on the [supervision and accountability factors](https://www.kumon.co.uk/blog/benefits-of-timing-my-childs-work/).
 

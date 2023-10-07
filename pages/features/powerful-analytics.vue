@@ -25,13 +25,16 @@
               src="/features/powerful-analytics/powerful-analytics.svg"
               alt="Hero-Image"
               class="img-fluid hero__image"
+              sizes="40vw"
             />
           </div>
         </div>
       </div>
     </div>
     <div class="container py-5">
-      <h2 class="section__heading text-center">How does Powerful Analytics help?</h2>
+      <h2 class="section__heading text-center">
+        How does Powerful Analytics help?
+      </h2>
       <div class="row py-5">
         <FeatureDetail
           :feature="feature"
@@ -42,9 +45,7 @@
       </div>
     </div>
     <ThreeStepsCreateForm />
-    <Testimonial 
-      :testimonials="randomTestimonials"
-    />
+    <Testimonial :testimonials="randomTestimonials" />
     <TemplateSection />
     <CallToActionSection />
   </div>
@@ -52,18 +53,44 @@
 
 <script>
 import CallToActionSection from '@/components/CallToActionSection.vue'
-import FeatureDetail from '../../components/FeatureDetail.vue'
+import FeatureDetail from '@/components/FeatureDetail.vue'
 import Testimonial from '@/components/Testimonial.vue'
-import { allTestimonials } from '@/constants/testimonials'
 
 // MetaTags
-import getSiteMeta from '../../utils/getSiteMeta'
-import TemplateSection from '../../components/TemplateSection.vue'
+import getSiteMeta from '@/utils/getSiteMeta'
+import TemplateSection from '@/components/TemplateSection.vue'
+import { fetchRandomTestimonials } from '@/utils/getTestimonials'
 
 export default {
-  components: { FeatureDetail, CallToActionSection, Testimonial, TemplateSection },
-  computed: {
-    meta() {
+  components: {
+    FeatureDetail,
+    CallToActionSection,
+    Testimonial,
+    TemplateSection,
+  },
+  setup() {
+    const features = [
+      {
+        title: 'Knowing Your Customers',
+        description:
+          'The data can be filtered by traffic source, device, location, browser, operating system, and other crucial factors. Using your analytics account, you can analyze user behavior and statistics over time.',
+        src: 'powerful-analytics/knowing-your-customers.svg',
+      },
+      {
+        title: 'Track your traffic by analyzing it',
+        description:
+          'You can see in detail where your visitors are coming from, what technology platforms they use, and which devices they are using to interact with your form in the traffic panel.',
+        src: 'powerful-analytics/track-your-traffic-by-analyzing-it.svg',
+      },
+      {
+        title: 'Provide critical insight',
+        description:
+          'Conversion rate is crucial. When your conversion rate is low, you have a high view rate but little interaction. This indicates that your questions are too long or that there is room for improvement.',
+        src: 'powerful-analytics/provide-critical-insight.svg',
+      },
+    ]
+
+    const meta = computed(() => {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/features/powerful-analytics/',
@@ -75,12 +102,11 @@ export default {
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with powerful analytics page image alt
       }
       return getSiteMeta(metaData)
-    },
-  },
-  head() {
-    return {
+    })
+
+    useHead({
       title: 'Form Analytics Software | Google Form Analytics - Formester',
-      meta: [...this.meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',
@@ -88,10 +114,9 @@ export default {
           href: 'https://formester.com/features/powerful-analytics/',
         },
       ],
-    }
-  },
-  jsonld() {
-    return {
+    })
+
+    useJsonld({
       '@context': 'http://schema.org',
       '@graph': [
         {
@@ -112,7 +137,7 @@ export default {
           '@type': 'BreadcrumbList',
           '@id': 'https://acornglobus.com',
           itemListElement: [
-          {
+            {
               '@type': 'ListItem',
               position: 1,
               name: 'Features',
@@ -123,42 +148,31 @@ export default {
               position: 2,
               name: 'Powerful Analytics',
               item: 'https://formester.com/features/powerful-analytics/',
-            }
+            },
           ],
         },
       ],
+    })
+
+    const randomTestimonials = ref([])
+
+    const fetchTestimonials = async () => {
+      try {
+        randomTestimonials.value = await fetchRandomTestimonials()
+      } catch (error) {
+        console.error('Error fetching random testimonials:', error)
+      }
     }
-  },
-  data() {
+
+    onMounted(() => {
+      fetchTestimonials()
+    })
+
     return {
-      features: [
-        {
-          title: 'Knowing Your Customers',
-          description:
-            'The data can be filtered by traffic source, device, location, browser, operating system, and other crucial factors. Using your analytics account, you can analyze user behavior and statistics over time.',
-          src: 'powerful-analytics/knowing-your-customers.svg',
-        },
-        {
-          title: 'Track your traffic by analyzing it',
-          description:
-            'You can see in detail where your visitors are coming from, what technology platforms they use, and which devices they are using to interact with your form in the traffic panel.',
-          src: 'powerful-analytics/track-your-traffic-by-analyzing-it.svg',
-        },
-        {
-          title: 'Provide critical insight',
-          description:
-            'Conversion rate is crucial. When your conversion rate is low, you have a high view rate but little interaction. This indicates that your questions are too long or that there is room for improvement.',
-          src: 'powerful-analytics/provide-critical-insight.svg',
-        },
-      ],
+      randomTestimonials,
+      features,
     }
-  },
-  async asyncData() {
-    let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(Math.random() * (randomTestimonials.length - 2))
-    randomTestimonials = randomTestimonials.slice(randIndex,  randIndex + 2);
-    return {randomTestimonials}
-  },
+  }
 }
 </script>
 

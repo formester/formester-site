@@ -29,14 +29,11 @@
       <NuxtLink
         v-for="category in templateCategories"
         :key="category.id"
-        :to="{
-          name: 'templates-categories-slug',
-          params: { slug: category.slug },
-        }"
+        :to="`/templates/categories/` + category.slug"
       >
         <h3
           class="category"
-          :class="{ active: activeCategory === category.slug }"
+          :class="{ active: activeCategory === category.name }"
         >
           {{ category.name }}
         </h3>
@@ -59,7 +56,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .category-heading {
   padding: 12px 36px;
   margin: 0;

@@ -54,14 +54,15 @@
 
 <script>
 import CallToActionSection from '@/components/CallToActionSection.vue'
-import FeatureDetail from '../../components/FeatureDetail.vue'
+import FeatureDetail from '@/components/FeatureDetail.vue'
 import Testimonial from '@/components/Testimonial.vue'
 import { allTestimonials } from '@/constants/testimonials'
-import TemplateSection from '../../components/TemplateSection.vue'
+import TemplateSection from '@/components/TemplateSection.vue'
 
 // MetaTags
-import getSiteMeta from '../../utils/getSiteMeta'
-import ThreeStepsCreateForm from '../../components/ThreeStepsCreateForm.vue'
+import getSiteMeta from '@/utils/getSiteMeta'
+import ThreeStepsCreateForm from '@/components/ThreeStepsCreateForm.vue'
+import { fetchRandomTestimonials } from '@/utils/getTestimonials'
 
 export default {
   components: {
@@ -71,8 +72,9 @@ export default {
     TemplateSection,
     ThreeStepsCreateForm,
   },
-  computed: {
-    meta() {
+  setup() {
+
+    const meta = computed(() => {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/features/auto-responder/',
@@ -84,12 +86,11 @@ export default {
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
       }
       return getSiteMeta(metaData)
-    },
-  },
-  head() {
-    return {
+    })
+
+    useHead({
       title: 'Brand Kit | Personalised Brand Form - Formester',
-      meta: [...this.meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',
@@ -97,10 +98,40 @@ export default {
           href: 'https://formester.com/features/branding-kit/',
         },
       ],
-    }
-  },
-  jsonld() {
-    return {
+    })
+
+    const features = [
+      {
+        title: 'Easy Brand Setup',
+        description:
+          "Formester's user-friendly interface allows you to easily establish your brand identity by linking your website, which automatically sets up your brand elements such as fonts, colors, and logo. By maintaining consistency, your customers will be able to instantly recognize your brand when interacting with your forms.",
+        src: 'brand-kit/easy-branding.svg',
+        alt: 'Get noticed by making the email personalized',
+      },
+      {
+        title: 'Logo Integration',
+        description:
+          'Seamlessly incorporate your company logo into your forms. Ensure your brand is visible and memorable, strengthening brand recognition and trust with your customers.',
+        src: 'brand-kit/logo-integration.svg',
+        alt: 'Email can be eaily build with auto responder',
+      },
+      {
+        title: 'Custom Fonts and Colors',
+        description:
+          "Select and apply your brand's fonts and colors to maintain a consistent look and feel throughout your forms. Enhance the user experience while reinforcing your brand identity.",
+        src: 'brand-kit/custom-fonts-colors.png',
+        alt: 'Have a personalised respose to end user',
+      },
+      {
+        title: 'Formester Watermark Removal',
+        description:
+          'Remove the Formester branding or watermark from your forms for a clean, professional appearance that fully showcases your brand. Enhance credibility and keep the focus on your own brand identity.',
+        src: 'brand-kit/formester-branding-removal.svg',
+        alt: 'Track your forms in real time',
+      },
+    ]
+
+    useJsonld({
       '@context': 'http://schema.org',
       '@graph': [
         {
@@ -136,49 +167,26 @@ export default {
           ],
         },
       ],
+    })
+
+    const randomTestimonials = ref([])
+
+    const fetchTestimonials = async () => {
+      try {
+        randomTestimonials.value = await fetchRandomTestimonials()
+      } catch (error) {
+        console.error('Error fetching random testimonials:', error)
+      }
     }
-  },
-  data() {
+
+    onMounted(() => {
+      fetchTestimonials()
+    })
+
     return {
-      features: [
-        {
-          title: 'Easy Brand Setup',
-          description:
-            "Formester's user-friendly interface allows you to easily establish your brand identity by linking your website, which automatically sets up your brand elements such as fonts, colors, and logo. By maintaining consistency, your customers will be able to instantly recognize your brand when interacting with your forms.",
-          src: 'brand-kit/easy-branding.svg',
-          alt: 'Get noticed by making the email personalized',
-        },
-        {
-          title: 'Logo Integration',
-          description:
-            'Seamlessly incorporate your company logo into your forms. Ensure your brand is visible and memorable, strengthening brand recognition and trust with your customers.',
-          src: 'brand-kit/logo-integration.svg',
-          alt: 'Email can be eaily build with auto responder',
-        },
-        {
-          title: 'Custom Fonts and Colors',
-          description:
-            "Select and apply your brand's fonts and colors to maintain a consistent look and feel throughout your forms. Enhance the user experience while reinforcing your brand identity.",
-          src: 'brand-kit/custom-fonts-colors.png',
-          alt: 'Have a personalised respose to end user',
-        },
-        {
-          title: 'Formester Watermark Removal',
-          description:
-            'Remove the Formester branding or watermark from your forms for a clean, professional appearance that fully showcases your brand. Enhance credibility and keep the focus on your own brand identity.',
-          src: 'brand-kit/formester-branding-removal.svg',
-          alt: 'Track your forms in real time',
-        },
-      ],
+      randomTestimonials,
+      features,
     }
-  },
-  async asyncData() {
-    let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(
-      Math.random() * (randomTestimonials.length - 2)
-    )
-    randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
-    return { randomTestimonials }
   },
 }
 </script>

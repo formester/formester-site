@@ -26,6 +26,7 @@
               src="/integration-hero.png"
               alt="Hero-Image"
               class="img-fluid hero__image"
+              sizes="40vw"
             />
           </div>
         </div>
@@ -104,8 +105,8 @@ export default {
       ],
     }
   },
-  computed: {
-    meta() {
+  setup() {
+    const meta = computed(() => {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/integrations/',
@@ -117,12 +118,11 @@ export default {
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with integrations page image alt
       }
       return getSiteMeta(metaData)
-    },
-  },
-  head() {
-    return {
+    })
+
+    useHead({
       title: 'Slack Integration | Google Sheets Integration - Formester',
-      meta: [...this.meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',
@@ -130,15 +130,14 @@ export default {
           href: 'https://formester.com/integrations/',
         },
       ],
-    }
-  },
-  jsonld() {
-    return {
+    })
+
+    useJsonld({
       '@context': 'http://schema.org',
       '@type': 'Corporation',
       name: 'Slack Integration | Google Sheets Integration - Formester',
       description:
-        "Streamline your workflow with our Slack and Google Sheets integration. Try Formester today and boost productivity in just a few clicks! Get started today.",
+        'Streamline your workflow with our Slack and Google Sheets integration. Try Formester today and boost productivity in just a few clicks! Get started today.',
       logo: 'https://formester.com/logo.png',
       url: 'https://formester.com',
       address: {
@@ -146,8 +145,8 @@ export default {
         addressLocality: 'Delaware',
         addressCountry: 'United States',
       },
-    }
-  },
+    })
+  }
 }
 </script>
 

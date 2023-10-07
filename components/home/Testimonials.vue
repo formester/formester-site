@@ -21,6 +21,7 @@
                   :src="`/testimonials/${testimonial.picture}`"
                   :alt="testimonial.picture"
                   loading="lazy"
+                  sizes="40vw"
                 />
                 <div>
                   <h6 class="name">{{ testimonial.user }}</h6>
@@ -33,9 +34,10 @@
         <div class="testimonial-content-wrapper">
           <p class="mb-3">{{ activeTestimonial.content }}</p>
           <div class="d-flex justify-content-end">
-            <img
-              :src="require(`@/assets/images/testimonials/${activeTestimonial.logo}`)"
+            <nuxt-img
+              :src="`/testimonials/${activeTestimonial.logo}`"
               :alt="activeTestimonial.logoAlt"
+              sizes="40vw"
             />
           </div>
           <nuxt-img

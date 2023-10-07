@@ -1,8 +1,5 @@
 <template>
-  <NuxtLink
-    :to="{ name: 'blog-slug', params: { slug: article.slug } }"
-    class="row px-3"
-  >
+  <NuxtLink :to="article._path" class="row px-3">
     <img
       :src="article.coverImg"
       class="col-lg-6 rounded img-fluid featured__blog-img"
@@ -19,7 +16,7 @@
       </div>
       <span class="mt-2 blog__timetoRead">
         <ClockIcon color="#828282" />
-        {{ article.readingStats.text }}
+        {{ article?.readingTime.text }}
       </span>
     </div>
   </NuxtLink>

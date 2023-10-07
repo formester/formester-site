@@ -258,6 +258,7 @@
                     class="mx-1"
                     target="_blank"
                     ><nuxt-img
+                      sizes="30vw"
                       src="/social/instagram.svg"
                       alt="Fomester instagram page"
                   /></a>
@@ -266,6 +267,7 @@
                     class="mx-1"
                     target="_blank"
                     ><nuxt-img
+                      sizes="30vw"
                       src="/social/twitter.svg"
                       alt="Formester twitter page"
                   /></a>
@@ -274,6 +276,7 @@
                     class="mx-1"
                     target="_blank"
                     ><nuxt-img
+                      sizes="30vw"
                       src="/social/facebook.svg"
                       alt="Formester facebook page"
                   /></a>
@@ -282,6 +285,7 @@
                     class="mx-1"
                     target="_blank"
                     ><nuxt-img
+                      sizes="30vw"
                       src="/social/linkedin.svg"
                       alt="Formester linkedin page"
                   /></a>
@@ -290,6 +294,7 @@
                     class="mx-1"
                     target="_blank"
                     ><nuxt-img
+                      sizes="30vw"
                       src="/social/youtube.svg"
                       alt="Formester youtube page"
                   /></a>
@@ -301,7 +306,7 @@
       </section>
       <div class="divider mt-4"></div>
       <div class="copyright d-flex justify-content-center mt-3">
-        © 2022 Acorn Globus. All rights reserved
+        © 2023 Acorn Globus. All rights reserved
       </div>
     </div>
   </footer>
@@ -360,6 +365,13 @@ ul {
 @media only screen and (max-width: 992px) {
   .footer__link {
     margin: 0.25rem 0px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .socials {
+    display: flex;
+    gap: 5px;
   }
 }
 </style>

@@ -8,7 +8,9 @@
           >
             <h1 class="section__heading">Online Payment</h1>
             <p class="hero__subheading mt-3">
-              Featuring secure PCI compliance, a responsive interface, and no additional charges, Formester makes receiving payments online more convenient than ever.
+              Featuring secure PCI compliance, a responsive interface, and no
+              additional charges, Formester makes receiving payments online more
+              convenient than ever.
             </p>
             <a
               href="https://app.formester.com/users/sign_up"
@@ -23,13 +25,16 @@
               src="/features/online-payment/online-payment-hero.svg"
               alt="Hero-Image"
               class="img-fluid hero__image"
+              sizes="40vw"
             />
           </div>
         </div>
       </div>
     </div>
     <div class="container py-5">
-      <h2 class="section__heading text-center">How does Online Payment help?</h2>
+      <h2 class="section__heading text-center">
+        How does Online Payment help?
+      </h2>
       <div class="row py-5">
         <FeatureDetail
           :feature="feature"
@@ -40,9 +45,7 @@
       </div>
     </div>
     <ThreeStepsCreateForm />
-    <Testimonial 
-      :testimonials="randomTestimonials"
-    />
+    <Testimonial :testimonials="randomTestimonials" />
     <TemplateSection />
     <CallToActionSection />
   </div>
@@ -50,18 +53,38 @@
 
 <script>
 import CallToActionSection from '@/components/CallToActionSection.vue'
-import FeatureDetail from '../../components/FeatureDetail.vue'
+import FeatureDetail from '@/components/FeatureDetail.vue'
 import Testimonial from '@/components/Testimonial.vue'
-import { allTestimonials } from '@/constants/testimonials'
 
 // MetaTags
-import getSiteMeta from '../../utils/getSiteMeta'
-import TemplateSection from '../../components/TemplateSection.vue'
+import getSiteMeta from '@/utils/getSiteMeta'
+import TemplateSection from '@/components/TemplateSection.vue'
+import { fetchRandomTestimonials } from '@/utils/getTestimonials'
 
 export default {
-  components: { FeatureDetail, CallToActionSection, Testimonial, TemplateSection },
-  computed: {
-    meta() {
+  components: {
+    FeatureDetail,
+    CallToActionSection,
+    Testimonial,
+    TemplateSection,
+  },
+  setup() {
+    const features = [
+      {
+        title: 'Pay by debit or credit card',
+        description:
+          "Payments can be made online using debit or credit cards without paying extra transaction fees! When you receive payments through your online forms, Formester doesn't charge you anything; your chosen payment processor charges you the standard rate. You can collect payments from hundreds of countries and currencies with 35+ payment gateways.",
+        src: 'online-payment/payment-by-card-illus.svg',
+      },
+      {
+        title: 'Stripe Integration',
+        description:
+          'Streamline your workflow with our free form integrations. Stripe payment integration allows you to seamlessly receive payments from customers through your forms. We will be adding more integrations soon.',
+        src: 'online-payment/payment-by-stripe-illus.svg',
+      },
+    ]
+
+    const meta = computed(() => {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/features/online-payment/',
@@ -73,12 +96,11 @@ export default {
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with Html Form Backend page image alt
       }
       return getSiteMeta(metaData)
-    },
-  },
-  head() {
-    return {
+    })
+
+    useHead({
       title: 'Online Payment Form | Secure Online Payment - Formester',
-      meta: [...this.meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',
@@ -86,10 +108,9 @@ export default {
           href: 'https://formester.com/features/online-payment/',
         },
       ],
-    }
-  },
-  jsonld() {
-    return {
+    })
+
+    useJsonld({
       '@context': 'http://schema.org',
       '@graph': [
         {
@@ -110,7 +131,7 @@ export default {
           '@type': 'BreadcrumbList',
           '@id': 'https://acornglobus.com',
           itemListElement: [
-          {
+            {
               '@type': 'ListItem',
               position: 1,
               name: 'Features',
@@ -121,35 +142,30 @@ export default {
               position: 2,
               name: 'Online Payment',
               item: 'https://formester.com/features/online-payment/',
-            }
+            },
           ],
         },
       ],
+    })
+
+    const randomTestimonials = ref([])
+
+    const fetchTestimonials = async () => {
+      try {
+        randomTestimonials.value = await fetchRandomTestimonials()
+      } catch (error) {
+        console.error('Error fetching random testimonials:', error)
+      }
     }
-  },
-  data() {
+
+    onMounted(() => {
+      fetchTestimonials()
+    })
+
     return {
-      features: [
-        {
-          title: 'Pay by debit or credit card',
-          description:
-            'Payments can be made online using debit or credit cards without paying extra transaction fees! When you receive payments through your online forms, Formester doesn\'t charge you anything; your chosen payment processor charges you the standard rate. You can collect payments from hundreds of countries and currencies with 35+ payment gateways.',
-          src: 'online-payment/payment-by-card-illus.svg',
-        },
-        {
-          title: 'Stripe Integration',
-          description:
-            'Streamline your workflow with our free form integrations. Stripe payment integration allows you to seamlessly receive payments from customers through your forms. We will be adding more integrations soon.',
-          src: 'online-payment/payment-by-stripe-illus.svg',
-        },
-      ],
+      randomTestimonials,
+      features,
     }
-  },
-  async asyncData() {
-    let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(Math.random() * (randomTestimonials.length - 2))
-    randomTestimonials = randomTestimonials.slice(randIndex,  randIndex + 2);
-    return {randomTestimonials}
   },
 }
 </script>

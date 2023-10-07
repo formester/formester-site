@@ -26,6 +26,7 @@
               src="/features/html-form-backend/easy-web-form.svg"
               alt="Hero-Image"
               class="img-fluid hero__image"
+              sizes="30vw"
             />
           </div>
         </div>
@@ -47,32 +48,32 @@
               <div class="card-body">
                 <p class="html">
                   &lt;<span style="color: #27ae60">form</span>
-                  <span style="color: #9b51e0">accept-charset</span>='UTF-8'
-                  <span style="color: #9b51e0">action</span
+                  <span style="color: #9b51e0"> accept-charset</span>='UTF-8'
+                  <span style="color: #9b51e0"> action</span
                   >="https://app.formester.com/forms/your@form/submissions"
-                  <span style="color: #9b51e0">method</span>="POST" &gt;<br />
+                  <span style="color: #9b51e0"> method</span>="POST" &gt;<br />
                   <span>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span
                       style="color: #27ae60"
                       >label</span
                     >
-                    <span style="color: #9b51e0">for</span>="email"&gt;Email
+                    <span style="color: #9b51e0"> for</span>="email"&gt;Email
                     &lt;<span style="color: #27ae60">/label</span>&gt;<br />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span
                       style="color: #27ae60"
                       >input</span
                     >
-                    <span style="color: #9b51e0">type</span>="email"
-                    <span style="color: #9b51e0">id</span>="email-address"
-                    <span style="color: #9b51e0">name</span>="email"
-                    <span style="color: #9b51e0">placeholder</span
+                    <span style="color: #9b51e0"> type</span>="email"
+                    <span style="color: #9b51e0"> id</span>="email-address"
+                    <span style="color: #9b51e0"> name</span>="email"
+                    <span style="color: #9b51e0"> placeholder</span
                     >="your@email.com"
                     <span style="color: #27ae60">/</span>&gt;<br />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span
                       style="color: #27ae60"
                       >button</span
                     >
-                    <span style="color: #9b51e0">type</span>="submit"&gt;Submit
+                    <span style="color: #9b51e0"> type</span>="submit"&gt;Submit
                     &lt;<span style="color: #27ae60">/button</span>&gt;<br />
                   </span>
                   &lt;<span style="color: #27ae60">/form</span>&gt;
@@ -91,8 +92,8 @@
             <div class="card-body card">
               <span class="html">
                 &lt;<span style="color: #27ae60">form </span>
-                <span style="color: #9b51e0">accept-charset</span>='UTF-8'
-                <span style="color: #9b51e0">action</span
+                <span style="color: #9b51e0"> accept-charset</span>='UTF-8'
+                <span style="color: #9b51e0"> action</span
                 >="https://app.formester.com/forms/your@form/submissions"
                 <span style="color: #9b51e0">method</span>="POST" &gt;
               </span>
@@ -108,7 +109,7 @@
             <div class="card-body card">
               <span class="html">
                 &lt;<span style="color: #27ae60">input</span>
-                <span style="color: #9b51e0">type</span>="email"
+                <span style="color: #9b51e0"> type</span>="email"
                 <span style="color: #9b51e0"> name</span>="email"
                 <span style="color: #27ae60">/</span>&gt;
               </span>
@@ -147,13 +148,13 @@
 
 <script>
 import CallToActionSection from '@/components/CallToActionSection.vue'
-import FeatureDetail from '../../components/FeatureDetail.vue'
+import FeatureDetail from '@/components/FeatureDetail.vue'
 import Testimonial from '@/components/Testimonial.vue'
-import { allTestimonials } from '@/constants/testimonials'
 
 // MetaTags
-import getSiteMeta from '../../utils/getSiteMeta'
-import TemplateSection from '../../components/TemplateSection.vue'
+import getSiteMeta from '@/utils/getSiteMeta'
+import TemplateSection from '@/components/TemplateSection.vue'
+import { fetchRandomTestimonials } from '@/utils/getTestimonials'
 
 export default {
   components: {
@@ -162,8 +163,8 @@ export default {
     Testimonial,
     TemplateSection,
   },
-  computed: {
-    meta() {
+  setup() {
+    const meta = computed(() => {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/features/html-form-backend/',
@@ -228,20 +229,52 @@ export default {
         ],
       }
       return getSiteMeta(metaData)
-    },
-  },
-  async asyncData() {
-    let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(
-      Math.random() * (randomTestimonials.length - 2)
-    )
-    randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
-    return { randomTestimonials }
-  },
-  head() {
-    return {
+    })
+
+    const features = ref([
+      {
+        title: 'Complete Control',
+        description:
+          'For those who like to take control, never again worry about your form not blending perfectly with your website. You do the styling and use our form endpoint to start receiving submissions.',
+        src: 'html-form-backend/control-illus.svg',
+      },
+      {
+        title: 'Easy Embedding',
+        description:
+          'Have a form up and running on your website quickly and with minimal coding. Select an existing template, modify it to match your brand theme, add your required data fields and paste our link on your webpage. Simple?',
+        src: 'html-form-backend/embedding-illus.svg',
+      },
+      {
+        title: 'Realtime Notifications',
+        description:
+          "On new submissions, Formester ensures that you get informed in real-time for you to stay on top of what's essential for your business. Notifications are delivered where they matter - Slack, email or 100+ apps.",
+        src: 'html-form-backend/notification.svg',
+      },
+      {
+        title: 'Own Your Data',
+        description:
+          'We offer zero-friction data import & export. If you decide to move on, you can take everything with you. We also provide guided migration from other tools. Our team will ensure the transition is seamless.',
+        src: 'html-form-backend/export-illus.svg',
+      },
+    ])
+
+    const randomTestimonials = ref([])
+
+    const fetchTestimonials = async () => {
+      try {
+        randomTestimonials.value = await fetchRandomTestimonials()
+      } catch (error) {
+        console.error('Error fetching random testimonials:', error)
+      }
+    }
+
+    onMounted(() => {
+      fetchTestimonials()
+    })
+
+    useHead({
       title: 'HTML Form Attributes | HTML Form Backend - Formester',
-      meta: [...this.meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',
@@ -249,10 +282,9 @@ export default {
           href: 'https://formester.com/features/html-form-backend/',
         },
       ],
-    }
-  },
-  jsonld() {
-    return {
+    })
+
+    useJsonld({
       '@context': 'http://schema.org',
       '@graph': [
         {
@@ -288,36 +320,11 @@ export default {
           ],
         },
       ],
-    }
-  },
-  data() {
+    })
+
     return {
-      features: [
-        {
-          title: 'Complete Control',
-          description:
-            'For those who like to take control, never again worry about your form not blending perfectly with your website. You do the styling and use our form endpoint to start receiving submissions.',
-          src: 'html-form-backend/control-illus.svg',
-        },
-        {
-          title: 'Easy Embedding',
-          description:
-            'Have a form up and running on your website quickly and with minimal coding. Select an existing template, modify it to match your brand theme, add your required data fields and paste our link on your webpage. Simple?',
-          src: 'html-form-backend/embedding-illus.svg',
-        },
-        {
-          title: 'Realtime Notifications',
-          description:
-            "On new submissions, Formester ensures that you get informed in real-time for you to stay on top of what's essential for your business. Notifications are delivered where they matter - Slack, email or 100+ apps.",
-          src: 'html-form-backend/notification.svg',
-        },
-        {
-          title: 'Own Your Data',
-          description:
-            'We offer zero-friction data import & export. If you decide to move on, you can take everything with you. We also provide guided migration from other tools. Our team will ensure the transition is seamless.',
-          src: 'html-form-backend/export-illus.svg',
-        },
-      ],
+      randomTestimonials,
+      features,
     }
   },
 }

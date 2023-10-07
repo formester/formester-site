@@ -26,13 +26,16 @@
               src="/features/conditional-logic/conditional-logic.svg"
               alt="Hero-Image"
               class="img-fluid hero__image"
+              sizes="40vw"
             />
           </div>
         </div>
       </div>
     </div>
     <div class="container py-5">
-      <h2 class="section__heading text-center">How does Conditional Logic help?</h2>
+      <h2 class="section__heading text-center">
+        How does Conditional Logic help?
+      </h2>
       <div class="row py-5">
         <FeatureDetail
           :feature="feature"
@@ -43,9 +46,7 @@
       </div>
     </div>
     <ThreeStepsCreateForm />
-    <Testimonial 
-      :testimonials="randomTestimonials"
-    />
+    <Testimonial :testimonials="randomTestimonials" />
     <TemplateSection />
     <CallToActionSection />
   </div>
@@ -53,18 +54,44 @@
 
 <script>
 import CallToActionSection from '@/components/CallToActionSection.vue'
-import FeatureDetail from '../../components/FeatureDetail.vue'
+import FeatureDetail from '@/components/FeatureDetail.vue'
 import Testimonial from '@/components/Testimonial.vue'
-import { allTestimonials } from '@/constants/testimonials'
-import TemplateSection from '../../components/TemplateSection.vue'
+import TemplateSection from '@/components/TemplateSection.vue'
+import { fetchRandomTestimonials } from '@/utils/getTestimonials'
 
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
 
 export default {
-  components: { FeatureDetail, CallToActionSection, Testimonial, TemplateSection },
-  computed: {
-    meta() {
+  components: {
+    FeatureDetail,
+    CallToActionSection,
+    Testimonial,
+    TemplateSection,
+  },
+  setup() {
+    const features = [
+      {
+        title: 'Skip to other pages',
+        description:
+          "In order to collect the most accurate data for your research, you can ask questions that don't apply to each user, allowing them to skip irrelevant pages in your survey.",
+        src: 'conditional-logic/skip-to-other-pages.svg',
+      },
+      {
+        title: 'Skip to follow up questions',
+        description:
+          'For best results, allow your respondents to skip irrelevant questions in your survey.',
+        src: 'conditional-logic/skip-to-follow-up-questions.svg',
+      },
+      {
+        title: 'Skip Logic',
+        description:
+          'Display only the questions your respondents must answer. You simply need to specify the conditions and choose the fields to hide from the drop-down list.',
+        src: 'conditional-logic/skip-logic.svg',
+      },
+    ]
+
+    const meta = computed(() => {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/features/conditional-logic/',
@@ -76,12 +103,11 @@ export default {
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with conditional page image alt
       }
       return getSiteMeta(metaData)
-    },
-  },
-  head() {
-    return {
+    })
+
+    useHead({
       title: 'Conditional Logic Forms Builder - Formester',
-      meta: [...this.meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',
@@ -89,10 +115,9 @@ export default {
           href: 'https://formester.com/features/conditional-logic/',
         },
       ],
-    }
-  },
-  jsonld() {
-    return {
+    })
+
+    useJsonld({
       '@context': 'http://schema.org',
       '@graph': [
         {
@@ -113,7 +138,7 @@ export default {
           '@type': 'BreadcrumbList',
           '@id': 'https://acornglobus.com',
           itemListElement: [
-          {
+            {
               '@type': 'ListItem',
               position: 1,
               name: 'Features',
@@ -124,41 +149,30 @@ export default {
               position: 2,
               name: 'Conditional Logic',
               item: 'https://formester.com/features/conditional-logic/',
-            }
+            },
           ],
         },
       ],
+    })
+
+    const randomTestimonials = ref([])
+
+    const fetchTestimonials = async () => {
+      try {
+        randomTestimonials.value = await fetchRandomTestimonials()
+      } catch (error) {
+        console.error('Error fetching random testimonials:', error)
+      }
     }
-  },
-  data() {
+
+    onMounted(() => {
+      fetchTestimonials()
+    })
+
     return {
-      features: [
-        {
-          title: 'Skip to other pages',
-          description:
-            "In order to collect the most accurate data for your research, you can ask questions that don't apply to each user, allowing them to skip irrelevant pages in your survey.",
-          src: 'conditional-logic/skip-to-other-pages.svg',
-        },
-        {
-          title: 'Skip to follow up questions',
-          description:
-            'For best results, allow your respondents to skip irrelevant questions in your survey.',
-          src: 'conditional-logic/skip-to-follow-up-questions.svg',
-        },
-        {
-          title: 'Skip Logic',
-          description:
-            'Display only the questions your respondents must answer. You simply need to specify the conditions and choose the fields to hide from the drop-down list.',
-          src: 'conditional-logic/skip-logic.svg',
-        },
-      ],
+      randomTestimonials,
+      features,
     }
-  },
-  async asyncData() {
-    let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(Math.random() * (randomTestimonials.length - 2))
-    randomTestimonials = randomTestimonials.slice(randIndex,  randIndex + 2);
-    return {randomTestimonials}
   },
 }
 </script>

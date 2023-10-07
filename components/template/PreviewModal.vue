@@ -10,7 +10,7 @@
 
     <div class="preview-heading-container">
       <span class="preview-heading">
-        {{ template.name }}
+        {{ template?.name }}
       </span>
       <button class="preview-use-template-btn" @click="$emit('redirect-to')">
         Use Template
@@ -18,7 +18,7 @@
     </div>
 
     <iframe
-      :src="template.surveyUrl"
+      :src="template?.surveyUrl"
       frameborder="0"
       width="100%"
       class="template-preview__iframe"
