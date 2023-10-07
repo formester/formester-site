@@ -50,7 +50,7 @@
       heading="Comparing Typeform with Other Leading Form Builders"
     />
     <WhyChooseFormester />
-    <FAQwithCategories :categories="typeformFaqs" />
+    <FAQwithCategories :faqQuestions="typeformFaqs" />
     <CallToActionSection
       :content="{
         heading: 'Start Your Formester Journey Today',

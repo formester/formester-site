@@ -36,7 +36,7 @@
     <SmallIconsFeatureSection :featureData="solutions" />
     <Results />
     <Conclusion />
-    <FAQwithCategories :categories="formesterLeadGenerationCaseStudy" />
+    <FAQwithCategories :faqQuestions="formesterLeadGenerationCaseStudy" />
   </div>
 </template>
 

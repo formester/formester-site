@@ -44,7 +44,7 @@
       heading="Comparision of Leading Form Builders"
     />
     <Testimonial :testimonials="randomTestimonials" />
-    <FAQwithCategories :categories="categories" />
+    <FAQwithCategories :faqQuestions="categories" />
     <CallToActionSection
       :content="{
         heading: 'Start Your Formester Journey Today',
