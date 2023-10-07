@@ -147,7 +147,7 @@ const { data: blog } = await useAsyncData('blog', () =>
     .find()
 )
 
-const article = ref(blog.value[0])
+const article = blog.value[0]
 
 const formatDate = (date) => {
   const options = { year: 'numeric', month: 'long', day: 'numeric' }

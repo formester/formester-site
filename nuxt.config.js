@@ -116,7 +116,7 @@ export default defineNuxtConfig({
     liveEdit: false,
     markdown: {
       remarkPlugins: ['remark-reading-time'],
-      toc: { depth: 5, searchDepth: 2 }
+      toc: { depth: 4, searchDepth: 2 }
     },
 
   },
