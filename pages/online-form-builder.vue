@@ -184,7 +184,7 @@ export default {
             {
               '@type': 'ListItem',
               position: 2,
-              name: 'Jotform 101: All About Jotform’s Forms by Formester!',
+              name: 'Online Form Builders for powerful form-building',
               item: 'https://formester.com/online-form-builder/',
             },
           ],
