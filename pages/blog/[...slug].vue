@@ -141,13 +141,11 @@ import getSiteMeta from '@/utils/getSiteMeta'
 const route = useRoute().params
 // const relatedArticles = ref()
 
-const { data: blog } = await useAsyncData('blog', () =>
+const { data: article } = await useAsyncData('article', () =>
   queryContent('blog')
     .where({ _path: `/blog/` + route.slug })
-    .find()
+    .findOne()
 )
-
-const article = blog.value[0]
 
 const formatDate = (date) => {
   const options = { year: 'numeric', month: 'long', day: 'numeric' }
@@ -303,15 +301,16 @@ useJsonld(() => {
 // }
 
 
-// const { data: result } = await useAsyncData('related', () => queryContent('/blog').find())
+const { data: result } = await useAsyncData('result', () => queryContent('blog').find())
 
-// if (result) {
-//   result.value = result.value.filter((relatedArticle) => article.value._path !== relatedArticle._path)
-//   const randIndex = Math.floor(Math.random() * (result.value.length - 2))
-//   result.value = result.value.slice(randIndex, randIndex + 2)
-// }
+if (result) {
+  result.value = result.value.filter((relatedArticle) => article.value._path !== relatedArticle._path)
+  const randIndex = Math.floor(Math.random() * (result.value.length - 2))
+  result.value = result.value.slice(randIndex, randIndex + 2)
+}
 
-// const relatedArticles = ref(result.value)
+const relatedArticles = ref()
+relatedArticles.value = result.value
 
 onMounted(async () => {
   document.querySelectorAll('.blog__content img').forEach((image) => {
