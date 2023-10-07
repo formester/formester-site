@@ -23,7 +23,7 @@
           class="d-flex align-items-center toggler__container mobile mx-auto mt-4"
         >
           <span
-            v-for="(feature, index) in features"
+            v-for="(feature, index) in features.value"
             :key="index"
             class="toggler__button"
             :class="activeIndex === index ? 'active' : ''"
@@ -46,10 +46,8 @@
           <div
             class="col-lg-5 d-flex align-items-center justify-content-center mt-lg-0 mt-5"
           >
-            <img
-              :src="
-                require(`@/assets/images/${features[activeIndex].imgName}.svg`)
-              "
+            <nuxt-img
+              :src="`${features[activeIndex].imgName}.svg`"
               :alt="features[activeIndex].alt"
               class="img-fluid feature__img"
             />
@@ -60,30 +58,27 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: ['features', 'sectionHeading'],
-  data() {
-    return {
-      activeIndex: 0,
-    }
-  },
-  methods: {
-    setActive(index) {
-      this.activeIndex = index
-    },
-  },
-  computed: {
-    computedFeatures() {
-      const cf = []
-      const featuresCopy = [...this.features]
-      while (featuresCopy.length) {
-        cf.push(featuresCopy.splice(0, 5))
-      }
-      return cf
-    },
-  },
+<script setup>
+import { ref, defineProps } from 'vue'
+const props = defineProps(['features', 'sectionHeading'])
+const features = ref(props.features)
+
+const activeIndex = ref()
+activeIndex.value = 0
+
+const setActive = (index) => {
+  activeIndex.value = index 
 }
+
+const computedFeatures = computed(() => {
+  const cf = []
+  const featuresCopy = [...features.value]
+  while (featuresCopy.length) {
+    cf.push(featuresCopy.splice(0, 5))
+  }
+  return cf
+})
+
 </script>
 <style scoped>
 .toggler__container {
