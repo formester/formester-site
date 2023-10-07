@@ -50,6 +50,7 @@
               :src="`${features[activeIndex].imgName}.svg`"
               :alt="features[activeIndex].alt"
               class="img-fluid feature__img"
+              sizes="40vw"
             />
           </div>
         </div>

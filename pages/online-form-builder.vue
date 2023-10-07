@@ -81,8 +81,10 @@ export default {
     Testimonial,
     ChooseRightOnlineFormBuilder,
   },
-  computed: {
-    meta() {
+  setup() {
+    const categories = ref(onlineFormBuilderFaqs)
+
+    const meta = computed(() => {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/online-form-builder/',
@@ -116,11 +118,12 @@ export default {
         ].join(','),
       }
       return getSiteMeta(metaData)
-    },
-    faqsSchema() {
+    })
+
+    const faqsSchema = computed(() => {
       const allFaqs = []
 
-      this.categories.forEach((c) => {
+      categories.value.forEach((c) => {
         if (c.faqs) {
           allFaqs.push(...c.faqs)
         }
@@ -137,12 +140,11 @@ export default {
           },
         }
       })
-    },
-  },
-  head() {
-    return {
+    })
+
+    useHead({
       title: 'Online Form Builders for powerful form-building',
-      meta: [...this.meta],
+      meta: meta,
       link: [
         {
           hid: 'canonical',
@@ -150,10 +152,9 @@ export default {
           href: 'https://formester.com/online-form-builder/',
         },
       ],
-    }
-  },
-  jsonld() {
-    return {
+    })
+
+    useJsonld({
       '@context': 'http://schema.org',
       '@graph': [
         {
@@ -183,7 +184,7 @@ export default {
             {
               '@type': 'ListItem',
               position: 2,
-              name: 'Online Form Builders for powerful form-building',
+              name: 'Jotform 101: All About Jotform’s Forms by Formester!',
               item: 'https://formester.com/online-form-builder/',
             },
           ],
@@ -191,19 +192,29 @@ export default {
         {
           '@context': 'https://schema.org',
           '@type': 'FAQPage',
-          mainEntity: this.faqsSchema,
+          mainEntity: faqsSchema.value,
         },
       ],
+    })
+
+    const randomTestimonials = ref([])
+
+    const fetchTestimonials = async () => {
+      try {
+        randomTestimonials.value = await fetchRandomTestimonials()
+      } catch (error) {
+        console.error('Error fetching random testimonials:', error)
+      }
     }
-  },
-  data() {
+
+    onMounted(() => {
+      fetchTestimonials()
+    })
+
     return {
-      categories: onlineFormBuilderFaqs,
+      randomTestimonials,
+      categories,
     }
-  },
-  async asyncData() {
-    const randomTestimonials = await fetchRandomTestimonials()
-    return { randomTestimonials }
   },
 }
 </script>
