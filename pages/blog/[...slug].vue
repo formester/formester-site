@@ -141,13 +141,13 @@ import getSiteMeta from '@/utils/getSiteMeta'
 const route = useRoute().params
 // const relatedArticles = ref()
 
-const { data: getBlog } = await useAsyncData('blog', () =>
-  queryContent('/blog')
+const { data: blog } = await useAsyncData('blog', () =>
+  queryContent('blog')
     .where({ _path: `/blog/` + route.slug })
     .find()
 )
 
-const article = ref(getBlog.value[0])
+const article = ref(blog.value[0])
 
 const formatDate = (date) => {
   const options = { year: 'numeric', month: 'long', day: 'numeric' }
