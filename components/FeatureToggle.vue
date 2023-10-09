@@ -31,28 +31,25 @@
             v-html="feature.heading"
           ></span>
         </div>
-        <div class="row py-3">
-          <div
-            class="col-lg-7 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start mt-5"
-          >
-            <h3
-              class="feature__heading"
-              v-html="features[activeIndex].heading"
-            ></h3>
-            <p class="feature__description mt-3">
-              {{ features[activeIndex].content }}
-            </p>
-          </div>
-          <div
-            class="col-lg-5 d-flex align-items-center justify-content-center mt-lg-0 mt-5"
-          >
-            <img
-              :src="
-                require(`@/assets/images/${features[activeIndex].imgName}.svg`)
-              "
-              :alt="features[activeIndex].alt"
-              class="img-fluid feature__img"
-            />
+        <div v-for="(feature, index) in features" :key="feature.heading">
+          <div v-show="activeIndex === index" class="row py-3">
+            <div
+              class="col-lg-7 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start mt-5"
+            >
+              <h3 class="feature__heading" v-html="feature.heading"></h3>
+              <p class="feature__description mt-3">
+                {{ feature.content }}
+              </p>
+            </div>
+            <div
+              class="col-lg-5 d-flex align-items-center justify-content-center mt-lg-0 mt-5"
+            >
+              <img
+                :src="require(`@/assets/images/${feature.imgName}.svg`)"
+                :alt="feature.alt"
+                class="img-fluid feature__img"
+              />
+            </div>
           </div>
         </div>
       </div>
