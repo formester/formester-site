@@ -250,25 +250,18 @@ export default {
           alt: 'Hero-Image',
         },
         {
-          heading: 'Powerful Analytics',
+          heading: 'Cloud Integration',
           content:
-            'Understand how users interact with your form. Get insights on ways to improve engagement and increase conversion. Identify trends to see where users are dropping off and what works for you.',
-          imgName: 'features/powerful-analytics',
-          alt: 'Hero-Image',
+            'Connect your form with Slack, Google Sheets, Salesforce or anything else with our Zapier integration. Use our webhooks to notify any other app when a submission arrives. Create flows that solve your business needs.',
+          imgName: 'features/integrations',
+          alt: 'Online tools which Formester integrates with',
         },
         {
-          heading: 'Conditional Logic',
+          heading: 'Collaboration',
           content:
-            'Creating a form has never been simpler. Just point your form to our endpoint and start getting submissions in a matter of minutes. If you are a power user you get complete control over how the form looks.',
-          imgName: 'features/conditional-logic',
-          alt: 'Hero-Image',
-        },
-        {
-          heading: 'Digital Signature',
-          content:
-            'Add e-sign to your online form easily using formester. E-sign has become increasingly popular in recent years as it offers a convenient and efficient way to sign documents. Traditional handwritten signatures can most often be replaced by electronic signatures.',
-          imgName: 'features/digital-signature',
-          alt: 'Hero-Image',
+            "Form sharing for effective collaboration and efficient team-work! Unite your team, gather valuable feedback, and unlock the true potential of form building with Formester's powerful in-built Collaboration/Add Collaborators feature!",
+          imgName: 'features/invite-collab',
+          alt: 'Monitor performance and open rates for your survey forms in Formester',
         },
       ],
       faqQuestions: softwareAndTechnologyFaqs,
