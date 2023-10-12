@@ -25,7 +25,7 @@ createdAt: 2023-10-12T02:36:53.540Z
 coverImg: /img/how-web-form-integrations-improve-workflow-and-boost-business-productivity.png
 coverImgAlt: Web Form Integration to Boost Business Productivity
 featured: false
-published: false
+published: true
 ---
 ## **What is Web Form Integration?**
 
