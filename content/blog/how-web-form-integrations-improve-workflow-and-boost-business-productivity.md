@@ -13,7 +13,7 @@ keywords: Web forms, form integration, workflow optimization, business
   Notion, Discord, web form tips, security considerations, data protection,
   Formester
 author: Siddharth Sharma
-authorProfile: www.linkedin.com/in/sidsh0502
+authorProfile: https://www.linkedin.com/in/sidsh0502/
 createdAt: 2023-10-12T02:36:53.540Z
 coverImg: /img/how-web-form-integrations-improve-workflow-and-boost-business-productivity.png
 coverImgAlt: Web Form Integration to Boost Business Productivity
