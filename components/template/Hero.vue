@@ -4,16 +4,16 @@
     <nuxt-img class="overlap-patter" src="/templates/hero-pattern.png" />
     <div class="hero-headings d-flex flex-column container m-auto">
       <h1 class="mx-auto">Search for a template. Modify it. Share it.</h1>
-      <h2>
-        <span class="mx-auto">
+      <p class="text-md-center">
+        <span class="mx-auto d-block">
           Browse through our curated library of 50+ ready to use form templates
           to help you gather information in a few clicks.
         </span>
-        <span class="mx-auto">
+        <span class="mx-auto d-block">
           Our templates are fully customizable, so you can easily match them to
           your brand style and share it across.
         </span>
-      </h2>
+      </p>
     </div>
 
     <!-- <div class="search-box position-absolute mx-auto d-flex flex-column"> -->
@@ -52,7 +52,6 @@
 .hero-headings {
   z-index: 1;
   color: white;
-  width: 1200px;
 }
 
 .hero-headings h1 {
@@ -61,10 +60,6 @@
   line-height: 60px;
 }
 .hero-headings h2 {
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  justify-content: center;
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
@@ -126,7 +121,6 @@
   }
   .hero-headings {
     color: white;
-    width: 455px;
     padding: 1rem;
   }
   .hero-headings h1 {
