@@ -2,7 +2,7 @@
   <section class="hero-section position-relative d-flex justify-content-center">
     <!-- Background Image -->
     <nuxt-img class="overlap-patter" src="/templates/hero-pattern.png" />
-    <div class="hero-headings d-flex flex-column p-2 m-auto">
+    <div class="hero-headings d-flex flex-column container m-auto">
       <h1 class="mx-auto">Search for a template. Modify it. Share it.</h1>
       <h2>
         <span class="mx-auto">
@@ -17,8 +17,8 @@
     </div>
 
     <!-- <div class="search-box position-absolute mx-auto d-flex flex-column"> -->
-      <!-- Search -->
-      <!-- <div class="d-flex">
+    <!-- Search -->
+    <!-- <div class="d-flex">
         <div class="d-flex gap-4 align-items-center m-auto">
           <div class="search-svg">
             <nuxt-img src="/templates/search.png" alt="Search" />
@@ -29,8 +29,8 @@
           />
         </div>
       </div> -->
-      <!-- Trending -->
-      <!-- <div class="trending-searches d-flex">
+    <!-- Trending -->
+    <!-- <div class="trending-searches d-flex">
         <p class="trending-heading">Trending:</p>
         <p>Lead Generation ,</p>
         <p>Event RSVP ,</p>
@@ -50,8 +50,9 @@
   margin-bottom: 3rem;
 }
 .hero-headings {
+  z-index: 1;
   color: white;
-  width: 1025px;
+  width: 1200px;
 }
 
 .hero-headings h1 {
@@ -61,6 +62,7 @@
 }
 .hero-headings h2 {
   display: flex;
+  text-align: center;
   flex-direction: column;
   justify-content: center;
   font-weight: 400;
@@ -132,6 +134,7 @@
     line-height: 48px;
   }
   .hero-headings h2 {
+    text-align: start;
     display: block;
     font-size: 16px;
   }
