@@ -1,26 +1,33 @@
 <template>
-  <div class="template_container d-flex">
-    <div class="left-sidebar">
-      <TemplateCategories
-        :activeCategory="activeCategory"
-        :templateCategories="templateCategories"
-      />
-    </div>
-    <div class="w-100">
-      <h1 class="heading">
-        {{ $route.params.slug ? $route.params.slug.replace('-', ' ') : '' }}
-        Templates
-      </h1>
-      <div v-if="templates && templates.length" class="templates">
-        <TemplateCard v-for="(template, idx) in templates" :key="idx" :template="template" />
-      </div>
-      <div v-else class="no-template">
-        <nuxt-img
-          class="img-fluid"
-          src="/templates/no-template.svg"
-          alt="No Template Illustration"
+  <div>
+    <Hero />
+    <div class="template_container d-flex">
+      <div class="left-sidebar">
+        <TemplateCategories
+          :activeCategory="activeCategory"
+          :templateCategories="templateCategories"
         />
-        <h4>No Template Available</h4>
+      </div>
+      <div class="w-100">
+        <h1 class="heading">
+          {{ $route.params.slug ? $route.params.slug.replace('-', ' ') : '' }}
+          Templates
+        </h1>
+        <div v-if="templates && templates.length" class="templates">
+          <TemplateCard
+            v-for="(template, idx) in templates"
+            :key="idx"
+            :template="template"
+          />
+        </div>
+        <div v-else class="no-template">
+          <nuxt-img
+            class="img-fluid"
+            src="/templates/no-template.svg"
+            alt="No Template Illustration"
+          />
+          <h4>No Template Available</h4>
+        </div>
       </div>
     </div>
   </div>
@@ -29,8 +36,10 @@
 <script>
 import TemplateCategories from './TemplateCategories.vue'
 import TemplateCard from './TemplateCard.vue'
+import Hero from './Hero.vue'
+
 export default {
-  components: { TemplateCategories, TemplateCard },
+  components: { TemplateCategories, TemplateCard, Hero },
   props: ['activeCategory', 'templates', 'templateCategories'],
 }
 </script>
@@ -47,6 +56,9 @@ export default {
   text-transform: capitalize;
   padding: 1rem 1.5rem 0;
   font-size: var(--ft-bigger-body);
+}
+.template_container {
+  margin-top: 65px;
 }
 .templates {
   width: 100%;
@@ -70,6 +82,9 @@ export default {
 @media (max-width: 991px) {
   .templates {
     grid-template-columns: 1fr 1fr;
+  }
+  .template_container {
+    margin-top: 0;
   }
 }
 
