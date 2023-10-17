@@ -9,7 +9,7 @@
         :alt="template.name"
         @load="loading = false"
       />
-      <div class="name-des-container">
+      <div class="template-content">
         <h3 class="template-name pointer">
           {{ template.name }}
         </h3>
@@ -66,22 +66,23 @@ export default {
 }
 
 .template:hover {
-  box-shadow: 0px 0px 15px 3px rgba(79, 56, 149, 0.25);
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08), 0px 12px 24px 0px rgba(0, 0, 0, 0.04);
 }
-.name-des-container {
-  padding: 17px;
+.template-content {
+  padding: 16px;
 }
 .template-name {
   user-select: none;
   color: var(--neutral-900, #171717);
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 21px;
+  line-height: 24px;
 }
 .template-description {
+  margin: 0;
   color: var(--neutral-600, #525252);
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 18px;
   display: -webkit-box;
@@ -105,16 +106,13 @@ export default {
   display: none;
 }
 
-@media (max-width: 991px) {
-  .template-description {
-    font-size: 14px;
-  }
-}
 
-@media only screen and (max-width: 840px) {
-  .template-description {
+@media only screen and (max-width: 768px) {
+  .template-name{
     font-size: 14px;
+    line-height: 21px;
   }
+
 }
 
 @keyframes skeleton-loading {
