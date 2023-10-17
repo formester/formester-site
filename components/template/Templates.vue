@@ -9,10 +9,6 @@
         />
       </div>
       <div class="w-100">
-        <h1 class="heading">
-          {{ $route.params.slug ? $route.params.slug.replace('-', ' ') : '' }}
-          Templates
-        </h1>
         <div v-if="templates && templates.length" class="templates">
           <TemplateCard
             v-for="(template, idx) in templates"
@@ -52,11 +48,6 @@ export default {
   overflow-y: auto;
   box-shadow: 5px 10px 10px 1px rgba(0, 0, 0, 0.05);
 }
-.heading {
-  text-transform: capitalize;
-  padding: 1rem 1.5rem 0;
-  font-size: var(--ft-bigger-body);
-}
 .template_container {
   margin-top: 65px;
 }
@@ -68,7 +59,6 @@ export default {
   grid-auto-rows: min-content;
   gap: 24px;
 }
-
 .no-template {
   width: 100%;
   padding: 52px 0px;
@@ -92,7 +82,6 @@ export default {
   .template_container {
     flex-direction: column;
   }
-
   .left-sidebar {
     min-height: auto;
     margin-bottom: 1rem;
