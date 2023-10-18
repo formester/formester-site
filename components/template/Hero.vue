@@ -45,7 +45,7 @@
 <style scoped>
 .hero-section {
   width: 100%;
-  height: 348px;
+  min-height: 348px;
   background-image: linear-gradient(#4726ad, #633ae1);
   margin-bottom: 3rem;
 }
@@ -53,7 +53,6 @@
   z-index: 1;
   color: white;
 }
-
 .hero-headings h1 {
   font-weight: 600;
   font-size: 40px;
@@ -90,7 +89,6 @@
 .search-svg {
   width: 20px;
 }
-
 .overlap-patter {
   width: 100%;
   height: 100%;
@@ -121,7 +119,7 @@
   }
   .hero-headings {
     color: white;
-    padding: 1rem;
+    padding: 1.5rem;
   }
   .hero-headings h1 {
     font-size: 32px;
