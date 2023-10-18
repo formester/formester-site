@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Hero />
+    <Hero @searchInput="handleSearch" />
     <div class="template_container d-flex">
       <div class="left-sidebar">
         <TemplateCategories
@@ -15,7 +15,7 @@
         </h1>
         <div v-if="templates && templates.length" class="templates">
           <TemplateCard
-            v-for="(template, idx) in templates"
+            v-for="(template, idx) in filteredTemplate"
             :key="idx"
             :template="template"
           />
@@ -41,6 +41,31 @@ import Hero from './Hero.vue'
 export default {
   components: { TemplateCategories, TemplateCard, Hero },
   props: ['activeCategory', 'templates', 'templateCategories'],
+  data() {
+    return {
+      mainTemplateData: this.templates,
+      filteredTemplate: this.templates,
+      searchTerm: '',
+    }
+  },
+  methods: {
+    handleSearch(searchTerm) {
+      this.searchTerm = searchTerm
+      this.filteredData()
+    },
+    filteredData() {
+      if (!this.searchTerm.trim()) {
+        this.filteredTemplate = this.mainTemplateData
+        return
+      }
+      const filteredData = this.mainTemplateData.filter((item) => {
+        return item.name
+          .toLowerCase()
+          .includes(this.searchTerm.toLocaleLowerCase())
+      })
+      this.filteredTemplate = filteredData
+    },
+  },
 }
 </script>
 
@@ -57,7 +82,7 @@ export default {
   font-size: var(--ft-bigger-body);
 }
 .template_container {
-  margin-top: 65px;
+  margin-top: 90px;
 }
 .templates {
   width: 100%;

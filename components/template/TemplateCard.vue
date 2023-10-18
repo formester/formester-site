@@ -84,7 +84,7 @@ export default {
 
 .image-skeleton {
   width: 100%;
-  min-height: 295px;
+  min-height: 11rem;
   animation: skeleton-loading 1s linear infinite alternate;
 }
 
