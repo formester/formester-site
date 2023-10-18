@@ -9,6 +9,10 @@
         />
       </div>
       <div class="w-100">
+        <h1 class="heading">
+          {{ $route.params.slug ? $route.params.slug.replace('-', ' ') : '' }}
+          Templates
+        </h1>
         <div v-if="templates && templates.length" class="templates">
           <TemplateCard
             v-for="(template, idx) in templates"
@@ -46,18 +50,23 @@ export default {
   min-width: 240px;
   min-height: calc(100vh - 45px);
   overflow-y: auto;
-  box-shadow: 5px 10px 10px 1px rgba(0, 0, 0, 0.05);
+}
+.heading {
+  text-transform: capitalize;
+  padding: 0.6rem 1.5rem 0;
+  font-size: var(--ft-bigger-body);
 }
 .template_container {
   margin-top: 65px;
 }
 .templates {
   width: 100%;
-  padding: 1.5rem;
+  padding: 0 1.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: min-content;
   gap: 24px;
+  margin-top: 1rem;
 }
 .no-template {
   width: 100%;
@@ -72,6 +81,8 @@ export default {
 @media (max-width: 991px) {
   .templates {
     grid-template-columns: 1fr 1fr;
+    padding: 0.5rem 1.5rem 0;
+    margin-top: 0;
   }
   .template_container {
     margin-top: 0;
@@ -84,8 +95,10 @@ export default {
   }
   .left-sidebar {
     min-height: auto;
-    margin-bottom: 1rem;
-    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: -1px;
+    padding: 1rem 0;
   }
 }
 

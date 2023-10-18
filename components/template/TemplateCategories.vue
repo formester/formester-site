@@ -4,11 +4,13 @@
       class="category-heading__container"
       data-bs-toggle="collapse"
       data-bs-target="#categories"
+      ref="categoryContainer"
+      @click="isCollapsed = !isCollapsed"
     >
-      <h2 class="category-heading">Category</h2>
+      <h2 class="category-heading pointer">Categories</h2>
       <nuxt-img
-        class="category-menu-btn"
-        src="/filter_icon.svg"
+        class="category-menu-btn pointer"
+        :src="imageSrc"
         alt="category-menu-button"
       />
     </div>
@@ -51,7 +53,14 @@ export default {
   data() {
     return {
       showCategories: true,
+      isCollapsed: false,
     }
+  },
+  computed: {
+    imageSrc() {
+      const imageName = this.isCollapsed ? 'cross' : 'right-arrow'
+      return `/templates/${imageName}.png`
+    },
   },
   mounted() {
     if (window.innerWidth <= 840) this.showCategories = false
@@ -63,7 +72,6 @@ export default {
 .category-heading {
   padding: 12px 36px;
   margin: 0;
-  margin-top: 10px;
   font-weight: 600 !important;
   font-size: 20px;
   line-height: 26px;
@@ -84,23 +92,49 @@ export default {
   font-weight: normal;
 }
 .category.active {
-  background-color: #f7f5ff;
-  border-right: 3px solid #4f3895;
+  color: #4f3895;
+  font-weight: 500;
 }
 
 @media only screen and (max-width: 840px) {
   .category-heading__container {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+    margin: 0 1.5rem;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: var(--neutral-100, #f5f5f5);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 1rem;
+  }
+  .category-heading {
+    color: var(--neutral-900, #171717);
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
   }
   .category-menu-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.13);
+  }
+  .template-categories {
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+  .categories {
+    overflow-y: auto;
+    padding-top: 1.5rem;
+  }
+  .category {
+    padding: 8px 36px;
+    font-size: 14px;
+    line-height: 21px;
   }
 }
 </style>
