@@ -11,10 +11,10 @@
       />
       <div class="template-content">
         <h3 class="template-name pointer">
-          {{ template.name }}
+          {{ template?.name }}
         </h3>
         <p class="template-description">
-          {{ templateDescription }}
+          {{ template?.description }}
         </p>
       </div>
     </NuxtLink>
@@ -32,7 +32,6 @@ export default {
   data() {
     return {
       loading: true,
-      templateDescription: '',
     }
   },
   computed: {
@@ -42,16 +41,6 @@ export default {
         require('@/assets/images/templates/create_form.png')
       )
     },
-  },
-  async mounted() {
-    try {
-      const response = await this.$axios.get(
-        `https://app.formester.com/templates/${this.template.slug}.json`
-      )
-      this.templateDescription = response.data.description
-    } catch (error) {
-      console.error('There was an error fetching the template:', error)
-    }
   },
 }
 </script>
@@ -66,7 +55,8 @@ export default {
 }
 
 .template:hover {
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08), 0px 12px 24px 0px rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08),
+    0px 12px 24px 0px rgba(0, 0, 0, 0.04);
 }
 .template-content {
   padding: 16px;
@@ -94,7 +84,7 @@ export default {
 
 .image-skeleton {
   width: 100%;
-  min-height: 295px;
+  min-height: 11rem;
   animation: skeleton-loading 1s linear infinite alternate;
 }
 
@@ -106,13 +96,11 @@ export default {
   display: none;
 }
 
-
 @media only screen and (max-width: 768px) {
-  .template-name{
+  .template-name {
     font-size: 14px;
     line-height: 21px;
   }
-
 }
 
 @keyframes skeleton-loading {

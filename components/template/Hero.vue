@@ -16,36 +16,62 @@
       </p>
     </div>
 
-    <!-- <div class="search-box position-absolute mx-auto d-flex flex-column"> -->
-    <!-- Search -->
-    <!-- <div class="d-flex">
-        <div class="d-flex gap-4 align-items-center m-auto">
+    <div class="search-box position-absolute mx-auto d-flex flex-column">
+      <!-- Search -->
+      <div class="d-flex">
+        <div class="position-relative d-flex gap-4 align-items-center m-auto">
           <div class="search-svg">
             <nuxt-img src="/templates/search.png" alt="Search" />
           </div>
           <input
             type="text"
             placeholder="Blood donation, job applicant tracker"
+            v-model="searchTerm"
+            @input="emitSearchTerm"
           />
+          <div
+            class="clear-input-btn pointer"
+            @click="resetSearchInput"
+            :class="{ 'd-none': this.searchTerm === '' }"
+          >
+            <nuxt-img src="/templates/cross.png" alt="Clear" />
+          </div>
         </div>
-      </div> -->
-    <!-- Trending -->
-    <!-- <div class="trending-searches d-flex">
+      </div>
+      <!-- Trending -->
+      <div class="trending-searches d-flex">
         <p class="trending-heading">Trending:</p>
         <p>Lead Generation ,</p>
         <p>Event RSVP ,</p>
         <p>Product Research</p>
-      </div> -->
-    <!-- </div> -->
+      </div>
+    </div>
   </section>
 </template>
 
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      searchTerm: '',
+    }
+  },
+  methods: {
+    emitSearchTerm() {
+      this.$emit('searchInput', this.searchTerm)
+    },
+    resetSearchInput() {
+      this.searchTerm = ''
+      this.emitSearchTerm()
+    },
+  },
+}
+</script>
 
 <style scoped>
 .hero-section {
   width: 100%;
-  height: 348px;
+  min-height: 348px;
   background-image: linear-gradient(#4726ad, #633ae1);
   margin-bottom: 3rem;
 }
@@ -53,7 +79,6 @@
   z-index: 1;
   color: white;
 }
-
 .hero-headings h1 {
   font-weight: 600;
   font-size: 40px;
@@ -90,7 +115,11 @@
 .search-svg {
   width: 20px;
 }
-
+.clear-input-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 .overlap-patter {
   width: 100%;
   height: 100%;
@@ -121,7 +150,7 @@
   }
   .hero-headings {
     color: white;
-    padding: 1rem;
+    padding: 1.5rem;
   }
   .hero-headings h1 {
     font-size: 32px;
@@ -149,6 +178,11 @@
   }
   .search-box {
     width: min-content;
+  }
+  @media only screen and (max-width: 550px) {
+    .search-box input {
+      width: 244px;
+    }
   }
 }
 </style>
