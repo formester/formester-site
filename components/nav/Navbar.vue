@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg sticky-top bg-white">
     <div class="container">
       <NuxtLink class="navbar-brand" to="/">
         <nuxt-img src="/logo.svg" alt="Formester" />
