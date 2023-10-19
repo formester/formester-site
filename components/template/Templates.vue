@@ -86,7 +86,7 @@ export default {
 }
 .templates {
   width: 100%;
-  padding: 0 1.5rem;
+  padding: 0 1.5rem 1.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: min-content;
@@ -106,7 +106,7 @@ export default {
 @media (max-width: 991px) {
   .templates {
     grid-template-columns: 1fr 1fr;
-    padding: 0.5rem 1.5rem 0;
+    padding: 0.5rem 1.5rem 1.5rem;
     margin-top: 0;
   }
   .template_container {
