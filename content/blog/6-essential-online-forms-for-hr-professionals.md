@@ -13,7 +13,7 @@ keywords: Online HR forms, HR professionals, job application forms, leave
   management, workplace safety, workflow optimization, HR management, employee
   feedback
 author: Siddharth Sharma
-authorProfile: www.linkedin.com/in/sidsh0502
+authorProfile: https://www.linkedin.com/in/sidsh0502/
 createdAt: 2023-10-19T03:18:34.805Z
 coverImg: /img/6-essential-online-forms-for-hr-professionals.png
 coverImgAlt: Illustration of 6 Important Online Forms for HR Professionals
