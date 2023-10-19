@@ -18,7 +18,7 @@ createdAt: 2023-10-19T03:18:34.805Z
 coverImg: /img/6-essential-online-forms-for-hr-professionals.png
 coverImgAlt: Illustration of 6 Important Online Forms for HR Professionals
 featured: false
-published: false
+published: true
 ---
 Online forms have become a crucial tool for HR professionals, changing how they handle routine tasks and processes. From recruitment to performance reviews, these digital forms have become indispensable in simplifying Human Resource workflows and improving employee experience.
 
