@@ -30,6 +30,8 @@ A [well-designed job application form](https://formester.com/templates/job-appli
 
 Personal information offers a glimpse into the candidate's background, while educational and work experience sections shed light on qualifications and relevant expertise. Skills, portfolio links, and LinkedIn profiles provide insights into the candidate's abilities and professional network. By carefully structuring and including these key fields in the job application form, HR professionals can efficiently evaluate candidates, ensuring they choose the best fit for the job.
 
+![Job Application Form Template](/img/job-application-form.jpg "Job Application Form")
+
 ## 2) Leave Request Forms
 
 Leave request forms play a crucial role in managing employee absences effectively. These forms bring in a level of organization and structure, ensuring that leave requests are handled consistently across the organization. There are various types of leaves, including annual, sick, maternity, or paternity leave. Each type serves a specific purpose and requires different approval processes.
@@ -59,8 +61,6 @@ Common sections in self-evaluation forms include goals achieved, strengths, area
 Exit interview forms hold significant value in understanding employee departures. They provide a platform for departing employees to express their reasons for leaving, feedback on their experiences, and suggestions for improvement. These forms often include questions about job satisfaction, work environment, management effectiveness, growth opportunities, and overall experience within the organization.
 
 The insights gathered help HR identify patterns, areas for improvement, and potential areas to revise HR strategies. By actively [analyzing exit interview data](https://formester.com/templates/exit-interview-form-2784/), organizations can make informed decisions to improve employee retention, improve workplace culture, and address concerns, ultimately strengthening the overall HR approach.
-
-
 
 How many of these forms have you used before? Let us know in the comments.
 
