@@ -41,8 +41,8 @@
       <!-- Trending -->
       <div class="trending-searches d-flex">
         <p class="trending-heading">Trending:</p>
-        <p>Lead Generation ,</p>
-        <p>Event RSVP ,</p>
+        <p>Lead Generation,</p>
+        <p>Event RSVP,</p>
         <p>Product Research</p>
       </div>
     </div>
