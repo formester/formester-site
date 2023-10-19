@@ -74,7 +74,15 @@ export default {
     const { data: categories } = await $axios.get(
       'https://app.formester.com/template_categories.json'
     )
-    return { template, categories }
+
+    const dummyDescription =
+      'Check out this pre-designed template and start customising with just a single click. Personalise with your branding, incorporate electronic signatures for security and add multiple collaborators to make changes simultaneously. Use this template and start getting data driven actionable insights with robust analytics.'
+
+    const modifiedTemplate = template.description
+      ? template
+      : { ...template, description: (template.description = dummyDescription) }
+
+    return { template: modifiedTemplate, categories }
   },
   data() {
     return {
@@ -115,11 +123,9 @@ export default {
     },
   },
   head() {
-    const { name, keywords } = this.template || {};
+    const { name, keywords } = this.template || {}
     return {
-      title: name
-        ? `${name} | Formester`
-        : 'Formester',
+      title: name ? `${name} | Formester` : 'Formester',
       meta: [
         ...this.meta,
         {
@@ -137,7 +143,7 @@ export default {
     }
   },
   jsonld() {
-    const { name, description, previewImageUrl, category  } = this.template || {}
+    const { name, description, previewImageUrl, category } = this.template || {}
     return [
       {
         '@context': 'https://schema.org',

@@ -22,7 +22,17 @@ export default {
       'https://app.formester.com/template_categories.json'
     )
 
-    return { templates, categories }
+    const dummyDescription =
+      'Check out this pre-designed template and start customising with just a single click. Personalise with your branding, incorporate electronic signatures for security and add multiple collaborators to make changes simultaneously. Use this template and start getting data driven actionable insights with robust analytics.'
+
+    const modifiedTemplates = templates.map((template) => ({
+      ...template,
+      description: template?.description
+        ? template?.description
+        : dummyDescription,
+    }))
+
+    return { templates: modifiedTemplates, categories }
   },
   computed: {
     meta() {
