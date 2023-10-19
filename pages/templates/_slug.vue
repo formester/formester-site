@@ -67,7 +67,7 @@ export default {
     Faq,
   },
   async asyncData({ $axios, params }) {
-    const { data: template } = await $axios.get(
+    let { data: template } = await $axios.get(
       `https://app.formester.com/templates/${params.slug}.json`
     )
 
@@ -78,11 +78,11 @@ export default {
     const dummyDescription =
       'Check out this pre-designed template and start customising with just a single click. Personalise with your branding, incorporate electronic signatures for security and add multiple collaborators to make changes simultaneously. Use this template and start getting data driven actionable insights with robust analytics.'
 
-    const modifiedTemplate = template.description
-      ? template
-      : { ...template, description: (template.description = dummyDescription) }
-
-    return { template: modifiedTemplate, categories }
+    template = {
+      ...template,
+      description: template.description || dummyDescription,
+    }
+    return { template, categories }
   },
   data() {
     return {
