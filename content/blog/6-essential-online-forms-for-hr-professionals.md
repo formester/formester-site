@@ -30,17 +30,23 @@ A [well-designed job application form](https://formester.com/templates/job-appli
 
 Personal information offers a glimpse into the candidate's background, while educational and work experience sections shed light on qualifications and relevant expertise. Skills, portfolio links, and LinkedIn profiles provide insights into the candidate's abilities and professional network. By carefully structuring and including these key fields in the job application form, HR professionals can efficiently evaluate candidates, ensuring they choose the best fit for the job.
 
+![Job Application Form Template](/img/job-application-form.jpg "Job Application Form")
+
 ## 2) Leave Request Forms
 
 Leave request forms play a crucial role in managing employee absences effectively. These forms bring in a level of organization and structure, ensuring that leave requests are handled consistently across the organization. There are various types of leaves, including annual, sick, maternity, or paternity leave. Each type serves a specific purpose and requires different approval processes.
 
 Having [standardized leave forms helps HR professionals](https://formester.com/templates/time-off-request-form-2780/) categorize and process these requests efficiently. The approval process often involves the employee filling out the necessary details in the form and submitting it to their immediate supervisor or the HR department. Once received, the request is reviewed and approved based on company policies and the nature of the leave. This approach ensures that the correct approvals are obtained and the employee's absence is appropriately managed.
 
+![Leave Request Form Template](/img/leave-request-form.png "Leave Request Form")
+
 ## **3) Employee Termination Forms**
 
 Documenting employee terminations using specific forms is a fundamental practice that helps organizations maintain a structured and consistent record of employee exits. These forms serve multiple purposes: legal compliance, company policy adherence, and future reference. When an employee leaves the organization, capturing essential information in the termination form is imperative. This information typically includes the reason for termination, the employee's last working day, return of company property, details about final pay and benefits, and any other relevant remarks.
 
 It helps in conducting exit interviews and understanding the circumstances surrounding the employee's departure. By having an online termination form, HR professionals can ensure that [all necessary details are documented accurately](https://formester.com/templates/termination-form-2446/) and in a standardized manner. This not only aids in maintaining a clear record but also facilitates a smooth transition during the employee's departure. 
+
+![Employee Termination Form Template](/img/employee-termination-form.jpg "Employee Termination Form")
 
 ## **4) Employee Accident Report Forms**
 
@@ -53,6 +59,8 @@ Additionally, it should capture the individuals involved and any witnesses, a de
 Self-evaluation forms benefit employees and the organization by promoting reflection, goal-setting, and open communication. Employees can showcase achievements, pinpoint strengths and areas for growth. This fosters self-awareness and [meaningful performance discussions](https://formester.com/templates/employee-self-evaluation-form-2779/). It aligns individual goals with larger objectives for organizations, enhancing productivity and satisfaction.
 
 Common sections in self-evaluation forms include goals achieved, strengths, areas for development, performance feedback, and future objectives. Criteria cover job-specific skills, teamwork, communication, adaptability, and contributions.
+
+![Self Evaluation Form Template](/img/self-evaluation-form.jpg "Employee Self Evaluation Form")
 
 ## 6) **Exit Interview Forms**
 
