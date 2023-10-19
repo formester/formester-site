@@ -38,11 +38,15 @@ Leave request forms play a crucial role in managing employee absences effectivel
 
 Having [standardized leave forms helps HR professionals](https://formester.com/templates/time-off-request-form-2780/) categorize and process these requests efficiently. The approval process often involves the employee filling out the necessary details in the form and submitting it to their immediate supervisor or the HR department. Once received, the request is reviewed and approved based on company policies and the nature of the leave. This approach ensures that the correct approvals are obtained and the employee's absence is appropriately managed.
 
+![Leave Request Form Template](/img/leave-request-form.png "Leave Request Form")
+
 ## **3) Employee Termination Forms**
 
 Documenting employee terminations using specific forms is a fundamental practice that helps organizations maintain a structured and consistent record of employee exits. These forms serve multiple purposes: legal compliance, company policy adherence, and future reference. When an employee leaves the organization, capturing essential information in the termination form is imperative. This information typically includes the reason for termination, the employee's last working day, return of company property, details about final pay and benefits, and any other relevant remarks.
 
 It helps in conducting exit interviews and understanding the circumstances surrounding the employee's departure. By having an online termination form, HR professionals can ensure that [all necessary details are documented accurately](https://formester.com/templates/termination-form-2446/) and in a standardized manner. This not only aids in maintaining a clear record but also facilitates a smooth transition during the employee's departure. 
+
+![Employee Termination Form Template](/img/employee-termination-form.jpg "Employee Termination Form")
 
 ## **4) Employee Accident Report Forms**
 
@@ -56,11 +60,15 @@ Self-evaluation forms benefit employees and the organization by promoting reflec
 
 Common sections in self-evaluation forms include goals achieved, strengths, areas for development, performance feedback, and future objectives. Criteria cover job-specific skills, teamwork, communication, adaptability, and contributions.
 
+![Self Evaluation Form Template](/img/self-evaluation-form.jpg "Employee Self Evaluation Form")
+
 ## 6) **Exit Interview Forms**
 
 Exit interview forms hold significant value in understanding employee departures. They provide a platform for departing employees to express their reasons for leaving, feedback on their experiences, and suggestions for improvement. These forms often include questions about job satisfaction, work environment, management effectiveness, growth opportunities, and overall experience within the organization.
 
 The insights gathered help HR identify patterns, areas for improvement, and potential areas to revise HR strategies. By actively [analyzing exit interview data](https://formester.com/templates/exit-interview-form-2784/), organizations can make informed decisions to improve employee retention, improve workplace culture, and address concerns, ultimately strengthening the overall HR approach.
+
+
 
 How many of these forms have you used before? Let us know in the comments.
 
