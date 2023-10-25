@@ -14,7 +14,7 @@ keywords: Employee onboarding, Online forms, HR efficiency, Digital onboarding,
   HR optimization, Employee data collection, Onboarding best practices,
   Formester
 author: Siddharth Sharma
-authorProfile: www.linkedin.com/in/sidsh0502
+authorProfile: https://www.linkedin.com/in/sidsh0502/
 createdAt: 2023-10-24T12:34:00.000Z
 coverImg: /img/how-online-forms-simplify-employee-onboarding-for-hr.png
 coverImgAlt: Employee Onboarding Form Illustration
