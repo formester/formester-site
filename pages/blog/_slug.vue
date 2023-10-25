@@ -5,32 +5,47 @@
         class="container mw-920 mt-8rem"
         :class="{ 'mb-3rem': !(article.cta && article.cta.hidden) }"
       >
-      <div class="blog__header">
-        <NuxtLink
-          :to="`/blog/`"
-          class="blog__back"
-          :class="article.toc.length ? 'blog__back__margin' : ''"
-        >
-          <span>← Back</span>
-        </NuxtLink>
-        <div class="social__links">
-          <a :href="`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${article.title} by @_Formester_ `" @click="googleAnalytics('twitter')" class="social-icons" target="_blank">
-            <TwitterIcon />
-          </a>
-          <a  :href="`https://www.facebook.com/sharer.php?u=${encodedUrl}`" @click="googleAnalytics('facebook')" class="social-icons" target="_blank">
-            <FacebookIcon />
-          </a>
-          <a  :href="`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}`" @click="googleAnalytics('linkedin')" class="social-icons" target="_blank">
-            <LinkdinIcon />
-          </a>
-          <span class="social-icons" @click="copyToClipboard">
-            <CopyLinkIcon />
-          </span>
+        <div class="blog__header">
+          <NuxtLink
+            :to="`/blog/`"
+            class="blog__back"
+            :class="article.toc.length ? 'blog__back__margin' : ''"
+          >
+            <span>← Back</span>
+          </NuxtLink>
+          <div class="social__links">
+            <a
+              :href="`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${article.title} by @_Formester_ `"
+              @click="googleAnalytics('twitter')"
+              class="social-icons"
+              target="_blank"
+            >
+              <TwitterIcon />
+            </a>
+            <a
+              :href="`https://www.facebook.com/sharer.php?u=${encodedUrl}`"
+              @click="googleAnalytics('facebook')"
+              class="social-icons"
+              target="_blank"
+            >
+              <FacebookIcon />
+            </a>
+            <a
+              :href="`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}`"
+              @click="googleAnalytics('linkedin')"
+              class="social-icons"
+              target="_blank"
+            >
+              <LinkdinIcon />
+            </a>
+            <span class="social-icons" @click="copyToClipboard">
+              <CopyLinkIcon />
+            </span>
+          </div>
         </div>
-      </div>
         <nav
           v-if="article.toc.length"
-          class="navbar navbar-expand bg-white sticky-top py-3"
+          class="navbar navbar-expand bg-white py-3"
         >
           <div class="collapse navbar-collapse">
             <ul class="navbar-nav">
@@ -70,9 +85,9 @@
         <div class="sm-text mt-1 article__author-section">
           by
           <a
-            :href="article.authorProfile" 
+            :href="article.authorProfile"
             :title="article.authorProfile"
-            target="_blank" 
+            target="_blank"
             rel="noopener"
           >
             <span class="article__author">{{ article.author }}</span>
@@ -80,15 +95,12 @@
         </div>
         <div class="blog__content">
           <nuxt-content :document="article" />
-            <div class="popup__img">
-              <span class="image-preview-close">&times;</span>
-              <img
-                src=""
-                alt=""
-              />
-            </div>
+          <div class="popup__img">
+            <span class="image-preview-close">&times;</span>
+            <img src="" alt="" />
+          </div>
         </div>
-        <notifications position="bottom right" class="my-notification"/>
+        <notifications position="bottom right" class="my-notification" />
 
         <div v-if="relatedArticles" class="mt-5">
           <h2 class="article__sub-heading">Related Blogs</h2>
@@ -112,7 +124,6 @@
             >comments powered by Disqus.</a
           ></noscript
         >
-
       </article>
     </div>
     <CallToActionSection :content="article.cta" />
@@ -134,7 +145,7 @@ export default {
     TwitterIcon,
     FacebookIcon,
     LinkdinIcon,
-    CopyLinkIcon
+    CopyLinkIcon,
   },
   content: {
     liveEdit: false,
@@ -143,17 +154,21 @@ export default {
     const article = await $content('blog', params.slug).fetch()
 
     let relatedArticles = await $content('blog').fetch()
-    relatedArticles = relatedArticles.filter(relatedArticle => article.slug !== relatedArticle.slug)
+    relatedArticles = relatedArticles.filter(
+      (relatedArticle) => article.slug !== relatedArticle.slug
+    )
     const randIndex = Math.floor(Math.random() * (relatedArticles.length - 2))
-    relatedArticles = relatedArticles.slice(randIndex,  randIndex + 2);
-    return { article, relatedArticles}
+    relatedArticles = relatedArticles.slice(randIndex, randIndex + 2)
+    return { article, relatedArticles }
   },
   mounted() {
-    document.querySelectorAll('.blog__content img').forEach(image => {
+    document.querySelectorAll('.blog__content img').forEach((image) => {
       image.onclick = () => {
-        document.querySelector('.popup__img').style.display = 'block';
-        document.querySelector('.popup__img img').src = image.getAttribute('src')
-        document.querySelector('.popup__img img').alt = image.getAttribute('alt')
+        document.querySelector('.popup__img').style.display = 'block'
+        document.querySelector('.popup__img img').src =
+          image.getAttribute('src')
+        document.querySelector('.popup__img img').alt =
+          image.getAttribute('alt')
       }
     })
     document.querySelector('.popup__img img').onclick = () => {
@@ -162,11 +177,11 @@ export default {
     document.querySelector('.image-preview-close').onclick = () => {
       document.querySelector('.popup__img ').style.display = 'none'
     }
-    document.onkeydown = function(evt) {
+    document.onkeydown = function (evt) {
       if (evt.keyCode === 27) {
         document.querySelector('.popup__img ').style.display = 'none'
       }
-    };
+    }
     this.loadDisqus()
   },
   methods: {
@@ -177,20 +192,21 @@ export default {
     to() {
       this.$router.back()
     },
-    copyToClipboard(){ 
+    copyToClipboard() {
       if (process.client) {
-        navigator.clipboard.writeText(window.location.href).then(()=>{
+        navigator.clipboard.writeText(window.location.href).then(() => {
           this.$notify({ type: 'success', text: 'Link copied to clipboard' })
-        });
+        })
       }
       this.googleAnalytics('custom_link')
     },
-    googleAnalytics(platform){
-      gtag && gtag("event", "share", {
-        "method": platform,
-        "content_type": "blog",
-        "item_id": this.article.title
-      })
+    googleAnalytics(platform) {
+      gtag &&
+        gtag('event', 'share', {
+          method: platform,
+          content_type: 'blog',
+          item_id: this.article.title,
+        })
     },
     loadDisqus() {
       var disqus_config = function () {
@@ -218,13 +234,13 @@ export default {
         mainImageAlt:
           this.article.coverImgAlt ||
           'Form builder showing drag and drop functionality',
-        keywords: this.article.keywords
+        keywords: this.article.keywords,
       }
       return getSiteMeta(metaData)
     },
-    encodedUrl(){
-      return encodeURIComponent(process.env.baseUrl + this.$route.fullPath);
-    }
+    encodedUrl() {
+      return encodeURIComponent(process.env.baseUrl + this.$route.fullPath)
+    },
   },
   head() {
     return {
@@ -282,34 +298,37 @@ export default {
 
     const jsonData = [
       {
-      '@context': 'https://schema.org',
-      '@type': 'BlogPosting',
-      mainEntityOfPage: {
-        '@type': 'WebPage',
-        '@id': `https://formester.com/blog/${this.article.slug}/`,
-      },
-      headline: this.article.title,
-      description: this.article.description,
-      image: imagesArray.length > 0 ? imagesArray : ['https://formester.com/formester-form-builder-background.png'],
-      author: {
-        '@type': 'Person',
-        name: this.article.author,
-        url: this.article.authorProfile,
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: 'Formester',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://formester.com/logo.png',
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': `https://formester.com/blog/${this.article.slug}/`,
         },
-      },
-      datePublished: this.article.createdAt,
+        headline: this.article.title,
+        description: this.article.description,
+        image:
+          imagesArray.length > 0
+            ? imagesArray
+            : ['https://formester.com/formester-form-builder-background.png'],
+        author: {
+          '@type': 'Person',
+          name: this.article.author,
+          url: this.article.authorProfile,
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Formester',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://formester.com/logo.png',
+          },
+        },
+        datePublished: this.article.createdAt,
       },
     ]
 
-     // Append schema if available
-     if (this.article.schema) {
+    // Append schema if available
+    if (this.article.schema) {
       try {
         this.article.schema.forEach((s) => {
           let parsedSchema = JSON.parse(s.type)
@@ -320,7 +339,7 @@ export default {
       } catch (error) {}
     }
 
-    return jsonData;
+    return jsonData
   },
 }
 </script>
@@ -328,7 +347,11 @@ export default {
 <style scoped>
 p {
   margin-bottom: 2rem;
-
+}
+nav {
+  position: sticky;
+  top: 77px;
+  z-index: 9999;
 }
 .article__heading {
   font-size: 2.25rem;
@@ -433,7 +456,6 @@ p {
   gap: 0.5rem;
 }
 
-
 #tocMenuLink {
   color: #777;
   font-size: 16px;
@@ -455,22 +477,22 @@ p {
   display: block;
 }
 
-.blog__header{
+.blog__header {
   margin-top: -4rem;
   justify-content: space-between;
   display: flex;
 }
-.blog__header span{
+.blog__header span {
   color: #777;
 }
-.social__links{
+.social__links {
   display: flex;
 }
-.social-icons{
+.social-icons {
   margin: 0 6px;
   cursor: pointer;
 }
-.social-icons{
+.social-icons {
   fill: #000;
 }
 
@@ -511,6 +533,9 @@ p {
 }
 
 @media only screen and (max-width: 992px) {
+  nav {
+    top: 70px;
+  }
   .dropdown-link {
     min-width: 680px;
   }

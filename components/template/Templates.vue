@@ -71,9 +71,10 @@ export default {
 
 <style scoped>
 .left-sidebar {
-  background-color: white;
+  position: sticky;
+  top: 40px;
+  height: 100%;
   min-width: 240px;
-  min-height: calc(100vh - 45px);
   overflow-y: auto;
 }
 .heading {
@@ -118,15 +119,12 @@ export default {
   .template_container {
     flex-direction: column;
   }
-  .left-sidebar {
-    min-height: auto;
-    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.04);
-    position: sticky;
-    top: 54px;
-    padding: 1rem 0;
-  }
   .heading {
-    margin-top: 12px;
+    display: none;
+  }
+  .left-sidebar {
+    position: static;
+    margin-bottom: 1.5rem;
   }
 }
 
