@@ -9,8 +9,8 @@
             The Only No-Code <span class="hglight">Form</span> Builder You Need
           </h1>
           <p class="hero__subheading mt-3">
-            Build forms in minutes using our drag and drop builder or integrate
-            with your existing HTML form.
+            Build forms in minutes with drag and drop interface or integrate
+            with your existing HTML form using our no-code form builder.
           </p>
           <a
             href="https://app.formester.com/users/sign_up"
