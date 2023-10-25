@@ -114,9 +114,9 @@ export default {
         {
           '@type': 'Corporation',
           '@id': 'https://acornglobus.com',
-          name: 'Formester',
+          name: 'HTML Form Generator | No Code Web Form Builder - Formester',
           description:
-            'Build online forms using a No-Code, Drag-and-Drop Form Builder - Starts Free! Advanced Features, Third-Party Integrations & Robust Analytics!',
+            'Build web forms using our Free HTML Form Builder with Drag-and-Drop Interface - Advanced Features, Third-Party Integrations & Robust Analytics!',
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
           sameAs: [
