@@ -10,7 +10,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'No Code Form Builder | Online HTML Form Builder - Formester',
+    title: 'HTML Form Generator | No Code Web Form Builder - Formester',
     meta: [
       ...meta,
       { charset: 'utf-8' },
@@ -35,7 +35,7 @@ export default {
         src: '/bootstrap.min.js',
         defer: true,
         async: true,
-      }
+      },
     ],
   },
 
@@ -58,10 +58,12 @@ export default {
           url: `/templates/${template.slug}`,
         }
       })
-      let { data: response } = await axios.get('https://app.formester.com/template_categories.json')
-        let categories = response.map((category) => {
-          return `/templates/categories/${category.slug}`
-        })
+      let { data: response } = await axios.get(
+        'https://app.formester.com/template_categories.json'
+      )
+      let categories = response.map((category) => {
+        return `/templates/categories/${category.slug}`
+      })
       const blogs = await getRoutes()
       return blogs.concat(templates, categories)
     },
@@ -103,7 +105,7 @@ export default {
   // GTM configuration
   gtm: {
     enabled: true,
-    id: 'GTM-56W9ZCR'
+    id: 'GTM-56W9ZCR',
   },
 
   // Hooks configuration - https://content.nuxtjs.org/advanced/
@@ -132,17 +134,21 @@ export default {
   generate: {
     routes: async () => {
       try {
-        let { data } = await axios.get('https://app.formester.com/templates.json')
+        let { data } = await axios.get(
+          'https://app.formester.com/templates.json'
+        )
         let templatesRoute = data.map((template) => {
           return `/templates/${template.slug}`
         })
-        let { data: response } = await axios.get('https://app.formester.com/template_categories.json')
+        let { data: response } = await axios.get(
+          'https://app.formester.com/template_categories.json'
+        )
         let categoriesRoute = response.map((category) => {
           return `/templates/categories/${category.slug}`
         })
         return [...templatesRoute, ...categoriesRoute]
       } catch (error) {
-        return [];
+        return []
       }
     },
     fallback: true,
@@ -153,7 +159,7 @@ export default {
 
   // Nuxt Image
   image: {
-    dir: 'assets/images'
+    dir: 'assets/images',
   },
 
   // Enviornment variable for the base url of the app
