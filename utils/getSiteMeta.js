@@ -43,6 +43,7 @@ const keywords = [
   'Form builder HTML',
   'Form generator HTML',
   'HTML form maker',
+  'Form builder',
   'Online form builder',
   'Web form builder',
   'Website form builder',
