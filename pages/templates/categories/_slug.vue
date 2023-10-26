@@ -36,6 +36,33 @@ export default {
       ],
       generic: [
         {
+          id: 11,
+          name: 'Frog Forms',
+          is_active: true,
+          created_at: '2023-10-20T13:45:21.030Z',
+          updated_at: '2023-10-20T15:48:55.836Z',
+          slug: 'donation-forms',
+          kind: 'generic',
+        },
+        {
+          id: 12,
+          name: 'Donation Forms',
+          is_active: true,
+          created_at: '2023-10-20T13:45:21.030Z',
+          updated_at: '2023-10-20T15:48:55.836Z',
+          slug: 'donation-forms',
+          kind: 'generic',
+        },
+        {
+          id: 14,
+          name: 'Bonut Forms',
+          is_active: true,
+          created_at: '2023-10-20T13:45:21.030Z',
+          updated_at: '2023-10-20T15:48:55.836Z',
+          slug: 'donation-forms',
+          kind: 'generic',
+        },
+        {
           id: 1,
           name: 'Donation Forms',
           is_active: true,

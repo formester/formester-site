@@ -350,7 +350,7 @@ p {
 }
 nav {
   position: sticky;
-  top: 77px;
+  top: 64px;
   z-index: 9999;
 }
 .article__heading {
@@ -507,7 +507,7 @@ nav {
   background: rgba(90, 90, 90, 0.96);
   height: 100%;
   width: 100%;
-  z-index: 1022;
+  z-index: 99999;
   display: none;
 }
 
@@ -534,7 +534,7 @@ nav {
 
 @media only screen and (max-width: 992px) {
   nav {
-    top: 70px;
+    top: 48px;
   }
   .dropdown-link {
     min-width: 680px;

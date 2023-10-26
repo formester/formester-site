@@ -23,7 +23,10 @@
     >
       <!-- Search -->
       <div class="d-flex">
-        <div class="position-relative d-flex gap-4 align-items-center m-auto">
+        <div
+          class="position-relative ps-1 d-flex gap-4 align-items-center m-auto"
+          :class="{ 'left-aligned-search': isSticky }"
+        >
           <div class="search-svg">
             <nuxt-img src="/templates/search.png" alt="Search" />
           </div>
@@ -99,6 +102,10 @@ export default {
   top: 69px;
   width: 100% !important;
   z-index: 1000;
+  border-radius: 0 !important;
+}
+.left-aligned-search {
+  margin: 0 !important;
 }
 
 .hero-section {

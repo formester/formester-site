@@ -1,5 +1,5 @@
 <template>
-  <div class="template-categories">
+  <div class="template-categories py-2">
     <h2 class="sidebar-heading">Our Templates</h2>
     <!-- Category bar for small devices to show hide categories -->
     <div class="category-bar" @click="isCollapsedSm = !isCollapsedSm">
@@ -24,7 +24,7 @@
       </h3>
     </NuxtLink>
     <div
-      v-for="(categories, kind) in templateCategories"
+      v-for="(categories, kind) in sortedTemplateCategories"
       :key="kind"
       class="category-block"
       :class="{ 'd-none': isCollapsedSm === true }"
@@ -33,7 +33,7 @@
         :data-bs-target="'#categories' + kind"
         data-bs-target="#categories"
         ref="categoryContainer"
-        @click="toggleCollapse(kind)"
+        @click="toggleKinds(kind)"
       >
         <div
           class="kind-container d-flex align-items-center justify-content-between"
@@ -84,11 +84,24 @@ export default {
     }
   },
   methods: {
-    toggleCollapse(kind) {
+    toggleKinds(kind) {
       this.$set(this.isCollapsed, kind, !this.isCollapsed[kind])
+      localStorage.setItem('isCollapsedState', JSON.stringify(this.isCollapsed))
+    },
+    clearIsCollapsedState() {
+      localStorage.removeItem('isCollapsedState')
     },
   },
   computed: {
+    sortedTemplateCategories() {
+      // Create a deep copy of templateCategories
+      let sortedTemplate = { ...this.templateCategories }
+
+      for (let kind in sortedTemplate) {
+        sortedTemplate[kind].sort((a, b) => a.name.localeCompare(b.name))
+      }
+      return sortedTemplate
+    },
     imageSrc() {
       const imageName = this.isCollapsedSm ? 'right-arrow' : 'cross'
       return `/templates/${imageName}.png`
@@ -96,6 +109,17 @@ export default {
   },
   mounted() {
     if (window.innerWidth <= 840) this.showCategories = false
+
+    const savedState = localStorage.getItem('isCollapsedState')
+    if (savedState) {
+      this.isCollapsed = JSON.parse(savedState)
+    }
+
+    window.addEventListener('beforeunload', this.clearIsCollapsedState)
+  },
+  beforeDestroy() {
+    // Remove the event listener when the component is destroyed
+    window.removeEventListener('beforeunload', this.clearIsCollapsedState)
   },
 }
 </script>
