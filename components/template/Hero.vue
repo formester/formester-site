@@ -99,7 +99,7 @@ export default {
 <style scoped>
 .sticky {
   position: fixed !important;
-  top: 69px;
+  top: 56px;
   width: 100% !important;
   z-index: 1000;
   border-radius: 0 !important;

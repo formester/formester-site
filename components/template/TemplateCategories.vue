@@ -24,21 +24,21 @@
       </h3>
     </NuxtLink>
     <div
-      v-for="(categories, kind) in sortedTemplateCategories"
-      :key="kind"
+      v-for="(categories, categoryType) in sortedTemplateCategories"
+      :key="categoryType"
       class="category-block"
       :class="{ 'd-none': isCollapsedSm === true }"
     >
       <div
-        :data-bs-target="'#categories' + kind"
+        :data-bs-target="'#categories' + categoryType"
         data-bs-target="#categories"
         ref="categoryContainer"
-        @click="toggleKinds(kind)"
+        @click="toggleCollapse(categoryType)"
       >
         <div
-          class="kind-container d-flex align-items-center justify-content-between"
+          class="categoryType-container d-flex align-items-center justify-content-between"
         >
-          <h2 class="category-heading pointer">{{ kind }}</h2>
+          <h2 class="category-heading pointer">{{ categoryType }}</h2>
           <div>
             <nuxt-img
               class="collapse-arrow-btn pointer"
@@ -50,8 +50,8 @@
       </div>
       <div
         class="categories collapse"
-        :id="'categories' + kind"
-        :class="{ show: isCollapsed[kind] }"
+        :id="'categories' + categoryType"
+        :class="{ show: isCollapsed[categoryType] }"
       >
         <NuxtLink
           v-for="category in categories"
@@ -84,8 +84,8 @@ export default {
     }
   },
   methods: {
-    toggleKinds(kind) {
-      this.$set(this.isCollapsed, kind, !this.isCollapsed[kind])
+    toggleCollapse(categoryType) {
+      this.$set(this.isCollapsed, categoryType, !this.isCollapsed[categoryType])
       localStorage.setItem('isCollapsedState', JSON.stringify(this.isCollapsed))
     },
     clearIsCollapsedState() {
@@ -97,8 +97,10 @@ export default {
       // Create a deep copy of templateCategories
       let sortedTemplate = { ...this.templateCategories }
 
-      for (let kind in sortedTemplate) {
-        sortedTemplate[kind].sort((a, b) => a.name.localeCompare(b.name))
+      for (let categoryType in sortedTemplate) {
+        sortedTemplate[categoryType].sort((a, b) =>
+          a.name.localeCompare(b.name)
+        )
       }
       return sortedTemplate
     },
@@ -168,7 +170,7 @@ h2::first-letter {
   letter-spacing: 0em;
   text-align: left;
 }
-.kind-container {
+.categoryType-container {
   padding: 0 35px;
 }
 .category-menu-btn {
@@ -227,7 +229,7 @@ h2::first-letter {
     line-height: 21px;
     transition: none;
   }
-  .kind-container {
+  .categoryType-container {
     padding: 0 24px;
   }
   .category {

@@ -19,91 +19,10 @@ export default {
       { params: { category_slug: params.slug } }
     )
 
-    let { data: categories } = await $axios.get(
+    const { data: categories } = await $axios.get(
       'https://app.formester.com/template_categories.json'
     )
-    categories = {
-      industry: [
-        {
-          id: 23,
-          name: 'Order Forms',
-          is_active: true,
-          created_at: '2023-10-20T13:45:21.191Z',
-          updated_at: '2023-10-20T15:42:32.427Z',
-          slug: 'order-forms',
-          kind: 'industry',
-        },
-      ],
-      generic: [
-        {
-          id: 11,
-          name: 'Frog Forms',
-          is_active: true,
-          created_at: '2023-10-20T13:45:21.030Z',
-          updated_at: '2023-10-20T15:48:55.836Z',
-          slug: 'donation-forms',
-          kind: 'generic',
-        },
-        {
-          id: 12,
-          name: 'Donation Forms',
-          is_active: true,
-          created_at: '2023-10-20T13:45:21.030Z',
-          updated_at: '2023-10-20T15:48:55.836Z',
-          slug: 'donation-forms',
-          kind: 'generic',
-        },
-        {
-          id: 14,
-          name: 'Bonut Forms',
-          is_active: true,
-          created_at: '2023-10-20T13:45:21.030Z',
-          updated_at: '2023-10-20T15:48:55.836Z',
-          slug: 'donation-forms',
-          kind: 'generic',
-        },
-        {
-          id: 1,
-          name: 'Donation Forms',
-          is_active: true,
-          created_at: '2023-10-20T13:45:21.030Z',
-          updated_at: '2023-10-20T15:48:55.836Z',
-          slug: 'donation-forms',
-          kind: 'generic',
-        },
-        {
-          id: 5,
-          name: 'Organization Forms',
-          is_active: true,
-          created_at: '2023-10-20T13:45:21.071Z',
-          updated_at: '2023-10-22T07:17:06.179Z',
-          slug: 'organization-forms',
-          kind: 'generic',
-        },
-      ],
-      purpose: [
-        {
-          id: 3,
-          name: 'Consultation Forms',
-          is_active: true,
-          created_at: '2023-10-20T13:45:21.056Z',
-          updated_at: '2023-10-22T07:14:34.588Z',
-          slug: 'consultation-forms',
-          kind: 'purpose',
-        },
-      ],
-      department: [
-        {
-          id: 4,
-          name: 'Application Forms',
-          is_active: true,
-          created_at: '2023-10-20T13:45:21.065Z',
-          updated_at: '2023-10-22T07:15:44.811Z',
-          slug: 'application-forms',
-          kind: 'department',
-        },
-      ],
-    }
+
     return { templates, categories }
   },
   computed: {

@@ -10,7 +10,7 @@
       </div>
       <div class="w-100">
         <h2 class="heading">
-          {{ $route.params.slug ? $route.params.slug.replace('-', ' ') : '' }}
+          {{ $route.params.slug ? $route.params.slug.replace('-', ' ') : 'All' }}
           Templates
         </h2>
         <div v-if="templates && templates.length" class="templates">
@@ -73,8 +73,7 @@ export default {
 .left-sidebar {
   position: sticky;
   top: 40px;
-  /* height: 100%; */
-  max-height: 80vh;
+  max-height: 100vh;
   margin-bottom: 1.5rem;
   min-width: 240px;
   overflow-y: auto;
