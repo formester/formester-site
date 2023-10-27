@@ -173,8 +173,8 @@ export default {
 <style scoped>
 nav {
   padding: 1em 0;
+  z-index: 99999;
 }
-
 .button {
   font-size: 16px;
   font-weight: 500;

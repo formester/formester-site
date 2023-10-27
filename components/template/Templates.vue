@@ -9,10 +9,12 @@
         />
       </div>
       <div class="w-100">
-        <h1 class="heading">
-          {{ $route.params.slug ? $route.params.slug.replace('-', ' ') : '' }}
+        <h2 class="heading">
+          {{
+            $route.params.slug ? $route.params.slug.replace('-', ' ') : 'All'
+          }}
           Templates
-        </h1>
+        </h2>
         <div v-if="templates && templates.length" class="templates">
           <TemplateCard
             v-for="(template, idx) in filteredTemplate"
@@ -71,10 +73,28 @@ export default {
 
 <style scoped>
 .left-sidebar {
-  background-color: white;
+  position: sticky;
+  top: 80px;
+  max-height: 100vh;
+  margin-bottom: 1.5rem;
+  margin-top: 56px;
   min-width: 240px;
-  min-height: calc(100vh - 45px);
   overflow-y: auto;
+}
+/* Style of the scrollbar*/
+.left-sidebar::-webkit-scrollbar {
+  width: 7px;
+  background-color: #f5f5f5;
+}
+/* Style of the scrollbar thumb */
+.left-sidebar::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+/* Change the thumb color on hover */
+.left-sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
 }
 .heading {
   text-transform: capitalize;
@@ -118,15 +138,13 @@ export default {
   .template_container {
     flex-direction: column;
   }
-  .left-sidebar {
-    min-height: auto;
-    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.04);
-    position: sticky;
-    top: 54px;
-    padding: 1rem 0;
-  }
   .heading {
     margin-top: 12px;
+    text-align: center;
+  }
+  .left-sidebar {
+    position: static;
+    margin: 0;
   }
 }
 

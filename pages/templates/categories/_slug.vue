@@ -14,7 +14,7 @@ import Templates from '@/components/template/Templates.vue'
 export default {
   components: { Templates },
   async asyncData({ $axios, params }) {
-    const { data: templates } = await $axios.get(
+    let { data: templates } = await $axios.get(
       'https://app.formester.com/templates.json',
       { params: { category_slug: params.slug } }
     )
@@ -23,14 +23,25 @@ export default {
       'https://app.formester.com/template_categories.json'
     )
 
+    const dummyDescription =
+      'Check out this pre-designed template and start customising with just a single click. Personalise with your branding, incorporate electronic signatures for security and add multiple collaborators to make changes simultaneously. Use this template and start getting data driven actionable insights with robust analytics.'
+
+    templates = templates.map((template) => ({
+      ...template,
+      description: template.description || dummyDescription,
+    }))
+
     return { templates, categories }
   },
   computed: {
     currentCategory() {
-      const [currentCategory] = this.categories.filter(
+      // Flatten all categories into a single array
+      const allCategories = Object.values(this.categories).flat()
+      // Find the first category with a matching slug
+      const currentCategory = allCategories.find(
         (cate) => cate.slug === this.$route.params.slug
       )
-      return currentCategory.name
+      return currentCategory.name || ''
     },
     meta() {
       const metaData = {

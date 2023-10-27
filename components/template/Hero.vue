@@ -16,10 +16,17 @@
       </p>
     </div>
 
-    <div class="search-box position-absolute mx-auto d-flex flex-column">
+    <div
+      class="search-box position-absolute mx-auto d-flex flex-column"
+      :class="{ sticky: isSticky }"
+      ref="stickyElement"
+    >
       <!-- Search -->
       <div class="d-flex">
-        <div class="position-relative d-flex gap-4 align-items-center m-auto">
+        <div
+          class="position-relative ps-1 d-flex gap-4 align-items-center m-auto"
+          :class="{ 'left-aligned-search': isSticky }"
+        >
           <div class="search-svg">
             <nuxt-img src="/templates/search.png" alt="Search" />
           </div>
@@ -54,6 +61,8 @@ export default {
   data() {
     return {
       searchTerm: '',
+      isSticky: false,
+      stickyPoint: 0,
     }
   },
   methods: {
@@ -64,11 +73,41 @@ export default {
       this.searchTerm = ''
       this.emitSearchTerm()
     },
+    handleScroll() {
+      if (window.innerWidth <= 840) {
+        if (window.scrollY >= this.stickyPoint) {
+          this.isSticky = true
+        } else {
+          this.isSticky = false
+        }
+      } else {
+        this.isSticky = false
+      }
+    },
+  },
+  mounted() {
+    this.stickyPoint =
+      this.$refs.stickyElement.getBoundingClientRect().top + window.scrollY
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll)
   },
 }
 </script>
 
 <style scoped>
+.sticky {
+  position: fixed !important;
+  top: 56px;
+  width: 100% !important;
+  z-index: 1000;
+  border-radius: 0 !important;
+}
+.left-aligned-search {
+  margin: 0 !important;
+}
+
 .hero-section {
   width: 100%;
   min-height: 348px;
