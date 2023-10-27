@@ -133,7 +133,7 @@ export default {
   font-weight: 600;
   line-height: 30px;
   padding: 0 35px;
-  margin: 56px 0 16px;
+  margin: 0 0 16px;
 }
 .our-template-heading {
   color: var(--neutral-900, #171717);

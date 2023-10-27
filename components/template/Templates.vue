@@ -10,7 +10,9 @@
       </div>
       <div class="w-100">
         <h2 class="heading">
-          {{ $route.params.slug ? $route.params.slug.replace('-', ' ') : 'All' }}
+          {{
+            $route.params.slug ? $route.params.slug.replace('-', ' ') : 'All'
+          }}
           Templates
         </h2>
         <div v-if="templates && templates.length" class="templates">
@@ -72,11 +74,27 @@ export default {
 <style scoped>
 .left-sidebar {
   position: sticky;
-  top: 40px;
+  top: 80px;
   max-height: 100vh;
   margin-bottom: 1.5rem;
+  margin-top: 56px;
   min-width: 240px;
   overflow-y: auto;
+}
+/* Style of the scrollbar*/
+.left-sidebar::-webkit-scrollbar {
+  width: 7px;
+  background-color: #f5f5f5;
+}
+/* Style of the scrollbar thumb */
+.left-sidebar::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+/* Change the thumb color on hover */
+.left-sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
 }
 .heading {
   text-transform: capitalize;
@@ -126,7 +144,7 @@ export default {
   }
   .left-sidebar {
     position: static;
-    margin-bottom: 1.5rem;
+    margin: 0;
   }
 }
 
