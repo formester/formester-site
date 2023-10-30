@@ -5,9 +5,16 @@
     <div class="category-bar" @click="isCollapsedSm = !isCollapsedSm">
       <h2 class="our-template-heading">Our Templates</h2>
       <nuxt-img
+        v-if="isCollapsedSm"
         class="category-menu-btn pointer"
-        :src="imageSrc"
-        alt="category-menu-button"
+        src="/templates/right-arrow.png"
+        alt="open-category"
+      />
+      <nuxt-img
+        v-else
+        class="category-menu-btn pointer"
+        src="/templates/cross.png"
+        alt="close-category"
       />
     </div>
 
@@ -103,10 +110,6 @@ export default {
         )
       }
       return sortedTemplate
-    },
-    imageSrc() {
-      const imageName = this.isCollapsedSm ? 'right-arrow' : 'cross'
-      return `/templates/${imageName}.png`
     },
   },
   mounted() {
