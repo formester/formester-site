@@ -5,13 +5,13 @@
     <div class="category-bar" @click="isCollapsedSm = !isCollapsedSm">
       <h2 class="our-template-heading">Our Templates</h2>
       <nuxt-img
-        v-if="isCollapsedSm"
+        v-show="isCollapsedSm"
         class="category-menu-btn pointer"
         src="/templates/right-arrow.png"
         alt="open-category"
       />
       <nuxt-img
-        v-else
+        v-show="!isCollapsedSm"
         class="category-menu-btn pointer"
         src="/templates/cross.png"
         alt="close-category"
