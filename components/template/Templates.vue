@@ -15,10 +15,10 @@
           }}
           Templates
         </h2>
-        <div v-if="templates && templates.length" class="templates">
+        <div v-if="filterTemplates && filterTemplates.length" class="templates">
           <TemplateCard
-            v-for="(template, idx) in filteredTemplate"
-            :key="idx"
+            v-for="(template, idx) in filterTemplates"
+            :key="template.id"
             :template="template"
           />
         </div>
@@ -45,27 +45,22 @@ export default {
   props: ['activeCategory', 'templates', 'templateCategories'],
   data() {
     return {
-      mainTemplateData: this.templates,
-      filteredTemplate: this.templates,
       searchTerm: '',
     }
   },
   methods: {
     handleSearch(searchTerm) {
       this.searchTerm = searchTerm
-      this.filteredData()
     },
-    filteredData() {
+  },
+  computed: {
+    filterTemplates() {
       if (!this.searchTerm.trim()) {
-        this.filteredTemplate = this.mainTemplateData
-        return
+        return this.templates
       }
-      const filteredData = this.mainTemplateData.filter((item) => {
-        return item.name
-          .toLowerCase()
-          .includes(this.searchTerm.toLocaleLowerCase())
-      })
-      this.filteredTemplate = filteredData
+      return this.templates.filter((template) =>
+        template.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+      )
     },
   },
 }
