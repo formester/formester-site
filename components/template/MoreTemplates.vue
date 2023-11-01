@@ -26,9 +26,10 @@
           >
             Recommend
           </li>
+          <!-- Flatten categories in single Array so we can loop on it  -->
           <li
             class="tab"
-            v-for="category in categories"
+            v-for="category in Object.values(categories).flat()"
             :key="category.id"
             :id="category.slug"
             :class="{ active: activeTab === category.id }"
@@ -72,7 +73,10 @@
           </NuxtLink>
         </div>
       </div>
-      <div v-if="templates && templates.length" class="d-flex align-items-center justify-content-center mt-4">
+      <div
+        v-if="templates && templates.length"
+        class="d-flex align-items-center justify-content-center mt-4"
+      >
         <NuxtLink :to="`/templates/`">
           <button class="btn-all-templates">View All Templates</button>
         </NuxtLink>
