@@ -72,7 +72,7 @@ Sharing Google Forms through links on social media or blog posts is an excellent
 6. **Shorten the Link (Optional)**: To make sharing even more straightforward, you can select the “Shorten URL” checkbox to create a shorter, more manageable link.
 7. **Share It**: Now, you can share this link on social media, in blog posts, or via any platform of your choice.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NAwtca9oZJ8?si=lxYXGQQxiXiJtTPt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="700" height="315" src="https://www.youtube.com/embed/NAwtca9oZJ8?si=lxYXGQQxiXiJtTPt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Sharing Google Forms via links is an incredibly flexible approach. It helps you reach a broad audience or restrict access if needed. It's a practical way to ensure your forms are readily available to those interested, wherever they are online.
 
