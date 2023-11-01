@@ -1,5 +1,5 @@
 <template>
-  <div class="template-categories py-2">
+  <div class="template-categories">
     <h2 class="sidebar-heading">Our Templates</h2>
     <!-- Category bar for small devices to show hide categories -->
     <div class="category-bar" @click="showFiltersSm = !showFiltersSm">

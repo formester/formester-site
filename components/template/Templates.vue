@@ -72,7 +72,7 @@ export default {
   top: 80px;
   max-height: 100vh;
   margin-bottom: 1.5rem;
-  margin-top: 56px;
+  margin-top: 15px;
   min-width: 240px;
   overflow-y: auto;
 }
