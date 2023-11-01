@@ -28,9 +28,9 @@ In this article, we will look at six online forms crucial for HR Teams, highligh
 
 A [well-designed job application form](https://formester.com/templates/job-application-form-2450/) is the starting point for finding the right candidate to fit a specific role within a company. It's like a roadmap that helps HR professionals navigate through a sea of potential candidates. One of the crucial aspects of a job application form is the collection of essential information. Fields such as personal details, education, work experience, skills, portfolio links, and LinkedIn profiles are vital.
 
-Personal information offers a glimpse into the candidate's background, while educational and work experience sections shed light on qualifications and relevant expertise. Skills, portfolio links, and LinkedIn profiles provide insights into the candidate's abilities and professional network. By carefully structuring and including these key fields in the job application form, HR professionals can efficiently evaluate candidates, ensuring they choose the best fit for the job.\
-\
-<iframe src="https://app.formester.com/f/48df2545-a443-4a89-bb90-c26f698c305b" frameborder="0" height="100%" width="100%"></iframe >
+Personal information offers a glimpse into the candidate's background, while educational and work experience sections shed light on qualifications and relevant expertise. Skills, portfolio links, and LinkedIn profiles provide insights into the candidate's abilities and professional network. By carefully structuring and including these key fields in the job application form, HR professionals can efficiently evaluate candidates, ensuring they choose the best fit for the job.
+
+<iframe src="https://app.formester.com/f/48df2545-a443-4a89-bb90-c26f698c305b" frameborder="0" height="100%" width="100%"> </iframe >
 
 ## 2) Leave Request Forms
 
