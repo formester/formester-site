@@ -28,7 +28,7 @@
           :class="{ 'left-aligned-search': isSticky }"
         >
           <div class="search-svg">
-            <nuxt-img src="/templates/search.png" alt="Search" />
+            <nuxt-img src="/templates/search.svg" alt="Search" />
           </div>
           <input
             type="text"

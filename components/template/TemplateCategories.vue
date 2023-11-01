@@ -1,17 +1,17 @@
 <template>
-  <div class="template-categories py-2">
+  <div class="template-categories">
     <h2 class="sidebar-heading">Our Templates</h2>
     <!-- Category bar for small devices to show hide categories -->
-    <div class="category-bar" @click="isCollapsedSm = !isCollapsedSm">
+    <div class="category-bar" @click="showFiltersSm = !showFiltersSm">
       <h2 class="our-template-heading">Our Templates</h2>
       <nuxt-img
-        v-show="isCollapsedSm"
+        v-show="showFiltersSm"
         class="category-menu-btn pointer"
         src="/templates/right-arrow.png"
         alt="open-category"
       />
       <nuxt-img
-        v-show="!isCollapsedSm"
+        v-show="!showFiltersSm"
         class="category-menu-btn pointer"
         src="/templates/cross.png"
         alt="close-category"
@@ -25,23 +25,18 @@
     >
       <h3
         class="all-category-heading"
-        :class="{ 'd-none': isCollapsedSm === true }"
+        :class="{ 'd-none': showFiltersSm === true }"
       >
         All Templates
       </h3>
     </NuxtLink>
     <div
-      v-for="(categories, categoryType) in sortedTemplateCategories"
+      v-for="(categories, categoryType) in templateCategories"
       :key="categoryType"
       class="category-block"
-      :class="{ 'd-none': isCollapsedSm === true }"
+      :class="{ 'd-none': showFiltersSm === true }"
     >
-      <div
-        :data-bs-target="'#categories' + categoryType"
-        data-bs-target="#categories"
-        ref="categoryContainer"
-        @click="toggleCollapse(categoryType)"
-      >
+      <div @click="toggleCollapse(categoryType)">
         <div
           class="categoryType-container d-flex align-items-center justify-content-between"
         >
@@ -49,7 +44,8 @@
           <div>
             <nuxt-img
               class="collapse-arrow-btn pointer"
-              src="templates/collapseDown-arrow.png"
+              :class="{ 'rotate-arrow': isExpanded[categoryType] }"
+              src="templates/collapseDown-arrow.svg"
               alt="category-arrow-button"
             />
           </div>
@@ -58,7 +54,7 @@
       <div
         class="categories collapse"
         :id="'categories' + categoryType"
-        :class="{ show: isCollapsed[categoryType] }"
+        :class="{ show: isExpanded[categoryType] }"
       >
         <NuxtLink
           v-for="category in categories"
@@ -86,30 +82,17 @@ export default {
   data() {
     return {
       showCategories: true,
-      isCollapsed: { industry: true }, // Hardcoded industry to open industry collapse by default
-      isCollapsedSm: false,
+      isExpanded: {},
+      showFiltersSm: false,
     }
   },
   methods: {
     toggleCollapse(categoryType) {
-      this.$set(this.isCollapsed, categoryType, !this.isCollapsed[categoryType])
-      localStorage.setItem('isCollapsedState', JSON.stringify(this.isCollapsed))
+      this.$set(this.isExpanded, categoryType, !this.isExpanded[categoryType])
+      localStorage.setItem('isCollapsedState', JSON.stringify(this.isExpanded))
     },
-    clearIsCollapsedState() {
+    clearIsExpandedState() {
       localStorage.removeItem('isCollapsedState')
-    },
-  },
-  computed: {
-    sortedTemplateCategories() {
-      // Create a deep copy of templateCategories
-      let sortedTemplate = { ...this.templateCategories }
-
-      for (let categoryType in sortedTemplate) {
-        sortedTemplate[categoryType].sort((a, b) =>
-          a.name.localeCompare(b.name)
-        )
-      }
-      return sortedTemplate
     },
   },
   mounted() {
@@ -117,14 +100,17 @@ export default {
 
     const savedState = localStorage.getItem('isCollapsedState')
     if (savedState) {
-      this.isCollapsed = JSON.parse(savedState)
+      this.isExpanded = JSON.parse(savedState)
+    } else {
+      // Set first category type as expanded
+      this.isExpanded = { [Object.keys(this.templateCategories)[0]]: true }
     }
 
-    window.addEventListener('beforeunload', this.clearIsCollapsedState)
+    window.addEventListener('beforeunload', this.clearIsExpandedState)
   },
   beforeDestroy() {
     // Remove the event listener when the component is destroyed
-    window.removeEventListener('beforeunload', this.clearIsCollapsedState)
+    window.removeEventListener('beforeunload', this.clearIsExpandedState)
   },
 }
 </script>
@@ -153,7 +139,6 @@ export default {
   font-size: 16px;
   line-height: 24px;
   user-select: none;
-  /* transition: all 2s ease-in-out; */
   font-weight: 500;
   letter-spacing: 0em;
 }
@@ -182,17 +167,26 @@ h2::first-letter {
 .category {
   padding: 4px 36px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
-  color: #404040;
+  color: #272727;
   user-select: none;
-  /* transition: all 2s ease-in-out; */
-  margin-bottom: 0;
+  margin-bottom: 4px;
   font-weight: 400;
 }
 .category.active {
   color: #4f3895;
-  font-weight: 500;
+  font-weight: 600;
+}
+.category:hover {
+  color: #643ed6;
+}
+.collapse-arrow-btn {
+  transition: all 0.3s ease-in-out;
+}
+.rotate-arrow {
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
 }
 
 @media only screen and (max-width: 840px) {
@@ -237,7 +231,6 @@ h2::first-letter {
   }
   .category {
     padding: 4px 24px;
-    font-size: 14px;
     font-weight: 400;
     line-height: 21px;
     transition: none;
