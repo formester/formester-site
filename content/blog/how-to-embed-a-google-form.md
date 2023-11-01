@@ -37,6 +37,8 @@ Embedding Google Forms on your website can [automate the way you collect informa
 6. **Add to Your Website**: Now, go to your website's editor and paste the code where you want the form to appear.
 7. **Save and Publish**: Don't forget to save your changes and publish your website.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4W0tYaOkq54?si=o7mU59aW-yqTvTZi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 Embedding Google Forms on your website is incredibly convenient. It ensures that your audience doesn't need to leave your website to interact with your forms. They can submit information and engage with your content, making it a great method in terms of user convenience. However, this method has certain limitations as iframes that google forms uses might cause usability or security issues.
 
 ## Method 2: **How to Embed Google Forms in Emails**
@@ -51,6 +53,8 @@ Embedding Google Forms in the email offers an easy way for users to fill in the 
 4. **Customize Email**: Compose your email, and then click the icon that resembles a form to insert your Google Form directly into the email body.
 5. **Recipient List**: Add your recipients and finalize the email as you normally would.
 6. **Send It**: Hit the send button to deliver your email with the embedded form.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rB3SSvAFdBk?si=X38ffwC_4xyOIset" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Embedding Google Forms in emails is a simple method to gather information that improves user experience by eliminating the need to open external links. It's a convenient method for direct engagement. It is important to note that email sending restrictions may apply in certain cases. Some email services limit the number of emails you can send in a day, causing an issue for larger surveys.
 
@@ -67,6 +71,8 @@ Sharing Google Forms through links on social media or blog posts is an excellent
 5. **Copy the Link**: Google will generate a shareable link. Click "Copy" to save it to your clipboard.
 6. **Shorten the Link (Optional)**: To make sharing even more straightforward, you can select the “Shorten URL” checkbox to create a shorter, more manageable link.
 7. **Share It**: Now, you can share this link on social media, in blog posts, or via any platform of your choice.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NAwtca9oZJ8?si=lxYXGQQxiXiJtTPt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Sharing Google Forms via links is an incredibly flexible approach. It helps you reach a broad audience or restrict access if needed. It's a practical way to ensure your forms are readily available to those interested, wherever they are online.
 
