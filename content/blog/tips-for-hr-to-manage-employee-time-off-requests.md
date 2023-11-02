@@ -39,13 +39,13 @@ In this article, I will walk you through some tips and strategies that Human Res
 
 It is critical to maintain transparency and clarity in managing employee time-off requests. By establishing well-defined rules and policies, HR teams can easily manage employee time-off requests, even during peak vacation times. These rules create a structured framework for employees and employers, ensuring a fair and organised approach. 
 
-**Importance of Transparency:**
+**Importance of Transparency**
 
 * [Transparency fosters trust and understanding](https://www.betterworks.com/magazine/workplace-transparency-alignment-trust/) among employees, management, and ownership.
 * It prevents conflicts and misunderstandings by setting clear expectations.
 * Demonstrates respect for employees' time and personal lives.
 
-### Key Components of Time-Off Request Rules:
+### Key Components of Time-Off Request Rules
 
 1. **Submission Procedures:** Designate a single, consistent method for all employees to submit time-off requests as it ensures uniformity and prevents confusion.
 2. **Request Timing:** Define when employees can request time off, including limitations during busy periods or special events.
@@ -55,7 +55,7 @@ By implementing these guidelines, you can create a structured time-off request p
 
 ## Handling Overlapping Requests
 
-During popular vacation times or special events, multiple employees may request time off for the same period. Overlapping time-off requests are a common challenge for HR teams. These conflicts can create tension among employees and affect the overall workplace camaraderie. To address the issue, establish clear policies for managing overlapping requests. Here are some key points to consider:
+During popular vacation times or special events, multiple employees may request time off for the same period. Overlapping time-off requests are a [common challenge for HR teams](https://formester.com/blog/6-essential-online-forms-for-hr-professionals/). These conflicts can create tension among employees and affect the overall workplace camaraderie. To address the issue, establish clear policies for managing overlapping requests. Here are some key points to consider:
 
 ### Policies for Managing Conflicts
 
@@ -64,6 +64,10 @@ During popular vacation times or special events, multiple employees may request 
 3. **Seniority-Based:** Prioritise employees with more seniority, rewarding loyalty and commitment. But remember, it may not always be suitable for today's dynamic job market.
 4. **Employee Flexibility:** Allow employees to indicate the flexibility of their request. Some may be willing to adjust their plans, which can aid in resolving conflicts.
 5. **Managerial Discretion:** Give managers the authority to decide which requests to approve based on their knowledge of the team's needs. This approach requires transparency and clear communication.
+
+![Illustration of Policies for Time Off Request Management](/img/time-off-policies.png "Policies for Time Off Request Management")
+
+
 
 A well-defined policy helps in making impartial decisions, reducing the risk of perceived favouritism, and maintaining employee trust. By choosing a policy that aligns with the organisation's values and culture, HR teams can effectively manage overlapping time-off requests and ensure equitable treatment of employees.
 
@@ -106,7 +110,7 @@ It's imperative to consider different submission methods to ensure a smooth subm
 * **Reduced Administrative Work:** HR departments benefit from increased efficiency in processing digital submissions, saving time and reducing the likelihood of errors.
 * **Notification and Tracking:** These systems often include automatic notifications and tracking features, which help HR teams manage and monitor requests effectively.
 
-## Centralizing Request Records
+## Centralising Request Records
 
 Maintaining a centralised repository for all time-off requests is essential for time-off management. Centralisation ensures easy access to leave request records, especially during busy periods. It promotes organisation and consistency while reducing the risk of misplaced requests. Digital tools and software further enhance this approach, offering secure and organised storage with search and filter capabilities. Maintaining centralised records optimises time-off request management for HR departments. 
 
