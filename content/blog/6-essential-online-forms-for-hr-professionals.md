@@ -37,9 +37,7 @@ Personal information offers a glimpse into the candidate's background, while edu
   frameborder="0"
 />
 
-
-
-## 2) Leave Request Forms
+## **2) Leave Request Form**
 
 Leave request forms play a crucial role in managing employee absences effectively. These forms bring in a level of organization and structure, ensuring that leave requests are handled consistently across the organization. There are various types of leaves, including annual, sick, maternity, or paternity leave. Each type serves a specific purpose and requires different approval processes.
 
@@ -51,8 +49,6 @@ Having [standardized leave forms helps HR professionals](https://formester.com/t
   src="https://app.formester.com/f/de992258-5f79-426f-b03a-d43a1e0b98a7"
   frameborder="0"
 />
-
-
 
 ## **3) Employee Termination Forms**
 
@@ -67,8 +63,6 @@ It helps in conducting exit interviews and understanding the circumstances surro
   frameborder="0"
 />
 
-
-
 ## **4) Employee Accident Report Forms**
 
 Accidents can happen in any workplace, making accident report forms a critical tool in maintaining workplace safety and ensuring compliance with safety regulations. These forms [document the details of accidents, injuries, or near misses](https://formester.com/templates/incident-report-form-2783/) that occur within the workplace. The information to be included in an accident report form usually comprises details about the incident, including the date, time, and location.
@@ -81,8 +75,6 @@ Additionally, it should capture the individuals involved and any witnesses, a de
   src="https://app.formester.com/f/91db316c-eda9-4054-a4b4-ed7c78bd1444"
   frameborder="0"
 />
-
-
 
 ## **5) Self Evaluation Forms**
 
@@ -97,9 +89,7 @@ Common sections in self-evaluation forms include goals achieved, strengths, area
   frameborder="0"
 />
 
-
-
-## 6) **Exit Interview Forms**
+## **6) Exit Interview Forms**
 
 Exit interview forms hold significant value in understanding employee departures. They provide a platform for departing employees to express their reasons for leaving, feedback on their experiences, and suggestions for improvement. These forms often include questions about job satisfaction, work environment, management effectiveness, growth opportunities, and overall experience within the organization.
 
