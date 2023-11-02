@@ -22,7 +22,7 @@ createdAt: 2023-11-01T23:00:34.146Z
 coverImg: /img/tips-for-hr-to-manage-employee-leave-requests-priority-1-.png
 coverImgAlt: Illustration of Employee Time-Off Request Form
 featured: false
-published: false
+published: true
 ---
 Managing time-off requests without any friction is imperative for HR operations to ensure fairness and efficiency in the workplace. During peak vacation times, HR professionals encounter several challenges in balancing employee time-off needs with business operations.
 
@@ -91,13 +91,13 @@ Standardised forms eliminate ambiguity and make it easier for Human Resource to 
 
 Making it easy for employees to request time off improves their job satisfaction and overall experience in the workplace. A simplified submission process ensures employees adhere to the established time-off request rules without unnecessary hurdles. 
 
-It's imperative to consider different submission methods to ensure a smooth submission process for time-off requests. By offering accessible and flexible options, you can simplify the process and make it more convenient for both your staff and the HR department. Let's have a look at various submission methods and the advantages of using a digital submission system like an online form builder or an employee management software.
+It's imperative to consider different submission methods to ensure a smooth submission process for time-off requests. By offering accessible and flexible options, you can simplify the process and make it more convenient for both your staff and the HR department. Let's have a look at various submission methods and the advantages of using a digital submission system like an [online form builder](https://formester.com/) or an [employee management software](https://www.flexos.work/learn/best-employee-management-software).
 
 ### Submission Methods
 
 1. **Manual Submission:** This traditional method involves employees filling out paper forms or making in-person requests. While it's a familiar approach, it may not be the most efficient, especially during peak vacation times.
-2. **Digital Submission:** The use of digital forms and applications allows employees to submit their requests online. This method offers an accessible way for employees to request time off.
-3. **Cloud-Based Submission:** Taking the digital approach a step further, cloud-based integration gives the flexibility of using multiple tools to automate the process.
+2. **Digital Submission:** The use of web forms and applications allows employees to submit their requests online. This method offers an accessible way for employees to request time off.
+3. **Cloud-Based Submission:** Taking the digital approach a step further, [cloud-based integration](https://formester.com/integrations/) gives the flexibility of using multiple tools to automate the process.
 
 ###  Advantages of a Digital Submission System
 
