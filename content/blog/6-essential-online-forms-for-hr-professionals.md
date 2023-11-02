@@ -37,13 +37,22 @@ Personal information offers a glimpse into the candidate's background, while edu
   frameborder="0"
 />
 
+
+
 ## 2) Leave Request Forms
 
 Leave request forms play a crucial role in managing employee absences effectively. These forms bring in a level of organization and structure, ensuring that leave requests are handled consistently across the organization. There are various types of leaves, including annual, sick, maternity, or paternity leave. Each type serves a specific purpose and requires different approval processes.
 
 Having [standardized leave forms helps HR professionals](https://formester.com/templates/time-off-request-form-2780/) categorize and process these requests efficiently. The approval process often involves the employee filling out the necessary details in the form and submitting it to their immediate supervisor or the HR department. Once received, the request is reviewed and approved based on company policies and the nature of the leave. This approach ensures that the correct approvals are obtained and the employee's absence is appropriately managed.
 
-![Leave Request Form Template](/img/leave-request-form.png "Leave Request Form")
+<iframe
+  width="100%"
+  height="450"
+  src="https://app.formester.com/f/de992258-5f79-426f-b03a-d43a1e0b98a7"
+  frameborder="0"
+/>
+
+
 
 ## **3) Employee Termination Forms**
 
@@ -51,7 +60,14 @@ Documenting employee terminations using specific forms is a fundamental practice
 
 It helps in conducting exit interviews and understanding the circumstances surrounding the employee's departure. By having an online termination form, HR professionals can ensure that [all necessary details are documented accurately](https://formester.com/templates/termination-form-2446/) and in a standardized manner. This not only aids in maintaining a clear record but also facilitates a smooth transition during the employee's departure. 
 
-![Employee Termination Form Template](/img/employee-termination-form.jpg "Employee Termination Form")
+<iframe
+  width="100%"
+  height="450"
+  src="https://app.formester.com/f/3bbfca84-6076-464f-9cc3-0dfd361d9d90"
+  frameborder="0"
+/>
+
+
 
 ## **4) Employee Accident Report Forms**
 
@@ -59,13 +75,29 @@ Accidents can happen in any workplace, making accident report forms a critical t
 
 Additionally, it should capture the individuals involved and any witnesses, a description of the incident, injuries sustained, immediate actions taken, and recommendations to prevent future occurrences. By accurately documenting workplace incidents through accident report forms, organizations can analyze patterns, identify safety hazards, and implement preventive measures. This proactive approach is essential for maintaining a safe work environment and complying with legal requirements.
 
+<iframe
+  width="100%"
+  height="450"
+  src="https://app.formester.com/f/91db316c-eda9-4054-a4b4-ed7c78bd1444"
+  frameborder="0"
+/>
+
+
+
 ## **5) Self Evaluation Forms**
 
 Self-evaluation forms benefit employees and the organization by promoting reflection, goal-setting, and open communication. Employees can showcase achievements, pinpoint strengths and areas for growth. This fosters self-awareness and [meaningful performance discussions](https://formester.com/templates/employee-self-evaluation-form-2779/). It aligns individual goals with larger objectives for organizations, enhancing productivity and satisfaction.
 
 Common sections in self-evaluation forms include goals achieved, strengths, areas for development, performance feedback, and future objectives. Criteria cover job-specific skills, teamwork, communication, adaptability, and contributions.
 
-![Self Evaluation Form Template](/img/self-evaluation-form.jpg "Employee Self Evaluation Form")
+<iframe
+  width="100%"
+  height="450"
+  src="https://app.formester.com/f/5c9d79ab-aa7e-43c7-adc7-eea0d8e29517"
+  frameborder="0"
+/>
+
+
 
 ## 6) **Exit Interview Forms**
 
@@ -76,3 +108,10 @@ The insights gathered help HR identify patterns, areas for improvement, and pote
 How many of these forms have you used before? Let us know in the comments.
 
 If you still rely on manual processes to complete routine tasks, take a step forward and embrace the future of HR Processes by trying out our [no-code web form builder with drag and drop interface](https://app.formester.com/users/sign_in).
+
+<iframe
+  width="100%"
+  height="450"
+  src="https://app.formester.com/f/ec48aa28-6407-41be-8e0f-84911fbc147f"
+  frameborder="0"
+/>
