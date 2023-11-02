@@ -41,7 +41,7 @@ It is critical to maintain transparency and clarity in managing employee time-of
 
 **Importance of Transparency:**
 
-* Transparency fosters trust and understanding among employees, management, and ownership.
+* [Transparency fosters trust and understanding](https://www.betterworks.com/magazine/workplace-transparency-alignment-trust/) among employees, management, and ownership.
 * It prevents conflicts and misunderstandings by setting clear expectations.
 * Demonstrates respect for employees' time and personal lives.
 
