@@ -69,7 +69,7 @@ A well-defined policy helps in making impartial decisions, reducing the risk of 
 
 ## Creating a Standardised Request Form
 
-Having a standardised request forms is a reliable method to manage employee time-off requests. It has several advantages for both Businesses and Employees. Let's look at the significance of such a form and its elements.
+Having a [standardised request forms is a reliable method](https://formester.com/templates/time-off-request-form-2780/) to manage employee time-off requests. It has several advantages for both Businesses and Employees. Let's look at the significance of such a form and its elements.
 
 ### Benefits of Standardisation
 
