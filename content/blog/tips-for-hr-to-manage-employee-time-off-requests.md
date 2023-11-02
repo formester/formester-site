@@ -57,7 +57,7 @@ By implementing these guidelines, you can create a structured time-off request p
 
 During popular vacation times or special events, multiple employees may request time off for the same period. Overlapping time-off requests are a [common challenge for HR teams](https://formester.com/blog/6-essential-online-forms-for-hr-professionals/). These conflicts can create tension among employees and affect the overall workplace camaraderie. To address the issue, establish clear policies for managing overlapping requests. Here are some key points to consider:
 
-### Policies for Managing Time Off Scheduling Conflicts 
+### Policies for Managing Time Off Scheduling Conflicts
 
 1. **First-Come, First-Served:** This policy prioritises employees based on the order they submit their requests. While simple, it may not always be the most equitable method.
 2. **Reason-Based:** Consider the reasons behind each request, giving preference to requests related to important personal or family matters. However, this approach can lead to subjectivity and potential favouritism.
@@ -78,7 +78,7 @@ Having a [standardised request forms is a reliable method](https://formester.com
 * **Clarity:** A standardised form ensures that all employees provide the same information, making it easier to process requests.
 * **Consistency:** It promotes a consistent request process, reducing the likelihood of errors and misunderstandings.
 * **Efficiency:** Standardised forms streamline the approval process, saving time for employees and HR personnel.
-* **Documentation:** They create a clear record of each request, helping HR track and manage time off effectively.
+* **Documentation:** They create a clear record of each request, helping HR track and manage time off allocation.
 
 ### Key Elements of the Request Form
 
@@ -106,7 +106,7 @@ It's imperative to consider different submission methods to ensure a smooth subm
 * **Accessibility:** Digital submission systems can be accessed from computers, tablets, and smartphones, providing flexibility and convenience for employees.
 * **Convenience:** With digital submission, employees can request time off outside traditional working hours, making the process more convenient for all parties involved.
 * **Reduced Administrative Work:** HR departments benefit from increased efficiency in processing digital submissions, saving time and reducing the likelihood of errors.
-* **Notification and Tracking:** These systems often include automatic notifications and tracking features, which help HR teams manage and monitor requests effectively.
+* **Notification and Tracking:** These systems often include automatic notifications and tracking features, which help HR teams manage and monitor requests in a seamless manner.
 
 ## Centralising Request Records
 
