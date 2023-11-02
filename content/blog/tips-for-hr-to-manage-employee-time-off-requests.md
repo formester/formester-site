@@ -57,7 +57,7 @@ By implementing these guidelines, you can create a structured time-off request p
 
 During popular vacation times or special events, multiple employees may request time off for the same period. Overlapping time-off requests are a [common challenge for HR teams](https://formester.com/blog/6-essential-online-forms-for-hr-professionals/). These conflicts can create tension among employees and affect the overall workplace camaraderie. To address the issue, establish clear policies for managing overlapping requests. Here are some key points to consider:
 
-### Policies for Managing Conflicts
+### Policies for Managing Time Off Scheduling Conflicts 
 
 1. **First-Come, First-Served:** This policy prioritises employees based on the order they submit their requests. While simple, it may not always be the most equitable method.
 2. **Reason-Based:** Consider the reasons behind each request, giving preference to requests related to important personal or family matters. However, this approach can lead to subjectivity and potential favouritism.
@@ -66,8 +66,6 @@ During popular vacation times or special events, multiple employees may request 
 5. **Managerial Discretion:** Give managers the authority to decide which requests to approve based on their knowledge of the team's needs. This approach requires transparency and clear communication.
 
 ![Illustration of Policies for Time Off Request Management](/img/time-off-policies.png "Policies for Time Off Request Management")
-
-
 
 A well-defined policy helps in making impartial decisions, reducing the risk of perceived favouritism, and maintaining employee trust. By choosing a policy that aligns with the organisation's values and culture, HR teams can effectively manage overlapping time-off requests and ensure equitable treatment of employees.
 
