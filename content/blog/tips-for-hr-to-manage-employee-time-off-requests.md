@@ -93,7 +93,7 @@ Standardised forms eliminate ambiguity and make it easier for Human Resource to 
 
 Making it easy for employees to request time off improves their job satisfaction and overall experience in the workplace. A simplified submission process ensures employees adhere to the established time-off request rules without unnecessary hurdles. 
 
-It's imperative to consider different submission methods to ensure a smooth submission process for time-off requests. By offering accessible and flexible options, you can simplify the process and make it more convenient for both your staff and the HR department. Let's have a look at various submission methods and the advantages of using a digital submission system like an [online form builder](https://formester.com/) or an [employee management software](https://www.flexos.work/learn/best-employee-management-software).
+It's imperative to consider different submission methods to ensure a smooth submission process for time-off requests. By offering accessible and flexible options, you can simplify the process and make it more convenient for both your staff and the HR department. Let's have a look at various submission methods and the advantages of using a digital submission system like an [online form builder](https://formester.com/) or an <a data-v-120723be="" href="https://www.flexos.work/learn/best-employee-management-software" rel="dofollow noopener noreferrer" target="_blank">employee management software</a>.
 
 ### Submission Methods
 
