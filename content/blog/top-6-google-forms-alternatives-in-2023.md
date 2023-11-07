@@ -41,7 +41,7 @@ Google Forms is available for free with a Gmail account, making it an attractive
 3. **Quizzes**: Creating online quizzes and assessments.
 4. **Data Collection**: Collecting data from respondents on various topics.
 
-Although Google Forms offers ease of use and accessibility, it does come with its own set of limitations that might not align with the needs of all users.
+Although Google Forms offers ease of use and accessibility, it does come with its own [set of limitations](https://formester.com/blog/how-to-embed-a-google-form/) that might not align with the needs of all users.
 
 ![Google Forms Website Image](/img/google-forms.png "Google Forms")
 
@@ -52,7 +52,7 @@ Although Google Forms offers ease of use and accessibility, it does come with it
 3. **Data Storage**: Files uploaded to Google Forms are stored in Google Drive, which may not be convenient for some users.
 4. **Limited Support**: Google Forms support can be limited, and users may face challenges when seeking help or assistance.
 
-With these [limitations in mind](https://formester.com/blog/how-to-embed-a-google-form/), it becomes evident that there's a growing need for alternatives to Google Forms that can provide more advanced features better suited for business needs.
+With these limitations in mind, it becomes evident that there's a growing need for alternatives to Google Forms that can provide more advanced features better suited for business needs.
 
 In the following sections, we will have a look at the best alternatives of Google Forms that offer a broader range of features and functionalities to change the way you collect, manage and analyse data.
 
