@@ -18,7 +18,7 @@
           </div>
           <div
             class="card-image col-12 col-lg-7 d-lg-flex"
-            :class="{ 'justify-content-lg-end': !isOdd(index) }"
+            :class="{ 'justify-content-lg-end  pe-xxl-4': !isOdd(index) }"
           >
             <nuxt-img :src="feature.imgUrl" class="img-fluid" alt="..." />
           </div>

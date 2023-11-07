@@ -80,34 +80,37 @@ export default {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/online-form-builder/',
-        title: 'Online Form Builders for powerful form-building',
+        url: 'https://formester.com/use-case/human-resource/',
+        title: 'Automate Human Resource Operations | No-Code Form Builder',
         description:
-          'Effective data collection and management for businesses and individuals alike. Transform your data-collection process & derive valuable insights!',
-        mainImage:
-          'https://formester.com/online-form-builder-hero-screenshot.png',
-        mainImageAlt: 'Form builder showing drag and drop functionality',
+          "Optimise HR data management with Formester's No-Code Form Builder and HR Form Templates. Automate job applications, leave management, employee onboarding, performance evaluation, and training",
+        mainImage: 'https://formester.com/human-resource-hero-screenshot.png',
+        mainImageAlt:
+          'Automate your human resource operations with HR Form Templates from Formester!',
         keywords: [
-          'Online Form',
-          'Online Form Builder',
-          'Online Form Builders for powerful form-building',
-          'Form Building',
-          'web forms productivity',
-          'form builder',
-          'formester',
-          'online forms',
-          'online web forms',
-          'formester web forms',
-          'form creator',
-          'form generator',
-          'online form',
-          'web form',
-          'online forms',
-          'web forms',
-          'create form',
-          'create forms',
-          'frequently asked questions',
-          'FAQ',
+          'HR form builder',
+          'HR form templates',
+          'Data collection',
+          'Automation',
+          'Job applications',
+          'Leave management',
+          'Employee onboarding',
+          'Performance insights',
+          'Training',
+          'Formester',
+          'Data management',
+          'HR solutions',
+          'Form creation',
+          'HR Solution',
+          'HR automation',
+          'Employee engagement',
+          'Data analytics',
+          'HR software',
+          'Online forms',
+          'Digital transformation',
+          'HR efficiency',
+          'Data-driven decisions',
+          'Job Application Templates',
         ],
       }
       return getSiteMeta(metaData)
@@ -115,13 +118,13 @@ export default {
   },
   head() {
     return {
-      title: 'Online Form Builders for powerful form-building',
+      title: 'Automate Human Resource Operations | No-Code Form Builder',
       meta: [...this.meta],
       link: [
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/online-form-builder/',
+          href: 'https://formester.com/use-case/human-resource/',
         },
       ],
     }
@@ -133,9 +136,9 @@ export default {
         {
           '@type': 'Corporation',
           '@id': 'https://acornglobus.com',
-          name: 'Online Form Builders for powerful form-building',
+          name: 'Automate Human Resource Operations | No-Code Form Builder',
           description:
-            'Effective data collection and management for businesses and individuals alike. Transform your data-collection process & derive valuable insights!',
+            "Optimise HR data management with Formester's No-Code Form Builder and HR Form Templates. Automate job applications, leave management, employee onboarding, performance evaluation, and training",
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
           address: {
@@ -157,8 +160,8 @@ export default {
             {
               '@type': 'ListItem',
               position: 2,
-              name: 'Online Form Builders for powerful form-building',
-              item: 'https://formester.com/online-form-builder/',
+              name: 'Automate Human Resource Operations | No-Code Form Builder',
+              item: 'https://formester.com/use-case/human-resource/',
             },
           ],
         },

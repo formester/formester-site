@@ -1,5 +1,5 @@
 <template>
-  <div class="container main-container mt-5 py-5">
+  <div class="container-lg main-container my-5 py-5">
     <div class="content-container d-flex flex-column align-items-center">
       <h2 class="section__heading">Seamless Integration</h2>
       <p class="sub-heading">
@@ -54,65 +54,48 @@
 <script>
 export default {
   data() {
+    const iconsForLargeScreen = [
+      {
+        src: '/hr-solution/SeamlessIntegration/salesforce.png',
+        alt: 'salesforce',
+      },
+      {
+        src: '/hr-solution/SeamlessIntegration/slack.png',
+        alt: 'slack',
+      },
+      {
+        src: '/hr-solution/SeamlessIntegration/notion.png',
+        alt: 'slack',
+      },
+      {
+        src: '/hr-solution/SeamlessIntegration/hubspot.png',
+        alt: 'hubspot',
+      },
+      {
+        src: '/hr-solution/SeamlessIntegration/calendar.png',
+        alt: 'calendar',
+      },
+      {
+        src: '/hr-solution/SeamlessIntegration/g-sheet.png',
+        alt: 'g-sheet',
+      },
+      {
+        src: '/hr-solution/SeamlessIntegration/calendly.png',
+        alt: 'calendy',
+      },
+      {
+        src: '/hr-solution/SeamlessIntegration/g-drive.png',
+        alt: 'g-drive',
+      },
+      {
+        src: '/hr-solution/SeamlessIntegration/discord.png',
+        alt: 'discord',
+      },
+      // ...more icons
+    ]
     return {
-      iconsForLargeScreen: [
-        {
-          src: '/hr-solution/SeamlessIntegration/salesforce.png',
-          alt: 'salesforce',
-        },
-        {
-          src: '/hr-solution/SeamlessIntegration/slack.png',
-          alt: 'slack',
-        },
-        {
-          src: '/hr-solution/SeamlessIntegration/notion.png',
-          alt: 'slack',
-        },
-        {
-          src: '/hr-solution/SeamlessIntegration/hubspot.png',
-          alt: 'hubspot',
-        },
-        {
-          src: '/hr-solution/SeamlessIntegration/calendar.png',
-          alt: 'calendar',
-        },
-        {
-          src: '/hr-solution/SeamlessIntegration/g-sheet.png',
-          alt: 'g-sheet',
-        },
-        {
-          src: '/hr-solution/SeamlessIntegration/calendly.png',
-          alt: 'calendy',
-        },
-        {
-          src: '/hr-solution/SeamlessIntegration/g-drive.png',
-          alt: 'g-drive',
-        },
-        {
-          src: '/hr-solution/SeamlessIntegration/discord.png',
-          alt: 'discord',
-        },
-        // ...more icons
-      ],
-      iconsForSmallScreen: [
-        {
-          src: '/hr-solution/SeamlessIntegration/hubspot.png',
-          alt: 'hubspot',
-        },
-        {
-          src: '/hr-solution/SeamlessIntegration/calendar.png',
-          alt: 'calendar',
-        },
-        {
-          src: '/hr-solution/SeamlessIntegration/g-sheet.png',
-          alt: 'g-sheet',
-        },
-        {
-          src: '/hr-solution/SeamlessIntegration/calendly.png',
-          alt: 'calendy',
-        },
-        // ...more icons
-      ],
+      iconsForLargeScreen: iconsForLargeScreen,
+      iconsForSmallScreen: iconsForLargeScreen.slice(0, 4),
     }
   },
   methods: {
@@ -178,6 +161,8 @@ export default {
     padding-right: 0;
     padding-left: 0;
     overflow: hidden;
+    margin-left: 0;
+    margin-right: 0;
   }
   .content-container {
     padding-right: 1em;
