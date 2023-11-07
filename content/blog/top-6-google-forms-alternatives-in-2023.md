@@ -60,7 +60,7 @@ Let's *move ahead with our list of Top 6 Google Forms Alternatives in 2023:*
 
 ## **1) Typeform**
 
-[Typeform](https://www.typeform.com/) is an innovative online form builder that stands out for its ability to create unique, visually appealing forms and surveys. It's designed for those who want to make a statement with their forms and gather data in an engaging way. Typeform enables you to create interactive and conversational forms with ease.
+[Typeform](https://www.typeform.com/) is an innovative online form builder that stands out for its ability to create unique, [visually appealing forms and surveys](https://formester.com/blog/top-5-typeform-alternatives-in-2023-no-code-form-builders-that-dont-skip-the-visual-appeal/). It's designed for those who want to make a statement with their forms and gather data in an engaging way. Typeform enables you to create interactive and conversational forms with ease.
 
 ![Typeform Website Home Page Image](/img/typeform.png "Typeform")
 
@@ -88,7 +88,7 @@ Let's *move ahead with our list of Top 6 Google Forms Alternatives in 2023:*
 
 ## **2) JotForm**
 
-[JotForm](https://www.jotform.com/) is another online form builder that offers a wide range of features and customisation options. Similar to Google Forms, JotForm provides a versatile platform for creating forms, but it takes things a step further with an abundance of features for creating complex and interactive forms.
+[JotForm](https://www.jotform.com/) is another online form builder that offers a wide range of features and customisation options. Similar to Google Forms, JotForm provides a [versatile platform for creating forms](https://formester.com/blog/google-forms-vs-jotform-the-comparison-everyone-asked-for/), but it takes things a step further with an abundance of features for creating complex and interactive forms.
 
 ![Jotform Website Home Page Image](/img/jotform.png "Jotform")
 
@@ -116,7 +116,7 @@ Let's *move ahead with our list of Top 6 Google Forms Alternatives in 2023:*
 
 ## **3) SurveyMonkey**
 
-[SurveyMonkey](https://www.surveymonkey.com/) is a well-established and widely used online survey and data collection platform. It's known for its simple interface and powerful survey creation tools, making it a popular choice for individuals and businesses alike.
+[SurveyMonkey](https://www.surveymonkey.com/) is a well-established and widely used online survey and data collection platform. It's known for its simple interface and [powerful survey creation tools](https://formester.com/blog/jotform-vs-surveymonkey-forms-surveys-or-both/), making it a popular choice for individuals and businesses alike.
 
 ![SurveyMonkey Website Home Page Image](/img/surveymonkey.png "SurveyMonkey")
 
@@ -145,7 +145,7 @@ Let's *move ahead with our list of Top 6 Google Forms Alternatives in 2023:*
 
 ## **4) Paperform**
 
-[Paperform](https://paperform.co/) is a reliable online form builder that stands out for its flexibility and aesthetic appeal. It helps users with various tasks, from processing payments to managing bookings and data collection.
+[Paperform](https://paperform.co/) is a reliable online form builder that stands out for its [flexibility and aesthetic appeal](https://formester.com/formester-vs-paperform/). It helps users with various tasks, from processing payments to managing bookings and data collection.
 
 ![Paperform Website Home Page Image](/img/paperform.png "Paperform")
 
@@ -173,7 +173,7 @@ Let's *move ahead with our list of Top 6 Google Forms Alternatives in 2023:*
 
 ## **5) Formester**
 
-[Formester](https://formester.com/) is an affordable no-code form builder with a drag-and-drop interface. It has been designed to provide users with a highly customisable form-building experience and robust analytics capabilities. Whether you're collecting data, conducting surveys, or processing payments, Formester is your one-stop solution.
+[Formester](https://formester.com/) is an affordable no-code form builder with a drag-and-drop interface. It has been designed to provide users with a highly customisable form-building experience and [robust analytics capabilities](https://formester.com/features/powerful-analytics/). Whether you're collecting data, conducting surveys, or processing payments, Formester is your one-stop solution.
 
 ![Formester Website Home Page Image](/img/formester.png "Formester")
 
@@ -198,8 +198,6 @@ Let's *move ahead with our list of Top 6 Google Forms Alternatives in 2023:*
 * **E-commerce**
 * **Event Registrations**
 * **Feedback Forms**
-
-
 
 ## **6) Microsoft Forms**
 
