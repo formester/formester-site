@@ -233,21 +233,4 @@ export default {
 }
 </script>
 
-<style>
-.section__subtitle {
-  color: var(--primary, #4f3895);
-  font-size: 48px !important;
-  font-weight: 700 !important;
-  line-height: 56px !important;
-}
-@media (max-width: 1200px) {
-  .section__subtitle {
-    font-size: 2.5rem !important;
-  }
-}
-@media (max-width: 575px) {
-  .section__subtitle {
-    font-size: 2rem !important;
-  }
-}
-</style>
+<style></style>

@@ -1,7 +1,7 @@
 <template>
   <div class="container-lg main-container my-5 py-5">
     <div class="content-container d-flex flex-column align-items-center">
-      <h2 class="section__heading">Seamless Integration</h2>
+      <h2 class="section__heading text-center">Seamless Integration</h2>
       <p class="sub-heading">
         Collecting data is one battle won. Formester integrates with tools like
         Slack, Google Sheets and Salesforce. Send data anywhere you like.
