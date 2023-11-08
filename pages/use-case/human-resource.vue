@@ -9,10 +9,10 @@
       heading="How Formester can Help You with Human Resource Operations"
       :features="HelpingFeaturesForHr"
     />
+    <TemplateSection slug="human-resource" />
     <CreateHrForms />
     <KeyBenefits />
     <SeamlessIntegration />
-    <TemplateSection slug="human-resource" />
     <div class="container py-5">
       <h2 class="section__heading text-center">HR Blogs</h2>
       <div class="row mt-4">

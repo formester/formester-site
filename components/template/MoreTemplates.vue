@@ -103,8 +103,8 @@ export default {
   },
   props: {
     categories: {
-      type: Array,
-      default: [],
+      type: Object,
+      default: {},
     },
     templateSlug: {
       type: String,
