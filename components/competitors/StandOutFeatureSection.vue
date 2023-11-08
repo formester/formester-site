@@ -10,7 +10,7 @@
       <div
         v-for="feature in features"
         :key="feature.title"
-        class="col-lg-3 col-md-4 col-sm-6 mt-5"
+        class="col-md-4 col-sm-6 mt-5"
       >
         <div
           class="border-sm-none border-start ps-3 d-flex flex-column align-items-start"

@@ -47,6 +47,11 @@
                   >Software and Technology</NuxtLink
                 >
               </li>
+              <li class="mt-2">
+                <NuxtLink to="/use-case/human-resource/" class="footer__link"
+                  >Human Resource</NuxtLink
+                >
+              </li>
             </ul>
 
             <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
@@ -55,9 +60,7 @@
 
             <ul class="list-unstyled mt-2">
               <li class="mt-2">
-                <NuxtLink
-                  to="/online-form-builder/"
-                  class="footer__link"
+                <NuxtLink to="/online-form-builder/" class="footer__link"
                   >Online Form Builder</NuxtLink
                 >
               </li>
@@ -139,10 +142,7 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink
-                  to="/features/collaboration/"
-                  class="footer__link"
-                >
+                <NuxtLink to="/features/collaboration/" class="footer__link">
                   Collaboration
                 </NuxtLink>
               </li>

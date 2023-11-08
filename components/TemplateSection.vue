@@ -1,20 +1,26 @@
 <template>
-    <div class="container py-5">
-        <div class="row px-0">
-            <div class="heading d-flex flex-column align-items-center text-center">
-                <h2 class="section__heading">Pre-Designed Templates</h2>
-                <p class="hero__subheading">Get Started Quickly with Ready-Made Form Templates</p>
-            </div>
-            <div v-if="templates && templates.length" class="templates py-3">
-                <TemplateCard v-for="(template, idx) in templates" :key="idx" :template="template" />
-            </div>
-            <div class="d-flex align-items-center justify-content-center mt-4">
-                <NuxtLink :to="`/templates/`">
-                    <button class="btn-all-templates">More Templates</button>
-                </NuxtLink>
-            </div>
-        </div>
+  <div class="container py-5">
+    <div class="row px-0">
+      <div class="heading d-flex flex-column align-items-center text-center">
+        <h2 class="section__heading">Pre-Designed Templates</h2>
+        <p class="hero__subheading">
+          Get Started Quickly with Ready-Made Form Templates
+        </p>
+      </div>
+      <div v-if="templates && templates.length" class="templates py-3">
+        <TemplateCard
+          v-for="(template, idx) in templates"
+          :key="idx"
+          :template="template"
+        />
+      </div>
+      <div class="d-flex align-items-center justify-content-center mt-4">
+        <NuxtLink :to="`/templates/`">
+          <button class="btn-all-templates">More Templates</button>
+        </NuxtLink>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -23,22 +29,41 @@ import axios from 'axios'
 
 export default {
   components: { TemplateCard },
+  props: ['slug'],
   data() {
     return {
-        templates: []
+      templates: [],
     }
   },
-  mounted(){
+  mounted() {
     this.getTemplates()
   },
   methods: {
     async getTemplates() {
       try {
-        const { data: templates } = await axios(
-          'https://app.formester.com/templates.json',
-        )
+        let response
+        if (this.slug) {
+          response = await axios.get(
+            'https://app.formester.com/templates.json',
+            {
+              params: { category_slug: this.slug },
+            }
+          )
+        } else {
+          response = await axios.get('https://app.formester.com/templates.json')
+        }
+        let templates = response.data
+
+        const dummyDescription =
+          'Check out this pre-designed template and start customising with just a single click. Personalise with your branding, incorporate electronic signatures for security and add multiple collaborators to make changes simultaneously. Use this template and start getting data driven actionable insights with robust analytics.'
+
+        templates = templates.map((template) => ({
+          ...template,
+          description: template.description || dummyDescription,
+        }))
+
         const randIndex = Math.floor(Math.random() * (templates.length - 3))
-        this.templates = templates.slice(randIndex,  randIndex + 3);
+        this.templates = templates.slice(randIndex, randIndex + 3)
       } catch (err) {
         console.error(err)
       }
@@ -76,5 +101,4 @@ export default {
     grid-template-columns: 1fr;
   }
 }
-
 </style>
