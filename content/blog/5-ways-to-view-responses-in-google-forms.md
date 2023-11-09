@@ -19,7 +19,7 @@ createdAt: 2023-11-09T04:25:37.378Z
 coverImg: /img/google_forms_responses.png
 coverImgAlt: Illustration of how to view responses in google forms
 featured: false
-published: false
+published: true
 ---
 You’ve created a [Google Form](https://www.google.com/forms/about/#features), shared it with participants, and now you are eagerly awaiting their responses. But how exactly do you check these incoming responses on Google Forms?
 
