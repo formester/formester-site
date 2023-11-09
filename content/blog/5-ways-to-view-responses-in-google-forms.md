@@ -96,6 +96,8 @@ To download all your form responses as a CSV file, follow these steps:
 
 The use of CSV files offers flexibility and portability in response management. You can store and work with your data offline, making it accessible at any time. Moreover, CSV files are compatible with various software and applications, making it easy to import your data into different tools for more advanced analysis or integration with other systems. This method is particularly useful when you need to keep a copy of your data or perform in-depth analysis beyond what Google Forms provides.
 
+![Illustration of 5 ways to view responses in Google Forms](/img/google-form-responses.png "5 ways to View Responses in Google Forms")
+
 ## Choose **the best way to view responses on Google Forms**
 
 Let’s compare and contrast all five methods, highlighting their strengths and ideal use cases so we can choose the best way of viewing the responses:
