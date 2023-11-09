@@ -98,7 +98,7 @@ The use of CSV files offers flexibility and portability in response management. 
 
 ## Choose **the best way to view responses on Google Forms**
 
-Let’s compare and contrast the five methods, highlighting their strengths and ideal use cases so we can choose the best way of viewing the responses:
+Let’s compare and contrast all five methods, highlighting their strengths and ideal use cases so we can choose the best way of viewing the responses:
 
 **Summary Tab**
 
@@ -137,7 +137,7 @@ Your choice should align with the depth of analysis required, your collaboration
 
 ## Answer Review and Analytics with Formester Forms
 
-Although Google Forms has various ways to check the responses, it might not be suitable for all users, especially businesses and enterprises that need more insights and in-depth analytics of responses.
+Although Google Forms has various ways to check the responses, it [might not be suitable for all users](https://formester.com/blog/how-to-embed-a-google-form/), especially businesses and enterprises that need more insights and in-depth analytics of responses.
 
 Do you also feel the management of Google Forms responses is clunky and not suitable for your business needs? It might be high time to find the perfect alternative, i.e. Formester.
 
