@@ -100,26 +100,30 @@ The use of CSV files offers flexibility and portability in response management. 
 
 Let’s compare and contrast the five methods, highlighting their strengths and ideal use cases so we can choose the best way of viewing the responses:
 
-1. **Summary Tab**
+**Summary Tab**
 
-   * Strengths: Provides a quick visual overview of response data.
-   * Use Case: Best for a high-level analysis of overall trends and patterns.
-2. **Question Tab**
+* Strengths: Provides a quick visual overview of response data.
+* Use Case: Best for a high-level analysis of overall trends and patterns.
 
-   * Strengths: Allows you to focus on specific questions for in-depth analysis.
-   * Use Case: Ideal when you want to understand how respondents are engaging with individual questions.
-3. **Individual Tab**
+**Question Tab**
 
-   * Strengths: Offers a detailed view of each respondent's feedback.
-   * Use Case: Valuable for personalised follow-ups and addressing unique concerns.
-4. **Spreadsheet**
+* Strengths: Allows you to focus on specific questions for in-depth analysis.
+* Use Case: Ideal when you want to understand how respondents are engaging with individual questions.
 
-   * Strengths: Enables comprehensive data analysis, sorting, filtering, and custom chart creation.
-   * Use Case: Perfect for detailed and collaborative analysis with team members.
-5. **CSV File**
+**Individual Tab**
 
-   * Strengths: Provides offline access and compatibility with various software.
-   * Use Case: Useful for keeping a local copy of your data or for in-depth analysis beyond what Google Forms offers.
+* Strengths: Offers a detailed view of each respondent's feedback.
+* Use Case: Valuable for personalised follow-ups and addressing unique concerns.
+
+**Spreadsheet**
+
+* Strengths: Enables comprehensive data analysis, sorting, filtering, and custom chart creation.
+* Use Case: Perfect for detailed and collaborative analysis with team members.
+
+**CSV File**
+
+* Strengths: Provides offline access and compatibility with various software.
+* Use Case: Useful for keeping a local copy of your data or for in-depth analysis beyond what Google Forms offers.
 
 Each method of checking responses in Google Forms is suitable for specific needs:
 
