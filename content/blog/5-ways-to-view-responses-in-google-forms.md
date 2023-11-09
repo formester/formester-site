@@ -21,11 +21,11 @@ coverImgAlt: Illustration of how to view responses in google forms
 featured: false
 published: false
 ---
-You’ve created a Google Form, shared it with participants, and now you are eagerly awaiting their responses. But how exactly do you check these incoming responses on Google Forms?
+You’ve created a [Google Form](https://www.google.com/forms/about/#features), shared it with participants, and now you are eagerly awaiting their responses. But how exactly do you check these incoming responses on Google Forms?
 
 Managing responses in Google Forms helps you make the most of the data you’ve collected. It assists in understanding the feedback, insights, and information provided by your respondents.
 
-In this article, we’ll walk you through five simple methods for reviewing the responses you’ve received. These techniques will help you check the responses conveniently and gain valuable insights from your Google Form submissions.
+In this article, we’ll walk you through five simple methods for reviewing the responses you’ve received. These techniques will help you check the responses conveniently and gain valuable [insights from your Google Form submissions](https://formester.com/blog/top-6-google-forms-alternatives-in-2023/).
 
 Let’s have a look at 5 ways you can view responses in Google Forms:
 
@@ -143,6 +143,6 @@ Do you also feel the management of Google Forms responses is clunky and not suit
 
 ![Screenshot of Formester Response Review and Analysis Tab](/img/image.png "Formester Response Analysis and Review")
 
-Formester’s analytics are a game-changer when it comes to understanding user behaviour and optimising your forms. With the ability to filter data by key factors, track traffic sources, and provide critical insights, Formester empowers you to make data-driven decisions that improve engagement and boost conversion rates.
+[Formester’s analytics are a game-changer](https://formester.com/features/powerful-analytics/) when it comes to understanding user behaviour and optimising your forms. With the ability to filter data by key factors, track traffic sources, and provide critical insights, Formester empowers you to make data-driven decisions that improve engagement and boost conversion rates.
 
-Try Formester for free to experience our robust analytics capabilities and unlock the full potential of your online forms to drive better results.
+[Try Formester for free](https://app.formester.com/users/sign_in) to experience our robust analytics capabilities and unlock the full potential of your online forms to drive better results.
