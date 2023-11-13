@@ -20,7 +20,7 @@ createdAt: 2023-11-13T01:12:38.988Z
 coverImg: /img/customer_feedback_blog.png
 coverImgAlt: Illustration of  5 Best Tools for Customer Feedback Survey
 featured: false
-published: false
+published: true
 ---
 Customer feedback is the [foundation of business growth](https://formester.com/blog/customer-experience-survey-definition-to-design-90-sample-survey-question/), offering a channel to understand what your audience values. It's more than just comments and suggestions – it's a goldmine of insights that, when leveraged smartly, can steer your business toward lasting success by reducing the customer churn rate.
 
