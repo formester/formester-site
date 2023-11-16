@@ -1,16 +1,24 @@
 ---
 title: How to Add a Form to Webflow
-description: abc
-metaTitle: abc
-metaDescription: abc
-keywords: abc
-author: abc
-authorProfile: abc
+description: Optimize your Webflow website by adding online forms. Follow a
+  straightforward guide to effortlessly embed online forms using the Embed
+  Component.
+metaTitle: "How to Add a Form to Webflow: Step-by-Step Guide with Formester"
+metaDescription: "Learn the simple process of adding online forms to your
+  Webflow website using Formester. Follow our step-by-step guide to enhance
+  engagement and interactivity. "
+keywords: Webflow forms, Formester, online forms, Webflow design, user
+  engagement, Embed Widget, step-by-step guide, website development,
+  drag-and-drop, code-free, interactive web pages, form integration, Webflow
+  dashboard, Embed code, seamless, dynamic user experience, lead collection,
+  customer inquiries, simple form addition
+author: Siddharth Sharma
+authorProfile: www.linkedin.com/in/sidsh0502
 createdAt: 2023-11-16T01:40:22.721Z
-coverImg: /img/10-alternatives-to-jotform_1.png
-coverImgAlt: abc
+coverImg: /img/how-to-add-forms-to-webflow.png
+coverImgAlt: How to Add a Form to Webflow Illustration
 featured: false
-published: false
+published: true
 ---
 Webflow is a powerful [web design and development tool](https://webflow.com/?r=0), offering an intuitive platform for creating responsive and aesthetically pleasing websites and landing pages. It empowers users to design without code, providing a convenient experience for both beginners and seasoned developers. With its drag-and-drop interface and comprehensive set of features, Webflow has become a go-to choice for building websites ranging from simple portfolios to complex eCommerce platforms.
 
@@ -56,7 +64,7 @@ Step 4: Scroll below to the Component section
 
 Step 5: Click on the Embed element or drag and drop it to the website page
 
-Step 6: Paste your form’s embed codes in the embed module
+Step 6: Paste your form’s embed codes in the embed component
 
 Step 7: Click the Save and Close button.
 
