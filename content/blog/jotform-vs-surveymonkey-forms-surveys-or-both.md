@@ -436,7 +436,7 @@ It provides an intuitive drag-and-drop interface for easy form building. 
 
 ![Screenshot showing: Jotform's Support and Customer Service Page](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-27-.png "Jotform's Support and Customer Service Page")
 
-**SurveyMonkey:** SurveyMonkey provides support through email and phone, with higher-tier plans offering priority support and dedicated customer success managers.
+**SurveyMonkey:** SurveyMonkey provides support through email and phone, with higher-tier plans offering priority support and dedicated [customer success](https://www.custify.com/) managers.
 
 ![Screenshot showing: SurveyMonkey's Support and Customer Service Page](/img/jotform-vs-surveymonkey_-forms-surveys-or-both-28-.png "SurveyMonkey's Support and Customer Service Page")
 
