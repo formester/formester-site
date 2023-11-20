@@ -1,10 +1,12 @@
 <template>
   <div>
     <div class="text-center mt-5">
-      <h1 class="pricing__heading">Get up 40% off on our Annual Plans</h1>
+      <h1 class="pricing__heading">
+        Black Friday Offer - Flat 40% off on Annual Plans
+      </h1>
       <p class="pricing__subheading">
-        Take advantage of this Black Friday deal! Explore our premium features
-        for a fraction of the price.
+        Take advantage of this Black Friday Deal to buy our plans for a fraction
+        of the price! Offer lasts till 30 November.
       </p>
 
       <div

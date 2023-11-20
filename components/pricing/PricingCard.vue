@@ -9,7 +9,9 @@
     <div class="d-flex align-items-baseline">
       <div class="d-flex flex-column align-items-start mb-2">
         <h2 class="pricing__amount mb-1">${{ plan.price }}</h2>
-        <span v-if="plan.type === 'Yearly'" class="pricing__prev__amount">{{ plan.prevPrice }}</span>
+        <span v-if="plan.type === 'Yearly'" class="pricing__prev__amount">{{
+          plan.prevPrice
+        }}</span> 
       </div>
       <span class="pricing__timeline">/mo</span>
     </div>
@@ -80,9 +82,11 @@ export default {
 }
 
 .pricing__prev__amount {
+  font-weight: 500;
   font-size: 28px;
-  color: #817e89;
+  color: rgba(33, 20, 72, 0.45);
   text-decoration: line-through;
+  text-decoration-thickness: 1.2px;
   height: 28px;
 }
 
