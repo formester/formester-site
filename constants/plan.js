@@ -37,7 +37,6 @@ export const free = {
 export const personalMonthly = {
   name: 'Personal',
   price: 13,
-  prevPrice: '$13',
   type: 'Monthly',
   features: {
     available: [
@@ -71,7 +70,6 @@ export const personalMonthly = {
 export const businessMonthly = {
   name: 'Business',
   price: 49,
-  prevPrice: '$13',
   type: 'Monthly',
   features: {
     available: [
@@ -142,8 +140,8 @@ export const freeYearly = {
 
 export const personalYearly = {
   name: 'Personal',
-  price: 12,
-  prevPrice: '$13',
+  price: 7.2,
+  prevPrice: '$12',
   type: 'Yearly',
   features: {
     available: [
@@ -176,8 +174,8 @@ export const personalYearly = {
 
 export const businessYearly = {
   name: 'Business',
-  price: 45,
-  prevPrice: '$13',
+  price: 27,
+  prevPrice: '$45',
   type: 'Yearly',
   features: {
     available: [

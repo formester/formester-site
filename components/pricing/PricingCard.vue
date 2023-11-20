@@ -9,7 +9,7 @@
     <div class="d-flex align-items-baseline">
       <div class="d-flex flex-column align-items-start mb-2">
         <h2 class="pricing__amount mb-1">${{ plan.price }}</h2>
-        <span class="pricing__prev__amount">{{ plan.prevPrice }}</span>
+        <span v-if="plan.type === 'Yearly'" class="pricing__prev__amount">{{ plan.prevPrice }}</span>
       </div>
       <span class="pricing__timeline">/mo</span>
     </div>
