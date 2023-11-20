@@ -7,7 +7,10 @@
   >
     <h6 class="pricing__category text-start">{{ plan.name }}</h6>
     <div class="d-flex align-items-baseline">
-      <h2 class="pricing__amount">${{ plan.price }}</h2>
+      <div class="d-flex flex-column align-items-start mb-2">
+        <h2 class="pricing__amount mb-1">${{ plan.price }}</h2>
+        <span class="pricing__prev__amount">{{ plan.prevPrice }}</span>
+      </div>
       <span class="pricing__timeline">/mo</span>
     </div>
     <div class="billing-timeline text-start">{{ billingTimeline }}</div>
@@ -47,10 +50,10 @@ export default {
     }
   },
   computed: {
-    billingTimeline(){
-      if (this.plan.price === 0) return " "
-      return this.plan.type === "Yearly" ? "Billed yearly" : "Billed monthly";
-    }
+    billingTimeline() {
+      if (this.plan.price === 0) return ' '
+      return this.plan.type === 'Yearly' ? 'Billed yearly' : 'Billed monthly'
+    },
   },
   methods: {
     addHighlight() {
@@ -76,6 +79,13 @@ export default {
   color: #695e8c;
 }
 
+.pricing__prev__amount {
+  font-size: 28px;
+  color: #817e89;
+  text-decoration: line-through;
+  height: 28px;
+}
+
 .pricing__amount {
   font-size: var(--ft-df-heading);
   font-weight: 700;
@@ -95,6 +105,7 @@ export default {
   line-height: 1.5;
   font-size: 14px;
   font-weight: 500;
+  height: 21px;
 }
 
 /* HIGHLIGHT CARD */
