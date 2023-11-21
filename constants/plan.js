@@ -2,6 +2,8 @@ export const free = {
   name: 'Free',
   price: 0,
   type: 'Monthly',
+  description:
+    'For individuals who need to quickly collect data through forms.',
   features: {
     available: [
       '10 forms',
@@ -38,6 +40,8 @@ export const personalMonthly = {
   name: 'Personal',
   price: 13,
   type: 'Monthly',
+  description:
+    'For individuals who need to create beautiful, branded forms on a regular basis.',
   features: {
     available: [
       'Unlimited forms',
@@ -71,6 +75,8 @@ export const businessMonthly = {
   name: 'Business',
   price: 49,
   type: 'Monthly',
+  description:
+    'For organizations and agencies to create unlimited forms that are fully customisable to handle any complexity.',
   features: {
     available: [
       'Unlimited forms',
@@ -106,6 +112,8 @@ export const freeYearly = {
   name: 'Free',
   price: 0,
   type: 'Yearly',
+  description:
+    'For individuals who need to quickly collect data through forms.',
   features: {
     available: [
       '10 forms',
@@ -142,6 +150,8 @@ export const personalYearly = {
   name: 'Personal',
   price: 12,
   type: 'Yearly',
+  description:
+    'For individuals who need to create beautiful, branded forms on a regular basis.',
   features: {
     available: [
       'Unlimited forms',
@@ -175,6 +185,8 @@ export const businessYearly = {
   name: 'Business',
   price: 45,
   type: 'Yearly',
+  description:
+    'For organizations and agencies to create unlimited forms that are fully customisable to handle any complexity.',
   features: {
     available: [
       'Unlimited forms',

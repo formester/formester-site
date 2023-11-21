@@ -15,22 +15,23 @@
         <span>Yearly</span>
       </div>
 
-      <div
-        v-if="!isYearly"
-        class="d-flex align-items-center justify-content-center flex-wrap mt-4"
-      >
-        <PricingCard :plan="free" />
-        <PricingCard :plan="personalMonthly" :isHighlighted="true" />
-        <PricingCard :plan="businessMonthly" />
-      </div>
-
-      <div
-        v-if="isYearly"
-        class="d-flex align-items-center justify-content-center flex-wrap mt-4"
-      >
-        <PricingCard :plan="free" />
-        <PricingCard :plan="personalYearly" :isHighlighted="true" />
-        <PricingCard :plan="businessYearly" />
+      <div class="container">
+        <div
+          v-if="!isYearly"
+          class="d-flex align-items-center justify-content-center mt-4"
+        >
+          <PricingCard :plan="free" />
+          <PricingCard :plan="personalMonthly" :isHighlighted="true" />
+          <PricingCard :plan="businessMonthly" />
+        </div>
+        <div
+          v-if="isYearly"
+          class="d-flex align-items-center justify-content-center mt-4"
+        >
+          <PricingCard :plan="free" />
+          <PricingCard :plan="personalYearly" :isHighlighted="true" />
+          <PricingCard :plan="businessYearly" />
+        </div>
       </div>
       <CallToActionSection />
       <Faq />

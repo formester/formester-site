@@ -1,5 +1,5 @@
 <template>
-  <div
+  <!-- <div
     @mouseenter="addHighlight"
     @mouseleave="removeHighlight"
     class="pricing__card d-flex flex-column"
@@ -32,6 +32,49 @@
       href="https://app.formester.com/users/sign_up"
       >Get Started</a
     >
+  </div> -->
+  <div
+    class="pricing__card d-flex flex-column mx-3"
+    :class="{ hglt: highlight }"
+  >
+    <div class="d-flex flex-column align-items-stretch text-start p-4">
+      <h2 class="pricing__category">{{ plan.name }}</h2>
+      <p class="pricing__description">
+        For organizations and agencies to create unlimited forms that are fully
+        customisable to handle any complexity.
+      </p>
+      <div class="d-flex align-items-baseline">
+        <span class="pricing__amount">{{ plan.price }}</span>
+        <span class="pricing__timeline">/mo</span>
+      </div>
+      <div class="billing-timeline mb-4">
+        <span v-show="billingTimeline"> Billed {{ billingTimeline }} </span>
+      </div>
+      <a
+        class="button pricing__button text-center"
+        href="https://app.formester.com/users/sign_up"
+        >{{ planTextButton }}</a
+      >
+    </div>
+    <ul
+      class="pricing__features d-flex flex-column align-items-start p-4 border-top"
+    >
+      <li>Unlimited forms</li>
+      <li>15k submissions/month</li>
+      <li>50 GB File Uploads</li>
+      <li>Unlimited Google Sheets Integration</li>
+      <li>Accept Payments (0% commission)</li>
+    </ul>
+    <div class="text-start p-4 border-top">
+      <span class="key__features-heading">Everything in Personal, plus</span>
+      <ul class="key__features d-flex flex-column align-items-start ps-4 mt-3">
+        <li>Unlimited forms</li>
+        <li>15k submissions/month</li>
+        <li>50 GB File Uploads</li>
+        <li>Unlimited Google Sheets Integration</li>
+        <li>Accept Payments (0% commission)</li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -47,10 +90,15 @@ export default {
     }
   },
   computed: {
-    billingTimeline(){
-      if (this.plan.price === 0) return " "
-      return this.plan.type === "Yearly" ? "Billed yearly" : "Billed monthly";
-    }
+    billingTimeline() {
+      if (this.plan.price === 0) return ''
+      return this.plan.type === 'Yearly' ? 'yearly' : 'monthly'
+    },
+    planTextButton() {
+      return this.billingTimeline
+        ? `Get ${this.plan.name} ${this.billingTimeline} Plan`
+        : 'Try for free forever'
+    },
   },
   methods: {
     addHighlight() {
@@ -65,41 +113,69 @@ export default {
 
 <style scoped>
 .pricing__card {
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: var(--brd-df-rd);
-  padding: 1.9em 2.5em;
-  margin: 1em;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.04),
+    0px 4px 8px 0px rgba(0, 0, 0, 0.04);
+}
+
+.pricing__card.hglt {
+  border: 4px solid #7965b0;
+  margin-bottom: 32px;
+}
+
+.pricing__card.hglt::before {
+  content: 'MOST POPULAR';
+  padding: 4px;
+  background-color: #7965b0;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .pricing__category {
-  font-size: var(--ft-subtitle);
-  color: #695e8c;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.pricing__description {
+  font-size: 16px;
+  line-height: 140%;
+  color: #525252;
+  height: 66px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .pricing__amount {
-  font-size: var(--ft-df-heading);
-  font-weight: 700;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 140%;
 }
 
 .pricing__timeline {
-  font-size: var(--ft-big-body);
+  font-size: 18px;
+  line-height: 140%;
+}
+
+.billing-timeline {
+  color: #525252;
+  font-size: 14px;
+  line-height: 140%;
+  height: 20px;
 }
 
 .pricing__button {
   background-color: var(--clr-primary-light);
-  padding: 0.8em 0;
-  border-radius: var(--brd-df-rd);
-}
-
-.billing-timeline {
-  line-height: 1.5;
-  font-size: 14px;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 18px;
   font-weight: 500;
-}
-
-/* HIGHLIGHT CARD */
-.pricing__card.hglt {
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  text-transform: capitalize;
 }
 
 .pricing__card.hglt .pricing__button {
@@ -108,12 +184,23 @@ export default {
 }
 
 .pricing__features {
-  list-style: url('../../assets/images/check.svg');
+  list-style: none;
+  font-size: 16px;
+  line-height: 140%;
+  gap: 8px;
+  padding: 0;
 }
 
-.pricing__unavailable__features {
-  list-style: url('../../assets/images/cross.svg');
-  text-decoration: line-through;
-  opacity: 0.7;
+.key__features-heading {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.key__features {
+  list-style: url('../../assets/images/check.svg');
+  gap: 8px;
+  font-size: 16px;
+  line-height: 140%;
 }
 </style>
