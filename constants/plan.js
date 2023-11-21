@@ -148,7 +148,8 @@ export const freeYearly = {
 
 export const personalYearly = {
   name: 'Personal',
-  price: 12,
+  price: 7.2,
+  prevPrice: '$12',
   type: 'Yearly',
   description:
     'For individuals who need to create beautiful, branded forms on a regular basis.',
@@ -183,7 +184,8 @@ export const personalYearly = {
 
 export const businessYearly = {
   name: 'Business',
-  price: 45,
+  price: 27,
+  prevPrice: '$45',
   type: 'Yearly',
   description:
     'For organizations and agencies to create unlimited forms that are fully customisable to handle any complexity.',

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <BlackFridayBanner />
     <Navbar />
     <Nuxt />
     <Footer />
@@ -9,9 +10,10 @@
 <script>
 import Navbar from '../components/nav/Navbar.vue'
 import Footer from '../components/Footer.vue'
+import BlackFridayBanner from '../components/BlackFridayBanner.vue'
 
 export default {
-  components: { Footer, Navbar },
+  components: { Footer, Navbar, BlackFridayBanner },
 }
 </script>
 

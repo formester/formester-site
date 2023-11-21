@@ -1,8 +1,13 @@
 <template>
   <div>
     <div class="text-center mt-5">
-      <h1 class="pricing__heading">Pricing that feels just right</h1>
-      <p class="pricing__subheading">Start with our free plan</p>
+      <h1 class="pricing__heading">
+        Black Friday Offer - Flat 40% off on Annual Plans
+      </h1>
+      <p class="pricing__subheading">
+        Take advantage of this Black Friday Deal to buy our plans for a fraction
+        of the price! Offer lasts till 30 November.
+      </p>
 
       <div
         class="d-flex justify-content-center align-items-center plan_toggle__switch"
@@ -201,15 +206,15 @@ export default {
           },
           {
             '@type': 'Question',
-            name: "Do I get a discount on yearly plan?",
+            name: 'Do I get a discount on yearly plan?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: "You do, If you buy yearly plan you only have to pay for 11 months and you get 1 month free.",
+              text: 'You do, If you buy yearly plan you only have to pay for 11 months and you get 1 month free.',
             },
           },
           {
             '@type': 'Question',
-            name: "Is there an referral/affiliate program?",
+            name: 'Is there an referral/affiliate program?',
             acceptedAnswer: {
               '@type': 'Answer',
               text: "Yes we do. It's an invite only program. If you need access to this please reach out to our support.",
@@ -217,23 +222,23 @@ export default {
           },
           {
             '@type': 'Question',
-            name: "Do you offer discount for NGO and School?",
+            name: 'Do you offer discount for NGO and School?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: "Yes. Get in touch and we’ll help you out.",
+              text: 'Yes. Get in touch and we’ll help you out.',
             },
           },
           {
             '@type': 'Question',
-            name: "What if I want a reseller account?",
+            name: 'What if I want a reseller account?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: "We do support resellers. Please reach out to us at support@formester.com and we will love to help you.",
+              text: 'We do support resellers. Please reach out to us at support@formester.com and we will love to help you.',
             },
           },
           {
             '@type': 'Question',
-            name: "I have more questions",
+            name: 'I have more questions',
             acceptedAnswer: {
               '@type': 'Answer',
               text: "No problem! Contact us and we'll get in touch with you shortly :)",
