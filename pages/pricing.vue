@@ -25,29 +25,17 @@
           v-if="!isYearly"
           class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3"
         >
-          <div class="col-lg-4 col-sm-8">
-            <PricingCard :plan="free" />
-          </div>
-          <div class="col-lg-4 col-sm-8">
-            <PricingCard :plan="personalMonthly" :isHighlighted="true" />
-          </div>
-          <div class="col-lg-4 col-sm-8">
-            <PricingCard :plan="businessMonthly" />
-          </div>
+          <PricingCard :plan="free" />
+          <PricingCard :plan="personalMonthly" :isHighlighted="true" />
+          <PricingCard :plan="businessMonthly" />
         </div>
         <div
           v-if="isYearly"
           class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3"
         >
-          <div class="col-lg-4 col-sm-8">
-            <PricingCard :plan="free" />
-          </div>
-          <div class="col-lg-4 col-sm-8">
-            <PricingCard :plan="personalYearly" :isHighlighted="true" />
-          </div>
-          <div class="col-lg-4 col-sm-8">
-            <PricingCard :plan="businessYearly" />
-          </div>
+          <PricingCard :plan="free" />
+          <PricingCard :plan="personalYearly" :isHighlighted="true" />
+          <PricingCard :plan="businessYearly" />
         </div>
       </div>
       <CallToActionSection />

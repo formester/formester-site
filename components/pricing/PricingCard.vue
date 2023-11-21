@@ -1,50 +1,52 @@
 <template>
-  <div class="pricing__card d-flex flex-column" :class="{ hglt: highlight }">
-    <div class="d-flex flex-column align-items-stretch text-start p-4">
-      <h2 class="pricing__category">{{ plan.name }}</h2>
-      <p class="pricing__description">
-        {{ plan.description }}
-      </p>
-      <div class="d-flex align-items-baseline">
-        <span
-          v-if="plan.type === 'Yearly'"
-          class="pricing__prev__amount me-2"
-          >{{ plan.prevPrice }}</span
+  <div class="col-lg-4 col-sm-8">
+    <div class="pricing__card d-flex flex-column" :class="{ hglt: highlight }">
+      <div class="d-flex flex-column align-items-stretch text-start p-4">
+        <h2 class="pricing__category">{{ plan.name }}</h2>
+        <p class="pricing__description">
+          {{ plan.description }}
+        </p>
+        <div class="d-flex align-items-baseline">
+          <span
+            v-if="plan.type === 'Yearly'"
+            class="pricing__prev__amount me-2"
+            >{{ plan.prevPrice }}</span
+          >
+          <span class="pricing__amount">${{ plan.price }}</span>
+          <span class="pricing__timeline">/mo</span>
+        </div>
+        <div class="billing-timeline mb-4">
+          <span v-show="billingTimeline"> Billed {{ billingTimeline }} </span>
+        </div>
+        <a
+          class="button pricing__button text-center"
+          href="https://app.formester.com/users/sign_up"
+          >{{ planTextButton }}</a
         >
-        <span class="pricing__amount">{{ plan.price }}</span>
-        <span class="pricing__timeline">/mo</span>
       </div>
-      <div class="billing-timeline mb-4">
-        <span v-show="billingTimeline"> Billed {{ billingTimeline }} </span>
-      </div>
-      <a
-        class="button pricing__button text-center"
-        href="https://app.formester.com/users/sign_up"
-        >{{ planTextButton }}</a
-      >
-    </div>
-    <ul
-      class="pricing__features d-flex flex-column align-items-start p-4 border-top mb-0"
-    >
-      <li
-        v-for="(feature, index) in plan.features.general"
-        :key="feature + index"
-      >
-        {{ feature }}
-      </li>
-    </ul>
-    <div class="text-start p-4 border-top">
-      <span class="key__features-heading">{{ keyFeaturesHeading }}</span>
       <ul
-        class="key__features d-flex flex-column align-items-start ps-4 mt-3 mb-0"
+        class="pricing__features d-flex flex-column align-items-start p-4 border-top mb-0"
       >
         <li
-          v-for="(feature, index) in plan.features.keyFeatures"
+          v-for="(feature, index) in plan.features.general"
           :key="feature + index"
         >
           {{ feature }}
         </li>
       </ul>
+      <div class="text-start p-4 border-top">
+        <span class="key__features-heading">{{ keyFeaturesHeading }}</span>
+        <ul
+          class="key__features d-flex flex-column align-items-start ps-4 mt-3 mb-0"
+        >
+          <li
+            v-for="(feature, index) in plan.features.keyFeatures"
+            :key="feature + index"
+          >
+            {{ feature }}
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
