@@ -1,13 +1,12 @@
 <template>
   <div
-    class="pricing__card d-flex flex-column mx-3"
+    class="pricing__card d-flex flex-column mt-3"
     :class="{ hglt: highlight }"
   >
     <div class="d-flex flex-column align-items-stretch text-start p-4">
       <h2 class="pricing__category">{{ plan.name }}</h2>
       <p class="pricing__description">
-        For organizations and agencies to create unlimited forms that are fully
-        customisable to handle any complexity.
+        {{ plan.description }}
       </p>
       <div class="d-flex align-items-baseline">
         <span
@@ -28,22 +27,26 @@
       >
     </div>
     <ul
-      class="pricing__features d-flex flex-column align-items-start p-4 border-top"
+      class="pricing__features d-flex flex-column align-items-start p-4 border-top mb-0"
     >
-      <li>Unlimited forms</li>
-      <li>15k submissions/month</li>
-      <li>50 GB File Uploads</li>
-      <li>Unlimited Google Sheets Integration</li>
-      <li>Accept Payments (0% commission)</li>
+      <li
+        v-for="(feature, index) in plan.features.general"
+        :key="feature + index"
+      >
+        {{ feature }}
+      </li>
     </ul>
     <div class="text-start p-4 border-top">
-      <span class="key__features-heading">Everything in Personal, plus</span>
-      <ul class="key__features d-flex flex-column align-items-start ps-4 mt-3">
-        <li>Unlimited forms</li>
-        <li>15k submissions/month</li>
-        <li>50 GB File Uploads</li>
-        <li>Unlimited Google Sheets Integration</li>
-        <li>Accept Payments (0% commission)</li>
+      <span class="key__features-heading">{{ keyFeaturesHeading }}</span>
+      <ul
+        class="key__features d-flex flex-column align-items-start ps-4 mt-3 mb-0"
+      >
+        <li
+          v-for="(feature, index) in plan.features.keyFeatures"
+          :key="feature + index"
+        >
+          {{ feature }}
+        </li>
       </ul>
     </div>
   </div>
@@ -69,6 +72,15 @@ export default {
       return this.billingTimeline
         ? `Get ${this.plan.name} ${this.billingTimeline} Plan`
         : 'Try for free forever'
+    },
+    keyFeaturesHeading() {
+      if (this.plan.name === 'Free') {
+        return 'Key Features'
+      } else if (this.plan.name === 'Personal') {
+        return 'Everthing in free, plus'
+      } else {
+        return 'Everthing in personal, plus'
+      }
     },
   },
   methods: {
@@ -112,9 +124,9 @@ export default {
 
 .pricing__description {
   font-size: 16px;
-  line-height: 140%;
+  line-height: 24px;
   color: #525252;
-  height: 66px;
+  height: 72px;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -149,13 +161,13 @@ export default {
 
 .pricing__timeline {
   font-size: 18px;
-  line-height: 140%;
+  line-height: 26px;
 }
 
 .billing-timeline {
   color: #525252;
   font-size: 14px;
-  line-height: 140%;
+  line-height: 21px;
   height: 20px;
 }
 
@@ -181,7 +193,7 @@ export default {
 .pricing__features {
   list-style: none;
   font-size: 16px;
-  line-height: 140%;
+  line-height: 24px;
   gap: 8px;
   padding: 0;
 }
@@ -189,13 +201,13 @@ export default {
 .key__features-heading {
   font-size: 16px;
   font-weight: 600;
-  line-height: 140%;
+  line-height: 24px;
 }
 
 .key__features {
   list-style: url('../../assets/images/check.svg');
   gap: 8px;
   font-size: 16px;
-  line-height: 140%;
+  line-height: 24px;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="text-center mt-5">
+    <div class="text-center mt-5 px-3">
       <h1 class="pricing__heading">
         Black Friday Offer - Flat 40% off on Annual Plans
       </h1>
@@ -20,22 +20,34 @@
         <span>Yearly</span>
       </div>
 
-      <div class="container">
+      <div class="mw-1200 mx-auto px-3">
         <div
           v-if="!isYearly"
-          class="d-flex align-items-center justify-content-center mt-4"
+          class="row gx-3 d-flex align-items-center justify-content-center mt-4"
         >
-          <PricingCard :plan="free" />
-          <PricingCard :plan="personalMonthly" :isHighlighted="true" />
-          <PricingCard :plan="businessMonthly" />
+          <div class="col-lg-4 col-sm-8">
+            <PricingCard :plan="free" />
+          </div>
+          <div class="col-lg-4 col-sm-8">
+            <PricingCard :plan="personalMonthly" :isHighlighted="true" />
+          </div>
+          <div class="col-lg-4 col-sm-8">
+            <PricingCard :plan="businessMonthly" />
+          </div>
         </div>
         <div
           v-if="isYearly"
-          class="d-flex align-items-center justify-content-center mt-4"
+          class="row gx-3 d-flex align-items-center justify-content-center mt-4"
         >
-          <PricingCard :plan="free" />
-          <PricingCard :plan="personalYearly" :isHighlighted="true" />
-          <PricingCard :plan="businessYearly" />
+          <div class="col-lg-4 col-sm-8">
+            <PricingCard :plan="free" />
+          </div>
+          <div class="col-lg-4 col-sm-8">
+            <PricingCard :plan="personalYearly" :isHighlighted="true" />
+          </div>
+          <div class="col-lg-4 col-sm-8">
+            <PricingCard :plan="businessYearly" />
+          </div>
         </div>
       </div>
       <CallToActionSection />
@@ -252,6 +264,10 @@ export default {
 </script>
 
 <style scoped>
+.mw-1200 {
+  max-width: 1200px;
+}
+
 .pricing__heading {
   font-size: var(--ft-bigger-body);
   font-weight: 600;
