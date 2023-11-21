@@ -28,6 +28,10 @@
   display: none;
 }
 
+.banner:hover .banner__text {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 700px) {
   .banner {
     flex-direction: column;
