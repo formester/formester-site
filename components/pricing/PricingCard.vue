@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="pricing__card d-flex flex-column mt-3"
-    :class="{ hglt: highlight }"
-  >
+  <div class="pricing__card d-flex flex-column" :class="{ hglt: highlight }">
     <div class="d-flex flex-column align-items-stretch text-start p-4">
       <h2 class="pricing__category">{{ plan.name }}</h2>
       <p class="pricing__description">
@@ -104,7 +101,7 @@ export default {
 
 .pricing__card.hglt {
   border: 4px solid #7965b0;
-  margin-bottom: 32px;
+  margin-top: -38px;
 }
 
 .pricing__card.hglt::before {

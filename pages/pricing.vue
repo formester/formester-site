@@ -23,7 +23,7 @@
       <div class="mw-1200 mx-auto px-3">
         <div
           v-if="!isYearly"
-          class="row gx-3 d-flex align-items-center justify-content-center mt-4"
+          class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3"
         >
           <div class="col-lg-4 col-sm-8">
             <PricingCard :plan="free" />
@@ -37,7 +37,7 @@
         </div>
         <div
           v-if="isYearly"
-          class="row gx-3 d-flex align-items-center justify-content-center mt-4"
+          class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3"
         >
           <div class="col-lg-4 col-sm-8">
             <PricingCard :plan="free" />
