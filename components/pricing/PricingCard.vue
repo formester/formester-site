@@ -25,7 +25,7 @@
         >
       </div>
       <ul
-        class="pricing__features d-flex flex-column align-items-start p-4 border-top mb-0"
+        class="pricing__features d-flex flex-column align-items-start p-4 border-top mb-0 text-start"
       >
         <li
           v-for="(feature, index) in plan.features.general"
