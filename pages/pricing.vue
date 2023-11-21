@@ -20,7 +20,7 @@
         <span>Yearly</span>
       </div>
 
-      <div class="mw-1200 mx-auto px-3">
+      <div class="mw-1200 mx-auto">
         <div
           v-if="!isYearly"
           class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3"
