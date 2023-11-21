@@ -10,6 +10,11 @@
         customisable to handle any complexity.
       </p>
       <div class="d-flex align-items-baseline">
+        <span
+          v-if="plan.type === 'Yearly'"
+          class="pricing__prev__amount me-2"
+          >{{ plan.prevPrice }}</span
+        >
         <span class="pricing__amount">{{ plan.price }}</span>
         <span class="pricing__timeline">/mo</span>
       </div>
@@ -118,12 +123,22 @@ export default {
 }
 
 .pricing__prev__amount {
-  font-weight: 500;
   font-size: 28px;
-  color: rgba(33, 20, 72, 0.45);
-  text-decoration: line-through;
-  text-decoration-thickness: 1.2px;
+  color: #a3a3a3;
   height: 28px;
+  position: relative;
+  display: inline-block;
+}
+
+.pricing__prev__amount::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 15%;
+  right: 0;
+  border-top: 2px solid #a3a3a3;
+  transform: rotate(-20deg);
+  transform-origin: left center;
 }
 
 .pricing__amount {
