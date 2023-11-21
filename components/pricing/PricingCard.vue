@@ -1,43 +1,4 @@
 <template>
-  <!-- <div
-    @mouseenter="addHighlight"
-    @mouseleave="removeHighlight"
-    class="pricing__card d-flex flex-column"
-    :class="{ hglt: highlight }"
-  >
-    <h6 class="pricing__category text-start">{{ plan.name }}</h6>
-    <div class="d-flex align-items-baseline">
-      <div class="d-flex flex-column align-items-start mb-2">
-        <h2 class="pricing__amount mb-1">${{ plan.price }}</h2>
-        <span v-if="plan.type === 'Yearly'" class="pricing__prev__amount">{{
-          plan.prevPrice
-        }}</span> 
-      </div>
-      <span class="pricing__timeline">/mo</span>
-    </div>
-    <div class="billing-timeline text-start">{{ billingTimeline }}</div>
-    <ul class="mt-3 text-start">
-      <li
-        v-for="(feature, index) in plan.features.available"
-        :key="feature + index"
-        class="mt-2 pricing__features"
-      >
-        {{ feature }}
-      </li>
-      <li
-        v-for="(feature, index) in plan.features.unavailable"
-        :key="feature + index"
-        class="mt-2 pricing__unavailable__features"
-      >
-        {{ feature }}
-      </li>
-    </ul>
-    <a
-      class="button pricing__button d-block"
-      href="https://app.formester.com/users/sign_up"
-      >Get Started</a
-    >
-  </div> -->
   <div
     class="pricing__card d-flex flex-column mx-3"
     :class="{ hglt: highlight }"
@@ -190,11 +151,16 @@ export default {
   font-size: 18px;
   font-weight: 500;
   text-transform: capitalize;
+  transition: 300ms ease-out;
 }
 
 .pricing__card.hglt .pricing__button {
   background-color: var(--clr-primary);
   color: white;
+}
+
+.pricing__button:hover {
+  opacity: 0.8;
 }
 
 .pricing__features {
