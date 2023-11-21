@@ -1,12 +1,15 @@
 <template>
   <nuxt-link
     to="/pricing/"
-    class="d-flex align-items-center justify-content-center banner py-3"
+    class="d-flex align-items-center justify-content-center banner p-3"
   >
-    <nuxt-img src="/blackfriday.svg" />
-    <p class="banner__text ms-2 mb-0">Don’t miss out <b>40% </b>off</p>
-    <nuxt-img src="/confetti.svg" />
-    <nuxt-img src="/chevron-right.svg" />
+    <nuxt-img src="/blackfriday.svg" class="blackFriday" />
+    <nuxt-img src="/blackfriday-mobile.png" class="blackFriday-mobile" />
+    <div class="d-flex align-items-center justify-content-center">
+      <p class="banner__text ms-2 mb-0">Don’t miss out <b>40% </b>off</p>
+      <nuxt-img src="/confetti.svg" class="mx-2"/>
+      <nuxt-img src="/chevron-right.svg" />
+    </div>
   </nuxt-link>
 </template>
 
@@ -19,5 +22,27 @@
 
 .banner__text {
   font-size: 24px;
+}
+
+.blackFriday-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .banner {
+    flex-direction: column;
+  }
+
+  .blackFriday {
+    display: none;
+  }
+
+  .blackFriday-mobile {
+    display: inline-block;
+  }
+
+  .banner__text {
+    font-size: 18px;
+  }
 }
 </style>
