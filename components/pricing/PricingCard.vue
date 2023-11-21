@@ -1,37 +1,53 @@
 <template>
-  <div
-    @mouseenter="addHighlight"
-    @mouseleave="removeHighlight"
-    class="pricing__card d-flex flex-column"
-    :class="{ hglt: highlight }"
-  >
-    <h6 class="pricing__category text-start">{{ plan.name }}</h6>
-    <div class="d-flex align-items-baseline">
-      <h2 class="pricing__amount">${{ plan.price }}</h2>
-      <span class="pricing__timeline">/mo</span>
+  <div class="col-lg-4 col-sm-8 mt-3">
+    <div class="pricing__card d-flex flex-column" :class="{ hglt: highlight }">
+      <div class="d-flex flex-column align-items-stretch text-start p-4">
+        <h2 class="pricing__category">{{ plan.name }}</h2>
+        <p class="pricing__description">
+          {{ plan.description }}
+        </p>
+        <div class="d-flex align-items-baseline">
+          <span
+            v-if="plan.type === 'Yearly'"
+            class="pricing__prev__amount me-2"
+            >{{ plan.prevPrice }}</span
+          >
+          <span class="pricing__amount">${{ plan.price }}</span>
+          <span class="pricing__timeline">/mo</span>
+        </div>
+        <div class="billing-timeline mb-4">
+          <span v-show="billingTimeline"> Billed {{ billingTimeline }} </span>
+        </div>
+        <a
+          class="button pricing__button text-center"
+          href="https://app.formester.com/users/sign_up"
+          >{{ planTextButton }}</a
+        >
+      </div>
+      <ul
+        class="pricing__features d-flex flex-column align-items-start p-4 border-top mb-0 text-start"
+      >
+        <li
+          v-for="(feature, index) in plan.features.general"
+          :key="feature + index"
+        >
+          {{ feature }}
+        </li>
+      </ul>
+      <div class="text-start p-4 border-top">
+        <span class="key__features-heading">{{ keyFeaturesHeading }}</span>
+        <ul
+          class="key__features d-flex flex-column align-items-start ps-4 mt-3 mb-0"
+        >
+          <li
+            v-for="(feature, index) in plan.features.keyFeatures"
+            :key="feature + index"
+          >
+            {{ feature }}
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="billing-timeline text-start">{{ billingTimeline }}</div>
-    <ul class="mt-3 text-start">
-      <li
-        v-for="(feature, index) in plan.features.available"
-        :key="feature + index"
-        class="mt-2 pricing__features"
-      >
-        {{ feature }}
-      </li>
-      <li
-        v-for="(feature, index) in plan.features.unavailable"
-        :key="feature + index"
-        class="mt-2 pricing__unavailable__features"
-      >
-        {{ feature }}
-      </li>
-    </ul>
-    <a
-      class="button pricing__button d-block"
-      href="https://app.formester.com/users/sign_up"
-      >Get Started</a
-    >
   </div>
 </template>
 
@@ -47,10 +63,24 @@ export default {
     }
   },
   computed: {
-    billingTimeline(){
-      if (this.plan.price === 0) return " "
-      return this.plan.type === "Yearly" ? "Billed yearly" : "Billed monthly";
-    }
+    billingTimeline() {
+      if (this.plan.price === 0) return ''
+      return this.plan.type === 'Yearly' ? 'yearly' : 'monthly'
+    },
+    planTextButton() {
+      return this.billingTimeline
+        ? `Get ${this.plan.name} ${this.billingTimeline} Plan`
+        : 'Try for free forever'
+    },
+    keyFeaturesHeading() {
+      if (this.plan.name === 'Free') {
+        return 'Key Features'
+      } else if (this.plan.name === 'Personal') {
+        return 'Everthing in free, plus'
+      } else {
+        return 'Everthing in personal, plus'
+      }
+    },
   },
   methods: {
     addHighlight() {
@@ -65,41 +95,95 @@ export default {
 
 <style scoped>
 .pricing__card {
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: var(--brd-df-rd);
-  padding: 1.9em 2.5em;
-  margin: 1em;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.04),
+    0px 4px 8px 0px rgba(0, 0, 0, 0.04);
+}
+
+.pricing__card.hglt {
+  border: 4px solid #7965b0;
+  margin-top: -38px;
+}
+
+@media screen and (max-width: 992px) {
+  .pricing__card.hglt {
+    margin-top: 0;
+  }
+}
+
+.pricing__card.hglt::before {
+  content: 'MOST POPULAR';
+  padding: 4px;
+  background-color: #7965b0;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .pricing__category {
-  font-size: var(--ft-subtitle);
-  color: #695e8c;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.pricing__description {
+  font-size: 16px;
+  line-height: 24px;
+  color: #525252;
+  height: 72px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pricing__prev__amount {
+  font-size: 28px;
+  color: #a3a3a3;
+  height: 28px;
+  position: relative;
+  display: inline-block;
+}
+
+.pricing__prev__amount::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 15%;
+  right: 0;
+  border-top: 2px solid #a3a3a3;
+  transform: rotate(-20deg);
+  transform-origin: left center;
 }
 
 .pricing__amount {
-  font-size: var(--ft-df-heading);
-  font-weight: 700;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 140%;
 }
 
 .pricing__timeline {
-  font-size: var(--ft-big-body);
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.billing-timeline {
+  color: #525252;
+  font-size: 14px;
+  line-height: 21px;
+  height: 20px;
 }
 
 .pricing__button {
   background-color: var(--clr-primary-light);
-  padding: 0.8em 0;
-  border-radius: var(--brd-df-rd);
-}
-
-.billing-timeline {
-  line-height: 1.5;
-  font-size: 14px;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 18px;
   font-weight: 500;
-}
-
-/* HIGHLIGHT CARD */
-.pricing__card.hglt {
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  text-transform: capitalize;
+  transition: 300ms ease-out;
 }
 
 .pricing__card.hglt .pricing__button {
@@ -107,13 +191,28 @@ export default {
   color: white;
 }
 
-.pricing__features {
-  list-style: url('../../assets/images/check.svg');
+.pricing__button:hover {
+  opacity: 0.8;
 }
 
-.pricing__unavailable__features {
-  list-style: url('../../assets/images/cross.svg');
-  text-decoration: line-through;
-  opacity: 0.7;
+.pricing__features {
+  list-style: none;
+  font-size: 16px;
+  line-height: 24px;
+  gap: 8px;
+  padding: 0;
+}
+
+.key__features-heading {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.key__features {
+  list-style: url('../../assets/images/check.svg');
+  gap: 8px;
+  font-size: 16px;
+  line-height: 24px;
 }
 </style>
