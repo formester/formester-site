@@ -37,6 +37,170 @@
           <PricingCard :plan="personalYearly" :isHighlighted="true" />
           <PricingCard :plan="businessYearly" />
         </div>
+        <div class="table-responsive mt-5 py-5">
+          <h2 class="comparision__table-heading mb-5">
+            See All Features and Compare Plan
+          </h2>
+          <table class="table text-start">
+            <thead>
+              <tr class="plan-header">
+                <td></td>
+                <td>
+                  <div class="plan__name mb-2">Free</div>
+                  <button class="table__button">Start for free</button>
+                </td>
+                <td>
+                  <div class="plan__name mb-2">Pro</div>
+                  <button class="table__button hglt">Get started</button>
+                </td>
+                <td>
+                  <div class="plan__name mb-2">Business</div>
+                  <button class="table__button">Get started</button>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="feature">Forms</th>
+                <td>10</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <th class="feature">Submission per month</th>
+                <td>100</td>
+                <td>1k</td>
+                <td>15k</td>
+              </tr>
+              <tr>
+                <th class="feature">Collaborators</th>
+                <td>0</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <th class="feature">File Uploads</th>
+                <td>100 MB</td>
+                <td>1 GB</td>
+                <td>50 GB</td>
+              </tr>
+              <tr>
+                <th class="feature">Spam Protection</th>
+                <td><nuxt-img src="check.svg" /></td>
+                <td><nuxt-img src="check.svg" /></td>
+                <td><nuxt-img src="check.svg" /></td>
+              </tr>
+              <tr>
+                <th class="feature">Access to Template Library</th>
+                <td><nuxt-img src="check.svg" /></td>
+                <td><nuxt-img src="check.svg" /></td>
+                <td><nuxt-img src="check.svg" /></td>
+              </tr>
+              <tr>
+                <th class="feature">Self Email Notifications</th>
+                <td><nuxt-img src="check.svg" /></td>
+                <td><nuxt-img src="check.svg" /></td>
+                <td><nuxt-img src="check.svg" /></td>
+              </tr>
+              <tr>
+                <th class="feature">Respondent Email Notifications</th>
+                <td><nuxt-img src="check.svg" /></td>
+                <td><nuxt-img src="check.svg" /></td>
+                <td><nuxt-img src="check.svg" /></td>
+              </tr>
+              <tr>
+                <th class="feature">Redirect to URL</th>
+                <td><nuxt-img src="check.svg" /></td>
+                <td><nuxt-img src="check.svg" /></td>
+                <td><nuxt-img src="check.svg" /></td>
+              </tr>
+              <tr>
+                <th class="feature">Hidden Fields</th>
+                <td><nuxt-img src="check.svg" /></td>
+                <td><nuxt-img src="check.svg" /></td>
+                <td><nuxt-img src="check.svg" /></td>
+              </tr>
+              <tr>
+                <th class="feature">Signatures</th>
+                <td>10</td>
+                <td>250</td>
+                <td>2,500</td>
+              </tr>
+              <tr>
+                <th class="feature">SMTP Integration</th>
+                <td><nuxt-img src="check.svg" /></td>
+                <td><nuxt-img src="check.svg" /></td>
+                <td><nuxt-img src="check.svg" /></td>
+              </tr>
+              <tr>
+                <th class="feature">Zapier Integrations</th>
+                <td><nuxt-img src="check.svg" /></td>
+                <td><nuxt-img src="check.svg" /></td>
+                <td><nuxt-img src="check.svg" /></td>
+              </tr>
+              <tr>
+                <th class="feature">Google Sheets Integration</th>
+                <td>1</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <th class="feature">Accept Payments (Commission)</th>
+                <td>1%</td>
+                <td>0%</td>
+                <td>0%</td>
+              </tr>
+              <tr>
+                <th class="feature">Webhooks</th>
+                <td>1</td>
+                <td>50</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <th class="feature">Analytics</th>
+                <td>Basic</td>
+                <td>Advanced</td>
+                <td>Advanced</td>
+              </tr>
+              <tr>
+                <th class="feature">Question Branching & Logic Jumps</th>
+                <td><nuxt-img src="check.svg" /></td>
+                <td><nuxt-img src="check.svg" /></td>
+                <td><nuxt-img src="check.svg" /></td>
+              </tr>
+              <tr>
+                <th class="feature">Brandkit</th>
+                <td>-</td>
+                <td><nuxt-img src="check.svg" /></td>
+                <td><nuxt-img src="check.svg" /></td>
+              </tr>
+              <tr>
+                <th class="feature">Custom Meta Information</th>
+                <td>-</td>
+                <td><nuxt-img src="check.svg" /></td>
+                <td><nuxt-img src="check.svg" /></td>
+              </tr>
+              <tr>
+                <th class="feature">Scripts (GTM, GA, Pixel)</th>
+                <td>-</td>
+                <td><nuxt-img src="check.svg" /></td>
+                <td><nuxt-img src="check.svg" /></td>
+              </tr>
+              <tr>
+                <th class="feature">API Access</th>
+                <td>-</td>
+                <td>-</td>
+                <td><nuxt-img src="check.svg" /></td>
+              </tr>
+              <tr>
+                <th class="feature">Custom Domain</th>
+                <td>-</td>
+                <td>-</td>
+                <td><nuxt-img src="check.svg" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
       <CallToActionSection />
       <Faq />
@@ -326,5 +490,64 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+/* TABLE */
+
+.comparision__table-heading {
+  font-size: 28px;
+  line-height: 40px;
+}
+
+thead tr td {
+  border: none;
+}
+
+tr td,
+tr th {
+  padding-block: 12px;
+  font-size: 14px;
+}
+
+tr td,
+thead tr td {
+  padding-inline: 20px;
+}
+
+thead tr td:nth-child(3) {
+  background-color: #fafafa;
+  border-inline: 1px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5;
+}
+
+tbody tr td:nth-child(3) {
+  background-color: #fafafa;
+  border-inline: 1px solid #e5e5e5;
+}
+
+table td {
+  min-width: 169px;
+}
+
+.plan__name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.table__button {
+  padding: 8px 16px;
+  border: 1px solid var(--clr-primary);
+  background: transparent;
+  color: var(--clr-primary);
+  border-radius: 8px;
+}
+
+.table__button.hglt {
+  background-color: var(--clr-primary);
+  color: white;
+}
+
+.feature {
+  font-weight: 500;
 }
 </style>
