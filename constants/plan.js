@@ -153,3 +153,146 @@ export const businessYearly = {
     keyFeatures: ['API Access', 'Custom Domain'],
   },
 }
+
+export const comparisonTableFeatures = [
+  {
+    name: 'Forms',
+    free: '10',
+    pro: 'Unlimited',
+    business: 'Unlimited'
+  },
+  {
+    name: 'Submission per month',
+    free: '100',
+    pro: '1k',
+    business: '15k'
+  },
+  {
+    name: 'Collaborators',
+    free: '0',
+    pro: 'Unlimited',
+    business: 'Unlimited'
+  },
+  {
+    name: 'File Uploads',
+    free: '100 MB',
+    pro: '1 GB',
+    business: '50 GB'
+  },
+  {
+    name: 'Spam Protection',
+    free: 'Yes',
+    pro: 'Yes',
+    business: 'Yes'
+  },
+  {
+    name: 'Access to Template Library',
+    free: 'Yes',
+    pro: 'Yes',
+    business: 'Yes'
+  },
+  {
+    name: 'Self Email Notifications',
+    free: 'Yes',
+    pro: 'Yes',
+    business: 'Yes'
+  },
+  {
+    name: 'Respondent Email Notifications',
+    free: 'Yes',
+    pro: 'Yes',
+    business: 'Yes'
+  },
+  {
+    name: 'Redirect to URL',
+    free: 'Yes',
+    pro: 'Yes',
+    business: 'Yes'
+  },
+  {
+    name: 'Hidden Fields',
+    free: 'Yes',
+    pro: 'Yes',
+    business: 'Yes'
+  },
+  {
+    name: 'Signatures',
+    free: '10',
+    pro: '250',
+    business: '2,500'
+  },
+  {
+    name: 'SMTP Integration',
+    free: 'Yes',
+    pro: 'Yes',
+    business: 'Yes'
+  },
+  {
+    name: 'Zapier Integrations',
+    free: 'Yes',
+    pro: 'Yes',
+    business: 'Yes'
+  },
+  {
+    name: 'Google Sheets Integration',
+    free: '1',
+    pro: 'Unlimited',
+    business: 'Unlimited'
+  },
+  {
+    name: 'Accept Payments (Commission)',
+    free: '1%',
+    pro: '0%',
+    business: '0%'
+  },
+  {
+    name: 'Webhooks',
+    free: '1',
+    pro: '50',
+    business: 'Unlimited'
+  },
+  {
+    name: 'Analytics',
+    free: 'Basic',
+    pro: 'Advanced',
+    business: 'Advanced'
+  },
+  {
+    name: 'Question Branching & Logic Jumps',
+    free: 'Yes',
+    pro: 'Yes',
+    business: 'Yes'
+  },
+  {
+    name: 'Brandkit',
+    free: '-',
+    pro: 'Yes',
+    business: 'Yes'
+  },
+  {
+    name: 'Custom Meta Information',
+    free: '-',
+    pro: 'Yes',
+    business: 'Yes'
+  },
+  {
+    name: 'Scripts (GTM, GA, Pixel)',
+    free: '-',
+    pro: 'Yes',
+    business: 'Yes'
+  },
+  {
+    name: 'API Access',
+    free: '-',
+    pro: '-',
+    business: 'Yes'
+  },
+  {
+    name: 'Custom Domain',
+    free: '-',
+    pro: '-',
+    business: 'Yes'
+  },
+  // Add more features as needed
+];
+

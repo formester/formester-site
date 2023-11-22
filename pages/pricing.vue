@@ -37,6 +37,64 @@
           <PricingCard :plan="personalYearly" :isHighlighted="true" />
           <PricingCard :plan="businessYearly" />
         </div>
+        <div class="mt-5 py-5">
+          <h2 class="comparision__table-heading mb-5">
+            See All Features and Compare Plan
+          </h2>
+          <div class="table-responsive mt-5">
+            <table class="table text-start">
+              <thead>
+                <tr class="plan-header">
+                  <td></td>
+                  <td>
+                    <div class="plan__name mb-2">Free</div>
+                    <button class="table__button">Start for free</button>
+                  </td>
+                  <td>
+                    <div class="plan__name mb-2">Personal</div>
+                    <button class="table__button hglt">Get started</button>
+                  </td>
+                  <td>
+                    <div class="plan__name mb-2">Business</div>
+                    <button class="table__button">Get started</button>
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  v-for="feature in comparisonTableFeatures"
+                  :key="feature.name"
+                >
+                  <th class="feature">{{ feature.name }}</th>
+                  <td>
+                    <template v-if="feature.free === 'Yes'">
+                      <nuxt-img src="check-green.svg" />
+                    </template>
+                    <template v-else>
+                      {{ feature.free }}
+                    </template>
+                  </td>
+                  <td>
+                    <template v-if="feature.pro === 'Yes'">
+                      <nuxt-img src="check-green.svg" />
+                    </template>
+                    <template v-else>
+                      {{ feature.pro }}
+                    </template>
+                  </td>
+                  <td>
+                    <template v-if="feature.business === 'Yes'">
+                      <nuxt-img src="check-green.svg" />
+                    </template>
+                    <template v-else>
+                      {{ feature.business }}
+                    </template>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
       <CallToActionSection />
       <Faq />
@@ -55,6 +113,7 @@ import {
   freeYearly,
   personalYearly,
   businessYearly,
+  comparisonTableFeatures,
 } from '../constants/plan'
 
 // MetaTags
@@ -71,6 +130,7 @@ export default {
       freeYearly,
       personalYearly,
       businessYearly,
+      comparisonTableFeatures,
     }
   },
   computed: {
@@ -326,5 +386,72 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+/* TABLE */
+
+.comparision__table-heading {
+  font-size: 28px;
+  line-height: 40px;
+}
+
+thead tr td {
+  border: none;
+}
+
+tr td,
+tr th {
+  padding-block: 12px;
+  font-size: 14px;
+}
+
+tr td,
+thead tr td {
+  padding-inline: 20px;
+}
+
+thead tr td:nth-child(3) {
+  background-color: #fafafa;
+  border-inline: 1px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5;
+}
+
+tbody tr td:nth-child(3) {
+  background-color: #fafafa;
+  border-inline: 1px solid #e5e5e5;
+}
+
+table td {
+  min-width: 169px;
+}
+
+.plan__name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.table__button {
+  padding: 8px 16px;
+  border: 1px solid var(--clr-primary);
+  background: white;
+  color: var(--clr-primary);
+  border-radius: 8px;
+}
+
+.table__button:hover {
+  background: #f9f9f9;
+}
+
+.table__button.hglt {
+  background-color: var(--clr-primary);
+  color: white;
+}
+
+.table__button.hglt:hover {
+  opacity: 0.9;
+}
+
+.feature {
+  font-weight: 500;
 }
 </style>
