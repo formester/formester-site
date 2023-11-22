@@ -61,11 +61,15 @@ In contrast, no-code tools prioritize simplicity and accessibility, enabling use
 
 Notable clients include Allianz, Zendesk, Lattice, Getaround, Upwork, and Dell. Webflow's unique visual canvas allows users to indulge in real-time website creation, utilizing HTML, CSS, and Javascript for seamless collaboration. With a library featuring over 1,000 templates, Webflow accelerates website development, making it an invaluable resource for businesses seeking efficient, professional website creation.
 
+![Webflow Home Page Screenshot](/img/webflow_screenshot.png "Webflow Home Page Screenshot")
+
 ### **2. Formester**
 
 [Formester](https://formester.com/) offers an affordable solution in the form of no-code form builder, allowing creation, editing, and management of forms and documents. Utilize customizable templates for data collection, tracking, and analysis, with real-time collaboration and automatic syncing. 
 
 Streamline workflows through automation, visualize data with dynamic dashboards, and standardize forms across your organization—all within a comprehensive platform. Formester caters to diverse teams, from large to small and cross-functional, across various industries, thanks to its intuitive interface and personalisation capabilities.
+
+![Formester Home Page Screenshot](/img/formester_screenshot.png "Formester Home Page Screenshot")
 
 ### **3. Bubble**
 
@@ -73,11 +77,15 @@ Streamline workflows through automation, visualize data with dynamic dashboards,
 
 Applications built on Bubble must be hosted on its platform. The platform accelerates app development, attracting over 3 million users, some progressing to top accelerators like Y Combinator and Techstars, securing millions in venture funding. Trusted by HubSpot, Zendesk, VMware, and others, Bubble stands out with support from Insight Partners, SignalFire, Neo, and Betaworks Ventures.
 
+![Bubble Home Page Screenshot](/img/bubble_screenshot.png "Bubble Home Page Screenshot")
+
 ### **4. Zapier** 
 
 [Zapier](https://zapier.com/) is a workflow automation tool, streamlining business processes across 6,000+ web apps without coding. It swiftly eliminates time-consuming and repetitive tasks, allowing teams to concentrate on critical work and save costs. With a plethora of integrations, Zapier effortlessly connects your tools, enabling custom workflows tailored to your work style.
 
 From automating email attachments to Dropbox to receiving Slack alerts, Zapier's DIY-friendly editor ensures user-friendly customization, leveraging the full potential of automation for enhanced efficiency and productivity.
+
+![Zapier Home Page Screenshot](/img/zapier_screenshot.png "Zapier Home Page Screenshot")
 
 ### **5. Shopify**
 
@@ -85,23 +93,31 @@ From automating email attachments to Dropbox to receiving Slack alerts, Zapier's
 
 Trusted by over 800,000 businesses in 150 countries, including renowned brands like Tesla Motors and Budweiser, Shopify is a go-to solution. Its e-commerce website builder, coupled with pre-designed themes and tools for email, social media, and branding, expedites online store launch and professional image building, supported by a vast ecosystem of 6,000+ integrated apps.
 
+![Shopify Home Page Screenshot](/img/shopify_screenshot.png "Shopify Home Page Screenshot")
+
 ### **6. MailChimp** 
 
 [Mailchimp](https://mailchimp.com/?currency=USD) is an Email Marketing and Automations platform that supports over 12 million global businesses. With world-class marketing technology and award-winning support, Mailchimp enables users like TEDTalks and Shutterstock to transform emails into revenue. Its comprehensive platform streamlines online selling, audience connection, and multichannel marketing campaigns, unifying email, social media, landing pages, ads, and websites.
 
 Founded in 2001, Atlanta-based Mailchimp, with offices worldwide, boasts 1,200+ employees and joined Intuit in Nov 2021. Mailchimp's user-friendly design tools, templates, and a drag-and-drop builder simplify email and website creation, while 250+ integrations enhance functionality. Editors for landing pages, ads, and more make Mailchimp essential for marketers seeking professional results.
 
-### **7. Airtable** 
+![MailChimp Home Page Screenshot](/img/mailchimp_screenshot.png "MailChimp Home Page Screenshot")
+
+### **7. Airtable**
 
 [Airtable](https://www.airtable.com/) is a powerful no-code platform which fosters collaborative workflows by enabling teams to create custom apps for streamlined processes. With a user-friendly drag-and-drop builder and versatile templates, Airtable centralizes data and synchronizes tasks. Trusted by over 300,000 organizations, including 80% of the Fortune 100, Airtable's Connected Apps Platform goes beyond spreadsheets, offering robust building blocks for modeling, relationship defining, and tailored views.
 
  This adaptable system promotes agility, transparency, and visibility, allowing teams to address diverse use cases without the need for IT resources, making it an indispensable tool for evolving markets and changing goals.
+
+![Airtable Home Page Screenshot](/img/airtable_screenshot.png "Airtable Home Page Screenshot")
 
 ### **8. Wix**
 
 [Wix](https://www.wix.com/) is a web creation and business management platform. Boasting lightning-fast performance, enterprise-grade security, and reliable infrastructure, Wix ensures your site is always operational. Beyond a website builder, Wix offers versatile features, from online scheduling and payments to versatile eCommerce solutions. 
 
 With leading SEO, marketing tools, advanced analytics, and a mobile app, managing your online presence is intuitive and efficient. Choose from 900+ templates, utilize advanced SEO, and tap into full-stack web dev tools for custom functionality. Join millions who've achieved online goals with Wix's comprehensive suite for optimal user experiences and business growth.
+
+![Wix Home Page Screenshot](/img/wix_screenshot.png "Wix Airtable Home Page Screenshot")
 
 **Implementing No-Code Tools**
 
