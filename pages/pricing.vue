@@ -47,16 +47,28 @@
                 <tr class="plan-header">
                   <td></td>
                   <td>
-                    <div class="plan__name mb-2">Free</div>
-                    <button class="table__button">Start for free</button>
+                    <div class="plan__name mb-3">Free</div>
+                    <a
+                      href="https://app.formester.com/users/sign_up"
+                      class="table__button"
+                      >Start for free</a
+                    >
                   </td>
                   <td>
-                    <div class="plan__name mb-2">Personal</div>
-                    <button class="table__button hglt">Get started</button>
+                    <div class="plan__name mb-3">Personal</div>
+                    <a
+                      href="https://app.formester.com/users/sign_up"
+                      class="table__button hglt"
+                      >Get started</a
+                    >
                   </td>
                   <td>
-                    <div class="plan__name mb-2">Business</div>
-                    <button class="table__button">Get started</button>
+                    <div class="plan__name mb-3">Business</div>
+                    <a
+                      href="https://app.formester.com/users/sign_up"
+                      class="table__button"
+                      >Get started</a
+                    >
                   </td>
                 </tr>
               </thead>
@@ -431,7 +443,7 @@ table td {
 }
 
 .table__button {
-  padding: 8px 16px;
+  padding: 12px 16px;
   border: 1px solid var(--clr-primary);
   background: white;
   color: var(--clr-primary);
