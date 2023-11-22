@@ -60,143 +60,35 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th class="feature">Forms</th>
-                <td>10</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
-              </tr>
-              <tr>
-                <th class="feature">Submission per month</th>
-                <td>100</td>
-                <td>1k</td>
-                <td>15k</td>
-              </tr>
-              <tr>
-                <th class="feature">Collaborators</th>
-                <td>0</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
-              </tr>
-              <tr>
-                <th class="feature">File Uploads</th>
-                <td>100 MB</td>
-                <td>1 GB</td>
-                <td>50 GB</td>
-              </tr>
-              <tr>
-                <th class="feature">Spam Protection</th>
-                <td><nuxt-img src="check.svg" /></td>
-                <td><nuxt-img src="check.svg" /></td>
-                <td><nuxt-img src="check.svg" /></td>
-              </tr>
-              <tr>
-                <th class="feature">Access to Template Library</th>
-                <td><nuxt-img src="check.svg" /></td>
-                <td><nuxt-img src="check.svg" /></td>
-                <td><nuxt-img src="check.svg" /></td>
-              </tr>
-              <tr>
-                <th class="feature">Self Email Notifications</th>
-                <td><nuxt-img src="check.svg" /></td>
-                <td><nuxt-img src="check.svg" /></td>
-                <td><nuxt-img src="check.svg" /></td>
-              </tr>
-              <tr>
-                <th class="feature">Respondent Email Notifications</th>
-                <td><nuxt-img src="check.svg" /></td>
-                <td><nuxt-img src="check.svg" /></td>
-                <td><nuxt-img src="check.svg" /></td>
-              </tr>
-              <tr>
-                <th class="feature">Redirect to URL</th>
-                <td><nuxt-img src="check.svg" /></td>
-                <td><nuxt-img src="check.svg" /></td>
-                <td><nuxt-img src="check.svg" /></td>
-              </tr>
-              <tr>
-                <th class="feature">Hidden Fields</th>
-                <td><nuxt-img src="check.svg" /></td>
-                <td><nuxt-img src="check.svg" /></td>
-                <td><nuxt-img src="check.svg" /></td>
-              </tr>
-              <tr>
-                <th class="feature">Signatures</th>
-                <td>10</td>
-                <td>250</td>
-                <td>2,500</td>
-              </tr>
-              <tr>
-                <th class="feature">SMTP Integration</th>
-                <td><nuxt-img src="check.svg" /></td>
-                <td><nuxt-img src="check.svg" /></td>
-                <td><nuxt-img src="check.svg" /></td>
-              </tr>
-              <tr>
-                <th class="feature">Zapier Integrations</th>
-                <td><nuxt-img src="check.svg" /></td>
-                <td><nuxt-img src="check.svg" /></td>
-                <td><nuxt-img src="check.svg" /></td>
-              </tr>
-              <tr>
-                <th class="feature">Google Sheets Integration</th>
-                <td>1</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
-              </tr>
-              <tr>
-                <th class="feature">Accept Payments (Commission)</th>
-                <td>1%</td>
-                <td>0%</td>
-                <td>0%</td>
-              </tr>
-              <tr>
-                <th class="feature">Webhooks</th>
-                <td>1</td>
-                <td>50</td>
-                <td>Unlimited</td>
-              </tr>
-              <tr>
-                <th class="feature">Analytics</th>
-                <td>Basic</td>
-                <td>Advanced</td>
-                <td>Advanced</td>
-              </tr>
-              <tr>
-                <th class="feature">Question Branching & Logic Jumps</th>
-                <td><nuxt-img src="check.svg" /></td>
-                <td><nuxt-img src="check.svg" /></td>
-                <td><nuxt-img src="check.svg" /></td>
-              </tr>
-              <tr>
-                <th class="feature">Brandkit</th>
-                <td>-</td>
-                <td><nuxt-img src="check.svg" /></td>
-                <td><nuxt-img src="check.svg" /></td>
-              </tr>
-              <tr>
-                <th class="feature">Custom Meta Information</th>
-                <td>-</td>
-                <td><nuxt-img src="check.svg" /></td>
-                <td><nuxt-img src="check.svg" /></td>
-              </tr>
-              <tr>
-                <th class="feature">Scripts (GTM, GA, Pixel)</th>
-                <td>-</td>
-                <td><nuxt-img src="check.svg" /></td>
-                <td><nuxt-img src="check.svg" /></td>
-              </tr>
-              <tr>
-                <th class="feature">API Access</th>
-                <td>-</td>
-                <td>-</td>
-                <td><nuxt-img src="check.svg" /></td>
-              </tr>
-              <tr>
-                <th class="feature">Custom Domain</th>
-                <td>-</td>
-                <td>-</td>
-                <td><nuxt-img src="check.svg" /></td>
+              <tr
+                v-for="feature in comparisonTableFeatures"
+                :key="feature.name"
+              >
+                <th class="feature">{{ feature.name }}</th>
+                <td>
+                  <template v-if="feature.free === 'Yes'">
+                    <nuxt-img src="check-green.svg" />
+                  </template>
+                  <template v-else>
+                    {{ feature.free }}
+                  </template>
+                </td>
+                <td>
+                  <template v-if="feature.pro === 'Yes'">
+                    <nuxt-img src="check-green.svg" />
+                  </template>
+                  <template v-else>
+                    {{ feature.pro }}
+                  </template>
+                </td>
+                <td>
+                  <template v-if="feature.business === 'Yes'">
+                    <nuxt-img src="check-green.svg" />
+                  </template>
+                  <template v-else>
+                    {{ feature.business }}
+                  </template>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -219,6 +111,7 @@ import {
   freeYearly,
   personalYearly,
   businessYearly,
+  comparisonTableFeatures,
 } from '../constants/plan'
 
 // MetaTags
@@ -235,6 +128,7 @@ export default {
       freeYearly,
       personalYearly,
       businessYearly,
+      comparisonTableFeatures,
     }
   },
   computed: {
