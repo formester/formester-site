@@ -15,7 +15,7 @@ keywords: Webflow forms, Formester, online forms, Webflow design, user
 author: Siddharth Sharma
 authorProfile: www.linkedin.com/in/sidsh0502
 createdAt: 2023-11-16T01:40:22.721Z
-coverImg: /img/how-to-add-forms-to-webflow.png
+coverImg: /img/how-to-add-forms-to-webflow-1-.png
 coverImgAlt: How to Add a Form to Webflow Illustration
 featured: false
 published: true
