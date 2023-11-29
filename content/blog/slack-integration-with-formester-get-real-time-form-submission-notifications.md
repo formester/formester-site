@@ -16,7 +16,7 @@ createdAt: 2023-11-28T13:03:50.444Z
 coverImg: /img/slack-integration-with-formester_-get-real-time-form-submission-notifications.png
 coverImgAlt: connect formester on your slack to get submission notification
 featured: false
-published: false
+published: true
 ---
 Staying connected in real-time is an important attribute of digital communication and collaboration. We often find ourselves looking for efficient ways to streamline the workflow, in a pursuit of higher productivity.\
 \
