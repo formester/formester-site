@@ -56,11 +56,11 @@ Owned by a leading market research company, SurveyMonkey Rewards stands out with
 
 ## **4. [Surveys On The Go](https://surveysonthego.com/)**
 
-Get paid for sharing opinions on various topics, including media, sports, technology, and more. Efficiently filter surveys by completing the demographic survey upfront. This ensures a targeted approach, saving you time and optimizing your earning potential.
+Get paid for sharing opinions on various topics, including media, sports, technology, and more. Efficiently filter surveys by completing the demographic survey upfront. This ensures a targeted approach, saving you time and optimising your earning potential.
 
 **Payment methods:** PayPal.
 
-![](/img/surveys_on_the_go_screenshot.png)
+![Surveys On The Go Mobile App Screenshot - Android Play Store](/img/surveys_on_the_go_screenshot.png "Surveys On The Go App - Android Play Store")
 
 ## **5. [Swagbucks](https://www.swagbucks.com/)**
 
@@ -76,11 +76,11 @@ InboxDollars provides a variety of tasks for earning rewards, including surveys,
 
 **Payment methods:** Gift cards, prepaid Visa card, or Tango card.
 
-![](/img/inboxdollars_screenshot.png)
+![InboxDollars Mobile App Screenshot - Android Play Store](/img/inboxdollars_screenshot.png "InboxDollars App - Android Play Store")
 
 ## **7. [Google Opinion Rewards](https://surveys.google.com/google-opinion-rewards/)**
 
-Stand out with Google Opinion Rewards by earning rewards not only for surveys but also for sharing information about your television usage. Cash out at just $2, offering a seamless payout process for your efforts. The survey topics include everything from opinion polls, to hotel reviews, to merchant satisfaction surveys. 
+Stand out with Google Opinion Rewards App by earning rewards for surveys. Cash out at just $2, offering a seamless payout process for your efforts on both Android and Ios Devices. The survey topics include everything from opinion polls, to hotel reviews, to merchant satisfaction surveys. 
 
 **Payment methods:** Google Play credit or PayPal cash.
 
@@ -92,7 +92,7 @@ Versatile as both a mobile app and a browser extension, Qmee provides deals whil
 
 **Payment methods:** PayPal.
 
-![](/img/qmee_screenshot.png)
+![Qmee Mobile App Screenshot - Android Play Store](/img/qmee_screenshot.png "Qmee App - Android Play Store")
 
 ## **9. [QuickThoughts](https://www.quickthoughtsapp.com/)**
 
@@ -100,7 +100,7 @@ Although not as established as some giants, QuickThoughts offers decent earnings
 
 **Payment methods:** Amazon and iTunes gift cards.
 
-![Mobile App Screenshot - Apple App Store](/img/quickthoughts_screenshot.png "App - Apple App Store")
+![QuickThoughts Mobile App Screenshot - Apple App Store](/img/quickthoughts_screenshot.png "QuickThoughts App - Apple App Store")
 
 ## **10. [Zap Surveys](https://www.zapsurveys.com/)**
 
@@ -108,7 +108,7 @@ Earn quickly with Zap Surveys, ranging from 30 cents to $100 per survey. While s
 
 **Payment methods:** PayPal or Amazon gift card.
 
-![](/img/zap_surveys_screenshot.png)
+![Zap Surveys Mobile App Screenshot - Android Play Store](/img/zap_surveys_screenshot.png "Zap Surveys App - Android Play Store")
 
 ## **11. [Ipsos I-Say](https://www.ipsosisay.com/en-gb)**
 
@@ -116,7 +116,7 @@ Receive instant survey notifications with Ipsos I-Say, allowing you to claim and
 
 **Payment methods:** Gift cards, prepaid Visa card, or PayPal.
 
-![Mobile App Screenshot - Apple App Store](/img/ipsos_isay_screenshot.png "App - Apple App Store")
+![Ipsos I-Say Mobile App Screenshot - Apple App Store](/img/ipsos_isay_screenshot.png "Ipsos I-Say App - Apple App Store")
 
 ## **12. [IPoll](https://www.ipoll.com/)**
 
@@ -124,7 +124,7 @@ Share your opinions about places and services with the iPoll app, earning points
 
 **Payment methods:** PayPal, gift cards, and airline credits.
 
-![](/img/ipoll_screenshot.png)
+![iPoll Mobile App Screenshot - Android Play Store](/img/ipoll_screenshot.png "iPoll App - Android Play Store")
 
 ## **13. [Toluna](https://www.toluna.com/)**
 
@@ -132,7 +132,7 @@ Toluna rewards you for sharing opinions on various topics, with points expiring 
 
 **Payment methods:** PayPal and bank transfers.
 
-![Mobile App Screenshot - Apple App Store](/img/toluna_screenshot.png "App - Apple App Store")
+![Toluna Mobile App Screenshot - Apple App Store](/img/toluna_screenshot.png "Toluna App - Apple App Store")
 
 ## **14. [Daily Scoop (MyPoints)](https://www.mypoints.com/landingPage?clickid=TS0T7k3GRxyPWrHx9gT46WqWUkFXcIzBq1A%3AyY0&irgwc=1&cxid=434965&aff_sid=&utm_source=IR_MP&utm_medium=affiliate&utm_campaign=970&utm_content=&utm_term=434965&cmp=970)**
 
@@ -140,7 +140,7 @@ Daily Scoop, part of MyPoints, offers payment for watching videos, contributing 
 
 **Payment methods:** PayPal, Amazon gift cards, and airline miles.
 
-![](/img/my_points_screenshot.png)
+![Daily Scoop Mobile App Screenshot - Android Play Store](/img/my_points_screenshot.png "Daily Scoop App - Android Play Store")
 
 ## **15. [YouGov](https://account.yougov.com/in-en/join/main)**
 
@@ -148,7 +148,7 @@ YouGov, a public opinion and data company, rewards you for short surveys on dive
 
 **Payment methods:** Prepaid Visa cards and Gift Cards.
 
-![Mobile App Screenshot - Apple App Store](/img/yougov_screenshot.png "App - Apple App Store")
+![YouGov Mobile App Screenshot - Apple App Store](/img/yougov_screenshot.png "YouGov App - Apple App Store")
 
 ## **16. [LifePoints](https://www.lifepointspanel.com/en-in)**
 
@@ -156,7 +156,7 @@ LifePoints creates a bridge between users and brands, facilitating the exchange 
 
 **Payment Methods:** Paypal, Gift Cards and Donations.
 
-![](/img/lifepoints_screenshot.png)
+![LifePoints Mobile App Screenshot - Android Play Store](/img/lifepoints_screenshot.png "LifePoints App - Android Play Store")
 
 ## **17. [MultiPolls](https://play.google.com/store/apps/details?id=ai.bohemian.multipolls&hl=en&gl=US)**
 
@@ -164,7 +164,7 @@ MultiPolls is a web-based platform, allows users to create and share polls. The 
 
 **Payment Methods:** Paypal.
 
-![Mobile App Screenshot - Apple App Store](/img/multipolls_screenshot.png "App - Apple App Store")
+![MultiPolls Mobile App Screenshot - Apple App Store](/img/multipolls_screenshot.png "MultiPolls App - Apple App Store")
 
 ## P﻿aid Survey Apps  for Quick Money in 2023
 
