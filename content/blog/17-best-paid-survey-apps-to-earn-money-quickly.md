@@ -36,11 +36,15 @@ Survey Junkie leads the pack with its remarkably low minimum payout of $5, coupl
 
 **Payment methods:** Earn points for cash via PayPal and gift cards.
 
+![Survey Junkie Mobile App Screenshot - Apple App Store](/img/surveyjunkie_screenshot.png "Survey Junkie App - Apple App Store")
+
 ## **2. [National Consumer Panel](https://join.ncponline.com/home?cid=7013m000001K75j&vcd=1&vpub=null&vsid=2025)**
 
 As a panel member, access the NCPMobile app to scan barcodes of purchased items. Ideal for grocery cashback, this app offers rewards for providing shopping information, including manual entries for non-barcoded items. Engage in surveys and special studies for additional rewards.
 
 **Payment methods:** Gifts and sweepstakes entries.
+
+![NCP Mobile App Screenshot - Android Play Store](/img/ncp_screenshot.png "NCP App - Android Play Store")
 
 ## **3. [SurveyMonkey Rewards](https://play.google.com/store/apps/details?id=com.surveymonkey.rewards&hl=en&gl=US)**
 
@@ -48,11 +52,15 @@ Owned by a leading market research company, SurveyMonkey Rewards stands out with
 
 **Payment methods:** Amazon gift card or charity donation.
 
+![SurveyMonkey Rewards Mobile App Screenshot - Apple App Store](/img/surveymonkey_rewards_screenshot.png "SurveyMonkey Rewards App - Apple App Store")
+
 ## **4. [Surveys On The Go](https://surveysonthego.com/)**
 
 Get paid for sharing opinions on various topics, including media, sports, technology, and more. Efficiently filter surveys by completing the demographic survey upfront. This ensures a targeted approach, saving you time and optimizing your earning potential.
 
 **Payment methods:** PayPal.
+
+![](/img/surveys_on_the_go_screenshot.png)
 
 ## **5. [Swagbucks](https://www.swagbucks.com/)**
 
@@ -60,17 +68,23 @@ Offering diverse earning opportunities, Swagbucks allows you to fill out surveys
 
 **Payment methods:** Gift cards (Walmart, iTunes, Amazon, etc.) or PayPal cash.
 
+![Swagbucks Mobile App Screenshot - Apple App Store](/img/swagbucks_screenshot.png "Swagbucks App - Apple App Store")
+
 ## **6. [InboxDollars](https://www.inboxdollars.com/)**
 
 InboxDollars provides a variety of tasks for earning rewards, including surveys, watching videos, playing games, and reading emails. Boasting a user-friendly interface, this app has paid out over $59 million since its inception, making it a reputable choice.
 
 **Payment methods:** Gift cards, prepaid Visa card, or Tango card.
 
+![](/img/inboxdollars_screenshot.png)
+
 ## **7. [Google Opinion Rewards](https://surveys.google.com/google-opinion-rewards/)**
 
-Stand out with Google Opinion Rewards by earning rewards not only for surveys but also for sharing information about your television usage. Cash out at just $2, offering a seamless payout process for your efforts.
+Stand out with Google Opinion Rewards by earning rewards not only for surveys but also for sharing information about your television usage. Cash out at just $2, offering a seamless payout process for your efforts. The survey topics include everything from opinion polls, to hotel reviews, to merchant satisfaction surveys. 
 
 **Payment methods:** Google Play credit or PayPal cash.
+
+![Google Opinion Rewards Mobile App Screenshot - Apple App Store](/img/google_opinion_rewards_screenshot.png "Google Opinion Rewards App - Apple App Store")
 
 ## **8. [Qmee](https://www.qmee.com/en-gb)**
 
@@ -78,11 +92,15 @@ Versatile as both a mobile app and a browser extension, Qmee provides deals whil
 
 **Payment methods:** PayPal.
 
+![](/img/qmee_screenshot.png)
+
 ## **9. [QuickThoughts](https://www.quickthoughtsapp.com/)**
 
 Although not as established as some giants, QuickThoughts offers decent earnings through surveys and location-dependent activities. Take note of the $10 minimum before redeeming for gift cards.
 
 **Payment methods:** Amazon and iTunes gift cards.
+
+![Mobile App Screenshot - Apple App Store](/img/quickthoughts_screenshot.png "App - Apple App Store")
 
 ## **10. [Zap Surveys](https://www.zapsurveys.com/)**
 
@@ -90,11 +108,15 @@ Earn quickly with Zap Surveys, ranging from 30 cents to $100 per survey. While s
 
 **Payment methods:** PayPal or Amazon gift card.
 
+![](/img/zap_surveys_screenshot.png)
+
 ## **11. [Ipsos I-Say](https://www.ipsosisay.com/en-gb)**
 
 Receive instant survey notifications with Ipsos I-Say, allowing you to claim and complete surveys efficiently. While lacking additional earning methods, the app ensures timely rewards.
 
 **Payment methods:** Gift cards, prepaid Visa card, or PayPal.
+
+![Mobile App Screenshot - Apple App Store](/img/ipsos_isay_screenshot.png "App - Apple App Store")
 
 ## **12. [IPoll](https://www.ipoll.com/)**
 
@@ -102,11 +124,15 @@ Share your opinions about places and services with the iPoll app, earning points
 
 **Payment methods:** PayPal, gift cards, and airline credits.
 
+![](/img/ipoll_screenshot.png)
+
 ## **13. [Toluna](https://www.toluna.com/)**
 
 Toluna rewards you for sharing opinions on various topics, with points expiring after 12 months. Participate in the Toluna Millionaire Sweepstakes for a chance to win substantial points daily.
 
 **Payment methods:** PayPal and bank transfers.
+
+![Mobile App Screenshot - Apple App Store](/img/toluna_screenshot.png "App - Apple App Store")
 
 ## **14. [Daily Scoop (MyPoints)](https://www.mypoints.com/landingPage?clickid=TS0T7k3GRxyPWrHx9gT46WqWUkFXcIzBq1A%3AyY0&irgwc=1&cxid=434965&aff_sid=&utm_source=IR_MP&utm_medium=affiliate&utm_campaign=970&utm_content=&utm_term=434965&cmp=970)**
 
@@ -114,11 +140,15 @@ Daily Scoop, part of MyPoints, offers payment for watching videos, contributing 
 
 **Payment methods:** PayPal, Amazon gift cards, and airline miles.
 
+![](/img/my_points_screenshot.png)
+
 ## **15. [YouGov](https://account.yougov.com/in-en/join/main)**
 
 YouGov, a public opinion and data company, rewards you for short surveys on diverse topics. Your insights may be featured in mainstream media, offering a unique way to make a difference.
 
 **Payment methods:** Prepaid Visa cards and Gift Cards.
+
+![Mobile App Screenshot - Apple App Store](/img/yougov_screenshot.png "App - Apple App Store")
 
 ## **16. [LifePoints](https://www.lifepointspanel.com/en-in)**
 
@@ -126,11 +156,15 @@ LifePoints creates a bridge between users and brands, facilitating the exchange 
 
 **Payment Methods:** Paypal, Gift Cards and Donations.
 
+![](/img/lifepoints_screenshot.png)
+
 ## **17. [MultiPolls](https://play.google.com/store/apps/details?id=ai.bohemian.multipolls&hl=en&gl=US)**
 
 MultiPolls is a web-based platform, allows users to create and share polls. The polls can be shared with friends and followers. Depending on the number of polls you participate in, the rewards range anywhere from $0.10 to $1.00 per poll.
 
 **Payment Methods:** Paypal.
+
+![Mobile App Screenshot - Apple App Store](/img/multipolls_screenshot.png "App - Apple App Store")
 
 ## P﻿aid Survey Apps  for Quick Money in 2023
 
