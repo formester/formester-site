@@ -90,12 +90,14 @@ export default {
   top: 40%;
   transform: translateY(-50%);
   left: 5%;
+  opacity: 1;
 }
 
 .hero-image.right {
   top: 40%;
   transform: translateY(-50%);
   right: 5%;
+  opacity: 1;
 }
 
 .formester {
