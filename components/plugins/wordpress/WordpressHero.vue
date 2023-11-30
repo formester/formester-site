@@ -8,14 +8,14 @@
       <h1 class="hero__heading">
         <span class="d-block">
           Embeding
-          <nuxt-img src="/logo.svg" alt="Formester" class="ms-2 formester" />
+          <nuxt-img src="/logo.svg" alt="Formester" class="ms-2 formester-logo" />
         </span>
         <span class="d-block">
           on
           <nuxt-img
             src="/plugins/wordpress-logo.svg"
             alt="Wordpress"
-            class="ms-2 wordpress"
+            class="ms-2 wordpress-logo"
           />
         </span>
       </h1>
@@ -35,7 +35,7 @@
           src="/plugins/wordpress-hero-left.svg"
           alt="Hero-Image"
           class="img-fluid position-absolute hero-image left"
-          v-if="showImage"
+          v-show="showImage"
         />
       </transition>
       <transition name="slide-in-right">
@@ -43,7 +43,7 @@
           src="/plugins/wordpress-hero-right.svg"
           alt="Hero-Image"
           class="img-fluid position-absolute hero-image right"
-          v-if="showImage"
+          v-show="showImage"
         />
       </transition>
     </div>
@@ -100,7 +100,7 @@ export default {
   opacity: 1;
 }
 
-.formester {
+.formester-logo {
   height: 40px;
 }
 
@@ -170,11 +170,11 @@ export default {
     line-height: 52px;
   }
 
-  .formester {
+  .formester-logo {
     height: 36px;
   }
 
-  .wordpress {
+  .wordpress-logo {
     height: 44px;
   }
 }

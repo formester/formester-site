@@ -23,14 +23,28 @@
           <p>Steps to Embed a Formester Form:</p>
           <ol>
             <li>
-              Install the plugin from WordPress.org here or from WordPress.com
+              Install the plugin from
+              <a href="wordpress.org" class="text-decoration-underline"
+                >wordpress.org</a
+              >
+              here or from
+              <a href="Wordpress.com" class="text-decoration-underline"
+                >wordpress.com</a
+              >
               here. Log into your WordPress account and follow the installation
-              instructions for WordPress.org users.
+              instructions for
+              <a href="wordpress.org" class="text-decoration-underline"
+                >wordpress.org</a
+              >
+              users.
             </li>
             <li class="mt-4">
               In WordPress, when adding a block, you'll notice the Formester
               option:
-              <nuxt-img src="/plugins/wordpress-block.svg" class="my-3" />
+              <nuxt-img
+                src="/plugins/wordpress-block.svg"
+                class="my-3 img-fluid"
+              />
               <span class="d-block">
                 Click this to launch the plugin and add a Formester form to your
                 page.
@@ -39,7 +53,10 @@
             <li class="mt-4">
               Paste your form's share URL in the field (make sure the form is
               published).
-              <nuxt-img src="/plugins/wordpress-paste-url.svg" class="my-3" />
+              <nuxt-img
+                src="/plugins/wordpress-paste-url.svg"
+                class="my-3 img-fluid"
+              />
               <span class="d-block"
                 >Formester plugin doesn’t collect, store, or share any personal
                 information of its users.</span
