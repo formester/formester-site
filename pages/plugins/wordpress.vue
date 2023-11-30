@@ -40,6 +40,10 @@
               Paste your form's share URL in the field (make sure the form is
               published).
               <nuxt-img src="/plugins/wordpress-paste-url.svg" class="my-3" />
+              <span class="d-block"
+                >Formester plugin doesn’t collect, store, or share any personal
+                information of its users.</span
+              >
             </li>
           </ol>
         </div>

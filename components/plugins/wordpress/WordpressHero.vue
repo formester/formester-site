@@ -1,47 +1,51 @@
 <template>
-  <div>
+  <div
+    class="hero d-flex justify-content-center align-items-center position-relative mx-auto"
+  >
     <div
-      class="hero d-flex justify-content-center align-items-center position-relative mx-auto"
+      class="hero__content d-flex flex-column align-items-center my-auto text-center px-3"
     >
-      <div
-        class="hero__content d-flex flex-column align-items-center my-auto text-center px-3"
+      <h1 class="hero__heading">
+        <span class="d-block">
+          Embeding
+          <nuxt-img src="/logo.svg" alt="Formester" class="ms-2 formester" />
+        </span>
+        <span class="d-block">
+          on
+          <nuxt-img
+            src="/plugins/wordpress-logo.svg"
+            alt="Wordpress"
+            class="ms-2 wordpress"
+          />
+        </span>
+      </h1>
+      <p class="mt-3">
+        Utilize our intuitive WordPress plugin to integrate Formester forms into
+        your WordPress pages effortlessly.
+      </p>
+      <a
+        href="https://app.formester.com/users/sign_up"
+        class="btn button hero__button mt-4 mb-4 mb-lg-0"
+        >Get Started for Free</a
       >
-        <h1 class="hero__heading">
-          <span class="d-block">
-            Embeding
-            <nuxt-img src="/logo.svg" alt="Formester" class="ms-2 formester" />
-          </span>
-          <span class="d-block">
-            on
-            <nuxt-img
-              src="/plugins/wordpress-logo.svg"
-              alt="Wordpress"
-              class="ms-2 wordpress"
-            />
-          </span>
-        </h1>
-        <p class="mt-3">
-          Utilize our intuitive WordPress plugin to integrate Formester forms
-          into your WordPress pages effortlessly.
-        </p>
-        <a
-          href="https://app.formester.com/users/sign_up"
-          class="btn button hero__button mt-4 mb-4 mb-lg-0"
-          >Get Started for Free</a
-        >
-      </div>
-      <div>
+    </div>
+    <div>
+      <transition name="slide-in-left">
         <nuxt-img
           src="/plugins/wordpress-hero-left.svg"
           alt="Hero-Image"
           class="img-fluid position-absolute hero-image left"
+          v-if="showImage"
         />
+      </transition>
+      <transition name="slide-in-right">
         <nuxt-img
           src="/plugins/wordpress-hero-right.svg"
           alt="Hero-Image"
           class="img-fluid position-absolute hero-image right"
+          v-if="showImage"
         />
-      </div>
+      </transition>
     </div>
   </div>
 </template>
@@ -50,6 +54,14 @@ import TrustSeals from '@/components/home/TrustSeals.vue'
 export default {
   components: {
     TrustSeals,
+  },
+  data() {
+    return {
+      showImage: false,
+    }
+  },
+  mounted() {
+    this.showImage = true
   },
 }
 </script>
@@ -88,6 +100,45 @@ export default {
 
 .formester {
   height: 40px;
+}
+
+/* animation */
+.slide-in-left-enter-active {
+  animation: slideInFadeInLeft 0.5s ease-out forwards;
+}
+.slide-in-left-enter {
+  transform: translateX(-100%) translateY(-50%);
+  opacity: 0;
+}
+
+@keyframes slideInFadeInLeft {
+  from {
+    transform: translateX(-100%) translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) translateY(-50%);
+    opacity: 1;
+  }
+}
+
+.slide-in-right-enter-active {
+  animation: slideInFadeInRight 0.5s ease-out forwards;
+}
+.slide-in-right-enter {
+  transform: translateX(100%) translateY(-50%);
+  opacity: 0;
+}
+
+@keyframes slideInFadeInRight {
+  from {
+    transform: translateX(100%) translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) translateY(-50%);
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 1100px) {
