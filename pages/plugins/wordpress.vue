@@ -17,10 +17,6 @@
               Directly paste the form's URL, eliminating the need to handle HTML
               embed codes.
             </li>
-            <li>
-              Access the Formester builder via the plugin to select, create, or
-              modify forms.
-            </li>
           </ul>
         </div>
         <div>
