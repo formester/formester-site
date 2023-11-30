@@ -2,7 +2,9 @@
   <div>
     <WordpressHero />
     <div class="bg__secondary py-5">
-      <div class="section__container d-flex flex-column p-5 gap-32 mx-auto">
+      <div
+        class="section__container d-flex flex-column p-4 p-sm-5 gap-32 mx-auto"
+      >
         <h2 class="section__heading">
           Embedding Your Formester Form Using the Formester WordPress Plugin
         </h2>
@@ -98,5 +100,12 @@ export default {
 
 .bg__secondary {
   background-color: #f5f5f5;
+}
+
+@media screen and (max-width: 768px) {
+  .section__heading {
+    font-size: 28px;
+    line-height: 40px;
+  }
 }
 </style>
