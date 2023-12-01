@@ -1,6 +1,6 @@
 export const free = {
   name: 'Free',
-  price: 0,
+  price: '$0',
   type: 'Monthly',
   description:
     'For individuals who need to quickly collect data through forms.',
@@ -31,7 +31,7 @@ export const free = {
 
 export const personalMonthly = {
   name: 'Personal',
-  price: 13,
+  price: '$13',
   type: 'Monthly',
   description:
     'For individuals who need to create beautiful, branded forms on a regular basis.',
@@ -58,7 +58,7 @@ export const personalMonthly = {
 
 export const businessMonthly = {
   name: 'Business',
-  price: 49,
+  price: '$49',
   type: 'Monthly',
   description:
     'For organizations and agencies to create unlimited forms that are fully customisable to handle any complexity.',
@@ -77,7 +77,7 @@ export const businessMonthly = {
 
 export const freeYearly = {
   name: 'Free',
-  price: 0,
+  price: '$0',
   type: 'Yearly',
   description:
     'For individuals who need to quickly collect data through forms.',
@@ -108,7 +108,7 @@ export const freeYearly = {
 
 export const personalYearly = {
   name: 'Personal',
-  price: 7.2,
+  price: '$12',
   prevPrice: '$12',
   type: 'Yearly',
   description:
@@ -136,7 +136,7 @@ export const personalYearly = {
 
 export const businessYearly = {
   name: 'Business',
-  price: 27,
+  price: '$45',
   prevPrice: '$45',
   type: 'Yearly',
   description:

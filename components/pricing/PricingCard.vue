@@ -7,12 +7,11 @@
           {{ plan.description }}
         </p>
         <div class="d-flex align-items-baseline">
-          <span
-            v-if="plan.type === 'Yearly'"
-            class="pricing__prev__amount me-2"
-            >{{ plan.prevPrice }}</span
-          >
-          <span class="pricing__amount">${{ plan.price }}</span>
+          <span v-if="false" class="pricing__striked me-2">
+            {{ plan.prevPrice }}
+          </span>
+
+          <span class="pricing__amount">{{ plan.price }}</span>
           <span class="pricing__timeline">/mo</span>
         </div>
         <div class="billing-timeline mb-4">
@@ -55,11 +54,11 @@
 export default {
   props: {
     plan: Object,
-    isHighlighted: Boolean,
+    highlighted: Boolean,
   },
   data() {
     return {
-      highlight: this.isHighlighted,
+      highlight: this.highlighted,
     }
   },
   computed: {
@@ -139,7 +138,7 @@ export default {
   text-overflow: ellipsis;
 }
 
-.pricing__prev__amount {
+.pricing__striked {
   font-size: 28px;
   color: #a3a3a3;
   height: 28px;
@@ -147,7 +146,7 @@ export default {
   display: inline-block;
 }
 
-.pricing__prev__amount::after {
+.pricing__striked::after {
   content: '';
   position: absolute;
   left: 0;
