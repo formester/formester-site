@@ -63,13 +63,14 @@ export default {
   },
   computed: {
     billingTimeline() {
-      if (this.plan.price === 0) return ''
+      if (this.plan.price === '$0') return ''
+
       return this.plan.type === 'Yearly' ? 'yearly' : 'monthly'
     },
     planTextButton() {
       return this.billingTimeline
         ? `Get ${this.plan.name} ${this.billingTimeline} Plan`
-        : 'Try for free forever'
+        : 'Free forever'
     },
     keyFeaturesHeading() {
       if (this.plan.name === 'Free') {
