@@ -10,11 +10,24 @@
       >
         <div class="mt-5">
           <span class="step__heading">Step 1</span>
-          <h3 class="step__section-heading">Install the Formester Plugin</h3>
+          <h3 class="step__section-heading">Install Formester Plugin</h3>
           <p class="step__section-description">
-            Navigate to WordPress.org here or WordPress.com here to install the
-            plugin. Log into your WordPress account. Follow the installation
-            instructions for WordPress.org users.
+            Visit
+            <a
+              href="WordPress.org"
+              target="_blank"
+              class="text-decoration-underline"
+              >WordPress.org</a
+            >
+            or
+            <a
+              href="WordPress.com"
+              target="_blank"
+              class="text-decoration-underline"
+              >WordPress.com</a
+            >
+            to install the Formester plugin. Log in to your WordPress account
+            and activate the plugin after installation.
           </p>
         </div>
         <div class="d-flex flex-column flex-lg-row">
@@ -32,12 +45,12 @@
         <div class="mt-5">
           <span class="step__heading">Step 2</span>
           <h3 class="step__section-heading">
-            Add a Formester Block in WordPress
+            Add Formester Block in WordPress
           </h3>
           <p class="step__section-description">
-            In your WordPress editor, when adding a new block, look for the
-            Formester option. Click on the Formester option to launch the
-            plugin. This allows you to add a Formester form to your page.
+            Locate and select the Formester Block in your WordPress editor.
+            Click on it to launch the plugin and easily integrate a Formester
+            form into your page.
           </p>
         </div>
         <div class="d-flex flex-column flex-lg-row">
@@ -54,12 +67,13 @@
       >
         <div class="mt-5">
           <span class="step__heading">Step 3</span>
-          <h3 class="step__section-heading">Embed Your Formester Form</h3>
+          <h3 class="step__section-heading">
+            Embed Formester Form in Wordpress
+          </h3>
           <p class="step__section-description">
-            Paste your form's share URL into the provided field. Ensure that
-            your form is already published. <br />
-            Note: The Formester plugin does not collect, store, or share any
-            personal information of its users.
+            You can also embed a form by pasting your form's shared URL into
+            WordPress editor. Ensure that your contact form is published before
+            embedding in the WordPress site.
           </p>
         </div>
         <div class="d-flex flex-column flex-lg-row">
