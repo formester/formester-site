@@ -53,7 +53,7 @@
       </div>
     </div>
     <WordpressSteps />
-    <KeyBenefits />
+    <KeyBenefits heading="Features of Formester" />
     <Faqs :faqs="faqs" />
   </div>
 </template>
