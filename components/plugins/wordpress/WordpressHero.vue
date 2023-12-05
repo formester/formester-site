@@ -5,28 +5,15 @@
     <div
       class="hero__content d-flex flex-column align-items-center my-auto text-center px-3"
     >
-      <h1 class="hero__heading">
-        <span class="d-block">
-          Embeding
-          <nuxt-img src="/logo.svg" alt="Formester" class="ms-2 formester-logo" />
-        </span>
-        <span class="d-block">
-          on
-          <nuxt-img
-            src="/wordpress/wordpress-logo.svg"
-            alt="Wordpress"
-            class="ms-2 wordpress-logo"
-          />
-        </span>
-      </h1>
+      <h1 class="hero__heading">Formester and WordPress Integration</h1>
       <p class="mt-3">
-        Utilize our intuitive WordPress plugin to integrate Formester forms into
-        your WordPress pages effortlessly.
+        Embed beautiful forms on your WordPress Website or Blog in minutes with
+        Formester WordPress Plugin
       </p>
       <a
         href="https://app.formester.com/users/sign_up"
         class="btn button hero__button mt-4 mb-4 mb-lg-0"
-        >Get Started for Free</a
+        >Sign Up For Free</a
       >
     </div>
     <div>
@@ -37,7 +24,7 @@
           class="img-fluid position-absolute hero-image left"
           v-show="showImage"
         />
-      </transition> 
+      </transition>
       <transition name="slide-in-right">
         <nuxt-img
           src="/wordpress/wordpress-hero-right.svg"
