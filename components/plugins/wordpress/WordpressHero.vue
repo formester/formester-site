@@ -13,7 +13,7 @@
         <span class="d-block">
           on
           <nuxt-img
-            src="/plugins/wordpress-logo.svg"
+            src="/wordpress/wordpress-logo.svg"
             alt="Wordpress"
             class="ms-2 wordpress-logo"
           />
@@ -32,15 +32,15 @@
     <div>
       <transition name="slide-in-left">
         <nuxt-img
-          src="/plugins/wordpress-hero-left.svg"
+          src="/wordpress/wordpress-hero-left.svg"
           alt="Hero-Image"
           class="img-fluid position-absolute hero-image left"
           v-show="showImage"
         />
-      </transition>
+      </transition> 
       <transition name="slide-in-right">
         <nuxt-img
-          src="/plugins/wordpress-hero-right.svg"
+          src="/wordpress/wordpress-hero-right.svg"
           alt="Hero-Image"
           class="img-fluid position-absolute hero-image right"
           v-show="showImage"
