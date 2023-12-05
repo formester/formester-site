@@ -1,81 +1,104 @@
 <template>
   <div>
     <WordpressHero />
-    <div class="bg__secondary py-5">
-      <div
-        class="section__container d-flex flex-column p-4 p-sm-5 gap-32 mx-auto"
-      >
-        <h2 class="section__heading">
-          Embedding Your Formester Form Using the Formester WordPress Plugin
-        </h2>
-        <div>
-          <p>
-            Utilize the Formester WordPress plugin to seamlessly integrate an
-            existing form into your WordPress site. This plugin simplifies the
-            process by offering two embedding methods:
-          </p>
-          <ul>
-            <li>
-              Directly paste the form's URL, eliminating the need to handle HTML
-              embed codes.
-            </li>
-          </ul>
+    <div class="container my-5">
+      <div class="row py-5">
+        <div class="col-lg-5 d-flex align-items-center justify-content-center">
+          <nuxt-img
+            src="/wordpress/formester-plus-wordpress.svg"
+            class="img-fluid"
+          />
         </div>
-        <div>
-          <p>Steps to Embed a Formester Form:</p>
-          <ol>
-            <li>
-              Install the plugin from
-              <a href="wordpress.org" class="text-decoration-underline"
-                >wordpress.org</a
-              >
-              here or from
-              <a href="Wordpress.com" class="text-decoration-underline"
-                >wordpress.com</a
-              >
-              here. Log into your WordPress account and follow the installation
-              instructions for
-              <a href="wordpress.org" class="text-decoration-underline"
-                >wordpress.org</a
-              >
-              users.
-            </li>
-            <li class="mt-4">
-              In WordPress, when adding a block, you'll notice the Formester
-              option:
-              <nuxt-img
-                src="/plugins/wordpress-block.svg"
-                class="my-3 img-fluid"
-              />
-              <span class="d-block">
-                Click this to launch the plugin and add a Formester form to your
-                page.
-              </span>
-            </li>
-            <li class="mt-4">
-              Paste your form's share URL in the field (make sure the form is
-              published).
-              <nuxt-img
-                src="/plugins/wordpress-paste-url.svg"
-                class="my-3 img-fluid"
-              />
-              <span class="d-block"
-                >Formester plugin doesn’t collect, store, or share any personal
-                information of its users.</span
-              >
-            </li>
-          </ol>
+        <div class="col-lg-7 mt-3 mt-lg-0">
+          <h2 class="section__heading mb-4">Formester Forms in WordPress</h2>
+          <p>
+            Use Formester’s versatile template library to add any form to your
+            WordPress blog or site. Use our WordPress plugin to embed a Contact
+            Form, Feedback Form or Lead Generation Form in the WordPress site
+            and automate data collection.
+          </p>
+          <p>
+            Create a new form on Formester or customise any of our pre-designed
+            templates using the intuitive drag and drop form builder. Our
+            WordPress plugin enables you to easily add the web form to a
+            WordPress powered website without any need of coding skills or
+            database backend.
+          </p>
+        </div>
+      </div>
+      <div class="row py-5">
+        <div
+          class="col-lg-5 order-lg-last d-flex align-items-center justify-content-center"
+        >
+          <nuxt-img
+            src="/wordpress/wordpress-website-illustration.svg"
+            class="img-fluid"
+          />
+        </div>
+        <div class="col-lg-7 mt-3 mt-lg-0">
+          <h2 class="section__heading mb-4">What is WordPress?</h2>
+          <p>
+            WordPress is a widely used CMS that allows people to build, host and
+            manage websites or blogs. WordPress users can manage their website
+            content and integrate WordPress with other tools or applications to
+            streamline their workflow. All websites often need a contact, survey
+            or feedback form to collect important information.
+          </p>
+          <p>
+            Integrating Formester forms with WordPress enables the users to
+            interact with your website, upload media, submit feedback or provide
+            personal details through contact form.
+          </p>
         </div>
       </div>
     </div>
+    <WordpressSteps />
+    <KeyBenefits />
+    <Faqs :faqs="faqs" />
   </div>
 </template>
 
 <script>
-import WordpressHero from '../../components/plugins/wordpress/WordpressHero.vue'
+import WordpressHero from '@/components/plugins/wordpress/WordpressHero.vue'
+import WordpressSteps from '@/components/plugins/wordpress/WordpressSteps.vue'
+import KeyBenefits from '@/components/hr-solution/KeyBenefits.vue'
+import Faqs from '@/components/template/Faq.vue'
 export default {
   components: {
     WordpressHero,
+    WordpressSteps,
+    KeyBenefits,
+    Faqs,
+  },
+  data() {
+    return {
+      faqs: [
+        {
+          question:
+            'How can I integrate Formester forms with my WordPress website or blog?',
+          answer:
+            'Integrating Formester forms with WordPress is quick and easy. Use our WordPress plugin to embed a Contact Form, Feedback Form, or Lead Generation Form on your WordPress site without any coding skills. Simply create a new form on Formester or customize a pre-designed template using the intuitive drag and drop form builder.',
+        },
+        {
+          question:
+            'What types of forms can I add to my WordPress blog or site with Formester?',
+          answer:
+            'Formester offers a versatile template library, allowing you to add various forms like Contact Forms, Feedback Forms, or Lead Generation Forms to your WordPress blog or site. Choose from our pre-designed templates and customize them to suit your needs.',
+        },
+        {
+          question:
+            'Why should I integrate Formester forms with my WordPress site?',
+          answer:
+            'Integrating Formester forms with WordPress enhances user interaction on your website. Users can upload media, submit feedback, or provide personal details through contact forms. This integration streamlines data collection and improves user engagement.',
+        },
+        {
+          question:
+            'How can Formester and WordPress work together to improve my website workflow?',
+          answer:
+            'WordPress users can leverage Formester to streamline their workflow by managing website content effectively and integrating powerful forms seamlessly. Collecting payments, preventing spam, and analysing form submissions become hassle-free with this integration.',
+        },
+      ],
+    }
   },
 }
 </script>
