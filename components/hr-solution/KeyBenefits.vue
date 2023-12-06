@@ -1,7 +1,7 @@
 <template>
   <div class="container py-5">
     <div class="heading d-flex flex-column align-items-center text-center">
-      <h2 class="section__heading">Keys Benefits</h2>
+      <h2 class="section__heading">{{ heading }}</h2>
     </div>
 
     <div class="templates mt-md-5">
@@ -24,6 +24,12 @@
 
 <script>
 export default {
+  props: {
+    heading: {
+      type: String,
+      default: 'Key Benefits',
+    },
+  },
   data() {
     return {
       features: [

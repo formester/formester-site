@@ -198,6 +198,18 @@
                 </NuxtLink>
               </li>
             </ul>
+
+            <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
+              Plugins
+            </h5>
+
+            <ul class="list-unstyled mt-2">
+              <li class="mt-2">
+                <NuxtLink to="/plugins/wordpress/" class="footer__link">
+                  WordPress
+                </NuxtLink>
+              </li>
+            </ul>
           </div>
 
           <div
