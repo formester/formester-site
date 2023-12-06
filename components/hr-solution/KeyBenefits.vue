@@ -27,7 +27,7 @@ export default {
   props: {
     heading: {
       type: String,
-      default: 'Keys Benefits',
+      default: 'Key Benefits',
     },
   },
   data() {

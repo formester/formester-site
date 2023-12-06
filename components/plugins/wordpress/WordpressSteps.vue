@@ -14,14 +14,14 @@
           <p class="step__section-description">
             Visit
             <a
-              href="WordPress.org"
+              href="https://WordPress.org"
               target="_blank"
               class="text-decoration-underline"
               >WordPress.org</a
             >
             or
             <a
-              href="WordPress.com"
+              href="https://WordPress.com"
               target="_blank"
               class="text-decoration-underline"
               >WordPress.com</a
