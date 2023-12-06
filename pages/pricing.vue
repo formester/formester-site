@@ -1,13 +1,8 @@
 <template>
   <div>
     <div class="text-center mt-5 px-3">
-      <h1 class="pricing__heading">
-        Black Friday Offer - Flat 40% off on Annual Plans
-      </h1>
-      <p class="pricing__subheading">
-        Take advantage of this Black Friday Deal to buy our plans for a fraction
-        of the price! Offer lasts till 30 November.
-      </p>
+      <h1 class="pricing__heading">Pricing that feels just right</h1>
+      <p class="pricing__subheading">Start with our free plan</p>
 
       <div
         class="d-flex justify-content-center align-items-center plan_toggle__switch"
@@ -26,7 +21,7 @@
           class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3"
         >
           <PricingCard :plan="free" />
-          <PricingCard :plan="personalMonthly" :isHighlighted="true" />
+          <PricingCard :plan="personalMonthly" highlighted />
           <PricingCard :plan="businessMonthly" />
         </div>
         <div
@@ -34,7 +29,7 @@
           class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3"
         >
           <PricingCard :plan="free" />
-          <PricingCard :plan="personalYearly" :isHighlighted="true" />
+          <PricingCard :plan="personalYearly" highlighted />
           <PricingCard :plan="businessYearly" />
         </div>
         <div class="mt-5 py-5">
