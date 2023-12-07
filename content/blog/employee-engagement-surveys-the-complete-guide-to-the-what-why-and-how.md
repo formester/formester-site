@@ -196,7 +196,7 @@ And as silly as it may sound, another important factor is the [ingress of Gen-Z 
 
 With the abovementioned factors in play, it is only natural to anticipate changes in crucial factors, such as, Employee Ideas, Perceptions and Expectations;
 
-That will in turn impact key Corporate Strategies, such as, Employee Engagement and Retention.
+That will in turn impact key Corporate Strategies, such as, [Employee Engagement](https://www.springworks.in/blog/employee-engagement-guide/) and Retention.
 
 The non-acceptance of these changes and failure to optimize and upgrade your organization's structure, policies, environment and culture;
 
