@@ -46,7 +46,7 @@ export default {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/templates/',
+        url: `https://formester.com/templates/${this.$route.params.slug}`,
         title: this.currentCategory,
         description: `Find the perfect template for ${this.currentCategory} with Formester's comprehensive library. Choose from a variety of customizable designs and create a professional look in no time.`,
         mainImage:

@@ -64,13 +64,13 @@ export default {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/features/online-payment/',
+        url: 'https://formester.com/features/digital-signature/',
         title: 'Online Forms With Signature | Online Form Builder With Signature - Formester',
         description:
           'Add e-sign to your online form easily - Formester | Document signing with secure electronic signatures (e-sign) | Formester Digital Signs',
         mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with Html Form Backend page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with Html Form Backend page image alt
+          'https://formester.com/formester-form-builder-background.png', 
+        mainImageAlt: 'Form builder showing drag and drop functionality',
       }
       return getSiteMeta(metaData)
     },

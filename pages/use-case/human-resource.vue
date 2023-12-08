@@ -165,10 +165,6 @@ export default {
             },
           ],
         },
-        {
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-        },
       ],
     }
   },
