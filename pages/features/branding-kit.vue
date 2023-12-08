@@ -75,13 +75,13 @@ export default {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/features/auto-responder/',
+        url: 'https://formester.com/features/branding-kit/',
         title: 'Brand Kit | Personalised Brand form - Formester',
         description:
           'Boost your trust to customer by adding your brand to form.',
         mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with auto-responder page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
+          'https://formester.com/formester-form-builder-background.png', 
+        mainImageAlt: 'Form builder showing drag and drop functionality', 
       }
       return getSiteMeta(metaData)
     },
