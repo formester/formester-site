@@ -108,7 +108,7 @@ export default {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/features/calculation/',
+        url: 'https://formester.com/features/calculation-fields/',
         title: 'Calculation - Formester',
         description:
           'Dynamic Forms to Perform Real-time Complex Calculations | Dynamic Scores, Personalized & Interactive Form Experiences - Sign up now.',
@@ -198,7 +198,7 @@ export default {
               '@type': 'ListItem',
               position: 2,
               name: 'Calculation',
-              item: 'https://formester.com/features/calculation/',
+              item: 'https://formester.com/features/calculation-fields/',
             },
           ],
         },
