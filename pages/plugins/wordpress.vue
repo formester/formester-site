@@ -70,6 +70,90 @@ export default {
     KeyBenefits,
     Faqs,
   },
+  computed: {
+    meta() {
+      const metaData = {
+        type: 'website',
+        url: 'https://formester.com/plugins/wordpress/',
+        title:
+          'Embed Beautiful Forms on Your WordPress Site | Formester Plugin',
+        description:
+          "Create & add stunning forms in minutes with Formester's intuitive builder & WordPress plugin. No coding needed! Increase leads, collect feedback & streamline workflow.",
+        mainImage:
+          'https://formester.com/formester-form-builder-background.png', // need to update with auto-responder page image
+        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
+        keywords: [
+          'Formester',
+          'WordPress plugin',
+          'contact form',
+          'survey form',
+          'lead generation form',
+          'online form builder',
+          'drag & drop',
+          'automation',
+          'analytics',
+          'spam protection',
+          'workflow',
+          'digital signature',
+          'autoresponder',
+          'CMS',
+          'website',
+          'blog',
+          'SEO',
+          'conversion rate',
+          'engagement',
+          'data collection',
+        ],
+      }
+      return getSiteMeta(metaData)
+    },
+  },
+  head() {
+    return {
+      title: 'Embed Beautiful Forms on Your WordPress Site | Formester Plugin',
+      meta: [...this.meta],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://formester.com/plugins/wordpress/',
+        },
+      ],
+    }
+  },
+  jsonld() {
+    return {
+      '@context': 'http://schema.org',
+      '@graph': [
+        {
+          '@type': 'Corporation',
+          '@id': 'https://acornglobus.com',
+          name: 'Embed Beautiful Forms on Your WordPress Site | Formester Plugin',
+          description:
+            "Create & add stunning forms in minutes with Formester's intuitive builder & WordPress plugin. No coding needed! Increase leads, collect feedback & streamline workflow.",
+          logo: 'https://formester.com/logo.png',
+          url: 'https://formester.com',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Delaware',
+            addressCountry: 'United States',
+          },
+        },
+        {
+          '@type': 'BreadcrumbList',
+          '@id': 'https://acornglobus.com',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Wordpress Plugin for Formester',
+              item: 'https://formester.com/plugins/wordpress/',
+            },
+          ],
+        },
+      ],
+    }
+  },
   data() {
     return {
       faqs: [
