@@ -18,7 +18,7 @@ export const free = {
       'Basic Analytics',
       'Access to Template Library',
       'Zapier Integrations',
-      'SMTP Intergration',
+      'SMTP Integration',
       'Accept Payments (1% commission)',
       'Spam Protection',
       'Self Email Notifications',
@@ -52,6 +52,7 @@ export const personalMonthly = {
       'Accept Payments (0% commission)',
       'Custom meta information',
       'Add script to page - GTM, GA, Pixel',
+      'AI Powered Spam Protection',
     ],
   },
 }
@@ -71,7 +72,7 @@ export const businessMonthly = {
       'Unlimited Webhooks',
       '2,500 Signatures',
     ],
-    keyFeatures: ['API Access', 'Custom Domain'],
+    keyFeatures: ['API Access', 'Custom Domain', 'Adaptive AI Spam Protection', 'White Label'],
   },
 }
 
@@ -95,7 +96,7 @@ export const freeYearly = {
       'Basic Analytics',
       'Access to Template Library',
       'Zapier Integrations',
-      'SMTP Intergration',
+      'SMTP Integration',
       'Accept Payments (1% commission)',
       'Spam Protection',
       'Self Email Notifications',
@@ -130,6 +131,7 @@ export const personalYearly = {
       'Accept Payments (0% commission)',
       'Custom meta information',
       'Add script to page - GTM, GA, Pixel',
+      'AI Powered Spam Protection',
     ],
   },
 }
@@ -150,7 +152,7 @@ export const businessYearly = {
       'Unlimited Webhooks',
       '2,500 Signatures',
     ],
-    keyFeatures: ['API Access', 'Custom Domain'],
+    keyFeatures: ['API Access', 'Custom Domain', 'Adaptive AI Spam Protection', 'White Label'],
   },
 }
 
@@ -174,6 +176,12 @@ export const comparisonTableFeatures = [
     business: 'Unlimited'
   },
   {
+    name: 'Remove Formester Branding',
+    free: '-',
+    pro: 'Yes',
+    business: 'Yes'
+  },
+  {
     name: 'File Uploads',
     free: '100 MB',
     pro: '1 GB',
@@ -181,9 +189,9 @@ export const comparisonTableFeatures = [
   },
   {
     name: 'Spam Protection',
-    free: 'Yes',
-    pro: 'Yes',
-    business: 'Yes'
+    free: 'Basic',
+    pro: ' AI Powered',
+    business: 'Adaptive AI'
   },
   {
     name: 'Access to Template Library',
@@ -293,6 +301,11 @@ export const comparisonTableFeatures = [
     pro: '-',
     business: 'Yes'
   },
-  // Add more features as needed
+  {
+    name: 'White Label',
+    free: '-',
+    pro: '-',
+    business: 'Yes'
+  },
 ];
 
