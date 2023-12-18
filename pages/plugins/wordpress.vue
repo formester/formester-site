@@ -63,6 +63,7 @@ import WordpressHero from '@/components/plugins/wordpress/WordpressHero.vue'
 import WordpressSteps from '@/components/plugins/wordpress/WordpressSteps.vue'
 import KeyBenefits from '@/components/hr-solution/KeyBenefits.vue'
 import Faqs from '@/components/template/Faq.vue'
+import getSiteMeta from '@/utils/getSiteMeta'
 export default {
   components: {
     WordpressHero,
