@@ -2,6 +2,9 @@
   <div class="container py-5 px-2">
     <div class="heading d-flex flex-column align-items-center text-center">
       <h2 class="section__heading">{{ heading }}</h2>
+      <p class="m-0">
+        {{ description }}
+      </p>
     </div>
 
     <div class="templates mt-md-5">
@@ -29,6 +32,10 @@ export default {
     heading: {
       type: String,
       required: true,
+      default: '',
+    },
+    description: {
+      type: String,
       default: '',
     },
     features: {
