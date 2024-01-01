@@ -1,24 +1,22 @@
 <template>
   <div class="container py-5 px-2">
-    <div class="row">
-      <div class="heading d-flex flex-column align-items-center text-center">
-        <h2 class="section__heading">{{ heading }}</h2>
-      </div>
+    <div class="heading d-flex flex-column align-items-center text-center">
+      <h2 class="section__heading">{{ heading }}</h2>
+    </div>
 
-      <div class="templates mt-md-5">
-        <div v-for="(feature, index) in features" :key="index">
-          <div
-            class="card p-4 d-flex align-items-center justify-items-center text-center align-items-md-start text-md-start"
-          >
-            <nuxt-img
-              :src="`/${feature.imageSrc}`"
-              class="img-fluid"
-              :alt="feature.altText"
-              loading="lazy"
-            />
-            <h4 class="sub__section-heading mt-4">{{ feature.title }}</h4>
-            <p class="subheading__text">{{ feature.description }}</p>
-          </div>
+    <div class="templates mt-md-5">
+      <div v-for="(feature, index) in features" :key="index">
+        <div
+          class="card p-4 d-flex align-items-center justify-items-center text-center align-items-md-start text-md-start"
+        >
+          <nuxt-img
+            :src="`/${feature.imageSrc}`"
+            class="img-fluid"
+            :alt="feature.altText"
+            loading="lazy"
+          />
+          <h4 class="sub__section-heading mt-4">{{ feature.title }}</h4>
+          <p class="subheading__text">{{ feature.description }}</p>
         </div>
       </div>
     </div>
