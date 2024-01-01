@@ -47,7 +47,7 @@ export default {
   width: 100%;
   padding: 1.5rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: min-content;
   gap: 24px;
 }
