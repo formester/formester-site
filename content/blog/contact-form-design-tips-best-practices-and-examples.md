@@ -1,10 +1,18 @@
 ---
 title: Contact Form Design Tips, Best Practices and Examples
-description: abcde
+description: "This blog covers the crucial design aspects of Contact Forms, from
+  strategic placement and compelling copy to personalised incentives and
+  follow-up tactics. Discover 16 expert tips, best practices , pitfalls to
+  avoid, and real-world examples from renowned brands like HubSpot, Nike, Tesla,
+  and Starbucks. Gain the knowledge to convert your contact forms into powerful
+  tools for lead generation, user engagement, and brand growth. "
 metaTitle: " High Conversion Contact Form Design Tips and Examples"
-metaDescription: abcde
-keywords: abcde
+metaDescription: Learn how to draft effective contact forms for your website.
+  Discover the pro tips, best practices and examples.
+keywords: Contact Form, Contact Form Conversion, Lead Generation Form, Lead Gen
+  Form, Day Collection
 author: Siddharth Sharma
+authorProfile: https://www.linkedin.com/in/sidsh0502/
 createdAt: 2024-01-02T15:15:42.783Z
 coverImg: /img/10-alternatives-to-jotform_1.png
 coverImgAlt: abcde
