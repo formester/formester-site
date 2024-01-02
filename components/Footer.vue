@@ -234,6 +234,14 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
+                <NuxtLink
+                  to="/formester-vs-microsoft-forms/"
+                  class="footer__link"
+                >
+                  Formester vs Microsoft Forms
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
                 <NuxtLink to="/formester-vs-forms-app/" class="footer__link">
                   Formester vs Forms App
                 </NuxtLink>
