@@ -1,6 +1,11 @@
 <template>
   <div>
-    <formester-vs-microsoft-forms-hero />
+    <comparision-hero
+      heading="Switch to <span class='hglight'>Formester</span> and craft interactive web forms – Perfect Alternative to Microsoft Forms"
+      description="Ditch the dry design and limited integrations of Microsoft Forms. Optimise your data collection with beautiful, personalised forms that captivate audiences, streamline orders, and automate workflows like magic. Forget coding headaches - our intuitive drag-and-drop interface empowers everyone to be a form-building pro."
+      imgLink="formester-vs-microsoft-forms/formester-vs-mirosoft-forms-hero-image"
+      imgAlt="Formester vs Microsoft Forms"
+    />
 
     <section class="container my-5 py-5">
       <div
@@ -106,16 +111,16 @@
 </template>
 
 <script>
-import AdvantageSection from '../components/comparision/AdvantageSection.vue'
+import AdvantageSection from '@/components/comparision/AdvantageSection.vue'
+import ComparisionHero from '@/components/comparision/ComparisionHero.vue'
 import Testimonial from '@/components/Testimonial.vue'
-import FormesterVsMicrosoftFormsHero from '@/components/comparision/formester-vs-microsoft-forms/Hero.vue'
 
 import { fetchRandomTestimonials } from '@/utils/getTestimonials.js'
 // MetaTags
 import getSiteMeta from '../utils/getSiteMeta'
 
 export default {
-  components: { AdvantageSection, Testimonial, FormesterVsMicrosoftFormsHero },
+  components: { AdvantageSection, Testimonial, ComparisionHero },
   data() {
     return {
       comparisions: [
@@ -269,8 +274,7 @@ export default {
           title: 'Third-Party Integration',
           description:
             'Automate your workflow with integrations like Notion, Wordpress, Stripe, Slack etc.',
-          imageSrc:
-            'icons/formester-vs-google-form/multiple-integration.svg',
+          imageSrc: 'icons/formester-vs-google-form/multiple-integration.svg',
           altText: 'Integrations',
         },
       ],
