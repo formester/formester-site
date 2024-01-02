@@ -277,9 +277,9 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/formester-vs-google-forms/',
-        title: 'Formester vs Google Form | Google Form Alternative - Formester',
+        title: 'Google Forms Best Alternative | Switch to Formester',
         description:
-          'Powerful Google Form alternative - Try Formester for Online, No-Code Forms & Surveys! Advanced Features & Integrations | Sign-up for Free!',
+          'Switch to Formester and break free from Google Forms limitations. Craft professional forms with advanced features like conditional logic, analytics, and payment processing. Try for free!',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with formester vs google-form page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs google-form page image alt
@@ -345,7 +345,7 @@ export default {
   },
   head() {
     return {
-      title: 'Formester vs Google Form | Google Form Alternative - Formester',
+      title: 'Google Forms Best Alternative | Switch to Formester',
       meta: [...this.meta],
       link: [
         {
@@ -360,9 +360,9 @@ export default {
     return {
       '@context': 'http://schema.org',
       '@type': 'Corporation',
-      name: 'Formester vs Google Form | Google Form Alternative - Formester',
+      name: 'Google Forms Best Alternative | Switch to Formester',
       description:
-        'Powerful Google Form alternative - Try Formester for Online, No-Code Forms & Surveys! Advanced Features & Integrations | Sign-up for Free!',
+        'Switch to Formester and break free from Google Forms limitations. Craft professional forms with advanced features like conditional logic, analytics, and payment processing. Try for free!',
       logo: 'https://formester.com/logo.png',
       url: 'https://formester.com',
       address: {
