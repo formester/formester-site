@@ -1,88 +1,13 @@
 <template>
   <div>
-    <section class="hero">
-      <div class="container horizontal__padding">
-        <div class="row my-5">
-          <div
-            class="col-lg-5 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start"
-          >
-            <h1 class="section__heading">
-              Switch to <span class="hglight">Formester</span> and build
-              beautiful online forms – The Best Alternative to Google Forms
-            </h1>
-            <p class="section__subtitle mt-3">
-              Tired of Google Forms's bland interface and lack of templates?
-              Formester is here to unleash your inner form-building genius!
-              Craft stunning, on-brand forms that capture attention, collect
-              data, process orders and automate tasks like a pro. No coding
-              required thanks to our Drag and Drop Interface!
-            </p>
-            <a
-              href="https://app.formester.com/users/sign_up"
-              class="btn button hero__button mt-4"
-            >
-              Try for Free
-            </a>
-          </div>
-          <div
-            class="col-lg-7 d-flex align-items-center justify-content-center"
-          >
-            <nuxt-img
-              src="/formester-vs-page-hero-img.svg"
-              alt="Formester form building with drag and drop interface"
-              class="img-fluid hero__image"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
+    <formester-vs-google-form-hero />
 
-    <section class="container text-center">
-      <h2 class="section__heading">Feature Comparison</h2>
-      <p class="section__subtitle">
-        Let’s have a look at the detailed feature comparison between Formester
-        and Google Forms to help you pick the right option based on your form
-        building needs.
-      </p>
-      <div class="table-responsive">
-        <table class="table text-start comparision__table mx-auto">
-          <thead class="bg__light-primary">
-            <tr>
-              <th scope="col">Features</th>
-              <th scope="col">Formester</th>
-              <th scope="col">Google Forms</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="c of comparisions" :key="c[0]">
-              <td style="font-weight: 600" v-html="c.title"></td>
-              <td>
-                <template v-if="c.formester === 'Yes'">
-                  <nuxt-img src="check-green.svg" />
-                </template>
-                <template v-else-if="c.formester === 'No'">
-                  <nuxt-img src="red-cross.svg" />
-                </template>
-                <template v-else>
-                  {{ c.formester }}
-                </template>
-              </td>
-              <td>
-                <template v-if="c.googleForm === 'Yes'">
-                  <nuxt-img src="check-green.svg" />
-                </template>
-                <template v-else-if="c.googleForm === 'No'">
-                  <nuxt-img src="red-cross.svg" />
-                </template>
-                <template v-else>
-                  {{ c.googleForm }}
-                </template>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+    <comparision-table
+      heading="Feature Comparision"
+      description="Let’s have a look at the detailed feature comparison between Formester and Google Forms to help you pick the right option based on your form building needs."
+      :headers="['Fomester', 'Google Form']"
+      :comparisions="comparisions"
+    />
 
     <section class="container my-5 py-5">
       <div class="container horizontal__padding">
@@ -147,13 +72,14 @@
 <script>
 import AdvantageSection from '../components/comparision/AdvantageSection.vue'
 import Testimonial from '@/components/Testimonial.vue'
+import FormesterVsGoogleFormHero from '@/components/comparision/formester-vs-google-form/Hero.vue'
 
 import { fetchRandomTestimonials } from '@/utils/getTestimonials.js'
 // MetaTags
 import getSiteMeta from '../utils/getSiteMeta'
 
 export default {
-  components: { AdvantageSection, Testimonial },
+  components: { AdvantageSection, Testimonial, FormesterVsGoogleFormHero },
   data() {
     return {
       steps: [
@@ -420,10 +346,6 @@ export default {
 
 <style scoped>
 /* HERO */
-.hero {
-  margin-bottom: 74px;
-}
-
 .hero__image {
   padding-left: 30px;
 }
@@ -432,19 +354,6 @@ export default {
   font-size: var(--ft-df-heading);
   font-weight: 700;
   line-height: 60px;
-}
-
-.section__subheading {
-  color: #28213d;
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 2.25rem;
-}
-
-.section__subheading-content {
-  color: #4e4664;
-  font-size: 1rem;
-  line-height: 160%;
 }
 
 .section__subtitle {
@@ -456,87 +365,6 @@ export default {
   .section__heading {
     line-height: 52px;
     font-size: 2rem;
-  }
-}
-
-/* TESTIMONIALS */
-.gradient-testimonial__container {
-  background: linear-gradient(180deg, #423569 0%, #5e4b96 100%);
-  border-radius: 0.5rem;
-  padding: 4rem 3rem 3rem;
-  max-width: 32rem;
-}
-
-.testimonial__content {
-  position: relative;
-  color: white;
-  font-size: 2rem;
-  line-height: 160%;
-  z-index: 10;
-}
-
-.testimonial__person--name {
-  color: white;
-  font-size: var(--ft-big-body);
-  font-weight: 900;
-}
-
-.testimonial__person--post {
-  font-size: var(--ft-df-body);
-  letter-spacing: 2%;
-  color: var(--clr-primary-light);
-}
-
-.quotes__watermark {
-  height: 100px;
-  top: 1rem;
-  left: 1rem;
-  opacity: 0.5;
-}
-
-/* COMPARISION */
-.comparision__table {
-  margin-top: 3.5rem;
-  max-width: 60rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
-  border-radius: 8px;
-}
-.comparision__table-pricing {
-  margin-top: 10px;
-}
-
-.table > :not(caption) > * > * {
-  padding: 1rem;
-}
-
-thead th {
-  border: none;
-}
-
-@media only screen and (max-width: 992px) {
-  .comparision__table {
-    max-width: 45rem;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .comparision__table {
-    max-width: 32rem;
-  }
-}
-@media only screen and (max-width: 576px) {
-  .comparision__table {
-    max-width: 20rem;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .comparision__table {
-    font-size: 12px;
-    line-height: 20px;
-    max-width: 20rem;
-  }
-  .comparision__table td {
-    padding: 0.5em;
   }
 }
 </style>
