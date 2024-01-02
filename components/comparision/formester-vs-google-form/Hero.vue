@@ -25,7 +25,7 @@
         </div>
         <div class="col-lg-5 d-flex align-items-center justify-content-center">
           <nuxt-img
-            src="/formester-vs-page-hero-img.svg"
+            src="/comparision/formester-vs-google-form/formester-vs-google-form-hero-image.svg"
             alt="Formester form building with drag and drop interface"
             class="img-fluid hero__image"
           />

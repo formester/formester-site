@@ -9,7 +9,7 @@
         <thead class="bg__light-primary">
           <tr>
             <th scope="col">Features</th>
-            <th scope="col" v-for="header in headers" :key="header">
+            <th scope="col" v-for="header in headers" :key="header" class="text-center">
               {{ header }}
             </th>
           </tr>
@@ -17,7 +17,7 @@
         <tbody>
           <tr v-for="c of comparisions" :key="c[0]">
             <td style="font-weight: 600" v-html="c.title"></td>
-            <td>
+            <td class="text-center">
               <template v-if="c.formester === 'Yes'">
                 <nuxt-img src="check-green.svg" />
               </template>
@@ -28,7 +28,7 @@
                 {{ c.formester }}
               </template>
             </td>
-            <td>
+            <td class="text-center">
               <template v-if="c.googleForm === 'Yes'">
                 <nuxt-img src="check-green.svg" />
               </template>
@@ -75,10 +75,6 @@ export default {
   max-width: 60rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
   border-radius: 8px;
-}
-
-.comparision__table-pricing {
-  margin-top: 10px;
 }
 
 .table > :not(caption) > * > * {

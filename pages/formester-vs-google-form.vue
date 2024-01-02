@@ -7,11 +7,11 @@
         class="d-flex flex-column align-items-center justify-content-center horizontal__padding"
       >
         <h2 class="section__heading">Formester vs Google Form</h2>
-        <div class="d-flex gap-5 mt-4">
+        <div class="d-flex flex-column flex-md-row gap-10 mt-4">
           <div class="d-flex flex-column">
             <nuxt-img
               src="/comparision/formester-vs-google-form/formester-ss.png"
-              class="img-fluid screenshot"
+              class="img-fluid screenshot formester-ss"
             />
             <p class="mt-3">
               Formester is an online form builder that can be used to build
@@ -24,7 +24,7 @@
           <div class="d-flex flex-column">
             <nuxt-img
               src="/comparision/formester-vs-google-form/google-form-ss.png"
-              class="img-fluid screenshot"
+              class="img-fluid screenshot google-form-ss"
             />
             <p class="mt-3">
               Google Forms is a free web form builder. It can be used to create
@@ -57,16 +57,21 @@
             <p class="section__subtitle mt-3">
               Although Google forms is a free and popular tool for form
               building, it is more suitable for students, small surveys or
-              personal use. The design and personalization options are very
-              limited with only a handful of templates available in their
-              library.
+              personal use. The
+              <span class="hglt-text">
+                design and personalization options are very limited
+              </span>
+              with only a handful of templates available in their library.
             </p>
             <p class="section__subtitle mt-3">
               Formester on the other hand, offers advanced form building
-              features like Conditional Logic, Workflow Automation, HTML Form
-              Backend and Payment Processing. Formester is the ideal choice for
-              businesses and individuals that require professional looking
-              online forms with advanced features.
+              features like
+              <span class="hglt-text">
+                Conditional Logic, Workflow Automation, HTML Form Backend and
+                Payment Processing.
+              </span>
+              Formester is the ideal choice for businesses and individuals that
+              require professional looking online forms with advanced features.
             </p>
           </div>
           <div
@@ -399,6 +404,24 @@ export default {
 
 .screenshot {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+.formester-ss {
+  border: 4px solid #dbcffe;
+}
+
+.google-form-ss {
+  border: 4px solid #dcdcdc;
+}
+
+.gap-10 {
+  gap: 72px;
+}
+
+.hglt-text {
+  font-weight: 500;
+  color: var(--clr-primary);
 }
 
 @media (max-width: 768px) {
