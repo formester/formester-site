@@ -135,29 +135,29 @@ Use ample whitespace to create a clean and organised form layout. Proper spacing
 
 Here are some common mistakes to avoid when creating and using contact forms:﻿
 
-**1. Asking for Too Much Information**﻿ - One of the most common mistakes is asking for excessive information in the form. Long forms can be overwhelming for users, leading to form abandonment. Stick to the essentials like name, email, and relevant details to avoid deterring users.﻿
+**1) Asking for Too Much Information**﻿ - One of the most common mistakes is asking for excessive information in the form. Long forms can be overwhelming for users, leading to form abandonment. Stick to the essentials like name, email, and relevant details to avoid deterring users.﻿
 
-**2. Not Providing Clear Instructions** ﻿- Unclear instructions can confuse users, leading to errors or incomplete submissions. Make sure your form has clear labels, placeholders, and guidance for each field to ensure users understand what's expected.﻿
+**2) Not Providing Clear Instructions** ﻿- Unclear instructions can confuse users, leading to errors or incomplete submissions. Make sure your form has clear labels, placeholders, and guidance for each field to ensure users understand what's expected.﻿
 
-**3﻿. Lack of Device-Optimization** - If your contact form isn't optimized for various devices and screen sizes, you risk alienating mobile users. Ensure your form is responsive and functions well on smartphones, tablets, and desktops.﻿
+**3﻿) Lack of Device-Optimization** - If your contact form isn't optimized for various devices and screen sizes, you risk alienating mobile users. Ensure your form is responsive and functions well on smartphones, tablets, and desktops.﻿
 
-**4. Missing or Unclear Call-to-Action** ﻿- A strong call-to-action (CTA) button is essential to encourage users to submit the form. Ensure your CTA is prominent, well-designed, and clearly indicates what will happen when clicked (e.g., "Submit," "Request Callback," etc.).﻿
+**4) Missing or Unclear Call-to-Action** ﻿- A strong call-to-action (CTA) button is essential to encourage users to submit the form. Ensure your CTA is prominent, well-designed, and clearly indicates what will happen when clicked (e.g., "Submit," "Request Callback," etc.).﻿
 
-**5. No Privacy Assurance**﻿ - Failing to include a privacy assurance can make users hesitant to share their information. Add a brief note about data protection and how their information will be used, following best practices like GDPR compliance.﻿
+**5) No Privacy Assurance**﻿ - Failing to include a privacy assurance can make users hesitant to share their information. Add a brief note about data protection and how their information will be used, following best practices like GDPR compliance.﻿
 
-**6. Ignoring User Experience (UX)** -﻿ Poorly designed forms with confusing layouts, too many steps, or distracting elements can frustrate users. Focus on providing a smooth and intuitive user experience to encourage completion.﻿
+**6) Ignoring User Experience (UX)** -﻿ Poorly designed forms with confusing layouts, too many steps, or distracting elements can frustrate users. Focus on providing a smooth and intuitive user experience to encourage completion.﻿
 
-**7. Not Testing the Form**﻿ - Neglecting to test the form thoroughly before making it live can lead to technical glitches or user experience issues. Test the form's functionality, responsiveness, and appearance across different devices.﻿
+**7) Not Testing the Form**﻿ - Neglecting to test the form thoroughly before making it live can lead to technical glitches or user experience issues. Test the form's functionality, responsiveness, and appearance across different devices.﻿
 
-**8﻿. No Validation and Error Messages** - Lack of proper validation (e.g., for email addresses) and informative error messages can frustrate users when they make mistakes. Offer real-time validation and clear error messages to guide users towards correct submissions.﻿
+**8﻿) No Validation and Error Messages** - Lack of proper validation (e.g., for email addresses) and informative error messages can frustrate users when they make mistakes. Offer real-time validation and clear error messages to guide users towards correct submissions.﻿
 
 **9﻿. No Confirmation or Thank-You Page** - After submitting a form, users should receive confirmation that their submission was successful. A thank-you page or confirmation message assures users that their information was received.﻿
 
-**1﻿0. Ignoring Analytics and Data** - Not analysing form data and responses can prevent you from understanding user behavior and making necessary improvements. Regularly review analytics to identify trends and areas for optimization.﻿
+**1﻿0) Ignoring Analytics and Data** - Not analysing form data and responses can prevent you from understanding user behavior and making necessary improvements. Regularly review analytics to identify trends and areas for optimization.﻿
 
-**11. Overcomplicating with Captchas**﻿ - While captchas are useful to prevent spam, overly complex captchas can frustrate users. Choose user-friendly options or consider alternatives like honeypot fields to deter spammers.﻿
+**11) Overcomplicating with Captchas**﻿ - While captchas are useful to prevent spam, overly complex captchas can frustrate users. Choose user-friendly options or consider alternatives like honeypot fields to deter spammers.﻿
 
-**12. Ignoring Integration Opportunities**﻿ - If your contact form integrates with other tools (e.g., CRM, email marketing), ignoring these opportunities can lead to missed chances for lead nurturing and customer relationship management.
+**12) Ignoring Integration Opportunities**﻿ - If your contact form integrates with other tools (e.g., CRM, email marketing), ignoring these opportunities can lead to missed chances for lead nurturing and customer relationship management.
 
 Now let's explore a few real-world examples, where big brands from various industries smartly employed contact forms to achieve different business objectives. ﻿
 
