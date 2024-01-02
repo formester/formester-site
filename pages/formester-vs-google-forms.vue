@@ -4,7 +4,7 @@
       heading="Switch to <span class='hglight'>Formester</span> and build beautiful online forms – The Best Alternative to Google Forms"
       description="Tired of Google Forms's bland interface and lack of templates? Formester is here to unleash your inner form-building genius! Craft stunning, on-brand forms that capture attention, collect data, process orders and automate tasks like a pro. No coding required thanks to our Drag and Drop Interface!"
       imgLink="formester-vs-google-form/formester-vs-google-form-hero-image"
-      imgAlt=""
+      imgAlt="Fomester vs Google Forms"
     />
 
     <section class="container my-5 py-5">
