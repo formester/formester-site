@@ -1,6 +1,11 @@
 <template>
   <div>
-    <formester-vs-google-form-hero />
+    <comparision-hero
+      heading="Switch to <span class='hglight'>Formester</span> and build beautiful online forms – The Best Alternative to Google Forms"
+      description="Tired of Google Forms's bland interface and lack of templates? Formester is here to unleash your inner form-building genius! Craft stunning, on-brand forms that capture attention, collect data, process orders and automate tasks like a pro. No coding required thanks to our Drag and Drop Interface!"
+      imgLink="formester-vs-google-form/formester-vs-google-form-hero-image"
+      imgAlt=""
+    />
 
     <section class="container my-5 py-5">
       <div
@@ -111,37 +116,18 @@
 </template>
 
 <script>
-import AdvantageSection from '../components/comparision/AdvantageSection.vue'
+import AdvantageSection from '@/components/comparision/AdvantageSection.vue'
+import ComparisionHero from '@/components/comparision/ComparisionHero.vue'
 import Testimonial from '@/components/Testimonial.vue'
-import FormesterVsGoogleFormHero from '@/components/comparision/formester-vs-google-form/Hero.vue'
 
 import { fetchRandomTestimonials } from '@/utils/getTestimonials.js'
 // MetaTags
 import getSiteMeta from '../utils/getSiteMeta'
 
 export default {
-  components: { AdvantageSection, Testimonial, FormesterVsGoogleFormHero },
+  components: { AdvantageSection, Testimonial, ComparisionHero },
   data() {
     return {
-      steps: [
-        {
-          step: 1,
-          heading: 'Multi-Purpose Form Creation Made Easy',
-          description: `It takes minutes, not hours to create forms using Formester. You can customize them the way you want and use them as standalone or web-integrated forms. Just drag and drop to build a form as per your requirements or integrate an existing HTML form’s backend.`,
-        },
-        {
-          step: 2,
-          heading: 'Responses on Auto-Pilot',
-          description:
-            'Stop jumping from one platform to another for each of your form-related tasks. Send automated replies to your audience when they fill out your form, and never compromise on personalization. One of Formester’s unique propositions in the industry, Auto Responder allows you the convenience of two tools in one.',
-        },
-        {
-          step: 3,
-          heading: 'End-to-End Form Analytics',
-          description:
-            'Just collecting data isn’t enough. Unless you extract meaningful insights from your form responses, your business isn’t going to benefit. Formester serves powerful analytics that are easier to comprehend and help you study engagement and conversions. Analyze your performance to act towards reducing your drop-offs.',
-        },
-      ],
       comparisions: [
         {
           title: 'HTML Form Backend Service',
