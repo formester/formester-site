@@ -2,6 +2,42 @@
   <div>
     <formester-vs-google-form-hero />
 
+    <section class="container my-5 py-5">
+      <div
+        class="d-flex flex-column align-items-center justify-content-center horizontal__padding"
+      >
+        <h2 class="section__heading">Formester vs Google Form</h2>
+        <div class="d-flex gap-5 mt-4">
+          <div class="d-flex flex-column">
+            <nuxt-img
+              src="/comparision/formester-vs-google-form/formester-ss.png"
+              class="img-fluid screenshot"
+            />
+            <p class="mt-3">
+              Formester is an online form builder that can be used to build
+              Forms, Surveys, Quizzes and Polls. It is a no-code tool with
+              robust data analytics and personalisation features. Formester has
+              AI powered Spam Protection along with multiple integrations to
+              automate workflow.
+            </p>
+          </div>
+          <div class="d-flex flex-column">
+            <nuxt-img
+              src="/comparision/formester-vs-google-form/google-form-ss.png"
+              class="img-fluid screenshot"
+            />
+            <p class="mt-3">
+              Google Forms is a free web form builder. It can be used to create
+              basic surveys and questionnaires with ease, suitable for casual
+              gatherings and simple data collection. Google forms is a vastly
+              popular tool but has limited design options, integrations and
+              functionality.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <comparision-table
       heading="Feature Comparision"
       description="Let’s have a look at the detailed feature comparison between Formester and Google Forms to help you pick the right option based on your form building needs."
@@ -359,6 +395,10 @@ export default {
 .section__subtitle {
   font-size: var(--ft-big-body);
   line-height: 30px;
+}
+
+.screenshot {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 768px) {
