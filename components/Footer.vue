@@ -229,8 +229,8 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/formester-vs-google-form/" class="footer__link">
-                  Formester vs Google Form
+                <NuxtLink to="/formester-vs-google-forms/" class="footer__link">
+                  Formester vs Google Forms
                 </NuxtLink>
               </li>
               <li class="mt-2">

@@ -6,7 +6,7 @@
       <div
         class="d-flex flex-column align-items-center justify-content-center horizontal__padding"
       >
-        <h2 class="section__heading">Formester vs Google Form</h2>
+        <h2 class="section__heading">Formester vs Google Forms</h2>
         <div class="d-flex flex-column flex-md-row gap-10 mt-4">
           <div class="d-flex flex-column">
             <nuxt-img
@@ -146,69 +146,69 @@ export default {
         {
           title: 'HTML Form Backend Service',
           formester: 'Yes',
-          googleForm: 'No',
+          otherForm: 'No',
         },
         {
           title: 'Professional Deisgned Templates',
           formester: '100+',
-          googleForm: '15',
+          otherForm: '15',
         },
         {
           title: 'Online Order and Payment Processing',
           formester: 'Yes',
-          googleForm: 'No',
+          otherForm: 'No',
         },
         {
           title: 'Form Design and Customization',
           formester:
             'Customisation capability with complete control over the look, feel, background buttons, question types and font etc.',
-          googleForm:
+          otherForm:
             'Limited cutomisation ability to only add/change header image.',
         },
         {
           title: 'File Upload',
           formester: 'Yes',
-          googleForm: 'Restricted',
+          otherForm: 'Restricted',
         },
         {
           title: 'White Labeling',
           formester: 'Yes',
-          googleForm: 'No',
+          otherForm: 'No',
         },
         {
           title: 'Integrations',
           formester: 'Yes',
-          googleForm: 'No',
+          otherForm: 'No',
         },
         {
           title: 'Conditional Logic',
           formester: 'Yes',
-          googleForm: 'No',
+          otherForm: 'No',
         },
         {
           title: 'Conditional Responder',
           formester: 'Yes',
-          googleForm: 'No',
+          otherForm: 'No',
         },
         {
           title: 'Mobile Optimised Forms',
           formester: 'Yes',
-          googleForm: 'No',
+          otherForm: 'No',
         },
         {
           title: 'Reporting and Analytics',
           formester: 'Advanced Analytics with Actionable Insights',
-          googleForm: 'Basic',
+          otherForm: 'Basic',
         },
         {
           title: 'Available Offline',
           formester: 'Yes',
-          googleForm: 'No',
+          otherForm: 'No',
         },
         {
           title: 'E-Signature Support',
           formester: 'Yes',
-          googleForm: 'No',
+          otherForm: 'No',
         },
       ],
       relatedComparisons: [
@@ -276,7 +276,7 @@ export default {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/formester-vs-google-form/',
+        url: 'https://formester.com/formester-vs-google-forms/',
         title: 'Formester vs Google Form | Google Form Alternative - Formester',
         description:
           'Powerful Google Form alternative - Try Formester for Online, No-Code Forms & Surveys! Advanced Features & Integrations | Sign-up for Free!',
@@ -351,7 +351,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/formester-vs-google-form/',
+          href: 'https://formester.com/formester-vs-google-forms/',
         },
       ],
     }

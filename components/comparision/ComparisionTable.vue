@@ -9,7 +9,12 @@
         <thead class="bg__light-primary">
           <tr>
             <th scope="col">Features</th>
-            <th scope="col" v-for="header in headers" :key="header" class="text-center">
+            <th
+              scope="col"
+              v-for="header in headers"
+              :key="header"
+              class="text-center"
+            >
               {{ header }}
             </th>
           </tr>
@@ -29,14 +34,14 @@
               </template>
             </td>
             <td class="text-center">
-              <template v-if="c.googleForm === 'Yes'">
+              <template v-if="c.otherForm === 'Yes'">
                 <nuxt-img src="check-green.svg" />
               </template>
-              <template v-else-if="c.googleForm === 'No'">
+              <template v-else-if="c.otherForm === 'No'">
                 <nuxt-img src="red-cross.svg" />
               </template>
               <template v-else>
-                {{ c.googleForm }}
+                {{ c.otherForm }}
               </template>
             </td>
           </tr>
