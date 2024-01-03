@@ -2,7 +2,7 @@
   <div>
     <comparision-hero
       heading="Switch to <span class='hglight'>Formester</span> and craft interactive web forms – Perfect Alternative to Microsoft Forms"
-      description="Ditch the dry design and limited integrations of Microsoft Forms. Optimise your data collection with beautiful, personalised forms that captivate audiences, streamline orders, and automate workflows like magic. Forget coding headaches - our intuitive drag-and-drop interface empowers everyone to be a form-building pro."
+      description="Ditch the dry design and limited integrations of Microsoft Forms. Optimise your data collection with beautiful, personalised forms that captivate audiences, streamline orders, and automate workflows like magic. <span class='hglight'>Forget coding headaches - our intuitive drag-and-drop interface empowers everyone to be a form-building pro.</span>"
       imgLink="formester-vs-microsoft-forms/formester-vs-mirosoft-forms-hero-image"
       imgAlt="Formester vs Microsoft Forms"
     />
@@ -62,16 +62,20 @@
             <p class="section__subtitle mt-3">
               Although Microsoft Forms is a popular tool that works well within
               Microsoft Suite, it is more suitable for simple forms or surveys.
-              It has many limitations like limited question types, restricted
-              logic rules and no third-party integrations that make it
-              unsuitable for complex forms.
+              <span class="hglt-text">
+                It has many limitations like limited question types, restricted
+                logic rules and no third-party integrations that make it
+                unsuitable for complex forms.
+              </span>
             </p>
             <p class="section__subtitle mt-3">
-              Formester, on the other hand, offers advanced form building
-              features like Conditional Logic, AI Powered Spam Protection, HTML
-              Form Backend and Payment Processing. Formester is the perfect
-              choice if you require professional looking online forms with
-              advanced features.
+              <span class="hglt-text">
+                Formester, on the other hand, offers advanced form building
+                features like Conditional Logic, AI Powered Spam Protection,
+                HTML Form Backend and Payment Processing.
+              </span>
+              Formester is the perfect choice if you require professional
+              looking online forms with advanced features.
             </p>
           </div>
           <div
@@ -127,7 +131,7 @@ export default {
         {
           title: 'HTML Form Backend Service',
           formester: 'Yes',
-          otherForm: 'No',
+          otherForm: 'Yes',
         },
         {
           title: 'Professional Deisgned Templates',
@@ -144,22 +148,22 @@ export default {
           formester:
             'Customisation capability with complete control over the look, feel, background buttons, question types and font etc.',
           otherForm:
-            'Limited cutomisation ability to only add/change header image.',
+            'Limited customisation ability to only add pictures or logos.',
         },
         {
           title: 'File Upload',
           formester: 'Yes',
-          otherForm: 'Restricted',
+          otherForm: 'Limited',
         },
         {
           title: 'White Labeling',
           formester: 'Yes',
-          otherForm: 'No',
+          otherForm: 'Limited',
         },
         {
           title: 'Integrations',
-          formester: 'Yes',
-          otherForm: 'No',
+          formester: 'Multiple Third Party Integrations',
+          otherForm: 'Limited to Microsoft Suite',
         },
         {
           title: 'Conditional Logic',
@@ -178,8 +182,8 @@ export default {
         },
         {
           title: 'Reporting and Analytics',
-          formester: 'Advanced Analytics with Actionable Insights',
-          otherForm: 'Basic',
+          formester: 'Advanced Analytics with Data Breakdown',
+          otherForm: 'Basic reporting with Charts and Graphs',
         },
         {
           title: 'Available Offline',
@@ -195,7 +199,7 @@ export default {
           title: 'Collaboration',
           formester:
             'Real-time multi user collaboration with access control and analytics.',
-          otherForm: 'Limited',
+          otherForm: 'Paid Feature',
         },
         {
           title: 'Captcha',
@@ -286,9 +290,9 @@ export default {
         type: 'website',
         url: 'https://formester.com/formester-vs-microsoft-forms/',
         title:
-          'Formester vs Microsoft Forms | Microsoft Forms Alternative - Formester',
+          'Formester vs Microsoft Forms | Best Microsoft Forms Alternative',
         description:
-          'Powerful Microsoft Forms alternative - Try Formester for Online, No-Code Forms & Surveys! Advanced Features & Integrations | Sign-up for Free!',
+          'Effortlessly craft captivating web forms with Formester - Detailed feature comparison of Formester and Microsoft Forms!',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with formester vs microsoft-forms page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs microsoft-forms page image alt
@@ -354,8 +358,7 @@ export default {
   },
   head() {
     return {
-      title:
-        'Formester vs Microsoft Forms | Microsoft Forms Alternative - Formester',
+      title: 'Formester vs Microsoft Forms | Best Microsoft Forms Alternative',
       meta: [...this.meta],
       link: [
         {
@@ -370,9 +373,9 @@ export default {
     return {
       '@context': 'http://schema.org',
       '@type': 'Corporation',
-      name: 'Formester vs Microsoft Forms | Microsoft Forms Alternative - Formester',
+      name: 'Formester vs Microsoft Forms | Best Microsoft Forms Alternative',
       description:
-        'Powerful Microsoft Forms alternative - Try Formester for Online, No-Code Forms & Surveys! Advanced Features & Integrations | Sign-up for Free!',
+        'Effortlessly craft captivating web forms with Formester - Detailed feature comparison of Formester and Microsoft Forms!',
       logo: 'https://formester.com/logo.png',
       url: 'https://formester.com',
       address: {

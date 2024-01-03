@@ -6,9 +6,7 @@
           class="col-lg-7 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start"
         >
           <h1 class="section__heading" v-html="heading"></h1>
-          <p class="section__subtitle mt-3">
-            {{ description }}
-          </p>
+          <p class="section__subtitle mt-3" v-html="description"></p>
           <a
             href="https://app.formester.com/users/sign_up"
             class="btn button hero__button mt-4"
@@ -69,6 +67,10 @@ export default {
 .section__subtitle {
   font-size: var(--ft-big-body);
   line-height: 30px;
+}
+
+.hglt-text {
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {
