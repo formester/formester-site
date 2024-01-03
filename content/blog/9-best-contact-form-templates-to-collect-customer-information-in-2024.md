@@ -36,7 +36,7 @@ Once the form is submitted, it is sent to the jewellery store's email address. T
 
 This contact form is a valuable tool for jewellery businesses. It allows them to easily and quickly communicate with their customers, which can help in improving customer satisfaction.
 
-## 2) [Newsletter Signup Form Template - Formsite﻿](https://www.formsite.com/templates/contact-form-templates/newsletter-signup-form/)
+### 2) [Newsletter Signup Form Template - Formsite﻿](https://www.formsite.com/templates/contact-form-templates/newsletter-signup-form/)
 
 The template is designed to be integrated into a website to allow visitors to opt-in to a newsletter. The form is simple and straightforward, with only one required field for the user's email address. ﻿
 
@@ -46,7 +46,7 @@ The template is easy to integrate with WordPress and other platforms, and it can
 
 A basic and effective newsletter signup form template that is likely to be successful in converting website visitors into subscribers.﻿
 
-## 3﻿) [Online Emergency Contact Information Form – WufooForms](https://www.wufoo.com/gallery/templates/forms/emergency-contact-information-form/)
+### 3﻿) [Online Emergency Contact Information Form – WufooForms](https://www.wufoo.com/gallery/templates/forms/emergency-contact-information-form/)
 
 Online Emergency Contact Information Form is a valuable tool for schools, companies, and event coordinators. It can help you in staying prepared for unforeseen situations by efficiently collecting and organizing essential contact details. 
 
@@ -54,7 +54,7 @@ Whether managing a group of minors, coordinating events, or overseeing a company
 
 Gather critical data such as emergency contact names, addresses, phone numbers, and relationships, with an additional space for important notes on allergies and medical information.
 
-## 4﻿) [Game Contact Form – Jotform](https://www.jotform.com/form-templates/contact-form-with-gaming-theme)
+### 4﻿) [Game Contact Form – Jotform](https://www.jotform.com/form-templates/contact-form-with-gaming-theme)
 
 This game contact form template is designed to help game developers gather feedback and information from players. The form has only three fields i.e. Name, Email and Message.
 
@@ -64,7 +64,7 @@ The template is easy to customize and can be integrated into a website or game. 
 
 This is a well-designed game contact form template that is likely to be useful for game developers.
 
-## 5﻿) [Callback Request Form Template – Typeform](https://www.typeform.com/templates/t/call-back-form-template/)
+### 5﻿) [Callback Request Form Template – Typeform](https://www.typeform.com/templates/t/call-back-form-template/)
 
 This callback request form template allows customers to conveniently schedule a call with a business. The form allows customers to pick a preferred date and time, alongside a text box to note their reason for the call. 
 
@@ -74,7 +74,7 @@ This way, customers get a faster resolution to their queries, while the business
 
 Use this form on your website to accept customer callback requests effortlessly.
 
-## 6) [Consultation Form Template - Paperform﻿](<Consultation Form Template - Paperform>)
+### 6) [Consultation Form Template - Paperform﻿](<Consultation Form Template - Paperform>)
 
 This form template from paperform can help you collect client consultation requests.
 It provides an efficient solution for client consultation requests with this customisable form template. 
@@ -83,7 +83,7 @@ Users can initiate edits by clicking "Use this template" below. The form present
 
 Schedule meeting with precision by linking Google Calendar, specifying availability, and tailoring meeting lengths—options ranging from 15 to 60 minutes—for a personalised consultation experience.
 
-## 7) [Guest List Form – Formester﻿](templates/guest-list-form-1910/)
+### 7) [Guest List Form – Formester﻿](templates/guest-list-form-1910/)
 
 Guest List Form is a tool used to collect essential information about attendees for an event or gathering. It helps event organisers keep track of guest details, manage RSVPs, and ensure a comfortable experience for all participants.
 
@@ -91,7 +91,7 @@ This Guest List Form Template by Formester is a useful tool to collect informati
 
 The collected information through guest list form can help you organise the event better and take care of all the guest requirements in advance.
 
-## 8﻿) [Complaint Form Template – Formstack](https://www.formstack.com/templates/complaint-form)
+### 8﻿) [Complaint Form Template – Formstack](https://www.formstack.com/templates/complaint-form)
 
 This Customer Complaint Form Template includes sections for customer information, product or service details, a description of the complaint, and desired resolution. There is also a space for long answers, so customers can thoroughly explain their concerns.
 
@@ -99,7 +99,7 @@ The form makes it easy to collect and resolve customer complaints with this temp
 
 This contact form template is designed to help businesses collect customer feedback and resolve complaints in a way that is easy for both the customer and the business.
 
-## 9﻿) [Request a Quote Form – Gravity Forms](https://www.gravityforms.com/form-templates/request-a-quote/)
+### 9﻿) [Request a Quote Form – Gravity Forms](https://www.gravityforms.com/form-templates/request-a-quote/)
 
 This form template invites potential customers to provide their contact information and project specifics to receive a tailored price quote. It simplifies the process for both parties, offering convenience and efficacy.
 
