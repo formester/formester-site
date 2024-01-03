@@ -9,14 +9,14 @@
             <h3 class="section__heading">
               <span v-if="content.heading">{{ content.heading }}</span>
               <span v-else>
-                Build <span class="hglt">Impactful forms</span> within minutes
+                Create your first form for <span class="hglt">free</span>
               </span>
             </h3>
             <h2 class="section__subtitle mt-3">
               <span class="hglt">
                 {{
                   content.subHeading ||
-                  'With Formester, creating forms is easier than ever'
+                  'With the most intuitive form creator out there'
                 }}
               </span>
             </h2>
@@ -33,12 +33,13 @@
               >
                 {{ content.btnPrimary || 'Create Now' }}
               </a>
-              <NuxtLink
-                :to="content.btnSecondaryLink || '/contact/'"
+              <a
+                target="_blank"
+                :href="content.btnSecondaryLink || 'https://app.zencal.io/u/ankit/formester'"
                 class="btn button cta-button__invert mx-2"
               >
-                {{ content.btnSecondary || 'Contact Us' }}
-              </NuxtLink>
+                {{ content.btnSecondary || 'Book a Demo' }}
+            </a>
             </div>
             <nuxt-img
               src="/plane.png"

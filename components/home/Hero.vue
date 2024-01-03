@@ -6,11 +6,10 @@
           class="col-lg-6 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start"
         >
           <h1 class="hero__heading">
-            The Only No-Code <span class="hglight">Form</span> Builder You Need
+            Best <span class="hglight">No Code</span> Form Builder
           </h1>
           <p class="hero__subheading mt-3">
-            Build forms in minutes with drag and drop interface or integrate
-            with your existing HTML form using our no-code form builder.
+            Create elegent forms, surveys and quizzes your audience will love to answer.
           </p>
           <a
             href="https://app.formester.com/users/sign_up"
