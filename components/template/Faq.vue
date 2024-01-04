@@ -21,7 +21,12 @@
           data-bs-parent="#accordionFaqs"
         >
           <div class="accordion-body">
-            {{ faq.answer }}
+            <p class="mb-2">{{ faq.answer }}</p>
+            <ul v-if="faq.list">
+              <li v-for="(item, idx) in faq.list" :key="`list-item-${idx}`">
+                {{ item }}
+              </li>
+            </ul>
           </div>
         </div>
       </div>
