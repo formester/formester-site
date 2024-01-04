@@ -157,6 +157,11 @@ export default {
           description: 'Collaborate with team members',
           linkName: 'collaboration',
         },
+        {
+          title: 'Offline Forms',
+          description: 'Form submission offline',
+          linkName: 'offline-forms',
+        },
       ],
     }
   },
