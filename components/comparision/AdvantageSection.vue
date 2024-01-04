@@ -13,7 +13,7 @@
           class="card p-4 d-flex align-items-center justify-items-center text-center align-items-md-start text-md-start"
         >
           <nuxt-img
-            :src="`/${feature.imageSrc}`"
+            :src="feature.imageSrc"
             class="img-fluid"
             :alt="feature.altText"
             loading="lazy"

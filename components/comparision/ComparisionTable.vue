@@ -20,7 +20,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="c of comparisions" :key="c[0]">
+          <tr v-for="c of comparisions" :key="c.title">
             <td style="font-weight: 600" v-html="c.title"></td>
             <td class="text-center">
               <template v-if="c.formester === 'Yes'">

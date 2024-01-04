@@ -41,10 +41,6 @@ export default {
       type: String,
       required: true,
     },
-    imgLink: {
-      type: String,
-      required: true,
-    },
   },
 }
 </script>
