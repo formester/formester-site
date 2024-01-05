@@ -10,13 +10,13 @@
               Offline Forms for Uninterrupted Data Collection: Anytime, Anywhere
             </h1>
             <p class="hero__subheading mt-3">
-              (change) Stay connected to your forms and collect submissions even
-              in no network zones with our mobile app
+              Stay connected to your forms and collect submissions even in no
+              network zones with our offline forms
             </p>
             <a
               href="https://app.formester.com/users/sign_up"
               class="hero__invert__button mt-4"
-              >Get Started - it's Free</a
+              >Create Now</a
             >
           </div>
           <div
@@ -58,6 +58,11 @@
       </div>
     </div>
 
+    <ProcessSteps
+      heading="Simple 3 step process: How offline forms work? "
+      :steps="howOfflineFormWorks"
+    />
+
     <Testimonial :testimonials="randomTestimonials" />
     <TemplateSection />
     <CallToActionSection />
@@ -67,11 +72,12 @@
 
 <script>
 import CallToActionSection from '@/components/CallToActionSection.vue'
-import FeatureDetail from '../../components/FeatureDetail.vue'
+import FeatureDetail from '@/components/FeatureDetail.vue'
 import Testimonial from '@/components/Testimonial.vue'
 import { allTestimonials } from '@/constants/testimonials'
-import TemplateSection from '../../components/TemplateSection.vue'
+import TemplateSection from '@/components/TemplateSection.vue'
 import Faqs from '@/components/template/Faq.vue'
+import ProcessSteps from '@/components/ProcessSteps.vue'
 
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
@@ -83,6 +89,7 @@ export default {
     Testimonial,
     TemplateSection,
     Faqs,
+    ProcessSteps,
   },
   computed: {
     meta() {
@@ -245,6 +252,28 @@ export default {
             'Events: Gather registrations, feedback, or surveys at conferences, trade shows, or festivals.',
             'Retail: Enable offline transactions or customer surveys in stores.',
           ],
+        },
+      ],
+      howOfflineFormWorks: [
+        {
+          description:
+            'Sign In to your Formester account and build a Contact Form, Lead Gen Form, or Feedback Form. You can also use any pre-designed template from our library.',
+          imageSrc: 'features/offline-forms/step1.svg',
+          imageAlt:
+            'ui to create new form and few graphics showing ready made templates',
+        },
+        {
+          description:
+            "Visit the 'Advanced' section in the form builder to activate the 'Allow Form to Work Offline' option, and then proceed to the survey page to install the form as an app.",
+          imageSrc: 'features/offline-forms/step2.svg',
+          imageAlt: 'ui to enable the allow form to work offline',
+        },
+        {
+          description:
+            'Once your form is loaded properly, you can start collecting submissions, even if the internet is disabled (all submissions will sync when you get online).',
+          imageSrc: 'features/offline-forms/step3.svg',
+          imageAlt:
+            'mockup ui of submission page with a internet not available symbol',
         },
       ],
     }
