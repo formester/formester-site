@@ -23,9 +23,11 @@ A great website design has multiple elements, User Interface, User Experience, I
 
 A [contact form](/blog/contact-forms-101-lead-generation-user-engagement-more/) lets your clients or website users provide you with invaluable feedback that can be used to improve your website. Moreover, the Contact Form helps you in lead generation so you can reach out to your potential audience. It does not matter what kind of website or business you own, you need a contact form on your website to connect with the users.﻿
 
-In this blog, we will cover how to design contact forms strategically, covering everything from placement and design to personalised incentives and follow-up strategies. The blog offers valuable insights to help you transform your contact forms into powerful tools for driving conversions﻿
+In this blog, we will cover how to design contact forms strategically, covering everything from placement and design to personalised incentives and follow-up strategies. The blog offers valuable insights to help you transform your contact forms into powerful tools for driving conversions﻿ and data collection.
 
 ## 16 Design Tips to Create a Contact form for your Website﻿
+
+![Infographic of 16 Design Tips to Create a Contact form for your Website﻿](/img/16-design-tips-for-contact-forms.png)
 
 ### 1. Placement and Visibility﻿
 
