@@ -239,7 +239,7 @@ export default {
         },
         {
           question:
-            'What types of forms can I add to my WordPress blog or site with Formester?',
+            'What are the benefits of using offline forms?',
           answer: 'Offline forms offer several advantages, including:',
           list: [
             'Increased productivity: Eliminate delays caused by slow or unavailable internet connections.',
@@ -250,7 +250,7 @@ export default {
         },
         {
           question:
-            'Why should I integrate Formester forms with my WordPress site?',
+            'What types of businesses can benefit from offline forms?',
           answer:
             'Offline forms can be valuable for a wide range of industries, including:',
           list: [
