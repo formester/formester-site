@@ -3,7 +3,9 @@
     <h2 class="section__heading text-center">
       {{ heading }}
     </h2>
-    <p>{{ description }}</p>
+    <p class="text-center">
+      {{ description }}
+    </p>
     <div class="steps-container px-3 py-5 d-flex flex-column flex-lg-row">
       <div
         v-for="(step, index) in steps"
