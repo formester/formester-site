@@ -220,7 +220,7 @@ export default {
           title: 'Uninterrupted',
           description:
             'Simplify data collection without any interruptions during fieldwork at isolated locations with limited connectivity.',
-          imageSrc: 'features/offline-forms/icons/uninterrupted.svg',
+          imageSrc: 'features/offline-forms/icons/Uninterrupted.svg',
           altText: 'icon showing storage for storing datas',
         },
         {
@@ -298,10 +298,10 @@ export default {
           img: '/features/offline-forms/icons/auto-responder.svg',
         },
         {
-          title: 'Offline Forms',
+          title: 'Information Recall',
           description:
             'Reference previous answers provided offline, allowing for a personalized user experience.',
-          img: '/features/offline-forms/icons/offline-forms.svg',
+          img: '/features/offline-forms/icons/information-recall.svg',
         },
         {
           title: 'Form Analytics',
