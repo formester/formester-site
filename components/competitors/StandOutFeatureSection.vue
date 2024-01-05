@@ -10,7 +10,7 @@
       <div
         v-for="feature in features"
         :key="feature.title"
-        class="col-md-4 col-sm-6 mt-5"
+        :class="columnClass"
       >
         <div
           class="border-sm-none border-start ps-3 d-flex flex-column align-items-start"
@@ -40,6 +40,27 @@ export default {
       type: Array,
       required: true,
     },
+    columnCount: {
+      type: Number,
+      default: 3,
+      validator(value) {
+        return [2, 3, 4].includes(value)
+      },
+    },
+  },
+  computed: {
+    columnClass() {
+      switch (this.columnCount) {
+        case 2:
+          return 'col-md-6 col-sm-6 mt-5'
+        case 3:
+          return 'col-md-4 col-sm-6 mt-5'
+        case 4:
+          return 'col-md-3 col-sm-6 mt-5'
+        default:
+          return 'col-md-4 col-sm-6 mt-5'
+      }
+    },
   },
 }
 </script>
@@ -49,10 +70,20 @@ export default {
   font-size: 18px;
   font-weight: 500;
   line-height: 26px;
+  position: relative;
 }
 
 .subheading__text {
   font-size: 14px;
   line-height: 22px;
+}
+
+.sub__section-heading::before {
+  content: '';
+  position: absolute;
+  left: -17px;
+  height: 100%;
+  width: 1.5px;
+  background-color: var(--clr-primary);
 }
 </style>

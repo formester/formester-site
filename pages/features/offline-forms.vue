@@ -62,6 +62,11 @@
       heading="Simple 3 step process: How offline forms work? "
       :steps="howOfflineFormWorks"
     />
+    <StandOutFeatureSection
+      heading="Make most of your Offline Forms"
+      :features="makeMostOfYourOfflineForms"
+      :columnCount="4"
+    />
 
     <Testimonial :testimonials="randomTestimonials" />
     <TemplateSection />
@@ -78,6 +83,7 @@ import { allTestimonials } from '@/constants/testimonials'
 import TemplateSection from '@/components/TemplateSection.vue'
 import Faqs from '@/components/template/Faq.vue'
 import ProcessSteps from '@/components/ProcessSteps.vue'
+import StandOutFeatureSection from '@/components/competitors/StandOutFeatureSection.vue'
 
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
@@ -90,24 +96,26 @@ export default {
     TemplateSection,
     Faqs,
     ProcessSteps,
+    StandOutFeatureSection,
   },
   computed: {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/features/information-recall/',
-        title: 'Information Recall - Formester',
+        url: 'https://formester.com/features/offline-forms/',
+        title:
+          'Offline Forms for Uninterrupted Data Collection: Anytime, Anywhere',
         description:
-          "Create personalized and interactive form & survey experiences - Formester's Information Recall | Answer recall, Dynamic variables & more!",
+          'Stay connected to your forms and collect submissions even in no network zones with our offline forms',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with auto-responder page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
         keywords: [
-          'formester web forms with information recall feature',
-          'Information Recall',
-          'Web forms Information Recall',
-          'Information Recall for web forms',
-          'Information Recall web forms',
+          'formester web forms with offline forms feature',
+          'Offline Forms',
+          'Web forms Offline Forms',
+          'Offline Forms for web forms',
+          'Offline Forms web forms',
           'web forms for customer support',
           'Best Autoresponder Software in 2023',
           'web forms productivity',
@@ -141,13 +149,13 @@ export default {
   },
   head() {
     return {
-      title: 'Information Recall - Formester',
+      title: 'Offline Forms | Formester',
       meta: [...this.meta],
       link: [
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/features/information-recall/',
+          href: 'https://formester.com/features/offline-forms/',
         },
       ],
     }
@@ -159,9 +167,9 @@ export default {
         {
           '@type': 'Corporation',
           '@id': 'https://acornglobus.com',
-          name: 'Information - Formester',
+          name: 'Offline Forms for Uninterrupted Data Collection: Anytime, Anywhere',
           description:
-            "Create personalized and interactive form & survey experiences - Formester's Information Recall | Answer recall, Dynamic variables & more!",
+            'Stay connected to your forms and collect submissions even in no network zones with our offline forms',
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
           address: {
@@ -183,8 +191,8 @@ export default {
             {
               '@type': 'ListItem',
               position: 2,
-              name: 'Information Recall',
-              item: 'https://formester.com/features/information-recall/',
+              name: 'Offline Forms',
+              item: 'https://formester.com/features/offline-forms/',
             },
           ],
         },
@@ -274,6 +282,32 @@ export default {
           imageSrc: 'features/offline-forms/step3.svg',
           imageAlt:
             'mockup ui of submission page with a internet not available symbol',
+        },
+      ],
+      makeMostOfYourOfflineForms: [
+        {
+          title: 'Conditional Logic',
+          description:
+            'Create intelligent forms that adapt based on user responses, ensuring a dynamic experience whether online or offline.',
+          img: '/features/offline-forms/icons/conditional-logic.svg',
+        },
+        {
+          title: 'Auto Responder',
+          description:
+            'Set up automated responses to engage users even with offline submissions, providing instant confirmation messages upon reconnection.',
+          img: '/features/offline-forms/icons/auto-responder.svg',
+        },
+        {
+          title: 'Offline Forms',
+          description:
+            'Reference previous answers provided offline, allowing for a personalized user experience.',
+          img: '/features/offline-forms/icons/offline-forms.svg',
+        },
+        {
+          title: 'Form Analytics',
+          description:
+            'Collect user engagement insights even when offline, and receive comprehensive analytics once the connection is restored.',
+          img: '/features/offline-forms/icons/form-analytics.svg',
         },
       ],
     }
