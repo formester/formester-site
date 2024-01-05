@@ -333,10 +333,12 @@ export default {
 .hero__image {
   height: 100%;
 }
+
 .subheading__text {
   font-size: 16px;
   margin-top: 12px;
 }
+
 .templates {
   width: 100%;
   display: grid;
@@ -352,6 +354,17 @@ export default {
 @media (max-width: 992px) {
   .feature__hero {
     padding-block: 4em;
+  }
+
+  .templates {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .templates {
+    margin-top: 16px;
+    grid-template-columns: 1fr;
   }
 }
 </style>
