@@ -195,7 +195,7 @@ F﻿eeling inspired to create a Contact Form for your website today? We will wal
 
 ## How to Create a Contact Form using Formester: Step-by-Step Guide
 
-![Infographic showing: How to Create a Contact Form using Formester: Step-by-Step Guide: Step 1: Sign Up and Log In | Step 2: Create a New Form OR Choose a Template | Step 3: Add Form Fields & Customize Form Fields | Step 4: Design and Styling | Step 5: Set up Information Recall | Step 6: Form Settings ](/img/how-to-create-a-contact-form-using-formester_-step-by-step-guide-1-min.png "How to Create a Contact Form using Formester: Step-by-Step Guide: Steps 1 - 6")
+![Infographic showing: Step-by-Step Guide of how to Create a Contact Form using Formester](/img/how-to-create-a-contact-form-using-formester-step-by-step-guide-1-.png)
 
 ### Step 1: Sign Up and Log In
 
@@ -230,8 +230,6 @@ Information recall pre-populates certain form fields based on user input. Make s
 In the **Settings** section, configure general settings for your form. Also under the Auto-responder Tab, you can set up notifications to receive an email whenever a user submits the form.
 
 You can also **customize the "Thank You" message** users see after submitting the form.
-
-![Infographic showing: How to Create a Contact Form using Formester: Step-by-Step Guide: Step 7: Integrations (Optional) | Step 8:Test & Publish the Form | Step 9: Monitor Responses](/img/how-to-create-a-contact-form-using-formester_-step-by-step-guide-min.png "How to Create a Contact Form using Formester: Step-by-Step Guide: Steps 7 - 9")
 
 ### Step 7: Integrations (Optional)
 
