@@ -155,7 +155,7 @@ Not only are contact forms the preferred choice for users, but they also hold si
 
 L﻿et's have a look at 7 ways how having a well designed contact form benefits your business:
 
-![Infographic showing: Benefits of a Contact Form on the Business Front: 1. Streamlined Communication  2. Efficiency  3. Lead Generation 4. Data Collection and Analysis  5. Automation  6. Privacy and Security  7. CRM Integration](/img/benefits-of-a-contact-form-on-the-business-front-min.png "Benefits of a Contact Form on the Business Front")
+![Infographic showing the benefits of a Contact Form for your Business](/img/benefits-of-contact-forms-for-business.png "Benefits of a Contact Form for your Business")
 
 **1. Streamlined Communication** - Contact forms provide a structured way for businesses to receive inquiries and messages. This ensures that the information businesses receive is organized and easy to manage. 
 
@@ -175,7 +175,7 @@ L﻿et's have a look at 7 ways how having a well designed contact form benefits 
 
 L﻿et's have a look at how contact form benefits the users of your website and potential clients:
 
-![Infographic showing: Benefits of a Contact Form on the User Front: 1. Convenience  2. User-Friendly Interface  3. Reduced Effort  4. Privacy  5. Immediate Confirmation  6. Structured Interaction 7. Focused Purpose ](/img/benefits-of-a-contact-form-on-the-user-front-min.png "Benefits of a Contact Form on the User Front")
+![Infographic showing the Benefits of a Contact Form for Website Users](/img/benefits-of-contact-forms-for-users.png "Benefits of a Contact Form for Website Users")
 
 **1. Convenience** - Contact forms are available 24/7, allowing users to get in touch at their convenience. This accommodates different time zones and user schedules.
 
