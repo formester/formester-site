@@ -212,7 +212,7 @@ export default {
         {
           title: 'Connected',
           description:
-            'Create, Edit and Manage your forms by staying connected even when you are offline. The changes will sync up as soon as you are back online!',
+            'Collect form submissions by staying connected even when you are offline. The responses will sync up as soon as you are back online!',
           imageSrc: 'features/offline-forms/icons/connected.svg',
           altText: 'icon showing personlization',
         },
@@ -224,10 +224,10 @@ export default {
           altText: 'icon showing storage for storing datas',
         },
         {
-          title: 'Efficient',
+          title: 'Flexible ',
           description:
-            'Save resources and increase productivity by getting form submissions without worrying about the internet costs!',
-          imageSrc: 'features/offline-forms/icons/efficient.svg',
+            'The forms can be installed on tablets, phones and laptops as apps which can then be accessed at any point of time without the internet.',
+          imageSrc: 'features/offline-forms/icons/flexible.svg',
           altText: 'icon showing work flows',
         },
       ],
