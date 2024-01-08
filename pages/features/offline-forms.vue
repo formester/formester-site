@@ -63,7 +63,7 @@
       :steps="howOfflineFormWorks"
     />
     <StandOutFeatureSection
-      heading="Make most of your Offline Forms"
+      heading="Make the most of your Offline Forms"
       :features="makeMostOfYourOfflineForms"
       :columnCount="4"
     />
