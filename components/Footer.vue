@@ -146,6 +146,11 @@
                   Collaboration
                 </NuxtLink>
               </li>
+              <li class="mt-2">
+                <NuxtLink to="/features/offline-forms/" class="footer__link">
+                  Offline Forms
+                </NuxtLink>
+              </li>
             </ul>
           </div>
 

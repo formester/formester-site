@@ -212,7 +212,7 @@
       </div>
     </section>
 
-    <section class="container text-center">
+    <section class="container text-center mb-5">
       <h2 class="section__heading">Other Comparisons</h2>
       <div class="row mt-4 px-2">
         <RelatedArticleCard

@@ -2,7 +2,7 @@
   <div>
     <comparision-hero
       heading="Switch to <span class='hglight'>Formester</span> and craft interactive web forms – Perfect Alternative to Microsoft Forms"
-      description="Ditch the dry design and limited integrations of Microsoft Forms. Optimise your data collection with beautiful, personalised forms that captivate audiences, streamline orders, and automate workflows like magic. <span class='hglight'>Forget coding headaches - our intuitive drag-and-drop interface empowers everyone to be a form-building pro.</span>"
+      description="Ditch the dry design and limited integrations of Microsoft Forms. Optimise your data collection with beautiful, personalised forms that captivate audiences, streamline orders, and automate workflows like magic. Forget coding headaches - our intuitive drag-and-drop interface empowers everyone to be a form-building pro."
       imgLink="formester-vs-microsoft-forms/formester-vs-mirosoft-forms-hero-image"
       imgAlt="Formester vs Microsoft Forms"
     />
@@ -62,20 +62,23 @@
             <p class="section__subtitle mt-3">
               Although Microsoft Forms is a popular tool that works well within
               Microsoft Suite, it is more suitable for simple forms or surveys.
+              It has many limitations like
               <span class="hglt-text">
-                It has many limitations like limited question types, restricted
-                logic rules and no third-party integrations that make it
-                unsuitable for complex forms.
+                limited question types, restricted logic
               </span>
+              rules and
+              <span class="hglt-text">no third-party integrations</span> that
+              make it unsuitable for complex forms.
             </p>
             <p class="section__subtitle mt-3">
+              Formester, on the other hand, offers advanced form building
+              features like
               <span class="hglt-text">
-                Formester, on the other hand, offers advanced form building
-                features like Conditional Logic, AI Powered Spam Protection,
-                HTML Form Backend and Payment Processing.
+                Conditional Logic, AI Powered Spam Protection, HTML Form Backend
               </span>
-              Formester is the perfect choice if you require professional
-              looking online forms with advanced features.
+              and <span class="hglt-text">Payment Processing</span>. Formester
+              is the perfect choice if you require professional looking online
+              forms with advanced features.
             </p>
           </div>
           <div
@@ -98,7 +101,7 @@
 
     <Testimonial :testimonials="randomTestimonials" />
 
-    <section class="container text-center">
+    <section class="container text-center mb-5">
       <h2 class="section__heading">Other Comparisons</h2>
       <div class="row mt-4 px-2">
         <RelatedArticleCard

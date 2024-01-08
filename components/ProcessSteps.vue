@@ -6,19 +6,8 @@
     <p class="text-center">
       {{ description }}
     </p>
-    <div class="steps-container px-3 py-5 d-flex flex-column flex-lg-row">
-      <div
-        v-for="(step, index) in steps"
-        :key="index"
-        class="row d-flex flex-column-reverse align-items-center justify-content-center"
-      >
-        <div class="mt-5">
-          <span class="step__heading">Step {{ index + 1 }}</span>
-          <h3 class="step__section-heading">{{ step.title }}</h3>
-          <p class="step__section-description">
-            {{ step.description }}
-          </p>
-        </div>
+    <div class="row steps-container px-3 py-5 d-flex flex-column flex-lg-row">
+      <div v-for="(step, index) in steps" :key="index" class="col">
         <div class="d-flex flex-column flex-lg-row">
           <nuxt-img
             :src="step.imageSrc"
@@ -26,6 +15,13 @@
             :alt="step.imageAlt"
             loading="lazy"
           />
+        </div>
+        <div class="mt-5">
+          <span class="step__heading">Step {{ index + 1 }}</span>
+          <h3 class="step__section-heading">{{ step.title }}</h3>
+          <p class="step__section-description">
+            {{ step.description }}
+          </p>
         </div>
       </div>
     </div>

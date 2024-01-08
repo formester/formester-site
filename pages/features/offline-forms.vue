@@ -63,7 +63,7 @@
       :steps="howOfflineFormWorks"
     />
     <StandOutFeatureSection
-      heading="Make most of your Offline Forms"
+      heading="Make the most of your Offline Forms"
       :features="makeMostOfYourOfflineForms"
       :columnCount="4"
     />
@@ -212,7 +212,7 @@ export default {
         {
           title: 'Connected',
           description:
-            'Create, Edit and Manage your forms by staying connected even when you are offline. The changes will sync up as soon as you are back online!',
+            'Collect form submissions by staying connected even when you are offline. The responses will sync up as soon as you are back online!',
           imageSrc: 'features/offline-forms/icons/connected.svg',
           altText: 'icon showing personlization',
         },
@@ -224,10 +224,10 @@ export default {
           altText: 'icon showing storage for storing datas',
         },
         {
-          title: 'Efficient',
+          title: 'Flexible ',
           description:
-            'Save resources and increase productivity by getting form submissions without worrying about the internet costs!',
-          imageSrc: 'features/offline-forms/icons/efficient.svg',
+            'The forms can be installed on tablets, phones and laptops as apps which can then be accessed at any point of time without the internet.',
+          imageSrc: 'features/offline-forms/icons/flexible.svg',
           altText: 'icon showing work flows',
         },
       ],
@@ -239,7 +239,7 @@ export default {
         },
         {
           question:
-            'What types of forms can I add to my WordPress blog or site with Formester?',
+            'What are the benefits of using offline forms?',
           answer: 'Offline forms offer several advantages, including:',
           list: [
             'Increased productivity: Eliminate delays caused by slow or unavailable internet connections.',
@@ -250,7 +250,7 @@ export default {
         },
         {
           question:
-            'Why should I integrate Formester forms with my WordPress site?',
+            'What types of businesses can benefit from offline forms?',
           answer:
             'Offline forms can be valuable for a wide range of industries, including:',
           list: [
@@ -265,7 +265,7 @@ export default {
       howOfflineFormWorks: [
         {
           description:
-            'Sign In to your Formester account and build a Contact Form, Lead Gen Form, or Feedback Form. You can also use any pre-designed template from our library.',
+            'Sign In to your Formester account and create a form. You can also use any pre-designed template from our library.',
           imageSrc: 'features/offline-forms/step1.svg',
           imageAlt:
             'ui to create new form and few graphics showing ready made templates',
