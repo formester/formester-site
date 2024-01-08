@@ -265,7 +265,7 @@ export default {
       howOfflineFormWorks: [
         {
           description:
-            'Sign In to your Formester account and build a Contact Form, Lead Gen Form, or Feedback Form. You can also use any pre-designed template from our library.',
+            'Sign In to your Formester account and create a form. You can also use any pre-designed template from our library.',
           imageSrc: 'features/offline-forms/step1.svg',
           imageAlt:
             'ui to create new form and few graphics showing ready made templates',
