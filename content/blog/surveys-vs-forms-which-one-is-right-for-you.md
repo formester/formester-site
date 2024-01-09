@@ -12,7 +12,7 @@ metaDescription: Not sure if you should use a survey or a form for your next
 keywords: surveys, forms, how is a form different from survey, key differences
   between form and survey
 author: Mriganka Chandra
-authorProfile: Mriganka
+authorProfile: ""
 createdAt: 2022-11-24T06:45:26.363Z
 coverImg: /img/survey-vs-forms__hero.png
 coverImgAlt: Image showing how to create forms and surveys using Formester
