@@ -42,7 +42,7 @@ Enough of and about Academic Quizzes!
 
 That's what we thought when we saw this meme:
 
-![Funny meme showing students' reaction as soon as they hear the word "Quiz"!](/img/damn-here-we-go-again-.gif "Students' reaction as soon as they hear the word \\\"Quiz\\\"!")
+![Funny meme showing students' reaction as soon as they hear the word "Quiz"!](/img/damn-here-we-go-again-.gif "Students' reaction as soon as they hear the word \\\\"Quiz\\\\"!")
 
 The term [Quiz is so heavily coined in the Academic World](/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-you%E2%80%99ll-need-in-2023-1/);
 
@@ -373,4 +373,4 @@ So, whether you're a content creator, marketer, or business owner, it's time to 
 
 With its user-friendly platform, diverse quiz types, and seamless lead capture integration, Formester stands as a leading facilitator of entertainment quizzes.   
 
-[Experience the joy of quiz-making, website engagement and lead generation, all at once with Formester, now!](formester.com/)
+[Experience the joy of quiz-making, website engagement and lead generation, all at once with Formester, now!](https://formester.com/)
