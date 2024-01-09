@@ -74,7 +74,7 @@ This way, customers get a faster resolution to their queries, while the business
 
 Use this form on your website to accept customer callback requests effortlessly.
 
-### 6) [Consultation Form Template - Paperform﻿](<Consultation Form Template - Paperform>)
+### 6) [Consultation Form Template - Paperform﻿](https://paperform.co/templates/consultation-form/)
 
 This form template from paperform can help you collect client consultation requests.
 It provides an efficient solution for client consultation requests with this customisable form template. 
@@ -83,7 +83,7 @@ Users can initiate edits by clicking "Use this template" below. The form present
 
 Schedule meeting with precision by linking Google Calendar, specifying availability, and tailoring meeting lengths—options ranging from 15 to 60 minutes—for a personalised consultation experience.
 
-### 7) [Guest List Form – Formester﻿](templates/guest-list-form-1910/)
+### 7) [Guest List Form – Formester﻿](https://formester.com/templates/guest-list-form-1910/)
 
 Guest List Form is a tool used to collect essential information about attendees for an event or gathering. It helps event organisers keep track of guest details, manage RSVPs, and ensure a comfortable experience for all participants.
 
