@@ -1,11 +1,20 @@
 ---
 title: Top 14 Anti-Spam Wordpress Plugins in 2023
-description: Combat spam & secure your online space! Explore our comprehensive guide to the best anti-spam plugins for WordPress. Enhance user experience & protect your reputation.
-metaTitle: 'Top 14 Anti-Spam WordPress Plugins for 2023: Protect Your Site Now!'
-metaDescription: Combat spam & secure your online space! Explore our comprehensive guide to the best anti-spam plugins for WordPress. Enhance user experience & protect your reputation.
-keywords: WordPress, anti-spam, spam protection, plugins, Akismet, Antispam Bee, WP Cerber, CleanTalk, All In One WP Security, Titan Anti-Spam & Security, Stop Spammers, WordPress Zero Spam, WP Armour, BulletProof Security, Hide My WP, OOPSpam, Spam Master, WP-SpamShield, comments, registrations, emails, security, website security, user experience, SEO, data protection, comment moderation, spam filtering
+description: Combat spam & secure your online space! Explore our comprehensive
+  guide to the best anti-spam plugins for WordPress. Enhance user experience &
+  protect your reputation.
+metaTitle: "Top 14 Anti-Spam WordPress Plugins for 2023: Protect Your Site Now!"
+metaDescription: Combat spam & secure your online space! Explore our
+  comprehensive guide to the best anti-spam plugins for WordPress. Enhance user
+  experience & protect your reputation.
+keywords: WordPress, anti-spam, spam protection, plugins, Akismet, Antispam Bee,
+  WP Cerber, CleanTalk, All In One WP Security, Titan Anti-Spam & Security, Stop
+  Spammers, WordPress Zero Spam, WP Armour, BulletProof Security, Hide My WP,
+  OOPSpam, Spam Master, WP-SpamShield, comments, registrations, emails,
+  security, website security, user experience, SEO, data protection, comment
+  moderation, spam filtering
 author: Siddharth Sharma
-authorProfile: www.linkedin.com/in/sidsh0502
+authorProfile: https://www.linkedin.com/in/sidsh0502/
 createdAt: 2023-12-09T04:32:03.591838
 coverImg: /img/anti-spam-wordpress-plugins.png
 coverImgAlt: Illustration of "Person overwhelmed by many spams"
