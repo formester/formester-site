@@ -11,7 +11,7 @@ metaDescription: Discover why mobile forms differ from desktop forms and how
 keywords: mobile forms vs desktop form, pros of mobile forms, tools to build
   digital forms online
 author: Mriganka Chandra
-authorProfile: Mriganka
+authorProfile: ""
 createdAt: 2022-11-30T05:34:54.396Z
 coverImg: /img/mobile-form-vs-desktop-form__hero.png
 coverImgAlt: Hero image showing title mobile forms vs desktop forms
