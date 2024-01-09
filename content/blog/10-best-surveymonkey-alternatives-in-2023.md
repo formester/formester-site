@@ -11,7 +11,7 @@ keywords: SurveyMonkey alternatives, SurveySparrow, Google Forms, HubSpot
   surveys, Alchemer, QuestionPro, Jotform, Zoho Survey, Qualtrics, Formester,
   Wufoo, survey tools 2023, user-friendly surveys, data collection solutions
 author: Siddharth Sharma
-authorProfile: www.linkedin.com/in/sidsh0502
+authorProfile: https://www.linkedin.com/in/sidsh0502/
 createdAt: 2023-11-20T14:08:17.511Z
 coverImg: /img/surveymonkey_alternative_cover.png
 coverImgAlt: 10 Best SurveyMonkey Alternatives in 2023 Illustration
