@@ -17,7 +17,7 @@ keywords: Paid Survey Apps, Survey Apps for iOS, Survey Apps for Android, Earn
   I-Say, iPoll, Toluna, Daily Scoop, MyPoints, YouGov, LifePoints, MultiPolls,
   Side Income Options
 author: Siddharth Sharma
-authorProfile: www.linkedin.com/in/sidsh0502
+authorProfile: https://www.linkedin.com/in/sidsh0502/
 createdAt: 2023-11-28T16:33:19.772Z
 coverImg: /img/paid-survey-apps.png
 coverImgAlt: Illustration of 17 Best Paid Survey Apps to earn Quick Money
