@@ -12,7 +12,7 @@ metaDescription: Discover How Surveys can Benefit Businesses and learn How to
   Formester's guide.
 keywords: uses of survey, why to use surveys
 author: Mriganka Chandra
-authorProfile: Mriganka Chandra
+authorProfile: ""
 createdAt: 2023-01-20
 coverImg: /img/10-reasons-why-you-are-still-not-doing-surveys.png
 coverImgAlt: Ten reasons why you are still not doing surveys
