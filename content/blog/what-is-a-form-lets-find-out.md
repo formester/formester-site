@@ -16,7 +16,7 @@ keywords: Online forms, Digital communication, Form definition, Importance of
   Event forms, Expense forms, Feedback forms, Information forms, Inspection
   forms, Registration forms, Release forms, HTML forms, Form builder, Formester
 author: Siddharth Sharma
-authorProfile: www.linkedin.com/in/sidsh0502
+authorProfile: https://www.linkedin.com/in/sidsh0502/
 createdAt: 2023-12-01T12:45:14.610Z
 coverImg: /img/what-is-a-form.png
 coverImgAlt: Illustration of "What is a form?"
