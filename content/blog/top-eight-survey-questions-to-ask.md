@@ -11,7 +11,7 @@ keywords: top survey questions to ask customers, what questions to ask for
   survey, best questions to ask on a survey, most popular survey questions, how
   to ask good survey questions, basic survey questions
 author: Mriganka Chandra
-authorProfile: Mriganka
+authorProfile: ""
 createdAt: 2022-11-09T12:08:16.854Z
 coverImg: /img/top-eight-survey-question-to-ask__cover-image.png
 coverImgAlt: Cover image for the blog, "Top 8 Survey Questions to Ask"
