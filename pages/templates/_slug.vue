@@ -37,7 +37,7 @@
       </div>
     </section>
 
-    <Faq v-if="template.faqs" :faqs="template.faqs" />
+    <Faq v-if="!isEmpty(template.faqs)" :faqs="template.faqs" />
 
     <!-- More templates section -->
     <more-templates :categories="categories" :template-slug="template.slug" />
@@ -59,6 +59,7 @@ import getSiteMeta from '../../utils/getSiteMeta'
 import PreviewModal from '../../components/template/PreviewModal.vue'
 import MoreTemplates from '../../components/template/MoreTemplates.vue'
 import Faq from '../../components/template/Faq.vue'
+import isEmpty from 'lodash/isEmpty'
 
 export default {
   components: {
@@ -175,7 +176,7 @@ export default {
       {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        mainEntity: this.faqsSchema,
+        ...(this.faqSchema ? { mainEntitty: this.faqSchema } : {}),
       },
     ]
   },
@@ -192,6 +193,7 @@ export default {
     closePreviewModal() {
       this.showPreviewModal = false
     },
+    isEmpty,
   },
 }
 </script>
