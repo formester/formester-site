@@ -280,6 +280,11 @@ nav {
     grid-template-columns: repeat(2, 1fr) !important;
     padding-inline: 0 !important;
   }
+
+  .navbar-collapse {
+    overflow-y: auto;
+    max-height: calc(100vh - 54px);
+  }
 }
 
 @media screen and (max-width: 1300px) {
