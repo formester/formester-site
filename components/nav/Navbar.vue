@@ -20,7 +20,10 @@
         ref="siteNav"
         id="navbarSupportedContent"
       >
-        <ul class="navbar-nav ms-auto">
+        <ul
+          class="navbar-nav ms-auto navbar-nav-scroll"
+          style="--bs-scroll-height: calc(100vh - 54px)"
+        >
           <li
             class="nav-item dropdown me-3 position-static"
             @click="collapseNav"
@@ -68,23 +71,23 @@
               >Integrations
             </NuxtLink>
           </li>
+          <div class="d-flex flex-column flex-lg-row mb-3">
+            <a
+              href="https://app.formester.com/users/sign_in"
+              @click="collapseNav"
+              class="mt-3 mt-lg-0"
+            >
+              <button class="button nav__outline__button">Login</button>
+            </a>
+            <a
+              href="https://app.formester.com/users/sign_up"
+              @click="collapseNav"
+              class="mt-3 mt-lg-0 ms-lg-3"
+            >
+              <button class="button nav__button">Sign Up Free</button>
+            </a>
+          </div>
         </ul>
-        <div class="d-flex flex-column flex-lg-row">
-          <a
-            href="https://app.formester.com/users/sign_in"
-            @click="collapseNav"
-            class="mt-3 mt-lg-0"
-          >
-            <button class="button nav__outline__button">Login</button>
-          </a>
-          <a
-            href="https://app.formester.com/users/sign_up"
-            @click="collapseNav"
-            class="mt-3 mt-lg-0 ms-lg-3"
-          >
-            <button class="button nav__button">Sign Up Free</button>
-          </a>
-        </div>
       </div>
     </div>
   </nav>
@@ -249,7 +252,7 @@ nav {
     padding-left: 5px !important;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .nav-link {
     padding-block: 0;
   }
