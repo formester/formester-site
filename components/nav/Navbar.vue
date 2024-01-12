@@ -249,7 +249,7 @@ nav {
     padding-left: 5px !important;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .nav-link {
     padding-block: 0;
   }
@@ -276,6 +276,11 @@ nav {
   .dropdown-menu.active {
     grid-template-columns: repeat(2, 1fr) !important;
     padding-inline: 0 !important;
+  }
+
+  .navbar-collapse {
+    overflow-y: auto;
+    max-height: calc(100vh - 54px);
   }
 }
 
