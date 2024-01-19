@@ -335,7 +335,7 @@ The aspect of branding can be covered under three heads:
 
 ### 19. Widgets and Add-ons
 
-**Jotform:** Jotform supports a wide range of widgets and add-ons to enhance form functionality, such as electronic signatures, appointment scheduling, and geolocation.
+**Jotform:** Jotform supports a wide range of widgets and add-ons to enhance form functionality, such as electronic signatures, [appointment scheduling](https://www.demandinc.co/post/b2b-appointment-setting-a-demand-inc-perspective), and geolocation.
 
 **Typeform:** Typeform focuses more on the core form experience rather than extensive functionalities.
 
