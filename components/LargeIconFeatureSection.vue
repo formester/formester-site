@@ -1,14 +1,30 @@
 <template>
   <div class="container py-5">
-    <div class="heading d-flex flex-column align-items-center">
-      <h2 class="section__heading">{{ heading }}</h2>
+    <div class="heading d-flex flex-column align-items-center text-center">
+      <h2 class="section__heading">
+        {{ heading }}
+      </h2>
     </div>
 
-    <div class="templates mt-md-5" :style="gridStyle">
-      <div v-for="(feature, idx) in features" :key="idx" class="card p-3">
-        <nuxt-img :src="feature.img" class="img-fluid" loading="lazy" />
-        <h4 class="sub__section-heading mt-4">{{ feature.title }}</h4>
-        <p class="subheading__text">{{ feature.description }}</p>
+    <div class="row mt-4">
+      <div
+        v-for="feature in features"
+        :key="feature.title"
+        :class="columnClass"
+        class="g-5"
+      >
+        <div class="d-flex flex-column align-items-center align-items-md-start">
+          <nuxt-img
+            :src="feature.img"
+            class="img-fluid"
+            :alt="feature.altText"
+            loading="lazy"
+          />
+          <h4 class="sub__section-heading mt-4">{{ feature.title }}</h4>
+          <p class="subheading__text text-center text-md-start">
+            {{ feature.description }}
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -19,11 +35,11 @@ export default {
   props: {
     heading: {
       type: String,
-      default: 'Key Benefits',
+      required: true,
     },
     features: {
       type: Array,
-      require: true,
+      required: true,
     },
     columnCount: {
       type: Number,
@@ -34,41 +50,21 @@ export default {
     },
   },
   computed: {
-    gridStyle() {
-      return {
-        'grid-template-columns': `repeat(${this.columnCount}, 1fr)`,
+    columnClass() {
+      // Bootstrap grid classes
+      switch (this.columnCount) {
+        case 2:
+          return 'col-lg-6 col-md-6 col-sm-12'
+        case 3:
+          return 'col-lg-4 col-md-6 col-sm-12'
+        case 4:
+          return 'col-lg-3 col-md-6 col-sm-12'
+        default:
+          return 'col-lg-4 col-md-6 col-sm-12'
       }
     },
   },
 }
 </script>
 
-<style scoped>
-.templates {
-  width: 100%;
-  padding: 1.5rem;
-  display: grid;
-  grid-auto-rows: min-content;
-  gap: 24px;
-}
-
-.card {
-  border-radius: 18px;
-  border: none;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-}
-
-@media only screen and (max-width: 992px) {
-  .templates {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media only screen and (max-width: 765px) {
-  .templates {
-    grid-template-columns: 1fr;
-  }
-}
-</style>
+<style scoped></style>
