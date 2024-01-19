@@ -18,7 +18,7 @@
     <div>
       <transition name="slide-in-left">
         <nuxt-img
-          src="/wordpress/wordpress-hero-left.svg"
+          src="plugins/plugins-hero-left.svg"
           alt="Hero-Image"
           class="img-fluid position-absolute hero-image left"
           v-show="showImage"
@@ -26,7 +26,7 @@
       </transition>
       <transition name="slide-in-right">
         <nuxt-img
-          src="/wordpress/wordpress-hero-right.svg"
+          src="plugins/plugins-hero-right.svg"
           alt="Hero-Image"
           class="img-fluid position-absolute hero-image right"
           v-show="showImage"
