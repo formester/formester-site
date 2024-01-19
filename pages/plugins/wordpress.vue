@@ -1,6 +1,9 @@
 <template>
   <div>
-    <WordpressHero />
+    <PluginsHero
+      heading="Formester and WordPress Integration"
+      description="Embed beautiful forms on your WordPress Website or Blog in minutes with Formester WordPress Plugin"
+    />
     <div class="container my-5">
       <div class="row py-5">
         <div class="col-lg-5 d-flex align-items-center justify-content-center">
@@ -52,24 +55,21 @@
         </div>
       </div>
     </div>
-    <WordpressSteps />
+    <ProcessSteps
+      heading="Steps to Embed a Formester Form"
+      :steps="wordpressSteps"
+    />
     <KeyBenefits heading="Features of Formester" />
-    <Faqs :faqs="faqs" />
+    <TemplateFaq :faqs="faqs" />
   </div>
 </template>
 
 <script>
-import WordpressHero from '@/components/plugins/wordpress/WordpressHero.vue'
-import WordpressSteps from '@/components/plugins/wordpress/WordpressSteps.vue'
 import KeyBenefits from '@/components/hr-solution/KeyBenefits.vue'
-import Faqs from '@/components/template/Faq.vue'
 import getSiteMeta from '@/utils/getSiteMeta'
 export default {
   components: {
-    WordpressHero,
-    WordpressSteps,
     KeyBenefits,
-    Faqs,
   },
   computed: {
     meta() {
@@ -157,6 +157,31 @@ export default {
   },
   data() {
     return {
+      wordpressSteps: [
+        {
+          title: 'Install Formester Plugin',
+          description:
+            'Visit WordPress.org or WordPress.com to install the Formester plugin. Log in to your WordPress account and activate the plugin after installation.',
+          imageSrc: 'plugins/wordpress/steps/step1.svg',
+          imageAlt:
+            'ui to create new form and few graphics showing ready made templates',
+        },
+        {
+          title: 'Add Formester Block in WordPress',
+          description:
+            'Locate and select the Formester Block in your WordPress editor. Click on it to launch the plugin and easily integrate a Formester form into your page.',
+          imageSrc: 'plugins/wordpress/steps/step2.svg',
+          imageAlt: 'ui to enable the allow form to work offline',
+        },
+        {
+          title: 'Embed Formester Form in Wordpress',
+          description:
+            "You can also embed a form by pasting your form's shared URL into WordPress editor. Ensure that your contact form is published before embedding in the WordPress site.",
+          imageSrc: 'plugins/wordpress/steps/step3.svg',
+          imageAlt:
+            'mockup ui of submission page with a internet not available symbol',
+        },
+      ],
       faqs: [
         {
           question:
