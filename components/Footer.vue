@@ -214,6 +214,11 @@
                   WordPress
                 </NuxtLink>
               </li>
+              <li class="mt-2">
+                <NuxtLink to="/plugins/webflow/" class="footer__link">
+                  Webflow
+                </NuxtLink>
+              </li>
             </ul>
           </div>
 
