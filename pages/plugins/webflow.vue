@@ -156,21 +156,19 @@ export default {
           description:
             'Sign in to your free Formester account and select the online form you want to integrate. You can also select any pre-designed template from our template library. Once your online form is ready, click on the "Embed" tab and copy the provided embed code.',
           imageSrc: 'plugins/webflow/steps/step1.svg',
-          imageAlt:
-            'ui to create new form and few graphics showing ready made templates',
+          imageAlt: 'Login and form builder page in Formester',
         },
         {
           description:
             "Open your Webflow project, locate the 'Embed' element and drag it onto the desired spot on your webflow site. Once the element is in place, access its settings and paste the copied embed code from Formester into the designated field.",
           imageSrc: 'plugins/webflow/steps/step2.svg',
-          imageAlt: 'ui to enable the allow form to work offline',
+          imageAlt: 'Embedding form in Webflow site',
         },
         {
           description:
             'Save the changes in Webflow and publish your website to make the form live. Start collecting leads and engaging visitors with beautiful online forms from Formester!',
           imageSrc: 'plugins/webflow/steps/step3.svg',
-          imageAlt:
-            'mockup ui of submission page with a internet not available symbol',
+          imageAlt: 'Webflow page with embedded Formester form',
         },
       ],
       features: [
