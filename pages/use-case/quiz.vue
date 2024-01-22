@@ -65,9 +65,9 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/use-case/quiz/',
-        title: 'Create Fun and Engaging Quiz in Minutes',
+        title: 'Free Online Quiz Maker | Formester',
         description:
-          'Build a Quiz to engage students, generate leads or test knowledge and competency with Formester’s Online Quiz maker',
+          "Build engaging quizzes with Formester's Online Quiz maker. Perfect solution to streamline education, training, and recruitment.",
         keywords: [
           'quiz form builder',
           'quiz form templates',
@@ -86,7 +86,7 @@ export default {
   },
   head() {
     return {
-      title: 'Create Fun and Engaging Quiz in Minutes',
+      title: 'Free Online Quiz Maker | Formester',
       meta: [...this.meta],
       link: [
         {
@@ -104,9 +104,9 @@ export default {
         {
           '@type': 'Corporation',
           '@id': 'https://acornglobus.com',
-          name: 'Create Fun and Engaging Quiz in Minutes',
+          name: 'Free Online Quiz Maker | Formester',
           description:
-            'Build a Quiz to engage students, generate leads or test knowledge and competency with Formester’s Online Quiz maker',
+            "Build engaging quizzes with Formester's Online Quiz maker. Perfect solution to streamline education, training, and recruitment.",
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
           address: {
