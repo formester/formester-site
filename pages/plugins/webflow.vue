@@ -154,7 +154,7 @@ export default {
       webflowSteps: [
         {
           description:
-            'Sign in to your free Formester account and select the online form you want to integrate. You can also select any pre-designed template from our template library. Once your online form is ready, click on the "Embed" tab and copy the provided embed code.',
+            'Sign up to a Formester account for free and build an online form you want to integrate. You can also select any pre-designed template from our template library. Once your online form is ready, click on the "Embed" tab and copy the provided embed code.',
           imageSrc: 'plugins/webflow/steps/step1.svg',
           imageAlt: 'Login and form builder page in Formester',
         },
