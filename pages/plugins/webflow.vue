@@ -71,12 +71,12 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/plugins/webflow/',
-        title: 'Embed Beautiful Forms on Your Webflow Site | Formester Plugin',
+        title: 'Craft Engaging Online Forms for Webflow | Formester',
         description:
-          "Create & add stunning forms in minutes with Formester's intuitive builder & Webflow plugin. No coding needed! Increase leads, collect feedback & streamline workflow.",
+          "Integrate Formester into Webflow in three simple steps. Effortlessly create, customize, and publish beautiful web forms on your webflow sites.",
         mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with auto-responder page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
+          'https://formester.com/formester-form-builder-background.png', 
+        mainImageAlt: 'Form builder showing drag and drop functionality', 
         keywords: [
           'Formester',
           'Webflow plugin',
@@ -105,7 +105,7 @@ export default {
   },
   head() {
     return {
-      title: 'Embed Beautiful Forms on Your Webflow Site | Formester Plugin',
+      title: 'Craft Engaging Online Forms for Webflow | Formester',
       meta: [...this.meta],
       link: [
         {
@@ -123,9 +123,9 @@ export default {
         {
           '@type': 'Corporation',
           '@id': 'https://acornglobus.com',
-          name: 'Embed Beautiful Forms on Your Webflow Site | Formester Plugin',
+          name: 'Craft Engaging Online Forms for Webflow | Formester',
           description:
-            "Create & add stunning forms in minutes with Formester's intuitive builder & Webflow plugin. No coding needed! Increase leads, collect feedback & streamline workflow.",
+            "Integrate Formester into Webflow in three simple steps. Effortlessly create, customize, and publish beautiful web forms on your webflow sites.",
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
           address: {
@@ -141,7 +141,7 @@ export default {
             {
               '@type': 'ListItem',
               position: 1,
-              name: 'Wordpress Plugin for Formester',
+              name: 'Webflow Plugin for Formester',
               item: 'https://formester.com/plugins/webflow/',
             },
           ],
