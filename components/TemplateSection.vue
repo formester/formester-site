@@ -2,7 +2,7 @@
   <div class="container py-5">
     <div class="row px-0">
       <div class="heading d-flex flex-column align-items-center text-center">
-        <h2 class="section__heading">Pre-Designed Templates</h2>
+        <h2 class="section__heading">{{ heading }}</h2>
         <p class="hero__subheading">
           Get Started Quickly with Ready-Made Form Templates
         </p>
@@ -29,7 +29,13 @@ import axios from 'axios'
 
 export default {
   components: { TemplateCard },
-  props: ['slug'],
+  props: {
+    slug: { type: String },
+    heading: {
+      type: String,
+      default: 'Pre-Designed Templates',
+    },
+  },
   data() {
     return {
       templates: [],

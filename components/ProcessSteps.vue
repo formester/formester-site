@@ -7,7 +7,11 @@
       {{ description }}
     </p>
     <div class="row steps-container px-3 py-5 d-flex flex-column flex-lg-row">
-      <div v-for="(step, index) in steps" :key="index" class="col">
+      <div
+        v-for="(step, index) in steps"
+        :key="index"
+        class="col d-flex flex-column align-items-center"
+      >
         <div class="d-flex flex-column flex-lg-row">
           <nuxt-img
             :src="step.imageSrc"

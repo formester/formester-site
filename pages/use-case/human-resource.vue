@@ -5,7 +5,7 @@
       heading="Challenges in HR Data Management"
       :features="typeformStandOutFeatures"
     />
-    <HelpingFeaturesForHr
+    <UseCaseFeatureShowcase
       heading="How Formester can Help You with Human Resource Operations"
       :features="HelpingFeaturesForHr"
     />
@@ -39,25 +39,19 @@
 import getSiteMeta from '@/utils/getSiteMeta'
 import Hero from '../../components/hr-solution/Hero.vue'
 import StandOutFeatureSection from '../../components/competitors/StandOutFeatureSection.vue'
-import HelpingFeaturesForHr from '../../components/hr-solution/HelpingFeaturesForHr.vue'
 import CreateHrForms from '../../components/hr-solution/CreateHrForms.vue'
 import KeyBenefits from '../../components/hr-solution/KeyBenefits.vue'
 import SeamlessIntegration from '../../components/hr-solution/SeamlessIntegration.vue'
-import TemplateSection from '../../components/TemplateSection.vue'
 import BlogCard from '../../components/blog/BlogCard.vue'
-import CallToActionSection from '../../components/CallToActionSection.vue'
 
 export default {
   components: {
     Hero,
     StandOutFeatureSection,
-    HelpingFeaturesForHr,
     CreateHrForms,
     KeyBenefits,
     SeamlessIntegration,
-    TemplateSection,
     BlogCard,
-    CallToActionSection,
   },
   async asyncData({ $content }) {
     let articles = await $content('blog')
