@@ -16,8 +16,7 @@ author: Vivek Badani
 authorProfile: https://www.linkedin.com/in/vivek--badani/
 createdAt: 2022-08-01
 coverImg: /img/best-online-form-builders-2023_-how-to-choose-the-ideal-one_.png
-coverImgAlt: Cover image for the blog, "Best Online Form Builders 2023"
-featured: true
+featured: false
 published: true
 metaImages:
   - https://formester.com/img/best-online-form-builder__best-online-form-builders.png
@@ -29,6 +28,7 @@ metaImages:
   - https://formester.com/img/best-online-form-builder__typeform.png
   - https://formester.com/img/best-online-form-builder__jotform.png
   - https://formester.com/img/best-online-form-builder__formsite.png
+coverImgAlt: Cover image for the blog, "Best Online Form Builders 2023"
 ---
 Online forms are the go-to solution for a variety of your needs - from marketing surveys to lead generation, feedback collection and more. The ability to capture data is vital for organizations regardless of their
 industry. The best thing about online forms is that they are decently easy to
