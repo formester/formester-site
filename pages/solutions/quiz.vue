@@ -64,7 +64,7 @@ export default {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/use-case/quiz/',
+        url: 'https://formester.com/solutions/quiz/',
         title: 'Free Online Quiz Maker | Formester',
         description:
           "Build engaging quizzes with Formester's Online Quiz maker. Perfect solution to streamline education, training, and recruitment.",
@@ -92,7 +92,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/use-case/quiz/',
+          href: 'https://formester.com/solutions/quiz/',
         },
       ],
     }
@@ -129,7 +129,7 @@ export default {
               '@type': 'ListItem',
               position: 2,
               name: 'Create Fun and Engaging Quiz in Minutes',
-              item: 'https://formester.com/use-case/quiz/',
+              item: 'https://formester.com/solutions/quiz/',
             },
           ],
         },

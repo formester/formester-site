@@ -52,11 +52,6 @@
                   >Human Resource</NuxtLink
                 >
               </li>
-              <li class="mt-2">
-                <NuxtLink to="/use-case/quiz/" class="footer__link"
-                  >Quiz</NuxtLink
-                >
-              </li>
             </ul>
 
             <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
@@ -67,6 +62,11 @@
               <li class="mt-2">
                 <NuxtLink to="/online-form-builder/" class="footer__link"
                   >Online Form Builder</NuxtLink
+                >
+              </li>
+              <li class="mt-2">
+                <NuxtLink to="/solutions/quiz/" class="footer__link"
+                  >Quiz</NuxtLink
                 >
               </li>
             </ul>
