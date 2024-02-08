@@ -72,7 +72,7 @@ export const businessMonthly = {
       'Unlimited Webhooks',
       '2,500 Signatures',
     ],
-    keyFeatures: ['API Access', 'Custom Domain', 'Adaptive AI Spam Protection', 'White Label'],
+    keyFeatures: ['Submission PDF','API Access', 'Custom Domain', 'Adaptive AI Spam Protection', 'White Label'],
   },
 }
 
@@ -152,7 +152,7 @@ export const businessYearly = {
       'Unlimited Webhooks',
       '2,500 Signatures',
     ],
-    keyFeatures: ['API Access', 'Custom Domain', 'Adaptive AI Spam Protection', 'White Label'],
+    keyFeatures: ['Submission PDF','API Access', 'Custom Domain', 'Adaptive AI Spam Protection', 'White Label'],
   },
 }
 
@@ -287,6 +287,12 @@ export const comparisonTableFeatures = [
     name: 'Scripts (GTM, GA, Pixel)',
     free: '-',
     pro: 'Yes',
+    business: 'Yes'
+  },
+  {
+    name: 'Submission PDF',
+    free: '-',
+    pro: '-',
     business: 'Yes'
   },
   {
