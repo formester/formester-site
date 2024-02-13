@@ -14,7 +14,7 @@ createdAt: 2024-02-13T02:38:44.461Z
 coverImg: /img/mistakes-of-marketing-agencies.png
 coverImgAlt: Illustration of Marketing Agency Owner Mistakes
 featured: false
-published: false
+published: true
 ---
 Running a marketing agency can be a rewarding endeavor, but it comes with its fair share of challenges. Marketing is a dynamic function with trends, tools and platforms changing overnight, it's crucial for agency owners to stay ahead of the curve and avoid common mistakes that can hinder growth and success. In this artile, we'll explore the top 10 mistakes that marketing agency owners often make and provide insights on how to avoid them.
 
