@@ -20,6 +20,8 @@ Running a marketing agency can be a rewarding endeavor, but it comes with its [f
 
 In this artile, we'll explore the top 10 mistakes that marketing agency owners often make and provide insights on how to avoid them.
 
+![Marketing Agency Statistic of Active Clients](/img/marketing-stat.png)
+
 ## **1. Offering All Marketing Services**
 
 One of the most common mistakes agency owners make is jumping into offering digital services without a solid plan in place. Without a clear strategy, agencies risk spreading themselves too thin and diluting their expertise. It takes time to build expertise and skillset to deliver quality marketing services to your client. 
