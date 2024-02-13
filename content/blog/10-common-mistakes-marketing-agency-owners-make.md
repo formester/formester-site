@@ -1,5 +1,5 @@
 ---
-title: 10 Common Mistakes marketing Agency Owners Make
+title: 10 Common Mistakes made by Marketing Agency Owners
 description: In this article we discuss the 10 most common mistakes made by
   marketing agency owners, along with the solutions and advice as to how the
   mistakes can be avoided to maximise success as a marketing agency.
