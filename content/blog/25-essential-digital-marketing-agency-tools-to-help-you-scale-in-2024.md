@@ -182,4 +182,6 @@ Work smarter, not harder with Google Workspace. This cloud-based suite superchar
 
 ### Bonus Marketing Tool: Formester
 
+![Formester Screenshot](/img/formester_screenshot.png)
+
 Formester prioritises user experience for high converting online forms. Drag and drop question types, customize with brand ing, and even implement conversational forms for an engaging experience. From feedback surveys to lead capture forms, Formester helps you collect valuable data in style. Analyze submissions, integrate with other tools, and watch your results soar. Whether you're a marketer, researcher, or business owner, Formester makes creating impactful forms simple and effective.
