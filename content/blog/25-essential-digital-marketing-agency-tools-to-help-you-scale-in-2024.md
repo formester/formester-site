@@ -92,21 +92,31 @@ Organize tasks with boards, lists, and cards, move them seamlessly through workf
 
 ### Marketing Tool #11: Google Ads
 
+![Google Ads Screenshot](/img/google-ads.png)
+
 Launch targeted ads across Google Search, YouTube, and other platforms. Get in front of people actively searching for products like yours, driving targeted traffic and boosting sales. Pay only when someone clicks your ad, making it a cost-effective way to reach the right audience at the right time. Ready to ignite your marketing? Google Ads is your launchpad.
 
 ### Marketing Tool #12: Facebook Ads
+
+![Facebook Ads Screenshot](/img/facebook-ads.png)
 
 Target millions with laser precision. Craft ads for Facebook, Instagram, and beyond. Reach specific demographics, interests, and behaviors. Track performance, optimize campaigns, and see your brand awareness soar. It's your gateway to targeted advertising on the world's largest social network.
 
 ### Marketing Tool #13: Linkedin Ads
 
+![Linkedin Ads Screenshot](/img/linkedin-ads.png)
+
 Level up your B2B marketing by laser-targeting professionals on LinkedIn. Showcase your expertise, generate leads, and build brand authority. Reach decision-makers across job titles, companies, and industries. From sponsored content to message ads, LinkedIn Ads unlocks unique targeting options to connect with the right audience and fuel your business growth.
 
 ### Marketing Tool #14: Google Tag Manager
 
+![Google Tag Manager Screenshot](/img/google-tag-manager.png)
+
 Google Tag Manager is your tag management hero. Think of it as a central hub where you control all the tiny code snippets (tags) on your website or app. No more manually editing code! Add, update, and fire tags for analytics, marketing, and more – all through a user-friendly interface. Plus, enjoy faster loading times, better organization, and peace of mind with error checking and security features.
 
 ### Marketing Tool #15: Hotjar
+
+![Hotjar Screenshot](/img/hotjar.png)
 
 Hotjar is your secret weapon for understanding user behavior. With heatmaps, recordings, surveys, and feedback polls, you can see exactly how people interact with your website or app. Identify pain points, optimize your user experience, and boost conversions. Hotjar is like having a team of user researchers at your fingertips – without the hefty price tag!
 
