@@ -32,21 +32,31 @@ From analytics platforms that track website traffic and user behavior to social 
 
 ### Marketing Tool #1: Google Analytics
 
+![Google Analytics Screenshot](/img/google-analytics.png)
+
 Google Analytics is your website and app's ultimate spy. It tracks website traffic, user behavior, and campaign performance, uncovering valuable insights. Think of it as a data treasure chest, helping you understand your audience, optimize marketing efforts, and boost ROI. Free and powerful, it's a must-have for any website owner or marketer.
 
 ### Marketing Tool #2: Semrush
+
+![Semrush Screenshot](/img/semrush.png)
 
 Semrush is your all-in-one marketing Swiss Army knife. Uncover winning keywords, spy on competitor strategies, audit your website's health, and track your rankings. It's a data powerhouse for SEO, content marketing, PPC, and social media, helping you dominate the digital landscape. From startups to Fortune 500s, it's a marketer's secret weapon.
 
 ### Marketing Tool #3: Hubspot
 
+![Hubspot Screenshot](/img/hubspot.png)
+
 HubSpot is your customer growth concierge. This all-in-one platform combines marketing, sales, customer service, and content management tools. Attract leads with engaging content, nurture them with automated emails, convert them with powerful sales features, and delight them with personalized support. HubSpot helps you attract, engage, and delight customers at every stage of their journey.
 
 ### Marketing Tool #4: Hootsuite 
 
+![Hootsuite Screenshot](/img/hootsuite.png)
+
 Hootsuite is your social media command center. Manage all your platforms (Twitter, Facebook, Instagram, LinkedIn, etc.) from one dashboard. Schedule posts, measure engagement, track trends, and respond to comments with ease. Say goodbye to social media juggling and hello to streamlined marketing with Hootsuite's collaborative tools and analytics.
 
 ### Marketing Tool #5: Buffer 
+
+![Buffer Screenshot](/img/buffer.png)
 
 Buffer simplifies your social media life! Draft and schedule posts for multiple platforms like Twitter, LinkedIn, and Instagram. Buffer its like your social media assistant, remembering optimal posting times and keeping your feed consistent. Analytics track performance, while engagement tools help you respond to comments and build audience connections. It's perfect for solopreneurs and small teams to manage social media effectively.
 
