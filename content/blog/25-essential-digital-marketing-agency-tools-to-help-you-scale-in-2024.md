@@ -164,13 +164,19 @@ Unbounce isn't just a landing page builder, it's a conversion magician. It lever
 
 ### Marketing Tool #23: Zapier
 
+![Zapier Screenshot](/img/zapier.png)
+
 Tired of jumping between apps? Zapier automates repetitive tasks by connecting over 6,000+ marketing tools. Create "Zaps" to automatically trigger actions across platforms, like adding new leads to your CRM when someone signs up for your newsletter, or posting social media updates when you publish a blog post. No coding required, just drag-and-drop simplicity for streamlining your marketing efforts and saving precious time.
 
 ### Marketing Tool #24: Adobe Creative Cloud
 
+![Adobe Creative Cloud Screenshot](/img/adobe-creative-cloud.png)
+
 Adobe Creative Cloud unlocks a powerhouse of design and marketing tools. Photoshop, Illustrator, and Premiere Pro are just the tip of the iceberg. Edit photos, craft stunning graphics, animate captivating videos, and design engaging social media content – all within this comprehensive suite. Plus, access cloud storage, fonts, and tutorials to fuel your creativity.
 
 ### Marketing Tool #25: Google Workspace
+
+![Google Workspace Screenshot](/img/google-workspace.png)
 
 Work smarter, not harder with Google Workspace. This cloud-based suite supercharges communication and collaboration with Gmail, Calendar, Meet, Chat, and Drive at its core. Edit documents, spreadsheets, and presentations in real-time with colleagues, manage projects seamlessly, and store files securely in the cloud. Accessible from any device, Google Workspace empowers teams of all sizes to stay connected, productive, and achieve more together.
 
