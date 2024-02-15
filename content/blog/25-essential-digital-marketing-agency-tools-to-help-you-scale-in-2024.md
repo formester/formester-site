@@ -122,29 +122,43 @@ Hotjar is your secret weapon for understanding user behavior. With heatmaps, rec
 
 ### Marketing Tool #16: BuzzSumo
 
+![Buzzsumo Screenshot](/img/buzzsumo.png)
+
 BuzzSumo is your content marketing crystal ball. Uncover what resonates with your audience by analyzing billions of articles and social shares. Discover trending topics, identify high-performing content, and generate winning ideas. Craft content destined for success with BuzzSumo's research tools – viral inspiration and insightful data, all at your fingertips!
 
 ### Marketing Tool #17: Yoast
+
+![Yoast Screenshot](/img/yoast.png)
 
 Yoast SEO is your website's SEO coach, cheering you on to higher search rankings. Whether you're a beginner blogger or a seasoned marketer, Yoast provides easy-to-follow guidance and tools. Optimize your content for targeted keywords, ensure technical SEO is on point, and improve readability – all within your WordPress editor. Actionable checklists, helpful feedback, and a green light for SEO success!
 
 ### Marketing Tool #18: Google Search Console
 
+![Google Search Console Screenshot](/img/google-search-console.png)
+
 Your website's SEO therapist, revealing how Google views your site and diagnosing any issues. See which searches bring visitors, monitor mobile usability, and fix indexing problems. Think of it as a doctor's report for your online presence, helping you optimize search visibility and attract more patients... er, visitors!
 
 ### Marketing Tool #19: Crazy Egg
+
+![Crazy Egg Screenshot](/img/crazy-egg.png)
 
 Crazy Egg cracks the code of user behavior on your website. Think X-ray vision, revealing where visitors click, scroll, and get lost. Heatmaps, recordings, and A/B testing paint a clear picture. Optimize your site with confidence, boost conversions, and create an experience visitors love. See for yourself what your users see!
 
 ### Marketing Tool #20: Sprinklr
 
+![Sprinkle Screenshot](/img/sprinklr.png)
+
 This powerful platform unifies social media management, marketing, advertising, and customer service under one roof. Listen to brand buzz, engage customers across channels, personalize content, and analyze data for insights. Think of an orchestra conductor, ensuring every note hits the right tone and your brand resonates everywhere.
 
 ### Marketing Tool #21: Mention
 
+![Mention Screenshot](/img/mention.png)
+
 Mention acts as your social media listening post, tracking brand mentions, competitor insights, and industry trends across the web. Identify influencers, join relevant conversations, and manage your online reputation proactively. Think of it as your social media radar, catching every buzz about your brand and helping you navigate the online landscape with confidence.
 
 ### Marketing Tool #22: Unbounce
+
+![Unbounce Screenshot](/img/unbounce.png)
 
 Unbounce isn't just a landing page builder, it's a conversion magician. It leverages AI to help you craft high-converting pages twice as fast as traditional tools. Think drag-and-drop simplicity, instant copywriting suggestions, and A/B testing to find the perfect design for your audience. Whether you're a marketing pro or a small business owner, Unbounce helps you turn clicks into leads, sales, and signups.
 
