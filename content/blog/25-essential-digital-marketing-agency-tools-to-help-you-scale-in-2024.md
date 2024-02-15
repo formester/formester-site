@@ -62,21 +62,31 @@ Buffer simplifies your social media life! Draft and schedule posts for multiple 
 
 ### Marketing Tool #6: Moz
 
+![Moz Screenshot](/img/moz.png)
+
 Moz offers tools and resources to research keywords, audit your website's health, track rankings, and build high-quality backlinks. Get expert insights and learn SEO best practices, whether you're just starting out or looking to refine your strategy. Moz helps you climb the search engine ladder and attract more organic traffic.
 
 ### Marketing Tool #7: Sprout Social
+
+![Sprout Social Screenshot](/img/sprout-social.png)
 
 Cultivate thriving social communities. This platform unites all your social media needs - scheduling, publishing, engaging, and analyzing - across major platforms like Facebook, Instagram, and Twitter. Streamline workflow, respond to customers swiftly, and gain deep insights to measure success. Sprout Social helps you nurture authentic connections and watch your brand blossom.
 
 ### Marketing Tool #8: Mailchimp
 
+![Mailchimp Screenshot](/img/mailchimp.png)
+
 Your email marketing maestro. Craft beautiful newsletters, automate personalized campaigns, and reach the right audience. From list building to landing pages, Mailchimp empowers businesses of all sizes to connect, engage, and convert. User-friendly, affordable, and data-driven, it's the go-to platform to nurture leads and grow your business through email.
 
 ### Marketing Tool #9:  Canva
 
+![Canva Screenshot](/img/canva.png)
+
 Create stunning visuals for social media, presentations, marketing materials, and more. Drag-and-drop tools, vast libraries of images and templates, and intuitive editing make graphic design accessible to everyone. Free for basic use, Canva empowers individuals and businesses alike to bring their creative visions to life.
 
 ### Marketing Tool #10: Trello
+
+![Trello Screenshot](/img/trello.png)
 
 Organize tasks with boards, lists, and cards, move them seamlessly through workflows, and collaborate effortlessly with your team. Think sticky notes on steroids, but digital, flexible, and oh-so-satisfying. Trello keeps everyone on the same page, boosts productivity, and makes project management a breeze.
 
