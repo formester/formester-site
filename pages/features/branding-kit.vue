@@ -8,11 +8,10 @@
           >
             <h1 class="section__heading" style="z-index: 2">Brand Kit</h1>
             <p class="hero__subheading mt-3" style="z-index: 2">
-              Elevate your brand identity with Formester's Brand Kit, designed
-              to help you create cohesive branded content across all your forms.
-              Set up your brand fonts, colors, and logo in minutes, then apply
-              them to your choice of form templates for a professional, fully
-              standardized look.
+              Match your company branding with all online forms across your website. Formester 
+              Branding Kit is designed to help you add consistent branding content on all your 
+              web forms. Set up customized URL fonts, colors, and logos in minutes, then apply 
+              them to your choice of form templates for a professional, fully standardized look.
             </p>
           </div>
           <div
@@ -35,7 +34,7 @@
     </div>
 
     <div class="container py-5">
-      <h2 class="section__heading text-center">How does Branding-Kit help?</h2>
+      <h2 class="section__heading text-center">How does Branding Kit help?</h2>
       <div class="row">
         <FeatureDetail
           :feature="feature"
@@ -76,7 +75,7 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/features/branding-kit/',
-        title: 'Brand Kit | Personalised Brand form - Formester',
+        title: 'Branding Kit | Create Brand Kit for Online Forms',
         description:
           'Boost your trust to customer by adding your brand to form.',
         mainImage:
@@ -88,7 +87,7 @@ export default {
   },
   head() {
     return {
-      title: 'Brand Kit | Personalised Brand Form - Formester',
+      title: 'Branding Kit | Create Brand Kit for Online Forms',
       meta: [...this.meta],
       link: [
         {
