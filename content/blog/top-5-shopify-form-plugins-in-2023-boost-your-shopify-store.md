@@ -394,7 +394,7 @@ Seamlessly [integrate online payment gateways into your forms to collect payment
 
 ### 7. Digital Signature
 
-Implement [digital signature fields in your forms, enabling customers to provide electronic signatures](https://formester.com/features/digital-signature/) for agreements, contracts, or authorization purposes.
+Implement [digital signature fields in your forms, enabling customers to provide electronic signatures](https://formester.com/features/electronic-signature/) for agreements, contracts, or authorization purposes.
 
 ### 8. Branding Kit
 

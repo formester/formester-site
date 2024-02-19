@@ -47,6 +47,36 @@
         />
       </div>
     </div>
+    <div class="container py-5">
+      <div
+        class="row justify-content-center align-items-center text-center mt-5"
+      >
+        <div>
+          <h2 class="section__heading">
+            Benefits of Collecting Electronic Signatures with Online Forms
+          </h2>
+        </div>
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between mt-md-5"
+        >
+          <div
+            v-for="benefit in benefits"
+            :key="benefit.title"
+            class="d-flex flex-column align-items-center align-items-md-start text-center text-md-start px-4 col-md-4 my-3 mt-lg-5"
+          >
+            <nuxt-img
+              style="width: 69px"
+              :src="`/features/${benefit?.imgSrc}`"
+              alt="Formester"
+            />
+            <h4 class="sub__section-heading mt-4">{{benefit?.title}}</h4>
+            <p class="subheading__text">
+              {{benefit?.description}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
     <ThreeStepsCreateForm />
     <Testimonial :testimonials="randomTestimonials" />
     <TemplateSection />
@@ -172,6 +202,26 @@ export default {
           description:
             'Once a party has completed the document and signed it, you will get a notification alert and the other person will also get a confirmation about the document they have signed with a copy.',
           src: 'digital-signature/completion-notification-illus.svg',
+        },
+      ],
+      benefits: [
+        {
+          title: 'Legal Document Signatures',
+          description:
+            "Obtain legally binding signatures with ease. Our online form builder's electronic signature feature reduces paperwork, ensuring an efficient, error-free method for handling legal agreements.",
+          imgSrc: 'digital-signature/legal-document-signatures.svg',
+        },
+        {
+          title: 'HR and Employee Onboarding',
+          description:
+            'Create digital forms for contracts and policy acknowledgments, obtain secure electronic signatures, and expedite onboarding without the hassle of paperwork delays.',
+          imgSrc: 'digital-signature/hr-and-employee-onboarding.svg',
+        },
+        {
+          title: 'Financial Transactions',
+          description:
+            'Streamline financial processes, enable digital signing and approvals within the order form, and optimize the workflows for error-free order processing and commercial transactions.',
+          imgSrc: 'digital-signature/financial-transactions.svg',
         },
       ],
     }

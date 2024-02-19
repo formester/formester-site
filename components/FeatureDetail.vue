@@ -29,5 +29,6 @@ export default {
 
 img {
   padding-bottom: 2em;
+  height: 235px;
 }
 </style>

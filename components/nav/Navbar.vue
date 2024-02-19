@@ -136,9 +136,9 @@ export default {
           linkName: 'online-payment',
         },
         {
-          title: 'Digital Signature',
+          title: 'Electronic Signature',
           description: 'Incorporate e-signatures',
-          linkName: 'digital-signature',
+          linkName: 'electronic-signature',
         },
         {
           title: 'Brand Kit',

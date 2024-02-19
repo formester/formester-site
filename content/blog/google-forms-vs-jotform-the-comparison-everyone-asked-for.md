@@ -319,7 +319,7 @@ Users can leverage advanced styling options and layout designs. To top that, Jot
 
 #### 2. Advanced Form Building Features
 
-Jotform offers a wide array of advanced form-building features, including [conditional logic](/features/conditional-logic/), [calculation fields](/features/calculation-fields/), form calculations, [electronic signatures](/features/digital-signature/), and document uploads. 
+Jotform offers a wide array of advanced form-building features, including [conditional logic](/features/conditional-logic/), [calculation fields](/features/calculation-fields/), form calculations, [electronic signatures](/features/electronic-signature/), and document uploads. 
 
 These features enable users to create complex and logic-driven, yet interactive forms to meet specific requirements.
 

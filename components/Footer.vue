@@ -119,10 +119,10 @@
               </li>
               <li class="mt-2">
                 <NuxtLink
-                  to="/features/digital-signature/"
+                  to="/features/electronic-signature/"
                   class="footer__link"
                 >
-                  Digital Signature
+                  Electronic Signature
                 </NuxtLink>
               </li>
               <li class="mt-2">
