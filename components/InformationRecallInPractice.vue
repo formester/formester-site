@@ -3,7 +3,7 @@
     <div class="row">
       <div class="heading d-flex flex-column align-items-center text-center">
         <h2 class="section__heading">
-          See how our Information Recall feature works in practice
+          See how Reuse and Recall Information feature works in 3 simple steps: (All 3 steps visible at the same time)
         </h2>
       </div>
       <div
