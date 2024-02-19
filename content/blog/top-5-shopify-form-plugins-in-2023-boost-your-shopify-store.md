@@ -410,7 +410,7 @@ Create forms that [perform calculations based on user inputs](https://formester.
 
 ### 11. Collaboration
 
-[Collaborate with team members on form creation](https://formester.com/features/collaboration/) and management. Assign roles and permissions, ensuring efficient teamwork in building and optimizing forms.
+[Collaborate with team members on form creation](https://formester.com/features/team-collaboration/) and management. Assign roles and permissions, ensuring efficient teamwork in building and optimizing forms.
 
 ## Conclusion
 

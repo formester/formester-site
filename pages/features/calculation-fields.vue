@@ -6,13 +6,13 @@
           <div
             class="col-lg-5 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start mt-xl-0 mt-md-5"
           >
-            <h1 class="section__heading">Calculation Fields</h1>
+            <h1 class="section__heading">
+              Simplify payments with Calculating Fields
+            </h1>
             <p class="hero__subheading mt-3">
-              Create dynamic forms that perform calculations in real-time,
-              empowering you to automate complex calculations, generate dynamic
-              scores, and deliver personalized, interactive experiences. Take
-              your forms to the next level and unlock the true power of
-              data-driven decision-making.
+              Create online forms that perform real-time calculations. Automate
+              complex calculations, generate dynamic scores, and deliver
+              personalized experience with our calculation forms
             </p>
             <a
               href="https://app.formester.com/users/sign_up"

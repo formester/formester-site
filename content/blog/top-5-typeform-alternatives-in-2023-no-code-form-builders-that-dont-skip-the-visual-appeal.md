@@ -135,7 +135,7 @@ Whether you're a small business owner, a marketer, or an educator, [Formester's 
   If you ever encounter a feature that Formester currently lacks but is crucial for your specific requirements, rest assured that our dedicated support and development teams will prioritize its implementation, tailored to your needs. Your satisfaction and success in creating the perfect forms are our top priorities!
 * **Online Payments:** Start [collecting payments directly through your forms](https://formester.com/features/online-payment/). Formester simplifies the payment process, making it convenient for your customers or clients to make transactions.
 * **Digital Signature:** Incorporate electronic signatures into your forms. Whether it's contract approvals or authorization, Formester streamlines the process with [easy-to-use e-signature integration](https://formester.com/features/electronic-signature/).
-* **Multi-User Collaboration:** Collaborate seamlessly with team members on form creation, reviews, and data analysis. [Formester's collaborative features promote teamwork and efficiency](https://formester.com/features/collaboration/), making it easier to work together on form projects.
+* **Multi-User Collaboration:** Collaborate seamlessly with team members on form creation, reviews, and data analysis. [Formester's collaborative features promote teamwork and efficiency](https://formester.com/features/team-collaboration/), making it easier to work together on form projects.
 * **Affordability:** Formester stands out for its cost-effectiveness, offering competitive pricing plans suitable for businesses of all sizes. \
   (P.S., we also offer custom enterprise pricing, as well as concessional costs for NGOs.)
 

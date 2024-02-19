@@ -265,7 +265,7 @@ As a product developed by Google, to be a part of its [Google Workspace](https:/
 
 #### 4. Real-time Collaboration
 
-Google Forms allows [multiple users to collaborate on form creation and analysis](/features/collaboration/). Team members can work together in real-time, making it convenient for group projects or in extensively collaborative settings.
+Google Forms allows [multiple users to collaborate on form creation and analysis](/features/team-collaboration/). Team members can work together in real-time, making it convenient for group projects or in extensively collaborative settings.
 
 #### 5. Offline Form Completion
 

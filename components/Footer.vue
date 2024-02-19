@@ -147,7 +147,7 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/features/collaboration/" class="footer__link">
+                <NuxtLink to="/features/team-collaboration/" class="footer__link">
                   Collaboration
                 </NuxtLink>
               </li>

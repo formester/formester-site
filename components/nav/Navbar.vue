@@ -158,7 +158,7 @@ export default {
         {
           title: 'Multi-User Collaboration',
           description: 'Collaborate with team members',
-          linkName: 'collaboration',
+          linkName: 'team-collaboration',
         },
         {
           title: 'Offline Forms',
