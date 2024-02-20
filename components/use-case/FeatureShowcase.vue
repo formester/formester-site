@@ -100,6 +100,7 @@ h2 {
   }
   .img-fluid {
     width: 100%;
+    border-radius: 2%;
   }
   .card-description {
     font-size: 14px;
