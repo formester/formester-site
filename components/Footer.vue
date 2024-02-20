@@ -87,7 +87,7 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/features/auto-responder/" class="footer__link">
+                <NuxtLink to="/features/autoresponder-email/" class="footer__link">
                   Auto Responder
                 </NuxtLink>
               </li>

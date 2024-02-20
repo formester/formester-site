@@ -143,7 +143,7 @@ Contact forms often require minimal personal information, enhancing privacy and 
 
 ### 10. Automation 
 
-Contact forms can [trigger automated responses or acknowledgments, assuring users that their message has been received](/features/auto-responder/). This immediate feedback might not be possible with emails or phone calls.
+Contact forms can [trigger automated responses or acknowledgments, assuring users that their message has been received](/features/autoresponder-email/). This immediate feedback might not be possible with emails or phone calls.
 
 ### 11. Efficient Routing 
 

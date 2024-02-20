@@ -113,7 +113,7 @@ export default {
         {
           title: 'Auto Responder',
           description: 'Set up automated responses',
-          linkName: 'auto-responder',
+          linkName: 'autoresponder-email',
         },
         {
           title: 'Spam Protection',

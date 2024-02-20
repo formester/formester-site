@@ -303,7 +303,7 @@ The aspect of branding can be covered under three heads:
 
 ### 14. Auto-Responder
 
-**Jotform:** JotForm offers a robust auto-responder feature that allows users to [automatically send personalized confirmation emails](/features/auto-responder/) or responses to form submissions. Customization extends right from the content of the auto-responder email, to including dynamic fields to show submission details and personalized messages.
+**Jotform:** JotForm offers a robust auto-responder feature that allows users to [automatically send personalized confirmation emails](/features/autoresponder-email/) or responses to form submissions. Customization extends right from the content of the auto-responder email, to including dynamic fields to show submission details and personalized messages.
 
 **Typeform:** Typeform has limited provision for auto-responses compared to JotForm. While Typeform does provide an option to send a basic confirmation email to form respondents, its auto-responder feature is more focused on sending simple confirmation emails rather than advanced automation and tailored responses.
 

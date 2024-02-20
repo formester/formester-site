@@ -240,7 +240,7 @@ Also, about 70% of buyers engage in business with a brand that responds within 5
 
 Seems like a lot of work? Well, not to us!
 
-Don’t forget to set up your [email autoresponder](/features/auto-responder/) once you’re done creating your forms with Formester.
+Don’t forget to set up your [email autoresponder](/features/autoresponder-email/) once you’re done creating your forms with Formester.
 
 > Tip & Trick: Be sure to have acknowledgement email systems in place after you receive any response to your web forms. Nobody likes to wait!
 

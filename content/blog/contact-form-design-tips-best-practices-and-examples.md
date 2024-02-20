@@ -55,7 +55,7 @@ Include trust-building elements like testimonials, client logos, or case study p
 
 ### 7. Automated Responses﻿
 
-Set up [automated confirmation emails or thank-you messages](/features/auto-responder/) that users receive after submitting the form. This immediate response reassures them that their submission was successful.﻿
+Set up [automated confirmation emails or thank-you messages](/features/autoresponder-email/) that users receive after submitting the form. This immediate response reassures them that their submission was successful.﻿
 
 ### 8﻿. Follow-Up Strategy
 

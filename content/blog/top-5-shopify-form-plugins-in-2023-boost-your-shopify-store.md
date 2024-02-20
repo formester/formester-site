@@ -374,7 +374,7 @@ Formester's [HTML form backend allows you to point your form to Formester's endp
 
 ### 2. Auto Responder
 
-Set up [automatic email responses to user submissions, acknowledging their submissions](https://formester.com/features/auto-responder/) and providing relevant information. This feature helps improve customer satisfaction and communication.
+Set up [automatic email responses to user submissions, acknowledging their submissions](https://formester.com/features/autoresponder-email/) and providing relevant information. This feature helps improve customer satisfaction and communication.
 
 ### 3. Spam Protection
 
