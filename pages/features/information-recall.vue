@@ -6,11 +6,9 @@
           <div
             class="col-lg-5 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start mt-xl-0 mt-md-5"
           >
-            <h1 class="section__heading">Reuse and Recall Information </h1>
+            <h1 class="section__heading">Reuse and Recall Information</h1>
             <p class="hero__subheading mt-3">
-              Information Recall allows you to reference answers, variables, and more, 
-              making your forms feel more dynamic, conversational, compelling and smart. 
-              Supercharge your forms by creating engaging experiences with Formester's Information Recall feature.
+              Information Recall allows you to reference answers, variables, and more, making your forms feel more dynamic, conversational, compelling and smart. Supercharge your forms by creating engaging experiences with Formester's Information Recall feature.
             </p>
             <a
               href="https://app.formester.com/users/sign_up"
@@ -74,7 +72,7 @@
     </div>
 
     <InformationRecallInPractice />
-    <Testimonial :testimonials="Testimonials" />
+    <Testimonial :testimonials="randomTestimonials"/>
     <TemplateSection />
     <CallToActionSection />
   </div>
@@ -205,7 +203,7 @@ export default {
         {
           title: 'Answer Recall: Bring Conversations to Life',
           description:
-            "Enhance the conversational experience of your webforms by referencing and utilizing answers from previous questions. By mentioning a respondent's name or other relevant information, you can create a personalized interaction that makes them feel engaged and valued.",
+            "Enhance the conversational experience of your web forms by referencing and recalling answers from previous questions. By mentioning a respondent's name or other relevant information, you can create a personalized interaction that makes them feel engaged and valued.",
           src: 'information-recall/answer-recall-bring-conversations-to-life.svg',
           alt: "Previous answers from questions are referenced and utilized, enhancing the conversational experience. By mentioning a respondent's name a personalized interaction is created, making them feel engaged and valued.",
         },

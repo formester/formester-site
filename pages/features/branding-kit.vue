@@ -6,12 +6,9 @@
           <div
             class="col-lg-5 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start mt-xl-0 mt-md-5"
           >
-            <h1 class="section__heading" style="z-index: 2">Brand Kit</h1>
+            <h1 class="section__heading" style="z-index: 2">Branding Kit</h1>
             <p class="hero__subheading mt-3" style="z-index: 2">
-              Match your company branding with all online forms across your website. Formester 
-              Branding Kit is designed to help you add consistent branding content on all your 
-              web forms. Set up customized URL fonts, colors, and logos in minutes, then apply 
-              them to your choice of form templates for a professional, fully standardized look.
+              Match your company branding with all online forms across your website. Formester Branding Kit is designed to help you add consistent branding content on all your web forms. Set up customized URL fonts, colors, and logos in minutes, then apply them to your choice of form templates for a professional, fully standardized look.
             </p>
           </div>
           <div
@@ -143,28 +140,28 @@ export default {
         {
           title: 'Easy Brand Setup',
           description:
-            "Formester's user-friendly interface allows you to easily establish your brand identity by linking your website, which automatically sets up your brand elements such as fonts, colors, and logo. By maintaining consistency, your customers will be able to instantly recognize your brand when interacting with your forms.",
+            "Formester's interface simplifies brand setup. Linking your website automatically configures brand elements like fonts, colors, and logos. This ensures consistent brand recognition when customers interact with your forms.",
           src: 'brand-kit/easy-branding.svg',
           alt: 'Get noticed by making the email personalized',
         },
         {
           title: 'Logo Integration',
           description:
-            'Seamlessly incorporate your company logo into your forms. Ensure your brand is visible and memorable, strengthening brand recognition and trust with your customers.',
+            'Seamlessly incorporate your company logo into your forms with Formester brand kit generator. Ensure your brand is visible and memorable, strengthening brand recognition and trust with your customers.',
           src: 'brand-kit/logo-integration.svg',
           alt: 'Email can be eaily build with auto responder',
         },
         {
           title: 'Custom Fonts and Colors',
           description:
-            "Select and apply your brand's fonts and colors to maintain a consistent look and feel throughout your forms. Enhance the user experience while reinforcing your brand identity.",
+            "Select and apply your brand's fonts and colors to maintain a consistent look and feel throughout your forms. Enhance the user experience while promoting your brand identity with our white labeling solution.",
           src: 'brand-kit/custom-fonts-colors.png',
           alt: 'Have a personalised respose to end user',
         },
         {
           title: 'Formester Watermark Removal',
           description:
-            'Remove the Formester branding or watermark from your forms for a clean, professional appearance that fully showcases your brand. Enhance credibility and keep the focus on your own brand identity.',
+            'Remove the Formester watermark from your forms for a clean, professional appearance that fully showcases your brand. Enhance credibility and keep the focus on your own brand identity.',
           src: 'brand-kit/formester-branding-removal.svg',
           alt: 'Track your forms in real time',
         },
