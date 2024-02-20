@@ -39,7 +39,9 @@
         <div
           class="feature__heading d-flex align-items-center justify-content-center"
         >
-          <h2 class="section__heading">How does online form collaboration help?</h2>
+          <h2 class="section__heading">
+            How does online form collaboration help?
+          </h2>
         </div>
         <FeatureDetail
           :feature="feature"
@@ -78,7 +80,11 @@
       </div>
     </div>
 
-    <CollaborateEffectively />
+    <SimpleStepsCreate
+      heading="How to collaborate effectively in 2 simple steps"
+      :steps="steps"
+      :stepCount="steps.length"
+    />
     <Testimonial :testimonials="randomTestimonials" />
     <TemplateSection />
     <CallToActionSection />
@@ -93,11 +99,11 @@ import Testimonial from '@/components/Testimonial.vue'
 import { allTestimonials } from '@/constants/testimonials'
 import TemplateSection from '../../components/TemplateSection.vue'
 import FAQwithCategories from '../../components/FAQwithCategories.vue'
-import CollaborateEffectively from '../../components/features/collaboration/collaborate-effectively.vue'
 
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
 import ApplicationOfWebForms from '../../components/ApplicationOfWebForms.vue'
+import SimpleStepsCreate from '../../components/features/SimpleStepsCreate'
 
 export default {
   components: {
@@ -107,7 +113,7 @@ export default {
     TemplateSection,
     ApplicationOfWebForms,
     FAQwithCategories,
-    CollaborateEffectively,
+    SimpleStepsCreate,
   },
   computed: {
     meta() {
@@ -228,13 +234,12 @@ export default {
         {
           title: 'Control Form Access and Permissions',
           description:
-            "Grant access to who can edit, view, and share your form. Formester’s form collaboration permissions put you in control, ensuring your precious work stays in the right hands. Assign specific roles and permissions for enhanced security and control.",
+            'Grant access to who can edit, view, and share your form. Formester’s form collaboration permissions put you in control, ensuring your precious work stays in the right hands. Assign specific roles and permissions for enhanced security and control.',
           src: 'collaboration/form-permissions.svg',
           alt: 'control the level of access to the forms',
         },
         {
-          title:
-            'Real-time Collaboration on Online Forms and Surveys',
+          title: 'Real-time Collaboration on Online Forms and Surveys',
           description:
             'Collaborate in real-time with your team members on the same form. Experience live communication and instant updates, ensuring everyone stays on the same page and make your form-building process a breeze.',
           src: 'collaboration/realtime-collaboration.svg',
@@ -248,8 +253,7 @@ export default {
           alt: 'remove the access of any user once their task is completed',
         },
         {
-          title:
-            'Track and Analyze Collaborator Contributions',
+          title: 'Track and Analyze Collaborator Contributions',
           description:
             "With Formester's Collaboration feature, you can monitor and analyze each collaborator's contributions to your forms. Easily track who made changes, the kind of changes, collected responses, and accessed the form at any given time. Gain valuable insights into team performance and form activity to optimize collaboration efficiency.",
           src: 'collaboration/form-collaboration-analytics.svg',
@@ -403,6 +407,21 @@ export default {
                 "Formester's real-time collaboration requires an internet connection for simultaneous work. However, collaborators can save drafts offline and sync changes when online.",
             },
           ],
+        },
+      ],
+      steps: [
+        {
+          title: 'Add Collaborators by Sending An Invite',
+          description:
+            'Access your Formester dashboard, click on the Collaborators Tab. In the Add Collaborator field, add the required person’s email address and click invite!.',
+          imgSrc:
+            '/features/collaboration/add-collaborators-by-sending-an-invite.svg',
+        },
+        {
+          title: 'Assign Permissions',
+          description:
+            'Efficiently manage form collaboration with Formester\'s role designation and permission settings. Choose from a range of roles like "Editor" for content changes and "Viewer" for read-only access. Maintain data security, preserve integrity, and enjoy the flexibility to adjust permissions as your project evolves. Assign appropriate roles to maintain control over permissions and collaborate seamlessly.',
+          imgSrc: '/features/collaboration/assign-permissions.svg',
         },
       ],
     }
