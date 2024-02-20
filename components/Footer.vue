@@ -140,7 +140,7 @@
               </li>
               <li class="mt-2">
                 <NuxtLink
-                  to="/features/calculation-fields/"
+                  to="/features/calculating-fields/"
                   class="footer__link"
                 >
                   Calculation Fields

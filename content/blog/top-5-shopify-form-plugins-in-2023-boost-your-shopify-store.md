@@ -406,7 +406,7 @@ Enhance user experience by [pre-filling form fields with known information based
 
 ### 10. Calculation Fields
 
-Create forms that [perform calculations based on user inputs](https://formester.com/features/calculation-fields/). This feature is useful for creating order forms with dynamic pricing, loan calculators, and more.
+Create forms that [perform calculations based on user inputs](https://formester.com/features/calculating-fields/). This feature is useful for creating order forms with dynamic pricing, loan calculators, and more.
 
 ### 11. Collaboration
 

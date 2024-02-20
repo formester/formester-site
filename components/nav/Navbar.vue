@@ -153,7 +153,7 @@ export default {
         {
           title: 'Calculation Fields',
           description: 'Forms that perform calculations',
-          linkName: 'calculation-fields',
+          linkName: 'calculating-fields',
         },
         {
           title: 'Multi-User Collaboration',

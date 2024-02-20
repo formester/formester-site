@@ -1,5 +1,5 @@
 <template>
-  <div class="px-5">
+  <div class="px-4">
     <nuxt-img
       :src="`/features/${feature.src}`"
       class="img-fluid"

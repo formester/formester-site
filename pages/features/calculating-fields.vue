@@ -41,7 +41,7 @@
         </div>
         <FeatureDetail
           :feature="feature"
-          class="col-md-6 my-3"
+          class="col-md-4 my-3"
           v-for="feature in features"
           :key="feature.title"
         />
@@ -111,8 +111,8 @@ export default {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/features/calculation-fields/',
-        title: 'Calculation - Formester',
+        url: 'https://formester.com/features/calculating-fields/',
+        title: 'Calculating Fields - Formester',
         description:
           'Dynamic Forms to Perform Real-time Complex Calculations | Dynamic Scores, Personalized & Interactive Form Experiences - Sign up now.',
         mainImage:
@@ -158,13 +158,13 @@ export default {
   },
   head() {
     return {
-      title: 'Calculation Fields - Formester',
+      title: 'Calculating Fields - Formester',
       meta: [...this.meta],
       link: [
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/features/calculation-fields/',
+          href: 'https://formester.com/features/calculating-fields/',
         },
       ],
     }
@@ -201,7 +201,7 @@ export default {
               '@type': 'ListItem',
               position: 2,
               name: 'Calculation',
-              item: 'https://formester.com/features/calculation-fields/',
+              item: 'https://formester.com/features/calculating-fields/',
             },
           ],
         },
@@ -215,43 +215,36 @@ export default {
           title: 'Loan Calculators',
           description:
             'Enable users to input loan amount, interest rate, and loan duration, and automatically calculate monthly payments. This is beneficial for financial institutions or lending platforms.',
-          src: 'calculation/effortless-calculations.svg',
+          src: 'calculation/loan-preview.png',
           alt: 'Point values assigned to answer choices are automatically calculated, simplifying the scoring process for quizzes, assessments, and interactive forms.',
         },
         {
           title: 'Quiz Score Calculations',
           description:
             'Design quizzes with assigned point values for each question. The form dynamically calculates the total score based on user responses, providing instant feedback. Useful for assessments like tests, surveys, and training modules.',
-          src: 'calculation/deliver-instant-results.svg',
+          src: 'calculation/quiz-preview.png',
           alt: 'As respondents interact with the form, calculations are performed instantly, providing instant feedback and dynamic scoring based on their inputs.',
         },
         {
           title: 'E-commerce Order Calculation',
           description:
             'Improve the shopping experience on e-commerce websites by creating calculation forms for users to input quantities and prices of products, automatically calculating the total order cost.',
-          src: 'calculation/unlock-advanced-functionality.svg',
+          src: 'calculation/order-preview.png',
           alt: 'Calculation Fields are utilized with powerful conditional logic to perform dynamic calculations based on specific conditions.',
         },
         {
           title: 'BMI Calculators',
           description:
             'Health and fitness businesses can design forms that allow users to input their height and weight, automatically calculating their Body Mass Index (BMI).',
-          src: 'calculation/create-interactive-forms.svg',
+          src: 'calculation/bmi-preview.png',
           alt: 'Scores are automatically generated based on specific criteria, enabling assessment of performance, result evaluation, and personalized feedback.',
         },
         {
           title: 'Survey Rating Averages',
           description:
             'Implement forms for surveys where users provide ratings to different questions. Automatically calculate and display the average rating, providing valuable insights for businesses and researchers.',
-          src: 'calculation/hassle-free-transactions.svg',
+          src: 'calculation/survey-preview.png',
           alt: 'Prices and totals are seamlessly calculated, ensuring accurate pricing information. Costs are dynamically adjusted based on selected options, creating optimized shopping baskets or order forms for hassle-free transactions.',
-        },
-        {
-          title: 'Event Budget Calculators',
-          description:
-            "Develop forms for event planning where users input estimated costs for various aspects (venue, catering, etc.). Automatically calculate the total budget, helping event organizers stay within financial constraints.",
-          src: 'calculation/offer-personalized-form-experience.svg',
-          alt: "Calculated results, tailored recommendations, and dynamic content are displayed based on respondents' inputs, offering a personalized form experience.",
         },
       ],
       benefits: [

@@ -319,7 +319,7 @@ Users can leverage advanced styling options and layout designs. To top that, Jot
 
 #### 2. Advanced Form Building Features
 
-Jotform offers a wide array of advanced form-building features, including [conditional logic](/features/conditional-logic/), [calculation fields](/features/calculation-fields/), form calculations, [electronic signatures](/features/electronic-signature/), and document uploads. 
+Jotform offers a wide array of advanced form-building features, including [conditional logic](/features/conditional-logic/), [calculation fields](/features/calculating-fields/), form calculations, [electronic signatures](/features/electronic-signature/), and document uploads. 
 
 These features enable users to create complex and logic-driven, yet interactive forms to meet specific requirements.
 
@@ -651,7 +651,7 @@ Moreover, Jotform facilitates the creation of forms that allow clients or custom
 
 #### 2. Payment Collection and Order Forms
 
-Jotform's built-in payment integration features make it suitable for creating [forms that collect payments, process orders, or handle donations](/features/calculation-fields/). You can create order forms with product catalogs, calculate totals, and accept payments securely.
+Jotform's built-in payment integration features make it suitable for creating [forms that collect payments, process orders, or handle donations](/features/calculating-fields/). You can create order forms with product catalogs, calculate totals, and accept payments securely.
 
 #### 3. Volunteer and Membership Forms
 

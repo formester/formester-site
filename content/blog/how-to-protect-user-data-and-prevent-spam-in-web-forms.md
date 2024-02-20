@@ -440,7 +440,7 @@ That said, Embracing solutions like Formester isn't just a protective measure, b
 
 As you delve deeper into refining your web forms, consider the holistic benefits that Formester brings to the table. 
 
-From spam protection to other advanced features, such as [Auto-responders](https://formester.com/features/autoresponder-email/), [Information Recall](https://formester.com/features/information-recall/), [Calculation Fields](https://formester.com/features/calculation-fields/), [Powerful Analytics](https://formester.com/features/powerful-analytics/), and [Online Payment Integrations](https://formester.com/features/online-payment/), that elevate form functionality;
+From spam protection to other advanced features, such as [Auto-responders](https://formester.com/features/autoresponder-email/), [Information Recall](https://formester.com/features/information-recall/), [Calculation Fields](https://formester.com/features/calculating-fields/), [Powerful Analytics](https://formester.com/features/powerful-analytics/), and [Online Payment Integrations](https://formester.com/features/online-payment/), that elevate form functionality;
 
 Formester empowers you to [create a superior user experience while maintaining data security, and that too without having any knowledge of coding by providing a no-code, drag-and-drop, intuitive interface! ](https://formester.com/)
 

@@ -432,7 +432,7 @@ Forms.App is a simple and affordable form builder that is easy to use. However, 
 
 ### 1. Form Creation Flexibility
 
-Forms.App offers fewer form fields and customization options than Jotform. This means that you may not be able to [create complex or dynamic forms](/features/calculation-fields/) with Forms.App.
+Forms.App offers fewer form fields and customization options than Jotform. This means that you may not be able to [create complex or dynamic forms](/features/calculating-fields/) with Forms.App.
 
 ### 2. Complex Logic
 
