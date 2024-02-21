@@ -20,7 +20,7 @@
             <nuxt-img
               :src="step?.imgSrc"
               class="img-fluid my-auto"
-              alt="Signup with a free account"
+              :alt="step?.title"
               loading="lazy"
             />
           </div>
