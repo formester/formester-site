@@ -20,7 +20,7 @@
             <nuxt-img
               :src="step?.imgSrc"
               class="img-fluid my-auto"
-              :alt="step?.title"
+              :alt="step?.imgAlt"
               loading="lazy"
             />
           </div>
