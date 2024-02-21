@@ -97,13 +97,14 @@ import CallToActionSection from '@/components/CallToActionSection.vue'
 import FeatureDetail from '../../components/FeatureDetail.vue'
 import Testimonial from '@/components/Testimonial.vue'
 import { allTestimonials } from '@/constants/testimonials'
-import TemplateSection from '../../components/TemplateSection.vue'
-import FAQwithCategories from '../../components/FAQwithCategories.vue'
+import TemplateSection from '@/components/TemplateSection.vue'
+import FAQwithCategories from '@/components/FAQwithCategories.vue'
 
 // MetaTags
-import getSiteMeta from '../../utils/getSiteMeta'
-import ApplicationOfWebForms from '../../components/ApplicationOfWebForms.vue'
-import SimpleStepsCreate from '../../components/features/SimpleStepsCreate'
+import getSiteMeta from '@/utils/getSiteMeta'
+import ApplicationOfWebForms from '@/components/ApplicationOfWebForms.vue'
+import SimpleStepsCreate from '@/components/features/SimpleStepsCreate'
+import { fetchRandomTestimonials } from '@/utils/getTestimonials.js'
 
 export default {
   components: {
@@ -429,11 +430,7 @@ export default {
     }
   },
   async asyncData() {
-    let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(
-      Math.random() * (randomTestimonials.length - 2)
-    )
-    randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
+    let randomTestimonials = await fetchRandomTestimonials()
     return { randomTestimonials }
   },
 }

@@ -50,9 +50,7 @@
     <div class="container py-5">
       <div class="row">
         <div class="heading d-flex flex-column align-items-center text-center">
-          <h2 class="section__heading">
-            Benefits of Calculating Fields
-          </h2>
+          <h2 class="section__heading">Benefits of Calculating Fields</h2>
           <p>
             Efficiency, precision, and enhanced productivity at your fingertips
           </p>
@@ -77,7 +75,7 @@
         </div>
       </div>
     </div>
-    <SimpleStepsCreate 
+    <SimpleStepsCreate
       heading="How to add a calculating fields in 3 simple steps"
       :steps="steps"
       :stepCount="steps.length"
@@ -95,6 +93,7 @@ import Testimonial from '@/components/Testimonial.vue'
 import { allTestimonials } from '@/constants/testimonials'
 import TemplateSection from '../../components/TemplateSection.vue'
 import SimpleStepsCreate from '../../components/features/SimpleStepsCreate'
+import { fetchRandomTestimonials } from '@/utils/getTestimonials.js'
 
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
@@ -105,7 +104,7 @@ export default {
     CallToActionSection,
     Testimonial,
     TemplateSection,
-    SimpleStepsCreate
+    SimpleStepsCreate,
   },
   computed: {
     meta() {
@@ -176,7 +175,7 @@ export default {
         {
           '@type': 'Corporation',
           '@id': 'https://acornglobus.com',
-          name: 'Calculation - Formester',
+          name: 'Calculating Fields - Formester',
           description:
             'Dynamic Forms to Perform Real-time Complex Calculations | Dynamic Scores, Personalized & Interactive Form Experiences - Sign up now.',
           logo: 'https://formester.com/logo.png',
@@ -282,33 +281,28 @@ export default {
           title: 'Sign Up',
           description:
             'Sign up for a free account on formester to build an online form or quiz. You can also select any template from our pre-designed templates library.',
-          imgSrc:
-            '/features/calculation-field-in-action/step1.svg',
-          imgAlt: 'Create your form Using Formester'
+          imgSrc: '/features/calculation-field-in-action/step1.svg',
+          imgAlt: 'Create your form Using Formester',
         },
         {
           title: 'Add the Calculation Field',
           description:
             'In the form builder, drag and drop the calculation field into your form. Customize the calculations with chosen fields, math operations, and conditional logic for customized results.',
           imgSrc: '/features/calculation-field-in-action/step2.svg',
-          imgAlt: 'Add Calculation Field'
+          imgAlt: 'Add Calculation Field',
         },
         {
           title: 'Publish the form',
           description:
             'Use the preview mode to ensure accurate calculations. Once done, deploy the form to deliver dynamic and personalized calculation forms to your respondents.',
           imgSrc: '/features/calculation-field-in-action/step4.svg',
-          imgAlt: 'Validate and Personalize with Calculation Field'
+          imgAlt: 'Validate and Personalize with Calculation Field',
         },
       ],
     }
   },
   async asyncData() {
-    let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(
-      Math.random() * (randomTestimonials.length - 2)
-    )
-    randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
+    let randomTestimonials = await fetchRandomTestimonials()
     return { randomTestimonials }
   },
 }

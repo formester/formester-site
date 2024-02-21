@@ -32,39 +32,11 @@
         </div>
       </div>
     </div>
-    <div class="container py-5">
-      <div
-        class="row justify-content-center align-items-center text-center mt-5"
-      >
-        <div>
-          <h2 class="section__heading">
-            Automate Email Marketing for Your Business with Email Autoresponder
-          </h2>
-          <p class="hero__subheading">
-            Unlock the Power of Automated Email Marketing for Your Business
-          </p>
-        </div>
-        <div
-          class="d-flex flex-column flex-md-row justify-content-between mt-md-5"
-        >
-          <div
-            class="d-flex flex-column align-items-center align-items-md-start text-center text-md-start px-4 col-md-4 my-3 mt-lg-5"
-            v-for="benefit in benefits"
-            :key="benefit.title"
-          >
-            <nuxt-img
-              style="width: 69px"
-              :src="benefit.imgSrc"
-              alt="Formester"
-            />
-            <h4 class="sub__section-heading mt-4">{{ benefit.title }}</h4>
-            <p class="subheading__text">
-              {{ benefit.description }}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ThreeColBenefits
+      heading="Automate Email Marketing for Your Business with Email Autoresponder"
+      subHeading="Unlock the Power of Automated Email Marketing for Your Business"
+      :benefits="benefits"
+    />
     <div class="container py-5">
       <div class="row">
         <div
@@ -101,16 +73,18 @@
 
 <script>
 import CallToActionSection from '@/components/CallToActionSection.vue'
-import FeatureDetail from '../../components/FeatureDetail.vue'
+import FeatureDetail from '@/components/FeatureDetail.vue'
 import Testimonial from '@/components/Testimonial.vue'
 import { allTestimonials } from '@/constants/testimonials'
-import TemplateSection from '../../components/TemplateSection.vue'
-import UseCaseFeatureShowcase from "../../components/use-case/FeatureShowcase.vue"
+import TemplateSection from '@/components/TemplateSection.vue'
+import UseCaseFeatureShowcase from "@/components/use-case/FeatureShowcase.vue"
 
 // MetaTags
-import getSiteMeta from '../../utils/getSiteMeta'
-import ApplicationOfWebForms from '../../components/ApplicationOfWebForms.vue'
-import SimpleStepsCreate from '../../components/features/SimpleStepsCreate'
+import getSiteMeta from '@/utils/getSiteMeta'
+import ApplicationOfWebForms from '@/components/ApplicationOfWebForms.vue'
+import SimpleStepsCreate from '@/components/features/SimpleStepsCreate'
+import { fetchRandomTestimonials } from '@/utils/getTestimonials.js'
+import ThreeColBenefits from '@/components/features/ThreeColBenefits.vue'
 
 export default {
   components: {
@@ -120,6 +94,8 @@ export default {
     TemplateSection,
     ApplicationOfWebForms,
     SimpleStepsCreate,
+    UseCaseFeatureShowcase,
+    ThreeColBenefits
   },
   computed: {
     meta() {
@@ -333,11 +309,7 @@ export default {
     }
   },
   async asyncData() {
-    let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(
-      Math.random() * (randomTestimonials.length - 2)
-    )
-    randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
+    let randomTestimonials = await fetchRandomTestimonials()
     return { randomTestimonials }
   },
 }

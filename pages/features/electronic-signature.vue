@@ -47,36 +47,10 @@
         />
       </div>
     </div>
-    <div class="container py-5">
-      <div
-        class="row justify-content-center align-items-center text-center mt-5"
-      >
-        <div>
-          <h2 class="section__heading">
-            Benefits of Collecting Electronic Signatures with Online Forms
-          </h2>
-        </div>
-        <div
-          class="d-flex flex-column flex-md-row justify-content-between mt-md-5"
-        >
-          <div
-            v-for="benefit in benefits"
-            :key="benefit.title"
-            class="d-flex flex-column align-items-center align-items-md-start text-center text-md-start px-4 col-md-4 my-3 mt-lg-5"
-          >
-            <nuxt-img
-              style="width: 69px"
-              :src="`/features/${benefit?.imgSrc}`"
-              alt="Formester"
-            />
-            <h4 class="sub__section-heading mt-4">{{benefit?.title}}</h4>
-            <p class="subheading__text">
-              {{benefit?.description}}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ThreeColBenefits
+      heading="Benefits of Collecting Electronic Signatures with Online Forms"
+      :benefits="benefits"
+    />
     <ThreeStepsCreateForm />
     <Testimonial :testimonials="randomTestimonials" />
     <TemplateSection />
@@ -93,6 +67,8 @@ import TemplateSection from '../../components/TemplateSection.vue'
 
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
+import ThreeColBenefits from '@/components/features/ThreeColBenefits.vue'
+import { fetchRandomTestimonials } from '@/utils/getTestimonials.js'
 
 export default {
   components: {
@@ -100,6 +76,7 @@ export default {
     CallToActionSection,
     Testimonial,
     TemplateSection,
+    ThreeColBenefits,
   },
   computed: {
     meta() {
@@ -209,29 +186,25 @@ export default {
           title: 'Legal Document Signatures',
           description:
             "Obtain legally binding signatures with ease. Our online form builder's electronic signature feature reduces paperwork, ensuring an efficient, error-free method for handling legal agreements.",
-          imgSrc: 'digital-signature/legal-document-signatures.svg',
+          imgSrc: 'features/digital-signature/legal-document-signatures.svg',
         },
         {
           title: 'HR and Employee Onboarding',
           description:
             'Create digital forms for contracts and policy acknowledgments, obtain secure electronic signatures, and expedite onboarding without the hassle of paperwork delays.',
-          imgSrc: 'digital-signature/hr-and-employee-onboarding.svg',
+          imgSrc: 'features/digital-signature/hr-and-employee-onboarding.svg',
         },
         {
           title: 'Financial Transactions',
           description:
             'Streamline financial processes, enable digital signing and approvals within the order form, and optimize the workflows for error-free order processing and commercial transactions.',
-          imgSrc: 'digital-signature/financial-transactions.svg',
+          imgSrc: 'features/digital-signature/financial-transactions.svg',
         },
       ],
     }
   },
   async asyncData() {
-    let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(
-      Math.random() * (randomTestimonials.length - 2)
-    )
-    randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
+    let randomTestimonials = await fetchRandomTestimonials()
     return { randomTestimonials }
   },
 }
