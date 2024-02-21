@@ -16,7 +16,7 @@
               {{ step?.description }}
             </p>
           </div>
-          <div class="d-flex flex-column flex-lg-row">
+          <div v-if="step?.imgSrc" class="d-flex flex-column flex-lg-row">
             <nuxt-img
               :src="step?.imgSrc"
               class="img-fluid my-auto"

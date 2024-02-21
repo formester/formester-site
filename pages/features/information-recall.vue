@@ -6,12 +6,9 @@
           <div
             class="col-lg-5 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start mt-xl-0 mt-md-5"
           >
-            <h1 class="section__heading">Information Recall</h1>
+            <h1 class="section__heading">Reuse and Recall Information</h1>
             <p class="hero__subheading mt-3">
-              Information Recall allows you to reference answers, variables, and
-              more, making your forms feel more dynamic, conversational,
-              compelling and smart. Supercharge your forms by creating engaging
-              experiences with Formester's Information Recall feature.
+              Information Recall allows you to reference answers, variables, and more, making your forms feel more dynamic, conversational, compelling and smart. Supercharge your forms by creating engaging experiences with Formester's Information Recall feature.
             </p>
             <a
               href="https://app.formester.com/users/sign_up"
@@ -50,9 +47,8 @@
       <div class="row">
         <div class="heading d-flex flex-column align-items-center text-center">
           <h2 class="section__heading">
-            Unlock the Benefits of Information Recall
+            Benefits of Information Recall
           </h2>
-          <p>Save time, improve accuracy, and boost productivity</p>
         </div>
 
         <div class="templates mt-md-5">
@@ -76,7 +72,7 @@
     </div>
 
     <InformationRecallInPractice />
-    <Testimonial :testimonials="randomTestimonials" />
+    <Testimonial :testimonials="randomTestimonials"/>
     <TemplateSection />
     <CallToActionSection />
   </div>
@@ -106,7 +102,7 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/features/information-recall/',
-        title: 'Information Recall - Formester',
+        title: 'Information Recall and Reuse Feature | Formester',
         description:
           "Create personalized and interactive form & survey experiences - Formester's Information Recall | Answer recall, Dynamic variables & more!",
         mainImage:
@@ -151,7 +147,7 @@ export default {
   },
   head() {
     return {
-      title: 'Information Recall - Formester',
+      title: 'Information Recall and Reuse Feature | Formester',
       meta: [...this.meta],
       link: [
         {
@@ -207,7 +203,7 @@ export default {
         {
           title: 'Answer Recall: Bring Conversations to Life',
           description:
-            "Enhance the conversational experience of your webforms by referencing and utilizing answers from previous questions. By mentioning a respondent's name or other relevant information, you can create a personalized interaction that makes them feel engaged and valued.",
+            "Enhance the conversational experience of your web forms by referencing and recalling answers from previous questions. By mentioning a respondent's name or other relevant information, you can create a personalized interaction that makes them feel engaged and valued.",
           src: 'information-recall/answer-recall-bring-conversations-to-life.svg',
           alt: "Previous answers from questions are referenced and utilized, enhancing the conversational experience. By mentioning a respondent's name a personalized interaction is created, making them feel engaged and valued.",
         },

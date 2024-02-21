@@ -2,7 +2,7 @@
   <div class="container py-5">
     <div class="row">
       <div class="heading d-flex flex-column align-items-center text-center">
-        <h2 class="section__heading">Customer Testimonials</h2>
+        <h2 class="section__heading">Testimonials</h2>
         <p class="hero__subheading">Discover what our customers have to say about their experience with us</p>
       </div>
       <div class="d-flex flex-column flex-lg-row px-3 px-md-0 justify-content-center align-items-center mt-5">
