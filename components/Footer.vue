@@ -101,7 +101,7 @@
                   to="/features/form-analytics/"
                   class="footer__link"
                 >
-                  Powerful Analytics
+                  Form Analytics
                 </NuxtLink>
               </li>
               <li class="mt-2">
@@ -114,7 +114,7 @@
               </li>
               <li class="mt-2">
                 <NuxtLink to="/features/online-payments/" class="footer__link">
-                  Online Payment
+                  Online Payments
                 </NuxtLink>
               </li>
               <li class="mt-2">
