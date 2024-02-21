@@ -121,9 +121,9 @@ export default {
           linkName: 'spam-protection',
         },
         {
-          title: 'Powerful Analytics',
+          title: 'Form Analytics',
           description: 'Get Insights of Engagements',
-          linkName: 'powerful-analytics',
+          linkName: 'form-analytics',
         },
         {
           title: 'Conditional Logic',
@@ -133,7 +133,7 @@ export default {
         {
           title: 'Online Payments',
           description: 'Start collecting payments',
-          linkName: 'online-payment',
+          linkName: 'online-payments',
         },
         {
           title: 'Digital Signature',
