@@ -416,12 +416,14 @@ export default {
             'Access your Formester dashboard, click on the Collaborators Tab. In the Add Collaborator field, add the required person’s email address and click invite!.',
           imgSrc:
             '/features/collaboration/add-collaborators-by-sending-an-invite.svg',
+          imgAlt: 'Add Collaborators by Sending An Invite'
         },
         {
           title: 'Assign Permissions',
           description:
             'Efficiently manage form collaboration with Formester\'s role designation and permission settings. Choose from a range of roles like "Editor" for content changes and "Viewer" for read-only access. Maintain data security, preserve integrity, and enjoy the flexibility to adjust permissions as your project evolves. Assign appropriate roles to maintain control over permissions and collaborate seamlessly.',
           imgSrc: '/features/collaboration/assign-permissions.svg',
+          imgAlt: 'Assign Permissions'
         },
       ],
     }

@@ -312,18 +312,21 @@ export default {
           description:
             'Sign up for a free account on formester and create an online form or survey. You can also select any template from our pre-designed templates library.',
           imgSrc: '/features/three-steps-create-form/step1.svg',
+          imgAlt: 'Sign up for a free account'
         },
         {
           title: '',
           description:
             'Select the “automation” tab in the form building menu. Turn on the autoresponder option and create an email copy.',
           imgSrc: '/features/three-steps-create-form/step2.svg',
+          imgAlt: 'Select the “automation” tab in the form building menu'
         },
         {
           title: '',
           description:
             'Share the form and wait for users to fill in the responses. Autoresponder emails will be sent out based on your set conditions.',
           imgSrc: '/features/three-steps-create-form/step3.svg',
+          imgAlt: 'Share the form'
         },
       ],
     }

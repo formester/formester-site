@@ -279,23 +279,26 @@ export default {
       ],
       steps: [
         {
-          title: 'Create your form Using Formester',
+          title: 'Sign Up',
           description:
             'Sign up for a free account on formester to build an online form or quiz. You can also select any template from our pre-designed templates library.',
           imgSrc:
             '/features/calculation-field-in-action/step1.svg',
+          imgAlt: 'Create your form Using Formester'
         },
         {
-          title: 'Add Calculation Field',
+          title: 'Add the Calculation Field',
           description:
             'In the form builder, drag and drop the calculation field into your form. Customize the calculations with chosen fields, math operations, and conditional logic for customized results.',
           imgSrc: '/features/calculation-field-in-action/step2.svg',
+          imgAlt: 'Add Calculation Field'
         },
         {
-          title: 'Validate and Personalize with Calculation Field',
+          title: 'Publish the form',
           description:
             'Use the preview mode to ensure accurate calculations. Once done, deploy the form to deliver dynamic and personalized calculation forms to your respondents.',
           imgSrc: '/features/calculation-field-in-action/step4.svg',
+          imgAlt: 'Validate and Personalize with Calculation Field'
         },
       ],
     }
