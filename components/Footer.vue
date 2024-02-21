@@ -143,7 +143,7 @@
                   to="/features/calculating-fields/"
                   class="footer__link"
                 >
-                  Calculation Fields
+                  Calculating Fields
                 </NuxtLink>
               </li>
               <li class="mt-2">
