@@ -28,7 +28,7 @@ export default {
 }
 
 img {
-  padding-bottom: 2em;
-  height: 235px;
+  margin-bottom: 2em;
+  border-radius: 6px;
 }
 </style>

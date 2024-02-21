@@ -151,7 +151,7 @@ export default {
           linkName: 'information-recall',
         },
         {
-          title: 'Calculation Fields',
+          title: 'Calculating Fields',
           description: 'Forms that perform calculations',
           linkName: 'calculating-fields',
         },

@@ -105,6 +105,7 @@ import FeatureDetail from '../../components/FeatureDetail.vue'
 import Testimonial from '@/components/Testimonial.vue'
 import { allTestimonials } from '@/constants/testimonials'
 import TemplateSection from '../../components/TemplateSection.vue'
+import UseCaseFeatureShowcase from "../../components/use-case/FeatureShowcase.vue"
 
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
@@ -291,19 +292,19 @@ export default {
           heading: 'Lead Nurturing and Conversion',
           description:
             'Implement an autoresponder series that is triggered when a user submits a lead generation form. This series can include personalized content, product information, and exclusive offers, nurturing leads and guiding them through the sales funnel. It helps in maintaining engagement and increasing the likelihood of conversion.',
-          imgUrl: 'hr-solution/HelpingFeaturesForHr/automate-job.svg',
+          imgUrl: 'features/auto-responder/lead-nurturing.png',
         },
         {
           heading: 'Customer Onboarding and Engagement',
           description:
             'Create an autoresponder email sequence for users who have recently signed up or made a purchase. This sequence can include welcome messages, onboarding tips, and resources to help customers get the most out of their purchase. Improving customer understanding and satisfaction can lead to long-term loyalty.',
-          imgUrl: 'hr-solution/HelpingFeaturesForHr/leave-management.svg',
+          imgUrl: 'features/auto-responder/customer-onboarding.png',
         },
         {
           heading: 'Survey and Feedback Analysis',
           description:
             'Use autoresponders to send follow-up emails containing surveys or feedback forms after a customer interaction, purchase, or support request. Analyzing the responses helps businesses understand customer satisfaction, identify areas for improvement, and make data-driven decisions to enhance their products or services.',
-          imgUrl: 'hr-solution/HelpingFeaturesForHr/effortless-employee.svg',
+          imgUrl: 'features/auto-responder/survey.png',
         },
       ],
       steps: [
