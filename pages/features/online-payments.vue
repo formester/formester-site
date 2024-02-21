@@ -257,7 +257,7 @@ export default {
       },
       templateContent: {
         heading: "Free Online Payment Form Templates",
-        slug:"sales"
+        slug:"order-forms"
       }
     }
   },
