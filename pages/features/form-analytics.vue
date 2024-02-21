@@ -90,7 +90,7 @@
           </div>
         </div>
     </div>
-    <ThreeStepsCreateForm />
+    <SimpleStepsCreate :heading="threeStepContent.heading" :step-count="threeStepContent.steps.length" :steps="threeStepContent.steps" />
     <Testimonial 
       :testimonials="randomTestimonials"
     />
@@ -104,13 +104,15 @@ import CallToActionSection from '@/components/CallToActionSection.vue'
 import FeatureDetail from '../../components/FeatureDetail.vue'
 import Testimonial from '@/components/Testimonial.vue'
 import { allTestimonials } from '@/constants/testimonials'
+import SimpleStepsCreate from '../../components/features/SimpleStepsCreate.vue'
 
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
 import TemplateSection from '../../components/TemplateSection.vue'
 
+
 export default {
-  components: { FeatureDetail, CallToActionSection, Testimonial, TemplateSection },
+  components: { FeatureDetail, CallToActionSection, Testimonial, TemplateSection, SimpleStepsCreate },
   computed: {
     meta() {
       const metaData = {
@@ -206,6 +208,23 @@ export default {
           src: 'form-analytics/provide-critical-insight.svg',
         },
       ],
+      threeStepContent: {
+        heading: "How to access robust form analytics in 3 simple steps:",
+        steps: [
+          {
+            title: "Sign up",
+            description: " Sign up for a free account on formester and build an online form or survey. You can also select any template from our pre-designed templates library."
+          },
+          {
+            title: "Form sharing",
+            description: "Share your form and wait for users to fill in the responses."
+          },
+          {
+            title: "Check the analytics",
+            description: "Go to the “Results” section to check the analytics and a detailed breakdown of all the form responses."
+          },
+        ]
+      }
     }
   },
   async asyncData() {

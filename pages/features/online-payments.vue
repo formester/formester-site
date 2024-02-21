@@ -95,11 +95,11 @@
         />
       </div>
     </div>
-    <ThreeStepsCreateForm />
+    <SimpleStepsCreate :heading="threeStepContent.heading" :step-count="threeStepContent.steps.length" :steps="threeStepContent.steps" />
     <Testimonial 
       :testimonials="randomTestimonials"
     />
-    <TemplateSection />
+    <TemplateSection :heading="templateContent.heading" :slug="templateContent.slug" />
     <CallToActionSection :content="CallToActionContent" />
   </div>
 </template>
@@ -110,13 +110,14 @@ import FeatureDetail from '../../components/FeatureDetail.vue'
 import Testimonial from '@/components/Testimonial.vue'
 import { allTestimonials } from '@/constants/testimonials'
 import FeatureShowcaseVue from '../../components/online-payments/FeatureShowcase.vue'
+import SimpleStepsCreate from '../../components/features/SimpleStepsCreate.vue'
 
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
 import TemplateSection from '../../components/TemplateSection.vue'
 
 export default {
-  components: { FeatureDetail, CallToActionSection, Testimonial, TemplateSection },
+  components: { FeatureDetail, CallToActionSection, Testimonial, TemplateSection, FeatureShowcaseVue, SimpleStepsCreate },
   computed: {
     meta() {
       const metaData = {
@@ -205,7 +206,7 @@ export default {
           heading: 'Event Registration with Fee Collection',
           description:
             'Organizers can effortlessly create customized registration forms, ensuring instant collection of fees and improved participant registration experience.',
-          imgUrl: 'features/online-payment/event-registration.jpg',
+          imgUrl: 'features/online-payment/event-registration.png',
         },
         {
           heading: 'Product Order and Payment',
@@ -235,7 +236,28 @@ export default {
         },
       ],
       CallToActionContent: {
-        heading: "Create your first online payment form!"
+        heading: "Create your first online payment form!",
+      },
+      threeStepContent: {
+        heading: "How to activate online payments in 3 simple steps:",
+        steps: [
+          {
+            title: "Sign up",
+            description: "Sign up for a free account on formester and build an online form. You can also select any template from our pre-designed templates library."
+          },
+          {
+            title: "Payment integration selection",
+            description: "Select a payment integration option in the form builder and drag & drop it to your form."
+          },
+          {
+            title: "Form sharing",
+            description: "Share the form and start collecting payments along with form submissions."
+          },
+        ]
+      },
+      templateContent: {
+        heading: "Free Online Payment Form Templates",
+        slug:"sales"
       }
     }
   },
