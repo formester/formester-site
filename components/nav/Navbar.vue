@@ -113,7 +113,7 @@ export default {
         {
           title: 'Auto Responder',
           description: 'Set up automated responses',
-          linkName: 'auto-responder',
+          linkName: 'autoresponder-email',
         },
         {
           title: 'Spam Protection',
@@ -136,9 +136,9 @@ export default {
           linkName: 'online-payments',
         },
         {
-          title: 'Digital Signature',
+          title: 'Electronic Signature',
           description: 'Incorporate e-signatures',
-          linkName: 'digital-signature',
+          linkName: 'electronic-signature',
         },
         {
           title: 'Brand Kit',
@@ -151,14 +151,14 @@ export default {
           linkName: 'information-recall',
         },
         {
-          title: 'Calculation Fields',
+          title: 'Calculating Fields',
           description: 'Forms that perform calculations',
-          linkName: 'calculation-fields',
+          linkName: 'calculating-fields',
         },
         {
           title: 'Multi-User Collaboration',
           description: 'Collaborate with team members',
-          linkName: 'collaboration',
+          linkName: 'team-collaboration',
         },
         {
           title: 'Offline Forms',

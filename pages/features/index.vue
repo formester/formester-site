@@ -89,7 +89,7 @@ export default {
               img: 'tracking',
             },
           ],
-          link: 'auto-responder',
+          link: 'autoresponder-email',
           bgPink: true,
         },
         {
@@ -201,7 +201,7 @@ export default {
               img: 'easy-sharing',
             },
           ],
-          link: 'digital-signature',
+          link: 'electronic-signature',
         },
       ],
     }

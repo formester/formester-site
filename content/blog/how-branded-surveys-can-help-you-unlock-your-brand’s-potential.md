@@ -270,7 +270,7 @@ However, the most crucial set of questions that you should take advantage of, ar
 
 To increase your affability, be sure you give thanks to your survey responders!
 
-Set-up an Auto-Responder, to [send out a quick thanks](/features/auto-responder/) for taking their valuable time to fill up your survey. 
+Set-up an Auto-Responder, to [send out a quick thanks](/features/autoresponder-email/) for taking their valuable time to fill up your survey. 
 
 ### 3. Providing a safe, smooth and effortless platform
 

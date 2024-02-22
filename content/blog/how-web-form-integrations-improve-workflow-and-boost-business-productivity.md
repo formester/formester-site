@@ -120,6 +120,6 @@ We've covered a lot about web form integrations! They make data handling easier,
 
 ### **Formester: Your Comprehensive Web Form Integration Solution**
 
-Formester is an [Html web form solution](https://formester.com/) that goes beyond mere integrations by strongly emphasising data accuracy and security. The [built-in spam protection feature](https://formester.com/features/spam-protection/) ensures that the data collected remains clean and accurate. Formester offers additional functionalities like auto-responder and [digital signatures](https://formester.com/features/digital-signature/), providing a comprehensive solution for efficient workflow management. 
+Formester is an [Html web form solution](https://formester.com/) that goes beyond mere integrations by strongly emphasising data accuracy and security. The [built-in spam protection feature](https://formester.com/features/spam-protection/) ensures that the data collected remains clean and accurate. Formester offers additional functionalities like auto-responder and [digital signatures](https://formester.com/features/electronic-signature/), providing a comprehensive solution for efficient workflow management. 
 
 If you're seeking a tool that not only integrates but enhances your workflow with insightful analytics and features designed for productivity, Formester is the ideal choice. Improve your web form integration experience, streamline your operations, and unlock unparalleled efficiency with Formester.

@@ -12,8 +12,8 @@
             <p class="hero__subheading mt-3">
               Form sharing for effective collaboration and efficient team-work!
               Unite your team, gather valuable feedback, and unlock the true
-              potential of form building with Formester's powerful in-built
-              Collaboration/Add Collaborators feature!
+              potential of form building with Formester's built-in Team
+              Collaboration feature.
             </p>
             <a
               href="https://app.formester.com/users/sign_up"
@@ -39,7 +39,9 @@
         <div
           class="feature__heading d-flex align-items-center justify-content-center"
         >
-          <h2 class="section__heading">How does Collaboration help?</h2>
+          <h2 class="section__heading">
+            How does online form collaboration help?
+          </h2>
         </div>
         <FeatureDetail
           :feature="feature"
@@ -54,7 +56,7 @@
       <div class="row">
         <div class="heading d-flex flex-column align-items-center text-center">
           <h2 class="section__heading">
-            Discover the Benefits of Form Collaboration
+            Discover the Benefits of Form Collaboration on Forms
           </h2>
         </div>
 
@@ -78,7 +80,11 @@
       </div>
     </div>
 
-    <CollaborateEffectively />
+    <SimpleStepsCreate
+      heading="How to collaborate effectively in 2 simple steps"
+      :steps="steps"
+      :stepCount="steps.length"
+    />
     <Testimonial :testimonials="randomTestimonials" />
     <TemplateSection />
     <CallToActionSection />
@@ -91,13 +97,14 @@ import CallToActionSection from '@/components/CallToActionSection.vue'
 import FeatureDetail from '../../components/FeatureDetail.vue'
 import Testimonial from '@/components/Testimonial.vue'
 import { allTestimonials } from '@/constants/testimonials'
-import TemplateSection from '../../components/TemplateSection.vue'
-import FAQwithCategories from '../../components/FAQwithCategories.vue'
-import CollaborateEffectively from '../../components/features/collaboration/collaborate-effectively.vue'
+import TemplateSection from '@/components/TemplateSection.vue'
+import FAQwithCategories from '@/components/FAQwithCategories.vue'
 
 // MetaTags
-import getSiteMeta from '../../utils/getSiteMeta'
-import ApplicationOfWebForms from '../../components/ApplicationOfWebForms.vue'
+import getSiteMeta from '@/utils/getSiteMeta'
+import ApplicationOfWebForms from '@/components/ApplicationOfWebForms.vue'
+import SimpleStepsCreate from '@/components/features/SimpleStepsCreate'
+import { fetchRandomTestimonials } from '@/utils/getTestimonials.js'
 
 export default {
   components: {
@@ -107,15 +114,15 @@ export default {
     TemplateSection,
     ApplicationOfWebForms,
     FAQwithCategories,
-    CollaborateEffectively,
+    SimpleStepsCreate,
   },
   computed: {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/features/collaboration/',
+        url: 'https://formester.com/features/team-collaboration/',
         title:
-          'Simplified Collaboration: Form Access with Multiple Members & Clients!',
+          'Simplify Collaboration on Online Forms and Surveys - Team Collaboration allows you to regulate Form Access for Multiple Users, Members or Clients!',
         description:
           "Formester's collaborative form sharing will boost teamwork! Gather input, unite your team, and easily uncover form-building potential.",
         mainImage:
@@ -165,13 +172,13 @@ export default {
   head() {
     return {
       title:
-        'Simplified Collaboration: Form Access with Multiple Members & Clients!',
+        'Simplify Collaboration on Online Forms and Surveys - Team Collaboration allows you to regulate Form Access for Multiple Users, Members or Clients!',
       meta: [...this.meta],
       link: [
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/features/collaboration/',
+          href: 'https://formester.com/features/team-collaboration/',
         },
       ],
     }
@@ -208,7 +215,7 @@ export default {
               '@type': 'ListItem',
               position: 2,
               name: 'Auto Responder',
-              item: 'https://formester.com/features/collaboration/',
+              item: 'https://formester.com/features/team-collaboration/',
             },
           ],
         },
@@ -219,37 +226,35 @@ export default {
     return {
       features: [
         {
-          title: 'Collaborate Effortlessly: Add Multiple Collaborators',
+          title: 'Collaborative forms with Multiple User',
           description:
             'With Formester’s in-built Collaboration feature, you can Invite multiple team members, colleagues, and clients to collaborate and work as a team on your forms. Boost productivity, efficiency and bring your team together to let the creativity flow!',
           src: 'collaboration/collaborate-effortlessly.svg',
           alt: 'add multiple collaboration',
         },
         {
-          title: 'Form Permissions: Control at Your Fingertips',
+          title: 'Control Form Access and Permissions',
           description:
-            "You're the master of permissions! Decide who can edit, who can view, and who can spread the edit your form further. Formester’s form collaboration permissions put you in control, ensuring your precious work stays in the right hands. Assign specific roles and permissions for enhanced security and control.",
+            'Grant access to who can edit, view, and share your form. Formester’s form collaboration permissions put you in control, ensuring your precious work stays in the right hands. Assign specific roles and permissions for enhanced security and control.',
           src: 'collaboration/form-permissions.svg',
           alt: 'control the level of access to the forms',
         },
         {
-          title:
-            'Real-time Collaboration: Suggest and Make Form Edits Simultaneously',
+          title: 'Real-time Collaboration on Online Forms and Surveys',
           description:
-            'Collaborate in real-time with your team members on the same form. Experience seamless communication and instant updates, ensuring everyone stays on the same page and make your form-building process a breeze.',
+            'Collaborate in real-time with your team members on the same form. Experience live communication and instant updates, ensuring everyone stays on the same page and make your form-building process a breeze.',
           src: 'collaboration/realtime-collaboration.svg',
           alt: 'collaboration real time',
         },
         {
-          title: 'Access Revoked: Remove Access with Ease',
+          title: 'Revoke Access with Ease',
           description:
-            "Formester's Collaboration feature empowers you with complete control over access to your forms. If you need to revoke access for a particular collaborator, you can do so effortlessly. Whether it's a team member who has completed their task or a client who no longer requires access, you can remove their permissions with a few simple clicks, ensuring the security and privacy of your form data.",
+            "Team Collaboration feature provides full access control to your online forms. Easily revoke access for specific collaborators, be it a past team member or a client no longer needing access. Ensure your form data's security and privacy with just a few clicks.",
           src: 'collaboration/access-revoked.svg',
           alt: 'remove the access of any user once their task is completed',
         },
         {
-          title:
-            'Form Collaboration Analytics: Track Collaborator Contributions',
+          title: 'Track and Analyze Collaborator Contributions',
           description:
             "With Formester's Collaboration feature, you can monitor and analyze each collaborator's contributions to your forms. Easily track who made changes, the kind of changes, collected responses, and accessed the form at any given time. Gain valuable insights into team performance and form activity to optimize collaboration efficiency.",
           src: 'collaboration/form-collaboration-analytics.svg',
@@ -307,7 +312,7 @@ export default {
           altText: 'icon showing enhanced productivity',
         },
         {
-          title: 'Team Cohesion',
+          title: 'Team Morale',
           description:
             'Collaborative form-building fosters a sense of unity and cohesion among team members. By working together towards a common goal, team members feel more engaged, motivated, and invested in the success of the project.',
           imageSrc: 'team-cohesion.jpg',
@@ -405,14 +410,27 @@ export default {
           ],
         },
       ],
+      steps: [
+        {
+          title: 'Add Collaborators by Sending An Invite',
+          description:
+            'Access your Formester dashboard, click on the Collaborators Tab. In the Add Collaborator field, add the required person’s email address and click invite!.',
+          imgSrc:
+            '/features/collaboration/add-collaborators-by-sending-an-invite.svg',
+          imgAlt: 'Add Collaborators by Sending An Invite'
+        },
+        {
+          title: 'Assign Permissions',
+          description:
+            'Efficiently manage form collaboration with Formester\'s role designation and permission settings. Choose from a range of roles like "Editor" for content changes and "Viewer" for read-only access. Maintain data security, preserve integrity, and enjoy the flexibility to adjust permissions as your project evolves. Assign appropriate roles to maintain control over permissions and collaborate seamlessly.',
+          imgSrc: '/features/collaboration/assign-permissions.svg',
+          imgAlt: 'Assign Permissions'
+        },
+      ],
     }
   },
   async asyncData() {
-    let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(
-      Math.random() * (randomTestimonials.length - 2)
-    )
-    randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
+    let randomTestimonials = await fetchRandomTestimonials()
     return { randomTestimonials }
   },
 }

@@ -374,7 +374,7 @@ Formester's [HTML form backend allows you to point your form to Formester's endp
 
 ### 2. Auto Responder
 
-Set up [automatic email responses to user submissions, acknowledging their submissions](https://formester.com/features/auto-responder/) and providing relevant information. This feature helps improve customer satisfaction and communication.
+Set up [automatic email responses to user submissions, acknowledging their submissions](https://formester.com/features/autoresponder-email/) and providing relevant information. This feature helps improve customer satisfaction and communication.
 
 ### 3. Spam Protection
 
@@ -394,7 +394,7 @@ Seamlessly [integrate online payment gateways into your forms to collect payment
 
 ### 7. Digital Signature
 
-Implement [digital signature fields in your forms, enabling customers to provide electronic signatures](https://formester.com/features/digital-signature/) for agreements, contracts, or authorization purposes.
+Implement [digital signature fields in your forms, enabling customers to provide electronic signatures](https://formester.com/features/electronic-signature/) for agreements, contracts, or authorization purposes.
 
 ### 8. Branding Kit
 
@@ -406,11 +406,11 @@ Enhance user experience by [pre-filling form fields with known information based
 
 ### 10. Calculation Fields
 
-Create forms that [perform calculations based on user inputs](https://formester.com/features/calculation-fields/). This feature is useful for creating order forms with dynamic pricing, loan calculators, and more.
+Create forms that [perform calculations based on user inputs](https://formester.com/features/calculating-fields/). This feature is useful for creating order forms with dynamic pricing, loan calculators, and more.
 
 ### 11. Collaboration
 
-[Collaborate with team members on form creation](https://formester.com/features/collaboration/) and management. Assign roles and permissions, ensuring efficient teamwork in building and optimizing forms.
+[Collaborate with team members on form creation](https://formester.com/features/team-collaboration/) and management. Assign roles and permissions, ensuring efficient teamwork in building and optimizing forms.
 
 ## Conclusion
 

@@ -6,13 +6,13 @@
           <div
             class="col-lg-5 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start mt-xl-0 mt-md-5"
           >
-            <h1 class="section__heading">Calculation Fields</h1>
+            <h1 class="section__heading">
+              Simplify payments with Calculating Fields
+            </h1>
             <p class="hero__subheading mt-3">
-              Create dynamic forms that perform calculations in real-time,
-              empowering you to automate complex calculations, generate dynamic
-              scores, and deliver personalized, interactive experiences. Take
-              your forms to the next level and unlock the true power of
-              data-driven decision-making.
+              Create online forms that perform real-time calculations. Automate
+              complex calculations, generate dynamic scores, and deliver
+              personalized experience with our calculation forms
             </p>
             <a
               href="https://app.formester.com/users/sign_up"
@@ -37,11 +37,11 @@
         <div
           class="feature__heading d-flex align-items-center justify-content-center"
         >
-          <h2 class="section__heading">How does Calculation Fields help?</h2>
+          <h2 class="section__heading">Calculation Forms for your Business</h2>
         </div>
         <FeatureDetail
           :feature="feature"
-          class="col-md-6 my-3"
+          class="col-md-4 my-3"
           v-for="feature in features"
           :key="feature.title"
         />
@@ -50,16 +50,14 @@
     <div class="container py-5">
       <div class="row">
         <div class="heading d-flex flex-column align-items-center text-center">
-          <h2 class="section__heading">
-            Unleash the Advantages of Calculation Fields
-          </h2>
+          <h2 class="section__heading">Benefits of Calculating Fields</h2>
           <p>
             Efficiency, precision, and enhanced productivity at your fingertips
           </p>
         </div>
 
-        <div class="templates mt-md-5">
-          <div v-for="(benefit, idx) in benefits" :key="idx">
+        <div class="row mt-md-5">
+          <div class="col-xs-12 col-md-6" v-for="(benefit, idx) in benefits" :key="idx">
             <div
               class="card p-3 d-flex align-items-center justify-items-center text-center align-items-md-start text-md-start"
             >
@@ -77,8 +75,11 @@
         </div>
       </div>
     </div>
-
-    <CalculationInAction />
+    <SimpleStepsCreate
+      heading="How to add a calculating fields in 3 simple steps"
+      :steps="steps"
+      :stepCount="steps.length"
+    />
     <Testimonial :testimonials="randomTestimonials" />
     <TemplateSection />
     <CallToActionSection />
@@ -91,7 +92,8 @@ import FeatureDetail from '../../components/FeatureDetail.vue'
 import Testimonial from '@/components/Testimonial.vue'
 import { allTestimonials } from '@/constants/testimonials'
 import TemplateSection from '../../components/TemplateSection.vue'
-import CalculationInAction from '../../components/CalculationInAction.vue'
+import SimpleStepsCreate from '../../components/features/SimpleStepsCreate'
+import { fetchRandomTestimonials } from '@/utils/getTestimonials.js'
 
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
@@ -102,14 +104,14 @@ export default {
     CallToActionSection,
     Testimonial,
     TemplateSection,
-    CalculationInAction,
+    SimpleStepsCreate,
   },
   computed: {
     meta() {
       const metaData = {
         type: 'website',
-        url: 'https://formester.com/features/calculation-fields/',
-        title: 'Calculation - Formester',
+        url: 'https://formester.com/features/calculating-fields/',
+        title: 'Calculating Fields - Formester',
         description:
           'Dynamic Forms to Perform Real-time Complex Calculations | Dynamic Scores, Personalized & Interactive Form Experiences - Sign up now.',
         mainImage:
@@ -155,13 +157,13 @@ export default {
   },
   head() {
     return {
-      title: 'Calculation Fields - Formester',
+      title: 'Calculating Fields - Formester',
       meta: [...this.meta],
       link: [
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/features/calculation-fields/',
+          href: 'https://formester.com/features/calculating-fields/',
         },
       ],
     }
@@ -173,7 +175,7 @@ export default {
         {
           '@type': 'Corporation',
           '@id': 'https://acornglobus.com',
-          name: 'Calculation - Formester',
+          name: 'Calculating Fields - Formester',
           description:
             'Dynamic Forms to Perform Real-time Complex Calculations | Dynamic Scores, Personalized & Interactive Form Experiences - Sign up now.',
           logo: 'https://formester.com/logo.png',
@@ -198,7 +200,7 @@ export default {
               '@type': 'ListItem',
               position: 2,
               name: 'Calculation',
-              item: 'https://formester.com/features/calculation-fields/',
+              item: 'https://formester.com/features/calculating-fields/',
             },
           ],
         },
@@ -209,86 +211,98 @@ export default {
     return {
       features: [
         {
-          title: 'Automated Score Calculation: Effortless Calculations',
+          title: 'Loan Calculators',
           description:
-            'Easily assign point values to answer choices and let Formester handle the calculations automatically. Streamline the process of scoring quizzes, assessments, or any other interactive form that requires scoring.',
-          src: 'calculation/effortless-calculations.svg',
+            'Enable users to input loan amount, interest rate, and loan duration, and automatically calculate monthly payments. This is beneficial for financial institutions or lending platforms.',
+          src: 'calculation/loan-preview.png',
           alt: 'Point values assigned to answer choices are automatically calculated, simplifying the scoring process for quizzes, assessments, and interactive forms.',
         },
         {
-          title: 'Real-Time Calculations: Deliver Instant Results',
+          title: 'Quiz Score Calculations',
           description:
-            'Perform calculations on-the-fly as respondents interact with your form. Enable instant feedback and dynamic scoring based on their inputs.',
-          src: 'calculation/deliver-instant-results.svg',
+            'Design quizzes with assigned point values for each question. The form dynamically calculates the total score based on user responses, providing instant feedback. Useful for assessments like tests, surveys, and training modules.',
+          src: 'calculation/quiz-preview.png',
           alt: 'As respondents interact with the form, calculations are performed instantly, providing instant feedback and dynamic scoring based on their inputs.',
         },
         {
-          title: 'Advanced Form Logic: Unlock Advanced Functionality',
+          title: 'E-commerce Order Calculation',
           description:
-            'Utilize powerful conditional logic within Calculation Fields to perform dynamic calculations based on specific conditions. Customize the behaviour of your forms and create personalized experiences for your respondents.',
-          src: 'calculation/unlock-advanced-functionality.svg',
+            'Improve the shopping experience on e-commerce websites by creating calculation forms for users to input quantities and prices of products, automatically calculating the total order cost.',
+          src: 'calculation/order-preview.png',
           alt: 'Calculation Fields are utilized with powerful conditional logic to perform dynamic calculations based on specific conditions.',
         },
         {
-          title: 'Dynamic Score Generation: Create Interactive Forms',
+          title: 'BMI Calculators',
           description:
-            'Automatically generate dynamic scores based on specific criteria, allowing you to assess performance, evaluate results, and provide personalized feedback.',
-          src: 'calculation/create-interactive-forms.svg',
+            'Health and fitness businesses can design forms that allow users to input their height and weight, automatically calculating their Body Mass Index (BMI).',
+          src: 'calculation/bmi-preview.png',
           alt: 'Scores are automatically generated based on specific criteria, enabling assessment of performance, result evaluation, and personalized feedback.',
         },
         {
-          title: 'Price Calculation: Hassle-Free Transactions',
+          title: 'Survey Rating Averages',
           description:
-            'Seamlessly calculate prices and totals within your forms using Calculation Fields. Provide accurate pricing information, dynamically adjust costs based on selected options, and create optimized shopping baskets or order forms.',
-          src: 'calculation/hassle-free-transactions.svg',
+            'Implement forms for surveys where users provide ratings to different questions. Automatically calculate and display the average rating, providing valuable insights for businesses and researchers.',
+          src: 'calculation/survey-preview.png',
           alt: 'Prices and totals are seamlessly calculated, ensuring accurate pricing information. Costs are dynamically adjusted based on selected options, creating optimized shopping baskets or order forms for hassle-free transactions.',
-        },
-        {
-          title: 'Personalized Experiences: Offer Personalized Form Experience',
-          description:
-            "Customize form interactions by displaying calculated results, tailored recommendations, or dynamic content based on respondents' inputs.",
-          src: 'calculation/offer-personalized-form-experience.svg',
-          alt: "Calculated results, tailored recommendations, and dynamic content are displayed based on respondents' inputs, offering a personalized form experience.",
         },
       ],
       benefits: [
         {
           title: 'Automated Calculation',
           description:
-            'The Calculation Field feature allows you to automate complex calculations, eliminating the need for manual calculations. This saves time and ensures accuracy.',
+            'Automate complex calculations, eliminating the need for manual calculations. This saves time and ensures accuracy.',
           imageSrc: 'automated-calculation.jpg',
           altText: 'icon showing calculation',
         },
         {
           title: 'Real-Time Results',
           description:
-            'With real-time calculations, respondents can instantly see the results of their inputs. This provides immediate feedback and enhances the interactive experience.',
+            'Provide immediate feedback and enhance user experience by allowing respondents to instantly check the results of their inputs.',
           imageSrc: 'real-time-results.jpg',
           altText: 'icon showing a graph, that displays the real time results',
         },
         {
           title: 'Advanced Form Logic',
           description:
-            'The Calculation Field feature enables you to apply advanced form logic, such as conditional calculations and dynamic field interactions. This flexibility allows you to create sophisticated and personalized form experiences.',
+            'Add advanced form logic, including conditional calculations and dynamic field interactions for creating personalized forms.',
           imageSrc: 'advanced-form-logic.jpg',
           altText: 'icon showing form',
         },
         {
-          title: 'Streamlined Pricing and Data Handling',
+          title: 'Streamlined Pricing and Data',
           description:
-            'Calculation Fields simplify price calculations, making it easy to generate totals, discounts, or taxes. Additionally, the feature facilitates efficient data handling by automatically calculating and storing important metrics for analysis and reporting.',
+            'Calculation Fields simplify price calculations, generate totals, and automate data handling for efficient analysis and reporting.',
           imageSrc: 'streamlined-pricing-and-data-handling.jpg',
           altText: 'icon showing storage for handling data',
+        },
+      ],
+      steps: [
+        {
+          title: 'Sign Up',
+          description:
+            'Sign up for a free account on formester to build an online form or quiz. You can also select any template from our pre-designed templates library.',
+          imgSrc: '/features/calculation-field-in-action/step1.svg',
+          imgAlt: 'Create your form Using Formester',
+        },
+        {
+          title: 'Add the Calculation Field',
+          description:
+            'In the form builder, drag and drop the calculation field into your form. Customize the calculations with chosen fields, math operations, and conditional logic for customized results.',
+          imgSrc: '/features/calculation-field-in-action/step2.svg',
+          imgAlt: 'Add Calculation Field',
+        },
+        {
+          title: 'Publish the form',
+          description:
+            'Use the preview mode to ensure accurate calculations. Once done, deploy the form to deliver dynamic and personalized calculation forms to your respondents.',
+          imgSrc: '/features/calculation-field-in-action/step4.svg',
+          imgAlt: 'Validate and Personalize with Calculation Field',
         },
       ],
     }
   },
   async asyncData() {
-    let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(
-      Math.random() * (randomTestimonials.length - 2)
-    )
-    randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
+    let randomTestimonials = await fetchRandomTestimonials()
     return { randomTestimonials }
   },
 }
@@ -320,6 +334,12 @@ export default {
 .card {
   border-radius: 18px;
   border: none;
+}
+
+.sub__section-heading{
+  font-size: 28px;
+  line-height: 44px;
+  font-weight: 700;
 }
 
 @media (max-width: 992px) {

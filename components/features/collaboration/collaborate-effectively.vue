@@ -3,7 +3,7 @@
     <div class="row">
       <div class="heading d-flex flex-column align-items-center text-center">
         <h2 class="section__heading">
-          How it Works - Collaborate Effectively In 2 Simple Steps
+          How to collaborate effectively in 2 simple steps 
         </h2>
       </div>
       <div

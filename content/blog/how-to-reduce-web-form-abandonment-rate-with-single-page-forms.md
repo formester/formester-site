@@ -484,7 +484,7 @@ You've successfully created a single-page web form using Formester. 
 
 Users can now access and submit responses through the link you provided, and you can manage and analyze the collected data within your Formester account.
 
-Moreover, using the Auto-responder feature, you may also [send automated acknowledgement and thank you messages to your form responders](https://formester.com/features/auto-responder/)!
+Moreover, using the Auto-responder feature, you may also [send automated acknowledgement and thank you messages to your form responders](https://formester.com/features/autoresponder-email/)!
 
 ## Conclusion
 

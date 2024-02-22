@@ -87,7 +87,7 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/features/auto-responder/" class="footer__link">
+                <NuxtLink to="/features/autoresponder-email/" class="footer__link">
                   Auto Responder
                 </NuxtLink>
               </li>
@@ -119,10 +119,10 @@
               </li>
               <li class="mt-2">
                 <NuxtLink
-                  to="/features/digital-signature/"
+                  to="/features/electronic-signature/"
                   class="footer__link"
                 >
-                  Digital Signature
+                  Electronic Signature
                 </NuxtLink>
               </li>
               <li class="mt-2">
@@ -140,14 +140,14 @@
               </li>
               <li class="mt-2">
                 <NuxtLink
-                  to="/features/calculation-fields/"
+                  to="/features/calculating-fields/"
                   class="footer__link"
                 >
-                  Calculation Fields
+                  Calculating Fields
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/features/collaboration/" class="footer__link">
+                <NuxtLink to="/features/team-collaboration/" class="footer__link">
                   Collaboration
                 </NuxtLink>
               </li>

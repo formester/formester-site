@@ -89,7 +89,7 @@ Sharing Google Forms via links is an incredibly flexible approach. It helps you 
 
 Although, Google Forms has its merits, it's essential to explore alternatives that offer a more streamlined experience without the limitations.
 
-Formester stands out as a strong alternative with features like [E-Signature support](https://formester.com/features/digital-signature/), [extensive template library](https://formester.com/templates/), customizable themes, [branding capabilities](https://formester.com/features/branding-kit/) and [powerful analytics](https://formester.com/features/powerful-analytics/). It is a solution that simplifies form-building while offering a feature-rich experience that aligns with the demands of modern form building.
+Formester stands out as a strong alternative with features like [E-Signature support](https://formester.com/features/electronic-signature/), [extensive template library](https://formester.com/templates/), customizable themes, [branding capabilities](https://formester.com/features/branding-kit/) and [powerful analytics](https://formester.com/features/powerful-analytics/). It is a solution that simplifies form-building while offering a feature-rich experience that aligns with the demands of modern form building.
 
 ## How to Embed Formester Forms
 

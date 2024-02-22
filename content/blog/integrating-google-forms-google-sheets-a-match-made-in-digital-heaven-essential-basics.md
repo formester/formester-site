@@ -427,7 +427,7 @@ The analytics system is comparatively basic when it comes to Google Forms.
 
 ### 6. No Way To Send Automatic Responses
 
-There is no way to [send out personalized, automated acknowledgment messages](/features/auto-responder/) to respondents.
+There is no way to [send out personalized, automated acknowledgment messages](/features/autoresponder-email/) to respondents.
 
 And whilst this isn't a problem when creating simple forms;
 

@@ -276,7 +276,7 @@ Setting up an auto-responder helps you send out instant acknowledgment messages 
 
 Moreover, with form-builders like Formester, you get Auto-Responders that allow you to curate personalized acknowledgment messages/emails.
 
-The most important contribution of an Auto-responder, therefore, is the fact that they help you [eliminate redundant processes and automate monotonous ones](/features/auto-responder/);
+The most important contribution of an Auto-responder, therefore, is the fact that they help you [eliminate redundant processes and automate monotonous ones](/features/autoresponder-email/);
 
 Thereby, increasing resource efficiency and conservation.
 
@@ -403,7 +403,7 @@ Consider form-builders that offer advanced features like conditional logic, whic
 
 ### 3. Auto-Responder
 
-Make sure your form builder also provides for setting up an auto-responder, which helps you [keep track of your submissions](/features/auto-responder/) and provide quality customer service.
+Make sure your form builder also provides for setting up an auto-responder, which helps you [keep track of your submissions](/features/autoresponder-email/) and provide quality customer service.
 
 ### 4. Robust Analytics 
 

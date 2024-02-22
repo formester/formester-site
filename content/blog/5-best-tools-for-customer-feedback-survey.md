@@ -38,7 +38,7 @@ Now, let's explore five standout tools - SurveyMonkey, Jotform, Typeform, Formes
 
 Selecting the ideal survey tool for your business can be time-consuming because all tools have different features suitable for specific needs. Here, we break down the key considerations and offer tips for a seamless integration into your operational framework. Make the right selection of tools by considering the following factors:
 
-* **Usability:** Opt for a tool with an intuitive interface, ensuring [your team and customers](https://formester.com/features/collaboration/) find it easy to navigate.
+* **Usability:** Opt for a tool with an intuitive interface, ensuring [your team and customers](https://formester.com/features/team-collaboration/) find it easy to navigate.
 * **Customisation:** Look for tools that allow you to tailor surveys and forms to [reflect your brand](https://formester.com/features/branding-kit/), ensuring a cohesive customer experience.
 * **Integration:** Choose a tool that [seamlessly integrates](https://formester.com/integrations/) with your existing systems to avoid unnecessary disruptions to your workflow.
 * **Analytics:** Prioritise tools with [powerful analytics features](https://formester.com/features/powerful-analytics/), enabling you to extract meaningful insights from the collected data.

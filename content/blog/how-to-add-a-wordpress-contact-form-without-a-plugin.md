@@ -173,7 +173,7 @@ Or in the meantime, work on creating your next form on Formester!
 
 ![Hit Publish once you've pasted the HTML embed code!](/img/wp-img-3.png "Hit Publish!")
 
-> Pro Tip: After successfully setting up your form on WordPress, once you start receiving new submissions, [Formester ensures that you get informed in real-time](/features/auto-responder/) so that you stay on top of what's essential for your business. 
+> Pro Tip: After successfully setting up your form on WordPress, once you start receiving new submissions, [Formester ensures that you get informed in real-time](/features/autoresponder-email/) so that you stay on top of what's essential for your business. 
 
 **Notifications are delivered where they matter - Slack, email or 100+ apps.**
 

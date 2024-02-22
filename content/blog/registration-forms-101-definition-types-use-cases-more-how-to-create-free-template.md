@@ -406,7 +406,7 @@ You may also insert your company logo, to enhance form credibility.
 
 Once your registration form is ready, click on the Auto-Responder Tab to create an auto-response.
 
-This feature lets you [create an automatic, personalized acknowledgement message](/features/auto-responder/) that can be sent to the users upon receiving their submissions.
+This feature lets you [create an automatic, personalized acknowledgement message](/features/autoresponder-email/) that can be sent to the users upon receiving their submissions.
 
 ![Screen-capture showing: The Auto-Responder Section](/img/registration-forms_5.png "The Auto-Responder Section")
 
