@@ -56,8 +56,8 @@
           </p>
         </div>
 
-        <div class="templates mt-md-5">
-          <div v-for="(benefit, idx) in benefits" :key="idx">
+        <div class="row mt-md-5">
+          <div class="col-xs-12 col-md-6" v-for="(benefit, idx) in benefits" :key="idx">
             <div
               class="card p-3 d-flex align-items-center justify-items-center text-center align-items-md-start text-md-start"
             >
@@ -334,6 +334,12 @@ export default {
 .card {
   border-radius: 18px;
   border: none;
+}
+
+.sub__section-heading{
+  font-size: 28px;
+  line-height: 44px;
+  font-weight: 700;
 }
 
 @media (max-width: 992px) {
