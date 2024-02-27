@@ -11,8 +11,8 @@ keywords: Marketing agency tools
 author: Siddharth Sharma
 authorProfile: https://www.linkedin.com/in/sidsh0502/
 createdAt: 2024-02-15T02:55:49.372Z
-coverImg: /img/marketing-agency-tools.png
-coverImgAlt: "-"
+coverImg: /img/25_marketing-tools-1-.webp
+coverImgAlt: Marketing Professional Tools Illustration 2024
 featured: false
 published: true
 ---
