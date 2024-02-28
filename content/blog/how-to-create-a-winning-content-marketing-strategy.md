@@ -11,7 +11,7 @@ createdAt: 2024-02-27T23:02:20.015Z
 coverImg: /img/content-marketing-strategy.webp
 coverImgAlt: Content Strategy Illustration
 featured: false
-published: true
+published: false
 ---
 A well designed content marketing strategy is essential for businesses aiming to engage, inform, and convert their target audience. Whether you're a seasoned marketer or just starting out, crafting an effective content marketing plan can seem daunting. However, with the right approach and resources, you can develop a strategy that drives results and boosts your brand's online presence.
 
