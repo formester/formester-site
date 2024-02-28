@@ -13,7 +13,7 @@ createdAt: 2024-02-28T04:31:39.086Z
 coverImg: /img/marketing_stats_cover.webp
 coverImgAlt: 70+ Marketing Statistics in 2024
 featured: false
-published: true
+published: false
 ---
 ## SEO Statistics
 
