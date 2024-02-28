@@ -12,7 +12,7 @@ createdAt: 2024-02-28T04:15:52.495Z
 coverImg: /img/video_marketing_trends_illustration-1-.webp
 coverImgAlt: Illustration of video marketing
 featured: false
-published: true
+published: false
 ---
 The world of video marketing is becoming one of the major content channels with more people taking up content creation on platforms like Tik-Tok, Youtube, Instagram and Facebook, etc. [Staying ahead of the competition](https://formester.com/blog/70-marketing-statistics-in-2024-to-optimize-your-marketing-campaigns/) is crucial for brands looking to connect with their audience and achieve their marketing goals. 
 
