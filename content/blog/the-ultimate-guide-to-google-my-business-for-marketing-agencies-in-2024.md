@@ -14,7 +14,7 @@ coverImgAlt: Google Business Guide Illustration
 featured: false
 published: true
 ---
-If you have ever owned a business or worked with business clients, you must be aware that local SEO reigns supreme for businesses looking to attract customers near and dear. And at the heart of local SEO sits Google My Business (GMB), a free platform offering immense potential for driving local visibility and engagement. For marketing agencies, mastering GMB is no longer an option, it's a necessity.
+If you have ever owned a business or worked with business clients, you must be aware that local SEO reigns supreme for businesses looking to attract customers near and dear. And at the heart of local SEO sits Google My Business (GMB), a free platform offering immense potential for driving local visibility and engagement. [For marketing agencies, mastering GMB is no longer an option, it's a necessity](https://formester.com/blog/10-common-mistakes-marketing-agency-owners-make/).
 
 In this guide we go through the intricacies of GMB in 2024, empowering you to become a local SEO powerhouse for your clients or your own business. So, buckle up agencies, because it's time to unlock the full potential of Google My Business!
 
@@ -32,7 +32,7 @@ Positive reviews are gold dust for businesses, and GMB offers the perfect platfo
 
 ## Advanced GMB Features for Agencies
 
-Juggling multiple client profiles? Breathe easy! Utilize GMB's dashboard tools to manage them efficiently. Dive deeper with available APIs and analyse data like insights and competitor performance to gain a strategic edge. And remember, Google Posts with offers and announcements can catapult your client's visibility, so use them wisely!
+[Juggling multiple client profiles](https://formester.com/blog/25-essential-digital-marketing-agency-tools-to-help-you-scale-in-2024/)? Breathe easy! Utilize GMB's dashboard tools to manage them efficiently. Dive deeper with available APIs and analyse data like insights and competitor performance to gain a strategic edge. And remember, Google Posts with offers and announcements can catapult your client's visibility, so use them wisely!
 
 ## Integrating GMB with Other Strategies
 
