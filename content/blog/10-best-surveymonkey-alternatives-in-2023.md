@@ -49,6 +49,8 @@ SurveySparrow has recently come up as a good alternative to SurveyMonkey, it sta
 * **G2 Rating: 4.4/5**
 * **Customer Review:** "The overall look of the dashboard is what I like best about SurveySparrow. It also had a free function which was nice compared to other survey softwares." – G2 Review
 
+  ![Surveysparrow screenshot](/img/beautify-picture-1-.png)
+
 ## **2. [Google Forms](https://www.google.com/forms/about/)**
 
 Google Forms is another popular tool in survey game, it is a powerhouse of simplicity and efficiency. As part of the Google Workspace, it seamlessly integrates with other Google apps, providing users with a familiar and user-friendly experience. Google Forms caters to users who prioritize simplicity, collaboration, and integration with other Google tools.
@@ -70,6 +72,8 @@ Google Forms is another popular tool in survey game, it is a powerhouse of simpl
 
 * **Capterra Rating: 4.7/5**
 * **Customer Review:** "It is a valuable tool as its user interface, ease of sharing options and collaboration features are awesome." – Capterra Customer Review
+
+  ![Google Forms Screenshot](/img/beautify-picture-4-.png)
 
 ## **3. [HubSpot](https://www.hubspot.com/products/marketing/form-maker?__hstc=71363532.6edf74f422b2035cda82db9d75690160.1696570765944.1700493871825.1700538197343.11&__hssc=71363532.5.1700538197343&__hsfp=2687445620)**
 
@@ -93,6 +97,8 @@ HubSpot, known for its comprehensive marketing and sales tools, extends its prow
 * **Capterra Rating: 4.5/5**
 * **Capterra Customer Review:** "The most important thing about Hubspot is the great quantity of tools and features that you can find in this software. They are really easy to use and the Look and Feel is excellent."
 
+  ![Hubspot Screenshot](/img/beautify-picture-5-.png)
+
 ## **4. [Alchemer (formerly SurveyGizmo)](https://www.alchemer.com/)**
 
 Alchemer, rebranded from SurveyGizmo, provides businesses with a robust survey solution. Recognised for its versatility, Alchemer caters to diverse survey needs, from market research to employee feedback. Alchemer, with its redefined brand, continues to be a go-to solution for businesses requiring versatile and powerful survey capabilities.
@@ -114,6 +120,8 @@ Alchemer, rebranded from SurveyGizmo, provides businesses with a robust survey s
 
 * **Rating : 4.5/5**
 * **Review:** "What I like most about Survey Gizmo is it allows you to set up the exact type of survey you need, no matter how simple or complex. Then you can export the data you extracted exactly as you want it."
+
+  ![Alchemer Screenshot](/img/beautify-picture-6-.png)
 
 ## **5. [QuestionPro](https://www.questionpro.com/)**
 
@@ -137,6 +145,8 @@ QuestionPro stands as a dynamic SurveyMonkey alternative, providing a comprehens
 * **Rating: 4.8/5**
 * **Customer Review:** "It is very functional and has all the types of questions that I need in my work, and I can export results to PowerPoint!"
 
+  ![Question Pro Screenshot](/img/beautify-picture-7-.png)
+
 ## **6. [Jotform](https://www.jotform.com/)**
 
 Jotform has recently emerged as an enticing alternative to SurveyMonkey, specialising in form creation for various purposes. Its intuitive interface caters to both beginners and experienced users, offering a wide array of customisation options. Jotform's user-friendly approach and adaptability make it an attractive choice for those seeking a straightforward yet powerful survey and form-building solution. 
@@ -157,6 +167,8 @@ Jotform has recently emerged as an enticing alternative to SurveyMonkey, special
 
 * **Rating: 4.7/5 based on 1,000+ reviews.**
 * **Customer Review:** "The template were super easy to use and provided you with an excellent foundation to develop your form."
+
+  ![Jotform Screenshot](/img/beautify-picture-8-.png)
 
 ## **7. [Zoho Survey](https://www.zoho.com/survey/)**
 
@@ -179,6 +191,8 @@ Zoho Survey is a comprehensive alternative to SurveyMonkey, designed to empower 
 * **Rating: 4.6/5 based on 150+ reviews.**
 * **Customer Review:** "For businesses that are interested in a survey solution, I would recommend Zoho Survey because it works and has some great features."
 
+  ![Zoho Survey Screenshot](/img/beautify-picture-9-.png)
+
 ## **8. [Qualtrics](https://www.qualtrics.com/au/?rid=ip&prevsite=en&newsite=au&geo=IN&geomatch=au)**
 
 Qualtrics stands out as a sophisticated alternative to SurveyMonkey, offering an unparalleled platform for experience management. From customer experience to employee engagement, Qualtrics empowers users to gather and analyse insights with precision. Qualtrics sets itself apart as an end-to-end solution, combining precision, customisation, and seamless integration to meet the demands of modern surveying.
@@ -199,6 +213,8 @@ Qualtrics stands out as a sophisticated alternative to SurveyMonkey, offering an
 
 * **Rating: 4.8/5**
 * **Customer Review:** "Best survey use I've seen out there. Non linear question editing is superb and it is super easy to view mobile and desktop visuals."
+
+  ![Qualtrics Screenshot](/img/beautify-picture-10-.png)
 
 ## **9. [Formester](https://formester.com/)**
 
@@ -222,6 +238,8 @@ Qualtrics stands out as a sophisticated alternative to SurveyMonkey, offering an
 * **User Rating: 4.9/5**
 * **User Review:** "My primary objective is to conduct effective customer surveys and I need online forms for that. Formester does the job perfectly and gives me all the analytics at one place - super easy to work with."
 
+  ![Formester Screenshot](/img/beautify-picture-2-1-.png)
+
 ## **10. [Wufoo](https://www.wufoo.com/)**
 
 **Brief Overview:** Meet Wufoo, your go-to survey platform for streamlined survey creation and data collection. Wufoo prides itself on simplicity making it a noteworthy SurveyMonkey alternative for those seeking a user-friendly surveying experience.
@@ -244,6 +262,8 @@ Qualtrics stands out as a sophisticated alternative to SurveyMonkey, offering an
 
 * **User Rating: 4.4/5**
 * **User Review:** "Ease of use, Simple to Embed on a Website, Simple to customise. Love the integrations."
+
+  ![Wufoo Screenshot](/img/beautify-picture-11-.png)
 
 ## **The Pricing Consideration**
 
