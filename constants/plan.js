@@ -52,6 +52,7 @@ export const personalMonthly = {
       'Accept Payments (0% commission)',
       'Custom meta information',
       'Add script to page - GTM, GA, Pixel',
+      'Send submission copy',
       'AI Powered Spam Protection',
     ],
   },
@@ -131,6 +132,7 @@ export const personalYearly = {
       'Accept Payments (0% commission)',
       'Custom meta information',
       'Add script to page - GTM, GA, Pixel',
+      'Send submission copy',
       'AI Powered Spam Protection',
     ],
   },
@@ -285,6 +287,12 @@ export const comparisonTableFeatures = [
   },
   {
     name: 'Scripts (GTM, GA, Pixel)',
+    free: '-',
+    pro: 'Yes',
+    business: 'Yes'
+  },
+  {
+    name: 'Send submission copy',
     free: '-',
     pro: 'Yes',
     business: 'Yes'
