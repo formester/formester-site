@@ -11,7 +11,7 @@ keywords: Marketing Agency, Marketing Mistakes
 author: Siddharth Sharma
 authorProfile: https://www.linkedin.com/in/sidsh0502/
 createdAt: 2024-02-13T02:38:44.461Z
-coverImg: /img/marketing_agency_mistakes.webp
+coverImg: /img/marketing-agency-tools-3-1-.png
 coverImgAlt: Illustration of Marketing Agency Owner Mistakes
 featured: false
 published: true
