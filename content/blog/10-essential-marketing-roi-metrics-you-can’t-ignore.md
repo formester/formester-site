@@ -7,11 +7,11 @@ metaDescription: Learn how to boost your ROI with these 10 crucial marketing
   performance indicators. Achieve better results and profitability.
 keywords: Marketin ROI
 author: Siddharth Sharma
-createdAt: 2024-02-28T03:53:13.360Z
+createdAt: 2024-03-08T06:37:04.580Z
 coverImg: /img/marketing-kpi-2-.webp
 coverImgAlt: Marketing ROI Metrics Illustration
 featured: false
-published: false
+published: true
 ---
 ## Why to focus on key metrics for measuring Digital Marketing success?
 
