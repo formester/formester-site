@@ -5,9 +5,10 @@ description: Master the art of earning money online in 2024 with these 12 proven
   financial freedom.
 metaTitle: "12 Proven Ways to Make Money Online in 2024 "
 metaDescription: Empower yourself with a dozen proven methods to make money
-  online in 2024 | Forrester Blog
+  online in 2024 | Formester Blog
 keywords: How to make money online?
 author: Siddharth Sharma
+authorProfile: https://www.linkedin.com/in/sidsh0502/
 createdAt: 2024-03-10T18:12:42.495Z
 coverImg: /img/12-ways-to-make-money-1-.png
 coverImgAlt: Make money online illustration 2024
