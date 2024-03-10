@@ -12,7 +12,7 @@ createdAt: 2024-03-10T17:20:07.786Z
 coverImg: /img/forms-management-system-1-.png
 coverImgAlt: Forms Management System Illustration
 featured: false
-published: false
+published: true
 ---
 Forms. They're the backbone of countless processes, from customer feedback surveys to employee onboarding applications. But let's face it, traditional paper-based forms can be a nightmare. Lost documents, illegible handwriting, and manual data entry slow things down and introduce errors.
 
