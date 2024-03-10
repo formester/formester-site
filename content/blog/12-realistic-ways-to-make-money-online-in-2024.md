@@ -9,7 +9,7 @@ metaDescription: Empower yourself with a dozen proven methods to make money
 keywords: How to make money online?
 author: Siddharth Sharma
 authorProfile: https://www.linkedin.com/in/sidsh0502/
-createdAt: 2024-03-10T18:12:42.495Z
+createdAt: 2024-03-05T18:12:00.000Z
 coverImg: /img/12-ways-to-make-money-1-.png
 coverImgAlt: Make money online illustration 2024
 featured: false
