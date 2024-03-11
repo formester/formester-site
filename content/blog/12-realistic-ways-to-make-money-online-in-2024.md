@@ -49,10 +49,10 @@ Businesses of all sizes require administrative and technical support. Virtual as
 
 ## 5. Online Tutoring & Teaching
 
-Sharing your knowledge is a great way to make money online. Platforms like VIPKid connect qualified individuals with students worldwide for online language tutoring.  If you have expertise in a specific subject, you can also create and sell online courses.
+Sharing your knowledge is a great way to make money online. Platforms like [VIPKid](https://www.vipkid.com/teach) connect qualified individuals with students worldwide for online language tutoring.  If you have expertise in a specific subject, you can also create and sell online courses.
 
 * **Learning:** If you plan to tutor a language, ensure fluency and strong communication skills. For academic subjects, a relevant degree and teaching experience are beneficial. Platforms like Udemy or Skillshare offer course creation tools and resources.
-* **Getting Started:** TEFL (Teaching English as a Foreign Language) certification is valuable for online language tutors. For online courses, identify a clear learning objective and structure your content in a logical and engaging manner.
+* **Getting Started:** [TEFL (Teaching English as a Foreign Language) certification](https://www.tefl.org) is valuable for online language tutors. For online courses, identify a clear learning objective and structure your content in a logical and engaging manner.
 
 ![Online Tutoring Illustration](/img/aks0510_80887_an_image_of_a_teacher_taking_online_classes_of_st_900602aa-1a7f-4a29-9bef-642616eb9534.webp)
 
