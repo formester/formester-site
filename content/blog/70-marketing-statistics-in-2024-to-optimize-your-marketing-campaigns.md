@@ -126,11 +126,15 @@ But fear not, fellow marketers! Marketing statistics are here to provide you wit
 
 1﻿) HubSpot State of Marketing Report, 2023
 
-2. HubSpot Marketing Trends Report, 2024
-3. ZipDo Essential A/B Testing Statistics, 2023
-4. Statista, 2023
-5. First Page Sage, 2023 
-6. Tech Report, 2023
+2) HubSpot Marketing Trends Report, 2024
+
+3) ZipDo Essential A/B Testing Statistics, 2023
+
+4) Statista, 2023
+
+5) First Page Sage, 2023 
+
+6) Tech Report, 2023
 
 7﻿) SEMrush, 2023
 
