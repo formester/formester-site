@@ -74,7 +74,7 @@ If you have a keen eye for detail and a strong grasp of grammar, consider offeri
 
 Businesses understand the power of social media but may lack the time or expertise to manage their online presence effectively.  Become a social media manager and help businesses develop engaging content, schedule posts, and interact with followers.
 
-* **Learning:** Understanding social media algorithms, content creation strategies, and community management is crucial. Numerous online courses and certifications from platforms like Hootsuite Academy or Social Media Today can equip you with the necessary skills.
+* **Learning:** Understanding social media algorithms, content creation strategies, and community management is crucial. Numerous online courses and certifications from platforms like [Hootsuite Academy](https://education.hootsuite.com) or [Social Media Today](https://www.socialmediatoday.com) can equip you with the necessary skills.
 * **Getting Started:** Build a strong social media presence of your own. Showcase your content creation skills and knowledge of social media trends. Network with businesses and demonstrate how you can help them achieve their social media goals.
 
 ## 9. Sell Your Photos & Videos
