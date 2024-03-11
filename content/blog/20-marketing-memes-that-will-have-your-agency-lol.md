@@ -61,3 +61,51 @@ Marketing memes don't need any context. Let's get started with 20+ marketing mem
 ## 8) Honestly, keyword research always seems like firing shots in the dark.
 
 ![Marketing Meme](/img/meme-11-1024x1014.png)
+
+
+
+## 9) Jokes apart, does anyone have a solution for this?
+
+![Marketing Meme](/img/meme-12-1024x932.png)
+
+
+
+## 10) Budgets are meant to be exceeded.
+
+![](/img/1-1.jpg)
+
+
+
+## 11) Self assurance is important.
+
+![Marketing Meme](/img/2-1.jpg)
+
+
+
+12) Marketers have a very specific set of skills.
+
+![Marketing Memes](/img/4c37wlzsumy51.webp)
+
+
+
+## 13) It is also about scheduling posts.
+
+![Marketing Memes](/img/6njoux.webp)
+
+
+
+## 14) It is part of the creative process.
+
+![Marketing Memes](/img/19.jpg)
+
+
+
+## 15) Why do people think content writing is a joke?
+
+![Marketing Memes](/img/21-1.png)
+
+
+
+## 16) I wouldn't be a marketer without google.
+
+![](/img/g0yzaq83fbv61.webp)
