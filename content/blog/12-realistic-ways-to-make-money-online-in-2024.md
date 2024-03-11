@@ -69,6 +69,8 @@ While the pay may not be substantial, data entry and microtask websites offer a 
 * **Learning:** The skills required for these tasks are relatively straightforward. However, strong typing skills and accuracy are essential. Some platforms may offer brief training modules.
 * **Getting Started:** Register with reputable microtask websites like [Amazon Mechanical Turk](https://www.mturk.com) or [Clickworker](https://www.clickworker.com). Be mindful of your time investment as some tasks may pay minimally.
 
+![Image of a person offering data entry services](/img/data-entry-1-.webp)
+
 ## 7. Online Proofreading & Editing
 
 If you have a keen eye for detail and a strong grasp of grammar, consider offering online proofreading and editing services. There's a growing demand for editors to polish website content, articles, or even academic papers.
