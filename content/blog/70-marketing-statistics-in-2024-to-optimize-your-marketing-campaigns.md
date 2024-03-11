@@ -15,7 +15,11 @@ coverImgAlt: 70+ Marketing Statistics in 2024
 featured: false
 published: false
 ---
+Marketing trends are constantly evolving, and staying ahead of the curve is crucial. But with so much information out there, it can be tough to know where to focus. That's where statistics come in. In this blog post, we'll dive into the top marketing statistics for 2024, giving you the insights you need to craft winning campaigns and achieve your marketing goals.
+
 ## SEO Statistics
+
+![SEO Statistics 2024](/img/seo.webp)
 
 * More than one in three marketing leaders cite conversion rates as a top KPI that they prioritize tracking.
 * Nearly two out of three marketers report that their average landing page conversion rate is less than 10%.
@@ -34,6 +38,8 @@ published: false
 * E-commerce accounts for over 20% of all global retail sales.
 
 ## Content Marketing Statistics
+
+![Content Marketing Statistics 2024](/img/content.webp)
 
 * Blog posts are the most famous content format, with 9 out of 10 marketers using their blogs to achieve their content goals. 
 * Companies with blogs produce an average of 67% more leads per month than companies that don’t have active blogs. 
@@ -55,6 +61,8 @@ published: false
 * Ad spending in the digital audio advertising market is projected to reach more than $10 billion in 2023 and $13 billion in 2028.
 
 ## Social Media Statistics
+
+![Social Media Statistics 2024](/img/social-media-56.webp)
 
 * Facebook is the most popular social media platform marketers used in 2023, and marketers report that it has a better ROI than every other platform.
 * Facebook has over 3 billion monthly active users and is the most-used social network worldwide.
@@ -84,6 +92,8 @@ published: false
 
 ## Video Marketing Statistics
 
+![Video Marketing Statistics 2024](/img/video-marketing.webp)
+
 * 56% of marketers reported that short-form video was the top trend they planned to invest in in 2024. 
 * More than one in three video marketers say that the optimal video is just one to three minutes long, and 96% agree that videos should be less than 10 minutes long. 
 * 73% of consumers prefer to watch a short-form video to learn about a product or service.
@@ -96,6 +106,8 @@ published: false
 * YouTube’s user base is 45.6% female and 54.4% male.
 
 ## Email Marketing Statistics
+
+![Email Marketing Statistics in 2024](/img/email-marketing.webp)
 
 * The average clickthrough rate for emails sent to Constant Contact customers is 1.40%.
 * Marketers report that segmented emails drive 30% more opens and 50% more clickthrough's than unsegmented ones.
