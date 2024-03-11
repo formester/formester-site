@@ -43,3 +43,21 @@ Marketing memes don't need any context. Let's get started with 20+ marketing mem
 ## 5) Please stop copying my creatives!
 
 ![](/img/meme-3-2-1024x703.png)
+
+
+
+## 6) I guess we are all scientists, aren't we?
+
+![Marketing Meme](/img/meme-6-2-1024x876.png)
+
+
+
+## 7) I think we have all done this at some point.
+
+![Marketing Memes](/img/meme-11-2-690x1024.png)
+
+
+
+## 8) Honestly, keyword research always seems like firing shots in the dark.
+
+![Marketing Meme](/img/meme-11-1024x1014.png)
