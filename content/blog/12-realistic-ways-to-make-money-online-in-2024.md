@@ -76,12 +76,16 @@ If you have a keen eye for detail and a strong grasp of grammar, consider offeri
 * **Learning:** Refine your grammar and punctuation skills. Online resources like [Grammarly](https://www.grammarly.com/grammar) or [Purdue Online Writing Lab (OWL)](https://owl.purdue.edu/owl/index.html) offer comprehensive grammar lessons and exercises. Consider certifications from accredited institutions to enhance your credibility, like the [American Copy Editors Society (ACES).](https://aceseditors.org)
 * **Getting Started:** Build a portfolio showcasing your editing skills. You can edit sample content for free or offer discounted rates to build experience. Freelance platforms like Upwork or Fiverr are a good starting point to connect with clients.
 
+![Image of a person proofreading for a client](/img/proofreading.webp)
+
 ## 8. Social Media Management
 
 Businesses understand the power of social media but may lack the time or expertise to manage their online presence effectively. Become a social media manager and help businesses develop engaging content, schedule posts, and interact with followers.
 
 * **Learning:** Understanding social media algorithms, content creation strategies, and community management is crucial. Numerous online courses and certifications from platforms like [Hootsuite Academy](https://education.hootsuite.com) or [Social Media Today](https://www.socialmediatoday.com) can equip you with the necessary skills.
 * **Getting Started:** Build a strong social media presence of your own. Showcase your content creation skills and knowledge of social media trends. Network with businesses and demonstrate how you can help them achieve their social media goals.
+
+![Image of a person doing social media management](/img/social-media.webp)
 
 ## 9. Sell Your Photos & Videos
 
@@ -90,7 +94,7 @@ Do you have a library of stunning visuals? Stock photography and videography we
 * **Learning:** Invest in good quality photography equipment and hone your photography skills. There are online courses and tutorials teaching composition, lighting techniques, and post-processing software. Understanding copyright and licensing terms is also essential.
 * **Getting Started:** Choose a reputable stock photo platform like [Shutterstock](https://www.shutterstock.com) or [Adobe Stock](https://stock.adobe.com). Build a diverse portfolio with high-resolution images and relevant keywords to improve discoverability.
 
-![Illustration of a photographer](/img/aks0510_80887_a_photographer_clicking_pictures_of_a_beautiful_s_a10e7cc9-fc37-4051-9f8a-8a1cbf63316c.webp)
+![Illustration of a photographer taking pictures for shutterstock](/img/aks0510_80887_a_photographer_clicking_pictures_of_a_beautiful_s_a10e7cc9-fc37-4051-9f8a-8a1cbf63316c.webp)
 
 ## 10. Online Consulting
 
@@ -98,6 +102,8 @@ Are you a consultant in a specific field like finance, marketing, or human resou
 
 * **Learning:** Stay updated on the latest trends and knowledge within your consulting field. Consider professional certifications to enhance your credibility. Develop strong communication and presentation skills to effectively deliver consultations online.
 * **Getting Started:** [Build a website or online profile](https://www.jimdo.com/blog/build-great-consultants-website/) showcasing your experience and areas of expertise. Network with potential clients through professional platforms like [LinkedIn](https://www.linkedin.com) or industry associations. Offer free consultations or webinars to establish yourself as a thought leader.
+
+![A consultant providing online services to client](/img/consultant.webp)
 
 ## 11. Invest in the Sharing Economy
 
