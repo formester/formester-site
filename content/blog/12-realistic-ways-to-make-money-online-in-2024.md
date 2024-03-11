@@ -24,6 +24,8 @@ If you have a marketable skill, like writing, graphic design, or coding, freelan
 * **Learning:** There are numerous online courses and tutorials to hone your skills. Platforms like Coursera, Skillshare, or Udemy offer in-depth training on various creative and technical fields.
 * **Getting Started:** Build a strong portfolio showcasing your past work. Set competitive rates and be prepared to tailor your proposals to specific client needs. Remember, building a positive reputation and client base takes time, so focus on delivering high-quality work and excellent customer service.
 
+![Freelancer Hand Drawn Illustration](/img/aks0510_80887_an_image_of_a_freelancer_working_hand_drawn_illus_eeeb8ff3-1b9f-4fa4-a172-dc828c984fd9.webp)
+
 ## 2. Sell Your Crafts & Creations
 
 Handmade enthusiasts rejoice! E-commerce platforms like Etsy allow you to set up a virtual shop and sell your unique creations, from jewelry and art to clothing and homeware.
@@ -52,6 +54,8 @@ Sharing your knowledge is a great way to make money online. Platforms like VIPKi
 * **Learning:** If you plan to tutor a language, ensure fluency and strong communication skills. For academic subjects, a relevant degree and teaching experience are beneficial. Platforms like Udemy or Skillshare offer course creation tools and resources.
 * **Getting Started:** TEFL (Teaching English as a Foreign Language) certification is valuable for online language tutors. For online courses, identify a clear learning objective and structure your content in a logical and engaging manner.
 
+![Online Tutoring Illustration](/img/aks0510_80887_an_image_of_a_teacher_taking_online_classes_of_st_900602aa-1a7f-4a29-9bef-642616eb9534.webp)
+
 ## 6. Data Entry & Microtasks
 
 While the pay may not be substantial, data entry and microtask websites offer a flexible way to earn some extra cash.  These tasks can involve anything from transcribing audio to completing surveys or categorizing images.
@@ -79,6 +83,8 @@ Do you have a library of stunning visuals?  Stock photography and videography w
 
 * **Learning:** Invest in good quality photography equipment and hone your photography skills. There are online courses and tutorials teaching composition, lighting techniques, and post-processing software. Understanding copyright and licensing terms is also essential.
 * **Getting Started:** Choose a reputable stock photo platform like Shutterstock or Adobe Stock. Build a diverse portfolio with high-resolution images and relevant keywords to improve discoverability.
+
+![Illustration of a photographer](/img/aks0510_80887_a_photographer_clicking_pictures_of_a_beautiful_s_a10e7cc9-fc37-4051-9f8a-8a1cbf63316c.webp)
 
 ## 10. Online Consulting
 
