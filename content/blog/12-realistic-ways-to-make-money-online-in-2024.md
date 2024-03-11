@@ -44,7 +44,7 @@ Do you have a knack for storytelling or a passion for a particular niche?  Star
 
 Businesses of all sizes require administrative and technical support. Virtual assistants provide remote assistance with tasks like scheduling appointments, managing social media, or data entry.
 
-* **Learning:** Several online courses and certifications can equip you with the necessary skills to become a virtual assistant. Familiarity with project management tools and virtual communication platforms is a plus.
+* **Learning:** Several online courses and certifications can equip you with the necessary skills to become a virtual assistant. Familiarity with [project management tools](https://www.wrike.com/project-management-guide/faq/what-are-project-management-tools/) and virtual communication platforms is a plus.
 * **Getting Started:** Highlight your organizational skills, time management abilities, and proficiency in relevant software on platforms like [Zirtual](https://www.zirtual.com) or [Fancy Hands](https://www.fancyhands.com). Network with potential clients and build a strong online presence to showcase your qualifications.
 
 ## 5. Online Tutoring & Teaching
