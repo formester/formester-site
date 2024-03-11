@@ -108,4 +108,34 @@ Marketing memes don't need any context. Let's get started with 20+ marketing mem
 
 ## 16) I wouldn't be a marketer without google.
 
-![](/img/g0yzaq83fbv61.webp)
+![Marketing Memes](/img/g0yzaq83fbv61.webp)
+
+
+
+## 17) Okay boss, sharing draft number 12.
+
+![](/img/i-promise-its-the-last-one-v0-ibl2gu7lkycc1.webp)
+
+
+
+## 18) SEO is an art not a science.
+
+![Marketing Meme](/img/image48.webp)
+
+
+
+## 19) Canva is gods gift to marketers.
+
+![Marketing Memes](/img/marketers-with-no-design-backgrounds-v0-jwwx9w3thwdc1.webp)
+
+
+
+## 20) Writing is definitely a never ending job.
+
+![Marketing Memes](/img/when-copy-writing-is-part-of-your-job-v0-6hhlqkce3y8c1.webp)
+
+
+
+## 21) Meme marketing rocks!
+
+![Marketing Meme](/img/yia6y1ktqspa1.webp)
