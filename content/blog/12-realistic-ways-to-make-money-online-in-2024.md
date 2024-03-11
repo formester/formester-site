@@ -37,8 +37,8 @@ Handmade craft artists rejoice! E-commerce platforms like [Etsy](https://www.ets
 
 Do you have a knack for storytelling or a passion for a particular niche?  Start a blog and cultivate a following by consistently creating engaging content. Once you have a sizable audience, you can monetize your blog through advertising, affiliate marketing, or selling your own products or services.
 
-* **Learning:** There are countless online resources on content creation, SEO (Search Engine Optimization) and building a blog audience. Websites like Copyblogger or Neil Patel offer valuable insights and strategies.
-* **Getting Started:** Choose a blogging platform like WordPress.com or Wix and focus on creating high-quality, informative, or entertaining content relevant to your niche. Be patient, as building a loyal audience takes consistent effort and time.
+* **Learning:** There are countless online resources on content creation, SEO (Search Engine Optimization) and building a blog audience. Websites like [Copyblogger](https://copyblogger.com/blog/) or [Neil Patel](https://neilpatel.com/blog/) offer valuable insights and strategies.
+* **Getting Started:** Choose a blogging platform like [WordPress](https://wordpress.com) or [Wix](https://www.wix.com) and focus on creating high-quality, informative, or entertaining content relevant to your niche. Be patient, as building a loyal audience takes consistent effort and time.
 
 ## 4. Become a Virtual Assistant
 
