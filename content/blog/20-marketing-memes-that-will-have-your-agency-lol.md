@@ -18,10 +18,28 @@ published: false
 ---
 Marketing memes don't need any context. Let's get started with 20+ marketing memes that will your whole agency ROFL! Share with your colleagues to kill some stress.
 
-## 1) Meme marketing always works! Right?
+## \
+1) Meme marketing always works! Right?
 
 ![Marketing Meme](/img/23-1.png)
 
-## 2) We all know, not all leads are qualified!
+## \
+2) We all know, not all leads are qualified!
 
 ![Marketing Meme](/img/240226.n.leads_.jpg)
+
+## \
+3) Client: "You know how to do that content writing or copywriting thing right?"
+
+![Marketing Meme](/img/image-12-1-11.webp)
+
+## \
+4) We can all agree, emails rarely find us well.
+
+![Marketing Memes](/img/image-18-1-3.webp)
+
+
+
+## 5) Please stop copying my creatives!
+
+![](/img/meme-3-2-1024x703.png)
