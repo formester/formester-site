@@ -61,13 +61,13 @@ Sharing your knowledge is a great way to make money online. Platforms like [VIPK
 While the pay may not be substantial, data entry and microtask websites offer a flexible way to earn some extra cash.  These tasks can involve anything from transcribing audio to completing surveys or categorizing images.
 
 * **Learning:** The skills required for these tasks are relatively straightforward. However, strong typing skills and accuracy are essential. Some platforms may offer brief training modules.
-* **Getting Started:** Register with reputable microtask websites like Amazon Mechanical Turk or Clickworker. Be mindful of your time investment as some tasks may pay minimally.
+* **Getting Started:** Register with reputable microtask websites like [Amazon Mechanical Turk](https://www.mturk.com) or [Clickworker](https://www.clickworker.com). Be mindful of your time investment as some tasks may pay minimally.
 
 ## 7. Online Proofreading & Editing
 
-If you have a keen eye for detail and a strong grasp of grammar, consider offering online proofreading and editing services.  There's a growing demand for editors to polish website content, articles, or even academic papers.
+If you have a keen eye for detail and a strong grasp of grammar, consider offering online proofreading and editing services. There's a growing demand for editors to polish website content, articles, or even academic papers.
 
-* **Learning:** Refine your grammar and punctuation skills. Online resources like Grammarly Academy or Purdue Online Writing Lab (OWL) offer comprehensive grammar lessons and exercises. Consider certifications from accredited institutions to enhance your credibility, like the American Copy Editors Society (ACES).
+* **Learning:** Refine your grammar and punctuation skills. Online resources like [Grammarly](https://www.grammarly.com/grammar) or [Purdue Online Writing Lab (OWL)](https://owl.purdue.edu/owl/index.html) offer comprehensive grammar lessons and exercises. Consider certifications from accredited institutions to enhance your credibility, like the [American Copy Editors Society (ACES).](https://aceseditors.org)
 * **Getting Started:** Build a portfolio showcasing your editing skills. You can edit sample content for free or offer discounted rates to build experience. Freelance platforms like Upwork or Fiverr are a good starting point to connect with clients.
 
 ## 8. Social Media Management
