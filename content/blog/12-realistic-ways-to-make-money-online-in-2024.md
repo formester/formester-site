@@ -88,10 +88,10 @@ Do you have a library of stunning visuals?  Stock photography and videography w
 
 ## 10. Online Consulting
 
-Are you a consultant in a specific field like finance, marketing, or human resources? Offer your expertise online through video conferencing platforms.  This is a great way to leverage your experience and knowledge to help businesses remotely.
+Are you a consultant in a specific field like finance, marketing, or human resources? Offer your expertise online through video conferencing platforms. This is a great way to leverage your experience and knowledge to help businesses remotely.
 
 * **Learning:** Stay updated on the latest trends and knowledge within your consulting field. Consider professional certifications to enhance your credibility. Develop strong communication and presentation skills to effectively deliver consultations online.
-* **Getting Started:** Build a website or online profile showcasing your experience and areas of expertise. Network with potential clients through professional platforms like LinkedIn or industry associations. Offer free consultations or webinars to establish yourself as a thought leader.
+* **Getting Started:** [Build a website or online profile](https://www.jimdo.com/blog/build-great-consultants-website/) showcasing your experience and areas of expertise. Network with potential clients through professional platforms like [LinkedIn](https://www.linkedin.com) or industry associations. Offer free consultations or webinars to establish yourself as a thought leader.
 
 ## 11. Invest in the Sharing Economy
 
