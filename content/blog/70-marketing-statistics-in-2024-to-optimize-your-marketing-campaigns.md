@@ -10,7 +10,7 @@ metaDescription: Achieve marketing excellence with over 70+ essential statistics
 keywords: Marketing Statistics, Marketing stats
 author: Siddharth Sharma
 authorProfile: https://www.linkedin.com/in/sidsh0502/
-createdAt: 2024-03-11T16:56:36.722Z
+createdAt: 2024-03-11T16:58:40.396Z
 coverImg: /img/marketing_stats_cover.webp
 coverImgAlt: 70+ Marketing Statistics in 2024
 featured: false
