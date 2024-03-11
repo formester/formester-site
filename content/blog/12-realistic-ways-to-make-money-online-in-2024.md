@@ -33,6 +33,8 @@ Handmade craft artists rejoice! E-commerce platforms like [Etsy](https://www.ets
 * **Learning:** While creative skills are inherent, there's always room for improvement. [Online tutorials and craft communities](https://thehiveindex.com/topics/crafts/) can teach you new techniques and inspire your designs. Consider attending workshops or taking courses to refine your craft.
 * **Getting Started:** Research your target market and identify a niche where your creations stand out. Take high-quality product photos with clear descriptions and competitive pricing. Promote your shop on social media and relevant online marketplaces. Building brand awareness is key to attracting customers.
 
+![Illustration of handicrafts artist working](/img/crafts-and-creation.webp)
+
 ## 3. Content Creation & Blogging
 
 Do you have a knack for storytelling or a passion for a particular niche? Start a blog and cultivate a following by consistently creating engaging content. Once you have a sizable audience, you can monetize your blog through advertising, affiliate marketing, or selling your own products or services.
@@ -40,12 +42,16 @@ Do you have a knack for storytelling or a passion for a particular niche? Start
 * **Learning:** There are countless online resources on content creation, SEO (Search Engine Optimization) and building a blog audience. Websites like [Copyblogger](https://copyblogger.com/blog/) or [Neil Patel](https://neilpatel.com/blog/) offer valuable insights and strategies.
 * **Getting Started:** Choose a blogging platform like [WordPress](https://wordpress.com) or [Wix](https://www.wix.com) and focus on creating high-quality, informative, or entertaining content relevant to your niche. Be patient, as building a loyal audience takes consistent effort and time.
 
+![Illustration of a person writing blog article on wordpress](/img/content-creation-and-blogging.webp)
+
 ## 4. Become a Virtual Assistant
 
 Businesses of all sizes require administrative and technical support. Virtual assistants provide remote assistance with tasks like scheduling appointments, managing social media, or data entry.
 
 * **Learning:** Several online courses and certifications can equip you with the necessary skills to become a virtual assistant. Familiarity with [project management tools](https://www.wrike.com/project-management-guide/faq/what-are-project-management-tools/) and virtual communication platforms is a plus.
 * **Getting Started:** Highlight your organizational skills, time management abilities, and proficiency in relevant software on platforms like [Zirtual](https://www.zirtual.com) or [Fancy Hands](https://www.fancyhands.com). Network with potential clients and build a strong online presence to showcase your qualifications.
+
+![A virtual assistant working for a client](/img/virtual-assistant.webp)
 
 ## 5. Online Tutoring & Teaching
 
