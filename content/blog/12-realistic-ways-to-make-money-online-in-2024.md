@@ -28,7 +28,7 @@ If you have a marketable skill, like writing, graphic design, or coding, freelan
 
 ## 2. Sell Your Crafts & Creations
 
-Handmade enthusiasts rejoice! E-commerce platforms like Etsy allow you to set up a virtual shop and sell your unique creations, from jewelry and art to clothing and homeware.
+Handmade craft artists rejoice! E-commerce platforms like [Etsy](https://www.etsy.com/) allow you to set up a virtual shop and sell your unique creations, from jewelry and art to clothing and homeware.
 
 * **Learning:** While creative skills are inherent, there's always room for improvement. Online tutorials and craft communities can teach you new techniques and inspire your designs. Consider attending workshops or taking courses to refine your craft.
 * **Getting Started:** Research your target market and identify a niche where your creations stand out. Take high-quality product photos with clear descriptions and competitive pricing. Promote your shop on social media and relevant online marketplaces. Building brand awareness is key to attracting customers.
