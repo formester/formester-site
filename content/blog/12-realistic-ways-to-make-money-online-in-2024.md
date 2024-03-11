@@ -82,7 +82,7 @@ Businesses understand the power of social media but may lack the time or experti
 Do you have a library of stunning visuals?  Stock photography and videography websites allow you to license your work to individuals or businesses for a fee. Capturing high-quality, unique images can generate passive income over time.
 
 * **Learning:** Invest in good quality photography equipment and hone your photography skills. There are online courses and tutorials teaching composition, lighting techniques, and post-processing software. Understanding copyright and licensing terms is also essential.
-* **Getting Started:** Choose a reputable stock photo platform like Shutterstock or Adobe Stock. Build a diverse portfolio with high-resolution images and relevant keywords to improve discoverability.
+* **Getting Started:** Choose a reputable stock photo platform like [Shutterstock](https://www.shutterstock.com) or [Adobe Stock](https://stock.adobe.com). Build a diverse portfolio with high-resolution images and relevant keywords to improve discoverability.
 
 ![Illustration of a photographer](/img/aks0510_80887_a_photographer_clicking_pictures_of_a_beautiful_s_a10e7cc9-fc37-4051-9f8a-8a1cbf63316c.webp)
 
