@@ -112,11 +112,15 @@ Platforms like [Airbnb](https://www.airbnb.com) and [Turo](https://turo.com/gb/e
 * **Learning:** Familiarize yourself with the platform's policies and legalities. Understand the local market rates and optimize your listing with clear descriptions, high-quality photos, and competitive pricing.
 * **Getting Started:** Ensure your space or vehicle meets the platform's safety and quality standards. Provide excellent customer service and prioritize clear communication with renters to build positive reviews and attract repeat business.
 
+![Image of a person renting out car on Turo](/img/sharing-economy.webp)
+
 ## 12.  Become a YouTuber or Streamer
 
 If you have a captivating personality and enjoy creating video content, [YouTube](https://www.youtube.com) and streaming platforms like [Twitch](https://www.twitch.tv) offer a path to online fame and fortune. Building a large audience allows you to monetize your content through advertising, sponsorships, or even selling merchandise.
 
 * **Learning:** Study successful YouTubers and streamers within your niche. Understand video editing software and online streaming platforms. Consistency is key, so be prepared to create engaging content regularly and interact with your audience.
 * **Getting Started:** Choose a clear focus for your channel and develop a consistent style. Invest in good quality audio and video equipment to enhance your production value. Be patient, as growing a large audience takes time and dedication.
+
+![Illustration of a YouTube streamer](/img/youtube-streamer.webp)
 
 **Remember:** Success in any online venture requires dedication, effort, and a strategic approach. Carefully research your chosen field, identify your target audience, and consistently produce high-quality content or services. The internet rewards those who bring value, so don't be afraid to experiment, adapt, and build a sustainable online income stream.
