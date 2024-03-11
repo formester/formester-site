@@ -33,6 +33,8 @@ Handmade craft artists rejoice! E-commerce platforms like [Etsy](https://www.ets
 * **Learning:** While creative skills are inherent, there's always room for improvement. [Online tutorials and craft communities](https://thehiveindex.com/topics/crafts/) can teach you new techniques and inspire your designs. Consider attending workshops or taking courses to refine your craft.
 * **Getting Started:** Research your target market and identify a niche where your creations stand out. Take high-quality product photos with clear descriptions and competitive pricing. Promote your shop on social media and relevant online marketplaces. Building brand awareness is key to attracting customers.
 
+![Illustration of handicrafts artist working](/img/crafts-and-creation.webp)
+
 ## 3. Content Creation & Blogging
 
 Do you have a knack for storytelling or a passion for a particular niche? Start a blog and cultivate a following by consistently creating engaging content. Once you have a sizable audience, you can monetize your blog through advertising, affiliate marketing, or selling your own products or services.
@@ -40,12 +42,16 @@ Do you have a knack for storytelling or a passion for a particular niche? Start
 * **Learning:** There are countless online resources on content creation, SEO (Search Engine Optimization) and building a blog audience. Websites like [Copyblogger](https://copyblogger.com/blog/) or [Neil Patel](https://neilpatel.com/blog/) offer valuable insights and strategies.
 * **Getting Started:** Choose a blogging platform like [WordPress](https://wordpress.com) or [Wix](https://www.wix.com) and focus on creating high-quality, informative, or entertaining content relevant to your niche. Be patient, as building a loyal audience takes consistent effort and time.
 
+![Illustration of a person writing blog article on wordpress](/img/content-creation-and-blogging.webp)
+
 ## 4. Become a Virtual Assistant
 
 Businesses of all sizes require administrative and technical support. Virtual assistants provide remote assistance with tasks like scheduling appointments, managing social media, or data entry.
 
 * **Learning:** Several online courses and certifications can equip you with the necessary skills to become a virtual assistant. Familiarity with [project management tools](https://www.wrike.com/project-management-guide/faq/what-are-project-management-tools/) and virtual communication platforms is a plus.
 * **Getting Started:** Highlight your organizational skills, time management abilities, and proficiency in relevant software on platforms like [Zirtual](https://www.zirtual.com) or [Fancy Hands](https://www.fancyhands.com). Network with potential clients and build a strong online presence to showcase your qualifications.
+
+![A virtual assistant working for a client](/img/virtual-assistant.webp)
 
 ## 5. Online Tutoring & Teaching
 
@@ -63,12 +69,16 @@ While the pay may not be substantial, data entry and microtask websites offer a 
 * **Learning:** The skills required for these tasks are relatively straightforward. However, strong typing skills and accuracy are essential. Some platforms may offer brief training modules.
 * **Getting Started:** Register with reputable microtask websites like [Amazon Mechanical Turk](https://www.mturk.com) or [Clickworker](https://www.clickworker.com). Be mindful of your time investment as some tasks may pay minimally.
 
+![Image of a person offering data entry services](/img/data-entry-1-.webp)
+
 ## 7. Online Proofreading & Editing
 
 If you have a keen eye for detail and a strong grasp of grammar, consider offering online proofreading and editing services. There's a growing demand for editors to polish website content, articles, or even academic papers.
 
 * **Learning:** Refine your grammar and punctuation skills. Online resources like [Grammarly](https://www.grammarly.com/grammar) or [Purdue Online Writing Lab (OWL)](https://owl.purdue.edu/owl/index.html) offer comprehensive grammar lessons and exercises. Consider certifications from accredited institutions to enhance your credibility, like the [American Copy Editors Society (ACES).](https://aceseditors.org)
 * **Getting Started:** Build a portfolio showcasing your editing skills. You can edit sample content for free or offer discounted rates to build experience. Freelance platforms like Upwork or Fiverr are a good starting point to connect with clients.
+
+![Image of a person proofreading for a client](/img/proofreading.webp)
 
 ## 8. Social Media Management
 
@@ -77,6 +87,8 @@ Businesses understand the power of social media but may lack the time or experti
 * **Learning:** Understanding social media algorithms, content creation strategies, and community management is crucial. Numerous online courses and certifications from platforms like [Hootsuite Academy](https://education.hootsuite.com) or [Social Media Today](https://www.socialmediatoday.com) can equip you with the necessary skills.
 * **Getting Started:** Build a strong social media presence of your own. Showcase your content creation skills and knowledge of social media trends. Network with businesses and demonstrate how you can help them achieve their social media goals.
 
+![Image of a person doing social media management](/img/social-media.webp)
+
 ## 9. Sell Your Photos & Videos
 
 Do you have a library of stunning visuals? Stock photography and videography websites allow you to license your work to individuals or businesses for a fee. Capturing high-quality, unique images can generate passive income over time.
@@ -84,7 +96,7 @@ Do you have a library of stunning visuals? Stock photography and videography we
 * **Learning:** Invest in good quality photography equipment and hone your photography skills. There are online courses and tutorials teaching composition, lighting techniques, and post-processing software. Understanding copyright and licensing terms is also essential.
 * **Getting Started:** Choose a reputable stock photo platform like [Shutterstock](https://www.shutterstock.com) or [Adobe Stock](https://stock.adobe.com). Build a diverse portfolio with high-resolution images and relevant keywords to improve discoverability.
 
-![Illustration of a photographer](/img/aks0510_80887_a_photographer_clicking_pictures_of_a_beautiful_s_a10e7cc9-fc37-4051-9f8a-8a1cbf63316c.webp)
+![Illustration of a photographer taking pictures for shutterstock](/img/aks0510_80887_a_photographer_clicking_pictures_of_a_beautiful_s_a10e7cc9-fc37-4051-9f8a-8a1cbf63316c.webp)
 
 ## 10. Online Consulting
 
@@ -93,6 +105,8 @@ Are you a consultant in a specific field like finance, marketing, or human resou
 * **Learning:** Stay updated on the latest trends and knowledge within your consulting field. Consider professional certifications to enhance your credibility. Develop strong communication and presentation skills to effectively deliver consultations online.
 * **Getting Started:** [Build a website or online profile](https://www.jimdo.com/blog/build-great-consultants-website/) showcasing your experience and areas of expertise. Network with potential clients through professional platforms like [LinkedIn](https://www.linkedin.com) or industry associations. Offer free consultations or webinars to establish yourself as a thought leader.
 
+![A consultant providing online services to client](/img/consultant.webp)
+
 ## 11. Invest in the Sharing Economy
 
 Platforms like [Airbnb](https://www.airbnb.com) and [Turo](https://turo.com/gb/en) allow you to rent out underutilized assets, like a spare room or your car, for additional income. The sharing economy thrives on convenience and accessibility, making it a lucrative option for many.
@@ -100,11 +114,15 @@ Platforms like [Airbnb](https://www.airbnb.com) and [Turo](https://turo.com/gb/e
 * **Learning:** Familiarize yourself with the platform's policies and legalities. Understand the local market rates and optimize your listing with clear descriptions, high-quality photos, and competitive pricing.
 * **Getting Started:** Ensure your space or vehicle meets the platform's safety and quality standards. Provide excellent customer service and prioritize clear communication with renters to build positive reviews and attract repeat business.
 
+![Image of a person renting out car on Turo](/img/sharing-economy.webp)
+
 ## 12.  Become a YouTuber or Streamer
 
 If you have a captivating personality and enjoy creating video content, [YouTube](https://www.youtube.com) and streaming platforms like [Twitch](https://www.twitch.tv) offer a path to online fame and fortune. Building a large audience allows you to monetize your content through advertising, sponsorships, or even selling merchandise.
 
 * **Learning:** Study successful YouTubers and streamers within your niche. Understand video editing software and online streaming platforms. Consistency is key, so be prepared to create engaging content regularly and interact with your audience.
 * **Getting Started:** Choose a clear focus for your channel and develop a consistent style. Invest in good quality audio and video equipment to enhance your production value. Be patient, as growing a large audience takes time and dedication.
+
+![Illustration of a YouTube streamer](/img/youtube-streamer.webp)
 
 **Remember:** Success in any online venture requires dedication, effort, and a strategic approach. Carefully research your chosen field, identify your target audience, and consistently produce high-quality content or services. The internet rewards those who bring value, so don't be afraid to experiment, adapt, and build a sustainable online income stream.
