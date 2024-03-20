@@ -8,7 +8,7 @@ metaDescription: Learn how to boost your ROI with these 10 crucial marketing
 keywords: Marketin ROI
 author: Siddharth Sharma
 createdAt: 2024-03-08T06:37:04.580Z
-coverImg: /img/marketing-kpi-2-.webp
+coverImg: /img/marketing-kpi-blog.png
 coverImgAlt: Marketing ROI Metrics Illustration
 featured: false
 published: true
