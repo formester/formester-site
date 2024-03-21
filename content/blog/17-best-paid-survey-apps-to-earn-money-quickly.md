@@ -38,6 +38,15 @@ Survey Junkie leads the pack with its remarkably low minimum payout of $5, coupl
 
 ![Survey Junkie Mobile App Screenshot - Apple App Store](/img/surveyjunkie_screenshot.png "Survey Junkie App - Apple App Store")
 
+## **2﻿. [Pawns.App](https://pawns.app/)**
+
+Pawns.app lets you earn cash by sharing your opinions through surveys, completing daily quests and by selling your unused bandwidth for 100 percent passive income. This new platform offers multiple ways to generate passive income and also lets you invite your friends to join and multiply your profits. 
+
+**Payment methods:** Get paid via PayPal, Bitcoin, or Gift Cards, depending on your location with a minimum withdrawal of 5$. 
+﻿
+
+![]()
+
 ## **2. [National Consumer Panel](https://join.ncponline.com/home?cid=7013m000001K75j&vcd=1&vpub=null&vsid=2025)**
 
 As a panel member, access the NCPMobile app to scan barcodes of purchased items. Ideal for grocery cashback, this app offers rewards for providing shopping information, including manual entries for non-barcoded items. Engage in surveys and special studies for additional rewards.
