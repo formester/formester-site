@@ -97,7 +97,7 @@ export default {
     '@nuxtjs/robots',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxthq/studio',
+    // '@nuxthq/studio',
     '@nuxt/content',
     '@nuxtjs/sitemap',
     '@nuxtjs/gtm'
