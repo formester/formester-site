@@ -100,6 +100,7 @@ export default {
     '@nuxt/content',
     '@nuxtjs/sitemap',
     '@nuxtjs/gtm',
+    '@nuxthq/studio'
   ],
 
   // GTM configuration
