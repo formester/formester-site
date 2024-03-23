@@ -97,10 +97,10 @@ export default {
     '@nuxtjs/robots',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@nuxthq/studio',
     '@nuxt/content',
     '@nuxtjs/sitemap',
-    '@nuxtjs/gtm',
-    '@nuxthq/studio'
+    '@nuxtjs/gtm'
   ],
 
   // GTM configuration
