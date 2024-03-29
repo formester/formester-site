@@ -61,9 +61,11 @@ export default {
       let { data: response } = await axios.get(
         'https://app.formester.com/template_categories.json'
       )
-      let categories = Object.values(response).flat().map((category) => {
-        return `/templates/categories/${category.slug}`
-      })
+      let categories = Object.values(response)
+        .flat()
+        .map((category) => {
+          return `/templates/categories/${category.slug}`
+        })
       const blogs = await getRoutes()
       return [...blogs, ...templates, ...categories]
     },
@@ -143,9 +145,11 @@ export default {
         let { data: response } = await axios.get(
           'https://app.formester.com/template_categories.json'
         )
-        let categoriesRoute = Object.values(response).flat().map((category) => {
-          return `/templates/categories/${category.slug}`
-        })
+        let categoriesRoute = Object.values(response)
+          .flat()
+          .map((category) => {
+            return `/templates/categories/${category.slug}`
+          })
         return [...templatesRoute, ...categoriesRoute]
       } catch (error) {
         return []
@@ -165,5 +169,6 @@ export default {
   // Enviornment variable for the base url of the app
   env: {
     baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'http://localhost:3000',
+    strapiUrl: process.env.STRAPI_URL || 'http://localhost:1337'
   },
 }
