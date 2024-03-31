@@ -46,8 +46,6 @@ export default {
       }
     })
 
-    console.log('articles', articles[0].coverImg)
-
     const heroArticles = articles.filter((item) => item.featured)
 
     return {

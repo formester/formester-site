@@ -158,27 +158,31 @@ export default {
     // const temp = await $strapi.$blogs.find({
     //   slug: '70-marketing-statistics-in-2024-to-optimize-your-marketing-campaigns',
     // })
-    const { data } = await axios.get(
+    const response = await axios.get(
       `${process.env.strapiUrl}/api/blogs?filters[slug][$eq]=${params.slug}&populate=*`
     )
-    const readingStats = readingTime(data.data[0].attributes.body)
+    const readingStats = readingTime(response.data.data[0].attributes.body)
     const blogData = {
-      id: data.data[0].id,
-      coverImg: data.data[0].attributes.coverImg.data.attributes.url,
-      ...data.data[0].attributes,
+      id: response.data.data[0].id,
+      coverImg: response.data.data[0].attributes.coverImg.data.attributes.url,
+      ...response.data.data[0].attributes,
       readingStats,
     }
     const blogBody = await parseMarkdown(blogData?.body)
 
-    const article = await $content('blog', params.slug).fetch()
-
-    let relatedArticles = await $content('blog').fetch()
-    relatedArticles = relatedArticles.filter(
-      (relatedArticle) => article.slug !== relatedArticle.slug
+    let { data } = await axios.get(
+      `${process.env.strapiUrl}/api/blogs/random?slug=${params.slug}`
     )
-    const randIndex = Math.floor(Math.random() * (relatedArticles.length - 2))
-    relatedArticles = relatedArticles.slice(randIndex, randIndex + 2)
-    return { blogData, blogBody, article, relatedArticles }
+
+    let relatedArticles = data.map((item) => {
+      return {
+        ...item,
+        coverImg: `${process.env.strapiUrl}${item.coverImg.url}`,
+        readingStats: readingTime(item.body),
+      }
+    })
+    
+    return { blogData, blogBody, relatedArticles }
   },
   mounted() {
     document.querySelectorAll('.blog__content img').forEach((image) => {
@@ -292,7 +296,7 @@ export default {
         {
           name: 'publish_date',
           property: 'og:publish_date',
-          content: this.blogData?.createdAt,
+          content: this.blogData?.publishedAt,
         },
       ],
       link: [
