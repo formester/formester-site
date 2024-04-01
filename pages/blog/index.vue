@@ -32,7 +32,7 @@ export default {
     BlogCard,
     BlogFeatured,
   },
-  async asyncData({ $content }) {
+  async asyncData() {
     const {
       data: { data },
     } = await axios.get(`${process.env.strapiUrl}/api/blogs?populate=*`)

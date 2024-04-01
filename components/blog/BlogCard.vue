@@ -7,7 +7,7 @@
       :title="article.coverImgAlt"
     />
     <div class="d-flex flex-column align-items-start">
-      <span class="blog__date mt-3">{{ formatDate(article.createdAt) }}</span>
+      <span class="blog__date mt-3">{{ formatDate(article.publishedAt) }}</span>
       <div class="mt-2">
         <h3 class="blog__title">{{ article.title }}</h3>
         <p class="mt-1 blog__desc">{{ article.description }}</p>

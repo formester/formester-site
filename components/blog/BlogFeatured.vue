@@ -12,7 +12,7 @@
     <div
       class="col-lg-6 d-flex flex-column align-items-start mt-3 mt-lg-0 ps-0 ps-lg-4"
     >
-      <span class="blog__date">{{ formatDate(article.createdAt) }}</span>
+      <span class="blog__date">{{ formatDate(article.publishedAt) }}</span>
       <div class="mt-2">
         <h3 class="blog__title">{{ article.title }}</h3>
         <p class="mt-1 blog__desc">{{ article.description }}</p>

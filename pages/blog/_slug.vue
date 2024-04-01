@@ -74,7 +74,7 @@
         </nav>
         <h1 class="mb-1 article__heading">{{ blogData?.title }}</h1>
         <div class="d-flex sm-text my-2 datentimeToRead">
-          <span>{{ formatDate(blogData?.createdAt) }}</span>
+          <span>{{ formatDate(blogData?.publishedAt) }}</span>
           <span>|</span>
           <div
             class="d-flex align-items-center justify-content-center timeToRead"
@@ -154,7 +154,7 @@ export default {
   content: {
     liveEdit: false,
   },
-  async asyncData({ $content, params }) {
+  async asyncData({ params }) {
     // const temp = await $strapi.$blogs.find({
     //   slug: '70-marketing-statistics-in-2024-to-optimize-your-marketing-campaigns',
     // })
@@ -272,7 +272,7 @@ export default {
         ...this.meta,
         {
           property: 'article:published_time',
-          content: this.blogData?.createdAt,
+          content: this.blogData?.publishedAt,
         },
         {
           property: 'article:modified_time',
@@ -346,7 +346,7 @@ export default {
             url: 'https://formester.com/logo.png',
           },
         },
-        datePublished: this.blogData?.createdAt,
+        datePublished: this.blogData?.publishedAt,
       },
     ]
 

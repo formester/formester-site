@@ -3,10 +3,10 @@ export default async () => {
   
   const {
     data: { data },
-  } = await axios.get(`${process.env.strapiUrl}/api/blogs?populate=*`);
+  } = await axios.get(`http://localhost:1337/api/blogs?populate=*`);
 
   const articles = data.map((item) => {
-    return `/blog/${item.slug}`
+    return `/blog/${item.attributes.slug}`
   })
 
   return articles;
