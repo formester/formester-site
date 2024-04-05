@@ -52,22 +52,23 @@ export default {
     hostname: 'https://formester.com',
     trailingSlash: true,
     routes: async () => {
-      let { data } = await axios.get('https://app.formester.com/templates.json')
-      let templates = data.map((template) => {
-        return {
-          url: `/templates/${template.slug}`,
-        }
-      })
-      let { data: response } = await axios.get(
-        'https://app.formester.com/template_categories.json'
-      )
-      let categories = Object.values(response)
-        .flat()
-        .map((category) => {
-          return `/templates/categories/${category.slug}`
-        })
+      // let { data } = await axios.get('https://app.formester.com/templates.json')
+      // let templates = data.map((template) => {
+      //   return {
+      //     url: `/templates/${template.slug}`,
+      //   }
+      // })
+      // let { data: response } = await axios.get(
+      //   'https://app.formester.com/template_categories.json'
+      // )
+      // let categories = Object.values(response)
+      //   .flat()
+      //   .map((category) => {
+      //     return `/templates/categories/${category.slug}`
+      //   })
       const blogs = await getRoutes()
-      return [...blogs, ...templates, ...categories]
+      // return [...blogs, ...templates, ...categories]
+      return [...blogs]
     },
   },
 
@@ -136,25 +137,29 @@ export default {
   generate: {
     routes: async () => {
       try {
-        let { data } = await axios.get(
-          'https://app.formester.com/templates.json'
-        )
-        let templatesRoute = data.map((template) => {
-          return `/templates/${template.slug}`
-        })
-        let { data: response } = await axios.get(
-          'https://app.formester.com/template_categories.json'
-        )
-        let categoriesRoute = Object.values(response)
-          .flat()
-          .map((category) => {
-            return `/templates/categories/${category.slug}`
-          })
-        return [...templatesRoute, ...categoriesRoute]
+        // let { data } = await axios.get(
+        //   'https://app.formester.com/templates.json'
+        // )
+        // let templatesRoute = data.map((template) => {
+        //   return `/templates/${template.slug}`
+        // })
+        // let { data: response } = await axios.get(
+        //   'https://app.formester.com/template_categories.json'
+        // )
+        // let categoriesRoute = Object.values(response)
+        //   .flat()
+        //   .map((category) => {
+        //     return `/templates/categories/${category.slug}`
+        //   })
+        // return [...templatesRoute, ...categoriesRoute]
+        return []
       } catch (error) {
         return []
       }
     },
+    exclude: [
+      /^\/templates/ 
+    ],
     fallback: true,
   },
   content: {

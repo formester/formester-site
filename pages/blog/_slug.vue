@@ -177,7 +177,7 @@ export default {
     let relatedArticles = data.map((item) => {
       return {
         ...item,
-        coverImg: `${process.env.strapiUrl}${item.coverImg.url}`,
+        coverImg: item.coverImg.url,
         readingStats: readingTime(item.body),
       }
     })

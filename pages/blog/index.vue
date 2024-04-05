@@ -41,7 +41,7 @@ export default {
       return {
         id: item.id,
         ...item.attributes,
-        coverImg: `${process.env.strapiUrl}${item.attributes.coverImg.data.attributes.url}`,
+        coverImg: item.attributes.coverImg.data.attributes.url,
         readingStats: readingTime(item.attributes.body),
       }
     })
