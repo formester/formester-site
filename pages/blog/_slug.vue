@@ -166,9 +166,9 @@ export default {
       metaImage: response.data.data[0].attributes.metaImage.map((item)=>item.imageURL),
       readingStats,
     }
-    console.log("DATA", blogData);
     const blogBody = await parseMarkdown(blogData?.body)
 
+    //Get Related Articles
     let { data } = await axios.get(
       `${process.env.strapiUrl}/api/blogs/random?slug=${params.slug}`
     )
