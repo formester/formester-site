@@ -155,19 +155,18 @@ export default {
     liveEdit: false,
   },
   async asyncData({ params }) {
-    // const temp = await $strapi.$blogs.find({
-    //   slug: '70-marketing-statistics-in-2024-to-optimize-your-marketing-campaigns',
-    // })
     const response = await axios.get(
       `${process.env.strapiUrl}/api/blogs?filters[slug][$eq]=${params.slug}&populate=*`
     )
     const readingStats = readingTime(response.data.data[0].attributes.body)
     const blogData = {
       id: response.data.data[0].id,
-      coverImg: response.data.data[0].attributes.coverImg.data.attributes.url,
       ...response.data.data[0].attributes,
+      coverImg: response.data.data[0].attributes.coverImg.data.attributes.url,
+      metaImage: response.data.data[0].attributes.metaImage.map((item)=>item.imageURL),
       readingStats,
     }
+    console.log("DATA", blogData);
     const blogBody = await parseMarkdown(blogData?.body)
 
     let { data } = await axios.get(
@@ -246,14 +245,13 @@ export default {
   },
   computed: {
     meta() {
+      // console.log("this.blogData?.coverImg", this.blogData?.coverImg);
       const metaData = {
         type: 'article',
         url: `https://formester.com/blog/${this.$route.params.slug}/`,
         title: this.blogData?.metaTitle,
         description: this.blogData?.metaDescription,
-        mainImage: this.blogData?.coverImg
-          ? `https://formester.com/${this.blogData?.coverImg}`
-          : 'https://formester.com/formester-form-builder-background.png',
+        mainImage: this.blogData?.coverImg || 'https://formester.com/formester-form-builder-background.png',
         mainImageAlt:
           this.blogData?.coverImgAlt ||
           'Form builder showing drag and drop functionality',
@@ -312,7 +310,7 @@ export default {
     const imagesArray = []
 
     if (this.blogData?.coverImg) {
-      imagesArray.push(`https://formester.com${this.blogData.coverImg}`)
+      imagesArray.push(this.blogData.coverImg)
     }
 
     if (this.blogData?.metaImages && this.blogData.metaImages.length > 0) {
