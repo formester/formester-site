@@ -2,20 +2,21 @@
   <div>
     <div class="container position-relative">
       <article
+        v-if="blogData"
         class="container mw-920 mt-8rem"
-        :class="{ 'mb-3rem': !(article.cta && article.cta.hidden) }"
+        :class="{ 'mb-3rem': !(blogData?.cta && blogData.cta.hidden) }"
       >
         <div class="blog__header">
           <NuxtLink
             :to="`/blog/`"
             class="blog__back"
-            :class="article.toc.length ? 'blog__back__margin' : ''"
+            :class="blogBody?.toc.length ? 'blog__back__margin' : ''"
           >
             <span>← Back</span>
           </NuxtLink>
           <div class="social__links">
             <a
-              :href="`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${article.title} by @_Formester_ `"
+              :href="`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${blogData?.title} by @_Formester_ `"
               @click="googleAnalytics('twitter')"
               class="social-icons"
               target="_blank"
@@ -44,7 +45,7 @@
           </div>
         </div>
         <nav
-          v-if="article.toc.length"
+          v-if="blogBody?.toc.length"
           class="navbar navbar-expand bg-white py-3"
         >
           <div class="collapse navbar-collapse">
@@ -61,7 +62,7 @@
                   Table of Contents
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="tocMenuLink">
-                  <li v-for="link of article.toc" :key="link.id">
+                  <li v-for="link of blogBody.toc" :key="link.id">
                     <NuxtLink class="dropdown-link" :to="`#${link.id}`">
                       {{ link.text }}
                     </NuxtLink>
@@ -71,30 +72,30 @@
             </ul>
           </div>
         </nav>
-        <h1 class="mb-1 article__heading">{{ article.title }}</h1>
+        <h1 class="mb-1 article__heading">{{ blogData?.title }}</h1>
         <div class="d-flex sm-text my-2 datentimeToRead">
-          <span>{{ formatDate(article.createdAt) }}</span>
+          <span>{{ formatDate(blogData?.publishedAt) }}</span>
           <span>|</span>
           <div
             class="d-flex align-items-center justify-content-center timeToRead"
           >
             <ClockIcon color="#4f4f4f" />
-            <span>{{ article.readingStats.text }}</span>
+            <span>{{ blogData?.readingStats?.text }}</span>
           </div>
         </div>
         <div class="sm-text mt-1 article__author-section">
           by
           <a
-            :href="article.authorProfile"
-            :title="article.authorProfile"
+            :href="blogData?.authorProfile"
+            :title="blogData?.authorProfile"
             target="_blank"
             rel="noopener"
           >
-            <span class="article__author">{{ article.author }}</span>
+            <span class="article__author">{{ blogData?.author }}</span>
           </a>
         </div>
         <div class="blog__content">
-          <nuxt-content :document="article" />
+          <nuxt-content :document="blogBody" v-if="blogBody" />
           <div class="popup__img">
             <span class="image-preview-close">&times;</span>
             <img src="" alt="" />
@@ -126,7 +127,7 @@
         >
       </article>
     </div>
-    <CallToActionSection :content="article.cta" />
+    <CallToActionSection :content="blogData?.cta" />
   </div>
 </template>
 
@@ -138,6 +139,9 @@ import LinkdinIcon from '../../components/icons/linkdin.vue'
 import CopyLinkIcon from '../../components/icons/copyLink.vue'
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
+import axios from 'axios'
+import { parseMarkdown } from '~/utils/parseMarkdown'
+import readingTime from 'reading-time'
 
 export default {
   components: {
@@ -150,16 +154,42 @@ export default {
   content: {
     liveEdit: false,
   },
-  async asyncData({ $content, params }) {
-    const article = await $content('blog', params.slug).fetch()
+  async asyncData({ params }) {
+    const response = await axios.get(`${process.env.strapiUrl}/api/blogs`, {
+      params: {
+        'filters[slug][$eq]': params.slug,
+        populate: '*',
+      },
+    })
+    const blog = response.data.data[0]
+    const blogData = {
+      id: blog.id,
+      ...blog.attributes,
+      coverImg: blog.attributes.coverImg.data.attributes.url,
+      metaImage: blog.attributes.metaImage.map((item) => item.imageURL),
+      readingStats: readingTime(blog.attributes.body),
+    }
+    const blogBody = await parseMarkdown(blogData?.body)
 
-    let relatedArticles = await $content('blog').fetch()
-    relatedArticles = relatedArticles.filter(
-      (relatedArticle) => article.slug !== relatedArticle.slug
+    //Get Related Articles
+    let { data } = await axios.get(
+      `${process.env.strapiUrl}/api/blogs/random`,
+      {
+        params: {
+          slug: params.slug,
+        },
+      }
     )
-    const randIndex = Math.floor(Math.random() * (relatedArticles.length - 2))
-    relatedArticles = relatedArticles.slice(randIndex, randIndex + 2)
-    return { article, relatedArticles }
+
+    let relatedArticles = data.map((item) => {
+      return {
+        ...item,
+        coverImg: item.coverImg.url,
+        readingStats: readingTime(item.body),
+      }
+    })
+
+    return { blogData, blogBody, relatedArticles }
   },
   mounted() {
     document.querySelectorAll('.blog__content img').forEach((image) => {
@@ -223,18 +253,19 @@ export default {
   },
   computed: {
     meta() {
+      // console.log("this.blogData?.coverImg", this.blogData?.coverImg);
       const metaData = {
         type: 'article',
         url: `https://formester.com/blog/${this.$route.params.slug}/`,
-        title: this.article.metaTitle,
-        description: this.article.metaDescription,
-        mainImage: this.article.coverImg
-          ? `https://formester.com/${this.article.coverImg}`
-          : 'https://formester.com/formester-form-builder-background.png',
+        title: this.blogData?.metaTitle,
+        description: this.blogData?.metaDescription,
+        mainImage:
+          this.blogData?.coverImg ||
+          'https://formester.com/formester-form-builder-background.png',
         mainImageAlt:
-          this.article.coverImgAlt ||
+          this.blogData?.coverImgAlt ||
           'Form builder showing drag and drop functionality',
-        keywords: this.article.keywords,
+        keywords: this.blogData?.keywords,
       }
       return getSiteMeta(metaData)
     },
@@ -244,25 +275,25 @@ export default {
   },
   head() {
     return {
-      title: this.article.metaTitle,
+      title: this.blogData?.metaTitle,
       meta: [
         ...this.meta,
         {
           property: 'article:published_time',
-          content: this.article.createdAt,
+          content: this.blogData?.publishedAt,
         },
         {
           property: 'article:modified_time',
-          content: this.article.updatedAt,
+          content: this.blogData?.updatedAt,
         },
         { name: 'twitter:label1', content: 'Written by' },
-        { name: 'twitter:data1', content: this.article.author },
+        { name: 'twitter:data1', content: this.blogData?.author },
         // Linkedin
         {
           hid: 'author',
           name: 'author',
           property: 'article:author',
-          content: this.article.author,
+          content: this.blogData?.author,
         },
         {
           hid: 'publisher',
@@ -273,7 +304,7 @@ export default {
         {
           name: 'publish_date',
           property: 'og:publish_date',
-          content: this.article.createdAt,
+          content: this.blogData?.publishedAt,
         },
       ],
       link: [
@@ -288,12 +319,12 @@ export default {
   jsonld() {
     const imagesArray = []
 
-    if (this.article.coverImg) {
-      imagesArray.push(`https://formester.com${this.article.coverImg}`)
+    if (this.blogData?.coverImg) {
+      imagesArray.push(this.blogData.coverImg)
     }
 
-    if (this.article.metaImages && this.article.metaImages.length > 0) {
-      imagesArray.push(...this.article.metaImages)
+    if (this.blogData?.metaImages && this.blogData.metaImages.length > 0) {
+      imagesArray.push(...this.blogData.metaImages)
     }
 
     const jsonData = [
@@ -302,18 +333,18 @@ export default {
         '@type': 'BlogPosting',
         mainEntityOfPage: {
           '@type': 'WebPage',
-          '@id': `https://formester.com/blog/${this.article.slug}/`,
+          '@id': `https://formester.com/blog/${this.blogData?.slug}/`,
         },
-        headline: this.article.title,
-        description: this.article.description,
+        headline: this.blogData?.title,
+        description: this.blogData?.description,
         image:
           imagesArray.length > 0
             ? imagesArray
             : ['https://formester.com/formester-form-builder-background.png'],
         author: {
           '@type': 'Person',
-          name: this.article.author,
-          url: this.article.authorProfile,
+          name: this.blogData?.author,
+          url: this.blogData?.authorProfile,
         },
         publisher: {
           '@type': 'Organization',
@@ -323,14 +354,14 @@ export default {
             url: 'https://formester.com/logo.png',
           },
         },
-        datePublished: this.article.createdAt,
+        datePublished: this.blogData?.publishedAt,
       },
     ]
 
     // Append schema if available
-    if (this.article.schema) {
+    if (this.blogData?.schema) {
       try {
-        this.article.schema.forEach((s) => {
+        this.blogData.schema.forEach((s) => {
           let parsedSchema = JSON.parse(s.type)
           if (typeof parsedSchema == 'object') {
             jsonData.push(parsedSchema)

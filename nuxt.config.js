@@ -61,9 +61,11 @@ export default {
       let { data: response } = await axios.get(
         'https://app.formester.com/template_categories.json'
       )
-      let categories = Object.values(response).flat().map((category) => {
-        return `/templates/categories/${category.slug}`
-      })
+      let categories = Object.values(response)
+        .flat()
+        .map((category) => {
+          return `/templates/categories/${category.slug}`
+        })
       const blogs = await getRoutes()
       return [...blogs, ...templates, ...categories]
     },
@@ -109,15 +111,6 @@ export default {
     id: 'GTM-56W9ZCR',
   },
 
-  // Hooks configuration - https://content.nuxtjs.org/advanced/
-  hooks: {
-    'content:file:beforeInsert': (document) => {
-      if (document.extension === '.md') {
-        const stats = require('reading-time')(document.text)
-        document.readingStats = stats
-      }
-    },
-  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
@@ -144,9 +137,11 @@ export default {
         let { data: response } = await axios.get(
           'https://app.formester.com/template_categories.json'
         )
-        let categoriesRoute = Object.values(response).flat().map((category) => {
-          return `/templates/categories/${category.slug}`
-        })
+        let categoriesRoute = Object.values(response)
+          .flat()
+          .map((category) => {
+            return `/templates/categories/${category.slug}`
+          })
         return [...templatesRoute, ...categoriesRoute]
       } catch (error) {
         return []
@@ -166,5 +161,8 @@ export default {
   // Enviornment variable for the base url of the app
   env: {
     baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'http://localhost:3000',
+    strapiUrl:
+      process.env.NUXT_PUBLIC_STRAPI_URL ||
+      'https://formester-strapi-4a64ecba89b0.herokuapp.com',
   },
 }

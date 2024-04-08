@@ -44,6 +44,9 @@ import KeyBenefits from '../../components/hr-solution/KeyBenefits.vue'
 import SeamlessIntegration from '../../components/hr-solution/SeamlessIntegration.vue'
 import BlogCard from '../../components/blog/BlogCard.vue'
 
+import axios from 'axios'
+import readingTime from 'reading-time'
+
 export default {
   components: {
     Hero,
@@ -53,18 +56,32 @@ export default {
     SeamlessIntegration,
     BlogCard,
   },
-  async asyncData({ $content }) {
-    let articles = await $content('blog')
-      .where({
-        published: true,
-        featured: false,
-      })
-      .search('human resource')
-      .sortBy('createdAt', 'desc')
-      .fetch()
+  async asyncData() {
+    const {
+      data: { data },
+    } = await axios.get(
+      `${process.env.strapiUrl}/api/blogs`,
+      {
+        params: {
+          'filters[$or][0][title][$contains]': 'HR',
+          'filters[$or][1][title][$containsi]': 'human resource',
+          sort: 'publishedAt:desc',
+          populate: '*',
+        },
+      }
+    )
+
+    let articles = data.map((item) => {
+      return {
+        id: item.id,
+        ...item.attributes,
+        coverImg: item.attributes.coverImg.data.attributes.url,
+        readingStats: readingTime(item.attributes.body),
+      }
+    })
 
     const randIndex = Math.floor(Math.random() * (articles.length - 3))
-    articles = articles.slice(randIndex, randIndex + 3)
+    articles = articles?.slice(randIndex, randIndex + 3)
 
     return {
       articles: articles,

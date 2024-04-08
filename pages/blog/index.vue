@@ -23,29 +23,36 @@ import BlogFeatured from '../../components/blog/BlogFeatured.vue'
 
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
+import axios from 'axios'
+import { parseMarkdown } from '~/utils/parseMarkdown'
+import readingTime from 'reading-time'
 
 export default {
   components: {
     BlogCard,
     BlogFeatured,
   },
-  async asyncData({ $content }) {
-    const articles = await $content('blog')
-      .where({
-        published: true,
-        featured: false,
-      })
-      .sortBy('createdAt', 'desc')
-      .fetch()
+  async asyncData() {
+    const {
+      data: { data },
+    } = await axios.get(`${process.env.strapiUrl}/api/blogs`, {
+      params: {
+        sort: 'publishedAt:desc',
+        populate: '*',
+      },
+    })
 
-    const heroArticles = await $content('blog')
-      .where({
-        published: true,
-        featured: true,
-      })
-      .sortBy('createdAt', 'desc')
-      .fetch()
+    let articles = data.map((item) => {
+      return {
+        id: item.id,
+        ...item.attributes,
+        coverImg: item.attributes.coverImg.data.attributes.url,
+        readingStats: readingTime(item.attributes.body),
+      }
+    })
 
+    const heroArticles = articles.filter((item) => item.featured)
+    articles = articles.filter((item) => !item.featured)
     return {
       articles,
       heroArticles,
@@ -56,9 +63,10 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/blog/',
-        title: 'Latest form Builder Software in 2023 | Best Online Form Builder to Use in 2023 - Formester',
+        title:
+          'Latest form Builder Software in 2023 | Best Online Form Builder to Use in 2023 - Formester',
         description:
-          'Best Online, No-Code Form Builder Software in 2023 - Formester\'s Blog Resource | Discover trending content related to all things form-building.',
+          "Best Online, No-Code Form Builder Software in 2023 - Formester's Blog Resource | Discover trending content related to all things form-building.",
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with blog page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with blog page image alt
@@ -68,7 +76,8 @@ export default {
   },
   head() {
     return {
-      title: 'Latest form Builder Software in 2023 | Best Online Form Builder to Use in 2023 - Formester',
+      title:
+        'Latest form Builder Software in 2023 | Best Online Form Builder to Use in 2023 - Formester',
       meta: [...this.meta],
       link: [
         {
@@ -101,13 +110,13 @@ export default {
           '@type': 'BreadcrumbList',
           '@id': 'https://acornglobus.com',
           itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Home',
-            item: 'https://formester.com',
-          },
-          {
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Home',
+              item: 'https://formester.com',
+            },
+            {
               '@type': 'ListItem',
               position: 2,
               name: 'Blog',

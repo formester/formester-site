@@ -1,7 +1,13 @@
 export default async () => {
-  const { $content } = require("@nuxt/content");
-  let files = await $content({ deep: true }).only(["path", "published"]).fetch();
-  files = files.filter(file => file.published)
+  const axios = require('axios')
+  
+  const {
+    data: { data },
+  } = await axios.get(`http://localhost:1337/api/blogs?populate=*`);
 
-  return files.map((file) => (file.path === "/index" ? "/" : file.path));
+  const articles = data.map((item) => {
+    return `/blog/${item.attributes.slug}`
+  })
+
+  return articles;
 };
