@@ -47,7 +47,6 @@ import BlogCard from '../../components/blog/BlogCard.vue'
 import axios from 'axios'
 import readingTime from 'reading-time'
 
-
 export default {
   components: {
     Hero,
@@ -58,8 +57,18 @@ export default {
     BlogCard,
   },
   async asyncData() {
-    const {data: {data}} = await axios.get(
-      `${process.env.strapiUrl}/api/blogs?filters[$or][0][title][$contains]=HR&filters[$or][1][title][$containsi]=human resource&sort=publishedAt:desc&populate=*`
+    const {
+      data: { data },
+    } = await axios.get(
+      `${process.env.strapiUrl}/api/blogs`,
+      {
+        params: {
+          'filters[$or][0][title][$contains]': 'HR',
+          'filters[$or][1][title][$containsi]': 'human resource',
+          sort: 'publishedAt:desc',
+          populate: '*',
+        },
+      }
     )
 
     let articles = data.map((item) => {
@@ -71,8 +80,8 @@ export default {
       }
     })
 
-    const randIndex = Math.floor(Math.random() * (articles.length - 3));
-    articles = articles?.slice(randIndex, randIndex + 3);
+    const randIndex = Math.floor(Math.random() * (articles.length - 3))
+    articles = articles?.slice(randIndex, randIndex + 3)
 
     return {
       articles: articles,

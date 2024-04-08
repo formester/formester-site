@@ -155,22 +155,30 @@ export default {
     liveEdit: false,
   },
   async asyncData({ params }) {
-    const response = await axios.get(
-      `${process.env.strapiUrl}/api/blogs?filters[slug][$eq]=${params.slug}&populate=*`
-    )
-    const readingStats = readingTime(response.data.data[0].attributes.body)
+    const response = await axios.get(`${process.env.strapiUrl}/api/blogs`, {
+      params: {
+        'filters[slug][$eq]': params.slug,
+        populate: '*',
+      },
+    })
+    const blog = response.data.data[0]
     const blogData = {
-      id: response.data.data[0].id,
-      ...response.data.data[0].attributes,
-      coverImg: response.data.data[0].attributes.coverImg.data.attributes.url,
-      metaImage: response.data.data[0].attributes.metaImage.map((item)=>item.imageURL),
-      readingStats,
+      id: blog.id,
+      ...blog.attributes,
+      coverImg: blog.attributes.coverImg.data.attributes.url,
+      metaImage: blog.attributes.metaImage.map((item) => item.imageURL),
+      readingStats: readingTime(blog.attributes.body),
     }
     const blogBody = await parseMarkdown(blogData?.body)
 
     //Get Related Articles
     let { data } = await axios.get(
-      `${process.env.strapiUrl}/api/blogs/random?slug=${params.slug}`
+      `${process.env.strapiUrl}/api/blogs/random`,
+      {
+        params: {
+          slug: params.slug,
+        },
+      }
     )
 
     let relatedArticles = data.map((item) => {
@@ -180,7 +188,7 @@ export default {
         readingStats: readingTime(item.body),
       }
     })
-    
+
     return { blogData, blogBody, relatedArticles }
   },
   mounted() {
@@ -251,7 +259,9 @@ export default {
         url: `https://formester.com/blog/${this.$route.params.slug}/`,
         title: this.blogData?.metaTitle,
         description: this.blogData?.metaDescription,
-        mainImage: this.blogData?.coverImg || 'https://formester.com/formester-form-builder-background.png',
+        mainImage:
+          this.blogData?.coverImg ||
+          'https://formester.com/formester-form-builder-background.png',
         mainImageAlt:
           this.blogData?.coverImgAlt ||
           'Form builder showing drag and drop functionality',

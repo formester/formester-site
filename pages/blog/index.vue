@@ -35,9 +35,12 @@ export default {
   async asyncData() {
     const {
       data: { data },
-    } = await axios.get(
-      `${process.env.strapiUrl}/api/blogs?sort=publishedAt:desc&populate=*`
-    )
+    } = await axios.get(`${process.env.strapiUrl}/api/blogs`, {
+      params: {
+        sort: 'publishedAt:desc',
+        populate: '*',
+      },
+    })
 
     let articles = data.map((item) => {
       return {
