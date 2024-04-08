@@ -59,14 +59,14 @@ export default {
   },
   async asyncData() {
     const {data: {data}} = await axios.get(
-      `${process.env.strapiUrl}/api/blogs?filters[body][$containsi]=human resource&sort=publishedAt:desc&populate=*`
+      `${process.env.strapiUrl}/api/blogs?filters[$or][0][title][$contains]=HR&filters[$or][1][title][$containsi]=human resource&sort=publishedAt:desc&populate=*`
     )
 
     let articles = data.map((item) => {
       return {
         id: item.id,
         ...item.attributes,
-        coverImg: `${process.env.strapiUrl}${item.attributes.coverImg.data.attributes.url}`,
+        coverImg: item.attributes.coverImg.data.attributes.url,
         readingStats: readingTime(item.attributes.body),
       }
     })

@@ -35,9 +35,11 @@ export default {
   async asyncData() {
     const {
       data: { data },
-    } = await axios.get(`${process.env.strapiUrl}/api/blogs?populate=*`)
+    } = await axios.get(
+      `${process.env.strapiUrl}/api/blogs?sort=publishedAt:desc&populate=*`
+    )
 
-    const articles = data.map((item) => {
+    let articles = data.map((item) => {
       return {
         id: item.id,
         ...item.attributes,
@@ -47,7 +49,7 @@ export default {
     })
 
     const heroArticles = articles.filter((item) => item.featured)
-
+    articles = articles.filter((item) => !item.featured)
     return {
       articles,
       heroArticles,

@@ -174,6 +174,6 @@ export default {
   // Enviornment variable for the base url of the app
   env: {
     baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'http://localhost:3000',
-    strapiUrl: process.env.STRAPI_URL || 'http://localhost:1337'
+    strapiUrl: process.env.NUXT_PUBLIC_STRAPI_URL || 'https://formester-strapi-4a64ecba89b0.herokuapp.com'
   },
 }
