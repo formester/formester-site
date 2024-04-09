@@ -50,7 +50,6 @@ export default {
         readingStats: readingTime(item.attributes.body),
       }
     })
-
     const heroArticles = articles.filter((item) => item.featured)
     articles = articles.filter((item) => !item.featured)
     return {
