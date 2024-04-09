@@ -253,7 +253,6 @@ export default {
   },
   computed: {
     meta() {
-      // console.log("this.blogData?.coverImg", this.blogData?.coverImg);
       const metaData = {
         type: 'article',
         url: `https://formester.com/blog/${this.$route.params.slug}/`,
