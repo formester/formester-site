@@ -297,7 +297,7 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/using-formester-for-lead-generation-success/',
+          href: 'https://formester.com/case-study/using-formester-for-lead-generation-success/',
         },
       ],
     }
