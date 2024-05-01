@@ -189,9 +189,11 @@ export default {
     },
     openPreviewModal() {
       this.showPreviewModal = true
+      document.body.style.overflow = "hidden"; //to hide page scrollbar
     },
     closePreviewModal() {
       this.showPreviewModal = false
+      document.body.style.overflow = "auto"; //to add page scrollbar
     },
     isEmpty,
   },
