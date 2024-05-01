@@ -91,8 +91,7 @@ export default {
 }
 
 .template-preview__iframe {
-  min-height: 520px;
-  height: 100%;
+  height: calc(100vh - 72px);
   overflow-y: auto;
 }
 
