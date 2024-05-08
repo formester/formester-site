@@ -83,7 +83,6 @@ props :{
 }
 </script>
 
-
 <style scoped>
 .step__heading {
   color: var(--clr-primary);

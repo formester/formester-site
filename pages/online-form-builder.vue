@@ -60,8 +60,6 @@ import TemplateSection from '@/components/TemplateSection.vue'
 import FAQwithCategories from '@/components/FAQwithCategories.vue'
 import CallToActionSection from '@/components/CallToActionSection.vue'
 
-
-
 import getSiteMeta from '@/utils/getSiteMeta'
 import onlineFormBuilderFaqs from '@/faqs/online-form-builder-faqs.js'
 
@@ -246,4 +244,5 @@ export default {
 <style scoped>
 .hglt {
   color: var(--clr-primary);
-}</style>
+}
+</style>
