@@ -205,12 +205,6 @@ export default {
         }
     },
     industrySpecificFeatures: [
-      {
-          title: 'Healthcare',
-          description:
-            " Expedite patient intake, appointment scheduling, and insurance verification. Reduce administrative burden and improve patient satisfaction.",
-          img: 'lead-generation-and-crm-integration',
-        },
         {
           title: 'Education',
           description:
@@ -227,7 +221,7 @@ export default {
           title: 'Marketing & Sales',
           description:
             "Generate qualified leads, capture customer preferences, and automate follow-up processes. Increase lead quality and improve your sales conversion rates.",
-          img: 'software-survey-research',
+          img: 'lead-generation-and-crm-integration',
         },
         {
           title: 'Non-Profit & Events',

@@ -49,14 +49,8 @@ export default {
         {
           title: 'Form Analytics',
           description:
-            'Optimize your forms for better results with data driven insights.',
+            'Optimize your forms efficiently for better results with data driven insights.',
           img: 'data-collection',
-        },
-        {
-          title: 'Multi User Collaboration',
-          description:
-            'Work together efficiently to access, edit and share forms with your team.',
-          img: 'collaboration-tools',
         },
       ],
     }
