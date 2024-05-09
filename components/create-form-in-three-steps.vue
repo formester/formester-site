@@ -1,7 +1,7 @@
 <template>
   <section class="container py-5 mt-3">
     <h2 class="section__heading text-center">
-      Create Customizable HR Forms with a simple 3 Step Process
+      {{sectionHeading}}
     </h2>
 
     <div class="steps-container px-3 py-5 d-flex flex-column flex-lg-row">
@@ -10,16 +10,15 @@
       >
         <div class="mt-5">
           <span class="step__heading">Step 1</span>
-          <h3 class="step__section-heading">Signup with a free account</h3>
+          <h3 class="step__section-heading">{{steps.step1.title}}</h3>
           <p class="step__section-description">
-            Sign up with your email address to start using Formester. Our free
-            plan allows you to create 10 forms with 100 submissions per month.
+           {{ steps.step1.description }}
           </p>
         </div>
         <div class="d-flex flex-column flex-lg-row">
           <nuxt-img
             src="/hr-solution/CreateHrForms/step1.svg"
-            class="img-fluid my-auto"
+            class="step__image img-fluid "
             alt="Signup with a free account"
             loading="lazy"
           />
@@ -31,17 +30,16 @@
         <div class="mt-5">
           <span class="step__heading">Step 2</span>
           <h3 class="step__section-heading">
-            Select a template or Create a form
+            {{steps.step2.title}}
           </h3>
           <p class="step__section-description">
-            We have multiple customisable templates for HR functions along with
-            an intuitive drag and drop form builder with personalized branding.
+           {{ steps.step2.description }}
           </p>
         </div>
         <div class="d-flex flex-column flex-lg-row">
           <nuxt-img
             src="/hr-solution/CreateHrForms/step2.svg"
-            class="img-fluid my-auto"
+            class="step__image img-fluid "
             alt="Select a template or Create a form"
             loading="lazy"
           />
@@ -52,17 +50,15 @@
       >
         <div class="mt-5">
           <span class="step__heading">Step 3</span>
-          <h3 class="step__section-heading">Publish and Share the Form</h3>
+          <h3 class="step__section-heading">{{ steps.step3.title }}</h3>
           <p class="step__section-description">
-            Once the form is created, share it via link or embed it in your
-            website. Our built-in analytics turn form inputs into actionable
-            insights.
+           {{steps.step3.description}}
           </p>
         </div>
         <div class="d-flex flex-column flex-lg-row">
           <nuxt-img
             src="/hr-solution/CreateHrForms/step3.svg"
-            class="img-fluid my-auto"
+            class="step__image img-fluid "
             alt="Publish and Share the Form"
             loading="lazy"
           />
@@ -71,6 +67,21 @@
     </div>
   </section>
 </template>
+
+<script>
+export default {
+props :{
+  sectionHeading:{
+    type:String,
+    required:true
+  },
+  steps:{
+    type:Object,
+    required: true
+  }
+}
+}
+</script>
 
 <style scoped>
 .step__heading {
@@ -99,10 +110,26 @@
   gap: 40px;
 }
 
+.step__image{
+  margin: auto;
+}
+
+.row{
+  max-width: calc(100%  / 3);
+}
+
 @media (max-width: 992px) {
   .step__section-description {
     font-size: 14px;
     line-height: 22px;
+  }
+
+  .step__image{
+    margin: initial;
+  }
+
+  .row{
+    max-width: 100%;
   }
 }
 </style>

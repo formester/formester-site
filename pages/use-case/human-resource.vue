@@ -10,7 +10,7 @@
       :features="HelpingFeaturesForHr"
     />
     <TemplateSection slug="human-resource" />
-    <CreateHrForms />
+    <CreateFormInThreeSteps section-heading="Create Customizable HR Forms with a simple 3 Step Process" :steps="stepsToCreateForm" />
     <KeyBenefits />
     <SeamlessIntegration />
     <div class="container py-5">
@@ -37,12 +37,12 @@
 
 <script>
 import getSiteMeta from '@/utils/getSiteMeta'
-import Hero from '../../components/hr-solution/Hero.vue'
-import StandOutFeatureSection from '../../components/competitors/StandOutFeatureSection.vue'
-import CreateHrForms from '../../components/hr-solution/CreateHrForms.vue'
-import KeyBenefits from '../../components/hr-solution/KeyBenefits.vue'
-import SeamlessIntegration from '../../components/hr-solution/SeamlessIntegration.vue'
-import BlogCard from '../../components/blog/BlogCard.vue'
+import Hero from '@/components/hr-solution/Hero.vue'
+import StandOutFeatureSection from '@/components/competitors/StandOutFeatureSection.vue'
+import CreateFormInThreeSteps from '@/components/create-form-in-three-steps.vue'
+import KeyBenefits from '@/components/hr-solution/KeyBenefits.vue'
+import SeamlessIntegration from '@/components/hr-solution/SeamlessIntegration.vue'
+import BlogCard from '@/components/blog/BlogCard.vue'
 
 import axios from 'axios'
 import readingTime from 'reading-time'
@@ -51,7 +51,7 @@ export default {
   components: {
     Hero,
     StandOutFeatureSection,
-    CreateHrForms,
+    CreateFormInThreeSteps,
     KeyBenefits,
     SeamlessIntegration,
     BlogCard,
@@ -85,6 +85,20 @@ export default {
 
     return {
       articles: articles,
+      stepsToCreateForm:{
+      step1: {
+          title: "Signup with a free account",
+          description: "Sign up with your email address to start using Formester. Our free plan allows you to create 10 forms with 100 submissions per month."
+        },
+      step2: {
+          title: "Select a template or Create a form",
+          description: "We have multiple customisable templates for HR functions along with an intuitive drag and drop form builder with personalized branding."
+        },
+      step3: {
+          title: "Publish and Share the Form",
+          description: "Once the form is created, share it via link or embed it in your website. Our built-in analytics turn form inputs into actionable insights."
+        }
+    }
     }
   },
   computed: {
