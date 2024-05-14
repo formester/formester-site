@@ -306,7 +306,7 @@ export default {
   font-size: 14px;
   line-height: 18px;
   transition: all 0.2s ease-out;
-  background: #4f3895;
+  background: var(--clr-primary);
   color: white;
 }
 

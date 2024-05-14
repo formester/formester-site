@@ -196,7 +196,7 @@ nav {
 }
 
 .nav__button:hover {
-  opacity: 0.9;
+  background-color: var(--clr-primary-hover);
 }
 
 .nav__outline__button {
