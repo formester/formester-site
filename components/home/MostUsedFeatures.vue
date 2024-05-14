@@ -3,7 +3,8 @@
     <h2 class="section__heading text-center">
       Most Used&nbsp;<span class="hglight">Features</span>
     </h2>
-    <div class="row mt-5">
+    <!-- Desktop -->
+    <div class="d-none d-lg-flex row mt-5">
       <ul class="col-6">
         <li
           v-for="(feature, index) in features"
@@ -40,6 +41,25 @@
             :key="features[activeIndex].image"
           />
         </transition>
+      </div>
+    </div>
+    <!-- Mobile -->
+    <div class="d-lg-none">
+      <div v-for="feature in features" :key="feature.title" class="mt-5">
+        <nuxt-img :src="feature.image" class="mb-4 img-fluid" />
+        <div class="d-flex align-items-start mt-2">
+          <div
+            class="feature__img-wrapper d-flex align-items-center justify-content-center"
+          >
+            <nuxt-img :src="feature.icon" />
+          </div>
+          <div class="ms-3 mt-1">
+            <h3 class="feature__title">{{ feature.title }}</h3>
+            <p class="feature__desc mt-2 mb-0">
+              {{ feature.description }}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
