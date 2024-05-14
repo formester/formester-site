@@ -104,11 +104,11 @@
 
 /* === FONTS === */
 :root {
-  --ft-big-heading: 3.2rem;
+  --ft-big-heading: 60px;
   --ft-df-heading: 2.5rem;
   --ft-sm-heading: 2.24rem;
   --ft-subtitle: 1.5rem;
-  --ft-big-body: 1.25rem;
+  --ft-big-body: 20px;
   --ft-df-body: 1.125rem;
   --ft-small-body: 1rem;
 
@@ -118,16 +118,21 @@
 
 @media (max-width: 1200px) {
   :root {
-    --ft-big-heading: 3rem;
     --ft-df-heading: 2rem;
     --ft-subtitle: 1.25rem;
-    --ft-big-body: 1.12rem;
     --ft-df-body: 1rem;
     --ft-small-body: 0.95rem;
 
     --ft-bigger-body: 1.5rem;
     --ft-lg-btn: 1rem;
     --ft-md-btn: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --ft-big-heading: 36px;
+    --ft-big-body: 18px;
   }
 }
 /* ====== OTHERS ==== */

@@ -1,31 +1,35 @@
 <template>
   <section class="hero">
     <div class="container horizontal__padding">
-      <div class="row my-5">
-        <div
-          class="col-lg-6 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start"
+      <div
+        class="d-flex flex-column align-items-center justify-content-center text-center my-5"
+      >
+        <h1 class="hero__heading">
+          Best <span class="hglight">No Code</span> Form Builder
+        </h1>
+        <p class="hero__subheading mt-3">
+          Create elegent forms, surveys and quizzes your audience will love to
+          answer.
+        </p>
+        <a
+          href="https://app.formester.com/users/sign_up"
+          class="btn button hero__button mt-4 mb-4 mb-md-5"
+          >Create Form for Free</a
         >
-          <h1 class="hero__heading">
-            Best <span class="hglight">No Code</span> Form Builder
-          </h1>
-          <p class="hero__subheading mt-3">
-            Create elegent forms, surveys and quizzes your audience will love to answer.
-          </p>
-          <a
-            href="https://app.formester.com/users/sign_up"
-            class="btn button hero__button mt-4 mb-4 mb-lg-0"
-            >Create Form for Free</a
-          >
-          <div class="hint">
-            <div>✓ &nbsp; No credit card required</div>
-            <div>✓ &nbsp; Unlimited forms</div>
-          </div>
-        </div>
-        <div class="col-lg-6 d-flex align-items-center justify-content-center">
-          <video loop muted autoplay playsinline style="max-width: 98%">
-            <source src="/videos/hero-animation.mp4" type="video/webm" />
-          </video>
-        </div>
+        <!-- <div class="hint">
+          <div>✓ &nbsp; No credit card required</div>
+          <div>✓ &nbsp; Unlimited forms</div>
+        </div> -->
+        <video
+          loop
+          muted
+          autoplay
+          playsinline
+          style="max-width: 98%"
+          class="mt-3"
+        >
+          <source src="/videos/hero-animation.mp4" type="video/webm" />
+        </video>
       </div>
     </div>
   </section>
@@ -41,9 +45,10 @@ video {
 }
 
 .hero {
-  margin-top: 130px;
-  margin-bottom: 100px;
+  margin-top: 100px;
+  margin-bottom: 64px;
 }
+
 .hero__image {
   padding-left: 30px;
 }
@@ -58,7 +63,7 @@ video {
 .hero__heading {
   font-size: var(--ft-big-heading);
   font-weight: 700;
-  line-height: 72px;
+  line-height: 125%;
 }
 
 .hero__subheading {
@@ -70,11 +75,6 @@ video {
   .hero {
     margin-top: 30px;
     margin-bottom: 20px;
-  }
-
-  .hero__heading {
-    line-height: 48px;
-    font-size: 2.5rem;
   }
 }
 </style>
