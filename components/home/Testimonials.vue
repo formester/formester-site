@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <div class="d-flex justify-content-between align-items-center mb-5">
+  <div class="container my-5 py-5">
+    <div class="d-flex justify-content-between align-items-center my-5">
       <h2 class="section__heading position-relative">
         What our Customers say
         <nuxt-img
@@ -8,7 +8,7 @@
           class="position-absolute arrow-decoration"
         />
       </h2>
-      <div class="d-flex">
+      <div class="d-none d-md-flex">
         <div class="arrow-button left-arrow-button" @click="prevTestimonial">
           <nuxt-img src="UI Block/Duotone/ArrowLeft.svg" />
         </div>
@@ -42,10 +42,29 @@
               }}</span>
             </div>
           </div>
-          <p class="mt-4">{{ testimonial.content }}</p>
+          <div class="mt-4">
+            <nuxt-img
+              src="/UI Block/quotation.svg"
+              class="quotation-marks mt-2"
+              alt="Quotation marks"
+              loading="lazy"
+            />
+            <p class="mt-1">{{ testimonial.content }}</p>
+          </div>
         </div>
       </div>
     </div>
+    <div class="d-md-none d-flex mt-4 pt-2">
+        <div class="arrow-button left-arrow-button" @click="prevTestimonial">
+          <nuxt-img src="UI Block/Duotone/ArrowLeft.svg" />
+        </div>
+        <div
+          class="arrow-button right-arrow-button ms-4"
+          @click="nextTestimonial"
+        >
+          <nuxt-img src="UI Block/Solid/32/ArrowRight.svg" />
+        </div>
+      </div>
   </div>
 </template>
 
@@ -231,6 +250,11 @@ export default {
   height: 100px;
   top: 10%;
   right: -25%;
+}
+
+.quotation-marks {
+  height: 30px;
+  width: 30px;
 }
 
 @media screen and (max-width: 1200px) {
