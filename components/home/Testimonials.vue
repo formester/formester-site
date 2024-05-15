@@ -55,16 +55,16 @@
       </div>
     </div>
     <div class="d-md-none d-flex mt-4 pt-2">
-        <div class="arrow-button left-arrow-button" @click="prevTestimonial">
-          <nuxt-img src="UI Block/Duotone/ArrowLeft.svg" />
-        </div>
-        <div
-          class="arrow-button right-arrow-button ms-4"
-          @click="nextTestimonial"
-        >
-          <nuxt-img src="UI Block/Solid/32/ArrowRight.svg" />
-        </div>
+      <div class="arrow-button left-arrow-button" @click="prevTestimonial">
+        <nuxt-img src="UI Block/Duotone/ArrowLeft.svg" />
       </div>
+      <div
+        class="arrow-button right-arrow-button ms-4"
+        @click="nextTestimonial"
+      >
+        <nuxt-img src="UI Block/Solid/32/ArrowRight.svg" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -158,6 +158,7 @@ export default {
       }
     },
     onResize() {
+      this.currentIndex = 0
       this.deviceWidth = window.innerWidth
       if (this.deviceWidth > 1200) {
         this.maxIndex = Math.floor((this.testimonials.length - 1) / 3)
