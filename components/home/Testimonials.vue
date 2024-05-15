@@ -6,18 +6,12 @@
         <nuxt-img
           src="UI Block/Vector 5.svg"
           class="position-absolute arrow-decoration"
+          loading="lazy"
         />
       </h2>
       <div class="d-none d-md-flex">
-        <div class="arrow-button left-arrow-button" @click="prevTestimonial">
-          <nuxt-img src="UI Block/Duotone/ArrowLeft.svg" />
-        </div>
-        <div
-          class="arrow-button right-arrow-button ms-4"
-          @click="nextTestimonial"
-        >
-          <nuxt-img src="UI Block/Solid/32/ArrowRight.svg" />
-        </div>
+        <ArrowButton @click="prevTestimonial" direction="left" />
+        <ArrowButton @click="nextTestimonial" direction="right" class="ms-4" />
       </div>
     </div>
     <div class="testimonial__wrapper d-flex position-relative">
@@ -34,6 +28,7 @@
             <nuxt-img
               :src="`testimonials/${testimonial.picture}`"
               class="img-fluid testimonial__user"
+              loading="lazy"
             />
             <div class="d-flex flex-column ms-3">
               <span class="testimonial__user-text">{{ testimonial.user }}</span>
@@ -55,15 +50,8 @@
       </div>
     </div>
     <div class="d-md-none d-flex mt-4 pt-2">
-      <div class="arrow-button left-arrow-button" @click="prevTestimonial">
-        <nuxt-img src="UI Block/Duotone/ArrowLeft.svg" />
-      </div>
-      <div
-        class="arrow-button right-arrow-button ms-4"
-        @click="nextTestimonial"
-      >
-        <nuxt-img src="UI Block/Solid/32/ArrowRight.svg" />
-      </div>
+      <ArrowButton @click="prevTestimonial" direction="left" />
+      <ArrowButton @click="nextTestimonial" direction="right" class="ms-4" />
     </div>
   </div>
 </template>
@@ -160,13 +148,10 @@ export default {
     onResize() {
       this.currentIndex = 0
       this.deviceWidth = window.innerWidth
-      if (this.deviceWidth > 1200) {
-        this.maxIndex = Math.floor((this.testimonials.length - 1) / 3)
-      } else if (this.deviceWidth > 768) {
-        this.maxIndex = Math.floor((this.testimonials.length - 1) / 2)
-      } else {
-        this.maxIndex = Math.floor((this.testimonials.length - 1) / 1)
-      }
+      this.maxIndex = Math.floor(
+        (this.testimonials.length - 1) /
+          (this.deviceWidth > 1200 ? 3 : this.deviceWidth > 768 ? 2 : 1)
+      )
     },
   },
   beforeDestroy() {
@@ -180,6 +165,39 @@ export default {
         extraTransition = 0
       }
       return `translateX(-${this.currentIndex * (100 + extraTransition)}%)`
+    },
+  },
+  components: {
+    ArrowButton: {
+      functional: true,
+      props: {
+        direction: {
+          type: String,
+          required: true,
+          validator: (value) => ['left', 'right'].includes(value),
+        },
+      },
+      render(h, { props, listeners }) {
+        const arrowSrc =
+          props.direction === 'left'
+            ? 'UI Block/Duotone/ArrowLeft.svg'
+            : 'UI Block/Solid/32/ArrowRight.svg'
+
+        const buttonClass = `arrow-button ${
+          props.direction === 'left'
+            ? 'left-arrow-button'
+            : 'right-arrow-button ms-4'
+        }`
+
+        return h(
+          'div',
+          {
+            class: buttonClass,
+            on: listeners,
+          },
+          [h('nuxt-img', { attrs: { src: arrowSrc } })]
+        )
+      },
     },
   },
 }
@@ -231,6 +249,7 @@ export default {
 .arrow-button {
   padding: 16px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .left-arrow-button {

@@ -17,13 +17,11 @@
             { active: activeIndex === index },
           ]"
           @click="handleFeatureClick(index)"
-          @mouseover="hoverFeature(index)"
-          @mouseleave="unhoverFeature()"
         >
           <div
             class="feature__img-wrapper d-flex align-items-center justify-content-center"
           >
-            <nuxt-img :src="feature.icon" />
+            <nuxt-img :src="feature.icon" loading="lazy" />
           </div>
           <div class="ms-3 mt-1">
             <h3 class="feature__title">{{ feature.title }}</h3>
@@ -39,6 +37,7 @@
             class="img-fluid animate__animated"
             :src="features[activeIndex].image"
             :key="features[activeIndex].image"
+            loading="lazy"
           />
         </transition>
       </div>
@@ -46,12 +45,12 @@
     <!-- Mobile -->
     <div class="d-lg-none">
       <div v-for="feature in features" :key="feature.title" class="mt-5">
-        <nuxt-img :src="feature.image" class="mb-4 img-fluid" />
+        <nuxt-img :src="feature.image" class="mb-4 img-fluid" loading="lazy" />
         <div class="d-flex align-items-start mt-2">
           <div
             class="feature__img-wrapper d-flex align-items-center justify-content-center"
           >
-            <nuxt-img :src="feature.icon" />
+            <nuxt-img :src="feature.icon" loading="lazy" />
           </div>
           <div class="ms-3 mt-1">
             <h3 class="feature__title">{{ feature.title }}</h3>
@@ -127,12 +126,6 @@ export default {
     handleFeatureClick(index) {
       this.activeIndex = index
     },
-    hoverFeature(index) {
-      this.hoverIndex = index
-    },
-    unhoverFeature() {
-      this.hoverIndex = null
-    },
   },
 }
 </script>
@@ -140,11 +133,11 @@ export default {
 <style scoped>
 .feature__img-wrapper {
   border-radius: 50%;
-  border: 5.333px solid #f7f3ff;
+  border: 4px solid #f7f3ff;
   background: #f7f3ff;
   width: 40px;
   height: 40px;
-  padding: 6px;
+  padding: 4px;
 }
 
 .feature__title {
@@ -163,11 +156,9 @@ export default {
 .feature__item {
   border-left: 4px solid #f2f4f7;
   cursor: pointer;
-  transition: all 0.7s ease;
 }
 
 .feature__item.active {
-  transition: all 0.7s ease;
   border-left-color: #6c63ff;
 }
 

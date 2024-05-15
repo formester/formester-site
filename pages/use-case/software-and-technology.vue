@@ -37,11 +37,11 @@
     </div>
 
     <WhyFormester />
-    <FeatureToggle
-      :features="toggleFeatures"
-      sectionHeading="Advanced Features for Your Software & Tech Business"
+    <MostUsedFeatures />
+    <IndustrySpecificUseCase
+      sectionHeading="Industry-Specific Use-Cases"
+      :features="industrySpecificFeatures"
     />
-    <IndustrySpecificUseCase sectionHeading="Industry-Specific Use-Cases" :features="industrySpecificFeatures" />
     <FormBuildersComparisionTable
       heading="Comparing Formester with Other Leading Form Builders"
     />
@@ -56,7 +56,6 @@
 
 <script>
 import WhyFormester from '../../components/use-case/why-formester.vue'
-import FeatureToggle from '../../components/FeatureToggle.vue'
 import IndustrySpecificUseCase from '@/components/use-case/industry-specific-use-case.vue'
 import FormBuildersComparisionTable from '../../components/form-builders-comparision-table.vue'
 
@@ -68,11 +67,11 @@ import CallToActionSection from '@/components/CallToActionSection.vue'
 import FAQwithCategories from '../../components/FAQwithCategories.vue'
 import softwareAndTechnologyFaqs from '../../faqs/use-case/software-and-technology-faqs'
 import getSiteMeta from '@/utils/getSiteMeta'
+import MostUsedFeatures from '../../components/home/MostUsedFeatures.vue'
 
 export default {
   components: {
     WhyFormester,
-    FeatureToggle,
     IndustrySpecificUseCase,
     FormBuildersComparisionTable,
     ThreeStepsCreateForm,
@@ -80,6 +79,7 @@ export default {
     TemplateSection,
     CallToActionSection,
     FAQwithCategories,
+    MostUsedFeatures,
   },
   async asyncData() {
     let randomTestimonials = await allTestimonials
