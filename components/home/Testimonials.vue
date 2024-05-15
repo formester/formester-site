@@ -57,7 +57,12 @@
 </template>
 
 <script>
+import ArrowButton from '@/components/UI/ArrowButton.vue'
+
 export default {
+  components: {
+    ArrowButton,
+  },
   data() {
     return {
       testimonials: [
@@ -167,39 +172,6 @@ export default {
       return `translateX(-${this.currentIndex * (100 + extraTransition)}%)`
     },
   },
-  components: {
-    ArrowButton: {
-      functional: true,
-      props: {
-        direction: {
-          type: String,
-          required: true,
-          validator: (value) => ['left', 'right'].includes(value),
-        },
-      },
-      render(h, { props, listeners }) {
-        const arrowSrc =
-          props.direction === 'left'
-            ? 'UI Block/Duotone/ArrowLeft.svg'
-            : 'UI Block/Solid/32/ArrowRight.svg'
-
-        const buttonClass = `arrow-button ${
-          props.direction === 'left'
-            ? 'left-arrow-button'
-            : 'right-arrow-button ms-4'
-        }`
-
-        return h(
-          'div',
-          {
-            class: buttonClass,
-            on: listeners,
-          },
-          [h('nuxt-img', { attrs: { src: arrowSrc } })]
-        )
-      },
-    },
-  },
 }
 </script>
 
@@ -246,26 +218,6 @@ export default {
   color: #42526b;
 }
 
-.arrow-button {
-  padding: 16px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.left-arrow-button {
-  background: var(--clr-primary-light);
-}
-.left-arrow-button:hover {
-  background: var(--clr-primary-light-hover);
-}
-
-.right-arrow-button {
-  background: var(--clr-primary);
-}
-.right-arrow-button:hover {
-  background: var(--clr-primary-hover);
-}
-
 .arrow-decoration {
   height: 100px;
   top: 10%;
@@ -294,10 +246,6 @@ export default {
 
   .testimonial__card {
     flex: 0 0 100%;
-  }
-
-  .arrow-button {
-    padding: 12px;
   }
 }
 </style>
