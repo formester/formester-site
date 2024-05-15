@@ -15,7 +15,6 @@
       />
     </div>
     <Testimonials />
-    <HowItWorks />
     <CallToActionSection />
   </div>
 </template>
@@ -24,7 +23,6 @@
 import Hero from '@/components/home/Hero.vue'
 import TrustSeals from '@/components/home/TrustSeals.vue'
 import Testimonials from '@/components/home/Testimonials.vue'
-import HowItWorks from '@/components/home/HowItWorks.vue'
 import MostUsedFeatures from '@/components/home/MostUsedFeatures.vue'
 
 export default {
@@ -32,7 +30,6 @@ export default {
     Hero,
     TrustSeals,
     Testimonials,
-    HowItWorks,
     MostUsedFeatures,
   },
   data() {
