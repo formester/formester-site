@@ -1,107 +1,48 @@
 <template>
-  <div class="bg-magnolia">
-    <div class="container">
-      <!-- Desktop View -->
-      <div class="d-none d-md-grid testimonials-section">
-        <div>
-          <h2 class="testimonials-heading">Testimonials</h2>
-          <div class="users">
-            <div
-              class="d-flex flex-column users-wrapper"
-              :style="usersWrapperStyling"
-            >
-              <div
-                v-for="(testimonial, idx) in testimonials"
-                :key="testimonial.id"
-                class="user d-flex align-items-center"
-                :class="{ active: active === testimonial.id }"
-                @click="updateActive(testimonial.id)"
-              >
-                <nuxt-img
-                  :src="`/testimonials/${testimonial.picture}`"
-                  :alt="testimonial.picture"
-                  loading="lazy"
-                />
-                <div>
-                  <h6 class="name">{{ testimonial.user }}</h6>
-                  <span class="designation">{{ testimonial.designation }}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-content-wrapper">
-          <p class="mb-3">{{ activeTestimonial.content }}</p>
-          <div class="d-flex justify-content-end">
-            <img
-              :src="require(`@/assets/images/testimonials/${activeTestimonial.logo}`)"
-              :alt="activeTestimonial.logoAlt"
-            />
-          </div>
-          <nuxt-img
-            src="/testimonials/quotation.svg"
-            class="quotation-marks"
-            alt="Quotation marks"
-            loading="lazy"
-          />
-        </div>
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-5">
+      <h2 class="section__heading position-relative">
+        What our Customers say
         <nuxt-img
-          src="/testimonials/quote.svg"
-          class="quote-illustraion"
-          alt="Quote illustration"
-          loading="lazy"
+          src="UI Block/Vector 5.svg"
+          class="position-absolute arrow-decoration"
         />
-      </div>
-      <!-- Mobile view -->
-      <div
-        class="d-flex flex-column align-items-center d-md-none testimonials-section"
-      >
-        <h2 class="testimonials-heading">Testimonials</h2>
+      </h2>
+      <div class="d-flex">
+        <div class="arrow-button left-arrow-button" @click="prevTestimonial">
+          <nuxt-img src="UI Block/Duotone/ArrowLeft.svg" />
+        </div>
         <div
-          id="testimonialsCarousel"
-          class="carousel slide"
-          data-bs-ride="carousel"
+          class="arrow-button right-arrow-button ms-4"
+          @click="nextTestimonial"
         >
-          <!-- Carousel Indicators -->
-          <div class="carousel-indicators">
-            <button
-              v-for="(testimonial, idx) in testimonials"
-              :key="testimonial.id"
-              type="button"
-              data-bs-target="#testimonialsCarousel"
-              :data-bs-slide-to="idx"
-              class="indicator"
-              :class="{ active: idx === 0 }"
-              aria-current="true"
-              :aria-label="`Slide ${idx + 1}`"
-            ></button>
-          </div>
-          <!-- Carousel Content -->
-          <div class="carousel-inner">
-            <div
-              v-for="(testimonial, idx) in testimonials"
-              class="carousel-item"
-              :class="{ active: idx === 0 }"
-            >
-              <div class="mobile-testimonial-wrapper">
-                <p class="content">{{ testimonial.content }}</p>
-                <div class="user d-flex align-items-center">
-                  <nuxt-img
-                    :src="`/testimonials/${testimonial.picture}`"
-                    :alt="testimonial.picture"
-                    loading="lazy"
-                  />
-                  <div>
-                    <h6 class="name">{{ testimonial.user }}</h6>
-                    <p class="designation my-0">
-                      {{ testimonial.designation }}
-                    </p>
-                    <p class="company my-0">{{ testimonial.company }}</p>
-                  </div>
-                </div>
-              </div>
+          <nuxt-img src="UI Block/Solid/32/ArrowRight.svg" />
+        </div>
+      </div>
+    </div>
+    <div class="testimonial__wrapper d-flex position-relative">
+      <div
+        class="testimonial__cards d-flex"
+        :style="{ transform: cardTranslation }"
+      >
+        <div
+          v-for="testimonial in testimonials"
+          :key="testimonial.id"
+          class="testimonial__card"
+        >
+          <div class="d-flex">
+            <nuxt-img
+              :src="`testimonials/${testimonial.picture}`"
+              class="img-fluid testimonial__user"
+            />
+            <div class="d-flex flex-column ms-3">
+              <span class="testimonial__user-text">{{ testimonial.user }}</span>
+              <span class="testimonial__user-desgn">{{
+                testimonial.designation
+              }}</span>
             </div>
           </div>
+          <p class="mt-4">{{ testimonial.content }}</p>
         </div>
       </div>
     </div>
@@ -112,10 +53,6 @@
 export default {
   data() {
     return {
-      active: 2,
-      prevActive: 2,
-      pixels: 0,
-      userHeight: 136,
       testimonials: [
         {
           id: 1,
@@ -179,58 +116,51 @@ export default {
           company: 'Tedx',
         },
       ],
+      currentIndex: 0,
+      maxIndex: null,
+      deviceWidth: 0,
     }
-  },
-  computed: {
-    activeTestimonial() {
-      return this.testimonials.find(
-        (testimonial) => testimonial.id === this.active
-      )
-    },
-    usersWrapperStyling() {
-      if (this.active <= 2) return
-
-      // Go Down
-      if (this.prevActive < this.active) {
-        if (this.active + 1 <= this.testimonials.length) {
-          this.pixels = -this.userHeight * (this.active - 2)
-        }
-        return {
-          transform: `translateY(${this.pixels}px)`,
-        }
-      }
-
-      // Go Up
-      else if (this.prevActive > this.active) {
-        if (this.active > 3) {
-          this.pixels = this.pixels + this.userHeight
-        }
-        return {
-          transform: `translateY(${this.pixels}px)`,
-        }
-      }
-    },
-  },
-  methods: {
-    updateActive(id) {
-      this.prevActive = this.active
-      this.active = id
-    },
-    onResize() {
-      if (window.innerWidth <= 992) {
-        this.userHeight = 113
-      } else {
-        this.userHeight = 136
-      }
-    },
   },
   mounted() {
     this.$nextTick(() => {
       window && window.addEventListener('resize', this.onResize)
+      this.onResize()
     })
+  },
+  methods: {
+    prevTestimonial() {
+      if (this.currentIndex > 0) {
+        this.currentIndex--
+      }
+    },
+    nextTestimonial() {
+      if (this.currentIndex < this.maxIndex) {
+        this.currentIndex++
+      }
+    },
+    onResize() {
+      this.deviceWidth = window.innerWidth
+      if (this.deviceWidth > 1200) {
+        this.maxIndex = Math.floor((this.testimonials.length - 1) / 3)
+      } else if (this.deviceWidth > 768) {
+        this.maxIndex = Math.floor((this.testimonials.length - 1) / 2)
+      } else {
+        this.maxIndex = Math.floor((this.testimonials.length - 1) / 1)
+      }
+    },
   },
   beforeDestroy() {
     window.removeEventListener('resize', this.onResize)
+  },
+  computed: {
+    cardTranslation() {
+      // extra 2% because of the gap
+      let extraTransition = 2.4
+      if (this.deviceWidth < 768) {
+        extraTransition = 0
+      }
+      return `translateX(-${this.currentIndex * (100 + extraTransition)}%)`
+    },
   },
 }
 </script>
@@ -240,190 +170,90 @@ export default {
   background-color: #f7f5ff;
 }
 
-.testimonials-section {
-  font-family: 'Inter';
-  font-style: normal;
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1.6fr;
-  align-items: center;
-  gap: 150px;
-  padding-block: 120px;
+.testimonial__wrapper {
+  overflow-x: hidden;
 }
-.testimonials-heading {
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 56px;
-  margin-bottom: 64px;
-  color: #211447;
+
+.testimonial__cards {
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+  gap: 24px;
 }
-.quote-illustraion {
-  position: absolute;
-  top: 0;
-  right: 46%;
+
+.testimonial__card {
+  padding: 40px;
+  flex: 0 0 calc(33.33% - 16px);
+  border-radius: 16px;
+  background: linear-gradient(
+    144deg,
+    #f7f3ff -2.68%,
+    rgba(247, 243, 255, 0.4) 51.09%,
+    #f7f3ff 109.34%
+  );
 }
-.quotation-marks {
-  position: absolute;
-  height: 35px;
-  width: 35px;
-  top: -25px;
-  left: -45px;
+
+.testimonial__user {
+  width: 48px;
+  height: 48px;
 }
-.users {
-  height: 408px;
-  overflow: hidden;
-}
-.users-wrapper {
-  transition: ease-in-out all 0.4s;
-}
-.user {
-  padding: 20px 28px;
-  border-radius: 8px;
-  margin: 8px 0px;
-  gap: 32px;
+
+.testimonial__user-text {
   font-weight: 500;
-  cursor: pointer;
-  user-select: none;
-}
-.user.active {
-  background: #ffffff;
-  box-shadow: 0px 17px 80px rgba(0, 0, 0, 0.03),
-    0px 11.0185px 46.8519px rgba(0, 0, 0, 0.0227778),
-    0px 6.54815px 25.4815px rgba(0, 0, 0, 0.0182222),
-    0px 3.4px 13px rgba(0, 0, 0, 0.015),
-    0px 1.38519px 6.51852px rgba(0, 0, 0, 0.0117778),
-    0px 0.314815px 3.14815px rgba(0, 0, 0, 0.00722222);
-}
-.user:last-child.active {
-  box-shadow: 0px 6.54815px 25.4815px rgba(0, 0, 0, 0.0182222),
-    0px 3.4px 13px rgba(0, 0, 0, 0.015),
-    0px 1.38519px 6.51852px rgba(0, 0, 0, 0.0117778),
-    0px 0.314815px 3.14815px rgba(0, 0, 0, 0.00722222);
-}
-.user .name {
-  font-size: 18px;
-  line-height: 28px;
-  color: #211447;
-}
-.user .designation {
-  font-size: 16px;
   line-height: 24px;
-  color: #828282;
 }
-.testimonial-content-wrapper {
-  position: relative;
-  font-size: 24px;
-  line-height: 38px;
-  color: #333333;
-  z-index: 2;
+
+.testimonial__user--degn {
+  font-size: 14px;
+  line-height: 20px;
+  color: #42526b;
 }
-@media only screen and (max-width: 1200px) {
-  .testimonials-section {
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    padding-block: 60px;
-  }
-  .testimonials-heading {
-    font-size: 36px;
-    line-height: 42px;
-  }
-  .testimonial-content-wrapper {
-    font-size: 20px;
-    line-height: 32px;
-  }
-  .quote-illustraion {
-    width: 90px;
-  }
+
+.arrow-button {
+  padding: 16px;
+  border-radius: 50%;
 }
-@media only screen and (max-width: 992px) {
-  .testimonials-section {
-    gap: 40px;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin: 0px auto;
+
+.left-arrow-button {
+  background: var(--clr-primary-light);
+}
+.left-arrow-button:hover {
+  background: var(--clr-primary-light-hover);
+}
+
+.right-arrow-button {
+  background: var(--clr-primary);
+}
+.right-arrow-button:hover {
+  background: var(--clr-primary-hover);
+}
+
+.arrow-decoration {
+  height: 100px;
+  top: 10%;
+  right: -25%;
+}
+
+@media screen and (max-width: 1200px) {
+  .testimonial__card {
+    flex: 0 0 calc(50% - 16px);
   }
-  .quote-illustraion {
-    width: 75px;
-  }
-  .users {
-    height: 339px;
-  }
-  .user {
-    padding: 16px 22px;
-  }
-  .user img {
-    height: auto;
-    width: 65px;
-  }
-  .user .name {
-    font-size: 16px;
-    line-height: 24px;
-  }
-  .user .designation {
-    font-size: 14px;
-    line-height: 22px;
-  }
-  .testimonial-content-wrapper {
-    font-size: 18px;
-    line-height: 28px;
+
+  .arrow-decoration {
+    display: none;
   }
 }
-@media only screen and (max-width: 768px) {
-  .testimonials-section {
-    padding-bottom: 0;
-    gap: 0px;
+
+@media screen and (max-width: 768px) {
+  .testimonial__cards {
+    gap: 0;
   }
-  #testimonialsCarousel {
-    min-height: 480px;
-    width: 100%;
-    padding-bottom: 60px;
+
+  .testimonial__card {
+    flex: 0 0 100%;
   }
-  .testimonials-heading {
-    margin-bottom: 36px;
-    line-height: 52px;
-    font-size: 2rem;
-  }
-  .mobile-testimonial-wrapper {
-    display: flex;
-    flex-direction: column;
-    margin: 0px 20px;
-    font-size: 20px;
-    line-height: 36px;
-    color: #333333;
-  }
-  .mobile-testimonial-wrapper .content {
-    min-height: 300px;
-  }
-  .user {
-    padding: 0px;
-    margin-top: 24px;
-    margin-bottom: 40px;
-  }
-  .user .name {
-    margin: 0;
-  }
-  .user .company {
-    font-size: 14px;
-    line-height: 22px;
-    color: #333333;
-  }
-  .carousel-indicators .indicator {
-    background-color: #e5def9;
-  }
-  .carousel-indicators .active {
-    background-color: #4f3895;
-  }
-}
-@media only screen and (max-width: 576px) {
-  #testimonialsCarousel {
-    min-height: 580px;
-  }
-  .mobile-testimonial-wrapper .content {
-    min-height: 400px;
-  }
-  .user {
-    margin-top: 8px;
-    margin-bottom: 24px;
+
+  .arrow-button {
+    padding: 12px;
   }
 }
 </style>
