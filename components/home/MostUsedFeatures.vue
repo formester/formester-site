@@ -74,49 +74,49 @@ export default {
           title: 'Notification and Responses',
           description:
             'Creating HTML web forms has never been more straightforward. Just point your form to our endpoint and start getting submissions in a matter of minutes. As a power user, you get complete control over the look and feel of your web form.',
-          image: 'home/most-used-features/notification-and-responses.png',
+          image: 'home/most-used-features/notification-and-responses.svg',
         },
         {
           icon: 'home/most-used-features/bar-chart-07.svg',
           title: 'Response Analytics',
           description:
             'Understand how users interact with your web form. Get insights on ways to improve engagement and increase conversion. Our web form builder can help you identify trends to see where users are dropping off and what works for you.',
-          image: 'home/most-used-features/response-analytics.png',
+          image: 'home/most-used-features/response-analytics.svg',
         },
         {
           icon: 'home/most-used-features/alert-octagon.svg',
           title: 'Spam Protection',
           description:
             'Web forms are an easy target for spam. Use our one-click Recaptcha to curb spam and keep your list clean, along with an option to configure your own Google Re-Captcha for greater control.',
-          image: 'home/most-used-features/spam-protection.png',
+          image: 'home/most-used-features/spam-protection.svg',
         },
         {
           icon: 'home/most-used-features/code-browser.svg',
           title: '1000+ Integration',
           description:
             'Connect your form with Slack, Google Sheets, Salesforce or anything else with our Zapier integration. Use our webhooks to notify any other app when a submission arrives. Create flows that solve your business needs.',
-          image: 'home/most-used-features/integrations.png',
+          image: 'home/most-used-features/integrations.svg',
         },
         {
           icon: 'home/most-used-features/users-plus.svg',
           title: 'Invite Team Members',
           description:
             "Form sharing for effective collaboration and efficient team-work! Unite your team, gather valuable feedback, and unlock the true potential of web form building with Formester's powerful in-built Collaboration/Add Collaborators feature!",
-          image: 'home/most-used-features/team-members.png',
+          image: 'home/most-used-features/team-members.svg',
         },
         {
           icon: 'home/most-used-features/pen-tool-02.svg',
           title: 'Electronic Signature',
           description:
             'Add e-sign to your online form easily using formester. Digital signatures have become increasingly popular in recent years as they offer a convenient and efficient way to sign documents.',
-          image: 'home/most-used-features/e-signature.png',
+          image: 'home/most-used-features/e-signature.svg',
         },
         {
           icon: 'home/most-used-features/bank-note-01.svg',
           title: 'Online Payments',
           description:
             'Formester’s online forms with payment integration make receiving payments more convenient than ever with secure PCI compliance, responsive interface, and no additional charges.',
-          image: 'home/most-used-features/payments.png',
+          image: 'home/most-used-features/payments.svg',
         },
       ],
       activeIndex: 0,
