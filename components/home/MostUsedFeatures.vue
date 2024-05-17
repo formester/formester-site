@@ -159,7 +159,7 @@ export default {
 }
 
 .feature__item.active {
-  border-left-color: #6c63ff;
+  border-left-color: #7f56d9;
 }
 
 .fade-enter-active,
