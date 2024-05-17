@@ -25,7 +25,7 @@
           muted
           autoplay
           playsinline
-          style="max-width: 98%"
+          style="max-width: 98%; border-radius: 12px"
           class="mt-3"
         >
           <source src="/videos/hero-animation.mp4" type="video/webm" />
