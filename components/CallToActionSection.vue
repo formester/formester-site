@@ -6,12 +6,12 @@
           <div
             class="call-to-action-content text-center mx-2 my-5 position-relative"
           >
-            <h3 class="section__heading">
+            <h2 class="section__heading">
               <span v-if="content.heading">{{ content.heading }}</span>
               <span v-else>
                 Create your first form for <span class="hglt">free</span>
               </span>
-            </h3>
+            </h2>
             <h2 class="section__subtitle mt-3">
               <span class="hglt">
                 {{
