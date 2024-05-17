@@ -5,7 +5,7 @@
     </h2>
     <!-- Desktop -->
     <div class="d-none d-lg-flex row mt-5">
-      <ul class="col-6">
+      <ul class="feature__content-wrapper col-6">
         <li
           v-for="(feature, index) in features"
           :key="feature.title"
@@ -131,6 +131,11 @@ export default {
 </script>
 
 <style scoped>
+.feature__content-wrapper {
+  /* prevent jumping of image */
+  min-height: 784px;
+}
+
 .feature__img-wrapper {
   border-radius: 50%;
   border: 4px solid #f7f3ff;
