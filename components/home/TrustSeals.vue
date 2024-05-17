@@ -3,13 +3,9 @@
     <div class="container">
       <div class="trust-seals">
         <div>
-          <nuxt-img
-            src="/tedx.png"
-            alt="Tedx Paris Organizer"
-            width="110"
-          />
+          <nuxt-img src="/tedx.png" alt="Tedx Paris Organizer" width="110" />
         </div>
-        
+
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -41,11 +37,7 @@
           <nuxt-img src="/vueconf-black.png" alt="Rumie Logo" />
         </div>
         <div>
-          <nuxt-img
-            src="/mayple.png"
-            alt="mayple logo"
-            width="150"
-          />
+          <nuxt-img src="/mayple.png" alt="mayple logo" width="150" />
         </div>
         <div>
           <nuxt-img
@@ -61,8 +53,15 @@
 
 <style scoped>
 .trust-seals-section {
-  margin-bottom: 120px;
+  margin-top: 48px;
 }
+
+@media screen and (max-width: 400px) {
+  .trust-seals-section {
+    margin-top: 64px;
+  }
+}
+
 .trust-seals {
   display: flex;
   flex-direction: row;
@@ -82,13 +81,13 @@
     justify-content: space-evenly;
   }
 
-  .trust-seals img, 
+  .trust-seals img,
   .trust-seals svg {
     transform: scale(0.75);
     margin-bottom: 18px;
   }
 
-  .trust-seals div:nth-child(n+3)  {
+  .trust-seals div:nth-child(n + 3) {
     display: none;
   }
 }

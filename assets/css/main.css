@@ -131,6 +131,7 @@
 
 @media screen and (max-width: 768px) {
   :root {
+    --ft-df-heading: 30px;
     --ft-big-heading: 36px;
     --ft-big-body: 18px;
   }

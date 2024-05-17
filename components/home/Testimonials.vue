@@ -1,7 +1,9 @@
 <template>
   <div class="container my-5 py-5">
-    <div class="d-flex justify-content-between align-items-center my-5">
-      <h2 class="section__heading position-relative">
+    <div
+      class="d-flex justify-content-center justify-content-md-between align-items-center my-4 my-md-5"
+    >
+      <h2 class="section__heading position-relative w-full">
         What our Customers say
         <nuxt-img
           src="UI Block/Vector 5.svg"
