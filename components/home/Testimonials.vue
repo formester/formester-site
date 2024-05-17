@@ -3,7 +3,7 @@
     <div
       class="d-flex justify-content-center justify-content-md-between align-items-center my-4 my-md-5"
     >
-      <h2 class="section__heading position-relative w-full">
+      <h2 class="section__heading position-relative w-full text-center">
         What our Customers say
         <nuxt-img
           src="UI Block/Vector 5.svg"
