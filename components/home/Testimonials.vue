@@ -32,9 +32,12 @@
             />
             <div class="d-flex flex-column ms-3">
               <span class="testimonial__user-text">{{ testimonial.user }}</span>
-              <span class="testimonial__user-desgn">{{
-                testimonial.designation
-              }}</span>
+              <span class="testimonial__user-degn"
+                >{{ testimonial.designation }} at
+                <span class="testimonial__user-company">{{
+                  testimonial.company
+                }}</span></span
+              >
             </div>
           </div>
           <div class="mt-4">
@@ -212,10 +215,15 @@ export default {
   line-height: 24px;
 }
 
-.testimonial__user--degn {
+.testimonial__user-degn {
   font-size: 14px;
   line-height: 20px;
   color: #42526b;
+}
+
+.testimonial__user-company {
+  color: #7534ff;
+  font-weight: 500;
 }
 
 .arrow-decoration {
