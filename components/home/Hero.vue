@@ -28,7 +28,7 @@
           style="max-width: 98%; border-radius: 12px"
           class="mt-3"
         >
-          <source src="/videos/hero-animation.mp4" type="video/webm" />
+          <source src="/videos/hero-animation.webm" type="video/webm" />
         </video>
       </div>
     </div>
