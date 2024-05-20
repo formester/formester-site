@@ -16,7 +16,7 @@
         <nuxt-img src="/toggle.svg" alt="Nav-menu-button" />
       </button>
       <div
-        class="collapse navbar-collapse"
+        class="collapse navbar-collapse mt-2"
         ref="siteNav"
         id="navbarSupportedContent"
       >
@@ -71,7 +71,7 @@
               >Integrations
             </NuxtLink>
           </li>
-          <div class="d-flex flex-column flex-lg-row mb-3">
+          <div class="d-flex flex-column flex-lg-row">
             <a
               href="https://app.formester.com/users/sign_in"
               @click="collapseNav"
@@ -193,10 +193,12 @@ nav {
 .nav__button {
   background-color: var(--clr-primary);
   color: white;
+  /* prevent wrappping of text */
+  white-space: nowrap;
 }
 
 .nav__button:hover {
-  opacity: 0.9;
+  background-color: var(--clr-primary-hover);
 }
 
 .nav__outline__button {

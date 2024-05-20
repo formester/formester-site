@@ -92,8 +92,10 @@
 
 /* === COLORS ===*/
 :root {
-  --clr-primary: hsla(255, 45%, 40%, 1);
-  --clr-primary-light: hsla(277, 100%, 93%, 1);
+  --clr-primary: #6434d0;
+  --clr-primary-hover: #472594;
+  --clr-primary-light: #f0ebfa;
+  --clr-primary-light-hover: #d1ceff;
   --clr-dark: hsla(255, 56%, 18%, 1);
   --clr-neutral-900: #171717;
   --clr-neutral-700: #404040;
@@ -102,11 +104,11 @@
 
 /* === FONTS === */
 :root {
-  --ft-big-heading: 3.2rem;
+  --ft-big-heading: 60px;
   --ft-df-heading: 2.5rem;
   --ft-sm-heading: 2.24rem;
   --ft-subtitle: 1.5rem;
-  --ft-big-body: 1.25rem;
+  --ft-big-body: 20px;
   --ft-df-body: 1.125rem;
   --ft-small-body: 1rem;
 
@@ -116,16 +118,22 @@
 
 @media (max-width: 1200px) {
   :root {
-    --ft-big-heading: 3rem;
     --ft-df-heading: 2rem;
     --ft-subtitle: 1.25rem;
-    --ft-big-body: 1.12rem;
     --ft-df-body: 1rem;
     --ft-small-body: 0.95rem;
 
     --ft-bigger-body: 1.5rem;
     --ft-lg-btn: 1rem;
     --ft-md-btn: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --ft-df-heading: 30px;
+    --ft-big-heading: 36px;
+    --ft-big-body: 18px;
   }
 }
 /* ====== OTHERS ==== */
@@ -180,7 +188,7 @@ button {
 
 .hero__button:hover {
   color: white;
-  opacity: 0.9;
+  background-color: var(--clr-primary-hover);
 }
 
 .hero__invert__button {
@@ -192,6 +200,7 @@ button {
 }
 
 .hero__invert__button:hover {
+  color: var(--clr-primary);
   background: rgb(248, 240, 253);
 }
 

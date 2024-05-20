@@ -6,12 +6,12 @@
           <div
             class="call-to-action-content text-center mx-2 my-5 position-relative"
           >
-            <h3 class="section__heading">
+            <h2 class="section__heading">
               <span v-if="content.heading">{{ content.heading }}</span>
               <span v-else>
                 Create your first form for <span class="hglt">free</span>
               </span>
-            </h3>
+            </h2>
             <h2 class="section__subtitle mt-3">
               <span class="hglt">
                 {{
@@ -35,11 +35,14 @@
               </a>
               <a
                 target="_blank"
-                :href="content.btnSecondaryLink || 'https://app.zencal.io/u/ankit/formester'"
+                :href="
+                  content.btnSecondaryLink ||
+                  'https://app.zencal.io/u/ankit/formester'
+                "
                 class="btn button cta-button__invert mx-2"
               >
                 {{ content.btnSecondary || 'Book a Demo' }}
-            </a>
+              </a>
             </div>
             <nuxt-img
               src="/plane.png"
@@ -66,7 +69,6 @@ export default {
 </script>
 
 <style scoped>
-
 .section__subtitle {
   font-size: 20px;
 }
@@ -90,8 +92,12 @@ export default {
   font-weight: 700;
 }
 
+.cta-button:hover {
+  background-color: var(--clr-primary-hover);
+}
+
 .cta-button__invert {
-  background-color: #eee8ff;
+  background-color: var(--clr-primary-light);
   font-size: var(--ft-md-btn);
   padding: 1em 2em;
   border-radius: 8px;
@@ -99,9 +105,8 @@ export default {
   font-weight: 700;
 }
 
-.cta-button:hover {
-  color: white;
-  opacity: 0.9;
+.cta-button__invert:hover {
+  background-color: var(--clr-primary-light-hover);
 }
 
 .plane {

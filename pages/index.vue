@@ -2,6 +2,7 @@
   <div>
     <Hero />
     <TrustSeals />
+    <MostUsedFeatures />
     <div class="iframe__container mx-auto position-relative">
       <iframe
         src="https://app.formester.com/f/6ce3db7a-94a3-48a3-8f00-d16395847a13"
@@ -14,26 +15,22 @@
       />
     </div>
     <Testimonials />
-    <FeatureToggle :features="features" sectionHeading="Most Used Features" />
-    <HowItWorks />
     <CallToActionSection />
   </div>
 </template>
 
 <script>
-import Hero from '../components/home/Hero.vue'
-import TrustSeals from '../components/home/TrustSeals.vue'
-import Testimonials from '../components/home/Testimonials.vue'
-import HowItWorks from '../components/home/HowItWorks.vue'
-import FeatureToggle from '../components/FeatureToggle.vue'
+import Hero from '@/components/home/Hero.vue'
+import TrustSeals from '@/components/home/TrustSeals.vue'
+import Testimonials from '@/components/home/Testimonials.vue'
+import MostUsedFeatures from '@/components/home/MostUsedFeatures.vue'
 
 export default {
   components: {
     Hero,
     TrustSeals,
     Testimonials,
-    HowItWorks,
-    FeatureToggle,
+    MostUsedFeatures,
   },
   data() {
     return {
