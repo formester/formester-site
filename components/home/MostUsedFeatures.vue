@@ -188,8 +188,4 @@ export default {
 .feature__img {
   transition: transform 0.2s ease-in-out;
 }
-
-.feature__desktop:hover .feature__img {
-  transform: scale(1.05);
-}
 </style>
