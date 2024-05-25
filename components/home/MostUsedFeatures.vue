@@ -4,7 +4,7 @@
       Most Used&nbsp;<span class="hglight">Features</span>
     </h2>
     <!-- Desktop -->
-    <div class="d-none d-lg-flex row mt-5">
+    <div class="feature__desktop d-none d-lg-flex row mt-5">
       <ul class="feature__content-wrapper col-6">
         <li
           v-for="(feature, index) in features"
@@ -19,7 +19,7 @@
           @click="handleFeatureClick(index)"
         >
           <div
-            class="feature__img-wrapper d-flex align-items-center justify-content-center"
+            class="feature__icon-wrapper d-flex align-items-center justify-content-center"
           >
             <nuxt-img :src="feature.icon" loading="lazy" />
           </div>
@@ -34,7 +34,7 @@
       <div class="col-6 d-flex align-items-center">
         <transition name="fade" mode="out-in">
           <nuxt-img
-            class="img-fluid animate__animated"
+            class="feature__img img-fluid"
             :src="features[activeIndex].image"
             :key="features[activeIndex].image"
             loading="lazy"
@@ -48,7 +48,7 @@
         <nuxt-img :src="feature.image" class="mb-4 img-fluid" loading="lazy" />
         <div class="d-flex align-items-start mt-2">
           <div
-            class="feature__img-wrapper d-flex align-items-center justify-content-center"
+            class="feature__icon-wrapper d-flex align-items-center justify-content-center"
           >
             <nuxt-img :src="feature.icon" loading="lazy" />
           </div>
@@ -143,7 +143,7 @@ export default {
   min-height: 784px;
 }
 
-.feature__img-wrapper {
+.feature__icon-wrapper {
   border-radius: 50%;
   border: 4px solid #f7f3ff;
   background: #f7f3ff;
@@ -176,12 +176,20 @@ export default {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.3s;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
-  /* transform: translateX(4px); */
+  transform: translateX(8px);
+}
+
+.feature__img {
+  transition: transform 0.2s ease-in-out;
+}
+
+.feature__desktop:hover .feature__img {
+  transform: scale(1.05);
 }
 </style>
