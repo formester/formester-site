@@ -37,7 +37,6 @@
             class="feature__img img-fluid"
             :src="features[activeIndex].image"
             :key="features[activeIndex].image"
-            loading="lazy"
           />
         </transition>
       </div>
