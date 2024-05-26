@@ -175,16 +175,15 @@ export default {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .fade-enter,
 .fade-leave-to {
-  opacity: 0;
-  transform: translateX(8px);
+  transform: scale(1.002);
 }
 
 .feature__img {
-  transition: transform 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 </style>
