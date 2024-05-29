@@ -84,7 +84,7 @@
               @click="collapseNav"
               class="mt-3 mt-lg-0 ms-lg-3"
             >
-              <button class="button nav__button">Sign Up Free</button>
+              <button class="button nav__button">Sign Up</button>
             </a>
           </div>
         </ul>

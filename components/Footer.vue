@@ -33,10 +33,20 @@
                   >Integrations</NuxtLink
                 >
               </li>
+              <li class="mt-2">
+                <NuxtLink to="/privacy/" class="footer__link">
+                  Privacy Policy
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
+                <NuxtLink to="/terms-of-service/" class="footer__link">
+                  Terms of Service
+                </NuxtLink>
+              </li>
             </ul>
 
             <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
-              Use Case
+              Industries
             </h5>
 
             <ul class="list-unstyled mt-2">
@@ -66,7 +76,7 @@
               </li>
               <li class="mt-2">
                 <NuxtLink to="/solutions/quiz/" class="footer__link"
-                  >Quiz</NuxtLink
+                  >Quiz Maker</NuxtLink
                 >
               </li>
             </ul>
@@ -75,7 +85,7 @@
 
           <!--Grid column-->
           <div class="col-lg-3 col-sm-6 mb-4 mb-md-0 text-lg-start">
-            <h5 class="text-uppercase footer__items--heading mb-3">Feature</h5>
+            <h5 class="text-uppercase footer__items--heading mb-3">Features</h5>
 
             <ul class="list-unstyled mt-2">
               <li class="mt-2">
@@ -162,19 +172,9 @@
           <div
             class="col-lg-3 col-sm-6 mb-4 mb-md-0 mt-0 mt-sm-4 mt-lg-0 text-lg-start"
           >
-            <h5 class="text-uppercase footer__items--heading mb-3">Others</h5>
+            <h5 class="text-uppercase footer__items--heading mb-3">Support</h5>
 
             <ul class="list-unstyled mt-2">
-              <li class="mt-2">
-                <NuxtLink to="/privacy/" class="footer__link">
-                  Privacy Policy
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/terms-of-service/" class="footer__link">
-                  Terms of Service
-                </NuxtLink>
-              </li>
               <li class="mt-2">
                 <NuxtLink to="/contact/" class="footer__link">
                   Contact Us
@@ -279,7 +279,7 @@
             </ul>
 
             <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
-              Case Studies
+              Use Cases
             </h5>
 
             <ul class="list-unstyled mt-2">
@@ -341,7 +341,7 @@
       </section>
       <div class="divider mt-4"></div>
       <div class="copyright d-flex justify-content-center mt-3">
-        © 2022 Acorn Globus. All rights reserved
+        © 2024 Acorn Globus. All rights reserved
       </div>
     </div>
   </footer>

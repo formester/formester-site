@@ -81,7 +81,7 @@ export default {
           '@id': 'https://acornglobus.com',
           name: 'Formester',
           description:
-            "Sign up now for the best No Code Form Builder! Create stunning HTML Forms with Formester's easy-to-use Online HTML Form Builder. Start building today!",
+            "Sign up now for the best No-Code Form Builder! Create stunning HTML Forms with Formester's easy-to-use Online HTML Form Builder. Start building today!",
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
           address: {
