@@ -8,7 +8,7 @@
         />
       </div>
       <div class="content-wrapper w-100">
-        <div class="d-flex align-items-center gap-2 mb-2">
+        <div class="d-flex align-items-center gap-2 my-2">
           <NuxtLink to="/templates/" class="breadcrumb-text"
             >All Templates</NuxtLink
           >
@@ -104,7 +104,6 @@ export default {
   top: 80px;
   max-height: 100vh;
   margin-bottom: 1.5rem;
-  margin-top: 15px;
   min-width: 264px;
   overflow-y: scroll;
 }
