@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Breadcrumb here -->
     <div class="template-container d-flex">
       <div class="left-sidebar">
         <TemplateCategories
@@ -9,12 +8,35 @@
         />
       </div>
       <div class="content-wrapper w-100">
-        <h2 class="content-heading">
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <NuxtLink to="/templates/" class="breadcrumb-text"
+            >All Templates</NuxtLink
+          >
+          <div v-if="activeCategory" class="d-flex align-items-center gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+            >
+              <path
+                d="M6 12L10 8L6 4"
+                stroke="#6434D0"
+                stroke-width="1.33333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span class="breadcrumb-text">{{ activeCategory }}</span>
+          </div>
+        </div>
+        <h1 class="content-heading mt-2">
           {{
             $route.params.slug ? $route.params.slug.replace('-', ' ') : 'All'
           }}
           Templates
-        </h2>
+        </h1>
         <p class="content-description mt-3">
           Tools and strategies modern teams need to help their companies grow.
         </p>
@@ -145,6 +167,17 @@ export default {
   width: 100%;
 }
 
+.breadcrumb-text {
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--clr-primary-600);
+  text-transform: capitalize;
+}
+
+.gap-2 {
+  gap: 8px;
+}
+
 @media screen and (max-width: 1412px) {
   .templates-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -165,10 +198,6 @@ export default {
   }
   .content-heading {
     margin-top: 12px;
-    text-align: center;
-  }
-  .content-description {
-    text-align: center;
   }
   .left-sidebar {
     position: static;
