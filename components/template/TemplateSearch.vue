@@ -60,7 +60,13 @@ export default {
   padding: 20px;
   gap: 16px;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08),
-    0px 12px 24px 0px rgba(0, 0, 0, 0.04);
+    0px 1px 2px 0px rgba(0, 0, 0, 0.04);
+}
+
+.search-box:focus-within {
+  background: var(--Gray-50, #f9fafb);
+  box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08),
+    0px 4px 6px -2px rgba(16, 24, 40, 0.03);
 }
 
 .search-input-wrapper {
@@ -74,6 +80,7 @@ export default {
 
 .search-input {
   border: none;
+  background-color: transparent;
 }
 
 .search-input::placeholder {
