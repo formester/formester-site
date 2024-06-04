@@ -50,9 +50,12 @@
             :template="template"
           />
         </div>
-        <div v-else class="no-templates">
+        <div
+          v-else
+          class="no-templates d-flex flex-column align-items-center justify-content-center w-100"
+        >
           <nuxt-img
-            class="no-templates-img img-fluid"
+            class="w-100 img-fluid"
             src="/templates/no-template.svg"
             alt="No Template Illustration"
           />
@@ -153,17 +156,8 @@ export default {
 }
 
 .no-templates {
-  width: 100%;
   padding: 52px 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 1rem;
-}
-
-.no-templates-img {
-  width: 100%;
 }
 
 .breadcrumb-text {
