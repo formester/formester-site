@@ -1,16 +1,16 @@
 <template>
   <div class="template-categories">
     <!-- Category bar for small devices to show hide categories -->
-    <div class="category-bar" @click="showFiltersSm = !showFiltersSm">
+    <div class="category-bar" @click="showCategories = !showCategories">
       <h2 class="our-template-heading">Our Templates</h2>
       <nuxt-img
-        v-show="showFiltersSm"
+        v-show="!showCategories"
         class="category-menu-btn pointer"
         src="/templates/right-arrow.png"
         alt="open-category"
       />
       <nuxt-img
-        v-show="!showFiltersSm"
+        v-show="showCategories"
         class="category-menu-btn pointer"
         src="/templates/cross.png"
         alt="close-category"
@@ -24,7 +24,9 @@
     >
       <h3
         class="all-category-heading"
-        :class="{ 'd-none': showFiltersSm === true }"
+        :class="{
+          'd-none': !showCategories && isMobile,
+        }"
       >
         All Templates
       </h3>
@@ -33,7 +35,7 @@
       v-for="(categories, categoryType) in templateCategories"
       :key="categoryType"
       class="category-block"
-      :class="{ 'd-none': showFiltersSm === true }"
+      :class="{ 'd-none': !showCategories && isMobile }"
     >
       <div @click="toggleCollapse(categoryType)">
         <div
@@ -82,7 +84,7 @@ export default {
     return {
       showCategories: true,
       isExpanded: {},
-      showFiltersSm: false,
+      isMobile: false,
     }
   },
   methods: {
@@ -93,9 +95,16 @@ export default {
     clearIsExpandedState() {
       localStorage.removeItem('isCollapsedState')
     },
+    handleResize() {
+      this.isMobile = window.innerWidth <= 840
+    },
   },
   mounted() {
-    if (window.innerWidth <= 840) this.showCategories = false
+    if (process.client) {
+      this.handleResize()
+      this.showCategories = !this.isMobile
+      window.addEventListener('resize', this.handleResize)
+    }
 
     const savedState = localStorage.getItem('isCollapsedState')
     if (savedState) {
@@ -109,6 +118,7 @@ export default {
   },
   beforeDestroy() {
     // Remove the event listener when the component is destroyed
+    window.removeEventListener('resize', this.handleResize)
     window.removeEventListener('beforeunload', this.clearIsExpandedState)
   },
 }
