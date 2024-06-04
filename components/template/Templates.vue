@@ -8,28 +8,29 @@
         />
       </div>
       <div class="content-wrapper w-100">
-        <div class="d-flex align-items-center gap-2 my-2">
+        <div
+          v-if="activeCategory"
+          class="breadcrumb d-flex align-items-center gap-2"
+        >
           <NuxtLink to="/templates/" class="breadcrumb-text"
             >All Templates</NuxtLink
           >
-          <div v-if="activeCategory" class="d-flex align-items-center gap-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-            >
-              <path
-                d="M6 12L10 8L6 4"
-                stroke="#6434D0"
-                stroke-width="1.33333"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <span class="breadcrumb-text">{{ activeCategory }}</span>
-          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+          >
+            <path
+              d="M6 12L10 8L6 4"
+              stroke="#6434D0"
+              stroke-width="1.33333"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span class="breadcrumb-text">{{ activeCategory }}</span>
         </div>
         <h1 class="content-heading mt-2">
           {{
@@ -37,7 +38,7 @@
           }}
           Templates
         </h1>
-        <p class="content-description mt-3">
+        <p class="content-description">
           Tools and strategies modern teams need to help their companies grow.
         </p>
 
@@ -144,6 +145,7 @@ export default {
   color: var(--clr-text-secondary);
   font-size: 20px;
   line-height: 30px;
+  margin-top: 12px;
 }
 
 .templates-grid {
@@ -158,6 +160,10 @@ export default {
 .no-templates {
   padding: 52px 0px;
   gap: 1rem;
+}
+
+.breadcrumb {
+  margin-block: 8px;
 }
 
 .breadcrumb-text {
@@ -185,15 +191,25 @@ export default {
 }
 
 @media only screen and (max-width: 840px) {
-  .template-container {
-    flex-direction: column;
-  }
   .content-heading {
     margin-top: 12px;
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .content-description {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 0;
+  }
+  .template-container {
+    flex-direction: column;
   }
   .left-sidebar {
     position: static;
     margin: 0;
+  }
+  .breadcrumb {
+    margin-top: 16px;
   }
 }
 
