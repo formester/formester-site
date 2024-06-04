@@ -49,14 +49,16 @@ export default {
 .template {
   transition: all 500ms ease;
   border-radius: 8px;
-  border: 1px solid var(--neutral-200, #e5e5e5);
-  background: var(--neutral-100, #f5f5f5);
+  border: 1px solid var(--Stroke, #eaecf0);
+  background: var(--Base-White, #fff);
+  box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1),
+    0px 2px 4px -2px rgba(16, 24, 40, 0.06);
   min-height: 130px;
+  overflow: hidden;
 }
 
-.template:hover {
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08),
-    0px 12px 24px 0px rgba(0, 0, 0, 0.04);
+.template:hover .template-preview__img {
+  transform: scale(1.03);
 }
 .template-content {
   padding: 16px;
@@ -90,8 +92,10 @@ export default {
 
 .template-preview__img {
   display: block;
-  border-radius: 8px 8px 0 0;
+  transition: all 0.4s ease;
+  overflow: hidden;
 }
+
 .template-preview__img.hidden {
   display: none;
 }

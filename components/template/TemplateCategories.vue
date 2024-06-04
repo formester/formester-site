@@ -1,6 +1,5 @@
 <template>
   <div class="template-categories">
-    <h2 class="sidebar-heading">Our Templates</h2>
     <!-- Category bar for small devices to show hide categories -->
     <div class="category-bar" @click="showFiltersSm = !showFiltersSm">
       <h2 class="our-template-heading">Our Templates</h2>
@@ -116,14 +115,6 @@ export default {
 </script>
 
 <style scoped>
-.sidebar-heading {
-  color: var(--neutral-900, #171717);
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 30px;
-  padding: 0 35px;
-  margin: 0 0 16px;
-}
 .our-template-heading {
   color: var(--neutral-900, #171717);
   font-size: 14px;
