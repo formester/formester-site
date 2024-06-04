@@ -25,7 +25,7 @@
       </div>
     </div>
     <!-- Trending -->
-    <div class="trending-searches d-flex mt-4">
+    <div class="trending-searches d-flex mt-4 d-none d-lg-flex">
       <p class="trending-heading">Trending:&nbsp</p>
       <p>Lead Generation,&nbsp</p>
       <p>Event RSVP,&nbsp</p>
@@ -99,12 +99,10 @@ export default {
 
 @media (max-width: 991px) {
   .search-box {
+    margin-bottom: 28px;
     height: 52px;
     padding: 12px;
     gap: 8px;
-  }
-  .trending-searches {
-    visibility: hidden;
   }
 }
 

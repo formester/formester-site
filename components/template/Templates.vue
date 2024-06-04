@@ -187,7 +187,6 @@ export default {
 @media (max-width: 991px) {
   .templates-grid {
     grid-template-columns: 1fr 1fr;
-    padding: 0.5rem 1.5rem 1.5rem;
     margin-top: 0;
   }
 }
