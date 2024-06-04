@@ -55,11 +55,11 @@
           class="no-templates d-flex flex-column align-items-center justify-content-center w-100"
         >
           <nuxt-img
-            class="w-100 img-fluid"
+            class="img-fluid"
             src="/templates/no-template.svg"
             alt="No Template Illustration"
           />
-          <h4>No Template Available</h4>
+          <h4 class="mt-3">No Template Available</h4>
         </div>
       </div>
     </div>
