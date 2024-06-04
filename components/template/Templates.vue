@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="template-container d-flex">
+    <div class="container template-container d-flex">
       <div class="left-sidebar">
         <TemplateCategories
           :activeCategory="activeCategory"
@@ -113,12 +113,12 @@ export default {
 }
 
 .left-sidebar::-webkit-scrollbar {
-  width: 7px;
+  width: 5px;
   background-color: #f5f5f5;
 }
 
 .left-sidebar::-webkit-scrollbar-thumb {
-  background-color: #888;
+  background-color: #d0d5dd;
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
@@ -129,7 +129,7 @@ export default {
 
 .content-wrapper {
   margin-bottom: 24px;
-  padding-inline: 1.5rem;
+  padding-left: 2rem;
 }
 
 .content-heading {
@@ -177,12 +177,6 @@ export default {
   gap: 8px;
 }
 
-@media screen and (max-width: 1412px) {
-  .templates-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 @media (max-width: 991px) {
   .templates-grid {
     grid-template-columns: 1fr 1fr;
@@ -191,6 +185,9 @@ export default {
 }
 
 @media only screen and (max-width: 840px) {
+  .content-wrapper {
+    padding: 0;
+  }
   .content-heading {
     margin-top: 12px;
     font-size: 32px;
