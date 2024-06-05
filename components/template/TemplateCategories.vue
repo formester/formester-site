@@ -196,8 +196,8 @@ h2::first-letter {
     justify-content: space-between;
     align-items: center;
     padding: 12px 16px;
-    margin: 1.5rem 1.5rem 0.8rem;
-    border-radius: 8px;
+    margin: 0 0 4px;
+    border-radius: 12px;
     background: var(--neutral-100, #f5f5f5);
   }
   .sidebar-heading {

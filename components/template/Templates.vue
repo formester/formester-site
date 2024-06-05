@@ -12,24 +12,10 @@
           v-if="activeCategory"
           class="breadcrumb d-flex align-items-center gap-2"
         >
-          <NuxtLink to="/templates/" class="breadcrumb-text"
-            >All Templates</NuxtLink
-          >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
-          >
-            <path
-              d="M6 12L10 8L6 4"
-              stroke="#6434D0"
-              stroke-width="1.33333"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
+          <NuxtLink to="/templates/" class="breadcrumb-text">
+            All Templates
+          </NuxtLink>
+          <nuxt-img src="icons/chevron-right.svg" />
           <span class="breadcrumb-text">{{ activeCategory }}</span>
         </div>
         <h1 class="content-heading mt-2">
@@ -187,6 +173,7 @@ export default {
 @media only screen and (max-width: 840px) {
   .content-wrapper {
     padding: 0;
+    margin-top: 12px;
   }
   .content-heading {
     margin-top: 12px;
@@ -204,9 +191,7 @@ export default {
   .left-sidebar {
     position: static;
     margin: 0;
-  }
-  .breadcrumb {
-    margin-top: 16px;
+    overflow-y: auto;
   }
 }
 
