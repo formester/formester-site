@@ -113,7 +113,7 @@ export default {
 
 .content-wrapper {
   margin-bottom: 24px;
-  padding-left: 2rem;
+  padding-left: 3rem;
 }
 
 .content-heading {
@@ -151,8 +151,9 @@ export default {
 }
 
 .breadcrumb-text {
-  font-weight: 500;
-  line-height: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
   color: var(--clr-primary-600);
   text-transform: capitalize;
 }
