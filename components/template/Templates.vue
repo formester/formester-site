@@ -15,7 +15,7 @@
           <NuxtLink to="/templates/" class="breadcrumb-text">
             All Templates
           </NuxtLink>
-          <nuxt-img src="icons/chevron-right.svg" />
+          <img src="~/assets/images/icons/chevron-right.svg" />
           <span class="breadcrumb-text">{{ activeCategory.name }}</span>
         </div>
         <h1 class="content-heading mt-2">
