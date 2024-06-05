@@ -221,17 +221,17 @@ h2::first-letter {
   }
   .all-category-heading {
     color: var(--neutral-900, #171717);
-    padding: 4px 24px 4px 0;
+    padding: 4px 8px 4px 8px;
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
     transition: none;
   }
   .categoryType-container {
-    padding-right: 24px;
+    padding: 0 8px 4px 8px;
   }
   .category {
-    padding: 4px 24px 4px 0;
+    padding: 4px 8px 4px 8px;
     font-weight: 400;
     line-height: 21px;
     transition: none;
