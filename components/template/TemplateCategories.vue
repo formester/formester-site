@@ -135,7 +135,7 @@ export default {
 }
 .all-category-heading {
   color: var(--neutral-900, #404040);
-  padding: 8px 36px;
+  padding: 8px 36px 8px 0;
   cursor: pointer;
   font-size: 16px;
   line-height: 24px;
@@ -160,13 +160,13 @@ h2::first-letter {
   text-align: left;
 }
 .categoryType-container {
-  padding: 0 35px;
+  padding-right: 35px;
 }
 .category-menu-btn {
   display: none;
 }
 .category {
-  padding: 4px 36px;
+  padding: 4px 36px 4px 0;
   cursor: pointer;
   font-size: 14px;
   line-height: 24px;
@@ -221,17 +221,17 @@ h2::first-letter {
   }
   .all-category-heading {
     color: var(--neutral-900, #171717);
-    padding: 4px 24px;
+    padding: 4px 24px 4px 0;
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
     transition: none;
   }
   .categoryType-container {
-    padding: 0 24px;
+    padding-right: 24px;
   }
   .category {
-    padding: 4px 24px;
+    padding: 4px 24px 4px 0;
     font-weight: 400;
     line-height: 21px;
     transition: none;
