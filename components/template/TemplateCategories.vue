@@ -100,7 +100,6 @@ export default {
     },
   },
   mounted() {
-    console.log(this.activeCategory)
     if (process.client) {
       this.handleResize()
       this.showCategories = !this.isMobile
