@@ -58,7 +58,7 @@ export default {
 }
 
 .template:hover .template-preview__img {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 .template-content {
   padding: 16px;
