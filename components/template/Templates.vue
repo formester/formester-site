@@ -71,12 +71,17 @@ export default {
   },
   computed: {
     filterTemplates() {
-      if (!this.searchTerm.trim()) {
+      const searchTerm = this.searchTerm.trim().toLowerCase()
+      if (!searchTerm) {
         return this.templates
       }
-      return this.templates.filter((template) =>
-        template.name.toLowerCase().includes(this.searchTerm.toLowerCase())
-      )
+      return this.templates.filter((template) => {
+        const nameMatch = template.name.toLowerCase().includes(searchTerm)
+        const descriptionMatch = template.description
+          ?.toLowerCase()
+          .includes(searchTerm)
+        return nameMatch || descriptionMatch
+      })
     },
   },
 }
