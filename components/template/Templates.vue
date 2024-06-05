@@ -16,17 +16,15 @@
             All Templates
           </NuxtLink>
           <nuxt-img src="icons/chevron-right.svg" />
-          <span class="breadcrumb-text">{{ activeCategory }}</span>
+          <span class="breadcrumb-text">{{ activeCategory.name }}</span>
         </div>
         <h1 class="content-heading mt-2">
-          {{
-            $route.params.slug ? $route.params.slug.replace('-', ' ') : 'All'
-          }}
+          {{ activeCategory ? activeCategory.name : 'All' }}
           Templates
         </h1>
-        <p class="content-description">
-          Tools and strategies modern teams need to help their companies grow.
-        </p>
+        <!-- <p class="content-description">
+          {{ activeCategory.description }}
+        </p> -->
 
         <TemplateSearch @searchInput="handleSearch" />
 

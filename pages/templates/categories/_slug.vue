@@ -1,6 +1,6 @@
 <template>
   <Templates
-    :activeCategory="$route.params.slug"
+    :activeCategory="activeCategory"
     :templates="templates"
     :templateCategories="categories"
   />
@@ -13,6 +13,11 @@ import Templates from '@/components/template/Templates.vue'
 
 export default {
   components: { Templates },
+  data() {
+    return {
+      activeCategory: null,
+    }
+  },
   async asyncData({ $axios, params }) {
     let { data: templates } = await $axios.get(
       'https://app.formester.com/templates.json',
@@ -66,6 +71,15 @@ export default {
           description: template.description,
         }
       })
+    },
+  },
+  mounted() {
+    this.activeCategory = this.findCategoryBySlug(this.$route.params.slug)
+  },
+  methods: {
+    findCategoryBySlug(slug) {
+      const allCategories = Object.values(this.categories).flatMap((arr) => arr)
+      return allCategories.find((category) => category.slug === slug)
     },
   },
   head() {

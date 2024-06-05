@@ -53,7 +53,7 @@ export default {
 
 <style scoped>
 .search-box {
-  margin-top: 40px;
+  margin-top: 32px;
   background: #fff;
   height: 67px;
   border-radius: 8px;

@@ -67,7 +67,7 @@
         >
           <h3
             class="category"
-            :class="{ active: activeCategory === category.slug }"
+            :class="{ active: activeCategory?.slug === category.slug }"
           >
             {{ category.name }}
           </h3>
@@ -100,6 +100,7 @@ export default {
     },
   },
   mounted() {
+    console.log(this.activeCategory)
     if (process.client) {
       this.handleResize()
       this.showCategories = !this.isMobile
