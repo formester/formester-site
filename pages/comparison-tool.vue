@@ -1,11 +1,11 @@
 <template>
   <div>
     <ComparisonToolHero />
-    <div class="container comparison__card-container mx-auto">
+    <div class="container comparison__card-container mx-auto my-5">
       <ComparisonCard :options="options" default-selected-option="Formester" />
       <ComparisonCard :options="options" default-selected-option="Typeform" />
       <ComparisonCard :options="options" default-selected-option="Jotform" />
-      <ComparisonCard :options="options" default-selected-option="Fillout" />
+      <ComparisonCard :options="options" />
     </div>
   </div>
 </template>

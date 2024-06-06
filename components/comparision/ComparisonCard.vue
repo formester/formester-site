@@ -1,14 +1,20 @@
 <template>
   <div class="comparison__card">
-    <div class="comparison__logo-wrapper text-center">
+    <div class="comparison__logo-wrapper d-flex justify-content-center">
       <nuxt-img
         v-if="selectedOption"
         :src="formBuilderLogoSrc[selectedOption]"
+        class="commparison__logo"
       />
-      <nuxt-img v-else src="/form-building-platform/plus.svg" />
+      <nuxt-img
+        v-else
+        src="/form-building-platforms/plus.svg"
+        class="commparison__logo"
+      />
     </div>
     <div class="comparison__dropdown-wrapper">
       <select class="form-select" v-model="selectedOption">
+        <option disabled hidden value="">Select a tool</option>
         <option
           v-for="option in options"
           :key="option"
@@ -30,7 +36,10 @@ export default {
     },
     defaultSelectedOption: {
       type: String,
-      default: null,
+      default: '',
+      validator(value) {
+        return ['Formester', 'Typeform', 'Jotform', 'Fillout'].includes(value)
+      },
     },
   },
   data() {
@@ -55,7 +64,8 @@ export default {
 }
 
 .comparison__logo-wrapper {
-  padding: 80px 24px 40px;
+  padding: 48px 24px 12px;
+  min-height: 154px;
 }
 
 .comparison__dropdown-wrapper {
