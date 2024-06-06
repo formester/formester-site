@@ -175,7 +175,7 @@ export default {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s cubic-bezier(0.12, 0.26, 1, 0.6);
 }
 
 .fade-enter,
@@ -185,6 +185,6 @@ export default {
 }
 
 .feature__img {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s cubic-bezier(0.12, 0.26, 1, 0.6);
 }
 </style>
