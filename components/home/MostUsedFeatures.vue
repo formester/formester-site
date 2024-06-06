@@ -180,6 +180,7 @@ export default {
 
 .fade-enter,
 .fade-leave-to {
+  opacity: 0;
   transform: scale(1.002);
 }
 
