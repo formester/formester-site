@@ -135,6 +135,71 @@ export default {
   grid-gap: 24px;
 }
 
+.comparision__table-heading {
+  font-size: 28px;
+  line-height: 40px;
+}
+
+thead tr td {
+  border: none;
+}
+
+tr td,
+tr th {
+  padding-block: 12px;
+  font-size: 14px;
+}
+
+tr td,
+thead tr td {
+  padding-inline: 20px;
+}
+
+thead tr td:nth-child(3) {
+  background-color: #fafafa;
+  border-inline: 1px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5;
+}
+
+tbody tr td:nth-child(3) {
+  background-color: #fafafa;
+  border-inline: 1px solid #e5e5e5;
+}
+
+table td {
+  min-width: 169px;
+}
+
+.plan__name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.table__button {
+  padding: 12px 16px;
+  border: 1px solid var(--clr-primary);
+  background: white;
+  color: var(--clr-primary);
+  border-radius: 8px;
+}
+
+.table__button:hover {
+  background: #f9f9f9;
+}
+
+.table__button.hglt {
+  background-color: var(--clr-primary);
+  color: white;
+}
+
+.table__button.hglt:hover {
+  opacity: 0.9;
+}
+
+.feature {
+  font-weight: 500;
+}
+
 @media screen and (max-width: 1200px) {
   .comparison__card-container {
     grid-template-columns: repeat(2, 1fr);
