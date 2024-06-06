@@ -1,17 +1,16 @@
 <template>
   <div class="template-categories">
-    <h2 class="sidebar-heading">Our Templates</h2>
     <!-- Category bar for small devices to show hide categories -->
-    <div class="category-bar" @click="showFiltersSm = !showFiltersSm">
+    <div class="category-bar" @click="showCategories = !showCategories">
       <h2 class="our-template-heading">Our Templates</h2>
       <nuxt-img
-        v-show="showFiltersSm"
+        v-show="!showCategories"
         class="category-menu-btn pointer"
         src="/templates/right-arrow.png"
         alt="open-category"
       />
       <nuxt-img
-        v-show="!showFiltersSm"
+        v-show="showCategories"
         class="category-menu-btn pointer"
         src="/templates/cross.png"
         alt="close-category"
@@ -25,7 +24,9 @@
     >
       <h3
         class="all-category-heading"
-        :class="{ 'd-none': showFiltersSm === true }"
+        :class="{
+          'd-none': !showCategories && isMobile,
+        }"
       >
         All Templates
       </h3>
@@ -34,7 +35,7 @@
       v-for="(categories, categoryType) in templateCategories"
       :key="categoryType"
       class="category-block"
-      :class="{ 'd-none': showFiltersSm === true }"
+      :class="{ 'd-none': !showCategories && isMobile }"
     >
       <div @click="toggleCollapse(categoryType)">
         <div
@@ -66,7 +67,7 @@
         >
           <h3
             class="category"
-            :class="{ active: activeCategory === category.slug }"
+            :class="{ active: activeCategory?.slug === category.slug }"
           >
             {{ category.name }}
           </h3>
@@ -83,7 +84,7 @@ export default {
     return {
       showCategories: true,
       isExpanded: {},
-      showFiltersSm: false,
+      isMobile: false,
     }
   },
   methods: {
@@ -94,9 +95,16 @@ export default {
     clearIsExpandedState() {
       localStorage.removeItem('isCollapsedState')
     },
+    handleResize() {
+      this.isMobile = window.innerWidth <= 840
+    },
   },
   mounted() {
-    if (window.innerWidth <= 840) this.showCategories = false
+    if (process.client) {
+      this.handleResize()
+      this.showCategories = !this.isMobile
+      window.addEventListener('resize', this.handleResize)
+    }
 
     const savedState = localStorage.getItem('isCollapsedState')
     if (savedState) {
@@ -110,20 +118,13 @@ export default {
   },
   beforeDestroy() {
     // Remove the event listener when the component is destroyed
+    window.removeEventListener('resize', this.handleResize)
     window.removeEventListener('beforeunload', this.clearIsExpandedState)
   },
 }
 </script>
 
 <style scoped>
-.sidebar-heading {
-  color: var(--neutral-900, #171717);
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 30px;
-  padding: 0 35px;
-  margin: 0 0 16px;
-}
 .our-template-heading {
   color: var(--neutral-900, #171717);
   font-size: 14px;
@@ -134,7 +135,7 @@ export default {
 }
 .all-category-heading {
   color: var(--neutral-900, #404040);
-  padding: 8px 36px;
+  padding: 8px 36px 8px 0;
   cursor: pointer;
   font-size: 16px;
   line-height: 24px;
@@ -159,13 +160,13 @@ h2::first-letter {
   text-align: left;
 }
 .categoryType-container {
-  padding: 0 35px;
+  padding-right: 35px;
 }
 .category-menu-btn {
   display: none;
 }
 .category {
-  padding: 4px 36px;
+  padding: 4px 36px 4px 0;
   cursor: pointer;
   font-size: 14px;
   line-height: 24px;
@@ -195,8 +196,8 @@ h2::first-letter {
     justify-content: space-between;
     align-items: center;
     padding: 12px 16px;
-    margin: 1.5rem 1.5rem 0.8rem;
-    border-radius: 8px;
+    margin: 0 0 4px;
+    border-radius: 12px;
     background: var(--neutral-100, #f5f5f5);
   }
   .sidebar-heading {
@@ -220,17 +221,17 @@ h2::first-letter {
   }
   .all-category-heading {
     color: var(--neutral-900, #171717);
-    padding: 4px 24px;
+    padding: 4px 8px 4px 8px;
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
     transition: none;
   }
   .categoryType-container {
-    padding: 0 24px;
+    padding: 0 8px 4px 8px;
   }
   .category {
-    padding: 4px 24px;
+    padding: 4px 8px 4px 8px;
     font-weight: 400;
     line-height: 21px;
     transition: none;

@@ -1,34 +1,50 @@
 <template>
   <div>
-    <Hero @searchInput="handleSearch" />
-    <div class="template_container d-flex">
+    <div class="container template-container d-flex">
       <div class="left-sidebar">
         <TemplateCategories
           :activeCategory="activeCategory"
           :templateCategories="templateCategories"
         />
       </div>
-      <div class="w-100">
-        <h2 class="heading">
-          {{
-            $route.params.slug ? $route.params.slug.replace('-', ' ') : 'All'
-          }}
+      <div class="content-wrapper w-100">
+        <div
+          v-if="activeCategory"
+          class="breadcrumb d-flex align-items-center gap-2"
+        >
+          <NuxtLink to="/templates/" class="breadcrumb-text">
+            All Templates
+          </NuxtLink>
+          <img src="~/assets/images/icons/chevron-right.svg" />
+          <span class="breadcrumb-text">{{ activeCategory.name }}</span>
+        </div>
+        <h1 class="content-heading mt-2">
+          {{ activeCategory ? activeCategory.name : 'All' }}
           Templates
-        </h2>
-        <div v-if="filterTemplates && filterTemplates.length" class="templates">
+        </h1>
+        <!-- <p class="content-description">
+          {{ activeCategory.description }}
+        </p> -->
+
+        <TemplateSearch @searchInput="handleSearch" />
+
+        <div v-if="filterTemplates.length" class="templates-grid">
           <TemplateCard
             v-for="(template, idx) in filterTemplates"
             :key="template.id"
             :template="template"
           />
         </div>
-        <div v-else class="no-template">
+        <div
+          v-else
+          class="no-templates d-flex flex-column align-items-center justify-content-center w-100"
+        >
           <nuxt-img
             class="img-fluid"
             src="/templates/no-template.svg"
             alt="No Template Illustration"
           />
-          <h4>No Template Available</h4>
+          <h4 class="mt-3">No Template Available</h4>
         </div>
       </div>
     </div>
@@ -36,12 +52,12 @@
 </template>
 
 <script>
-import TemplateCategories from './TemplateCategories.vue'
-import TemplateCard from './TemplateCard.vue'
-import Hero from './Hero.vue'
+import TemplateCategories from '@/components/template/TemplateCategories.vue'
+import TemplateCard from '@/components/template/TemplateCard.vue'
+import TemplateSearch from '@/components/template/TemplateSearch.vue'
 
 export default {
-  components: { TemplateCategories, TemplateCard, Hero },
+  components: { TemplateCategories, TemplateCard, TemplateSearch },
   props: ['activeCategory', 'templates', 'templateCategories'],
   data() {
     return {
@@ -55,96 +71,136 @@ export default {
   },
   computed: {
     filterTemplates() {
-      if (!this.searchTerm.trim()) {
+      const searchTerm = this.searchTerm.trim().toLowerCase()
+      if (!searchTerm) {
         return this.templates
       }
-      return this.templates.filter((template) =>
-        template.name.toLowerCase().includes(this.searchTerm.toLowerCase())
-      )
+      return this.templates.filter((template) => {
+        const nameMatch = template.name.toLowerCase().includes(searchTerm)
+        const descriptionMatch = template.description
+          ?.toLowerCase()
+          .includes(searchTerm)
+        return nameMatch || descriptionMatch
+      })
     },
   },
 }
 </script>
 
 <style scoped>
+.template-container {
+  margin-top: 24px;
+}
+
 .left-sidebar {
   position: sticky;
   top: 80px;
   max-height: 100vh;
   margin-bottom: 1.5rem;
-  margin-top: 15px;
-  min-width: 240px;
-  overflow-y: auto;
+  min-width: 264px;
+  overflow-y: scroll;
 }
-/* Style of the scrollbar*/
+
 .left-sidebar::-webkit-scrollbar {
-  width: 7px;
+  width: 5px;
   background-color: #f5f5f5;
 }
-/* Style of the scrollbar thumb */
+
 .left-sidebar::-webkit-scrollbar-thumb {
-  background-color: #888;
+  background-color: #d0d5dd;
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
-/* Change the thumb color on hover */
+
 .left-sidebar::-webkit-scrollbar-thumb:hover {
   background-color: #555;
 }
-.heading {
+
+.content-wrapper {
+  margin-bottom: 24px;
+  padding-left: 3rem;
+}
+
+.content-heading {
+  color: var(--clr-text-primary);
   text-transform: capitalize;
-  padding: 0.6rem 1.5rem 0;
-  font-size: var(--ft-bigger-body);
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 60px;
+  letter-spacing: -0.96px;
 }
-.template_container {
-  margin-top: 90px;
+
+.content-description {
+  color: var(--clr-text-secondary);
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 12px;
 }
-.templates {
+
+.templates-grid {
   width: 100%;
-  padding: 0 1.5rem 1.5rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: min-content;
   gap: 24px;
   margin-top: 1rem;
 }
-.no-template {
-  width: 100%;
+
+.no-templates {
   padding: 52px 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 1rem;
 }
 
+.breadcrumb {
+  margin-block: 8px;
+}
+
+.breadcrumb-text {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(--clr-primary-600);
+  text-transform: capitalize;
+}
+
+.gap-2 {
+  gap: 8px;
+}
+
 @media (max-width: 991px) {
-  .templates {
+  .templates-grid {
     grid-template-columns: 1fr 1fr;
-    padding: 0.5rem 1.5rem 1.5rem;
-    margin-top: 0;
-  }
-  .template_container {
     margin-top: 0;
   }
 }
 
 @media only screen and (max-width: 840px) {
-  .template_container {
-    flex-direction: column;
-  }
-  .heading {
+  .content-wrapper {
+    padding: 0;
     margin-top: 12px;
-    text-align: center;
+  }
+  .content-heading {
+    margin-top: 12px;
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .content-description {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 0;
+  }
+  .template-container {
+    flex-direction: column;
   }
   .left-sidebar {
     position: static;
     margin: 0;
+    overflow-y: auto;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .templates {
+  .templates-grid {
     grid-template-columns: 1fr;
   }
 }
