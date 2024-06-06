@@ -100,10 +100,10 @@ export default {
     return {
       options: ['Formester', 'Typeform', 'Jotform', 'Fillout'],
       selectedFormBuilders: {
-        0: null,
-        1: null,
-        2: null,
-        3: null,
+        0: '',
+        1: '',
+        2: '',
+        3: '',
       },
       comparisonTableFeatures,
     }
