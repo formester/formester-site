@@ -24,7 +24,6 @@ import BlogFeatured from '../../components/blog/BlogFeatured.vue'
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
 import axios from 'axios'
-import { parseMarkdown } from '~/utils/parseMarkdown'
 import readingTime from 'reading-time'
 
 export default {
