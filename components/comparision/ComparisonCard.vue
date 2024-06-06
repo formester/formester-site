@@ -59,11 +59,6 @@ export default {
       this.$emit('change', this.modelSelectedOption, this.cardNumber)
     },
   },
-  watch: {
-    selectedOption(newVal) {
-      this.modelSelectedOption = newVal
-    },
-  },
 }
 </script>
 
