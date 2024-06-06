@@ -1,6 +1,6 @@
 const type = 'website'
 const url = 'https://formester.com'
-const title = 'HTML Form Generator | No Code Web Form Builder - Formester'
+const title = 'HTML Form Generator | No-Code Web Form Builder - Formester'
 const description =
   'Build web forms using our Free HTML Form Builder with Drag-and-Drop Interface - Advanced Features, Third-Party Integrations & Robust Analytics!'
 const mainImage = 'https://formester.com/formester-form-builder-background.png'

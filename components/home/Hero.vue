@@ -5,10 +5,10 @@
         class="d-flex flex-column align-items-center justify-content-center text-center my-5"
       >
         <h1 class="hero__heading">
-          Best <span class="hglight">No Code</span> Form Builder
+          Best <span class="hglight">No-Code</span> Form Builder
         </h1>
         <p class="hero__subheading mt-3">
-          Create elegent forms, surveys and quizzes your audience will love to
+          Create elegant forms, surveys and quizzes your audience will love to
           answer.
         </p>
         <a

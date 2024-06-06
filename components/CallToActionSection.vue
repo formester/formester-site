@@ -31,7 +31,7 @@
                 class="btn button cta-button mx-2"
                 target="_blank"
               >
-                {{ content.btnPrimary || 'Create Now' }}
+                {{ content.btnPrimary || 'Create a Form Now' }}
               </a>
               <a
                 target="_blank"

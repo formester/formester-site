@@ -15,7 +15,7 @@
           <NuxtLink to="/templates/" class="breadcrumb-text">
             All Templates
           </NuxtLink>
-          <nuxt-img src="icons/chevron-right.svg" />
+          <img src="~/assets/images/icons/chevron-right.svg" />
           <span class="breadcrumb-text">{{ activeCategory.name }}</span>
         </div>
         <h1 class="content-heading mt-2">
@@ -71,12 +71,17 @@ export default {
   },
   computed: {
     filterTemplates() {
-      if (!this.searchTerm.trim()) {
+      const searchTerm = this.searchTerm.trim().toLowerCase()
+      if (!searchTerm) {
         return this.templates
       }
-      return this.templates.filter((template) =>
-        template.name.toLowerCase().includes(this.searchTerm.toLowerCase())
-      )
+      return this.templates.filter((template) => {
+        const nameMatch = template.name.toLowerCase().includes(searchTerm)
+        const descriptionMatch = template.description
+          ?.toLowerCase()
+          .includes(searchTerm)
+        return nameMatch || descriptionMatch
+      })
     },
   },
 }
