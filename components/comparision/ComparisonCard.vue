@@ -2,8 +2,8 @@
   <div class="comparison__card">
     <div class="comparison__logo-wrapper d-flex justify-content-center">
       <nuxt-img
-        v-if="selectedOption"
-        :src="formBuilderLogoSrc[selectedOption]"
+        v-if="modelSelectedOption"
+        :src="formBuilderLogoSrc[modelSelectedOption]"
         class="commparison__logo"
       />
       <nuxt-img
@@ -13,13 +13,13 @@
       />
     </div>
     <div class="comparison__dropdown-wrapper">
-      <select class="form-select" v-model="selectedOption">
+      <select
+        class="form-select"
+        v-model="modelSelectedOption"
+        @change="emitChange"
+      >
         <option disabled hidden value="">Select a tool</option>
-        <option
-          v-for="option in options"
-          :key="option"
-          :selected="option === selectedOption"
-        >
+        <option v-for="option in options" :key="option" :value="option">
           {{ option }}
         </option>
       </select>
@@ -30,21 +30,22 @@
 <script>
 export default {
   props: {
+    cardNumber: {
+      type: String || Number,
+      required: true,
+    },
     options: {
       type: Array,
       required: true,
     },
-    defaultSelectedOption: {
+    selectedOption: {
       type: String,
       default: '',
-      validator(value) {
-        return ['Formester', 'Typeform', 'Jotform', 'Fillout'].includes(value)
-      },
     },
   },
   data() {
     return {
-      selectedOption: this.defaultSelectedOption,
+      modelSelectedOption: this.selectedOption,
       formBuilderLogoSrc: {
         Formester: '/logo.svg',
         Typeform: '/form-building-platforms/typeform.svg',
@@ -52,6 +53,16 @@ export default {
         Fillout: '/form-building-platforms/fillout.svg',
       },
     }
+  },
+  methods: {
+    emitChange() {
+      this.$emit('change', this.modelSelectedOption, this.cardNumber)
+    },
+  },
+  watch: {
+    selectedOption(newVal) {
+      this.modelSelectedOption = newVal
+    },
   },
 }
 </script>
