@@ -39,9 +39,9 @@
           v-else
           class="no-templates d-flex flex-column align-items-center justify-content-center w-100"
         >
-          <nuxt-img
+          <img
             class="img-fluid"
-            src="/templates/no-template.svg"
+            src="@/assets/images/templates/no-template.svg"
             alt="No Template Illustration"
           />
           <h4 class="mt-3">No Template Available</h4>
