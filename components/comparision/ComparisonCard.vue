@@ -29,9 +29,6 @@ export default {
       required: true,
     },
   },
-  mounted() {
-    console.log(this.imgSrc, this.formBuilder1, this.formBuilder2)
-  },
 }
 </script>
 
