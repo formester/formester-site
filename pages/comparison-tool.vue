@@ -3,7 +3,10 @@
     <ComparisonToolHero />
     <div class="container">
       <div class="comparison__card-container mx-auto my-5">
-        <div v-for="(selectedFB, index) in selectedFormBuilders" :key="index">
+        <div
+          v-for="(selectedFB, index) in selectedFormBuildersOption"
+          :key="index"
+        >
           <ComparisonCard
             :options="filteredOptions(index)"
             :selected-option="selectedFB"
@@ -62,7 +65,7 @@ export default {
   },
   data() {
     return {
-      selectedFormBuilders: ['', '', '', ''],
+      selectedFormBuildersOption: ['', '', '', ''],
       featureNameList,
       selectedFormBuildersDetails: [],
     }
@@ -82,16 +85,16 @@ export default {
   },
   methods: {
     filteredOptions(cardNumber) {
-      const selectedOptions = this.selectedFormBuilders.filter(Boolean)
+      const selectedOptions = this.selectedFormBuildersOption.filter(Boolean)
       return this.options.filter(
         (option) =>
           !selectedOptions.includes(option) ||
-          this.selectedFormBuilders[cardNumber] === option
+          this.selectedFormBuildersOption[cardNumber] === option
       )
     },
     handleOptionChange(selectedOption, cardNumber) {
-      const oldOption = this.selectedFormBuilders[cardNumber]
-      this.$set(this.selectedFormBuilders, cardNumber, selectedOption)
+      const oldOption = this.selectedFormBuildersOption[cardNumber]
+      this.$set(this.selectedFormBuildersOption, cardNumber, selectedOption)
 
       if (oldOption) {
         this.selectedFormBuildersDetails =
