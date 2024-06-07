@@ -1,7 +1,7 @@
 <template>
-  <div v-if="selectedFormBuildersDetails.length">
+  <div v-if="selectedFormBuildersDetails.length" class="my-5 pt-5">
     <!-- desktop -->
-    <div class="d-none d-lg-flex w-100 my-5 pt-5">
+    <div class="d-none d-lg-flex w-100">
       <div class="feature__list d-flex flex-column">
         <div
           v-for="(featureName, index) in featureNameList"
@@ -54,7 +54,7 @@
     </div>
     <!-- mobile -->
     <div
-      class="d-lg-none mobile__formbuilder-details-wrapper d-flex flex-column mx-auto mt-5"
+      class="d-lg-none mobile__formbuilder-details-wrapper d-flex flex-column mx-auto"
     >
       <div
         v-for="fb in selectedFormBuildersDetails"
