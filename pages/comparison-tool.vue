@@ -179,9 +179,9 @@ export default {
         {
           '@type': 'Corporation',
           '@id': 'https://acornglobus.com',
-          name: "Jotform 101: All About Jotform's Forms by Formester!",
+          name: 'Easy way to compare Form Builders!',
           description:
-            "Discover Jotform's full potential with Formester's guide. Unlock powerful form building features, tips & tricks!",
+            'Compare form builders side by side with Formester’s comparison tool. Find the best form builder for your needs with ease!',
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
           address: {
@@ -203,7 +203,7 @@ export default {
             {
               '@type': 'ListItem',
               position: 2,
-              name: 'Jotform 101: All About Jotform’s Forms by Formester!',
+              name: 'Easy way to compare Form Builders!',
               item: 'https://formester.com/comparison-tool/',
             },
           ],
