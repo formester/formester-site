@@ -13,19 +13,26 @@
           />
         </div>
       </div>
-      <div v-if="selectedFormBuildersDetails.length" class="d-flex">
+      <div
+        v-if="selectedFormBuildersDetails.length"
+        class="d-flex w-100 my-5 pt-5"
+      >
         <div class="feature__list d-flex flex-column">
           <div
             v-for="(featureName, index) in featureNameList"
             :key="featureName"
-            class="feature__cell"
+            class="feature__cell feature__row-name"
             :class="{ 'alternate-bg': index % 2 !== 0 }"
           >
             {{ featureName }}
           </div>
         </div>
-        <div class="d-flex">
-          <div v-for="fb in selectedFormBuildersDetails" :key="fb.id">
+        <div class="d-flex overflow-auto w-100">
+          <div
+            v-for="fb in selectedFormBuildersDetails"
+            :key="fb.id"
+            class="w-100 mw-300"
+          >
             <div class="plan__name text-center">
               <nuxt-img
                 class="formbuilder__logo"
@@ -188,61 +195,10 @@ export default {
   grid-gap: 24px;
 }
 
-.comparision__table-heading {
-  font-size: 28px;
-  line-height: 40px;
-}
-
-thead tr td {
-  border: none;
-}
-
-tr td,
-tr th {
-  padding-block: 12px;
-  font-size: 14px;
-}
-
-tr td,
-thead tr td {
-  padding-inline: 20px;
-}
-
-table td {
-  min-width: 169px;
-}
-
-.plan__name {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.table__button {
-  padding: 12px 16px;
-  border: 1px solid var(--clr-primary);
-  background: white;
-  color: var(--clr-primary);
-  border-radius: 8px;
-}
-
-.table__button:hover {
-  background: #f9f9f9;
-}
-
-.table__button.hglt {
-  background-color: var(--clr-primary);
-  color: white;
-}
-
-.table__button.hglt:hover {
-  opacity: 0.9;
-}
-
 .feature {
   font-weight: 500;
 }
 
-/*  */
 .formbuilder__logo {
   height: 22px;
   width: auto;
@@ -260,6 +216,10 @@ table td {
   padding: 20px 24px;
 }
 
+.feature__row-name {
+  min-width: 262px;
+}
+
 .feature__cell.alternate-bg {
   background-color: #f9fafb;
 }
@@ -268,7 +228,12 @@ table td {
   color: var(--clr-text-secondary);
   font-size: 14px;
   line-height: 20px;
-  min-width: 300px;
+  min-width: 200px;
+  width: 100%;
+}
+
+.mw-300 {
+  max-width: 300px;
 }
 
 .select-plan__option {

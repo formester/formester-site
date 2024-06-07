@@ -353,7 +353,7 @@ export const featureNameList = [
   'Accept Payments (Commission)',
   'Webhooks',
   'Analytics',
-  'Question Branching & Logic Jumps',
+  'Question Branching',
   'Brandkit',
   'Custom Meta Information',
   'Scripts (GTM, GA, Pixel)',
