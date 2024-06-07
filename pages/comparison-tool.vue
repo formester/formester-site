@@ -23,7 +23,10 @@
         :form-builders="formBuilders"
         @update:selectedPlans="updateSelectedPlans"
       />
-      <div class="my-5">
+      <!-- <div
+        v-if="!selectedFormBuildersOption.filter(Boolean).length"
+        class="my-5"
+      >
         <h2 class="section__heading">Popular Form Builder Comparisons</h2>
         <div class="section__grid">
           <ComparisonCard
@@ -32,8 +35,20 @@
             formBuilder2="Typeform"
             @onViewComparisonButtonClick="handleViewComparisonClick"
           />
+          <ComparisonCard
+            imgSrc="/form-building-platforms/jotform-vs-typeform.svg"
+            formBuilder1="Jotform"
+            formBuilder2="Typeform"
+            @onViewComparisonButtonClick="handleViewComparisonClick"
+          />
+          <ComparisonCard
+            imgSrc="/form-building-platforms/formester-vs-jotform.svg"
+            formBuilder1="Formester"
+            formBuilder2="Jotform"
+            @onViewComparisonButtonClick="handleViewComparisonClick"
+          />
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
