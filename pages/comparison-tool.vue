@@ -47,16 +47,18 @@ export default {
       },
     })
 
-    let formBuilders = data.map((item) => {
-      return {
-        id: item.id,
-        ...item.attributes,
-      }
-    })
+    let formBuilders = data.map((item) => ({
+      id: item.id,
+      ...item.attributes,
+    }))
 
     const options = formBuilders.map((fb) => fb.name)
+    const selectedPlans = formBuilders.reduce((acc, fb) => {
+      acc[fb.id] = fb.plan[0].name
+      return acc
+    }, {})
 
-    return { formBuilders, options }
+    return { formBuilders, options, selectedPlans }
   },
   data() {
     return {
@@ -79,11 +81,6 @@ export default {
       selectedFormBuildersDetails: [],
     }
   },
-  created() {
-    this.formBuilders.forEach((fb) => {
-      this.$set(this.selectedPlans, fb.id, fb.plan[0].name)
-    })
-  },
   methods: {
     filteredOptions(cardNumber) {
       const selectedOptions = Object.values(this.selectedFormBuilders).filter(
@@ -100,26 +97,15 @@ export default {
       this.$set(this.selectedFormBuilders, cardNumber, selectedOption)
 
       if (oldOption) {
-        // Remove the old form builder from selectedFormBuildersDetails
-        const index = this.selectedFormBuildersDetails.findIndex(
-          (fb) => fb.name === oldOption
-        )
-        if (index !== -1) {
-          this.selectedFormBuildersDetails.splice(index, 1)
-        }
+        this.selectedFormBuildersDetails =
+          this.selectedFormBuildersDetails.filter((fb) => fb.name !== oldOption)
       }
 
       if (selectedOption) {
-        // Add the new form builder to selectedFormBuildersDetails
         const newFormBuilder = this.formBuilders.find(
           (fb) => fb.name === selectedOption
         )
-        if (
-          newFormBuilder &&
-          !this.selectedFormBuildersDetails.some(
-            (fb) => fb.id === newFormBuilder.id
-          )
-        ) {
+        if (newFormBuilder) {
           this.selectedFormBuildersDetails.push(newFormBuilder)
         }
       }
