@@ -16,7 +16,9 @@
         :key="fb.id"
         class="w-100 mw-300"
       >
-        <div class="plan__name text-center">
+        <div
+          class="formbuilder__logo-wrapper d-flex align-items-center justify-content-center text-center"
+        >
           <img class="formbuilder__logo" :src="fb.logo.data.attributes.url" />
         </div>
         <div class="feature__cell">
@@ -129,8 +131,15 @@ export default {
   text-transform: capitalize;
 }
 
+.formbuilder__logo-wrapper {
+  min-height: 40px;
+}
+
 .formbuilder__logo {
-  height: 22px;
-  width: auto;
+  /* height: 22px;
+  width: auto; */
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 </style>
