@@ -6,7 +6,7 @@
         <div
           v-for="(featureName, index) in featureNameList"
           :key="featureName"
-          class="feature__cell feature__row-name"
+          class="feature__cell"
           :class="{ 'alternate-bg': index % 2 !== 0 }"
         >
           {{ featureName }}
@@ -77,7 +77,7 @@
             <div
               v-for="(featureName, index) in featureNameList"
               :key="featureName"
-              class="feature__cell feature__row-name"
+              class="feature__cell"
               :class="{ 'alternate-bg': index % 2 !== 0 }"
             >
               {{ featureName }}
@@ -96,6 +96,7 @@
                   :value="plan.name"
                 >
                   {{ plan.name }}
+                  - ${{ plan.amount }}/mo
                 </option>
               </select>
             </div>
@@ -177,14 +178,11 @@ export default {
   font-weight: 500;
   line-height: 20px;
   margin-top: 58px;
+  min-width: fit-content;
 }
 
 .feature__cell {
   padding: 20px 24px;
-}
-
-.feature__row-name {
-  min-width: 262px;
 }
 
 .feature__cell.alternate-bg {
