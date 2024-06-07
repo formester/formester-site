@@ -201,7 +201,7 @@ export default {
 }
 
 /* === mobile === */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .mobile__formbuilder-details-wrapper {
     gap: 48px;
     overflow: hidden;
