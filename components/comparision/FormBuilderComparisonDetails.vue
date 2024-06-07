@@ -229,5 +229,18 @@ export default {
   .feature__list {
     margin-top: 19px;
   }
+
+  .feature__list {
+    min-width: fit-content;
+  }
+
+  .feature__cell {
+    font-size: 13px;
+    padding: 16px 12px;
+  }
+
+  .feature__cell.info {
+    min-width: fit-content;
+  }
 }
 </style>
