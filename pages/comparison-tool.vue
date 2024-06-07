@@ -95,19 +95,13 @@ export default {
         Jotform: '/form-building-platforms/jotform.svg',
         Fillout: '/form-building-platforms/fillout.svg',
       },
+      selectedFormBuildersDetails: [],
     }
   },
   created() {
     this.formBuilders.forEach((fb) => {
       this.$set(this.selectedPlans, fb.id, fb.plan[0].name)
     })
-  },
-  computed: {
-    selectedFormBuildersDetails() {
-      return this.formBuilders.filter((fb) =>
-        Object.values(this.selectedFormBuilders).includes(fb.name)
-      )
-    },
   },
   methods: {
     filteredOptions(cardNumber) {
@@ -121,7 +115,33 @@ export default {
       )
     },
     handleOptionChange(selectedOption, cardNumber) {
+      const oldOption = this.selectedFormBuilders[cardNumber]
       this.$set(this.selectedFormBuilders, cardNumber, selectedOption)
+
+      if (oldOption) {
+        // Remove the old form builder from selectedFormBuildersDetails
+        const index = this.selectedFormBuildersDetails.findIndex(
+          (fb) => fb.name === oldOption
+        )
+        if (index !== -1) {
+          this.selectedFormBuildersDetails.splice(index, 1)
+        }
+      }
+
+      if (selectedOption) {
+        // Add the new form builder to selectedFormBuildersDetails
+        const newFormBuilder = this.formBuilders.find(
+          (fb) => fb.name === selectedOption
+        )
+        if (
+          newFormBuilder &&
+          !this.selectedFormBuildersDetails.some(
+            (fb) => fb.id === newFormBuilder.id
+          )
+        ) {
+          this.selectedFormBuildersDetails.push(newFormBuilder)
+        }
+      }
     },
     handlePlanChange(event, formBuilderId) {
       const selectedPlan = event.target.value
@@ -142,6 +162,9 @@ export default {
 }
 </script>
 
+<style scoped>
+/* ... styles remain the same ... */
+</style>
 <style scoped>
 .comparison__card-container {
   display: grid;
