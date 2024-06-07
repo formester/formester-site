@@ -48,7 +48,12 @@
               'd-none': index === 0,
             }"
           >
-            {{ feature ?? '-' }}
+            <template v-if="trimString(feature) === 'Available'">
+              <nuxt-img src="check-green.svg" />
+            </template>
+            <template v-else>
+              {{ feature ?? '-' }}
+            </template>
           </div>
         </div>
       </div>
@@ -156,6 +161,10 @@ export default {
       return selectedPlan && selectedPlan.features
         ? Object.values(selectedPlan.features)
         : []
+    },
+    trimString(feature) {
+      const featureText = String(feature)
+      return featureText.trim()
     },
   },
 }
