@@ -1,7 +1,7 @@
 <template>
   <div class="comparison__card">
     <div class="comparison__logo-wrapper d-flex justify-content-center">
-      <nuxt-img
+      <img
         v-if="modelSelectedOption"
         :src="formBuildersLogoSrc[modelSelectedOption]"
       />

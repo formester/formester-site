@@ -17,10 +17,7 @@
         class="w-100 mw-300"
       >
         <div class="plan__name text-center">
-          <nuxt-img
-            class="formbuilder__logo"
-            :src="formBuildersLogoSrc[fb.name]"
-          />
+          <img class="formbuilder__logo" :src="fb.logo.data.attributes.url" />
         </div>
         <div class="feature__cell">
           <select
@@ -56,11 +53,22 @@
 <script>
 export default {
   props: {
-    selectedFormBuildersDetails: Array,
-    selectedPlans: Object,
-    formBuildersLogoSrc: Object,
-    featureNameList: Array,
-    formBuilders: Array,
+    selectedFormBuildersDetails: {
+      type: Array,
+      required: true,
+    },
+    selectedPlans: {
+      type: Object,
+      required: true,
+    },
+    featureNameList: {
+      type: Array,
+      required: true,
+    },
+    formBuilders: {
+      type: Array,
+      required: true,
+    },
   },
   methods: {
     handlePlanChange(event, formBuilderId) {

@@ -16,7 +16,6 @@
       <FormBuilderComparisonDetails
         :selected-form-builders-details="selectedFormBuildersDetails"
         :selected-plans="selectedPlans"
-        :form-builders-logo-src="formBuildersLogoSrc"
         :feature-name-list="featureNameList"
         :form-builders="formBuilders"
         @update:selectedPlans="updateSelectedPlans"
@@ -43,7 +42,7 @@ export default {
       data: { data },
     } = await axios.get(`${process.env.strapiUrl}/api/form-builders`, {
       params: {
-        populate: ['plan', 'plan.features'],
+        populate: ['logo', 'plan', 'plan.features'],
       },
     })
 
@@ -70,14 +69,21 @@ export default {
         3: '',
       },
       featureNameList,
-      formBuildersLogoSrc: {
-        Formester: '/logo.svg',
-        Typeform: '/form-building-platforms/typeform.svg',
-        Jotform: '/form-building-platforms/jotform.svg',
-        Fillout: '/form-building-platforms/fillout.svg',
-      },
       selectedFormBuildersDetails: [],
     }
+  },
+  computed: {
+    formBuildersLogoSrc() {
+      const logoSrc = {}
+      this.formBuilders.forEach((fb) => {
+        if (fb.logo && fb.logo.data && fb.logo.data.attributes) {
+          logoSrc[fb.name] = fb.logo.data.attributes.url
+        } else {
+          console.warn(`Logo not found for form builder: ${fb.name}`)
+        }
+      })
+      return logoSrc
+    },
   },
   methods: {
     filteredOptions(cardNumber) {
