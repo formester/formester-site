@@ -1,51 +1,110 @@
 <template>
-  <div v-if="selectedFormBuildersDetails.length" class="d-flex w-100 my-5 pt-5">
-    <div class="feature__list d-flex flex-column">
-      <div
-        v-for="(featureName, index) in featureNameList"
-        :key="featureName"
-        class="feature__cell feature__row-name"
-        :class="{ 'alternate-bg': index % 2 !== 0 }"
-      >
-        {{ featureName }}
+  <div v-if="selectedFormBuildersDetails.length">
+    <!-- desktop -->
+    <div class="d-none d-lg-flex w-100 my-5 pt-5">
+      <div class="feature__list d-flex flex-column">
+        <div
+          v-for="(featureName, index) in featureNameList"
+          :key="featureName"
+          class="feature__cell feature__row-name"
+          :class="{ 'alternate-bg': index % 2 !== 0 }"
+        >
+          {{ featureName }}
+        </div>
+      </div>
+      <div class="d-flex overflow-auto w-100">
+        <div
+          v-for="fb in selectedFormBuildersDetails"
+          :key="fb.id"
+          class="w-100 mw-300"
+        >
+          <div
+            class="formbuilder__logo-wrapper d-flex align-items-center justify-content-center text-center"
+          >
+            <img class="formbuilder__logo" :src="fb.logo.data.attributes.url" />
+          </div>
+          <div class="feature__cell">
+            <select
+              class="form-select select-plan__option"
+              v-model="selectedPlans[fb.id]"
+              @change="handlePlanChange($event, fb.id)"
+            >
+              <option
+                v-for="plan in fb.plan"
+                :key="`${fb.name}-${plan.name}`"
+                :value="plan.name"
+              >
+                {{ plan.name }}
+              </option>
+            </select>
+          </div>
+          <div
+            v-for="(feature, index) in getSelectedPlanFeatures(fb.id)"
+            :key="`${fb.name}-row${index}-${feature}`"
+            class="feature__cell info text-center"
+            :class="{
+              'alternate-bg': index % 2 !== 0,
+              'd-none': index === 0,
+            }"
+          >
+            {{ feature ?? '-' }}
+          </div>
+        </div>
       </div>
     </div>
-    <div class="d-flex overflow-auto w-100">
+    <!-- mobile -->
+    <div
+      class="d-lg-none mobile__formbuilder-details-wrapper d-flex flex-column mx-auto mt-5"
+    >
       <div
         v-for="fb in selectedFormBuildersDetails"
         :key="fb.id"
-        class="w-100 mw-300"
+        class="d-flex flex-column"
       >
         <div
           class="formbuilder__logo-wrapper d-flex align-items-center justify-content-center text-center"
         >
           <img class="formbuilder__logo" :src="fb.logo.data.attributes.url" />
         </div>
-        <div class="feature__cell">
-          <select
-            class="form-select select-plan__option"
-            v-model="selectedPlans[fb.id]"
-            @change="handlePlanChange($event, fb.id)"
-          >
-            <option
-              v-for="plan in fb.plan"
-              :key="`${fb.name}-${plan.name}`"
-              :value="plan.name"
+        <div class="d-flex overflow-auto">
+          <div class="feature__list d-flex flex-column">
+            <div
+              v-for="(featureName, index) in featureNameList"
+              :key="featureName"
+              class="feature__cell feature__row-name"
+              :class="{ 'alternate-bg': index % 2 !== 0 }"
             >
-              {{ plan.name }}
-            </option>
-          </select>
-        </div>
-        <div
-          v-for="(feature, index) in getSelectedPlanFeatures(fb.id)"
-          :key="`${fb.name}-row${index}-${feature}`"
-          class="feature__cell info text-center"
-          :class="{
-            'alternate-bg': index % 2 !== 0,
-            'd-none': index === 0,
-          }"
-        >
-          {{ feature ?? '-' }}
+              {{ featureName }}
+            </div>
+          </div>
+          <div class="w-100">
+            <div class="feature__cell">
+              <select
+                class="form-select select-plan__option"
+                v-model="selectedPlans[fb.id]"
+                @change="handlePlanChange($event, fb.id)"
+              >
+                <option
+                  v-for="plan in fb.plan"
+                  :key="`${fb.name}-${plan.name}`"
+                  :value="plan.name"
+                >
+                  {{ plan.name }}
+                </option>
+              </select>
+            </div>
+            <div
+              v-for="(feature, index) in getSelectedPlanFeatures(fb.id)"
+              :key="`${fb.name}-row${index}-${feature}`"
+              class="feature__cell info text-center"
+              :class="{
+                'alternate-bg': index % 2 !== 0,
+                'd-none': index === 0,
+              }"
+            >
+              {{ feature ?? '-' }}
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -136,10 +195,20 @@ export default {
 }
 
 .formbuilder__logo {
-  /* height: 22px;
-  width: auto; */
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+}
+
+/* === mobile === */
+@media screen and (max-width: 768px) {
+  .mobile__formbuilder-details-wrapper {
+    gap: 48px;
+    overflow: hidden;
+  }
+
+  .feature__list {
+    margin-top: 19px;
+  }
 }
 </style>
