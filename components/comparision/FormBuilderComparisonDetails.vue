@@ -108,6 +108,15 @@
         </div>
       </div>
     </div>
+    <div class="disparity__text mt-5 text-center">
+      <a
+        href="https://rdjguczw.formester.com/f/0dc9b105-dfda-4e31-b59d-fff7befbbc73"
+        target="_blank"
+        class="disparity__text-link"
+        >Click here</a
+      >
+      to report any disparity in the information provided.
+    </div>
   </div>
 </template>
 
@@ -198,6 +207,16 @@ export default {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+}
+
+.disparity__text {
+  font-size: 16px;
+  color: var(--clr-text-secondary);
+}
+
+.disparity__text-link {
+  color: var(--clr-primary);
+  text-decoration: underline;
 }
 
 /* === mobile === */
