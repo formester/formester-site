@@ -3,83 +3,43 @@
     <ComparisonToolHero />
     <div class="container">
       <div class="comparison__card-container mx-auto my-5">
-        <div
-          v-for="(selectedFB, index) in selectedFormBuilders"
-          :key="selectedFB"
-        >
+        <div v-for="(selectedFB, index) in selectedFormBuilders" :key="index">
           <ComparisonCard
             :options="filteredOptions(index)"
             :selected-option="selectedFB"
             :card-number="index"
+            :form-builders-logo-src="formBuildersLogoSrc"
             @change="handleOptionChange"
           />
         </div>
       </div>
-      <div class="mt-5 py-5">
-        <div class="table-responsive mt-5">
-          <table class="table text-start">
-            <thead>
-              <tr class="plan-header">
-                <td></td>
-                <td>
-                  <div class="plan__name mb-3">Free</div>
-                  <a
-                    href="https://app.formester.com/users/sign_up"
-                    class="table__button"
-                    >Start for free</a
-                  >
-                </td>
-                <td>
-                  <div class="plan__name mb-3">Personal</div>
-                  <a
-                    href="https://app.formester.com/users/sign_up"
-                    class="table__button hglt"
-                    >Get started</a
-                  >
-                </td>
-                <td>
-                  <div class="plan__name mb-3">Business</div>
-                  <a
-                    href="https://app.formester.com/users/sign_up"
-                    class="table__button"
-                    >Get started</a
-                  >
-                </td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr
-                v-for="feature in comparisonTableFeatures"
-                :key="feature.name"
-              >
-                <th class="feature">{{ feature.name }}</th>
-                <td>
-                  <template v-if="feature.free === 'Yes'">
-                    <nuxt-img src="check-green.svg" />
-                  </template>
-                  <template v-else>
-                    {{ feature.free }}
-                  </template>
-                </td>
-                <td>
-                  <template v-if="feature.pro === 'Yes'">
-                    <nuxt-img src="check-green.svg" />
-                  </template>
-                  <template v-else>
-                    {{ feature.pro }}
-                  </template>
-                </td>
-                <td>
-                  <template v-if="feature.business === 'Yes'">
-                    <nuxt-img src="check-green.svg" />
-                  </template>
-                  <template v-else>
-                    {{ feature.business }}
-                  </template>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+      <div class="d-flex">
+        <div class="d-flex flex-column">
+          <div v-for="featureName in featureNameList" :key="featureName">
+            {{ featureName }}
+          </div>
+        </div>
+        <div class="d-flex">
+          <div v-for="(fb, idx) in selectedFormBuildersDetails" :key="fb.id">
+            <div class="plan__name">
+              <nuxt-img :src="formBuildersLogoSrc[fb.name]" />
+            </div>
+            <select
+              class="option-select"
+              v-model="selectedPlans[fb.id]"
+              @change="handlePlanChange($event, fb.id)"
+            >
+              <option v-for="(plan, i) in fb.plan" :key="i" :value="plan.name">
+                {{ plan.name }}
+              </option>
+            </select>
+            <div
+              v-for="(feature, index) in getSelectedPlanFeatures(fb.id)"
+              :key="index"
+            >
+              <div>{{ feature ?? '-' }}</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -89,16 +49,37 @@
 <script>
 import ComparisonToolHero from '@/components/comparision/ComparisonToolHero.vue'
 import ComparisonCard from '@/components/comparision/ComparisonCard.vue'
-import { comparisonTableFeatures } from '@/constants/plan'
+import { comparisonTableFeatures, featureNameList } from '@/constants/plan'
+import axios from 'axios'
 
 export default {
   components: {
     ComparisonToolHero,
     ComparisonCard,
   },
+  async asyncData() {
+    const {
+      data: { data },
+    } = await axios.get(`${process.env.strapiUrl}/api/form-builders`, {
+      params: {
+        populate: ['plan', 'plan.features'],
+      },
+    })
+
+    let formBuilders = data.map((item) => {
+      return {
+        id: item.id,
+        ...item.attributes,
+      }
+    })
+
+    const options = formBuilders.map((fb) => fb.name)
+
+    return { formBuilders, options }
+  },
   data() {
     return {
-      options: ['Formester', 'Typeform', 'Jotform', 'Fillout'],
+      options: [],
       selectedFormBuilders: {
         0: '',
         1: '',
@@ -106,11 +87,30 @@ export default {
         3: '',
       },
       comparisonTableFeatures,
+      featureNameList,
+      selectedPlans: {},
+      formBuildersLogoSrc: {
+        Formester: '/logo.svg',
+        Typeform: '/form-building-platforms/typeform.svg',
+        Jotform: '/form-building-platforms/jotform.svg',
+        Fillout: '/form-building-platforms/fillout.svg',
+      },
     }
+  },
+  created() {
+    this.formBuilders.forEach((fb) => {
+      this.$set(this.selectedPlans, fb.id, fb.plan[0].name)
+    })
+  },
+  computed: {
+    selectedFormBuildersDetails() {
+      return this.formBuilders.filter((fb) =>
+        Object.values(this.selectedFormBuilders).includes(fb.name)
+      )
+    },
   },
   methods: {
     filteredOptions(cardNumber) {
-      // Returns options that are not selected by any other card (or are currently selected by this card).
       const selectedOptions = Object.values(this.selectedFormBuilders).filter(
         Boolean
       )
@@ -121,8 +121,22 @@ export default {
       )
     },
     handleOptionChange(selectedOption, cardNumber) {
-      // Updates the selected option for the specified card
-      this.selectedFormBuilders[cardNumber] = selectedOption
+      this.$set(this.selectedFormBuilders, cardNumber, selectedOption)
+    },
+    handlePlanChange(event, formBuilderId) {
+      const selectedPlan = event.target.value
+      this.$set(this.selectedPlans, formBuilderId, selectedPlan)
+    },
+    getSelectedPlanFeatures(formBuilderId) {
+      const formBuilder = this.formBuilders.find(
+        (fb) => fb.id === formBuilderId
+      )
+      const selectedPlan = formBuilder.plan.find(
+        (plan) => plan.name === this.selectedPlans[formBuilderId]
+      )
+      return selectedPlan && selectedPlan.features
+        ? Object.values(selectedPlan.features)
+        : []
     },
   },
 }
@@ -153,17 +167,6 @@ tr th {
 tr td,
 thead tr td {
   padding-inline: 20px;
-}
-
-thead tr td:nth-child(3) {
-  background-color: #fafafa;
-  border-inline: 1px solid #e5e5e5;
-  border-top: 1px solid #e5e5e5;
-}
-
-tbody tr td:nth-child(3) {
-  background-color: #fafafa;
-  border-inline: 1px solid #e5e5e5;
 }
 
 table td {

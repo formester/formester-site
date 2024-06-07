@@ -3,14 +3,9 @@
     <div class="comparison__logo-wrapper d-flex justify-content-center">
       <nuxt-img
         v-if="modelSelectedOption"
-        :src="formBuilderLogoSrc[modelSelectedOption]"
-        class="commparison__logo"
+        :src="formBuildersLogoSrc[modelSelectedOption]"
       />
-      <nuxt-img
-        v-else
-        src="/form-building-platforms/plus.svg"
-        class="commparison__logo"
-      />
+      <nuxt-img v-else src="/form-building-platforms/plus.svg" />
     </div>
     <div class="comparison__dropdown-wrapper">
       <select
@@ -42,16 +37,14 @@ export default {
       type: String,
       default: '',
     },
+    formBuildersLogoSrc: {
+      type: Object,
+      required: true,
+    },
   },
   data() {
     return {
       modelSelectedOption: this.selectedOption,
-      formBuilderLogoSrc: {
-        Formester: '/logo.svg',
-        Typeform: '/form-building-platforms/typeform.svg',
-        Jotform: '/form-building-platforms/jotform.svg',
-        Fillout: '/form-building-platforms/fillout.svg',
-      },
     }
   },
   methods: {
