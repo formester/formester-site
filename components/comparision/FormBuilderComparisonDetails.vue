@@ -98,7 +98,7 @@ export default {
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
-  margin-top: 46px;
+  margin-top: 58px;
 }
 
 .feature__cell {
