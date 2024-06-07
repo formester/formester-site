@@ -29,7 +29,7 @@
 import ComparisonToolHero from '@/components/comparision/ComparisonToolHero.vue'
 import ComparisonCard from '@/components/comparision/ComparisonCard.vue'
 import FormBuilderComparisonDetails from '@/components/comparision/FormBuilderComparisonDetails.vue'
-import { comparisonTableFeatures, featureNameList } from '@/constants/plan'
+import { featureNameList } from '@/constants/plan'
 import axios from 'axios'
 
 export default {
@@ -53,25 +53,23 @@ export default {
     }))
 
     const options = formBuilders.map((fb) => fb.name)
-    const selectedPlans = formBuilders.reduce((acc, fb) => {
-      acc[fb.id] = fb.plan[0].name
-      return acc
-    }, {})
+
+    const selectedPlans = {}
+    formBuilders.forEach((fb) => {
+      selectedPlans[fb.id] = fb.plan[0].name
+    })
 
     return { formBuilders, options, selectedPlans }
   },
   data() {
     return {
-      options: [],
       selectedFormBuilders: {
         0: '',
         1: '',
         2: '',
         3: '',
       },
-      comparisonTableFeatures,
       featureNameList,
-      selectedPlans: {},
       formBuildersLogoSrc: {
         Formester: '/logo.svg',
         Typeform: '/form-building-platforms/typeform.svg',
