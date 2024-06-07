@@ -93,6 +93,7 @@
 /* === COLORS ===*/
 :root {
   --clr-primary: #6434d0;
+  --clr-primary-600: #7f56d9;
   --clr-primary-hover: #472594;
   --clr-primary-light: #f0ebfa;
   --clr-primary-light-hover: #d1ceff;
@@ -100,6 +101,10 @@
   --clr-neutral-900: #171717;
   --clr-neutral-700: #404040;
   --clr-neutral-600: #525252;
+  --clr-neutral-500: #737373;
+
+  --clr-text-primary: #101828;
+  --clr-text-secondary: #475467;
 }
 
 /* === BOX SHADOWS === */
