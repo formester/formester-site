@@ -2,12 +2,12 @@
   <div>
     <ComparisonToolHero />
     <div class="container">
-      <div class="comparison__card-container mx-auto my-5">
+      <div class="comparison_card-container mx-auto my-5">
         <div
           v-for="(selectedFB, index) in selectedFormBuildersOption"
-          :key="index"
+          :key="selectedFB + index"
         >
-          <ComparisonCard
+          <ComparisonOptionSelectCard
             :options="filteredOptions(index)"
             :selected-option="selectedFB"
             :card-number="index"
@@ -23,12 +23,24 @@
         :form-builders="formBuilders"
         @update:selectedPlans="updateSelectedPlans"
       />
+      <div class="my-5">
+        <h2 class="section__heading">Popular Form Builder Comparisons</h2>
+        <div class="section__grid">
+          <ComparisonCard
+            imgSrc="/form-building-platforms/formester-vs-typeform.svg"
+            formBuilder1="Formester"
+            formBuilder2="Typeform"
+            @onViewComparisonButtonClick="handleViewComparisonClick"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import ComparisonToolHero from '@/components/comparision/ComparisonToolHero.vue'
+import ComparisonOptionSelectCard from '@/components/comparision/ComparisonOptionSelectCard.vue'
 import ComparisonCard from '@/components/comparision/ComparisonCard.vue'
 import FormBuilderComparisonDetails from '@/components/comparision/FormBuilderComparisonDetails.vue'
 import { featureNameList } from '@/constants/plan'
@@ -38,6 +50,7 @@ import axios from 'axios'
 export default {
   components: {
     ComparisonToolHero,
+    ComparisonOptionSelectCard,
     ComparisonCard,
     FormBuilderComparisonDetails,
   },
@@ -122,6 +135,10 @@ export default {
     updateSelectedPlans({ formBuilderId, selectedPlan }) {
       this.$set(this.selectedPlans, formBuilderId, selectedPlan)
     },
+    handleViewComparisonClick(formBuilder1, formBuilder2) {
+      this.handleOptionChange(formBuilder1, 0)
+      this.handleOptionChange(formBuilder2, 1)
+    },
   },
   head() {
     return {
@@ -183,20 +200,45 @@ export default {
 </script>
 
 <style scoped>
-.comparison__card-container {
+.comparison_card-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 24px;
 }
 
+.section__heading {
+  color: var(--clr-text-primary);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: -0.72px;
+  margin-bottom: 32px;
+}
+
+.section__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px;
+}
+
 @media screen and (max-width: 1200px) {
-  .comparison__card-container {
+  .comparison_card-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 24px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .comparison__card-container {
+  .comparison_card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .section__grid {
     grid-template-columns: 1fr;
   }
 }

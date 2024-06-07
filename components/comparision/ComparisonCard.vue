@@ -1,74 +1,66 @@
 <template>
-  <div class="comparison__card">
-    <div class="comparison__logo-wrapper d-flex justify-content-center">
-      <img
-        v-if="modelSelectedOption"
-        :src="formBuildersLogoSrc[modelSelectedOption]"
-      />
-      <nuxt-img v-else src="/form-building-platforms/plus.svg" />
-    </div>
-    <div class="comparison__dropdown-wrapper">
-      <select
-        class="form-select"
-        v-model="modelSelectedOption"
-        @change="emitChange"
-      >
-        <option disabled hidden value="">Select a tool</option>
-        <option v-for="option in options" :key="option" :value="option">
-          {{ option }}
-        </option>
-      </select>
-    </div>
+  <div class="comparison_card">
+    <nuxt-img :src="imgSrc" alt="Formester vs Typeform" class="img-fluid" />
+    <h3 class="comparison_card-title">
+      Compare {{ formBuilder1 }} vs {{ formBuilder2 }}
+    </h3>
+    <button
+      class="btn__secondary"
+      @click="$emit('onViewComparisonButtonClick', formBuilder1, formBuilder2)"
+    >
+      View Comparison
+    </button>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    cardNumber: {
-      type: String || Number,
-      required: true,
-    },
-    options: {
-      type: Array,
-      required: true,
-    },
-    selectedOption: {
+    imgSrc: {
       type: String,
-      default: '',
+      required: true,
     },
-    formBuildersLogoSrc: {
-      type: Object,
+    formBuilder1: {
+      type: String,
+      required: true,
+    },
+    formBuilder2: {
+      type: String,
       required: true,
     },
   },
-  data() {
-    return {
-      modelSelectedOption: this.selectedOption,
-    }
-  },
-  methods: {
-    emitChange() {
-      this.$emit('change', this.modelSelectedOption, this.cardNumber)
-    },
+  mounted() {
+    console.log(this.imgSrc, this.formBuilder1, this.formBuilder2)
   },
 }
 </script>
 
 <style scoped>
-.comparison__card {
+.comparison_card {
+  padding: 24px;
   border-radius: 4px;
   border: 1px solid #eaecf0;
   box-shadow: var(--box-shadow-lg);
 }
 
-.comparison__logo-wrapper {
-  padding: 48px 24px 12px;
-  min-height: 154px;
+.comparison_card-title {
+  color: var(--clr-text-primary);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-block: 16px 24px;
 }
 
-.comparison__dropdown-wrapper {
-  border-top: 1px solid #eaecf0;
-  padding: 40px 24px 72px;
+.btn__secondary {
+  padding: 12px 20px;
+  border-radius: 4px;
+  border: 1px solid var(--Gray-300, #d0d5dd);
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  color: var(--clr-text-secondary);
+  background: white;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  cursor: pointer;
 }
 </style>
