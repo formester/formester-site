@@ -32,6 +32,7 @@ import ComparisonToolHero from '@/components/comparision/ComparisonToolHero.vue'
 import ComparisonCard from '@/components/comparision/ComparisonCard.vue'
 import FormBuilderComparisonDetails from '@/components/comparision/FormBuilderComparisonDetails.vue'
 import { featureNameList } from '@/constants/plan'
+import getSiteMeta from '@/utils/getSiteMeta'
 import axios from 'axios'
 
 export default {
@@ -71,6 +72,14 @@ export default {
     }
   },
   computed: {
+    meta() {
+      const metaData = {
+        type: 'website',
+        url: 'https://formester.com/comparison-tool/',
+        title: 'Easy way to compare Form Builders!',
+      }
+      return getSiteMeta(metaData)
+    },
     formBuildersLogoSrc() {
       const logoSrc = {}
       this.formBuilders.forEach((fb) => {
@@ -113,6 +122,62 @@ export default {
     updateSelectedPlans({ formBuilderId, selectedPlan }) {
       this.$set(this.selectedPlans, formBuilderId, selectedPlan)
     },
+  },
+  head() {
+    return {
+      title: 'Easy way to compare Form Builders!',
+      description:
+        'Compare form builders side by side with Formester’s comparison tool. Find the best form builder for your needs with ease!',
+      meta: [...this.meta],
+      keywords:
+        'form builder, form builder comparison, form builder comparison tool',
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://formester.com/comparison-tool/',
+        },
+      ],
+    }
+  },
+  jsonld() {
+    return {
+      '@context': 'http://schema.org',
+      '@graph': [
+        {
+          '@type': 'Corporation',
+          '@id': 'https://acornglobus.com',
+          name: "Jotform 101: All About Jotform's Forms by Formester!",
+          description:
+            "Discover Jotform's full potential with Formester's guide. Unlock powerful form building features, tips & tricks!",
+          logo: 'https://formester.com/logo.png',
+          url: 'https://formester.com',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Delaware',
+            addressCountry: 'United States',
+          },
+        },
+        {
+          '@type': 'BreadcrumbList',
+          '@id': 'https://acornglobus.com',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Formester',
+              item: 'https://formester.com/',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Jotform 101: All About Jotform’s Forms by Formester!',
+              item: 'https://formester.com/comparison-tool/',
+            },
+          ],
+        },
+      ],
+    }
   },
 }
 </script>
