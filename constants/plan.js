@@ -336,6 +336,7 @@ export const comparisonTableFeatures = [
 ]
 
 export const featureNameList = [
+  'Select Plan',
   'No of Forms',
   'Submission per month',
   'Remove Branding',

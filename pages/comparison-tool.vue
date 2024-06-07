@@ -13,31 +13,50 @@
           />
         </div>
       </div>
-      <div class="d-flex">
-        <div class="d-flex flex-column">
-          <div v-for="featureName in featureNameList" :key="featureName">
+      <div v-if="selectedFormBuildersDetails.length" class="d-flex">
+        <div class="feature__list d-flex flex-column">
+          <div
+            v-for="(featureName, index) in featureNameList"
+            :key="featureName"
+            class="feature__cell"
+            :class="{ 'alternate-bg': index % 2 !== 0 }"
+          >
             {{ featureName }}
           </div>
         </div>
         <div class="d-flex">
-          <div v-for="(fb, idx) in selectedFormBuildersDetails" :key="fb.id">
-            <div class="plan__name">
-              <nuxt-img :src="formBuildersLogoSrc[fb.name]" />
+          <div v-for="fb in selectedFormBuildersDetails" :key="fb.id">
+            <div class="plan__name text-center">
+              <nuxt-img
+                class="formbuilder__logo"
+                :src="formBuildersLogoSrc[fb.name]"
+              />
             </div>
-            <select
-              class="option-select"
-              v-model="selectedPlans[fb.id]"
-              @change="handlePlanChange($event, fb.id)"
-            >
-              <option v-for="(plan, i) in fb.plan" :key="i" :value="plan.name">
-                {{ plan.name }}
-              </option>
-            </select>
+            <div class="feature__cell">
+              <select
+                class="form-select select-plan__option"
+                v-model="selectedPlans[fb.id]"
+                @change="handlePlanChange($event, fb.id)"
+              >
+                <option
+                  v-for="plan in fb.plan"
+                  :key="`${fb.name}-${plan.name}`"
+                  :value="plan.name"
+                >
+                  {{ plan.name }}
+                </option>
+              </select>
+            </div>
             <div
               v-for="(feature, index) in getSelectedPlanFeatures(fb.id)"
-              :key="index"
+              :key="`${fb.name}-row${index}-${feature}`"
+              class="feature__cell info text-center"
+              :class="{
+                'alternate-bg': index % 2 !== 0,
+                'd-none': index === 0,
+              }"
             >
-              <div>{{ feature ?? '-' }}</div>
+              {{ feature ?? '-' }}
             </div>
           </div>
         </div>
@@ -163,9 +182,6 @@ export default {
 </script>
 
 <style scoped>
-/* ... styles remain the same ... */
-</style>
-<style scoped>
 .comparison__card-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -224,6 +240,41 @@ table td {
 
 .feature {
   font-weight: 500;
+}
+
+/*  */
+.formbuilder__logo {
+  height: 22px;
+  width: auto;
+}
+
+.feature__list {
+  color: var(--clr-text-primary);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-top: 46px;
+}
+
+.feature__cell {
+  padding: 20px 24px;
+}
+
+.feature__cell.alternate-bg {
+  background-color: #f9fafb;
+}
+
+.feature__cell.info {
+  color: var(--clr-text-secondary);
+  font-size: 14px;
+  line-height: 20px;
+  min-width: 300px;
+}
+
+.select-plan__option {
+  max-width: 200px;
+  margin: auto;
+  text-transform: capitalize;
 }
 
 @media screen and (max-width: 1200px) {
