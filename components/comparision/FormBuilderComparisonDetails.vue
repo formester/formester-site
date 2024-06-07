@@ -108,7 +108,7 @@
         </div>
       </div>
     </div>
-    <div class="disparity__text mt-5 text-center">
+    <!-- <div class="disparity__text mt-5 text-center">
       <a
         href="https://rdjguczw.formester.com/f/0dc9b105-dfda-4e31-b59d-fff7befbbc73"
         target="_blank"
@@ -116,7 +116,7 @@
         >Click here</a
       >
       to report any disparity in the information provided.
-    </div>
+    </div> -->
   </div>
 </template>
 
