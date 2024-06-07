@@ -53,16 +53,16 @@ export default {
     }))
 
     const options = formBuilders.map((fb) => fb.name)
-    const selectedPlans = formBuilders.reduce((acc, fb) => {
-      acc[fb.id] = fb.plan[0].name
-      return acc
-    }, {})
+
+    const selectedPlans = {}
+    formBuilders.forEach((fb) => {
+      selectedPlans[fb.id] = fb.plan[0].name
+    })
 
     return { formBuilders, options, selectedPlans }
   },
   data() {
     return {
-      options: [],
       selectedFormBuilders: {
         0: '',
         1: '',
@@ -71,7 +71,6 @@ export default {
       },
       comparisonTableFeatures,
       featureNameList,
-      selectedPlans: {},
       formBuildersLogoSrc: {
         Formester: '/logo.svg',
         Typeform: '/form-building-platforms/typeform.svg',
