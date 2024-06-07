@@ -62,12 +62,7 @@ export default {
   },
   data() {
     return {
-      selectedFormBuilders: {
-        0: '',
-        1: '',
-        2: '',
-        3: '',
-      },
+      selectedFormBuilders: ['', '', '', ''],
       featureNameList,
       selectedFormBuildersDetails: [],
     }
@@ -87,9 +82,7 @@ export default {
   },
   methods: {
     filteredOptions(cardNumber) {
-      const selectedOptions = Object.values(this.selectedFormBuilders).filter(
-        Boolean
-      )
+      const selectedOptions = this.selectedFormBuilders.filter(Boolean)
       return this.options.filter(
         (option) =>
           !selectedOptions.includes(option) ||
