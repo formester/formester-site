@@ -35,6 +35,7 @@
                 :value="plan.name"
               >
                 {{ plan.name }}
+                - ${{ plan.amount }}/mo
               </option>
             </select>
           </div>
@@ -196,7 +197,6 @@ export default {
 .select-plan__option {
   max-width: 200px;
   margin: auto;
-  text-transform: capitalize;
 }
 
 .formbuilder__logo-wrapper {
