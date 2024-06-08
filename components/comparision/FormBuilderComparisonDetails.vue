@@ -14,38 +14,11 @@
           >
             <img class="formbuilder__logo" :src="fb.logo.data.attributes.url" />
           </div>
-          <div class="feature__cell">
-            <select
-              class="form-select select-plan__option"
-              v-model="selectedPlans[fb.id]"
-              @change="handlePlanChange($event, fb.id)"
-            >
-              <option
-                v-for="plan in fb.plan"
-                :key="`${fb.name}-${plan.name}`"
-                :value="plan.name"
-              >
-                {{ plan.name }}
-                - ${{ plan.amount }}/mo
-              </option>
-            </select>
-          </div>
-          <div
-            v-for="(feature, index) in getSelectedPlanFeatures(fb.id)"
-            :key="`${fb.name}-row${index}-${feature}`"
-            class="feature__cell info text-center"
-            :class="{
-              'alternate-bg': index % 2 !== 0,
-              'd-none': index === 0,
-            }"
-          >
-            <template v-if="trimString(feature) === 'Available'">
-              <nuxt-img src="check-green.svg" />
-            </template>
-            <template v-else>
-              {{ feature ?? '-' }}
-            </template>
-          </div>
+          <FormBuilderDetails
+            :formBuilder="fb"
+            :selectedPlans="selectedPlans"
+            @onPlanChange="handlePlanChange"
+          />
         </div>
       </div>
     </div>
@@ -66,33 +39,11 @@
         <div class="d-flex overflow-auto">
           <FormBuilderFeatureList :featureNameList="featureNameList" />
           <div class="w-100">
-            <div class="feature__cell">
-              <select
-                class="form-select select-plan__option"
-                v-model="selectedPlans[fb.id]"
-                @change="handlePlanChange($event, fb.id)"
-              >
-                <option
-                  v-for="plan in fb.plan"
-                  :key="`${fb.name}-${plan.name}`"
-                  :value="plan.name"
-                >
-                  {{ plan.name }}
-                  - ${{ plan.amount }}/mo
-                </option>
-              </select>
-            </div>
-            <div
-              v-for="(feature, index) in getSelectedPlanFeatures(fb.id)"
-              :key="`${fb.name}-row${index}-${feature}`"
-              class="feature__cell info text-center"
-              :class="{
-                'alternate-bg': index % 2 !== 0,
-                'd-none': index === 0,
-              }"
-            >
-              {{ feature ?? '-' }}
-            </div>
+            <FormBuilderDetails
+              :formBuilder="fb"
+              :selectedPlans="selectedPlans"
+              @onPlanChange="handlePlanChange"
+            />
           </div>
         </div>
       </div>
@@ -111,12 +62,12 @@
 
 <script>
 import FormBuilderFeatureList from '@/components/comparision/FormBuilderFeatureList.vue'
-import FormBuiilderDetails from '@/components/comparision/FormBuilderDetails.vue'
+import FormBuilderDetails from '@/components/comparision/FormBuilderDetails.vue'
 
 export default {
   components: {
     FormBuilderFeatureList,
-    FormBuiilderDetails,
+    FormBuilderDetails,
   },
   props: {
     selectedFormBuildersDetails: {
@@ -141,49 +92,13 @@ export default {
       const selectedPlan = event.target.value
       this.$emit('update:selectedPlans', { formBuilderId, selectedPlan })
     },
-    getSelectedPlanFeatures(formBuilderId) {
-      const formBuilder = this.formBuilders.find(
-        (fb) => fb.id === formBuilderId
-      )
-      const selectedPlan = formBuilder.plan.find(
-        (plan) => plan.name === this.selectedPlans[formBuilderId]
-      )
-      return selectedPlan && selectedPlan.features
-        ? Object.values(selectedPlan.features)
-        : []
-    },
-    trimString(feature) {
-      const featureText = String(feature)
-      return featureText.trim()
-    },
   },
 }
 </script>
 
 <style scoped>
-.feature__cell {
-  padding: 20px 24px;
-}
-
-.feature__cell.alternate-bg {
-  background-color: #f9fafb;
-}
-
-.feature__cell.info {
-  color: var(--clr-text-secondary);
-  font-size: 14px;
-  line-height: 20px;
-  min-width: 200px;
-  width: 100%;
-}
-
 .mw-300 {
   max-width: 300px;
-}
-
-.select-plan__option {
-  max-width: 200px;
-  margin: auto;
 }
 
 .formbuilder__logo-wrapper {
@@ -211,15 +126,6 @@ export default {
   .mobile__formbuilder-details-wrapper {
     gap: 48px;
     overflow: hidden;
-  }
-
-  .feature__cell {
-    font-size: 13px;
-    padding: 16px 12px;
-  }
-
-  .feature__cell.info {
-    min-width: fit-content;
   }
 }
 </style>
