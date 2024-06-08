@@ -20,32 +20,17 @@
         <a
           class="button pricing__button text-center"
           href="https://app.formester.com/users/sign_up"
+          :class="{ muted: muted }"
           >{{ planTextButton }}</a
         >
       </div>
       <ul
         class="pricing__features d-flex flex-column align-items-start p-4 border-top mb-0 text-start"
       >
-        <li
-          v-for="(feature, index) in plan.features.general"
-          :key="feature + index"
-        >
+        <li v-for="(feature, index) in plan.features" :key="feature + index">
           {{ feature }}
         </li>
       </ul>
-      <div class="text-start p-4 border-top">
-        <span class="key__features-heading">{{ keyFeaturesHeading }}</span>
-        <ul
-          class="key__features d-flex flex-column align-items-start ps-4 mt-3 mb-0"
-        >
-          <li
-            v-for="(feature, index) in plan.features.keyFeatures"
-            :key="feature + index"
-          >
-            {{ feature }}
-          </li>
-        </ul>
-      </div>
     </div>
   </div>
 </template>
@@ -53,8 +38,9 @@
 <script>
 export default {
   props: {
-    plan: Object,
-    highlighted: Boolean,
+    plan: { type: Object, required: true },
+    highlighted: { type: Boolean, default: false },
+    muted: { type: Boolean, default: false },
   },
   data() {
     return {
@@ -102,7 +88,7 @@ export default {
 }
 
 .pricing__card.hglt {
-  border: 4px solid #7965b0;
+  border: 4px solid var(--clr-primary);
   margin-top: -38px;
 }
 
@@ -115,7 +101,7 @@ export default {
 .pricing__card.hglt::before {
   content: 'MOST POPULAR';
   padding: 4px;
-  background-color: #7965b0;
+  background-color: var(--clr-primary);
   color: white;
   font-size: 12px;
   font-weight: 600;
@@ -177,6 +163,7 @@ export default {
 }
 
 .pricing__button {
+  color: var(--clr-primary);
   background-color: var(--clr-primary-light);
   padding: 16px;
   border-radius: 8px;
@@ -184,6 +171,19 @@ export default {
   font-weight: 500;
   text-transform: capitalize;
   transition: 300ms ease-out;
+}
+
+.pricing__button.muted {
+  color: var(--clr-text-secondary);
+  border-radius: 4px;
+  border: 1px solid #d0d5dd;
+  background: white;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+.pricing__button.muted:hover {
+  border: 1px solid #dfe4eb;
+  box-shadow: 0px 4px 8px 0px rgba(16, 24, 40, 0.01);
 }
 
 .pricing__card.hglt .pricing__button {
