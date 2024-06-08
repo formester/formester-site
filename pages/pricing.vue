@@ -2,17 +2,21 @@
   <div>
     <div class="text-center mt-5 px-3">
       <h1 class="pricing__heading">Pricing that feels just right</h1>
-      <p class="pricing__subheading">Start with our free plan</p>
+      <p class="pricing__subheading">
+        Select the perfect plan for your needs, and star building beautiful
+        forms!
+      </p>
 
       <div
         class="d-flex justify-content-center align-items-center plan_toggle__switch"
       >
-        <span>Monthly</span>
         <label class="switch">
           <input type="checkbox" class="plan_toggle" v-model="isYearly" />
           <div class="slider round"></div>
         </label>
-        <span>Yearly</span>
+        <span
+          >Annual pricing <span class="text__primary">(save 20%)</span></span
+        >
       </div>
 
       <div class="mw-1200 mx-auto">
@@ -20,17 +24,19 @@
           v-if="!isYearly"
           class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3"
         >
-          <PricingCard :plan="free" />
+          <PricingCard :plan="free" muted />
           <PricingCard :plan="personalMonthly" highlighted />
           <PricingCard :plan="businessMonthly" />
+          <!-- <PricingCard :plan="enterprise" /> -->
         </div>
         <div
           v-if="isYearly"
           class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3"
         >
-          <PricingCard :plan="free" />
+          <PricingCard :plan="free" muted />
           <PricingCard :plan="personalYearly" highlighted />
           <PricingCard :plan="businessYearly" />
+          <!-- <PricingCard :plan="enterprise" /> -->
         </div>
         <div class="mt-5 py-5">
           <h2 class="comparision__table-heading mb-5">
@@ -120,6 +126,7 @@ import {
   freeYearly,
   personalYearly,
   businessYearly,
+  enterprise,
   comparisonTableFeatures,
 } from '../constants/plan'
 
@@ -138,6 +145,7 @@ export default {
       personalYearly,
       businessYearly,
       comparisonTableFeatures,
+      enterprise,
     }
   },
   computed: {
@@ -324,14 +332,17 @@ export default {
 }
 
 .pricing__heading {
-  font-size: var(--ft-bigger-body);
+  color: var(--clr-text-primary);
+  font-size: 48px;
   font-weight: 600;
+  line-height: 60px;
+  letter-spacing: -0.96px;
 }
 
 .plan_toggle__switch {
   margin-top: 3rem;
   gap: 18px;
-  font-size: var(--ft-subtitle);
+  font-size: 16px;
   font-weight: 500;
   line-height: normal;
 }
@@ -374,11 +385,11 @@ export default {
 }
 
 input:checked + .slider {
-  background-color: #6d5eac;
+  background-color: var(--clr-primary);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #6d5eac;
+  box-shadow: 0 0 1px var(--clr-primary);
 }
 
 input:checked + .slider:before {
@@ -393,6 +404,10 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.text__primary {
+  color: var(--clr-primary);
 }
 
 /* TABLE */
@@ -410,6 +425,7 @@ tr td,
 tr th {
   padding-block: 12px;
   font-size: 14px;
+  border: none;
 }
 
 tr td,
@@ -417,19 +433,12 @@ thead tr td {
   padding-inline: 20px;
 }
 
-thead tr td:nth-child(3) {
-  background-color: #fafafa;
-  border-inline: 1px solid #e5e5e5;
-  border-top: 1px solid #e5e5e5;
-}
-
-tbody tr td:nth-child(3) {
-  background-color: #fafafa;
-  border-inline: 1px solid #e5e5e5;
-}
-
 table td {
   min-width: 169px;
+}
+
+table tr:nth-child(even) {
+  background: #f9fafb;
 }
 
 .plan__name {
