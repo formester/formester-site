@@ -2,16 +2,7 @@
   <div v-if="selectedFormBuildersDetails.length" class="my-5 pt-5">
     <!-- desktop -->
     <div class="d-none d-lg-flex w-100">
-      <div class="feature__list d-flex flex-column">
-        <div
-          v-for="(featureName, index) in featureNameList"
-          :key="featureName"
-          class="feature__cell"
-          :class="{ 'alternate-bg': index % 2 !== 0 }"
-        >
-          {{ featureName }}
-        </div>
-      </div>
+      <FormBuilderFeatureList :featureNameList="featureNameList" />
       <div class="d-flex overflow-auto w-100">
         <div
           v-for="fb in selectedFormBuildersDetails"
@@ -73,16 +64,7 @@
           <img class="formbuilder__logo" :src="fb.logo.data.attributes.url" />
         </div>
         <div class="d-flex overflow-auto">
-          <div class="feature__list d-flex flex-column">
-            <div
-              v-for="(featureName, index) in featureNameList"
-              :key="featureName"
-              class="feature__cell"
-              :class="{ 'alternate-bg': index % 2 !== 0 }"
-            >
-              {{ featureName }}
-            </div>
-          </div>
+          <FormBuilderFeatureList :featureNameList="featureNameList" />
           <div class="w-100">
             <div class="feature__cell">
               <select
@@ -128,7 +110,14 @@
 </template>
 
 <script>
+import FormBuilderFeatureList from '@/components/comparision/FormBuilderFeatureList.vue'
+import FormBuiilderDetails from '@/components/comparision/FormBuilderDetails.vue'
+
 export default {
+  components: {
+    FormBuilderFeatureList,
+    FormBuiilderDetails,
+  },
   props: {
     selectedFormBuildersDetails: {
       type: Array,
@@ -172,15 +161,6 @@ export default {
 </script>
 
 <style scoped>
-.feature__list {
-  color: var(--clr-text-primary);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  margin-top: 58px;
-  min-width: fit-content;
-}
-
 .feature__cell {
   padding: 20px 24px;
 }
@@ -231,14 +211,6 @@ export default {
   .mobile__formbuilder-details-wrapper {
     gap: 48px;
     overflow: hidden;
-  }
-
-  .feature__list {
-    margin-top: 19px;
-  }
-
-  .feature__list {
-    min-width: fit-content;
   }
 
   .feature__cell {
