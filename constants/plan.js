@@ -4,29 +4,20 @@ export const free = {
   type: 'Monthly',
   description:
     'For individuals who need to quickly collect data through forms.',
-  features: {
-    general: [
-      '10 forms',
-      '100 Submission/month',
-      '100 MB file uploads',
-      '1 Google Sheets Integration',
-      '1 Webhook',
-      '10 Signatures',
-    ],
-    keyFeatures: [
-      'Email Auto-responder',
-      'Basic Analytics',
-      'Access to Template Library',
-      'Zapier Integrations',
-      'SMTP Integration',
-      'Accept Payments (1% commission)',
-      'Spam Protection',
-      'Self Email Notifications',
-      'Respondent Email Notifications',
-      'Redirect to URL',
-      'Hidden Fields',
-    ],
-  },
+  features: [
+    '10 forms',
+    '100 Submission/month',
+    '100 MB file uploads',
+    '1 Google Sheets Integration',
+    '1 Webhook',
+    '10 Signatures',
+  ],
+}
+
+export const enterprise = {
+  name: 'Enterprise',
+  description: 'For organizations needing custom plan as per the requirements.',
+  features: ['Customizable'],
 }
 
 export const personalMonthly = {
@@ -35,27 +26,14 @@ export const personalMonthly = {
   type: 'Monthly',
   description:
     'For individuals who need to create beautiful, branded forms on a regular basis.',
-  features: {
-    general: [
-      'Unlimited forms',
-      '1k Submission/month',
-      '1 GB file uploads',
-      'Unlimited Google Sheets Integration',
-      '50 Webhooks',
-      '250 Signatures',
-    ],
-    keyFeatures: [
-      'Brandkit',
-      'Advanced Analytics',
-      'Question Branching & Logic Jumps',
-      'Unlimited Collaborators',
-      'Accept Payments (0% commission)',
-      'Custom meta information',
-      'Add script to page - GTM, GA, Pixel',
-      'Send submission copy',
-      'AI Powered Spam Protection',
-    ],
-  },
+  features: [
+    'Unlimited forms',
+    '1k Submission/month',
+    '1 GB file uploads',
+    'Unlimited Google Sheets Integration',
+    '50 Webhooks',
+    '250 Signatures',
+  ],
 }
 
 export const businessMonthly = {
@@ -64,17 +42,14 @@ export const businessMonthly = {
   type: 'Monthly',
   description:
     'For organizations and agencies to create unlimited forms that are fully customisable to handle any complexity.',
-  features: {
-    general: [
-      'Unlimited forms',
-      '15k Submission/month',
-      '50 GB file uploads',
-      'Unlimited Google Sheets Integration',
-      'Unlimited Webhooks',
-      '2,500 Signatures',
-    ],
-    keyFeatures: ['Submission PDF','API Access', 'Custom Domain', 'Adaptive AI Spam Protection', 'White Label'],
-  },
+  features: [
+    'Unlimited forms',
+    '15k Submission/month',
+    '50 GB file uploads',
+    'Unlimited Google Sheets Integration',
+    'Unlimited Webhooks',
+    '2,500 Signatures',
+  ],
 }
 
 export const freeYearly = {
@@ -83,29 +58,14 @@ export const freeYearly = {
   type: 'Yearly',
   description:
     'For individuals who need to quickly collect data through forms.',
-  features: {
-    general: [
-      '10 forms',
-      '100 Submission/month',
-      '100 MB file uploads',
-      '1 Google Sheets Integration',
-      '1 Webhook',
-      '10 Signatures',
-    ],
-    keyFeatures: [
-      'Email Auto-responder',
-      'Basic Analytics',
-      'Access to Template Library',
-      'Zapier Integrations',
-      'SMTP Integration',
-      'Accept Payments (1% commission)',
-      'Spam Protection',
-      'Self Email Notifications',
-      'Respondent Email Notifications',
-      'Redirect to URL',
-      'Hidden Fields',
-    ],
-  },
+  features: [
+    '10 forms',
+    '100 Submission/month',
+    '100 MB file uploads',
+    '1 Google Sheets Integration',
+    '1 Webhook',
+    '10 Signatures',
+  ],
 }
 
 export const personalYearly = {
@@ -115,27 +75,14 @@ export const personalYearly = {
   type: 'Yearly',
   description:
     'For individuals who need to create beautiful, branded forms on a regular basis.',
-  features: {
-    general: [
-      'Unlimited forms',
-      '1k Submission/month',
-      '1 GB file uploads',
-      'Unlimited Google Sheets Integration',
-      '50 Webhooks',
-      '250 Signatures',
-    ],
-    keyFeatures: [
-      'Brandkit',
-      'Advanced Analytics',
-      'Question Branching & Logic Jumps',
-      'Unlimited Collaborators',
-      'Accept Payments (0% commission)',
-      'Custom meta information',
-      'Add script to page - GTM, GA, Pixel',
-      'Send submission copy',
-      'AI Powered Spam Protection',
-    ],
-  },
+  features: [
+    'Unlimited forms',
+    '1k Submission/month',
+    '1 GB file uploads',
+    'Unlimited Google Sheets Integration',
+    '50 Webhooks',
+    '250 Signatures',
+  ],
 }
 
 export const businessYearly = {
@@ -145,17 +92,14 @@ export const businessYearly = {
   type: 'Yearly',
   description:
     'For organizations and agencies to create unlimited forms that are fully customisable to handle any complexity.',
-  features: {
-    general: [
-      'Unlimited forms',
-      '15k Submission/month',
-      '50 GB file uploads',
-      'Unlimited Google Sheets Integration',
-      'Unlimited Webhooks',
-      '2,500 Signatures',
-    ],
-    keyFeatures: ['Submission PDF','API Access', 'Custom Domain', 'Adaptive AI Spam Protection', 'White Label'],
-  },
+  features: [
+    'Unlimited forms',
+    '15k Submission/month',
+    '50 GB file uploads',
+    'Unlimited Google Sheets Integration',
+    'Unlimited Webhooks',
+    '2,500 Signatures',
+  ],
 }
 
 export const comparisonTableFeatures = [
@@ -163,163 +107,162 @@ export const comparisonTableFeatures = [
     name: 'Forms',
     free: '10',
     pro: 'Unlimited',
-    business: 'Unlimited'
+    business: 'Unlimited',
   },
   {
     name: 'Submission per month',
     free: '100',
     pro: '1k',
-    business: '15k'
+    business: '15k',
   },
   {
     name: 'Collaborators',
     free: '0',
     pro: 'Unlimited',
-    business: 'Unlimited'
+    business: 'Unlimited',
   },
   {
     name: 'Remove Formester Branding',
     free: '-',
     pro: 'Yes',
-    business: 'Yes'
+    business: 'Yes',
   },
   {
     name: 'File Uploads',
     free: '100 MB',
     pro: '1 GB',
-    business: '50 GB'
+    business: '50 GB',
   },
   {
     name: 'Spam Protection',
     free: 'Basic',
     pro: ' AI Powered',
-    business: 'Adaptive AI'
+    business: 'Adaptive AI',
   },
   {
     name: 'Access to Template Library',
     free: 'Yes',
     pro: 'Yes',
-    business: 'Yes'
+    business: 'Yes',
   },
   {
     name: 'Self Email Notifications',
     free: 'Yes',
     pro: 'Yes',
-    business: 'Yes'
+    business: 'Yes',
   },
   {
     name: 'Respondent Email Notifications',
     free: 'Yes',
     pro: 'Yes',
-    business: 'Yes'
+    business: 'Yes',
   },
   {
     name: 'Redirect to URL',
     free: 'Yes',
     pro: 'Yes',
-    business: 'Yes'
+    business: 'Yes',
   },
   {
     name: 'Hidden Fields',
     free: 'Yes',
     pro: 'Yes',
-    business: 'Yes'
+    business: 'Yes',
   },
   {
     name: 'Signatures',
     free: '10',
     pro: '250',
-    business: '2,500'
+    business: '2,500',
   },
   {
     name: 'SMTP Integration',
     free: 'Yes',
     pro: 'Yes',
-    business: 'Yes'
+    business: 'Yes',
   },
   {
     name: 'Zapier Integrations',
     free: 'Yes',
     pro: 'Yes',
-    business: 'Yes'
+    business: 'Yes',
   },
   {
     name: 'Google Sheets Integration',
     free: '1',
     pro: 'Unlimited',
-    business: 'Unlimited'
+    business: 'Unlimited',
   },
   {
     name: 'Accept Payments (Commission)',
     free: '1%',
     pro: '0%',
-    business: '0%'
+    business: '0%',
   },
   {
     name: 'Webhooks',
     free: '1',
     pro: '50',
-    business: 'Unlimited'
+    business: 'Unlimited',
   },
   {
     name: 'Analytics',
     free: 'Basic',
     pro: 'Advanced',
-    business: 'Advanced'
+    business: 'Advanced',
   },
   {
     name: 'Question Branching & Logic Jumps',
     free: 'Yes',
     pro: 'Yes',
-    business: 'Yes'
+    business: 'Yes',
   },
   {
     name: 'Brandkit',
     free: '-',
     pro: 'Yes',
-    business: 'Yes'
+    business: 'Yes',
   },
   {
     name: 'Custom Meta Information',
     free: '-',
     pro: 'Yes',
-    business: 'Yes'
+    business: 'Yes',
   },
   {
     name: 'Scripts (GTM, GA, Pixel)',
     free: '-',
     pro: 'Yes',
-    business: 'Yes'
+    business: 'Yes',
   },
   {
     name: 'Send submission copy',
     free: '-',
     pro: 'Yes',
-    business: 'Yes'
+    business: 'Yes',
   },
   {
     name: 'Submission PDF',
     free: '-',
     pro: '-',
-    business: 'Yes'
+    business: 'Yes',
   },
   {
     name: 'API Access',
     free: '-',
     pro: '-',
-    business: 'Yes'
+    business: 'Yes',
   },
   {
     name: 'Custom Domain',
     free: '-',
     pro: '-',
-    business: 'Yes'
+    business: 'Yes',
   },
   {
     name: 'White Label',
     free: '-',
     pro: '-',
-    business: 'Yes'
+    business: 'Yes',
   },
-];
-
+]
