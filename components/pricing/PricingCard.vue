@@ -3,20 +3,20 @@
     <div class="pricing__card d-flex flex-column" :class="{ hglt: highlight }">
       <div class="d-flex flex-column align-items-stretch text-start p-4">
         <h2 class="pricing__category">{{ plan.name }}</h2>
-        <p class="pricing__description">
-          {{ plan.description }}
-        </p>
-        <div class="d-flex align-items-baseline">
+        <div class="d-flex align-items-baseline mt-2">
           <span v-if="false" class="pricing__striked me-2">
             {{ plan.prevPrice }}
           </span>
 
           <span class="pricing__amount">{{ plan.price }}</span>
-          <span class="pricing__timeline">/mo</span>
+          <span class="pricing__timeline ms-1">per month</span>
         </div>
-        <div class="billing-timeline mb-4">
+        <p class="pricing__description mt-3 mb-4">
+          {{ plan.description }}
+        </p>
+        <!-- <div class="billing-timeline mb-4">
           <span v-show="billingTimeline"> Billed {{ billingTimeline }} </span>
-        </div>
+        </div> -->
         <a
           class="button pricing__button text-center"
           href="https://app.formester.com/users/sign_up"
@@ -108,9 +108,10 @@ export default {
 }
 
 .pricing__category {
-  font-size: 32px;
+  color: var(--clr-primary);
+  font-size: 20px;
   font-weight: 600;
-  line-height: 140%;
+  line-height: 30px;
 }
 
 .pricing__description {
@@ -145,14 +146,18 @@ export default {
 }
 
 .pricing__amount {
-  font-size: 32px;
+  color: var(--clr-text-primary);
+  font-size: 48px;
   font-weight: 600;
-  line-height: 140%;
+  line-height: 60px;
+  letter-spacing: -0.96px;
 }
 
 .pricing__timeline {
-  font-size: 18px;
-  line-height: 26px;
+  color: var(--clr-text-secondary);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
 }
 
 .billing-timeline {
