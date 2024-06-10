@@ -13,7 +13,7 @@
         v-model="modelSelectedOption"
         @change="emitChange"
       >
-        <option disabled hidden value="">Select a tool</option>
+        <option disabled value="">Select a tool</option>
         <option v-for="option in options" :key="option" :value="option">
           {{ option }}
         </option>
