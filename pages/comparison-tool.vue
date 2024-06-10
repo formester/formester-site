@@ -16,7 +16,7 @@
           />
         </div>
       </div>
-      <FormBuilderComparisonDetails
+      <FormBuilderComparisonTable
         :selected-form-builders-details="selectedFormBuildersDetails"
         :feature-name-list="featureNameList"
         :form-builders="formBuilders"
@@ -55,7 +55,7 @@
 import ComparisonToolHero from '@/components/comparision/ComparisonToolHero.vue'
 import ComparisonOptionSelectCard from '@/components/comparision/ComparisonOptionSelectCard.vue'
 import ComparisonCard from '@/components/comparision/ComparisonCard.vue'
-import FormBuilderComparisonDetails from '@/components/comparision/FormBuilderComparisonDetails.vue'
+import FormBuilderComparisonTable from '@/components/comparision/FormBuilderComparisonTable.vue'
 import { featureNameList } from '@/constants/plan'
 import getSiteMeta from '@/utils/getSiteMeta'
 import axios from 'axios'
@@ -65,7 +65,7 @@ export default {
     ComparisonToolHero,
     ComparisonOptionSelectCard,
     ComparisonCard,
-    FormBuilderComparisonDetails,
+    FormBuilderComparisonTable,
   },
   async asyncData() {
     const {
