@@ -18,10 +18,8 @@
       </div>
       <FormBuilderComparisonDetails
         :selected-form-builders-details="selectedFormBuildersDetails"
-        :selected-plans="selectedPlans"
         :feature-name-list="featureNameList"
         :form-builders="formBuilders"
-        @update:selectedPlans="updateSelectedPlans"
       />
       <!-- <div
         v-if="!selectedFormBuildersOption.filter(Boolean).length"
@@ -85,12 +83,7 @@ export default {
 
     const options = formBuilders.map((fb) => fb.name)
 
-    const selectedPlans = {}
-    formBuilders.forEach((fb) => {
-      selectedPlans[fb.id] = fb.plan[0].name
-    })
-
-    return { formBuilders, options, selectedPlans }
+    return { formBuilders, options }
   },
   data() {
     return {
@@ -146,9 +139,6 @@ export default {
           this.selectedFormBuildersDetails.push(newFormBuilder)
         }
       }
-    },
-    updateSelectedPlans({ formBuilderId, selectedPlan }) {
-      this.$set(this.selectedPlans, formBuilderId, selectedPlan)
     },
     handleViewComparisonClick(formBuilder1, formBuilder2) {
       this.handleOptionChange(formBuilder1, 0)

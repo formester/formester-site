@@ -69,13 +69,14 @@ export default {
     FormBuilderFeatureList,
     FormBuilderDetails,
   },
+  data() {
+    return {
+      selectedPlans: {},
+    }
+  },
   props: {
     selectedFormBuildersDetails: {
       type: Array,
-      required: true,
-    },
-    selectedPlans: {
-      type: Object,
       required: true,
     },
     featureNameList: {
@@ -87,10 +88,15 @@ export default {
       required: true,
     },
   },
+  mounted() {
+    this.formBuilders.forEach((fb) => {
+      this.$set(this.selectedPlans, fb.id, fb.plan[0].name)
+    })
+  },
   methods: {
     handlePlanChange(event, formBuilderId) {
       const selectedPlan = event.target.value
-      this.$emit('update:selectedPlans', { formBuilderId, selectedPlan })
+      this.$set(this.selectedPlans, formBuilderId, selectedPlan)
     },
   },
 }
