@@ -26,7 +26,7 @@
       }"
     >
       <template v-if="trimString(feature) === 'Available'">
-        <nuxt-img src="check-green.svg" />
+        <img src="@/assets/images/check-green.svg" />
       </template>
       <template v-else>
         {{ feature ?? '-' }}
