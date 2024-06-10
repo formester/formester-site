@@ -7,7 +7,7 @@
           v-for="(selectedFB, index) in selectedFormBuildersOption"
           :key="selectedFB + index"
         >
-          <ComparisonOptionSelectCard
+          <ComparisonOptionCard
             :options="filteredOptions(index)"
             :selected-option="selectedFB"
             :card-number="index"
@@ -53,7 +53,7 @@
 
 <script>
 import ComparisonToolHero from '@/components/comparision/ComparisonToolHero.vue'
-import ComparisonOptionSelectCard from '@/components/comparision/ComparisonOptionSelectCard.vue'
+import ComparisonOptionCard from '@/components/comparision/ComparisonOptionCard.vue'
 import ComparisonCard from '@/components/comparision/ComparisonCard.vue'
 import FormBuilderComparisonTable from '@/components/comparision/FormBuilderComparisonTable.vue'
 import { featureNameList } from '@/constants/plan'
@@ -63,7 +63,7 @@ import axios from 'axios'
 export default {
   components: {
     ComparisonToolHero,
-    ComparisonOptionSelectCard,
+    ComparisonOptionCard,
     ComparisonCard,
     FormBuilderComparisonTable,
   },
