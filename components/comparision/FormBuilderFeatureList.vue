@@ -1,12 +1,13 @@
 <template>
   <div class="feature__list d-flex flex-column">
+    <span class="feature__cell">Select Plan</span>
     <div
       v-for="(feature, index) in featureList"
-      :key="feature"
+      :key="feature.id"
       class="feature__cell"
-      :class="{ 'alternate-bg': index % 2 !== 0 }"
+      :class="{ 'alternate-bg': index % 2 === 0 }"
     >
-      {{ feature.name }}
+      {{ feature.title }}
       <div v-if="feature.description" class="custom__tooltip">
         <img
           class="question__icon"
@@ -20,33 +21,14 @@
 </template>
 
 <script>
-import axios from 'axios'
+
 
 export default {
-  async created() {
-    const {
-      data: { data },
-    } = await axios.get(
-      `${process.env.strapiUrl}/api/form-builder-feature-lists`,
-      {
-        params: {
-          populate: '*',
-        },
-      }
-    )
-
-    let featureListData = data.map((item) => ({
-      id: item.id,
-      ...item.attributes,
-    }))
-
-    const { feature_list } = featureListData[0]
-    this.featureList = [...this.featureList, ...feature_list]
-  },
-  data() {
-    return {
-      featureList: [{ name: 'Select plan' }],
-    }
+  props: {
+    featureList: {
+      type: Array,
+      required: true,
+    },
   },
 }
 </script>

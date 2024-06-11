@@ -2,7 +2,7 @@
   <div v-if="selectedFormBuildersDetails.length" class="my-5 pt-5">
     <!-- desktop -->
     <div class="d-none d-lg-flex w-100">
-      <FormBuilderFeatureList :featureNameList="featureNameList" />
+      <FormBuilderFeatureList :feature-list="featureList" />
       <div class="d-flex overflow-auto w-100">
         <div
           v-for="fb in selectedFormBuildersDetails"
@@ -37,7 +37,7 @@
           <img class="formbuilder__logo" :src="fb.logo.data.attributes.url" />
         </div>
         <div class="d-flex overflow-auto">
-          <FormBuilderFeatureList :featureNameList="featureNameList" />
+          <FormBuilderFeatureList :feature-list="featureList" />
           <div class="w-100">
             <FormBuilderDetails
               :formBuilder="fb"
@@ -63,6 +63,7 @@
 <script>
 import FormBuilderFeatureList from '@/components/comparision/FormBuilderFeatureList.vue'
 import FormBuilderDetails from '@/components/comparision/FormBuilderDetails.vue'
+import axios from 'axios'
 
 export default {
   components: {
@@ -72,6 +73,7 @@ export default {
   data() {
     return {
       selectedPlans: {},
+      featureList: [],
     }
   },
   props: {
@@ -79,14 +81,27 @@ export default {
       type: Array,
       required: true,
     },
-    featureNameList: {
-      type: Array,
-      required: true,
-    },
     formBuilders: {
       type: Array,
       required: true,
     },
+  },
+  async created() {
+    const {
+      data: { data },
+    } = await axios.get(`${process.env.strapiUrl}/api/form-builder-features`, {
+      params: {
+        sort: 'createdAt',
+        populate: '*',
+      },
+    })
+
+    let fbFeatures = data.map((item) => ({
+      id: item.id,
+      ...item.attributes,
+    }))
+
+    this.featureList = [...fbFeatures]
   },
   mounted() {
     this.formBuilders.forEach((fb) => {

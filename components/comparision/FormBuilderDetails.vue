@@ -18,18 +18,17 @@
     </div>
     <div
       v-for="(feature, index) in getSelectedPlanFeatures(formBuilder)"
-      :key="`${formBuilder.name}-row${index}-${feature}`"
+      :key="`${formBuilder.name}-row${index}-${feature.id}`"
       class="feature__cell info text-center"
       :class="{
-        'alternate-bg': index % 2 !== 0,
-        'd-none': index === 0,
+        'alternate-bg': index % 2 === 0,
       }"
     >
-      <template v-if="trimString(feature) === 'Available'">
+      <template v-if="trimString(feature.value) === 'Available'">
         <img src="@/assets/images/check-green.svg" />
       </template>
       <template v-else>
-        {{ feature ?? '-' }}
+        {{ feature.value ?? '-' }}
       </template>
     </div>
   </div>
@@ -56,9 +55,19 @@ export default {
       const selectedPlan = formBuilder.plan.find(
         (plan) => plan.name === this.selectedPlans[formBuilder.id]
       )
-      return selectedPlan && selectedPlan.features
-        ? Object.values(selectedPlan.features)
-        : []
+      if (!selectedPlan || !selectedPlan.features) {
+        return []
+      }
+
+      // Extracting features and sorting by createdAt
+      const features = Object.values(selectedPlan.features)
+      features.sort((a, b) => {
+        const dateA = new Date(a.form_builder_feature.data.attributes.createdAt)
+        const dateB = new Date(b.form_builder_feature.data.attributes.createdAt)
+        return dateA - dateB
+      })
+
+      return features
     },
   },
 }
