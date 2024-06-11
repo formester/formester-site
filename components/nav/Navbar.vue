@@ -71,6 +71,11 @@
               >Integrations
             </NuxtLink>
           </li>
+          <li class="nav-item me-4" @click="collapseNav">
+            <NuxtLink to="/comparison-tool/" class="nav-link"
+              >Compare
+            </NuxtLink>
+          </li>
           <div class="d-flex flex-column flex-lg-row">
             <a
               href="https://app.formester.com/users/sign_in"
