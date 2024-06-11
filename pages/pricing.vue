@@ -14,7 +14,8 @@
           <input type="checkbox" class="plan_toggle" v-model="isYearly" />
           <div class="slider round"></div>
         </label>
-        <span
+        <span v-if="!isYearly">Monthly pricing</span>
+        <span v-else
           >Annual pricing <span class="text__primary">(save 20%)</span></span
         >
       </div>
@@ -346,5 +347,4 @@ input:checked + .slider:before {
 .text__primary {
   color: var(--clr-primary);
 }
-
 </style>
