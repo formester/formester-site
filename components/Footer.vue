@@ -97,7 +97,10 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/features/autoresponder-email/" class="footer__link">
+                <NuxtLink
+                  to="/features/autoresponder-email/"
+                  class="footer__link"
+                >
                   Auto Responder
                 </NuxtLink>
               </li>
@@ -107,10 +110,7 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink
-                  to="/features/form-analytics/"
-                  class="footer__link"
-                >
+                <NuxtLink to="/features/form-analytics/" class="footer__link">
                   Form Analytics
                 </NuxtLink>
               </li>
@@ -157,7 +157,10 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/features/team-collaboration/" class="footer__link">
+                <NuxtLink
+                  to="/features/team-collaboration/"
+                  class="footer__link"
+                >
                   Collaboration
                 </NuxtLink>
               </li>
@@ -233,6 +236,11 @@
             <h5 class="text-uppercase footer__items--heading mb-3">Compare</h5>
 
             <ul class="list-unstyled mt-2">
+              <li class="mt-2">
+                <NuxtLink to="/comparison-tool/" class="footer__link">
+                  Compare From Builders
+                </NuxtLink>
+              </li>
               <li class="mt-2">
                 <NuxtLink to="/formester-vs-typeform/" class="footer__link">
                   Formester vs Typeform
