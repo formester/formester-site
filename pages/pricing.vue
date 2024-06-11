@@ -309,7 +309,7 @@ export default {
 }
 
 .plan_toggle__switch {
-  margin-top: 3rem;
+  margin-block: 40px 64px;
   gap: 18px;
   font-size: 16px;
   font-weight: 500;
@@ -377,5 +377,11 @@ input:checked + .slider:before {
 
 .text__primary {
   color: var(--clr-primary);
+}
+
+@media screen and (max-width: 768px) {
+  .plan_toggle__switch {
+    margin-block: 40px 0;
+  }
 }
 </style>
