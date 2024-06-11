@@ -154,14 +154,16 @@ table tr:nth-child(even) {
 }
 
 .table__button.muted {
-  border: 1px solid var(--clr-primary);
+  color: var(--clr-text-secondary);
+  border: 1px solid #d0d5dd;
   background: white;
-  color: var(--clr-primary);
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
 }
 
 .table__button.muted:hover {
-  background: #f9f9f9;
   opacity: 1;
+  border: 1px solid #dfe4eb;
+  box-shadow: 0px 4px 8px 0px rgba(16, 24, 40, 0.01);
 }
 
 .feature {
