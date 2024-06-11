@@ -1,93 +1,203 @@
 <template>
-  <div class="table-responsive mt-5">
-    <table class="table text-start">
-      <thead>
-        <tr class="plan-header">
-          <td></td>
-          <td>
-            <div class="plan__name mb-3">Free</div>
+  <div>
+    <!-- desktop -->
+    <div class="table-responsive mt-5 d-none d-md-block">
+      <table class="table text-start">
+        <thead>
+          <tr class="plan-header">
+            <td></td>
+            <td>
+              <div class="plan__name mb-3">Free</div>
+              <a
+                href="https://app.formester.com/users/sign_up"
+                class="table__button muted d-block text-center"
+                >Start for free</a
+              >
+            </td>
+            <td>
+              <div class="plan__name mb-3">
+                Personal<span class="badge ms-2">Popular</span>
+              </div>
+              <a
+                href="https://app.formester.com/users/sign_up"
+                class="table__button hglt d-block text-center"
+                >Get started</a
+              >
+            </td>
+            <td>
+              <div class="plan__name mb-3">Business</div>
+              <a
+                href="https://app.formester.com/users/sign_up"
+                class="table__button d-block text-center"
+                >Get started</a
+              >
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="feature in comparisonTableFeatures" :key="feature.name">
+            <th class="feature">{{ feature.name }}</th>
+            <td>
+              <template v-if="feature.free === 'Yes'">
+                <nuxt-img src="check-green.svg" />
+              </template>
+              <template v-else>
+                {{ feature.free }}
+              </template>
+            </td>
+            <td>
+              <template v-if="feature.pro === 'Yes'">
+                <nuxt-img src="check-green.svg" />
+              </template>
+              <template v-else>
+                {{ feature.pro }}
+              </template>
+            </td>
+            <td>
+              <template v-if="feature.business === 'Yes'">
+                <nuxt-img src="check-green.svg" />
+              </template>
+              <template v-else>
+                {{ feature.business }}
+              </template>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr class="plan-header">
+            <td></td>
+            <td>
+              <a
+                href="https://app.formester.com/users/sign_up"
+                class="table__button muted d-block text-center"
+                >Start for free</a
+              >
+            </td>
+            <td>
+              <a
+                href="https://app.formester.com/users/sign_up"
+                class="table__button hglt d-block text-center"
+                >Get started</a
+              >
+            </td>
+            <td>
+              <a
+                href="https://app.formester.com/users/sign_up"
+                class="table__button d-block text-center"
+                >Get started</a
+              >
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <!-- mobile -->
+    <div class="d-md-none d-flex flex-column">
+      <!-- free -->
+      <div class="mt-4">
+        <div class="plan__name mb-3">Free</div>
+        <a
+          href="https://app.formester.com/users/sign_up"
+          class="table__button muted d-block text-center"
+          >Start for free</a
+        >
+      </div>
+      <table class="table text-start">
+        <tbody>
+          <tr v-for="feature in comparisonTableFeatures" :key="feature.name">
+            <th class="feature">{{ feature.name }}</th>
+            <td>
+              <template v-if="feature.free === 'Yes'">
+                <nuxt-img src="check-green.svg" />
+              </template>
+              <template v-else>
+                {{ feature.free }}
+              </template>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <td colspan="2">
             <a
               href="https://app.formester.com/users/sign_up"
               class="table__button muted d-block text-center"
-              >Start for free</a
             >
+              Start for free
+            </a>
           </td>
-          <td>
-            <div class="plan__name mb-3">
-              Personal<span class="badge ms-2">Popular</span>
-            </div>
+        </tfoot>
+      </table>
+      <!-- personal -->
+      <div class="mt-5">
+        <div class="plan__name mb-3">
+          Personal<span class="badge ms-2">Popular</span>
+        </div>
+        <a
+          href="https://app.formester.com/users/sign_up"
+          class="table__button hglt d-block text-center"
+          >Get Started</a
+        >
+      </div>
+      <table class="table text-start">
+        <tbody>
+          <tr v-for="feature in comparisonTableFeatures" :key="feature.name">
+            <th class="feature">{{ feature.name }}</th>
+            <td>
+              <template v-if="feature.pro === 'Yes'">
+                <nuxt-img src="check-green.svg" />
+              </template>
+              <template v-else>
+                {{ feature.pro }}
+              </template>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <td colspan="2">
             <a
               href="https://app.formester.com/users/sign_up"
               class="table__button hglt d-block text-center"
-              >Get started</a
             >
+              Get Started
+            </a>
           </td>
-          <td>
-            <div class="plan__name mb-3">Business</div>
+        </tfoot>
+      </table>
+      <!-- business -->
+      <div class="mt-5">
+        <div class="plan__name mb-3">Business</div>
+        <a
+          href="https://app.formester.com/users/sign_up"
+          class="table__button d-block text-center"
+          >Get Started</a
+        >
+      </div>
+      <table class="table text-start">
+        <tbody>
+          <tr v-for="feature in comparisonTableFeatures" :key="feature.name">
+            <th class="feature">{{ feature.name }}</th>
+            <td>
+              <template v-if="feature.business === 'Yes'">
+                <nuxt-img src="check-green.svg" />
+              </template>
+              <template v-else>
+                {{ feature.business }}
+              </template>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <td colspan="2">
             <a
               href="https://app.formester.com/users/sign_up"
               class="table__button d-block text-center"
-              >Get started</a
-            >
+              >Get Started
+            </a>
           </td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="feature in comparisonTableFeatures" :key="feature.name">
-          <th class="feature">{{ feature.name }}</th>
-          <td>
-            <template v-if="feature.free === 'Yes'">
-              <nuxt-img src="check-green.svg" />
-            </template>
-            <template v-else>
-              {{ feature.free }}
-            </template>
-          </td>
-          <td>
-            <template v-if="feature.pro === 'Yes'">
-              <nuxt-img src="check-green.svg" />
-            </template>
-            <template v-else>
-              {{ feature.pro }}
-            </template>
-          </td>
-          <td>
-            <template v-if="feature.business === 'Yes'">
-              <nuxt-img src="check-green.svg" />
-            </template>
-            <template v-else>
-              {{ feature.business }}
-            </template>
-          </td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr class="plan-header">
-          <td></td>
-          <td>
-            <a
-              href="https://app.formester.com/users/sign_up"
-              class="table__button muted d-block text-center"
-              >Start for free</a
-            >
-          </td>
-          <td>
-            <a
-              href="https://app.formester.com/users/sign_up"
-              class="table__button hglt d-block text-center"
-              >Get started</a
-            >
-          </td>
-          <td>
-            <a
-              href="https://app.formester.com/users/sign_up"
-              class="table__button d-block text-center"
-              >Get started</a
-            >
-          </td>
-        </tr>
-      </tfoot>
-    </table>
+        </tfoot>
+      </table>
+    </div>
   </div>
 </template>
 
@@ -182,6 +292,6 @@ table tr:nth-child(even) {
   font-weight: 500;
   line-height: 20px;
   background: #f9f5ff;
-  border-radius: 16px;
+  border-radius: 8px;
 }
 </style>
