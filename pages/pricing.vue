@@ -1,8 +1,9 @@
 <template>
   <div>
     <div class="text-center mt-5 px-3">
-      <h1 class="pricing__heading">Pricing that feels just right</h1>
-      <p class="pricing__subheading">
+      <span class="d-block mb-1 pricing__subtitle text__primary">Pricing</span>
+      <h1 class="pricing__heading mt-2">Pricing that feels just right</h1>
+      <p class="pricing__subheading mt-3">
         Select the perfect plan for your needs, and star building beautiful
         forms!
       </p>
@@ -286,12 +287,24 @@ export default {
   max-width: 1200px;
 }
 
+.pricing__subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
 .pricing__heading {
   color: var(--clr-text-primary);
   font-size: 48px;
   font-weight: 600;
   line-height: 60px;
   letter-spacing: -0.96px;
+}
+
+.pricing__subheading {
+  color: var(--clr-text-secondary);
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .comparison__table-heading {
