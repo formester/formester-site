@@ -8,7 +8,7 @@
             <div class="plan__name mb-3">Free</div>
             <a
               href="https://app.formester.com/users/sign_up"
-              class="table__button"
+              class="table__button d-block text-center"
               >Start for free</a
             >
           </td>
@@ -16,7 +16,7 @@
             <div class="plan__name mb-3">Personal</div>
             <a
               href="https://app.formester.com/users/sign_up"
-              class="table__button hglt"
+              class="table__button hglt d-block text-center"
               >Get started</a
             >
           </td>
@@ -24,7 +24,7 @@
             <div class="plan__name mb-3">Business</div>
             <a
               href="https://app.formester.com/users/sign_up"
-              class="table__button"
+              class="table__button d-block text-center"
               >Get started</a
             >
           </td>
@@ -59,6 +59,32 @@
           </td>
         </tr>
       </tbody>
+      <tfoot>
+        <tr class="plan-header">
+          <td></td>
+          <td>
+            <a
+              href="https://app.formester.com/users/sign_up"
+              class="table__button d-block text-center"
+              >Start for free</a
+            >
+          </td>
+          <td>
+            <a
+              href="https://app.formester.com/users/sign_up"
+              class="table__button hglt d-block text-center"
+              >Get started</a
+            >
+          </td>
+          <td>
+            <a
+              href="https://app.formester.com/users/sign_up"
+              class="table__button d-block text-center"
+              >Get started</a
+            >
+          </td>
+        </tr>
+      </tfoot>
     </table>
   </div>
 </template>
@@ -112,11 +138,11 @@ table tr:nth-child(even) {
 }
 
 .table__button {
-  padding: 12px 16px;
+  padding: 8px 12px;
   border: 1px solid var(--clr-primary);
   background: white;
   color: var(--clr-primary);
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 .table__button:hover {
