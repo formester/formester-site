@@ -393,6 +393,31 @@ input:checked + .slider:before {
 }
 
 @media screen and (max-width: 768px) {
+  .pricing__subtitle {
+    font-size: 14px;
+  }
+
+  .pricing__heading {
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.72px;
+  }
+
+  .pricing__subheading {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .comparison__table-heading {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .comparison__table-description {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
   .plan_toggle__switch {
     margin-block: 40px 0;
   }
