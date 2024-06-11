@@ -8,15 +8,28 @@
             <td></td>
             <td>
               <div class="plan__name mb-3">Free</div>
+              <div class="d-flex align-items-baseline mt-2 mb-3">
+                <span class="pricing__amount">{{ pricingPlans.free }}</span>
+                <span class="pricing__timeline ms-1 text-nowrap"
+                  >per month</span
+                >
+              </div>
               <a
                 href="https://app.formester.com/users/sign_up"
                 class="table__button muted d-block text-center"
-                >Start for free</a
+              >
+                Start for free</a
               >
             </td>
             <td>
               <div class="plan__name mb-3">
                 Personal<span class="badge ms-2">Popular</span>
+              </div>
+              <div class="d-flex align-items-baseline mt-2 mb-3">
+                <span class="pricing__amount">{{ pricingPlans.personal }}</span>
+                <span class="pricing__timeline ms-1 text-nowrap"
+                  >per month</span
+                >
               </div>
               <a
                 href="https://app.formester.com/users/sign_up"
@@ -26,6 +39,12 @@
             </td>
             <td>
               <div class="plan__name mb-3">Business</div>
+              <div class="d-flex align-items-baseline mt-2 mb-3">
+                <span class="pricing__amount">{{ pricingPlans.business }}</span>
+                <span class="pricing__timeline ms-1 text-nowrap"
+                  >per month</span
+                >
+              </div>
               <a
                 href="https://app.formester.com/users/sign_up"
                 class="table__button d-block text-center"
@@ -84,8 +103,9 @@
               <a
                 href="https://app.formester.com/users/sign_up"
                 class="table__button d-block text-center"
-                >Get started</a
               >
+                Get started
+              </a>
             </td>
           </tr>
         </tfoot>
@@ -93,15 +113,20 @@
     </div>
 
     <!-- mobile -->
-    <div class="d-md-none d-flex flex-column">
+    <div class="d-md-none d-flex flex-column text-start">
       <!-- free -->
       <div class="mt-4">
         <div class="plan__name mb-3">Free</div>
+        <div class="d-flex align-items-baseline mt-3 mb-4">
+          <span class="pricing__amount">{{ pricingPlans.free }}</span>
+          <span class="pricing__timeline ms-1 text-nowrap">per month</span>
+        </div>
         <a
           href="https://app.formester.com/users/sign_up"
           class="table__button muted d-block text-center"
-          >Start for free</a
         >
+          Start for free
+        </a>
       </div>
       <table class="table text-start">
         <tbody>
@@ -133,11 +158,16 @@
         <div class="plan__name mb-3">
           Personal<span class="badge ms-2">Popular</span>
         </div>
+        <div class="d-flex align-items-baseline mt-3 mb-4">
+          <span class="pricing__amount">{{ pricingPlans.personal }}</span>
+          <span class="pricing__timeline ms-1 text-nowrap">per month</span>
+        </div>
         <a
           href="https://app.formester.com/users/sign_up"
           class="table__button hglt d-block text-center"
-          >Get Started</a
         >
+          Get Started
+        </a>
       </div>
       <table class="table text-start">
         <tbody>
@@ -167,11 +197,16 @@
       <!-- business -->
       <div class="mt-5">
         <div class="plan__name mb-3">Business</div>
+        <div class="d-flex align-items-baseline mt-3 mb-4">
+          <span class="pricing__amount">{{ pricingPlans.business }}</span>
+          <span class="pricing__timeline ms-1 text-nowrap">per month</span>
+        </div>
         <a
           href="https://app.formester.com/users/sign_up"
           class="table__button d-block text-center"
-          >Get Started</a
         >
+          Get Started
+        </a>
       </div>
       <table class="table text-start">
         <tbody>
@@ -192,7 +227,8 @@
             <a
               href="https://app.formester.com/users/sign_up"
               class="table__button d-block text-center"
-              >Get Started
+            >
+              Get Started
             </a>
           </td>
         </tfoot>
@@ -205,6 +241,10 @@
 export default {
   props: {
     comparisonTableFeatures: {
+      type: Array,
+      required: true,
+    },
+    pricingPlans: {
       type: Array,
       required: true,
     },
@@ -293,5 +333,20 @@ table tr:nth-child(even) {
   line-height: 20px;
   background: #f9f5ff;
   border-radius: 8px;
+}
+
+.pricing__amount {
+  color: var(--clr-text-primary);
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 60px;
+  letter-spacing: -0.96px;
+}
+
+.pricing__timeline {
+  color: var(--clr-text-secondary);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
 }
 </style>

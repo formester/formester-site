@@ -46,7 +46,10 @@
           <p class="comparison__table-description mt-1">
             Everything you need to know about the product features and pricings.
           </p>
-          <PricingTable :comparison-table-features="comparisonTableFeatures" />
+          <PricingTable
+            :comparison-table-features="comparisonTableFeatures"
+            :pricing-plans="pricingPlans"
+          />
         </div>
       </div>
       <CallToActionSection />
@@ -101,6 +104,17 @@ export default {
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with pricing page image alt
       }
       return getSiteMeta(metaData)
+    },
+    pricingPlans() {
+      return {
+        free: this.free.price,
+        personal: this.isYearly
+          ? this.personalYearly.price
+          : this.personalMonthly.price,
+        business: this.isYearly
+          ? this.businessYearly.price
+          : this.businessMonthly.price,
+      }
     },
   },
   head() {
