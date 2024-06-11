@@ -48,15 +48,25 @@
         </div>
       </div>
     </div>
-    <!-- <div class="disparity__text mt-5 text-center">
+
+    <div class="disparity__text-sm mt-5 text-center">
+      Want to list your form?
       <a
-        href="https://rdjguczw.formester.com/f/0dc9b105-dfda-4e31-b59d-fff7befbbc73"
+        href="https://sxqzooev.formester.com/f/d6abd30c-aeaf-4d16-aa15-fab9c07a967d"
+        target="_blank"
+        class="disparity__text-link"
+        >Click Here</a
+      >
+    </div>
+    <div class="disparity__text-sm mt-2 text-center">
+      <a
+        href="https://sxqzooev.formester.com/f/dc66d38b-49a1-4d79-b53c-b44c2f5925c6"
         target="_blank"
         class="disparity__text-link"
         >Click here</a
       >
       to report any disparity in the information provided.
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -134,6 +144,11 @@ export default {
 
 .disparity__text {
   font-size: 16px;
+  color: var(--clr-text-secondary);
+}
+
+.disparity__text-sm {
+  font-size: 14px;
   color: var(--clr-text-secondary);
 }
 
