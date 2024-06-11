@@ -67,7 +67,7 @@ export default {
 
 .hero__subtitle {
   color: var(--clr-primary);
-  font-size: 16px;
+  font-size: var(--ft-small-body);
   font-weight: 600;
   line-height: 24px;
 }
