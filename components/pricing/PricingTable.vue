@@ -13,7 +13,9 @@
             >
           </td>
           <td>
-            <div class="plan__name mb-3">Personal</div>
+            <div class="plan__name mb-3">
+              Personal<span class="badge ms-2">Popular</span>
+            </div>
             <a
               href="https://app.formester.com/users/sign_up"
               class="table__button hglt d-block text-center"
@@ -168,5 +170,18 @@ table tr:nth-child(even) {
 
 .feature {
   font-weight: 500;
+}
+
+.plan__name:has(.badge) {
+  white-space: nowrap;
+}
+
+.badge {
+  color: var(--clr-primary);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  background: #f9f5ff;
+  border-radius: 16px;
 }
 </style>
