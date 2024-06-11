@@ -11,12 +11,12 @@
           <span class="pricing__amount">{{ plan.price }}</span>
           <span class="pricing__timeline ms-1">per month</span>
         </div>
+        <div class="billing-timeline mb-4">
+          <span v-show="billingTimeline"> Billed {{ billingTimeline }} </span>
+        </div>
         <p class="pricing__description mt-3 mb-4">
           {{ plan.description }}
         </p>
-        <!-- <div class="billing-timeline mb-4">
-          <span v-show="billingTimeline"> Billed {{ billingTimeline }} </span>
-        </div> -->
         <a
           class="button pricing__button text-center"
           href="https://app.formester.com/users/sign_up"
