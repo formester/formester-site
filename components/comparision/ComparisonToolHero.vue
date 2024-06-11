@@ -112,10 +112,6 @@ export default {
 .slide-in-left-enter-active {
   animation: slideInFadeInLeft 0.5s ease-out forwards;
 }
-.slide-in-left-enter {
-  transform: translateX(-100%) translateY(-50%);
-  opacity: 0;
-}
 
 @keyframes slideInFadeInLeft {
   from {
@@ -130,10 +126,6 @@ export default {
 
 .slide-in-right-enter-active {
   animation: slideInFadeInRight 0.5s ease-out forwards;
-}
-.slide-in-right-enter {
-  transform: translateX(100%) translateY(-50%);
-  opacity: 0;
 }
 
 @keyframes slideInFadeInRight {
