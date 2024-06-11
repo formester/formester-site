@@ -8,7 +8,7 @@
             <div class="plan__name mb-3">Free</div>
             <a
               href="https://app.formester.com/users/sign_up"
-              class="table__button"
+              class="table__button muted d-block text-center"
               >Start for free</a
             >
           </td>
@@ -16,7 +16,7 @@
             <div class="plan__name mb-3">Personal</div>
             <a
               href="https://app.formester.com/users/sign_up"
-              class="table__button hglt"
+              class="table__button hglt d-block text-center"
               >Get started</a
             >
           </td>
@@ -24,7 +24,7 @@
             <div class="plan__name mb-3">Business</div>
             <a
               href="https://app.formester.com/users/sign_up"
-              class="table__button"
+              class="table__button d-block text-center"
               >Get started</a
             >
           </td>
@@ -59,6 +59,32 @@
           </td>
         </tr>
       </tbody>
+      <tfoot>
+        <tr class="plan-header">
+          <td></td>
+          <td>
+            <a
+              href="https://app.formester.com/users/sign_up"
+              class="table__button muted d-block text-center"
+              >Start for free</a
+            >
+          </td>
+          <td>
+            <a
+              href="https://app.formester.com/users/sign_up"
+              class="table__button hglt d-block text-center"
+              >Get started</a
+            >
+          </td>
+          <td>
+            <a
+              href="https://app.formester.com/users/sign_up"
+              class="table__button d-block text-center"
+              >Get started</a
+            >
+          </td>
+        </tr>
+      </tfoot>
     </table>
   </div>
 </template>
@@ -112,15 +138,16 @@ table tr:nth-child(even) {
 }
 
 .table__button {
-  padding: 12px 16px;
-  border: 1px solid var(--clr-primary);
-  background: white;
+  padding: 8px 12px;
+  background-color: var(--clr-primary-light);
   color: var(--clr-primary);
-  border-radius: 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease-out;
 }
 
 .table__button:hover {
-  background: #f9f9f9;
+  opacity: 0.8;
 }
 
 .table__button.hglt {
@@ -130,6 +157,17 @@ table tr:nth-child(even) {
 
 .table__button.hglt:hover {
   opacity: 0.9;
+}
+
+.table__button.muted {
+  border: 1px solid var(--clr-primary);
+  background: white;
+  color: var(--clr-primary);
+}
+
+.table__button.muted:hover {
+  background: #f9f9f9;
+  opacity: 1;
 }
 
 .feature {
