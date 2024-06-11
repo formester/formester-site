@@ -40,9 +40,12 @@
           <!-- <PricingCard :plan="enterprise" /> -->
         </div>
         <div class="mt-5 py-5">
-          <h2 class="comparision__table-heading mb-5">
+          <h2 class="comparison__table-heading mb-3">
             See All Features and Compare Plan
           </h2>
+          <p class="comparison__table-description mt-1">
+            Everything you need to know about the product features and pricings.
+          </p>
           <PricingTable :comparison-table-features="comparisonTableFeatures" />
         </div>
       </div>
@@ -275,6 +278,20 @@ export default {
   font-weight: 600;
   line-height: 60px;
   letter-spacing: -0.96px;
+}
+
+.comparison__table-heading {
+  color: var(--clr-text-primary);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: -0.72px;
+}
+
+.comparison__table-description {
+  color: var(--clr-text-secondary);
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .plan_toggle__switch {

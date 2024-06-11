@@ -102,12 +102,6 @@ export default {
 
 <style scoped>
 /* TABLE */
-
-.comparision__table-heading {
-  font-size: 28px;
-  line-height: 40px;
-}
-
 thead tr td {
   border: none;
 }
