@@ -295,7 +295,9 @@ table tr:nth-child(even) {
 }
 
 .table__button:hover {
-  opacity: 0.8;
+  color: #371d72;
+  border-radius: 4px;
+  background: #d1ceff;
 }
 
 .table__button.hglt {
@@ -304,7 +306,9 @@ table tr:nth-child(even) {
 }
 
 .table__button.hglt:hover {
-  opacity: 0.9;
+  border-radius: 4px;
+  background: var(--clr-primary-hover);
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
 }
 
 .table__button.muted {
@@ -315,9 +319,9 @@ table tr:nth-child(even) {
 }
 
 .table__button.muted:hover {
-  opacity: 1;
-  border: 1px solid #dfe4eb;
-  box-shadow: 0px 4px 8px 0px rgba(16, 24, 40, 0.01);
+  border: 1px solid #d0d5dd;
+  background: #f9fafb;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
 }
 
 .feature {
