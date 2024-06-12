@@ -107,6 +107,12 @@
   --clr-text-secondary: #475467;
 }
 
+/* === BOX SHADOWS === */
+:root {
+  --box-shadow-lg: 0px 12px 16px -4px rgba(16, 24, 40, 0.08),
+    0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+}
+
 /* === FONTS === */
 :root {
   --ft-big-heading: 60px;
@@ -126,7 +132,6 @@
     --ft-df-heading: 2rem;
     --ft-subtitle: 1.25rem;
     --ft-df-body: 1rem;
-    --ft-small-body: 0.95rem;
 
     --ft-bigger-body: 1.5rem;
     --ft-lg-btn: 1rem;
@@ -238,6 +243,11 @@ button {
 
 .pointer {
   cursor: pointer;
+}
+
+.form-select:focus {
+  box-shadow: 0 0 0 0.25rem rgba(99, 52, 208, 0.152);
+  border-color: var(--clr-primary-light);
 }
 
 @media screen and (max-width: 992px) {
