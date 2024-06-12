@@ -11,12 +11,12 @@
       <div
         class="d-flex justify-content-center align-items-center plan_toggle__switch"
       >
+        <span>Monthly pricing</span>
         <label class="switch">
           <input type="checkbox" class="plan_toggle" v-model="isYearly" />
           <div class="slider round"></div>
         </label>
-        <span v-if="!isYearly">Monthly pricing</span>
-        <span v-else
+        <span
           >Annual pricing <span class="text__primary">(save 20%)</span></span
         >
       </div>
@@ -323,7 +323,7 @@ export default {
 
 .plan_toggle__switch {
   margin-block: 40px 64px;
-  gap: 18px;
+  gap: 12px;
   font-size: 16px;
   font-weight: 500;
   line-height: normal;
