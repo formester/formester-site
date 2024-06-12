@@ -291,6 +291,7 @@ table tr:nth-child(even) {
   border-radius: 4px;
   font-weight: 600;
   transition: all 0.3s ease-out;
+  white-space: nowrap;
 }
 
 .table__button:hover {
