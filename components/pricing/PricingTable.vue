@@ -245,7 +245,7 @@ export default {
       required: true,
     },
     pricingPlans: {
-      type: Array,
+      type: Object,
       required: true,
     },
   },
