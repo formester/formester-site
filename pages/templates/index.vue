@@ -40,8 +40,7 @@ export default {
         title: 'The Formester Templates',
         description:
           'Use our Formester form templates including surveys, reviews, registrations, & more for any industry! Automate workflows with online templates.',
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with blog page image
+        mainImage: 'https://formester.com/formester-logo-meta-image.png', // need to update with blog page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with blog page image alt
       }
       return getSiteMeta(metaData)

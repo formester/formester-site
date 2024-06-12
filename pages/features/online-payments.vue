@@ -8,7 +8,9 @@
           >
             <h1 class="section__heading">Secure Online Payments</h1>
             <p class="hero__subheading mt-3">
-              Formester’s online forms with payment integration make receiving payments more convenient than ever with secure PCI compliance, responsive interface, and no additional charges.
+              Formester’s online forms with payment integration make receiving
+              payments more convenient than ever with secure PCI compliance,
+              responsive interface, and no additional charges.
             </p>
             <a
               href="https://app.formester.com/users/sign_up"
@@ -33,57 +35,60 @@
         Automate Payment Collection and Order Processing
       </h2>
       <div
-          class="d-flex flex-column flex-md-row justify-content-between mt-md-5"
+        class="d-flex flex-column flex-md-row justify-content-between mt-md-5"
+      >
+        <div
+          class="d-flex flex-column align-items-center align-items-md-start text-center text-md-start px-4 col-md-4 my-3 mt-lg-5"
         >
-          <div
-            class="d-flex flex-column align-items-center align-items-md-start text-center text-md-start px-4 col-md-4 my-3 mt-lg-5"
-          >
-            <nuxt-img
-              style="width: 69px"
-              src="/features/online-payment/track-payments.svg"
-              alt="Formester"
-            />
-            <h4 class="sub__section-heading mt-4">Track Payments</h4>
-            <p class="subheading__text">
-              Keep a track of your payment data along with live updates when a payment is processed.
-            </p>
-          </div>
-          <div
-            class="d-flex flex-column align-items-center align-items-md-start text-center text-md-start px-4 col-md-4 my-3 mt-lg-5"
-          >
-            <nuxt-img
-              style="width: 69px"
-              src="/features/online-payment/all-in-one-solution.svg"
-              alt="Formester"
-            />
-            <h4 class="sub__section-heading mt-4">All in One Solution</h4>
-            <p class="subheading__text">
-              Regardless of your industry, formester provides you with end-to-end solutions with a comprehensive suite of features.
-            </p>
-          </div>
-          <div
-            class="d-flex flex-column align-items-center align-items-md-start text-center text-md-start px-4 col-md-4 my-3 mt-lg-5"
-          >
-            <nuxt-img
-              style="width: 69px"
-              src="/features/online-payment/integrations.svg"
-              alt="Formester"
-            />
-            <h4 class="sub__section-heading mt-4">Integrations</h4>
-            <p class="subheading__text">
-              Select the payment gateway of your choice from our 35+ payment integrations.
-            </p>
-          </div>
+          <nuxt-img
+            style="width: 69px"
+            src="/features/online-payment/track-payments.svg"
+            alt="Formester"
+          />
+          <h4 class="sub__section-heading mt-4">Track Payments</h4>
+          <p class="subheading__text">
+            Keep a track of your payment data along with live updates when a
+            payment is processed.
+          </p>
         </div>
+        <div
+          class="d-flex flex-column align-items-center align-items-md-start text-center text-md-start px-4 col-md-4 my-3 mt-lg-5"
+        >
+          <nuxt-img
+            style="width: 69px"
+            src="/features/online-payment/all-in-one-solution.svg"
+            alt="Formester"
+          />
+          <h4 class="sub__section-heading mt-4">All in One Solution</h4>
+          <p class="subheading__text">
+            Regardless of your industry, formester provides you with end-to-end
+            solutions with a comprehensive suite of features.
+          </p>
+        </div>
+        <div
+          class="d-flex flex-column align-items-center align-items-md-start text-center text-md-start px-4 col-md-4 my-3 mt-lg-5"
+        >
+          <nuxt-img
+            style="width: 69px"
+            src="/features/online-payment/integrations.svg"
+            alt="Formester"
+          />
+          <h4 class="sub__section-heading mt-4">Integrations</h4>
+          <p class="subheading__text">
+            Select the payment gateway of your choice from our 35+ payment
+            integrations.
+          </p>
+        </div>
+      </div>
     </div>
-      <div class="container py-5">
-        <div class="row py-5">
-          <OnlinePaymentsFeatureShowcase
+    <div class="container py-5">
+      <div class="row py-5">
+        <OnlinePaymentsFeatureShowcase
           heading="How online payment forms help your business?"
           :features="OnlinePaymentFeatures"
         />
-        </div>
       </div>
+    </div>
     <div class="container py-5">
       <h2 class="section__heading text-center">Payment Intigrations</h2>
       <div class="row py-5">
@@ -95,11 +100,16 @@
         />
       </div>
     </div>
-    <SimpleStepsCreate :heading="threeStepContent.heading" :step-count="threeStepContent.steps.length" :steps="threeStepContent.steps" />
-    <Testimonial 
-      :testimonials="randomTestimonials"
+    <SimpleStepsCreate
+      :heading="threeStepContent.heading"
+      :step-count="threeStepContent.steps.length"
+      :steps="threeStepContent.steps"
     />
-    <TemplateSection :heading="templateContent.heading" :slug="templateContent.slug" />
+    <Testimonial :testimonials="randomTestimonials" />
+    <TemplateSection
+      :heading="templateContent.heading"
+      :slug="templateContent.slug"
+    />
     <CallToActionSection :content="CallToActionContent" />
   </div>
 </template>
@@ -117,7 +127,14 @@ import getSiteMeta from '../../utils/getSiteMeta'
 import TemplateSection from '../../components/TemplateSection.vue'
 
 export default {
-  components: { FeatureDetail, CallToActionSection, Testimonial, TemplateSection, FeatureShowcaseVue, SimpleStepsCreate },
+  components: {
+    FeatureDetail,
+    CallToActionSection,
+    Testimonial,
+    TemplateSection,
+    FeatureShowcaseVue,
+    SimpleStepsCreate,
+  },
   computed: {
     meta() {
       const metaData = {
@@ -126,8 +143,7 @@ export default {
         title: 'Online Payment Form | Secure Online Payment - Formester',
         description:
           "Experience secure online payments with Formester's user-friendly online payment form. Start accepting payments today. Try now!",
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with Html Form Backend page image
+        mainImage: 'https://formester.com/formester-logo-meta-image.png', // need to update with Html Form Backend page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with Html Form Backend page image alt
       }
       return getSiteMeta(metaData)
@@ -168,7 +184,7 @@ export default {
           '@type': 'BreadcrumbList',
           '@id': 'https://acornglobus.com',
           itemListElement: [
-          {
+            {
               '@type': 'ListItem',
               position: 1,
               name: 'Features',
@@ -179,7 +195,7 @@ export default {
               position: 2,
               name: 'Online Payment',
               item: 'https://formester.com/features/online-payments/',
-            }
+            },
           ],
         },
       ],
@@ -191,7 +207,7 @@ export default {
         {
           title: 'Pay by debit or credit card',
           description:
-            'Payments can be made online using debit or credit cards without paying extra transaction fees! When you receive payments through your online forms, Formester doesn\'t charge you anything; your chosen payment processor charges you the standard rate. You can collect payments from hundreds of countries and currencies with 35+ payment gateways.',
+            "Payments can be made online using debit or credit cards without paying extra transaction fees! When you receive payments through your online forms, Formester doesn't charge you anything; your chosen payment processor charges you the standard rate. You can collect payments from hundreds of countries and currencies with 35+ payment gateways.",
           src: 'online-payment/payment-by-card-illus.svg',
         },
         {
@@ -217,15 +233,14 @@ export default {
         {
           heading: 'Membership Subscription Renewal',
           description:
-            "Craft membership renewal forms with integrated payment options. This ensures an efficient process for members to renew their subscriptions online.",
+            'Craft membership renewal forms with integrated payment options. This ensures an efficient process for members to renew their subscriptions online.',
           imgUrl: 'features/online-payment/membership.jpg',
         },
         {
           heading: 'Donation Collection for Nonprofits',
           description:
             'Create nonprofit donation forms, allowing supporters to contribute online. This streamlines the donation process and provides a reliable payment platform to the donors.',
-          imgUrl:
-            'features/online-payment/donation.jpg',
+          imgUrl: 'features/online-payment/donation.jpg',
         },
         {
           heading: 'Service Request for Professionals',
@@ -236,36 +251,41 @@ export default {
         },
       ],
       CallToActionContent: {
-        heading: "Create your first online payment form!",
+        heading: 'Create your first online payment form!',
       },
       threeStepContent: {
-        heading: "How to activate online payments in 3 simple steps:",
+        heading: 'How to activate online payments in 3 simple steps:',
         steps: [
           {
-            title: "Sign up",
-            description: "Sign up for a free account on formester and build an online form. You can also select any template from our pre-designed templates library."
+            title: 'Sign up',
+            description:
+              'Sign up for a free account on formester and build an online form. You can also select any template from our pre-designed templates library.',
           },
           {
-            title: "Payment integration selection",
-            description: "Select a payment integration option in the form builder and drag & drop it to your form."
+            title: 'Payment integration selection',
+            description:
+              'Select a payment integration option in the form builder and drag & drop it to your form.',
           },
           {
-            title: "Form sharing",
-            description: "Share the form and start collecting payments along with form submissions."
+            title: 'Form sharing',
+            description:
+              'Share the form and start collecting payments along with form submissions.',
           },
-        ]
+        ],
       },
       templateContent: {
-        heading: "Free Online Payment Form Templates",
-        slug:"order-forms"
-      }
+        heading: 'Free Online Payment Form Templates',
+        slug: 'order-forms',
+      },
     }
   },
   async asyncData() {
     let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(Math.random() * (randomTestimonials.length - 2))
-    randomTestimonials = randomTestimonials.slice(randIndex,  randIndex + 2);
-    return {randomTestimonials}
+    const randIndex = Math.floor(
+      Math.random() * (randomTestimonials.length - 2)
+    )
+    randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
+    return { randomTestimonials }
   },
 }
 </script>

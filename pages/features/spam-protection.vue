@@ -31,7 +31,9 @@
       </div>
     </div>
     <div class="container py-5">
-      <h2 class="section__heading text-center">How does Spam Protection help?</h2>
+      <h2 class="section__heading text-center">
+        How does Spam Protection help?
+      </h2>
       <div class="row py-5">
         <FeatureDetail
           :feature="feature"
@@ -43,9 +45,7 @@
     </div>
     <SpamPreventionTipsSection />
     <ThreeStepsCreateForm />
-    <Testimonial 
-      :testimonials="randomTestimonials"
-    />
+    <Testimonial :testimonials="randomTestimonials" />
     <TemplateSection />
     <CallToActionSection />
   </div>
@@ -62,7 +62,12 @@ import getSiteMeta from '../../utils/getSiteMeta'
 import TemplateSection from '../../components/TemplateSection.vue'
 
 export default {
-  components: { FeatureDetail, CallToActionSection, Testimonial, TemplateSection },
+  components: {
+    FeatureDetail,
+    CallToActionSection,
+    Testimonial,
+    TemplateSection,
+  },
   computed: {
     meta() {
       const metaData = {
@@ -71,8 +76,7 @@ export default {
         title: 'Spam Protection | Spam Protection in Web Form - Formester',
         description:
           'Spam Protection for your Web Forms - Formester | Protect your web forms from spam | Block unwanted submissions & Improve user experience',
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with spam-protection page image
+        mainImage: 'https://formester.com/formester-logo-meta-image.png', // need to update with spam-protection page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with spam-protection page image alt
       }
       return getSiteMeta(metaData)
@@ -100,7 +104,7 @@ export default {
           '@id': 'https://acornglobus.com',
           name: 'Spam Protection | Spam Protection in Web Form - Formester',
           description:
-            "Spam Protection for your Web Forms - Formester | Protect your web forms from spam | Block unwanted submissions & Improve user experience",
+            'Spam Protection for your Web Forms - Formester | Protect your web forms from spam | Block unwanted submissions & Improve user experience',
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
           address: {
@@ -113,7 +117,7 @@ export default {
           '@type': 'BreadcrumbList',
           '@id': 'https://acornglobus.com',
           itemListElement: [
-          {
+            {
               '@type': 'ListItem',
               position: 1,
               name: 'Features',
@@ -124,7 +128,7 @@ export default {
               position: 2,
               name: 'Spam Protection',
               item: 'https://formester.com/features/spam-protection/',
-            }
+            },
           ],
         },
       ],
@@ -153,17 +157,20 @@ export default {
         },
         {
           title: 'IP/User-Agent Monitoring',
-          description:'One of the most common kinds of malicious activity involves multiple submissions from a single source over a given period. At Formester, you get to track, monitor and update your web form settings to restrict such IPs and reduce spam occurrences.',
+          description:
+            'One of the most common kinds of malicious activity involves multiple submissions from a single source over a given period. At Formester, you get to track, monitor and update your web form settings to restrict such IPs and reduce spam occurrences.',
           src: 'spam-protection/ip-user-monitor.jpg',
         },
         {
           title: 'Honeypot Integration',
-          description:'Honeypot acts as a trap to snare bots and spammers. It works by using a field that remains hidden from humans but visible to such annoyances. Web Forms at Formester can be set-up to be easily configured with Honeypot; ensuring security and convenience at one go!',
+          description:
+            'Honeypot acts as a trap to snare bots and spammers. It works by using a field that remains hidden from humans but visible to such annoyances. Web Forms at Formester can be set-up to be easily configured with Honeypot; ensuring security and convenience at one go!',
           src: 'spam-protection/honeypot-migration.jpg',
         },
         {
           title: 'Cloudflare Turnstile Integration',
-          description:"Cloudflare's popular Turnstile allows for sending traffic through Cloudflare and operates, keeping the visitors free of the hassle and frustration that comes with the need for solving over-the-top CAPTCHA, using just a simple snippet of absolutely free code. At Formester, we use this integration to provide visitors with an abuse-free experience whilst eliminating data privacy concerns for confirming real visitors and providing seamless UX for the users.",
+          description:
+            "Cloudflare's popular Turnstile allows for sending traffic through Cloudflare and operates, keeping the visitors free of the hassle and frustration that comes with the need for solving over-the-top CAPTCHA, using just a simple snippet of absolutely free code. At Formester, we use this integration to provide visitors with an abuse-free experience whilst eliminating data privacy concerns for confirming real visitors and providing seamless UX for the users.",
           src: 'spam-protection/cloudflare-integration.jpg',
         },
       ],
@@ -171,9 +178,11 @@ export default {
   },
   async asyncData() {
     let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(Math.random() * (randomTestimonials.length - 2))
-    randomTestimonials = randomTestimonials.slice(randIndex,  randIndex + 2);
-    return {randomTestimonials}
+    const randIndex = Math.floor(
+      Math.random() * (randomTestimonials.length - 2)
+    )
+    randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
+    return { randomTestimonials }
   },
 }
 </script>

@@ -87,8 +87,7 @@ export default {
           'Electronic Signature in Online Forms | Collect Online Signatures | Formester',
         description:
           'Add e-sign to your online form easily - Formester | Document signing with secure electronic signatures (e-sign) | Formester Digital Signs',
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png',
+        mainImage: 'https://formester.com/formester-logo-meta-image.png',
         mainImageAlt: 'Form builder showing drag and drop functionality',
       }
       return getSiteMeta(metaData)

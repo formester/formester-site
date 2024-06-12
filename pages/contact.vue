@@ -152,7 +152,7 @@ export default {
           '@type': 'ImageObject',
           url: 'https://formester.com/logo.png',
         },
-      }
+      },
     }
   },
   computed: {
@@ -163,8 +163,7 @@ export default {
         title: 'Contact | Online Form Builder - Formester',
         description:
           'Create custom online forms with ease using Formester - the top-rated online form builder. Contact us today to start building your perfect form!',
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with contact page image
+        mainImage: 'https://formester.com/formester-logo-meta-image.png', // need to update with contact page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with contact page image alt
       }
       return getSiteMeta(metaData)

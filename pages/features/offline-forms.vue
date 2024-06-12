@@ -107,8 +107,7 @@ export default {
           'Offline Forms for Uninterrupted Data Collection: Anytime, Anywhere',
         description:
           'Stay connected to your forms and collect submissions even in no network zones with our offline forms',
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with auto-responder page image
+        mainImage: 'https://formester.com/formester-logo-meta-image.png', // need to update with auto-responder page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
         keywords: [
           'formester web forms with offline forms feature',
@@ -238,8 +237,7 @@ export default {
             "Offline forms allow you to collect data even when you're not connected to the internet. This means you can use them in remote locations, on-site visits, or during events with unreliable connectivity. Once you're back online, the data is securely synced to your device.",
         },
         {
-          question:
-            'What are the benefits of using offline forms?',
+          question: 'What are the benefits of using offline forms?',
           answer: 'Offline forms offer several advantages, including:',
           list: [
             'Increased productivity: Eliminate delays caused by slow or unavailable internet connections.',
@@ -249,8 +247,7 @@ export default {
           ],
         },
         {
-          question:
-            'What types of businesses can benefit from offline forms?',
+          question: 'What types of businesses can benefit from offline forms?',
           answer:
             'Offline forms can be valuable for a wide range of industries, including:',
           list: [

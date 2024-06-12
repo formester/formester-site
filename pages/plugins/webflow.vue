@@ -73,10 +73,9 @@ export default {
         url: 'https://formester.com/plugins/webflow/',
         title: 'Craft Engaging Online Forms for Webflow | Formester',
         description:
-          "Integrate Formester into Webflow in three simple steps. Effortlessly create, customize, and publish beautiful web forms on your webflow sites.",
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', 
-        mainImageAlt: 'Form builder showing drag and drop functionality', 
+          'Integrate Formester into Webflow in three simple steps. Effortlessly create, customize, and publish beautiful web forms on your webflow sites.',
+        mainImage: 'https://formester.com/formester-logo-meta-image.png',
+        mainImageAlt: 'Form builder showing drag and drop functionality',
         keywords: [
           'Formester',
           'Webflow plugin',
@@ -125,7 +124,7 @@ export default {
           '@id': 'https://acornglobus.com',
           name: 'Craft Engaging Online Forms for Webflow | Formester',
           description:
-            "Integrate Formester into Webflow in three simple steps. Effortlessly create, customize, and publish beautiful web forms on your webflow sites.",
+            'Integrate Formester into Webflow in three simple steps. Effortlessly create, customize, and publish beautiful web forms on your webflow sites.',
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
           address: {

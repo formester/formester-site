@@ -57,7 +57,11 @@
         </div>
 
         <div class="row mt-md-5">
-          <div class="col-xs-12 col-md-6" v-for="(benefit, idx) in benefits" :key="idx">
+          <div
+            class="col-xs-12 col-md-6"
+            v-for="(benefit, idx) in benefits"
+            :key="idx"
+          >
             <div
               class="card p-3 d-flex align-items-center justify-items-center text-center align-items-md-start text-md-start"
             >
@@ -114,8 +118,7 @@ export default {
         title: 'Calculating Fields - Formester',
         description:
           'Dynamic Forms to Perform Real-time Complex Calculations | Dynamic Scores, Personalized & Interactive Form Experiences - Sign up now.',
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with auto-responder page image
+        mainImage: 'https://formester.com/formester-logo-meta-image.png', // need to update with auto-responder page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
         keywords: [
           'formester web forms with calculation',
@@ -336,7 +339,7 @@ export default {
   border: none;
 }
 
-.sub__section-heading{
+.sub__section-heading {
   font-size: 28px;
   line-height: 44px;
   font-weight: 700;

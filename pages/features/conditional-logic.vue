@@ -32,7 +32,9 @@
       </div>
     </div>
     <div class="container py-5">
-      <h2 class="section__heading text-center">How does Conditional Logic help?</h2>
+      <h2 class="section__heading text-center">
+        How does Conditional Logic help?
+      </h2>
       <div class="row py-5">
         <FeatureDetail
           :feature="feature"
@@ -43,9 +45,7 @@
       </div>
     </div>
     <ThreeStepsCreateForm />
-    <Testimonial 
-      :testimonials="randomTestimonials"
-    />
+    <Testimonial :testimonials="randomTestimonials" />
     <TemplateSection />
     <CallToActionSection />
   </div>
@@ -62,7 +62,12 @@ import TemplateSection from '../../components/TemplateSection.vue'
 import getSiteMeta from '../../utils/getSiteMeta'
 
 export default {
-  components: { FeatureDetail, CallToActionSection, Testimonial, TemplateSection },
+  components: {
+    FeatureDetail,
+    CallToActionSection,
+    Testimonial,
+    TemplateSection,
+  },
   computed: {
     meta() {
       const metaData = {
@@ -71,8 +76,7 @@ export default {
         title: 'Conditional Logic Forms Builder - Formester',
         description:
           "Easily create custom forms with Conditional Logic Forms Builder - Formester. Get started today and optimize your website's lead generation!",
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with conditional page image
+        mainImage: 'https://formester.com/formester-logo-meta-image.png', // need to update with conditional page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with conditional page image alt
       }
       return getSiteMeta(metaData)
@@ -113,7 +117,7 @@ export default {
           '@type': 'BreadcrumbList',
           '@id': 'https://acornglobus.com',
           itemListElement: [
-          {
+            {
               '@type': 'ListItem',
               position: 1,
               name: 'Features',
@@ -124,7 +128,7 @@ export default {
               position: 2,
               name: 'Conditional Logic',
               item: 'https://formester.com/features/conditional-logic/',
-            }
+            },
           ],
         },
       ],
@@ -156,9 +160,11 @@ export default {
   },
   async asyncData() {
     let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(Math.random() * (randomTestimonials.length - 2))
-    randomTestimonials = randomTestimonials.slice(randIndex,  randIndex + 2);
-    return {randomTestimonials}
+    const randIndex = Math.floor(
+      Math.random() * (randomTestimonials.length - 2)
+    )
+    randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
+    return { randomTestimonials }
   },
 }
 </script>

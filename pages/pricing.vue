@@ -99,9 +99,8 @@ export default {
         title: 'Pricing that feels just right',
         description:
           'Select the perfect plan for your needs, and star building beautiful forms!',
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with pricing page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with pricing page image alt
+        mainImage: 'https://formester.com/formester-logo-meta-image.png',
+        mainImageAlt: 'Form builder showing drag and drop functionality',
       }
       return getSiteMeta(metaData)
     },

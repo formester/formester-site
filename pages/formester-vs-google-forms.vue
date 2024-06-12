@@ -266,8 +266,7 @@ export default {
         title: 'Google Forms Best Alternative | Switch to Formester',
         description:
           'Switch to Formester and break free from Google Forms limitations. Craft professional forms with advanced features like conditional logic, analytics, and payment processing. Try for free!',
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with formester vs google-form page image
+        mainImage: 'https://formester.com/formester-logo-meta-image.png', // need to update with formester vs google-form page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs google-form page image alt
         keywords: [
           'google-form alternative',

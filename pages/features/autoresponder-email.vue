@@ -77,7 +77,7 @@ import FeatureDetail from '@/components/FeatureDetail.vue'
 import Testimonial from '@/components/Testimonial.vue'
 import { allTestimonials } from '@/constants/testimonials'
 import TemplateSection from '@/components/TemplateSection.vue'
-import UseCaseFeatureShowcase from "@/components/use-case/FeatureShowcase.vue"
+import UseCaseFeatureShowcase from '@/components/use-case/FeatureShowcase.vue'
 
 // MetaTags
 import getSiteMeta from '@/utils/getSiteMeta'
@@ -95,19 +95,17 @@ export default {
     ApplicationOfWebForms,
     SimpleStepsCreate,
     UseCaseFeatureShowcase,
-    ThreeColBenefits
+    ThreeColBenefits,
   },
   computed: {
     meta() {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/features/autoresponder-email/',
-        title:
-          'Set up Autoresponder Email | Formester',
+        title: 'Set up Autoresponder Email | Formester',
         description:
           'Boost your email marketing with a personalised email autoresponder message. Try Formester and engage your subscribers today! Sign up now.',
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with auto-responder page image
+        mainImage: 'https://formester.com/formester-logo-meta-image.png', // need to update with auto-responder page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
         keywords: [
           'formester web forms with autoresponder feature',
@@ -160,8 +158,7 @@ export default {
   },
   head() {
     return {
-      title:
-        'Set up Autoresponder Email | Formester',
+      title: 'Set up Autoresponder Email | Formester',
       meta: [...this.meta],
       link: [
         {
@@ -289,21 +286,21 @@ export default {
           description:
             'Sign up for a free account on formester and create an online form or survey. You can also select any template from our pre-designed templates library.',
           imgSrc: '/features/three-steps-create-form/step1.svg',
-          imgAlt: 'Sign up for a free account'
+          imgAlt: 'Sign up for a free account',
         },
         {
           title: 'Turn on Autoresponder',
           description:
             'Select the “automation” tab in the form building menu. Turn on the autoresponder option and create an email copy.',
           imgSrc: '/features/three-steps-create-form/step2.svg',
-          imgAlt: 'Turn on Autoresponder'
+          imgAlt: 'Turn on Autoresponder',
         },
         {
           title: 'Publish the form',
           description:
             'Share the form and wait for users to fill in the responses. Autoresponder emails will be sent out based on your set conditions.',
           imgSrc: '/features/three-steps-create-form/step3.svg',
-          imgAlt: 'Publish the form'
+          imgAlt: 'Publish the form',
         },
       ],
     }

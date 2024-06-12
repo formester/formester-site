@@ -8,7 +8,10 @@
           >
             <h1 class="section__heading">Reuse and Recall Information</h1>
             <p class="hero__subheading mt-3">
-              Information Recall allows you to reference answers, variables, and more, making your forms feel more dynamic, conversational, compelling and smart. Supercharge your forms by creating engaging experiences with Formester's Information Recall feature.
+              Information Recall allows you to reference answers, variables, and
+              more, making your forms feel more dynamic, conversational,
+              compelling and smart. Supercharge your forms by creating engaging
+              experiences with Formester's Information Recall feature.
             </p>
             <a
               href="https://app.formester.com/users/sign_up"
@@ -46,9 +49,7 @@
     <div class="container py-5">
       <div class="row">
         <div class="heading d-flex flex-column align-items-center text-center">
-          <h2 class="section__heading">
-            Benefits of Information Recall
-          </h2>
+          <h2 class="section__heading">Benefits of Information Recall</h2>
         </div>
 
         <div class="templates mt-md-5">
@@ -72,7 +73,7 @@
     </div>
 
     <InformationRecallInPractice />
-    <Testimonial :testimonials="randomTestimonials"/>
+    <Testimonial :testimonials="randomTestimonials" />
     <TemplateSection />
     <CallToActionSection />
   </div>
@@ -105,8 +106,7 @@ export default {
         title: 'Information Recall and Reuse Feature | Formester',
         description:
           "Create personalized and interactive form & survey experiences - Formester's Information Recall | Answer recall, Dynamic variables & more!",
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with auto-responder page image
+        mainImage: 'https://formester.com/formester-logo-meta-image.png', // need to update with auto-responder page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
         keywords: [
           'formester web forms with information recall feature',

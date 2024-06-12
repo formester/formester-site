@@ -8,7 +8,12 @@
           >
             <h1 class="section__heading" style="z-index: 2">Branding Kit</h1>
             <p class="hero__subheading mt-3" style="z-index: 2">
-              Match your company branding with all online forms across your website. Formester Branding Kit is designed to help you add consistent branding content on all your web forms. Set up customized URL fonts, colors, and logos in minutes, then apply them to your choice of form templates for a professional, fully standardized look.
+              Match your company branding with all online forms across your
+              website. Formester Branding Kit is designed to help you add
+              consistent branding content on all your web forms. Set up
+              customized URL fonts, colors, and logos in minutes, then apply
+              them to your choice of form templates for a professional, fully
+              standardized look.
             </p>
           </div>
           <div
@@ -75,9 +80,8 @@ export default {
         title: 'Branding Kit | Create Brand Kit for Online Forms',
         description:
           'Boost your trust to customer by adding your brand to form.',
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', 
-        mainImageAlt: 'Form builder showing drag and drop functionality', 
+        mainImage: 'https://formester.com/formester-logo-meta-image.png',
+        mainImageAlt: 'Form builder showing drag and drop functionality',
       }
       return getSiteMeta(metaData)
     },

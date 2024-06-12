@@ -65,8 +65,7 @@ export default {
           'Latest form Builder Software in 2023 | Best Online Form Builder to Use in 2023 - Formester',
         description:
           "Best Online, No-Code Form Builder Software in 2023 - Formester's Blog Resource | Discover trending content related to all things form-building.",
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with blog page image
+        mainImage: 'https://formester.com/formester-logo-meta-image.png', // need to update with blog page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with blog page image alt
       }
       return getSiteMeta(metaData)

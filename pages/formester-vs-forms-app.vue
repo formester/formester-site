@@ -63,7 +63,9 @@
       <i class="fa-solid fa-angle-up"></i>
       <h3 class="section__heading">Pricing</h3>
       <div class="table-responsive">
-        <table class="table text-start comparision__table comparision__table-pricing mx-auto">
+        <table
+          class="table text-start comparision__table comparision__table-pricing mx-auto"
+        >
           <thead class="bg__light-primary">
             <tr>
               <th scope="col">Features</th>
@@ -259,33 +261,35 @@ export default {
       ],
       comparisions: [
         {
-          title: 'White Labeled Surveys Creation', 
+          title: 'White Labeled Surveys Creation',
           formester: '<span class="present">Present</span>',
-          forms: '<span class="absent">Not Available</span>'
+          forms: '<span class="absent">Not Available</span>',
         },
         {
           title: 'Logo addition to form',
-          formester: '<span class="present">Available</span> even with the <span class="present">free</span> plan',
+          formester:
+            '<span class="present">Available</span> even with the <span class="present">free</span> plan',
           forms: '<span class="absent">Not Available</span>',
         },
         {
           title: 'HTML Form Backend Service',
-          formester: '<span class="present">Present</span>', 
-          forms: '<span class="absent">Not Available</span>'
+          formester: '<span class="present">Present</span>',
+          forms: '<span class="absent">Not Available</span>',
         },
         {
           title: 'Spam Protection',
           formester: '<span class="present">Present</span>',
-          forms: '<span class="absent">Basic</span>'
+          forms: '<span class="absent">Basic</span>',
         },
         {
-          title: 'Deep Performance Analytics', 
+          title: 'Deep Performance Analytics',
           formester: '<span class="present">Present</span>',
-          forms: '<span class="absent">Basic</span>'
+          forms: '<span class="absent">Basic</span>',
         },
         {
           title: 'Redirection on Submission',
-          formester: '<span class="present">Customization</span> available even with the <span class="present">basic</span> plan',
+          formester:
+            '<span class="present">Customization</span> available even with the <span class="present">basic</span> plan',
           forms: 'Only in <span class="absent">paid</span> plans',
         },
         {
@@ -294,82 +298,102 @@ export default {
           forms: '<span class="absent">Complex</span> embedment execution',
         },
         {
-          title: 'End-to-End Design Customization', 
-          formester: '<span class="present">Present</span>', 
-          forms: '<span class="absent">Minimal</span> customization'
+          title: 'End-to-End Design Customization',
+          formester: '<span class="present">Present</span>',
+          forms: '<span class="absent">Minimal</span> customization',
         },
         {
           title: 'Mobile First UX',
           formester: '<span class="present">Perfectly</span> mobile-first',
-          forms: '<span class="absent">Complicated</span> for design-heavy forms',
+          forms:
+            '<span class="absent">Complicated</span> for design-heavy forms',
         },
         {
           title: 'Conditional Logic',
           formester: '<span class="present">Present</span>',
-          forms: 'Present with a <span class="absent">lower degree</span> of flexibility',
+          forms:
+            'Present with a <span class="absent">lower degree</span> of flexibility',
         },
         {
           title: 'Form Limit',
-          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
-          forms: '<span class="absent">Limited</span> Forms - 10 Forms for free, <span class="absent">$29/month</span> for Unlimited Forms',
+          formester:
+            '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
+          forms:
+            '<span class="absent">Limited</span> Forms - 10 Forms for free, <span class="absent">$29/month</span> for Unlimited Forms',
         },
         {
           title: 'Monthly Form Views',
-          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
-          forms: '<span class="absent">Limited</span> Form Views - 1000 views for free, <span class="absent">$29/month</span> for Unlimited Views',
+          formester:
+            '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
+          forms:
+            '<span class="absent">Limited</span> Form Views - 1000 views for free, <span class="absent">$29/month</span> for Unlimited Views',
         },
         {
           title: 'Total Submission Storage',
-          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
-          forms: '<span class="absent">1000</span> Total Submission Storage for free, <span class="absent">$19/month</span> for Unlimited',
+          formester:
+            '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
+          forms:
+            '<span class="absent">1000</span> Total Submission Storage for free, <span class="absent">$19/month</span> for Unlimited',
         },
         {
           title: 'Automated Email Responses',
-          formester: '<span class="present">Present</span> with custom integration',
-          forms: '<span class="absent">25</span> email notifications/month for free, <span class="absent">$19/month</span> for unlimited email notifications',
+          formester:
+            '<span class="present">Present</span> with custom integration',
+          forms:
+            '<span class="absent">25</span> email notifications/month for free, <span class="absent">$19/month</span> for unlimited email notifications',
         },
         {
           title: 'Best For',
-          formester: '<span class="present">All kinds of forms and applications</span> including survey lead generation, feedback etc',
+          formester:
+            '<span class="present">All kinds of forms and applications</span> including survey lead generation, feedback etc',
           forms: '<span class="absent">Not</span> suitable for long forms',
         },
         {
           title: 'Add Media to Forms',
           formester: '<span class="present">Present</span>',
-          forms: '<span class="present">Present</span>'
+          forms: '<span class="present">Present</span>',
         },
         {
-          title: 'Cloud Integrations with Zapier', 
+          title: 'Cloud Integrations with Zapier',
           formester: '<span class="present">Present</span>',
-          forms: '<span class="present">Present</span>'
+          forms: '<span class="present">Present</span>',
         },
         {
           title: 'Monthly Payment Submissions',
           formester: 'Build in <span class="absent">Progress</span>',
-          forms: '<span class="present">$19/month</span> for <span class="present">100</span> Monthly Payment Submissions',
+          forms:
+            '<span class="present">$19/month</span> for <span class="present">100</span> Monthly Payment Submissions',
         },
         {
           title: 'Storage',
-          formester: 'Basic Plan: <span class="absent">$13/month</span> & Maximum Storage: <span class="absent">1GB</span>.<span></br></span> Business Plan: <span class="absent">$49/monthv</span> & Maximum Storage: <span class="absent">50GB</span>',
-          forms: 'Basic Plan: <span class="present">$19/month</span>  & Maximum Storage: <span class="present">10GB</span>.<span></br></span> Pro Plan: <span class="present">$29/month</span> & Maximum Storage <span class="present">100GB</span>  ',
+          formester:
+            'Basic Plan: <span class="absent">$13/month</span> & Maximum Storage: <span class="absent">1GB</span>.<span></br></span> Business Plan: <span class="absent">$49/monthv</span> & Maximum Storage: <span class="absent">50GB</span>',
+          forms:
+            'Basic Plan: <span class="present">$19/month</span>  & Maximum Storage: <span class="present">10GB</span>.<span></br></span> Pro Plan: <span class="present">$29/month</span> & Maximum Storage <span class="present">100GB</span>  ',
         },
       ],
-      pricing:[
-        { 
+      pricing: [
+        {
           title: 'Free',
-          formester:'Starts <span class="present">free</span> for <span class="present">100</span> submissions',
-          forms: 'Starts <span class="present">free</span> for <span class="present">100</span> submissions',
+          formester:
+            'Starts <span class="present">free</span> for <span class="present">100</span> submissions',
+          forms:
+            'Starts <span class="present">free</span> for <span class="present">100</span> submissions',
         },
         {
           title: 'Personal',
-          formester:'<span class="absent">$13/month</span> for <span class="absent">1000</span> submissions',
-          forms: '<span class="present">$12/month</span> for <span class="present">1000</span> submissions',
+          formester:
+            '<span class="absent">$13/month</span> for <span class="absent">1000</span> submissions',
+          forms:
+            '<span class="present">$12/month</span> for <span class="present">1000</span> submissions',
         },
         {
           title: 'Bussiness',
-          formester:'<span class="absent">$49/month</span> for <span class="absent">15k</span> submissions',
-          forms: '<span class="present">$19/month</span> for <span class="present">100k</span> submissions',
-        }
+          formester:
+            '<span class="absent">$49/month</span> for <span class="absent">15k</span> submissions',
+          forms:
+            '<span class="present">$19/month</span> for <span class="present">100k</span> submissions',
+        },
       ],
       relatedComparisons: [
         {
@@ -403,9 +427,8 @@ export default {
         url: 'https://formester.com/formester-vs-forms-app/',
         title: 'Formester vs Forms App | Forms App Alternative - Formester',
         description:
-          "Clear out your confusion now! With custom forms, data collection, actionable insights and affordable prices, see how Formester offers you more!",
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with formester vs forms.app page image
+          'Clear out your confusion now! With custom forms, data collection, actionable insights and affordable prices, see how Formester offers you more!',
+        mainImage: 'https://formester.com/formester-logo-meta-image.png', // need to update with formester vs forms.app page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs forms.app page image alt
         keywords: [
           'forms app alternative',
@@ -458,7 +481,7 @@ export default {
           'forms app alternative free reddit',
           'forms app alternative deutsch',
           'free alternatives to forms app',
-        ]
+        ],
       }
       return getSiteMeta(metaData)
     },
@@ -482,7 +505,7 @@ export default {
       '@type': 'Corporation',
       name: 'Formester vs Forms App | Forms App Alternative - Formester',
       description:
-        "Clear out your confusion now! With custom forms, data collection, actionable insights and affordable prices, see how Formester offers you more!",
+        'Clear out your confusion now! With custom forms, data collection, actionable insights and affordable prices, see how Formester offers you more!',
       logo: 'https://formester.com/logo.png',
       url: 'https://formester.com',
       address: {
@@ -499,7 +522,7 @@ export default {
           '@type': 'ImageObject',
           url: 'https://formester.com/logo.png',
         },
-      }
+      },
     }
   },
 }
