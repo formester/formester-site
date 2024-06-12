@@ -282,6 +282,7 @@ table tr:nth-child(even) {
 .plan__name {
   font-size: 18px;
   font-weight: 600;
+  text-align: start;
 }
 
 .table__button {
