@@ -271,6 +271,7 @@ thead tr td {
 }
 
 table td {
+  text-align: center;
   min-width: 169px;
 }
 
@@ -348,5 +349,11 @@ table tr:nth-child(even) {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  table td {
+    text-align: right;
+  }
 }
 </style>
