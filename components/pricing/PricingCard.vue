@@ -1,5 +1,5 @@
 <template>
-  <div class="col-lg-4 col-sm-8 mt-3">
+  <div class="col-lg-3 col-sm-8 mt-3">
     <div class="pricing__card d-flex flex-column" :class="{ hglt: highlight }">
       <div class="d-flex flex-column align-items-stretch text-start p-4">
         <h2 class="pricing__category">{{ plan.name }}</h2>
@@ -7,14 +7,18 @@
           <span v-if="false" class="pricing__striked me-2">
             {{ plan.prevPrice }}
           </span>
-
-          <span class="pricing__amount">{{ plan.price }}</span>
-          <span class="pricing__timeline ms-1">per month</span>
+          <div v-if="plan.name === 'Enterprise'">
+            <span class="pricing__amount">Let's Talk</span>
+          </div>
+          <div v-else>
+            <span class="pricing__amount">{{ plan.price }}</span>
+            <span class="pricing__timeline ms-1">per month</span>
+          </div>
         </div>
-        <div class="billing-timeline mb-4">
+        <div class="billing-timeline mb-3">
           <span v-show="billingTimeline"> Billed {{ billingTimeline }} </span>
         </div>
-        <p class="pricing__description mt-3 mb-4">
+        <p class="pricing__description mb-4">
           {{ plan.description }}
         </p>
         <a
@@ -49,14 +53,17 @@ export default {
   },
   computed: {
     billingTimeline() {
-      if (this.plan.price === '$0') return ''
+      if (this.plan.type === 'All') return ''
 
       return this.plan.type === 'Yearly' ? 'yearly' : 'monthly'
     },
     planTextButton() {
-      return this.billingTimeline
-        ? `Get ${this.plan.name} ${this.billingTimeline} Plan`
-        : 'Free forever'
+      if (this.plan.name === 'Free') {
+        return 'Free forever'
+      } else if (this.plan.name === 'Enterprise') {
+        return 'Contact sales'
+      }
+      return 'Get Started'
     },
     keyFeaturesHeading() {
       if (this.plan.name === 'Free') {

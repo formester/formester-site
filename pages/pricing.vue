@@ -29,7 +29,7 @@
           <PricingCard :plan="free" muted />
           <PricingCard :plan="personalMonthly" highlighted />
           <PricingCard :plan="businessMonthly" />
-          <!-- <PricingCard :plan="enterprise" /> -->
+          <PricingCard :plan="enterprise" />
         </div>
         <div
           v-if="isYearly"
@@ -38,7 +38,7 @@
           <PricingCard :plan="free" muted />
           <PricingCard :plan="personalYearly" highlighted />
           <PricingCard :plan="businessYearly" />
-          <!-- <PricingCard :plan="enterprise" /> -->
+          <PricingCard :plan="enterprise" />
         </div>
         <div class="mt-5 py-5">
           <h2 class="comparison__table-heading mb-3">
@@ -67,7 +67,6 @@ import {
   free,
   personalMonthly,
   businessMonthly,
-  freeYearly,
   personalYearly,
   businessYearly,
   enterprise,
@@ -86,7 +85,6 @@ export default {
       free,
       personalMonthly,
       businessMonthly,
-      freeYearly,
       personalYearly,
       businessYearly,
       comparisonTableFeatures,
@@ -99,7 +97,8 @@ export default {
         type: 'website',
         url: 'https://formester.com/pricing/',
         title: 'Pricing that feels just right',
-        description: 'Start with our free plan',
+        description:
+          'Select the perfect plan for your needs, and star building beautiful forms!',
         mainImage:
           'https://formester.com/formester-form-builder-background.png', // need to update with pricing page image
         mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with pricing page image alt

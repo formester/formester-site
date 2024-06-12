@@ -1,7 +1,7 @@
 export const free = {
   name: 'Free',
   price: '$0',
-  type: 'Monthly',
+  type: 'All',
   description:
     'For individuals who need to quickly collect data through forms.',
   features: [
@@ -17,7 +17,15 @@ export const free = {
 export const enterprise = {
   name: 'Enterprise',
   description: 'For organizations needing custom plan as per the requirements.',
-  features: ['Customizable'],
+  type: 'All',
+  features: [
+    'Custom forms',
+    'Custom Submission/month',
+    'Custom file uploads',
+    'Custom Google Sheets Integration',
+    'Custom Webhook',
+    'Custom Signatures',
+  ],
 }
 
 export const personalMonthly = {
@@ -49,22 +57,6 @@ export const businessMonthly = {
     'Unlimited Google Sheets Integration',
     'Unlimited Webhooks',
     '2,500 Signatures',
-  ],
-}
-
-export const freeYearly = {
-  name: 'Free',
-  price: '$0',
-  type: 'Yearly',
-  description:
-    'For individuals who need to quickly collect data through forms.',
-  features: [
-    '10 forms',
-    '100 Submission/month',
-    '100 MB file uploads',
-    '1 Google Sheets Integration',
-    '1 Webhook',
-    '10 Signatures',
   ],
 }
 
