@@ -3,7 +3,7 @@
     <div class="pricing__card d-flex flex-column" :class="{ hglt: highlight }">
       <div class="d-flex flex-column align-items-stretch text-start p-4">
         <h2 class="pricing__category">{{ plan.name }}</h2>
-        <div class="d-flex align-items-baseline mt-2">
+        <div class="d-flex align-items-baseline mt-2 mb-3">
           <span v-if="false" class="pricing__striked me-2">
             {{ plan.prevPrice }}
           </span>
@@ -14,9 +14,6 @@
             <span class="pricing__amount">{{ plan.price }}</span>
             <span class="pricing__timeline ms-1">per month</span>
           </div>
-        </div>
-        <div class="billing-timeline mb-3">
-          <span v-show="billingTimeline"> Billed {{ billingTimeline }} </span>
         </div>
         <p class="pricing__description mb-4">
           {{ plan.description }}
@@ -52,11 +49,6 @@ export default {
     }
   },
   computed: {
-    billingTimeline() {
-      if (this.plan.type === 'All') return ''
-
-      return this.plan.type === 'Yearly' ? 'yearly' : 'monthly'
-    },
     planTextButton() {
       if (this.plan.name === 'Free') {
         return 'Free forever'
@@ -165,13 +157,6 @@ export default {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
-}
-
-.billing-timeline {
-  color: #525252;
-  font-size: 14px;
-  line-height: 21px;
-  height: 20px;
 }
 
 .pricing__button {
