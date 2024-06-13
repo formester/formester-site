@@ -22,9 +22,7 @@
               >
             </td>
             <td>
-              <div class="plan__name mb-3">
-                Personal<span class="badge ms-2">Popular</span>
-              </div>
+              <div class="plan__name mb-3">Personal</div>
               <div class="d-flex align-items-baseline mt-2 mb-3">
                 <span class="pricing__amount">{{ pricingPlans.personal }}</span>
                 <span class="pricing__timeline ms-1 text-nowrap"
@@ -33,12 +31,14 @@
               </div>
               <a
                 href="https://app.formester.com/users/sign_up"
-                class="table__button hglt d-block text-center"
+                class="table__button d-block text-center"
                 >Get started</a
               >
             </td>
             <td>
-              <div class="plan__name mb-3">Business</div>
+              <div class="plan__name mb-3">
+                Business<span class="badge ms-2">Popular</span>
+              </div>
               <div class="d-flex align-items-baseline mt-2 mb-3">
                 <span class="pricing__amount">{{ pricingPlans.business }}</span>
                 <span class="pricing__timeline ms-1 text-nowrap"
@@ -47,7 +47,7 @@
               </div>
               <a
                 href="https://app.formester.com/users/sign_up"
-                class="table__button d-block text-center"
+                class="table__button hglt d-block text-center"
                 >Get started</a
               >
             </td>
@@ -95,14 +95,14 @@
             <td>
               <a
                 href="https://app.formester.com/users/sign_up"
-                class="table__button hglt d-block text-center"
+                class="table__button d-block text-center"
                 >Get started</a
               >
             </td>
             <td>
               <a
                 href="https://app.formester.com/users/sign_up"
-                class="table__button d-block text-center"
+                class="table__button hglt d-block text-center"
               >
                 Get started
               </a>
@@ -155,16 +155,14 @@
       </table>
       <!-- personal -->
       <div class="mt-5">
-        <div class="plan__name mb-3">
-          Personal<span class="badge ms-2">Popular</span>
-        </div>
+        <div class="plan__name mb-3">Personal</div>
         <div class="d-flex align-items-baseline mt-3 mb-4">
           <span class="pricing__amount">{{ pricingPlans.personal }}</span>
           <span class="pricing__timeline ms-1 text-nowrap">per month</span>
         </div>
         <a
           href="https://app.formester.com/users/sign_up"
-          class="table__button hglt d-block text-center"
+          class="table__button d-block text-center"
         >
           Get Started
         </a>
@@ -187,7 +185,7 @@
           <td colspan="2">
             <a
               href="https://app.formester.com/users/sign_up"
-              class="table__button hglt d-block text-center"
+              class="table__button d-block text-center"
             >
               Get Started
             </a>
@@ -196,14 +194,16 @@
       </table>
       <!-- business -->
       <div class="mt-5">
-        <div class="plan__name mb-3">Business</div>
+        <div class="plan__name mb-3">
+          Business<span class="badge ms-2">Popular</span>
+        </div>
         <div class="d-flex align-items-baseline mt-3 mb-4">
           <span class="pricing__amount">{{ pricingPlans.business }}</span>
           <span class="pricing__timeline ms-1 text-nowrap">per month</span>
         </div>
         <a
           href="https://app.formester.com/users/sign_up"
-          class="table__button d-block text-center"
+          class="table__button hglt d-block text-center"
         >
           Get Started
         </a>
@@ -226,7 +226,7 @@
           <td colspan="2">
             <a
               href="https://app.formester.com/users/sign_up"
-              class="table__button d-block text-center"
+              class="table__button hglt d-block text-center"
             >
               Get Started
             </a>

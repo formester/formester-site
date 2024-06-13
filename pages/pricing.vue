@@ -40,18 +40,18 @@
           class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3"
         >
           <PricingCard :plan="free" muted />
-          <PricingCard :plan="personalMonthly" highlighted />
-          <PricingCard :plan="businessMonthly" />
-          <PricingCard :plan="enterprise" />
+          <PricingCard :plan="personalMonthly" />
+          <PricingCard :plan="businessMonthly" highlighted />
+          <PricingCard :plan="enterprise" contact-sales />
         </div>
         <div
           v-if="isYearly"
           class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3"
         >
           <PricingCard :plan="free" muted />
-          <PricingCard :plan="personalYearly" highlighted />
-          <PricingCard :plan="businessYearly" />
-          <PricingCard :plan="enterprise" />
+          <PricingCard :plan="personalYearly" />
+          <PricingCard :plan="businessYearly" highlighted />
+          <PricingCard :plan="enterprise" contact-sales />
         </div>
         <div class="mt-5 py-5">
           <h2 class="comparison__table-heading mb-3">

@@ -20,7 +20,7 @@
         </p>
         <a
           class="button pricing__button text-center"
-          href="https://app.formester.com/users/sign_up"
+          :href="buttonLink"
           :class="{ muted: muted }"
           >{{ planTextButton }}</a
         >
@@ -42,6 +42,7 @@ export default {
     plan: { type: Object, required: true },
     highlighted: { type: Boolean, default: false },
     muted: { type: Boolean, default: false },
+    contactSales: { type: Boolean, default: false },
   },
   data() {
     return {
@@ -56,6 +57,13 @@ export default {
         return 'Contact sales'
       }
       return 'Get Started'
+    },
+    buttonLink() {
+      if (this.contactSales) {
+        return 'mailto:sales@formester.com'
+      } else {
+        return 'https://app.formester.com/users/sign_up'
+      }
     },
     keyFeaturesHeading() {
       if (this.plan.name === 'Free') {
