@@ -261,9 +261,7 @@ export default {
         mainImage:
           this.blogData?.coverImg ||
           'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt:
-          this.blogData?.coverImgAlt ||
-          'Form builder showing drag and drop functionality',
+        mainImageAlt: this.blogData?.coverImgAlt || 'Formester Logo',
         keywords: this.blogData?.keywords,
       }
       return getSiteMeta(metaData)

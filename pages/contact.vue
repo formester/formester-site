@@ -164,7 +164,7 @@ export default {
         description:
           'Create custom online forms with ease using Formester - the top-rated online form builder. Contact us today to start building your perfect form!',
         mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Form builder showing drag and drop functionality',
+        mainImageAlt: 'Formester Logo',
       }
       return getSiteMeta(metaData)
     },

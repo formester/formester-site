@@ -334,7 +334,7 @@ export default {
         description:
           'Formester terms of service. Read our terms of service and privacy policy.',
         mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Form builder showing drag and drop functionality',
+        mainImageAlt: 'Formester Logo',
       }
       return getSiteMeta(metaData)
     },

@@ -126,7 +126,7 @@ export default {
         description:
           "Formester's collaborative form sharing will boost teamwork! Gather input, unite your team, and easily uncover form-building potential.",
         mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Form builder showing drag and drop functionality',
+        mainImageAlt: 'Formester Logo',
         keywords: [
           'formester web forms with collaboration feature',
           'formester web form features collboration',

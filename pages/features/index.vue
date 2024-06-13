@@ -223,7 +223,7 @@ export default {
         description:
           'Experience the perfect blend of simplicity and versatility, empowering you to create engaging and efficient forms effortlessly.',
         mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Form builder showing drag and drop functionality',
+        mainImageAlt: 'Formester Logo',
       }
       return getSiteMeta(metaData)
     },

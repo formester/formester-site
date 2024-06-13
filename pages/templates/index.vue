@@ -41,7 +41,7 @@ export default {
         description:
           'Use our Formester form templates including surveys, reviews, registrations, & more for any industry! Automate workflows with online templates.',
         mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Form builder showing drag and drop functionality',
+        mainImageAlt: 'Formester Logo',
       }
       return getSiteMeta(metaData)
     },

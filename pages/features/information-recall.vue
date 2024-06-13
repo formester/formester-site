@@ -107,7 +107,7 @@ export default {
         description:
           "Create personalized and interactive form & survey experiences - Formester's Information Recall | Answer recall, Dynamic variables & more!",
         mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Form builder showing drag and drop functionality',
+        mainImageAlt: 'Formester Logo',
         keywords: [
           'formester web forms with information recall feature',
           'Information Recall',

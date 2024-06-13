@@ -4,8 +4,7 @@ const title = 'HTML Form Generator | No-Code Web Form Builder - Formester'
 const description =
   'Build web forms using our Free HTML Form Builder with Drag-and-Drop Interface - Advanced Features, Third-Party Integrations & Robust Analytics!'
 const mainImage = 'https://formester.com/formester-logo-meta-image.png'
-const mainImageAlt =
-  'Form builder showing drag and drop functionality in Formester'
+const mainImageAlt = 'Formester Logo'
 const keywords = [
   'HTML form builder',
   'Web form creation',

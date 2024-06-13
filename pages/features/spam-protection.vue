@@ -77,7 +77,7 @@ export default {
         description:
           'Spam Protection for your Web Forms - Formester | Protect your web forms from spam | Block unwanted submissions & Improve user experience',
         mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Form builder showing drag and drop functionality',
+        mainImageAlt: 'Formester Logo',
       }
       return getSiteMeta(metaData)
     },

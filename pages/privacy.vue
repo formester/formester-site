@@ -144,7 +144,7 @@ export default {
           'Formester uses collected information for the following general purposes: products and services provision, billing, identification and authentication, services improvement, contact, and research.',
         mainImage:
           'https://formester.com/formester-logo-meta-image.png', 
-        mainImageAlt: 'Form builder showing drag and drop functionality', 
+        mainImageAlt: 'Formester Logo', 
       }
       return getSiteMeta(metaData)
     },

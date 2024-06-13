@@ -81,7 +81,7 @@ export default {
         description:
           "Create & add stunning forms in minutes with Formester's intuitive builder & WordPress plugin. No coding needed! Increase leads, collect feedback & streamline workflow.",
         mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Form builder showing drag and drop functionality',
+        mainImageAlt: 'Formester Logo',
         keywords: [
           'Formester',
           'WordPress plugin',

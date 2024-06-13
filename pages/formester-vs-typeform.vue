@@ -398,7 +398,7 @@ export default {
         description:
           'Powerful Alternative to Typeform - Try Formester for Online, No-Code Forms & Surveys! Advanced Features & Integrations | Sign-up for Free!',
         mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Form builder showing drag and drop functionality',
+        mainImageAlt: 'Formester Logo',
         keywords: [
           'typeform alternative',
           'typeform alternative free',

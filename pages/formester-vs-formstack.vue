@@ -421,7 +421,7 @@ export default {
         description:
           'Powerful Formstack alternative - Try Formester for Online, No-Code Forms & Surveys! Advanced Features & Integrations | Sign-up for Free!',
         mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Form builder showing drag and drop functionality',
+        mainImageAlt: 'Formester Logo',
         keywords: [
           'formstack alternative',
           'formstack alternative free',

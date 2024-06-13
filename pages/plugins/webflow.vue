@@ -75,7 +75,7 @@ export default {
         description:
           'Integrate Formester into Webflow in three simple steps. Effortlessly create, customize, and publish beautiful web forms on your webflow sites.',
         mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Form builder showing drag and drop functionality',
+        mainImageAlt: 'Formester Logo',
         keywords: [
           'Formester',
           'Webflow plugin',

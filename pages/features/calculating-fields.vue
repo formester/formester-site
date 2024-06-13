@@ -119,7 +119,7 @@ export default {
         description:
           'Dynamic Forms to Perform Real-time Complex Calculations | Dynamic Scores, Personalized & Interactive Form Experiences - Sign up now.',
         mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Form builder showing drag and drop functionality',
+        mainImageAlt: 'Formester Logo',
         keywords: [
           'formester web forms with calculation',
           'Calculation',

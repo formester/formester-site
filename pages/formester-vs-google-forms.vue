@@ -267,7 +267,7 @@ export default {
         description:
           'Switch to Formester and break free from Google Forms limitations. Craft professional forms with advanced features like conditional logic, analytics, and payment processing. Try for free!',
         mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Form builder showing drag and drop functionality',
+        mainImageAlt: 'Formester Logo',
         keywords: [
           'google-form alternative',
           'google-form alternative free',

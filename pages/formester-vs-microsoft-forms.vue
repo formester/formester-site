@@ -297,7 +297,7 @@ export default {
         description:
           'Effortlessly craft captivating web forms with Formester - Detailed feature comparison of Formester and Microsoft Forms!',
         mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Form builder showing drag and drop functionality',
+        mainImageAlt: 'Formester Logo',
         keywords: [
           'microsoft-forms alternative',
           'microsoft-forms alternative free',

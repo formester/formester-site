@@ -429,7 +429,7 @@ export default {
         description:
           'Clear out your confusion now! With custom forms, data collection, actionable insights and affordable prices, see how Formester offers you more!',
         mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Form builder showing drag and drop functionality',
+        mainImageAlt: 'Formester Logo',
         keywords: [
           'forms app alternative',
           'forms app alternative free',

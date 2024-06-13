@@ -81,7 +81,7 @@ export default {
         description:
           'Boost your trust to customer by adding your brand to form.',
         mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Form builder showing drag and drop functionality',
+        mainImageAlt: 'Formester Logo',
       }
       return getSiteMeta(metaData)
     },

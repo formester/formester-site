@@ -113,7 +113,7 @@ export default {
         description:
           'Select the perfect plan for your needs, and star building beautiful forms!',
         mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Form builder showing drag and drop functionality',
+        mainImageAlt: 'Formester Logo',
       }
       return getSiteMeta(metaData)
     },

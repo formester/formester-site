@@ -420,7 +420,7 @@ export default {
         description:
           'Powerful Alternative to Paperform - Try Formester for Online, No-Code, Customizable Forms with Advanced Features | Sign-up for Free!',
         mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Form builder showing drag and drop functionality',
+        mainImageAlt: 'Formester Logo',
         keywords: [
           'paperform alternative',
           'paperform alternative free',

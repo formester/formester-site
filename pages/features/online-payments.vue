@@ -144,7 +144,7 @@ export default {
         description:
           "Experience secure online payments with Formester's user-friendly online payment form. Start accepting payments today. Try now!",
         mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Form builder showing drag and drop functionality',
+        mainImageAlt: 'Formester Logo',
       }
       return getSiteMeta(metaData)
     },

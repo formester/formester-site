@@ -108,7 +108,7 @@ export default {
         description:
           'Stay connected to your forms and collect submissions even in no network zones with our offline forms',
         mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Form builder showing drag and drop functionality',
+        mainImageAlt: 'Formester Logo',
         keywords: [
           'formester web forms with offline forms feature',
           'Offline Forms',
