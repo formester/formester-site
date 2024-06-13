@@ -131,8 +131,8 @@ export default {
         title: 'Form Analytics | Formester',
         description:
           "Get valuable insights into your Google Forms data with Formester's powerful Form Analytics software. Sign up for free now to optimize your forms!",
-        mainImage: 'https://formester.com/formester-logo-meta-image.png', // need to update with powerful analytics page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with powerful analytics page image alt
+        mainImage: 'https://formester.com/formester-logo-meta-image.png',
+        mainImageAlt: 'Form builder showing drag and drop functionality',
       }
       return getSiteMeta(metaData)
     },

@@ -419,8 +419,8 @@ export default {
         title: 'Formester vs Paperform | Paperform Alternative - Formester',
         description:
           'Powerful Alternative to Paperform - Try Formester for Online, No-Code, Customizable Forms with Advanced Features | Sign-up for Free!',
-        mainImage: 'https://formester.com/formester-logo-meta-image.png', // need to update with formester vs paperform page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs paperform page image alt
+        mainImage: 'https://formester.com/formester-logo-meta-image.png',
+        mainImageAlt: 'Form builder showing drag and drop functionality',
         keywords: [
           'paperform alternative',
           'paperform alternative free',

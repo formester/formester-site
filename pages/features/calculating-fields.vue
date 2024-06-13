@@ -118,8 +118,8 @@ export default {
         title: 'Calculating Fields - Formester',
         description:
           'Dynamic Forms to Perform Real-time Complex Calculations | Dynamic Scores, Personalized & Interactive Form Experiences - Sign up now.',
-        mainImage: 'https://formester.com/formester-logo-meta-image.png', // need to update with auto-responder page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
+        mainImage: 'https://formester.com/formester-logo-meta-image.png',
+        mainImageAlt: 'Form builder showing drag and drop functionality',
         keywords: [
           'formester web forms with calculation',
           'Calculation',

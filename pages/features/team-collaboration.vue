@@ -125,8 +125,8 @@ export default {
           'Simplify Collaboration on Online Forms and Surveys - Team Collaboration allows you to regulate Form Access for Multiple Users, Members or Clients!',
         description:
           "Formester's collaborative form sharing will boost teamwork! Gather input, unite your team, and easily uncover form-building potential.",
-        mainImage: 'https://formester.com/formester-logo-meta-image.png', // need to update with auto-responder page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
+        mainImage: 'https://formester.com/formester-logo-meta-image.png',
+        mainImageAlt: 'Form builder showing drag and drop functionality',
         keywords: [
           'formester web forms with collaboration feature',
           'formester web form features collboration',

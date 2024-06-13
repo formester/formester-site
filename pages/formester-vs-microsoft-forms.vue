@@ -296,8 +296,8 @@ export default {
           'Formester vs Microsoft Forms | Best Microsoft Forms Alternative',
         description:
           'Effortlessly craft captivating web forms with Formester - Detailed feature comparison of Formester and Microsoft Forms!',
-        mainImage: 'https://formester.com/formester-logo-meta-image.png', // need to update with formester vs microsoft-forms page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs microsoft-forms page image alt
+        mainImage: 'https://formester.com/formester-logo-meta-image.png',
+        mainImageAlt: 'Form builder showing drag and drop functionality',
         keywords: [
           'microsoft-forms alternative',
           'microsoft-forms alternative free',

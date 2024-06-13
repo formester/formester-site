@@ -76,8 +76,8 @@ export default {
         title: 'Conditional Logic Forms Builder - Formester',
         description:
           "Easily create custom forms with Conditional Logic Forms Builder - Formester. Get started today and optimize your website's lead generation!",
-        mainImage: 'https://formester.com/formester-logo-meta-image.png', // need to update with conditional page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with conditional page image alt
+        mainImage: 'https://formester.com/formester-logo-meta-image.png',
+        mainImageAlt: 'Form builder showing drag and drop functionality',
       }
       return getSiteMeta(metaData)
     },

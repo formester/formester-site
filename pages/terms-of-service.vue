@@ -333,8 +333,8 @@ export default {
         title: 'Terms of Service | Formester',
         description:
           'Formester terms of service. Read our terms of service and privacy policy.',
-        mainImage: 'https://formester.com/formester-logo-meta-image.png', // need to update with privacy page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with privacy page image alt
+        mainImage: 'https://formester.com/formester-logo-meta-image.png',
+        mainImageAlt: 'Form builder showing drag and drop functionality',
       }
       return getSiteMeta(metaData)
     },

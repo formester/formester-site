@@ -222,8 +222,8 @@ export default {
         title: 'Feature Page - Formester',
         description:
           'Experience the perfect blend of simplicity and versatility, empowering you to create engaging and efficient forms effortlessly.',
-        mainImage: 'https://formester.com/formester-logo-meta-image.png', // need to update with powerful analytics page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with powerful analytics page image alt
+        mainImage: 'https://formester.com/formester-logo-meta-image.png',
+        mainImageAlt: 'Form builder showing drag and drop functionality',
       }
       return getSiteMeta(metaData)
     },

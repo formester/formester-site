@@ -54,8 +54,8 @@ export default {
         url: `https://formester.com/templates/${this.$route.params.slug}`,
         title: this.currentCategory,
         description: `Find the perfect template for ${this.currentCategory} with Formester's comprehensive library. Choose from a variety of customizable designs and create a professional look in no time.`,
-        mainImage: 'https://formester.com/formester-logo-meta-image.png', // need to update with blog page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with blog page image alt
+        mainImage: 'https://formester.com/formester-logo-meta-image.png',
+        mainImageAlt: 'Form builder showing drag and drop functionality',
       }
       return getSiteMeta(metaData)
     },

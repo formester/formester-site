@@ -107,8 +107,8 @@ export default {
           'Offline Forms for Uninterrupted Data Collection: Anytime, Anywhere',
         description:
           'Stay connected to your forms and collect submissions even in no network zones with our offline forms',
-        mainImage: 'https://formester.com/formester-logo-meta-image.png', // need to update with auto-responder page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
+        mainImage: 'https://formester.com/formester-logo-meta-image.png',
+        mainImageAlt: 'Form builder showing drag and drop functionality',
         keywords: [
           'formester web forms with offline forms feature',
           'Offline Forms',

@@ -411,8 +411,8 @@ export default {
         title: 'Formester vs Zoho Forms | Zoho Forms Alternative - Formester',
         description:
           'Powerful Alternative to Zoho Forms - Formester for Customizable Forms & Surveys, Data Collection, Insights, Affordable prices! Sign-up for free!',
-        mainImage: 'https://formester.com/formester-logo-meta-image.png', // need to update with formester vs zoho form page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs zoho form page image alt
+        mainImage: 'https://formester.com/formester-logo-meta-image.png',
+        mainImageAlt: 'Form builder showing drag and drop functionality',
         keywords: [
           'zoho form alternative',
           'zoho form alternative free',

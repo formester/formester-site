@@ -427,8 +427,8 @@ export default {
         title: 'Jotform Alternative | Formester vs Jotform - Formester',
         description:
           'Powerful Alternative to Jotform. Custom forms, data collection, actionable insights & more to grow your business. Start by signing-up for free!',
-        mainImage: 'https://formester.com/formester-logo-meta-image.png', // need to update with formester vs jotform page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs jotform page image alt
+        mainImage: 'https://formester.com/formester-logo-meta-image.png', 
+        mainImageAlt: 'Form builder showing drag and drop functionality', 
         keywords: [
           'jotform alternative',
           'jotform alternative free',
