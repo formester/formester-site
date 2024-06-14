@@ -22,15 +22,27 @@
           {{ activeCategory ? activeCategory.name : 'All' }}
           Templates
         </h1>
-        <!-- <p class="content-description">
-          {{ activeCategory.description }}
-        </p> -->
+        <div
+          v-if="activeCategory && activeCategory.description"
+          class="my-2"
+          :class="{ 'd-flex align-items-center': !showFullDescription }"
+        >
+          <p class="content-description mt-0 mb-1">
+            {{ activeCategory.description }}
+          </p>
+          <button
+            class="content-description-handle-button text-nowrap"
+            @click="toggleDescription"
+          >
+            {{ descriptionButtonLabel }}
+          </button>
+        </div>
 
         <TemplateSearch @searchInput="handleSearch" />
 
-        <div v-if="filterTemplates.length" class="templates-grid">
+        <div v-if="filteredTemplates.length" class="templates-grid">
           <TemplateCard
-            v-for="(template, idx) in filterTemplates"
+            v-for="template in filteredTemplates"
             :key="template.id"
             :template="template"
           />
@@ -58,30 +70,40 @@ import TemplateSearch from '@/components/template/TemplateSearch.vue'
 
 export default {
   components: { TemplateCategories, TemplateCard, TemplateSearch },
-  props: ['activeCategory', 'templates', 'templateCategories'],
+  props: {
+    activeCategory: Object,
+    templates: Array,
+    templateCategories: Array,
+  },
   data() {
     return {
       searchTerm: '',
+      showFullDescription: false,
     }
   },
   methods: {
     handleSearch(searchTerm) {
       this.searchTerm = searchTerm
     },
+    toggleDescription() {
+      this.showFullDescription = !this.showFullDescription
+    },
   },
   computed: {
-    filterTemplates() {
+    filteredTemplates() {
       const searchTerm = this.searchTerm.trim().toLowerCase()
-      if (!searchTerm) {
-        return this.templates
-      }
-      return this.templates.filter((template) => {
-        const nameMatch = template.name.toLowerCase().includes(searchTerm)
-        const descriptionMatch = template.description
-          ?.toLowerCase()
-          .includes(searchTerm)
-        return nameMatch || descriptionMatch
-      })
+      if (!searchTerm) return this.templates
+      return this.templates.filter(
+        (template) =>
+          template.name.toLowerCase().includes(searchTerm) ||
+          template.description?.toLowerCase().includes(searchTerm)
+      )
+    },
+    descriptionLineClampStyle() {
+      return this.showFullDescription ? 'auto' : 1
+    },
+    descriptionButtonLabel() {
+      return this.showFullDescription ? 'Show less' : 'Show more'
     },
   },
 }
@@ -135,6 +157,18 @@ export default {
   font-size: 20px;
   line-height: 30px;
   margin-top: 12px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: v-bind(descriptionLineClampStyle);
+  -webkit-box-orient: vertical;
+}
+
+.content-description-handle-button {
+  color: var(--clr-primary);
+  background: transparent;
+  text-decoration: underline;
 }
 
 .templates-grid {
@@ -147,7 +181,7 @@ export default {
 }
 
 .no-templates {
-  padding: 52px 0px;
+  padding: 52px 0;
   gap: 1rem;
 }
 

@@ -260,10 +260,8 @@ export default {
         description: this.blogData?.metaDescription,
         mainImage:
           this.blogData?.coverImg ||
-          'https://formester.com/formester-form-builder-background.png',
-        mainImageAlt:
-          this.blogData?.coverImgAlt ||
-          'Form builder showing drag and drop functionality',
+          'https://formester.com/formester-logo-meta-image.png',
+        mainImageAlt: this.blogData?.coverImgAlt || 'Formester Logo',
         keywords: this.blogData?.keywords,
       }
       return getSiteMeta(metaData)
@@ -339,7 +337,7 @@ export default {
         image:
           imagesArray.length > 0
             ? imagesArray
-            : ['https://formester.com/formester-form-builder-background.png'],
+            : ['https://formester.com/formester-logo-meta-image.png'],
         author: {
           '@type': 'Person',
           name: this.blogData?.author,

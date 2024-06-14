@@ -62,7 +62,9 @@
     <section class="container text-center">
       <h3 class="section__heading">Pricing</h3>
       <div class="table-responsive">
-        <table class="table text-start comparision__table comparision__table-pricing mx-auto">
+        <table
+          class="table text-start comparision__table comparision__table-pricing mx-auto"
+        >
           <thead class="bg__light-primary">
             <tr>
               <th scope="col">Features</th>
@@ -222,7 +224,7 @@
         />
       </div>
     </section>
-    
+
     <CallToActionSection />
   </div>
 </template>
@@ -256,23 +258,25 @@ export default {
       ],
       comparisions: [
         {
-          title: 'HTML Form Backend Service', 
-          formester: '<span class="present">Present</span>', 
+          title: 'HTML Form Backend Service',
+          formester: '<span class="present">Present</span>',
           paperform: '<span class="absent">Not Available</span>',
         },
         {
           title: 'White Labeled Surveys Creation',
-          formester: '<span class="present">Present</span>', 
-          paperform: '<span class="absent">Not Available</span>'
+          formester: '<span class="present">Present</span>',
+          paperform: '<span class="absent">Not Available</span>',
         },
         {
           title: 'Logo addition to form',
-          formester: '<span class="present">Available</span> even with the <span class="present">free</span> plan',
+          formester:
+            '<span class="present">Available</span> even with the <span class="present">free</span> plan',
           paperform: '<span class="absent">Not Available</span> specifically',
         },
         {
           title: 'Automated Email Responses',
-          formester: '<span class="present">Present</span> with custom integration',
+          formester:
+            '<span class="present">Present</span> with custom integration',
           paperform: 'Only in <span class="absent">paid plans</span>',
         },
         {
@@ -281,88 +285,106 @@ export default {
           paperform: '<span class="absent">Complex</span> embedment execution',
         },
         {
-          title: 'End-to-End Design Customization', 
-          formester: '<span class="present">Present</span>', 
+          title: 'End-to-End Design Customization',
+          formester: '<span class="present">Present</span>',
           paperform: '<span class="absent">Minimal</span> customization',
         },
         {
           title: 'Mobile First UX',
           formester: '<span class="present">Perfectly</span> mobile-first',
-          paperform: '<span class="absent">Complicated</span> for design-heavy forms',
+          paperform:
+            '<span class="absent">Complicated</span> for design-heavy forms',
         },
         {
           title: 'Conditional Logic',
           formester: '<span class="present">Present</span>',
-          paperform: 'Present with a <span class="absent">lower degree</span> of flexibility',
+          paperform:
+            'Present with a <span class="absent">lower degree</span> of flexibility',
         },
-        {  
+        {
           title: 'Monthly Form Views',
-          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
-          paperform: '<span class="absent">Limited</span> Form Views - 10000 views for <span class="absent">$24/month</span>, <span class="absent">$49/month</span> for Unlimited Views',
+          formester:
+            '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
+          paperform:
+            '<span class="absent">Limited</span> Form Views - 10000 views for <span class="absent">$24/month</span>, <span class="absent">$49/month</span> for Unlimited Views',
         },
-        
-        {  
+
+        {
           title: 'Collaborators',
-          formester: '<span class="present">Allow collaborators</span> even in <span class="present">free</span> plan',
-          paperform: 'Single user upto <span class="absent">$49/month</span>, 5 users in <span class="absent">$159/month</span>',
+          formester:
+            '<span class="present">Allow collaborators</span> even in <span class="present">free</span> plan',
+          paperform:
+            'Single user upto <span class="absent">$49/month</span>, 5 users in <span class="absent">$159/month</span>',
         },
-        {  
+        {
           title: 'Total Submission Storage',
-          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
-          paperform: '1000 Total Submission Storage in<span class="absent">$24/month</span>, <span class="absent">$159/month</span> for Unlimited',
+          formester:
+            '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
+          paperform:
+            '1000 Total Submission Storage in<span class="absent">$24/month</span>, <span class="absent">$159/month</span> for Unlimited',
         },
         {
           title: 'Best For',
-          formester: '<span class="present">All kinds of forms and applications</span> including survey lead generation, feedback etc',
+          formester:
+            '<span class="present">All kinds of forms and applications</span> including survey lead generation, feedback etc',
           paperform: '<span class="absent">Not suitable</span>  for long forms',
         },
         {
           title: 'Monthly Payment Submissions',
           formester: 'Build in <span class="absent">Progress</span>',
-          paperform: '<span class="present">$24/month</span> for 1 Payment Account',
-        },
-        { 
-          title: 'Redirection on Submission',
-          formester: '<span class="present">Customization</span> available even with the <span class="present">free</span> plan',
-          paperform: 'Paperform forms <span class="present">also allows</span> redirection',
+          paperform:
+            '<span class="present">$24/month</span> for 1 Payment Account',
         },
         {
-          title: 'Add Media to Forms', 
+          title: 'Redirection on Submission',
+          formester:
+            '<span class="present">Customization</span> available even with the <span class="present">free</span> plan',
+          paperform:
+            'Paperform forms <span class="present">also allows</span> redirection',
+        },
+        {
+          title: 'Add Media to Forms',
           formester: '<span class="present">Present</span>',
-          paperform: '<span class="present">Present</span>'
+          paperform: '<span class="present">Present</span>',
         },
         {
           title: 'Spam Protection',
           formester: '<span class="present">Present</span>',
-          paperform:   '<span class="present">Present</span>'
+          paperform: '<span class="present">Present</span>',
         },
         {
           title: 'Cloud Integrations with Zapier',
-          formester: '<span class="present">Present</span>', 
-          paperform: '<span class="present">Present</span>'
+          formester: '<span class="present">Present</span>',
+          paperform: '<span class="present">Present</span>',
         },
         {
           title: 'Deep Performance Analytics',
-          formester: '<span class="present">Present</span>', 
-          paperform: '<span class="present">Present</span>'
+          formester: '<span class="present">Present</span>',
+          paperform: '<span class="present">Present</span>',
         },
       ],
-      pricing:[
+      pricing: [
         {
           title: 'Free',
-          formester: '<span class="present">Starts</span> free for 100 submissions',
-          paperform: '<span class="absent">$24/month</span> for 1000 submissions',
+          formester:
+            '<span class="present">Starts</span> free for 100 submissions',
+          paperform:
+            '<span class="absent">$24/month</span> for 1000 submissions',
         },
         {
           title: 'Personal',
-          formester: '<span class="present">$13/month</span> for 1000 submissions',
-          paperform: '<span class="absent">$49/month</span> for 10k submissions',
+          formester:
+            '<span class="present">$13/month</span> for 1000 submissions',
+          paperform:
+            '<span class="absent">$49/month</span> for 10k submissions',
         },
         {
           title: 'Bussiness',
-          formester: '<span class="present">$49/month</span> for <span class="present">15k</span> submissions',
-          paperform: '<span class="absent">$159/month</span> for unlimited submissions',
-        }
+          formester:
+            '<span class="present">$49/month</span> for <span class="present">15k</span> submissions',
+          paperform:
+            '<span class="absent">$159/month</span> for unlimited submissions',
+        },
       ],
       relatedComparisons: [
         {
@@ -387,7 +409,6 @@ export default {
           type: 'comparison',
         },
       ],
-      
     }
   },
   computed: {
@@ -398,61 +419,60 @@ export default {
         title: 'Formester vs Paperform | Paperform Alternative - Formester',
         description:
           'Powerful Alternative to Paperform - Try Formester for Online, No-Code, Customizable Forms with Advanced Features | Sign-up for Free!',
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with formester vs paperform page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs paperform page image alt
+        mainImage: 'https://formester.com/formester-logo-meta-image.png',
+        mainImageAlt: 'Formester Logo',
         keywords: [
-          'paperform alternative', 
-          'paperform alternative free', 
-          'paperform competitor', 
-          'free alternative to paperform', 
-          'paperform alternative open source', 
-          'paperform alternative wordpress', 
-          'paperform alternatives free', 
-          'paperform open source alternative', 
-          'best paperform alternative', 
-          'paperform wordpress alternative', 
-          'paperform alternative reddit', 
-          'paperform alternative for wordpress', 
-          'open source paperform alternative', 
-          'paperform alternative free reddit', 
-          'paperform similar free', 
-          'paperform equivalent', 
-          'wordpress paperform alternative', 
-          'free paperform alternatives', 
-          'free alternative paperform	', 
-          'paperform like open source	', 
-          'similar to paperform free', 
-          'privacy focused alternatives to paperform', 
-          'free paperform alternative with conditional formatting', 
-          'open source paperform alternatives', 
-          'forms', 
-          'web forms', 
-          'formester', 
-          'online forms', 
-          'online web forms', 
-          'paperform wufoo alternatives', 
-          'cheaper paperform alternative', 
-          'easier alternatives to paperform', 
-          'paid alternatives to paperform', 
-          'private alternatives to paperform', 
-          'paperform alternate thank you pages', 
-          'paperform alternates commerce', 
-          'paperform alternatives cheaper', 
-          'paperform alternative quiz', 
-          'better paperform alternatives', 
-          'completele free alternatives to paperform', 
-          'rank alternatives paperform', 
-          'paperform alternative for gravity forms', 
-          'paperform alternative for registration', 
-          'paperform alternative squarespace', 
-          'paperform alternative with branching', 
-          'paperform cheaper alternatives', 
-          'paperform wordpress alternative', 
-          'paperform alternative free reddit', 
-          'paperform alternative deutsch', 
-          'free alternatives to paperform', 
-        ]
+          'paperform alternative',
+          'paperform alternative free',
+          'paperform competitor',
+          'free alternative to paperform',
+          'paperform alternative open source',
+          'paperform alternative wordpress',
+          'paperform alternatives free',
+          'paperform open source alternative',
+          'best paperform alternative',
+          'paperform wordpress alternative',
+          'paperform alternative reddit',
+          'paperform alternative for wordpress',
+          'open source paperform alternative',
+          'paperform alternative free reddit',
+          'paperform similar free',
+          'paperform equivalent',
+          'wordpress paperform alternative',
+          'free paperform alternatives',
+          'free alternative paperform	',
+          'paperform like open source	',
+          'similar to paperform free',
+          'privacy focused alternatives to paperform',
+          'free paperform alternative with conditional formatting',
+          'open source paperform alternatives',
+          'forms',
+          'web forms',
+          'formester',
+          'online forms',
+          'online web forms',
+          'paperform wufoo alternatives',
+          'cheaper paperform alternative',
+          'easier alternatives to paperform',
+          'paid alternatives to paperform',
+          'private alternatives to paperform',
+          'paperform alternate thank you pages',
+          'paperform alternates commerce',
+          'paperform alternatives cheaper',
+          'paperform alternative quiz',
+          'better paperform alternatives',
+          'completele free alternatives to paperform',
+          'rank alternatives paperform',
+          'paperform alternative for gravity forms',
+          'paperform alternative for registration',
+          'paperform alternative squarespace',
+          'paperform alternative with branching',
+          'paperform cheaper alternatives',
+          'paperform wordpress alternative',
+          'paperform alternative free reddit',
+          'paperform alternative deutsch',
+          'free alternatives to paperform',
+        ],
       }
       return getSiteMeta(metaData)
     },
@@ -476,7 +496,7 @@ export default {
       '@type': 'Corporation',
       name: 'Formester vs Paperform | Paperform Alternative - Formester',
       description:
-        "Powerful Alternative to Paperform - Try Formester for Online, No-Code, Customizable Forms with Advanced Features | Sign-up for Free!",
+        'Powerful Alternative to Paperform - Try Formester for Online, No-Code, Customizable Forms with Advanced Features | Sign-up for Free!',
       logo: 'https://formester.com/logo.png',
       url: 'https://formester.com',
       address: {
@@ -493,7 +513,7 @@ export default {
           '@type': 'ImageObject',
           url: 'https://formester.com/logo.png',
         },
-      }
+      },
     }
   },
 }

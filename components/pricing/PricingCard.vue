@@ -1,51 +1,37 @@
 <template>
-  <div class="col-lg-4 col-sm-8 mt-3">
+  <div class="col-lg-3 col-sm-8 mt-3">
     <div class="pricing__card d-flex flex-column" :class="{ hglt: highlight }">
       <div class="d-flex flex-column align-items-stretch text-start p-4">
         <h2 class="pricing__category">{{ plan.name }}</h2>
-        <p class="pricing__description">
-          {{ plan.description }}
-        </p>
-        <div class="d-flex align-items-baseline">
+        <div class="d-flex align-items-baseline mt-2 mb-3">
           <span v-if="false" class="pricing__striked me-2">
             {{ plan.prevPrice }}
           </span>
-
-          <span class="pricing__amount">{{ plan.price }}</span>
-          <span class="pricing__timeline">/mo</span>
+          <div v-if="plan.name === 'Enterprise'">
+            <span class="pricing__amount">Let's Talk</span>
+          </div>
+          <div v-else>
+            <span class="pricing__amount">{{ plan.price }}</span>
+            <span class="pricing__timeline ms-1">per month</span>
+          </div>
         </div>
-        <div class="billing-timeline mb-4">
-          <span v-show="billingTimeline"> Billed {{ billingTimeline }} </span>
-        </div>
+        <p class="pricing__description mb-4">
+          {{ plan.description }}
+        </p>
         <a
           class="button pricing__button text-center"
-          href="https://app.formester.com/users/sign_up"
+          :href="buttonLink"
+          :class="{ muted: muted }"
           >{{ planTextButton }}</a
         >
       </div>
       <ul
         class="pricing__features d-flex flex-column align-items-start p-4 border-top mb-0 text-start"
       >
-        <li
-          v-for="(feature, index) in plan.features.general"
-          :key="feature + index"
-        >
+        <li v-for="(feature, index) in plan.features" :key="feature + index">
           {{ feature }}
         </li>
       </ul>
-      <div class="text-start p-4 border-top">
-        <span class="key__features-heading">{{ keyFeaturesHeading }}</span>
-        <ul
-          class="key__features d-flex flex-column align-items-start ps-4 mt-3 mb-0"
-        >
-          <li
-            v-for="(feature, index) in plan.features.keyFeatures"
-            :key="feature + index"
-          >
-            {{ feature }}
-          </li>
-        </ul>
-      </div>
     </div>
   </div>
 </template>
@@ -53,8 +39,10 @@
 <script>
 export default {
   props: {
-    plan: Object,
-    highlighted: Boolean,
+    plan: { type: Object, required: true },
+    highlighted: { type: Boolean, default: false },
+    muted: { type: Boolean, default: false },
+    contactSales: { type: Boolean, default: false },
   },
   data() {
     return {
@@ -62,15 +50,20 @@ export default {
     }
   },
   computed: {
-    billingTimeline() {
-      if (this.plan.price === '$0') return ''
-
-      return this.plan.type === 'Yearly' ? 'yearly' : 'monthly'
-    },
     planTextButton() {
-      return this.billingTimeline
-        ? `Get ${this.plan.name} ${this.billingTimeline} Plan`
-        : 'Free forever'
+      if (this.plan.name === 'Free') {
+        return 'Free forever'
+      } else if (this.plan.name === 'Enterprise') {
+        return 'Contact sales'
+      }
+      return 'Get Started'
+    },
+    buttonLink() {
+      if (this.contactSales) {
+        return 'mailto:sales@formester.com'
+      } else {
+        return 'https://app.formester.com/users/sign_up'
+      }
     },
     keyFeaturesHeading() {
       if (this.plan.name === 'Free') {
@@ -102,7 +95,7 @@ export default {
 }
 
 .pricing__card.hglt {
-  border: 4px solid #7965b0;
+  border: 4px solid var(--clr-primary);
   margin-top: -38px;
 }
 
@@ -115,16 +108,17 @@ export default {
 .pricing__card.hglt::before {
   content: 'MOST POPULAR';
   padding: 4px;
-  background-color: #7965b0;
+  background-color: var(--clr-primary);
   color: white;
   font-size: 12px;
   font-weight: 600;
 }
 
 .pricing__category {
-  font-size: 32px;
+  color: var(--clr-primary);
+  font-size: 20px;
   font-weight: 600;
-  line-height: 140%;
+  line-height: 30px;
 }
 
 .pricing__description {
@@ -159,24 +153,22 @@ export default {
 }
 
 .pricing__amount {
-  font-size: 32px;
+  color: var(--clr-text-primary);
+  font-size: 48px;
   font-weight: 600;
-  line-height: 140%;
+  line-height: 60px;
+  letter-spacing: -0.96px;
 }
 
 .pricing__timeline {
-  font-size: 18px;
-  line-height: 26px;
-}
-
-.billing-timeline {
-  color: #525252;
-  font-size: 14px;
-  line-height: 21px;
-  height: 20px;
+  color: var(--clr-text-secondary);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
 }
 
 .pricing__button {
+  color: var(--clr-primary);
   background-color: var(--clr-primary-light);
   padding: 16px;
   border-radius: 8px;
@@ -186,13 +178,35 @@ export default {
   transition: 300ms ease-out;
 }
 
+.pricing__button.muted {
+  color: var(--clr-text-secondary);
+  border-radius: 4px;
+  border: 1px solid #d0d5dd;
+  background: white;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+.pricing__button.muted:hover {
+  border: 1px solid #d0d5dd;
+  background: #f9fafb;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
 .pricing__card.hglt .pricing__button {
   background-color: var(--clr-primary);
   color: white;
 }
 
+.pricing__card.hglt .pricing__button:hover {
+  border-radius: 4px;
+  background: var(--clr-primary-hover);
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
 .pricing__button:hover {
-  opacity: 0.8;
+  color: #371d72;
+  border-radius: 4px;
+  background: #d1ceff;
 }
 
 .pricing__features {

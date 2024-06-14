@@ -97,8 +97,8 @@ export default {
         title: 'Formester: Empowering Software and Technology Industries',
         description:
           'Formester: Revolutionize form-building, automate workflows, empower teams with no-code solutions. Streamline and grow your business!',
-        mainImage: 'https://formester.com/jotform101-hero-section.png', // need to update with auto-responder page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
+        mainImage: 'https://formester.com/jotform101-hero-section.png',
+        mainImageAlt: 'Form builder showing drag and drop functionality',
         keywords: [
           'Formester',
           'Formester Use Case',

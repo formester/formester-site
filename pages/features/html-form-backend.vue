@@ -170,9 +170,8 @@ export default {
         title: 'HTML Form Attributes | HTML Form Backend - Formester',
         description:
           "Maximize your website's potential with Formester's HTML form attributes and backend. Start converting leads into customers today. Get Started now!",
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with Html Form Backend page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with Html Form Backend page image alt
+        mainImage: 'https://formester.com/formester-logo-meta-image.png',
+        mainImageAlt: 'Formester Logo',
         keywords: [
           'formester',
           'form backend',

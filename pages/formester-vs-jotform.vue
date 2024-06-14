@@ -7,7 +7,7 @@
             class="col-lg-5 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start"
           >
             <h1 class="section__heading">
-              Jotform  Alternative that Offers <span class="hglight">More</span>
+              Jotform Alternative that Offers <span class="hglight">More</span>
             </h1>
             <p class="section__subtitle mt-3">
               Declutter your work with a faster and intuitive form builder.
@@ -62,7 +62,9 @@
     <section class="container text-center">
       <h3 class="section__heading">Pricing</h3>
       <div class="table-responsive">
-        <table class="table text-start comparision__table comparision__table-pricing mx-auto">
+        <table
+          class="table text-start comparision__table comparision__table-pricing mx-auto"
+        >
           <thead class="bg__light-primary">
             <tr>
               <th scope="col">Features</th>
@@ -223,7 +225,7 @@
         />
       </div>
     </section>
-    
+
     <CallToActionSection />
   </div>
 </template>
@@ -257,117 +259,140 @@ export default {
       ],
       comparisions: [
         {
-          title: 'HTML Form Backend Service', 
-          formester: '<span class="present">Present</span>', 
-          jotform: '<span class="absent">Not available</span>'
+          title: 'HTML Form Backend Service',
+          formester: '<span class="present">Present</span>',
+          jotform: '<span class="absent">Not available</span>',
         },
         {
           title: 'Automated Email Responses',
-          formester: '<span class="present">Present</span> with custom integration',
+          formester:
+            '<span class="present">Present</span> with custom integration',
           jotform: 'Only in <span class="absent">paid plans</span>',
         },
         {
           title: 'Conditional Logic',
           formester: '<span class="present">Present</span>',
-          jotform: 'Present with a lower <span class="absent">degree of flexibility</span>',
+          jotform:
+            'Present with a lower <span class="absent">degree of flexibility</span>',
         },
         {
           title: 'Logo addition to form',
-          formester: '<span class="present">Available</span> even with the <span class="present">free</span> plan',
-          jotform: 'Available <span class="absent">only on single page</span> forms',
+          formester:
+            '<span class="present">Available</span> even with the <span class="present">free</span> plan',
+          jotform:
+            'Available <span class="absent">only on single page</span> forms',
         },
         {
-          title: 'End-to-End Design Customization', 
-          formester: '<span class="present">Present</span>', 
-          jotform: '<span class="absent">Minimal</span> customization'
+          title: 'End-to-End Design Customization',
+          formester: '<span class="present">Present</span>',
+          jotform: '<span class="absent">Minimal</span> customization',
         },
-        {  
+        {
           title: 'Website Embedment',
           formester: '<span class="present">Easy and quickly</span> embedment',
           jotform: '<span class="absent">Complex</span> embedment execution',
         },
-        { 
+        {
           title: 'Mobile First UX',
           formester: '<span class="present">Perfectly</span> mobile-first',
-          jotform: '<span class="absent">Complicated<span> for design-heavy forms',
+          jotform:
+            '<span class="absent">Complicated<span> for design-heavy forms',
         },
         {
           title: 'Form Limit',
-          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
-          jotform: '<span class="absent">Limited</span> Forms - 5 Forms for free, <span class="absent">$129/month</span> for Unlimited Forms',
+          formester:
+            '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
+          jotform:
+            '<span class="absent">Limited</span> Forms - 5 Forms for free, <span class="absent">$129/month</span> for Unlimited Forms',
         },
-        {  
+        {
           title: 'Monthly Form Views',
-          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
-          jotform: 'Limited Form Views - 1000 views for free, <span class="absent">$49/month</span> for Unlimited Views',
+          formester:
+            '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
+          jotform:
+            'Limited Form Views - 1000 views for free, <span class="absent">$49/month</span> for Unlimited Views',
         },
-        {  
+        {
           title: 'Total Submission Storage',
-          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
-          jotform: '500 Total Submission Storage for free,  <span class="absent">$39/month</span> for Unlimited',
+          formester:
+            '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
+          jotform:
+            '500 Total Submission Storage for free,  <span class="absent">$39/month</span> for Unlimited',
         },
         {
           title: 'Redirection on Submission',
-          formester: '<span class="present">Customization available</span> even with the <span class="present">free plan</span>',
-          jotform: 'Jotform forms <span class="present">also allows</span> redirection',
+          formester:
+            '<span class="present">Customization available</span> even with the <span class="present">free plan</span>',
+          jotform:
+            'Jotform forms <span class="present">also allows</span> redirection',
         },
-        { 
+        {
           title: 'Best For',
-          formester: '<span class="present">All kinds of forms and applications</span> including survey lead generation, feedback etc',
+          formester:
+            '<span class="present">All kinds of forms and applications</span> including survey lead generation, feedback etc',
           jotform: '<span class="absent">Not</span> suitable for long forms',
         },
-        {  
+        {
           title: 'Storage',
-          formester: 'Basic Plan: <span class="absent">$13/month</span> & Maximum Storage: <span class="absent">1GB</span>.<span></br></span> Business Plan: <span class="absent">$49/monthv</span> & Maximum Storage: <span class="absent">50GB</span>',
-          jotform: 'Bronze Plan: <span class="present">39$/month</span> & Maximum Storage: <span class="present">10GB</span>.<span></br></span> Silver Plan: <span class="present">$49/month</span> & Maximum Storage: <span class="present">100GB</span>',
+          formester:
+            'Basic Plan: <span class="absent">$13/month</span> & Maximum Storage: <span class="absent">1GB</span>.<span></br></span> Business Plan: <span class="absent">$49/monthv</span> & Maximum Storage: <span class="absent">50GB</span>',
+          jotform:
+            'Bronze Plan: <span class="present">39$/month</span> & Maximum Storage: <span class="present">10GB</span>.<span></br></span> Silver Plan: <span class="present">$49/month</span> & Maximum Storage: <span class="present">100GB</span>',
         },
-        { 
+        {
           title: 'Monthly Payment Submissions',
           formester: 'Build in <span class="absent">Progress</span>',
-          jotform: '<span class="present">39$/month</span> for <span class="present">100</span> Monthly Payment Submissions',
+          jotform:
+            '<span class="present">39$/month</span> for <span class="present">100</span> Monthly Payment Submissions',
         },
         {
-          title: 'Add Media to Forms', 
-          formester: '<span class="present">Present</span>', 
-          jotform:   '<span class="present">Present</span>'
+          title: 'Add Media to Forms',
+          formester: '<span class="present">Present</span>',
+          jotform: '<span class="present">Present</span>',
         },
         {
-          title: 'Spam Protection', 
-          formester: '<span class="present">Present</span>', 
-          jotform:   '<span class="present">Present</span>'
+          title: 'Spam Protection',
+          formester: '<span class="present">Present</span>',
+          jotform: '<span class="present">Present</span>',
         },
         {
-          title: 'Cloud Integrations with Zapier', 
-          formester: '<span class="present">Present</span>', 
-          jotform:   '<span class="present">Present</span>'
+          title: 'Cloud Integrations with Zapier',
+          formester: '<span class="present">Present</span>',
+          jotform: '<span class="present">Present</span>',
         },
         {
-          title: 'Deep Performance Analytics', 
-          formester: '<span class="present">Present</span>', 
-          jotform:   '<span class="present">Present</span>'
+          title: 'Deep Performance Analytics',
+          formester: '<span class="present">Present</span>',
+          jotform: '<span class="present">Present</span>',
         },
         {
-          title: 'White Labeled Surveys Creation', 
-          formester: '<span class="present">Present</span>', 
-          jotform:   '<span class="present">Present</span>'
+          title: 'White Labeled Surveys Creation',
+          formester: '<span class="present">Present</span>',
+          jotform: '<span class="present">Present</span>',
         },
       ],
-      pricing:[
-        { 
+      pricing: [
+        {
           title: 'Free',
-          formester:'Starts <span class="present"> free </span> for <span class="present">100</span> submissions',
-          jotform: 'Starts <span class="present"> free </span> for <span class="present">100</span> submissions',
+          formester:
+            'Starts <span class="present"> free </span> for <span class="present">100</span> submissions',
+          jotform:
+            'Starts <span class="present"> free </span> for <span class="present">100</span> submissions',
         },
         {
           title: 'Personal',
-          formester:'<span class="present">$13/month</span> for <span class="present">1000</span> submissions',
-          jotform: '<span class="absent">$39/month </span> for <span class="absent">1000</span> submissions',
+          formester:
+            '<span class="present">$13/month</span> for <span class="present">1000</span> submissions',
+          jotform:
+            '<span class="absent">$39/month </span> for <span class="absent">1000</span> submissions',
         },
         {
           title: 'Bussiness',
-          formester:'<span class="present">$49/month</span> for <span class="present">15k </span>submissions',
-          jotform: '<span class="absent">$99/month</span> for <span class="absent">10k </span> submissions',
-        }
+          formester:
+            '<span class="present">$49/month</span> for <span class="present">15k </span>submissions',
+          jotform:
+            '<span class="absent">$99/month</span> for <span class="absent">10k </span> submissions',
+        },
       ],
       relatedComparisons: [
         {
@@ -402,9 +427,8 @@ export default {
         title: 'Jotform Alternative | Formester vs Jotform - Formester',
         description:
           'Powerful Alternative to Jotform. Custom forms, data collection, actionable insights & more to grow your business. Start by signing-up for free!',
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with formester vs jotform page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs jotform page image alt
+        mainImage: 'https://formester.com/formester-logo-meta-image.png',
+        mainImageAlt: 'Formester Logo',
         keywords: [
           'jotform alternative',
           'jotform alternative free',
@@ -456,7 +480,7 @@ export default {
           'jotform alternative free reddit',
           'jotform alternative deutsch',
           'free alternatives to jotform',
-        ]
+        ],
       }
       return getSiteMeta(metaData)
     },
@@ -480,7 +504,7 @@ export default {
       '@type': 'Corporation',
       name: 'Jotform Alternative | Formester vs Jotform - Formester',
       description:
-        "Powerful Alternative to Jotform. Custom forms, data collection, actionable insights & more to grow your business. Start by signing-up for free!",
+        'Powerful Alternative to Jotform. Custom forms, data collection, actionable insights & more to grow your business. Start by signing-up for free!',
       logo: 'https://formester.com/logo.png',
       url: 'https://formester.com',
       address: {
@@ -497,7 +521,7 @@ export default {
           '@type': 'ImageObject',
           url: 'https://formester.com/logo.png',
         },
-      }
+      },
     }
   },
 }

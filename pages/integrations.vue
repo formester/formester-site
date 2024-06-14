@@ -112,9 +112,8 @@ export default {
         title: 'Slack Integration | Google Sheets Integration - Formester',
         description:
           'Streamline your workflow with our Slack and Google Sheets integration. Try Formester today and boost productivity in just a few clicks! Get started today.',
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with integrations page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with integrations page image alt
+        mainImage: 'https://formester.com/formester-logo-meta-image.png',
+        mainImageAlt: 'Formester Logo',
       }
       return getSiteMeta(metaData)
     },
@@ -138,7 +137,7 @@ export default {
       '@type': 'Corporation',
       name: 'Slack Integration | Google Sheets Integration - Formester',
       description:
-        "Streamline your workflow with our Slack and Google Sheets integration. Try Formester today and boost productivity in just a few clicks! Get started today.",
+        'Streamline your workflow with our Slack and Google Sheets integration. Try Formester today and boost productivity in just a few clicks! Get started today.',
       logo: 'https://formester.com/logo.png',
       url: 'https://formester.com',
       address: {

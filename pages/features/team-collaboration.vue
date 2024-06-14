@@ -125,9 +125,8 @@ export default {
           'Simplify Collaboration on Online Forms and Surveys - Team Collaboration allows you to regulate Form Access for Multiple Users, Members or Clients!',
         description:
           "Formester's collaborative form sharing will boost teamwork! Gather input, unite your team, and easily uncover form-building potential.",
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with auto-responder page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
+        mainImage: 'https://formester.com/formester-logo-meta-image.png',
+        mainImageAlt: 'Formester Logo',
         keywords: [
           'formester web forms with collaboration feature',
           'formester web form features collboration',
@@ -417,14 +416,14 @@ export default {
             'Access your Formester dashboard, click on the Collaborators Tab. In the Add Collaborator field, add the required person’s email address and click invite!.',
           imgSrc:
             '/features/collaboration/add-collaborators-by-sending-an-invite.svg',
-          imgAlt: 'Add Collaborators by Sending An Invite'
+          imgAlt: 'Add Collaborators by Sending An Invite',
         },
         {
           title: 'Assign Permissions',
           description:
             'Efficiently manage form collaboration with Formester\'s role designation and permission settings. Choose from a range of roles like "Editor" for content changes and "Viewer" for read-only access. Maintain data security, preserve integrity, and enjoy the flexibility to adjust permissions as your project evolves. Assign appropriate roles to maintain control over permissions and collaborate seamlessly.',
           imgSrc: '/features/collaboration/assign-permissions.svg',
-          imgAlt: 'Assign Permissions'
+          imgAlt: 'Assign Permissions',
         },
       ],
     }
