@@ -1,11 +1,11 @@
 <template>
   <div>
-    <Hero />
-    <TrustSeals />
-    <MostUsedFeatures />
+    <Hero :data="hero" />
+    <TrustSeals :data="trustSeals" />
+    <MostUsedFeatures :data="mostUsedFeatures" />
     <div class="iframe__container mx-auto position-relative">
       <iframe
-        src="https://bevdkbdf.formester.com/f/6ce3db7a-94a3-48a3-8f00-d16395847a13"
+        :src="embedFormUrl"
         height="100%"
         width="100%"
       ></iframe>
@@ -14,8 +14,8 @@
         class="see-for-yourself position-absolute"
       />
     </div>
-    <Testimonials />
-    <CallToActionSection />
+    <Testimonials :data="testimonialsData" />
+    <CallToActionSection :content="cta" />
   </div>
 </template>
 
@@ -24,6 +24,8 @@ import Hero from '@/components/home/Hero.vue'
 import TrustSeals from '@/components/home/TrustSeals.vue'
 import Testimonials from '@/components/home/Testimonials.vue'
 import MostUsedFeatures from '@/components/home/MostUsedFeatures.vue'
+
+import axios from 'axios'
 
 export default {
   components: {
@@ -92,6 +94,69 @@ export default {
           alt: 'Monitor performance and open rates for your survey forms in Formester',
         },
       ],
+    }
+  },
+  async asyncData() {
+    const {
+      data: { data },
+    } = await axios.get(`http://localhost:1337/api/home-page`, {
+      params: {
+        'populate[hero][populate]': '*',
+        'populate[heroVideo]': '*',
+        'populate[companies][populate]': '*',
+        'populate[testimonialHeading][populate]': '*',
+        'populate[testimonials][populate][profileImage][populate]': '*',
+        'populate[cta][populate]': '*',
+        'populate[featuresHeading][populate]': '*',
+        'populate[features][populate][icon][populate]': '*',
+        'populate[features][populate][featureImage][populate]': '*',
+      },
+    })
+    const hero = data.attributes.hero;
+    hero.video = data.attributes.heroVideo.data.attributes.url;
+    
+    const trustSeals = data.attributes.companies?.map((item)=>({
+      ...item,
+      url: item.imageUrl || item.image.data.attributes.url
+    }))
+
+    const features = data.attributes.features?.map((item)=>({
+      ...item,
+      icon: {
+        ...item.icon,
+        url:  item.icon.imageUrl || item.icon.image.data.attributes.url
+      },
+      featureImage: {
+        ...item.featureImage,
+        url:  item.featureImage.imageUrl || item.featureImage.image.data.attributes.url
+      }
+    }))
+    const mostUsedFeatures = {
+      title: data.attributes.featuresHeading,
+      features
+    }
+    
+    const testimonials = data.attributes.testimonials.data.map(item=>({
+      ...item.attributes,
+      profileImage: {
+        ...item.attributes.profileImage,
+        url: item.attributes.profileImage.imageUrl || item.attributes.profileImage.image.data.attributes.url
+      }
+    }))
+    const testimonialsData = {
+      title: data.attributes.testimonialHeading,
+      testimonials
+    }
+
+    const cta = data.attributes.cta.data.attributes
+
+    return {
+      hero,
+      trustSeals,
+      embedFormUrl: data.attributes.embedFormUrl,
+      mostUsedFeatures,
+      testimonialsData,
+      cta
     }
   },
   head() {

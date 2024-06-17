@@ -155,6 +155,15 @@ export default {
   // Nuxt Image
   image: {
     dir: 'assets/images',
+    providers: {
+      ipx: {
+        provider: 'ipx',
+        options: {
+          baseURL: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/'
+        }
+      }
+    },
+    domains: ['formester-strapi.s3.ap-south-1.amazonaws.com'],
   },
 
   // Enviornment variable for the base url of the app

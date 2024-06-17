@@ -4,7 +4,13 @@
       class="d-flex justify-content-center justify-content-md-between align-items-center my-4 my-md-5"
     >
       <h2 class="section__heading position-relative w-full text-center">
-        What our Customers say
+        <span
+          v-for="item in data.title"
+          :key="item.id"
+          :class="{ hglight: item.highlight }"
+        >
+          {{ item.text }}
+        </span>
         <nuxt-img
           src="UI Block/Vector 5.svg"
           class="position-absolute arrow-decoration"
@@ -22,22 +28,22 @@
         :style="{ transform: cardTranslation }"
       >
         <div
-          v-for="testimonial in testimonials"
+          v-for="testimonial in data.testimonials"
           :key="testimonial.id"
           class="testimonial__card"
         >
           <div class="d-flex">
             <nuxt-img
-              :src="`testimonials/${testimonial.picture}`"
+              :src="testimonial.profileImage.url"
               class="img-fluid testimonial__user"
               loading="lazy"
             />
             <div class="d-flex flex-column ms-3">
-              <span class="testimonial__user-text">{{ testimonial.user }}</span>
+              <span class="testimonial__user-text">{{ testimonial.name }}</span>
               <span class="testimonial__user-degn"
-                >{{ testimonial.designation }} at
+                >{{ testimonial.position }} at
                 <span class="testimonial__user-company">{{
-                  testimonial.company
+                  testimonial.organization
                 }}</span></span
               >
             </div>
@@ -49,7 +55,7 @@
               alt="Quotation marks"
               loading="lazy"
             />
-            <p class="mt-1">{{ testimonial.content }}</p>
+            <p class="mt-1">{{ testimonial.comment }}</p>
           </div>
         </div>
       </div>
@@ -68,6 +74,7 @@ export default {
   components: {
     ArrowButton,
   },
+  props: ['data'],
   data() {
     return {
       testimonials: [
@@ -159,7 +166,7 @@ export default {
       this.currentIndex = 0
       this.deviceWidth = window.innerWidth
       this.maxIndex = Math.floor(
-        (this.testimonials.length - 1) /
+        (this.data.testimonials.length - 1) /
           (this.deviceWidth > 1200 ? 3 : this.deviceWidth > 768 ? 2 : 1)
       )
     },

@@ -5,16 +5,21 @@
         class="d-flex flex-column align-items-center justify-content-center text-center my-5"
       >
         <h1 class="hero__heading">
-          Best <span class="hglight">No-Code</span> Form Builder
+          <span
+            v-for="item in data.title"
+            :key="item.id"
+            :class="{ hglight: item.highlight }"
+          >
+            {{ item.text }}
+          </span>
         </h1>
         <p class="hero__subheading mt-3">
-          Create elegant forms, surveys and quizzes your audience will love to
-          answer.
+          {{ data.description }}
         </p>
         <a
-          href="https://app.formester.com/users/sign_up"
+          :href="data?.button.link"
           class="btn button hero__button mt-4 mb-4 mb-md-5"
-          >Create Form for Free</a
+          >{{ data?.button.text }}</a
         >
         <!-- <div class="hint">
           <div>✓ &nbsp; No credit card required</div>
@@ -28,15 +33,15 @@
           style="max-width: 98%; border-radius: 12px"
           class="mt-3"
         >
-          <source src="/videos/hero-animation.webm" type="video/webm" />
+          <source :src="data.video" type="video/webm" />
         </video>
       </div>
     </div>
   </section>
 </template>
 
-<script>
-export default {}
+<script setup>
+const props = defineProps(['data'])
 </script>
 
 <style scoped>
