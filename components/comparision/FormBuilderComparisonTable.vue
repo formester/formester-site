@@ -12,7 +12,11 @@
           <div
             class="formbuilder__logo-wrapper d-flex align-items-center justify-content-center text-center"
           >
-            <img class="formbuilder__logo" :src="fb.logo.data.attributes.url" />
+            <img
+              class="formbuilder__logo"
+              :src="fb.logo.data.attributes.url"
+              height="40"
+            />
           </div>
           <FormBuilderDetails
             :formBuilder="fb"
