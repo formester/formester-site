@@ -17,10 +17,15 @@
           {{ data.description }}
         </p>
         <a
-          :href="data?.button[0].link"
+          v-if="data && data?.button?.length > 0"
+          :href="data.button[0].link"
           class="btn button hero__button mt-4 mb-4 mb-md-5"
+          :class="{
+            'hero__button': data.button[0].type === 'Primary',
+            'hero__invert__button': data.button[0].type === 'Secondary',
+          }"
         >
-          {{ data?.button[0].text }}
+          {{ data.button[0].text }}
         </a>
         <!-- <div class="hint">
           <div>✓ &nbsp; No credit card required</div>

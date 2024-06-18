@@ -29,29 +29,59 @@
               </span>
             </h2>
             <div
+              v-if="data && data?.buttons?.length > 0"
+              class="d-flex align-items-center justify-content-center flex-wrap gap-3 mt-5"
+            >
+              <a
+                :href="
+                  data?.buttons[0]?.link ||
+                  'https://app.formester.com/users/sign_up'
+                "
+                class="btn button mx-2"
+                :class="{
+                  'cta-button': data.buttons[0].type === 'Primary',
+                  'cta-button__invert': data.buttons[0].type === 'Secondary',
+                }"
+                target="_blank"
+              >
+                {{ data?.buttons[0]?.text }}
+              </a>
+              <a
+                v-if="data?.buttons?.length===2"
+                target="_blank"
+                :href="data.buttons[1].link"
+                class="btn button mx-2"
+                :class="{
+                  'cta-button': data?.buttons[1]?.type === 'Primary',
+                  'cta-button__invert': data?.buttons[1]?.type === 'Secondary',
+                }"
+              >
+                {{ data?.buttons[1]?.text }}
+              </a>
+            </div>
+            <div
+              v-else
               class="d-flex align-items-center justify-content-center flex-wrap gap-3 mt-5"
             >
               <a
                 :href="
                   content.btnPrimaryLink ||
-                  data.buttons[0].link ||
                   'https://app.formester.com/users/sign_up'
                 "
                 class="btn button cta-button mx-2"
                 target="_blank"
               >
-                {{ content.btnPrimary ||  data.buttons[0].text || 'Create a Form Now' }}
+                {{ content.btnPrimary || 'Create a Form Now' }}
               </a>
               <a
                 target="_blank"
                 :href="
                   content.btnSecondaryLink ||
-                  data.buttons[1].link ||
                   'https://app.zencal.io/u/ankit/formester'
                 "
                 class="btn button cta-button__invert mx-2"
               >
-                {{ content.btnSecondary ||  data.buttons[1].text || 'Book a Demo' }}
+                {{ content.btnSecondary || 'Book a Demo' }}
               </a>
             </div>
             <nuxt-img
