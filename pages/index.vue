@@ -99,7 +99,7 @@ export default {
   async asyncData() {
     const {
       data: { data },
-    } = await axios.get(`http://localhost:1337/api/home-page`, {
+    } = await axios.get(`${process.env.strapiUrl}/api/home-page`, {
       params: {
         'populate[hero][populate]': '*',
         'populate[heroVideo]': '*',
