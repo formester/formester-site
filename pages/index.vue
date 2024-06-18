@@ -15,7 +15,7 @@
       />
     </div>
     <Testimonials :data="testimonialsData" />
-    <CallToActionSection :content="cta" />
+    <CallToActionSection :data="cta" />
   </div>
 </template>
 

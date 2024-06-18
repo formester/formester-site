@@ -8,6 +8,14 @@
           >
             <h2 class="section__heading">
               <span v-if="content.heading">{{ content.heading }}</span>
+              <span
+                v-else-if="data.title"
+                v-for="item in data.title"
+                :key="item.id"
+                :class="{ hglight: item.highlight }"
+              >
+                {{ item.text }}
+              </span>
               <span v-else>
                 Create your first form for <span class="hglt">free</span>
               </span>
@@ -26,22 +34,24 @@
               <a
                 :href="
                   content.btnPrimaryLink ||
+                  data.buttons[0].link ||
                   'https://app.formester.com/users/sign_up'
                 "
                 class="btn button cta-button mx-2"
                 target="_blank"
               >
-                {{ content.btnPrimary || 'Create a Form Now' }}
+                {{ content.btnPrimary ||  data.buttons[0].text || 'Create a Form Now' }}
               </a>
               <a
                 target="_blank"
                 :href="
                   content.btnSecondaryLink ||
+                  data.buttons[1].link ||
                   'https://app.zencal.io/u/ankit/formester'
                 "
                 class="btn button cta-button__invert mx-2"
               >
-                {{ content.btnSecondary || 'Book a Demo' }}
+                {{ content.btnSecondary ||  data.buttons[1].text || 'Book a Demo' }}
               </a>
             </div>
             <nuxt-img
@@ -61,6 +71,10 @@
 export default {
   props: {
     content: {
+      type: Object,
+      default: () => ({}),
+    },
+    data: {
       type: Object,
       default: () => ({}),
     },

@@ -17,10 +17,11 @@
           {{ data.description }}
         </p>
         <a
-          :href="data?.button.link"
+          :href="data?.button[0].link"
           class="btn button hero__button mt-4 mb-4 mb-md-5"
-          >{{ data?.button.text }}</a
         >
+          {{ data?.button[0].text }}
+        </a>
         <!-- <div class="hint">
           <div>✓ &nbsp; No credit card required</div>
           <div>✓ &nbsp; Unlimited forms</div>
