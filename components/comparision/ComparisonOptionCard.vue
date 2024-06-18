@@ -1,6 +1,8 @@
 <template>
   <div class="comparison-option-select__card">
-    <div class="comparison__logo-wrapper d-flex justify-content-center">
+    <div
+      class="comparison__logo-wrapper d-flex justify-content-center align-items-center"
+    >
       <img
         v-if="modelSelectedOption"
         :src="formBuildersLogoSrc[modelSelectedOption]"
