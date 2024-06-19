@@ -4,6 +4,7 @@
       class="comparison__logo-wrapper d-flex justify-content-center align-items-center"
     >
       <img
+        height="40"
         v-if="modelSelectedOption"
         :src="formBuildersLogoSrc[modelSelectedOption]"
       />
