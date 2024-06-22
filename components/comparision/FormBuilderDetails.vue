@@ -11,8 +11,7 @@
           :key="`${formBuilder.name}-${plan.name}`"
           :value="plan.name"
         >
-          {{ plan.name }}
-          - ${{ plan.amount }}/mo
+          {{ plan.name }} - ${{ plan.amount }}/mo
         </option>
       </select>
     </div>
@@ -45,6 +44,10 @@ export default {
       type: Object,
       required: true,
     },
+    featureList: {
+      type: Array,
+      required: true,
+    },
   },
   methods: {
     trimString(feature) {
@@ -56,18 +59,32 @@ export default {
         (plan) => plan.name === this.selectedPlans[formBuilder.id]
       )
       if (!selectedPlan || !selectedPlan.features) {
-        return []
+        return this.featureList.map((feature) => ({
+          value: '-',
+          id: feature.title,
+        }))
       }
 
-      // Extracting features and sorting by createdAt
-      const features = Object.values(selectedPlan.features)
-      features.sort((a, b) => {
-        const dateA = new Date(a.form_builder_feature.data.attributes.createdAt)
-        const dateB = new Date(b.form_builder_feature.data.attributes.createdAt)
-        return dateA - dateB
-      })
+      // Extracting features and filtering out null form_builder_feature
+      const features = Object.values(selectedPlan.features).filter(
+        (feature) =>
+          feature.form_builder_feature && feature.form_builder_feature.data
+      )
 
-      return features
+      // Creating a map for quick lookup
+      const featureMap = features.reduce((map, feature) => {
+        const title = feature.form_builder_feature.data.attributes.title
+        map[title] = feature.value
+        return map
+      }, {})
+
+      // Creating the list in sequence to the featureList
+      const orderedFeatures = this.featureList.map((feature) => ({
+        value: featureMap[feature.title] || '-',
+        id: feature.title, // Using title as id
+      }))
+
+      return orderedFeatures
     },
   },
 }

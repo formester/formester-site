@@ -21,6 +21,7 @@
           <FormBuilderDetails
             :formBuilder="fb"
             :selectedPlans="selectedPlans"
+            :feature-list="featureList"
             @onPlanChange="handlePlanChange"
           />
         </div>
@@ -46,6 +47,7 @@
             <FormBuilderDetails
               :formBuilder="fb"
               :selectedPlans="selectedPlans"
+              :feature-list="featureList"
               @onPlanChange="handlePlanChange"
             />
           </div>
