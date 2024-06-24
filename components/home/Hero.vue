@@ -39,7 +39,7 @@
           style="max-width: 98%; border-radius: 12px"
           class="mt-3"
         >
-          <source :src="video.url" type="video/webm" />
+          <source :src="video?.url" type="video/webm" />
         </video>
       </div>
     </div>
@@ -48,10 +48,22 @@
 
 <script setup>
 const props = defineProps({
-  title: Array,
-  description: String,
-  button: Array,
-  video: Object,
+  title: {
+    type: Array,
+    default: () => ([])
+  },
+  description: {
+    type: String,
+    default: () => ("")
+  },
+  button: {
+    type: Array,
+    default: () => ([])
+  },
+  video:  {
+    type: Object,
+    default: () => ([])
+  },
 })
 </script>
 

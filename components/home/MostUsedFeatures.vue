@@ -27,7 +27,7 @@
           <div
             class="feature__icon-wrapper d-flex align-items-center justify-content-center"
           >
-            <nuxt-img :src="feature.icon.image.url" loading="lazy" />
+            <nuxt-img :src="feature.icon.imageUrl||feature.icon.image.url" loading="lazy" />
           </div>
           <div class="ms-3 mt-1">
             <h3 class="feature__title">{{ feature.title }}</h3>
@@ -41,8 +41,8 @@
         <transition name="fade" mode="out-in">
           <nuxt-img
             class="feature__img img-fluid"
-            :src="itemList[activeIndex].cardImage.image.url"
-            :key="itemList[activeIndex].cardImage.image.url"
+            :src="activeFeatureImageUrl"
+            :key="activeFeatureImageUrl"
           />
         </transition>
       </div>
@@ -50,12 +50,19 @@
     <!-- Mobile -->
     <div class="d-lg-none">
       <div v-for="feature in itemList" :key="feature.title" class="mt-5">
-        <nuxt-img :src="feature.cardImage.imageUrl || feature.cardImage.image.url" class="mb-4 img-fluid" loading="lazy" />
+        <nuxt-img
+          :src="feature.cardImage.imageUrl || feature.cardImage.image.url"
+          class="mb-4 img-fluid"
+          loading="lazy"
+        />
         <div class="d-flex align-items-start mt-2">
           <div
             class="feature__icon-wrapper d-flex align-items-center justify-content-center"
           >
-            <nuxt-img :src="feature.icon.imageUrl ||feature.icon.image.url" loading="lazy" />
+            <nuxt-img
+              :src="feature.icon.imageUrl || feature.icon.image.url"
+              loading="lazy"
+            />
           </div>
           <div class="ms-3 mt-1">
             <h3 class="feature__title">{{ feature.title }}</h3>
@@ -72,12 +79,23 @@
 <script>
 export default {
   props: {
-    heading: Array,
-    itemList: Array,
+    heading: {
+      type: Array,
+      default: () => [],
+    },
+    itemList: {
+      type: Array,
+      default: () => [],
+    },
   },
   data() {
     return {
       activeIndex: 0,
+    }
+  },
+  computed: {
+    activeFeatureImageUrl(){
+      return this.itemList[this.activeIndex].cardImage.imageUrl || this.itemList[this.activeIndex].cardImage.image.url
     }
   },
   methods: {

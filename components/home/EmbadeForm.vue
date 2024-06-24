@@ -1,5 +1,5 @@
 <template>
-  <div class="iframe__container mx-auto position-relative">
+  <div class="iframe__container mx-auto position-relative" v-if="url">
     <iframe :src="url" height="100%" width="100%"></iframe>
     <nuxt-img
       src="see-for-yourself.svg"
@@ -10,7 +10,10 @@
 
 <script setup>
 const props = defineProps({
-  url: String
+  url: {
+    type: String,
+    default: ()=>("")
+  }
 })
 </script>
 
