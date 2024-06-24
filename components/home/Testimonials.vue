@@ -5,7 +5,7 @@
     >
       <h2 class="section__heading position-relative w-full text-center">
         <span
-          v-for="item in data.title"
+          v-for="item in heading"
           :key="item.id"
           :class="{ hglight: item.highlight }"
         >
@@ -28,13 +28,13 @@
         :style="{ transform: cardTranslation }"
       >
         <div
-          v-for="testimonial in data.testimonials"
+          v-for="testimonial in testimonials"
           :key="testimonial.id"
           class="testimonial__card"
         >
           <div class="d-flex">
             <nuxt-img
-              :src="testimonial.profileImage.url"
+              :src="testimonial.profileImage.imageUrl || testimonial.profileImage.image.url"
               class="img-fluid testimonial__user"
               loading="lazy"
             />
@@ -74,72 +74,18 @@ export default {
   components: {
     ArrowButton,
   },
-  props: ['data'],
+  props: {
+    heading: {
+      type: Array,
+      default: () => ([])
+    },
+    testimonials: {
+      type: Array,
+      default: () => ([])
+    },
+  },
   data() {
     return {
-      testimonials: [
-        {
-          id: 1,
-          user: 'Dr. Michele Ross',
-          designation: 'Founder',
-          picture: 'Dr_Michele.webp',
-          content: `I'm migrating my forms from Paperform, where I've been a user for over 4 years. Loving the software so far! I've already replaced Paperform form embeds & popups on my sites & my husband's websites with Formester forms`,
-          logo: 'dr._michelelogo.webp',
-          logoAlt: 'Dr. michele ross logo',
-          company: 'Infused Health',
-        },
-        {
-          id: 2,
-          user: 'Jilson',
-          designation: 'Organiser',
-          picture: 'jilson.webp',
-          content: `Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.`,
-          logo: 'vueconf.webp',
-          logoAlt: 'Vue conference logo',
-          company: 'Vue Conference',
-        },
-        {
-          id: 3,
-          user: 'Bogdan Arsenie',
-          designation: 'CTO',
-          picture: 'bogdan.webp',
-          content: `At Rumie we use Formester to get feedback from our educators and
-          volunteers. It's intuitive, fast and easy to share.`,
-          logo: 'rumie.webp',
-          logoAlt: 'Rumie logo',
-          company: 'Rumie',
-        },
-        {
-          id: 4,
-          user: 'Costanza Casullo',
-          designation: 'Volunteer',
-          picture: 'costanza.webp',
-          content: `Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.`,
-          logo: 'wato-coding-hub.webp',
-          logoAlt: 'Wato coding hub logo',
-          company: 'Wato Coding Hub',
-        },
-        {
-          id: 5,
-          user: 'Deanna Bugalski',
-          designation: 'Founder/CEO',
-          picture: 'Deanna_bugalski.webp',
-          content: `I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formester was super easy to set up, and the usability is seamless! I highly recommend!`,
-          logo: 'suggesterfy_logo.webp',
-          logoAlt: 'suggesterfy logo',
-          company: 'Suggesterfy',
-        },
-        {
-          id: 6,
-          user: 'Thibaud Martinez',
-          designation: 'Organiser',
-          picture: 'thibaud.webp',
-          content: `I really enjoy Formester. It’s clean and straight-forward and it does well, what it is supposed to do.`,
-          logo: 'tedx.webp',
-          logoAlt: 'Tedx logo',
-          company: 'Tedx',
-        },
-      ],
       currentIndex: 0,
       maxIndex: null,
       deviceWidth: 0,
@@ -166,7 +112,7 @@ export default {
       this.currentIndex = 0
       this.deviceWidth = window.innerWidth
       this.maxIndex = Math.floor(
-        (this.data.testimonials.length - 1) /
+        (this.props?.testimonials.length - 1) /
           (this.deviceWidth > 1200 ? 3 : this.deviceWidth > 768 ? 2 : 1)
       )
     },

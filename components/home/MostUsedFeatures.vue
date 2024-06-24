@@ -2,7 +2,7 @@
   <section class="container py-5 mt-3">
     <h2 class="section__heading text-center">
       <span
-        v-for="item in data.title"
+        v-for="item in heading"
         :key="item.id"
         :class="{ hglight: item.highlight }"
       >
@@ -13,7 +13,7 @@
     <div class="feature__desktop d-none d-lg-flex row mt-5">
       <ul class="feature__content-wrapper col-6">
         <li
-          v-for="(feature, index) in data.features"
+          v-for="(feature, index) in itemList"
           :key="feature.title"
           :class="[
             'feature__item',
@@ -27,7 +27,7 @@
           <div
             class="feature__icon-wrapper d-flex align-items-center justify-content-center"
           >
-            <nuxt-img :src="feature.icon.url" loading="lazy" />
+            <nuxt-img :src="feature.icon.image.url" loading="lazy" />
           </div>
           <div class="ms-3 mt-1">
             <h3 class="feature__title">{{ feature.title }}</h3>
@@ -41,21 +41,21 @@
         <transition name="fade" mode="out-in">
           <nuxt-img
             class="feature__img img-fluid"
-            :src="data.features[activeIndex].featureImage.url"
-            :key="data.features[activeIndex].featureImage.url"
+            :src="itemList[activeIndex].cardImage.image.url"
+            :key="itemList[activeIndex].cardImage.image.url"
           />
         </transition>
       </div>
     </div>
     <!-- Mobile -->
     <div class="d-lg-none">
-      <div v-for="feature in data.features" :key="feature.title" class="mt-5">
-        <nuxt-img :src="feature.featureImage.url" class="mb-4 img-fluid" loading="lazy" />
+      <div v-for="feature in itemList" :key="feature.title" class="mt-5">
+        <nuxt-img :src="feature.cardImage.imageUrl || feature.cardImage.image.url" class="mb-4 img-fluid" loading="lazy" />
         <div class="d-flex align-items-start mt-2">
           <div
             class="feature__icon-wrapper d-flex align-items-center justify-content-center"
           >
-            <nuxt-img :src="feature.icon.url" loading="lazy" />
+            <nuxt-img :src="feature.icon.imageUrl ||feature.icon.image.url" loading="lazy" />
           </div>
           <div class="ms-3 mt-1">
             <h3 class="feature__title">{{ feature.title }}</h3>
@@ -71,7 +71,10 @@
 
 <script>
 export default {
-  props: ['data'],
+  props: {
+    heading: Array,
+    itemList: Array,
+  },
   data() {
     return {
       activeIndex: 0,

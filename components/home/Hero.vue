@@ -6,7 +6,7 @@
       >
         <h1 class="hero__heading">
           <span
-            v-for="item in data.title"
+            v-for="item in title"
             :key="item.id"
             :class="{ hglight: item.highlight }"
           >
@@ -14,18 +14,18 @@
           </span>
         </h1>
         <p class="hero__subheading mt-3">
-          {{ data.description }}
+          {{ description }}
         </p>
         <a
-          v-if="data && data?.button?.length > 0"
-          :href="data.button[0].link"
+          v-if="button && button?.length > 0"
+          :href="button[0].link"
           class="btn button hero__button mt-4 mb-4 mb-md-5"
           :class="{
-            'hero__button': data.button[0].type === 'Primary',
-            'hero__invert__button': data.button[0].type === 'Secondary',
+            hero__button: button[0].type === 'Primary',
+            hero__invert__button: button[0].type === 'Secondary',
           }"
         >
-          {{ data.button[0].text }}
+          {{ button[0].text }}
         </a>
         <!-- <div class="hint">
           <div>✓ &nbsp; No credit card required</div>
@@ -39,7 +39,7 @@
           style="max-width: 98%; border-radius: 12px"
           class="mt-3"
         >
-          <source :src="data.video" type="video/webm" />
+          <source :src="video.url" type="video/webm" />
         </video>
       </div>
     </div>
@@ -47,7 +47,12 @@
 </template>
 
 <script setup>
-const props = defineProps(['data'])
+const props = defineProps({
+  title: Array,
+  description: String,
+  button: Array,
+  video: Object,
+})
 </script>
 
 <style scoped>

@@ -9,8 +9,8 @@
             <h2 class="section__heading">
               <span v-if="content.heading">{{ content.heading }}</span>
               <span
-                v-else-if="data.title"
-                v-for="item in data.title"
+                v-else-if="title"
+                v-for="item in title"
                 :key="item.id"
                 :class="{ hglight: item.highlight }"
               >
@@ -24,39 +24,40 @@
               <span class="hglt">
                 {{
                   content.subHeading ||
+                  description ||
                   'With the most intuitive form creator out there'
                 }}
               </span>
             </h2>
             <div
-              v-if="data && data?.buttons?.length > 0"
+              v-if="buttons && buttons?.length > 0"
               class="d-flex align-items-center justify-content-center flex-wrap gap-3 mt-5"
             >
               <a
                 :href="
-                  data?.buttons[0]?.link ||
+                  buttons[0]?.link ||
                   'https://app.formester.com/users/sign_up'
                 "
                 class="btn button mx-2"
                 :class="{
-                  'cta-button': data.buttons[0].type === 'Primary',
-                  'cta-button__invert': data.buttons[0].type === 'Secondary',
+                  'cta-button': buttons[0].type === 'Primary',
+                  'cta-button__invert': buttons[0].type === 'Secondary',
                 }"
                 target="_blank"
               >
-                {{ data?.buttons[0]?.text }}
+                {{ buttons[0]?.text }}
               </a>
               <a
-                v-if="data?.buttons?.length===2"
+                v-if="buttons?.length === 2"
                 target="_blank"
-                :href="data.buttons[1].link"
+                :href="buttons[1].link"
                 class="btn button mx-2"
                 :class="{
-                  'cta-button': data?.buttons[1]?.type === 'Primary',
-                  'cta-button__invert': data?.buttons[1]?.type === 'Secondary',
+                  'cta-button': buttons[1]?.type === 'Primary',
+                  'cta-button__invert': buttons[1]?.type === 'Secondary',
                 }"
               >
-                {{ data?.buttons[1]?.text }}
+                {{ buttons[1]?.text }}
               </a>
             </div>
             <div
@@ -104,10 +105,18 @@ export default {
       type: Object,
       default: () => ({}),
     },
-    data: {
-      type: Object,
-      default: () => ({}),
+    title: {
+      type: Array,
+      default: () => ([])
     },
+    description: {
+      type: String,
+      default: () => ("")
+    },
+    buttons: {
+      type: Array,
+      default: () => ([])
+    }
   },
 }
 </script>

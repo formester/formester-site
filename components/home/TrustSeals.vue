@@ -2,8 +2,8 @@
   <section class="trust-seals-section">
     <div class="container">
       <div class="trust-seals">
-        <div v-for="item in data" :key="item.id">
-          <nuxt-img :src="item.url" :alt="item.imageAlt" :width="item.width" />
+        <div v-for="item in logos" :key="item.id">
+          <nuxt-img :src="item.image.url" :alt="item.imageAlt" :width="item.width" />
         </div>
 
         <!-- <div>
@@ -56,7 +56,9 @@
 </template>
 
 <script setup>
-const props = defineProps(['data'])
+const props = defineProps({
+  logos: Array,
+})
 </script>
 
 <style scoped>
