@@ -105,19 +105,22 @@ export default {
       type: Object,
       default: () => ({}),
     },
-    title: {
-      type: Array,
-      default: () => ([])
-    },
-    description: {
-      type: String,
-      default: () => ("")
-    },
-    buttons: {
-      type: Array,
-      default: () => ([])
+    ctaValue: {
+      type: Object,
+      default: () => ({})
     }
   },
+  computed: {
+    title(){
+      return this.ctaValue.title || []
+    }, 
+    description(){
+      return this.ctaValue.description || ""
+    },
+    buttons(){
+      return this.ctaValue.buttons || []
+    }
+  }
 }
 </script>
 
