@@ -112,7 +112,7 @@ export default {
       this.currentIndex = 0
       this.deviceWidth = window.innerWidth
       this.maxIndex = Math.floor(
-        (this.props?.testimonials.length - 1) /
+        (this.testimonials.length - 1) /
           (this.deviceWidth > 1200 ? 3 : this.deviceWidth > 768 ? 2 : 1)
       )
     },
@@ -130,6 +130,9 @@ export default {
       return `translateX(-${this.currentIndex * (100 + extraTransition)}%)`
     },
   },
+  // watch: {
+  //   this.testimonials
+  // }
 }
 </script>
 

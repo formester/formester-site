@@ -4,7 +4,7 @@
       v-for="component in components"
       :key="component.id"
       :is="getComponent(component.__component)"
-      v-bind="components"
+      v-bind="component"
     />
   </div>
 </template>
