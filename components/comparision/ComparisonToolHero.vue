@@ -8,10 +8,10 @@
       >
         <span class="hero__subtitle">Comparison Tool</span>
         <h1 class="hero__heading">
-          Confused? Easy way to compare Form Builders
+          Find the Best Online Form Builder for All Your Needs
         </h1>
         <p class="hero__description mt-3">
-          Compare Formester with other Form Building tools.
+          Compare Pricing and Features of the Best Form Builders Side-by-Side.
         </p>
         <a
           href="https://app.formester.com/users/sign_up"
