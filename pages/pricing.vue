@@ -1,18 +1,37 @@
 <template>
   <div>
     <div class="text-center mt-5 px-3">
-      <h1 class="pricing__heading">Pricing that feels just right</h1>
-      <p class="pricing__subheading">Start with our free plan</p>
+      <span class="d-block mb-1 pricing__subtitle text__primary">Pricing</span>
+      <h1 class="pricing__heading mt-2">Pricing that feels just right</h1>
+      <p class="pricing__subheading mt-3">
+        Select the perfect plan for your needs, and star building beautiful
+        forms!
+      </p>
 
       <div
-        class="d-flex justify-content-center align-items-center plan_toggle__switch"
+        class="d-none d-sm-flex justify-content-center align-items-center plan_toggle__switch"
       >
-        <span>Monthly</span>
+        <span>Monthly pricing</span>
         <label class="switch">
           <input type="checkbox" class="plan_toggle" v-model="isYearly" />
           <div class="slider round"></div>
         </label>
-        <span>Yearly</span>
+        <span
+          >Annual pricing <span class="text__primary">(save 20%)</span></span
+        >
+      </div>
+
+      <div
+        class="d-flex d-sm-none justify-content-center align-items-center plan_toggle__switch"
+      >
+        <label class="switch">
+          <input type="checkbox" class="plan_toggle" v-model="isYearly" />
+          <div class="slider round"></div>
+        </label>
+        <span v-if="!isYearly">Monthly pricing</span>
+        <span v-else
+          >Annual pricing <span class="text__primary">(save 20%)</span></span
+        >
       </div>
 
       <div class="mw-1200 mx-auto">
@@ -20,87 +39,31 @@
           v-if="!isYearly"
           class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3"
         >
-          <PricingCard :plan="free" />
-          <PricingCard :plan="personalMonthly" highlighted />
-          <PricingCard :plan="businessMonthly" />
+          <PricingCard :plan="free" muted />
+          <PricingCard :plan="personalMonthly" />
+          <PricingCard :plan="businessMonthly" highlighted />
+          <PricingCard :plan="enterprise" contact-sales />
         </div>
         <div
           v-if="isYearly"
           class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3"
         >
-          <PricingCard :plan="free" />
-          <PricingCard :plan="personalYearly" highlighted />
-          <PricingCard :plan="businessYearly" />
+          <PricingCard :plan="free" muted />
+          <PricingCard :plan="personalYearly" />
+          <PricingCard :plan="businessYearly" highlighted />
+          <PricingCard :plan="enterprise" contact-sales />
         </div>
         <div class="mt-5 py-5">
-          <h2 class="comparision__table-heading mb-5">
+          <h2 class="comparison__table-heading mb-3">
             See All Features and Compare Plan
           </h2>
-          <div class="table-responsive mt-5">
-            <table class="table text-start">
-              <thead>
-                <tr class="plan-header">
-                  <td></td>
-                  <td>
-                    <div class="plan__name mb-3">Free</div>
-                    <a
-                      href="https://app.formester.com/users/sign_up"
-                      class="table__button"
-                      >Start for free</a
-                    >
-                  </td>
-                  <td>
-                    <div class="plan__name mb-3">Personal</div>
-                    <a
-                      href="https://app.formester.com/users/sign_up"
-                      class="table__button hglt"
-                      >Get started</a
-                    >
-                  </td>
-                  <td>
-                    <div class="plan__name mb-3">Business</div>
-                    <a
-                      href="https://app.formester.com/users/sign_up"
-                      class="table__button"
-                      >Get started</a
-                    >
-                  </td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr
-                  v-for="feature in comparisonTableFeatures"
-                  :key="feature.name"
-                >
-                  <th class="feature">{{ feature.name }}</th>
-                  <td>
-                    <template v-if="feature.free === 'Yes'">
-                      <nuxt-img src="check-green.svg" />
-                    </template>
-                    <template v-else>
-                      {{ feature.free }}
-                    </template>
-                  </td>
-                  <td>
-                    <template v-if="feature.pro === 'Yes'">
-                      <nuxt-img src="check-green.svg" />
-                    </template>
-                    <template v-else>
-                      {{ feature.pro }}
-                    </template>
-                  </td>
-                  <td>
-                    <template v-if="feature.business === 'Yes'">
-                      <nuxt-img src="check-green.svg" />
-                    </template>
-                    <template v-else>
-                      {{ feature.business }}
-                    </template>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <p class="comparison__table-description mt-1">
+            Everything you need to know about the product features and pricings.
+          </p>
+          <PricingTable
+            :comparison-table-features="comparisonTableFeatures"
+            :pricing-plans="pricingPlans"
+          />
         </div>
       </div>
       <CallToActionSection />
@@ -111,33 +74,34 @@
 
 <script>
 import CallToActionSection from '@/components/CallToActionSection.vue'
-import PricingCard from '../components/pricing/PricingCard.vue'
-import Faq from '../components/pricing/Faq.vue'
+import PricingCard from '@/components/pricing/PricingCard.vue'
+import Faq from '@/components/pricing/Faq.vue'
 import {
   free,
   personalMonthly,
   businessMonthly,
-  freeYearly,
   personalYearly,
   businessYearly,
+  enterprise,
   comparisonTableFeatures,
-} from '../constants/plan'
+} from '@/constants/plan'
 
 // MetaTags
-import getSiteMeta from '../utils/getSiteMeta'
+import getSiteMeta from '@/utils/getSiteMeta'
+import PricingTable from '@/components/pricing/PricingTable.vue'
 
 export default {
-  components: { PricingCard, Faq, CallToActionSection },
+  components: { PricingCard, Faq, CallToActionSection, PricingTable },
   data() {
     return {
       isYearly: true,
       free,
       personalMonthly,
       businessMonthly,
-      freeYearly,
       personalYearly,
       businessYearly,
       comparisonTableFeatures,
+      enterprise,
     }
   },
   computed: {
@@ -146,12 +110,23 @@ export default {
         type: 'website',
         url: 'https://formester.com/pricing/',
         title: 'Pricing that feels just right',
-        description: 'Start with our free plan',
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with pricing page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with pricing page image alt
+        description:
+          'Select the perfect plan for your needs, and star building beautiful forms!',
+        mainImage: 'https://formester.com/formester-logo-meta-image.png',
+        mainImageAlt: 'Formester Logo',
       }
       return getSiteMeta(metaData)
+    },
+    pricingPlans() {
+      return {
+        free: this.free.price,
+        personal: this.isYearly
+          ? this.personalYearly.price
+          : this.personalMonthly.price,
+        business: this.isYearly
+          ? this.businessYearly.price
+          : this.businessMonthly.price,
+      }
     },
   },
   head() {
@@ -323,15 +298,44 @@ export default {
   max-width: 1200px;
 }
 
-.pricing__heading {
-  font-size: var(--ft-bigger-body);
+.pricing__subtitle {
+  font-size: 16px;
   font-weight: 600;
+  line-height: 24px;
+}
+
+.pricing__heading {
+  color: var(--clr-text-primary);
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 60px;
+  letter-spacing: -0.96px;
+}
+
+.pricing__subheading {
+  color: var(--clr-text-secondary);
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.comparison__table-heading {
+  color: var(--clr-text-primary);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: -0.72px;
+}
+
+.comparison__table-description {
+  color: var(--clr-text-secondary);
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .plan_toggle__switch {
-  margin-top: 3rem;
-  gap: 18px;
-  font-size: var(--ft-subtitle);
+  margin-block: 40px 64px;
+  gap: 12px;
+  font-size: 16px;
   font-weight: 500;
   line-height: normal;
 }
@@ -374,11 +378,11 @@ export default {
 }
 
 input:checked + .slider {
-  background-color: #6d5eac;
+  background-color: var(--clr-primary);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #6d5eac;
+  box-shadow: 0 0 1px var(--clr-primary);
 }
 
 input:checked + .slider:before {
@@ -395,70 +399,38 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-/* TABLE */
-
-.comparision__table-heading {
-  font-size: 28px;
-  line-height: 40px;
-}
-
-thead tr td {
-  border: none;
-}
-
-tr td,
-tr th {
-  padding-block: 12px;
-  font-size: 14px;
-}
-
-tr td,
-thead tr td {
-  padding-inline: 20px;
-}
-
-thead tr td:nth-child(3) {
-  background-color: #fafafa;
-  border-inline: 1px solid #e5e5e5;
-  border-top: 1px solid #e5e5e5;
-}
-
-tbody tr td:nth-child(3) {
-  background-color: #fafafa;
-  border-inline: 1px solid #e5e5e5;
-}
-
-table td {
-  min-width: 169px;
-}
-
-.plan__name {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.table__button {
-  padding: 12px 16px;
-  border: 1px solid var(--clr-primary);
-  background: white;
+.text__primary {
   color: var(--clr-primary);
-  border-radius: 8px;
 }
 
-.table__button:hover {
-  background: #f9f9f9;
-}
+@media screen and (max-width: 768px) {
+  .pricing__subtitle {
+    font-size: 14px;
+  }
 
-.table__button.hglt {
-  background-color: var(--clr-primary);
-  color: white;
-}
+  .pricing__heading {
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.72px;
+  }
 
-.table__button.hglt:hover {
-  opacity: 0.9;
-}
+  .pricing__subheading {
+    font-size: 18px;
+    line-height: 28px;
+  }
 
-.feature {
-  font-weight: 500;
+  .comparison__table-heading {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .comparison__table-description {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .plan_toggle__switch {
+    margin-block: 40px 0;
+  }
 }
 </style>

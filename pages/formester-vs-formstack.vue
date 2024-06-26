@@ -62,7 +62,9 @@
     <section class="container text-center">
       <h3 class="section__heading">Pricing</h3>
       <div class="table-responsive">
-        <table class="table text-start comparision__table comparision__table-pricing mx-auto">
+        <table
+          class="table text-start comparision__table comparision__table-pricing mx-auto"
+        >
           <thead class="bg__light-primary">
             <tr>
               <th scope="col">Features</th>
@@ -259,42 +261,46 @@ export default {
         {
           title: 'HTML Form Backend Service',
           formester: '<span class="present">Present</span>',
-          formstack: '<span class="absent">Not available</span>'
+          formstack: '<span class="absent">Not available</span>',
         },
         {
-          title: 'White Labeled Surveys Creation', 
-          formester: '<span class="present">Present</span>', 
-          formstack: '<span class="absent">Not Available</span>'
+          title: 'White Labeled Surveys Creation',
+          formester: '<span class="present">Present</span>',
+          formstack: '<span class="absent">Not Available</span>',
         },
         {
           title: 'Logo addition to form',
-          formester: '<span class="present">Available</span> even with the <span class="present">free</span> plan',
+          formester:
+            '<span class="present">Available</span> even with the <span class="present">free</span> plan',
           formstack: '<span class="absent">Not Available</span>',
         },
         {
           title: 'Automated Email Responses',
-          formester: '<span class="present">Present</span> with custom integration',
+          formester:
+            '<span class="present">Present</span> with custom integration',
           formstack: 'Only in <span class="absent">paid</span> plans',
         },
         {
-          title: 'Deep Performance Analytics', 
-          formester: '<span class="present">Present</span>', 
-         formstack:  '<span class="absent">Basic</span>'
+          title: 'Deep Performance Analytics',
+          formester: '<span class="present">Present</span>',
+          formstack: '<span class="absent">Basic</span>',
         },
         {
           title: 'End-to-End Design Customization',
           formester: '<span class="present">Present</span>',
-          formstack: '<span class="absent">Minimal</span> customization'
+          formstack: '<span class="absent">Minimal</span> customization',
         },
         {
           title: 'Mobile First UX',
           formester: '<span class="present">Perfectly</span> mobile-first',
-          formstack: '<span class="absent">Complicated</span> for design-heavy forms',
+          formstack:
+            '<span class="absent">Complicated</span> for design-heavy forms',
         },
         {
           title: 'Conditional Logic',
           formester: '<span class="present">Present</span>',
-          formstack: 'Present with a <span class="absent">lower degree</span> of flexibility',
+          formstack:
+            'Present with a <span class="absent">lower degree</span> of flexibility',
         },
         {
           title: 'Website Embedment',
@@ -304,66 +310,82 @@ export default {
         {
           title: 'Add Media to Forms',
           formester: '<span class="present">Mutliple</span> Options',
-          formstack: '<span class="absent">Only</span> Background Image'
+          formstack: '<span class="absent">Only</span> Background Image',
         },
         {
           title: 'Cloud Integrations with Zapier',
           formester: '<span class="present">Present</span>',
-          formstack: '<span class="absent">Basic</span> Integration, Zapier <span class="absent">Not Available</span>',
+          formstack:
+            '<span class="absent">Basic</span> Integration, Zapier <span class="absent">Not Available</span>',
         },
         {
           title: 'Form Limit',
-          formester: '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
-          formstack: '<span class="absent">Limited</span> Forms - 20 Forms for <span class="absent">$59/month</span>, <span class="absent">$99/month</span> for 100 forms',
+          formester:
+            '<span class="present">Unlimited</span> including <span class="present">free</span> plan users',
+          formstack:
+            '<span class="absent">Limited</span> Forms - 20 Forms for <span class="absent">$59/month</span>, <span class="absent">$99/month</span> for 100 forms',
         },
         {
           title: 'Collaborators',
-          formester: '<span class="present">Allows collaborators</span> even in <span class="present">free</span> plan',
-          formstack: '<span class="absent">Single</span> user in <span class="absent">$59/month</span>, 5 users in <span class="absent">$99/month</span>',
+          formester:
+            '<span class="present">Allows collaborators</span> even in <span class="present">free</span> plan',
+          formstack:
+            '<span class="absent">Single</span> user in <span class="absent">$59/month</span>, 5 users in <span class="absent">$99/month</span>',
         },
         {
           title: 'Storage',
-          formester: 'Basic Plan: <span class="present">$13/month</span> & Maximum Storage: <span class="present">1GB</span>.<span></br></span> Business Plan: <span class="present">$49/month</span> & Maximum Storage: <span class="present">50GB</span>',
-          formstack: 'Basic Plan: <span class="absent">$59/month/month</span>  & Maximum Storage: <span class="absent">1GB</span>.<span></br></span> Business Plan: <span class="absent">$99/month</span> & Maximum Storage: <span class="absent">2GB</span>',
+          formester:
+            'Basic Plan: <span class="present">$13/month</span> & Maximum Storage: <span class="present">1GB</span>.<span></br></span> Business Plan: <span class="present">$49/month</span> & Maximum Storage: <span class="present">50GB</span>',
+          formstack:
+            'Basic Plan: <span class="absent">$59/month/month</span>  & Maximum Storage: <span class="absent">1GB</span>.<span></br></span> Business Plan: <span class="absent">$99/month</span> & Maximum Storage: <span class="absent">2GB</span>',
           // formstack: 'Maximum Storage - 1GB: comes with Starter Plan - $59/month. Teams Plan - 2GB: $99/month',
         },
         {
           title: 'Redirection on Submission',
-          formester: 'Customization <span class="present">available</span> even with the <span class="present">free</span> plan',
-          formstack: 'Formstack forms <span class="present">also allows</span> redirection',
+          formester:
+            'Customization <span class="present">available</span> even with the <span class="present">free</span> plan',
+          formstack:
+            'Formstack forms <span class="present">also allows</span> redirection',
         },
         {
           title: 'Best For',
-          formester: '<span class="present">All kinds</span> of forms and applications including survey lead generation, feedback etc',
+          formester:
+            '<span class="present">All kinds</span> of forms and applications including survey lead generation, feedback etc',
           formstack: '<span class="absent">Not</span> suitable for long forms',
         },
         {
           title: 'Spam Protection',
           formester: '<span class="present">Present</span>',
-          formstack: '<span class="present">Present</span>'
+          formstack: '<span class="present">Present</span>',
         },
         {
           title: 'Monthly Payment Submissions',
           formester: 'Build in <span class="absent">Progress</span>',
-          formstack: '<span class="present">Available</span>'
+          formstack: '<span class="present">Available</span>',
         },
       ],
-      pricing:[
+      pricing: [
         {
           title: 'Free',
-          formester: '<span class="present">Starts</span> free for 100 submissions',
-          formstack: '<span class="absent">$59/month</span> for 1000 submissions',
+          formester:
+            '<span class="present">Starts</span> free for 100 submissions',
+          formstack:
+            '<span class="absent">$59/month</span> for 1000 submissions',
         },
         {
           title: 'Personal',
-          formester: '<span class="present">$13/month</span> for 1000 submissions',
-          formstack: '<span class="absent">$250/month</span> for 6000 submissions',
+          formester:
+            '<span class="present">$13/month</span> for 1000 submissions',
+          formstack:
+            '<span class="absent">$250/month</span> for 6000 submissions',
         },
         {
           title: 'Bussiness',
-          formester: '<span class="present">$49/month</span> for <span class="present">15k</span> submissions',
-          formstack: '<span class="absent">custom quotation/month</span> for unlimited submissions',
-        }
+          formester:
+            '<span class="present">$49/month</span> for <span class="present">15k</span> submissions',
+          formstack:
+            '<span class="absent">custom quotation/month</span> for unlimited submissions',
+        },
       ],
       relatedComparisons: [
         {
@@ -398,9 +420,8 @@ export default {
         title: 'Formester vs Formstack | Formstack Alternative - Formester',
         description:
           'Powerful Formstack alternative - Try Formester for Online, No-Code Forms & Surveys! Advanced Features & Integrations | Sign-up for Free!',
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with formester vs formstack page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with formester vs formstack page image alt
+        mainImage: 'https://formester.com/formester-logo-meta-image.png',
+        mainImageAlt: 'Formester Logo',
         keywords: [
           'formstack alternative',
           'formstack alternative free',
@@ -452,7 +473,7 @@ export default {
           'formstack alternative free reddit',
           'formstack alternative deutsch',
           'free alternatives to formstack',
-        ]
+        ],
       }
       return getSiteMeta(metaData)
     },
@@ -476,7 +497,7 @@ export default {
       '@type': 'Corporation',
       name: 'Formester vs Formstack | Formstack Alternative - Formester',
       description:
-        "Powerful Formstack alternative - Try Formester for Online, No-Code Forms & Surveys! Advanced Features & Integrations | Sign-up for Free!",
+        'Powerful Formstack alternative - Try Formester for Online, No-Code Forms & Surveys! Advanced Features & Integrations | Sign-up for Free!',
       logo: 'https://formester.com/logo.png',
       url: 'https://formester.com',
       address: {
@@ -493,7 +514,7 @@ export default {
           '@type': 'ImageObject',
           url: 'https://formester.com/logo.png',
         },
-      }
+      },
     }
   },
 }

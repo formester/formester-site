@@ -93,8 +93,8 @@ export default {
         title: "Jotform 101: All About Jotform's Forms by Formester!",
         description:
           'Discover everything about form building using Jotform: Presented by Formester, uncover Jotform’s key features, FAQs, limitations & more!',
-        mainImage: 'https://formester.com/jotform101-hero-section.png', // need to update with auto-responder page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
+        mainImage: 'https://formester.com/jotform101-hero-section.png',
+        mainImageAlt: 'Form builder showing drag and drop functionality',
         keywords: [
           'formester vs jotform',
           'jotform form builder',

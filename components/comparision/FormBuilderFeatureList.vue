@@ -4,11 +4,13 @@
     <div
       v-for="(feature, index) in featureList"
       :key="feature.id"
-      class="feature__cell"
+      class="feature__cell d-flex"
       :class="{ 'alternate-bg': index % 2 === 0 }"
     >
-      {{ feature.title }}
-      <div v-if="feature.description" class="custom__tooltip">
+      <div :title="feature.title" class="feature__title">
+        {{ feature.title }}
+      </div>
+      <div v-if="feature.description" class="custom__tooltip ms-1">
         <img
           class="question__icon"
           src="@/assets/images/icons/question.svg"
@@ -21,8 +23,6 @@
 </template>
 
 <script>
-
-
 export default {
   props: {
     featureList: {
@@ -49,6 +49,13 @@ export default {
 
 .feature__cell.alternate-bg {
   background-color: #f9fafb;
+}
+
+.feature__title {
+  max-width: 284px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .question__icon {

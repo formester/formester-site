@@ -72,6 +72,7 @@ export default {
       data: { data },
     } = await axios.get(`${process.env.strapiUrl}/api/form-builders`, {
       params: {
+        sort: 'name',
         populate: [
           'logo',
           'plan',

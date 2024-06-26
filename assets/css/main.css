@@ -105,6 +105,9 @@
 
   --clr-text-primary: #101828;
   --clr-text-secondary: #475467;
+
+  --clr-secondary-gray-hover: #f9fafb;
+  --clr-secondary-gray-stroke: #d0d5dd;
 }
 
 /* === BOX SHADOWS === */
@@ -248,6 +251,44 @@ button {
 .form-select:focus {
   box-shadow: 0 0 0 0.25rem rgba(99, 52, 208, 0.152);
   border-color: var(--clr-primary-light);
+}
+
+/* Buttons */
+
+.button__primary {
+  border-radius: 4px;
+  border: 1px solid var(--clr-primary);
+  background: var(--clr-primary);
+}
+
+.button__primary:hover {
+  border: 1px solid var(--clr-primary-hover);
+  background: var(--clr-primary-hover);
+}
+
+.button__secondary {
+  border-radius: 4px;
+  border: 1px solid var(--clr-primary-light);
+  background: var(--clr-primary-light);
+}
+
+.button__secondary:hover {
+  border: 1px solid var(--clr-primary-light-hover);
+  background: var(--clr-primary-light-hover);
+  color: #371d72;
+}
+
+.button__secondary-gray {
+  border-radius: 4px;
+  border: 1px solid var(--clr-secondary-gray-stroke);
+  background: white;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  color: var(--clr-text-secondary);
+}
+
+.button__secondary-gray:hover {
+  background: var(--clr-secondary-gray-hover);
+  color: var(--clr-text-primary);
 }
 
 @media screen and (max-width: 992px) {

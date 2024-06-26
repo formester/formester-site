@@ -105,7 +105,7 @@ export default {
           "Explore Formester's no-code form templates! Create surveys, gather feedback, and manage events effortlessly. Simplify form building now!",
         mainImage:
           previewImageUrl ||
-          'https://formester.com/formester-form-builder-background.png',
+          'https://formester.com/formester-logo-meta-image.png',
         mainImageAlt: 'Formester Template',
       }
       return getSiteMeta(metaData)
@@ -189,11 +189,11 @@ export default {
     },
     openPreviewModal() {
       this.showPreviewModal = true
-      document.body.style.overflow = "hidden"; //to hide page scrollbar
+      document.body.style.overflow = 'hidden' //to hide page scrollbar
     },
     closePreviewModal() {
       this.showPreviewModal = false
-      document.body.style.overflow = "auto"; //to add page scrollbar
+      document.body.style.overflow = 'auto' //to add page scrollbar
     },
     isEmpty,
   },

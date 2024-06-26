@@ -80,9 +80,8 @@ export default {
           'Embed Beautiful Forms on Your WordPress Site | Formester Plugin',
         description:
           "Create & add stunning forms in minutes with Formester's intuitive builder & WordPress plugin. No coding needed! Increase leads, collect feedback & streamline workflow.",
-        mainImage:
-          'https://formester.com/formester-form-builder-background.png', // need to update with auto-responder page image
-        mainImageAlt: 'Form builder showing drag and drop functionality', // need to update with auto-responder page image alt
+        mainImage: 'https://formester.com/formester-logo-meta-image.png',
+        mainImageAlt: 'Formester Logo',
         keywords: [
           'Formester',
           'WordPress plugin',

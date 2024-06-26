@@ -1,32 +1,31 @@
 export const free = {
   name: 'Free',
   price: '$0',
-  type: 'Monthly',
+  type: 'All',
   description:
     'For individuals who need to quickly collect data through forms.',
-  features: {
-    general: [
-      '10 forms',
-      '100 Submission/month',
-      '100 MB file uploads',
-      '1 Google Sheets Integration',
-      '1 Webhook',
-      '10 Signatures',
-    ],
-    keyFeatures: [
-      'Email Auto-responder',
-      'Basic Analytics',
-      'Access to Template Library',
-      'Zapier Integrations',
-      'SMTP Integration',
-      'Accept Payments (1% commission)',
-      'Spam Protection',
-      'Self Email Notifications',
-      'Respondent Email Notifications',
-      'Redirect to URL',
-      'Hidden Fields',
-    ],
-  },
+  features: [
+    '10 forms',
+    '100 Submission/month',
+    '100 MB file uploads',
+    '1 Google Sheets Integration',
+    '1 Webhook',
+    '10 Signatures',
+  ],
+}
+
+export const enterprise = {
+  name: 'Enterprise',
+  description: 'For organizations needing custom plan as per the requirements.',
+  type: 'All',
+  features: [
+    'Custom forms',
+    'Custom Submission/month',
+    'Custom file uploads',
+    'Custom Google Sheets Integration',
+    'Custom Webhook',
+    'Custom Signatures',
+  ],
 }
 
 export const personalMonthly = {
@@ -35,27 +34,14 @@ export const personalMonthly = {
   type: 'Monthly',
   description:
     'For individuals who need to create beautiful, branded forms on a regular basis.',
-  features: {
-    general: [
-      'Unlimited forms',
-      '1k Submission/month',
-      '1 GB file uploads',
-      'Unlimited Google Sheets Integration',
-      '50 Webhooks',
-      '250 Signatures',
-    ],
-    keyFeatures: [
-      'Brandkit',
-      'Advanced Analytics',
-      'Question Branching & Logic Jumps',
-      'Unlimited Collaborators',
-      'Accept Payments (0% commission)',
-      'Custom meta information',
-      'Add script to page - GTM, GA, Pixel',
-      'Send submission copy',
-      'AI Powered Spam Protection',
-    ],
-  },
+  features: [
+    'Unlimited forms',
+    '1k Submission/month',
+    '1 GB file uploads',
+    'Unlimited Google Sheets Integration',
+    '50 Webhooks',
+    '250 Signatures',
+  ],
 }
 
 export const businessMonthly = {
@@ -63,55 +49,15 @@ export const businessMonthly = {
   price: '$49',
   type: 'Monthly',
   description:
-    'For organizations and agencies to create unlimited forms that are fully customisable to handle any complexity.',
-  features: {
-    general: [
-      'Unlimited forms',
-      '15k Submission/month',
-      '50 GB file uploads',
-      'Unlimited Google Sheets Integration',
-      'Unlimited Webhooks',
-      '2,500 Signatures',
-    ],
-    keyFeatures: [
-      'Submission PDF',
-      'API Access',
-      'Custom Domain',
-      'Adaptive AI Spam Protection',
-      'White Label',
-    ],
-  },
-}
-
-export const freeYearly = {
-  name: 'Free',
-  price: '$0',
-  type: 'Yearly',
-  description:
-    'For individuals who need to quickly collect data through forms.',
-  features: {
-    general: [
-      '10 forms',
-      '100 Submission/month',
-      '100 MB file uploads',
-      '1 Google Sheets Integration',
-      '1 Webhook',
-      '10 Signatures',
-    ],
-    keyFeatures: [
-      'Email Auto-responder',
-      'Basic Analytics',
-      'Access to Template Library',
-      'Zapier Integrations',
-      'SMTP Integration',
-      'Accept Payments (1% commission)',
-      'Spam Protection',
-      'Self Email Notifications',
-      'Respondent Email Notifications',
-      'Redirect to URL',
-      'Hidden Fields',
-    ],
-  },
+    'For organizations to create unlimited forms that are fully customisable.',
+  features: [
+    'Unlimited forms',
+    '15k Submission/month',
+    '50 GB file uploads',
+    'Unlimited Google Sheets Integration',
+    'Unlimited Webhooks',
+    '2,500 Signatures',
+  ],
 }
 
 export const personalYearly = {
@@ -121,27 +67,14 @@ export const personalYearly = {
   type: 'Yearly',
   description:
     'For individuals who need to create beautiful, branded forms on a regular basis.',
-  features: {
-    general: [
-      'Unlimited forms',
-      '1k Submission/month',
-      '1 GB file uploads',
-      'Unlimited Google Sheets Integration',
-      '50 Webhooks',
-      '250 Signatures',
-    ],
-    keyFeatures: [
-      'Brandkit',
-      'Advanced Analytics',
-      'Question Branching & Logic Jumps',
-      'Unlimited Collaborators',
-      'Accept Payments (0% commission)',
-      'Custom meta information',
-      'Add script to page - GTM, GA, Pixel',
-      'Send submission copy',
-      'AI Powered Spam Protection',
-    ],
-  },
+  features: [
+    'Unlimited forms',
+    '1k Submission/month',
+    '1 GB file uploads',
+    'Unlimited Google Sheets Integration',
+    '50 Webhooks',
+    '250 Signatures',
+  ],
 }
 
 export const businessYearly = {
@@ -150,24 +83,15 @@ export const businessYearly = {
   prevPrice: '$45',
   type: 'Yearly',
   description:
-    'For organizations and agencies to create unlimited forms that are fully customisable to handle any complexity.',
-  features: {
-    general: [
-      'Unlimited forms',
-      '15k Submission/month',
-      '50 GB file uploads',
-      'Unlimited Google Sheets Integration',
-      'Unlimited Webhooks',
-      '2,500 Signatures',
-    ],
-    keyFeatures: [
-      'Submission PDF',
-      'API Access',
-      'Custom Domain',
-      'Adaptive AI Spam Protection',
-      'White Label',
-    ],
-  },
+    'For organizations to create unlimited forms that are fully customisable.',
+  features: [
+    'Unlimited forms',
+    '15k Submission/month',
+    '50 GB file uploads',
+    'Unlimited Google Sheets Integration',
+    'Unlimited Webhooks',
+    '2,500 Signatures',
+  ],
 }
 
 export const comparisonTableFeatures = [
@@ -333,33 +257,4 @@ export const comparisonTableFeatures = [
     pro: '-',
     business: 'Yes',
   },
-]
-
-export const featureNameList = [
-  'Select Plan',
-  'No of Forms',
-  'Submission per month',
-  'Remove Branding',
-  'File Uploads',
-  'Spam Protection',
-  'Access to Templates',
-  'Self Email Notifications',
-  'Respondent Email Notifications',
-  'Redirect to URL',
-  'Signatures',
-  'SMTP Integration',
-  'Zapier Integrations',
-  'Google Sheets Integration',
-  'Accept Payments (Commission)',
-  'Webhooks',
-  'Analytics',
-  'Question Branching',
-  'Brandkit',
-  'Custom Meta Information',
-  'Scripts (GTM, GA, Pixel)',
-  'Send submission copy',
-  'Submission PDF',
-  'API Access',
-  'Custom Domain',
-  'White Label',
 ]
