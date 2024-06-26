@@ -213,7 +213,7 @@ export default {
 <style scoped>
 .comparison_card-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-gap: 24px;
 }
 
@@ -234,7 +234,7 @@ export default {
 
 @media screen and (max-width: 1200px) {
   .comparison_card-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .section__grid {
