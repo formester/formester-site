@@ -169,6 +169,6 @@ export default {
   // Enviornment variable for the base url of the app
   env: {
     baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'http://localhost:3000',
-    strapiUrl: 'http://localhost:1337',
+    strapiUrl: 'https://cms.formester.com',
   },
 }

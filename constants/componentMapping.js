@@ -1,9 +1,9 @@
 // componentMapping.js
 export default {
-  'shared.hero-centered': () => import('@/components/home/Hero.vue'),
-  'home-page.trust-seals': () => import('@/components/home/TrustSeals.vue'),
-  'home-page.collapsible-item-list': () => import('@/components/home/MostUsedFeatures.vue'),
-  'home-page.embade-form-url': () => import('@/components/home/EmbadeForm.vue'),
-  'home-page.testimonials': () => import('@/components/home/Testimonials.vue'),
-  'home-page.cta-home': () => import('@/components/CallToActionSection.vue'),
+  'macro-components.hero-centered': () => import('@/components/home/Hero.vue'),
+  'macro-components.trust-seals': () => import('@/components/home/TrustSeals.vue'),
+  'macro-components.collapsible-item-list': () => import('@/components/home/MostUsedFeatures.vue'),
+  'macro-components.embade-form-url': () => import('@/components/home/EmbadeForm.vue'),
+  'macro-components.testimonials': () => import('@/components/home/Testimonials.vue'),
+  'macro-components.cta': () => import('@/components/CallToActionSection.vue'),
 }
