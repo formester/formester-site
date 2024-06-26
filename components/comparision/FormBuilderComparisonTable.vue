@@ -140,6 +140,7 @@ export default {
 
 .formbuilder__logo-wrapper {
   min-height: 40px;
+  padding-inline: 12px;
 }
 
 .formbuilder__logo {
