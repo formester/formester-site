@@ -8,6 +8,14 @@
           >
             <h2 class="section__heading">
               <span v-if="content.heading">{{ content.heading }}</span>
+              <span
+                v-else-if="title"
+                v-for="item in title"
+                :key="item.id"
+                :class="{ hglight: item.highlight }"
+              >
+                {{ item.text }}
+              </span>
               <span v-else>
                 Create your first form for <span class="hglt">free</span>
               </span>
@@ -16,11 +24,44 @@
               <span class="hglt">
                 {{
                   content.subHeading ||
+                  description ||
                   'With the most intuitive form creator out there'
                 }}
               </span>
             </h2>
             <div
+              v-if="buttons && buttons?.length > 0"
+              class="d-flex align-items-center justify-content-center flex-wrap gap-3 mt-5"
+            >
+              <a
+                :href="
+                  buttons[0]?.link ||
+                  'https://app.formester.com/users/sign_up'
+                "
+                class="btn button mx-2"
+                :class="{
+                  'cta-button': buttons[0].type === 'Primary',
+                  'cta-button__invert': buttons[0].type === 'Secondary',
+                }"
+                target="_blank"
+              >
+                {{ buttons[0]?.text }}
+              </a>
+              <a
+                v-if="buttons?.length === 2"
+                target="_blank"
+                :href="buttons[1].link"
+                class="btn button mx-2"
+                :class="{
+                  'cta-button': buttons[1]?.type === 'Primary',
+                  'cta-button__invert': buttons[1]?.type === 'Secondary',
+                }"
+              >
+                {{ buttons[1]?.text }}
+              </a>
+            </div>
+            <div
+              v-else
               class="d-flex align-items-center justify-content-center flex-wrap gap-3 mt-5"
             >
               <a
@@ -64,7 +105,22 @@ export default {
       type: Object,
       default: () => ({}),
     },
+    ctaValue: {
+      type: Object,
+      default: () => ({})
+    }
   },
+  computed: {
+    title(){
+      return this.ctaValue.title || []
+    }, 
+    description(){
+      return this.ctaValue.description || ""
+    },
+    buttons(){
+      return this.ctaValue.buttons || []
+    }
+  }
 }
 </script>
 

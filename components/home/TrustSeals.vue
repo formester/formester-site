@@ -2,7 +2,15 @@
   <section class="trust-seals-section">
     <div class="container">
       <div class="trust-seals">
-        <div>
+        <div v-for="item in logos" :key="item.id">
+          <nuxt-img
+            :src="item.imageUrl || item.image.url"
+            :alt="item.imageAlt"
+            :width="item.width"
+          />
+        </div>
+
+        <!-- <div>
           <nuxt-img src="/tedx.png" alt="Tedx Paris Organizer" width="110" />
         </div>
 
@@ -45,11 +53,22 @@
             alt="mayple logo"
             width="160"
           />
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  props: {
+    logos: {
+      type: Array,
+      default: () => [],
+    },
+  },
+}
+</script>
 
 <style scoped>
 .trust-seals-section {
