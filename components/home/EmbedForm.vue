@@ -8,13 +8,15 @@
   </div>
 </template>
 
-<script setup>
-const props = defineProps({
-  url: {
-    type: String,
-    default: ()=>("")
-  }
-})
+<script>
+export default {
+  props: {
+    url: {
+      type: String,
+      default: () => '',
+    },
+  },
+}
 </script>
 
 <style scoped>

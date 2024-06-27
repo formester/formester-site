@@ -46,25 +46,27 @@
   </section>
 </template>
 
-<script setup>
-const props = defineProps({
-  title: {
-    type: Array,
-    default: () => ([])
+<script>
+export default {
+  props: {
+    title: {
+      type: Array,
+      default: () => [],
+    },
+    description: {
+      type: String,
+      default: () => '',
+    },
+    button: {
+      type: Array,
+      default: () => [],
+    },
+    video: {
+      type: Object,
+      default: () => [],
+    },
   },
-  description: {
-    type: String,
-    default: () => ("")
-  },
-  button: {
-    type: Array,
-    default: () => ([])
-  },
-  video:  {
-    type: Object,
-    default: () => ([])
-  },
-})
+}
 </script>
 
 <style scoped>

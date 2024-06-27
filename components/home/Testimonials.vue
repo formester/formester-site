@@ -130,9 +130,6 @@ export default {
       return `translateX(-${this.currentIndex * (100 + extraTransition)}%)`
     },
   },
-  // watch: {
-  //   this.testimonials
-  // }
 }
 </script>
 

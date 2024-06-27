@@ -3,7 +3,11 @@
     <div class="container">
       <div class="trust-seals">
         <div v-for="item in logos" :key="item.id">
-          <nuxt-img :src="item.imageUrl || item.image.url" :alt="item.imageAlt" :width="item.width" />
+          <nuxt-img
+            :src="item.imageUrl || item.image.url"
+            :alt="item.imageAlt"
+            :width="item.width"
+          />
         </div>
 
         <!-- <div>
@@ -55,13 +59,15 @@
   </section>
 </template>
 
-<script setup>
-const props = defineProps({
-  logos: {
-    type: Array,
-    default: () => ([])
+<script>
+export default {
+  props: {
+    logos: {
+      type: Array,
+      default: () => [],
+    },
   },
-})
+}
 </script>
 
 <style scoped>
