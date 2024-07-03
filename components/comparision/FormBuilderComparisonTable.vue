@@ -233,12 +233,25 @@ export default {
   },
   computed: {
     groupedFeatures() {
-      const grouped = {}
+      const grouped = {
+        'Usage Limits': null,
+        'Form Creation': null,
+        Customization: null,
+        Payments: null,
+        'Form Analytics & Automation': null,
+        'Sharing & Embeding': null,
+        'Security & Compliance': null,
+        Support: null,
+      }
 
       this.featureList.forEach((feature) => {
         const category = feature.category?.name || 'Other'
 
-        if (!grouped[category]) {
+        if (!(category in grouped)) {
+          grouped[category] = null
+        }
+
+        if (grouped[category] === null) {
           grouped[category] = {
             name: category,
             features: [],
@@ -248,19 +261,24 @@ export default {
         grouped[category].features.push(feature)
       })
 
-      const sortedCategories = Object.values(grouped)
-
       // Sort features within each category
-      sortedCategories.forEach((category) => {
-        category.features.sort((a, b) => {
-          const posA = a.category?.position ?? Infinity
-          const posB = b.category?.position ?? Infinity
-          if (posA === posB) {
-            return (a.name || '').localeCompare(b.name || '')
-          }
-          return posA - posB
-        })
+      Object.values(grouped).forEach((category) => {
+        if (category) {
+          category.features.sort((a, b) => {
+            const posA = a.category?.position ?? Infinity
+            const posB = b.category?.position ?? Infinity
+            if (posA === posB) {
+              return (a.name || '').localeCompare(b.name || '')
+            }
+            return posA - posB
+          })
+        }
       })
+
+      // Filter out null categories and convert to array
+      const sortedCategories = Object.entries(grouped)
+        .filter(([_, value]) => value !== null)
+        .map(([_, value]) => value)
 
       return sortedCategories
     },
