@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <div class="feature__cell">
+    <!-- <div class="feature__cell">
       <select
         class="form-select select-plan__option"
         v-model="selectedPlans[formBuilder.id]"
@@ -14,14 +14,11 @@
           {{ plan.name }} - ${{ plan.amount }}/mo
         </option>
       </select>
-    </div>
+    </div> -->
     <div
       v-for="(feature, index) in getSelectedPlanFeatures(formBuilder)"
       :key="`${formBuilder.name}-row${index}-${feature.id}`"
       class="feature__cell info text-center"
-      :class="{
-        'alternate-bg': index % 2 === 0,
-      }"
     >
       <template v-if="trimString(feature.value) === 'Available'">
         <img src="@/assets/images/check-green.svg" />
@@ -93,10 +90,15 @@ export default {
 <style scoped>
 .feature__cell {
   padding: 20px 24px;
+  border-bottom: 1px solid #eaecf0;
 }
 
-.feature__cell.alternate-bg {
-  background-color: #f9fafb;
+.feature__cell:first-child {
+  border-top: 1px solid #eaecf0;
+}
+
+.feature__cell:last-child {
+  border-bottom: none;
 }
 
 .feature__cell.info {

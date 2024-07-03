@@ -1,13 +1,12 @@
 <template>
   <div v-if="selectedFormBuildersDetails.length" class="my-5 pt-5">
     <!-- desktop -->
-    <div class="d-none d-lg-flex w-100">
-      <FormBuilderFeatureList :feature-list="featureList" />
-      <div class="d-flex overflow-auto w-100">
+    <div class="d-none d-lg-block w-100 my-5">
+      <div class="d-flex formbuilder__logo-container">
         <div
           v-for="fb in selectedFormBuildersDetails"
           :key="fb.id"
-          class="w-100 mw-300"
+          class="w-100"
         >
           <div
             class="formbuilder__logo-wrapper d-flex align-items-center justify-content-center text-center"
@@ -18,12 +17,73 @@
               height="40"
             />
           </div>
-          <FormBuilderDetails
-            :formBuilder="fb"
-            :selectedPlans="selectedPlans"
-            :feature-list="featureList"
-            @onPlanChange="handlePlanChange"
-          />
+          <div class="formbuilder__select-plan">
+            <select
+              class="form-select select-plan__option"
+              v-model="selectedPlans[fb.id]"
+            >
+              <option
+                v-for="plan in fb.plan"
+                :key="`${fb.name}-${plan.name}`"
+                :value="plan.name"
+              >
+                {{ plan.name }} - ${{ plan.amount }}/mo
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="formbuilder__features accordion accordion-flush">
+        <div
+          v-for="(category, index) in groupedFeatures"
+          :key="generateSlug(category.name)"
+          class="category__group accordion-item"
+        >
+          <h3 class="category__name accordion-header" :id="category.name">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              :data-bs-target="'#' + generateSlug(category.name)"
+              aria-expanded="false"
+              :aria-controls="generateSlug(category.name)"
+            >
+              {{ category.name }}
+            </button>
+          </h3>
+          <div
+            :id="generateSlug(category.name)"
+            class="accordion-collapse collapse"
+            :aria-labelledby="generateSlug(category.name)"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body d-flex">
+              <FormBuilderFeatureList :feature-list="category.features" />
+              <div class="d-flex overflow-auto w-100">
+                <div
+                  v-for="fb in selectedFormBuildersDetails"
+                  :key="fb.id"
+                  class="w-100"
+                >
+                  <!-- <div
+                    class="formbuilder__logo-wrapper d-flex align-items-center justify-content-center text-center"
+                  >
+                    <img
+                      class="formbuilder__logo"
+                      :src="fb.logo.data.attributes.url"
+                      height="40"
+                    />
+                  </div> -->
+                  <FormBuilderDetails
+                    :formBuilder="fb"
+                    :selectedPlans="selectedPlans"
+                    :feature-list="category.features"
+                    @onPlanChange="handlePlanChange"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -39,17 +99,64 @@
         <div
           class="formbuilder__logo-wrapper d-flex align-items-center justify-content-center text-center"
         >
-          <img class="formbuilder__logo" :src="fb.logo.data.attributes.url" />
+          <img
+            class="formbuilder__logo"
+            :src="fb.logo.data.attributes.url"
+            height="40"
+          />
         </div>
-        <div class="d-flex overflow-auto">
-          <FormBuilderFeatureList :feature-list="featureList" />
-          <div class="w-100">
-            <FormBuilderDetails
-              :formBuilder="fb"
-              :selectedPlans="selectedPlans"
-              :feature-list="featureList"
-              @onPlanChange="handlePlanChange"
-            />
+        <div class="formbuilder__select-plan">
+          <select
+            class="form-select select-plan__option"
+            v-model="selectedPlans[fb.id]"
+          >
+            <option
+              v-for="plan in fb.plan"
+              :key="`${fb.name}-${plan.name}`"
+              :value="plan.name"
+            >
+              {{ plan.name }} - ${{ plan.amount }}/mo
+            </option>
+          </select>
+        </div>
+        <div class="formbuilder__features accordion accordion-flush">
+          <div
+            v-for="(category, index) in groupedFeatures"
+            :key="generateSlug(category.name)"
+            class="category__group accordion-item"
+          >
+            <h3 class="category__name accordion-header" :id="category.name">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                :data-bs-target="'#' + generateSlug(category.name)"
+                aria-expanded="false"
+                :aria-controls="generateSlug(category.name)"
+              >
+                {{ category.name }}
+              </button>
+            </h3>
+            <div
+              :id="generateSlug(category.name)"
+              class="accordion-collapse collapse"
+              :aria-labelledby="generateSlug(category.name)"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body d-flex">
+                <div class="d-flex overflow-auto w-100">
+                  <FormBuilderFeatureList :feature-list="featureList" />
+                  <div class="w-100">
+                    <FormBuilderDetails
+                      :formBuilder="fb"
+                      :selectedPlans="selectedPlans"
+                      :feature-list="featureList"
+                      @onPlanChange="handlePlanChange"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -108,7 +215,7 @@ export default {
     } = await axios.get(`${process.env.strapiUrl}/api/form-builder-features`, {
       params: {
         sort: 'createdAt',
-        populate: '*',
+        populate: 'category',
       },
     })
 
@@ -124,10 +231,50 @@ export default {
       this.$set(this.selectedPlans, fb.id, fb.plan[0].name)
     })
   },
+  computed: {
+    groupedFeatures() {
+      const grouped = {}
+
+      this.featureList.forEach((feature) => {
+        const category = feature.category?.name || 'Other'
+
+        if (!grouped[category]) {
+          grouped[category] = {
+            name: category,
+            features: [],
+          }
+        }
+
+        grouped[category].features.push(feature)
+      })
+
+      const sortedCategories = Object.values(grouped)
+
+      // Sort features within each category
+      sortedCategories.forEach((category) => {
+        category.features.sort((a, b) => {
+          const posA = a.category?.position ?? Infinity
+          const posB = b.category?.position ?? Infinity
+          if (posA === posB) {
+            return (a.name || '').localeCompare(b.name || '')
+          }
+          return posA - posB
+        })
+      })
+
+      return sortedCategories
+    },
+  },
   methods: {
     handlePlanChange(event, formBuilderId) {
       const selectedPlan = event.target.value
       this.$set(this.selectedPlans, formBuilderId, selectedPlan)
+    },
+    generateSlug(title) {
+      return title
+        .toLowerCase()
+        .replace(/\s+/g, '-')
+        .replace(/[^\w-]+/g, '')
     },
   },
 }
@@ -164,7 +311,53 @@ export default {
   text-decoration: underline;
 }
 
+.accordion-body {
+  padding: 0;
+}
+
+.category__name {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.category__name button {
+  background-color: #f9fafb;
+  font-weight: 500;
+}
+
+.formbuilder__logo-container {
+  margin-left: 354px;
+}
+
+.formbuilder__select-plan {
+  margin: 28px auto 32px;
+  max-width: 200px;
+}
+
+.formbuilder__features {
+  border: 1px solid #eaecf0;
+}
+
+.accordion-button:not(.collapsed) {
+  color: inherit;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
 /* === mobile === */
+.mobile__formbuilder-details-wrapper .formbuilder__select-plan {
+  margin: 12px auto 20px;
+}
+
+.mobile__formbuilder-details-wrapper .accordion-button {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 16px 12px;
+}
+
 @media screen and (max-width: 992px) {
   .mobile__formbuilder-details-wrapper {
     gap: 48px;
