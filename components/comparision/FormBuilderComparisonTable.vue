@@ -280,12 +280,6 @@ export default {
   margin: 12px auto 20px;
 }
 
-.mobile__formbuilder-details-wrapper .accordion-button {
-  font-size: 14px;
-  line-height: 20px;
-  padding: 16px 12px;
-}
-
 @media screen and (max-width: 992px) {
   .mobile__formbuilder-details-wrapper {
     gap: 48px;
