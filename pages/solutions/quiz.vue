@@ -7,7 +7,7 @@
             class="col-lg-6 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start"
           >
             <h1 class="hero__heading">
-              Create Fun and Engaging <span class="hglight">Quiz</span> in
+              Create Fun and Engaging <span class="highlight__text">Quiz</span> in
               Minutes
             </h1>
             <p class="hero__subheading mt-3">

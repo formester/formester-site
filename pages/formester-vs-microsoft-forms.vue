@@ -1,7 +1,7 @@
 <template>
   <div>
     <comparision-hero
-      heading="Switch to <span class='hglight'>Formester</span> and craft interactive web forms – Perfect Alternative to Microsoft Forms"
+      heading="Switch to <span class='highlight__text'>Formester</span> and craft interactive web forms – Perfect Alternative to Microsoft Forms"
       description="Ditch the dry design and limited integrations of Microsoft Forms. Optimise your data collection with beautiful, personalised forms that captivate audiences, streamline orders, and automate workflows like magic. Forget coding headaches - our intuitive drag-and-drop interface empowers everyone to be a form-building pro."
       imgLink="formester-vs-microsoft-forms/formester-vs-mirosoft-forms-hero-image"
       imgAlt="Formester vs Microsoft Forms"

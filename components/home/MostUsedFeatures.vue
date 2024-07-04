@@ -4,7 +4,7 @@
       <span
         v-for="item in heading"
         :key="item.id"
-        :class="{ hglight: item.highlight }"
+        :class="{ highlight__text: item.highlight }"
       >
         {{ item.text }}
       </span>

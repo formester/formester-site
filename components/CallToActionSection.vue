@@ -8,13 +8,14 @@
           >
             <h2 class="section__heading">
               <span v-if="content.heading">{{ content.heading }}</span>
-              <span
-                v-else-if="title"
-                v-for="item in title"
-                :key="item.id"
-                :class="{ hglight: item.highlight }"
-              >
-                {{ item.text }}
+              <span v-else-if="title">
+                <span 
+                  v-for="item in title"
+                  :key="item.id"
+                  :class="{ highlight__text: item.highlight }"
+                >
+                  {{ item.text }}
+                </span>
               </span>
               <span v-else>
                 Create your first form for <span class="hglt">free</span>
@@ -30,13 +31,12 @@
               </span>
             </h2>
             <div
-              v-if="buttons && buttons?.length > 0"
+              v-if="buttons?.length"
               class="d-flex align-items-center justify-content-center flex-wrap gap-3 mt-5"
             >
               <a
                 :href="
-                  buttons[0]?.link ||
-                  'https://app.formester.com/users/sign_up'
+                  buttons[0]?.link || 'https://app.formester.com/users/sign_up'
                 "
                 class="btn button mx-2"
                 :class="{
@@ -107,20 +107,20 @@ export default {
     },
     ctaValue: {
       type: Object,
-      default: () => ({})
-    }
+      default: () => ({}),
+    },
   },
   computed: {
-    title(){
+    title() {
       return this.ctaValue.title || []
-    }, 
-    description(){
-      return this.ctaValue.description || ""
     },
-    buttons(){
+    description() {
+      return this.ctaValue.description || ''
+    },
+    buttons() {
       return this.ctaValue.buttons || []
-    }
-  }
+    },
+  },
 }
 </script>
 

@@ -8,7 +8,7 @@
           <span
             v-for="item in title"
             :key="item.id"
-            :class="{ hglight: item.highlight }"
+            :class="{ highlight__text: item.highlight }"
           >
             {{ item.text }}
           </span>
@@ -63,7 +63,7 @@ export default {
     },
     video: {
       type: Object,
-      default: () => [],
+      default: () => {},
     },
   },
 }
