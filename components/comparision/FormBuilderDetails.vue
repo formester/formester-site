@@ -1,20 +1,5 @@
 <template>
-  <div class="">
-    <!-- <div class="feature__cell">
-      <select
-        class="form-select select-plan__option"
-        v-model="selectedPlans[formBuilder.id]"
-        @change="$emit('onPlanChange', $event, formBuilder.id)"
-      >
-        <option
-          v-for="plan in formBuilder.plan"
-          :key="`${formBuilder.name}-${plan.name}`"
-          :value="plan.name"
-        >
-          {{ plan.name }} - ${{ plan.amount }}/mo
-        </option>
-      </select>
-    </div> -->
+  <div>
     <div
       v-for="(feature, index) in getSelectedPlanFeatures(formBuilder)"
       :key="`${formBuilder.name}-row${index}-${feature.id}`"

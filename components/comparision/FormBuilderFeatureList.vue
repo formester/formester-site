@@ -1,6 +1,5 @@
 <template>
   <div class="feature__list d-flex flex-column">
-    <!-- <span class="feature__cell">Select Plan</span> -->
     <div
       v-for="(feature, index) in featureList"
       :key="feature.id"
