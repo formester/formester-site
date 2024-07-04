@@ -4,7 +4,7 @@
       class="comparison__logo-wrapper d-flex justify-content-center align-items-center"
     >
       <img
-        height="40"
+        class="form-builder-logo"
         v-if="modelSelectedOption"
         :src="formBuildersLogoSrc[modelSelectedOption]"
       />
@@ -68,6 +68,10 @@ export default {
 .comparison__logo-wrapper {
   padding: 48px 24px 12px;
   min-height: 154px;
+}
+
+.form-builder-logo {
+  max-height: 40px;
 }
 
 .comparison__dropdown-wrapper {

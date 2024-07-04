@@ -153,12 +153,18 @@ export default {
   },
   head() {
     return {
-      title: 'Easy way to compare Form Builders!',
+      title:
+        'Compare the Best Form Builder Software: Pricing & Features Comparison',
       description:
-        'Compare form builders side by side with Formester’s comparison tool. Find the best form builder for your needs with ease!',
+        'Find the best software to create forms. Use our comparison tool to see prices and features side-by-side. Find your form builder today!',
       meta: [...this.meta],
-      keywords:
-        'form builder, form builder comparison, form builder comparison tool',
+      keywords: [
+        'best form builder',
+        'best software to create forms',
+        'best form software',
+        'software to build forms',
+        'best form buider tools',
+      ],
       link: [
         {
           hid: 'canonical',
@@ -175,9 +181,9 @@ export default {
         {
           '@type': 'Corporation',
           '@id': 'https://acornglobus.com',
-          name: 'Easy way to compare Form Builders!',
+          name: 'Compare the Best Form Builder Software: Pricing & Features Comparison',
           description:
-            'Compare form builders side by side with Formester’s comparison tool. Find the best form builder for your needs with ease!',
+            'Find the best software to create forms. Use our comparison tool to see prices and features side-by-side. Find your form builder today!',
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
           address: {
@@ -199,7 +205,7 @@ export default {
             {
               '@type': 'ListItem',
               position: 2,
-              name: 'Easy way to compare Form Builders!',
+              name: 'Compare the Best Form Builder Software: Pricing & Features Comparison',
               item: 'https://formester.com/comparison-tool/',
             },
           ],
@@ -213,7 +219,7 @@ export default {
 <style scoped>
 .comparison_card-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-gap: 24px;
 }
 
@@ -234,7 +240,7 @@ export default {
 
 @media screen and (max-width: 1200px) {
   .comparison_card-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .section__grid {

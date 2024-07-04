@@ -1,11 +1,9 @@
 <template>
   <div class="feature__list d-flex flex-column">
-    <span class="feature__cell">Select Plan</span>
     <div
       v-for="(feature, index) in featureList"
       :key="feature.id"
       class="feature__cell d-flex"
-      :class="{ 'alternate-bg': index % 2 === 0 }"
     >
       <div :title="feature.title" class="feature__title">
         {{ feature.title }}
@@ -39,20 +37,25 @@ export default {
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
-  margin-top: 58px;
   min-width: fit-content;
 }
 
 .feature__cell {
   padding: 20px 24px;
+  border-bottom: 1px solid #eaecf0;
+  min-width: 242px;
 }
 
-.feature__cell.alternate-bg {
-  background-color: #f9fafb;
+.feature__cell:first-child {
+  border-top: 1px solid #eaecf0;
+}
+
+.feature__cell:last-child {
+  border-bottom: none;
 }
 
 .feature__title {
-  max-width: 284px;
+  max-width: 172px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -81,7 +84,7 @@ export default {
 
   /* Position the custom__tooltip text */
   position: absolute;
-  z-index: 1;
+  z-index: 10;
   bottom: 125%;
   left: 50%;
   margin-left: -60px;
@@ -113,7 +116,6 @@ export default {
 @media screen and (max-width: 992px) {
   .feature__list {
     min-width: fit-content;
-    margin-top: 19px;
   }
 
   .feature__cell {
