@@ -17,15 +17,15 @@
           {{ description }}
         </p>
         <a
-          v-if="button && button?.length > 0"
-          :href="button[0].link"
+          v-if="buttons?.length"
+          :href="buttons[0].link"
           class="btn button hero__button mt-4 mb-4 mb-md-5"
           :class="{
-            hero__button: button[0].type === 'Primary',
-            hero__invert__button: button[0].type === 'Secondary',
+            hero__button: buttons[0].type === 'Primary',
+            hero__invert__button: buttons[0].type === 'Secondary',
           }"
         >
-          {{ button[0].text }}
+          {{ buttons[0].text }}
         </a>
         <!-- <div class="hint">
           <div>✓ &nbsp; No credit card required</div>
@@ -57,7 +57,7 @@ export default {
       type: String,
       default: () => '',
     },
-    button: {
+    buttons: {
       type: Array,
       default: () => [],
     },
