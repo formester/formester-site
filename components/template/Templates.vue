@@ -27,9 +27,10 @@
           class="my-2"
           :class="{ 'd-flex align-items-center': !showFullDescription }"
         >
-          <p class="content-description mt-0 mb-1">
-            {{ activeCategory.description }}
-          </p>
+          <p
+            class="content-description mt-0 mb-0"
+            v-html="activeCategory.description"
+          ></p>
           <button
             class="content-description-handle-button text-nowrap"
             @click="toggleDescription"
