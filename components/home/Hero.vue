@@ -5,17 +5,28 @@
         class="d-flex flex-column align-items-center justify-content-center text-center my-5"
       >
         <h1 class="hero__heading">
-          Best <span class="hglight">No-Code</span> Form Builder
+          <span
+            v-for="item in title"
+            :key="item.id"
+            :class="{ highlight__text: item.highlight }"
+          >
+            {{ item.text }}
+          </span>
         </h1>
         <p class="hero__subheading mt-3">
-          Create elegant forms, surveys and quizzes your audience will love to
-          answer.
+          {{ description }}
         </p>
         <a
-          href="https://app.formester.com/users/sign_up"
+          v-if="buttons?.length"
+          :href="buttons[0].link"
           class="btn button hero__button mt-4 mb-4 mb-md-5"
-          >Create Form for Free</a
+          :class="{
+            hero__button: buttons[0].type === 'Primary',
+            hero__invert__button: buttons[0].type === 'Secondary',
+          }"
         >
+          {{ buttons[0].text }}
+        </a>
         <!-- <div class="hint">
           <div>✓ &nbsp; No credit card required</div>
           <div>✓ &nbsp; Unlimited forms</div>
@@ -28,7 +39,7 @@
           style="max-width: 98%; border-radius: 12px"
           class="mt-3"
         >
-          <source src="/videos/hero-animation.webm" type="video/webm" />
+          <source :src="video?.url" type="video/webm" />
         </video>
       </div>
     </div>
@@ -36,7 +47,26 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    title: {
+      type: Array,
+      default: () => [],
+    },
+    description: {
+      type: String,
+      default: () => '',
+    },
+    buttons: {
+      type: Array,
+      default: () => [],
+    },
+    video: {
+      type: Object,
+      default: () => {},
+    },
+  },
+}
 </script>
 
 <style scoped>

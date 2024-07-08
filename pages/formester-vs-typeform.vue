@@ -7,7 +7,7 @@
             class="col-lg-5 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start"
           >
             <h1 class="section__heading">
-              Looking for a <span class="hglight">Powerful</span> Alternative to
+              Looking for a <span class="highlight__text">Powerful</span> Alternative to
               Typeform? Your Search Ends here!
             </h1>
             <p class="section__subtitle mt-3">

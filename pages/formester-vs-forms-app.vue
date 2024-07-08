@@ -7,7 +7,7 @@
             class="col-lg-5 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start"
           >
             <h1 class="section__heading">
-              Forms.App Alternative that Gives <span class="hglight">More</span>
+              Forms.App Alternative that Gives <span class="highlight__text">More</span>
             </h1>
             <p class="section__subtitle mt-3">
               Declutter your work with a faster and intuitive form builder.

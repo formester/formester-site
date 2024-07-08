@@ -6,7 +6,7 @@
           class="col-lg-6 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start"
         >
           <h1 class="hero__heading">
-            Unleash Your Form <span class="hglight">Potential</span> with
+            Unleash Your Form <span class="highlight__text">Potential</span> with
             Formester
           </h1>
           <p class="hero__subheading mt-3">
