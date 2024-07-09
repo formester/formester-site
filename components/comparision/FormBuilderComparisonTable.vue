@@ -246,6 +246,7 @@ export default {
 }
 
 .formbuilder__logo {
+  transform: scale(0.8);
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;

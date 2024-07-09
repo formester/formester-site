@@ -17,7 +17,7 @@
         </div>
       </div>
       <FormBuilderComparisonTable
-        :selected-form-builders-details="computedSelectedFormBuildersDetails"
+        :selected-form-builders-details="filteredSelectedFormBuildersDetails"
         :feature-name-list="featureNameList"
         :form-builders="formBuilders"
       />
