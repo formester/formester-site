@@ -291,4 +291,10 @@ export default {
     overflow: hidden;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .formbuilder__logo {
+    transform: scale(1);
+  }
+}
 </style>

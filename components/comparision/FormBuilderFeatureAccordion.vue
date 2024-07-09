@@ -1,7 +1,7 @@
 <template>
   <div class="formbuilder__features accordion accordion-flush">
     <div
-      v-for="category in groupedFeatures"
+      v-for="(category, index) in groupedFeatures"
       :key="generateSlug(category.name)"
       class="category__group accordion-item"
     >
@@ -20,6 +20,7 @@
       <div
         :id="generateSlug(category.name)"
         class="accordion-collapse collapse"
+        :class="{ show: index === 0 }"
         :aria-labelledby="generateSlug(category.name)"
         data-bs-parent="#accordionFlushExample"
       >
