@@ -67,7 +67,7 @@ import CallToActionSection from '@/components/CallToActionSection.vue'
 import FAQwithCategories from '../../components/FAQwithCategories.vue'
 import softwareAndTechnologyFaqs from '../../faqs/use-case/software-and-technology-faqs'
 import getSiteMeta from '@/utils/getSiteMeta'
-import MostUsedFeatures from '../../components/home/MostUsedFeatures.vue'
+import MostUsedFeatures from '@/components/MostUsedFeatures.vue'
 
 export default {
   components: {

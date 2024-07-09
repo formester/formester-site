@@ -8,7 +8,7 @@
           >
             <h2 class="section__heading">
               <span v-if="content.heading">{{ content.heading }}</span>
-              <span v-else-if="title">
+              <span v-else-if="title.length">
                 <span 
                   v-for="item in title"
                   :key="item.id"
