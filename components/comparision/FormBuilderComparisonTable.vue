@@ -2,7 +2,7 @@
   <div v-if="selectedFormBuildersDetails.length" class="my-5 pt-5">
     <!-- desktop -->
     <div class="d-none d-lg-block w-100 my-5">
-      <div class="d-flex formbuilder__logo-container">
+      <div class="d-flex formbuilder__logo-container pt-2">
         <div
           v-for="fb in selectedFormBuildersDetails"
           :key="fb.id"
@@ -268,7 +268,11 @@ export default {
 }
 
 .formbuilder__logo-container {
-  margin-left: 354px;
+  position: sticky;
+  top: 86px;
+  background: white;
+  padding-left: 354px;
+  z-index: 100;
 }
 
 .formbuilder__select-plan {
