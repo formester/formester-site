@@ -17,7 +17,7 @@
         </div>
       </div>
       <FormBuilderComparisonTable
-        :selected-form-builders-details="selectedFormBuildersDetails"
+        :selected-form-builders-details="computedSelectedFormBuildersDetails"
         :feature-name-list="featureNameList"
         :form-builders="formBuilders"
       />
@@ -95,7 +95,7 @@ export default {
     return {
       selectedFormBuildersOption: ['', '', '', ''],
       featureNameList,
-      selectedFormBuildersDetails: [],
+      selectedFormBuildersDetails: { 0: null, 1: null, 2: null, 3: null },
     }
   },
   computed: {
@@ -118,6 +118,9 @@ export default {
       })
       return logoSrc
     },
+    filteredSelectedFormBuildersDetails() {
+      return Object.values(this.selectedFormBuildersDetails).filter(Boolean)
+    },
   },
   methods: {
     filteredOptions(cardNumber) {
@@ -129,20 +132,14 @@ export default {
       )
     },
     handleOptionChange(selectedOption, cardNumber) {
-      const oldOption = this.selectedFormBuildersOption[cardNumber]
       this.$set(this.selectedFormBuildersOption, cardNumber, selectedOption)
-
-      if (oldOption) {
-        this.selectedFormBuildersDetails =
-          this.selectedFormBuildersDetails.filter((fb) => fb.name !== oldOption)
-      }
 
       if (selectedOption) {
         const newFormBuilder = this.formBuilders.find(
           (fb) => fb.name === selectedOption
         )
         if (newFormBuilder) {
-          this.selectedFormBuildersDetails.push(newFormBuilder)
+          this.selectedFormBuildersDetails[cardNumber] = newFormBuilder
         }
       }
     },
