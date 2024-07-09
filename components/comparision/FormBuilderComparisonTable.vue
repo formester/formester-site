@@ -6,7 +6,7 @@
         <div
           v-for="fb in selectedFormBuildersDetails"
           :key="fb.id"
-          class="w-100"
+          class="w-100 px-2"
         >
           <div
             class="formbuilder__logo-wrapper d-flex align-items-center justify-content-center text-center"
