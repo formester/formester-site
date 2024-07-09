@@ -31,7 +31,7 @@
             ref="description"
             class="content-description mt-0 mb-0"
             v-html="activeCategory.description"
-          ></p>
+          />
           <button
             v-if="showHandleButton"
             class="content-description-handle-button text-nowrap"
