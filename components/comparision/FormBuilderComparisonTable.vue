@@ -177,7 +177,7 @@ export default {
   computed: {
     groupedFeatures() {
       const grouped = {
-        'Usage Limits': null,
+        'Usage limits': null,
         'Form Fields & Creation': null,
         'Quiz Features': null,
         Branding: null,
