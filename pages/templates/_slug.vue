@@ -10,10 +10,10 @@
         <h1 class="section__heading">{{ template.name }}</h1>
 
         <!-- New paragraph for each line break -->
-        <p v-for="(line, index) in template.description" :key="index" class="hero__subheading mt-3">
+        <p v-for="(line, index) in template.description.split('\n')" :key="index" class="hero__subheading mt-3">
           {{ line }}
         </p>
-        
+
         <div class="btns-container d-flex align-items-center mt-2">
           <button class="btn btn-use_template" @click="redirectTo">
             Use Template
