@@ -6,4 +6,6 @@ export default {
   'macro-components.embed-form-url': () => import('@/components/home/EmbedForm.vue'),
   'macro-components.testimonials': () => import('@/components/home/Testimonials.vue'),
   'macro-components.cta': () => import('@/components/CallToActionSection.vue'),
+
+  'macro-components.hero-row-layout': () => import('@/components/HeroRowLayout.vue')
 }
