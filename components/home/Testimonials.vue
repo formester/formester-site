@@ -1,68 +1,122 @@
 <template>
-  <div class="container my-5 py-5">
-    <div
-      class="d-flex justify-content-center justify-content-md-between align-items-center my-4 my-md-5"
-    >
-      <h2 class="section__heading position-relative w-full text-center">
-        <span
-          v-for="item in heading"
-          :key="item.id"
-          :class="{ highlight__text: item.highlight }"
-        >
-          {{ item.text }}
-        </span>
-        <nuxt-img
-          src="UI Block/Vector 5.svg"
-          class="position-absolute arrow-decoration"
-          loading="lazy"
-        />
-      </h2>
-      <div class="d-none d-md-flex">
-        <ArrowButton @click="prevTestimonial" direction="left" />
-        <ArrowButton @click="nextTestimonial" direction="right" class="ms-4" />
-      </div>
-    </div>
-    <div class="testimonial__wrapper d-flex position-relative">
-      <div
-        class="testimonial__cards d-flex"
-        :style="{ transform: cardTranslation }"
-      >
+  <div>
+    <div class="container py-5" v-if="isFeatureTestimonail">
+      <div class="row">
+        <SectionTitle :heading="heading" />
+        <p class="hero__subheading" v-if="description">
+          {{ description }}
+        </p>
         <div
-          v-for="testimonial in testimonials"
-          :key="testimonial.id"
-          class="testimonial__card"
+          class="d-flex flex-column flex-lg-row px-3 px-md-0 justify-content-center align-items-center mt-5"
         >
-          <div class="d-flex">
+          <div
+            class="card mt-5 mt-lg-1 p-3 me-lg-3"
+            style="max-width: 512px"
+            v-for="(testimonial, idx) in randomTestimonials"
+            :key="testimonial.id"
+          >
             <nuxt-img
-              :src="testimonial.profileImage.imageUrl || testimonial.profileImage.image.url"
-              class="img-fluid testimonial__user"
+              v-if="idx === 0"
+              class="quotes__logo"
+              src="/quotes.svg"
+              alt=""
               loading="lazy"
             />
-            <div class="d-flex flex-column ms-3">
-              <span class="testimonial__user-text">{{ testimonial.name }}</span>
-              <span class="testimonial__user-degn"
-                >{{ testimonial.position }} at
-                <span class="testimonial__user-company">{{
-                  testimonial.organization
-                }}</span></span
-              >
+            <div class="d-flex flex-column align-items-center text-center px-2">
+              <span class="quote mt-5 mb-4">{{ testimonial.comment }}</span>
+              <div class="my-3 d-flex flex-column align-items-center">
+                <span class="person">{{ testimonial.name }}</span>
+                <span class="designation">{{ testimonial.position }}</span>
+                <nuxt-img
+                  class="brand mt-4 mb-3"
+                  :src="
+                    testimonial.companyLogo.imageUrl ||
+                    testimonial.companyLogo.image.url
+                  "
+                  :alt="testimonial.companyLogo.imageAlt"
+                  loading="lazy"
+                />
+              </div>
             </div>
-          </div>
-          <div class="mt-4">
-            <nuxt-img
-              src="/UI Block/quotation.svg"
-              class="quotation-marks mt-2"
-              alt="Quotation marks"
-              loading="lazy"
-            />
-            <p class="mt-1">{{ testimonial.comment }}</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="d-md-none d-flex mt-4 pt-2">
-      <ArrowButton @click="prevTestimonial" direction="left" />
-      <ArrowButton @click="nextTestimonial" direction="right" class="ms-4" />
+    <!-- Testimonial Homepage -->
+    <div class="container my-5 py-5" v-else>
+      <div
+        class="d-flex justify-content-center justify-content-md-between align-items-center my-4 my-md-5"
+      >
+        <h2 class="section__heading position-relative w-full text-center">
+          <span
+            v-for="item in heading"
+            :key="item.id"
+            :class="{ highlight__text: item.highlight }"
+          >
+            {{ item.text }}
+          </span>
+          <nuxt-img
+            src="UI Block/Vector 5.svg"
+            class="position-absolute arrow-decoration"
+            loading="lazy"
+          />
+        </h2>
+        <div class="d-none d-md-flex">
+          <ArrowButton @click="prevTestimonial" direction="left" />
+          <ArrowButton
+            @click="nextTestimonial"
+            direction="right"
+            class="ms-4"
+          />
+        </div>
+      </div>
+      <div class="testimonial__wrapper d-flex position-relative">
+        <div
+          class="testimonial__cards d-flex"
+          :style="{ transform: cardTranslation }"
+        >
+          <div
+            v-for="testimonial in testimonials"
+            :key="testimonial.id"
+            class="testimonial__card"
+          >
+            <div class="d-flex">
+              <nuxt-img
+                :src="
+                  testimonial.profileImage.imageUrl ||
+                  testimonial.profileImage.image.url
+                "
+                class="img-fluid testimonial__user"
+                loading="lazy"
+              />
+              <div class="d-flex flex-column ms-3">
+                <span class="testimonial__user-text">{{
+                  testimonial.name
+                }}</span>
+                <span class="testimonial__user-degn"
+                  >{{ testimonial.position }} at
+                  <span class="testimonial__user-company">{{
+                    testimonial.organization
+                  }}</span></span
+                >
+              </div>
+            </div>
+            <div class="mt-4">
+              <nuxt-img
+                src="/UI Block/quotation.svg"
+                class="quotation-marks mt-2"
+                alt="Quotation marks"
+                loading="lazy"
+              />
+              <p class="mt-1">{{ testimonial.comment }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-md-none d-flex mt-4 pt-2">
+        <ArrowButton @click="prevTestimonial" direction="left" />
+        <ArrowButton @click="nextTestimonial" direction="right" class="ms-4" />
+      </div>
     </div>
   </div>
 </template>
@@ -77,11 +131,19 @@ export default {
   props: {
     heading: {
       type: Array,
-      default: () => ([])
+      default: () => [],
+    },
+    description: {
+      type: String,
+      default: '',
+    },
+    version: {
+      type: String,
+      default: 'home',
     },
     testimonials: {
       type: Array,
-      default: () => ([])
+      default: () => [],
     },
   },
   data() {
@@ -129,11 +191,56 @@ export default {
       }
       return `translateX(-${this.currentIndex * (100 + extraTransition)}%)`
     },
+    isFeatureTestimonail() {
+      return this.version === 'feature'
+    },
+    randomTestimonials() {
+      const randIndex = Math.floor(
+        Math.random() * (this.testimonials.length - 2)
+      )
+      const randomTestimonials = this.testimonials.slice(
+        randIndex,
+        randIndex + 2
+      )
+      return randomTestimonials
+    },
   },
 }
 </script>
 
 <style>
+.hero__subheading {
+  font-size: var(--ft-big-body);
+  line-height: 30px;
+}
+.quotes__logo {
+  width: 81px;
+  position: absolute;
+  top: -45px;
+  left: -42px;
+}
+.quote {
+  font-size: 19px;
+  font-weight: 500;
+}
+.card {
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+}
+.person {
+  font-size: 16px;
+  font-weight: 500;
+}
+.designation {
+  font-size: 15px;
+  color: #737373;
+}
+@media (max-width: 576px) {
+  .quotes__logo {
+    left: -20px;
+  }
+}
+/* Testimonial Homepage */
 .bg-magnolia {
   background-color: #f7f5ff;
 }
