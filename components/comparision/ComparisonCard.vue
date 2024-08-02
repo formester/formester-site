@@ -38,6 +38,7 @@ export default {
   border-radius: 4px;
   border: 1px solid #eaecf0;
   box-shadow: var(--box-shadow-lg);
+  text-align: center;
 }
 
 .comparison_card-title {
@@ -51,7 +52,7 @@ export default {
 .btn__secondary {
   padding: 12px 20px;
   border-radius: 4px;
-  border: 1px solid var(--Gray-300, #d0d5dd);
+  border: 1px solid #d0d5dd;
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
   color: var(--clr-text-secondary);
   background: white;
