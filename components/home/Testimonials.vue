@@ -3,7 +3,7 @@
     <div class="container py-5" v-if="isFeatureTestimonail">
       <div class="row">
         <SectionTitle :heading="heading" />
-        <p class="hero__subheading" v-if="description">
+        <p class="hero__subheading text-center" v-if="description">
           {{ description }}
         </p>
         <div
@@ -208,11 +208,10 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .hero__subheading {
   font-size: var(--ft-big-body);
   line-height: 30px;
-  text-align: center;
 }
 .quotes__logo {
   width: 81px;

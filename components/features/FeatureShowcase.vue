@@ -5,11 +5,7 @@
       {{ description }}
     </p>
     <div class="row">
-      <div
-        class="col-md-12"
-        v-for="(item, index) in itemList"
-        :key="item.id"
-      >
+      <div class="col-md-12" v-for="(item, index) in itemList" :key="item.id">
         <div class="card" :class="{ 'reverse-order': isOdd(index) }">
           <div class="card-content col-12 col-lg-5">
             <h3 class="card-title">{{ item.title }}</h3>
@@ -19,7 +15,11 @@
             class="card-image col-12 col-lg-7 d-lg-flex"
             :class="{ 'justify-content-lg-end  pe-xxl-4': !isOdd(index) }"
           >
-            <nuxt-img :src="item.cardImage.image?.url || item.cardImage.imageUrl" class="img-fluid" :alt="item.cardImage.imageAlt" />
+            <nuxt-img
+              :src="item.cardImage.image?.url || item.cardImage.imageUrl"
+              class="img-fluid"
+              :alt="item.cardImage.imageAlt"
+            />
           </div>
         </div>
       </div>
@@ -93,6 +93,10 @@ h2 {
   border-radius: 8px;
   flex-shrink: 0;
 }
+.img-fluid {
+  width: 70%;
+  border-radius: 2%;
+}
 
 @media (max-width: 992px) {
   .card {
@@ -108,6 +112,10 @@ h2 {
   .card-description {
     font-size: 14px;
     line-height: 22px;
+  }
+  .img-fluid {
+    width: 100%;
+    border-radius: 2%;
   }
 }
 </style>
