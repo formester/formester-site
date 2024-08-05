@@ -1,13 +1,10 @@
 <template>
   <NuxtLink
     class="dropdown-item d-flex align-items-center"
-    :to="`/features/${linkName}/`"
+    :to="`/features/${slug}/`"
     @click="collapseNav"
   >
-    <nuxt-img
-      :src="`/nav-dropdown/${linkName}.png`"
-      class="dropdown-item__img"
-    />
+    <nuxt-img :src="imageUrl" :alt="imageAlt" class="dropdown-item__img" />
     <div class="d-flex flex-column ms-3">
       <span class="dropdown-item__title">{{ title }}</span>
       <span class="dropdown-item__desc">{{ description }}</span>
@@ -18,15 +15,23 @@
 <script>
 export default {
   props: {
-    linkName: {
-      type: String,
-      required: true,
-    },
     title: {
       type: String,
       required: true,
     },
     description: {
+      type: String,
+      required: true,
+    },
+    imageUrl: {
+      type: String,
+      required: true,
+    },
+    imageAlt: {
+      type: String,
+      required: true,
+    },
+    slug: {
       type: String,
       required: true,
     },

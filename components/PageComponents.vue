@@ -18,8 +18,8 @@ export default {
     endpoint: String,
     params: {
       type: Object,
-      default: {}
-    }
+      default: () => ({}),
+    },
   },
   data() {
     return {

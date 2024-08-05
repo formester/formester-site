@@ -2,7 +2,7 @@
   <div class="container py-5 px-2">
     <div class="row">
       <SectionTitle :heading="title" />
-      <p class="hero__subheading" v-if="description">
+      <p class="hero__subheading text-center" v-if="description">
         {{ description }}
       </p>
       <div

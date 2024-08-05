@@ -208,10 +208,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .hero__subheading {
   font-size: var(--ft-big-body);
   line-height: 30px;
+  text-align: center;
 }
 .quotes__logo {
   width: 81px;

@@ -1,23 +1,26 @@
 <template>
   <section class="container py-5 mt-3">
     <SectionTitle :heading="title" />
-    <p class="hero__subheading" v-if="description">
+    <p class="hero__subheading text-center" v-if="description">
       {{ description }}
     </p>
 
     <div class="py-5 row">
-      <div v-for="(item,idx) in itemList" :key="item?.id" :class="columnClass">
+      <div v-for="(item, idx) in itemList" :key="item?.id" :class="columnClass">
         <div
           class="d-flex flex-column-reverse align-items-center justify-content-center pe-md-4"
         >
           <div class="mt-5">
-            <span class="step__heading">Step {{idx+1}}</span>
+            <span class="step__heading">Step {{ idx + 1 }}</span>
             <h3 class="step__section-heading">{{ item?.title }}</h3>
             <p class="step__section-description">
               {{ item?.description }}
             </p>
           </div>
-          <div v-if="item.cardImage.image?.url || item.cardImage.imageUrl" class="d-flex flex-column flex-lg-row">
+          <div
+            v-if="item.cardImage.image?.url || item.cardImage.imageUrl"
+            class="d-flex flex-column flex-lg-row"
+          >
             <nuxt-img
               :src="item.cardImage.image?.url || item.cardImage.imageUrl"
               class="img-fluid my-auto"
@@ -63,8 +66,6 @@ export default {
   },
 }
 </script>
-
-
 
 <style scoped>
 .step__heading {
