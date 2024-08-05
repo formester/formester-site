@@ -620,6 +620,7 @@ export default {
   margin-top: 96px;
   display: flex;
   flex-direction: column;
+  text-align: center;
   gap: 32px;
 }
 .popular-comparisons__heading {
@@ -640,7 +641,7 @@ export default {
   margin: 128px auto;
   display: flex;
   flex-direction: column;
-  gap: 56px;
+  gap: 40px;
 }
 .faq-section > h2 {
   text-align: center;
@@ -661,7 +662,11 @@ export default {
     grid-gap: 24px;
   }
 }
-
+@media screen and (max-width: 1024px) {
+  .faq-section__body {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 768px) {
   .comparison_card-container {
     grid-template-columns: 1fr;
@@ -735,10 +740,6 @@ export default {
   /* Popular Form Builder Comparisons */
   .popular-comparisons__grid {
     grid-template-columns: 1fr;
-  }
-
-  .faq-section__body {
-    width: 100%;
   }
 }
 </style>

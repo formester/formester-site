@@ -64,7 +64,9 @@ export default {
   border-top: 1px solid var(--Gray-200, #eaecf0);
 }
 .accordion {
-  padding: 24px 0;
+  padding: 0;
+  padding-top: 24px;
+  padding-bottom: 32px;
 }
 .category__name {
   color: var(--clr-text-primary);
@@ -77,7 +79,6 @@ export default {
   background-color: transparent;
   font-weight: 500;
   padding: 0;
-  padding-bottom: 12px;
 }
 
 .accordion-body {
@@ -86,6 +87,7 @@ export default {
   font-weight: 400;
   line-height: 24px;
   padding: 0;
+  padding-top: 8px;
 }
 
 .accordion-button:not(.collapsed) {
