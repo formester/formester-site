@@ -179,7 +179,7 @@ export default {
       {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        ...(this.faqSchema ? { mainEntitty: this.faqSchema } : {}),
+        ...(this.faqsSchema ? { mainEntitty: this.faqsSchema } : {}),
       },
     ]
   },
