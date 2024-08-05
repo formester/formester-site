@@ -121,6 +121,7 @@ export default {
     } = await axios.get(`${process.env.strapiUrl}/api/features`, {
       params: {
         populate: 'deep',
+        'sort[0]': 'id',
       },
     })
     this.dropdownItems = data.map((item) => ({
