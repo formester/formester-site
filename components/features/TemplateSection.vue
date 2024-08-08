@@ -7,7 +7,7 @@
           {{ description }}
         </p>
       </div>
-      <div v-if="templates && templates.length" class="templates py-3">
+      <div v-if="templates?.length" class="templates py-3">
         <TemplateCard
           v-for="(template, idx) in templates"
           :key="idx"
