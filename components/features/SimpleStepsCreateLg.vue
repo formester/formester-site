@@ -17,7 +17,7 @@
             :key="item.id"
             data-bs-target="#stepsSlider"
             :data-bs-slide-to="idx"
-            :class="{ active: idx === 0 }"
+            :class="{ active: !idx }"
             aria-current="true"
             :aria-label="`Step ${idx + 1}`"
           ></li>
