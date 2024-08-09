@@ -104,6 +104,7 @@ export default {
         type: 'website',
         url: 'https://formester.com/comparison-tool/',
         title: 'Easy way to compare Form Builders!',
+        description: "Compare features and pricing of 30+ form builders. Unbiased analysis to help you choose the perfect tool for your needs."
       }
       return getSiteMeta(metaData)
     },
