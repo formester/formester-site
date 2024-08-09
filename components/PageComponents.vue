@@ -16,6 +16,10 @@ import axios from 'axios'
 export default {
   props: {
     endpoint: String,
+    params: {
+      type: Object,
+      default: () => ({}),
+    },
   },
   data() {
     return {
@@ -27,10 +31,11 @@ export default {
       data: { data },
     } = await axios.get(`${process.env.strapiUrl}/api/${this.endpoint}`, {
       params: {
+        ...this.params,
         populate: 'deep',
       },
     })
-    this.components = data.components
+    this.components = data.components || data[0].components
   },
   methods: {
     getComponent(name) {

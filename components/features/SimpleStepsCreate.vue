@@ -1,26 +1,30 @@
 <template>
   <section class="container py-5 mt-3">
-    <h2 class="section__heading text-center">
-      {{ heading }}
-    </h2>
+    <SectionTitle :heading="title" />
+    <p class="hero__subheading text-center" v-if="description">
+      {{ description }}
+    </p>
 
     <div class="py-5 row">
-      <div v-for="(step,idx) in steps" :key="step?.title" :class="columnClass">
+      <div v-for="(item, idx) in itemList" :key="item?.id" :class="columnClass">
         <div
           class="d-flex flex-column-reverse align-items-center justify-content-center pe-md-4"
         >
           <div class="mt-5">
-            <span class="step__heading">Step {{idx+1}}</span>
-            <h3 class="step__section-heading">{{ step?.title }}</h3>
+            <span class="step__heading">Step {{ idx + 1 }}</span>
+            <h3 class="step__section-heading">{{ item?.title }}</h3>
             <p class="step__section-description">
-              {{ step?.description }}
+              {{ item?.description }}
             </p>
           </div>
-          <div v-if="step?.imgSrc" class="d-flex flex-column flex-lg-row">
+          <div
+            v-if="item.cardImage.image?.url || item.cardImage.imageUrl"
+            class="d-flex flex-column flex-lg-row"
+          >
             <nuxt-img
-              :src="step?.imgSrc"
+              :src="item.cardImage.image?.url || item.cardImage.imageUrl"
               class="img-fluid my-auto"
-              :alt="step?.imgAlt"
+              :alt="item.cardImage.imageAlt"
               loading="lazy"
             />
           </div>
@@ -33,25 +37,22 @@
 <script>
 export default {
   props: {
-    heading: {
-      type: String,
-      required: true,
-    },
-    steps: {
+    title: {
       type: Array,
       required: true,
     },
-    stepCount: {
-      type: Number,
-      default: 3,
-      validator(value) {
-        return [2, 3, 4].includes(value)
-      },
+    description: {
+      type: String,
+      default: '',
+    },
+    itemList: {
+      type: Array,
+      required: true,
     },
   },
   computed: {
     columnClass() {
-      switch (this.stepCount) {
+      switch (this.itemList.length) {
         case 2:
           return 'col-md-6 col-sm-6 mt-5'
         case 3:
@@ -65,8 +66,6 @@ export default {
   },
 }
 </script>
-
-
 
 <style scoped>
 .step__heading {

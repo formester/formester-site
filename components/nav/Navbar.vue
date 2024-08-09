@@ -46,13 +46,15 @@
             >
               <li
                 v-for="dropdownItem in dropdownItems"
-                :key="dropdownItem.title"
+                :key="dropdownItem.id"
                 @click="dropdownActive = false"
               >
                 <DropdownItem
                   :title="dropdownItem.title"
                   :description="dropdownItem.description"
-                  :link-name="dropdownItem.linkName"
+                  :imageUrl="dropdownItem.imageUrl"
+                  :imageAlt="dropdownItem.imageAlt"
+                  :slug="dropdownItem.slug"
                 />
               </li>
             </ul>
@@ -101,6 +103,7 @@
 <script>
 import DropdownItem from './DropdownItem.vue'
 import NavItem from './NavItem.vue'
+import axios from 'axios'
 export default {
   components: {
     NavItem,
@@ -109,69 +112,26 @@ export default {
   data() {
     return {
       dropdownActive: false,
-      dropdownItems: [
-        {
-          title: 'HTML Form Backend',
-          description: 'Simplify form integration',
-          linkName: 'html-form-backend',
-        },
-        {
-          title: 'Auto Responder',
-          description: 'Set up automated responses',
-          linkName: 'autoresponder-email',
-        },
-        {
-          title: 'Spam Protection',
-          description: 'Protect sensitive data',
-          linkName: 'spam-protection',
-        },
-        {
-          title: 'Form Analytics',
-          description: 'Get Insights of Engagements',
-          linkName: 'form-analytics',
-        },
-        {
-          title: 'Conditional Logic',
-          description: 'Create intelligent forms',
-          linkName: 'conditional-logic',
-        },
-        {
-          title: 'Online Payments',
-          description: 'Start collecting payments',
-          linkName: 'online-payments',
-        },
-        {
-          title: 'Electronic Signature',
-          description: 'Incorporate e-signatures',
-          linkName: 'electronic-signature',
-        },
-        {
-          title: 'Brand Kit',
-          description: 'Elevate your brand identity',
-          linkName: 'branding-kit',
-        },
-        {
-          title: 'Information Recall',
-          description: 'Referencing previous answers',
-          linkName: 'information-recall',
-        },
-        {
-          title: 'Calculating Fields',
-          description: 'Forms that perform calculations',
-          linkName: 'calculating-fields',
-        },
-        {
-          title: 'Multi-User Collaboration',
-          description: 'Collaborate with team members',
-          linkName: 'team-collaboration',
-        },
-        {
-          title: 'Offline Forms',
-          description: 'Form submission offline',
-          linkName: 'offline-forms',
-        },
-      ],
+      dropdownItems: [],
     }
+  },
+  async fetch() {
+    const {
+      data: { data },
+    } = await axios.get(`${process.env.strapiUrl}/api/features`, {
+      params: {
+        populate: 'deep',
+        'sort[0]': 'id',
+      },
+    })
+    this.dropdownItems = data.map((item) => ({
+      id: item.id,
+      title: item.navTitle,
+      description: item.navDescription,
+      imageUrl: item.navIcon?.imageUrl || item.navIcon?.image.url,
+      imageAlt: item.navIcon.imageAlt,
+      slug: item.slug,
+    }))
   },
   methods: {
     collapseNav() {
