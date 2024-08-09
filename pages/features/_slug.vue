@@ -13,9 +13,9 @@ export default {
   components: { PageComponents },
   async asyncData({ params }) {
     const slug = params.slug
-    const endpoint = `/features/${slug}`
-    const { head, jsonld } = await getSiteHeaders(endpoint)
-
+    const endpoint = `/features`
+    const strapiParams = { 'filters[slug][$eqi]': slug }
+    const { head, jsonld } = await getSiteHeaders(endpoint, strapiParams)
     return { slug, head, jsonld }
   },
   head() {

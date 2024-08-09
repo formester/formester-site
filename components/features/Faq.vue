@@ -41,7 +41,7 @@
 export default {
   props: {
     title: {
-      type: String,
+      type: Array,
       required: true,
     },
     description: {

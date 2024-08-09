@@ -2,23 +2,33 @@
 import axios from 'axios'
 import getSiteMeta from '@/utils/getSiteMeta'
 
-export default async (endpoint) => {
+export default async (endpoint, params) => {
   const {
     data: { data },
-  } = await axios.get(`${process.env.strapiUrl}/api/page-headers`, {
+  } = await axios.get(`${process.env.strapiUrl}/api${endpoint}`, {
     params: {
-      'filters[endpoint][$eqi]': endpoint,
+      ...params,
       populate: 'deep',
     },
   })
+  const meta = data[0].meta
 
-  const headers = data[0]
-  const metaData = getSiteMeta(headers?.meta)
-  const head = {
-    ...headers?.head,
-    meta: [...metaData],
+  const metaData = {
+    url: meta?.url,
+    type: meta?.type,
+    title: meta?.title,
+    description: meta?.description,
+    mainImage: meta?.mainImage.imageUrl || meta?.mainImage.image.url,
+    mainImageAlt: meta?.mainImage.imageAlt,
+    keywords: meta?.keywords.map((item) => item?.text),
   }
-  const jsonld = headers?.jsonld
+  const siteMetaData = getSiteMeta(metaData)
+  const head = {
+    title: meta?.title,
+    link: meta?.link,
+    meta: [...siteMetaData],
+  }
+  const jsonld = meta?.jsonld
 
   return { head, jsonld }
 }
