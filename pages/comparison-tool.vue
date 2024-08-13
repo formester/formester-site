@@ -306,19 +306,19 @@ export default {
         },
         {
           name: 'How often do you update the information?',
-          content: '',
+          content: 'We keep our tool up to date with the latest pricing, features, and user feedback so you get the most current information.',
         },
         {
-          name: ' Is there a cost to use your comparison tool?',
-          content: '',
+          name: 'Is there a cost to use your comparison tool?',
+          content: "No, our tool is completely free for you to use. It's designed to help you make an informed decision without any fees.",
         },
         {
           name: 'Does the tool cover all the features of the pricing plans?',
-          content: '',
+          content: 'No, this tool focuses on comparing the most sought-after features among online form builders. While we strive to cover the essential features that most users look for, it may not include every detail of every pricing plan.\n We prioritize the features that are most commonly considered important by users to provide a clear and meaningful comparison.',
         },
         {
           name: 'How does your tool help me find the right form builder?',
-          content: '',
+          content: 'Our tool lets you compare prices and features of different form builders so you can easily pick the best one for your needs.',
         },
       ],
     }
