@@ -302,32 +302,16 @@
               <li class="mt-2">
                 <div class="socials mt-4">
                   <a
-                    href="https://instagram.com/_formester_?utm_medium=copy_link"
-                    class="mx-1"
+                    href="https://www.reddit.com/r/Formester/"
+                    class="mx-1 my-2 inline-block"
                     target="_blank"
                     ><nuxt-img
-                      src="/social/instagram.svg"
-                      alt="Fomester instagram page"
-                  /></a>
-                  <a
-                    href="https://twitter.com/_Formester_?t=-m1pNwXvxR6KOf9kfPi9lQ&s=09"
-                    class="mx-1"
-                    target="_blank"
-                    ><nuxt-img
-                      src="/social/twitter.svg"
-                      alt="Formester twitter page"
-                  /></a>
-                  <a
-                    href="https://www.facebook.com/formester"
-                    class="mx-1"
-                    target="_blank"
-                    ><nuxt-img
-                      src="/social/facebook.svg"
-                      alt="Formester facebook page"
+                      src="/social/reddit.svg"
+                      alt="Formester reddit community"
                   /></a>
                   <a
                     href="https://www.linkedin.com/company/formester-inc/"
-                    class="mx-1"
+                    class="mx-1 my-2 inline-block"
                     target="_blank"
                     ><nuxt-img
                       src="/social/linkedin.svg"
@@ -335,12 +319,37 @@
                   /></a>
                   <a
                     href="https://www.youtube.com/channel/UCVfBesiZINubCEC9Xu5Z6gQ"
-                    class="mx-1"
+                    class="mx-1 my-2 inline-block"
                     target="_blank"
                     ><nuxt-img
                       src="/social/youtube.svg"
                       alt="Formester youtube page"
                   /></a>
+                  <a
+                    href="https://instagram.com/_formester_?utm_medium=copy_link"
+                    class="mx-1 my-2 inline-block"
+                    target="_blank"
+                    ><nuxt-img
+                      src="/social/instagram.svg"
+                      alt="Fomester instagram page"
+                  /></a>
+                  <a
+                    href="https://twitter.com/_Formester_?t=-m1pNwXvxR6KOf9kfPi9lQ&s=09"
+                    class="mx-1 my-2 inline-block"
+                    target="_blank"
+                    ><nuxt-img
+                      src="/social/twitter.svg"
+                      alt="Formester twitter page"
+                  /></a>
+                  <a
+                    href="https://www.facebook.com/formester"
+                    class="mx-1 my-2 inline-block"
+                    target="_blank"
+                    ><nuxt-img
+                      src="/social/facebook.svg"
+                      alt="Formester facebook page"
+                  /></a>
+                  
                 </div>
               </li>
             </ul>
