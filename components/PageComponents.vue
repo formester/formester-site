@@ -15,27 +15,10 @@ import axios from 'axios'
 
 export default {
   props: {
-    endpoint: String,
-    params: {
-      type: Object,
-      default: () => ({}),
+    components: {
+      type: Array,
+      default: () => [],
     },
-  },
-  data() {
-    return {
-      components: [],
-    }
-  },
-  async fetch() {
-    const {
-      data: { data },
-    } = await axios.get(`${process.env.strapiUrl}/api/${this.endpoint}`, {
-      params: {
-        ...this.params,
-        populate: 'deep',
-      },
-    })
-    this.components = data.components || data[0].components
   },
   methods: {
     getComponent(name) {
