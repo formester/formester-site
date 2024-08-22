@@ -1,8 +1,8 @@
 <template>
   <div>
     <component
-      v-for="component in components"
-      :key="component.id"
+      v-for="(component, idx) in components"
+      :key="`${component.id}-${idx}`"
       :is="getComponent(component.__component)"
       v-bind="component"
     />
