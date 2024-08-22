@@ -1,6 +1,5 @@
+const axios = require('axios')
 export default async () => {
-  const axios = require('axios')
-
   const {
     data: { data },
   } = await axios.get(`https://cms.formester.com/api/blogs?populate=*`)
@@ -10,4 +9,16 @@ export default async () => {
   })
 
   return articles
+}
+
+export const getFeatureRoutes = async (params) => {
+  const {
+    data: { data },
+  } = await axios.get(`https://cms.formester.com/api/features?populate=deep`)
+
+  const features = data.map((item) => {
+    return `/features/${item.slug}`
+  })
+
+  return features
 }

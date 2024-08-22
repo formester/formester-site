@@ -1,4 +1,4 @@
-import getRoutes from './utils/getRoutes'
+import getRoutes, { getFeatureRoutes } from './utils/getRoutes'
 import getSiteMeta from './utils/getSiteMeta'
 
 const axios = require('axios')
@@ -67,7 +67,8 @@ export default {
           return `/templates/categories/${category.slug}`
         })
       const blogs = await getRoutes()
-      return [...blogs, ...templates, ...categories]
+      const features = await getFeatureRoutes()
+      return [...features, ...blogs, ...templates, ...categories]
     },
   },
 
@@ -141,7 +142,8 @@ export default {
           .map((category) => {
             return `/templates/categories/${category.slug}`
           })
-        return [...templatesRoute, ...categoriesRoute]
+        const featureRoutes = await getFeatureRoutes()
+        return [...featureRoutes, ...templatesRoute, ...categoriesRoute]
       } catch (error) {
         return []
       }
