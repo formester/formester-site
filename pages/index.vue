@@ -13,16 +13,6 @@ export default {
     const { head, jsonld, components } = await getStrapiData(endpoint)
     return { head, jsonld, components }
   },
-  head() {
-    return {
-      script: [
-        {
-          src: 'https://identity.netlify.com/v1/netlify-identity-widget.js',
-          defer: true,
-        },
-      ],
-    }
-  },
   jsonld() {
     return this.jsonld
   },

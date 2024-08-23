@@ -80,7 +80,7 @@
             class="d-flex align-items-center justify-content-center timeToRead"
           >
             <ClockIcon color="#4f4f4f" />
-            <span>{{ blogData?.readingStats?.text }}</span>
+            <span>{{ blogData?.readingStats.text }}</span>
           </div>
         </div>
         <div class="sm-text mt-1 article__author-section">
@@ -141,6 +141,7 @@ import CopyLinkIcon from '../../components/icons/copyLink.vue'
 import getSiteMeta from '../../utils/getSiteMeta'
 import axios from 'axios'
 import { parseMarkdown } from '~/utils/parseMarkdown'
+import readingTime from '@/utils/readingTime'
 
 export default {
   components: {
@@ -170,9 +171,7 @@ export default {
       ...blog.attributes,
       coverImg: blog.attributes.coverImg.data.attributes?.url,
       metaImage: blog.attributes.metaImage.map((item) => item.imageURL),
-      readingStats: {
-        text: '3 min read',
-      },
+      readingStats: readingTime(blog.attributes.body),
     }
     const blogBody = await parseMarkdown(blogData?.body)
 
@@ -190,9 +189,7 @@ export default {
       return {
         ...item,
         coverImg: item.coverImg?.url,
-        readingStats: {
-          text: '3 min read',
-        },
+        readingStats: readingTime(item.body),
       }
     })
 
