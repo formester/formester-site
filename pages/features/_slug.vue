@@ -8,7 +8,7 @@ import getStrapiData from '@/utils/getStrapiData'
 
 export default {
   components: { PageComponents },
-  async asyncData({ params }) {
+  async asyncData({ params, error }) {
     const slug = params.slug
     const endpoint = `/features`
     const strapiParams = { 'filters[slug][$eqi]': slug }
@@ -16,6 +16,10 @@ export default {
       endpoint,
       strapiParams
     )
+    if (!components?.length) {
+      error({ statusCode: 404, message: 'Page not found' })
+      return
+    }
     return { slug, head, jsonld, components }
   },
   head() {

@@ -11,8 +11,13 @@ export default async (endpoint, params = {}) => {
       populate: 'deep',
     },
   })
-  const components = data.components || data[0].components
-  const meta = data.meta || data[0].meta
+  const components = data?.components || data[0]?.components
+  const meta = data?.meta || data[0]?.meta
+  let head = {}
+  let jsonld = {}
+  if (!components || !meta) {
+    return { head, jsonld, components }
+  }
 
   const metaData = {
     url: meta?.url,
@@ -24,12 +29,12 @@ export default async (endpoint, params = {}) => {
     keywords: meta?.keywords.map((item) => item?.text),
   }
   const siteMetaData = getSiteMeta(metaData)
-  const head = {
+  head = {
     title: meta?.title,
     link: meta?.link,
     meta: [...siteMetaData],
   }
-  const jsonld = meta?.jsonld
+  jsonld = meta?.jsonld
 
   return { head, jsonld, components }
 }
