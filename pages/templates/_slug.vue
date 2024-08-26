@@ -67,7 +67,10 @@ export default {
     MoreTemplates,
     Faq,
   },
-  async asyncData({ $axios, params }) {
+  async asyncData({ $axios, params, payload }) {
+    if (payload) {
+      return payload
+    }
     let { data: template } = await $axios.get(
       `https://app.formester.com/templates/${params.slug}.json`
     )

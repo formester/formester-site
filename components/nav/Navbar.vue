@@ -115,29 +115,32 @@ export default {
       dropdownItems: [],
     }
   },
-  async fetch() {
-    const {
-      data: { data },
-    } = await axios.get(`${process.env.strapiUrl}/api/features`, {
-      params: {
-        populate: 'deep',
-        'sort[0]': 'id',
-      },
-    })
-    this.dropdownItems = data.map((item) => ({
-      id: item.id,
-      title: item.navTitle,
-      description: item.navDescription,
-      imageUrl: item.navIcon?.imageUrl || item.navIcon?.image.url,
-      imageAlt: item.navIcon.imageAlt,
-      slug: item.slug,
-    }))
+  mounted() {
+    this.getFeatures()
   },
   methods: {
     collapseNav() {
       if (window.screen.width >= 992) return
       const bsCollapse = new bootstrap.Collapse(this.$refs.siteNav)
       bsCollapse.toggle()
+    },
+    async getFeatures() {
+      const {
+        data: { data },
+      } = await axios.get(`${process.env.strapiUrl}/api/features`, {
+        params: {
+          populate: 'deep',
+          'sort[0]': 'id',
+        },
+      })
+      this.dropdownItems = data.map((item) => ({
+        id: item.id,
+        title: item.navTitle,
+        description: item.navDescription,
+        imageUrl: item.navIcon?.imageUrl || item.navIcon?.image.url,
+        imageAlt: item.navIcon.imageAlt,
+        slug: item.slug,
+      }))
     },
   },
 }

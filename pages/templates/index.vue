@@ -13,7 +13,10 @@ import Templates from '@/components/template/Templates.vue'
 
 export default {
   components: { Templates },
-  async asyncData({ $axios }) {
+  async asyncData({ $axios, payload }) {
+    if (payload) {
+      return payload
+    }
     let { data: templates } = await $axios.get(
       'https://app.formester.com/templates.json'
     )

@@ -73,7 +73,7 @@ export default {
   props: {
     activeCategory: Object,
     templates: Array,
-    templateCategories: Array,
+    templateCategories: Object,
   },
   data() {
     return {
