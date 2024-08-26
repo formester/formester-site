@@ -11,7 +11,7 @@ export default async () => {
   return articles
 }
 
-export const getFeatureRoutes = async (params) => {
+export const getFeatureRoutes = async () => {
   const {
     data: { data },
   } = await axios.get(`https://cms.formester.com/api/features?populate=deep`)
