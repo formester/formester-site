@@ -2,7 +2,7 @@
 import axios from 'axios'
 import getSiteMeta from '@/utils/getSiteMeta'
 
-export default async (endpoint, params) => {
+export default async (endpoint, params = {}) => {
   const {
     data: { data },
   } = await axios.get(`${process.env.strapiUrl}/api${endpoint}`, {
@@ -11,7 +11,8 @@ export default async (endpoint, params) => {
       populate: 'deep',
     },
   })
-  const meta = data[0].meta
+  const components = data.components || data[0].components
+  const meta = data.meta || data[0].meta
 
   const metaData = {
     url: meta?.url,
@@ -30,5 +31,5 @@ export default async (endpoint, params) => {
   }
   const jsonld = meta?.jsonld
 
-  return { head, jsonld }
+  return { head, jsonld, components }
 }

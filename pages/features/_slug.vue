@@ -1,13 +1,10 @@
 <template>
-  <PageComponents
-    endpoint="features"
-    :params="{ 'filters[slug][$eqi]': slug }"
-  />
+  <PageComponents :components="components" />
 </template>
 
 <script>
 import PageComponents from '@/components/PageComponents.vue'
-import getSiteHeaders from '@/utils/getSiteHeaders'
+import getStrapiData from '@/utils/getStrapiData'
 
 export default {
   components: { PageComponents },
@@ -15,8 +12,11 @@ export default {
     const slug = params.slug
     const endpoint = `/features`
     const strapiParams = { 'filters[slug][$eqi]': slug }
-    const { head, jsonld } = await getSiteHeaders(endpoint, strapiParams)
-    return { slug, head, jsonld }
+    const { head, jsonld, components } = await getStrapiData(
+      endpoint,
+      strapiParams
+    )
+    return { slug, head, jsonld, components }
   },
   head() {
     return this.head
