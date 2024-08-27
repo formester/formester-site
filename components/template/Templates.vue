@@ -28,6 +28,7 @@
           :class="{ 'd-flex align-items-center': !showFullDescription }"
         >
           <p
+            ref="description"
             class="content-description mt-0 mb-1"
             v-html="activeCategory.description"
           />
