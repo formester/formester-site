@@ -15,6 +15,7 @@ import getTemplatesAndCategories from '@/utils/getTemplatesAndCategories'
 export default {
   components: { Templates },
   async asyncData({ payload }) {
+    // payload is used during static site generation and api call during developement
     if (payload) {
       return payload
     }
