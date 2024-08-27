@@ -2,11 +2,11 @@
   <div v-if="selectedFormBuildersDetails.length" class="my-5 pt-5">
     <!-- desktop -->
     <div class="d-none d-lg-block w-100 my-5">
-      <div class="d-flex formbuilder__logo-container">
+      <div class="d-flex formbuilder__logo-container pt-2">
         <div
           v-for="fb in selectedFormBuildersDetails"
           :key="fb.id"
-          class="w-100"
+          class="w-100 px-2"
         >
           <div
             class="formbuilder__logo-wrapper d-flex align-items-center justify-content-center text-center"
@@ -177,12 +177,23 @@ export default {
   computed: {
     groupedFeatures() {
       const grouped = {
-        'Usage Limits': null,
-        'Form Creation': null,
+        'Usage limits': null,
+        'Form Fields & Creation': null,
+        'Quiz Features': null,
+        Branding: null,
         Customization: null,
-        Payments: null,
-        'Form Analytics & Automation': null,
-        'Sharing & Embeding': null,
+        'Publishing & Sharing': null,
+        'Workflow Automation': null,
+        'Payment Integrations': null,
+        'CRM Integrations': null,
+        'Email Marketing Integrations': null,
+        'Collaboration Tool Integrations': null,
+        'Ecommerce Integrations': null,
+        'Reporting & Analytics': null,
+        'Set Response & Time Limits': null,
+        'Email Notification': null,
+        'AI Capabilities': null,
+        'Spam Protection': null,
         'Security & Compliance': null,
         Support: null,
       }
@@ -246,6 +257,7 @@ export default {
 }
 
 .formbuilder__logo {
+  transform: scale(0.8);
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
@@ -267,7 +279,11 @@ export default {
 }
 
 .formbuilder__logo-container {
-  margin-left: 354px;
+  position: sticky;
+  top: 86px;
+  background: white;
+  padding-left: 354px;
+  z-index: 100;
 }
 
 .formbuilder__select-plan {
@@ -284,6 +300,12 @@ export default {
   .mobile__formbuilder-details-wrapper {
     gap: 48px;
     overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .formbuilder__logo {
+    transform: scale(1);
   }
 }
 </style>
