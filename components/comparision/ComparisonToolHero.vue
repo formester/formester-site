@@ -6,18 +6,18 @@
       <div
         class="hero__content d-flex flex-column align-items-center my-auto text-center px-3"
       >
-        <span class="hero__subtitle">Comparison Tool</span>
+        <span class="hero__subtitle">30+ Form Builders Compared</span>
         <h1 class="hero__heading">
-          Find the Best Online Form Builder for All Your Needs
+          Compare Top Online Form Builders
         </h1>
         <p class="hero__description mt-3">
-          Compare Pricing and Features of the Best Form Builders Side-by-Side.
+          Pricing and Features of the Top Form Builders Side-by-Side
         </p>
-        <a
+        <!-- <a
           href="https://app.formester.com/users/sign_up"
           class="btn button hero__button mt-4 mb-4 mb-lg-0"
           >Sign Up For Free</a
-        >
+        > -->
       </div>
       <div>
         <transition name="slide-in-left">

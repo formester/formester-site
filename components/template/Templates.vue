@@ -33,6 +33,7 @@
             v-html="activeCategory.description"
           />
           <button
+            v-if="showHandleButton"
             class="content-description-handle-button text-nowrap"
             @click="toggleDescription"
           >
@@ -81,7 +82,18 @@ export default {
     return {
       searchTerm: '',
       showFullDescription: false,
+      showHandleButton: false,
     }
+  },
+  watch: {
+    activeCategory: {
+      immediate: true,
+      handler() {
+        this.$nextTick(() => {
+          this.checkDescriptionOverflow()
+        })
+      },
+    },
   },
   methods: {
     handleSearch(searchTerm) {
@@ -89,6 +101,13 @@ export default {
     },
     toggleDescription() {
       this.showFullDescription = !this.showFullDescription
+    },
+    checkDescriptionOverflow() {
+      const description = this.$refs.description
+      if (description) {
+        this.showHandleButton =
+          description.scrollHeight > description.clientHeight
+      }
     },
   },
   computed: {

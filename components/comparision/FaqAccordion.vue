@@ -1,31 +1,32 @@
 <template>
-  <div class="formbuilder__features accordion accordion-flush">
-    <div
-      v-for="(category, index) in groupedFeatures"
-      :key="generateSlug(category.name)"
-      class="category__group accordion-item"
-    >
-      <h3 class="category__name accordion-header" :id="category.name">
+  <div
+    class="formbuilder__features accordion accordion-flush"
+    :class="{ border_top_1: index !== 0 }"
+  >
+    <div class="category__group accordion-item">
+      <h3 class="category__name accordion-header">
         <button
           class="accordion-button collapsed"
           type="button"
           data-bs-toggle="collapse"
-          :data-bs-target="'#' + generateSlug(category.name)"
+          :data-bs-target="'#' + generateSlug(name)"
           aria-expanded="false"
-          :aria-controls="generateSlug(category.name)"
+          :aria-controls="generateSlug(name)"
         >
-          {{ category.name }}
+          {{ name }}
         </button>
       </h3>
       <div
-        :id="generateSlug(category.name)"
+        :id="generateSlug(name)"
         class="accordion-collapse collapse"
         :class="{ show: index === 0 }"
-        :aria-labelledby="generateSlug(category.name)"
+        :aria-labelledby="generateSlug(name)"
         data-bs-parent="#accordionFlushExample"
       >
-        <div class="accordion-body d-flex">
-          <slot :category-features="category.features" />
+        <div class="accordion-body">
+          <p v-for="paragraph in content.split('\n')" :key="paragraph">
+            {{ paragraph }}
+          </p>
         </div>
       </div>
     </div>
@@ -33,17 +34,19 @@
 </template>
 
 <script>
-import FormBuilderFeatureList from '@/components/comparision/FormBuilderFeatureList.vue'
-import FormBuilderDetails from '@/components/comparision/FormBuilderDetails.vue'
-
 export default {
-  components: {
-    FormBuilderFeatureList,
-    FormBuilderDetails,
-  },
+  name: 'FaqAccordion',
   props: {
-    groupedFeatures: {
-      type: Array,
+    index: {
+      type: Number,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    content: {
+      type: String,
       required: true,
     },
   },
@@ -59,22 +62,34 @@ export default {
 </script>
 
 <style scoped>
-.formbuilder__features {
-  border: 1px solid #eaecf0;
+.border_top_1 {
+  border-top: 1px solid var(--Gray-200, #eaecf0);
 }
-
+.accordion {
+  padding: 0;
+  padding-top: 24px;
+  padding-bottom: 32px;
+}
 .category__name {
-  font-size: 16px;
-  line-height: 24px;
+  color: var(--clr-text-primary);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
 }
 
 .category__name button {
-  background-color: #f9fafb;
+  background-color: transparent;
   font-weight: 500;
+  padding: 0;
 }
 
 .accordion-body {
+  color: var(--clr-text-secondary);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
   padding: 0;
+  padding-top: 8px;
 }
 
 .accordion-button:not(.collapsed) {
@@ -90,11 +105,14 @@ export default {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
 }
 
+.accordion-body p:last-child {
+  margin: 0;
+}
+
 @media screen and (max-width: 992px) {
   .accordion-button {
     font-size: 14px;
     line-height: 20px;
-    padding: 16px 12px;
   }
 }
 </style>

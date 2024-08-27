@@ -8,9 +8,12 @@
         class="d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start mt-xl-0 mt-md-5 hero__info_container"
       >
         <h1 class="section__heading">{{ template.name }}</h1>
-        <p class="hero__subheading mt-3">
-          {{ template.description }}
+
+        <!-- New paragraph for each line break -->
+        <p v-for="(line, index) in template.description.split('\n')" :key="index" class="hero__subheading mt-3">
+          {{ line }}
         </p>
+
         <div class="btns-container d-flex align-items-center mt-2">
           <button class="btn btn-use_template" @click="redirectTo">
             Use Template
@@ -167,7 +170,7 @@ export default {
       {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        ...(this.faqSchema ? { mainEntitty: this.faqSchema } : {}),
+        ...(this.faqsSchema ? { mainEntitty: this.faqsSchema } : {}),
       },
     ]
   },
