@@ -3,7 +3,7 @@
     <div class="footer__container text-center">
       <NuxtLink to="/">
         <div class="footer__logo">
-          <nuxt-img src="/logo-light.svg" alt="Formester" />
+          <img src="~/assets/images/logo-light.svg" alt="Formester" />
         </div>
       </NuxtLink>
       <section class="mt-5 container">

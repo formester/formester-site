@@ -20,7 +20,7 @@
           @click="resetSearchInput"
           :class="{ 'd-none': searchTerm === '' }"
         >
-          <nuxt-img src="/templates/cross.png" alt="Clear" />
+          <img src="~/assets/images/templates/cross.png" alt="Clear" />
         </div>
       </div>
     </div>
