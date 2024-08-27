@@ -72,6 +72,7 @@ export default {
     Faq,
   },
   async asyncData({ params, payload }) {
+    // payload is used during static site generation and api call during developement
     if (payload) {
       return payload
     }
