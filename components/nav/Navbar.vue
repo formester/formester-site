@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg sticky-top bg-white">
     <div class="container">
       <NuxtLink class="navbar-brand" to="/">
-        <nuxt-img src="/logo.svg" alt="Formester" />
+        <img src="~/assets/images/logo.svg" alt="Formester" />
       </NuxtLink>
       <button
         class="navbar-toggler"
@@ -13,7 +13,7 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <nuxt-img src="/toggle.svg" alt="Nav-menu-button" />
+        <img src="~/assets/images/toggle.svg" alt="Nav-menu-button" />
       </button>
       <div
         class="collapse navbar-collapse mt-2"

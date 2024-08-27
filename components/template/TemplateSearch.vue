@@ -6,7 +6,7 @@
         class="search-input-wrapper position-relative ps-1 d-flex gap-4 align-items-center"
       >
         <div class="search-icon">
-          <nuxt-img src="/templates/search.svg" alt="Search" />
+          <img src="~/assets/images/templates/search.svg" alt="Search" />
         </div>
         <input
           type="text"

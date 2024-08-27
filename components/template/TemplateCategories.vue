@@ -3,16 +3,16 @@
     <!-- Category bar for small devices to show hide categories -->
     <div class="category-bar" @click="showCategories = !showCategories">
       <h2 class="our-template-heading">Our Templates</h2>
-      <nuxt-img
+      <img
         v-show="!showCategories"
         class="category-menu-btn pointer"
-        src="/templates/right-arrow.png"
+        src="~/assets/images/templates/right-arrow.png"
         alt="open-category"
       />
-      <nuxt-img
+      <img
         v-show="showCategories"
         class="category-menu-btn pointer"
-        src="/templates/cross.png"
+        src="~/assets/images/templates/cross.png"
         alt="close-category"
       />
     </div>
@@ -43,10 +43,10 @@
         >
           <h2 class="category-heading pointer">{{ categoryType }}</h2>
           <div>
-            <nuxt-img
+            <img
               class="collapse-arrow-btn pointer"
               :class="{ 'rotate-arrow': isExpanded[categoryType] }"
-              src="templates/collapseDown-arrow.svg"
+              src="~/assets/images/templates/collapseDown-arrow.svg"
               alt="category-arrow-button"
             />
           </div>
