@@ -60,6 +60,7 @@ import PreviewModal from '../../components/template/PreviewModal.vue'
 import MoreTemplates from '../../components/template/MoreTemplates.vue'
 import Faq from '../../components/template/Faq.vue'
 import isEmpty from 'lodash/isEmpty'
+import getTemplatesAndCategories from '@/utils/getTemplatesAndCategories'
 
 export default {
   components: {
@@ -67,25 +68,12 @@ export default {
     MoreTemplates,
     Faq,
   },
-  async asyncData({ $axios, params, payload }) {
+  async asyncData({ params, payload }) {
     if (payload) {
       return payload
     }
-    let { data: template } = await $axios.get(
-      `https://app.formester.com/templates/${params.slug}.json`
-    )
-
-    const { data: categories } = await $axios.get(
-      'https://app.formester.com/template_categories.json'
-    )
-
-    const dummyDescription =
-      'Check out this pre-designed template and start customising with just a single click. Personalise with your branding, incorporate electronic signatures for security and add multiple collaborators to make changes simultaneously. Use this template and start getting data driven actionable insights with robust analytics.'
-
-    template = {
-      ...template,
-      description: template.description || dummyDescription,
-    }
+    const { templates, categories } = await getTemplatesAndCategories()
+    const template = templates.find((template)=>template.slug === params.slug)
     return { template, categories }
   },
   data() {

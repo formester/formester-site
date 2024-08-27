@@ -35,5 +35,5 @@ export default async () => {
         categories,
       },
     }))
-  return { templateRoutes, categorieRoutes }
+  return { templateRoutes, categorieRoutes, templates, categories }
 }

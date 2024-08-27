@@ -80,7 +80,7 @@
             class="d-flex align-items-center justify-content-center timeToRead"
           >
             <ClockIcon color="#4f4f4f" />
-            <span>{{ blogData?.readingStats.text }}</span>
+            <span>{{ blogData?.readingStats?.text }}</span>
           </div>
         </div>
         <div class="sm-text mt-1 article__author-section">
