@@ -45,7 +45,7 @@ import SeamlessIntegration from '@/components/hr-solution/SeamlessIntegration.vu
 import BlogCard from '@/components/blog/BlogCard.vue'
 
 import axios from 'axios'
-import readingTime from 'reading-time'
+import readingTime from '@/utils/readingTime'
 
 export default {
   components: {

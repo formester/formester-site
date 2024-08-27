@@ -1,5 +1,6 @@
 import getRoutes, { getFeatureRoutes } from './utils/getRoutes'
 import getSiteMeta from './utils/getSiteMeta'
+import getTemplatesAndCategories from './utils/getTemplatesAndCategories'
 
 const axios = require('axios')
 const meta = getSiteMeta()
@@ -124,26 +125,14 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-  // For catching 404 pages
+  //   For catching 404 pages
   generate: {
     routes: async () => {
       try {
-        let { data } = await axios.get(
-          'https://app.formester.com/templates.json'
-        )
-        let templatesRoute = data.map((template) => {
-          return `/templates/${template.slug}`
-        })
-        let { data: response } = await axios.get(
-          'https://app.formester.com/template_categories.json'
-        )
-        let categoriesRoute = Object.values(response)
-          .flat()
-          .map((category) => {
-            return `/templates/categories/${category.slug}`
-          })
+        const { templateRoutes, categorieRoutes } =
+          await getTemplatesAndCategories()
         const featureRoutes = await getFeatureRoutes()
-        return [...featureRoutes, ...templatesRoute, ...categoriesRoute]
+        return [...featureRoutes, ...templateRoutes, ...categorieRoutes]
       } catch (error) {
         return []
       }

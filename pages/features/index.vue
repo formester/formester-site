@@ -146,7 +146,7 @@ export default {
               img: 'insight',
             },
           ],
-          link: 'powerful-analytics',
+          link: 'form-analytics',
         },
         {
           heading: 'Conditional Logic',

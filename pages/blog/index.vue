@@ -24,7 +24,7 @@ import BlogFeatured from '../../components/blog/BlogFeatured.vue'
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
 import axios from 'axios'
-import readingTime from 'reading-time'
+import readingTime from '@/utils/readingTime'
 
 export default {
   components: {

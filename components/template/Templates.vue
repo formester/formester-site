@@ -29,7 +29,7 @@
         >
           <p
             ref="description"
-            class="content-description mt-0 mb-0"
+            class="content-description mt-0 mb-1"
             v-html="activeCategory.description"
           />
           <button
@@ -76,7 +76,7 @@ export default {
   props: {
     activeCategory: Object,
     templates: Array,
-    templateCategories: Array,
+    templateCategories: Object,
   },
   data() {
     return {

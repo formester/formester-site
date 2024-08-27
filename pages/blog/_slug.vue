@@ -141,7 +141,7 @@ import CopyLinkIcon from '../../components/icons/copyLink.vue'
 import getSiteMeta from '../../utils/getSiteMeta'
 import axios from 'axios'
 import { parseMarkdown } from '~/utils/parseMarkdown'
-import readingTime from 'reading-time'
+import readingTime from '@/utils/readingTime'
 
 export default {
   components: {
@@ -154,7 +154,7 @@ export default {
   content: {
     liveEdit: false,
   },
-  async asyncData({ params }) {
+  async asyncData({ params, error }) {
     const response = await axios.get(`${process.env.strapiUrl}/api/blogs`, {
       params: {
         'filters[slug][$eq]': params.slug,
@@ -162,10 +162,14 @@ export default {
       },
     })
     const blog = response.data.data[0]
+    if (!blog?.id) {
+      error({ statusCode: 404, message: 'Page not found' })
+      return
+    }
     const blogData = {
       id: blog.id,
       ...blog.attributes,
-      coverImg: blog.attributes.coverImg.data.attributes.url,
+      coverImg: blog.attributes.coverImg.data.attributes?.url,
       metaImage: blog.attributes.metaImage.map((item) => item.imageURL),
       readingStats: readingTime(blog.attributes.body),
     }
@@ -184,7 +188,7 @@ export default {
     let relatedArticles = data.map((item) => {
       return {
         ...item,
-        coverImg: item.coverImg.url,
+        coverImg: item.coverImg?.url,
         readingStats: readingTime(item.body),
       }
     })
