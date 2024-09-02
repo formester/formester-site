@@ -1,6 +1,6 @@
 <template>
-  <div class="container py-3 px-2">
-    <div class="row">
+  <div class="container pt-5 pb-3 px-2">
+    <div class="row pt-4">
       <SectionTitle :heading="title" />
       <p class="hero__subheading" v-if="description">
         {{ description }}
@@ -11,7 +11,7 @@
             class="card p-3 d-flex align-items-center justify-items-center text-center align-items-md-start text-md-start"
           >
             <nuxt-img
-              :src="item.cardImage.image?.url || item.cardImage.imageUrl "
+              :src="item.cardImage.image?.url || item.cardImage.imageUrl"
               class="img-fluid"
               style="width: 69px"
               :alt="item.cardImage.imageAlt"
@@ -46,6 +46,10 @@ export default {
 </script>
 
 <style scoped>
+.hero__subheading {
+  text-align: center;
+}
+
 .templates {
   width: 100%;
   padding: 1.5rem;
@@ -61,8 +65,8 @@ export default {
 }
 
 .card {
-    border-radius: 18px;
-    border: none;
+  border-radius: 18px;
+  border: none;
 }
 
 .no__sapm-image {
