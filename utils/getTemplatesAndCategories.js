@@ -1,8 +1,14 @@
 const axios = require('axios')
 
-export default async () => {
+export default async (params = {}) => {
   let { data: templates } = await axios.get(
-    'https://app.formester.com/templates.json?with_details=true'
+    'https://app.formester.com/templates.json',
+    {
+      params: {
+        ...params,
+        with_details: true,
+      },
+    }
   )
 
   const { data: categories } = await axios.get(
