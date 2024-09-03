@@ -19,7 +19,10 @@ export default {
       activeCategory: null,
     }
   },
-  async asyncData({ params }) {
+  async asyncData({ params, payload }) {
+    if (payload) {
+      return payload
+    }
     const { templates, categories } = await getTemplatesAndCategories({
       category_slug: params.slug,
     })
