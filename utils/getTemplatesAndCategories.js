@@ -2,7 +2,7 @@ const axios = require('axios')
 
 export default async (params = {}) => {
   let { data: templates } = await axios.get(
-    'https://app.formester.com/templates.json',
+    `${process.env.appUrl}/templates.json`,
     {
       params: {
         ...params,
@@ -12,7 +12,7 @@ export default async (params = {}) => {
   )
 
   const { data: categories } = await axios.get(
-    'https://app.formester.com/template_categories.json'
+    `${process.env.appUrl}/template_categories.json`
   )
 
   const dummyDescription =
@@ -32,14 +32,17 @@ export default async (params = {}) => {
     payload: { templates, categories },
   })
 
-  const categorieRoutes = Object.values(categories)
-    .flat()
-    .map((category) => ({
-      route: `/templates/categories/${category.slug}`,
-      payload: {
-        templates,
-        categories,
-      },
-    }))
+  const { data: templatesGroupedByCategory } = await axios.get(
+    `${process.env.appUrl}/template_categories/grouped_by_category.json`
+  )
+
+  const categorieRoutes = templatesGroupedByCategory.map((item) => ({
+    route: `/templates/categories/${item.categorySlug}`,
+    payload: {
+      templates: item.templates,
+      categories,
+    },
+  }))
+
   return { templateRoutes, categorieRoutes, templates, categories }
 }
