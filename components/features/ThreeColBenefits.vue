@@ -8,7 +8,7 @@
         </p>
       </div>
       <div
-        class="d-flex flex-column flex-md-row justify-content-between mt-md-5"
+        class="d-flex flex-column flex-md-row justify-content-between mt-md-5 flex-wrap"
       >
         <div
           v-for="item in itemList"
