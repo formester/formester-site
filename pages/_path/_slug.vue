@@ -11,7 +11,7 @@ export default {
   async asyncData({ params, error }) {
     const { path, slug } = params
     const endpoint = `/pages`
-    const filters = slug ? `${path}/${slug}/` : `${path}/`
+    const filters = slug ? `${path}/${slug}` : `${path}`
     const strapiParams = { 'filters[slug][$eqi]': filters }
     const { head, jsonld, components } = await getStrapiData(
       endpoint,
