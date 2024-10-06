@@ -8,6 +8,7 @@
       <div class="col-md-12" v-for="(item, index) in itemList" :key="item.id">
         <div class="card" :class="{ 'reverse-order': isOdd(index) }">
           <div class="card-content col-12 col-lg-5">
+            <p class="card-step-index" v-if="steps">STEP {{ index + 1 }}</p>
             <h3 class="card-title">{{ item.title }}</h3>
             <p class="card-description">{{ item.description }}</p>
           </div>
@@ -42,6 +43,10 @@ export default {
       type: Array,
       required: true,
     },
+    steps: {
+      type: Boolean,
+      default: false,
+    },
   },
   methods: {
     isOdd(index) {
@@ -67,6 +72,14 @@ h2 {
 .card.reverse-order {
   flex-direction: row-reverse;
 }
+.card-step-index {
+  color: var(--clr-primary);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  margin: 0;
+}
+
 .card-title {
   color: var(--neutral-900, #171717);
   font-size: 28px;
@@ -84,7 +97,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: 10px;
   align-self: stretch;
   height: min-content;
   margin: auto;

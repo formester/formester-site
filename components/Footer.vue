@@ -79,6 +79,11 @@
                   >Quiz Maker</NuxtLink
                 >
               </li>
+              <li class="mt-2">
+                <NuxtLink to="/ai-form-builder/" class="footer__link"
+                  >AI Form Generator</NuxtLink
+                >
+              </li>
             </ul>
           </div>
           <!--Grid column-->
@@ -349,7 +354,7 @@
                       src="/social/facebook.svg"
                       alt="Formester facebook page"
                   /></a>
-                  
+
                 </div>
               </li>
             </ul>

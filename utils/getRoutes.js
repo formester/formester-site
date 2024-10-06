@@ -22,3 +22,15 @@ export const getFeatureRoutes = async () => {
 
   return features
 }
+
+export const getPageRoutes = async () => {
+    const {
+      data: { data },
+    } = await axios.get(`https://cms.formester.com/api/pages?populate=deep`)
+
+    const pages = data.map((item) => {
+      return `/${item.slug}`
+    })
+
+    return pages
+  }

@@ -1,4 +1,4 @@
-import getRoutes, { getFeatureRoutes } from './utils/getRoutes'
+import getRoutes, { getFeatureRoutes, getPageRoutes } from './utils/getRoutes'
 import getSiteMeta from './utils/getSiteMeta'
 import getTemplatesAndCategories from './utils/getTemplatesAndCategories'
 
@@ -69,7 +69,9 @@ export default {
         })
       const blogs = await getRoutes()
       const features = await getFeatureRoutes()
-      return [...features, ...blogs, ...templates, ...categories]
+      const pages = await getPageRoutes()
+      const sitemap = [...pages, ...features, ...blogs, ...templates, ...categories]
+      return sitemap;
     },
   },
 
@@ -132,7 +134,8 @@ export default {
         const { templateRoutes, categorieRoutes } =
           await getTemplatesAndCategories()
         const featureRoutes = await getFeatureRoutes()
-        return [...featureRoutes, ...templateRoutes, ...categorieRoutes]
+        const pageRoutes = await getPageRoutes()
+        return [...pageRoutes, ...featureRoutes, ...templateRoutes, ...categorieRoutes]
       } catch (error) {
         return []
       }
