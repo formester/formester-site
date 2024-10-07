@@ -148,7 +148,7 @@ export default {
 .cta-button {
   background-color: var(--clr-primary);
   font-size: var(--ft-md-btn);
-  padding: 12px 22px;
+  padding: 12px 24px;
   border-radius: 8px;
   color: white;
   font-weight: 700;
@@ -161,7 +161,7 @@ export default {
 .cta-button__invert {
   background-color: var(--clr-primary-light);
   font-size: var(--ft-md-btn);
-  padding: 12px 22px;
+  padding: 12px 24px;
   border-radius: 8px;
   color: var(--clr-primary);
   font-weight: 700;

@@ -97,7 +97,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
+  gap: 8px;
   align-self: stretch;
   height: min-content;
   margin: auto;
