@@ -102,7 +102,7 @@ export default {
           img: 'notion.png',
         },
         {
-          name: 'sureTRIGGERS',
+          name: 'SureTriggers',
           desc: 'Automate Your Workflow & Streamline Your Business Processes',
           img: 'suretriggers.png'
         }
