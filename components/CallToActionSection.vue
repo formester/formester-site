@@ -9,7 +9,7 @@
             <h2 class="section__heading">
               <span v-if="content.heading">{{ content.heading }}</span>
               <span v-else-if="title.length">
-                <span 
+                <span
                   v-for="item in title"
                   :key="item.id"
                   :class="{ highlight__text: item.highlight }"
@@ -21,7 +21,13 @@
                 Create your first form for <span class="hglt">free</span>
               </span>
             </h2>
-            <h2 class="section__subtitle mt-3">
+            <h2
+              class="section__heading highlight__text"
+              v-if="ctaValue.type !== 'default'"
+            >
+              {{ description }}
+            </h2>
+            <h2 class="section__subtitle mt-3" v-else>
               <span class="hglt">
                 {{
                   content.subHeading ||
@@ -142,7 +148,7 @@ export default {
 .cta-button {
   background-color: var(--clr-primary);
   font-size: var(--ft-md-btn);
-  padding: 1em 2em;
+  padding: 12px 24px;
   border-radius: 8px;
   color: white;
   font-weight: 700;
@@ -155,7 +161,7 @@ export default {
 .cta-button__invert {
   background-color: var(--clr-primary-light);
   font-size: var(--ft-md-btn);
-  padding: 1em 2em;
+  padding: 12px 24px;
   border-radius: 8px;
   color: var(--clr-primary);
   font-weight: 700;

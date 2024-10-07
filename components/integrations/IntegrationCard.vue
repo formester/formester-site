@@ -22,6 +22,10 @@ export default {
     0px 5.16104px 8.21553px rgba(55, 0, 108, 0.0157037);
   border-radius: 0.5em;
 }
+.img__box img{
+    height: 60px;
+    width: 60px;
+}
 .app__name {
   font-size: 1.25rem;
   font-weight: 600;

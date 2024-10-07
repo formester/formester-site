@@ -101,6 +101,11 @@ export default {
           desc: 'Create, collaborate, and share in one place.',
           img: 'notion.png',
         },
+        {
+          name: 'sureTRIGGERS',
+          desc: 'Automate Your Workflow & Streamline Your Business Processes',
+          img: 'suretriggers.png'
+        }
       ],
     }
   },
