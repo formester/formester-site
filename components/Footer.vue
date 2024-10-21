@@ -80,8 +80,23 @@
                 >
               </li>
               <li class="mt-2">
-                <NuxtLink to="/ai-form-builder/" class="footer__link"
+                <NuxtLink to="/ai-form-generator/" class="footer__link"
                   >AI Form Generator</NuxtLink
+                >
+              </li>
+              <li class="mt-2">
+                <NuxtLink to="/poll-maker/" class="footer__link"
+                  >Poll Maker</NuxtLink
+                >
+              </li>
+              <li class="mt-2">
+                <NuxtLink to="/online-survey-maker/" class="footer__link"
+                  >Survey Maker</NuxtLink
+                >
+              </li>
+              <li class="mt-2">
+                <NuxtLink to="/questionnaire-maker/" class="footer__link"
+                  >Questionnaire Maker</NuxtLink
                 >
               </li>
             </ul>
@@ -172,6 +187,75 @@
               <li class="mt-2">
                 <NuxtLink to="/features/offline-forms/" class="footer__link">
                   Offline Forms
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
+                <NuxtLink
+                  to="/features/partial-submissions/"
+                  class="footer__link"
+                >
+                  Partial Submissions
+                </NuxtLink>
+              </li>
+
+              <li class="mt-2">
+                <NuxtLink
+                  to="/features/multi-language-form-translations/"
+                  class="footer__link"
+                >
+                  Multilingual Forms
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
+                <NuxtLink
+                  to="/features/export-form-submission-pdf/"
+                  class="footer__link"
+                >
+                  PDF Export
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
+                <NuxtLink to="/features/form-limiter/" class="footer__link">
+                  Form Limiter
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
+                <NuxtLink
+                  to="/features/qr-code-generator/"
+                  class="footer__link"
+                >
+                  QR Code Generator
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
+                <NuxtLink
+                  to="/features/save-and-continue/"
+                  class="footer__link"
+                >
+                  Auto Save and Continue
+                </NuxtLink>
+              </li>
+
+              <li class="mt-2">
+                <NuxtLink
+                  to="/features/file-upload-forms/"
+                  class="footer__link"
+                >
+                  File Upload
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
+                <NuxtLink
+                  to="/features/drag-and-drop-form-builder/"
+                  class="footer__link"
+                >
+                  Drag and Drop Interface
+                </NuxtLink>
+              </li>
+
+              <li class="mt-2">
+                <NuxtLink to="/features/embed-forms/" class="footer__link">
+                  Embeding Forms
                 </NuxtLink>
               </li>
             </ul>
@@ -354,7 +438,6 @@
                       src="/social/facebook.svg"
                       alt="Formester facebook page"
                   /></a>
-
                 </div>
               </li>
             </ul>
