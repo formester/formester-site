@@ -85,6 +85,16 @@
                 >
               </li>
               <li class="mt-2">
+                <NuxtLink to="/ai-quiz-maker/" class="footer__link"
+                  >AI Quiz Maker</NuxtLink
+                >
+              </li>
+              <li class="mt-2">
+                <NuxtLink to="/build-conditional-logic-forms-with-ai/" class="footer__link"
+                  >AI Conditional Logic Forms</NuxtLink
+                >
+              </li>
+              <li class="mt-2">
                 <NuxtLink to="/poll-maker/" class="footer__link"
                   >Poll Maker</NuxtLink
                 >
