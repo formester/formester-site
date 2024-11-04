@@ -84,7 +84,7 @@
                 target="_blank"
                 :href="
                   content.btnSecondaryLink ||
-                  'https://app.zencal.io/u/ankit/formester'
+                  'https://calendar.app.google/So3CCei31oYjhoM47'
                 "
                 class="btn button cta-button__invert mx-2"
               >
