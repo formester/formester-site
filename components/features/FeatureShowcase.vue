@@ -19,9 +19,20 @@
             :class="{ 'justify-content-lg-end  pe-xxl-4': !isOdd(index) }"
           >
             <nuxt-img
+              v-if="
+                !isGif(item.cardImage.image?.url || item.cardImage.imageUrl)
+              "
               :src="item.cardImage.image?.url || item.cardImage.imageUrl"
               class="img-fluid"
               :alt="item.cardImage.imageAlt"
+              :modifiers="{ animated: true }"
+            />
+            <img
+              v-else
+              :src="item.cardImage.image?.url || item.cardImage.imageUrl"
+              class="img-fluid"
+              :alt="item.cardImage.imageAlt"
+              :modifiers="{ animated: true }"
             />
           </div>
         </div>
@@ -53,6 +64,9 @@ export default {
   methods: {
     isOdd(index) {
       return index % 2 !== 0
+    },
+    isGif(url) {
+      return url.endsWith('.gif')
     },
   },
 }
