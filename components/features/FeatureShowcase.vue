@@ -1,9 +1,11 @@
 <template>
   <div class="container py-5">
-    <SectionTitle :heading="title" />
-    <p class="hero__subheading" v-if="description">
-      {{ description }}
-    </p>
+    <div class="showcase-header">
+      <SectionTitle :heading="title" />
+      <p class="hero__subheading mt-4" v-if="description">
+        {{ description }}
+      </p>
+    </div>
     <div class="row">
       <div class="col-md-12" v-for="(item, index) in itemList" :key="item.id">
         <div class="card" :class="{ 'reverse-order': isOdd(index) }">
@@ -57,8 +59,17 @@ export default {
 </script>
 
 <style scoped>
-h2 {
+.showcase-header {
   margin-bottom: 3.5rem;
+}
+.hero__subheading {
+  text-align: center;
+  max-width: 720px;
+  margin: auto;
+  color: #475467;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
 }
 .card {
   display: flex;
