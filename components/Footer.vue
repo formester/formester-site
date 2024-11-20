@@ -34,6 +34,11 @@
                 >
               </li>
               <li class="mt-2">
+                <NuxtLink to="/enterprise/" class="footer__link">
+                    Enterprise
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
                 <NuxtLink to="/privacy/" class="footer__link">
                   Privacy Policy
                 </NuxtLink>
@@ -90,7 +95,9 @@
                 >
               </li>
               <li class="mt-2">
-                <NuxtLink to="/build-conditional-logic-forms-with-ai/" class="footer__link"
+                <NuxtLink
+                  to="/build-conditional-logic-forms-with-ai/"
+                  class="footer__link"
                   >AI Conditional Logic Forms</NuxtLink
                 >
               </li>
