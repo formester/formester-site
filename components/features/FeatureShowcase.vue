@@ -17,25 +17,24 @@
           <div
             class="card-image col-12 col-lg-7 d-lg-flex"
             :class="{ 'justify-content-lg-end  pe-xxl-4': !isOdd(index) }"
+            v-if="item.cardImage.image?.url || item.cardImage.imageUrl"
           >
-            <div v-if="item.cardImage.image?.url || item.cardImage.imageUrl">
-              <nuxt-img
-                v-if="
-                  !isGif(item.cardImage.image?.url || item.cardImage.imageUrl)
-                "
-                :src="item.cardImage.image?.url || item.cardImage.imageUrl"
-                class="img-fluid"
-                :alt="item.cardImage.imageAlt"
-                :modifiers="{ animated: true }"
-              />
-              <img
-                v-else
-                :src="item.cardImage.image?.url || item.cardImage.imageUrl"
-                class="img-fluid"
-                :alt="item.cardImage.imageAlt"
-                :modifiers="{ animated: true }"
-              />
-            </div>
+            <nuxt-img
+              v-if="
+                !isGif(item.cardImage.image?.url || item.cardImage.imageUrl)
+              "
+              :src="item.cardImage.image?.url || item.cardImage.imageUrl"
+              class="img-fluid"
+              :alt="item.cardImage.imageAlt"
+              :modifiers="{ animated: true }"
+            />
+            <img
+              v-else
+              :src="item.cardImage.image?.url || item.cardImage.imageUrl"
+              class="img-fluid"
+              :alt="item.cardImage.imageAlt"
+              :modifiers="{ animated: true }"
+            />
           </div>
         </div>
       </div>
