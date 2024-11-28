@@ -11,6 +11,7 @@ export const free = {
     '1 Google Sheets Integration',
     '1 Webhook',
     '10 Signatures',
+    'No Members'
   ],
 }
 
@@ -25,6 +26,7 @@ export const enterprise = {
     'Custom Google Sheets Integration',
     'Custom Webhook',
     'Custom Signatures',
+    'Custom Members',
   ],
 }
 
@@ -41,6 +43,7 @@ export const personalMonthly = {
     'Unlimited Google Sheets Integration',
     '50 Webhooks',
     '250 Signatures',
+    'No Members'
   ],
 }
 
@@ -57,6 +60,7 @@ export const businessMonthly = {
     'Unlimited Google Sheets Integration',
     'Unlimited Webhooks',
     '2,500 Signatures',
+    "10 Members"
   ],
 }
 
@@ -74,6 +78,7 @@ export const personalYearly = {
     'Unlimited Google Sheets Integration',
     '50 Webhooks',
     '250 Signatures',
+    'No Members'
   ],
 }
 
@@ -91,6 +96,7 @@ export const businessYearly = {
     'Unlimited Google Sheets Integration',
     'Unlimited Webhooks',
     '2,500 Signatures',
+    '10 Members'
   ],
 }
 
@@ -108,10 +114,10 @@ export const comparisonTableFeatures = [
     business: '15k',
   },
   {
-    name: 'Collaborators',
+    name: 'Members',
     free: '0',
-    pro: 'Unlimited',
-    business: 'Unlimited',
+    pro: '0',
+    business: '10',
   },
   {
     name: 'Remove Formester Branding',
