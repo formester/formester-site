@@ -102,6 +102,11 @@
                 >
               </li>
               <li class="mt-2">
+                <NuxtLink to="/ai-powered-multilingual-forms/" class="footer__link"
+                  >AI Auto Translation</NuxtLink
+                >
+              </li>
+              <li class="mt-2">
                 <NuxtLink to="/poll-maker/" class="footer__link"
                   >Poll Maker</NuxtLink
                 >
