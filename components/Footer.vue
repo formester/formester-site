@@ -114,6 +114,11 @@
                   >Questionnaire Maker</NuxtLink
                 >
               </li>
+              <li class="mt-2">
+                <NuxtLink to="/test-creator/" class="footer__link"
+                  >Test Creator</NuxtLink
+                >
+              </li>
             </ul>
           </div>
           <!--Grid column-->
