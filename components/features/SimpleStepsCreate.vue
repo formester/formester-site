@@ -13,7 +13,13 @@
           <div class="mt-5">
             <span class="step__heading">Step {{ idx + 1 }}</span>
             <h3 class="step__section-heading">{{ item?.title }}</h3>
-            <p class="step__section-description">
+
+            <MarkdownContent
+              v-if="item?.description_markdown"
+              class="step__section-description"
+              :content="item?.description_markdown"
+            />
+            <p v-else class="step__section-description">
               {{ item?.description }}
             </p>
           </div>
@@ -35,7 +41,10 @@
 </template>
 
 <script>
+import MarkdownContent from '~/components/MarkdownContent.vue'
+
 export default {
+  components: { MarkdownContent },
   props: {
     title: {
       type: Array,

@@ -18,7 +18,12 @@
               loading="lazy"
             />
             <h4 class="sub__section-heading mt-4">{{ item.title }}</h4>
-            <p class="subheading__text">{{ item.description }}</p>
+            <MarkdownContent
+              v-if="item?.description_markdown"
+              class="subheading__text"
+              :content="item?.description_markdown"
+            />
+            <p v-else class="subheading__text">{{ item.description }}</p>
           </div>
         </div>
       </div>
@@ -27,7 +32,10 @@
 </template>
 
 <script>
+import MarkdownContent from '~/components/MarkdownContent.vue'
+
 export default {
+  components: { MarkdownContent },
   props: {
     title: {
       type: Array,

@@ -5,7 +5,7 @@
       {{ description }}
     </p>
     <div class="row py-5">
-      <div v-for="item in itemList" :key="item.id"  class="col-md-6 my-3">
+      <div v-for="item in itemList" :key="item.id" class="col-md-6 my-3">
         <div class="px-4">
           <nuxt-img
             :src="item.cardImage.imageUrl || item.cardImage.image?.url"
@@ -14,7 +14,11 @@
             loading="lazy"
           />
           <h3 class="feature__heading">{{ item.title }}</h3>
-          <p>
+          <MarkdownContent
+            v-if="item.description_markdown"
+            :content="item.description_markdown"
+          />
+          <p v-else>
             {{ item.description }}
           </p>
         </div>
@@ -24,7 +28,10 @@
 </template>
 
 <script>
+import MarkdownContent from '~/components/MarkdownContent.vue'
+
 export default {
+  components: { MarkdownContent },
   props: {
     title: {
       type: Array,
