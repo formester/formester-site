@@ -17,11 +17,17 @@
         >
           <nuxt-img
             style="width: 69px"
-            :src="item.cardImage.image?.url || item.cardImage.imageUrl "
+            :src="item.cardImage.image?.url || item.cardImage.imageUrl"
             alt="Formester"
           />
           <h4 class="sub__section-heading mt-4">{{ item?.title }}</h4>
-          <p class="subheading__text">
+
+          <MarkdownContent
+            v-if="item?.description_markdown"
+            class="subheading__text"
+            :content="item?.description_markdown"
+          />
+          <p v-else class="subheading__text">
             {{ item?.description }}
           </p>
         </div>
@@ -31,7 +37,10 @@
 </template>
 
 <script>
+import MarkdownContent from '~/components/MarkdownContent.vue'
+
 export default {
+  components: { MarkdownContent },
   props: {
     title: {
       type: Array,
@@ -39,15 +48,14 @@ export default {
     },
     description: {
       type: String,
-      default: ''
+      default: '',
     },
     itemList: {
       type: Array,
       required: true,
-    }
+    },
   },
 }
 </script>
 
-<style>
-</style>
+<style></style>

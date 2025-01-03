@@ -23,7 +23,12 @@
           class="accordion-collapse collapse"
           data-bs-parent="#accordionFaqs"
         >
-          <div class="accordion-body">
+          <MarkdownContent
+            v-if="faq.body_markdown"
+            class="accordion-body mb-2"
+            :content="faq.body_markdown"
+          />
+          <div v-else class="accordion-body">
             <p class="mb-2">{{ faq.body }}</p>
             <ul v-if="faq.list">
               <li v-for="(item, idx) in faq.list" :key="`list-item-${idx}`">
@@ -38,7 +43,10 @@
 </template>
 
 <script>
+import MarkdownContent from '~/components/MarkdownContent.vue'
+
 export default {
+  components: { MarkdownContent },
   props: {
     title: {
       type: Array,

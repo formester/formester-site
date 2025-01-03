@@ -12,7 +12,12 @@
           <div class="card-content col-12 col-lg-5">
             <p class="card-step-index" v-if="steps">STEP {{ index + 1 }}</p>
             <h3 class="card-title">{{ item.title }}</h3>
-            <p class="card-description">{{ item.description }}</p>
+            <MarkdownContent
+              v-if="item.description_markdown"
+              :content="item.description_markdown"
+              class="card-description"
+            />
+            <p v-else class="card-description">{{ item.description }}</p>
           </div>
           <div
             class="card-image col-12 col-lg-7 d-lg-flex"
@@ -43,7 +48,10 @@
 </template>
 
 <script>
+import MarkdownContent from '~/components/MarkdownContent.vue'
+
 export default {
+  components: { MarkdownContent },
   props: {
     title: {
       type: Array,

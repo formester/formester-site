@@ -27,13 +27,23 @@
           <div
             class="feature__icon-wrapper d-flex align-items-center justify-content-center"
           >
-            <nuxt-img :src="feature.icon.imageUrl||feature.icon.image.url" loading="lazy" />
+            <nuxt-img
+              :src="feature.icon.imageUrl || feature.icon.image.url"
+              loading="lazy"
+            />
           </div>
           <div class="ms-3 mt-1">
             <h3 class="feature__title">{{ feature.title }}</h3>
-            <p v-if="activeIndex === index" class="feature__desc mt-2 mb-0">
-              {{ feature.description }}
-            </p>
+            <div v-if="activeIndex === index">
+              <MarkdownContent
+                v-if="feature.description_markdown"
+                class="feature__desc mt-2 mb-0"
+                :content="feature.description_markdown"
+              />
+              <p v-else class="feature__desc mt-2 mb-0">
+                {{ feature.description }}
+              </p>
+            </div>
           </div>
         </li>
       </ul>
@@ -66,7 +76,12 @@
           </div>
           <div class="ms-3 mt-1">
             <h3 class="feature__title">{{ feature.title }}</h3>
-            <p class="feature__desc mt-2 mb-0">
+            <MarkdownContent
+              v-if="feature.description_markdown"
+              class="feature__desc mt-2 mb-0"
+              :content="feature.description_markdown"
+            />
+            <p v-else class="feature__desc mt-2 mb-0">
               {{ feature.description }}
             </p>
           </div>
@@ -77,7 +92,10 @@
 </template>
 
 <script>
+import MarkdownContent from '~/components/MarkdownContent.vue'
+
 export default {
+  components: { MarkdownContent },
   props: {
     heading: {
       type: Array,
@@ -94,9 +112,12 @@ export default {
     }
   },
   computed: {
-    activeFeatureImageUrl(){
-      return this.itemList[this.activeIndex].cardImage.imageUrl || this.itemList[this.activeIndex].cardImage.image.url
-    }
+    activeFeatureImageUrl() {
+      return (
+        this.itemList[this.activeIndex].cardImage.imageUrl ||
+        this.itemList[this.activeIndex].cardImage.image.url
+      )
+    },
   },
   methods: {
     handleFeatureClick(index) {
