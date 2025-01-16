@@ -16,8 +16,7 @@ export default {
   components: { Templates },
   data() {
     return {
-      activeCategory: null,
-      description: `Find the perfect template for ${this.currentCategoryName} with Formester's comprehensive library. Choose from a variety of customizable designs and create a professional look in no time.`,
+      activeCategory: null
     }
   },
   async asyncData({ params, payload }) {
@@ -46,7 +45,8 @@ export default {
       return this.currentCategory.metaTitle || this.currentCategoryName
     },
     metaDescription() {
-      return this.currentCategory.metaDescription || this.currentCategory.description || this.description
+      const description = `Find the perfect template for ${this.currentCategoryName} with Formester's comprehensive library. Choose from a variety of customizable designs and create a professional look in no time.`
+      return this.currentCategory.metaDescription || this.currentCategory.description || description
     },
     meta() {
       const metaData = {

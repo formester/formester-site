@@ -26,7 +26,7 @@
     </section>
 
     <!-- About template section -->
-    <section class="container py-2 py-lg-5">
+    <section v-if="template.aboutTemplate && template.aboutTemplate.replace(/(<([^>]+)>)/gi, '').trim()" class="container py-2 py-lg-5">
       <h2 class="section__heading text-center">About this template</h2>
       <div class="about-template__description" v-html="template.aboutTemplate" />
     </section>
