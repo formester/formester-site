@@ -17,6 +17,7 @@ export default {
   data() {
     return {
       activeCategory: null,
+      description: `Find the perfect template for ${this.currentCategoryName} with Formester's comprehensive library. Choose from a variety of customizable designs and create a professional look in no time.`,
     }
   },
   async asyncData({ params, payload }) {
@@ -36,14 +37,23 @@ export default {
       const currentCategory = allCategories.find(
         (cate) => cate.slug === this.$route.params.slug
       )
-      return currentCategory.name || ''
+      return currentCategory || {}
+    },
+    currentCategoryName() {
+      return this.currentCategory.name || ''
+    },
+    metaTitle() {
+      return this.currentCategory.metaTitle || this.currentCategoryName
+    },
+    metaDescription() {
+      return this.currentCategory.metaDescription || this.currentCategory.description || this.description
     },
     meta() {
       const metaData = {
         type: 'website',
         url: `https://formester.com/templates/${this.$route.params.slug}`,
-        title: this.currentCategory,
-        description: `Find the perfect template for ${this.currentCategory} with Formester's comprehensive library. Choose from a variety of customizable designs and create a professional look in no time.`,
+        title: this.metaTitle,
+        description: this.metaDescription,
         mainImage: 'https://formester.com/formester-logo-meta-image.png',
         mainImageAlt: 'Formester Logo',
       }
@@ -73,7 +83,7 @@ export default {
   },
   head() {
     return {
-      title: `${this.currentCategory} Templates | Formester`,
+      title: `${this.currentCategoryName} Templates | Formester`,
       meta: [...this.meta],
       link: [
         {
@@ -89,8 +99,8 @@ export default {
       {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        name: this.currentCategory,
-        description: `Find the perfect template for ${this.currentCategory} with Formester's comprehensive library. Choose from a variety of customizable designs and create a professional look in no time.`,
+        name: this.metaTitle,
+        description: this.metaDescription,
         itemListElement: this.listItems,
       },
     ]
