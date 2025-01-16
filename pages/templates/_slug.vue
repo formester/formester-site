@@ -1,57 +1,40 @@
 <template>
   <div>
     <!-- Hero section -->
-    <section
-      class="container d-flex flex-column-reverse flex-lg-row template_hero"
-    >
-      <div
-        class="d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start mt-xl-0 mt-md-5 hero__info_container"
-      >
+    <section class="container d-flex flex-column template_hero">
+      <div class="template-info">
         <h1 class="section__heading">{{ template.name }}</h1>
 
         <!-- New paragraph for each line break -->
-        <p v-for="(line, index) in template.description.split('\n')" :key="index" class="hero__subheading mt-3">
+        <p v-for="(line, index) in template.description.split('\n')" :key="index" class="hero__subheading">
           {{ line }}
         </p>
-
-        <div class="btns-container d-flex align-items-center mt-2">
-          <button class="btn btn-use_template" @click="redirectTo">
-            Use Template
-          </button>
-          <button class="btn btn-preview_template" @click="openPreviewModal">
-            Preview Template
-          </button>
-        </div>
       </div>
-      <div
-        class="d-flex align-items-center justify-content-center mt-lg-0 mt-4 hero__image_container"
-        @click="openPreviewModal"
-      >
-        <img
-          :src="template.previewImageUrl"
-          alt="Hero-Image"
-          class="img-fluid hero__image rounded pointer"
-        />
-
-        <div class="template__preview-btn d-flex align-itens-center">
-          <nuxt-img src="/eye-icon.svg" alt="template preview button" />
-          <span class="template__preview-btn__text">Preview</span>
-        </div>
+      
+      <div class="d-flex justify-content-start">
+        <button class="btn btn-use_template" @click="redirectTo" >
+          Use Template
+        </button>
       </div>
+
+      <iframe
+        :src="template.surveyUrl"
+        frameborder="0"
+        width="100%"
+        class="template-preview__iframe mt-3"
+      />
+    </section>
+
+    <!-- About template section -->
+    <section v-if="template.aboutTemplate && template.aboutTemplate.replace(/(<([^>]+)>)/gi, '').trim()" class="container py-2 py-lg-5">
+      <h2 class="section__heading text-center">About this template</h2>
+      <div class="about-template__description" v-html="template.aboutTemplate" />
     </section>
 
     <Faq v-if="!isEmpty(template.faqs)" :faqs="template.faqs" />
 
     <!-- More templates section -->
     <more-templates :categories="categories" :template-slug="template.slug" />
-
-    <!-- Preview Template Modal -->
-    <template-preview-modal
-      :showPreviewModal="showPreviewModal"
-      :template="template"
-      @close-modal="closePreviewModal"
-      @redirect-to="redirectTo"
-    />
   </div>
 </template>
 
@@ -59,7 +42,6 @@
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
 // Components
-import PreviewModal from '../../components/template/PreviewModal.vue'
 import MoreTemplates from '../../components/template/MoreTemplates.vue'
 import Faq from '../../components/template/Faq.vue'
 import isEmpty from 'lodash/isEmpty'
@@ -67,7 +49,6 @@ import getTemplatesAndCategories from '@/utils/getTemplatesAndCategories'
 
 export default {
   components: {
-    'template-preview-modal': PreviewModal,
     MoreTemplates,
     Faq,
   },
@@ -79,11 +60,6 @@ export default {
     const { templates, categories } = await getTemplatesAndCategories()
     const template = templates.find((template)=>template.slug === params.slug)
     return { template, categories }
-  },
-  data() {
-    return {
-      showPreviewModal: false,
-    }
   },
   computed: {
     meta() {
@@ -182,14 +158,6 @@ export default {
         '_blank'
       )
     },
-    openPreviewModal() {
-      this.showPreviewModal = true
-      document.body.style.overflow = 'hidden' //to hide page scrollbar
-    },
-    closePreviewModal() {
-      this.showPreviewModal = false
-      document.body.style.overflow = 'auto' //to add page scrollbar
-    },
     isEmpty,
   },
 }
@@ -197,8 +165,14 @@ export default {
 
 <style scoped>
 .template_hero {
-  gap: 2rem;
-  margin: 6.5rem auto;
+  gap: 1rem;
+  margin: 2.5rem auto;
+}
+
+.template-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .hero__info_container {
@@ -217,19 +191,7 @@ export default {
   filter: blur(1px) brightness(40%);
 }
 
-.template__preview-btn {
-  pointer-events: none;
-  opacity: 0;
-  gap: 6px;
-  font-weight: 500;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.4s ease;
-  color: #fff;
-}
-.hero__image:hover + .template__preview-btn {
+.hero__image:hover  {
   opacity: 1;
 }
 
@@ -245,23 +207,21 @@ export default {
   line-height: 18px;
   transition: all 0.2s ease-out;
 }
+
 .btn-use_template {
-  background: #4f3895;
+  background: var(--clr-primary);
   color: white;
+  padding: 16px 24px;
+  font-size: 16px;
 }
 
 .btn-use_template:hover {
-  background: #4f3895eb;
+  background: var(--clr-primary-hover);
 }
 
-.btn-preview_template {
-  background: transparent;
-  border: 1px solid #4f3895;
-  color: #4f3895;
-}
-
-.btn-preview_template:hover {
-  background: #eee8ff47;
+.template-preview__iframe {
+  height: calc(100vh - 140px);
+  overflow-y: auto;
 }
 
 @media only screen and (max-width: 991px) {
@@ -277,8 +237,7 @@ export default {
     width: 100%;
   }
 
-  .btn-use_template,
-  .btn-preview_template {
+  .btn-use_template {
     width: 100%;
     padding: 18px;
     font-size: 16px;

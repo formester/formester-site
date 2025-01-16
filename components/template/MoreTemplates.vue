@@ -265,7 +265,7 @@ export default {
 
 .tabs-box .tab.active {
   color: #fff;
-  background: #4f3895;
+  background: var(--clr-primary);
   border-color: transparent;
 }
 
