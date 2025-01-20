@@ -343,6 +343,11 @@
                   Webflow
                 </NuxtLink>
               </li>
+              <li class="mt-2">
+                <NuxtLink to="/plugins/wix-forms/" class="footer__link">
+                  Wix
+                </NuxtLink>
+              </li>
             </ul>
           </div>
 
