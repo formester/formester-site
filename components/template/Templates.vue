@@ -138,10 +138,11 @@ export default {
 .left-sidebar {
   position: sticky;
   top: 80px;
-  max-height: 100vh;
+  max-height: calc(100vh - 70px);
   margin-bottom: 1.5rem;
   min-width: 264px;
   overflow-y: scroll;
+  padding-bottom: 1.5rem;
 }
 
 .left-sidebar::-webkit-scrollbar {
