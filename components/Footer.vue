@@ -38,16 +38,6 @@
                     Enterprise
                 </NuxtLink>
               </li>
-              <li class="mt-2">
-                <NuxtLink to="/privacy/" class="footer__link">
-                  Privacy Policy
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/terms-of-service/" class="footer__link">
-                  Terms of Service
-                </NuxtLink>
-              </li>
             </ul>
 
             <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
@@ -300,13 +290,28 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <a href="mailto:support@formester.com" class="footer__link">
-                  Get Support
+                <a href="https://status.formester.com" class="footer__link">
+                  Status
                 </a>
               </li>
               <li class="mt-2">
-                <a href="https://status.formester.com" class="footer__link">
-                  Status
+                <NuxtLink to="/privacy/" class="footer__link">
+                  Privacy Policy
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
+                <NuxtLink to="/security/" class="footer__link">
+                  Security
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
+                <NuxtLink to="/terms-of-service/" class="footer__link">
+                  Terms of Service
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
+                <a href="https://docs.formester.com/" class="footer__link">
+                  Documentation
                 </a>
               </li>
             </ul>

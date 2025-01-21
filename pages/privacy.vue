@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1>Privacy Policy</h1>
-    <h3 class="mt-3"><strong>General Information</strong></h3>
+    <h2 class="mt-3"><strong>General Information</strong></h2>
     <p>
       We collect the e-mail addresses of those who communicate with us via
       e-mail, aggregate information on what pages consumers access or visit, and
@@ -189,4 +189,29 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.container {
+  margin-top: 24px;
+  margin-bottom: 64px;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+    color: #6434d0;
+}
+
+h1 {
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+h2 {
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+
+h3 {
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+</style>
