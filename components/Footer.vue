@@ -483,7 +483,7 @@
       </section>
       <div class="divider mt-4"></div>
       <div class="copyright d-flex justify-content-center mt-3">
-        © 2024 Acorn Globus. All rights reserved
+        © 2025 Acorn Globus. All rights reserved
       </div>
     </div>
   </footer>
