@@ -354,7 +354,7 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/plugins/shopify-form-builder" class="footer__link">
+                <NuxtLink to="/plugins/shopify-form-builder/" class="footer__link">
                   Shopify
                 </NuxtLink>
               </li>
