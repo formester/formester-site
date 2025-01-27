@@ -115,16 +115,18 @@
           </div>
         </div>
 
-        <template>
-          <div class="mt-5" id="disqus_thread"></div>
-        </template>
+        <!-- 
+          <template>
+            <div class="mt-5" id="disqus_thread"></div>
+          </template>
 
-        <noscript
-          >Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript"
-            >comments powered by Disqus.</a
-          ></noscript
-        >
+          <noscript
+            >Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript"
+              >comments powered by Disqus.</a
+            ></noscript
+          >
+        -->
       </article>
     </div>
     <CallToActionSection :content="blogData?.cta" />
@@ -216,7 +218,7 @@ export default {
         document.querySelector('.popup__img ').style.display = 'none'
       }
     }
-    this.loadDisqus()
+    // this.loadDisqus()
   },
   methods: {
     formatDate(date) {
