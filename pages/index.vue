@@ -13,6 +13,9 @@ export default {
     const { head, jsonld, components } = await getStrapiData(endpoint)
     return { head, jsonld, components }
   },
+  head() {
+    return this.head
+  },
   jsonld() {
     return this.jsonld
   },
