@@ -116,6 +116,11 @@
                   >Test Creator</NuxtLink
                 >
               </li>
+              <li class="mt-2">
+                <NuxtLink to="/ai-survey-generator/" class="footer__link">
+                  AI Survey Generator
+                </NuxtLink>
+              </li>
             </ul>
           </div>
           <!--Grid column-->
