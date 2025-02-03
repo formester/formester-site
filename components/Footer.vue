@@ -38,6 +38,11 @@
                     Enterprise
                 </NuxtLink>
               </li>
+              <li class="mt-2">
+                <NuxtLink to="/form-building-service/" class="footer__link">
+                  Form Building Service
+                </NuxtLink>
+              </li>
             </ul>
 
             <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
@@ -361,6 +366,11 @@
               <li class="mt-2">
                 <NuxtLink to="/plugins/shopify-form-builder/" class="footer__link">
                   Shopify
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
+                <NuxtLink to="/plugins/squarespace-forms/" class="footer__link">
+                  Squarespace
                 </NuxtLink>
               </li>
             </ul>
