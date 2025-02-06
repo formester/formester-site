@@ -373,6 +373,11 @@
                   Squarespace
                 </NuxtLink>
               </li>
+              <li class="mt-2">
+                <NuxtLink to="/plugins/canva-form-builder/" class="footer__link">
+                  Canva
+                </NuxtLink>
+              </li>
             </ul>
           </div>
 
