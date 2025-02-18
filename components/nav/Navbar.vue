@@ -31,13 +31,31 @@
             @mouseleave="dropdownActive = false"
           >
             <NuxtLink
-              class="nav-link"
+              class="nav-link d-flex align-items-center"
               id="navbarDropdown"
               role="button"
               aria-expanded="false"
               to="/features/"
             >
               Features
+              <svg 
+                class="chevron-icon" 
+                style="margin-left: 8px;"
+                :class="{ 'chevron-rotate': dropdownActive }"
+                width="16" 
+                height="16" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path 
+                  d="M6 9L12 15L18 9" 
+                  stroke="currentColor" 
+                  stroke-width="2.5" 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round"
+                />
+              </svg>
             </NuxtLink>
             <ul
               class="dropdown-menu"
@@ -156,6 +174,7 @@ nav {
   font-weight: 500;
   padding: 8px 16px;
   border-radius: 8px;
+  transition: all 0.2s ease;
 }
 
 .nav__button {
@@ -189,7 +208,7 @@ nav {
 
 .nav-link:hover {
   color: var(--clr-primary);
-  border-bottom: 2px solid var(--clr-primary);
+   transition: all 0.2s ease;
 }
 
 .navbar-toggler:focus,
@@ -199,13 +218,6 @@ nav {
   box-shadow: none;
 }
 
-.dropdown-menu.active {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding-inline: 9vw;
-  z-index: 9999;
-}
-
 .dropdown-menu {
   padding-block: 16px;
   border: none;
@@ -213,6 +225,31 @@ nav {
   position: absolute;
   left: 0;
   right: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-inline: 9vw;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.dropdown-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  z-index: 9999;
+}
+
+.chevron-icon {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.chevron-rotate {
+  transform: rotate(180deg);
 }
 
 @media (max-width: 1199px) {
@@ -249,6 +286,7 @@ nav {
   .dropdown-menu.active {
     grid-template-columns: repeat(2, 1fr) !important;
     padding-inline: 0 !important;
+
   }
 }
 
