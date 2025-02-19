@@ -140,42 +140,65 @@ export default {
   width: 40px;
   height: 40px;
   padding: 4px;
+  transition: all 0.3s ease;
 }
 
 .feature__title {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 28px;
   margin-bottom: 0;
+  transition: color 0.3s ease;
 }
 
 .feature__desc {
   color: #475467;
   font-size: 16px;
   line-height: 24px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
 }
 
 .feature__item {
   border-left: 4px solid #f2f4f7;
   cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature__item:hover {
+  background-color: #f9fafb;
 }
 
 .feature__item.active {
   border-left-color: #7f56d9;
 }
 
+
+.feature__item.active .feature__title {
+  color: #6434d0;
+}
+
+.feature__item.active .feature__desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .fade-enter-active,
 .fade-leave-active {
-  transition: all 0.2s cubic-bezier(0.12, 0.26, 1, 0.6);
+  transition: all 0.3s cubic-bezier(0.12, 0.26, 1, 0.6);
 }
 
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
-  transform: scale(1.002);
+  transform: scale(1.002) translateY(10px);
 }
 
 .feature__img {
-  transition: all 0.2s cubic-bezier(0.12, 0.26, 1, 0.6);
+  transition: all 0.3s cubic-bezier(0.12, 0.26, 1, 0.6);
 }
 </style>
+
