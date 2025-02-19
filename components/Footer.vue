@@ -39,8 +39,8 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/form-building-service/" class="footer__link">
-                  Form Building Service
+                <NuxtLink to="/cutsom-form-building-service/" class="footer__link">
+                  Custom Form Building
                 </NuxtLink>
               </li>
             </ul>
