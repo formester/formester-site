@@ -42,6 +42,7 @@ export default {
 }
 .left-arrow-button:hover {
   background: var(--clr-primary-light-hover);
+  transition: all 0.3s ease;
 }
 
 .right-arrow-button {
@@ -49,6 +50,7 @@ export default {
 }
 .right-arrow-button:hover {
   background: var(--clr-primary-hover);
+  transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 768px) {

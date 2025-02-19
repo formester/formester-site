@@ -19,7 +19,7 @@
         <a
           v-if="buttons?.length"
           :href="buttons[0].link"
-          class="btn button hero__button mt-4 mb-4 mb-md-5"
+          class="btn button hero__button mt-4 mb-4 mb-md-5 transition 0.3s ease"
           :class="{
             hero__button: buttons[0].type === 'Primary',
             hero__invert__button: buttons[0].type === 'Secondary',

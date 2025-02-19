@@ -533,6 +533,7 @@ ul {
 
 .footer__items--heading {
   font-size: 14px;
+  font-weight: 600;
   line-height: 21px;
   letter-spacing: 0.02em;
   color: var(--clr-primary-light);
@@ -546,6 +547,8 @@ ul {
 
 .footer__link:hover {
   color: white;
+  text-decoration: underline;
+  transition: all 0.3s ease-out;
 }
 
 .divider {

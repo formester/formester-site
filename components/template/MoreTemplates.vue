@@ -303,7 +303,7 @@ export default {
   padding: 12px 16px;
   border-radius: 4px;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 1px;
   line-height: 18px;
   transition: all 0.2s ease-out;
   background: var(--clr-primary);

@@ -16,7 +16,7 @@
           class="d-flex flex-column align-items-center align-items-md-start text-center text-md-start px-4 col-md-4 my-3 mt-lg-5"
         >
           <nuxt-img
-            style="width: 69px"
+            style="width: 48px"
             :src="item.cardImage.image?.url || item.cardImage.imageUrl"
             alt="Formester"
           />
