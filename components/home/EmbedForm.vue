@@ -3,6 +3,7 @@
     <iframe :src="url" height="100%" width="100%"></iframe>
     <nuxt-img
       src="see-for-yourself.svg"
+      alt="see for yourself"
       class="see-for-yourself position-absolute"
     />
   </div>

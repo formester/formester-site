@@ -29,6 +29,7 @@
           >
             <nuxt-img
               :src="feature.icon.imageUrl || feature.icon.image.url"
+              :alt="feature.icon.imageAlt"
               loading="lazy"
             />
           </div>
@@ -52,6 +53,7 @@
           <nuxt-img
             class="feature__img img-fluid"
             :src="activeFeatureImageUrl"
+            :alt="activeFeatureImageAlt"
             :key="activeFeatureImageUrl"
           />
         </transition>
@@ -62,6 +64,7 @@
       <div v-for="feature in itemList" :key="feature.title" class="mt-5">
         <nuxt-img
           :src="feature.cardImage.imageUrl || feature.cardImage.image.url"
+          :alt="feature.cardImage.imageAlt"
           class="mb-4 img-fluid"
           loading="lazy"
         />
@@ -71,6 +74,7 @@
           >
             <nuxt-img
               :src="feature.icon.imageUrl || feature.icon.image.url"
+              :alt="feature.icon.imageAlt"
               loading="lazy"
             />
           </div>
@@ -117,6 +121,9 @@ export default {
         this.itemList[this.activeIndex].cardImage.imageUrl ||
         this.itemList[this.activeIndex].cardImage.image.url
       )
+    },
+    activeFeatureImageAlt() {
+      return this.itemList[this.activeIndex].cardImage.imageAlt
     },
   },
   methods: {

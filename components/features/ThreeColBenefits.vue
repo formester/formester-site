@@ -18,7 +18,7 @@
           <nuxt-img
             style="width: 69px"
             :src="item.cardImage.image?.url || item.cardImage.imageUrl"
-            alt="Formester"
+            :alt="item.cardImage.imageAlt"
           />
           <h4 class="sub__section-heading mt-4">{{ item?.title }}</h4>
 
