@@ -210,10 +210,88 @@ export const comparisonTableFeatures = [
     business: 'Advanced',
   },
   {
-    name: 'Question Branching & Logic Jumps',
-    free: 'Yes',
-    pro: 'Yes',
-    business: 'Yes',
+    "name": "AI Forms",
+    "free": "2 Daily",
+    "pro": "10 Daily",
+    "business": "50 Daily"
+  },
+  {
+    "name": "Generate QR Code",
+    "free": "Yes",
+    "pro": "Yes",
+    "business": "Yes"
+  },
+  {
+    "name": "Pre Fill Fields",
+    "free": "Yes",
+    "pro": "Yes",
+    "business": "Yes"
+  },
+  {
+    "name": "Form Limiter",
+    "free": "Yes",
+    "pro": "Yes",
+    "business": "Yes"
+  },
+  {
+    "name": "Trusted Form Certificate",
+    "free": "Yes",
+    "pro": "Yes",
+    "business": "Yes"
+  },
+  {
+    "name": "Appointment Scheduler",
+    "free": "Yes",
+    "pro": "Yes",
+    "business": "Yes"
+  },
+  {
+    "name": "Auto Unique ID For Submissions",
+    "free": "Yes",
+    "pro": "Yes",
+    "business": "Yes"
+  },
+  {
+    "name": "Calculation Field",
+    "free": "Yes",
+    "pro": "Yes",
+    "business": "Yes"
+  },
+  {
+    "name": "Quiz Scoring",
+    "free": "Yes",
+    "pro": "Yes",
+    "business": "Yes"
+  },
+  {
+    "name": "Outcome Quiz",
+    "free": "Yes",
+    "pro": "Yes",
+    "business": "Yes"
+  },
+  {
+    "name": "Offline Forms",
+    "free": "Yes",
+    "pro": "Yes",
+    "business": "Yes"
+  },
+  {
+    "name": "View Pending Submissions",
+    "free": "Yes",
+    "pro": "Yes",
+    "business": "Yes"
+  },
+  {
+    "name": "Custom Variables",
+    "free": "Yes",
+    "pro": "Yes",
+    "business": "Yes"
+  },
+  {
+    "name": "Repeater Fields",
+    "free": "Yes",
+    "pro": "Yes",
+    "business": "Yes"
   },
   {
     name: 'Brandkit',
@@ -234,10 +312,40 @@ export const comparisonTableFeatures = [
     business: 'Yes',
   },
   {
-    name: 'Send submission copy',
-    free: '-',
-    pro: 'Yes',
-    business: 'Yes',
+    "name": "Email Confirmation",
+    "free": "-",
+    "pro": "Yes",
+    "business": "Yes"
+  },
+  {
+    "name": "Countdown Timer",
+    "free": "-",
+    "pro": "Yes",
+    "business": "Yes"
+  },
+  {
+    "name": "Conditional Logic",
+    "free": "-",
+    "pro": "Yes",
+    "business": "Yes"
+  },
+  {
+    "name": "Send Submission Copy",
+    "free": "-",
+    "pro": "Yes",
+    "business": "Yes"
+  },
+  {
+    "name": "Backend Only",
+    "free": "-",
+    "pro": "Yes",
+    "business": "Yes"
+  },
+  {
+    "name": "Custom Scripts",
+    "free": "-",
+    "pro": "Yes",
+    "business": "Yes"
   },
   {
     name: 'Submission PDF',
@@ -263,4 +371,34 @@ export const comparisonTableFeatures = [
     pro: '-',
     business: 'Yes',
   },
+  {
+    "name": "Team Collaboration",
+    "free": "-",
+    "pro": "-",
+    "business": "Yes"
+  },
+  {
+    "name": "Address Autocomplete",
+    "free": "-",
+    "pro": "-",
+    "business": "Yes"
+  },
+  {
+    "name": "Save And Resume Submissions",
+    "free": "-",
+    "pro": "-",
+    "business": "Yes"
+  },
+  {
+    "name": "AI Multilanguage Translations",
+    "free": "-",
+    "pro": "-",
+    "business": "Yes"
+  },
+  {
+    "name": "Connect Form to PDF",
+    "free": "-",
+    "pro": "-",
+    "business": "Yes"
+  }
 ]
