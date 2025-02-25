@@ -210,12 +210,6 @@ export const comparisonTableFeatures = [
     business: 'Advanced',
   },
   {
-    name: 'Question Branching & Logic Jumps',
-    free: 'Yes',
-    pro: 'Yes',
-    business: 'Yes',
-  },
-  {
     "name": "AI Forms",
     "free": "2 Daily",
     "pro": "10 Daily",
@@ -271,12 +265,6 @@ export const comparisonTableFeatures = [
   },
   {
     "name": "Outcome Quiz",
-    "free": "Yes",
-    "pro": "Yes",
-    "business": "Yes"
-  },
-  {
-    "name": "Slack Integration",
     "free": "Yes",
     "pro": "Yes",
     "business": "Yes"
