@@ -294,6 +294,24 @@ export const comparisonTableFeatures = [
     "business": "Yes"
   },
   {
+    "name": "Drop Off Rates",
+    "free": "Yes",
+    "pro": "Yes",
+    "business": "Yes"
+  },
+  {
+    "name": "Export Submissions",
+    "free": "Yes",
+    "pro": "Yes",
+    "business": "Yes"
+  },
+  {
+    "name": "Field Wise Analysis",
+    "free": "Yes",
+    "pro": "Yes",
+    "business": "Yes"
+  },
+  {
     name: 'Brandkit',
     free: '-',
     pro: 'Yes',
