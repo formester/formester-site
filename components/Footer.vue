@@ -70,16 +70,6 @@
 
             <ul class="list-unstyled mt-2">
               <li class="mt-2">
-                <NuxtLink to="/online-form-builder/" class="footer__link"
-                  >Online Form Builder</NuxtLink
-                >
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/solutions/quiz/" class="footer__link"
-                  >Quiz Maker</NuxtLink
-                >
-              </li>
-              <li class="mt-2">
                 <NuxtLink to="/ai-form-generator/" class="footer__link"
                   >AI Form Generator</NuxtLink
                 >
