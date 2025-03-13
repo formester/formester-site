@@ -10,7 +10,7 @@
           {{ line }}
         </p>
       </div>
-      
+
       <div class="d-flex justify-content-start">
         <button class="btn btn-use_template" @click="redirectTo" >
           Use Template
@@ -82,7 +82,7 @@ export default {
       return getSiteMeta(metaData)
     },
     faqsSchema() {
-      return (this.template.faqs || []).map((faq) => {
+      const mainEntity = (this.template.faqs || []).map((faq) => {
         return {
           '@type': 'Question',
           name: faq.question,
@@ -92,6 +92,13 @@ export default {
           },
         }
       })
+      return mainEntity.length > 0
+        ? {
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: mainEntity,
+          }
+        : null
     },
   },
   head() {
@@ -116,7 +123,7 @@ export default {
   },
   jsonld() {
     const { name, description, previewImageUrl, category } = this.template || {}
-    return [
+    const jsonldData = [
       {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
@@ -144,12 +151,11 @@ export default {
             'Browse our collection of Research Form templates for free.',
         },
       },
-      {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        ...(this.faqsSchema ? { mainEntity: this.faqsSchema } : {}),
-      },
     ]
+    if (this.faqsSchema) {
+      jsonldData.push(this.faqsSchema)
+    }
+    return jsonldData;
   },
   methods: {
     redirectTo() {
