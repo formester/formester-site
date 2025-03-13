@@ -152,8 +152,8 @@ export default {
         },
       },
     ]
-    if (faqsSchema) {
-      jsonldData.push(faqsSchema)
+    if (this.faqsSchema) {
+      jsonldData.push(this.faqsSchema)
     }
     return jsonldData;
   },
