@@ -3,7 +3,14 @@
     <div class="img__box">
       <nuxt-img :src="`/integrations/${app.img}`" />
     </div>
-    <h5 class="mt-4 app__name">{{ app.name }}</h5>
+    <nuxt-link
+      v-if="app.url"
+      :to="app.url"
+      class="mt-4 app__name"
+    >
+        {{ app.name }}
+    </nuxt-link>
+    <h5 v-else class="mt-4 app__name">{{ app.name }}</h5>
     <p>{{ app.desc }}</p>
   </div>
 </template>
