@@ -193,7 +193,7 @@ button {
 .hero__button {
   background-color: var(--clr-primary);
   font-size: var(--ft-lg-btn);
-  padding: 1em 2em;
+  padding: 0.75em 1.5em;
   border-radius: 8px;
   color: white;
   font-weight: 700;
@@ -202,6 +202,7 @@ button {
 .hero__button:hover {
   color: white;
   background-color: var(--clr-primary-hover);
+  transition: 0.3s ease;
 }
 
 .hero__invert__button {
@@ -259,11 +260,13 @@ button {
   border-radius: 4px;
   border: 1px solid var(--clr-primary);
   background: var(--clr-primary);
+  
 }
 
 .button__primary:hover {
   border: 1px solid var(--clr-primary-hover);
   background: var(--clr-primary-hover);
+  transition: 0.3s ease;
 }
 
 .button__secondary {
@@ -276,6 +279,7 @@ button {
   border: 1px solid var(--clr-primary-light-hover);
   background: var(--clr-primary-light-hover);
   color: #371d72;
+  transition: 0.3s ease;
 }
 
 .button__secondary-gray {
@@ -289,6 +293,7 @@ button {
 .button__secondary-gray:hover {
   background: var(--clr-secondary-gray-hover);
   color: var(--clr-text-primary);
+  transition: 0.3s ease;
 }
 
 @media screen and (max-width: 992px) {

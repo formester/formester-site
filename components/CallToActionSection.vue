@@ -38,13 +38,13 @@
             </h2>
             <div
               v-if="buttons?.length"
-              class="d-flex align-items-center justify-content-center flex-wrap gap-3 mt-5"
+              class="d-flex align-items-center justify-content-center flex-wrap gap-4 mt-5"
             >
               <a
                 :href="
                   buttons[0]?.link || 'https://app.formester.com/users/sign_up'
                 "
-                class="btn button mx-2"
+                class="btn button"
                 :class="{
                   'cta-button': buttons[0].type === 'Primary',
                   'cta-button__invert': buttons[0].type === 'Secondary',
@@ -57,7 +57,7 @@
                 v-if="buttons?.length === 2"
                 target="_blank"
                 :href="buttons[1].link"
-                class="btn button mx-2"
+                class="btn button"
                 :class="{
                   'cta-button': buttons[1]?.type === 'Primary',
                   'cta-button__invert': buttons[1]?.type === 'Secondary',
@@ -151,11 +151,12 @@ export default {
   padding: 12px 24px;
   border-radius: 8px;
   color: white;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .cta-button:hover {
   background-color: var(--clr-primary-hover);
+  transition: all 0.3s ease;
 }
 
 .cta-button__invert {
@@ -164,11 +165,12 @@ export default {
   padding: 12px 24px;
   border-radius: 8px;
   color: var(--clr-primary);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .cta-button__invert:hover {
   background-color: var(--clr-primary-light-hover);
+  transition: all 0.3s ease;
 }
 
 .plane {
