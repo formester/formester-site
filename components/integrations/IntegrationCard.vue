@@ -3,7 +3,15 @@
     <div class="img__box">
       <nuxt-img :src="`/integrations/${app.img}`" />
     </div>
-    <h5 class="mt-4 app__name">{{ app.name }}</h5>
+    <nuxt-link
+      v-if="app.url"
+      :to="app.url"
+      class="mt-4 app__name"
+    >
+        {{ app.name }}
+        <nuxt-img src="/integrations/link.png" alt="redirect-link" class="redirect-link" />
+    </nuxt-link>
+    <h5 v-else class="mt-4 app__name">{{ app.name }}</h5>
     <p>{{ app.desc }}</p>
   </div>
 </template>
@@ -30,5 +38,11 @@ export default {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 32px;
+}
+.redirect-link{
+    height: 18px;
+    width: 18px;
+    margin-left: 2px;
+    margin-bottom: 2px;
 }
 </style>
