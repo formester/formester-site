@@ -425,6 +425,11 @@
                   Formester vs Formstack
                 </NuxtLink>
               </li>
+              <li class="mt-2">
+                <NuxtLink to="/formester-vs-canva/" class="footer__link">
+                  Formester vs Canva
+                </NuxtLink>
+              </li>
             </ul>
 
             <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
