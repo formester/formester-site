@@ -39,7 +39,7 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/cutsom-form-building-service/" class="footer__link">
+                <NuxtLink to="/custom-form-building-service/" class="footer__link">
                   Custom Form Building
                 </NuxtLink>
               </li>
@@ -272,7 +272,7 @@
 
               <li class="mt-2">
                 <NuxtLink to="/features/embed-forms/" class="footer__link">
-                  Embeding Forms
+                  Embeddable Forms
                 </NuxtLink>
               </li>
             </ul>
