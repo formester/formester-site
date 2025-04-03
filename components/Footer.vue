@@ -379,7 +379,7 @@
             <ul class="list-unstyled mt-2">
               <li class="mt-2">
                 <NuxtLink to="/comparison-tool/" class="footer__link">
-                  Compare From Builders
+                  Compare Form Builders
                 </NuxtLink>
               </li>
               <li class="mt-2">
@@ -442,7 +442,7 @@
                   to="/case-study/using-formester-for-lead-generation-success/"
                   class="footer__link"
                 >
-                  Formester For Lead Generation Success
+                  Formester for Lead Generation Success
                 </NuxtLink>
               </li>
               <li class="mt-2">
