@@ -97,16 +97,6 @@
                 >
               </li>
               <li class="mt-2">
-                <NuxtLink to="/online-survey-maker/" class="footer__link"
-                  >Survey Maker</NuxtLink
-                >
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/questionnaire-maker/" class="footer__link"
-                  >Questionnaire Maker</NuxtLink
-                >
-              </li>
-              <li class="mt-2">
                 <NuxtLink to="/test-creator/" class="footer__link"
                   >Test Creator</NuxtLink
                 >
@@ -453,7 +443,7 @@
                     target="_blank"
                     ><nuxt-img
                       src="/social/reddit.svg"
-                      alt="Formester reddit community"
+                      alt="Formester Reddit community"
                   /></a>
                   <a
                     href="https://www.linkedin.com/company/formester-inc/"
@@ -461,7 +451,7 @@
                     target="_blank"
                     ><nuxt-img
                       src="/social/linkedin.svg"
-                      alt="Formester linkedin page"
+                      alt="Formester LinkedIn page"
                   /></a>
                   <a
                     href="https://www.youtube.com/channel/UCVfBesiZINubCEC9Xu5Z6gQ"
@@ -469,7 +459,7 @@
                     target="_blank"
                     ><nuxt-img
                       src="/social/youtube.svg"
-                      alt="Formester youtube page"
+                      alt="Formester YouTube page"
                   /></a>
                   <a
                     href="https://instagram.com/_formester_?utm_medium=copy_link"
@@ -477,7 +467,7 @@
                     target="_blank"
                     ><nuxt-img
                       src="/social/instagram.svg"
-                      alt="Fomester instagram page"
+                      alt="Formester Instagram page"
                   /></a>
                   <a
                     href="https://twitter.com/_Formester_?t=-m1pNwXvxR6KOf9kfPi9lQ&s=09"
@@ -485,7 +475,7 @@
                     target="_blank"
                     ><nuxt-img
                       src="/social/twitter.svg"
-                      alt="Formester twitter page"
+                      alt="Formester Twitter page"
                   /></a>
                   <a
                     href="https://www.facebook.com/formester"
@@ -493,7 +483,7 @@
                     target="_blank"
                     ><nuxt-img
                       src="/social/facebook.svg"
-                      alt="Formester facebook page"
+                      alt="Formester Facebook page"
                   /></a>
                 </div>
               </li>
