@@ -65,7 +65,7 @@
             </ul>
 
             <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
-              Solutions
+              AI Solutions
             </h5>
 
             <ul class="list-unstyled mt-2">
@@ -93,12 +93,12 @@
               </li>
               <li class="mt-2">
                 <NuxtLink to="/poll-maker/" class="footer__link"
-                  >Poll Maker</NuxtLink
+                  >AI Poll Maker</NuxtLink
                 >
               </li>
               <li class="mt-2">
                 <NuxtLink to="/test-creator/" class="footer__link"
-                  >Test Creator</NuxtLink
+                  >AI Test Creator</NuxtLink
                 >
               </li>
               <li class="mt-2">
