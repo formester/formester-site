@@ -65,14 +65,14 @@ export default {
 
 .dropdown-item__desc {
   color: #5d5d5d !important;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 20px;
 }
 
 .dropdown-item__img {
-  height: 32px;
-  width: 32px;
+  height: 24px;
+  width: 24px;
 }
 
 @media (max-width: 992px) {
