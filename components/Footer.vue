@@ -436,6 +436,22 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
+                <NuxtLink
+                  to="/use-case/formester-for-finance/"
+                  class="footer__link"
+                >
+                  Formester for Finance
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
+                <NuxtLink
+                  to="/use-case/formester-for-training-and-assessments/"
+                  class="footer__link"
+                >
+                  Formester for Training & Assessments
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
                 <div class="socials mt-4">
                   <a
                     href="https://www.reddit.com/r/Formester/"
