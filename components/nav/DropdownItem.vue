@@ -48,7 +48,7 @@ export default {
 
 <style>
 .dropdown-item {
-  padding: 12px;
+  padding: 8px;
   border-radius: 8px;
 }
 
@@ -58,14 +58,14 @@ export default {
 
 .dropdown-item__title {
   color: var(#171717);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 140%;
+  line-height: 120%;
 }
 
 .dropdown-item__desc {
   color: #5d5d5d !important;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 20px;
 }

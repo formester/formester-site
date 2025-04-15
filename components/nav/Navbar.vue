@@ -24,58 +24,49 @@
           class="navbar-nav ms-auto navbar-nav-scroll"
           style="--bs-scroll-height: calc(100vh - 54px)"
         >
-          <li
-            class="nav-item dropdown me-3 position-static"
-            @click="collapseNav"
-            @mouseenter="dropdownActive = true"
-            @mouseleave="dropdownActive = false"
+          <li class="nav-item dropdown position-static"
+            @mouseenter="showDropdown"
+            @mouseleave="hideDropdown"
           >
             <NuxtLink
-              class="nav-link d-flex align-items-center"
-              id="navbarDropdown"
-              role="button"
-              aria-expanded="false"
               to="/features/"
+              class="nav-link d-flex align-items-center"
+              @click="showDropdown"
             >
               Features
-              <svg 
-                class="chevron-icon" 
-                style="margin-left: 8px;"
-                :class="{ 'chevron-rotate': dropdownActive }"
-                width="16" 
-                height="16" 
-                viewBox="0 0 24 24" 
-                fill="none" 
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
+                width="10"
+                height="6"
+                viewBox="0 0 10 6"
+                fill="none"
+                class="chevron-icon ms-2"
+                :class="{ 'chevron-rotate': dropdownActive }"
               >
-                <path 
-                  d="M6 9L12 15L18 9" 
-                  stroke="currentColor" 
-                  stroke-width="2.5" 
-                  stroke-linecap="round" 
+                <path
+                  d="M1 1L5 5L9 1"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
                   stroke-linejoin="round"
                 />
               </svg>
             </NuxtLink>
-            <ul
+            <div 
               class="dropdown-menu"
-              aria-labelledby="navbarDropdown"
               :class="{ active: dropdownActive }"
             >
-              <li
-                v-for="dropdownItem in dropdownItems"
-                :key="dropdownItem.id"
-                @click="dropdownActive = false"
-              >
-                <DropdownItem
-                  :title="dropdownItem.title"
-                  :description="dropdownItem.description"
-                  :imageUrl="dropdownItem.imageUrl"
-                  :imageAlt="dropdownItem.imageAlt"
-                  :slug="dropdownItem.slug"
+              <div class="dropdown-menu-inner">
+                <NavDropdownCategory
+                  v-for="category in categories"
+                  :key="category.id"
+                  :title="category.title"
+                  :items="category.items"
+                  :slug="category.slug"
+                  @itemClick="hideDropdown"
                 />
-              </li>
-            </ul>
+              </div>
+            </div>
           </li>
           <li class="nav-item me-3" @click="collapseNav">
             <NuxtLink to="/pricing/" class="nav-link"> Pricing </NuxtLink>
@@ -121,46 +112,123 @@
 <script>
 import DropdownItem from './DropdownItem.vue'
 import NavItem from './NavItem.vue'
+import NavDropdownCategory from './NavDropdownCategory.vue'
 import axios from 'axios'
+
 export default {
   components: {
     NavItem,
     DropdownItem,
+    NavDropdownCategory,
   },
   data() {
     return {
       dropdownActive: false,
-      dropdownItems: [],
+      dropdownTimeout: null,
+      categories: [
+        {
+          id: 1,
+          title: 'Form Building',
+          items: []
+        },
+        {
+          id: 2,
+          title: 'Security & Validation',
+          items: []
+        },
+        {
+          id: 3,
+          title: 'Submission & Data Handling',
+          items: []
+        },
+        {
+          id: 4,
+          title: 'Advanced Controls',
+          items: []
+        },
+        {
+          id: 5,
+          title: 'Branding & Integration',
+          items: []
+        },
+        {
+          id: 6,
+          title: 'Notifications & Reporting',
+          items: []
+        }
+      ]
     }
   },
   mounted() {
+    // Try to load cached features first
+    const cachedFeatures = localStorage.getItem('navFeatures')
+    if (cachedFeatures) {
+      this.populateFeatures(JSON.parse(cachedFeatures))
+    }
+    // Then fetch fresh data
     this.getFeatures()
   },
   methods: {
     collapseNav() {
-      if (window.screen.width >= 992) return
       const bsCollapse = new bootstrap.Collapse(this.$refs.siteNav)
       bsCollapse.toggle()
     },
-    async getFeatures() {
-      const {
-        data: { data },
-      } = await axios.get(`${process.env.strapiUrl}/api/features`, {
-        params: {
-          populate: 'deep',
-          'sort[0]': 'id',
-        },
-      })
-      this.dropdownItems = data.map((item) => ({
-        id: item.id,
-        title: item.navTitle,
-        description: item.navDescription,
-        imageUrl: item.navIcon?.imageUrl || item.navIcon?.image.url,
-        imageAlt: item.navIcon.imageAlt,
-        slug: item.slug,
-      }))
+    showDropdown() {
+      if (this.dropdownTimeout) {
+        clearTimeout(this.dropdownTimeout)
+        this.dropdownTimeout = null
+      }
+      this.dropdownActive = true
     },
-  },
+    hideDropdown() {
+      this.dropdownTimeout = setTimeout(() => {
+        this.dropdownActive = false
+      }, 300) // 300ms delay before closing for better UX
+    },
+    populateFeatures(data) {
+      // Reset all category items
+      this.categories.forEach(category => {
+        category.items = []
+      })
+
+      // Map features to categories
+      data.forEach((item) => {
+        const categoryTitle = item.featureCategory;
+        const category = this.categories.find(cat => cat.title === categoryTitle);
+        
+        if (category) {
+          category.items.push({
+            id: item.id,
+            title: item.navTitle,
+            description: item.navDescription,
+            imageUrl: item.navIcon?.imageUrl || item.navIcon?.image?.url,
+            imageAlt: item.navIcon?.imageAlt || item.navTitle,
+            slug: item.slug,
+          });
+        }
+      });
+    },
+    async getFeatures() {
+      try {
+        const {
+          data: { data },
+        } = await axios.get(`${process.env.strapiUrl}/api/features`, {
+          params: {
+            populate: 'deep',
+            'sort[0]': 'id',
+          },
+        })
+
+        // Cache the fresh data
+        localStorage.setItem('navFeatures', JSON.stringify(data))
+        
+        // Update the features
+        this.populateFeatures(data)
+      } catch (error) {
+        console.error('Error fetching features:', error);
+      }
+    }
+  }
 }
 </script>
 
@@ -219,20 +287,21 @@ nav {
 }
 
 .dropdown-menu {
-  padding-block: 16px;
+  padding: 24px 0;
   border: none;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.05);
   position: absolute;
   left: 0;
   right: 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding-inline: 9vw;
+  top: 100%;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.3s ease;
   pointer-events: none;
+  background: white;
+  width: 100%;
+  display: block !important;
 }
 
 .dropdown-menu.active {
@@ -241,10 +310,19 @@ nav {
   transform: translateY(0);
   pointer-events: auto;
   z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 24px;
+  padding: 0 24px;
 }
 
 .chevron-icon {
-  font-size: 12px;
   transition: transform 0.3s ease;
 }
 
@@ -253,12 +331,15 @@ nav {
 }
 
 @media (max-width: 1199px) {
-  .nav-link {
-    font-size: 16px;
-    padding-right: 5px !important;
-    padding-left: 5px !important;
+  .dropdown-menu {
+    padding: 16px 0;
+  }
+  .dropdown-menu-inner {
+    gap: 16px;
+    padding: 0 16px;
   }
 }
+
 @media (max-width: 991px) {
   .nav-link {
     padding-block: 0;
@@ -276,17 +357,15 @@ nav {
   }
 
   .dropdown-menu {
-    display: grid;
     position: relative;
     box-shadow: none;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0;
+    border-radius: 0;
   }
 
-  .dropdown-menu.active {
-    grid-template-columns: repeat(2, 1fr) !important;
-    padding-inline: 0 !important;
-
+  .dropdown-menu-inner {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 0 16px;
   }
 }
 
