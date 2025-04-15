@@ -19,7 +19,7 @@
               v-if="idx === 0"
               class="quotes__logo"
               src="/quotes.svg"
-              alt=""
+              alt="quilotes-logo"
               loading="lazy"
             />
             <div class="d-flex flex-column align-items-center text-center px-2">
@@ -58,6 +58,7 @@
           <nuxt-img
             src="UI Block/Vector 5.svg"
             class="position-absolute arrow-decoration"
+            alt="arrow"
             loading="lazy"
           />
         </h2>
@@ -86,6 +87,7 @@
                   testimonial.profileImage.imageUrl ||
                   testimonial.profileImage.image.url
                 "
+                :alt="testimonial.profileImage.imageAlt"
                 class="img-fluid testimonial__user"
                 loading="lazy"
               />

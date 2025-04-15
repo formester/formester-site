@@ -39,8 +39,8 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/form-building-service/" class="footer__link">
-                  Form Building Service
+                <NuxtLink to="/custom-form-building-service/" class="footer__link">
+                  Custom Form Building
                 </NuxtLink>
               </li>
             </ul>
@@ -65,20 +65,10 @@
             </ul>
 
             <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
-              Solutions
+              AI Solutions
             </h5>
 
             <ul class="list-unstyled mt-2">
-              <li class="mt-2">
-                <NuxtLink to="/online-form-builder/" class="footer__link"
-                  >Online Form Builder</NuxtLink
-                >
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/solutions/quiz/" class="footer__link"
-                  >Quiz Maker</NuxtLink
-                >
-              </li>
               <li class="mt-2">
                 <NuxtLink to="/ai-form-generator/" class="footer__link"
                   >AI Form Generator</NuxtLink
@@ -103,22 +93,12 @@
               </li>
               <li class="mt-2">
                 <NuxtLink to="/poll-maker/" class="footer__link"
-                  >Poll Maker</NuxtLink
-                >
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/online-survey-maker/" class="footer__link"
-                  >Survey Maker</NuxtLink
-                >
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/questionnaire-maker/" class="footer__link"
-                  >Questionnaire Maker</NuxtLink
+                  >AI Poll Maker</NuxtLink
                 >
               </li>
               <li class="mt-2">
                 <NuxtLink to="/test-creator/" class="footer__link"
-                  >Test Creator</NuxtLink
+                  >AI Test Creator</NuxtLink
                 >
               </li>
               <li class="mt-2">
@@ -282,7 +262,7 @@
 
               <li class="mt-2">
                 <NuxtLink to="/features/embed-forms/" class="footer__link">
-                  Embeding Forms
+                  Embeddable Forms
                 </NuxtLink>
               </li>
             </ul>
@@ -373,6 +353,11 @@
                   Squarespace
                 </NuxtLink>
               </li>
+              <li class="mt-2">
+                <NuxtLink to="/plugins/canva-form-builder/" class="footer__link">
+                  Canva
+                </NuxtLink>
+              </li>
             </ul>
           </div>
 
@@ -384,7 +369,7 @@
             <ul class="list-unstyled mt-2">
               <li class="mt-2">
                 <NuxtLink to="/comparison-tool/" class="footer__link">
-                  Compare From Builders
+                  Compare Form Builders
                 </NuxtLink>
               </li>
               <li class="mt-2">
@@ -430,6 +415,11 @@
                   Formester vs Formstack
                 </NuxtLink>
               </li>
+              <li class="mt-2">
+                <NuxtLink to="/formester-vs-canva/" class="footer__link">
+                  Formester vs Canva
+                </NuxtLink>
+              </li>
             </ul>
 
             <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
@@ -442,7 +432,23 @@
                   to="/case-study/using-formester-for-lead-generation-success/"
                   class="footer__link"
                 >
-                  Formester For Lead Generation Success
+                  Formester for Lead Generation Success
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
+                <NuxtLink
+                  to="/use-case/formester-for-finance/"
+                  class="footer__link"
+                >
+                  Formester for Finance
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
+                <NuxtLink
+                  to="/use-case/formester-for-training-and-assessments/"
+                  class="footer__link"
+                >
+                  Formester for Training & Assessments
                 </NuxtLink>
               </li>
               <li class="mt-2">
@@ -453,7 +459,7 @@
                     target="_blank"
                     ><nuxt-img
                       src="/social/reddit.svg"
-                      alt="Formester reddit community"
+                      alt="Formester Reddit community"
                   /></a>
                   <a
                     href="https://www.linkedin.com/company/formester-inc/"
@@ -461,7 +467,7 @@
                     target="_blank"
                     ><nuxt-img
                       src="/social/linkedin.svg"
-                      alt="Formester linkedin page"
+                      alt="Formester LinkedIn page"
                   /></a>
                   <a
                     href="https://www.youtube.com/channel/UCVfBesiZINubCEC9Xu5Z6gQ"
@@ -469,7 +475,7 @@
                     target="_blank"
                     ><nuxt-img
                       src="/social/youtube.svg"
-                      alt="Formester youtube page"
+                      alt="Formester YouTube page"
                   /></a>
                   <a
                     href="https://instagram.com/_formester_?utm_medium=copy_link"
@@ -477,7 +483,7 @@
                     target="_blank"
                     ><nuxt-img
                       src="/social/instagram.svg"
-                      alt="Fomester instagram page"
+                      alt="Formester Instagram page"
                   /></a>
                   <a
                     href="https://twitter.com/_Formester_?t=-m1pNwXvxR6KOf9kfPi9lQ&s=09"
@@ -485,7 +491,7 @@
                     target="_blank"
                     ><nuxt-img
                       src="/social/twitter.svg"
-                      alt="Formester twitter page"
+                      alt="Formester Twitter page"
                   /></a>
                   <a
                     href="https://www.facebook.com/formester"
@@ -493,7 +499,7 @@
                     target="_blank"
                     ><nuxt-img
                       src="/social/facebook.svg"
-                      alt="Formester facebook page"
+                      alt="Formester Facebook page"
                   /></a>
                 </div>
               </li>

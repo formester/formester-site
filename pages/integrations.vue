@@ -65,6 +65,7 @@ export default {
           name: 'Slack',
           desc: 'Slack channels will receive form submissions.',
           img: 'slack.png',
+          url: '/integrations/slack/',
         },
         {
           name: 'Discord',
@@ -85,6 +86,7 @@ export default {
           name: 'Google Sheets',
           desc: 'Add form data to your spreadsheet quickly.',
           img: 'google-sheets.png',
+          url: '/integrations/google-sheets/',
         },
         {
           name: 'HubSpot',
@@ -92,9 +94,10 @@ export default {
           img: 'hubspot.png',
         },
         {
-          name: 'Google Drive',
-          desc: 'Google Drive integration for file uploads and form submissions.',
-          img: 'gdrive.png',
+          name: 'Gmail',
+          desc: 'Gmail integration for sending form responses as emails.',
+          img: 'gmail.svg',
+          url: '/integrations/gmail/'
         },
         {
           name: 'Notion',
