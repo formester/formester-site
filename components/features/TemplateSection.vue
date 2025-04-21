@@ -46,6 +46,10 @@ export default {
       type: Object,
       required: true,
     },
+    specificTemplate: {
+      type: Array,
+      default: () => [],
+    },
   },
   data() {
     return {
@@ -79,8 +83,16 @@ export default {
           description: template.description || dummyDescription,
         }))
 
-        const randIndex = Math.floor(Math.random() * (templates.length - 3))
-        this.templates = templates.slice(randIndex, randIndex + 3)
+        // Filter templates based on specificTemplate prop
+        if (this.specificTemplate && this.specificTemplate.length > 0) {
+          const templateSlugs = this.specificTemplate.map(template => template.text)
+          this.templates = templates.filter(template => 
+            templateSlugs.includes(template.slug)
+          )
+        } else {
+          const randIndex = Math.floor(Math.random() * (templates.length - 3))
+          this.templates = templates.slice(randIndex, randIndex + 3)
+        }
       } catch (err) {
         console.error(err)
       }
