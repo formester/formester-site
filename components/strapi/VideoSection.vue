@@ -7,21 +7,16 @@
             {{ description }}
           </p>
         </div>
-        <div
-          class="d-flex flex-column flex-md-row justify-content-center align-items-center mt-md-5 flex-wrap"
-          style="width: 100%;"
-        >
+        <div>
+
           <!-- YouTube Video Thumbnail with Custom Play Button -->
-          <div v-if="video_url" class="video-thumbnail-wrapper position-relative mx-auto" style="max-width: 100%; cursor: pointer; display: flex; justify-content: center;"
-            @click="showOverlay = true">
+          <div v-if="video_url" class="video-thumbnail-wrapper" @click="showOverlay = true">
             <nuxt-img
-              :src="thumbnail? thumbnail.url : youtubeThumbnailUrl"
-              class="img-fluid rounded shadow video-thumb-img"
-              style="display: block;"
+              :src="thumbnail ? thumbnail.url : youtubeThumbnailUrl"
+              class="video-thumb-img"
             />
-            <button class="custom-play-btn" aria-label="Play video"
-              style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: none; background: transparent; border-radius: 50%; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;">
-              <svg width="48" height="48" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="custom-play-btn" aria-label="Play video">
+              <svg width="64" height="64" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="18" cy="18" r="18" fill="white" fill-opacity="1"/>
                 <polygon points="15,12 27,18 15,24" fill="#6434D0"/>
               </svg>
@@ -111,12 +106,21 @@
 
 <style>
 .video-thumb-img {
-  width: 800px !important;
-  height: 450px !important;
-  aspect-ratio: 16 / 9;
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
   object-fit: cover;
-  border-radius: 16px;
-  overflow: hidden;
+  aspect-ratio: 3 / 2;
+  box-shadow: 0 2px 32px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+.debug-img-border {
+  border: 2px solid blue !important;
+}
+
+.debug-border {
+  border: 2px solid green !important;
 }
 @media (max-width: 700px) {
   .video-thumb-img {
@@ -134,22 +138,58 @@
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+.video-thumbnail-wrapper {
+  position: relative;
+  width: 800px;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+@media (max-width: 991px) {
+  .video-thumbnail-wrapper {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-thumbnail-wrapper {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 180px;
+  }
+}
+
 .custom-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
   animation: pulse 2s infinite;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 @keyframes pulse {
   0% {
-    transform: scale(1);
+    transform: translate(-50%, -50%) scale(1);
     box-shadow: 0 0 0 0 rgba(220,220,220,100);
     opacity: 1;
   }
   70% {
-    transform: scale(1.1);
+    transform: translate(-50%, -50%) scale(1.1);
     box-shadow: 0 0 0 20px rgba(255,0,0,0.0);
     opacity: 0.85;
   }
   100% {
-    transform: scale(1);
+    transform: translate(-50%, -50%) scale(1);
     box-shadow: 0 0 0 0 rgba(255,0,0,0.0);
     opacity: 1;
   }
