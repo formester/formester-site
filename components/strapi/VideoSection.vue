@@ -14,10 +14,10 @@
           <!-- YouTube Video Thumbnail with Custom Play Button -->
           <div v-if="video_url" class="video-thumbnail-wrapper position-relative mx-auto" style="max-width: 100%; cursor: pointer; display: flex; justify-content: center;"
             @click="showOverlay = true">
-            <img
-              :src="thumbnail && thumbnail.url ? thumbnail.url : youtubeThumbnailUrl"
-              class="img-fluid rounded shadow"
-              style="width: 100%; display: block;"
+            <nuxt-img
+              :src="thumbnail? thumbnail.url : youtubeThumbnailUrl"
+              class="img-fluid rounded shadow video-thumb-img"
+              style="display: block;"
             />
             <button class="custom-play-btn" aria-label="Play video"
               style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: none; background: transparent; border-radius: 50%; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;">
@@ -38,7 +38,7 @@
                 frameborder="0"
                 allow="autoplay; encrypted-media"
                 allowfullscreen
-                style="width: 100%; min-width: 900px; height: 506px; max-width: 95vw; max-height: 85vh; border-radius: 12px; box-shadow: 0 4px 32px rgba(0,0,0,0.5); margin: auto; display: block;"
+                style="width: 100%; min-width: 1000px; height: 563px; max-width: 95vw; max-height: 85vh; border-radius: 12px; box-shadow: 0 4px 32px rgba(0,0,0,0.5); margin: auto; display: block;"
               ></iframe>
               <button @click="closeOverlay" aria-label="Close video"
                 style="position: absolute; top: -32px; right: -32px; background: #fff; border: none; border-radius: 50%; width: 40px; height: 40px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); display: flex; align-items: center; justify-content: center; cursor: pointer;">
@@ -110,6 +110,22 @@
 
 
 <style>
+.video-thumb-img {
+  width: 800px !important;
+  height: 450px !important;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 16px;
+  overflow: hidden;
+}
+@media (max-width: 700px) {
+  .video-thumb-img {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 180px;
+  }
+}
+
 .video-overlay {
   animation: fadeIn 0.2s;
   z-index: 2147483647 !important;
