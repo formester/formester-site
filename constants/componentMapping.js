@@ -20,5 +20,6 @@ export default {
   'macro-components.faqs-with-categories': () => import('@/components/features/FaqWithCategories.vue'),
   'macro-components.code-showcase-section': () => import('@/components/features/FeatureCodeShowcase.vue'),
   'macro-components.hero-centered-dark': () => import('@/components/strapi/HeroCenteredDark.vue'),
+  'macro-components.rich-text': () => import('@/components/strapi/RichText.vue'),
   'macro-components.video-section': () => import('@/components/strapi/VideoSection.vue'),
 }
