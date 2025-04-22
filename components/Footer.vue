@@ -280,6 +280,11 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
+                <NuxtLink to="/about-us/" class="footer__link">
+                  About Us
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
                 <a href="https://status.formester.com" class="footer__link">
                   Status
                 </a>
