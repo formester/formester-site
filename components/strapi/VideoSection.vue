@@ -16,31 +16,21 @@
               class="video-thumb-img"
             />
             <button class="custom-play-btn" aria-label="Play video">
-              <svg width="64" height="64" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="18" cy="18" r="18" fill="white" fill-opacity="1"/>
-                <polygon points="15,12 27,18 15,24" fill="#6434D0"/>
-              </svg>
-            </button>
+              <img src="/play-button.svg" />
+          </button>
           </div>
           <!-- Overlay -->
-          <div v-if="showOverlay" class="video-overlay" @click.self="closeOverlay"
-            style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.8); display: flex; align-items: center; justify-content: center; z-index: 2147483647 !important;">
-            <div style="position: relative; min-width: 900px; max-width: 95vw; max-height: 85vh; display: flex; justify-content: center;">
+          <div v-if="showOverlay" class="video-overlay" @click.self="closeOverlay">
+            <div class="video-overlay-wrapper">
               <iframe
+                class="video-iframe"
                 :src="youtubeEmbedUrl"
-                width="900"
-                height="506"
                 frameborder="0"
                 allow="autoplay; encrypted-media"
                 allowfullscreen
-                style="width: 100%; min-width: 1000px; height: 563px; max-width: 95vw; max-height: 85vh; border-radius: 12px; box-shadow: 0 4px 32px rgba(0,0,0,0.5); margin: auto; display: block;"
               ></iframe>
-              <button @click="closeOverlay" aria-label="Close video"
-                style="position: absolute; top: -32px; right: -32px; background: #fff; border: none; border-radius: 50%; width: 40px; height: 40px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); display: flex; align-items: center; justify-content: center; cursor: pointer;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 6L18 18" stroke="#333" stroke-width="2" stroke-linecap="round"/>
-                  <path d="M6 18L18 6" stroke="#333" stroke-width="2" stroke-linecap="round"/>
-                </svg>
+              <button @click="closeOverlay" aria-label="Close video" class="close-btn">
+                <img src="/x-close.svg" />
               </button>
             </div>
           </div>
@@ -105,6 +95,76 @@
 
 
 <style>
+.close-btn {
+  position: absolute;
+  top: -24px;
+  right: -24px;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+@media (max-width: 1000px) {
+  .close-btn {
+    top: -16px;
+    right: -16px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.video-overlay-wrapper {
+  position: relative;
+  max-width: 95vw;
+  max-height: 85vh;
+  display: flex;
+  justify-content: center;
+}
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: rgba(0,0,0,0.8);
+  align-items: center;
+  justify-content: center;
+  z-index: 2147483647 !important;
+}
+
+.video-iframe {
+    width: 100%;
+    height: 100%;
+    min-width: 1000px;
+    min-height: 563px;
+    border-radius: 8px;
+    box-shadow: 0 2px 32px rgba(0,0,0,0.1);
+   margin: auto;
+   display: block;
+}
+
+@media (max-width: 1000px) {
+  .video-iframe {
+    min-width: 0;
+    min-height: 0;
+    width: 80vw;
+    height: calc(80vw * 0.5625); /* 16:9 aspect ratio */
+    max-width: 100%;
+    max-height: calc(80vw * 0.5625);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
 .video-thumb-img {
   display: block;
   width: 100%;
@@ -115,13 +175,7 @@
   box-shadow: 0 2px 32px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
 }
-.debug-img-border {
-  border: 2px solid blue !important;
-}
 
-.debug-border {
-  border: 2px solid green !important;
-}
 @media (max-width: 700px) {
   .video-thumb-img {
     width: 100% !important;
@@ -147,6 +201,21 @@
   margin-top: 16px;
 }
 
+.custom-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  animation: pulse 2s infinite;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
 @media (max-width: 991px) {
   .video-thumbnail-wrapper {
     width: 100% !important;
@@ -163,20 +232,7 @@
   }
 }
 
-.custom-play-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: none;
-  background: transparent;
-  border-radius: 50%;
-  width: 64px;
-  height: 64px;
-  animation: pulse 2s infinite;
-  z-index: 2;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
+
 @keyframes pulse {
   0% {
     transform: translate(-50%, -50%) scale(1);
