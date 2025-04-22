@@ -3,7 +3,10 @@
       <div class="row justify-content-center align-items-center text-center mt-5">
         <div>
           <SectionTitle :heading="title" />
-          <p class="hero__subheading" v-if="description">
+          <p class="hero__subheading" v-if="description_markdown">
+            <MarkdownContent :content="description_markdown" />
+          </p>
+          <p class="hero__subheading" v-else-if="description">
             {{ description }}
           </p>
         </div>
@@ -61,6 +64,10 @@
      thumbnail: {
         type: Object,
         default: () => (null)
+      },
+      description_markdown: {
+        type: String,
+        default: '',
       },
     },
     data() {
