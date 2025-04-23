@@ -19,7 +19,7 @@
               class="video-thumb-img"
             />
             <button class="custom-play-btn" aria-label="Play video">
-              <img src="/play-button.svg" />
+              <nuxt-img src="/play-button.svg" />
           </button>
           </div>
           <!-- Overlay -->
@@ -33,7 +33,7 @@
                 allowfullscreen
               ></iframe>
               <button @click="closeOverlay" aria-label="Close video" class="close-btn">
-                <img src="/x-close.svg" />
+                <nuxt-img src="/x-close.svg" />
               </button>
             </div>
           </div>
