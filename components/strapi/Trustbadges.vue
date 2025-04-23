@@ -4,31 +4,31 @@
         <SectionTitle :heading="title" />
         <div class="trustbadge-wrapper">
             <div class="rating-wrapper">
-                <img src="/g2-crowd.svg" alt="G2 Crowd" class="logo" />
+                <nuxt-img src="/g2-crowd.svg" alt="G2 Crowd" class="logo" />
                 <div class="rating">
                     <span class="rating-number">4.7</span>
-                    <img src="/4.5-stars.svg" alt="4.5 stars" class="rating-stars" />
+                    <nuxt-img src="/4.5-stars.svg" alt="4.5 stars" class="rating-stars" />
                 </div>
             </div>
             <div class="rating-wrapper">
-                <img src="/capterra.svg" alt="Capterra" class="logo" />
+                <nuxt-img src="/capterra.svg" alt="Capterra" class="logo" />
                 <div class="rating">
                     <span class="rating-number">5</span>
-                    <img src="/5-stars.svg" alt="5 stars" class="rating-stars" />
+                    <nuxt-img src="/5-stars.svg" alt="5 stars" class="rating-stars" />
                 </div>
             </div>
             <div class="rating-wrapper">
-                <img src="/product-hunt.svg" alt="Product Hunt" class="logo" />
+                <nuxt-img src="/product-hunt.svg" alt="Product Hunt" class="logo" />
                 <div class="rating">
                     <span class="rating-number">5</span>
-                    <img src="/5-stars.svg" alt="5 stars" class="rating-stars" />
+                    <nuxt-img src="/5-stars.svg" alt="5 stars" class="rating-stars" />
                 </div>
             </div>
             <div class="rating-wrapper">
-                <img src="/trustpilot.svg" alt="Trustpilot" class="logo" />
+                <nuxt-img src="/trustpilot.svg" alt="Trustpilot" class="logo" />
                 <div class="rating">
                     <span class="rating-number">4.4</span>
-                    <img src="/4.5-stars.svg" alt="4.5 stars" class="rating-stars" />
+                    <nuxt-img src="/4.5-stars.svg" alt="4.5 stars" class="rating-stars" />
                 </div>
             </div>
         </div>
