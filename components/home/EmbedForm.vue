@@ -43,4 +43,22 @@ export default {
     animation: pulse 4s infinite;
   }
 }
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: none;
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: none;
+    opacity: 0.85;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: none;
+    opacity: 1;
+  }
+}
 </style>

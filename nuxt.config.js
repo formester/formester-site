@@ -149,7 +149,7 @@ export default {
   // Nuxt Image
   image: {
     dir: 'assets/images',
-    domains: ['formester-strapi.s3.ap-south-1.amazonaws.com'],
+    domains: ['formester-strapi.s3.ap-south-1.amazonaws.com','img.youtube.com'],
   },
 
   // Enviornment variable for the base url of the app
