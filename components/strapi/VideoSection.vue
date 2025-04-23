@@ -58,7 +58,6 @@
       },
       video_url: {
         type: String,
-        default: '',
         required: true,
       },
      thumbnail: {
