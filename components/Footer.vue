@@ -64,7 +64,13 @@
               </li>
             </ul>
 
-            <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
+     
+          </div>
+
+          <div
+            class="col-lg-3 col-sm-6 mb-4 mb-md-0 mt-0 mt-lg-0 text-lg-start"
+          >
+          <h5 class="text-uppercase footer__items--heading mb-3 ">
               AI Solutions
             </h5>
 
@@ -107,171 +113,8 @@
                 </NuxtLink>
               </li>
             </ul>
-          </div>
-          <!--Grid column-->
 
-          <!--Grid column-->
-          <div class="col-lg-3 col-sm-6 mb-4 mb-md-0 text-lg-start">
-            <h5 class="text-uppercase footer__items--heading mb-3">Features</h5>
-
-            <ul class="list-unstyled mt-2">
-              <li class="mt-2">
-                <NuxtLink
-                  to="/features/html-form-backend/"
-                  class="footer__link"
-                >
-                  HTML Form Backend
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink
-                  to="/features/autoresponder-email/"
-                  class="footer__link"
-                >
-                  Auto Responder
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/features/spam-protection/" class="footer__link">
-                  Spam Protection
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/features/form-analytics/" class="footer__link">
-                  Form Analytics
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink
-                  to="/features/conditional-logic/"
-                  class="footer__link"
-                >
-                  Conditional Logic
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/features/online-payments/" class="footer__link">
-                  Online Payments
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink
-                  to="/features/electronic-signature/"
-                  class="footer__link"
-                >
-                  Electronic Signature
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/features/branding-kit/" class="footer__link">
-                  Branding Kit
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink
-                  to="/features/information-recall/"
-                  class="footer__link"
-                >
-                  Information Recall
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink
-                  to="/features/calculating-fields/"
-                  class="footer__link"
-                >
-                  Calculating Fields
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink
-                  to="/features/team-collaboration/"
-                  class="footer__link"
-                >
-                  Collaboration
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/features/offline-forms/" class="footer__link">
-                  Offline Forms
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink
-                  to="/features/partial-submissions/"
-                  class="footer__link"
-                >
-                  Partial Submissions
-                </NuxtLink>
-              </li>
-
-              <li class="mt-2">
-                <NuxtLink
-                  to="/features/multi-language-form-translations/"
-                  class="footer__link"
-                >
-                  Multilingual Forms
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink
-                  to="/features/export-form-submission-pdf/"
-                  class="footer__link"
-                >
-                  PDF Export
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/features/form-limiter/" class="footer__link">
-                  Form Limiter
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink
-                  to="/features/qr-code-generator/"
-                  class="footer__link"
-                >
-                  QR Code Generator
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink
-                  to="/features/save-and-continue/"
-                  class="footer__link"
-                >
-                  Auto Save and Continue
-                </NuxtLink>
-              </li>
-
-              <li class="mt-2">
-                <NuxtLink
-                  to="/features/file-upload-forms/"
-                  class="footer__link"
-                >
-                  File Upload
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink
-                  to="/features/drag-and-drop-form-builder/"
-                  class="footer__link"
-                >
-                  Drag and Drop Interface
-                </NuxtLink>
-              </li>
-
-              <li class="mt-2">
-                <NuxtLink to="/features/embed-forms/" class="footer__link">
-                  Embeddable Forms
-                </NuxtLink>
-              </li>
-            </ul>
-          </div>
-
-          <div
-            class="col-lg-3 col-sm-6 mb-4 mb-md-0 mt-0 mt-sm-4 mt-lg-0 text-lg-start"
-          >
-            <h5 class="text-uppercase footer__items--heading mb-3">Support</h5>
+            <h5 class="text-uppercase footer__items--heading mb-3 mt-5">Support</h5>
 
             <ul class="list-unstyled mt-2">
               <li class="mt-2">
@@ -311,7 +154,13 @@
               </li>
             </ul>
 
-            <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
+          </div>
+
+          
+          <div
+            class="col-lg-3 col-sm-6 mb-4 mb-md-0 mt-0 mt-sm-4 mt-lg-0 text-lg-start"
+          >
+            <h5 class="text-uppercase footer__items--heading mb-3">
               Competitor Insights
             </h5>
 
@@ -365,6 +214,7 @@
               </li>
             </ul>
           </div>
+
 
           <div
             class="col-lg-3 col-sm-6 mb-4 mb-md-0 mt-0 mt-sm-4 mt-lg-0 text-lg-start"
@@ -456,8 +306,12 @@
                   Formester for Training & Assessments
                 </NuxtLink>
               </li>
-              <li class="mt-2">
-                <div class="socials mt-4">
+            </ul>
+          </div>
+        </div>
+      </section>
+      <div class="divider mt-4"></div>
+      <div class="socials mt-4">
                   <a
                     href="https://www.reddit.com/r/Formester/"
                     class="mx-1 my-2 inline-block"
@@ -508,11 +362,6 @@
                   /></a>
                 </div>
               </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <div class="divider mt-4"></div>
       <div class="copyright d-flex justify-content-center mt-3">
         © 2025 Acorn Globus. All rights reserved
       </div>
@@ -530,7 +379,7 @@ ul {
 }
 
 .footer__container {
-  background: linear-gradient(180deg, #4f3895 0.01%, #1d1240 100%);
+  background: linear-gradient(180deg, #5B2FBD 0.01%, #371D72 100%);
   color: var(--clr-primary-light);
   padding: 2em 0 1em 0;
 }
@@ -546,17 +395,18 @@ ul {
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0.02em;
-  color: var(--clr-primary-light);
+  color: #F7F3FF;
 }
 
 .footer__link {
   font-size: 14px;
   line-height: 21px;
-  color: white;
+  color: #F7F3FF;
 }
 
 .footer__link:hover {
   color: white;
+  text-decoration: underline;
 }
 
 .divider {
