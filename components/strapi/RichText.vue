@@ -1,10 +1,7 @@
 <template>
   <section class="container">
     <div>
-      <MarkdownContent
-        v-if="code"
-        :content="code"
-      />
+      <MarkdownContent v-if="code" :content="code" />
     </div>
   </section>
 </template>
@@ -21,9 +18,7 @@ export default {
 </script>
 <style scoped>
 .container {
-  margin-top: 24px;
+  margin-top: 64px;
   margin-bottom: 64px;
 }
 </style>
-
-

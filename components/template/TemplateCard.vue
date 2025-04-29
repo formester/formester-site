@@ -86,7 +86,8 @@ export default {
 
 .image-skeleton {
   width: 100%;
-  min-height: 11rem;
+  height: 176px;
+  border-radius: 8px;
   animation: skeleton-loading 1s linear infinite alternate;
 }
 
@@ -94,6 +95,9 @@ export default {
   display: block;
   transition: all 0.4s ease;
   overflow: hidden;
+  width: 100%;
+  height: 176px;
+  object-fit: cover;
 }
 
 .template-preview__img.hidden {
