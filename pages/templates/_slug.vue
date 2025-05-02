@@ -160,7 +160,7 @@ export default {
   methods: {
     redirectTo() {
       window.open(
-        `https://app.formester.com/forms/new?template_id=${this.template.id}`,
+        `https://app.formester.com/templates?template_id=${this.template.id}`,
         '_blank'
       )
     },
