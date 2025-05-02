@@ -254,6 +254,14 @@
                   Event Planning Cost Estimator
                 </NuxtLink>
               </li>
+              <li class="mt-2">
+                <NuxtLink
+                  to="/tools/business-quote-generator/"
+                  class="footer__link"
+                >
+                  Business Quote Generator
+                </NuxtLink>
+              </li>
             </ul>
           </div>
 
