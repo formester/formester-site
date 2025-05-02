@@ -4,11 +4,11 @@
           <SectionTitle :heading="title" />
             <table class="tablestyle">
                 <thead>
-                    <TableRow :rowData="row[0].rowData" :rowType="row[0].rowType" />
+                    <TableRow :rowData="rows[0].rowData" :rowType="rows[0].rowType" />
                 </thead>
                 <tbody>
                     <TableRow
-          v-for="(row, index) in row.slice(1)"
+          v-for="(row, index) in rows.slice(1)"
           :key="index"
           :rowData="row.rowData"
           :rowType="row.rowType"
@@ -28,7 +28,7 @@
         type: Array,
         required: true,
       },
-      row: Array,
+      rows: Array,
     },
     components: {
       TableRow
