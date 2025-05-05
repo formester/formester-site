@@ -225,9 +225,9 @@ export default {
   },
   methods: {
     checkIsMobile() {
-      this.isMobile = window.innerWidth < 992
+      this.isMobile = window.innerWidth < 1200;
       if (!this.isMobile) {
-        this.dropdownActive = false // Reset dropdown state when switching to desktop
+        this.dropdownActive = false; // Reset dropdown state when switching to desktop
       }
     },
     toggleDropdown() {
@@ -238,9 +238,9 @@ export default {
      * Toggle mobile navigation collapse
      */
     collapseNav() {
-      if (window.screen.width >= 992) return
-      const bsCollapse = new bootstrap.Collapse(this.$refs.siteNav)
-      bsCollapse.toggle()
+      if (window.screen.width >= 1200) return;
+      const bsCollapse = new bootstrap.Collapse(this.$refs.siteNav);
+      bsCollapse.toggle();
     },
 
     /**
