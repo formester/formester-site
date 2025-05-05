@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg  sticky-top bg-white">
+  <nav class="navbar navbar-expand-xl  sticky-top bg-white">
     <div class="container">
       <!-- Logo -->
       <NuxtLink class="navbar-brand" to="/">
@@ -526,7 +526,7 @@ nav {
 
 
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
 
 
   .nav-item {
