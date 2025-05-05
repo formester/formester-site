@@ -25,71 +25,105 @@
         ref="siteNav"
         id="navbarSupportedContent"
       >
-        <ul
+                <ul
           class="navbar-nav ms-auto navbar-nav-scroll"
           style="--bs-scroll-height: calc(100vh - 54px)"
         >
-          <!-- Features Dropdown with Mega Menu -->
           <li
             class="nav-item dropdown me-3 position-static"
-            @click="collapseNav"
-            @mouseenter="onDropdownMouseEnter"
-            @mouseleave="onDropdownMouseLeave"
+            :class="{ open: dropdownActive }"
+            @mouseenter="!isMobile && onDropdownMouseEnter()"
+            @mouseleave="!isMobile && onDropdownMouseLeave()"
           >
-            <NuxtLink
-              class="nav-link"
-              id="navbarDropdown"
-              role="button"
-              aria-expanded="false"
-              to="/features/"
-            >
-              Features
-            </NuxtLink>
+            <template v-if="isMobile">
+              <button
+                class="nav-link"
+                id="navbarDropdown"
+                type="button"
+                @click="toggleDropdown"
+              >
+                Features
+              </button>
+            </template>
+            <template v-else>
+              <NuxtLink
+                class="nav-link"
+                id="navbarDropdown"
+                role="button"
+                aria-expanded="false"
+                to="/features/"
+                @click.prevent="collapseNav()"
+              >
+                Features
+              </NuxtLink>
+            </template>
 
             <!-- Mega Dropdown -->
             <div
               class="features-dropdown-mega"
               :class="{ active: dropdownActive }"
               v-show="dropdownActive"
-              @mouseenter="onDropdownMouseEnter"
-              @mouseleave="onDropdownMouseLeave"
+              v-on="!isMobile ? { mouseenter: onDropdownMouseEnter, mouseleave: onDropdownMouseLeave } : {}"
             >
-              <!-- Categories Sidebar -->
-              <div class="features-dropdown-sidebar">
-                <div class="features-dropdown-title-category">Categories</div>
-                <button
-                  v-for="category in featureCategories"
-                  :key="category"
-                  type="button"
-                  :class="[
-                    'features-vertical-tab',
-                    { active: activeFeatureCategory === category },
-                  ]"
-                  @mouseenter="activeFeatureCategory = category"
-                >
-                  {{ category }}
-                </button>
-              </div>
-
-              <!-- Features Content -->
-              <div class="features-dropdown-content-wrap">
-                <div class="features-dropdown-title-features">Features</div>
-                <ul class="features-dropdown-content">
-                  <li
-                    v-for="dropdownItem in filteredDropdownItems"
-                    :key="dropdownItem.id"
-                    @click="dropdownActive = false"
+              <template v-if="!isMobile">
+                <!-- Categories Sidebar -->
+                <div class="features-dropdown-sidebar">
+                  <div class="features-dropdown-title-category">Categories</div>
+                  <button
+                    v-for="category in featureCategories"
+                    :key="category"
+                    type="button"
+                    :class="[
+                      'features-vertical-tab',
+                      { active: activeFeatureCategory === category },
+                    ]"
+                    @mouseenter="activeFeatureCategory = category"
                   >
-                    <DropdownItem
-                      :title="dropdownItem.title"
-                      :description="dropdownItem.description"
-                      :imageUrl="dropdownItem.imageUrl"
-                      :imageAlt="dropdownItem.imageAlt"
-                      :slug="dropdownItem.slug"
-                    />
-                  </li>
-                </ul>
-              </div>
+                    {{ category }}
+                  </button>
+                </div>
+
+                <!-- Features Content -->
+                <div class="features-dropdown-content-wrap">
+                  <div class="features-dropdown-title-features">Features</div>
+                  <ul class="features-dropdown-content">
+                    <li
+                      v-for="dropdownItem in filteredDropdownItems"
+                      :key="dropdownItem.id"
+                      @click="!isMobile && (dropdownActive = false)"
+                    >
+                      <DropdownItem
+                        :title="dropdownItem.title"
+                        :description="dropdownItem.description"
+                        :imageUrl="dropdownItem.imageUrl"
+                        :imageAlt="dropdownItem.imageAlt"
+                        :slug="dropdownItem.slug"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </template>
+              <template v-else>
+                <!-- Mobile: Flat list of all features, no categories -->
+                <div class="features-dropdown-content-wrap" style="width:100%">
+                  <div class="features-dropdown-title-features">Features</div>
+                  <ul class="features-dropdown-content">
+                    <li
+                      v-for="dropdownItem in dropdownItems"
+                      :key="dropdownItem.id"
+                      @click="!isMobile && (dropdownActive = false)"
+                    >
+                      <DropdownItem
+                        :title="dropdownItem.title"
+                        :description="dropdownItem.description"
+                        :imageUrl="dropdownItem.imageUrl"
+                        :imageAlt="dropdownItem.imageAlt"
+                        :slug="dropdownItem.slug"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </template>
             </div>
           </li>
 
@@ -155,6 +189,7 @@ export default {
       featureCategories: [],
       activeFeatureCategory: '',
       dropdownCloseTimeout: null,
+      isMobile: false,
     }
   },
   computed: {
@@ -170,8 +205,23 @@ export default {
   },
   mounted() {
     this.getFeatures()
+    this.checkIsMobile()
+    window.addEventListener('resize', this.checkIsMobile)
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.checkIsMobile)
   },
   methods: {
+    checkIsMobile() {
+      this.isMobile = window.innerWidth < 992
+      if (!this.isMobile) {
+        this.dropdownActive = false // Reset dropdown state when switching to desktop
+      }
+    },
+    toggleDropdown() {
+      this.dropdownActive = !this.dropdownActive
+      
+    },
     /**
      * Toggle mobile navigation collapse
      */
@@ -394,41 +444,43 @@ nav {
   padding: 0 24px;
 }
 
-/* ---------- Responsive Styles ---------- */
-@media (max-width: 1199px) {
-  .nav-link {
-    font-size: 16px;
-    padding-right: 5px !important;
-    padding-left: 5px !important;
-  }
+button.nav-link,
+a.nav-link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--clr-text-secondary);
+  text-align: left;
+  min-height: 48px;
+  line-height: normal;
 }
+
 
 @media (max-width: 991px) {
-  .nav-link {
-    padding-block: 0;
-  }
 
-  .nav-link:hover {
-    color: var(--clr-primary);
-    border-bottom: 2px solid transparent;
-  }
 
   .nav-item {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-top: 0.5em;
-  }
-}
+    margin-top: 8px;
 
-/* Mobile Dropdown Styles */
-@media (max-width: 900px) {
+  }
+
   .features-dropdown-mega {
+    position: static;
     flex-direction: column;
-    min-width: 250px;
+    min-width: unset;
+    max-width: unset;
+    width: 100%;
     min-height: unset;
-    left: 0;
-    right: 0;
+    left: unset;
+    right: unset;
     transform: none;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
   }
 
   .features-dropdown-sidebar {
@@ -439,16 +491,28 @@ nav {
     align-items: flex-start;
   }
 
-  .features-vertical-tab {
-    padding: 10px 14px;
-    font-size: 14px;
+  .features-dropdown-content {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;  
+    height: auto;
+    padding: 0px;
   }
 
+  .features-dropdown-content-wrap {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .features-dropdown-title-features {
+   display: none;
+  }
+
+}
+
+@media (max-width: 768px) {
   .features-dropdown-content {
-    grid-template-columns: 1fr;
-    padding: 14px 12px;
-    min-width: unset;
-    height: auto;
+    grid-template-columns: repeat(1, 1fr);
+    
   }
 }
 </style>
