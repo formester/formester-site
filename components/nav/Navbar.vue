@@ -38,24 +38,35 @@
             <template v-if="isMobile">
               <button
                 class="nav-link"
+                :class="{ active: dropdownActive || hoveringDropdown }"
                 id="navbarDropdown"
                 type="button"
                 @click="toggleDropdown"
               >
                 Features
+                <span class="chevron-stack">
+  <nuxt-img src="/chevron-down.svg" class="chevron chevron-gray" :class="{ open: dropdownActive }" />
+  <nuxt-img src="/chevron-down-colored.svg" class="chevron chevron-colored" :class="{ open: dropdownActive }" />
+</span>
               </button>
             </template>
             <template v-else>
-              <NuxtLink
+              <button
                 class="nav-link"
+                :class="{ active: dropdownActive || hoveringDropdown }"
                 id="navbarDropdown"
-                role="button"
-                aria-expanded="false"
-                to="/features/"
-                @click.prevent="collapseNav()"
+                type="button"
+                @click="toggleDropdown"
+                @mouseenter="onDropdownMouseEnter"
+                @mouseleave="onDropdownMouseLeave"
+                :aria-expanded="dropdownActive.toString()"
               >
                 Features
-              </NuxtLink>
+                <span class="chevron-stack">
+  <nuxt-img src="/chevron-down.svg" class="chevron chevron-gray" :class="{ open: dropdownActive }" />
+  <nuxt-img src="/chevron-down-colored.svg" class="chevron chevron-colored" :class="{ open: dropdownActive }" />
+</span>
+              </button>
             </template>
 
             <!-- Mega Dropdown -->
@@ -190,6 +201,7 @@ export default {
       activeFeatureCategory: '',
       dropdownCloseTimeout: null,
       isMobile: false,
+      hoveringDropdown: false,
     }
   },
   computed: {
@@ -272,14 +284,18 @@ export default {
         this.dropdownCloseTimeout = null
       }
       this.dropdownActive = true
+      this.hoveringDropdown = true
     },
 
     /**
      * Handle mouse leave on dropdown - set timeout to hide dropdown with delay
      */
     onDropdownMouseLeave() {
+      this.hoveringDropdown = false
       this.dropdownCloseTimeout = setTimeout(() => {
-        this.dropdownActive = false
+        if (!this.hoveringDropdown) {
+          this.dropdownActive = false
+        }
       }, 200)
     },
   },
@@ -298,13 +314,16 @@ nav {
   font-size: 16px;
   font-weight: 500;
   color: #6e6e6e;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.3s ease;
+  border-bottom: none;
+  transition: color 0.3s ease;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active,
+.router-link-exact-active {
   color: var(--clr-primary);
-  border-bottom: 2px solid var(--clr-primary);
+  border-bottom: none;
 }
 
 /* Buttons */
@@ -387,6 +406,66 @@ nav {
   color: #8a94a6;
   margin-left: 24px;
   margin-bottom: 12px;
+}
+
+.chevron-stack {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.chevron {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), opacity 0.2s;
+  will-change: transform;
+  pointer-events: none;
+}
+
+.chevron-gray {
+  opacity: 1;
+  z-index: 1;
+}
+
+.chevron-colored {
+  opacity: 0;
+  z-index: 2;
+}
+
+.nav-link:hover .chevron-gray,
+.nav-link:focus .chevron-gray,
+.nav-link.active .chevron-gray,
+.router-link-exact-active .chevron-gray,
+.chevron-gray.open {
+  opacity: 0;
+}
+
+.nav-link:hover .chevron-colored,
+.nav-link:focus .chevron-colored,
+.nav-link.active .chevron-colored,
+.router-link-exact-active .chevron-colored,
+.chevron-colored.open {
+  opacity: 1;
+}
+
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+.nav-link:hover .chevron,
+.nav-link:focus .chevron,
+.nav-link.active .chevron,
+.router-link-exact-active .chevron {
+  filter: none;
+  /* Optionally, you can use a color filter if your SVG is black/gray:
+     filter: invert(36%) sepia(95%) saturate(749%) hue-rotate(192deg) brightness(95%) contrast(101%);
+     Or use a colored SVG if needed. */
 }
 
 .features-vertical-tab {
