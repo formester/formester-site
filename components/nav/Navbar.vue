@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg sticky-top bg-white">
+  <nav class="navbar navbar-expand-lg  sticky-top bg-white">
     <div class="container">
       <!-- Logo -->
       <NuxtLink class="navbar-brand" to="/">
@@ -30,7 +30,7 @@
           style="--bs-scroll-height: calc(100vh - 54px)"
         >
           <li
-            class="nav-item dropdown me-3 position-static"
+            class="nav-item dropdown me-2 position-static"
             :class="{ open: dropdownActive }"
             @mouseenter="!isMobile && onDropdownMouseEnter()"
             @mouseleave="!isMobile && onDropdownMouseLeave()"
@@ -45,7 +45,7 @@
               >
                 Features
                 <span class="chevron-stack">
-  <nuxt-img src="/chevron-down.svg" class="chevron chevron-gray" :class="{ open: dropdownActive }" />
+  <nuxt-img src="/chevron-down-gray.svg" class="chevron chevron-gray" :class="{ open: dropdownActive }" />
   <nuxt-img src="/chevron-down-colored.svg" class="chevron chevron-colored" :class="{ open: dropdownActive }" />
 </span>
               </button>
@@ -63,7 +63,7 @@
               >
                 Features
                 <span class="chevron-stack">
-  <nuxt-img src="/chevron-down.svg" class="chevron chevron-gray" :class="{ open: dropdownActive }" />
+  <nuxt-img src="/chevron-down-gray.svg" class="chevron chevron-gray" :class="{ open: dropdownActive }" />
   <nuxt-img src="/chevron-down-colored.svg" class="chevron chevron-colored" :class="{ open: dropdownActive }" />
 </span>
               </button>
@@ -139,21 +139,21 @@
           </li>
 
           <!-- Regular Nav Items -->
-          <li class="nav-item me-3" @click="collapseNav">
+          <li class="nav-item me-2" @click="collapseNav">
             <NuxtLink to="/pricing/" class="nav-link">Pricing</NuxtLink>
           </li>
-          <li class="nav-item me-3" @click="collapseNav">
+          <li class="nav-item me-2" @click="collapseNav">
             <NuxtLink to="/blog/" class="nav-link">Blog</NuxtLink>
           </li>
-          <li class="nav-item me-3" @click="collapseNav">
+          <li class="nav-item me-2" @click="collapseNav">
             <NuxtLink to="/templates/" class="nav-link">Templates</NuxtLink>
           </li>
-          <li class="nav-item me-4" @click="collapseNav">
+          <li class="nav-item me-2" @click="collapseNav">
             <NuxtLink to="/integrations/" class="nav-link"
               >Integrations</NuxtLink
             >
           </li>
-          <li class="nav-item me-4" @click="collapseNav">
+          <li class="nav-item me-3" @click="collapseNav">
             <NuxtLink to="/comparison-tool/" class="nav-link">Compare</NuxtLink>
           </li>
 
@@ -303,7 +303,7 @@ export default {
 </script>
 
 <style scoped>
-/* ---------- General Navigation Styles ---------- */
+
 nav {
   padding: 1em 0;
   z-index: 99999;
@@ -313,9 +313,10 @@ nav {
 .nav-link {
   font-size: 16px;
   font-weight: 500;
-  color: #6e6e6e;
+  color: #697586;
   border-bottom: none;
   transition: color 0.3s ease;
+  background: none;
 }
 
 .nav-link:hover,
@@ -328,7 +329,7 @@ nav {
 
 /* Buttons */
 .button {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   padding: 8px 16px;
   border-radius: 8px;
@@ -411,18 +412,18 @@ nav {
 .chevron-stack {
   display: inline-block;
   position: relative;
-  width: 20px;
-  height: 20px;
-  margin-left: 4px;
+  width: 18px;
+  height: 18px;
+  margin-left: 2px;
   vertical-align: middle;
 }
 
 .chevron {
   position: absolute;
-  top: 0;
+  top: -2px;
   left: 0;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), opacity 0.2s;
   will-change: transform;
   pointer-events: none;
@@ -523,20 +524,6 @@ nav {
   padding: 0 24px;
 }
 
-button.nav-link,
-a.nav-link {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-  background: none;
-  border: none;
-  outline: none;
-  color: var(--clr-text-secondary);
-  text-align: left;
-  min-height: 48px;
-  line-height: normal;
-}
 
 
 @media (max-width: 991px) {
@@ -544,7 +531,6 @@ a.nav-link {
 
   .nav-item {
     margin-top: 8px;
-
   }
 
   .features-dropdown-mega {
