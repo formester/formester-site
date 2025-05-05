@@ -58,14 +58,14 @@ export default {
 }
 
 .dropdown-item__title {
-  color: var(#171717);
+  color: var(--clr-text-primary);
   font-size: 14px;
   font-weight: 500;
   line-height: 140%;
 }
 
 .dropdown-item__desc {
-  color: #5d5d5d !important;
+  color: var(--clr-text-secondary);
   font-size: 12px;
   font-weight: 400;
   line-height: 20px;
