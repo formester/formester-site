@@ -186,6 +186,7 @@
 import DropdownItem from './DropdownItem.vue'
 import NavItem from './NavItem.vue'
 import axios from 'axios'
+import navItems from '~/static/navbar.json'
 
 export default {
   name: 'NavNavbar',
@@ -247,17 +248,10 @@ export default {
      * Fetch features from API and organize by category
      */
     async getFeatures() {
-      const {
-        data: { data },
-      } = await axios.get(`${process.env.strapiUrl}/api/features`, {
-        params: {
-          populate: 'deep',
-          'sort[0]': 'id',
-        },
-      })
+
 
       // Map API data to dropdown items
-      this.dropdownItems = data.map((item) => ({
+      this.dropdownItems = navItems.map((item) => ({
         id: item.id,
         title: item.navTitle,
         description: item.navDescription,
