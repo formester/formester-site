@@ -1,5 +1,14 @@
 <template>
   <section class="trust-seals-section">
+    <h3 class="heading text-center">
+    <span
+      v-for="item in title"
+      :key="item.id"
+      :class="{ highlight__text: item.highlight, bold: item.bold }"
+    >
+      {{ item.text }}
+    </span>
+  </h3>
     <div class="ticker-container">
       <div class="gradient-overlay left"></div>
       
@@ -25,9 +34,27 @@
   </section>
 </template>
 
+<style scoped>
+.heading {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 64px;
+  color: var(--clr-dark);
+}
+.bold {
+  font-weight: 700;
+}
+
+</style>
+
 <script>
 export default {
   props: {
+    title: {
+      type: Array,
+      default: () => [],
+    },
     logos: {
       type: Array,
       default: () => [],
@@ -238,6 +265,14 @@ export default {
 }
 
 @media screen and (max-width: 800px) {
+  .heading {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .bold {
+    font-weight: 700;
+  }
+
   .ticker-item {
     padding: 0 16px;
   }
