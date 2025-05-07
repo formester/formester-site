@@ -69,73 +69,19 @@
               </button>
             </template>
 
-            <!-- Mega Dropdown -->
-            <div
-              class="features-dropdown-mega"
-              :class="{ active: dropdownActive }"
-              v-show="dropdownActive"
-              v-on="!isMobile ? { mouseenter: onDropdownMouseEnter, mouseleave: onDropdownMouseLeave } : {}"
-            >
-              <template v-if="!isMobile">
-                <!-- Categories Sidebar -->
-                <div class="features-dropdown-sidebar">
-                  <div class="features-dropdown-title-category">Categories</div>
-                  <button
-                    v-for="category in featureCategories"
-                    :key="category"
-                    type="button"
-                    :class="[
-                      'features-vertical-tab',
-                      { active: activeFeatureCategory === category },
-                    ]"
-                    @mouseenter="activeFeatureCategory = category"
-                  >
-                    {{ category }}
-                  </button>
-                </div>
-
-                <!-- Features Content -->
-                <div class="features-dropdown-content-wrap">
-                  <div class="features-dropdown-title-features">Features</div>
-                  <ul class="features-dropdown-content">
-                    <li
-                      v-for="dropdownItem in filteredDropdownItems"
-                      :key="dropdownItem.id"
-                      @click="!isMobile && (dropdownActive = false)"
-                    >
-                      <DropdownItem
-                        :title="dropdownItem.title"
-                        :description="dropdownItem.description"
-                        :imageUrl="dropdownItem.imageUrl"
-                        :imageAlt="dropdownItem.imageAlt"
-                        :slug="dropdownItem.slug"
-                      />
-                    </li>
-                  </ul>
-                </div>
-              </template>
-              <template v-else>
-                <!-- Mobile: Flat list of all features, no categories -->
-                <div class="features-dropdown-content-wrap" style="width:100%">
-                  <div class="features-dropdown-title-features">Features</div>
-                  <ul class="features-dropdown-content">
-                    <li
-                      v-for="dropdownItem in dropdownItems"
-                      :key="dropdownItem.id"
-                      @click="!isMobile && (dropdownActive = false)"
-                    >
-                      <DropdownItem
-                        :title="dropdownItem.title"
-                        :description="dropdownItem.description"
-                        :imageUrl="dropdownItem.imageUrl"
-                        :imageAlt="dropdownItem.imageAlt"
-                        :slug="dropdownItem.slug"
-                      />
-                    </li>
-                  </ul>
-                </div>
-              </template>
-            </div>
+            <!-- Mega Dropdown using FeaturesDropdown component -->
+            <FeaturesDropdown
+              :dropdownActive="dropdownActive"
+              :isMobile="isMobile"
+              :featureCategories="featureCategories"
+              :activeFeatureCategory="activeFeatureCategory"
+              :dropdownItems="dropdownItems"
+              :filteredDropdownItems="filteredDropdownItems"
+              @mouseenter="onDropdownMouseEnter"
+              @mouseleave="onDropdownMouseLeave"
+              @category-change="activeFeatureCategory = $event"
+              @dropdown-close="handleDropdownClose"
+            />
           </li>
 
           <!-- Regular Nav Items -->
@@ -185,6 +131,7 @@
 <script>
 import DropdownItem from './DropdownItem.vue'
 import NavItem from './NavItem.vue'
+import FeaturesDropdown from './FeaturesDropdown.vue'
 import axios from 'axios'
 import navItems from '~/static/navbar.json'
 
@@ -193,6 +140,7 @@ export default {
   components: {
     NavItem,
     DropdownItem,
+    FeaturesDropdown,
   },
   data() {
     return {
@@ -235,35 +183,25 @@ export default {
       this.dropdownActive = !this.dropdownActive
       
     },
-    /**
-     * Toggle mobile navigation collapse
-     */
+
+    
     collapseNav() {
-      if (window.screen.width >= 1200) return;
+      if (window.innerWidth >= 1200) return;
       const bsCollapse = new bootstrap.Collapse(this.$refs.siteNav);
-      bsCollapse.toggle();
+      bsCollapse.hide();
     },
 
-    /**
-     * Fetch features from API and organize by category
-     */
-    async getFeatures() {
-      // Map API data to dropdown items
-      this.dropdownItems = navItems.map((item) => {
-        // Handle the case where navIcon might be null
-        const navIcon = item.navIcon || {};
-        const image = navIcon.image || {};
-        
-        return {
-          id: item.id,
-          title: item.navTitle,
-          description: item.navDescription,
-          imageUrl: navIcon.imageUrl || (image ? image.url : null),
-          imageAlt: navIcon.imageAlt || '',
-          slug: item.slug,
-          featureCategory: item.featureCategory || 'Other',
-        };
-      });
+
+    getFeatures() {
+      this.dropdownItems = navItems.map((item) => ({
+        id: item.id,
+        title: item.navTitle,
+        description: item.navDescription,
+        imageUrl: item.navIcon?.imageUrl || item.navIcon?.image?.url,
+        imageAlt: item.navIcon?.imageAlt || '',
+        slug: item.slug,
+        featureCategory: item.featureCategory || 'Other',
+      }));
 
       // Extract unique categories
       const categories = [
@@ -273,9 +211,6 @@ export default {
       this.activeFeatureCategory = categories[0] || '';
     },
 
-    /**
-     * Handle mouse enter on dropdown - clear timeout and show dropdown
-     */
     onDropdownMouseEnter() {
       if (this.dropdownCloseTimeout) {
         clearTimeout(this.dropdownCloseTimeout)
@@ -285,9 +220,7 @@ export default {
       this.hoveringDropdown = true
     },
 
-    /**
-     * Handle mouse leave on dropdown - set timeout to hide dropdown with delay
-     */
+
     onDropdownMouseLeave() {
       this.hoveringDropdown = false
       this.dropdownCloseTimeout = setTimeout(() => {
@@ -295,6 +228,11 @@ export default {
           this.dropdownActive = false
         }
       }, 200)
+    },
+    
+    handleDropdownClose() {
+      this.dropdownActive = false
+      this.collapseNav()
     },
   },
 }

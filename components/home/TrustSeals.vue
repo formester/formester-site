@@ -59,10 +59,6 @@ export default {
       type: Array,
       default: () => [],
     },
-    speed: {
-      type: Number,
-      default: 30, // seconds to complete one loop
-    },
   },
   data() {
     return {
@@ -70,7 +66,7 @@ export default {
       tickerWidth: 0,
       contentWidth: 0,
       animationPaused: false,
-      duplicateCount: 3, // Number of copies to ensure continuous loop
+      duplicateCount: 1, // Number of copies to ensure continuous loop
       currentPosition: 0,
     }
   },
@@ -146,9 +142,9 @@ export default {
         return
       }
       
-      // Use a fixed pixel-per-second rate if content width is zero
+      // Use a fixed pixel-per-second rate
       const pixelsPerSecond = this.contentWidth > 0 ? 
-        this.contentWidth / this.speed : 
+        this.contentWidth / 50 : // 30 seconds to complete one loop
         50; // fallback speed
       
       let lastTime = null

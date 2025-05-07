@@ -22,6 +22,7 @@ async function fetchNavbar() {
       featureCategory: item.featureCategory,
       navIcon: item.navIcon ? {
         imageUrl: item.navIcon.imageUrl,
+        imageAlt: item.navIcon.imageAlt,
         image: item.navIcon.image ? {
           url: item.navIcon.image.url,
           alt: item.navIcon.imageAlt
