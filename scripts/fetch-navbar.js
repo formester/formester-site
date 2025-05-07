@@ -11,9 +11,28 @@ async function fetchNavbar() {
       'sort[0]': 'id',
     },
   })
-  const navItems = data
-  fs.writeFileSync('static/navbar.json', JSON.stringify(navItems, null, 2))
-  console.log('✅ navbar.json saved.')
+
+  // Extract only the required fields for each item
+  const extractedNavItems = data.map(item => {
+    return {
+      id: item.id,
+      slug: item.slug,
+      navTitle: item.navTitle,
+      navDescription: item.navDescription,
+      featureCategory: item.featureCategory,
+      navIcon: item.navIcon ? {
+        imageUrl: item.navIcon.imageUrl,
+        image: item.navIcon.image ? {
+          url: item.navIcon.image.url,
+          alt: item.navIcon.imageAlt
+        } : null
+      } : null
+    };
+  });
+
+  // Save the extracted data to navbar.json
+  fs.writeFileSync('static/navbar.json', JSON.stringify(extractedNavItems, null, 2))
+  console.log('✅ navbar.json saved with extracted fields.')
 }
 
 fetchNavbar()

@@ -248,25 +248,29 @@ export default {
      * Fetch features from API and organize by category
      */
     async getFeatures() {
-
-
       // Map API data to dropdown items
-      this.dropdownItems = navItems.map((item) => ({
-        id: item.id,
-        title: item.navTitle,
-        description: item.navDescription,
-        imageUrl: item.navIcon?.imageUrl || item.navIcon?.image.url,
-        imageAlt: item.navIcon.imageAlt,
-        slug: item.slug,
-        featureCategory: item.featureCategory || 'Other',
-      }))
+      this.dropdownItems = navItems.map((item) => {
+        // Handle the case where navIcon might be null
+        const navIcon = item.navIcon || {};
+        const image = navIcon.image || {};
+        
+        return {
+          id: item.id,
+          title: item.navTitle,
+          description: item.navDescription,
+          imageUrl: navIcon.imageUrl || (image ? image.url : null),
+          imageAlt: navIcon.imageAlt || '',
+          slug: item.slug,
+          featureCategory: item.featureCategory || 'Other',
+        };
+      });
 
       // Extract unique categories
       const categories = [
         ...new Set(this.dropdownItems.map((item) => item.featureCategory)),
-      ]
-      this.featureCategories = categories
-      this.activeFeatureCategory = categories[0] || ''
+      ];
+      this.featureCategories = categories;
+      this.activeFeatureCategory = categories[0] || '';
     },
 
     /**
