@@ -161,9 +161,11 @@ export default {
         // Update position based on elapsed time and speed (pixels per second / 1000 = pixels per ms)
         this.currentPosition += (pixelsPerSecond / 1000) * deltaTime
         
-        // Reset position when we've moved one full content width
-        if (this.contentWidth > 0 && this.currentPosition >= this.contentWidth) {
-          this.currentPosition = 0
+        // Create a seamless loop by using modulo instead of resetting to zero
+        // This ensures the animation continues smoothly without abrupt resets
+        if (this.contentWidth > 0) {
+          // Use modulo to create a continuous loop effect
+          this.currentPosition = this.currentPosition % this.contentWidth
         }
         
         // Apply transform
