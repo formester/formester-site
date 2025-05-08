@@ -235,17 +235,10 @@
         v-if="!selectedFormBuildersOption.filter(Boolean).length"
         class="faq-section"
       >
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-section__body">
-          <template v-for="(faq, index) in faqs">
-            <FaqAccordion
-              :id="index"
-              :index="index"
-              :name="faq.name"
-              :content="faq.content"
-            />
-          </template>
-        </div>
+        <Faq 
+          :faqItems="formattedFaqs" 
+          title="Frequently Asked Questions"
+        />
       </div>
     </div>
   </div>
@@ -256,7 +249,7 @@ import ComparisonToolHero from '@/components/comparision/ComparisonToolHero.vue'
 import ComparisonOptionCard from '@/components/comparision/ComparisonOptionCard.vue'
 import ComparisonCard from '@/components/comparision/ComparisonCard.vue'
 import FormBuilderComparisonTable from '@/components/comparision/FormBuilderComparisonTable.vue'
-import FaqAccordion from '@/components/comparision/FaqAccordion.vue'
+import Faq from '@/components/faq/Faq.vue'
 import { featureNameList } from '@/constants/plan'
 import getSiteMeta from '@/utils/getSiteMeta'
 import axios from 'axios'
@@ -267,7 +260,7 @@ export default {
     ComparisonOptionCard,
     ComparisonCard,
     FormBuilderComparisonTable,
-    FaqAccordion,
+    Faq,
   },
   async asyncData() {
     const {
@@ -346,6 +339,13 @@ export default {
     },
     filteredSelectedFormBuildersDetails() {
       return Object.values(this.selectedFormBuildersDetails).filter(Boolean)
+    },
+    formattedFaqs() {
+      return this.faqs.map((faq, index) => ({
+        id: `faq-${index + 1}`,
+        header: faq.name,
+        body: faq.content
+      }))
     },
   },
   methods: {
