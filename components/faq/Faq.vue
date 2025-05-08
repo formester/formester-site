@@ -4,7 +4,7 @@
     <p class="hero__subheading text-center" v-if="description">
       {{ description }}
     </p>
-    <div class="accordion accordion-flush my-5 mx-auto" id="accordionFaqs" style="width: 75%;">
+    <div class="accordion accordion-flush my-5 mx-auto faq-container" id="accordionFaqs">
       <div v-for="(faq, index) in formattedFaqItems" :key="faq.id || index" class="accordion-item">
         <h2 class="accordion-header">
           <button
@@ -181,5 +181,15 @@ export default {
 
 .accordion-button.collapsed {
   color: var(--clr-text-primary);
+}
+
+.faq-container {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .faq-container {
+    width: 100%;
+  }
 }
 </style>
