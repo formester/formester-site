@@ -5,7 +5,7 @@
     @click="collapseNav"
   >
     <nuxt-img :src="imageUrl" :alt="imageAlt" class="dropdown-item__img" />
-    <div class="d-flex flex-column ms-3">
+    <div class="d-flex flex-column">
       <span class="dropdown-item__title">{{ title }}</span>
       <span class="dropdown-item__desc">{{ description }}</span>
     </div>
@@ -50,29 +50,30 @@ export default {
 .dropdown-item {
   padding: 12px;
   border-radius: 8px;
+  gap: 12px;
 }
 
 .dropdown-item:hover {
-  background: #f9f9f9;
+  background: #f9fafb;
 }
 
 .dropdown-item__title {
-  color: var(#171717);
-  font-size: 16px;
+  color: var(--clr-text-primary);
+  font-size: 14px;
   font-weight: 500;
   line-height: 140%;
 }
 
 .dropdown-item__desc {
-  color: #5d5d5d !important;
-  font-size: 13px;
+  color: var(--clr-text-secondary);
+  font-size: 12px;
   font-weight: 400;
   line-height: 20px;
 }
 
 .dropdown-item__img {
-  height: 32px;
-  width: 32px;
+  height: 24px;
+  width: 24px;
 }
 
 @media (max-width: 992px) {
