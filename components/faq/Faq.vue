@@ -5,7 +5,7 @@
       {{ description }}
     </p>
     <div class="accordion accordion-flush my-5 mx-auto" id="accordionFaqs" style="width: 75%;">
-      <div v-for="(faq, index) in faqItems" :key="faq.id || index" class="accordion-item">
+      <div v-for="(faq, index) in formattedFaqItems" :key="faq.id || index" class="accordion-item">
         <h2 class="accordion-header">
           <button
             class="accordion-button collapsed"
@@ -71,6 +71,23 @@ export default {
     defaultOpen: {
       type: Number,
       default: null
+    }
+  },
+  computed: {
+    formattedFaqItems() {
+      return this.faqItems.map((faq, index) => {
+        // If the item already has the expected structure, return it as is
+        if (faq.id && (faq.header || faq.question || faq.title) && (faq.body || faq.answer || faq.content)) {
+          return faq;
+        }
+        
+        // Otherwise, format it with standard properties
+        return {
+          id: faq.id || `faq-${index + 1}`,
+          header: faq.name || faq.header || faq.question || faq.title,
+          body: faq.content || faq.body || faq.answer
+        };
+      });
     }
   },
   data() {

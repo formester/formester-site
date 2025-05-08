@@ -236,7 +236,7 @@
         class="faq-section"
       >
         <Faq 
-          :faqItems="formattedFaqs" 
+          :faqItems="faqs" 
           title="Frequently Asked Questions"
         />
       </div>
@@ -340,13 +340,7 @@ export default {
     filteredSelectedFormBuildersDetails() {
       return Object.values(this.selectedFormBuildersDetails).filter(Boolean)
     },
-    formattedFaqs() {
-      return this.faqs.map((faq, index) => ({
-        id: `faq-${index + 1}`,
-        header: faq.name,
-        body: faq.content
-      }))
-    },
+   
   },
   methods: {
     filteredOptions(cardNumber) {
