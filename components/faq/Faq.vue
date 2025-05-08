@@ -185,11 +185,13 @@ export default {
 
 .faq-container {
   width: 100%;
+  max-width: 960px;
 }
 
 @media (min-width: 768px) {
   .faq-container {
     width: 100%;
+    max-width: 960px;
   }
 }
 </style>
