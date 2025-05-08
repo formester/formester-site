@@ -31,7 +31,7 @@
       <div class="about-template__description" v-html="template.aboutTemplate" />
     </section>
 
-    <Faq v-if="!isEmpty(template.faqs)" :faqs="template.faqs" />
+    <Faq v-if="!isEmpty(template.faqs)" :faqItems="template.faqs" />
 
     <!-- More templates section -->
     <more-templates :categories="categories" :template-slug="template.slug" />
@@ -43,7 +43,7 @@
 import getSiteMeta from '../../utils/getSiteMeta'
 // Components
 import MoreTemplates from '../../components/template/MoreTemplates.vue'
-import Faq from '../../components/template/Faq.vue'
+import Faq from '../../components/faq/Faq.vue'
 import isEmpty from 'lodash/isEmpty'
 import getTemplatesAndCategories from '@/utils/getTemplatesAndCategories'
 
@@ -85,10 +85,10 @@ export default {
       const mainEntity = (this.template.faqs || []).map((faq) => {
         return {
           '@type': 'Question',
-          name: faq.question,
+          name: faq.question || faq.name || faq.header,
           acceptedAnswer: {
             '@type': 'Answer',
-            text: faq.answer,
+            text: faq.answer || faq.content || faq.body,
           },
         }
       })
