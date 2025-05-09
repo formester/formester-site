@@ -43,7 +43,7 @@
 import getSiteMeta from '../../utils/getSiteMeta'
 // Components
 import MoreTemplates from '../../components/template/MoreTemplates.vue'
-import Faq from '../../components/faq/Faq.vue'
+import Faq from '../../components/features/Faq.vue'
 import isEmpty from 'lodash/isEmpty'
 import getTemplatesAndCategories from '@/utils/getTemplatesAndCategories'
 

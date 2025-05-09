@@ -78,7 +78,7 @@
 <script>
 import CallToActionSection from '@/components/CallToActionSection.vue'
 import PricingCard from '@/components/pricing/PricingCard.vue'
-import Faq from '@/components/faq/Faq.vue'
+import Faq from '@/components/features/Faq.vue'
 import {
   free,
   personalMonthly,

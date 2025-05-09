@@ -1,19 +1,25 @@
 <template>
   <section class="container py-2 py-lg-5">
-    <h3 class="title text-center">
-    <span
-      v-for="item in title"
-      :key="item.id"
-      :class="{ highlight__text: item.highlight, bold: item.bold }"
-    >
-      {{ item.text }}
-    </span>
-  </h3>
+    <!-- Handle both string and array title formats -->
+    <template v-if="typeof title === 'string'">
+      <h3 class="title text-center">{{ title }}</h3>
+    </template>
+    <template v-else>
+      <h3 class="title text-center">
+        <span
+          v-for="item in title"
+          :key="item.id"
+          :class="{ highlight__text: item.highlight, bold: item.bold }"
+        >
+          {{ item.text }}
+        </span>
+      </h3>
+    </template>
     <p class="hero__subheading text-center" v-if="description">
       {{ description }}
     </p>
     <div class="accordion accordion-flush my-5 mx-auto faq-container" id="accordionFaqs">
-      <div v-for="(faq, index) in faqList" :key="faq.id" class="accordion-item">
+      <div v-for="(faq, index) in formattedFaqItems" :key="faq.id || index" class="accordion-item">
         <h2 class="accordion-header">
           <button
             class="accordion-button collapsed"
@@ -24,7 +30,7 @@
             :aria-controls="`collapse${index}`"
             @click="toggleAccordion(index)"
           >
-            {{ faq.header }}
+            {{ faq.header || faq.question || faq.title }}
             <nuxt-img
               src="/chevron-down.svg"
               class="chevron-icon"
@@ -46,10 +52,10 @@
             :content="faq.body_markdown"
           />
           <div v-else class="accordion-body text-start">
-            <p class="mb-2">{{ faq.body }}</p>
+            <p class="mb-2">{{ faq.body || faq.answer || faq.content }}</p>
             <ul v-if="faq.list">
               <li v-for="(item, idx) in faq.list" :key="`list-item-${idx}`">
-                {{ item.text }}
+                {{ item.text || item }}
               </li>
             </ul>
           </div>
@@ -63,11 +69,13 @@
 import MarkdownContent from '~/components/MarkdownContent.vue'
 
 export default {
+  name: 'Faq',
   components: { MarkdownContent },
   props: {
     title: {
-      type: Array,
+      type: [Array, String],
       required: true,
+      default: 'Frequently Asked Questions',
     },
     description: {
       type: String,
@@ -75,12 +83,42 @@ export default {
     },
     faqList: {
       type: Array,
-      required: true,
+      required: false,
+      default: () => [],
     },
+    faqItems: {
+      type: Array,
+      required: false,
+      default: () => [],
+    },
+    defaultOpen: {
+      type: Number,
+      default: null
+    }
+  },
+  computed: {
+    formattedFaqItems() {
+      // Use faqList if provided, otherwise use faqItems
+      const items = this.faqList.length > 0 ? this.faqList : this.faqItems;
+      
+      return items.map((faq, index) => {
+        // If the item already has the expected structure, return it as is
+        if (faq.id && (faq.header || faq.question || faq.title) && (faq.body || faq.answer || faq.content)) {
+          return faq;
+        }
+        
+        // Otherwise, format it with standard properties
+        return {
+          id: faq.id || `faq-${index + 1}`,
+          header: faq.name || faq.header || faq.question || faq.title,
+          body: faq.content || faq.body || faq.answer
+        };
+      });
+    }
   },
   data() {
     return {
-      openIndex: null,
+      openIndex: this.defaultOpen,
     }
   },
   methods: {
