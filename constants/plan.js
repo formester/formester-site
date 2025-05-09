@@ -60,7 +60,7 @@ export const businessMonthly = {
     'Unlimited Google Sheets Integration',
     'Unlimited Webhooks',
     '2,500 Signatures',
-    "10 Members"
+    "25 Members"
   ],
 }
 
@@ -96,7 +96,7 @@ export const businessYearly = {
     'Unlimited Google Sheets Integration',
     'Unlimited Webhooks',
     '2,500 Signatures',
-    '10 Members'
+    '25 Members'
   ],
 }
 
@@ -117,7 +117,7 @@ export const comparisonTableFeatures = [
     name: 'Members',
     free: '0',
     pro: '0',
-    business: '10',
+    business: '25',
   },
   {
     name: 'Remove Formester Branding',
