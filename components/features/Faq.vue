@@ -134,7 +134,7 @@ export default {
   font-size: 36px;
   font-weight: 600;
   line-height: 44px;
-  margin-bottom: 64px;
+  margin-bottom: 48px;
   color: var(--clr-dark);
 }
 
@@ -142,11 +142,11 @@ export default {
   font-size: 36px;
   line-height: 44px;
   font-weight: 600;
-  margin-bottom: 64px;
+  margin-bottom: 48px;
   color: var(--clr-text-primary);
 }
 .faq__heading {
-  font-size: var(--ft-subtitle);
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: 1.5rem;
   color: var(--clr-text-primary);
@@ -172,7 +172,7 @@ export default {
   border: none;
 }
 .accordion-button {
-  font-size: var(--ft-df-body);
+  font-size: 18px;
   font-weight: 500;
   color: var(--clr-text-primary);
   background: none;
@@ -183,13 +183,15 @@ export default {
   outline: none;
   transition: color 0.15s;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  gap: 1.5rem;
   width: 100%;
 }
 .chevron-icon {
   margin-left: auto;
   transition: transform 0.3s, filter 0.2s;
   filter: grayscale(1) brightness(0.7);
+  margin-top: 4px;
 }
 .chevron-icon.open {
   transform: rotate(180deg);
@@ -211,6 +213,8 @@ export default {
   width: 100%;
   background: none;
   color: #444;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .accordion-button.collapsed {
