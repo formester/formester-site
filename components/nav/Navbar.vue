@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-xl  sticky-top bg-white">
+  <nav class="navbar navbar-expand-xl sticky-top bg-white">
     <div class="container">
       <!-- Logo -->
       <NuxtLink class="navbar-brand" to="/">
@@ -25,7 +25,7 @@
         ref="siteNav"
         id="navbarSupportedContent"
       >
-                <ul
+        <ul
           class="navbar-nav ms-auto navbar-nav-scroll"
           style="--bs-scroll-height: calc(100vh - 54px)"
         >
@@ -45,9 +45,17 @@
               >
                 Features
                 <span class="chevron-stack">
-  <nuxt-img src="/chevron-down-gray.svg" class="chevron chevron-gray" :class="{ open: dropdownActive }" />
-  <nuxt-img src="/chevron-down-colored.svg" class="chevron chevron-colored" :class="{ open: dropdownActive }" />
-</span>
+                  <nuxt-img
+                    src="/chevron-down-gray.svg"
+                    class="chevron chevron-gray"
+                    :class="{ open: dropdownActive }"
+                  />
+                  <nuxt-img
+                    src="/chevron-down-colored.svg"
+                    class="chevron chevron-colored"
+                    :class="{ open: dropdownActive }"
+                  />
+                </span>
               </button>
             </template>
             <template v-else>
@@ -63,9 +71,17 @@
               >
                 Features
                 <span class="chevron-stack">
-  <nuxt-img src="/chevron-down-gray.svg" class="chevron chevron-gray" :class="{ open: dropdownActive }" />
-  <nuxt-img src="/chevron-down-colored.svg" class="chevron chevron-colored" :class="{ open: dropdownActive }" />
-</span>
+                  <nuxt-img
+                    src="/chevron-down-gray.svg"
+                    class="chevron chevron-gray"
+                    :class="{ open: dropdownActive }"
+                  />
+                  <nuxt-img
+                    src="/chevron-down-colored.svg"
+                    class="chevron chevron-colored"
+                    :class="{ open: dropdownActive }"
+                  />
+                </span>
               </button>
             </template>
 
@@ -89,9 +105,6 @@
             <NuxtLink to="/pricing/" class="nav-link">Pricing</NuxtLink>
           </li>
           <li class="nav-item me-2" @click="collapseNav">
-            <NuxtLink to="/blog/" class="nav-link">Blog</NuxtLink>
-          </li>
-          <li class="nav-item me-2" @click="collapseNav">
             <NuxtLink to="/templates/" class="nav-link">Templates</NuxtLink>
           </li>
           <li class="nav-item me-2" @click="collapseNav">
@@ -99,30 +112,96 @@
               >Integrations</NuxtLink
             >
           </li>
-          <li class="nav-item me-3" @click="collapseNav">
-            <NuxtLink to="/comparison-tool/" class="nav-link">Compare</NuxtLink>
-          </li>
 
-          <!-- Auth Buttons -->
-          <div class="d-flex flex-column flex-lg-row">
-            <a
-              href="https://app.formester.com/users/sign_in"
-              @click="collapseNav"
-              class="mt-3 mt-lg-0"
-            >
-              <button type="button" class="button nav__outline__button">
-                Login
+          <li
+            class="nav-item dropdown me-2 position-relative"
+            :class="{ open: resourcesDropdownActive }"
+            @mouseenter="!isMobile && onResourcesDropdownMouseEnter()"
+            @mouseleave="!isMobile && onResourcesDropdownMouseLeave()"
+          >
+            <template v-if="isMobile">
+              <button
+                class="nav-link"
+                :class="{
+                  active: resourcesDropdownActive || hoveringResourcesDropdown,
+                }"
+                type="button"
+                @click="toggleResourcesDropdown"
+              >
+                Resources
+                <span class="chevron-stack">
+                  <nuxt-img
+                    src="/chevron-down-gray.svg"
+                    class="chevron chevron-gray"
+                    :class="{ open: resourcesDropdownActive }"
+                  />
+                  <nuxt-img
+                    src="/chevron-down-colored.svg"
+                    class="chevron chevron-colored"
+                    :class="{ open: resourcesDropdownActive }"
+                  />
+                </span>
               </button>
-            </a>
-            <a
-              href="https://app.formester.com/users/sign_up"
-              @click="collapseNav"
-              class="mt-3 mt-lg-0 ms-lg-3"
-            >
-              <button type="button" class="button nav__button">Sign Up</button>
-            </a>
-          </div>
+            </template>
+            <template v-else>
+              <button
+                class="nav-link"
+                :class="{
+                  active: resourcesDropdownActive || hoveringResourcesDropdown,
+                }"
+                type="button"
+                @click="toggleResourcesDropdown"
+                @mouseenter="onResourcesDropdownMouseEnter"
+                @mouseleave="onResourcesDropdownMouseLeave"
+                :aria-expanded="resourcesDropdownActive.toString()"
+              >
+                Resources
+                <span class="chevron-stack">
+                  <nuxt-img
+                    src="/chevron-down-gray.svg"
+                    class="chevron chevron-gray"
+                    :class="{ open: resourcesDropdownActive }"
+                  />
+                  <nuxt-img
+                    src="/chevron-down-colored.svg"
+                    class="chevron chevron-colored"
+                    :class="{ open: resourcesDropdownActive }"
+                  />
+                </span>
+              </button>
+            </template>
+
+            <!-- Resources Dropdown component -->
+            <ResourcesDropdown
+              :dropdownActive="resourcesDropdownActive"
+              :isMobile="isMobile"
+              :resourcesList="resourcesList"
+              @mouseenter="onResourcesDropdownMouseEnter"
+              @mouseleave="onResourcesDropdownMouseLeave"
+              @dropdown-close="handleResourcesDropdownClose"
+            />
+          </li>
         </ul>
+
+        <!-- Auth Buttons -->
+        <div class="d-flex flex-column flex-lg-row ms-auto">
+          <a
+            href="https://app.formester.com/users/sign_in"
+            @click="collapseNav"
+            class="mt-3 mt-lg-0"
+          >
+            <button type="button" class="button nav__outline__button">
+              Log In
+            </button>
+          </a>
+          <a
+            href="https://app.formester.com/users/sign_up"
+            @click="collapseNav"
+            class="mt-3 mt-lg-0 ms-lg-3"
+          >
+            <button type="button" class="button nav__button">Sign Up</button>
+          </a>
+        </div>
       </div>
     </div>
   </nav>
@@ -132,6 +211,7 @@
 import DropdownItem from './DropdownItem.vue'
 import NavItem from './NavItem.vue'
 import FeaturesDropdown from './FeaturesDropdown.vue'
+import ResourcesDropdown from './ResourcesDropdown.vue'
 import axios from 'axios'
 import navItems from '~/static/navbar.json'
 
@@ -141,16 +221,43 @@ export default {
     NavItem,
     DropdownItem,
     FeaturesDropdown,
+    ResourcesDropdown,
   },
   data() {
     return {
       dropdownActive: false,
+      resourcesDropdownActive: false,
+      hoveringDropdown: false,
+      hoveringResourcesDropdown: false,
+      isMobile: false,
       dropdownItems: [],
       featureCategories: [],
       activeFeatureCategory: '',
-      dropdownCloseTimeout: null,
-      isMobile: false,
-      hoveringDropdown: false,
+      dropdownTimer: null,
+      resourcesDropdownTimer: null,
+      resourcesList: [
+        {
+          id: 1,
+          title: 'Compare',
+          imageUrl: '/compare.svg',
+          imageAlt: 'Compare icon',
+          slug: 'comparison-tool',
+        },
+        {
+          id: 2,
+          title: 'Blogs',
+          imageUrl: '/blog.svg',
+          imageAlt: 'Blogs icon',
+          slug: 'blog',
+        },
+        {
+          id: 3,
+          title: 'Enterprise',
+          imageUrl: '/enterprise.svg',
+          imageAlt: 'Enterprise icon',
+          slug: 'enterprise',
+        },
+      ],
     }
   },
   computed: {
@@ -174,23 +281,20 @@ export default {
   },
   methods: {
     checkIsMobile() {
-      this.isMobile = window.innerWidth < 1200;
+      this.isMobile = window.innerWidth < 1200
       if (!this.isMobile) {
-        this.dropdownActive = false; // Reset dropdown state when switching to desktop
+        this.dropdownActive = false // Reset dropdown state when switching to desktop
       }
     },
     toggleDropdown() {
       this.dropdownActive = !this.dropdownActive
-      
     },
 
-    
     collapseNav() {
-      if (window.innerWidth >= 1200) return;
-      const bsCollapse = new bootstrap.Collapse(this.$refs.siteNav);
-      bsCollapse.hide();
+      if (window.innerWidth >= 1200) return
+      const bsCollapse = new bootstrap.Collapse(this.$refs.siteNav)
+      bsCollapse.hide()
     },
-
 
     getFeatures() {
       this.dropdownItems = navItems.map((item) => ({
@@ -201,37 +305,70 @@ export default {
         imageAlt: item.navIcon?.imageAlt || '',
         slug: item.slug,
         featureCategory: item.featureCategory || 'Other',
-      }));
+      }))
 
       // Extract unique categories
       const categories = [
         ...new Set(this.dropdownItems.map((item) => item.featureCategory)),
-      ];
-      this.featureCategories = categories;
-      this.activeFeatureCategory = categories[0] || '';
+      ]
+      this.featureCategories = categories
+      this.activeFeatureCategory = categories[0] || ''
     },
 
     onDropdownMouseEnter() {
-      if (this.dropdownCloseTimeout) {
-        clearTimeout(this.dropdownCloseTimeout)
-        this.dropdownCloseTimeout = null
+      if (this.dropdownTimer) {
+        clearTimeout(this.dropdownTimer)
+        this.dropdownTimer = null
       }
       this.dropdownActive = true
       this.hoveringDropdown = true
     },
 
-
     onDropdownMouseLeave() {
       this.hoveringDropdown = false
-      this.dropdownCloseTimeout = setTimeout(() => {
+      this.dropdownTimer = setTimeout(() => {
         if (!this.hoveringDropdown) {
           this.dropdownActive = false
         }
       }, 200)
     },
-    
+
     handleDropdownClose() {
       this.dropdownActive = false
+      this.collapseNav()
+    },
+
+    toggleResourcesDropdown() {
+      this.resourcesDropdownActive = !this.resourcesDropdownActive
+      // Close features dropdown if open
+      if (this.resourcesDropdownActive && this.dropdownActive) {
+        this.dropdownActive = false
+      }
+    },
+
+    onResourcesDropdownMouseEnter() {
+      this.hoveringResourcesDropdown = true
+      clearTimeout(this.resourcesDropdownTimer)
+
+      // Close features dropdown if open
+      if (this.dropdownActive) {
+        this.dropdownActive = false
+      }
+
+      this.resourcesDropdownActive = true
+    },
+
+    onResourcesDropdownMouseLeave() {
+      this.hoveringResourcesDropdown = false
+      this.resourcesDropdownTimer = setTimeout(() => {
+        if (!this.hoveringResourcesDropdown) {
+          this.resourcesDropdownActive = false
+        }
+      }, 300)
+    },
+
+    handleResourcesDropdownClose() {
+      this.resourcesDropdownActive = false
       this.collapseNav()
     },
   },
@@ -239,20 +376,27 @@ export default {
 </script>
 
 <style scoped>
-
 nav {
-  padding: 1em 0;
+  padding: 0.5em 0;
   z-index: 99999;
+}
+
+/* Center navigation styles */
+.nav-center {
+  display: flex;
+  justify-content: center;
 }
 
 /* Nav Links */
 .nav-link {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   color: #697586;
   border-bottom: none;
   transition: color 0.3s ease;
   background: none;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
 }
 
 .nav-link:hover,
@@ -265,10 +409,10 @@ nav {
 
 /* Buttons */
 .button {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
-  padding: 8px 16px;
-  border-radius: 8px;
+  padding: 6px 14px;
+  border-radius: 6px;
   white-space: nowrap;
 }
 
@@ -360,7 +504,7 @@ nav {
   left: 0;
   width: 18px;
   height: 18px;
-  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), opacity 0.2s;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s;
   will-change: transform;
   pointer-events: none;
 }
@@ -460,11 +604,11 @@ nav {
   padding: 0 24px;
 }
 
-
+.button {
+  transition: all 0.3s ease;
+}
 
 @media (max-width: 1199px) {
-
-
   .nav-item {
     margin-top: 8px;
   }
@@ -494,7 +638,7 @@ nav {
 
   .features-dropdown-content {
     grid-template-columns: repeat(2, 1fr);
-    width: 100%;  
+    width: 100%;
     height: auto;
     padding: 0px;
   }
@@ -505,15 +649,13 @@ nav {
   }
 
   .features-dropdown-title-features {
-   display: none;
+    display: none;
   }
-
 }
 
 @media (max-width: 768px) {
   .features-dropdown-content {
     grid-template-columns: repeat(1, 1fr);
-    
   }
 }
 </style>
