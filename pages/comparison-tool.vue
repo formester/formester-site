@@ -236,7 +236,7 @@
         class="faq-section"
       >
         <Faq 
-          :faqItems="faqs" 
+          :faqList="faqs" 
           title="Frequently Asked Questions"
         />
       </div>

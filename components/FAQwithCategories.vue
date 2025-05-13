@@ -1,4 +1,4 @@
-re <template>
+<template>
   <section class="container py-2 py-lg-5">
     <h2 class="title text-center">Frequently Asked Questions</h2>
     <div class="row">
@@ -6,7 +6,7 @@ re <template>
         v-for="(category, idx) in faqQuestions"
         :key="idx"
         class="mb-5 mt-4"
-        :class="[idx === faqQuestions.length - 1 ? 'col' : 'col-md-6', idx % 2 === 0 ? 'pe-md-5' : 'ps-md-5']"
+        :class="getCategoryClasses(idx)"
       >
         <h3 class="faq__heading">{{ category.title }}</h3>
         <div class="accordion accordion-flush faq-container" :id="`accordionFaqs-${idx}`">
@@ -15,26 +15,28 @@ re <template>
             :key="index"
             class="accordion-item"
           >
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                :data-bs-target="`#collapse-${idx}-${index}`"
-                :aria-expanded="isOpen(idx, index)"
-                :aria-controls="`collapse-${idx}-${index}`"
-              >
-                {{ faq.question }}
-                <nuxt-img
-                  src="/chevron-down.svg"
-                  class="chevron-icon"
-                  :class="{ open: isOpen(idx, index) }"
-                  width="20"
-                  height="20"
-                  alt="Chevron"
-                />
-              </button>
-            </h2>
+            <div class="accordion-header">
+              <h3>
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  :data-bs-target="`#collapse-${idx}-${index}`"
+                  :aria-expanded="isOpen(idx, index)"
+                  :aria-controls="`collapse-${idx}-${index}`"
+                >
+                  {{ faq.question }}
+                  <nuxt-img
+                    src="/chevron-down.svg"
+                    class="chevron-icon"
+                    :class="{ open: isOpen(idx, index) }"
+                    width="20"
+                    height="20"
+                    alt="Chevron"
+                  />
+                </button>
+              </h3>
+            </div>
             <div
               :id="`collapse-${idx}-${index}`"
               class="accordion-collapse collapse"
@@ -85,6 +87,14 @@ export default {
         })
       })
     })
+  },
+  computed: {
+    getCategoryClasses() {
+      return (idx) => [
+        idx === this.faqQuestions.length - 1 ? 'col' : 'col-md-6',
+        idx % 2 === 0 ? 'pe-md-5' : 'ps-md-5'
+      ]
+    },
   },
   methods: {
     handleAccordionChange(faqId) {

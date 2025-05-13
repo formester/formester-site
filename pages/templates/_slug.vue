@@ -31,7 +31,7 @@
       <div class="about-template__description" v-html="template.aboutTemplate" />
     </section>
 
-    <Faq v-if="!isEmpty(template.faqs)" :faqItems="template.faqs" />
+    <Faq v-if="!isEmpty(template.faqs)" :faqList="template.faqs" />
 
     <!-- More templates section -->
     <more-templates :categories="categories" :template-slug="template.slug" />

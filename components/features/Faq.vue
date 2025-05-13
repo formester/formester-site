@@ -1,11 +1,10 @@
 <template>
   <section class="container py-2 py-lg-5">
-    <!-- Handle both string and array title formats -->
     <template v-if="typeof title === 'string'">
-      <h3 class="title text-center">{{ title }}</h3>
+      <h2 class="title text-center">{{ title }}</h2>
     </template>
     <template v-else>
-      <h3 class="title text-center">
+      <h2 class="title text-center">
         <span
           v-for="item in title"
           :key="item.id"
@@ -13,34 +12,43 @@
         >
           {{ item.text }}
         </span>
-      </h3>
+      </h2>
     </template>
     <p class="hero__subheading text-center" v-if="description">
       {{ description }}
     </p>
-    <div class="accordion accordion-flush my-5 mx-auto faq-container" id="accordionFaqs">
-      <div v-for="(faq, index) in formattedFaqItems" :key="faq.id || index" class="accordion-item">
-        <h2 class="accordion-header">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            :data-bs-target="`#collapse${index}`"
-            :aria-expanded="openIndex === index ? 'true' : 'false'"
-            :aria-controls="`collapse${index}`"
-            @click="toggleAccordion(index)"
-          >
-            {{ faq.header || faq.question || faq.title }}
-            <nuxt-img
-              src="/chevron-down.svg"
-              class="chevron-icon"
-              :class="{ open: openIndex === index }"
-              width="20"
-              height="20"
-              alt="Chevron"
-            />
-          </button>
-        </h2>
+    <div
+      class="accordion accordion-flush my-5 mx-auto faq-container"
+      id="accordionFaqs"
+    >
+      <div
+        v-for="(faq, index) in formattedFaqItems"
+        :key="faq.id || index"
+        class="accordion-item"
+      >
+        <div class="accordion-header">
+          <h3>
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              :data-bs-target="`#collapse${index}`"
+              :aria-expanded="openIndex === index ? 'true' : 'false'"
+              :aria-controls="`collapse${index}`"
+              @click="toggleAccordion(index)"
+            >
+              {{ faq.header || faq.question || faq.title }}
+              <nuxt-img
+                src="/chevron-down.svg"
+                class="chevron-icon"
+                :class="{ open: openIndex === index }"
+                width="20"
+                height="20"
+                alt="Chevron"
+              />
+            </button>
+          </h3>
+        </div>
         <div
           :id="`collapse${index}`"
           class="accordion-collapse collapse"
@@ -86,35 +94,32 @@ export default {
       required: false,
       default: () => [],
     },
-    faqItems: {
-      type: Array,
-      required: false,
-      default: () => [],
-    },
+
     defaultOpen: {
       type: Number,
-      default: null
-    }
+      default: null,
+    },
   },
   computed: {
     formattedFaqItems() {
-      // Use faqList if provided, otherwise use faqItems
-      const items = this.faqList.length > 0 ? this.faqList : this.faqItems;
-      
+      const items = this.faqList
+
       return items.map((faq, index) => {
-        // If the item already has the expected structure, return it as is
-        if (faq.id && (faq.header || faq.question || faq.title) && (faq.body || faq.answer || faq.content)) {
-          return faq;
+        if (
+          faq.id &&
+          (faq.header || faq.question || faq.title) &&
+          (faq.body || faq.answer || faq.content)
+        ) {
+          return faq
         }
-        
-        // Otherwise, format it with standard properties
+
         return {
           id: faq.id || `faq-${index + 1}`,
           header: faq.name || faq.header || faq.question || faq.title,
-          body: faq.content || faq.body || faq.answer
-        };
-      });
-    }
+          body: faq.content || faq.body || faq.answer,
+        }
+      })
+    },
   },
   data() {
     return {
