@@ -37,7 +37,7 @@
               :aria-controls="`collapse${index}`"
               @click="toggleAccordion(index)"
             >
-              {{ faq.header || faq.question || faq.title || faq.name }}
+              {{ faq.header }}
               <nuxt-img
                 src="/chevron-down.svg"
                 class="chevron-icon"
@@ -60,7 +60,7 @@
             :content="faq.body_markdown"
           />
           <div v-else class="accordion-body text-start">
-            <p class="mb-2">{{ faq.body || faq.answer || faq.content }}</p>
+            <p class="mb-2">{{ faq.body }}</p>
             <ul v-if="faq.list">
               <li v-for="(item, idx) in faq.list" :key="`list-item-${idx}`">
                 {{ item.text || item }}
@@ -82,7 +82,7 @@ export default {
   props: {
     title: {
       type: [Array, String],
-      required: true,
+      required: false,
       default: 'Frequently Asked Questions',
     },
     description: {
@@ -103,8 +103,9 @@ export default {
   computed: {
     formattedFaqItems() {
       return this.faqList.map((faq, index) => ({
-        ...faq,
-        id: faq.id || `faq-${index + 1}` // Only generate IDs if missing
+        id: faq.id || `faq-${index + 1}`,
+        header: faq.header || faq.question,
+        body: faq.body || faq.answer,
       }))
     },
   },

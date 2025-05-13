@@ -66,11 +66,8 @@
           />
         </div>
       </div>
-      <CallToActionSection />     
-      <Faq 
-          :faqList="faqs" 
-          title="Frequently Asked Questions"
-        />
+      <CallToActionSection />
+      <Faq :faqList="faqs" title="Frequently Asked Questions" />
     </div>
   </div>
 </template>
@@ -106,44 +103,37 @@ export default {
       comparisonTableFeatures,
       enterprise,
       faqs: [
-      {
-          name: 'Can I try before I buy?',
-          content:
-            "It's free to set up an account and create a campaign. But to get more than 100 submissions, you'll need to choose a plan.",
+        {
+          header: 'Can I try before I buy?',
+          body: "It's free to set up an account and create a campaign. But to get more than 100 submissions, you'll need to choose a plan.",
         },
         {
-          name: 'Can I change plans at anytime?',
-          content:
-            'Yes. Formester is a pay-as-you-go service and you can upgrade, downgrade or cancel at any time. You can upgrade anytime right from your account page.',
+          header: 'Can I change plans at anytime?',
+          body: 'Yes. Formester is a pay-as-you-go service and you can upgrade, downgrade or cancel at any time. You can upgrade anytime right from your account page.',
         },
         {
-          name: "What happens if I don't like the service?",
-          content:
-            "Don't worry, if you are ever unhappy with our service and wish to cancel, we'll happily reimburse your last month -- no questions asked.",
+          header: "What happens if I don't like the service?",
+          body: "Don't worry, if you are ever unhappy with our service and wish to cancel, we'll happily reimburse your last month -- no questions asked.",
         },
         {
-          name: 'Do I get a discount on yearly plan?',
-          content:
-            'You do, If you buy yearly plan you only have to pay for 11 months and you get 1 month free.',
+          header: 'Do I get a discount on yearly plan?',
+          body: 'You do, If you buy yearly plan you only have to pay for 11 months and you get 1 month free.',
         },
         {
-          name: 'Is there an referral/affiliate program?',
-          content:
-            "Yes we do. It's an invite only program. If you need access to this please reach out to our support.",
+          header: 'Is there an referral/affiliate program?',
+          body: "Yes we do. It's an invite only program. If you need access to this please reach out to our support.",
         },
         {
-          name: 'Do you offer discount for NGO and School?',
-          content: "Yes. Get in touch and we'll help you out.",
+          header: 'Do you offer discount for NGO and School?',
+          body: "Yes. Get in touch and we'll help you out.",
         },
         {
-          name: 'What if I want a reseller account?',
-          content:
-            'We do support resellers. Please reach out to us at support@formester.com and we will love to help you.',
+          header: 'What if I want a reseller account?',
+          body: 'We do support resellers. Please reach out to us at support@formester.com and we will love to help you.',
         },
         {
-          name: 'I have more questions',
-          content:
-            "No problem! Contact us and we'll get in touch with you shortly :)",
+          header: 'I have more questions',
+          body: "No problem! Contact us and we'll get in touch with you shortly :)",
         },
       ],
     }
