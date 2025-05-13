@@ -37,7 +37,7 @@
               :aria-controls="`collapse${index}`"
               @click="toggleAccordion(index)"
             >
-              {{ faq.header || faq.question || faq.title }}
+              {{ faq.header || faq.question || faq.title || faq.name }}
               <nuxt-img
                 src="/chevron-down.svg"
                 class="chevron-icon"
@@ -102,23 +102,10 @@ export default {
   },
   computed: {
     formattedFaqItems() {
-      const items = this.faqList
-
-      return items.map((faq, index) => {
-        if (
-          faq.id &&
-          (faq.header || faq.question || faq.title) &&
-          (faq.body || faq.answer || faq.content)
-        ) {
-          return faq
-        }
-
-        return {
-          id: faq.id || `faq-${index + 1}`,
-          header: faq.name || faq.header || faq.question || faq.title,
-          body: faq.content || faq.body || faq.answer,
-        }
-      })
+      return this.faqList.map((faq, index) => ({
+        ...faq,
+        id: faq.id || `faq-${index + 1}` // Only generate IDs if missing
+      }))
     },
   },
   data() {
