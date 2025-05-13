@@ -235,17 +235,10 @@
         v-if="!selectedFormBuildersOption.filter(Boolean).length"
         class="faq-section"
       >
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-section__body">
-          <template v-for="(faq, index) in faqs">
-            <FaqAccordion
-              :id="index"
-              :index="index"
-              :name="faq.name"
-              :content="faq.content"
-            />
-          </template>
-        </div>
+        <Faq 
+          :faqList="faqs" 
+          title="Frequently Asked Questions"
+        />
       </div>
     </div>
   </div>
@@ -256,7 +249,7 @@ import ComparisonToolHero from '@/components/comparision/ComparisonToolHero.vue'
 import ComparisonOptionCard from '@/components/comparision/ComparisonOptionCard.vue'
 import ComparisonCard from '@/components/comparision/ComparisonCard.vue'
 import FormBuilderComparisonTable from '@/components/comparision/FormBuilderComparisonTable.vue'
-import FaqAccordion from '@/components/comparision/FaqAccordion.vue'
+import Faq from '@/components/features/Faq.vue'
 import { featureNameList } from '@/constants/plan'
 import getSiteMeta from '@/utils/getSiteMeta'
 import axios from 'axios'
@@ -267,7 +260,7 @@ export default {
     ComparisonOptionCard,
     ComparisonCard,
     FormBuilderComparisonTable,
-    FaqAccordion,
+    Faq,
   },
   async asyncData() {
     const {
@@ -300,25 +293,25 @@ export default {
       selectedFormBuildersDetails: { 0: null, 1: null, 2: null, 3: null },
       faqs: [
         {
-          name: 'What key features should I look for in an online form builder?',
-          content:
+          header: 'What key features should I look for in an online form builder?',
+          body:
             'When choosing an online form builder, look for features like easy drag-and-drop design, a variety of templates, integration with other apps (like email and CRM tools), customizable fields, responsive design for mobile devices, and reliable customer support. These features will help you create effective forms that meet your needs.',
         },
         {
-          name: 'How often do you update the information?',
-          content: 'We keep our tool up to date with the latest pricing, features, and user feedback so you get the most current information.',
+          header: 'How often do you update the information?',
+          body: 'We keep our tool up to date with the latest pricing, features, and user feedback so you get the most current information.',
         },
         {
-          name: 'Is there a cost to use your comparison tool?',
-          content: "No, our tool is completely free for you to use. It's designed to help you make an informed decision without any fees.",
+          header: 'Is there a cost to use your comparison tool?',
+          body: "No, our tool is completely free for you to use. It's designed to help you make an informed decision without any fees.",
         },
         {
-          name: 'Does the tool cover all the features of the pricing plans?',
-          content: 'No, this tool focuses on comparing the most sought-after features among online form builders. While we strive to cover the essential features that most users look for, it may not include every detail of every pricing plan.\n We prioritize the features that are most commonly considered important by users to provide a clear and meaningful comparison.',
+          header: 'Does the tool cover all the features of the pricing plans?',
+          body: 'No, this tool focuses on comparing the most sought-after features among online form builders. While we strive to cover the essential features that most users look for, it may not include every detail of every pricing plan.\n We prioritize the features that are most commonly considered important by users to provide a clear and meaningful comparison.',
         },
         {
-          name: 'How does your tool help me find the right form builder?',
-          content: 'Our tool lets you compare prices and features of different form builders so you can easily pick the best one for your needs.',
+          header: 'How does your tool help me find the right form builder?',
+          body: 'Our tool lets you compare prices and features of different form builders so you can easily pick the best one for your needs.',
         },
       ],
     }
@@ -347,6 +340,7 @@ export default {
     filteredSelectedFormBuildersDetails() {
       return Object.values(this.selectedFormBuildersDetails).filter(Boolean)
     },
+   
   },
   methods: {
     filteredOptions(cardNumber) {

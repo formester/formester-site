@@ -6,13 +6,17 @@
         <h1 class="section__heading">{{ template.name }}</h1>
 
         <!-- New paragraph for each line break -->
-        <p v-for="(line, index) in template.description.split('\n')" :key="index" class="hero__subheading">
+        <p
+          v-for="(line, index) in template.description.split('\n')"
+          :key="index"
+          class="hero__subheading"
+        >
           {{ line }}
         </p>
       </div>
 
       <div class="d-flex justify-content-start">
-        <button class="btn btn-use_template" @click="redirectTo" >
+        <button class="btn btn-use_template" @click="redirectTo">
           Use Template
         </button>
       </div>
@@ -26,12 +30,21 @@
     </section>
 
     <!-- About template section -->
-    <section v-if="template.aboutTemplate && template.aboutTemplate.replace(/(<([^>]+)>)/gi, '').trim()" class="container py-2 py-lg-5">
+    <section
+      v-if="
+        template.aboutTemplate &&
+        template.aboutTemplate.replace(/(<([^>]+)>)/gi, '').trim()
+      "
+      class="container py-2 py-lg-5"
+    >
       <h2 class="section__heading text-center">About this template</h2>
-      <div class="about-template__description" v-html="template.aboutTemplate" />
+      <div
+        class="about-template__description"
+        v-html="template.aboutTemplate"
+      />
     </section>
 
-    <Faq v-if="!isEmpty(template.faqs)" :faqs="template.faqs" />
+    <Faq v-if="!isEmpty(template.faqs)" :faqList="template.faqs" />
 
     <!-- More templates section -->
     <more-templates :categories="categories" :template-slug="template.slug" />
@@ -43,7 +56,7 @@
 import getSiteMeta from '../../utils/getSiteMeta'
 // Components
 import MoreTemplates from '../../components/template/MoreTemplates.vue'
-import Faq from '../../components/template/Faq.vue'
+import Faq from '../../components/features/Faq.vue'
 import isEmpty from 'lodash/isEmpty'
 import getTemplatesAndCategories from '@/utils/getTemplatesAndCategories'
 
@@ -58,7 +71,7 @@ export default {
       return payload
     }
     const { templates, categories } = await getTemplatesAndCategories()
-    const template = templates.find((template)=>template.slug === params.slug)
+    const template = templates.find((template) => template.slug === params.slug)
     return { template, categories }
   },
   computed: {
@@ -155,7 +168,7 @@ export default {
     if (this.faqsSchema) {
       jsonldData.push(this.faqsSchema)
     }
-    return jsonldData;
+    return jsonldData
   },
   methods: {
     redirectTo() {
@@ -197,7 +210,7 @@ export default {
   filter: blur(1px) brightness(40%);
 }
 
-.hero__image:hover  {
+.hero__image:hover {
   opacity: 1;
 }
 

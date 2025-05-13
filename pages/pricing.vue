@@ -67,7 +67,7 @@
         </div>
       </div>
       <CallToActionSection />
-      <Faq />
+      <Faq :faqList="faqs" title="Frequently Asked Questions" />
     </div>
   </div>
 </template>
@@ -75,7 +75,7 @@
 <script>
 import CallToActionSection from '@/components/CallToActionSection.vue'
 import PricingCard from '@/components/pricing/PricingCard.vue'
-import Faq from '@/components/pricing/Faq.vue'
+import Faq from '@/components/features/Faq.vue'
 import {
   free,
   personalMonthly,
@@ -102,6 +102,40 @@ export default {
       businessYearly,
       comparisonTableFeatures,
       enterprise,
+      faqs: [
+        {
+          header: 'Can I try before I buy?',
+          body: "It's free to set up an account and create a campaign. But to get more than 100 submissions, you'll need to choose a plan.",
+        },
+        {
+          header: 'Can I change plans at anytime?',
+          body: 'Yes. Formester is a pay-as-you-go service and you can upgrade, downgrade or cancel at any time. You can upgrade anytime right from your account page.',
+        },
+        {
+          header: "What happens if I don't like the service?",
+          body: "Don't worry, if you are ever unhappy with our service and wish to cancel, we'll happily reimburse your last month -- no questions asked.",
+        },
+        {
+          header: 'Do I get a discount on yearly plan?',
+          body: 'You do, If you buy yearly plan you only have to pay for 11 months and you get 1 month free.',
+        },
+        {
+          header: 'Is there an referral/affiliate program?',
+          body: "Yes we do. It's an invite only program. If you need access to this please reach out to our support.",
+        },
+        {
+          header: 'Do you offer discount for NGO and School?',
+          body: "Yes. Get in touch and we'll help you out.",
+        },
+        {
+          header: 'What if I want a reseller account?',
+          body: 'We do support resellers. Please reach out to us at support@formester.com and we will love to help you.',
+        },
+        {
+          header: 'I have more questions',
+          body: "No problem! Contact us and we'll get in touch with you shortly :)",
+        },
+      ],
     }
   },
   computed: {

@@ -7,6 +7,7 @@
     "featureCategory": "Form Builder",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "HTML Form Backend ",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/file_code_01_1_061cddcb52.svg",
         "alt": "HTML Form Backend "
@@ -21,6 +22,7 @@
     "featureCategory": "Data Handling",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "Auto Responder - Set up automated response",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/message_text_square_02_5014683c23.svg",
         "alt": "Auto Responder - Set up automated response"
@@ -35,6 +37,7 @@
     "featureCategory": "Security & Validation",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "Spam Protecttion",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/alert_circle_aaab0ba583.svg",
         "alt": "Spam Protecttion"
@@ -49,6 +52,7 @@
     "featureCategory": "Notifications & Reports",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "Form Analytics",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/line_chart_up_02_64fbb99e61.svg",
         "alt": "Form Analytics"
@@ -63,6 +67,7 @@
     "featureCategory": "Branding & Integration",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "Online Payments",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/bank_note_01_c82e2ca657.svg",
         "alt": "Online Payments"
@@ -77,6 +82,7 @@
     "featureCategory": "Security & Validation",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "Electronic Signature",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/pen_tool_01_90a1971874.svg",
         "alt": "Electronic Signature"
@@ -91,6 +97,7 @@
     "featureCategory": "Branding & Integration",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "Branding Kit",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/palette_5b4002a356.svg",
         "alt": "Branding Kit"
@@ -105,6 +112,7 @@
     "featureCategory": "Data Handling",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "Information Recall",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/info_circle_0c5be9e7ae.svg",
         "alt": "Information Recall"
@@ -119,6 +127,7 @@
     "featureCategory": "Form Builder",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "Offline Forms",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/wifi_off_dfb7dcad0a.svg",
         "alt": "Offline Forms"
@@ -133,6 +142,7 @@
     "featureCategory": "Data Handling",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "partial submission",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/contrast_01_957476277f.svg",
         "alt": "partial submission"
@@ -147,6 +157,7 @@
     "featureCategory": "Advanced Controls",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "Multi Language Form Translations",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/translate_01_5a72e93245.svg",
         "alt": "Multi Language Form Translations"
@@ -161,6 +172,7 @@
     "featureCategory": "Data Handling",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "Export Submissions As PDFs",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/file_code_01_5c7679ba32.svg",
         "alt": "Export Submissions As PDFs"
@@ -175,6 +187,7 @@
     "featureCategory": "Form Builder",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "formester's form limiter icon",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/file_x_02_d885c1bfc8.svg",
         "alt": "formester's form limiter icon"
@@ -189,6 +202,7 @@
     "featureCategory": "Branding & Integration",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "formester's qr code generator icon",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/qr_code_01_8709da922c.svg",
         "alt": "formester's qr code generator icon"
@@ -203,6 +217,7 @@
     "featureCategory": "Data Handling",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "Save and Resume Forms",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/save_01_f341fc7527.svg",
         "alt": "Save and Resume Forms"
@@ -217,6 +232,7 @@
     "featureCategory": "Data Handling",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "File Upload",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/upload_cloud_01_cc4f62129a.svg",
         "alt": "File Upload"
@@ -231,6 +247,7 @@
     "featureCategory": "Form Builder",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "drag and drop",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/hand_1d708b646e.svg",
         "alt": "drag and drop"
@@ -245,6 +262,7 @@
     "featureCategory": "Branding & Integration",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "Embeddable Forms",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/code_browser_122d6f96e9.svg",
         "alt": "Embeddable Forms"
@@ -259,6 +277,7 @@
     "featureCategory": "Advanced Controls",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "Calculating Fields",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/calculator_681470834f.svg",
         "alt": "Calculating Fields"
@@ -273,6 +292,7 @@
     "featureCategory": "Advanced Controls",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "Conditional Logic",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/dataflow_01_b806bceec3.svg",
         "alt": "Conditional Logic"
@@ -287,6 +307,7 @@
     "featureCategory": "Form Builder",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "user icon",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/users_01_a6edb44f56.svg",
         "alt": "user icon"
@@ -301,6 +322,7 @@
     "featureCategory": "Security & Validation",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "Email Verification",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/message_text_square_02_5014683c23.svg",
         "alt": "Email Verification"
@@ -315,6 +337,7 @@
     "featureCategory": "Advanced Controls",
     "navIcon": {
       "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/file_shield_02_d218ab98b4.svg",
+      "imageAlt": "auto unique id icon",
       "image": null
     }
   },
@@ -326,6 +349,7 @@
     "featureCategory": "Advanced Controls",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "calender icon",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/calendar_check_01_40b824429a.svg",
         "alt": "calender icon"
@@ -340,6 +364,7 @@
     "featureCategory": "Security & Validation",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "embed icon",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/code_02_738cc7eea0.svg",
         "alt": "embed icon"
@@ -354,6 +379,7 @@
     "featureCategory": "Form Builder",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "pdf icon",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/file_code_01_5c7679ba32.svg",
         "alt": "pdf icon"
@@ -368,6 +394,7 @@
     "featureCategory": "Notifications & Reports",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "analytics icon",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/horizontal_bar_chart_01_519c8d6247.svg",
         "alt": "analytics icon"
@@ -382,6 +409,7 @@
     "featureCategory": "Advanced Controls",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "pen icon",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/pencil_line_61da15ee94.svg",
         "alt": "pen icon"
@@ -396,6 +424,7 @@
     "featureCategory": "Form Builder",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "pdf icon",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/icon_d06783ec37.svg",
         "alt": "pdf icon"
@@ -410,6 +439,7 @@
     "featureCategory": "Advanced Controls",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "formester pen icon",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/pen_tool_01_90a1971874.svg",
         "alt": "formester pen icon"
@@ -424,6 +454,7 @@
     "featureCategory": "Notifications & Reports",
     "navIcon": {
       "imageUrl": null,
+      "imageAlt": "email icon",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/message_text_square_02_5014683c23.svg",
         "alt": "email icon"
