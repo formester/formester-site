@@ -1,18 +1,18 @@
 <template>
     <tr>
       <td 
-        v-for="cell in rowData" 
+        v-for="(cell, cellIndex) in rowData" 
         :key="cell.id"
         :style="{
           fontWeight: rowType === 'head' ? '600' : 'normal',
           padding: '12px 16px',
-          textAlign: 'left',
+          textAlign: cellIndex === 0 ? 'left' : 'center',
           wordWrap: 'break-word', /* Ensure word wrap works for long text */
           whiteSpace: 'normal',   /* Allows the text to wrap */
-          verticalAlign: 'top',
+          verticalAlign: 'middle',
         }"  
       >
-        <div v-if="cell.cellData.length === 1">
+        <div v-if="cell.cellData.length === 1" :style="{ display: 'flex', justifyContent: cellIndex === 0 ? 'flex-start' : 'center' }">
           <CellData
             :text="cell.cellData[0].text"
             :isHighlighted="cell.cellData[0].highlight"
@@ -20,14 +20,15 @@
             :bold="cell.cellData[0].bold"
           />
         </div>
-        <div v-else>
+        <div v-else :style="{ textAlign: cellIndex === 0 ? 'left' : 'center', width: '100%' }">
           <span
             v-for="(data, index) in cell.cellData"
             :key="index"
             :style="{
               color: data.highlight ? data.color : 'inherit',
               fontWeight: data.bold === true ? '500' : (data.bold === false ? 'normal' : '400'),
-              verticalAlign: 'top', // Align text to top
+              verticalAlign: 'middle',
+              display: 'inline',
             }"
           >
             {{ data.text }}

@@ -18,7 +18,9 @@ export default {
     cellType: {
       type: String,
       default: 'td',
-      validator: (value) => ['td', 'th'].includes(value),
+      validator(value) {
+        return ['td', 'th'].includes(value);
+      },
     },
   },
 };

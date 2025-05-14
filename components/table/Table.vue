@@ -55,9 +55,14 @@
   overflow: hidden;
 }
   
-  th, td {
+  th:first-child, td:first-child {
     padding: 12px 16px;
     text-align: left;
+  }
+  
+  th:not(:first-child), td:not(:first-child) {
+    padding: 12px 16px;
+    text-align: center;
   }
   
   tbody tr {
