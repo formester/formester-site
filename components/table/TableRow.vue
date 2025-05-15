@@ -18,10 +18,16 @@
             :isHighlighted="cell.cellData[0].highlight"
             :textColor="cell.cellData[0].color"
             :bold="cell.cellData[0].bold"
+            :cellIcon="cell.cellIcon || null"
           />
         </div>
-        <div v-else :style="{ textAlign: cellIndex === 0 ? 'left' : 'center', width: '100%' }">
-          <span
+        <div v-else :style="{ textAlign: cellIndex === 0 ? 'left' : 'center', width: '100%', position: 'relative' }">
+         
+          <span v-if="cell.cellIcon && getIconSrc(cell.cellIcon)" class="cell-icon-container" :style="{ display: 'flex', justifyContent: 'center' }">
+            <nuxt-img class="cell__icon" :src="getIconSrc(cell.cellIcon)" :alt="cell.cellIcon.imageAlt || ''" style="width: 24px; height: 24px;" />
+          </span>
+
+          <span v-else
             v-for="(data, index) in cell.cellData"
             :key="index"
             :style="{
@@ -49,6 +55,32 @@
     components: {
       CellData,
     },
+    methods: {
+      getIconSrc(cellIcon) {
+        if (!cellIcon) return null;
+        
+        // Case 1: Direct URL in image object
+        if (cellIcon.image?.url) {
+          return cellIcon.image.url;
+        }
+        
+        // Case 2: Direct imageUrl property
+        if (cellIcon.imageUrl) {
+          return cellIcon.imageUrl;
+        }
+        
+        // Case 3: Uploaded image in Strapi v4
+        if (cellIcon.image?.data?.attributes?.url) {
+          return cellIcon.image.data.attributes.url;
+        }
+
+        // Case 4: Direct upload in Strapi (your specific case)
+        if (cellIcon.image && typeof cellIcon.image === 'object' && cellIcon.image.url) {
+          return cellIcon.image.url;
+        }
+        
+        return null;
+      }
+    }
   };
   </script>
-  
