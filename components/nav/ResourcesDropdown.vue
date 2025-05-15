@@ -26,9 +26,10 @@
               :alt="resource.imageAlt"
               class="resource-dropdown-item__img"
             />
-            <span class="resource-dropdown-item__title">{{
-              resource.title
-            }}</span>
+            <div class="d-flex flex-column">
+              <span class="resource-dropdown-item__title">{{ resource.title }}</span>
+              <span class="resource-dropdown-item__desc">{{ resource.description }}</span>
+            </div>
           </NuxtLink>
         </li>
       </ul>
@@ -67,7 +68,7 @@ export default {
 .resources-dropdown-mega {
   display: flex;
   width: auto;
-  min-width: 200px;
+  min-width: 300px;
   max-width: 300px;
   height: auto;
   background: #fff;
@@ -152,7 +153,6 @@ export default {
 /* Resource Dropdown Item Styles */
 .resource-dropdown-item {
   padding: 10px 16px;
-  border-radius: 8px;
   gap: 12px;
   display: flex;
   align-items: center;
@@ -170,9 +170,16 @@ export default {
   line-height: 140%;
 }
 
+.resource-dropdown-item__desc {
+  color: var(--clr-text-secondary);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
 .resource-dropdown-item__img {
-  height: 20px;
-  width: 20px;
+  height: 24px;
+  width: 24px;
 }
 
 @media (max-width: 992px) {

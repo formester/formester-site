@@ -305,6 +305,7 @@ export default {
         {
           id: 1,
           title: 'Compare',
+          description: 'Compare us with other form builders',
           imageUrl: '/compare.svg',
           imageAlt: 'Compare icon',
           slug: 'comparison-tool',
@@ -312,6 +313,7 @@ export default {
         {
           id: 2,
           title: 'Blogs',
+          description: 'Read our latest articles and guides',
           imageUrl: '/blog.svg',
           imageAlt: 'Blogs icon',
           slug: 'blog',
@@ -319,9 +321,10 @@ export default {
         {
           id: 3,
           title: 'Enterprise',
+          description: 'Solutions for large organizations',
           imageUrl: '/enterprise.svg',
           imageAlt: 'Enterprise icon',
-          slug: 'enterprise',
+          Formeserug: 'enterprise',
         },
       ],
     }
