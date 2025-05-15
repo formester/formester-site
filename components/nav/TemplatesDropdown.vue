@@ -1,70 +1,77 @@
 <template>
-  <div
-    class="templates-dropdown-mega"
-    :class="{ active: dropdownActive }"
-    v-show="dropdownActive"
-    v-on="!isMobile ? { mouseenter: onDropdownMouseEnter, mouseleave: onDropdownMouseLeave } : {}"
-  >
-    <div class="templates-dropdown-content-wrap">
-      <div class="templates-dropdown-columns">
-        <!-- Forms Column -->
-        <div class="templates-dropdown-column">
-          <div class="templates-dropdown-title">
-            <span class="templates-dropdown-icon">
-              <nuxt-img src="/form-icon.svg" alt="Forms" width="20" height="20" />
-            </span>
-            Forms
+  <div class="dropdown-container">
+    <transition
+      :name="!isMobile ? 'dropdown' : 'mobile-dropdown'"
+      appear
+    >
+      <div
+        v-show="dropdownActive"
+        class="templates-dropdown-mega"
+        :class="{ active: dropdownActive, 'is-mobile': isMobile }"
+        v-on="!isMobile ? { mouseenter: onDropdownMouseEnter, mouseleave: onDropdownMouseLeave } : {}"
+      >
+        <div class="templates-dropdown-content-wrap">
+          <div class="templates-dropdown-columns">
+            <!-- Forms Column -->
+            <div class="templates-dropdown-column">
+              <div class="templates-dropdown-title">
+                <span class="templates-dropdown-icon">
+                  <nuxt-img src="/form-icon.svg" alt="Forms" width="20" height="20" />
+                </span>
+                Forms
+              </div>
+              <ul class="templates-dropdown-list">
+                <li v-for="item in formsTemplates" :key="item.id" @click="$emit('dropdown-close')">
+                  <NuxtLink :to="item.slug" class="templates-dropdown-link">
+                    {{ item.title }}
+                  </NuxtLink>
+                </li>
+              </ul>
+            </div>
+            
+            <!-- Surveys Column -->
+            <div class="templates-dropdown-column">
+              <div class="templates-dropdown-title">
+                <span class="templates-dropdown-icon">
+                  <nuxt-img src="/survey-icon.svg" alt="Surveys" width="20" height="20" />
+                </span>
+                Surveys
+              </div>
+              <ul class="templates-dropdown-list">
+                <li v-for="item in surveysTemplates" :key="item.id" @click="$emit('dropdown-close')">
+                  <NuxtLink :to="item.slug" class="templates-dropdown-link">
+                    {{ item.title }}
+                  </NuxtLink>
+                </li>
+              </ul>
+            </div>
+            
+            <!-- Quizzes Column -->
+            <div class="templates-dropdown-column">
+              <div class="templates-dropdown-title">
+                <span class="templates-dropdown-icon">
+                  <nuxt-img src="/quiz-icon.svg" alt="Quizzes" width="20" height="20" />
+                </span>
+                Quizzes
+              </div>
+              <ul class="templates-dropdown-list">
+                <li v-for="item in quizzesTemplates" :key="item.id" @click="$emit('dropdown-close')">
+                  <NuxtLink :to="item.slug" class="templates-dropdown-link">
+                    {{ item.title }}
+                  </NuxtLink>
+                </li>
+              </ul>
+            </div>
           </div>
-          <ul class="templates-dropdown-list">
-            <li v-for="item in formsTemplates" :key="item.id" @click="$emit('dropdown-close')">
-              <NuxtLink :to="item.slug" class="templates-dropdown-link">
-                {{ item.title }}
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
-        
-        <!-- Surveys Column -->
-        <div class="templates-dropdown-column">
-          <div class="templates-dropdown-title">
-            <span class="templates-dropdown-icon">
-              <nuxt-img src="/survey-icon.svg" alt="Surveys" width="20" height="20" />
-            </span>
-            Surveys
+          
+          <div class="templates-dropdown-footer">
+            <NuxtLink to="/templates/" class="templates-dropdown-all" @click="$emit('dropdown-close')">
+              Explore all templates →
+            </NuxtLink>
           </div>
-          <ul class="templates-dropdown-list">
-            <li v-for="item in surveysTemplates" :key="item.id" @click="$emit('dropdown-close')">
-              <NuxtLink :to="item.slug" class="templates-dropdown-link">
-                {{ item.title }}
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
-        
-        <!-- Quizzes Column -->
-        <div class="templates-dropdown-column">
-          <div class="templates-dropdown-title">
-            <span class="templates-dropdown-icon">
-              <nuxt-img src="/quiz-icon.svg" alt="Quizzes" width="20" height="20" />
-            </span>
-            Quizzes
-          </div>
-          <ul class="templates-dropdown-list">
-            <li v-for="item in quizzesTemplates" :key="item.id" @click="$emit('dropdown-close')">
-              <NuxtLink :to="item.slug" class="templates-dropdown-link">
-                {{ item.title }}
-              </NuxtLink>
-            </li>
-          </ul>
         </div>
       </div>
-      
-      <div class="templates-dropdown-footer">
-        <NuxtLink to="/templates/" class="templates-dropdown-all" @click="$emit('dropdown-close')">
-          Explore all templates →
-        </NuxtLink>
-      </div>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -115,6 +122,37 @@ export default {
 </script>
 
 <style scoped>
+/* Transition Effects */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+.dropdown-enter-active {
+  animation: slideDown 0.25s ease-out forwards;
+}
+
+.dropdown-leave-active {
+  animation: slideUp 0.2s ease-in forwards;
+}
+
 /* Templates Mega Dropdown */
 .templates-dropdown-mega {
   display: flex;
@@ -225,6 +263,70 @@ export default {
 }
 
 @media (max-width: 1199px) {
+  /* Mobile specific styles */
+  .templates-dropdown-mega.is-mobile {
+    overflow: hidden;
+  }
+  
+  /* Mobile transitions */
+  .mobile-dropdown-enter-active {
+    animation: mobileSlideDown 0.5s ease-out forwards;
+  }
+  
+  .mobile-dropdown-leave-active {
+    animation: mobileSlideUp 0.3s ease-in forwards;
+  }
+  
+  @keyframes mobileSlideDown {
+    0% {
+      opacity: 0;
+      max-height: 0;
+    }
+    20% {
+      opacity: 1;
+      max-height: 0;
+    }
+    100% {
+      opacity: 1;
+      max-height: 2000px;
+    }
+  }
+  
+  @keyframes mobileSlideUp {
+    0% {
+      opacity: 1;
+      max-height: 2000px;
+    }
+    80% {
+      opacity: 0;
+      max-height: 0;
+    }
+    100% {
+      opacity: 0;
+      max-height: 0;
+    }
+  }
+  
+  /* Override desktop animations for mobile */
+  .dropdown-enter-active,
+  .dropdown-leave-active {
+    animation: none !important;
+  }
+  
+  @keyframes slideDown {
+    from, to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  @keyframes slideUp {
+    from, to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
   .templates-dropdown-mega {
     position: static;
     flex-direction: column;
@@ -235,6 +337,7 @@ export default {
     left: unset;
     right: unset;
     transform: none;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
     box-shadow: none;
     border-radius: 0;
     border: none;

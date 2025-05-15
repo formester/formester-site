@@ -1,39 +1,46 @@
 <template>
-  <div
-    class="resources-dropdown-mega"
-    :class="{ active: dropdownActive }"
-    v-show="dropdownActive"
-    v-on="
-      !isMobile
-        ? { mouseenter: onDropdownMouseEnter, mouseleave: onDropdownMouseLeave }
-        : {}
-    "
-  >
-    <div class="resources-dropdown-content-wrap">
-      <ul class="resources-dropdown-content">
-        <li
-          v-for="resource in resourcesList"
-          :key="resource.id"
-          @click="$emit('dropdown-close')"
-        >
-          <NuxtLink
-            class="resource-dropdown-item d-flex align-items-center"
-            :to="`/${resource.slug}/`"
-            @click="collapseNav"
-          >
-            <nuxt-img
-              :src="resource.imageUrl"
-              :alt="resource.imageAlt"
-              class="resource-dropdown-item__img"
-            />
-            <div class="d-flex flex-column">
-              <span class="resource-dropdown-item__title">{{ resource.title }}</span>
-              <span class="resource-dropdown-item__desc">{{ resource.description }}</span>
-            </div>
-          </NuxtLink>
-        </li>
-      </ul>
-    </div>
+  <div class="dropdown-container">
+    <transition
+      :name="!isMobile ? 'dropdown' : 'mobile-dropdown'"
+      appear
+    >
+      <div
+        v-show="dropdownActive"
+        class="resources-dropdown-mega"
+        :class="{ active: dropdownActive, 'is-mobile': isMobile }"
+        v-on="
+          !isMobile
+            ? { mouseenter: onDropdownMouseEnter, mouseleave: onDropdownMouseLeave }
+            : {}
+        "
+      >
+        <div class="resources-dropdown-content-wrap">
+          <ul class="resources-dropdown-content">
+            <li
+              v-for="resource in resourcesList"
+              :key="resource.id"
+              @click="$emit('dropdown-close')"
+            >
+              <NuxtLink
+                class="resource-dropdown-item d-flex align-items-center"
+                :to="`/${resource.slug}/`"
+                @click="collapseNav"
+              >
+                <nuxt-img
+                  :src="resource.imageUrl"
+                  :alt="resource.imageAlt"
+                  class="resource-dropdown-item__img"
+                />
+                <div class="d-flex flex-column">
+                  <span class="resource-dropdown-item__title">{{ resource.title }}</span>
+                  <span class="resource-dropdown-item__desc">{{ resource.description }}</span>
+                </div>
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -65,6 +72,37 @@ export default {
 </script>
 
 <style scoped>
+/* Transition Effects */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+.dropdown-enter-active {
+  animation: slideDown 0.25s ease-out forwards;
+}
+
+.dropdown-leave-active {
+  animation: slideUp 0.2s ease-in forwards;
+}
+
 .resources-dropdown-mega {
   display: flex;
   width: auto;
@@ -116,6 +154,70 @@ export default {
 }
 
 @media (max-width: 1199px) {
+  /* Mobile specific styles */
+  .resources-dropdown-mega.is-mobile {
+    overflow: hidden;
+  }
+  
+  /* Mobile transitions */
+  .mobile-dropdown-enter-active {
+    animation: mobileSlideDown 0.5s ease-out forwards;
+  }
+  
+  .mobile-dropdown-leave-active {
+    animation: mobileSlideUp 0.3s ease-in forwards;
+  }
+  
+  @keyframes mobileSlideDown {
+    0% {
+      opacity: 0;
+      max-height: 0;
+    }
+    20% {
+      opacity: 1;
+      max-height: 0;
+    }
+    100% {
+      opacity: 1;
+      max-height: 2000px;
+    }
+  }
+  
+  @keyframes mobileSlideUp {
+    0% {
+      opacity: 1;
+      max-height: 2000px;
+    }
+    80% {
+      opacity: 0;
+      max-height: 0;
+    }
+    100% {
+      opacity: 0;
+      max-height: 0;
+    }
+  }
+  
+  /* Override desktop animations for mobile */
+  .dropdown-enter-active,
+  .dropdown-leave-active {
+    animation: none !important;
+  }
+  
+  @keyframes slideDown {
+    from, to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  @keyframes slideUp {
+    from, to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
   .resources-dropdown-mega {
     position: static;
     flex-direction: column;
@@ -126,6 +228,7 @@ export default {
     left: unset;
     right: unset;
     transform: none;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
     box-shadow: none;
     border-radius: 0;
     border: none;
