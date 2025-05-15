@@ -1,19 +1,20 @@
 <template>
   <div class="dropdown-container">
-    <transition
-      :name="!isMobile ? 'dropdown' : 'mobile-dropdown'"
-      appear
-    >
+    <transition :name="!isMobile ? 'dropdown' : 'mobile-dropdown'" appear>
       <div
         v-show="dropdownActive"
         class="resources-dropdown-mega"
         :class="{ active: dropdownActive, 'is-mobile': isMobile }"
         v-on="
           !isMobile
-            ? { mouseenter: onDropdownMouseEnter, mouseleave: onDropdownMouseLeave }
+            ? {
+                mouseenter: onDropdownMouseEnter,
+                mouseleave: onDropdownMouseLeave,
+              }
             : {}
         "
       >
+        <div class="dropdown-arrow" v-if="!isMobile"></div>
         <div class="resources-dropdown-content-wrap">
           <ul class="resources-dropdown-content">
             <li
@@ -32,8 +33,12 @@
                   class="resource-dropdown-item__img"
                 />
                 <div class="d-flex flex-column">
-                  <span class="resource-dropdown-item__title">{{ resource.title }}</span>
-                  <span class="resource-dropdown-item__desc">{{ resource.description }}</span>
+                  <span class="resource-dropdown-item__title">{{
+                    resource.title
+                  }}</span>
+                  <span class="resource-dropdown-item__desc">{{
+                    resource.description
+                  }}</span>
                 </div>
               </NuxtLink>
             </li>
@@ -119,7 +124,7 @@ export default {
   z-index: 9999;
   border: 1px solid #eaecf0;
   align-items: stretch;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .resources-dropdown-content-wrap {
@@ -158,16 +163,16 @@ export default {
   .resources-dropdown-mega.is-mobile {
     overflow: hidden;
   }
-  
+
   /* Mobile transitions */
   .mobile-dropdown-enter-active {
     animation: mobileSlideDown 0.5s ease-out forwards;
   }
-  
+
   .mobile-dropdown-leave-active {
     animation: mobileSlideUp 0.3s ease-in forwards;
   }
-  
+
   @keyframes mobileSlideDown {
     0% {
       opacity: 0;
@@ -182,7 +187,7 @@ export default {
       max-height: 2000px;
     }
   }
-  
+
   @keyframes mobileSlideUp {
     0% {
       opacity: 1;
@@ -197,27 +202,29 @@ export default {
       max-height: 0;
     }
   }
-  
+
   /* Override desktop animations for mobile */
   .dropdown-enter-active,
   .dropdown-leave-active {
     animation: none !important;
   }
-  
+
   @keyframes slideDown {
-    from, to {
+    from,
+    to {
       opacity: 1;
       transform: none;
     }
   }
-  
+
   @keyframes slideUp {
-    from, to {
+    from,
+    to {
       opacity: 1;
       transform: none;
     }
   }
-  
+
   .resources-dropdown-mega {
     position: static;
     flex-direction: column;
@@ -245,6 +252,20 @@ export default {
     padding-top: 16px;
     padding-bottom: 16px;
   }
+}
+
+.dropdown-arrow {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-left: 1px solid #eaecf0;
+  border-top: 1px solid #eaecf0;
+  transform: rotate(45deg);
+  top: -8px;
+  left: 45%;
+  z-index: 10000;
+  box-shadow: -3px -3px 5px rgba(16, 30, 54, 0.02);
 }
 
 @media (max-width: 768px) {

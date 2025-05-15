@@ -14,6 +14,7 @@
             : {}
         "
       >
+        <div class="dropdown-arrow" v-if="!isMobile"></div>
         <div class="templates-dropdown-content-wrap">
           <div class="templates-dropdown-columns">
             <!-- Forms Column -->
@@ -283,7 +284,7 @@ export default {
   transform: translateX(-50%) translateY(0px);
   z-index: 9999;
   border: 1px solid #eaecf0;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .templates-dropdown-content-wrap {
@@ -384,6 +385,20 @@ export default {
   width: 20px;
   height: 20px;
   transition: transform 0.2s ease;
+}
+
+.dropdown-arrow {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-left: 1px solid #eaecf0;
+  border-top: 1px solid #eaecf0;
+  transform: rotate(45deg);
+  top: -8px;
+  left: 46%;
+  z-index: 10000;
+  box-shadow: -3px -3px 5px rgba(16, 30, 54, 0.02);
 }
 
 @media (max-width: 1199px) {

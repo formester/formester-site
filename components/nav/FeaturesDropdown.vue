@@ -10,6 +10,7 @@
         :class="{ active: dropdownActive, 'is-mobile': isMobile }"
         v-on="!isMobile ? { mouseenter: onDropdownMouseEnter, mouseleave: onDropdownMouseLeave } : {}"
       >
+        <div class="dropdown-arrow" v-if="!isMobile"></div>
         <template v-if="!isMobile">
           <!-- Categories Sidebar -->
           <div class="features-dropdown-sidebar">
@@ -144,13 +145,13 @@ export default {
   will-change: transform, opacity;
   border-radius: 8px;
   position: absolute;
-  left: 50%;
+  left: 45%;
   top: 100%;
   transform: translateX(-50%) translateY(0px);
   z-index: 9999;
   border: 1px solid #eaecf0;
   align-items: stretch;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* Sidebar (Categories) */
@@ -228,6 +229,20 @@ export default {
   box-sizing: border-box;
   align-content: start;
   padding: 0 24px;
+}
+
+.dropdown-arrow {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-left: 1px solid #eaecf0;
+  border-top: 1px solid #eaecf0;
+  transform: rotate(45deg);
+  top: -8px;
+  left: 36%;
+  z-index: 10000;
+  box-shadow: -3px -3px 5px rgba(16, 30, 54, 0.02);
 }
 
 @media (max-width: 1199px) {
