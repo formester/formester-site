@@ -107,7 +107,7 @@ export default {
   position: absolute;
   left: 50%;
   top: 100%;
-  transform: translateX(-50%) translateY(-8px);
+  transform: translateX(-50%) translateY(0px);
   z-index: 9999;
   border: 1px solid #eaecf0;
   align-items: stretch;

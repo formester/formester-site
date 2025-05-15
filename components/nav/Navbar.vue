@@ -104,8 +104,70 @@
           <li class="nav-item me-2" @click="collapseNav">
             <NuxtLink to="/pricing/" class="nav-link">Pricing</NuxtLink>
           </li>
-          <li class="nav-item me-2" @click="collapseNav">
-            <NuxtLink to="/templates/" class="nav-link">Templates</NuxtLink>
+          <li
+            class="nav-item dropdown me-2 position-static"
+            :class="{ open: templatesDropdownActive }"
+            @mouseenter="!isMobile && onTemplatesDropdownMouseEnter()"
+            @mouseleave="!isMobile && onTemplatesDropdownMouseLeave()"
+          >
+            <template v-if="isMobile">
+              <button
+                class="nav-link"
+                :class="{ active: templatesDropdownActive || hoveringTemplatesDropdown }"
+                id="navbarTemplatesDropdown"
+                type="button"
+                @click="toggleTemplatesDropdown"
+              >
+                Templates
+                <span class="chevron-stack">
+                  <nuxt-img
+                    src="/chevron-down-gray.svg"
+                    class="chevron chevron-gray"
+                    :class="{ open: templatesDropdownActive }"
+                  />
+                  <nuxt-img
+                    src="/chevron-down-colored.svg"
+                    class="chevron chevron-colored"
+                    :class="{ open: templatesDropdownActive }"
+                  />
+                </span>
+              </button>
+            </template>
+            <template v-else>
+              <button
+                class="nav-link"
+                :class="{ active: templatesDropdownActive || hoveringTemplatesDropdown }"
+                id="navbarTemplatesDropdown"
+                type="button"
+                @click="toggleTemplatesDropdown"
+                @mouseenter="onTemplatesDropdownMouseEnter"
+                @mouseleave="onTemplatesDropdownMouseLeave"
+                :aria-expanded="templatesDropdownActive.toString()"
+              >
+                Templates
+                <span class="chevron-stack">
+                  <nuxt-img
+                    src="/chevron-down-gray.svg"
+                    class="chevron chevron-gray"
+                    :class="{ open: templatesDropdownActive }"
+                  />
+                  <nuxt-img
+                    src="/chevron-down-colored.svg"
+                    class="chevron chevron-colored"
+                    :class="{ open: templatesDropdownActive }"
+                  />
+                </span>
+              </button>
+            </template>
+
+            <!-- Templates Dropdown Component -->
+            <TemplatesDropdown
+              :dropdownActive="templatesDropdownActive"
+              :isMobile="isMobile"
+              @mouseenter="onTemplatesDropdownMouseEnter"
+              @mouseleave="onTemplatesDropdownMouseLeave"
+              @dropdown-close="handleTemplatesDropdownClose"
+            />
           </li>
           <li class="nav-item me-2" @click="collapseNav">
             <NuxtLink to="/integrations/" class="nav-link"
@@ -212,6 +274,7 @@ import DropdownItem from './DropdownItem.vue'
 import NavItem from './NavItem.vue'
 import FeaturesDropdown from './FeaturesDropdown.vue'
 import ResourcesDropdown from './ResourcesDropdown.vue'
+import TemplatesDropdown from './TemplatesDropdown.vue'
 import axios from 'axios'
 import navItems from '~/static/navbar.json'
 
@@ -222,12 +285,15 @@ export default {
     DropdownItem,
     FeaturesDropdown,
     ResourcesDropdown,
+    TemplatesDropdown,
   },
   data() {
     return {
       dropdownActive: false,
-      resourcesDropdownActive: false,
       hoveringDropdown: false,
+      templatesDropdownActive: false,
+      hoveringTemplatesDropdown: false,
+      resourcesDropdownActive: false,
       hoveringResourcesDropdown: false,
       isMobile: false,
       dropdownItems: [],
@@ -288,6 +354,18 @@ export default {
     },
     toggleDropdown() {
       this.dropdownActive = !this.dropdownActive
+      if (this.dropdownActive) {
+        this.templatesDropdownActive = false
+        this.resourcesDropdownActive = false
+      }
+    },
+    
+    toggleTemplatesDropdown() {
+      this.templatesDropdownActive = !this.templatesDropdownActive
+      if (this.templatesDropdownActive) {
+        this.dropdownActive = false
+        this.resourcesDropdownActive = false
+      }
     },
 
     collapseNav() {
@@ -338,11 +416,37 @@ export default {
       this.collapseNav()
     },
 
+    onTemplatesDropdownMouseEnter() {
+      this.hoveringTemplatesDropdown = true
+      // Close other dropdowns if open
+      if (this.dropdownActive) {
+        this.dropdownActive = false
+      }
+      if (this.resourcesDropdownActive) {
+        this.resourcesDropdownActive = false
+      }
+      this.templatesDropdownActive = true
+    },
+
+    onTemplatesDropdownMouseLeave() {
+      this.hoveringTemplatesDropdown = false
+      setTimeout(() => {
+        if (!this.hoveringTemplatesDropdown) {
+          this.templatesDropdownActive = false
+        }
+      }, 200)
+    },
+
+    handleTemplatesDropdownClose() {
+      this.templatesDropdownActive = false
+      this.collapseNav()
+    },
+
     toggleResourcesDropdown() {
       this.resourcesDropdownActive = !this.resourcesDropdownActive
-      // Close features dropdown if open
-      if (this.resourcesDropdownActive && this.dropdownActive) {
+      if (this.resourcesDropdownActive) {
         this.dropdownActive = false
+        this.templatesDropdownActive = false
       }
     },
 
