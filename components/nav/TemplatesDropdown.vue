@@ -1,14 +1,18 @@
 <template>
   <div class="dropdown-container">
-    <transition
-      :name="!isMobile ? 'dropdown' : 'mobile-dropdown'"
-      appear
-    >
+    <transition :name="!isMobile ? 'dropdown' : 'mobile-dropdown'" appear>
       <div
         v-show="dropdownActive"
         class="templates-dropdown-mega"
         :class="{ active: dropdownActive, 'is-mobile': isMobile }"
-        v-on="!isMobile ? { mouseenter: onDropdownMouseEnter, mouseleave: onDropdownMouseLeave } : {}"
+        v-on="
+          !isMobile
+            ? {
+                mouseenter: onDropdownMouseEnter,
+                mouseleave: onDropdownMouseLeave,
+              }
+            : {}
+        "
       >
         <div class="templates-dropdown-content-wrap">
           <div class="templates-dropdown-columns">
@@ -16,46 +20,73 @@
             <div class="templates-dropdown-column">
               <div class="templates-dropdown-title">
                 <span class="templates-dropdown-icon">
-                  <nuxt-img src="/form-icon.svg" alt="Forms" width="20" height="20" />
+                  <nuxt-img
+                    src="/form-icon.svg"
+                    alt="Forms"
+                    width="20"
+                    height="20"
+                  />
                 </span>
                 Forms
               </div>
               <ul class="templates-dropdown-list">
-                <li v-for="item in formsTemplates" :key="item.id" @click="$emit('dropdown-close')">
+                <li
+                  v-for="item in formsTemplates"
+                  :key="item.id"
+                  @click="$emit('dropdown-close')"
+                >
                   <NuxtLink :to="item.slug" class="templates-dropdown-link">
                     {{ item.title }}
                   </NuxtLink>
                 </li>
               </ul>
             </div>
-            
+
             <!-- Surveys Column -->
             <div class="templates-dropdown-column">
               <div class="templates-dropdown-title">
                 <span class="templates-dropdown-icon">
-                  <nuxt-img src="/survey-icon.svg" alt="Surveys" width="20" height="20" />
+                  <nuxt-img
+                    src="/survey-icon.svg"
+                    alt="Surveys"
+                    width="20"
+                    height="20"
+                  />
                 </span>
                 Surveys
               </div>
               <ul class="templates-dropdown-list">
-                <li v-for="item in surveysTemplates" :key="item.id" @click="$emit('dropdown-close')">
+                <li
+                  v-for="item in surveysTemplates"
+                  :key="item.id"
+                  @click="$emit('dropdown-close')"
+                >
                   <NuxtLink :to="item.slug" class="templates-dropdown-link">
                     {{ item.title }}
                   </NuxtLink>
                 </li>
               </ul>
             </div>
-            
+
             <!-- Quizzes Column -->
             <div class="templates-dropdown-column">
               <div class="templates-dropdown-title">
                 <span class="templates-dropdown-icon">
-                  <nuxt-img src="/quiz-icon.svg" alt="Quizzes" width="20" height="20" />
+                  <nuxt-img
+                    src="/quiz-icon.svg"
+                    alt="Quizzes"
+                    width="20"
+                    height="20"
+                  />
                 </span>
                 Quizzes
               </div>
               <ul class="templates-dropdown-list">
-                <li v-for="item in quizzesTemplates" :key="item.id" @click="$emit('dropdown-close')">
+                <li
+                  v-for="item in quizzesTemplates"
+                  :key="item.id"
+                  @click="$emit('dropdown-close')"
+                >
                   <NuxtLink :to="item.slug" class="templates-dropdown-link">
                     {{ item.title }}
                   </NuxtLink>
@@ -63,10 +94,22 @@
               </ul>
             </div>
           </div>
-          
+
           <div class="templates-dropdown-footer">
-            <NuxtLink to="/templates/" class="templates-dropdown-all" @click="$emit('dropdown-close')">
-              Explore all templates →
+            <NuxtLink
+              to="/templates/"
+              class="templates-dropdown-all"
+              @click="$emit('dropdown-close')"
+            >
+              <span>Explore all templates</span>
+              <span class="arrow-icon">
+                <nuxt-img
+                  src="/arrow-right.svg"
+                  alt="Arrow Right"
+                  width="20"
+                  height="20"
+                />
+              </span>
             </NuxtLink>
           </div>
         </div>
@@ -85,29 +128,96 @@ export default {
   data() {
     return {
       formsTemplates: [
-        { id: 1, title: 'Application forms', slug: '/templates/application-forms/' },
-        { id: 2, title: 'Booking forms', slug: '/templates/booking-forms/' },
-        { id: 3, title: 'Contact forms', slug: '/templates/contact-forms/' },
-        { id: 4, title: 'Consent forms', slug: '/templates/consent-forms/' },
-        { id: 5, title: 'Payment forms', slug: '/templates/payment-forms/' },
-        { id: 6, title: 'Registration forms', slug: '/templates/registration-forms/' },
+        {
+          id: 1,
+          title: 'Contact Forms',
+          slug: '/templates/categories/contact-forms/',
+        },
+        {
+          id: 2,
+          title: 'Employee Management Forms',
+          slug: '/templates/categories/event-management-forms/',
+        },
+        {
+          id: 3,
+          title: 'Booking Forms',
+          slug: '/templates/categories/booking-forms/',
+        },
+        {
+          id: 4,
+          title: 'Lead Generation Forms',
+          slug: '/templates/categories/lead-generation-forms/',
+        },
+        {
+          id: 5,
+          title: 'Application Forms',
+          slug: '/templates/categories/application-forms/',
+        },
+        {
+          id: 6,
+          title: 'Order Forms',
+          slug: '/templates/categories/order-forms/',
+        },
       ],
       surveysTemplates: [
-        { id: 1, title: 'Customer satisfaction surveys', slug: '/templates/customer-satisfaction-surveys/' },
-        { id: 2, title: 'Employee Satisfaction Surveys', slug: '/templates/employee-satisfaction-surveys/' },
-        { id: 3, title: 'Feedback Surveys', slug: '/templates/feedback-surveys/' },
-        { id: 4, title: 'Marketing Surveys', slug: '/templates/marketing-surveys/' },
-        { id: 5, title: 'Product Surveys', slug: '/templates/product-surveys/' },
-        { id: 6, title: 'Research Surveys', slug: '/templates/research-surveys/' },
+        {
+          id: 1,
+          title: 'Surveys',
+          slug: '/templates/categories/survey-forms/',
+        },
+        {
+          id: 2,
+          title: 'Questionnaire',
+          slug: '/templates/categories/questionnaire/',
+        },
+        {
+          id: 3,
+          title: 'New Product Survey',
+          slug: '/templates/new-product-survey-form-1919/',
+        },
+        {
+          id: 4,
+          title: 'Marketing Research Survey',
+          slug: '/templates/market-research-survey-701/',
+        },
+        {
+          id: 5,
+          title: 'Employee Engagement Survey',
+          slug: '/templates/employee-engagement-survey-template-17645/',
+        },
+        {
+          id: 6,
+          title: 'Event Feedback Survey',
+          slug: '/templates/event-feedback-survey-698/',
+        },
       ],
       quizzesTemplates: [
-        { id: 1, title: 'Personality Quiz', slug: '/templates/personality-quiz/' },
-        { id: 2, title: 'General Knowledge Quiz', slug: '/templates/general-knowledge-quiz/' },
-        { id: 3, title: 'Vocabulary Quiz', slug: '/templates/vocabulary-quiz/' },
-        { id: 4, title: 'Trivia Quiz', slug: '/templates/trivia-quiz/' },
-        { id: 5, title: 'Science Quiz', slug: '/templates/science-quiz/' },
-        { id: 6, title: 'Webinar Quiz', slug: '/templates/webinar-quiz/' },
-      ]
+        {
+          id: 1,
+          title: 'General Knowledge Quiz',
+          slug: '/templates/general-knowledge-mcq-quiz-27608/',
+        },
+        {
+          id: 2,
+          title: 'Personality Quiz',
+          slug: '/templates/uncover-your-inner-you-4124/',
+        },
+        {
+          id: 3,
+          title: 'Trivia Quiz',
+          slug: '/templates/funny-trivia-quiz-14818/',
+        },
+        {
+          id: 4,
+          title: 'Magazine Quiz',
+          slug: '/templates/magazine-quiz-27610/',
+        },
+        {
+          id: 5,
+          title: 'Vocabulary Quiz',
+          slug: '/templates/vocabulary-quiz-27609/',
+        },
+      ],
     }
   },
   methods: {
@@ -116,8 +226,8 @@ export default {
     },
     onDropdownMouseLeave() {
       this.$emit('mouseleave')
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -145,6 +255,12 @@ export default {
   }
 }
 
+.templates-dropdown-all {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .dropdown-enter-active {
   animation: slideDown 0.25s ease-out forwards;
 }
@@ -153,7 +269,6 @@ export default {
   animation: slideUp 0.2s ease-in forwards;
 }
 
-/* Templates Mega Dropdown */
 .templates-dropdown-mega {
   display: flex;
   width: 800px;
@@ -245,7 +360,8 @@ export default {
 .templates-dropdown-all {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  gap: 4px;
   color: var(--clr-primary);
   font-size: 14px;
   font-weight: 500;
@@ -257,9 +373,17 @@ export default {
   transition: all 0.2s ease;
 }
 
+.templates-dropdown-all:hover .arrow-icon {
+  transform: translateX(2px);
+}
+
 .arrow-icon {
-  width: 16px;
-  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease;
 }
 
 @media (max-width: 1199px) {
@@ -267,16 +391,16 @@ export default {
   .templates-dropdown-mega.is-mobile {
     overflow: hidden;
   }
-  
+
   /* Mobile transitions */
   .mobile-dropdown-enter-active {
     animation: mobileSlideDown 0.5s ease-out forwards;
   }
-  
+
   .mobile-dropdown-leave-active {
     animation: mobileSlideUp 0.3s ease-in forwards;
   }
-  
+
   @keyframes mobileSlideDown {
     0% {
       opacity: 0;
@@ -291,7 +415,7 @@ export default {
       max-height: 2000px;
     }
   }
-  
+
   @keyframes mobileSlideUp {
     0% {
       opacity: 1;
@@ -306,27 +430,29 @@ export default {
       max-height: 0;
     }
   }
-  
+
   /* Override desktop animations for mobile */
   .dropdown-enter-active,
   .dropdown-leave-active {
     animation: none !important;
   }
-  
+
   @keyframes slideDown {
-    from, to {
+    from,
+    to {
       opacity: 1;
       transform: none;
     }
   }
-  
+
   @keyframes slideUp {
-    from, to {
+    from,
+    to {
       opacity: 1;
       transform: none;
     }
   }
-  
+
   .templates-dropdown-mega {
     position: static;
     flex-direction: column;
@@ -342,11 +468,11 @@ export default {
     border-radius: 0;
     border: none;
   }
-  
+
   .templates-dropdown-content-wrap {
     padding: 16px;
   }
-  
+
   .templates-dropdown-columns {
     flex-direction: column;
     gap: 24px;
@@ -357,7 +483,7 @@ export default {
   .templates-dropdown-columns {
     gap: 16px;
   }
-  
+
   .templates-dropdown-list {
     gap: 8px;
   }
