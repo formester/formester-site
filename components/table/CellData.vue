@@ -1,5 +1,5 @@
 <template>
-  <component :is="cellType" :style="textStyle">
+  <component :is="cellType">
     <span v-if="!iconSrc">{{ text }}</span>
     <span v-else-if="iconSrc">
       <nuxt-img class="cell__icon" :src="iconSrc" :alt="cellIcon.imageAlt || text || ''" />
