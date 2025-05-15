@@ -131,10 +131,8 @@ export default {
 }
 
 .features-dropdown-title-category {
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-size: 14px;
+  font-weight: 500;
   color: #8a94a6;
   margin-left: 24px;
   margin-bottom: 12px;
@@ -173,10 +171,8 @@ export default {
 }
 
 .features-dropdown-title-features {
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-size: 14px;
+  font-weight: 500;
   color: #8a94a6;
   margin-left: 36px;
   margin-bottom: 12px;

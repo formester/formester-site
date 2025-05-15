@@ -99,7 +99,7 @@ export default {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: #8a94a6;
+  color: var(--clr-text-primary);
 }
 
 .resources-dropdown-content {

@@ -330,9 +330,7 @@ export default {
     }
   },
   computed: {
-    /**
-     * Filter dropdown items based on the active category
-     */
+
     filteredDropdownItems() {
       if (!this.activeFeatureCategory) return this.dropdownItems
       return this.dropdownItems.filter(

@@ -10,6 +10,9 @@
         <!-- Forms Column -->
         <div class="templates-dropdown-column">
           <div class="templates-dropdown-title">
+            <span class="templates-dropdown-icon">
+              <nuxt-img src="/form-icon.svg" alt="Forms" width="20" height="20" />
+            </span>
             Forms
           </div>
           <ul class="templates-dropdown-list">
@@ -24,6 +27,9 @@
         <!-- Surveys Column -->
         <div class="templates-dropdown-column">
           <div class="templates-dropdown-title">
+            <span class="templates-dropdown-icon">
+              <nuxt-img src="/survey-icon.svg" alt="Surveys" width="20" height="20" />
+            </span>
             Surveys
           </div>
           <ul class="templates-dropdown-list">
@@ -38,6 +44,9 @@
         <!-- Quizzes Column -->
         <div class="templates-dropdown-column">
           <div class="templates-dropdown-title">
+            <span class="templates-dropdown-icon">
+              <nuxt-img src="/quiz-icon.svg" alt="Quizzes" width="20" height="20" />
+            </span>
             Quizzes
           </div>
           <ul class="templates-dropdown-list">
@@ -144,12 +153,20 @@ export default {
 
 .templates-dropdown-title {
   font-size: 14px;
-  font-weight: 600;
-  color: var(--clr-text-primary);
+  font-weight: 500;
+  color: #8a94a6;
   margin-bottom: 16px;
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.templates-dropdown-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
 }
 
 .templates-dropdown-title-icon {
@@ -167,7 +184,7 @@ export default {
 }
 
 .templates-dropdown-link {
-  color: var(--clr-text-secondary);
+  color: var(--clr-text-primary);
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
