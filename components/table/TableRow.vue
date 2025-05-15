@@ -7,8 +7,8 @@
           fontWeight: rowType === 'head' ? '600' : 'normal',
           padding: '12px 16px',
           textAlign: cellIndex === 0 ? 'left' : 'center',
-          wordWrap: 'break-word', /* Ensure word wrap works for long text */
-          whiteSpace: 'normal',   /* Allows the text to wrap */
+          wordWrap: 'break-word',
+          whiteSpace: 'normal', 
           verticalAlign: 'middle',
         }"  
       >
@@ -67,16 +67,6 @@
         // Case 2: Direct imageUrl property
         if (cellIcon.imageUrl) {
           return cellIcon.imageUrl;
-        }
-        
-        // Case 3: Uploaded image in Strapi v4
-        if (cellIcon.image?.data?.attributes?.url) {
-          return cellIcon.image.data.attributes.url;
-        }
-
-        // Case 4: Direct upload in Strapi (your specific case)
-        if (cellIcon.image && typeof cellIcon.image === 'object' && cellIcon.image.url) {
-          return cellIcon.image.url;
         }
         
         return null;
