@@ -267,7 +267,7 @@ export default {
 }
 
 .dropdown-leave-active {
-  animation: slideUp 0.2s ease-in forwards;
+  animation: slideUp 0.1s ease-in forwards;
 }
 
 .templates-dropdown-mega {
@@ -413,7 +413,7 @@ export default {
   }
 
   .mobile-dropdown-leave-active {
-    animation: mobileSlideUp 0.3s ease-in forwards;
+    animation: mobileSlideUp 0.2s ease-in forwards;
   }
 
   @keyframes mobileSlideDown {
