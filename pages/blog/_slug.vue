@@ -391,28 +391,28 @@ nav {
   font-size: 2.25rem;
   font-weight: 700;
   line-height: 44px;
-  color: hsla(0, 0%, 20%, 1);
+  color: var(--clr-text-primary);
 }
 
 .article__sub-heading {
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 36px;
-  color: hsla(0, 0%, 20%, 1);
+  color: var(--clr-text-primary);
 }
 
 .article__desc {
   font-size: 17px;
   line-height: 31px;
-  color: hsla(0, 0%, 31%, 1);
+  color: var(--clr-text-primary);
 }
 
 .nuxt-content {
   margin-top: 18px;
-  font-size: 17px;
-  line-height: 32px;
+  font-size: 16px;
+  line-height: 24px;
   letter-spacing: 0.4px;
-  color: #0d0d0d;
+  color: var(--clr-text-primary);
 }
 
 .nuxt-content p {
@@ -420,21 +420,21 @@ nav {
 }
 
 .nuxt-content h2 {
-  font-size: 1.75rem;
+  font-size: 30px;
   font-weight: 700;
-  line-height: 36px;
-  color: hsla(0, 0%, 20%, 1);
-  margin-top: 48px;
-  margin-bottom: 16px;
+  line-height: 38px;
+  color: var(--clr-text-primary);
+  margin-top: 64px;
+  margin-bottom: 24px;
 }
 
 .nuxt-content h3 {
-  font-size: 1.45rem;
+  font-size: 24px;
   font-weight: 600;
-  line-height: 24px;
-  color: hsla(0, 0%, 20%, 1);
-  margin-top: 32px;
-  margin-bottom: 16px;
+  line-height: 28px;
+  color: var(--clr-text-primary);
+  margin-top: 48px;
+  margin-bottom: 24px;
 }
 
 .nuxt-content a {

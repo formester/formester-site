@@ -46,7 +46,7 @@ export default {
 
   robots: {
     UserAgent: '*',
-    Disallow: ['/_nuxt/', '/_nuxt/static/'],
+    Disallow: ['/_nuxt/static/'],
   },
 
   sitemap: {
