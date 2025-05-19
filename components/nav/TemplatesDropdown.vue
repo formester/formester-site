@@ -137,7 +137,7 @@ export default {
         {
           id: 2,
           title: 'Employee Management Forms',
-          slug: '/templates/categories/event-management-forms/',
+          slug: '/templates/categories/event-management/',
         },
         {
           id: 3,
@@ -147,12 +147,12 @@ export default {
         {
           id: 4,
           title: 'Lead Generation Forms',
-          slug: '/templates/categories/lead-generation-forms/',
+          slug: '/templates/categories/lead-generation/',
         },
         {
           id: 5,
           title: 'Application Forms',
-          slug: '/templates/categories/application-forms/',
+          slug: '/templates/categories/application-and-registration/',
         },
         {
           id: 6,

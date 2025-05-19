@@ -324,7 +324,7 @@ export default {
           description: 'Solutions for large organizations',
           imageUrl: '/enterprise.svg',
           imageAlt: 'Enterprise icon',
-          Formeserug: 'enterprise',
+          slug: 'enterprise',
         },
       ],
     }
