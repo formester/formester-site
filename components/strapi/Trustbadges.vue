@@ -13,14 +13,14 @@
             <div class="rating-wrapper">
                 <nuxt-img src="/capterra.svg" alt="Capterra" class="logo" />
                 <div class="rating">
-                    <span class="rating-number">5.0</span>
+                    <span class="rating-number">5</span>
                     <nuxt-img src="/5-stars.svg" alt="5 stars" class="rating-stars" />
                 </div>
             </div>
             <div class="rating-wrapper">
                 <nuxt-img src="/product-hunt.svg" alt="Product Hunt" class="logo" />
                 <div class="rating">
-                    <span class="rating-number">5.0</span>
+                    <span class="rating-number">5</span>
                     <nuxt-img src="/5-stars.svg" alt="5 stars" class="rating-stars" />
                 </div>
             </div>

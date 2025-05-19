@@ -31,15 +31,14 @@ export default {
 }
 
 .see-for-yourself {
-  top: -10%;
+  top: -14%;
   right: 20%;
   animation: pulse 4s infinite;
-  height: 100px;
 }
 
 @media screen and (max-width: 768px) {
   .see-for-yourself {
-    top: -10%;
+    top: -14%;
     right: 5%;
     animation: pulse 4s infinite;
   }
