@@ -5,6 +5,7 @@
     "navTitle": "HTML Form Backend",
     "navDescription": "SImplify form integration",
     "featureCategory": "Form Builder",
+    "featurePlan": "Personal",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "HTML Form Backend ",
@@ -20,6 +21,7 @@
     "navTitle": "Email Autoresponder",
     "navDescription": "Send Automated Email Response ",
     "featureCategory": "Data Handling",
+    "featurePlan": "Free",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "Auto Responder - Set up automated response",
@@ -35,6 +37,7 @@
     "navTitle": "Spam Protection",
     "navDescription": "Protect sensitive data",
     "featureCategory": "Security & Validation",
+    "featurePlan": null,
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "Spam Protecttion",
@@ -50,6 +53,7 @@
     "navTitle": "Form Analytics",
     "navDescription": "Get Insights of Engagements",
     "featureCategory": "Notifications & Reports",
+    "featurePlan": null,
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "Form Analytics",
@@ -65,6 +69,7 @@
     "navTitle": "Online Payments",
     "navDescription": "Start collecting payments",
     "featureCategory": "Branding & Integration",
+    "featurePlan": null,
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "Online Payments",
@@ -80,6 +85,7 @@
     "navTitle": "Electronic Signature",
     "navDescription": "Incorporate e-signatures",
     "featureCategory": "Security & Validation",
+    "featurePlan": "Free",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "Electronic Signature",
@@ -95,6 +101,7 @@
     "navTitle": "Branding Kit",
     "navDescription": "Elevate your brand identity",
     "featureCategory": "Branding & Integration",
+    "featurePlan": "Personal",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "Branding Kit",
@@ -110,6 +117,7 @@
     "navTitle": "Information Recall",
     "navDescription": "Referencing previous answers",
     "featureCategory": "Data Handling",
+    "featurePlan": null,
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "Information Recall",
@@ -125,6 +133,7 @@
     "navTitle": "Offline Forms",
     "navDescription": "Form submissions offline",
     "featureCategory": "Form Builder",
+    "featurePlan": null,
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "Offline Forms",
@@ -140,6 +149,7 @@
     "navTitle": "Partial Submissions",
     "navDescription": "Capture incomplete submissions",
     "featureCategory": "Data Handling",
+    "featurePlan": "Business",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "partial submission",
@@ -155,6 +165,7 @@
     "navTitle": "Multilingual Forms",
     "navDescription": "Add 80+ translations to forms",
     "featureCategory": "Advanced Controls",
+    "featurePlan": null,
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "Multi Language Form Translations",
@@ -170,6 +181,7 @@
     "navTitle": "PDF Export",
     "navDescription": "Export submissions as PDFs",
     "featureCategory": "Data Handling",
+    "featurePlan": null,
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "Export Submissions As PDFs",
@@ -185,6 +197,7 @@
     "navTitle": "Form Limiter",
     "navDescription": "Limit form responses",
     "featureCategory": "Form Builder",
+    "featurePlan": null,
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "formester's form limiter icon",
@@ -200,6 +213,7 @@
     "navTitle": "Qr Code Generator",
     "navDescription": "Generate free QR codes",
     "featureCategory": "Branding & Integration",
+    "featurePlan": null,
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "formester's qr code generator icon",
@@ -215,6 +229,7 @@
     "navTitle": "Save & Resume",
     "navDescription": "Save & Resume Progress",
     "featureCategory": "Data Handling",
+    "featurePlan": null,
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "Save and Resume Forms",
@@ -230,6 +245,7 @@
     "navTitle": "File Upload",
     "navDescription": "Collect Files, PDFs & More",
     "featureCategory": "Data Handling",
+    "featurePlan": null,
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "File Upload",
@@ -245,6 +261,7 @@
     "navTitle": "Drag and Drop Interface",
     "navDescription": "Create Stunning Forms & Surveys",
     "featureCategory": "Form Builder",
+    "featurePlan": "Free",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "drag and drop",
@@ -260,6 +277,7 @@
     "navTitle": "Embeddable Forms",
     "navDescription": "Embed Form In Your Website",
     "featureCategory": "Branding & Integration",
+    "featurePlan": "Free",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "Embeddable Forms",
@@ -275,6 +293,7 @@
     "navTitle": "Calculating Fields",
     "navDescription": "Forms that perform calculations",
     "featureCategory": "Advanced Controls",
+    "featurePlan": "Free",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "Calculating Fields",
@@ -290,6 +309,7 @@
     "navTitle": "Conditional Logic",
     "navDescription": "Create intelligent forms",
     "featureCategory": "Advanced Controls",
+    "featurePlan": "Personal",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "Conditional Logic",
@@ -305,6 +325,7 @@
     "navTitle": "Collaborative Forms",
     "navDescription": "Collaborative Forms & Surveys",
     "featureCategory": "Form Builder",
+    "featurePlan": "Business",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "user icon",
@@ -320,6 +341,7 @@
     "navTitle": "Email Verification",
     "navDescription": "Verify Email Addresses",
     "featureCategory": "Security & Validation",
+    "featurePlan": "Personal",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "Email Verification",
@@ -335,6 +357,7 @@
     "navTitle": "Custom ID",
     "navDescription": "Unique IDs For Submissions",
     "featureCategory": "Advanced Controls",
+    "featurePlan": "Free",
     "navIcon": {
       "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/file_shield_02_d218ab98b4.svg",
       "imageAlt": "auto unique id icon",
@@ -347,6 +370,7 @@
     "navTitle": "Appointment Scheduler",
     "navDescription": "Book Appointments",
     "featureCategory": "Advanced Controls",
+    "featurePlan": "Free",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "calender icon",
@@ -362,6 +386,7 @@
     "navTitle": "TrustedFormCertificate",
     "navDescription": "Certify Your Leads",
     "featureCategory": "Security & Validation",
+    "featurePlan": null,
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "embed icon",
@@ -377,6 +402,7 @@
     "navTitle": "PDF Editor",
     "navDescription": "Create Fillable PDFs",
     "featureCategory": "Form Builder",
+    "featurePlan": null,
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "pdf icon",
@@ -392,6 +418,7 @@
     "navTitle": "Summary Analytics",
     "navDescription": "Summarize Reponses",
     "featureCategory": "Notifications & Reports",
+    "featurePlan": null,
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "analytics icon",
@@ -407,6 +434,7 @@
     "navTitle": "Pre Fill Fields",
     "navDescription": "Pre Fill Forms",
     "featureCategory": "Advanced Controls",
+    "featurePlan": null,
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "pen icon",
@@ -422,6 +450,7 @@
     "navTitle": "Convert PDF to Form",
     "navDescription": "Convert PDFs to Fillable Forms",
     "featureCategory": "Form Builder",
+    "featurePlan": "Free",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "pdf icon",
@@ -437,6 +466,7 @@
     "navTitle": "Quiz Features",
     "navDescription": "Advanced Quiz Features",
     "featureCategory": "Advanced Controls",
+    "featurePlan": null,
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "formester pen icon",
@@ -452,6 +482,7 @@
     "navTitle": "Email Notifications",
     "navDescription": "Get Instant Email Alerts",
     "featureCategory": "Notifications & Reports",
+    "featurePlan": "Free",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "email icon",

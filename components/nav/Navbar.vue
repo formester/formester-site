@@ -384,6 +384,7 @@ export default {
         imageAlt: item.navIcon?.imageAlt || '',
         slug: item.slug,
         featureCategory: item.featureCategory || 'Other',
+        featurePlan: item.featurePlan || null,
       }))
 
       // Extract unique categories

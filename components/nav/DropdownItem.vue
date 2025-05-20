@@ -6,7 +6,31 @@
   >
     <nuxt-img :src="imageUrl" :alt="imageAlt" class="dropdown-item__img" />
     <div class="d-flex flex-column">
-      <span class="dropdown-item__title">{{ title }}</span>
+      <div class="d-flex align-items-center gap-2">
+        <span class="dropdown-item__title">{{ title }}</span>
+        <div 
+          v-if="featurePlan === 'Business'" 
+          class="plan-icon-wrapper" 
+          title="Available in Business Plan"
+        >
+          <nuxt-img 
+            src="business.svg" 
+            alt="Business plan"
+            class="plan-icon"
+          />
+        </div>
+        <div 
+          v-if="featurePlan === 'Personal'" 
+          class="plan-icon-wrapper" 
+          title="Available in Personal Plan"
+        >
+          <nuxt-img 
+            src="personal.svg" 
+            alt="Personal plan"
+            class="plan-icon"
+          />
+        </div>
+      </div>
       <span class="dropdown-item__desc">{{ description }}</span>
     </div>
   </NuxtLink>
@@ -35,6 +59,14 @@ export default {
       type: String,
       required: true,
     },
+    featurePlan: {
+      type: String,
+      required: false,
+      default: null,
+      validator: (value) => {
+        return value === null || ['Business', 'Personal', 'Free'].includes(value)
+      }
+    },
   },
   methods: {
     collapseNav() {
@@ -47,6 +79,10 @@ export default {
 </script>
 
 <style>
+.plan-icon {
+  height: 16px;
+  width: 16px;
+}
 .dropdown-item {
   padding: 12px;
   border-radius: 8px;
@@ -74,6 +110,17 @@ export default {
 .dropdown-item__img {
   height: 24px;
   width: 24px;
+}
+
+.plan-icon-wrapper {
+  display: inline-flex;
+  position: relative;
+  cursor: pointer;
+}
+
+.plan-icon {
+  height: 20px;
+  width: 20px;
 }
 
 @media (max-width: 992px) {
