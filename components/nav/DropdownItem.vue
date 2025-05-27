@@ -13,8 +13,8 @@
           class="plan-icon-wrapper" 
           title="Available in Business Plan"
         >
-          <nuxt-img 
-            src="/business.svg" 
+          <img 
+            src="assets/images/business.svg" 
             alt="Business plan"
             class="plan-icon"
           />
@@ -24,8 +24,8 @@
           class="plan-icon-wrapper" 
           title="Available in Personal Plan"
         >
-          <nuxt-img 
-            src="/personal.svg" 
+          <img 
+            src="assets/images/personal.svg" 
             alt="Personal plan"
             class="plan-icon"
           />
