@@ -37,7 +37,7 @@
     "navTitle": "Spam Protection",
     "navDescription": "Protect sensitive data",
     "featureCategory": "Security & Validation",
-    "featurePlan": null,
+    "featurePlan": "Free",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "Spam Protecttion",
@@ -53,7 +53,7 @@
     "navTitle": "Form Analytics",
     "navDescription": "Get Insights of Engagements",
     "featureCategory": "Notifications & Reports",
-    "featurePlan": null,
+    "featurePlan": "Free",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "Form Analytics",
@@ -69,7 +69,7 @@
     "navTitle": "Online Payments",
     "navDescription": "Start collecting payments",
     "featureCategory": "Branding & Integration",
-    "featurePlan": null,
+    "featurePlan": "Free",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "Online Payments",
@@ -117,7 +117,7 @@
     "navTitle": "Information Recall",
     "navDescription": "Referencing previous answers",
     "featureCategory": "Data Handling",
-    "featurePlan": null,
+    "featurePlan": "Free",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "Information Recall",
@@ -133,7 +133,7 @@
     "navTitle": "Offline Forms",
     "navDescription": "Form submissions offline",
     "featureCategory": "Form Builder",
-    "featurePlan": null,
+    "featurePlan": "Free",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "Offline Forms",
@@ -165,7 +165,7 @@
     "navTitle": "Multilingual Forms",
     "navDescription": "Add 80+ translations to forms",
     "featureCategory": "Advanced Controls",
-    "featurePlan": null,
+    "featurePlan": "Business",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "Multi Language Form Translations",
@@ -181,7 +181,7 @@
     "navTitle": "PDF Export",
     "navDescription": "Export submissions as PDFs",
     "featureCategory": "Data Handling",
-    "featurePlan": null,
+    "featurePlan": "Free",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "Export Submissions As PDFs",
@@ -197,7 +197,7 @@
     "navTitle": "Form Limiter",
     "navDescription": "Limit form responses",
     "featureCategory": "Form Builder",
-    "featurePlan": null,
+    "featurePlan": "Free",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "formester's form limiter icon",
@@ -213,7 +213,7 @@
     "navTitle": "Qr Code Generator",
     "navDescription": "Generate free QR codes",
     "featureCategory": "Branding & Integration",
-    "featurePlan": null,
+    "featurePlan": "Free",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "formester's qr code generator icon",
@@ -229,7 +229,7 @@
     "navTitle": "Save & Resume",
     "navDescription": "Save & Resume Progress",
     "featureCategory": "Data Handling",
-    "featurePlan": null,
+    "featurePlan": "Business",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "Save and Resume Forms",
@@ -245,7 +245,7 @@
     "navTitle": "File Upload",
     "navDescription": "Collect Files, PDFs & More",
     "featureCategory": "Data Handling",
-    "featurePlan": null,
+    "featurePlan": "Free",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "File Upload",
@@ -386,7 +386,7 @@
     "navTitle": "TrustedFormCertificate",
     "navDescription": "Certify Your Leads",
     "featureCategory": "Security & Validation",
-    "featurePlan": null,
+    "featurePlan": "Free",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "embed icon",
@@ -402,7 +402,7 @@
     "navTitle": "PDF Editor",
     "navDescription": "Create Fillable PDFs",
     "featureCategory": "Form Builder",
-    "featurePlan": null,
+    "featurePlan": "Business",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "pdf icon",
@@ -418,7 +418,7 @@
     "navTitle": "Summary Analytics",
     "navDescription": "Summarize Reponses",
     "featureCategory": "Notifications & Reports",
-    "featurePlan": null,
+    "featurePlan": "Free",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "analytics icon",
@@ -434,7 +434,7 @@
     "navTitle": "Pre Fill Fields",
     "navDescription": "Pre Fill Forms",
     "featureCategory": "Advanced Controls",
-    "featurePlan": null,
+    "featurePlan": "Free",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "pen icon",
@@ -466,7 +466,7 @@
     "navTitle": "Quiz Features",
     "navDescription": "Advanced Quiz Features",
     "featureCategory": "Advanced Controls",
-    "featurePlan": null,
+    "featurePlan": "Free",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "formester pen icon",
