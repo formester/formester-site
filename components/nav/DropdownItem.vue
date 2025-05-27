@@ -14,7 +14,7 @@
           title="Available in Business Plan"
         >
           <nuxt-img 
-            src="business.svg" 
+            src="/business.svg" 
             alt="Business plan"
             class="plan-icon"
           />
@@ -25,7 +25,7 @@
           title="Available in Personal Plan"
         >
           <nuxt-img 
-            src="personal.svg" 
+            src="/personal.svg" 
             alt="Personal plan"
             class="plan-icon"
           />
