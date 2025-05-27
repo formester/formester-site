@@ -184,7 +184,7 @@ export default {
 <style scoped>
 .trust-seals-section {
   margin-top: 96px;
-  margin-bottom: 240px;
+  margin-bottom: 96px;
   overflow: hidden;
   width: 100%;
 }

@@ -43,6 +43,7 @@
                   :imageUrl="dropdownItem.imageUrl"
                   :imageAlt="dropdownItem.imageAlt"
                   :slug="dropdownItem.slug"
+                  :featurePlan="dropdownItem.featurePlan"
                 />
               </li>
             </ul>
@@ -64,6 +65,7 @@
                   :imageUrl="dropdownItem.imageUrl"
                   :imageAlt="dropdownItem.imageAlt"
                   :slug="dropdownItem.slug"
+                  :featurePlan="dropdownItem.featurePlan"
                 />
               </li>
             </ul>
