@@ -1,19 +1,6 @@
 <template>
   <section class="container py-2 py-lg-5">
-    <template v-if="typeof title === 'string'">
-      <h2 class="title text-center">{{ title }}</h2>
-    </template>
-    <template v-else>
-      <h2 class="title text-center">
-        <span
-          v-for="item in title"
-          :key="item.id"
-          :class="{ highlight__text: item.highlight, bold: item.bold }"
-        >
-          {{ item.text }}
-        </span>
-      </h2>
-    </template>
+    <SectionTitle :heading="title" />
     <p class="hero__subheading text-center" v-if="description">
       {{ description }}
     </p>
