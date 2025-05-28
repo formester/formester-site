@@ -2,35 +2,39 @@
     <div class="container py-5">
       <div class="row justify-content-center align-items-center text-center mt-5">
         <SectionTitle :heading="title" />
+        <p>{{ description }}</p>
         <div class="trustbadge-wrapper">
-            <div class="rating-wrapper">
-                <nuxt-img src="/g2-crowd.svg" alt="G2 Crowd" class="logo" />
+          <div class="rating-wrapper">
+                <nuxt-img src="/product-hunt.svg" alt="Product Hunt" class="logo" />
                 <div class="rating">
-                    <span class="rating-number">4.7</span>
+                    <span class="rating-number">5/5</span>
+                    <nuxt-img src="/5-stars.svg" alt="5 stars" class="rating-stars" />
+                </div>
+            </div>
+          <div class="rating-wrapper">
+                <nuxt-img src="/trustpilot.svg" alt="Trustpilot" class="logo" />
+                <div class="rating">
+                    <span class="rating-number">4.4/5</span>
                     <nuxt-img src="/4.5-stars.svg" alt="4.5 stars" class="rating-stars" />
                 </div>
             </div>
             <div class="rating-wrapper">
                 <nuxt-img src="/capterra.svg" alt="Capterra" class="logo" />
                 <div class="rating">
-                    <span class="rating-number">5</span>
+                    <span class="rating-number">5/5</span>
                     <nuxt-img src="/5-stars.svg" alt="5 stars" class="rating-stars" />
                 </div>
             </div>
+
             <div class="rating-wrapper">
-                <nuxt-img src="/product-hunt.svg" alt="Product Hunt" class="logo" />
+                <nuxt-img src="/g2-crowd.svg" alt="G2 Crowd" class="logo" />
                 <div class="rating">
-                    <span class="rating-number">5</span>
-                    <nuxt-img src="/5-stars.svg" alt="5 stars" class="rating-stars" />
-                </div>
-            </div>
-            <div class="rating-wrapper">
-                <nuxt-img src="/trustpilot.svg" alt="Trustpilot" class="logo" />
-                <div class="rating">
-                    <span class="rating-number">4.4</span>
+                    <span class="rating-number">4.7/5</span>
                     <nuxt-img src="/4.5-stars.svg" alt="4.5 stars" class="rating-stars" />
                 </div>
             </div>
+
+
         </div>
       </div>
     </div>
@@ -44,6 +48,9 @@
         type: Array,
         required: true,
       },
+      description: {
+        type: String,
+      },
     },
   }
   </script>
@@ -53,22 +60,24 @@
 <style scoped>
 .rating {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 8px;
 }
 
 .rating-number {
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 60px;
   display: flex;
   align-items: center;
 }
 
+
+
 .rating-stars {
-  height: 1.25rem;  
+  height: 24px;  
   display: block;
 }
 
@@ -83,7 +92,9 @@
   padding-top: 32px;
   padding-bottom: 32px;
   border-radius: 8px;
-  background-color: #F9FAFB;
+  background-color: #FCFCFD;
+  border: 1px solid #F2F4F7;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
 }
 .logo {
   height: 40px;
@@ -97,4 +108,10 @@
   margin: 24px auto 0 auto;
 }
 
+@media screen and (max-width: 768px) {
+  .rating-number {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
 </style>
