@@ -342,7 +342,8 @@
         </div>
       </section>
       <div class="divider mt-4"></div>
-      <div class="socials mt-4">
+      <div class="footer__bottom">
+        <div class="socials mt-4">
         <a
           href="https://www.reddit.com/r/Formester/"
           class="mx-1 my-2 inline-block"
@@ -383,6 +384,13 @@
       <div class="copyright d-flex justify-content-center mt-3">
         © 2025 Acorn Globus. All rights reserved
       </div>
+      <a
+          href="https://www.trustpilot.com/review/formester.com"
+          target="_blank"
+          ><nuxt-img src="/trustpilot-footer.svg" alt="Trustpilot" /></a>
+      
+      </div>
+
     </div>
   </footer>
 </template>
@@ -392,12 +400,22 @@ export default {}
 </script>
 
 <style scoped>
+.footer__bottom {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 1em 0;
+}
 ul {
   padding: 0;
 }
 
 .footer__container {
-  background: linear-gradient(180deg, #5b2fbd 0.01%, #371d72 100%);
+  background: linear-gradient(180deg, #5b2fbd 0.01%, #502BA4 100%);
   color: var(--clr-primary-light);
   padding: 2em 0 1em 0;
 }
@@ -441,6 +459,12 @@ ul {
 @media only screen and (max-width: 992px) {
   .footer__link {
     margin: 0.25rem 0px;
+  }
+  
+  .footer__bottom {
+    width: 90%;
+    flex-direction: column;
+    gap: 16px;
   }
 }
 </style>
