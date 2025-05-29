@@ -1,103 +1,43 @@
 <template>
   <section class="call-to-action-section" :class="{ 'd-none': content.hidden }">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div
-            class="call-to-action-content text-center mx-2 my-5 position-relative"
+    <div class="container py-md-6 py-5 px-md-5">
+      <div class="background-image-wrapper">
+        <nuxt-img src="/CTA Mask Left.svg" class="background-image-left" />
+        <nuxt-img src="/CTA Mask Right.svg" class="background-image-right" />
+      </div>
+      <div class="row align-items-center py-md-5 py-3 px-md-5 px-3" style="position: relative; z-index: 1;">
+        <div class="col-lg-8 col-12 text-lg-start text-center">
+          <h2 class="section__heading text-white">
+            <span v-if="content.heading">{{ content.heading }}</span>
+            <span v-else-if="title && title.length">
+              <span
+                v-for="item in title"
+                :key="item.id"
+                :class="{ highlight__text: item.highlight }"
+              >
+                {{ item.text }}
+              </span>
+            </span>
+            <span v-else>Create your first form for free</span>
+          </h2>
+          <p class="section__subtitle mt-3">
+            <span>
+              {{
+                content.subHeading ||
+                description ||
+                "Formester is the easiest way to create forms, collect data and automate your workflow"
+              }}
+            </span>
+          </p>
+        </div>
+        <div class="col-lg-4 col-12 text-center mt-4">
+          <a
+            :href="content.btnPrimaryLink || 'https://app.formester.com/users/sign_up'"
+            class="btn button cta-button__invert"
+            target="_blank"
           >
-            <h2 class="section__heading">
-              <span v-if="content.heading">{{ content.heading }}</span>
-              <span v-else-if="title.length">
-                <span
-                  v-for="item in title"
-                  :key="item.id"
-                  :class="{ highlight__text: item.highlight }"
-                >
-                  {{ item.text }}
-                </span>
-              </span>
-              <span v-else>
-                Create your first form for <span class="hglt">free</span>
-              </span>
-            </h2>
-            <h2
-              class="section__heading highlight__text"
-              v-if="ctaValue.type !== 'default'"
-            >
-              {{ description }}
-            </h2>
-            <h2 class="section__subtitle mt-3" v-else>
-              <span class="hglt">
-                {{
-                  content.subHeading ||
-                  description ||
-                  'With the most intuitive form creator out there'
-                }}
-              </span>
-            </h2>
-            <div
-              v-if="buttons?.length"
-              class="d-flex align-items-center justify-content-center flex-wrap gap-3 mt-5"
-            >
-              <a
-                :href="
-                  buttons[0]?.link || 'https://app.formester.com/users/sign_up'
-                "
-                class="btn button mx-2"
-                :class="{
-                  'cta-button': buttons[0].type === 'Primary',
-                  'cta-button__invert': buttons[0].type === 'Secondary',
-                }"
-                target="_blank"
-              >
-                {{ buttons[0]?.text }}
-              </a>
-              <a
-                v-if="buttons?.length === 2"
-                target="_blank"
-                :href="buttons[1].link"
-                class="btn button mx-2"
-                :class="{
-                  'cta-button': buttons[1]?.type === 'Primary',
-                  'cta-button__invert': buttons[1]?.type === 'Secondary',
-                }"
-              >
-                {{ buttons[1]?.text }}
-              </a>
-            </div>
-            <div
-              v-else
-              class="d-flex align-items-center justify-content-center flex-wrap gap-3 mt-5"
-            >
-              <a
-                :href="
-                  content.btnPrimaryLink ||
-                  'https://app.formester.com/users/sign_up'
-                "
-                class="btn button cta-button mx-2"
-                target="_blank"
-              >
-                {{ content.btnPrimary || 'Create a Form Now' }}
-              </a>
-              <a
-                target="_blank"
-                :href="
-                  content.btnSecondaryLink ||
-                  'https://calendar.app.google/So3CCei31oYjhoM47'
-                "
-                class="btn button cta-button__invert mx-2"
-              >
-                {{ content.btnSecondary || 'Book a Demo' }}
-              </a>
-            </div>
-            <nuxt-img
-              src="/plane.png"
-              alt="plane image on call to action section"
-              class="plane position-absolute"
-              loading="lazy"
-            />
-          </div>
+            Create a Form Now
+          </a>
         </div>
       </div>
     </div>
@@ -131,12 +71,62 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  position: relative;
+  background-color: var(--clr-primary);
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.background-image-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.background-image-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.background-image-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  object-position: right center;
+}
+.section__heading {
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -0.28px;
+  font-weight: 00;
+}
 .section__subtitle {
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #F9FAFB;
 }
 
 .call-to-action-section {
-  padding-bottom: 50px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  width: 100%;
 }
 .cta-bullets {
   opacity: 0.5;
@@ -171,44 +161,43 @@ export default {
   background-color: var(--clr-primary-light-hover);
 }
 
-.plane {
-  right: -10%;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: -1;
-}
-
 .gap-3 {
   gap: 1rem;
-}
-
-@media (max-width: 1456px) {
-  .plane {
-    right: -5%;
-  }
-}
-@media (max-width: 1400px) {
-  .plane {
-    right: -7%;
-  }
-}
-@media (max-width: 1200px) {
-  .plane {
-    right: -10%;
-  }
-}
-@media (max-width: 1017px) {
-  .plane {
-    display: none;
-  }
 }
 
 @media (max-width: 575px) {
   .section__heading {
     font-size: 30px;
+    line-height: 40px;
   }
   .section__subtitle {
     font-size: 16px;
+    line-height: 24px;
   }
+  
+  .container {
+    margin-left: 16px;
+    margin-right: 16px;
+    width: calc(100% - 32px);
+  }
+}
+
+@media (min-width: 768px) {
+  .py-md-6 {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    background-size: auto 100%;
+  }
+}
+@media (max-width: 1199px) {
+  .background-image-left {
+    display: none !important;
+  }
+
 }
 </style>
