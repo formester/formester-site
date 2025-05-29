@@ -175,7 +175,7 @@
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 16px;
   object-fit: cover;
   aspect-ratio: 3 / 2;
   box-shadow: 0 2px 32px rgba(0,0,0,0.1);
@@ -205,6 +205,8 @@
   display: inline-block;
   cursor: pointer;
   margin-top: 16px;
+  border-radius: 16px;
+  box-shadow: 0 2px 32px rgba(0,0,0,0.1);
 }
 
 .custom-play-btn {
