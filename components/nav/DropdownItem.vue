@@ -14,7 +14,7 @@
           title="Available in Business Plan"
         >
           <img 
-            src="assets/images/business.svg" 
+            src="/assets/images/business.svg" 
             alt="Business plan"
             class="plan-icon"
           />
@@ -25,7 +25,7 @@
           title="Available in Personal Plan"
         >
           <img 
-            src="assets/images/personal.svg" 
+            src="/assets/images/personal.svg" 
             alt="Personal plan"
             class="plan-icon"
           />
