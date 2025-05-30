@@ -24,4 +24,5 @@ export default {
   'macro-components.video-section': () => import('@/components/strapi/VideoSection.vue'),
   'macro-components.trustbadges': () => import('@/components/strapi/Trustbadges.vue'),
   'macro-components.table': () => import('@/components/table/Table.vue'),
+  'macro-components.integrations-showcase': () => import('@/components/strapi/IntegrationsShowcase.vue'),
 }
