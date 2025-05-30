@@ -1,6 +1,6 @@
 <template>
   <section class="trust-seals-section">
-    <h3 class="heading text-center">
+    <!-- <h3 class="heading text-center">
     <span
       v-for="item in title"
       :key="item.id"
@@ -8,20 +8,76 @@
     >
       {{ item.text }}
     </span>
-  </h3>
+  </h3> -->
     <div class="ticker-container">
       <div class="gradient-overlay left"></div>
       
       <div class="ticker-wrapper">
         <div class="ticker" ref="ticker">
-          <!-- We'll use multiple copies to ensure continuous looping -->
           <div class="ticker-track" ref="tickerTrack">
             <div v-for="n in duplicateCount" :key="`track-${n}`" class="ticker-content">
-              <div v-for="(item, index) in logos" :key="`${item.id}-${n}-${index}`" class="ticker-item">
+              <div class="ticker-item">
                 <nuxt-img
-                  :src="item.imageUrl || item.image.url"
-                  :alt="item.imageAlt"
-                  :width="item.width"
+                  src="/trustseals/01.svg"
+                  alt="Peabody"
+                  height="40"
+                />
+              </div>
+              <div class="ticker-item">
+                <nuxt-img
+                  src="/trustseals/02.svg"
+                  alt="Aramark"
+                  height="40"
+                />
+              </div>
+              <div class="ticker-item">
+                <nuxt-img
+                  src="/trustseals/03.svg"
+                  alt="Loreal"
+                  height="32"
+                />
+              </div>
+              <div class="ticker-item">
+                <nuxt-img
+                  src="/trustseals/04.svg"
+                  alt="Toptal"
+                  height="40"
+                />
+              </div>
+
+              <div class="ticker-item">
+                <nuxt-img
+                  src="/trustseals/05.svg"
+                  alt="Grab"
+                  height="38"
+                />
+              </div>
+              <div class="ticker-item">
+                <nuxt-img
+                  src="/trustseals/06.svg"
+                  alt="SFU"
+                  height="36"
+                />
+              </div>
+              <div class="ticker-item">
+                <nuxt-img
+                  src="/trustseals/07.svg"
+                  alt="World of Hyatt"
+                  height="32"
+                />
+              </div>
+              <div class="ticker-item">
+                <nuxt-img
+                  src="/trustseals/08.svg"
+                  alt="Iolani School"
+                  height="40"
+                />
+              </div>
+              <div class="ticker-item">
+                <nuxt-img
+                  src="/trustseals/09.svg"
+                  alt="Austin Independent School District"
+                  height="44"
                 />
               </div>
             </div>
@@ -55,10 +111,7 @@ export default {
       type: Array,
       default: () => [],
     },
-    logos: {
-      type: Array,
-      default: () => [],
-    },
+    // Removed logos prop as we're using local images directly
   },
   data() {
     return {
@@ -144,8 +197,8 @@ export default {
       
       // Use a fixed pixel-per-second rate
       const pixelsPerSecond = this.contentWidth > 0 ? 
-        this.contentWidth / 50 : // 30 seconds to complete one loop
-        50; // fallback speed
+        this.contentWidth / 60 : 
+        50;
       
       let lastTime = null
       
@@ -229,7 +282,8 @@ export default {
 .ticker-item {
   display: inline-flex;
   align-items: center;
-  padding: 0 48px;
+  padding: 0 64px;
+  opacity: 0.9;
 }
 
 .ticker-item img,
