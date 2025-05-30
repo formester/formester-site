@@ -1,6 +1,6 @@
 <template>
-  <section class="container py-2 py-lg-5">
-    <SectionTitle :heading="title" />
+  <section class="container my-5 py-2 py-lg-5">
+    <SectionTitle :heading="formattedTitle" />
     <p class="hero__subheading text-center" v-if="description">
       {{ description }}
     </p>
@@ -88,6 +88,14 @@ export default {
     },
   },
   computed: {
+    formattedTitle() {
+      // If title is already an array, return it as is
+      if (Array.isArray(this.title)) {
+        return this.title;
+      }
+      // If title is a string, convert it to the expected array format
+      return [{ id: 'title-1', text: this.title, highlight: false }];
+    },
     formattedFaqItems() {
       return this.faqList.map((faq, index) => ({
         id: faq.id || `faq-${index + 1}`,
