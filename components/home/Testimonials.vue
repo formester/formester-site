@@ -1,10 +1,12 @@
 <template>
   <div>
     <!-- Feature Testimonials Layout -->
-    <div class="container py-5" v-if="isFeatureTestimonail">
+    <div class="section" v-if="isFeatureTestimonail">
       <div class="row">
         <SectionTitle :heading="heading" />
-        <div class="d-flex flex-column flex-lg-row px-3 px-md-0 justify-content-center align-items-center mt-5">
+        <div
+          class="d-flex flex-column flex-lg-row px-3 px-md-0 justify-content-center align-items-center mt-5"
+        >
           <div
             class="card mt-5 mt-lg-1 p-3 me-lg-3"
             style="max-width: 512px"
@@ -35,27 +37,25 @@
         </div>
       </div>
     </div>
-    
+
     <!-- Homepage Testimonials Layout with Auto-Scrolling Ticker -->
     <div class="my-5 py-5" v-else>
       <div class="icon-wrapper">
-        <img
-          src="/assets/images/TestimonialSection.svg"
-          alt="Quote icon"
-        />
+        <img src="/assets/images/TestimonialSection.svg" alt="Quote icon" />
         <p class="tag">USER TESTIMONIALS</p>
       </div>
       <SectionTitle :heading="heading" />
 
-      
       <!-- Testimonial Ticker Container -->
       <div class="testimonial-container position-relative">
         <!-- Gradient Overlays for Seamless Look -->
         <div class="testimonial-gradient-left"></div>
         <div class="testimonial-gradient-right"></div>
-        
+
         <!-- Testimonial Cards Wrapper -->
-        <div class="testimonial__wrapper d-flex position-relative overflow-hidden">
+        <div
+          class="testimonial__wrapper d-flex position-relative overflow-hidden"
+        >
           <div class="testimonial__cards d-flex ticker-scroll">
             <TestimonialCard
               v-for="testimonial in testimonials"
@@ -74,7 +74,7 @@ import TestimonialCard from './TestimonialCard.vue'
 
 export default {
   components: {
-    TestimonialCard
+    TestimonialCard,
   },
   props: {
     heading: {
@@ -97,7 +97,7 @@ export default {
   data() {
     return {
       scrollInterval: null,
-      scrollSpeed: 0.6, // Reduced speed - lower value = slower movement
+      scrollSpeed: 0.2,
       scrollPaused: false,
       scrollPosition: 0,
       tickerWidth: 0,
@@ -105,7 +105,7 @@ export default {
       animationFrame: null,
       handleMouseEnter: null,
       handleMouseLeave: null,
-      moveTickerForward: null
+      moveTickerForward: null,
     }
   },
   mounted() {
@@ -115,148 +115,165 @@ export default {
   },
   methods: {
     setupTicker() {
-      if (this.testimonials.length === 0) return;
-      
+      if (this.testimonials.length === 0) return
+
       // Reset the paused state
-      this.scrollPaused = false;
-      
+      this.scrollPaused = false
+
       // Get references to DOM elements
-      const wrapper = document.querySelector('.testimonial__wrapper');
-      if (!wrapper) return;
-      
+      const wrapper = document.querySelector('.testimonial__wrapper')
+      if (!wrapper) return
+
       // Get the original cards container
-      const cardsContainer = document.querySelector('.testimonial__cards');
-      if (!cardsContainer) return;
-      
+      const cardsContainer = document.querySelector('.testimonial__cards')
+      if (!cardsContainer) return
+
       // Get all original cards
-      const cards = cardsContainer.querySelectorAll('.testimonial__card');
-      if (!cards.length) return;
-      
+      const cards = cardsContainer.querySelectorAll('.testimonial__card')
+      if (!cards.length) return
+
       // Calculate the total width of all cards
-      let totalWidth = 0;
-      cards.forEach(card => {
-        totalWidth += card.offsetWidth + 24; // Adding gap width
-      });
-      
+      let totalWidth = 0
+      cards.forEach((card) => {
+        totalWidth += card.offsetWidth + 24 // Adding gap width
+      })
+
       // Create enough clones to fill the container at least twice
       // This ensures we always have content to scroll to
-      const numClones = Math.ceil((wrapper.offsetWidth * 2) / totalWidth) + 1;
-      
+      const numClones = Math.ceil((wrapper.offsetWidth * 2) / totalWidth) + 1
+
       // Clone cards and append them
       for (let i = 0; i < numClones; i++) {
-        cards.forEach(card => {
-          const clone = card.cloneNode(true);
-          cardsContainer.appendChild(clone);
-        });
+        cards.forEach((card) => {
+          const clone = card.cloneNode(true)
+          cardsContainer.appendChild(clone)
+        })
       }
-      
+
       // Remove any CSS animation
-      cardsContainer.style.animation = 'none';
-      
+      cardsContainer.style.animation = 'none'
+
       // Start the scrolling
-      let currentPosition = 0;
-      
+      let currentPosition = 0
+
       // Define the animation function
       const animate = () => {
         // Only move if not paused
         if (!this.scrollPaused) {
-          currentPosition += this.scrollSpeed;
-          
+          currentPosition += this.scrollSpeed
+
           // Check if we need to shift
           if (currentPosition > totalWidth) {
             // When we've scrolled past the first set of cards,
             // shift the container back by that amount (invisibly)
-            currentPosition -= totalWidth;
+            currentPosition -= totalWidth
           }
-          
+
           // Apply the transform
-          cardsContainer.style.transform = `translateX(-${currentPosition}px)`;
+          cardsContainer.style.transform = `translateX(-${currentPosition}px)`
         }
-        
+
         // Always request the next frame
-        this.animationFrame = requestAnimationFrame(animate);
-      };
-      
+        this.animationFrame = requestAnimationFrame(animate)
+      }
+
       // Start the animation
-      this.animationFrame = requestAnimationFrame(animate);
-      
+      this.animationFrame = requestAnimationFrame(animate)
+
       // Define the event handlers
       this.handleMouseEnter = () => {
-        this.scrollPaused = true;
-      };
-      
+        this.scrollPaused = true
+      }
+
       this.handleMouseLeave = () => {
-        this.scrollPaused = false;
-      };
-      
+        this.scrollPaused = false
+      }
+
       // Add event listeners for pausing on hover
-      wrapper.addEventListener('mouseenter', this.handleMouseEnter);
-      wrapper.addEventListener('mouseleave', this.handleMouseLeave);
+      wrapper.addEventListener('mouseenter', this.handleMouseEnter)
+      wrapper.addEventListener('mouseleave', this.handleMouseLeave)
     },
-    
+
     getIconSrc(iconObject) {
-      if (!iconObject) return '';
-      
+      if (!iconObject) return ''
+
       // Handle different Strapi image structures
       if (iconObject.imageUrl) {
-        return iconObject.imageUrl;
+        return iconObject.imageUrl
       }
-      
+
       if (iconObject.image) {
         if (iconObject.image.url) {
-          return iconObject.image.url;
+          return iconObject.image.url
         }
-        
+
         if (iconObject.image.data) {
-          if (iconObject.image.data.attributes && iconObject.image.data.attributes.url) {
-            return iconObject.image.data.attributes.url;
+          if (
+            iconObject.image.data.attributes &&
+            iconObject.image.data.attributes.url
+          ) {
+            return iconObject.image.data.attributes.url
           }
-          
-          if (Array.isArray(iconObject.image.data) && 
-              iconObject.image.data[0] && 
-              iconObject.image.data[0].attributes && 
-              iconObject.image.data[0].attributes.url) {
-            return iconObject.image.data[0].attributes.url;
+
+          if (
+            Array.isArray(iconObject.image.data) &&
+            iconObject.image.data[0] &&
+            iconObject.image.data[0].attributes &&
+            iconObject.image.data[0].attributes.url
+          ) {
+            return iconObject.image.data[0].attributes.url
           }
         }
       }
-      
-      return '';
-    }
+
+      return ''
+    },
   },
   beforeDestroy() {
     // Clear the interval when component is destroyed
     if (this.scrollInterval) {
-      clearInterval(this.scrollInterval);
+      clearInterval(this.scrollInterval)
     }
-    
+
     // Cancel animation frame if it exists
     if (this.animationFrame) {
-      cancelAnimationFrame(this.animationFrame);
+      cancelAnimationFrame(this.animationFrame)
     }
-    
+
     // Remove event listeners if they were added
-    const wrapper = document.querySelector('.testimonial__wrapper');
+    const wrapper = document.querySelector('.testimonial__wrapper')
     if (wrapper && this.handleMouseEnter && this.handleMouseLeave) {
-      wrapper.removeEventListener('mouseenter', this.handleMouseEnter);
-      wrapper.removeEventListener('mouseleave', this.handleMouseLeave);
+      wrapper.removeEventListener('mouseenter', this.handleMouseEnter)
+      wrapper.removeEventListener('mouseleave', this.handleMouseLeave)
     }
   },
   computed: {
     isFeatureTestimonail() {
-      return this.version === 'feature';
+      return this.version === 'feature'
     },
     randomTestimonials() {
-      if (this.testimonials.length <= 2) return this.testimonials;
-      
-      const randIndex = Math.floor(Math.random() * (this.testimonials.length - 2));
-      return this.testimonials.slice(randIndex, randIndex + 2);
+      if (this.testimonials.length <= 2) return this.testimonials
+
+      const randIndex = Math.floor(
+        Math.random() * (this.testimonials.length - 2)
+      )
+      return this.testimonials.slice(randIndex, randIndex + 2)
     },
   },
 }
 </script>
 
 <style>
+.section {
+  padding: 6rem 0 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 4rem 0 !important;
+  }
+}
+
 .icon-wrapper {
   display: flex;
   flex-direction: column;
@@ -341,7 +358,12 @@ export default {
   left: 0;
   height: 100%;
   width: 150px;
-  background: linear-gradient(to right, white 30%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0));
+  background: linear-gradient(
+    to right,
+    white 30%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(255, 255, 255, 0)
+  );
   z-index: 10;
   pointer-events: none;
 }
@@ -352,7 +374,12 @@ export default {
   right: 0;
   height: 100%;
   width: 150px;
-  background: linear-gradient(to left, white 30%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0));
+  background: linear-gradient(
+    to left,
+    white 30%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(255, 255, 255, 0)
+  );
   z-index: 10;
   pointer-events: none;
 }
@@ -376,7 +403,7 @@ export default {
     gap: 24px;
     padding: 0 24px;
   }
-  
+
   .testimonial-gradient-left,
   .testimonial-gradient-right {
     width: 80px;

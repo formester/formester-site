@@ -1,5 +1,5 @@
 <template>
-  <section class="integrations-showcase py-5">
+  <section class="integrations-showcase">
     <div class="container">
       <div
         class="row justify-content-center align-items-center text-center mb-5"
@@ -412,6 +412,12 @@ section.integrations-showcase {
   padding: 6rem 0 !important;
   position: relative;
   overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .section.integrations-showcase {
+    padding: 6rem 0 !important;
+  }
 }
 
 /* Integration Container Styles */

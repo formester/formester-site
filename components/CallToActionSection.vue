@@ -5,7 +5,10 @@
         <nuxt-img src="/CTA Mask Left.svg" class="background-image-left" />
         <nuxt-img src="/CTA Mask Right.svg" class="background-image-right" />
       </div>
-      <div class="row align-items-center py-md-5 py-3 px-md-5 px-3" style="position: relative; z-index: 1;">
+      <div
+        class="row align-items-center py-md-5 py-3 px-md-5 px-3"
+        style="position: relative; z-index: 1"
+      >
         <div class="col-lg-8 col-12 text-lg-start text-center">
           <h2 class="section__heading text-white">
             <span v-if="content.heading">{{ content.heading }}</span>
@@ -25,14 +28,17 @@
               {{
                 content.subHeading ||
                 description ||
-                "Formester is the easiest way to create forms, collect data and automate your workflow"
+                'Formester is the easiest way to create forms, collect data and automate your workflow'
               }}
             </span>
           </p>
         </div>
         <div class="col-lg-4 col-12 text-center mt-4">
           <a
-            :href="content.btnPrimaryLink || 'https://app.formester.com/users/sign_up'"
+            :href="
+              content.btnPrimaryLink ||
+              'https://app.formester.com/users/sign_up'
+            "
             class="btn button cta-button__invert"
             target="_blank"
           >
@@ -111,8 +117,8 @@ export default {
   object-position: right center;
 }
 .section__heading {
-  font-size: 48px;
-  line-height: 60px;
+  font-size: 40px;
+  line-height: 56px;
   letter-spacing: -0.28px;
   font-weight: 00;
 }
@@ -120,12 +126,11 @@ export default {
   font-size: 18px;
   line-height: 28px;
   font-weight: 400;
-  color: #F9FAFB;
+  color: #f9fafb;
 }
 
 .call-to-action-section {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding: 6rem 0 !important;
   width: 100%;
 }
 .cta-bullets {
@@ -174,7 +179,7 @@ export default {
     font-size: 16px;
     line-height: 24px;
   }
-  
+
   .container {
     margin-left: 16px;
     margin-right: 16px;
@@ -187,6 +192,9 @@ export default {
     padding-top: 4rem !important;
     padding-bottom: 4rem !important;
   }
+  .call-to-action-section {
+    padding: 4rem 0 !important;
+  }
 }
 
 @media (max-width: 767px) {
@@ -198,6 +206,5 @@ export default {
   .background-image-left {
     display: none !important;
   }
-
 }
 </style>
