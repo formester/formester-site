@@ -1,85 +1,85 @@
 <template>
-  <section class="hero" @mousemove="handleMouseMove" ref="heroSection">
-    <img
-      src="/hero-assets/hero-shadow.svg"
-      class="hero-shadow"
-      alt=""
-    />
-
-    <!-- Floating Icons -->
-    <div
-      class="floating-icon floating-icon-1"
-      :style="{
-        transform: `translate(${iconPositions[0].x}px, ${iconPositions[0].y}px)`,
-      }"
-    >
-      <img src="/hero-assets/floating-icon-1.svg" alt="Floating Icon" />
-    </div>
-    <div
-      class="floating-icon floating-icon-2"
-      :style="{
-        transform: `translate(${iconPositions[1].x}px, ${iconPositions[1].y}px)`,
-      }"
-    >
-      <img src="/hero-assets/floating-icon-2.svg" alt="Floating Icon" />
-    </div>
-    <div
-      class="floating-icon floating-icon-3"
-      :style="{
-        transform: `translate(${iconPositions[2].x}px, ${iconPositions[2].y}px)`,
-      }"
-    >
-      <img src="/hero-assets/floating-icon-3.svg" alt="Floating Icon" />
-    </div>
-    <div
-      class="floating-icon floating-icon-4"
-      :style="{
-        transform: `translate(${iconPositions[3].x}px, ${iconPositions[3].y}px)`,
-      }"
-    >
-      <img src="/hero-assets/floating-icon-4.svg" alt="Floating Icon" />
-    </div>
-    <div class="container horizontal__padding">
+  <section>
+    <div class="hero" @mousemove="handleMouseMove" ref="heroSection">
+      <img src="/hero-assets/hero-shadow.svg" class="hero-shadow" alt="" />
       <div
-        class="d-flex flex-column align-items-center justify-content-center text-center my-5"
+        class="floating-icon floating-icon-1"
+        :style="{
+          transform: `translate(${iconPositions[0].x}px, ${iconPositions[0].y}px)`,
+        }"
       >
-        <div class="ai-badge">
-          <span class="lightning-icon">⚡</span>
-          <span>Explore our new AI features</span>
-          <span class="arrow-icon">→</span>
-        </div>
-        <h1 class="hero__heading">
-          <template v-for="(item, index) in title">
-            <span
-              :key="item.id"
-              :class="{ highlight__text: item.highlight }"
-              :style="{ display: item.highlight ? 'block' : 'inline' }"
-            >
-              {{ item.text }}
-            </span>
-          </template>
-        </h1>
-        <p class="hero__subheading mt-3">
-          {{ description }}
-        </p>
-        <a
-          v-if="buttons && buttons.length"
-          :href="buttons[0]?.link || '#'"
-          class="btn button mt-4 mb-4 mb-md-5"
-          :class="{
-            hero__button: buttons[0]?.type === 'Primary',
-            hero__invert__button: buttons[0]?.type === 'Secondary',
-          }"
+        <img src="/hero-assets/floating-icon-1.svg" alt="Floating Icon" />
+      </div>
+      <div
+        class="floating-icon floating-icon-2"
+        :style="{
+          transform: `translate(${iconPositions[1].x}px, ${iconPositions[1].y}px)`,
+        }"
+      >
+        <img src="/hero-assets/floating-icon-2.svg" alt="Floating Icon" />
+      </div>
+      <div
+        class="floating-icon floating-icon-3"
+        :style="{
+          transform: `translate(${iconPositions[2].x}px, ${iconPositions[2].y}px)`,
+        }"
+      >
+        <img src="/hero-assets/floating-icon-3.svg" alt="Floating Icon" />
+      </div>
+      <div
+        class="floating-icon floating-icon-4"
+        :style="{
+          transform: `translate(${iconPositions[3].x}px, ${iconPositions[3].y}px)`,
+        }"
+      >
+        <img src="/hero-assets/floating-icon-4.svg" alt="Floating Icon" />
+      </div>
+      <div class="container horizontal__padding">
+        <div
+          class="d-flex flex-column align-items-center justify-content-center text-center my-5"
         >
-          {{ buttons[0]?.text || 'Learn More' }}
-        </a>
+          <div class="ai-badge">
+            <img src="/hero-assets/bolt.svg" alt="Lightning" />
+            <span>Explore our new AI features</span>
+          </div>
+          <h1 class="hero__heading">
+            <template v-for="(item, index) in title">
+              <span
+                :key="item.id"
+                :class="{ highlight__text: item.highlight }"
+                :style="{ display: item.highlight ? 'block' : 'inline' }"
+              >
+                {{ item.text }}
+              </span>
+            </template>
+          </h1>
+          <p class="hero__subheading mt-3">
+            {{ description }}
+          </p>
+          <a
+            v-if="buttons && buttons.length"
+            :href="buttons[0]?.link || '#'"
+            class="btn button mt-4 mb-4 mb-md-5"
+            :class="{
+              hero__button: buttons[0]?.type === 'Primary',
+              hero__invert__button: buttons[0]?.type === 'Secondary',
+            }"
+          >
+            {{ buttons[0]?.text || 'Learn More' }}
+          </a>
+        </div>
       </div>
     </div>
+    <HeroTabs class="hero-tabs" />
   </section>
 </template>
 
 <script>
+import HeroTabs from './HeroTabs.vue'
 export default {
+  components: {
+    HeroTabs,
+  },
   data() {
     return {
       iconPositions: [
@@ -127,6 +127,10 @@ export default {
 </script>
 
 <style scoped>
+.hero-tabs {
+  margin-top: -160px;
+}
+
 .hero {
   padding-top: 160px;
   padding-bottom: 240px;
@@ -171,8 +175,8 @@ export default {
   padding: 4px 16px;
   border-radius: 20px;
   border: 1px solid #5b2fbd;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   margin-bottom: 32px;
   transition: all 0.3s ease;
   cursor: pointer;
