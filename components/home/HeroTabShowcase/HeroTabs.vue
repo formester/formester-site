@@ -7,11 +7,7 @@
           :key="tab.label"
           :class="['tab', { active: idx === selectedTab }]"
           @click="selectedTab = idx"
-          :style="
-            idx === selectedTab
-              ? { borderBottom: `4px solid ${borderColors[idx]}` }
-              : {}
-          "
+          :style="tabButtonStyle(idx)"
         >
           {{ tab.label }}
         </button>
@@ -188,15 +184,32 @@ onMounted(() => {
 onUnmounted(() => {
   if (intervalId) clearInterval(intervalId)
 })
+function tabButtonStyle(idx) {
+  if (typeof window !== 'undefined' && window.innerWidth < 900) {
+    if (idx === selectedTab.value) {
+      return {
+        background: borderColors[idx],
+        color: '#fff',
+        borderBottom: 'none',
+      };
+    }
+    return {
+      background: '#fff',
+      color: '#111',
+      borderBottom: 'none',
+    };
+  }
+  return idx === selectedTab.value ? { borderBottom: `4px solid ${borderColors[idx]}` } : {};
+}
+
+
 </script>
 
 <style scoped>
 .hero-tabs-container {
   max-width: 1280px;
-
   width: 100%;
-  margin: 0 auto;
-  padding: 0 16px;
+  margin: 0 96px;
 }
 .hero-tabs {
   width: 100%;
@@ -225,7 +238,7 @@ onUnmounted(() => {
   opacity: 1;
   padding: 0 0 18px 0;
   cursor: pointer;
-  border-bottom: 3px solid transparent;
+  border-bottom: 4px solid transparent;
   transition: color 0.2s, border-color 0.2s, opacity 0.2s;
   flex: 1 1 0;
   text-align: center;
@@ -242,17 +255,31 @@ onUnmounted(() => {
 .tab-content {
   margin-top: -2px;
   background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  border: 1px solid #f2f4f7;
   border-radius: 24px;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
   padding: 40px 36px;
   display: flex;
-  gap: 48px;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  gap: 64px;
   align-items: flex-start;
   position: relative;
   z-index: 1;
   min-height: 340px;
+}
+@media (max-width: 900px) {
+  .tab-content {
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px 16px;
+    min-height: unset;
+  }
+}
+@media (max-width: 600px) {
+  .tab-content {
+    padding: 20px 8px;
+    gap: 20px;
+  }
 }
 .tab-left {
   flex: 1 1 0;
@@ -293,27 +320,61 @@ onUnmounted(() => {
   align-items: center;
   height: 100%;
   min-height: 260px;
+  padding: 0;
 }
 .tab-image {
-  height: 100%;
-  width: auto;
-  max-width: 100%;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  display: block;
   border-radius: 16px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.09);
-  background: #f6f6fb;
+  background: none;
   object-fit: contain;
 }
+
 @media (max-width: 900px) {
+  .tab-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 16px;
+    padding: 0;
+    margin-bottom: 16px;
+  }
+  .tab {
+    flex: 0 1 auto;
+    min-width: 120px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px 18px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background 0.2s, color 0.2s;
+    border-bottom: none !important;
+  }
+  .tab.active {
+    background: #2563eb;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+  }
   .tab-content {
     flex-direction: column;
     gap: 24px;
-    padding: 24px 12px;
-  }
-  .tab-list {
-    padding: 0 12px;
+    padding: 32px;
   }
   .tab-right {
     justify-content: flex-start;
   }
 }
+.tab-icon {
+  display: inline-flex;
+  margin-right: 8px;
+}
+
 </style>

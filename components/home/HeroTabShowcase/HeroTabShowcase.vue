@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="hero-tabs-container">
     <div class="hero" @mousemove="handleMouseMove" ref="heroSection">
       <img src="/hero-assets/hero-shadow.svg" class="hero-shadow" alt="" />
       <div
@@ -127,8 +127,21 @@ export default {
 </script>
 
 <style scoped>
+.hero-tabs-container {
+  margin-bottom: 96px;
+}
 .hero-tabs {
-  margin-top: -160px;
+  margin-inline: auto;
+  margin-top: -120px;
+  padding-left: 96px;
+  padding-right: 96px;
+}
+
+@media (max-width: 600px) {
+  .hero-tabs {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 
 .hero {
@@ -241,11 +254,25 @@ export default {
   right: 18%;
 }
 
-@media (max-width: 992px) {
-  .hero {
-    padding-top: 100px;
-    padding-bottom: 64px;
+@media (max-width: 1024px) {
+  .hero-tabs {
+    margin-top: -160px;
+    padding-left: 48px;
+    padding-right: 48px;
   }
+
+  @media (max-width: 900px) {
+    .hero-tabs {
+      margin-top: -160px;
+      padding-left: 48px;
+      padding-right: 48px;
+    }
+  }
+
+  .hero {
+    padding-bottom: 160px;
+  }
+
   .hero__heading {
     font-size: 56px;
     line-height: 125%;
@@ -258,9 +285,8 @@ export default {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .hero {
-    margin-top: 30px;
     margin-bottom: 20px;
   }
 
