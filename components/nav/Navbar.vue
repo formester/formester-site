@@ -1,272 +1,282 @@
 <template>
-  <nav class="navbar navbar-expand-xl sticky-top bg-white">
-    <div class="container">
-      <!-- Logo -->
-      <NuxtLink class="navbar-brand" to="/">
-        <nuxt-img src="/logo.svg" alt="Formester" />
-      </NuxtLink>
+  <div class="navbar-container">
+    <nav class="navbar navbar-expand-xl bg-white floating-navbar">
+      <div class="container d-flex align-items-center">
+        <!-- Logo -->
+        <NuxtLink class="navbar-brand" to="/">
+          <nuxt-img src="/logo.svg" alt="Formester" />
+        </NuxtLink>
 
-      <!-- Mobile Toggle Button -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <nuxt-img src="/toggle.svg" alt="Nav-menu-button" />
-      </button>
-
-      <!-- Navigation Menu -->
-      <div
-        class="collapse navbar-collapse mt-2"
-        ref="siteNav"
-        id="navbarSupportedContent"
-      >
-        <ul
-          class="navbar-nav ms-auto navbar-nav-scroll"
-          style="--bs-scroll-height: calc(100vh - 54px)"
+        <!-- Mobile Toggle Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <li
-            class="nav-item dropdown me-2 position-static"
-            :class="{ open: dropdownActive }"
-            @mouseenter="!isMobile && onDropdownMouseEnter()"
-            @mouseleave="!isMobile && onDropdownMouseLeave()"
+          <nuxt-img src="/toggle.svg" alt="Nav-menu-button" />
+        </button>
+
+        <!-- Navigation Menu -->
+        <div
+          class="collapse navbar-collapse"
+          ref="siteNav"
+          id="navbarSupportedContent"
+        >
+          <ul
+            class="navbar-nav ms-auto navbar-nav-scroll"
+            style="--bs-scroll-height: calc(100vh - 54px)"
           >
-            <template v-if="isMobile">
-              <button
-                class="nav-link"
-                :class="{ active: dropdownActive || hoveringDropdown }"
-                id="navbarDropdown"
-                type="button"
-                @click="toggleDropdown"
-              >
-                Features
-                <span class="chevron-stack">
-                  <nuxt-img
-                    src="/chevron-down-gray.svg"
-                    class="chevron chevron-gray"
-                    :class="{ open: dropdownActive }"
-                  />
-                  <nuxt-img
-                    src="/chevron-down-colored.svg"
-                    class="chevron chevron-colored"
-                    :class="{ open: dropdownActive }"
-                  />
-                </span>
-              </button>
-            </template>
-            <template v-else>
-              <button
-                class="nav-link"
-                :class="{ active: dropdownActive || hoveringDropdown }"
-                id="navbarDropdown"
-                type="button"
-                @click="toggleDropdown"
+            <li
+              class="nav-item dropdown me-2 position-static"
+              :class="{ open: dropdownActive }"
+              @mouseenter="!isMobile && onDropdownMouseEnter()"
+              @mouseleave="!isMobile && onDropdownMouseLeave()"
+            >
+              <template v-if="isMobile">
+                <button
+                  class="nav-link"
+                  :class="{ active: dropdownActive || hoveringDropdown }"
+                  id="navbarDropdown"
+                  type="button"
+                  @click="toggleDropdown"
+                >
+                  Features
+                  <span class="chevron-stack">
+                    <nuxt-img
+                      src="/chevron-down-gray.svg"
+                      class="chevron chevron-gray"
+                      :class="{ open: dropdownActive }"
+                    />
+                    <nuxt-img
+                      src="/chevron-down-colored.svg"
+                      class="chevron chevron-colored"
+                      :class="{ open: dropdownActive }"
+                    />
+                  </span>
+                </button>
+              </template>
+              <template v-else>
+                <button
+                  class="nav-link"
+                  :class="{ active: dropdownActive || hoveringDropdown }"
+                  id="navbarDropdown"
+                  type="button"
+                  @click="toggleDropdown"
+                  @mouseenter="onDropdownMouseEnter"
+                  @mouseleave="onDropdownMouseLeave"
+                  :aria-expanded="dropdownActive.toString()"
+                >
+                  Features
+                  <span class="chevron-stack">
+                    <nuxt-img
+                      src="/chevron-down-gray.svg"
+                      class="chevron chevron-gray"
+                      :class="{ open: dropdownActive }"
+                    />
+                    <nuxt-img
+                      src="/chevron-down-colored.svg"
+                      class="chevron chevron-colored"
+                      :class="{ open: dropdownActive }"
+                    />
+                  </span>
+                </button>
+              </template>
+
+              <!-- Mega Dropdown using FeaturesDropdown component -->
+              <FeaturesDropdown
+                :dropdownActive="dropdownActive"
+                :isMobile="isMobile"
+                :featureCategories="featureCategories"
+                :activeFeatureCategory="activeFeatureCategory"
+                :dropdownItems="dropdownItems"
+                :filteredDropdownItems="filteredDropdownItems"
                 @mouseenter="onDropdownMouseEnter"
                 @mouseleave="onDropdownMouseLeave"
-                :aria-expanded="dropdownActive.toString()"
-              >
-                Features
-                <span class="chevron-stack">
-                  <nuxt-img
-                    src="/chevron-down-gray.svg"
-                    class="chevron chevron-gray"
-                    :class="{ open: dropdownActive }"
-                  />
-                  <nuxt-img
-                    src="/chevron-down-colored.svg"
-                    class="chevron chevron-colored"
-                    :class="{ open: dropdownActive }"
-                  />
-                </span>
-              </button>
-            </template>
+                @category-change="activeFeatureCategory = $event"
+                @dropdown-close="handleDropdownClose"
+              />
+            </li>
 
-            <!-- Mega Dropdown using FeaturesDropdown component -->
-            <FeaturesDropdown
-              :dropdownActive="dropdownActive"
-              :isMobile="isMobile"
-              :featureCategories="featureCategories"
-              :activeFeatureCategory="activeFeatureCategory"
-              :dropdownItems="dropdownItems"
-              :filteredDropdownItems="filteredDropdownItems"
-              @mouseenter="onDropdownMouseEnter"
-              @mouseleave="onDropdownMouseLeave"
-              @category-change="activeFeatureCategory = $event"
-              @dropdown-close="handleDropdownClose"
-            />
-          </li>
+            <!-- Regular Nav Items -->
+            <li class="nav-item me-2" @click="collapseNav">
+              <NuxtLink to="/pricing/" class="nav-link">Pricing</NuxtLink>
+            </li>
+            <li
+              class="nav-item dropdown me-2 position-static"
+              :class="{ open: templatesDropdownActive }"
+              @mouseenter="!isMobile && onTemplatesDropdownMouseEnter()"
+              @mouseleave="!isMobile && onTemplatesDropdownMouseLeave()"
+            >
+              <template v-if="isMobile">
+                <button
+                  class="nav-link"
+                  :class="{
+                    active:
+                      templatesDropdownActive || hoveringTemplatesDropdown,
+                  }"
+                  id="navbarTemplatesDropdown"
+                  type="button"
+                  @click="toggleTemplatesDropdown"
+                >
+                  Templates
+                  <span class="chevron-stack">
+                    <nuxt-img
+                      src="/chevron-down-gray.svg"
+                      class="chevron chevron-gray"
+                      :class="{ open: templatesDropdownActive }"
+                    />
+                    <nuxt-img
+                      src="/chevron-down-colored.svg"
+                      class="chevron chevron-colored"
+                      :class="{ open: templatesDropdownActive }"
+                    />
+                  </span>
+                </button>
+              </template>
+              <template v-else>
+                <button
+                  class="nav-link"
+                  :class="{
+                    active:
+                      templatesDropdownActive || hoveringTemplatesDropdown,
+                  }"
+                  id="navbarTemplatesDropdown"
+                  type="button"
+                  @click="toggleTemplatesDropdown"
+                  @mouseenter="onTemplatesDropdownMouseEnter"
+                  @mouseleave="onTemplatesDropdownMouseLeave"
+                  :aria-expanded="templatesDropdownActive.toString()"
+                >
+                  Templates
+                  <span class="chevron-stack">
+                    <nuxt-img
+                      src="/chevron-down-gray.svg"
+                      class="chevron chevron-gray"
+                      :class="{ open: templatesDropdownActive }"
+                    />
+                    <nuxt-img
+                      src="/chevron-down-colored.svg"
+                      class="chevron chevron-colored"
+                      :class="{ open: templatesDropdownActive }"
+                    />
+                  </span>
+                </button>
+              </template>
 
-          <!-- Regular Nav Items -->
-          <li class="nav-item me-2" @click="collapseNav">
-            <NuxtLink to="/pricing/" class="nav-link">Pricing</NuxtLink>
-          </li>
-          <li
-            class="nav-item dropdown me-2 position-static"
-            :class="{ open: templatesDropdownActive }"
-            @mouseenter="!isMobile && onTemplatesDropdownMouseEnter()"
-            @mouseleave="!isMobile && onTemplatesDropdownMouseLeave()"
-          >
-            <template v-if="isMobile">
-              <button
-                class="nav-link"
-                :class="{ active: templatesDropdownActive || hoveringTemplatesDropdown }"
-                id="navbarTemplatesDropdown"
-                type="button"
-                @click="toggleTemplatesDropdown"
-              >
-                Templates
-                <span class="chevron-stack">
-                  <nuxt-img
-                    src="/chevron-down-gray.svg"
-                    class="chevron chevron-gray"
-                    :class="{ open: templatesDropdownActive }"
-                  />
-                  <nuxt-img
-                    src="/chevron-down-colored.svg"
-                    class="chevron chevron-colored"
-                    :class="{ open: templatesDropdownActive }"
-                  />
-                </span>
-              </button>
-            </template>
-            <template v-else>
-              <button
-                class="nav-link"
-                :class="{ active: templatesDropdownActive || hoveringTemplatesDropdown }"
-                id="navbarTemplatesDropdown"
-                type="button"
-                @click="toggleTemplatesDropdown"
+              <!-- Templates Dropdown Component -->
+              <TemplatesDropdown
+                :dropdownActive="templatesDropdownActive"
+                :isMobile="isMobile"
                 @mouseenter="onTemplatesDropdownMouseEnter"
                 @mouseleave="onTemplatesDropdownMouseLeave"
-                :aria-expanded="templatesDropdownActive.toString()"
+                @dropdown-close="handleTemplatesDropdownClose"
+              />
+            </li>
+            <li class="nav-item me-2" @click="collapseNav">
+              <NuxtLink to="/integrations/" class="nav-link"
+                >Integrations</NuxtLink
               >
-                Templates
-                <span class="chevron-stack">
-                  <nuxt-img
-                    src="/chevron-down-gray.svg"
-                    class="chevron chevron-gray"
-                    :class="{ open: templatesDropdownActive }"
-                  />
-                  <nuxt-img
-                    src="/chevron-down-colored.svg"
-                    class="chevron chevron-colored"
-                    :class="{ open: templatesDropdownActive }"
-                  />
-                </span>
-              </button>
-            </template>
+            </li>
 
-            <!-- Templates Dropdown Component -->
-            <TemplatesDropdown
-              :dropdownActive="templatesDropdownActive"
-              :isMobile="isMobile"
-              @mouseenter="onTemplatesDropdownMouseEnter"
-              @mouseleave="onTemplatesDropdownMouseLeave"
-              @dropdown-close="handleTemplatesDropdownClose"
-            />
-          </li>
-          <li class="nav-item me-2" @click="collapseNav">
-            <NuxtLink to="/integrations/" class="nav-link"
-              >Integrations</NuxtLink
+            <li
+              class="nav-item dropdown me-2 position-relative"
+              :class="{ open: resourcesDropdownActive }"
+              @mouseenter="!isMobile && onResourcesDropdownMouseEnter()"
+              @mouseleave="!isMobile && onResourcesDropdownMouseLeave()"
             >
-          </li>
+              <template v-if="isMobile">
+                <button
+                  class="nav-link"
+                  :class="{
+                    active:
+                      resourcesDropdownActive || hoveringResourcesDropdown,
+                  }"
+                  type="button"
+                  @click="toggleResourcesDropdown"
+                >
+                  Resources
+                  <span class="chevron-stack">
+                    <nuxt-img
+                      src="/chevron-down-gray.svg"
+                      class="chevron chevron-gray"
+                      :class="{ open: resourcesDropdownActive }"
+                    />
+                    <nuxt-img
+                      src="/chevron-down-colored.svg"
+                      class="chevron chevron-colored"
+                      :class="{ open: resourcesDropdownActive }"
+                    />
+                  </span>
+                </button>
+              </template>
+              <template v-else>
+                <button
+                  class="nav-link"
+                  :class="{
+                    active:
+                      resourcesDropdownActive || hoveringResourcesDropdown,
+                  }"
+                  type="button"
+                  @click="toggleResourcesDropdown"
+                  @mouseenter="onResourcesDropdownMouseEnter"
+                  @mouseleave="onResourcesDropdownMouseLeave"
+                  :aria-expanded="resourcesDropdownActive.toString()"
+                >
+                  Resources
+                  <span class="chevron-stack">
+                    <nuxt-img
+                      src="/chevron-down-gray.svg"
+                      class="chevron chevron-gray"
+                      :class="{ open: resourcesDropdownActive }"
+                    />
+                    <nuxt-img
+                      src="/chevron-down-colored.svg"
+                      class="chevron chevron-colored"
+                      :class="{ open: resourcesDropdownActive }"
+                    />
+                  </span>
+                </button>
+              </template>
 
-          <li
-            class="nav-item dropdown me-2 position-relative"
-            :class="{ open: resourcesDropdownActive }"
-            @mouseenter="!isMobile && onResourcesDropdownMouseEnter()"
-            @mouseleave="!isMobile && onResourcesDropdownMouseLeave()"
-          >
-            <template v-if="isMobile">
-              <button
-                class="nav-link"
-                :class="{
-                  active: resourcesDropdownActive || hoveringResourcesDropdown,
-                }"
-                type="button"
-                @click="toggleResourcesDropdown"
-              >
-                Resources
-                <span class="chevron-stack">
-                  <nuxt-img
-                    src="/chevron-down-gray.svg"
-                    class="chevron chevron-gray"
-                    :class="{ open: resourcesDropdownActive }"
-                  />
-                  <nuxt-img
-                    src="/chevron-down-colored.svg"
-                    class="chevron chevron-colored"
-                    :class="{ open: resourcesDropdownActive }"
-                  />
-                </span>
-              </button>
-            </template>
-            <template v-else>
-              <button
-                class="nav-link"
-                :class="{
-                  active: resourcesDropdownActive || hoveringResourcesDropdown,
-                }"
-                type="button"
-                @click="toggleResourcesDropdown"
+              <!-- Resources Dropdown component -->
+              <ResourcesDropdown
+                :dropdownActive="resourcesDropdownActive"
+                :isMobile="isMobile"
+                :resourcesList="resourcesList"
                 @mouseenter="onResourcesDropdownMouseEnter"
                 @mouseleave="onResourcesDropdownMouseLeave"
-                :aria-expanded="resourcesDropdownActive.toString()"
-              >
-                Resources
-                <span class="chevron-stack">
-                  <nuxt-img
-                    src="/chevron-down-gray.svg"
-                    class="chevron chevron-gray"
-                    :class="{ open: resourcesDropdownActive }"
-                  />
-                  <nuxt-img
-                    src="/chevron-down-colored.svg"
-                    class="chevron chevron-colored"
-                    :class="{ open: resourcesDropdownActive }"
-                  />
-                </span>
+                @dropdown-close="handleResourcesDropdownClose"
+              />
+            </li>
+          </ul>
+
+          <!-- Auth Buttons -->
+          <div class="d-flex flex-column flex-lg-row ms-auto">
+            <a
+              href="https://app.formester.com/users/sign_in"
+              @click="collapseNav"
+              class="mt-3 mt-lg-0"
+            >
+              <button type="button" class="button nav__outline__button">
+                Log In
               </button>
-            </template>
-
-            <!-- Resources Dropdown component -->
-            <ResourcesDropdown
-              :dropdownActive="resourcesDropdownActive"
-              :isMobile="isMobile"
-              :resourcesList="resourcesList"
-              @mouseenter="onResourcesDropdownMouseEnter"
-              @mouseleave="onResourcesDropdownMouseLeave"
-              @dropdown-close="handleResourcesDropdownClose"
-            />
-          </li>
-        </ul>
-
-        <!-- Auth Buttons -->
-        <div class="d-flex flex-column flex-lg-row ms-auto">
-          <a
-            href="https://app.formester.com/users/sign_in"
-            @click="collapseNav"
-            class="mt-3 mt-lg-0"
-          >
-            <button type="button" class="button nav__outline__button">
-              Log In
-            </button>
-          </a>
-          <a
-            href="https://app.formester.com/users/sign_up"
-            @click="collapseNav"
-            class="mt-3 mt-lg-0 ms-lg-3"
-          >
-            <button type="button" class="button nav__button">Sign Up</button>
-          </a>
+            </a>
+            <a
+              href="https://app.formester.com/users/sign_up"
+              @click="collapseNav"
+              class="mt-3 mt-lg-0 ms-lg-2"
+            >
+              <button type="button" class="button nav__button">Sign Up</button>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </template>
 
 <script>
@@ -330,7 +340,6 @@ export default {
     }
   },
   computed: {
-
     filteredDropdownItems() {
       if (!this.activeFeatureCategory) return this.dropdownItems
       return this.dropdownItems.filter(
@@ -360,7 +369,7 @@ export default {
         this.resourcesDropdownActive = false
       }
     },
-    
+
     toggleTemplatesDropdown() {
       this.templatesDropdownActive = !this.templatesDropdownActive
       if (this.templatesDropdownActive) {
@@ -482,9 +491,47 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  padding-left: 16px !important;
+  padding-right: 8px !important;
+}
+
+.navbar-container {
+  z-index: 1030;
+  background: transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 16px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 16px;
+}
+
+.floating-navbar {
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 8px 0;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
 nav {
   padding: 0.5em 0;
   z-index: 99999;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+  padding: 0;
+}
+
+.navbar-collapse {
+  display: flex;
+  align-items: center;
 }
 
 /* Center navigation styles */
@@ -493,7 +540,6 @@ nav {
   justify-content: center;
 }
 
-/* Nav Links */
 .nav-link {
   font-size: 15px;
   font-weight: 500;
@@ -547,6 +593,13 @@ nav {
   border: none;
   outline: none;
   box-shadow: none;
+}
+
+/* Desktop navbar styles */
+@media (min-width: 1200px) {
+  .navbar-nav {
+    padding-right: 16px;
+  }
 }
 
 /* ---------- Features Mega Dropdown ---------- */
@@ -717,6 +770,64 @@ nav {
 @media (max-width: 1199px) {
   .nav-item {
     margin-top: 8px;
+  }
+  
+  /* Fix for mobile navbar */
+  .navbar-collapse:not(.show) {
+    display: none;
+  }
+  
+  .navbar-collapse.show {
+    display: block;
+  }
+  
+  .container {
+    width: 100%;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  
+  /* Align navbar links with logo */
+  .navbar-nav {
+    padding-left: 0;
+    margin-top: 16px;
+  }
+  
+  .nav-link {
+    padding-left: 0;
+  }
+  
+  /* Remove padding from dropdown items */
+  .dropdown-item {
+    padding-left: 0;
+  }
+  
+  /* Increase bottom padding in mobile */
+  .floating-navbar {
+    padding-bottom: 16px;
+  }
+}
+
+/* Fix for smaller screens (500px and below) */
+@media (max-width: 500px) {
+  .navbar-container {
+    padding: 0 8px;
+  }
+  
+  .container {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  
+  .floating-navbar {
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  /* Remove padding from mobile menu items */
+  .features-dropdown-content .dropdown-item,
+  .features-vertical-tab {
+    padding-left: 0;
   }
 
   .features-dropdown-mega {
