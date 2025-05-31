@@ -25,4 +25,5 @@ export default {
   'macro-components.trustbadges': () => import('@/components/strapi/Trustbadges.vue'),
   'macro-components.table': () => import('@/components/table/Table.vue'),
   'macro-components.integrations-showcase': () => import('@/components/strapi/IntegrationsShowcase.vue'),
+  'macro-components.hero-tab-showcase': () => import('@/components/home/HeroTabShowcase/HeroTabShowcase.vue'),
 }
