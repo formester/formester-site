@@ -34,6 +34,8 @@
             :src="currentTab.image"
             :alt="currentTab.label + ' screenshot'"
             class="tab-image"
+            :key="currentTab.image"
+            loading="eager"
           />
         </div>
       </div>
@@ -57,53 +59,53 @@ const borderColors = [
 
 const tabs = [
   {
-    label: 'Forms',
-    title: 'Turn forms into powerful automations',
+    label: 'AI Tools',
+    title: 'Build full forms, surveys & quizzes in seconds with AI',
     features: [
       {
-        text: 'Sync your calendar and set your availability',
+        text: 'Skip manual work & convert PDFs to forms',
         icon: '/images/feature-icons/calendar.svg',
       },
       {
-        text: 'Email or upload completed PDFs to your systems',
+        text: 'Reach global users in their language',
         icon: '/images/feature-icons/mail.svg',
       },
       {
-        text: 'Offer discounts, free trials, pay by ACH & more',
+        text: 'Personalize journeys with smart logic',
         icon: '/images/feature-icons/discount.svg',
       },
     ],
     image: '/hero-assets/features/Forms.png',
   },
   {
-    label: 'Scheduling',
-    title: 'Automate your scheduling',
+    label: 'Documents',
+    title: 'Automate your document workflows',
     features: [
       {
-        text: 'Book meetings directly from forms',
+        text: 'Make file collection fast and stress-free',
         icon: '/images/feature-icons/clock.svg',
       },
       {
-        text: 'Integrate with Google Calendar, Outlook, and more',
+        text: 'Stay in control of file types and sizes',
         icon: '/images/feature-icons/calendar.svg',
       },
       {
-        text: 'Send reminders and confirmations automatically',
+        text: 'Collect signatures within the form',
         icon: '/images/feature-icons/zap.svg',
       },
     ],
     image: '/images/hero-tabs/scheduling.png',
   },
   {
-    label: 'PDF',
+    label: 'Custom PDFs',
     title: 'Seamless PDF workflows',
     features: [
       {
-        text: 'Generate PDFs from form submissions',
+        text: 'Auto-generate invoices and reports',
         icon: '/images/feature-icons/pdf.svg',
       },
       {
-        text: 'Email or upload PDFs to your systems',
+        text: 'Automate your PDF Workflow',
         icon: '/images/feature-icons/mail.svg',
       },
       {
@@ -114,57 +116,57 @@ const tabs = [
     image: '/images/hero-tabs/pdf.png',
   },
   {
-    label: 'Payments',
-    title: 'Integrated payments',
+    label: 'Automations',
+    title: 'Keep leads warm with auto follow-ups',
     features: [
       {
-        text: 'Collect payments via Stripe, ACH, and more',
+        text: 'Notify your team instantly via Slack',
         icon: '/images/feature-icons/credit-card.svg',
       },
       {
-        text: 'Offer discounts, free trials, and subscriptions',
+        text: 'Capture leads right into your CRM',
         icon: '/images/feature-icons/discount.svg',
       },
       {
-        text: 'Track transactions in one place',
+        text: 'Save time with 1000+ app integrations',
         icon: '/images/feature-icons/chart.svg',
       },
     ],
     image: '/images/hero-tabs/payments.png',
   },
   {
-    label: 'Workflows',
-    title: 'Automate your workflows',
+    label: 'Collaboration',
+    title: 'Collaborate with your team',
     features: [
       {
-        text: 'Trigger actions based on form responses',
+        text: 'Bring your whole team into one workspace',
         icon: '/images/feature-icons/zap.svg',
       },
       {
-        text: 'Integrate with 1000+ apps via Zapier',
+        text: 'Control who sees or edits what, easily',
         icon: '/images/feature-icons/workflow.svg',
       },
       {
-        text: 'Build multi-step workflows visually',
+        text: 'Share forms with your team',
         icon: '/images/feature-icons/edit.svg',
       },
     ],
     image: '/images/hero-tabs/workflows.png',
   },
   {
-    label: 'Signature',
-    title: 'Collect signatures with ease',
+    label: 'Payments',
+    title: 'Collect payments with ease',
     features: [
       {
-        text: 'Add e-signature fields to your forms',
+        text: 'Get paid directly through your forms',
         icon: '/images/feature-icons/signature.svg',
       },
       {
-        text: 'Legally binding and secure',
+        text: 'Build form with built-in promo discounts',
         icon: '/images/feature-icons/lock.svg',
       },
       {
-        text: 'Track signed documents easily',
+        text: 'Track payments in one place',
         icon: '/images/feature-icons/chart.svg',
       },
     ],
@@ -177,9 +179,18 @@ const currentTab = computed(() => tabs[selectedTab.value])
 
 let intervalId = null
 onMounted(() => {
+
+  tabs.forEach(tab => {
+    const img = new window.Image();
+    img.src = tab.image;
+    tab.features.forEach(feature => {
+      const iconImg = new window.Image();
+      iconImg.src = feature.icon;
+    });
+  });
   intervalId = setInterval(() => {
     selectedTab.value = (selectedTab.value + 1) % tabs.length
-  }, 8000)
+  }, 5000)
 })
 onUnmounted(() => {
   if (intervalId) clearInterval(intervalId)
@@ -370,6 +381,27 @@ function tabButtonStyle(idx) {
   }
   .tab-right {
     justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0;
+  }
+  .tab-image {
+    max-width: 98vw;
+    max-height: 320px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin-top: 16px;
+    margin-left: 0;
+    object-fit: contain;
+  }
+}
+@media (max-width: 600px) {
+  .tab-image {
+    max-width: 98vw;
+    max-height: 220px;
+    width: auto;
+    height: auto;
   }
 }
 .tab-icon {
