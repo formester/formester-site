@@ -179,15 +179,14 @@ const currentTab = computed(() => tabs[selectedTab.value])
 
 let intervalId = null
 onMounted(() => {
-
-  tabs.forEach(tab => {
-    const img = new window.Image();
-    img.src = tab.image;
-    tab.features.forEach(feature => {
-      const iconImg = new window.Image();
-      iconImg.src = feature.icon;
-    });
-  });
+  tabs.forEach((tab) => {
+    const img = new window.Image()
+    img.src = tab.image
+    tab.features.forEach((feature) => {
+      const iconImg = new window.Image()
+      iconImg.src = feature.icon
+    })
+  })
   intervalId = setInterval(() => {
     selectedTab.value = (selectedTab.value + 1) % tabs.length
   }, 5000)
@@ -202,18 +201,18 @@ function tabButtonStyle(idx) {
         background: borderColors[idx],
         color: '#fff',
         borderBottom: 'none',
-      };
+      }
     }
     return {
       background: '#fff',
       color: '#111',
       borderBottom: 'none',
-    };
+    }
   }
-  return idx === selectedTab.value ? { borderBottom: `4px solid ${borderColors[idx]}` } : {};
+  return idx === selectedTab.value
+    ? { borderBottom: `4px solid ${borderColors[idx]}` }
+    : {}
 }
-
-
 </script>
 
 <style scoped>
@@ -278,20 +277,7 @@ function tabButtonStyle(idx) {
   z-index: 1;
   min-height: 340px;
 }
-@media (max-width: 900px) {
-  .tab-content {
-    flex-direction: column;
-    gap: 32px;
-    padding: 32px 16px;
-    min-height: unset;
-  }
-}
-@media (max-width: 600px) {
-  .tab-content {
-    padding: 20px 8px;
-    gap: 20px;
-  }
-}
+
 .tab-left {
   flex: 1 1 0;
   min-width: 0;
@@ -343,8 +329,19 @@ function tabButtonStyle(idx) {
   background: none;
   object-fit: contain;
 }
+.tab-icon {
+  display: inline-flex;
+  margin-right: 8px;
+}
 
 @media (max-width: 900px) {
+  .tab-content {
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px 16px;
+    min-height: unset;
+  }
+
   .tab-list {
     flex-wrap: wrap;
     justify-content: center;
@@ -357,8 +354,8 @@ function tabButtonStyle(idx) {
     min-width: 120px;
     border-radius: 10px;
     border: none;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    font-size: 14px;
     font-weight: 600;
     padding: 8px 18px;
     margin: 0;
@@ -372,7 +369,7 @@ function tabButtonStyle(idx) {
   .tab.active {
     background: #2563eb;
     color: #fff;
-    box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
   }
   .tab-content {
     flex-direction: column;
@@ -395,18 +392,39 @@ function tabButtonStyle(idx) {
     margin-left: 0;
     object-fit: contain;
   }
+
+  .tab-title {
+    font-size: 20px;
+    line-height: 125%;
+  }
+
+  .tab-features li {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
+
 @media (max-width: 600px) {
+  .tab-content {
+    padding: 20px;
+    gap: 20px;
+    border-radius: 16px;
+  }
   .tab-image {
     max-width: 98vw;
     max-height: 220px;
     width: auto;
     height: auto;
   }
-}
-.tab-icon {
-  display: inline-flex;
-  margin-right: 8px;
-}
 
+  .tab-title {
+    font-size: 18px;
+    line-height: 125%;
+  }
+
+  .tab-features li {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
 </style>

@@ -287,7 +287,22 @@ export default {
 
 @media (max-width: 768px) {
   .hero {
-    margin-bottom: 20px;
+    padding-bottom: 240px;
+  }
+  .hero-tabs {
+    margin-top: -240px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .hero__heading {
+    font-size: 40px;
+    line-height: 125%;
+  }
+
+  .hero__subheading {
+    font-size: var(--ft-body);
+    line-height: 24px;
+    color: #475467;
   }
 
   .floating-icon {
