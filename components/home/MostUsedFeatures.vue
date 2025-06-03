@@ -1,6 +1,11 @@
 <template>
   <section class="container py-5 mt-3">
-    <SectionTitle :heading="heading" />
+    <div class="row justify-content-center align-items-center text-center mb-5">
+      <SectionTitle :heading="heading" />
+      <!-- <p v-if="description">
+        {{ description }}
+      </p> -->
+    </div>
     <!-- Desktop -->
     <div class="feature__desktop d-none d-lg-flex row mt-5">
       <ul class="feature__content-wrapper col-6">
@@ -11,7 +16,7 @@
             'feature__item',
             'd-flex flex-column',
             'p-4',
-            { 'active': activeIndex === index }
+            { active: activeIndex === index },
           ]"
           @click="handleFeatureClick(index)"
         >
@@ -19,7 +24,7 @@
             <div
               :class="[
                 'feature__icon-wrapper d-flex align-items-center justify-content-center',
-                { 'inactive-icon': activeIndex !== index }
+                { 'inactive-icon': activeIndex !== index },
               ]"
             >
               <nuxt-img
@@ -30,7 +35,14 @@
               />
             </div>
             <div class="ms-3 mt-1">
-              <h3 :class="['feature__title', { 'active-title': activeIndex === index }]">{{ feature.title }}</h3>
+              <h3
+                :class="[
+                  'feature__title',
+                  { 'active-title': activeIndex === index },
+                ]"
+              >
+                {{ feature.title }}
+              </h3>
               <div v-if="activeIndex === index">
                 <MarkdownContent
                   v-if="feature.description_markdown"
@@ -43,15 +55,20 @@
               </div>
             </div>
           </div>
-          
+
           <!-- Individual progress bar for each tab -->
-          <div v-if="activeIndex === index" class="progress-container w-100 progress-wrapper">
+          <div
+            v-if="activeIndex === index"
+            class="progress-container w-100 progress-wrapper"
+          >
             <div class="progress">
-              <div 
-                class="progress-bar" 
+              <div
+                class="progress-bar"
                 :key="'progress-' + activeIndex + '-' + progressKey"
                 :class="{ 'progress-animate': isAutoRotating }"
-                :style="{ '--animation-duration': rotationDuration/1000 + 's' }"
+                :style="{
+                  '--animation-duration': rotationDuration / 1000 + 's',
+                }"
               ></div>
             </div>
           </div>
@@ -124,8 +141,8 @@ export default {
       activeIndex: 0,
       autoRotateInterval: null,
       isAutoRotating: true,
-      rotationDuration: 7000, 
-      progressKey: 0, 
+      rotationDuration: 7000,
+      progressKey: 0,
     }
   },
   mounted() {
@@ -155,7 +172,7 @@ export default {
     startAutoRotation() {
       // Animate progress bar to 100% over rotationDuration
       this.isAutoRotating = true
-      
+
       // Set interval for rotating features
       this.autoRotateInterval = setInterval(() => {
         this.rotateToNextFeature()
@@ -175,11 +192,11 @@ export default {
     rotateToNextFeature() {
       // Move to next feature or back to first
       this.activeIndex = (this.activeIndex + 1) % this.itemList.length
-      
+
       // Reset progress bar animation by incrementing the key and toggling isAutoRotating
       this.isAutoRotating = false
       this.progressKey++
-      
+
       // Force a repaint before starting animation again
       setTimeout(() => {
         this.isAutoRotating = true
@@ -190,7 +207,7 @@ export default {
     // Watch for changes in itemList to reset rotation
     itemList() {
       this.resetAutoRotation()
-    }
+    },
   },
 }
 </script>
@@ -202,8 +219,8 @@ export default {
 
 .feature__icon-wrapper {
   border-radius: 50%;
-  border: 4px solid #f7f3ff;
-  background: #f7f3ff;
+  border: 4px solid #f3eeff;
+  background: #f3eeff;
   width: 40px;
   height: 40px;
   padding: 4px;
@@ -214,7 +231,7 @@ export default {
   font-weight: 500;
   line-height: 28px;
   margin-bottom: 0;
-  color: #475467; 
+  color: #475467;
 }
 
 .feature__desc {
@@ -229,11 +246,11 @@ export default {
 }
 
 .feature__item:hover {
-  background-color: #FCFCFD;
+  background-color: #fcfcfd;
 }
 
 .feature__item.active {
-  background-color: #FCFCFD;
+  background-color: #fdfbff;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
@@ -252,7 +269,6 @@ export default {
 .feature__img {
   transition: all 0.2s cubic-bezier(0.12, 0.26, 1, 0.6);
 }
-
 
 .progress-container {
   width: 100%;
@@ -275,7 +291,7 @@ export default {
 
 .progress-bar {
   height: 100%;
-  background: linear-gradient(90deg, #F0EBFA 0%, #6434D0 100%);
+  background: linear-gradient(90deg, #b8a2e9 0%, #6434d0 100%);
   border-radius: 24px;
 }
 
@@ -284,23 +300,29 @@ export default {
 }
 
 @keyframes progressAnimation {
-  from { width: 0%; }
-  to { width: 100%; }
-}
-
-.grey-filter {
-  filter: grayscale(100%) opacity(0.5);
-  transition: filter 0.3s ease;
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 .inactive-icon {
-  background: #F9FAFB;
-  border-color:#F9FAFB;
+  background: #f2f4f7;
+  border-color: #f2f4f7;
   transition: all 0.3s ease;
 }
 
+.inactive-icon img,
+.inactive-icon svg {
+  filter: grayscale(1) brightness(1.3) contrast(1.2) sepia(0.18)
+    hue-rotate(175deg) saturate(1.2);
+  transition: filter 0.3s ease;
+}
+
 .active-title {
-  color: #6434D0; 
+  color: #6434d0;
   transition: color 0.3s ease;
   font-weight: 600;
 }
