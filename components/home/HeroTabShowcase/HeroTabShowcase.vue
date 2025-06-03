@@ -57,15 +57,15 @@
             {{ description }}
           </p>
           <a
-            v-if="buttons && buttons.length"
-            :href="buttons[0]?.link || '#'"
-            class="btn button mt-4 mb-4 mb-md-5"
+            v-if="button && button.length"
+            :href="button[0]?.link || '#'"
+            class="btn button mt-4 mb-4 mb-md-5 hero__button"
             :class="{
-              hero__button: buttons[0]?.type === 'Primary',
-              hero__invert__button: buttons[0]?.type === 'Secondary',
+              'hero__button--primary': button[0]?.type === 'Primary',
+              'hero__button--secondary': button[0]?.type === 'Secondary',
             }"
           >
-            {{ buttons[0]?.text || 'Learn More' }}
+            {{ button[0]?.text || 'Learn More' }}
           </a>
         </div>
       </div>
@@ -118,7 +118,7 @@ export default {
       type: String,
       default: () => '',
     },
-    buttons: {
+    button: {
       type: Array,
       default: () => [],
     },
@@ -127,12 +127,45 @@ export default {
 </script>
 
 <style scoped>
+.hero__button.hero__button--primary {
+  background-color: #6434d0;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75em 2em;
+  font-size: 1.125rem;
+  box-shadow: 0 2px 8px rgba(100, 52, 208, 0.08);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.hero__button.hero__button--primary:hover,
+.hero__button.hero__button--primary:focus {
+  background-color: #4b27a8;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(100, 52, 208, 0.15);
+  outline: none;
+}
+
+.hero__button.hero__button--secondary {
+  background-color: transparent;
+  color: #6434d0;
+  border: 1px solid #6434d0;
+}
+.hero__button.hero__button--secondary:hover,
+.hero__button.hero__button--secondary:focus {
+  background-color: #6434d0;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(100, 52, 208, 0.15);
+  outline: none;
+}
+
 .hero-tabs-container {
   margin-bottom: 96px;
 }
 .hero-tabs {
   margin-inline: auto;
-  margin-top: -120px;
+  margin-top: -160px;
   padding-left: 96px;
   padding-right: 96px;
 }
