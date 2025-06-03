@@ -11,8 +11,8 @@
 <stop stop-color="#F7F3FF"/>
 <stop offset="0.5" stop-color="#F7F3FF"/>
 <stop offset="0.5001" stop-color="#219653" stop-opacity="0"/>
-<stop offset="0.5002" stop-color="#B3B3B3"/>
-<stop offset="0.9998" stop-color="#BBBBBB"/>
+<stop offset="0.5002" stop-color="#D5D5D5" stop-opacity="0.5"/>
+<stop offset="0.9998" stop-color="#D5D5D5" stop-opacity="0.5"/>
 </linearGradient>
 </defs>
 </svg>
