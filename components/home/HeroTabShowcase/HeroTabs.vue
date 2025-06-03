@@ -13,31 +13,35 @@
         </button>
       </div>
       <div class="tab-content">
-        <div class="tab-left">
-          <h2 class="tab-title">{{ currentTab.title }}</h2>
-          <ul class="tab-features">
-            <li v-for="(feature, i) in currentTab.features" :key="i">
-              <span class="feature-icon">
-                <img
-                  :src="feature.icon"
-                  :alt="feature.text + ' icon'"
-                  width="20"
-                  height="20"
-                />
-              </span>
-              {{ feature.text }}
-            </li>
-          </ul>
-        </div>
-        <div class="tab-right">
-          <img
-            :src="currentTab.image"
-            :alt="currentTab.label + ' screenshot'"
-            class="tab-image"
-            :key="currentTab.image"
-            loading="eager"
-          />
-        </div>
+        <transition name="tab-left-fade-slide" mode="out-in">
+          <div class="tab-left" :key="selectedTab + '-left'">
+            <h2 class="tab-title">{{ currentTab.title }}</h2>
+            <ul class="tab-features">
+              <li v-for="(feature, i) in currentTab.features" :key="i">
+                <span class="feature-icon">
+                  <img
+                    :src="feature.icon"
+                    :alt="feature.text + ' icon'"
+                    width="20"
+                    height="20"
+                  />
+                </span>
+                {{ feature.text }}
+              </li>
+            </ul>
+          </div>
+        </transition>
+        <transition name="tab-right-fade-slide" mode="out-in">
+          <div class="tab-right" :key="selectedTab + '-right'">
+            <img
+              :src="currentTab.image"
+              :alt="currentTab.label + ' screenshot'"
+              class="tab-image"
+              :key="currentTab.image"
+              loading="eager"
+            />
+          </div>
+        </transition>
       </div>
     </div>
   </div>
@@ -426,5 +430,42 @@ function tabButtonStyle(idx) {
     font-size: 14px;
     line-height: 24px;
   }
+}
+.tab-left-fade-slide-enter-active,
+.tab-left-fade-slide-leave-active {
+  transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tab-left-fade-slide-enter-from {
+  opacity: 0;
+  transform: translateX(-8px);
+}
+.tab-left-fade-slide-leave-to {
+  opacity: 0;
+  transform: translateX(-8px);
+}
+.tab-left-fade-slide-enter-to,
+.tab-left-fade-slide-leave-from {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.tab-right-fade-slide-enter-active,
+.tab-right-fade-slide-leave-active {
+  transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tab-right-fade-slide-enter-from {
+  opacity: 0;
+  transform: translateX(8px);
+}
+.tab-right-fade-slide-leave-to {
+  opacity: 0;
+  transform: translateX(-8px);
+}
+.tab-right-fade-slide-enter-to,
+.tab-right-fade-slide-leave-from {
+  opacity: 1;
+  transform: translateX(0);
 }
 </style>
