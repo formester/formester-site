@@ -14,6 +14,7 @@
           v-model="searchTerm"
           @input="emitSearchTerm"
           class="search-input w-100"
+          data-clarity-mask="false"
         />
         <div
           class="clear-input-btn pointer"
