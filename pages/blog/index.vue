@@ -64,48 +64,51 @@ import axios from 'axios'
 import readingTime from '@/utils/readingTime'
 
 export default {
+
   components: {
     BlogCard,
     BlogFeatured,
   },
   data() {
     return {
-      currentPage: 1,
-      itemsPerPage: 9, // Adjust as needed
+      itemsPerPage: 9 // Adjust as needed
     }
   },
   async asyncData() {
-    const {
-      data: { data },
-    } = await axios.get(`${process.env.strapiUrl}/api/blogs`, {
+    const { data: { data } } = await axios.get(`${process.env.strapiUrl}/api/blogs`, {
       params: {
         sort: 'publishedAt:desc',
         populate: '*',
       },
     })
 
-    let articles = data.map((item) => {
-      return {
-        id: item.id,
-        ...item.attributes,
-        coverImg: item.attributes.coverImg.data.attributes.url,
-        readingStats: readingTime(item.attributes.body),
-      }
-    })
+    let articles = data.map((item) => ({
+      id: item.id,
+      ...item.attributes,
+      coverImg: item.attributes.coverImg.data.attributes.url,
+      readingStats: readingTime(item.attributes.body),
+    }))
     const heroArticles = articles.filter((item) => item.featured)
     articles = articles.filter((item) => !item.featured)
+    const totalArticles = articles.length
+    const totalPages = Math.ceil(totalArticles / 9)
     return {
       articles,
       heroArticles,
+      totalPages,
     }
   },
   computed: {
+
+    currentPage() {
+      return parseInt(this.$route.query.page) || 1
+    },
+    currentPage() {
+      return parseInt(this.$route.query.page) || 1
+    },
     paginatedArticles() {
       const start = (this.currentPage - 1) * this.itemsPerPage
       return this.articles.slice(start, start + this.itemsPerPage)
-    },
-    totalPages() {
-      return Math.ceil(this.articles.length / this.itemsPerPage)
     },
     paginationPages() {
       const pages = []
@@ -153,24 +156,9 @@ export default {
   methods: {
     goToPage(page) {
       if (page < 1 || page > this.totalPages) return
-      this.currentPage = page
-      this.scrollToAllBlogs()
+      this.$router.push({ path: '/blog', query: { ...this.$route.query, page } })
     },
-    scrollToAllBlogs() {
-      this.$nextTick(() => {
-        const el = document.getElementById('all-blogs')
-        if (el) {
-          const yOffset = -80 // Adjust this to your navbar height
-          const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset
-          window.scrollTo({ top: y, behavior: 'smooth' })
-        }
-      })
-    },
-  },
-  watch: {
-    $route() {
-      this.scrollToAllBlogs()
-    }
+
   },
 
   head() {

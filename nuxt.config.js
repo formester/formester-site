@@ -40,9 +40,7 @@ export default {
     ],
   },
 
-  router: {
-    trailingSlash: true,
-  },
+  router: {},
 
   robots: {
     UserAgent: '*',
@@ -70,8 +68,14 @@ export default {
       const blogs = await getRoutes()
       const features = await getFeatureRoutes()
       const pages = await getPageRoutes()
-      const sitemap = [...pages, ...features, ...blogs, ...templates, ...categories]
-      return sitemap;
+      const sitemap = [
+        ...pages,
+        ...features,
+        ...blogs,
+        ...templates,
+        ...categories,
+      ]
+      return sitemap
     },
   },
 
@@ -135,7 +139,12 @@ export default {
           await getTemplatesAndCategories()
         const featureRoutes = await getFeatureRoutes()
         const pageRoutes = await getPageRoutes()
-        return [...pageRoutes, ...featureRoutes, ...templateRoutes, ...categorieRoutes]
+        return [
+          ...pageRoutes,
+          ...featureRoutes,
+          ...templateRoutes,
+          ...categorieRoutes,
+        ]
       } catch (error) {
         return []
       }
@@ -149,7 +158,10 @@ export default {
   // Nuxt Image
   image: {
     dir: 'assets/images',
-    domains: ['formester-strapi.s3.ap-south-1.amazonaws.com','img.youtube.com'],
+    domains: [
+      'formester-strapi.s3.ap-south-1.amazonaws.com',
+      'img.youtube.com',
+    ],
   },
 
   // Enviornment variable for the base url of the app
