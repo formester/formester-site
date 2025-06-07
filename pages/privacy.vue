@@ -72,6 +72,9 @@
 
     <h2>12. Compliance with Google API Services User Data Policy</h2>
     <p>Our app complies with the Google API Services User Data Policy, including the Limited Use requirements. This means that we only use the data we collect for providing our app's features and functionality, and we do not share this data with any third parties.</p>
+
+    <h2>13. Google Workspace API & AI Use</h2>
+    <p>We do not use any data obtained through Google Workspace APIs to develop, improve, or train generalized artificial intelligence (AI) or machine learning (ML) models.</p>
   </div>
 </template>
 
@@ -154,6 +157,8 @@ h1 {
 h2 {
     margin-top: 32px;
     margin-bottom: 16px;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 h3 {
