@@ -68,18 +68,18 @@ const tabs = [
     features: [
       {
         text: 'Get cleaner data with built-in email & field validation',
-        icon: '/images/feature-icons/calendar.svg',
+        icon: '/hero-assets/features/forms/1.svg',
       },
       {
         text: 'Let users upload files, book meetings, and e-sign instantly',
-        icon: '/images/feature-icons/mail.svg',
+        icon: '/hero-assets/features/forms/2.svg',
       },
       {
         text: 'Spot drop-offs and improve performance with smart analytics',
-        icon: '/images/feature-icons/discount.svg',
+        icon: '/hero-assets/features/forms/3.svg',
       },
     ],
-    image: '/hero-assets/features/Forms.png',
+    image: '/hero-assets/features/forms/Forms.png',
   },
   {
     label: 'Payments',
@@ -87,22 +87,22 @@ const tabs = [
     features: [
       {
         text: 'Process one-time fees, recurring subscriptions & donations',
-        icon: '/images/feature-icons/clock.svg',
+        icon: '/hero-assets/features/payments/1.svg',
       },
       {
         text: 'Handle event tickets, product orders, and memberships',
-        icon: '/images/feature-icons/calendar.svg',
+        icon: '/hero-assets/features/payments/2.svg',
       },
       {
         text: 'Connect Stripe or PayPal, offer discounts or free trials',
-        icon: '/images/feature-icons/zap.svg',
+        icon: '/hero-assets/features/payments/3.svg',
       },
       {
         text: 'Enable ACH payments for higher-value transactions',
-        icon: '/images/feature-icons/chart.svg',
+        icon: '/hero-assets/features/payments/4.svg',
       },
     ],
-    image: '/images/hero-tabs/scheduling.png',
+    image: '/hero-assets/features/payments/Payments.png',
   },
   {
     label: 'Collaboration',
@@ -110,18 +110,18 @@ const tabs = [
     features: [
       {
         text: 'Co-create forms without overwriting each other’s work',
-        icon: '/images/feature-icons/pdf.svg',
+        icon: '/hero-assets/features/collaboration/1.svg',
       },
       {
         text: 'Set precise access controls: who can view, edit, or submit',
-        icon: '/images/feature-icons/mail.svg',
+        icon: '/hero-assets/features/collaboration/2.svg',
       },
       {
         text: 'Co-submit a single form as a team in real time',
-        icon: '/images/feature-icons/edit.svg',
+        icon: '/hero-assets/features/collaboration/3.svg',
       },
     ],
-    image: '/images/hero-tabs/pdf.png',
+    image: '/hero-assets/features/collaboration/Collaboration.png',
   },
   {
     label: 'Custom PDFs',
@@ -129,14 +129,14 @@ const tabs = [
     features: [
       {
         text: 'Automatically generate polished, fillable PDFs from responses',
-        icon: '/images/feature-icons/credit-card.svg',
+        icon: '/hero-assets/features/custom-pdfs/1.svg',
       },
       {
         text: 'Auto-send personalized PDFs as email attachments',
-        icon: '/images/feature-icons/discount.svg',
+        icon: '/hero-assets/features/custom-pdfs/2.svg',
       },
     ],
-    image: '/images/hero-tabs/payments.png',
+    image: '/hero-assets/features/custom-pdfs/CustomPDFs.png',
   },
   {
     label: 'Automations',
@@ -144,18 +144,18 @@ const tabs = [
     features: [
       {
         text: 'Send confirmation emails, alerts, or updates without lifting a finger',
-        icon: '/images/feature-icons/zap.svg',
+        icon: '/hero-assets/features/automations/1.svg',
       },
       {
         text: 'Instantly sync responses to CRMs, spreadsheets, or databases',
-        icon: '/images/feature-icons/workflow.svg',
+        icon: '/hero-assets/features/automations/2.svg',
       },
       {
         text: 'Connect with 1,000+ tools like Slack, HubSpot, Notion & more',
-        icon: '/images/feature-icons/edit.svg',
+        icon: '/hero-assets/features/automations/3.svg',
       },
     ],
-    image: '/images/hero-tabs/workflows.png',
+    image: '/hero-assets/features/automations/Automations.png',
   },
   {
     label: 'AI Native',
@@ -163,18 +163,18 @@ const tabs = [
     features: [
       {
         text: 'Create complete forms in seconds using AI',
-        icon: '/images/feature-icons/signature.svg',
+        icon: '/hero-assets/features/ai-native/1.svg',
       },
       {
         text: 'Add logic branching to your forms without manual work',
-        icon: '/images/feature-icons/lock.svg',
+        icon: '/hero-assets/features/ai-native/2.svg',
       },
       {
         text: 'Reach a global audience with AI-powered multilingual forms',
-        icon: '/images/feature-icons/chart.svg',
+        icon: '/hero-assets/features/ai-native/3.svg',
       },
     ],
-    image: '/images/hero-tabs/signature.png',
+    image: '/hero-assets/features/ai-native/AINative.png',
   },
 ]
 
@@ -302,14 +302,15 @@ function tabButtonStyle(idx) {
 }
 .tab-features li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   font-size: 18px;
   margin-bottom: 18px;
   color: #3b3b4f;
 }
 .feature-icon {
+  margin-top: 4px;
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
   margin-right: 12px;
 }
 
