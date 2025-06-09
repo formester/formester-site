@@ -63,114 +63,114 @@ const borderColors = [
 
 const tabs = [
   {
-    label: 'AI Tools',
-    title: 'Build full forms, surveys & quizzes in seconds with AI',
+    label: 'Forms',
+    title: 'Launch High-Converting Forms in Seconds',
     features: [
       {
-        text: 'Skip manual work & convert PDFs to forms',
+        text: 'Get cleaner data with built-in email & field validation',
         icon: '/images/feature-icons/calendar.svg',
       },
       {
-        text: 'Reach global users in their language',
+        text: 'Let users upload files, book meetings, and e-sign instantly',
         icon: '/images/feature-icons/mail.svg',
       },
       {
-        text: 'Personalize journeys with smart logic',
+        text: 'Spot drop-offs and improve performance with smart analytics',
         icon: '/images/feature-icons/discount.svg',
       },
     ],
     image: '/hero-assets/features/Forms.png',
   },
   {
-    label: 'Documents',
-    title: 'Automate your document workflows',
+    label: 'Payments',
+    title: 'Accept payments directly in your form',
     features: [
       {
-        text: 'Make file collection fast and stress-free',
+        text: 'Process one-time fees, recurring subscriptions & donations',
         icon: '/images/feature-icons/clock.svg',
       },
       {
-        text: 'Stay in control of file types and sizes',
+        text: 'Handle event tickets, product orders, and memberships',
         icon: '/images/feature-icons/calendar.svg',
       },
       {
-        text: 'Collect signatures within the form',
+        text: 'Connect Stripe or PayPal, offer discounts or free trials',
         icon: '/images/feature-icons/zap.svg',
+      },
+      {
+        text: 'Enable ACH payments for higher-value transactions',
+        icon: '/images/feature-icons/chart.svg',
       },
     ],
     image: '/images/hero-tabs/scheduling.png',
   },
   {
-    label: 'Custom PDFs',
-    title: 'Seamless PDF workflows',
+    label: 'Collaboration',
+    title: 'Work together without the chaos',
     features: [
       {
-        text: 'Auto-generate invoices and reports',
+        text: 'Co-create forms without overwriting each other’s work',
         icon: '/images/feature-icons/pdf.svg',
       },
       {
-        text: 'Automate your PDF Workflow',
+        text: 'Set precise access controls: who can view, edit, or submit',
         icon: '/images/feature-icons/mail.svg',
       },
       {
-        text: 'Customize PDF templates easily',
+        text: 'Co-submit a single form as a team in real time',
         icon: '/images/feature-icons/edit.svg',
       },
     ],
     image: '/images/hero-tabs/pdf.png',
   },
   {
-    label: 'Automations',
-    title: 'Keep leads warm with auto follow-ups',
+    label: 'Custom PDFs',
+    title: 'Turn form entries into branded PDFs',
     features: [
       {
-        text: 'Notify your team instantly via Slack',
+        text: 'Automatically generate polished, fillable PDFs from responses',
         icon: '/images/feature-icons/credit-card.svg',
       },
       {
-        text: 'Capture leads right into your CRM',
+        text: 'Auto-send personalized PDFs as email attachments',
         icon: '/images/feature-icons/discount.svg',
-      },
-      {
-        text: 'Save time with 1000+ app integrations',
-        icon: '/images/feature-icons/chart.svg',
       },
     ],
     image: '/images/hero-tabs/payments.png',
   },
   {
-    label: 'Collaboration',
-    title: 'Collaborate with your team',
+    label: 'Automations',
+    title: 'Save time with powerful automations',
     features: [
       {
-        text: 'Bring your whole team into one workspace',
+        text: 'Send confirmation emails, alerts, or updates without lifting a finger',
         icon: '/images/feature-icons/zap.svg',
       },
       {
-        text: 'Control who sees or edits what, easily',
+        text: 'Instantly sync responses to CRMs, spreadsheets, or databases',
         icon: '/images/feature-icons/workflow.svg',
       },
       {
-        text: 'Share forms with your team',
+        text: 'Connect with 1,000+ tools like Slack, HubSpot, Notion & more',
         icon: '/images/feature-icons/edit.svg',
       },
     ],
     image: '/images/hero-tabs/workflows.png',
   },
   {
-    label: 'Payments',
-    title: 'Collect payments with ease',
+    label: 'AI Native',
+    title: 'Let AI build and customize forms for you',
     features: [
       {
-        text: 'Get paid directly through your forms',
+        text: 'Create complete forms in seconds using AI',
         icon: '/images/feature-icons/signature.svg',
       },
       {
-        text: 'Build form with built-in promo discounts',
+        text: 'Add logic branching to your forms without manual work',
         icon: '/images/feature-icons/lock.svg',
       },
       {
-        text: 'Track payments in one place',
+        text: 'Reach a global audience with AI-powered multilingual forms',
         icon: '/images/feature-icons/chart.svg',
       },
     ],

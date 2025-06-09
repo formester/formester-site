@@ -190,6 +190,7 @@ export default {
 }
 
 .hero__heading {
+  max-width: 800px;
   font-size: 72px;
   font-weight: 700;
   line-height: 125%;
