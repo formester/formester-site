@@ -214,7 +214,7 @@ export default {
 
 <style scoped>
 .feature__content-wrapper {
-  min-height: 784px;
+  margin: auto 0;
 }
 
 .feature__icon-wrapper {
@@ -267,6 +267,9 @@ export default {
 }
 
 .feature__img {
+  box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08),
+    0px 8px 8px -4px rgba(16, 24, 40, 0.03);
+  border-radius: 24px;
   transition: all 0.2s cubic-bezier(0.12, 0.26, 1, 0.6);
 }
 
