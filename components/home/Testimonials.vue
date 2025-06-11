@@ -97,7 +97,7 @@ export default {
   data() {
     return {
       scrollInterval: null,
-      scrollSpeed: 0.2,
+      scrollSpeed: 0.5,
       scrollPaused: false,
       scrollPosition: 0,
       tickerWidth: 0,

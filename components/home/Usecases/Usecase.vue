@@ -5,7 +5,7 @@
     </div>
     <div class="carousel-wrapper">
       <button class="carousel-arrow left" @click="scrollLeft" aria-label="Scroll left">
-        <span>&#8592;</span>
+        <img src="/arrow-left.svg" alt="Previous" class="arrow-icon" />
       </button>
       <div class="carousel-container">
         <div class="carousel" :style="carouselStyle">
@@ -24,7 +24,7 @@
         </div>
       </div>
       <button class="carousel-arrow right" @click="scrollRight" aria-label="Scroll right">
-        <span>&#8594;</span>
+        <img src="/arrow-right.svg" alt="Next" class="arrow-icon" />
       </button>
     </div>
   </section>
@@ -161,19 +161,14 @@ export default {
   box-sizing: border-box;
   transition: all 0.4s ease;
 }
-.carousel-arrow {
-  background: white;
-  border: 1px solid #e5e7eb;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 2;
-  margin: 0 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+.arrow-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+.carousel-arrow:hover .arrow-icon {
+  filter: brightness(0.8);
 }
 .carousel-arrow:hover {
   background: #f9fafb;
@@ -185,8 +180,8 @@ export default {
   background: #fff;
   border: 1px solid #e5e7eb;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
