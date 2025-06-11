@@ -1,14 +1,18 @@
 <template>
   <div class="dropdown-container">
-    <transition
-      :name="!isMobile ? 'dropdown' : 'mobile-dropdown'"
-      appear
-    >
+    <transition :name="!isMobile ? 'dropdown' : 'mobile-dropdown'" appear>
       <div
         v-show="dropdownActive"
         class="features-dropdown-mega"
         :class="{ active: dropdownActive, 'is-mobile': isMobile }"
-        v-on="!isMobile ? { mouseenter: onDropdownMouseEnter, mouseleave: onDropdownMouseLeave } : {}"
+        v-on="
+          !isMobile
+            ? {
+                mouseenter: onDropdownMouseEnter,
+                mouseleave: onDropdownMouseLeave,
+              }
+            : {}
+        "
       >
         <div class="dropdown-arrow" v-if="!isMobile"></div>
         <template v-if="!isMobile">
@@ -51,7 +55,7 @@
         </template>
         <template v-else>
           <!-- Mobile: Flat list of all features, no categories -->
-          <div class="features-dropdown-content-wrap" style="width:100%">
+          <div class="features-dropdown-content-wrap" style="width: 100%">
             <div class="features-dropdown-title-features">Features</div>
             <ul class="features-dropdown-content">
               <li
@@ -98,8 +102,8 @@ export default {
     },
     onDropdownMouseLeave() {
       this.$emit('mouseleave')
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -147,7 +151,7 @@ export default {
   will-change: transform, opacity;
   border-radius: 8px;
   position: absolute;
-  left: 45%;
+  left: 40%;
   top: 100%;
   transform: translateX(-50%) translateY(0px);
   z-index: 9999;
@@ -170,6 +174,8 @@ export default {
   height: 100%;
   align-items: flex-start;
   box-sizing: border-box;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 .features-dropdown-title-category {
@@ -248,20 +254,20 @@ export default {
 }
 
 @media (max-width: 1199px) {
-    /* Mobile specific styles */
+  /* Mobile specific styles */
   .features-dropdown-mega.is-mobile {
     overflow: hidden;
   }
-  
+
   /* Mobile transitions */
   .mobile-dropdown-enter-active {
     animation: mobileSlideDown 0.5s ease-out forwards;
   }
-  
+
   .mobile-dropdown-leave-active {
     animation: mobileSlideUp 0.2s ease-in forwards;
   }
-  
+
   @keyframes mobileSlideDown {
     0% {
       opacity: 0;
@@ -276,7 +282,7 @@ export default {
       max-height: 2000px;
     }
   }
-  
+
   @keyframes mobileSlideUp {
     0% {
       opacity: 1;
@@ -291,27 +297,29 @@ export default {
       max-height: 0;
     }
   }
-  
+
   /* Override desktop animations for mobile */
   .dropdown-enter-active,
   .dropdown-leave-active {
     animation: none !important;
   }
-  
+
   @keyframes slideDown {
-    from, to {
+    from,
+    to {
       opacity: 1;
       transform: none;
     }
   }
-  
+
   @keyframes slideUp {
-    from, to {
+    from,
+    to {
       opacity: 1;
       transform: none;
     }
   }
-  
+
   .features-dropdown-mega {
     position: static;
     flex-direction: column;
@@ -334,11 +342,12 @@ export default {
     border-bottom: 1px solid #eee;
     height: auto;
     align-items: flex-start;
+    border-radius: 0;
   }
 
   .features-dropdown-content {
     grid-template-columns: repeat(2, 1fr);
-    width: 100%;  
+    width: 100%;
     height: auto;
     padding: 0px;
   }
@@ -349,7 +358,7 @@ export default {
   }
 
   .features-dropdown-title-features {
-   display: none;
+    display: none;
   }
 }
 

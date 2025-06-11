@@ -1,6 +1,6 @@
 <template>
   <section class="container py-2 py-lg-5">
-    <h2 class="title text-center">Frequently Asked Questions</h2>
+    <SectionTitle :heading="[{id: 1, text: 'Frequently Asked Questions', highlight: false}]" />
     <div class="row">
       <div
         v-for="(category, idx) in faqQuestions"
@@ -117,12 +117,8 @@ export default {
 </script>
 
 <style scoped>
-.title {
-  font-size: 36px;
-  font-weight: 600;
-  line-height: 44px;
-  margin-bottom: 48px;
-  color: var(--clr-dark);
+.row {
+  margin-top: 64px;
 }
 
 .faq__heading {

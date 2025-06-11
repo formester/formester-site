@@ -11,53 +11,33 @@
   </h3> -->
     <div class="ticker-container">
       <div class="gradient-overlay left"></div>
-      
+
       <div class="ticker-wrapper">
         <div class="ticker" ref="ticker">
           <div class="ticker-track" ref="tickerTrack">
-            <div v-for="n in duplicateCount" :key="`track-${n}`" class="ticker-content">
+            <div
+              v-for="n in duplicateCount"
+              :key="`track-${n}`"
+              class="ticker-content"
+            >
               <div class="ticker-item">
-                <nuxt-img
-                  src="/trustseals/01.svg"
-                  alt="Peabody"
-                  height="40"
-                />
+                <nuxt-img src="/trustseals/01.svg" alt="Peabody" height="40" />
               </div>
               <div class="ticker-item">
-                <nuxt-img
-                  src="/trustseals/02.svg"
-                  alt="Aramark"
-                  height="40"
-                />
+                <nuxt-img src="/trustseals/02.svg" alt="Aramark" height="40" />
               </div>
               <div class="ticker-item">
-                <nuxt-img
-                  src="/trustseals/03.svg"
-                  alt="Loreal"
-                  height="32"
-                />
+                <nuxt-img src="/trustseals/03.svg" alt="Loreal" height="32" />
               </div>
               <div class="ticker-item">
-                <nuxt-img
-                  src="/trustseals/04.svg"
-                  alt="Toptal"
-                  height="40"
-                />
+                <nuxt-img src="/trustseals/04.svg" alt="Toptal" height="40" />
               </div>
 
               <div class="ticker-item">
-                <nuxt-img
-                  src="/trustseals/05.svg"
-                  alt="Grab"
-                  height="38"
-                />
+                <nuxt-img src="/trustseals/05.svg" alt="Grab" height="38" />
               </div>
               <div class="ticker-item">
-                <nuxt-img
-                  src="/trustseals/06.svg"
-                  alt="SFU"
-                  height="36"
-                />
+                <nuxt-img src="/trustseals/06.svg" alt="SFU" height="36" />
               </div>
               <div class="ticker-item">
                 <nuxt-img
@@ -84,7 +64,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="gradient-overlay right"></div>
     </div>
   </section>
@@ -101,7 +81,6 @@
 .bold {
   font-weight: 700;
 }
-
 </style>
 
 <script>
@@ -132,7 +111,7 @@ export default {
   },
   beforeDestroy() {
     window.removeEventListener('resize', this.handleResize)
-    
+
     if (this.animationId) {
       cancelAnimationFrame(this.animationId)
     }
@@ -144,36 +123,43 @@ export default {
         console.log('Ticker refs not found')
         return
       }
-      
+
       // Get the width of a single ticker content element
-      const firstContent = this.$refs.tickerTrack.querySelector('.ticker-content')
+      const firstContent =
+        this.$refs.tickerTrack.querySelector('.ticker-content')
       if (!firstContent) {
         console.log('No ticker content found')
         return
       }
-      
+
       // Measure widths
       this.contentWidth = firstContent.offsetWidth
       this.tickerWidth = this.$refs.ticker.offsetWidth
-      
-      console.log('Content width:', this.contentWidth, 'Ticker width:', this.tickerWidth)
-      
+
+      console.log(
+        'Content width:',
+        this.contentWidth,
+        'Ticker width:',
+        this.tickerWidth
+      )
+
       // Ensure we have enough duplicates to cover the screen multiple times
-      const minDuplicates = Math.ceil((this.tickerWidth * 3) / this.contentWidth) || 3
+      const minDuplicates =
+        Math.ceil((this.tickerWidth * 3) / this.contentWidth) || 3
       if (minDuplicates > this.duplicateCount) {
         console.log('Increasing duplicates to:', minDuplicates)
         this.duplicateCount = minDuplicates
         this.$forceUpdate() // Force re-render with more duplicates if needed
-        
+
         // Re-initialize after a short delay to allow re-render
         setTimeout(() => this.initTicker(), 100)
         return
       }
-      
+
       // Reset position
       this.currentPosition = 0
       this.$refs.tickerTrack.style.transform = 'translateX(0px)'
-      
+
       // Start animation if we have content to scroll
       if (this.contentWidth > 0) {
         console.log('Starting animation')
@@ -188,41 +174,40 @@ export default {
         cancelAnimationFrame(this.animationId)
         this.animationId = null
       }
-      
+
       const trackEl = this.$refs.tickerTrack
       if (!trackEl) {
         console.log('Track element not found')
         return
       }
-      
+
       // Use a fixed pixel-per-second rate
-      const pixelsPerSecond = this.contentWidth > 0 ? 
-        this.contentWidth / 60 : 
-        50;
-      
+      const pixelsPerSecond =
+        this.contentWidth > 0 ? this.contentWidth / 60 : 50
+
       let lastTime = null
-      
+
       const animate = (timestamp) => {
         if (!lastTime) lastTime = timestamp
         const deltaTime = timestamp - lastTime
         lastTime = timestamp
-        
+
         // Update position based on elapsed time and speed (pixels per second / 1000 = pixels per ms)
         this.currentPosition += (pixelsPerSecond / 1000) * deltaTime
-        
+
         // Create a seamless loop by using modulo instead of resetting to zero
         // This ensures the animation continues smoothly without abrupt resets
         if (this.contentWidth > 0) {
           // Use modulo to create a continuous loop effect
           this.currentPosition = this.currentPosition % this.contentWidth
         }
-        
+
         // Apply transform
         trackEl.style.transform = `translateX(-${this.currentPosition}px)`
-        
+
         this.animationId = requestAnimationFrame(animate)
       }
-      
+
       // Start the animation
       this.animationId = requestAnimationFrame(animate)
     },
@@ -237,7 +222,7 @@ export default {
 <style scoped>
 .trust-seals-section {
   margin-top: 96px;
-  margin-bottom: 96px;
+  margin-bottom: 48px;
   overflow: hidden;
   width: 100%;
 }
@@ -245,7 +230,7 @@ export default {
 @media screen and (max-width: 400px) {
   .trust-seals-section {
     margin-top: 64px;
-    margin-bottom: 64px;
+    margin-bottom: 32px;
   }
 }
 
@@ -308,12 +293,20 @@ export default {
 
 .gradient-overlay.left {
   left: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
 .gradient-overlay.right {
   right: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
 @media screen and (max-width: 800px) {
@@ -328,12 +321,12 @@ export default {
   .ticker-item {
     padding: 0 16px;
   }
-  
+
   .ticker-item img,
   .ticker-item svg {
     transform: scale(0.75);
   }
-  
+
   .gradient-overlay {
     width: 80px;
   }

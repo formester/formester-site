@@ -1,19 +1,6 @@
 <template>
-  <section class="container py-2 py-lg-5">
-    <template v-if="typeof title === 'string'">
-      <h2 class="title text-center">{{ title }}</h2>
-    </template>
-    <template v-else>
-      <h2 class="title text-center">
-        <span
-          v-for="item in title"
-          :key="item.id"
-          :class="{ highlight__text: item.highlight, bold: item.bold }"
-        >
-          {{ item.text }}
-        </span>
-      </h2>
-    </template>
+  <section class="container my-5 py-2 py-lg-5">
+    <SectionTitle :heading="formattedTitle" />
     <p class="hero__subheading text-center" v-if="description">
       {{ description }}
     </p>
@@ -101,6 +88,14 @@ export default {
     },
   },
   computed: {
+    formattedTitle() {
+      // If title is already an array, return it as is
+      if (Array.isArray(this.title)) {
+        return this.title;
+      }
+      // If title is a string, convert it to the expected array format
+      return [{ id: 'title-1', text: this.title, highlight: false }];
+    },
     formattedFaqItems() {
       return this.faqList.map((faq, index) => ({
         id: faq.id || `faq-${index + 1}`,
