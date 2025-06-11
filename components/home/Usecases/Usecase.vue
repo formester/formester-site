@@ -16,7 +16,10 @@
             :description="uc.description"
             :image="uc.image"
             class="carousel-card"
-            :class="{'slide-in': isSliding}"
+            :class="{
+              'slide-in-right': isSliding && slideDirection === 'right',
+              'slide-in-left': isSliding && slideDirection === 'left'
+            }"
           />
         </div>
       </div>
@@ -48,7 +51,8 @@ export default {
     return {
       currentIndex: 0,
       cardsPerView: 1,
-      isSliding: false
+      isSliding: false,
+      slideDirection: 'right' // 'left' or 'right'
     };
   },
   computed: {
@@ -89,22 +93,35 @@ export default {
       }
     },
     scrollLeft() {
-      // Add sliding animation
+      if (this.isSliding) return; // Prevent multiple clicks during animation
+      
+      // Set direction and trigger animation
+      this.slideDirection = 'left';
       this.isSliding = true;
+      
+      // Update the index immediately for seamless transition
+      this.currentIndex = (this.currentIndex - 1 + this.usecase.length) % this.usecase.length;
+      
+      // Reset sliding state after animation completes
       setTimeout(() => {
-        // Move one card to the left, with loop
-        this.currentIndex = (this.currentIndex - 1 + this.usecase.length) % this.usecase.length;
         this.isSliding = false;
-      }, 10);
+      }, 400); // Match animation duration
     },
+    
     scrollRight() {
-      // Add sliding animation
+      if (this.isSliding) return; // Prevent multiple clicks during animation
+      
+      // Set direction and trigger animation
+      this.slideDirection = 'right';
       this.isSliding = true;
+      
+      // Update the index immediately for seamless transition
+      this.currentIndex = (this.currentIndex + 1) % this.usecase.length;
+      
+      // Reset sliding state after animation completes
       setTimeout(() => {
-        // Move one card to the right, with loop
-        this.currentIndex = (this.currentIndex + 1) % this.usecase.length;
         this.isSliding = false;
-      }, 10);
+      }, 400); // Match animation duration
     }
   }
 } 
@@ -137,6 +154,7 @@ export default {
   width: 100%;
   padding: 8px;
   position: relative;
+  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 .carousel-card {
   flex: 0 0 calc((100% - (24px * (var(--cards-per-view) - 1))) / var(--cards-per-view));
@@ -199,7 +217,7 @@ export default {
   }
 }
 
-/* Slide animation */
+/* Slide animations with improved transitions */
 @keyframes slideInFromRight {
   0% {
     opacity: 0;
@@ -222,7 +240,11 @@ export default {
   }
 }
 
-.slide-in {
-  animation: slideInFromRight 0.4s ease forwards;
+.slide-in-right {
+  animation: slideInFromRight 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
 </style>
