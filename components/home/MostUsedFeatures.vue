@@ -1,5 +1,5 @@
 <template>
-  <section class="container py-5 mt-3">
+  <section class="container py-5">
     <div class="row justify-content-center align-items-center text-center mb-5">
       <SectionTitle :heading="heading" />
       <!-- <p v-if="description">
@@ -7,7 +7,7 @@
       </p> -->
     </div>
     <!-- Desktop -->
-    <div class="feature__desktop d-none d-lg-flex row mt-5">
+    <div class="feature__desktop d-none d-lg-flex row">
       <ul class="feature__content-wrapper col-6">
         <li
           v-for="(feature, index) in itemList"

@@ -21,7 +21,7 @@
                 {{ item.text }}
               </span>
             </span>
-            <span v-else>Create your first form for free</span>
+            <span v-else>Ready to build your perfect form?</span>
           </h2>
           <p class="section__subtitle mt-3">
             <span>
@@ -42,7 +42,7 @@
             class="btn button cta-button__invert"
             target="_blank"
           >
-            Create a Form Now
+            {{ content.btnPrimaryText || 'Get Started – It’s Free!' }}
           </a>
         </div>
       </div>
