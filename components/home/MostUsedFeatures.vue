@@ -213,6 +213,18 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  padding-top: 96px !important;
+  padding-bottom: 96px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+}
+
 .feature__content-wrapper {
   margin: auto 0;
 }
