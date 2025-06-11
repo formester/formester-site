@@ -145,7 +145,6 @@ export default {
 }
 .carousel-container {
   width: 100%;
-  overflow: hidden;
   padding: 8px 0;
 }
 .carousel {

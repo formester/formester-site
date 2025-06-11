@@ -2,9 +2,7 @@
   <section class="container py-5">
     <div class="row justify-content-center align-items-center text-center mb-5">
       <SectionTitle :heading="heading" />
-      <!-- <p v-if="description">
-        {{ description }}
-      </p> -->
+       <p>Impress users. Capture more leads. Grow your brand.</p>
     </div>
     <!-- Desktop -->
     <div class="feature__desktop d-none d-lg-flex row">
