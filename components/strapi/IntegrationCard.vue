@@ -39,8 +39,8 @@ export default {
   text-align: center;
   box-shadow: rgba(36, 27, 5, 0.15) 8px 8px 16px 0px;
   height: 100%;
-  min-height: 160px; /* Fixed minimum height */
-  width: 100%;
+  min-width: 320px;
+  min-height: 160px; 
   display: flex;
   flex-direction: column;
   justify-content: center;

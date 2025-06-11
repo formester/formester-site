@@ -223,14 +223,12 @@ function tabButtonStyle(idx) {
 .hero-tabs-container {
   max-width: 1280px;
   width: 100%;
-  margin: 0 96px;
 }
 .hero-tabs {
   width: 100%;
   background: transparent;
   border-radius: 0;
   box-shadow: none;
-  padding: 0;
 }
 .tab-list {
   display: flex;
