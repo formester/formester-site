@@ -1,10 +1,10 @@
 <template>
   <div class="navbar-container">
-    <nav class="navbar navbar-expand-xl bg-white floating-navbar">
+    <nav class="navbar navbar-expand-xl floating-navbar">
       <div class="container d-flex align-items-center">
         <!-- Logo -->
-        <NuxtLink class="navbar-brand" to="/">
-          <nuxt-img src="/logo.svg" alt="Formester" />
+        <NuxtLink class="navbar-brand-wrapper" to="/">
+          <nuxt-img class="navbar-brand" src="/logo.svg" alt="Formester" />
         </NuxtLink>
 
         <!-- Mobile Toggle Button -->
@@ -491,15 +491,22 @@ export default {
 </script>
 
 <style scoped>
+.navbar {
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+}
+
 .container {
-  padding-left: 16px !important;
+  padding-left: 20px !important;
   padding-right: 8px !important;
 }
 
 .navbar-container {
   z-index: 1030;
   background: transparent;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   top: 16px;
@@ -522,8 +529,14 @@ nav {
   z-index: 99999;
 }
 
-.navbar-brand {
+.navbar-brand-wrapper {
+  height: 18px;
+  align-items: center;
   display: flex;
+}
+
+.navbar-brand {
+  height: 18px;
   align-items: center;
   margin-right: 0;
   padding: 0;
@@ -586,6 +599,7 @@ nav {
 .nav__outline__button:hover {
   background: #f9f9f9;
 }
+
 
 /* Mobile Toggle */
 .navbar-toggler:focus,
@@ -772,7 +786,8 @@ nav {
     margin-top: 8px;
   }
   
-  /* Fix for mobile navbar */
+  .navbar{background-color: white;}
+
   .navbar-collapse:not(.show) {
     display: none;
   }
@@ -783,8 +798,6 @@ nav {
   
   .container {
     width: 100%;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
   }
   
   /* Align navbar links with logo */
@@ -815,7 +828,7 @@ nav {
   }
   
   .container {
-    padding-left: 8px !important;
+    padding-left: 20px !important;
     padding-right: 8px !important;
   }
   
