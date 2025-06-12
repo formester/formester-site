@@ -279,7 +279,7 @@ function tabButtonStyle(idx) {
   align-items: flex-start;
   position: relative;
   z-index: 1;
-  min-height: 500px !important;
+  min-height: 520px !important;
 }
 
 .tab-left {
