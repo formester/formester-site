@@ -279,7 +279,7 @@ function tabButtonStyle(idx) {
   align-items: flex-start;
   position: relative;
   z-index: 1;
-  min-height: 340px;
+  min-height: 500px !important;
 }
 
 .tab-left {
@@ -303,15 +303,14 @@ function tabButtonStyle(idx) {
 .tab-features li {
   display: flex;
   align-items: flex-start;
+  gap: 8px;
   font-size: 18px;
   margin-bottom: 18px;
   color: #3b3b4f;
 }
 .feature-icon {
-  margin-top: 4px;
   display: inline-flex;
-  align-items: flex-start;
-  margin-right: 12px;
+  margin-top: 2px;
 }
 
 .tab-right {
@@ -344,7 +343,7 @@ function tabButtonStyle(idx) {
     flex-direction: column;
     gap: 32px;
     padding: 32px 16px;
-    min-height: unset;
+    min-height: 500px !important; 
   }
 
   .tab-list {
@@ -380,22 +379,27 @@ function tabButtonStyle(idx) {
     flex-direction: column;
     gap: 24px;
     padding: 32px;
+    min-height: 505px;
   }
   .tab-right {
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
+    height: auto !important;
     padding: 0;
+    overflow: hidden;
+    display: flex;
   }
   .tab-image {
-    max-width: 98vw;
-    max-height: 320px;
+    max-width: 100%;
+    max-height: 220px;
     width: auto;
     height: auto;
     display: block;
     margin-top: 16px;
     margin-left: 0;
     object-fit: contain;
+    margin: 0;
   }
 
   .tab-title {
@@ -414,6 +418,7 @@ function tabButtonStyle(idx) {
     padding: 20px;
     gap: 20px;
     border-radius: 16px;
+    min-height: 500px !important;
   }
   .tab-image {
     max-width: 98vw;

@@ -47,6 +47,16 @@ export default {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+@media (max-width: 600px) {
+  .integration-card {
+    padding: 1rem 0.75rem;
+    border-radius: 10px;
+    min-width: 180px;
+    min-height: 100px;
+    font-size: 0.95rem;
+  }
+}
+
 .integration-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
