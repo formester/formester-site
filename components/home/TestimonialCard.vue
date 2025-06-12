@@ -75,10 +75,11 @@ export default {
   flex: 0 0 calc(33.33% - 16px);
   border-radius: 16px;
   background-color: #fff;
-  box-shadow:0 2px 8px 0 rgba(16, 24, 40, 0.08);
+  box-shadow: 0 4px 12px 0 rgba(16, 24, 40, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 4px;
 }
 .testimonial__card:hover {
   box-shadow:0 2px 8px 0 rgba(16, 24, 40, 0.12);
@@ -125,7 +126,9 @@ export default {
 @media screen and (max-width: 768px) {
   .testimonial__card {
     flex: 0 0 100%;
-    min-width: 100%;
+    min-width: calc(100% - 32px);
+    margin: 0 auto;
+    padding: 24px;
   }
 }
 </style>

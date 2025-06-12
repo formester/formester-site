@@ -38,7 +38,7 @@
       </div>
     </div>
 
-    <!-- Homepage Testimonials Layout with Auto-Scrolling Ticker -->
+    <!-- Homepage Testimonials Layout with Auto-Scrolling Ticker for Desktop / Carousel for Mobile -->
     <div class="my-5 py-5" v-else>
       <div class="icon-wrapper">
         <img src="/assets/images/TestimonialSection.svg" alt="Quote icon" />
@@ -46,22 +46,46 @@
       </div>
       <SectionTitle :heading="heading" />
 
-      <!-- Testimonial Ticker Container -->
+      <!-- Desktop Ticker / Mobile Carousel Container -->
       <div class="testimonial-container position-relative">
-        <!-- Gradient Overlays for Seamless Look -->
-        <div class="testimonial-gradient-left"></div>
-        <div class="testimonial-gradient-right"></div>
+        <!-- Desktop Only: Gradient Overlays for Seamless Look -->
+        <div class="testimonial-gradient-left d-none d-md-block"></div>
+        <div class="testimonial-gradient-right d-none d-md-block"></div>
 
         <!-- Testimonial Cards Wrapper -->
-        <div
-          class="testimonial__wrapper d-flex position-relative overflow-hidden"
-        >
-          <div class="testimonial__cards d-flex ticker-scroll">
+        <div class="testimonial__wrapper d-flex position-relative overflow-hidden">
+          <!-- Desktop: Auto-scrolling ticker -->
+          <div class="testimonial__cards d-flex ticker-scroll d-none d-md-flex">
             <TestimonialCard
               v-for="testimonial in testimonials"
               :key="testimonial.id"
               :testimonial="testimonial"
             />
+          </div>
+          
+          <!-- Mobile: Carousel -->
+          <div class="mobile-carousel d-md-none">
+            <div class="carousel-container">
+              <div class="carousel-track" ref="carouselTrack">
+                <div 
+                  v-for="(testimonial, index) in testimonials" 
+                  :key="testimonial.id"
+                  class="carousel-slide"
+                  :class="{ 'active': currentSlide === index }"
+                >
+                  <TestimonialCard :testimonial="testimonial" />
+                </div>
+              </div>
+            </div>
+            <!-- Mobile: Carousel Navigation -->
+            <div class="carousel-navigation">
+              <button class="carousel-nav-btn prev" @click="manualPrevSlide" aria-label="Previous testimonial">
+                <img src="/arrow-left.svg" alt="Previous" width="24" height="24">
+              </button>
+              <button class="carousel-nav-btn next" @click="manualNextSlide" aria-label="Next testimonial">
+                <img src="/arrow-right.svg" alt="Next" width="24" height="24">
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -106,14 +130,95 @@ export default {
       handleMouseEnter: null,
       handleMouseLeave: null,
       moveTickerForward: null,
+      currentSlide: 0,
+      touchStartX: 0,
+      touchEndX: 0,
+      userInteracted: false,
+      carouselInterval: null,
     }
   },
   mounted() {
     this.$nextTick(() => {
       this.setupTicker()
+      this.setupCarousel()
     })
   },
   methods: {
+    // Mobile Carousel Methods
+    setupCarousel() {
+      if (this.testimonials.length === 0) return
+      
+      // Add touch event listeners for swipe functionality
+      const carouselTrack = this.$refs.carouselTrack
+      if (carouselTrack) {
+        carouselTrack.addEventListener('touchstart', this.handleTouchStart, { passive: true })
+        carouselTrack.addEventListener('touchend', this.handleTouchEnd, { passive: true })
+      }
+      
+      // Set up auto-rotation if more than one slide
+      this.startAutoRotation()
+    },
+    
+    startAutoRotation() {
+      if (this.testimonials.length > 1) {
+        // Clear any existing interval first
+        if (this.carouselInterval) {
+          clearInterval(this.carouselInterval)
+        }
+        
+        this.carouselInterval = setInterval(() => {
+          if (window.innerWidth < 768 && !this.userInteracted) { // Only auto-rotate on mobile and if user hasn't interacted
+            this.nextSlide()
+          }
+        }, 5000)
+      }
+    },
+    
+    stopAutoRotation() {
+      if (this.carouselInterval) {
+        clearInterval(this.carouselInterval)
+        this.carouselInterval = null
+      }
+      this.userInteracted = true
+    },
+    
+    nextSlide() {
+      this.currentSlide = (this.currentSlide + 1) % this.testimonials.length
+    },
+    
+    prevSlide() {
+      this.currentSlide = (this.currentSlide - 1 + this.testimonials.length) % this.testimonials.length
+    },
+    
+    manualNextSlide() {
+      this.stopAutoRotation()
+      this.nextSlide()
+    },
+    
+    manualPrevSlide() {
+      this.stopAutoRotation()
+      this.prevSlide()
+    },
+    
+    goToSlide(index) {
+      this.currentSlide = index
+    },
+    
+    handleTouchStart(e) {
+      this.touchStartX = e.changedTouches[0].screenX
+    },
+    
+    handleTouchEnd(e) {
+      this.touchEndX = e.changedTouches[0].screenX
+      if (this.touchStartX - this.touchEndX > 50) {
+        // Swipe left - go to next slide
+        this.nextSlide()
+      } else if (this.touchEndX - this.touchStartX > 50) {
+        // Swipe right - go to previous slide
+        this.prevSlide()
+      }
+    },
+    
     setupTicker() {
       if (this.testimonials.length === 0) return
 
@@ -234,6 +339,11 @@ export default {
     if (this.scrollInterval) {
       clearInterval(this.scrollInterval)
     }
+    
+    // Clear carousel interval
+    if (this.carouselInterval) {
+      clearInterval(this.carouselInterval)
+    }
 
     // Cancel animation frame if it exists
     if (this.animationFrame) {
@@ -245,6 +355,13 @@ export default {
     if (wrapper && this.handleMouseEnter && this.handleMouseLeave) {
       wrapper.removeEventListener('mouseenter', this.handleMouseEnter)
       wrapper.removeEventListener('mouseleave', this.handleMouseLeave)
+    }
+    
+    // Remove touch event listeners
+    const carouselTrack = this.$refs.carouselTrack
+    if (carouselTrack) {
+      carouselTrack.removeEventListener('touchstart', this.handleTouchStart)
+      carouselTrack.removeEventListener('touchend', this.handleTouchEnd)
     }
   },
   computed: {
@@ -408,5 +525,74 @@ export default {
   .testimonial-gradient-right {
     width: 80px;
   }
+  
+  /* Mobile Carousel Styles */
+  .mobile-carousel {
+    width: 100%;
+    position: relative;
+    padding: 8px 16px;
+    overflow: visible;
+  }
+  
+  .carousel-container {
+    width: 100%;
+    overflow: visible;
+    padding: 0 8px;
+    position: relative;
+    min-height: 200px; /* Minimum height to prevent layout shifts */
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .carousel-slide {
+    min-width: 100%;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+    padding: 0;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-bottom: 8px;
+    pointer-events: none;
+  }
+  
+  .carousel-slide.active {
+    opacity: 1;
+    position: relative;
+    pointer-events: auto;
+  }
+  
+  .carousel-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    gap: 24px;
+  }
+  
+  .carousel-nav-btn {
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #42526b;
+    transition: all 0.2s ease;
+  }
+  
+  .carousel-nav-btn:hover {
+    background-color: #f8f8f8;
+    color: #7534ff;
+  }
+  
+
 }
 </style>
