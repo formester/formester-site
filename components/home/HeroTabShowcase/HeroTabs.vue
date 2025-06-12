@@ -69,15 +69,15 @@ const tabs = [
     title: 'Launch High-Converting Forms in Seconds',
     features: [
       {
-        text: 'Get cleaner data with built-in email & field validation',
+        text: 'Get cleaner data with built-in email & field validation.',
         icon: '/hero-assets/features/forms/1.svg',
       },
       {
-        text: 'Let users upload files, book meetings, and e-sign instantly',
+        text: 'Let users upload files, book meetings, and e-sign instantly.',
         icon: '/hero-assets/features/forms/2.svg',
       },
       {
-        text: 'Spot drop-offs and improve performance with smart analytics',
+        text: 'Spot drop-offs and improve performance with smart analytics.',
         icon: '/hero-assets/features/forms/3.svg',
       },
     ],
@@ -88,21 +88,17 @@ const tabs = [
     title: 'Accept payments directly in your form',
     features: [
       {
-        text: 'Process one-time fees, recurring subscriptions & donations',
+        text: 'Process one-time fees, recurring subscriptions & donations.',
         icon: '/hero-assets/features/payments/1.svg',
       },
       {
-        text: 'Handle event tickets, product orders, and memberships',
+        text: 'Handle event tickets, product orders, and memberships.',
         icon: '/hero-assets/features/payments/2.svg',
       },
       {
-        text: 'Connect Stripe or PayPal, offer discounts or free trials',
+        text: 'Connect Stripe or PayPal, offer discounts or free trials.',
         icon: '/hero-assets/features/payments/3.svg',
-      },
-      {
-        text: 'Enable ACH payments for higher-value transactions',
-        icon: '/hero-assets/features/payments/4.svg',
-      },
+      }
     ],
     image: '/hero-assets/features/payments/Payments.png',
   },
@@ -111,15 +107,15 @@ const tabs = [
     title: 'Work together without the chaos',
     features: [
       {
-        text: 'Co-create forms without overwriting each other’s work',
+        text: 'Co-create forms without overwriting each other’s work.',
         icon: '/hero-assets/features/collaboration/1.svg',
       },
       {
-        text: 'Set precise access controls: who can view, edit, or submit',
+        text: 'Set precise access controls: who can view, edit, or submit.',
         icon: '/hero-assets/features/collaboration/2.svg',
       },
       {
-        text: 'Co-submit a single form as a team in real time',
+        text: 'Co-submit a single form as a team in real time.',
         icon: '/hero-assets/features/collaboration/3.svg',
       },
     ],
@@ -130,11 +126,11 @@ const tabs = [
     title: 'Turn form entries into branded PDFs',
     features: [
       {
-        text: 'Automatically generate polished, fillable PDFs from responses',
+        text: 'Automatically generate polished, fillable PDFs from responses.',
         icon: '/hero-assets/features/custom-pdfs/1.svg',
       },
       {
-        text: 'Auto-send personalized PDFs as email attachments',
+        text: 'Auto-send personalized PDFs as email attachments.',
         icon: '/hero-assets/features/custom-pdfs/2.svg',
       },
     ],
@@ -145,15 +141,15 @@ const tabs = [
     title: 'Save time with powerful automations',
     features: [
       {
-        text: 'Send confirmation emails, alerts, or updates without lifting a finger',
+        text: 'Send confirmation emails, alerts, or updates without lifting a finger.',
         icon: '/hero-assets/features/automations/1.svg',
       },
       {
-        text: 'Instantly sync responses to CRMs, spreadsheets, or databases',
+        text: 'Instantly sync responses to CRMs, spreadsheets, or databases.',
         icon: '/hero-assets/features/automations/2.svg',
       },
       {
-        text: 'Connect with 1,000+ tools like Slack, HubSpot, Notion & more',
+        text: 'Connect with 1,000+ tools like Slack, HubSpot, Notion & more.',
         icon: '/hero-assets/features/automations/3.svg',
       },
     ],
@@ -164,15 +160,15 @@ const tabs = [
     title: 'Let AI build and customize forms for you',
     features: [
       {
-        text: 'Create complete forms in seconds using AI',
+        text: 'Create complete forms in seconds using AI.',
         icon: '/hero-assets/features/ai-native/1.svg',
       },
       {
-        text: 'Add logic branching to your forms without manual work',
+        text: 'Add logic branching to your forms without manual work.',
         icon: '/hero-assets/features/ai-native/2.svg',
       },
       {
-        text: 'Reach a global audience with AI-powered multilingual forms',
+        text: 'Reach a global audience with AI-powered multilingual forms.',
         icon: '/hero-assets/features/ai-native/3.svg',
       },
     ],

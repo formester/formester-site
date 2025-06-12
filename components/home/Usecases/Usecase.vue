@@ -2,6 +2,7 @@
   <section class="container">
     <div class="row justify-content-center align-items-center text-center mb-5">
       <SectionTitle :heading="title" />
+      <p>Learn how Formester can help your business.</p>
     </div>
     <div class="carousel-wrapper">
       <button class="carousel-arrow left" @click="scrollLeft" aria-label="Scroll left">
