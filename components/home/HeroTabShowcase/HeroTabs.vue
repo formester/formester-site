@@ -6,7 +6,7 @@
           v-for="(tab, idx) in tabs"
           :key="tab.label"
           :class="['tab', { active: idx === selectedTab }]"
-          @click="selectedTab = idx"
+          @click="() => { selectedTab = idx; stopAutoSwitch(); }"
           :style="tabButtonStyle(idx)"
         >
           {{ tab.label }}
@@ -182,6 +182,14 @@ const selectedTab = ref(0)
 const currentTab = computed(() => tabs[selectedTab.value])
 
 let intervalId = null
+
+function stopAutoSwitch() {
+  if (intervalId) {
+    clearInterval(intervalId)
+    intervalId = null
+  }
+}
+
 onMounted(() => {
   tabs.forEach((tab) => {
     const img = new window.Image()
@@ -193,10 +201,10 @@ onMounted(() => {
   })
   intervalId = setInterval(() => {
     selectedTab.value = (selectedTab.value + 1) % tabs.length
-  }, 5000)
+  }, 7000)
 })
 onUnmounted(() => {
-  if (intervalId) clearInterval(intervalId)
+  stopAutoSwitch()
 })
 function tabButtonStyle(idx) {
   if (typeof window !== 'undefined' && window.innerWidth < 900) {
