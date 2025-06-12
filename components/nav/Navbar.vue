@@ -492,8 +492,8 @@ export default {
 
 <style scoped>
 .navbar {
-  background-color: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
   position: sticky;
   top: 0;
 }
@@ -591,7 +591,7 @@ nav {
 }
 
 .nav__outline__button {
-  background: transparent;
+  background: white;
   border: 1px solid #ebebeb;
   color: #6e6e6e;
 }

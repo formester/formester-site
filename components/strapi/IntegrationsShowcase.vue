@@ -383,7 +383,7 @@ export default {
 
 <style scoped>
 .cta-button__invert {
-  background-color: var(--clr-primary-light);
+  background-color: white;
   font-size: var(--ft-md-btn);
   padding: 16px 24px;
   border-radius: 8px;
@@ -392,7 +392,7 @@ export default {
 }
 
 .cta-button__invert:hover {
-  background-color: var(--clr-primary-light-hover);
+  background-color: var(--clr-primary-light);
   transition: all 0.2s ease-in-out;
 }
 

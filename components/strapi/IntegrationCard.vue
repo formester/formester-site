@@ -47,7 +47,7 @@ export default {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .integration-card {
     padding: 1rem 0.75rem;
     border-radius: 10px;

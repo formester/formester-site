@@ -191,6 +191,19 @@ export default {
   box-shadow: 0 2px 8px 0 rgba(16, 24, 40, 0.08);
   z-index: 2;
   transition: background 0.2s;
+  flex-shrink: 0;
+  flex-grow: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.arrow-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+  margin: 0;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 .carousel-arrow:hover {
   background: #f3f4f6;
