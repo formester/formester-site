@@ -19,11 +19,13 @@
             <ul class="tab-features">
               <li v-for="(feature, i) in currentTab.features" :key="i">
                 <span class="feature-icon">
-                  <img
+                  <nuxt-img
                     :src="feature.icon"
                     :alt="feature.text + ' icon'"
+                    class="feature-icon"
                     width="20"
                     height="20"
+                    loading="lazy"
                   />
                 </span>
                 {{ feature.text }}
@@ -33,12 +35,14 @@
         </transition>
         <transition name="tab-right-fade-slide" mode="out-in">
           <div class="tab-right" :key="selectedTab + '-right'">
-            <img
+            <nuxt-img
               :src="currentTab.image"
               :alt="currentTab.label + ' screenshot'"
               class="tab-image"
               :key="currentTab.image"
               loading="eager"
+              width="480"
+              
             />
           </div>
         </transition>
@@ -49,8 +53,6 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
-
-// Feature icons will now use <img> with the icon property as the image path.
 
 const borderColors = [
   '#FF9100', // Forms (orange)
@@ -191,14 +193,6 @@ function stopAutoSwitch() {
 }
 
 onMounted(() => {
-  tabs.forEach((tab) => {
-    const img = new window.Image()
-    img.src = tab.image
-    tab.features.forEach((feature) => {
-      const iconImg = new window.Image()
-      iconImg.src = feature.icon
-    })
-  })
   intervalId = setInterval(() => {
     selectedTab.value = (selectedTab.value + 1) % tabs.length
   }, 7000)
