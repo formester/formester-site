@@ -275,17 +275,17 @@ export default {
 
 .floating-icon-2 {
   top: 25%;
-  right: 20%;
+  right: 18%;
 }
 
 .floating-icon-3 {
   bottom: 30%;
-  left: 18%;
+  left: 25%;
 }
 
 .floating-icon-4 {
   bottom: 30%;
-  right: 18%;
+  right: 25%;
 }
 
 @media (max-width: 1024px) {
@@ -346,23 +346,23 @@ export default {
 
 @media (max-width: 1440px) {
   .floating-icon-1 {
-    top: 20%;
+    top: 17%;
     left: 20%;
   }
 
   .floating-icon-2 {
-    top: 25%;
+    top: 20%;
     right: 15%;
   }
 
   .floating-icon-3 {
     bottom: 30%;
-    left: 5%;
+    left: 15%;
   }
 
   .floating-icon-4 {
-    bottom: 30%;
-    right: 5%;
+    bottom: 32%;
+    right: 15%;
   }
 }
 
@@ -373,17 +373,17 @@ export default {
   }
 
   .floating-icon-2 {
-    top: 25%;
+    top: 20%;
     right: 15%;
   }
 
   .floating-icon-3 {
-    bottom: 40%;
+    bottom: 30%;
     left: 5%;
   }
 
   .floating-icon-4 {
-    bottom: 40%;
+    bottom: 30%;
     right: 5%;
   }
 
