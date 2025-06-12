@@ -19,7 +19,7 @@
             <ul class="tab-features">
               <li v-for="(feature, i) in currentTab.features" :key="i">
                 <span class="feature-icon">
-                  <nuxt-img
+                  <img
                     :src="feature.icon"
                     :alt="feature.text + ' icon'"
                     class="feature-icon"
@@ -35,7 +35,7 @@
         </transition>
         <transition name="tab-right-fade-slide" mode="out-in">
           <div class="tab-right" :key="selectedTab + '-right'">
-            <nuxt-img
+            <img
               :src="currentTab.image"
               :alt="currentTab.label + ' screenshot'"
               class="tab-image"

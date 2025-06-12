@@ -1,14 +1,14 @@
 <template>
   <section class="hero-tabs-container">
     <div class="hero" @mousemove="handleMouseMove" ref="heroSection">
-      <nuxt-img src="/hero-assets/hero-shadow.svg" class="hero-shadow" alt="" />
+      <img src="/hero-assets/hero-shadow.svg" class="hero-shadow" alt="" />
       <div
         class="floating-icon floating-icon-1"
         :style="{
           transform: `translate(${iconPositions[0].x}px, ${iconPositions[0].y}px)`,
         }"
       >
-        <nuxt-img src="/hero-assets/floating-icon-1.svg" alt="Floating Icon" />
+        <img src="/hero-assets/floating-icon-1.svg" alt="Floating Icon" />
       </div>
       <div
         class="floating-icon floating-icon-2"
@@ -16,7 +16,7 @@
           transform: `translate(${iconPositions[1].x}px, ${iconPositions[1].y}px)`,
         }"
       >
-        <nuxt-img src="/hero-assets/floating-icon-2.svg" alt="Floating Icon" />
+        <img src="/hero-assets/floating-icon-2.svg" alt="Floating Icon" />
       </div>
       <div
         class="floating-icon floating-icon-3"
@@ -24,7 +24,7 @@
           transform: `translate(${iconPositions[2].x}px, ${iconPositions[2].y}px)`,
         }"
       >
-        <nuxt-img src="/hero-assets/floating-icon-3.svg" alt="Floating Icon" />
+        <img src="/hero-assets/floating-icon-3.svg" alt="Floating Icon" />
       </div>
       <div
         class="floating-icon floating-icon-4"
@@ -32,14 +32,14 @@
           transform: `translate(${iconPositions[3].x}px, ${iconPositions[3].y}px)`,
         }"
       >
-        <nuxt-img src="/hero-assets/floating-icon-4.svg" alt="Floating Icon" />
+        <img src="/hero-assets/floating-icon-4.svg" alt="Floating Icon" />
       </div>
       <div class="container horizontal__padding">
         <div
           class="d-flex flex-column align-items-center justify-content-center text-center my-5"
         >
           <div class="ai-badge">
-            <nuxt-img src="/hero-assets/bolt.svg" alt="Lightning" />
+            <img src="/hero-assets/bolt.svg" alt="Lightning" />
             <span>Explore our new AI features</span>
           </div>
           <h1 class="hero__heading">
