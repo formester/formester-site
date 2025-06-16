@@ -797,7 +797,9 @@ nav {
   }
   
   .container {
-    width: 100%;
+    margin-inline: 0px;
+    width: 100% !important;
+    max-width: none !important;
   }
   
   /* Align navbar links with logo */
@@ -813,11 +815,6 @@ nav {
   /* Remove padding from dropdown items */
   .dropdown-item {
     padding-left: 0;
-  }
-  
-  /* Increase bottom padding in mobile */
-  .floating-navbar {
-    padding-bottom: 16px;
   }
 }
 
