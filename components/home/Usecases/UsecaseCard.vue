@@ -1,7 +1,7 @@
 <template>
   <div class="usecase-card">
     <div class="image-wrapper" v-if="computedImage">
-      <img :src="computedImage" :alt="title" width="100%" height="160"/>
+      <img :src="computedImage" :alt="title" width="100%" height="100%" class="img-fluid"/>
     </div>
     <div class="content">
       <h3 class="title">{{ title }}</h3>
@@ -78,5 +78,14 @@ export default {
   font-size: 1rem;
   color: #475467;
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .img-fluid {
+    height: 100%;
+  }
+  .image-wrapper {
+    height: 240px;
+  }
 }
 </style>

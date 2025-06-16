@@ -4,29 +4,42 @@
       <SectionTitle :heading="title" />
       <p>Learn how Formester can help your business.</p>
     </div>
-    <div class="carousel-wrapper">
-      <button class="carousel-arrow left" @click="scrollLeft" aria-label="Scroll left">
-        <img src="/arrow-left.svg" alt="Previous" class="arrow-icon" />
-      </button>
-      <div class="carousel-container">
-        <div class="carousel" :style="carouselStyle">
-          <UsecaseCard
-            v-for="(uc, idx) in visibleUsecases"
-            :key="uc.id + '-' + idx"
-            :title="uc.title"
-            :description="uc.description"
-            :image="uc.image"
-            class="carousel-card"
-            :class="{
-              'slide-in-right': isSliding && slideDirection === 'right',
-              'slide-in-left': isSliding && slideDirection === 'left'
-            }"
-          />
+    <div class="carousel-outer-wrapper">
+      <div class="carousel-wrapper">
+        <!-- Desktop arrows (hidden on mobile) -->
+        <button class="carousel-arrow left desktop-arrow" @click="scrollLeft" aria-label="Scroll left">
+          <img src="/arrow-left.svg" alt="Previous" class="arrow-icon" />
+        </button>
+        <div class="carousel-container">
+          <div class="carousel" :style="carouselStyle">
+            <UsecaseCard
+              v-for="(uc, idx) in visibleUsecases"
+              :key="uc.id + '-' + idx"
+              :title="uc.title"
+              :description="uc.description"
+              :image="uc.image"
+              class="carousel-card"
+              :class="{
+                'slide-in-right': isSliding && slideDirection === 'right',
+                'slide-in-left': isSliding && slideDirection === 'left'
+              }"
+            />
+          </div>
         </div>
+        <button class="carousel-arrow right desktop-arrow" @click="scrollRight" aria-label="Scroll right">
+          <img src="/arrow-right.svg" alt="Next" class="arrow-icon" />
+        </button>
       </div>
-      <button class="carousel-arrow right" @click="scrollRight" aria-label="Scroll right">
-        <img src="/arrow-right.svg" alt="Next" class="arrow-icon" />
-      </button>
+      
+      <!-- Mobile arrows (shown only on mobile) -->
+      <div class="mobile-arrows-container">
+        <button class="carousel-arrow left" @click="scrollLeft" aria-label="Scroll left">
+          <img src="/arrow-left.svg" alt="Previous" class="arrow-icon" />
+        </button>
+        <button class="carousel-arrow right" @click="scrollRight" aria-label="Scroll right">
+          <img src="/arrow-right.svg" alt="Next" class="arrow-icon" />
+        </button>
+      </div>
     </div>
   </section>
 </template>
@@ -133,6 +146,15 @@ export default {
   padding-top: 96px !important;
   padding-bottom: 96px !important;
 }
+
+.carousel-outer-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .carousel-wrapper {
   display: flex;
   align-items: center;
@@ -215,6 +237,15 @@ export default {
 .carousel-arrow.right {
   margin-left: 12px;
 }
+
+/* Mobile arrows container (hidden by default on desktop) */
+.mobile-arrows-container {
+  display: none;
+  width: 100%;
+  justify-content: center;
+  margin-top: 24px;
+  gap: 16px;
+}
 @media screen and (max-width: 768px) {
   .container {
     padding-top: 64px !important;
@@ -222,6 +253,20 @@ export default {
   }
   .carousel {
     max-width: 100vw;
+  }
+  .desktop-arrow {
+    display: none;
+  }
+  .mobile-arrows-container {
+    display: flex;
+  }
+  .carousel-arrow {
+    width: 64px;
+    height: 64px;
+  }
+  .arrow-icon {
+    width: 24px;
+    height: 24px;
   }
 }
 
