@@ -397,17 +397,7 @@ export default {
 }
 
 section.integrations-showcase {
-  background: radial-gradient(
-      100% 100% at 50% 0%,
-      rgba(255, 255, 255, 0.1) 0%,
-      rgba(255, 255, 255, 0) 100%
-    ),
-    radial-gradient(
-      80% 80% at 80% 20%,
-      rgba(255, 255, 255, 0.08) 0%,
-      rgba(255, 255, 255, 0) 100%
-    ),
-    #6434d0;
+  background: #6c3ce9;
   color: white;
   padding: 6rem 0 !important;
   position: relative;
@@ -494,6 +484,13 @@ section.integrations-showcase {
   .integration-gradient-left,
   .integration-gradient-right {
     width: 80px;
+  }
+
+ 
+}
+@media screen and (max-width: 991px) {
+  section.integrations-showcase {
+    background-color: #6c3ce9;
   }
 }
 </style>
