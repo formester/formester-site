@@ -125,5 +125,20 @@ export default {
     font-size: 32px;
     line-height: 40px;
   }
+
+  .rating-stars {
+    height: 20px;
+  }
+
+  .rating-wrapper {
+    min-width: 240px;
+    padding-inline: 32px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .logo {
+    height: 32px;
+  }
 }
 </style>

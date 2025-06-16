@@ -19,7 +19,7 @@
     "id": 2,
     "slug": "autoresponder-email",
     "navTitle": "Email Autoresponder",
-    "navDescription": "Automate Email Follow-Ups",
+    "navDescription": "Automate email follow-ups",
     "featureCategory": "Data Handling",
     "featurePlan": "Free",
     "navIcon": {
@@ -489,6 +489,38 @@
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/message_text_square_02_5014683c23.svg",
         "alt": "email icon"
+      }
+    }
+  },
+  {
+    "id": 496,
+    "slug": "custom-subdomains-for-form-url",
+    "navTitle": "Custom Domains",
+    "navDescription": "Create branded forms",
+    "featureCategory": "Branding & Integration",
+    "featurePlan": "Business",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "pen icon",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/pencil_line_61da15ee94.svg",
+        "alt": "pen icon"
+      }
+    }
+  },
+  {
+    "id": 497,
+    "slug": "collaborate-on-form-submission",
+    "navTitle": "Collaborative Form Submissions",
+    "navDescription": "Skip back & forth, submit forms as a team",
+    "featureCategory": "Advanced Controls",
+    "featurePlan": "Personal",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "pen icon",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/pencil_line_61da15ee94.svg",
+        "alt": "pen icon"
       }
     }
   }
