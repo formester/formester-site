@@ -8,7 +8,7 @@
           transform: `translate(${iconPositions[0].x}px, ${iconPositions[0].y}px)`,
         }"
       >
-        <img src="/hero-assets/floating-icon-1.svg" alt="Floating Icon" />
+        <object type="image/svg+xml" data="/hero-assets/floating-icon-1.svg" width="120" height="120" aria-label="Floating Icon" class="svg-object"></object>
       </div>
       <div
         class="floating-icon floating-icon-2"
@@ -16,7 +16,7 @@
           transform: `translate(${iconPositions[1].x}px, ${iconPositions[1].y}px)`,
         }"
       >
-        <img src="/hero-assets/floating-icon-2.svg" alt="Floating Icon" />
+        <object type="image/svg+xml" data="/hero-assets/floating-icon-2.svg" width="120" height="120" aria-label="Floating Icon" class="svg-object"></object>
       </div>
       <div
         class="floating-icon floating-icon-3"
@@ -24,7 +24,7 @@
           transform: `translate(${iconPositions[2].x}px, ${iconPositions[2].y}px)`,
         }"
       >
-        <img src="/hero-assets/floating-icon-3.svg" alt="Floating Icon" />
+        <object type="image/svg+xml" data="/hero-assets/floating-icon-3.svg" width="120" height="120" aria-label="Floating Icon" class="svg-object"></object>
       </div>
       <div
         class="floating-icon floating-icon-4"
@@ -32,7 +32,7 @@
           transform: `translate(${iconPositions[3].x}px, ${iconPositions[3].y}px)`,
         }"
       >
-        <img src="/hero-assets/floating-icon-4.svg" alt="Floating Icon" />
+        <object type="image/svg+xml" data="/hero-assets/floating-icon-4.svg" width="120" height="120" aria-label="Floating Icon" class="svg-object"></object>
       </div>
       <div class="container horizontal__padding">
         <div
@@ -100,12 +100,13 @@ export default {
       const mouseX = event.clientX - rect.left - centerX
       const mouseY = event.clientY - rect.top - centerY
 
-      // Update icon positions with different movement factors for each icon
+      // Safari-specific fix: Use integer values only to prevent subpixel rendering
+      // Multiply by factor, then round to nearest integer
       this.iconPositions = [
-        { x: mouseX * 0.02, y: mouseY * 0.03 },
-        { x: mouseX * -0.03, y: mouseY * 0.02 },
-        { x: mouseX * 0.04, y: mouseY * -0.02 },
-        { x: mouseX * -0.02, y: mouseY * -0.03 },
+        { x: Math.floor(mouseX * 0.02), y: Math.floor(mouseY * 0.03) },
+        { x: Math.floor(mouseX * -0.03), y: Math.floor(mouseY * 0.02) },
+        { x: Math.floor(mouseX * 0.04), y: Math.floor(mouseY * -0.02) },
+        { x: Math.floor(mouseX * -0.02), y: Math.floor(mouseY * -0.03) },
       ]
     },
   },
@@ -256,16 +257,32 @@ export default {
 .floating-icon {
   position: absolute;
   z-index: 1;
-  transition: transform 0.3s ease-out;
+  transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); /* Improved easing */
+  transform-style: preserve-3d; /* Better 3D handling */
+  -webkit-transform-style: preserve-3d; /* Safari-specific 3D handling */
+  -webkit-perspective: 1000; /* Safari-specific */
+  perspective: 1000;
   width: 120px; /* Larger default size */
   height: 120px; /* Larger default size */
   pointer-events: none;
 }
 
+.floating-icon .svg-object,
 .floating-icon img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  /* Fix for SVG blurriness */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated; /* Safari-specific */
+  -ms-interpolation-mode: nearest-neighbor; /* IE/Edge */
+  transform: translateZ(0); /* Force GPU acceleration */
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  will-change: transform; /* Hint to browser about property changes */
+  filter: blur(0); /* Safari fix */
+  -webkit-transform: translate3d(0, 0, 0); /* Safari-specific GPU acceleration */
 }
 
 .floating-icon-1 {
