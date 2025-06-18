@@ -137,7 +137,7 @@ export default {
         {
           id: 2,
           title: 'Employee Management Forms',
-          slug: '/templates/categories/event-management/',
+          slug: '/templates/categories/employee-management/',
         },
         {
           id: 3,
