@@ -3,7 +3,7 @@
     "id": 1,
     "slug": "html-form-backend",
     "navTitle": "HTML Form Backend",
-    "navDescription": "SImplify form integration",
+    "navDescription": "Send form data to a custom server",
     "featureCategory": "Form Builder",
     "featurePlan": "Personal",
     "navIcon": {
@@ -19,7 +19,7 @@
     "id": 2,
     "slug": "autoresponder-email",
     "navTitle": "Email Autoresponder",
-    "navDescription": "Send Automated Email Response ",
+    "navDescription": "Automate email follow-ups",
     "featureCategory": "Data Handling",
     "featurePlan": "Free",
     "navIcon": {
@@ -35,7 +35,7 @@
     "id": 3,
     "slug": "spam-protection",
     "navTitle": "Spam Protection",
-    "navDescription": "Protect sensitive data",
+    "navDescription": "Block fake submissions",
     "featureCategory": "Security & Validation",
     "featurePlan": "Free",
     "navIcon": {
@@ -51,7 +51,7 @@
     "id": 4,
     "slug": "form-analytics",
     "navTitle": "Form Analytics",
-    "navDescription": "Get Insights of Engagements",
+    "navDescription": "Gather advanced insights",
     "featureCategory": "Notifications & Reports",
     "featurePlan": "Free",
     "navIcon": {
@@ -67,7 +67,7 @@
     "id": 6,
     "slug": "online-payments",
     "navTitle": "Online Payments",
-    "navDescription": "Start collecting payments",
+    "navDescription": "Collect payments with ease",
     "featureCategory": "Branding & Integration",
     "featurePlan": "Free",
     "navIcon": {
@@ -83,7 +83,7 @@
     "id": 7,
     "slug": "electronic-signature",
     "navTitle": "Electronic Signature",
-    "navDescription": "Incorporate e-signatures",
+    "navDescription": "Collect e-signs in forms",
     "featureCategory": "Security & Validation",
     "featurePlan": "Free",
     "navIcon": {
@@ -99,7 +99,7 @@
     "id": 8,
     "slug": "branding-kit",
     "navTitle": "Branding Kit",
-    "navDescription": "Elevate your brand identity",
+    "navDescription": "Make every form on-brand",
     "featureCategory": "Branding & Integration",
     "featurePlan": "Personal",
     "navIcon": {
@@ -115,7 +115,7 @@
     "id": 9,
     "slug": "information-recall",
     "navTitle": "Information Recall",
-    "navDescription": "Referencing previous answers",
+    "navDescription": "Auto-fill past responses",
     "featureCategory": "Data Handling",
     "featurePlan": "Free",
     "navIcon": {
@@ -131,7 +131,7 @@
     "id": 12,
     "slug": "offline-forms",
     "navTitle": "Offline Forms",
-    "navDescription": "Form submissions offline",
+    "navDescription": "Collect submissions offline",
     "featureCategory": "Form Builder",
     "featurePlan": "Free",
     "navIcon": {
@@ -179,9 +179,9 @@
     "id": 36,
     "slug": "export-form-submission-pdf",
     "navTitle": "PDF Export",
-    "navDescription": "Export submissions as PDFs",
+    "navDescription": "Download responses as PDFs",
     "featureCategory": "Data Handling",
-    "featurePlan": "Free",
+    "featurePlan": "Personal",
     "navIcon": {
       "imageUrl": null,
       "imageAlt": "Export Submissions As PDFs",
@@ -195,7 +195,7 @@
     "id": 67,
     "slug": "form-limiter",
     "navTitle": "Form Limiter",
-    "navDescription": "Limit form responses",
+    "navDescription": "Limit how many can submit",
     "featureCategory": "Form Builder",
     "featurePlan": "Free",
     "navIcon": {
@@ -211,7 +211,7 @@
     "id": 68,
     "slug": "qr-code-generator",
     "navTitle": "Qr Code Generator",
-    "navDescription": "Generate free QR codes",
+    "navDescription": "Share forms via QR",
     "featureCategory": "Branding & Integration",
     "featurePlan": "Free",
     "navIcon": {
@@ -227,7 +227,7 @@
     "id": 101,
     "slug": "save-and-continue",
     "navTitle": "Save & Resume",
-    "navDescription": "Save & Resume Progress",
+    "navDescription": "Let users submit later",
     "featureCategory": "Data Handling",
     "featurePlan": "Business",
     "navIcon": {
@@ -243,7 +243,7 @@
     "id": 133,
     "slug": "file-upload-forms",
     "navTitle": "File Upload",
-    "navDescription": "Collect Files, PDFs & More",
+    "navDescription": "Collect files, PDFs & more",
     "featureCategory": "Data Handling",
     "featurePlan": "Free",
     "navIcon": {
@@ -259,7 +259,7 @@
     "id": 134,
     "slug": "drag-and-drop-form-builder",
     "navTitle": "Drag and Drop Interface",
-    "navDescription": "Create Stunning Forms & Surveys",
+    "navDescription": "Build forms with zero code",
     "featureCategory": "Form Builder",
     "featurePlan": "Free",
     "navIcon": {
@@ -275,7 +275,7 @@
     "id": 135,
     "slug": "embed-forms",
     "navTitle": "Embeddable Forms",
-    "navDescription": "Embed Form In Your Website",
+    "navDescription": "Embed forms in seconds",
     "featureCategory": "Branding & Integration",
     "featurePlan": "Free",
     "navIcon": {
@@ -291,7 +291,7 @@
     "id": 166,
     "slug": "calculating-fields",
     "navTitle": "Calculating Fields",
-    "navDescription": "Forms that perform calculations",
+    "navDescription": "Do math inside your form",
     "featureCategory": "Advanced Controls",
     "featurePlan": "Free",
     "navIcon": {
@@ -307,7 +307,7 @@
     "id": 167,
     "slug": "conditional-logic",
     "navTitle": "Conditional Logic",
-    "navDescription": "Create intelligent forms",
+    "navDescription": "Show only relevant fields",
     "featureCategory": "Advanced Controls",
     "featurePlan": "Personal",
     "navIcon": {
@@ -323,7 +323,7 @@
     "id": 199,
     "slug": "collaborative-forms",
     "navTitle": "Collaborative Forms",
-    "navDescription": "Collaborative Forms & Surveys",
+    "navDescription": "Build forms as a team",
     "featureCategory": "Form Builder",
     "featurePlan": "Business",
     "navIcon": {
@@ -339,7 +339,7 @@
     "id": 232,
     "slug": "email-verification",
     "navTitle": "Email Verification",
-    "navDescription": "Verify Email Addresses",
+    "navDescription": "Stop fake emails instantly",
     "featureCategory": "Security & Validation",
     "featurePlan": "Personal",
     "navIcon": {
@@ -355,7 +355,7 @@
     "id": 265,
     "slug": "auto-unique-id",
     "navTitle": "Custom ID",
-    "navDescription": "Unique IDs For Submissions",
+    "navDescription": "Tag every entry",
     "featureCategory": "Advanced Controls",
     "featurePlan": "Free",
     "navIcon": {
@@ -368,7 +368,7 @@
     "id": 298,
     "slug": "appointment-scheduler",
     "navTitle": "Appointment Scheduler",
-    "navDescription": "Book Appointments",
+    "navDescription": "Let users book time easily",
     "featureCategory": "Advanced Controls",
     "featurePlan": "Free",
     "navIcon": {
@@ -384,7 +384,7 @@
     "id": 331,
     "slug": "trustedform-certified-online-forms",
     "navTitle": "TrustedFormCertificate",
-    "navDescription": "Certify Your Leads",
+    "navDescription": "Certify your leads",
     "featureCategory": "Security & Validation",
     "featurePlan": "Free",
     "navIcon": {
@@ -400,7 +400,7 @@
     "id": 364,
     "slug": "pdf-editor",
     "navTitle": "PDF Editor",
-    "navDescription": "Create Fillable PDFs",
+    "navDescription": "Edit and style PDFs",
     "featureCategory": "Form Builder",
     "featurePlan": "Business",
     "navIcon": {
@@ -416,7 +416,7 @@
     "id": 397,
     "slug": "summary-analytics",
     "navTitle": "Summary Analytics",
-    "navDescription": "Summarize Reponses",
+    "navDescription": "View stats & trends",
     "featureCategory": "Notifications & Reports",
     "featurePlan": "Free",
     "navIcon": {
@@ -432,7 +432,7 @@
     "id": 398,
     "slug": "pre-fill-fields",
     "navTitle": "Pre Fill Fields",
-    "navDescription": "Pre Fill Forms",
+    "navDescription": "Auto-fill known answers",
     "featureCategory": "Advanced Controls",
     "featurePlan": "Free",
     "navIcon": {
@@ -448,7 +448,7 @@
     "id": 430,
     "slug": "convert-pdf-to-fillable-form",
     "navTitle": "Convert PDF to Form",
-    "navDescription": "Convert PDFs to Fillable Forms",
+    "navDescription": "Make PDFs fillable fast",
     "featureCategory": "Form Builder",
     "featurePlan": "Free",
     "navIcon": {
@@ -463,8 +463,8 @@
   {
     "id": 463,
     "slug": "quiz-maker-features",
-    "navTitle": "Quiz Features",
-    "navDescription": "Advanced Quiz Features",
+    "navTitle": "Quiz Maker Features",
+    "navDescription": "Build fun, graded quizzes",
     "featureCategory": "Advanced Controls",
     "featurePlan": "Free",
     "navIcon": {
@@ -480,7 +480,7 @@
     "id": 464,
     "slug": "email-notification-for-form-submission",
     "navTitle": "Email Notifications",
-    "navDescription": "Get Instant Email Alerts",
+    "navDescription": "Get alerts for each response",
     "featureCategory": "Notifications & Reports",
     "featurePlan": "Free",
     "navIcon": {
@@ -489,6 +489,38 @@
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/message_text_square_02_5014683c23.svg",
         "alt": "email icon"
+      }
+    }
+  },
+  {
+    "id": 496,
+    "slug": "custom-subdomains-for-form-url",
+    "navTitle": "Custom Domains",
+    "navDescription": "Create branded forms",
+    "featureCategory": "Branding & Integration",
+    "featurePlan": "Business",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "pen icon",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/pencil_line_61da15ee94.svg",
+        "alt": "pen icon"
+      }
+    }
+  },
+  {
+    "id": 497,
+    "slug": "collaborate-on-form-submission",
+    "navTitle": "Collaborative Form Submissions",
+    "navDescription": "Skip back & forth, submit forms as a team",
+    "featureCategory": "Advanced Controls",
+    "featurePlan": "Personal",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "pen icon",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/pencil_line_61da15ee94.svg",
+        "alt": "pen icon"
       }
     }
   }
