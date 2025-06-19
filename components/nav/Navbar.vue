@@ -521,7 +521,7 @@ export default {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   padding: 8px 0;
   width: 100%;
-  max-width: 1140px;
+  max-width: 1320px;
   margin: 0 auto;
 }
 nav {
