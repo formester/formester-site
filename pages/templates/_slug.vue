@@ -275,32 +275,32 @@ export default {
 }
 
 .about-template__description h1 {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   margin: 3rem 0 2rem 0;
 }
 
 .about-template__description h2 {
-  font-size: 1.875rem;
+  font-size: 2.25rem;
   margin: 2.5rem 0 1.5rem 0;
 }
 
 .about-template__description h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 2rem 0 1.25rem 0;
 }
 
 .about-template__description h4 {
-  font-size: 1.25rem;
+  font-size: 1.25rem 0;
   margin: 1.75rem 0 1rem 0;
 }
 
 .about-template__description h5 {
-  font-size: 1.125rem;
+  font-size: 1.25rem 0;
   margin: 1.5rem 0 0.75rem 0;
 }
 
 .about-template__description h6 {
-  font-size: 1rem;
+  font-size: 1.25rem 0;
   margin: 1.25rem 0 0.75rem 0;
 }
 
