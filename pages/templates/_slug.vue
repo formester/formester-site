@@ -249,6 +249,136 @@ export default {
   }
 }
 
+/* About template description styling */
+.about-template__description {
+  padding: 2rem 0;
+}
+
+.about-template__description h1,
+.about-template__description h2,
+.about-template__description h3,
+.about-template__description h4,
+.about-template__description h5,
+.about-template__description h6 {
+  margin: 1.5rem 0;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.about-template__description h1:first-child,
+.about-template__description h2:first-child,
+.about-template__description h3:first-child,
+.about-template__description h4:first-child,
+.about-template__description h5:first-child,
+.about-template__description h6:first-child {
+  margin-top: 0;
+}
+
+.about-template__description h1 {
+  font-size: 2.25rem;
+  margin: 3rem 0 2rem 0;
+}
+
+.about-template__description h2 {
+  font-size: 1.875rem;
+  margin: 2.5rem 0 1.5rem 0;
+}
+
+.about-template__description h3 {
+  font-size: 1.5rem;
+  margin: 2rem 0 1.25rem 0;
+}
+
+.about-template__description h4 {
+  font-size: 1.25rem;
+  margin: 1.75rem 0 1rem 0;
+}
+
+.about-template__description h5 {
+  font-size: 1.125rem;
+  margin: 1.5rem 0 0.75rem 0;
+}
+
+.about-template__description h6 {
+  font-size: 1rem;
+  margin: 1.25rem 0 0.75rem 0;
+}
+
+.about-template__description p {
+  margin: 1.25rem 0;
+  line-height: 1.7;
+}
+
+.about-template__description p:first-child {
+  margin-top: 0;
+}
+
+.about-template__description p:last-child {
+  margin-bottom: 0;
+}
+
+.about-template__description a {
+  text-decoration: underline;
+  transition: opacity 0.2s ease;
+}
+
+.about-template__description a:hover {
+  opacity: 0.8;
+}
+
+.about-template__description ul,
+.about-template__description ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.about-template__description ul ul,
+.about-template__description ol ol,
+.about-template__description ul ol,
+.about-template__description ol ul {
+  margin: 0.5rem 0;
+}
+
+.about-template__description li {
+  margin: 0.75rem 0;
+  line-height: 1.6;
+}
+
+.about-template__description li:first-child {
+  margin-top: 0;
+}
+
+.about-template__description li:last-child {
+  margin-bottom: 0;
+}
+
+.about-template__description blockquote {
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 4px solid #e0e0e0;
+  background-color: #f9f9f9;
+  font-style: italic;
+}
+
+.about-template__description blockquote p {
+  margin: 0.75rem 0;
+}
+
+.about-template__description blockquote p:first-child {
+  margin-top: 0;
+}
+
+.about-template__description blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.about-template__description hr {
+  margin: 3rem 0;
+  border: none;
+  height: 1px;
+  background-color: #e0e0e0;
+}
+
 @media only screen and (max-width: 600px) {
   .btns-container {
     gap: 1.5rem;
@@ -260,6 +390,27 @@ export default {
     width: 100%;
     padding: 18px;
     font-size: 16px;
+  }
+
+  .about-template__description {
+    padding: 1.5rem 0;
+  }
+
+  .about-template__description h1 {
+    font-size: 1.75rem;
+  }
+
+  .about-template__description h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-template__description h3 {
+    font-size: 1.25rem;
+  }
+
+  .about-template__description ul,
+  .about-template__description ol {
+    padding-left: 1.5rem;
   }
 }
 </style>

@@ -2,7 +2,7 @@
   <div class="template-categories">
     <!-- Category bar for small devices to show hide categories -->
     <div class="category-bar" @click="showCategories = !showCategories">
-      <h2 class="our-template-heading">Our Templates</h2>
+      <span class="our-template-heading">Our Templates</span>
       <nuxt-img
         v-show="!showCategories"
         class="category-menu-btn pointer"
@@ -41,7 +41,7 @@
         <div
           class="categoryType-container d-flex align-items-center justify-content-between"
         >
-          <h2 class="category-heading pointer">{{ categoryType }}</h2>
+          <h3 class="category-heading pointer">{{ categoryType }}</h3>
           <div>
             <nuxt-img
               class="collapse-arrow-btn pointer"
@@ -65,12 +65,12 @@
             params: { slug: category.slug },
           }"
         >
-          <h3
+          <h6
             class="category"
             :class="{ active: activeCategory?.slug === category.slug }"
           >
             {{ category.name }}
-          </h3>
+          </h6>
         </NuxtLink>
       </div>
     </div>
@@ -158,6 +158,7 @@ h2::first-letter {
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
+  text-transform: capitalize;
 }
 .categoryType-container {
   padding-right: 35px;

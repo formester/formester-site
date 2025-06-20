@@ -128,7 +128,7 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/formester-vs-typeform/" class="footer__link">
+                <NuxtLink to="/typeform-alternative/" class="footer__link">
                   Formester vs Typeform
                 </NuxtLink>
               </li>
