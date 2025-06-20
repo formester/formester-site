@@ -249,6 +249,21 @@ export default {
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .btns-container {
+    gap: 1.5rem;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-use_template {
+    width: 100%;
+    padding: 18px;
+    font-size: 16px;
+  }
+}
+</style>
+<style>
 /* About template description styling */
 .about-template__description {
   padding: 2rem 0;
@@ -275,32 +290,32 @@ export default {
 }
 
 .about-template__description h1 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   margin: 3rem 0 2rem 0;
 }
 
 .about-template__description h2 {
-  font-size: 2.25rem;
+  font-size: 1.875rem;
   margin: 2.5rem 0 1.5rem 0;
 }
 
 .about-template__description h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 2rem 0 1.25rem 0;
 }
 
 .about-template__description h4 {
-  font-size: 1.25rem 0;
+  font-size: 1.25rem;
   margin: 1.75rem 0 1rem 0;
 }
 
 .about-template__description h5 {
-  font-size: 1.25rem 0;
+  font-size: 1.125rem;
   margin: 1.5rem 0 0.75rem 0;
 }
 
 .about-template__description h6 {
-  font-size: 1.25rem 0;
+  font-size: 1rem;
   margin: 1.25rem 0 0.75rem 0;
 }
 
@@ -352,26 +367,6 @@ export default {
   margin-bottom: 0;
 }
 
-.about-template__description blockquote {
-  margin: 2rem 0;
-  padding: 1.25rem 1.5rem;
-  border-left: 4px solid #e0e0e0;
-  background-color: #f9f9f9;
-  font-style: italic;
-}
-
-.about-template__description blockquote p {
-  margin: 0.75rem 0;
-}
-
-.about-template__description blockquote p:first-child {
-  margin-top: 0;
-}
-
-.about-template__description blockquote p:last-child {
-  margin-bottom: 0;
-}
-
 .about-template__description hr {
   margin: 3rem 0;
   border: none;
@@ -380,18 +375,6 @@ export default {
 }
 
 @media only screen and (max-width: 600px) {
-  .btns-container {
-    gap: 1.5rem;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .btn-use_template {
-    width: 100%;
-    padding: 18px;
-    font-size: 16px;
-  }
-
   .about-template__description {
     padding: 1.5rem 0;
   }
