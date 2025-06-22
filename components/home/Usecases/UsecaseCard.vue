@@ -46,6 +46,7 @@ export default {
   justify-content: flex-start;
   transition: box-shadow 0.2s;
 }
+
 .usecase-card:hover {
   box-shadow: 0 8px 32px 0 rgba(16, 24, 40, 0.12);
 }
@@ -65,6 +66,7 @@ export default {
 }
 .content {
   padding: 24px 16px 16px 16px;
+  background-color: #fff;
   width: 100%;
   text-align: left;
 }

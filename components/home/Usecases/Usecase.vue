@@ -5,38 +5,48 @@
       <p>Learn how Formester can help your business.</p>
     </div>
     <div class="carousel-outer-wrapper">
-      <div class="carousel-wrapper">
-        <!-- Desktop arrows (hidden on mobile) -->
-        <button class="carousel-arrow left desktop-arrow" @click="scrollLeft" aria-label="Scroll left">
-          <img src="/arrow-left.svg" alt="Previous" class="arrow-icon" />
-        </button>
-        <div class="carousel-container">
-          <div class="carousel" :style="carouselStyle">
-            <UsecaseCard
-              v-for="(uc, idx) in visibleUsecases"
-              :key="uc.id + '-' + idx"
-              :title="uc.title"
-              :description="uc.description"
-              :image="uc.image"
-              class="carousel-card"
-              :class="{
-                'slide-in-right': isSliding && slideDirection === 'right',
-                'slide-in-left': isSliding && slideDirection === 'left'
-              }"
-            />
-          </div>
-        </div>
-        <button class="carousel-arrow right desktop-arrow" @click="scrollRight" aria-label="Scroll right">
-          <img src="/arrow-right.svg" alt="Next" class="arrow-icon" />
-        </button>
-      </div>
+      <VueSlickCarousel
+        ref="slick"
+        :arrows="true"
+        :dots="true"
+        :infinite="true"
+        :autoplay="true"
+        :autoplaySpeed="5000"
+        :slidesToShow="3"
+        :responsive="slickResponsive"
+        @afterChange="handleAfterChange"
       
-      <!-- Mobile arrows (shown only on mobile) -->
+        @beforeChange="handleBeforeChange"
+      >
+        <template #prevArrow>
+          <button class="carousel-arrow left desktop-arrow" @click="goToPrev" aria-label="Scroll left">
+            <img src="/arrow-left.svg" alt="Previous" class="arrow-icon" />
+          </button>
+        </template>
+        <template #nextArrow>
+          <button class="carousel-arrow right desktop-arrow" @click="goToNext" aria-label="Scroll right">
+            <img src="/arrow-right.svg" alt="Next" class="arrow-icon" />
+          </button>
+        </template>
+        <div
+          v-for="(uc, idx) in usecase"
+          :key="uc.id + '-' + idx"
+          class="carousel-slide-inner"
+        >
+          <UsecaseCard
+            :title="uc.title"
+            :description="uc.description"
+            :image="uc.image"
+            :class="['carousel-card', { scaled: isCenter(idx) }]"
+          />
+        </div>
+      </VueSlickCarousel>
+      <!-- Mobile arrows container for <=768px -->
       <div class="mobile-arrows-container">
-        <button class="carousel-arrow left" @click="scrollLeft" aria-label="Scroll left">
+        <button class="carousel-arrow left" @click="goToPrev" aria-label="Scroll left">
           <img src="/arrow-left.svg" alt="Previous" class="arrow-icon" />
         </button>
-        <button class="carousel-arrow right" @click="scrollRight" aria-label="Scroll right">
+        <button class="carousel-arrow right" @click="goToNext" aria-label="Scroll right">
           <img src="/arrow-right.svg" alt="Next" class="arrow-icon" />
         </button>
       </div>
@@ -45,12 +55,15 @@
 </template>
 
 <script>
+import VueSlickCarousel from 'vue-slick-carousel';
 import UsecaseCard from './UsecaseCard.vue';
 import SectionTitle from '~/components/SectionTitle.vue';
+import 'vue-slick-carousel/dist/vue-slick-carousel.css';
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
 
 export default {
   name: 'Usecases',
-  components: { UsecaseCard, SectionTitle },
+  components: { VueSlickCarousel, UsecaseCard, SectionTitle },
   props: {
     title: {
       type: Array,
@@ -63,85 +76,98 @@ export default {
   },
   data() {
     return {
-      currentIndex: 0,
-      cardsPerView: 1,
-      isSliding: false,
-      slideDirection: 'right' // 'left' or 'right'
+      currentSlide: 0,
+      slickResponsive: [
+        {
+          breakpoint: 1440,
+          settings: { slidesToShow: 3 }
+        },
+        {
+          breakpoint: 992,
+          settings: { slidesToShow: 2 }
+        },
+        {
+          breakpoint: 768,
+          settings: { slidesToShow: 1 }
+        }
+      ]
     };
   },
-  computed: {
-    visibleUsecases() {
-      // Show cards from currentIndex to currentIndex + cardsPerView
-      // Handle wrapping around the end of the array
-      const result = [];
-      for (let i = 0; i < this.cardsPerView; i++) {
-        const index = (this.currentIndex + i) % this.usecase.length;
-        result.push(this.usecase[index]);
-      }
-      return result;
-    },
-    carouselStyle() {
-      return {
-        '--cards-per-view': this.cardsPerView
-      };
-    }
-  },
-  mounted() {
-    this.updateCardsPerView();
-    window.addEventListener('resize', this.updateCardsPerView);
-  },
-  beforeDestroy() {
-    window.removeEventListener('resize', this.updateCardsPerView);
-  },
   methods: {
-    updateCardsPerView() {
-      const width = window.innerWidth;
-      if (width < 768) {
-        this.cardsPerView = 1;
-      } else if (width < 992) {
-        this.cardsPerView = 2;
-      } else if (width < 1440) {
-        this.cardsPerView = 3;
-      } else {
-        this.cardsPerView = 4;
-      }
+    handleBeforeChange(oldIndex, newIndex) {
+      this.currentSlide = newIndex;
     },
-    scrollLeft() {
-      if (this.isSliding) return; // Prevent multiple clicks during animation
-      
-      // Set direction and trigger animation
-      this.slideDirection = 'left';
-      this.isSliding = true;
-      
-      // Update the index immediately for seamless transition
-      this.currentIndex = (this.currentIndex - 1 + this.usecase.length) % this.usecase.length;
-      
-      // Reset sliding state after animation completes
-      setTimeout(() => {
-        this.isSliding = false;
-      }, 400); // Match animation duration
+    isCenter(idx) {
+      // Only apply scaling if width >= 991px
+      if (typeof window !== 'undefined' && window.innerWidth < 991) return false;
+      let centerIdx = (this.currentSlide + 1) % this.usecase.length;
+      if (this.usecase.length < 3) return idx === this.currentSlide;
+      return idx === centerIdx;
     },
-    
-    scrollRight() {
-      if (this.isSliding) return; // Prevent multiple clicks during animation
-      
-      // Set direction and trigger animation
-      this.slideDirection = 'right';
-      this.isSliding = true;
-      
-      // Update the index immediately for seamless transition
-      this.currentIndex = (this.currentIndex + 1) % this.usecase.length;
-      
-      // Reset sliding state after animation completes
-      setTimeout(() => {
-        this.isSliding = false;
-      }, 400); // Match animation duration
+    goToPrev() {
+      this.$refs.slick && this.$refs.slick.prev();
+    },
+    goToNext() {
+      this.$refs.slick && this.$refs.slick.next();
     }
   }
-} 
+}
 </script>
 
 <style scoped>
+
+:deep(.slick-list) {
+  overflow: hidden !important;
+  padding-bottom: 32px !important;
+  padding-top: 32px !important;
+}
+@media (max-width: 992px) {
+  :deep(.slick-list) {
+    padding-top: 16px !important;
+  }
+}
+
+.slick-track {
+  align-items: center !important;
+}
+
+.carousel-slide-inner {
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+@media (max-width: 992px) {
+  .carousel-slide-inner { padding: 0 12px; }
+}
+@media (max-width: 768px) {
+  .carousel-slide-inner { padding: 0 6px; }
+}
+
+
+/* Disable default slick arrow styling from vue-slick-carousel */
+.slick-arrow:not(.carousel-arrow) {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  color: inherit !important;
+  position: static !important;
+}
+
+
+.carousel-arrow.carousel-arrow.right::before
+{
+  display: none !important;
+  content: none !important;
+}
+
+.carousel-arrow.carousel-arrow.left::before
+{
+  display: none !important;
+  content: none !important;
+}
+
 .container {
   padding-top: 96px !important;
   padding-bottom: 96px !important;
@@ -179,11 +205,16 @@ export default {
   transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 .carousel-card {
-  flex: 0 0 calc((100% - (24px * (var(--cards-per-view) - 1))) / var(--cards-per-view));
-  max-width: calc((100% - (24px * (var(--cards-per-view) - 1))) / var(--cards-per-view));
-  box-sizing: border-box;
-  transition: all 0.4s ease;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
+.carousel-card.scaled {
+  transform: scale(1.08);
+  box-shadow: 0 6px 32px 0 rgba(16, 24, 40, 0.10);
+  z-index: 2;
+  margin-top: -2.5%;
+  margin-bottom: -2.5%;
+}
+
 
 .arrow-icon {
   width: 18px;
@@ -238,14 +269,6 @@ export default {
   margin-left: 12px;
 }
 
-/* Mobile arrows container (hidden by default on desktop) */
-.mobile-arrows-container {
-  display: none;
-  width: 100%;
-  justify-content: center;
-  margin-top: 24px;
-  gap: 16px;
-}
 @media screen and (max-width: 768px) {
   .container {
     padding-top: 64px !important;
@@ -300,4 +323,65 @@ export default {
 .slide-in-left {
   animation: slideInFromLeft 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
+.mobile-arrows-container {
+  display: none;
+  width: 100%;
+  justify-content: center;
+  margin-top: 64px;
+  gap: 16px;
+}
+@media screen and (max-width: 768px) {
+  .desktop-arrow {
+    display: none;
+  }
+  .mobile-arrows-container {
+    display: flex;
+  }
+  .carousel-arrow {
+    width: 64px;
+    height: 64px;
+  }
+  .arrow-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+:deep(.slick-dots) {
+  display: flex !important;
+  justify-content: center;
+  margin-top: 24px;
+  gap: 8px;
+  list-style: none;
+}
+
+:deep(.slick-dots li) {
+  margin: 0;
+  padding: 0;
+}
+
+:deep(.slick-dots button) {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  font-size: 0;         /* Hide any number/text */
+  color: transparent;   /* Hide any number/text */
+  outline: none;        /* Remove focus ring */
+  box-shadow: none;     /* Remove native shadow */
+}
+
+:deep(.slick-dots button:before) {
+  display: none !important; /* Hide Slick's default dot pseudo-element */
+}
+
+:deep(.slick-dots .slick-active button) {
+  background: #6434D0; /* Your brand color */
+  transform: scale(1.25);
+}
+
 </style>
