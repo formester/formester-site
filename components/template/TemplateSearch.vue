@@ -2,9 +2,7 @@
   <div>
     <!-- Search -->
     <div class="search-box mx-auto d-flex flex-column">
-      <div
-        class="search-input-wrapper position-relative ps-1 d-flex gap-4 align-items-center"
-      >
+      <div class="search-input-wrapper">
         <div class="search-icon">
           <nuxt-img src="/templates/search.svg" alt="Search" />
         </div>
@@ -54,29 +52,33 @@ export default {
 
 <style scoped>
 .search-box {
-  margin-top: 32px;
+  margin-top: 16px;
   background: #fff;
   height: 67px;
   border-radius: 8px;
   padding: 20px;
-  gap: 16px;
+  gap: 8px;
+  border: 1px solid #e5e7eb;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08),
     0px 1px 2px 0px rgba(0, 0, 0, 0.04);
 }
 
 .search-box:focus-within {
-  background: var(--Gray-50, #f9fafb);
-  box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08),
-    0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #f4ebff;
 }
 
 .search-input-wrapper {
   position: relative;
-  gap: 4px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .search-icon {
   width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .search-input {
@@ -85,7 +87,7 @@ export default {
 }
 
 .search-input::placeholder {
-  color: var(--neutral-500, #737373);
+  color: #667085;
   font-size: 18px;
   font-weight: 400;
   line-height: 150%;

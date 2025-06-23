@@ -8,7 +8,28 @@ export default async () => {
     return `/blog/${item.attributes.slug}`
   })
 
-  return articles
+  const totalArticles = data.filter(item => !item.attributes.featured).length
+  const itemsPerPage = 9
+  const totalPages = Math.ceil(totalArticles / itemsPerPage)
+  const paginationUrls = []
+  paginationUrls.push({
+    url: '/blog',
+    changefreq: 'daily'
+  })
+  
+  for (let i = 2; i <= totalPages; i++) {
+    paginationUrls.push({
+      url: `/blog?page=${i}`,
+      changefreq: 'daily'
+    })
+  }
+  
+  const articleUrls = articles.map(url => ({
+    url,
+    changefreq: 'weekly'
+  }))
+  
+  return [...articleUrls, ...paginationUrls]
 }
 
 export const getFeatureRoutes = async () => {

@@ -169,10 +169,10 @@ export default {
 .content-heading {
   color: var(--clr-text-primary);
   text-transform: capitalize;
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 600;
-  line-height: 60px;
-  letter-spacing: -0.96px;
+  line-height: 48px;
+  letter-spacing: -0.64px;
 }
 
 .content-description {
