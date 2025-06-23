@@ -13,13 +13,13 @@ export default async () => {
   const totalPages = Math.ceil(totalArticles / itemsPerPage)
   const paginationUrls = []
   paginationUrls.push({
-    url: '/blog/',
+    url: '/blog',
     changefreq: 'daily'
   })
   
   for (let i = 2; i <= totalPages; i++) {
     paginationUrls.push({
-      url: `/blog/?page=${i}`,
+      url: `/blog?page=${i}`,
       changefreq: 'daily'
     })
   }

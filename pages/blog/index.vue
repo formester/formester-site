@@ -224,8 +224,8 @@ export default {
     // Generate canonical URL based on current page
     const baseUrl = 'https://formester.com/blog';
     const canonicalUrl = this.currentPage === 1 
-      ? `${baseUrl}/` 
-      : `${baseUrl}/?page=${this.currentPage}`;
+      ? baseUrl 
+      : `${baseUrl}?page=${this.currentPage}`;
     
     return {
       title:
@@ -249,12 +249,12 @@ export default {
         ...(this.currentPage > 1 ? [{
           rel: 'prev',
           href: this.currentPage === 2 
-            ? `${baseUrl}/` 
-            : `${baseUrl}/?page=${this.currentPage - 1}`,
+            ? baseUrl 
+            : `${baseUrl}?page=${this.currentPage - 1}`,
         }] : []),
         ...(this.currentPage < this.totalPages ? [{
           rel: 'next',
-          href: `${baseUrl}/?page=${this.currentPage + 1}`,
+          href: `${baseUrl}?page=${this.currentPage + 1}`,
         }] : []),
       ],
     }
