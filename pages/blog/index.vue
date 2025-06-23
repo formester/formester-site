@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-5">
+  <div class="container upper-margin">
     <div>
       <h2 class="section__heading">Featured Blog</h2>
       <BlogFeatured
@@ -12,43 +12,64 @@
 
     <div class="row mt-4">
       <h2 class="section__heading" id="all-blogs">All Blogs</h2>
-      <BlogCard
-        v-for="article in paginatedArticles"
-        :key="article.slug"
-        class="col-lg-4 mt-3 mb-5"
-        :article="article"
-      />
+      <div class="blog-container-wrapper">
+        <div class="blog-container">
+          <transition-group name="fade" tag="div" class="row" mode="out-in">
+            <BlogCard
+              v-for="article in paginatedArticles"
+              :key="article.slug"
+              class="col-lg-4 mt-3 mb-5"
+              :article="article"
+            />
+          </transition-group>
+        </div>
+        <div v-if="isLoading" class="blog-loading">
+          <div class="loading-spinner"></div>
+        </div>
+      </div>
     </div>
     <nav v-if="totalPages > 1">
       <div class="custom-pagination-bar">
-        <button
+        <nuxt-link
+          v-if="currentPage > 1"
           class="custom-page-btn prev"
-          :disabled="currentPage === 1"
-          @click="goToPage(currentPage - 1)"
+          :to="{ path: '/blog', query: { ...$route.query, page: currentPage - 1 } }"
         >
           Previous
-        </button>
+        </nuxt-link>
+        <span
+          v-else
+          class="custom-page-btn prev disabled"
+        >
+          Previous
+        </span>
         <div class="custom-pagination-center">
           <span v-for="item in paginationPages" :key="item.key">
-            <button
+            <nuxt-link
               v-if="item.type === 'page'"
               class="custom-page-btn"
               :class="{ active: item.page === currentPage }"
-              @click="goToPage(item.page)"
-              :disabled="item.page === currentPage"
+              :to="{ path: '/blog', query: { ...$route.query, page: item.page } }"
+              :aria-current="item.page === currentPage ? 'page' : null"
             >
               {{ item.page }}
-            </button>
+            </nuxt-link>
             <span v-else class="custom-ellipsis">...</span>
           </span>
         </div>
-        <button
+        <nuxt-link
+          v-if="currentPage < totalPages"
           class="custom-page-btn next"
-          :disabled="currentPage === totalPages"
-          @click="goToPage(currentPage + 1)"
+          :to="{ path: '/blog', query: { ...$route.query, page: currentPage + 1 } }"
         >
           Next
-        </button>
+        </nuxt-link>
+        <span
+          v-else
+          class="custom-page-btn next disabled"
+        >
+          Next
+        </span>
       </div>
     </nav>
   </div>
@@ -71,7 +92,8 @@ export default {
   },
   data() {
     return {
-      itemsPerPage: 9 // Adjust as needed
+      itemsPerPage: 9, // Adjust as needed
+      isLoading: false
     }
   },
   async asyncData() {
@@ -158,20 +180,82 @@ export default {
       if (page < 1 || page > this.totalPages) return
       this.$router.push({ path: '/blog', query: { ...this.$route.query, page } })
     },
-
+  },
+  
+  watch: {
+    // Watch for route changes to handle loading state
+    '$route.query.page': {
+      handler() {
+        // Set loading state when page changes
+        this.isLoading = true
+        
+        // Only run scroll behavior on client side
+        if (process.client) {
+          this.$nextTick(() => {
+            // Scroll to top of the page or to the all-blogs section with margin
+            const allBlogsSection = document.getElementById('all-blogs')
+            if (allBlogsSection) {
+              // Get the position of the element relative to the viewport
+              const rect = allBlogsSection.getBoundingClientRect()
+              // Get the absolute position and subtract margin (80px)
+              const scrollTop = window.pageYOffset + rect.top - 80
+              // Scroll to the adjusted position with smooth behavior
+              window.scrollTo({ top: scrollTop, behavior: 'smooth' })
+            } else {
+              // Fallback: scroll to top of the page
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+            }
+          })
+        }
+        
+        // Use nextTick to ensure DOM has updated
+        this.$nextTick(() => {
+          // Small timeout to ensure smooth transition
+          setTimeout(() => {
+            this.isLoading = false
+          }, 300)
+        })
+      },
+      immediate: true
+    }
   },
 
   head() {
+    // Generate canonical URL based on current page
+    const baseUrl = 'https://formester.com/blog';
+    const canonicalUrl = this.currentPage === 1 
+      ? `${baseUrl}/` 
+      : `${baseUrl}/?page=${this.currentPage}`;
+    
     return {
       title:
         'Latest form Builder Software in 2023 | Best Online Form Builder to Use in 2023 - Formester',
-      meta: [...this.meta],
+      meta: [
+        ...this.meta,
+        // Add pagination meta tags for SEO
+        ...(this.currentPage > 1 ? [{
+          hid: 'robots',
+          name: 'robots',
+          content: 'noindex, follow'
+        }] : []),
+      ],
       link: [
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://formester.com/blog/',
+          href: canonicalUrl,
         },
+        // Add prev/next links for pagination
+        ...(this.currentPage > 1 ? [{
+          rel: 'prev',
+          href: this.currentPage === 2 
+            ? `${baseUrl}/` 
+            : `${baseUrl}/?page=${this.currentPage - 1}`,
+        }] : []),
+        ...(this.currentPage < this.totalPages ? [{
+          rel: 'next',
+          href: `${baseUrl}/?page=${this.currentPage + 1}`,
+        }] : []),
       ],
     }
   },
@@ -218,6 +302,14 @@ export default {
 </script>
 
 <style scoped>
+.upper-margin {
+  margin-top: 8em;
+}
+@media only screen and (max-width: 768px) {
+  .upper-margin {
+    margin-top: 6em;
+  }
+}
 .section__heading {
   font-size: 32px;
   margin-top: 32px;
@@ -266,6 +358,10 @@ export default {
 }
 
 .custom-page-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   background: #fff;
   border-radius: 4px;
   min-width: 44px;
@@ -283,7 +379,7 @@ export default {
   background: #f9fafb;
 }
 .custom-page-btn.active,
-.custom-page-btn:disabled {
+.custom-page-btn.disabled {
   background: #f9fafb;
   color: var(--clr-text-secondary);
   border: 1px solid #d0d5dd;
@@ -297,7 +393,7 @@ export default {
   align-items: center;
   justify-content: center;
 }
-.custom-page-btn[disabled] {
+.custom-page-btn.disabled {
   opacity: 1;
 }
 .custom-ellipsis {
@@ -308,5 +404,48 @@ export default {
   font-size: 1.2rem;
   user-select: none;
   pointer-events: none;
+}
+.blog-container-wrapper {
+  position: relative;
+  min-height: 600px; /* Adjust based on your content */
+}
+
+.blog-container {
+  width: 100%;
+}
+
+.blog-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid var(--clr-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Transition effects */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 </style>
