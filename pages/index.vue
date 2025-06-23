@@ -9,8 +9,9 @@ import getStrapiData from '@/utils/getStrapiData'
 export default {
   components: { PageComponents },
   async asyncData({ params }) {
-    const endpoint = `/home-page`
-    const { head, jsonld, components } = await getStrapiData(endpoint)
+    const endpoint = `/pages`
+    const strapiParams = { 'filters[slug][$null]': true }
+    const { head, jsonld, components } = await getStrapiData(endpoint, strapiParams)
     return { head, jsonld, components }
   },
   head() {

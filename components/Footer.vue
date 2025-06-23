@@ -342,46 +342,63 @@
         </div>
       </section>
       <div class="divider mt-4"></div>
-      <div class="socials mt-4">
-        <a
-          href="https://www.reddit.com/r/Formester/"
-          class="mx-1 my-2 inline-block"
-          target="_blank"
-          ><nuxt-img src="/social/reddit.svg" alt="Formester Reddit community"
-        /></a>
-        <a
-          href="https://www.linkedin.com/company/formester-inc/"
-          class="mx-1 my-2 inline-block"
-          target="_blank"
-          ><nuxt-img src="/social/linkedin.svg" alt="Formester LinkedIn page"
-        /></a>
-        <a
-          href="https://www.youtube.com/channel/UCVfBesiZINubCEC9Xu5Z6gQ"
-          class="mx-1 my-2 inline-block"
-          target="_blank"
-          ><nuxt-img src="/social/youtube.svg" alt="Formester YouTube page"
-        /></a>
-        <a
-          href="https://instagram.com/_formester_?utm_medium=copy_link"
-          class="mx-1 my-2 inline-block"
-          target="_blank"
-          ><nuxt-img src="/social/instagram.svg" alt="Formester Instagram page"
-        /></a>
-        <a
-          href="https://twitter.com/_Formester_?t=-m1pNwXvxR6KOf9kfPi9lQ&s=09"
-          class="mx-1 my-2 inline-block"
-          target="_blank"
-          ><nuxt-img src="/social/twitter.svg" alt="Formester Twitter page"
-        /></a>
-        <a
-          href="https://www.facebook.com/formester"
-          class="mx-1 my-2 inline-block"
-          target="_blank"
-          ><nuxt-img src="/social/facebook.svg" alt="Formester Facebook page"
-        /></a>
-      </div>
-      <div class="copyright d-flex justify-content-center mt-3">
-        © 2025 Acorn Globus. All rights reserved
+      <div class="container">
+        <div class="footer__bottom">
+          <div class="socials">
+            <a
+              href="https://www.reddit.com/r/Formester/"
+              class="mx-1 my-2 inline-block"
+              target="_blank"
+              ><nuxt-img
+                src="/social/reddit.svg"
+                alt="Formester Reddit community"
+            /></a>
+            <a
+              href="https://www.linkedin.com/company/formester-inc/"
+              class="mx-1 my-2 inline-block"
+              target="_blank"
+              ><nuxt-img
+                src="/social/linkedin.svg"
+                alt="Formester LinkedIn page"
+            /></a>
+            <a
+              href="https://www.youtube.com/channel/UCVfBesiZINubCEC9Xu5Z6gQ"
+              class="mx-1 my-2 inline-block"
+              target="_blank"
+              ><nuxt-img src="/social/youtube.svg" alt="Formester YouTube page"
+            /></a>
+            <a
+              href="https://instagram.com/_formester_?utm_medium=copy_link"
+              class="mx-1 my-2 inline-block"
+              target="_blank"
+              ><nuxt-img
+                src="/social/instagram.svg"
+                alt="Formester Instagram page"
+            /></a>
+            <a
+              href="https://twitter.com/_Formester_?t=-m1pNwXvxR6KOf9kfPi9lQ&s=09"
+              class="mx-1 my-2 inline-block"
+              target="_blank"
+              ><nuxt-img src="/social/twitter.svg" alt="Formester Twitter page"
+            /></a>
+            <a
+              href="https://www.facebook.com/formester"
+              class="mx-1 my-2 inline-block"
+              target="_blank"
+              ><nuxt-img
+                src="/social/facebook.svg"
+                alt="Formester Facebook page"
+            /></a>
+          </div>
+          <div class="copyright d-flex justify-content-center">
+            © 2025 Acorn Globus. All rights reserved
+          </div>
+          <a
+            href="https://www.trustpilot.com/review/formester.com"
+            target="_blank"
+            ><nuxt-img src="/trustpilot-footer.svg" alt="Trustpilot"
+          /></a>
+        </div>
       </div>
     </div>
   </footer>
@@ -392,12 +409,21 @@ export default {}
 </script>
 
 <style scoped>
+.footer__bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 2em 0px;
+}
 ul {
   padding: 0;
 }
 
 .footer__container {
-  background: linear-gradient(180deg, #5b2fbd 0.01%, #371d72 100%);
+  background: linear-gradient(180deg, #5b2fbd 0.01%, #502ba4 100%);
   color: var(--clr-primary-light);
   padding: 2em 0 1em 0;
 }
@@ -441,6 +467,12 @@ ul {
 @media only screen and (max-width: 992px) {
   .footer__link {
     margin: 0.25rem 0px;
+  }
+
+  .footer__bottom {
+    width: 90%;
+    flex-direction: column;
+    gap: 16px;
   }
 }
 </style>
