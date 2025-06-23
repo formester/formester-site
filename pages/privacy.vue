@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <div class="upper-margin">
     <h1>Privacy Policy</h1>
     <p>Last Updated: 22nd January, 2025</p>
 
@@ -76,6 +77,7 @@
     <h2>13. Google Workspace API & AI Use</h2>
     <p>We do not use any data obtained through Google Workspace APIs to develop, improve, or train generalized artificial intelligence (AI) or machine learning (ML) models.</p>
   </div>
+  </div>
 </template>
 
 <script>
@@ -139,6 +141,15 @@ export default {
 </script>
 
 <style scoped>
+.upper-margin {
+  margin-top: 8rem;
+}
+
+@media (max-width: 992px) {
+  .upper-margin {
+    margin-top: 8rem;
+  }
+}
 .container {
   margin-top: 24px;
   margin-bottom: 64px;

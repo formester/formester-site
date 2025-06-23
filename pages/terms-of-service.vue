@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <div class="upper-margin">
     <h1>Terms of Service</h1>
 
     <br />
@@ -317,6 +318,7 @@
       Questions about the Terms of Service should be sent to
       support@formester.com.
     </p>
+    </div>
   </div>
 </template>
 
@@ -379,4 +381,14 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.upper-margin {
+  margin-top: 8rem;
+}
+
+@media (max-width: 992px) {
+  .upper-margin {
+    margin-top: 7rem;
+  }
+}
+</style>
