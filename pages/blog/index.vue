@@ -307,7 +307,7 @@ export default {
 }
 @media only screen and (max-width: 768px) {
   .upper-margin {
-    margin-top: 6em;
+    margin-top: 5em;
   }
 }
 .section__heading {

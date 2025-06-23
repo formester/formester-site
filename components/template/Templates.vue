@@ -37,17 +37,26 @@
 
         <TemplateSearch @searchInput="handleSearch" />
 
-        <div v-if="filteredTemplates.length" class="templates-grid">
-          <TemplateCard
-            v-for="template in filteredTemplates"
-            :key="template.id"
-            :template="template"
-          />
-        </div>
-        <div
-          v-else
-          class="no-templates d-flex flex-column align-items-center justify-content-center w-100"
-        >
+        <template v-if="filteredTemplates.length > 0">
+          <section class="templates-grid" aria-label="Templates">
+            <TemplateCard
+              v-for="template in paginatedTemplates"
+              :key="template.id"
+              :template="template"
+            />
+          </section>
+          <div v-if="visibleCount < filteredTemplates.length" class="d-flex justify-content-center mt-3">
+            <button
+              @click="viewMore"
+              class="btn-primary"
+              aria-label="View more templates"
+              type="button"
+            >
+              View More
+            </button>
+          </div>
+        </template>
+        <div v-else class="no-templates d-flex flex-column align-items-center justify-content-center w-100">
           <nuxt-img
             class="img-fluid"
             src="/templates/no-template.svg"
@@ -83,6 +92,7 @@ export default {
       searchTerm: '',
       showFullDescription: false,
       showHandleButton: false,
+      visibleCount: 12,
     }
   },
   watch: {
@@ -98,6 +108,7 @@ export default {
   methods: {
     handleSearch(searchTerm) {
       this.searchTerm = searchTerm
+      this.visibleCount = 12 // Reset pagination on new search
     },
     toggleDescription() {
       this.showFullDescription = !this.showFullDescription
@@ -108,6 +119,9 @@ export default {
         this.showHandleButton =
           description.scrollHeight > description.clientHeight
       }
+    },
+    viewMore() {
+      this.visibleCount += 12
     },
   },
   computed: {
@@ -120,6 +134,9 @@ export default {
           template.description?.toLowerCase().includes(searchTerm)
       )
     },
+    paginatedTemplates() {
+      return this.filteredTemplates.slice(0, this.visibleCount)
+    },
     descriptionLineClampStyle() {
       return this.showFullDescription ? 'auto' : 1
     },
@@ -131,10 +148,30 @@ export default {
 </script>
 
 <style scoped>
+.btn-primary {
+  margin-top: 1rem;
+  background-color: var(--clr-primary);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 8px;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--clr-primary-hover);
+  transition: all 0.2s ease;
+}
+
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem var(--clr-primary-focus);
+}
+
 .template-container {
   flex-direction: row-reverse;
-  margin-top: 24px;
+  margin-top: 8rem;
 }
+
 
 .left-sidebar {
   position: sticky;
@@ -248,6 +285,7 @@ export default {
   }
   .template-container {
     flex-direction: column;
+    margin-top: 5rem;
   }
   .left-sidebar {
     position: static;
