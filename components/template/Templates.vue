@@ -1,12 +1,6 @@
 <template>
   <div>
     <div class="container template-container d-flex">
-      <div class="left-sidebar">
-        <TemplateCategories
-          :activeCategory="activeCategory"
-          :templateCategories="templateCategories"
-        />
-      </div>
       <div class="content-wrapper w-100">
         <div
           v-if="activeCategory"
@@ -61,6 +55,12 @@
           />
           <h4 class="mt-3">No Template Available</h4>
         </div>
+      </div>
+      <div class="left-sidebar">
+        <TemplateCategories
+          :activeCategory="activeCategory"
+          :templateCategories="templateCategories"
+        />
       </div>
     </div>
   </div>
@@ -132,6 +132,7 @@ export default {
 
 <style scoped>
 .template-container {
+  flex-direction: row-reverse;
   margin-top: 24px;
 }
 
