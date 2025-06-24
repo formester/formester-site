@@ -94,6 +94,9 @@ export default {
     };
   },
   methods: {
+    handleAfterChange(currentSlide) {
+      this.currentSlide = currentSlide;
+    },
     handleBeforeChange(oldIndex, newIndex) {
       this.currentSlide = newIndex;
     },
