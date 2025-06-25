@@ -89,17 +89,7 @@
           </div>
         </div>
         
-        <!-- Pagination Dots -->
-        <div class="pagination-dots d-none d-md-flex justify-content-center mt-4">
-          <button 
-            v-for="(testimonial, index) in testimonials" 
-            :key="testimonial.id"
-            class="pagination-dot" 
-            :class="{ 'active': currentTestimonialIndex === index }"
-            @click="goToTestimonial(index)"
-            :aria-label="`Go to testimonial ${index + 1}`"
-          ></button>
-        </div>
+        <!-- Pagination Dots Removed -->
       </div>
     </div>
   </div>
@@ -147,8 +137,6 @@ export default {
       dragOffset: 0,
       tickerPosition: 0,
       cardsContainer: null,
-      // Pagination data
-      currentTestimonialIndex: 0
     }
   },
   mounted() {
@@ -215,10 +203,6 @@ export default {
       this.prevSlide()
     },
     
-    goToSlide(index) {
-      this.currentSlide = index
-    },
-    
     handleTouchStart(e) {
       this.touchStartX = e.changedTouches[0].screenX
     },
@@ -241,7 +225,6 @@ export default {
       this.scrollPaused = false
       this.isDragging = false
       this.tickerPosition = 0
-      this.currentTestimonialIndex = 0
 
       // Get references to DOM elements
       const wrapper = document.querySelector('.testimonial__wrapper')
@@ -297,17 +280,6 @@ export default {
 
           // Apply the transform
           this.cardsContainer.style.transform = `translateX(-${this.tickerPosition}px)`
-          
-          // Update current testimonial index based on scroll position
-          if (this.testimonials.length > 0) {
-            const cardWidth = totalWidth / this.testimonials.length
-            const currentPosition = this.tickerPosition % totalWidth
-            const newIndex = Math.floor(currentPosition / cardWidth)
-            
-            if (newIndex !== this.currentTestimonialIndex && newIndex < this.testimonials.length) {
-              this.currentTestimonialIndex = newIndex
-            }
-          }
         }
 
         // Always request the next frame
@@ -492,138 +464,8 @@ export default {
         Math.random() * (this.testimonials.length - 2)
       )
       return this.testimonials.slice(randIndex, randIndex + 2)
-    },
-
-  },
-  
-  // Add new methods for pagination
-  goToTestimonial(testimonialIndex) {
-    if (testimonialIndex < 0 || testimonialIndex >= this.testimonials.length) return
-    
-    // Calculate the position to scroll to
-    const cardWidth = this.totalCardsWidth / this.testimonials.length
-    
-    // Find the closest path to the target (might be forward or backward)
-    let targetPosition = testimonialIndex * cardWidth
-    const currentPos = this.tickerPosition % this.totalCardsWidth
-    
-    // If the distance going forward is greater than going backward, go backward
-    if (Math.abs(targetPosition - currentPos) > this.totalCardsWidth / 2) {
-      if (targetPosition > currentPos) {
-        targetPosition = targetPosition - this.totalCardsWidth
-      } else {
-        targetPosition = targetPosition + this.totalCardsWidth
-      }
     }
-    
-    // Update current testimonial index
-    this.currentTestimonialIndex = testimonialIndex
-    
-    // Pause auto-scrolling temporarily
-    const wasPaused = this.scrollPaused
-    this.scrollPaused = true
-    
-    // Animate scrolling to the target position
-    const startPosition = this.tickerPosition % this.totalCardsWidth
-    const distance = targetPosition - startPosition
-    const duration = 500 // ms
-    const startTime = performance.now()
-    
-    const animateScroll = (currentTime) => {
-      const elapsed = currentTime - startTime
-      const progress = Math.min(elapsed / duration, 1)
-      const easeProgress = 0.5 - Math.cos(progress * Math.PI) / 2 // Sine easing
-      
-      this.tickerPosition = (startPosition + distance * easeProgress) % this.totalCardsWidth
-      
-      if (this.cardsContainer) {
-        this.cardsContainer.style.transform = `translateX(-${this.tickerPosition}px)`
-      }
-      
-      if (progress < 1) {
-        requestAnimationFrame(animateScroll)
-      } else {
-        // Resume auto-scrolling if it wasn't paused before
-        this.scrollPaused = wasPaused
-      }
-    }
-    
-    requestAnimationFrame(animateScroll)
-  },
-  
-  // Add new drag functionality methods
-  handleDragStart(e) {
-    e.preventDefault()
-    this.isDragging = true
-    this.scrollPaused = true
-    
-    // Get the starting position (works for both mouse and touch)
-    const clientX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX
-    this.dragStartX = clientX
-    this.dragCurrentX = clientX
-    
-    // Set cursor style
-    if (this.cardsContainer) {
-      this.cardsContainer.style.cursor = 'grabbing'
-    }
-  },
-  
-  handleDragMove(e) {
-    if (!this.isDragging) return
-    e.preventDefault()
-    
-    // Get current position (works for both mouse and touch)
-    const clientX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX
-    this.dragCurrentX = clientX
-    
-    // Calculate the drag offset
-    const dragDelta = this.dragCurrentX - this.dragStartX
-    
-    // Update the position of the ticker
-    const newPosition = this.tickerPosition - dragDelta
-    
-    // Apply the transform
-    if (this.cardsContainer) {
-      this.cardsContainer.style.transform = `translateX(-${newPosition}px)`
-    }
-    
-    // Update the start position for the next move
-    this.dragStartX = this.dragCurrentX
-    
-    // Update the ticker position
-    this.tickerPosition = newPosition
-    
-    // Handle wrapping for infinite scroll
-    if (this.tickerPosition >= this.totalCardsWidth) {
-      this.tickerPosition = this.tickerPosition % this.totalCardsWidth
-    } else if (this.tickerPosition < 0) {
-      // Handle negative position (dragging backwards past the first card)
-      this.tickerPosition = this.totalCardsWidth + (this.tickerPosition % this.totalCardsWidth)
-    }
-    
-    // Update current testimonial index based on drag position
-    if (this.testimonials.length > 0 && this.totalCardsWidth > 0) {
-      const cardWidth = this.totalCardsWidth / this.testimonials.length
-      const currentPosition = this.tickerPosition % this.totalCardsWidth
-      const newIndex = Math.floor(currentPosition / cardWidth)
-      
-      if (newIndex !== this.currentTestimonialIndex && newIndex < this.testimonials.length) {
-        this.currentTestimonialIndex = newIndex
-      }
-    }
-  },
-  
-  handleDragEnd(e) {
-    if (!this.isDragging) return
-    
-    this.isDragging = false
-    this.scrollPaused = false
-    
-    // Reset cursor style
-    if (this.cardsContainer) {
-      this.cardsContainer.style.cursor = 'grab'
-    }
-  },
+  }
 }
 </script>
 
@@ -762,34 +604,7 @@ export default {
   transition: none;
 }
 
-/* Pagination Dots Styles */
-.pagination-dots {
-  display: flex;
-  gap: 8px;
-  margin-top: 24px;
-  height: 12px;
-}
-
-.pagination-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #e5e7eb;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.pagination-dot:hover {
-  background-color: #D1D1D1;
-}
-
-.pagination-dot.active {
-  background-color: var(--clr-primary);
-  transform: scale(1.2);
-}
+/* Pagination Dots Styles Removed */
 
 /* Responsive Styles */
 @media (max-width: 576px) {
