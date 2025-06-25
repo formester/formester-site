@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="text-center mt-5 px-3">
+    <div class=" upper-margin text-center px-3">
       <span class="d-block mb-1 pricing__subtitle text__primary">Pricing</span>
       <h1 class="pricing__heading mt-2">Pricing that feels just right</h1>
       <p class="pricing__subheading mt-3">
@@ -328,6 +328,16 @@ export default {
 </script>
 
 <style scoped>
+.upper-margin {
+  margin-top: 10rem;
+}
+
+@media (max-width: 991px) {
+  .upper-margin {
+    margin-top: 8rem;
+  }
+}
+
 .mw-1200 {
   max-width: 1200px;
 }
