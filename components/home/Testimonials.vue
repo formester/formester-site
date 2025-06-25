@@ -88,6 +88,8 @@
             </div>
           </div>
         </div>
+        
+        <!-- Pagination Dots Removed -->
       </div>
     </div>
   </div>
@@ -120,28 +122,29 @@ export default {
   },
   data() {
     return {
-      scrollInterval: null,
-      scrollSpeed: 0.5,
-      scrollPaused: false,
-      scrollPosition: 0,
-      tickerWidth: 0,
-      containerWidth: 0,
-      animationFrame: null,
-      handleMouseEnter: null,
-      handleMouseLeave: null,
-      moveTickerForward: null,
       currentSlide: 0,
+      totalSlides: 0,
+      autoRotationTimer: null,
       touchStartX: 0,
       touchEndX: 0,
-      userInteracted: false,
-      carouselInterval: null,
+      animationFrame: null,
+      scrollSpeed: 0.5, // pixels per frame
+      scrollPaused: false,
+      // Drag functionality data
+      isDragging: false,
+      dragStartX: 0,
+      dragCurrentX: 0,
+      dragOffset: 0,
+      tickerPosition: 0,
+      cardsContainer: null,
     }
   },
   mounted() {
-    this.$nextTick(() => {
+    if (this.version === 'home') {
       this.setupTicker()
+    } else {
       this.setupCarousel()
-    })
+    }
   },
   methods: {
     // Mobile Carousel Methods
@@ -162,11 +165,11 @@ export default {
     startAutoRotation() {
       if (this.testimonials.length > 1) {
         // Clear any existing interval first
-        if (this.carouselInterval) {
-          clearInterval(this.carouselInterval)
+        if (this.autoRotationTimer) {
+          clearInterval(this.autoRotationTimer)
         }
         
-        this.carouselInterval = setInterval(() => {
+        this.autoRotationTimer = setInterval(() => {
           if (window.innerWidth < 768 && !this.userInteracted) { // Only auto-rotate on mobile and if user hasn't interacted
             this.nextSlide()
           }
@@ -175,9 +178,9 @@ export default {
     },
     
     stopAutoRotation() {
-      if (this.carouselInterval) {
-        clearInterval(this.carouselInterval)
-        this.carouselInterval = null
+      if (this.autoRotationTimer) {
+        clearInterval(this.autoRotationTimer)
+        this.autoRotationTimer = null
       }
       this.userInteracted = true
     },
@@ -200,10 +203,6 @@ export default {
       this.prevSlide()
     },
     
-    goToSlide(index) {
-      this.currentSlide = index
-    },
-    
     handleTouchStart(e) {
       this.touchStartX = e.changedTouches[0].screenX
     },
@@ -224,17 +223,19 @@ export default {
 
       // Reset the paused state
       this.scrollPaused = false
+      this.isDragging = false
+      this.tickerPosition = 0
 
       // Get references to DOM elements
       const wrapper = document.querySelector('.testimonial__wrapper')
       if (!wrapper) return
 
       // Get the original cards container
-      const cardsContainer = document.querySelector('.testimonial__cards')
-      if (!cardsContainer) return
+      this.cardsContainer = document.querySelector('.testimonial__cards')
+      if (!this.cardsContainer) return
 
       // Get all original cards
-      const cards = cardsContainer.querySelectorAll('.testimonial__card')
+      const cards = this.cardsContainer.querySelectorAll('.testimonial__card')
       if (!cards.length) return
 
       // Calculate the total width of all cards
@@ -242,6 +243,9 @@ export default {
       cards.forEach((card) => {
         totalWidth += card.offsetWidth + 24 // Adding gap width
       })
+      
+      // Store the total width for drag calculations
+      this.totalCardsWidth = totalWidth
 
       // Create enough clones to fill the container at least twice
       // This ensures we always have content to scroll to
@@ -251,31 +255,31 @@ export default {
       for (let i = 0; i < numClones; i++) {
         cards.forEach((card) => {
           const clone = card.cloneNode(true)
-          cardsContainer.appendChild(clone)
+          this.cardsContainer.appendChild(clone)
         })
       }
 
       // Remove any CSS animation
-      cardsContainer.style.animation = 'none'
+      this.cardsContainer.style.animation = 'none'
 
       // Start the scrolling
-      let currentPosition = 0
+      this.tickerPosition = 0
 
       // Define the animation function
       const animate = () => {
-        // Only move if not paused
-        if (!this.scrollPaused) {
-          currentPosition += this.scrollSpeed
+        // Only move if not paused and not being dragged
+        if (!this.scrollPaused && !this.isDragging) {
+          this.tickerPosition += this.scrollSpeed
 
           // Check if we need to shift
-          if (currentPosition > totalWidth) {
+          if (this.tickerPosition >= totalWidth) {
             // When we've scrolled past the first set of cards,
             // shift the container back by that amount (invisibly)
-            currentPosition -= totalWidth
+            this.tickerPosition = this.tickerPosition % totalWidth
           }
 
           // Apply the transform
-          cardsContainer.style.transform = `translateX(-${currentPosition}px)`
+          this.cardsContainer.style.transform = `translateX(-${this.tickerPosition}px)`
         }
 
         // Always request the next frame
@@ -285,18 +289,32 @@ export default {
       // Start the animation
       this.animationFrame = requestAnimationFrame(animate)
 
-      // Define the event handlers
+      // Define the event handlers for hover
       this.handleMouseEnter = () => {
-        this.scrollPaused = true
+        if (!this.isDragging) {
+          this.scrollPaused = true
+        }
       }
 
       this.handleMouseLeave = () => {
-        this.scrollPaused = false
+        if (!this.isDragging) {
+          this.scrollPaused = false
+        }
       }
 
       // Add event listeners for pausing on hover
       wrapper.addEventListener('mouseenter', this.handleMouseEnter)
       wrapper.addEventListener('mouseleave', this.handleMouseLeave)
+      
+      // Add event listeners for drag functionality
+      this.cardsContainer.addEventListener('mousedown', this.handleDragStart)
+      document.addEventListener('mousemove', this.handleDragMove)
+      document.addEventListener('mouseup', this.handleDragEnd)
+      
+      // Touch events for mobile
+      this.cardsContainer.addEventListener('touchstart', this.handleDragStart, { passive: false })
+      document.addEventListener('touchmove', this.handleDragMove, { passive: false })
+      document.addEventListener('touchend', this.handleDragEnd)
     },
 
     getIconSrc(iconObject) {
@@ -333,11 +351,71 @@ export default {
 
       return ''
     },
+    handleDragStart(e) {
+      e.preventDefault()
+      this.isDragging = true
+      this.scrollPaused = true
+      
+      // Get the starting position (works for both mouse and touch)
+      const clientX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX
+      this.dragStartX = clientX
+      this.dragCurrentX = clientX
+      
+      // Set cursor style
+      if (this.cardsContainer) {
+        this.cardsContainer.style.cursor = 'grabbing'
+      }
+    },
+    
+    handleDragMove(e) {
+      if (!this.isDragging) return
+      e.preventDefault()
+      
+      // Get current position (works for both mouse and touch)
+      const clientX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX
+      this.dragCurrentX = clientX
+      
+      // Calculate the drag offset
+      const dragDelta = this.dragCurrentX - this.dragStartX
+      
+      // Update the position of the ticker
+      const newPosition = this.tickerPosition - dragDelta
+      
+      // Apply the transform
+      if (this.cardsContainer) {
+        this.cardsContainer.style.transform = `translateX(-${newPosition}px)`
+      }
+      
+      // Update the start position for the next move
+      this.dragStartX = this.dragCurrentX
+      
+      // Update the ticker position
+      this.tickerPosition = newPosition
+      
+      // Handle wrapping if we've scrolled too far in either direction
+      if (this.tickerPosition < 0) {
+        this.tickerPosition += this.totalCardsWidth
+      } else if (this.tickerPosition > this.totalCardsWidth * 2) {
+        this.tickerPosition -= this.totalCardsWidth
+      }
+    },
+    
+    handleDragEnd(e) {
+      if (!this.isDragging) return
+      
+      this.isDragging = false
+      this.scrollPaused = false
+      
+      // Reset cursor style
+      if (this.cardsContainer) {
+        this.cardsContainer.style.cursor = 'grab'
+      }
+    },
   },
   beforeDestroy() {
     // Clear the interval when component is destroyed
-    if (this.scrollInterval) {
-      clearInterval(this.scrollInterval)
+    if (this.autoRotationTimer) {
+      clearInterval(this.autoRotationTimer)
     }
     
     // Clear carousel interval
@@ -363,6 +441,17 @@ export default {
       carouselTrack.removeEventListener('touchstart', this.handleTouchStart)
       carouselTrack.removeEventListener('touchend', this.handleTouchEnd)
     }
+    
+    // Clean up drag event listeners
+    if (this.cardsContainer) {
+      this.cardsContainer.removeEventListener('mousedown', this.handleDragStart)
+      this.cardsContainer.removeEventListener('touchstart', this.handleDragStart)
+    }
+    
+    document.removeEventListener('mousemove', this.handleDragMove)
+    document.removeEventListener('mouseup', this.handleDragEnd)
+    document.removeEventListener('touchmove', this.handleDragMove)
+    document.removeEventListener('touchend', this.handleDragEnd)
   },
   computed: {
     isFeatureTestimonail() {
@@ -375,8 +464,8 @@ export default {
         Math.random() * (this.testimonials.length - 2)
       )
       return this.testimonials.slice(randIndex, randIndex + 2)
-    },
-  },
+    }
+  }
 }
 </script>
 
@@ -464,6 +553,13 @@ export default {
   display: flex;
   overflow: visible;
   box-sizing: border-box;
+  cursor: grab; /* Show grab cursor to indicate draggable */
+  user-select: none; /* Prevent text selection during drag */
+  touch-action: pan-y; /* Allow vertical scrolling but handle horizontal ourselves */
+}
+
+.testimonial__cards:active {
+  cursor: grabbing; /* Change cursor when actively dragging */
 }
 
 /* Hover pause is now handled by JavaScript */
@@ -507,6 +603,8 @@ export default {
 .testimonial__cards {
   transition: none;
 }
+
+/* Pagination Dots Styles Removed */
 
 /* Responsive Styles */
 @media (max-width: 576px) {

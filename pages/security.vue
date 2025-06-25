@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <div class="upper-margin">
     <h1>Security</h1>
     <p>
       As a form builder and management service, we recognize the importance of
@@ -149,6 +150,7 @@
       Please <a href="mailto:support@formester.com">email us</a> and we'll happily
       update this doc.
     </p>
+    </div>
   </div>
 </template>
 
@@ -178,5 +180,15 @@ h2 {
 h3 {
     margin-top: 24px;
     margin-bottom: 12px;
+}
+
+.upper-margin {
+  margin-top: 8rem;
+}
+
+@media (max-width: 992px) {
+  .upper-margin {
+    margin-top: 8rem;
+  }
 }
 </style>

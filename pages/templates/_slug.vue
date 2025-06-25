@@ -186,6 +186,7 @@ export default {
 .template_hero {
   gap: 1rem;
   margin: 2.5rem auto;
+  padding-top: 6rem;
 }
 
 .template-info {

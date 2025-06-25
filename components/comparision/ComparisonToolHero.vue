@@ -56,7 +56,7 @@ export default {
 
 <style scoped>
 .hero {
-  margin-top: 130px;
+  margin-top: 14rem;
   margin-bottom: 100px;
   max-width: 1440px;
 }
@@ -146,6 +146,9 @@ export default {
 }
 
 @media screen and (max-width: 900px) {
+  .hero {
+    margin-top: 12rem;
+  }
   .hero-image.left {
     left: 0%;
   }

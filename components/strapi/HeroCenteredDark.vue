@@ -80,7 +80,8 @@ export default {
 
 <style scoped>
 .hero {
-  padding-block: 4em;
+  padding-top: 8em;
+  padding-bottom: 6em;
   background: var(--clr-primary);
   color: white;
 }
@@ -119,11 +120,14 @@ export default {
   color: #ebebeb;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 992px) {
   .hero {
-    margin-top: 30px;
-    margin-bottom: 20px;
+    padding-top: 4em;
+    padding-bottom: 2em;
   }
+}
+
+@media (max-width: 768px) {
   .hero__heading {
     line-height: 52px;
   }

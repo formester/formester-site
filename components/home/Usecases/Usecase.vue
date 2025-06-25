@@ -354,7 +354,6 @@ export default {
   display: flex !important;
   justify-content: center;
   margin-top: 24px;
-  gap: 8px;
   list-style: none;
 }
 
@@ -364,8 +363,8 @@ export default {
 }
 
 :deep(.slick-dots button) {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: #e5e7eb;
   border: none;
@@ -384,7 +383,7 @@ export default {
 
 :deep(.slick-dots .slick-active button) {
   background: #6434D0; /* Your brand color */
-  transform: scale(1.25);
+  transform: scale(1.2);
 }
 
 </style>

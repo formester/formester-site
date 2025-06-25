@@ -4,7 +4,7 @@
       <div class="feature__hero">
         <div class="container">
           <div
-            class="d-flex flex-column justify-content-center align-items-center text-center mt-5"
+            class="d-flex flex-column justify-content-center align-items-center text-center upper-margin"
           >
             <h1 class="hero__heading pt-3">
               Designing Forms with <span class="hglt">Visual Brilliance!</span>
@@ -415,6 +415,15 @@ export default {
 </script>
 
 <style>
+.upper-margin {
+  margin-top: 8rem;
+}
+
+@media (max-width: 992px) {
+  .upper-margin {
+    margin-top: 6rem;
+  }
+}
 .hero__heading {
   font-size: var(--ft-big-heading);
   font-weight: 700;
