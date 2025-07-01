@@ -28,8 +28,8 @@
                 @click="collapseNav"
               >
                 <nuxt-img
-                  :src="resource.imageUrl"
-                  :alt="resource.imageAlt"
+                  :src="resource?.imageUrl"
+                  :alt="resource?.imageAlt"
                   class="resource-dropdown-item__img"
                 />
                 <div class="d-flex flex-column">

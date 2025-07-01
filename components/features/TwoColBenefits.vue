@@ -14,7 +14,7 @@
               :src="item.cardImage.image?.url || item.cardImage.imageUrl"
               class="img-fluid"
               style="width: 69px"
-              :alt="item.cardImage.imageAlt"
+              :alt="item.cardImage?.imageAlt"
               loading="lazy"
             />
             <h4 class="sub__section-heading mt-4">{{ item.title }}</h4>

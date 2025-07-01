@@ -44,8 +44,8 @@
                 <DropdownItem
                   :title="dropdownItem.title"
                   :description="dropdownItem.description"
-                  :imageUrl="dropdownItem.imageUrl"
-                  :imageAlt="dropdownItem.imageAlt"
+                  :imageUrl="dropdownItem?.imageUrl"
+                  :imageAlt="dropdownItem?.imageAlt"
                   :slug="dropdownItem.slug"
                   :featurePlan="dropdownItem.featurePlan"
                 />
@@ -66,8 +66,8 @@
                 <DropdownItem
                   :title="dropdownItem.title"
                   :description="dropdownItem.description"
-                  :imageUrl="dropdownItem.imageUrl"
-                  :imageAlt="dropdownItem.imageAlt"
+                  :imageUrl="dropdownItem?.imageUrl"
+                  :imageAlt="dropdownItem?.imageAlt"
                   :slug="dropdownItem.slug"
                   :featurePlan="dropdownItem.featurePlan"
                 />

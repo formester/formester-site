@@ -22,11 +22,11 @@ async function fetchNavbar() {
       featureCategory: item.featureCategory,
       featurePlan: item.featurePlan,
       navIcon: item.navIcon ? {
-        imageUrl: item.navIcon.imageUrl,
-        imageAlt: item.navIcon.imageAlt,
-        image: item.navIcon.image ? {
+        imageUrl: item.navIcon?.imageUrl,
+        imageAlt: item.navIcon?.imageAlt,
+        image: item.navIcon?.image ? {
           url: item.navIcon.image.url,
-          alt: item.navIcon.imageAlt
+          alt: item.navIcon?.imageAlt
         } : null
       } : null
     };

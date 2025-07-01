@@ -28,9 +28,9 @@
             class="d-flex flex-column flex-lg-row"
           >
             <nuxt-img
-              :src="item.cardImage.image?.url || item.cardImage.imageUrl"
+              :src="item.cardImage?.image?.url || item.cardImage?.imageUrl"
               class="img-fluid my-auto"
-              :alt="item.cardImage.imageAlt"
+              :alt="item.cardImage?.imageAlt"
               loading="lazy"
             />
           </div>
