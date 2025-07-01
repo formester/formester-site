@@ -94,11 +94,11 @@
             <span class="article__author">{{ blogData?.author }}</span>
           </a>
         </div>
-        <div class="blog__content">
+        <div class="blog__content" ref="blogContent">
           <nuxt-content :document="blogBody" v-if="blogBody" />
-          <div class="popup__img">
-            <span class="image-preview-close">&times;</span>
-            <img src="" alt="" />
+          <div class="popup__img" ref="popupImg" :style="{ display: showPopup ? 'block' : 'none' }">
+            <span class="image-preview-close" @click="closePopup">&times;</span>
+            <img :src="popupImageSrc" :alt="popupImageAlt" @click="closePopup" ref="popupImage" />
           </div>
         </div>
         <notifications position="bottom right" class="my-notification" />
@@ -153,6 +153,13 @@ export default {
     LinkdinIcon,
     CopyLinkIcon,
   },
+  data() {
+    return {
+      showPopup: false,
+      popupImageSrc: '',
+      popupImageAlt: '',
+    }
+  },
   content: {
     liveEdit: false,
   },
@@ -198,29 +205,40 @@ export default {
     return { blogData, blogBody, relatedArticles }
   },
   mounted() {
-    document.querySelectorAll('.blog__content img').forEach((image) => {
-      image.onclick = () => {
-        document.querySelector('.popup__img').style.display = 'block'
-        document.querySelector('.popup__img img').src =
-          image.getAttribute('src')
-        document.querySelector('.popup__img img').alt =
-          image.getAttribute('alt')
-      }
-    })
-    document.querySelector('.popup__img img').onclick = () => {
-      document.querySelector('.popup__img ').style.display = 'none'
-    }
-    document.querySelector('.image-preview-close').onclick = () => {
-      document.querySelector('.popup__img ').style.display = 'none'
-    }
-    document.onkeydown = function (evt) {
-      if (evt.keyCode === 27) {
-        document.querySelector('.popup__img ').style.display = 'none'
-      }
-    }
+    this.setupImageClickHandlers()
+    this.setupKeyboardHandler()
     // this.loadDisqus()
   },
   methods: {
+    setupImageClickHandlers() {
+      this.$nextTick(() => {
+        if (this.$refs.blogContent) {
+          const images = this.$refs.blogContent.querySelectorAll('.nuxt-content img')
+          images.forEach((image) => {
+            image.addEventListener('click', () => {
+              this.openPopup(image.src, image.alt)
+            })
+          })
+        }
+      })
+    },
+    setupKeyboardHandler() {
+      document.addEventListener('keydown', (evt) => {
+        if (evt.keyCode === 27) {
+          this.closePopup()
+        }
+      })
+    },
+    openPopup(src, alt) {
+      this.popupImageSrc = src
+      this.popupImageAlt = alt
+      this.showPopup = true
+    },
+    closePopup() {
+      this.showPopup = false
+      this.popupImageSrc = ''
+      this.popupImageAlt = ''
+    },
     formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(date).toLocaleDateString('en', options)
