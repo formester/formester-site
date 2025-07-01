@@ -10,6 +10,7 @@
     "fetch-navbar": "node scripts/fetch-navbar.js"
   },
   "dependencies": {
+    "@builder.io/partytown": "^0.10.3",
     "@nuxt/content": "^1.15.1",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/gtm": "^2.4.0",
