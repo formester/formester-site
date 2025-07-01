@@ -12,7 +12,7 @@
     <div class="d-flex">
       <nuxt-img
         :src="getIconSrc(testimonial.profileImage)"
-        :alt="testimonial.profileImage.imageAlt || 'User profile'"
+        :alt="testimonial?.profileImage?.imageAlt || 'User profile'"
         class="img-fluid testimonial__user"
         loading="lazy"
       />
@@ -38,31 +38,31 @@ export default {
   methods: {
     getIconSrc(iconObject) {
       if (!iconObject) return '';
-      
+
       // Handle different Strapi image structures
       if (iconObject.imageUrl) {
         return iconObject.imageUrl;
       }
-      
+
       if (iconObject.image) {
         if (iconObject.image.url) {
           return iconObject.image.url;
         }
-        
+
         if (iconObject.image.data) {
           if (iconObject.image.data.attributes && iconObject.image.data.attributes.url) {
             return iconObject.image.data.attributes.url;
           }
-          
-          if (Array.isArray(iconObject.image.data) && 
-              iconObject.image.data[0] && 
-              iconObject.image.data[0].attributes && 
+
+          if (Array.isArray(iconObject.image.data) &&
+              iconObject.image.data[0] &&
+              iconObject.image.data[0].attributes &&
               iconObject.image.data[0].attributes.url) {
             return iconObject.image.data[0].attributes.url;
           }
         }
       }
-      
+
       return '';
     }
   }

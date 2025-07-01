@@ -28,16 +28,16 @@
               v-if="
                 !isGif(item.cardImage.image?.url || item.cardImage.imageUrl)
               "
-              :src="item.cardImage.image?.url || item.cardImage.imageUrl"
+              :src="item.cardImage?.image?.url || item.cardImage.imageUrl"
               class="img-fluid"
-              :alt="item.cardImage.imageAlt"
+              :alt="item.cardImage?.imageAlt"
               :modifiers="{ animated: true }"
             />
             <img
               v-else
-              :src="item.cardImage.image?.url || item.cardImage.imageUrl"
+              :src="item.cardImage?.image?.url || item.cardImage?.imageUrl"
               class="img-fluid"
-              :alt="item.cardImage.imageAlt"
+              :alt="item.cardImage?.imageAlt"
               :modifiers="{ animated: true }"
             />
           </div>

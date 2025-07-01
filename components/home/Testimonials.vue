@@ -28,7 +28,7 @@
                 <nuxt-img
                   class="brand mt-4 mb-3"
                   :src="getIconSrc(testimonial.companyLogo)"
-                  :alt="testimonial.companyLogo.imageAlt || 'Company logo'"
+                  :alt="testimonial?.companyLogo?.imageAlt || 'Company logo'"
                   loading="lazy"
                 />
               </div>
@@ -62,13 +62,13 @@
               :testimonial="testimonial"
             />
           </div>
-          
+
           <!-- Mobile: Carousel -->
           <div class="mobile-carousel d-md-none">
             <div class="carousel-container">
               <div class="carousel-track" ref="carouselTrack">
-                <div 
-                  v-for="(testimonial, index) in testimonials" 
+                <div
+                  v-for="(testimonial, index) in testimonials"
                   :key="testimonial.id"
                   class="carousel-slide"
                   :class="{ 'active': currentSlide === index }"
@@ -88,7 +88,7 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Pagination Dots Removed -->
       </div>
     </div>
@@ -150,25 +150,25 @@ export default {
     // Mobile Carousel Methods
     setupCarousel() {
       if (this.testimonials.length === 0) return
-      
+
       // Add touch event listeners for swipe functionality
       const carouselTrack = this.$refs.carouselTrack
       if (carouselTrack) {
         carouselTrack.addEventListener('touchstart', this.handleTouchStart, { passive: true })
         carouselTrack.addEventListener('touchend', this.handleTouchEnd, { passive: true })
       }
-      
+
       // Set up auto-rotation if more than one slide
       this.startAutoRotation()
     },
-    
+
     startAutoRotation() {
       if (this.testimonials.length > 1) {
         // Clear any existing interval first
         if (this.autoRotationTimer) {
           clearInterval(this.autoRotationTimer)
         }
-        
+
         this.autoRotationTimer = setInterval(() => {
           if (window.innerWidth < 768 && !this.userInteracted) { // Only auto-rotate on mobile and if user hasn't interacted
             this.nextSlide()
@@ -176,7 +176,7 @@ export default {
         }, 5000)
       }
     },
-    
+
     stopAutoRotation() {
       if (this.autoRotationTimer) {
         clearInterval(this.autoRotationTimer)
@@ -184,29 +184,29 @@ export default {
       }
       this.userInteracted = true
     },
-    
+
     nextSlide() {
       this.currentSlide = (this.currentSlide + 1) % this.testimonials.length
     },
-    
+
     prevSlide() {
       this.currentSlide = (this.currentSlide - 1 + this.testimonials.length) % this.testimonials.length
     },
-    
+
     manualNextSlide() {
       this.stopAutoRotation()
       this.nextSlide()
     },
-    
+
     manualPrevSlide() {
       this.stopAutoRotation()
       this.prevSlide()
     },
-    
+
     handleTouchStart(e) {
       this.touchStartX = e.changedTouches[0].screenX
     },
-    
+
     handleTouchEnd(e) {
       this.touchEndX = e.changedTouches[0].screenX
       if (this.touchStartX - this.touchEndX > 50) {
@@ -217,7 +217,7 @@ export default {
         this.prevSlide()
       }
     },
-    
+
     setupTicker() {
       if (this.testimonials.length === 0) return
 
@@ -243,7 +243,7 @@ export default {
       cards.forEach((card) => {
         totalWidth += card.offsetWidth + 24 // Adding gap width
       })
-      
+
       // Store the total width for drag calculations
       this.totalCardsWidth = totalWidth
 
@@ -305,12 +305,12 @@ export default {
       // Add event listeners for pausing on hover
       wrapper.addEventListener('mouseenter', this.handleMouseEnter)
       wrapper.addEventListener('mouseleave', this.handleMouseLeave)
-      
+
       // Add event listeners for drag functionality
       this.cardsContainer.addEventListener('mousedown', this.handleDragStart)
       document.addEventListener('mousemove', this.handleDragMove)
       document.addEventListener('mouseup', this.handleDragEnd)
-      
+
       // Touch events for mobile
       this.cardsContainer.addEventListener('touchstart', this.handleDragStart, { passive: false })
       document.addEventListener('touchmove', this.handleDragMove, { passive: false })
@@ -355,43 +355,43 @@ export default {
       e.preventDefault()
       this.isDragging = true
       this.scrollPaused = true
-      
+
       // Get the starting position (works for both mouse and touch)
       const clientX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX
       this.dragStartX = clientX
       this.dragCurrentX = clientX
-      
+
       // Set cursor style
       if (this.cardsContainer) {
         this.cardsContainer.style.cursor = 'grabbing'
       }
     },
-    
+
     handleDragMove(e) {
       if (!this.isDragging) return
       e.preventDefault()
-      
+
       // Get current position (works for both mouse and touch)
       const clientX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX
       this.dragCurrentX = clientX
-      
+
       // Calculate the drag offset
       const dragDelta = this.dragCurrentX - this.dragStartX
-      
+
       // Update the position of the ticker
       const newPosition = this.tickerPosition - dragDelta
-      
+
       // Apply the transform
       if (this.cardsContainer) {
         this.cardsContainer.style.transform = `translateX(-${newPosition}px)`
       }
-      
+
       // Update the start position for the next move
       this.dragStartX = this.dragCurrentX
-      
+
       // Update the ticker position
       this.tickerPosition = newPosition
-      
+
       // Handle wrapping if we've scrolled too far in either direction
       if (this.tickerPosition < 0) {
         this.tickerPosition += this.totalCardsWidth
@@ -399,13 +399,13 @@ export default {
         this.tickerPosition -= this.totalCardsWidth
       }
     },
-    
+
     handleDragEnd(e) {
       if (!this.isDragging) return
-      
+
       this.isDragging = false
       this.scrollPaused = false
-      
+
       // Reset cursor style
       if (this.cardsContainer) {
         this.cardsContainer.style.cursor = 'grab'
@@ -417,7 +417,7 @@ export default {
     if (this.autoRotationTimer) {
       clearInterval(this.autoRotationTimer)
     }
-    
+
     // Clear carousel interval
     if (this.carouselInterval) {
       clearInterval(this.carouselInterval)
@@ -434,20 +434,20 @@ export default {
       wrapper.removeEventListener('mouseenter', this.handleMouseEnter)
       wrapper.removeEventListener('mouseleave', this.handleMouseLeave)
     }
-    
+
     // Remove touch event listeners
     const carouselTrack = this.$refs.carouselTrack
     if (carouselTrack) {
       carouselTrack.removeEventListener('touchstart', this.handleTouchStart)
       carouselTrack.removeEventListener('touchend', this.handleTouchEnd)
     }
-    
+
     // Clean up drag event listeners
     if (this.cardsContainer) {
       this.cardsContainer.removeEventListener('mousedown', this.handleDragStart)
       this.cardsContainer.removeEventListener('touchstart', this.handleDragStart)
     }
-    
+
     document.removeEventListener('mousemove', this.handleDragMove)
     document.removeEventListener('mouseup', this.handleDragEnd)
     document.removeEventListener('touchmove', this.handleDragMove)
@@ -623,7 +623,7 @@ export default {
   .testimonial-gradient-right {
     width: 80px;
   }
-  
+
   /* Mobile Carousel Styles */
   .mobile-carousel {
     width: 100%;
@@ -631,7 +631,7 @@ export default {
     padding: 8px 16px;
     overflow: visible;
   }
-  
+
   .carousel-container {
     width: 100%;
     overflow: visible;
@@ -639,12 +639,12 @@ export default {
     position: relative;
     min-height: 200px; /* Minimum height to prevent layout shifts */
   }
-  
+
   .carousel-track {
     display: flex;
     transition: transform 0.3s ease-in-out;
   }
-  
+
   .carousel-slide {
     min-width: 100%;
     opacity: 0;
@@ -657,13 +657,13 @@ export default {
     margin-bottom: 8px;
     pointer-events: none;
   }
-  
+
   .carousel-slide.active {
     opacity: 1;
     position: relative;
     pointer-events: auto;
   }
-  
+
   .carousel-navigation {
     display: flex;
     justify-content: center;
@@ -671,7 +671,7 @@ export default {
     margin-top: 24px;
     gap: 24px;
   }
-  
+
   .carousel-nav-btn {
     background: white;
     border: 1px solid #e5e5e5;
@@ -685,12 +685,12 @@ export default {
     color: #42526b;
     transition: all 0.2s ease;
   }
-  
+
   .carousel-nav-btn:hover {
     background-color: #f8f8f8;
     color: #7534ff;
   }
-  
+
 
 }
 </style>

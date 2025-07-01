@@ -24,8 +24,8 @@ export default async (endpoint, params = {}) => {
     type: meta?.type,
     title: meta?.title,
     description: meta?.description,
-    mainImage: meta?.mainImage.imageUrl || meta?.mainImage.image.url,
-    mainImageAlt: meta?.mainImage.imageAlt,
+    mainImage: meta?.mainImage?.imageUrl || meta?.mainImage?.image?.url,
+    mainImageAlt: meta?.mainImage?.imageAlt,
     keywords: meta?.keywords.map((item) => item?.text),
   }
   const siteMetaData = getSiteMeta(metaData)

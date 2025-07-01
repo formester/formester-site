@@ -10,9 +10,9 @@
           class="border-sm-none border-start ps-3 d-flex flex-column align-items-start"
         >
           <nuxt-img
-            :src="item.cardImage.image?.url || item.cardImage.imageUrl"
+            :src="item.cardImage?.image?.url || item.cardImage?.imageUrl"
             class="img-fluid"
-            :alt="item.cardImage.imageAlt"
+            :alt="item.cardImage?.imageAlt"
             loading="lazy"
           />
           <h4 class="sub__section-heading mt-4">{{ item.title }}</h4>

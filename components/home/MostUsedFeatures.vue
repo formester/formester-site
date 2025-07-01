@@ -26,8 +26,8 @@
               ]"
             >
               <nuxt-img
-                :src="feature.icon.imageUrl || feature.icon.image.url"
-                :alt="feature.icon.imageAlt"
+                :src="feature.icon?.imageUrl || feature.icon?.image?.url"
+                :alt="feature.icon?.imageAlt"
                 loading="lazy"
                 :class="{ 'grey-filter': activeIndex !== index }"
               />
@@ -87,8 +87,8 @@
     <div class="d-lg-none">
       <div v-for="feature in itemList" :key="feature.title" class="mt-5">
         <nuxt-img
-          :src="feature.cardImage.imageUrl || feature.cardImage.image.url"
-          :alt="feature.cardImage.imageAlt"
+          :src="feature.cardImage?.imageUrl || feature.cardImage?.image?.url"
+          :alt="feature.cardImage?.imageAlt"
           class="mb-4 img-fluid"
           loading="lazy"
         />
@@ -97,8 +97,8 @@
             class="feature__icon-wrapper d-flex align-items-center justify-content-center"
           >
             <nuxt-img
-              :src="feature.icon.imageUrl || feature.icon.image.url"
-              :alt="feature.icon.imageAlt"
+              :src="feature.icon?.imageUrl || feature.icon?.image?.url"
+              :alt="feature.icon?.imageAlt"
               loading="lazy"
             />
           </div>
@@ -157,7 +157,7 @@ export default {
       )
     },
     activeFeatureImageAlt() {
-      return this.itemList[this.activeIndex].cardImage.imageAlt
+      return this.itemList[this.activeIndex].cardImage?.imageAlt
     },
   },
   methods: {
