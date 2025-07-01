@@ -8,7 +8,7 @@
         class="mb-5 mt-4"
         :class="getCategoryClasses(idx)"
       >
-        <h3 class="faq__heading">{{ category.title }}</h3>
+        <h3 class="faq__heading">{{ category?.title }}</h3>
         <div class="accordion accordion-flush faq-container" :id="`accordionFaqs-${idx}`">
           <div
             v-for="(faq, index) in category.faqs"
