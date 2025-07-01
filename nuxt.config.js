@@ -157,6 +157,7 @@ export default {
   gtm: {
     enabled: true,
     id: 'GTM-5GX7R49B',
+    scriptURL: false,
     noscript: false
   },
 
