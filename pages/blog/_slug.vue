@@ -1,16 +1,16 @@
 <template>
   <div>
-    <div class="container position-relative">
+    <div class="container position-relative mt-5">
       <article
         v-if="blogData"
-        class="container mw-920 mt-8rem"
+        class="article-container container mw-920"
         :class="{ 'mb-3rem': !(blogData?.cta && blogData.cta.hidden) }"
       >
         <div class="blog__header">
           <NuxtLink
             :to="`/blog/`"
             class="blog__back"
-            :class="blogBody?.toc.length ? 'blog__back__margin' : ''"
+            :class="tableOfContents.length ? 'blog__back__margin' : ''"
           >
             <span>← Back</span>
           </NuxtLink>
@@ -45,7 +45,7 @@
           </div>
         </div>
         <nav
-          v-if="blogBody?.toc.length"
+          v-if="tableOfContents.length"
           class="navbar navbar-expand bg-white py-3"
         >
           <div class="collapse navbar-collapse">
@@ -62,7 +62,7 @@
                   Table of Contents
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="tocMenuLink">
-                  <li v-for="link of blogBody.toc" :key="link.id">
+                  <li v-for="link of tableOfContents" :key="link.id">
                     <NuxtLink class="dropdown-link" :to="`#${link.id}`">
                       {{ link.text }}
                     </NuxtLink>
@@ -95,7 +95,9 @@
           </a>
         </div>
         <div class="blog__content" ref="blogContent">
-          <nuxt-content :document="blogBody" v-if="blogBody" />
+          <!-- <nuxt-content :document="processedBlogData" v-if="processedBlogData" /> -->
+          <div class="nuxt-content" v-html="processedBlogData"/>
+
           <div class="popup__img" ref="popupImg" :style="{ display: showPopup ? 'block' : 'none' }">
             <span class="image-preview-close" @click="closePopup">&times;</span>
             <img :src="popupImageSrc" :alt="popupImageAlt" @click="closePopup" ref="popupImage" />
@@ -115,7 +117,7 @@
           </div>
         </div>
 
-        <!-- 
+        <!--
           <template>
             <div class="mt-5" id="disqus_thread"></div>
           </template>
@@ -142,8 +144,8 @@ import CopyLinkIcon from '../../components/icons/copyLink.vue'
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
 import axios from 'axios'
-import { parseMarkdown } from '~/utils/parseMarkdown'
 import readingTime from '@/utils/readingTime'
+import { marked } from 'marked'
 
 export default {
   components: {
@@ -182,7 +184,6 @@ export default {
       metaImage: blog.attributes.metaImage.map((item) => item.imageURL),
       readingStats: readingTime(blog.attributes.body),
     }
-    const blogBody = await parseMarkdown(blogData?.body)
 
     //Get Related Articles
     let { data } = await axios.get(
@@ -202,7 +203,7 @@ export default {
       }
     })
 
-    return { blogData, blogBody, relatedArticles }
+    return { blogData, relatedArticles }
   },
   mounted() {
     this.setupImageClickHandlers()
@@ -224,7 +225,7 @@ export default {
     },
     setupKeyboardHandler() {
       document.addEventListener('keydown', (evt) => {
-        if (evt.keyCode === 27) {
+        if (evt.key === 'Escape') {
           this.closePopup()
         }
       })
@@ -292,6 +293,53 @@ export default {
     },
     encodedUrl() {
       return encodeURIComponent(process.env.baseUrl + this.$route.fullPath)
+    },
+    processedBlogData() {
+      const renderer = new marked.Renderer()
+
+      // Override heading renderer to add IDs
+      renderer.heading = function(text, level) {
+        if (level >= 2 && level <= 3) {
+          const id = text
+            .toLowerCase()
+            .replace(/[^\w\s-]/g, '') // Remove special characters
+            .replace(/\s+/g, '-') // Replace spaces with hyphens
+            .replace(/--+/g, '-') // Replace multiple hyphens with single
+            .replace(/^-+|-+$/g, '') // Remove leading/trailing hyphens
+
+          return `<h${level} id="${id}">${text}</h${level}>`
+        }
+        return `<h${level}>${text}</h${level}>`
+      }
+
+      return marked(this.blogData?.body || '', { renderer })
+    },
+    tableOfContents() {
+      const toc = []
+      const content = this.blogData?.body || ''
+
+      // Extract headings from markdown
+      const headingRegex = /^(#{2,3})\s+(.+)$/gm
+      let match
+
+      while ((match = headingRegex.exec(content)) !== null) {
+        const level = match[1].length
+        const text = match[2].trim()
+        const id = text
+          .toLowerCase()
+          .replace(/[^\w\s-]/g, '') // Remove special characters
+          .replace(/\s+/g, '-') // Replace spaces with hyphens
+          .replace(/--+/g, '-') // Replace multiple hyphens with single
+          .replace(/^-+|-+$/g, '') // Remove leading/trailing hyphens
+
+        toc.push({
+          id,
+          text,
+          level
+        })
+      }
+
+      return toc
     },
   },
   head() {
@@ -402,8 +450,11 @@ p {
 }
 nav {
   position: sticky;
-  top: 64px;
-  z-index: 9999;
+  top: 72px;
+  z-index: 100;
+}
+.article-container{
+    margin-top: 9rem;
 }
 .article__heading {
   font-size: 2.25rem;
@@ -425,53 +476,6 @@ nav {
   color: var(--clr-text-primary);
 }
 
-.nuxt-content {
-  margin-top: 18px;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.4px;
-  color: var(--clr-text-primary);
-}
-
-.nuxt-content p {
-  margin-bottom: 1.4rem;
-}
-
-.nuxt-content h2 {
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 38px;
-  color: var(--clr-text-primary);
-  margin-top: 64px;
-  margin-bottom: 24px;
-}
-
-.nuxt-content h3 {
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 28px;
-  color: var(--clr-text-primary);
-  margin-top: 48px;
-  margin-bottom: 24px;
-}
-
-.nuxt-content a {
-  color: var(--clr-primary);
-  text-decoration: underline;
-}
-
-.nuxt-content img {
-  height: auto;
-  width: 100%;
-  margin-top: 8px;
-  margin-bottom: 16px;
-}
-
-.nuxt-content ul li,
-.nuxt-content ol li {
-  margin-top: 0px;
-  margin-bottom: 16px;
-}
 
 .sm-text {
   font-size: 14px;
@@ -514,19 +518,36 @@ nav {
 }
 
 .dropdown-menu {
-  border: 0 solid #e4e4e7;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(12px);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.95);
   max-height: 450px;
   overflow-y: auto;
   overflow-x: hidden;
+  padding: 8px 0;
+  margin-top: 8px;
 }
 
 .dropdown-link {
-  padding: 0.5em;
+  padding: 12px 16px;
   min-width: 750px;
   width: 100%;
   display: block;
+  color: #374151;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.4;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.dropdown-link:hover {
+  background-color: #f3f4f6;
+  color: var(--clr-primary);
+  border-left-color: var(--clr-primary);
+  text-decoration: none;
 }
 
 .blog__header {
@@ -586,7 +607,7 @@ nav {
 
 @media only screen and (max-width: 992px) {
   nav {
-    top: 48px;
+    top: 60px;
   }
   .dropdown-link {
     min-width: 680px;
@@ -629,5 +650,55 @@ nav {
   .dropdown-link {
     min-width: 250px;
   }
+}
+</style>
+
+<style>
+.nuxt-content {
+  margin-top: 18px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  color: var(--clr-text-primary);
+}
+
+.nuxt-content p {
+  margin-bottom: 1.4rem;
+}
+
+.nuxt-content h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 38px;
+  color: var(--clr-text-primary);
+  margin-top: 64px;
+  margin-bottom: 24px;
+}
+
+.nuxt-content h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+  color: var(--clr-text-primary);
+  margin-top: 48px;
+  margin-bottom: 24px;
+}
+
+.nuxt-content a {
+  color: var(--clr-primary);
+  text-decoration: underline;
+}
+
+.nuxt-content img {
+  height: auto;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.nuxt-content ul li,
+.nuxt-content ol li {
+  margin-top: 0px;
+  margin-bottom: 16px;
 }
 </style>
