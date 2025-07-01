@@ -61,9 +61,22 @@ export default {
         type: 'text/javascript',
         charset: 'utf-8'
       },
+      {
+        hid: 'gtag-init',
+        innerHTML: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){ dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', 'G-WY8RMY11PE');
+        `,
+        type: 'text/javascript',
+        charset: 'utf-8'
+      }
+      
     ],
     __dangerouslyDisableSanitizersByTagID: {
-      'datalayer-init': ['innerHTML']
+      'datalayer-init': ['innerHTML'],
+      'gtag-init': ['innerHTML']
     }
   },
 
@@ -144,7 +157,6 @@ export default {
   gtm: {
     enabled: true,
     id: 'GTM-5GX7R49B',
-    scriptURL: false, // disables auto-injecting the GTM script tag
     noscript: false
   },
 
