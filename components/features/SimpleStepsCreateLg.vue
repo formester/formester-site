@@ -44,12 +44,12 @@
               </div>
               <div
                 class="col-lg-5 m-auto"
-                v-if="item.cardImage.image?.url || item.cardImage.imageUrl"
+                v-if="item.cardImage?.image?.url || item.cardImage?.imageUrl"
               >
                 <nuxt-img
                   :src="item.cardImage.image?.url || item.cardImage.imageUrl"
                   class="w-lg-40 d-block img-fluid my-auto"
-                  :alt="item.cardImage.imageAlt"
+                  :alt="item.cardImage?.imageAlt"
                   loading="lazy"
                 />
               </div>

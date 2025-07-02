@@ -64,13 +64,13 @@ export default {
   },
   computed: {
     title() {
-      return this.ctaValue.title || []
+      return this.ctaValue?.title || []
     },
     description() {
-      return this.ctaValue.description || ''
+      return this.ctaValue?.description || ''
     },
     buttons() {
-      return this.ctaValue.buttons || []
+      return this.ctaValue?.buttons || []
     },
   },
 }

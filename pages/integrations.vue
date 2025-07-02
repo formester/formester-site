@@ -92,6 +92,7 @@ export default {
           name: 'HubSpot',
           desc: 'Create new deals with new contacts in your CRM.',
           img: 'hubspot.png',
+          url: '/integrations/hubspot/'
         },
         {
           name: 'Gmail',
@@ -117,9 +118,9 @@ export default {
       const metaData = {
         type: 'website',
         url: 'https://formester.com/integrations/',
-        title: 'Slack Integration | Google Sheets Integration - Formester',
+        title: 'Formester Integrations | Automate Your Workflows',
         description:
-          'Streamline your workflow with our Slack and Google Sheets integration. Try Formester today and boost productivity in just a few clicks! Get started today.',
+          'Automate your workflows with powerful form integrations. Set up triggers and transfer data from your forms to 1000+ Apps. Get started - It is free!',
         mainImage: 'https://formester.com/formester-logo-meta-image.png',
         mainImageAlt: 'Formester Logo',
       }
@@ -128,7 +129,7 @@ export default {
   },
   head() {
     return {
-      title: 'Slack Integration | Google Sheets Integration - Formester',
+      title: 'Formester Integrations | Automate Your Workflows',
       meta: [...this.meta],
       link: [
         {
@@ -143,9 +144,9 @@ export default {
     return {
       '@context': 'http://schema.org',
       '@type': 'Corporation',
-      name: 'Slack Integration | Google Sheets Integration - Formester',
+      name: 'Formester Integrations | Automate Your Workflows',
       description:
-        'Streamline your workflow with our Slack and Google Sheets integration. Try Formester today and boost productivity in just a few clicks! Get started today.',
+        'Automate your workflows with powerful form integrations. Set up triggers and transfer data from your forms to 1000+ Apps. Get started - It is free!',
       logo: 'https://formester.com/logo.png',
       url: 'https://formester.com',
       address: {
