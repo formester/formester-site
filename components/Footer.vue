@@ -176,7 +176,7 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/tally-so-alternative/" class="footer__link">
+                <NuxtLink to="/tally-forms-alternative/" class="footer__link">
                   Formester vs Tally Forms
                 </NuxtLink>
               </li>
