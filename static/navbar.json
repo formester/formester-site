@@ -397,22 +397,6 @@
     }
   },
   {
-    "id": 364,
-    "slug": "pdf-editor",
-    "navTitle": "PDF Editor",
-    "navDescription": "Edit and style PDFs",
-    "featureCategory": "Form Builder",
-    "featurePlan": "Business",
-    "navIcon": {
-      "imageUrl": null,
-      "imageAlt": "pdf icon",
-      "image": {
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/file_code_01_5c7679ba32.svg",
-        "alt": "pdf icon"
-      }
-    }
-  },
-  {
     "id": 397,
     "slug": "summary-analytics",
     "navTitle": "Summary Analytics",
@@ -455,7 +439,7 @@
       "imageUrl": null,
       "imageAlt": "pdf icon",
       "image": {
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/icon_d06783ec37.svg",
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Convert_PDF_7a5317fd6c.svg",
         "alt": "pdf icon"
       }
     }
@@ -501,10 +485,10 @@
     "featurePlan": "Business",
     "navIcon": {
       "imageUrl": null,
-      "imageAlt": "pen icon",
+      "imageAlt": "domain icon",
       "image": {
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/pencil_line_61da15ee94.svg",
-        "alt": "pen icon"
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/domain_7e0984bdb1.svg",
+        "alt": "domain icon"
       }
     }
   },
@@ -517,10 +501,42 @@
     "featurePlan": "Personal",
     "navIcon": {
       "imageUrl": null,
-      "imageAlt": "pen icon",
+      "imageAlt": "click icon",
       "image": {
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/pencil_line_61da15ee94.svg",
-        "alt": "pen icon"
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/collab_d35dd449de.svg",
+        "alt": "click icon"
+      }
+    }
+  },
+  {
+    "id": 529,
+    "slug": "auto-fill-forms-with-external-data",
+    "navTitle": "Auto Fill Forms",
+    "navDescription": "Pre populate forms with external data.",
+    "featureCategory": "Data Handling",
+    "featurePlan": "Personal",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "click icon",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/API_1d18d8d756.svg",
+        "alt": "click icon"
+      }
+    }
+  },
+  {
+    "id": 530,
+    "slug": "create-fillable-pdf-forms",
+    "navTitle": "Create Fillable PDF Forms",
+    "navDescription": "Populate blank PDFs with form data.",
+    "featureCategory": "Form Builder",
+    "featurePlan": "Business",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "fillable pdf icon",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Fillable_PDF_50b4621522.svg",
+        "alt": "fillable pdf icon"
       }
     }
   }
