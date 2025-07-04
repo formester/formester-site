@@ -38,10 +38,14 @@ export default {
         async: true,
       },
       {
+        hid: 'partytown-init',
         innerHTML: `
-          partytown = { forward: ['dataLayer.push', 'gtag'] };
+          window.partytown = {
+            forward: ['dataLayer.push', 'gtag']
+          };
         `,
-        type: 'text/javascript'
+        type: 'text/javascript',
+        charset: 'utf-8'
       },
       {
         src: '/~partytown/partytown.js',
@@ -76,7 +80,8 @@ export default {
     ],
     __dangerouslyDisableSanitizersByTagID: {
       'datalayer-init': ['innerHTML'],
-      'gtag-init': ['innerHTML']
+      'gtag-init': ['innerHTML'],
+      'partytown-init': ['innerHTML']
     }
   },
 
@@ -149,17 +154,9 @@ export default {
     '@nuxtjs/pwa',
     // '@nuxthq/studio',
     '@nuxt/content',
-    '@nuxtjs/sitemap',
-    '@nuxtjs/gtm',
+    '@nuxtjs/sitemap'
   ],
 
-  // GTM configuration
-  gtm: {
-    enabled: true,
-    id: 'GTM-5GX7R49B',
-    scriptURL: '',
-    noscript: false
-  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
