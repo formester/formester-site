@@ -151,6 +151,7 @@ export default {
     },
     fallback: true,
     concurrency: 200,
+    interval: 100,
   },
   content: {
     liveEdit: false,
