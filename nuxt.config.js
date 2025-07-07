@@ -37,7 +37,52 @@ export default {
         defer: true,
         async: true,
       },
+      {
+        hid: 'partytown-init',
+        innerHTML: `
+          window.partytown = {
+            forward: ['dataLayer.push', 'gtag']
+          };
+        `,
+        type: 'text/javascript',
+        charset: 'utf-8'
+      },
+      {
+        src: '/~partytown/partytown.js',
+        async: true
+      },
+      {
+        type: 'text/partytown',
+        src: 'https://www.googletagmanager.com/gtm.js?id=GTM-5GX7R49B',
+      },
+      {
+        hid: 'datalayer-init',
+        innerHTML: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){ dataLayer.push(arguments); }
+          gtag('js', new Date());
+        `,
+        type: 'text/javascript',
+        charset: 'utf-8'
+      },
+      {
+        hid: 'gtag-init',
+        innerHTML: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){ dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', 'G-WY8RMY11PE');
+        `,
+        type: 'text/javascript',
+        charset: 'utf-8'
+      }
+      
     ],
+    __dangerouslyDisableSanitizersByTagID: {
+      'datalayer-init': ['innerHTML'],
+      'gtag-init': ['innerHTML'],
+      'partytown-init': ['innerHTML']
+    }
   },
 
   router: {},
@@ -109,15 +154,9 @@ export default {
     '@nuxtjs/pwa',
     // '@nuxthq/studio',
     '@nuxt/content',
-    '@nuxtjs/sitemap',
-    '@nuxtjs/gtm',
+    '@nuxtjs/sitemap'
   ],
 
-  // GTM configuration
-  gtm: {
-    enabled: true,
-    id: 'GTM-5GX7R49B',
-  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
