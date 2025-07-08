@@ -10,7 +10,7 @@ export const free = {
     '100 MB file uploads',
     '1 Google Sheets Integration',
     '1 Webhook',
-    '10 Signatures',
+    'e-Signatures',
     'No Members'
   ],
 }
@@ -42,7 +42,7 @@ export const personalMonthly = {
     '1 GB file uploads',
     'Unlimited Google Sheets Integration',
     '50 Webhooks',
-    '250 Signatures',
+    'e-Signatures',
     'No Members'
   ],
 }
@@ -59,7 +59,7 @@ export const businessMonthly = {
     '50 GB file uploads',
     'Unlimited Google Sheets Integration',
     'Unlimited Webhooks',
-    '2,500 Signatures',
+    'e-Signatures',
     "25 Members"
   ],
 }
@@ -77,7 +77,7 @@ export const personalYearly = {
     '1 GB file uploads',
     'Unlimited Google Sheets Integration',
     '50 Webhooks',
-    '250 Signatures',
+    'e-Signatures',
     'No Members'
   ],
 }
@@ -95,7 +95,7 @@ export const businessYearly = {
     '50 GB file uploads',
     'Unlimited Google Sheets Integration',
     'Unlimited Webhooks',
-    '2,500 Signatures',
+    'e-Signatures',
     '25 Members'
   ],
 }
@@ -169,9 +169,9 @@ export const comparisonTableFeatures = [
   },
   {
     name: 'Signatures',
-    free: '10',
-    pro: '250',
-    business: '2,500',
+    free: 'Yes',
+    pro: 'Yes',
+    business: 'Yes',
   },
   {
     name: 'SMTP Integration',
