@@ -41,7 +41,7 @@
         <div
           class="categoryType-container d-flex align-items-center justify-content-between"
         >
-          <h3 class="category-heading pointer">{{ categoryType }}</h3>
+          <h3 class="category-heading pointer">{{ formatCategoryHeading(categoryType) }}</h3>
           <div>
             <nuxt-img
               class="collapse-arrow-btn pointer"
@@ -88,6 +88,13 @@ export default {
     }
   },
   methods: {
+    formatCategoryHeading(str) {
+      if (!str) return '';
+      // Insert space before all caps and replace underscores with space
+      let formatted = str.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/_/g, ' ');
+      // Replace any occurrence of 'Pdf' (case-insensitive) with 'PDF'
+      return formatted.replace(/Pdf/gi, 'PDF');
+    },
     toggleCollapse(categoryType) {
       this.$set(this.isExpanded, categoryType, !this.isExpanded[categoryType])
       localStorage.setItem('isCollapsedState', JSON.stringify(this.isExpanded))
