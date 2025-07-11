@@ -26,6 +26,7 @@
         frameborder="0"
         width="100%"
         class="template-preview__iframe mt-3"
+        loading="lazy"
       />
     </section>
 
@@ -55,8 +56,8 @@
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
 // Components
-import MoreTemplates from '../../components/template/MoreTemplates.vue'
-import Faq from '../../components/features/Faq.vue'
+const MoreTemplates = () => import('../../components/template/MoreTemplates.vue')
+const Faq = () => import('../../components/features/Faq.vue')
 import isEmpty from 'lodash/isEmpty'
 import getTemplatesAndCategories from '@/utils/getTemplatesAndCategories'
 
@@ -240,8 +241,10 @@ export default {
 }
 
 .template-preview__iframe {
+  min-height: 600px;
   height: calc(100vh - 140px);
   overflow-y: auto;
+  display: block;
 }
 
 @media only screen and (max-width: 991px) {
@@ -268,6 +271,7 @@ export default {
 /* About template description styling */
 .about-template__description {
   padding: 2rem 0;
+  min-height: 100px;
 }
 
 .about-template__description h1,
