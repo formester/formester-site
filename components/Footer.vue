@@ -138,13 +138,13 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/formester-vs-google-forms/" class="footer__link">
+                <NuxtLink to="/google-forms-alternative/" class="footer__link">
                   Formester vs Google Forms
                 </NuxtLink>
               </li>
               <li class="mt-2">
                 <NuxtLink
-                  to="/formester-vs-microsoft-forms/"
+                  to="/microsoft-forms-alternative/"
                   class="footer__link"
                 >
                   Formester vs Microsoft Forms
@@ -345,6 +345,14 @@
                   class="footer__link"
                 >
                   Formester for Training & Assessments
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
+                <NuxtLink
+                  to="/use-case/formester-for-compliance/"
+                  class="footer__link"
+                >
+                  Formester for Compliance
                 </NuxtLink>
               </li>
             </ul>
