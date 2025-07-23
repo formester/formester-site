@@ -169,7 +169,24 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    extend(config, { isClient }) {
+      // Configure Vue to recognize custom elements
+      if (config.module && config.module.rules) {
+        const vueRule = config.module.rules.find(rule => rule.test && rule.test.toString().includes('vue'))
+        if (vueRule && vueRule.use) {
+          const vueLoader = vueRule.use.find(use => use.loader && use.loader.includes('vue-loader'))
+          if (vueLoader && vueLoader.options) {
+            vueLoader.options.compilerOptions = vueLoader.options.compilerOptions || {}
+            vueLoader.options.compilerOptions.isCustomElement = (tag) => {
+              const customElements = ['pdf-box']
+              return customElements.includes(tag)
+            }
+          }
+        }
+      }
+    }
+  },
   //   For catching 404 pages
   generate: {
     routes: async () => {
