@@ -22,12 +22,17 @@
       </div>
 
       <iframe
+        v-if="template.slug !== $route.params.slug"
         :src="template.surveyUrl"
         frameborder="0"
         width="100%"
         class="template-preview__iframe mt-3"
         loading="lazy"
       />
+
+      <div v-else>
+        <img :src="template.previewImages[0]" alt="Template Preview" />
+      </div>
     </section>
 
     <!-- About template section -->
@@ -60,20 +65,54 @@ const MoreTemplates = () => import('../../components/template/MoreTemplates.vue'
 const Faq = () => import('../../components/features/Faq.vue')
 import isEmpty from 'lodash/isEmpty'
 import getTemplatesAndCategories from '@/utils/getTemplatesAndCategories'
+import getStrapiData from '@/utils/getStrapiData'
 
 export default {
   components: {
     MoreTemplates,
     Faq,
   },
-  async asyncData({ params, payload }) {
+  async asyncData({ params, payload, error }) {
     // payload is used during static site generation and api call during developement
+
     if (payload) {
       return payload
     }
-    const { templates, categories } = await getTemplatesAndCategories()
-    const template = templates.find((template) => template.slug === params.slug)
-    return { template, categories }
+
+    try {
+      const slug = params.slug
+      
+      // First, get templates and categories from the main API
+      const { templates, categories } = await getTemplatesAndCategories()
+      const template = templates.find((template) => template.slug === slug)
+      
+      if (!template) {
+        error({ statusCode: 404, message: 'Template not found' })
+        return
+      }
+
+      // Then try to get additional Strapi data (optional)
+      let head = {}
+      let jsonld = {}
+      let components = []
+      
+      try {
+        const endpoint = `/pdf-templates`
+        const strapiParams = { 'filters[slug][$eqi]': slug }
+        const strapiData = await getStrapiData(endpoint, strapiParams)
+        head = strapiData.head || {}
+        jsonld = strapiData.jsonld || {}
+        components = strapiData.components || []
+      } catch (strapiError) {
+        console.warn('Strapi data not available for template:', slug, strapiError.message)
+        // Continue without Strapi data - it's optional
+      }
+      
+      return { template, categories, head, jsonld, components }
+    } catch (err) {
+      console.error('Error in asyncData:', err)
+      error({ statusCode: 500, message: 'Internal Server Error' })
+    }
   },
   computed: {
     meta() {
