@@ -73,12 +73,12 @@ export default {
     MoreTemplates,
     Faq,
   },
-  async asyncData({ params,  error }) {
-    // payload is used during static site generation and api call during developement
+  async asyncData({ params, payload, error }) {
+    //payload is used during static site generation and api call during developement
 
-    // if (payload) {
-    //   return payload
-    // }
+    if (payload) {
+      return payload
+    }
 
     try {
       const slug = params.slug    
