@@ -22,7 +22,7 @@
       </div>
 
       <iframe
-        v-if="template.slug !== $route.params.slug"
+      v-if="!data || !data.slug"
         :src="template.surveyUrl"
         frameborder="0"
         width="100%"
@@ -31,8 +31,9 @@
       />
 
       <div v-else>
-        <img :src="template.previewImages[0]" alt="Template Preview" />
+        <img v-if="previewImageUrl" :src="previewImageUrl" alt="Template Preview" class="template-preview__image">
       </div>
+
     </section>
 
     <!-- About template section -->
@@ -65,23 +66,22 @@ const MoreTemplates = () => import('../../components/template/MoreTemplates.vue'
 const Faq = () => import('../../components/features/Faq.vue')
 import isEmpty from 'lodash/isEmpty'
 import getTemplatesAndCategories from '@/utils/getTemplatesAndCategories'
-import getStrapiData from '@/utils/getStrapiData'
+import axios from 'axios'
 
 export default {
   components: {
     MoreTemplates,
     Faq,
   },
-  async asyncData({ params, payload, error }) {
+  async asyncData({ params,  error }) {
     // payload is used during static site generation and api call during developement
 
-    if (payload) {
-      return payload
-    }
+    // if (payload) {
+    //   return payload
+    // }
 
     try {
-      const slug = params.slug
-      
+      const slug = params.slug    
       // First, get templates and categories from the main API
       const { templates, categories } = await getTemplatesAndCategories()
       const template = templates.find((template) => template.slug === slug)
@@ -91,24 +91,15 @@ export default {
         return
       }
 
-      // Then try to get additional Strapi data (optional)
-      let head = {}
-      let jsonld = {}
-      let components = []
-      
-      try {
-        const endpoint = `/pdf-templates`
-        const strapiParams = { 'filters[slug][$eqi]': slug }
-        const strapiData = await getStrapiData(endpoint, strapiParams)
-        head = strapiData.head || {}
-        jsonld = strapiData.jsonld || {}
-        components = strapiData.components || []
-      } catch (strapiError) {
-        console.warn('Strapi data not available for template:', slug, strapiError.message)
-        // Continue without Strapi data - it's optional
-      }
-      
-      return { template, categories, head, jsonld, components }
+    const {
+      data: { data },
+    } = await axios.get(`${process.env.strapiUrl}/api/pdf-templates`, {
+    params: {
+      'filters[slug][$eqi]': slug,
+      populate: 'deep',
+    },
+  })      
+      return { template, categories, data: data[0] }
     } catch (err) {
       console.error('Error in asyncData:', err)
       error({ statusCode: 500, message: 'Internal Server Error' })
@@ -133,6 +124,11 @@ export default {
         mainImageAlt: 'Formester Template',
       }
       return getSiteMeta(metaData)
+    },
+    previewImageUrl() {
+      return (
+        this.data?.previewImages?.[0]?.image?.url ?? ''
+      );
     },
     faqsSchema() {
       const mainEntity = (this.template.faqs || []).map((faq) => {
@@ -223,6 +219,13 @@ export default {
 </script>
 
 <style scoped>
+.template-preview__image {
+  margin-top: 1rem;
+  width: 100%;
+  height: auto;
+}
+
+
 .template_hero {
   gap: 1rem;
   margin: 2.5rem auto;
