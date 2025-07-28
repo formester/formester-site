@@ -1,38 +1,114 @@
 <template>
   <div>
     <!-- Hero section -->
-    <section class="container d-flex flex-column template_hero">
-      <div class="template-info">
-        <h1 class="section__heading">{{ template.name }}</h1>
+    <section class="container template_hero" :class="{ 'template_hero--split': data && data.slug }">
+      <!-- Non-PDF template layout (original) -->
+      <template v-if="!data || !data.slug">
+        <div class="d-flex flex-column">
+          <div class="template-info">
+            <h1 class="section__heading">{{ template.name }}</h1>
 
-        <!-- New paragraph for each line break -->
-        <p
-          v-for="(line, index) in template.description.split('\n')"
-          :key="index"
-          class="hero__subheading"
-        >
-          {{ line }}
-        </p>
-      </div>
+            <!-- New paragraph for each line break -->
+            <p
+              v-for="(line, index) in template.description.split('\n')"
+              :key="index"
+              class="hero__subheading"
+            >
+              {{ line }}
+            </p>
+          </div>
 
-      <div class="d-flex justify-content-start">
-        <button class="btn btn-use_template" @click="redirectTo">
-          Use Template
-        </button>
-      </div>
+          <div class="d-flex justify-content-start">
+            <button class="btn btn-use_template" @click="redirectTo">
+              Use Template
+            </button>
+          </div>
 
-      <iframe
-      v-if="!data || !data.slug"
-        :src="template.surveyUrl"
-        frameborder="0"
-        width="100%"
-        class="template-preview__iframe mt-3"
-        loading="lazy"
-      />
+          <iframe
+            :src="template.surveyUrl"
+            frameborder="0"
+            width="100%"
+            class="template-preview__iframe mt-3"
+            loading="lazy"
+          />
+        </div>
+      </template>
 
-      <div v-else>
-        <img v-if="previewImageUrl" :src="previewImageUrl" alt="Template Preview" class="template-preview__image">
-      </div>
+      <!-- PDF template layout (left-right split) -->
+      <template v-else>
+        <div class="row align-items-center">
+          <!-- Left side: Content -->
+          <div class="col-lg-6">
+            <div class="template-info">
+              <h1 class="section__heading">{{ template.name }}</h1>
+
+              <!-- New paragraph for each line break -->
+              <p
+                v-for="(line, index) in template.description.split('\n')"
+                :key="index"
+                class="hero__subheading"
+              >
+                {{ line }}
+              </p>
+            </div>
+
+            <div class="d-flex justify-content-start">
+              <button class="btn btn-use_template" @click="redirectTo">
+                Use Template
+              </button>
+            </div>
+          </div>
+
+          <!-- Right side: PDF Images -->
+          <div class="col-lg-6">
+            <!-- Single image -->
+            <img v-if="previewImages.length === 1" :src="previewImages[0].url" alt="Template Preview" class="template-preview__image">
+            
+            <!-- Multiple images carousel -->
+            <div v-else-if="previewImages.length > 1" class="carousel-outer-wrapper">
+              <VueSlickCarousel
+                ref="slick"
+                :arrows="true"
+                :dots="false"
+                :infinite="true"
+                :autoplay="false"
+                :autoplaySpeed="5000"
+                :slidesToShow="1"
+                :responsive="slickResponsive"
+                @afterChange="handleAfterChange"
+                @beforeChange="handleBeforeChange"
+              >
+                <template #prevArrow>
+                  <button class="carousel-arrow left desktop-arrow" @click="goToPrev" aria-label="Previous image">
+                    <img src="/arrow-left.svg" alt="Previous" class="arrow-icon" />
+                  </button>
+                </template>
+                <template #nextArrow>
+                  <button class="carousel-arrow right desktop-arrow" @click="goToNext" aria-label="Next image">
+                    <img src="/arrow-right.svg" alt="Next" class="arrow-icon" />
+                  </button>
+                </template>
+                <div
+                  v-for="(image, idx) in previewImages"
+                  :key="image.id || idx"
+                  class="carousel-slide-inner"
+                >
+                  <img :src="image.url" :alt="image.alt || 'Template Preview'" class="template-preview__image carousel-image">
+                </div>
+              </VueSlickCarousel>
+              <!-- Mobile arrows container for <=768px -->
+              <div class="mobile-arrows-container">
+                <button class="carousel-arrow left" @click="goToPrev" aria-label="Previous image">
+                  <img src="/arrow-left.svg" alt="Previous" class="arrow-icon" />
+                </button>
+                <button class="carousel-arrow right" @click="goToNext" aria-label="Next image">
+                  <img src="/arrow-right.svg" alt="Next" class="arrow-icon" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </template>
 
     </section>
 
@@ -64,6 +140,9 @@ import getSiteMeta from '../../utils/getSiteMeta'
 // Components
 const MoreTemplates = () => import('../../components/template/MoreTemplates.vue')
 const Faq = () => import('../../components/features/Faq.vue')
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 import isEmpty from 'lodash/isEmpty'
 import getTemplatesAndCategories from '@/utils/getTemplatesAndCategories'
 import axios from 'axios'
@@ -72,6 +151,7 @@ export default {
   components: {
     MoreTemplates,
     Faq,
+    VueSlickCarousel,
   },
   async asyncData({ params, payload, error }) {
     //payload is used during static site generation and api call during developement
@@ -105,6 +185,17 @@ export default {
       error({ statusCode: 500, message: 'Internal Server Error' })
     }
   },
+  data() {
+    return {
+      currentSlide: 0,
+      slickResponsive: [
+        {
+          breakpoint: 768,
+          settings: { slidesToShow: 1 }
+        }
+      ]
+    }
+  },
   computed: {
     meta() {
       const { name, description, metaTitle, metaDescription, previewImageUrl } =
@@ -129,6 +220,29 @@ export default {
       return (
         this.data?.previewImages?.[0]?.image?.url ?? ''
       );
+    },
+    previewImages() {
+      if (!this.data?.previewImages) return []
+      
+      return this.data.previewImages.map(item => {
+        // Handle different Strapi image structures
+        let url = ''
+        let alt = ''
+        let id = item.id
+        
+        if (item.image?.url) {
+          url = item.image.url
+          alt = item.image.alternativeText || item.imageAlt || 'Template Preview'
+        } else if (item.image?.data?.attributes?.url) {
+          url = item.image.data.attributes.url
+          alt = item.image.data.attributes.alternativeText || item.imageAlt || 'Template Preview'
+        } else if (item.imageUrl) {
+          url = item.imageUrl
+          alt = item.imageAlt || 'Template Preview'
+        }
+        
+        return { id, url, alt }
+      }).filter(item => item.url) // Only return items with valid URLs
     },
     faqsSchema() {
       const mainEntity = (this.template.faqs || []).map((faq) => {
@@ -213,12 +327,36 @@ export default {
         '_blank'
       )
     },
+    handleAfterChange(currentSlide) {
+      this.currentSlide = currentSlide
+    },
+    handleBeforeChange(oldIndex, newIndex) {
+      this.currentSlide = newIndex
+    },
+    goToPrev() {
+      this.$refs.slick && this.$refs.slick.prev()
+    },
+    goToNext() {
+      this.$refs.slick && this.$refs.slick.next()
+    },
     isEmpty,
   },
 }
 </script>
 
 <style scoped>
+.carousel-arrow.carousel-arrow.right::before
+{
+  display: none !important;
+  content: none !important;
+}
+
+.carousel-arrow.carousel-arrow.left::before
+{
+  display: none !important;
+  content: none !important;
+}
+
 .template-preview__image {
   margin-top: 1rem;
   width: 100%;
@@ -230,6 +368,24 @@ export default {
   gap: 1rem;
   margin: 2.5rem auto;
   padding-top: 6rem;
+}
+
+.template_hero--split {
+  display: flex;
+  flex-direction: column;
+}
+
+.template_hero--split .row {
+  margin: 0;
+  min-height: 60vh;
+}
+
+.template_hero--split .col-lg-6 {
+  padding: 0 15px;
+}
+
+.template_hero--split .template-info {
+  margin-bottom: 2rem;
 }
 
 .template-info {
@@ -292,6 +448,15 @@ export default {
 @media only screen and (max-width: 991px) {
   .template_hero {
     margin: 1rem auto 5rem;
+  }
+  
+  .template_hero--split .row {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .template_hero--split .col-lg-6:first-child {
+    margin-bottom: 2rem;
   }
 }
 
@@ -443,4 +608,142 @@ export default {
     padding-left: 1.5rem;
   }
 }
+
+/* Carousel styles */
+.carousel-outer-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 1rem auto 0;
+}
+
+.carousel-slide-inner {
+  box-sizing: border-box;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.carousel-arrow {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #475467;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(16, 24, 40, 0.08);
+  z-index: 2;
+  transition: background 0.2s;
+  flex-shrink: 0;
+  flex-grow: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.arrow-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+  margin: 0;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.carousel-arrow:hover {
+  background: #f3f4f6;
+}
+
+.carousel-arrow:focus {
+  background: #fff !important;
+  outline: none;
+}
+
+.carousel-arrow:active {
+  background: #f3f4f6 !important;
+}
+
+.carousel-arrow.left {
+  margin-right: 12px;
+}
+
+.carousel-arrow.right {
+  margin-left: 12px;
+}
+
+.mobile-arrows-container {
+  display: none;
+  width: 100%;
+  justify-content: center;
+  margin-top: 24px;
+  gap: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .desktop-arrow {
+    display: none;
+  }
+  .mobile-arrows-container {
+    display: flex;
+  }
+  .carousel-arrow {
+    width: 64px;
+    height: 64px;
+  }
+  .arrow-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+:deep(.slick-list) {
+  overflow: hidden !important;
+  padding-bottom: 32px !important;
+  padding-top: 32px !important;
+}
+
+:deep(.slick-dots) {
+  display: flex !important;
+  justify-content: center;
+  margin-top: 24px;
+  list-style: none;
+}
+
+:deep(.slick-dots li) {
+  margin: 0 4px;
+  padding: 0;
+}
+
+:deep(.slick-dots button) {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  font-size: 0;
+  color: transparent;
+  outline: none;
+  box-shadow: none;
+}
+
+:deep(.slick-dots button:before) {
+  display: none !important;
+}
+
+:deep(.slick-dots .slick-active button) {
+  background: #6434D0;
+  transform: scale(1.2);
+}
+
 </style>
