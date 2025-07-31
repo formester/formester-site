@@ -66,7 +66,9 @@
             
             <!-- Multiple images carousel -->
             <div v-else-if="previewImages.length > 1" class="carousel-outer-wrapper">
-              <VueSlickCarousel
+              <component
+                v-if="VueSlickCarousel"
+                :is="VueSlickCarousel"
                 ref="slick"
                 :arrows="true"
                 :dots="false"
@@ -95,7 +97,7 @@
                 >
                   <img :src="image.url" :alt="image.alt || 'Template Preview'" class="template-preview__image carousel-image">
                 </div>
-              </VueSlickCarousel>
+              </component>
               <!-- Mobile arrows container for <=768px -->
               <div class="mobile-arrows-container">
                 <button class="carousel-arrow left" @click="goToPrev" aria-label="Previous image">
@@ -140,9 +142,16 @@ import getSiteMeta from '../../utils/getSiteMeta'
 // Components
 const MoreTemplates = () => import('../../components/template/MoreTemplates.vue')
 const Faq = () => import('../../components/features/Faq.vue')
-import VueSlickCarousel from 'vue-slick-carousel'
-import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+
+// Dynamic carousel import - only loaded when needed
+const loadCarousel = async () => {
+  const [{ default: VueSlickCarousel }] = await Promise.all([
+    import('vue-slick-carousel'),
+    import('vue-slick-carousel/dist/vue-slick-carousel.css'),
+    import('vue-slick-carousel/dist/vue-slick-carousel-theme.css')
+  ])
+  return VueSlickCarousel
+}
 import isEmpty from 'lodash/isEmpty'
 import getTemplatesAndCategories from '@/utils/getTemplatesAndCategories'
 import axios from 'axios'
@@ -151,7 +160,6 @@ export default {
   components: {
     MoreTemplates,
     Faq,
-    VueSlickCarousel,
   },
   async asyncData({ params, payload, error }) {
     //payload is used during static site generation and api call during developement
@@ -188,12 +196,16 @@ export default {
   data() {
     return {
       currentSlide: 0,
+      totalSlides: 0,
+      VueSlickCarousel: null,
       slickResponsive: [
         {
           breakpoint: 768,
-          settings: { slidesToShow: 1 }
-        }
-      ]
+          settings: {
+            arrows: false,
+          },
+        },
+      ],
     }
   },
   computed: {
@@ -319,6 +331,16 @@ export default {
       jsonldData.push(this.faqsSchema)
     }
     return jsonldData
+  },
+  async mounted() {
+    // Load carousel component only if we have multiple preview images
+    if (this.data && this.data.slug && this.previewImages.length > 1) {
+      try {
+        this.VueSlickCarousel = await loadCarousel()
+      } catch (error) {
+        console.error('Failed to load carousel component:', error)
+      }
+    }
   },
   methods: {
     redirectTo() {
