@@ -70,7 +70,7 @@
         </div>
       </div>
     </div>
-    <HeroTabs class="hero-tabs" :data="{ tabCardContent }" />
+    <HeroTabs class="hero-tabs" />
   </section>
 </template>
 
@@ -121,15 +121,7 @@ export default {
     },
     button: {
       type: Array,
-      default() {
-        return []
-      },
-    },
-    tabCardContent: {
-      type: Array,
-      default() {
-        return []
-      },
+      default: () => [],
     },
   },
 }

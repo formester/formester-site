@@ -54,14 +54,6 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 
-// Define props to receive Strapi data
-const props = defineProps({
-  data: {
-    type: Object,
-    default: () => ({})
-  }
-})
-
 const borderColors = [
   '#FF9100', // Forms (orange)
   '#2F80ED', // Scheduling (blue)
@@ -71,28 +63,8 @@ const borderColors = [
   '#3F2AFF', // Signature (indigo)
 ]
 
-// Helper function to get image URL from different Strapi structures
-const getImageUrl = (imageObj) => {
-  if (!imageObj) return null
-  
-  // Direct URL
-  if (imageObj.imageUrl) return imageObj.imageUrl
-  
-  // Image object with URL
-  if (imageObj.image?.url) return imageObj.image.url
-  
-  // Strapi v4 structure with data.attributes
-  if (imageObj.image?.data?.attributes?.url) return imageObj.image.data.attributes.url
-  
-  // Array format
-  if (imageObj.image?.data?.[0]?.attributes?.url) return imageObj.image.data[0].attributes.url
-  
-  return null
-}
-
-// Fallback static data for when Strapi data is not available
-const fallbackTabs = [
-{
+const tabs = [
+  {
     label: 'Forms',
     title: 'Launch High-Converting Forms in Seconds',
     features: [
@@ -204,31 +176,8 @@ const fallbackTabs = [
   },
 ]
 
-// Process Strapi data into tabs format
-const tabs = computed(() => {
-  // Debug: Log the received data
-  console.log('HeroTabs received data:', props.data)
-  
-  // If no Strapi data, use fallback
-  if (!props.data?.tabCardContent || props.data.tabCardContent.length === 0) {
-    console.log('Using fallback tabs data')
-    return fallbackTabs
-  }
-  
-  console.log('Processing Strapi data:', props.data.tabCardContent)
-  return props.data.tabCardContent.map(tab => ({
-    label: tab.navTitle,
-    title: tab.title,
-    features: tab.feature?.map(feature => ({
-      text: feature.featureTitle,
-      icon: getImageUrl(feature.icon)
-    })) || [],
-    image: getImageUrl(tab.image)
-  }))
-})
-
 const selectedTab = ref(0)
-const currentTab = computed(() => tabs.value[selectedTab.value] || {})
+const currentTab = computed(() => tabs[selectedTab.value])
 
 let intervalId = null
 
@@ -241,9 +190,7 @@ function stopAutoSwitch() {
 
 onMounted(() => {
   intervalId = setInterval(() => {
-    if (tabs.value.length > 0) {
-      selectedTab.value = (selectedTab.value + 1) % tabs.value.length
-    }
+    selectedTab.value = (selectedTab.value + 1) % tabs.length
   }, 7000)
 })
 onUnmounted(() => {
