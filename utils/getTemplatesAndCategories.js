@@ -18,15 +18,27 @@ export default async (params = {}) => {
   const dummyDescription =
     'Check out this pre-designed template and start customising with just a single click. Personalise with your branding, incorporate electronic signatures for security and add multiple collaborators to make changes simultaneously. Use this template and start getting data driven actionable insights with robust analytics.'
 
+    const {
+      data: { data },
+    } = await axios.get(`https://cms.formester.com/api/pdf-templates`, {
+    params: {
+     
+      populate: 'deep',
+    },
+  }) 
+
   templates = templates.map((template) => ({
     ...template,
     description: template.description || dummyDescription,
   }))
 
-  const templateRoutes = templates.map((template) => ({
-    route: `/templates/${template.slug}`,
-    payload: { template, categories },
-  }))
+  const templateRoutes = templates.map((template) => {
+    const pdfTemplate = data.find((pdfTemplate) => pdfTemplate.slug === template.slug)
+    return {
+      route: `/templates/${template.slug}`,
+      payload: { template, categories, data: pdfTemplate },
+    }
+  })
   templateRoutes.push({
     route: `/templates`,
     payload: { templates, categories },
