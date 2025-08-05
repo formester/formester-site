@@ -38,10 +38,10 @@
         <div
           class="d-flex flex-column align-items-center justify-content-center text-center my-5"
         >
-          <div class="ai-badge">
+          <!-- <div class="ai-badge">
             <img src="/hero-assets/bolt.svg" alt="Lightning" />
             <span>Explore our new AI features</span>
-          </div>
+          </div> -->
           <h1 class="hero__heading">
             <template v-for="(item, index) in title">
               <span
@@ -199,6 +199,7 @@ export default {
 }
 
 .hero__heading {
+  margin-top: 48px;
   max-width: 800px;
   font-size: 72px;
   font-weight: 700;
