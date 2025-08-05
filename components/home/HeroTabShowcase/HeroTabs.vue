@@ -54,6 +54,14 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 
+// Define props to receive Strapi data
+const props = defineProps({
+  data: {
+    type: Object,
+    default: () => ({})
+  }
+})
+
 const borderColors = [
   '#FF9100', // Forms (orange)
   '#2F80ED', // Scheduling (blue)
@@ -63,8 +71,19 @@ const borderColors = [
   '#3F2AFF', // Signature (indigo)
 ]
 
-const tabs = [
-  {
+
+const getImageUrl = (imageObj) => {
+  if (!imageObj) return null
+  
+  if (imageObj.imageUrl) return imageObj.imageUrl
+  
+  if (imageObj.image?.url) return imageObj.image.url
+  
+  return null
+}
+
+const fallbackTabs = [
+{
     label: 'Forms',
     title: 'Launch High-Converting Forms in Seconds',
     features: [
@@ -176,8 +195,25 @@ const tabs = [
   },
 ]
 
+
+const tabs = computed(() => {
+  if (!props.data?.tabCardContent || props.data.tabCardContent.length === 0) {
+    return fallbackTabs
+  }
+  
+  return props.data.tabCardContent.map(tab => ({
+    label: tab.navTitle,
+    title: tab.title,
+    features: tab.feature?.map(feature => ({
+      text: feature.featureTitle,
+      icon: getImageUrl(feature.icon)
+    })) || [],
+    image: getImageUrl(tab.image)
+  }))
+})
+
 const selectedTab = ref(0)
-const currentTab = computed(() => tabs[selectedTab.value])
+const currentTab = computed(() => tabs.value[selectedTab.value] || {})
 
 let intervalId = null
 
@@ -190,7 +226,9 @@ function stopAutoSwitch() {
 
 onMounted(() => {
   intervalId = setInterval(() => {
-    selectedTab.value = (selectedTab.value + 1) % tabs.length
+    if (tabs.value.length > 0) {
+      selectedTab.value = (selectedTab.value + 1) % tabs.value.length
+    }
   }, 7000)
 })
 onUnmounted(() => {
