@@ -154,9 +154,15 @@ export default {
     '@nuxtjs/pwa',
     // '@nuxthq/studio',
     '@nuxt/content',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/gtm',
   ],
 
+  // GTM configuration
+  gtm: {
+    enabled: true,
+    id: 'GTM-5GX7R49B',
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
