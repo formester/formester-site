@@ -71,26 +71,17 @@ const borderColors = [
   '#3F2AFF', // Signature (indigo)
 ]
 
-// Helper function to get image URL from different Strapi structures
+
 const getImageUrl = (imageObj) => {
   if (!imageObj) return null
   
-  // Direct URL
   if (imageObj.imageUrl) return imageObj.imageUrl
   
-  // Image object with URL
   if (imageObj.image?.url) return imageObj.image.url
-  
-  // Strapi v4 structure with data.attributes
-  if (imageObj.image?.data?.attributes?.url) return imageObj.image.data.attributes.url
-  
-  // Array format
-  if (imageObj.image?.data?.[0]?.attributes?.url) return imageObj.image.data[0].attributes.url
   
   return null
 }
 
-// Fallback static data for when Strapi data is not available
 const fallbackTabs = [
 {
     label: 'Forms',
@@ -204,18 +195,12 @@ const fallbackTabs = [
   },
 ]
 
-// Process Strapi data into tabs format
+
 const tabs = computed(() => {
-  // Debug: Log the received data
-  console.log('HeroTabs received data:', props.data)
-  
-  // If no Strapi data, use fallback
   if (!props.data?.tabCardContent || props.data.tabCardContent.length === 0) {
-    console.log('Using fallback tabs data')
     return fallbackTabs
   }
   
-  console.log('Processing Strapi data:', props.data.tabCardContent)
   return props.data.tabCardContent.map(tab => ({
     label: tab.navTitle,
     title: tab.title,
