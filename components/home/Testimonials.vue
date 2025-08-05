@@ -2,7 +2,7 @@
   <div>
     <!-- Feature Testimonials Layout -->
     <div class="section" v-if="isFeatureTestimonail">
-      <div class="row">
+      <div>
         <SectionTitle :heading="heading" />
         <div
           class="d-flex flex-column flex-lg-row px-3 px-md-0 justify-content-center align-items-center mt-5"
