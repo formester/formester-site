@@ -6,12 +6,13 @@ export const free = {
     'For individuals who need to quickly collect data through forms.',
   features: [
     '10 forms',
-    '100 Submission/month',
-    '100 MB file uploads',
-    '1 Google Sheets Integration',
-    '1 Webhook',
-    'e-Signatures',
-    'No Members'
+    '100 responses/mo',
+    'Basic spam protection',
+    'AI forms (2/day) (Limited AI features)',
+    'File uploads (100 MB)',
+    'Dropoff analysis',
+    'Unlimited integrations',
+    'e-signature',
   ],
 }
 
@@ -20,13 +21,12 @@ export const enterprise = {
   description: 'For organizations needing custom plan as per the requirements.',
   type: 'All',
   features: [
-    'Custom forms',
-    'Custom Submission/month',
-    'Custom file uploads',
-    'Custom Google Sheets Integration',
-    'Custom Webhook',
-    'Custom Signatures',
-    'Custom Members',
+    'Everything in business',
+    'Custom form building support',
+    'High-volume file uploads',
+    'Unlimited signature workflows',
+    'Add unlimited team members',
+    'Priority support & onboarding',
   ],
 }
 
@@ -37,13 +37,14 @@ export const personalMonthly = {
   description:
     'For individuals who need to create beautiful, branded forms on a regular basis.',
   features: [
+    'Everything in free',
     'Unlimited forms',
-    '1k Submission/month',
-    '1 GB file uploads',
-    'Unlimited Google Sheets Integration',
-    '50 Webhooks',
-    'e-Signatures',
-    'No Members'
+    '1,000 responses/mo',
+    'AI forms (10/day)',
+    'Conditional logic',
+    'File uploads (1 GB)',
+    'Remove branding',
+    'Multilingual forms',
   ],
 }
 
@@ -54,13 +55,14 @@ export const businessMonthly = {
   description:
     'For organizations to create unlimited forms that are fully customisable.',
   features: [
-    'Unlimited forms',
-    '15k Submission/month',
-    '50 GB file uploads',
-    'Unlimited Google Sheets Integration',
-    'Unlimited Webhooks',
-    'e-Signatures',
-    "25 Members"
+    'Everything in personal',
+    '15,000 responses/mo',
+    'Team collaboration (25 seats)',
+    'API & Webhooks',
+    'PDF exports',
+    'Advanced spam protection',
+    'View partial submissions',
+    'Granular permissions',
   ],
 }
 
@@ -72,13 +74,14 @@ export const personalYearly = {
   description:
     'For individuals who need to create beautiful, branded forms on a regular basis.',
   features: [
+    'Everything in free',
     'Unlimited forms',
-    '1k Submission/month',
-    '1 GB file uploads',
-    'Unlimited Google Sheets Integration',
-    '50 Webhooks',
-    'e-Signatures',
-    'No Members'
+    '1,000 responses/mo',
+    'AI forms (10/day)',
+    'Conditional logic',
+    'File uploads (1 GB)',
+    'Remove branding',
+    'Multilingual forms',
   ],
 }
 
@@ -90,13 +93,14 @@ export const businessYearly = {
   description:
     'For organizations to create unlimited forms that are fully customisable.',
   features: [
-    'Unlimited forms',
-    '15k Submission/month',
-    '50 GB file uploads',
-    'Unlimited Google Sheets Integration',
-    'Unlimited Webhooks',
-    'e-Signatures',
-    '25 Members'
+    'Everything in personal',
+    '15,000 responses/mo',
+    'Team collaboration (25 seats)',
+    'API & Webhooks',
+    'PDF exports',
+    'Advanced spam protection',
+    'View partial submissions',
+    'Granular permissions',
   ],
 }
 
