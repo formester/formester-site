@@ -106,321 +106,356 @@ export const businessYearly = {
 
 export const comparisonTableFeatures = [
   {
-    name: 'Forms',
-    free: '10',
-    pro: 'Unlimited',
-    business: 'Unlimited',
+    category: 'Core Features',
+    features: [
+      {
+        name: 'Forms',
+        description: 'Total number of forms you can create and manage',
+        free: '10',
+        pro: 'Unlimited',
+        business: 'Unlimited',
+      },
+      {
+        name: 'Submission per month',
+        description: 'Maximum number of form submissions you can receive each month',
+        free: '100',
+        pro: '1k',
+        business: '15k',
+      },
+      {
+        name: 'Members',
+        description: 'Number of team members who can collaborate on your forms',
+        free: '0',
+        pro: '0',
+        business: '25',
+      },
+      {
+        name: 'File Uploads',
+        description: 'Total storage space available for file uploads across all forms',
+        free: '100 MB',
+        pro: '1 GB',
+        business: '50 GB',
+      },
+      {
+        name: 'Spam Protection',
+        description: 'Advanced filtering to prevent spam submissions and protect your forms',
+        free: 'Basic',
+        pro: 'AI Powered',
+        business: 'Adaptive AI',
+      },
+      {
+        name: 'Analytics',
+        description: 'Detailed insights and reporting on form performance and submissions',
+        free: 'Basic',
+        pro: 'Advanced',
+        business: 'Advanced',
+      },
+      {
+        name: 'AI Forms',
+        description: 'Use AI to automatically generate forms based on your requirements',
+        free: '2 Daily',
+        pro: '10 Daily',
+        business: '50 Daily'
+      },
+    ]
   },
   {
-    name: 'Submission per month',
-    free: '100',
-    pro: '1k',
-    business: '15k',
+    category: 'Form Features',
+    features: [
+      {
+        name: 'Multi Step Forms',
+        description: 'Break long forms into multiple steps to improve user experience and completion rates',
+        free: 'Yes',
+        pro: 'Yes',
+        business: 'Yes'
+      },
+      {
+        name: 'Conversational Forms',
+        description: 'Create engaging, chat-like forms that feel like natural conversations',
+        free: 'Yes',
+        pro: 'Yes',
+        business: 'Yes'
+      },
+      {
+        name: 'Conditional Logic',
+        description: 'Show or hide fields based on user responses to create dynamic, personalized forms',
+        free: '-',
+        pro: 'Yes',
+        business: 'Yes'
+      },
+      {
+        name: 'Calculations',
+        description: 'Automatically calculate values based on user inputs (totals, taxes, etc.)',
+        free: 'Yes',
+        pro: 'Yes',
+        business: 'Yes'
+      },
+      {
+        name: 'Pre Fill Fields',
+        description: 'Automatically populate form fields with default values or URL parameters',
+        free: 'Yes',
+        pro: 'Yes',
+        business: 'Yes'
+      },
+      {
+        name: 'Hidden Fields',
+        description: 'Include invisible fields to capture additional data like UTM parameters',
+        free: 'Yes',
+        pro: 'Yes',
+        business: 'Yes'
+      },
+      {
+        name: 'Form Limiter',
+        description: 'Set limits on form submissions (date ranges, maximum submissions, etc.)',
+        free: 'Yes',
+        pro: 'Yes',
+        business: 'Yes'
+      },
+      {
+        name: 'Countdown Timer',
+        description: 'Add urgency with countdown timers for limited-time offers or deadlines',
+        free: '-',
+        pro: 'Yes',
+        business: 'Yes'
+      },
+      {
+        name: 'Generate QR Code',
+        description: 'Create QR codes for easy mobile access to your forms',
+        free: 'Yes',
+        pro: 'Yes',
+        business: 'Yes'
+      },
+    ]
   },
   {
-    name: 'Members',
-    free: '0',
-    pro: '0',
-    business: '25',
+    category: 'Integrations',
+    features: [
+      {
+        name: 'Google Sheets Integration',
+        description: 'Automatically send form submissions to Google Sheets for easy data management',
+        free: 'Unlimited',
+        pro: 'Unlimited',
+        business: 'Unlimited',
+      },
+      {
+        name: 'Webhooks',
+        description: 'Send form data to external services and APIs in real-time',
+        free: '1',
+        pro: '50',
+        business: 'Unlimited',
+      },
+      {
+        name: 'Zapier Integration',
+        free: 'Yes',
+        pro: 'Yes',
+        business: 'Yes',
+      },
+      {
+        name: 'Slack Integration',
+        free: 'Yes',
+        pro: 'Yes',
+        business: 'Yes',
+      },
+      {
+        name: 'Mailchimp Integration',
+        free: 'Yes',
+        pro: 'Yes',
+        business: 'Yes',
+      },
+      {
+        name: 'Hubspot Integration',
+        free: 'Yes',
+        pro: 'Yes',
+        business: 'Yes',
+      },
+      {
+        name: 'Airtable Integration',
+        free: 'Yes',
+        pro: 'Yes',
+        business: 'Yes',
+      },
+      {
+        name: 'Google Calendar Integration',
+        free: 'Yes',
+        pro: 'Yes',
+        business: 'Yes',
+      },
+    ]
   },
   {
-    name: 'Remove Formester Branding',
-    free: '-',
-    pro: 'Yes',
-    business: 'Yes',
+    category: 'Notifications & Communication',
+    features: [
+      {
+        name: 'Self Email Notifications',
+        free: 'Yes',
+        pro: 'Yes',
+        business: 'Yes',
+      },
+      {
+        name: 'Respondent Email Notifications',
+        free: 'Yes',
+        pro: 'Yes',
+        business: 'Yes',
+      },
+      {
+        name: 'Email Confirmation',
+        free: '-',
+        pro: 'Yes',
+        business: 'Yes'
+      },
+      {
+        name: 'Send Submission Copy',
+        free: '-',
+        pro: 'Yes',
+        business: 'Yes'
+      },
+    ]
   },
   {
-    name: 'File Uploads',
-    free: '100 MB',
-    pro: '1 GB',
-    business: '50 GB',
+    category: 'Customization & Branding',
+    features: [
+      {
+        name: 'Remove Formester Branding',
+        free: '-',
+        pro: 'Yes',
+        business: 'Yes',
+      },
+      {
+        name: 'Brandkit',
+        free: '-',
+        pro: 'Yes',
+        business: 'Yes',
+      },
+      {
+        name: 'Custom Meta Information',
+        free: '-',
+        pro: 'Yes',
+        business: 'Yes',
+      },
+      {
+        name: 'Scripts (GTM, GA, Pixel)',
+        free: '-',
+        pro: 'Yes',
+        business: 'Yes',
+      },
+      {
+        name: 'Custom Scripts',
+        free: '-',
+        pro: 'Yes',
+        business: 'Yes'
+      },
+    ]
   },
   {
-    name: 'Spam Protection',
-    free: 'Basic',
-    pro: ' AI Powered',
-    business: 'Adaptive AI',
+    category: 'Advanced Features',
+    features: [
+      {
+        name: 'Signature',
+        free: 'Yes',
+        pro: 'Yes',
+        business: 'Yes'
+      },
+      {
+        name: 'Signature Workflows',
+        free: 'Yes',
+        pro: 'Yes',
+        business: 'Yes'
+      },
+      {
+        name: 'Appointment Scheduler',
+        free: 'Yes',
+        pro: 'Yes',
+        business: 'Yes'
+      },
+      {
+        name: 'Trusted Form Certificate',
+        free: 'Yes',
+        pro: 'Yes',
+        business: 'Yes'
+      },
+      {
+        name: 'Backend Only',
+        free: '-',
+        pro: 'Yes',
+        business: 'Yes'
+      },
+      {
+        name: 'Collect Partial Submissions',
+        free: 'Yes',
+        pro: 'Yes',
+        business: 'Yes',
+      },
+      {
+        name: 'Drop Off Rates',
+        free: 'Yes',
+        pro: 'Yes',
+        business: 'Yes'
+      },
+      {
+        name: 'Field Wise Analysis',
+        free: 'Yes',
+        pro: 'Yes',
+        business: 'Yes'
+      },
+    ]
   },
   {
-    name: 'Access to Template Library',
-    free: 'Yes',
-    pro: 'Yes',
-    business: 'Yes',
-  },
-  {
-    name: 'Self Email Notifications',
-    free: 'Yes',
-    pro: 'Yes',
-    business: 'Yes',
-  },
-  {
-    name: 'Respondent Email Notifications',
-    free: 'Yes',
-    pro: 'Yes',
-    business: 'Yes',
-  },
-  {
-    name: 'Redirect to URL',
-    free: 'Yes',
-    pro: 'Yes',
-    business: 'Yes',
-  },
-  {
-    name: 'Hidden Fields',
-    free: 'Yes',
-    pro: 'Yes',
-    business: 'Yes',
-  },
-  {
-    name: 'Signatures',
-    free: 'Yes',
-    pro: 'Yes',
-    business: 'Yes',
-  },
-  {
-    name: 'SMTP Integration',
-    free: 'Yes',
-    pro: 'Yes',
-    business: 'Yes',
-  },
-  {
-    name: 'Zapier Integrations',
-    free: 'Yes',
-    pro: 'Yes',
-    business: 'Yes',
-  },
-  {
-    name: 'Google Sheets Integration',
-    free: '1',
-    pro: 'Unlimited',
-    business: 'Unlimited',
-  },
-  {
-    name: 'Accept Payments (Commission)',
-    free: '1%',
-    pro: '0%',
-    business: '0%',
-  },
-  {
-    name: 'Webhooks',
-    free: '1',
-    pro: '50',
-    business: 'Unlimited',
-  },
-  {
-    name: 'Analytics',
-    free: 'Basic',
-    pro: 'Advanced',
-    business: 'Advanced',
-  },
-  {
-    "name": "AI Forms",
-    "free": "2 Daily",
-    "pro": "10 Daily",
-    "business": "50 Daily"
-  },
-  {
-    "name": "Generate QR Code",
-    "free": "Yes",
-    "pro": "Yes",
-    "business": "Yes"
-  },
-  {
-    "name": "Pre Fill Fields",
-    "free": "Yes",
-    "pro": "Yes",
-    "business": "Yes"
-  },
-  {
-    "name": "Form Limiter",
-    "free": "Yes",
-    "pro": "Yes",
-    "business": "Yes"
-  },
-  {
-    "name": "Trusted Form Certificate",
-    "free": "Yes",
-    "pro": "Yes",
-    "business": "Yes"
-  },
-  {
-    "name": "Appointment Scheduler",
-    "free": "Yes",
-    "pro": "Yes",
-    "business": "Yes"
-  },
-  {
-    "name": "Auto Unique ID For Submissions",
-    "free": "Yes",
-    "pro": "Yes",
-    "business": "Yes"
-  },
-  {
-    "name": "Calculation Field",
-    "free": "Yes",
-    "pro": "Yes",
-    "business": "Yes"
-  },
-  {
-    "name": "Quiz Scoring",
-    "free": "Yes",
-    "pro": "Yes",
-    "business": "Yes"
-  },
-  {
-    "name": "Outcome Quiz",
-    "free": "Yes",
-    "pro": "Yes",
-    "business": "Yes"
-  },
-  {
-    "name": "Offline Forms",
-    "free": "Yes",
-    "pro": "Yes",
-    "business": "Yes"
-  },
-  {
-    "name": "View Pending Submissions",
-    "free": "Yes",
-    "pro": "Yes",
-    "business": "Yes"
-  },
-  {
-    "name": "Custom Variables",
-    "free": "Yes",
-    "pro": "Yes",
-    "business": "Yes"
-  },
-  {
-    "name": "Repeater Fields",
-    "free": "Yes",
-    "pro": "Yes",
-    "business": "Yes"
-  },
-  {
-    "name": "Drop Off Rates",
-    "free": "Yes",
-    "pro": "Yes",
-    "business": "Yes"
-  },
-  {
-    "name": "Export Submissions",
-    "free": "Yes",
-    "pro": "Yes",
-    "business": "Yes"
-  },
-  {
-    "name": "Field Wise Analysis",
-    "free": "Yes",
-    "pro": "Yes",
-    "business": "Yes"
-  },
-  {
-    name: 'Brandkit',
-    free: '-',
-    pro: 'Yes',
-    business: 'Yes',
-  },
-  {
-    name: 'Custom Meta Information',
-    free: '-',
-    pro: 'Yes',
-    business: 'Yes',
-  },
-  {
-    name: 'Scripts (GTM, GA, Pixel)',
-    free: '-',
-    pro: 'Yes',
-    business: 'Yes',
-  },
-  {
-    "name": "Email Confirmation",
-    "free": "-",
-    "pro": "Yes",
-    "business": "Yes"
-  },
-  {
-    "name": "Countdown Timer",
-    "free": "-",
-    "pro": "Yes",
-    "business": "Yes"
-  },
-  {
-    "name": "Conditional Logic",
-    "free": "-",
-    "pro": "Yes",
-    "business": "Yes"
-  },
-  {
-    "name": "Send Submission Copy",
-    "free": "-",
-    "pro": "Yes",
-    "business": "Yes"
-  },
-  {
-    "name": "Backend Only",
-    "free": "-",
-    "pro": "Yes",
-    "business": "Yes"
-  },
-  {
-    "name": "Custom Scripts",
-    "free": "-",
-    "pro": "Yes",
-    "business": "Yes"
-  },
-  {
-    name: 'Submission PDF',
-    free: '-',
-    pro: '-',
-    business: 'Yes',
-  },
-  {
-    name: 'API Access',
-    free: '-',
-    pro: '-',
-    business: 'Yes',
-  },
-  {
-    name: 'Custom Domain',
-    free: '-',
-    pro: '-',
-    business: 'Yes',
-  },
-  {
-    name: 'White Label',
-    free: '-',
-    pro: '-',
-    business: 'Yes',
-  },
-  {
-    "name": "Team Collaboration",
-    "free": "-",
-    "pro": "-",
-    "business": "Yes"
-  },
-  {
-    "name": "Address Autocomplete",
-    "free": "-",
-    "pro": "-",
-    "business": "Yes"
-  },
-  {
-    "name": "Save And Resume Submissions",
-    "free": "-",
-    "pro": "-",
-    "business": "Yes"
-  },
-  {
-    "name": "AI Multilanguage Translations",
-    "free": "-",
-    "pro": "-",
-    "business": "Yes"
-  },
-  {
-    "name": "Connect Form to PDF",
-    "free": "-",
-    "pro": "-",
-    "business": "Yes"
+    category: 'Enterprise Features',
+    features: [
+      {
+        name: 'API Access',
+        free: '-',
+        pro: '-',
+        business: 'Yes',
+      },
+      {
+        name: 'Custom Domain',
+        free: '-',
+        pro: '-',
+        business: 'Yes',
+      },
+      {
+        name: 'White Label',
+        free: '-',
+        pro: '-',
+        business: 'Yes',
+      },
+      {
+        name: 'Team Collaboration',
+        free: '-',
+        pro: '-',
+        business: 'Yes'
+      },
+      {
+        name: 'Submission PDF',
+        free: '-',
+        pro: '-',
+        business: 'Yes',
+      },
+      {
+        name: 'Address Autocomplete',
+        free: '-',
+        pro: '-',
+        business: 'Yes'
+      },
+      {
+        name: 'Save And Resume Submissions',
+        free: '-',
+        pro: '-',
+        business: 'Yes'
+      },
+      {
+        name: 'AI Multilanguage Translations',
+        free: '-',
+        pro: '-',
+        business: 'Yes'
+      },
+      {
+        name: 'Connect Form to PDF',
+        free: '-',
+        pro: '-',
+        business: 'Yes'
+      },
+    ]
   }
 ]

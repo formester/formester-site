@@ -54,33 +54,50 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="feature in comparisonTableFeatures" :key="feature.name">
-            <th class="feature">{{ feature.name }}</th>
-            <td>
-              <template v-if="feature.free === 'Yes'">
-                <nuxt-img src="check-green.svg" />
-              </template>
-              <template v-else>
-                {{ feature.free }}
-              </template>
-            </td>
-            <td>
-              <template v-if="feature.pro === 'Yes'">
-                <nuxt-img src="check-green.svg" />
-              </template>
-              <template v-else>
-                {{ feature.pro }}
-              </template>
-            </td>
-            <td>
-              <template v-if="feature.business === 'Yes'">
-                <nuxt-img src="check-green.svg" />
-              </template>
-              <template v-else>
-                {{ feature.business }}
-              </template>
-            </td>
-          </tr>
+          <template v-for="category in comparisonTableFeatures">
+            <tr class="category-header" :key="`${category.category}-header`">
+              <th colspan="4" class="category-title">{{ category.category }}</th>
+            </tr>
+            <tr v-for="feature in category.features" :key="`${category.category}-${feature.name}`">
+              <th class="feature">
+                <div class="feature-with-tooltip">
+                  {{ feature.name }}
+                  <div class="info-icon-container" v-if="feature.description">
+                    <svg class="info-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="8" cy="8" r="7" stroke="#6B7280" stroke-width="1.5"/>
+                      <path d="M8 11V8" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"/>
+                      <circle cx="8" cy="5.5" r="0.75" fill="#6B7280"/>
+                    </svg>
+                    <div class="tooltip">{{ feature.description }}</div>
+                  </div>
+                </div>
+              </th>
+              <td>
+                <template v-if="feature.free === 'Yes'">
+                  <nuxt-img src="check-green.svg" />
+                </template>
+                <template v-else>
+                  {{ feature.free }}
+                </template>
+              </td>
+              <td>
+                <template v-if="feature.pro === 'Yes'">
+                  <nuxt-img src="check-green.svg" />
+                </template>
+                <template v-else>
+                  {{ feature.pro }}
+                </template>
+              </td>
+              <td>
+                <template v-if="feature.business === 'Yes'">
+                  <nuxt-img src="check-green.svg" />
+                </template>
+                <template v-else>
+                  {{ feature.business }}
+                </template>
+              </td>
+            </tr>
+          </template>
         </tbody>
         <tfoot>
           <tr class="plan-header">
@@ -130,17 +147,34 @@
       </div>
       <table class="table text-start">
         <tbody>
-          <tr v-for="feature in comparisonTableFeatures" :key="feature.name">
-            <th class="feature">{{ feature.name }}</th>
-            <td>
-              <template v-if="feature.free === 'Yes'">
-                <nuxt-img src="check-green.svg" />
-              </template>
-              <template v-else>
-                {{ feature.free }}
-              </template>
-            </td>
-          </tr>
+          <template v-for="category in comparisonTableFeatures">
+            <tr class="category-header" :key="`${category.category}-header-free`">
+              <th colspan="2" class="category-title">{{ category.category }}</th>
+            </tr>
+            <tr v-for="feature in category.features" :key="`${category.category}-${feature.name}-free`">
+              <th class="feature">
+                <div class="feature-with-tooltip">
+                  {{ feature.name }}
+                  <div class="info-icon-container" v-if="feature.description">
+                    <svg class="info-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="8" cy="8" r="7" stroke="#6B7280" stroke-width="1.5"/>
+                      <path d="M8 11V8" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"/>
+                      <circle cx="8" cy="5.5" r="0.75" fill="#6B7280"/>
+                    </svg>
+                    <div class="tooltip">{{ feature.description }}</div>
+                  </div>
+                </div>
+              </th>
+              <td>
+                <template v-if="feature.free === 'Yes'">
+                  <nuxt-img src="check-green.svg" />
+                </template>
+                <template v-else>
+                  {{ feature.free }}
+                </template>
+              </td>
+            </tr>
+          </template>
         </tbody>
         <tfoot>
           <td colspan="2">
@@ -169,17 +203,34 @@
       </div>
       <table class="table text-start">
         <tbody>
-          <tr v-for="feature in comparisonTableFeatures" :key="feature.name">
-            <th class="feature">{{ feature.name }}</th>
-            <td>
-              <template v-if="feature.pro === 'Yes'">
-                <nuxt-img src="check-green.svg" />
-              </template>
-              <template v-else>
-                {{ feature.pro }}
-              </template>
-            </td>
-          </tr>
+          <template v-for="category in comparisonTableFeatures">
+            <tr class="category-header" :key="`${category.category}-header-personal`">
+              <th colspan="2" class="category-title">{{ category.category }}</th>
+            </tr>
+            <tr v-for="feature in category.features" :key="`${category.category}-${feature.name}-personal`">
+              <th class="feature">
+                <div class="feature-with-tooltip">
+                  {{ feature.name }}
+                  <div class="info-icon-container" v-if="feature.description">
+                    <svg class="info-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="8" cy="8" r="7" stroke="#6B7280" stroke-width="1.5"/>
+                      <path d="M8 11V8" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"/>
+                      <circle cx="8" cy="5.5" r="0.75" fill="#6B7280"/>
+                    </svg>
+                    <div class="tooltip">{{ feature.description }}</div>
+                  </div>
+                </div>
+              </th>
+              <td>
+                <template v-if="feature.pro === 'Yes'">
+                  <nuxt-img src="check-green.svg" />
+                </template>
+                <template v-else>
+                  {{ feature.pro }}
+                </template>
+              </td>
+            </tr>
+          </template>
         </tbody>
         <tfoot>
           <td colspan="2">
@@ -210,17 +261,34 @@
       </div>
       <table class="table text-start">
         <tbody>
-          <tr v-for="feature in comparisonTableFeatures" :key="feature.name">
-            <th class="feature">{{ feature.name }}</th>
-            <td>
-              <template v-if="feature.business === 'Yes'">
-                <nuxt-img src="check-green.svg" />
-              </template>
-              <template v-else>
-                {{ feature.business }}
-              </template>
-            </td>
-          </tr>
+          <template v-for="category in comparisonTableFeatures">
+            <tr class="category-header" :key="`${category.category}-header-business`">
+              <th colspan="2" class="category-title">{{ category.category }}</th>
+            </tr>
+            <tr v-for="feature in category.features" :key="`${category.category}-${feature.name}-business`">
+              <th class="feature">
+                <div class="feature-with-tooltip">
+                  {{ feature.name }}
+                  <div class="info-icon-container" v-if="feature.description">
+                    <svg class="info-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="8" cy="8" r="7" stroke="#6B7280" stroke-width="1.5"/>
+                      <path d="M8 11V8" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"/>
+                      <circle cx="8" cy="5.5" r="0.75" fill="#6B7280"/>
+                    </svg>
+                    <div class="tooltip">{{ feature.description }}</div>
+                  </div>
+                </div>
+              </th>
+              <td>
+                <template v-if="feature.business === 'Yes'">
+                  <nuxt-img src="check-green.svg" />
+                </template>
+                <template v-else>
+                  {{ feature.business }}
+                </template>
+              </td>
+            </tr>
+          </template>
         </tbody>
         <tfoot>
           <td colspan="2">
@@ -327,6 +395,99 @@ table tr:nth-child(even) {
 
 .feature {
   font-weight: 500;
+}
+
+.category-header {
+  background: white !important;
+}
+
+.category-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--clr-primary);
+  padding-inline: 8px ;
+  padding-top: 32px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+/* Tooltip Styles */
+.feature-with-tooltip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-icon-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.info-icon {
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.info-icon:hover {
+  opacity: 1;
+}
+
+.tooltip {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  margin-left: 12px;
+  padding: 8px 12px;
+  background: #1f2937;
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  border-radius: 6px;
+  width: 300px;
+  min-width: 250px;
+  max-width: 400px;
+  word-wrap: break-word;
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 10;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -4px;
+  transform: translateY(-50%);
+  border: 4px solid transparent;
+  border-right-color: #1f2937;
+}
+
+.info-icon-container:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (max-width: 768px) {
+  .tooltip {
+    position: fixed;
+    bottom: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    max-width: 320px;
+    z-index: 1000;
+  }
+  
+  .tooltip::after {
+    display: none;
+  }
 }
 
 .plan__name:has(.badge) {
