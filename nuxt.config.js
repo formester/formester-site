@@ -38,51 +38,18 @@ export default {
         async: true,
       },
       {
-        hid: 'partytown-init',
-        innerHTML: `
-          window.partytown = {
-            forward: ['dataLayer.push', 'gtag']
-          };
-        `,
-        type: 'text/javascript',
-        charset: 'utf-8'
-      },
-      {
-        src: '/~partytown/partytown.js',
-        async: true
-      },
-      {
-        type: 'text/partytown',
-        src: 'https://www.googletagmanager.com/gtm.js?id=GTM-5GX7R49B',
-      },
-      {
-        hid: 'datalayer-init',
         innerHTML: `
           window.dataLayer = window.dataLayer || [];
-          function gtag(){ dataLayer.push(arguments); }
-          gtag('js', new Date());
+          window.gtag = window.gtag || function(){dataLayer.push(arguments);};
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-5GX7R49B');
         `,
-        type: 'text/javascript',
-        charset: 'utf-8'
-      },
-      {
-        hid: 'gtag-init',
-        innerHTML: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){ dataLayer.push(arguments); }
-          gtag('js', new Date());
-          gtag('config', 'G-WY8RMY11PE');
-        `,
-        type: 'text/javascript',
-        charset: 'utf-8'
+        type: 'text/partytown'
       }
-      
     ],
-    __dangerouslyDisableSanitizersByTagID: {
-      'datalayer-init': ['innerHTML'],
-      'gtag-init': ['innerHTML'],
-      'partytown-init': ['innerHTML']
-    }
   },
 
   router: {},
@@ -152,17 +119,22 @@ export default {
     '@nuxtjs/robots',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    // '@nuxthq/studio',
+    '@nuxtjs/partytown',
     '@nuxt/content',
     '@nuxtjs/sitemap',
-    '@nuxtjs/gtm',
   ],
-
-  // GTM configuration
-  gtm: {
-    enabled: true,
-    id: 'GTM-5GX7R49B',
+  partytown: {
+    forward: ['dataLayer.push', 'gtag'],
+    resolveUrl: function(url) {
+      if (url.hostname === 'www.googletagmanager.com') {
+        const proxyUrl = new URL('https://cdn.partytown.io/proxytown')
+        proxyUrl.searchParams.append('url', url.href)
+        return proxyUrl
+      }
+      return url
+    }
   },
+
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
