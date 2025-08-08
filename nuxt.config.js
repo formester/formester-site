@@ -38,7 +38,12 @@ export default {
         async: true,
       },
       {
-        innerHTML: 'window.dataLayer = window.dataLayer || [];',
+        innerHTML: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'GTM-5GX7R49B');
+        `,
         type: 'text/partytown'
       },
       {
@@ -121,7 +126,15 @@ export default {
     '@nuxtjs/sitemap',
   ],
   partytown: {
-    forward: ['dataLayer.push']
+    forward: ['dataLayer.push', 'gtag'],
+    resolveUrl: function(url) {
+      if (url.hostname === 'www.googletagmanager.com') {
+        const proxyUrl = new URL('https://cdn.partytown.io/proxytown')
+        proxyUrl.searchParams.append('url', url.href)
+        return proxyUrl
+      }
+      return url
+    }
   },
 
 
