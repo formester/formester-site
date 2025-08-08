@@ -37,7 +37,15 @@ export default {
         defer: true,
         async: true,
       },
-  
+      {
+        innerHTML: 'window.dataLayer = window.dataLayer || [];',
+        type: 'text/partytown'
+      },
+      {
+        src: 'https://www.googletagmanager.com/gtm.js?id=GTM-5GX7R49B',
+        async: true,
+        type: 'text/partytown'
+      }
     ],
   },
 
@@ -114,13 +122,6 @@ export default {
   ],
   partytown: {
     forward: ['dataLayer.push']
-  },
-  app: {
-    head: {
-      script: [
-        { src: 'https://www.googletagmanager.com/gtm.js?id=GTM-5GX7R49B', async: true, type: 'text/partytown' },
-      ],
-    },
   },
 
 

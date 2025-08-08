@@ -12,7 +12,6 @@
   "dependencies": {
     "@nuxt/content": "^1.15.1",
     "@nuxtjs/axios": "^5.13.6",
-    "@nuxtjs/gtm": "^2.4.0",
     "@nuxtjs/partytown": "^1.6.0",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/robots": "^2.5.0",
