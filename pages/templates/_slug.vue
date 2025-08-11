@@ -61,51 +61,81 @@
 
           <!-- Right side: PDF Images -->
           <div class="col-lg-6">
-            <!-- Single image -->
-            <img v-if="previewImages.length === 1" :src="previewImages[0].url" alt="Template Preview" class="template-preview__image">
-            
-            <!-- Multiple images carousel -->
-            <div v-else-if="previewImages.length > 1" class="carousel-outer-wrapper">
-              <component
-                v-if="VueSlickCarousel"
-                :is="VueSlickCarousel"
-                ref="slick"
-                :arrows="true"
-                :dots="false"
-                :infinite="true"
-                :autoplay="false"
-                :autoplaySpeed="5000"
-                :slidesToShow="1"
-                :responsive="slickResponsive"
-                @afterChange="handleAfterChange"
-                @beforeChange="handleBeforeChange"
-              >
-                <template #prevArrow>
-                  <button class="carousel-arrow left desktop-arrow" @click="goToPrev" aria-label="Previous image">
-                    <img src="/arrow-left.svg" alt="Previous" class="arrow-icon" />
-                  </button>
-                </template>
-                <template #nextArrow>
-                  <button class="carousel-arrow right desktop-arrow" @click="goToNext" aria-label="Next image">
-                    <img src="/arrow-right.svg" alt="Next" class="arrow-icon" />
-                  </button>
-                </template>
-                <div
-                  v-for="(image, idx) in previewImages"
-                  :key="image.id || idx"
-                  class="carousel-slide-inner"
+            <div class="preview-wrapper" v-if="data && data.slug">
+              <div class="preview-switch" :class="{ 'is-form': activeTab === 'form' }">
+                <button
+                  class="preview-tab"
+                  :class="{ 'preview-tab--active': activeTab === 'pdf' }"
+                  @click="activeTab = 'pdf'"
+                  type="button"
                 >
-                  <img :src="image.url" :alt="image.alt || 'Template Preview'" class="template-preview__image carousel-image">
+                  PDF Preview
+                </button>
+                <button
+                  class="preview-tab"
+                  :class="{ 'preview-tab--active': activeTab === 'form' }"
+                  @click="activeTab = 'form'"
+                  type="button"
+                >
+                  Form Preview
+                </button>
+                <span class="switch-indicator" aria-hidden="true"></span>
+              </div>
+
+              <div v-show="activeTab === 'pdf'" class="preview-pane">
+                <img v-if="previewImages.length === 1" :src="previewImages[0].url" alt="Template Preview" class="template-preview__image">
+                <div v-else-if="previewImages.length > 1" class="carousel-outer-wrapper">
+                  <component
+                    v-if="VueSlickCarousel"
+                    :is="VueSlickCarousel"
+                    ref="slick"
+                    :arrows="true"
+                    :dots="false"
+                    :infinite="true"
+                    :autoplay="false"
+                    :autoplaySpeed="5000"
+                    :slidesToShow="1"
+                    :responsive="slickResponsive"
+                    @afterChange="handleAfterChange"
+                    @beforeChange="handleBeforeChange"
+                  >
+                    <template #prevArrow>
+                      <button class="carousel-arrow left desktop-arrow" @click="goToPrev" aria-label="Previous image">
+                        <img src="/arrow-left.svg" alt="Previous" class="arrow-icon" />
+                      </button>
+                    </template>
+                    <template #nextArrow>
+                      <button class="carousel-arrow right desktop-arrow" @click="goToNext" aria-label="Next image">
+                        <img src="/arrow-right.svg" alt="Next" class="arrow-icon" />
+                      </button>
+                    </template>
+                    <div
+                      v-for="(image, idx) in previewImages"
+                      :key="image.id || idx"
+                      class="carousel-slide-inner"
+                    >
+                      <img :src="image.url" :alt="image.alt || 'Template Preview'" class="template-preview__image carousel-image">
+                    </div>
+                  </component>
+                  <div class="mobile-arrows-container">
+                    <button class="carousel-arrow left" @click="goToPrev" aria-label="Previous image">
+                      <img src="/arrow-left.svg" alt="Previous" class="arrow-icon" />
+                    </button>
+                    <button class="carousel-arrow right" @click="goToNext" aria-label="Next image">
+                      <img src="/arrow-right.svg" alt="Next" class="arrow-icon" />
+                    </button>
+                  </div>
                 </div>
-              </component>
-              <!-- Mobile arrows container for <=768px -->
-              <div class="mobile-arrows-container">
-                <button class="carousel-arrow left" @click="goToPrev" aria-label="Previous image">
-                  <img src="/arrow-left.svg" alt="Previous" class="arrow-icon" />
-                </button>
-                <button class="carousel-arrow right" @click="goToNext" aria-label="Next image">
-                  <img src="/arrow-right.svg" alt="Next" class="arrow-icon" />
-                </button>
+              </div>
+
+              <div v-show="activeTab === 'form'" class="preview-pane">
+                <iframe
+                  :src="template.surveyUrl"
+                  frameborder="0"
+                  width="100%"
+                  class="template-preview__iframe mt-3"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
@@ -161,12 +191,12 @@ export default {
     MoreTemplates,
     Faq,
   },
-  async asyncData({ params, payload, error }) {
-    //payload is used during static site generation and api call during developement
+  async asyncData({ params,payload, error }) {
 
     if (payload) {
       return payload
     }
+    //payload is used during static site generation and api call during developement
 
     try {
       const slug = params.slug    
@@ -198,6 +228,9 @@ export default {
       currentSlide: 0,
       totalSlides: 0,
       VueSlickCarousel: null,
+      // Active preview tab when PDF preview is available
+      // 'pdf' | 'form'
+      activeTab: 'pdf',
       slickResponsive: [
         {
           breakpoint: 768,
@@ -383,7 +416,120 @@ export default {
   margin-top: 1rem;
   width: 100%;
   height: auto;
+  object-fit: contain;
 }
+
+/* Tabs */
+.preview-wrapper { position: relative; padding-top: 60px; }
+
+/* Switch-style tabs positioned absolute within the preview */
+.preview-switch {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #F2F4F7;
+  border-radius: 9999px;
+  padding: 4px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(16,24,40,0.08);
+  min-width: 260px;
+  height: 36px;
+  z-index: 3;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.preview-tab {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #667085;
+  font-weight: 600;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: .02em;
+  padding: 0 12px;
+  height: 28px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: color .2s ease;
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* occupy grid cell fully to avoid overlap */
+}
+
+.preview-tab--active { color: #fff; }
+
+.switch-indicator {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  height: calc(100% - 8px);
+  width: calc(50% - 4px);
+  background: #6434D0;
+  border-radius: 9999px;
+  transition: transform .25s ease;
+  z-index: 0;
+}
+
+.preview-switch.is-form .switch-indicator { transform: translateX(100%); }
+
+/* Uniform preview height for image and iframe */
+.preview-pane {
+  height: calc(100vh - 140px);
+  min-height: 600px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* top align content */
+}
+
+.preview-pane .template-preview__image {
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.preview-pane .template-preview__iframe {
+  height: 100% !important;
+  min-height: 0;
+}
+
+.preview-pane .carousel-outer-wrapper { height: 100%; }
+.preview-pane :deep(.slick-slider),
+.preview-pane :deep(.slick-list),
+.preview-pane :deep(.slick-track) { height: 100% !important; }
+.preview-pane .carousel-slide-inner {
+  height: 100%;
+  display: flex;
+  align-items: flex-start; /* top align vertically */
+  justify-content: center; /* center horizontally */
+}
+.preview-pane .carousel-image { height: 100%; object-fit: contain; }
+
+@media screen and (max-width: 768px) {
+  .preview-pane {
+    height: auto;
+    min-height: 70vh; /* ensure enough height on small screens */
+  }
+  .preview-pane .template-preview__image,
+  .preview-pane .carousel-image { height: auto !important; }
+  .preview-pane .template-preview__iframe { height: 70vh !important; }
+  .preview-pane .carousel-outer-wrapper { height: auto; }
+  .preview-pane :deep(.slick-slider),
+  .preview-pane :deep(.slick-list),
+  .preview-pane :deep(.slick-track) { height: auto !important; }
+}
+
 
 
 .template_hero {
