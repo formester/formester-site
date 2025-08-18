@@ -44,6 +44,7 @@
 
  table {
   width: 100%;
+  max-width: 980px;
   border-collapse: collapse;
   border-spacing: 0;
   margin: 16px 0;
