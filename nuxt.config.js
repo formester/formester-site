@@ -56,6 +56,11 @@ export default {
         src: 'https://www.googletagmanager.com/gtm.js?id=GTM-5GX7R49B',
       },
       {
+        src: 'https://chakam-wc.netlify.app/chakam-web-components.js',
+        defer: true,
+        async: true,
+      },
+      {
         hid: 'datalayer-init',
         innerHTML: `
           window.dataLayer = window.dataLayer || [];

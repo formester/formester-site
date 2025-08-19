@@ -3,6 +3,14 @@
     <Navbar />
     <Nuxt />
     <Footer />
+    <chakam-fab-chat
+      title="Ask Formester AI"
+      primary-color="#6434d0"
+      api-url="https://api.chakam.tech"
+      customer-token="ck-chakam-f53516df275b4211b91dbe22949c22b5"
+      welcome-message="Ask me anything about Formester's features or test the chat functionality!"
+      suggestions='What can you help with?, How does this work?, Tell me about features,API documentation,Pricing information'
+    />
   </div>
 </template>
 
