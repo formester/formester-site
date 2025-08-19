@@ -29,7 +29,7 @@
         class="pricing__features d-flex flex-column align-items-start p-4 border-top mb-0 text-start"
       >
         <div class="d-flex align-items-start gap-2 justify-content-start" v-for="feature in plan.features">
-          <img src="../../assets/images/check.svg" alt="" />
+          <img  class="mt-1" src="../../assets/images/check.svg" alt="" />
           <li>
             {{ feature }}
           </li>
