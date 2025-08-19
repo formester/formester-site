@@ -484,13 +484,16 @@ export default {
 
 /* Uniform preview height for image and iframe */
 .preview-pane {
-  height: calc(100vh - 140px);
-  min-height: 600px;
+  height: calc(100vh - 300px);
+  min-height: 500px;
   width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* top align content */
+  background-color: #F2F4F7;
+  border-radius: 12px;
+  box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.04), 0px 4px 8px 0px rgba(0, 0, 0, 0.04);
 }
 
 .preview-pane .template-preview__image {
@@ -501,7 +504,9 @@ export default {
 
 .preview-pane .template-preview__iframe {
   height: 100% !important;
+  margin-top: 0 !important;
   min-height: 0;
+  border-radius: 12px;
 }
 
 .preview-pane .carousel-outer-wrapper { height: 100%; }
