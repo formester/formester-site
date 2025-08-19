@@ -103,7 +103,7 @@ export default {
             { name: 'Outlook', icon: '/icons/ms_outlook.svg' },
             { name: 'Mailchimp', icon: '/icons/mailchimp.svg' },
           ],
-          action: 'Auto-Reply by Emai',
+          action: 'Auto-Reply by Email',
         },
         {
           tools: [
