@@ -61,7 +61,14 @@
             <tr v-for="feature in category.features" :key="`${category.category}-${feature.name}`">
               <th class="feature">
                 <div class="feature-with-tooltip">
-                  {{ feature.name }}
+                  <template v-if="feature.link">
+                    <a :href="feature.link" target="_blank" rel="noopener noreferrer" class="feature-link">
+                      {{ feature.name }}
+                    </a>
+                  </template>
+                  <template v-else>
+                    {{ feature.name }}
+                  </template>
                   <div class="info-icon-container" v-if="feature.description">
                     <svg class="info-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <circle cx="8" cy="8" r="7" stroke="#6B7280" stroke-width="1.5"/>
@@ -154,7 +161,14 @@
             <tr v-for="feature in category.features" :key="`${category.category}-${feature.name}-free`">
               <th class="feature">
                 <div class="feature-with-tooltip">
-                  {{ feature.name }}
+                  <template v-if="feature.link">
+                    <a :href="feature.link" target="_blank" rel="noopener noreferrer" class="feature-link">
+                      {{ feature.name }}
+                    </a>
+                  </template>
+                  <template v-else>
+                    {{ feature.name }}
+                  </template>
                   <div class="info-icon-container" v-if="feature.description">
                     <svg class="info-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <circle cx="8" cy="8" r="7" stroke="#6B7280" stroke-width="1.5"/>
@@ -210,7 +224,14 @@
             <tr v-for="feature in category.features" :key="`${category.category}-${feature.name}-personal`">
               <th class="feature">
                 <div class="feature-with-tooltip">
-                  {{ feature.name }}
+                  <template v-if="feature.link">
+                    <a :href="feature.link" target="_blank" rel="noopener noreferrer" class="feature-link">
+                      {{ feature.name }}
+                    </a>
+                  </template>
+                  <template v-else>
+                    {{ feature.name }}
+                  </template>
                   <div class="info-icon-container" v-if="feature.description">
                     <svg class="info-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <circle cx="8" cy="8" r="7" stroke="#6B7280" stroke-width="1.5"/>
@@ -268,7 +289,14 @@
             <tr v-for="feature in category.features" :key="`${category.category}-${feature.name}-business`">
               <th class="feature">
                 <div class="feature-with-tooltip">
-                  {{ feature.name }}
+                  <template v-if="feature.link">
+                    <a :href="feature.link" target="_blank" rel="noopener noreferrer" class="feature-link">
+                      {{ feature.name }}
+                    </a>
+                  </template>
+                  <template v-else>
+                    {{ feature.name }}
+                  </template>
                   <div class="info-icon-container" v-if="feature.description">
                     <svg class="info-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <circle cx="8" cy="8" r="7" stroke="#6B7280" stroke-width="1.5"/>
@@ -516,6 +544,17 @@ table tr:nth-child(even) {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+}
+
+.feature-link {
+  color: var(--clr-text-primary);
+  transition: color 0.2s ease;
+  text-decoration: underline;
+}
+
+.feature-link:hover {
+  color: var(--clr-primary);
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {
