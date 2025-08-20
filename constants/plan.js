@@ -166,19 +166,19 @@ export const comparisonTableFeatures = [
         name: "AI multilingual translation",
         description: "Automatically translate forms into multiple languages using AI",
         free: "-",
-        pro: "Yes",
+        pro: "-",
         business: "Yes"
       },
       {
         name: "AI logic branching",
-        description: "Let AI build conditional logic based on your form goal",
+        description: "Use AI to show or hide fields based on respondents input",
         free: "-",
         pro: "Yes",
         business: "Yes"
       },
       {
         name: "AI powered emails",
-        description: "Send smart autoresponders and email notifications using AI",
+        description: "Create personalized autoresponding emails with AI",
         free: "Yes",
         pro: "Yes",
         business: "Yes"
@@ -239,21 +239,21 @@ export const comparisonTableFeatures = [
       },
       {
         name: "Pre-fill fields",
-        description: "Create a pre-filled form link",
+        description: "Pre-fill forms with known information",
         free: "Yes",
         pro: "Yes",
         business: "Yes"
       },
       {
         name: "Collect payment",
-        description: "Accept online payments via Stripe, PayPal, etc.",
+        description: "Accept online payments via Stripe and PayPal",
         free: "1% fee",
         pro: "0% fee",
         business: "0% fee",
       },
       {
         name: "Form limiter",
-        description: "Limit form responses by time, count, or per user",
+        description: "Limit form responses by date, time or count",
         free: "Yes",
         pro: "Yes",
         business: "Yes",
@@ -309,7 +309,7 @@ export const comparisonTableFeatures = [
       },
       {
         name: "Backend only forms",
-        description: "Create hidden forms that work via API only (no UI)",
+        description: "Send your existing form responses to Formester's backend",
         free: "-",
         pro: "Yes",
         business: "Yes",
@@ -360,29 +360,22 @@ export const comparisonTableFeatures = [
         business: "Yes"
       },
       {
-        name: "White label forms",
-        description: "Remove all Formester branding from the form",
-        free: "-",
-        pro: "-",
-        business: "Yes"
-      },
-      {
         name: "Remove branding",
-        description: "Hide \"Powered by Formester\" from user view",
+        description: "Make your forms truely yours",
         free: "-",
         pro: "Yes",
         business: "Yes"
       },
       {
         name: "Add custom domain",
-        description: "Use your own domain instead of a Formester URL",
+        description: "Have your own domain in the form URL",
         free: "-",
         pro: "-",
         business: "Yes"
       },
       {
         name: "Custom URL",
-        description: "Create clean and branded form links",
+        description: "Edit form URL slugs",
         free: "-",
         pro: "-",
         business: "Yes"
@@ -403,7 +396,7 @@ export const comparisonTableFeatures = [
       },
       {
         name: "Add favicon",
-        description: "Display your brand's favicon on the form page",
+        description: "Add your brand's logo as the form favicon",
         free: "Yes",
         pro: "Yes",
         business: "Yes"
@@ -441,7 +434,7 @@ export const comparisonTableFeatures = [
     features: [
       {
         name: "Email verification",
-        description: "Verify email addresses before submission is completed",
+        description: "Verify email addresses with OTP confirmation",
         free: "-",
         pro: "Yes",
         business: "Yes"
@@ -509,7 +502,7 @@ export const comparisonTableFeatures = [
       },
       {
         name: "Save and resume submissions",
-        description: "Allow respondents to save their progress",
+        description: "Allow respondents to save and resume their progress",
         free: "-",
         pro: "-",
         business: "Yes"
@@ -549,7 +542,7 @@ export const comparisonTableFeatures = [
       },
       {
         name: "API powered forms",
-        description: "Connect your forms to external apps using APIs like Google Sheets",
+        description: "Pre-fill forms using external data via API",
         free: "-",
         pro: "-",
         business: "Yes"
@@ -589,7 +582,7 @@ export const comparisonTableFeatures = [
       },
       {
         name: "Field wise analytics",
-        description: "Track performance and engagement at a field level",
+        description: "Summarize answers on a field level",
         free: "Yes",
         pro: "Yes",
         business: "Yes"
@@ -603,7 +596,7 @@ export const comparisonTableFeatures = [
       },
       {
         name: "Drop off rates",
-        description: "Find where users are quitting the form",
+        description: "See how many users dropped off before completion",
         free: "Yes",
         pro: "Yes",
         business: "Yes"
@@ -624,14 +617,14 @@ export const comparisonTableFeatures = [
       },
       {
         name: "Demographics",
-        description: "Capture user data like location, language, and OS",
+        description: "See where users are submitting the form from",
         free: "-",
         pro: "Yes",
         business: "Yes"
       },
       {
         name: "IP tracking",
-        description: "Track user IP addresses for location and security checks",
+        description: "See form submitters IP address",
         free: "Yes",
         pro: "Yes",
         business: "Yes"
