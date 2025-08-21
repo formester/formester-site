@@ -94,6 +94,32 @@
                 </li>
               </ul>
             </div>
+
+              <!-- PDF Templates Column -->
+              <div class="templates-dropdown-column">
+              <div class="templates-dropdown-title">
+                <span class="templates-dropdown-icon">
+                  <nuxt-img
+                    src="/pdf-icon.svg"
+                    alt="PDF Templates"
+                    width="20"
+                    height="20"
+                  />
+                </span>
+                PDF Templates
+              </div>
+              <ul class="templates-dropdown-list">
+                <li
+                  v-for="item in pdfTemplates"
+                  :key="item.id"
+                  @click="$emit('dropdown-close')"
+                >
+                  <NuxtLink :to="item.slug" class="templates-dropdown-link">
+                    {{ item.title }}
+                  </NuxtLink>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div class="templates-dropdown-footer">
@@ -219,6 +245,33 @@ export default {
           slug: '/templates/vocabulary-quiz-27609/',
         },
       ],
+      pdfTemplates: [
+        {
+          id: 1,
+          title: 'Employee Agreement PDF Form',
+          slug: '/templates/employee-agreement-pdf-form-49926/',
+        },
+        {
+          id: 2,
+          title: 'Lease Agreement PDF Form',
+          slug: '/templates/lease-agreement-pdf-form-template-49894/',
+        },
+        {
+          id: 3,
+          title: 'NDA Agreement PDF Form',
+          slug: '/templates/nda-agreement-pdf-form-template-49898/',
+        },
+        {
+          id: 4,
+          title: 'Photography Services Contract',
+          slug: '/templates/photography-services-contract-template-51951/',
+        },
+        {
+          id: 5,
+          title: 'Business Contract Agreement PDF Form',
+          slug: '/templates/business-contract-agreement-pdf-form-49913/',
+        },
+      ],
     }
   },
   methods: {
@@ -272,9 +325,9 @@ export default {
 
 .templates-dropdown-mega {
   display: flex;
-  width: 800px;
-  min-width: 800px;
-  max-width: 800px;
+  width: 900px;
+  min-width: 900px;
+  max-width: 900px;
   background: #fff;
   box-shadow: 0 8px 32px 0 rgba(16, 30, 54, 0.08);
   border-radius: 8px;

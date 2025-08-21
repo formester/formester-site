@@ -28,9 +28,12 @@
       <ul
         class="pricing__features d-flex flex-column align-items-start p-4 border-top mb-0 text-start"
       >
-        <li v-for="(feature, index) in plan.features" :key="feature + index">
-          {{ feature }}
-        </li>
+        <div class="d-flex align-items-start gap-2 justify-content-start" v-for="feature in plan.features">
+          <img  class="mt-1" src="../../assets/images/check.svg" alt="" />
+          <li>
+            {{ feature }}
+          </li>
+        </div>
       </ul>
     </div>
   </div>
