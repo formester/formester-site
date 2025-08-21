@@ -547,14 +547,22 @@ table tr:nth-child(even) {
 }
 
 .feature-link {
-  color: var(--clr-text-primary);
-  transition: color 0.2s ease;
-  text-decoration: underline;
+  position: relative;
+  text-decoration: none;            
+  background-image: radial-gradient(currentColor 1px, transparent 2px);
+  background-size: 8px 6px;         
+  background-repeat: repeat-x;
+  background-position: 0 100%;
 }
 
 .feature-link:hover {
   color: var(--clr-primary);
-  text-decoration: underline;
+  position: relative;
+  text-decoration: none;            
+  background-image: radial-gradient(currentColor 1px, transparent 2px);
+  background-size: 8px 6px;         
+  background-repeat: repeat-x;
+  background-position: 0 100%;
 }
 
 @media screen and (max-width: 768px) {
