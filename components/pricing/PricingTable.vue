@@ -547,22 +547,23 @@ table tr:nth-child(even) {
 }
 
 .feature-link {
-  position: relative;
-  text-decoration: none;            
-  background-image: radial-gradient(currentColor 1px, transparent 2px);
-  background-size: 8px 6px;         
+  color: var(--clr-text-primary);
+  transition: color 0.2s ease;
+  text-decoration: none; 
+  background-image: radial-gradient(currentColor 1.5px, transparent 1.5px);
+  background-size: 6px 6px; 
   background-repeat: repeat-x;
-  background-position: 0 100%;
+  background-position: 0 calc(100% - 1px); 
 }
 
 .feature-link:hover {
   color: var(--clr-primary);
-  position: relative;
-  text-decoration: none;            
-  background-image: radial-gradient(currentColor 1px, transparent 2px);
-  background-size: 8px 6px;         
+  transition: color 0.2s ease;
+  text-decoration: none; 
+  background-image: radial-gradient(currentColor 1.5px, transparent 1.5px);
+  background-size: 6px 6px; 
   background-repeat: repeat-x;
-  background-position: 0 100%;
+  background-position: 0 calc(100% - 1px); 
 }
 
 @media screen and (max-width: 768px) {
