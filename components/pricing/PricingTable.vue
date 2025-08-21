@@ -70,11 +70,11 @@
                     {{ feature.name }}
                   </template>
                   <div class="info-icon-container" v-if="feature.description">
-                    <svg class="info-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="8" cy="8" r="7" stroke="#6B7280" stroke-width="1.5"/>
-                      <path d="M8 11V8" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"/>
-                      <circle cx="8" cy="5.5" r="0.75" fill="#6B7280"/>
-                    </svg>
+                    <img
+                      class="question__icon"
+                      src="@/assets/images/icons/question.svg"
+                      alt="question icon"
+                    />
                     <div class="tooltip">{{ feature.description }}</div>
                   </div>
                 </div>
@@ -170,11 +170,11 @@
                     {{ feature.name }}
                   </template>
                   <div class="info-icon-container" v-if="feature.description">
-                    <svg class="info-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="8" cy="8" r="7" stroke="#6B7280" stroke-width="1.5"/>
-                      <path d="M8 11V8" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"/>
-                      <circle cx="8" cy="5.5" r="0.75" fill="#6B7280"/>
-                    </svg>
+                    <img
+                      class="question__icon"
+                      src="@/assets/images/icons/question.svg"
+                      alt="question icon"
+                    />
                     <div class="tooltip">{{ feature.description }}</div>
                   </div>
                 </div>
@@ -233,11 +233,11 @@
                     {{ feature.name }}
                   </template>
                   <div class="info-icon-container" v-if="feature.description">
-                    <svg class="info-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="8" cy="8" r="7" stroke="#6B7280" stroke-width="1.5"/>
-                      <path d="M8 11V8" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"/>
-                      <circle cx="8" cy="5.5" r="0.75" fill="#6B7280"/>
-                    </svg>
+                    <img
+          class="question__icon"
+          src="@/assets/images/icons/question.svg"
+          alt="question icon"
+        />
                     <div class="tooltip">{{ feature.description }}</div>
                   </div>
                 </div>
@@ -298,11 +298,11 @@
                     {{ feature.name }}
                   </template>
                   <div class="info-icon-container" v-if="feature.description">
-                    <svg class="info-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="8" cy="8" r="7" stroke="#6B7280" stroke-width="1.5"/>
-                      <path d="M8 11V8" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"/>
-                      <circle cx="8" cy="5.5" r="0.75" fill="#6B7280"/>
-                    </svg>
+                    <img
+                      class="question__icon"
+                      src="@/assets/images/icons/question.svg"
+                      alt="question icon"
+                    />
                     <div class="tooltip">{{ feature.description }}</div>
                   </div>
                 </div>
@@ -474,9 +474,9 @@ table tr:nth-child(even) {
   font-weight: 400;
   line-height: 1.4;
   border-radius: 6px;
-  width: 300px;
-  min-width: 250px;
-  max-width: 400px;
+  width: fit-content;
+  max-width: none;
+  white-space: nowrap;
   word-wrap: break-word;
   text-align: left;
   opacity: 0;
@@ -509,7 +509,8 @@ table tr:nth-child(even) {
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0;
-    max-width: 320px;
+    max-width: calc(100% - 32px);
+    white-space: normal;
     z-index: 1000;
   }
   
