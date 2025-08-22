@@ -56,6 +56,11 @@ export default {
         src: 'https://www.googletagmanager.com/gtm.js?id=GTM-5GX7R49B',
       },
       {
+        src: 'https://chakam-wc.netlify.app/chakam-web-components.js',
+        defer: true,
+        async: true,
+      },
+      {
         hid: 'datalayer-init',
         innerHTML: `
           window.dataLayer = window.dataLayer || [];
@@ -215,5 +220,6 @@ export default {
   env: {
     baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'http://localhost:3000',
     strapiUrl: 'https://cms.formester.com',
+    chakamCustomerToken: process.env.NUXT_PUBLIC_CHAKAM_CUSTOMER_TOKEN || '',
   },
 }
