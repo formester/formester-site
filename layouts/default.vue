@@ -7,6 +7,7 @@
       title="Ask Formester AI"
       primary-color="#6434d0"
       api-url="https://api.chakam.tech"
+      query-prefix="About Formester, "
       :customer-token="chakamCustomerToken"
       welcome-message="Ask me anything about Formester's features or test the chat functionality!"
       suggestions='What can you help with?, How does this work?, Tell me about features,API documentation,Pricing information'
