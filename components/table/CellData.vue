@@ -21,5 +21,14 @@ export default {
       validator: (value) => ['td', 'th'].includes(value),
     },
   },
+  computed: {
+    textStyle() {
+      return {
+        color: this.textColor || 'inherit',
+        fontWeight: this.bold || this.isBold ? 'bold' : 'normal',
+        backgroundColor: this.isHighlighted ? '#f8f9fa' : 'transparent',
+      };
+    },
+  },
 };
 </script>
