@@ -219,9 +219,9 @@ export default {
   },
   async asyncData({ params, error }) {
 
-    // if (payload) {
-    //   return payload
-    // }
+    if (payload) {
+      return payload
+    }
     //payload is used during static site generation and api call during developement
 
     try {
