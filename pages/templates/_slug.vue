@@ -38,7 +38,7 @@
       <template v-else>
         <div class="row align-items-center">
           <!-- Left side: Content -->
-          <div class="col-lg-6">
+          <div class="col-lg-6 content-col">
             <div class="template-info">
               <h1 class="section__heading">{{ template.name }}</h1>
 
@@ -60,7 +60,7 @@
           </div>
 
           <!-- Right side: PDF Images -->
-          <div class="col-lg-6">
+          <div class="col-lg-6 preview-col">
             <div class="preview-wrapper" v-if="data && data.slug">
               <div class="preview-switch" :class="{ 'is-form': activeTab === 'form' }">
                 <button
@@ -83,6 +83,12 @@
               </div>
 
               <div v-show="activeTab === 'pdf'" class="preview-pane">
+                <button type="button" class="preview-fab" @click="openFullscreen" aria-label="Open fullscreen preview">
+                  <!-- expand icon -->
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M9 4H4v5M15 4h5v5M9 20H4v-5M15 20h5v-5" stroke="#475467" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
                 <img v-if="previewImages.length === 1" :src="previewImages[0].url" alt="Template Preview" class="template-preview__image">
                 <div v-else-if="previewImages.length > 1" class="carousel-outer-wrapper">
                   <component
@@ -128,6 +134,25 @@
                 </div>
               </div>
 
+              <!-- Fullscreen Modal Overlay -->
+              <div v-if="showFullscreen" class="fullscreen-modal" @click.self="closeFullscreen">
+                <button class="modal-close" @click="closeFullscreen" aria-label="Close fullscreen">
+                  <img :src="closeIcon" alt="Close" />
+                </button>
+                <button v-if="previewImages.length > 1" class="modal-arrow left" @click.stop="prevModal" aria-label="Previous image">
+                  <span>&lsaquo;</span>
+                </button>
+                <img
+                  v-if="previewImages.length"
+                  :src="previewImages[modalIndex].url"
+                  :alt="previewImages[modalIndex].alt || 'Template Preview'"
+                  class="fullscreen-image"
+                />
+                <button v-if="previewImages.length > 1" class="modal-arrow right" @click.stop="nextModal" aria-label="Next image">
+                  <span>&rsaquo;</span>
+                </button>
+              </div>
+
               <div v-show="activeTab === 'form'" class="preview-pane">
                 <iframe
                   :src="template.surveyUrl"
@@ -167,6 +192,7 @@
 </template>
 
 <script>
+import closeIcon from '~/assets/images/x-close.svg'
 // MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
 // Components
@@ -191,7 +217,7 @@ export default {
     MoreTemplates,
     Faq,
   },
-  async asyncData({ params,payload, error }) {
+  async asyncData({ params, error }) {
 
     if (payload) {
       return payload
@@ -239,6 +265,10 @@ export default {
           },
         },
       ],
+      // fullscreen modal state
+      showFullscreen: false,
+      modalIndex: 0,
+      closeIcon,
     }
   },
   computed: {
@@ -382,6 +412,24 @@ export default {
         '_blank'
       )
     },
+    openFullscreen() {
+      // If carousel is present use current slide, else default to 0
+      this.modalIndex = this.currentSlide || 0
+      this.showFullscreen = true
+      document.body.style.overflow = 'hidden'
+    },
+    closeFullscreen() {
+      this.showFullscreen = false
+      document.body.style.overflow = ''
+    },
+    nextModal() {
+      if (!this.previewImages.length) return
+      this.modalIndex = (this.modalIndex + 1) % this.previewImages.length
+    },
+    prevModal() {
+      if (!this.previewImages.length) return
+      this.modalIndex = (this.modalIndex - 1 + this.previewImages.length) % this.previewImages.length
+    },
     handleAfterChange(currentSlide) {
       this.currentSlide = currentSlide
     },
@@ -420,14 +468,12 @@ export default {
 }
 
 /* Tabs */
-.preview-wrapper { position: relative; padding-top: 60px; }
+.preview-wrapper { display: flex; flex-direction: column; }
 
 /* Switch-style tabs positioned absolute within the preview */
 .preview-switch {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translateX(-50%);
+  /* place tabs in normal flow above preview */
+  position: relative;
   background: #F2F4F7;
   border-radius: 9999px;
   padding: 4px;
@@ -441,6 +487,8 @@ export default {
   overflow: hidden;
   white-space: nowrap;
   box-sizing: border-box;
+  margin-bottom: 16px; /* spacing above preview content */
+  align-self: center;  /* center the switch horizontally */
 }
 
 .preview-tab {
@@ -494,10 +542,13 @@ export default {
   background-color: #F2F4F7;
   border-radius: 12px;
   box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.04), 0px 4px 8px 0px rgba(0, 0, 0, 0.04);
+  position: relative; /* anchor floating button */
 }
 
 .preview-pane .template-preview__image {
   height: 100%;
+  padding-inline: 16px;
+  padding-bottom: 32px;
   object-fit: contain;
   display: block;
 }
@@ -519,12 +570,91 @@ export default {
   align-items: flex-start; /* top align vertically */
   justify-content: center; /* center horizontally */
 }
-.preview-pane .carousel-image { height: 100%; object-fit: contain; }
+.preview-pane .carousel-image {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Floating action button for fullscreen */
+.preview-fab {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(16,24,40,0.12);
+  z-index: 4;
+  padding: 0;
+}
+.preview-fab:hover { background: #f9fafb; }
+.preview-fab:focus { outline: none; box-shadow: 0 0 0 3px rgba(100,52,208,0.2); }
+
+/* Fullscreen modal styles */
+.fullscreen-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+}
+.fullscreen-image {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: none;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  line-height: 1;
+}
+.modal-arrow.left { left: 24px; }
+.modal-arrow.right { right: 24px; }
 
 @media screen and (max-width: 768px) {
   .preview-pane {
     height: auto;
-    min-height: 70vh; /* ensure enough height on small screens */
+    min-height: unset; /* let pane size to image height */
   }
   .preview-pane .template-preview__image,
   .preview-pane .carousel-image { height: auto !important; }

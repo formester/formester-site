@@ -45,14 +45,14 @@
  table {
   width: 100%;
   max-width: 980px;
-  border-collapse: collapse;
   border-spacing: 0;
   margin: 16px 0;
   font-family: inherit;
   background: #fff;
+  border: 1px solid #e5e7eb;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   table-layout: fixed;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
 }
   
@@ -63,6 +63,9 @@
   
   tbody tr {
     border-bottom: 1.5px solid #EAECF0;
+  }
+  tbody tr:nth-child(even) {
+    background-color: #f9fafb;
   }
   tbody tr:last-child {
     border-bottom: none;

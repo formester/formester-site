@@ -2,38 +2,40 @@
   <section class="hero-tabs-container">
     <div class="hero" @mousemove="handleMouseMove" ref="heroSection">
       <img src="/hero-assets/hero-shadow.svg" class="hero-shadow" alt="" />
-      <div
-        class="floating-icon floating-icon-1"
-        :style="{
-          transform: `translate(${iconPositions[0].x}px, ${iconPositions[0].y}px)`,
-        }"
-      >
-        <object type="image/svg+xml" data="/hero-assets/floating-icon-1.svg" width="120" height="120" aria-label="Floating Icon" class="svg-object"></object>
-      </div>
-      <div
-        class="floating-icon floating-icon-2"
-        :style="{
-          transform: `translate(${iconPositions[1].x}px, ${iconPositions[1].y}px)`,
-        }"
-      >
-        <object type="image/svg+xml" data="/hero-assets/floating-icon-2.svg" width="120" height="120" aria-label="Floating Icon" class="svg-object"></object>
-      </div>
-      <div
-        class="floating-icon floating-icon-3"
-        :style="{
-          transform: `translate(${iconPositions[2].x}px, ${iconPositions[2].y}px)`,
-        }"
-      >
-        <object type="image/svg+xml" data="/hero-assets/floating-icon-3.svg" width="120" height="120" aria-label="Floating Icon" class="svg-object"></object>
-      </div>
-      <div
-        class="floating-icon floating-icon-4"
-        :style="{
-          transform: `translate(${iconPositions[3].x}px, ${iconPositions[3].y}px)`,
-        }"
-      >
-        <object type="image/svg+xml" data="/hero-assets/floating-icon-4.svg" width="120" height="120" aria-label="Floating Icon" class="svg-object"></object>
-      </div>
+      <template v-if="!hideIcons">
+        <div
+          class="floating-icon floating-icon-1"
+          :style="{
+            transform: `translate(${iconPositions[0].x}px, ${iconPositions[0].y}px)`,
+          }"
+        >
+          <object type="image/svg+xml" data="/hero-assets/floating-icon-1.svg" width="120" height="120" aria-label="Floating Icon" class="svg-object"></object>
+        </div>
+        <div
+          class="floating-icon floating-icon-2"
+          :style="{
+            transform: `translate(${iconPositions[1].x}px, ${iconPositions[1].y}px)`,
+          }"
+        >
+          <object type="image/svg+xml" data="/hero-assets/floating-icon-2.svg" width="120" height="120" aria-label="Floating Icon" class="svg-object"></object>
+        </div>
+        <div
+          class="floating-icon floating-icon-3"
+          :style="{
+            transform: `translate(${iconPositions[2].x}px, ${iconPositions[2].y}px)`,
+          }"
+        >
+          <object type="image/svg+xml" data="/hero-assets/floating-icon-3.svg" width="120" height="120" aria-label="Floating Icon" class="svg-object"></object>
+        </div>
+        <div
+          class="floating-icon floating-icon-4"
+          :style="{
+            transform: `translate(${iconPositions[3].x}px, ${iconPositions[3].y}px)`,
+          }"
+        >
+          <object type="image/svg+xml" data="/hero-assets/floating-icon-4.svg" width="120" height="120" aria-label="Floating Icon" class="svg-object"></object>
+        </div>
+      </template>
       <div class="container horizontal__padding">
         <div
           class="d-flex flex-column align-items-center justify-content-center text-center my-5"
@@ -59,7 +61,7 @@
           <a
             v-if="button && button.length"
             :href="button[0]?.link || '#'"
-            class="btn button mt-4 mb-4 mb-md-5 hero__button"
+            class="btn button mt-4 mb-5 hero__button"
             :class="{
               'hero__button--primary': button[0]?.type === 'Primary',
               'hero__button--secondary': button[0]?.type === 'Secondary',
@@ -67,6 +69,19 @@
           >
             {{ button[0]?.text || 'Learn More' }}
           </a>
+
+          <div
+          class="d-flex flex-column flex-md-row align-items-center justify-content-center"
+        >
+          <div
+            v-for="item in clickTriggers"
+            :key="item"
+            class="d-flex align-items-center justify-content-center mx-4"
+          >
+            <nuxt-img src="/icons/check-icon.svg" alt="tick" />
+            <sapn class="click-triggers ms-2">{{ item.text }}</sapn>
+          </div>
+        </div>
         </div>
       </div>
     </div>
@@ -111,6 +126,14 @@ export default {
     },
   },
   props: {
+    clickTriggers: {
+      type: Array,
+      default: () => [],
+    },
+    hideIcons: {
+      type: Boolean,
+      default: false
+    },
     title: {
       type: Array,
       default: () => [],
