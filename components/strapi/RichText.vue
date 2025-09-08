@@ -35,7 +35,7 @@ export default {
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  padding: 2.5rem;
+  padding: 2rem;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -65,6 +65,34 @@ export default {
 }
 
 .container {
-  margin: 64px auto;
+  margin: 0 auto;
+  margin-top: 32px;
+  margin-bottom: 96px;
+}
+
+.rich-text-content :deep(h2) {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 125%;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .rich-text-content :deep(h2) {
+    font-size: 30px !important;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .rich-text-content :deep(h2) {
+  font-size: 32;
+  font-weight: 700;
+  line-height: 125%;
+  margin: 0 auto;
+  margin-bottom: 24px;
+
+  }
 }
 </style>
