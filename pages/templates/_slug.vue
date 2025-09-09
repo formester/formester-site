@@ -217,7 +217,7 @@ export default {
     MoreTemplates,
     Faq,
   },
-  async asyncData({ params, error }) {
+  async asyncData({ params, error ,payload }) {
 
     if (payload) {
       return payload
