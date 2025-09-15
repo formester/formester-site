@@ -156,17 +156,17 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/formester-vs-zoho-form/" class="footer__link">
+                <NuxtLink to="/zoho-forms-alternative/" class="footer__link">
                   Formester vs Zoho Form
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/formester-vs-paperform/" class="footer__link">
+                <NuxtLink to="/paperform-alternative/" class="footer__link">
                   Formester vs Paperform
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/formester-vs-formstack/" class="footer__link">
+                <NuxtLink to="/formstack-alternative/" class="footer__link">
                   Formester vs Formstack
                 </NuxtLink>
               </li>
@@ -183,6 +183,16 @@
               <li class="mt-2">
                 <NuxtLink to="/fillout-alternative/" class="footer__link">
                   Formester vs Fillout
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
+                <NuxtLink to="/gravity-forms-alternative/" class="footer__link">
+                  Formester vs Gravity Forms
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
+                <NuxtLink to="/wp-forms-alternative/" class="footer__link">
+                  Formester vs WPForms
                 </NuxtLink>
               </li>
             </ul>
