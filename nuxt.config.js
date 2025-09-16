@@ -131,6 +131,7 @@ export default {
   plugins: [
     '~plugins/jsonld',
     { src: '~/plugins/notifications-client', ssr: false },
+    { src: '~/plugins/crisp.client.js', ssr: false },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
