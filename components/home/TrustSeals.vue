@@ -60,6 +60,13 @@
                   height="44"
                 />
               </div>
+              <div class="ticker-item">
+                <nuxt-img 
+                src="/trustseals/10.svg" 
+                alt="Virgin" 
+                height="64" 
+                />
+              </div>
             </div>
           </div>
         </div>
