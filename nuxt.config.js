@@ -36,53 +36,9 @@ export default {
         src: '/bootstrap.min.js',
         defer: true,
         async: true,
-      },
-      {
-        hid: 'partytown-init',
-        innerHTML: `
-          window.partytown = {
-            forward: ['dataLayer.push', 'gtag']
-          };
-        `,
-        type: 'text/javascript',
-        charset: 'utf-8'
-      },
-      {
-        src: '/~partytown/partytown.js',
-        async: true
-      },
-      {
-        type: 'text/partytown',
-        src: 'https://www.googletagmanager.com/gtm.js?id=GTM-5GX7R49B',
-      },
-      {
-        hid: 'datalayer-init',
-        innerHTML: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){ dataLayer.push(arguments); }
-          gtag('js', new Date());
-        `,
-        type: 'text/javascript',
-        charset: 'utf-8'
-      },
-      {
-        hid: 'gtag-init',
-        innerHTML: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){ dataLayer.push(arguments); }
-          gtag('js', new Date());
-          gtag('config', 'G-WY8RMY11PE');
-        `,
-        type: 'text/javascript',
-        charset: 'utf-8'
       }
-      
     ],
-    __dangerouslyDisableSanitizersByTagID: {
-      'datalayer-init': ['innerHTML'],
-      'gtag-init': ['innerHTML'],
-      'partytown-init': ['innerHTML']
-    }
+    __dangerouslyDisableSanitizersByTagID: {}
   },
 
   router: {},
@@ -132,6 +88,7 @@ export default {
     '~plugins/jsonld',
     { src: '~/plugins/notifications-client', ssr: false },
     { src: '~/plugins/crisp.client.js', ssr: false },
+    { src: '~/plugins/consent.client.js', ssr: false },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -161,7 +118,7 @@ export default {
 
   // GTM configuration
   gtm: {
-    enabled: true,
+    enabled: false, // Will be enabled after cookie consent
     id: 'GTM-5GX7R49B',
   },
 
@@ -216,5 +173,6 @@ export default {
   env: {
     baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'http://localhost:3000',
     strapiUrl: 'https://cms.formester.com',
+    clarityId: 'emw9o333qb',
   },
 }
