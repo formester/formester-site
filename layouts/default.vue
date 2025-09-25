@@ -3,15 +3,17 @@
     <Navbar />
     <Nuxt />
     <Footer />
+    <CookieConsent />
   </div>
 </template>
 
 <script>
 import Navbar from '../components/nav/Navbar.vue'
 import Footer from '../components/Footer.vue'
+import CookieConsent from '../components/CookieConsent.vue'
 
 export default {
-  components: { Footer, Navbar },
+  components: { Footer, Navbar, CookieConsent },
   mounted() {
     this.trackReferrer()
   },
@@ -43,8 +45,8 @@ export default {
           // Store in cross-subdomain cookie (expires in 30 days)
           this.setCookie('formester_referrer_data', JSON.stringify(referrerData), 30, '.formester.com')
           
-          // Send to GTM/Google Analytics
-          if (typeof gtag === 'function') {
+          // Send to GTM/Google Analytics (only if tracking enabled)
+          if (typeof window !== 'undefined' && window.__trackingEnabled && typeof gtag === 'function') {
             gtag('event', 'referrer_tracking', {
               event_category: 'referrer',
               event_label: referrerDomain,
@@ -54,8 +56,8 @@ export default {
             })
           }
           
-          // Also push to dataLayer for GTM
-          if (typeof window !== 'undefined' && window.dataLayer) {
+          // Also push to dataLayer for GTM (only if tracking enabled)
+          if (typeof window !== 'undefined' && window.__trackingEnabled && window.dataLayer) {
             window.dataLayer.push({
               event: 'referrer_tracked',
               referrer_domain: referrerDomain,
