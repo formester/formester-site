@@ -326,6 +326,11 @@
                   Documentation
                 </a>
               </li>
+              <li class="mt-2">
+                <a href="https://help.formester.com/en/" class="footer__link">
+                  Help Centre
+                </a>
+              </li>
             </ul>
 
             <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
