@@ -268,18 +268,10 @@
             <ul class="list-unstyled mt-2">
               <li class="mt-2">
                 <NuxtLink
-                  to="/tools/event-planning-cost-estimator/"
+                  to="/tools/event-registration-software/"
                   class="footer__link"
                 >
-                  Event Planning Cost Estimator
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink
-                  to="/tools/business-quote-generator/"
-                  class="footer__link"
-                >
-                  Business Quote Generator
+                Event Registration Software
                 </NuxtLink>
               </li>
             </ul>
