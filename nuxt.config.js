@@ -36,6 +36,13 @@ export default {
         src: '/bootstrap.min.js',
         defer: true,
         async: true,
+      },
+      {
+        src: 'https://affonso.io/js/pixel.min.js',
+        defer: true,
+        async: true,
+        "data-affonso": "cmgks3gcz001h7prj3pe2h62f",
+        "data-cookie_duration": "30"
       }
     ],
     __dangerouslyDisableSanitizersByTagID: {}
