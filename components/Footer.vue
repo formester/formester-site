@@ -195,6 +195,11 @@
                   Formester vs WPForms
                 </NuxtLink>
               </li>
+              <li class="mt-2">
+                <NuxtLink to="/surveymonkey-alternative/" class="footer__link">
+                  Formester vs SurveyMonkey
+                </NuxtLink>
+              </li>
             </ul>
           </div>
 
