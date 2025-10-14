@@ -24,7 +24,7 @@
             :class="{ active: activeTab === null }"
             @click="setActiveTab()"
           >
-            Recommend
+            Recommended
           </li>
           <!-- Flatten categories in single Array so we can loop on it  -->
           <li
@@ -117,6 +117,8 @@ export default {
       activeTab: null,
       templates: [],
       loading: false,
+      recommendedSlugs: null,
+      randomRecommended: null,
     }
   },
   mounted() {
@@ -179,12 +181,60 @@ export default {
           'https://app.formester.com/templates.json',
           { params }
         )
-        this.templates = templates.filter((el) => el.slug !== this.templateSlug)
-        this.templates = this.templates.splice(0, 6)
+        let list = templates.filter((el) => el.slug !== this.templateSlug)
+
+        if (!categorySlug) {
+          try {
+            if (this.recommendedSlugs === null) {
+              this.recommendedSlugs = await this.getRecommendedSlugs()
+            }
+            if (this.recommendedSlugs && this.recommendedSlugs.length) {
+              const slugSet = new Set(this.recommendedSlugs)
+              list = list.filter((el) => slugSet.has(el.slug))
+              list.sort(
+                (a, b) =>
+                  this.recommendedSlugs.indexOf(a.slug) -
+                  this.recommendedSlugs.indexOf(b.slug)
+              )
+              this.templates = list.slice(0, 6)
+            } else {
+              if (!this.randomRecommended) {
+                const shuffled = [...list].sort(() => Math.random() - 0.5)
+                this.randomRecommended = shuffled.slice(0, 6)
+              }
+              this.templates = this.randomRecommended
+            }
+            this.loading = false
+            return
+          } catch (e) {
+            console.error(e)
+          }
+        }
+
+        this.templates = list.splice(0, 6)
         this.loading = false
       } catch (err) {
         console.error(err)
         this.loading = false
+      }
+    },
+    async getRecommendedSlugs() {
+      try {
+        const { data } = await axios(
+          'https://cms.formester.com/api/recommended-templates?populate=deep'
+        )
+        const items = (data && data.data) || []
+        const found = items.find(
+          (it) => it && it.specificTemplate === this.templateSlug
+        )
+        if (!found || !found.recommendedTemplates) return []
+        const slugs = found.recommendedTemplates
+          .map((rt) => (rt ? rt.text : null))
+          .filter(Boolean)
+        return [...new Set(slugs)]
+      } catch (e) {
+        console.error(e)
+        return []
       }
     },
   },
