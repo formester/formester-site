@@ -117,8 +117,6 @@ export default {
       activeTab: null,
       templates: [],
       loading: false,
-      recommendedSlugs: null,
-      randomRecommended: null,
     }
   },
   mounted() {
@@ -171,47 +169,51 @@ export default {
       }, 300)
     },
     async getTemplates(categorySlug) {
-      const params = {}
-      if (categorySlug) {
-        params.category_slug = categorySlug
-      }
       this.loading = true
       try {
-        const { data: templates } = await axios(
-          'https://app.formester.com/templates.json',
-          { params }
-        )
-        let list = templates.filter((el) => el.slug !== this.templateSlug)
-
         if (!categorySlug) {
-          try {
-            if (this.recommendedSlugs === null) {
-              this.recommendedSlugs = await this.getRecommendedSlugs()
+          const recSlugs = await this.getRecommendedSlugs()
+          if (recSlugs && recSlugs.length) {
+            const params = {
+              slugs: recSlugs.join(','),
+              limit: 6,
             }
-            if (this.recommendedSlugs && this.recommendedSlugs.length) {
-              const slugSet = new Set(this.recommendedSlugs)
-              list = list.filter((el) => slugSet.has(el.slug))
-              list.sort(
-                (a, b) =>
-                  this.recommendedSlugs.indexOf(a.slug) -
-                  this.recommendedSlugs.indexOf(b.slug)
-              )
-              this.templates = list.slice(0, 6)
-            } else {
-              if (!this.randomRecommended) {
-                const shuffled = [...list].sort(() => Math.random() - 0.5)
-                this.randomRecommended = shuffled.slice(0, 6)
-              }
-              this.templates = this.randomRecommended
-            }
+            const { data: filtered } = await axios(
+              'https://app.formester.com/templates.json',
+              { params }
+            )
+            const allowed = new Set(recSlugs)
+            let list = filtered.filter((el) => allowed.has(el.slug))
+            const order = recSlugs
+            list.sort((a, b) => order.indexOf(a.slug) - order.indexOf(b.slug))
+            this.templates = list.filter((el) => el.slug !== this.templateSlug).slice(0, 6)
             this.loading = false
             return
-          } catch (e) {
-            console.error(e)
+          } else {
+            const params = {
+              limit: 7,
+            }
+            const { data } = await axios(
+              'https://app.formester.com/templates.json',
+              { params }
+            )
+            this.templates = data
+              .filter((el) => el.slug !== this.templateSlug)
+              .slice(0, 6)
+            this.loading = false
+            return
           }
         }
 
-        this.templates = list.splice(0, 6)
+        const params = { limit: 6 }
+        if (categorySlug) params.category_slug = categorySlug
+        const { data } = await axios(
+          'https://app.formester.com/templates.json',
+          { params }
+        )
+        this.templates = data
+          .filter((el) => el.slug !== this.templateSlug)
+          .slice(0, 6)
         this.loading = false
       } catch (err) {
         console.error(err)
@@ -221,12 +223,17 @@ export default {
     async getRecommendedSlugs() {
       try {
         const { data } = await axios(
-          'https://cms.formester.com/api/recommended-templates?populate=deep'
+          'https://cms.formester.com/api/recommended-templates',
+          {
+            params: {
+              'filters[specificTemplate][$eq]': this.templateSlug,
+              'pagination[pageSize]': 1,
+              populate: 'deep',
+            },
+          }
         )
         const items = (data && data.data) || []
-        const found = items.find(
-          (it) => it && it.specificTemplate === this.templateSlug
-        )
+        const found = items && items.length ? items[0] : null
         if (!found || !found.recommendedTemplates) return []
         const slugs = found.recommendedTemplates
           .map((rt) => (rt ? rt.text : null))
