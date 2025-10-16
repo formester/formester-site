@@ -24,7 +24,7 @@
             :class="{ active: activeTab === null }"
             @click="setActiveTab()"
           >
-            Recommend
+            Recommended
           </li>
           <!-- Flatten categories in single Array so we can loop on it  -->
           <li
@@ -169,22 +169,79 @@ export default {
       }, 300)
     },
     async getTemplates(categorySlug) {
-      const params = {}
-      if (categorySlug) {
-        params.category_slug = categorySlug
-      }
       this.loading = true
       try {
-        const { data: templates } = await axios(
+        if (!categorySlug) {
+          const recSlugs = await this.getRecommendedSlugs()
+          if (recSlugs && recSlugs.length) {
+            const params = {
+              slugs: recSlugs.join(','),
+              limit: 6,
+            }
+            const { data: filtered } = await axios(
+              'https://app.formester.com/templates.json',
+              { params }
+            )
+            const allowed = new Set(recSlugs)
+            let list = filtered.filter((el) => allowed.has(el.slug))
+            const order = recSlugs
+            list.sort((a, b) => order.indexOf(a.slug) - order.indexOf(b.slug))
+            this.templates = list.filter((el) => el.slug !== this.templateSlug).slice(0, 6)
+            this.loading = false
+            return
+          } else {
+            const params = {
+              limit: 7,
+            }
+            const { data } = await axios(
+              'https://app.formester.com/templates.json',
+              { params }
+            )
+            this.templates = data
+              .filter((el) => el.slug !== this.templateSlug)
+              .slice(0, 6)
+            this.loading = false
+            return
+          }
+        }
+
+        const params = { limit: 6 }
+        if (categorySlug) params.category_slug = categorySlug
+        const { data } = await axios(
           'https://app.formester.com/templates.json',
           { params }
         )
-        this.templates = templates.filter((el) => el.slug !== this.templateSlug)
-        this.templates = this.templates.splice(0, 6)
+        this.templates = data
+          .filter((el) => el.slug !== this.templateSlug)
+          .slice(0, 6)
         this.loading = false
       } catch (err) {
         console.error(err)
         this.loading = false
+      }
+    },
+    async getRecommendedSlugs() {
+      try {
+        const { data } = await axios(
+          'https://cms.formester.com/api/recommended-templates',
+          {
+            params: {
+              'filters[specificTemplate][$eq]': this.templateSlug,
+              'pagination[pageSize]': 1,
+              populate: 'deep',
+            },
+          }
+        )
+        const items = (data && data.data) || []
+        const found = items && items.length ? items[0] : null
+        if (!found || !found.recommendedTemplates) return []
+        const slugs = found.recommendedTemplates
+          .map((rt) => (rt ? rt.text : null))
+          .filter(Boolean)
+        return [...new Set(slugs)]
+      } catch (e) {
+        console.error(e)
+        return []
       }
     },
   },
