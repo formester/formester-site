@@ -171,11 +171,6 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/formester-vs-canva/" class="footer__link">
-                  Formester vs Canva
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
                 <NuxtLink to="/tally-forms-alternative/" class="footer__link">
                   Formester vs Tally Forms
                 </NuxtLink>
