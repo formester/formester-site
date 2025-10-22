@@ -1,16 +1,15 @@
 import getRoutes, { getFeatureRoutes, getPageRoutes } from './utils/getRoutes'
 import getSiteMeta from './utils/getSiteMeta'
 import getTemplatesAndCategories from './utils/getTemplatesAndCategories'
+import axios from 'axios'
 
-const axios = require('axios')
 const meta = getSiteMeta()
 
-export default {
-  // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
-
-  // Global page headers: https://go.nuxtjs.dev/config-head
-  head: {
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  // Global page headers
+  app: {
+    head: {
     title: 'No-Code Online Form Builder - Formester',
     meta: [
       ...meta,
@@ -44,21 +43,20 @@ export default {
         "data-affonso": "cmgks3gcz001h7prj3pe2h62f",
         "data-cookie_duration": "30"
       }
-    ],
-    __dangerouslyDisableSanitizersByTagID: {}
+    ]
+    }
   },
 
-  router: {},
-
+  // Robots configuration
   robots: {
     UserAgent: '*',
-    Disallow: ['/_nuxt/static/'],
+    Disallow: ['/_nuxt/static/']
   },
 
   sitemap: {
     hostname: 'https://formester.com',
     trailingSlash: true,
-    routes: async () => {
+    urls: async () => {
       let { data } = await axios.get('https://app.formester.com/templates.json')
       let templates = data.map((template) => {
         return {
@@ -84,87 +82,71 @@ export default {
         ...categories,
       ]
       return sitemap
-    },
+    }
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~/assets/css/bootstrap.min.css', '~/assets/css/main.css'],
 
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
+  // Plugins to run before rendering page
   plugins: [
-    '~plugins/jsonld',
-    { src: '~/plugins/notifications-client', ssr: false },
-    { src: '~/plugins/crisp.client.js', ssr: false },
-    { src: '~/plugins/consent.client.js', ssr: false },
+    '~/plugins/jsonld',
+    '~/plugins/notifications-client',
+    '~/plugins/crisp.client.js',
+    '~/plugins/consent.client.js'
   ],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
+  // Auto import components
   components: true,
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    '@nuxt/image',
-    // [
-    //   '@nuxtjs/google-analytics',
-    //   {
-    //     id: 'UA-99986844-1',
-    //   },
-    // ],
-  ],
-
-  // Modules: https://go.nuxtjs.dev/config-modules
+  // Modules
   modules: [
-    '@nuxtjs/robots',
-    '@nuxtjs/axios',
-    '@nuxtjs/pwa',
-    // '@nuxthq/studio',
+    'nuxt-simple-robots',
     '@nuxt/content',
     '@nuxtjs/sitemap',
-    '@nuxtjs/gtm',
+    'nuxt-gtag',
+    '@vite-pwa/nuxt',
+    '@nuxt/image',
+    'nuxt-schema-org'
   ],
 
-  // GTM configuration
-  gtm: {
+  // GTM/Gtag configuration
+  gtag: {
     enabled: false, // Will be enabled after cookie consent
-    id: 'GTM-5GX7R49B',
+    id: 'GTM-5GX7R49B'
   },
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
-
-  // PWA module configuration: https://go.nuxtjs.dev/pwa
+  // PWA module configuration
   pwa: {
     manifest: {
-      lang: 'en',
-    },
+      lang: 'en'
+    }
   },
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
-  //   For catching 404 pages
-  generate: {
-    routes: async () => {
-      try {
-        const { templateRoutes, categorieRoutes } =
-          await getTemplatesAndCategories()
-        const featureRoutes = await getFeatureRoutes()
-        const pageRoutes = await getPageRoutes()
-        return [
-          ...pageRoutes,
-          ...featureRoutes,
-          ...templateRoutes,
-          ...categorieRoutes,
-        ]
-      } catch (error) {
-        return []
+  // Nitro configuration (replaces generate)
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: async () => {
+        try {
+          const { templateRoutes, categorieRoutes } =
+            await getTemplatesAndCategories()
+          const featureRoutes = await getFeatureRoutes()
+          const pageRoutes = await getPageRoutes()
+          return [
+            ...pageRoutes,
+            ...featureRoutes,
+            ...templateRoutes,
+            ...categorieRoutes
+          ]
+        } catch (error) {
+          return []
+        }
       }
-    },
-    fallback: true,
-    concurrency: 200,
-    interval: 100,
+    }
   },
   content: {
-    liveEdit: false,
+    // Nuxt Content v2 configuration
   },
 
   // Nuxt Image
@@ -172,14 +154,19 @@ export default {
     dir: 'assets/images',
     domains: [
       'formester-strapi.s3.ap-south-1.amazonaws.com',
-      'img.youtube.com',
-    ],
+      'img.youtube.com'
+    ]
   },
 
-  // Enviornment variable for the base url of the app
-  env: {
-    baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'http://localhost:3000',
-    strapiUrl: 'https://cms.formester.com',
-    clarityId: 'emw9o333qb',
+  // Runtime config (replaces env)
+  runtimeConfig: {
+    public: {
+      baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'http://localhost:3000',
+      strapiUrl: 'https://cms.formester.com',
+      clarityId: 'emw9o333qb'
+    }
   },
-}
+
+  // Compatibility
+  compatibilityDate: '2024-10-22'
+})
