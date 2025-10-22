@@ -135,313 +135,289 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import ClockIcon from '../../components/icons/ClockIcon.vue'
 import TwitterIcon from '../../components/icons/twitter.vue'
 import FacebookIcon from '../../components/icons/facebook.vue'
 import LinkdinIcon from '../../components/icons/linkdin.vue'
 import CopyLinkIcon from '../../components/icons/copyLink.vue'
-// MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
-import axios from 'axios'
 import readingTime from '@/utils/readingTime'
 import { marked } from 'marked'
 
-export default {
-  components: {
-    ClockIcon,
-    TwitterIcon,
-    FacebookIcon,
-    LinkdinIcon,
-    CopyLinkIcon,
-  },
-  data() {
-    return {
-      showPopup: false,
-      popupImageSrc: '',
-      popupImageAlt: '',
-    }
-  },
-  content: {
-    liveEdit: false,
-  },
-  async asyncData({ params, error }) {
-    const response = await axios.get(`${process.env.strapiUrl}/api/blogs`, {
+const route = useRoute()
+const config = useRuntimeConfig()
+const { $notify } = useNuxtApp()
+
+const showPopup = ref(false)
+const popupImageSrc = ref('')
+const popupImageAlt = ref('')
+const blogContent = ref(null)
+
+const { data: blogResponse } = await useAsyncData(`blog-${route.params.slug}`, async () => {
+  try {
+    const response = await $fetch(`${config.public.strapiUrl}/api/blogs`, {
       params: {
-        'filters[slug][$eq]': params.slug,
+        'filters[slug][$eq]': route.params.slug,
         populate: '*',
       },
     })
-    const blog = response.data.data[0]
+    
+    const blog = response.data?.[0]
     if (!blog?.id) {
-      error({ statusCode: 404, message: 'Page not found' })
-      return
+      throw createError({ statusCode: 404, message: 'Page not found' })
     }
+    
     const blogData = {
       id: blog.id,
       ...blog.attributes,
-      coverImg: blog.attributes.coverImg.data.attributes?.url,
-      metaImage: blog.attributes.metaImage.map((item) => item.imageURL),
-      readingStats: readingTime(blog.attributes.body),
+      coverImg: blog.attributes.coverImg?.data?.attributes?.url,
+      metaImage: blog.attributes.metaImage?.map((item) => item.imageURL) || [],
+      readingStats: readingTime(blog.attributes.body || ''),
     }
 
-    //Get Related Articles
-    let { data } = await axios.get(
-      `${process.env.strapiUrl}/api/blogs/random`,
-      {
-        params: {
-          slug: params.slug,
-        },
-      }
-    )
-
-    let relatedArticles = data.map((item) => {
-      return {
-        ...item,
-        coverImg: item.coverImg?.url,
-        readingStats: readingTime(item.body),
-      }
+    const relatedData = await $fetch(`${config.public.strapiUrl}/api/blogs/random`, {
+      params: {
+        slug: route.params.slug,
+      },
     })
 
+    const relatedArticles = relatedData.map((item) => ({
+      ...item,
+      coverImg: item.coverImg?.url,
+      readingStats: readingTime(item.body || ''),
+    }))
+
     return { blogData, relatedArticles }
-  },
-  mounted() {
-    this.setupImageClickHandlers()
-    this.setupKeyboardHandler()
-    // this.loadDisqus()
-  },
-  methods: {
-    setupImageClickHandlers() {
-      this.$nextTick(() => {
-        if (this.$refs.blogContent) {
-          const images = this.$refs.blogContent.querySelectorAll('.nuxt-content img')
-          images.forEach((image) => {
-            image.addEventListener('click', () => {
-              this.openPopup(image.src, image.alt)
-            })
-          })
-        }
+  } catch (error) {
+    console.error('Error fetching blog:', error)
+    throw createError({ statusCode: 404, message: 'Blog not found' })
+  }
+})
+
+const blogData = computed(() => blogResponse.value?.blogData)
+const relatedArticles = computed(() => blogResponse.value?.relatedArticles || [])
+
+const setupImageClickHandlers = () => {
+  nextTick(() => {
+    if (blogContent.value) {
+      const images = blogContent.value.querySelectorAll('.nuxt-content img')
+      images.forEach((image) => {
+        image.addEventListener('click', () => {
+          openPopup(image.src, image.alt)
+        })
       })
-    },
-    setupKeyboardHandler() {
-      document.addEventListener('keydown', (evt) => {
-        if (evt.key === 'Escape') {
-          this.closePopup()
-        }
-      })
-    },
-    openPopup(src, alt) {
-      this.popupImageSrc = src
-      this.popupImageAlt = alt
-      this.showPopup = true
-    },
-    closePopup() {
-      this.showPopup = false
-      this.popupImageSrc = ''
-      this.popupImageAlt = ''
-    },
-    formatDate(date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' }
-      return new Date(date).toLocaleDateString('en', options)
-    },
-    to() {
-      this.$router.back()
-    },
-    copyToClipboard() {
-      if (process.client) {
-        navigator.clipboard.writeText(window.location.href).then(() => {
-          this.$notify({ type: 'success', text: 'Link copied to clipboard' })
-        })
-      }
-      this.googleAnalytics('custom_link')
-    },
-    googleAnalytics(platform) {
-      gtag &&
-        gtag('event', 'share', {
-          method: platform,
-          content_type: 'blog',
-          item_id: this.article.title,
-        })
-    },
-    loadDisqus() {
-      var disqus_config = function () {
-        this.page.url = `https://formester.com/blog/${this.$route.params.slug}/`
-        this.page.identifier = `${this.$route.params.slug}`
-      }
-
-      var d = document,
-        s = d.createElement('script')
-      s.src = 'https://formester.disqus.com/embed.js'
-      s.setAttribute('data-timestamp', +new Date())
-      ;(d.head || d.body).appendChild(s)
-    },
-  },
-  computed: {
-    meta() {
-      const metaData = {
-        type: 'article',
-        url: `https://formester.com/blog/${this.$route.params.slug}/`,
-        title: this.blogData?.metaTitle,
-        description: this.blogData?.metaDescription,
-        mainImage:
-          this.blogData?.coverImg ||
-          'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: this.blogData?.coverImgAlt || 'Formester Logo',
-        keywords: this.blogData?.keywords,
-      }
-      return getSiteMeta(metaData)
-    },
-    encodedUrl() {
-      return encodeURIComponent(process.env.baseUrl + this.$route.fullPath)
-    },
-    processedBlogData() {
-      const renderer = new marked.Renderer()
-
-      // Override heading renderer to add IDs
-      renderer.heading = function(text, level) {
-        if (level >= 2 && level <= 3) {
-          const id = text
-            .toLowerCase()
-            .replace(/[^\w\s-]/g, '') // Remove special characters
-            .replace(/\s+/g, '-') // Replace spaces with hyphens
-            .replace(/--+/g, '-') // Replace multiple hyphens with single
-            .replace(/^-+|-+$/g, '') // Remove leading/trailing hyphens
-
-          return `<h${level} id="${id}">${text}</h${level}>`
-        }
-        return `<h${level}>${text}</h${level}>`
-      }
-
-      return marked(this.blogData?.body || '', { renderer })
-    },
-    tableOfContents() {
-      const toc = []
-      const content = this.blogData?.body || ''
-
-      // Extract headings from markdown
-      const headingRegex = /^(#{2,3})\s+(.+)$/gm
-      let match
-
-      while ((match = headingRegex.exec(content)) !== null) {
-        const level = match[1].length
-        const text = match[2].trim()
-        const id = text
-          .toLowerCase()
-          .replace(/[^\w\s-]/g, '') // Remove special characters
-          .replace(/\s+/g, '-') // Replace spaces with hyphens
-          .replace(/--+/g, '-') // Replace multiple hyphens with single
-          .replace(/^-+|-+$/g, '') // Remove leading/trailing hyphens
-
-        toc.push({
-          id,
-          text,
-          level
-        })
-      }
-
-      return toc
-    },
-  },
-  head() {
-    return {
-      title: this.blogData?.metaTitle,
-      meta: [
-        ...this.meta,
-        {
-          property: 'article:published_time',
-          content: this.blogData?.publishedAt,
-        },
-        {
-          property: 'article:modified_time',
-          content: this.blogData?.updatedAt,
-        },
-        { name: 'twitter:label1', content: 'Written by' },
-        { name: 'twitter:data1', content: this.blogData?.author },
-        // Linkedin
-        {
-          hid: 'author',
-          name: 'author',
-          property: 'article:author',
-          content: this.blogData?.author,
-        },
-        {
-          hid: 'publisher',
-          name: 'publisher',
-          property: 'article:publisher',
-          content: 'Formester',
-        },
-        {
-          name: 'publish_date',
-          property: 'og:publish_date',
-          content: this.blogData?.publishedAt,
-        },
-      ],
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: `https://formester.com/blog/${this.$route.params.slug}/`,
-        },
-      ],
     }
-  },
-  jsonld() {
-    const imagesArray = []
-
-    if (this.blogData?.coverImg) {
-      imagesArray.push(this.blogData.coverImg)
-    }
-
-    if (this.blogData?.metaImages && this.blogData.metaImages.length > 0) {
-      imagesArray.push(...this.blogData.metaImages)
-    }
-
-    const jsonData = [
-      {
-        '@context': 'https://schema.org',
-        '@type': 'BlogPosting',
-        mainEntityOfPage: {
-          '@type': 'WebPage',
-          '@id': `https://formester.com/blog/${this.blogData?.slug}/`,
-        },
-        headline: this.blogData?.title,
-        description: this.blogData?.description,
-        image:
-          imagesArray.length > 0
-            ? imagesArray
-            : ['https://formester.com/formester-logo-meta-image.png'],
-        author: {
-          '@type': 'Person',
-          name: this.blogData?.author,
-          url: this.blogData?.authorProfile,
-        },
-        publisher: {
-          '@type': 'Organization',
-          name: 'Formester',
-          logo: {
-            '@type': 'ImageObject',
-            url: 'https://formester.com/logo.png',
-          },
-        },
-        datePublished: this.blogData?.publishedAt,
-      },
-    ]
-
-    // Append schema if available
-    if (this.blogData?.schema) {
-      try {
-        this.blogData.schema.forEach((s) => {
-          let parsedSchema = JSON.parse(s.type)
-          if (typeof parsedSchema == 'object') {
-            jsonData.push(parsedSchema)
-          }
-        })
-      } catch (error) {}
-    }
-
-    return jsonData
-  },
+  })
 }
+
+const setupKeyboardHandler = () => {
+  document.addEventListener('keydown', (evt) => {
+    if (evt.key === 'Escape') {
+      closePopup()
+    }
+  })
+}
+
+const openPopup = (src, alt) => {
+  popupImageSrc.value = src
+  popupImageAlt.value = alt
+  showPopup.value = true
+}
+
+const closePopup = () => {
+  showPopup.value = false
+  popupImageSrc.value = ''
+  popupImageAlt.value = ''
+}
+
+const formatDate = (date) => {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' }
+  return new Date(date).toLocaleDateString('en', options)
+}
+
+const copyToClipboard = () => {
+  if (process.client) {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      $notify({ type: 'success', text: 'Link copied to clipboard' })
+    })
+  }
+  googleAnalytics('custom_link')
+}
+
+const googleAnalytics = (platform) => {
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'share', {
+      method: platform,
+      content_type: 'blog',
+      item_id: blogData.value?.title,
+    })
+  }
+}
+
+const meta = computed(() => {
+  const metaData = {
+    type: 'article',
+    url: `https://formester.com/blog/${route.params.slug}/`,
+    title: blogData.value?.metaTitle,
+    description: blogData.value?.metaDescription,
+    mainImage: blogData.value?.coverImg || 'https://formester.com/formester-logo-meta-image.png',
+    mainImageAlt: blogData.value?.coverImgAlt || 'Formester Logo',
+    keywords: blogData.value?.keywords,
+  }
+  return getSiteMeta(metaData)
+})
+
+const encodedUrl = computed(() => {
+  return encodeURIComponent(config.public.baseUrl + route.fullPath)
+})
+
+const processedBlogData = computed(() => {
+  const renderer = new marked.Renderer()
+
+  renderer.heading = function(text, level) {
+    if (level >= 2 && level <= 3) {
+      const id = text
+        .toLowerCase()
+        .replace(/[^\w\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/--+/g, '-')
+        .replace(/^-+|-+$/g, '')
+
+      return `<h${level} id="${id}">${text}</h${level}>`
+    }
+    return `<h${level}>${text}</h${level}>`
+  }
+
+  return marked(blogData.value?.body || '', { renderer })
+})
+
+const tableOfContents = computed(() => {
+  const toc = []
+  const content = blogData.value?.body || ''
+
+  const headingRegex = /^(#{2,3})\s+(.+)$/gm
+  let match
+
+  while ((match = headingRegex.exec(content)) !== null) {
+    const level = match[1].length
+    const text = match[2].trim()
+    const id = text
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/--+/g, '-')
+      .replace(/^-+|-+$/g, '')
+
+    toc.push({
+      id,
+      text,
+      level
+    })
+  }
+
+  return toc
+})
+
+onMounted(() => {
+  setupImageClickHandlers()
+  setupKeyboardHandler()
+})
+
+useHead({
+  title: blogData.value?.metaTitle,
+  meta: [
+    ...meta.value,
+    {
+      property: 'article:published_time',
+      content: blogData.value?.publishedAt,
+    },
+    {
+      property: 'article:modified_time',
+      content: blogData.value?.updatedAt,
+    },
+    { name: 'twitter:label1', content: 'Written by' },
+    { name: 'twitter:data1', content: blogData.value?.author },
+    {
+      name: 'author',
+      property: 'article:author',
+      content: blogData.value?.author,
+    },
+    {
+      name: 'publisher',
+      property: 'article:publisher',
+      content: 'Formester',
+    },
+    {
+      name: 'publish_date',
+      property: 'og:publish_date',
+      content: blogData.value?.publishedAt,
+    },
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: `https://formester.com/blog/${route.params.slug}/`,
+    },
+  ],
+})
+
+const jsonldData = computed(() => {
+  const imagesArray = []
+
+  if (blogData.value?.coverImg) {
+    imagesArray.push(blogData.value.coverImg)
+  }
+
+  if (blogData.value?.metaImages && blogData.value.metaImages.length > 0) {
+    imagesArray.push(...blogData.value.metaImages)
+  }
+
+  const jsonData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': `https://formester.com/blog/${blogData.value?.slug}/`,
+      },
+      headline: blogData.value?.title,
+      description: blogData.value?.description,
+      image: imagesArray.length > 0 ? imagesArray : ['https://formester.com/formester-logo-meta-image.png'],
+      author: {
+        '@type': 'Person',
+        name: blogData.value?.author,
+        url: blogData.value?.authorProfile,
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Formester',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://formester.com/logo.png',
+        },
+      },
+      datePublished: blogData.value?.publishedAt,
+    },
+  ]
+
+  if (blogData.value?.schema) {
+    try {
+      blogData.value.schema.forEach((s) => {
+        const parsedSchema = JSON.parse(s.type)
+        if (typeof parsedSchema === 'object') {
+          jsonData.push(parsedSchema)
+        }
+      })
+    } catch (error) {
+      console.error('Error parsing schema:', error)
+    }
+  }
+
+  return jsonData
+})
+
+useSchemaOrg(jsonldData)
 </script>
 
 <style scoped>
