@@ -46,6 +46,14 @@
                   Custom Form Building
                 </NuxtLink>
               </li>
+              <li class="mt-2">
+                <NuxtLink
+                  to="/affiliate-program/"
+                  class="footer__link"
+                >
+                 Become our Affiliate!
+                </NuxtLink>
+              </li>
             </ul>
 
             <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
