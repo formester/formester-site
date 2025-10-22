@@ -171,7 +171,7 @@ export default {
   },
   mounted() {
     this.formBuilders.forEach((fb) => {
-      this.$set(this.selectedPlans, fb.id, fb.plan[0].name)
+      this.selectedPlans[fb.id] = fb.plan[0].name
     })
   },
   computed: {
@@ -240,7 +240,7 @@ export default {
   methods: {
     handlePlanChange(event, formBuilderId) {
       const selectedPlan = event.target.value
-      this.$set(this.selectedPlans, formBuilderId, selectedPlan)
+      this.selectedPlans[formBuilderId] = selectedPlan
     },
   },
 }

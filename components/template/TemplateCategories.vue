@@ -96,7 +96,7 @@ export default {
       return formatted.replace(/Pdf/gi, 'PDF');
     },
     toggleCollapse(categoryType) {
-      this.$set(this.isExpanded, categoryType, !this.isExpanded[categoryType])
+      this.isExpanded[categoryType] = !this.isExpanded[categoryType]
       localStorage.setItem('isCollapsedState', JSON.stringify(this.isExpanded))
     },
     clearIsExpandedState() {
