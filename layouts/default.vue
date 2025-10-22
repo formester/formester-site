@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar />
-    <Nuxt />
+    <NuxtPage />
     <Footer />
     <CookieConsent />
   </div>
