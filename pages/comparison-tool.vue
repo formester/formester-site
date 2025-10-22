@@ -18,7 +18,6 @@
       </div>
       <FormBuilderComparisonTable
         :selected-form-builders-details="filteredSelectedFormBuildersDetails"
-        :feature-name-list="featureNameList"
         :form-builders="formBuilders"
       />
 
@@ -244,28 +243,22 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import ComparisonToolHero from '@/components/comparision/ComparisonToolHero.vue'
 import ComparisonOptionCard from '@/components/comparision/ComparisonOptionCard.vue'
 import ComparisonCard from '@/components/comparision/ComparisonCard.vue'
 import FormBuilderComparisonTable from '@/components/comparision/FormBuilderComparisonTable.vue'
 import Faq from '@/components/features/Faq.vue'
-import { featureNameList } from '@/constants/plan'
 import getSiteMeta from '@/utils/getSiteMeta'
 import axios from 'axios'
 
-export default {
-  components: {
-    ComparisonToolHero,
-    ComparisonOptionCard,
-    ComparisonCard,
-    FormBuilderComparisonTable,
-    Faq,
-  },
-  async asyncData() {
+const config = useRuntimeConfig()
+
+const { data: fetchedData, error: fetchError } = await useAsyncData('comparison-tool', async () => {
+  try {
     const {
       data: { data },
-    } = await axios.get(`${process.env.strapiUrl}/api/form-builders`, {
+    } = await axios.get(`${config.public.strapiUrl}/api/form-builders`, {
       params: {
         sort: 'name',
         populate: [
@@ -277,7 +270,7 @@ export default {
       },
     })
 
-    let formBuilders = data.map((item) => ({
+    const formBuilders = data.map((item) => ({
       id: item.id,
       ...item.attributes,
     }))
@@ -285,152 +278,159 @@ export default {
     const options = formBuilders.map((fb) => fb.name)
 
     return { formBuilders, options }
-  },
-  data() {
-    return {
-      selectedFormBuildersOption: ['', '', '', ''],
-      featureNameList,
-      selectedFormBuildersDetails: { 0: null, 1: null, 2: null, 3: null },
-      faqs: [
-        {
-          header: 'What key features should I look for in an online form builder?',
-          body:
-            'When choosing an online form builder, look for features like easy drag-and-drop design, a variety of templates, integration with other apps (like email and CRM tools), customizable fields, responsive design for mobile devices, and reliable customer support. These features will help you create effective forms that meet your needs.',
-        },
-        {
-          header: 'How often do you update the information?',
-          body: 'We keep our tool up to date with the latest pricing, features, and user feedback so you get the most current information.',
-        },
-        {
-          header: 'Is there a cost to use your comparison tool?',
-          body: "No, our tool is completely free for you to use. It's designed to help you make an informed decision without any fees.",
-        },
-        {
-          header: 'Does the tool cover all the features of the pricing plans?',
-          body: 'No, this tool focuses on comparing the most sought-after features among online form builders. While we strive to cover the essential features that most users look for, it may not include every detail of every pricing plan.\n We prioritize the features that are most commonly considered important by users to provide a clear and meaningful comparison.',
-        },
-        {
-          header: 'How does your tool help me find the right form builder?',
-          body: 'Our tool lets you compare prices and features of different form builders so you can easily pick the best one for your needs.',
-        },
-      ],
-    }
-  },
-  computed: {
-    meta() {
-      const metaData = {
-        type: 'website',
-        url: 'https://formester.com/comparison-tool/',
-        title: 'Easy way to compare Form Builders!',
-        description: "Compare features and pricing of 30+ form builders. Unbiased analysis to help you choose the perfect tool for your needs."
-      }
-      return getSiteMeta(metaData)
-    },
-    formBuildersLogoSrc() {
-      const logoSrc = {}
-      this.formBuilders.forEach((fb) => {
-        if (fb.logo && fb.logo.data && fb.logo.data.attributes) {
-          logoSrc[fb.name] = fb.logo.data.attributes.url
-        } else {
-          console.warn(`Logo not found for form builder: ${fb.name}`)
-        }
-      })
-      return logoSrc
-    },
-    filteredSelectedFormBuildersDetails() {
-      return Object.values(this.selectedFormBuildersDetails).filter(Boolean)
-    },
-   
-  },
-  methods: {
-    filteredOptions(cardNumber) {
-      const selectedOptions = this.selectedFormBuildersOption.filter(Boolean)
-      return this.options.filter(
-        (option) =>
-          !selectedOptions.includes(option) ||
-          this.selectedFormBuildersOption[cardNumber] === option
-      )
-    },
-    handleOptionChange(selectedOption, cardNumber) {
-      this.$set(this.selectedFormBuildersOption, cardNumber, selectedOption)
+  } catch (error) {
+    console.error('Error fetching form builders:', error)
+    throw error
+  }
+})
 
-      if (selectedOption) {
-        const newFormBuilder = this.formBuilders.find(
-          (fb) => fb.name === selectedOption
-        )
-        if (newFormBuilder) {
-          this.selectedFormBuildersDetails[cardNumber] = newFormBuilder
-        }
-      }
-    },
-    handleViewComparisonClick(formBuilder1, formBuilder2) {
-      this.handleOptionChange(formBuilder1, 0)
-      this.handleOptionChange(formBuilder2, 1)
-    },
-  },
-  head() {
-    return {
-      title:
-        'Compare the Best Form Builder Software: Pricing & Features Comparison',
-      description:
-        'Find the best software to create forms. Use our comparison tool to see prices and features side-by-side. Find your form builder today!',
-      meta: [...this.meta],
-      keywords: [
-        'best form builder',
-        'best software to create forms',
-        'best form software',
-        'software to build forms',
-        'best form buider tools',
-      ],
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: 'https://formester.com/comparison-tool/',
-        },
-      ],
-    }
-  },
-  jsonld() {
-    return {
-      '@context': 'http://schema.org',
-      '@graph': [
-        {
-          '@type': 'Corporation',
-          '@id': 'https://acornglobus.com',
-          name: 'Compare the Best Form Builder Software: Pricing & Features Comparison',
-          description:
-            'Find the best software to create forms. Use our comparison tool to see prices and features side-by-side. Find your form builder today!',
-          logo: 'https://formester.com/logo.png',
-          url: 'https://formester.com',
-          address: {
-            '@type': 'PostalAddress',
-            addressLocality: 'Delaware',
-            addressCountry: 'United States',
-          },
-        },
-        {
-          '@type': 'BreadcrumbList',
-          '@id': 'https://acornglobus.com',
-          itemListElement: [
-            {
-              '@type': 'ListItem',
-              position: 1,
-              name: 'Formester',
-              item: 'https://formester.com/',
-            },
-            {
-              '@type': 'ListItem',
-              position: 2,
-              name: 'Compare the Best Form Builder Software: Pricing & Features Comparison',
-              item: 'https://formester.com/comparison-tool/',
-            },
-          ],
-        },
-      ],
-    }
-  },
+if (fetchError.value) {
+  throw createError({
+    statusCode: 500,
+    statusMessage: 'Failed to load comparison data',
+    fatal: true
+  })
 }
+
+const formBuilders = computed(() => fetchedData.value?.formBuilders || [])
+const options = computed(() => fetchedData.value?.options || [])
+
+const selectedFormBuildersOption = ref(['', '', '', ''])
+const selectedFormBuildersDetails = reactive({ 0: null, 1: null, 2: null, 3: null })
+
+const faqs = [
+  {
+    header: 'What key features should I look for in an online form builder?',
+    body:
+      'When choosing an online form builder, look for features like easy drag-and-drop design, a variety of templates, integration with other apps (like email and CRM tools), customizable fields, responsive design for mobile devices, and reliable customer support. These features will help you create effective forms that meet your needs.',
+  },
+  {
+    header: 'How often do you update the information?',
+    body: 'We keep our tool up to date with the latest pricing, features, and user feedback so you get the most current information.',
+  },
+  {
+    header: 'Is there a cost to use your comparison tool?',
+    body: "No, our tool is completely free for you to use. It's designed to help you make an informed decision without any fees.",
+  },
+  {
+    header: 'Does the tool cover all the features of the pricing plans?',
+    body: 'No, this tool focuses on comparing the most sought-after features among online form builders. While we strive to cover the essential features that most users look for, it may not include every detail of every pricing plan.\n We prioritize the features that are most commonly considered important by users to provide a clear and meaningful comparison.',
+  },
+  {
+    header: 'How does your tool help me find the right form builder?',
+    body: 'Our tool lets you compare prices and features of different form builders so you can easily pick the best one for your needs.',
+  },
+]
+
+const meta = computed(() => {
+  const metaData = {
+    type: 'website',
+    url: 'https://formester.com/comparison-tool/',
+    title: 'Easy way to compare Form Builders!',
+    description: "Compare features and pricing of 30+ form builders. Unbiased analysis to help you choose the perfect tool for your needs."
+  }
+  return getSiteMeta(metaData)
+})
+
+const formBuildersLogoSrc = computed(() => {
+  const logoSrc = {}
+  formBuilders.value.forEach((fb) => {
+    if (fb.logo && fb.logo.data && fb.logo.data.attributes) {
+      logoSrc[fb.name] = fb.logo.data.attributes.url
+    } else {
+      console.warn(`Logo not found for form builder: ${fb.name}`)
+    }
+  })
+  return logoSrc
+})
+
+const filteredSelectedFormBuildersDetails = computed(() => {
+  return Object.values(selectedFormBuildersDetails).filter(Boolean)
+})
+
+const filteredOptions = (cardNumber) => {
+  const selectedOptions = selectedFormBuildersOption.value.filter(Boolean)
+  return options.value.filter(
+    (option) =>
+      !selectedOptions.includes(option) ||
+      selectedFormBuildersOption.value[cardNumber] === option
+  )
+}
+
+const handleOptionChange = (selectedOption, cardNumber) => {
+  selectedFormBuildersOption.value[cardNumber] = selectedOption
+
+  if (selectedOption) {
+    const newFormBuilder = formBuilders.value.find(
+      (fb) => fb.name === selectedOption
+    )
+    if (newFormBuilder) {
+      selectedFormBuildersDetails[cardNumber] = newFormBuilder
+    }
+  }
+}
+
+const handleViewComparisonClick = (formBuilder1, formBuilder2) => {
+  handleOptionChange(formBuilder1, 0)
+  handleOptionChange(formBuilder2, 1)
+}
+
+useHead({
+  title:
+    'Compare the Best Form Builder Software: Pricing & Features Comparison',
+  meta: [
+    ...meta.value,
+    {
+      name: 'description',
+      content: 'Find the best software to create forms. Use our comparison tool to see prices and features side-by-side. Find your form builder today!',
+    },
+    {
+      name: 'keywords',
+      content: 'best form builder, best software to create forms, best form software, software to build forms, best form buider tools',
+    },
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://formester.com/comparison-tool/',
+    },
+  ],
+})
+
+useSchemaOrg([
+  {
+    '@type': 'Corporation',
+    '@id': 'https://acornglobus.com',
+    name: 'Compare the Best Form Builder Software: Pricing & Features Comparison',
+    description:
+      'Find the best software to create forms. Use our comparison tool to see prices and features side-by-side. Find your form builder today!',
+    logo: 'https://formester.com/logo.png',
+    url: 'https://formester.com',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Delaware',
+      addressCountry: 'United States',
+    },
+  },
+  {
+    '@type': 'BreadcrumbList',
+    '@id': 'https://acornglobus.com',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Formester',
+        item: 'https://formester.com/',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Compare the Best Form Builder Software: Pricing & Features Comparison',
+        item: 'https://formester.com/comparison-tool/',
+      },
+    ],
+  },
+])
 </script>
 
 <style scoped>

@@ -153,9 +153,10 @@ export default {
     },
   },
   async created() {
+    const config = useRuntimeConfig()
     const {
       data: { data },
-    } = await axios.get(`${process.env.strapiUrl}/api/form-builder-features`, {
+    } = await axios.get(`${config.public.strapiUrl}/api/form-builder-features`, {
       params: {
         sort: 'createdAt',
         populate: 'category',
