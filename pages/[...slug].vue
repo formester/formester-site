@@ -10,7 +10,8 @@ const route = useRoute()
 
 // Get the full path from route params (catch-all route uses 'slug' param)
 const pathSegments = route.params.slug || []
-const slug = Array.isArray(pathSegments) ? pathSegments.join('/') : pathSegments
+let slug = Array.isArray(pathSegments) ? pathSegments.join('/') : pathSegments
+slug = slug.replace(/\/$/, '')
 
 const endpoint = `/pages`
 const strapiParams = { 'filters[slug][$eqi]': slug }
