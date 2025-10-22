@@ -54,11 +54,10 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import WhyFormester from '../../components/use-case/why-formester.vue'
 import IndustrySpecificUseCase from '@/components/use-case/industry-specific-use-case.vue'
 import FormBuildersComparisionTable from '../../components/form-builders-comparision-table.vue'
-
 import ThreeStepsCreateForm from '../../components/ThreeStepsCreateForm.vue'
 import Testimonial from '../../components/Testimonial.vue'
 import { allTestimonials } from '@/constants/testimonials'
@@ -69,144 +68,100 @@ import softwareAndTechnologyFaqs from '../../faqs/use-case/software-and-technolo
 import getSiteMeta from '@/utils/getSiteMeta'
 import MostUsedFeatures from '@/components/MostUsedFeatures.vue'
 
-export default {
-  components: {
-    WhyFormester,
-    IndustrySpecificUseCase,
-    FormBuildersComparisionTable,
-    ThreeStepsCreateForm,
-    Testimonial,
-    TemplateSection,
-    CallToActionSection,
-    FAQwithCategories,
-    MostUsedFeatures,
-  },
-  async asyncData() {
-    let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(
-      Math.random() * (randomTestimonials.length - 2)
-    )
-    randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
-    return { randomTestimonials }
-  },
-  computed: {
-    meta() {
-      const metaData = {
-        type: 'website',
-        url: 'https://formester.com/use-case/software-and-technology/',
-        title: 'Formester: Empowering Software and Technology Industries',
-        description:
-          'Formester: Revolutionize form-building, automate workflows, empower teams with no-code solutions. Streamline and grow your business!',
-        mainImage: 'https://formester.com/jotform101-hero-section.png',
-        mainImageAlt: 'Form builder showing drag and drop functionality',
-        keywords: [
-          'Formester',
-          'Formester Use Case',
-          'Formester: Empowering Software',
-          'Formester: Empowering Technology Industries',
-          'web forms for customer support',
-          'web forms productivity',
-          'form builder',
-          'formester',
-          'online forms',
-          'online web forms',
-          'formester web forms',
-          'form creator',
-          'form generator',
-          'online form',
-          'web form',
-          'online forms',
-          'web forms',
-          'create form',
-          'create forms',
-          'frequently asked questions',
-          'FAQ',
-        ],
+const randomTestimonials = (() => {
+  const list = [...allTestimonials]
+  if (list.length <= 2) return list
+  const randIndex = Math.floor(Math.random() * (list.length - 2))
+  return list.slice(randIndex, randIndex + 2)
+})()
+
+const meta = computed(() => {
+  const metaData = {
+    type: 'website',
+    url: 'https://formester.com/use-case/software-and-technology/',
+    title: 'Formester: Empowering Software and Technology Industries',
+    description: 'Formester: Revolutionize form-building, automate workflows, empower teams with no-code solutions. Streamline and grow your business!',
+    mainImage: 'https://formester.com/jotform101-hero-section.png',
+    mainImageAlt: 'Form builder showing drag and drop functionality',
+    keywords: [
+      'Formester',
+      'Formester Use Case',
+      'Formester: Empowering Software',
+      'Formester: Empowering Technology Industries',
+      'web forms for customer support',
+      'web forms productivity',
+      'form builder',
+      'formester',
+      'online forms',
+      'online web forms',
+      'formester web forms',
+      'form creator',
+      'form generator',
+      'online form',
+      'web form',
+      'online forms',
+      'web forms',
+      'create form',
+      'create forms',
+      'frequently asked questions',
+      'FAQ'
+    ]
+  }
+  return getSiteMeta(metaData)
+})
+
+const faqsSchema = computed(() => {
+  const allFaqs = []
+  softwareAndTechnologyFaqs.forEach((c) => {
+    if (c.faqs) allFaqs.push(...c.faqs)
+  })
+  return allFaqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer
+    }
+  }))
+})
+
+useHead({
+  title: 'Formester: Empowering Software and Technology Industries',
+  meta: [...meta.value],
+  link: [
+    { rel: 'canonical', href: 'https://formester.com/use-case/software-and-technology/' }
+  ]
+})
+
+useSchemaOrg(() => ({
+  '@context': 'http://schema.org',
+  '@graph': [
+    {
+      '@type': 'Corporation',
+      '@id': 'https://acornglobus.com',
+      name: 'Formester: Empowering Software and Technology Industries',
+      description: 'Streamline Your Workflows and Scale Your Software Business with Formester! Discover how Formester can revolutionize your form-building process, automate workflows, and drive efficiency in your organization. Empower your team with versatile, no-code solutions that save time and propel your business forward.',
+      logo: 'https://formester.com/logo.png',
+      url: 'https://formester.com',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Delaware',
+        addressCountry: 'United States'
       }
-      return getSiteMeta(metaData)
     },
-    faqsSchema() {
-      const allFaqs = []
-
-      this.faqQuestions.forEach((c) => {
-        if (c.faqs) {
-          allFaqs.push(...c.faqs)
-        }
-      })
-
-      // Generate the FAQ schema
-      return allFaqs.map((faq) => {
-        return {
-          '@type': 'Question',
-          name: faq.question,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: faq.answer,
-          },
-        }
-      })
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://acornglobus.com',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Formester', item: 'https://formester.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Formester: Empowering Software and Technology Industries', item: 'https://formester.com/use-case/' }
+      ]
     },
-  },
-  head() {
-    return {
-      title: 'Formester: Empowering Software and Technology Industries',
-      meta: [...this.meta],
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: 'https://formester.com/use-case/software-and-technology/',
-        },
-      ],
-    }
-  },
-  jsonld() {
-    return {
-      '@context': 'http://schema.org',
-      '@graph': [
-        {
-          '@type': 'Corporation',
-          '@id': 'https://acornglobus.com',
-          name: 'Formester: Empowering Software and Technology Industries',
-          description:
-            'Streamline Your Workflows and Scale Your Software Business with Formester! Discover how Formester can revolutionize your form-building process, automate workflows, and drive efficiency in your organization. Empower your team with versatile, no-code solutions that save time and propel your business forward.',
-          logo: 'https://formester.com/logo.png',
-          url: 'https://formester.com',
-          address: {
-            '@type': 'PostalAddress',
-            addressLocality: 'Delaware',
-            addressCountry: 'United States',
-          },
-        },
-        {
-          '@type': 'BreadcrumbList',
-          '@id': 'https://acornglobus.com',
-          itemListElement: [
-            {
-              '@type': 'ListItem',
-              position: 1,
-              name: 'Formester',
-              item: 'https://formester.com/',
-            },
-            {
-              '@type': 'ListItem',
-              position: 2,
-              name: 'Formester: Empowering Software and Technology Industries',
-              item: 'https://formester.com/use-case/',
-            },
-          ],
-        },
-        {
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity: this.faqsSchema,
-        },
-      ],
-    }
-  },
-  data() {
-    return {
-      toggleFeatures: [
+    { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqsSchema.value }
+  ]
+}))
+
+const toggleFeatures = [
         {
           heading: 'HTML Form Backend',
           content:
@@ -262,10 +217,12 @@ export default {
             "Form sharing for effective collaboration and efficient team-work! Unite your team, gather valuable feedback, and unlock the true potential of form building with Formester's powerful in-built Collaboration/Add Collaborators feature!",
           imgName: 'features/invite-collab',
           alt: 'Monitor performance and open rates for your survey forms in Formester',
-        },
-      ],
-      faqQuestions: softwareAndTechnologyFaqs,
-      industrySpecificFeatures: [
+        }
+      ]
+
+const faqQuestions = softwareAndTechnologyFaqs
+
+const industrySpecificFeatures = [
         {
           title: 'Streamlined Customer Onboarding',
           description:
@@ -337,11 +294,8 @@ export default {
           description:
             "Conduct market research and gather insights on software industry trends, user preferences, and competitive analysis with Formester's survey solutions, enabling informed business decisions and effective software development strategies.",
           img: 'software-survey-research',
-        },
-      ],
-    }
-  },
-}
+        }
+      ]
 </script>
 
 <style></style>
