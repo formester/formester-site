@@ -1,0 +1,543 @@
+[
+  {
+    "id": 1,
+    "slug": "html-form-backend",
+    "navTitle": "HTML Form Backend",
+    "navDescription": "Send form data to a custom server",
+    "featureCategory": "Form Builder",
+    "featurePlan": "Personal",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "HTML Form Backend ",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/file_code_01_1_061cddcb52.svg",
+        "alt": "HTML Form Backend "
+      }
+    }
+  },
+  {
+    "id": 2,
+    "slug": "autoresponder-email",
+    "navTitle": "Email Autoresponder",
+    "navDescription": "Automate email follow-ups",
+    "featureCategory": "Data Handling",
+    "featurePlan": "Free",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "Auto Responder - Set up automated response",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/message_text_square_02_5014683c23.svg",
+        "alt": "Auto Responder - Set up automated response"
+      }
+    }
+  },
+  {
+    "id": 3,
+    "slug": "spam-protection",
+    "navTitle": "Spam Protection",
+    "navDescription": "Block fake submissions",
+    "featureCategory": "Security & Validation",
+    "featurePlan": "Free",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "Spam Protecttion",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/alert_circle_aaab0ba583.svg",
+        "alt": "Spam Protecttion"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "slug": "form-analytics",
+    "navTitle": "Form Analytics",
+    "navDescription": "Gather advanced insights",
+    "featureCategory": "Notifications & Reports",
+    "featurePlan": "Free",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "Form Analytics",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/line_chart_up_02_64fbb99e61.svg",
+        "alt": "Form Analytics"
+      }
+    }
+  },
+  {
+    "id": 6,
+    "slug": "online-payments",
+    "navTitle": "Online Payments",
+    "navDescription": "Collect payments with ease",
+    "featureCategory": "Branding & Integration",
+    "featurePlan": "Free",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "Online Payments",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/bank_note_01_c82e2ca657.svg",
+        "alt": "Online Payments"
+      }
+    }
+  },
+  {
+    "id": 7,
+    "slug": "electronic-signature",
+    "navTitle": "Electronic Signature",
+    "navDescription": "Collect e-signs in forms",
+    "featureCategory": "Security & Validation",
+    "featurePlan": "Free",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "Electronic Signature",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/pen_tool_01_90a1971874.svg",
+        "alt": "Electronic Signature"
+      }
+    }
+  },
+  {
+    "id": 8,
+    "slug": "branding-kit",
+    "navTitle": "Branding Kit",
+    "navDescription": "Make every form on-brand",
+    "featureCategory": "Branding & Integration",
+    "featurePlan": "Personal",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "Branding Kit",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/palette_5b4002a356.svg",
+        "alt": "Branding Kit"
+      }
+    }
+  },
+  {
+    "id": 9,
+    "slug": "information-recall",
+    "navTitle": "Information Recall",
+    "navDescription": "Auto-fill past responses",
+    "featureCategory": "Data Handling",
+    "featurePlan": "Free",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "Information Recall",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/info_circle_0c5be9e7ae.svg",
+        "alt": "Information Recall"
+      }
+    }
+  },
+  {
+    "id": 12,
+    "slug": "offline-forms",
+    "navTitle": "Offline Forms",
+    "navDescription": "Collect submissions offline",
+    "featureCategory": "Form Builder",
+    "featurePlan": "Free",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "Offline Forms",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/wifi_off_dfb7dcad0a.svg",
+        "alt": "Offline Forms"
+      }
+    }
+  },
+  {
+    "id": 34,
+    "slug": "partial-submissions",
+    "navTitle": "Partial Submissions",
+    "navDescription": "Capture incomplete submissions",
+    "featureCategory": "Data Handling",
+    "featurePlan": "Business",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "partial submission",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/contrast_01_957476277f.svg",
+        "alt": "partial submission"
+      }
+    }
+  },
+  {
+    "id": 35,
+    "slug": "multi-language-form-translations",
+    "navTitle": "Multilingual Forms",
+    "navDescription": "Add 80+ translations to forms",
+    "featureCategory": "Advanced Controls",
+    "featurePlan": "Business",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "Multi Language Form Translations",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/translate_01_5a72e93245.svg",
+        "alt": "Multi Language Form Translations"
+      }
+    }
+  },
+  {
+    "id": 36,
+    "slug": "export-form-submission-pdf",
+    "navTitle": "PDF Export",
+    "navDescription": "Download responses as PDFs",
+    "featureCategory": "Data Handling",
+    "featurePlan": "Personal",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "Export Submissions As PDFs",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/file_code_01_5c7679ba32.svg",
+        "alt": "Export Submissions As PDFs"
+      }
+    }
+  },
+  {
+    "id": 67,
+    "slug": "form-limiter",
+    "navTitle": "Form Limiter",
+    "navDescription": "Limit how many can submit",
+    "featureCategory": "Form Builder",
+    "featurePlan": "Free",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "formester's form limiter icon",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/file_x_02_d885c1bfc8.svg",
+        "alt": "formester's form limiter icon"
+      }
+    }
+  },
+  {
+    "id": 68,
+    "slug": "qr-code-generator",
+    "navTitle": "Qr Code Generator",
+    "navDescription": "Share forms via QR",
+    "featureCategory": "Branding & Integration",
+    "featurePlan": "Free",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "formester's qr code generator icon",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/qr_code_01_8709da922c.svg",
+        "alt": "formester's qr code generator icon"
+      }
+    }
+  },
+  {
+    "id": 101,
+    "slug": "save-and-continue",
+    "navTitle": "Save & Resume",
+    "navDescription": "Let users submit later",
+    "featureCategory": "Data Handling",
+    "featurePlan": "Business",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "Save and Resume Forms",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/save_01_f341fc7527.svg",
+        "alt": "Save and Resume Forms"
+      }
+    }
+  },
+  {
+    "id": 133,
+    "slug": "file-upload-forms",
+    "navTitle": "File Upload",
+    "navDescription": "Collect files, PDFs & more",
+    "featureCategory": "Data Handling",
+    "featurePlan": "Free",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "File Upload",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/upload_cloud_01_cc4f62129a.svg",
+        "alt": "File Upload"
+      }
+    }
+  },
+  {
+    "id": 134,
+    "slug": "drag-and-drop-form-builder",
+    "navTitle": "Drag and Drop Interface",
+    "navDescription": "Build forms with zero code",
+    "featureCategory": "Form Builder",
+    "featurePlan": "Free",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "drag and drop",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/hand_1d708b646e.svg",
+        "alt": "drag and drop"
+      }
+    }
+  },
+  {
+    "id": 135,
+    "slug": "embed-forms",
+    "navTitle": "Embeddable Forms",
+    "navDescription": "Embed forms in seconds",
+    "featureCategory": "Branding & Integration",
+    "featurePlan": "Free",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "Embeddable Forms",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/code_browser_122d6f96e9.svg",
+        "alt": "Embeddable Forms"
+      }
+    }
+  },
+  {
+    "id": 166,
+    "slug": "calculating-fields",
+    "navTitle": "Calculating Fields",
+    "navDescription": "Do math inside your form",
+    "featureCategory": "Advanced Controls",
+    "featurePlan": "Free",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "Calculating Fields",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/calculator_681470834f.svg",
+        "alt": "Calculating Fields"
+      }
+    }
+  },
+  {
+    "id": 167,
+    "slug": "conditional-logic",
+    "navTitle": "Conditional Logic",
+    "navDescription": "Show only relevant fields",
+    "featureCategory": "Advanced Controls",
+    "featurePlan": "Personal",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "Conditional Logic",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/dataflow_01_b806bceec3.svg",
+        "alt": "Conditional Logic"
+      }
+    }
+  },
+  {
+    "id": 199,
+    "slug": "collaborative-forms",
+    "navTitle": "Collaborative Forms",
+    "navDescription": "Build forms as a team",
+    "featureCategory": "Form Builder",
+    "featurePlan": "Business",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "user icon",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/users_01_a6edb44f56.svg",
+        "alt": "user icon"
+      }
+    }
+  },
+  {
+    "id": 232,
+    "slug": "email-verification",
+    "navTitle": "Email Verification",
+    "navDescription": "Stop fake emails instantly",
+    "featureCategory": "Security & Validation",
+    "featurePlan": "Personal",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "Email Verification",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/message_text_square_02_5014683c23.svg",
+        "alt": "Email Verification"
+      }
+    }
+  },
+  {
+    "id": 265,
+    "slug": "auto-unique-id",
+    "navTitle": "Custom ID",
+    "navDescription": "Tag every entry",
+    "featureCategory": "Advanced Controls",
+    "featurePlan": "Free",
+    "navIcon": {
+      "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/file_shield_02_d218ab98b4.svg",
+      "imageAlt": "auto unique id icon",
+      "image": null
+    }
+  },
+  {
+    "id": 298,
+    "slug": "appointment-scheduler",
+    "navTitle": "Appointment Scheduler",
+    "navDescription": "Let users book time easily",
+    "featureCategory": "Advanced Controls",
+    "featurePlan": "Free",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "calender icon",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/calendar_check_01_40b824429a.svg",
+        "alt": "calender icon"
+      }
+    }
+  },
+  {
+    "id": 331,
+    "slug": "trustedform-certified-online-forms",
+    "navTitle": "TrustedFormCertificate",
+    "navDescription": "Certify your leads",
+    "featureCategory": "Security & Validation",
+    "featurePlan": "Free",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "embed icon",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/code_02_738cc7eea0.svg",
+        "alt": "embed icon"
+      }
+    }
+  },
+  {
+    "id": 397,
+    "slug": "summary-analytics",
+    "navTitle": "Summary Analytics",
+    "navDescription": "View stats & trends",
+    "featureCategory": "Notifications & Reports",
+    "featurePlan": "Free",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "analytics icon",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/horizontal_bar_chart_01_519c8d6247.svg",
+        "alt": "analytics icon"
+      }
+    }
+  },
+  {
+    "id": 398,
+    "slug": "pre-fill-fields",
+    "navTitle": "Pre Fill Fields",
+    "navDescription": "Auto-fill known answers",
+    "featureCategory": "Advanced Controls",
+    "featurePlan": "Free",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "pen icon",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/pencil_line_61da15ee94.svg",
+        "alt": "pen icon"
+      }
+    }
+  },
+  {
+    "id": 430,
+    "slug": "convert-pdf-to-fillable-form",
+    "navTitle": "Convert PDF to Form",
+    "navDescription": "Make PDFs fillable fast",
+    "featureCategory": "Form Builder",
+    "featurePlan": "Free",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "pdf icon",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Convert_PDF_7a5317fd6c.svg",
+        "alt": "pdf icon"
+      }
+    }
+  },
+  {
+    "id": 463,
+    "slug": "quiz-maker-features",
+    "navTitle": "Quiz Maker Features",
+    "navDescription": "Build fun, graded quizzes",
+    "featureCategory": "Advanced Controls",
+    "featurePlan": "Free",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "formester pen icon",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/pen_tool_01_90a1971874.svg",
+        "alt": "formester pen icon"
+      }
+    }
+  },
+  {
+    "id": 464,
+    "slug": "email-notification-for-form-submission",
+    "navTitle": "Email Notifications",
+    "navDescription": "Get alerts for each response",
+    "featureCategory": "Notifications & Reports",
+    "featurePlan": "Free",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "email icon",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/message_text_square_02_5014683c23.svg",
+        "alt": "email icon"
+      }
+    }
+  },
+  {
+    "id": 496,
+    "slug": "custom-subdomains-for-form-url",
+    "navTitle": "Custom Domains",
+    "navDescription": "Create branded forms",
+    "featureCategory": "Branding & Integration",
+    "featurePlan": "Business",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "domain icon",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/domain_7e0984bdb1.svg",
+        "alt": "domain icon"
+      }
+    }
+  },
+  {
+    "id": 497,
+    "slug": "collaborate-on-form-submission",
+    "navTitle": "Collaborative Form Submissions",
+    "navDescription": "Skip back & forth, submit forms as a team",
+    "featureCategory": "Form Builder",
+    "featurePlan": "Personal",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "click icon",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/collab_d35dd449de.svg",
+        "alt": "click icon"
+      }
+    }
+  },
+  {
+    "id": 529,
+    "slug": "auto-fill-forms-with-external-data",
+    "navTitle": "Auto Fill Forms",
+    "navDescription": "Pre populate forms with external data.",
+    "featureCategory": "Data Handling",
+    "featurePlan": "Personal",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "click icon",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/API_1d18d8d756.svg",
+        "alt": "click icon"
+      }
+    }
+  },
+  {
+    "id": 530,
+    "slug": "create-fillable-pdf-forms",
+    "navTitle": "Create Fillable PDF Forms",
+    "navDescription": "Populate blank PDFs with form data.",
+    "featureCategory": "Form Builder",
+    "featurePlan": "Business",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "fillable pdf icon",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Fillable_PDF_50b4621522.svg",
+        "alt": "fillable pdf icon"
+      }
+    }
+  }
+]
