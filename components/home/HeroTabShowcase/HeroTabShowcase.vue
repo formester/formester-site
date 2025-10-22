@@ -45,9 +45,8 @@
             <span>Explore our new AI features</span>
           </div> -->
           <h1 class="hero__heading">
-            <template v-for="(item, index) in title">
+            <template v-for="(item, index) in title" :key="item.id">
               <span
-                :key="item.id"
                 :class="{ highlight__text: item.highlight }"
                 :style="{ display: item.highlight ? 'block' : 'inline' }"
               >

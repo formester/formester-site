@@ -54,8 +54,8 @@
           </tr>
         </thead>
         <tbody>
-          <template v-for="category in comparisonTableFeatures">
-            <tr class="category-header" :key="`${category.category}-header`">
+          <template v-for="category in comparisonTableFeatures" :key="`${category.category}`">
+            <tr class="category-header">
               <th colspan="4" class="category-title">{{ category.category }}</th>
             </tr>
             <tr v-for="feature in category.features" :key="`${category.category}-${feature.name}`">
@@ -154,8 +154,8 @@
       </div>
       <table class="table text-start">
         <tbody>
-          <template v-for="category in comparisonTableFeatures">
-            <tr class="category-header" :key="`${category.category}-header-free`">
+          <template v-for="category in comparisonTableFeatures" :key="`${category.category}-free`">
+            <tr class="category-header">
               <th colspan="2" class="category-title">{{ category.category }}</th>
             </tr>
             <tr v-for="feature in category.features" :key="`${category.category}-${feature.name}-free`">
@@ -217,8 +217,8 @@
       </div>
       <table class="table text-start">
         <tbody>
-          <template v-for="category in comparisonTableFeatures">
-            <tr class="category-header" :key="`${category.category}-header-personal`">
+          <template v-for="category in comparisonTableFeatures" :key="`${category.category}-personal`">
+            <tr class="category-header">
               <th colspan="2" class="category-title">{{ category.category }}</th>
             </tr>
             <tr v-for="feature in category.features" :key="`${category.category}-${feature.name}-personal`">
@@ -282,8 +282,8 @@
       </div>
       <table class="table text-start">
         <tbody>
-          <template v-for="category in comparisonTableFeatures">
-            <tr class="category-header" :key="`${category.category}-header-business`">
+          <template v-for="category in comparisonTableFeatures" :key="`${category.category}-business`">
+            <tr class="category-header">
               <th colspan="2" class="category-title">{{ category.category }}</th>
             </tr>
             <tr v-for="feature in category.features" :key="`${category.category}-${feature.name}-business`">

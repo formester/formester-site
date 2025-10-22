@@ -2,24 +2,27 @@
   <PageComponents :components="components" />
 </template>
 
-<script>
+<script setup>
 import PageComponents from '@/components/PageComponents.vue'
 import getStrapiData from '@/utils/getStrapiData'
 
-export default {
-  components: { PageComponents },
-  async asyncData({ params }) {
-    const endpoint = `/pages`
-    const strapiParams = { 'filters[slug][$null]': true }
-    const { head, jsonld, components } = await getStrapiData(endpoint, strapiParams)
-    return { head, jsonld, components }
-  },
-  head() {
-    return this.head
-  },
-  jsonld() {
-    return this.jsonld
-  },
+const endpoint = `/pages`
+const strapiParams = { 'filters[slug][$null]': true }
+
+const { data } = await useAsyncData('home-page', async () => {
+  return await getStrapiData(endpoint, strapiParams)
+})
+
+const components = computed(() => data.value?.components || [])
+
+// Set page meta using useHead
+if (data.value?.head) {
+  useHead(data.value.head)
+}
+
+// Set JSON-LD schema
+if (data.value?.jsonld) {
+  useSchemaOrg([data.value.jsonld])
 }
 </script>
 

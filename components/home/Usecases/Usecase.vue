@@ -1,53 +1,52 @@
 <template>
-  <section class="container">
-    <div class="row justify-content-center align-items-center text-center mb-5">
-      <SectionTitle :heading="title" />
-      <p>Learn how Formester can help your business.</p>
-    </div>
-    <div class="carousel-outer-wrapper">
-      <VueSlickCarousel
-        ref="slick"
-        :arrows="true"
-        :dots="true"
-        :infinite="true"
-        :autoplay="true"
-        :autoplaySpeed="5000"
-        :slidesToShow="3"
-        :responsive="slickResponsive"
-        @afterChange="handleAfterChange"
-      
-        @beforeChange="handleBeforeChange"
-      >
-        <template #prevArrow>
-          <button class="carousel-arrow left desktop-arrow" @click="goToPrev" aria-label="Scroll left">
-            <img src="/arrow-left.svg" alt="Previous" class="arrow-icon" />
-          </button>
-        </template>
-        <template #nextArrow>
-          <button class="carousel-arrow right desktop-arrow" @click="goToNext" aria-label="Scroll right">
-            <img src="/arrow-right.svg" alt="Next" class="arrow-icon" />
-          </button>
-        </template>
-        <div
-          v-for="(uc, idx) in usecase"
-          :key="uc.id + '-' + idx"
-          class="carousel-slide-inner"
+  <section class="usecases-section">
+    <div class="container">
+      <div class="section-header">
+        <SectionTitle :heading="title" />
+        <p class="section-description">Learn how Formester can help your business.</p>
+      </div>
+
+      <div class="carousel-wrapper">
+        <Swiper
+          :modules="modules"
+          :slides-per-view="1"
+          :space-between="24"
+          :loop="true"
+          :autoplay="{
+            delay: 5000,
+            disableOnInteraction: false,
+          }"
+          :pagination="{
+            clickable: true,
+            dynamicBullets: false,
+          }"
+          :navigation="{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          }"
+          :breakpoints="{
+            768: { slidesPerView: 1, spaceBetween: 0, centeredSlides: true },
+            992: { slidesPerView: 2, spaceBetween: 16, centeredSlides: false },
+            1200: { slidesPerView: 3, spaceBetween: 24, centeredSlides: false },
+          }"
+          :centered-slides="true"
+          class="usecases-swiper"
         >
-          <UsecaseCard
-            :title="uc.title"
-            :description="uc.description"
-            :image="uc.image"
-            :class="['carousel-card', { scaled: isCenter(idx) }]"
-          />
-        </div>
-      </VueSlickCarousel>
-      <!-- Mobile arrows container for <=768px -->
-      <div class="mobile-arrows-container">
-        <button class="carousel-arrow left" @click="goToPrev" aria-label="Scroll left">
-          <img src="/arrow-left.svg" alt="Previous" class="arrow-icon" />
+          <SwiperSlide v-for="(uc, idx) in usecase" :key="uc.id + '-' + idx">
+            <UsecaseCard
+              :title="uc.title"
+              :description="uc.description"
+              :image="uc.image"
+            />
+          </SwiperSlide>
+        </Swiper>
+
+        <!-- Custom Navigation Buttons -->
+        <button class="swiper-button-prev custom-nav" aria-label="Previous slide">
+          <img src="/arrow-left.svg" alt="Previous" />
         </button>
-        <button class="carousel-arrow right" @click="goToNext" aria-label="Scroll right">
-          <img src="/arrow-right.svg" alt="Next" class="arrow-icon" />
+        <button class="swiper-button-next custom-nav" aria-label="Next slide">
+          <img src="/arrow-right.svg" alt="Next" />
         </button>
       </div>
     </div>
@@ -55,15 +54,17 @@
 </template>
 
 <script>
-import VueSlickCarousel from 'vue-slick-carousel';
-import UsecaseCard from './UsecaseCard.vue';
-import SectionTitle from '~/components/SectionTitle.vue';
-import 'vue-slick-carousel/dist/vue-slick-carousel.css';
-import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Navigation, Pagination, Autoplay } from 'swiper/modules'
+import UsecaseCard from './UsecaseCard.vue'
+import SectionTitle from '~/components/SectionTitle.vue'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
 export default {
   name: 'Usecases',
-  components: { VueSlickCarousel, UsecaseCard, SectionTitle },
+  components: { Swiper, SwiperSlide, UsecaseCard, SectionTitle },
   props: {
     title: {
       type: Array,
@@ -76,314 +77,179 @@ export default {
   },
   data() {
     return {
-      currentSlide: 0,
-      slickResponsive: [
-        {
-          breakpoint: 1440,
-          settings: { slidesToShow: 3 }
-        },
-        {
-          breakpoint: 992,
-          settings: { slidesToShow: 2 }
-        },
-        {
-          breakpoint: 768,
-          settings: { slidesToShow: 1 }
-        }
-      ]
-    };
-  },
-  methods: {
-    handleAfterChange(currentSlide) {
-      this.currentSlide = currentSlide;
-    },
-    handleBeforeChange(oldIndex, newIndex) {
-      this.currentSlide = newIndex;
-    },
-    isCenter(idx) {
-      // Only apply scaling if width >= 991px
-      if (typeof window !== 'undefined' && window.innerWidth < 991) return false;
-      let centerIdx = (this.currentSlide + 1) % this.usecase.length;
-      if (this.usecase.length < 3) return idx === this.currentSlide;
-      return idx === centerIdx;
-    },
-    goToPrev() {
-      this.$refs.slick && this.$refs.slick.prev();
-    },
-    goToNext() {
-      this.$refs.slick && this.$refs.slick.next();
+      modules: [Navigation, Pagination, Autoplay]
     }
   }
 }
 </script>
 
 <style scoped>
-
-:deep(.slick-list) {
-  overflow: hidden !important;
-  padding-bottom: 32px !important;
-  padding-top: 32px !important;
-}
-@media (max-width: 992px) {
-  :deep(.slick-list) {
-    padding-top: 16px !important;
-  }
+.usecases-section {
+  padding: 96px 0;
+  background: #fff;
 }
 
-.slick-track {
-  align-items: center !important;
-}
-
-.carousel-slide-inner {
-  padding: 0 16px;
-  box-sizing: border-box;
-}
-@media (max-width: 992px) {
-  .carousel-slide-inner { padding: 0 12px; }
-}
 @media (max-width: 768px) {
-  .carousel-slide-inner { padding: 0 6px; }
-}
-
-
-/* Disable default slick arrow styling from vue-slick-carousel */
-.slick-arrow:not(.carousel-arrow) {
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  width: auto !important;
-  height: auto !important;
-  padding: 0 !important;
-  color: inherit !important;
-  position: static !important;
-}
-
-
-.carousel-arrow.carousel-arrow.right::before
-{
-  display: none !important;
-  content: none !important;
-}
-
-.carousel-arrow.carousel-arrow.left::before
-{
-  display: none !important;
-  content: none !important;
+  .usecases-section {
+    padding: 64px 0;
+  }
 }
 
 .container {
-  padding-top: 96px !important;
-  padding-bottom: 96px !important;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
-.carousel-outer-wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
 }
+
+.section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+@media (max-width: 992px) {
+  .section-header {
+    margin-bottom: 32px;
+  }
+}
+
+.section-description {
+  font-size: 16px;
+  color: #667085;
+  margin-top: 12px;
+}
+
 .carousel-wrapper {
+  position: relative;
+  padding: 32px 60px;
+}
+
+@media (max-width: 992px) {
+  .carousel-wrapper {
+    padding: 24px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-wrapper {
+    padding: 24px 0;
+  }
+}
+
+/* Swiper Overrides */
+.usecases-swiper {
+  padding: 16px 0 48px;
+}
+
+:deep(.swiper-slide) {
+  height: auto;
   display: flex;
-  align-items: center;
   justify-content: center;
-  position: relative;
-  margin-top: 16px;
-  width: 100%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.carousel-container {
-  width: 100%;
-  padding: 8px 0;
-}
-.carousel {
-  display: flex;
-  gap: 24px;
-  width: 100%;
-  padding: 8px;
-  position: relative;
-  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-.carousel-card {
-  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.carousel-card.scaled {
-  transform: scale(1.08);
-  box-shadow: 0 6px 32px 0 rgba(16, 24, 40, 0.10);
-  z-index: 2;
-  margin-top: -2.5%;
-  margin-bottom: -2.5%;
 }
 
+@media (max-width: 768px) {
+  .usecases-swiper {
+    padding: 16px 0 56px;
+  }
+  
+  :deep(.swiper-wrapper) {
+    align-items: center;
+  }
+  
+  :deep(.swiper-slide) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
-.arrow-icon {
-  width: 18px;
-  height: 18px;
-  display: block;
-}
-.carousel-arrow:hover .arrow-icon {
-  filter: brightness(0.8);
-}
-.carousel-arrow:hover {
-  background: #f9fafb;
-}
-.carousel::-webkit-scrollbar {
-  display: none;
-}
-.carousel-arrow {
+/* Custom Navigation Buttons */
+.custom-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
   background: #fff;
   border: 1px solid #e5e7eb;
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  color: #475467;
   cursor: pointer;
-  box-shadow: 0 2px 8px 0 rgba(16, 24, 40, 0.08);
-  z-index: 2;
-  transition: background 0.2s;
-  flex-shrink: 0;
-  flex-grow: 0;
-  box-sizing: border-box;
-  padding: 0;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.08);
 }
 
-.arrow-icon {
-  width: 18px;
-  height: 18px;
-  display: block;
-  margin: 0;
-  flex-shrink: 0;
-  flex-grow: 0;
-}
-.carousel-arrow:hover {
-  background: #f3f4f6;
-}
-.carousel-arrow.left {
-  margin-right: 12px;
-}
-.carousel-arrow.right {
-  margin-left: 12px;
+.custom-nav:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+  box-shadow: 0 4px 12px rgba(16, 24, 40, 0.12);
 }
 
-@media screen and (max-width: 768px) {
-  .container {
-    padding-top: 64px !important;
-    padding-bottom: 64px !important;
-  }
-  .carousel {
-    max-width: 100vw;
-  }
-  .desktop-arrow {
+.custom-nav:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.custom-nav.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.custom-nav img {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .custom-nav {
     display: none;
   }
-  .mobile-arrows-container {
-    display: flex;
-  }
-  .carousel-arrow {
-    width: 64px;
-    height: 64px;
-  }
-  .arrow-icon {
-    width: 24px;
-    height: 24px;
-  }
 }
 
-/* Slide animations with improved transitions */
-@keyframes slideInFromRight {
-  0% {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInFromLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.slide-in-right {
-  animation: slideInFromRight 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
-}
-
-.slide-in-left {
-  animation: slideInFromLeft 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
-}
-.mobile-arrows-container {
+/* Hide default Swiper buttons */
+:deep(.swiper-button-prev::after),
+:deep(.swiper-button-next::after) {
   display: none;
-  width: 100%;
+}
+
+/* Custom Pagination */
+:deep(.swiper-pagination) {
+  bottom: 0 !important;
+  display: flex;
   justify-content: center;
-  margin-top: 64px;
-  gap: 16px;
-}
-@media screen and (max-width: 768px) {
-  .desktop-arrow {
-    display: none;
-  }
-  .mobile-arrows-container {
-    display: flex;
-  }
-  .carousel-arrow {
-    width: 64px;
-    height: 64px;
-  }
-  .arrow-icon {
-    width: 24px;
-    height: 24px;
-  }
+  gap: 8px;
 }
 
-:deep(.slick-dots) {
-  display: flex !important;
-  justify-content: center;
-  margin-top: 24px;
-  list-style: none;
-}
-
-:deep(.slick-dots li) {
-  margin: 0;
-  padding: 0;
-}
-
-:deep(.slick-dots button) {
+:deep(.swiper-pagination-bullet) {
   width: 10px;
   height: 10px;
-  border-radius: 50%;
-  background: #e5e7eb;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
-  font-size: 0;         /* Hide any number/text */
-  color: transparent;   /* Hide any number/text */
-  outline: none;        /* Remove focus ring */
-  box-shadow: none;     /* Remove native shadow */
+  background: #d1d5db;
+  opacity: 1;
+  transition: all 0.3s ease;
+  margin: 0 !important;
 }
 
-:deep(.slick-dots button:before) {
-  display: none !important; /* Hide Slick's default dot pseudo-element */
-}
-
-:deep(.slick-dots .slick-active button) {
-  background: #6434D0; /* Your brand color */
+:deep(.swiper-pagination-bullet-active) {
+  background: #6434d0;
   transform: scale(1.2);
 }
 
+:deep(.swiper-pagination-bullet:hover) {
+  background: #9ca3af;
+}
 </style>
