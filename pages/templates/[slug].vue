@@ -89,49 +89,8 @@
                     <path d="M9 4H4v5M15 4h5v5M9 20H4v-5M15 20h5v-5" stroke="#475467" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                 </button>
-                <img v-if="previewImages.length === 1" :src="previewImages[0].url" alt="Template Preview" class="template-preview__image">
-                <div v-else-if="previewImages.length > 1" class="carousel-outer-wrapper">
-                  <component
-                    v-if="VueSlickCarousel"
-                    :is="VueSlickCarousel"
-                    ref="slick"
-                    :arrows="true"
-                    :dots="false"
-                    :infinite="true"
-                    :autoplay="false"
-                    :autoplaySpeed="5000"
-                    :slidesToShow="1"
-                    :responsive="slickResponsive"
-                    @afterChange="handleAfterChange"
-                    @beforeChange="handleBeforeChange"
-                  >
-                    <template #prevArrow>
-                      <button class="carousel-arrow left desktop-arrow" @click="goToPrev" aria-label="Previous image">
-                        <img src="/arrow-left.svg" alt="Previous" class="arrow-icon" />
-                      </button>
-                    </template>
-                    <template #nextArrow>
-                      <button class="carousel-arrow right desktop-arrow" @click="goToNext" aria-label="Next image">
-                        <img src="/arrow-right.svg" alt="Next" class="arrow-icon" />
-                      </button>
-                    </template>
-                    <div
-                      v-for="(image, idx) in previewImages"
-                      :key="image.id || idx"
-                      class="carousel-slide-inner"
-                    >
-                      <img :src="image.url" :alt="image.alt || 'Template Preview'" class="template-preview__image carousel-image">
-                    </div>
-                  </component>
-                  <div class="mobile-arrows-container">
-                    <button class="carousel-arrow left" @click="goToPrev" aria-label="Previous image">
-                      <img src="/arrow-left.svg" alt="Previous" class="arrow-icon" />
-                    </button>
-                    <button class="carousel-arrow right" @click="goToNext" aria-label="Next image">
-                      <img src="/arrow-right.svg" alt="Next" class="arrow-icon" />
-                    </button>
-                  </div>
-                </div>
+                <!-- Show first preview image (carousel temporarily disabled due to Vue 3 compatibility) -->
+                <img v-if="previewImages.length >= 1" :src="previewImages[0].url" :alt="previewImages[0].alt || 'Template Preview'" class="template-preview__image">
               </div>
 
               <!-- Fullscreen Modal Overlay -->
@@ -191,260 +150,224 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import closeIcon from '~/assets/images/x-close.svg'
-// MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
-// Components
-const MoreTemplates = () => import('../../components/template/MoreTemplates.vue')
-const Faq = () => import('../../components/features/Faq.vue')
-
-// Dynamic carousel import - only loaded when needed
-const loadCarousel = async () => {
-  const [{ default: VueSlickCarousel }] = await Promise.all([
-    import('vue-slick-carousel'),
-    import('vue-slick-carousel/dist/vue-slick-carousel.css'),
-    import('vue-slick-carousel/dist/vue-slick-carousel-theme.css')
-  ])
-  return VueSlickCarousel
-}
 import isEmpty from 'lodash/isEmpty'
 import getTemplatesAndCategories from '@/utils/getTemplatesAndCategories'
 import axios from 'axios'
 
-export default {
-  components: {
-    MoreTemplates,
-    Faq,
-  },
-  async asyncData({ params, error ,payload }) {
+// Components
+const MoreTemplates = defineAsyncComponent(() => import('../../components/template/MoreTemplates.vue'))
+const Faq = defineAsyncComponent(() => import('../../components/features/Faq.vue'))
 
-    if (payload) {
-      return payload
+// Note: vue-slick-carousel is not compatible with Vue 3
+// Carousel functionality temporarily disabled - templates will show single image only
+
+const route = useRoute()
+
+const { data: fetchedData, error: fetchError } = await useAsyncData(`template-${route.params.slug}`, async () => {
+  try {
+    const slug = route.params.slug
+    // First, get templates and categories from the main API
+    const { templates, categories } = await getTemplatesAndCategories()
+    const template = templates.find((template) => template.slug === slug)
+    
+    if (!template) {
+      throw createError({ statusCode: 404, message: 'Template not found' })
     }
-    //payload is used during static site generation and api call during developement
-
-    try {
-      const slug = params.slug    
-      // First, get templates and categories from the main API
-      const { templates, categories } = await getTemplatesAndCategories()
-      const template = templates.find((template) => template.slug === slug)
-      
-      if (!template) {
-        error({ statusCode: 404, message: 'Template not found' })
-        return
-      }
 
     const {
       data: { data },
-    } = await axios.get(`${process.env.strapiUrl}/api/pdf-templates`, {
-    params: {
-      'filters[slug][$eqi]': slug,
-      populate: 'deep',
-    },
-  })      
-      return { template, categories, data: data[0] }
-    } catch (err) {
-      console.error('Error in asyncData:', err)
-      error({ statusCode: 500, message: 'Internal Server Error' })
-    }
-  },
-  data() {
-    return {
-      currentSlide: 0,
-      totalSlides: 0,
-      VueSlickCarousel: null,
-      // Active preview tab when PDF preview is available
-      // 'pdf' | 'form'
-      activeTab: 'pdf',
-      slickResponsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            arrows: false,
-          },
-        },
-      ],
-      // fullscreen modal state
-      showFullscreen: false,
-      modalIndex: 0,
-      closeIcon,
-    }
-  },
-  computed: {
-    meta() {
-      const { name, description, metaTitle, metaDescription, previewImageUrl } =
-        this.template || {}
+    } = await axios.get(`https://cms.formester.com/api/pdf-templates`, {
+      params: {
+        'filters[slug][$eqi]': slug,
+        populate: 'deep',
+      },
+    })
+    
+    return { template, categories, data: data[0] }
+  } catch (err) {
+    console.error('Error fetching template:', err)
+    throw createError({ statusCode: 500, message: 'Internal Server Error' })
+  }
+})
 
-      const metaData = {
-        type: 'website',
-        url: `https://formester.com/templates/${this.$route.params.slug}/`,
-        title: metaTitle || name || 'Form Template | Formester',
-        description:
-          metaDescription ||
-          description ||
-          "Explore Formester's no-code form templates! Create surveys, gather feedback, and manage events effortlessly. Simplify form building now!",
-        mainImage:
-          previewImageUrl ||
-          'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Formester Template',
-      }
-      return getSiteMeta(metaData)
-    },
-    previewImageUrl() {
-      return (
-        this.data?.previewImages?.[0]?.image?.url ?? ''
-      );
-    },
-    previewImages() {
-      if (!this.data?.previewImages) return []
-      
-      return this.data.previewImages.map(item => {
-        // Handle different Strapi image structures
-        let url = ''
-        let alt = ''
-        let id = item.id
-        
-        if (item.image?.url) {
-          url = item.image.url
-          alt = item.image.alternativeText || item.imageAlt || 'Template Preview'
-        } else if (item.image?.data?.attributes?.url) {
-          url = item.image.data.attributes.url
-          alt = item.image.data.attributes.alternativeText || item.imageAlt || 'Template Preview'
-        } else if (item.imageUrl) {
-          url = item.imageUrl
-          alt = item.imageAlt || 'Template Preview'
-        }
-        
-        return { id, url, alt }
-      }).filter(item => item.url) // Only return items with valid URLs
-    },
-    faqsSchema() {
-      const mainEntity = (this.template.faqs || []).map((faq) => {
-        return {
-          '@type': 'Question',
-          name: faq.question,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: faq.answer,
-          },
-        }
-      })
-      return mainEntity.length > 0
-        ? {
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: mainEntity,
-          }
-        : null
-    },
-  },
-  head() {
-    const { name, keywords } = this.template || {}
-    return {
-      title: name ? `${name} | Formester` : 'Formester',
-      meta: [
-        ...this.meta,
-        {
-          name: 'keywords',
-          content: keywords,
-        },
-      ],
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: `https://formester.com/templates/${this.$route.params.slug}/`,
-        },
-      ],
+if (fetchError.value) {
+  throw createError({ statusCode: 500, message: 'Failed to load template' })
+}
+
+const template = computed(() => fetchedData.value?.template || {})
+const categories = computed(() => fetchedData.value?.categories || {})
+const data = computed(() => fetchedData.value?.data || null)
+
+const currentSlide = ref(0)
+const activeTab = ref('pdf')
+const showFullscreen = ref(false)
+const modalIndex = ref(0)
+
+const meta = computed(() => {
+  const { name, description, metaTitle, metaDescription, previewImageUrl } =
+    template.value || {}
+
+  const metaData = {
+    type: 'website',
+    url: `https://formester.com/templates/${route.params.slug}/`,
+    title: metaTitle || name || 'Form Template | Formester',
+    description:
+      metaDescription ||
+      description ||
+      "Explore Formester's no-code form templates! Create surveys, gather feedback, and manage events effortlessly. Simplify form building now!",
+    mainImage:
+      previewImageUrl ||
+      'https://formester.com/formester-logo-meta-image.png',
+    mainImageAlt: 'Formester Template',
+  }
+  return getSiteMeta(metaData)
+})
+
+const previewImageUrl = computed(() => {
+  return data.value?.previewImages?.[0]?.image?.url ?? ''
+})
+
+const previewImages = computed(() => {
+  if (!data.value?.previewImages) return []
+  
+  return data.value.previewImages.map(item => {
+    // Handle different Strapi image structures
+    let url = ''
+    let alt = ''
+    let id = item.id
+    
+    if (item.image?.url) {
+      url = item.image.url
+      alt = item.image.alternativeText || item.imageAlt || 'Template Preview'
+    } else if (item.image?.data?.attributes?.url) {
+      url = item.image.data.attributes.url
+      alt = item.image.data.attributes.alternativeText || item.imageAlt || 'Template Preview'
+    } else if (item.imageUrl) {
+      url = item.imageUrl
+      alt = item.imageAlt || 'Template Preview'
     }
-  },
-  jsonld() {
-    const { name, description, previewImageUrl, category } = this.template || {}
-    const jsonldData = [
-      {
+    
+    return { id, url, alt }
+  }).filter(item => item.url) // Only return items with valid URLs
+})
+
+const faqsSchema = computed(() => {
+  const mainEntity = (template.value.faqs || []).map((faq) => {
+    return {
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    }
+  })
+  return mainEntity.length > 0
+    ? {
         '@context': 'https://schema.org',
-        '@type': 'WebPage',
+        '@type': 'FAQPage',
+        mainEntity: mainEntity,
+      }
+    : null
+})
+
+useHead(() => {
+  const { name, keywords } = template.value || {}
+  return {
+    title: name ? `${name} | Formester` : 'Formester',
+    meta: [
+      ...meta.value,
+      {
+        name: 'keywords',
+        content: keywords,
+      },
+    ],
+    link: [
+      {
+        rel: 'canonical',
+        href: `https://formester.com/templates/${route.params.slug}/`,
+      },
+    ],
+  }
+})
+
+useSchemaOrg(() => {
+  const { name, description, previewImageUrl, category } = template.value || {}
+  const jsonldData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: name,
+      description: description,
+      image: previewImageUrl,
+      url: `https://formester.com/templates/${route.params.slug}/`,
+      mainEntity: {
+        '@type': 'CreativeWork',
         name: name,
         description: description,
         image: previewImageUrl,
-        url: `https://formester.com/templates/${this.$route.params.slug}/`,
-        mainEntity: {
-          '@type': 'CreativeWork',
-          name: name,
-          description: description,
-          image: previewImageUrl,
-          url: `https://formester.com/templates/${this.$route.params.slug}/`,
-          author: {
-            '@type': 'Organization',
-            name: 'Formester',
-            url: 'https://formester.com/',
-          },
-        },
-        isPartOf: {
-          '@type': 'CollectionPage',
-          name: category?.name,
-          url: `https://formester.com/templates/categories/${category?.slug}/`,
-          description:
-            'Browse our collection of Research Form templates for free.',
+        url: `https://formester.com/templates/${route.params.slug}/`,
+        author: {
+          '@type': 'Organization',
+          name: 'Formester',
+          url: 'https://formester.com/',
         },
       },
-    ]
-    if (this.faqsSchema) {
-      jsonldData.push(this.faqsSchema)
-    }
-    return jsonldData
-  },
-  async mounted() {
-    // Load carousel component only if we have multiple preview images
-    if (this.data && this.data.slug && this.previewImages.length > 1) {
-      try {
-        this.VueSlickCarousel = await loadCarousel()
-      } catch (error) {
-        console.error('Failed to load carousel component:', error)
-      }
-    }
-  },
-  methods: {
-    redirectTo() {
-      window.open(
-        `https://app.formester.com/templates?template_id=${this.template.id}`,
-        '_blank'
-      )
+      isPartOf: {
+        '@type': 'CollectionPage',
+        name: category?.name,
+        url: `https://formester.com/templates/categories/${category?.slug}/`,
+        description:
+          'Browse our collection of Research Form templates for free.',
+      },
     },
-    openFullscreen() {
-      // If carousel is present use current slide, else default to 0
-      this.modalIndex = this.currentSlide || 0
-      this.showFullscreen = true
-      document.body.style.overflow = 'hidden'
-    },
-    closeFullscreen() {
-      this.showFullscreen = false
-      document.body.style.overflow = ''
-    },
-    nextModal() {
-      if (!this.previewImages.length) return
-      this.modalIndex = (this.modalIndex + 1) % this.previewImages.length
-    },
-    prevModal() {
-      if (!this.previewImages.length) return
-      this.modalIndex = (this.modalIndex - 1 + this.previewImages.length) % this.previewImages.length
-    },
-    handleAfterChange(currentSlide) {
-      this.currentSlide = currentSlide
-    },
-    handleBeforeChange(oldIndex, newIndex) {
-      this.currentSlide = newIndex
-    },
-    goToPrev() {
-      this.$refs.slick && this.$refs.slick.prev()
-    },
-    goToNext() {
-      this.$refs.slick && this.$refs.slick.next()
-    },
-    isEmpty,
-  },
+  ]
+  if (faqsSchema.value) {
+    jsonldData.push(faqsSchema.value)
+  }
+  return jsonldData
+})
+
+const redirectTo = () => {
+  window.open(
+    `https://app.formester.com/templates?template_id=${template.value.id}`,
+    '_blank'
+  )
 }
+
+const openFullscreen = () => {
+  // If carousel is present use current slide, else default to 0
+  modalIndex.value = currentSlide.value || 0
+  showFullscreen.value = true
+  document.body.style.overflow = 'hidden'
+}
+
+const closeFullscreen = () => {
+  showFullscreen.value = false
+  document.body.style.overflow = ''
+}
+
+const nextModal = () => {
+  if (!previewImages.value.length) return
+  modalIndex.value = (modalIndex.value + 1) % previewImages.value.length
+}
+
+const prevModal = () => {
+  if (!previewImages.value.length) return
+  modalIndex.value = (modalIndex.value - 1 + previewImages.value.length) % previewImages.value.length
+}
+
+const goToPrev = () => {
+  // Carousel disabled - no action
+}
+
+const goToNext = () => {
+  // Carousel disabled - no action
+}
+
 </script>
 
 <style scoped>
