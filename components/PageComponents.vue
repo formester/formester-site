@@ -12,37 +12,31 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { defineAsyncComponent } from 'vue'
 import componentMapping from '@/constants/componentMapping'
 
-export default {
-  props: {
-    components: {
-      type: Array,
-      default: () => [],
-    },
+const props = defineProps({
+  components: {
+    type: Array,
+    default: () => [],
   },
-  data() {
-    return {
-      loadedComponents: {}
-    }
-  },
-  methods: {
-    getComponent(name) {
-      if (!componentMapping[name]) {
-        return null
-      }
-      
-      // Cache the async component
-      if (!this.loadedComponents[name]) {
-        this.loadedComponents[name] = defineAsyncComponent({
-          loader: componentMapping[name]
-        })
-      }
-      
-      return this.loadedComponents[name]
-    },
-  },
+})
+
+const loadedComponents = {}
+
+const getComponent = (name) => {
+  if (!componentMapping[name]) {
+    return null
+  }
+  
+  // Cache the async component
+  if (!loadedComponents[name]) {
+    loadedComponents[name] = defineAsyncComponent({
+      loader: componentMapping[name]
+    })
+  }
+  
+  return loadedComponents[name]
 }
 </script>
