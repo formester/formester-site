@@ -1,4 +1,5 @@
-const axios = require('axios')
+import axios from 'axios'
+
 export default async () => {
   const {
     data: { data },
