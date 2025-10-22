@@ -1,10 +1,3 @@
-import getRoutes, { getFeatureRoutes, getPageRoutes } from './utils/getRoutes'
-import getSiteMeta from './utils/getSiteMeta'
-import getTemplatesAndCategories from './utils/getTemplatesAndCategories'
-import axios from 'axios'
-
-const meta = getSiteMeta()
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   // Global page headers
@@ -12,7 +5,6 @@ export default defineNuxtConfig({
     head: {
     title: 'No-Code Online Form Builder - Formester',
     meta: [
-      ...meta,
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
@@ -56,33 +48,9 @@ export default defineNuxtConfig({
   sitemap: {
     hostname: 'https://formester.com',
     trailingSlash: true,
-    urls: async () => {
-      let { data } = await axios.get('https://app.formester.com/templates.json')
-      let templates = data.map((template) => {
-        return {
-          url: `/templates/${template.slug}`,
-        }
-      })
-      let { data: response } = await axios.get(
-        'https://app.formester.com/template_categories.json'
-      )
-      let categories = Object.values(response)
-        .flat()
-        .map((category) => {
-          return `/templates/categories/${category.slug}`
-        })
-      const blogs = await getRoutes()
-      const features = await getFeatureRoutes()
-      const pages = await getPageRoutes()
-      const sitemap = [
-        ...pages,
-        ...features,
-        ...blogs,
-        ...templates,
-        ...categories,
-      ]
-      return sitemap
-    }
+    sources: [
+      '/api/__sitemap__/urls'
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -101,7 +69,7 @@ export default defineNuxtConfig({
 
   // Modules
   modules: [
-    'nuxt-simple-robots',
+    '@nuxtjs/robots',
     '@nuxt/content',
     '@nuxtjs/sitemap',
     'nuxt-gtag',
@@ -127,22 +95,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: async () => {
-        try {
-          const { templateRoutes, categorieRoutes } =
-            await getTemplatesAndCategories()
-          const featureRoutes = await getFeatureRoutes()
-          const pageRoutes = await getPageRoutes()
-          return [
-            ...pageRoutes,
-            ...featureRoutes,
-            ...templateRoutes,
-            ...categorieRoutes
-          ]
-        } catch (error) {
-          return []
-        }
-      }
+      routes: ['/']
     }
   },
   content: {
