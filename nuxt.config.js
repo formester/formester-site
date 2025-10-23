@@ -94,8 +94,8 @@ export default defineNuxtConfig({
     },
     workbox: {
       maximumFileSizeToCacheInBytes: 50 * 1024 * 1024, // 50 MB to handle large SVGs
-      globPatterns: ['**/*.{js,css,html,png,ico,jpg,jpeg,webp}'],
-      globIgnores: ['**/_payload.json', '**/_ipx/**', '**/hr-solution/**']
+      globPatterns: ['**/*.{js,css,html,png,svg,ico,jpg,jpeg,webp}'],
+      globIgnores: ['**/_payload.json', '**/_ipx/**']
     }
   },
 
