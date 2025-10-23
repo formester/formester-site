@@ -191,14 +191,16 @@
           </template>
         </tbody>
         <tfoot>
-          <td colspan="2">
-            <a
-              href="https://app.formester.com/users/sign_up"
-              class="table__button muted d-block text-center"
-            >
-              Start for free
-            </a>
-          </td>
+          <tr>
+            <td colspan="2">
+              <a
+                href="https://app.formester.com/users/sign_up"
+                class="table__button muted d-block text-center"
+              >
+                Start for free
+              </a>
+            </td>
+          </tr>
         </tfoot>
       </table>
       <!-- personal -->
