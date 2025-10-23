@@ -102,11 +102,45 @@ export default defineNuxtConfig({
   // Nitro configuration (replaces generate)
   nitro: {
     prerender: {
-      crawlLinks: true,
-      routes: ['/'],
+      crawlLinks: false,
+      routes: async () => {
+        const axios = (await import('axios')).default
+        
+        // Fetch all templates ONCE (like Nuxt 2)
+        const { data: templates } = await axios.get(
+          'https://app.formester.com/templates.json',
+          { params: { with_details: true } }
+        )
+        
+        // Fetch categories
+        const { data: categoriesData } = await axios.get(
+          'https://app.formester.com/template_categories/grouped_by_category.json'
+        )
+        
+        // Prerender ALL templates (like Nuxt 2 did)
+        const allTemplates = templates.map(t => `/templates/${t.slug}`)
+        
+        // Prerender all category pages
+        const categoryPages = categoriesData.map(c => `/templates/categories/${c.categorySlug}`)
+        
+        console.log(`Prerendering ${allTemplates.length} templates + ${categoryPages.length} categories`)
+        
+        return [
+          '/',
+          '/about-us',
+          '/pricing',
+          '/security',
+          '/privacy',
+          '/terms-of-service',
+          '/contact-us',
+          '/templates',
+          ...allTemplates,
+          ...categoryPages
+        ]
+      },
       ignore: ['/api'],
-      concurrency: 3,
-      interval: 1000,
+      concurrency: 15,  // Higher concurrency for speed
+      interval: 50,     // Faster interval
       failOnError: false
     }
   },
