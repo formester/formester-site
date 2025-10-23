@@ -60,34 +60,20 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import KeyFeatures from '../components/competitors/KeyFeatures.vue'
 import StandOutFeatureSection from '../components/competitors/StandOutFeatureSection.vue'
 import PopularUseCase from '../components/competitors/PopularUseCase.vue'
 import Limitations from '../components/competitors/Limitations.vue'
-
 import FormBuilderComparisionTable from '../components/form-builders-comparision-table.vue'
 import WhyChooseFormester from '../components/competitors/why-choose-formester.vue'
 import CallToActionSection from '../components/CallToActionSection.vue'
 import FAQwithCategories from '../components/FAQwithCategories.vue'
-
 import getSiteMeta from '@/utils/getSiteMeta'
 import jotformFaqs from '@/faqs/jotform-101-faqs'
 
-export default {
-  components: {
-    KeyFeatures,
-    StandOutFeatureSection,
-    PopularUseCase,
-    Limitations,
-    WhyChooseFormester,
-    FormBuilderComparisionTable,
-    CallToActionSection,
-    FAQwithCategories,
-  },
-  computed: {
-    meta() {
-      const metaData = {
+const meta = computed(() => {
+  const metaData = {
         type: 'website',
         url: 'https://formester.com/jotform-101/',
         title: "Jotform 101: All About Jotform's Forms by Formester!",
@@ -137,45 +123,40 @@ export default {
           'online form builder',
         ],
       }
-      return getSiteMeta(metaData)
-    },
-    faqsSchema() {
-      const allFaqs = []
+  return getSiteMeta(metaData)
+})
 
-      this.jotformFaqs.forEach((c) => {
-        if (c.faqs) {
-          allFaqs.push(...c.faqs)
-        }
-      })
+const faqsSchema = computed(() => {
+  const allFaqs = []
 
-      // Generate the FAQ schema
-      return allFaqs.map((faq) => {
-        return {
-          '@type': 'Question',
-          name: faq.question,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: faq.answer,
-          },
-        }
-      })
-    },
-  },
-  head() {
-    return {
-      title: "Jotform 101: All About Jotform's Forms by Formester!",
-      meta: [...this.meta],
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: 'https://formester.com/jotform-101/',
-        },
-      ],
+  jotformFaqs.forEach((c) => {
+    if (c.faqs) {
+      allFaqs.push(...c.faqs)
     }
-  },
-  jsonld() {
-    return {
+  })
+
+  return allFaqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  }))
+})
+
+useHead({
+  title: "Jotform 101: All About Jotform's Forms by Formester!",
+  meta: [...meta.value],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://formester.com/jotform-101/',
+    },
+  ],
+})
+
+useSchemaOrg({
       '@context': 'http://schema.org',
       '@graph': [
         {
@@ -213,15 +194,13 @@ export default {
         {
           '@context': 'https://schema.org',
           '@type': 'FAQPage',
-          mainEntity: this.faqsSchema,
+          mainEntity: faqsSchema.value,
         },
       ],
-    }
-  },
-  data() {
-    return {
-      jotformKeyFeatures: [
-        {
+    })
+
+const jotformKeyFeatures = [
+  {
           title: 'Customization Options',
           description:
             'With Jotform, users get the option to customize their forms to match their brand and design preferences.',
@@ -269,9 +248,10 @@ export default {
             'Jotform prioritizes the security of user data and provides features like SSL encryption, GDPR compliance, and HIPAA compliance for handling sensitive information securely.',
           img: '/jotform101/key-features/security-and-compliance.svg',
         },
-      ],
-      jotformStandOutFeatures: [
-        {
+      ]
+
+const jotformStandOutFeatures = [
+  {
           title: 'Form Templates',
           description:
             'Access professionally designed templates for various industries and customize them to fit your needs. As of now, Jotform has a collection of over 10K Templates!',
@@ -319,9 +299,10 @@ export default {
             'Jotform provides reliable customer support through various channels, including a help center, community forum, an extensive blog resource and a responsive support team.!',
           img: '/jotform101/what-makes-jotform-stand-out/support.svg',
         },
-      ],
-      jotformUseCases: [
-        {
+      ]
+
+const jotformUseCases = [
+  {
           title: 'Event Registration',
           description:
             "Simplify event planning and streamline the registration process with Jotform's user-friendly forms.",
@@ -387,9 +368,10 @@ export default {
           ],
           img: '/jotform101/popular-use-case/healthcare-and-medical-forms.svg',
         },
-      ],
-      jotformLimitations: [
-        {
+      ]
+
+const jotformLimitations = [
+  {
           title: 'Learning Curve',
           description:
             'Jotform offers a wide range of features and functionalities, which may require some time to master, especially for users new to form building.',
@@ -413,11 +395,7 @@ export default {
             'There is no way to purchase only required additional features. Users have to upgrade to a higher plan to get access to greater limits of a particular feature.',
           img: '/jotform101/limitations/restrictions-and-upgrading.svg',
         },
-      ],
-      jotformFaqs: jotformFaqs,
-    }
-  },
-}
+      ]
 </script>
 
 <style>

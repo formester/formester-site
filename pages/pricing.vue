@@ -72,7 +72,7 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import CallToActionSection from '@/components/CallToActionSection.vue'
 import PricingCard from '@/components/pricing/PricingCard.vue'
 import Faq from '@/components/features/Faq.vue'
@@ -85,24 +85,12 @@ import {
   enterprise,
   comparisonTableFeatures,
 } from '@/constants/plan'
-
-// MetaTags
 import getSiteMeta from '@/utils/getSiteMeta'
 import PricingTable from '@/components/pricing/PricingTable.vue'
 
-export default {
-  components: { PricingCard, Faq, CallToActionSection, PricingTable },
-  data() {
-    return {
-      isYearly: true,
-      free,
-      personalMonthly,
-      businessMonthly,
-      personalYearly,
-      businessYearly,
-      comparisonTableFeatures,
-      enterprise,
-      faqs: [
+const isYearly = ref(true)
+
+const faqs = [
         {
           header: 'Can I try before I buy?',
           body: "It's free to set up an account and create a campaign. But to get more than 100 submissions, you'll need to choose a plan.",
@@ -135,49 +123,40 @@ export default {
           header: 'I have more questions',
           body: "No problem! Contact us and we'll get in touch with you shortly :)",
         },
-      ],
-    }
-  },
-  computed: {
-    meta() {
-      const metaData = {
-        type: 'website',
-        url: 'https://formester.com/pricing/',
-        title: 'Pricing that feels just right',
-        description:
-          'Select the perfect plan for your needs, and star building beautiful forms!',
-        mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Formester Logo',
-      }
-      return getSiteMeta(metaData)
+      ]
+
+const meta = computed(() => {
+  const metaData = {
+    type: 'website',
+    url: 'https://formester.com/pricing/',
+    title: 'Pricing that feels just right',
+    description: 'Select the perfect plan for your needs, and star building beautiful forms!',
+    mainImage: 'https://formester.com/formester-logo-meta-image.png',
+    mainImageAlt: 'Formester Logo',
+  }
+  return getSiteMeta(metaData)
+})
+
+const pricingPlans = computed(() => ({
+  free: free.price,
+  personal: isYearly.value ? personalYearly.price : personalMonthly.price,
+  business: isYearly.value ? businessYearly.price : businessMonthly.price,
+}))
+
+// SEO
+useHead({
+  title: 'Plans & Pricing | Formester',
+  meta: [...meta.value],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://formester.com/pricing/',
     },
-    pricingPlans() {
-      return {
-        free: this.free.price,
-        personal: this.isYearly
-          ? this.personalYearly.price
-          : this.personalMonthly.price,
-        business: this.isYearly
-          ? this.businessYearly.price
-          : this.businessMonthly.price,
-      }
-    },
-  },
-  head() {
-    return {
-      title: 'Plans & Pricing | Formester',
-      meta: [...this.meta],
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: 'https://formester.com/pricing/',
-        },
-      ],
-    }
-  },
-  jsonld() {
-    return [
+  ],
+})
+
+// JSON-LD
+useSchemaOrg([
       {
         '@context': 'http://schema.org',
         '@type': 'WebApplication',
@@ -322,9 +301,7 @@ export default {
           },
         ],
       },
-    ]
-  },
-}
+    ])
 </script>
 
 <style scoped>

@@ -64,65 +64,56 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import KeyBenefits from '@/components/hr-solution/KeyBenefits.vue'
 import getSiteMeta from '@/utils/getSiteMeta'
-export default {
-  components: {
-    KeyBenefits,
-  },
-  computed: {
-    meta() {
-      const metaData = {
-        type: 'website',
-        url: 'https://formester.com/plugins/wordpress/',
-        title:
-          'Embed Beautiful Forms on Your WordPress Site | Formester Plugin',
-        description:
-          "Create & add stunning forms in minutes with Formester's intuitive builder & WordPress plugin. No coding needed! Increase leads, collect feedback & streamline workflow.",
-        mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Formester Logo',
-        keywords: [
-          'Formester',
-          'WordPress plugin',
-          'contact form',
-          'survey form',
-          'lead generation form',
-          'online form builder',
-          'drag & drop',
-          'automation',
-          'analytics',
-          'spam protection',
-          'workflow',
-          'digital signature',
-          'autoresponder',
-          'CMS',
-          'website',
-          'blog',
-          'SEO',
-          'conversion rate',
-          'engagement',
-          'data collection',
-        ],
-      }
-      return getSiteMeta(metaData)
+
+const meta = computed(() => {
+  const metaData = {
+    type: 'website',
+    url: 'https://formester.com/plugins/wordpress/',
+    title: 'Embed Beautiful Forms on Your WordPress Site | Formester Plugin',
+    description: "Create & add stunning forms in minutes with Formester's intuitive builder & WordPress plugin. No coding needed! Increase leads, collect feedback & streamline workflow.",
+    mainImage: 'https://formester.com/formester-logo-meta-image.png',
+    mainImageAlt: 'Formester Logo',
+    keywords: [
+      'Formester',
+      'WordPress plugin',
+      'contact form',
+      'survey form',
+      'lead generation form',
+      'online form builder',
+      'drag & drop',
+      'automation',
+      'analytics',
+      'spam protection',
+      'workflow',
+      'digital signature',
+      'autoresponder',
+      'CMS',
+      'website',
+      'blog',
+      'SEO',
+      'conversion rate',
+      'engagement',
+      'data collection',
+    ],
+  }
+  return getSiteMeta(metaData)
+})
+
+useHead({
+  title: 'Embed Beautiful Forms on Your WordPress Site | Formester Plugin',
+  meta: [...meta.value],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://formester.com/plugins/wordpress/',
     },
-  },
-  head() {
-    return {
-      title: 'Embed Beautiful Forms on Your WordPress Site | Formester Plugin',
-      meta: [...this.meta],
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: 'https://formester.com/plugins/wordpress/',
-        },
-      ],
-    }
-  },
-  jsonld() {
-    return {
+  ],
+})
+
+useSchemaOrg({
       '@context': 'http://schema.org',
       '@graph': [
         {
@@ -152,11 +143,9 @@ export default {
           ],
         },
       ],
-    }
-  },
-  data() {
-    return {
-      wordpressSteps: [
+    })
+
+const wordpressSteps = [
         {
           title: 'Install Formester Plugin',
           description:
@@ -180,8 +169,9 @@ export default {
           imageAlt:
             'mockup ui of submission page with a internet not available symbol',
         },
-      ],
-      faqs: [
+      ]
+
+const faqs = [
         {
           question:
             'How can I integrate Formester forms with my WordPress website or blog?',
@@ -206,10 +196,7 @@ export default {
           answer:
             'WordPress users can leverage Formester to streamline their workflow by managing website content effectively and integrating powerful forms seamlessly. Collecting payments, preventing spam, and analysing form submissions become hassle-free with this integration.',
         },
-      ],
-    }
-  },
-}
+      ]
 </script>
 
 <style scoped>

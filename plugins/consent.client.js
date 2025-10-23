@@ -65,48 +65,55 @@ async function enableClarity(clarityId) {
   })(window, document, 'clarity', 'script', clarityId);
 }
 
-export default (context, inject) => {
-  const gtmId = (context.$config && context.$config.gtm && context.$config.gtm.id) || (context.app && context.app.$config && context.app.$config.gtm && context.app.$config.gtm.id) || 'GTM-5GX7R49B';
+export default defineNuxtPlugin((nuxtApp) => {
+  const config = useRuntimeConfig()
+  const gtmId = config.public?.gtm?.id || 'GTM-5GX7R49B'
   // GA4 Measurement ID used previously in project
-  const gaMeasurementId = 'G-WY8RMY11PE';
-  const clarityId = process.env.NUXT_PUBLIC_CLARITY_ID || context.env && context.env.clarityId || '';
+  const gaMeasurementId = 'G-WY8RMY11PE'
+  const clarityId = config.public?.clarityId || ''
 
-  let trackingEnabled = false;
+  let trackingEnabled = false
 
   async function enableTracking() {
-    if (trackingEnabled) return;
-    trackingEnabled = true;
+    if (trackingEnabled) return
+    trackingEnabled = true
     try {
       await Promise.all([
         enableGtm(gtmId),
         enableGa4(gaMeasurementId),
         enableClarity(clarityId)
-      ]);
+      ])
       // Mark enabled for other app code
-      window.__trackingEnabled = true;
+      if (typeof window !== 'undefined') {
+        window.__trackingEnabled = true
+      }
     } catch (e) {
       // Fail silently to avoid blocking UX
-      // eslint-disable-next-line no-console
-      console.warn('Tracking enabling failed', e);
+      console.warn('Tracking enabling failed', e)
     }
   }
 
   // Expose helpers
   if (typeof window !== 'undefined') {
-    window.__enableTracking = enableTracking;
-    window.__setConsent = (value) => setCookie('fm_consent', value, 180);
-    window.__getConsent = () => getCookie('fm_consent');
+    window.__enableTracking = enableTracking
+    window.__setConsent = (value) => setCookie('fm_consent', value, 180)
+    window.__getConsent = () => getCookie('fm_consent')
   }
 
   // Auto-enable if already accepted previously
   if (process.client) {
-    const consent = getCookie('fm_consent');
+    const consent = getCookie('fm_consent')
     if (consent === 'accepted') {
-      enableTracking();
+      enableTracking()
     }
   }
 
-  inject('enableTracking', enableTracking);
-  inject('getConsent', () => getCookie('fm_consent'));
-  inject('setConsent', (value) => setCookie('fm_consent', value, 180));
-};
+  // Provide to Nuxt app
+  return {
+    provide: {
+      enableTracking,
+      getConsent: () => getCookie('fm_consent'),
+      setConsent: (value) => setCookie('fm_consent', value, 180)
+    }
+  }
+})

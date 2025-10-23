@@ -3,9 +3,12 @@ import axios from 'axios'
 import getSiteMeta from '@/utils/getSiteMeta'
 
 export default async (endpoint, params = {}) => {
+  const config = useRuntimeConfig()
+  const strapiUrl = config.public.strapiUrl
+  
   const {
     data: { data },
-  } = await axios.get(`${process.env.strapiUrl}/api${endpoint}`, {
+  } = await axios.get(`${strapiUrl}/api${endpoint}`, {
     params: {
       ...params,
       populate: 'deep',

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="features-page">
     <featureHero />
     <featureContainer
       v-for="feature in features1"
@@ -18,25 +18,15 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import featureHero from '@/components/features/featureHero.vue'
 import featureContainer from '@/components/features/featureContainer.vue'
 import { allTestimonials } from '@/constants/testimonials'
 import Testimonials from '@/components/Testimonial.vue'
 import TemplateSection from '@/components/TemplateSection.vue'
-
 import getSiteMeta from '@/utils/getSiteMeta'
 
-export default {
-  components: {
-    featureHero,
-    featureContainer,
-    Testimonials,
-    TemplateSection,
-  },
-  data() {
-    return {
-      features1: [
+const features1 = [
         {
           heading: 'HTML Form Backend',
           description:
@@ -119,8 +109,9 @@ export default {
           ],
           link: 'spam-protection',
         },
-      ],
-      features2: [
+      ]
+
+const features2 = [
         {
           heading: 'Powerful Analytics',
           description:
@@ -203,84 +194,82 @@ export default {
           ],
           link: 'electronic-signature',
         },
-      ],
-    }
-  },
-  async asyncData() {
-    let randomTestimonials = await allTestimonials
-    const randIndex = Math.floor(
-      Math.random() * (randomTestimonials.length - 2)
-    )
-    randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
-    return { randomTestimonials }
-  },
-  computed: {
-    meta() {
-      const metaData = {
-        type: 'website',
-        url: 'https://formester.com/features/',
-        title: 'Feature Page - Formester',
-        description:
-          'Experience the perfect blend of simplicity and versatility, empowering you to create engaging and efficient forms effortlessly.',
-        mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Formester Logo',
-      }
-      return getSiteMeta(metaData)
+      ]
+
+// Get random testimonials
+let randomTestimonials = await allTestimonials
+const randIndex = Math.floor(Math.random() * (randomTestimonials.length - 2))
+randomTestimonials = randomTestimonials.slice(randIndex, randIndex + 2)
+
+// Meta data
+const meta = computed(() => {
+  const metaData = {
+    type: 'website',
+    url: 'https://formester.com/features/',
+    title: 'Feature Page - Formester',
+    description: 'Experience the perfect blend of simplicity and versatility, empowering you to create engaging and efficient forms effortlessly.',
+    mainImage: 'https://formester.com/formester-logo-meta-image.png',
+    mainImageAlt: 'Formester Logo',
+  }
+  return getSiteMeta(metaData)
+})
+
+// SEO
+useHead({
+  title: 'Exciting Features for your Form Builder | Formester',
+  meta: [...meta.value],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://formester.com/features/',
+    },
+  ],
+})
+
+// JSON-LD
+useSchemaOrg([
+  {
+    '@type': 'Corporation',
+    '@id': 'https://acornglobus.com',
+    name: 'Formester',
+    description: "Sign up now for the best No-Code Form Builder! Create stunning HTML Forms with Formester's easy-to-use Online HTML Form Builder. Start building today!",
+    logo: 'https://formester.com/logo.png',
+    url: 'https://formester.com',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Delaware',
+      addressCountry: 'United States',
     },
   },
-  head() {
-    return {
-      title: 'Exciting Features for your Form Builder | Formester',
-      meta: [...this.meta],
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: 'https://formester.com/features/',
-        },
-      ],
-    }
+  {
+    '@type': 'BreadcrumbList',
+    '@id': 'https://acornglobus.com',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://formester.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Features',
+        item: 'https://formester.com/features',
+      },
+    ],
   },
-  jsonld() {
-    return {
-      '@context': 'http://schema.org',
-      '@graph': [
-        {
-          '@type': 'Corporation',
-          '@id': 'https://acornglobus.com',
-          name: 'Formester',
-          description:
-            "Sign up now for the best No-Code Form Builder! Create stunning HTML Forms with Formester's easy-to-use Online HTML Form Builder. Start building today!",
-          logo: 'https://formester.com/logo.png',
-          url: 'https://formester.com',
-          address: {
-            '@type': 'PostalAddress',
-            addressLocality: 'Delaware',
-            addressCountry: 'United States',
-          },
-        },
-        {
-          '@type': 'BreadcrumbList',
-          '@id': 'https://acornglobus.com',
-          itemListElement: [
-            {
-              '@type': 'ListItem',
-              position: 1,
-              name: 'Home',
-              item: 'https://formester.com',
-            },
-            {
-              '@type': 'ListItem',
-              position: 2,
-              name: 'Features',
-              item: 'https://formester.com/features',
-            },
-          ],
-        },
-      ],
-    }
-  },
-}
+])
 </script>
 
-<style></style>
+<style scoped>
+.features-page {
+  margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+  .features-page {
+    margin-top: 60px;
+  }
+}
+</style>

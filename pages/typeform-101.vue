@@ -60,34 +60,20 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import KeyFeatures from '../components/competitors/KeyFeatures.vue'
 import StandOutFeatureSection from '../components/competitors/StandOutFeatureSection.vue'
 import PopularUseCase from '../components/competitors/PopularUseCase.vue'
 import Limitations from '../components/competitors/Limitations.vue'
 import FormBuilderComparisionTable from '../components/form-builders-comparision-table.vue'
-
 import FAQwithCategories from '../components/FAQwithCategories.vue'
 import WhyChooseFormester from '../components/competitors/why-choose-formester.vue'
 import CallToActionSection from '../components/CallToActionSection.vue'
-
 import typeformFaqs from '@/faqs/typeform-101-faqs.js'
 import getSiteMeta from '@/utils/getSiteMeta'
 
-export default {
-  components: {
-    KeyFeatures,
-    StandOutFeatureSection,
-    PopularUseCase,
-    Limitations,
-    WhyChooseFormester,
-    FormBuilderComparisionTable,
-    FAQwithCategories,
-    CallToActionSection,
-  },
-  computed: {
-    meta() {
-      const metaData = {
+const meta = computed(() => {
+  const metaData = {
         type: 'website',
         url: 'https://formester.com/typeform-101/',
         title: "Typeform 101: All About Typeform's Forms by Formester!",
@@ -138,45 +124,40 @@ export default {
           'online form builder',
         ],
       }
-      return getSiteMeta(metaData)
-    },
-    faqsSchema() {
-      const allFaqs = []
+  return getSiteMeta(metaData)
+})
 
-      this.typeformFaqs.forEach((c) => {
-        if (c.faqs) {
-          allFaqs.push(...c.faqs)
-        }
-      })
+const faqsSchema = computed(() => {
+  const allFaqs = []
 
-      // Generate the FAQ schema
-      return allFaqs.map((faq) => {
-        return {
-          '@type': 'Question',
-          name: faq.question,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: faq.answer,
-          },
-        }
-      })
-    },
-  },
-  head() {
-    return {
-      title: "Typeform 101: All About Typeform's Forms by Formester!",
-      meta: [...this.meta],
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: 'https://formester.com/typeform-101/',
-        },
-      ],
+  typeformFaqs.forEach((c) => {
+    if (c.faqs) {
+      allFaqs.push(...c.faqs)
     }
-  },
-  jsonld() {
-    return {
+  })
+
+  return allFaqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  }))
+})
+
+useHead({
+  title: "Typeform 101: All About Typeform's Forms by Formester!",
+  meta: [...meta.value],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://formester.com/typeform-101/',
+    },
+  ],
+})
+
+useSchemaOrg({
       '@context': 'http://schema.org',
       '@graph': [
         {
@@ -214,15 +195,13 @@ export default {
         {
           '@context': 'https://schema.org',
           '@type': 'FAQPage',
-          mainEntity: this.faqsSchema,
+          mainEntity: faqsSchema.value,
         },
       ],
-    }
-  },
-  data() {
-    return {
-      typeformKeyFeatures: [
-        {
+    })
+
+const typeformKeyFeatures = [
+  {
           title: 'Beautiful and Interactive Forms',
           description:
             'Typeform is renowned for its visually appealing and engaging form designs. You can create forms that are not just functional but also aesthetically pleasing, leaving a lasting impression on respondents.',
@@ -275,9 +254,10 @@ export default {
             'Typeform is designed with the user experience in mind. Its user-friendly interface and intuitive form builder make it easy for both form creators and respondents to navigate and interact with forms.',
           img: 'typeform-101/key-features/human-centered-design.svg',
         },
-      ],
-      typeformStandOutFeatures: [
-        {
+      ]
+
+const typeformStandOutFeatures = [
+  {
           title: 'Visual Storytelling',
           description:
             "Elevate data collection with Typeform's visual storytelling, turning forms into engaging journeys that captivate respondents.",
@@ -313,9 +293,10 @@ export default {
             "Ensure your forms look and function flawlessly on all devices, from desktop to mobile, with Typeform's responsive design.",
           img: 'typeform-101/stand-out-features/multi-device-compatibility.svg',
         },
-      ],
-      typeformPopularUseCases: [
-        {
+      ]
+
+const typeformUseCases = [
+  {
           title: 'Market Research',
           description:
             'Leverage Typeform to collect valuable insights and customer feedback through engaging surveys and questionnaires.',
@@ -363,9 +344,10 @@ export default {
             'Boost audience engagement by creating interactive quizzes, polls, and other engaging content for your website or blog using Typeform.',
           img: 'typeform-101/popular-user-cases/polls.svg',
         },
-      ],
-      typeformLimitations: [
-        {
+      ]
+
+const typeformLimitations = [
+  {
           title: 'Complexity for Beginners',
           description:
             "Typeform's unique design can be complex for those new to the platform, requiring a learning curve.",
@@ -407,11 +389,7 @@ export default {
             "Typeform's file upload functionality may have limitations in terms of file size and storage capacity.",
           img: 'typeform-101/limitations/file-upload-limitations.svg',
         },
-      ],
-      typeformFaqs: typeformFaqs,
-    }
-  },
-}
+      ]
 </script>
 
 <style>

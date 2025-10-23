@@ -1,4 +1,8 @@
-import Vue from 'vue';
-import NuxtJsonld from 'nuxt-jsonld';
+// This plugin is no longer needed in Nuxt 3
+// JSON-LD functionality is now handled by nuxt-schema-org module
+// which is already configured in nuxt.config.js
 
-Vue.use(NuxtJsonld);
+export default defineNuxtPlugin(() => {
+  // No-op plugin for backward compatibility
+  // useSchemaOrg() composable is used directly in pages/components
+})
