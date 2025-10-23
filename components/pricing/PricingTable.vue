@@ -254,14 +254,16 @@
           </template>
         </tbody>
         <tfoot>
-          <td colspan="2">
-            <a
-              href="https://app.formester.com/users/sign_up"
-              class="table__button d-block text-center"
-            >
-              Get Started
-            </a>
-          </td>
+          <tr>
+            <td colspan="2">
+              <a
+                href="https://app.formester.com/users/sign_up"
+                class="table__button d-block text-center"
+              >
+                Get Started
+              </a>
+            </td>
+          </tr>
         </tfoot>
       </table>
       <!-- business -->
@@ -319,14 +321,16 @@
           </template>
         </tbody>
         <tfoot>
-          <td colspan="2">
-            <a
-              href="https://app.formester.com/users/sign_up"
-              class="table__button hglt d-block text-center"
-            >
-              Get Started
-            </a>
-          </td>
+          <tr>
+            <td colspan="2">
+              <a
+                href="https://app.formester.com/users/sign_up"
+                class="table__button hglt d-block text-center"
+              >
+                Get Started
+              </a>
+            </td>
+          </tr>
         </tfoot>
       </table>
     </div>

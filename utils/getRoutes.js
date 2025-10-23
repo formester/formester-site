@@ -56,3 +56,19 @@ export const getPageRoutes = async () => {
 
   return pages
 }
+
+export const getTemplateRoutes = async () => {
+  const { data: templates } = await axios.get(
+    "https://app.formester.com/templates.json",
+    { params: { with_details: true } }
+  )
+
+  const { data: templatesGroupedByCategory } = await axios.get(
+    "https://app.formester.com/template_categories/grouped_by_category.json"
+  )
+
+  const templateUrls = templates.map(t => `/templates/${t.slug}`)
+  const categoryUrls = templatesGroupedByCategory.map(c => `/templates/categories/${c.categorySlug}`)
+
+  return [...templateUrls, ...categoryUrls, '/templates']
+}

@@ -151,7 +151,7 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/formester-vs-forms-app/" class="footer__link">
+                <NuxtLink to="/forms-app-alternative/" class="footer__link">
                   Formester vs Forms App
                 </NuxtLink>
               </li>
@@ -168,11 +168,6 @@
               <li class="mt-2">
                 <NuxtLink to="/formstack-alternative/" class="footer__link">
                   Formester vs Formstack
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/formester-vs-canva/" class="footer__link">
-                  Formester vs Canva
                 </NuxtLink>
               </li>
               <li class="mt-2">

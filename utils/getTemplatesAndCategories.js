@@ -1,5 +1,9 @@
 import axios from 'axios'
 
+// Simple in-memory cache
+let cache = null
+let cacheKey = null
+
 export default async (params = {}) => {
   let { data: templates } = await axios.get(
     "https://app.formester.com/templates.json",
