@@ -19,9 +19,7 @@
     "@vite-pwa/nuxt": "^0.10.5",
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
-    "bootstrap-vue-next": "^0.24.23",
     "marked": "^4.3.0",
-    "nuxt": "^3.13.2",
     "nuxt-gtag": "^3.0.1",
     "nuxt-schema-org": "^3.4.0",
     "@nuxtjs/robots": "^4.1.7",
@@ -33,6 +31,7 @@
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
+    "nuxt": "^3.13.2",
     "@nuxt/image": "^1.8.1",
     "eslint-config-prettier": "^8.3.0",
     "prettier": "^2.3.2"

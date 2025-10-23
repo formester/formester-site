@@ -24,16 +24,11 @@ export default defineNuxtConfig({
     // Custom Javascript
     script: [
       {
-        src: '/bootstrap.min.js',
-        defer: true,
-        async: true,
-      },
-      {
         src: 'https://affonso.io/js/pixel.min.js',
         defer: true,
         async: true,
-        "data-affonso": "cmgks3gcz001h7prj3pe2h62f",
-        "data-cookie_duration": "30"
+        'data-affonso': 'cmgks3gcz001h7prj3pe2h62f',
+        'data-cookie_duration': '30'
       }
     ]
     }
@@ -152,8 +147,7 @@ export default defineNuxtConfig({
 
   // Nuxt Image
   image: {
-    provider: 'none',  // Disable optimization to fix 404 errors
-    dir: 'assets/images',
+    provider: 'none',  // Serve images directly from public/
     domains: [
       'formester-strapi.s3.ap-south-1.amazonaws.com',
       'img.youtube.com'
