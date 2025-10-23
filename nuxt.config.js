@@ -152,20 +152,12 @@ export default defineNuxtConfig({
 
   // Nuxt Image
   image: {
+    provider: 'none',  // Disable optimization to fix 404 errors
     dir: 'assets/images',
     domains: [
       'formester-strapi.s3.ap-south-1.amazonaws.com',
       'img.youtube.com'
-    ],
-    provider: 'ipx',
-    presets: {
-      default: {
-        modifiers: {
-          format: 'webp',
-          quality: 80
-        }
-      }
-    }
+    ]
   },
 
   // Runtime config (replaces env)
