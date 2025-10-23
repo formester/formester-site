@@ -152,8 +152,7 @@ export default defineNuxtConfig({
 
   // Nuxt Image
   image: {
-    provider: 'none',  // Disable optimization to fix 404 errors
-    dir: 'assets/images',
+    provider: 'none',  // Serve images directly from public/
     domains: [
       'formester-strapi.s3.ap-south-1.amazonaws.com',
       'img.youtube.com'
