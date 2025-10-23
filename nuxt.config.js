@@ -102,46 +102,48 @@ export default defineNuxtConfig({
   // Nitro configuration (replaces generate)
   nitro: {
     prerender: {
-      crawlLinks: false,
-      routes: async () => {
+      crawlLinks: true,
+      routes: ['/'],
+      ignore: ['/api'],
+      concurrency: 15,
+      interval: 50,
+      failOnError: false
+    },
+    hooks: {
+      async 'prerender:routes'(ctx) {
         const axios = (await import('axios')).default
         
-        // Fetch all templates ONCE (like Nuxt 2)
-        const { data: templates } = await axios.get(
-          'https://app.formester.com/templates.json',
-          { params: { with_details: true } }
-        )
-        
-        // Fetch categories
-        const { data: categoriesData } = await axios.get(
-          'https://app.formester.com/template_categories/grouped_by_category.json'
-        )
-        
-        // Prerender ALL templates (like Nuxt 2 did)
-        const allTemplates = templates.map(t => `/templates/${t.slug}`)
-        
-        // Prerender all category pages
-        const categoryPages = categoriesData.map(c => `/templates/categories/${c.categorySlug}`)
-        
-        console.log(`Prerendering ${allTemplates.length} templates + ${categoryPages.length} categories`)
-        
-        return [
-          '/',
-          '/about-us',
-          '/pricing',
-          '/security',
-          '/privacy',
-          '/terms-of-service',
-          '/contact-us',
-          '/templates',
-          ...allTemplates,
-          ...categoryPages
-        ]
-      },
-      ignore: ['/api'],
-      concurrency: 15,  // Higher concurrency for speed
-      interval: 50,     // Faster interval
-      failOnError: false
+        try {
+          // Fetch all templates ONCE (like Nuxt 2)
+          const { data: templates } = await axios.get(
+            'https://app.formester.com/templates.json',
+            { params: { with_details: true }, timeout: 30000 }
+          )
+          
+          // Fetch categories
+          const { data: categoriesData } = await axios.get(
+            'https://app.formester.com/template_categories/grouped_by_category.json',
+            { timeout: 30000 }
+          )
+          
+          // Add all template routes
+          templates.forEach(t => {
+            ctx.routes.add(`/templates/${t.slug}`)
+          })
+          
+          // Add all category routes
+          categoriesData.forEach(c => {
+            ctx.routes.add(`/templates/categories/${c.categorySlug}`)
+          })
+          
+          // Add main templates page
+          ctx.routes.add('/templates')
+          
+          console.log(`Added ${templates.length} templates + ${categoriesData.length} categories to prerender`)
+        } catch (error) {
+          console.error('Error fetching routes:', error.message)
+        }
+      }
     }
   },
   content: {
