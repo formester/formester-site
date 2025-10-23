@@ -2,8 +2,16 @@ import axios from 'axios'
 import getRoutes, { getFeatureRoutes, getPageRoutes } from '~/utils/getRoutes.js'
 import getTemplatesAndCategories from '~/utils/getTemplatesAndCategories.js'
 
+// Cache for sitemap data
+let sitemapCache = null
+
 export default defineEventHandler(async () => {
   try {
+    // Return cached sitemap if available
+    if (sitemapCache) {
+      return sitemapCache
+    }
+
     // Fetch templates
     const { data } = await axios.get('https://app.formester.com/templates.json')
     const templates = data.map((template) => ({
@@ -26,13 +34,21 @@ export default defineEventHandler(async () => {
     const pages = await getPageRoutes()
 
     // Combine all routes
-    return [
+    const result = [
       ...pages.map(url => ({ loc: url, lastmod: new Date() })),
       ...features.map(url => ({ loc: url, lastmod: new Date() })),
-      ...blogs.map(url => ({ loc: url, lastmod: new Date() })),
+      ...blogs.map(item => ({ 
+        loc: typeof item === 'string' ? item : item.url, 
+        lastmod: new Date() 
+      })),
       ...templates,
       ...categories
     ]
+    
+    // Cache the result
+    sitemapCache = result
+    
+    return result
   } catch (error) {
     console.error('Error generating sitemap URLs:', error)
     return []

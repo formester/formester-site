@@ -45,8 +45,11 @@ export default defineNuxtConfig({
     Disallow: ['/_nuxt/static/']
   },
 
+  site: {
+    url: 'https://formester.com'
+  },
+
   sitemap: {
-    hostname: 'https://formester.com',
     trailingSlash: true,
     sources: [
       '/api/__sitemap__/urls'
@@ -88,6 +91,11 @@ export default defineNuxtConfig({
   pwa: {
     manifest: {
       lang: 'en'
+    },
+    workbox: {
+      maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5 MB
+      globPatterns: ['**/*.{js,css,html,png,svg,ico,jpg,jpeg,webp}'],
+      globIgnores: ['**/_payload.json']
     }
   },
 
@@ -95,7 +103,11 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/']
+      routes: ['/'],
+      ignore: ['/api'],
+      concurrency: 3,
+      interval: 1000,
+      failOnError: false
     }
   },
   content: {
@@ -108,7 +120,16 @@ export default defineNuxtConfig({
     domains: [
       'formester-strapi.s3.ap-south-1.amazonaws.com',
       'img.youtube.com'
-    ]
+    ],
+    provider: 'ipx',
+    presets: {
+      default: {
+        modifiers: {
+          format: 'webp',
+          quality: 80
+        }
+      }
+    }
   },
 
   // Runtime config (replaces env)
