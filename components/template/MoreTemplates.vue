@@ -53,7 +53,7 @@
       <div v-if="templates && templates.length" class="templates">
         <div v-for="(template, idx) in templates" :key="idx" class="template">
           <NuxtLink
-            :to="{ name: 'templates-slug', params: { slug: template.slug } }"
+            :to="`/templates/${template.slug}/`"
           >
             <img
               v-if="template.previewImageUrl"
