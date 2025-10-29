@@ -101,6 +101,9 @@ export default {
       params: {
         sort: 'publishedAt:desc',
         populate: '*',
+        pagination: {
+          pageSize: 500,
+        },
       },
     })
 
@@ -166,9 +169,9 @@ export default {
         type: 'website',
         url: 'https://formester.com/blog/',
         title:
-          'Latest form Builder Software in 2023 | Best Online Form Builder to Use in 2023 - Formester',
+          'Formester Blog',
         description:
-          "Best Online, No-Code Form Builder Software in 2023 - Formester's Blog Resource | Discover trending content related to all things form-building.",
+          "Learn expert tips, templates, and automation guides to help you create smarter forms, improve response rates, and grow your business with Formester.",
         mainImage: 'https://formester.com/formester-logo-meta-image.png',
         mainImageAlt: 'Formester Logo',
       }
@@ -222,14 +225,14 @@ export default {
 
   head() {
     // Generate canonical URL based on current page
-    const baseUrl = 'https://formester.com/blog';
+    const baseUrl = 'https://formester.com/blog/';
     const canonicalUrl = this.currentPage === 1 
       ? baseUrl 
       : `${baseUrl}?page=${this.currentPage}`;
     
     return {
       title:
-        'Latest form Builder Software in 2023 | Best Online Form Builder to Use in 2023 - Formester',
+        'Formester Blog',
       meta: [
         ...this.meta,
         // Add pagination meta tags for SEO
@@ -268,7 +271,7 @@ export default {
           '@id': 'https://acornglobus.com',
           name: 'Formester',
           description:
-            "Best Online, No-Code Form Builder Software in 2023 - Formester's Blog Resource | Discover trending content related to all things form-building.",
+            "Learn expert tips, templates, and automation guides to help you create smarter forms, improve response rates, and grow your business with Formester.",
           logo: 'https://formester.com/logo.png',
           url: 'https://formester.com',
           address: {
