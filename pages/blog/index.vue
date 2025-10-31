@@ -176,9 +176,10 @@ const paginationPages = computed(() => {
 })
 
 const meta = computed(() => {
+  const currentPage = route.query.page || 1
   const metaData = {
     type: 'website',
-    url: 'https://formester.com/blog/',
+    url: `https://formester.com/blog${currentPage > 1 ? `?page=${currentPage}` : ''}`,
     title: 'Latest form Builder Software in 2023 | Best Online Form Builder to Use in 2023 - Formester',
     description: "Best Online, No-Code Form Builder Software in 2023 - Formester's Blog Resource | Discover trending content related to all things form-building.",
     mainImage: 'https://formester.com/formester-logo-meta-image.png',
@@ -215,18 +216,12 @@ watch(() => route.query.page, () => {
 // SEO Meta tags
 const baseUrl = 'https://formester.com/blog'
 const canonicalUrl = computed(() => 
-  currentPage.value === 1 ? baseUrl : `${baseUrl}?page=${currentPage.value}`
+  `https://formester.com/blog${currentPage.value > 1 ? `?page=${currentPage.value}` : ''}`
 )
 
 useHead({
-  title: 'Latest form Builder Software in 2023 | Best Online Form Builder to Use in 2023 - Formester',
-  meta: [
-    ...meta.value,
-    ...(currentPage.value > 1 ? [{
-      name: 'robots',
-      content: 'noindex, follow'
-    }] : []),
-  ],
+  title: 'Form Builder Blog | Latest Articles & Resources - Formester',
+  meta: meta.value,
   link: [
     {
       rel: 'canonical',
@@ -244,7 +239,7 @@ useHead({
 })
 
 // JSON-LD Schema
-useSchemaOrg([
+useJsonld([
   {
     '@type': 'Corporation',
     '@id': 'https://acornglobus.com',

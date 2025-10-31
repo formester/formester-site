@@ -294,7 +294,7 @@ useHead(() => {
   }
 })
 
-useSchemaOrg(() => {
+useJsonld(() => {
   const { name, description, previewImageUrl, category } = template.value || {}
   const jsonldData = [
     {

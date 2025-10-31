@@ -54,7 +54,7 @@ useHead({
   ],
 })
 
-useSchemaOrg([
+useJsonld([
   {
     '@type': 'Corporation',
     '@id': 'https://acornglobus.com',

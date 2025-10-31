@@ -348,7 +348,7 @@ useHead({
   ],
 })
 
-useSchemaOrg([{
+useJsonld([{
       '@context': 'http://schema.org',
       '@type': 'WebApplication',
       name: 'Terms of Service | Formester',

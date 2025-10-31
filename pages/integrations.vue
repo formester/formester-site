@@ -126,7 +126,7 @@ useHead({
   ],
 })
 
-useSchemaOrg([
+useJsonld([
   {
     '@type': 'Corporation',
     name: 'Formester Integrations | Automate Your Workflows',

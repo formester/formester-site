@@ -45,7 +45,7 @@ const components = computed(() => pageData.value?.components || [])
 useHead(() => pageData.value?.head || {})
 
 // Set JSON-LD schema - must be called unconditionally
-useSchemaOrg(() => pageData.value?.jsonld || [])
+useJsonld(() => pageData.value?.jsonld || [])
 </script>
 
 <style></style>

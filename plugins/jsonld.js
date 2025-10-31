@@ -4,5 +4,5 @@
 
 export default defineNuxtPlugin(() => {
   // No-op plugin for backward compatibility
-  // useSchemaOrg() composable is used directly in pages/components
+  // useJsonld() composable is used directly in pages/components
 })

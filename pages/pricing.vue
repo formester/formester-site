@@ -156,7 +156,7 @@ useHead({
 })
 
 // JSON-LD
-useSchemaOrg([
+useJsonld([
       {
         '@context': 'http://schema.org',
         '@type': 'WebApplication',
@@ -302,6 +302,9 @@ useSchemaOrg([
         ],
       },
     ])
+
+
+  
 </script>
 
 <style scoped>

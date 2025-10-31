@@ -417,7 +417,7 @@ const jsonldData = computed(() => {
   return jsonData
 })
 
-useSchemaOrg(jsonldData)
+useJsonld(jsonldData.value)
 </script>
 
 <style scoped>

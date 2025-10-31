@@ -157,7 +157,7 @@ useHead({
   ],
 })
 
-useSchemaOrg({
+useJsonld({
       '@context': 'http://schema.org',
       '@graph': [
         {

@@ -146,7 +146,7 @@ useHead({
   ],
 })
 
-useSchemaOrg([
+useJsonld([
   {
     '@type': 'ContactPage',
     name: 'Contact | Online Form Builder - Formester',

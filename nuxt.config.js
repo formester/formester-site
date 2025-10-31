@@ -73,7 +73,7 @@ export default defineNuxtConfig({
     'nuxt-gtag',
     '@vite-pwa/nuxt',
     '@nuxt/image',
-    'nuxt-schema-org'
+    'nuxt-jsonld'
   ],
 
   // GTM/Gtag configuration

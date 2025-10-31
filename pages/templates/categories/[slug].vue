@@ -87,13 +87,13 @@ useHead(() => ({
   ],
 }))
 
-useSchemaOrg([
+useJsonld([
   {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: metaTitle,
-    description: metaDescription,
-    itemListElement: listItems,
+    name: metaTitle.value,
+    description: metaDescription.value,
+    itemListElement: listItems.value,
   },
 ])
 </script>
