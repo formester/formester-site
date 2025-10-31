@@ -322,40 +322,33 @@
   </div>
 </template>
 
-<script>
-// MetaTags
+<script setup>
 import getSiteMeta from '../utils/getSiteMeta'
 
-export default {
-  computed: {
-    meta() {
-      const metaData = {
-        type: 'website',
-        url: 'https://formester.com/terms-of-service/',
-        title: 'Terms of Service | Formester',
-        description:
-          'Formester terms of service. Read our terms of service and privacy policy.',
-        mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Formester Logo',
-      }
-      return getSiteMeta(metaData)
+const meta = computed(() => {
+  const metaData = {
+    type: 'website',
+    url: 'https://formester.com/terms-of-service/',
+    title: 'Terms of Service | Formester',
+    description: 'Formester terms of service. Read our terms of service and privacy policy.',
+    mainImage: 'https://formester.com/formester-logo-meta-image.png',
+    mainImageAlt: 'Formester Logo',
+  }
+  return getSiteMeta(metaData)
+})
+
+useHead({
+  title: 'Terms of Service | Formester',
+  meta: [...meta.value],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://formester.com/terms-of-service/',
     },
-  },
-  head() {
-    return {
-      title: 'Terms of Service | Formester',
-      meta: [...this.meta],
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: 'https://formester.com/terms-of-service/',
-        },
-      ],
-    }
-  },
-  jsonld() {
-    return {
+  ],
+})
+
+useJsonld([{
       '@context': 'http://schema.org',
       '@type': 'WebApplication',
       name: 'Terms of Service | Formester',
@@ -376,9 +369,7 @@ export default {
           url: 'https://formester.com/logo.png',
         },
       },
-    }
-  },
-}
+    }])
 </script>
 
 <style scoped>

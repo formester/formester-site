@@ -1,7 +1,32 @@
-const axios = require('axios')
+import axios from 'axios'
+
+// Build-time cache with proper key management
+let cache = null
+let cacheKey = null
+
+// Retry helper function
+const fetchWithRetry = async (url, config, retries = 3, delay = 2000) => {
+  for (let i = 0; i < retries; i++) {
+    try {
+      return await axios.get(url, { ...config, timeout: 30000 })
+    } catch (error) {
+      if (i === retries - 1) throw error
+      console.log(`Retry ${i + 1}/${retries} for ${url}`)
+      await new Promise(resolve => setTimeout(resolve, delay))
+    }
+  }
+}
 
 export default async (params = {}) => {
-  let { data: templates } = await axios.get(
+  // Create cache key
+  const currentKey = JSON.stringify(params)
+  
+  // Return cached data during build if available
+  if (cache && cacheKey === currentKey && typeof window === 'undefined') {
+    return cache
+  }
+
+  let { data: templates } = await fetchWithRetry(
     "https://app.formester.com/templates.json",
     {
       params: {
@@ -11,7 +36,7 @@ export default async (params = {}) => {
     }
   )
 
-  const { data: categories } = await axios.get(
+  const { data: categories } = await fetchWithRetry(
     "https://app.formester.com/template_categories.json"
   )
 
@@ -20,7 +45,7 @@ export default async (params = {}) => {
 
     const {
       data: { data },
-    } = await axios.get(`https://cms.formester.com/api/pdf-templates`, {
+    } = await fetchWithRetry(`https://cms.formester.com/api/pdf-templates`, {
     params: {
      
       populate: 'deep',
@@ -44,7 +69,7 @@ export default async (params = {}) => {
     payload: { templates, categories },
   })
 
-  const { data: templatesGroupedByCategory } = await axios.get(
+  const { data: templatesGroupedByCategory } = await fetchWithRetry(
     "https://app.formester.com/template_categories/grouped_by_category.json"
   )
 
@@ -56,5 +81,13 @@ export default async (params = {}) => {
     },
   }))
 
-  return { templateRoutes, categorieRoutes, templates, categories }
+  const result = { templateRoutes, categorieRoutes, templates, categories }
+  
+  // Cache result during build only
+  if (typeof window === 'undefined') {
+    cache = result
+    cacheKey = currentKey
+  }
+  
+  return result
 }

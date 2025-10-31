@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div v-if="!components || components.length === 0">
+      <p>No components to display</p>
+    </div>
     <component
       v-for="(component, idx) in components"
       :key="`${component.id}-${idx}`"
@@ -9,21 +12,31 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { defineAsyncComponent } from 'vue'
 import componentMapping from '@/constants/componentMapping'
-import axios from 'axios'
 
-export default {
-  props: {
-    components: {
-      type: Array,
-      default: () => [],
-    },
+const props = defineProps({
+  components: {
+    type: Array,
+    default: () => [],
   },
-  methods: {
-    getComponent(name) {
-      return componentMapping[name] || null
-    },
-  },
+})
+
+const loadedComponents = {}
+
+const getComponent = (name) => {
+  if (!componentMapping[name]) {
+    return null
+  }
+  
+  // Cache the async component
+  if (!loadedComponents[name]) {
+    loadedComponents[name] = defineAsyncComponent({
+      loader: componentMapping[name]
+    })
+  }
+  
+  return loadedComponents[name]
 }
 </script>

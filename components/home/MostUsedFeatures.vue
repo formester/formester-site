@@ -79,6 +79,7 @@
             :src="activeFeatureImageUrl"
             :alt="activeFeatureImageAlt"
             :key="activeFeatureImageUrl"
+            sizes="sm:100vw md:50vw lg:600px"
           />
         </transition>
       </div>
@@ -91,6 +92,7 @@
           :alt="feature.cardImage?.imageAlt"
           class="mb-4 img-fluid"
           loading="lazy"
+          sizes="10vw"
         />
         <div class="d-flex align-items-start mt-2">
           <div
@@ -281,6 +283,10 @@ export default {
     0px 8px 8px -4px rgba(16, 24, 40, 0.03);
   border-radius: 24px;
   transition: all 0.2s cubic-bezier(0.12, 0.26, 1, 0.6);
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
 }
 
 .progress-container {

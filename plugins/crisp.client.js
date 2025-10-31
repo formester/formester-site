@@ -4,8 +4,9 @@
   - Toggles visibility based on route changes (hides on blog pages)
 */
 
-export default ({ app }) => {
-  if (process.server) return
+export default defineNuxtPlugin(() => {
+  const router = useRouter()
+  const route = useRoute()
 
   const WEBSITE_ID = '81cb6489-5b12-46a7-a688-9f67f7894421'
   const CRISP_SRC = 'https://client.crisp.chat/l.js'
@@ -72,10 +73,10 @@ export default ({ app }) => {
   }
 
   // Initial load
-  handleRoute(app.router.currentRoute)
+  handleRoute(route)
 
   // On every route change
-  app.router.afterEach((to) => {
+  router.afterEach((to) => {
     handleRoute(to)
   })
-}
+})

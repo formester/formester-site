@@ -119,70 +119,56 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import CallToStackSection from '@/components/CallToActionSection.vue'
-
-// MetaTags
 import getSiteMeta from '../utils/getSiteMeta'
 
-export default {
-  name: 'Contact',
-  components: {
-    CallToStackSection,
-  },
-  jsonld() {
-    return {
-      '@context': 'http://schema.org/',
-      '@type': 'ContactPage',
-      name: 'Contact | Online Form Builder - Formester',
-      description:
-        'Create custom online forms with ease using Formester - the top-rated online form builder. Contact us today to start building your perfect form!',
-      url: 'https://formester.com/contact/',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Delaware',
-        addressCountry: 'United States',
+const meta = computed(() => {
+  const metaData = {
+    type: 'website',
+    url: 'https://formester.com/contact/',
+    title: 'Contact | Online Form Builder - Formester',
+    description: 'Create custom online forms with ease using Formester - the top-rated online form builder. Contact us today to start building your perfect form!',
+    mainImage: 'https://formester.com/formester-logo-meta-image.png',
+    mainImageAlt: 'Formester Logo',
+  }
+  return getSiteMeta(metaData)
+})
+
+useHead({
+  title: 'Contact | Online Form Builder - Formester',
+  meta: [...meta.value],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://formester.com/contact/',
+    },
+  ],
+})
+
+useJsonld([
+  {
+    '@type': 'ContactPage',
+    name: 'Contact | Online Form Builder - Formester',
+    description: 'Create custom online forms with ease using Formester - the top-rated online form builder. Contact us today to start building your perfect form!',
+    url: 'https://formester.com/contact/',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Delaware',
+      addressCountry: 'United States',
+    },
+    creator: {
+      '@type': 'Organization',
+      '@id': '#organization',
+      url: 'https://formester.com/',
+      name: 'Formester',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://formester.com/logo.png',
       },
-      creator: {
-        '@type': 'Organization',
-        '@id': '#organization',
-        url: 'https://formester.com/',
-        name: 'Formester',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://formester.com/logo.png',
-        },
-      },
-    }
-  },
-  computed: {
-    meta() {
-      const metaData = {
-        type: 'website',
-        url: 'https://formester.com/contact/',
-        title: 'Contact | Online Form Builder - Formester',
-        description:
-          'Create custom online forms with ease using Formester - the top-rated online form builder. Contact us today to start building your perfect form!',
-        mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Formester Logo',
-      }
-      return getSiteMeta(metaData)
     },
   },
-  head() {
-    return {
-      title: 'Contact | Online Form Builder - Formester',
-      meta: [...this.meta],
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: 'https://formester.com/contact/',
-        },
-      ],
-    }
-  },
-}
+])
 </script>
 
 <style scoped>
