@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-    :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+    :to="{ path: `/blog/${article.slug}/` }"
     class="row px-3"
   >
     <img
