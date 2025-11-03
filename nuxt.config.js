@@ -48,7 +48,9 @@ export default {
     __dangerouslyDisableSanitizersByTagID: {}
   },
 
-  router: {},
+  router: {
+    trailingSlash: true,
+  },
 
   robots: {
     UserAgent: '*',
