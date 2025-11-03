@@ -4,7 +4,7 @@
       <span class="d-block mb-1 pricing__subtitle text__primary">Pricing</span>
       <h1 class="pricing__heading mt-2">Pricing that feels just right</h1>
       <p class="pricing__subheading mt-3">
-        Select the perfect plan for your needs, and star building beautiful
+        Select the perfect plan for your needs, and start building beautiful
         forms!
       </p>
 
@@ -145,7 +145,7 @@ export default {
         url: 'https://formester.com/pricing/',
         title: 'Pricing that feels just right',
         description:
-          'Select the perfect plan for your needs, and star building beautiful forms!',
+          'Select the perfect plan for your needs, and start building beautiful forms!',
         mainImage: 'https://formester.com/formester-logo-meta-image.png',
         mainImageAlt: 'Formester Logo',
       }

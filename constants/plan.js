@@ -57,7 +57,7 @@ export const businessMonthly = {
   price: '$49',
   type: 'Monthly',
   description:
-    'For organizations to create unlimited forms that are fully customisable.',
+    'For organizations to create unlimited forms that are fully customizable.',
     features: [
       'Everything in Personal',
       '15,000 responses per month',
@@ -96,7 +96,7 @@ export const businessYearly = {
   prevPrice: '$45',
   type: 'Yearly',
   description:
-    'For organizations to create unlimited forms that are fully customisable.',
+    'For organizations to create unlimited forms that are fully customizable.',
   features: [
     'Everything in Personal',
     '15,000 responses per month',
