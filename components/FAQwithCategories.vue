@@ -1,35 +1,38 @@
 <template>
   <section class="container py-2 py-lg-5">
-    <SectionTitle :heading="[{id: 1, text: 'Frequently Asked Questions', highlight: false}]" />
+    <SectionTitle :heading="[{ id: 1, text: 'Frequently Asked Questions', highlight: false }]" />
+
     <div class="row">
       <div
-        v-for="(category, idx) in faqQuestions"
-        :key="idx"
+        v-for="(category, cIdx) in faqQuestions"
+        :key="cIdx"
         class="mb-5 mt-4"
-        :class="getCategoryClasses(idx)"
+        :class="getCategoryClasses(cIdx)"
       >
         <h3 class="faq__heading">{{ category?.title }}</h3>
-        <div class="accordion accordion-flush faq-container" :id="`accordionFaqs-${idx}`">
+
+        <!-- each category gets its own accordion root id (kept for semantics) -->
+        <div class="accordion accordion-flush faq-container" :id="`accordionFaqs-${cIdx}`">
           <div
-            v-for="(faq, index) in category.faqs"
-            :key="index"
+            v-for="(faq, fIdx) in category.faqs"
+            :key="fIdx"
             class="accordion-item"
           >
             <div class="accordion-header">
               <h3>
                 <button
-                  class="accordion-button collapsed"
+                  class="accordion-button"
+                  :class="{ collapsed: openByCategory[cIdx] !== fIdx }"
                   type="button"
-                  data-bs-toggle="collapse"
-                  :data-bs-target="`#collapse-${idx}-${index}`"
-                  :aria-expanded="isOpen(idx, index)"
-                  :aria-controls="`collapse-${idx}-${index}`"
+                  :aria-expanded="openByCategory[cIdx] === fIdx ? 'true' : 'false'"
+                  :aria-controls="`collapse-${cIdx}-${fIdx}`"
+                  @click="toggle(cIdx, fIdx)"
                 >
                   {{ faq.question }}
-                  <nuxt-img
+                  <NuxtImg
                     src="/chevron-down.svg"
                     class="chevron-icon"
-                    :class="{ open: isOpen(idx, index) }"
+                    :class="{ open: openByCategory[cIdx] === fIdx }"
                     width="20"
                     height="20"
                     alt="Chevron"
@@ -37,10 +40,14 @@
                 </button>
               </h3>
             </div>
+
             <div
-              :id="`collapse-${idx}-${index}`"
-              class="accordion-collapse collapse"
-              :data-bs-parent="`#accordionFaqs-${idx}`"
+              :id="`collapse-${cIdx}-${fIdx}`"
+              class="accordion-collapse"
+              :class="{ show: openByCategory[cIdx] === fIdx, collapse: openByCategory[cIdx] !== fIdx }"
+              role="region"
+              :aria-labelledby="`heading-${cIdx}-${fIdx}`"
+              :data-bs-parent="`#accordionFaqs-${cIdx}`"
             >
               <MarkdownContent
                 v-if="faq.answerMarkdown"
@@ -53,66 +60,36 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div> <!-- /col -->
+    </div> <!-- /row -->
   </section>
 </template>
 
-<script>
+<script setup>
+import { reactive } from 'vue'
+// If you're not using auto-imported components, keep this import:
 import MarkdownContent from '~/components/MarkdownContent.vue'
 
-export default {
-  components: { MarkdownContent },
-  props: {
-    faqQuestions: {
-      type: Array,
-      required: true,
-    },
-  },
-  data() {
-    return {
-      openFaq: null // Will store 'categoryIdx-faqIdx' string
-    }
-  },
-  mounted() {
-    // Listen to Bootstrap collapse events to sync our state
-    this.$nextTick(() => {
-      document.querySelectorAll('.accordion-collapse').forEach(collapse => {
-        collapse.addEventListener('show.bs.collapse', () => {
-          const [categoryIdx, faqIdx] = collapse.id.replace('collapse-', '').split('-')
-          this.handleAccordionChange(`${categoryIdx}-${faqIdx}`)
-        })
-        collapse.addEventListener('hide.bs.collapse', () => {
-          this.openFaq = null
-        })
-      })
-    })
-  },
-  computed: {
-    getCategoryClasses() {
-      return (idx) => [
-        idx === this.faqQuestions.length - 1 ? 'col' : 'col-md-6',
-        idx % 2 === 0 ? 'pe-md-5' : 'ps-md-5'
-      ]
-    },
-  },
-  methods: {
-    handleAccordionChange(faqId) {
-      // Close any previously open FAQ
-      if (this.openFaq && this.openFaq !== faqId) {
-        const [prevCatIdx, prevFaqIdx] = this.openFaq.split('-')
-        const prevElement = document.querySelector(`#collapse-${prevCatIdx}-${prevFaqIdx}`)
-        if (prevElement) {
-          const collapse = bootstrap.Collapse.getInstance(prevElement)
-          if (collapse) collapse.hide()
-        }
-      }
-      this.openFaq = faqId
-    },
-    isOpen(categoryIdx, faqIdx) {
-      return this.openFaq === `${categoryIdx}-${faqIdx}`
-    }
+const props = defineProps({
+  faqQuestions: {
+    type: Array,
+    required: true
   }
+})
+
+/** openByCategory keeps the open faq index per category, e.g. { 0: 2, 1: null } */
+const openByCategory = reactive({})
+
+function toggle(catIdx, faqIdx) {
+  openByCategory[catIdx] =
+    openByCategory[catIdx] === faqIdx ? null : faqIdx
+}
+
+function getCategoryClasses(idx) {
+  return [
+    idx === props.faqQuestions.length - 1 ? 'col' : 'col-md-6',
+    idx % 2 === 0 ? 'pe-md-5' : 'ps-md-5'
+  ]
 }
 </script>
 
@@ -166,8 +143,7 @@ export default {
   filter: grayscale(1) brightness(0.7);
   margin-top: 4px;
 }
-
-.accordion-button:not(.collapsed) .chevron-icon {
+.chevron-icon.open {
   transform: rotate(180deg);
   filter: invert(29%) sepia(60%) saturate(7497%) hue-rotate(243deg)
     brightness(89%) contrast(101%);
@@ -198,13 +174,13 @@ export default {
   color: var(--clr-text-primary);
 }
 
-.faq-container {
-  width: 100%;
-}
+.faq-container { width: 100%; }
+
+/* Make "collapse" work without Bootstrap JS */
+.accordion-collapse.collapse { display: none; }
+.accordion-collapse.show { display: block; }
 
 @media (min-width: 768px) {
-  .faq-container {
-    width: 100%;
-  }
+  .faq-container { width: 100%; }
 }
 </style>

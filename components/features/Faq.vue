@@ -1,13 +1,12 @@
 <template>
   <section class="container my-5 py-2 py-lg-5">
     <SectionTitle :heading="formattedTitle" />
+
     <p class="hero__subheading text-center" v-if="description">
       {{ description }}
     </p>
-    <div
-      class="accordion accordion-flush my-5 mx-auto faq-container"
-      id="accordionFaqs"
-    >
+
+    <div class="accordion accordion-flush my-5 mx-auto faq-container" id="accordionFaqs">
       <div
         v-for="(faq, index) in formattedFaqItems"
         :key="faq.id || index"
@@ -16,16 +15,15 @@
         <div class="accordion-header">
           <h3>
             <button
-              class="accordion-button collapsed"
+              class="accordion-button"
+              :class="{ collapsed: openIndex !== index }"
               type="button"
-              data-bs-toggle="collapse"
-              :data-bs-target="`#collapse${index}`"
               :aria-expanded="openIndex === index ? 'true' : 'false'"
               :aria-controls="`collapse${index}`"
               @click="toggleAccordion(index)"
             >
               {{ faq.header }}
-              <nuxt-img
+              <NuxtImg
                 src="/chevron-down.svg"
                 class="chevron-icon"
                 :class="{ open: openIndex === index }"
@@ -36,10 +34,13 @@
             </button>
           </h3>
         </div>
+
         <div
           :id="`collapse${index}`"
-          class="accordion-collapse collapse"
-          data-bs-parent="#accordionFaqs"
+          class="accordion-collapse"
+          :class="{ show: openIndex === index, collapse: openIndex !== index }"
+          role="region"
+          :aria-labelledby="`heading${index}`"
         >
           <MarkdownContent
             v-if="faq.body_markdown"
@@ -60,60 +61,52 @@
   </section>
 </template>
 
-<script>
-import MarkdownContent from '~/components/MarkdownContent.vue'
+<script setup>
+import { ref, computed } from 'vue'
+// In Nuxt 3, components in /components are auto-registered,
+// so you can omit the explicit import below if you prefer.
+// import MarkdownContent from '~/components/MarkdownContent.vue'
 
-export default {
-  name: 'Faq',
-  components: { MarkdownContent },
-  props: {
-    title: {
-      type: [Array, String],
-      required: false,
-      default: 'Frequently Asked Questions',
-    },
-    description: {
-      type: String,
-      default: '',
-    },
-    faqList: {
-      type: Array,
-      required: false,
-      default: () => [],
-    },
+const props = defineProps({
+  title: {
+    type: [Array, String],
+    default: 'Frequently Asked Questions'
+  },
+  description: {
+    type: String,
+    default: ''
+  },
+  faqList: {
+    type: Array,
+    default: () => []
+  },
+  defaultOpen: {
+    type: Number,
+    default: null
+  }
+})
 
-    defaultOpen: {
-      type: Number,
-      default: null,
-    },
-  },
-  computed: {
-    formattedTitle() {
-      // If title is already an array, return it as is
-      if (Array.isArray(this.title)) {
-        return this.title;
-      }
-      // If title is a string, convert it to the expected array format
-      return [{ id: 'title-1', text: this.title, highlight: false }];
-    },
-    formattedFaqItems() {
-      return this.faqList.map((faq, index) => ({
-        id: faq.id || `faq-${index + 1}`,
-        header: faq.header || faq.question,
-        body: faq.body || faq.answer,
-      }))
-    },
-  },
-  data() {
-    return {
-      openIndex: this.defaultOpen,
-    }
-  },
-  methods: {
-    toggleAccordion(idx) {
-      this.openIndex = this.openIndex === idx ? null : idx
-    },
-  },
+const openIndex = ref(props.defaultOpen)
+
+const formattedTitle = computed(() => {
+  return Array.isArray(props.title)
+    ? props.title
+    : [{ id: 'title-1', text: props.title, highlight: false }]
+})
+
+const formattedFaqItems = computed(() =>
+  props.faqList.map((faq, index) => ({
+    // keep ALL original fields so template conditions still work
+    ...faq,
+    id: faq.id || `faq-${index + 1}`,
+    header: faq.header || faq.question,
+    // prefer explicit body over answer, but keep nullish coalescing
+    body: faq.body ?? faq.answer
+  }))
+)
+
+function toggleAccordion(idx) {
+  openIndex.value = openIndex.value === idx ? null : idx
 }
 </script>
 
@@ -155,10 +148,7 @@ export default {
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
 }
-.accordion-header {
-  background: none;
-  border: none;
-}
+.accordion-header { background: none; border: none; }
 .accordion-button {
   font-size: 18px;
   font-weight: 500;
@@ -183,12 +173,9 @@ export default {
 }
 .chevron-icon.open {
   transform: rotate(180deg);
-  filter: invert(29%) sepia(60%) saturate(7497%) hue-rotate(243deg)
-    brightness(89%) contrast(101%);
+  filter: invert(29%) sepia(60%) saturate(7497%) hue-rotate(243deg) brightness(89%) contrast(101%);
 }
-.accordion-button::after {
-  display: none !important;
-}
+.accordion-button::after { display: none !important; }
 .accordion-button:focus,
 .accordion-button:not(.collapsed) {
   color: var(--clr-primary);
@@ -204,20 +191,13 @@ export default {
   font-size: 16px;
   line-height: 1.6;
 }
-
-.accordion-button.collapsed {
-  color: var(--clr-text-primary);
-}
-
-.faq-container {
-  width: 100%;
-  max-width: 960px;
-}
-
+.accordion-button.collapsed { color: var(--clr-text-primary); }
+.faq-container { width: 100%; max-width: 960px; }
 @media (min-width: 768px) {
-  .faq-container {
-    width: 100%;
-    max-width: 960px;
-  }
+  .faq-container { width: 100%; max-width: 960px; }
 }
+
+/* Make sure collapsed vs show look right without Bootstrap JS */
+.accordion-collapse.collapse { display: none; }
+.accordion-collapse.show { display: block; }
 </style>

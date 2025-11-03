@@ -295,7 +295,7 @@ const typeformStandOutFeatures = [
         },
       ]
 
-const typeformUseCases = [
+const typeformPopularUseCases = [
   {
           title: 'Market Research',
           description:
