@@ -15,7 +15,7 @@
       <div class="tab-content">
         <transition name="tab-left-fade-slide" mode="out-in">
           <div class="tab-left" :key="selectedTab + '-left'">
-            <h2 class="tab-title">{{ currentTab.title }}</h2>
+            <h3 class="tab-title">{{ currentTab.title }}</h3>
             <ul class="tab-features">
               <li v-for="(feature, i) in currentTab.features" :key="i">
                 <span class="feature-icon">

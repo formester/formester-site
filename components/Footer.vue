@@ -165,7 +165,7 @@
               </li>
               <li class="mt-2">
                 <NuxtLink to="/zoho-forms-alternative/" class="footer__link">
-                  Formester vs Zoho Form
+                  Formester vs Zoho Forms
                 </NuxtLink>
               </li>
               <li class="mt-2">

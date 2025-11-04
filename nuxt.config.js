@@ -41,7 +41,8 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: 'https://formester.com'
+    url: 'https://formester.com/',
+    trailingSlash: true 
   },
 
   sitemap: {

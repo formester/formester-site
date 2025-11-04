@@ -49,6 +49,7 @@
                     <nuxt-img
                       src="/chevron-down-gray.svg"
                       class="chevron chevron-gray"
+                      alt="Chevron"
                       :class="{ open: dropdownActive }"
                     />
                     <nuxt-img
@@ -75,6 +76,7 @@
                     <nuxt-img
                       src="/chevron-down-gray.svg"
                       class="chevron chevron-gray"
+                      alt="Chevron"
                       :class="{ open: dropdownActive }"
                     />
                     <nuxt-img
@@ -127,6 +129,7 @@
                     <nuxt-img
                       src="/chevron-down-gray.svg"
                       class="chevron chevron-gray"
+                      alt="Chevron"
                       :class="{ open: templatesDropdownActive }"
                     />
                     <nuxt-img
@@ -156,11 +159,13 @@
                     <nuxt-img
                       src="/chevron-down-gray.svg"
                       class="chevron chevron-gray"
+                      alt="Chevron"
                       :class="{ open: templatesDropdownActive }"
                     />
                     <nuxt-img
                       src="/chevron-down-colored.svg"
                       class="chevron chevron-colored"
+                      alt="Chevron"
                       :class="{ open: templatesDropdownActive }"
                     />
                   </span>
@@ -203,11 +208,13 @@
                     <nuxt-img
                       src="/chevron-down-gray.svg"
                       class="chevron chevron-gray"
+                      alt="Chevron"
                       :class="{ open: resourcesDropdownActive }"
                     />
                     <nuxt-img
                       src="/chevron-down-colored.svg"
                       class="chevron chevron-colored"
+                      alt="Chevron"
                       :class="{ open: resourcesDropdownActive }"
                     />
                   </span>
@@ -231,11 +238,13 @@
                     <nuxt-img
                       src="/chevron-down-gray.svg"
                       class="chevron chevron-gray"
+                      alt="Chevron"
                       :class="{ open: resourcesDropdownActive }"
                     />
                     <nuxt-img
                       src="/chevron-down-colored.svg"
                       class="chevron chevron-colored"
+                      alt="Chevron"
                       :class="{ open: resourcesDropdownActive }"
                     />
                   </span>

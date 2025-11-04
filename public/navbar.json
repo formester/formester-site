@@ -539,5 +539,53 @@
         "alt": "fillable pdf icon"
       }
     }
+  },
+  {
+    "id": 562,
+    "slug": "custom-css-forms",
+    "navTitle": "Custom CSS Forms",
+    "navDescription": "Take full control over form design.",
+    "featureCategory": "Branding & Integration",
+    "featurePlan": "Business",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "Custom CSS",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/code_icon_7c0efa1ffd.svg",
+        "alt": "Custom CSS"
+      }
+    }
+  },
+  {
+    "id": 563,
+    "slug": "password-protect-form",
+    "navTitle": "Password Protection",
+    "navDescription": "Restrict form submission access.",
+    "featureCategory": "Security & Validation",
+    "featurePlan": "Business",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "password protected form",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/hand_1d708b646e.svg",
+        "alt": "password protected form"
+      }
+    }
+  },
+  {
+    "id": 564,
+    "slug": "smtp-integration",
+    "navTitle": "SMTP Integration",
+    "navDescription": "Send form emails from your own domain.",
+    "featureCategory": "Notifications & Reports",
+    "featurePlan": "Free",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "smtp integration",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/message_text_square_02_5014683c23.svg",
+        "alt": "smtp integration"
+      }
+    }
   }
 ]
