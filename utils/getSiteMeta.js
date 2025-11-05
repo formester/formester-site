@@ -70,7 +70,7 @@ export default (meta) => {
     {
       hid: 'og:url',
       property: 'og:url',
-      content: (meta && meta.url) || url,
+      content: ((meta && meta.url) || url).replace(/([^/])$/, '$1/'),
     },
     {
       hid: 'og:title',
@@ -96,7 +96,11 @@ export default (meta) => {
     {
       hid: 'twitter:url',
       name: 'twitter:url',
-      content: (meta && meta.url) || url,
+      content: ((meta && meta.url) || url).replace(/([^/])$/, '$1/'),
+    },
+    {
+      name: 'twitter:site',
+      content: '@_formester_',
     },
     {
       hid: 'twitter:title',
@@ -117,10 +121,6 @@ export default (meta) => {
       hid: 'twitter:image:alt',
       name: 'twitter:image:alt',
       content: (meta && meta.mainImageAlt) || mainImageAlt,
-    },
-    {
-      name: 'twitter:site',
-      content: '@_formester_',
     },
     {
       hid: 'twitter:card',

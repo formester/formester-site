@@ -37,7 +37,8 @@ export default defineNuxtConfig({
   // Robots configuration
   robots: {
     UserAgent: '*',
-    Disallow: ['/_nuxt/static/']
+    Disallow: ['/_nuxt/static/'],
+    Sitemap: 'https://formester.com/sitemap.xml'
   },
 
   site: {
