@@ -1,7 +1,7 @@
 <template>
   <div class="container upper-margin">
     <div>
-      <h2 class="section__heading">Featured Blog</h2>
+      <h1 class="section__heading">Featured Blog</h1>
       <BlogFeatured
         v-for="article in heroArticles"
         :key="article.slug"
@@ -33,7 +33,7 @@
         <nuxt-link
           v-if="currentPage > 1"
           class="custom-page-btn prev"
-          :to="{ path: '/blog', query: { ...$route.query, page: currentPage - 1 } }"
+          :to="{ path: '/blog/', query: { ...$route.query, page: currentPage - 1 } }"
         >
           Previous
         </nuxt-link>
@@ -49,7 +49,7 @@
               v-if="item.type === 'page'"
               class="custom-page-btn"
               :class="{ active: item.page === currentPage }"
-              :to="{ path: '/blog', query: { ...$route.query, page: item.page } }"
+              :to="{ path: '/blog/', query: { ...$route.query, page: item.page } }"
               :aria-current="item.page === currentPage ? 'page' : null"
             >
               {{ item.page }}
@@ -60,7 +60,7 @@
         <nuxt-link
           v-if="currentPage < totalPages"
           class="custom-page-btn next"
-          :to="{ path: '/blog', query: { ...$route.query, page: currentPage + 1 } }"
+          :to="{ path: '/blog/', query: { ...$route.query, page: currentPage + 1 } }"
         >
           Next
         </nuxt-link>
@@ -214,9 +214,9 @@ watch(() => route.query.page, () => {
 
 
 // SEO Meta tags
-const baseUrl = 'https://formester.com/blog'
+const baseUrl = 'https://formester.com/blog/'
 const canonicalUrl = computed(() => 
-  `https://formester.com/blog${currentPage.value > 1 ? `?page=${currentPage.value}` : ''}`
+  `https://formester.com/blog/${currentPage.value > 1 ? `?page=${currentPage.value}` : ''}`
 )
 
 useHead({

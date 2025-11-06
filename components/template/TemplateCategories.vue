@@ -60,10 +60,7 @@
         <NuxtLink
           v-for="category in categories"
           :key="category.id"
-          :to="{
-            name: 'templates-categories-slug',
-            params: { slug: category.slug },
-          }"
+          :to="`/templates/categories/${category.slug}/`"
         >
           <h6
             class="category"

@@ -23,7 +23,7 @@ const meta = computed(() => {
   const metaData = {
     type: 'website',
     url: 'https://formester.com/templates/',
-    title: 'The Formester Templates',
+    title: '1000+ Free Form Templates - Formester',
     description:
       'Use our Formester form templates including surveys, reviews, registrations, & more for any industry! Automate workflows with online templates.',
     mainImage: 'https://formester.com/formester-logo-meta-image.png',
@@ -44,7 +44,7 @@ const listItems = computed(() =>
 )
 
 useHead({
-  title: 'Templates | Formester',
+  title: '1000+ Free Form Templates - Formester',
   meta: meta.value,
   link: [
     {
