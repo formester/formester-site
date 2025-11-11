@@ -4,7 +4,7 @@
       <span class="d-block mb-1 pricing__subtitle text__primary">Pricing</span>
       <h1 class="pricing__heading mt-2">Pricing that feels just right</h1>
       <p class="pricing__subheading mt-3">
-        Select the perfect plan for your needs, and star building beautiful
+        Select the perfect plan for your needs, and start building beautiful
         forms!
       </p>
 
@@ -123,40 +123,49 @@ const faqs = [
           header: 'I have more questions',
           body: "No problem! Contact us and we'll get in touch with you shortly :)",
         },
-      ]
-
-const meta = computed(() => {
-  const metaData = {
-    type: 'website',
-    url: 'https://formester.com/pricing/',
-    title: 'Pricing that feels just right',
-    description: 'Select the perfect plan for your needs, and star building beautiful forms!',
-    mainImage: 'https://formester.com/formester-logo-meta-image.png',
-    mainImageAlt: 'Formester Logo',
-  }
-  return getSiteMeta(metaData)
-})
-
-const pricingPlans = computed(() => ({
-  free: free.price,
-  personal: isYearly.value ? personalYearly.price : personalMonthly.price,
-  business: isYearly.value ? businessYearly.price : businessMonthly.price,
-}))
-
-// SEO
-useHead({
-  title: 'Plans & Pricing | Formester',
-  meta: [...meta.value],
-  link: [
-    {
-      rel: 'canonical',
-      href: 'https://formester.com/pricing/',
+      ],
+    }
+  },
+  computed: {
+    meta() {
+      const metaData = {
+        type: 'website',
+        url: 'https://formester.com/pricing/',
+        title: 'Pricing that feels just right',
+        description:
+          'Select the perfect plan for your needs, and star building beautiful forms!',
+        mainImage: 'https://formester.com/formester-logo-meta-image.png',
+        mainImageAlt: 'Formester Logo',
+      }
+      return getSiteMeta(metaData)
     },
-  ],
-})
-
-// JSON-LD
-useJsonld([
+    pricingPlans() {
+      return {
+        free: this.free.price,
+        personal: this.isYearly
+          ? this.personalYearly.price
+          : this.personalMonthly.price,
+        business: this.isYearly
+          ? this.businessYearly.price
+          : this.businessMonthly.price,
+      }
+    },
+  },
+  head() {
+    return {
+      title: 'Plans & Pricing | Formester',
+      meta: [...this.meta],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://formester.com/pricing/',
+        },
+      ],
+    }
+  },
+  jsonld() {
+    return [
       {
         '@context': 'http://schema.org',
         '@type': 'WebApplication',

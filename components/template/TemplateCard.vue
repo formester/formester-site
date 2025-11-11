@@ -86,9 +86,10 @@ export default {
 
 .image-skeleton {
   width: 100%;
-  height: 176px;
+  padding-top: 61.5%; /* 738/1200 = 0.615 (61.5%) */
   border-radius: 8px;
   animation: skeleton-loading 1s linear infinite alternate;
+  position: relative;
 }
 
 .template-preview__img {
@@ -96,8 +97,9 @@ export default {
   transition: all 0.4s ease;
   overflow: hidden;
   width: 100%;
-  height: 176px;
+  aspect-ratio: 1200/738;
   object-fit: cover;
+  object-position: top;
 }
 
 .template-preview__img.hidden {

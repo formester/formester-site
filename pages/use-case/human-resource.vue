@@ -86,7 +86,7 @@ const stepsToCreateForm = {
   },
   step2: {
     title: 'Select a template or Create a form',
-    description: 'We have multiple customisable templates for HR functions along with an intuitive drag and drop form builder with personalized branding.'
+    description: 'We have multiple customizable templates for HR functions along with an intuitive drag and drop form builder with personalized branding.'
   },
   step3: {
     title: 'Publish and Share the Form',
@@ -192,13 +192,13 @@ const HelpingFeaturesForHr = [
         {
           heading: 'Effortless Employee Onboarding',
           description:
-            "Formester's customisable forms make sure the onboarding experience is hassle free, ensuring new hires provide essential information for a smooth transition. HR departments can create personalised forms, select from templates, collect data, and send tailored welcome emails, improving the onboarding experience and efficiency.",
+            "Formester's customizable forms make sure the onboarding experience is hassle free, ensuring new hires provide essential information for a smooth transition. HR departments can create personalised forms, select from templates, collect data, and send tailored welcome emails, improving the onboarding experience and efficiency.",
           imgUrl: 'hr-solution/HelpingFeaturesForHr/effortless-employee.svg',
         },
         {
           heading: 'Get Data-Driven Performance Insights',
           description:
-            'Formester allows you to design customisable evaluation forms for a smooth performance review process. Gain insights into employee performance and engagement through our powerful analytics. HR can leverage Formester to create dynamic evaluation forms, track employee progress, and analyse user interactions. This helps in evaluating employee performance accurately.',
+            'Formester allows you to design customizable evaluation forms for a smooth performance review process. Gain insights into employee performance and engagement through our powerful analytics. HR can leverage Formester to create dynamic evaluation forms, track employee progress, and analyse user interactions. This helps in evaluating employee performance accurately.',
           imgUrl:
             'hr-solution/HelpingFeaturesForHr/get-data-driven-performance.svg',
         },
