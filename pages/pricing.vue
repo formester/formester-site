@@ -73,6 +73,7 @@
 </template>
 
 <script setup>
+import { ref, computed } from 'vue'
 import CallToActionSection from '@/components/CallToActionSection.vue'
 import PricingCard from '@/components/pricing/PricingCard.vue'
 import Faq from '@/components/features/Faq.vue'
@@ -91,229 +92,150 @@ import PricingTable from '@/components/pricing/PricingTable.vue'
 const isYearly = ref(true)
 
 const faqs = [
-        {
-          header: 'Can I try before I buy?',
-          body: "It's free to set up an account and create a campaign. But to get more than 100 submissions, you'll need to choose a plan.",
-        },
-        {
-          header: 'Can I change plans at anytime?',
-          body: 'Yes. Formester is a pay-as-you-go service and you can upgrade, downgrade or cancel at any time. You can upgrade anytime right from your account page.',
-        },
-        {
-          header: "What happens if I don't like the service?",
-          body: "Don't worry, if you are ever unhappy with our service and wish to cancel, we'll happily reimburse your last month -- no questions asked.",
-        },
-        {
-          header: 'Do I get a discount on yearly plan?',
-          body: 'You do, If you buy yearly plan you only have to pay for 11 months and you get 1 month free.',
-        },
-        {
-          header: 'Is there an referral/affiliate program?',
-          body: "Yes we do. It's an invite only program. If you need access to this please reach out to our support.",
-        },
-        {
-          header: 'Do you offer discount for NGO and School?',
-          body: "Yes. Get in touch and we'll help you out.",
-        },
-        {
-          header: 'What if I want a reseller account?',
-          body: 'We do support resellers. Please reach out to us at support@formester.com and we will love to help you.',
-        },
-        {
-          header: 'I have more questions',
-          body: "No problem! Contact us and we'll get in touch with you shortly :)",
-        },
-      ],
-    }
+  {
+    header: 'Can I try before I buy?',
+    body: "It's free to set up an account and create a campaign. But to get more than 100 submissions, you'll need to choose a plan.",
   },
-  computed: {
-    meta() {
-      const metaData = {
-        type: 'website',
-        url: 'https://formester.com/pricing/',
-        title: 'Pricing that feels just right',
-        description:
-          'Select the perfect plan for your needs, and star building beautiful forms!',
-        mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Formester Logo',
-      }
-      return getSiteMeta(metaData)
+  {
+    header: 'Can I change plans at anytime?',
+    body: 'Yes. Formester is a pay-as-you-go service and you can upgrade, downgrade or cancel at any time. You can upgrade anytime right from your account page.',
+  },
+  {
+    header: "What happens if I don't like the service?",
+    body: "Don't worry, if you are ever unhappy with our service and wish to cancel, we'll happily reimburse your last month -- no questions asked.",
+  },
+  {
+    header: 'Do I get a discount on yearly plan?',
+    body: 'You do, If you buy yearly plan you only have to pay for 11 months and you get 1 month free.',
+  },
+  {
+    header: 'Is there an referral/affiliate program?',
+    body: "Yes we do. It's an invite only program. If you need access to this please reach out to our support.",
+  },
+  {
+    header: 'Do you offer discount for NGO and School?',
+    body: "Yes. Get in touch and we'll help you out.",
+  },
+  {
+    header: 'What if I want a reseller account?',
+    body: 'We do support resellers. Please reach out to us at support@formester.com and we will love to help you.',
+  },
+  {
+    header: 'I have more questions',
+    body: "No problem! Contact us and we'll get in touch with you shortly :)",
+  },
+]
+
+const meta = computed(() => {
+  const metaData = {
+    type: 'website',
+    url: 'https://formester.com/pricing/',
+    title: 'Pricing that feels just right',
+    description:
+      'Select the perfect plan for your needs, and star building beautiful forms!',
+    mainImage: 'https://formester.com/formester-logo-meta-image.png',
+    mainImageAlt: 'Formester Logo',
+  }
+  return getSiteMeta(metaData)
+})
+
+const pricingPlans = computed(() => ({
+  free: free.price,
+  personal: isYearly.value ? personalYearly.price : personalMonthly.price,
+  business: isYearly.value ? businessYearly.price : businessMonthly.price,
+}))
+
+// Use useHead for Nuxt 3 head management
+useHead({
+  title: 'Plans & Pricing | Formester',
+  meta: computed(() => [...meta.value]),
+  link: [
+    {
+      hid: 'canonical',
+      rel: 'canonical',
+      href: 'https://formester.com/pricing/',
     },
-    pricingPlans() {
-      return {
-        free: this.free.price,
-        personal: this.isYearly
-          ? this.personalYearly.price
-          : this.personalMonthly.price,
-        business: this.isYearly
-          ? this.businessYearly.price
-          : this.businessMonthly.price,
-      }
+  ],
+})
+
+// JSON-LD structured data
+const jsonLd = {
+  '@context': 'http://schema.org',
+  '@type': 'WebApplication',
+  name: 'Formester - HTML Form Backend',
+  operatingSystem: 'all',
+  browserRequirements: 'Requires Javascript and HTML5 support',
+  url: 'https://formester.com',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.8',
+    reviewCount: '8',
+  },
+  offers: {
+    '@type': 'AggregateOffer',
+    offeredBy: {
+      '@type': 'Organization',
+      name: 'Formester',
     },
-  },
-  head() {
-    return {
-      title: 'Plans & Pricing | Formester',
-      meta: [...this.meta],
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: 'https://formester.com/pricing/',
-        },
-      ],
-    }
-  },
-  jsonld() {
-    return [
+    highPrice: '49.00',
+    lowPrice: '0',
+    offerCount: '3',
+    priceCurrency: 'USD',
+    priceSpecification: [
       {
-        '@context': 'http://schema.org',
-        '@type': 'WebApplication',
-        '@id': 'kwfinder',
-        applicationCategory: 'BusinessApplication',
-        name: 'Formester - HTML Form Backend',
-        operatingSystem: 'all',
-        browserRequirements: 'Requires Javascript and HTML5 support',
-        url: 'https://formester.com',
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: '4.8',
-          reviewCount: '8',
-        },
-        offers: {
-          '@type': 'AggregateOffer',
-          offeredBy: {
-            '@type': 'Organization',
-            name: 'Formester',
-          },
-          highPrice: '49.00',
-          lowPrice: '0',
-          offerCount: '3',
-          priceCurrency: 'USD',
-          priceSpecification: [
-            {
-              '@type': 'UnitPriceSpecification',
-              price: '0.00',
-              priceCurrency: 'USD',
-              name: 'Formester FREE subscription',
-              referenceQuantity: {
-                '@type': 'QuantitativeValue',
-                value: '100',
-                unitCode: 'SUB',
-                unitText: 'Submissions',
-              },
-            },
-            {
-              '@type': 'UnitPriceSpecification',
-              price: '13.00',
-              priceCurrency: 'USD',
-              name: 'Formester personal subscription',
-              referenceQuantity: {
-                '@type': 'QuantitativeValue',
-                value: '1000',
-                unitCode: 'SUB',
-                unitText: 'Submissions',
-              },
-            },
-            {
-              '@type': 'UnitPriceSpecification',
-              price: '49.00',
-              priceCurrency: 'USD',
-              name: 'Formester business subscription',
-              referenceQuantity: {
-                '@type': 'QuantitativeValue',
-                value: '15000',
-                unitCode: 'SUB',
-                unitText: 'Submissions',
-              },
-            },
-          ],
-        },
-        creator: {
-          '@type': 'Organization',
-          '@id': '#organization',
-          url: 'https://formester.com/',
-          name: 'Formester',
-          logo: {
-            '@type': 'ImageObject',
-            url: 'https://formester.com/logo.png',
-          },
+        '@type': 'UnitPriceSpecification',
+        price: '0.00',
+        priceCurrency: 'USD',
+        name: 'Formester FREE subscription',
+        referenceQuantity: {
+          '@type': 'QuantitativeValue',
+          value: '100',
+          unitCode: 'SUB',
+          unitText: 'Submissions',
         },
       },
       {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: [
-          {
-            '@type': 'Question',
-            name: 'Can I try before I buy?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'It’s free to set up an account and create a campaign. But to get more than 100 submissions, you’ll need to choose a plan.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Can I change plans at anytime?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Yes. Formester is a pay-as-you-go service and you can upgrade, downgrade or cancel at any time. You can upgrade anytime right from your account page.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: "What happens if I don't like the service?",
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: "Don't worry, if you are ever unhappy with our service and wish to cancel, we'll happily reimburse your last month -- no questions asked.",
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Do I get a discount on yearly plan?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'You do, If you buy yearly plan you only have to pay for 11 months and you get 1 month free.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Is there an referral/affiliate program?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: "Yes we do. It's an invite only program. If you need access to this please reach out to our support.",
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Do you offer discount for NGO and School?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Yes. Get in touch and we’ll help you out.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'What if I want a reseller account?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'We do support resellers. Please reach out to us at support@formester.com and we will love to help you.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'I have more questions',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: "No problem! Contact us and we'll get in touch with you shortly :)",
-            },
-          },
-        ],
+        '@type': 'UnitPriceSpecification',
+        price: '13.00',
+        priceCurrency: 'USD',
+        name: 'Formester personal subscription',
+        referenceQuantity: {
+          '@type': 'QuantitativeValue',
+          value: '1000',
+          unitCode: 'SUB',
+          unitText: 'Submissions',
+        },
       },
-    ])
+      {
+        '@type': 'UnitPriceSpecification',
+        price: '49.00',
+        priceCurrency: 'USD',
+        name: 'Formester business subscription',
+        referenceQuantity: {
+          '@type': 'QuantitativeValue',
+          value: '15000',
+          unitCode: 'SUB',
+          unitText: 'Submissions',
+        },
+      },
+    ],
+  },
+  creator: {
+    '@type': 'Organization',
+    url: 'https://formester.com/',
+    name: 'Formester',
+  },
+}
 
-
-  
+// Add JSON-LD to head
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(jsonLd),
+    },
+  ],
+})
 </script>
 
 <style scoped>
