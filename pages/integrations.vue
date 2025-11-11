@@ -46,21 +46,12 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import IntegrationCard from '../components/integrations/IntegrationCard.vue'
 import CallToActionSection from '../components/CallToActionSection.vue'
-
-// MetaTags
 import getSiteMeta from '../utils/getSiteMeta'
 
-export default {
-  components: {
-    IntegrationCard,
-    CallToActionSection,
-  },
-  data() {
-    return {
-      apps: [
+const apps = [
         {
           name: 'Slack',
           desc: 'Slack channels will receive form submissions.',
@@ -110,53 +101,45 @@ export default {
           desc: 'Automate Your Workflow & Streamline Your Business Processes',
           img: 'suretriggers.png'
         }
-      ],
-    }
-  },
-  computed: {
-    meta() {
-      const metaData = {
-        type: 'website',
-        url: 'https://formester.com/integrations/',
-        title: 'Formester Integrations | Automate Your Workflows',
-        description:
-          'Automate your workflows with powerful form integrations. Set up triggers and transfer data from your forms to 1000+ Apps. Get started - It is free!',
-        mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Formester Logo',
-      }
-      return getSiteMeta(metaData)
+      ]
+
+const meta = computed(() => {
+  const metaData = {
+    type: 'website',
+    url: 'https://formester.com/integrations/',
+    title: 'Formester Integrations | Automate Your Workflows',
+    description: 'Automate your workflows with powerful form integrations. Set up triggers and transfer data from your forms to 1000+ Apps. Get started - It is free!',
+    mainImage: 'https://formester.com/formester-logo-meta-image.png',
+    mainImageAlt: 'Formester Logo',
+  }
+  return getSiteMeta(metaData)
+})
+
+useHead({
+  title: 'Formester Integrations | Automate Your Workflows',
+  meta: [...meta.value],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://formester.com/integrations/',
+    },
+  ],
+})
+
+useJsonld([
+  {
+    '@type': 'Corporation',
+    name: 'Formester Integrations | Automate Your Workflows',
+    description: 'Automate your workflows with powerful form integrations. Set up triggers and transfer data from your forms to 1000+ Apps. Get started - It is free!',
+    logo: 'https://formester.com/logo.png',
+    url: 'https://formester.com',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Delaware',
+      addressCountry: 'United States',
     },
   },
-  head() {
-    return {
-      title: 'Formester Integrations | Automate Your Workflows',
-      meta: [...this.meta],
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: 'https://formester.com/integrations/',
-        },
-      ],
-    }
-  },
-  jsonld() {
-    return {
-      '@context': 'http://schema.org',
-      '@type': 'Corporation',
-      name: 'Formester Integrations | Automate Your Workflows',
-      description:
-        'Automate your workflows with powerful form integrations. Set up triggers and transfer data from your forms to 1000+ Apps. Get started - It is free!',
-      logo: 'https://formester.com/logo.png',
-      url: 'https://formester.com',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Delaware',
-        addressCountry: 'United States',
-      },
-    }
-  },
-}
+])
 </script>
 
 <style scoped>

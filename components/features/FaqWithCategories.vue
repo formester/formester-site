@@ -1,39 +1,49 @@
 <template>
   <section class="container py-2 py-lg-5">
     <SectionTitle :heading="title" />
+
     <p class="hero__subheading" v-if="description">
       {{ description }}
     </p>
+
     <div class="row">
       <div
-        v-for="(category, idx) in categories"
-        :key="category.id"
+        v-for="(category, cIdx) in categories"
+        :key="category.id || `cat-${cIdx}`"
         class="my-5"
-        :class="idx === categories.length - 1 ? 'col' : 'col-md-6'"
+        :class="cIdx === categories.length - 1 ? 'col' : 'col-md-6'"
       >
-        <h3 class="faq__heading">{{ category.title[0].text }}</h3>
-        <div class="accordion accordion-flush" id="accordionFaqs">
+        <h3 class="faq__heading">
+          {{ Array.isArray(category.title) ? category.title[0]?.text : category.title }}
+        </h3>
+
+        <!-- give each category its own accordion id -->
+        <div class="accordion accordion-flush" :id="`accordionFaqs-${cIdx}`">
           <div
-            v-for="(faq, index) in category.faqList"
-            :key="faq.id"
+            v-for="(faq, fIdx) in category.faqList"
+            :key="faq.id || `faq-${cIdx}-${fIdx}`"
             class="accordion-item"
           >
             <h2 class="accordion-header">
               <button
-                class="accordion-button collapsed"
+                class="accordion-button"
+                :class="{ collapsed: openByCategory[cIdx] !== fIdx }"
                 type="button"
-                data-bs-toggle="collapse"
-                :data-bs-target="`#collapse-${idx}-${index}`"
-                aria-expanded="false"
-                :aria-controls="`collapse-${idx}-${index}`"
+                :aria-expanded="openByCategory[cIdx] === fIdx ? 'true' : 'false'"
+                :aria-controls="`collapse-${cIdx}-${fIdx}`"
+                @click="toggle(cIdx, fIdx)"
               >
                 <span class="me-2">{{ faq.header }}</span>
               </button>
             </h2>
+
             <div
-              :id="`collapse-${idx}-${index}`"
-              class="accordion-collapse collapse"
-              data-bs-parent="#accordionFaqs"
+              :id="`collapse-${cIdx}-${fIdx}`"
+              class="accordion-collapse"
+              :class="{ show: openByCategory[cIdx] === fIdx, collapse: openByCategory[cIdx] !== fIdx }"
+              role="region"
+              :aria-labelledby="`heading-${cIdx}-${fIdx}`"
+              :data-bs-parent="`#accordionFaqs-${cIdx}`"
             >
               <MarkdownContent
                 v-if="faq.body_markdown"
@@ -43,38 +53,52 @@
               <div v-else class="accordion-body">
                 <p class="mb-2">{{ faq.body }}</p>
                 <ul v-if="faq.list">
-                  <li v-for="item in faq.list" :key="item.id">
-                    {{ item.text }}
+                  <li
+                    v-for="(item, i) in faq.list"
+                    :key="item.id || `li-${cIdx}-${fIdx}-${i}`"
+                  >
+                    {{ item.text ?? item }}
                   </li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
+        <!-- /accordion -->
       </div>
     </div>
   </section>
 </template>
 
-<script>
-import MarkdownContent from '~/components/MarkdownContent.vue'
+<script setup>
+import { reactive } from 'vue'
+// components in /components are auto-registered in Nuxt 3; keep explicit import if you prefer
+// import MarkdownContent from '~/components/MarkdownContent.vue'
 
-export default {
-  components: { MarkdownContent },
-  props: {
-    title: {
-      type: Array,
-      required: true,
-    },
-    description: {
-      type: String,
-      default: '',
-    },
-    categories: {
-      type: Array,
-      required: true,
-    },
+const props = defineProps({
+  title: {
+    type: Array,
+    required: true
   },
+  description: {
+    type: String,
+    default: ''
+  },
+  categories: {
+    type: Array,
+    required: true
+  }
+})
+
+/**
+ * Track the open index per category: { [categoryIndex]: number|null }
+ * Starts with all collapsed.
+ */
+const openByCategory = reactive({})
+
+function toggle(catIdx, faqIdx) {
+  openByCategory[catIdx] =
+    openByCategory[catIdx] === faqIdx ? null : faqIdx
 }
 </script>
 
@@ -102,4 +126,8 @@ export default {
   padding: 0 1.25rem;
   width: 85%;
 }
+
+/* Make collapsed vs show work without Bootstrap JS */
+.accordion-collapse.collapse { display: none; }
+.accordion-collapse.show { display: block; }
 </style>

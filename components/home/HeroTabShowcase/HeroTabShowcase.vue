@@ -45,9 +45,8 @@
             <span>Explore our new AI features</span>
           </div> -->
           <h1 class="hero__heading">
-            <template v-for="(item, index) in title">
+            <template v-for="(item, index) in title" :key="item.id">
               <span
-                :key="item.id"
                 :class="{ highlight__text: item.highlight }"
                 :style="{ display: item.highlight ? 'block' : 'inline' }"
               >
@@ -79,7 +78,7 @@
             class="d-flex align-items-center justify-content-center mx-4"
           >
             <nuxt-img src="/icons/check-icon.svg" alt="tick" />
-            <sapn class="click-triggers ms-2">{{ item.text }}</sapn>
+            <span class="click-triggers ms-2">{{ item.text }}</span>
           </div>
         </div>
         </div>

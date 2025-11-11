@@ -1,5 +1,5 @@
 <template>
-  <div v-if="selectedFormBuildersDetails.length" class="my-5 pt-5">
+  <div v-if="selectedFormBuildersDetails && selectedFormBuildersDetails.length" class="my-5 pt-5">
     <!-- desktop -->
     <div class="d-none d-lg-block w-100 my-5">
       <div class="d-flex formbuilder__logo-container pt-2">
@@ -8,13 +8,14 @@
           :key="fb.id"
           class="w-100 px-2"
         >
-          <div
-            class="formbuilder__logo-wrapper d-flex align-items-center justify-content-center text-center"
-          >
-            <img
+          <div class="formbuilder__logo-wrapper d-flex align-items-center justify-content-center text-center">
+            <!-- If not using @nuxt/image, replace NuxtImg with img -->
+            <NuxtImg
               class="formbuilder__logo"
-              :src="fb.logo.data.attributes.url"
+              :src="fb?.logo?.data?.attributes?.url || ''"
+              :alt="fb?.name || 'Form builder logo'"
               height="40"
+              loading="lazy"
             />
           </div>
           <div class="formbuilder__select-plan">
@@ -23,16 +24,17 @@
               v-model="selectedPlans[fb.id]"
             >
               <option
-                v-for="plan in fb.plan"
-                :key="`${fb.name}-${plan.name}`"
-                :value="plan.name"
+                v-for="plan in (fb?.plan || [])"
+                :key="`${fb?.name || 'fb'}-${plan?.name}`"
+                :value="plan?.name"
               >
-                {{ plan.name }} - ${{ plan.amount }}/mo
+                {{ plan?.name }} - ${{ plan?.amount }}/mo
               </option>
             </select>
           </div>
         </div>
       </div>
+
       <FormBuilderFeatureAccordion :grouped-features="groupedFeatures">
         <template #default="{ categoryFeatures }">
           <FormBuilderFeatureList :feature-list="categoryFeatures" />
@@ -46,29 +48,28 @@
                 :formBuilder="fb"
                 :selectedPlans="selectedPlans"
                 :feature-list="categoryFeatures"
-                @onPlanChange="handlePlanChange"
+                @onPlanChange="onPlanChange"
               />
             </div>
           </div>
         </template>
       </FormBuilderFeatureAccordion>
     </div>
+
     <!-- mobile -->
-    <div
-      class="d-lg-none mobile__formbuilder-details-wrapper d-flex flex-column mx-auto"
-    >
+    <div class="d-lg-none mobile__formbuilder-details-wrapper d-flex flex-column mx-auto">
       <div
         v-for="fb in selectedFormBuildersDetails"
         :key="fb.id"
         class="d-flex flex-column"
       >
-        <div
-          class="formbuilder__logo-wrapper d-flex align-items-center justify-content-center text-center"
-        >
-          <img
+        <div class="formbuilder__logo-wrapper d-flex align-items-center justify-content-center text-center">
+          <NuxtImg
             class="formbuilder__logo"
-            :src="fb.logo.data.attributes.url"
+            :src="fb?.logo?.data?.attributes?.url || ''"
+            :alt="fb?.name || 'Form builder logo'"
             height="40"
+            loading="lazy"
           />
         </div>
         <div class="formbuilder__select-plan">
@@ -77,14 +78,15 @@
             v-model="selectedPlans[fb.id]"
           >
             <option
-              v-for="plan in fb.plan"
-              :key="`${fb.name}-${plan.name}`"
-              :value="plan.name"
+              v-for="plan in (fb?.plan || [])"
+              :key="`${fb?.name || 'fb'}-${plan?.name}`"
+              :value="plan?.name"
             >
-              {{ plan.name }} - ${{ plan.amount }}/mo
+              {{ plan?.name }} - ${{ plan?.amount }}/mo
             </option>
           </select>
         </div>
+
         <FormBuilderFeatureAccordion :grouped-features="groupedFeatures">
           <template #default="{ categoryFeatures }">
             <div class="d-flex overflow-auto w-100">
@@ -94,7 +96,7 @@
                   :formBuilder="fb"
                   :selectedPlans="selectedPlans"
                   :feature-list="categoryFeatures"
-                  @onPlanChange="handlePlanChange"
+                  @onPlanChange="onPlanChange"
                 />
               </div>
             </div>
@@ -109,140 +111,141 @@
         href="https://sxqzooev.formester.com/f/d6abd30c-aeaf-4d16-aa15-fab9c07a967d"
         target="_blank"
         class="disparity__text-link"
-        >Click Here</a
-      >
+      >Click Here</a>
     </div>
     <div class="disparity__text-sm mt-2 text-center">
       <a
         href="https://sxqzooev.formester.com/f/dc66d38b-49a1-4d79-b53c-b44c2f5925c6"
         target="_blank"
         class="disparity__text-link"
-        >Click here</a
-      >
+      >Click here</a>
       to report any disparity in the information provided.
     </div>
   </div>
 </template>
 
-<script>
+<script setup>
+import { computed, reactive, ref, watch } from 'vue'
 import FormBuilderFeatureList from '@/components/comparision/FormBuilderFeatureList.vue'
 import FormBuilderDetails from '@/components/comparision/FormBuilderDetails.vue'
 import FormBuilderFeatureAccordion from '@/components/comparision/FormBuilderFeatureAccordion.vue'
-import axios from 'axios'
 
-export default {
-  components: {
-    FormBuilderFeatureList,
-    FormBuilderDetails,
-    FormBuilderFeatureAccordion,
+const props = defineProps({
+  selectedFormBuildersDetails: {
+    type: Array,
+    required: true
   },
-  data() {
-    return {
-      selectedPlans: {},
-      featureList: [],
-    }
-  },
-  props: {
-    selectedFormBuildersDetails: {
-      type: Array,
-      required: true,
-    },
-    formBuilders: {
-      type: Array,
-      required: true,
-    },
-  },
-  async created() {
-    const {
-      data: { data },
-    } = await axios.get(`${process.env.strapiUrl}/api/form-builder-features`, {
-      params: {
-        sort: 'createdAt',
-        populate: 'category',
-      },
-    })
+  formBuilders: {
+    type: Array,
+    required: true
+  }
+})
 
-    let fbFeatures = data.map((item) => ({
+// reactive map: fb.id -> plan name
+const selectedPlans = reactive({})
+
+// runtime config + fetch features from Strapi
+const config = useRuntimeConfig()
+
+// useFetch returns { data, pending, error }
+const { data: featureResp, error: featureError } = await useFetch(
+  () => `${config.public.strapiUrl}/api/form-builder-features`,
+  {
+    query: { sort: 'createdAt', populate: 'category' },
+    // If you fetch on client only, uncomment:
+    // server: false,
+    // key helps Nuxt cache/dedupe between SSR/CSR
+    key: 'form-builder-features'
+  }
+)
+
+const featureList = ref([])
+
+// Safely parse Strapi v4 response shapes
+watch(
+  () => featureResp.value,
+  (val) => {
+    // Some setups return { data: [...] }, others nest more deeply when proxied.
+    const arr =
+      (val && Array.isArray(val.data) && val.data) ||
+      (val && val.data && Array.isArray(val.data.data) && val.data.data) ||
+      []
+    featureList.value = arr.map((item) => ({
       id: item.id,
-      ...item.attributes,
+      ...(item.attributes || {})
     }))
-
-    this.featureList = [...fbFeatures]
   },
-  mounted() {
-    this.formBuilders.forEach((fb) => {
-      this.$set(this.selectedPlans, fb.id, fb.plan[0].name)
+  { immediate: true }
+)
+
+// (Re)seed selected plans whenever formBuilders changes
+watch(
+  () => props.formBuilders,
+  (builders) => {
+    if (!builders) return
+    builders.forEach((fb) => {
+      const firstPlan = fb && Array.isArray(fb.plan) && fb.plan.length ? fb.plan[0].name : ''
+      if (fb && selectedPlans[fb.id] == null) {
+        selectedPlans[fb.id] = firstPlan
+      }
     })
   },
-  computed: {
-    groupedFeatures() {
-      const grouped = {
-        'Usage limits': null,
-        'Form Fields & Creation': null,
-        'Quiz Features': null,
-        Branding: null,
-        Customization: null,
-        'Publishing & Sharing': null,
-        'Workflow Automation': null,
-        'Payment Integrations': null,
-        'CRM Integrations': null,
-        'Email Marketing Integrations': null,
-        'Collaboration Tool Integrations': null,
-        'Ecommerce Integrations': null,
-        'Reporting & Analytics': null,
-        'Set Response & Time Limits': null,
-        'Email Notification': null,
-        'AI Capabilities': null,
-        'Spam Protection': null,
-        'Security & Compliance': null,
-        Support: null,
-      }
+  { immediate: true, deep: true }
+)
 
-      this.featureList.forEach((feature) => {
-        const category = feature.category?.name || 'Other'
+// Group features into ordered categories
+const groupedFeatures = computed(() => {
+  const base = {
+    'Usage limits': null,
+    'Form Fields & Creation': null,
+    'Quiz Features': null,
+    Branding: null,
+    Customization: null,
+    'Publishing & Sharing': null,
+    'Workflow Automation': null,
+    'Payment Integrations': null,
+    'CRM Integrations': null,
+    'Email Marketing Integrations': null,
+    'Collaboration Tool Integrations': null,
+    'Ecommerce Integrations': null,
+    'Reporting & Analytics': null,
+    'Set Response & Time Limits': null,
+    'Email Notification': null,
+    'AI Capabilities': null,
+    'Spam Protection': null,
+    'Security & Compliance': null,
+    Support: null
+  }
 
-        if (!(category in grouped)) {
-          grouped[category] = null
-        }
+  const grouped = { ...base }
 
-        if (grouped[category] === null) {
-          grouped[category] = {
-            name: category,
-            features: [],
-          }
-        }
+  featureList.value.forEach((feature) => {
+    const cat = (feature && feature.category && feature.category.name) || 'Other'
+    if (!(cat in grouped)) grouped[cat] = null
+    if (grouped[cat] === null) grouped[cat] = { name: cat, features: [] }
+    grouped[cat].features.push(feature)
+  })
 
-        grouped[category].features.push(feature)
+  Object.values(grouped).forEach((cat) => {
+    if (cat) {
+      cat.features.sort((a, b) => {
+        const posA = (a.category && a.category.position) != null ? a.category.position : Infinity
+        const posB = (b.category && b.category.position) != null ? b.category.position : Infinity
+        if (posA === posB) return (a.name || '').localeCompare(b.name || '')
+        return posA - posB
       })
+    }
+  })
 
-      // Sort features within each category
-      Object.values(grouped).forEach((category) => {
-        if (category) {
-          category.features.sort((a, b) => {
-            const posA = a.category?.position ?? Infinity
-            const posB = b.category?.position ?? Infinity
-            if (posA === posB) {
-              return (a.name || '').localeCompare(b.name || '')
-            }
-            return posA - posB
-          })
-        }
-      })
+  return Object.values(grouped).filter(Boolean)
+})
 
-      // Filter out null categories and convert to array
-      const sortedCategories = Object.entries(grouped)
-        .filter(([_, value]) => value !== null)
-        .map(([_, value]) => value)
-
-      return sortedCategories
-    },
-  },
-  methods: {
-    handlePlanChange(event, formBuilderId) {
-      const selectedPlan = event.target.value
-      this.$set(this.selectedPlans, formBuilderId, selectedPlan)
-    },
-  },
+// Uniform plan-change handler (don’t depend on child’s custom event payload)
+function onPlanChange(e) {
+  const el = e && e.target
+  const formBuilderId = el && el.getAttribute && el.getAttribute('data-formbuilder-id')
+  if (!formBuilderId || !el) return
+  selectedPlans[formBuilderId] = el.value
 }
 </script>
 

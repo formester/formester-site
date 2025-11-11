@@ -60,10 +60,7 @@
         <NuxtLink
           v-for="category in categories"
           :key="category.id"
-          :to="{
-            name: 'templates-categories-slug',
-            params: { slug: category.slug },
-          }"
+          :to="`/templates/categories/${category.slug}/`"
         >
           <h6
             class="category"
@@ -96,7 +93,7 @@ export default {
       return formatted.replace(/Pdf/gi, 'PDF');
     },
     toggleCollapse(categoryType) {
-      this.$set(this.isExpanded, categoryType, !this.isExpanded[categoryType])
+      this.isExpanded[categoryType] = !this.isExpanded[categoryType]
       localStorage.setItem('isCollapsedState', JSON.stringify(this.isExpanded))
     },
     clearIsExpandedState() {

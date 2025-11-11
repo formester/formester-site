@@ -1,7 +1,7 @@
 <template>
   <div class="container upper-margin">
     <div>
-      <h2 class="section__heading">Featured Blog</h2>
+      <h1 class="section__heading">Featured Blog</h1>
       <BlogFeatured
         v-for="article in heroArticles"
         :key="article.slug"
@@ -33,7 +33,7 @@
         <nuxt-link
           v-if="currentPage > 1"
           class="custom-page-btn prev"
-          :to="{ path: '/blog', query: { ...$route.query, page: currentPage - 1 } }"
+          :to="{ path: '/blog/', query: { ...$route.query, page: currentPage - 1 } }"
         >
           Previous
         </nuxt-link>
@@ -49,7 +49,7 @@
               v-if="item.type === 'page'"
               class="custom-page-btn"
               :class="{ active: item.page === currentPage }"
-              :to="{ path: '/blog', query: { ...$route.query, page: item.page } }"
+              :to="{ path: '/blog/', query: { ...$route.query, page: item.page } }"
               :aria-current="item.page === currentPage ? 'page' : null"
             >
               {{ item.page }}
@@ -60,7 +60,7 @@
         <nuxt-link
           v-if="currentPage < totalPages"
           class="custom-page-btn next"
-          :to="{ path: '/blog', query: { ...$route.query, page: currentPage + 1 } }"
+          :to="{ path: '/blog/', query: { ...$route.query, page: currentPage + 1 } }"
         >
           Next
         </nuxt-link>
@@ -75,29 +75,23 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import BlogCard from '../../components/blog/BlogCard.vue'
 import BlogFeatured from '../../components/blog/BlogFeatured.vue'
-
-// MetaTags
 import getSiteMeta from '../../utils/getSiteMeta'
-import axios from 'axios'
 import readingTime from '@/utils/readingTime'
 
-export default {
+const route = useRoute()
+const router = useRouter()
+const config = useRuntimeConfig()
 
-  components: {
-    BlogCard,
-    BlogFeatured,
-  },
-  data() {
-    return {
-      itemsPerPage: 9, // Adjust as needed
-      isLoading: false
-    }
-  },
-  async asyncData() {
-    const { data: { data } } = await axios.get(`${process.env.strapiUrl}/api/blogs`, {
+const itemsPerPage = 9
+const isLoading = ref(false)
+
+// Fetch blog data
+const { data: blogData, error: fetchError } = await useAsyncData('blogs', async () => {
+  try {
+    const response = await $fetch(`${config.public.strapiUrl}/api/blogs`, {
       params: {
         sort: 'publishedAt:desc',
         populate: '*',
@@ -107,201 +101,177 @@ export default {
       },
     })
 
+    const data = response.data || []
+    
     let articles = data.map((item) => ({
       id: item.id,
       ...item.attributes,
-      coverImg: item.attributes.coverImg.data.attributes.url,
-      readingStats: readingTime(item.attributes.body),
+      coverImg: item.attributes.coverImg?.data?.attributes?.url || '',
+      readingStats: readingTime(item.attributes.body || ''),
     }))
+    
     const heroArticles = articles.filter((item) => item.featured)
     articles = articles.filter((item) => !item.featured)
     const totalArticles = articles.length
     const totalPages = Math.ceil(totalArticles / 9)
+    
     return {
       articles,
       heroArticles,
       totalPages,
     }
-  },
-  computed: {
-
-    currentPage() {
-      return parseInt(this.$route.query.page) || 1
-    },
-    currentPage() {
-      return parseInt(this.$route.query.page) || 1
-    },
-    paginatedArticles() {
-      const start = (this.currentPage - 1) * this.itemsPerPage
-      return this.articles.slice(start, start + this.itemsPerPage)
-    },
-    paginationPages() {
-      const pages = []
-      const total = this.totalPages
-      const current = this.currentPage
-      // Always show first, last, current, and neighbors
-      if (total <= 5) {
-        for (let i = 1; i <= total; i++) {
-          pages.push({ type: 'page', page: i, key: `page-${i}` })
-        }
-      } else {
-        pages.push({ type: 'page', page: 1, key: 'page-1' })
-        if (current > 3) {
-          pages.push({ type: 'ellipsis', key: 'start-ellipsis' })
-        }
-        for (
-          let i = Math.max(2, current - 1);
-          i <= Math.min(total - 1, current + 1);
-          i++
-        ) {
-          if (i === 1 || i === total) continue
-          pages.push({ type: 'page', page: i, key: `page-${i}` })
-        }
-        if (current < total - 2) {
-          pages.push({ type: 'ellipsis', key: 'end-ellipsis' })
-        }
-        pages.push({ type: 'page', page: total, key: `page-${total}` })
-      }
-      return pages
-    },
-    meta() {
-      const metaData = {
-        type: 'website',
-        url: 'https://formester.com/blog/',
-        title:
-          'Formester Blog',
-        description:
-          "Learn expert tips, templates, and automation guides to help you create smarter forms, improve response rates, and grow your business with Formester.",
-        mainImage: 'https://formester.com/formester-logo-meta-image.png',
-        mainImageAlt: 'Formester Logo',
-      }
-      return getSiteMeta(metaData)
-    },
-  },
-  methods: {
-    goToPage(page) {
-      if (page < 1 || page > this.totalPages) return
-      this.$router.push({ path: '/blog', query: { ...this.$route.query, page } })
-    },
-  },
-  
-  watch: {
-    // Watch for route changes to handle loading state
-    '$route.query.page': {
-      handler() {
-        // Set loading state when page changes
-        this.isLoading = true
-        
-        // Only run scroll behavior on client side
-        if (process.client) {
-          this.$nextTick(() => {
-            // Scroll to top of the page or to the all-blogs section with margin
-            const allBlogsSection = document.getElementById('all-blogs')
-            if (allBlogsSection) {
-              // Get the position of the element relative to the viewport
-              const rect = allBlogsSection.getBoundingClientRect()
-              // Get the absolute position and subtract margin (80px)
-              const scrollTop = window.pageYOffset + rect.top - 80
-              // Scroll to the adjusted position with smooth behavior
-              window.scrollTo({ top: scrollTop, behavior: 'smooth' })
-            } else {
-              // Fallback: scroll to top of the page
-              window.scrollTo({ top: 0, behavior: 'smooth' })
-            }
-          })
-        }
-        
-        // Use nextTick to ensure DOM has updated
-        this.$nextTick(() => {
-          // Small timeout to ensure smooth transition
-          setTimeout(() => {
-            this.isLoading = false
-          }, 300)
-        })
-      },
-      immediate: true
-    }
-  },
-
-  head() {
-    // Generate canonical URL based on current page
-    const baseUrl = 'https://formester.com/blog/';
-    const canonicalUrl = this.currentPage === 1 
-      ? baseUrl 
-      : `${baseUrl}?page=${this.currentPage}`;
-    
+  } catch (error) {
+    console.error('Error fetching blogs:', error)
     return {
-      title:
-        'Formester Blog',
-      meta: [
-        ...this.meta,
-        // Add pagination meta tags for SEO
-        ...(this.currentPage > 1 ? [{
-          hid: 'robots',
-          name: 'robots',
-          content: 'noindex, follow'
-        }] : []),
-      ],
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: canonicalUrl,
-        },
-        // Add prev/next links for pagination
-        ...(this.currentPage > 1 ? [{
-          rel: 'prev',
-          href: this.currentPage === 2 
-            ? baseUrl 
-            : `${baseUrl}?page=${this.currentPage - 1}`,
-        }] : []),
-        ...(this.currentPage < this.totalPages ? [{
-          rel: 'next',
-          href: `${baseUrl}?page=${this.currentPage + 1}`,
-        }] : []),
-      ],
+      articles: [],
+      heroArticles: [],
+      totalPages: 1,
     }
-  },
-  jsonld() {
-    return {
-      '@context': 'http://schema.org',
-      '@graph': [
-        {
-          '@type': 'Corporation',
-          '@id': 'https://acornglobus.com',
-          name: 'Formester',
-          description:
-            "Learn expert tips, templates, and automation guides to help you create smarter forms, improve response rates, and grow your business with Formester.",
-          logo: 'https://formester.com/logo.png',
-          url: 'https://formester.com',
-          address: {
-            '@type': 'PostalAddress',
-            addressLocality: 'Delaware',
-            addressCountry: 'United States',
-          },
-        },
-        {
-          '@type': 'BreadcrumbList',
-          '@id': 'https://acornglobus.com',
-          itemListElement: [
-            {
-              '@type': 'ListItem',
-              position: 1,
-              name: 'Home',
-              item: 'https://formester.com',
-            },
-            {
-              '@type': 'ListItem',
-              position: 2,
-              name: 'Blog',
-              item: 'https://formester.com/blog',
-            },
-          ],
-        },
-      ],
-    }
-  },
+  }
+})
+
+if (fetchError.value) {
+  console.error('Blog fetch error:', fetchError.value)
 }
+
+const articles = computed(() => blogData.value?.articles || [])
+const heroArticles = computed(() => blogData.value?.heroArticles || [])
+const totalPages = computed(() => blogData.value?.totalPages || 1)
+
+const currentPage = computed(() => parseInt(route.query.page) || 1)
+
+const paginatedArticles = computed(() => {
+  const start = (currentPage.value - 1) * itemsPerPage
+  return articles.value.slice(start, start + itemsPerPage)
+})
+
+const paginationPages = computed(() => {
+  const pages = []
+  const total = totalPages.value
+  const current = currentPage.value
+  
+  if (total <= 5) {
+    for (let i = 1; i <= total; i++) {
+      pages.push({ type: 'page', page: i, key: `page-${i}` })
+    }
+  } else {
+    pages.push({ type: 'page', page: 1, key: 'page-1' })
+    if (current > 3) {
+      pages.push({ type: 'ellipsis', key: 'start-ellipsis' })
+    }
+    for (
+      let i = Math.max(2, current - 1);
+      i <= Math.min(total - 1, current + 1);
+      i++
+    ) {
+      if (i === 1 || i === total) continue
+      pages.push({ type: 'page', page: i, key: `page-${i}` })
+    }
+    if (current < total - 2) {
+      pages.push({ type: 'ellipsis', key: 'end-ellipsis' })
+    }
+    pages.push({ type: 'page', page: total, key: `page-${total}` })
+  }
+  return pages
+})
+
+const meta = computed(() => {
+  const currentPage = route.query.page || 1
+  const metaData = {
+    type: 'website',
+    url: `https://formester.com/blog${currentPage > 1 ? `?page=${currentPage}` : ''}`,
+    title: 'Latest form Builder Software in 2023 | Best Online Form Builder to Use in 2023 - Formester',
+    description: "Best Online, No-Code Form Builder Software in 2023 - Formester's Blog Resource | Discover trending content related to all things form-building.",
+    mainImage: 'https://formester.com/formester-logo-meta-image.png',
+    mainImageAlt: 'Formester Logo',
+  }
+  return getSiteMeta(metaData)
+})
+
+// Watch for route changes
+watch(() => route.query.page, () => {
+  isLoading.value = true
+  
+  if (process.client) {
+    nextTick(() => {
+      const allBlogsSection = document.getElementById('all-blogs')
+      if (allBlogsSection) {
+        const rect = allBlogsSection.getBoundingClientRect()
+        const scrollTop = window.pageYOffset + rect.top - 80
+        window.scrollTo({ top: scrollTop, behavior: 'smooth' })
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      }
+    })
+  }
+  
+  nextTick(() => {
+    setTimeout(() => {
+      isLoading.value = false
+    }, 300)
+  })
+}, { immediate: true })
+
+
+// SEO Meta tags
+const baseUrl = 'https://formester.com/blog/'
+const canonicalUrl = computed(() => 
+  `https://formester.com/blog/${currentPage.value > 1 ? `?page=${currentPage.value}` : ''}`
+)
+
+useHead({
+  title: 'Form Builder Blog | Latest Articles & Resources - Formester',
+  meta: meta.value,
+  link: [
+    {
+      rel: 'canonical',
+      href: canonicalUrl.value,
+    },
+    ...(currentPage.value > 1 ? [{
+      rel: 'prev',
+      href: currentPage.value === 2 ? baseUrl : `${baseUrl}?page=${currentPage.value - 1}`,
+    }] : []),
+    ...(currentPage.value < totalPages.value ? [{
+      rel: 'next',
+      href: `${baseUrl}?page=${currentPage.value + 1}`,
+    }] : []),
+  ],
+})
+
+// JSON-LD Schema
+useJsonld([
+  {
+    '@type': 'Corporation',
+    '@id': 'https://acornglobus.com',
+    name: 'Formester',
+    description: "Best Online, No-Code Form Builder Software in 2023 - Formester's Blog Resource | Discover trending content related to all things form-building.",
+    logo: 'https://formester.com/logo.png',
+    url: 'https://formester.com',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Delaware',
+      addressCountry: 'United States',
+    },
+  },
+  {
+    '@type': 'BreadcrumbList',
+    '@id': 'https://acornglobus.com',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://formester.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Blog',
+        item: 'https://formester.com/blog',
+      },
+    ],
+  },
+])
 </script>
 
 <style scoped>

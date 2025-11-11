@@ -35,7 +35,7 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import getSiteMeta from '@/utils/getSiteMeta'
 import Hero from '@/components/hr-solution/Hero.vue'
 import StandOutFeatureSection from '@/components/competitors/StandOutFeatureSection.vue'
@@ -43,159 +43,140 @@ import CreateFormInThreeSteps from '@/components/create-form-in-three-steps.vue'
 import KeyBenefits from '@/components/hr-solution/KeyBenefits.vue'
 import SeamlessIntegration from '@/components/hr-solution/SeamlessIntegration.vue'
 import BlogCard from '@/components/blog/BlogCard.vue'
-
-import axios from 'axios'
 import readingTime from '@/utils/readingTime'
 
-export default {
-  components: {
-    Hero,
-    StandOutFeatureSection,
-    CreateFormInThreeSteps,
-    KeyBenefits,
-    SeamlessIntegration,
-    BlogCard,
-  },
-  async asyncData() {
-    const {
-      data: { data },
-    } = await axios.get(
-      `${process.env.strapiUrl}/api/blogs`,
-      {
-        params: {
-          'filters[$or][0][title][$contains]': 'HR',
-          'filters[$or][1][title][$containsi]': 'human resource',
-          sort: 'publishedAt:desc',
-          populate: '*',
-        },
-      }
-    )
+const config = useRuntimeConfig()
 
-    let articles = data.map((item) => {
-      return {
-        id: item.id,
-        ...item.attributes,
-        coverImg: item.attributes.coverImg.data.attributes.url,
-        readingStats: readingTime(item.attributes.body),
+const { data: blogsData } = await useAsyncData('hr-blogs', async () => {
+  try {
+    const res = await $fetch(`${config.public.strapiUrl}/api/blogs`, {
+      params: {
+        'filters[$or][0][title][$contains]': 'HR',
+        'filters[$or][1][title][$containsi]': 'human resource',
+        sort: 'publishedAt:desc',
+        populate: '*'
       }
     })
 
-    const randIndex = Math.floor(Math.random() * (articles.length - 3))
-    articles = articles?.slice(randIndex, randIndex + 3)
+    let articles = (res?.data || []).map((item) => ({
+      id: item.id,
+      ...item.attributes,
+      coverImg: item?.attributes?.coverImg?.data?.attributes?.url,
+      readingStats: readingTime(item?.attributes?.body || '')
+    })).filter(a => a.coverImg)
 
-    return {
-      articles: articles,
-      stepsToCreateForm:{
-      step1: {
-          title: "Signup with a free account",
-          description: "Sign up with your email address to start using Formester. Our free plan allows you to create 10 forms with 100 submissions per month."
-        },
-      step2: {
-          title: "Select a template or Create a form",
-          description: "We have multiple customizable templates for HR functions along with an intuitive drag and drop form builder with personalized branding."
-        },
-      step3: {
-          title: "Publish and Share the Form",
-          description: "Once the form is created, share it via link or embed it in your website. Our built-in analytics turn form inputs into actionable insights."
-        }
+    if (articles.length > 3) {
+      const randIndex = Math.floor(Math.random() * (articles.length - 3))
+      articles = articles.slice(randIndex, randIndex + 3)
     }
-    }
+
+    return { articles }
+  } catch (e) {
+    console.error('Failed to fetch HR blogs:', e)
+    return { articles: [] }
+  }
+})
+
+const articles = computed(() => blogsData.value?.articles || [])
+
+const stepsToCreateForm = {
+  step1: {
+    title: 'Signup with a free account',
+    description: 'Sign up with your email address to start using Formester. Our free plan allows you to create 10 forms with 100 submissions per month.'
   },
-  computed: {
-    meta() {
-      const metaData = {
-        type: 'website',
-        url: 'https://formester.com/use-case/human-resource/',
-        title: 'Automate Human Resource Operations | No-Code Form Builder',
-        description:
-          "Optimise HR data management with Formester's No-Code Form Builder and HR Form Templates. Automate job applications, leave management, employee onboarding, performance evaluation, and training",
-        mainImage: 'https://formester.com/human-resource-hero-screenshot.png',
-        mainImageAlt:
-          'Automate your human resource operations with HR Form Templates from Formester!',
-        keywords: [
-          'HR form builder',
-          'HR form templates',
-          'Data collection',
-          'Automation',
-          'Job applications',
-          'Leave management',
-          'Employee onboarding',
-          'Performance insights',
-          'Training',
-          'Formester',
-          'Data management',
-          'HR solutions',
-          'Form creation',
-          'HR Solution',
-          'HR automation',
-          'Employee engagement',
-          'Data analytics',
-          'HR software',
-          'Online forms',
-          'Digital transformation',
-          'HR efficiency',
-          'Data-driven decisions',
-          'Job Application Templates',
-        ],
+  step2: {
+    title: 'Select a template or Create a form',
+    description: 'We have multiple customizable templates for HR functions along with an intuitive drag and drop form builder with personalized branding.'
+  },
+  step3: {
+    title: 'Publish and Share the Form',
+    description: 'Once the form is created, share it via link or embed it in your website. Our built-in analytics turn form inputs into actionable insights.'
+  }
+}
+
+const meta = computed(() => {
+  const metaData = {
+    type: 'website',
+    url: 'https://formester.com/use-case/human-resource/',
+    title: 'Automate Human Resource Operations | No-Code Form Builder',
+    description: "Optimise HR data management with Formester's No-Code Form Builder and HR Form Templates. Automate job applications, leave management, employee onboarding, performance evaluation, and training",
+    mainImage: 'https://formester.com/human-resource-hero-screenshot.png',
+    mainImageAlt: 'Automate your human resource operations with HR Form Templates from Formester!',
+    keywords: [
+      'HR form builder',
+      'HR form templates',
+      'Data collection',
+      'Automation',
+      'Job applications',
+      'Leave management',
+      'Employee onboarding',
+      'Performance insights',
+      'Training',
+      'Formester',
+      'Data management',
+      'HR solutions',
+      'Form creation',
+      'HR Solution',
+      'HR automation',
+      'Employee engagement',
+      'Data analytics',
+      'HR software',
+      'Online forms',
+      'Digital transformation',
+      'HR efficiency',
+      'Data-driven decisions',
+      'Job Application Templates'
+    ]
+  }
+  return getSiteMeta(metaData)
+})
+
+useHead({
+  title: 'Automate Human Resource Operations | No-Code Form Builder',
+  meta: [...meta.value],
+  link: [
+    { rel: 'canonical', href: 'https://formester.com/use-case/human-resource/' }
+  ]
+})
+
+useJsonld({
+  '@context': 'http://schema.org',
+  '@graph': [
+    {
+      '@type': 'Corporation',
+      '@id': 'https://acornglobus.com',
+      name: 'Automate Human Resource Operations | No-Code Form Builder',
+      description: "Optimise HR data management with Formester's No-Code Form Builder and HR Form Templates. Automate job applications, leave management, employee onboarding, performance evaluation, and training",
+      logo: 'https://formester.com/logo.png',
+      url: 'https://formester.com',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Delaware',
+        addressCountry: 'United States'
       }
-      return getSiteMeta(metaData)
     },
-  },
-  head() {
-    return {
-      title: 'Automate Human Resource Operations | No-Code Form Builder',
-      meta: [...this.meta],
-      link: [
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://acornglobus.com',
+      itemListElement: [
         {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: 'https://formester.com/use-case/human-resource/',
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Formester',
+          item: 'https://formester.com/'
         },
-      ],
-    }
-  },
-  jsonld() {
-    return {
-      '@context': 'http://schema.org',
-      '@graph': [
         {
-          '@type': 'Corporation',
-          '@id': 'https://acornglobus.com',
+          '@type': 'ListItem',
+          position: 2,
           name: 'Automate Human Resource Operations | No-Code Form Builder',
-          description:
-            "Optimise HR data management with Formester's No-Code Form Builder and HR Form Templates. Automate job applications, leave management, employee onboarding, performance evaluation, and training",
-          logo: 'https://formester.com/logo.png',
-          url: 'https://formester.com',
-          address: {
-            '@type': 'PostalAddress',
-            addressLocality: 'Delaware',
-            addressCountry: 'United States',
-          },
-        },
-        {
-          '@type': 'BreadcrumbList',
-          '@id': 'https://acornglobus.com',
-          itemListElement: [
-            {
-              '@type': 'ListItem',
-              position: 1,
-              name: 'Formester',
-              item: 'https://formester.com/',
-            },
-            {
-              '@type': 'ListItem',
-              position: 2,
-              name: 'Automate Human Resource Operations | No-Code Form Builder',
-              item: 'https://formester.com/use-case/human-resource/',
-            },
-          ],
-        },
-      ],
+          item: 'https://formester.com/use-case/human-resource/'
+        }
+      ]
     }
-  },
-  data() {
-    return {
-      HelpingFeaturesForHr: [
+  ]
+})
+
+const HelpingFeaturesForHr = [
         {
           heading: 'Automate Job Application Process',
           description:
@@ -227,9 +208,10 @@ export default {
             'Formester helps you create training and development forms tailored to employee needs. HR can easily collect feedback and training preferences. You can design training feedback forms, gather valuable insights from employees, and optimise training programs based on the collected feedback, ensuring continuous improvement in employee development initiatives.',
           imgUrl:
             'hr-solution/HelpingFeaturesForHr/support-employee-growth.svg',
-        },
-      ],
-      typeformStandOutFeatures: [
+        }
+      ]
+
+const typeformStandOutFeatures = [
         {
           title: 'Inefficient Time Management',
           description:
@@ -247,11 +229,8 @@ export default {
           description:
             'Physical documents limit remote access which hampers business flexibility. They also hinder real-time collaborative editing which leads to cumbersome teamwork.',
           img: '/hr-solution/StandOutFeatureSection/lack-of-accessibility.svg',
-        },
-      ],
-    }
-  },
-}
+        }
+      ]
 </script>
 
 <style></style>

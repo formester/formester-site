@@ -54,8 +54,8 @@
           </tr>
         </thead>
         <tbody>
-          <template v-for="category in comparisonTableFeatures">
-            <tr class="category-header" :key="`${category.category}-header`">
+          <template v-for="category in comparisonTableFeatures" :key="`${category.category}`">
+            <tr class="category-header">
               <th colspan="4" class="category-title">{{ category.category }}</th>
             </tr>
             <tr v-for="feature in category.features" :key="`${category.category}-${feature.name}`">
@@ -154,8 +154,8 @@
       </div>
       <table class="table text-start">
         <tbody>
-          <template v-for="category in comparisonTableFeatures">
-            <tr class="category-header" :key="`${category.category}-header-free`">
+          <template v-for="category in comparisonTableFeatures" :key="`${category.category}-free`">
+            <tr class="category-header">
               <th colspan="2" class="category-title">{{ category.category }}</th>
             </tr>
             <tr v-for="feature in category.features" :key="`${category.category}-${feature.name}-free`">
@@ -191,14 +191,16 @@
           </template>
         </tbody>
         <tfoot>
-          <td colspan="2">
-            <a
-              href="https://app.formester.com/users/sign_up"
-              class="table__button muted d-block text-center"
-            >
-              Start for free
-            </a>
-          </td>
+          <tr>
+            <td colspan="2">
+              <a
+                href="https://app.formester.com/users/sign_up"
+                class="table__button muted d-block text-center"
+              >
+                Start for free
+              </a>
+            </td>
+          </tr>
         </tfoot>
       </table>
       <!-- personal -->
@@ -217,8 +219,8 @@
       </div>
       <table class="table text-start">
         <tbody>
-          <template v-for="category in comparisonTableFeatures">
-            <tr class="category-header" :key="`${category.category}-header-personal`">
+          <template v-for="category in comparisonTableFeatures" :key="`${category.category}-personal`">
+            <tr class="category-header">
               <th colspan="2" class="category-title">{{ category.category }}</th>
             </tr>
             <tr v-for="feature in category.features" :key="`${category.category}-${feature.name}-personal`">
@@ -254,14 +256,16 @@
           </template>
         </tbody>
         <tfoot>
-          <td colspan="2">
-            <a
-              href="https://app.formester.com/users/sign_up"
-              class="table__button d-block text-center"
-            >
-              Get Started
-            </a>
-          </td>
+          <tr>
+            <td colspan="2">
+              <a
+                href="https://app.formester.com/users/sign_up"
+                class="table__button d-block text-center"
+              >
+                Get Started
+              </a>
+            </td>
+          </tr>
         </tfoot>
       </table>
       <!-- business -->
@@ -282,8 +286,8 @@
       </div>
       <table class="table text-start">
         <tbody>
-          <template v-for="category in comparisonTableFeatures">
-            <tr class="category-header" :key="`${category.category}-header-business`">
+          <template v-for="category in comparisonTableFeatures" :key="`${category.category}-business`">
+            <tr class="category-header">
               <th colspan="2" class="category-title">{{ category.category }}</th>
             </tr>
             <tr v-for="feature in category.features" :key="`${category.category}-${feature.name}-business`">
@@ -319,14 +323,16 @@
           </template>
         </tbody>
         <tfoot>
-          <td colspan="2">
-            <a
-              href="https://app.formester.com/users/sign_up"
-              class="table__button hglt d-block text-center"
-            >
-              Get Started
-            </a>
-          </td>
+          <tr>
+            <td colspan="2">
+              <a
+                href="https://app.formester.com/users/sign_up"
+                class="table__button hglt d-block text-center"
+              >
+                Get Started
+              </a>
+            </td>
+          </tr>
         </tfoot>
       </table>
     </div>

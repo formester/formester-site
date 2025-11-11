@@ -62,13 +62,11 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import getSiteMeta from '@/utils/getSiteMeta'
 
-export default {
-  computed: {
-    meta() {
-      const metaData = {
+const meta = computed(() => {
+  const metaData = {
         type: 'website',
         url: 'https://formester.com/plugins/webflow/',
         title: 'Craft Engaging Online Forms for Webflow | Formester',
@@ -99,24 +97,21 @@ export default {
           'data collection',
         ],
       }
-      return getSiteMeta(metaData)
+  return getSiteMeta(metaData)
+})
+
+useHead({
+  title: 'Craft Engaging Online Forms for Webflow | Formester',
+  meta: [...meta.value],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://formester.com/plugins/webflow/',
     },
-  },
-  head() {
-    return {
-      title: 'Craft Engaging Online Forms for Webflow | Formester',
-      meta: [...this.meta],
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: 'https://formester.com/plugins/webflow/',
-        },
-      ],
-    }
-  },
-  jsonld() {
-    return {
+  ],
+})
+
+useJsonld({
       '@context': 'http://schema.org',
       '@graph': [
         {
@@ -146,11 +141,9 @@ export default {
           ],
         },
       ],
-    }
-  },
-  data() {
-    return {
-      webflowSteps: [
+    })
+
+const webflowSteps = [
         {
           description:
             'Sign up to a Formester account for free and build an online form you want to integrate. You can also select any pre-designed template from our template library. Once your online form is ready, click on the "Embed" tab and copy the provided embed code.',
@@ -169,8 +162,9 @@ export default {
           imageSrc: 'plugins/webflow/steps/step3.svg',
           imageAlt: 'Webflow page with embedded Formester form',
         },
-      ],
-      features: [
+      ]
+
+const features = [
         {
           title: 'Order Processing',
           description:
@@ -207,8 +201,9 @@ export default {
             'Collect powerful form analytics for actionable insights.',
           img: 'plugins/webflow/icons/form-analytics.svg',
         },
-      ],
-      faqs: [
+      ]
+
+const faqs = [
         {
           question:
             'How can I integrate Formester forms with my Webflow website or blog?',
@@ -233,10 +228,8 @@ export default {
           answer:
             'Embedding formster forms in Webflow helps you automate data collection without having to worry about maintaining a backend database. Apart from that, Formester has advanced spam protection powered by AI that secures your form submissions and adapts itself based on the submissions.',
         },
-      ],
-    }
-  },
-}
+      ]
+
 </script>
 
 <style scoped>

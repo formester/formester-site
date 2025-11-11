@@ -156,7 +156,6 @@ export default {
       if (minDuplicates > this.duplicateCount) {
         console.log('Increasing duplicates to:', minDuplicates)
         this.duplicateCount = minDuplicates
-        this.$forceUpdate() // Force re-render with more duplicates if needed
 
         // Re-initialize after a short delay to allow re-render
         setTimeout(() => this.initTicker(), 100)
