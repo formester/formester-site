@@ -16,6 +16,7 @@
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          @click="toggleNav"
         >
           <nuxt-img src="/toggle.svg" alt="Nav-menu-button" />
         </button>
@@ -294,8 +295,6 @@ import NavItem from './NavItem.vue'
 import FeaturesDropdown from './FeaturesDropdown.vue'
 import ResourcesDropdown from './ResourcesDropdown.vue'
 import TemplatesDropdown from './TemplatesDropdown.vue'
-import axios from 'axios'
-import navItems from '~/static/navbar.json'
 
 export default {
   name: 'NavNavbar',
@@ -320,6 +319,7 @@ export default {
       activeFeatureCategory: '',
       dropdownTimer: null,
       resourcesDropdownTimer: null,
+      bsCollapse: null,
       resourcesList: [
         {
           id: 1,
@@ -356,12 +356,15 @@ export default {
       )
     },
   },
-  mounted() {
-    this.getFeatures()
+  async mounted() {
+    await this.getFeatures()
     this.checkIsMobile()
     window.addEventListener('resize', this.checkIsMobile)
+    if (typeof window !== 'undefined' && window.bootstrap) {
+      this.bsCollapse = new window.bootstrap.Collapse(this.$refs.siteNav, { toggle: false })
+    }
   },
-  beforeDestroy() {
+  beforeUnmount() {
     window.removeEventListener('resize', this.checkIsMobile)
   },
   methods: {
@@ -387,25 +390,47 @@ export default {
       }
     },
 
-    collapseNav() {
-      if (window.innerWidth >= 1200) return
-      const bsCollapse = new bootstrap.Collapse(this.$refs.siteNav)
-      bsCollapse.hide()
+    ensureBsCollapse() {
+      if (!this.bsCollapse && typeof window !== 'undefined' && window.bootstrap) {
+        this.bsCollapse = new window.bootstrap.Collapse(this.$refs.siteNav, { toggle: false })
+      }
+      return this.bsCollapse
     },
 
-    getFeatures() {
-      this.dropdownItems = navItems.map((item) => ({
+    toggleNav() {
+      const c = this.ensureBsCollapse()
+      if (c) c.toggle()
+    },
+
+    collapseNav() {
+      if (window.innerWidth >= 1200) return
+      const c = this.ensureBsCollapse()
+      if (c) c.hide()
+    },
+
+    async getFeatures() {
+      const { public: { strapiUrl } } = useRuntimeConfig()
+      const normalizeImageUrl = (navIcon) => {
+        const direct = navIcon?.imageUrl
+        const nested = navIcon?.image?.url
+        const url = direct || nested || null
+        if (!url) return null
+        if (typeof url === 'string' && url.startsWith('http')) return url
+        return `${strapiUrl}${url}`
+      }
+
+      const items = await $fetch('/navbar.json', { method: 'GET' })
+      this.dropdownItems = items.map((item) => ({
         id: item.id,
         title: item.navTitle,
         description: item.navDescription,
-        imageUrl: item.navIcon?.imageUrl || item.navIcon?.image?.url,
+        imageUrl: normalizeImageUrl(item.navIcon),
         imageAlt: item.navIcon?.imageAlt || '',
         slug: item.slug,
         featureCategory: item.featureCategory || 'Other',
         featurePlan: item.featurePlan || null,
       }))
 
-      // Extract unique categories
       const categories = [
         ...new Set(this.dropdownItems.map((item) => item.featureCategory)),
       ]

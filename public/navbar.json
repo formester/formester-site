@@ -551,7 +551,7 @@
       "imageUrl": null,
       "imageAlt": "Custom CSS",
       "image": {
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/code_icon_7c0efa1ffd.svg",
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/custom_css_4e281d5092.svg",
         "alt": "Custom CSS"
       }
     }
@@ -567,7 +567,7 @@
       "imageUrl": null,
       "imageAlt": "password protected form",
       "image": {
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/hand_1d708b646e.svg",
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/passcode_lock_eef589120a.svg",
         "alt": "password protected form"
       }
     }
@@ -583,7 +583,7 @@
       "imageUrl": null,
       "imageAlt": "smtp integration",
       "image": {
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/message_text_square_02_5014683c23.svg",
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/smtp_6282b1b3e6.svg",
         "alt": "smtp integration"
       }
     }
