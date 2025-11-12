@@ -43,7 +43,7 @@ export default defineNuxtConfig({
 
   site: {
     url: 'https://formester.com/',
-    trailingSlash: true 
+    trailingSlash: true
   },
 
   sitemap: {
@@ -109,37 +109,28 @@ export default defineNuxtConfig({
     },
     hooks: {
       async 'prerender:routes'(ctx) {
-        const axios = (await import('axios')).default
-        
+        const getTemplatesAndCategories = (await import('./utils/getTemplatesAndCategories.js')).default
+
         try {
-          // Fetch all templates ONCE (like Nuxt 2)
-          const { data: templates } = await axios.get(
-            'https://app.formester.com/templates.json',
-            { params: { with_details: true }, timeout: 30000 }
-          )
-          
-          // Fetch categories
-          const { data: categoriesData } = await axios.get(
-            'https://app.formester.com/template_categories/grouped_by_category.json',
-            { timeout: 30000 }
-          )
-          
+          // Fetch all data ONCE using the utility (this populates the cache)
+          const { templateRoutes, categorieRoutes } = await getTemplatesAndCategories()
+
           // Add all template routes
-          templates.forEach(t => {
-            ctx.routes.add(`/templates/${t.slug}`)
+          templateRoutes.forEach(route => {
+            ctx.routes.add(route.route)
           })
-          
+
           // Add all category routes
-          categoriesData.forEach(c => {
-            ctx.routes.add(`/templates/categories/${c.categorySlug}`)
+          categorieRoutes.forEach(route => {
+            ctx.routes.add(route.route)
           })
-          
+
           // Add main templates page
           ctx.routes.add('/templates')
-          
-          console.log(`Added ${templates.length} templates + ${categoriesData.length} categories to prerender`)
+
+          console.log(`✅ Added ${templateRoutes.length} template routes + ${categorieRoutes.length} category routes to prerender`)
         } catch (error) {
-          console.error('Error fetching routes:', error.message)
+          console.error('❌ Error in prerender:routes hook:', error.message)
         }
       }
     }
