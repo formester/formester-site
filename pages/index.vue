@@ -22,7 +22,7 @@ if (data.value?.head) {
 
 // Set JSON-LD schema
 if (data.value?.jsonld) {
-  useJsonld([data.value.jsonld])
+  useJsonld(data.value.jsonld)
 }
 </script>
 

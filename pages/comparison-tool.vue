@@ -399,6 +399,7 @@ useHead({
 
 useJsonld([
   {
+    '@context': 'https://schema.org',
     '@type': 'Corporation',
     '@id': 'https://acornglobus.com',
     name: 'Compare the Best Form Builder Software: Pricing & Features Comparison',
@@ -413,6 +414,7 @@ useJsonld([
     },
   },
   {
+    '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     '@id': 'https://acornglobus.com',
     itemListElement: [

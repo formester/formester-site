@@ -17,7 +17,19 @@ export default async (endpoint, params = {}) => {
   const components = data?.components || data[0]?.components
   const meta = data?.meta || data[0]?.meta
   let head = {}
-  let jsonld = {}
+  let jsonld = []
+  const normalizeJsonLd = (input) => {
+    if (!input) return []
+    let arr = Array.isArray(input) ? input : [input]
+    return arr
+      .filter((item) => item && typeof item === 'object')
+      .map((item) => {
+        if (!item['@context'] || typeof item['@context'] !== 'string') {
+          return { '@context': 'https://schema.org', ...item }
+        }
+        return item
+      })
+  }
   if (!components || !meta) {
     return { head, jsonld, components }
   }
@@ -37,7 +49,7 @@ export default async (endpoint, params = {}) => {
     link: meta?.link,
     meta: [...siteMetaData],
   }
-  jsonld = meta?.jsonld
+  jsonld = normalizeJsonLd(meta?.jsonld)
 
   return { head, jsonld, components }
 }
