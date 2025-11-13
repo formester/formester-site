@@ -1,8 +1,7 @@
 import axios from 'axios'
 
-// Build-time cache with proper key management
+// Single global cache for all requests
 let cache = null
-let cacheKey = null
 
 // Retry helper function
 const fetchWithRetry = async (url, config, retries = 3, delay = 2000) => {
@@ -18,11 +17,8 @@ const fetchWithRetry = async (url, config, retries = 3, delay = 2000) => {
 }
 
 export default async (params = {}) => {
-  // Create cache key
-  const currentKey = JSON.stringify(params)
-  
-  // Return cached data during build if available
-  if (cache && cacheKey === currentKey && typeof window === 'undefined') {
+  // Return cached data if available (build or dev)
+  if (cache) {
     return cache
   }
 
@@ -47,10 +43,10 @@ export default async (params = {}) => {
       data: { data },
     } = await fetchWithRetry(`https://cms.formester.com/api/pdf-templates`, {
     params: {
-     
+
       populate: 'deep',
     },
-  }) 
+  })
 
   templates = templates.map((template) => ({
     ...template,
@@ -82,12 +78,9 @@ export default async (params = {}) => {
   }))
 
   const result = { templateRoutes, categorieRoutes, templates, categories }
-  
-  // Cache result during build only
-  if (typeof window === 'undefined') {
-    cache = result
-    cacheKey = currentKey
-  }
-  
+
+  // Cache result globally
+  cache = result
+
   return result
 }
