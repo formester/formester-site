@@ -106,33 +106,6 @@ export default defineNuxtConfig({
       concurrency: 15,
       interval: 50,
       failOnError: false
-    },
-    hooks: {
-      async 'prerender:routes'(ctx) {
-        const getTemplatesAndCategories = (await import('./utils/getTemplatesAndCategories.js')).default
-
-        try {
-          // Fetch all data ONCE using the utility (this populates the cache)
-          const { templateRoutes, categorieRoutes } = await getTemplatesAndCategories()
-
-          // Add all template routes
-          templateRoutes.forEach(route => {
-            ctx.routes.add(route.route)
-          })
-
-          // Add all category routes
-          categorieRoutes.forEach(route => {
-            ctx.routes.add(route.route)
-          })
-
-          // Add main templates page
-          ctx.routes.add('/templates')
-
-          console.log(`✅ Added ${templateRoutes.length} template routes + ${categorieRoutes.length} category routes to prerender`)
-        } catch (error) {
-          console.error('❌ Error in prerender:routes hook:', error.message)
-        }
-      }
     }
   },
   content: {
