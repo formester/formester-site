@@ -33,7 +33,7 @@ async function fetchNavbar() {
   });
 
   // Save the extracted data to navbar.json
-  fs.writeFileSync('public/navbar.json', JSON.stringify(extractedNavItems, null, 2))
+  fs.writeFileSync('static/navbar.json', JSON.stringify(extractedNavItems, null, 2))
   console.log('✅ navbar.json saved with extracted fields.')
 }
 

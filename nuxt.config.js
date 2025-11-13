@@ -43,7 +43,7 @@ export default defineNuxtConfig({
 
   site: {
     url: 'https://formester.com/',
-    trailingSlash: true 
+    trailingSlash: true
   },
 
   sitemap: {
@@ -107,42 +107,6 @@ export default defineNuxtConfig({
       concurrency: 15,
       interval: 50,
       failOnError: false
-    },
-    hooks: {
-      async 'prerender:routes'(ctx) {
-        const axios = (await import('axios')).default
-        
-        try {
-          // Fetch all templates ONCE (like Nuxt 2)
-          const { data: templates } = await axios.get(
-            'https://app.formester.com/templates.json',
-            { params: { with_details: true }, timeout: 30000 }
-          )
-          
-          // Fetch categories
-          const { data: categoriesData } = await axios.get(
-            'https://app.formester.com/template_categories/grouped_by_category.json',
-            { timeout: 30000 }
-          )
-          
-          // Add all template routes
-          templates.forEach(t => {
-            ctx.routes.add(`/templates/${t.slug}`)
-          })
-          
-          // Add all category routes
-          categoriesData.forEach(c => {
-            ctx.routes.add(`/templates/categories/${c.categorySlug}`)
-          })
-          
-          // Add main templates page
-          ctx.routes.add('/templates')
-          
-          console.log(`Added ${templates.length} templates + ${categoriesData.length} categories to prerender`)
-        } catch (error) {
-          console.error('Error fetching routes:', error.message)
-        }
-      }
     }
   },
   content: {

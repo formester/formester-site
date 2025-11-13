@@ -155,7 +155,6 @@ import closeIcon from '~/assets/images/x-close.svg'
 import getSiteMeta from '../../utils/getSiteMeta'
 import isEmpty from 'lodash/isEmpty'
 import getTemplatesAndCategories from '@/utils/getTemplatesAndCategories'
-import axios from 'axios'
 
 // Components
 const MoreTemplates = defineAsyncComponent(() => import('../../components/template/MoreTemplates.vue'))
@@ -169,24 +168,19 @@ const route = useRoute()
 const { data: fetchedData, error: fetchError } = await useAsyncData(`template-${route.params.slug}`, async () => {
   try {
     const slug = route.params.slug
-    // First, get templates and categories from the main API
-    const { templates, categories } = await getTemplatesAndCategories()
+    // Get templates and categories (includes PDF data in payload)
+    const { templateRoutes, templates, categories } = await getTemplatesAndCategories()
     const template = templates.find((template) => template.slug === slug)
-    
+
     if (!template) {
       throw createError({ statusCode: 404, message: 'Template not found' })
     }
 
-    const {
-      data: { data },
-    } = await axios.get(`https://cms.formester.com/api/pdf-templates`, {
-      params: {
-        'filters[slug][$eqi]': slug,
-        populate: 'deep',
-      },
-    })
-    
-    return { template, categories, data: data[0] }
+    // PDF data is already in the templateRoutes payload
+    const routePayload = templateRoutes.find(r => r.route === `/templates/${slug}`)
+    const pdfData = routePayload?.payload?.data || null
+
+    return { template, categories, data: pdfData }
   } catch (err) {
     console.error('Error fetching template:', err)
     throw createError({ statusCode: 500, message: 'Internal Server Error' })
