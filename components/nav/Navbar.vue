@@ -295,6 +295,7 @@ import NavItem from './NavItem.vue'
 import FeaturesDropdown from './FeaturesDropdown.vue'
 import ResourcesDropdown from './ResourcesDropdown.vue'
 import TemplatesDropdown from './TemplatesDropdown.vue'
+import navbarData from '~/constants/navbar.json'
 
 export default {
   name: 'NavNavbar',
@@ -356,8 +357,8 @@ export default {
       )
     },
   },
-  async mounted() {
-    await this.getFeatures()
+  mounted() {
+    this.getFeatures()
     this.checkIsMobile()
     window.addEventListener('resize', this.checkIsMobile)
     if (typeof window !== 'undefined' && window.bootstrap) {
@@ -398,28 +399,26 @@ export default {
     },
 
     toggleNav() {
-      const c = this.ensureBsCollapse()
-      if (c) c.toggle()
+      const navbarCollapse = this.ensureBsCollapse()
+      if (navbarCollapse) navbarCollapse.toggle()
     },
 
     collapseNav() {
       if (window.innerWidth >= 1200) return
-      const c = this.ensureBsCollapse()
-      if (c) c.hide()
+      const navbarCollapse = this.ensureBsCollapse()
+      if (navbarCollapse) navbarCollapse.hide()
     },
 
-    async getFeatures() {
-      const { public: { strapiUrl } } = useRuntimeConfig()
+    getFeatures() {
       const normalizeImageUrl = (navIcon) => {
         const direct = navIcon?.imageUrl
         const nested = navIcon?.image?.url
         const url = direct || nested || null
         if (!url) return null
-        if (typeof url === 'string' && url.startsWith('http')) return url
-        return `${strapiUrl}${url}`
+        return url
       }
 
-      const items = await $fetch('/navbar.json', { method: 'GET' })
+      const items = navbarData
       this.dropdownItems = items.map((item) => ({
         id: item.id,
         title: item.navTitle,
