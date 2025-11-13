@@ -56,6 +56,7 @@ useHead({
 
 useJsonld([
   {
+    '@context': 'https://schema.org',
     '@type': 'Corporation',
     '@id': 'https://acornglobus.com',
     name: 'Formester',
@@ -70,6 +71,7 @@ useJsonld([
     },
   },
   {
+    '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     '@id': 'https://acornglobus.com',
     itemListElement: [

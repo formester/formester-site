@@ -148,6 +148,7 @@ useHead({
 
 useJsonld([
   {
+    '@context': 'https://schema.org',
     '@type': 'ContactPage',
     name: 'Contact | Online Form Builder - Formester',
     description: 'Create custom online forms with ease using Formester - the top-rated online form builder. Contact us today to start building your perfect form!',

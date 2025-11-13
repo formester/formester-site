@@ -405,8 +405,11 @@ const jsonldData = computed(() => {
     try {
       blogData.value.schema.forEach((s) => {
         const parsedSchema = JSON.parse(s.type)
-        if (typeof parsedSchema === 'object') {
-          jsonData.push(parsedSchema)
+        if (parsedSchema && typeof parsedSchema === 'object') {
+          const withContext = !parsedSchema['@context'] || typeof parsedSchema['@context'] !== 'string'
+            ? { '@context': 'https://schema.org', ...parsedSchema }
+            : parsedSchema
+          jsonData.push(withContext)
         }
       })
     } catch (error) {

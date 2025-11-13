@@ -349,7 +349,7 @@ useHead({
 })
 
 useJsonld([{
-      '@context': 'http://schema.org',
+      '@context': 'https://schema.org',
       '@type': 'WebApplication',
       name: 'Terms of Service | Formester',
       logo: 'https://formester.com/logo.png',

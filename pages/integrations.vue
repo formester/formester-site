@@ -128,6 +128,7 @@ useHead({
 
 useJsonld([
   {
+    '@context': 'https://schema.org',
     '@type': 'Corporation',
     name: 'Formester Integrations | Automate Your Workflows',
     description: 'Automate your workflows with powerful form integrations. Set up triggers and transfer data from your forms to 1000+ Apps. Get started - It is free!',

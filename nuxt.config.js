@@ -61,7 +61,8 @@ export default defineNuxtConfig({
     '~/plugins/jsonld',
     '~/plugins/notifications-client',
     '~/plugins/crisp.client.js',
-    '~/plugins/consent.client.js'
+    '~/plugins/consent.client.js',
+    '~/plugins/bootstrap.client.js'
   ],
 
   // Auto import components

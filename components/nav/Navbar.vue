@@ -16,6 +16,7 @@
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          @click="toggleNav"
         >
           <nuxt-img src="/toggle.svg" alt="Nav-menu-button" />
         </button>
@@ -294,8 +295,7 @@ import NavItem from './NavItem.vue'
 import FeaturesDropdown from './FeaturesDropdown.vue'
 import ResourcesDropdown from './ResourcesDropdown.vue'
 import TemplatesDropdown from './TemplatesDropdown.vue'
-import axios from 'axios'
-import navItems from '~/static/navbar.json'
+import navbarData from '~/constants/navbar.json'
 
 export default {
   name: 'NavNavbar',
@@ -320,6 +320,7 @@ export default {
       activeFeatureCategory: '',
       dropdownTimer: null,
       resourcesDropdownTimer: null,
+      bsCollapse: null,
       resourcesList: [
         {
           id: 1,
@@ -360,8 +361,11 @@ export default {
     this.getFeatures()
     this.checkIsMobile()
     window.addEventListener('resize', this.checkIsMobile)
+    if (typeof window !== 'undefined' && window.bootstrap) {
+      this.bsCollapse = new window.bootstrap.Collapse(this.$refs.siteNav, { toggle: false })
+    }
   },
-  beforeDestroy() {
+  beforeUnmount() {
     window.removeEventListener('resize', this.checkIsMobile)
   },
   methods: {
@@ -387,25 +391,45 @@ export default {
       }
     },
 
+    ensureBsCollapse() {
+      if (!this.bsCollapse && typeof window !== 'undefined' && window.bootstrap) {
+        this.bsCollapse = new window.bootstrap.Collapse(this.$refs.siteNav, { toggle: false })
+      }
+      return this.bsCollapse
+    },
+
+    toggleNav() {
+      const navbarCollapse = this.ensureBsCollapse()
+      if (navbarCollapse) navbarCollapse.toggle()
+    },
+
     collapseNav() {
       if (window.innerWidth >= 1200) return
-      const bsCollapse = new bootstrap.Collapse(this.$refs.siteNav)
-      bsCollapse.hide()
+      const navbarCollapse = this.ensureBsCollapse()
+      if (navbarCollapse) navbarCollapse.hide()
     },
 
     getFeatures() {
-      this.dropdownItems = navItems.map((item) => ({
+      const normalizeImageUrl = (navIcon) => {
+        const direct = navIcon?.imageUrl
+        const nested = navIcon?.image?.url
+        const url = direct || nested || null
+        if (!url) return null
+        return url
+      }
+
+      const items = navbarData
+      this.dropdownItems = items.map((item) => ({
         id: item.id,
         title: item.navTitle,
         description: item.navDescription,
-        imageUrl: item.navIcon?.imageUrl || item.navIcon?.image?.url,
+        imageUrl: normalizeImageUrl(item.navIcon),
         imageAlt: item.navIcon?.imageAlt || '',
         slug: item.slug,
         featureCategory: item.featureCategory || 'Other',
         featurePlan: item.featurePlan || null,
       }))
 
-      // Extract unique categories
       const categories = [
         ...new Set(this.dropdownItems.map((item) => item.featureCategory)),
       ]
