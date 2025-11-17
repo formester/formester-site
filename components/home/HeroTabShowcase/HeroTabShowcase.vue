@@ -106,6 +106,11 @@ export default {
   },
   methods: {
     handleMouseMove(event) {
+      // Check if ref exists before accessing it
+      if (!this.$refs.heroSection) {
+        return
+      }
+      
       const rect = this.$refs.heroSection.getBoundingClientRect()
       const centerX = rect.width / 2
       const centerY = rect.height / 2
