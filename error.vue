@@ -28,9 +28,21 @@
 
 <script setup>
 import Navbar from '@/components/nav/Navbar.vue'
+import { onMounted } from 'vue'
 
 const props = defineProps({
   error: Object
+})
+
+if (process.server) {
+  console.error('Nuxt error page (server):', props.error)
+}
+
+onMounted(() => {
+  if (process.client) {
+    console.error('Nuxt error page:', props.error)
+    console.error('Status:', props.error?.statusCode, 'Message:', props.error?.message)
+  }
 })
 
 const handleError = () => {
