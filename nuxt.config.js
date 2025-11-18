@@ -1,6 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-const isPreview = process.env.DEPLOY_CONTEXT === 'deploy-preview' || process.env.CONTEXT === 'deploy-preview'
-const isNetlify = process.env.NETLIFY === 'true'
 export default defineNuxtConfig({
   // Global page headers
   app: {
@@ -106,8 +104,8 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: ['/'],
       ignore: ['/api'],
-      concurrency: isNetlify ? 1 : (isPreview ? 1 : 2),
-      interval: isNetlify ? 800 : (isPreview ? 600 : 200),
+      concurrency: 15,
+      interval: 50,
       failOnError: false
     }
   },
