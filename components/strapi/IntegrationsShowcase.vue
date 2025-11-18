@@ -93,7 +93,7 @@ export default {
           tools: [
             { name: 'Airtable', icon: '/icons/airtable.svg' },
             { name: 'Notion', icon: '/icons/notion.svg' },
-            { name: 'GoogleSheets', icon: '/icons/GoogleSheets.svg' },
+            { name: 'GoogleSheets', icon: '/icons/googlesheets.svg' },
           ],
           action: 'Update Sheets & CRMs',
         },
