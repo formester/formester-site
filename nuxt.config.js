@@ -104,8 +104,8 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: ['/'],
       ignore: ['/api'],
-      concurrency: 15,
-      interval: 50,
+      concurrency: 2,
+      interval: 200,
       failOnError: false
     }
   },
