@@ -100,9 +100,9 @@ export default defineNuxtConfig({
 
   // Nitro configuration (replaces generate)
   nitro: {
-    sourceMap: false,
+    sourceMap: true,
     prerender: {
-      crawlLinks: false,
+      crawlLinks: true,
       routes: ['/'],
       ignore: ['/api'],
       concurrency: 15,
