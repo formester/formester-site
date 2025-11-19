@@ -21,7 +21,7 @@ export default defineNuxtConfig({
         href: 'https://formester.com/',
       },
     ],
-    // Custom Javascript
+
     script: [
       {
         src: 'https://affonso.io/js/pixel.min.js',
