@@ -100,8 +100,9 @@ export default defineNuxtConfig({
 
   // Nitro configuration (replaces generate)
   nitro: {
+    sourceMap: false,
     prerender: {
-      crawlLinks: true,
+      crawlLinks: false,
       routes: ['/'],
       ignore: ['/api'],
       concurrency: 15,
@@ -128,6 +129,22 @@ export default defineNuxtConfig({
       baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'http://localhost:3000',
       strapiUrl: 'https://cms.formester.com',
       clarityId: 'emw9o333qb'
+    }
+  },
+
+  // Disable sourcemaps to lower memory usage
+  sourcemap: {
+    server: false,
+    client: false
+  },
+
+  // Vite build tuning
+  vite: {
+    build: {
+      sourcemap: false
+    },
+    css: {
+      devSourcemap: false
     }
   },
 
