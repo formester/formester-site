@@ -98,9 +98,9 @@ export default defineNuxtConfig({
     }
   },
 
-  // Nitro configuration (replaces generate)
+  // Nitro configuration
   nitro: {
-    sourceMap: true,
+    sourceMap: false,
     prerender: {
       crawlLinks: true,
       routes: ['/'],
