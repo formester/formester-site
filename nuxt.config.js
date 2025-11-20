@@ -75,7 +75,8 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap',
     'nuxt-gtag',
     '@vite-pwa/nuxt',
-    '@nuxt/image'
+    '@nuxt/image',
+    'nuxt-jsonld'
   ],
 
   // GTM/Gtag configuration
