@@ -4,7 +4,11 @@
 
 [build.environment]
   NODE_VERSION = "20"
-  NODE_OPTIONS = "--max-old-space-size=4096"
+  NODE_OPTIONS = "--max-old-space-size=6144"
+
+# Increase build timeout
+[build.processing]
+  skip_processing = false
 
 [[redirects]]
   from = "/*"

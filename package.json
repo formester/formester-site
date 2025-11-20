@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "npm run fetch-navbar && nuxt dev",
-    "build": "npm run fetch-navbar && nuxt build",
+    "build": "npm run fetch-navbar && node --max-old-space-size=6144 ./node_modules/nuxt/bin/nuxt.mjs build",
     "start": "npm run fetch-navbar && nuxt preview",
     "generate": "npm run fetch-navbar && nuxt generate",
     "fetch-navbar": "node scripts/fetch-navbar.js",
