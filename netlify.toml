@@ -1,14 +1,10 @@
 [build]
-  command = "npm run build && find .output -type d -name public"
+  command = "npm run build"
   publish = ".output/public"
 
 [build.environment]
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=6144"
-
-# Increase build timeout
-[build.processing]
-  skip_processing = false
 
 [[redirects]]
   from = "/*"

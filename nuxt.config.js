@@ -105,6 +105,7 @@ export default defineNuxtConfig({
 
   // Nitro configuration
   nitro: {
+    preset: 'static', // Force static generation instead of Netlify Functions
     sourceMap: false,
     minify: false, // Disable minification to save memory
     prerender: {
