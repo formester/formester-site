@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "npm run build && find .output -type d -name public"
   publish = ".output/public"
 
 [build.environment]

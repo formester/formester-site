@@ -98,6 +98,11 @@ export default defineNuxtConfig({
     }
   },
 
+  // Output directory configuration
+  dir: {
+    public: 'public'
+  },
+
   // Nitro configuration
   nitro: {
     sourceMap: false,
