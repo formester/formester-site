@@ -23,7 +23,7 @@ export default async (params = {}) => {
   }
 
   let { data: templates } = await fetchWithRetry(
-    "http://localhost:5000/templates.json",
+    "https://app.formester.com/templates.json",
     {
       params: {
         ...params,
@@ -33,7 +33,7 @@ export default async (params = {}) => {
   )
 
   const { data: categories } = await fetchWithRetry(
-    "http://localhost:5000/template_categories.json"
+    "https://app.formester.com/template_categories.json"
   )
 
   const dummyDescription =
@@ -66,7 +66,7 @@ export default async (params = {}) => {
   })
 
   const { data: templatesGroupedByCategory } = await fetchWithRetry(
-    "http://localhost:5000/template_categories/grouped_by_category.json"
+    "https://app.formester.com/template_categories/grouped_by_category.json"
   )
 
   const categorieRoutes = templatesGroupedByCategory.map((item) => ({
