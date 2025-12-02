@@ -16,13 +16,13 @@
   },
   "dependencies": {
     "@builder.io/partytown": "^0.10.3",
-    "@kyvg/vue3-notification": "^3.2.1",
+    "@kyvg/vue3-notification": "^3.4.2",
     "@nuxt/content": "^2.13.2",
     "@nuxt/image": "^1.8.1",
     "@nuxtjs/robots": "^4.1.7",
     "@nuxtjs/sitemap": "^5.3.5",
     "@vite-pwa/nuxt": "^0.10.5",
-    "axios": "^1.7.7",
+    "axios": "^1.13.2",
     "bootstrap": "^5.3.3",
     "marked": "^4.3.0",
     "nuxt-gtag": "^3.0.1",
@@ -36,6 +36,6 @@
   "devDependencies": {
     "eslint-config-prettier": "^10.1.8",
     "nuxt": "^4.0.0",
-    "prettier": "^3.6.2"
+    "prettier": "^3.7.3"
   }
 }
