@@ -11,7 +11,7 @@ async function fetchNavbar() {
         populate: 'deep',
         'sort[0]': 'id',
       },
-      timeout: 10000, // 10 second timeout
+      timeout: 10000,
     })
 
     // Extract only the required fields for each item
@@ -43,14 +43,6 @@ async function fetchNavbar() {
     console.log('✅ constants/navbar.json saved with extracted fields.')
   } catch (error) {
     console.warn('⚠️  Failed to fetch navbar data from API:', error.message)
-
-    // Check if navbar.json already exists
-    if (fs.existsSync('constants/navbar.json')) {
-      console.log('✅ Using existing constants/navbar.json file.')
-    } else {
-      console.error('❌ No existing navbar.json found. Build may fail.')
-      process.exit(1)
-    }
   }
 }
 

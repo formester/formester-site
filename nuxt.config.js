@@ -140,10 +140,7 @@ export default defineNuxtConfig({
   },
 
   // Disable sourcemaps to lower memory usage
-  sourcemap: {
-    server: false,
-    client: false
-  },
+  sourcemap: false,
 
   // Vite build tuning
   vite: {
