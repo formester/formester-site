@@ -27,7 +27,7 @@
               'description-truncated': isClient && !showFullDescription
             }"
           >
-            <p
+            <div
               class="content-description mt-0 mb-1"
               v-html="activeCategory.description"
             />
