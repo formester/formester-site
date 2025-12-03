@@ -86,14 +86,15 @@ export default {
   },
   methods: {
     initializeExpandedState() {
-      // For SSR: expand all categories by default for SEO
-      const allExpanded = {}
+      // For SSR: only expand first category to prevent memory issues during build
+      // On client: expand all or restore from localStorage
+      const expandedState = {}
       if (this.templateCategories) {
-        Object.keys(this.templateCategories).forEach(key => {
-          allExpanded[key] = true
+        Object.keys(this.templateCategories).forEach((key, index) => {
+          expandedState[key] = index === 0  // Only first category expanded
         })
       }
-      return allExpanded
+      return expandedState
     },
     formatCategoryHeading(str) {
       if (!str) return '';
@@ -119,17 +120,17 @@ export default {
       this.showCategories = !this.isMobile
       window.addEventListener('resize', this.handleResize)
 
-      // On client-side, apply saved state or collapse all except first
+      // On client-side, expand all categories for better UX, or restore saved state
       const savedState = localStorage.getItem('isCollapsedState')
       if (savedState) {
         this.isExpanded = JSON.parse(savedState)
       } else {
-        // Collapse all except first category after initial render
-        const collapsedState = {}
-        Object.keys(this.templateCategories).forEach((key, index) => {
-          collapsedState[key] = index === 0
+        // Expand all categories on client for better UX
+        const allExpanded = {}
+        Object.keys(this.templateCategories).forEach(key => {
+          allExpanded[key] = true
         })
-        this.isExpanded = collapsedState
+        this.isExpanded = allExpanded
       }
 
       window.addEventListener('beforeunload', this.clearIsExpandedState)
