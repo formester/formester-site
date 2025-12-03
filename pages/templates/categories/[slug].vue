@@ -15,19 +15,20 @@ const route = useRoute()
 
 const slug = computed(() => route.params.slug)
 
-const { data } = await useAsyncData('template-categories-all', async () => {
+const { data } = await useAsyncData(`template-category-${slug.value}`, async () => {
   const result = await getTemplatesAndCategories()
-  return result
+  // Only store the data needed for this specific category to reduce memory
+  const categoryRoute = result.categorieRoutes?.find(
+    (cate) => cate.route === `/templates/categories/${slug.value}`
+  )
+  return {
+    templates: categoryRoute?.payload?.templates || [],
+    categories: result.categories
+  }
 })
 
 const categories = computed(() => data.value?.categories || {})
-
-const templates = computed(() => {
-  const categoryRoute = data.value?.categorieRoutes?.find(
-    (cate) => cate.route === `/templates/categories/${slug.value}`
-  )
-  return categoryRoute?.payload?.templates || []
-})
+const templates = computed(() => data.value?.templates || [])
 
 const findCategoryBySlug = (slugValue) => {
   const allCategories = Object.values(categories.value).flatMap((arr) => arr)

@@ -169,18 +169,19 @@ const { data: fetchedData, error: fetchError } = await useAsyncData(`template-${
   try {
     const slug = route.params.slug
     // Get templates and categories (includes PDF data in payload)
-    const { templateRoutes, templates, categories } = await getTemplatesAndCategories()
-    const template = templates.find((template) => template.slug === slug)
+    const result = await getTemplatesAndCategories()
+    const template = result.templates.find((t) => t.slug === slug)
 
     if (!template) {
       throw createError({ statusCode: 404, message: 'Template not found' })
     }
 
     // PDF data is already in the templateRoutes payload
-    const routePayload = templateRoutes.find(r => r.route === `/templates/${slug}`)
+    const routePayload = result.templateRoutes.find(r => r.route === `/templates/${slug}`)
     const pdfData = routePayload?.payload?.data || null
 
-    return { template, categories, data: pdfData }
+    // Only return the data needed for this template to reduce memory
+    return { template, categories: result.categories, data: pdfData }
   } catch (err) {
     console.error('Error fetching template:', err)
     throw createError({ statusCode: 500, message: 'Internal Server Error' })
