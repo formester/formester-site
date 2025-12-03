@@ -46,9 +46,10 @@
         <template v-if="filteredTemplates.length > 0">
           <section class="templates-grid" aria-label="Templates">
             <TemplateCard
-              v-for="template in ssrTemplates"
+              v-for="(template, index) in filteredTemplates"
               :key="template.id"
               :template="template"
+              :class="{ 'template-hidden': isClient && index >= visibleCount }"
             />
           </section>
           <div v-if="isClient && visibleCount < filteredTemplates.length" class="d-flex justify-content-center mt-3">
@@ -134,14 +135,6 @@ export default {
           template.name.toLowerCase().includes(searchTerm) ||
           template.description?.toLowerCase().includes(searchTerm)
       )
-    },
-    ssrTemplates() {
-      // During SSR (build), only render first 12 templates to prevent memory issues
-      // On client, render based on visibleCount for pagination
-      if (!this.isClient) {
-        return this.filteredTemplates.slice(0, 12)
-      }
-      return this.filteredTemplates.slice(0, this.visibleCount)
     },
     descriptionButtonLabel() {
       return this.showFullDescription ? 'Show less' : 'Show more'
@@ -252,6 +245,10 @@ export default {
   grid-auto-rows: min-content;
   gap: 24px;
   margin-top: 1rem;
+}
+
+.template-hidden {
+  display: none;
 }
 
 .no-templates {
