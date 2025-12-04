@@ -53,9 +53,9 @@
         </div>
       </div>
       <div
-        class="categories collapse"
+        class="categories"
         :id="'categories' + categoryType"
-        :class="{ show: isExpanded[categoryType] }"
+        :class="{ 'categories-collapsed': !isExpanded[categoryType] }"
       >
         <NuxtLink
           v-for="category in categories"
@@ -80,11 +80,21 @@ export default {
   data() {
     return {
       showCategories: true,
-      isExpanded: {},
+      isExpanded: this.initializeExpandedState(),
       isMobile: false,
     }
   },
   methods: {
+    initializeExpandedState() {
+      // For SSR: expand all categories by default for SEO
+      const allExpanded = {}
+      if (this.templateCategories) {
+        Object.keys(this.templateCategories).forEach(key => {
+          allExpanded[key] = true
+        })
+      }
+      return allExpanded
+    },
     formatCategoryHeading(str) {
       if (!str) return '';
       // Insert space before all caps and replace underscores with space
@@ -108,17 +118,22 @@ export default {
       this.handleResize()
       this.showCategories = !this.isMobile
       window.addEventListener('resize', this.handleResize)
-    }
 
-    const savedState = localStorage.getItem('isCollapsedState')
-    if (savedState) {
-      this.isExpanded = JSON.parse(savedState)
-    } else {
-      // Set first category type as expanded
-      this.isExpanded = { [Object.keys(this.templateCategories)[0]]: true }
-    }
+      // On client-side, apply saved state or collapse all except first
+      const savedState = localStorage.getItem('isCollapsedState')
+      if (savedState) {
+        this.isExpanded = JSON.parse(savedState)
+      } else {
+        // Collapse all except first category after initial render
+        const collapsedState = {}
+        Object.keys(this.templateCategories).forEach((key, index) => {
+          collapsedState[key] = index === 0
+        })
+        this.isExpanded = collapsedState
+      }
 
-    window.addEventListener('beforeunload', this.clearIsExpandedState)
+      window.addEventListener('beforeunload', this.clearIsExpandedState)
+    }
   },
   beforeDestroy() {
     // Remove the event listener when the component is destroyed
@@ -193,6 +208,17 @@ h2::first-letter {
 .rotate-arrow {
   transform: rotate(180deg);
   transition: all 0.3s ease-in-out;
+}
+
+.categories {
+  max-height: 2000px; /* Large enough to fit all categories */
+  overflow: visible;
+  transition: max-height 0.3s ease;
+}
+
+.categories-collapsed {
+  max-height: 0;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 840px) {

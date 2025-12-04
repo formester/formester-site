@@ -38,7 +38,7 @@ export default {
     previewImageUrl() {
       return (
         this.template.previewImageUrl ||
-        require('@/assets/images/templates/create_form.png')
+        '/templates/create_form.png'
       )
     },
   },

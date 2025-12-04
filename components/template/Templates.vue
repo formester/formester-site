@@ -17,17 +17,23 @@
           Templates
         </h1>
         <div
-          v-if="activeCategory && activeCategory.description"
+          v-if="activeCategory?.description"
           class="my-2"
-          :class="{ 'd-flex align-items-center': !showFullDescription }"
         >
-          <p
-            ref="description"
-            class="content-description mt-0 mb-1"
-            v-html="activeCategory.description"
-          />
+          <div
+            class="description-wrapper"
+            :class="{
+              'expanded': showFullDescription,
+              'description-truncated': isClient && !showFullDescription
+            }"
+          >
+            <div
+              class="content-description mt-0 mb-1"
+              v-html="activeCategory.description"
+            />
+          </div>
           <button
-            v-if="showHandleButton"
+            v-if="isClient"
             class="content-description-handle-button text-nowrap"
             @click="toggleDescription"
           >
@@ -40,12 +46,13 @@
         <template v-if="filteredTemplates.length > 0">
           <section class="templates-grid" aria-label="Templates">
             <TemplateCard
-              v-for="template in paginatedTemplates"
+              v-for="(template, index) in filteredTemplates"
               :key="template.id"
               :template="template"
+              :class="{ 'template-hidden': isClient && index >= visibleCount }"
             />
           </section>
-          <div v-if="visibleCount < filteredTemplates.length" class="d-flex justify-content-center mt-3">
+          <div v-if="isClient && visibleCount < filteredTemplates.length" class="d-flex justify-content-center mt-3">
             <button
               @click="viewMore"
               class="btn-primary"
@@ -91,17 +98,19 @@ export default {
     return {
       searchTerm: '',
       showFullDescription: false,
-      showHandleButton: false,
       visibleCount: 12,
+      isClient: false,
     }
+  },
+  mounted() {
+    // Apply client-side hiding after initial SSR
+    this.isClient = true
   },
   watch: {
     activeCategory: {
       immediate: true,
       handler() {
-        this.$nextTick(() => {
-          this.checkDescriptionOverflow()
-        })
+        this.showFullDescription = false
       },
     },
   },
@@ -112,13 +121,6 @@ export default {
     },
     toggleDescription() {
       this.showFullDescription = !this.showFullDescription
-    },
-    checkDescriptionOverflow() {
-      const description = this.$refs.description
-      if (description) {
-        this.showHandleButton =
-          description.scrollHeight > description.clientHeight
-      }
     },
     viewMore() {
       this.visibleCount += 12
@@ -133,12 +135,6 @@ export default {
           template.name.toLowerCase().includes(searchTerm) ||
           template.description?.toLowerCase().includes(searchTerm)
       )
-    },
-    paginatedTemplates() {
-      return this.filteredTemplates.slice(0, this.visibleCount)
-    },
-    descriptionLineClampStyle() {
-      return this.showFullDescription ? 'auto' : 1
     },
     descriptionButtonLabel() {
       return this.showFullDescription ? 'Show less' : 'Show more'
@@ -212,23 +208,34 @@ export default {
   letter-spacing: -0.64px;
 }
 
-.content-description {
+.description-wrapper {
+  position: relative;
+  transition: max-height 0.3s ease;
+}
+
+.description-wrapper.description-truncated {
+  max-height: 60px; /* Approximate height for 2 lines at 30px line-height */
+  overflow: hidden;
+}
+
+.description-wrapper.expanded {
+  max-height: none;
+  overflow: visible;
+}
+
+.description-wrapper .content-description {
   color: var(--clr-text-secondary);
   font-size: 20px;
   line-height: 30px;
   margin-top: 12px;
   max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: v-bind(descriptionLineClampStyle);
-  -webkit-box-orient: vertical;
 }
 
 .content-description-handle-button {
   color: var(--clr-primary);
   background: transparent;
   text-decoration: underline;
+  margin-top: 4px;
 }
 
 .templates-grid {
@@ -238,6 +245,10 @@ export default {
   grid-auto-rows: min-content;
   gap: 24px;
   margin-top: 1rem;
+}
+
+.template-hidden {
+  display: none;
 }
 
 .no-templates {
@@ -278,10 +289,13 @@ export default {
     font-size: 32px;
     line-height: 48px;
   }
-  .content-description {
+  .description-wrapper .content-description {
     font-size: 16px;
     line-height: 24px;
     margin-top: 0;
+  }
+  .description-wrapper.description-truncated {
+    max-height: 48px; /* 2 lines at 24px for mobile */
   }
   .template-container {
     flex-direction: column;

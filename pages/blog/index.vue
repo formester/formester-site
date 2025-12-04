@@ -23,9 +23,11 @@
             />
           </transition-group>
         </div>
-        <div v-if="isLoading" class="blog-loading">
-          <div class="loading-spinner"></div>
-        </div>
+        <ClientOnly>
+            <div v-if="isLoading" class="blog-loading">
+            <div class="loading-spinner"></div>
+            </div>
+        </ClientOnly>
       </div>
     </div>
     <nav v-if="totalPages > 1">
