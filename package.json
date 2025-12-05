@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=18.20.0 || >=20.9.0"
+    "node": ">=18.20.0"
   },
   "scripts": {
     "dev": "npm run fetch-navbar && nuxt dev",
