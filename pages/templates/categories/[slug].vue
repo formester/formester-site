@@ -13,26 +13,29 @@ import getTemplatesAndCategories from '@/utils/getTemplatesAndCategories'
 
 const route = useRoute()
 
-const { data } = await useAsyncData(`template-category-${route.params.slug}`, async () => {
-  const { templates, categories } = await getTemplatesAndCategories({
-    category_slug: route.params.slug,
-  })
-  return { templates, categories }
+const slug = computed(() => route.params.slug)
+
+const { data } = await useAsyncData(`template-category-${slug.value}`, async () => {
+  const result = await getTemplatesAndCategories()
+  // Only store the data needed for this specific category to reduce memory
+  const categoryRoute = result.categorieRoutes?.find(
+    (cate) => cate.route === `/templates/categories/${slug.value}`
+  )
+  return {
+    templates: categoryRoute?.payload?.templates || [],
+    categories: result.categories
+  }
 })
 
-const templates = computed(() => data.value?.templates || [])
 const categories = computed(() => data.value?.categories || {})
+const templates = computed(() => data.value?.templates || [])
 
-const findCategoryBySlug = (slug) => {
+const findCategoryBySlug = (slugValue) => {
   const allCategories = Object.values(categories.value).flatMap((arr) => arr)
-  return allCategories.find((category) => category.slug === slug)
+  return allCategories.find((category) => category.slug === slugValue)
 }
 
-const activeCategory = ref(null)
-
-onMounted(() => {
-  activeCategory.value = findCategoryBySlug(route.params.slug)
-})
+const activeCategory = computed(() => findCategoryBySlug(slug.value))
 
 const currentCategory = computed(() => {
   const allCategories = Object.values(categories.value).flat()
@@ -54,7 +57,7 @@ const metaDescription = computed(() => {
 const meta = computed(() => {
   const metaData = {
     type: 'website',
-    url: `https://formester.com/templates/${route.params.slug}`,
+    url: `https://formester.com/templates/${slug.value}`,
     title: metaTitle.value,
     description: metaDescription.value,
     mainImage: 'https://formester.com/formester-logo-meta-image.png',
@@ -82,7 +85,7 @@ useHead(() => ({
   link: [
     {
       rel: 'canonical',
-      href: `https://formester.com/templates/categories/${route.params.slug}/`,
+      href: `https://formester.com/templates/categories/${slug.value}/`,
     },
   ],
 }))
