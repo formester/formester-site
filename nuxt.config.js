@@ -143,21 +143,21 @@ export default defineNuxtConfig({
   sourcemap: false,
 
   // Vite build tuning
-  vite: {
-    build: {
-      sourcemap: false,
-      minify: false, // Disable minification to save memory
-      chunkSizeWarningLimit: 1000, // Increase to reduce warnings
-      rollupOptions: {
-        output: {
-          manualChunks: undefined // Disable manual chunking to reduce complexity
-        }
-      }
-    },
-    css: {
-      devSourcemap: false
-    }
-  },
+  // vite: {
+  //   build: {
+  //     sourcemap: false,
+  //     minify: false, // Disable minification to save memory
+  //     chunkSizeWarningLimit: 1000, // Increase to reduce warnings
+  //     rollupOptions: {
+  //       output: {
+  //         manualChunks: undefined // Disable manual chunking to reduce complexity
+  //       }
+  //     }
+  //   },
+  //   css: {
+  //     devSourcemap: false
+  //   }
+  // },
 
   // Compatibility
   compatibilityDate: '2024-10-22'
