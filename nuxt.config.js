@@ -3,34 +3,34 @@ export default defineNuxtConfig({
   // Global page headers
   app: {
     head: {
-    title: 'No-Code Online Form Builder - Formester',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        name: 'robots',
-        content: 'index, follow',
-      },
-      { name: 'format-detection', content: 'telephone=no' },
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        hid: 'canonical',
-        rel: 'canonical',
-        href: 'https://formester.com/',
-      },
-    ],
-    // Custom Javascript
-    script: [
-      {
-        src: 'https://affonso.io/js/pixel.min.js',
-        defer: true,
-        async: true,
-        'data-affonso': 'cmgks3gcz001h7prj3pe2h62f',
-        'data-cookie_duration': '30'
-      }
-    ]
+      title: 'No-Code Online Form Builder - Formester',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          name: 'robots',
+          content: 'index, follow',
+        },
+        { name: 'format-detection', content: 'telephone=no' },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://formester.com/',
+        },
+      ],
+
+      script: [
+        {
+          src: 'https://affonso.io/js/pixel.min.js',
+          defer: true,
+          async: true,
+          'data-affonso': 'cmgks3gcz001h7prj3pe2h62f',
+          'data-cookie_duration': '30'
+        }
+      ]
     }
   },
 
@@ -98,14 +98,22 @@ export default defineNuxtConfig({
     }
   },
 
-  // Nitro configuration (replaces generate)
+  // Output directory configuration
+  dir: {
+    public: 'public'
+  },
+
+  // Nitro configuration
   nitro: {
+    preset: 'static', // Force static generation instead of Netlify Functions
+    sourceMap: false,
+    minify: false, // Disable minification to save memory
     prerender: {
       crawlLinks: true,
       routes: ['/'],
       ignore: ['/api'],
-      concurrency: 15,
-      interval: 50,
+      concurrency: 5, // Reduced from 15 to lower memory usage
+      interval: 100, // Increased from 50 to slow down processing
       failOnError: false
     }
   },
@@ -130,6 +138,26 @@ export default defineNuxtConfig({
       clarityId: 'emw9o333qb'
     }
   },
+
+  // Disable sourcemaps to lower memory usage
+  sourcemap: false,
+
+  // Vite build tuning
+  // vite: {
+  //   build: {
+  //     sourcemap: false,
+  //     minify: false, // Disable minification to save memory
+  //     chunkSizeWarningLimit: 1000, // Increase to reduce warnings
+  //     rollupOptions: {
+  //       output: {
+  //         manualChunks: undefined // Disable manual chunking to reduce complexity
+  //       }
+  //     }
+  //   },
+  //   css: {
+  //     devSourcemap: false
+  //   }
+  // },
 
   // Compatibility
   compatibilityDate: '2024-10-22'

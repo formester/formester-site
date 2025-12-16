@@ -3,6 +3,9 @@
   "version": "3.0.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=18.20.0"
+  },
   "scripts": {
     "dev": "npm run fetch-navbar && nuxt dev",
     "build": "npm run fetch-navbar && nuxt build",
@@ -13,12 +16,13 @@
   },
   "dependencies": {
     "@builder.io/partytown": "^0.10.3",
-    "@kyvg/vue3-notification": "^3.2.1",
+    "@kyvg/vue3-notification": "^3.4.2",
     "@nuxt/content": "^2.13.2",
+    "@nuxt/image": "^1.8.1",
     "@nuxtjs/robots": "^4.1.7",
     "@nuxtjs/sitemap": "^5.3.5",
     "@vite-pwa/nuxt": "^0.10.5",
-    "axios": "^1.7.7",
+    "axios": "^1.13.2",
     "bootstrap": "^5.3.3",
     "marked": "^4.3.0",
     "nuxt-gtag": "^3.0.1",
@@ -27,14 +31,11 @@
     "reading-time": "^1.5.0",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.1.14",
-    "vue": "^3.5.10",
-    "vue-router": "^4.4.5",
     "vue3-carousel": "^0.3.4"
   },
   "devDependencies": {
-    "@nuxt/image": "^1.8.1",
-    "eslint-config-prettier": "^8.3.0",
-    "nuxt": "^3.13.2",
-    "prettier": "^2.3.2"
+    "eslint-config-prettier": "^10.1.8",
+    "nuxt": "^4.0.0",
+    "prettier": "^3.7.3"
   }
 }
