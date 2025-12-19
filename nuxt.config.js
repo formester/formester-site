@@ -110,7 +110,7 @@ export default defineNuxtConfig({
     minify: false, // Disable minification to save memory
     prerender: {
       crawlLinks: true,
-      routes: ['/'],
+      routes: ['/', '/sitemap.xml'],
       ignore: ['/api'],
       concurrency: 5, // Reduced from 15 to lower memory usage
       interval: 100, // Increased from 50 to slow down processing
