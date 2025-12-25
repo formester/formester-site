@@ -1,6 +1,6 @@
 <template>
   <div 
-    class="integration-card" 
+    class="integration-card-slim" 
     :class="{ 'clickable': app.url || app.helpArticle }"
     @click="handleCardClick"
   >
@@ -15,18 +15,8 @@
       </div>
       
       <div class="card-content">
-        <div class="app-header">
-          <h3 class="app-name">{{ app.name }}</h3>
-        </div>
-        
+        <h4 class="app-name">{{ app.name }}</h4>
         <p class="app-description">{{ app.desc }}</p>
-        
-        <div v-if="app.url || app.helpArticle" class="explore-link">
-          <span>{{ app.helpArticle ? 'Learn More' : 'Explore Integration' }}</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
       </div>
     </div>
   </div>
@@ -50,17 +40,16 @@ export default {
 </script>
 
 <style scoped>
-.integration-card {
+.integration-card-slim {
   position: relative;
-  height: 100%;
-  border-radius: 20px;
+  border-radius: 12px;
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
   border: 1px solid rgba(100, 52, 208, 0.1);
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.integration-card::before {
+.integration-card-slim::before {
   content: '';
   position: absolute;
   top: 0;
@@ -69,57 +58,56 @@ export default {
   bottom: 0;
   background: linear-gradient(135deg, rgba(100, 52, 208, 0.05) 0%, rgba(100, 52, 208, 0.08) 100%);
   opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.3s ease;
   pointer-events: none;
 }
 
-.integration-card.clickable {
+.integration-card-slim.clickable {
   cursor: pointer;
 }
 
-.integration-card:hover {
-  transform: translateY(-8px);
+.integration-card-slim:hover {
+  transform: translateY(-4px);
   box-shadow: 
-    0 20px 40px rgba(100, 52, 208, 0.15),
-    0 0 0 1px rgba(100, 52, 208, 0.2),
-    0 0 60px rgba(100, 52, 208, 0.1);
-  border-color: rgba(100, 52, 208, 0.3);
+    0 12px 24px rgba(100, 52, 208, 0.12),
+    0 0 0 1px rgba(100, 52, 208, 0.15);
+  border-color: rgba(100, 52, 208, 0.25);
 }
 
-.integration-card:hover::before {
+.integration-card-slim:hover::before {
   opacity: 1;
 }
 
 .card-inner {
-  padding: 32px;
-  height: 100%;
+  padding: 20px 24px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 16px;
   position: relative;
   z-index: 1;
 }
 
 .icon-wrapper {
   position: relative;
-  width: 80px;
-  height: 80px;
-  margin-bottom: 24px;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-  border-radius: 16px;
+  border-radius: 12px;
   box-shadow: 
-    0 8px 16px rgba(0, 0, 0, 0.06),
-    0 0 0 1px rgba(100, 52, 208, 0.08);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    0 4px 8px rgba(0, 0, 0, 0.04),
+    0 0 0 1px rgba(100, 52, 208, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.integration-card:hover .icon-wrapper {
-  transform: scale(1.05) rotate(2deg);
+.integration-card-slim:hover .icon-wrapper {
+  transform: scale(1.05);
   box-shadow: 
-    0 12px 24px rgba(100, 52, 208, 0.15),
-    0 0 0 1px rgba(100, 52, 208, 0.2);
+    0 6px 12px rgba(100, 52, 208, 0.12),
+    0 0 0 1px rgba(100, 52, 208, 0.15);
 }
 
 .icon-glow {
@@ -129,118 +117,104 @@ export default {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(100, 52, 208, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(100, 52, 208, 0.15) 0%, transparent 70%);
   opacity: 0;
-  transition: opacity 0.4s ease;
-  border-radius: 16px;
+  transition: opacity 0.3s ease;
+  border-radius: 12px;
 }
 
-.integration-card:hover .icon-glow {
+.integration-card-slim:hover .icon-glow {
   opacity: 1;
 }
 
 .app-icon {
-  width: 48px;
-  height: 48px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
   position: relative;
   z-index: 1;
   transition: transform 0.3s ease;
 }
 
-.integration-card:hover .app-icon {
+.integration-card-slim:hover .app-icon {
   transform: scale(1.1);
 }
 
 .card-content {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.app-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-bottom: 12px;
+  min-width: 0;
 }
 
 .app-name {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.3;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
   color: #1e293b;
-  margin: 0;
+  margin: 0 0 4px 0;
   transition: color 0.3s ease;
-  flex: 1;
 }
 
-.integration-card:hover .app-name {
+.integration-card-slim:hover .app-name {
   color: #6434D0;
 }
 
 .app-description {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 0.875rem;
+  line-height: 1.5;
   color: #64748b;
-  margin: 0 0 20px 0;
-  flex: 1;
+  margin: 0;
   transition: color 0.3s ease;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.integration-card:hover .app-description {
+.integration-card-slim:hover .app-description {
   color: #475569;
 }
 
-.explore-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #6434D0;
-  opacity: 0;
-  transform: translateY(8px);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  margin-top: auto;
-}
-
-.integration-card:hover .explore-link {
+.integration-card-slim:hover .arrow-icon {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 
-.explore-link svg {
+.arrow-icon svg {
   transition: transform 0.3s ease;
 }
 
-.integration-card:hover .explore-link svg {
+.integration-card-slim:hover .arrow-icon svg {
   transform: translateX(4px);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .card-inner {
-    padding: 24px;
+    padding: 16px 20px;
+    gap: 12px;
   }
   
   .icon-wrapper {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 20px;
+    width: 48px;
+    height: 48px;
   }
   
   .app-icon {
-    width: 40px;
-    height: 40px;
+    width: 28px;
+    height: 28px;
   }
   
   .app-name {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
   
   .app-description {
-    font-size: 0.9rem;
+    font-size: 0.8125rem;
+  }
+  
+  .arrow-icon {
+    width: 32px;
+    height: 32px;
   }
 }
 </style>
