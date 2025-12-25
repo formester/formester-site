@@ -33,10 +33,9 @@
     </div>
     <div class="container py-5">
       <h2 class="subheading my-5">Most Popular</h2>
-      <div class="row py-5">
+      <div class="integrations-grid">
         <IntegrationCard
           :app="app"
-          class="col-md-4 my-3"
           v-for="app in apps"
           :key="app.title"
         />
@@ -154,5 +153,26 @@ useJsonld([
   font-size: 1.75rem;
   font-weight: 600;
   line-height: 36px;
+}
+
+.integrations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 3rem 0;
+}
+
+@media (max-width: 992px) {
+  .integrations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .integrations-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 </style>
