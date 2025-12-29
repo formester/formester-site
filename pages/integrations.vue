@@ -118,26 +118,6 @@ const apps = [
     helpArticle: 'https://help.formester.com/en/article/slack-integration-aierxk/'
   },
   {
-    name: 'Discord',
-    desc: 'Discord will receive a notification of submission.',
-    img: 'discord.png',
-  },
-  {
-    name: 'Salesforce',
-    desc: 'Manage sales, campaigns, and customer relations.',
-    img: 'salesforce.png',
-  },
-  {
-    name: 'Mailchimp',
-    desc: 'Keep your email lists up to date by adding and updating contacts.',
-    img: 'mailchimp.svg',
-  },
-  {
-    name: 'Notion',
-    desc: 'Create, collaborate, and share in one place.',
-    img: 'notion.png',
-  },
-  {
     name: 'Trustedform',
     desc: 'Certify and validate your leads automatically with TrustedForm.',
     img: 'trustedform.png',
@@ -202,6 +182,18 @@ const apps = [
     desc: 'Automate your form workflows using Ottokit.',
     img: 'suretriggers.png',
     helpArticle: 'https://help.formester.com/en/article/ottokit-integration-2373e8/'
+  },
+  {
+    name: 'Pabbly Connect',
+    desc: 'Automate tasks and move form data without doing it manually.',
+    img: 'pabbly.png',
+    helpArticle: 'https://help.formester.com/en/article/pabbly-connect-po2q6f/'
+  },
+  {
+    name: 'n8n',
+    desc: 'Control how your form data moves between apps with full flexibility.',
+    img: 'n8n.png',
+    helpArticle: 'https://help.formester.com/en/article/n8n-1k42y6o/'
   }
 ]
 
