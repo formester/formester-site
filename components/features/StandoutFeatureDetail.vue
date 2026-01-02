@@ -65,6 +65,11 @@ export default {
 </script>
 
 <style scoped>
+
+.img-fluid {
+  width: 100%;
+}
+
 .sub__section-heading {
   font-size: 18px;
   font-weight: 500;
