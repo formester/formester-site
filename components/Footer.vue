@@ -255,11 +255,6 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/plugins/squarespace-forms/" class="footer__link">
-                  Squarespace
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
                 <NuxtLink
                   to="/plugins/canva-form-builder/"
                   class="footer__link"
