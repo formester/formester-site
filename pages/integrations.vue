@@ -6,12 +6,9 @@
           <div
             class="col-lg-6 d-flex flex-column justify-content-center align-items-lg-start align-items-center text-center text-lg-start mt-xl-0 mt-md-5"
           >
-            <h1 class="section__heading">Seamless Integration</h1>
+            <h1 class="section__heading">Save Hours With Powerful Form Integrations</h1>
             <p class="hero__subheading mt-3">
-              Collecting data is one battle won. Formester integrates with tools
-              like Slack, Google Sheets and Salesforce. Send data anywhere you
-              like. Getting started just takes few minutes with our pre-build
-              templates.
+              Connect your forms to the tools you already use and automate work in minutes instead of hours.
             </p>
             <a
               href="https://app.formester.com/users/sign_up"
@@ -201,8 +198,8 @@ const meta = computed(() => {
   const metaData = {
     type: 'website',
     url: 'https://formester.com/integrations/',
-    title: 'Formester Integrations | Automate Your Workflows',
-    description: 'Automate your workflows with powerful form integrations. Set up triggers and transfer data from your forms to 1000+ Apps. Get started - It is free!',
+    title: '1000+ Online Form Integrations',
+    description: 'Connect your forms with your favorite apps to automate workflows, reduce manual work, and save hours every week with fast and easy integrations.',
     mainImage: 'https://formester.com/formester-logo-meta-image.png',
     mainImageAlt: 'Formester Logo',
   }
@@ -210,7 +207,7 @@ const meta = computed(() => {
 })
 
 useHead({
-  title: 'Formester Integrations | Automate Your Workflows',
+  title: '1000+ Online Form Integrations',
   meta: [...meta.value],
   link: [
     {
@@ -224,8 +221,8 @@ useJsonld([
   {
     '@context': 'https://schema.org',
     '@type': 'Corporation',
-    name: 'Formester Integrations | Automate Your Workflows',
-    description: 'Automate your workflows with powerful form integrations. Set up triggers and transfer data from your forms to 1000+ Apps. Get started - It is free!',
+    name: '1000+ Online Form Integrations',
+    description: 'Connect your forms with your favorite apps to automate workflows, reduce manual work, and save hours every week with fast and easy integrations.',
     logo: 'https://formester.com/logo.png',
     url: 'https://formester.com',
     address: {
