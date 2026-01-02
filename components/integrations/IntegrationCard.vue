@@ -1,14 +1,14 @@
 <template>
   <div 
     class="integration-card-slim" 
-    :class="{ 'clickable': app.url || app.helpArticle }"
+    :class="{ 'clickable': getLink(app) }"
     @click="handleCardClick"
   >
     <div class="card-inner">
       <div class="icon-wrapper">
         <div class="icon-glow"></div>
         <nuxt-img 
-          :src="`/integrations/${app.img}`" 
+          :src="getImgUrl(app)" 
           :alt="app.name"
           class="app-icon"
         />
@@ -16,7 +16,7 @@
       
       <div class="card-content">
         <h4 class="app-name">{{ app.name }}</h4>
-        <p class="app-description">{{ app.desc }}</p>
+        <p class="app-description">{{ app.description }}</p>
       </div>
     </div>
   </div>
@@ -27,13 +27,31 @@ export default {
   props: ['app'],
   methods: {
     handleCardClick() {
-      if (this.app.url) {
-        // Internal route navigation
-        this.$router.push(this.app.url);
-      } else if (this.app.helpArticle) {
+      const link = this.getLink(this.app)
+      if (!link) return
+
+      if (link.startsWith('http')) {
         // External link - open in new tab
-        window.open(this.app.helpArticle, '_blank', 'noopener,noreferrer');
+        window.open(link, '_blank', 'noopener,noreferrer');
+      } else {
+        // Internal route navigation
+        this.$router.push(link);
       }
+    },
+    getImgUrl(app) {
+      if (app.icon?.image?.url || app.icon?.imageUrl) {
+        return app.icon.image?.url || app.icon.imageUrl
+      }
+      if (app.image?.url || app.imageUrl) {
+        return app.image?.url || app.imageUrl
+      }
+      if (app.img) {
+        return `/integrations/${app.img}`
+      }
+      return ''
+    },
+    getLink(app) {
+      return app.url || app.helpArticle || app.link
     }
   }
 }
@@ -166,6 +184,7 @@ export default {
   transition: color 0.3s ease;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
