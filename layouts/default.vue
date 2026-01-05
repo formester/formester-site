@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div class="layout-wrapper">
     <Navbar />
-    <NuxtPage />
+    <main class="main-content">
+      <NuxtPage />
+    </main>
     <Footer />
     <CookieConsent />
   </div>
@@ -104,4 +106,14 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+.layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+</style>
