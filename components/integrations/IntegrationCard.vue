@@ -1,8 +1,9 @@
 <template>
-  <div 
+  <NuxtLink
+    :to="getLink(app)"
+    :target="getLink(app)?.startsWith('http') ? '_blank' : undefined"
     class="integration-card-slim" 
     :class="{ 'clickable': getLink(app) }"
-    @click="handleCardClick"
   >
     <div class="card-inner">
       <div class="icon-wrapper">
@@ -19,25 +20,13 @@
         <p class="app-description">{{ app.description }}</p>
       </div>
     </div>
-  </div>
+  </NuxtLink>
 </template>
 
 <script>
 export default {
   props: ['app'],
   methods: {
-    handleCardClick() {
-      const link = this.getLink(this.app)
-      if (!link) return
-
-      if (link.startsWith('http')) {
-        // External link - open in new tab
-        window.open(link, '_blank', 'noopener,noreferrer');
-      } else {
-        // Internal route navigation
-        this.$router.push(link);
-      }
-    },
     getImgUrl(app) {
       if (app.icon?.image?.url || app.icon?.imageUrl) {
         return app.icon.image?.url || app.icon.imageUrl
@@ -59,6 +48,8 @@ export default {
 
 <style scoped>
 .integration-card-slim {
+  display: block;
+  text-decoration: none;
   position: relative;
   border-radius: 12px;
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
