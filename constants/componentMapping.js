@@ -26,4 +26,5 @@ export default {
   'macro-components.integrations-showcase': () => import('@/components/strapi/IntegrationsShowcase.vue'),
   'macro-components.hero-tab-showcase': () => import('@/components/home/HeroTabShowcase/HeroTabShowcase.vue'),
   'macro-components.usecases': () => import('@/components/home/Usecases/Usecase.vue'),
+  'macro-components.integrations-grid': () => import('@/components/integrations/IntegrationsGrid.vue'),
 }

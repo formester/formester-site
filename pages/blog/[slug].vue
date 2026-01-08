@@ -8,9 +8,10 @@
       >
         <div class="blog__header">
           <NuxtLink
-            :to="`/blog/`"
+            to="/blog/"
             class="blog__back"
             :class="tableOfContents.length ? 'blog__back__margin' : ''"
+            @click.prevent="goBack"
           >
             <span>← Back</span>
           </NuxtLink>
@@ -146,6 +147,7 @@ import readingTime from '@/utils/readingTime'
 import { marked } from 'marked'
 
 const route = useRoute()
+const router = useRouter()
 const config = useRuntimeConfig()
 const { $notify } = useNuxtApp()
 
@@ -234,6 +236,14 @@ const closePopup = () => {
 const formatDate = (date) => {
   const options = { year: 'numeric', month: 'long', day: 'numeric' }
   return new Date(date).toLocaleDateString('en', options)
+}
+
+const goBack = () => {
+  if (process.client && window.history.length > 1) {
+    router.back()
+  } else {
+    router.push('/blog/')
+  }
 }
 
 const copyToClipboard = () => {

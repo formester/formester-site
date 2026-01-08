@@ -1,14 +1,15 @@
 <template>
-  <div 
+  <NuxtLink
+    :to="getLink(app)"
+    :target="getLink(app)?.startsWith('http') ? '_blank' : undefined"
     class="integration-card-slim" 
-    :class="{ 'clickable': app.url || app.helpArticle }"
-    @click="handleCardClick"
+    :class="{ 'clickable': getLink(app) }"
   >
     <div class="card-inner">
       <div class="icon-wrapper">
         <div class="icon-glow"></div>
         <nuxt-img 
-          :src="`/integrations/${app.img}`" 
+          :src="getImgUrl(app)" 
           :alt="app.name"
           class="app-icon"
         />
@@ -16,24 +17,30 @@
       
       <div class="card-content">
         <h4 class="app-name">{{ app.name }}</h4>
-        <p class="app-description">{{ app.desc }}</p>
+        <p class="app-description">{{ app.description }}</p>
       </div>
     </div>
-  </div>
+  </NuxtLink>
 </template>
 
 <script>
 export default {
   props: ['app'],
   methods: {
-    handleCardClick() {
-      if (this.app.url) {
-        // Internal route navigation
-        this.$router.push(this.app.url);
-      } else if (this.app.helpArticle) {
-        // External link - open in new tab
-        window.open(this.app.helpArticle, '_blank', 'noopener,noreferrer');
+    getImgUrl(app) {
+      if (app.icon?.image?.url || app.icon?.imageUrl) {
+        return app.icon.image?.url || app.icon.imageUrl
       }
+      if (app.image?.url || app.imageUrl) {
+        return app.image?.url || app.imageUrl
+      }
+      if (app.img) {
+        return `/integrations/${app.img}`
+      }
+      return ''
+    },
+    getLink(app) {
+      return app.url || app.helpArticle || app.link
     }
   }
 }
@@ -41,6 +48,8 @@ export default {
 
 <style scoped>
 .integration-card-slim {
+  display: block;
+  text-decoration: none;
   position: relative;
   border-radius: 12px;
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
@@ -166,6 +175,7 @@ export default {
   transition: color 0.3s ease;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
