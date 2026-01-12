@@ -13,11 +13,18 @@
         </button>
       </div>
       <div class="tab-content">
-        <transition name="tab-left-fade-slide" mode="out-in">
-          <div class="tab-left" :key="selectedTab + '-left'">
-            <h3 class="tab-title">{{ currentTab.title }}</h3>
+        <!-- Render all tabs in DOM for SEO, use CSS to show/hide -->
+        <div 
+          v-for="(tab, idx) in tabs" 
+          :key="idx"
+          class="tab-panel"
+          :class="{ 'tab-panel-active': idx === selectedTab }"
+          :aria-hidden="idx !== selectedTab"
+        >
+          <div class="tab-left">
+            <h3 class="tab-title">{{ tab.title }}</h3>
             <ul class="tab-features">
-              <li v-for="(feature, i) in currentTab.features" :key="i">
+              <li v-for="(feature, i) in tab.features" :key="i">
                 <span class="feature-icon">
                   <img
                     :src="feature.icon"
@@ -32,20 +39,16 @@
               </li>
             </ul>
           </div>
-        </transition>
-        <transition name="tab-right-fade-slide" mode="out-in">
-          <div class="tab-right" :key="selectedTab + '-right'">
+          <div class="tab-right">
             <img
-              :src="currentTab.image"
-              :alt="currentTab.label + ' screenshot'"
+              :src="tab.image"
+              :alt="tab.label + ' screenshot'"
               class="tab-image"
-              :key="currentTab.image"
-              loading="eager"
+              :loading="idx === 0 ? 'eager' : 'lazy'"
               width="480"
-              
             />
           </div>
-        </transition>
+        </div>
       </div>
     </div>
   </div>
@@ -308,12 +311,32 @@ function tabButtonStyle(idx) {
   border-radius: 24px;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
   padding: 40px 36px;
-  display: flex;
-  gap: 64px;
-  align-items: flex-start;
   position: relative;
   z-index: 1;
   min-height: 520px !important;
+}
+
+/* Tab panel - all tabs rendered in DOM for SEO */
+.tab-panel {
+  display: flex;
+  gap: 64px;
+  align-items: flex-start;
+  position: absolute;
+  top: 40px;
+  left: 36px;
+  right: 36px;
+  bottom: 40px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+              visibility 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tab-panel-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .tab-left {
@@ -374,10 +397,17 @@ function tabButtonStyle(idx) {
 
 @media (max-width: 900px) {
   .tab-content {
-    flex-direction: column;
-    gap: 32px;
     padding: 32px 16px;
     min-height: 500px !important; 
+  }
+
+  .tab-panel {
+    flex-direction: column;
+    gap: 32px;
+    top: 32px;
+    left: 16px;
+    right: 16px;
+    bottom: 32px;
   }
 
   .tab-list {
@@ -408,12 +438,6 @@ function tabButtonStyle(idx) {
     background: #2563eb;
     color: #fff;
     box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
-  }
-  .tab-content {
-    flex-direction: column;
-    gap: 24px;
-    padding: 32px;
-    min-height: 505px;
   }
   .tab-right {
     justify-content: flex-start;
@@ -450,10 +474,18 @@ function tabButtonStyle(idx) {
 @media (max-width: 600px) {
   .tab-content {
     padding: 20px;
-    gap: 20px;
     border-radius: 16px;
     min-height: 500px !important;
   }
+
+  .tab-panel {
+    gap: 20px;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+
   .tab-image {
     max-width: 98vw;
     max-height: 220px;
@@ -471,41 +503,5 @@ function tabButtonStyle(idx) {
     line-height: 24px;
   }
 }
-.tab-left-fade-slide-enter-active,
-.tab-left-fade-slide-leave-active {
-  transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.tab-left-fade-slide-enter-from {
-  opacity: 0;
-  transform: translateX(-8px);
-}
-.tab-left-fade-slide-leave-to {
-  opacity: 0;
-  transform: translateX(-8px);
-}
-.tab-left-fade-slide-enter-to,
-.tab-left-fade-slide-leave-from {
-  opacity: 1;
-  transform: translateX(0);
-}
 
-.tab-right-fade-slide-enter-active,
-.tab-right-fade-slide-leave-active {
-  transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.tab-right-fade-slide-enter-from {
-  opacity: 0;
-  transform: translateX(8px);
-}
-.tab-right-fade-slide-leave-to {
-  opacity: 0;
-  transform: translateX(-8px);
-}
-.tab-right-fade-slide-enter-to,
-.tab-right-fade-slide-leave-from {
-  opacity: 1;
-  transform: translateX(0);
-}
 </style>
