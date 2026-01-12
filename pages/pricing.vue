@@ -36,22 +36,26 @@
 
       <div class="mw-1200 mx-auto">
         <div
-          v-if="!isYearly"
-          class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3"
+          :class="['pricing-cards-container', { 'pricing-hidden': isYearly }]"
+          :aria-hidden="isYearly"
         >
-          <PricingCard :plan="free" muted />
-          <PricingCard :plan="personalMonthly" />
-          <PricingCard :plan="businessMonthly" highlighted />
-          <PricingCard :plan="enterprise" contact-sales />
+          <div class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3">
+            <PricingCard :plan="free" muted />
+            <PricingCard :plan="personalMonthly" />
+            <PricingCard :plan="businessMonthly" highlighted />
+            <PricingCard :plan="enterprise" contact-sales />
+          </div>
         </div>
         <div
-          v-if="isYearly"
-          class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3"
+          :class="['pricing-cards-container', { 'pricing-hidden': !isYearly }]"
+          :aria-hidden="!isYearly"
         >
-          <PricingCard :plan="free" muted />
-          <PricingCard :plan="personalYearly" />
-          <PricingCard :plan="businessYearly" highlighted />
-          <PricingCard :plan="enterprise" contact-sales />
+          <div class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3">
+            <PricingCard :plan="free" muted />
+            <PricingCard :plan="personalYearly" />
+            <PricingCard :plan="businessYearly" highlighted />
+            <PricingCard :plan="enterprise" contact-sales />
+          </div>
         </div>
         <div class="mt-5 py-5">
           <h2 class="comparison__table-heading mb-3">
@@ -251,6 +255,16 @@ useHead({
 
 .mw-1200 {
   max-width: 1200px;
+}
+
+/* Pricing cards container - both monthly and yearly in DOM for SEO */
+.pricing-cards-container {
+  display: block;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.pricing-cards-container.pricing-hidden {
+  display: none;
 }
 
 .pricing__subtitle {
