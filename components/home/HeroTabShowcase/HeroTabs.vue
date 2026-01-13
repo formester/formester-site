@@ -19,7 +19,7 @@
           :key="idx"
           class="tab-panel"
           :class="{ 'tab-panel-active': idx === selectedTab }"
-          :aria-hidden="idx !== selectedTab"
+          :v-show="idx !== selectedTab"
         >
           <div class="tab-left">
             <h3 class="tab-title">{{ tab.title }}</h3>

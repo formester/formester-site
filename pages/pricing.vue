@@ -37,7 +37,7 @@
       <div class="mw-1200 mx-auto">
         <div
           :class="['pricing-cards-container', { 'pricing-hidden': isYearly }]"
-          :aria-hidden="isYearly"
+          :v-show="isYearly"
         >
           <div class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3">
             <PricingCard :plan="free" muted />
@@ -48,7 +48,7 @@
         </div>
         <div
           :class="['pricing-cards-container', { 'pricing-hidden': !isYearly }]"
-          :aria-hidden="!isYearly"
+          :v-show="!isYearly"
         >
           <div class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3">
             <PricingCard :plan="free" muted />
