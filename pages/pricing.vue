@@ -66,7 +66,9 @@
           </p>
           <PricingTable
             :comparison-table-features="comparisonTableFeatures"
-            :pricing-plans="pricingPlans"
+            :pricing-plans-monthly="pricingPlansMonthly"
+            :pricing-plans-yearly="pricingPlansYearly"
+            :is-yearly="isYearly"
           />
         </div>
       </div>
@@ -143,11 +145,17 @@ const meta = computed(() => {
   return getSiteMeta(metaData)
 })
 
-const pricingPlans = computed(() => ({
+const pricingPlansMonthly = {
   free: free.price,
-  personal: isYearly.value ? personalYearly.price : personalMonthly.price,
-  business: isYearly.value ? businessYearly.price : businessMonthly.price,
-}))
+  personal: personalMonthly.price,
+  business: businessMonthly.price,
+}
+
+const pricingPlansYearly = {
+  free: free.price,
+  personal: personalYearly.price,
+  business: businessYearly.price,
+}
 
 // Use useHead for Nuxt 3 head management
 useHead({

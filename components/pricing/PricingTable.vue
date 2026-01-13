@@ -9,7 +9,7 @@
             <td>
               <div class="plan__name mb-3">Free</div>
               <div class="d-flex align-items-baseline mt-2 mb-3">
-                <span class="pricing__amount">{{ pricingPlans.free }}</span>
+                <span class="pricing__amount">{{ pricingPlansMonthly.free }}</span>
                 <span class="pricing__timeline ms-1 text-nowrap"
                   >per month</span
                 >
@@ -24,7 +24,8 @@
             <td>
               <div class="plan__name mb-3">Personal</div>
               <div class="d-flex align-items-baseline mt-2 mb-3">
-                <span class="pricing__amount">{{ pricingPlans.personal }}</span>
+                <span class="pricing__amount" v-show="!isYearly" :aria-hidden="isYearly">{{ pricingPlansMonthly.personal }}</span>
+                <span class="pricing__amount" v-show="isYearly" :aria-hidden="!isYearly">{{ pricingPlansYearly.personal }}</span>
                 <span class="pricing__timeline ms-1 text-nowrap"
                   >per month</span
                 >
@@ -40,7 +41,8 @@
                 Business<span class="badge ms-2">Popular</span>
               </div>
               <div class="d-flex align-items-baseline mt-2 mb-3">
-                <span class="pricing__amount">{{ pricingPlans.business }}</span>
+                <span class="pricing__amount" v-show="!isYearly" :aria-hidden="isYearly">{{ pricingPlansMonthly.business }}</span>
+                <span class="pricing__amount" v-show="isYearly" :aria-hidden="!isYearly">{{ pricingPlansYearly.business }}</span>
                 <span class="pricing__timeline ms-1 text-nowrap"
                   >per month</span
                 >
@@ -159,7 +161,7 @@
       <div class="mt-4">
         <div class="plan__name mb-3">Free</div>
         <div class="d-flex align-items-baseline mt-3 mb-4">
-          <span class="pricing__amount">{{ pricingPlans.free }}</span>
+          <span class="pricing__amount">{{ pricingPlansMonthly.free }}</span>
           <span class="pricing__timeline ms-1 text-nowrap">per month</span>
         </div>
         <a
@@ -241,7 +243,8 @@
       <div class="mt-5">
         <div class="plan__name mb-3">Personal</div>
         <div class="d-flex align-items-baseline mt-3 mb-4">
-          <span class="pricing__amount">{{ pricingPlans.personal }}</span>
+          <span class="pricing__amount" v-show="!isYearly" :aria-hidden="isYearly">{{ pricingPlansMonthly.personal }}</span>
+          <span class="pricing__amount" v-show="isYearly" :aria-hidden="!isYearly">{{ pricingPlansYearly.personal }}</span>
           <span class="pricing__timeline ms-1 text-nowrap">per month</span>
         </div>
         <a
@@ -308,7 +311,8 @@
           Business<span class="badge ms-2">Popular</span>
         </div>
         <div class="d-flex align-items-baseline mt-3 mb-4">
-          <span class="pricing__amount">{{ pricingPlans.business }}</span>
+          <span class="pricing__amount" v-show="!isYearly" :aria-hidden="isYearly">{{ pricingPlansMonthly.business }}</span>
+          <span class="pricing__amount" v-show="isYearly" :aria-hidden="!isYearly">{{ pricingPlansYearly.business }}</span>
           <span class="pricing__timeline ms-1 text-nowrap">per month</span>
         </div>
         <a
@@ -380,8 +384,16 @@ export default {
       type: Array,
       required: true,
     },
-    pricingPlans: {
+    pricingPlansMonthly: {
       type: Object,
+      required: true,
+    },
+    pricingPlansYearly: {
+      type: Object,
+      required: true,
+    },
+    isYearly: {
+      type: Boolean,
       required: true,
     },
   },
