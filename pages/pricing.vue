@@ -36,22 +36,26 @@
 
       <div class="mw-1200 mx-auto">
         <div
-          v-if="!isYearly"
-          class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3"
+          :class="['pricing-cards-container', { 'pricing-hidden': isYearly }]"
+          :v-show="isYearly"
         >
-          <PricingCard :plan="free" muted />
-          <PricingCard :plan="personalMonthly" />
-          <PricingCard :plan="businessMonthly" highlighted />
-          <PricingCard :plan="enterprise" contact-sales />
+          <div class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3">
+            <PricingCard :plan="free" muted />
+            <PricingCard :plan="personalMonthly" />
+            <PricingCard :plan="businessMonthly" highlighted />
+            <PricingCard :plan="enterprise" contact-sales />
+          </div>
         </div>
         <div
-          v-if="isYearly"
-          class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3"
+          :class="['pricing-cards-container', { 'pricing-hidden': !isYearly }]"
+          :v-show="!isYearly"
         >
-          <PricingCard :plan="free" muted />
-          <PricingCard :plan="personalYearly" />
-          <PricingCard :plan="businessYearly" highlighted />
-          <PricingCard :plan="enterprise" contact-sales />
+          <div class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3">
+            <PricingCard :plan="free" muted />
+            <PricingCard :plan="personalYearly" />
+            <PricingCard :plan="businessYearly" highlighted />
+            <PricingCard :plan="enterprise" contact-sales />
+          </div>
         </div>
         <div class="mt-5 py-5">
           <h2 class="comparison__table-heading mb-3">
@@ -62,7 +66,9 @@
           </p>
           <PricingTable
             :comparison-table-features="comparisonTableFeatures"
-            :pricing-plans="pricingPlans"
+            :pricing-plans-monthly="pricingPlansMonthly"
+            :pricing-plans-yearly="pricingPlansYearly"
+            :is-yearly="isYearly"
           />
         </div>
       </div>
@@ -139,11 +145,17 @@ const meta = computed(() => {
   return getSiteMeta(metaData)
 })
 
-const pricingPlans = computed(() => ({
+const pricingPlansMonthly = {
   free: free.price,
-  personal: isYearly.value ? personalYearly.price : personalMonthly.price,
-  business: isYearly.value ? businessYearly.price : businessMonthly.price,
-}))
+  personal: personalMonthly.price,
+  business: businessMonthly.price,
+}
+
+const pricingPlansYearly = {
+  free: free.price,
+  personal: personalYearly.price,
+  business: businessYearly.price,
+}
 
 // Use useHead for Nuxt 3 head management
 useHead({
@@ -251,6 +263,16 @@ useHead({
 
 .mw-1200 {
   max-width: 1200px;
+}
+
+/* Pricing cards container - both monthly and yearly in DOM for SEO */
+.pricing-cards-container {
+  display: block;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.pricing-cards-container.pricing-hidden {
+  display: none;
 }
 
 .pricing__subtitle {
