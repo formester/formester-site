@@ -135,6 +135,7 @@ export default defineNuxtConfig({
     public: {
       baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'http://localhost:3000',
       strapiUrl: 'https://cms.formester.com',
+      appUrl: 'https://app.formester.com',
       clarityId: 'emw9o333qb'
     }
   },

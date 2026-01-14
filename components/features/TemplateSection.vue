@@ -23,82 +23,70 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import TemplateCard from '@/components/template/TemplateCard.vue'
-import axios from 'axios'
 
-export default {
-  components: { TemplateCard },
-  props: {
-    slug: {
-      type: String,
-      default: '',
-    },
-    title: {
-      type: Array,
-      required: true,
-    },
-    description: {
-      type: String,
-      default: '',
-    },
-    button: {
-      type: Object,
-      required: true,
-    },
-    specificTemplate: {
-      type: Array,
-      default: () => [],
-    },
+const props = defineProps({
+  slug: {
+    type: String,
+    default: '',
   },
-  data() {
-    return {
-      templates: [],
-    }
+  title: {
+    type: Array,
+    required: true,
   },
-  mounted() {
-    this.getTemplates()
+  description: {
+    type: String,
+    default: '',
   },
-  methods: {
-    async getTemplates() {
-      try {
-        let response
-        if (this.slug) {
-          response = await axios.get(
-            'https://app.formester.com/templates.json',
-            {
-              params: { category_slug: this.slug },
-            }
-          )
-        } else {
-          response = await axios.get('https://app.formester.com/templates.json')
-        }
-        let templates = response.data
+  button: {
+    type: Object,
+    required: true,
+  },
+  specificTemplate: {
+    type: Array,
+    default: () => [],
+  },
+})
 
-        const dummyDescription =
-          'Check out this pre-designed template and start customising with just a single click. Personalise with your branding, incorporate electronic signatures for security and add multiple collaborators to make changes simultaneously. Use this template and start getting data driven actionable insights with robust analytics.'
+const config = useRuntimeConfig()
+const appUrl = config.public.appUrl
 
-        templates = templates.map((template) => ({
-          ...template,
-          description: template.description || dummyDescription,
-        }))
+const dummyDescription =
+  'Check out this pre-designed template and start customising with just a single click. Personalise with your branding, incorporate electronic signatures for security and add multiple collaborators to make changes simultaneously. Use this template and start getting data driven actionable insights with robust analytics.'
 
-        // Filter templates based on specificTemplate prop
-        if (this.specificTemplate && this.specificTemplate.length > 0) {
-          const templateSlugs = this.specificTemplate.map(template => template.text)
-          this.templates = templates.filter(template => 
-            templateSlugs.includes(template.slug)
-          )
-        } else {
-          const randIndex = Math.floor(Math.random() * (templates.length - 3))
-          this.templates = templates.slice(randIndex, randIndex + 3)
-        }
-      } catch (err) {
-        console.error(err)
+// Fetch templates server-side for SEO
+const { data: templates } = await useAsyncData(
+  `templates-${props.slug}`,
+  async () => {
+    try {
+      const url = props.slug
+        ? `${appUrl}/templates.json?category_slug=${props.slug}`
+        : `${appUrl}/templates.json`
+
+      const response = await $fetch(url)
+
+      let processedTemplates = response.map((template) => ({
+        ...template,
+        description: template.description || dummyDescription,
+      }))
+
+      // Filter templates based on specificTemplate prop
+      if (props.specificTemplate && props.specificTemplate.length > 0) {
+        const templateSlugs = props.specificTemplate.map(template => template.text)
+        return processedTemplates.filter(template =>
+          templateSlugs.includes(template.slug)
+        )
+      } else {
+        const randIndex = Math.floor(Math.random() * (processedTemplates.length - 3))
+        return processedTemplates.slice(randIndex, randIndex + 3)
       }
-    },
-  },
-}
+    } catch (err) {
+      console.error(err)
+      return []
+    }
+  }
+)
 </script>
 
 <style>
