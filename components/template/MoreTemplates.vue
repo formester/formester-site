@@ -49,9 +49,9 @@
       </div>
     </div>
 
-    <div class="mb-5">
-      <div v-if="templates && templates.length" class="templates">
-        <div v-for="(template, idx) in templates" :key="idx" class="template">
+      <!-- Recommended Tab Templates -->
+      <div v-show="activeTab === null" class="templates">
+        <div v-for="(template, idx) in recommendedTemplates" :key="`rec-${idx}`" class="template">
           <NuxtLink
             :to="`/templates/${template.slug}/`"
           >
@@ -73,179 +73,209 @@
           </NuxtLink>
         </div>
       </div>
+
+      <!-- Category Tab Templates -->
       <div
-        v-if="templates && templates.length"
+        v-for="category in Object.values(categories).flat()"
+        :key="`cat-${category.id}`"
+        v-show="activeTab === category.id"
+        class="templates"
+      >
+        <div
+          v-for="(template, idx) in getCategoryTemplates(category.slug)"
+          :key="`${category.slug}-${idx}`"
+          class="template"
+        >
+          <NuxtLink
+            :to="`/templates/${template.slug}/`"
+          >
+            <img
+              v-if="template.previewImageUrl"
+              class="img-fluid pointer template_img"
+              :src="template.previewImageUrl"
+              :alt="template.name"
+            />
+            <nuxt-img
+              v-else
+              class="img-fluid"
+              src="/templates/create_form.png"
+              alt="Template placeholder image"
+            />
+            <h2 class="template-name pointer">
+              {{ template.name }}
+            </h2>
+          </NuxtLink>
+        </div>
+      </div>
+
+      <div
         class="d-flex align-items-center justify-content-center mt-4"
       >
         <NuxtLink :to="`/templates/`">
           <button class="btn-all-templates">View All Templates</button>
         </NuxtLink>
       </div>
-      <div
-        v-if="!loading && templates.length == 0"
-        class="d-flex align-items-center justify-content-center mt-5 p-5"
-      >
-        No Templates
-      </div>
-
-      <!-- Loader -->
-      <Loader :loading="loading" class="mt-5 p-5" />
-    </div>
   </section>
 </template>
 
-<script>
-import axios from 'axios'
+<script setup>
 import Loader from '../Loader.vue'
-export default {
-  components: {
-    Loader,
-  },
-  props: {
-    categories: {
-      type: Object,
-      default: {},
-    },
-    templateSlug: {
-      type: String,
-      default: '',
-    },
-  },
-  data() {
-    return {
-      isDragging: false,
-      activeTab: null,
-      templates: [],
-      loading: false,
-    }
-  },
-  mounted() {
-    this.getTemplates()
-    this.handleIcons()
-  },
-  methods: {
-    handleIcons() {
-      const tabsBox = this.$refs.tabsBox
-      const leftArrow = document.querySelector('#left')
-      const rightArrow = document.querySelector('#right')
-      const scrollLeft = Math.ceil(tabsBox.scrollLeft)
-      const scrollableWidth = tabsBox.scrollWidth - tabsBox.clientWidth
 
-      leftArrow.parentElement.style.display = scrollLeft > 0 ? 'flex' : 'none'
-      rightArrow.parentElement.style.display =
-        scrollableWidth > scrollLeft ? 'flex' : 'none'
-    },
-    scrollTabs(direction) {
-      const tabsBox = this.$refs.tabsBox
-      const scrollAmount = 180
-
-      if (direction === 'left') {
-        if (tabsBox.scrollLeft <= 100) {
-          tabsBox.scrollLeft = 0
-        } else {
-          tabsBox.scrollLeft -= scrollAmount
-        }
-      } else if (direction === 'right') {
-        tabsBox.scrollLeft += scrollAmount
-      }
-
-      setTimeout(() => {
-        this.handleIcons()
-      }, 300)
-    },
-    setActiveTab(tab) {
-      const id = tab ? tab.slug : 'recommend'
-      this.activeTab = tab?.id || null
-      this.getTemplates(tab?.slug || null)
-      const element = document.getElementById(id)
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'center',
-      })
-      clearTimeout(timeout)
-      const timeout = setTimeout(() => {
-        this.handleIcons()
-      }, 300)
-    },
-    async getTemplates(categorySlug) {
-      this.loading = true
-      try {
-        if (!categorySlug) {
-          const recSlugs = await this.getRecommendedSlugs()
-          if (recSlugs && recSlugs.length) {
-            const params = {
-              slugs: recSlugs.join(','),
-              limit: 6,
-            }
-            const { data: filtered } = await axios(
-              'https://app.formester.com/templates.json',
-              { params }
-            )
-            const allowed = new Set(recSlugs)
-            let list = filtered.filter((el) => allowed.has(el.slug))
-            const order = recSlugs
-            list.sort((a, b) => order.indexOf(a.slug) - order.indexOf(b.slug))
-            this.templates = list.filter((el) => el.slug !== this.templateSlug).slice(0, 6)
-            this.loading = false
-            return
-          } else {
-            const params = {
-              limit: 7,
-            }
-            const { data } = await axios(
-              'https://app.formester.com/templates.json',
-              { params }
-            )
-            this.templates = data
-              .filter((el) => el.slug !== this.templateSlug)
-              .slice(0, 6)
-            this.loading = false
-            return
-          }
-        }
-
-        const params = { limit: 6 }
-        if (categorySlug) params.category_slug = categorySlug
-        const { data } = await axios(
-          'https://app.formester.com/templates.json',
-          { params }
-        )
-        this.templates = data
-          .filter((el) => el.slug !== this.templateSlug)
-          .slice(0, 6)
-        this.loading = false
-      } catch (err) {
-        console.error(err)
-        this.loading = false
-      }
-    },
-    async getRecommendedSlugs() {
-      try {
-        const { data } = await axios(
-          'https://cms.formester.com/api/recommended-templates',
-          {
-            params: {
-              'filters[specificTemplate][$eq]': this.templateSlug,
-              'pagination[pageSize]': 1,
-              populate: 'deep',
-            },
-          }
-        )
-        const items = (data && data.data) || []
-        const found = items && items.length ? items[0] : null
-        if (!found || !found.recommendedTemplates) return []
-        const slugs = found.recommendedTemplates
-          .map((rt) => (rt ? rt.text : null))
-          .filter(Boolean)
-        return [...new Set(slugs)]
-      } catch (e) {
-        console.error(e)
-        return []
-      }
-    },
+const props = defineProps({
+  categories: {
+    type: Object,
+    default: {},
   },
+  templateSlug: {
+    type: String,
+    default: '',
+  },
+})
+
+const activeTab = ref(null)
+const tabsBox = ref(null)
+
+const config = useRuntimeConfig()
+const appUrl = config.public.appUrl
+
+// Fetch recommended slugs
+async function getRecommendedSlugs() {
+  try {
+    const data = await $fetch('https://cms.formester.com/api/recommended-templates', {
+      params: {
+        'filters[specificTemplate][$eq]': props.templateSlug,
+        'pagination[pageSize]': 1,
+        populate: 'deep',
+      },
+    })
+    const items = (data && data.data) || []
+    const found = items && items.length ? items[0] : null
+    if (!found || !found.recommendedTemplates) return []
+    const slugs = found.recommendedTemplates
+      .map((rt) => (rt ? rt.text : null))
+      .filter(Boolean)
+    return [...new Set(slugs)]
+  } catch (e) {
+    console.error(e)
+    return []
+  }
 }
+
+const { data: categoryTemplatesCache } = await useAsyncData(
+  'category-templates-global',
+  async () => {
+    try {
+      const templatesGroupedByCategory = await $fetch(
+        `${appUrl}/template_categories/grouped_by_category.json`
+      )
+
+      // Convert array to map for easy lookup
+      const templatesMap = {}
+      templatesGroupedByCategory.forEach((item) => {
+        templatesMap[item.categorySlug] = item.templates.slice(0, 6)
+      })
+
+      return templatesMap
+    } catch (err) {
+      console.error('Error fetching grouped templates:', err)
+      return {}
+    }
+  }
+)
+
+// Fetch recommended templates for THIS specific page (unique per templateSlug)
+const { data: recommendedTemplates } = await useAsyncData(
+  `recommended-templates-${props.templateSlug}`,
+  async () => {
+    try {
+      const recSlugs = await getRecommendedSlugs()
+      if (recSlugs && recSlugs.length) {
+        const filtered = await $fetch(`${appUrl}/templates.json`, {
+          params: {
+            slugs: recSlugs.join(','),
+            limit: 6,
+          },
+        })
+        const allowed = new Set(recSlugs)
+        let list = filtered.filter((el) => allowed.has(el.slug))
+        const order = recSlugs
+        list.sort((a, b) => order.indexOf(a.slug) - order.indexOf(b.slug))
+        return list.filter((el) => el.slug !== props.templateSlug).slice(0, 6)
+      } else {
+        const data = await $fetch(`${appUrl}/templates.json`, {
+          params: { limit: 7 },
+        })
+        return data
+          .filter((el) => el.slug !== props.templateSlug)
+          .slice(0, 6)
+      }
+    } catch (err) {
+      console.error(err)
+      return []
+    }
+  }
+)
+
+// Get templates for a specific category (filters out current template)
+function getCategoryTemplates(categorySlug) {
+  const categoryTemplates = categoryTemplatesCache.value?.[categorySlug] || []
+  return categoryTemplates.filter((el) => el.slug !== props.templateSlug).slice(0, 6)
+}
+
+// Switch active tab (just updates activeTab, all content already rendered)
+function setActiveTab(tab) {
+  const id = tab ? tab.slug : 'recommend'
+  activeTab.value = tab?.id || null
+
+  const element = document.getElementById(id)
+  element?.scrollIntoView({
+    behavior: 'smooth',
+    block: 'nearest',
+    inline: 'center',
+  })
+
+  setTimeout(() => {
+    handleIcons()
+  }, 300)
+}
+
+function handleIcons() {
+  const leftArrow = document.querySelector('#left')
+  const rightArrow = document.querySelector('#right')
+  if (!tabsBox.value) return
+
+  const scrollLeft = Math.ceil(tabsBox.value.scrollLeft)
+  const scrollableWidth = tabsBox.value.scrollWidth - tabsBox.value.clientWidth
+
+  if (leftArrow?.parentElement) {
+    leftArrow.parentElement.style.display = scrollLeft > 0 ? 'flex' : 'none'
+  }
+  if (rightArrow?.parentElement) {
+    rightArrow.parentElement.style.display = scrollableWidth > scrollLeft ? 'flex' : 'none'
+  }
+}
+
+function scrollTabs(direction) {
+  const scrollAmount = 180
+
+  if (direction === 'left') {
+    if (tabsBox.value.scrollLeft <= 100) {
+      tabsBox.value.scrollLeft = 0
+    } else {
+      tabsBox.value.scrollLeft -= scrollAmount
+    }
+  } else if (direction === 'right') {
+    tabsBox.value.scrollLeft += scrollAmount
+  }
+
+  setTimeout(() => {
+    handleIcons()
+  }, 300)
+}
+
+onMounted(() => {
+  handleIcons()
+})
 </script>
 
 <style scoped>
