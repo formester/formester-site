@@ -17,19 +17,19 @@ export default async () => {
     url: '/blog',
     changefreq: 'daily'
   })
-  
+
   for (let i = 2; i <= totalPages; i++) {
     paginationUrls.push({
-      url: `/blog?page=${i}`,
+      url: `/blog/page/${i}`,
       changefreq: 'daily'
     })
   }
-  
+
   const articleUrls = articles.map(url => ({
     url,
     changefreq: 'weekly'
   }))
-  
+
   return [...articleUrls, ...paginationUrls]
 }
 

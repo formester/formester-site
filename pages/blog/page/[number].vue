@@ -1,15 +1,5 @@
 <template>
   <div class="container upper-margin">
-    <div>
-      <h1 class="section__heading">Featured Blog</h1>
-      <BlogFeatured
-        v-for="article in heroArticles"
-        :key="article.slug"
-        :article="article"
-        class="my-4"
-      />
-    </div>
-
     <div class="row mt-4">
       <h2 class="section__heading" id="all-blogs">All Blogs</h2>
       <div class="blog-container-wrapper">
@@ -24,15 +14,25 @@
           </transition-group>
         </div>
         <ClientOnly>
-            <div v-if="isLoading" class="blog-loading">
+          <div v-if="isLoading" class="blog-loading">
             <div class="loading-spinner"></div>
-            </div>
+          </div>
         </ClientOnly>
       </div>
     </div>
     <nav v-if="totalPages > 1">
       <div class="custom-pagination-bar">
-        <span class="custom-page-btn prev disabled">
+        <nuxt-link
+          v-if="currentPage > 1"
+          class="custom-page-btn prev"
+          :to="currentPage === 2 ? '/blog/' : `/blog/page/${currentPage - 1}/`"
+        >
+          Previous
+        </nuxt-link>
+        <span
+          v-else
+          class="custom-page-btn prev disabled"
+        >
           Previous
         </span>
         <div class="custom-pagination-center">
@@ -52,7 +52,7 @@
         <nuxt-link
           v-if="currentPage < totalPages"
           class="custom-page-btn next"
-          :to="`/blog/page/2/`"
+          :to="`/blog/page/${currentPage + 1}/`"
         >
           Next
         </nuxt-link>
@@ -68,37 +68,42 @@
 </template>
 
 <script setup>
-import BlogCard from '../../components/blog/BlogCard.vue'
-import BlogFeatured from '../../components/blog/BlogFeatured.vue'
-import getSiteMeta from '../../utils/getSiteMeta'
-import { getPaginatedArticles } from '../../composables/useBlogData'
+import BlogCard from '../../../components/blog/BlogCard.vue'
+import getSiteMeta from '../../../utils/getSiteMeta'
+import { getPaginatedArticles } from '../../../composables/useBlogData'
 
 const route = useRoute()
 const isLoading = ref(false)
 
+// Get page number from route
+const currentPage = computed(() => {
+  const num = parseInt(route.params.number)
+  return isNaN(num) || num < 1 ? 1 : num
+})
+
 // Fetch blog data using shared composable
 const { articles, heroArticles, totalPages, itemsPerPage } = await useBlogData()
 
-// Always show page 1 on index
-const currentPage = 1
-
+// Get paginated articles for this page
 const paginatedArticles = computed(() => {
-  return getPaginatedArticles(articles.value, currentPage, itemsPerPage)
+  return getPaginatedArticles(articles.value, currentPage.value, itemsPerPage)
 })
 
-// Redirect old query param URLs to new structure
-if (route.query.page) {
-  const pageNum = parseInt(route.query.page)
-  if (pageNum > 1) {
-    await navigateTo(`/blog/page/${pageNum}/`, { redirectCode: 301 })
-  }
+// 404 if page number is out of range
+if (currentPage.value > totalPages.value) {
+  throw createError({ statusCode: 404, message: 'Page not found' })
+}
+
+// Redirect page 1 to /blog/
+if (currentPage.value === 1) {
+  await navigateTo('/blog/', { redirectCode: 301 })
 }
 
 const paginationPages = computed(() => {
   const pages = []
   const total = totalPages.value
-  const current = currentPage
-  
+  const current = currentPage.value
+
   if (total <= 5) {
     for (let i = 1; i <= total; i++) {
       pages.push({ type: 'page', page: i, key: `page-${i}` })
@@ -127,8 +132,8 @@ const paginationPages = computed(() => {
 const meta = computed(() => {
   const metaData = {
     type: 'website',
-    url: 'https://formester.com/blog/',
-    title: 'Latest form Builder Software in 2023 | Best Online Form Builder to Use in 2023 - Formester',
+    url: `https://formester.com/blog/page/${currentPage.value}/`,
+    title: `Latest form Builder Software in 2023 | Page ${currentPage.value} - Formester`,
     description: "Best Online, No-Code Form Builder Software in 2023 - Formester's Blog Resource | Discover trending content related to all things form-building.",
     mainImage: 'https://formester.com/formester-logo-meta-image.png',
     mainImageAlt: 'Formester Logo',
@@ -137,17 +142,26 @@ const meta = computed(() => {
 })
 
 // SEO Meta tags
+const baseUrl = 'https://formester.com/blog/'
+
 useHead({
-  title: 'Form Builder Blog | Latest Articles & Resources - Formester',
+  title: `Form Builder Blog | Page ${currentPage.value} - Formester`,
   meta: meta.value,
   link: [
     {
       rel: 'canonical',
-      href: 'https://formester.com/blog/',
+      href: `https://formester.com/blog/page/${currentPage.value}/`,
     },
-    ...(totalPages.value > 1 ? [{
+    ...(currentPage.value > 2 ? [{
+      rel: 'prev',
+      href: currentPage.value === 2 ? baseUrl : `${baseUrl}page/${currentPage.value - 1}/`,
+    }] : currentPage.value === 2 ? [{
+      rel: 'prev',
+      href: baseUrl,
+    }] : []),
+    ...(currentPage.value < totalPages.value ? [{
       rel: 'next',
-      href: 'https://formester.com/blog/page/2/',
+      href: `${baseUrl}page/${currentPage.value + 1}/`,
     }] : []),
   ],
 })
@@ -185,9 +199,39 @@ useJsonld([
         name: 'Blog',
         item: 'https://formester.com/blog',
       },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: `Page ${currentPage.value}`,
+        item: `https://formester.com/blog/page/${currentPage.value}`,
+      },
     ],
   },
 ])
+
+// Watch for route changes (for client-side navigation)
+watch(() => route.params.number, () => {
+  isLoading.value = true
+
+  if (process.client) {
+    nextTick(() => {
+      const allBlogsSection = document.getElementById('all-blogs')
+      if (allBlogsSection) {
+        const rect = allBlogsSection.getBoundingClientRect()
+        const scrollTop = window.pageYOffset + rect.top - 80
+        window.scrollTo({ top: scrollTop, behavior: 'smooth' })
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      }
+    })
+  }
+
+  nextTick(() => {
+    setTimeout(() => {
+      isLoading.value = false
+    }, 300)
+  })
+})
 </script>
 
 <style scoped>
@@ -296,7 +340,7 @@ useJsonld([
 }
 .blog-container-wrapper {
   position: relative;
-  min-height: 600px; /* Adjust based on your content */
+  min-height: 600px;
 }
 
 .blog-container {

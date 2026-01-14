@@ -1,6 +1,5 @@
 import axios from 'axios'
 import getRoutes, { getFeatureRoutes, getPageRoutes } from '~/utils/getRoutes.js'
-import getTemplatesAndCategories from '~/utils/getTemplatesAndCategories.js'
 
 // Cache for sitemap data
 let sitemapCache = null
@@ -28,7 +27,7 @@ export default defineEventHandler(async () => {
         lastmod: new Date()
       }))
 
-    // Get other routes
+    // Get other routes (includes blog articles and pagination)
     const blogs = await getRoutes()
     const features = await getFeatureRoutes()
     const pages = await getPageRoutes()
@@ -37,9 +36,9 @@ export default defineEventHandler(async () => {
     const result = [
       ...pages.map(url => ({ loc: url, lastmod: new Date() })),
       ...features.map(url => ({ loc: url, lastmod: new Date() })),
-      ...blogs.map(item => ({ 
-        loc: typeof item === 'string' ? item : item.url, 
-        lastmod: new Date() 
+      ...blogs.map(item => ({
+        loc: typeof item === 'string' ? item : item.url,
+        lastmod: new Date()
       })),
       ...templates,
       ...categories
