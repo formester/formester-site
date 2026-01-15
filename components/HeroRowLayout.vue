@@ -45,7 +45,7 @@
           </div>
           
           <!-- Video Overlay -->
-          <div v-if="showOverlay" class="video-overlay" @click.self="closeOverlay">
+          <div v-show="showOverlay" class="video-overlay" @click.self="closeOverlay">
             <div class="video-overlay-wrapper">
               <iframe
                 class="video-iframe"
