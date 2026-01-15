@@ -100,7 +100,7 @@
               </th>
               <td>
                 <template v-if="feature.free === 'Yes'">
-                  <nuxt-img src="check-green.svg" />
+                  <nuxt-img src="check-green.svg" alt="Included" />
                 </template>
                 <template v-else>
                   {{ feature.free }}
@@ -108,7 +108,7 @@
               </td>
               <td>
                 <template v-if="feature.pro === 'Yes'">
-                  <nuxt-img src="check-green.svg" />
+                  <nuxt-img src="check-green.svg" alt="Included" />
                 </template>
                 <template v-else>
                   {{ feature.pro }}
@@ -116,7 +116,7 @@
               </td>
               <td>
                 <template v-if="feature.business === 'Yes'">
-                  <nuxt-img src="check-green.svg" />
+                  <nuxt-img src="check-green.svg" alt="Included" />
                 </template>
                 <template v-else>
                   {{ feature.business }}
@@ -217,7 +217,7 @@
               </th>
               <td>
                 <template v-if="feature.free === 'Yes'">
-                  <nuxt-img src="check-green.svg" />
+                  <nuxt-img src="check-green.svg" alt="Included" />
                 </template>
                 <template v-else>
                   {{ feature.free }}
@@ -283,7 +283,7 @@
               </th>
               <td>
                 <template v-if="feature.pro === 'Yes'">
-                  <nuxt-img src="check-green.svg" />
+                  <nuxt-img src="check-green.svg" alt="Included" />
                 </template>
                 <template v-else>
                   {{ feature.pro }}
@@ -351,7 +351,7 @@
               </th>
               <td>
                 <template v-if="feature.business === 'Yes'">
-                  <nuxt-img src="check-green.svg" />
+                  <nuxt-img src="check-green.svg" alt="Included" />
                 </template>
                 <template v-else>
                   {{ feature.business }}
@@ -565,7 +565,7 @@ table tr:nth-child(even) {
     white-space: normal;
     z-index: 1000;
   }
-  
+
   .tooltip::after {
     display: none;
   }
