@@ -135,86 +135,31 @@ const props = defineProps({
 const activeTab = ref(null)
 const tabsBox = ref(null)
 
-const config = useRuntimeConfig()
-const appUrl = config.public.appUrl
+// Use global cached composables - fetches data once for all template pages
+const { data: allTemplates } = await useAllTemplates()
+const { data: categoryTemplatesCache } = await useGroupedTemplates()
+const { data: recommendedSlugs } = await useRecommendedSlugs(props.templateSlug)
 
-// Fetch recommended slugs
-async function getRecommendedSlugs() {
-  try {
-    const data = await $fetch('https://cms.formester.com/api/recommended-templates', {
-      params: {
-        'filters[specificTemplate][$eq]': props.templateSlug,
-        'pagination[pageSize]': 1,
-        populate: 'deep',
-      },
-    })
-    const items = (data && data.data) || []
-    const found = items && items.length ? items[0] : null
-    if (!found || !found.recommendedTemplates) return []
-    const slugs = found.recommendedTemplates
-      .map((rt) => (rt ? rt.text : null))
-      .filter(Boolean)
-    return [...new Set(slugs)]
-  } catch (e) {
-    console.error(e)
-    return []
+// Compute recommended templates from cached data
+const recommendedTemplates = computed(() => {
+  if (!allTemplates.value) return []
+
+  const recSlugs = recommendedSlugs.value || []
+
+  if (recSlugs && recSlugs.length) {
+    // Filter from cached templates instead of making API call
+    const allowed = new Set(recSlugs)
+    let list = allTemplates.value.filter((el) => allowed.has(el.slug))
+    // Sort by recommendation order
+    list.sort((a, b) => recSlugs.indexOf(a.slug) - recSlugs.indexOf(b.slug))
+    return list.filter((el) => el.slug !== props.templateSlug).slice(0, 6)
+  } else {
+    // Fallback: return first 6 templates (excluding current)
+    return allTemplates.value
+      .filter((el) => el.slug !== props.templateSlug)
+      .slice(0, 6)
   }
-}
-
-const { data: categoryTemplatesCache } = await useAsyncData(
-  'category-templates-global',
-  async () => {
-    try {
-      const templatesGroupedByCategory = await $fetch(
-        `${appUrl}/template_categories/grouped_by_category.json`
-      )
-
-      // Convert array to map for easy lookup
-      const templatesMap = {}
-      templatesGroupedByCategory.forEach((item) => {
-        templatesMap[item.categorySlug] = item.templates.slice(0, 6)
-      })
-
-      return templatesMap
-    } catch (err) {
-      console.error('Error fetching grouped templates:', err)
-      return {}
-    }
-  }
-)
-
-// Fetch recommended templates for THIS specific page (unique per templateSlug)
-const { data: recommendedTemplates } = await useAsyncData(
-  `recommended-templates-${props.templateSlug}`,
-  async () => {
-    try {
-      const recSlugs = await getRecommendedSlugs()
-      if (recSlugs && recSlugs.length) {
-        const filtered = await $fetch(`${appUrl}/templates.json`, {
-          params: {
-            slugs: recSlugs.join(','),
-            limit: 6,
-          },
-        })
-        const allowed = new Set(recSlugs)
-        let list = filtered.filter((el) => allowed.has(el.slug))
-        const order = recSlugs
-        list.sort((a, b) => order.indexOf(a.slug) - order.indexOf(b.slug))
-        return list.filter((el) => el.slug !== props.templateSlug).slice(0, 6)
-      } else {
-        const data = await $fetch(`${appUrl}/templates.json`, {
-          params: { limit: 7 },
-        })
-        return data
-          .filter((el) => el.slug !== props.templateSlug)
-          .slice(0, 6)
-      }
-    } catch (err) {
-      console.error(err)
-      return []
-    }
-  }
-)
+})
 
 // Get templates for a specific category (filters out current template)
 function getCategoryTemplates(categorySlug) {

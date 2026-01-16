@@ -587,5 +587,53 @@
         "alt": "smtp integration"
       }
     }
+  },
+  {
+    "id": 595,
+    "slug": "generate-unique-form-submission-url-for-each-respondent",
+    "navTitle": "Unique Links",
+    "navDescription": "Track individual submissions with unique links.",
+    "featureCategory": "Branding & Integration",
+    "featurePlan": "Business",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "Custom CSS",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/custom_css_4e281d5092.svg",
+        "alt": "Custom CSS"
+      }
+    }
+  },
+  {
+    "id": 596,
+    "slug": "ai-workflows",
+    "navTitle": "AI Workflows",
+    "navDescription": "Analyze responses using AI",
+    "featureCategory": "Data Handling",
+    "featurePlan": "Business",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "AI Workflow",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/custom_css_4e281d5092.svg",
+        "alt": "AI Workflow"
+      }
+    }
+  },
+  {
+    "id": 597,
+    "slug": "sms-verification-forms",
+    "navTitle": "SMS OTP Verfication",
+    "navDescription": "Block fake entries with SMS OTP",
+    "featureCategory": "Security & Validation",
+    "featurePlan": "Business",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "message-check-square",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/message_check_square_a7ca7bc154.svg",
+        "alt": "message-check-square"
+      }
+    }
   }
 ]

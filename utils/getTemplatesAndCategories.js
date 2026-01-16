@@ -1,75 +1,47 @@
-import axios from 'axios'
+import { getTemplateData, getPdfTemplates } from './templateDataCache'
 
 // Single global cache for all requests
 let cache = null
 
-// Retry helper function
-const fetchWithRetry = async (url, config, retries = 3, delay = 2000) => {
-  for (let i = 0; i < retries; i++) {
-    try {
-      return await axios.get(url, { ...config, timeout: 30000 })
-    } catch (error) {
-      if (i === retries - 1) throw error
-      console.log(`Retry ${i + 1}/${retries} for ${url}`)
-      await new Promise(resolve => setTimeout(resolve, delay))
-    }
-  }
-}
-
+/**
+ * Fetch templates and categories using the shared cache
+ * This ensures data is fetched only once during the entire build process
+ * Works during SSR/build without HTTP requests
+ */
 export default async (params = {}) => {
-  // Return cached data if available (build or dev)
+  // Return cached data if available
   if (cache) {
     return cache
   }
 
-  let { data: templates } = await fetchWithRetry(
-    "https://app.formester.com/templates.json",
-    {
-      params: {
-        ...params,
-        with_details: true,
-      },
-    }
-  )
-
-  const { data: categories } = await fetchWithRetry(
-    "https://app.formester.com/template_categories.json"
-  )
+  // Fetch all template data from shared cache (direct import, no HTTP)
+  const { templates, categories, groupedCategories } = await getTemplateData('all')
 
   const dummyDescription =
     'Check out this pre-designed template and start customising with just a single click. Personalise with your branding, incorporate electronic signatures for security and add multiple collaborators to make changes simultaneously. Use this template and start getting data driven actionable insights with robust analytics.'
 
-    const {
-      data: { data },
-    } = await fetchWithRetry(`https://cms.formester.com/api/pdf-templates`, {
-    params: {
+  // Fetch PDF templates
+  const pdfTemplates = await getPdfTemplates()
 
-      populate: 'deep',
-    },
-  })
-
-  templates = templates.map((template) => ({
+  const processedTemplates = templates.map((template) => ({
     ...template,
     description: template.description || dummyDescription,
   }))
 
-  const templateRoutes = templates.map((template) => {
-    const pdfTemplate = data.find((pdfTemplate) => pdfTemplate.slug === template.slug)
+  const templateRoutes = processedTemplates.map((template) => {
+    const pdfTemplate = pdfTemplates.find((pdfTemplate) => pdfTemplate.slug === template.slug)
     return {
       route: `/templates/${template.slug}`,
       payload: { template, categories, data: pdfTemplate },
     }
   })
+
   templateRoutes.push({
     route: `/templates`,
-    payload: { templates, categories },
+    payload: { templates: processedTemplates, categories },
   })
 
-  const { data: templatesGroupedByCategory } = await fetchWithRetry(
-    "https://app.formester.com/template_categories/grouped_by_category.json"
-  )
-
-  const categorieRoutes = templatesGroupedByCategory.map((item) => ({
+  const categorieRoutes = groupedCategories.map((item) => ({
     route: `/templates/categories/${item.categorySlug}`,
     payload: {
       templates: item.templates,
@@ -77,7 +49,12 @@ export default async (params = {}) => {
     },
   }))
 
-  const result = { templateRoutes, categorieRoutes, templates, categories }
+  const result = {
+    templateRoutes,
+    categorieRoutes,
+    templates: processedTemplates,
+    categories
+  }
 
   // Cache result globally
   cache = result

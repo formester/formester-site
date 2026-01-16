@@ -15,7 +15,7 @@
                 >
               </div>
               <a
-                href="https://app.formester.com/users/sign_up"
+                href="http://localhost:5000/users/sign_up"
                 class="table__button muted d-block text-center"
               >
                 Start for free</a
@@ -31,7 +31,7 @@
                 >
               </div>
               <a
-                href="https://app.formester.com/users/sign_up"
+                href="http://localhost:5000/users/sign_up"
                 class="table__button d-block text-center"
                 >Get started</a
               >
@@ -48,7 +48,7 @@
                 >
               </div>
               <a
-                href="https://app.formester.com/users/sign_up"
+                href="http://localhost:5000/users/sign_up"
                 class="table__button hglt d-block text-center"
                 >Get started</a
               >
@@ -130,21 +130,21 @@
             <td></td>
             <td>
               <a
-                href="https://app.formester.com/users/sign_up"
+                href="http://localhost:5000/users/sign_up"
                 class="table__button muted d-block text-center"
                 >Start for free</a
               >
             </td>
             <td>
               <a
-                href="https://app.formester.com/users/sign_up"
+                href="http://localhost:5000/users/sign_up"
                 class="table__button d-block text-center"
                 >Get started</a
               >
             </td>
             <td>
               <a
-                href="https://app.formester.com/users/sign_up"
+                href="http://localhost:5000/users/sign_up"
                 class="table__button hglt d-block text-center"
               >
                 Get started
@@ -165,7 +165,7 @@
           <span class="pricing__timeline ms-1 text-nowrap">per month</span>
         </div>
         <a
-          href="https://app.formester.com/users/sign_up"
+          href="http://localhost:5000/users/sign_up"
           class="table__button muted d-block text-center"
         >
           Start for free
@@ -230,7 +230,7 @@
           <tr>
             <td colspan="2">
               <a
-                href="https://app.formester.com/users/sign_up"
+                href="http://localhost:5000/users/sign_up"
                 class="table__button muted d-block text-center"
               >
                 Start for free
@@ -248,7 +248,7 @@
           <span class="pricing__timeline ms-1 text-nowrap">per month</span>
         </div>
         <a
-          href="https://app.formester.com/users/sign_up"
+          href="http://localhost:5000/users/sign_up"
           class="table__button d-block text-center"
         >
           Get Started
@@ -296,7 +296,7 @@
           <tr>
             <td colspan="2">
               <a
-                href="https://app.formester.com/users/sign_up"
+                href="http://localhost:5000/users/sign_up"
                 class="table__button d-block text-center"
               >
                 Get Started
@@ -316,7 +316,7 @@
           <span class="pricing__timeline ms-1 text-nowrap">per month</span>
         </div>
         <a
-          href="https://app.formester.com/users/sign_up"
+          href="http://localhost:5000/users/sign_up"
           class="table__button hglt d-block text-center"
         >
           Get Started
@@ -364,7 +364,7 @@
           <tr>
             <td colspan="2">
               <a
-                href="https://app.formester.com/users/sign_up"
+                href="http://localhost:5000/users/sign_up"
                 class="table__button hglt d-block text-center"
               >
                 Get Started

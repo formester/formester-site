@@ -112,8 +112,8 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: ['/', '/sitemap.xml'],
       ignore: ['/api'],
-      concurrency: 5, // Reduced from 15 to lower memory usage
-      interval: 100, // Increased from 50 to slow down processing
+      concurrency: 10, // Optimized caching allows higher concurrency
+      interval: 50, // Faster builds with singleton cache
       failOnError: false
     }
   },
@@ -135,7 +135,7 @@ export default defineNuxtConfig({
     public: {
       baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'http://localhost:3000',
       strapiUrl: 'https://cms.formester.com',
-      appUrl: 'https://app.formester.com',
+      appUrl: 'http://localhost:5000',
       clarityId: 'emw9o333qb'
     }
   },

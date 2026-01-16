@@ -49,44 +49,43 @@ const props = defineProps({
   },
 })
 
-const config = useRuntimeConfig()
-const appUrl = config.public.appUrl
-
 const dummyDescription =
   'Check out this pre-designed template and start customising with just a single click. Personalise with your branding, incorporate electronic signatures for security and add multiple collaborators to make changes simultaneously. Use this template and start getting data driven actionable insights with robust analytics.'
 
-// Fetch templates server-side for SEO
-const { data: templates } = await useAsyncData(
-  `templates-${props.slug}`,
-  async () => {
-    try {
-      const url = props.slug
-        ? `${appUrl}/templates.json?category_slug=${props.slug}`
-        : `${appUrl}/templates.json`
+// Use global cached templates - fetches once for all pages
+const { data: allTemplates } = await useAllTemplates()
 
-      const response = await $fetch(url)
+// Compute filtered templates from cached data
+const templates = computed(() => {
+  if (!allTemplates.value) return []
 
-      let processedTemplates = response.map((template) => ({
-        ...template,
-        description: template.description || dummyDescription,
-      }))
+  let filteredTemplates = allTemplates.value
 
-      // Filter templates based on specificTemplate prop
-      if (props.specificTemplate && props.specificTemplate.length > 0) {
-        const templateSlugs = props.specificTemplate.map(template => template.text)
-        return processedTemplates.filter(template =>
-          templateSlugs.includes(template.slug)
-        )
-      } else {
-        const randIndex = Math.floor(Math.random() * (processedTemplates.length - 3))
-        return processedTemplates.slice(randIndex, randIndex + 3)
-      }
-    } catch (err) {
-      console.error(err)
-      return []
-    }
+  // Filter by category slug if provided
+  if (props.slug) {
+    filteredTemplates = filteredTemplates.filter(
+      (template) => template.categorySlug === props.slug
+    )
   }
-)
+
+  // Add dummy description to all templates
+  let processedTemplates = filteredTemplates.map((template) => ({
+    ...template,
+    description: template.description || dummyDescription,
+  }))
+
+  // Filter templates based on specificTemplate prop
+  if (props.specificTemplate && props.specificTemplate.length > 0) {
+    const templateSlugs = props.specificTemplate.map(template => template.text)
+    return processedTemplates.filter(template =>
+      templateSlugs.includes(template.slug)
+    )
+  } else {
+    // Return random 3 templates
+    const randIndex = Math.floor(Math.random() * Math.max(0, processedTemplates.length - 3))
+    return processedTemplates.slice(randIndex, randIndex + 3)
+  }
+})
 </script>
 
 <style>
