@@ -62,7 +62,7 @@ export default defineEventHandler(async () => {
     }
 
     // Fetch templates with preview images
-    const { data } = await axios.get('http://localhost:5000/templates.json')
+    const { data } = await axios.get('https://app.formester.com/templates.json')
     const templates = data.map((template) => ({
       loc: `/templates/${template.slug}`,
       lastmod: new Date(),
@@ -70,7 +70,7 @@ export default defineEventHandler(async () => {
     }))
 
     // Fetch template categories
-    const { data: response } = await axios.get('http://localhost:5000/template_categories.json')
+    const { data: response } = await axios.get('https://app.formester.com/template_categories.json')
     const categories = Object.values(response)
       .flat()
       .map((category) => ({
