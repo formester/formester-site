@@ -1,50 +1,27 @@
-import axios from 'axios'
+import templateData from '~/constants/templates.json'
 
 // Global in-memory cache shared across all imports
+// Data is pre-fetched into templates.json during build
 let templatesCache = null
 let categoriesCache = null
 let groupedCategoriesCache = null
 let pdfTemplatesCache = null
 
 /**
- * Fetch and cache template data - works during SSR/build
- * This is imported directly, no HTTP calls needed
- * Returns same reference to prevent memory duplication
+ * Get template data from pre-fetched JSON file
+ * No HTTP calls during build - data is already in constants/templates.json
+ * Returns frozen objects to prevent mutations
  */
 export async function getTemplateData(type = 'all') {
-  const appUrl = process.env.NUXT_PUBLIC_APP_URL || 'https://app.formester.com'
-
   try {
-    // Fetch templates if not cached
+    // Initialize caches from pre-fetched JSON file (only once)
     if (!templatesCache) {
-      console.log('🔄 Fetching templates (first time)...')
-      const { data } = await axios.get(`${appUrl}/templates.json`, {
-        params: { with_details: true },
-        timeout: 30000
-      })
-      // Freeze to prevent accidental mutations and ensure same reference
-      templatesCache = Object.freeze(data)
-      console.log(`✅ Cached ${templatesCache.length} templates`)
-    }
-
-    // Fetch categories if not cached
-    if (!categoriesCache) {
-      console.log('🔄 Fetching categories (first time)...')
-      const { data } = await axios.get(`${appUrl}/template_categories.json`, {
-        timeout: 30000
-      })
-      categoriesCache = Object.freeze(data)
-      console.log(`✅ Cached categories`)
-    }
-
-    // Fetch grouped categories if not cached
-    if (!groupedCategoriesCache) {
-      console.log('🔄 Fetching grouped categories (first time)...')
-      const { data } = await axios.get(`${appUrl}/template_categories/grouped_by_category.json`, {
-        timeout: 30000
-      })
-      groupedCategoriesCache = Object.freeze(data)
-      console.log(`✅ Cached ${groupedCategoriesCache.length} grouped categories`)
+      console.log('📦 Loading templates from constants/templates.json...')
+      templatesCache = Object.freeze(templateData.templates)
+      categoriesCache = Object.freeze(templateData.categories)
+      groupedCategoriesCache = Object.freeze(templateData.groupedCategories)
+      pdfTemplatesCache = templateData.pdfTemplates || []
+      console.log(`✅ Loaded ${templatesCache.length} templates from JSON file`)
     }
 
     // Return requested data (same reference each time)
@@ -70,22 +47,12 @@ export async function getTemplateData(type = 'all') {
 }
 
 /**
- * Fetch PDF templates - cached separately
+ * Get PDF templates from pre-fetched data
  */
 export async function getPdfTemplates() {
+  // Initialize from JSON if not already done
   if (!pdfTemplatesCache) {
-    try {
-      console.log('🔄 Fetching PDF templates...')
-      const { data: { data } } = await axios.get('https://cms.formester.com/api/pdf-templates', {
-        params: { populate: 'deep' },
-        timeout: 30000
-      })
-      pdfTemplatesCache = data
-      console.log(`✅ Cached ${pdfTemplatesCache.length} PDF templates`)
-    } catch (error) {
-      console.error('Error fetching PDF templates:', error.message)
-      pdfTemplatesCache = []
-    }
+    await getTemplateData('all') // This will initialize all caches
   }
   return pdfTemplatesCache
 }

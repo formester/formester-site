@@ -14,19 +14,14 @@ export default async (params = {}) => {
     return cache
   }
 
-  // Fetch all template data from shared cache (direct import, no HTTP)
+  // Fetch all template data from pre-fetched JSON file (no HTTP calls)
   const { templates, categories, groupedCategories } = await getTemplateData('all')
 
-  const dummyDescription =
-    'Check out this pre-designed template and start customising with just a single click. Personalise with your branding, incorporate electronic signatures for security and add multiple collaborators to make changes simultaneously. Use this template and start getting data driven actionable insights with robust analytics.'
-
-  // Fetch PDF templates
+  // Fetch PDF templates from pre-fetched data
   const pdfTemplates = await getPdfTemplates()
 
-  const processedTemplates = templates.map((template) => ({
-    ...template,
-    description: template.description || dummyDescription,
-  }))
+  // Templates already have descriptions added in cache layer
+  const processedTemplates = templates
 
   const templateRoutes = processedTemplates.map((template) => {
     const pdfTemplate = pdfTemplates.find((pdfTemplate) => pdfTemplate.slug === template.slug)
