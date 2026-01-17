@@ -112,8 +112,8 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: ['/', '/sitemap.xml'],
       ignore: ['/api'],
-      concurrency: 10, // Optimized caching allows higher concurrency
-      interval: 50, // Faster builds with singleton cache
+      concurrency: 5,
+      interval: 100,
       failOnError: false
     }
   },
