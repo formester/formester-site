@@ -1,11 +1,13 @@
 <template>
   <div class="template">
     <NuxtLink :to="`/templates/${template.slug}/`">
+      <div v-if="loading" class="image-skeleton"></div>
       <img
         class="img-fluid pointer template-preview__img"
+        :class="{ hidden: loading }"
         :src="previewImageUrl"
         :alt="template.name"
-        loading="lazy"
+        @load="loading = false"
       />
       <div class="template-content">
         <h6 class="template-name pointer">
@@ -19,20 +21,28 @@
   </div>
 </template>
 
-<script setup>
-const props = defineProps({
-  template: {
-    type: Object,
-    required: true,
+<script>
+export default {
+  props: {
+    template: {
+      type: Object,
+      required: true,
+    },
   },
-})
-
-const previewImageUrl = computed(() => {
-  return (
-    props.template.previewImageUrl ||
-    '/templates/create_form.png'
-  )
-})
+  data() {
+    return {
+      loading: true,
+    }
+  },
+  computed: {
+    previewImageUrl() {
+      return (
+        this.template.previewImageUrl ||
+        '/templates/create_form.png'
+      )
+    },
+  },
+}
 </script>
 
 <style scoped>
@@ -74,6 +84,14 @@ const previewImageUrl = computed(() => {
   text-overflow: ellipsis;
 }
 
+.image-skeleton {
+  width: 100%;
+  padding-top: 61.5%; /* 738/1200 = 0.615 (61.5%) */
+  border-radius: 8px;
+  animation: skeleton-loading 1s linear infinite alternate;
+  position: relative;
+}
+
 .template-preview__img {
   display: block;
   transition: all 0.4s ease;
@@ -84,10 +102,23 @@ const previewImageUrl = computed(() => {
   object-position: top;
 }
 
+.template-preview__img.hidden {
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
   .template-name {
     font-size: 14px;
     line-height: 21px;
+  }
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 90%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 97%);
   }
 }
 </style>

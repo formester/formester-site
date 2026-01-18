@@ -90,6 +90,3 @@ sw.*
 
 # Vim swap files
 *.swp
-
-# Generated data files
-constants/templates.json

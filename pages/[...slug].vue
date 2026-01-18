@@ -1,5 +1,5 @@
 <template>
-  <PageComponents v-if="pageData" :components="components" />
+  <PageComponents :components="components" />
 </template>
 
 <script setup>
@@ -18,20 +18,24 @@ const strapiParams = { 'filters[slug][$eqi]': slug }
 
 const { data: pageData, error: fetchError } = await useAsyncData(`page-${slug}`, async () => {
   const result = await getStrapiData(endpoint, strapiParams)
-
+  
   if (!result || !result.components || result.components.length === 0) {
-    return null
+    throw createError({ 
+      statusCode: 404, 
+      statusMessage: 'Page not found',
+      fatal: true 
+    })
   }
-
+  
   return result
 })
 
-// If there was an error or no data, throw a 404
-if (fetchError.value || !pageData.value) {
-  throw createError({
-    statusCode: 404,
+// If there was an error fetching data, throw it
+if (fetchError.value) {
+  throw createError({ 
+    statusCode: 404, 
     statusMessage: 'Page not found',
-    fatal: true
+    fatal: true 
   })
 }
 
@@ -43,3 +47,5 @@ useHead(() => pageData.value?.head || {})
 // Set JSON-LD schema - must be called unconditionally
 useJsonld(() => pageData.value?.jsonld || [])
 </script>
+
+<style></style>
