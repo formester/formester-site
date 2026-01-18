@@ -138,6 +138,10 @@ const tabsBox = ref(null)
 const config = useRuntimeConfig()
 const appUrl = config.public.appUrl
 
+// Cache for category templates - lazy loaded on demand (client-side only)
+const categoryTemplatesCache = ref({})
+const isFetchingCategories = ref(false)
+
 // Fetch recommended slugs
 async function getRecommendedSlugs() {
   try {
@@ -161,27 +165,32 @@ async function getRecommendedSlugs() {
   }
 }
 
-const { data: categoryTemplatesCache } = await useAsyncData(
-  'category-templates-global',
-  async () => {
-    try {
-      const templatesGroupedByCategory = await $fetch(
-        `${appUrl}/template_categories/grouped_by_category.json`
-      )
-
-      // Convert array to map for easy lookup
-      const templatesMap = {}
-      templatesGroupedByCategory.forEach((item) => {
-        templatesMap[item.categorySlug] = item.templates.slice(0, 6)
-      })
-
-      return templatesMap
-    } catch (err) {
-      console.error('Error fetching grouped templates:', err)
-      return {}
-    }
+// Lazy-load category templates only when needed (client-side)
+async function loadCategoryTemplates() {
+  if (isFetchingCategories.value || Object.keys(categoryTemplatesCache.value).length > 0) {
+    return // Already loaded or loading
   }
-)
+
+  isFetchingCategories.value = true
+  try {
+    const templatesGroupedByCategory = await $fetch(
+      `${appUrl}/template_categories/grouped_by_category.json`
+    )
+
+    // Convert array to map for easy lookup
+    const templatesMap = {}
+    templatesGroupedByCategory.forEach((item) => {
+      templatesMap[item.categorySlug] = item.templates.slice(0, 6)
+    })
+
+    categoryTemplatesCache.value = templatesMap
+  } catch (err) {
+    console.error('Error fetching grouped templates:', err)
+    categoryTemplatesCache.value = {}
+  } finally {
+    isFetchingCategories.value = false
+  }
+}
 
 // Fetch recommended templates for THIS specific page (unique per templateSlug)
 const { data: recommendedTemplates } = await useAsyncData(
@@ -222,10 +231,15 @@ function getCategoryTemplates(categorySlug) {
   return categoryTemplates.filter((el) => el.slug !== props.templateSlug).slice(0, 6)
 }
 
-// Switch active tab (just updates activeTab, all content already rendered)
-function setActiveTab(tab) {
+// Switch active tab and lazy-load category templates if needed
+async function setActiveTab(tab) {
   const id = tab ? tab.slug : 'recommend'
   activeTab.value = tab?.id || null
+
+  // If switching to a category tab, ensure templates are loaded
+  if (tab && Object.keys(categoryTemplatesCache.value).length === 0) {
+    await loadCategoryTemplates()
+  }
 
   const element = document.getElementById(id)
   element?.scrollIntoView({
