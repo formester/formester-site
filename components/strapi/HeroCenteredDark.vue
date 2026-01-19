@@ -43,7 +43,7 @@
             class="d-flex align-items-center justify-content-center mx-4"
           >
             <nuxt-img src="/icons/check-icon.svg" alt="tick" />
-            <sapn class="click-triggers ms-2">{{ item.text }}</sapn>
+            <span class="click-triggers ms-2">{{ item.text }}</span>
           </div>
         </div>
       </div>

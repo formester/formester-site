@@ -146,7 +146,11 @@
     <Faq v-if="!isEmpty(template.faqs)" :faqList="template.faqs" />
 
     <!-- More templates section -->
-    <more-templates :categories="categories" :template-slug="template.slug" />
+    <more-templates
+      :categories="categories"
+      :template-slug="template.slug"
+      :recommended-templates="recommendedTemplates"
+    />
   </div>
 </template>
 
@@ -180,8 +184,50 @@ const { data: fetchedData, error: fetchError } = await useAsyncData(`template-${
     const routePayload = result.templateRoutes.find(r => r.route === `/templates/${slug}`)
     const pdfData = routePayload?.payload?.data || null
 
+    // Fetch recommended slugs for this template
+    let recommendedTemplates = []
+    try {
+      const recData = await $fetch('https://cms.formester.com/api/recommended-templates', {
+        params: {
+          'filters[specificTemplate][$eq]': slug,
+          'pagination[pageSize]': 1,
+          populate: 'deep',
+        },
+      })
+      const items = (recData && recData.data) || []
+      const found = items && items.length ? items[0] : null
+
+      if (found && found.recommendedTemplates) {
+        const slugs = found.recommendedTemplates
+          .map((rt) => (rt ? rt.text : null))
+          .filter(Boolean)
+        const uniqueSlugs = [...new Set(slugs)]
+
+        // Filter recommended templates from already-loaded templates
+        if (uniqueSlugs.length > 0) {
+          const allowed = new Set(uniqueSlugs)
+          let list = result.templates.filter((t) => allowed.has(t.slug))
+          list.sort((a, b) => uniqueSlugs.indexOf(a.slug) - uniqueSlugs.indexOf(b.slug))
+          recommendedTemplates = list.filter((t) => t.slug !== slug).slice(0, 6)
+        }
+      }
+
+      // Fallback to first 6 templates if no recommendations
+      if (recommendedTemplates.length === 0) {
+        recommendedTemplates = result.templates
+          .filter((t) => t.slug !== slug)
+          .slice(0, 6)
+      }
+    } catch (e) {
+      console.error('Error fetching recommended templates:', e)
+      // Fallback to first 6 templates
+      recommendedTemplates = result.templates
+        .filter((t) => t.slug !== slug)
+        .slice(0, 6)
+    }
+
     // Only return the data needed for this template to reduce memory
-    return { template, categories: result.categories, data: pdfData }
+    return { template, categories: result.categories, data: pdfData, recommendedTemplates }
   } catch (err) {
     console.error('Error fetching template:', err)
     throw createError({ statusCode: 500, message: 'Internal Server Error' })
@@ -195,6 +241,7 @@ if (fetchError.value) {
 const template = computed(() => fetchedData.value?.template || {})
 const categories = computed(() => fetchedData.value?.categories || {})
 const data = computed(() => fetchedData.value?.data || null)
+const recommendedTemplates = computed(() => fetchedData.value?.recommendedTemplates || [])
 
 const currentSlide = ref(0)
 const activeTab = ref('pdf')
@@ -227,13 +274,13 @@ const previewImageUrl = computed(() => {
 
 const previewImages = computed(() => {
   if (!data.value?.previewImages) return []
-  
+
   return data.value.previewImages.map(item => {
     // Handle different Strapi image structures
     let url = ''
     let alt = ''
     let id = item.id
-    
+
     if (item.image?.url) {
       url = item.image.url
       alt = item.image.alternativeText || item.imageAlt || 'Template Preview'
@@ -244,7 +291,7 @@ const previewImages = computed(() => {
       url = item.imageUrl
       alt = item.imageAlt || 'Template Preview'
     }
-    
+
     return { id, url, alt }
   }).filter(item => item.url) // Only return items with valid URLs
 })
@@ -670,12 +717,12 @@ const goToNext = () => {
   .template_hero {
     margin: 1rem auto 5rem;
   }
-  
+
   .template_hero--split .row {
     flex-direction: column;
     min-height: auto;
   }
-  
+
   .template_hero--split .col-lg-6:first-child {
     margin-bottom: 2rem;
   }

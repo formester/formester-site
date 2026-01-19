@@ -31,7 +31,7 @@
             :alt="heroImage.imageAlt || 'Hero image'"
             class="img-fluid hero__image"
           />
-          
+
           <!-- Video thumbnail with play button when video is provided -->
           <div v-if="video_url" class="video-thumbnail-wrapper" @click="showOverlay = true">
             <nuxt-img
@@ -40,10 +40,12 @@
               class="video-thumb-img hero__image"
             />
             <button class="custom-play-btn" aria-label="Play video">
-              <nuxt-img src="/play-button.svg" />
+              <nuxt-img src="/play-button.svg" alt="Play video" />
             </button>
+            <!-- Hidden link for SEO - helps search engines discover the video -->
+            <a :href="video_url" class="visually-hidden" target="_blank" rel="noopener noreferrer">Watch video on YouTube</a>
           </div>
-          
+
           <!-- Video Overlay -->
           <div v-if="showOverlay" class="video-overlay" @click.self="closeOverlay">
             <div class="video-overlay-wrapper">
@@ -136,11 +138,6 @@ export default {
 
 .hero__image {
   height: 100%;
-}
-
-/* Using Bootstrap gutters instead of custom padding */
-.video-column {
-  /* Spacing handled by row gx-lg-5 class */
 }
 
 .click-triggers {
@@ -275,7 +272,7 @@ export default {
     max-width: 100%;
     max-height: calc(80vw * 0.5625);
   }
-  
+
   .close-btn {
     top: -16px;
     right: -16px;
