@@ -49,12 +49,15 @@
       </div>
     </div>
 
-      <!-- Recommended Tab Templates -->
-      <div v-show="activeTab === null" class="templates">
-        <div v-for="(template, idx) in recommendedTemplates" :key="`rec-${idx}`" class="template">
-          <NuxtLink
-            :to="`/templates/${template.slug}/`"
-          >
+    <!-- Recommended Tab Templates -->
+    <div v-show="activeTab === null">
+      <div class="templates">
+        <div
+          v-for="(template, idx) in recommendedTemplates"
+          :key="`rec-${idx}`"
+          class="template"
+        >
+          <NuxtLink :to="`/templates/${template.slug}/`">
             <img
               v-if="template.previewImageUrl"
               class="img-fluid pointer template_img"
@@ -73,22 +76,20 @@
           </NuxtLink>
         </div>
       </div>
+    </div>
 
-      <!-- Category Tab Templates -->
+    <!-- Category Tab Templates -->
+    <div v-show="activeTab !== null" class="mb-5">
       <div
-        v-for="category in Object.values(categories).flat()"
-        :key="`cat-${category.id}`"
-        v-show="activeTab === category.id"
+        v-if="categoryTemplates && categoryTemplates.length"
         class="templates"
       >
         <div
-          v-for="(template, idx) in getCategoryTemplates(category.slug)"
-          :key="`${category.slug}-${idx}`"
+          v-for="(template, idx) in categoryTemplates"
+          :key="`cat-${idx}`"
           class="template"
         >
-          <NuxtLink
-            :to="`/templates/${template.slug}/`"
-          >
+          <NuxtLink :to="`/templates/${template.slug}/`">
             <img
               v-if="template.previewImageUrl"
               class="img-fluid pointer template_img"
@@ -107,14 +108,21 @@
           </NuxtLink>
         </div>
       </div>
-
       <div
-        class="d-flex align-items-center justify-content-center mt-4"
+        v-if="!loading && categoryTemplates.length === 0"
+        class="d-flex align-items-center justify-content-center mt-5 p-5"
       >
-        <NuxtLink :to="`/templates/`">
-          <button class="btn-all-templates">View All Templates</button>
-        </NuxtLink>
+        No Templates
       </div>
+      <!-- Loader -->
+      <Loader :loading="loading" class="mt-5 p-5" />
+    </div>
+
+    <div class="d-flex align-items-center justify-content-center mt-4">
+      <NuxtLink :to="`/templates/`">
+        <button class="btn-all-templates">View All Templates</button>
+      </NuxtLink>
+    </div>
   </section>
 </template>
 
@@ -130,105 +138,52 @@ const props = defineProps({
     type: String,
     default: '',
   },
+  recommendedTemplates: {
+    type: Array,
+    default: () => [],
+  },
 })
 
 const activeTab = ref(null)
 const tabsBox = ref(null)
+const categoryTemplates = ref([])
+const loading = ref(false)
 
 const config = useRuntimeConfig()
 const appUrl = config.public.appUrl
 
-// Cache for category templates - lazy loaded on demand (client-side only)
+// Cache for category templates by slug
 const categoryTemplatesCache = ref({})
-const isFetchingCategories = ref(false)
 
-// Fetch recommended slugs
-async function getRecommendedSlugs() {
+// Lazy-load category templates one category at a time (client-side only)
+async function loadCategoryTemplates(categorySlug) {
+  // Check cache first
+  if (categoryTemplatesCache.value[categorySlug]) {
+    categoryTemplates.value = categoryTemplatesCache.value[categorySlug]
+    return
+  }
+
+  loading.value = true
   try {
-    const data = await $fetch('https://cms.formester.com/api/recommended-templates', {
+    const data = await $fetch(`${appUrl}/templates.json`, {
       params: {
-        'filters[specificTemplate][$eq]': props.templateSlug,
-        'pagination[pageSize]': 1,
-        populate: 'deep',
+        category_slug: categorySlug,
+        limit: 7,
       },
     })
-    const items = (data && data.data) || []
-    const found = items && items.length ? items[0] : null
-    if (!found || !found.recommendedTemplates) return []
-    const slugs = found.recommendedTemplates
-      .map((rt) => (rt ? rt.text : null))
-      .filter(Boolean)
-    return [...new Set(slugs)]
-  } catch (e) {
-    console.error(e)
-    return []
-  }
-}
+    const filtered = data
+      .filter((el) => el.slug !== props.templateSlug)
+      .slice(0, 6)
 
-// Lazy-load category templates only when needed (client-side)
-async function loadCategoryTemplates() {
-  if (isFetchingCategories.value || Object.keys(categoryTemplatesCache.value).length > 0) {
-    return // Already loaded or loading
-  }
-
-  isFetchingCategories.value = true
-  try {
-    const templatesGroupedByCategory = await $fetch(
-      `${appUrl}/template_categories/grouped_by_category.json`
-    )
-
-    // Convert array to map for easy lookup
-    const templatesMap = {}
-    templatesGroupedByCategory.forEach((item) => {
-      templatesMap[item.categorySlug] = item.templates.slice(0, 6)
-    })
-
-    categoryTemplatesCache.value = templatesMap
+    // Cache the result
+    categoryTemplatesCache.value[categorySlug] = filtered
+    categoryTemplates.value = filtered
   } catch (err) {
-    console.error('Error fetching grouped templates:', err)
-    categoryTemplatesCache.value = {}
+    console.error('Error fetching category templates:', err)
+    categoryTemplates.value = []
   } finally {
-    isFetchingCategories.value = false
+    loading.value = false
   }
-}
-
-// Fetch recommended templates for THIS specific page (unique per templateSlug)
-const { data: recommendedTemplates } = await useAsyncData(
-  `recommended-templates-${props.templateSlug}`,
-  async () => {
-    try {
-      const recSlugs = await getRecommendedSlugs()
-      if (recSlugs && recSlugs.length) {
-        const filtered = await $fetch(`${appUrl}/templates.json`, {
-          params: {
-            slugs: recSlugs.join(','),
-            limit: 6,
-          },
-        })
-        const allowed = new Set(recSlugs)
-        let list = filtered.filter((el) => allowed.has(el.slug))
-        const order = recSlugs
-        list.sort((a, b) => order.indexOf(a.slug) - order.indexOf(b.slug))
-        return list.filter((el) => el.slug !== props.templateSlug).slice(0, 6)
-      } else {
-        const data = await $fetch(`${appUrl}/templates.json`, {
-          params: { limit: 7 },
-        })
-        return data
-          .filter((el) => el.slug !== props.templateSlug)
-          .slice(0, 6)
-      }
-    } catch (err) {
-      console.error(err)
-      return []
-    }
-  }
-)
-
-// Get templates for a specific category (filters out current template)
-function getCategoryTemplates(categorySlug) {
-  const categoryTemplates = categoryTemplatesCache.value?.[categorySlug] || []
-  return categoryTemplates.filter((el) => el.slug !== props.templateSlug).slice(0, 6)
 }
 
 // Switch active tab and lazy-load category templates if needed
@@ -236,9 +191,9 @@ async function setActiveTab(tab) {
   const id = tab ? tab.slug : 'recommend'
   activeTab.value = tab?.id || null
 
-  // If switching to a category tab, ensure templates are loaded
-  if (tab && Object.keys(categoryTemplatesCache.value).length === 0) {
-    await loadCategoryTemplates()
+  // Load category templates on tab click (client-side only)
+  if (tab?.slug) {
+    await loadCategoryTemplates(tab.slug)
   }
 
   const element = document.getElementById(id)
@@ -265,7 +220,8 @@ function handleIcons() {
     leftArrow.parentElement.style.display = scrollLeft > 0 ? 'flex' : 'none'
   }
   if (rightArrow?.parentElement) {
-    rightArrow.parentElement.style.display = scrollableWidth > scrollLeft ? 'flex' : 'none'
+    rightArrow.parentElement.style.display =
+      scrollableWidth > scrollLeft ? 'flex' : 'none'
   }
 }
 
