@@ -3,6 +3,9 @@ export default defineNuxtConfig({
   // Global page headers
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'en'
+      },
       title: 'No-Code Online Form Builder - Formester',
       meta: [
         { charset: 'utf-8' },
