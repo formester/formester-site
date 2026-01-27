@@ -11,9 +11,7 @@ export const useBlogData = async () => {
         params: {
           sort: 'publishedAt:desc',
           populate: '*',
-          pagination: {
-            pageSize: 500,
-          },
+          'pagination[pageSize]': 500,
         },
       })
 
