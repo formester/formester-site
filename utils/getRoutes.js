@@ -70,5 +70,15 @@ export const getTemplateRoutes = async () => {
   const templateUrls = templates.map(t => `/templates/${t.slug}`)
   const categoryUrls = templatesGroupedByCategory.map(c => `/templates/categories/${c.categorySlug}`)
 
-  return [...templateUrls, ...categoryUrls, '/templates']
+  // Add pagination URLs
+  const totalTemplates = templates.length
+  const itemsPerPage = 12
+  const totalPages = Math.ceil(totalTemplates / itemsPerPage)
+  const paginationUrls = ['/templates']
+
+  for (let i = 2; i <= totalPages; i++) {
+    paginationUrls.push(`/templates/page/${i}`)
+  }
+
+  return [...templateUrls, ...categoryUrls, ...paginationUrls]
 }

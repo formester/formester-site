@@ -27,6 +27,19 @@ export default defineEventHandler(async () => {
         lastmod: new Date()
       }))
 
+    // Add template pagination URLs
+    const totalTemplates = data.length
+    const itemsPerPage = 12
+    const totalPages = Math.ceil(totalTemplates / itemsPerPage)
+    const templatePagination = [{ loc: '/templates', lastmod: new Date() }]
+
+    for (let i = 2; i <= totalPages; i++) {
+      templatePagination.push({
+        loc: `/templates/page/${i}`,
+        lastmod: new Date()
+      })
+    }
+
     // Get other routes (includes blog articles and pagination)
     const blogs = await getRoutes()
     const features = await getFeatureRoutes()
@@ -41,12 +54,13 @@ export default defineEventHandler(async () => {
         lastmod: new Date()
       })),
       ...templates,
-      ...categories
+      ...categories,
+      ...templatePagination
     ]
-    
+
     // Cache the result
     sitemapCache = result
-    
+
     return result
   } catch (error) {
     console.error('Error generating sitemap URLs:', error)
