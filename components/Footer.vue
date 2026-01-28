@@ -319,6 +319,11 @@
                   Terms of Service
                 </NuxtLink>
               </li>
+            <li class="mt-2">
+                <NuxtLink to="/dpa/" class="footer__link">
+                  DPA
+                </NuxtLink>
+              </li>
               <li class="mt-2">
                 <a href="https://docs.formester.com/" class="footer__link">
                   Documentation

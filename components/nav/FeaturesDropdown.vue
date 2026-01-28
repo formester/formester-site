@@ -37,8 +37,9 @@
             <div class="features-dropdown-title-features">Features</div>
             <ul class="features-dropdown-content">
               <li
-                v-for="dropdownItem in filteredDropdownItems"
+                v-for="dropdownItem in dropdownItems"
                 :key="dropdownItem.id"
+                v-show="dropdownItem.featureCategory === (activeFeatureCategory || localActiveCategory)"
                 @click="$emit('dropdown-close')"
               >
                 <DropdownItem
@@ -124,15 +125,6 @@ export default {
       dropdownItems: dropdownItems,
       featureCategories: featureCategories,
       localActiveCategory: featureCategories[0] || '',
-    }
-  },
-  computed: {
-    filteredDropdownItems() {
-      const category = this.activeFeatureCategory || this.localActiveCategory
-      if (!category) return this.dropdownItems
-      return this.dropdownItems.filter(
-        (item) => item.featureCategory === category
-      )
     }
   },
   methods: {
