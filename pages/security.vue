@@ -154,7 +154,35 @@
   </div>
 </template>
 
-<script></script>
+<script setup>
+import { computed } from 'vue'
+import getSiteMeta from '@/utils/getSiteMeta'
+
+const meta = computed(() => {
+  const metaData = {
+    type: 'website',
+    url: 'https://formester.com/security/',
+    title: 'Security - Formester',
+    description:
+      'Learn about Formester\'s security practices, infrastructure, encryption, and compliance. We take security seriously to protect your form data.',
+    mainImage: 'https://formester.com/formester-logo-meta-image.png',
+    mainImageAlt: 'Formester Logo',
+  }
+  return getSiteMeta(metaData)
+})
+
+useHead({
+  title: 'Security - Formester',
+  meta: computed(() => [...meta.value]),
+  link: [
+    {
+      hid: 'canonical',
+      rel: 'canonical',
+      href: 'https://formester.com/security/',
+    },
+  ],
+})
+</script>
 
 <style scoped>
 .container {

@@ -25,9 +25,9 @@
               type="button"
               :class="[
                 'features-vertical-tab',
-                { active: activeFeatureCategory === category },
+                { active: (activeFeatureCategory || localActiveCategory) === category },
               ]"
-              @mouseenter="$emit('category-change', category)"
+              @mouseenter="handleCategoryChange(category)"
             >
               {{ category }}
             </button>
@@ -37,8 +37,9 @@
             <div class="features-dropdown-title-features">Features</div>
             <ul class="features-dropdown-content">
               <li
-                v-for="dropdownItem in filteredDropdownItems"
+                v-for="dropdownItem in dropdownItems"
                 :key="dropdownItem.id"
+                v-show="dropdownItem.featureCategory === (activeFeatureCategory || localActiveCategory)"
                 @click="$emit('dropdown-close')"
               >
                 <DropdownItem
@@ -82,6 +83,7 @@
 
 <script>
 import DropdownItem from './DropdownItem.vue'
+import navbarData from '~/constants/navbar.json'
 
 export default {
   name: 'FeaturesDropdown',
@@ -91,12 +93,45 @@ export default {
   props: {
     dropdownActive: Boolean,
     isMobile: Boolean,
-    featureCategories: Array,
     activeFeatureCategory: String,
-    dropdownItems: Array,
-    filteredDropdownItems: Array,
+  },
+  data() {
+    // Initialize features data directly in component (same pattern as TemplatesDropdown)
+    const normalizeImageUrl = (navIcon) => {
+      const direct = navIcon?.imageUrl
+      const nested = navIcon?.image?.url
+      const url = direct || nested || null
+      if (!url) return null
+      return url
+    }
+
+    const items = navbarData
+    const dropdownItems = items.map((item) => ({
+      id: item.id,
+      title: item.navTitle,
+      description: item.navDescription,
+      imageUrl: normalizeImageUrl(item.navIcon),
+      imageAlt: item.navIcon?.imageAlt || '',
+      slug: item.slug,
+      featureCategory: item.featureCategory || 'Other',
+      featurePlan: item.featurePlan || null,
+    }))
+
+    const featureCategories = [
+      ...new Set(dropdownItems.map((item) => item.featureCategory)),
+    ]
+
+    return {
+      dropdownItems: dropdownItems,
+      featureCategories: featureCategories,
+      localActiveCategory: featureCategories[0] || '',
+    }
   },
   methods: {
+    handleCategoryChange(category) {
+      this.localActiveCategory = category
+      this.$emit('category-change', category)
+    },
     onDropdownMouseEnter() {
       this.$emit('mouseenter')
     },

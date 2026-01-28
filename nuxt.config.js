@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import getRoutes, { getFeatureRoutes, getPageRoutes, getTemplateRoutes } from './utils/getRoutes.js'
+
 export default defineNuxtConfig({
   // Global page headers
   app: {
@@ -115,6 +117,31 @@ export default defineNuxtConfig({
       concurrency: 5, // Reduced from 15 to lower memory usage
       interval: 100, // Increased from 50 to slow down processing
       failOnError: false
+    },
+    hooks: {
+      async 'prerender:routes'(routes) {
+        const blogs = await getRoutes()
+        const features = await getFeatureRoutes()
+        const pages = await getPageRoutes()
+        const templates = await getTemplateRoutes()
+
+        // Extract URLs from the objects returned by route functions
+        const blogUrls = blogs.map(item => item.url)
+        const featureUrls = features.map(item => item.url)
+        const pageUrls = pages.map(item => item.url)
+        const templateUrls = templates.map(item => item.url)
+
+        const allRoutes = [
+          ...pageUrls,
+          ...featureUrls,
+          ...blogUrls,
+          ...templateUrls,
+        ].filter(Boolean)
+
+        for (const route of allRoutes) {
+          routes.add(route)
+        }
+      }
     }
   },
   content: {

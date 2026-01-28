@@ -299,6 +299,31 @@ const processedBlogData = computed(() => {
     return `<h${level}>${text}</h${level}>`
   }
 
+  renderer.link = function(href, title, text) {
+    // Only add trailing slash to internal links
+    let processedHref = href
+
+    // Check if it's an internal link (relative or formester.com)
+    const isInternal = href.startsWith('/') || href.includes('formester.com')
+
+    if (isInternal && href) {
+      // Don't add trailing slash if:
+      // - Already has trailing slash
+      // - Has file extension (like .pdf, .jpg, etc.)
+      // - Has hash fragment or query string
+      const hasTrailingSlash = href.endsWith('/')
+      const hasFileExtension = /\.[a-z0-9]+$/i.test(href.split(/[?#]/)[0])
+      const hasHashOrQuery = href.includes('#') || href.includes('?')
+
+      if (!hasTrailingSlash && !hasFileExtension && !hasHashOrQuery) {
+        processedHref = href + '/'
+      }
+    }
+
+    const titleAttr = title ? ` title="${title}"` : ''
+    return `<a href="${processedHref}"${titleAttr}>${text}</a>`
+  }
+
   return marked(blogData.value?.body || '', { renderer })
 })
 

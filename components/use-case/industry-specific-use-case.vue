@@ -13,7 +13,7 @@
       >
         <div class="p-3 d-flex flex-column align-items-center">
           <nuxt-img
-            :src="`/use-case/industry-specific-use-case/${feature.img}.svg`"
+            :src="`/use-case/industry-specific-use-case/${feature.img}`"
             class="img-fluid"
             :alt="feature.altText"
             loading="lazy"

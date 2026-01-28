@@ -18,9 +18,7 @@
     </div>
 
     <NuxtLink
-      :to="{
-        name: 'templates',
-      }"
+      to="/templates/"
     >
       <h3
         class="all-category-heading"
