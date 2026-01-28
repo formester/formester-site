@@ -56,7 +56,7 @@
 <script setup>
 import Templates from '@/components/template/Templates.vue'
 import getSiteMeta from '@/utils/getSiteMeta'
-import { getPaginatedTemplates } from '@/composables/useTemplateData'
+import { useTemplateData, getPaginatedTemplates } from '@/composables/useTemplateData'
 
 const route = useRoute()
 
