@@ -95,4 +95,64 @@ export default {
 
   }
 }
+
+/* Table Styles */
+.rich-text-content :deep(table) {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.rich-text-content :deep(thead) {
+  background: #f9fafb;
+  border-bottom: 2px solid #eaecf0;
+}
+
+.rich-text-content :deep(th) {
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  color: #344054;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rich-text-content :deep(td) {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eaecf0;
+  font-size: 14px;
+  color: #475467;
+  line-height: 1.5;
+}
+
+.rich-text-content :deep(tbody tr:last-child td) {
+  border-bottom: none;
+}
+
+.rich-text-content :deep(tbody tr:hover) {
+  background: #f9fafb;
+  transition: background 0.2s ease;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+  .rich-text-content :deep(table) {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 1rem 0;
+  }
+
+  .rich-text-content :deep(th),
+  .rich-text-content :deep(td) {
+    padding: 8px 12px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+}
 </style>
