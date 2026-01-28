@@ -227,73 +227,73 @@ const industrySpecificFeatures = [
           title: 'Streamlined Customer Onboarding',
           description:
             "Simplify software user onboarding with Formester's custom Onboarding forms to collect essential information such as user preferences and software requirements, ensuring a seamless and personalized experience for new customers.",
-          img: 'streamlined-customer-onboarding',
+          img: 'streamlined-customer-onboarding.svg',
         },
         {
           title: 'Efficient Bug Reporting and User Support',
           description:
             "Streamline bug reporting and user support processes with Formester's tailored forms, providing a seamless way for users to report problems, track their status, and receive timely assistance for efficient resolution of software issues and user queries.",
-          img: 'efficient-bug-reporting-and-user-support',
+          img: 'efficient-bug-reporting-and-user-support.svg',
         },
         {
           title: 'Product Feedback and Feature Requests',
           description:
             "Gather valuable insights and prioritize software updates with Formester's interactive forms, empowering users to provide feedback and submit feature requests for your software.",
-          img: 'product-feedback-and-feature-requests',
+          img: 'product-feedback-and-feature-requests.svg',
         },
         {
           title: 'Lead Generation and CRM Integration',
           description:
             "Capture high-quality leads with Formester's lead generation forms and seamlessly integrate with CRM systems to nurture prospects and drive business growth.",
-          img: 'lead-generation-and-crm-integration',
+          img: 'lead-generation-and-crm-integration.png',
         },
         {
           title: 'Software Demo Requests',
           description:
             "Simplify the software demo scheduling process by utilizing Formester's forms to collect user information and preferred demo dates and times, ensuring efficient scheduling.",
-          img: 'software-demo-requests',
+          img: 'software-demo-requests.svg',
         },
         {
           title: 'User Surveys and Feedback',
           description:
             "Gain a deep understanding of user experiences and enhance software usability through Formester's user surveys and feedback forms.",
-          img: 'user-surveys-and-feedback',
+          img: 'user-surveys-and-feedback.svg',
         },
         {
           title: 'Software Purchase and Order Forms',
           description:
             "Facilitate seamless software purchases and orders with Formester's customizable forms, ensuring a smooth transaction process for customers.",
-          img: 'software-purchase-and-order-forms',
+          img: 'software-purchase-and-order-forms.svg',
         },
         {
           title: 'Software Renewal Reminders',
           description:
             "Automate software renewal reminders using Formester's personalized forms, ensuring timely subscription renewals and reducing churn.",
-          img: 'software-renewal-reminders',
+          img: 'software-renewal-reminders.svg',
         },
         {
           title: 'Software Feature Adoption Surveys',
           description:
             "Measure the adoption and effectiveness of software features with Formester's targeted surveys, enabling data-driven decision-making for feature enhancements.",
-          img: 'software-feature-adoption-surveys',
+          img: 'software-feature-adoption-surveys.svg',
         },
         {
           title: 'Software Beta Testing',
           description:
             "Conduct beta testing programs with Formester's dedicated forms, allowing users to participate as beta testers and provide valuable feedback for software improvements.",
-          img: 'software-beta-testing',
+          img: 'software-beta-testing.svg',
         },
         {
           title: 'Software License Compliance',
           description:
             "Ensure compliance with software licensing agreements by leveraging Formester's forms to collect user information, validate licenses, and monitor software usage.",
-          img: 'software-license-compliance',
+          img: 'software-license-compliance.svg',
         },
         {
           title: 'Software Survey Research',
           description:
             "Conduct market research and gather insights on software industry trends, user preferences, and competitive analysis with Formester's survey solutions, enabling informed business decisions and effective software development strategies.",
-          img: 'software-survey-research',
+          img: 'software-survey-research.svg',
         }
       ]
 </script>
