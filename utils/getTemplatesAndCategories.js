@@ -16,7 +16,7 @@ const fetchWithRetry = async (url, config, retries = 3, delay = 2000) => {
   }
 }
 
-export default async (params = {}) => {
+const getTemplatesAndCategories = async (params = {}) => {
   // Return cached data if available (build or dev)
   if (cache) {
     return cache
@@ -83,4 +83,50 @@ export default async (params = {}) => {
   cache = result
 
   return result
+}
+
+export default getTemplatesAndCategories
+
+/**
+ * Get random templates from the cached data (without making new API calls)
+ * @param {number} count - Number of random templates to return (default: 6)
+ * @param {string} categorySlug - Optional category slug to filter by
+ * @param {Array} specificSlugs - Optional array of specific template slugs to filter by
+ * @returns {Array} Array of random templates
+ */
+export const getRandomTemplates = async (count = 6, categorySlug = null, specificSlugs = null) => {
+  const { templates } = await getTemplatesAndCategories()
+
+  let filteredTemplates = templates
+
+  // Filter by specific slugs if provided (takes priority)
+  if (specificSlugs && specificSlugs.length > 0) {
+    return templates.filter(template => specificSlugs.includes(template.slug))
+  }
+
+  // Filter by category if provided
+  if (categorySlug) {
+    filteredTemplates = templates.filter(template =>
+      template.categories?.some(cat => cat.slug === categorySlug)
+    )
+  }
+
+  // Return empty array if not enough templates
+  if (filteredTemplates.length === 0) {
+    return []
+  }
+
+  // If requesting more templates than available, return all
+  if (count >= filteredTemplates.length) {
+    return filteredTemplates
+  }
+
+  // Get random templates using Fisher-Yates shuffle
+  const shuffled = [...filteredTemplates]
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+  }
+
+  return shuffled.slice(0, count)
 }

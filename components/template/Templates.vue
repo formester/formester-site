@@ -49,10 +49,10 @@
               v-for="(template, index) in filteredTemplates"
               :key="template.id"
               :template="template"
-              :class="{ 'template-hidden': isClient && index >= visibleCount }"
+              :class="{ 'template-hidden': isClient && !isPaginated && index >= visibleCount }"
             />
           </section>
-          <div v-if="isClient && visibleCount < filteredTemplates.length" class="d-flex justify-content-center mt-3">
+          <div v-if="isClient && !isPaginated && visibleCount < filteredTemplates.length" class="d-flex justify-content-center mt-3">
             <button
               @click="viewMore"
               class="btn-primary"
@@ -93,6 +93,10 @@ export default {
     activeCategory: Object,
     templates: Array,
     templateCategories: Object,
+    isPaginated: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {

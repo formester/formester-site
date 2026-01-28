@@ -10,6 +10,7 @@ export default defineEventHandler(async () => {
       return sitemapCache
     }
 
+    // Get other routes (includes blog articles and pagination)
     const blogs = await getRoutes()
     const features = await getFeatureRoutes()
     const pages = await getPageRoutes()

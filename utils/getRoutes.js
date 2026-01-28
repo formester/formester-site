@@ -93,9 +93,20 @@ export const getTemplateRoutes = async () => {
     ? templates[0].updatedAt
     : new Date().toISOString()
 
+  // Add pagination URLs
+  const totalTemplates = templates.length
+  const itemsPerPage = 12
+  const totalPages = Math.ceil(totalTemplates / itemsPerPage)
+  const paginationUrls = [{ url: '/templates/', lastmod: mostRecentTemplateUpdate }]
+
+  for (let i = 2; i <= totalPages; i++) {
+    paginationUrls.push({ url: `/templates/page/${i}/`, lastmod: mostRecentTemplateUpdate })
+  }
+
+
   return [
     ...templateUrls,
     ...categoryUrls,
-    { url: '/templates', lastmod: mostRecentTemplateUpdate }
+    ...paginationUrls
   ]
 }

@@ -25,6 +25,7 @@
 
 <script setup>
 import TemplateCard from '@/components/template/TemplateCard.vue'
+import { getRandomTemplates } from '@/utils/getTemplatesAndCategories'
 
 const props = defineProps({
   slug: {
@@ -49,38 +50,17 @@ const props = defineProps({
   },
 })
 
-const config = useRuntimeConfig()
-const appUrl = config.public.appUrl
+// Extract specific template slugs if provided
+const specificSlugs = props.specificTemplate?.length > 0
+  ? props.specificTemplate.map(template => template.text)
+  : null
 
-const dummyDescription =
-  'Check out this pre-designed template and start customising with just a single click. Personalise with your branding, incorporate electronic signatures for security and add multiple collaborators to make changes simultaneously. Use this template and start getting data driven actionable insights with robust analytics.'
-
-// Fetch templates server-side for SEO
+// Get templates from cached data (no API calls)
 const { data: templates } = await useAsyncData(
   `templates-${props.slug}`,
   async () => {
     try {
-      const url = props.slug
-        ? `${appUrl}/templates.json?category_slug=${props.slug}`
-        : `${appUrl}/templates.json`
-
-      const response = await $fetch(url)
-
-      let processedTemplates = response.map((template) => ({
-        ...template,
-        description: template.description || dummyDescription,
-      }))
-
-      // Filter templates based on specificTemplate prop
-      if (props.specificTemplate && props.specificTemplate.length > 0) {
-        const templateSlugs = props.specificTemplate.map(template => template.text)
-        return processedTemplates.filter(template =>
-          templateSlugs.includes(template.slug)
-        )
-      } else {
-        const randIndex = Math.floor(Math.random() * (processedTemplates.length - 3))
-        return processedTemplates.slice(randIndex, randIndex + 3)
-      }
+      return await getRandomTemplates(3, props.slug, specificSlugs)
     } catch (err) {
       console.error(err)
       return []

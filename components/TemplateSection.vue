@@ -23,59 +23,30 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import TemplateCard from './template/TemplateCard.vue'
-import axios from 'axios'
+import { getRandomTemplates } from '@/utils/getTemplatesAndCategories'
 
-export default {
-  components: { TemplateCard },
-  props: {
-    slug: { type: String },
-    heading: {
-      type: String,
-      default: 'Pre-Designed Templates',
-    },
+const props = defineProps({
+  slug: { type: String },
+  heading: {
+    type: String,
+    default: 'Pre-Designed Templates',
   },
-  data() {
-    return {
-      templates: [],
+})
+
+// Get templates from cached data (no API calls)
+const { data: templates } = await useAsyncData(
+  `templates-${props.slug || 'default'}`,
+  async () => {
+    try {
+      return await getRandomTemplates(3, props.slug)
+    } catch (err) {
+      console.error(err)
+      return []
     }
-  },
-  mounted() {
-    this.getTemplates()
-  },
-  methods: {
-    async getTemplates() {
-      try {
-        let response
-        if (this.slug) {
-          response = await axios.get(
-            'https://app.formester.com/templates.json',
-            {
-              params: { category_slug: this.slug },
-            }
-          )
-        } else {
-          response = await axios.get('https://app.formester.com/templates.json')
-        }
-        let templates = response.data
-
-        const dummyDescription =
-          'Check out this pre-designed template and start customising with just a single click. Personalise with your branding, incorporate electronic signatures for security and add multiple collaborators to make changes simultaneously. Use this template and start getting data driven actionable insights with robust analytics.'
-
-        templates = templates.map((template) => ({
-          ...template,
-          description: template.description || dummyDescription,
-        }))
-
-        const randIndex = Math.floor(Math.random() * (templates.length - 3))
-        this.templates = templates.slice(randIndex, randIndex + 3)
-      } catch (err) {
-        console.error(err)
-      }
-    },
-  },
-}
+  }
+)
 </script>
 
 <style>
