@@ -291,7 +291,7 @@ useHead({
   ],
 })
 
-useJsonld({
+useJsonld(() => ({
   '@context': 'http://schema.org',
   '@graph': [
     {
@@ -329,10 +329,10 @@ useJsonld({
     {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      mainEntity: faqsSchema,
+      mainEntity: faqsSchema.value,
     },
   ],
-})
+}))
 </script>
 
 <style scoped>
