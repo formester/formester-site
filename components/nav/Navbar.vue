@@ -357,8 +357,10 @@ export default {
       )
     },
   },
-  mounted() {
+  created() {
     this.getFeatures()
+  },
+  mounted() {
     this.checkIsMobile()
     window.addEventListener('resize', this.checkIsMobile)
     if (typeof window !== 'undefined' && window.bootstrap) {
