@@ -14,7 +14,7 @@ export default async () => {
   })
 
   const articles = data.map((item) => ({
-    url: `/blog/${item.attributes.slug}`,
+    url: `/blog/${item.attributes.slug}/`,
     lastmod: item.attributes.updatedAt
   }))
 
@@ -27,13 +27,13 @@ export default async () => {
   const mostRecentUpdate = data.length > 0 ? data[0].attributes.updatedAt : new Date().toISOString()
 
   paginationUrls.push({
-    url: '/blog',
+    url: '/blog/',
     lastmod: mostRecentUpdate
   })
 
   for (let i = 2; i <= totalPages; i++) {
     paginationUrls.push({
-      url: `/blog/page/${i}`,
+      url: `/blog/page/${i}/`,
       lastmod: mostRecentUpdate
     })
   }
@@ -47,7 +47,7 @@ export const getFeatureRoutes = async () => {
   } = await axios.get(`https://cms.formester.com/api/features?populate=deep`)
 
   const features = data.map((item) => ({
-    url: `/features/${item.slug}`,
+    url: `/features/${item.slug}/`,
     lastmod: item.updatedAt
   }))
 
@@ -62,7 +62,7 @@ export const getPageRoutes = async () => {
   const pages = data
     .filter((item) => item.slug)
     .map((item) => ({
-      url: `/${item.slug}`,
+      url: `/${item.slug}/`,
       lastmod: item.updatedAt
     }))
 
@@ -74,17 +74,20 @@ export const getTemplateRoutes = async () => {
     "https://app.formester.com/templates.json"
   )
 
-  const { data: templatesGroupedByCategory } = await axios.get(
-    "https://app.formester.com/template_categories/grouped_by_category.json"
+  const { data: templateCategories } = await axios.get(
+    "https://app.formester.com/template_categories.json"
   )
 
   const templateUrls = templates.map(t => ({
-    url: `/templates/${t.slug}`,
+    url: `/templates/${t.slug}/`,
     lastmod: t?.updatedAt
   }))
 
-  const categoryUrls = templatesGroupedByCategory.map(c => ({
-    url: `/templates/categories/${c.categorySlug}`,
+  // Flatten all category arrays (department, industry, etc.)
+  const allCategories = Object.values(templateCategories).flat()
+
+  const categoryUrls = allCategories.map(c => ({
+    url: `/templates/categories/${c.slug}/`,
     lastmod: c.updatedAt
   }))
 

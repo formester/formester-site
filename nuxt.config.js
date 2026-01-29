@@ -55,7 +55,6 @@ export default defineNuxtConfig({
     sources: [
       '/api/__sitemap__/urls'
     ],
-    exclude: ['/status/**']
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
