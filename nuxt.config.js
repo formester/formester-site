@@ -5,6 +5,9 @@ export default defineNuxtConfig({
   // Global page headers
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'en'
+      },
       title: 'No-Code Online Form Builder - Formester',
       meta: [
         { charset: 'utf-8' },
@@ -23,7 +26,6 @@ export default defineNuxtConfig({
           href: 'https://formester.com/',
         },
       ],
-
       script: [
         {
           src: 'https://affonso.io/js/pixel.min.js',
@@ -39,7 +41,7 @@ export default defineNuxtConfig({
   // Robots configuration
   robots: {
     UserAgent: '*',
-    Disallow: ['/_nuxt/static/'],
+    Disallow: ['/_nuxt/static/', '/status/', '/api/'],
     Sitemap: 'https://formester.com/sitemap.xml'
   },
 
