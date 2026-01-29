@@ -23,9 +23,10 @@ export default {
   computed: {
     articleLink() {
       if (this.article.type) {
-        return this.article.link
+        return this.article.link.endsWith('/') ? this.article.link : `${this.article.link}/`
       }
-      return { name: 'blog-slug', params: { slug: this.article.slug } }
+      const slug = this.article.slug.endsWith('/') ? this.article.slug : `${this.article.slug}/`
+      return { name: 'blog-slug', params: { slug: slug } }
     },
   },
   methods: {

@@ -300,9 +300,9 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <a href="https://status.formester.com" rel="nofollow noopener" class="footer__link">
+                <NuxtLink to="/status/" class="footer__link">
                   Status
-                </a>
+                </NuxtLink>
               </li>
               <li class="mt-2">
                 <NuxtLink to="/privacy/" class="footer__link">
