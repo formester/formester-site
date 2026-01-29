@@ -16,9 +16,13 @@ export default defineEventHandler(async () => {
     const pages = await getPageRoutes()
     const templates = await getTemplateRoutes()
 
+    const filteredPages = pages.filter(
+      item => !item.url?.startsWith('/status')
+    )
+
     // Combine all routes
     const result = [
-      ...pages.map(item => ({ loc: item.url, lastmod: item.lastmod })),
+      ...filteredPages.map(item => ({ loc: item.url, lastmod: item.lastmod })),
       ...features.map(item => ({ loc: item.url, lastmod: item.lastmod })),
       ...blogs.map(item => ({ loc: item.url, lastmod: item.lastmod })),
       ...templates.map(item => ({ loc: item.url, lastmod: item.lastmod }))
