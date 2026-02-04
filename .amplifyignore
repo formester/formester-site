@@ -1,0 +1,31 @@
+# amplify-cli reserved file
+amplify/hooks/README.md
+amplify/hooks/useAmplifyHook.js
+
+# dependencies
+/**/node_modules/**
+
+# local env files
+.env
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Build outputs
+.output
+.nuxt
+dist
