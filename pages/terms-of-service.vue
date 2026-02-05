@@ -105,6 +105,29 @@
       </li>
     </ul>
 
+    <h2>SMS Messaging Terms</h2>
+    <p>
+      Formester sends transactional SMS messages containing one-time verification
+      codes when a user attempts to submit or verify a form that requires phone
+      number validation.
+    </p>
+    <p>
+      SMS messages are sent only after the user enters their phone number in a
+      form and clicks the verification action. These messages are used solely to
+      confirm the authenticity of the submitted phone number and are not used for
+      marketing purposes.
+    </p>
+    <p>
+      Message frequency is limited to verification attempts initiated by the user.
+    </p>
+    <p>
+      Message and data rates may apply based on the user's mobile carrier.
+    </p>
+    <p>
+      Users may opt out of SMS messages at any time by replying STOP. For
+      assistance, reply HELP or contact support@formester.com.
+    </p>
+
     <h2>Payment, Refunds, Upgrading and Downgrading Terms</h2>
     <p>
       All paid plans must enter a valid credit card. Free accounts are not
