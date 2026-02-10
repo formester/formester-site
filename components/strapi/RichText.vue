@@ -24,9 +24,6 @@ export default {
 .rich-text-content {
   margin: 2rem 0;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 0 1rem;
   box-sizing: border-box;
 }
@@ -56,7 +53,7 @@ export default {
     margin: 1rem auto;
     padding: 0 0.5rem;
   }
-  
+
   .card-ui {
     padding: 1.5rem;
     margin: 1.5rem 0.5rem;
@@ -103,7 +100,7 @@ export default {
   margin: 2rem 0;
   background: white;
   border-radius: 8px;
-  overflow: hidden;
+  overflow-x: scroll;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
