@@ -40,7 +40,8 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { computed } from 'vue'
 import Background from '@/components/case-study/formester-for-lead-generation-success/Background.vue'
 import SmallIconsFeatureSection from '@/components/SmallIconsFeatureSection.vue'
 import Results from '@/components/case-study/formester-for-lead-generation-success/Results.vue'
@@ -50,18 +51,8 @@ import FAQwithCategories from '@/components/FAQwithCategories.vue'
 import getSiteMeta from '@/utils/getSiteMeta'
 import formesterLeadGenerationCaseStudy from '@/faqs/formester-lead-generation-case-study'
 
-export default {
-  components: {
-    Background,
-    SmallIconsFeatureSection,
-    Results,
-    Conclusion,
-    FAQwithCategories,
-  },
-  data() {
-    return {
-      challenges: {
-        heading: 'The Complexities of Modern Lead Generation',
+const challenges = {
+  heading: 'The Complexities of Modern Lead Generation',
         description:
           "Lead generation is an intricate process, comprising several stages that demand careful attention and strategy. These multifaceted challenges underscore the importance of not only creating lead-generation forms but also optimizing them to overcome these obstacles. To better understand the significance of these challenges, let's delve into some of the commonly faced key problems with regard to lead generation.",
         subtext: 'Challenges',
@@ -108,10 +99,11 @@ export default {
               "The process of lead-generation doesn't end with the initial form creation. It involves continuous improvement based on data and insights. By analysing form performance and user behaviour, businesses can refine and fine-tune their forms to achieve even better results over time. Businesses may find it hard to run, manage and track the performance of each form.",
             imgSrc: 'svgs/storage-setting.svg',
           },
-        ],
-      },
-      solutions: {
-        heading:
+  ],
+}
+
+const solutions = {
+  heading:
           "Overcoming Lead Generation Challenges with Formester's Lead-Generation Web Forms",
         description:
           "By leveraging Formester's comprehensive set of features, your B2B company can overcome these lead generation challenges, resulting in improved conversion rates, more efficient lead nurturing, and enhanced overall lead management. Formester's capabilities ensure that your lead generation forms become powerful tools in capturing and converting leads effectively.",
@@ -189,17 +181,14 @@ export default {
               'Formester simplifies form management with an intuitive dashboard that allows businesses to easily track and monitor the performance of each form. It provides insights into submission rates, engagement metrics, user behaviour and conversion data, enabling businesses to continually improve their forms, making them even more effective over time, taking informed decisions and refine their lead generation strategy.',
             imgSrc: 'svgs/document-copy.svg',
           },
-        ],
-      },
-      formesterLeadGenerationCaseStudy: formesterLeadGenerationCaseStudy,
-    }
-  },
-  computed: {
-    meta() {
-      const metaData = {
-        type: 'website',
-        url: 'https://formester.com/using-formester-for-lead-generation-success',
-        title: 'Case Study: Improved Lead-Generation Success with Formester!',
+  ],
+}
+
+const meta = computed(() => {
+  const metaData = {
+    type: 'website',
+    url: 'https://formester.com/case-study/using-formester-for-lead-generation-success/',
+    title: 'Case Study: Improved Lead-Generation Success with Formester!',
         description:
           "Formester's Case Study: Discover how Formester's smart & effective lead-gen forms can help nurture leads for increased conversions and sales",
         keywords: [
@@ -263,90 +252,87 @@ export default {
           "Formester's role in improving lead quality",
           "Formester's success in enhancing conversion rates",
           "Formester's real - world success cases",
-        ],
-      }
-      return getSiteMeta(metaData)
-    },
-    faqsSchema() {
-      const allFaqs = []
+    ],
+  }
+  return getSiteMeta(metaData)
+})
 
-      this.formesterLeadGenerationCaseStudy.forEach((c) => {
-        if (c.faqs) {
-          allFaqs.push(...c.faqs)
-        }
-      })
+const faqsSchema = computed(() => {
+  const allFaqs = []
 
-      // Generate the FAQ schema
-      return allFaqs.map((faq) => {
-        return {
-          '@type': 'Question',
-          name: faq.question,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: faq.answer,
-          },
-        }
-      })
-    },
-  },
-  head() {
-    return {
-      title: 'Case Study: Improved Lead-Generation Success with Formester!',
-      meta: [...this.meta],
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: 'https://formester.com/case-study/using-formester-for-lead-generation-success/',
-        },
-      ],
+  formesterLeadGenerationCaseStudy.forEach((c) => {
+    if (c.faqs) {
+      allFaqs.push(...c.faqs)
     }
-  },
-  jsonld() {
+  })
+
+  // Generate the FAQ schema
+  return allFaqs.map((faq) => {
     return {
-      '@context': 'http://schema.org',
-      '@graph': [
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    }
+  })
+})
+
+useHead({
+  title: 'Case Study: Improved Lead-Generation Success with Formester!',
+  meta: computed(() => [...meta.value]),
+  link: [
+    {
+      hid: 'canonical',
+      rel: 'canonical',
+      href: 'https://formester.com/case-study/using-formester-for-lead-generation-success/',
+    },
+  ],
+})
+
+useJsonld(() => ({
+  '@context': 'http://schema.org',
+  '@graph': [
+    {
+      '@type': 'Corporation',
+      '@id': 'https://formester.com',
+      name: 'Case Study: Improved Lead-Generation Success with Formester!',
+      description:
+        "Formester's Case Study: Discover how Formester's smart & effective lead-gen forms can help nurture leads for increased conversions and sales",
+      logo: 'https://formester.com/logo.png',
+      url: 'https://formester.com',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Delaware',
+        addressCountry: 'United States',
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://formester.com/breadcrumb',
+      itemListElement: [
         {
-          '@type': 'Corporation',
-          '@id': 'https://acornglobus.com',
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Formester',
+          item: 'https://formester.com/',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
           name: 'Case Study: Improved Lead-Generation Success with Formester!',
-          description:
-            "Formester's Case Study: Discover how Formester's smart & effective lead-gen forms can help nurture leads for increased conversions and sales",
-          logo: 'https://formester.com/logo.png',
-          url: 'https://formester.com',
-          address: {
-            '@type': 'PostalAddress',
-            addressLocality: 'Delaware',
-            addressCountry: 'United States',
-          },
-        },
-        {
-          '@type': 'BreadcrumbList',
-          '@id': 'https://acornglobus.com',
-          itemListElement: [
-            {
-              '@type': 'ListItem',
-              position: 1,
-              name: 'Formester',
-              item: 'https://formester.com/',
-            },
-            {
-              '@type': 'ListItem',
-              position: 2,
-              name: 'Case Study: Improved Lead-Generation Success with Formester!',
-              item: 'https://formester.com/using-formester-for-lead-generation-success/',
-            },
-          ],
-        },
-        {
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity: this.faqsSchema,
+          item: 'https://formester.com/case-study/using-formester-for-lead-generation-success/',
         },
       ],
-    }
-  },
-}
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqsSchema.value,
+    },
+  ],
+}))
 </script>
 
 <style scoped>

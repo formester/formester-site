@@ -95,10 +95,7 @@
               <FeaturesDropdown
                 :dropdownActive="dropdownActive"
                 :isMobile="isMobile"
-                :featureCategories="featureCategories"
                 :activeFeatureCategory="activeFeatureCategory"
-                :dropdownItems="dropdownItems"
-                :filteredDropdownItems="filteredDropdownItems"
                 @mouseenter="onDropdownMouseEnter"
                 @mouseleave="onDropdownMouseLeave"
                 @category-change="activeFeatureCategory = $event"
@@ -298,7 +295,6 @@ import NavItem from './NavItem.vue'
 import FeaturesDropdown from './FeaturesDropdown.vue'
 import ResourcesDropdown from './ResourcesDropdown.vue'
 import TemplatesDropdown from './TemplatesDropdown.vue'
-import navbarData from '~/constants/navbar.json'
 
 export default {
   name: 'NavNavbar',
@@ -318,8 +314,6 @@ export default {
       resourcesDropdownActive: false,
       hoveringResourcesDropdown: false,
       isMobile: false,
-      dropdownItems: [],
-      featureCategories: [],
       activeFeatureCategory: '',
       dropdownTimer: null,
       resourcesDropdownTimer: null,
@@ -352,16 +346,7 @@ export default {
       ],
     }
   },
-  computed: {
-    filteredDropdownItems() {
-      if (!this.activeFeatureCategory) return this.dropdownItems
-      return this.dropdownItems.filter(
-        (item) => item.featureCategory === this.activeFeatureCategory
-      )
-    },
-  },
   mounted() {
-    this.getFeatures()
     this.checkIsMobile()
     window.addEventListener('resize', this.checkIsMobile)
     if (typeof window !== 'undefined' && window.bootstrap) {
@@ -410,34 +395,6 @@ export default {
       if (window.innerWidth >= 1200) return
       const navbarCollapse = this.ensureBsCollapse()
       if (navbarCollapse) navbarCollapse.hide()
-    },
-
-    getFeatures() {
-      const normalizeImageUrl = (navIcon) => {
-        const direct = navIcon?.imageUrl
-        const nested = navIcon?.image?.url
-        const url = direct || nested || null
-        if (!url) return null
-        return url
-      }
-
-      const items = navbarData
-      this.dropdownItems = items.map((item) => ({
-        id: item.id,
-        title: item.navTitle,
-        description: item.navDescription,
-        imageUrl: normalizeImageUrl(item.navIcon),
-        imageAlt: item.navIcon?.imageAlt || '',
-        slug: item.slug,
-        featureCategory: item.featureCategory || 'Other',
-        featurePlan: item.featurePlan || null,
-      }))
-
-      const categories = [
-        ...new Set(this.dropdownItems.map((item) => item.featureCategory)),
-      ]
-      this.featureCategories = categories
-      this.activeFeatureCategory = categories[0] || ''
     },
 
     onDropdownMouseEnter() {

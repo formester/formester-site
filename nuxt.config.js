@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import getRoutes, { getFeatureRoutes, getPageRoutes, getTemplateRoutes } from './utils/getRoutes.js'
+
 export default defineNuxtConfig({
   // Global page headers
   app: {
@@ -24,7 +26,6 @@ export default defineNuxtConfig({
           href: 'https://formester.com/',
         },
       ],
-
       script: [
         {
           src: 'https://affonso.io/js/pixel.min.js',
@@ -40,7 +41,7 @@ export default defineNuxtConfig({
   // Robots configuration
   robots: {
     UserAgent: '*',
-    Disallow: ['/_nuxt/static/'],
+    Disallow: ['/_nuxt/static/', '/status/', '/api/'],
     Sitemap: 'https://formester.com/sitemap.xml'
   },
 
@@ -53,7 +54,8 @@ export default defineNuxtConfig({
     trailingSlash: true,
     sources: [
       '/api/__sitemap__/urls'
-    ]
+    ],
+    exclude: ['/status/**']
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -118,6 +120,31 @@ export default defineNuxtConfig({
       concurrency: 5, // For lower memory usage
       interval: 100, // Increased from 50 to slow down processing
       failOnError: false
+    },
+    hooks: {
+      async 'prerender:routes'(routes) {
+        const blogs = await getRoutes()
+        const features = await getFeatureRoutes()
+        const pages = await getPageRoutes()
+        const templates = await getTemplateRoutes()
+
+        // Extract URLs from the objects returned by route functions
+        const blogUrls = blogs.map(item => item.url)
+        const featureUrls = features.map(item => item.url)
+        const pageUrls = pages.map(item => item.url)
+        const templateUrls = templates.map(item => item.url)
+
+        const allRoutes = [
+          ...pageUrls,
+          ...featureUrls,
+          ...blogUrls,
+          ...templateUrls,
+        ].filter(Boolean)
+
+        for (const route of allRoutes) {
+          routes.add(route)
+        }
+      }
     }
   },
   content: {

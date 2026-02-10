@@ -25,7 +25,7 @@ export default {
       if (this.article.type) {
         return this.article.link
       }
-      return { name: 'blog-slug', params: { slug: this.article.slug } }
+      return `/blog/${this.article.slug}/`
     },
   },
   methods: {

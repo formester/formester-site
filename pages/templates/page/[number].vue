@@ -8,7 +8,17 @@
     />
     <nav v-if="totalPages > 1" class="container">
       <div class="custom-pagination-bar">
-        <span class="custom-page-btn prev disabled">
+        <nuxt-link
+          v-if="currentPage > 1"
+          class="custom-page-btn prev"
+          :to="currentPage === 2 ? '/templates/' : `/templates/page/${currentPage - 1}/`"
+        >
+          Previous
+        </nuxt-link>
+        <span
+          v-else
+          class="custom-page-btn prev disabled"
+        >
           Previous
         </span>
         <div class="custom-pagination-center">
@@ -28,7 +38,7 @@
         <nuxt-link
           v-if="currentPage < totalPages"
           class="custom-page-btn next"
-          :to="`/templates/page/2/`"
+          :to="`/templates/page/${currentPage + 1}/`"
         >
           Next
         </nuxt-link>
@@ -50,28 +60,34 @@ import { useTemplateData, getPaginatedTemplates } from '@/composables/useTemplat
 
 const route = useRoute()
 
+// Get page number from route
+const currentPage = computed(() => {
+  const num = parseInt(route.params.number)
+  return isNaN(num) || num < 1 ? 1 : num
+})
+
 // Fetch template data using shared composable
 const { templates, categories, totalPages, itemsPerPage } = await useTemplateData()
 
-// Always show page 1 on index
-const currentPage = 1
-
+// Get paginated templates for this page
 const paginatedTemplates = computed(() => {
-  return getPaginatedTemplates(templates.value, currentPage, itemsPerPage)
+  return getPaginatedTemplates(templates.value, currentPage.value, itemsPerPage)
 })
 
-// Redirect old query param URLs to new structure
-if (route.query.page) {
-  const pageNum = parseInt(route.query.page)
-  if (pageNum > 1) {
-    await navigateTo(`/templates/page/${pageNum}/`, { redirectCode: 301 })
-  }
+// 404 if page number is out of range
+if (currentPage.value > totalPages.value) {
+  throw createError({ statusCode: 404, message: 'Page not found' })
+}
+
+// Redirect page 1 to /templates/
+if (currentPage.value === 1) {
+  await navigateTo('/templates/', { redirectCode: 301 })
 }
 
 const paginationPages = computed(() => {
   const pages = []
   const total = totalPages.value
-  const current = currentPage
+  const current = currentPage.value
 
   if (total <= 5) {
     for (let i = 1; i <= total; i++) {
@@ -101,8 +117,8 @@ const paginationPages = computed(() => {
 const meta = computed(() => {
   const metaData = {
     type: 'website',
-    url: 'https://formester.com/templates/',
-    title: '1000+ Free Form Templates - Formester',
+    url: `https://formester.com/templates/page/${currentPage.value}/`,
+    title: `1000+ Free Form Templates - Page ${currentPage.value} - Formester`,
     description:
       'Use our Formester form templates including surveys, reviews, registrations, & more for any industry! Automate workflows with online templates.',
     mainImage: 'https://formester.com/formester-logo-meta-image.png',
@@ -111,28 +127,27 @@ const meta = computed(() => {
   return getSiteMeta(metaData)
 })
 
-const listItems = computed(() =>
-  templates.value.map((template, index) => ({
-    '@type': 'ListItem',
-    position: index + 1,
-    url: `https://formester.com/templates/${template.slug}`,
-    name: template.name,
-    image: template.previewImageUrl,
-    description: template.description,
-  }))
-)
+// SEO Meta tags
+const baseUrl = 'https://formester.com/templates/'
 
 useHead({
-  title: '1000+ Free Form Templates - Formester',
+  title: `1000+ Free Form Templates - Page ${currentPage.value} - Formester`,
   meta: meta.value,
   link: [
     {
       rel: 'canonical',
-      href: 'https://formester.com/templates/',
+      href: `https://formester.com/templates/page/${currentPage.value}/`,
     },
-    ...(totalPages.value > 1 ? [{
+    ...(currentPage.value > 2 ? [{
+      rel: 'prev',
+      href: currentPage.value === 2 ? baseUrl : `${baseUrl}page/${currentPage.value - 1}/`,
+    }] : currentPage.value === 2 ? [{
+      rel: 'prev',
+      href: baseUrl,
+    }] : []),
+    ...(currentPage.value < totalPages.value ? [{
       rel: 'next',
-      href: 'https://formester.com/templates/page/2/',
+      href: `${baseUrl}page/${currentPage.value + 1}/`,
     }] : []),
   ],
 })
@@ -169,6 +184,12 @@ useJsonld([
         position: 2,
         name: 'All Templates',
         item: 'https://formester.com/templates',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: `Page ${currentPage.value}`,
+        item: `https://formester.com/templates/page/${currentPage.value}`,
       },
     ],
   },

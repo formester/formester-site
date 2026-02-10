@@ -234,7 +234,7 @@ const jotformKeyFeatures = [
           title: 'Collaboration and Sharing',
           description:
             "Jotform's forms are mobile-friendly and adapt to different screen sizes, providing an optimal user experience.",
-          img: '/jotform101/key-features/collaboration-and-sharin.svg',
+          img: '/jotform101/key-features/collaboration-and-sharing.svg',
         },
         {
           title: 'Workflow Automation',

@@ -34,6 +34,9 @@
                 >
               </li>
               <li class="mt-2">
+                <NuxtLink to="/plugins/" class="footer__link">Plugins</NuxtLink>
+              </li>
+              <li class="mt-2">
                 <NuxtLink to="/enterprise/" class="footer__link">
                   Enterprise
                 </NuxtLink>
@@ -126,7 +129,7 @@
             </ul>
 
             <p class="text-uppercase footer__items--heading mb-3 mt-5 text-semibold">
-              Compare
+              <NuxtLink to="/vs/">Compare</NuxtLink>
             </p>
 
             <ul class="list-unstyled mt-2">
@@ -297,9 +300,9 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <a href="https://status.formester.com" class="footer__link">
+                <NuxtLink to="/status/" class="footer__link">
                   Status
-                </a>
+                </NuxtLink>
               </li>
               <li class="mt-2">
                 <NuxtLink to="/privacy/" class="footer__link">
@@ -314,6 +317,11 @@
               <li class="mt-2">
                 <NuxtLink to="/terms-of-service/" class="footer__link">
                   Terms of Service
+                </NuxtLink>
+              </li>
+            <li class="mt-2">
+                <NuxtLink to="/dpa/" class="footer__link">
+                  DPA
                 </NuxtLink>
               </li>
               <li class="mt-2">
@@ -467,6 +475,10 @@ ul {
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0.02em;
+  color: #f7f3ff;
+}
+
+.footer__items--heading a {
   color: #f7f3ff;
 }
 
