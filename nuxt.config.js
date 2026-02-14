@@ -117,7 +117,7 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: ['/', '/sitemap.xml'],
       ignore: ['/api'],
-      concurrency: 5, // Reduced from 15 to lower memory usage
+      concurrency: 5, // For lower memory usage
       interval: 100, // Increased from 50 to slow down processing
       failOnError: false
     },

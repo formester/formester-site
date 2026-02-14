@@ -2,8 +2,8 @@
   <section class="call-to-action-section" :class="{ 'd-none': content.hidden }">
     <div class="container py-md-6 py-5 px-md-5">
       <div class="background-image-wrapper">
-        <nuxt-img src="/CTA Mask Left.svg" class="background-image-left" />
-        <nuxt-img src="/CTA Mask Right.svg" class="background-image-right" />
+        <nuxt-img src="/CTA Mask Left.svg" class="background-image-left" alt="" />
+        <nuxt-img src="/CTA Mask Right.svg" class="background-image-right" alt="" />
       </div>
       <div
         class="row align-items-center py-md-5 py-3 px-md-5 px-3"

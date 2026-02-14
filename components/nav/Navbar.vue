@@ -56,6 +56,7 @@
                     <nuxt-img
                       src="/chevron-down-colored.svg"
                       class="chevron chevron-colored"
+                      alt="Chevron"
                       :class="{ open: dropdownActive }"
                     />
                   </span>
@@ -83,6 +84,7 @@
                     <nuxt-img
                       src="/chevron-down-colored.svg"
                       class="chevron chevron-colored"
+                      alt="Chevron"
                       :class="{ open: dropdownActive }"
                     />
                   </span>
@@ -133,6 +135,7 @@
                     <nuxt-img
                       src="/chevron-down-colored.svg"
                       class="chevron chevron-colored"
+                      alt="Chevron"
                       :class="{ open: templatesDropdownActive }"
                     />
                   </span>
