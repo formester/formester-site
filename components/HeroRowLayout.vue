@@ -57,7 +57,7 @@
                 allowfullscreen
               ></iframe>
               <button @click="closeOverlay" aria-label="Close video" class="close-btn">
-                <nuxt-img src="/x-close.svg" />
+                <nuxt-img src="/x-close.svg" alt="Close video" />
               </button>
             </div>
           </div>

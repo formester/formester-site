@@ -30,14 +30,14 @@
               "
               :src="item.cardImage?.image?.url || item.cardImage.imageUrl"
               class="img-fluid"
-              :alt="item.cardImage?.imageAlt"
+              :alt="item.cardImage?.imageAlt || item.title || 'Feature image'"
               :modifiers="{ animated: true }"
             />
             <img
               v-else
               :src="item.cardImage?.image?.url || item.cardImage?.imageUrl"
               class="img-fluid"
-              :alt="item.cardImage?.imageAlt"
+              :alt="item.cardImage?.imageAlt || item.title || 'Feature image'"
               :modifiers="{ animated: true }"
             />
           </div>

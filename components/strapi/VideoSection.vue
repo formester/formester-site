@@ -19,7 +19,7 @@
               class="video-thumb-img"
             />
             <button class="custom-play-btn" aria-label="Play video">
-              <nuxt-img src="/play-button.svg" />
+              <nuxt-img src="/play-button.svg" alt="Play video" />
           </button>
           </div>
           <!-- Overlay -->
@@ -33,7 +33,7 @@
                 allowfullscreen
               ></iframe>
               <button @click="closeOverlay" aria-label="Close video" class="close-btn">
-                <nuxt-img src="/x-close.svg" />
+                <nuxt-img src="/x-close.svg" alt="Close video" />
               </button>
             </div>
           </div>
@@ -41,10 +41,10 @@
       </div>
     </div>
   </template>
-  
+
   <script>
   import MarkdownContent from '~/components/MarkdownContent.vue'
-  
+
   export default {
     components: { MarkdownContent },
     props: {
@@ -97,7 +97,7 @@
   },
   }
   </script>
-  
+
 
 
 <style>

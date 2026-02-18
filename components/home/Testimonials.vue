@@ -28,7 +28,7 @@
                 <nuxt-img
                   class="brand mt-4 mb-3"
                   :src="getIconSrc(testimonial.companyLogo)"
-                  :alt="testimonial?.companyLogo?.imageAlt || 'Company logo'"
+                  :alt="testimonial?.companyLogo?.imageAlt || `${testimonial.name}'s company logo`"
                   loading="lazy"
                 />
               </div>

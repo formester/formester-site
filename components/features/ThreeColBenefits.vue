@@ -18,7 +18,7 @@
           <nuxt-img
             style="width: 69px"
             :src="item.cardImage?.image?.url || item.cardImage?.imageUrl"
-            :alt="item.cardImage?.imageAlt"
+            :alt="item.cardImage?.imageAlt || item?.title || 'Feature icon'"
           />
           <h3 class="sub__section-heading mt-4">{{ item?.title }}</h3>
 
