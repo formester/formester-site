@@ -52,6 +52,7 @@
               <iframe
                 class="video-iframe"
                 :src="youtubeEmbedUrl"
+                :title="title || 'Video'"
                 frameborder="0"
                 allow="autoplay; encrypted-media"
                 allowfullscreen

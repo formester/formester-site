@@ -32,6 +32,7 @@
               class="img-fluid"
               :alt="item.cardImage?.imageAlt || item.title || 'Feature image'"
               :modifiers="{ animated: true }"
+              loading="lazy"
             />
             <img
               v-else
@@ -39,6 +40,7 @@
               class="img-fluid"
               :alt="item.cardImage?.imageAlt || item.title || 'Feature image'"
               :modifiers="{ animated: true }"
+              loading="lazy"
             />
           </div>
         </div>

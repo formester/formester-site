@@ -28,6 +28,7 @@
               <iframe
                 class="video-iframe"
                 :src="youtubeEmbedUrl"
+                :title="description || 'Video'"
                 frameborder="0"
                 allow="autoplay; encrypted-media"
                 allowfullscreen
