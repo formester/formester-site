@@ -17,7 +17,7 @@
               :alt="item.cardImage?.imageAlt"
               loading="lazy"
             />
-            <h4 class="sub__section-heading mt-4">{{ item.title }}</h4>
+            <h3 class="sub__section-heading mt-4">{{ item.title }}</h3>
             <MarkdownContent
               v-if="item?.description_markdown"
               class="subheading__text"
