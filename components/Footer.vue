@@ -9,9 +9,9 @@
       <section class="mt-5 container">
         <div class="row">
           <div class="col-lg-3 col-sm-6 mb-4 mb-md-0 text-lg-start">
-            <h5 class="text-uppercase footer__items--heading mb-3">
+            <h3 class="text-uppercase footer__items--heading mb-3">
               Formester
-            </h5>
+            </h3>
 
             <ul class="list-unstyled mt-2">
               <li class="mt-2">
@@ -59,9 +59,9 @@
               </li>
             </ul>
 
-            <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
+            <h3 class="text-uppercase footer__items--heading mb-3 mt-5">
               AI Solutions
-            </h5>
+            </h3>
 
             <ul class="list-unstyled mt-2">
               <li class="mt-2">
@@ -109,9 +109,9 @@
           <div
             class="col-lg-3 col-sm-6 mb-4 mb-md-0 mt-0 mt-lg-0 text-lg-start"
           >
-            <h5 class="text-uppercase footer__items--heading mb-3">
+            <h3 class="text-uppercase footer__items--heading mb-3">
               Industries
-            </h5>
+            </h3>
 
             <ul class="list-unstyled mt-2">
               <li class="mt-2">
@@ -128,9 +128,9 @@
               </li>
             </ul>
 
-            <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
+            <h3 class="text-uppercase footer__items--heading mb-3 mt-5">
               <NuxtLink to="/vs/">Compare</NuxtLink>
-            </h5>
+            </h3>
 
             <ul class="list-unstyled mt-2">
               <li class="mt-2">
@@ -212,9 +212,9 @@
           <div
             class="col-lg-3 col-sm-6 mb-4 mb-md-0 mt-0 mt-sm-4 mt-lg-0 text-lg-start"
           >
-            <h5 class="text-uppercase footer__items--heading mb-3">
+            <h3 class="text-uppercase footer__items--heading mb-3">
               Competitor Insights
-            </h5>
+            </h3>
 
             <ul class="list-unstyled mt-2">
               <li class="mt-2">
@@ -229,9 +229,9 @@
               </li>
             </ul>
 
-            <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
+            <h3 class="text-uppercase footer__items--heading mb-3 mt-5">
               Plugins
-            </h5>
+            </h3>
 
             <ul class="list-unstyled mt-2">
               <li class="mt-2">
@@ -267,9 +267,9 @@
               </li>
             </ul>
 
-            <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
+            <h3 class="text-uppercase footer__items--heading mb-3 mt-5">
               Tools
-            </h5>
+            </h3>
 
             <ul class="list-unstyled mt-2">
               <li class="mt-2">
@@ -286,7 +286,7 @@
           <div
             class="col-lg-3 col-sm-6 mb-4 mb-md-0 mt-0 mt-sm-4 mt-lg-0 text-lg-start"
           >
-            <h5 class="text-uppercase footer__items--heading mb-3">Support</h5>
+            <h3 class="text-uppercase footer__items--heading mb-3">Support</h3>
 
             <ul class="list-unstyled mt-2">
               <li class="mt-2">
@@ -336,9 +336,9 @@
               </li>
             </ul>
 
-            <h5 class="text-uppercase footer__items--heading mb-3 mt-5">
+            <h3 class="text-uppercase footer__items--heading mb-3 mt-5">
               Use Cases
-            </h5>
+            </h3>
 
             <ul class="list-unstyled mt-2">
               <li class="mt-2">

@@ -10,9 +10,9 @@
         @load="loading = false"
       />
       <div class="template-content">
-        <h6 class="template-name pointer">
+        <h3 class="template-name pointer">
           {{ template?.name }}
-        </h6>
+        </h3>
         <p class="template-description">
           {{ template?.description }}
         </p>
