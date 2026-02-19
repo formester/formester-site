@@ -14,7 +14,7 @@
             class="img-fluid"
             loading="lazy"
           />
-          <h4 class="sub__section-heading mt-4">{{ limitation.title }}</h4>
+          <h3 class="sub__section-heading mt-4">{{ limitation.title }}</h3>
           <p class="subheading__text">{{ limitation.description }}</p>
         </div>
       </div>

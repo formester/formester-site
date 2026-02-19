@@ -27,7 +27,7 @@
             >
               <nuxt-img
                 :src="feature.icon?.imageUrl || feature.icon?.image?.url"
-                :alt="feature.icon?.imageAlt"
+                :alt="feature.icon?.imageAlt || feature.title || 'Feature icon'"
                 loading="lazy"
                 :class="{ 'grey-filter': activeIndex !== index }"
               />
@@ -89,7 +89,7 @@
       <div v-for="feature in itemList" :key="feature.title" class="mt-5">
         <nuxt-img
           :src="feature.cardImage?.imageUrl || feature.cardImage?.image?.url"
-          :alt="feature.cardImage?.imageAlt"
+          :alt="feature.cardImage?.imageAlt || feature.title || 'Feature image'"
           class="mb-4 img-fluid"
           loading="lazy"
           sizes="10vw"
@@ -100,7 +100,7 @@
           >
             <nuxt-img
               :src="feature.icon?.imageUrl || feature.icon?.image?.url"
-              :alt="feature.icon?.imageAlt"
+              :alt="feature.icon?.imageAlt || feature.title || 'Feature icon'"
               loading="lazy"
             />
           </div>

@@ -49,7 +49,7 @@
                 <nuxt-img
                   :src="item.cardImage.image?.url || item.cardImage.imageUrl"
                   class="w-lg-40 d-block img-fluid my-auto"
-                  :alt="item.cardImage?.imageAlt"
+                  :alt="item.cardImage?.imageAlt || item?.title || 'Step image'"
                   loading="lazy"
                 />
               </div>

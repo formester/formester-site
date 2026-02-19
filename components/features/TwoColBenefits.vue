@@ -14,10 +14,10 @@
               :src="item.cardImage.image?.url || item.cardImage.imageUrl"
               class="img-fluid"
               style="width: 69px"
-              :alt="item.cardImage?.imageAlt"
+              :alt="item.cardImage?.imageAlt || item.title || 'Feature icon'"
               loading="lazy"
             />
-            <h4 class="sub__section-heading mt-4">{{ item.title }}</h4>
+            <h3 class="sub__section-heading mt-4">{{ item.title }}</h3>
             <MarkdownContent
               v-if="item?.description_markdown"
               class="subheading__text"

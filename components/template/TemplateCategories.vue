@@ -20,14 +20,14 @@
     <NuxtLink
       to="/templates/"
     >
-      <h3
+      <h2
         class="all-category-heading"
         :class="{
           'd-none': !showCategories && isMobile,
         }"
       >
         All Templates
-      </h3>
+      </h2>
     </NuxtLink>
     <div
       v-for="(categories, categoryType) in templateCategories"
@@ -39,7 +39,7 @@
         <div
           class="categoryType-container d-flex align-items-center justify-content-between"
         >
-          <h3 class="category-heading pointer">{{ formatCategoryHeading(categoryType) }}</h3>
+          <h2 class="category-heading pointer">{{ formatCategoryHeading(categoryType) }}</h2>
           <div>
             <nuxt-img
               class="collapse-arrow-btn pointer"
@@ -60,12 +60,12 @@
           :key="category.id"
           :to="`/templates/categories/${category.slug}/`"
         >
-          <h6
+          <h3
             class="category"
             :class="{ active: activeCategory?.slug === category.slug }"
           >
             {{ category.name }}
-          </h6>
+          </h3>
         </NuxtLink>
       </div>
     </div>

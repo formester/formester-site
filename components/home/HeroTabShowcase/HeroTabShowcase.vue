@@ -9,7 +9,7 @@
             transform: `translate(${iconPositions[0].x}px, ${iconPositions[0].y}px)`,
           }"
         >
-          <object type="image/svg+xml" data="/hero-assets/floating-icon-1.svg" width="120" height="120" aria-label="Floating Icon" class="svg-object"></object>
+          <object type="image/svg+xml" data="/hero-assets/floating-icon-1.svg" width="120" height="120" aria-hidden="true" class="svg-object"></object>
         </div>
         <div
           class="floating-icon floating-icon-2"
@@ -17,7 +17,7 @@
             transform: `translate(${iconPositions[1].x}px, ${iconPositions[1].y}px)`,
           }"
         >
-          <object type="image/svg+xml" data="/hero-assets/floating-icon-2.svg" width="120" height="120" aria-label="Floating Icon" class="svg-object"></object>
+          <object type="image/svg+xml" data="/hero-assets/floating-icon-2.svg" width="120" height="120" aria-hidden="true" class="svg-object"></object>
         </div>
         <div
           class="floating-icon floating-icon-3"
@@ -25,7 +25,7 @@
             transform: `translate(${iconPositions[2].x}px, ${iconPositions[2].y}px)`,
           }"
         >
-          <object type="image/svg+xml" data="/hero-assets/floating-icon-3.svg" width="120" height="120" aria-label="Floating Icon" class="svg-object"></object>
+          <object type="image/svg+xml" data="/hero-assets/floating-icon-3.svg" width="120" height="120" aria-hidden="true" class="svg-object"></object>
         </div>
         <div
           class="floating-icon floating-icon-4"
@@ -33,7 +33,7 @@
             transform: `translate(${iconPositions[3].x}px, ${iconPositions[3].y}px)`,
           }"
         >
-          <object type="image/svg+xml" data="/hero-assets/floating-icon-4.svg" width="120" height="120" aria-label="Floating Icon" class="svg-object"></object>
+          <object type="image/svg+xml" data="/hero-assets/floating-icon-4.svg" width="120" height="120" aria-hidden="true" class="svg-object"></object>
         </div>
       </template>
       <div class="container horizontal__padding">
@@ -110,7 +110,7 @@ export default {
       if (!this.$refs.heroSection) {
         return
       }
-      
+
       const rect = this.$refs.heroSection.getBoundingClientRect()
       const centerX = rect.width / 2
       const centerY = rect.height / 2

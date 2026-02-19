@@ -2,21 +2,21 @@
   <NuxtLink
     :to="getLink(app)"
     :target="getLink(app)?.startsWith('http') ? '_blank' : undefined"
-    class="integration-card-slim" 
+    class="integration-card-slim"
     :class="{ 'clickable': getLink(app) }"
   >
     <div class="card-inner">
       <div class="icon-wrapper">
         <div class="icon-glow"></div>
-        <nuxt-img 
-          :src="getImgUrl(app)" 
+        <nuxt-img
+          :src="getImgUrl(app)"
           :alt="app.name"
           class="app-icon"
         />
       </div>
-      
+
       <div class="card-content">
-        <h4 class="app-name">{{ app.name }}</h4>
+        <h3 class="app-name">{{ app.name }}</h3>
         <p class="app-description">{{ app.description }}</p>
       </div>
     </div>
@@ -77,7 +77,7 @@ export default {
 
 .integration-card-slim:hover {
   transform: translateY(-4px);
-  box-shadow: 
+  box-shadow:
     0 12px 24px rgba(100, 52, 208, 0.12),
     0 0 0 1px rgba(100, 52, 208, 0.15);
   border-color: rgba(100, 52, 208, 0.25);
@@ -106,7 +106,7 @@ export default {
   justify-content: center;
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
   border-radius: 12px;
-  box-shadow: 
+  box-shadow:
     0 4px 8px rgba(0, 0, 0, 0.04),
     0 0 0 1px rgba(100, 52, 208, 0.06);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -114,7 +114,7 @@ export default {
 
 .integration-card-slim:hover .icon-wrapper {
   transform: scale(1.05);
-  box-shadow: 
+  box-shadow:
     0 6px 12px rgba(100, 52, 208, 0.12),
     0 0 0 1px rgba(100, 52, 208, 0.15);
 }
@@ -203,25 +203,25 @@ export default {
     padding: 16px 20px;
     gap: 12px;
   }
-  
+
   .icon-wrapper {
     width: 48px;
     height: 48px;
   }
-  
+
   .app-icon {
     width: 28px;
     height: 28px;
   }
-  
+
   .app-name {
     font-size: 1rem;
   }
-  
+
   .app-description {
     font-size: 0.8125rem;
   }
-  
+
   .arrow-icon {
     width: 32px;
     height: 32px;
