@@ -18,7 +18,7 @@
             loading="lazy"
           />
           <div class="text-start">
-            <h4 class="sub__section-heading mt-4">{{ feature.title }}</h4>
+            <h3 class="sub__section-heading mt-4">{{ feature.title }}</h3>
             <p class="subheading__text">{{ feature.description }}</p>
           </div>
         </div>

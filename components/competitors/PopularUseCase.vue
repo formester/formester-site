@@ -19,7 +19,7 @@
             loading="lazy"
           />
           <div class="text-start">
-            <h4 class="sub__section-heading mt-4">{{ useCase.title }}</h4>
+            <h3 class="sub__section-heading mt-4">{{ useCase.title }}</h3>
             <p class="subheading__text">{{ useCase.description }}</p>
           </div>
         </div>

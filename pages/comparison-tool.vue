@@ -37,7 +37,7 @@
           <div class="section-body__step step-1">
             <div class="step__content">
               <span>STEP 1</span>
-              <h4>Select Form Builders</h4>
+              <h3>Select Form Builders</h3>
               <p>
                 First, select up to four form builders from our list that you
                 want to compare.
@@ -53,7 +53,7 @@
           <div class="section-body__step step-2">
             <div class="step__content">
               <span>STEP 2</span>
-              <h4>Select Right Plans for Each Form Builder</h4>
+              <h3>Select Right Plans for Each Form Builder</h3>
               <p>
                 Then select the pricing plan of the tool you are trying to
                 compare, Our tool will display a table with pricing plans and
@@ -73,7 +73,7 @@
           <div class="section-body__step step-3">
             <div class="step__content">
               <span>STEP 3</span>
-              <h4>Compare different Form Builders</h4>
+              <h3>Compare different Form Builders</h3>
               <p>
                 You can easily see what each form builder offers for each of
                 their pricing plan, helping you decide which one suits your
@@ -147,7 +147,7 @@
               src="../assets/images/comparision/features/feature-1.svg"
               alt="1"
             />
-            <h6>Unique Tool</h6>
+            <h3>Unique Tool</h3>
             <p>
               Our tool is unique because it lets you compare prices and features
               of the top form builder tools on the market.
@@ -158,7 +158,7 @@
               src="../assets/images/comparision/features/feature-2.svg"
               alt="2"
             />
-            <h6>Easy Comparison</h6>
+            <h3>Easy Comparison</h3>
             <p>
               You can easily customize your comparison by choosing up to four
               form builders at once. This helps you see a detailed comparison
@@ -170,7 +170,7 @@
               src="../assets/images/comparision/features/feature-3.svg"
               alt="3"
             />
-            <h6>Compare Pricing Plans</h6>
+            <h3>Compare Pricing Plans</h3>
             <p>
               You can compare pricing plans of online form builders to decide
               which one is best for you.
@@ -181,7 +181,7 @@
               src="../assets/images/comparision/features/feature-4.svg"
               alt="4"
             />
-            <h6>Find the best tool</h6>
+            <h3>Find the best tool</h3>
             <p>
               This feature helps people find the best software for making forms.
               It shows which tool has the right features at the best price.
@@ -192,7 +192,7 @@
               src="../assets/images/comparision/features/feature-5.svg"
               alt="5"
             />
-            <h6>Regular Updates</h6>
+            <h3>Regular Updates</h3>
             <p>
               Our tool is regularly updated to give you the most current and
               accurate information on all form builders.
@@ -505,7 +505,7 @@ useJsonld([
   text-transform: uppercase;
   margin-bottom: 0;
 }
-.step__content > h4 {
+.step__content > h3 {
   color: var(--clr-text-primary);
   font-size: 28px;
   font-weight: 600;
@@ -596,7 +596,7 @@ useJsonld([
   background: #f4ebff;
   margin-bottom: 0.5rem;
 }
-.feature > h6 {
+.feature > h3 {
   color: var(--clr-text-primary);
   text-align: center;
   font-size: 20px;
@@ -693,7 +693,7 @@ useJsonld([
     font-size: 12px;
     line-height: 18px;
   }
-  .step__content > h4 {
+  .step__content > h3 {
     font-size: 18px;
     line-height: 28px;
   }
