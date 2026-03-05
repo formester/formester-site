@@ -4,25 +4,22 @@
 
 <script setup>
 import PageComponents from '@/components/PageComponents.vue'
-import getStrapiData from '@/utils/getStrapiData'
+import { getFeatureBySlug } from '@/utils/getAllFeatures'
 
 const route = useRoute()
 const slug = route.params.slug
 
-const endpoint = `/features`
-const strapiParams = { 'filters[slug][$eqi]': slug }
-
 const { data: pageData, error: fetchError } = await useAsyncData(`feature-${slug}`, async () => {
-  const result = await getStrapiData(endpoint, strapiParams)
-  
+  const result = await getFeatureBySlug(slug)
+
   if (!result || !result.components || result.components.length === 0) {
-    throw createError({ 
-      statusCode: 404, 
+    throw createError({
+      statusCode: 404,
       statusMessage: 'Page not found',
-      fatal: true 
+      fatal: true
     })
   }
-  
+
   return result
 })
 

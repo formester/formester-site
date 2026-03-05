@@ -1,29 +1,42 @@
 import axios from 'axios'
+import { STRAPI_URL, APP_URL } from '../constants/urls.js'
 
-// Single global cache for all requests
-let cache = null
+const MAX_RETRIES = 3
+const BASE_DELAY_MS = 1000
 
-// Retry helper function
-const fetchWithRetry = async (url, config, retries = 3, delay = 2000) => {
-  for (let i = 0; i < retries; i++) {
+let cachePromise = null
+let categorieRoutesPromise = null
+
+async function fetchWithRetry(url, config = {}, retries = MAX_RETRIES) {
+  for (let attempt = 1; attempt <= retries; attempt++) {
     try {
       return await axios.get(url, { ...config, timeout: 30000 })
     } catch (error) {
-      if (i === retries - 1) throw error
-      console.log(`Retry ${i + 1}/${retries} for ${url}`)
-      await new Promise(resolve => setTimeout(resolve, delay))
+      const isRetryable =
+        error.code === 'ECONNRESET' ||
+        error.code === 'ETIMEDOUT' ||
+        error.code === 'ECONNABORTED' ||
+        error.code === 'EPIPE' ||
+        error.code === 'EAI_AGAIN' ||
+        (error.response && error.response.status >= 500)
+
+      if (isRetryable && attempt < retries) {
+        const delay = BASE_DELAY_MS * Math.pow(2, attempt - 1)
+        console.warn(
+          `[getTemplatesAndCategories] Attempt ${attempt}/${retries} failed (${error.code || error.message}). Retrying in ${delay}ms...`
+        )
+        await new Promise((resolve) => setTimeout(resolve, delay))
+        continue
+      }
+      throw error
     }
   }
 }
 
-const getTemplatesAndCategories = async (params = {}) => {
-  // Return cached data if available (build or dev)
-  if (cache) {
-    return cache
-  }
-
+async function _fetchTemplatesAndCategories(params = {}) {
+  console.log('[getTemplatesAndCategories] Fetching all templates and categories...')
   let { data: templates } = await fetchWithRetry(
-    "https://app.formester.com/templates.json",
+    `${APP_URL}/templates.json`,
     {
       params: {
         ...params,
@@ -33,7 +46,7 @@ const getTemplatesAndCategories = async (params = {}) => {
   )
 
   const { data: categories } = await fetchWithRetry(
-    "https://app.formester.com/template_categories.json"
+    `${APP_URL}/template_categories.json`
   )
 
   const dummyDescription =
@@ -41,7 +54,7 @@ const getTemplatesAndCategories = async (params = {}) => {
 
     const {
       data: { data },
-    } = await fetchWithRetry(`https://cms.formester.com/api/pdf-templates`, {
+    } = await fetchWithRetry(`${STRAPI_URL}/api/pdf-templates`, {
     params: {
 
       populate: 'deep',
@@ -65,27 +78,42 @@ const getTemplatesAndCategories = async (params = {}) => {
     payload: { templates, categories },
   })
 
-  const { data: templatesGroupedByCategory } = await fetchWithRetry(
-    "https://app.formester.com/template_categories/grouped_by_category.json"
-  )
+  const result = { templateRoutes, templates, categories }
 
-  const categorieRoutes = templatesGroupedByCategory.map((item) => ({
+  console.log(`[getTemplatesAndCategories] Cached ${templates.length} templates`)
+  return result
+}
+
+const getTemplatesAndCategories = async (params = {}) => {
+  if (!cachePromise) {
+    cachePromise = _fetchTemplatesAndCategories(params)
+  }
+  return cachePromise
+}
+
+export default getTemplatesAndCategories
+
+async function _fetchCategorieRoutes() {
+  console.log('[getTemplatesAndCategories] Fetching grouped_by_category...')
+  const { categories } = await getTemplatesAndCategories()
+  const { data: templatesGroupedByCategory } = await fetchWithRetry(
+    `${APP_URL}/template_categories/grouped_by_category.json`
+  )
+  return templatesGroupedByCategory.map((item) => ({
     route: `/templates/categories/${item.categorySlug}`,
     payload: {
       templates: item.templates,
       categories,
     },
   }))
-
-  const result = { templateRoutes, categorieRoutes, templates, categories }
-
-  // Cache result globally
-  cache = result
-
-  return result
 }
 
-export default getTemplatesAndCategories
+export async function getCategorieRoutes() {
+  if (!categorieRoutesPromise) {
+    categorieRoutesPromise = _fetchCategorieRoutes()
+  }
+  return categorieRoutesPromise
+}
 
 /**
  * Get random templates from the cached data (without making new API calls)

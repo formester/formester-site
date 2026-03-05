@@ -90,3 +90,7 @@ sw.*
 
 # Vim swap files
 *.swp
+
+.claude
+.claude-flow
+.mcp

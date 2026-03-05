@@ -9,16 +9,18 @@
 <script setup>
 import Templates from '@/components/template/Templates.vue'
 import getSiteMeta from '@/utils/getSiteMeta'
-import getTemplatesAndCategories from '@/utils/getTemplatesAndCategories'
+import getTemplatesAndCategories, { getCategorieRoutes } from '@/utils/getTemplatesAndCategories'
 
 const route = useRoute()
 
 const slug = computed(() => route.params.slug)
 
 const { data } = await useAsyncData(`template-category-${slug.value}`, async () => {
-  const result = await getTemplatesAndCategories()
-  // Only store the data needed for this specific category to reduce memory
-  const categoryRoute = result.categorieRoutes?.find(
+  const [result, categorieRoutes] = await Promise.all([
+    getTemplatesAndCategories(),
+    getCategorieRoutes(),
+  ])
+  const categoryRoute = categorieRoutes?.find(
     (cate) => cate.route === `/templates/categories/${slug.value}`
   )
   return {
