@@ -1,17 +1,10 @@
-import axios from 'axios'
+import { getAllBlogs } from './getAllBlogs.js'
+import { getAllFeatures } from './getAllFeatures.js'
+import { getAllPages } from './getAllPages.js'
+import getTemplatesAndCategories from './getTemplatesAndCategories.js'
 
 export default async () => {
-  const {
-    data: { data },
-  } = await axios.get(`https://cms.formester.com/api/blogs`, {
-    params: {
-        sort: 'publishedAt:desc',
-        populate: '*',
-        pagination: {
-            pageSize: 500,
-        },
-    },
-  })
+  const data = await getAllBlogs()
 
   const articles = data.map((item) => ({
     url: `/blog/${item.attributes.slug}/`,
@@ -42,41 +35,31 @@ export default async () => {
 }
 
 export const getFeatureRoutes = async () => {
-  const {
-    data: { data },
-  } = await axios.get(`https://cms.formester.com/api/features?populate=deep`)
+  const featuresMap = await getAllFeatures()
 
-  const features = data.map((item) => ({
-    url: `/features/${item.slug}/`,
-    lastmod: item.updatedAt
+  const features = Object.keys(featuresMap).map((slug) => ({
+    url: `/features/${slug}/`,
   }))
 
   return features
 }
 
 export const getPageRoutes = async () => {
-  const {
-    data: { data },
-  } = await axios.get(`https://cms.formester.com/api/pages?populate=deep`)
+  const pagesMap = await getAllPages()
 
-  const pages = data
-    .filter((item) => item.slug)
-    .map((item) => ({
-      url: `/${item.slug}/`,
-      lastmod: item.updatedAt
+  const pages = Object.keys(pagesMap)
+    .filter((slug) => slug !== '__home__')
+    .map((slug) => ({
+      url: `/${slug}/`,
     }))
 
   return pages
 }
 
 export const getTemplateRoutes = async () => {
-  const { data: templates } = await axios.get(
-    "https://app.formester.com/templates.json"
-  )
-
-  const { data: templateCategories } = await axios.get(
-    "https://app.formester.com/template_categories.json"
-  )
+  const result = await getTemplatesAndCategories()
+  const templates = result.templates
+  const categories = result.categories
 
   const templateUrls = templates.map(t => ({
     url: `/templates/${t.slug}/`,
@@ -84,7 +67,7 @@ export const getTemplateRoutes = async () => {
   }))
 
   // Flatten all category arrays (department, industry, etc.)
-  const allCategories = Object.values(templateCategories).flat()
+  const allCategories = Object.values(categories).flat()
 
   const categoryUrls = allCategories.map(c => ({
     url: `/templates/categories/${c.slug}/`,

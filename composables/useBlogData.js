@@ -1,21 +1,13 @@
 import readingTime from '@/utils/readingTime'
+import { getAllBlogs } from '@/utils/getAllBlogs'
 
 export const useBlogData = async () => {
-  const config = useRuntimeConfig()
   const itemsPerPage = 9
 
-  // Fetch all blog data once and cache it
+  // Fetch all blog data once via shared cache
   const { data: blogData, error: fetchError } = await useAsyncData('blogs-global', async () => {
     try {
-      const response = await $fetch(`${config.public.strapiUrl}/api/blogs`, {
-        params: {
-          sort: 'publishedAt:desc',
-          populate: '*',
-          'pagination[pageSize]': 500,
-        },
-      })
-
-      const data = response.data || []
+      const data = await getAllBlogs()
 
       let articles = data.map((item) => ({
         id: item.id,

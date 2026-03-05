@@ -144,6 +144,7 @@ import LinkdinIcon from '../../components/icons/linkdin.vue'
 import CopyLinkIcon from '../../components/icons/copyLink.vue'
 import getSiteMeta from '../../utils/getSiteMeta'
 import readingTime from '@/utils/readingTime'
+import { getBlogBySlug, getAllBlogs } from '@/utils/getAllBlogs'
 import { marked } from 'marked'
 
 const route = useRoute()
@@ -158,18 +159,11 @@ const blogContent = ref(null)
 
 const { data: blogResponse } = await useAsyncData(`blog-${route.params.slug}`, async () => {
   try {
-    const response = await $fetch(`${config.public.strapiUrl}/api/blogs`, {
-      params: {
-        'filters[slug][$eq]': route.params.slug,
-        populate: '*',
-      },
-    })
-    
-    const blog = response.data?.[0]
+    const blog = await getBlogBySlug(route.params.slug)
     if (!blog?.id) {
       throw createError({ statusCode: 404, message: 'Page not found' })
     }
-    
+
     const blogData = {
       id: blog.id,
       ...blog.attributes,
@@ -178,16 +172,15 @@ const { data: blogResponse } = await useAsyncData(`blog-${route.params.slug}`, a
       readingStats: readingTime(blog.attributes.body || ''),
     }
 
-    const relatedData = await $fetch(`${config.public.strapiUrl}/api/blogs/random`, {
-      params: {
-        slug: route.params.slug,
-      },
-    })
-
-    const relatedArticles = relatedData.map((item) => ({
-      ...item,
-      coverImg: item.coverImg?.url,
-      readingStats: readingTime(item.body || ''),
+    // Compute related articles locally from cached blogs
+    const allBlogs = await getAllBlogs()
+    const otherBlogs = allBlogs.filter((item) => item.attributes.slug !== route.params.slug)
+    const shuffled = [...otherBlogs].sort(() => Math.random() - 0.5)
+    const relatedArticles = shuffled.slice(0, 4).map((item) => ({
+      ...item.attributes,
+      id: item.id,
+      coverImg: item.attributes.coverImg?.data?.attributes?.url,
+      readingStats: readingTime(item.attributes.body || ''),
     }))
 
     return { blogData, relatedArticles }
