@@ -3,7 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm ci
+        - npm install
     build:
       commands:
         - npm run build
@@ -15,3 +15,4 @@ frontend:
     paths:
       - node_modules/**/*
       - .nuxt/**/*
+      - node_modules/.cache/**/*
