@@ -34,6 +34,12 @@ export default {
       loading: true,
     }
   },
+  mounted() {
+    const img = this.$el.querySelector('img')
+    if (img && img.complete) {
+      this.loading = false
+    }
+  },
   computed: {
     previewImageUrl() {
       return (
