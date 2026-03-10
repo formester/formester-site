@@ -4,14 +4,29 @@
 
 <script setup>
 import PageComponents from '@/components/PageComponents.vue'
-import getStrapiData from '@/utils/getStrapiData'
+import { getHomePage } from '@/utils/getAllPages'
 
-const endpoint = `/pages`
-const strapiParams = { 'filters[slug][$null]': true }
+const { data, error: fetchError } = await useAsyncData('home-page', async () => {
+  const result = await getHomePage()
 
-const { data } = await useAsyncData('home-page', async () => {
-  return await getStrapiData(endpoint, strapiParams)
+  if (!result || !result.components || result.components.length === 0) {
+    throw createError({
+      statusCode: 500,
+      statusMessage: 'Home page data unavailable',
+      fatal: true,
+    })
+  }
+
+  return result
 })
+
+if (fetchError.value) {
+  throw createError({
+    statusCode: 500,
+    statusMessage: 'Failed to load home page',
+    fatal: true,
+  })
+}
 
 const components = computed(() => data.value?.components || [])
 

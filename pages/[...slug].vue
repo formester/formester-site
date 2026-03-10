@@ -4,7 +4,7 @@
 
 <script setup>
 import PageComponents from '@/components/PageComponents.vue'
-import getStrapiData from '@/utils/getStrapiData'
+import { getPageBySlug } from '@/utils/getAllPages'
 
 const route = useRoute()
 
@@ -13,20 +13,17 @@ const pathSegments = route.params.slug || []
 let slug = Array.isArray(pathSegments) ? pathSegments.join('/') : pathSegments
 slug = slug.replace(/\/$/, '')
 
-const endpoint = `/pages`
-const strapiParams = { 'filters[slug][$eqi]': slug }
-
 const { data: pageData, error: fetchError } = await useAsyncData(`page-${slug}`, async () => {
-  const result = await getStrapiData(endpoint, strapiParams)
-  
+  const result = await getPageBySlug(slug)
+
   if (!result || !result.components || result.components.length === 0) {
-    throw createError({ 
-      statusCode: 404, 
+    throw createError({
+      statusCode: 404,
       statusMessage: 'Page not found',
-      fatal: true 
+      fatal: true
     })
   }
-  
+
   return result
 })
 

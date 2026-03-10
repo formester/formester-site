@@ -1,14 +1,13 @@
-// dataFetcher.js
-import axios from 'axios'
 import getSiteMeta from '@/utils/getSiteMeta'
+import fetchWithRetry from '@/utils/fetchWithRetry'
 
 export default async (endpoint, params = {}) => {
   const config = useRuntimeConfig()
   const strapiUrl = config.public.strapiUrl
-  
+
   const {
     data: { data },
-  } = await axios.get(`${strapiUrl}/api${endpoint}`, {
+  } = await fetchWithRetry(`${strapiUrl}/api${endpoint}`, {
     params: {
       ...params,
       populate: 'deep',

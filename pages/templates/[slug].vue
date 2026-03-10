@@ -159,6 +159,7 @@ import closeIcon from '~/assets/images/x-close.svg'
 import getSiteMeta from '../../utils/getSiteMeta'
 import isEmpty from 'lodash/isEmpty'
 import getTemplatesAndCategories from '@/utils/getTemplatesAndCategories'
+import getRecommendedTemplatesMap from '@/utils/getRecommendedTemplatesMap'
 
 // Components
 const MoreTemplates = defineAsyncComponent(() => import('../../components/template/MoreTemplates.vue'))
@@ -184,32 +185,17 @@ const { data: fetchedData, error: fetchError } = await useAsyncData(`template-${
     const routePayload = result.templateRoutes.find(r => r.route === `/templates/${slug}`)
     const pdfData = routePayload?.payload?.data || null
 
-    // Fetch recommended slugs for this template
+    // Look up recommended templates from cached map
     let recommendedTemplates = []
     try {
-      const recData = await $fetch('https://cms.formester.com/api/recommended-templates', {
-        params: {
-          'filters[specificTemplate][$eq]': slug,
-          'pagination[pageSize]': 1,
-          populate: 'deep',
-        },
-      })
-      const items = (recData && recData.data) || []
-      const found = items && items.length ? items[0] : null
+      const recMap = await getRecommendedTemplatesMap()
+      const uniqueSlugs = recMap[slug] || []
 
-      if (found && found.recommendedTemplates) {
-        const slugs = found.recommendedTemplates
-          .map((rt) => (rt ? rt.text : null))
-          .filter(Boolean)
-        const uniqueSlugs = [...new Set(slugs)]
-
-        // Filter recommended templates from already-loaded templates
-        if (uniqueSlugs.length > 0) {
-          const allowed = new Set(uniqueSlugs)
-          let list = result.templates.filter((t) => allowed.has(t.slug))
-          list.sort((a, b) => uniqueSlugs.indexOf(a.slug) - uniqueSlugs.indexOf(b.slug))
-          recommendedTemplates = list.filter((t) => t.slug !== slug).slice(0, 6)
-        }
+      if (uniqueSlugs.length > 0) {
+        const allowed = new Set(uniqueSlugs)
+        let list = result.templates.filter((t) => allowed.has(t.slug))
+        list.sort((a, b) => uniqueSlugs.indexOf(a.slug) - uniqueSlugs.indexOf(b.slug))
+        recommendedTemplates = list.filter((t) => t.slug !== slug).slice(0, 6)
       }
 
       // Fallback to first 6 templates if no recommendations

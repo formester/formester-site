@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import getRoutes, { getFeatureRoutes, getPageRoutes, getTemplateRoutes } from './utils/getRoutes.js'
+import { STRAPI_URL, APP_URL } from './constants/urls'
 
 export default defineNuxtConfig({
   // Global page headers
@@ -117,8 +118,8 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: ['/', '/sitemap.xml'],
       ignore: ['/api'],
-      concurrency: 5, // Reduced from 15 to lower memory usage
-      interval: 100, // Increased from 50 to slow down processing
+      concurrency: 15, // Increased: pages now render from in-memory cache
+      interval: 10, // Reduced: minimal API I/O with batch caching
       failOnError: false
     },
     hooks: {
@@ -164,8 +165,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'http://localhost:3000',
-      strapiUrl: 'https://cms.formester.com',
-      appUrl: 'https://app.formester.com',
+      strapiUrl: STRAPI_URL,
+      appUrl: APP_URL,
       clarityId: 'emw9o333qb'
     }
   },
