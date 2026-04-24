@@ -17,8 +17,8 @@ export default {
     },
     cellType: {
       type: String,
-      default: 'td',
-      validator: (value) => ['td', 'th'].includes(value),
+      default: 'span',
+      validator: (value) => ['td', 'th', 'span', 'div'].includes(value),
     },
   },
   computed: {
@@ -27,6 +27,7 @@ export default {
         color: this.textColor || 'inherit',
         fontWeight: this.bold || this.isBold ? 'bold' : 'normal',
         backgroundColor: this.isHighlighted ? '#f8f9fa' : 'transparent',
+        display: this.cellType === 'span' ? 'inline-block' : 'block',
       };
     },
   },
