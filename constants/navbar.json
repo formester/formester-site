@@ -635,14 +635,5 @@
         "alt": "message-check-square"
       }
     }
-  },
-  {
-    "id": 628,
-    "slug": "gdpr-compliant-forms",
-    "navTitle": "GDPR Compliance",
-    "navDescription": "Build GDPR compliant forms",
-    "featureCategory": "Security & Validation",
-    "featurePlan": "Free",
-    "navIcon": null
   }
 ]
