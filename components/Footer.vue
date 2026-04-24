@@ -427,7 +427,7 @@
             /></a>
           </div>
           <div class="copyright d-flex justify-content-center">
-            © 2025 Acorn Globus. All rights reserved
+            © {{ currentYear }} Acorn Globus. All rights reserved
           </div>
           <a
             href="https://www.trustpilot.com/review/formester.com"
@@ -440,8 +440,10 @@
   </footer>
 </template>
 
-<script>
-export default {}
+<script setup>
+import { computed } from 'vue'
+
+const currentYear = computed(() => Math.max(new Date().getFullYear(), 2026))
 </script>
 
 <style scoped>
