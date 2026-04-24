@@ -427,7 +427,7 @@
             /></a>
           </div>
           <div class="copyright d-flex justify-content-center">
-            © 2025 Acorn Globus. All rights reserved
+            © 2026 Acorn Globus. All rights reserved
           </div>
           <a
             href="https://www.trustpilot.com/review/formester.com"
