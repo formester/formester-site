@@ -21,5 +21,14 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.section__heading {
+  /* Uses the variable from the parent, or falls back to the site default */
+  color: var(--heading-color, var(--clr-dark));
+}
+
+.highlight__text {
+  /* Uses the variable from the parent, or falls back to the site primary purple */
+  color: var(--highlight-color, var(--clr-primary));
+}
 </style>
