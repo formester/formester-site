@@ -1,9 +1,9 @@
 <template>
   <tr>
     <td 
-      v-for="cell in rowData" 
+      v-for="(cell, index) in rowData" 
       :key="cell.id"
-      :style="tdStyle"
+      :style="getTdStyle(index)"
     >
       <!-- If icon present, show icon; otherwise fallback to text -->
       <template v-if="getIconSrc(cell.cellIcon)">
@@ -19,14 +19,14 @@
             :text="cell.cellData[0].text"
             :isHighlighted="cell.cellData[0].highlight"
             :textColor="cell.cellData[0].color"
-            :bold="cell.cellData[0].bold"
+            :bold="cell.cellData[0].bold || (highlightColumn && index + 1 === highlightColumn)"
           />
         </div>
         <div v-else>
           <span
-            v-for="(data, index) in cell.cellData"
-            :key="index"
-            :style="getTextStyle(data)"
+            v-for="(data, dataIndex) in cell.cellData"
+            :key="dataIndex"
+            :style="getTextStyle(data, index)"
           >
             {{ data.text }}
           </span>
@@ -43,23 +43,48 @@ export default {
   props: {
     rowData: Array,
     rowType: String, // For header row type handling
+    highlightColumn: {
+      type: Number,
+      default: null,
+    },
   },
   components: {
     CellData,
   },
-  computed: {
-    tdStyle() {
-      return {
-        fontWeight: this.rowType === 'head' ? '600' : 'normal',
-        padding: '12px 16px',
+  methods: {
+    getTdStyle(index) {
+      const isHighlighted = this.highlightColumn && index + 1 === this.highlightColumn;
+      const style = {
+        padding: '16px 20px',
         textAlign: 'left',
         wordWrap: 'break-word',
         whiteSpace: 'normal',
-        verticalAlign: 'top',
+        verticalAlign: 'middle',
       };
+
+      if (isHighlighted) {
+        if (this.rowType === 'head') {
+          // Dark Header Highlight
+          style.backgroundColor = '#6366f1'; 
+          style.color = '#ffffff';
+          style.fontWeight = '700';
+        } else {
+          // Light Column Highlight
+          style.backgroundColor = '#f5f3ff'; 
+          style.color = '#111827';
+          style.fontWeight = '600';
+        }
+      } else {
+        // Normal Styling
+        style.fontWeight = this.rowType === 'head' ? '600' : 'normal';
+        style.color = this.rowType === 'head' ? '#374151' : '#6b7280';
+        if (this.rowType === 'head') {
+          style.backgroundColor = '#f9fafb';
+        }
+      }
+
+      return style;
     },
-  },
-  methods: {
     // Return a valid icon URL from common Strapi shapes
     getIconSrc(icon) {
       if (!icon) return null;
@@ -72,10 +97,11 @@ export default {
       if (cell && cell.cellData && cell.cellData[0] && cell.cellData[0].text) return cell.cellData[0].text;
       return 'icon';
     },
-    getTextStyle(data) {
+    getTextStyle(data, colIndex) {
+      const isColHighlighted = this.highlightColumn && colIndex + 1 === this.highlightColumn;
       return {
         color: data && data.highlight ? data.color : 'inherit',
-        fontWeight: data && data.bold === true ? '500' : (data && data.bold === false ? 'normal' : '400'),
+        fontWeight: (data && data.bold === true) || isColHighlighted ? '700' : (data && data.bold === false ? 'normal' : '400'),
         verticalAlign: 'top',
       };
     },
