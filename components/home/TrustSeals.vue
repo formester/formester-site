@@ -21,28 +21,29 @@
               class="ticker-content"
             >
               <div class="ticker-item">
-                <nuxt-img src="/trustseals/01.svg" alt="Peabody" height="40" />
+                <nuxt-img src="/trustseals/01.svg" alt="Peabody" width="118" height="40" />
               </div>
               <div class="ticker-item">
-                <nuxt-img src="/trustseals/02.svg" alt="Aramark" height="40" />
+                <nuxt-img src="/trustseals/02.svg" alt="Aramark" width="142" height="40" />
               </div>
               <div class="ticker-item">
-                <nuxt-img src="/trustseals/03.svg" alt="Loreal" height="32" />
+                <nuxt-img src="/trustseals/03.svg" alt="Loreal" width="177" height="32" />
               </div>
               <div class="ticker-item">
-                <nuxt-img src="/trustseals/04.svg" alt="Toptal" height="40" />
+                <nuxt-img src="/trustseals/04.svg" alt="Toptal" width="131" height="40" />
               </div>
 
               <div class="ticker-item">
-                <nuxt-img src="/trustseals/05.svg" alt="Grab" height="38" />
+                <nuxt-img src="/trustseals/05.svg" alt="Grab" width="108" height="38" />
               </div>
               <div class="ticker-item">
-                <nuxt-img src="/trustseals/06.svg" alt="SFU" height="36" />
+                <nuxt-img src="/trustseals/06.svg" alt="SFU" width="154" height="36" />
               </div>
               <div class="ticker-item">
                 <nuxt-img
                   src="/trustseals/07.svg"
                   alt="World of Hyatt"
+                  width="321"
                   height="32"
                 />
               </div>
@@ -50,6 +51,7 @@
                 <nuxt-img
                   src="/trustseals/08.svg"
                   alt="Iolani School"
+                  width="225"
                   height="40"
                 />
               </div>
@@ -57,14 +59,16 @@
                 <nuxt-img
                   src="/trustseals/09.svg"
                   alt="Austin Independent School District"
+                  width="146"
                   height="44"
                 />
               </div>
               <div class="ticker-item">
-                <nuxt-img 
-                src="/trustseals/10.svg" 
-                alt="Virgin" 
-                height="64" 
+                <nuxt-img
+                src="/trustseals/10.svg"
+                alt="Virgin"
+                width="73"
+                height="64"
                 />
               </div>
             </div>

@@ -4,6 +4,9 @@
       :src="article.coverImg"
       class="rounded img-fluid"
       :alt="article.coverImgAlt"
+      :width="article.coverImgWidth || 1200"
+      :height="article.coverImgHeight || 630"
+      loading="lazy"
     />
     <div class="d-flex flex-column align-items-start mt-2">
       <h3 class="article__title">{{ article.title }}</h3>

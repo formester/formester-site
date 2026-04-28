@@ -18,6 +18,8 @@
               class="quotes__logo"
               src="/quotes.svg"
               alt="Quote icon"
+              width="81"
+              height="63"
               loading="lazy"
             />
             <div class="d-flex flex-column align-items-center text-center px-2">
@@ -26,9 +28,12 @@
                 <span class="person">{{ testimonial.name }}</span>
                 <span class="designation">{{ testimonial.position }}</span>
                 <nuxt-img
+                  v-if="getCompanyLogo(testimonial).src"
                   class="brand mt-4 mb-3"
-                  :src="getIconSrc(testimonial.companyLogo)"
-                  :alt="testimonial?.companyLogo?.imageAlt || `${testimonial.name}'s company logo`"
+                  :src="getCompanyLogo(testimonial).src"
+                  :alt="getCompanyLogo(testimonial).alt || `${testimonial.name}'s company logo`"
+                  :width="getCompanyLogo(testimonial).width || 110"
+                  :height="getCompanyLogo(testimonial).height || 36"
                   loading="lazy"
                 />
               </div>
@@ -41,7 +46,7 @@
     <!-- Homepage Testimonials Layout with Auto-Scrolling Ticker for Desktop / Carousel for Mobile -->
     <div class="my-5 py-5" v-else>
       <div class="icon-wrapper">
-        <img src="/assets/images/TestimonialSection.svg" alt="Quote icon" />
+        <img src="/assets/images/TestimonialSection.svg" alt="Quote icon" width="40" height="40" />
         <p class="tag">USER TESTIMONIALS</p>
       </div>
       <SectionTitle :heading="heading" />
@@ -97,6 +102,7 @@
 
 <script>
 import TestimonialCard from './TestimonialCard.vue'
+import { getStrapiImage } from '@/utils/strapiImage'
 
 export default {
   components: {
@@ -317,39 +323,8 @@ export default {
       document.addEventListener('touchend', this.handleDragEnd)
     },
 
-    getIconSrc(iconObject) {
-      if (!iconObject) return ''
-
-      // Handle different Strapi image structures
-      if (iconObject.imageUrl) {
-        return iconObject.imageUrl
-      }
-
-      if (iconObject.image) {
-        if (iconObject.image.url) {
-          return iconObject.image.url
-        }
-
-        if (iconObject.image.data) {
-          if (
-            iconObject.image.data.attributes &&
-            iconObject.image.data.attributes.url
-          ) {
-            return iconObject.image.data.attributes.url
-          }
-
-          if (
-            Array.isArray(iconObject.image.data) &&
-            iconObject.image.data[0] &&
-            iconObject.image.data[0].attributes &&
-            iconObject.image.data[0].attributes.url
-          ) {
-            return iconObject.image.data[0].attributes.url
-          }
-        }
-      }
-
-      return ''
+    getCompanyLogo(testimonial) {
+      return getStrapiImage(testimonial?.companyLogo)
     },
     handleDragStart(e) {
       e.preventDefault()

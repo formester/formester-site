@@ -3,7 +3,7 @@
     <div class="footer__container text-center">
       <NuxtLink to="/">
         <div class="footer__logo">
-          <nuxt-img src="/logo-light.svg" alt="Formester" />
+          <nuxt-img src="/logo-light.svg" alt="Formester" width="169" height="24" />
         </div>
       </NuxtLink>
       <section class="mt-5 container">
@@ -388,6 +388,9 @@
               ><nuxt-img
                 src="/social/reddit.svg"
                 alt="Formester Reddit community"
+                width="32"
+                height="32"
+                loading="lazy"
             /></a>
             <a
               href="https://www.linkedin.com/company/formester-inc/"
@@ -396,12 +399,15 @@
               ><nuxt-img
                 src="/social/linkedin.svg"
                 alt="Formester LinkedIn page"
+                width="32"
+                height="32"
+                loading="lazy"
             /></a>
             <a
               href="https://www.youtube.com/channel/UCVfBesiZINubCEC9Xu5Z6gQ"
               class="mx-1 my-2 inline-block"
               target="_blank"
-              ><nuxt-img src="/social/youtube.svg" alt="Formester YouTube page"
+              ><nuxt-img src="/social/youtube.svg" alt="Formester YouTube page" width="32" height="32" loading="lazy"
             /></a>
             <a
               href="https://instagram.com/_formester_?utm_medium=copy_link"
@@ -410,12 +416,15 @@
               ><nuxt-img
                 src="/social/instagram.svg"
                 alt="Formester Instagram page"
+                width="32"
+                height="32"
+                loading="lazy"
             /></a>
             <a
               href="https://twitter.com/_Formester_?t=-m1pNwXvxR6KOf9kfPi9lQ&s=09"
               class="mx-1 my-2 inline-block"
               target="_blank"
-              ><nuxt-img src="/social/twitter.svg" alt="Formester Twitter page"
+              ><nuxt-img src="/social/twitter.svg" alt="Formester Twitter page" width="32" height="32" loading="lazy"
             /></a>
             <a
               href="https://www.facebook.com/formester"
@@ -424,6 +433,9 @@
               ><nuxt-img
                 src="/social/facebook.svg"
                 alt="Formester Facebook page"
+                width="32"
+                height="32"
+                loading="lazy"
             /></a>
           </div>
           <div class="copyright d-flex justify-content-center">
@@ -432,7 +444,7 @@
           <a
             href="https://www.trustpilot.com/review/formester.com"
             target="_blank"
-            ><nuxt-img src="/trustpilot-footer.svg" alt="Trustpilot"
+            ><nuxt-img src="/trustpilot-footer.svg" alt="Trustpilot" width="260" height="36" loading="lazy"
           /></a>
         </div>
       </div>

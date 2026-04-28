@@ -9,12 +9,17 @@ export const useBlogData = async () => {
     try {
       const data = await getAllBlogs()
 
-      let articles = data.map((item) => ({
-        id: item.id,
-        ...item.attributes,
-        coverImg: item.attributes.coverImg?.data?.attributes?.url || '',
-        readingStats: readingTime(item.attributes.body || ''),
-      }))
+      let articles = data.map((item) => {
+        const cover = item.attributes.coverImg?.data?.attributes
+        return {
+          id: item.id,
+          ...item.attributes,
+          coverImg: cover?.url || '',
+          coverImgWidth: cover?.width || 1200,
+          coverImgHeight: cover?.height || 630,
+          readingStats: readingTime(item.attributes.body || ''),
+        }
+      })
 
       const heroArticles = articles.filter((item) => item.featured)
       articles = articles.filter((item) => !item.featured)
