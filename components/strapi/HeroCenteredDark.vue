@@ -2,7 +2,7 @@
   <section
     class="hero"
     :style="{
-      backgroundImage: background.image?.url
+      backgroundImage: background?.image?.url
         ? `url(${background.image.url})`
         : '',
     }"
