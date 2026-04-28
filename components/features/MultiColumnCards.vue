@@ -11,7 +11,7 @@
         <div
           v-for="(card, index) in cards"
           :key="index"
-          :class="['col-12 col-md-6', Number(columns) === 4 ? 'col-lg-3' : 'col-lg-4']"
+          :class="['col-12 col-md-6', Number(columns) === 4 ? 'col-lg-3' : (Number(columns) === 2 ? 'col-lg-6' : 'col-lg-4')]"
         >
           <div class="custom-card d-flex flex-column h-100">
             <div class="card-icon-wrapper mb-4">

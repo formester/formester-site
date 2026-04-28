@@ -3,12 +3,12 @@
     <div class="container py-5">
       <h1 class="mb-4 text-center">MultiColumnCards Component Test</h1>
       <p class="text-center mb-5">Testing the hardcoded component independently from Strapi.</p>
-      
+
       <div class="mb-5">
         <MultiColumnCards
           title="Who this is for"
           description="Every test has a job to do. Below is how Formester fits the six jobs we see most."
-          :columns="3"
+          :columns="2"
           :cards="mockCards"
         />
       </div>
