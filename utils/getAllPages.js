@@ -7,6 +7,7 @@ let cachePromise = null
 function processItem(item) {
   const components = item?.components || []
   const meta = item?.meta || null
+  const updatedAt = item?.updatedAt || null
   let head = {}
   let jsonld = []
 
@@ -40,7 +41,10 @@ function processItem(item) {
   head = {
     title: meta?.title,
     link: meta?.link,
-    meta: [...siteMetaData],
+    meta: [
+      ...siteMetaData,
+      ...(updatedAt ? [{ property: 'article:modified_time', content: updatedAt }] : []),
+    ],
   }
   jsonld = normalizeJsonLd(meta?.jsonld)
 
