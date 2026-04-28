@@ -4,7 +4,7 @@
     :to="`/features/${slug}/`"
     @click="collapseNav"
   >
-    <nuxt-img :src="imageUrl" :alt="imageAlt" class="dropdown-item__img" />
+    <nuxt-img v-if="imageUrl" :src="imageUrl" :alt="imageAlt" class="dropdown-item__img" width="24" height="24" loading="lazy" />
     <div class="d-flex flex-column">
       <div class="d-flex align-items-center gap-2">
         <span class="dropdown-item__title">{{ title }}</span>
@@ -13,10 +13,12 @@
           class="plan-icon-wrapper" 
           title="Available in Business Plan"
         >
-          <img 
-            src="/assets/images/business.svg" 
+          <img
+            src="/assets/images/business.svg"
             alt="Business plan"
             class="plan-icon"
+            width="20"
+            height="20"
           />
         </div>
         <div 
@@ -24,10 +26,12 @@
           class="plan-icon-wrapper" 
           title="Available in Personal Plan"
         >
-          <img 
-            src="/assets/images/personal.svg" 
+          <img
+            src="/assets/images/personal.svg"
             alt="Personal plan"
             class="plan-icon"
+            width="20"
+            height="20"
           />
         </div>
       </div>
@@ -49,11 +53,11 @@ export default {
     },
     imageUrl: {
       type: String,
-      required: true,
+      default: null,
     },
     imageAlt: {
       type: String,
-      required: true,
+      default: '',
     },
     slug: {
       type: String,

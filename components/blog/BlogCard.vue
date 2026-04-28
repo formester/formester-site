@@ -5,6 +5,9 @@
       class="rounded img-fluid"
       :alt="article.coverImgAlt"
       :title="article.coverImgAlt"
+      :width="article.coverImgWidth || 1200"
+      :height="article.coverImgHeight || 630"
+      loading="lazy"
     />
     <div class="d-flex flex-column align-items-start">
       <span class="blog__date mt-3">{{ formatDate(article.publishedAt) }}</span>

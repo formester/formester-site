@@ -27,11 +27,11 @@
               <li v-for="(feature, i) in tab.features" :key="i">
                 <span class="feature-icon">
                   <img
-                    :src="feature.icon"
+                    :src="feature.icon.src"
                     :alt="feature.text + ' icon'"
                     class="feature-icon"
-                    width="20"
-                    height="20"
+                    :width="feature.icon.width || 20"
+                    :height="feature.icon.height || 20"
                     loading="lazy"
                   />
                 </span>
@@ -41,11 +41,12 @@
           </div>
           <div class="tab-right">
             <img
-              :src="tab.image"
+              :src="tab.image.src"
               :alt="tab.label + ' screenshot'"
               class="tab-image"
               :loading="idx === 0 ? 'eager' : 'lazy'"
-              width="480"
+              :width="tab.image.width || 480"
+              :height="tab.image.height || 360"
             />
           </div>
         </div>
@@ -56,6 +57,7 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { getStrapiImage } from '@/utils/strapiImage'
 
 // Define props to receive Strapi data
 const props = defineProps({
@@ -75,15 +77,12 @@ const borderColors = [
 ]
 
 
-const getImageUrl = (imageObj) => {
-  if (!imageObj) return null
-  
-  if (imageObj.imageUrl) return imageObj.imageUrl
-  
-  if (imageObj.image?.url) return imageObj.image.url
-  
-  return null
-}
+// Fallback tab images live under /public; provide their natural dimensions
+// so the static fallback path also gets width/height attributes set.
+const fallbackImageDims = { width: 1200, height: 800 }
+const fallbackIconDims = { width: 20, height: 20 }
+
+const wrapStaticImage = (src, dims) => ({ src, width: dims.width, height: dims.height })
 
 const fallbackTabs = [
 {
@@ -201,17 +200,21 @@ const fallbackTabs = [
 
 const tabs = computed(() => {
   if (!props.data?.tabCardContent || props.data.tabCardContent.length === 0) {
-    return fallbackTabs
+    return fallbackTabs.map(tab => ({
+      ...tab,
+      features: tab.features.map(f => ({ ...f, icon: wrapStaticImage(f.icon, fallbackIconDims) })),
+      image: wrapStaticImage(tab.image, fallbackImageDims),
+    }))
   }
-  
+
   return props.data.tabCardContent.map(tab => ({
     label: tab.navTitle,
     title: tab.title,
     features: tab.feature?.map(feature => ({
       text: feature.featureTitle,
-      icon: getImageUrl(feature.icon)
+      icon: getStrapiImage(feature.icon, { width: fallbackIconDims.width, height: fallbackIconDims.height }),
     })) || [],
-    image: getImageUrl(tab.image)
+    image: getStrapiImage(tab.image, { width: fallbackImageDims.width, height: fallbackImageDims.height }),
   }))
 })
 

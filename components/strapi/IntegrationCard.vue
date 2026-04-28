@@ -7,6 +7,9 @@
         :src="tool.icon"
         :alt="tool.name"
         class="tool-icon"
+        width="48"
+        height="48"
+        loading="lazy"
       />
     </div>
     <div class="action">{{ action }}</div>

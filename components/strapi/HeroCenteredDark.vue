@@ -42,7 +42,7 @@
             :key="item"
             class="d-flex align-items-center justify-content-center mx-4"
           >
-            <nuxt-img src="/icons/check-icon.svg" alt="tick" />
+            <nuxt-img src="/icons/check-icon.svg" alt="tick" width="20" height="20" />
             <span class="click-triggers ms-2">{{ item.text }}</span>
           </div>
         </div>

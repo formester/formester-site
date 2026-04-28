@@ -10,6 +10,9 @@
         <img
           :src="getIconSrc(cell.cellIcon)"
           :alt="getIconAlt(cell)"
+          width="24"
+          height="24"
+          loading="lazy"
           style="max-width:24px; max-height:24px; object-fit:contain; display:block;"
         />
       </template>

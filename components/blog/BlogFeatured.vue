@@ -8,6 +8,8 @@
       class="col-lg-6 rounded img-fluid featured__blog-img"
       :alt="article.coverImgAlt"
       :title="article.coverImgAlt"
+      :width="article.coverImgWidth || 1200"
+      :height="article.coverImgHeight || 630"
     />
     <div
       class="col-lg-6 d-flex flex-column align-items-start mt-3 mt-lg-0 ps-0 ps-lg-4"
