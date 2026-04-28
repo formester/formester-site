@@ -25,7 +25,7 @@
             <h3 class="tab-title">{{ tab.title }}</h3>
             <ul class="tab-features">
               <li v-for="(feature, i) in tab.features" :key="i">
-                <span class="feature-icon">
+                <span class="feature-icon" v-if="feature.icon?.src">
                   <img
                     :src="feature.icon.src"
                     :alt="feature.text + ' icon'"
@@ -39,7 +39,7 @@
               </li>
             </ul>
           </div>
-          <div class="tab-right">
+          <div class="tab-right" v-if="tab.image?.src">
             <img
               :src="tab.image.src"
               :alt="tab.label + ' screenshot'"

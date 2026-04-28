@@ -4,6 +4,7 @@
     class="row px-3"
   >
     <img
+      v-if="article.coverImg"
       :src="article.coverImg"
       class="col-lg-6 rounded img-fluid featured__blog-img"
       :alt="article.coverImgAlt"

@@ -1,6 +1,7 @@
 <template>
   <NuxtLink :to="{ path: `/blog/${article.slug}/` }">
     <img
+      v-if="article.coverImg"
       :src="article.coverImg"
       class="rounded img-fluid"
       :alt="article.coverImgAlt"
