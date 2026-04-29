@@ -36,15 +36,13 @@ function processItem(item) {
     mainImage: meta?.mainImage?.imageUrl || meta?.mainImage?.image?.url,
     mainImageAlt: meta?.mainImage?.imageAlt,
     keywords: meta?.keywords?.map((k) => k?.text),
+    updatedAt,
   }
   const siteMetaData = getSiteMeta(metaData)
   head = {
     title: meta?.title,
     link: meta?.link,
-    meta: [
-      ...siteMetaData,
-      ...(updatedAt ? [{ property: 'article:modified_time', content: updatedAt }] : []),
-    ],
+    meta: [...siteMetaData],
   }
   jsonld = normalizeJsonLd(meta?.jsonld)
 
