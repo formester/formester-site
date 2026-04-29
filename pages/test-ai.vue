@@ -13,6 +13,7 @@
         { text: 'Customer satisfaction survey with NPS' },
         { text: 'Event registration with dietary preferences' }
       ]"
+      style="margin-top: 30px;"
     />
 
     <div class="test-controls">
