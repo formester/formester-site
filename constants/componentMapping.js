@@ -27,5 +27,6 @@ export default {
   'macro-components.hero-tab-showcase': () => import('@/components/home/HeroTabShowcase/HeroTabShowcase.vue'),
   'macro-components.usecases': () => import('@/components/home/Usecases/Usecase.vue'),
   'macro-components.integrations-grid': () => import('@/components/integrations/IntegrationsGrid.vue'),
+  'macro-components.multi-column-cards': () => import('@/components/features/MultiColumnCards.vue'),
   'macro-components.ai-hero': () => import('@/components/features/AiHero.vue'),
 }
