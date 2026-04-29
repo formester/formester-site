@@ -348,6 +348,14 @@ const props = defineProps({
   form_config: Object
 })
 
+// Map CMS-friendly labels ("Score Quiz") to API-expected values ("score_quiz")
+const CMS_TYPE_MAP = {
+  'Form': 'form',
+  'Score Quiz': 'score_quiz',
+  'Outcome Quiz': 'outcome_quiz',
+}
+const apiType = computed(() => CMS_TYPE_MAP[props.type] || props.type || 'form')
+
 const config = useRuntimeConfig()
 const prompt = ref('')
 const isGenerating = ref(false)
@@ -368,7 +376,7 @@ const handleGenerate = async () => {
   try {
     const { data } = await axios.post(`${config.public.appUrl}/api/v1/public_ai_previews`, {
       prompt: prompt.value,
-      type: props.type
+      type: apiType.value
     })
 
     generatedTitle.value = data.form_name
@@ -414,7 +422,7 @@ const scaleRange = (field) => {
 }
 
 const claimUrl = computed(() =>
-  `${config.public.appUrl}/users/sign_up?preview_token=${previewToken.value}&prompt=${encodeURIComponent(prompt.value)}`
+  `${config.public.appUrl}/ai_preview/claim?preview_token=${previewToken.value}`
 )
 
 const previewBodyStyle = computed(() => {
@@ -462,8 +470,8 @@ const submitStyle = computed(() => {
   align-items: center;
   gap: 8px;
   padding: 6px 16px;
-  background: #f4ebff;
-  color: #7f56d9;
+  background: var(--clr-primary-light);
+  color: var(--clr-primary);
   border-radius: 100px;
   font-size: 14px;
   font-weight: 600;
@@ -475,30 +483,30 @@ const submitStyle = computed(() => {
 .ai-hero__badge .dot {
   width: 8px;
   height: 8px;
-  background: #7f56d9;
+  background: var(--clr-primary);
   border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(127, 86, 217, 0.2);
+  box-shadow: 0 0 0 4px rgba(100, 52, 208, 0.2);
 }
 
 .ai-hero__title {
   font-size: 48px;
   line-height: 1.2;
   margin-bottom: 20px;
-  color: #101828;
+  color: var(--clr-text-primary);
 }
 
-.ai-hero__title .highlight { color: #7f56d9; }
+.ai-hero__title .highlight { color: var(--clr-primary); }
 
 .ai-hero__description {
   font-size: 18px;
-  color: #475467;
+  color: var(--clr-text-secondary);
   line-height: 1.6;
   margin-bottom: 32px;
 }
 
 .ai-hero__prompt-box {
   background: #ffffff;
-  border: 1px solid #eaecf0;
+  border: 1px solid var(--clr-secondary-gray-stroke);
   border-radius: 16px;
   padding: 24px;
   box-shadow: 0 12px 16px -4px rgba(16, 24, 40, 0.08), 0 4px 6px -2px rgba(16, 24, 40, 0.03);
@@ -507,7 +515,7 @@ const submitStyle = computed(() => {
 
 .ai-hero__input {
   width: 100%;
-  border: 1px solid #d0d5dd;
+  border: 1px solid var(--clr-secondary-gray-stroke);
   border-radius: 8px;
   padding: 12px 16px;
   font-size: 16px;
@@ -515,13 +523,13 @@ const submitStyle = computed(() => {
   transition: all 0.2s;
   margin-bottom: 16px;
   font-family: inherit;
-  color: #101828;
+  color: var(--clr-text-primary);
 }
 
 .ai-hero__input:focus {
   outline: none;
-  border-color: #7f56d9;
-  box-shadow: 0 0 0 4px rgba(127, 86, 217, 0.1);
+  border-color: var(--clr-primary);
+  box-shadow: 0 0 0 4px rgba(100, 52, 208, 0.1);
 }
 
 .ai-hero__suggestions {
@@ -533,9 +541,9 @@ const submitStyle = computed(() => {
 
 .ai-hero__chip {
   padding: 6px 12px;
-  background: #f9f5ff;
-  border: 1px solid #d6bbfb;
-  color: #6941c0;
+  background: var(--clr-primary-light);
+  border: 1px solid var(--clr-primary-light-hover);
+  color: var(--clr-primary);
   border-radius: 100px;
   font-size: 13px;
   font-weight: 500;
@@ -544,14 +552,14 @@ const submitStyle = computed(() => {
 }
 
 .ai-hero__chip:hover {
-  background: #f4ebff;
+  background: var(--clr-primary-light-hover);
   transform: translateY(-1px);
 }
 
 .ai-hero__footer-text {
   margin-top: 12px;
   font-size: 13px;
-  color: #667085;
+  color: var(--clr-text-secondary);
   text-align: center;
 }
 
@@ -570,18 +578,18 @@ const submitStyle = computed(() => {
 }
 
 .btn-primary {
-  background: #7f56d9;
+  background: var(--clr-primary);
   color: white;
 }
 
 .btn-primary:hover:not(:disabled) {
-  background: #6941c0;
+  background: var(--clr-primary-hover);
   transform: translateY(-1px);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary:disabled {
-  background: #eaecf0;
+  background: var(--clr-secondary-gray-stroke);
   color: #98a2b3;
   cursor: not-allowed;
 }
@@ -700,12 +708,12 @@ const submitStyle = computed(() => {
 .preview-placeholder__icon {
   width: 56px;
   height: 56px;
-  background: #f4ebff;
+  background: var(--clr-primary-light);
   border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #7f56d9;
+  color: var(--clr-primary);
 }
 
 .preview-placeholder p {
@@ -871,8 +879,8 @@ const submitStyle = computed(() => {
 .pf-rank-num {
   width: 18px;
   height: 18px;
-  background: #f4ebff;
-  color: #6941c0;
+  background: var(--clr-primary-light);
+  color: var(--clr-primary);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -975,9 +983,9 @@ const submitStyle = computed(() => {
 
 .pf-repeat-add {
   font-size: 11px;
-  color: #7f56d9;
+  color: var(--clr-primary);
   background: none;
-  border: 1px dashed #d6bbfb;
+  border: 1px dashed var(--clr-primary-light-hover);
   border-radius: 4px;
   padding: 4px 10px;
   cursor: default;
@@ -1040,14 +1048,14 @@ const submitStyle = computed(() => {
   text-align: center;
   padding: 24px 16px;
   margin: 8px 0;
-  background: #f9f5ff;
+  background: var(--clr-primary-light);
   border-radius: 10px;
 }
 
 .pf-thankyou__icon {
   width: 36px;
   height: 36px;
-  background: #7f56d9;
+  background: var(--clr-primary);
   color: #fff;
   border-radius: 50%;
   display: flex;
@@ -1073,7 +1081,7 @@ const submitStyle = computed(() => {
 /* Submit button */
 .pf-submit {
   width: 100%;
-  background: #7f56d9;
+  background: var(--clr-primary);
   color: #ffffff;
   border: none;
   border-radius: 6px;
@@ -1104,7 +1112,7 @@ const submitStyle = computed(() => {
 .claim-bar__btn {
   display: block;
   text-align: center;
-  background: #7f56d9;
+  background: var(--clr-primary);
   color: #ffffff;
   font-weight: 600;
   font-size: 13px;
@@ -1113,7 +1121,7 @@ const submitStyle = computed(() => {
   transition: background 0.2s;
 }
 
-.claim-bar__btn:hover { background: #6941c0; }
+.claim-bar__btn:hover { background: var(--clr-primary-hover); }
 
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(8px); }
