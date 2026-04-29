@@ -21,12 +21,12 @@
       <Transition name="canvas-fade" mode="out-in">
 
         <!-- State: Input -->
-        <div v-if="!isGenerating && !previewFields.length" key="input" class="canvas-input">
+        <div v-if="!isGenerating && !surveyUrl" key="input" class="canvas-input">
           <textarea
             v-model="prompt"
             class="canvas-textarea"
             placeholder="Describe the form you need…"
-            rows="3"
+            rows="4"
           ></textarea>
 
           <div v-if="suggestions && suggestions.length" class="canvas-chips">
@@ -64,7 +64,7 @@
         </div>
 
         <!-- State: Result -->
-        <div v-else key="result" class="canvas-result" :style="resultBgStyle">
+        <div v-else key="result" class="canvas-result">
           <!-- Toolbar -->
           <div class="result-toolbar">
             <button class="toolbar-back" @click="reset">
@@ -72,140 +72,16 @@
               Try another
             </button>
             <span class="toolbar-title">{{ generatedTitle }}</span>
-            <a :href="claimUrl" class="toolbar-cta">Use this form free →</a>
+            <a :href="claimUrl" target="_blank" class="toolbar-cta">Use this form free →</a>
           </div>
 
-          <!-- Scrollable form preview -->
-          <div class="result-scroll">
-            <template v-for="(field, idx) in previewFields" :key="idx">
-
-              <div v-if="field.type === 'page-break'" class="pf-page-break">
-                <div class="pf-page-break__line"></div>
-                <span class="pf-page-break__label">Next Page</span>
-                <div class="pf-page-break__line"></div>
-              </div>
-
-              <div v-else-if="field.type === 'header'" class="pf-header">
-                <div class="pf-header__title">{{ field.label }}</div>
-                <div v-if="field.sublabel" class="pf-header__sub">{{ field.sublabel }}</div>
-              </div>
-
-              <div v-else-if="field.type === 'paragraph'" class="pf-paragraph" v-html="field.value"></div>
-
-              <div v-else-if="field.type === 'thank-you'" class="pf-thankyou">
-                <div class="pf-thankyou__icon">✓</div>
-                <div class="pf-thankyou__title">{{ field.label || 'Thank You!' }}</div>
-                <div v-if="field.description" class="pf-thankyou__desc">{{ field.description }}</div>
-              </div>
-
-              <div v-else class="pf-field">
-                <label class="pf-label">
-                  {{ field.label }}
-                  <span v-if="field.required" class="pf-required">*</span>
-                </label>
-                <div v-if="field.description" class="pf-desc">{{ field.description }}</div>
-
-                <input
-                  v-if="['shorttext','name','email','phone','url','number','date','time','location'].includes(field.type)"
-                  class="pf-input"
-                  :type="field.type === 'number' ? 'number' : field.type === 'date' ? 'date' : field.type === 'time' ? 'time' : 'text'"
-                  :placeholder="field.placeholder || ''"
-                  disabled
-                />
-                <textarea v-else-if="field.type === 'longtext'" class="pf-input pf-textarea" :placeholder="field.placeholder || ''" rows="3" disabled></textarea>
-
-                <div v-else-if="field.type === 'radio'" class="pf-options">
-                  <div v-for="(opt, oIdx) in (field.options || [])" :key="oIdx" class="pf-option">
-                    <span class="pf-radio"></span><span class="pf-option-label">{{ opt.label }}</span>
-                  </div>
-                </div>
-
-                <div v-else-if="field.type === 'multiple-checkbox' || field.type === 'picture-checkbox'" class="pf-options">
-                  <div v-for="(opt, oIdx) in (field.options || [])" :key="oIdx" class="pf-option">
-                    <span class="pf-checkbox"></span><span class="pf-option-label">{{ opt.label }}</span>
-                  </div>
-                </div>
-
-                <div v-else-if="field.type === 'dropdown'" class="pf-select-wrap">
-                  <select class="pf-input pf-select" disabled>
-                    <option value="" disabled selected>Select an option…</option>
-                    <option v-for="(opt, oIdx) in (field.options || [])" :key="oIdx">{{ opt.label }}</option>
-                  </select>
-                  <span class="pf-select-arrow">▾</span>
-                </div>
-
-                <div v-else-if="field.type === 'scale-rating'" class="pf-scale">
-                  <div class="pf-scale-labels">
-                    <span>{{ field.startlabel }}</span><span>{{ field.endlabel }}</span>
-                  </div>
-                  <div class="pf-scale-buttons">
-                    <div v-for="n in scaleRange(field)" :key="n" class="pf-scale-btn">{{ n }}</div>
-                  </div>
-                </div>
-
-                <div v-else-if="field.type === 'star-rating'" class="pf-stars">
-                  <span v-for="n in (field.count || 5)" :key="n" class="pf-star">★</span>
-                </div>
-
-                <div v-else-if="field.type === 'ranking'" class="pf-ranking">
-                  <div v-for="(opt, oIdx) in (field.options || [])" :key="oIdx" class="pf-rank-item">
-                    <span class="pf-rank-num">{{ oIdx + 1 }}</span>
-                    <span class="pf-rank-label">{{ opt.label }}</span>
-                    <span class="pf-rank-drag">⠿</span>
-                  </div>
-                </div>
-
-                <div v-else-if="field.type === 'matrix'" class="pf-matrix">
-                  <table class="pf-matrix-table">
-                    <thead>
-                      <tr>
-                        <th class="pf-matrix-corner"></th>
-                        <th v-for="(col, cIdx) in (field.columns || [])" :key="cIdx" class="pf-matrix-th">{{ col.label }}</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr v-for="(row, rIdx) in (field.rows || [])" :key="rIdx">
-                        <td class="pf-matrix-row-label">{{ row.label }}</td>
-                        <td v-for="(_, cIdx) in (field.columns || [])" :key="cIdx" class="pf-matrix-cell"><span class="pf-radio"></span></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <div v-else-if="field.type === 'file'" class="pf-file">
-                  <span class="pf-file-icon">↑</span>
-                  <span class="pf-file-text">Click to upload or drag and drop</span>
-                </div>
-
-                <div v-else-if="field.type === 'signature'" class="pf-signature"><span>Sign here</span></div>
-
-                <div v-else-if="field.type === 'address'" class="pf-address">
-                  <input class="pf-input" placeholder="Street address" disabled />
-                  <div class="pf-address-row">
-                    <input class="pf-input" placeholder="City" disabled />
-                    <input class="pf-input" placeholder="Postal code" disabled />
-                  </div>
-                </div>
-
-                <div v-else-if="field.type === 'terms'" class="pf-terms">
-                  <span class="pf-checkbox"></span><span class="pf-terms-text">{{ field.label }}</span>
-                </div>
-
-                <div v-else-if="field.type === 'repeat-field'" class="pf-repeat">
-                  <div v-for="(comp, cIdx) in (field.components || [])" :key="cIdx">
-                    <label class="pf-label pf-label--sm">{{ comp.label }}</label>
-                    <input class="pf-input" :placeholder="comp.placeholder || ''" disabled />
-                  </div>
-                  <button class="pf-repeat-add" disabled>+ Add another</button>
-                </div>
-
-                <input v-else class="pf-input" :placeholder="field.placeholder || ''" disabled />
-              </div>
-
-            </template>
-
-            <button class="pf-submit" :style="submitStyle" disabled>Submit</button>
-          </div>
+          <!-- Live form preview via iframe -->
+          <iframe
+            :src="surveyUrl"
+            class="result-iframe"
+            frameborder="0"
+            title="Form preview"
+          ></iframe>
         </div>
 
       </Transition>
@@ -221,8 +97,7 @@ const props = defineProps({
   title: { type: Array, default: () => [] },
   description: String,
   type: { type: String, default: 'form' },
-  suggestions: { type: Array, default: () => [] },
-  form_config: Object
+  suggestions: { type: Array, default: () => [] }
 })
 
 const CMS_TYPE_MAP = {
@@ -235,17 +110,15 @@ const apiType = computed(() => CMS_TYPE_MAP[props.type] || props.type || 'form')
 const config = useRuntimeConfig()
 const prompt = ref('')
 const isGenerating = ref(false)
-const previewFields = ref([])
+const surveyUrl = ref('')
 const generatedTitle = ref('')
 const previewToken = ref('')
-const formTheme = ref({})
 
 const setPrompt = (text) => { prompt.value = text }
 
 const reset = () => {
-  previewFields.value = []
+  surveyUrl.value = ''
   generatedTitle.value = ''
-  formTheme.value = {}
   previewToken.value = ''
 }
 
@@ -261,30 +134,7 @@ const handleGenerate = async () => {
     })
 
     generatedTitle.value = data.form_name
-    formTheme.value = data.styling || {}
-    previewFields.value = Object.values(data.form_builder || {})
-      .filter(f => f.type !== 'submit')
-      .map(f => ({
-        type: f.type,
-        label: f.label,
-        sublabel: f.sublabel || '',
-        description: f.description || '',
-        placeholder: f.placeholder || '',
-        required: f.required || false,
-        options: f.options || [],
-        rows: f.rows || [],
-        columns: f.columns || [],
-        inputType: f.inputType || 'radio',
-        start: f.start ?? 1,
-        end: f.end ?? 10,
-        startlabel: f.startlabel || '',
-        endlabel: f.endlabel || '',
-        count: f.count || 5,
-        value: f.value || '',
-        components: f.components || [],
-        multipleUpload: f.multipleUpload || false,
-        quizScore: f.quizScore || {},
-      }))
+    surveyUrl.value = data.survey_url
     previewToken.value = data.preview_token
   } catch (err) {
     console.error('Generation failed:', err)
@@ -297,24 +147,6 @@ const handleGenerate = async () => {
 const claimUrl = computed(() =>
   `${config.public.appUrl}/ai_preview/claim?preview_token=${previewToken.value}`
 )
-
-const scaleRange = (field) => {
-  const start = field.start ?? 1
-  const end = field.end ?? 10
-  const arr = []
-  for (let i = start; i <= end; i++) arr.push(i)
-  return arr
-}
-
-const resultBgStyle = computed(() => {
-  const t = formTheme.value
-  return t?.backgroundColor ? { background: t.backgroundColor } : {}
-})
-
-const submitStyle = computed(() => {
-  const t = formTheme.value
-  return t?.buttonColor ? { background: t.buttonColor, color: t.buttonTextColor || '#fff' } : {}
-})
 </script>
 
 <style scoped>
@@ -380,7 +212,7 @@ const submitStyle = computed(() => {
 /* ─── Canvas ────────────────────────────────────────────── */
 .ai-canvas {
   width: 100%;
-  max-width: 680px;
+  max-width: 720px;
 }
 
 /* ─── Input state ───────────────────────────────────────── */
@@ -389,12 +221,12 @@ const submitStyle = computed(() => {
   border: 1px solid var(--clr-secondary-gray-stroke);
   border-radius: 20px;
   padding: 24px;
+  min-height: 420px;
   box-shadow: 0 8px 32px rgba(100, 52, 208, 0.08), 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .canvas-textarea {
   width: 100%;
-  min-height: 120px;
   border: 1px solid var(--clr-secondary-gray-stroke);
   border-radius: 10px;
   padding: 14px 16px;
@@ -476,6 +308,7 @@ const submitStyle = computed(() => {
   border: 1px solid var(--clr-secondary-gray-stroke);
   border-radius: 20px;
   padding: 28px 24px;
+  min-height: 420px;
   box-shadow: 0 8px 32px rgba(100, 52, 208, 0.08);
 }
 
@@ -523,11 +356,11 @@ const submitStyle = computed(() => {
 
 /* ─── Result state ──────────────────────────────────────── */
 .canvas-result {
-  background: #f9fafb;
   border: 1px solid var(--clr-secondary-gray-stroke);
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(100, 52, 208, 0.08), 0 2px 8px rgba(0,0,0,0.04);
+  background: #ffffff;
 }
 
 .result-toolbar {
@@ -588,18 +421,14 @@ const submitStyle = computed(() => {
   flex-shrink: 0;
 }
 
-.toolbar-cta:hover { background: var(--clr-primary-hover); }
+.toolbar-cta:hover { background: var(--clr-primary-hover); color: #ffffff; }
 
-.result-scroll {
-  max-height: 440px;
-  overflow-y: auto;
-  padding: 20px 20px 28px;
-  scrollbar-width: thin;
-  scrollbar-color: var(--clr-secondary-gray-stroke) transparent;
+.result-iframe {
+  width: 100%;
+  height: 520px;
+  display: block;
+  border: none;
 }
-
-.result-scroll::-webkit-scrollbar { width: 4px; }
-.result-scroll::-webkit-scrollbar-thumb { background: var(--clr-secondary-gray-stroke); border-radius: 2px; }
 
 /* ─── Transition ────────────────────────────────────────── */
 .canvas-fade-enter-active,
@@ -615,170 +444,5 @@ const submitStyle = computed(() => {
 .canvas-fade-leave-to {
   opacity: 0;
   transform: translateY(-6px);
-}
-
-/* ─── Form field styles ─────────────────────────────────── */
-.pf-field { margin-bottom: 16px; }
-
-.pf-label {
-  display: block;
-  font-size: 13px;
-  font-weight: 600;
-  color: #344054;
-  margin-bottom: 5px;
-}
-
-.pf-label--sm { font-size: 12px; }
-.pf-required { color: #f04438; margin-left: 2px; }
-
-.pf-desc {
-  font-size: 11px;
-  color: var(--clr-text-secondary);
-  margin-bottom: 5px;
-}
-
-.pf-input {
-  width: 100%;
-  background: #ffffff;
-  border: 1px solid var(--clr-secondary-gray-stroke);
-  border-radius: 6px;
-  padding: 8px 10px;
-  font-size: 12px;
-  color: var(--clr-text-secondary);
-  font-family: inherit;
-  box-sizing: border-box;
-}
-
-.pf-textarea { resize: none; min-height: 60px; }
-
-.pf-select-wrap { position: relative; }
-.pf-select { appearance: none; padding-right: 28px; cursor: default; }
-.pf-select-arrow {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--clr-text-secondary);
-  font-size: 11px;
-  pointer-events: none;
-}
-
-.pf-options { display: flex; flex-direction: column; gap: 6px; }
-.pf-option { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--clr-text-secondary); }
-
-.pf-radio {
-  width: 14px; height: 14px;
-  border: 1.5px solid var(--clr-secondary-gray-stroke);
-  border-radius: 50%; flex-shrink: 0; background: #fff;
-}
-
-.pf-checkbox {
-  width: 14px; height: 14px;
-  border: 1.5px solid var(--clr-secondary-gray-stroke);
-  border-radius: 3px; flex-shrink: 0; background: #fff;
-}
-
-.pf-option-label { line-height: 1.3; }
-
-.pf-scale-labels { display: flex; justify-content: space-between; font-size: 10px; color: #98a2b3; margin-bottom: 4px; }
-.pf-scale-buttons { display: flex; gap: 3px; flex-wrap: wrap; }
-.pf-scale-btn {
-  min-width: 26px; height: 26px;
-  border: 1px solid var(--clr-secondary-gray-stroke);
-  border-radius: 4px; display: flex; align-items: center; justify-content: center;
-  font-size: 11px; color: var(--clr-text-secondary); background: #fff; flex-shrink: 0;
-}
-
-.pf-stars { display: flex; gap: 4px; }
-.pf-star { font-size: 20px; color: var(--clr-secondary-gray-stroke); line-height: 1; }
-
-.pf-ranking { display: flex; flex-direction: column; gap: 5px; }
-.pf-rank-item {
-  display: flex; align-items: center; gap: 8px;
-  background: #fff; border: 1px solid var(--clr-secondary-gray-stroke);
-  border-radius: 6px; padding: 6px 10px; font-size: 12px; color: #344054;
-}
-.pf-rank-num {
-  width: 18px; height: 18px;
-  background: var(--clr-primary-light); color: var(--clr-primary);
-  border-radius: 50%; display: flex; align-items: center; justify-content: center;
-  font-size: 10px; font-weight: 700; flex-shrink: 0;
-}
-.pf-rank-label { flex: 1; }
-.pf-rank-drag { color: var(--clr-secondary-gray-stroke); font-size: 14px; margin-left: auto; }
-
-.pf-matrix { overflow-x: auto; }
-.pf-matrix-table { width: 100%; border-collapse: collapse; font-size: 11px; }
-.pf-matrix-th, .pf-matrix-row-label {
-  padding: 5px 8px; text-align: center;
-  color: var(--clr-text-secondary); font-weight: 600;
-  border-bottom: 1px solid #eaecf0;
-}
-.pf-matrix-row-label { text-align: left; font-weight: 500; }
-.pf-matrix-corner { border-bottom: 1px solid #eaecf0; }
-.pf-matrix-cell { text-align: center; padding: 6px; border-bottom: 1px solid #f2f4f7; }
-
-.pf-file {
-  border: 1.5px dashed var(--clr-secondary-gray-stroke);
-  border-radius: 6px; padding: 14px 10px;
-  display: flex; flex-direction: column; align-items: center; gap: 4px;
-  color: var(--clr-text-secondary); background: #f9fafb;
-}
-.pf-file-icon { font-size: 18px; }
-.pf-file-text { font-size: 11px; }
-
-.pf-signature {
-  border: 1.5px dashed var(--clr-secondary-gray-stroke);
-  border-radius: 6px; height: 56px;
-  display: flex; align-items: center; justify-content: center;
-  color: #98a2b3; font-size: 12px; font-style: italic; background: #f9fafb;
-}
-
-.pf-address { display: flex; flex-direction: column; gap: 6px; }
-.pf-address-row { display: flex; gap: 6px; }
-.pf-address-row .pf-input { flex: 1; }
-
-.pf-terms { display: flex; align-items: flex-start; gap: 8px; font-size: 12px; color: #344054; line-height: 1.4; }
-.pf-terms-text { flex: 1; }
-
-.pf-repeat {
-  background: #f9fafb; border: 1px solid #eaecf0;
-  border-radius: 8px; padding: 12px;
-  display: flex; flex-direction: column; gap: 10px;
-}
-.pf-repeat-add {
-  font-size: 11px; color: var(--clr-primary); background: none;
-  border: 1px dashed var(--clr-primary-light-hover);
-  border-radius: 4px; padding: 4px 10px;
-  cursor: default; font-family: inherit; margin-top: 4px;
-}
-
-.pf-page-break { display: flex; align-items: center; gap: 8px; margin: 16px 0; }
-.pf-page-break__line { flex: 1; height: 1px; background: var(--clr-secondary-gray-stroke); }
-.pf-page-break__label { font-size: 10px; font-weight: 600; color: #98a2b3; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
-
-.pf-header { margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #f2f4f7; }
-.pf-header__title { font-size: 15px; font-weight: 700; color: var(--clr-text-primary); }
-.pf-header__sub { font-size: 12px; color: var(--clr-text-secondary); margin-top: 3px; }
-
-.pf-paragraph { font-size: 12px; color: var(--clr-text-secondary); line-height: 1.6; margin-bottom: 14px; }
-
-.pf-thankyou {
-  text-align: center; padding: 20px 16px; margin: 8px 0;
-  background: var(--clr-primary-light); border-radius: 10px;
-}
-.pf-thankyou__icon {
-  width: 32px; height: 32px; background: var(--clr-primary); color: #fff;
-  border-radius: 50%; display: flex; align-items: center; justify-content: center;
-  font-size: 16px; font-weight: 700; margin: 0 auto 8px;
-}
-.pf-thankyou__title { font-size: 14px; font-weight: 700; color: var(--clr-text-primary); }
-.pf-thankyou__desc { font-size: 12px; color: var(--clr-text-secondary); margin-top: 4px; }
-
-.pf-submit {
-  width: 100%; background: var(--clr-primary); color: #fff;
-  border: none; border-radius: 6px; padding: 10px 20px;
-  font-size: 13px; font-weight: 600; cursor: default;
-  font-family: inherit; margin-top: 8px;
 }
 </style>
