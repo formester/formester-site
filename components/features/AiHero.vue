@@ -69,52 +69,263 @@
 
       <!-- Preview Area -->
       <div class="ai-hero__preview">
-        <div class="preview-container glass">
-          <div class="preview-header">
-            <div class="dots">
-              <span></span><span></span><span></span>
+        <div class="preview-container">
+          <!-- Browser chrome -->
+          <div class="preview-chrome">
+            <div class="chrome-dots">
+              <span class="dot-red"></span>
+              <span class="dot-yellow"></span>
+              <span class="dot-green"></span>
             </div>
-            <div class="address-bar">Preview</div>
+            <div class="chrome-bar">Form Preview</div>
           </div>
 
-          <div class="preview-body">
+          <!-- Preview body -->
+          <div class="preview-body" :style="previewBodyStyle">
+            <!-- Loading shimmer -->
             <div v-if="isGenerating" class="preview-loading">
-              <div class="shimmer-line title"></div>
-              <div class="shimmer-line"></div>
-              <div class="shimmer-line"></div>
-              <div class="shimmer-line short"></div>
+              <div class="shimmer shimmer-title"></div>
+              <div class="shimmer shimmer-label"></div>
+              <div class="shimmer shimmer-input"></div>
+              <div class="shimmer shimmer-label short"></div>
+              <div class="shimmer shimmer-input"></div>
+              <div class="shimmer shimmer-label"></div>
+              <div class="shimmer shimmer-options"></div>
             </div>
-            <div v-else-if="generatedFields.length" class="preview-form">
-              <h3>{{ generatedTitle || 'Your Form' }}</h3>
-              <div v-for="(field, idx) in generatedFields" :key="idx" class="preview-field">
-                <label>{{ field.label }}</label>
-                <input v-if="field.type === 'text' || field.type === 'email'" :type="field.type" :placeholder="field.placeholder" disabled />
-                <textarea v-else-if="field.type === 'textarea'" disabled></textarea>
-                <div v-else-if="field.type === 'radio' || field.type === 'checkbox'" class="preview-options">
-                  <div v-for="(opt, oIdx) in field.options" :key="oIdx" class="preview-option">
-                    <span class="circle"></span> {{ opt.label }}
-                  </div>
-                </div>
-              </div>
-              <button class="preview-submit" disabled>Submit</button>
 
-              <!-- Claim CTA -->
-              <div class="claim-overlay">
-                <a :href="claimUrl" class="btn btn-secondary btn-lg shadow-lg">
-                  Add to My Account
-                </a>
-              </div>
+            <!-- Generated form -->
+            <div v-else-if="previewFields.length" class="preview-form">
+              <div class="pf-title">{{ generatedTitle || 'Your Form' }}</div>
+
+              <template v-for="(field, idx) in previewFields" :key="idx">
+
+                <!-- Page break: visual page separator -->
+                <div v-if="field.type === 'page-break'" class="pf-page-break">
+                  <div class="pf-page-break__line"></div>
+                  <span class="pf-page-break__label">Next Page</span>
+                  <div class="pf-page-break__line"></div>
+                </div>
+
+                <!-- Header: section heading, no input -->
+                <div v-else-if="field.type === 'header'" class="pf-header">
+                  <div class="pf-header__title">{{ field.label }}</div>
+                  <div v-if="field.sublabel" class="pf-header__sub">{{ field.sublabel }}</div>
+                </div>
+
+                <!-- Paragraph: raw HTML text block -->
+                <div
+                  v-else-if="field.type === 'paragraph'"
+                  class="pf-paragraph"
+                  v-html="field.value"
+                ></div>
+
+                <!-- Thank you: end screen indicator -->
+                <div v-else-if="field.type === 'thank-you'" class="pf-thankyou">
+                  <div class="pf-thankyou__icon">✓</div>
+                  <div class="pf-thankyou__title">{{ field.label || 'Thank You!' }}</div>
+                  <div v-if="field.description" class="pf-thankyou__desc">{{ field.description }}</div>
+                </div>
+
+                <!-- Standard input fields -->
+                <div v-else class="pf-field">
+                  <label class="pf-label">
+                    {{ field.label }}
+                    <span v-if="field.required" class="pf-required">*</span>
+                  </label>
+                  <div v-if="field.description" class="pf-desc">{{ field.description }}</div>
+
+                  <!-- Short text / name / email / phone / url / number / date / time / location -->
+                  <input
+                    v-if="['shorttext', 'name', 'email', 'phone', 'url', 'number', 'date', 'time', 'location'].includes(field.type)"
+                    class="pf-input"
+                    :type="field.type === 'number' ? 'number' : field.type === 'date' ? 'date' : field.type === 'time' ? 'time' : 'text'"
+                    :placeholder="field.placeholder || ''"
+                    disabled
+                  />
+
+                  <!-- Long text -->
+                  <textarea
+                    v-else-if="field.type === 'longtext'"
+                    class="pf-input pf-textarea"
+                    :placeholder="field.placeholder || ''"
+                    rows="3"
+                    disabled
+                  ></textarea>
+
+                  <!-- Radio (single choice) -->
+                  <div v-else-if="field.type === 'radio'" class="pf-options">
+                    <div
+                      v-for="(opt, oIdx) in (field.options || [])"
+                      :key="oIdx"
+                      class="pf-option"
+                    >
+                      <span class="pf-radio"></span>
+                      <span class="pf-option-label">{{ opt.label }}</span>
+                    </div>
+                  </div>
+
+                  <!-- Multiple checkbox -->
+                  <div v-else-if="field.type === 'multiple-checkbox' || field.type === 'picture-checkbox'" class="pf-options">
+                    <div
+                      v-for="(opt, oIdx) in (field.options || [])"
+                      :key="oIdx"
+                      class="pf-option"
+                    >
+                      <span class="pf-checkbox"></span>
+                      <span class="pf-option-label">{{ opt.label }}</span>
+                    </div>
+                  </div>
+
+                  <!-- Dropdown -->
+                  <div v-else-if="field.type === 'dropdown'" class="pf-select-wrap">
+                    <select class="pf-input pf-select" disabled>
+                      <option value="" disabled selected>Select an option...</option>
+                      <option
+                        v-for="(opt, oIdx) in (field.options || [])"
+                        :key="oIdx"
+                      >{{ opt.label }}</option>
+                    </select>
+                    <span class="pf-select-arrow">▾</span>
+                  </div>
+
+                  <!-- Scale rating (NPS-style numeric scale) -->
+                  <div v-else-if="field.type === 'scale-rating'" class="pf-scale">
+                    <div class="pf-scale-labels">
+                      <span>{{ field.startlabel || '' }}</span>
+                      <span>{{ field.endlabel || '' }}</span>
+                    </div>
+                    <div class="pf-scale-buttons">
+                      <div
+                        v-for="n in scaleRange(field)"
+                        :key="n"
+                        class="pf-scale-btn"
+                      >{{ n }}</div>
+                    </div>
+                  </div>
+
+                  <!-- Star rating -->
+                  <div v-else-if="field.type === 'star-rating'" class="pf-stars">
+                    <span
+                      v-for="n in (field.count || 5)"
+                      :key="n"
+                      class="pf-star"
+                    >★</span>
+                  </div>
+
+                  <!-- Ranking -->
+                  <div v-else-if="field.type === 'ranking'" class="pf-ranking">
+                    <div
+                      v-for="(opt, oIdx) in (field.options || [])"
+                      :key="oIdx"
+                      class="pf-rank-item"
+                    >
+                      <span class="pf-rank-num">{{ oIdx + 1 }}</span>
+                      <span class="pf-rank-label">{{ opt.label }}</span>
+                      <span class="pf-rank-drag">⠿</span>
+                    </div>
+                  </div>
+
+                  <!-- Matrix (grid) -->
+                  <div v-else-if="field.type === 'matrix'" class="pf-matrix">
+                    <table class="pf-matrix-table">
+                      <thead>
+                        <tr>
+                          <th class="pf-matrix-corner"></th>
+                          <th
+                            v-for="(col, cIdx) in (field.columns || [])"
+                            :key="cIdx"
+                            class="pf-matrix-th"
+                          >{{ col.label }}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr
+                          v-for="(row, rIdx) in (field.rows || [])"
+                          :key="rIdx"
+                        >
+                          <td class="pf-matrix-row-label">{{ row.label }}</td>
+                          <td
+                            v-for="(_, cIdx) in (field.columns || [])"
+                            :key="cIdx"
+                            class="pf-matrix-cell"
+                          >
+                            <span class="pf-radio"></span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <!-- File upload -->
+                  <div v-else-if="field.type === 'file'" class="pf-file">
+                    <span class="pf-file-icon">↑</span>
+                    <span class="pf-file-text">Click to upload or drag and drop</span>
+                  </div>
+
+                  <!-- Signature -->
+                  <div v-else-if="field.type === 'signature'" class="pf-signature">
+                    <span>Sign here</span>
+                  </div>
+
+                  <!-- Address -->
+                  <div v-else-if="field.type === 'address'" class="pf-address">
+                    <input class="pf-input pf-address-line" placeholder="Street address" disabled />
+                    <div class="pf-address-row">
+                      <input class="pf-input" placeholder="City" disabled />
+                      <input class="pf-input" placeholder="Postal code" disabled />
+                    </div>
+                  </div>
+
+                  <!-- Terms / consent -->
+                  <div v-else-if="field.type === 'terms'" class="pf-terms">
+                    <span class="pf-checkbox"></span>
+                    <span class="pf-terms-text">{{ field.label }}</span>
+                  </div>
+
+                  <!-- Repeat field: render sub-components -->
+                  <div v-else-if="field.type === 'repeat-field'" class="pf-repeat">
+                    <div
+                      v-for="(comp, cIdx) in (field.components || [])"
+                      :key="cIdx"
+                      class="pf-repeat-item"
+                    >
+                      <label class="pf-label pf-label--sm">{{ comp.label }}</label>
+                      <input class="pf-input" :placeholder="comp.placeholder || ''" disabled />
+                    </div>
+                    <button class="pf-repeat-add" disabled>+ Add another</button>
+                  </div>
+
+                  <!-- Fallback for any other type -->
+                  <input v-else class="pf-input" :placeholder="field.placeholder || ''" disabled />
+                </div>
+
+              </template>
+
+              <!-- Submit button -->
+              <button class="pf-submit" :style="submitStyle" disabled>Submit</button>
             </div>
+
+            <!-- Placeholder state -->
             <div v-else class="preview-placeholder">
-              <div class="placeholder-icon">
-                <i class="icon-ai"></i>
+              <div class="preview-placeholder__icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M9 12h6M9 16h6M17 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2z"/>
+                </svg>
               </div>
-              <p>Type a prompt and click generate to see a live preview of your form</p>
+              <p>Type a prompt and click Generate to see your form here</p>
+            </div>
+
+            <!-- Claim CTA — sticky bottom gradient bar -->
+            <div v-if="previewFields.length && !isGenerating" class="claim-bar">
+              <div class="claim-bar__gradient"></div>
+              <a :href="claimUrl" class="claim-bar__btn">
+                Use This Form Free →
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- Floating Elements -->
+        <!-- Floating decoration elements -->
         <div class="floating-icons">
           <div class="icon icon-1"><img src="/form-icon.svg" alt="Form" /></div>
           <div class="icon icon-2"><img src="/quiz-icon.svg" alt="Quiz" /></div>
@@ -130,90 +341,100 @@ import { ref, computed } from 'vue'
 import axios from 'axios'
 
 const props = defineProps({
-  title: {
-    type: Array,
-    default: () => []
-  },
+  title: { type: Array, default: () => [] },
   description: String,
-  type: {
-    type: String,
-    default: 'Form'
-  },
-  suggestions: {
-    type: Array,
-    default: () => []
-  },
+  type: { type: String, default: 'form' },
+  suggestions: { type: Array, default: () => [] },
   form_config: Object
 })
 
 const config = useRuntimeConfig()
 const prompt = ref('')
 const isGenerating = ref(false)
-const generatedFields = ref([])
+const previewFields = ref([])
 const generatedTitle = ref('')
 const previewToken = ref('')
+const formTheme = ref({})
 
-const setPrompt = (text) => {
-  prompt.value = text
-}
+const setPrompt = (text) => { prompt.value = text }
 
 const handleGenerate = async () => {
   if (!prompt.value) return
-  
   isGenerating.value = true
-  
+  previewFields.value = []
+  generatedTitle.value = ''
+  formTheme.value = {}
+
   try {
-    console.log(config.public.appUrl);
-    const { data } = await axios.post(`${config.public.appUrl}/api/v1/public_ai_previews`, { 
+    const { data } = await axios.post(`${config.public.appUrl}/api/v1/public_ai_previews`, {
       prompt: prompt.value,
-      type: props.type 
+      type: props.type
     })
-    
-    if (data.process_id) {
-      pollStatus(data.process_id)
-    }
+
+    generatedTitle.value = data.form_name
+    formTheme.value = data.styling || {}
+    previewFields.value = Object.values(data.form_builder || {})
+      .filter(f => f.type !== 'submit')
+      .map(f => ({
+        type: f.type,
+        label: f.label,
+        sublabel: f.sublabel || '',
+        description: f.description || '',
+        placeholder: f.placeholder || '',
+        required: f.required || false,
+        options: f.options || [],
+        rows: f.rows || [],
+        columns: f.columns || [],
+        inputType: f.inputType || 'radio',
+        start: f.start ?? 1,
+        end: f.end ?? 10,
+        startlabel: f.startlabel || '',
+        endlabel: f.endlabel || '',
+        count: f.count || 5,
+        value: f.value || '',
+        components: f.components || [],
+        multipleUpload: f.multipleUpload || false,
+      }))
+    previewToken.value = data.preview_token
   } catch (err) {
     console.error('Generation failed:', err)
-    alert('Unable to connect to AI service. Please try again.')
+    const msg = err.response?.data?.error || 'Unable to generate form. Please try again.'
+    alert(msg)
+  } finally {
     isGenerating.value = false
   }
 }
 
-const pollStatus = async (processId) => {
-  try {
-    const { data } = await axios.get(`${config.public.appUrl}/api/v1/public_ai_previews/${processId}`)
-    
-    if (data.status === 'success') {
-      console.log(data.form_name, data.form_builder);
-      generatedTitle.value = data.form_name
-      // Map form_builder to our preview fields
-      generatedFields.value = Object.values(data.form_builder || {}).map(field => ({
-        type: field.type,
-        label: field.label,
-        placeholder: field.placeholder,
-        options: field.options
-      }))
-      previewToken.value = processId
-      isGenerating.value = false
-    } else if (data.status === 'failed') {
-      alert(data.error || 'Generation failed. Please try a different prompt.')
-      isGenerating.value = false
-    } else {
-      // Continue polling
-      setTimeout(() => pollStatus(processId), 2000)
-    }
-  } catch (err) {
-    console.error('Polling failed:', err)
-    isGenerating.value = false
-  }
+const scaleRange = (field) => {
+  const start = field.start ?? 1
+  const end = field.end ?? 10
+  const range = []
+  for (let i = start; i <= end; i++) range.push(i)
+  return range
 }
 
-const claimUrl = computed(() => {
-  return `${config.public.appUrl}/users/sign_up?preview_token=${previewToken.value}&prompt=${encodeURIComponent(prompt.value)}`
+const claimUrl = computed(() =>
+  `${config.public.appUrl}/users/sign_up?preview_token=${previewToken.value}&prompt=${encodeURIComponent(prompt.value)}`
+)
+
+const previewBodyStyle = computed(() => {
+  const t = formTheme.value
+  if (!t || !t.backgroundColor) return {}
+  return { background: t.backgroundColor }
+})
+
+const submitStyle = computed(() => {
+  const t = formTheme.value
+  if (!t || !t.buttonColor) return {}
+  return {
+    background: t.buttonColor,
+    color: t.buttonTextColor || '#ffffff'
+  }
 })
 </script>
 
 <style scoped>
+/* ─── Layout ─────────────────────────────────────────────── */
 .ai-hero {
   padding: 80px 0;
   background: radial-gradient(circle at 0% 0%, #fdfaff 0%, #ffffff 100%);
@@ -232,12 +453,10 @@ const claimUrl = computed(() => {
 }
 
 @media (max-width: 991px) {
-  .container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
+  .container { grid-template-columns: 1fr; text-align: center; }
 }
 
+/* ─── Left panel ─────────────────────────────────────────── */
 .ai-hero__badge {
   display: inline-flex;
   align-items: center;
@@ -268,9 +487,7 @@ const claimUrl = computed(() => {
   color: #101828;
 }
 
-.ai-hero__title .highlight {
-  color: #7f56d9;
-}
+.ai-hero__title .highlight { color: #7f56d9; }
 
 .ai-hero__description {
   font-size: 18px;
@@ -297,6 +514,8 @@ const claimUrl = computed(() => {
   resize: none;
   transition: all 0.2s;
   margin-bottom: 16px;
+  font-family: inherit;
+  color: #101828;
 }
 
 .ai-hero__input:focus {
@@ -331,12 +550,12 @@ const claimUrl = computed(() => {
 
 .ai-hero__footer-text {
   margin-top: 12px;
-  font-size: 14px;
+  font-size: 13px;
   color: #667085;
   text-align: center;
 }
 
-/* Button & Spinner */
+/* ─── Buttons ────────────────────────────────────────────── */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -347,6 +566,7 @@ const claimUrl = computed(() => {
   cursor: pointer;
   transition: all 0.2s;
   border: none;
+  font-family: inherit;
 }
 
 .btn-primary {
@@ -366,99 +586,105 @@ const claimUrl = computed(() => {
   cursor: not-allowed;
 }
 
-.btn-lg {
-  padding: 16px 28px;
-  font-size: 18px;
-}
-
-.btn-block {
-  width: 100%;
-}
-
-.btn-secondary {
-  background: #ffffff;
-  color: #344054;
-  border: 1px solid #d0d5dd;
-}
+.btn-lg { padding: 16px 28px; font-size: 18px; }
+.btn-block { width: 100%; }
 
 .spinner {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-top-color: #ffffff;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
   margin-right: 8px;
+  flex-shrink: 0;
 }
 
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
+@keyframes spin { to { transform: rotate(360deg); } }
 
-/* Preview Area */
-.ai-hero__preview {
-  position: relative;
-}
+/* ─── Preview container ──────────────────────────────────── */
+.ai-hero__preview { position: relative; }
 
 .preview-container {
-  background: #ffffff;
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 20px 24px -4px rgba(16, 24, 40, 0.08), 0 8px 8px -4px rgba(16, 24, 40, 0.03);
-  min-height: 500px;
+  border: 1px solid #e4e7ec;
+  box-shadow: 0 24px 48px -12px rgba(16, 24, 40, 0.18);
   overflow: hidden;
   position: relative;
   z-index: 2;
+  background: #ffffff;
 }
 
-.glass {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-}
-
-.preview-header {
-  background: #f9fafb;
-  padding: 12px 16px;
-  border-bottom: 1px solid #eaecf0;
+/* Browser chrome */
+.preview-chrome {
+  background: #f2f4f7;
+  padding: 10px 14px;
+  border-bottom: 1px solid #e4e7ec;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
-.dots {
+.chrome-dots {
   display: flex;
-  gap: 6px;
+  gap: 5px;
+  flex-shrink: 0;
 }
 
-.dots span {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #e4e7ec;
-}
+.dot-red   { width: 10px; height: 10px; border-radius: 50%; background: #ff5f57; }
+.dot-yellow { width: 10px; height: 10px; border-radius: 50%; background: #ffbd2e; }
+.dot-green  { width: 10px; height: 10px; border-radius: 50%; background: #28c840; }
 
-.dots span:nth-child(1) { background: #febca6; }
-.dots span:nth-child(2) { background: #f9dbaf; }
-.dots span:nth-child(3) { background: #a6f4d0; }
-
-.address-bar {
+.chrome-bar {
+  flex: 1;
   background: #ffffff;
-  border: 1px solid #eaecf0;
+  border: 1px solid #e4e7ec;
   border-radius: 6px;
-  flex-grow: 1;
-  padding: 4px 12px;
-  font-size: 12px;
-  color: #667085;
+  padding: 3px 12px;
+  font-size: 11px;
+  color: #98a2b3;
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+/* Preview body */
 .preview-body {
-  padding: 32px;
-  height: calc(500px - 45px);
+  height: 480px;
   overflow-y: auto;
   position: relative;
+  background: #f9fafb;
+  scrollbar-width: thin;
+  scrollbar-color: #d0d5dd transparent;
 }
 
+.preview-body::-webkit-scrollbar { width: 4px; }
+.preview-body::-webkit-scrollbar-thumb { background: #d0d5dd; border-radius: 2px; }
+
+/* ─── Loading shimmer ────────────────────────────────────── */
+.preview-loading { padding: 28px 24px; }
+
+.shimmer {
+  background: linear-gradient(90deg, #f2f4f7 25%, #e4e7ec 50%, #f2f4f7 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.shimmer-title  { height: 22px; width: 55%; margin-bottom: 24px; }
+.shimmer-label  { height: 12px; width: 40%; }
+.shimmer-label.short { width: 30%; }
+.shimmer-input  { height: 36px; width: 100%; margin-bottom: 20px; }
+.shimmer-options { height: 60px; width: 100%; margin-bottom: 20px; }
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ─── Placeholder state ──────────────────────────────────── */
 .preview-placeholder {
   height: 100%;
   display: flex;
@@ -466,151 +692,447 @@ const claimUrl = computed(() => {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #667085;
+  color: #98a2b3;
+  padding: 40px 24px;
+  gap: 12px;
 }
 
-.placeholder-icon {
-  width: 64px;
-  height: 64px;
+.preview-placeholder__icon {
+  width: 56px;
+  height: 56px;
   background: #f4ebff;
-  border-radius: 16px;
-  margin-bottom: 16px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #7f56d9;
 }
 
-/* Shimmer / Loading */
-.preview-loading {
-  padding: 20px;
-}
-
-.shimmer-line {
-  height: 12px;
-  background: #f2f4f7;
-  border-radius: 100px;
-  margin-bottom: 16px;
-  position: relative;
-  overflow: hidden;
-}
-
-.shimmer-line.title {
-  height: 24px;
-  width: 60%;
-  margin-bottom: 32px;
-}
-
-.shimmer-line.short {
-  width: 40%;
-}
-
-.shimmer-line::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
-  animation: shimmer 1.5s infinite;
-}
-
-@keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
-
-/* Form Styles */
-.preview-form h3 {
-  margin-bottom: 24px;
-  color: #101828;
-}
-
-.preview-field {
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-.preview-field label {
-  display: block;
+.preview-placeholder p {
   font-size: 14px;
-  font-weight: 500;
+  line-height: 1.5;
+  max-width: 220px;
+}
+
+/* ─── Generated form ────────────────────────────────────── */
+.preview-form {
+  padding: 24px 24px 100px;
+}
+
+.pf-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #101828;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+/* Standard field wrapper */
+.pf-field {
+  margin-bottom: 18px;
+}
+
+.pf-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
   color: #344054;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
-.preview-field input, .preview-field textarea {
+.pf-label--sm { font-size: 12px; }
+
+.pf-required { color: #f04438; margin-left: 2px; }
+
+.pf-desc {
+  font-size: 11px;
+  color: #667085;
+  margin-bottom: 5px;
+}
+
+/* Inputs */
+.pf-input {
   width: 100%;
-  background: #f9fafb;
-  border: 1px solid #eaecf0;
+  background: #ffffff;
+  border: 1px solid #d0d5dd;
   border-radius: 6px;
-  padding: 10px;
+  padding: 8px 10px;
+  font-size: 12px;
+  color: #667085;
+  font-family: inherit;
+  box-sizing: border-box;
 }
 
-.preview-option {
+.pf-textarea { resize: none; min-height: 64px; }
+
+/* Select with custom arrow */
+.pf-select-wrap { position: relative; }
+
+.pf-select {
+  appearance: none;
+  padding-right: 28px;
+  cursor: default;
+}
+
+.pf-select-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #667085;
+  font-size: 11px;
+  pointer-events: none;
+}
+
+/* Radio / checkbox options */
+.pf-options { display: flex; flex-direction: column; gap: 6px; }
+
+.pf-option {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 14px;
+  font-size: 12px;
   color: #475467;
+}
+
+.pf-radio {
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid #d0d5dd;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: #fff;
+}
+
+.pf-checkbox {
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid #d0d5dd;
+  border-radius: 3px;
+  flex-shrink: 0;
+  background: #fff;
+}
+
+.pf-option-label { line-height: 1.3; }
+
+/* Scale rating */
+.pf-scale-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #98a2b3;
   margin-bottom: 4px;
 }
 
-.preview-option .circle {
-  width: 14px;
-  height: 14px;
+.pf-scale-buttons {
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+}
+
+.pf-scale-btn {
+  min-width: 26px;
+  height: 26px;
   border: 1px solid #d0d5dd;
-  border-radius: 50%;
-}
-
-.preview-submit {
-  background: #7f56d9;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  width: 100%;
-  margin-top: 10px;
-}
-
-/* Claim Overlay */
-.claim-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(2px);
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 11px;
+  color: #475467;
+  background: #ffffff;
+  flex-shrink: 0;
+}
+
+/* Star rating */
+.pf-stars { display: flex; gap: 4px; }
+
+.pf-star {
+  font-size: 20px;
+  color: #d0d5dd;
+  line-height: 1;
+}
+
+/* Ranking */
+.pf-ranking { display: flex; flex-direction: column; gap: 5px; }
+
+.pf-rank-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 12px;
+  color: #344054;
+}
+
+.pf-rank-num {
+  width: 18px;
+  height: 18px;
+  background: #f4ebff;
+  color: #6941c0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.pf-rank-label { flex: 1; }
+
+.pf-rank-drag { color: #d0d5dd; font-size: 14px; margin-left: auto; }
+
+/* Matrix */
+.pf-matrix { overflow-x: auto; }
+
+.pf-matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+.pf-matrix-th,
+.pf-matrix-row-label {
+  padding: 5px 8px;
+  text-align: center;
+  color: #475467;
+  font-weight: 600;
+  border-bottom: 1px solid #eaecf0;
+}
+
+.pf-matrix-row-label { text-align: left; font-weight: 500; }
+
+.pf-matrix-corner { border-bottom: 1px solid #eaecf0; }
+
+.pf-matrix-cell {
+  text-align: center;
+  padding: 6px;
+  border-bottom: 1px solid #f2f4f7;
+}
+
+/* File upload */
+.pf-file {
+  border: 1.5px dashed #d0d5dd;
+  border-radius: 6px;
+  padding: 14px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: #667085;
+  background: #f9fafb;
+}
+
+.pf-file-icon { font-size: 18px; }
+
+.pf-file-text { font-size: 11px; }
+
+/* Signature */
+.pf-signature {
+  border: 1.5px dashed #d0d5dd;
+  border-radius: 6px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #98a2b3;
+  font-size: 12px;
+  font-style: italic;
+  background: #f9fafb;
+}
+
+/* Address */
+.pf-address { display: flex; flex-direction: column; gap: 6px; }
+.pf-address-row { display: flex; gap: 6px; }
+.pf-address-row .pf-input { flex: 1; }
+
+/* Terms */
+.pf-terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  color: #344054;
+  line-height: 1.4;
+}
+
+.pf-terms-text { flex: 1; }
+
+/* Repeat field */
+.pf-repeat {
+  background: #f9fafb;
+  border: 1px solid #eaecf0;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pf-repeat-add {
+  font-size: 11px;
+  color: #7f56d9;
+  background: none;
+  border: 1px dashed #d6bbfb;
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: default;
+  font-family: inherit;
+  margin-top: 4px;
+}
+
+/* Page break */
+.pf-page-break {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.pf-page-break__line {
+  flex: 1;
+  height: 1px;
+  background: #d0d5dd;
+}
+
+.pf-page-break__label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #98a2b3;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+/* Header block */
+.pf-header {
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f2f4f7;
+}
+
+.pf-header__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #101828;
+}
+
+.pf-header__sub {
+  font-size: 12px;
+  color: #667085;
+  margin-top: 3px;
+}
+
+/* Paragraph / HTML block */
+.pf-paragraph {
+  font-size: 12px;
+  color: #475467;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+/* Thank you screen */
+.pf-thankyou {
+  text-align: center;
+  padding: 24px 16px;
+  margin: 8px 0;
+  background: #f9f5ff;
+  border-radius: 10px;
+}
+
+.pf-thankyou__icon {
+  width: 36px;
+  height: 36px;
+  background: #7f56d9;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 auto 10px;
+}
+
+.pf-thankyou__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #101828;
+}
+
+.pf-thankyou__desc {
+  font-size: 12px;
+  color: #475467;
+  margin-top: 4px;
+}
+
+/* Submit button */
+.pf-submit {
+  width: 100%;
+  background: #7f56d9;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: default;
+  font-family: inherit;
+  margin-top: 8px;
+}
+
+/* ─── Claim CTA bar ──────────────────────────────────────── */
+.claim-bar {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 10;
-  animation: fadeIn 0.3s ease-out;
+  animation: fadeUp 0.4s ease-out;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.claim-bar__gradient {
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, rgba(249, 250, 251, 0.95));
+  pointer-events: none;
 }
 
-.shadow-lg {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+.claim-bar__btn {
+  display: block;
+  text-align: center;
+  background: #7f56d9;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 12px 20px;
+  text-decoration: none;
+  transition: background 0.2s;
 }
 
-/* Floating Elements */
+.claim-bar__btn:hover { background: #6941c0; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Floating decoration ────────────────────────────────── */
 .floating-icons .icon {
   position: absolute;
-  width: 56px;
-  height: 56px;
+  width: 52px;
+  height: 52px;
   background: white;
-  border-radius: 16px;
-  box-shadow: 0 12px 16px -4px rgba(16, 24, 40, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 12px 16px -4px rgba(16, 24, 40, 0.10);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1;
-  padding: 12px;
+  padding: 10px;
 }
 
 .floating-icons .icon img {
@@ -619,12 +1141,12 @@ const claimUrl = computed(() => {
   object-fit: contain;
 }
 
-.icon-1 { top: 10%; right: 10%; animation: float 6s ease-in-out infinite; }
-.icon-2 { bottom: 20%; right: 5%; animation: float 8s ease-in-out infinite; delay: -2s; }
-.icon-3 { top: 40%; right: -5%; animation: float 7s ease-in-out infinite; delay: -4s; }
+.icon-1 { top: 8%;  right: 8%;  animation: float 6s ease-in-out infinite; }
+.icon-2 { bottom: 18%; right: 4%; animation: float 8s ease-in-out infinite 2s; }
+.icon-3 { top: 42%; right: -4%; animation: float 7s ease-in-out infinite 4s; }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0) rotate(0); }
-  50% { transform: translateY(-20px) rotate(5deg); }
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-14px); }
 }
 </style>

@@ -17,9 +17,9 @@
 
     <div class="test-controls">
       <p>Testing different types:</p>
-      <button @click="currentType = 'Form'">Form</button>
-      <button @click="currentType = 'Score Quiz'">Score Quiz</button>
-      <button @click="currentType = 'Outcome Quiz'">Outcome Quiz</button>
+      <button @click="currentType = 'form'">Form</button>
+      <button @click="currentType = 'score_quiz'">Score Quiz</button>
+      <button @click="currentType = 'outcome_quiz'">Outcome Quiz</button>
     </div>
   </div>
 </template>
@@ -28,7 +28,7 @@
 import { ref } from 'vue'
 import AiHero from '@/components/features/AiHero.vue'
 
-const currentType = ref('Form')
+const currentType = ref('form')
 </script>
 
 <style scoped>

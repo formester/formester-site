@@ -4,7 +4,7 @@
     :to="`/features/${slug}/`"
     @click="collapseNav"
   >
-    <nuxt-img :src="imageUrl" :alt="imageAlt" class="dropdown-item__img" />
+    <nuxt-img v-if="imageUrl" :src="imageUrl" :alt="imageAlt" class="dropdown-item__img" />
     <div class="d-flex flex-column">
       <div class="d-flex align-items-center gap-2">
         <span class="dropdown-item__title">{{ title }}</span>
