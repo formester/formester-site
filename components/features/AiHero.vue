@@ -22,26 +22,23 @@
 
         <!-- State: Input -->
         <div v-if="!isGenerating && !surveyUrl" key="input" class="canvas-input">
-          <!-- Textarea: hidden when a PDF is selected -->
-          <template v-if="!selectedFile">
-            <textarea
-              v-model="prompt"
-              class="canvas-textarea"
-              placeholder="Describe the form you need…"
-              rows="4"
-            ></textarea>
+          <textarea
+            v-model="prompt"
+            class="canvas-textarea"
+            placeholder="Describe the form you need…"
+            rows="4"
+          ></textarea>
 
-            <div v-if="suggestions && suggestions.length" class="canvas-chips">
-              <button
-                v-for="(chip, i) in suggestions"
-                :key="i"
-                class="canvas-chip"
-                @click="setPrompt(chip.text)"
-              >{{ chip.text }}</button>
-            </div>
-          </template>
+          <div v-if="suggestions && suggestions.length" class="canvas-chips">
+            <button
+              v-for="(chip, i) in suggestions"
+              :key="i"
+              class="canvas-chip"
+              @click="setPrompt(chip.text)"
+            >{{ chip.text }}</button>
+          </div>
 
-          <!-- PDF upload -->
+          <!-- PDF upload (commented out until prompt+PDF UX is finalized)
           <input
             ref="fileInputRef"
             type="file"
@@ -60,13 +57,14 @@
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
             Upload PDF
           </button>
+          -->
 
           <button
             class="canvas-btn"
-            :disabled="!prompt && !selectedFile"
+            :disabled="!prompt"
             @click="handleGenerate"
           >
-            {{ isUploading ? 'Uploading…' : 'Generate Form' }}
+            Generate Form
           </button>
           <p class="canvas-footer">Free forever · No credit card · Your prompt stays private</p>
         </div>
@@ -133,41 +131,41 @@ const apiType = computed(() => CMS_TYPE_MAP[props.type] || props.type || 'form')
 const config = useRuntimeConfig()
 const prompt = ref('')
 const isGenerating = ref(false)
-const isUploading = ref(false)
 const surveyUrl = ref('')
 const generatedTitle = ref('')
 const previewToken = ref('')
-const selectedFile = ref(null)
-const fileInputRef = ref(null)
+
+// PDF refs (commented out until prompt+PDF UX is finalized)
+// const isUploading = ref(false)
+// const selectedFile = ref(null)
+// const fileInputRef = ref(null)
 
 const setPrompt = (text) => { prompt.value = text }
 
-const onFileChange = (e) => { selectedFile.value = e.target.files[0] || null }
+// const onFileChange = (e) => { selectedFile.value = e.target.files[0] || null }
 
-const clearFile = () => {
-  selectedFile.value = null
-  if (fileInputRef.value) fileInputRef.value.value = ''
-}
+// const clearFile = () => {
+//   selectedFile.value = null
+//   if (fileInputRef.value) fileInputRef.value.value = ''
+// }
 
 const reset = () => {
   surveyUrl.value = ''
   generatedTitle.value = ''
   previewToken.value = ''
-  clearFile()
+  // clearFile()
 }
 
-const uploadPdf = async (file) => {
-  isUploading.value = true
-  const { data: presign } = await axios.post(
-    `${config.public.appUrl}/api/site/public_ai_previews/presign`,
-    { filename: file.name }
-  )
-
-  console.log("Presign data:", presign);
-  await axios.put(presign.upload_url, file, { headers: { 'Content-Type': file.type } })
-  isUploading.value = false
-  return presign.object_url
-}
+// const uploadPdf = async (file) => {
+//   isUploading.value = true
+//   const { data: presign } = await axios.post(
+//     `${config.public.appUrl}/api/site/public_ai_previews/presign`,
+//     { filename: file.name }
+//   )
+//   await axios.put(presign.upload_url, file, { headers: { 'Content-Type': file.type } })
+//   isUploading.value = false
+//   return presign.object_url
+// }
 
 const pollStatus = async (processId) => {
   return new Promise((resolve, reject) => {
@@ -192,19 +190,20 @@ const pollStatus = async (processId) => {
 }
 
 const handleGenerate = async () => {
-  if (!prompt.value && !selectedFile.value) return
+  if (!prompt.value) return
   isGenerating.value = true
   surveyUrl.value = ''
   generatedTitle.value = ''
   previewToken.value = ''
 
   try {
-    let body = { type: apiType.value }
-    if (selectedFile.value) {
-      body.file_uri = await uploadPdf(selectedFile.value)
-    } else {
-      body.prompt = prompt.value
-    }
+    const body = { prompt: prompt.value, type: apiType.value }
+
+    // PDF branch (commented out until prompt+PDF UX is finalized)
+    // if (selectedFile.value) {
+    //   body.file_uri = await uploadPdf(selectedFile.value)
+    //   delete body.prompt
+    // }
 
     const { data } = await axios.post(`${config.public.appUrl}/api/site/public_ai_previews`, body)
     const result = await pollStatus(data.process_id)
@@ -217,7 +216,7 @@ const handleGenerate = async () => {
     alert('Unable to connect to AI service. Please try again.')
   } finally {
     isGenerating.value = false
-    isUploading.value = false
+    // isUploading.value = false
   }
 }
 
