@@ -1,6 +1,7 @@
 <template>
-  <NuxtLink :to="articleLink">
+  <NuxtLink v-if="article" :to="articleLink">
     <img
+      v-if="article.coverImg"
       :src="article.coverImg"
       class="rounded img-fluid"
       :alt="article.coverImgAlt"
@@ -25,6 +26,7 @@ export default {
   },
   computed: {
     articleLink() {
+      if (!this.article) return '#'
       if (this.article.type) {
         return this.article.link
       }

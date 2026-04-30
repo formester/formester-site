@@ -1,9 +1,11 @@
 <template>
   <NuxtLink
+    v-if="article"
     :to="{ path: `/blog/${article.slug}/` }"
     class="row px-3"
   >
     <img
+      v-if="article.coverImg"
       :src="article.coverImg"
       class="col-lg-6 rounded img-fluid featured__blog-img"
       :alt="article.coverImgAlt"
@@ -19,7 +21,7 @@
         <h3 class="blog__title">{{ article.title }}</h3>
         <p class="mt-1 blog__desc">{{ article.description }}</p>
       </div>
-      <span class="mt-2 blog__timetoRead">
+      <span v-if="article.readingStats" class="mt-2 blog__timetoRead">
         <ClockIcon color="#828282" />
         {{ article.readingStats.text }}
       </span>
