@@ -42,14 +42,13 @@
                 />
                 <span v-else class="step__description"> {{ item?.description }}</span>
               </div>
-              <div
-                class="col-lg-5 m-auto"
-                v-if="item.cardImage?.image?.url || item.cardImage?.imageUrl"
-              >
+              <div class="col-lg-5 m-auto" v-if="cardImg(item).src">
                 <nuxt-img
-                  :src="item.cardImage.image?.url || item.cardImage.imageUrl"
+                  :src="cardImg(item).src"
+                  :alt="cardImg(item).alt || item?.title || 'Step image'"
+                  :width="cardImg(item).width || 480"
+                  :height="cardImg(item).height || 360"
                   class="w-lg-40 d-block img-fluid my-auto"
-                  :alt="item.cardImage?.imageAlt || item?.title || 'Step image'"
                   loading="lazy"
                 />
               </div>
@@ -63,6 +62,7 @@
 
 <script>
 import MarkdownContent from '~/components/MarkdownContent.vue'
+import { getStrapiImage } from '@/utils/strapiImage'
 
 export default {
   components: { MarkdownContent },
@@ -80,6 +80,11 @@ export default {
       required: true,
     },
   },
+  methods: {
+    cardImg(item) {
+      return getStrapiImage(item.cardImage)
+    }
+  }
 }
 </script>
 

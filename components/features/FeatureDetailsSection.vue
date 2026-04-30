@@ -8,9 +8,12 @@
       <div v-for="item in itemList" :key="item.id" class="col-md-6 my-3">
         <div class="px-4">
           <nuxt-img
-            :src="item.cardImage?.imageUrl || item.cardImage?.image?.url"
+            v-if="cardImg(item).src"
+            :src="cardImg(item).src"
+            :alt="cardImg(item).alt || item.title || 'Feature image'"
+            :width="cardImg(item).width || 600"
+            :height="cardImg(item).height || 400"
             class="img-fluid"
-            :alt="item.cardImage?.imageAlt || item.title || 'Feature image'"
             loading="lazy"
           />
           <h3 class="feature__heading">{{ item.title }}</h3>
@@ -29,6 +32,7 @@
 
 <script>
 import MarkdownContent from '~/components/MarkdownContent.vue'
+import { getStrapiImage } from '@/utils/strapiImage'
 
 export default {
   components: { MarkdownContent },
@@ -46,6 +50,11 @@ export default {
       required: true,
     },
   },
+  methods: {
+    cardImg(item) {
+      return getStrapiImage(item.cardImage)
+    }
+  }
 }
 </script>
 

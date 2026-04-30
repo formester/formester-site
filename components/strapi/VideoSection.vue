@@ -15,11 +15,14 @@
           <!-- YouTube Video Thumbnail with Custom Play Button -->
           <div v-if="video_url" class="video-thumbnail-wrapper" @click="showOverlay = true">
             <nuxt-img
-              :src="thumbnail ? thumbnail.url : youtubeThumbnailUrl"
+              :src="thumbImg.src || youtubeThumbnailUrl"
+              :alt="thumbImg.alt || 'Video thumbnail'"
+              :width="thumbImg.width || 800"
+              :height="thumbImg.height || 533"
               class="video-thumb-img"
             />
             <button class="custom-play-btn" aria-label="Play video">
-              <nuxt-img src="/play-button.svg" alt="Play video" />
+              <nuxt-img src="/play-button.svg" alt="Play video" width="64" height="64" />
           </button>
           </div>
           <!-- Overlay -->
@@ -34,7 +37,7 @@
                 allowfullscreen
               ></iframe>
               <button @click="closeOverlay" aria-label="Close video" class="close-btn">
-                <nuxt-img src="/x-close.svg" alt="Close video" />
+                <nuxt-img src="/x-close.svg" alt="Close video" width="24" height="24" />
               </button>
             </div>
           </div>
@@ -45,6 +48,7 @@
 
   <script>
   import MarkdownContent from '~/components/MarkdownContent.vue'
+  import { getStrapiImage } from '@/utils/strapiImage'
 
   export default {
     components: { MarkdownContent },
@@ -76,6 +80,9 @@
     };
   },
   computed: {
+    thumbImg() {
+      return getStrapiImage(this.thumbnail)
+    },
     youtubeVideoId() {
       // Extracts the video ID from various YouTube URL formats
       const url = this.video_url;

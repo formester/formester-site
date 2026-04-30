@@ -1,7 +1,13 @@
 <template>
   <div class="usecase-card">
-    <div class="image-wrapper" v-if="computedImage">
-      <img :src="computedImage" :alt="title" width="100%" height="100%" class="img-fluid"/>
+    <div class="image-wrapper" v-if="img.src">
+      <img
+        :src="img.src"
+        :alt="img.alt || title"
+        :width="img.width || 400"
+        :height="img.height || 160"
+        class="img-fluid"
+      />
     </div>
     <div class="content">
       <h3 class="title">{{ title }}</h3>
@@ -12,6 +18,8 @@
 </template>
 
 <script>
+import { getStrapiImage } from '@/utils/strapiImage'
+
 export default {
   name: 'UsecaseCard',
   props: {
@@ -20,15 +28,17 @@ export default {
     image: { type: [String, Object], default: null }
   },
   computed: {
-    computedImage() {
-      if (!this.image) return null;
-      if (typeof this.image === 'string') return this.image;
-      if (this.image.formats) {
-        if (this.image.formats.medium) return this.image.formats.medium.url;
-        if (this.image.formats.small) return this.image.formats.small.url;
-        if (this.image.formats.thumbnail) return this.image.formats.thumbnail.url;
+    img() {
+      if (typeof this.image === 'string') {
+        return { src: this.image, alt: this.title, width: null, height: null }
       }
-      return this.image.url;
+      // Prefer the medium format if available — it's what was being used before.
+      const media = this.image?.data?.attributes || this.image
+      if (media?.formats?.medium) {
+        const m = media.formats.medium
+        return { src: m.url, alt: media.alternativeText || this.title, width: m.width, height: m.height }
+      }
+      return getStrapiImage(this.image, { alt: this.title })
     }
   }
 }

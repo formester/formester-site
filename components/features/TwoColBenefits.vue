@@ -11,10 +11,13 @@
             class="card p-3 d-flex align-items-center justify-items-center text-center align-items-md-start text-md-start"
           >
             <nuxt-img
-              :src="item.cardImage.image?.url || item.cardImage.imageUrl"
+              v-if="cardImg(item).src"
+              :src="cardImg(item).src"
+              :alt="cardImg(item).alt || item.title || 'Feature icon'"
+              :width="cardImg(item).width || 69"
+              :height="cardImg(item).height || 69"
               class="img-fluid"
               style="width: 69px"
-              :alt="item.cardImage?.imageAlt || item.title || 'Feature icon'"
               loading="lazy"
             />
             <h3 class="sub__section-heading mt-4">{{ item.title }}</h3>
@@ -33,6 +36,7 @@
 
 <script>
 import MarkdownContent from '~/components/MarkdownContent.vue'
+import { getStrapiImage } from '@/utils/strapiImage'
 
 export default {
   components: { MarkdownContent },
@@ -50,6 +54,11 @@ export default {
       required: true,
     },
   },
+  methods: {
+    cardImg(item) {
+      return getStrapiImage(item.cardImage)
+    }
+  }
 }
 </script>
 

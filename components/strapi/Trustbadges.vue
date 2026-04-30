@@ -4,39 +4,25 @@
       <SectionTitle :heading="title" />
       <p>{{ description }}</p>
       <div class="trustbadge-wrapper">
-        <div class="rating-wrapper">
-          <nuxt-img src="/product-hunt.svg" alt="Product Hunt" class="logo" />
+        <div
+          v-for="(badge, i) in badges"
+          :key="badge.id || i"
+          class="rating-wrapper"
+        >
+          <nuxt-img
+            :src="logoFor(badge).src"
+            :alt="logoFor(badge).alt"
+            :width="logoFor(badge).width"
+            :height="logoFor(badge).height"
+            class="logo"
+          />
           <div class="rating">
-            <span class="rating-number">5/5</span>
-            <nuxt-img src="/5-stars.svg" alt="5 stars" class="rating-stars" />
-          </div>
-        </div>
-        <div class="rating-wrapper">
-          <nuxt-img src="/trustpilot.svg" alt="Trustpilot" class="logo" />
-          <div class="rating">
-            <span class="rating-number">4.4/5</span>
+            <span class="rating-number">{{ badge.ratingNumber }}</span>
             <nuxt-img
-              src="/4.5-stars.svg"
-              alt="4.5 stars"
-              class="rating-stars"
-            />
-          </div>
-        </div>
-        <div class="rating-wrapper">
-          <nuxt-img src="/capterra.svg" alt="Capterra" class="logo" />
-          <div class="rating">
-            <span class="rating-number">5/5</span>
-            <nuxt-img src="/5-stars.svg" alt="5 stars" class="rating-stars" />
-          </div>
-        </div>
-
-        <div class="rating-wrapper">
-          <nuxt-img src="/g2-crowd.svg" alt="G2 Crowd" class="logo" />
-          <div class="rating">
-            <span class="rating-number">4.7/5</span>
-            <nuxt-img
-              src="/4.5-stars.svg"
-              alt="4.5 stars"
+              :src="starsFor(badge).src"
+              :alt="starsFor(badge).alt"
+              :width="starsFor(badge).width"
+              :height="starsFor(badge).height"
               class="rating-stars"
             />
           </div>
@@ -47,6 +33,8 @@
 </template>
 
 <script>
+import { getStrapiImage } from '@/utils/strapiImage'
+
 export default {
   props: {
     title: {
@@ -55,6 +43,18 @@ export default {
     },
     description: {
       type: String,
+    },
+    badges: {
+      type: Array,
+      default: () => [],
+    },
+  },
+  methods: {
+    logoFor(badge) {
+      return getStrapiImage(badge?.logo)
+    },
+    starsFor(badge) {
+      return getStrapiImage(badge?.stars)
     },
   },
 }

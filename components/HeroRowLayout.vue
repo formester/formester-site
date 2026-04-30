@@ -27,20 +27,24 @@
           <!-- Image display when no video is provided -->
           <nuxt-img
             v-if="heroImage && !video_url"
-            :src="heroImage.image?.url || heroImage.imageUrl"
-            :alt="heroImage.imageAlt || 'Hero image'"
+            :src="heroImg.src"
+            :alt="heroImg.alt || 'Hero image'"
+            :width="heroImg.width"
+            :height="heroImg.height"
             class="img-fluid hero__image"
           />
 
           <!-- Video thumbnail with play button when video is provided -->
           <div v-if="video_url" class="video-thumbnail-wrapper" @click="showOverlay = true">
             <nuxt-img
-              :src="thumbnail ? (thumbnail.url || thumbnail.image?.url || thumbnail.imageUrl) : youtubeThumbnailUrl"
-              :alt="thumbnail?.imageAlt || 'Video thumbnail'"
+              :src="thumbImg.src || youtubeThumbnailUrl"
+              :alt="thumbImg.alt || 'Video thumbnail'"
+              :width="thumbImg.width || 480"
+              :height="thumbImg.height || 360"
               class="video-thumb-img hero__image"
             />
             <button class="custom-play-btn" aria-label="Play video">
-              <nuxt-img src="/play-button.svg" alt="Play video" />
+              <nuxt-img src="/play-button.svg" alt="Play video" width="64" height="64" />
             </button>
             <!-- Hidden link for SEO - helps search engines discover the video -->
             <a :href="video_url" class="visually-hidden" target="_blank" rel="noopener noreferrer">Watch video on YouTube</a>
@@ -58,7 +62,7 @@
                 allowfullscreen
               ></iframe>
               <button @click="closeOverlay" aria-label="Close video" class="close-btn">
-                <nuxt-img src="/x-close.svg" alt="Close video" />
+                <nuxt-img src="/x-close.svg" alt="Close video" width="24" height="24" />
               </button>
             </div>
           </div>
@@ -69,6 +73,8 @@
 </template>
 
 <script>
+import { getStrapiImage } from '@/utils/strapiImage'
+
 export default {
    props: {
     title: {
@@ -106,6 +112,12 @@ export default {
     };
   },
   computed: {
+    heroImg() {
+      return getStrapiImage(this.heroImage)
+    },
+    thumbImg() {
+      return getStrapiImage(this.thumbnail)
+    },
     youtubeVideoId() {
       // Extracts the video ID from various YouTube URL formats
       const url = this.video_url;

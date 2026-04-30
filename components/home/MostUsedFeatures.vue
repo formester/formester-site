@@ -26,8 +26,11 @@
               ]"
             >
               <nuxt-img
-                :src="feature.icon?.imageUrl || feature.icon?.image?.url"
-                :alt="feature.icon?.imageAlt || feature.title || 'Feature icon'"
+                v-if="featureIcon(feature).src"
+                :src="featureIcon(feature).src"
+                :alt="featureIcon(feature).alt || feature.title || 'Feature icon'"
+                :width="featureIcon(feature).width || 32"
+                :height="featureIcon(feature).height || 32"
                 loading="lazy"
                 :class="{ 'grey-filter': activeIndex !== index }"
               />
@@ -76,9 +79,11 @@
         <transition name="fade" mode="out-in">
           <nuxt-img
             class="feature__img img-fluid"
-            :src="activeFeatureImageUrl"
-            :alt="activeFeatureImageAlt"
-            :key="activeFeatureImageUrl"
+            :src="activeFeature.src"
+            :alt="activeFeature.alt"
+            :width="activeFeature.width || 600"
+            :height="activeFeature.height || 400"
+            :key="activeFeature.src"
             sizes="sm:100vw md:50vw lg:600px"
           />
         </transition>
@@ -88,8 +93,11 @@
     <div class="d-lg-none">
       <div v-for="feature in itemList" :key="feature.title" class="mt-5">
         <nuxt-img
-          :src="feature.cardImage?.imageUrl || feature.cardImage?.image?.url"
-          :alt="feature.cardImage?.imageAlt || feature.title || 'Feature image'"
+          v-if="cardImg(feature).src"
+          :src="cardImg(feature).src"
+          :alt="cardImg(feature).alt || feature.title || 'Feature image'"
+          :width="cardImg(feature).width || 600"
+          :height="cardImg(feature).height || 400"
           class="mb-4 img-fluid"
           loading="lazy"
           sizes="10vw"
@@ -99,8 +107,11 @@
             class="feature__icon-wrapper d-flex align-items-center justify-content-center"
           >
             <nuxt-img
-              :src="feature.icon?.imageUrl || feature.icon?.image?.url"
-              :alt="feature.icon?.imageAlt || feature.title || 'Feature icon'"
+              v-if="featureIcon(feature).src"
+              :src="featureIcon(feature).src"
+              :alt="featureIcon(feature).alt || feature.title || 'Feature icon'"
+              :width="featureIcon(feature).width || 32"
+              :height="featureIcon(feature).height || 32"
               loading="lazy"
             />
           </div>
@@ -123,6 +134,7 @@
 
 <script>
 import MarkdownContent from '~/components/MarkdownContent.vue'
+import { getStrapiImage } from '@/utils/strapiImage'
 
 export default {
   components: { MarkdownContent },
@@ -152,17 +164,18 @@ export default {
     this.stopAutoRotation()
   },
   computed: {
-    activeFeatureImageUrl() {
-      return (
-        this.itemList[this.activeIndex].cardImage.imageUrl ||
-        this.itemList[this.activeIndex].cardImage.image.url
-      )
-    },
-    activeFeatureImageAlt() {
-      return this.itemList[this.activeIndex].cardImage?.imageAlt
+    activeFeature() {
+      const item = this.itemList[this.activeIndex] || {}
+      return getStrapiImage(item.cardImage, { alt: item.title })
     },
   },
   methods: {
+    cardImg(feature) {
+      return getStrapiImage(feature.cardImage)
+    },
+    featureIcon(feature) {
+      return getStrapiImage(feature.icon)
+    },
     handleFeatureClick(index) {
       this.activeIndex = index
       // Reset auto-rotation when manually clicking

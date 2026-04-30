@@ -90,13 +90,21 @@
                   </svg>
                 </button>
                 <!-- Show first preview image (carousel temporarily disabled due to Vue 3 compatibility) -->
-                <img v-if="previewImages.length >= 1" :src="previewImages[0].url" :alt="previewImages[0].alt || 'Template Preview'" class="template-preview__image">
+                <img
+                  v-if="previewImages.length >= 1"
+                  :src="previewImages[0].url"
+                  :alt="previewImages[0].alt || 'Template Preview'"
+                  :width="previewImages[0].width || 1200"
+                  :height="previewImages[0].height || 738"
+                  class="template-preview__image"
+                  loading="lazy"
+                >
               </div>
 
               <!-- Fullscreen Modal Overlay -->
               <div v-if="showFullscreen" class="fullscreen-modal" @click.self="closeFullscreen">
                 <button class="modal-close" @click="closeFullscreen" aria-label="Close fullscreen">
-                  <img :src="closeIcon" alt="Close" />
+                  <img :src="closeIcon" alt="Close" width="24" height="24" />
                 </button>
                 <button v-if="previewImages.length > 1" class="modal-arrow left" @click.stop="prevModal" aria-label="Previous image">
                   <span>&lsaquo;</span>
@@ -105,6 +113,8 @@
                   v-if="previewImages.length"
                   :src="previewImages[modalIndex].url"
                   :alt="previewImages[modalIndex].alt || 'Template Preview'"
+                  :width="previewImages[modalIndex].width || 1200"
+                  :height="previewImages[modalIndex].height || 738"
                   class="fullscreen-image"
                 />
                 <button v-if="previewImages.length > 1" class="modal-arrow right" @click.stop="nextModal" aria-label="Next image">
@@ -265,20 +275,29 @@ const previewImages = computed(() => {
     // Handle different Strapi image structures
     let url = ''
     let alt = ''
+    let width = null
+    let height = null
     let id = item.id
 
     if (item.image?.url) {
       url = item.image.url
       alt = item.image.alternativeText || item.imageAlt || 'Template Preview'
+      width = item.width || item.image.width
+      height = item.height || item.image.height
     } else if (item.image?.data?.attributes?.url) {
-      url = item.image.data.attributes.url
-      alt = item.image.data.attributes.alternativeText || item.imageAlt || 'Template Preview'
+      const a = item.image.data.attributes
+      url = a.url
+      alt = a.alternativeText || item.imageAlt || 'Template Preview'
+      width = item.width || a.width
+      height = item.height || a.height
     } else if (item.imageUrl) {
       url = item.imageUrl
       alt = item.imageAlt || 'Template Preview'
+      width = item.width
+      height = item.height
     }
 
-    return { id, url, alt }
+    return { id, url, alt, width, height }
   }).filter(item => item.url) // Only return items with valid URLs
 })
 

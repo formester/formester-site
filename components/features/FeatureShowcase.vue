@@ -22,24 +22,25 @@
           <div
             class="card-image col-12 col-lg-7 d-lg-flex"
             :class="{ 'justify-content-lg-end  pe-xxl-4': !isOdd(index) }"
-            v-if="item.cardImage.image?.url || item.cardImage.imageUrl"
+            v-if="cardImg(item).src"
           >
             <nuxt-img
-              v-if="
-                !isGif(item.cardImage.image?.url || item.cardImage.imageUrl)
-              "
-              :src="item.cardImage?.image?.url || item.cardImage.imageUrl"
+              v-if="!isGif(cardImg(item).src)"
+              :src="cardImg(item).src"
+              :alt="cardImg(item).alt || item.title || 'Feature image'"
+              :width="cardImg(item).width || 800"
+              :height="cardImg(item).height || 600"
               class="img-fluid"
-              :alt="item.cardImage?.imageAlt || item.title || 'Feature image'"
               :modifiers="{ animated: true }"
               loading="lazy"
             />
             <img
               v-else
-              :src="item.cardImage?.image?.url || item.cardImage?.imageUrl"
+              :src="cardImg(item).src"
+              :alt="cardImg(item).alt || item.title || 'Feature image'"
+              :width="cardImg(item).width || 800"
+              :height="cardImg(item).height || 600"
               class="img-fluid"
-              :alt="item.cardImage?.imageAlt || item.title || 'Feature image'"
-              :modifiers="{ animated: true }"
               loading="lazy"
             />
           </div>
@@ -51,6 +52,7 @@
 
 <script>
 import MarkdownContent from '~/components/MarkdownContent.vue'
+import { getStrapiImage } from '@/utils/strapiImage'
 
 export default {
   components: { MarkdownContent },
@@ -78,6 +80,9 @@ export default {
     },
     isGif(url) {
       return url?.endsWith('.gif')
+    },
+    cardImg(item) {
+      return getStrapiImage(item.cardImage)
     },
   },
 }
