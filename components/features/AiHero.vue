@@ -169,6 +169,28 @@ const uploadPdf = async (file) => {
   return presign.object_url
 }
 
+const pollStatus = async (processId) => {
+  return new Promise((resolve, reject) => {
+    const interval = setInterval(async () => {
+      try {
+        const { data } = await axios.get(`${config.public.appUrl}/api/v1/public_ai_previews/status`, {
+          params: { process_id: processId }
+        })
+        if (data.status === 'success') {
+          clearInterval(interval)
+          resolve(data)
+        } else if (data.status === 'failed') {
+          clearInterval(interval)
+          reject(new Error(data.error || 'Generation failed'))
+        }
+      } catch (err) {
+        clearInterval(interval)
+        reject(err)
+      }
+    }, 3000)
+  })
+}
+
 const handleGenerate = async () => {
   if (!prompt.value && !selectedFile.value) return
   isGenerating.value = true
@@ -179,17 +201,17 @@ const handleGenerate = async () => {
   try {
     let body = { type: apiType.value }
     if (selectedFile.value) {
-      console.log('Uploading PDF:', selectedFile.value.name)
       body.file_uri = await uploadPdf(selectedFile.value)
-      console.log('PDF uploaded, generating preview with file URI:', body.file_uri)
     } else {
       body.prompt = prompt.value
     }
 
     const { data } = await axios.post(`${config.public.appUrl}/api/v1/public_ai_previews`, body)
-    generatedTitle.value = data.form_name
-    surveyUrl.value = data.survey_url
-    previewToken.value = data.preview_token
+    const result = await pollStatus(data.process_id)
+
+    generatedTitle.value = result.form_name
+    surveyUrl.value = result.survey_url
+    previewToken.value = result.preview_token
   } catch (err) {
     console.error('Generation failed:', err)
     alert('Unable to connect to AI service. Please try again.')
