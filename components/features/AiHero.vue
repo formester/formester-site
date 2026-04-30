@@ -159,7 +159,7 @@ const reset = () => {
 const uploadPdf = async (file) => {
   isUploading.value = true
   const { data: presign } = await axios.post(
-    `${config.public.appUrl}/api/v1/public_ai_previews/presign`,
+    `${config.public.appUrl}/api/site/public_ai_previews/presign`,
     { filename: file.name }
   )
 
@@ -173,7 +173,7 @@ const pollStatus = async (processId) => {
   return new Promise((resolve, reject) => {
     const interval = setInterval(async () => {
       try {
-        const { data } = await axios.get(`${config.public.appUrl}/api/v1/public_ai_previews/status`, {
+        const { data } = await axios.get(`${config.public.appUrl}/api/site/public_ai_previews/status`, {
           params: { process_id: processId }
         })
         if (data.status === 'success') {
@@ -206,7 +206,7 @@ const handleGenerate = async () => {
       body.prompt = prompt.value
     }
 
-    const { data } = await axios.post(`${config.public.appUrl}/api/v1/public_ai_previews`, body)
+    const { data } = await axios.post(`${config.public.appUrl}/api/site/public_ai_previews`, body)
     const result = await pollStatus(data.process_id)
 
     generatedTitle.value = result.form_name
