@@ -5,14 +5,19 @@
         src="/UI Block/quotation.svg"
         class="quotation-marks mb-2"
         alt="Quotation marks"
+        width="30"
+        height="30"
         loading="lazy"
       />
       <p class="mt-1">{{ testimonial.comment }}</p>
     </div>
     <div class="d-flex">
       <nuxt-img
-        :src="getIconSrc(testimonial.profileImage)"
-        :alt="testimonial?.profileImage?.imageAlt || 'User profile'"
+        v-if="profileImg.src"
+        :src="profileImg.src"
+        :alt="profileImg.alt || 'User profile'"
+        :width="profileImg.width || 48"
+        :height="profileImg.height || 48"
         class="img-fluid testimonial__user"
         loading="lazy"
       />
@@ -28,6 +33,8 @@
 </template>
 
 <script>
+import { getStrapiImage } from '@/utils/strapiImage'
+
 export default {
   props: {
     testimonial: {
@@ -35,35 +42,9 @@ export default {
       required: true
     }
   },
-  methods: {
-    getIconSrc(iconObject) {
-      if (!iconObject) return '';
-
-      // Handle different Strapi image structures
-      if (iconObject.imageUrl) {
-        return iconObject.imageUrl;
-      }
-
-      if (iconObject.image) {
-        if (iconObject.image.url) {
-          return iconObject.image.url;
-        }
-
-        if (iconObject.image.data) {
-          if (iconObject.image.data.attributes && iconObject.image.data.attributes.url) {
-            return iconObject.image.data.attributes.url;
-          }
-
-          if (Array.isArray(iconObject.image.data) &&
-              iconObject.image.data[0] &&
-              iconObject.image.data[0].attributes &&
-              iconObject.image.data[0].attributes.url) {
-            return iconObject.image.data[0].attributes.url;
-          }
-        }
-      }
-
-      return '';
+  computed: {
+    profileImg() {
+      return getStrapiImage(this.testimonial?.profileImage)
     }
   }
 }

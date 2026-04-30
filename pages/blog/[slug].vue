@@ -164,10 +164,13 @@ const { data: blogResponse } = await useAsyncData(`blog-${route.params.slug}`, a
       throw createError({ statusCode: 404, message: 'Page not found' })
     }
 
+    const cover = blog.attributes.coverImg?.data?.attributes
     const blogData = {
       id: blog.id,
       ...blog.attributes,
-      coverImg: blog.attributes.coverImg?.data?.attributes?.url,
+      coverImg: cover?.url,
+      coverImgWidth: cover?.width || 1200,
+      coverImgHeight: cover?.height || 630,
       metaImage: blog.attributes.metaImage?.map((item) => item.imageURL) || [],
       readingStats: readingTime(blog.attributes.body || ''),
     }
@@ -176,12 +179,17 @@ const { data: blogResponse } = await useAsyncData(`blog-${route.params.slug}`, a
     const allBlogs = await getAllBlogs()
     const otherBlogs = allBlogs.filter((item) => item.attributes.slug !== route.params.slug)
     const shuffled = [...otherBlogs].sort(() => Math.random() - 0.5)
-    const relatedArticles = shuffled.slice(0, 4).map((item) => ({
-      ...item.attributes,
-      id: item.id,
-      coverImg: item.attributes.coverImg?.data?.attributes?.url,
-      readingStats: readingTime(item.attributes.body || ''),
-    }))
+    const relatedArticles = shuffled.slice(0, 4).map((item) => {
+      const c = item.attributes.coverImg?.data?.attributes
+      return {
+        ...item.attributes,
+        id: item.id,
+        coverImg: c?.url,
+        coverImgWidth: c?.width || 1200,
+        coverImgHeight: c?.height || 630,
+        readingStats: readingTime(item.attributes.body || ''),
+      }
+    })
 
     return { blogData, relatedArticles }
   } catch (error) {

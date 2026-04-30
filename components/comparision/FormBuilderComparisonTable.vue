@@ -11,8 +11,9 @@
           <div class="formbuilder__logo-wrapper d-flex align-items-center justify-content-center text-center">
             <!-- If not using @nuxt/image, replace NuxtImg with img -->
             <NuxtImg
+              v-if="fb?.logo?.data?.attributes?.url"
               class="formbuilder__logo"
-              :src="fb?.logo?.data?.attributes?.url || ''"
+              :src="fb.logo.data.attributes.url"
               :alt="fb?.name || 'Form builder logo'"
               height="40"
               loading="lazy"
@@ -65,8 +66,9 @@
       >
         <div class="formbuilder__logo-wrapper d-flex align-items-center justify-content-center text-center">
           <NuxtImg
+            v-if="fb?.logo?.data?.attributes?.url"
             class="formbuilder__logo"
-            :src="fb?.logo?.data?.attributes?.url || ''"
+            :src="fb.logo.data.attributes.url"
             :alt="fb?.name || 'Form builder logo'"
             height="40"
             loading="lazy"

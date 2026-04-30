@@ -24,13 +24,15 @@
             </p>
           </div>
           <div
-            v-if="item.cardImage.image?.url || item.cardImage.imageUrl"
+            v-if="cardImg(item).src"
             class="d-flex flex-column flex-lg-row"
           >
             <nuxt-img
-              :src="item.cardImage?.image?.url || item.cardImage?.imageUrl"
+              :src="cardImg(item).src"
+              :alt="cardImg(item).alt || item?.title || 'Step image'"
+              :width="cardImg(item).width || 400"
+              :height="cardImg(item).height || 300"
               class="img-fluid my-auto"
-              :alt="item.cardImage?.imageAlt || item?.title || 'Step image'"
               loading="lazy"
             />
           </div>
@@ -42,6 +44,7 @@
 
 <script>
 import MarkdownContent from '~/components/MarkdownContent.vue'
+import { getStrapiImage } from '@/utils/strapiImage'
 
 export default {
   components: { MarkdownContent },
@@ -58,6 +61,11 @@ export default {
       type: Array,
       required: true,
     },
+  },
+  methods: {
+    cardImg(item) {
+      return getStrapiImage(item.cardImage)
+    }
   },
   computed: {
     columnClass() {

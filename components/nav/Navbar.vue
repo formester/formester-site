@@ -4,7 +4,7 @@
       <div class="container d-flex align-items-center">
         <!-- Logo -->
         <NuxtLink class="navbar-brand-wrapper" to="/">
-          <nuxt-img class="navbar-brand" src="/logo.svg" alt="Formester" />
+          <nuxt-img class="navbar-brand" src="/logo.svg" alt="Formester" width="175" height="24" />
         </NuxtLink>
 
         <!-- Mobile Toggle Button -->
@@ -18,7 +18,7 @@
           aria-label="Toggle navigation"
           @click="toggleNav"
         >
-          <nuxt-img src="/toggle.svg" alt="Nav-menu-button" />
+          <nuxt-img src="/toggle.svg" alt="Nav-menu-button" width="24" height="24" />
         </button>
 
         <!-- Navigation Menu -->
@@ -51,11 +51,16 @@
                       src="/chevron-down-gray.svg"
                       class="chevron chevron-gray"
                       alt="Chevron"
+                      width="24"
+                      height="24"
                       :class="{ open: dropdownActive }"
                     />
                     <nuxt-img
                       src="/chevron-down-colored.svg"
                       class="chevron chevron-colored"
+                      alt=""
+                      width="24"
+                      height="24"
                       :class="{ open: dropdownActive }"
                     />
                   </span>
@@ -78,11 +83,16 @@
                       src="/chevron-down-gray.svg"
                       class="chevron chevron-gray"
                       alt="Chevron"
+                      width="24"
+                      height="24"
                       :class="{ open: dropdownActive }"
                     />
                     <nuxt-img
                       src="/chevron-down-colored.svg"
                       class="chevron chevron-colored"
+                      alt=""
+                      width="24"
+                      height="24"
                       :class="{ open: dropdownActive }"
                     />
                   </span>

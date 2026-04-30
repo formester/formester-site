@@ -1,9 +1,13 @@
 <template>
-  <NuxtLink :to="articleLink">
+  <NuxtLink v-if="article" :to="articleLink">
     <img
+      v-if="article.coverImg"
       :src="article.coverImg"
       class="rounded img-fluid"
       :alt="article.coverImgAlt"
+      :width="article.coverImgWidth || 1200"
+      :height="article.coverImgHeight || 630"
+      loading="lazy"
     />
     <div class="d-flex flex-column align-items-start mt-2">
       <h3 class="article__title">{{ article.title }}</h3>
@@ -22,6 +26,7 @@ export default {
   },
   computed: {
     articleLink() {
+      if (!this.article) return '#'
       if (this.article.type) {
         return this.article.link
       }

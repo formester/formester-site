@@ -7,6 +7,9 @@
         :class="{ hidden: loading }"
         :src="previewImageUrl"
         :alt="template.name"
+        width="1200"
+        height="738"
+        loading="lazy"
         @load="loading = false"
       />
       <div class="template-content">

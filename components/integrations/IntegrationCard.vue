@@ -9,9 +9,12 @@
       <div class="icon-wrapper">
         <div class="icon-glow"></div>
         <nuxt-img
-          :src="getImgUrl(app)"
-          :alt="app.name"
+          :src="appImg.src"
+          :alt="appImg.alt || app.name"
+          :width="appImg.width || 32"
+          :height="appImg.height || 32"
           class="app-icon"
+          loading="lazy"
         />
       </div>
 
@@ -24,21 +27,25 @@
 </template>
 
 <script>
+import { getStrapiImage } from '@/utils/strapiImage'
+
 export default {
   props: ['app'],
+  computed: {
+    appImg() {
+      const fromIcon = getStrapiImage(this.app.icon, { alt: this.app.name })
+      if (fromIcon.src) return fromIcon
+      if (this.app.image || this.app.imageUrl) {
+        const fromImage = getStrapiImage(this.app.image || this.app, { alt: this.app.name })
+        if (fromImage.src) return fromImage
+      }
+      if (this.app.img) {
+        return { src: `/integrations/${this.app.img}`, alt: this.app.name, width: null, height: null }
+      }
+      return { src: '', alt: this.app.name, width: null, height: null }
+    }
+  },
   methods: {
-    getImgUrl(app) {
-      if (app.icon?.image?.url || app.icon?.imageUrl) {
-        return app.icon.image?.url || app.icon.imageUrl
-      }
-      if (app.image?.url || app.imageUrl) {
-        return app.image?.url || app.imageUrl
-      }
-      if (app.img) {
-        return `/integrations/${app.img}`
-      }
-      return ''
-    },
     getLink(app) {
       return app.url || app.helpArticle || app.link
     }

@@ -1,13 +1,17 @@
 <template>
   <div class="integration-card">
     <div class="tools-container">
-      <img
-        v-for="tool in tools"
-        :key="tool.name"
-        :src="tool.icon"
-        :alt="tool.name"
-        class="tool-icon"
-      />
+      <template v-for="tool in tools" :key="tool.name">
+        <img
+          v-if="tool.icon"
+          :src="tool.icon"
+          :alt="tool.name"
+          class="tool-icon"
+          width="48"
+          height="48"
+          loading="lazy"
+        />
+      </template>
     </div>
     <div class="action">{{ action }}</div>
   </div>
