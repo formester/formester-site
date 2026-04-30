@@ -51,6 +51,9 @@ const keywords = [
 
 export default (meta) => {
   return [
+    ...(meta && meta.updatedAt
+      ? [{ property: 'article:modified_time', content: meta.updatedAt }]
+      : []),
     {
       hid: 'description',
       name: 'description',
