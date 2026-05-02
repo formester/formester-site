@@ -116,7 +116,7 @@ export default defineNuxtConfig({
     minify: false, // Disable minification to save memory
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/sitemap.xml'],
+      routes: ['/', '/sitemap.xml', '/preview'],
       ignore: ['/api'],
       concurrency: 15, // Increased: pages now render from in-memory cache
       interval: 10, // Reduced: minimal API I/O with batch caching
