@@ -1,7 +1,6 @@
 <template>
   <section :class="{ container: useContainer }">
-    <iframe ref="iframeRef" :srcdoc="source" sandbox="allow-same-origin allow-scripts" frameborder="0"
-      class="raw-html-frame" @load="onIframeLoad" />
+    <div ref="containerRef" v-html="source" class="raw-html-content" />
   </section>
 </template>
 
@@ -17,46 +16,27 @@ const props = defineProps({
   }
 })
 
-const iframeRef = ref(null)
+const containerRef = ref(null)
 const source = computed(() => props.markup || '')
-const observer = ref(null)
 
-function syncHeight() {
-  const iframe = iframeRef.value
-  if (!iframe) return
-  const height = iframe.contentDocument?.body?.scrollHeight
-  if (height) iframe.style.height = height + 'px'
+function executeScripts() {
+  const container = containerRef.value
+  if (!container) return
+  container.querySelectorAll('script').forEach((original) => {
+    const script = document.createElement('script')
+    Array.from(original.attributes).forEach(({ name, value }) =>
+      script.setAttribute(name, value)
+    )
+    script.textContent = original.textContent
+    original.replaceWith(script)
+  })
 }
 
-function setupObserver() {
-  const body = iframeRef.value?.contentDocument?.body
-  if (!body) return console.warn('Unable to access iframe body for ResizeObserver')
-  observer.value?.disconnect()
-  observer.value = new ResizeObserver(syncHeight)
-  observer.value.observe(body)
-}
-
-function onIframeLoad() {
-  syncHeight()
-  setupObserver()
-}
-
-onMounted(() => {
-  const iframe = iframeRef.value
-  if (iframe?.contentDocument?.readyState === 'complete') {
-    // SSR hydration: load event already fired before listener was attached
-    syncHeight()
-    setupObserver()
-  }
-})
-
-onUnmounted(() => observer.value?.disconnect())
+watch(
+  () => props.markup,
+  () => {
+    setTimeout(executeScripts, 0)
+  },
+  { immediate: true }
+)
 </script>
-
-<style scoped>
-.raw-html-frame {
-  width: 100%;
-  border: none;
-  min-height: 100px;
-}
-</style>
