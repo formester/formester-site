@@ -66,7 +66,12 @@
           >
             {{ buttonText }}
           </button>
-          <p v-if="footerText" class="canvas-footer">{{ footerText }}</p>
+          <p v-if="footerItems && footerItems.length" class="canvas-footer">
+            <template v-for="(item, i) in footerItems" :key="i">
+              <span v-if="i > 0" class="canvas-footer__sep">·</span>
+              {{ item.text }}
+            </template>
+          </p>
         </div>
 
         <!-- State: Generating -->
@@ -122,7 +127,11 @@ const props = defineProps({
   buttonText: { type: String, default: 'Generate Form' },
   placeholder: { type: String, default: 'Describe the form you need…' },
   badgeText: { type: String, default: 'TRY IT NOW. NO SIGN-UP REQUIRED.' },
-  footerText: { type: String, default: 'Free forever · No credit card · Your prompt stays private' },
+  footerItems: { type: Array, default: () => [
+    { text: 'Free forever' },
+    { text: 'No credit card' },
+    { text: 'Your prompt stays private' },
+  ]},
 })
 
 const CMS_TYPE_MAP = {
@@ -439,6 +448,10 @@ const claimUrl = computed(() =>
   font-size: 12px;
   color: var(--clr-text-secondary);
   text-align: center;
+}
+
+.canvas-footer__sep {
+  margin: 0 4px;
 }
 
 /* ─── Loading state ─────────────────────────────────────── */
