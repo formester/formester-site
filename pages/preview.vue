@@ -22,17 +22,17 @@ import PageComponents from '@/components/PageComponents.vue'
 const route = useRoute()
 const config = useRuntimeConfig()
 
-const { token } = route.query
+const { token, type } = route.query
 
-if (process.client && !token) {
-  throw createError({ statusCode: 400, statusMessage: 'Missing preview token', fatal: true })
+if (process.client && (!token || !type)) {
+  throw createError({ statusCode: 400, statusMessage: 'Missing preview token or type', fatal: true })
 }
 
 const { data: previewData, pending, error: fetchError } = await useAsyncData(
   `preview-${token}`,
   async () => {
     const { data } = await axios.get(
-      `${config.public.strapiUrl}/api/preview-entry?token=${encodeURIComponent(token)}`,
+      `${config.public.strapiUrl}/api/preview-entry?token=${encodeURIComponent(token)}&type=${encodeURIComponent(type)}`,
       { timeout: 15000 }
     )
 
