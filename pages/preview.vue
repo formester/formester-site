@@ -66,7 +66,10 @@ const { data: previewData, pending, error: fetchError } = await useAsyncData(
 
 const components = computed(() => previewData.value?.components || [])
 
-useHead(() => ({ title: previewData.value?.title || 'Draft Preview' }))
+useHead(() => ({
+  title: previewData.value?.title || 'Draft Preview',
+  meta: [{ name: 'robots', content: 'noindex, nofollow' }],
+}))
 </script>
 
 <style scoped>
