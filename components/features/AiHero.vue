@@ -80,13 +80,11 @@
             <span class="loading-dot"></span>
             Generating your form…
           </div>
-          <div class="shimmer sh-title"></div>
-          <div class="shimmer sh-label"></div>
-          <div class="shimmer sh-input"></div>
-          <div class="shimmer sh-label short"></div>
-          <div class="shimmer sh-input"></div>
-          <div class="shimmer sh-label"></div>
-          <div class="shimmer sh-options"></div>
+          <p class="loading-hint">This may take a minute. Hang tight!</p>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-fill" :style="{ width: progress + '%' }"></div>
+          </div>
+          <div class="progress-text">{{ progress }}% completed</div>
         </div>
 
         <!-- State: Result -->
@@ -148,6 +146,34 @@ const isGenerating = ref(false)
 const surveyUrl = ref('')
 const generatedTitle = ref('')
 const previewToken = ref('')
+const progress = ref(0)
+let progressInterval = null
+let slowInterval = null
+
+function startProgress() {
+  progress.value = 0
+  // Phase 1 — fast initial burst to 60%
+  progressInterval = setInterval(() => {
+    if (progress.value < 60) {
+      progress.value = Math.min(60, progress.value + Math.floor(Math.random() * 5) + 1)
+    } else {
+      clearInterval(progressInterval)
+    }
+  }, 1000)
+  // Phase 2 — slow crawl from 60% to 97%
+  slowInterval = setInterval(() => {
+    if (progress.value >= 60 && progress.value < 97) {
+      progress.value = Math.min(97, progress.value + Math.floor(Math.random() * 5) + 1)
+    }
+  }, 5000)
+}
+
+function stopProgress() {
+  clearInterval(progressInterval)
+  clearInterval(slowInterval)
+  progressInterval = null
+  slowInterval = null
+}
 
 // PDF refs (commented out until prompt+PDF UX is finalized)
 // const isUploading = ref(false)
@@ -210,6 +236,7 @@ const handleGenerate = async () => {
   surveyUrl.value = ''
   generatedTitle.value = ''
   previewToken.value = ''
+  startProgress()
 
   try {
     const body = { prompt: prompt.value, type: apiType.value }
@@ -223,10 +250,15 @@ const handleGenerate = async () => {
     const { data } = await axios.post(`${config.public.appUrl}/api/site/public_ai_previews`, body)
     const result = await pollStatus(data.process_id)
 
+    stopProgress()
+    progress.value = 100
+    await new Promise((resolve) => setTimeout(resolve, 500))
+
     generatedTitle.value = result.form_name
     surveyUrl.value = result.survey_url
     previewToken.value = result.preview_token
   } catch (err) {
+    stopProgress()
     console.error('Generation failed:', err)
     $notify({ text: 'Unable to generate your form. Please try again.', type: 'error' })
   } finally {
@@ -487,24 +519,34 @@ const claimUrl = computed(() =>
   50%       { opacity: 0.4; transform: scale(0.7); }
 }
 
-.shimmer {
-  background: linear-gradient(90deg, #f2f4f7 25%, #e8eaed 50%, #f2f4f7 75%);
-  background-size: 200% 100%;
-  animation: shimmer 1.4s infinite;
-  border-radius: 6px;
-  margin-bottom: 12px;
+
+.loading-hint {
+  font-size: 13px;
+  color: var(--clr-text-secondary);
+  margin-bottom: 24px;
 }
 
-@keyframes shimmer {
-  0%   { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+.progress-bar-wrap {
+  width: 100%;
+  height: 6px;
+  background: var(--clr-secondary-gray-stroke);
+  border-radius: 100px;
+  overflow: hidden;
+  margin-bottom: 8px;
 }
 
-.sh-title   { height: 20px; width: 50%; margin-bottom: 20px; }
-.sh-label   { height: 11px; width: 38%; }
-.sh-label.short { width: 28%; }
-.sh-input   { height: 34px; width: 100%; margin-bottom: 18px; }
-.sh-options { height: 56px; width: 100%; margin-bottom: 18px; }
+.progress-bar-fill {
+  height: 100%;
+  background: var(--clr-primary);
+  border-radius: 100px;
+  transition: width 0.5s ease;
+}
+
+.progress-text {
+  font-size: 12px;
+  color: var(--clr-text-secondary);
+  text-align: right;
+}
 
 /* ─── Result state ──────────────────────────────────────── */
 .canvas-result {
