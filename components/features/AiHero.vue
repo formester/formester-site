@@ -3,7 +3,7 @@
     <div class="ai-hero__header">
       <div class="ai-hero__badge">
         <span class="dot"></span>
-        TRY IT NOW. NO SIGN-UP REQUIRED.
+        {{ badgeText }}
       </div>
       <h1 class="ai-hero__title">
         <span
@@ -25,7 +25,7 @@
           <textarea
             v-model="prompt"
             class="canvas-textarea"
-            placeholder="Describe the form you need…"
+            :placeholder="placeholder"
             rows="4"
           ></textarea>
 
@@ -64,9 +64,9 @@
             :disabled="!prompt"
             @click="handleGenerate"
           >
-            Generate Form
+            {{ buttonText }}
           </button>
-          <p class="canvas-footer">Free forever · No credit card · Your prompt stays private</p>
+          <p v-if="footerText" class="canvas-footer">{{ footerText }}</p>
         </div>
 
         <!-- State: Generating -->
@@ -118,7 +118,11 @@ const props = defineProps({
   title: { type: Array, default: () => [] },
   description: String,
   type: { type: String, default: 'form' },
-  suggestions: { type: Array, default: () => [] }
+  suggestions: { type: Array, default: () => [] },
+  buttonText: { type: String, default: 'Generate Form' },
+  placeholder: { type: String, default: 'Describe the form you need…' },
+  badgeText: { type: String, default: 'TRY IT NOW. NO SIGN-UP REQUIRED.' },
+  footerText: { type: String, default: 'Free forever · No credit card · Your prompt stays private' },
 })
 
 const CMS_TYPE_MAP = {
@@ -129,6 +133,7 @@ const CMS_TYPE_MAP = {
 const apiType = computed(() => CMS_TYPE_MAP[props.type] || props.type || 'form')
 
 const config = useRuntimeConfig()
+const { $notify } = useNuxtApp()
 const prompt = ref('')
 const isGenerating = ref(false)
 const surveyUrl = ref('')
@@ -150,6 +155,7 @@ const setPrompt = (text) => { prompt.value = text }
 // }
 
 const reset = () => {
+  prompt.value = ''
   surveyUrl.value = ''
   generatedTitle.value = ''
   previewToken.value = ''
@@ -213,7 +219,7 @@ const handleGenerate = async () => {
     previewToken.value = result.preview_token
   } catch (err) {
     console.error('Generation failed:', err)
-    alert('Unable to connect to AI service. Please try again.')
+    $notify({ text: 'Unable to generate your form. Please try again.', type: 'error' })
   } finally {
     isGenerating.value = false
     // isUploading.value = false
