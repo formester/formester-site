@@ -8,6 +8,12 @@
         {{ fetchError.message || 'Failed to load draft' }}
       </div>
       <PageComponents v-else-if="components.length" :components="components" />
+      <div
+        v-else-if="previewData?.type === 'blog' && blogData"
+        class="container mw-920 blog-preview-container"
+      >
+        <BlogPostView :blog-data="blogPostViewData" />
+      </div>
       <div v-else style="padding: 4rem; text-align: center; color: #666">
         No components found for this draft.
       </div>
@@ -50,12 +56,28 @@ const { data: previewData, pending, error: fetchError } = await useAsyncData(
     }
 
     if (data.type === 'blog') {
-      // transformer denied for blogs — attributes may still be wrapped
       const item = data.data
       return {
         type: 'blog',
         components: [],
-        title: item.attributes?.metaTitle || item.attributes?.title || item.metaTitle || item.title || 'Draft Blog Preview',
+        title: item.metaTitle || item.attributes?.metaTitle || item.title || item.attributes?.title || 'Draft Blog Preview',
+        blogData: {
+          title: item.title || item.attributes?.title,
+          body: item.body || item.attributes?.body || '',
+          author: item.author || item.attributes?.author,
+          authorProfile: item.authorProfile || item.attributes?.authorProfile,
+          coverImg: item.coverImg?.url || item.attributes?.coverImg?.data?.attributes?.url,
+          coverImgAlt: item.coverImgAlt || item.attributes?.coverImgAlt,
+        },
+      }
+    }
+
+    if (data.type === 'feature') {
+      const item = data.data
+      return {
+        type: 'feature',
+        components: item.components || [],
+        title: item.meta?.title || 'Draft Feature Preview',
       }
     }
 
@@ -65,6 +87,17 @@ const { data: previewData, pending, error: fetchError } = await useAsyncData(
 )
 
 const components = computed(() => previewData.value?.components || [])
+const blogData = computed(() => previewData.value?.blogData)
+
+const blogPostViewData = computed(() => {
+  if (!blogData.value) return null
+  return {
+    title: blogData.value.title,
+    body: blogData.value.body,
+    author: blogData.value.author,
+    authorProfile: blogData.value.authorProfile,
+  }
+})
 
 useHead(() => ({
   title: previewData.value?.title || 'Draft Preview',
@@ -73,23 +106,12 @@ useHead(() => ({
 </script>
 
 <style scoped>
-.preview-banner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-  background: #4945ff;
-  color: #fff;
-  text-align: center;
-  padding: 10px 16px;
-  font-size: 14px;
-  font-family: sans-serif;
+.mw-920 {
+  max-width: 920px;
 }
 
-.preview-banner-link {
-  color: #fff;
-  margin-left: 16px;
-  text-decoration: underline;
+.blog-preview-container {
+  margin-top: 5rem;
+  padding: 2rem;
 }
 </style>
