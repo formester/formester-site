@@ -96,7 +96,7 @@
               Try another
             </button>
             <span class="toolbar-title">{{ generatedTitle }}</span>
-            <a :href="claimUrl" target="_blank" class="toolbar-cta">Use this form free →</a>
+            <a :href="claimUrl" target="_blank" class="toolbar-cta">Edit this form →</a>
           </div>
 
           <!-- Live form preview via iframe -->
