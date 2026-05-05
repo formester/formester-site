@@ -7,6 +7,7 @@ let cachePromise = null
 function processItem(item) {
   const components = item?.components || []
   const meta = item?.meta || null
+  const updatedAt = item?.updatedAt || null
   let head = {}
   let jsonld = []
 
@@ -35,6 +36,7 @@ function processItem(item) {
     mainImage: meta?.mainImage?.imageUrl || meta?.mainImage?.image?.url,
     mainImageAlt: meta?.mainImage?.imageAlt,
     keywords: meta?.keywords?.map((k) => k?.text),
+    updatedAt,
   }
   const siteMetaData = getSiteMeta(metaData)
   head = {
