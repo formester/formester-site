@@ -5,7 +5,7 @@
       <p>{{ description }}</p>
       <div class="trustbadge-wrapper">
         <div
-          v-for="(badge, i) in badges"
+          v-for="(badge, i) in displayBadges"
           :key="badge.id || i"
           class="rating-wrapper"
         >
@@ -35,6 +35,36 @@
 <script>
 import { getStrapiImage } from '@/utils/strapiImage'
 
+const stars5 = { url: '/5-stars.svg', alternativeText: '5 stars', width: 139, height: 24 }
+const stars4_5 = { url: '/4.5-stars.svg', alternativeText: '4.5 stars', width: 139, height: 24 }
+
+const DEFAULT_BADGES = [
+  {
+    id: 'default-product-hunt',
+    ratingNumber: '5/5',
+    logo: { url: '/product-hunt.svg', alternativeText: 'Product Hunt', width: 171, height: 40 },
+    stars: stars5,
+  },
+  {
+    id: 'default-trustpilot',
+    ratingNumber: '4.4/5',
+    logo: { url: '/trustpilot.svg', alternativeText: 'Trustpilot', width: 163, height: 40 },
+    stars: stars4_5,
+  },
+  {
+    id: 'default-capterra',
+    ratingNumber: '5/5',
+    logo: { url: '/capterra.svg', alternativeText: 'Capterra', width: 174, height: 40 },
+    stars: stars5,
+  },
+  {
+    id: 'default-g2-crowd',
+    ratingNumber: '4.7/5',
+    logo: { url: '/g2-crowd.svg', alternativeText: 'G2 Crowd', width: 40, height: 40 },
+    stars: stars4_5,
+  },
+]
+
 export default {
   props: {
     title: {
@@ -47,6 +77,11 @@ export default {
     badges: {
       type: Array,
       default: () => [],
+    },
+  },
+  computed: {
+    displayBadges() {
+      return this.badges && this.badges.length ? this.badges : DEFAULT_BADGES
     },
   },
   methods: {
@@ -94,7 +129,8 @@ export default {
 }
 
 .rating-wrapper {
-  min-width: 270px;
+  flex: 1 1 0;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -110,6 +146,8 @@ export default {
 }
 .logo {
   height: 40px;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .trustbadge-wrapper {
@@ -131,7 +169,7 @@ export default {
   }
 
   .rating-wrapper {
-    min-width: 240px;
+    flex: 1 1 calc(50% - 24px);
     padding-inline: 32px;
     padding-top: 24px;
     padding-bottom: 24px;

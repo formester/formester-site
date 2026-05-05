@@ -17,7 +17,7 @@
         >
           <nuxt-img
             v-if="cardImg(item).src"
-            style="width: 69px"
+            class="benefit-icon"
             :src="cardImg(item).src"
             :alt="cardImg(item).alt || item?.title || 'Feature icon'"
             :width="cardImg(item).width || 69"
@@ -68,4 +68,10 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+.benefit-icon {
+  width: 69px;
+  height: 69px;
+  object-fit: contain;
+}
+</style>
