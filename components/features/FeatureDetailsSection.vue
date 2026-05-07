@@ -1,7 +1,7 @@
 <template>
   <div class="container py-5">
     <SectionTitle :heading="title" />
-    <p class="hero__subheading" v-if="description">
+    <p class="hero__subheading text-center" v-if="description">
       {{ description }}
     </p>
     <div class="row py-5">
