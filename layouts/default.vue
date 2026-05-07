@@ -1,5 +1,5 @@
 <template>
-  <div class="layout-wrapper">
+  <div class="layout-wrapper opacity-100">
     <Navbar />
     <main class="main-content">
       <NuxtPage />
