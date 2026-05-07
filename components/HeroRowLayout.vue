@@ -31,7 +31,7 @@
             :alt="heroImg.alt || 'Hero image'"
             :width="heroImg.width"
             :height="heroImg.height"
-            class="img-fluid hero__image"
+            class="hero__image"
           />
 
           <!-- Video thumbnail with play button when video is provided -->
@@ -150,7 +150,8 @@ export default {
 }
 
 .hero__image {
-  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .click-triggers {
