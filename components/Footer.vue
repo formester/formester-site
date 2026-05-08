@@ -1,532 +1,303 @@
 <template>
-  <footer>
-    <div class="footer__container text-center">
-      <NuxtLink to="/">
-        <div class="footer__logo">
-          <nuxt-img src="/logo-light.svg" alt="Formester" width="169" height="24" />
-        </div>
-      </NuxtLink>
-      <section class="mt-5 container">
-        <div class="row">
-          <div class="col-lg-3 col-sm-6 mb-4 mb-md-0 text-lg-start">
-            <h3 class="text-uppercase footer__items--heading mb-3">
-              Formester
-            </h3>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
 
-            <ul class="list-unstyled mt-2">
-              <li class="mt-2">
-                <NuxtLink to="/" class="footer__link">Home</NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/pricing/" class="footer__link">Pricing</NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/blog/" class="footer__link">Blog</NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/templates/" class="footer__link"
-                  >Templates</NuxtLink
-                >
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/integrations/" class="footer__link"
-                  >Integrations</NuxtLink
-                >
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/plugins/" class="footer__link">Plugins</NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/enterprise/" class="footer__link">
-                  Enterprise
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink
-                  to="/custom-form-building-service/"
-                  class="footer__link"
-                >
-                  Custom Form Building
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink
-                  to="/affiliate-program/"
-                  class="footer__link"
-                >
-                 Become our Affiliate!
-                </NuxtLink>
-              </li>
-            </ul>
-
-            <h3 class="text-uppercase footer__items--heading mb-3 mt-5">
-              AI Solutions
-            </h3>
-
-            <ul class="list-unstyled mt-2">
-              <li class="mt-2">
-                <NuxtLink to="/ai-form-generator/" class="footer__link"
-                  >AI Form Generator</NuxtLink
-                >
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/ai-quiz-maker/" class="footer__link"
-                  >AI Quiz Maker</NuxtLink
-                >
-              </li>
-              <li class="mt-2">
-                <NuxtLink
-                  to="/build-conditional-logic-forms-with-ai/"
-                  class="footer__link"
-                  >AI Conditional Logic Forms</NuxtLink
-                >
-              </li>
-              <li class="mt-2">
-                <NuxtLink
-                  to="/ai-powered-multilingual-forms/"
-                  class="footer__link"
-                  >AI Auto Translation</NuxtLink
-                >
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/poll-maker/" class="footer__link"
-                  >AI Poll Maker</NuxtLink
-                >
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/test-creator/" class="footer__link"
-                  >AI Test Creator</NuxtLink
-                >
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/ai-survey-generator/" class="footer__link">
-                  AI Survey Generator
-                </NuxtLink>
-              </li>
-            </ul>
-          </div>
-
-          <div
-            class="col-lg-3 col-sm-6 mb-4 mb-md-0 mt-0 mt-lg-0 text-lg-start"
-          >
-            <h3 class="text-uppercase footer__items--heading mb-3">
-              Industries
-            </h3>
-
-            <ul class="list-unstyled mt-2">
-              <li class="mt-2">
-                <NuxtLink
-                  to="/use-case/software-and-technology/"
-                  class="footer__link"
-                  >Software and Technology</NuxtLink
-                >
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/use-case/human-resource/" class="footer__link"
-                  >Human Resource</NuxtLink
-                >
-              </li>
-            </ul>
-
-            <h3 class="text-uppercase footer__items--heading mb-3 mt-5">
-              <NuxtLink to="/vs/">Compare</NuxtLink>
-            </h3>
-
-            <ul class="list-unstyled mt-2">
-              <li class="mt-2">
-                <NuxtLink to="/comparison-tool/" class="footer__link">
-                  Compare Form Builders
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/typeform-alternative/" class="footer__link">
-                  Formester vs Typeform
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/jotform-alternative/" class="footer__link">
-                  Formester vs Jotform
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/google-forms-alternative/" class="footer__link">
-                  Formester vs Google Forms
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink
-                  to="/microsoft-forms-alternative/"
-                  class="footer__link"
-                >
-                  Formester vs Microsoft Forms
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/forms-app-alternative/" class="footer__link">
-                  Formester vs Forms App
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/zoho-forms-alternative/" class="footer__link">
-                  Formester vs Zoho Forms
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/paperform-alternative/" class="footer__link">
-                  Formester vs Paperform
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/formstack-alternative/" class="footer__link">
-                  Formester vs Formstack
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/tally-forms-alternative/" class="footer__link">
-                  Formester vs Tally Forms
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/fillout-alternative/" class="footer__link">
-                  Formester vs Fillout
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/gravity-forms-alternative/" class="footer__link">
-                  Formester vs Gravity Forms
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/wp-forms-alternative/" class="footer__link">
-                  Formester vs WPForms
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/surveymonkey-alternative/" class="footer__link">
-                  Formester vs SurveyMonkey
-                </NuxtLink>
-              </li>
-            </ul>
-          </div>
-
-          <div
-            class="col-lg-3 col-sm-6 mb-4 mb-md-0 mt-0 mt-sm-4 mt-lg-0 text-lg-start"
-          >
-            <h3 class="text-uppercase footer__items--heading mb-3">
-              Competitor Insights
-            </h3>
-
-            <ul class="list-unstyled mt-2">
-              <li class="mt-2">
-                <NuxtLink to="/jotform-101/" class="footer__link">
-                  Jotform
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/typeform-101/" class="footer__link">
-                  Typeform
-                </NuxtLink>
-              </li>
-            </ul>
-
-            <h3 class="text-uppercase footer__items--heading mb-3 mt-5">
-              Plugins
-            </h3>
-
-            <ul class="list-unstyled mt-2">
-              <li class="mt-2">
-                <NuxtLink to="/plugins/wordpress/" class="footer__link">
-                  WordPress
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/plugins/webflow/" class="footer__link">
-                  Webflow
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/plugins/wix-forms/" class="footer__link">
-                  Wix
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink
-                  to="/plugins/shopify-form-builder/"
-                  class="footer__link"
-                >
-                  Shopify
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink
-                  to="/plugins/canva-form-builder/"
-                  class="footer__link"
-                >
-                  Canva
-                </NuxtLink>
-              </li>
-            </ul>
-
-            <h3 class="text-uppercase footer__items--heading mb-3 mt-5">
-              Tools
-            </h3>
-
-            <ul class="list-unstyled mt-2">
-              <li class="mt-2">
-                <NuxtLink
-                  to="/tools/event-registration-software/"
-                  class="footer__link"
-                >
-                Event Registration Software
-                </NuxtLink>
-              </li>
-            </ul>
-          </div>
-
-          <div
-            class="col-lg-3 col-sm-6 mb-4 mb-md-0 mt-0 mt-sm-4 mt-lg-0 text-lg-start"
-          >
-            <h3 class="text-uppercase footer__items--heading mb-3">Support</h3>
-
-            <ul class="list-unstyled mt-2">
-              <li class="mt-2">
-                <NuxtLink to="/contact/" class="footer__link">
-                  Contact Us
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/about-us/" class="footer__link">
-                  About Us
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/status/" class="footer__link">
-                  Status
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/privacy/" class="footer__link">
-                  Privacy Policy
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/security/" class="footer__link">
-                  Security
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/terms-of-service/" class="footer__link">
-                  Terms of Service
-                </NuxtLink>
-              </li>
-            <li class="mt-2">
-                <NuxtLink to="/dpa/" class="footer__link">
-                  DPA
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <a href="https://docs.formester.com/" class="footer__link">
-                  Documentation
-                </a>
-              </li>
-              <li class="mt-2">
-                <a href="https://help.formester.com/en/" class="footer__link">
-                  Help Centre
-                </a>
-              </li>
-            </ul>
-
-            <h3 class="text-uppercase footer__items--heading mb-3 mt-5">
-              Use Cases
-            </h3>
-
-            <ul class="list-unstyled mt-2">
-              <li class="mt-2">
-                <NuxtLink
-                  to="/case-study/using-formester-for-lead-generation-success/"
-                  class="footer__link"
-                >
-                  Formester for Lead Generation Success
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink
-                  to="/use-case/formester-for-finance/"
-                  class="footer__link"
-                >
-                  Formester for Finance
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink
-                  to="/use-case/formester-for-training-and-assessments/"
-                  class="footer__link"
-                >
-                  Formester for Training & Assessments
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink
-                  to="/use-case/formester-for-compliance/"
-                  class="footer__link"
-                >
-                  Formester for Compliance
-                </NuxtLink>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <div class="divider mt-4"></div>
-      <div class="container">
-        <div class="footer__bottom">
-          <div class="socials">
-            <a
-              href="https://www.reddit.com/r/Formester/"
-              class="mx-1 my-2 inline-block"
-              target="_blank"
-              ><nuxt-img
-                src="/social/reddit.svg"
-                alt="Formester Reddit community"
-                width="32"
-                height="32"
-                loading="lazy"
-            /></a>
-            <a
-              href="https://www.linkedin.com/company/formester-inc/"
-              class="mx-1 my-2 inline-block"
-              target="_blank"
-              ><nuxt-img
-                src="/social/linkedin.svg"
-                alt="Formester LinkedIn page"
-                width="32"
-                height="32"
-                loading="lazy"
-            /></a>
-            <a
-              href="https://www.youtube.com/channel/UCVfBesiZINubCEC9Xu5Z6gQ"
-              class="mx-1 my-2 inline-block"
-              target="_blank"
-              ><nuxt-img src="/social/youtube.svg" alt="Formester YouTube page" width="32" height="32" loading="lazy"
-            /></a>
-            <a
-              href="https://instagram.com/_formester_?utm_medium=copy_link"
-              class="mx-1 my-2 inline-block"
-              target="_blank"
-              ><nuxt-img
-                src="/social/instagram.svg"
-                alt="Formester Instagram page"
-                width="32"
-                height="32"
-                loading="lazy"
-            /></a>
-            <a
-              href="https://twitter.com/_Formester_?t=-m1pNwXvxR6KOf9kfPi9lQ&s=09"
-              class="mx-1 my-2 inline-block"
-              target="_blank"
-              ><nuxt-img src="/social/twitter.svg" alt="Formester Twitter page" width="32" height="32" loading="lazy"
-            /></a>
-            <a
-              href="https://www.facebook.com/formester"
-              class="mx-1 my-2 inline-block"
-              target="_blank"
-              ><nuxt-img
-                src="/social/facebook.svg"
-                alt="Formester Facebook page"
-                width="32"
-                height="32"
-                loading="lazy"
-            /></a>
-          </div>
-          <div class="copyright d-flex justify-content-center">
-            © {{ currentYear }} Acorn Globus. All rights reserved
-          </div>
-          <a
-            href="https://www.trustpilot.com/review/formester.com"
-            target="_blank"
-            ><nuxt-img src="/trustpilot-footer.svg" alt="Trustpilot" width="260" height="36" loading="lazy"
-          /></a>
+      <!-- Brand column -->
+      <div class="site-footer__brand">
+        <NuxtLink to="/" class="site-footer__logo-link">
+          <nuxt-img src="/logo.svg" alt="Formester" width="140" height="24" />
+        </NuxtLink>
+        <p class="site-footer__brand-desc">
+          The AI form builder for teams that move fast — without breaking compliance.
+        </p>
+        <div class="site-footer__socials">
+          <a href="https://twitter.com/_Formester_" target="_blank" rel="noopener" aria-label="X / Twitter" class="site-footer__social-icon">
+            <nuxt-img src="/social/twitter.svg" alt="X" width="16" height="16" loading="lazy" />
+          </a>
+          <a href="https://www.linkedin.com/company/formester-inc/" target="_blank" rel="noopener" aria-label="LinkedIn" class="site-footer__social-icon">
+            <nuxt-img src="/social/linkedin.svg" alt="LinkedIn" width="16" height="16" loading="lazy" />
+          </a>
+          <a href="https://www.youtube.com/channel/UCVfBesiZINubCEC9Xu5Z6gQ" target="_blank" rel="noopener" aria-label="YouTube" class="site-footer__social-icon">
+            <nuxt-img src="/social/youtube.svg" alt="YouTube" width="16" height="16" loading="lazy" />
+          </a>
+          <a href="https://instagram.com/_formester_" target="_blank" rel="noopener" aria-label="Instagram" class="site-footer__social-icon">
+            <nuxt-img src="/social/instagram.svg" alt="Instagram" width="16" height="16" loading="lazy" />
+          </a>
         </div>
       </div>
+
+      <!-- Product -->
+      <div class="site-footer__col">
+        <h3 class="site-footer__col-heading">Product</h3>
+        <ul class="site-footer__links">
+          <li><NuxtLink to="/features/" class="site-footer__link">Features</NuxtLink></li>
+          <li><NuxtLink to="/ai-form-generator/" class="site-footer__link">AI Builder</NuxtLink></li>
+          <li><NuxtLink to="/templates/" class="site-footer__link">Templates</NuxtLink></li>
+          <li><NuxtLink to="/integrations/" class="site-footer__link">Integrations</NuxtLink></li>
+          <li><NuxtLink to="/pricing/" class="site-footer__link">Pricing</NuxtLink></li>
+          <li><NuxtLink to="/blog/" class="site-footer__link">Changelog</NuxtLink></li>
+        </ul>
+      </div>
+
+      <!-- Solutions -->
+      <div class="site-footer__col">
+        <h3 class="site-footer__col-heading">Solutions</h3>
+        <ul class="site-footer__links">
+          <li><NuxtLink to="/use-case/human-resource/" class="site-footer__link">HR &amp; People</NuxtLink></li>
+          <li><NuxtLink to="/use-case/software-and-technology/" class="site-footer__link">Marketing</NuxtLink></li>
+          <li><NuxtLink to="/use-case/" class="site-footer__link">Education</NuxtLink></li>
+          <li><NuxtLink to="/use-case/" class="site-footer__link">Healthcare</NuxtLink></li>
+          <li><NuxtLink to="/use-case/" class="site-footer__link">Operations</NuxtLink></li>
+        </ul>
+      </div>
+
+      <!-- Resources -->
+      <div class="site-footer__col">
+        <h3 class="site-footer__col-heading">Resources</h3>
+        <ul class="site-footer__links">
+          <li><a href="https://docs.formester.com/" class="site-footer__link">Documentation</a></li>
+          <li><a href="https://docs.formester.com/api/" class="site-footer__link">API Reference</a></li>
+          <li><a href="https://help.formester.com/en/" class="site-footer__link">Help Center</a></li>
+          <li><NuxtLink to="/blog/" class="site-footer__link">Blog</NuxtLink></li>
+          <li><NuxtLink to="/templates/" class="site-footer__link">Form Library</NuxtLink></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div class="site-footer__col">
+        <h3 class="site-footer__col-heading">Company</h3>
+        <ul class="site-footer__links">
+          <li><NuxtLink to="/about-us/" class="site-footer__link">About</NuxtLink></li>
+          <li><NuxtLink to="/case-study/" class="site-footer__link">Customers</NuxtLink></li>
+          <li><NuxtLink to="/contact/" class="site-footer__link">Careers</NuxtLink></li>
+          <li><NuxtLink to="/security/" class="site-footer__link">Security</NuxtLink></li>
+          <li><NuxtLink to="/contact/" class="site-footer__link">Contact</NuxtLink></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="site-footer__bottom">
+      <span class="site-footer__copy">© {{ currentYear }} Formester, Inc. All rights reserved.</span>
+      <nav class="site-footer__legal">
+        <NuxtLink to="/privacy/" class="site-footer__legal-link">Privacy</NuxtLink>
+        <NuxtLink to="/terms-of-service/" class="site-footer__legal-link">Terms</NuxtLink>
+        <NuxtLink to="/security/" class="site-footer__legal-link">Security</NuxtLink>
+        <NuxtLink to="/status/" class="site-footer__legal-link">Status</NuxtLink>
+      </nav>
     </div>
   </footer>
 </template>
 
 <script setup>
 import { computed } from 'vue'
-
 const currentYear = computed(() => Math.max(new Date().getFullYear(), 2026))
 </script>
 
 <style scoped>
-.footer__bottom {
-  width: 100%;
+.site-footer {
+  background: #ffffff;
+  border-top: 1px solid #e4e7ec;
+  font-family: 'Inter', sans-serif;
+}
+
+.site-footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 40px 48px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 48px;
+}
+
+/* Brand column */
+.site-footer__logo-link {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.site-footer__brand-desc {
+  font-size: 14px;
+  color: #667085;
+  line-height: 1.65;
+  max-width: 240px;
+  margin-bottom: 20px;
+}
+
+.site-footer__socials {
   display: flex;
-  flex-direction: row;
+  gap: 8px;
+}
+
+.site-footer__social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid #e4e7ec;
+  background: #fff;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.site-footer__social-icon:hover {
+  border-color: #c7c4e8;
+  background: #f9f8ff;
+}
+
+.site-footer__social-icon img {
+  filter: brightness(0) saturate(100%) invert(45%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(90%);
+  transition: filter 0.2s;
+}
+
+.site-footer__social-icon:hover img {
+  filter: brightness(0) saturate(100%) invert(28%) sepia(60%) saturate(800%) hue-rotate(230deg) brightness(80%) contrast(100%);
+}
+
+/* Nav columns */
+.site-footer__col-heading {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #98a2b3;
+  margin-bottom: 16px;
+}
+
+.site-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.site-footer__link {
+  font-size: 14px;
+  color: #344054;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.site-footer__link:hover {
+  color: var(--clr-primary);
+}
+
+/* Bottom bar */
+.site-footer__bottom {
+  border-top: 1px solid #e4e7ec;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
+}
+
+.site-footer__copy {
+  font-size: 14px;
+  color: #98a2b3;
+}
+
+.site-footer__legal {
+  display: flex;
   gap: 24px;
-  padding: 2em 0px;
-}
-ul {
-  padding: 0;
 }
 
-.footer__container {
-  background: linear-gradient(180deg, #5b2fbd 0.01%, #502ba4 100%);
-  color: var(--clr-primary-light);
-  padding: 2em 0 1em 0;
-}
-
-.footer__logo {
-  font-size: var(--ft-subtitle);
-  font-weight: 600;
-  text-transform: uppercase;
-  color: white;
-}
-
-.footer__items--heading {
+.site-footer__legal-link {
   font-size: 14px;
-  line-height: 21px;
-  letter-spacing: 0.02em;
-  color: #f7f3ff;
+  color: #667085;
+  text-decoration: none;
+  transition: color 0.15s;
 }
 
-.footer__items--heading a {
-  color: #f7f3ff;
+.site-footer__legal-link:hover {
+  color: var(--clr-primary);
 }
 
-.footer__link {
-  font-size: 14px;
-  line-height: 21px;
-  color: #f7f3ff;
+/* Responsive */
+@media (max-width: 1100px) {
+  .site-footer__inner {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    gap: 32px;
+    padding: 56px 32px 40px;
+  }
 }
 
-.footer__link:hover {
-  color: white;
-  text-decoration: underline;
-}
-
-.divider {
-  width: 70%;
-  background-color: rgba(146, 146, 146, 0.2);
-  height: 2px;
-  margin: auto;
-}
-
-.copyright {
-  font-size: 14px;
-}
-
-@media only screen and (max-width: 992px) {
-  .footer__link {
-    margin: 0.25rem 0px;
+@media (max-width: 860px) {
+  .site-footer__inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 48px 28px 32px;
   }
 
-  .footer__bottom {
-    width: 90%;
+  .site-footer__brand {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px 24px;
+    align-items: start;
+  }
+
+  .site-footer__logo-link {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .site-footer__brand-desc {
+    grid-column: 2;
+    grid-row: 1;
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+
+  .site-footer__socials {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-footer__inner {
+    grid-template-columns: 1fr 1fr;
+    padding: 40px 20px 24px;
+    gap: 32px;
+  }
+
+  .site-footer__brand {
+    display: flex;
     flex-direction: column;
-    gap: 16px;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .site-footer__brand-desc {
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+
+  .site-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 20px;
+    gap: 10px;
+  }
+
+  .site-footer__legal {
+    flex-wrap: wrap;
+    gap: 12px 20px;
+  }
+
+  .site-footer__col-heading {
+    font-size: 11px;
+  }
+
+  .site-footer__link {
+    font-size: 13px;
   }
 }
 </style>

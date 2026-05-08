@@ -60,7 +60,7 @@ export default defineNuxtConfig({
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['~/assets/css/bootstrap.min.css', '~/assets/css/main.css'],
+  css: ['~/assets/css/design-tokens.css', '~/assets/css/bootstrap.min.css', '~/assets/css/main.css'],
 
   // Plugins to run before rendering page
   plugins: [

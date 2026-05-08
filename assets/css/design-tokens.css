@@ -1,0 +1,134 @@
+/* ==========================================================================
+   Violet Design System — Core Tokens
+   ========================================================================== */
+
+:root {
+  /* ---------- Font family ---------- */
+  --font-primary: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI',
+                  Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-mono:    ui-monospace, 'SF Mono', Menlo, Consolas, 'Roboto Mono', monospace;
+
+  /* ---------- Background colors ---------- */
+  --bg-primary:    #ffffff;
+  --bg-grey-25:    #fcfcfd;
+  --bg-grey-50:    #f9fafb;
+  --bg-grey-100:   #f2f4f7;
+  --bg-violet-25:  #f7f3ff;
+  --bg-violet-50:  #f0ebfa;
+
+  /* ---------- Foreground / text ---------- */
+  --fg-1:      #101828;
+  --fg-2:      #475467;
+  --fg-3:      #697586;
+  --fg-muted:  #98a2b3;
+  --fg-strong: #344054;
+
+  /* ---------- Neutral gray scale ---------- */
+  --gray-25:  #fcfcfd;
+  --gray-50:  #f9fafb;
+  --gray-100: #f2f4f7;
+  --gray-200: #eaecf0;
+  --gray-300: #d0d5dd;
+  --gray-400: #98a2b3;
+  --gray-500: #697586;
+  --gray-700: #344054;
+  --gray-900: #101828;
+
+  /* ---------- Brand: Violet ---------- */
+  --violet-25:  #f7f3ff;
+  --violet-50:  #f0ebfa;
+  --violet-100: #f4ebff;
+  --violet-300: #9777e0;
+  --violet-500: #6434d0;
+  --violet-600: #472594;
+  --violet-700: #53389e;
+
+  /* ---------- Semantic: Error ---------- */
+  --error:     #d92d20;
+  --error-10:  #fdeded;
+  --error-50:  #fef3f2;
+
+  /* ---------- Semantic: Success ---------- */
+  --success:     #11c15b;
+  --success-10:  #e6faef;
+  --success-700: #027a48;
+
+  /* ---------- Semantic: Warning ---------- */
+  --warning-400: #fdb022;
+  --warning-500: #f79009;
+  --warning-600: #dc6803;
+
+  /* ---------- Borders ---------- */
+  --border-light:  #eaecf0;
+  --border-medium: #ebebeb;
+  --border-dark:   #d0d5dd;
+  --border-violet: #9777e0;
+
+  /* ---------- Focus rings ---------- */
+  --focus-ring-primary: 0 0 0 4px #f4ebff;
+  --focus-ring-error:   0 0 0 4px rgba(217, 45, 32, 0.10);
+
+  /* ---------- Shadows ---------- */
+  --shadow-xs: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(16, 24, 40, 0.10);
+  --shadow-md: 0 2px 4px 0 rgba(16, 24, 40, 0.06);
+  --shadow-lg: 0 8px 24px -4px rgba(16, 24, 40, 0.08), 0 4px 8px -2px rgba(16, 24, 40, 0.04);
+
+  /* ---------- Font sizes ---------- */
+  --fs-tiny: 10px;
+  --fs-xs:   12px;
+  --fs-sm:   14px;
+  --fs-md:   16px;
+  --fs-lg:   18px;
+  --fs-xl:   20px;
+  --fs-2xl:  24px;
+  --fs-3xl:  36px;
+
+  /* ---------- Font weights ---------- */
+  --fw-light:    300;
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  /* ---------- Line heights ---------- */
+  --lh-xs:  18px;
+  --lh-sm:  20px;
+  --lh-md:  24px;
+  --lh-lg:  28px;
+  --lh-xl:  30px;
+  --lh-2xl: 32px;
+
+  /* ---------- Spacing (4 px grid) ---------- */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-7:  28px;
+  --space-8:  32px;
+  --space-9:  36px;
+  --space-10: 40px;
+  --space-11: 44px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-18: 72px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-25: 100px;
+  --space-30: 120px;
+
+  /* ---------- Radii ---------- */
+  --r-sm:   2px;
+  --r:      4px;
+  --r-md:   6px;
+  --r-lg:   8px;
+  --r-xl:   12px;
+  --r-2xl:  16px;
+  --r-3xl:  24px;
+  --r-half: 50%;
+  --r-full: 9999px;
+}
