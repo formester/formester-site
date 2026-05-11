@@ -94,3 +94,9 @@ sw.*
 .claude
 .claude-flow
 .mcp
+CLAUDE.local.md
+stories
+.stories
+public/design-files
+.playwright-mcp
+.storybook
