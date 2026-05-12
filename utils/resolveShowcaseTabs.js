@@ -1,42 +1,36 @@
 // Resolve raw CMS showcase tabs into renderable tab objects.
 //
-// Each input tab has a list of `templates` entries, where each entry has:
-//   - template: relation to template-listing (provides slug)
-//   - displayName: optional override
-//   - displayImage: optional override (Strapi media field)
-//   - displayImageAlt: optional override
+// Each input tab has a list of `templates` entries with:
+//   - templateSlug: slug picked via the template-picker custom field
+//   - displayName: optional override for the template's name
+//   - displayImage: optional Strapi media override for the preview image
+//   - displayImageAlt: optional alt text for the override image
 //
-// We resolve the slug against the app's full template list (passed in
-// `allTemplates`), apply CMS overrides, drop unresolvable slugs, exclude
-// the current template, and cap at 6 per tab.
+// Resolves each slug against `allTemplates` (fetched from the app), applies
+// CMS overrides, drops unresolvable slugs, excludes the current template,
+// and caps at 6 templates per tab.
 export default function resolveShowcaseTabs(rawTabs, allTemplates, currentSlug, opts = {}) {
   const idPrefix = opts.idPrefix || 'tab'
   const sourceLabel = opts.sourceLabel || 'template-showcase'
 
   return (rawTabs || []).map((tab, tabIdx) => {
-    const entries = tab.templates || []
     const unresolved = []
 
-    const resolved = entries
+    const resolved = (tab.templates || [])
       .map(entry => {
-        // Custom field stores the slug as a plain string in `templateSlug`.
-        // Older entries may have used a relation under `template.slug`.
         const refSlug = entry.templateSlug
-          || entry.template?.slug
-          || entry.template?.data?.attributes?.slug
         if (!refSlug) return null
+
         const appTemplate = allTemplates.find(t => t.slug === refSlug)
         if (!appTemplate) {
           unresolved.push(refSlug)
           return null
         }
-        const displayImageUrl = entry.displayImage?.url
-          || entry.displayImage?.data?.attributes?.url
-          || null
+
         return {
           ...appTemplate,
           name: entry.displayName || appTemplate.name,
-          previewImageUrl: displayImageUrl || appTemplate.previewImageUrl,
+          previewImageUrl: entry.displayImage?.url || appTemplate.previewImageUrl,
           previewImageAlt: entry.displayImageAlt || appTemplate.name,
         }
       })

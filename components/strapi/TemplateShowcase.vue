@@ -31,31 +31,33 @@
       </div>
     </div>
 
-    <div v-if="visibleTemplates.length" class="templates">
-      <div
-        v-for="(template, idx) in visibleTemplates"
-        :key="`ts-${idx}`"
-        class="template"
-      >
-        <NuxtLink :to="`/templates/${template.slug}/`">
-          <img
-            v-if="template.previewImageUrl"
-            class="img-fluid pointer template_img"
-            :src="template.previewImageUrl"
-            :alt="template.previewImageAlt || template.name"
-          />
-          <nuxt-img
-            v-else
-            class="img-fluid"
-            src="/templates/create_form.png"
-            alt="Template placeholder image"
-          />
-          <h2 class="template-name pointer">
-            {{ template.name }}
-          </h2>
-        </NuxtLink>
+    <template v-for="tab in resolvedTabs" :key="tab.id">
+      <div v-show="activeTab === tab.id" class="templates">
+        <div
+          v-for="(template, idx) in tab.templates"
+          :key="`${tab.id}-${idx}`"
+          class="template"
+        >
+          <NuxtLink :to="`/templates/${template.slug}/`">
+            <img
+              v-if="template.previewImageUrl"
+              class="img-fluid pointer template_img"
+              :src="template.previewImageUrl"
+              :alt="template.previewImageAlt || template.name"
+            />
+            <nuxt-img
+              v-else
+              class="img-fluid"
+              src="/templates/create_form.png"
+              alt="Template placeholder image"
+            />
+            <h2 class="template-name pointer">
+              {{ template.name }}
+            </h2>
+          </NuxtLink>
+        </div>
       </div>
-    </div>
+    </template>
   </section>
 </template>
 
@@ -71,7 +73,7 @@ const props = defineProps({
 })
 
 const { data: resolvedTabs } = await useAsyncData(
-  `template-showcase-${(props.tabs || []).map(t => t.id || t.tabName).join('-')}`,
+  `template-showcase-${(props.tabs || []).map((t) => t.id || t.tabName).join('-')}`,
   async () => {
     const { templates } = await getTemplatesAndCategories()
     return resolveShowcaseTabs(props.tabs, templates, null, {
@@ -79,20 +81,22 @@ const { data: resolvedTabs } = await useAsyncData(
       idPrefix: 'ts',
     })
   },
-  { default: () => [] }
+  { default: () => [] },
 )
 
 const tabsBox = ref(null)
 const firstTab = resolvedTabs.value[0] || null
 const activeTab = ref(firstTab?.id ?? null)
-const visibleTemplates = ref(firstTab ? firstTab.templates.slice(0, 6) : [])
 
 function setActiveTab(tab) {
   if (!tab) return
   activeTab.value = tab.id
-  visibleTemplates.value = (tab.templates || []).slice(0, 6)
   const element = document.getElementById(tab.slug)
-  element?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+  element?.scrollIntoView({
+    behavior: 'smooth',
+    block: 'nearest',
+    inline: 'center',
+  })
   setTimeout(() => handleIcons(), 300)
 }
 
@@ -106,7 +110,8 @@ function handleIcons() {
     leftArrow.parentElement.style.display = scrollLeft > 0 ? 'flex' : 'none'
   }
   if (rightArrow?.parentElement) {
-    rightArrow.parentElement.style.display = scrollableWidth > scrollLeft ? 'flex' : 'none'
+    rightArrow.parentElement.style.display =
+      scrollableWidth > scrollLeft ? 'flex' : 'none'
   }
 }
 
@@ -114,7 +119,10 @@ function scrollTabs(direction) {
   const scrollAmount = 180
   if (!tabsBox.value) return
   if (direction === 'left') {
-    tabsBox.value.scrollLeft = tabsBox.value.scrollLeft <= 100 ? 0 : tabsBox.value.scrollLeft - scrollAmount
+    tabsBox.value.scrollLeft =
+      tabsBox.value.scrollLeft <= 100
+        ? 0
+        : tabsBox.value.scrollLeft - scrollAmount
   } else {
     tabsBox.value.scrollLeft += scrollAmount
   }

@@ -210,21 +210,30 @@ const { data: fetchedData, error: fetchError } = await useAsyncData(`template-${
       const hideDefault = entry.hideDefaultRecommended === true
       const customTabs = entry.customTabs || []
 
-      // 1) Default "Recommended" tab from the simple slug list (unless hidden)
-      if (!hideDefault && defaultSlugs.length > 0) {
-        const allowed = new Set(defaultSlugs)
-        const ordered = result.templates
-          .filter(t => allowed.has(t.slug))
-          .sort((a, b) => defaultSlugs.indexOf(a.slug) - defaultSlugs.indexOf(b.slug))
-          .filter(t => t.slug !== slug)
-          .slice(0, 6)
+      // 1) Default "Recommended" tab (unless explicitly hidden).
+      //    Prefer the CMS-configured slug list. If no list is set, fall back
+      //    to the first 6 templates so the tab is never missing.
+      if (!hideDefault) {
+        let recommendedTemplates
+        if (defaultSlugs.length > 0) {
+          const allowed = new Set(defaultSlugs)
+          recommendedTemplates = result.templates
+            .filter(t => allowed.has(t.slug))
+            .sort((a, b) => defaultSlugs.indexOf(a.slug) - defaultSlugs.indexOf(b.slug))
+            .filter(t => t.slug !== slug)
+            .slice(0, 6)
+        } else {
+          recommendedTemplates = result.templates
+            .filter(t => t.slug !== slug)
+            .slice(0, 6)
+        }
 
-        if (ordered.length > 0) {
+        if (recommendedTemplates.length > 0) {
           showcaseTabs.push({
             id: 'recommended-default',
             name: 'Recommended',
             slug: 'recommended',
-            templates: ordered,
+            templates: recommendedTemplates,
           })
         }
       }

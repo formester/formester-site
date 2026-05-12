@@ -40,43 +40,77 @@
       </div>
     </div>
 
-    <!-- Active Tab Templates -->
     <div class="mb-5">
-      <div
-        v-if="categoryTemplates && categoryTemplates.length"
-        class="templates"
-      >
-        <div
-          v-for="(template, idx) in categoryTemplates"
-          :key="`tab-${idx}`"
-          class="template"
-        >
-          <NuxtLink :to="`/templates/${template.slug}/`">
-            <img
-              v-if="template.previewImageUrl"
-              class="img-fluid pointer template_img"
-              :src="template.previewImageUrl"
-              :alt="template.previewImageAlt || template.name"
-            />
-            <nuxt-img
-              v-else
-              class="img-fluid"
-              src="/templates/create_form.png"
-              alt="Template placeholder image"
-            />
-            <h2 class="template-name pointer">
-              {{ template.name }}
-            </h2>
-          </NuxtLink>
+      <template v-for="tab in availableTabs" :key="tab.id">
+        <div v-show="activeTab === tab.id">
+          <!-- CMS-resolved tabs: pre-rendered templates -->
+          <div
+            v-if="!tab.isLegacy && tab.templates && tab.templates.length"
+            class="templates"
+          >
+            <div
+              v-for="(template, idx) in tab.templates"
+              :key="`${tab.id}-${idx}`"
+              class="template"
+            >
+              <NuxtLink :to="`/templates/${template.slug}/`">
+                <img
+                  v-if="template.previewImageUrl"
+                  class="img-fluid pointer template_img"
+                  :src="template.previewImageUrl"
+                  :alt="template.previewImageAlt || template.name"
+                />
+                <nuxt-img
+                  v-else
+                  class="img-fluid"
+                  src="/templates/create_form.png"
+                  alt="Template placeholder image"
+                />
+                <h2 class="template-name pointer">
+                  {{ template.name }}
+                </h2>
+              </NuxtLink>
+            </div>
+          </div>
+
+          <!-- Legacy tabs: render from runtime-fetched categoryTemplates -->
+          <div
+            v-else-if="tab.isLegacy && categoryTemplates.length"
+            class="templates"
+          >
+            <div
+              v-for="(template, idx) in categoryTemplates"
+              :key="`legacy-${tab.id}-${idx}`"
+              class="template"
+            >
+              <NuxtLink :to="`/templates/${template.slug}/`">
+                <img
+                  v-if="template.previewImageUrl"
+                  class="img-fluid pointer template_img"
+                  :src="template.previewImageUrl"
+                  :alt="template.previewImageAlt || template.name"
+                />
+                <nuxt-img
+                  v-else
+                  class="img-fluid"
+                  src="/templates/create_form.png"
+                  alt="Template placeholder image"
+                />
+                <h2 class="template-name pointer">
+                  {{ template.name }}
+                </h2>
+              </NuxtLink>
+            </div>
+          </div>
+
+          <div
+            v-else-if="!loading && tab.isLegacy"
+            class="d-flex align-items-center justify-content-center mt-5 p-5"
+          >
+            No Templates
+          </div>
         </div>
-      </div>
-      <div
-        v-if="!loading && categoryTemplates.length === 0"
-        class="d-flex align-items-center justify-content-center mt-5 p-5"
-      >
-        No Templates
-      </div>
-      <!-- Loader -->
+      </template>
       <Loader :loading="loading" class="mt-5 p-5" />
     </div>
 
@@ -113,13 +147,15 @@ const props = defineProps({
 // Legacy category tabs (lazy-loaded from app on click).
 // Marked with isLegacy: true so setActiveTab knows to call loadCategoryTemplates.
 const legacyCategoryTabs = computed(() =>
-  Object.values(props.categories).flat().map(cat => ({
-    id: `legacy-${cat.id}`,
-    name: cat.name,
-    slug: cat.slug,
-    templates: [],
-    isLegacy: true,
-  }))
+  Object.values(props.categories)
+    .flat()
+    .map((cat) => ({
+      id: `legacy-${cat.id}`,
+      name: cat.name,
+      slug: cat.slug,
+      templates: [],
+      isLegacy: true,
+    })),
 )
 
 // When a Custom Template Showcase is configured, it REPLACES legacy categories.
@@ -137,11 +173,9 @@ const loading = ref(false)
 
 const firstTab = availableTabs.value[0] || null
 const activeTab = ref(firstTab?.id ?? null)
-const categoryTemplates = ref(
-  firstTab && !firstTab.isLegacy
-    ? firstTab.templates.filter(t => t.slug !== props.templateSlug).slice(0, 6)
-    : []
-)
+// Holds templates for the currently-active legacy category tab.
+// CMS-resolved tabs render directly from their own .templates array.
+const categoryTemplates = ref([])
 
 const config = useRuntimeConfig()
 const appUrl = config.public.appUrl
@@ -180,18 +214,14 @@ async function loadCategoryTemplates(categorySlug) {
   }
 }
 
-// Switch active tab. Pre-resolved CMS tabs use their templates directly;
-// legacy app-category tabs lazy-load from the app on click.
+// Switch active tab. CMS tabs are pre-rendered (no fetch); legacy
+// app-category tabs lazy-load from the app on first click.
 async function setActiveTab(tab) {
   if (!tab) return
   activeTab.value = tab.id
 
   if (tab.isLegacy) {
     await loadCategoryTemplates(tab.slug)
-  } else {
-    categoryTemplates.value = (tab.templates || [])
-      .filter(t => t.slug !== props.templateSlug)
-      .slice(0, 6)
   }
 
   const element = document.getElementById(tab.slug)
