@@ -30,4 +30,5 @@ export default {
   'macro-components.multi-column-cards': () => import('@/components/features/MultiColumnCards.vue'),
    'micro-components.raw-html': () => import('@/components/strapi/RawHtml.vue'),
   'macro-components.ai-hero': () => import('@/components/features/AiHero.vue'),
+  'macro-components.template-showcase': () => import('@/components/strapi/TemplateShowcase.vue'),
 }
