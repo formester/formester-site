@@ -26,16 +26,15 @@
           >
             Recommended
           </li>
-          <!-- Flatten categories in single Array so we can loop on it  -->
           <li
             class="tab"
-            v-for="category in Object.values(categories).flat()"
-            :key="category.id"
-            :id="category.slug"
-            :class="{ active: activeTab === category.id }"
-            @click="setActiveTab(category)"
+            v-for="tab in availableTabs"
+            :key="tab.id"
+            :id="tab.slug"
+            :class="{ active: activeTab === tab.id }"
+            @click="setActiveTab(tab)"
           >
-            {{ category.name }}
+            {{ tab.name }}
           </li>
         </ul>
 
@@ -115,7 +114,7 @@
         No Templates
       </div>
       <!-- Loader -->
-      <Loader :loading="loading" class="mt-5 p-5" />
+      <Loader :loading="loading && useLegacyMode" class="mt-5 p-5" />
     </div>
 
     <div class="d-flex align-items-center justify-content-center mt-4">
@@ -132,7 +131,7 @@ import Loader from '../Loader.vue'
 const props = defineProps({
   categories: {
     type: Object,
-    default: {},
+    default: () => ({}),
   },
   templateSlug: {
     type: String,
@@ -142,6 +141,24 @@ const props = defineProps({
     type: Array,
     default: () => [],
   },
+  showcaseTabs: {
+    type: Array,
+    default: () => [],
+  },
+})
+
+const useLegacyMode = computed(() => props.showcaseTabs.length === 0)
+
+const availableTabs = computed(() => {
+  if (!useLegacyMode.value) {
+    return props.showcaseTabs
+  }
+  return Object.values(props.categories).flat().map(cat => ({
+    id: cat.id,
+    name: cat.name,
+    slug: cat.slug,
+    templates: [],
+  }))
 })
 
 const activeTab = ref(null)
@@ -186,14 +203,19 @@ async function loadCategoryTemplates(categorySlug) {
   }
 }
 
-// Switch active tab and lazy-load category templates if needed
+// Switch active tab and load category templates
 async function setActiveTab(tab) {
   const id = tab ? tab.slug : 'recommend'
   activeTab.value = tab?.id || null
 
-  // Load category templates on tab click (client-side only)
-  if (tab?.slug) {
-    await loadCategoryTemplates(tab.slug)
+  if (tab) {
+    if (!useLegacyMode.value) {
+      categoryTemplates.value = tab.templates
+        .filter(t => t.slug !== props.templateSlug)
+        .slice(0, 6)
+    } else {
+      await loadCategoryTemplates(tab.slug)
+    }
   }
 
   const element = document.getElementById(id)

@@ -160,6 +160,7 @@
       :categories="categories"
       :template-slug="template.slug"
       :recommended-templates="recommendedTemplates"
+      :showcase-tabs="showcaseTabs"
     />
   </div>
 </template>
@@ -170,6 +171,7 @@ import getSiteMeta from '../../utils/getSiteMeta'
 import isEmpty from 'lodash/isEmpty'
 import getTemplatesAndCategories from '@/utils/getTemplatesAndCategories'
 import getRecommendedTemplatesMap from '@/utils/getRecommendedTemplatesMap'
+import getTemplateShowcase from '@/utils/getTemplateShowcase'
 
 // Components
 const MoreTemplates = defineAsyncComponent(() => import('../../components/template/MoreTemplates.vue'))
@@ -222,8 +224,54 @@ const { data: fetchedData, error: fetchError } = await useAsyncData(`template-${
         .slice(0, 6)
     }
 
+    // Fetch showcase tabs from CMS, resolve template references, apply overrides
+    let showcaseTabs = []
+    try {
+      const rawTabs = await getTemplateShowcase()
+      showcaseTabs = rawTabs.map(tab => {
+        const entries = tab.templates || []
+        const unresolved = []
+
+        const resolved = entries
+          .map(entry => {
+            const refSlug = entry.template?.slug || entry.template?.data?.attributes?.slug
+            if (!refSlug) return null
+            const appTemplate = result.templates.find(t => t.slug === refSlug)
+            if (!appTemplate) {
+              unresolved.push(refSlug)
+              return null
+            }
+            const displayImageUrl = entry.displayImage?.url
+              || entry.displayImage?.data?.attributes?.url
+              || null
+            return {
+              ...appTemplate,
+              name: entry.displayName || appTemplate.name,
+              previewImageUrl: displayImageUrl || appTemplate.previewImageUrl,
+              previewImageAlt: entry.displayImageAlt || appTemplate.name,
+            }
+          })
+          .filter(Boolean)
+          .filter(t => t.slug !== slug)
+          .slice(0, 6)
+
+        if (unresolved.length > 0) {
+          console.warn(`[template-showcase] Tab "${tab.tabName}" has unresolvable slugs: ${unresolved.join(', ')}`)
+        }
+
+        return {
+          id: tab.id,
+          name: tab.tabName,
+          slug: tab.tabName.toLowerCase().replace(/\s+/g, '-'),
+          templates: resolved,
+        }
+      }).filter(tab => tab.templates.length > 0)
+    } catch (e) {
+      console.error('[template-showcase] Error fetching showcase tabs:', e)
+    }
+
     // Only return the data needed for this template to reduce memory
-    return { template, categories: result.categories, data: pdfData, recommendedTemplates }
+    return { template, categories: result.categories, data: pdfData, recommendedTemplates, showcaseTabs }
   } catch (err) {
     console.error('Error fetching template:', err)
     throw createError({ statusCode: 500, message: 'Internal Server Error' })
@@ -238,6 +286,7 @@ const template = computed(() => fetchedData.value?.template || {})
 const categories = computed(() => fetchedData.value?.categories || {})
 const data = computed(() => fetchedData.value?.data || null)
 const recommendedTemplates = computed(() => fetchedData.value?.recommendedTemplates || [])
+const showcaseTabs = computed(() => fetchedData.value?.showcaseTabs || [])
 
 const currentSlide = ref(0)
 const activeTab = ref('pdf')
