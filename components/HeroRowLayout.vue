@@ -31,7 +31,8 @@
             :alt="heroImg.alt || 'Hero image'"
             :width="heroImg.width"
             :height="heroImg.height"
-            class="img-fluid hero__image"
+            class="hero__image"
+            :class="{'full-height': !heroImage?.width && !heroImage.height}"
           />
 
           <!-- Video thumbnail with play button when video is provided -->
@@ -149,8 +150,13 @@ export default {
   color: white;
 }
 
-.hero__image {
+.full-height{
   height: 100%;
+}
+
+.hero__image {
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .click-triggers {

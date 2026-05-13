@@ -94,11 +94,12 @@ sw.*
 .claude
 .claude-flow
 .mcp
-.playwright-mcp
-CLAUDE.local.md
-stories
 .storybook
-public/design-files
 components/demo
 .gemini*
 tmp
+CLAUDE.local.md
+stories
+.stories
+public/design-files
+.playwright-mcp

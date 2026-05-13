@@ -153,6 +153,14 @@
       />
     </section>
 
+    <!-- Raw HTML Blocks -->
+    <template
+      v-for="(block, index) in template.rawHtmlBlocks"
+      :key="index"
+    >
+      <StrapiRawHtml v-if="block && block.trim()" :markup="block" />
+    </template>
+
     <Faq v-if="!isEmpty(template.faqs)" :faqList="template.faqs" />
 
     <!-- More templates section -->
@@ -180,11 +188,13 @@ const Faq = defineAsyncComponent(() => import('../../components/features/Faq.vue
 
 const route = useRoute()
 
-const { data: fetchedData, error: fetchError } = await useAsyncData(`template-${route.params.slug}`, async () => {
+const isPreview = route.query.preview === 'true'
+
+const { data: fetchedData, error: fetchError } = useAsyncData(`template-${route.params.slug}${isPreview ? '-preview' : ''}`, async () => {
   try {
     const slug = route.params.slug
     // Get templates and categories (includes PDF data in payload)
-    const result = await getTemplatesAndCategories()
+    const result = await getTemplatesAndCategories({ no_cache: isPreview })
     const template = result.templates.find((t) => t.slug === slug)
 
     if (!template) {
