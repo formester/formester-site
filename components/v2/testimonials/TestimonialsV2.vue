@@ -1,61 +1,55 @@
 <template>
-  <section class="bg-gray-50 font-primary py-space-10 px-space-4 md:py-space-16 md:px-space-8 overflow-x-hidden">
+  <section class="tv2-section">
       <!-- Header -->
-      <div class="max-w-[1280px] mx-auto flex flex-col items-center text-center gap-space-2 mb-space-8 md:mb-space-12">
-        <div class="flex items-center justify-center gap-space-2">
-          <span class="inline-block w-4 h-0.5 bg-violet-500 shrink-0"></span>
-          <span class="text-violet-500 text-fs-xs font-semibold tracking-[0.08em] uppercase m-0">Testimonials</span>
-          <span class="inline-block w-4 h-0.5 bg-violet-500 shrink-0"></span>
+      <div class="tv2-header">
+        <div class="tv2-eyebrow">
+          <span class="tv2-eyebrow-line"></span>
+          <span class="tv2-eyebrow-text">Testimonials</span>
+          <span class="tv2-eyebrow-line"></span>
         </div>
-        <h2 class="font-primary font-semibold text-fg-1 mb-0 text-fs-2xl leading-lh-2xl md:text-fs-3xl md:leading-[40px]">
+        <h2 class="tv2-heading">
           <span
             v-for="item in heading"
             :key="item.id"
-            :class="item.highlight ? 'text-violet-500' : ''"
+            :class="item.highlight ? 'tv2-highlight' : ''"
           >{{ item.text }}</span>
         </h2>
       </div>
 
       <!-- Carousel (full-width, outside the max-width cap) -->
       <div class="tc-track-wrapper">
-        <div class="tc-gradient-left hidden md:block"></div>
+        <div class="tc-gradient-left"></div>
         <div class="tc-track-outer">
           <div ref="track" class="tc-cards">
-            <div
-              v-for="t in testimonials"
-              :key="t.id"
-              class="tc-card bg-white border border-gray-200 rounded-r-xl shadow-sm flex flex-col justify-between"
-            >
+            <div v-for="t in testimonials" :key="t.id" class="tc-card">
               <div>
-                <nuxt-img src="/quotes.svg" alt="" width="40" height="31" loading="lazy" class="mb-space-4" />
-                <p class="text-fs-md leading-lh-md text-fg-2 mb-space-2 font-normal">
+                <nuxt-img src="/quotes.svg" alt="" width="40" height="31" loading="lazy" class="tv2-quote-img" />
+                <p class="tv2-comment">
                   <template v-if="isExpanded(t.id) || t.comment.length <= COMMENT_LIMIT">"{{ t.comment }}"</template>
                   <template v-else>"{{ t.comment.slice(0, COMMENT_LIMIT) }}…"</template>
                 </p>
                 <button
                   v-if="t.comment.length > COMMENT_LIMIT"
                   @click="toggleExpanded(t.id)"
-                  class="text-violet-500 text-fs-sm font-semibold mb-space-4 bg-transparent border-0 cursor-pointer p-0 hover:underline"
+                  class="tv2-read-more"
                 >{{ isExpanded(t.id) ? 'Read less' : 'Read more' }}</button>
-                <div v-else class="mb-space-4"></div>
+                <div v-else class="tv2-spacer"></div>
               </div>
-              <div class="flex items-center gap-space-3">
-                <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-fs-sm font-semibold text-violet-500 shrink-0">
-                  {{ getInitials(t.name) }}
-                </div>
+              <div class="tv2-author">
+                <div class="tv2-avatar">{{ getInitials(t.name) }}</div>
                 <div>
-                  <div class="text-fs-sm font-semibold text-fg-1 leading-lh-sm">{{ t.name }}</div>
-                  <div class="text-fs-sm text-fg-3 leading-lh-sm">{{ t.position }}</div>
+                  <div class="tv2-name">{{ t.name }}</div>
+                  <div class="tv2-position">{{ t.position }}</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="tc-gradient-right hidden md:block"></div>
+        <div class="tc-gradient-right"></div>
       </div>
 
       <!-- Mobile-only bottom navigation -->
-      <div class="flex md:hidden justify-center gap-space-3 mt-space-6">
+      <div class="tc-nav-mobile">
         <button @click="scrollPrev" class="tc-btn" aria-label="Previous testimonial">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <polyline points="15 18 9 12 15 6"></polyline>
@@ -267,6 +261,158 @@ onBeforeUnmount(() => teardown())
 </script>
 
 <style scoped>
+/* Section */
+.tv2-section {
+  background: var(--gray-50);
+  font-family: var(--font-primary);
+  padding: var(--space-10) var(--space-4);
+  overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+  .tv2-section {
+    padding: var(--space-16) var(--space-8);
+  }
+}
+
+/* Header */
+.tv2-header {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .tv2-header {
+    margin-bottom: var(--space-12);
+  }
+}
+
+.tv2-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.tv2-eyebrow-line {
+  display: inline-block;
+  width: 1rem;
+  height: 1.5px;
+  background: var(--violet-500);
+  flex-shrink: 0;
+}
+
+.tv2-eyebrow-text {
+  color: var(--violet-500);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Heading */
+.tv2-heading {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-semibold);
+  color: var(--fg-1);
+  margin-bottom: 0;
+  font-size: var(--fs-2xl);
+  line-height: var(--lh-2xl);
+}
+
+@media (min-width: 768px) {
+  .tv2-heading {
+    font-size: var(--fs-3xl);
+    line-height: 40px;
+  }
+}
+
+.tv2-highlight {
+  color: var(--violet-500);
+}
+
+/* Card internals */
+.tc-card {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tv2-quote-img {
+  margin-bottom: var(--space-4);
+}
+
+.tv2-comment {
+  font-size: var(--fs-md);
+  line-height: var(--lh-md);
+  color: var(--fg-2);
+  margin-bottom: var(--space-2);
+  font-weight: normal;
+}
+
+.tv2-read-more {
+  color: var(--violet-500);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-4);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}
+
+.tv2-read-more:hover {
+  text-decoration: underline;
+}
+
+.tv2-spacer {
+  margin-bottom: var(--space-4);
+}
+
+.tv2-author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.tv2-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--r-full);
+  background: var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--violet-500);
+  flex-shrink: 0;
+}
+
+.tv2-name {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--fg-1);
+  line-height: var(--lh-sm);
+}
+
+.tv2-position {
+  font-size: var(--fs-sm);
+  color: var(--fg-3);
+  line-height: var(--lh-sm);
+}
+
 .tc-btn {
   display: flex;
   align-items: center;
@@ -349,7 +495,41 @@ onBeforeUnmount(() => teardown())
   .tc-card  { flex: 0 0 calc(33.3333% - 16px); }
 }
 
+/* Heading */
+.tv2-heading {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-semibold);
+  color: var(--fg-1);
+  margin-bottom: 0;
+  font-size: var(--fs-2xl);
+  line-height: var(--lh-2xl);
+}
+
+@media (min-width: 768px) {
+  .tv2-heading {
+    font-size: var(--fs-3xl);
+    line-height: 40px;
+  }
+}
+
+/* Mobile-only nav buttons */
+.tc-nav-mobile {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .tc-nav-mobile { display: none; }
+  .tc-gradient-left,
+  .tc-gradient-right { display: block; }
+}
+
 @media (max-width: 767px) {
+  .tc-gradient-left,
+  .tc-gradient-right { display: none; }
+
   .tc-cards {
     transition: transform 0.35s ease;
     cursor: default;

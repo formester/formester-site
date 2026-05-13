@@ -5,7 +5,7 @@
       <!-- Header -->
       <div class="cc-header">
         <SectionBadge v-if="badge" :text="badge" class="cc-badge" />
-        <h2 class="section-heading text-fg-1">{{ heading }}</h2>
+        <h2 class="section-heading">{{ heading }}</h2>
         <p v-if="description" class="cc-description">{{ description }}</p>
       </div>
 
