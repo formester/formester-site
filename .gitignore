@@ -99,3 +99,6 @@ CLAUDE.local.md
 stories
 .storybook
 public/design-files
+components/demo
+.gemini*
+tmp
