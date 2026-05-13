@@ -4,19 +4,22 @@ import fetchWithRetry from './fetchWithRetry.js'
 let cachePromise = null
 let categorieRoutesPromise = null
 
-async function _fetchTemplatesAndCategories(params = {}) {
+async function _fetchTemplatesAndCategories(options = {}) {
   console.log(
     '[getTemplatesAndCategories] Fetching all templates and categories...',
   )
+  const cacheBust = options.no_cache ? { no_cache: true } : {}
+
   let { data: templates } = await fetchWithRetry(`${APP_URL}/templates.json`, {
     params: {
-      ...params,
+      ...cacheBust,
       with_details: true,
     },
   })
 
   const { data: categories } = await fetchWithRetry(
     `${APP_URL}/template_categories.json`,
+    { params: cacheBust },
   )
 
   const dummyDescription =
@@ -57,9 +60,12 @@ async function _fetchTemplatesAndCategories(params = {}) {
   return result
 }
 
-const getTemplatesAndCategories = async (params = {}) => {
+const getTemplatesAndCategories = async (options = {}) => {
+  if (options.no_cache) {
+    return _fetchTemplatesAndCategories(options)
+  }
   if (!cachePromise) {
-    cachePromise = _fetchTemplatesAndCategories(params)
+    cachePromise = _fetchTemplatesAndCategories(options)
   }
   return cachePromise
 }

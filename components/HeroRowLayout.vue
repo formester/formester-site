@@ -32,6 +32,7 @@
             :width="heroImg.width"
             :height="heroImg.height"
             class="hero__image"
+            :class="{'full-height': !heroImage?.width && !heroImage.height}"
           />
 
           <!-- Video thumbnail with play button when video is provided -->
@@ -147,6 +148,10 @@ export default {
   padding-bottom: 6em;
   background: var(--clr-primary);
   color: white;
+}
+
+.full-height{
+  height: 100%;
 }
 
 .hero__image {
