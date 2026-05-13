@@ -13,6 +13,10 @@ export default {
     preflight: false,
   },
   theme: {
+    screens: {
+      'tab-md': { max: '900px' },
+      'tab-sm': { max: '600px' },
+    },
     extend: {
       fontFamily: {
         primary: 'var(--font-primary)',
