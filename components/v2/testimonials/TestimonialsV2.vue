@@ -72,6 +72,7 @@ const COMMENT_LIMIT = 150
 const props = defineProps({
   heading:      { type: Array, default: () => [] },
   testimonials: { type: Array, default: () => [] },
+  background:   { type: String, default: '' },
 })
 
 const track = ref(null)
@@ -263,7 +264,7 @@ onBeforeUnmount(() => teardown())
 <style scoped>
 /* Section */
 .tv2-section {
-  background: var(--gray-50);
+  background: v-bind(background);
   font-family: var(--font-primary);
   padding: var(--space-10) var(--space-4);
   overflow-x: hidden;

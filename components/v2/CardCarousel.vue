@@ -79,6 +79,7 @@ defineProps({
   description: { type: String, default: '' },
   cta:         { type: Object, default: null },
   usecases:    { type: Array,  default: () => [] },
+  background:  { type: String, default: '' },
 })
 
 const modules = [Navigation, Pagination, Autoplay]
@@ -87,7 +88,7 @@ const modules = [Navigation, Pagination, Autoplay]
 <style scoped>
 .cc-section {
   padding: var(--space-24) var(--space-6);
-  background: var(--gray-50);
+  background: v-bind(background);
 }
 
 .cc-inner {

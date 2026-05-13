@@ -12,7 +12,7 @@
     <div class="dm-row-wrap carousel-fade">
       <div class="dm-row carousel-row carousel-left" style="width: max-content;">
         <template v-for="pass in 2" :key="`r1-p${pass}`">
-          <template v-for="(item, i) in allItems" :key="`r1-p${pass}-${i}`">
+          <template v-for="(item, i) in rowOneItems" :key="`r1-p${pass}-${i}`">
             <div v-if="item.isMore" class="dm-item dm-item--more">
               <span class="dm-icon dm-icon--more">+</span>
               <span class="dm-label dm-label--more">{{ item.name }}</span>
@@ -32,8 +32,8 @@
     <!-- Row 2 — scrolls right -->
     <div class="dm-row-wrap dm-row-wrap--last carousel-fade">
       <div class="dm-row carousel-row carousel-right" style="width: max-content;">
-        <template v-for="pass in 2" :key="`r2-p${pass}`">
-          <template v-for="(item, i) in allItems" :key="`r2-p${pass}-${i}`">
+        <template v-for="pass in 4" :key="`r2-p${pass}`">
+          <template v-for="(item, i) in rowTwoItems" :key="`r2-p${pass}-${i}`">
             <div v-if="item.isMore" class="dm-item dm-item--more">
               <span class="dm-icon dm-icon--more">+</span>
               <span class="dm-label dm-label--more">{{ item.name }}</span>
@@ -51,8 +51,9 @@
     </div>
 
     <div v-if="cta?.link" class="dm-cta">
-      <FButton :href="cta.link" variant="ghost" size="md">
-        {{ cta.text || 'Browse all integrations' }} →
+      <FButton :href="cta.link" variant="ghost" size="lg">
+        {{ cta.text || 'Browse all integrations' }} 
+        <ArrowRightIcon />
       </FButton>
     </div>
   </section>
@@ -62,6 +63,7 @@
 import { computed } from 'vue'
 import FButton from '@/components/UI/FButton.vue'
 import SectionBadge from '@/components/UI/SectionBadge.vue'
+import ArrowRightIcon from "@/components/icons/ArrowRightIcon.vue"
 
 const PALETTE = [
   '#67B9F0', '#FF4A00', '#635BFF', '#FFD60A',
@@ -76,9 +78,12 @@ const props = defineProps({
   description: { type: String, default: '' },
   integrations: { type: Array, default: () => [] },
   cta: { type: Object, default: () => null },
+  background: { type: String, default: '' },
 })
 
 const allItems = computed(() => [...props.integrations])
+const rowOneItems = computed(() => allItems.value.slice(0, Math.ceil(allItems.value.length / 2)))
+const rowTwoItems = computed(() => allItems.value.slice(Math.ceil(allItems.value.length / 2)))
 
 const getInitials = (name) => {
   if (!name) return '??'
@@ -94,7 +99,7 @@ const getColor = (index) => PALETTE[index % PALETTE.length]
 <style scoped>
 .dm-section {
   padding-block: 5rem;
-  background: var(--gray-50);
+  background: v-bind(background);
   border-top: 1px solid var(--gray-100);
   overflow: hidden;
 }
@@ -155,13 +160,14 @@ const getColor = (index) => PALETTE[index % PALETTE.length]
   border: 1px solid var(--gray-200);
   border-radius: var(--r-full);
   white-space: nowrap;
-  cursor: default;
-  transition: border-color 150ms, box-shadow 150ms;
+  cursor: pointer;
+  transition: border-color 150ms, box-shadow 150ms, transform 150ms, background 150ms;
 }
 
 .dm-item:hover {
-  border-color: var(--violet-300);
+  /* border-color: var(--violet-300); */
   box-shadow: var(--shadow-sm);
+  background: var(--gray-100);
 }
 
 .dm-item--more {
@@ -256,7 +262,7 @@ const getColor = (index) => PALETTE[index % PALETTE.length]
 }
 
 @keyframes scrollRight {
-  from { transform: translateX(-50%); }
+  from { transform: translateX(-25%); }
   to   { transform: translateX(0); }
 }
 

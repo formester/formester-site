@@ -5,19 +5,17 @@
 
     <TrustSeals :title="[]" />
 
-    <StatsSection :badge="stats.badge" :heading="stats.heading" :description="stats.description" :stats="stats.items" />
+    <StatsSection background="var(--gray-100)" :badge="stats.badge" :heading="stats.heading" :description="stats.description" :stats="stats.items" />
 
     <StickyStepsSection :badge="ai.badge" :heading="ai.heading" :description="ai.description" :buttons="ai.buttons"
       :steps="ai.steps" />
 
-    <CardCarousel :badge="usecases.badge" :heading="usecases.heading" :description="usecases.description" :cta="usecases.cta" :usecases="usecases.items" />
+    <CardCarousel background="var(--gray-100)" :badge="usecases.badge" :heading="usecases.heading" :description="usecases.description" :cta="usecases.cta" :usecases="usecases.items" />
 
-    <DualMarquee :badge="integrations.badge" :heading="integrations.heading" :description="integrations.description"
-      :integrations="integrations.items" :cta="integrations.cta" />
+    <IntegrationsShowcase :badge="integrations.badge" :heading="integrations.heading" :description="integrations.description"
+      :cta="integrations.cta" />
 
-    <!-- <Testimonials :heading="testimonials.heading" :testimonials="testimonials.items" /> -->
-
-    <TestimonialsV2 :heading="testimonials.heading" :testimonials="testimonials.items" />
+    <TestimonialsV2 :heading="testimonials.heading" :testimonials="testimonials.items" background="var(--gray-100)" />
 
     <FaqSection :badge="faq.badge" :title="faq.title" :description="faq.description" :faq-list="faq.faqList" :cta-button="faq.ctaButton" />
 
@@ -33,7 +31,7 @@ import TrustSeals from '@/components/home/TrustSeals.vue'
 import StatsSection from '@/components/v2/StatsSection.vue'
 import StickyStepsSection from '@/components/v2/StickyStepsSection.vue'
 import CardCarousel from '@/components/v2/CardCarousel.vue'
-import DualMarquee from '@/components/v2/DualMarquee.vue'
+import IntegrationsShowcase from '@/components/v2/IntegrationsShowcase.vue'
 import Testimonials from '@/components/v2/testimonials/TestimonialsOld.vue'
 import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
 import FaqSection from '@/components/v2/FaqSection.vue'
@@ -174,7 +172,7 @@ const usecases = {
   badge: 'Built for every team',
   heading: 'One builder. Every workflow.',
   description: 'Learn how Formester can help your business grow and scale efficiently.',
-  cta: { text: 'See all use cases', link: '/use-case' },
+  // cta: { text: 'See all use cases', link: '/use-case' },
   items: [
     {
       id: 1,

@@ -58,6 +58,7 @@ const props = defineProps({
   description: { type: String, default: null },
   faqList: { type: Array, default: () => [] },
   ctaButton: { type: Object, default: null },
+  background: { type: String, default: '' },
 })
 
 const DEFAULT_DESCRIPTION = 'Find answers to common questions below, or reach out to our team for more help.'
@@ -89,7 +90,7 @@ const toggle = (id) => {
 <style scoped>
 .faq-section {
   padding-block: 5rem;
-  background: var(--gray-50);
+  background: v-bind(background);
 }
 
 .faq-inner {
@@ -197,7 +198,7 @@ const toggle = (id) => {
 }
 
 .faq-question {
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-medium);
   color: var(--fg-1);
   font-size: 15px;
   line-height: 1.375;

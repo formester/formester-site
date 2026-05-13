@@ -56,6 +56,7 @@ defineProps({
   description: { type: String, default: '' },
   buttons:     { type: Array,  default: () => [] },
   steps:       { type: Array,  default: () => [] },
+  background:  { type: String, default: '' },
 })
 </script>
 
@@ -64,6 +65,7 @@ defineProps({
   padding: 6rem 1.5rem;
   background: var(--gray-50);
   border-top: 1px solid var(--gray-200);
+  background: v-bind(background);
 }
 
 .steps-inner {

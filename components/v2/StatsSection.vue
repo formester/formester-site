@@ -25,14 +25,15 @@ defineProps({
   heading:     { type: String, default: '' },
   description: { type: String, default: '' },
   stats:       { type: Array,  default: () => [] },
+  background:  { type: String, default: '' },
 })
 </script>
 
 <style scoped>
 .stats-section {
   padding: var(--space-24) var(--space-6);
-  background: var(--bg-primary);
   border-top: 1px solid var(--border-light);
+  background: v-bind(background);
 }
 
 .stats-section__inner {
