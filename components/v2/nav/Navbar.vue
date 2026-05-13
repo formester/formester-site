@@ -450,7 +450,6 @@ nav {
 .nav-link.active,
 .router-link-exact-active {
   color: var(--clr-primary);
-  background: #f3eeff;
   border-bottom: none;
 }
 
