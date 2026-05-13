@@ -1,6 +1,6 @@
 <template>
-  <section ref="sectionEl" class="hero-v2" :style="{ '--gradient-x': mouseX + '%' }" @mousemove="onMouseMove" @mouseleave="onMouseLeave">
-    <canvas ref="particleCanvas" class="hero-v2__particles" aria-hidden="true" />
+  <section ref="sectionEl" class="hero-v2">
+    <div class="hero-v2__grid" aria-hidden="true"></div>
     <div class="hero-v2__inner">
       <a v-if="badge?.text" :href="badge.link || '#'" class="hero-v2__badge-link">
         <SectionBadge
@@ -65,7 +65,6 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
 import HeroTabs from '@/components/home/HeroTabShowcase/HeroTabs.vue'
 import FButton from '@/components/UI/FButton.vue'
 import SectionBadge from '@/components/UI/SectionBadge.vue'
@@ -79,146 +78,42 @@ defineProps({
   image:          { type: Object, default: () => null },
   tabCardContent: { type: Array,  default: () => [] },
 })
-
-const sectionEl = ref(null)
-const particleCanvas = ref(null)
-
-const mouseX = ref(50)
-let targetX = 50
-let _rafId = null
-let _particles = []
-let _ctx = null
-let _canvasW = 0
-let _canvasH = 0
-let _tick = 0
-
-const onMouseMove = (e) => {
-  const rect = sectionEl.value.getBoundingClientRect()
-  targetX = Math.min(100, Math.max(0, (e.clientX - rect.left) / rect.width * 100))
-}
-
-const onMouseLeave = () => { targetX = 50 }
-
-const _makeParticle = (scattered = false) => {
-  const isViolet = Math.random() > 0.45
-  return {
-    x:       Math.random() * (_canvasW || 800),
-    y:       scattered ? Math.random() * (_canvasH || 600) : (_canvasH || 600) + Math.random() * 40,
-    r:       0.8 + Math.random() * 2.2,
-    speed:   0.2 + Math.random() * 0.55,
-    phase:   Math.random() * Math.PI * 2,
-    freq:    0.003 + Math.random() * 0.004,
-    sway:    0.18 + Math.random() * 0.22,
-    opacity: 0.08 + Math.random() * 0.27,
-    color:   isViolet ? '100,52,208' : '167,139,250',
-  }
-}
-
-const _resizeCanvas = () => {
-  const canvas = particleCanvas.value
-  if (!canvas) return
-  _canvasW = canvas.width  = sectionEl.value.offsetWidth
-  _canvasH = canvas.height = sectionEl.value.offsetHeight
-}
-
-const _initParticles = () => {
-  const canvas = particleCanvas.value
-  if (!canvas) return
-  _canvasW = canvas.width  = sectionEl.value.offsetWidth
-  _canvasH = canvas.height = sectionEl.value.offsetHeight
-  _ctx = canvas.getContext('2d')
-  _particles = Array.from({ length: 70 }, () => _makeParticle(true))
-}
-
-const _tickParticles = () => {
-  if (!_ctx) return
-  _ctx.clearRect(0, 0, _canvasW, _canvasH)
-  const lightX = (mouseX.value / 100) * _canvasW
-  for (const p of _particles) {
-    p.y -= p.speed
-    p.x += Math.sin(_tick * p.freq + p.phase) * p.sway
-    p.x += (lightX - p.x) * 0.0003
-    if (p.y + p.r < 0) Object.assign(p, _makeParticle(false))
-    _ctx.beginPath()
-    _ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
-    _ctx.fillStyle = `rgba(${p.color},${p.opacity})`
-    _ctx.fill()
-  }
-}
-
-onMounted(() => {
-  _initParticles()
-  window.addEventListener('resize', _resizeCanvas)
-  const animate = () => {
-    mouseX.value += (targetX - mouseX.value) * 0.08
-    _tick++
-    _tickParticles()
-    _rafId = requestAnimationFrame(animate)
-  }
-  _rafId = requestAnimationFrame(animate)
-})
-
-onBeforeUnmount(() => {
-  if (_rafId) cancelAnimationFrame(_rafId)
-  window.removeEventListener('resize', _resizeCanvas)
-})
 </script>
 
 <style scoped>
 .hero-v2 {
-  --gradient-x: 50%;
   position: relative;
-  background:
-    radial-gradient(ellipse 55% 35% at var(--gradient-x) -5%, rgba(167, 139, 250, 0.45) 0%, transparent 75%),
-    linear-gradient(180deg, var(--bg-violet-50) 0%, var(--bg-primary) 100%);
+  background: linear-gradient(180deg, var(--bg-violet-50) 0%, var(--bg-primary) 100%);
   padding: var(--space-30) var(--space-6) var(--space-20);
   overflow: hidden;
 }
 
-.hero-v2::before {
-  content: '';
+.hero-v2__grid {
   position: absolute;
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background: conic-gradient(
-    from -90deg at var(--gradient-x) -8%,
-    transparent         0deg,
-    rgba(167,139,250,0.07)  4deg,
-    transparent         8deg,
-    transparent        18deg,
-    rgba(167,139,250,0.05) 22deg,
-    transparent        26deg,
-    transparent        36deg,
-    rgba(167,139,250,0.06) 40deg,
-    transparent        44deg,
-    transparent        54deg,
-    rgba(167,139,250,0.04) 57deg,
-    transparent        61deg,
-    transparent        70deg,
-    rgba(167,139,250,0.05) 74deg,
-    transparent        78deg,
-    transparent        88deg,
-    rgba(167,139,250,0.03) 91deg,
-    transparent        95deg,
-    transparent       105deg,
-    rgba(167,139,250,0.06) 108deg,
-    transparent       112deg,
-    transparent       122deg,
-    rgba(167,139,250,0.04) 126deg,
-    transparent       130deg,
-    transparent       180deg
-  );
-  animation: rayBreathe 6s ease-in-out infinite;
+
+  background-image:
+    linear-gradient(rgba(100, 52, 208, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(100, 52, 208, 0.10) 1px, transparent 1px);
+  background-size: 52px 52px;
+
+  mask-image:
+    linear-gradient(to right,  transparent 0%, black 18%, black 82%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
+  mask-composite: intersect;
+  -webkit-mask-image:
+    linear-gradient(to right,  transparent 0%, black 18%, black 82%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
+  -webkit-mask-composite: source-in;
+
+  animation: gridBreathe 6s ease-in-out infinite;
 }
 
-.hero-v2__particles {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
+@keyframes gridBreathe {
+  0%, 100% { opacity: 0.7; }
+  50%       { opacity: 1; }
 }
 
 .hero-v2__inner {
@@ -230,11 +125,6 @@ onBeforeUnmount(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-@keyframes rayBreathe {
-  0%, 100% { opacity: 0.6; }
-  50%       { opacity: 1; }
 }
 
 .hero-v2__badge-link {
@@ -365,9 +255,5 @@ onBeforeUnmount(() => {
   .hero-v2__mockup { border-radius: var(--r-xl); }
 
   .hero-v2__url-bar { display: none; }
-}
-
-@media (max-width: 480px) {
-  /* hide badge text on very small screens — handled by SectionBadge pill variant */
 }
 </style>
