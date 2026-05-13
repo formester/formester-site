@@ -226,7 +226,7 @@ export default {
           title: 'Help Center',
           description: 'Get help and support',
           imageUrl: '/support.svg',
-          imageAlt: 'Support icon',
+          imageAlt: 'Help Center icon',
           href: 'https://help.formester.com/',
         }
       ],
