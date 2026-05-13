@@ -51,7 +51,7 @@
     </div>
 
     <div v-if="cta?.link" class="dm-cta">
-      <FButton :href="cta.link" variant="ghost" size="lg">
+      <FButton :href="cta.link" variant="secondary" size="lg">
         {{ cta.text || 'Browse all integrations' }} 
         <ArrowRightIcon />
       </FButton>

@@ -61,7 +61,7 @@ export default {
   box-shadow: var(--shadow-xs);
 }
 .fbt--secondary:hover {
-  background: var(--gray-50);
+  background: var(--gray-100);
   color: var(--fg-strong);
 }
 
