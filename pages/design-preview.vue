@@ -1,71 +1,43 @@
 <template>
   <div>
-    <HeroV2
-      :badge="hero.badge"
-      :title="hero.title"
-      :description="hero.description"
-      :buttons="hero.buttons"
-      :trust-text="hero.trustText"
-      :image="hero.image"
-    />
+    <HeroV2 :badge="hero.badge" :title="hero.title" :description="hero.description" :buttons="hero.buttons"
+      :trust-text="hero.trustText" :image="hero.image" :tab-card-content="hero.tabCardContent" />
 
     <TrustSeals :title="[]" />
 
-    <StatsSection
-      :badge="stats.badge"
-      :heading="stats.heading"
-      :description="stats.description"
-      :stats="stats.items"
-    />
+    <StatsSection :badge="stats.badge" :heading="stats.heading" :description="stats.description" :stats="stats.items" />
 
-    <StickyStepsSection
-      :badge="ai.badge"
-      :heading="ai.heading"
-      :description="ai.description"
-      :buttons="ai.buttons"
-      :steps="ai.steps"
-    />
+    <StickyStepsSection :badge="ai.badge" :heading="ai.heading" :description="ai.description" :buttons="ai.buttons"
+      :steps="ai.steps" />
 
-    <CardGrid
-      :badge="usecases.badge"
-      :heading="usecases.heading"
-      :cta="usecases.cta"
-      :usecases="usecases.items"
-    />
+    <CardCarousel :badge="usecases.badge" :heading="usecases.heading" :description="usecases.description" :cta="usecases.cta" :usecases="usecases.items" />
 
-    <DualMarquee
-      :badge="integrations.badge"
-      :heading="integrations.heading"
-      :description="integrations.description"
-      :integrations="integrations.items"
-      :cta="integrations.cta"
-    />
+    <DualMarquee :badge="integrations.badge" :heading="integrations.heading" :description="integrations.description"
+      :integrations="integrations.items" :cta="integrations.cta" />
 
-    <Carousel
-      :badge="testimonials.badge"
-      :heading="testimonials.heading"
-      :testimonials="testimonials.items"
-    />
+    <!-- <Testimonials :heading="testimonials.heading" :testimonials="testimonials.items" /> -->
 
-    <CtaDark
-      :badge="cta.badge"
-      :heading="cta.heading"
-      :description="cta.description"
-      :buttons="cta.buttons"
-      :trust-text="cta.trustText"
-    />
+    <TestimonialsV2 :heading="testimonials.heading" :testimonials="testimonials.items" />
+
+    <FaqSection :badge="faq.badge" :heading="faq.heading" :description="faq.description" :faqs="faq.items" :cta-button="faq.ctaButton" />
+
+    <CtaDark :badge="cta.badge" :heading="cta.heading" :description="cta.description" :buttons="cta.buttons"
+      :trust-text="cta.trustText" />
   </div>
 </template>
 
 <script setup>
-import HeroV2 from '@/components/home/HeroV2.vue'
+import HeroV2 from '@/components/v2/HeroV2.vue'
+import { getPageBySlug } from '@/utils/getAllPages'
 import TrustSeals from '@/components/home/TrustSeals.vue'
-import StatsSection from '@/components/home/StatsSection.vue'
-import StickyStepsSection from '@/components/home/StickyStepsSection.vue'
-import CardGrid from '@/components/home/CardGrid.vue'
-import DualMarquee from '@/components/home/DualMarquee.vue'
-import Carousel from '@/components/home/Carousel.vue'
-import CtaDark from '@/components/home/CtaDark.vue'
+import StatsSection from '@/components/v2/StatsSection.vue'
+import StickyStepsSection from '@/components/v2/StickyStepsSection.vue'
+import CardCarousel from '@/components/v2/CardCarousel.vue'
+import DualMarquee from '@/components/v2/DualMarquee.vue'
+import Testimonials from '@/components/v2/testimonials/TestimonialsOld.vue'
+import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
+import FaqSection from '@/components/v2/FaqSection.vue'
+import CtaDark from '@/components/v2/CtaDark.vue'
 
 useHead({ title: 'Design Preview — Formester Redesign' })
 
@@ -87,6 +59,68 @@ const hero = {
   ],
   trustText: 'Free forever plan · No credit card · Setup in 2 minutes',
   image: null,
+  tabCardContent: [
+    {
+      id: 2,
+      navTitle: 'Collaboration',
+      title: 'Invite team members to build and manage forms together.',
+      image: { id: 2590, imageAlt: null, imageUrl: null, width: null, height: null, image: { id: 3778, name: 'Collaboration.png', alternativeText: null, width: 644, height: 430, url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Collaboration_04ed2957f5.png' } },
+      feature: [
+        { id: 2, featureTitle: 'Let multiple people fill the same form at once.', icon: { id: 2591, imageAlt: null, imageUrl: null, width: null, height: null, image: { id: 3780, width: 30, height: 30, url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/2_a478ca0bb9.svg' } } },
+        { id: 3, featureTitle: 'Manage access using permissions at the field and form levels.', icon: { id: 2592, imageAlt: null, imageUrl: null, width: null, height: null, image: { id: 3781, width: 30, height: 30, url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/3_a6e59b0281.svg' } } },
+      ],
+    },
+    {
+      id: 3,
+      navTitle: 'White Label',
+      title: 'Match forms to your brand with full design control.',
+      image: { id: 2593, imageAlt: null, imageUrl: null, width: null, height: null, image: { id: 3784, name: '3_2 screen mockup.png', alternativeText: null, width: 644, height: 430, url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/3_2_screen_mockup_e1d360566d.png' } },
+      feature: [
+        { id: 5, featureTitle: 'Use your own domain and custom form links.', icon: { id: 2594, imageAlt: null, imageUrl: null, width: null, height: null, image: { id: 3782, width: 30, height: 30, url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/25785696_afa4df307a.svg' } } },
+        { id: 4, featureTitle: 'Build trust with branded, seamless user experience.', icon: { id: 2595, imageAlt: null, imageUrl: null, width: null, height: null, image: { id: 3783, width: 30, height: 30, url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/25785697_737c35b407.svg' } } },
+      ],
+    },
+    {
+      id: 4,
+      navTitle: 'Generate PDF',
+      title: 'Turn responses into ready-to-use downloadable PDFs.',
+      image: { id: 2596, imageAlt: null, imageUrl: null, width: null, height: null, image: { id: 3787, name: '3_2 screen mockup.png', alternativeText: null, width: 644, height: 430, url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/3_2_screen_mockup_004dd521b6.png' } },
+      feature: [
+        { id: 6, featureTitle: 'Design custom layouts for invoices or agreements.', icon: { id: 2597, imageAlt: null, imageUrl: null, width: null, height: null, image: { id: 3786, width: 30, height: 30, url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/25785686_46a853ce4f.svg' } } },
+        { id: 7, featureTitle: 'No formatting needed, everything auto-generated.', icon: { id: 2598, imageAlt: null, imageUrl: null, width: null, height: null, image: { id: 3785, width: 30, height: 30, url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/25785680_52367487a0.svg' } } },
+      ],
+    },
+    {
+      id: 5,
+      navTitle: 'Data Protection',
+      title: 'Let users save and finish forms across any device.',
+      image: { id: 2599, imageAlt: null, imageUrl: null, width: null, height: null, image: { id: 3790, name: 'CustomPDFs.png', alternativeText: null, width: 644, height: 430, url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Custom_PD_Fs_0bf349ef31.png' } },
+      feature: [
+        { id: 8, featureTitle: 'Fill forms offline and sync when back online.', icon: { id: 2600, imageAlt: null, imageUrl: null, width: null, height: null, image: { id: 3788, width: 30, height: 30, url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/25785698_4fce483246.svg' } } },
+        { id: 9, featureTitle: 'Prevent drop-offs with seamless resume options.', icon: { id: 2601, imageAlt: null, imageUrl: null, width: null, height: null, image: { id: 3789, width: 30, height: 30, url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/25785699_11ac2f76f7.svg' } } },
+      ],
+    },
+    {
+      id: 6,
+      navTitle: 'Automations',
+      title: 'Send auto-confirmation and follow-up emails.',
+      image: { id: 2602, imageAlt: null, imageUrl: null, width: null, height: null, image: { id: 3793, name: 'automations.png', alternativeText: 'automations', width: 644, height: 430, url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Automations_0ada4ec9d6.png' } },
+      feature: [
+        { id: 10, featureTitle: 'Get alerts and route responses to your team.', icon: { id: 2603, imageAlt: null, imageUrl: null, width: null, height: null, image: { id: 3792, width: 30, height: 30, url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/1_6db3ee3368.svg' } } },
+        { id: 11, featureTitle: 'Connect with CRMs, Slack, and 1000+ other tools.', icon: { id: 2604, imageAlt: null, imageUrl: null, width: null, height: null, image: { id: 3791, width: 30, height: 30, url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/3_1533ef9e10.svg' } } },
+      ],
+    },
+    {
+      id: 7,
+      navTitle: 'Multi Language',
+      title: 'Add multiple languages to reach global users',
+      image: { id: 2605, imageAlt: null, imageUrl: null, width: null, height: null, image: { id: 3796, name: 'form builder.png', alternativeText: 'form builder', width: 644, height: 430, url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/AI_Native_b2cc469b26.png' } },
+      feature: [
+        { id: 13, featureTitle: 'Translate forms instantly using AI', icon: { id: 2606, imageAlt: null, imageUrl: null, width: null, height: null, image: { id: 3794, width: 30, height: 30, url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/25785693_c9fed37b30.svg' } } },
+        { id: 12, featureTitle: 'Make your forms accessible to everyone', icon: { id: 2607, imageAlt: null, imageUrl: null, width: null, height: null, image: { id: 3795, width: 30, height: 30, url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/25785694_a5e7dd58a2.svg' } } },
+      ],
+    },
+  ],
 }
 
 const stats = {
@@ -135,36 +169,51 @@ const ai = {
 
 const usecases = {
   badge: 'Built for every team',
-  heading: 'One form builder. Every workflow that needs input.',
+  heading: 'One builder. Every workflow.',
+  description: 'Learn how Formester can help your business grow and scale efficiently.',
   cta: { text: 'See all use cases', link: '/use-case' },
   items: [
     {
       id: 1,
       category: 'HR & People',
-      title: 'Onboard new hires faster',
       description: 'Collect documents, run payroll setup, and automate welcome surveys — multi-department support.',
-      image: null,
+      iconBg: '#FEF9C3',
+      icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="color:#CA8A04"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
     },
     {
       id: 2,
       category: 'Marketing',
-      title: 'Capture and qualify leads',
-      description: 'Multi-step forms, scoring, and CRM syncing in less than 30 minutes.',
-      image: null,
+      description: 'Generate leads, capture event registrations, and run customer satisfaction surveys seamlessly.',
+      iconBg: '#FEF3C7',
+      icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="color:#D97706"><path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
     },
     {
       id: 3,
-      category: 'Finance',
-      title: 'Run admissions & surveys',
-      description: 'Collect data, run pre-admit, accept multi-lingual support.',
-      image: null,
+      category: 'Education',
+      description: 'Build quizzes, surveys, and feedback forms for students and teams with an easy drag-and-drop builder.',
+      iconBg: '#DCFCE7',
+      icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="color:#16A34A"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 12v5c3.33 2 8.67 2 12 0v-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
     },
     {
       id: 4,
-      category: 'Operations',
-      title: 'Standardize internal requests',
-      description: 'IT tickets, expense claims, vendor onboarding — one tool for everything.',
-      image: null,
+      category: 'IT & Operations',
+      description: 'Streamline internal ticketing, bug tracking, and equipment request workflows.',
+      iconBg: '#EDE9FE',
+      icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="color:#7C3AED"><rect x="2" y="3" width="20" height="5" rx="1" stroke="currentColor" stroke-width="1.8"/><rect x="2" y="11" width="20" height="5" rx="1" stroke="currentColor" stroke-width="1.8"/><circle cx="6" cy="5.5" r="1" fill="currentColor"/><circle cx="6" cy="13.5" r="1" fill="currentColor"/></svg>`,
+    },
+    {
+      id: 5,
+      category: 'Healthcare',
+      description: 'Securely collect patient intake forms, consent documents, and appointment requests.',
+      iconBg: '#CCFBF1',
+      icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="color:#0D9488"><path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+    },
+    {
+      id: 6,
+      category: 'Real Estate',
+      description: 'Manage property applications, tenant on-boarding, and inspection reports in one place.',
+      iconBg: '#FEF3C7',
+      icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="color:#B45309"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><polyline points="9 22 9 12 15 12 15 22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
     },
   ],
 }
@@ -191,35 +240,128 @@ const integrations = {
 }
 
 const testimonials = {
-  badge: 'Customer stories',
-  heading: 'Trusted where the forms have to work.',
+  heading: [
+    { id: 1, text: 'Trusted where the ', highlight: false },
+    { id: 2, text: 'forms have to work.', highlight: true },
+  ],
   items: [
     {
       id: 1,
-      rating: 5,
-      review:
-        'We replaced three form tools with Formester. The AI builder cut our launch time from days to under an hour.',
-      authorName: 'Maya Chen',
-      authorDesignation: 'Head of Operations, Lattice',
-      image: null,
+      comment: 'We replaced three form tools with Formester. The AI builder cut our launch time from days to under an hour. What used to take a full sprint — scoping, dev time, QA, deployment — now takes one person less than 60 minutes. The ROI was obvious within the first week.',
+      name: 'Maya Chen',
+      position: 'Head of Operations, Lattice',
+      companyLogo: null,
     },
     {
       id: 2,
-      rating: 5,
-      review:
-        'Conditional logic that actually works the first time. Our admissions team writes their own forms — no eng tickets.',
-      authorName: 'Rohit Sharma',
-      authorDesignation: 'Director of IT, Ashoka University',
-      image: null,
+      comment: 'Conditional logic that actually works the first time. Our admissions team writes their own forms — no eng tickets.',
+      name: 'Rohit Sharma',
+      position: 'Director of IT, Ashoka University',
+      companyLogo: null,
     },
     {
       id: 3,
-      rating: 5,
-      review:
-        'Field-level drop-off analytics is the feature I didn\'t know I needed. Conversions up 31% in two months.',
-      authorName: 'Sara Lindqvist',
-      authorDesignation: 'Growth Lead, Notable',
-      image: null,
+      comment: 'Field-level drop-off analytics is the feature I didn\'t know I needed. Conversions up 31% in two months. We could see exactly which question made people abandon the form, rewrite it in plain language, and watch the completion rate jump. No A/B testing platform required — the built-in analytics told us everything.',
+      name: 'Sara Lindqvist',
+      position: 'Growth Lead, Notable',
+      companyLogo: null,
+    },
+    {
+      id: 4,
+      comment: 'Our HR team went from spreadsheets to automated onboarding flows in a single afternoon. Formester just works.',
+      name: 'Priya Nambiar',
+      position: 'VP People, Razorpay',
+      companyLogo: null,
+    },
+    {
+      id: 5,
+      comment: 'The Stripe integration meant we could collect payments inside our intake form. No extra tools, no custom code. We handle retainer agreements, deposits, and event fees all through the same form our clients already fill out. It removed an entire step from our onboarding and our close rate improved noticeably.',
+      name: 'James Okafor',
+      position: 'Founder, Clearline Legal',
+      companyLogo: null,
+    },
+    {
+      id: 6,
+      comment: 'We run 200+ event registrations a year. Formester handles them all — conditional logic, payments, confirmations.',
+      name: 'Elena Vasquez',
+      position: 'Events Director, TechSpark',
+      companyLogo: null,
+    },
+    {
+      id: 7,
+      comment: 'Switching from Typeform saved us $800/month and we actually got more features. The migration took two hours.',
+      name: 'Daniel Park',
+      position: 'CTO, Growthline',
+      companyLogo: null,
+    },
+    {
+      id: 8,
+      comment: 'Our students complete feedback surveys at 3× the rate we saw before. The mobile experience makes the difference. We\'d struggled for years with low response rates on course evaluations. After switching to Formester, the mobile-first layout and shorter perceived length — thanks to multi-step forms — completely changed student behaviour. Admin now actually has enough data to act on.',
+      name: 'Ananya Krishnan',
+      position: 'Head of Student Success, Manipal Online',
+      companyLogo: null,
+    },
+    {
+      id: 9,
+      comment: 'The webhook support is rock-solid. We pipe every submission straight into our internal tools with zero data loss.',
+      name: 'Tom Eriksson',
+      position: 'Engineering Lead, Finlo',
+      companyLogo: null,
+    },
+    {
+      id: 10,
+      comment: 'I built a multi-step lead qualifier in 20 minutes. Our sales team finally gets warm, pre-screened leads.',
+      name: 'Neha Bhatia',
+      position: 'Head of Marketing, Zomentum',
+      companyLogo: null,
+    },
+    {
+      id: 11,
+      comment: 'White-labelling was seamless. Clients see our brand everywhere — URL, emails, the form itself. We\'d been manually editing confirmation emails and embedding workarounds for years. With Formester, everything — the subdomain, the logo, the email sender name, the form theme — is ours. Clients have stopped asking "what tool is this?" which means they stay focused on filling it out.',
+      name: 'Marcus Webb',
+      position: 'Product Manager, AgencyStack',
+      companyLogo: null,
+    },
+    {
+      id: 12,
+      comment: 'GDPR compliance was a blocker for us. EU data residency and the audit log gave our legal team the confidence to approve.',
+      name: 'Ingrid Solvang',
+      position: 'Head of Compliance, Norvik Health',
+      companyLogo: null,
+    },
+  ],
+}
+
+const faq = {
+  badge: 'FAQ',
+  heading: 'Questions we get a lot.',
+  description: 'Still curious? Our docs cover everything in depth — or just chat with us.',
+  ctaButton: { text: 'Visit help center', link: '/docs' },
+  items: [
+    {
+      id: 1,
+      question: 'Is Formester really free to start?',
+      answer: 'Yes. The free plan includes unlimited forms, up to 100 responses/month, and all core features. No credit card required.',
+    },
+    {
+      id: 2,
+      question: 'How does the AI form builder work?',
+      answer: 'Describe your goal in plain English. Formester generates a complete form with fields, validation, and conditional logic. You can edit every detail before publishing.',
+    },
+    {
+      id: 3,
+      question: 'Can I accept payments through my forms?',
+      answer: 'Yes — Stripe integration is built in. Collect one-time or recurring payments, issue receipts, and manage payouts without leaving Formester.',
+    },
+    {
+      id: 4,
+      question: 'Does Formester integrate with my existing tools?',
+      answer: 'Formester connects natively to 50+ tools including HubSpot, Slack, Notion, Google Sheets, Salesforce, and Zapier. A typed REST API and webhooks cover everything else.',
+    },
+    {
+      id: 5,
+      question: 'Where is my data stored?',
+      answer: 'Data is stored in AWS data centres (us-east-1 by default). EU data residency is available on Business and Enterprise plans.',
     },
   ],
 }
@@ -234,4 +376,9 @@ const cta = {
   ],
   trustText: '50,000+ teams · Free forever · Real support',
 }
+
+useHead(() => ({
+  title: 'Home Page Preview',
+  meta: [{ name: 'robots', content: 'noindex, nofollow' }],
+}))
 </script>
