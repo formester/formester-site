@@ -106,7 +106,8 @@ function selectTab(tab) {
 
 // Hold-to-scroll: immediate step on press, then continuous while held.
 let scrollHoldTimer = null
-let scrollIntervalTimer = null
+let scrollFrameId = null
+let lastScrollTimestamp = 0
 
 function scrollStep(direction, amount) {
   if (!tabsBox.value) return
@@ -118,22 +119,43 @@ function scrollStep(direction, amount) {
 }
 
 function startScroll(direction) {
+  stopScroll(false)
   scrollStep(direction, 180)
   scrollHoldTimer = setTimeout(() => {
-    scrollIntervalTimer = setInterval(() => scrollStep(direction, 24), 16)
+    lastScrollTimestamp = 0
+    scrollFrameId = requestAnimationFrame((timestamp) =>
+      scrollContinuously(direction, timestamp),
+    )
   }, 250)
 }
 
-function stopScroll() {
+function scrollContinuously(direction, timestamp) {
+  if (!lastScrollTimestamp) {
+    lastScrollTimestamp = timestamp
+  }
+
+  const delta = timestamp - lastScrollTimestamp
+  lastScrollTimestamp = timestamp
+  scrollStep(direction, delta * 1.5)
+  scrollFrameId = requestAnimationFrame((nextTimestamp) =>
+    scrollContinuously(direction, nextTimestamp),
+  )
+}
+
+function stopScroll(updateIcons = true) {
   if (scrollHoldTimer) {
     clearTimeout(scrollHoldTimer)
     scrollHoldTimer = null
   }
-  if (scrollIntervalTimer) {
-    clearInterval(scrollIntervalTimer)
-    scrollIntervalTimer = null
+  if (scrollFrameId) {
+    cancelAnimationFrame(scrollFrameId)
+    scrollFrameId = null
   }
-  setTimeout(handleIcons, 100)
+  lastScrollTimestamp = 0
+
+  if (updateIcons) {
+    setTimeout(handleIcons, 100)
+  }
 }
 
 function handleIcons() {
@@ -153,6 +175,7 @@ function handleIcons() {
 }
 
 onMounted(() => handleIcons())
+onBeforeUnmount(() => stopScroll(false))
 </script>
 
 <style scoped>
@@ -258,7 +281,9 @@ onMounted(() => handleIcons())
   box-shadow:
     0 1px 2px rgba(16, 24, 40, 0.05),
     0 1px 3px rgba(16, 24, 40, 0.04);
-  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+  transition:
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .template:hover {
