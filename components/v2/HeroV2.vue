@@ -39,8 +39,15 @@
       </div>
 
       <p v-if="trustText" class="hero-v2__trust">{{ trustText }}</p>
+    </div>
 
-      <div v-if="image?.url" class="hero-v2__mockup">
+    <div v-if="tabCardContent.length || image?.url" class="hero-v2__media">
+      <HeroTabs
+        v-if="tabCardContent.length"
+        class="hero-v2__tabs"
+        :data="{ tabCardContent }"
+      />
+      <div v-else-if="image?.url" class="hero-v2__mockup">
         <div class="hero-v2__mockup-bar">
           <span class="hero-v2__dot hero-v2__dot--red"></span>
           <span class="hero-v2__dot hero-v2__dot--yellow"></span>
@@ -59,16 +66,18 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+import HeroTabs from '@/components/home/HeroTabShowcase/HeroTabs.vue'
 import FButton from '@/components/UI/FButton.vue'
 import SectionBadge from '@/components/UI/SectionBadge.vue'
 
 defineProps({
-  badge:       { type: Object, default: () => null },
-  title:       { type: Array,  default: () => [] },
-  description: { type: String, default: '' },
-  buttons:     { type: Array,  default: () => [] },
-  trustText:   { type: String, default: '' },
-  image:       { type: Object, default: () => null },
+  badge:          { type: Object, default: () => null },
+  title:          { type: Array,  default: () => [] },
+  description:    { type: String, default: '' },
+  buttons:        { type: Array,  default: () => [] },
+  trustText:      { type: String, default: '' },
+  image:          { type: Object, default: () => null },
+  tabCardContent: { type: Array,  default: () => [] },
 })
 
 const sectionEl = ref(null)
@@ -275,6 +284,19 @@ onBeforeUnmount(() => {
   margin-bottom: var(--space-14);
 }
 
+.hero-v2__media {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.hero-v2__tabs {
+  width: 100%;
+}
+
 .hero-v2__mockup {
   width: 100%;
   max-width: 900px;
@@ -337,6 +359,8 @@ onBeforeUnmount(() => {
   .hero-v2__btn { justify-content: center; }
 
   .hero-v2__trust { margin-bottom: var(--space-9); }
+
+  .hero-v2__media { padding: 0 var(--space-4); }
 
   .hero-v2__mockup { border-radius: var(--r-xl); }
 

@@ -1,8 +1,8 @@
 <template>
-  <div v-if="variant === 'pill'" class="badge-pill p-1  max-w-[80vw]" :class="{ 'pr-2': arrow, 'px-2': onlyText }">
+  <div v-if="variant === 'pill'" class="badge-pill p-1 py-1  max-w-[80vw]" :class="{ 'pr-2': arrow, 'px-2': onlyText }">
     <span v-if="tag" class="badge-pill__tag">{{ tag }}</span>
     <span v-if="sep" class="badge-pill__sep"></span>
-    <span class="truncate" :tilte="text">{{ text }}</span>
+    <span class="truncate" :title="text">{{ text }}</span>
     <span v-if="arrow" class="badge-pill__arrow">
       <ArrowRightIcon />
     </span>
@@ -74,7 +74,7 @@ export default {
   font-weight: var(--fw-bold);
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  padding: 3px 9px;
+  padding: 0 8px;
   border-radius: var(--r-full);
   white-space: nowrap;
 }
