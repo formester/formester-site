@@ -4,18 +4,17 @@
     <main class="main-content">
       <NuxtPage />
     </main>
-    <Footer />
+    <V2Footer />
     <CookieConsent />
   </div>
 </template>
 
 <script>
 import Navbar from '../components/v2/nav/Navbar.vue'
-import Footer from '../components/Footer.vue'
 import CookieConsent from '../components/CookieConsent.vue'
 
 export default {
-  components: { Footer, Navbar, CookieConsent },
+  components: { Navbar, CookieConsent },
   mounted() {
     this.trackReferrer()
   },
