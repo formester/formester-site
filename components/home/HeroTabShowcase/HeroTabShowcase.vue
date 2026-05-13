@@ -169,7 +169,7 @@ export default {
   color: #fff;
   font-weight: 700;
   border: none;
-  border-radius: 999px;
+  border-radius: 8px;
   padding: 0.75em 2em;
   font-size: 1.125rem;
   box-shadow: 0 2px 8px rgba(100, 52, 208, 0.08);
