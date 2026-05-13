@@ -145,144 +145,50 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'TemplatesDropdown',
-  props: {
-    dropdownActive: Boolean,
-    isMobile: Boolean,
-  },
-  data() {
-    return {
-      formsTemplates: [
-        {
-          id: 1,
-          title: 'Contact Forms',
-          slug: '/templates/categories/contact-forms/',
-        },
-        {
-          id: 2,
-          title: 'Employee Management Forms',
-          slug: '/templates/categories/employee-management/',
-        },
-        {
-          id: 3,
-          title: 'Booking Forms',
-          slug: '/templates/categories/booking-forms/',
-        },
-        {
-          id: 4,
-          title: 'Lead Generation Forms',
-          slug: '/templates/categories/lead-generation/',
-        },
-        {
-          id: 5,
-          title: 'Application Forms',
-          slug: '/templates/categories/application-and-registration/',
-        },
-        {
-          id: 6,
-          title: 'Order Forms',
-          slug: '/templates/categories/order-forms/',
-        },
-      ],
-      surveysTemplates: [
-        {
-          id: 1,
-          title: 'Surveys',
-          slug: '/templates/categories/survey-forms/',
-        },
-        {
-          id: 2,
-          title: 'Questionnaire',
-          slug: '/templates/categories/questionnaire/',
-        },
-        {
-          id: 3,
-          title: 'New Product Survey',
-          slug: '/templates/new-product-survey-form-1919/',
-        },
-        {
-          id: 4,
-          title: 'Marketing Research Survey',
-          slug: '/templates/market-research-survey-701/',
-        },
-        {
-          id: 5,
-          title: 'Employee Engagement Survey',
-          slug: '/templates/employee-engagement-survey-template-17645/',
-        },
-        {
-          id: 6,
-          title: 'Event Feedback Survey',
-          slug: '/templates/event-feedback-survey-698/',
-        },
-      ],
-      quizzesTemplates: [
-        {
-          id: 1,
-          title: 'General Knowledge Quiz',
-          slug: '/templates/general-knowledge-mcq-quiz-27608/',
-        },
-        {
-          id: 2,
-          title: 'Personality Quiz',
-          slug: '/templates/uncover-your-inner-you-4124/',
-        },
-        {
-          id: 3,
-          title: 'Trivia Quiz',
-          slug: '/templates/funny-trivia-quiz-14818/',
-        },
-        {
-          id: 4,
-          title: 'Magazine Quiz',
-          slug: '/templates/magazine-quiz-27610/',
-        },
-        {
-          id: 5,
-          title: 'Vocabulary Quiz',
-          slug: '/templates/vocabulary-quiz-27609/',
-        },
-      ],
-      pdfTemplates: [
-        {
-          id: 1,
-          title: 'Employee Agreement PDF Form',
-          slug: '/templates/employee-agreement-pdf-form-49926/',
-        },
-        {
-          id: 2,
-          title: 'Lease Agreement PDF Form',
-          slug: '/templates/lease-agreement-pdf-form-template-49894/',
-        },
-        {
-          id: 3,
-          title: 'NDA Agreement PDF Form',
-          slug: '/templates/nda-agreement-pdf-form-template-49898/',
-        },
-        {
-          id: 4,
-          title: 'Photography Services Contract',
-          slug: '/templates/photography-services-contract-template-51951/',
-        },
-        {
-          id: 5,
-          title: 'Business Contract Agreement PDF Form',
-          slug: '/templates/business-contract-agreement-pdf-form-49913/',
-        },
-      ],
-    }
-  },
-  methods: {
-    onDropdownMouseEnter() {
-      this.$emit('mouseenter')
-    },
-    onDropdownMouseLeave() {
-      this.$emit('mouseleave')
-    },
-  },
-}
+<script setup>
+defineProps({
+  dropdownActive: Boolean,
+  isMobile: Boolean,
+})
+
+const emit = defineEmits(['mouseenter', 'mouseleave', 'dropdown-close'])
+
+const onDropdownMouseEnter = () => emit('mouseenter')
+const onDropdownMouseLeave = () => emit('mouseleave')
+
+const formsTemplates = [
+  { id: 1, title: 'Contact Forms',              slug: '/templates/categories/contact-forms/' },
+  { id: 2, title: 'Employee Management Forms',  slug: '/templates/categories/employee-management/' },
+  { id: 3, title: 'Booking Forms',              slug: '/templates/categories/booking-forms/' },
+  { id: 4, title: 'Lead Generation Forms',      slug: '/templates/categories/lead-generation/' },
+  { id: 5, title: 'Application Forms',          slug: '/templates/categories/application-and-registration/' },
+  { id: 6, title: 'Order Forms',                slug: '/templates/categories/order-forms/' },
+]
+
+const surveysTemplates = [
+  { id: 1, title: 'Surveys',                    slug: '/templates/categories/survey-forms/' },
+  { id: 2, title: 'Questionnaire',              slug: '/templates/categories/questionnaire/' },
+  { id: 3, title: 'New Product Survey',         slug: '/templates/new-product-survey-form-1919/' },
+  { id: 4, title: 'Marketing Research Survey',  slug: '/templates/market-research-survey-701/' },
+  { id: 5, title: 'Employee Engagement Survey', slug: '/templates/employee-engagement-survey-template-17645/' },
+  { id: 6, title: 'Event Feedback Survey',      slug: '/templates/event-feedback-survey-698/' },
+]
+
+const quizzesTemplates = [
+  { id: 1, title: 'General Knowledge Quiz', slug: '/templates/general-knowledge-mcq-quiz-27608/' },
+  { id: 2, title: 'Personality Quiz',       slug: '/templates/uncover-your-inner-you-4124/' },
+  { id: 3, title: 'Trivia Quiz',            slug: '/templates/funny-trivia-quiz-14818/' },
+  { id: 4, title: 'Magazine Quiz',          slug: '/templates/magazine-quiz-27610/' },
+  { id: 5, title: 'Vocabulary Quiz',        slug: '/templates/vocabulary-quiz-27609/' },
+]
+
+const pdfTemplates = [
+  { id: 1, title: 'Employee Agreement PDF Form',         slug: '/templates/employee-agreement-pdf-form-49926/' },
+  { id: 2, title: 'Lease Agreement PDF Form',            slug: '/templates/lease-agreement-pdf-form-template-49894/' },
+  { id: 3, title: 'NDA Agreement PDF Form',              slug: '/templates/nda-agreement-pdf-form-template-49898/' },
+  { id: 4, title: 'Photography Services Contract',       slug: '/templates/photography-services-contract-template-51951/' },
+  { id: 5, title: 'Business Contract Agreement PDF Form',slug: '/templates/business-contract-agreement-pdf-form-49913/' },
+]
 </script>
 
 <style scoped>

@@ -70,212 +70,200 @@
   </section>
 </template>
 
-<script>
+<script setup>
+import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
+
 const COMMENT_LIMIT = 150
 
-export default {
-  props: {
-    heading:      { type: Array, default: () => [] },
-    testimonials: { type: Array, default: () => [] },
-  },
+const props = defineProps({
+  heading:      { type: Array, default: () => [] },
+  testimonials: { type: Array, default: () => [] },
+})
 
-  data() {
-    return {
-      COMMENT_LIMIT,
-      expandedCards:   {},
-      isMobile:        false,
-      currentSlide:    0,
-      tickerPosition:  0,
-      scrollSpeed:     0.5,
-      scrollPaused:    false,
-      isDragging:      false,
-      dragStartX:      0,
-      totalCardsWidth: 0,
-      animationFrame:  null,
-      _onEnter: null,
-      _onLeave: null,
-      _handleDragStart: null,
-      _handleDragMove:  null,
-      _handleDragEnd:   null,
-    }
-  },
+const track = ref(null)
+const expandedCards = ref({})
+const isMobile = ref(false)
+const currentSlide = ref(0)
+const tickerPosition = ref(0)
+const scrollSpeed = 0.5
+const scrollPaused = ref(false)
+const isDragging = ref(false)
+const dragStartX = ref(0)
+const totalCardsWidth = ref(0)
 
-  mounted() {
-    this.$nextTick(() => {
-      this.isMobile = typeof window !== 'undefined' && window.innerWidth < 768
-      if (this.isMobile) {
-        this.setupMobileCarousel()
-      } else {
-        this.setupTicker()
-      }
-    })
-  },
+let animationFrame = null
+let _onEnter = null
+let _onLeave = null
+let _handleDragStart = null
+let _handleDragMove = null
+let _handleDragEnd = null
 
-  beforeUnmount() {
-    this.teardown()
-  },
-
-  methods: {
-    isExpanded(id) {
-      return !!this.expandedCards[id]
-    },
-    toggleExpanded(id) {
-      this.expandedCards = { ...this.expandedCards, [id]: !this.expandedCards[id] }
-    },
-
-    getInitials(name) {
-      const parts = (name || '').trim().split(/\s+/)
-      if (parts.length >= 2) return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase()
-      return (name || '').slice(0, 2).toUpperCase()
-    },
-
-    setupTicker() {
-      const track = this.$refs.track
-      if (!track || this.testimonials.length === 0) return
-
-      const originalCards = Array.from(track.querySelectorAll('.tc-card'))
-      const gap = parseInt(window.getComputedStyle(track).gap) || 0
-
-      let totalWidth = 0
-      originalCards.forEach(card => { totalWidth += card.offsetWidth + gap })
-      this.totalCardsWidth = totalWidth
-
-      const outer = track.parentElement
-      const numClones = Math.ceil((outer.offsetWidth * 2) / totalWidth) + 1
-      for (let i = 0; i < numClones; i++) {
-        originalCards.forEach(card => {
-          const clone = card.cloneNode(true)
-          clone.setAttribute('aria-hidden', 'true')
-          track.appendChild(clone)
-        })
-      }
-
-      const animate = () => {
-        if (!this.scrollPaused && !this.isDragging) {
-          this.tickerPosition += this.scrollSpeed
-          if (this.tickerPosition >= this.totalCardsWidth) {
-            this.tickerPosition %= this.totalCardsWidth
-          }
-          track.style.transform = `translateX(-${this.tickerPosition}px)`
-        }
-        this.animationFrame = requestAnimationFrame(animate)
-      }
-      this.animationFrame = requestAnimationFrame(animate)
-
-      this._onEnter = () => { this.scrollPaused = true }
-      this._onLeave = () => { if (!this.isDragging) this.scrollPaused = false }
-      outer.addEventListener('mouseenter', this._onEnter)
-      outer.addEventListener('mouseleave', this._onLeave)
-
-      this._handleDragStart = this.handleDragStart.bind(this)
-      this._handleDragMove  = this.handleDragMove.bind(this)
-      this._handleDragEnd   = this.handleDragEnd.bind(this)
-
-      track.addEventListener('mousedown', this._handleDragStart)
-      document.addEventListener('mousemove', this._handleDragMove)
-      document.addEventListener('mouseup',   this._handleDragEnd)
-      track.addEventListener('touchstart', this._handleDragStart, { passive: false })
-      document.addEventListener('touchmove', this._handleDragMove, { passive: false })
-      document.addEventListener('touchend',  this._handleDragEnd)
-    },
-
-    teardown() {
-      if (this.animationFrame) cancelAnimationFrame(this.animationFrame)
-      const track = this.$refs.track
-      if (track) {
-        const outer = track.parentElement
-        if (outer) {
-          if (this._onEnter) outer.removeEventListener('mouseenter', this._onEnter)
-          if (this._onLeave) outer.removeEventListener('mouseleave', this._onLeave)
-        }
-        if (this._handleDragStart) {
-          track.removeEventListener('mousedown',  this._handleDragStart)
-          track.removeEventListener('touchstart', this._handleDragStart)
-        }
-      }
-      if (this._handleDragMove) {
-        document.removeEventListener('mousemove', this._handleDragMove)
-        document.removeEventListener('touchmove', this._handleDragMove)
-      }
-      if (this._handleDragEnd) {
-        document.removeEventListener('mouseup',  this._handleDragEnd)
-        document.removeEventListener('touchend', this._handleDragEnd)
-      }
-    },
-
-    handleDragStart(e) {
-      e.preventDefault()
-      this.isDragging   = true
-      this.scrollPaused = true
-      this.dragStartX   = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX
-      if (this.$refs.track) this.$refs.track.style.cursor = 'grabbing'
-    },
-
-    handleDragMove(e) {
-      if (!this.isDragging) return
-      e.preventDefault()
-      const x     = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX
-      const delta = this.dragStartX - x
-      let newPos  = this.tickerPosition + delta
-      if (newPos < 0) newPos += this.totalCardsWidth
-      if (newPos > this.totalCardsWidth * 2) newPos -= this.totalCardsWidth
-      this.tickerPosition = newPos
-      if (this.$refs.track) this.$refs.track.style.transform = `translateX(-${newPos}px)`
-      this.dragStartX = x
-    },
-
-    handleDragEnd() {
-      if (!this.isDragging) return
-      this.isDragging   = false
-      this.scrollPaused = false
-      if (this.$refs.track) this.$refs.track.style.cursor = 'grab'
-    },
-
-    setupMobileCarousel() {
-      const track = this.$refs.track
-      if (!track) return
-      track.style.transition = 'transform 0.35s ease'
-    },
-
-    applyMobileTransform() {
-      const step = this.getCardStep()
-      if (this.$refs.track) {
-        this.$refs.track.style.transform = `translateX(-${this.currentSlide * step}px)`
-      }
-    },
-
-    getCardStep() {
-      const track = this.$refs.track
-      if (!track) return 0
-      const card = track.querySelector('.tc-card')
-      if (!card) return 0
-      const gap = parseInt(window.getComputedStyle(track).gap) || 0
-      return card.offsetWidth + gap
-    },
-
-    scrollNext() {
-      if (this.isMobile) {
-        this.currentSlide = Math.min(this.currentSlide + 1, this.testimonials.length - 1)
-        this.applyMobileTransform()
-      } else {
-        this.tickerPosition += this.getCardStep()
-        if (this.tickerPosition >= this.totalCardsWidth) {
-          this.tickerPosition %= this.totalCardsWidth
-        }
-      }
-    },
-
-    scrollPrev() {
-      if (this.isMobile) {
-        this.currentSlide = Math.max(this.currentSlide - 1, 0)
-        this.applyMobileTransform()
-      } else {
-        this.tickerPosition -= this.getCardStep()
-        if (this.tickerPosition < 0) this.tickerPosition += this.totalCardsWidth
-      }
-    },
-  },
+const isExpanded = (id) => !!expandedCards.value[id]
+const toggleExpanded = (id) => {
+  expandedCards.value = { ...expandedCards.value, [id]: !expandedCards.value[id] }
 }
+
+const getInitials = (name) => {
+  const parts = (name || '').trim().split(/\s+/)
+  if (parts.length >= 2) return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase()
+  return (name || '').slice(0, 2).toUpperCase()
+}
+
+const getCardStep = () => {
+  const t = track.value
+  if (!t) return 0
+  const card = t.querySelector('.tc-card')
+  if (!card) return 0
+  const gap = parseInt(window.getComputedStyle(t).gap) || 0
+  return card.offsetWidth + gap
+}
+
+const applyMobileTransform = () => {
+  const step = getCardStep()
+  if (track.value) track.value.style.transform = `translateX(-${currentSlide.value * step}px)`
+}
+
+const handleDragStart = (e) => {
+  e.preventDefault()
+  isDragging.value = true
+  scrollPaused.value = true
+  dragStartX.value = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX
+  if (track.value) track.value.style.cursor = 'grabbing'
+}
+
+const handleDragMove = (e) => {
+  if (!isDragging.value) return
+  e.preventDefault()
+  const x = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX
+  const delta = dragStartX.value - x
+  let newPos = tickerPosition.value + delta
+  if (newPos < 0) newPos += totalCardsWidth.value
+  if (newPos > totalCardsWidth.value * 2) newPos -= totalCardsWidth.value
+  tickerPosition.value = newPos
+  if (track.value) track.value.style.transform = `translateX(-${newPos}px)`
+  dragStartX.value = x
+}
+
+const handleDragEnd = () => {
+  if (!isDragging.value) return
+  isDragging.value = false
+  scrollPaused.value = false
+  if (track.value) track.value.style.cursor = 'grab'
+}
+
+const setupTicker = () => {
+  const t = track.value
+  if (!t || props.testimonials.length === 0) return
+
+  const originalCards = Array.from(t.querySelectorAll('.tc-card'))
+  const gap = parseInt(window.getComputedStyle(t).gap) || 0
+
+  let totalWidth = 0
+  originalCards.forEach(card => { totalWidth += card.offsetWidth + gap })
+  totalCardsWidth.value = totalWidth
+
+  const outer = t.parentElement
+  const numClones = Math.ceil((outer.offsetWidth * 2) / totalWidth) + 1
+  for (let i = 0; i < numClones; i++) {
+    originalCards.forEach(card => {
+      const clone = card.cloneNode(true)
+      clone.setAttribute('aria-hidden', 'true')
+      t.appendChild(clone)
+    })
+  }
+
+  const animate = () => {
+    if (!scrollPaused.value && !isDragging.value) {
+      tickerPosition.value += scrollSpeed
+      if (tickerPosition.value >= totalCardsWidth.value) {
+        tickerPosition.value %= totalCardsWidth.value
+      }
+      t.style.transform = `translateX(-${tickerPosition.value}px)`
+    }
+    animationFrame = requestAnimationFrame(animate)
+  }
+  animationFrame = requestAnimationFrame(animate)
+
+  _onEnter = () => { scrollPaused.value = true }
+  _onLeave = () => { if (!isDragging.value) scrollPaused.value = false }
+  outer.addEventListener('mouseenter', _onEnter)
+  outer.addEventListener('mouseleave', _onLeave)
+
+  _handleDragStart = handleDragStart
+  _handleDragMove  = handleDragMove
+  _handleDragEnd   = handleDragEnd
+
+  t.addEventListener('mousedown', _handleDragStart)
+  document.addEventListener('mousemove', _handleDragMove)
+  document.addEventListener('mouseup', _handleDragEnd)
+  t.addEventListener('touchstart', _handleDragStart, { passive: false })
+  document.addEventListener('touchmove', _handleDragMove, { passive: false })
+  document.addEventListener('touchend', _handleDragEnd)
+}
+
+const setupMobileCarousel = () => {
+  const t = track.value
+  if (!t) return
+  t.style.transition = 'transform 0.35s ease'
+}
+
+const teardown = () => {
+  if (animationFrame) cancelAnimationFrame(animationFrame)
+  const t = track.value
+  if (t) {
+    const outer = t.parentElement
+    if (outer) {
+      if (_onEnter) outer.removeEventListener('mouseenter', _onEnter)
+      if (_onLeave) outer.removeEventListener('mouseleave', _onLeave)
+    }
+    if (_handleDragStart) {
+      t.removeEventListener('mousedown', _handleDragStart)
+      t.removeEventListener('touchstart', _handleDragStart)
+    }
+  }
+  if (_handleDragMove) {
+    document.removeEventListener('mousemove', _handleDragMove)
+    document.removeEventListener('touchmove', _handleDragMove)
+  }
+  if (_handleDragEnd) {
+    document.removeEventListener('mouseup', _handleDragEnd)
+    document.removeEventListener('touchend', _handleDragEnd)
+  }
+}
+
+const scrollNext = () => {
+  if (isMobile.value) {
+    currentSlide.value = Math.min(currentSlide.value + 1, props.testimonials.length - 1)
+    applyMobileTransform()
+  } else {
+    tickerPosition.value += getCardStep()
+    if (tickerPosition.value >= totalCardsWidth.value) {
+      tickerPosition.value %= totalCardsWidth.value
+    }
+  }
+}
+
+const scrollPrev = () => {
+  if (isMobile.value) {
+    currentSlide.value = Math.max(currentSlide.value - 1, 0)
+    applyMobileTransform()
+  } else {
+    tickerPosition.value -= getCardStep()
+    if (tickerPosition.value < 0) tickerPosition.value += totalCardsWidth.value
+  }
+}
+
+onMounted(async () => {
+  await nextTick()
+  isMobile.value = typeof window !== 'undefined' && window.innerWidth < 768
+  if (isMobile.value) {
+    setupMobileCarousel()
+  } else {
+    setupTicker()
+  }
+})
+
+onBeforeUnmount(() => teardown())
 </script>
 
 <style scoped>

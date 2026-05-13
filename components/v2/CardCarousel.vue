@@ -68,7 +68,7 @@
   </section>
 </template>
 
-<script>
+<script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 import 'swiper/css'
@@ -76,22 +76,15 @@ import 'swiper/css/pagination'
 import SectionBadge from '@/components/UI/SectionBadge.vue'
 import FButton from '@/components/UI/FButton.vue'
 
-export default {
-  name: 'CardCarousel',
-  components: { Swiper, SwiperSlide, SectionBadge, FButton },
-  props: {
-    badge:       { type: String, default: '' },
-    heading:     { type: String, default: '' },
-    description: { type: String, default: '' },
-    cta:         { type: Object, default: null },
-    usecases:    { type: Array,  default: () => [] },
-  },
-  data() {
-    return {
-      modules: [Navigation, Pagination, Autoplay],
-    }
-  },
-}
+defineProps({
+  badge:       { type: String, default: '' },
+  heading:     { type: String, default: '' },
+  description: { type: String, default: '' },
+  cta:         { type: Object, default: null },
+  usecases:    { type: Array,  default: () => [] },
+})
+
+const modules = [Navigation, Pagination, Autoplay]
 </script>
 
 <style scoped>

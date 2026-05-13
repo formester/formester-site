@@ -54,29 +54,19 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import ResourceDropdownItem from './ResourceDropdownItem.vue'
 
-export default {
-  name: 'ResourcesDropdown',
-  components: { ResourceDropdownItem },
-  props: {
-    dropdownActive: Boolean,
-    isMobile: Boolean,
-    resourcesList: {
-      type: Array,
-      required: true,
-    },
-  },
-  methods: {
-    onDropdownMouseEnter() {
-      this.$emit('mouseenter')
-    },
-    onDropdownMouseLeave() {
-      this.$emit('mouseleave')
-    },
-  },
-}
+defineProps({
+  dropdownActive: Boolean,
+  isMobile: Boolean,
+  resourcesList: { type: Array, required: true },
+})
+
+const emit = defineEmits(['mouseenter', 'mouseleave', 'dropdown-close'])
+
+const onDropdownMouseEnter = () => emit('mouseenter')
+const onDropdownMouseLeave = () => emit('mouseleave')
 </script>
 
 <style scoped>

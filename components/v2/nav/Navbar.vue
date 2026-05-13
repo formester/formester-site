@@ -156,219 +156,153 @@
   </div>
 </template>
 
-<script>
-import DropdownItem from './DropdownItem.vue'
-import NavItem from './NavItem.vue'
+<script setup>
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+import FButton from '@/components/UI/FButton.vue'
 import FeaturesDropdown from './FeaturesDropdown.vue'
 import ResourcesDropdown from './ResourcesDropdown.vue'
 import TemplatesDropdown from './TemplatesDropdown.vue'
-import FButton from '@/components/UI/FButton.vue'
 
-export default {
-  name: 'NavNavbar',
-  components: {
-    NavItem,
-    DropdownItem,
-    FeaturesDropdown,
-    ResourcesDropdown,
-    TemplatesDropdown,
-    FButton,
-  },
-  data() {
-    return {
-      dropdownActive: false,
-      hoveringDropdown: false,
-      templatesDropdownActive: false,
-      hoveringTemplatesDropdown: false,
-      resourcesDropdownActive: false,
-      hoveringResourcesDropdown: false,
-      isMobile: false,
-      isTablet: false,
-      activeFeatureCategory: '',
-      dropdownTimer: null,
-      resourcesDropdownTimer: null,
-      bsCollapse: null,
-      resourcesList: [
-        {
-          id: 1,
-          title: 'Compare',
-          description: 'Compare us with other form builders',
-          imageUrl: '/compare.svg',
-          imageAlt: 'Compare icon',
-          slug: 'comparison-tool',
-        },
-        {
-          id: 2,
-          title: 'Blogs',
-          description: 'Read our latest articles and guides',
-          imageUrl: '/blog.svg',
-          imageAlt: 'Blogs icon',
-          slug: 'blog',
-        },
-        {
-          id: 3,
-          title: 'Enterprise',
-          description: 'Solutions for large organizations',
-          imageUrl: '/enterprise.svg',
-          imageAlt: 'Enterprise icon',
-          slug: 'enterprise',
-        },
-        {
-          id: 4,
-          title: 'API Docs',
-          description: 'Comprehensive API documentation',
-          imageUrl: '/api-docs.svg',
-          imageAlt: 'API Docs icon',
-          href: 'https://docs.formester.com/formester-api.html',
-        },
-        {
-          id: 5,
-          title: 'Help Center',
-          description: 'Get help and support',
-          imageUrl: '/support.svg',
-          imageAlt: 'Help Center icon',
-          href: 'https://help.formester.com/',
-        }
-      ],
-    }
-  },
-  mounted() {
-    this.checkIsMobile()
-    window.addEventListener('resize', this.checkIsMobile)
-    if (typeof window !== 'undefined' && window.bootstrap) {
-      this.bsCollapse = new window.bootstrap.Collapse(this.$refs.siteNav, { toggle: false })
-    }
-  },
-  beforeUnmount() {
-    window.removeEventListener('resize', this.checkIsMobile)
-  },
-  methods: {
-    checkIsMobile() {
-      const w = window.innerWidth
-      this.isMobile = w < 1200
-      this.isTablet = w >= 768 && w < 1200
-      if (!this.isMobile) {
-        this.dropdownActive = false
-      }
-    },
-    toggleDropdown() {
-      this.dropdownActive = !this.dropdownActive
-      if (this.dropdownActive) {
-        this.templatesDropdownActive = false
-        this.resourcesDropdownActive = false
-      }
-    },
+const siteNav = ref(null)
 
-    toggleTemplatesDropdown() {
-      this.templatesDropdownActive = !this.templatesDropdownActive
-      if (this.templatesDropdownActive) {
-        this.dropdownActive = false
-        this.resourcesDropdownActive = false
-      }
-    },
+const dropdownActive = ref(false)
+const hoveringDropdown = ref(false)
+const templatesDropdownActive = ref(false)
+const hoveringTemplatesDropdown = ref(false)
+const resourcesDropdownActive = ref(false)
+const hoveringResourcesDropdown = ref(false)
+const isMobile = ref(false)
+const isTablet = ref(false)
+const activeFeatureCategory = ref('')
 
-    ensureBsCollapse() {
-      if (!this.bsCollapse && typeof window !== 'undefined' && window.bootstrap) {
-        this.bsCollapse = new window.bootstrap.Collapse(this.$refs.siteNav, { toggle: false })
-      }
-      return this.bsCollapse
-    },
+let dropdownTimer = null
+let resourcesDropdownTimer = null
+let bsCollapse = null
 
-    toggleNav() {
-      const navbarCollapse = this.ensureBsCollapse()
-      if (navbarCollapse) navbarCollapse.toggle()
-    },
+const resourcesList = [
+  { id: 1, title: 'Compare',     description: 'Compare us with other form builders',  imageUrl: '/compare.svg',    imageAlt: 'Compare icon',     slug: 'comparison-tool' },
+  { id: 2, title: 'Blogs',       description: 'Read our latest articles and guides',   imageUrl: '/blog.svg',       imageAlt: 'Blogs icon',        slug: 'blog' },
+  { id: 3, title: 'Enterprise',  description: 'Solutions for large organizations',     imageUrl: '/enterprise.svg', imageAlt: 'Enterprise icon',   slug: 'enterprise' },
+  { id: 4, title: 'API Docs',    description: 'Comprehensive API documentation',       imageUrl: '/api-docs.svg',   imageAlt: 'API Docs icon',     href: 'https://docs.formester.com/formester-api.html' },
+  { id: 5, title: 'Help Center', description: 'Get help and support',                  imageUrl: '/support.svg',    imageAlt: 'Help Center icon',  href: 'https://help.formester.com/' },
+]
 
-    collapseNav() {
-      if (window.innerWidth >= 1200) return
-      const navbarCollapse = this.ensureBsCollapse()
-      if (navbarCollapse) navbarCollapse.hide()
-    },
-
-    onDropdownMouseEnter() {
-      if (this.dropdownTimer) {
-        clearTimeout(this.dropdownTimer)
-        this.dropdownTimer = null
-      }
-      this.dropdownActive = true
-      this.hoveringDropdown = true
-    },
-
-    onDropdownMouseLeave() {
-      this.hoveringDropdown = false
-      this.dropdownTimer = setTimeout(() => {
-        if (!this.hoveringDropdown) {
-          this.dropdownActive = false
-        }
-      }, 80)
-    },
-
-    handleDropdownClose() {
-      this.dropdownActive = false
-      this.collapseNav()
-    },
-
-    onTemplatesDropdownMouseEnter() {
-      this.hoveringTemplatesDropdown = true
-      // Close other dropdowns if open
-      if (this.dropdownActive) {
-        this.dropdownActive = false
-      }
-      if (this.resourcesDropdownActive) {
-        this.resourcesDropdownActive = false
-      }
-      this.templatesDropdownActive = true
-    },
-
-    onTemplatesDropdownMouseLeave() {
-      this.hoveringTemplatesDropdown = false
-      setTimeout(() => {
-        if (!this.hoveringTemplatesDropdown) {
-          this.templatesDropdownActive = false
-        }
-      }, 80)
-    },
-
-    handleTemplatesDropdownClose() {
-      this.templatesDropdownActive = false
-      this.collapseNav()
-    },
-
-    toggleResourcesDropdown() {
-      this.resourcesDropdownActive = !this.resourcesDropdownActive
-      if (this.resourcesDropdownActive) {
-        this.dropdownActive = false
-        this.templatesDropdownActive = false
-      }
-    },
-
-    onResourcesDropdownMouseEnter() {
-      this.hoveringResourcesDropdown = true
-      clearTimeout(this.resourcesDropdownTimer)
-
-      // Close features dropdown if open
-      if (this.dropdownActive) {
-        this.dropdownActive = false
-      }
-
-      this.resourcesDropdownActive = true
-    },
-
-    onResourcesDropdownMouseLeave() {
-      this.hoveringResourcesDropdown = false
-      this.resourcesDropdownTimer = setTimeout(() => {
-        if (!this.hoveringResourcesDropdown) {
-          this.resourcesDropdownActive = false
-        }
-      }, 80)
-    },
-
-    handleResourcesDropdownClose() {
-      this.resourcesDropdownActive = false
-      this.collapseNav()
-    },
-  },
+const checkIsMobile = () => {
+  const w = window.innerWidth
+  isMobile.value = w < 1200
+  isTablet.value = w >= 768 && w < 1200
+  if (!isMobile.value) dropdownActive.value = false
 }
+
+const ensureBsCollapse = () => {
+  if (!bsCollapse && typeof window !== 'undefined' && window.bootstrap) {
+    bsCollapse = new window.bootstrap.Collapse(siteNav.value, { toggle: false })
+  }
+  return bsCollapse
+}
+
+const toggleNav = () => {
+  const c = ensureBsCollapse()
+  if (c) c.toggle()
+}
+
+const collapseNav = () => {
+  if (window.innerWidth >= 1200) return
+  const c = ensureBsCollapse()
+  if (c) c.hide()
+}
+
+const toggleDropdown = () => {
+  dropdownActive.value = !dropdownActive.value
+  if (dropdownActive.value) {
+    templatesDropdownActive.value = false
+    resourcesDropdownActive.value = false
+  }
+}
+
+const toggleTemplatesDropdown = () => {
+  templatesDropdownActive.value = !templatesDropdownActive.value
+  if (templatesDropdownActive.value) {
+    dropdownActive.value = false
+    resourcesDropdownActive.value = false
+  }
+}
+
+const onDropdownMouseEnter = () => {
+  if (dropdownTimer) { clearTimeout(dropdownTimer); dropdownTimer = null }
+  dropdownActive.value = true
+  hoveringDropdown.value = true
+}
+
+const onDropdownMouseLeave = () => {
+  hoveringDropdown.value = false
+  dropdownTimer = setTimeout(() => {
+    if (!hoveringDropdown.value) dropdownActive.value = false
+  }, 80)
+}
+
+const handleDropdownClose = () => {
+  dropdownActive.value = false
+  collapseNav()
+}
+
+const onTemplatesDropdownMouseEnter = () => {
+  hoveringTemplatesDropdown.value = true
+  if (dropdownActive.value) dropdownActive.value = false
+  if (resourcesDropdownActive.value) resourcesDropdownActive.value = false
+  templatesDropdownActive.value = true
+}
+
+const onTemplatesDropdownMouseLeave = () => {
+  hoveringTemplatesDropdown.value = false
+  setTimeout(() => {
+    if (!hoveringTemplatesDropdown.value) templatesDropdownActive.value = false
+  }, 80)
+}
+
+const handleTemplatesDropdownClose = () => {
+  templatesDropdownActive.value = false
+  collapseNav()
+}
+
+const toggleResourcesDropdown = () => {
+  resourcesDropdownActive.value = !resourcesDropdownActive.value
+  if (resourcesDropdownActive.value) {
+    dropdownActive.value = false
+    templatesDropdownActive.value = false
+  }
+}
+
+const onResourcesDropdownMouseEnter = () => {
+  hoveringResourcesDropdown.value = true
+  clearTimeout(resourcesDropdownTimer)
+  if (dropdownActive.value) dropdownActive.value = false
+  resourcesDropdownActive.value = true
+}
+
+const onResourcesDropdownMouseLeave = () => {
+  hoveringResourcesDropdown.value = false
+  resourcesDropdownTimer = setTimeout(() => {
+    if (!hoveringResourcesDropdown.value) resourcesDropdownActive.value = false
+  }, 80)
+}
+
+const handleResourcesDropdownClose = () => {
+  resourcesDropdownActive.value = false
+  collapseNav()
+}
+
+onMounted(() => {
+  checkIsMobile()
+  window.addEventListener('resize', checkIsMobile)
+  if (typeof window !== 'undefined' && window.bootstrap) {
+    bsCollapse = new window.bootstrap.Collapse(siteNav.value, { toggle: false })
+  }
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', checkIsMobile)
+})
 </script>
 
 <style scoped>

@@ -81,65 +81,45 @@
   </div>
 </template>
 
-<script>
-import DropdownItem from './DropdownItem.vue'
+<script setup>
+import { ref } from 'vue'
 import navbarData from '~/constants/navbar.json'
+import DropdownItem from './DropdownItem.vue'
 
-export default {
-  name: 'FeaturesDropdown',
-  components: {
-    DropdownItem,
-  },
-  props: {
-    dropdownActive: Boolean,
-    isMobile: Boolean,
-    activeFeatureCategory: String,
-  },
-  data() {
-    // Initialize features data directly in component (same pattern as TemplatesDropdown)
-    const normalizeImageUrl = (navIcon) => {
-      const direct = navIcon?.imageUrl
-      const nested = navIcon?.image?.url
-      const url = direct || nested || null
-      if (!url) return null
-      return url
-    }
+defineProps({
+  dropdownActive: Boolean,
+  isMobile: Boolean,
+  activeFeatureCategory: String,
+})
 
-    const items = navbarData
-    const dropdownItems = items.map((item) => ({
-      id: item.id,
-      title: item.navTitle,
-      description: item.navDescription,
-      imageUrl: normalizeImageUrl(item.navIcon),
-      imageAlt: item.navIcon?.imageAlt || '',
-      slug: item.slug,
-      featureCategory: item.featureCategory || 'Other',
-      featurePlan: item.featurePlan || null,
-    }))
+const emit = defineEmits(['category-change', 'mouseenter', 'mouseleave', 'dropdown-close'])
 
-    const featureCategories = [
-      ...new Set(dropdownItems.map((item) => item.featureCategory)),
-    ]
-
-    return {
-      dropdownItems: dropdownItems,
-      featureCategories: featureCategories,
-      localActiveCategory: featureCategories[0] || '',
-    }
-  },
-  methods: {
-    handleCategoryChange(category) {
-      this.localActiveCategory = category
-      this.$emit('category-change', category)
-    },
-    onDropdownMouseEnter() {
-      this.$emit('mouseenter')
-    },
-    onDropdownMouseLeave() {
-      this.$emit('mouseleave')
-    },
-  },
+const normalizeImageUrl = (navIcon) => {
+  const url = navIcon?.imageUrl || navIcon?.image?.url || null
+  return url
 }
+
+const dropdownItems = navbarData.map((item) => ({
+  id: item.id,
+  title: item.navTitle,
+  description: item.navDescription,
+  imageUrl: normalizeImageUrl(item.navIcon),
+  imageAlt: item.navIcon?.imageAlt || '',
+  slug: item.slug,
+  featureCategory: item.featureCategory || 'Other',
+  featurePlan: item.featurePlan || null,
+}))
+
+const featureCategories = [...new Set(dropdownItems.map((item) => item.featureCategory))]
+const localActiveCategory = ref(featureCategories[0] || '')
+
+const handleCategoryChange = (category) => {
+  localActiveCategory.value = category
+  emit('category-change', category)
+}
+
+const onDropdownMouseEnter = () => emit('mouseenter')
+const onDropdownMouseLeave = () => emit('mouseleave')
 </script>
 
 <style scoped>

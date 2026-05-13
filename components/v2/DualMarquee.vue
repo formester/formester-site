@@ -70,7 +70,8 @@
   </section>
 </template>
 
-<script>
+<script setup>
+import { computed } from 'vue'
 import FButton from '@/components/UI/FButton.vue'
 import SectionBadge from '@/components/UI/SectionBadge.vue'
 
@@ -81,36 +82,25 @@ const PALETTE = [
   '#E91E63', '#FF6B35', '#00BCD4', '#8BC34A',
 ]
 
-export default {
-  name: 'IntegrationsCarousel',
-  components: { FButton, SectionBadge },
-  props: {
-    badge: { type: String, default: '' },
-    heading: { type: String, default: '' },
-    description: { type: String, default: '' },
-    integrations: { type: Array, default: () => [] },
-    cta: { type: Object, default: () => null },
-  },
-  computed: {
-    allItems() {
-      const items = [...this.integrations]
-      const insertAt = Math.min(Math.floor(items.length / 2), items.length)
-      return items
-    },
-  },
-  methods: {
-    getInitials(name) {
-      if (!name) return '??'
-      const words = name.trim().split(/\s+/)
-      return words.length >= 2
-        ? (words[0][0] + words[1][0]).toUpperCase()
-        : name.slice(0, 2).toUpperCase()
-    },
-    getColor(index) {
-      return PALETTE[index % PALETTE.length]
-    },
-  },
+const props = defineProps({
+  badge: { type: String, default: '' },
+  heading: { type: String, default: '' },
+  description: { type: String, default: '' },
+  integrations: { type: Array, default: () => [] },
+  cta: { type: Object, default: () => null },
+})
+
+const allItems = computed(() => [...props.integrations])
+
+const getInitials = (name) => {
+  if (!name) return '??'
+  const words = name.trim().split(/\s+/)
+  return words.length >= 2
+    ? (words[0][0] + words[1][0]).toUpperCase()
+    : name.slice(0, 2).toUpperCase()
 }
+
+const getColor = (index) => PALETTE[index % PALETTE.length]
 </script>
 
 <style scoped>

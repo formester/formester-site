@@ -96,78 +96,68 @@
   </section>
 </template>
 
-<script>
+<script setup>
+import { ref, computed, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import SectionBadge from '@/components/UI/SectionBadge.vue'
 
-export default {
-  name: 'TestimonialsV2',
-  components: { SectionBadge },
-  props: {
-    badge:        { type: String, default: '' },
-    heading:      { type: String, default: '' },
-    testimonials: { type: Array,  default: () => [] },
-  },
-  data() {
-    return {
-      currentIndex: 1,
-      isSnapping: false,
-      timer: null,
-    }
-  },
-  computed: {
-    clonedSlides() {
-      if (!this.testimonials.length) return []
-      return [
-        this.testimonials[this.testimonials.length - 1],
-        ...this.testimonials,
-        this.testimonials[0],
-      ]
-    },
-    activeIndex() {
-      const len = this.testimonials.length
-      if (this.currentIndex === 0) return len - 1
-      if (this.currentIndex === len + 1) return 0
-      return this.currentIndex - 1
-    },
-  },
-  mounted() {
-    this.startAutoPlay()
-  },
-  beforeUnmount() {
-    this.stopAutoPlay()
-  },
-  methods: {
-    next() {
-      this.currentIndex++
-    },
-    prev() {
-      this.currentIndex--
-    },
-    goTo(idx) {
-      this.currentIndex = idx
-    },
-    handleTransitionEnd() {
-      const len = this.testimonials.length
-      if (this.currentIndex === 0) {
-        this.isSnapping = true
-        this.currentIndex = len
-        this.$nextTick(() => { this.isSnapping = false })
-      } else if (this.currentIndex === len + 1) {
-        this.isSnapping = true
-        this.currentIndex = 1
-        this.$nextTick(() => { this.isSnapping = false })
-      }
-    },
-    startAutoPlay() {
-      this.timer = setInterval(() => this.next(), 4000)
-    },
-    stopAutoPlay() {
-      if (this.timer) { clearInterval(this.timer); this.timer = null }
-    },
-    pause()  { this.stopAutoPlay() },
-    resume() { this.startAutoPlay() },
-  },
+const props = defineProps({
+  badge:        { type: String, default: '' },
+  heading:      { type: String, default: '' },
+  testimonials: { type: Array,  default: () => [] },
+})
+
+const currentIndex = ref(1)
+const isSnapping = ref(false)
+let timer = null
+
+const clonedSlides = computed(() => {
+  if (!props.testimonials.length) return []
+  return [
+    props.testimonials[props.testimonials.length - 1],
+    ...props.testimonials,
+    props.testimonials[0],
+  ]
+})
+
+const activeIndex = computed(() => {
+  const len = props.testimonials.length
+  if (currentIndex.value === 0) return len - 1
+  if (currentIndex.value === len + 1) return 0
+  return currentIndex.value - 1
+})
+
+const next = () => { currentIndex.value++ }
+const prev = () => { currentIndex.value-- }
+const goTo = (idx) => { currentIndex.value = idx }
+
+const handleTransitionEnd = async () => {
+  const len = props.testimonials.length
+  if (currentIndex.value === 0) {
+    isSnapping.value = true
+    currentIndex.value = len
+    await nextTick()
+    isSnapping.value = false
+  } else if (currentIndex.value === len + 1) {
+    isSnapping.value = true
+    currentIndex.value = 1
+    await nextTick()
+    isSnapping.value = false
+  }
 }
+
+const stopAutoPlay = () => {
+  if (timer) { clearInterval(timer); timer = null }
+}
+
+const startAutoPlay = () => {
+  timer = setInterval(() => next(), 4000)
+}
+
+const pause  = () => stopAutoPlay()
+const resume = () => startAutoPlay()
+
+onMounted(() => startAutoPlay())
+onBeforeUnmount(() => stopAutoPlay())
 </script>
 
 <style scoped>

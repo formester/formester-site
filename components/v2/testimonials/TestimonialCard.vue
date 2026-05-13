@@ -38,44 +38,39 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { computed } from 'vue'
 import { getStrapiImage } from '@/utils/strapiImage'
 
-export default {
-  props: {
-    testimonial: {
-      type: Object,
-      required: true
-    }
-  },
-  computed: {
-    profileImg() {
-      return getStrapiImage(this.testimonial?.profileImage)
-    },
-    initials() {
-      const name = (this.testimonial?.name || '').trim()
-      const parts = name.split(/\s+/)
-      if (parts.length >= 2) return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase()
-      return name.slice(0, 2).toUpperCase()
-    },
-    avatarColor() {
-      const palette = [
-        { bg: '#f4ebff', text: '#6434d0' },
-        { bg: '#eff8ff', text: '#1570ef' },
-        { bg: '#ecfdf3', text: '#027a48' },
-        { bg: '#fff6ed', text: '#c4320a' },
-        { bg: '#fdf2fa', text: '#c11574' },
-        { bg: '#f0fdf9', text: '#107569' },
-      ]
-      const name = this.testimonial?.name || ''
-      let hash = 0
-      for (let i = 0; i < name.length; i++) {
-        hash = name.charCodeAt(i) + ((hash << 5) - hash)
-      }
-      return palette[Math.abs(hash) % palette.length]
-    },
+const props = defineProps({
+  testimonial: { type: Object, required: true },
+})
+
+const profileImg = computed(() => getStrapiImage(props.testimonial?.profileImage))
+
+const initials = computed(() => {
+  const name = (props.testimonial?.name || '').trim()
+  const parts = name.split(/\s+/)
+  if (parts.length >= 2) return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase()
+  return name.slice(0, 2).toUpperCase()
+})
+
+const avatarColor = computed(() => {
+  const palette = [
+    { bg: '#f4ebff', text: '#6434d0' },
+    { bg: '#eff8ff', text: '#1570ef' },
+    { bg: '#ecfdf3', text: '#027a48' },
+    { bg: '#fff6ed', text: '#c4320a' },
+    { bg: '#fdf2fa', text: '#c11574' },
+    { bg: '#f0fdf9', text: '#107569' },
+  ]
+  const name = props.testimonial?.name || ''
+  let hash = 0
+  for (let i = 0; i < name.length; i++) {
+    hash = name.charCodeAt(i) + ((hash << 5) - hash)
   }
-}
+  return palette[Math.abs(hash) % palette.length]
+})
 </script>
 
 <style scoped>

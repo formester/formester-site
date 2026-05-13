@@ -17,19 +17,15 @@
   </section>
 </template>
 
-<script>
+<script setup>
 import SectionBadge from '@/components/UI/SectionBadge.vue'
 
-export default {
-  name: 'StatsSection',
-  components: { SectionBadge },
-  props: {
-    badge:       { type: String, default: '' },
-    heading:     { type: String, default: '' },
-    description: { type: String, default: '' },
-    stats:       { type: Array,  default: () => [] },
-  },
-}
+defineProps({
+  badge:       { type: String, default: '' },
+  heading:     { type: String, default: '' },
+  description: { type: String, default: '' },
+  stats:       { type: Array,  default: () => [] },
+})
 </script>
 
 <style scoped>

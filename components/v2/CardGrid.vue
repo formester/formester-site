@@ -28,20 +28,16 @@
   </section>
 </template>
 
-<script>
+<script setup>
 import FButton from '@/components/UI/FButton.vue'
 import SectionBadge from '@/components/UI/SectionBadge.vue'
 
-export default {
-  name: 'UsecasesGridV2',
-  components: { FButton, SectionBadge },
-  props: {
-    badge: { type: String, default: '' },
-    heading: { type: String, default: '' },
-    cta: { type: Object, default: () => null },
-    usecases: { type: Array, default: () => [] },
-  },
-}
+defineProps({
+  badge: { type: String, default: '' },
+  heading: { type: String, default: '' },
+  cta: { type: Object, default: () => null },
+  usecases: { type: Array, default: () => [] },
+})
 </script>
 
 <style scoped>

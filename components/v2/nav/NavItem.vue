@@ -20,12 +20,10 @@
   </li>
 </template>
 
-<script>
-export default {
-  props: {
-    navName: String,
-  },
-}
+<script setup>
+defineProps({
+  navName: String,
+})
 </script>
 
 <style scoped>

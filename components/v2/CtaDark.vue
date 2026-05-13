@@ -20,21 +20,17 @@
   </section>
 </template>
 
-<script>
+<script setup>
 import FButton from '@/components/UI/FButton.vue'
 import SectionBadge from '@/components/UI/SectionBadge.vue'
 
-export default {
-  name: 'CtaDark',
-  components: { FButton, SectionBadge },
-  props: {
-    badge:       { type: String, default: '' },
-    heading:     { type: String, default: '' },
-    description: { type: String, default: '' },
-    buttons:     { type: Array,  default: () => [] },
-    trustText:   { type: String, default: '' },
-  },
-}
+defineProps({
+  badge:       { type: String, default: '' },
+  heading:     { type: String, default: '' },
+  description: { type: String, default: '' },
+  buttons:     { type: Array,  default: () => [] },
+  trustText:   { type: String, default: '' },
+})
 </script>
 
 <style scoped>

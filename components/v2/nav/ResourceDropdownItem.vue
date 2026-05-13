@@ -16,16 +16,13 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'ResourceDropdownItem',
-  props: {
-    title: String,
-    description: String,
-    imageUrl: String,
-    imageAlt: String,
-  },
-}
+<script setup>
+defineProps({
+  title: String,
+  description: String,
+  imageUrl: String,
+  imageAlt: String,
+})
 </script>
 
 <style scoped>

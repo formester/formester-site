@@ -40,45 +40,27 @@
   </NuxtLink>
 </template>
 
-<script>
-export default {
-  props: {
-    title: {
-      type: String,
-      required: true,
-    },
-    description: {
-      type: String,
-      required: true,
-    },
-    imageUrl: {
-      type: String,
-      default: null,
-    },
-    imageAlt: {
-      type: String,
-      default: '',
-    },
-    slug: {
-      type: String,
-      required: true,
-    },
-    featurePlan: {
-      type: String,
-      required: false,
-      default: null,
-      validator: (value) => {
-        return value === null || ['Business', 'Personal', 'Free'].includes(value)
-      }
-    },
+<script setup>
+defineProps({
+  title:       { type: String, required: true },
+  description: { type: String, required: true },
+  imageUrl:    { type: String, default: null },
+  imageAlt:    { type: String, default: '' },
+  slug:        { type: String, required: true },
+  featurePlan: {
+    type: String,
+    default: null,
+    validator: (value) => value === null || ['Business', 'Personal', 'Free'].includes(value),
   },
-  methods: {
-    collapseNav() {
-      if (window.screen.width >= 1200) return
-      const bsCollapse = new bootstrap.Collapse(this.$refs.siteNav)
-      bsCollapse.toggle()
-    },
-  },
+})
+
+const collapseNav = () => {
+  if (window.screen.width >= 1200) return
+  // bootstrap is loaded globally via plugin
+  if (typeof bootstrap !== 'undefined') {
+    const siteNavEl = document.getElementById('navbarSupportedContent')
+    if (siteNavEl) new bootstrap.Collapse(siteNavEl).toggle()
+  }
 }
 </script>
 

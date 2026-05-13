@@ -1,5 +1,5 @@
 <template>
-  <section class="hero-v2" :style="{ '--gradient-x': mouseX + '%' }" @mousemove="onMouseMove" @mouseleave="onMouseLeave">
+  <section ref="sectionEl" class="hero-v2" :style="{ '--gradient-x': mouseX + '%' }" @mousemove="onMouseMove" @mouseleave="onMouseLeave">
     <canvas ref="particleCanvas" class="hero-v2__particles" aria-hidden="true" />
     <div class="hero-v2__inner">
       <a v-if="badge?.text" :href="badge.link || '#'" class="hero-v2__badge-link">
@@ -57,113 +57,102 @@
   </section>
 </template>
 
-<script>
+<script setup>
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import FButton from '@/components/UI/FButton.vue'
 import SectionBadge from '@/components/UI/SectionBadge.vue'
 
-export default {
-  name: 'HeroV2',
-  components: { FButton, SectionBadge },
-  props: {
-    badge:       { type: Object, default: () => null },
-    title:       { type: Array,  default: () => [] },
-    description: { type: String, default: '' },
-    buttons:     { type: Array,  default: () => [] },
-    trustText:   { type: String, default: '' },
-    image:       { type: Object, default: () => null },
-  },
-  data() {
-    return {
-      mouseX:     50,
-      targetX:    50,
-      _rafId:     null,
-      _particles: [],
-      _ctx:       null,
-      _canvasW:   0,
-      _canvasH:   0,
-      _tick:      0,
-    }
-  },
-  mounted() {
-    this._initParticles()
-    window.addEventListener('resize', this._resizeCanvas)
+defineProps({
+  badge:       { type: Object, default: () => null },
+  title:       { type: Array,  default: () => [] },
+  description: { type: String, default: '' },
+  buttons:     { type: Array,  default: () => [] },
+  trustText:   { type: String, default: '' },
+  image:       { type: Object, default: () => null },
+})
 
-    const animate = () => {
-      this.mouseX += (this.targetX - this.mouseX) * 0.08
-      this._tick++
-      this._tickParticles()
-      this._rafId = requestAnimationFrame(animate)
-    }
-    this._rafId = requestAnimationFrame(animate)
-  },
-  beforeUnmount() {
-    if (this._rafId) cancelAnimationFrame(this._rafId)
-    window.removeEventListener('resize', this._resizeCanvas)
-  },
-  methods: {
-    onMouseMove(e) {
-      const rect = this.$el.getBoundingClientRect()
-      this.targetX = Math.min(100, Math.max(0, (e.clientX - rect.left) / rect.width * 100))
-    },
-    onMouseLeave() {
-      this.targetX = 50
-    },
-    _initParticles() {
-      const canvas = this.$refs.particleCanvas
-      if (!canvas) return
-      const section = this.$el
-      this._canvasW = canvas.width  = section.offsetWidth
-      this._canvasH = canvas.height = section.offsetHeight
-      this._ctx = canvas.getContext('2d')
+const sectionEl = ref(null)
+const particleCanvas = ref(null)
 
-      this._particles = Array.from({ length: 70 }, () => this._makeParticle(true))
-    },
-    _resizeCanvas() {
-      const canvas = this.$refs.particleCanvas
-      if (!canvas) return
-      const section = this.$el
-      this._canvasW = canvas.width  = section.offsetWidth
-      this._canvasH = canvas.height = section.offsetHeight
-    },
-    _makeParticle(scattered = false) {
-      const isViolet = Math.random() > 0.45
-      return {
-        x:       Math.random() * (this._canvasW || 800),
-        y:       scattered ? Math.random() * (this._canvasH || 600) : (this._canvasH || 600) + Math.random() * 40,
-        r:       0.8 + Math.random() * 2.2,
-        speed:   0.2 + Math.random() * 0.55,
-        phase:   Math.random() * Math.PI * 2,
-        freq:    0.003 + Math.random() * 0.004,
-        sway:    0.18 + Math.random() * 0.22,
-        opacity: 0.08 + Math.random() * 0.27,
-        color:   isViolet ? '100,52,208' : '167,139,250',
-      }
-    },
-    _tickParticles() {
-      const ctx = this._ctx
-      if (!ctx) return
-      ctx.clearRect(0, 0, this._canvasW, this._canvasH)
+const mouseX = ref(50)
+let targetX = 50
+let _rafId = null
+let _particles = []
+let _ctx = null
+let _canvasW = 0
+let _canvasH = 0
+let _tick = 0
 
-      const lightX = (this.mouseX / 100) * this._canvasW
-
-      for (const p of this._particles) {
-        p.y -= p.speed
-        p.x += Math.sin(this._tick * p.freq + p.phase) * p.sway
-        // subtle pull toward light source
-        p.x += (lightX - p.x) * 0.0003
-
-        if (p.y + p.r < 0) {
-          Object.assign(p, this._makeParticle(false))
-        }
-
-        ctx.beginPath()
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(${p.color},${p.opacity})`
-        ctx.fill()
-      }
-    },
-  },
+const onMouseMove = (e) => {
+  const rect = sectionEl.value.getBoundingClientRect()
+  targetX = Math.min(100, Math.max(0, (e.clientX - rect.left) / rect.width * 100))
 }
+
+const onMouseLeave = () => { targetX = 50 }
+
+const _makeParticle = (scattered = false) => {
+  const isViolet = Math.random() > 0.45
+  return {
+    x:       Math.random() * (_canvasW || 800),
+    y:       scattered ? Math.random() * (_canvasH || 600) : (_canvasH || 600) + Math.random() * 40,
+    r:       0.8 + Math.random() * 2.2,
+    speed:   0.2 + Math.random() * 0.55,
+    phase:   Math.random() * Math.PI * 2,
+    freq:    0.003 + Math.random() * 0.004,
+    sway:    0.18 + Math.random() * 0.22,
+    opacity: 0.08 + Math.random() * 0.27,
+    color:   isViolet ? '100,52,208' : '167,139,250',
+  }
+}
+
+const _resizeCanvas = () => {
+  const canvas = particleCanvas.value
+  if (!canvas) return
+  _canvasW = canvas.width  = sectionEl.value.offsetWidth
+  _canvasH = canvas.height = sectionEl.value.offsetHeight
+}
+
+const _initParticles = () => {
+  const canvas = particleCanvas.value
+  if (!canvas) return
+  _canvasW = canvas.width  = sectionEl.value.offsetWidth
+  _canvasH = canvas.height = sectionEl.value.offsetHeight
+  _ctx = canvas.getContext('2d')
+  _particles = Array.from({ length: 70 }, () => _makeParticle(true))
+}
+
+const _tickParticles = () => {
+  if (!_ctx) return
+  _ctx.clearRect(0, 0, _canvasW, _canvasH)
+  const lightX = (mouseX.value / 100) * _canvasW
+  for (const p of _particles) {
+    p.y -= p.speed
+    p.x += Math.sin(_tick * p.freq + p.phase) * p.sway
+    p.x += (lightX - p.x) * 0.0003
+    if (p.y + p.r < 0) Object.assign(p, _makeParticle(false))
+    _ctx.beginPath()
+    _ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
+    _ctx.fillStyle = `rgba(${p.color},${p.opacity})`
+    _ctx.fill()
+  }
+}
+
+onMounted(() => {
+  _initParticles()
+  window.addEventListener('resize', _resizeCanvas)
+  const animate = () => {
+    mouseX.value += (targetX - mouseX.value) * 0.08
+    _tick++
+    _tickParticles()
+    _rafId = requestAnimationFrame(animate)
+  }
+  _rafId = requestAnimationFrame(animate)
+})
+
+onBeforeUnmount(() => {
+  if (_rafId) cancelAnimationFrame(_rafId)
+  window.removeEventListener('resize', _resizeCanvas)
+})
 </script>
 
 <style scoped>
