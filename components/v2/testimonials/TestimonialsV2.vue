@@ -1,9 +1,7 @@
 <template>
   <section class="bg-gray-50 font-primary py-space-10 px-space-4 md:py-space-16 md:px-space-8 overflow-x-hidden">
-    <div class="max-w-[1280px] mx-auto">
-
       <!-- Header -->
-      <div class="flex flex-col items-center text-center gap-space-2 mb-space-8 md:mb-space-12">
+      <div class="max-w-[1280px] mx-auto flex flex-col items-center text-center gap-space-2 mb-space-8 md:mb-space-12">
         <div class="flex items-center justify-center gap-space-2">
           <span class="inline-block w-4 h-0.5 bg-violet-500 shrink-0"></span>
           <span class="text-violet-500 text-fs-xs font-semibold tracking-[0.08em] uppercase m-0">Testimonials</span>
@@ -18,7 +16,7 @@
         </h2>
       </div>
 
-      <!-- Carousel -->
+      <!-- Carousel (full-width, outside the max-width cap) -->
       <div class="tc-track-wrapper">
         <div class="tc-gradient-left hidden md:block"></div>
         <div class="tc-track-outer">
@@ -30,7 +28,16 @@
             >
               <div>
                 <nuxt-img src="/quotes.svg" alt="" width="40" height="31" loading="lazy" class="mb-space-4" />
-                <p class="text-fs-md leading-lh-md text-fg-2 mb-space-6 font-normal">"{{ t.comment }}"</p>
+                <p class="text-fs-md leading-lh-md text-fg-2 mb-space-2 font-normal">
+                  <template v-if="isExpanded(t.id) || t.comment.length <= COMMENT_LIMIT">"{{ t.comment }}"</template>
+                  <template v-else>"{{ t.comment.slice(0, COMMENT_LIMIT) }}…"</template>
+                </p>
+                <button
+                  v-if="t.comment.length > COMMENT_LIMIT"
+                  @click="toggleExpanded(t.id)"
+                  class="text-violet-500 text-fs-sm font-semibold mb-space-4 bg-transparent border-0 cursor-pointer p-0 hover:underline"
+                >{{ isExpanded(t.id) ? 'Read less' : 'Read more' }}</button>
+                <div v-else class="mb-space-4"></div>
               </div>
               <div class="flex items-center gap-space-3">
                 <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-fs-sm font-semibold text-violet-500 shrink-0">
@@ -60,12 +67,12 @@
           </svg>
         </button>
       </div>
-
-    </div>
   </section>
 </template>
 
 <script>
+const COMMENT_LIMIT = 150
+
 export default {
   props: {
     heading:      { type: Array, default: () => [] },
@@ -74,6 +81,8 @@ export default {
 
   data() {
     return {
+      COMMENT_LIMIT,
+      expandedCards:   {},
       isMobile:        false,
       currentSlide:    0,
       tickerPosition:  0,
@@ -107,6 +116,13 @@ export default {
   },
 
   methods: {
+    isExpanded(id) {
+      return !!this.expandedCards[id]
+    },
+    toggleExpanded(id) {
+      this.expandedCards = { ...this.expandedCards, [id]: !this.expandedCards[id] }
+    },
+
     getInitials(name) {
       const parts = (name || '').trim().split(/\s+/)
       if (parts.length >= 2) return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase()
