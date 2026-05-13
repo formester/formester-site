@@ -44,6 +44,8 @@ async function _fetchRecommendedTemplatesMap() {
         defaultRecommendedSlugs: [...new Set(defaultSlugs)],
         hideDefaultRecommended: Boolean(item.hideDefaultRecommended),
         customTabs: extractTabsFromContent(item.content),
+        title: item.title || [],
+        description: item.description || '',
       }
     }
 

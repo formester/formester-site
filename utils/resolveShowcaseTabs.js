@@ -3,6 +3,7 @@
 // Each input tab has a list of `templates` entries with:
 //   - templateSlug: slug picked via the template-picker custom field
 //   - displayName: optional override for the template's name
+//   - displayDescription: optional override for the template's description
 //   - displayImage: optional Strapi media override for the preview image
 //   - displayImageAlt: optional alt text for the override image
 //
@@ -30,6 +31,7 @@ export default function resolveShowcaseTabs(rawTabs, allTemplates, currentSlug, 
         return {
           ...appTemplate,
           name: entry.displayName || appTemplate.name,
+          description: entry.displayDescription || appTemplate.description,
           previewImageUrl: entry.displayImage?.url || appTemplate.previewImageUrl,
           previewImageAlt: entry.displayImageAlt || appTemplate.name,
         }

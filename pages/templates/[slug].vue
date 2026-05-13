@@ -161,6 +161,8 @@
       :template-slug="template.slug"
       :showcase-tabs="showcaseTabs"
       :has-custom-showcase="hasCustomShowcase"
+      :title="moreTemplatesTitle"
+      :description="moreTemplatesDescription"
     />
   </div>
 </template>
@@ -203,12 +205,16 @@ const { data: fetchedData, error: fetchError } = await useAsyncData(`template-${
     // independent — it can coexist with either custom tabs or categories.
     let showcaseTabs = []
     let hasCustomShowcase = false
+    let moreTemplatesTitle = []
+    let moreTemplatesDescription = ''
     try {
       const recMap = await getRecommendedTemplatesMap()
       const entry = recMap[slug] || {}
       const defaultSlugs = entry.defaultRecommendedSlugs || []
       const hideDefault = entry.hideDefaultRecommended === true
       const customTabs = entry.customTabs || []
+      moreTemplatesTitle = entry.title || []
+      moreTemplatesDescription = entry.description || ''
 
       // 1) Default "Recommended" tab (unless explicitly hidden).
       //    Prefer the CMS-configured slug list. If no list is set, fall back
@@ -252,7 +258,15 @@ const { data: fetchedData, error: fetchError } = await useAsyncData(`template-${
     }
 
     // Only return the data needed for this template to reduce memory
-    return { template, categories: result.categories, data: pdfData, showcaseTabs, hasCustomShowcase }
+    return {
+      template,
+      categories: result.categories,
+      data: pdfData,
+      showcaseTabs,
+      hasCustomShowcase,
+      moreTemplatesTitle,
+      moreTemplatesDescription,
+    }
   } catch (err) {
     console.error('Error fetching template:', err)
     throw createError({ statusCode: 500, message: 'Internal Server Error' })
@@ -268,6 +282,8 @@ const categories = computed(() => fetchedData.value?.categories || {})
 const data = computed(() => fetchedData.value?.data || null)
 const showcaseTabs = computed(() => fetchedData.value?.showcaseTabs || [])
 const hasCustomShowcase = computed(() => fetchedData.value?.hasCustomShowcase === true)
+const moreTemplatesTitle = computed(() => fetchedData.value?.moreTemplatesTitle || [])
+const moreTemplatesDescription = computed(() => fetchedData.value?.moreTemplatesDescription || '')
 
 const currentSlide = ref(0)
 const activeTab = ref('pdf')
