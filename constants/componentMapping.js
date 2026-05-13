@@ -6,7 +6,7 @@ export default {
   'macro-components.sticky-steps-section': () => import('@/components/v2/StickyStepsSection.vue'),
   'macro-components.card-grid': () => import('@/components/v2/CardGrid.vue'),
   'macro-components.dual-marquee': () => import('@/components/v2/DualMarquee.vue'),
-  'macro-components.carousel': () => import('@/components/v2/Carousel.vue'),
+  'macro-components.card-carousel': () => import('@/components/v2/CardCarousel.vue'),
   'macro-components.cta-dark': () => import('@/components/v2/CtaDark.vue'),
 
   'macro-components.hero-centered': () => import('@/components/home/Hero.vue'),

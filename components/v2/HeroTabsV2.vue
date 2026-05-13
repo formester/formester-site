@@ -1,49 +1,40 @@
 <template>
-  <div class="max-w-[1280px] w-full font-primary">
-    <div class="w-full">
-      <div class="flex justify-between w-full px-space-8 relative z-[2] tab-md:flex-wrap tab-md:justify-center tab-md:gap-x-space-4 tab-md:gap-y-space-3 tab-md:px-0 tab-md:mb-space-4">
+  <div class="htv2-wrap">
+    <div class="htv2-inner">
+
+      <!-- Tab bar -->
+      <div class="htv2-tabs">
         <button
           v-for="(tab, idx) in tabs"
           :key="tab.label"
-          :class="[
-            'bg-transparent border-none cursor-pointer border-b-4 border-b-transparent flex-1 text-center text-fs-xl font-semibold transition-[color,border-color,opacity] duration-200 pb-space-4',
-            'tab-md:flex-[0_1_auto] tab-md:min-w-[120px] tab-md:rounded-r-xl tab-md:shadow-xs tab-md:text-fs-sm tab-md:py-space-2 tab-md:px-space-4 tab-md:flex tab-md:items-center tab-md:justify-center tab-md:gap-space-2 tab-md:!border-b-0',
-            idx === selectedTab
-              ? 'text-fg-1 font-bold opacity-100'
-              : 'text-fg-3 opacity-[0.85]',
-          ]"
-          @click="() => { selectedTab = idx; stopAutoSwitch(); }"
+          class="htv2-tab-btn"
+          :class="idx === selectedTab ? 'htv2-tab-btn--active' : 'htv2-tab-btn--inactive'"
           :style="tabButtonStyle(idx)"
+          @click="() => { selectedTab = idx; stopAutoSwitch(); }"
         >
           {{ tab.label }}
         </button>
       </div>
 
-      <div class="-mt-[2px] bg-white/70 backdrop-blur-lg border border-gray-200 rounded-r-3xl shadow-md py-space-10 px-space-9 relative z-[1] !min-h-[520px] tab-md:py-space-8 tab-md:px-space-4 tab-md:!min-h-[500px] tab-sm:p-space-5 tab-sm:rounded-r-2xl tab-sm:!min-h-[500px]">
-        <!-- Render all tabs in DOM for SEO, use CSS to show/hide -->
+      <!-- Panel -->
+      <div class="htv2-panel">
+        <!-- All tabs in DOM for SEO, shown/hidden via CSS -->
         <div
           v-for="(tab, idx) in tabs"
           :key="idx"
-          :class="[
-            'flex gap-space-16 items-start absolute top-space-10 left-space-9 right-space-9 bottom-space-10 transition-[opacity,visibility] duration-[450ms] ease-in-out pointer-events-none',
-            'tab-md:flex-col tab-md:gap-space-8 tab-md:top-space-8 tab-md:left-space-4 tab-md:right-space-4 tab-md:bottom-space-8',
-            'tab-sm:gap-space-5 tab-sm:top-space-5 tab-sm:left-space-5 tab-sm:right-space-5 tab-sm:bottom-space-5',
-            idx === selectedTab
-              ? 'opacity-100 visible pointer-events-auto'
-              : 'opacity-0 invisible',
-          ]"
+          class="htv2-content"
+          :class="idx === selectedTab ? 'htv2-content--active' : 'htv2-content--inactive'"
         >
-          <div class="flex-1 min-w-0 flex flex-col justify-center">
-            <h3 class="mb-space-6 text-fg-1 text-fs-2xl font-semibold tab-md:text-fs-xl tab-md:leading-[125%] tab-sm:text-fs-lg">
-              {{ tab.title }}
-            </h3>
-            <ul class="list-none p-0 m-0">
+          <!-- Text column -->
+          <div class="htv2-text">
+            <h3 class="htv2-title">{{ tab.title }}</h3>
+            <ul class="htv2-features">
               <li
                 v-for="(feature, i) in tab.features"
                 :key="i"
-                class="flex items-start gap-space-2 mb-space-4 text-fg-2 text-fs-lg tab-md:text-fs-md tab-md:leading-lh-md tab-sm:text-fs-sm tab-sm:leading-lh-md"
+                class="htv2-feature"
               >
-                <span class="inline-flex mt-[2px] shrink-0" v-if="feature.icon?.src">
+                <span v-if="feature.icon?.src" class="htv2-feature-icon">
                   <img
                     :src="feature.icon.src"
                     :alt="feature.text + ' icon'"
@@ -57,14 +48,12 @@
             </ul>
           </div>
 
-          <div
-            v-if="tab.image?.src"
-            class="flex-[2_1_0] min-w-0 flex justify-center items-center h-full min-h-[260px] tab-md:justify-start tab-md:items-start tab-md:w-full tab-md:!h-auto tab-md:overflow-hidden"
-          >
+          <!-- Image column -->
+          <div v-if="tab.image?.src" class="htv2-img-col">
             <img
               :src="tab.image.src"
               :alt="tab.label + ' screenshot'"
-              class="w-full min-w-0 h-auto block rounded-r-2xl shadow-[0_2px_12px_rgba(0,0,0,0.09)] object-contain tab-md:max-w-full tab-md:max-h-[220px] tab-md:w-auto tab-md:m-0 tab-sm:max-w-[98vw] tab-sm:max-h-[220px]"
+              class="htv2-img"
               :loading="idx === 0 ? 'eager' : 'lazy'"
               :width="tab.image.width || 480"
               :height="tab.image.height || 360"
@@ -72,6 +61,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </template>
@@ -218,3 +208,244 @@ function tabButtonStyle(idx) {
     : {}
 }
 </script>
+
+<style scoped>
+.htv2-wrap {
+  max-width: 1280px;
+  width: 100%;
+  font-family: var(--font-primary);
+}
+
+.htv2-inner {
+  width: 100%;
+}
+
+/* Tab bar */
+.htv2-tabs {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-inline: var(--space-8);
+  position: relative;
+  z-index: 2;
+}
+
+/* Tab buttons */
+.htv2-tab-btn {
+  background: transparent;
+  border: none;
+  border-bottom: 4px solid transparent;
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semibold);
+  transition: color 200ms, border-color 200ms, opacity 200ms;
+  padding-bottom: var(--space-4);
+}
+
+.htv2-tab-btn--active {
+  color: var(--fg-1);
+  font-weight: var(--fw-bold);
+  opacity: 1;
+}
+
+.htv2-tab-btn--inactive {
+  color: var(--fg-3);
+  opacity: 0.85;
+}
+
+/* Panel */
+.htv2-panel {
+  margin-top: -2px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--r-3xl);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-10) var(--space-9);
+  position: relative;
+  z-index: 1;
+  min-height: 520px;
+}
+
+/* Tab content */
+.htv2-content {
+  display: flex;
+  gap: var(--space-16);
+  align-items: flex-start;
+  position: absolute;
+  top: var(--space-10);
+  left: var(--space-9);
+  right: var(--space-9);
+  bottom: var(--space-10);
+  transition: opacity 450ms ease-in-out, visibility 450ms ease-in-out;
+  pointer-events: none;
+}
+
+.htv2-content--active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.htv2-content--inactive {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Text column */
+.htv2-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.htv2-title {
+  margin-bottom: var(--space-6);
+  color: var(--fg-1);
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-semibold);
+}
+
+.htv2-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.htv2-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  color: var(--fg-2);
+  font-size: var(--fs-lg);
+}
+
+.htv2-feature-icon {
+  display: inline-flex;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* Image column */
+.htv2-img-col {
+  flex: 2 1 0;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 260px;
+}
+
+.htv2-img {
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  display: block;
+  border-radius: var(--r-2xl);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.09);
+  object-fit: contain;
+}
+
+/* ── Tablet (max 900px) ── */
+@media (max-width: 900px) {
+  .htv2-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: var(--space-4);
+    row-gap: var(--space-3);
+    padding-inline: 0;
+    margin-bottom: var(--space-4);
+  }
+
+  .htv2-tab-btn {
+    flex: 0 1 auto;
+    min-width: 120px;
+    border-radius: var(--r-xl);
+    box-shadow: var(--shadow-xs);
+    font-size: var(--fs-sm);
+    padding: var(--space-2) var(--space-4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    border-bottom: none !important;
+  }
+
+  .htv2-panel {
+    padding: var(--space-8) var(--space-4);
+    min-height: 500px !important;
+  }
+
+  .htv2-content {
+    flex-direction: column;
+    gap: var(--space-8);
+    top: var(--space-8);
+    left: var(--space-4);
+    right: var(--space-4);
+    bottom: var(--space-8);
+  }
+
+  .htv2-title {
+    font-size: var(--fs-xl);
+    line-height: 125%;
+  }
+
+  .htv2-feature {
+    font-size: var(--fs-md);
+    line-height: var(--lh-md);
+  }
+
+  .htv2-img-col {
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: auto !important;
+    overflow: hidden;
+  }
+
+  .htv2-img {
+    max-width: 100%;
+    max-height: 220px;
+    width: auto;
+    margin: 0;
+  }
+}
+
+/* ── Mobile (max 600px) ── */
+@media (max-width: 600px) {
+  .htv2-panel {
+    padding: var(--space-5);
+    border-radius: var(--r-2xl);
+    min-height: 500px !important;
+  }
+
+  .htv2-content {
+    gap: var(--space-5);
+    top: var(--space-5);
+    left: var(--space-5);
+    right: var(--space-5);
+    bottom: var(--space-5);
+  }
+
+  .htv2-title {
+    font-size: var(--fs-lg);
+  }
+
+  .htv2-feature {
+    font-size: var(--fs-sm);
+    line-height: var(--lh-md);
+  }
+
+  .htv2-img {
+    max-width: 98vw;
+    max-height: 220px;
+  }
+}
+</style>

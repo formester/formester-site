@@ -143,7 +143,7 @@ const ai = {
     'Describe your audience, goals, and field types. Formester structures the questions, picks field types, sets validation rules, and adds conditional logic — all editable.',
   buttons: [
     { id: 1, text: 'Try the AI builder', link: 'https://app.formester.com/users/sign_up', type: 'Primary' },
-    { id: 2, text: 'Watch demo ↓', link: '#', type: 'Secondary' },
+    { id: 2, text: 'Watch demo', link: '#', type: 'Secondary', icon: '/arrow-right.svg' },
   ],
   steps: [
     {
@@ -151,18 +151,21 @@ const ai = {
       title: 'Describe your form',
       description: 'Type "Customer onboarding survey, 8 questions, contact info first" — and stop.',
       image: null,
+      rawHtml: `<style>@keyframes fmst-blink{0%,100%{opacity:1}50%{opacity:0}}</style><div style="margin-top:16px;border-radius:12px;background-color:#f3f4f6;padding:16px 20px;font-family:monospace;font-size:14px;line-height:1.625"><span style="color:#8b5cf6">›</span><span style="color:#1f2937;margin-left:8px">Customer onboarding survey,</span><br><span style="color:#6b7280;margin-left:16px">8 questions, contact first…</span><span style="display:inline-block;width:8px;height:13px;background-color:#7c3aed;vertical-align:text-bottom;margin-left:3px;animation:fmst-blink 1s step-end infinite"></span></div>`,
     },
     {
       id: 2,
       title: 'Review the draft',
       description: 'Formester drafts every field, validation rules, and conditional logic. You get to edit everything.',
       image: null,
+      rawHtml: `<div style="margin-top:16px;border-radius:12px;border:1px solid #e5e7eb;overflow:hidden;font-size:14px"><div style="display:flex;align-items:center;padding:12px 16px;border-bottom:1px solid #f3f4f6"><span style="font-family:monospace;font-size:12px;color:#9ca3af;width:24px;flex-shrink:0">01</span><span style="margin-left:12px;font-weight:500;color:#111827;flex:1">Full name</span><span style="font-size:12px;color:#9ca3af">Short text</span></div><div style="display:flex;align-items:center;padding:12px 16px;border-bottom:1px solid #f3f4f6"><span style="font-family:monospace;font-size:12px;color:#9ca3af;width:24px;flex-shrink:0">02</span><span style="margin-left:12px;font-weight:500;color:#111827;flex:1">Work email</span><span style="font-size:12px;color:#9ca3af">Email · validated</span></div><div style="display:flex;align-items:center;padding:12px 16px"><span style="font-family:monospace;font-size:12px;color:#9ca3af;width:24px;flex-shrink:0">03</span><span style="margin-left:12px;font-weight:500;color:#111827;flex:1">Company size</span><span style="font-size:12px;color:#9ca3af;margin-right:8px">Multiple choice</span><span style="font-size:12px;font-weight:600;background-color:#ede9fe;color:#7c3aed;border-radius:4px;padding:2px 6px">AI</span></div></div>`,
     },
     {
       id: 3,
       title: 'Ship and iterate',
       description: 'Embed, share via link or QR. Watch responses come in with analytics that flag drop-in spots.',
       image: null,
+      rawHtml: `<div style="margin-top:16px;border-radius:12px;border:1px solid #e5e7eb;background-color:#fff;padding:16px 20px"><p style="font-size:10px;font-weight:600;letter-spacing:0.1em;color:#9ca3af;text-transform:uppercase;margin:0 0 4px">Responses · Today</p><p style="font-size:30px;font-weight:700;color:#111827;line-height:1;margin:0">1,247</p><p style="font-size:12px;color:#16a34a;margin:4px 0 0">↑ 38% vs last week</p><div style="margin-top:16px;display:flex;align-items:flex-end;gap:6px;height:40px"><div style="flex:1;border-radius:2px;background-color:#ede9fe;height:35%"></div><div style="flex:1;border-radius:2px;background-color:#ede9fe;height:55%"></div><div style="flex:1;border-radius:2px;background-color:#ede9fe;height:45%"></div><div style="flex:1;border-radius:2px;background-color:#ddd6fe;height:70%"></div><div style="flex:1;border-radius:2px;background-color:#ddd6fe;height:60%"></div><div style="flex:1;border-radius:2px;background-color:#c4b5fd;height:80%"></div><div style="flex:1;border-radius:2px;background-color:#7c3aed;height:100%"></div></div></div>`,
     },
   ],
 }

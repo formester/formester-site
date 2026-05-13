@@ -1,68 +1,56 @@
 <template>
-  <section class="py-20 bg-[#f7f7f8] border-t border-gray-100 overflow-hidden">
-    <div class="max-w-[1200px] mx-auto px-6">
-      <div class="text-center mb-14">
-        <SectionBadge v-if="badge" :text="badge" class="mb-4" />
-        <h2 class="text-[clamp(28px,3.5vw,42px)] font-extrabold text-[#1a1a2e] leading-tight tracking-tight mb-4">
-          {{ heading }}
-        </h2>
-        <p v-if="description" class="text-base text-gray-500 max-w-xl mx-auto leading-relaxed">
-          {{ description }}
-        </p>
+  <section class="dm-section">
+    <div class="dm-inner">
+      <div class="dm-header">
+        <SectionBadge v-if="badge" :text="badge" class="dm-badge" />
+        <h2 class="dm-heading">{{ heading }}</h2>
+        <p v-if="description" class="dm-description">{{ description }}</p>
       </div>
     </div>
 
-    <!-- Row 1 — starts left, scrolls left -->
-    <div class="relative mb-4 carousel-fade">
-      <div class="flex gap-2 sm:gap-3 carousel-row carousel-left" style="width: max-content;">
+    <!-- Row 1 — scrolls left -->
+    <div class="dm-row-wrap carousel-fade">
+      <div class="dm-row carousel-row carousel-left" style="width: max-content;">
         <template v-for="pass in 2" :key="`r1-p${pass}`">
           <template v-for="(item, i) in allItems" :key="`r1-p${pass}-${i}`">
-            <div v-if="item.isMore"
-              class="flex items-center gap-2 sm:gap-3 px-3 py-2 sm:px-4 sm:py-3 bg-white border border-violet-200 rounded-full whitespace-nowrap cursor-default">
-              <span class="w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl bg-violet-50 flex items-center justify-center text-violet-600 text-sm sm:text-base font-bold flex-shrink-0">+</span>
-              <span class="text-xs sm:text-sm font-semibold text-violet-600">{{ item.name }}</span>
+            <div v-if="item.isMore" class="dm-item dm-item--more">
+              <span class="dm-icon dm-icon--more">+</span>
+              <span class="dm-label dm-label--more">{{ item.name }}</span>
             </div>
-            <div v-else
-              class="flex items-center gap-2 sm:gap-3 px-3 py-2 sm:px-4 sm:py-3 bg-white border border-gray-200 rounded-full whitespace-nowrap hover:border-violet-200 hover:shadow-sm transition-all duration-150 cursor-default">
-              <img v-if="item.imageUrl" :src="item.imageUrl" :alt="item.imageAlt || item.name"
-                class="w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl object-contain flex-shrink-0" />
-              <span v-else class="w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl flex items-center justify-center text-white text-[10px] sm:text-xs font-bold flex-shrink-0"
-                :style="{ background: getColor(i) }">
+            <div v-else class="dm-item">
+              <img v-if="item.imageUrl" :src="item.imageUrl" :alt="item.imageAlt || item.name" class="dm-icon dm-icon--img" />
+              <span v-else class="dm-icon dm-icon--fallback" :style="{ background: getColor(i) }">
                 {{ getInitials(item.name || item.imageAlt) }}
               </span>
-              <span class="text-xs sm:text-sm font-semibold text-gray-800">{{ item.name || item.imageAlt }}</span>
+              <span class="dm-label">{{ item.name || item.imageAlt }}</span>
             </div>
           </template>
         </template>
       </div>
     </div>
 
-    <!-- Row 2 — starts right, scrolls right -->
-    <div class="relative mb-14 carousel-fade">
-      <div class="flex gap-2 sm:gap-3 carousel-row carousel-right" style="width: max-content;">
+    <!-- Row 2 — scrolls right -->
+    <div class="dm-row-wrap dm-row-wrap--last carousel-fade">
+      <div class="dm-row carousel-row carousel-right" style="width: max-content;">
         <template v-for="pass in 2" :key="`r2-p${pass}`">
           <template v-for="(item, i) in allItems" :key="`r2-p${pass}-${i}`">
-            <div v-if="item.isMore"
-              class="flex items-center gap-2 sm:gap-3 px-3 py-2 sm:px-4 sm:py-3 bg-white border border-violet-200 rounded-full whitespace-nowrap cursor-default">
-              <span class="w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl bg-violet-50 flex items-center justify-center text-violet-600 text-sm sm:text-base font-bold flex-shrink-0">+</span>
-              <span class="text-xs sm:text-sm font-semibold text-violet-600">{{ item.name }}</span>
+            <div v-if="item.isMore" class="dm-item dm-item--more">
+              <span class="dm-icon dm-icon--more">+</span>
+              <span class="dm-label dm-label--more">{{ item.name }}</span>
             </div>
-            <div v-else
-              class="flex items-center gap-2 sm:gap-3 px-3 py-2 sm:px-4 sm:py-3 bg-white border border-gray-200 rounded-full whitespace-nowrap hover:border-violet-200 hover:shadow-sm transition-all duration-150 cursor-default">
-              <img v-if="item.imageUrl" :src="item.imageUrl" :alt="item.imageAlt || item.name"
-                class="w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl object-contain flex-shrink-0" />
-              <span v-else class="w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl flex items-center justify-center text-white text-[10px] sm:text-xs font-bold flex-shrink-0"
-                :style="{ background: getColor(i) }">
+            <div v-else class="dm-item">
+              <img v-if="item.imageUrl" :src="item.imageUrl" :alt="item.imageAlt || item.name" class="dm-icon dm-icon--img" />
+              <span v-else class="dm-icon dm-icon--fallback" :style="{ background: getColor(i) }">
                 {{ getInitials(item.name || item.imageAlt) }}
               </span>
-              <span class="text-xs sm:text-sm font-semibold text-gray-800">{{ item.name || item.imageAlt }}</span>
+              <span class="dm-label">{{ item.name || item.imageAlt }}</span>
             </div>
           </template>
         </template>
       </div>
     </div>
 
-    <div v-if="cta?.link" class="text-center">
+    <div v-if="cta?.link" class="dm-cta">
       <FButton :href="cta.link" variant="ghost" size="md">
         {{ cta.text || 'Browse all integrations' }} →
       </FButton>
@@ -104,37 +92,180 @@ const getColor = (index) => PALETTE[index % PALETTE.length]
 </script>
 
 <style scoped>
-@keyframes scrollLeft {
-  from {
-    transform: translateX(0);
+.dm-section {
+  padding-block: 5rem;
+  background: var(--gray-50);
+  border-top: 1px solid var(--gray-100);
+  overflow: hidden;
+}
+
+.dm-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: 1.5rem;
+}
+
+.dm-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.dm-badge {
+  margin-bottom: var(--space-4);
+}
+
+.dm-heading {
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 800;
+  color: var(--fg-1);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-4);
+}
+
+.dm-description {
+  font-size: var(--fs-md);
+  color: var(--gray-500);
+  max-width: 36rem;
+  margin-inline: auto;
+  line-height: 1.6;
+}
+
+.dm-row-wrap {
+  position: relative;
+  margin-bottom: var(--space-4);
+}
+
+.dm-row-wrap--last {
+  margin-bottom: 3.5rem;
+}
+
+.dm-row {
+  display: flex;
+  gap: var(--space-2);
+}
+
+/* Pills */
+.dm-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--r-full);
+  white-space: nowrap;
+  cursor: default;
+  transition: border-color 150ms, box-shadow 150ms;
+}
+
+.dm-item:hover {
+  border-color: var(--violet-300);
+  box-shadow: var(--shadow-sm);
+}
+
+.dm-item--more {
+  border-color: var(--violet-300);
+}
+
+.dm-item--more:hover {
+  border-color: var(--violet-300);
+  box-shadow: none;
+}
+
+/* Icons */
+.dm-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: var(--r-md);
+  flex-shrink: 0;
+}
+
+.dm-icon--img {
+  object-fit: contain;
+}
+
+.dm-icon--more {
+  background: var(--violet-50);
+  color: var(--violet-600);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dm-icon--fallback {
+  color: #fff;
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Labels */
+.dm-label {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--gray-800);
+}
+
+.dm-label--more {
+  color: var(--violet-600);
+}
+
+/* Larger screens — bigger pills */
+@media (min-width: 640px) {
+  .dm-row {
+    gap: var(--space-3);
   }
 
-  to {
-    transform: translateX(-50%);
+  .dm-item {
+    padding: var(--space-3) var(--space-4);
+    gap: var(--space-3);
+  }
+
+  .dm-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: var(--r-lg);
+  }
+
+  .dm-icon--more {
+    font-size: var(--fs-md);
+  }
+
+  .dm-icon--fallback {
+    font-size: var(--fs-xs);
+  }
+
+  .dm-label {
+    font-size: var(--fs-sm);
   }
 }
 
-@keyframes scrollRight {
-  from {
-    transform: translateX(-50%);
-  }
+.dm-cta {
+  text-align: center;
+}
 
-  to {
-    transform: translateX(0);
-  }
+/* Marquee animations */
+@keyframes scrollLeft {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes scrollRight {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
 }
 
 .carousel-row {
   will-change: transform;
 }
 
-.carousel-left {
-  animation: scrollLeft 60s linear infinite;
-}
-
-.carousel-right {
-  animation: scrollRight 50s linear infinite;
-}
+.carousel-left  { animation: scrollLeft  60s linear infinite; }
+.carousel-right { animation: scrollRight 50s linear infinite; }
 
 .carousel-left:hover,
 .carousel-right:hover {

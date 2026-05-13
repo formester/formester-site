@@ -1,8 +1,8 @@
 <template>
-  <div v-if="variant === 'pill'" class="badge-pill p-1 py-1  max-w-[80vw]" :class="{ 'pr-2': arrow, 'px-2': onlyText }">
+  <div v-if="variant === 'pill'" class="badge-pill" :class="{ 'badge-pill--arrow': arrow, 'badge-pill--text-only': onlyText }">
     <span v-if="tag" class="badge-pill__tag">{{ tag }}</span>
     <span v-if="sep" class="badge-pill__sep"></span>
-    <span class="truncate" :title="text">{{ text }}</span>
+    <span class="badge-pill__text" :title="text">{{ text }}</span>
     <span v-if="arrow" class="badge-pill__arrow">
       <ArrowRightIcon />
     </span>
@@ -58,6 +58,8 @@ export default {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
+  padding: var(--space-1);
+  max-width: 80vw;
   background: var(--bg-primary);
   border: 1px solid var(--border-light);
   border-radius: var(--r-full);
@@ -65,6 +67,20 @@ export default {
   font-weight: var(--fw-medium);
   color: var(--fg-strong);
   box-shadow: var(--shadow-xs);
+}
+
+.badge-pill--text-only {
+  padding-inline: var(--space-2);
+}
+
+.badge-pill--arrow {
+  padding-right: var(--space-2);
+}
+
+.badge-pill__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .badge-pill__tag {

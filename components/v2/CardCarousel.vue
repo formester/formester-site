@@ -1,16 +1,16 @@
 <template>
-  <section class="py-space-24 px-space-6 bg-gray-50">
-    <div class="max-w-[1120px] mx-auto">
+  <section class="cc-section">
+    <div class="cc-inner">
 
       <!-- Header -->
-      <div class="text-center mb-space-16">
-        <SectionBadge v-if="badge" :text="badge" class="justify-center mb-space-4" />
+      <div class="cc-header">
+        <SectionBadge v-if="badge" :text="badge" class="cc-badge" />
         <h2 class="section-heading text-fg-1">{{ heading }}</h2>
-        <p v-if="description" class="text-fs-md text-fg-2 mt-space-4 max-w-[600px] mx-auto">{{ description }}</p>
+        <p v-if="description" class="cc-description">{{ description }}</p>
       </div>
 
       <!-- Carousel -->
-      <div class="relative px-space-7">
+      <div class="cc-viewport">
         <Swiper
           :modules="modules"
           :slides-per-view="1"
@@ -27,21 +27,18 @@
           class="cc-swiper"
         >
           <SwiperSlide v-for="item in usecases" :key="item.id">
-            <div class="bg-white border border-gray-100 rounded-r-2xl p-space-8 hover:shadow-md transition-shadow duration-[140ms] h-full">
+            <div class="cc-card">
               <!-- Icon -->
-              <div
-                class="w-14 h-14 rounded-r-xl flex items-center justify-center"
-                :style="{ background: item.iconBg }"
-              >
+              <div class="cc-icon" :style="{ background: item.iconBg }">
                 <!-- eslint-disable-next-line vue/no-v-html -->
                 <span v-html="item.icon" />
               </div>
 
               <!-- Category -->
-              <h3 class="text-fg-1 font-bold text-fs-lg mt-space-4">{{ item.category }}</h3>
+              <h3 class="cc-category">{{ item.category }}</h3>
 
               <!-- Description -->
-              <p class="text-fg-2 text-fs-sm leading-[1.6] mt-space-2">{{ item.description }}</p>
+              <p class="cc-desc">{{ item.description }}</p>
             </div>
           </SwiperSlide>
         </Swiper>
@@ -60,7 +57,7 @@
       </div>
 
       <!-- CTA -->
-      <div v-if="cta" class="text-center mt-space-10">
+      <div v-if="cta" class="cc-cta">
         <FButton variant="secondary" :href="cta.link">{{ cta.text }}</FButton>
       </div>
 
@@ -88,11 +85,86 @@ const modules = [Navigation, Pagination, Autoplay]
 </script>
 
 <style scoped>
+.cc-section {
+  padding: var(--space-24) var(--space-6);
+  background: var(--gray-50);
+}
+
+.cc-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.cc-header {
+  text-align: center;
+  margin-bottom: var(--space-16);
+}
+
+.cc-badge {
+  justify-content: center;
+  margin-bottom: var(--space-4);
+}
+
 .section-heading {
   font-size: clamp(28px, 3.5vw, 44px);
   font-weight: var(--fw-bold);
   line-height: 1.2;
   letter-spacing: -0.5px;
+  color: var(--fg-1);
+}
+
+.cc-description {
+  font-size: var(--fs-md);
+  color: var(--fg-2);
+  margin-top: var(--space-4);
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.cc-viewport {
+  position: relative;
+  padding-inline: var(--space-7);
+}
+
+.cc-card {
+  background: #fff;
+  border: 1px solid var(--gray-100);
+  border-radius: var(--r-2xl);
+  padding: var(--space-8);
+  height: 100%;
+  transition: box-shadow 140ms;
+}
+
+.cc-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.cc-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: var(--r-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cc-category {
+  color: var(--fg-1);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-lg);
+  margin-top: var(--space-4);
+}
+
+.cc-desc {
+  color: var(--fg-2);
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+  margin-top: var(--space-2);
+}
+
+.cc-cta {
+  text-align: center;
+  margin-top: var(--space-10);
 }
 
 .cc-swiper {
@@ -107,7 +179,7 @@ const modules = [Navigation, Pagination, Autoplay]
 .cc-nav {
   position: absolute;
   top: 50%;
-  transform: translateY(calc(-50% - 24px)); /* offset for pagination below */
+  transform: translateY(calc(-50% - 24px));
   width: 36px;
   height: 36px;
   background: var(--bg-primary);
@@ -132,13 +204,11 @@ const modules = [Navigation, Pagination, Autoplay]
 .cc-btn-prev { left: 0; }
 .cc-btn-next { right: 0; }
 
-/* Hide default swiper nav arrows */
 :deep(.swiper-button-prev::after),
 :deep(.swiper-button-next::after) {
   display: none;
 }
 
-/* Pagination bullets */
 :deep(.swiper-pagination) {
   bottom: 0 !important;
   display: flex;

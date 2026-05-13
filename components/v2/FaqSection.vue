@@ -1,26 +1,22 @@
 <template>
-  <section class="py-20 bg-gray-50">
-    <div class="max-w-[1200px] mx-auto px-6">
-      <div class="flex flex-col lg:flex-row gap-12 lg:gap-20">
+  <section class="faq-section">
+    <div class="faq-inner">
+      <div class="faq-layout">
 
         <!-- Left: heading + CTA -->
-        <div class="lg:w-[38%] flex-shrink-0 lg:sticky lg:top-24 lg:self-start">
-          <!-- Badge -->
-          <div v-if="badge" class="flex items-center gap-2 mb-5">
-            <span class="block w-5 h-px bg-violet-500"></span>
-            <span class="text-violet-500 text-fs-sm font-semibold tracking-wide">{{ badge }}</span>
+        <div class="faq-left">
+          <div v-if="badge" class="faq-badge-row">
+            <span class="faq-badge-line"></span>
+            <span class="faq-badge-text">{{ badge }}</span>
           </div>
 
-          <h2 class="font-bold leading-tight text-fg-1 mb-4" style="font-size: clamp(28px, 3.5vw, 44px)">
+          <h2 class="faq-heading" style="font-size: clamp(28px, 3.5vw, 44px)">
             {{ heading }}
           </h2>
 
-          <p v-if="description" class="text-fg-2 text-fs-md leading-lh-lg mb-8">
-            {{ description }}
-          </p>
+          <p v-if="description" class="faq-description">{{ description }}</p>
 
-          <FButton v-if="ctaButton" variant="secondary" size="lg" :href="ctaButton.link"
-            class="inline-flex items-center gap-2 px-5 py-[10px] rounded-full border border-gray-300 text-fg-1 text-fs-sm font-medium hover:bg-gray-100 transition-colors duration-150 no-underline">
+          <FButton v-if="ctaButton" variant="secondary" size="lg" :href="ctaButton.link" class="faq-cta">
             {{ ctaButton.text }}
             <span aria-hidden="true">
               <ArrowRightIcon class="w-4 h-4" />
@@ -29,26 +25,21 @@
         </div>
 
         <!-- Right: accordion -->
-        <div class="flex-1 min-w-0">
-          <div v-for="item in faqs" :key="item.id" class="border-b border-gray-200" style="border-bottom-style: solid;">
-            <button @click="toggle(item.id)"
-              class="flex w-full items-center justify-between py-3 text-left gap-4 bg-transparent border-0 cursor-pointer px-0">
-              <span class="font-semibold text-fg-1 text-[15px] leading-snug">
-                {{ item.question }}
-              </span>
+        <div class="faq-right">
+          <div v-for="item in faqs" :key="item.id" class="faq-item">
+            <button @click="toggle(item.id)" class="faq-trigger">
+              <span class="faq-question">{{ item.question }}</span>
 
-              <!-- Filled violet × when open, outlined gray + when closed -->
               <span
-                class="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-colors duration-150"
-                :class="openId === item.id
-                  ? 'bg-violet-500 text-white'
-                  : 'border border-gray-300 text-fg-muted'">
+                class="faq-icon"
+                :class="openId === item.id ? 'faq-icon--open' : 'faq-icon--closed'"
+              >
                 <icons-close-icon v-if="openId === item.id" />
                 <icons-plus-icon v-else />
               </span>
             </button>
 
-            <div v-show="openId === item.id" class="pb-3 text-fg-2 text-fs-sm leading-lh-lg pr-12">
+            <div v-show="openId === item.id" class="faq-answer">
               {{ item.answer }}
             </div>
           </div>
@@ -77,3 +68,150 @@ const toggle = (id) => {
   openId.value = openId.value === id ? null : id
 }
 </script>
+
+<style scoped>
+.faq-section {
+  padding-block: 5rem;
+  background: var(--gray-50);
+}
+
+.faq-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: 1.5rem;
+}
+
+.faq-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .faq-layout {
+    flex-direction: row;
+    gap: 5rem;
+  }
+
+  .faq-left {
+    width: 38%;
+    flex-shrink: 0;
+    position: sticky;
+    top: 6rem;
+    align-self: flex-start;
+  }
+}
+
+.faq-badge-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.faq-badge-line {
+  display: block;
+  width: 1.25rem;
+  height: 1px;
+  background: var(--violet-500);
+}
+
+.faq-badge-text {
+  color: var(--violet-500);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.05em;
+}
+
+.faq-heading {
+  font-weight: var(--fw-bold);
+  line-height: 1.2;
+  color: var(--fg-1);
+  margin-bottom: var(--space-4);
+}
+
+.faq-description {
+  color: var(--fg-2);
+  font-size: var(--fs-md);
+  line-height: var(--lh-lg);
+  margin-bottom: var(--space-8);
+}
+
+.faq-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 10px var(--space-5);
+  border-radius: var(--r-full);
+  border: 1px solid var(--gray-300);
+  color: var(--fg-1);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  text-decoration: none;
+  transition: background 150ms;
+}
+
+.faq-cta:hover {
+  background: var(--gray-100);
+}
+
+.faq-right {
+  flex: 1;
+  min-width: 0;
+  border-top: 1px solid var(--gray-200);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.faq-trigger {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: var(--space-3);
+  padding-inline: 0;
+  text-align: left;
+  gap: var(--space-4);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.faq-question {
+  font-weight: var(--fw-semibold);
+  color: var(--fg-1);
+  font-size: 15px;
+  line-height: 1.375;
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: var(--r-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 150ms, border 150ms;
+}
+
+.faq-icon--open {
+  background: var(--violet-500);
+  color: #fff;
+}
+
+.faq-icon--closed {
+  border: 1px solid var(--gray-300);
+  color: var(--fg-muted);
+}
+
+.faq-answer {
+  padding-bottom: var(--space-3);
+  color: var(--fg-2);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-lg);
+  padding-right: 3rem;
+}
+</style>

@@ -32,9 +32,7 @@
           class="hero-v2__btn"
         >
           {{ btn.text }}
-          <svg v-if="btn.type === 'Primary'" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <IconArrowRight v-if="btn.type === 'Primary'" />
         </FButton>
       </div>
 
