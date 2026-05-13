@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Navbar from '../components/nav-v2/Navbar.vue'
+import Navbar from '../components/v2/nav/Navbar.vue'
 import Footer from '../components/Footer.vue'
 import CookieConsent from '../components/CookieConsent.vue'
 

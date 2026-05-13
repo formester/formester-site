@@ -95,7 +95,7 @@ export default {
   border-color: #fff;
 }
 .fbt--white:hover {
-  background: var(--gray-100);
+  background: var(--gray-300);
   color: var(--fg-1);
 }
 

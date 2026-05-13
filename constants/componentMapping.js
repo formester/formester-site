@@ -1,10 +1,20 @@
 // componentMapping.js
 export default {
+  // New v2 landing page components
+  'macro-components.hero-v2': () => import('@/components/v2/HeroV2.vue'),
+  'macro-components.stats-section': () => import('@/components/v2/StatsSection.vue'),
+  'macro-components.sticky-steps-section': () => import('@/components/v2/StickyStepsSection.vue'),
+  'macro-components.card-grid': () => import('@/components/v2/CardGrid.vue'),
+  'macro-components.dual-marquee': () => import('@/components/v2/DualMarquee.vue'),
+  'macro-components.carousel': () => import('@/components/v2/Carousel.vue'),
+  'macro-components.cta-dark': () => import('@/components/v2/CtaDark.vue'),
+
   'macro-components.hero-centered': () => import('@/components/home/Hero.vue'),
   'macro-components.trust-seals': () => import('@/components/home/TrustSeals.vue'),
   'macro-components.collapsible-item-list': () => import('@/components/home/MostUsedFeatures.vue'),
   'macro-components.embed-form-url': () => import('@/components/home/EmbedForm.vue'),
-  'macro-components.testimonials': () => import('@/components/home/Testimonials.vue'),
+  'macro-components.testimonials': () => import('@/components/v2/testimonials/Testimonials.vue'),
+  'macro-components.testimonials-v2': () => import('@/components/v2/testimonials/TestimonialsV2.vue'),
   'macro-components.cta': () => import('@/components/CallToActionSection.vue'),
   'macro-components.hero-row-layout': () => import('@/components/HeroRowLayout.vue'),
   'macro-components.three-column-benefits': () => import('@/components/features/ThreeColBenefits.vue'),
