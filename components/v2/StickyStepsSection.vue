@@ -42,6 +42,7 @@
             <div v-if="step.image?.url" class="rounded-lg overflow-hidden border border-gray-200">
               <img :src="step.image.url" :alt="step.title" class="w-full block" />
             </div>
+            <div v-if="step.rawHtml" v-html="step.rawHtml" />
           </div>
         </div>
       </div>
