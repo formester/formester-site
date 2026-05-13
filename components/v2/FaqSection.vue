@@ -60,7 +60,7 @@ const props = defineProps({
   ctaButton: { type: Object, default: null },
 })
 
-const DEFAULT_DESCRIPTION = 'Still curious? Our docs cover everything in depth - or just chat with us.'
+const DEFAULT_DESCRIPTION = 'Find answers to common questions below, or reach out to our team for more help.'
 const DEFAULT_HEADING = 'Questions we get a lot.'
 
 const resolvedHeading = computed(() => {
