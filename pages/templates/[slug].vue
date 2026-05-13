@@ -230,6 +230,16 @@ const { data: fetchedData, error: fetchError } = useAsyncData(`template-${route.
       //    Prefer the CMS-configured slug list. If no list is set, fall back
       //    to the first 6 templates so the tab is never missing.
       if (!hideDefault) {
+        // Strip down to fields the card renders to keep the per-page payload
+        // small (full template objects carry heavy aboutTemplate HTML etc.)
+        const toCard = (t) => ({
+          slug: t.slug,
+          name: t.name,
+          description: t.description,
+          previewImageUrl: t.previewImageUrl,
+          previewImageAlt: t.name,
+        })
+
         let recommendedTemplates
         if (defaultSlugs.length > 0) {
           const allowed = new Set(defaultSlugs)
@@ -238,10 +248,12 @@ const { data: fetchedData, error: fetchError } = useAsyncData(`template-${route.
             .sort((a, b) => defaultSlugs.indexOf(a.slug) - defaultSlugs.indexOf(b.slug))
             .filter(t => t.slug !== slug)
             .slice(0, 6)
+            .map(toCard)
         } else {
           recommendedTemplates = result.templates
             .filter(t => t.slug !== slug)
             .slice(0, 6)
+            .map(toCard)
         }
 
         if (recommendedTemplates.length > 0) {
