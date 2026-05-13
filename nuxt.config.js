@@ -118,8 +118,8 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: ['/', '/sitemap.xml'],
       ignore: ['/api'],
-      concurrency: 15, // Increased: pages now render from in-memory cache
-      interval: 10, // Reduced: minimal API I/O with batch caching
+      concurrency: 5, // Keep prerender memory below hosted build limits
+      interval: 25, // Small delay keeps API and heap pressure steadier
       failOnError: false
     },
     hooks: {
