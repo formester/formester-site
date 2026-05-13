@@ -25,7 +25,7 @@ export default {
   'macro-components.two-column-benefits': () => import('@/components/features/TwoColBenefits.vue'),
   'macro-components.simple-steps-create-lg': () => import('@/components/features/SimpleStepsCreateLg.vue'),
   'macro-components.standout-feature-detail': () => import('@/components/features/StandoutFeatureDetail.vue'),
-  'macro-components.faqs': () => import('@/components/features/Faq.vue'),
+  'macro-components.faqs': () => import('@/components/v2/FaqSection.vue'),
   'macro-components.faqs-with-categories': () => import('@/components/features/FaqWithCategories.vue'),
   'macro-components.code-showcase-section': () => import('@/components/features/FeatureCodeShowcase.vue'),
   'macro-components.hero-centered-dark': () => import('@/components/strapi/HeroCenteredDark.vue'),

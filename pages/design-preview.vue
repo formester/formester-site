@@ -19,7 +19,7 @@
 
     <TestimonialsV2 :heading="testimonials.heading" :testimonials="testimonials.items" />
 
-    <FaqSection :badge="faq.badge" :heading="faq.heading" :description="faq.description" :faqs="faq.items" :cta-button="faq.ctaButton" />
+    <FaqSection :badge="faq.badge" :title="faq.title" :description="faq.description" :faq-list="faq.faqList" :cta-button="faq.ctaButton" />
 
     <CtaDark :badge="cta.badge" :heading="cta.heading" :description="cta.description" :buttons="cta.buttons"
       :trust-text="cta.trustText" />
@@ -337,10 +337,10 @@ const testimonials = {
 
 const faq = {
   badge: 'FAQ',
-  heading: 'Questions we get a lot.',
+  title: 'Questions we get a lot.',
   description: 'Still curious? Our docs cover everything in depth — or just chat with us.',
   ctaButton: { text: 'Visit help center', link: '/docs' },
-  items: [
+  faqList: [
     {
       id: 1,
       question: 'Is Formester really free to start?',
@@ -365,6 +365,56 @@ const faq = {
       id: 5,
       question: 'Where is my data stored?',
       answer: 'Data is stored in AWS data centres (us-east-1 by default). EU data residency is available on Business and Enterprise plans.',
+    },
+    {
+      id: 6,
+      question: 'Can I embed forms on my website?',
+      answer: "Yes. Formester generates an embed snippet you can drop into any HTML page, WordPress site, or web app. Forms inherit your page's font and adapt to any container width.",
+    },
+    {
+      id: 7,
+      question: 'Does Formester support multi-step forms?',
+      answer: 'Yes. Break long forms into pages, add progress bars, and control navigation with conditional logic — all without writing code.',
+    },
+    {
+      id: 8,
+      question: 'Can I white-label forms with my own domain and branding?',
+      answer: 'White-labelling is available on Business and Enterprise plans. Use a custom subdomain, remove Formester branding, and match your brand colours, fonts, and logo.',
+    },
+    {
+      id: 9,
+      question: 'How does conditional logic work?',
+      answer: 'Set rules on any field to show, hide, skip, or branch to a different page based on previous answers. Rules support AND/OR conditions and can trigger across multiple fields at once.',
+    },
+    {
+      id: 10,
+      question: 'Is there an API I can use?',
+      answer: 'Yes. Formester offers a typed REST API for creating forms, reading submissions, and managing workspaces programmatically. API keys are generated from your account settings.',
+    },
+    {
+      id: 11,
+      question: 'What file types can respondents upload?',
+      answer: 'The file upload field accepts any file type by default. You can restrict to specific types (PDF, image, CSV, etc.) and set a maximum file size per upload.',
+    },
+    {
+      id: 12,
+      question: 'Can I collect electronic signatures?',
+      answer: 'Yes. The signature field lets respondents draw or type their signature directly in the form. Submissions include a timestamped record for audit purposes.',
+    },
+    {
+      id: 13,
+      question: 'How do I prevent spam submissions?',
+      answer: 'Formester includes built-in honeypot detection, reCAPTCHA v3 support, and submission rate limiting. You can also restrict responses to specific email domains.',
+    },
+    {
+      id: 14,
+      question: 'Can I schedule when a form is open or closed?',
+      answer: 'Yes. Set an open date, a close date, or a maximum response limit. Once the condition is met the form automatically displays a custom closed message of your choice.',
+    },
+    {
+      id: 15,
+      question: 'Does Formester offer HIPAA or GDPR compliance?',
+      answer: 'GDPR controls (consent fields, data deletion, DPA) are available on all paid plans. HIPAA-compliant data handling with a signed BAA is available on Enterprise.',
     },
   ],
 }

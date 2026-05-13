@@ -11,10 +11,10 @@
           </div>
 
           <h2 class="faq-heading" style="font-size: clamp(28px, 3.5vw, 44px)">
-            {{ heading }}
+            {{ resolvedHeading }}
           </h2>
 
-          <p v-if="description" class="faq-description">{{ description }}</p>
+          <p class="faq-description">{{ description || DEFAULT_DESCRIPTION }}</p>
 
           <FButton v-if="ctaButton" variant="secondary" size="lg" :href="ctaButton.link" class="faq-cta">
             {{ ctaButton.text }}
@@ -26,14 +26,11 @@
 
         <!-- Right: accordion -->
         <div class="faq-right">
-          <div v-for="item in faqs" :key="item.id" class="faq-item">
+          <div v-for="item in resolvedFaqs" :key="item.id" class="faq-item">
             <button @click="toggle(item.id)" class="faq-trigger">
               <span class="faq-question">{{ item.question }}</span>
 
-              <span
-                class="faq-icon"
-                :class="openId === item.id ? 'faq-icon--open' : 'faq-icon--closed'"
-              >
+              <span class="faq-icon" :class="openId === item.id ? 'faq-icon--open' : 'faq-icon--closed'">
                 <icons-close-icon v-if="openId === item.id" />
                 <icons-plus-icon v-else />
               </span>
@@ -51,17 +48,37 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import ArrowRightIcon from '@/components/icons/ArrowRightIcon.vue'
 import FButton from '../UI/FButton.vue'
 
-defineProps({
-  badge: { type: String, default: null },
-  heading: { type: String, required: true },
+const props = defineProps({
+  badge: { type: String, default: 'FAQ' },
+  title: { type: [String, Array], default: null },
   description: { type: String, default: null },
-  faqs: { type: Array, required: true },
+  faqList: { type: Array, default: () => [] },
   ctaButton: { type: Object, default: null },
 })
+
+const DEFAULT_DESCRIPTION = 'Still curious? Our docs cover everything in depth - or just chat with us.'
+const DEFAULT_HEADING = 'Questions we get a lot.'
+
+const resolvedHeading = computed(() => {
+  if (Array.isArray(props.title)) {
+    const text = props.title.map(t => t.text).join('')
+    return text || DEFAULT_HEADING
+  }
+  return props.title || DEFAULT_HEADING
+})
+
+const resolvedFaqs = computed(() =>
+  props.faqList.map((faq, i) => ({
+    ...faq,
+    id: faq.id ?? i,
+    question: faq.question || faq.header,
+    answer: faq.answer || faq.body,
+  }))
+)
 
 const openId = ref(null)
 const toggle = (id) => {
