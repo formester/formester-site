@@ -262,7 +262,7 @@ const TABS = [
   { id: 'collaboration',   label: 'Collaboration' },
   { id: 'whitelabel',      label: 'White Label' },
   { id: 'generate-pdf',    label: 'Generate PDF' },
-  { id: 'data-protection', label: 'Data Protection' },
+  { id: 'data-protection', label: 'Offline Mode' },
   { id: 'automations',     label: 'Automations' },
   { id: 'multi-language',  label: 'Multi Language' },
 ]
@@ -1071,8 +1071,8 @@ const content = computed(() => CONTENT_DATA[activeTab.value])
 .fsv-dp__sync-pill {
   position: absolute;
   bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: var(--space-4);
+  right: var(--space-4);
   background: var(--bg-primary);
   padding: var(--space-2) var(--space-4);
   border-radius: var(--r-full);
@@ -1080,9 +1080,9 @@ const content = computed(() => CONTENT_DATA[activeTab.value])
   border: 1px solid var(--border-light);
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--space-2);
   z-index: 2;
-  white-space: nowrap;
   font-size: var(--fs-xs);
   font-weight: var(--fw-semibold);
   color: var(--fg-strong);
