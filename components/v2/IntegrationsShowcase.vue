@@ -1,7 +1,7 @@
 <template>
   <V2DualMarquee
     :badge="badge"
-    :heading="heading"
+    :heading="resolvedHeading"
     :description="description"
     :integrations="resolvedIntegrations"
     :cta="cta"
@@ -40,11 +40,20 @@ const DEFAULT_INTEGRATIONS = [
 
 const props = defineProps({
   badge:        { type: String, default: 'Integrations' },
+  title:        { type: [String, Array], default: null },
   heading:      { type: String, default: 'Plays well with your stack.' },
   description:  { type: String, default: 'Native connections to 50+ tools, plus webhooks and a typed API for the rest.' },
   integrations: { type: Array,  default: () => [] },
   cta:          { type: Object, default: () => ({ link: '/integrations/', text: 'Browse all integrations' }) },
   background:   { type: String, default: '' },
+})
+
+const resolvedHeading = computed(() => {
+  if (props.title) {
+    if (Array.isArray(props.title)) return props.title.map(t => t.text).join('')
+    return props.title
+  }
+  return props.heading
 })
 
 const resolvedIntegrations = computed(() =>
