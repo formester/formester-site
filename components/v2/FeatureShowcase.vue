@@ -655,7 +655,7 @@ const content = computed(() => CONTENT_DATA[activeTab.value])
 }
 
 .fs__explore {
-  display: none;
+  display: inline-flex;
   align-items: center;
   gap: var(--space-1);
   font-size: var(--fs-sm);
@@ -670,7 +670,6 @@ const content = computed(() => CONTENT_DATA[activeTab.value])
 }
 .fs__explore:hover { opacity: 0.75; }
 .fs__explore:hover .fs__chevron { transform: translateX(4px); }
-@media (min-width: 640px) { .fs__explore { display: inline-flex; } }
 
 .fs__chevron { transition: transform 200ms ease; flex-shrink: 0; }
 
