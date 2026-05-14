@@ -1,23 +1,16 @@
 <template>
-  <div>
-    <div style="padding-top: 44px">
-      <div v-if="pending" style="padding: 4rem; text-align: center; color: #666">
-        Loading draft&hellip;
-      </div>
-      <div v-else-if="fetchError" style="padding: 4rem; text-align: center; color: #c0392b">
-        {{ fetchError.message || 'Failed to load draft' }}
-      </div>
-      <PageComponents v-else-if="components.length" :components="components" />
-      <div
-        v-else-if="previewData?.type === 'blog' && blogData"
-        class="container mw-920 blog-preview-container"
-      >
-        <BlogPostView :blog-data="blogPostViewData" />
-      </div>
-      <div v-else style="padding: 4rem; text-align: center; color: #666">
-        No components found for this draft.
-      </div>
-    </div>
+  <div v-if="pending" style="padding: 4rem; text-align: center; color: #666">
+    Loading draft&hellip;
+  </div>
+  <div v-else-if="fetchError" style="padding: 4rem; text-align: center; color: #c0392b">
+    {{ fetchError.message || 'Failed to load draft' }}
+  </div>
+  <PageComponents v-else-if="components.length" :components="components" />
+  <div v-else-if="previewData?.type === 'blog' && blogData" class="container mw-920 blog-preview-container">
+    <BlogPostView :blog-data="blogPostViewData" />
+  </div>
+  <div v-else style="padding: 4rem; text-align: center; color: #666">
+    No components found for this draft.
   </div>
 </template>
 

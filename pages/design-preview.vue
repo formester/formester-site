@@ -32,7 +32,6 @@ import StatsSection from '@/components/v2/StatsSection.vue'
 import StickyStepsSection from '@/components/v2/StickyStepsSection.vue'
 import CardCarousel from '@/components/v2/CardCarousel.vue'
 import IntegrationsShowcase from '@/components/v2/IntegrationsShowcase.vue'
-import Testimonials from '@/components/v2/testimonials/TestimonialsOld.vue'
 import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
 import FaqSection from '@/components/v2/FaqSection.vue'
 import CtaDark from '@/components/v2/CtaDark.vue'
@@ -425,7 +424,7 @@ const cta = {
     { id: 1, text: 'Start free', link: 'https://app.formester.com/users/sign_up', type: 'Primary' },
     { id: 2, text: 'Talk to sales', link: '/contact', type: 'Secondary' },
   ],
-  trustText: '50,000+ teams · Free forever · Real support',
+  trustText: '56,000+ teams · Free forever · Live support',
 }
 
 useHead(() => ({

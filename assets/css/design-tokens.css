@@ -9,6 +9,9 @@
   --font-display: 'Instrument Serif', Georgia, serif;
   --font-mono:    ui-monospace, 'SF Mono', Menlo, Consolas, 'Roboto Mono', monospace;
 
+  /* ---------- Brand ---------- */
+  --color-primary: #6434d0;
+
   /* ---------- Background colors ---------- */
   --bg-primary:    #ffffff;
   --bg-grey-25:    #fcfcfd;
