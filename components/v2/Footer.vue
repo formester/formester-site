@@ -59,7 +59,8 @@
       </div>
 
       <!-- Solutions -->
-      <div class="site-footer__col">
+      <!-- TODO : need to bring back after adding pages for Healthcare and Education  -->
+      <div class="site-footer__col" v-if="0">
         <h3 class="site-footer__col-heading">Solutions</h3>
         <ul class="site-footer__links">
           <li>
@@ -70,6 +71,13 @@
           </li>
           <li>
             <NuxtLink to="/use-case/formester-for-compliance/" class="site-footer__link">Operations</NuxtLink>
+          </li>
+
+          <li>
+            <NuxtLink to="/use-case/" class="site-footer__link">Education</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/use-case/" class="site-footer__link">Healthcare</NuxtLink>
           </li>
         </ul>
       </div>
