@@ -137,11 +137,13 @@ defineProps({
   border-radius: var(--r-2xl);
   background: #fff;
   padding: 26px 28px;
-  transition: background 140ms;
+  transition: all 140ms;
 }
 
 .step-card:hover {
-  background: var(--violet-25);
+  background: var(--gray-50);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
 }
 
 .step-num {
