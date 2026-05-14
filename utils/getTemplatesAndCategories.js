@@ -5,18 +5,17 @@ let cachePromise = null
 let categorieRoutesPromise = null
 
 async function _fetchTemplatesAndCategories(options = {}) {
-  console.log('[getTemplatesAndCategories] Fetching all templates and categories...')
+  console.log(
+    '[getTemplatesAndCategories] Fetching all templates and categories...',
+  )
   const cacheBust = options.no_cache ? { no_cache: true } : {}
 
-  let { data: templates } = await fetchWithRetry(
-    `${APP_URL}/templates.json`, 
-    {
+  let { data: templates } = await fetchWithRetry(`${APP_URL}/templates.json`, {
     params: {
       ...cacheBust,
       with_details: true,
     },
-    }
-  )
+  })
 
   const { data: categories } = await fetchWithRetry(
     `${APP_URL}/template_categories.json`,
@@ -26,11 +25,10 @@ async function _fetchTemplatesAndCategories(options = {}) {
   const dummyDescription =
     'Check out this pre-designed template and start customising with just a single click. Personalise with your branding, incorporate electronic signatures for security and add multiple collaborators to make changes simultaneously. Use this template and start getting data driven actionable insights with robust analytics.'
 
-    const {
-      data: { data },
-    } = await fetchWithRetry(`${STRAPI_URL}/api/pdf-templates`, {
+  const {
+    data: { data },
+  } = await fetchWithRetry(`${STRAPI_URL}/api/pdf-templates`, {
     params: {
-
       populate: 'deep',
     },
   })
@@ -41,7 +39,9 @@ async function _fetchTemplatesAndCategories(options = {}) {
   }))
 
   const templateRoutes = templates.map((template) => {
-    const pdfTemplate = data.find((pdfTemplate) => pdfTemplate.slug === template.slug)
+    const pdfTemplate = data.find(
+      (pdfTemplate) => pdfTemplate.slug === template.slug,
+    )
     return {
       route: `/templates/${template.slug}`,
       payload: { template, categories, data: pdfTemplate },
@@ -54,7 +54,9 @@ async function _fetchTemplatesAndCategories(options = {}) {
 
   const result = { templateRoutes, templates, categories }
 
-  console.log(`[getTemplatesAndCategories] Cached ${templates.length} templates`)
+  console.log(
+    `[getTemplatesAndCategories] Cached ${templates.length} templates`,
+  )
   return result
 }
 
@@ -74,7 +76,7 @@ async function _fetchCategorieRoutes() {
   console.log('[getTemplatesAndCategories] Fetching grouped_by_category...')
   const { categories } = await getTemplatesAndCategories()
   const { data: templatesGroupedByCategory } = await fetchWithRetry(
-    `${APP_URL}/template_categories/grouped_by_category.json`
+    `${APP_URL}/template_categories/grouped_by_category.json`,
   )
   return templatesGroupedByCategory.map((item) => ({
     route: `/templates/categories/${item.categorySlug}`,
@@ -99,20 +101,24 @@ export async function getCategorieRoutes() {
  * @param {Array} specificSlugs - Optional array of specific template slugs to filter by
  * @returns {Array} Array of random templates
  */
-export const getRandomTemplates = async (count = 6, categorySlug = null, specificSlugs = null) => {
+export const getRandomTemplates = async (
+  count = 6,
+  categorySlug = null,
+  specificSlugs = null,
+) => {
   const { templates } = await getTemplatesAndCategories()
 
   let filteredTemplates = templates
 
   // Filter by specific slugs if provided (takes priority)
   if (specificSlugs && specificSlugs.length > 0) {
-    return templates.filter(template => specificSlugs.includes(template.slug))
+    return templates.filter((template) => specificSlugs.includes(template.slug))
   }
 
   // Filter by category if provided
   if (categorySlug) {
-    filteredTemplates = templates.filter(template =>
-      template.categories?.some(cat => cat.slug === categorySlug)
+    filteredTemplates = templates.filter((template) =>
+      template.categories?.some((cat) => cat.slug === categorySlug),
     )
   }
 

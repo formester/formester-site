@@ -6,6 +6,7 @@ frontend:
         - npm ci
     build:
       commands:
+        - export NODE_OPTIONS=--max-old-space-size=4096
         - npm run build
   artifacts:
     baseDirectory: .output/public

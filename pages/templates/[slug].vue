@@ -167,7 +167,10 @@
     <more-templates
       :categories="categories"
       :template-slug="template.slug"
-      :recommended-templates="recommendedTemplates"
+      :showcase-tabs="showcaseTabs"
+      :has-custom-showcase="hasCustomShowcase"
+      :title="moreTemplatesTitle"
+      :description="moreTemplatesDescription"
     />
   </div>
 </template>
@@ -178,6 +181,7 @@ import getSiteMeta from '../../utils/getSiteMeta'
 import isEmpty from 'lodash/isEmpty'
 import getTemplatesAndCategories from '@/utils/getTemplatesAndCategories'
 import getRecommendedTemplatesMap from '@/utils/getRecommendedTemplatesMap'
+import resolveShowcaseTabs from '@/utils/resolveShowcaseTabs'
 
 // Components
 const MoreTemplates = defineAsyncComponent(() => import('../../components/template/MoreTemplates.vue'))
@@ -205,35 +209,86 @@ const { data: fetchedData, error: fetchError } = useAsyncData(`template-${route.
     const routePayload = result.templateRoutes.find(r => r.route === `/templates/${slug}`)
     const pdfData = routePayload?.payload?.data || null
 
-    // Look up recommended templates from cached map
-    let recommendedTemplates = []
+    // Build showcase tabs from recommended-templates entry (if any).
+    // When a custom Template Showcase is configured, it REPLACES the legacy
+    // app categories. The default "Recommended" tab (from slug list) is
+    // independent — it can coexist with either custom tabs or categories.
+    let showcaseTabs = []
+    let hasCustomShowcase = false
+    let moreTemplatesTitle = []
+    let moreTemplatesDescription = ''
     try {
       const recMap = await getRecommendedTemplatesMap()
-      const uniqueSlugs = recMap[slug] || []
+      const entry = recMap[slug] || {}
+      const defaultSlugs = entry.defaultRecommendedSlugs || []
+      const hideDefault = entry.hideDefaultRecommended === true
+      const customTabs = entry.customTabs || []
+      moreTemplatesTitle = entry.title || []
+      moreTemplatesDescription = entry.description || ''
 
-      if (uniqueSlugs.length > 0) {
-        const allowed = new Set(uniqueSlugs)
-        let list = result.templates.filter((t) => allowed.has(t.slug))
-        list.sort((a, b) => uniqueSlugs.indexOf(a.slug) - uniqueSlugs.indexOf(b.slug))
-        recommendedTemplates = list.filter((t) => t.slug !== slug).slice(0, 6)
+      // 1) Default "Recommended" tab (unless explicitly hidden).
+      //    Prefer the CMS-configured slug list. If no list is set, fall back
+      //    to the first 6 templates so the tab is never missing.
+      if (!hideDefault) {
+        // Strip down to fields the card renders to keep the per-page payload
+        // small (full template objects carry heavy aboutTemplate HTML etc.)
+        const toCard = (t) => ({
+          slug: t.slug,
+          name: t.name,
+          description: t.description,
+          previewImageUrl: t.previewImageUrl,
+          previewImageAlt: t.name,
+        })
+
+        let recommendedTemplates
+        if (defaultSlugs.length > 0) {
+          const allowed = new Set(defaultSlugs)
+          recommendedTemplates = result.templates
+            .filter(t => allowed.has(t.slug))
+            .sort((a, b) => defaultSlugs.indexOf(a.slug) - defaultSlugs.indexOf(b.slug))
+            .filter(t => t.slug !== slug)
+            .slice(0, 6)
+            .map(toCard)
+        } else {
+          recommendedTemplates = result.templates
+            .filter(t => t.slug !== slug)
+            .slice(0, 6)
+            .map(toCard)
+        }
+
+        if (recommendedTemplates.length > 0) {
+          showcaseTabs.push({
+            id: 'recommended-default',
+            name: 'Recommended',
+            slug: 'recommended',
+            templates: recommendedTemplates,
+          })
+        }
       }
 
-      // Fallback to first 6 templates if no recommendations
-      if (recommendedTemplates.length === 0) {
-        recommendedTemplates = result.templates
-          .filter((t) => t.slug !== slug)
-          .slice(0, 6)
+      // 2) Custom tabs from the Template Showcase component (with overrides)
+      const resolvedCustomTabs = resolveShowcaseTabs(customTabs, result.templates, slug, {
+        sourceLabel: 'recommended-templates',
+        idPrefix: 'rec',
+      })
+      if (resolvedCustomTabs.length > 0) {
+        hasCustomShowcase = true
+        showcaseTabs.push(...resolvedCustomTabs)
       }
     } catch (e) {
-      console.error('Error fetching recommended templates:', e)
-      // Fallback to first 6 templates
-      recommendedTemplates = result.templates
-        .filter((t) => t.slug !== slug)
-        .slice(0, 6)
+      console.error('[recommended-templates] Error resolving tabs:', e)
     }
 
     // Only return the data needed for this template to reduce memory
-    return { template, categories: result.categories, data: pdfData, recommendedTemplates }
+    return {
+      template,
+      categories: result.categories,
+      data: pdfData,
+      showcaseTabs,
+      hasCustomShowcase,
+      moreTemplatesTitle,
+      moreTemplatesDescription,
+    }
   } catch (err) {
     console.error('Error fetching template:', err)
     throw createError({ statusCode: 500, message: 'Internal Server Error' })
@@ -247,7 +302,10 @@ if (fetchError.value) {
 const template = computed(() => fetchedData.value?.template || {})
 const categories = computed(() => fetchedData.value?.categories || {})
 const data = computed(() => fetchedData.value?.data || null)
-const recommendedTemplates = computed(() => fetchedData.value?.recommendedTemplates || [])
+const showcaseTabs = computed(() => fetchedData.value?.showcaseTabs || [])
+const hasCustomShowcase = computed(() => fetchedData.value?.hasCustomShowcase === true)
+const moreTemplatesTitle = computed(() => fetchedData.value?.moreTemplatesTitle || [])
+const moreTemplatesDescription = computed(() => fetchedData.value?.moreTemplatesDescription || '')
 
 const currentSlide = ref(0)
 const activeTab = ref('pdf')
