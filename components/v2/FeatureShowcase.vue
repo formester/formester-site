@@ -65,12 +65,12 @@
               </div>
             </div>
 
-            <button class="fs__explore" :style="{ color: content.theme.iconColor }">
+            <NuxtLink :to="content.href" class="fs__explore" :style="{ color: content.theme.iconColor }">
               Explore feature
               <svg class="fs__chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="m9 18 6-6-6-6" />
               </svg>
-            </button>
+            </NuxtLink>
           </div>
 
           <!-- Right: animated visual -->
@@ -269,6 +269,7 @@ const TABS = [
 
 const CONTENT_DATA = {
   'collaboration': {
+    href: '/features/collaborative-forms/',
     title: 'Invite team members to build and manage forms together.',
     desc: 'Work in real-time with your team. Avoid back-and-forth emails and ensure everyone is on the same page.',
     badge: 'Real-time sync',
@@ -286,6 +287,7 @@ const CONTENT_DATA = {
     },
   },
   'whitelabel': {
+    href: '/features/branding-kit/',
     title: 'Match forms to your brand with full design control.',
     desc: 'Remove all our branding and make the forms feel completely native to your application or website.',
     badge: 'Custom Branding',
@@ -303,6 +305,7 @@ const CONTENT_DATA = {
     },
   },
   'generate-pdf': {
+    href: '/features/export-form-submission-pdf/',
     title: 'Turn responses into ready-to-use downloadable PDFs.',
     desc: 'Automatically generate professional documents, invoices, or contracts the moment a form is submitted.',
     badge: 'Auto-Generation',
@@ -320,6 +323,7 @@ const CONTENT_DATA = {
     },
   },
   'data-protection': {
+    href: '/features/offline-forms/',
     title: 'Let users save and finish forms across any device.',
     desc: "Don't lose form submissions due to bad connections. Allow users to complete forms on their own schedule.",
     badge: 'Offline Support',
@@ -337,6 +341,7 @@ const CONTENT_DATA = {
     },
   },
   'automations': {
+    href: '/features/autoresponder-email/',
     title: 'Send auto-confirmation and follow-up emails.',
     desc: 'Put your communication on autopilot. Ensure every customer gets a timely response without manual effort.',
     badge: 'Workflow Automation',
@@ -354,6 +359,7 @@ const CONTENT_DATA = {
     },
   },
   'multi-language': {
+    href: '/features/multi-language-form-translations/',
     title: 'Add multiple languages to reach global users',
     desc: 'Break language barriers and expand your market reach by offering fully localized form experiences.',
     badge: 'Localization',
