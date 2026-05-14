@@ -1,7 +1,5 @@
 <template>
   <section class="fs">
-    <div class="fs__grid" aria-hidden="true" />
-
     <div class="fs__container">
       <!-- ── Desktop tabs ─────────────────────────────────── -->
       <div class="fs__tabs-desktop">
@@ -435,17 +433,6 @@ const content = computed(() => CONTENT_DATA[activeTab.value])
 .fs {
   position: relative;
   overflow: hidden;
-}
-
-.fs__grid {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background-image:
-    linear-gradient(to right, rgba(0,0,0,0.025) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0,0,0,0.025) 1px, transparent 1px);
-  background-size: 40px 40px;
 }
 
 .fs__container {
