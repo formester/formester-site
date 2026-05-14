@@ -36,11 +36,8 @@
                 <div v-else class="tv2-spacer"></div>
               </div>
               <div class="tv2-author">
-                <div class="tv2-avatar">{{ getInitials(t.name) }}</div>
-                <div>
-                  <div class="tv2-name">{{ t.name }}</div>
-                  <div class="tv2-position">{{ t.position }}</div>
-                </div>
+                <div class="tv2-name">{{ t.name }}</div>
+                <div class="tv2-position">{{ t.position }}</div>
               </div>
             </div>
           </div>
@@ -96,12 +93,6 @@ let _handleDragEnd = null
 const isExpanded = (id) => !!expandedCards.value[id]
 const toggleExpanded = (id) => {
   expandedCards.value = { ...expandedCards.value, [id]: !expandedCards.value[id] }
-}
-
-const getInitials = (name) => {
-  const parts = (name || '').trim().split(/\s+/)
-  if (parts.length >= 2) return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase()
-  return (name || '').slice(0, 2).toUpperCase()
 }
 
 const getCardStep = () => {
@@ -383,22 +374,7 @@ onBeforeUnmount(() => teardown())
 
 .tv2-author {
   display: flex;
-  align-items: center;
-  gap: var(--space-3);
-}
-
-.tv2-avatar {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: var(--r-full);
-  background: var(--gray-100);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-semibold);
-  color: var(--violet-500);
-  flex-shrink: 0;
+  flex-direction: column;
 }
 
 .tv2-name {
