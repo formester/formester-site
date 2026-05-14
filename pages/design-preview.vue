@@ -12,7 +12,7 @@
 
     <CardCarousel background="var(--gray-100)" :badge="usecases.badge" :heading="usecases.heading" :description="usecases.description" :cta="usecases.cta" :usecases="usecases.items" />
 
-    <IntegrationsShowcase :badge="integrations.badge" :heading="integrations.heading" :description="integrations.description"
+    <V2IntegrationsShowcase :badge="integrations.badge" :heading="integrations.heading" :description="integrations.description"
       :cta="integrations.cta" />
 
     <TestimonialsV2 :heading="testimonials.heading" :testimonials="testimonials.items" background="var(--gray-100)" />
@@ -31,7 +31,6 @@ import TrustSeals from '@/components/v2/TrustSeals.vue'
 import StatsSection from '@/components/v2/StatsSection.vue'
 import StickyStepsSection from '@/components/v2/StickyStepsSection.vue'
 import CardCarousel from '@/components/v2/CardCarousel.vue'
-import IntegrationsShowcase from '@/components/v2/IntegrationsShowcase.vue'
 import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
 import FaqSection from '@/components/v2/FaqSection.vue'
 import CtaDark from '@/components/v2/CtaDark.vue'
