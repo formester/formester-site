@@ -10,7 +10,7 @@
 
             <!-- New paragraph for each line break -->
             <p
-              v-for="(line, index) in template.description.split('\n')"
+              v-for="(line, index) in template?.description?.split?.('\n')"
               :key="index"
               class="hero__subheading"
             >
@@ -44,7 +44,7 @@
 
               <!-- New paragraph for each line break -->
               <p
-                v-for="(line, index) in template.description.split('\n')"
+                v-for="(line, index) in template?.description?.split?.('\n')"
                 :key="index"
                 class="hero__subheading"
               >
