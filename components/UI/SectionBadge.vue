@@ -53,6 +53,15 @@ export default {
   flex-shrink: 0;
 }
 
+.badge-label::after {
+  content: '';
+  width: 16px;
+  height: 1.5px;
+  background: var(--violet-300);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
 /* --- Pill variant (hero eyebrow chip) --- */
 .badge-pill {
   display: inline-flex;
