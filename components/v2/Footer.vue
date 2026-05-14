@@ -55,9 +55,6 @@
           <li>
             <NuxtLink to="/pricing/" class="site-footer__link">Pricing</NuxtLink>
           </li>
-          <li>
-            <NuxtLink to="/blog/" class="site-footer__link">Changelog</NuxtLink>
-          </li>
         </ul>
       </div>
 
@@ -69,16 +66,10 @@
             <NuxtLink to="/use-case/human-resource/" class="site-footer__link">HR &amp; People</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/use-case/software-and-technology/" class="site-footer__link">Marketing</NuxtLink>
+            <NuxtLink to="/use-case/formester-for-training-and-assessments/" class="site-footer__link">Education</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/use-case/" class="site-footer__link">Education</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/use-case/" class="site-footer__link">Healthcare</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/use-case/" class="site-footer__link">Operations</NuxtLink>
+            <NuxtLink to="/use-case/formester-for-compliance/" class="site-footer__link">Operations</NuxtLink>
           </li>
         </ul>
       </div>
