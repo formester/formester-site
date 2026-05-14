@@ -40,11 +40,7 @@
     </div>
 
     <div v-if="tabCardContent.length || image?.url" class="hero-v2__media">
-      <HeroTabs
-        v-if="tabCardContent.length"
-        class="hero-v2__tabs"
-        :data="{ tabCardContent }"
-      />
+      <FeatureShowcase v-if="tabCardContent.length" />
       <div v-else-if="image?.url" class="hero-v2__mockup">
         <div class="hero-v2__mockup-bar">
           <span class="hero-v2__dot hero-v2__dot--red"></span>
@@ -63,7 +59,7 @@
 </template>
 
 <script setup>
-import HeroTabs from '@/components/home/HeroTabShowcase/HeroTabs.vue'
+import FeatureShowcase from '@/components/v2/FeatureShowcase.vue'
 import FButton from '@/components/UI/FButton.vue'
 import SectionBadge from '@/components/UI/SectionBadge.vue'
 
