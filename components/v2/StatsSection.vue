@@ -89,7 +89,7 @@ defineProps({
 .stats-section__value {
   font-size: clamp(32px, 4vw, 48px);
   font-weight: var(--fw-bold);
-  color: var(--fg-1);
+  color: var(--color-primary);
   letter-spacing: -1px;
   line-height: 1;
 }
