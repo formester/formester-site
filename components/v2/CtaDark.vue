@@ -99,7 +99,7 @@ defineProps({
 }
 
 .cta-dark__trust {
-  font-size: var(--fs-xs);
+  font-size: var(--fs-sm);
   color: var(--fg-3);
   position: relative;
 }
