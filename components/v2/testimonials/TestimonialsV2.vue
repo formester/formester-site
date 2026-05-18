@@ -2,11 +2,7 @@
   <section class="tv2-section">
       <!-- Header -->
       <div class="tv2-header">
-        <div class="tv2-eyebrow">
-          <span class="tv2-eyebrow-line"></span>
-          <span class="tv2-eyebrow-text">Testimonials</span>
-          <span class="tv2-eyebrow-line"></span>
-        </div>
+        <SectionBadge text="Testimonials" />
         <h2 class="tv2-heading">
           <span
             v-for="item in heading"
@@ -63,6 +59,7 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
+import SectionBadge from '@/components/UI/SectionBadge.vue'
 
 const COMMENT_LIMIT = 150
 
@@ -285,29 +282,6 @@ onBeforeUnmount(() => teardown())
   }
 }
 
-.tv2-eyebrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-2);
-}
-
-.tv2-eyebrow-line {
-  display: inline-block;
-  width: 1rem;
-  height: 1.5px;
-  background: var(--violet-500);
-  flex-shrink: 0;
-}
-
-.tv2-eyebrow-text {
-  color: var(--violet-500);
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-semibold);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin: 0;
-}
 
 /* Heading */
 .tv2-heading {
