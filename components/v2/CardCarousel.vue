@@ -1,5 +1,5 @@
 <template>
-  <section class="cc-section">
+  <section class="cc-section" :style="{ background }">
     <div class="cc-inner">
 
       <!-- Header -->
@@ -88,7 +88,6 @@ const modules = [Navigation, Pagination, Autoplay]
 <style scoped>
 .cc-section {
   padding: var(--space-24) var(--space-6);
-  background: v-bind(background);
 }
 
 .cc-inner {

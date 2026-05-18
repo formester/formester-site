@@ -1,5 +1,5 @@
 <template>
-  <section class="stats-section">
+  <section class="stats-section" :style="{ background }">
     <div class="stats-section__inner">
       <div class="stats-section__left">
         <SectionBadge v-if="badge" :text="badge" class="stats-section__badge" />
@@ -33,7 +33,6 @@ defineProps({
 .stats-section {
   padding: var(--space-24) var(--space-6);
   border-top: 1px solid var(--border-light);
-  background: v-bind(background);
 }
 
 .stats-section__inner {
