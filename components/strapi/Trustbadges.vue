@@ -1,38 +1,42 @@
 <template>
-  <div class="container">
-    <div class="row justify-content-center align-items-center text-center mt-5">
-      <SectionTitle :heading="title" />
-      <p>{{ description }}</p>
-      <div class="trustbadge-wrapper">
+  <section class="trustbadges">
+    <div class="trustbadges__inner">
+      <div class="trustbadges__header">
+        <SectionTitle :heading="title" />
+        <p v-if="description" class="trustbadges__desc">{{ description }}</p>
+      </div>
+
+      <div class="trustbadges__grid">
         <div
           v-for="(badge, i) in displayBadges"
           :key="badge.id || i"
-          class="rating-wrapper"
+          class="badge-card"
         >
           <nuxt-img
             :src="logoFor(badge).src"
             :alt="logoFor(badge).alt"
             :width="logoFor(badge).width"
             :height="logoFor(badge).height"
-            class="logo"
+            class="badge-card__logo"
           />
-          <div class="rating">
-            <span class="rating-number">{{ badge.ratingNumber }}</span>
+          <div class="badge-card__rating">
+            <span class="badge-card__number">{{ badge.ratingNumber }}</span>
             <nuxt-img
               :src="starsFor(badge).src"
               :alt="starsFor(badge).alt"
               :width="starsFor(badge).width"
               :height="starsFor(badge).height"
-              class="rating-stars"
+              class="badge-card__stars"
             />
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
-<script>
+<script setup>
+import { computed } from 'vue'
 import { getStrapiImage } from '@/utils/strapiImage'
 
 const stars5 = { url: '/5-stars.svg', alternativeText: '5 stars', width: 139, height: 24 }
@@ -65,118 +69,145 @@ const DEFAULT_BADGES = [
   },
 ]
 
-export default {
-  props: {
-    title: {
-      type: Array,
-      required: true,
-    },
-    description: {
-      type: String,
-    },
-    badges: {
-      type: Array,
-      default: () => [],
-    },
+const props = defineProps({
+  title: {
+    type: Array,
+    required: true,
   },
-  computed: {
-    displayBadges() {
-      return this.badges && this.badges.length ? this.badges : DEFAULT_BADGES
-    },
+  description: {
+    type: String,
   },
-  methods: {
-    logoFor(badge) {
-      return getStrapiImage(badge?.logo)
-    },
-    starsFor(badge) {
-      return getStrapiImage(badge?.stars)
-    },
+  badges: {
+    type: Array,
+    default: () => [],
   },
+})
+
+const displayBadges = computed(() =>
+  props.badges && props.badges.length ? props.badges : DEFAULT_BADGES
+)
+
+function logoFor(badge) {
+  return getStrapiImage(badge?.logo)
+}
+
+function starsFor(badge) {
+  return getStrapiImage(badge?.stars)
 }
 </script>
 
 <style scoped>
-.container {
-  padding-top: 96px !important;
-  padding-bottom: 96px !important;
+.trustbadges {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
 }
 
-@media screen and (max-width: 768px) {
-  .container {
-    padding-top: 64px !important;
-    padding-bottom: 64px !important;
+@media (min-width: 768px) {
+  .trustbadges {
+    padding-top: var(--space-24);
+    padding-bottom: var(--space-24);
   }
 }
-.rating {
+
+.trustbadges__inner {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--space-6);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
+  gap: var(--space-8);
 }
 
-.rating-number {
-  font-weight: 500;
-  font-size: 48px;
-  line-height: 60px;
-  display: flex;
-  align-items: center;
+.trustbadges__header {
+  text-align: center;
+  max-width: 720px;
 }
 
-.rating-stars {
-  height: 24px;
-  display: block;
+.trustbadges__desc {
+  margin-top: var(--space-4);
+  font-size: var(--fs-md);
+  color: var(--fg-2);
+  line-height: var(--lh-md);
 }
 
-.rating-wrapper {
-  flex: 1 1 0;
-  min-width: 0;
+.trustbadges__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .trustbadges__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+.badge-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-6) var(--space-4);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 24px;
-  padding-inline: 48px;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  border-radius: 8px;
-  background-color: #fcfcfd;
-  border: 1px solid #f2f4f7;
-  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  gap: var(--space-5);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
-.logo {
-  height: 40px;
+
+.badge-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.badge-card__logo {
+  height: 36px;
   max-width: 100%;
   object-fit: contain;
 }
 
-.trustbadge-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
-  margin: 24px auto 0 auto;
+@media (min-width: 768px) {
+  .badge-card {
+    padding: var(--space-8) var(--space-6);
+  }
+
+  .badge-card__logo {
+    height: 40px;
+  }
 }
 
-@media screen and (max-width: 768px) {
-  .rating-number {
-    font-size: 32px;
-    line-height: 40px;
-  }
+.badge-card__rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
 
-  .rating-stars {
-    height: 20px;
-  }
+.badge-card__number {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  color: var(--fg-1);
+  line-height: 1;
+  font-family: var(--font-primary);
+}
 
-  .rating-wrapper {
-    flex: 1 1 calc(50% - 24px);
-    padding-inline: 32px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+@media (min-width: 768px) {
+  .badge-card__number {
+    font-size: var(--fs-3xl);
   }
+}
 
-  .logo {
-    height: 32px;
+.badge-card__stars {
+  height: 20px;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .badge-card__stars {
+    height: 24px;
   }
 }
 </style>
