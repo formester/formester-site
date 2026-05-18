@@ -168,7 +168,7 @@ const setupTicker = () => {
   animationFrame = requestAnimationFrame(animate)
 
   _onEnter = () => { scrollPaused.value = true }
-  _onLeave = () => { if (!isDragging.value) scrollPaused.value = false }
+  _onLeave = (e) => { if (!isDragging.value && !outer.contains(e.relatedTarget)) scrollPaused.value = false }
   outer.addEventListener('mouseenter', _onEnter)
   outer.addEventListener('mouseleave', _onLeave)
 
