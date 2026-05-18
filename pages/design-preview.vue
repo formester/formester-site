@@ -45,7 +45,7 @@ const hero = {
   },
   title: [
     { id: 1, text: 'Reliable Online Form Builder,', highlight: false },
-    { id: 2, text: 'Free Forever', highlight: true },
+    { id: 2, text: ' Free Forever', highlight: true },
     // { id: 3, text: ' | Formester', highlight: false },
   ],
   description:
