@@ -1,28 +1,11 @@
 <template>
   <section class="fs">
     <div class="fs__container">
-      <!-- ── Desktop tabs ─────────────────────────────────── -->
-      <div class="fs__tabs-desktop">
-        <div class="fs__tabs-border" />
-        <div class="fs__tabs-track">
-          <button
-            v-for="tab in TABS"
-            :key="tab.id"
-            class="fs__tab"
-            :class="{ 'fs__tab--active': activeTab === tab.id }"
-            @click="activeTab = tab.id"
-          >
-            {{ tab.label }}
-            <span v-if="activeTab === tab.id" class="fs__tab-underline" />
-          </button>
-        </div>
-      </div>
-
-      <!-- ── Mobile pills ───────────────────────────────────── -->
-      <div class="fs__tabs-mobile">
+      <!-- ── Tabs (all breakpoints) ────────────────────────── -->
+      <div class="fs__tabs">
         <button
           v-for="tab in TABS"
-          :key="tab.id + '-m'"
+          :key="tab.id"
           class="fs__pill"
           :class="{ 'fs__pill--active': activeTab === tab.id }"
           :style="activeTab === tab.id
@@ -32,7 +15,6 @@
         >
           {{ tab.label }}
         </button>
-        <div class="fs__pill-spacer" aria-hidden="true" />
       </div>
 
       <!-- ── Feature card ───────────────────────────────────── -->
@@ -333,7 +315,7 @@ const CONTENT_DATA = {
       bg:        'linear-gradient(135deg, #ecfdf5, #f0fdfa, #d1fae5)',
       iconBg:    '#205e45',
       iconColor: '#ffffff',
-      pillBg:    '#0fc977',
+      pillBg:    '#098851',
       blob1:     'rgba(153,246,228,0.4)',
       blob2:     'rgba(167,243,208,0.4)',
     },
@@ -446,62 +428,8 @@ const content = computed(() => CONTENT_DATA[activeTab.value])
 @media (min-width: 640px)  { .fs__container { padding: var(--space-6); } }
 @media (min-width: 1024px) { .fs__container { padding: var(--space-8); } }
 
-/* ── Desktop tabs ──────────────────────────────────────────── */
-.fs__tabs-desktop {
-  display: none;
-  position: relative;
-  margin-bottom: var(--space-6);
-}
-@media (min-width: 1024px) { .fs__tabs-desktop { display: block; } }
-
-.fs__tabs-border {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 1px;
-  background: rgba(234,236,240,0.8);
-}
-
-.fs__tabs-track {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-2);
-  overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  scroll-behavior: smooth;
-}
-.fs__tabs-track::-webkit-scrollbar { display: none; }
-@media (min-width: 640px) { .fs__tabs-track { gap: var(--space-8); } }
-
-.fs__tab {
-  position: relative;
-  padding: 14px var(--space-3);
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-medium);
-  color: var(--fg-muted);
-  background: none;
-  border: none;
-  cursor: pointer;
-  white-space: nowrap;
-  flex-shrink: 0;
-  transition: color 200ms ease;
-  outline: none;
-  font-family: var(--font-primary);
-}
-.fs__tab:hover { color: var(--color-primary); }
-.fs__tab--active { color: var(--color-primary); }
-@media (min-width: 1024px) { .fs__tab { font-size: var(--fs-md); } }
-
-.fs__tab-underline {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 2px;
-  background: var(--color-primary);
-  border-radius: 2px 2px 0 0;
-}
-
-/* ── Mobile pills ──────────────────────────────────────────── */
-.fs__tabs-mobile {
+/* ── Tabs (all breakpoints) ────────────────────────────────── */
+.fs__tabs {
   display: flex;
   overflow-x: auto;
   -ms-overflow-style: none;
@@ -512,24 +440,32 @@ const content = computed(() => CONTENT_DATA[activeTab.value])
   padding: 0 var(--space-4) var(--space-2);
   margin: 0 calc(-1 * var(--space-4)) var(--space-5);
 }
-.fs__tabs-mobile::-webkit-scrollbar { display: none; }
+.fs__tabs::-webkit-scrollbar { display: none; }
 @media (min-width: 640px) {
-  .fs__tabs-mobile {
+  .fs__tabs {
     margin: 0 calc(-1 * var(--space-6)) var(--space-5);
     padding: 0 var(--space-6) var(--space-2);
   }
 }
-@media (min-width: 1024px) { .fs__tabs-mobile { display: none; } }
+@media (min-width: 1024px) {
+  .fs__tabs {
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-x: visible;
+    margin: 0 0 var(--space-6);
+    padding: 0 0 var(--space-2);
+  }
+}
 
 .fs__pill {
   flex-shrink: 0;
   scroll-snap-align: start;
   white-space: nowrap;
-  padding: 6px var(--space-4);
+  padding: var(--space-1) var(--space-3);
   font-size: var(--fs-sm);
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-medium);
   border-radius: var(--r-full);
-  border: 1px solid rgba(229,231,235,0.9);
+  border: 1px solid var(--border-light);
   background: var(--bg-primary);
   color: var(--fg-strong);
   cursor: pointer;
@@ -539,8 +475,6 @@ const content = computed(() => CONTENT_DATA[activeTab.value])
 }
 .fs__pill:hover:not(.fs__pill--active) { background: var(--bg-grey-50); }
 .fs__pill--active { box-shadow: var(--shadow-sm); }
-
-.fs__pill-spacer { width: 4px; flex-shrink: 0; }
 
 /* ── Feature card ──────────────────────────────────────────── */
 .fs__card {
