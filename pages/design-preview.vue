@@ -44,13 +44,14 @@ const hero = {
     link: '/features/ai-form-builder',
   },
   title: [
-    { id: 1, text: 'Forms that work as hard as your ', highlight: false },
-    { id: 2, text: 'team does.', highlight: true },
+    { id: 1, text: 'Reliable Online Form Builder,', highlight: false },
+    { id: 2, text: 'Free Forever', highlight: true },
+    // { id: 3, text: ' | Formester', highlight: false },
   ],
   description:
-    'Build, distribute and analyze high-converting forms with AI. Conditional logic, payments, and 50+ integrations — no dev ticket required.',
+    'Build reliable online forms for intakes, applications, and everyday workflows. Drag-and-drop, conditional logic, AI-powered. Free forever — no credit card.',
   buttons: [
-    { id: 1, text: 'Start free', link: 'https://app.formester.com/users/sign_up', type: 'Primary' },
+    { id: 1, text: 'Start free', link: 'https://app.formester.com/users/sign_up', type: 'Primary', showArrow: true },
     { id: 2, text: 'Book a demo', link: 'https://calendar.app.google/So3CCei31oYjhoM47', type: 'Secondary' },
   ],
   trustText: 'Free forever plan · No credit card · Setup in 2 minutes',
