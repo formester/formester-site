@@ -51,7 +51,7 @@ const hero = {
     'Build, distribute and analyze high-converting forms with AI. Conditional logic, payments, and 50+ integrations — no dev ticket required.',
   buttons: [
     { id: 1, text: 'Start free', link: 'https://app.formester.com/users/sign_up', type: 'Primary' },
-    { id: 2, text: 'Book a demo', link: '/contact', type: 'Secondary' },
+    { id: 2, text: 'Book a demo', link: 'https://calendar.app.google/So3CCei31oYjhoM47', type: 'Secondary' },
   ],
   trustText: 'Free forever plan · No credit card · Setup in 2 minutes',
   image: null,
