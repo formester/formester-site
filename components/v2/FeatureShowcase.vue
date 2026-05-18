@@ -18,22 +18,26 @@
       </div>
 
       <!-- ── Feature card ───────────────────────────────────── -->
-      <Transition name="tab-fade" mode="out-in">
-        <div :key="activeTab" class="fs__card">
+      <div
+        v-for="(tabContent, tabId) in CONTENT_DATA"
+        :key="tabId"
+        class="fs__card"
+        :class="activeTab === tabId ? 'fs__card--visible' : 'fs__card--hidden'"
+      >
 
           <!-- Left: text content -->
           <div class="fs__content">
-            <span class="fs__badge" :style="{ color: content.theme.iconColor }">
-              {{ content.badge }}
+            <span class="fs__badge" :style="{ color: tabContent.theme.iconColor }">
+              {{ tabContent.badge }}
             </span>
-            <h2 class="fs__title">{{ content.title }}</h2>
-            <p class="fs__desc">{{ content.desc }}</p>
+            <h2 class="fs__title">{{ tabContent.title }}</h2>
+            <p class="fs__desc">{{ tabContent.desc }}</p>
 
             <div class="fs__features">
-              <div v-for="(f, i) in content.features" :key="i" class="fs__feature">
+              <div v-for="(f, i) in tabContent.features" :key="i" class="fs__feature">
                 <div
                   class="fs__feature-icon"
-                  :style="{ background: content.theme.iconBg, color: content.theme.iconColor }"
+                  :style="{ background: tabContent.theme.iconBg, color: tabContent.theme.iconColor }"
                 >
                   <!-- eslint-disable-next-line vue/no-v-html -->
                   <span class="fs__icon-svg" v-html="SVG_ICONS[f.iconKey]" />
@@ -45,7 +49,7 @@
               </div>
             </div>
 
-            <NuxtLink :to="content.href" class="fs__explore" :style="{ color: content.theme.iconColor }">
+            <NuxtLink :to="tabContent.href" class="fs__explore" :style="{ color: tabContent.theme.iconColor }">
               Explore feature
               <svg class="fs__chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="m9 18 6-6-6-6" />
@@ -54,14 +58,14 @@
           </div>
 
           <!-- Right: animated visual -->
-          <div class="fs__visual" :style="{ background: content.theme.bg }">
-            <div class="fs__blob fs__blob--1" :style="{ background: content.theme.blob1 }" />
-            <div class="fs__blob fs__blob--2" :style="{ background: content.theme.blob2 }" />
+          <div class="fs__visual" :style="{ background: tabContent.theme.bg }">
+            <div class="fs__blob fs__blob--1" :style="{ background: tabContent.theme.blob1 }" />
+            <div class="fs__blob fs__blob--2" :style="{ background: tabContent.theme.blob2 }" />
 
             <div class="fs__visual-inner">
 
               <!-- Collaboration -->
-              <div v-if="activeTab === 'collaboration'" class="fsv-collab">
+              <div v-if="tabId === 'collaboration'" class="fsv-collab">
                 <div class="fsv-collab__header" />
                 <div class="fsv-collab__row">
                   <div class="fsv-collab__field" />
@@ -84,7 +88,7 @@
               </div>
 
               <!-- White Label -->
-              <div v-else-if="activeTab === 'whitelabel'" class="fsv-wl">
+              <div v-else-if="tabId === 'whitelabel'" class="fsv-wl">
                 <div class="fsv-wl__dark-card">
                   <div class="fsv-wl__dark-header" />
                   <div class="fsv-wl__dark-field" />
@@ -104,7 +108,7 @@
               </div>
 
               <!-- Generate PDF -->
-              <div v-else-if="activeTab === 'generate-pdf'" class="fsv-pdf">
+              <div v-else-if="tabId === 'generate-pdf'" class="fsv-pdf">
                 <div class="fsv-pdf__form">
                   <div class="fsv-pdf__form-header" />
                   <div class="fsv-pdf__form-field" />
@@ -132,7 +136,7 @@
               </div>
 
               <!-- Data Protection -->
-              <div v-else-if="activeTab === 'data-protection'" class="fsv-dp">
+              <div v-else-if="tabId === 'data-protection'" class="fsv-dp">
                 <div class="fsv-dp__offline-bar">
                   <div class="fsv-dp__offline-left">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -157,7 +161,7 @@
               </div>
 
               <!-- Automations -->
-              <div v-else-if="activeTab === 'automations'" class="fsv-auto">
+              <div v-else-if="tabId === 'automations'" class="fsv-auto">
                 <div class="fsv-auto__bg-card">
                   <div class="fsv-auto__bg-header" />
                   <div class="fsv-auto__bg-avatar-row">
@@ -194,7 +198,7 @@
               </div>
 
               <!-- Multi Language -->
-              <div v-else-if="activeTab === 'multi-language'" class="fsv-ml">
+              <div v-else-if="tabId === 'multi-language'" class="fsv-ml">
                 <div class="fsv-ml__form-card">
                   <div class="fsv-ml__form-header" />
                   <div class="fsv-ml__form-field" />
@@ -216,13 +220,12 @@
             </div>
           </div>
         </div>
-      </Transition>
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 
 const SVG_ICONS = {
   users: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
@@ -359,7 +362,6 @@ const CONTENT_DATA = {
 }
 
 const activeTab = ref('collaboration')
-const content = computed(() => CONTENT_DATA[activeTab.value])
 </script>
 
 <style scoped>
@@ -405,11 +407,14 @@ const content = computed(() => CONTENT_DATA[activeTab.value])
   to   { opacity: 1; transform: translate(16px, 24px); }
 }
 
-/* ── Tab transition ────────────────────────────────────────── */
-.tab-fade-enter-active { transition: opacity 0.25s ease, transform 0.25s ease; }
-.tab-fade-leave-active { transition: opacity 0.2s ease, transform 0.2s ease; }
-.tab-fade-enter-from   { opacity: 0; transform: translateY(8px); }
-.tab-fade-leave-to     { opacity: 0; transform: translateY(-8px); }
+/* ── Tab visibility ────────────────────────────────────────── */
+.fs__card--hidden  { display: none !important; }
+.fs__card--visible { animation: tab-card-in 0.25s ease both; }
+
+@keyframes tab-card-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 
 /* ── Section ───────────────────────────────────────────────── */
 .fs {
