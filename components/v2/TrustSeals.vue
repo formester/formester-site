@@ -1,5 +1,6 @@
 <template>
   <section class="trust-seals-section">
+    <p class="trust-seals-label">Trusted by leading organisations</p>
     <div class="ticker-container">
       <div class="gradient-overlay left" />
 
@@ -123,6 +124,30 @@ onBeforeUnmount(() => {
     margin-top: 64px;
     margin-bottom: 32px;
   }
+}
+
+.trust-seals-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--fg-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-6);
+}
+
+.trust-seals-label::before,
+.trust-seals-label::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.5;
+  flex-shrink: 0;
 }
 
 .ticker-container {
