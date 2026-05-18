@@ -130,7 +130,7 @@ onBeforeUnmount(() => {
 
   --tint-a: #e2daf1;
   --tint-b: #f1ebff;
-  --tint-c: #ece4fe;
+  --tint-c: #eee7ff;
   /* --glow: #f4ebff; */
 
   --a-size-x: 900px; --a-size-y: 594px;
