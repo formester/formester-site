@@ -441,7 +441,7 @@ const content = computed(() => CONTENT_DATA[activeTab.value])
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
-  padding: var(--space-6) var(--space-4);
+  padding: var(--space-6) 0;
 }
 @media (min-width: 640px)  { .fs__container { padding: var(--space-6); } }
 @media (min-width: 1024px) { .fs__container { padding: var(--space-8); } }

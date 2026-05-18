@@ -224,7 +224,7 @@ defineProps({
   display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .hero-v2 { padding: var(--space-24) var(--space-5) var(--space-14); }
 
   .hero-v2__inner { max-width: 100%; }
@@ -244,7 +244,7 @@ defineProps({
 
   .hero-v2__trust { margin-bottom: var(--space-9); }
 
-  .hero-v2__media { padding: 0 var(--space-4); }
+  .hero-v2__media { padding: 0; }
 
   .hero-v2__mockup { border-radius: var(--r-xl); }
 
