@@ -58,3 +58,14 @@ Static files output to `.output/public`. Configured for AWS Amplify (amplify.yml
 ## Node Version
 
 Requires Node.js >=18.20.0 (see package.json engines).
+
+## Component Style
+
+All Vue components must use `<script setup>` (Composition API). Do not write `export default {}` blocks.
+- Props: `defineProps({})`
+- Emits: `defineEmits([])`
+- Reactive state: `ref()` / `reactive()`
+- Computed: `computed()`
+- Lifecycle: `onMounted()`, `onBeforeUnmount()`, etc.
+- Template refs: `useTemplateRef('name')`
+- Components are auto-imported by Nuxt — no `components: {}` registration needed.

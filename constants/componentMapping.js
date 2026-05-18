@@ -1,10 +1,18 @@
 // componentMapping.js
 export default {
+  // New v2 landing page components
+  'macro-components.hero-v2': () => import('@/components/v2/HeroV2.vue'),
+  'macro-components.stats-section': () => import('@/components/v2/StatsSection.vue'),
+  'macro-components.sticky-steps-section': () => import('@/components/v2/StickyStepsSection.vue'),
+  'macro-components.dual-marquee': () => import('@/components/v2/DualMarquee.vue'),
+  'macro-components.card-carousel': () => import('@/components/v2/CardCarousel.vue'),
+  'macro-components.cta-dark': () => import('@/components/v2/CtaDark.vue'),
+
   'macro-components.hero-centered': () => import('@/components/home/Hero.vue'),
-  'macro-components.trust-seals': () => import('@/components/home/TrustSeals.vue'),
+  'macro-components.trust-seals': () => import('@/components/v2/TrustSeals.vue'),
   'macro-components.collapsible-item-list': () => import('@/components/home/MostUsedFeatures.vue'),
   'macro-components.embed-form-url': () => import('@/components/home/EmbedForm.vue'),
-  'macro-components.testimonials': () => import('@/components/home/Testimonials.vue'),
+  'macro-components.testimonials': () => import('@/components/v2/testimonials/TestimonialsV2.vue'),
   'macro-components.cta': () => import('@/components/CallToActionSection.vue'),
   'macro-components.hero-row-layout': () => import('@/components/HeroRowLayout.vue'),
   'macro-components.three-column-benefits': () => import('@/components/features/ThreeColBenefits.vue'),
@@ -15,7 +23,7 @@ export default {
   'macro-components.two-column-benefits': () => import('@/components/features/TwoColBenefits.vue'),
   'macro-components.simple-steps-create-lg': () => import('@/components/features/SimpleStepsCreateLg.vue'),
   'macro-components.standout-feature-detail': () => import('@/components/features/StandoutFeatureDetail.vue'),
-  'macro-components.faqs': () => import('@/components/features/Faq.vue'),
+  'macro-components.faqs': () => import('@/components/v2/FaqSection.vue'),
   'macro-components.faqs-with-categories': () => import('@/components/features/FaqWithCategories.vue'),
   'macro-components.code-showcase-section': () => import('@/components/features/FeatureCodeShowcase.vue'),
   'macro-components.hero-centered-dark': () => import('@/components/strapi/HeroCenteredDark.vue'),
@@ -23,7 +31,7 @@ export default {
   'macro-components.video-section': () => import('@/components/strapi/VideoSection.vue'),
   'macro-components.trustbadges': () => import('@/components/strapi/Trustbadges.vue'),
   'macro-components.table': () => import('@/components/table/Table.vue'),
-  'macro-components.integrations-showcase': () => import('@/components/strapi/IntegrationsShowcase.vue'),
+  'macro-components.integrations-showcase': () => import('@/components/v2/IntegrationsShowcase.vue'),
   'macro-components.hero-tab-showcase': () => import('@/components/home/HeroTabShowcase/HeroTabShowcase.vue'),
   'macro-components.usecases': () => import('@/components/home/Usecases/Usecase.vue'),
   'macro-components.integrations-grid': () => import('@/components/integrations/IntegrationsGrid.vue'),

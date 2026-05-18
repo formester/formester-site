@@ -7,6 +7,7 @@
       v-for="(component, idx) in components"
       :key="`${component.id}-${idx}`"
       :is="getComponent(component.__component)"
+      class="page-component-item"
       v-bind="component"
     />
   </div>
@@ -40,3 +41,12 @@ const getComponent = (name) => {
   return loadedComponents[name]
 }
 </script>
+<style scoped>
+.page-component-item::nth-child(odd) {
+  background-color: var(--gray-100);
+}
+
+.page-component-item::nth-child(even) {
+  background-color: var(--white);
+}
+</style>

@@ -94,9 +94,12 @@ sw.*
 .claude
 .claude-flow
 .mcp
+.storybook
+components/demo
+.gemini*
+tmp
 CLAUDE.local.md
 stories
 .stories
 public/design-files
 .playwright-mcp
-.storybook

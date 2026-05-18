@@ -67,6 +67,7 @@
             }"
           >
             {{ button[0]?.text || 'Learn More' }}
+            <svg v-if="button[0]?.type === 'Primary'" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
 
           <div
@@ -174,6 +175,9 @@ export default {
   box-shadow: 0 2px 8px rgba(100, 52, 208, 0.08);
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 .hero__button.hero__button--primary:hover,
 .hero__button.hero__button--primary:focus {
