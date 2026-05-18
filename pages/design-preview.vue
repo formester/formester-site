@@ -45,7 +45,7 @@ const hero = {
   },
   title: [
     { id: 1, text: 'Reliable Online Form Builder,', highlight: false },
-    { id: 2, text: 'Free Forever', highlight: true },
+    { id: 2, text: ' Free Forever', highlight: true },
     // { id: 3, text: ' | Formester', highlight: false },
   ],
   description:
@@ -139,7 +139,7 @@ const ai = {
   description:
     'Describe your audience, goals, and field types. Formester structures the questions, picks field types, sets validation rules, and adds conditional logic — all editable.',
   buttons: [
-    { id: 1, text: 'Try the AI builder', link: 'https://app.formester.com/users/sign_up', type: 'Primary' },
+    { id: 1, text: 'Try the AI builder', link: 'https://formester.com/ai-form-generator', type: 'Primary' },
     { id: 2, text: 'Watch demo', link: '#', type: 'Secondary', icon: '/arrow-right.svg' },
   ],
   steps: [
@@ -421,8 +421,8 @@ const cta = {
   heading: 'Ship your next form before your coffee gets cold.',
   description: 'Free forever plan. No credit card required. Upgrade when you\'re ready.',
   buttons: [
-    { id: 1, text: 'Start free', link: 'https://app.formester.com/users/sign_up', type: 'Primary' },
-    { id: 2, text: 'Talk to sales', link: '/contact', type: 'Secondary' },
+    { id: 1, text: 'Start free', link: 'https://app.formester.com/users/sign_up', type: 'Primary', showArrow: true },
+    { id: 2, text: 'Talk to sales', link: 'https://calendar.app.google/So3CCei31oYjhoM47', type: 'Secondary' },
   ],
   trustText: '56,000+ teams · Free forever · Live support',
 }

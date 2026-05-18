@@ -1,5 +1,5 @@
 <template>
-  <section class="tv2-section">
+  <section class="tv2-section" :style="{ background }">
       <!-- Header -->
       <div class="tv2-header">
         <SectionBadge text="Testimonials" />
@@ -168,7 +168,7 @@ const setupTicker = () => {
   animationFrame = requestAnimationFrame(animate)
 
   _onEnter = () => { scrollPaused.value = true }
-  _onLeave = () => { if (!isDragging.value) scrollPaused.value = false }
+  _onLeave = (e) => { if (!isDragging.value && !outer.contains(e.relatedTarget)) scrollPaused.value = false }
   outer.addEventListener('mouseenter', _onEnter)
   outer.addEventListener('mouseleave', _onLeave)
 
@@ -252,7 +252,6 @@ onBeforeUnmount(() => teardown())
 <style scoped>
 /* Section */
 .tv2-section {
-  background: v-bind(background);
   font-family: var(--font-primary);
   padding: var(--space-10) var(--space-4);
   overflow-x: hidden;

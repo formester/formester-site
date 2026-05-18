@@ -1,6 +1,6 @@
 <template>
   <section ref="sectionEl" class="hero-v2">
-    <div class="hero-v2__grid" aria-hidden="true"></div>
+    <!-- <div class="hero-v2__grid" aria-hidden="true"></div> -->
     <div class="hero-v2__inner">
       <a v-if="badge?.text" :href="badge.link || '#'" class="hero-v2__badge-link">
         <SectionBadge variant="pill" :text="badge.text" :tag="badge.tag" :sep="!!(badge.tag && badge.text)" arrow />
@@ -40,6 +40,7 @@
 </template>
 
 <script setup>
+import { onMounted, onBeforeUnmount, useTemplateRef } from 'vue'
 import FeatureShowcase from '@/components/v2/FeatureShowcase.vue'
 import FButton from '@/components/UI/FButton.vue'
 import SectionBadge from '@/components/UI/SectionBadge.vue'
@@ -54,50 +55,127 @@ defineProps({
   image: { type: Object, default: () => null },
   tabCardContent: { type: Array, default: () => [] },
 })
+
+const sectionEl = useTemplateRef('sectionEl')
+
+const HOME = { ax: 72, ay: 18, bx: 22, by: 78, cx: 52, cy: 50 }
+const BASE = { aSize: 900, bSize: 700 }
+const SPEED = 0.5
+
+let rafId = null
+let startTime = null
+
+function tick(ts) {
+  if (!startTime) startTime = ts
+  const t = (ts - startTime) * 0.001 * SPEED
+  const el = sectionEl.value
+  if (!el) return
+
+  const ax = HOME.ax + 18 * Math.sin(t * 0.45)
+  const ay = HOME.ay + 12 * Math.cos(t * 0.38)
+  const bx = HOME.bx + 16 * Math.cos(t * 0.34 + 1.2)
+  const by = HOME.by + 10 * Math.sin(t * 0.29 + 0.7)
+  const cx = HOME.cx + 22 * Math.sin(t * 0.55 + 2.0)
+  const cy = HOME.cy + 14 * Math.sin(t * 1.10 + 0.5)
+
+  const breatheA = 1 + 0.06 * Math.sin(t * 0.31)
+  const breatheB = 1 + 0.06 * Math.cos(t * 0.27 + 1.0)
+
+  el.style.setProperty('--a-x', ax.toFixed(2) + '%')
+  el.style.setProperty('--a-y', ay.toFixed(2) + '%')
+  el.style.setProperty('--a-size-x', Math.round(BASE.aSize * breatheA) + 'px')
+  el.style.setProperty('--a-size-y', Math.round(BASE.aSize * 0.66 * breatheA) + 'px')
+
+  el.style.setProperty('--b-x', bx.toFixed(2) + '%')
+  el.style.setProperty('--b-y', by.toFixed(2) + '%')
+  el.style.setProperty('--b-size-x', Math.round(BASE.bSize * breatheB) + 'px')
+  el.style.setProperty('--b-size-y', Math.round(BASE.bSize * 0.71 * breatheB) + 'px')
+
+  el.style.setProperty('--c-x', cx.toFixed(2) + '%')
+  el.style.setProperty('--c-y', cy.toFixed(2) + '%')
+
+  rafId = requestAnimationFrame(tick)
+}
+
+function onPointerMove(e) {
+  const el = sectionEl.value
+  if (!el) return
+  const r = el.getBoundingClientRect()
+  el.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100).toFixed(2) + '%')
+  el.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100).toFixed(2) + '%')
+  el.style.setProperty('--glow-opacity', '0.7')
+}
+
+function onPointerLeave() {
+  sectionEl.value?.style.setProperty('--glow-opacity', '0')
+}
+
+onMounted(() => {
+  rafId = requestAnimationFrame(tick)
+  const el = sectionEl.value
+  el?.addEventListener('pointermove', onPointerMove)
+  el?.addEventListener('pointerleave', onPointerLeave)
+})
+
+onBeforeUnmount(() => {
+  if (rafId) cancelAnimationFrame(rafId)
+  const el = sectionEl.value
+  el?.removeEventListener('pointermove', onPointerMove)
+  el?.removeEventListener('pointerleave', onPointerLeave)
+})
 </script>
 
 <style scoped>
 .hero-v2 {
+
+  --tint-a: #e2daf1;
+  --tint-b: #f1ebff;
+  --tint-c: #eee7ff;
+  /* --glow: #f4ebff; */
+
+  --a-size-x: 900px; --a-size-y: 594px;
+  --b-size-x: 700px; --b-size-y: 497px;
+  --c-size-x: 600px; --c-size-y: 420px;
+
+  --a-x: 72%; --a-y: 18%;
+  --b-x: 22%; --b-y: 78%;
+  --c-x: 52%; --c-y: 50%;
+
+  --mx: 50%; --my: 50%;
+  --glow-size: 520px;
+  --glow-opacity: 0;
+
   position: relative;
-  background: linear-gradient(180deg, var(--bg-violet-50) 0%, var(--bg-primary) 100%);
-  padding: var(--space-30) var(--space-6) var(--space-20);
+  isolation: isolate;
   overflow: hidden;
+
+  background:
+    radial-gradient(var(--a-size-x) var(--a-size-y) at var(--a-x) var(--a-y),
+      var(--tint-a) 0%, transparent 60%),
+    radial-gradient(var(--b-size-x) var(--b-size-y) at var(--b-x) var(--b-y),
+      var(--tint-b) 0%, transparent 65%),
+    radial-gradient(var(--c-size-x) var(--c-size-y) at var(--c-x) var(--c-y),
+      var(--tint-c) 0%, transparent 55%),
+    #fff;
+
+  padding: var(--space-30) var(--space-6) var(--space-20);
 }
 
-.hero-v2__grid {
+.hero-v2::before {
+  content: "";
   position: absolute;
   inset: 0;
+  background: radial-gradient(
+    var(--glow-size) var(--glow-size) at var(--mx) var(--my),
+    var(--glow) 0%, transparent 55%
+  );
+  opacity: var(--glow-opacity);
+  transition: opacity 300ms ease;
   pointer-events: none;
   z-index: 0;
-
-  background-image:
-    linear-gradient(rgba(100, 52, 208, 0.10) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(100, 52, 208, 0.10) 1px, transparent 1px);
-  background-size: 52px 52px;
-
-  mask-image:
-    linear-gradient(to right, transparent 0%, black 18%, black 82%, transparent 100%),
-    linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
-  mask-composite: intersect;
-  -webkit-mask-image:
-    linear-gradient(to right, transparent 0%, black 18%, black 82%, transparent 100%),
-    linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
-  -webkit-mask-composite: source-in;
-
-  animation: gridBreathe 6s ease-in-out infinite;
 }
 
-@keyframes gridBreathe {
-
-  0%,
-  100% {
-    opacity: 0.7;
-  }
-
-  50% {
-    opacity: 1;
-  }
-}
+.hero-v2:not(:hover)::before { opacity: 0; }
 
 .hero-v2__inner {
   position: relative;

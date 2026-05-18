@@ -1,28 +1,11 @@
 <template>
   <section class="fs">
     <div class="fs__container">
-      <!-- ── Desktop tabs ─────────────────────────────────── -->
-      <div class="fs__tabs-desktop">
-        <div class="fs__tabs-border" />
-        <div class="fs__tabs-track">
-          <button
-            v-for="tab in TABS"
-            :key="tab.id"
-            class="fs__tab"
-            :class="{ 'fs__tab--active': activeTab === tab.id }"
-            @click="activeTab = tab.id"
-          >
-            {{ tab.label }}
-            <span v-if="activeTab === tab.id" class="fs__tab-underline" />
-          </button>
-        </div>
-      </div>
-
-      <!-- ── Mobile pills ───────────────────────────────────── -->
-      <div class="fs__tabs-mobile">
+      <!-- ── Tabs (all breakpoints) ────────────────────────── -->
+      <div class="fs__tabs">
         <button
           v-for="tab in TABS"
-          :key="tab.id + '-m'"
+          :key="tab.id"
           class="fs__pill"
           :class="{ 'fs__pill--active': activeTab === tab.id }"
           :style="activeTab === tab.id
@@ -32,26 +15,29 @@
         >
           {{ tab.label }}
         </button>
-        <div class="fs__pill-spacer" aria-hidden="true" />
       </div>
 
       <!-- ── Feature card ───────────────────────────────────── -->
-      <Transition name="tab-fade" mode="out-in">
-        <div :key="activeTab" class="fs__card">
+      <div
+        v-for="(tabContent, tabId) in CONTENT_DATA"
+        :key="tabId"
+        class="fs__card"
+        :class="activeTab === tabId ? 'fs__card--visible' : 'fs__card--hidden'"
+      >
 
           <!-- Left: text content -->
           <div class="fs__content">
-            <span class="fs__badge" :style="{ color: content.theme.iconColor }">
-              {{ content.badge }}
+            <span class="fs__badge" :style="{ color: tabContent.theme.iconColor }">
+              {{ tabContent.badge }}
             </span>
-            <h2 class="fs__title">{{ content.title }}</h2>
-            <p class="fs__desc">{{ content.desc }}</p>
+            <h2 class="fs__title">{{ tabContent.title }}</h2>
+            <p class="fs__desc">{{ tabContent.desc }}</p>
 
             <div class="fs__features">
-              <div v-for="(f, i) in content.features" :key="i" class="fs__feature">
+              <div v-for="(f, i) in tabContent.features" :key="i" class="fs__feature">
                 <div
                   class="fs__feature-icon"
-                  :style="{ background: content.theme.iconBg, color: content.theme.iconColor }"
+                  :style="{ background: tabContent.theme.iconBg, color: tabContent.theme.iconColor }"
                 >
                   <!-- eslint-disable-next-line vue/no-v-html -->
                   <span class="fs__icon-svg" v-html="SVG_ICONS[f.iconKey]" />
@@ -63,7 +49,7 @@
               </div>
             </div>
 
-            <NuxtLink :to="content.href" class="fs__explore" :style="{ color: content.theme.iconColor }">
+            <NuxtLink :to="tabContent.href" class="fs__explore" :style="{ color: tabContent.theme.iconColor }">
               Explore feature
               <svg class="fs__chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="m9 18 6-6-6-6" />
@@ -72,14 +58,14 @@
           </div>
 
           <!-- Right: animated visual -->
-          <div class="fs__visual" :style="{ background: content.theme.bg }">
-            <div class="fs__blob fs__blob--1" :style="{ background: content.theme.blob1 }" />
-            <div class="fs__blob fs__blob--2" :style="{ background: content.theme.blob2 }" />
+          <div class="fs__visual" :style="{ background: tabContent.theme.bg }">
+            <div class="fs__blob fs__blob--1" :style="{ background: tabContent.theme.blob1 }" />
+            <div class="fs__blob fs__blob--2" :style="{ background: tabContent.theme.blob2 }" />
 
             <div class="fs__visual-inner">
 
               <!-- Collaboration -->
-              <div v-if="activeTab === 'collaboration'" class="fsv-collab">
+              <div v-if="tabId === 'collaboration'" class="fsv-collab">
                 <div class="fsv-collab__header" />
                 <div class="fsv-collab__row">
                   <div class="fsv-collab__field" />
@@ -102,7 +88,7 @@
               </div>
 
               <!-- White Label -->
-              <div v-else-if="activeTab === 'whitelabel'" class="fsv-wl">
+              <div v-else-if="tabId === 'whitelabel'" class="fsv-wl">
                 <div class="fsv-wl__dark-card">
                   <div class="fsv-wl__dark-header" />
                   <div class="fsv-wl__dark-field" />
@@ -122,7 +108,7 @@
               </div>
 
               <!-- Generate PDF -->
-              <div v-else-if="activeTab === 'generate-pdf'" class="fsv-pdf">
+              <div v-else-if="tabId === 'generate-pdf'" class="fsv-pdf">
                 <div class="fsv-pdf__form">
                   <div class="fsv-pdf__form-header" />
                   <div class="fsv-pdf__form-field" />
@@ -150,7 +136,7 @@
               </div>
 
               <!-- Data Protection -->
-              <div v-else-if="activeTab === 'data-protection'" class="fsv-dp">
+              <div v-else-if="tabId === 'data-protection'" class="fsv-dp">
                 <div class="fsv-dp__offline-bar">
                   <div class="fsv-dp__offline-left">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -175,7 +161,7 @@
               </div>
 
               <!-- Automations -->
-              <div v-else-if="activeTab === 'automations'" class="fsv-auto">
+              <div v-else-if="tabId === 'automations'" class="fsv-auto">
                 <div class="fsv-auto__bg-card">
                   <div class="fsv-auto__bg-header" />
                   <div class="fsv-auto__bg-avatar-row">
@@ -212,7 +198,7 @@
               </div>
 
               <!-- Multi Language -->
-              <div v-else-if="activeTab === 'multi-language'" class="fsv-ml">
+              <div v-else-if="tabId === 'multi-language'" class="fsv-ml">
                 <div class="fsv-ml__form-card">
                   <div class="fsv-ml__form-header" />
                   <div class="fsv-ml__form-field" />
@@ -234,13 +220,12 @@
             </div>
           </div>
         </div>
-      </Transition>
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 
 const SVG_ICONS = {
   users: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
@@ -333,7 +318,7 @@ const CONTENT_DATA = {
       bg:        'linear-gradient(135deg, #ecfdf5, #f0fdfa, #d1fae5)',
       iconBg:    '#205e45',
       iconColor: '#ffffff',
-      pillBg:    '#0fc977',
+      pillBg:    '#098851',
       blob1:     'rgba(153,246,228,0.4)',
       blob2:     'rgba(167,243,208,0.4)',
     },
@@ -377,7 +362,6 @@ const CONTENT_DATA = {
 }
 
 const activeTab = ref('collaboration')
-const content = computed(() => CONTENT_DATA[activeTab.value])
 </script>
 
 <style scoped>
@@ -423,11 +407,14 @@ const content = computed(() => CONTENT_DATA[activeTab.value])
   to   { opacity: 1; transform: translate(16px, 24px); }
 }
 
-/* ── Tab transition ────────────────────────────────────────── */
-.tab-fade-enter-active { transition: opacity 0.25s ease, transform 0.25s ease; }
-.tab-fade-leave-active { transition: opacity 0.2s ease, transform 0.2s ease; }
-.tab-fade-enter-from   { opacity: 0; transform: translateY(8px); }
-.tab-fade-leave-to     { opacity: 0; transform: translateY(-8px); }
+/* ── Tab visibility ────────────────────────────────────────── */
+.fs__card--hidden  { display: none !important; }
+.fs__card--visible { animation: tab-card-in 0.25s ease both; }
+
+@keyframes tab-card-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 
 /* ── Section ───────────────────────────────────────────────── */
 .fs {
@@ -446,62 +433,8 @@ const content = computed(() => CONTENT_DATA[activeTab.value])
 @media (min-width: 640px)  { .fs__container { padding: var(--space-6); } }
 @media (min-width: 1024px) { .fs__container { padding: var(--space-8); } }
 
-/* ── Desktop tabs ──────────────────────────────────────────── */
-.fs__tabs-desktop {
-  display: none;
-  position: relative;
-  margin-bottom: var(--space-6);
-}
-@media (min-width: 1024px) { .fs__tabs-desktop { display: block; } }
-
-.fs__tabs-border {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 1px;
-  background: rgba(234,236,240,0.8);
-}
-
-.fs__tabs-track {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-2);
-  overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  scroll-behavior: smooth;
-}
-.fs__tabs-track::-webkit-scrollbar { display: none; }
-@media (min-width: 640px) { .fs__tabs-track { gap: var(--space-8); } }
-
-.fs__tab {
-  position: relative;
-  padding: 14px var(--space-3);
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-medium);
-  color: var(--fg-muted);
-  background: none;
-  border: none;
-  cursor: pointer;
-  white-space: nowrap;
-  flex-shrink: 0;
-  transition: color 200ms ease;
-  outline: none;
-  font-family: var(--font-primary);
-}
-.fs__tab:hover { color: var(--color-primary); }
-.fs__tab--active { color: var(--color-primary); }
-@media (min-width: 1024px) { .fs__tab { font-size: var(--fs-md); } }
-
-.fs__tab-underline {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 2px;
-  background: var(--color-primary);
-  border-radius: 2px 2px 0 0;
-}
-
-/* ── Mobile pills ──────────────────────────────────────────── */
-.fs__tabs-mobile {
+/* ── Tabs (all breakpoints) ────────────────────────────────── */
+.fs__tabs {
   display: flex;
   overflow-x: auto;
   -ms-overflow-style: none;
@@ -512,24 +445,32 @@ const content = computed(() => CONTENT_DATA[activeTab.value])
   padding: 0 var(--space-4) var(--space-2);
   margin: 0 calc(-1 * var(--space-4)) var(--space-5);
 }
-.fs__tabs-mobile::-webkit-scrollbar { display: none; }
+.fs__tabs::-webkit-scrollbar { display: none; }
 @media (min-width: 640px) {
-  .fs__tabs-mobile {
+  .fs__tabs {
     margin: 0 calc(-1 * var(--space-6)) var(--space-5);
     padding: 0 var(--space-6) var(--space-2);
   }
 }
-@media (min-width: 1024px) { .fs__tabs-mobile { display: none; } }
+@media (min-width: 1024px) {
+  .fs__tabs {
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-x: visible;
+    margin: 0 0 var(--space-6);
+    padding: 0 0 var(--space-2);
+  }
+}
 
 .fs__pill {
   flex-shrink: 0;
   scroll-snap-align: start;
   white-space: nowrap;
-  padding: 6px var(--space-4);
+  padding: var(--space-1) var(--space-3);
   font-size: var(--fs-sm);
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-medium);
   border-radius: var(--r-full);
-  border: 1px solid rgba(229,231,235,0.9);
+  border: 1px solid var(--border-light);
   background: var(--bg-primary);
   color: var(--fg-strong);
   cursor: pointer;
@@ -539,8 +480,6 @@ const content = computed(() => CONTENT_DATA[activeTab.value])
 }
 .fs__pill:hover:not(.fs__pill--active) { background: var(--bg-grey-50); }
 .fs__pill--active { box-shadow: var(--shadow-sm); }
-
-.fs__pill-spacer { width: 4px; flex-shrink: 0; }
 
 /* ── Feature card ──────────────────────────────────────────── */
 .fs__card {
