@@ -56,26 +56,7 @@
 
         <!-- Right: icon grid, video, or fallback image -->
         <div class="col-lg-6 d-flex align-items-center justify-content-center">
-          <div v-if="displayGridItems.length" class="hero-rl-v2__grid">
-            <div
-              v-for="item in displayGridItems"
-              :key="item.id ?? item.name"
-              class="hero-rl-v2__card"
-              :class="{ 'hero-rl-v2__card--highlight': item.highlight }"
-            >
-              <img
-                v-if="item.icon"
-                :src="item.icon"
-                :alt="item.name"
-                class="hero-rl-v2__icon"
-              />
-              <span v-else class="hero-rl-v2__initials" aria-label="item.name">
-                {{ initials(item.name) }}
-              </span>
-            </div>
-          </div>
-
-          <template v-else-if="videoUrl">
+          <template v-if="videoUrl">
             <div class="hero-rl-v2__video-wrapper" @click="showOverlay = true">
               <nuxt-img
                 :src="thumbImg.src || youtubeThumbnailUrl"
@@ -139,7 +120,6 @@ const props = defineProps({
   buttons:        { type: Array,   default: () => [] },
   button:         { type: Object,  default: () => null },
   clickTriggers:  { type: Array,   default: () => null },
-  gridItems:      { type: Array,   default: () => [] },  // generic icon/logo grid (up to 9)
   heroImage:      { type: Object,  default: () => null },
   heroRawHtml:    { type: String,  default: '' },
   videoUrl:       { type: String,  default: '' },
@@ -151,11 +131,10 @@ const showOverlay = ref(false)
 
 const resolvedButtons = computed(() => {
   if (props.buttons.length) return props.buttons
-  if (props.button) return [{ ...props.button, type: 'Primary', showArrow: false }]
+  if (props.button) return [{ ...props.button, type: 'Primary'}]
   return []
 })
 
-const displayGridItems = computed(() => props.gridItems.slice(0, 9))
 
 const heroImg = computed(() => getStrapiImage(props.heroImage))
 const thumbImg = computed(() => getStrapiImage(props.thumbnail))
