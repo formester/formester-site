@@ -1,9 +1,9 @@
 <template>
   <section ref="sectionEl" class="hero-v2">
     <div aria-hidden="true" class="hero-v2__blobs">
-      <div ref="blobA" class="hero-v2__blob hero-v2__blob--a"></div>
-      <div ref="blobB" class="hero-v2__blob hero-v2__blob--b"></div>
-      <div ref="blobC" class="hero-v2__blob hero-v2__blob--c"></div>
+      <div ref="blobA" class="hero-v2__blob hero-v2__blob--a" :style="{ background: blobColorA }"></div>
+      <div ref="blobB" class="hero-v2__blob hero-v2__blob--b" :style="{ background: blobColorB }"></div>
+      <div ref="blobC" class="hero-v2__blob hero-v2__blob--c" :style="{ background: blobColorC }"></div>
     </div>
     <div class="hero-v2__inner">
       <a v-if="badge?.text" :href="badge.link || '#'" class="hero-v2__badge-link">
@@ -58,6 +58,9 @@ defineProps({
   trustText: { type: String, default: '' },
   image: { type: Object, default: () => null },
   tabCardContent: { type: Array, default: () => [] },
+  blobColorA: { type: String, default: '#f5eeff' },
+  blobColorB: { type: String, default: '#f1ebff' },
+  blobColorC: { type: String, default: '#f4efff' },
 })
 
 const sectionEl = useTemplateRef('sectionEl')
@@ -72,7 +75,7 @@ const RANGES = {
   bx: [0.06, 0.38],
   cx: [0.30, 0.74], cy: [0.36, 0.64],
 }
-const BY_FIXED = 500 // TODO: configure blob-B center Y (px from section top)
+const BY_FIXED = 500
 
 function rand(min, max) { return Math.random() * (max - min) + min }
 
@@ -138,9 +141,9 @@ onBeforeUnmount(() => {
   will-change: transform;
 }
 
-.hero-v2__blob--a { width: 900px; height: 594px; background: #f5eeff; }
-.hero-v2__blob--b { width: 700px; height: 497px; background: #f1ebff; }
-.hero-v2__blob--c { width: 600px; height: 420px; background: #f4efff; }
+.hero-v2__blob--a { width: 900px; height: 594px; }
+.hero-v2__blob--b { width: 700px; height: 497px; }
+.hero-v2__blob--c { width: 600px; height: 420px; }
 
 .hero-v2__inner {
   position: relative;
