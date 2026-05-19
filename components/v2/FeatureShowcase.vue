@@ -122,24 +122,7 @@
               <V2FeatureShowcaseAutomations v-else-if="tabId === 'automations'" />
 
               <!-- Multi Language -->
-              <div v-else-if="tabId === 'multi-language'" class="fsv-ml">
-                <div class="fsv-ml__form-card">
-                  <div class="fsv-ml__form-header" />
-                  <div class="fsv-ml__form-field" />
-                  <div class="fsv-ml__form-field" />
-                </div>
-                <div class="fsv-ml__dropdown">
-                  <div class="fsv-ml__dropdown-title">Select Language</div>
-                  <div class="fsv-ml__lang fsv-ml__lang--active">
-                    <span>🇬🇧</span>
-                    <span class="fsv-ml__lang-name">English</span>
-                    <div class="fsv-ml__lang-dot" />
-                  </div>
-                  <div class="fsv-ml__lang"><span>🇫🇷</span><span class="fsv-ml__lang-name">French</span></div>
-                  <div class="fsv-ml__lang"><span>🇩🇪</span><span class="fsv-ml__lang-name">German</span></div>
-                  <div class="fsv-ml__lang"><span>🇯🇵</span><span class="fsv-ml__lang-name">Japanese</span></div>
-                </div>
-              </div>
+              <V2FeatureShowcaseMultiLanguage v-else-if="tabId === 'multi-language'" />
 
             </div>
           </div>
@@ -726,86 +709,4 @@ const activeTab = ref('collaboration')
   animation: slide-up 0.4s 0.2s ease both;
 }
 
-/* ─────────────────────────────────────────────────────────── */
-/* Visual: Multi Language                                      */
-/* ─────────────────────────────────────────────────────────── */
-.fsv-ml {
-  position: relative;
-  width: 100%;
-  max-width: 320px;
-  height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.fsv-ml__form-card {
-  position: absolute;
-  inset: 8px;
-  background: var(--bg-primary);
-  border-radius: var(--r-2xl);
-  border: 1px solid #ede9fe;
-  box-shadow: var(--shadow-xs);
-  padding: var(--space-6);
-}
-.fsv-ml__form-header {
-  height: 20px;
-  width: 50%;
-  background: #ede9fe;
-  border-radius: var(--r);
-  margin-bottom: var(--space-6);
-}
-.fsv-ml__form-field {
-  height: 40px;
-  background: var(--bg-grey-50);
-  border-radius: var(--r);
-  border: 1px solid var(--border-light);
-  margin-bottom: var(--space-4);
-}
-.fsv-ml__dropdown {
-  position: absolute;
-  top: 32px;
-  right: -16px;
-  background: var(--bg-primary);
-  border-radius: var(--r-xl);
-  box-shadow: 0 20px 40px -10px rgba(0,0,0,0.15);
-  border: 1px solid var(--border-light);
-  padding: var(--space-2);
-  width: 192px;
-  z-index: 1;
-  animation: slide-up 0.4s 0.2s ease both;
-}
-.fsv-ml__dropdown-title {
-  font-size: var(--fs-tiny);
-  font-weight: var(--fw-semibold);
-  color: var(--fg-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding: var(--space-1) var(--space-2) var(--space-2);
-  margin-top: var(--space-1);
-}
-.fsv-ml__lang {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  padding: var(--space-2);
-  border-radius: var(--r);
-  cursor: default;
-  color: var(--fg-3);
-  font-size: var(--fs-xs);
-  transition: background 150ms;
-}
-.fsv-ml__lang:hover:not(.fsv-ml__lang--active) { background: var(--bg-grey-50); }
-.fsv-ml__lang--active {
-  background: #f5f3ff;
-  color: #7c3aed;
-  justify-content: space-between;
-}
-.fsv-ml__lang-name { font-weight: var(--fw-medium); flex: 1; }
-.fsv-ml__lang-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: var(--r-full);
-  background: #7c3aed;
-  flex-shrink: 0;
-}
 </style>
