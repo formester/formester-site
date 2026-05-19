@@ -1,24 +1,23 @@
 <template>
   <section class="trust-seals-section">
-    <p class="trust-seals-label">Trusted by leading organisations</p>
-    <div class="ticker-container">
+    <div class="flex justify-center text-center mb-4" v-if="label">
+      <UISectionBadge :text="label" />
+    </div>
+
+    <div v-if="heading || description" class="trust-seals-header">
+      <h2 v-if="heading" class="trust-seals-heading">{{ heading }}</h2>
+      <p v-if="description" class="trust-seals-desc">{{ description }}</p>
+    </div>
+
+    <div class="ticker-container mb-4">
       <div class="gradient-overlay left" />
 
       <div class="ticker-wrapper">
         <div class="ticker" ref="ticker">
           <div class="ticker-track" ref="tickerTrack">
-            <div
-              v-for="n in duplicateCount"
-              :key="`track-${n}`"
-              class="ticker-content"
-            >
+            <div v-for="n in duplicateCount" :key="`track-${n}`" class="ticker-content">
               <div v-for="logo in logos" :key="logo.alt" class="ticker-item">
-                <nuxt-img
-                  :src="logo.src"
-                  :alt="logo.alt"
-                  :width="logo.width"
-                  :height="logo.height"
-                />
+                <nuxt-img :src="logo.src" :alt="logo.alt" :width="logo.width" :height="logo.height" />
               </div>
             </div>
           </div>
@@ -27,21 +26,32 @@
 
       <div class="gradient-overlay right" />
     </div>
+
+    <StrapiTrustbadges v-if="showTrustBadges" :title="[]" style="padding: var(--space-2) 0" />
+    <div v-if="rawHtml" v-html="rawHtml" class="trust-seals-raw" />
   </section>
 </template>
 
 <script setup>
+defineProps({
+  label: { type: String, default: 'Trusted by leading organisations' },
+  heading: { type: String, default: null },
+  description: { type: String, default: null },
+  showTrustBadges: { type: Boolean, default: false },
+  rawHtml: { type: String, default: null },
+})
+
 const logos = [
-  { src: '/v2/trustseals/01.svg', alt: 'Peabody',                           width: 118, height: 40 },
-  { src: '/v2/trustseals/02.svg', alt: 'Aramark',                           width: 142, height: 40 },
-  { src: '/v2/trustseals/03.svg', alt: "L'Oreal",                           width: 177, height: 32 },
-  { src: '/v2/trustseals/04.svg', alt: 'Toptal',                            width: 131, height: 40 },
-  { src: '/v2/trustseals/05.svg', alt: 'Grab',                              width: 108, height: 38 },
-  { src: '/v2/trustseals/06.svg', alt: 'SFU',                               width: 154, height: 36 },
-  { src: '/v2/trustseals/07.svg', alt: 'World of Hyatt',                    width: 321, height: 32 },
-  { src: '/v2/trustseals/08.svg', alt: 'Iolani School',                     width: 225, height: 40 },
+  { src: '/v2/trustseals/01.svg', alt: 'Peabody', width: 118, height: 40 },
+  { src: '/v2/trustseals/02.svg', alt: 'Aramark', width: 142, height: 40 },
+  { src: '/v2/trustseals/03.svg', alt: "L'Oreal", width: 177, height: 32 },
+  { src: '/v2/trustseals/04.svg', alt: 'Toptal', width: 131, height: 40 },
+  { src: '/v2/trustseals/05.svg', alt: 'Grab', width: 108, height: 38 },
+  { src: '/v2/trustseals/06.svg', alt: 'SFU', width: 154, height: 36 },
+  { src: '/v2/trustseals/07.svg', alt: 'World of Hyatt', width: 321, height: 32 },
+  { src: '/v2/trustseals/08.svg', alt: 'Iolani School', width: 225, height: 40 },
   { src: '/v2/trustseals/09.svg', alt: 'Austin Independent School District', width: 146, height: 44 },
-  { src: '/v2/trustseals/10.svg', alt: 'Virgin',                            width: 73,  height: 64 },
+  { src: '/v2/trustseals/10.svg', alt: 'Virgin', width: 73, height: 64 },
 ]
 
 const tickerTrack = useTemplateRef('tickerTrack')
@@ -126,28 +136,32 @@ onBeforeUnmount(() => {
   }
 }
 
-.trust-seals-label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-4);
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-medium);
-  color: var(--fg-muted);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+.trust-seals-header {
+  text-align: center;
+  max-width: 720px;
+  margin-inline: auto;
+  margin-bottom: var(--space-12);
+  padding-inline: var(--space-6);
+}
+
+.trust-seals-heading {
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: var(--fw-bold);
+  color: var(--fg-1);
+  line-height: 1.2;
   margin-bottom: var(--space-6);
 }
 
-.trust-seals-label::before,
-.trust-seals-label::after {
-  content: '';
-  display: block;
-  width: 48px;
-  height: 1px;
-  background: currentColor;
-  opacity: 0.5;
-  flex-shrink: 0;
+.trust-seals-desc {
+  font-size: var(--fs-md);
+  color: var(--fg-2);
+  line-height: var(--lh-md);
+}
+
+.trust-seals-raw {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--space-6);
 }
 
 .ticker-container {
@@ -205,12 +219,12 @@ onBeforeUnmount(() => {
 
 .gradient-overlay.left {
   left: 0;
-  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .gradient-overlay.right {
   right: 0;
-  background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 @media (max-width: 800px) {
@@ -226,4 +240,10 @@ onBeforeUnmount(() => {
     width: 80px;
   }
 }
+/* 
+@media (min-width: 768px) {
+  :deep(.badge-card) {
+    padding: var(--space-4) var(--space-2);
+  }
+} */
 </style>
