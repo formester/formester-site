@@ -91,32 +91,7 @@
               <V2FeatureShowcaseWhiteLabel v-else-if="tabId === 'whitelabel'" />
 
               <!-- Generate PDF -->
-              <div v-else-if="tabId === 'generate-pdf'" class="fsv-pdf">
-                <div class="fsv-pdf__form">
-                  <div class="fsv-pdf__form-header" />
-                  <div class="fsv-pdf__form-field" />
-                  <div class="fsv-pdf__form-field" />
-                  <div class="fsv-pdf__form-field" />
-                  <div class="fsv-pdf__form-btn" />
-                </div>
-                <div class="fsv-pdf__arrow">
-                  <svg class="fsv-pdf__chevron" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m9 18 6-6-6-6" />
-                  </svg>
-                </div>
-                <div class="fsv-pdf__doc">
-                  <div class="fsv-pdf__doc-corner" />
-                  <div class="fsv-pdf__doc-title">INVOICE</div>
-                  <div class="fsv-pdf__doc-row">
-                    <div class="fsv-pdf__doc-label" />
-                    <div class="fsv-pdf__doc-value" />
-                  </div>
-                  <div class="fsv-pdf__doc-divider" />
-                  <div class="fsv-pdf__doc-line" />
-                  <div class="fsv-pdf__doc-line fsv-pdf__doc-line--short" />
-                  <div class="fsv-pdf__doc-line" />
-                </div>
-              </div>
+              <V2FeatureShowcasePdf v-else-if="tabId === 'generate-pdf'" />
 
               <!-- Data Protection -->
               <div v-else-if="tabId === 'data-protection'" class="fsv-dp">
@@ -144,41 +119,7 @@
               </div>
 
               <!-- Automations -->
-              <div v-else-if="tabId === 'automations'" class="fsv-auto">
-                <div class="fsv-auto__bg-card">
-                  <div class="fsv-auto__bg-header" />
-                  <div class="fsv-auto__bg-avatar-row">
-                    <div class="fsv-auto__bg-avatar" />
-                    <div class="fsv-auto__bg-lines">
-                      <div class="fsv-auto__bg-line" />
-                      <div class="fsv-auto__bg-line fsv-auto__bg-line--short" />
-                    </div>
-                  </div>
-                  <div class="fsv-auto__bg-line" />
-                  <div class="fsv-auto__bg-line fsv-auto__bg-line--med" />
-                  <div class="fsv-auto__bg-line fsv-auto__bg-line--short2" />
-                </div>
-                <div class="fsv-auto__fg-card">
-                  <div class="fsv-auto__fg-top">
-                    <span class="fsv-auto__fg-title">Autoresponder</span>
-                    <div class="fsv-auto__toggle">
-                      <div class="fsv-auto__toggle-dot" />
-                    </div>
-                  </div>
-                  <div class="fsv-auto__tabs-row">
-                    <span class="fsv-auto__tab-link fsv-auto__tab-link--active">General</span>
-                    <span class="fsv-auto__tab-link">Advanced</span>
-                  </div>
-                  <div class="fsv-auto__field">
-                    <label class="fsv-auto__label">Responder Name</label>
-                    <div class="fsv-auto__input">Follow Up</div>
-                  </div>
-                  <div class="fsv-auto__field">
-                    <label class="fsv-auto__label">Email Subject</label>
-                    <div class="fsv-auto__input">Customer Enquiry...</div>
-                  </div>
-                </div>
-              </div>
+              <V2FeatureShowcaseAutomations v-else-if="tabId === 'automations'" />
 
               <!-- Multi Language -->
               <div v-else-if="tabId === 'multi-language'" class="fsv-ml">
@@ -381,25 +322,9 @@ const activeTab = ref('collaboration')
   from { opacity: 0; transform: translateY(-20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-@keyframes slide-from-left {
-  from { opacity: 0; transform: translateX(-20px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-@keyframes slide-from-right {
-  from { opacity: 0; transform: translateX(20px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
 @keyframes scale-in {
   from { opacity: 0; transform: scale(0.95); }
   to   { opacity: 1; transform: scale(1); }
-}
-@keyframes bg-card-in {
-  from { opacity: 0; transform: translate(4px, -4px) rotate(-2deg); }
-  to   { opacity: 1; transform: translate(-16px, -24px) rotate(-2deg); }
-}
-@keyframes fg-card-in {
-  from { opacity: 0; transform: translate(-4px, 4px); }
-  to   { opacity: 1; transform: translate(16px, 24px); }
 }
 
 /* ── Tab visibility ────────────────────────────────────────── */
@@ -713,120 +638,6 @@ const activeTab = ref('collaboration')
 .fsv-collab__label--pink { background: #ec4899; }
 
 
-/* ─────────────────────────────────────────────────────────── */
-/* Visual: Generate PDF                                        */
-/* ─────────────────────────────────────────────────────────── */
-.fsv-pdf {
-  position: relative;
-  width: 100%;
-  max-width: 320px;
-  height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-4);
-}
-.fsv-pdf__form {
-  width: 144px;
-  height: 224px;
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(4px);
-  border-radius: var(--r-xl);
-  border: 1px solid rgba(216,180,254,0.4);
-  box-shadow: var(--shadow-xs);
-  padding: var(--space-3);
-  display: flex;
-  flex-direction: column;
-  z-index: 1;
-  animation: slide-from-left 0.4s ease both;
-}
-.fsv-pdf__form-header {
-  height: 12px;
-  width: 50%;
-  background: #ddd6fe;
-  border-radius: var(--r);
-  margin-bottom: var(--space-3);
-}
-.fsv-pdf__form-field {
-  height: 24px;
-  background: var(--bg-grey-50);
-  border-radius: var(--r);
-  border: 1px solid var(--border-light);
-  margin-bottom: var(--space-2);
-  flex: 1;
-}
-.fsv-pdf__form-btn {
-  height: 24px;
-  background: #a855f7;
-  border-radius: var(--r);
-  margin-top: var(--space-2);
-  flex-shrink: 0;
-}
-.fsv-pdf__arrow {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-}
-.fsv-pdf__chevron { animation: chevron-bounce 1.5s ease-in-out infinite; }
-
-.fsv-pdf__doc {
-  width: 144px;
-  height: 224px;
-  background: var(--bg-primary);
-  border-radius: var(--r-xl);
-  border: 1px solid var(--border-medium);
-  box-shadow: var(--shadow-md);
-  padding: var(--space-4);
-  position: relative;
-  z-index: 1;
-  animation: slide-from-right 0.4s 0.1s ease both;
-}
-.fsv-pdf__doc-corner {
-  position: absolute;
-  top: 0; right: 0;
-  width: 32px;
-  height: 32px;
-  overflow: hidden;
-  border-top-right-radius: var(--r-xl);
-}
-.fsv-pdf__doc-corner::after {
-  content: '';
-  position: absolute;
-  top: -10px; right: -10px;
-  width: 40px; height: 40px;
-  background: #f3e8ff;
-  transform: rotate(45deg);
-  border-bottom: 1px solid #e9d5ff;
-  border-left: 1px solid #e9d5ff;
-}
-.fsv-pdf__doc-title {
-  font-size: var(--fs-tiny);
-  font-weight: var(--fw-bold);
-  color: var(--fg-1);
-  margin-bottom: var(--space-2);
-  margin-top: var(--space-2);
-}
-.fsv-pdf__doc-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: var(--space-2);
-}
-.fsv-pdf__doc-label { width: 40px; height: 8px; background: var(--gray-200); border-radius: var(--r); }
-.fsv-pdf__doc-value { width: 32px; height: 8px; background: var(--fg-1); border-radius: var(--r); }
-.fsv-pdf__doc-divider {
-  width: 100%;
-  height: 1px;
-  background: var(--border-light);
-  margin-bottom: var(--space-2);
-}
-.fsv-pdf__doc-line {
-  height: 8px;
-  background: var(--bg-grey-100);
-  border-radius: var(--r);
-  margin-bottom: var(--space-2);
-}
-.fsv-pdf__doc-line--short { width: 80%; }
 
 /* ─────────────────────────────────────────────────────────── */
 /* Visual: Data Protection                                     */
@@ -913,141 +724,6 @@ const activeTab = ref('collaboration')
   font-weight: var(--fw-semibold);
   color: var(--fg-strong);
   animation: slide-up 0.4s 0.2s ease both;
-}
-
-/* ─────────────────────────────────────────────────────────── */
-/* Visual: Automations                                         */
-/* ─────────────────────────────────────────────────────────── */
-.fsv-auto {
-  position: relative;
-  width: 100%;
-  max-width: 320px;
-  height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.fsv-auto__bg-card {
-  position: absolute;
-  inset: 8px;
-  background: rgba(255,255,255,0.6);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.8);
-  border-radius: var(--r-2xl);
-  padding: var(--space-6);
-  box-shadow: 0 8px 24px rgba(236,72,153,0.05);
-  transform: translate(-16px, -24px) rotate(-2deg);
-  z-index: 0;
-  animation: bg-card-in 0.6s 0.1s cubic-bezier(0.34,1.56,0.64,1) both;
-}
-.fsv-auto__bg-header {
-  height: 16px;
-  width: 50%;
-  background: rgba(229,231,235,0.8);
-  border-radius: var(--r-full);
-  margin-bottom: var(--space-6);
-}
-.fsv-auto__bg-avatar-row {
-  display: flex;
-  gap: var(--space-3);
-  align-items: center;
-  margin-bottom: var(--space-6);
-}
-.fsv-auto__bg-avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: var(--r-full);
-  background: linear-gradient(135deg, #fb923c, #f43f5e);
-  flex-shrink: 0;
-}
-.fsv-auto__bg-lines { flex: 1; display: flex; flex-direction: column; gap: var(--space-2); }
-.fsv-auto__bg-line {
-  height: 10px;
-  background: rgba(229,231,235,0.8);
-  border-radius: var(--r-full);
-}
-.fsv-auto__bg-line--short  { width: 33%; }
-.fsv-auto__bg-line--med    { width: 91%; }
-.fsv-auto__bg-line--short2 { width: 80%; }
-
-.fsv-auto__fg-card {
-  position: relative;
-  width: 90%;
-  background: var(--bg-primary);
-  border-radius: var(--r-2xl);
-  padding: var(--space-6);
-  box-shadow: 0 20px 40px -15px rgba(0,0,0,0.1);
-  border: 1px solid var(--border-light);
-  z-index: 1;
-  transform: translate(16px, 24px);
-  animation: fg-card-in 0.6s 0.2s cubic-bezier(0.34,1.56,0.64,1) both;
-}
-.fsv-auto__fg-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: var(--space-6);
-}
-.fsv-auto__fg-title {
-  font-weight: var(--fw-semibold);
-  color: var(--fg-1);
-  font-size: 15px;
-}
-.fsv-auto__toggle {
-  width: 32px;
-  height: 16px;
-  background: #e0e7ff;
-  border-radius: var(--r-full);
-  position: relative;
-  flex-shrink: 0;
-}
-.fsv-auto__toggle-dot {
-  position: absolute;
-  right: 2px;
-  top: 2px;
-  width: 12px;
-  height: 12px;
-  background: #6366f1;
-  border-radius: var(--r-full);
-  box-shadow: var(--shadow-xs);
-}
-.fsv-auto__tabs-row {
-  display: flex;
-  gap: var(--space-4);
-  border-bottom: 1px solid var(--border-light);
-  margin-bottom: var(--space-6);
-  padding-bottom: var(--space-2);
-}
-.fsv-auto__tab-link {
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-medium);
-  color: var(--fg-muted);
-  padding-bottom: var(--space-2);
-  cursor: default;
-}
-.fsv-auto__tab-link--active {
-  color: #4f46e5;
-  font-weight: var(--fw-semibold);
-  border-bottom: 2px solid #4f46e5;
-  margin-bottom: -10px;
-}
-.fsv-auto__field { margin-bottom: var(--space-4); }
-.fsv-auto__label {
-  font-size: var(--fs-tiny);
-  font-weight: var(--fw-semibold);
-  color: var(--fg-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  display: block;
-  margin-bottom: 6px;
-}
-.fsv-auto__input {
-  border: 1px solid var(--border-medium);
-  border-radius: var(--r-lg);
-  padding: var(--space-2) var(--space-3);
-  font-size: var(--fs-sm);
-  color: var(--fg-strong);
-  background: rgba(249,250,251,0.5);
 }
 
 /* ─────────────────────────────────────────────────────────── */
