@@ -1,6 +1,10 @@
 <template>
   <section ref="sectionEl" class="hero-v2">
-    <!-- <div class="hero-v2__grid" aria-hidden="true"></div> -->
+    <div aria-hidden="true" class="hero-v2__blobs">
+      <div ref="blobA" class="hero-v2__blob hero-v2__blob--a"></div>
+      <div ref="blobB" class="hero-v2__blob hero-v2__blob--b"></div>
+      <div ref="blobC" class="hero-v2__blob hero-v2__blob--c"></div>
+    </div>
     <div class="hero-v2__inner">
       <a v-if="badge?.text" :href="badge.link || '#'" class="hero-v2__badge-link">
         <SectionBadge variant="pill" :text="badge.text" :tag="badge.tag" :sep="!!(badge.tag && badge.text)" arrow />
@@ -57,125 +61,86 @@ defineProps({
 })
 
 const sectionEl = useTemplateRef('sectionEl')
+const blobA = useTemplateRef('blobA')
+const blobB = useTemplateRef('blobB')
+const blobC = useTemplateRef('blobC')
 
-const HOME = { ax: 72, ay: 18, bx: 22, by: 78, cx: 52, cy: 50 }
-const BASE = { aSize: 900, bSize: 700 }
-const SPEED = 0.5
+// Blob base sizes (px): A=900×594  B=700×497  C=600×420
+// Ranges are percentage of section width/height for each blob's center point
+const RANGES = {
+  ax: [0.54, 0.90], ay: [0.06, 0.30],
+  bx: [0.06, 0.38],
+  cx: [0.30, 0.74], cy: [0.36, 0.64],
+}
+const BY_FIXED = 500 // TODO: configure blob-B center Y (px from section top)
 
-let rafId = null
-let startTime = null
+function rand(min, max) { return Math.random() * (max - min) + min }
 
-function tick(ts) {
-  if (!startTime) startTime = ts
-  const t = (ts - startTime) * 0.001 * SPEED
-  const el = sectionEl.value
-  if (!el) return
+function tick() {
+  const section = sectionEl.value
+  if (!section) return
+  const W = section.offsetWidth
+  const H = section.offsetHeight
 
-  const ax = HOME.ax + 18 * Math.sin(t * 0.45)
-  const ay = HOME.ay + 12 * Math.cos(t * 0.38)
-  const bx = HOME.bx + 16 * Math.cos(t * 0.34 + 1.2)
-  const by = HOME.by + 10 * Math.sin(t * 0.29 + 0.7)
-  const cx = HOME.cx + 22 * Math.sin(t * 0.55 + 2.0)
-  const cy = HOME.cy + 14 * Math.sin(t * 1.10 + 0.5)
+  const scaleA = rand(0.94, 1.06).toFixed(2)
+  const scaleB = rand(0.94, 1.06).toFixed(2)
+  const scaleC = rand(0.94, 1.06).toFixed(2)
 
-  const breatheA = 1 + 0.06 * Math.sin(t * 0.31)
-  const breatheB = 1 + 0.06 * Math.cos(t * 0.27 + 1.0)
+  // translate positions the blob center; subtract half the blob size to align
+  const ax = Math.round(W * rand(...RANGES.ax) - 450)
+  const ay = Math.round(H * rand(...RANGES.ay) - 297)
+  blobA.value.style.transform = `translate(${ax}px, ${ay}px) scale(${scaleA})`
 
-  el.style.setProperty('--a-x', ax.toFixed(2) + '%')
-  el.style.setProperty('--a-y', ay.toFixed(2) + '%')
-  el.style.setProperty('--a-size-x', Math.round(BASE.aSize * breatheA) + 'px')
-  el.style.setProperty('--a-size-y', Math.round(BASE.aSize * 0.66 * breatheA) + 'px')
+  const bx = Math.round(W * rand(...RANGES.bx) - 350)
+  blobB.value.style.transform = `translate(${bx}px, ${BY_FIXED - 248}px) scale(${scaleB})`
 
-  el.style.setProperty('--b-x', bx.toFixed(2) + '%')
-  el.style.setProperty('--b-y', by.toFixed(2) + '%')
-  el.style.setProperty('--b-size-x', Math.round(BASE.bSize * breatheB) + 'px')
-  el.style.setProperty('--b-size-y', Math.round(BASE.bSize * 0.71 * breatheB) + 'px')
-
-  el.style.setProperty('--c-x', cx.toFixed(2) + '%')
-  el.style.setProperty('--c-y', cy.toFixed(2) + '%')
-
-  rafId = requestAnimationFrame(tick)
+  const cx = Math.round(W * rand(...RANGES.cx) - 300)
+  const cy = Math.round(H * rand(...RANGES.cy) - 210)
+  blobC.value.style.transform = `translate(${cx}px, ${cy}px) scale(${scaleC})`
 }
 
-function onPointerMove(e) {
-  const el = sectionEl.value
-  if (!el) return
-  const r = el.getBoundingClientRect()
-  el.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100).toFixed(2) + '%')
-  el.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100).toFixed(2) + '%')
-  el.style.setProperty('--glow-opacity', '0.7')
-}
-
-function onPointerLeave() {
-  sectionEl.value?.style.setProperty('--glow-opacity', '0')
-}
+let intervalId = null
 
 onMounted(() => {
-  rafId = requestAnimationFrame(tick)
-  const el = sectionEl.value
-  el?.addEventListener('pointermove', onPointerMove)
-  el?.addEventListener('pointerleave', onPointerLeave)
+  tick()
+  intervalId = setInterval(tick, 1500)
 })
 
 onBeforeUnmount(() => {
-  if (rafId) cancelAnimationFrame(rafId)
-  const el = sectionEl.value
-  el?.removeEventListener('pointermove', onPointerMove)
-  el?.removeEventListener('pointerleave', onPointerLeave)
+  clearInterval(intervalId)
 })
 </script>
 
 <style scoped>
 .hero-v2 {
-
-  --tint-a: #e2daf1;
-  --tint-b: #f1ebff;
-  --tint-c: #eee7ff;
-  /* --glow: #f4ebff; */
-
-  --a-size-x: 900px; --a-size-y: 594px;
-  --b-size-x: 700px; --b-size-y: 497px;
-  --c-size-x: 600px; --c-size-y: 420px;
-
-  --a-x: 72%; --a-y: 18%;
-  --b-x: 22%; --b-y: 78%;
-  --c-x: 52%; --c-y: 50%;
-
-  --mx: 50%; --my: 50%;
-  --glow-size: 520px;
-  --glow-opacity: 0;
-
   position: relative;
   isolation: isolate;
   overflow: hidden;
-
-  background:
-    radial-gradient(var(--a-size-x) var(--a-size-y) at var(--a-x) var(--a-y),
-      var(--tint-a) 0%, transparent 60%),
-    radial-gradient(var(--b-size-x) var(--b-size-y) at var(--b-x) var(--b-y),
-      var(--tint-b) 0%, transparent 65%),
-    radial-gradient(var(--c-size-x) var(--c-size-y) at var(--c-x) var(--c-y),
-      var(--tint-c) 0%, transparent 55%),
-    #fff;
-
+  background: #fff;
   padding: var(--space-30) var(--space-6) var(--space-20);
 }
 
-.hero-v2::before {
-  content: "";
+.hero-v2__blobs {
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    var(--glow-size) var(--glow-size) at var(--mx) var(--my),
-    var(--glow) 0%, transparent 55%
-  );
-  opacity: var(--glow-opacity);
-  transition: opacity 300ms ease;
   pointer-events: none;
   z-index: 0;
 }
 
-.hero-v2:not(:hover)::before { opacity: 0; }
+.hero-v2__blob {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.85;
+  transition: transform 1.5s ease-in-out;
+  will-change: transform;
+}
+
+.hero-v2__blob--a { width: 900px; height: 594px; background: #f5eeff; }
+.hero-v2__blob--b { width: 700px; height: 497px; background: #f1ebff; }
+.hero-v2__blob--c { width: 600px; height: 420px; background: #f4efff; }
 
 .hero-v2__inner {
   position: relative;
