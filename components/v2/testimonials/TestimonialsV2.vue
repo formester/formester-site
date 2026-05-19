@@ -17,7 +17,13 @@
         <div class="tc-gradient-left"></div>
         <div class="tc-track-outer">
           <div ref="track" class="tc-cards">
-            <div v-for="t in testimonials" :key="t.id" class="tc-card">
+            <template v-for="(pass, passIdx) in 3" :key="`pass-${passIdx}`">
+            <div
+              v-for="t in testimonials"
+              :key="`${passIdx}-${t.id}`"
+              class="tc-card"
+              :aria-hidden="passIdx > 0 ? 'true' : undefined"
+            >
               <div>
                 <nuxt-img src="/quotes.svg" alt="" width="40" height="31" loading="lazy" class="tv2-quote-img" />
                 <p class="tv2-comment">
@@ -36,6 +42,7 @@
                 <div class="tv2-position">{{ t.position }}</div>
               </div>
             </div>
+          </template>
           </div>
         </div>
         <div class="tc-gradient-right"></div>
@@ -138,22 +145,16 @@ const setupTicker = () => {
   const t = track.value
   if (!t || props.testimonials.length === 0) return
 
-  const originalCards = Array.from(t.querySelectorAll('.tc-card'))
   const gap = parseInt(window.getComputedStyle(t).gap) || 0
+  // Measure only the first pass (original testimonials); duplicates are rendered in template
+  const originalCards = Array.from(t.querySelectorAll('.tc-card'))
+    .slice(0, props.testimonials.length)
 
   let totalWidth = 0
   originalCards.forEach(card => { totalWidth += card.offsetWidth + gap })
   totalCardsWidth.value = totalWidth
 
   const outer = t.parentElement
-  const numClones = Math.ceil((outer.offsetWidth * 2) / totalWidth) + 1
-  for (let i = 0; i < numClones; i++) {
-    originalCards.forEach(card => {
-      const clone = card.cloneNode(true)
-      clone.setAttribute('aria-hidden', 'true')
-      t.appendChild(clone)
-    })
-  }
 
   const animate = () => {
     if (!scrollPaused.value && !isDragging.value) {
