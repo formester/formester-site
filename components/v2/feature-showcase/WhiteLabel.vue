@@ -141,7 +141,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: scale(1.5) translateY(-16px);
+  transform: scale(1.2) translateY(-16px);
 }
 
 .fsv-wl svg {
