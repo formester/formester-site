@@ -88,24 +88,7 @@
               </div>
 
               <!-- White Label -->
-              <div v-else-if="tabId === 'whitelabel'" class="fsv-wl">
-                <div class="fsv-wl__dark-card">
-                  <div class="fsv-wl__dark-header" />
-                  <div class="fsv-wl__dark-field" />
-                  <div class="fsv-wl__dark-field" />
-                  <div class="fsv-wl__dark-btn" />
-                </div>
-                <div class="fsv-wl__popup">
-                  <div class="fsv-wl__avatar" />
-                  <div class="fsv-wl__popup-body">
-                    <div class="fsv-wl__popup-title">Custom Sub-Domain</div>
-                    <div class="fsv-wl__popup-row">
-                      <div class="fsv-wl__popup-input">hotel.custom.com</div>
-                      <div class="fsv-wl__popup-apply">Apply</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <V2FeatureShowcaseWhiteLabel v-else-if="tabId === 'whitelabel'" />
 
               <!-- Generate PDF -->
               <div v-else-if="tabId === 'generate-pdf'" class="fsv-pdf">
@@ -227,18 +210,30 @@
 <script setup>
 import { ref } from 'vue'
 
+import usersIcon from '~/assets/svg/feature-icons/users.svg?raw'
+import slidersHorizontalIcon from '~/assets/svg/feature-icons/sliders-horizontal.svg?raw'
+import globeIcon from '~/assets/svg/feature-icons/globe.svg?raw'
+import paletteIcon from '~/assets/svg/feature-icons/palette.svg?raw'
+import penToolIcon from '~/assets/svg/feature-icons/pen-tool.svg?raw'
+import fileTextIcon from '~/assets/svg/feature-icons/file-text.svg?raw'
+import wifiOffIcon from '~/assets/svg/feature-icons/wifi-off.svg?raw'
+import activityIcon from '~/assets/svg/feature-icons/activity.svg?raw'
+import bellRingIcon from '~/assets/svg/feature-icons/bell-ring.svg?raw'
+import layersIcon from '~/assets/svg/feature-icons/layers.svg?raw'
+import languagesIcon from '~/assets/svg/feature-icons/languages.svg?raw'
+
 const SVG_ICONS = {
-  users: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
-  slidersHorizontal: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="21" y1="4" x2="14" y2="4"/><line x1="10" y1="4" x2="3" y2="4"/><line x1="21" y1="12" x2="12" y2="12"/><line x1="8" y1="12" x2="3" y2="12"/><line x1="21" y1="20" x2="16" y2="20"/><line x1="12" y1="20" x2="3" y2="20"/><line x1="14" y1="2" x2="14" y2="6"/><line x1="8" y1="10" x2="8" y2="14"/><line x1="16" y1="18" x2="16" y2="22"/></svg>`,
-  globe: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>`,
-  palette: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>`,
-  penTool: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>`,
-  fileText: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>`,
-  wifiOff: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="2" x2="22" y2="22"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M2 8.82A15.02 15.02 0 0 1 4.34 7"/><path d="M8.2 4.09A14.93 14.93 0 0 1 12 3a15 15 0 0 1 10 5.82"/><path d="M5 12.86A9.97 9.97 0 0 1 12 10a9.92 9.92 0 0 1 5.92 1.94"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>`,
-  activity: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
-  bellRing: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/><path d="M4 2C2.8 3.7 2 5.7 2 8"/><path d="M22 8c0-2.3-.8-4.3-2-6"/></svg>`,
-  layers: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 12 12 17 22 12"/><polyline points="2 17 12 22 22 17"/></svg>`,
-  languages: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>`,
+  users:              usersIcon,
+  slidersHorizontal:  slidersHorizontalIcon,
+  globe:              globeIcon,
+  palette:            paletteIcon,
+  penTool:            penToolIcon,
+  fileText:           fileTextIcon,
+  wifiOff:            wifiOffIcon,
+  activity:           activityIcon,
+  bellRing:           bellRingIcon,
+  layers:             layersIcon,
+  languages:          languagesIcon,
 }
 
 const TABS = [
@@ -717,106 +712,6 @@ const activeTab = ref('collaboration')
 .fsv-collab__label--blue { background: #3b82f6; }
 .fsv-collab__label--pink { background: #ec4899; }
 
-/* ─────────────────────────────────────────────────────────── */
-/* Visual: White Label                                         */
-/* ─────────────────────────────────────────────────────────── */
-.fsv-wl {
-  position: relative;
-  width: 100%;
-  max-width: 320px;
-  height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.fsv-wl__dark-card {
-  position: absolute;
-  inset: 0;
-  background: #0f172a;
-  border-radius: var(--r-2xl);
-  padding: var(--space-6);
-  border: 1px solid #1e293b;
-  box-shadow: 0 20px 40px -15px rgba(0,0,0,0.3);
-  animation: scale-in 0.4s ease both;
-}
-.fsv-wl__dark-header {
-  width: 50%;
-  height: 20px;
-  background: #1e293b;
-  border-radius: var(--r);
-  margin-bottom: var(--space-6);
-}
-.fsv-wl__dark-field {
-  height: 40px;
-  background: rgba(30,41,59,0.5);
-  border-radius: var(--r-lg);
-  border: 1px solid #334155;
-  margin-bottom: var(--space-4);
-}
-.fsv-wl__dark-btn {
-  height: 40px;
-  width: 33%;
-  background: #4f46e5;
-  border-radius: var(--r-lg);
-}
-.fsv-wl__popup {
-  position: absolute;
-  bottom: -16px;
-  right: 16px;
-  background: var(--bg-primary);
-  padding: var(--space-4);
-  border-radius: var(--r-xl);
-  box-shadow: 0 16px 32px -8px rgba(0,0,0,0.18);
-  border: 1px solid var(--border-light);
-  display: flex;
-  align-items: center;
-  gap: var(--space-4);
-  max-width: 90%;
-  animation: slide-up 0.4s 0.2s ease both;
-}
-.fsv-wl__avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: var(--r-full);
-  background: linear-gradient(135deg, #a855f7, #ec4899, #eab308);
-  flex-shrink: 0;
-  border: 2px solid var(--bg-primary);
-  box-shadow: var(--shadow-xs);
-}
-.fsv-wl__popup-body { flex: 1; min-width: 0; }
-.fsv-wl__popup-title {
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-semibold);
-  color: #1f2937;
-  margin-bottom: var(--space-1);
-}
-.fsv-wl__popup-row { display: flex; gap: var(--space-2); }
-.fsv-wl__popup-input {
-  height: 32px;
-  flex: 1;
-  background: var(--bg-grey-50);
-  border: 1px solid var(--border-medium);
-  border-radius: var(--r);
-  padding: 0 var(--space-2);
-  font-size: var(--fs-tiny);
-  color: var(--fg-muted);
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.fsv-wl__popup-apply {
-  height: 32px;
-  padding: 0 var(--space-3);
-  background: #4f46e5;
-  color: var(--bg-primary);
-  border-radius: var(--r);
-  font-size: var(--fs-tiny);
-  font-weight: var(--fw-medium);
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-}
 
 /* ─────────────────────────────────────────────────────────── */
 /* Visual: Generate PDF                                        */
