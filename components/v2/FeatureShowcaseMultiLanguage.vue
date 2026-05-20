@@ -2,7 +2,7 @@
   <div class="fsv-ml">
     <!-- Background: form card with real dummy text -->
     <div class="fsv-ml__form-card">
-      <div class="fsv-ml__form-title">Contact Us</div>
+      <div class="fsv-ml__form-title">{{ fields[activeLang].title }}</div>
 
       <label class="fsv-ml__label">{{ fields[activeLang].name }}</label>
       <div class="fsv-ml__field">{{ fields[activeLang].namePlaceholder }}</div>
@@ -41,10 +41,10 @@ const LANGS = [
 ]
 
 const fields = {
-  en: { name: 'Full Name', namePlaceholder: 'John Doe', email: 'Email Address', emailPlaceholder: 'john@example.com', submit: 'Send Message' },
-  fr: { name: 'Nom complet', namePlaceholder: 'Jean Dupont', email: 'Adresse e-mail', emailPlaceholder: 'jean@exemple.fr', submit: 'Envoyer' },
-  de: { name: 'Vollständiger Name', namePlaceholder: 'Max Mustermann', email: 'E-Mail-Adresse', emailPlaceholder: 'max@beispiel.de', submit: 'Absenden' },
-  ja: { name: 'お名前', namePlaceholder: '山田 太郎', email: 'メールアドレス', emailPlaceholder: 'taro@example.jp', submit: '送信する' },
+  en: { title: 'Contact Us',     name: 'Full Name',           namePlaceholder: 'John Doe',       email: 'Email Address',  emailPlaceholder: 'john@example.com',  submit: 'Send Message' },
+  fr: { title: 'Contactez-nous', name: 'Nom complet',          namePlaceholder: 'Jean Dupont',    email: 'Adresse e-mail', emailPlaceholder: 'jean@exemple.fr',   submit: 'Envoyer' },
+  de: { title: 'Kontakt',        name: 'Vollständiger Name',   namePlaceholder: 'Max Mustermann', email: 'E-Mail-Adresse', emailPlaceholder: 'max@beispiel.de',   submit: 'Absenden' },
+  ja: { title: 'お問い合わせ',    name: 'お名前',               namePlaceholder: '山田 太郎',      email: 'メールアドレス', emailPlaceholder: 'taro@example.jp',   submit: '送信する' },
 }
 
 const activeLang = ref('en')
