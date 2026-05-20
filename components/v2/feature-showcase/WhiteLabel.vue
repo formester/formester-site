@@ -30,14 +30,14 @@
       <circle cx="110" cy="90" r="7" fill="#28c840" />
 
       <!-- URL bar -->
-      <rect x="116" y="77" width="128" height="26" rx="13" fill="#f9fafb" stroke="#eaecf0" stroke-width="1" />
+      <rect x="146" y="77" width="128" height="26" rx="13" fill="#f9fafb" stroke="#eaecf0" stroke-width="1" />
 
-      <rect x="126" y="81" width="108" height="18" rx="5">
+      <rect x="156" y="81" width="108" height="18" rx="5">
         <animate attributeName="fill" values="#f0ebfa;#e6faef;#fff3e0" dur="6s" keyTimes="0;0.333;0.667"
           calcMode="discrete" repeatCount="indefinite" />
       </rect>
 
-      <text x="180" y="94" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="8"
+      <text x="200" y="93" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="8"
         font-weight="700" fill="#6434d0">
         hotel.custom.com
         <animate attributeName="fill" values="#6434d0;#11c15b;#f79009" dur="6s" keyTimes="0;0.333;0.667"
@@ -84,21 +84,6 @@
       <rect x="220" y="284" width="32" height="32" rx="7" fill="#f79009" />
       <rect x="260" y="284" width="32" height="32" rx="7" fill="#eaecf0" />
 
-      <!-- Callout -->
-      <rect x="140" y="43" width="150" height="35" fill="#ffffff77" rx="8" stroke="#ddd" stroke-width="1" />
-
-      <!-- Magnifier -->
-      <circle cx="160" cy="59" r="10" fill="none" stroke="#d0d5dd" stroke-width="2" />
-
-      <line x1="167" y1="66" x2="174" y2="73" stroke="#d0d5dd" stroke-width="2" stroke-linecap="round" />
-
-      <!-- Zoomed text -->
-      <text x="184" y="65" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="11" font-weight="700"
-        fill="#6434d0">
-        hotel.custom.com
-        <animate attributeName="fill" values="#6434d0;#11c15b;#f79009" dur="6s" keyTimes="0;0.333;0.667"
-          calcMode="discrete" repeatCount="indefinite" />
-      </text>
 
       <!-- Selection ring -->
       <g id="wl-sel-ring">
