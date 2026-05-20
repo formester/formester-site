@@ -88,52 +88,10 @@
               </div>
 
               <!-- White Label -->
-              <div v-else-if="tabId === 'whitelabel'" class="fsv-wl">
-                <div class="fsv-wl__dark-card">
-                  <div class="fsv-wl__dark-header" />
-                  <div class="fsv-wl__dark-field" />
-                  <div class="fsv-wl__dark-field" />
-                  <div class="fsv-wl__dark-btn" />
-                </div>
-                <div class="fsv-wl__popup">
-                  <div class="fsv-wl__avatar" />
-                  <div class="fsv-wl__popup-body">
-                    <div class="fsv-wl__popup-title">Custom Sub-Domain</div>
-                    <div class="fsv-wl__popup-row">
-                      <div class="fsv-wl__popup-input">hotel.custom.com</div>
-                      <div class="fsv-wl__popup-apply">Apply</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <V2FeatureShowcaseWhiteLabel v-else-if="tabId === 'whitelabel'" />
 
               <!-- Generate PDF -->
-              <div v-else-if="tabId === 'generate-pdf'" class="fsv-pdf">
-                <div class="fsv-pdf__form">
-                  <div class="fsv-pdf__form-header" />
-                  <div class="fsv-pdf__form-field" />
-                  <div class="fsv-pdf__form-field" />
-                  <div class="fsv-pdf__form-field" />
-                  <div class="fsv-pdf__form-btn" />
-                </div>
-                <div class="fsv-pdf__arrow">
-                  <svg class="fsv-pdf__chevron" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m9 18 6-6-6-6" />
-                  </svg>
-                </div>
-                <div class="fsv-pdf__doc">
-                  <div class="fsv-pdf__doc-corner" />
-                  <div class="fsv-pdf__doc-title">INVOICE</div>
-                  <div class="fsv-pdf__doc-row">
-                    <div class="fsv-pdf__doc-label" />
-                    <div class="fsv-pdf__doc-value" />
-                  </div>
-                  <div class="fsv-pdf__doc-divider" />
-                  <div class="fsv-pdf__doc-line" />
-                  <div class="fsv-pdf__doc-line fsv-pdf__doc-line--short" />
-                  <div class="fsv-pdf__doc-line" />
-                </div>
-              </div>
+              <V2FeatureShowcasePdf v-else-if="tabId === 'generate-pdf'" />
 
               <!-- Data Protection -->
               <div v-else-if="tabId === 'data-protection'" class="fsv-dp">
@@ -161,61 +119,10 @@
               </div>
 
               <!-- Automations -->
-              <div v-else-if="tabId === 'automations'" class="fsv-auto">
-                <div class="fsv-auto__bg-card">
-                  <div class="fsv-auto__bg-header" />
-                  <div class="fsv-auto__bg-avatar-row">
-                    <div class="fsv-auto__bg-avatar" />
-                    <div class="fsv-auto__bg-lines">
-                      <div class="fsv-auto__bg-line" />
-                      <div class="fsv-auto__bg-line fsv-auto__bg-line--short" />
-                    </div>
-                  </div>
-                  <div class="fsv-auto__bg-line" />
-                  <div class="fsv-auto__bg-line fsv-auto__bg-line--med" />
-                  <div class="fsv-auto__bg-line fsv-auto__bg-line--short2" />
-                </div>
-                <div class="fsv-auto__fg-card">
-                  <div class="fsv-auto__fg-top">
-                    <span class="fsv-auto__fg-title">Autoresponder</span>
-                    <div class="fsv-auto__toggle">
-                      <div class="fsv-auto__toggle-dot" />
-                    </div>
-                  </div>
-                  <div class="fsv-auto__tabs-row">
-                    <span class="fsv-auto__tab-link fsv-auto__tab-link--active">General</span>
-                    <span class="fsv-auto__tab-link">Advanced</span>
-                  </div>
-                  <div class="fsv-auto__field">
-                    <label class="fsv-auto__label">Responder Name</label>
-                    <div class="fsv-auto__input">Follow Up</div>
-                  </div>
-                  <div class="fsv-auto__field">
-                    <label class="fsv-auto__label">Email Subject</label>
-                    <div class="fsv-auto__input">Customer Enquiry...</div>
-                  </div>
-                </div>
-              </div>
+              <V2FeatureShowcaseAutomations v-else-if="tabId === 'automations'" />
 
               <!-- Multi Language -->
-              <div v-else-if="tabId === 'multi-language'" class="fsv-ml">
-                <div class="fsv-ml__form-card">
-                  <div class="fsv-ml__form-header" />
-                  <div class="fsv-ml__form-field" />
-                  <div class="fsv-ml__form-field" />
-                </div>
-                <div class="fsv-ml__dropdown">
-                  <div class="fsv-ml__dropdown-title">Select Language</div>
-                  <div class="fsv-ml__lang fsv-ml__lang--active">
-                    <span>🇬🇧</span>
-                    <span class="fsv-ml__lang-name">English</span>
-                    <div class="fsv-ml__lang-dot" />
-                  </div>
-                  <div class="fsv-ml__lang"><span>🇫🇷</span><span class="fsv-ml__lang-name">French</span></div>
-                  <div class="fsv-ml__lang"><span>🇩🇪</span><span class="fsv-ml__lang-name">German</span></div>
-                  <div class="fsv-ml__lang"><span>🇯🇵</span><span class="fsv-ml__lang-name">Japanese</span></div>
-                </div>
-              </div>
+              <V2FeatureShowcaseMultiLanguage v-else-if="tabId === 'multi-language'" />
 
             </div>
           </div>
@@ -227,18 +134,30 @@
 <script setup>
 import { ref } from 'vue'
 
+import usersIcon from '~/assets/svg/feature-icons/users.svg?raw'
+import slidersHorizontalIcon from '~/assets/svg/feature-icons/sliders-horizontal.svg?raw'
+import globeIcon from '~/assets/svg/feature-icons/globe.svg?raw'
+import paletteIcon from '~/assets/svg/feature-icons/palette.svg?raw'
+import penToolIcon from '~/assets/svg/feature-icons/pen-tool.svg?raw'
+import fileTextIcon from '~/assets/svg/feature-icons/file-text.svg?raw'
+import wifiOffIcon from '~/assets/svg/feature-icons/wifi-off.svg?raw'
+import activityIcon from '~/assets/svg/feature-icons/activity.svg?raw'
+import bellRingIcon from '~/assets/svg/feature-icons/bell-ring.svg?raw'
+import layersIcon from '~/assets/svg/feature-icons/layers.svg?raw'
+import languagesIcon from '~/assets/svg/feature-icons/languages.svg?raw'
+
 const SVG_ICONS = {
-  users: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
-  slidersHorizontal: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="21" y1="4" x2="14" y2="4"/><line x1="10" y1="4" x2="3" y2="4"/><line x1="21" y1="12" x2="12" y2="12"/><line x1="8" y1="12" x2="3" y2="12"/><line x1="21" y1="20" x2="16" y2="20"/><line x1="12" y1="20" x2="3" y2="20"/><line x1="14" y1="2" x2="14" y2="6"/><line x1="8" y1="10" x2="8" y2="14"/><line x1="16" y1="18" x2="16" y2="22"/></svg>`,
-  globe: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>`,
-  palette: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>`,
-  penTool: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>`,
-  fileText: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>`,
-  wifiOff: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="2" x2="22" y2="22"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M2 8.82A15.02 15.02 0 0 1 4.34 7"/><path d="M8.2 4.09A14.93 14.93 0 0 1 12 3a15 15 0 0 1 10 5.82"/><path d="M5 12.86A9.97 9.97 0 0 1 12 10a9.92 9.92 0 0 1 5.92 1.94"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>`,
-  activity: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
-  bellRing: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/><path d="M4 2C2.8 3.7 2 5.7 2 8"/><path d="M22 8c0-2.3-.8-4.3-2-6"/></svg>`,
-  layers: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 12 12 17 22 12"/><polyline points="2 17 12 22 22 17"/></svg>`,
-  languages: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>`,
+  users:              usersIcon,
+  slidersHorizontal:  slidersHorizontalIcon,
+  globe:              globeIcon,
+  palette:            paletteIcon,
+  penTool:            penToolIcon,
+  fileText:           fileTextIcon,
+  wifiOff:            wifiOffIcon,
+  activity:           activityIcon,
+  bellRing:           bellRingIcon,
+  layers:             layersIcon,
+  languages:          languagesIcon,
 }
 
 const TABS = [
@@ -386,25 +305,9 @@ const activeTab = ref('collaboration')
   from { opacity: 0; transform: translateY(-20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-@keyframes slide-from-left {
-  from { opacity: 0; transform: translateX(-20px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-@keyframes slide-from-right {
-  from { opacity: 0; transform: translateX(20px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
 @keyframes scale-in {
   from { opacity: 0; transform: scale(0.95); }
   to   { opacity: 1; transform: scale(1); }
-}
-@keyframes bg-card-in {
-  from { opacity: 0; transform: translate(4px, -4px) rotate(-2deg); }
-  to   { opacity: 1; transform: translate(-16px, -24px) rotate(-2deg); }
-}
-@keyframes fg-card-in {
-  from { opacity: 0; transform: translate(-4px, 4px); }
-  to   { opacity: 1; transform: translate(16px, 24px); }
 }
 
 /* ── Tab visibility ────────────────────────────────────────── */
@@ -717,221 +620,7 @@ const activeTab = ref('collaboration')
 .fsv-collab__label--blue { background: #3b82f6; }
 .fsv-collab__label--pink { background: #ec4899; }
 
-/* ─────────────────────────────────────────────────────────── */
-/* Visual: White Label                                         */
-/* ─────────────────────────────────────────────────────────── */
-.fsv-wl {
-  position: relative;
-  width: 100%;
-  max-width: 320px;
-  height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.fsv-wl__dark-card {
-  position: absolute;
-  inset: 0;
-  background: #0f172a;
-  border-radius: var(--r-2xl);
-  padding: var(--space-6);
-  border: 1px solid #1e293b;
-  box-shadow: 0 20px 40px -15px rgba(0,0,0,0.3);
-  animation: scale-in 0.4s ease both;
-}
-.fsv-wl__dark-header {
-  width: 50%;
-  height: 20px;
-  background: #1e293b;
-  border-radius: var(--r);
-  margin-bottom: var(--space-6);
-}
-.fsv-wl__dark-field {
-  height: 40px;
-  background: rgba(30,41,59,0.5);
-  border-radius: var(--r-lg);
-  border: 1px solid #334155;
-  margin-bottom: var(--space-4);
-}
-.fsv-wl__dark-btn {
-  height: 40px;
-  width: 33%;
-  background: #4f46e5;
-  border-radius: var(--r-lg);
-}
-.fsv-wl__popup {
-  position: absolute;
-  bottom: -16px;
-  right: 16px;
-  background: var(--bg-primary);
-  padding: var(--space-4);
-  border-radius: var(--r-xl);
-  box-shadow: 0 16px 32px -8px rgba(0,0,0,0.18);
-  border: 1px solid var(--border-light);
-  display: flex;
-  align-items: center;
-  gap: var(--space-4);
-  max-width: 90%;
-  animation: slide-up 0.4s 0.2s ease both;
-}
-.fsv-wl__avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: var(--r-full);
-  background: linear-gradient(135deg, #a855f7, #ec4899, #eab308);
-  flex-shrink: 0;
-  border: 2px solid var(--bg-primary);
-  box-shadow: var(--shadow-xs);
-}
-.fsv-wl__popup-body { flex: 1; min-width: 0; }
-.fsv-wl__popup-title {
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-semibold);
-  color: #1f2937;
-  margin-bottom: var(--space-1);
-}
-.fsv-wl__popup-row { display: flex; gap: var(--space-2); }
-.fsv-wl__popup-input {
-  height: 32px;
-  flex: 1;
-  background: var(--bg-grey-50);
-  border: 1px solid var(--border-medium);
-  border-radius: var(--r);
-  padding: 0 var(--space-2);
-  font-size: var(--fs-tiny);
-  color: var(--fg-muted);
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.fsv-wl__popup-apply {
-  height: 32px;
-  padding: 0 var(--space-3);
-  background: #4f46e5;
-  color: var(--bg-primary);
-  border-radius: var(--r);
-  font-size: var(--fs-tiny);
-  font-weight: var(--fw-medium);
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-}
 
-/* ─────────────────────────────────────────────────────────── */
-/* Visual: Generate PDF                                        */
-/* ─────────────────────────────────────────────────────────── */
-.fsv-pdf {
-  position: relative;
-  width: 100%;
-  max-width: 320px;
-  height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-4);
-}
-.fsv-pdf__form {
-  width: 144px;
-  height: 224px;
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(4px);
-  border-radius: var(--r-xl);
-  border: 1px solid rgba(216,180,254,0.4);
-  box-shadow: var(--shadow-xs);
-  padding: var(--space-3);
-  display: flex;
-  flex-direction: column;
-  z-index: 1;
-  animation: slide-from-left 0.4s ease both;
-}
-.fsv-pdf__form-header {
-  height: 12px;
-  width: 50%;
-  background: #ddd6fe;
-  border-radius: var(--r);
-  margin-bottom: var(--space-3);
-}
-.fsv-pdf__form-field {
-  height: 24px;
-  background: var(--bg-grey-50);
-  border-radius: var(--r);
-  border: 1px solid var(--border-light);
-  margin-bottom: var(--space-2);
-  flex: 1;
-}
-.fsv-pdf__form-btn {
-  height: 24px;
-  background: #a855f7;
-  border-radius: var(--r);
-  margin-top: var(--space-2);
-  flex-shrink: 0;
-}
-.fsv-pdf__arrow {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-}
-.fsv-pdf__chevron { animation: chevron-bounce 1.5s ease-in-out infinite; }
-
-.fsv-pdf__doc {
-  width: 144px;
-  height: 224px;
-  background: var(--bg-primary);
-  border-radius: var(--r-xl);
-  border: 1px solid var(--border-medium);
-  box-shadow: var(--shadow-md);
-  padding: var(--space-4);
-  position: relative;
-  z-index: 1;
-  animation: slide-from-right 0.4s 0.1s ease both;
-}
-.fsv-pdf__doc-corner {
-  position: absolute;
-  top: 0; right: 0;
-  width: 32px;
-  height: 32px;
-  overflow: hidden;
-  border-top-right-radius: var(--r-xl);
-}
-.fsv-pdf__doc-corner::after {
-  content: '';
-  position: absolute;
-  top: -10px; right: -10px;
-  width: 40px; height: 40px;
-  background: #f3e8ff;
-  transform: rotate(45deg);
-  border-bottom: 1px solid #e9d5ff;
-  border-left: 1px solid #e9d5ff;
-}
-.fsv-pdf__doc-title {
-  font-size: var(--fs-tiny);
-  font-weight: var(--fw-bold);
-  color: var(--fg-1);
-  margin-bottom: var(--space-2);
-  margin-top: var(--space-2);
-}
-.fsv-pdf__doc-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: var(--space-2);
-}
-.fsv-pdf__doc-label { width: 40px; height: 8px; background: var(--gray-200); border-radius: var(--r); }
-.fsv-pdf__doc-value { width: 32px; height: 8px; background: var(--fg-1); border-radius: var(--r); }
-.fsv-pdf__doc-divider {
-  width: 100%;
-  height: 1px;
-  background: var(--border-light);
-  margin-bottom: var(--space-2);
-}
-.fsv-pdf__doc-line {
-  height: 8px;
-  background: var(--bg-grey-100);
-  border-radius: var(--r);
-  margin-bottom: var(--space-2);
-}
-.fsv-pdf__doc-line--short { width: 80%; }
 
 /* ─────────────────────────────────────────────────────────── */
 /* Visual: Data Protection                                     */
@@ -1020,221 +709,4 @@ const activeTab = ref('collaboration')
   animation: slide-up 0.4s 0.2s ease both;
 }
 
-/* ─────────────────────────────────────────────────────────── */
-/* Visual: Automations                                         */
-/* ─────────────────────────────────────────────────────────── */
-.fsv-auto {
-  position: relative;
-  width: 100%;
-  max-width: 320px;
-  height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.fsv-auto__bg-card {
-  position: absolute;
-  inset: 8px;
-  background: rgba(255,255,255,0.6);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.8);
-  border-radius: var(--r-2xl);
-  padding: var(--space-6);
-  box-shadow: 0 8px 24px rgba(236,72,153,0.05);
-  transform: translate(-16px, -24px) rotate(-2deg);
-  z-index: 0;
-  animation: bg-card-in 0.6s 0.1s cubic-bezier(0.34,1.56,0.64,1) both;
-}
-.fsv-auto__bg-header {
-  height: 16px;
-  width: 50%;
-  background: rgba(229,231,235,0.8);
-  border-radius: var(--r-full);
-  margin-bottom: var(--space-6);
-}
-.fsv-auto__bg-avatar-row {
-  display: flex;
-  gap: var(--space-3);
-  align-items: center;
-  margin-bottom: var(--space-6);
-}
-.fsv-auto__bg-avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: var(--r-full);
-  background: linear-gradient(135deg, #fb923c, #f43f5e);
-  flex-shrink: 0;
-}
-.fsv-auto__bg-lines { flex: 1; display: flex; flex-direction: column; gap: var(--space-2); }
-.fsv-auto__bg-line {
-  height: 10px;
-  background: rgba(229,231,235,0.8);
-  border-radius: var(--r-full);
-}
-.fsv-auto__bg-line--short  { width: 33%; }
-.fsv-auto__bg-line--med    { width: 91%; }
-.fsv-auto__bg-line--short2 { width: 80%; }
-
-.fsv-auto__fg-card {
-  position: relative;
-  width: 90%;
-  background: var(--bg-primary);
-  border-radius: var(--r-2xl);
-  padding: var(--space-6);
-  box-shadow: 0 20px 40px -15px rgba(0,0,0,0.1);
-  border: 1px solid var(--border-light);
-  z-index: 1;
-  transform: translate(16px, 24px);
-  animation: fg-card-in 0.6s 0.2s cubic-bezier(0.34,1.56,0.64,1) both;
-}
-.fsv-auto__fg-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: var(--space-6);
-}
-.fsv-auto__fg-title {
-  font-weight: var(--fw-semibold);
-  color: var(--fg-1);
-  font-size: 15px;
-}
-.fsv-auto__toggle {
-  width: 32px;
-  height: 16px;
-  background: #e0e7ff;
-  border-radius: var(--r-full);
-  position: relative;
-  flex-shrink: 0;
-}
-.fsv-auto__toggle-dot {
-  position: absolute;
-  right: 2px;
-  top: 2px;
-  width: 12px;
-  height: 12px;
-  background: #6366f1;
-  border-radius: var(--r-full);
-  box-shadow: var(--shadow-xs);
-}
-.fsv-auto__tabs-row {
-  display: flex;
-  gap: var(--space-4);
-  border-bottom: 1px solid var(--border-light);
-  margin-bottom: var(--space-6);
-  padding-bottom: var(--space-2);
-}
-.fsv-auto__tab-link {
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-medium);
-  color: var(--fg-muted);
-  padding-bottom: var(--space-2);
-  cursor: default;
-}
-.fsv-auto__tab-link--active {
-  color: #4f46e5;
-  font-weight: var(--fw-semibold);
-  border-bottom: 2px solid #4f46e5;
-  margin-bottom: -10px;
-}
-.fsv-auto__field { margin-bottom: var(--space-4); }
-.fsv-auto__label {
-  font-size: var(--fs-tiny);
-  font-weight: var(--fw-semibold);
-  color: var(--fg-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  display: block;
-  margin-bottom: 6px;
-}
-.fsv-auto__input {
-  border: 1px solid var(--border-medium);
-  border-radius: var(--r-lg);
-  padding: var(--space-2) var(--space-3);
-  font-size: var(--fs-sm);
-  color: var(--fg-strong);
-  background: rgba(249,250,251,0.5);
-}
-
-/* ─────────────────────────────────────────────────────────── */
-/* Visual: Multi Language                                      */
-/* ─────────────────────────────────────────────────────────── */
-.fsv-ml {
-  position: relative;
-  width: 100%;
-  max-width: 320px;
-  height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.fsv-ml__form-card {
-  position: absolute;
-  inset: 8px;
-  background: var(--bg-primary);
-  border-radius: var(--r-2xl);
-  border: 1px solid #ede9fe;
-  box-shadow: var(--shadow-xs);
-  padding: var(--space-6);
-}
-.fsv-ml__form-header {
-  height: 20px;
-  width: 50%;
-  background: #ede9fe;
-  border-radius: var(--r);
-  margin-bottom: var(--space-6);
-}
-.fsv-ml__form-field {
-  height: 40px;
-  background: var(--bg-grey-50);
-  border-radius: var(--r);
-  border: 1px solid var(--border-light);
-  margin-bottom: var(--space-4);
-}
-.fsv-ml__dropdown {
-  position: absolute;
-  top: 32px;
-  right: -16px;
-  background: var(--bg-primary);
-  border-radius: var(--r-xl);
-  box-shadow: 0 20px 40px -10px rgba(0,0,0,0.15);
-  border: 1px solid var(--border-light);
-  padding: var(--space-2);
-  width: 192px;
-  z-index: 1;
-  animation: slide-up 0.4s 0.2s ease both;
-}
-.fsv-ml__dropdown-title {
-  font-size: var(--fs-tiny);
-  font-weight: var(--fw-semibold);
-  color: var(--fg-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding: var(--space-1) var(--space-2) var(--space-2);
-  margin-top: var(--space-1);
-}
-.fsv-ml__lang {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  padding: var(--space-2);
-  border-radius: var(--r);
-  cursor: default;
-  color: var(--fg-3);
-  font-size: var(--fs-xs);
-  transition: background 150ms;
-}
-.fsv-ml__lang:hover:not(.fsv-ml__lang--active) { background: var(--bg-grey-50); }
-.fsv-ml__lang--active {
-  background: #f5f3ff;
-  color: #7c3aed;
-  justify-content: space-between;
-}
-.fsv-ml__lang-name { font-weight: var(--fw-medium); flex: 1; }
-.fsv-ml__lang-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: var(--r-full);
-  background: #7c3aed;
-  flex-shrink: 0;
-}
 </style>

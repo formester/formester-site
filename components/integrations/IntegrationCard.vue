@@ -29,6 +29,33 @@
 <script>
 import { getStrapiImage } from '@/utils/strapiImage'
 
+const INTEGRATION_ICONS = {
+  'google tag manager': 'gtm.svg',
+  'google analytics': 'analytics.svg',
+  'facebook pixel': 'pixel.png',
+  'hubspot crm': 'hubspot.png',
+  'google sheets': 'google-sheets.png',
+  'slack': 'slack.png',
+  'calendly': 'calendly.svg',
+  'webhook': 'webhook.svg',
+  'stripe': 'stripe.svg',
+  'paypal': 'paypal.svg',
+  'recaptcha': 'recaptcha.svg',
+  'cloudflare turnstile': 'turnstile.svg',
+  'trustedform': 'trustedform.png',
+  'google forms': 'forms.svg',
+  'typeform': 'Typeform.svg',
+  'gmail': 'gmail.svg',
+  'outlook': 'ms_outlook.svg',
+  'sendgrid': 'sendgrid.svg',
+  'mailgun': 'mailgun.svg',
+  'amazon ses': 'aws-ses.svg',
+  'zapier': 'zapier.svg',
+  'ottokit (formerly suretriggers)': 'suretriggers.png',
+  'pabbly connect': 'pabbly.png',
+  'n8n': 'n8n.png',
+}
+
 export default {
   props: ['app'],
   computed: {
@@ -41,6 +68,10 @@ export default {
       }
       if (this.app.img) {
         return { src: `/integrations/${this.app.img}`, alt: this.app.name, width: null, height: null }
+      }
+      const localIcon = INTEGRATION_ICONS[this.app.name?.toLowerCase()]
+      if (localIcon) {
+        return { src: `/integrations/${localIcon}`, alt: this.app.name, width: null, height: null }
       }
       return { src: '', alt: this.app.name, width: null, height: null }
     }
