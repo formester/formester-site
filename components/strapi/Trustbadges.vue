@@ -156,6 +156,7 @@ function starsFor(badge) {
   align-items: center;
   gap: var(--space-5);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
+  cursor: default;
 }
 
 .badge-card:hover {
