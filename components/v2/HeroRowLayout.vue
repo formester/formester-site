@@ -87,7 +87,7 @@
             </div>
           </template>
 
-          <div v-else-if="heroRawHtml" class="hero-rl-v2__raw-html w-100" v-html="heroRawHtml" />
+          <RawHtml v-else-if="heroRawHtml" :markup="heroRawHtml" class="hero-rl-v2__raw-html w-100" />
 
           <nuxt-img
             v-else-if="heroImg.src"
@@ -110,6 +110,7 @@ import { getStrapiImage } from '@/utils/strapiImage'
 import SectionBadge from '@/components/UI/SectionBadge.vue'
 import FButton from '@/components/UI/FButton.vue'
 import ArrowRightIcon from '@/components/icons/ArrowRightIcon.vue'
+import RawHtml from '../strapi/RawHtml.vue'
 
 const props = defineProps({
   badge:          { type: Object,  default: () => null },
