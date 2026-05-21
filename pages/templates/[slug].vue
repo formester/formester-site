@@ -154,11 +154,8 @@
     </section>
 
     <!-- Raw HTML Blocks -->
-    <template
-      v-for="(block, index) in template.rawHtmlBlocks"
-      :key="index"
-    >
-      <StrapiRawHtml v-if="block && block.trim()" :markup="block?.content || block" />
+    <template v-for="(content, index) in rawHtmlBlockContents" :key="index">
+      <StrapiRawHtml :markup="content" />
     </template>
 
     <Faq v-if="!isEmpty(template.faqs)" :faqList="template.faqs" />
@@ -300,6 +297,11 @@ if (fetchError.value) {
 }
 
 const template = computed(() => fetchedData.value?.template || {})
+const rawHtmlBlockContents = computed(() =>
+  (template.value.rawHtmlBlocks ?? [])
+    .map(block => typeof (block?.content ?? block) === 'string' ? (block?.content ?? block).trim() : '')
+    .filter(Boolean)
+)
 const categories = computed(() => fetchedData.value?.categories || {})
 const data = computed(() => fetchedData.value?.data || null)
 const showcaseTabs = computed(() => fetchedData.value?.showcaseTabs || [])
