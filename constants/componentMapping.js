@@ -14,7 +14,7 @@ export default {
   'macro-components.embed-form-url': () => import('@/components/home/EmbedForm.vue'),
   'macro-components.testimonials': () => import('@/components/v2/testimonials/TestimonialsV2.vue'),
   'macro-components.cta': () => import('@/components/CallToActionSection.vue'),
-  'macro-components.hero-row-layout': () => import('@/components/HeroRowLayout.vue'),
+  'macro-components.hero-row-layout': () => import('@/components/v2/HeroRowLayout.vue'),
   'macro-components.three-column-benefits': () => import('@/components/features/ThreeColBenefits.vue'),
   'macro-components.feature-detail-section': () => import('@/components/features/FeatureDetailsSection.vue'),
   'macro-components.feature-showcase': () => import('@/components/features/FeatureShowcase.vue'),

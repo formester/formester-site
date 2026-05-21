@@ -192,5 +192,15 @@ export default defineNuxtConfig({
   // },
 
   // Compatibility
-  compatibilityDate: '2024-10-22'
+  compatibilityDate: '2024-10-22',
+
+  $development: {
+    experimental: {
+      defaults: {
+        useAsyncData: {
+          getCachedData: () => undefined,
+        },
+      },
+    },
+  },
 })

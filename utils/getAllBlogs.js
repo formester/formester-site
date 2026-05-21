@@ -21,7 +21,7 @@ async function _fetchAllBlogs() {
 }
 
 export async function getAllBlogs() {
-  if (!cachePromise) {
+  if (!cachePromise || import.meta.dev) {
     cachePromise = _fetchAllBlogs()
   }
   return cachePromise
