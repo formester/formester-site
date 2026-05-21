@@ -154,10 +154,6 @@ const youtubeEmbedUrl = computed(() =>
   youtubeVideoId.value ? `https://www.youtube.com/embed/${youtubeVideoId.value}?autoplay=1` : ''
 )
 
-function initials(name) {
-  if (!name) return '?'
-  return name.split(/\s+/).slice(0, 2).map(w => w[0].toUpperCase()).join('')
-}
 </script>
 
 <style scoped>
@@ -245,48 +241,6 @@ function initials(name) {
   font-size: var(--fs-sm);
   color: var(--fg-3);
   line-height: 1.4;
-}
-
-/* Integration grid */
-.hero-rl-v2__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-4);
-  max-width: 400px;
-  width: 100%;
-}
-
-.hero-rl-v2__card {
-  background: var(--bg-primary);
-  border: 1px solid var(--border-light);
-  border-radius: var(--r-2xl);
-  box-shadow: var(--shadow-sm);
-  aspect-ratio: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-5);
-  transition: box-shadow 140ms ease, border-color 140ms ease;
-}
-
-.hero-rl-v2__card--highlight {
-  border-color: var(--border-violet);
-  box-shadow: var(--focus-ring-primary);
-}
-
-.hero-rl-v2__icon {
-  width: 100%;
-  height: 100%;
-  max-width: 52px;
-  max-height: 52px;
-  object-fit: contain;
-}
-
-.hero-rl-v2__initials {
-  font-size: var(--fs-lg);
-  font-weight: var(--fw-bold);
-  color: var(--violet-500);
-  letter-spacing: -0.5px;
 }
 
 .hero-rl-v2__image {
@@ -415,8 +369,5 @@ function initials(name) {
     justify-content: center;
   }
 
-  .hero-rl-v2__grid {
-    max-width: 320px;
-  }
 }
 </style>
