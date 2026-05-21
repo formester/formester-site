@@ -56,7 +56,7 @@
 
         <!-- Right: icon grid, video, or fallback image -->
         <div class="col-lg-6 d-flex align-items-center justify-content-center">
-          <template v-if="videoUrl">
+          <template v-if="video_url">
             <div class="hero-rl-v2__video-wrapper" @click="showOverlay = true">
               <nuxt-img
                 :src="thumbImg.src || youtubeThumbnailUrl"
@@ -68,7 +68,7 @@
               <button class="hero-rl-v2__play-btn" aria-label="Play video">
                 <nuxt-img src="/play-button.svg" alt="Play video" width="64" height="64" />
               </button>
-              <a :href="videoUrl" class="visually-hidden" target="_blank" rel="noopener noreferrer">Watch video</a>
+              <a :href="video_url" class="visually-hidden" target="_blank" rel="noopener noreferrer">Watch video</a>
             </div>
 
             <div v-if="showOverlay" class="hero-rl-v2__overlay" @click.self="showOverlay = false">
@@ -123,7 +123,7 @@ const props = defineProps({
   clickTriggers:  { type: Array,   default: () => null },
   heroImage:      { type: Object,  default: () => null },
   heroRawHtml:    { type: String,  default: '' },
-  videoUrl:       { type: String,  default: '' },
+  video_url:       { type: String,  default: '' },
   thumbnail:      { type: Object,  default: () => null },
   stats:          { type: Array,   default: () => [] },  // [{ id?, value, label }]
 })
@@ -141,8 +141,8 @@ const heroImg = computed(() => getStrapiImage(props.heroImage))
 const thumbImg = computed(() => getStrapiImage(props.thumbnail))
 
 const youtubeVideoId = computed(() => {
-  if (!props.videoUrl) return ''
-  const match = props.videoUrl.match(/(?:youtube\.com.*[\?&]v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/)
+  if (!props.video_url) return ''
+  const match = props.video_url.match(/(?:youtube\.com.*[\?&]v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/)
   return match ? match[1] : ''
 })
 
