@@ -72,7 +72,7 @@ async function _fetchAllFeatures() {
 }
 
 export async function getAllFeatures() {
-  if (!cachePromise) {
+  if (!cachePromise || import.meta.dev) {
     cachePromise = _fetchAllFeatures()
   }
   return cachePromise

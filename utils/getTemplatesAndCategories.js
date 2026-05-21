@@ -61,7 +61,7 @@ async function _fetchTemplatesAndCategories(options = {}) {
 }
 
 const getTemplatesAndCategories = async (options = {}) => {
-  if (options.no_cache) {
+  if (options.no_cache || import.meta.dev) {
     return _fetchTemplatesAndCategories(options)
   }
   if (!cachePromise) {
@@ -88,7 +88,7 @@ async function _fetchCategorieRoutes() {
 }
 
 export async function getCategorieRoutes() {
-  if (!categorieRoutesPromise) {
+  if (!categorieRoutesPromise || import.meta.dev) {
     categorieRoutesPromise = _fetchCategorieRoutes()
   }
   return categorieRoutesPromise

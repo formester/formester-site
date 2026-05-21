@@ -158,7 +158,7 @@ const youtubeEmbedUrl = computed(() =>
 
 <style scoped>
 .hero-rl-v2 {
-  background: var(--bg-grey-50);
+  background: var(--bg-grey-75);
   padding-top: var(--space-30);
   padding-bottom: var(--space-20);
 }
@@ -256,6 +256,7 @@ const youtubeEmbedUrl = computed(() =>
   border-radius: var(--r-2xl);
   overflow: hidden;
   box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
 }
 
 .hero-rl-v2__video-thumb {

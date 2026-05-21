@@ -75,7 +75,7 @@ async function _fetchAllPages() {
 }
 
 export async function getAllPages() {
-  if (!cachePromise) {
+  if (!cachePromise || import.meta.dev) {
     cachePromise = _fetchAllPages()
   }
   return cachePromise
