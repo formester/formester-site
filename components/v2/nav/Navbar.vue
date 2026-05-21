@@ -307,8 +307,8 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .navbar {
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
   top: 0;
 }
 
@@ -337,6 +337,11 @@ onBeforeUnmount(() => {
   width: 100%;
   max-width: 1160px;
   margin: 0 auto;
+  transition: border-radius 0.2s ease;
+}
+
+.floating-navbar:has(.navbar-collapse.show) {
+  border-radius: 16px;
 }
 
 nav {
@@ -632,35 +637,8 @@ nav {
   margin-left: auto;
 }
 
-/* ---- Tablet: full-width, no floating pill ---- */
+/* ---- Tablet + mobile: keep floating pill, show hamburger ---- */
 @media (max-width: 1199px) {
-  .navbar-container {
-    top: 0;
-    padding: 0;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid #e4e7ec;
-  }
-
-  .floating-navbar {
-    border-radius: 0;
-    box-shadow: none;
-    max-width: 100%;
-    padding: 8px 0;
-  }
-
-  .navbar {
-    background-color: transparent;
-  }
-
-  .container {
-    margin-inline: 0;
-    width: 100% !important;
-    max-width: none !important;
-    padding-left: 24px !important;
-    padding-right: 16px !important;
-  }
-
   .nav-mobile-actions {
     display: flex;
   }
@@ -719,10 +697,10 @@ nav {
 
 }
 
-/* ---- Mobile: hide Log In, tighter layout ---- */
+/* ---- Mobile: tighter side gutter ---- */
 @media (max-width: 767px) {
   .navbar-container {
-    padding: 0;
+    padding: 0 12px;
   }
 
   .container {
