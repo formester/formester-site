@@ -158,7 +158,7 @@
       v-for="(block, index) in template.rawHtmlBlocks"
       :key="index"
     >
-      <StrapiRawHtml v-if="block && block.trim()" :markup="block" />
+      <StrapiRawHtml v-if="block && block.trim()" :markup="block?.content || block" />
     </template>
 
     <Faq v-if="!isEmpty(template.faqs)" :faqList="template.faqs" />
