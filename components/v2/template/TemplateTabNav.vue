@@ -1,25 +1,29 @@
 <template>
   <nav class="tmpl-detail__tab-nav" aria-label="Template sections">
     <div class="tmpl-detail__tab-nav-inner">
-      <button
-        v-for="tab in tabs"
-        :key="tab.id"
-        type="button"
-        class="tmpl-detail__tab-btn"
+      <button v-for="tab in tabs" :key="tab.id" type="button" class="tmpl-detail__tab-btn"
         :class="{ 'tmpl-detail__tab-btn--active': activeTabId === tab.id }"
-        @click="$emit('update:activeTabId', tab.id)"
-      >{{ tab.name }}</button>
+        @click="$emit('update:activeTabId', tab.id)">{{ tab.name }}</button>
     </div>
   </nav>
 </template>
 
 <script setup>
-defineProps({
-  tabs:        { type: Array, required: true },
+import { watch } from 'vue';
+
+const props = defineProps({
+  tabs: { type: Array, required: true },
   activeTabId: { type: String, default: null },
 })
 
-defineEmits(['update:activeTabId'])
+const emit = defineEmits(['update:activeTabId'])
+watch(() => props.tabs, (newTabs) => {
+  if (!newTabs.find(tab => tab.id === props.activeTabId)) {
+    // If the current activeTabId is not in the new tabs list, reset it to the first tab's id or null
+    const firstTabId = newTabs.length > 0 ? newTabs[0].id : null;
+    emit('update:activeTabId', firstTabId);
+  }
+}, { immediate: true })
 </script>
 
 <style scoped>
