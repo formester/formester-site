@@ -1,17 +1,24 @@
 <template>
   <div class="tmpl-detail">
 
-    <TemplateHero
-      :template="templateData"
-      :pdf-data="pdfData"
-    />
+    <div
+      class="tmpl-detail__sticky-header"
+      :style="{ '--hero-h': heroHeight + 'px' }"
+    >
+      <div ref="heroWrapRef">
+        <TemplateHero
+          :template="templateData"
+          :pdf-data="pdfData"
+        />
+      </div>
 
-    <TemplateTabNav
-      v-if="templateData.tabs?.length"
-      :tabs="templateData.tabs"
-      :active-tab-id="activeTabId"
-      @update:active-tab-id="activeTabId = $event"
-    />
+      <TemplateTabNav
+        v-if="templateData.tabs?.length"
+        :tabs="templateData.tabs"
+        :active-tab-id="activeTabId"
+        @update:active-tab-id="activeTabId = $event"
+      />
+    </div>
 
     <TemplateTabContent
       :template="templateData"
@@ -66,11 +73,30 @@ const templateData = computed(() => {
 })
 
 const activeTabId = ref(templateData.value.tabs?.[0]?.id ?? null)
+
+const heroWrapRef = useTemplateRef('heroWrapRef')
+const heroHeight = ref(0)
+
+onMounted(() => {
+  const ro = new ResizeObserver(([entry]) => {
+    heroHeight.value = entry.contentRect.height
+  })
+  if (heroWrapRef.value) ro.observe(heroWrapRef.value)
+  onBeforeUnmount(() => ro.disconnect())
+})
 </script>
 
 <style scoped>
 .tmpl-detail {
   /* consumed by TemplateHero via CSS custom property cascade */
   --hero-top-pad: 6rem;
+}
+
+.tmpl-detail__sticky-header {
+  position: sticky;
+  /* stick when hero has scrolled fully out; 80px = site navbar height */
+  top: calc(-1 * var(--hero-h, 0px) + 80px);
+  z-index: 20;
+  background: var(--bg-primary);
 }
 </style>
