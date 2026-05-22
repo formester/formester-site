@@ -28,6 +28,10 @@
         :faqList="template.faqs"
         badge=""
       />
+      <div v-else class="tmpl-detail__faq-empty">
+<p class="tmpl-detail__faq-empty-text">Have questions about this template?</p>
+        <FButton href="/contact-us" variant="primary" size="md">Ask a Question</FButton>
+      </div>
     </div>
 
     <!-- Custom UUID tabs -->
@@ -65,6 +69,7 @@
 
 <script setup>
 import TemplateOverviewPanel from './TemplateOverviewPanel.vue'
+import FButton from '@/components/UI/FButton.vue'
 
 const V2FaqSection = defineAsyncComponent(() => import('@/components/v2/FaqSection.vue'))
 
@@ -87,6 +92,24 @@ const customTabs = computed(() =>
 .tmpl-detail__content-area {
   min-height: 200px;
 }
+
+/* FAQ empty placeholder */
+.tmpl-detail__faq-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6);
+  padding-block: var(--space-16);
+  text-align: center;
+}
+
+.tmpl-detail__faq-empty-text {
+  font-size: var(--fs-lg);
+  color: var(--fg-2);
+  margin: 0;
+}
+
 
 /* Legacy fallback */
 .tmpl-detail__legacy-about {
