@@ -30,7 +30,7 @@
       />
       <div v-else class="tmpl-detail__faq-empty">
 <p class="tmpl-detail__faq-empty-text">Have questions about this template?</p>
-        <FButton href="/contact-us" variant="primary" size="md">Ask a Question</FButton>
+        <FButton href="/contact" variant="primary" size="md">Ask a Question</FButton>
       </div>
     </div>
 
