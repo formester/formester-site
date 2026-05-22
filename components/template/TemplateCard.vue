@@ -1,17 +1,20 @@
 <template>
   <div class="template">
     <NuxtLink :to="`/templates/${template.slug}/`">
-      <div v-if="loading" class="image-skeleton"></div>
-      <img
-        class="img-fluid pointer template-preview__img"
-        :class="{ hidden: loading }"
-        :src="previewImageUrl"
-        :alt="template.name"
-        width="1200"
-        height="738"
-        loading="lazy"
-        @load="loading = false"
-      />
+      <div class="template-image-wrapper">
+        <div v-if="loading" class="image-skeleton"></div>
+        <img
+          class="img-fluid pointer template-preview__img"
+          :class="{ 'img-invisible': loading }"
+          :src="previewImageUrl"
+          :alt="template.name"
+          width="1200"
+          height="738"
+          loading="lazy"
+          @load="loading = false"
+          @error="loading = false"
+        />
+      </div>
       <div class="template-content">
         <h3 class="template-name pointer">
           {{ template?.name }}
@@ -93,17 +96,21 @@ export default {
   text-overflow: ellipsis;
 }
 
+.template-image-wrapper {
+  position: relative;
+}
+
 .image-skeleton {
-  width: 100%;
-  padding-top: 61.5%; /* 738/1200 = 0.615 (61.5%) */
+  position: absolute;
+  inset: 0;
   border-radius: 8px;
   animation: skeleton-loading 1s linear infinite alternate;
-  position: relative;
+  z-index: 1;
 }
 
 .template-preview__img {
   display: block;
-  transition: all 0.4s ease;
+  transition: opacity 0.3s ease, transform 0.4s ease;
   overflow: hidden;
   width: 100%;
   aspect-ratio: 1200/738;
@@ -111,8 +118,8 @@ export default {
   object-position: top;
 }
 
-.template-preview__img.hidden {
-  display: none;
+.template-preview__img.img-invisible {
+  opacity: 0;
 }
 
 @media only screen and (max-width: 768px) {
