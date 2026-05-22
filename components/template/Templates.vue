@@ -71,6 +71,13 @@
           />
           <h4 class="mt-3">No Template Available</h4>
         </div>
+        <template v-if="activeCategory?.htmlBlocks?.length">
+          <StrapiRawHtml
+            v-for="block in activeCategory.htmlBlocks"
+            :key="block.name"
+            :markup="block.content"
+          />
+        </template>
       </div>
       <div class="left-sidebar">
         <TemplateCategories
