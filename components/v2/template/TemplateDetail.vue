@@ -3,14 +3,14 @@
 
     <div class="tmpl-detail__sticky-header" :style="{ '--hero-h': heroHeight + 'px' }">
       <div ref="heroWrapRef">
-        <TemplateHero :template="templateData" :pdf-data="pdfData" />
+        <TemplateHero :template="template" :pdf-data="pdfData" />
       </div>
 
-      <TemplateTabNav v-if="templateData.tabs?.length" :tabs="templateData.tabs" :active-tab-id="activeTabId"
+      <TemplateTabNav v-if="template.tabs?.length" :tabs="template.tabs" :active-tab-id="activeTabId"
         @update:active-tab-id="activeTabId = $event" />
     </div>
 
-    <TemplateTabContent :template="templateData" :active-tab-id="activeTabId" />
+    <TemplateTabContent :template="template" :active-tab-id="activeTabId" />
 
   </div>
 </template>
@@ -19,8 +19,6 @@
 import TemplateHero from './TemplateHero.vue'
 import TemplateTabNav from './TemplateTabNav.vue'
 import TemplateTabContent from './TemplateTabContent.vue'
-
-const MoreTemplates = defineAsyncComponent(() => import('@/components/template/MoreTemplates.vue'))
 
 const props = defineProps({
   template: { type: Object, required: true },
@@ -33,33 +31,7 @@ const props = defineProps({
   showMoreTemplates: { type: Boolean, default: true },
 })
 
-const hasHtmlBlockForTab = (tabId) => props.template.rawHtmlBlocks?.some(b => b.tabId && b.tabId === tabId)
-
-const templateData = computed(() => {
-  // return early if tabs are defined and we can be sure about their content (i.e. no possibility of empty "Overview" or "FAQ" tabs)
-  if (props.template.tabs?.length) return {
-    ...props.template, tabs: props.template.tabs.filter(tab => {
-      if (tab.id == 'overview') return props.template.aboutTemplate?.replace(/(<([^>]+)>)/gi, '').trim() || hasHtmlBlockForTab('overview')
-      if (tab.id == 'faq') return props.template.faqs?.length || hasHtmlBlockForTab('faq')
-      return true
-    })
-  }
-
-  // fallback for unmigrated older data : use 'overview' and 'faq' tabs if there's content for them, even if tabs aren't defined.
-  const syntheticTabs = []
-
-  const hasOverview = props.template.aboutTemplate?.replace(/(<([^>]+)>)/gi, '').trim()
-  if (hasOverview) syntheticTabs.push({ id: 'overview', name: 'Overview' })
-
-  if (props.template.faqs?.length) syntheticTabs.push({ id: 'faq', name: 'FAQ' })
-  console.log('faqs', props.template.faqs)
-
-  return syntheticTabs.length
-    ? { ...props.template, tabs: syntheticTabs }
-    : props.template
-})
-
-const activeTabId = ref(templateData.value.tabs?.[0]?.id ?? null)
+const activeTabId = ref(props.template.tabs?.[0]?.id ?? null)
 
 const heroWrapRef = useTemplateRef('heroWrapRef')
 const heroHeight = ref(0)

@@ -154,7 +154,9 @@ const meta = computed(() => {
 })
 
 const faqsSchema = computed(() => {
-  const mainEntity = (template.value.faqs || []).map((faq) => {
+  const faqTab = template.value.tabs?.find(t => t.id === 'faq' && t.props?.faqList?.length)
+  const faqs = faqTab?.props?.faqList ?? []
+  const mainEntity = faqs.map((faq) => {
     return {
       '@type': 'Question',
       name: faq.question,

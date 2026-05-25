@@ -15,6 +15,7 @@ async function _fetchTemplatesAndCategories(options = {}) {
       ...cacheBust,
       with_details: true,
       include_all_categories: true,
+      contract: 'v2',
     },
   })
 

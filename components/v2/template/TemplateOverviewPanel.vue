@@ -2,7 +2,7 @@
   <div class="tmpl-detail__two-col">
     <div class="tmpl-detail__main">
       <h2 class="tmpl-detail__content-h2">About this template</h2>
-      <div class="tmpl-detail__about-html" v-html="template.aboutTemplate" />
+      <div class="tmpl-detail__about-html" v-html="aboutTemplate" />
     </div>
     <aside class="tmpl-detail__sidebar">
       <div class="tmpl-detail__sidebar-block">
@@ -16,10 +16,10 @@
           <span class="tmpl-detail__sidebar-text">Last updated: <strong>{{ formattedDate }}</strong></span>
         </div>
       </div>
-      <div v-if="template.categories?.length" class="tmpl-detail__sidebar-block">
+      <div v-if="categories?.length" class="tmpl-detail__sidebar-block">
         <h3 class="tmpl-detail__sidebar-h3">Category</h3>
         <div class="tmpl-detail__chips">
-          <span v-for="cat in template.categories" :key="cat.name" class="tmpl-detail__chip">{{ cat.name }}</span>
+          <span v-for="cat in categories" :key="cat.name" class="tmpl-detail__chip">{{ cat.name }}</span>
         </div>
       </div>
     </aside>
@@ -28,16 +28,18 @@
 
 <script setup>
 const props = defineProps({
-  template: { type: Object, required: true },
+  aboutTemplate: { type: String, default: '' },
+  updatedAt:     { type: String, default: null },
+  categories:    { type: Array, default: () => [] },
 })
 
 const formattedDate = computed(() => {
-  if (!props.template.updatedAt) return ''
+  if (!props.updatedAt) return ''
   return new Intl.DateTimeFormat('en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
-  }).format(new Date(props.template.updatedAt))
+  }).format(new Date(props.updatedAt))
 })
 </script>
 
