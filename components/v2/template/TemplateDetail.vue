@@ -1,39 +1,16 @@
 <template>
   <div class="tmpl-detail">
 
-    <div
-      class="tmpl-detail__sticky-header"
-      :style="{ '--hero-h': heroHeight + 'px' }"
-    >
+    <div class="tmpl-detail__sticky-header" :style="{ '--hero-h': heroHeight + 'px' }">
       <div ref="heroWrapRef">
-        <TemplateHero
-          :template="templateData"
-          :pdf-data="pdfData"
-        />
+        <TemplateHero :template="templateData" :pdf-data="pdfData" />
       </div>
 
-      <TemplateTabNav
-        v-if="templateData.tabs?.length"
-        :tabs="templateData.tabs"
-        :active-tab-id="activeTabId"
-        @update:active-tab-id="activeTabId = $event"
-      />
+      <TemplateTabNav v-if="templateData.tabs?.length" :tabs="templateData.tabs" :active-tab-id="activeTabId"
+        @update:active-tab-id="activeTabId = $event" />
     </div>
 
-    <TemplateTabContent
-      :template="templateData"
-      :active-tab-id="activeTabId"
-    />
-
-    <!-- <MoreTemplates
-      v-if="showMoreTemplates"
-      :categories="categories"
-      :template-slug="template.slug"
-      :showcase-tabs="showcaseTabs"
-      :has-custom-showcase="hasCustomShowcase"
-      :title="moreTemplatesTitle"
-      :description="moreTemplatesDescription"
-    /> -->
+    <TemplateTabContent :template="templateData" :active-tab-id="activeTabId" />
 
   </div>
 </template>
@@ -46,19 +23,29 @@ import TemplateTabContent from './TemplateTabContent.vue'
 const MoreTemplates = defineAsyncComponent(() => import('@/components/template/MoreTemplates.vue'))
 
 const props = defineProps({
-  template:                { type: Object,           required: true },
-  pdfData:                 { type: Object,           default: null },
-  categories:              { type: [Object, Array],  default: () => ({}) },
-  showcaseTabs:            { type: Array,            default: () => [] },
-  hasCustomShowcase:       { type: Boolean,          default: false },
-  moreTemplatesTitle:      { type: Array,            default: () => [] },
-  moreTemplatesDescription:{ type: String,           default: '' },
-  showMoreTemplates:       { type: Boolean,          default: true },
+  template: { type: Object, required: true },
+  pdfData: { type: Object, default: null },
+  categories: { type: [Object, Array], default: () => ({}) },
+  showcaseTabs: { type: Array, default: () => [] },
+  hasCustomShowcase: { type: Boolean, default: false },
+  moreTemplatesTitle: { type: Array, default: () => [] },
+  moreTemplatesDescription: { type: String, default: '' },
+  showMoreTemplates: { type: Boolean, default: true },
 })
 
-const templateData = computed(() => {
-  if (props.template.tabs?.length) return props.template
+const hasHtmlBlockForTab = (tabId) => props.template.rawHtmlBlocks?.some(b => b.tabId && b.tabId === tabId)
 
+const templateData = computed(() => {
+  // return early if tabs are defined and we can be sure about their content (i.e. no possibility of empty "Overview" or "FAQ" tabs)
+  if (props.template.tabs?.length) return {
+    ...props.template, tabs: props.template.tabs.filter(tab => {
+      if (tab.id == 'overview') return props.template.aboutTemplate?.replace(/(<([^>]+)>)/gi, '').trim() || hasHtmlBlockForTab('overview')
+      if (tab.id == 'faq') return props.template.faqs?.length || hasHtmlBlockForTab('faq')
+      return true
+    })
+  }
+
+  // fallback for unmigrated older data : use 'overview' and 'faq' tabs if there's content for them, even if tabs aren't defined.
   const syntheticTabs = []
 
   const hasOverview = props.template.aboutTemplate?.replace(/(<([^>]+)>)/gi, '').trim()
