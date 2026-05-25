@@ -158,7 +158,9 @@ const youtubeEmbedUrl = computed(() =>
 
 <style scoped>
 .hero-rl-v2 {
-  background: var(--bg-grey-75);
+  background:
+    radial-gradient(ellipse 700px 320px at 85% 10%, rgba(74, 21, 75, 0.06), transparent 70%),
+    linear-gradient(180deg, var(--violet-25) 0%, rgba(247, 243, 255, 0) 80%);
   padding-top: var(--space-30);
   padding-bottom: var(--space-20);
 }
