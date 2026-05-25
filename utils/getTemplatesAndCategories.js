@@ -1,5 +1,6 @@
 import { STRAPI_URL, APP_URL } from '../constants/urls.js'
 import fetchWithRetry from './fetchWithRetry.js'
+import { adaptTemplateToV2 } from './adaptTemplateToV2.js'
 
 let cachePromise = null
 let categorieRoutesPromise = null
@@ -15,7 +16,6 @@ async function _fetchTemplatesAndCategories(options = {}) {
       ...cacheBust,
       with_details: true,
       include_all_categories: true,
-      contract: 'v2',
     },
   })
 
@@ -35,10 +35,12 @@ async function _fetchTemplatesAndCategories(options = {}) {
     },
   })
 
-  templates = templates.map((template) => ({
-    ...template,
-    description: template.description || dummyDescription,
-  }))
+  templates = templates.map((template) =>
+    adaptTemplateToV2({
+      ...template,
+      description: template.description || dummyDescription,
+    })
+  )
 
   const templateRoutes = templates.map((template) => {
     const pdfTemplate = data.find(

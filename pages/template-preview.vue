@@ -13,6 +13,8 @@
 </template>
 
 <script setup>
+import { adaptTemplateToV2 } from '@/utils/adaptTemplateToV2'
+
 useHead({
   title: 'Template Preview',
   meta: [{ name: 'robots', content: 'noindex, nofollow' }],
@@ -33,7 +35,7 @@ const { data: template, pending, error } = await useAsyncData(
     const res = await $fetch(`${config.public.appUrl}/templates/${slug}.json`, {
       params: { include_all_categories: true },
     })
-    return res
+    return adaptTemplateToV2(res)
   },
   { server: false }
 )
