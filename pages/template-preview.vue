@@ -33,7 +33,7 @@ const { data: template, pending, error } = await useAsyncData(
   `template-preview-${slug}`,
   async () => {
     const res = await $fetch(`${config.public.appUrl}/templates/${slug}.json`, {
-      params: { include_all_categories: true },
+      params: { include_all_categories: true, include_related_templates: true },
     })
     return adaptTemplateToV2(res)
   },
