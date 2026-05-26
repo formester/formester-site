@@ -19,7 +19,14 @@
       <div v-if="categories?.length" class="tmpl-detail__sidebar-block">
         <h3 class="tmpl-detail__sidebar-h3">Category</h3>
         <div class="tmpl-detail__chips">
-          <span v-for="cat in categories" :key="cat.name" class="tmpl-detail__chip">{{ cat.name }}</span>
+          <template v-for="cat in categories" :key="cat.name">
+            <NuxtLink
+              v-if="cat.slug"
+              :to="`/templates/categories/${cat.slug}`"
+              class="tmpl-detail__chip tmpl-detail__chip--link"
+            >{{ cat.name }}</NuxtLink>
+            <span v-else class="tmpl-detail__chip">{{ cat.name }}</span>
+          </template>
         </div>
       </div>
     </aside>
@@ -167,6 +174,12 @@ const formattedDate = computed(() => {
   font-weight: var(--fw-medium);
   color: var(--fg-2);
   background: var(--bg-primary);
+  text-decoration: none;
+}
+
+.tmpl-detail__chip--link:hover {
+  border-color: var(--violet-500);
+  color: var(--violet-500);
 }
 
 .tmpl-detail__creator {
