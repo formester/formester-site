@@ -1,6 +1,6 @@
 export function adaptTemplateToV2(template) {
   const tabs = buildTabs(template)
-  const { aboutTemplate, faqs, rawHtmlBlocks, tabs: _rawTabs, ...rest } = template
+  const { aboutTemplate, faqs, rawHtmlBlocks, tabs: _rawTabs, relatedTemplates, ...rest } = template
   return { ...rest, tabs }
 }
 
@@ -15,7 +15,7 @@ function overviewHasContent(aboutTemplate) {
 }
 
 function buildTabs(template) {
-  const { aboutTemplate, faqs, rawHtmlBlocks, tabs: rawTabs, updatedAt, categories } = template
+  const { aboutTemplate, faqs, rawHtmlBlocks, tabs: rawTabs, updatedAt, categories, relatedTemplates } = template
   const tabs = []
 
   // Overview
@@ -38,8 +38,15 @@ function buildTabs(template) {
       props: { faqList: faqs, badge: '' } })
   }
 
+  // Related Templates
+  if (relatedTemplates?.length) {
+    tabs.push({ id: 'related', name: 'Related Templates', type: 'macro-components.related-templates',
+      props: { relatedTemplates } })
+  }
+
   // Custom UUID tabs
-  const customDefs = rawTabs?.filter(t => t.id !== 'overview' && t.id !== 'faq') ?? []
+  const reservedIds = new Set(['overview', 'faq', 'related'])
+  const customDefs = rawTabs?.filter(t => !reservedIds.has(t.id)) ?? []
   customDefs.forEach(tabDef => {
     tabs.push({ id: tabDef.id, name: tabDef.name, type: 'micro-components.raw-html',
       props: { markup: rawHtmlFor(rawHtmlBlocks, tabDef.id) ?? '' } })

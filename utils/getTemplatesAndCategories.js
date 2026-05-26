@@ -16,6 +16,7 @@ async function _fetchTemplatesAndCategories(options = {}) {
       ...cacheBust,
       with_details: true,
       include_all_categories: true,
+      include_related_templates: true,
     },
   })
 

@@ -40,4 +40,5 @@ export default {
   'macro-components.ai-hero': () => import('@/components/features/AiHero.vue'),
   'macro-components.template-showcase': () => import('@/components/strapi/TemplateShowcase.vue'),
   'macro-components.overview-panel': () => import('@/components/v2/template/TemplateOverviewPanel.vue'),
+  'macro-components.related-templates': () => import('@/components/v2/template/TemplateRelatedPanel.vue'),
 }
