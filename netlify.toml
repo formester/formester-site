@@ -5,3 +5,8 @@
 [build.environment]
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=4096"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
