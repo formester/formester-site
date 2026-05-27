@@ -55,9 +55,9 @@ export function adaptTemplateToV2(template) {
 }
 
 function rawHtmlFor(rawHtmlBlocks, tabId) {
-  const blocks = rawHtmlBlocks?.filter(b => b.tabId === tabId) ?? []
+  const blocks = rawHtmlBlocks?.filter((b) => b?.tabId === tabId) ?? []
   if (!blocks.length) return null
-  return blocks.map(b => b.content).join('')
+  return blocks.map((b) => b.content).join('')
 }
 
 function overviewHasContent(aboutTemplate) {
@@ -71,36 +71,25 @@ function overviewHasContent(aboutTemplate) {
 function buildTabEntry(tabDef, { aboutTemplate, faqs, rawHtmlBlocks, updatedAt, categories, relatedTemplates }) {
   const { id, name } = tabDef
 
-  if (id === 'overview') {
-    const html = rawHtmlFor(rawHtmlBlocks, 'overview')
-    if (html) {
-      return { id, name, type: 'micro-components.raw-html', props: { markup: html } }
-    }
-    if (overviewHasContent(aboutTemplate)) {
-      return { id, name, type: 'macro-components.overview-panel', props: { aboutTemplate, updatedAt, categories } }
-    }
+  // Closes over id, name, rawHtmlBlocks; only the varying parts are passed in.
+  const reserved = (hasContent, type, props) => {
+    const html = rawHtmlFor(rawHtmlBlocks, id)
+    if (html) return { id, name, type: 'micro-components.raw-html', props: { markup: html } }
+    if (hasContent) return { id, name, type, props }
     return null
   }
 
-  if (id === 'faq') {
-    const html = rawHtmlFor(rawHtmlBlocks, 'faq')
-    if (html) {
-      return { id, name, type: 'micro-components.raw-html', props: { markup: html } }
-    }
-    if (faqs?.length) {
-      return { id, name, type: 'macro-components.faqs', props: { faqList: faqs, badge: '' } }
-    }
-    return null
-  }
+  if (id === 'overview')
+    return reserved(overviewHasContent(aboutTemplate), 'macro-components.overview-panel', {
+      aboutTemplate,
+      updatedAt,
+      categories,
+    })
+  if (id === 'faq') return reserved(faqs?.length, 'macro-components.faqs', { faqList: faqs, badge: '' })
+  if (id === 'related')
+    return reserved(relatedTemplates?.length, 'macro-components.related-templates', { relatedTemplates })
 
-  if (id === 'related') {
-    if (relatedTemplates?.length) {
-      return { id, name, type: 'macro-components.related-templates', props: { relatedTemplates } }
-    }
-    return null
-  }
-
-  // Custom UUID tab
+  // Custom UUID tab — always renders, raw HTML only (empty string if no block)
   const html = rawHtmlFor(rawHtmlBlocks, id)
   return { id, name, type: 'micro-components.raw-html', props: { markup: html ?? '' } }
 }
@@ -111,6 +100,8 @@ function buildTabs(template) {
   if (!rawTabs?.length) return []
 
   return rawTabs
-    .map(tabDef => buildTabEntry(tabDef, { aboutTemplate, faqs, rawHtmlBlocks, updatedAt, categories, relatedTemplates }))
+    .map((tabDef) =>
+      buildTabEntry(tabDef, { aboutTemplate, faqs, rawHtmlBlocks, updatedAt, categories, relatedTemplates }),
+    )
     .filter(Boolean)
 }
