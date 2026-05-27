@@ -39,4 +39,6 @@ export default {
    'micro-components.raw-html': () => import('@/components/strapi/RawHtml.vue'),
   'macro-components.ai-hero': () => import('@/components/features/AiHero.vue'),
   'macro-components.template-showcase': () => import('@/components/strapi/TemplateShowcase.vue'),
+  'macro-components.overview-panel': () => import('@/components/v2/template/TemplateOverviewPanel.vue'),
+  'macro-components.related-templates': () => import('@/components/v2/template/TemplateRelatedPanel.vue'),
 }
