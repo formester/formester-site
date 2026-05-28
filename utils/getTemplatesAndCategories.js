@@ -43,6 +43,9 @@ async function _fetchTemplatesAndCategories(options = {}) {
     })
   )
 
+  const toCardShape = ({ id, slug, name, description, previewImageUrl }) =>
+    ({ id, slug, name, description, previewImageUrl })
+
   const templateRoutes = templates.map((template) => {
     const pdfTemplate = data.find(
       (pdfTemplate) => pdfTemplate.slug === template.slug,
@@ -54,7 +57,7 @@ async function _fetchTemplatesAndCategories(options = {}) {
   })
   templateRoutes.push({
     route: `/templates`,
-    payload: { templates, categories },
+    payload: { templates: templates.map(toCardShape), categories },
   })
 
   const result = { templateRoutes, templates, categories }
