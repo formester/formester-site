@@ -26,7 +26,8 @@ const resolvedComponents = computed(() => {
 
 const contentRef = useTemplateRef('contentRef')
 
-watch(() => props.activeTabId, () => {
+watch(() => props.activeTabId, (newVal, oldVal) => {
+  if (!oldVal) return
   nextTick(() => {
     contentRef.value?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   })
