@@ -3,10 +3,12 @@
     <Templates
       :activeCategory="null"
       :templates="paginatedTemplates"
+      :allTemplates="templates"
       :templateCategories="categories"
       :isPaginated="true"
+      @search-active="isSearchActive = $event"
     />
-    <nav v-if="totalPages > 1" class="container">
+    <nav v-if="totalPages > 1 && !isSearchActive" class="container">
       <div class="custom-pagination-bar">
         <nuxt-link
           v-if="currentPage > 1"
@@ -68,6 +70,8 @@ const currentPage = computed(() => {
 
 // Fetch template data using shared composable
 const { templates, categories, totalPages, itemsPerPage } = await useTemplateData()
+
+const isSearchActive = ref(false)
 
 // Get paginated templates for this page
 const paginatedTemplates = computed(() => {

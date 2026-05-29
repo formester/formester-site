@@ -3,10 +3,12 @@
     <Templates
       :activeCategory="null"
       :templates="paginatedTemplates"
+      :allTemplates="templates"
       :templateCategories="categories"
       :isPaginated="true"
+      @search-active="isSearchActive = $event"
     />
-    <nav v-if="totalPages > 1" class="container">
+    <nav v-if="totalPages > 1 && !isSearchActive" class="container">
       <div class="custom-pagination-bar">
         <span class="custom-page-btn prev disabled">
           Previous
@@ -52,6 +54,8 @@ const route = useRoute()
 
 // Fetch template data using shared composable
 const { templates, categories, totalPages, itemsPerPage } = await useTemplateData()
+
+const isSearchActive = ref(false)
 
 // Always show page 1 on index
 const currentPage = 1

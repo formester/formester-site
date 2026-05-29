@@ -4,7 +4,7 @@
     <div class="search-box mx-auto d-flex flex-column">
       <div class="search-input-wrapper">
         <div class="search-icon">
-          <nuxt-img src="/templates/search.svg" alt="Search" />
+          <nuxt-img height="24" src="/templates/search.svg" alt="Search" />
         </div>
         <input
           type="text"
