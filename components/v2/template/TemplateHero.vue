@@ -21,7 +21,17 @@
 
         <h1 class="tmpl-detail__title">{{ template.name }}</h1>
 
-        <p v-if="template.description" class="tmpl-detail__desc">{{ template.description }}</p>
+        <div v-if="template.description" class="tmpl-detail__desc-wrap">
+          <p
+            class="tmpl-detail__desc"
+            :class="{ 'tmpl-detail__desc--clamped': !descExpanded }"
+          >{{ template.description }}</p>
+          <button
+            v-if="isDescLong"
+            class="tmpl-detail__desc-toggle"
+            @click="descExpanded = !descExpanded"
+          >{{ descExpanded ? 'Read less' : 'Read more' }}</button>
+        </div>
 
         <FButton size="lg" class="tmpl-detail__cta" @click="redirectTo">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -37,6 +47,7 @@
 </template>
 
 <script setup>
+import { ref, computed } from 'vue'
 import FButton from '@/components/UI/FButton.vue'
 import TemplatePreviewPanel from './TemplatePreviewPanel.vue'
 
@@ -44,6 +55,10 @@ const props = defineProps({
   template: { type: Object, required: true },
   pdfData:  { type: Object, default: null },
 })
+
+const CHAR_LIMIT = 400
+const descExpanded = ref(false)
+const isDescLong = computed(() => (props.template.description?.length ?? 0) > CHAR_LIMIT)
 
 const redirectTo = () => {
   window.open(
@@ -116,11 +131,39 @@ const redirectTo = () => {
   margin: 0;
 }
 
+.tmpl-detail__desc-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
 .tmpl-detail__desc {
   font-size: var(--fs-sm);
   color: var(--fg-2);
   line-height: var(--lh-lg);
   margin: 0;
+}
+
+.tmpl-detail__desc--clamped {
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tmpl-detail__desc-toggle {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--violet-500);
+  cursor: pointer;
+}
+
+.tmpl-detail__desc-toggle:hover {
+  text-decoration: underline;
 }
 
 .tmpl-detail__cta {
