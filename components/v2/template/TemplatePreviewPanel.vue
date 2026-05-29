@@ -164,6 +164,11 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
+.tmpl-detail__preview-col {
+  position: sticky;
+  top: 80px;
+}
+
 /* ---- Preview switch ---- */
 .tmpl-detail__preview-switch-wrap {
   display: flex;
