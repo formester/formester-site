@@ -644,5 +644,39 @@
     "featureCategory": "Security & Validation",
     "featurePlan": "Free",
     "navIcon": null
+  },
+  {
+    "id": 661,
+    "slug": "product-order-form",
+    "navTitle": "Online Order Form",
+    "navDescription": "e-commerce product order form",
+    "featureCategory": "Form Builder",
+    "featurePlan": "Free",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "Online Product Order Form",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/custom_css_4e281d5092.svg",
+        "alt": "Online Product Order Form"
+      }
+    }
+  },
+  {
+    "id": 662,
+    "slug": "embed-form-in-email",
+    "navTitle": "Form Embed",
+    "navDescription": "Embed your first form",
+    "featureCategory": "Form Builder",
+    "featurePlan": "Free",
+    "navIcon": null
+  },
+  {
+    "id": 663,
+    "slug": "form-abandonment-recovery",
+    "navTitle": "Form Abandonment",
+    "navDescription": "Recover abandoned forms",
+    "featureCategory": "Data Handling",
+    "featurePlan": "Business",
+    "navIcon": null
   }
 ]

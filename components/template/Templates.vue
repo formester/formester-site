@@ -12,10 +12,13 @@
           <img src="~/assets/images/icons/chevron-right.svg" />
           <span class="breadcrumb-text">{{ activeCategory.name }}</span>
         </div>
-        <h1 class="content-heading mt-2">
-          {{ activeCategory ? activeCategory.name : 'All' }}
-          Templates
-        </h1>
+        <div class="heading-row">
+          <h1 class="content-heading mt-2">
+            {{ activeCategory ? activeCategory.name : 'All' }}
+            Templates
+          </h1>
+          <TemplateSearch @searchInput="handleSearch" />
+        </div>
         <div
           v-if="activeCategory?.description"
           class="my-2"
@@ -41,18 +44,16 @@
           </button>
         </div>
 
-        <TemplateSearch @searchInput="handleSearch" />
-
         <template v-if="filteredTemplates.length > 0">
           <section class="templates-grid" aria-label="Templates">
             <TemplateCard
               v-for="(template, index) in filteredTemplates"
               :key="template.id"
               :template="template"
-              :class="{ 'template-hidden': isClient && !isPaginated && index >= visibleCount }"
+              :class="{ 'template-hidden': isClient && useViewMore && index >= visibleCount }"
             />
           </section>
-          <div v-if="isClient && !isPaginated && visibleCount < filteredTemplates.length" class="d-flex justify-content-center mt-3">
+          <div v-if="isClient && useViewMore && visibleCount < filteredTemplates.length" class="d-flex justify-content-center mt-3">
             <button
               @click="viewMore"
               class="btn-primary"
@@ -99,12 +100,17 @@ export default {
   props: {
     activeCategory: Object,
     templates: Array,
+    allTemplates: {
+      type: Array,
+      default: null,
+    },
     templateCategories: Object,
     isPaginated: {
       type: Boolean,
       default: false,
     },
   },
+  emits: ['search-active'],
   data() {
     return {
       searchTerm: '',
@@ -114,7 +120,6 @@ export default {
     }
   },
   mounted() {
-    // Apply client-side hiding after initial SSR
     this.isClient = true
   },
   watch: {
@@ -128,7 +133,8 @@ export default {
   methods: {
     handleSearch(searchTerm) {
       this.searchTerm = searchTerm
-      this.visibleCount = 12 // Reset pagination on new search
+      this.visibleCount = 12
+      this.$emit('search-active', searchTerm.trim().length > 0)
     },
     toggleDescription() {
       this.showFullDescription = !this.showFullDescription
@@ -138,10 +144,16 @@ export default {
     },
   },
   computed: {
+    useViewMore() {
+      return !this.isPaginated || this.searchTerm.trim().length > 0
+    },
+    searchableTemplates() {
+      return this.searchTerm.trim() && this.allTemplates ? this.allTemplates : this.templates
+    },
     filteredTemplates() {
       const searchTerm = this.searchTerm.trim().toLowerCase()
       if (!searchTerm) return this.templates
-      return this.templates.filter(
+      return this.searchableTemplates.filter(
         (template) =>
           template.name.toLowerCase().includes(searchTerm) ||
           template.description?.toLowerCase().includes(searchTerm)
@@ -210,6 +222,14 @@ export default {
   padding-left: 3rem;
 }
 
+.heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
 .content-heading {
   color: var(--clr-text-primary);
   text-transform: capitalize;
@@ -217,6 +237,7 @@ export default {
   font-weight: 600;
   line-height: 48px;
   letter-spacing: -0.64px;
+  flex-shrink: 0;
 }
 
 .description-wrapper {
@@ -291,6 +312,10 @@ export default {
 }
 
 @media only screen and (max-width: 840px) {
+  .heading-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .content-wrapper {
     padding: 0;
     margin-top: 12px;

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="template.tabs?.length" class="tmpl-detail__content-area">
+  <div v-if="template.tabs?.length" ref="contentRef" class="tmpl-detail__content-area" :style="{ 'scroll-margin-top': scrollOffset + 'px' }">
     <div v-for="tab in template.tabs" :key="tab.id" v-show="activeTabId === tab.id">
       <component :is="resolvedComponents[tab.type]" v-bind="tab.props" />
     </div>
@@ -10,8 +10,9 @@
 import componentMapping from '@/constants/componentMapping'
 
 const props = defineProps({
-  template:    { type: Object, required: true },
-  activeTabId: { type: String, default: null },
+  template:     { type: Object, required: true },
+  activeTabId:  { type: String, default: null },
+  scrollOffset: { type: Number, default: 80 },
 })
 
 const resolvedComponents = computed(() => {
@@ -21,6 +22,15 @@ const resolvedComponents = computed(() => {
       .filter(t => componentMapping[t])
       .map(t => [t, defineAsyncComponent(componentMapping[t])])
   )
+})
+
+const contentRef = useTemplateRef('contentRef')
+
+watch(() => props.activeTabId, (newVal, oldVal) => {
+  if (!oldVal) return
+  nextTick(() => {
+    contentRef.value?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  })
 })
 </script>
 
