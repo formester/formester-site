@@ -45,7 +45,7 @@ function emitSearchTerm() {
   align-items: center;
   background: var(--bg-primary);
   border: 1px solid var(--border-light);
-  border-radius: var(--r-lg);
+  border-radius: 40px;
   padding: var(--space-3) var(--space-4);
   box-shadow: var(--shadow-xs);
   transition: box-shadow 0.15s ease, border-color 0.15s ease;
