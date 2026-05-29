@@ -119,7 +119,6 @@ defineExpose({ openModal: formModal.open })
   min-width: 0;
   position: sticky;
   top: 80px;
-  margin-top: 45px;
 }
 
 .preview-shell {

@@ -139,7 +139,14 @@ function openPreviewModal() {
   display: grid;
   grid-template-columns: 1fr 400px;
   gap: 52px;
-  align-items: start;
+  margin-top: 40px;
+}
+
+@media (max-width: 767px) {
+  .tmpl-detail__hero-inner {
+    margin-top: 0;
+    padding-top: 24px !important;
+  }
 }
 
 /* ── Info column ── */
@@ -320,7 +327,7 @@ function openPreviewModal() {
 @media (max-width: 1024px) {
   .tmpl-detail__hero-inner {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 100px;
     padding: 32px 20px 0;
   }
 
