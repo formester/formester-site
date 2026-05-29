@@ -71,7 +71,7 @@ defineEmits(['close'])
 .modal-card {
   width: 100%;
   max-width: 98vw;
-  height: calc(100vh - 32px);
+  height: 100%;
   max-height: 98vh;
   background: #fff;
   border-radius: 16px;

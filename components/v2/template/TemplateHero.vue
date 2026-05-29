@@ -251,7 +251,7 @@ function openPreviewModal() {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  padding: 4px 10px;
+  padding: 0 10px;
   border-radius: 9999px;
   border: 1px solid var(--border-light);
   background: var(--bg-grey-50);
