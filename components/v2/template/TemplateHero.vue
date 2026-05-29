@@ -307,6 +307,7 @@ function openPreviewModal() {
 .tmpl-detail__cta-group {
   display: flex;
   flex-direction: column;
+  margin-top: var(--space-4);
   gap: 10px;
 }
 
