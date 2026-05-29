@@ -1,7 +1,7 @@
 <template>
   <div class="tmpl-detail">
 
-    <div class="tmpl-detail__sticky-header" :style="{ '--hero-h': heroHeight + 'px' }">
+    <div ref="stickyHeaderRef" class="tmpl-detail__sticky-header" :style="{ '--hero-h': heroHeight + 'px' }">
       <div ref="heroWrapRef">
         <TemplateHero :template="template" :pdf-data="pdfData" />
       </div>
@@ -10,7 +10,7 @@
         @update:active-tab-id="activeTabId = $event" />
     </div>
 
-    <TemplateTabContent :template="template" :active-tab-id="activeTabId" />
+    <TemplateTabContent :template="template" :active-tab-id="activeTabId" :scroll-offset="contentScrollOffset" />
 
   </div>
 </template>
@@ -34,14 +34,23 @@ const props = defineProps({
 const activeTabId = ref(props.template.tabs?.[0]?.id ?? null)
 
 const heroWrapRef = useTemplateRef('heroWrapRef')
+const stickyHeaderRef = useTemplateRef('stickyHeaderRef')
 const heroHeight = ref(0)
+const stickyHeaderHeight = ref(0)
+
+// visible sticky height = total sticky height - hidden hero portion + 80px site navbar
+const contentScrollOffset = computed(() => stickyHeaderHeight.value - heroHeight.value + 80)
 
 onMounted(() => {
   const ro = new ResizeObserver(([entry]) => {
     heroHeight.value = entry.contentRect.height
   })
+  const roSticky = new ResizeObserver(([entry]) => {
+    stickyHeaderHeight.value = entry.contentRect.height
+  })
   if (heroWrapRef.value) ro.observe(heroWrapRef.value)
-  onBeforeUnmount(() => ro.disconnect())
+  if (stickyHeaderRef.value) roSticky.observe(stickyHeaderRef.value)
+  onBeforeUnmount(() => { ro.disconnect(); roSticky.disconnect() })
 })
 </script>
 
