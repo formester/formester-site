@@ -2,11 +2,13 @@
   <section class="tmpl-detail__hero">
     <div class="tmpl-detail__hero-inner">
 
-      <TemplatePreviewPanel
-        ref="previewPanelRef"
-        :pdf-data="pdfData"
-        :survey-url="template.surveyUrl"
-      />
+      <div class="tmpl-detail__preview-col">
+        <TemplatePreviewPanel
+          ref="previewPanelRef"
+          :pdf-data="pdfData"
+          :survey-url="template.surveyUrl"
+        />
+      </div>
 
       <div class="tmpl-detail__info-col">
 
@@ -149,10 +151,18 @@ function openPreviewModal() {
   }
 }
 
+/* ── Preview column ── */
+.tmpl-detail__preview-col {
+  position: sticky;
+  top: 80px;
+  align-self: start;
+}
+
 /* ── Info column ── */
 .tmpl-detail__info-col {
   position: sticky;
   top: 80px;
+  align-self: start;
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
@@ -332,9 +342,12 @@ function openPreviewModal() {
   }
 
   .tmpl-detail__info-col {
-    top: 60px;
     position: relative;
     order: -1;
+  }
+
+  .tmpl-detail__preview-col {
+    position: static;
   }
 }
 
