@@ -1,5 +1,6 @@
 import { STRAPI_URL, APP_URL } from '../constants/urls.js'
 import fetchWithRetry from './fetchWithRetry.js'
+import { adaptTemplateToV2 } from './adaptTemplateToV2.js'
 
 let cachePromise = null
 let categorieRoutesPromise = null
@@ -14,6 +15,8 @@ async function _fetchTemplatesAndCategories(options = {}) {
     params: {
       ...cacheBust,
       with_details: true,
+      include_all_categories: true,
+      include_related_templates: true,
     },
   })
 
@@ -33,10 +36,15 @@ async function _fetchTemplatesAndCategories(options = {}) {
     },
   })
 
-  templates = templates.map((template) => ({
-    ...template,
-    description: template.description || dummyDescription,
-  }))
+  templates = templates.map((template) =>
+    adaptTemplateToV2({
+      ...template,
+      description: template.description || dummyDescription,
+    })
+  )
+
+  const toCardShape = ({ id, slug, name, description, previewImageUrl }) =>
+    ({ id, slug, name, description, previewImageUrl })
 
   const templateRoutes = templates.map((template) => {
     const pdfTemplate = data.find(
@@ -49,7 +57,7 @@ async function _fetchTemplatesAndCategories(options = {}) {
   })
   templateRoutes.push({
     route: `/templates`,
-    payload: { templates, categories },
+    payload: { templates: templates.map(toCardShape), categories },
   })
 
   const result = { templateRoutes, templates, categories }
