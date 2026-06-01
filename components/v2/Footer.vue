@@ -116,16 +116,16 @@
         <h3 class="site-footer__col-heading">Resources</h3>
         <ul class="site-footer__links">
           <li>
-            <NuxtLink to="/vs/" class="site-footer__link">Formester Alternatives</NuxtLink>
+            <NuxtLink to="/comparison-tool/" class="site-footer__link">Compare</NuxtLink>
           </li>
           <li>
             <NuxtLink to="/blog/" class="site-footer__link">Blog</NuxtLink>
           </li>
+          <li>
+            <NuxtLink to="/enterprise/" class="site-footer__link">Enterprise</NuxtLink>
+          </li>
           <li><a href="https://docs.formester.com/formester-api.html" class="site-footer__link">API Docs</a></li>
           <li><a href="https://help.formester.com/en/" class="site-footer__link">Help Center</a></li>
-          <li>
-            <NuxtLink to="/templates/" class="site-footer__link">1000+ Templates</NuxtLink>
-          </li>
         </ul>
       </div>
 

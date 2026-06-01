@@ -286,7 +286,29 @@
           <div
             class="col-lg-3 col-sm-6 mb-4 mb-md-0 mt-0 mt-sm-4 mt-lg-0 text-lg-start"
           >
-            <h3 class="text-uppercase footer__items--heading mb-3">Support</h3>
+            <h3 class="text-uppercase footer__items--heading mb-3">
+              Resources
+            </h3>
+
+            <ul class="list-unstyled mt-2">
+              <li class="mt-2">
+                <NuxtLink to="/comparison-tool/" class="footer__link">Compare</NuxtLink>
+              </li>
+              <li class="mt-2">
+                <NuxtLink to="/blog/" class="footer__link">Blog</NuxtLink>
+              </li>
+              <li class="mt-2">
+                <NuxtLink to="/enterprise/" class="footer__link">Enterprise</NuxtLink>
+              </li>
+              <li class="mt-2">
+                <a href="https://docs.formester.com/api/" class="footer__link">API Docs</a>
+              </li>
+              <li class="mt-2">
+                <a href="https://help.formester.com/en/" class="footer__link">Help Center</a>
+              </li>
+            </ul>
+
+            <h3 class="text-uppercase footer__items--heading mb-3 mt-5">Support</h3>
 
             <ul class="list-unstyled mt-2">
               <li class="mt-2">

@@ -7,7 +7,7 @@
     "node": ">=18.20.0"
   },
   "scripts": {
-    "dev": "npm run fetch-navbar && nuxt dev",
+    "dev": "npm run fetch-navbar && nuxt dev --host 0.0.0.0",
     "build": "npm run fetch-navbar && nuxt build",
     "start": "npm run fetch-navbar && nuxt preview",
     "generate": "npm run fetch-navbar && nuxt generate",

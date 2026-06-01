@@ -96,47 +96,72 @@
                 @mouseenter="onTemplatesDropdownMouseEnter" @mouseleave="onTemplatesDropdownMouseLeave"
                 @dropdown-close="handleTemplatesDropdownClose" />
             </li>
-            <li class="nav-item dropdown me-2 position-relative" :class="{ open: resourcesDropdownActive }"
-              @mouseenter="!isMobile && onResourcesDropdownMouseEnter()"
-              @mouseleave="!isMobile && onResourcesDropdownMouseLeave()">
+            <li class="nav-item dropdown me-2 position-relative" :class="{ open: pluginsDropdownActive }"
+              @mouseenter="!isMobile && onPluginsDropdownMouseEnter()"
+              @mouseleave="!isMobile && onPluginsDropdownMouseLeave()">
               <template v-if="isMobile">
-                <button class="nav-link" :class="{
-                  active:
-                    resourcesDropdownActive || hoveringResourcesDropdown,
-                }" type="button" @click="toggleResourcesDropdown">
-                  Resources
+                <button class="nav-link" :class="{ active: pluginsDropdownActive || hoveringPluginsDropdown }"
+                  type="button" @click="togglePluginsDropdown">
+                  Plugins
                   <span class="chevron-stack">
                     <nuxt-img src="/chevron-down-gray.svg" class="chevron chevron-gray" alt="Chevron"
-                      :class="{ open: resourcesDropdownActive }" />
+                      :class="{ open: pluginsDropdownActive }" />
                     <nuxt-img src="/chevron-down-colored.svg" class="chevron chevron-colored" alt="Chevron"
-                      :class="{ open: resourcesDropdownActive }" />
+                      :class="{ open: pluginsDropdownActive }" />
                   </span>
                 </button>
               </template>
               <template v-else>
-                <button class="nav-link" :class="{
-                  active:
-                    resourcesDropdownActive || hoveringResourcesDropdown,
-                }" type="button" @click="toggleResourcesDropdown" @mouseenter="onResourcesDropdownMouseEnter"
-                  @mouseleave="onResourcesDropdownMouseLeave" :aria-expanded="resourcesDropdownActive.toString()">
-                  Resources
+                <button class="nav-link" :class="{ active: pluginsDropdownActive || hoveringPluginsDropdown }"
+                  type="button" @click="togglePluginsDropdown" @mouseenter="onPluginsDropdownMouseEnter"
+                  @mouseleave="onPluginsDropdownMouseLeave" :aria-expanded="pluginsDropdownActive.toString()">
+                  Plugins
                   <span class="chevron-stack">
                     <nuxt-img src="/chevron-down-gray.svg" class="chevron chevron-gray" alt="Chevron"
-                      :class="{ open: resourcesDropdownActive }" />
+                      :class="{ open: pluginsDropdownActive }" />
                     <nuxt-img src="/chevron-down-colored.svg" class="chevron chevron-colored" alt="Chevron"
-                      :class="{ open: resourcesDropdownActive }" />
+                      :class="{ open: pluginsDropdownActive }" />
                   </span>
                 </button>
               </template>
+              <PluginsDropdown :dropdownActive="pluginsDropdownActive" :isMobile="isMobile"
+                @mouseenter="onPluginsDropdownMouseEnter" @mouseleave="onPluginsDropdownMouseLeave"
+                @dropdown-close="handlePluginsDropdownClose" />
+            </li>
 
-              <!-- Resources Dropdown component -->
-              <ResourcesDropdown :dropdownActive="resourcesDropdownActive" :isMobile="isMobile"
-                :resourcesList="resourcesList" @mouseenter="onResourcesDropdownMouseEnter"
-                @mouseleave="onResourcesDropdownMouseLeave" @dropdown-close="handleResourcesDropdownClose" />
+            <li class="nav-item dropdown me-2 position-relative" :class="{ open: integrationsDropdownActive }"
+              @mouseenter="!isMobile && onIntegrationsDropdownMouseEnter()"
+              @mouseleave="!isMobile && onIntegrationsDropdownMouseLeave()">
+              <template v-if="isMobile">
+                <button class="nav-link" :class="{ active: integrationsDropdownActive || hoveringIntegrationsDropdown }"
+                  type="button" @click="toggleIntegrationsDropdown">
+                  Integrations
+                  <span class="chevron-stack">
+                    <nuxt-img src="/chevron-down-gray.svg" class="chevron chevron-gray" alt="Chevron"
+                      :class="{ open: integrationsDropdownActive }" />
+                    <nuxt-img src="/chevron-down-colored.svg" class="chevron chevron-colored" alt="Chevron"
+                      :class="{ open: integrationsDropdownActive }" />
+                  </span>
+                </button>
+              </template>
+              <template v-else>
+                <button class="nav-link" :class="{ active: integrationsDropdownActive || hoveringIntegrationsDropdown }"
+                  type="button" @click="toggleIntegrationsDropdown" @mouseenter="onIntegrationsDropdownMouseEnter"
+                  @mouseleave="onIntegrationsDropdownMouseLeave" :aria-expanded="integrationsDropdownActive.toString()">
+                  Integrations
+                  <span class="chevron-stack">
+                    <nuxt-img src="/chevron-down-gray.svg" class="chevron chevron-gray" alt="Chevron"
+                      :class="{ open: integrationsDropdownActive }" />
+                    <nuxt-img src="/chevron-down-colored.svg" class="chevron chevron-colored" alt="Chevron"
+                      :class="{ open: integrationsDropdownActive }" />
+                  </span>
+                </button>
+              </template>
+              <IntegrationsDropdown :dropdownActive="integrationsDropdownActive" :isMobile="isMobile"
+                @mouseenter="onIntegrationsDropdownMouseEnter" @mouseleave="onIntegrationsDropdownMouseLeave"
+                @dropdown-close="handleIntegrationsDropdownClose" />
             </li>
-            <li class="nav-item me-2" @click="collapseNav">
-              <NuxtLink to="/integrations/" class="nav-link">Integrations</NuxtLink>
-            </li>
+
             <li class="nav-item me-2" @click="collapseNav">
               <NuxtLink to="/pricing/" class="nav-link">Pricing</NuxtLink>
             </li>
@@ -160,8 +185,9 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import FButton from '@/components/UI/FButton.vue'
 import FeaturesDropdown from './FeaturesDropdown.vue'
-import ResourcesDropdown from './ResourcesDropdown.vue'
 import TemplatesDropdown from './TemplatesDropdown.vue'
+import PluginsDropdown from './PluginsDropdown.vue'
+import IntegrationsDropdown from './IntegrationsDropdown.vue'
 
 const siteNav = ref(null)
 
@@ -169,29 +195,31 @@ const dropdownActive = ref(false)
 const hoveringDropdown = ref(false)
 const templatesDropdownActive = ref(false)
 const hoveringTemplatesDropdown = ref(false)
-const resourcesDropdownActive = ref(false)
-const hoveringResourcesDropdown = ref(false)
+const pluginsDropdownActive = ref(false)
+const hoveringPluginsDropdown = ref(false)
+const integrationsDropdownActive = ref(false)
+const hoveringIntegrationsDropdown = ref(false)
 const isMobile = ref(false)
 const isTablet = ref(false)
 const activeFeatureCategory = ref('')
 
 let dropdownTimer = null
-let resourcesDropdownTimer = null
+let pluginsDropdownTimer = null
+let integrationsDropdownTimer = null
 let bsCollapse = null
 
-const resourcesList = [
-  { id: 1, title: 'Compare',     description: 'Compare us with other form builders',  imageUrl: '/compare.svg',    imageAlt: 'Compare icon',     slug: 'comparison-tool' },
-  { id: 2, title: 'Blogs',       description: 'Read our latest articles and guides',   imageUrl: '/blog.svg',       imageAlt: 'Blogs icon',        slug: 'blog' },
-  { id: 3, title: 'Enterprise',  description: 'Solutions for large organizations',     imageUrl: '/enterprise.svg', imageAlt: 'Enterprise icon',   slug: 'enterprise' },
-  { id: 4, title: 'API Docs',    description: 'Comprehensive API documentation',       imageUrl: '/api-docs.svg',   imageAlt: 'API Docs icon',     href: 'https://docs.formester.com/formester-api.html' },
-  { id: 5, title: 'Help Center', description: 'Get help and support',                  imageUrl: '/support.svg',    imageAlt: 'Help Center icon',  href: 'https://help.formester.com/' },
-]
+const closeAllDropdowns = () => {
+  dropdownActive.value = false
+  templatesDropdownActive.value = false
+  pluginsDropdownActive.value = false
+  integrationsDropdownActive.value = false
+}
 
 const checkIsMobile = () => {
   const w = window.innerWidth
   isMobile.value = w < 1200
   isTablet.value = w >= 768 && w < 1200
-  if (!isMobile.value) dropdownActive.value = false
+  if (!isMobile.value) closeAllDropdowns()
 }
 
 const ensureBsCollapse = () => {
@@ -213,19 +241,15 @@ const collapseNav = () => {
 }
 
 const toggleDropdown = () => {
-  dropdownActive.value = !dropdownActive.value
-  if (dropdownActive.value) {
-    templatesDropdownActive.value = false
-    resourcesDropdownActive.value = false
-  }
+  const next = !dropdownActive.value
+  closeAllDropdowns()
+  dropdownActive.value = next
 }
 
 const toggleTemplatesDropdown = () => {
-  templatesDropdownActive.value = !templatesDropdownActive.value
-  if (templatesDropdownActive.value) {
-    dropdownActive.value = false
-    resourcesDropdownActive.value = false
-  }
+  const next = !templatesDropdownActive.value
+  closeAllDropdowns()
+  templatesDropdownActive.value = next
 }
 
 const onDropdownMouseEnter = () => {
@@ -248,8 +272,7 @@ const handleDropdownClose = () => {
 
 const onTemplatesDropdownMouseEnter = () => {
   hoveringTemplatesDropdown.value = true
-  if (dropdownActive.value) dropdownActive.value = false
-  if (resourcesDropdownActive.value) resourcesDropdownActive.value = false
+  closeAllDropdowns()
   templatesDropdownActive.value = true
 }
 
@@ -265,30 +288,53 @@ const handleTemplatesDropdownClose = () => {
   collapseNav()
 }
 
-const toggleResourcesDropdown = () => {
-  resourcesDropdownActive.value = !resourcesDropdownActive.value
-  if (resourcesDropdownActive.value) {
-    dropdownActive.value = false
-    templatesDropdownActive.value = false
-  }
+const togglePluginsDropdown = () => {
+  const next = !pluginsDropdownActive.value
+  closeAllDropdowns()
+  pluginsDropdownActive.value = next
 }
 
-const onResourcesDropdownMouseEnter = () => {
-  hoveringResourcesDropdown.value = true
-  clearTimeout(resourcesDropdownTimer)
-  if (dropdownActive.value) dropdownActive.value = false
-  resourcesDropdownActive.value = true
+const onPluginsDropdownMouseEnter = () => {
+  if (pluginsDropdownTimer) { clearTimeout(pluginsDropdownTimer); pluginsDropdownTimer = null }
+  hoveringPluginsDropdown.value = true
+  closeAllDropdowns()
+  pluginsDropdownActive.value = true
 }
 
-const onResourcesDropdownMouseLeave = () => {
-  hoveringResourcesDropdown.value = false
-  resourcesDropdownTimer = setTimeout(() => {
-    if (!hoveringResourcesDropdown.value) resourcesDropdownActive.value = false
+const onPluginsDropdownMouseLeave = () => {
+  hoveringPluginsDropdown.value = false
+  pluginsDropdownTimer = setTimeout(() => {
+    if (!hoveringPluginsDropdown.value) pluginsDropdownActive.value = false
   }, 80)
 }
 
-const handleResourcesDropdownClose = () => {
-  resourcesDropdownActive.value = false
+const handlePluginsDropdownClose = () => {
+  pluginsDropdownActive.value = false
+  collapseNav()
+}
+
+const toggleIntegrationsDropdown = () => {
+  const next = !integrationsDropdownActive.value
+  closeAllDropdowns()
+  integrationsDropdownActive.value = next
+}
+
+const onIntegrationsDropdownMouseEnter = () => {
+  if (integrationsDropdownTimer) { clearTimeout(integrationsDropdownTimer); integrationsDropdownTimer = null }
+  hoveringIntegrationsDropdown.value = true
+  closeAllDropdowns()
+  integrationsDropdownActive.value = true
+}
+
+const onIntegrationsDropdownMouseLeave = () => {
+  hoveringIntegrationsDropdown.value = false
+  integrationsDropdownTimer = setTimeout(() => {
+    if (!hoveringIntegrationsDropdown.value) integrationsDropdownActive.value = false
+  }, 80)
+}
+
+const handleIntegrationsDropdownClose = () => {
+  integrationsDropdownActive.value = false
   collapseNav()
 }
 
