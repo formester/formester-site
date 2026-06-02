@@ -2,6 +2,11 @@
 export default {
   // New v2 landing page components
   'macro-components.hero-v2': () => import('@/components/v2/HeroV2.vue'),
+  'macro-components.card-grid': () => import('@/components/v2/CardGrid.vue'),
+  'macro-components.alternating-rows': () => import('@/components/v2/AlternatingRows.vue'),
+  'macro-components.callout-diagram': () => import('@/components/v2/CalloutDiagram.vue'),
+  'macro-components.stats-banner': () => import('@/components/v2/StatsBanner.vue'),
+  'macro-components.comparison-table': () => import('@/components/v2/ComparisonTable.vue'),
   'macro-components.stats-section': () => import('@/components/v2/StatsSection.vue'),
   'macro-components.sticky-steps-section': () => import('@/components/v2/StickyStepsSection.vue'),
   'macro-components.dual-marquee': () => import('@/components/v2/DualMarquee.vue'),
@@ -36,7 +41,7 @@ export default {
   'macro-components.usecases': () => import('@/components/home/Usecases/Usecase.vue'),
   'macro-components.integrations-grid': () => import('@/components/integrations/IntegrationsGrid.vue'),
   'macro-components.multi-column-cards': () => import('@/components/features/MultiColumnCards.vue'),
-   'micro-components.raw-html': () => import('@/components/strapi/RawHtml.vue'),
+  'micro-components.raw-html': () => import('@/components/strapi/RawHtml.vue'),
   'macro-components.ai-hero': () => import('@/components/features/AiHero.vue'),
   'macro-components.template-showcase': () => import('@/components/strapi/TemplateShowcase.vue'),
   'macro-components.overview-panel': () => import('@/components/v2/template/TemplateOverviewPanel.vue'),
