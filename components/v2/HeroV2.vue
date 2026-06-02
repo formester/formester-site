@@ -316,8 +316,6 @@ onBeforeUnmount(() => {
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
 }
 
 .hero-v2__mockup {

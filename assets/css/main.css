@@ -296,17 +296,3 @@ button {
     padding: 0 1em;
   }
 }
-
-/* --- Mobile guard for raw-HTML illustration mocks ---
-   Inline styles can't carry media queries, so internal multi-column grids
-   inside the v2 illustration containers stay multi-up and crush on phones.
-   Collapse them to a single column below 600px. */
-@media (max-width: 600px) {
-  .hero-v2__html-mock [style*="grid-template-columns"],
-  .zz-media [style*="grid-template-columns"],
-  .fcg-card__mock [style*="grid-template-columns"],
-  .am-graphic [style*="grid-template-columns"],
-  .step-card [style*="grid-template-columns"] {
-    grid-template-columns: 1fr !important;
-  }
-}

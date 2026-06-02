@@ -189,7 +189,5 @@ const gridStyle = computed(() => ({
   border-radius: var(--r-lg);
   background: var(--bg-grey-50, #f9fafb);
   padding: var(--space-3);
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
 }
 </style>
