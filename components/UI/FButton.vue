@@ -88,6 +88,29 @@ export default {
   color: var(--fg-strong);
 }
 
+/* Violet outline */
+.fbt--violet-outline {
+  background: #fff;
+  color: var(--violet-600);
+  border-color: var(--violet-300, #9777e0);
+}
+.fbt--violet-outline:hover {
+  background: var(--violet-50);
+  border-color: var(--violet-500);
+  color: var(--violet-600);
+}
+
+/* Violet text — no border, no background */
+.fbt--violet-text {
+  background: transparent;
+  color: var(--violet-600);
+  border-color: transparent;
+}
+.fbt--violet-text:hover {
+  background: var(--violet-50);
+  color: var(--violet-700);
+}
+
 /* White (for dark sections) */
 .fbt--white {
   background: #fff;

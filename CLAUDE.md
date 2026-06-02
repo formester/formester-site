@@ -69,3 +69,25 @@ All Vue components must use `<script setup>` (Composition API). Do not write `ex
 - Lifecycle: `onMounted()`, `onBeforeUnmount()`, etc.
 - Template refs: `useTemplateRef('name')`
 - Components are auto-imported by Nuxt — no `components: {}` registration needed.
+
+## Icons
+
+**Never embed inline SVGs directly in component templates.** Always use or create a dedicated icon component:
+- Existing icons: `components/icons/` — check here first before creating new ones.
+- New icons: create `components/icons/Icon<Name>.vue` with `<script setup>` and accept at least a `size` prop.
+- Pattern:
+  ```vue
+  <template>
+    <svg :width="size" :height="size" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+      <!-- paths -->
+    </svg>
+  </template>
+  <script setup>
+  defineProps({ size: { type: [Number, String], default: 16 } })
+  </script>
+  ```
+- Icon components are auto-imported by Nuxt — no manual import needed.
+
+## UI Buttons
+
+Use `components/UI/FButton.vue` for all CTA and action buttons. Available variants: `primary`, `secondary`, `ghost`, `white`, `text`, `violet-outline`, `violet-text`. Sizes: `sm`, `md`, `lg`.

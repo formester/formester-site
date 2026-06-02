@@ -1,122 +1,119 @@
 <template>
-  <div>
-    <!-- Search -->
-    <div class="search-box mx-auto d-flex flex-column">
-      <div class="search-input-wrapper">
-        <div class="search-icon">
-          <nuxt-img src="/templates/search.svg" alt="Search" />
-        </div>
-        <input
-          type="text"
-          placeholder="Blood donation, job applicant tracker"
-          v-model="searchTerm"
-          @input="emitSearchTerm"
-          class="search-input w-100"
-          data-clarity-unmask="true"
-        />
-        <div
-          class="clear-input-btn pointer"
-          @click="resetSearchInput"
-          :class="{ 'd-none': searchTerm === '' }"
-        >
-          <nuxt-img src="/templates/cross.png" alt="Clear" />
-        </div>
-      </div>
-    </div>
-    <!-- Trending -->
-    <div class="trending-searches d-flex mt-4 d-none d-lg-flex">
-      <p class="trending-heading">Trending:&nbsp</p>
-      <p>Lead Generation,&nbsp</p>
-      <p>Event RSVP,&nbsp</p>
-      <p>Product Research</p>
+  <div class="search-box" :class="{ 'search-box--active': searchTerm !== '' }">
+    <div class="search-input-wrapper">
+      <img class="search-icon" src="/templates/search.svg" alt="" aria-hidden="true" width="18" height="18" />
+      <input
+        type="text"
+        placeholder="Blood donation, job applicant tracker"
+        v-model="searchTerm"
+        @input="emitSearchTerm"
+        class="search-input"
+        data-clarity-unmask="true"
+        aria-label="Search templates"
+      />
+      <button
+        v-if="searchTerm !== ''"
+        class="clear-btn"
+        @click="resetSearchInput"
+        aria-label="Clear search"
+        type="button"
+      >
+        <img src="/templates/cross.png" alt="" aria-hidden="true" width="14" height="14" />
+      </button>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return { searchTerm: '' }
-  },
-  methods: {
-    resetSearchInput() {
-      this.searchTerm = ''
-      this.emitSearchTerm()
-    },
-    emitSearchTerm() {
-      this.$emit('searchInput', this.searchTerm)
-    },
-  },
+<script setup>
+const emit = defineEmits(['searchInput'])
+
+const searchTerm = ref('')
+
+function resetSearchInput() {
+  searchTerm.value = ''
+  emit('searchInput', '')
+}
+
+function emitSearchTerm() {
+  emit('searchInput', searchTerm.value)
 }
 </script>
 
 <style scoped>
 .search-box {
-  margin-top: 16px;
-  background: #fff;
-  height: 67px;
-  border-radius: 8px;
-  padding: 20px;
-  gap: 8px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08),
-    0px 1px 2px 0px rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: 40px;
+  padding: var(--space-3) var(--space-4);
+  box-shadow: var(--shadow-xs);
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+  min-width: 280px;
+  max-width: 400px;
+  width: 100%;
 }
 
 .search-box:focus-within {
-  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #f4ebff;
+  border-color: var(--violet-300);
+  box-shadow: var(--focus-ring-primary);
 }
 
 .search-input-wrapper {
-  position: relative;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: var(--space-3);
+  width: 100%;
 }
 
 .search-icon {
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
+  flex-shrink: 0;
+  opacity: 0.5;
 }
 
 .search-input {
+  flex: 1;
   border: none;
-  background-color: transparent;
+  background: transparent;
+  font-family: var(--font-primary);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-regular);
+  color: var(--fg-1);
+  line-height: var(--lh-sm);
+  min-width: 0;
 }
 
 .search-input::placeholder {
-  color: #667085;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 150%;
+  color: var(--fg-3);
 }
 
 .search-input:focus {
   outline: none;
 }
 
-.trending-searches {
-  color: var(--clr-neutral-700);
+.clear-btn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-grey-100);
+  border: none;
+  border-radius: var(--r-full);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.15s ease;
 }
 
-.trending-heading {
-  color: var(--clr-text-secondary);
+.clear-btn:hover {
+  background: var(--gray-200);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 840px) {
   .search-box {
-    margin-bottom: 28px;
-    height: 52px;
-    padding: 12px;
-    gap: 8px;
-  }
-}
-
-@media only screen and (max-width: 840px) {
-  .search-input::placeholder {
-    font-size: 14px;
+    max-width: 100%;
+    width: 100%;
   }
 }
 </style>
