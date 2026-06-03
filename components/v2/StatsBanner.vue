@@ -3,8 +3,7 @@
     <div class="sb-inner">
       <!-- Violet gradient band: row of stats -->
       <div v-if="variant !== 'split'" class="sb-band">
-        <span v-if="eyebrow" class="sb-band__eyebrow">{{ eyebrow }}</span>
-        <h2 v-if="heading" class="sb-band__heading">{{ heading }}</h2>
+        <SectionHeader :eyebrow="eyebrow" :title="heading" tone="inverse" size="sm" spacing="none" />
         <div class="sb-band__row">
           <div v-for="(s, i) in stats" :key="i" class="sb-band__stat">
             <span class="sb-band__value">{{ s.value }}</span>
@@ -16,9 +15,7 @@
       <!-- Split: heading/body beside one big stat -->
       <div v-else class="sb-split">
         <div class="sb-split__text">
-          <span v-if="eyebrow" class="sb-split__eyebrow">{{ eyebrow }}</span>
-          <h2 v-if="heading" class="sb-split__heading">{{ heading }}</h2>
-          <p v-if="description" class="sb-split__desc">{{ description }}</p>
+          <SectionHeader :eyebrow="eyebrow" :title="heading" :description="description" align="left" spacing="none" />
         </div>
         <div v-if="stats.length" class="sb-split__stat">
           <span class="sb-split__value">{{ stats[0].value }}</span>
@@ -30,6 +27,8 @@
 </template>
 
 <script setup>
+import SectionHeader from '@/components/v2/SectionHeader.vue'
+
 defineProps({
   variant: { type: String, default: 'band' },
   eyebrow: { type: String, default: '' },
@@ -67,24 +66,6 @@ defineProps({
   inset: 0;
   background: radial-gradient(80% 120% at 50% -10%, rgba(255, 255, 255, 0.16), transparent 60%);
   pointer-events: none;
-}
-.sb-band__eyebrow {
-  position: relative;
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-bold);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.8);
-}
-.sb-band__heading {
-  position: relative;
-  font-size: clamp(22px, 2.6vw, 30px);
-  font-weight: var(--fw-bold);
-  letter-spacing: -0.02em;
-  color: #fff;
-  text-align: center;
-  margin: 0;
-  max-width: 640px;
 }
 .sb-band__row {
   position: relative;
@@ -132,29 +113,6 @@ defineProps({
   grid-template-columns: 1.2fr 1fr;
   gap: var(--space-12);
   align-items: center;
-}
-.sb-split__eyebrow {
-  display: inline-block;
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-bold);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--violet-500);
-  margin-bottom: var(--space-3);
-}
-.sb-split__heading {
-  font-size: clamp(26px, 3vw, 38px);
-  font-weight: var(--fw-bold);
-  letter-spacing: -0.02em;
-  color: var(--fg-1);
-  margin: 0 0 var(--space-4);
-  line-height: 1.2;
-}
-.sb-split__desc {
-  font-size: var(--fs-md);
-  line-height: 1.65;
-  color: var(--fg-2);
-  margin: 0;
 }
 .sb-split__stat {
   display: flex;

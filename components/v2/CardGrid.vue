@@ -2,15 +2,7 @@
   <section class="fcg-section" :style="{ background }">
     <div class="fcg-inner">
       <!-- Header -->
-      <div v-if="eyebrow || resolvedTitle.length || description" class="fcg-header">
-        <SectionBadge v-if="eyebrow" :text="eyebrow" />
-        <h2 v-if="resolvedTitle.length" class="fcg-heading">
-          <span v-for="(item, i) in resolvedTitle" :key="i" :class="{ 'fcg-highlight': item.highlight }"
-            >{{ item.text }}{{ i < resolvedTitle.length - 1 ? ' ' : '' }}</span
-          >
-        </h2>
-        <p v-if="description" class="fcg-description">{{ description }}</p>
-      </div>
+      <SectionHeader :eyebrow="eyebrow" :title="title" :description="description" />
 
       <!-- Grid -->
       <div class="fcg-grid" :style="gridStyle">
@@ -29,20 +21,15 @@
 
 <script setup>
 import { computed } from 'vue'
-import SectionBadge from '@/components/UI/SectionBadge.vue'
+import SectionHeader from '@/components/v2/SectionHeader.vue'
 
 const props = defineProps({
   eyebrow: { type: String, default: '' },
-  title: { type: [String, Array], default: () => [] },
+  title: { type: Array, default: () => [] },
   description: { type: String, default: '' },
   columns: { type: [String, Number], default: 3 },
   background: { type: String, default: '' },
   cards: { type: Array, default: () => [] },
-})
-
-const resolvedTitle = computed(() => {
-  if (Array.isArray(props.title)) return props.title
-  return props.title ? [{ text: props.title, highlight: false }] : []
 })
 
 const gridStyle = computed(() => ({
@@ -58,39 +45,6 @@ const gridStyle = computed(() => ({
 .fcg-inner {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-/* Header */
-.fcg-header {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto var(--space-12);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-3);
-}
-
-.fcg-heading {
-  font-size: clamp(28px, 3.5vw, 44px);
-  font-weight: var(--fw-bold);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: var(--fg-1);
-  margin: 0;
-}
-
-.fcg-highlight {
-  color: var(--violet-500);
-  font-style: italic;
-  font-family: var(--font-display);
-}
-
-.fcg-description {
-  font-size: var(--fs-md);
-  line-height: var(--lh-lg);
-  color: var(--fg-2);
-  margin: 0;
 }
 
 /* Grid */

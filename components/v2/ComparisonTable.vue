@@ -1,15 +1,7 @@
 <template>
   <section class="cmp-section" :style="{ background }">
     <div class="cmp-inner">
-      <div v-if="eyebrow || resolvedTitle.length || description" class="cmp-header">
-        <SectionBadge v-if="eyebrow" :text="eyebrow" />
-        <h2 v-if="resolvedTitle.length" class="cmp-heading">
-          <span v-for="(item, i) in resolvedTitle" :key="i" :class="{ 'cmp-highlight': item.highlight }"
-            >{{ item.text }}{{ i < resolvedTitle.length - 1 ? ' ' : '' }}</span
-          >
-        </h2>
-        <p v-if="description" class="cmp-desc">{{ description }}</p>
-      </div>
+      <SectionHeader :eyebrow="eyebrow" :title="title" :description="description" />
 
       <div class="cmp-scroll">
         <table class="cmp-table">
@@ -58,12 +50,11 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
-import SectionBadge from '@/components/UI/SectionBadge.vue'
+import SectionHeader from '@/components/v2/SectionHeader.vue'
 
-const props = defineProps({
+defineProps({
   eyebrow: { type: String, default: '' },
-  title: { type: [String, Array], default: () => [] },
+  title: { type: Array, default: () => [] },
   description: { type: String, default: '' },
   background: { type: String, default: '' },
   colUs: { type: String, default: 'Formester' },
@@ -71,10 +62,6 @@ const props = defineProps({
   rows: { type: Array, default: () => [] },
   note: { type: String, default: '' },
 })
-
-const resolvedTitle = computed(() =>
-  Array.isArray(props.title) ? props.title : props.title ? [{ text: props.title, highlight: false }] : [],
-)
 
 const isNegative = (v) => !v || /^(no|none|n\/a|—|-)$/i.test(String(v).trim())
 </script>
@@ -86,35 +73,6 @@ const isNegative = (v) => !v || /^(no|none|n\/a|—|-)$/i.test(String(v).trim())
 .cmp-inner {
   max-width: 880px;
   margin: 0 auto;
-}
-
-.cmp-header {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto var(--space-10);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-3);
-}
-.cmp-heading {
-  font-size: clamp(28px, 3.5vw, 44px);
-  font-weight: var(--fw-bold);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: var(--fg-1);
-  margin: 0;
-}
-.cmp-highlight {
-  color: var(--violet-500);
-  font-style: italic;
-  font-family: var(--font-display);
-}
-.cmp-desc {
-  font-size: var(--fs-md);
-  line-height: var(--lh-lg);
-  color: var(--fg-2);
-  margin: 0;
 }
 
 .cmp-scroll {
