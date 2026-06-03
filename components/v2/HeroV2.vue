@@ -1,43 +1,57 @@
 <template>
-  <section ref="sectionEl" class="hero-v2">
+  <section ref="sectionEl" class="hero-v2" :class="{ 'hero-v2--split': layout === 'split' }">
     <div aria-hidden="true" class="hero-v2__blobs">
       <div ref="blobA" class="hero-v2__blob hero-v2__blob--a" :style="{ background: blobColorA }"></div>
       <div ref="blobB" class="hero-v2__blob hero-v2__blob--b" :style="{ background: blobColorB }"></div>
       <div ref="blobC" class="hero-v2__blob hero-v2__blob--c" :style="{ background: blobColorC }"></div>
     </div>
-    <div class="hero-v2__inner">
-      <a v-if="badge?.text" :href="badge.link || '#'" class="hero-v2__badge-link">
-        <SectionBadge variant="pill" :text="badge.text" :tag="badge.tag" :sep="!!(badge.tag && badge.text)" arrow />
-      </a>
+    <div class="hero-v2__grid">
+      <div class="hero-v2__inner">
+        <a v-if="badge?.text" :href="badge.link || '#'" class="hero-v2__badge-link">
+          <SectionBadge variant="pill" :text="badge.text" :tag="badge.tag" :sep="!!(badge.tag && badge.text)" arrow />
+        </a>
 
-      <h1 class="hero-v2__heading">
-        <span v-for="item in title" :key="item.id"
-          :class="['hero-v2__title-span', { 'hero-v2__title-highlight': item.highlight }]">{{ item.text }}</span>
-      </h1>
+        <h1 class="hero-v2__heading">
+          <span
+            v-for="item in title"
+            :key="item.id"
+            :class="['hero-v2__title-span', { 'hero-v2__title-highlight': item.highlight }]"
+            >{{ item.text }}</span
+          >
+        </h1>
 
-      <p class="hero-v2__desc">{{ description }}</p>
+        <p class="hero-v2__desc">{{ description }}</p>
 
-      <div class="hero-v2__ctas">
-        <FButton v-for="btn in buttons" :key="btn.id" :href="btn.link"
-          :variant="btn.type === 'Primary' ? 'primary' : 'secondary'" size="lg" class="hero-v2__btn">
-          {{ btn.text }}
-          <IconArrowRight v-if="btn?.showArrow" />
-        </FButton>
+        <div class="hero-v2__ctas">
+          <FButton
+            v-for="btn in buttons"
+            :key="btn.id"
+            :href="btn.link"
+            :variant="btn.type === 'Primary' ? 'primary' : 'secondary'"
+            size="lg"
+            class="hero-v2__btn"
+          >
+            {{ btn.text }}
+            <IconArrowRight v-if="btn?.showArrow" />
+          </FButton>
+        </div>
+
+        <p v-if="trustText" class="hero-v2__trust">{{ trustText }}</p>
       </div>
 
-      <p v-if="trustText" class="hero-v2__trust">{{ trustText }}</p>
-    </div>
-
-    <div v-if="tabCardContent.length || image?.url" class="hero-v2__media">
-      <FeatureShowcase v-if="tabCardContent.length" />
-      <div v-else-if="image?.url" class="hero-v2__mockup">
-        <div class="hero-v2__mockup-bar">
-          <span class="hero-v2__dot hero-v2__dot--red"></span>
-          <span class="hero-v2__dot hero-v2__dot--yellow"></span>
-          <span class="hero-v2__dot hero-v2__dot--green"></span>
-          <span class="hero-v2__url-bar">app.formester.com / forms</span>
+      <div v-if="tabCardContent.length || image?.url || mockupHtml" class="hero-v2__media">
+        <FeatureShowcase v-if="tabCardContent.length" />
+        <!-- Raw HTML mockup/illustration: render bare so the markup can bring its own chrome -->
+        <div v-else-if="mockupHtml" class="hero-v2__html-mock" v-html="mockupHtml"></div>
+        <div v-else-if="image?.url" class="hero-v2__mockup">
+          <div class="hero-v2__mockup-bar">
+            <span class="hero-v2__dot hero-v2__dot--red"></span>
+            <span class="hero-v2__dot hero-v2__dot--yellow"></span>
+            <span class="hero-v2__dot hero-v2__dot--green"></span>
+            <span class="hero-v2__url-bar">app.formester.com / forms</span>
+          </div>
+          <img :src="image.url" :alt="image.alternativeText || 'Formester dashboard'" class="hero-v2__screenshot" />
         </div>
-        <img :src="image.url" :alt="image.alternativeText || 'Formester dashboard'" class="hero-v2__screenshot" />
       </div>
     </div>
   </section>
@@ -57,6 +71,8 @@ defineProps({
   buttons: { type: Array, default: () => [] },
   trustText: { type: String, default: '' },
   image: { type: Object, default: () => null },
+  mockupHtml: { type: String, default: '' },
+  layout: { type: String, default: 'centered' },
   tabCardContent: { type: Array, default: () => [] },
   blobColorA: { type: String, default: '#f5eeff' },
   blobColorB: { type: String, default: '#f1ebff' },
@@ -71,13 +87,17 @@ const blobC = useTemplateRef('blobC')
 // Blob base sizes (px): A=900×594  B=700×497  C=600×420
 // Ranges are percentage of section width/height for each blob's center point
 const RANGES = {
-  ax: [0.54, 0.90], ay: [0.06, 0.30],
+  ax: [0.54, 0.9],
+  ay: [0.06, 0.3],
   bx: [0.06, 0.38],
-  cx: [0.30, 0.74], cy: [0.36, 0.64],
+  cx: [0.3, 0.74],
+  cy: [0.36, 0.64],
 }
 const BY_FIXED = 500
 
-function rand(min, max) { return Math.random() * (max - min) + min }
+function rand(min, max) {
+  return Math.random() * (max - min) + min
+}
 
 function tick() {
   const section = sectionEl.value
@@ -141,9 +161,18 @@ onBeforeUnmount(() => {
   will-change: transform;
 }
 
-.hero-v2__blob--a { width: 900px; height: 594px; }
-.hero-v2__blob--b { width: 700px; height: 497px; }
-.hero-v2__blob--c { width: 600px; height: 420px; }
+.hero-v2__blob--a {
+  width: 900px;
+  height: 594px;
+}
+.hero-v2__blob--b {
+  width: 700px;
+  height: 497px;
+}
+.hero-v2__blob--c {
+  width: 600px;
+  height: 420px;
+}
 
 .hero-v2__inner {
   position: relative;
@@ -154,6 +183,67 @@ onBeforeUnmount(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* --- Split (side-by-side) layout: text left, media right on desktop --- */
+.hero-v2__grid {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-v2--split .hero-v2__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-v2--split .hero-v2__heading {
+  font-size: clamp(36px, 4vw, 54px);
+}
+
+.hero-v2--split .hero-v2__inner {
+  max-width: none;
+  margin: 0;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.hero-v2--split .hero-v2__desc {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.hero-v2--split .hero-v2__ctas {
+  justify-content: flex-start;
+}
+
+.hero-v2--split .hero-v2__media {
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
+
+.hero-v2--split .hero-v2__html-mock {
+  max-width: none;
+}
+
+@media (max-width: 920px) {
+  .hero-v2--split .hero-v2__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .hero-v2--split .hero-v2__inner {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-v2--split .hero-v2__ctas {
+    justify-content: center;
+  }
 }
 
 .hero-v2__badge-link {
@@ -221,13 +311,22 @@ onBeforeUnmount(() => {
   width: 100%;
 }
 
+/* Raw HTML mockup/illustration — illustration markup supplies its own framing */
+.hero-v2__html-mock {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .hero-v2__mockup {
   width: 100%;
   max-width: 900px;
   border-radius: var(--r-2xl);
   overflow: hidden;
   border: 1px solid var(--border-light);
-  box-shadow: 0 24px 80px rgba(15, 14, 26, 0.12), 0 8px 24px rgba(15, 14, 26, 0.06);
+  box-shadow:
+    0 24px 80px rgba(15, 14, 26, 0.12),
+    0 8px 24px rgba(15, 14, 26, 0.06);
 }
 
 .hero-v2__mockup-bar {
