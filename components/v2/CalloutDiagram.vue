@@ -1,15 +1,7 @@
 <template>
   <section class="am-section" :style="{ background }">
     <div class="am-inner">
-      <div v-if="eyebrow || resolvedTitle.length || description" class="am-header">
-        <SectionBadge v-if="eyebrow" :text="eyebrow" />
-        <h2 v-if="resolvedTitle.length" class="am-heading">
-          <span v-for="(item, i) in resolvedTitle" :key="i" :class="{ 'am-highlight': item.highlight }"
-            >{{ item.text }}{{ i < resolvedTitle.length - 1 ? ' ' : '' }}</span
-          >
-        </h2>
-        <p v-if="description" class="am-desc">{{ description }}</p>
-      </div>
+      <SectionHeader :eyebrow="eyebrow" :title="title" :description="description" />
 
       <div class="am-layout">
         <div class="am-col am-col--left">
@@ -42,20 +34,17 @@
 
 <script setup>
 import { computed } from 'vue'
-import SectionBadge from '@/components/UI/SectionBadge.vue'
+import SectionHeader from '@/components/v2/SectionHeader.vue'
 
 const props = defineProps({
   eyebrow: { type: String, default: '' },
-  title: { type: [String, Array], default: () => [] },
+  title: { type: Array, default: () => [] },
   description: { type: String, default: '' },
   background: { type: String, default: '' },
   mockHtml: { type: String, default: '' },
   pins: { type: Array, default: () => [] },
 })
 
-const resolvedTitle = computed(() =>
-  Array.isArray(props.title) ? props.title : props.title ? [{ text: props.title, highlight: false }] : [],
-)
 const half = computed(() => Math.ceil(props.pins.length / 2))
 const leftPins = computed(() => props.pins.slice(0, half.value))
 const rightPins = computed(() => props.pins.slice(half.value))
@@ -68,35 +57,6 @@ const rightPins = computed(() => props.pins.slice(half.value))
 .am-inner {
   max-width: 1120px;
   margin: 0 auto;
-}
-
-.am-header {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto var(--space-12);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-3);
-}
-.am-heading {
-  font-size: clamp(28px, 3.5vw, 44px);
-  font-weight: var(--fw-bold);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: var(--fg-1);
-  margin: 0;
-}
-.am-highlight {
-  color: var(--violet-500);
-  font-style: italic;
-  font-family: var(--font-display);
-}
-.am-desc {
-  font-size: var(--fs-md);
-  line-height: var(--lh-lg);
-  color: var(--fg-2);
-  margin: 0;
 }
 
 .am-layout {
