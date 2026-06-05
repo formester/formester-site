@@ -57,32 +57,44 @@ export default {
   methods: {
     getTdStyle(index) {
       const isHighlighted = this.highlightColumn && index + 1 === this.highlightColumn;
+      const isHead = this.rowType === 'head';
+      const isFirstCol = index === 0;
       const style = {
-        padding: '16px 20px',
+        padding: '15px 20px',
         textAlign: 'left',
         wordWrap: 'break-word',
         whiteSpace: 'normal',
         verticalAlign: 'middle',
       };
 
-      if (isHighlighted) {
-        if (this.rowType === 'head') {
-          // Dark Header Highlight
-          style.backgroundColor = '#6366f1'; 
-          style.color = '#ffffff';
-          style.fontWeight = '700';
-        } else {
-          // Light Column Highlight
-          style.backgroundColor = '#f5f3ff'; 
-          style.color = '#111827';
-          style.fontWeight = '600';
+      if (isHead) {
+        // V2 header row: uppercase eyebrow-style labels.
+        style.fontSize = '13px';
+        style.fontWeight = '700';
+        style.textTransform = 'uppercase';
+        style.letterSpacing = '0.06em';
+        style.color = '#475467'; // --fg-2
+        style.backgroundColor = isHighlighted ? '#f7f3ff' : '#f9fafb'; // violet-25 : gray-50
+        if (isHighlighted) {
+          style.color = '#472594'; // --violet-600
+          style.borderTop = '2px solid #6434d0'; // --violet-500 accent
         }
       } else {
-        // Normal Styling
-        style.fontWeight = this.rowType === 'head' ? '600' : 'normal';
-        style.color = this.rowType === 'head' ? '#374151' : '#6b7280';
-        if (this.rowType === 'head') {
-          style.backgroundColor = '#f9fafb';
+        // V2 body row.
+        style.fontSize = '14.5px';
+        if (isFirstCol) {
+          // Criteria column: stronger.
+          style.color = '#101828'; // --fg-1
+          style.fontWeight = '600';
+        } else {
+          style.color = '#475467'; // --fg-2
+          style.fontWeight = 'normal';
+        }
+        if (isHighlighted) {
+          // Subtle Formester-column tint.
+          style.backgroundColor = '#f7f3ff'; // violet-25
+          style.color = '#101828'; // --fg-1
+          style.fontWeight = '600';
         }
       }
 
@@ -111,3 +123,13 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+/* Row separators on cells — reliable under border-collapse: separate.
+   td carries this component's scope; the thead/tbody wrappers live in the
+   parent (Table.vue) scope, so we style td directly and let the parent
+   strip the final row's border. */
+td {
+  border-bottom: 1px solid var(--border-light);
+}
+</style>

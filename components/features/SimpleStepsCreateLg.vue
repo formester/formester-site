@@ -1,54 +1,53 @@
 <template>
-  <div class="container py-5 px-2">
-    <div class="row">
-      <SectionTitle :heading="title" />
-      <p class="hero__subheading text-center" v-if="description">
-        {{ description }}
-      </p>
-      <div
-        id="stepsSlider"
-        class="carousel slide"
-        data-bs-ride="carousel"
-        style="min-height: 535px"
-      >
-        <ol class="carousel-indicators">
-          <li
-            v-for="(item, idx) in itemList"
-            :key="item.id"
-            data-bs-target="#stepsSlider"
-            :data-bs-slide-to="idx"
-            :class="{ active: !idx }"
-            aria-current="true"
-            :aria-label="`Step ${idx + 1}`"
-          ></li>
-        </ol>
-        <div class="carousel-inner px-3 py-5">
-          <div
-            class="carousel-item"
-            v-for="(item, idx) in itemList"
-            :key="item.id"
-            :class="{ active: idx === 0 }"
-          >
-            <div class="d-flex flex-column-reverse flex-lg-row">
-              <div class="col-lg-6 me-lg-5 mt-5 mt-lg-0">
-                <span class="step__heading">Step {{ idx + 1 }}</span>
-                <h3 class="step__section-heading">
-                  {{ item?.title }}
-                </h3>
-                <MarkdownContent
-                  v-if="item?.description_markdown"
-                  class="step__description"
-                  :content="item?.description_markdown"
-                />
-                <span v-else class="step__description"> {{ item?.description }}</span>
-              </div>
-              <div class="col-lg-5 m-auto" v-if="cardImg(item).src">
+  <section class="ssc-lg-section">
+    <SectionTitle :heading="title" />
+    <p class="ssc-lg-description text-center" v-if="description">
+      {{ description }}
+    </p>
+    <div
+      id="stepsSlider"
+      class="carousel slide ssc-lg-slider"
+      data-bs-ride="carousel"
+    >
+      <ol class="carousel-indicators ssc-lg-indicators">
+        <li
+          v-for="(item, idx) in itemList"
+          :key="item.id"
+          data-bs-target="#stepsSlider"
+          :data-bs-slide-to="idx"
+          :class="{ active: !idx }"
+          aria-current="true"
+          :aria-label="`Step ${idx + 1}`"
+        ></li>
+      </ol>
+      <div class="carousel-inner ssc-lg-inner">
+        <div
+          class="carousel-item"
+          v-for="(item, idx) in itemList"
+          :key="item.id"
+          :class="{ active: idx === 0 }"
+        >
+          <div class="ssc-lg-card">
+            <div class="ssc-lg-card__body">
+              <span class="ssc-lg-card__num">{{ String(idx + 1).padStart(2, '0') }}</span>
+              <h3 class="ssc-lg-card__title">
+                {{ item?.title }}
+              </h3>
+              <MarkdownContent
+                v-if="item?.description_markdown"
+                class="ssc-lg-card__text"
+                :content="item?.description_markdown"
+              />
+              <span v-else class="ssc-lg-card__text"> {{ item?.description }}</span>
+            </div>
+            <div class="ssc-lg-card__media" v-if="cardImg(item).src">
+              <div class="ssc-lg-card__img-wrap">
                 <nuxt-img
                   :src="cardImg(item).src"
                   :alt="cardImg(item).alt || item?.title || 'Step image'"
                   :width="cardImg(item).width || 480"
                   :height="cardImg(item).height || 360"
-                  class="w-lg-40 d-block img-fluid my-auto"
+                  class="ssc-lg-card__img"
                   loading="lazy"
                 />
               </div>
@@ -57,7 +56,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -89,29 +88,124 @@ export default {
 </script>
 
 <style scoped>
-.subheading__text {
-  font-size: 16px;
-  margin-top: 12px;
+.ssc-lg-section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: var(--space-18) var(--space-6);
 }
-.step__heading {
-  color: var(--clr-primary);
-  font-weight: 700;
-  margin-bottom: 8px;
+
+.ssc-lg-description {
+  font-size: var(--fs-lg);
+  line-height: 1.6;
+  color: var(--fg-2);
+  max-width: 720px;
+  margin: var(--space-4) auto 0;
 }
-.step__description {
-  font-size: 15px;
-  font-weight: 500;
+
+.ssc-lg-slider {
+  margin-top: var(--space-12);
+  min-height: 535px;
 }
-.step__section-heading {
-  font-size: 28px;
-  font-weight: 600;
+
+.ssc-lg-inner {
+  padding-bottom: var(--space-12);
 }
-.step__circle {
-  position: absolute;
-  top: 50%;
-  right: 50%;
+
+.ssc-lg-card {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--space-8);
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-2xl);
+  box-shadow: var(--shadow-xs);
+  padding: 28px;
+  transition: transform 140ms ease, box-shadow 140ms ease;
 }
-.carousel-indicators li {
-  background-color: var(--clr-primary);
+
+.ssc-lg-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.ssc-lg-card__body {
+  width: 100%;
+}
+
+.ssc-lg-card__media {
+  width: 100%;
+}
+
+.ssc-lg-card__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 24px;
+  padding: 0 var(--space-2);
+  margin-bottom: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  color: var(--violet-500);
+  background: var(--violet-50);
+  border-radius: var(--r-full);
+}
+
+.ssc-lg-card__title {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semibold);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--fg-1);
+  margin: 0 0 var(--space-2);
+}
+
+.ssc-lg-card__text {
+  display: block;
+  font-size: 14.5px;
+  font-weight: var(--fw-regular);
+  line-height: 1.55;
+  color: var(--fg-2);
+}
+
+.ssc-lg-card__img-wrap {
+  overflow: hidden;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--border-light);
+}
+
+.ssc-lg-card__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-indicators.ssc-lg-indicators li {
+  background-color: var(--violet-500);
+}
+
+@media (min-width: 992px) {
+  .ssc-lg-card {
+    flex-direction: row;
+    gap: var(--space-12);
+    align-items: center;
+  }
+
+  .ssc-lg-card__body {
+    width: 50%;
+  }
+
+  .ssc-lg-card__media {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .ssc-lg-section {
+    padding: var(--space-16) var(--space-4);
+  }
 }
 </style>

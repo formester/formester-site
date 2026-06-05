@@ -222,9 +222,11 @@ button {
 }
 
 .section__heading {
-  font-size: var(--ft-df-heading);
-  font-weight: 700;
-  line-height: 150%;
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: var(--fw-bold);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--fg-1);
 }
 .sub__section-heading {
   font-size: var(--ft-subtitle);
@@ -232,7 +234,9 @@ button {
   line-height: 140%;
 }
 .highlight__text {
-  color: var(--clr-primary);
+  color: var(--violet-500);
+  font-style: italic;
+  font-family: var(--font-display);
 }
 
 .present {

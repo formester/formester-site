@@ -1,30 +1,28 @@
 <template>
-  <div class="container py-5">
+  <div class="sfd-section">
     <SectionTitle :heading="title" />
-    <p class="hero__subheading" v-if="description">
+    <p class="sfd-subheading" v-if="description">
       {{ description }}
     </p>
-    <div class="row">
+    <div class="row sfd-row">
       <div v-for="item in itemList" :key="item.id" :class="columnClass">
-        <div
-          class="border-sm-none border-start ps-3 d-flex flex-column align-items-start"
-        >
+        <div class="sfd-card d-flex flex-column align-items-start">
           <nuxt-img
             v-if="cardImg(item).src"
             :src="cardImg(item).src"
             :alt="cardImg(item).alt || item.title || 'Feature image'"
             :width="cardImg(item).width || 400"
             :height="cardImg(item).height || 300"
-            class="img-fluid"
+            class="sfd-card__img"
             loading="lazy"
           />
-          <h3 class="sub__section-heading mt-4">{{ item.title }}</h3>
+          <h3 class="sfd-card__title">{{ item.title }}</h3>
           <MarkdownContent
             v-if="item.description_markdown"
-            class="subheading__text"
+            class="sfd-card__body"
             :content="item.description_markdown"
           />
-          <p v-else class="subheading__text">{{ item.description }}</p>
+          <p v-else class="sfd-card__body">{{ item.description }}</p>
         </div>
       </div>
     </div>
@@ -74,29 +72,81 @@ export default {
 </script>
 
 <style scoped>
-
-.img-fluid {
-  width: 100%;
+.sfd-section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: var(--space-16) var(--space-6);
 }
 
-.sub__section-heading {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 26px;
-  position: relative;
+.sfd-subheading {
+  max-width: 720px;
+  margin: var(--space-4) auto 0;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--fg-2);
 }
 
-.subheading__text {
-  font-size: 14px;
-  line-height: 22px;
+.sfd-row {
+  margin-top: var(--space-8);
 }
 
-.sub__section-heading::before {
-  content: '';
-  position: absolute;
-  left: -17px;
+/* Item card */
+.sfd-card {
   height: 100%;
-  width: 1.5px;
-  background-color: var(--clr-primary);
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-2xl);
+  box-shadow: var(--shadow-xs);
+  padding: 24px;
+  transition:
+    transform 140ms ease,
+    box-shadow 140ms ease,
+    border-color 140ms ease;
+}
+
+.sfd-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-violet);
+}
+
+.sfd-card__img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--r-lg);
+  margin-bottom: var(--space-5);
+}
+
+.sfd-card__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--fg-1);
+  margin: 0 0 var(--space-2);
+}
+
+.sfd-card__body {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--fg-2);
+  margin: 0;
+}
+
+/* Links inside markdown bodies */
+.sfd-card__body :deep(a) {
+  color: var(--violet-600);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sfd-card__body :deep(a:hover) {
+  text-decoration: underline;
+}
+
+@media (max-width: 575px) {
+  .sfd-section {
+    padding: var(--space-12) var(--space-4);
+  }
 }
 </style>

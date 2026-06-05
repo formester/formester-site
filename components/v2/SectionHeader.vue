@@ -2,18 +2,18 @@
   <div
     v-if="eyebrow || segments.length || description"
     class="sh"
-    :class="[`sh--${align}`, `sh--${tone}`, `sh--sp-${spacing}`]"
+    :class="[`sh--${align}`, `sh--${tone}`, `sh--sp-${spacing}`, `sh--size-${size}`]"
   >
     <template v-if="eyebrow">
       <SectionBadge v-if="tone === 'default'" :text="eyebrow" />
       <span v-else class="sh__eyebrow">{{ eyebrow }}</span>
     </template>
 
-    <h2 v-if="segments.length" class="sh__heading" :class="`sh__heading--${size}`">
+    <component :is="tag" v-if="segments.length" class="sh__heading" :class="`sh__heading--${size}`">
       <span v-for="(seg, i) in segments" :key="i" :class="{ 'sh__hl': seg.highlight }"
         >{{ seg.text }}{{ i < segments.length - 1 ? ' ' : '' }}</span
       >
-    </h2>
+    </component>
 
     <p v-if="description" class="sh__desc">{{ description }}</p>
   </div>
@@ -29,8 +29,9 @@ const props = defineProps({
   description: { type: String, default: '' },
   align: { type: String, default: 'center' }, // center | left
   tone: { type: String, default: 'default' }, // default | inverse (on dark/gradient)
-  size: { type: String, default: 'default' }, // default | sm
+  size: { type: String, default: 'default' }, // default | sm | xl (hero scale)
   spacing: { type: String, default: 'lg' }, // lg | none (bottom margin)
+  tag: { type: String, default: 'h2' }, // h2 | h1 (hero usage)
 })
 
 const segments = computed(() =>
@@ -76,6 +77,15 @@ const segments = computed(() =>
 }
 .sh__heading--sm {
   font-size: clamp(22px, 2.6vw, 30px);
+}
+.sh__heading--xl {
+  font-size: clamp(36px, 4vw, 54px);
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+.sh--size-xl .sh__desc {
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.6;
 }
 .sh__hl {
   color: var(--violet-500);
