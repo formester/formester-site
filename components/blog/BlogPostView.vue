@@ -129,13 +129,6 @@ const slugifyHeading = (text) =>
 const processedBody = computed(() => {
   const renderer = new marked.Renderer()
 
-  renderer.heading = function (text, level) {
-    if (level >= 2 && level <= 3) {
-      return `<h${level} id="${slugifyHeading(text)}">${text}</h${level}>`
-    }
-    return `<h${level}>${text}</h${level}>`
-  }
-
   renderer.link = function (href, title, text) {
     let processedHref = href
     const isInternal = href.startsWith('/') || href.includes('formester.com')
@@ -154,18 +147,34 @@ const processedBody = computed(() => {
   return marked(props.blogData?.body || '', { renderer })
 })
 
-const tableOfContents = computed(() => {
-  const toc = []
-  const content = props.blogData?.body || ''
-  const headingRegex = /^(#{2,3})\s+(.+)$/gm
-  let match
-  while ((match = headingRegex.exec(content)) !== null) {
-    const level = match[1].length
-    const text = match[2].trim()
-    toc.push({ id: slugifyHeading(text), text, level })
-  }
-  return toc
-})
+const tableOfContents = ref([])
+
+// Walk the rendered headings, give each a stable id (keep existing, else slug),
+// and build the TOC from the actual DOM — robust against v-html hydration.
+const buildToc = () => {
+  nextTick(() => {
+    if (!blogContent.value) return
+    const toc = []
+    const used = new Set()
+    blogContent.value
+      .querySelectorAll('.nuxt-content h2, .nuxt-content h3')
+      .forEach((el) => {
+        const text = el.textContent.trim()
+        if (!text) return
+        let id = el.id
+        if (!id) {
+          id = slugifyHeading(text) || 'section'
+          let base = id, n = 2
+          while (used.has(id)) id = `${base}-${n++}`
+          el.id = id
+        }
+        used.add(id)
+        el.style.scrollMarginTop = '96px'
+        toc.push({ id, text, level: el.tagName === 'H3' ? 3 : 2 })
+      })
+    tableOfContents.value = toc
+  })
+}
 
 const openPopup = (src, alt) => {
   popupImageSrc.value = src
@@ -217,6 +226,7 @@ const keyHandler = (evt) => {
 
 onMounted(() => {
   setupImageClickHandlers()
+  buildToc()
   setupScrollspy()
   document.addEventListener('keydown', keyHandler)
 })
@@ -228,6 +238,7 @@ onBeforeUnmount(() => {
 
 watch(() => props.blogData?.body, () => {
   setupImageClickHandlers()
+  buildToc()
   setupScrollspy()
 })
 </script>
@@ -241,7 +252,7 @@ watch(() => props.blogData?.body, () => {
 }
 
 .art-hero__inner {
-  max-width: 760px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 
@@ -276,6 +287,7 @@ watch(() => props.blogData?.body, () => {
   letter-spacing: -0.025em;
   color: var(--fg-1);
   margin: 0 0 22px;
+  max-width: 900px;
   text-wrap: balance;
 }
 
