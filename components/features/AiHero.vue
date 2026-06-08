@@ -1,19 +1,12 @@
 <template>
   <section class="ai-hero">
+    <div class="ai-hero__grid">
     <div class="ai-hero__header">
       <div class="ai-hero__badge">
         <span class="dot"></span>
         {{ badgeText }}
       </div>
-      <h1 class="ai-hero__title">
-        <span
-          v-for="(item, index) in title"
-          :key="index"
-          :class="{ highlight: item.highlight }"
-          :style="{ color: item.color }"
-        >{{ item.text }}</span>
-      </h1>
-      <p v-if="description" class="ai-hero__description">{{ description }}</p>
+      <SectionHeader :title="title" :description="description" tag="h1" size="xl" spacing="none" align="left" />
     </div>
 
     <!-- Single canvas -->
@@ -25,7 +18,7 @@
           <textarea
             v-model="prompt"
             class="canvas-textarea"
-            :placeholder="placeholder"
+            :placeholder="typedPlaceholder || placeholder"
             rows="4"
           ></textarea>
 
@@ -35,7 +28,7 @@
               :key="i"
               class="canvas-chip"
               @click="setPrompt(chip.text)"
-            >{{ chip.text }}</button>
+            >{{ chip.label || chip.text }}</button>
           </div>
 
           <!-- PDF upload (commented out until prompt+PDF UX is finalized)
@@ -81,6 +74,12 @@
             Generating your form…
           </div>
           <p class="loading-hint">This may take a minute. Hang tight!</p>
+          <div class="loading-skeleton" aria-hidden="true">
+            <div v-for="n in 4" :key="n" class="sk-row" :style="{ animationDelay: 0.2 + n * 0.45 + 's' }">
+              <span class="sk-label" :style="{ width: 28 + (n % 3) * 14 + '%' }"></span>
+              <span class="sk-input"></span>
+            </div>
+          </div>
           <div class="progress-bar-wrap">
             <div class="progress-bar-fill" :style="{ width: progress + '%' }"></div>
           </div>
@@ -110,12 +109,14 @@
 
       </Transition>
     </div>
+    </div>
   </section>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import axios from 'axios'
+import SectionHeader from '@/components/v2/SectionHeader.vue'
 
 const props = defineProps({
   title: { type: Array, default: () => [] },
@@ -181,6 +182,23 @@ function stopProgress() {
 // const fileInputRef = ref(null)
 
 const setPrompt = (text) => { prompt.value = text }
+
+const typedPlaceholder = ref('')
+let typeTimer = null
+onMounted(() => {
+  const examples = (props.suggestions || []).map((s) => s.text).filter(Boolean)
+  if (!examples.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+  let i = 0
+  let len = 0
+  typeTimer = setInterval(() => {
+    if (prompt.value) return
+    const text = examples[i % examples.length]
+    len += 2
+    typedPlaceholder.value = text.slice(0, len)
+    if (len >= text.length + 60) { i++; len = 0 }
+  }, 30)
+})
+onBeforeUnmount(() => clearInterval(typeTimer))
 
 // const onFileChange = (e) => { selectedFile.value = e.target.files[0] || null }
 
@@ -275,21 +293,44 @@ const claimUrl = computed(() =>
 <style scoped>
 /* ─── Section ───────────────────────────────────────────── */
 .ai-hero {
-  padding: 80px 20px;
+  padding: var(--space-30) 20px var(--space-20);
   background: radial-gradient(ellipse at 50% 0%, #f5f0ff 0%, #ffffff 60%);
-  display: flex;
-  flex-direction: column;
+}
+
+.ai-hero__grid {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 64px;
   align-items: center;
-  gap: 40px;
+}
+
+@media (max-width: 991px) {
+  .ai-hero__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 }
 
 /* ─── Header ────────────────────────────────────────────── */
 .ai-hero__header {
+  text-align: left;
+}
+
+.canvas-footer {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--clr-text-secondary);
   text-align: center;
-  max-width: 680px;
+}
+
+.canvas-footer__sep {
+  margin: 0 4px;
 }
 
 .ai-hero__badge {
+  margin-bottom: 18px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -312,30 +353,11 @@ const claimUrl = computed(() =>
   box-shadow: 0 0 0 4px rgba(100, 52, 208, 0.2);
 }
 
-.ai-hero__title {
-  font-size: 48px;
-  line-height: 1.15;
-  margin-bottom: 16px;
-  color: var(--clr-text-primary);
-}
-
-.ai-hero__title .highlight { color: var(--clr-primary); }
-
-.ai-hero__description {
-  font-size: 18px;
-  color: var(--clr-text-secondary);
-  line-height: 1.6;
-}
-
-@media (max-width: 640px) {
-  .ai-hero__title { font-size: 32px; }
-  .ai-hero__description { font-size: 16px; }
-}
 
 /* ─── Canvas ────────────────────────────────────────────── */
 .ai-canvas {
   width: 100%;
-  max-width: 720px;
+  min-width: 0;
 }
 
 /* ─── Input state ───────────────────────────────────────── */
@@ -345,10 +367,6 @@ const claimUrl = computed(() =>
   border-radius: 20px;
   padding: 24px;
   box-shadow: 0 8px 32px rgba(100, 52, 208, 0.08), 0 2px 8px rgba(0,0,0,0.04);
-}
-
-.canvas-input:has(.canvas-textarea) {
-  min-height: 420px;
 }
 
 .canvas-textarea {
@@ -389,6 +407,10 @@ const claimUrl = computed(() =>
   cursor: pointer;
   transition: background 0.15s, transform 0.15s;
   font-family: inherit;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .canvas-chip:hover {
@@ -475,16 +497,6 @@ const claimUrl = computed(() =>
   cursor: not-allowed;
 }
 
-.canvas-footer {
-  margin-top: 12px;
-  font-size: 12px;
-  color: var(--clr-text-secondary);
-  text-align: center;
-}
-
-.canvas-footer__sep {
-  margin: 0 4px;
-}
 
 /* ─── Loading state ─────────────────────────────────────── */
 .canvas-loading {
@@ -524,6 +536,49 @@ const claimUrl = computed(() =>
   font-size: 13px;
   color: var(--clr-text-secondary);
   margin-bottom: 24px;
+}
+
+.loading-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.sk-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  opacity: 0;
+  animation: skIn 0.4s ease forwards;
+}
+
+.sk-label {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--clr-secondary-gray-stroke);
+}
+
+.sk-input {
+  height: 34px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #f2f4f7 25%, #e9ecf1 37%, #f2f4f7 63%);
+  background-size: 400% 100%;
+  animation: skShimmer 1.4s ease infinite;
+}
+
+@keyframes skIn {
+  to { opacity: 1; }
+}
+
+@keyframes skShimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: 0 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sk-row { animation: none; opacity: 1; }
+  .sk-input { animation: none; }
 }
 
 .progress-bar-wrap {

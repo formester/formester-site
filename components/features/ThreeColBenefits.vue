@@ -1,37 +1,37 @@
 <template>
-  <div class="container py-5">
-    <div class="row justify-content-center align-items-center text-center mt-5">
-      <div>
+  <div class="benefits-v2">
+    <div class="benefits-v2__inner">
+      <div class="benefits-v2__head">
         <SectionTitle :heading="title" />
-        <p class="hero__subheading" v-if="description">
+        <p class="benefits-v2__desc" v-if="description">
           {{ description }}
         </p>
       </div>
-      <div
-        class="d-flex flex-column flex-md-row justify-content-start mt-md-5 flex-wrap"
-      >
+
+      <div class="benefits-v2__grid">
         <div
           v-for="item in itemList"
           :key="item.id"
-          class="d-flex flex-column align-items-center align-items-md-start text-center text-md-start px-4 col-md-4 my-3 mt-lg-5"
+          class="benefits-v2__card"
         >
-          <nuxt-img
-            v-if="cardImg(item).src"
-            class="benefit-icon"
-            :src="cardImg(item).src"
-            :alt="cardImg(item).alt || item?.title || 'Feature icon'"
-            :width="cardImg(item).width || 69"
-            :height="cardImg(item).height || 69"
-            loading="lazy"
-          />
-          <h3 class="sub__section-heading mt-4">{{ item?.title }}</h3>
+          <div class="benefits-v2__icon-tile" v-if="cardImg(item).src">
+            <nuxt-img
+              class="benefit-icon"
+              :src="cardImg(item).src"
+              :alt="cardImg(item).alt || item?.title || 'Feature icon'"
+              :width="cardImg(item).width || 69"
+              :height="cardImg(item).height || 69"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="benefits-v2__title">{{ item?.title }}</h3>
 
           <MarkdownContent
             v-if="item?.description_markdown"
-            class="subheading__text"
+            class="benefits-v2__body"
             :content="item?.description_markdown"
           />
-          <p v-else class="subheading__text">
+          <p v-else class="benefits-v2__body">
             {{ item?.description }}
           </p>
         </div>
@@ -69,9 +69,89 @@ export default {
 </script>
 
 <style scoped>
+.benefits-v2 {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+}
+
+.benefits-v2__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+}
+
+.benefits-v2__head {
+  text-align: center;
+}
+
+.benefits-v2__desc {
+  max-width: 720px;
+  margin: var(--space-4) auto 0;
+  font-size: var(--fs-md);
+  line-height: 1.6;
+  color: var(--fg-3);
+}
+
+.benefits-v2__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: var(--space-12);
+}
+
+.benefits-v2__card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-2xl);
+  box-shadow: var(--shadow-xs);
+  padding: 24px;
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+.benefits-v2__card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.benefits-v2__icon-tile {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: var(--bg-violet-25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+}
+
 .benefit-icon {
-  width: 69px;
-  height: 69px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
+}
+
+.benefits-v2__title {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  color: var(--fg-1);
+  line-height: 1.4;
+  margin: 0 0 var(--space-2);
+}
+
+.benefits-v2__body {
+  font-size: var(--fs-sm);
+  line-height: 1.55;
+  color: var(--fg-2);
+  margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .benefits-v2__grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

@@ -1,29 +1,25 @@
 <template>
-  <section class="call-to-action-section" :class="{ 'd-none': content.hidden }">
-    <div class="container py-md-6 py-5 px-md-5">
-      <div class="background-image-wrapper">
-        <nuxt-img src="/CTA Mask Left.svg" class="background-image-left" alt="" width="164" height="329" loading="lazy" />
-        <nuxt-img src="/CTA Mask Right.svg" class="background-image-right" alt="" width="584" height="329" loading="lazy" />
-      </div>
-      <div
-        class="row align-items-center py-md-5 py-3 px-md-5 px-3"
-        style="position: relative; z-index: 1"
-      >
-        <div class="col-lg-8 col-12 text-lg-start text-center">
-          <h2 class="section__heading text-white">
+  <section
+    class="call-to-action-section"
+    :class="{ 'cta-v2--hidden': content.hidden }"
+  >
+    <div class="cta-v2__band">
+      <div class="cta-v2__inner">
+        <div class="cta-v2__copy">
+          <h2 class="cta-v2__heading">
             <span v-if="content.heading">{{ content.heading }}</span>
             <span v-else-if="title && title.length">
               <span
                 v-for="item in title"
                 :key="item.id"
-                :class="{ highlight__text: item.highlight }"
+                :class="{ 'cta-v2__highlight': item.highlight }"
               >
                 {{ item.text }}
               </span>
             </span>
             <span v-else>Ready to build your perfect form?</span>
           </h2>
-          <p class="section__subtitle mt-3">
+          <p class="cta-v2__desc">
             <span>
               {{
                 content.subHeading ||
@@ -33,13 +29,13 @@
             </span>
           </p>
         </div>
-        <div class="col-lg-4 col-12 text-center mt-4">
+        <div class="cta-v2__actions">
           <a
             :href="
               content.btnPrimaryLink ||
               'https://app.formester.com/users/sign_up'
             "
-            class="btn button cta-button__invert"
+            class="cta-v2__btn cta-v2__btn--primary"
             target="_blank"
           >
             {{ content.btnPrimaryText || 'Get Started – It’s Free!' }}
@@ -77,134 +73,144 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  position: relative;
-  background-color: var(--clr-primary);
-  border-radius: 16px;
-  overflow: hidden;
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.background-image-wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.background-image-left {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: auto;
-  object-fit: contain;
-  object-position: left center;
-}
-
-.background-image-right {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: auto;
-  object-fit: contain;
-  object-position: right center;
-}
-.section__heading {
-  font-size: 40px;
-  line-height: 56px;
-  letter-spacing: -0.28px;
-  font-weight: 00;
-}
-.section__subtitle {
-  font-size: 18px;
-  line-height: 28px;
-  font-weight: 400;
-  color: #f9fafb;
-}
-
 .call-to-action-section {
-  padding: 6rem 0 !important;
   width: 100%;
+  padding: var(--space-16) var(--space-6);
+  display: flex;
+  justify-content: center;
 }
-.cta-bullets {
-  opacity: 0.5;
-  font-size: 14px;
+
+.cta-v2--hidden {
+  display: none;
+}
+
+.cta-v2__band {
+  position: relative;
+  width: 100%;
+  max-width: 1180px;
+  background-color: #0f0921;
+  background-image: radial-gradient(
+    ellipse 600px 400px at 70% 20%,
+    rgba(127, 86, 217, 0.3),
+    transparent 60%
+  );
+  border-radius: var(--r-3xl);
+  overflow: hidden;
+  padding: var(--space-20) var(--space-12);
+}
+
+.cta-v2__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-12);
+}
+
+.cta-v2__copy {
+  flex: 1 1 auto;
+  max-width: 720px;
+  text-align: left;
+}
+
+.cta-v2__heading {
+  margin: 0;
+  color: #ffffff;
+  font-family: var(--font-primary);
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: var(--fw-bold);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.cta-v2__highlight {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: var(--fw-regular);
+  color: #ffffff;
+}
+
+.cta-v2__desc {
+  margin: var(--space-4) 0 0;
+  max-width: 640px;
+  color: rgba(255, 255, 255, 0.74);
+  font-family: var(--font-primary);
+  font-size: var(--fs-md);
+  line-height: 1.6;
+}
+
+.cta-v2__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+  flex-shrink: 0;
+}
+
+.cta-v2__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: var(--r-full);
+  font-family: var(--font-primary);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+  line-height: 1;
   text-decoration: none;
-  list-style-type: none;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.cta-button {
-  background-color: var(--clr-primary);
-  font-size: var(--ft-md-btn);
-  padding: 12px 24px;
-  border-radius: 8px;
-  color: white;
-  font-weight: 700;
+.cta-v2__btn--primary {
+  background-color: var(--violet-500);
+  color: #ffffff;
 }
 
-.cta-button:hover {
-  background-color: var(--clr-primary-hover);
+.cta-v2__btn--primary:hover {
+  background-color: var(--violet-600);
 }
 
-.cta-button__invert {
-  background-color: white;
-  font-size: var(--ft-md-btn);
-  padding: 12px 24px;
-  border-radius: 8px;
-  color: var(--clr-primary);
-  font-weight: 700;
+.cta-v2__btn--white {
+  background-color: #ffffff;
+  color: var(--fg-1);
 }
 
-.cta-button__invert:hover {
-  background-color: var(--clr-primary-light);
-}
-
-.gap-3 {
-  gap: 1rem;
-}
-
-@media (max-width: 575px) {
-  .section__heading {
-    font-size: 30px;
-    line-height: 40px;
-  }
-  .section__subtitle {
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  .container {
-    margin-left: 16px;
-    margin-right: 16px;
-    width: calc(100% - 32px);
+@media (max-width: 991px) {
+  .cta-v2__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-9);
   }
 }
 
-@media (min-width: 768px) {
-  .py-md-6 {
-    padding-top: 4rem !important;
-    padding-bottom: 4rem !important;
-  }
+@media (max-width: 600px) {
   .call-to-action-section {
-    padding: 4rem 0 !important;
+    padding: var(--space-12) var(--space-4);
   }
-}
 
-@media (max-width: 767px) {
-  .container {
-    background-size: auto 100%;
+  .cta-v2__band {
+    padding: var(--space-12) var(--space-6);
   }
-}
-@media (max-width: 1199px) {
-  .background-image-left {
-    display: none !important;
+
+  .cta-v2__inner {
+    align-items: center;
+    text-align: center;
+  }
+
+  .cta-v2__copy {
+    text-align: center;
+  }
+
+  .cta-v2__actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-v2__btn {
+    width: 100%;
   }
 }
 </style>

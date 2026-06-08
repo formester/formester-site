@@ -25,8 +25,8 @@ export default {
     textStyle() {
       return {
         color: this.textColor || 'inherit',
-        fontWeight: this.bold || this.isBold ? 'bold' : 'normal',
-        backgroundColor: this.isHighlighted ? '#f8f9fa' : 'transparent',
+        fontWeight: this.bold || this.isBold ? '600' : 'normal',
+        backgroundColor: this.isHighlighted ? '#f7f3ff' : 'transparent',
         display: this.cellType === 'span' ? 'inline-block' : 'block',
       };
     },

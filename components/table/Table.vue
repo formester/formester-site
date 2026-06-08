@@ -1,27 +1,29 @@
 <template>
-  <div class="container py-5">
-    <div class="row justify-content-center align-items-center text-center">
+  <section class="v2-table-section">
+    <div class="v2-table-inner">
       <SectionTitle :heading="title" />
-      <table class="tablestyle">
-        <thead>
-          <TableRow
-            :rowData="rows[0].rowData"
-            :rowType="rows[0].rowType"
-            :highlightColumn="highlightColumn"
-          />
-        </thead>
-        <tbody>
-          <TableRow
-            v-for="(row, index) in rows.slice(1)"
-            :key="index"
-            :rowData="row.rowData"
-            :rowType="row.rowType"
-            :highlightColumn="highlightColumn"
-          />
-        </tbody>
-      </table>
+      <div class="v2-table-scroll">
+        <table class="tablestyle">
+          <thead>
+            <TableRow
+              :rowData="rows[0].rowData"
+              :rowType="rows[0].rowType"
+              :highlightColumn="highlightColumn"
+            />
+          </thead>
+          <tbody>
+            <TableRow
+              v-for="(row, index) in rows.slice(1)"
+              :key="index"
+              :rowData="row.rowData"
+              :rowType="row.rowType"
+              :highlightColumn="highlightColumn"
+            />
+          </tbody>
+        </table>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -46,51 +48,47 @@ export default {
 </script>
 
 <style scoped>
-.tablestyle {
-  margin-top: 32px;
+.v2-table-section {
+  padding: var(--space-16) var(--space-6);
 }
 
-table {
+.v2-table-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.v2-table-scroll {
+  margin-top: var(--space-8);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--r-2xl);
+}
+
+.tablestyle {
   width: 100%;
-  max-width: 980px;
+  border-collapse: separate;
   border-spacing: 0;
-  margin: 16px 0;
   font-family: inherit;
   background: #fff;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-xs);
   table-layout: fixed;
-  border-radius: 12px;
+  border-radius: var(--r-2xl);
   overflow: hidden;
 }
 
-th,
-td {
-  padding: 12px 16px;
-  text-align: left;
-}
-
-tbody tr {
-  border-bottom: 1.5px solid #eaecf0;
-}
-tbody tr:nth-child(even) {
-  background-color: #f9fafb;
-}
-tbody tr:last-child {
+/* Cell separators are drawn in TableRow (cells live in that child scope).
+   Strip the final row's border here via :deep so the rounded corner reads clean. */
+.tablestyle tbody tr:last-child :deep(td) {
   border-bottom: none;
 }
 
-thead tr {
-  background: #f3f4f6;
-}
-
-tbody td {
-  color: #6b7280;
-}
-
-@media (max-width: 575px) {
-  table {
-    width: 95%;
+@media (max-width: 600px) {
+  .v2-table-section {
+    padding: var(--space-12) var(--space-4);
+  }
+  .tablestyle {
+    min-width: 560px;
   }
 }
 </style>

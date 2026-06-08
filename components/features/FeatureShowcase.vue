@@ -1,15 +1,20 @@
 <template>
-  <div class="container py-5">
-    <div class="showcase-header">
-      <SectionTitle :heading="title" />
-      <p class="hero__subheading mt-4" v-if="description">
-        {{ description }}
-      </p>
-    </div>
-    <div class="row">
-      <div class="col-md-12" v-for="(item, index) in itemList" :key="item.id">
-        <div class="card" :class="{ 'reverse-order': isOdd(index) }">
-          <div class="card-content col-12 col-lg-5">
+  <section class="fs-section">
+    <div class="fs-inner">
+      <div class="showcase-header">
+        <SectionTitle :heading="title" />
+        <p class="hero__subheading mt-4" v-if="description">
+          {{ description }}
+        </p>
+      </div>
+      <div class="fs-rows">
+        <div
+          class="fs-row"
+          :class="{ 'fs-row--flip': isOdd(index) }"
+          v-for="(item, index) in itemList"
+          :key="item.id"
+        >
+          <div class="fs-text">
             <p class="card-step-index" v-if="steps">STEP {{ index + 1 }}</p>
             <h3 class="card-title">{{ item.title }}</h3>
             <MarkdownContent
@@ -19,18 +24,14 @@
             />
             <p v-else class="card-description">{{ item.description }}</p>
           </div>
-          <div
-            class="card-image col-12 col-lg-7 d-lg-flex"
-            :class="{ 'justify-content-lg-end  pe-xxl-4': !isOdd(index) }"
-            v-if="cardImg(item).src"
-          >
+          <div class="fs-media" v-if="cardImg(item).src">
             <nuxt-img
               v-if="!isGif(cardImg(item).src)"
               :src="cardImg(item).src"
               :alt="cardImg(item).alt || item.title || 'Feature image'"
               :width="cardImg(item).width || 800"
               :height="cardImg(item).height || 600"
-              class="img-fluid"
+              class="fs-img"
               :modifiers="{ animated: true }"
               loading="lazy"
             />
@@ -40,14 +41,14 @@
               :alt="cardImg(item).alt || item.title || 'Feature image'"
               :width="cardImg(item).width || 800"
               :height="cardImg(item).height || 600"
-              class="img-fluid"
+              class="fs-img"
               loading="lazy"
             />
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -89,87 +90,105 @@ export default {
 </script>
 
 <style scoped>
+.fs-section {
+  padding: var(--space-16) var(--space-6);
+}
+.fs-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
 .showcase-header {
-  margin-bottom: 3.5rem;
+  margin-bottom: var(--space-16);
 }
 .hero__subheading {
   text-align: center;
   max-width: 720px;
   margin: auto;
-  color: #475467;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 30px;
+  color: var(--fg-2);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-xl);
 }
-.card {
+
+.fs-rows {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.fs-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
   align-items: center;
-  flex-direction: row;
-  margin-bottom: 80px;
-  border: none;
+}
+.fs-row--flip .fs-media {
+  order: 2;
 }
 
-.card.reverse-order {
-  flex-direction: row-reverse;
-}
-.card-step-index {
-  color: var(--clr-primary);
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 22px;
-  margin: 0;
-}
-
-.card-title {
-  color: var(--neutral-900, #171717);
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 39px;
-}
-
-.card-description {
-  color: var(--neutral-700, #404040);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 28px;
-}
-.card-content {
+.fs-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
-  align-self: stretch;
-  height: min-content;
-  margin: auto;
+  gap: var(--space-3);
+  min-width: 0;
 }
-.card-image {
-  border-radius: 8px;
-  flex-shrink: 0;
+
+.card-step-index {
+  display: inline-block;
+  margin: 0;
+  padding: var(--space-1) var(--space-3);
+  background: var(--bg-violet-50);
+  color: var(--violet-600);
+  font-size: 11px;
+  font-weight: var(--fw-bold);
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--r-full);
 }
-.img-fluid {
-  width: 70%;
-  border-radius: 2%;
+
+.card-title {
+  margin: 0;
+  color: var(--fg-1);
+  font-size: clamp(20px, 2.4vw, 28px);
+  font-weight: var(--fw-bold);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.card-description {
+  margin: 0;
+  color: var(--fg-2);
+  font-size: 15px;
+  font-weight: var(--fw-regular);
+  line-height: 1.6;
+}
+.card-description :deep(a) {
+  color: var(--violet-600);
+  font-weight: var(--fw-semibold);
+}
+
+.fs-media {
+  min-width: 0;
+}
+.fs-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--r-2xl);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-lg);
 }
 
 @media (max-width: 992px) {
-  .card {
-    flex-direction: column;
+  .fs-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
   }
-  .card.reverse-order {
-    flex-direction: column;
-  }
-  .img-fluid {
-    width: 100%;
-    border-radius: 2%;
-  }
-  .card-description {
-    font-size: 14px;
-    line-height: 22px;
-  }
-  .img-fluid {
-    width: 100%;
-    border-radius: 2%;
+  .fs-row--flip .fs-media {
+    order: 0;
   }
 }
 </style>
