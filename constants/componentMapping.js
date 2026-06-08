@@ -18,6 +18,7 @@ export default {
   'macro-components.collapsible-item-list': () => import('@/components/home/MostUsedFeatures.vue'),
   'macro-components.embed-form-url': () => import('@/components/home/EmbedForm.vue'),
   'macro-components.testimonials': () => import('@/components/v2/testimonials/TestimonialsV2.vue'),
+  'macro-components.testimonial-wall': () => import('@/components/v2/TestimonialWall.vue'),
   'macro-components.cta': () => import('@/components/CallToActionSection.vue'),
   'macro-components.hero-row-layout': () => import('@/components/v2/HeroRowLayout.vue'),
   'macro-components.three-column-benefits': () => import('@/components/features/ThreeColBenefits.vue'),
