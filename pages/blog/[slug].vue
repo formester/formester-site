@@ -1,19 +1,12 @@
 <template>
   <div>
-    <div class="container position-relative mt-5">
-      <article
-        v-if="blogData"
-        class="article-container container mw-920"
-        :class="{ 'mb-3rem': !(blogData?.cta && blogData.cta.hidden) }"
-      >
-        <div class="blog__header">
-          <NuxtLink
-            to="/blog/"
-            class="blog__back"
-            @click.prevent="goBack"
-          >
-            <span>← Back</span>
-          </NuxtLink>
+    <div class="read-progress" aria-hidden="true">
+      <div class="read-progress__fill" :style="{ transform: `scaleX(${readProgress})` }"></div>
+    </div>
+
+    <div v-if="blogData" :class="{ 'mb-3rem': !(blogData?.cta && blogData.cta.hidden) }">
+        <BlogPostView v-if="blogPostViewData" :blog-data="blogPostViewData">
+          <template #actions>
           <div class="social__links">
             <a
               :href="`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${blogData?.title} by @_Formester_ `"
@@ -21,7 +14,7 @@
               class="social-icons"
               target="_blank"
             >
-              <TwitterIcon />
+              <IconXSocial />
             </a>
             <a
               :href="`https://www.facebook.com/sharer.php?u=${encodedUrl}`"
@@ -29,7 +22,7 @@
               class="social-icons"
               target="_blank"
             >
-              <FacebookIcon />
+              <IconFacebookSocial />
             </a>
             <a
               :href="`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}`"
@@ -37,68 +30,46 @@
               class="social-icons"
               target="_blank"
             >
-              <LinkdinIcon />
+              <IconLinkedinSocial />
             </a>
             <span class="social-icons" @click="copyToClipboard">
-              <CopyLinkIcon />
+              <IconLinkChain />
             </span>
           </div>
-        </div>
-        <div class="d-flex sm-text my-2 datentimeToRead">
-          <span>{{ formatDate(blogData?.publishedAt) }}</span>
-          <span>|</span>
-          <div
-            class="d-flex align-items-center justify-content-center timeToRead"
-          >
-            <ClockIcon color="#4f4f4f" />
-            <span>{{ blogData?.readingStats?.text }}</span>
-          </div>
-        </div>
-        <BlogPostView v-if="blogPostViewData" :blog-data="blogPostViewData" />
+          </template>
+        </BlogPostView>
         <notifications position="bottom right" class="my-notification" />
 
-        <div v-if="relatedArticles" class="mt-5">
-          <h2 class="article__sub-heading">Related Blogs</h2>
-          <div class="row mt-4">
-            <RelatedArticleCard
-              v-for="relatedArticle in relatedArticles"
-              :key="relatedArticle.slug"
-              :article="relatedArticle"
-              class="col-lg-6 related-article-card"
-            />
+        <div v-if="relatedArticles && relatedArticles.length" class="container related-container">
+          <div class="related-section">
+            <div class="section-label">
+              <h2>Related Blogs</h2>
+              <span class="rule"></span>
+            </div>
+            <div class="related-grid">
+              <RelatedArticleCard
+                v-for="relatedArticle in relatedArticles"
+                :key="relatedArticle.slug"
+                :article="relatedArticle"
+              />
+            </div>
           </div>
         </div>
-
-        <!--
-          <template>
-            <div class="mt-5" id="disqus_thread"></div>
-          </template>
-
-          <noscript
-            >Please enable JavaScript to view the
-            <a href="https://disqus.com/?ref_noscript"
-              >comments powered by Disqus.</a
-            ></noscript
-          >
-        -->
-      </article>
     </div>
     <CallToActionSection :content="blogData?.cta" />
   </div>
 </template>
 
 <script setup>
-import ClockIcon from '../../components/icons/ClockIcon.vue'
-import TwitterIcon from '../../components/icons/twitter.vue'
-import FacebookIcon from '../../components/icons/facebook.vue'
-import LinkdinIcon from '../../components/icons/linkdin.vue'
-import CopyLinkIcon from '../../components/icons/copyLink.vue'
+import IconXSocial from '../../components/icons/IconXSocial.vue'
+import IconFacebookSocial from '../../components/icons/IconFacebookSocial.vue'
+import IconLinkedinSocial from '../../components/icons/IconLinkedinSocial.vue'
+import IconLinkChain from '../../components/icons/IconLinkChain.vue'
 import getSiteMeta from '../../utils/getSiteMeta'
 import readingTime from '@/utils/readingTime'
 import { getBlogBySlug, getAllBlogs } from '@/utils/getAllBlogs'
 
 const route = useRoute()
-const router = useRouter()
 const config = useRuntimeConfig()
 const { $notify } = useNuxtApp()
 
@@ -155,20 +126,31 @@ const blogPostViewData = computed(() => {
     authorProfile: blogData.value.authorProfile,
     coverImgUrl: null,
     coverImgAlt: blogData.value.coverImgAlt,
+    publishedAt: blogData.value.publishedAt,
+    readingStats: blogData.value.readingStats,
   }
+})
+
+// Reading progress bar
+const readProgress = ref(0)
+const onScroll = () => {
+  const doc = document.documentElement
+  const total = doc.scrollHeight - window.innerHeight
+  readProgress.value = total > 0 ? Math.min(1, window.scrollY / total) : 0
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', onScroll, { passive: true })
+  onScroll()
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', onScroll)
 })
 
 const formatDate = (date) => {
   const options = { year: 'numeric', month: 'long', day: 'numeric' }
   return new Date(date).toLocaleDateString('en', options)
-}
-
-const goBack = () => {
-  if (process.client && window.history.length > 1) {
-    router.back()
-  } else {
-    router.push('/blog/')
-  }
 }
 
 const copyToClipboard = () => {
@@ -307,72 +289,102 @@ useJsonld(jsonldData.value)
 </script>
 
 <style scoped>
-p {
-  margin-bottom: 2rem;
+.read-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 2000;
+  background: transparent;
+  pointer-events: none;
 }
 
-.article-container {
-  margin-top: 9rem;
-}
-
-.article__sub-heading {
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 36px;
-  color: var(--clr-text-primary);
-}
-
-.article__desc {
-  font-size: 17px;
-  line-height: 31px;
-  color: var(--clr-text-primary);
-}
-
-.sm-text {
-  font-size: 14px;
-  line-height: 21px;
-  color: hsla(0, 0%, 31%, 1);
-}
-
-.mw-920 {
-  max-width: 920px;
-}
-
-.mt-8rem {
-  margin-block: 8rem;
+.read-progress__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--violet-300), var(--violet-500));
+  transform-origin: left;
+  transform: scaleX(0);
 }
 
 .mb-3rem {
   margin-bottom: 3rem;
 }
 
-.datentimeToRead {
-  gap: 0.75rem;
-  opacity: 0.5;
-}
-
-.timeToRead {
-  gap: 0.5rem;
-}
-
-.blog__header {
-  margin-top: -4rem;
-  justify-content: space-between;
-  display: flex;
-}
-
-.blog__header span {
-  color: #777;
-}
-
+/* share buttons rendered into the article's right rail */
 .social__links {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .social-icons {
-  margin: 0 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  border: 1px solid var(--border-light);
+  background: #fff;
   cursor: pointer;
-  fill: #000;
+  color: var(--fg-3);
+  transition: all 150ms ease;
+}
+
+.social-icons:hover {
+  background: var(--bg-violet-25);
+  border-color: var(--violet-300);
+  color: var(--violet-600);
+  transform: translateY(-2px);
+}
+
+.related-container {
+  max-width: 1140px;
+}
+
+.section-label {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 26px;
+}
+
+.section-label h2 {
+  font-size: 21px;
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.01em;
+  color: var(--fg-1);
+  margin: 0;
+}
+
+.section-label .rule {
+  flex: 1;
+  height: 1px;
+  background: var(--border-light);
+}
+
+.related-section {
+  margin-top: var(--space-10);
+  padding-top: var(--space-10);
+  border-top: 1px solid var(--border-light);
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+@media (max-width: 1100px) {
+  .related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
-

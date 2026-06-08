@@ -6,7 +6,7 @@
     {{ fetchError.message || 'Failed to load draft' }}
   </div>
   <PageComponents v-else-if="components.length" :components="components" />
-  <div v-else-if="previewData?.type === 'blog' && blogData" class="container mw-920 blog-preview-container">
+  <div v-else-if="previewData?.type === 'blog' && blogData" class="blog-preview-container">
     <BlogPostView :blog-data="blogPostViewData" />
   </div>
   <div v-else style="padding: 4rem; text-align: center; color: #666">
