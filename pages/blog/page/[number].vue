@@ -4,11 +4,10 @@
       <h2 class="section__heading" id="all-blogs">All Blogs</h2>
       <div class="blog-container-wrapper">
         <div class="blog-container">
-          <transition-group name="fade" tag="div" class="row" mode="out-in">
+          <transition-group name="fade" tag="div" class="blog-grid" mode="out-in">
             <BlogCard
               v-for="article in paginatedArticles"
               :key="article.slug"
-              class="col-lg-4 mt-3 mb-5"
               :article="article"
             />
           </transition-group>
@@ -27,13 +26,13 @@
           class="custom-page-btn prev"
           :to="currentPage === 2 ? '/blog/' : `/blog/page/${currentPage - 1}/`"
         >
-          Previous
+          ← Previous
         </nuxt-link>
         <span
           v-else
           class="custom-page-btn prev disabled"
         >
-          Previous
+          ← Previous
         </span>
         <div class="custom-pagination-center">
           <span v-for="item in paginationPages" :key="item.key">
@@ -54,13 +53,13 @@
           class="custom-page-btn next"
           :to="`/blog/page/${currentPage + 1}/`"
         >
-          Next
+          Next →
         </nuxt-link>
         <span
           v-else
           class="custom-page-btn next disabled"
         >
-          Next
+          Next →
         </span>
       </div>
     </nav>
@@ -244,23 +243,42 @@ watch(() => route.params.number, () => {
   }
 }
 .section__heading {
-  font-size: 32px;
-  margin-top: 32px;
+  font-size: clamp(22px, 2.4vw, 28px);
+  margin-top: 48px;
+  margin-bottom: 24px;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+@media (max-width: 991px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 600px) {
   .section__heading {
-    font-size: 24px;
     margin-top: 24px;
   }
 }
 .custom-pagination-bar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 64px auto;
+  margin: 48px auto 64px;
   padding: 32px 0px;
-  border-top: 1px solid #eaecf0;
+  border-top: 1px solid var(--border-light);
   flex-wrap: wrap;
   gap: 12px;
 }
@@ -268,8 +286,7 @@ watch(() => route.params.number, () => {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
-  gap: 8px;
+  gap: 6px;
   flex-wrap: wrap;
 }
 
@@ -296,35 +313,46 @@ watch(() => route.params.number, () => {
   justify-content: center;
   text-decoration: none;
   background: #fff;
-  border-radius: 4px;
-  min-width: 44px;
+  border: 1px solid transparent;
+  border-radius: var(--r-full);
+  min-width: 40px;
   min-height: 40px;
-  font-weight: 600;
-  font-size: var(--ft-small-body);
-  color: var(--clr-text-secondary);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-sm);
+  color: var(--fg-2);
   cursor: pointer;
   outline: none;
-  transition: background 0.2s, color 0.2s, border 0.2s;
-  padding: 0 16px;
+  transition: background 140ms ease, color 140ms ease, border-color 140ms ease;
+  padding: 0 14px;
 }
 
 .custom-page-btn:hover {
-  background: #f9fafb;
+  background: var(--bg-violet-25);
+  color: var(--violet-600);
 }
-.custom-page-btn.active,
+.custom-page-btn.active {
+  background: var(--violet-500);
+  border-color: var(--violet-500);
+  color: #fff;
+  cursor: default;
+}
 .custom-page-btn.disabled {
-  background: #f9fafb;
-  color: var(--clr-text-secondary);
-  border: 1px solid #d0d5dd;
+  background: var(--gray-50);
+  color: var(--fg-muted);
+  border: 1px solid var(--border-light);
   cursor: default;
 }
 .custom-page-btn.prev,
 .custom-page-btn.next {
-  border: 1px solid #d0d5dd;
-  min-width: 120px;
+  border: 1px solid var(--border-dark);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 18px;
+}
+.custom-page-btn.next:not(.disabled):hover,
+.custom-page-btn.prev:not(.disabled):hover {
+  border-color: var(--violet-300);
 }
 .custom-page-btn.disabled {
   opacity: 1;
