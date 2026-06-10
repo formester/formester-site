@@ -3,7 +3,7 @@
     :to="getLink(app)"
     :target="getLink(app)?.startsWith('http') ? '_blank' : undefined"
     class="integration-card-slim"
-    :class="{ 'clickable': getLink(app) }"
+    :class="{ clickable: getLink(app) }"
   >
     <div class="card-inner">
       <div class="icon-wrapper">
@@ -28,33 +28,7 @@
 
 <script>
 import { getStrapiImage } from '@/utils/strapiImage'
-
-const INTEGRATION_ICONS = {
-  'google tag manager': 'gtm.svg',
-  'google analytics': 'analytics.svg',
-  'facebook pixel': 'pixel.png',
-  'hubspot crm': 'hubspot.png',
-  'google sheets': 'google-sheets.png',
-  'slack': 'slack.png',
-  'calendly': 'calendly.svg',
-  'webhook': 'webhook.svg',
-  'stripe': 'stripe.svg',
-  'paypal': 'paypal.svg',
-  'recaptcha': 'recaptcha.svg',
-  'cloudflare turnstile': 'turnstile.svg',
-  'trustedform': 'trustedform.png',
-  'google forms': 'forms.svg',
-  'typeform': 'Typeform.svg',
-  'gmail': 'gmail.svg',
-  'outlook': 'ms_outlook.svg',
-  'sendgrid': 'sendgrid.svg',
-  'mailgun': 'mailgun.svg',
-  'amazon ses': 'aws-ses.svg',
-  'zapier': 'zapier.svg',
-  'ottokit (formerly suretriggers)': 'suretriggers.png',
-  'pabbly connect': 'pabbly.png',
-  'n8n': 'n8n.png',
-}
+import { integrationIconSrc } from '@/constants/integrationIcons'
 
 export default {
   props: ['app'],
@@ -69,18 +43,20 @@ export default {
       if (this.app.img) {
         return { src: `/integrations/${this.app.img}`, alt: this.app.name, width: null, height: null }
       }
-      const localIcon = INTEGRATION_ICONS[this.app.name?.toLowerCase()]
-      if (localIcon) {
-        return { src: `/integrations/${localIcon}`, alt: this.app.name, width: null, height: null }
+
+      const iconSrc = integrationIconSrc(this.app.name, null)
+      if (iconSrc) {
+        return { src: iconSrc, alt: this.app.name, width: null, height: null }
       }
+
       return { src: '', alt: this.app.name, width: null, height: null }
-    }
+    },
   },
   methods: {
     getLink(app) {
       return app.url || app.helpArticle || app.link
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -202,7 +178,7 @@ export default {
 }
 
 .integration-card-slim:hover .app-name {
-  color: #6434D0;
+  color: #6434d0;
 }
 
 .app-description {
