@@ -1,6 +1,6 @@
 <template>
   <div class="navbar-container">
-    <nav class="navbar navbar-expand-xl floating-navbar">
+    <nav class="navbar navbar-expand-lg floating-navbar">
       <div class="container d-flex align-items-center pr-3">
         <!-- Logo -->
         <NuxtLink class="navbar-brand-wrapper" to="/">
@@ -10,8 +10,6 @@
         <!-- Mobile: auth buttons always visible beside hamburger -->
         <div class="nav-mobile-actions">
           <FButton href="https://app.formester.com/users/sign_in" variant="text" size="sm" class="nav-login-btn">Log in
-          </FButton>
-          <FButton v-if="isTablet" href="https://app.formester.com/users/sign_up" variant="primary" size="sm">Start free
           </FButton>
           <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation" @click="toggleNav">
@@ -172,7 +170,6 @@ const hoveringTemplatesDropdown = ref(false)
 const resourcesDropdownActive = ref(false)
 const hoveringResourcesDropdown = ref(false)
 const isMobile = ref(false)
-const isTablet = ref(false)
 const activeFeatureCategory = ref('')
 
 let dropdownTimer = null
@@ -187,10 +184,10 @@ const resourcesList = [
   { id: 5, title: 'Help Center', description: 'Get help and support',                  imageUrl: '/support.svg',    imageAlt: 'Help Center icon',  href: 'https://help.formester.com/' },
 ]
 
+const MOBILE_MQ = '(max-width: 991px)'
+
 const checkIsMobile = () => {
-  const w = window.innerWidth
-  isMobile.value = w < 1200
-  isTablet.value = w >= 768 && w < 1200
+  isMobile.value = window.matchMedia(MOBILE_MQ).matches
   if (!isMobile.value) dropdownActive.value = false
 }
 
@@ -207,7 +204,7 @@ const toggleNav = () => {
 }
 
 const collapseNav = () => {
-  if (window.innerWidth >= 1200) return
+  if (!window.matchMedia(MOBILE_MQ).matches) return
   const c = ensureBsCollapse()
   if (c) c.hide()
 }
@@ -340,8 +337,12 @@ onBeforeUnmount(() => {
   transition: border-radius 0.2s ease;
 }
 
+/* When the mobile menu is open, the pill becomes a solid panel — glass is for
+   the floating bar over content, not for a menu you need to read. */
 .floating-navbar:has(.navbar-collapse.show) {
   border-radius: 16px;
+  background: #fff;
+  backdrop-filter: none;
 }
 
 nav {
@@ -452,8 +453,8 @@ nav {
   margin-left: auto;
 }
 
-/* Desktop navbar styles */
-@media (min-width: 1200px) {
+/* Desktop navbar styles (lg and up) */
+@media (min-width: 992px) {
   .navbar-nav {
     padding-right: 16px;
   }
@@ -637,8 +638,8 @@ nav {
   margin-left: auto;
 }
 
-/* ---- Tablet + mobile: keep floating pill, show hamburger ---- */
-@media (max-width: 1199px) {
+/* ---- Tablet + phones: keep floating pill, show hamburger ---- */
+@media (max-width: 991px) {
   .nav-mobile-actions {
     display: flex;
   }
@@ -697,8 +698,8 @@ nav {
 
 }
 
-/* ---- Mobile: tighter side gutter ---- */
-@media (max-width: 767px) {
+/* ---- Tablet + phones: collapsed menu renders the dropdown as an inline list ---- */
+@media (max-width: 991px) {
   .navbar-container {
     padding: 0 12px;
   }
