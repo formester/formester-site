@@ -2,11 +2,13 @@
 import fs from 'fs'
 import axios from 'axios'
 
+const BASE = 'https://cms.formester.com'
+
 async function fetchNavbar() {
   try {
     const {
       data: { data },
-    } = await axios.get(`https://cms.formester.com/api/features`, {
+    } = await axios.get(`${BASE}/api/features`, {
       params: {
         populate: 'deep',
         'sort[0]': 'id',
@@ -41,10 +43,21 @@ async function fetchNavbar() {
     // Save the extracted data to an importable path (bundled by Vite/Nuxt)
     fs.writeFileSync('constants/navbar.json', JSON.stringify(extractedNavItems, null, 2))
     console.log('✅ constants/navbar.json saved with extracted fields.')
+
+    // Category sidebar order = featureCategory enum order, straight from the CMS.
+    try {
+      const res = await axios.get(`${BASE}/api/feature-categories`, { timeout: 10000 })
+      const categories = Array.isArray(res.data) ? res.data : res.data?.data || []
+      if (categories.length) {
+        fs.writeFileSync('constants/featureCategories.json', JSON.stringify(categories, null, 2))
+        console.log('✅ constants/featureCategories.json saved.')
+      }
+    } catch (e) {
+      console.warn('⚠️  feature-categories fetch failed, keeping existing order file:', e.message)
+    }
   } catch (error) {
     console.warn('⚠️  Failed to fetch navbar data from API:', error.message)
   }
 }
 
 fetchNavbar()
-

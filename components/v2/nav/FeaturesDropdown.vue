@@ -84,6 +84,7 @@
 <script setup>
 import { ref } from 'vue'
 import navbarData from '~/constants/navbar.json'
+import categoryOrder from '~/constants/featureCategories.json'
 import DropdownItem from './DropdownItem.vue'
 
 defineProps({
@@ -110,7 +111,11 @@ const dropdownItems = navbarData.map((item) => ({
   featurePlan: item.featurePlan || null,
 }))
 
-const featureCategories = [...new Set(dropdownItems.map((item) => item.featureCategory))]
+const present = new Set(dropdownItems.map((item) => item.featureCategory))
+const featureCategories = [
+  ...categoryOrder.filter((c) => present.has(c)),
+  ...[...present].filter((c) => !categoryOrder.includes(c)),
+]
 const localActiveCategory = ref(featureCategories[0] || '')
 
 const handleCategoryChange = (category) => {
@@ -157,8 +162,8 @@ const onDropdownMouseLeave = () => emit('mouseleave')
 
 .features-dropdown-mega {
   display: flex;
-  width: 900px;
-  min-width: 900px;
+  width: min(900px, calc(100vw - 48px));
+  min-width: 0;
   max-width: 900px;
   min-height: 340px;
   background: #fff;
@@ -166,7 +171,7 @@ const onDropdownMouseLeave = () => emit('mouseleave')
   will-change: transform, opacity;
   border-radius: 18px;
   position: absolute;
-  left: 40%;
+  left: 50%;
   top: 100%;
   transform: translateX(-50%) translateY(0px);
   z-index: 9999;
@@ -263,12 +268,13 @@ const onDropdownMouseLeave = () => emit('mouseleave')
   border-top: 1px solid #eaecf0;
   transform: rotate(45deg);
   top: -8px;
-  left: 36%;
+  left: 50%;
+  margin-left: -8px;
   z-index: 10000;
   box-shadow: -3px -3px 5px rgba(16, 30, 54, 0.02);
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   /* Mobile specific styles */
   .features-dropdown-mega.is-mobile {
     overflow: hidden;

@@ -231,8 +231,9 @@ const pdfTemplates = [
 
 .templates-dropdown-mega {
   display: flex;
-  width: 900px;
-  min-width: 900px;
+  /* Cap to viewport so the panel fits from the lg breakpoint (992px) up */
+  width: min(900px, calc(100vw - 48px));
+  min-width: 0;
   max-width: 900px;
   background: #fff;
   box-shadow: 0 16px 48px -12px rgba(16, 24, 40, 0.18), 0 4px 16px -4px rgba(16, 24, 40, 0.08);
@@ -355,12 +356,13 @@ const pdfTemplates = [
   border-top: 1px solid #eaecf0;
   transform: rotate(45deg);
   top: -8px;
-  left: 37%;
+  left: 50%;
+  margin-left: -8px;
   z-index: 10000;
   box-shadow: -3px -3px 5px rgba(16, 30, 54, 0.02);
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   /* Mobile specific styles */
   .templates-dropdown-mega.is-mobile {
     overflow: hidden;

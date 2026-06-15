@@ -151,7 +151,7 @@ const onDropdownMouseLeave = () => emit('mouseleave')
   padding: 0;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   /* Mobile specific styles */
   .resources-dropdown-mega.is-mobile {
     overflow: hidden;
