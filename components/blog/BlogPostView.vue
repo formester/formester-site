@@ -84,11 +84,22 @@
         </aside>
       </div>
     </section>
+
+    <!-- FAQ: pulled out of the article body, rendered via the shared component -->
+    <FaqSection
+      v-if="faq.list.length"
+      :title="faq.title || 'Frequently asked questions'"
+      :description="faq.description"
+      :descriptionFallback="false"
+      :faqList="faq.list"
+      centered
+    />
   </div>
 </template>
 
 <script setup>
 import { marked } from 'marked'
+import FaqSection from '@/components/v2/FaqSection.vue'
 
 const props = defineProps({
   blogData: {
@@ -126,6 +137,35 @@ const slugifyHeading = (text) =>
     .replace(/--+/g, '-')
     .replace(/^-+|-+$/g, '')
 
+// Extract the body's FAQ section so it renders via FaqSection; drop it from the body.
+const decodeEntities = (s) =>
+  (s || '')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#0?39;|&apos;|&rsquo;/g, "'")
+    .replace(/&nbsp;/g, ' ')
+const stripTags = (s) => decodeEntities((s || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim())
+
+const faq = computed(() => {
+  const html = props.blogData?.body || ''
+  const sec = html.match(/<section\b[^>]*class="[^"]*\bfaq\b[^"]*"[^>]*>[\s\S]*?<\/section>/i)
+  if (!sec) return { body: html, list: [], title: '', description: '' }
+  const inner = sec[0]
+  const title = stripTags(inner.match(/<h2[^>]*>([\s\S]*?)<\/h2>/i)?.[1] || '')
+  const description = stripTags(inner.match(/class="[^"]*-faq__intro[^"]*"[^>]*>([\s\S]*?)<\/[a-z]+>/i)?.[1] || '')
+  const list = []
+  const re = /<details\b[\s\S]*?<summary[^>]*>([\s\S]*?)<\/summary>([\s\S]*?)<\/details>/gi
+  let m
+  while ((m = re.exec(inner))) {
+    const q = stripTags(m[1])
+    const a = stripTags(m[2])
+    if (q) list.push({ question: q, answer: a })
+  }
+  return { body: html.replace(sec[0], ''), list, title, description }
+})
+
 const processedBody = computed(() => {
   const renderer = new marked.Renderer()
 
@@ -144,7 +184,10 @@ const processedBody = computed(() => {
     return `<a href="${processedHref}"${titleAttr}>${text}</a>`
   }
 
-  return marked(props.blogData?.body || '', { renderer })
+  const raw = faq.value.body
+  // Bodies with embedded <style> render raw — marked mangles the inline CSS.
+  if ((props.blogData?.body || '').includes('design-preview')) return raw
+  return marked(raw, { renderer })
 })
 
 const tableOfContents = ref([])
@@ -715,6 +758,38 @@ a.art-author__name:hover {
   margin: var(--space-8) 0;
 }
 
+/* FAQ / collapsibles (native <details> once bespoke styling is stripped) */
+.nuxt-content details {
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-xl);
+  padding: 4px 18px;
+  margin: 12px 0;
+}
+
+.nuxt-content summary {
+  cursor: pointer;
+  font-weight: var(--fw-semibold);
+  color: var(--fg-1);
+  padding: 12px 0;
+  list-style: none;
+}
+
+.nuxt-content summary::-webkit-details-marker {
+  display: none;
+}
+
+.nuxt-content details[open] summary {
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 12px;
+}
+
+/* Stripped layout wrappers shouldn't add stray gaps */
+.nuxt-content section,
+.nuxt-content article,
+.nuxt-content div {
+  margin: 0;
+}
+
 @media only screen and (max-width: 768px) {
   .nuxt-content h2 {
     margin-top: 32px;
@@ -722,6 +797,248 @@ a.art-author__name:hover {
 
   .nuxt-content h3 {
     margin-top: 24px;
+  }
+}
+
+/* CMS-authored content blocks. Un-prefixed classes (fmstr- is for external bundles);
+   plain semantic HTML needs no class. Contract: docs/blog-authoring-prompt.md */
+
+/* TL;DR card; first child is the label */
+.nuxt-content .tldr {
+  background: var(--gray-50);
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-xl);
+  padding: 20px 22px;
+  margin: 28px 0;
+}
+.nuxt-content .tldr > :first-child {
+  color: var(--violet-500);
+  font-weight: var(--fw-bold);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+.nuxt-content .tldr ul {
+  margin: 0;
+}
+
+/* Callout / note (also the listicle "Best for:" tagline) */
+.nuxt-content .note {
+  border-left: 3px solid var(--violet-500);
+  background: #faf8ff;
+  border-radius: 0 8px 8px 0;
+  padding: 12px 18px;
+  margin: 22px 0;
+  color: var(--fg-2);
+}
+.nuxt-content .note > :last-child {
+  margin-bottom: 0;
+}
+.nuxt-content .note--warn {
+  border-left-color: #f79009;
+  background: #fffaf0;
+}
+
+/* Inline CTA */
+.nuxt-content .cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-xl);
+  background: var(--gray-50);
+  padding: 18px 22px;
+  margin: 28px 0;
+}
+.nuxt-content .cta > :first-child {
+  margin: 0;
+  font-weight: var(--fw-medium);
+  color: var(--fg-1);
+}
+.nuxt-content .cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--violet-500);
+  color: #fff;
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-weight: var(--fw-semibold);
+  white-space: nowrap;
+}
+.nuxt-content .cta a:hover {
+  background: var(--violet-700);
+  color: #fff;
+}
+
+/* Auto-numbered steps */
+.nuxt-content ol.steps {
+  list-style: none;
+  counter-reset: step;
+  padding: 0;
+  margin: 24px 0;
+}
+.nuxt-content .steps > li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 52px;
+  margin: 0 0 26px;
+}
+.nuxt-content .steps > li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2ecff;
+  color: var(--violet-500);
+  font-weight: var(--fw-bold);
+  border-radius: 8px;
+}
+.nuxt-content .steps h3 {
+  margin-top: 2px;
+}
+
+/* Ranked listicle entry */
+.nuxt-content .rank {
+  padding-top: 40px;
+  margin-top: 40px;
+  border-top: 1px solid var(--border-light);
+}
+.nuxt-content .rank:first-of-type {
+  padding-top: 0;
+  margin-top: 24px;
+  border-top: 0;
+}
+.nuxt-content .rank-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: #f2ecff;
+  color: var(--violet-500);
+  font-weight: var(--fw-bold);
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+.nuxt-content .rank h3 {
+  margin-top: 4px;
+}
+.nuxt-content .rank-badge {
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: middle;
+  border: 1px solid var(--violet-500);
+  color: var(--violet-500);
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  border-radius: 999px;
+  padding: 2px 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.nuxt-content .rank h4 {
+  font-size: 13px;
+  font-weight: var(--fw-bold);
+  color: #697586;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 20px 0 8px;
+}
+
+/* Pros & cons */
+.nuxt-content .proscons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin: 20px 0 4px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-light);
+}
+.nuxt-content .pros > strong,
+.nuxt-content .cons > strong {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+.nuxt-content .pros > strong {
+  color: #0f9d58;
+}
+.nuxt-content .cons > strong {
+  color: #b42318;
+}
+.nuxt-content .pros ul,
+.nuxt-content .cons ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nuxt-content .pros li,
+.nuxt-content .cons li {
+  position: relative;
+  padding-left: 22px;
+  margin: 6px 0;
+}
+.nuxt-content .pros li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #0f9d58;
+  font-weight: 700;
+}
+.nuxt-content .cons li::before {
+  content: '✕';
+  position: absolute;
+  left: 0;
+  color: #b42318;
+  font-weight: 700;
+}
+
+/* Comparison table; scrolls within its card */
+.nuxt-content .table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-xl);
+  margin: 24px 0;
+}
+.nuxt-content .table-wrap table {
+  margin: 0;
+  width: auto;
+  min-width: 100%;
+  font-size: var(--fs-sm);
+}
+.nuxt-content .table-wrap th {
+  white-space: nowrap;
+}
+.nuxt-content .table-wrap th,
+.nuxt-content .table-wrap td {
+  border: 0;
+  border-bottom: 1px solid var(--border-light);
+}
+.nuxt-content .table-wrap tr:last-child td {
+  border-bottom: 0;
+}
+.nuxt-content .table-wrap tbody tr:nth-child(even) td {
+  background: var(--gray-50);
+}
+
+@media (max-width: 640px) {
+  .nuxt-content .proscons {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 }
 </style>
