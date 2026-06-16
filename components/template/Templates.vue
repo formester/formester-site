@@ -2,6 +2,9 @@
   <div>
     <div class="container template-container d-flex">
       <div class="content-wrapper w-100">
+        <div class="search-row">
+          <TemplateSearch @searchInput="handleSearch" />
+        </div>
         <div
           v-if="activeCategory"
           class="breadcrumb d-flex align-items-center gap-2"
@@ -10,14 +13,13 @@
             All Templates
           </NuxtLink>
           <img src="~/assets/images/icons/chevron-right.svg" />
-          <span class="breadcrumb-text">{{ activeCategory.name }}</span>
+          <span class="breadcrumb-current">{{ activeCategory.name }}</span>
         </div>
         <div class="heading-row">
-          <h1 class="content-heading mt-2">
+          <h1 class="content-heading">
             {{ activeCategory ? activeCategory.name : 'All' }}
             Templates
           </h1>
-          <TemplateSearch @searchInput="handleSearch" />
         </div>
         <div
           v-if="activeCategory?.description"
@@ -222,6 +224,18 @@ export default {
   padding-left: 3rem;
 }
 
+.search-row {
+  margin: 0 0 28px;
+}
+
+.search-row :deep(.search-box) {
+  max-width: 100%;
+}
+
+.heading-row {
+  margin-top: 4px;
+}
+
 .heading-row {
   display: flex;
   align-items: center;
@@ -257,10 +271,74 @@ export default {
 
 .description-wrapper .content-description {
   color: var(--clr-text-secondary);
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 1.7;
   margin-top: 12px;
   max-width: 100%;
+}
+
+/* ── Rich-text category description typography ──
+   These run on v-html content, so they use :deep(). Build a clear scale
+   below the page title (32px): h2 22 → h3 18 → body 16, with weight and
+   top-margin contrast so multi-section descriptions read as an article. */
+.description-wrapper .content-description :deep(h2) {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--clr-text-primary);
+  margin: 32px 0 10px;
+}
+
+.description-wrapper .content-description :deep(h3) {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--clr-text-primary);
+  margin: 24px 0 8px;
+}
+
+.description-wrapper .content-description :deep(h4) {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--clr-text-primary);
+  margin: 20px 0 6px;
+}
+
+.description-wrapper .content-description :deep(h2:first-child),
+.description-wrapper .content-description :deep(h3:first-child) {
+  margin-top: 0;
+}
+
+.description-wrapper .content-description :deep(p) {
+  margin: 0 0 14px;
+}
+
+.description-wrapper .content-description :deep(ul),
+.description-wrapper .content-description :deep(ol) {
+  margin: 0 0 16px;
+  padding-left: 24px;
+}
+
+.description-wrapper .content-description :deep(li) {
+  margin: 6px 0;
+}
+
+/* Bold/emphasis text uses the ink so it reads against the grey body copy. */
+.description-wrapper .content-description :deep(strong),
+.description-wrapper .content-description :deep(b) {
+  color: var(--clr-text-primary);
+  font-weight: 600;
+}
+
+/* Links inside the rich-text category description use the brand primary. */
+.description-wrapper .content-description :deep(a) {
+  color: var(--clr-primary);
+  text-decoration: underline;
+}
+
+.description-wrapper .content-description :deep(a:hover) {
+  color: var(--clr-primary-hover);
 }
 
 .content-description-handle-button {
@@ -296,7 +374,15 @@ export default {
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
-  color: var(--clr-primary-600);
+  color: var(--clr-primary);
+  text-transform: capitalize;
+}
+
+.breadcrumb-current {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(--clr-text-secondary);
   text-transform: capitalize;
 }
 
