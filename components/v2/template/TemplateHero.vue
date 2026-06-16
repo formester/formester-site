@@ -139,7 +139,7 @@ function openPreviewModal() {
   margin: 0 auto;
   padding: 40px 40px 0;
   display: grid;
-  grid-template-columns: 1fr 400px;
+  grid-template-columns: minmax(0, 1fr) 400px;
   gap: 52px;
   margin-top: 40px;
 }
@@ -156,6 +156,7 @@ function openPreviewModal() {
   position: sticky;
   top: 80px;
   align-self: start;
+  min-width: 0;
 }
 
 /* ── Info column ── */
@@ -167,6 +168,7 @@ function openPreviewModal() {
   flex-direction: column;
   gap: var(--space-5);
   padding-top: 2px;
+  min-width: 0;
 }
 
 /* Breadcrumb */
@@ -336,18 +338,20 @@ function openPreviewModal() {
 /* ── Responsive ── */
 @media (max-width: 1024px) {
   .tmpl-detail__hero-inner {
-    grid-template-columns: 1fr;
-    gap: 100px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
     padding: 32px 20px 0;
   }
 
   .tmpl-detail__info-col {
     position: relative;
+    top: auto;
     order: -1;
   }
 
   .tmpl-detail__preview-col {
     position: static;
+    top: auto;
   }
 }
 

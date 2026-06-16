@@ -61,6 +61,15 @@ defineEmits(['update:activeTab', 'update:activeDevice'])
   gap: 10px;
 }
 
+@media (max-width: 1024px) {
+  .device-switcher {
+    display: none;
+  }
+  .toolbar.no-pdf {
+    display: none;
+  }
+}
+
 @media (max-width: 600px) {
   .toolbar {
     display: none;

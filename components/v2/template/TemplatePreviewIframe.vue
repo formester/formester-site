@@ -25,7 +25,7 @@ defineProps({
 }
 
 .preview-iframe {
-  width: calc(100% + 8px);
+  width: 100%;
   height: calc(100vh - 200px);
   border: none;
   display: block;
