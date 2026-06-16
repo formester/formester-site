@@ -2,6 +2,11 @@
 // Used by the integrations directory and integration cards when the CMS entry
 // doesn't carry its own icon.
 export const INTEGRATION_ICONS = {
+  // Plugin platforms
+  webflow: 'webflow.svg',
+  shopify: 'shopify.svg',
+  wix: 'wix.svg',
+  wordpress: 'wordpress.svg',
   'google tag manager': 'gtm.svg',
   'google analytics': 'analytics.svg',
   'facebook pixel': 'pixel.png',
