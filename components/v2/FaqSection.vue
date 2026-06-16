@@ -14,7 +14,7 @@
             {{ resolvedHeading }}
           </h2>
 
-          <p class="faq-description">{{ description || DEFAULT_DESCRIPTION }}</p>
+          <p v-if="resolvedDescription" class="faq-description">{{ resolvedDescription }}</p>
 
           <FButton v-if="ctaButton" variant="secondary" size="lg" :href="ctaButton.link" class="faq-cta">
             {{ ctaButton.text }}
@@ -59,6 +59,8 @@ const props = defineProps({
   ctaButton: { type: Object, default: null },
   background: { type: String, default: '' },
   centered: { type: Boolean, default: false },
+  // false = no default description; show only if provided.
+  descriptionFallback: { type: Boolean, default: true },
 })
 
 const DEFAULT_DESCRIPTION = 'Find answers to common questions below, or reach out to our team for more help.'
@@ -71,6 +73,10 @@ const resolvedHeading = computed(() => {
   }
   return props.title || DEFAULT_HEADING
 })
+
+const resolvedDescription = computed(
+  () => props.description || (props.descriptionFallback ? DEFAULT_DESCRIPTION : ''),
+)
 
 const resolvedFaqs = computed(() =>
   props.faqList.map((faq, i) => ({
