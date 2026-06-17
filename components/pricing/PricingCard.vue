@@ -91,30 +91,53 @@ export default {
 
 <style scoped>
 .pricing__card {
-  border-radius: 8px;
-  background: white;
-  box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.04),
-    0px 4px 8px 0px rgba(0, 0, 0, 0.04);
+  position: relative;
+  height: 100%;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid #eaecf0;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+  transition: box-shadow 160ms ease, transform 160ms ease, border-color 160ms ease;
+}
+
+.pricing__card:hover {
+  box-shadow: 0 14px 30px -14px rgba(16, 24, 40, 0.16);
+  transform: translateY(-3px);
+  border-color: #e0d8f5;
 }
 
 .pricing__card.hglt {
-  border: 4px solid var(--clr-primary);
-  margin-top: -38px;
+  border: 1.5px solid var(--clr-primary);
+  box-shadow: 0 22px 50px -18px rgba(100, 52, 208, 0.34);
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.pricing__card.hglt:hover {
+  transform: scale(1.05) translateY(-3px);
+  border-color: var(--clr-primary);
 }
 
 @media screen and (max-width: 992px) {
   .pricing__card.hglt {
-    margin-top: 0;
+    transform: none;
   }
 }
 
 .pricing__card.hglt::before {
   content: 'MOST POPULAR';
-  padding: 4px;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: var(--clr-primary);
-  color: white;
-  font-size: 12px;
-  font-weight: 600;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 5px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
 }
 
 .pricing__category {
@@ -173,12 +196,12 @@ export default {
 .pricing__button {
   color: var(--clr-primary);
   background-color: var(--clr-primary-light);
-  padding: 16px;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 500;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
   text-transform: capitalize;
-  transition: 300ms ease-out;
+  transition: background 160ms ease, color 160ms ease;
 }
 
 .pricing__button.muted {
@@ -201,14 +224,11 @@ export default {
 }
 
 .pricing__card.hglt .pricing__button:hover {
-  border-radius: 4px;
   background: var(--clr-primary-hover);
-  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
 }
 
 .pricing__button:hover {
   color: #371d72;
-  border-radius: 4px;
   background: #d1ceff;
 }
 

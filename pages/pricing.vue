@@ -1,12 +1,14 @@
 <template>
   <div>
     <div class=" upper-margin text-center px-3">
-      <span class="d-block mb-1 pricing__subtitle text__primary">Pricing</span>
-      <h1 class="pricing__heading mt-2">Pricing that feels just right</h1>
-      <p class="pricing__subheading mt-3">
-        Select the perfect plan for your needs, and start building beautiful
-        forms!
-      </p>
+      <SectionHeader
+        tag="h1"
+        size="xl"
+        align="center"
+        eyebrow="Pricing"
+        :title="[{ text: 'Pricing that feels' }, { text: 'just right', highlight: true }]"
+        description="Select the perfect plan for your needs, and start building beautiful forms!"
+      />
 
       <div
         class="d-none d-sm-flex justify-content-center align-items-center plan_toggle__switch"
@@ -58,12 +60,12 @@
           </div>
         </div>
         <div class="mt-5 py-5">
-          <h2 class="comparison__table-heading mb-3">
-            See All Features and Compare Plan
-          </h2>
-          <p class="comparison__table-description mt-1">
-            Everything you need to know about the product features and pricings.
-          </p>
+          <SectionHeader
+            align="center"
+            eyebrow="Compare plans"
+            :title="[{ text: 'See all features and' }, { text: 'compare plans', highlight: true }]"
+            description="Everything you need to know about the product features and pricing."
+          />
           <PricingTable
             :comparison-table-features="comparisonTableFeatures"
             :pricing-plans-monthly="pricingPlansMonthly"
@@ -73,7 +75,7 @@
         </div>
       </div>
       <CallToActionSection />
-      <Faq :faqList="faqs" title="Frequently Asked Questions" />
+      <FaqSection title="Frequently asked questions" :faqList="faqs" :descriptionFallback="false" centered />
     </div>
   </div>
 </template>
@@ -82,7 +84,8 @@
 import { ref, computed } from 'vue'
 import CallToActionSection from '@/components/CallToActionSection.vue'
 import PricingCard from '@/components/pricing/PricingCard.vue'
-import Faq from '@/components/features/Faq.vue'
+import FaqSection from '@/components/v2/FaqSection.vue'
+import SectionHeader from '@/components/v2/SectionHeader.vue'
 import {
   free,
   personalMonthly,
