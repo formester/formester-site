@@ -132,8 +132,69 @@
                 :resourcesList="resourcesList" @mouseenter="onResourcesDropdownMouseEnter"
                 @mouseleave="onResourcesDropdownMouseLeave" @dropdown-close="handleResourcesDropdownClose" />
             </li>
-            <li class="nav-item me-2" @click="collapseNav">
-              <NuxtLink to="/integrations/" class="nav-link">Integrations</NuxtLink>
+            <li class="nav-item dropdown me-2 position-relative" :class="{ open: pluginsDropdownActive }"
+              @mouseenter="!isMobile && onPluginsDropdownMouseEnter()"
+              @mouseleave="!isMobile && onPluginsDropdownMouseLeave()">
+              <template v-if="isMobile">
+                <button class="nav-link" :class="{ active: pluginsDropdownActive || hoveringPluginsDropdown }"
+                  type="button" @click="togglePluginsDropdown">
+                  Plugins
+                  <span class="chevron-stack">
+                    <nuxt-img src="/chevron-down-gray.svg" class="chevron chevron-gray" alt="Chevron"
+                      :class="{ open: pluginsDropdownActive }" />
+                    <nuxt-img src="/chevron-down-colored.svg" class="chevron chevron-colored" alt="Chevron"
+                      :class="{ open: pluginsDropdownActive }" />
+                  </span>
+                </button>
+              </template>
+              <template v-else>
+                <button class="nav-link" :class="{ active: pluginsDropdownActive || hoveringPluginsDropdown }"
+                  type="button" @click="togglePluginsDropdown" @mouseenter="onPluginsDropdownMouseEnter"
+                  @mouseleave="onPluginsDropdownMouseLeave" :aria-expanded="pluginsDropdownActive.toString()">
+                  Plugins
+                  <span class="chevron-stack">
+                    <nuxt-img src="/chevron-down-gray.svg" class="chevron chevron-gray" alt="Chevron"
+                      :class="{ open: pluginsDropdownActive }" />
+                    <nuxt-img src="/chevron-down-colored.svg" class="chevron chevron-colored" alt="Chevron"
+                      :class="{ open: pluginsDropdownActive }" />
+                  </span>
+                </button>
+              </template>
+              <PluginsDropdown :dropdownActive="pluginsDropdownActive" :isMobile="isMobile"
+                @mouseenter="onPluginsDropdownMouseEnter" @mouseleave="onPluginsDropdownMouseLeave"
+                @dropdown-close="handlePluginsDropdownClose" />
+            </li>
+            <li class="nav-item dropdown me-2 position-relative" :class="{ open: integrationsDropdownActive }"
+              @mouseenter="!isMobile && onIntegrationsDropdownMouseEnter()"
+              @mouseleave="!isMobile && onIntegrationsDropdownMouseLeave()">
+              <template v-if="isMobile">
+                <button class="nav-link" :class="{ active: integrationsDropdownActive || hoveringIntegrationsDropdown }"
+                  type="button" @click="toggleIntegrationsDropdown">
+                  Integrations
+                  <span class="chevron-stack">
+                    <nuxt-img src="/chevron-down-gray.svg" class="chevron chevron-gray" alt="Chevron"
+                      :class="{ open: integrationsDropdownActive }" />
+                    <nuxt-img src="/chevron-down-colored.svg" class="chevron chevron-colored" alt="Chevron"
+                      :class="{ open: integrationsDropdownActive }" />
+                  </span>
+                </button>
+              </template>
+              <template v-else>
+                <button class="nav-link" :class="{ active: integrationsDropdownActive || hoveringIntegrationsDropdown }"
+                  type="button" @click="toggleIntegrationsDropdown" @mouseenter="onIntegrationsDropdownMouseEnter"
+                  @mouseleave="onIntegrationsDropdownMouseLeave" :aria-expanded="integrationsDropdownActive.toString()">
+                  Integrations
+                  <span class="chevron-stack">
+                    <nuxt-img src="/chevron-down-gray.svg" class="chevron chevron-gray" alt="Chevron"
+                      :class="{ open: integrationsDropdownActive }" />
+                    <nuxt-img src="/chevron-down-colored.svg" class="chevron chevron-colored" alt="Chevron"
+                      :class="{ open: integrationsDropdownActive }" />
+                  </span>
+                </button>
+              </template>
+              <IntegrationsDropdown :dropdownActive="integrationsDropdownActive" :isMobile="isMobile"
+                @mouseenter="onIntegrationsDropdownMouseEnter" @mouseleave="onIntegrationsDropdownMouseLeave"
+                @dropdown-close="handleIntegrationsDropdownClose" />
             </li>
             <li class="nav-item me-2" @click="collapseNav">
               <NuxtLink to="/pricing/" class="nav-link">Pricing</NuxtLink>
@@ -160,6 +221,8 @@ import FButton from '@/components/UI/FButton.vue'
 import FeaturesDropdown from './FeaturesDropdown.vue'
 import ResourcesDropdown from './ResourcesDropdown.vue'
 import TemplatesDropdown from './TemplatesDropdown.vue'
+import PluginsDropdown from './PluginsDropdown.vue'
+import IntegrationsDropdown from './IntegrationsDropdown.vue'
 
 const siteNav = ref(null)
 
@@ -169,11 +232,17 @@ const templatesDropdownActive = ref(false)
 const hoveringTemplatesDropdown = ref(false)
 const resourcesDropdownActive = ref(false)
 const hoveringResourcesDropdown = ref(false)
+const pluginsDropdownActive = ref(false)
+const hoveringPluginsDropdown = ref(false)
+const integrationsDropdownActive = ref(false)
+const hoveringIntegrationsDropdown = ref(false)
 const isMobile = ref(false)
 const activeFeatureCategory = ref('')
 
 let dropdownTimer = null
 let resourcesDropdownTimer = null
+let pluginsDropdownTimer = null
+let integrationsDropdownTimer = null
 let bsCollapse = null
 
 const resourcesList = [
@@ -286,6 +355,70 @@ const onResourcesDropdownMouseLeave = () => {
 
 const handleResourcesDropdownClose = () => {
   resourcesDropdownActive.value = false
+  collapseNav()
+}
+
+const togglePluginsDropdown = () => {
+  pluginsDropdownActive.value = !pluginsDropdownActive.value
+  if (pluginsDropdownActive.value) {
+    dropdownActive.value = false
+    templatesDropdownActive.value = false
+    resourcesDropdownActive.value = false
+    integrationsDropdownActive.value = false
+  }
+}
+
+const onPluginsDropdownMouseEnter = () => {
+  hoveringPluginsDropdown.value = true
+  clearTimeout(pluginsDropdownTimer)
+  dropdownActive.value = false
+  templatesDropdownActive.value = false
+  resourcesDropdownActive.value = false
+  integrationsDropdownActive.value = false
+  pluginsDropdownActive.value = true
+}
+
+const onPluginsDropdownMouseLeave = () => {
+  hoveringPluginsDropdown.value = false
+  pluginsDropdownTimer = setTimeout(() => {
+    if (!hoveringPluginsDropdown.value) pluginsDropdownActive.value = false
+  }, 80)
+}
+
+const handlePluginsDropdownClose = () => {
+  pluginsDropdownActive.value = false
+  collapseNav()
+}
+
+const toggleIntegrationsDropdown = () => {
+  integrationsDropdownActive.value = !integrationsDropdownActive.value
+  if (integrationsDropdownActive.value) {
+    dropdownActive.value = false
+    templatesDropdownActive.value = false
+    resourcesDropdownActive.value = false
+    pluginsDropdownActive.value = false
+  }
+}
+
+const onIntegrationsDropdownMouseEnter = () => {
+  hoveringIntegrationsDropdown.value = true
+  clearTimeout(integrationsDropdownTimer)
+  dropdownActive.value = false
+  templatesDropdownActive.value = false
+  resourcesDropdownActive.value = false
+  pluginsDropdownActive.value = false
+  integrationsDropdownActive.value = true
+}
+
+const onIntegrationsDropdownMouseLeave = () => {
+  hoveringIntegrationsDropdown.value = false
+  integrationsDropdownTimer = setTimeout(() => {
+    if (!hoveringIntegrationsDropdown.value) integrationsDropdownActive.value = false
+  }, 80)
+}
+
+const handleIntegrationsDropdownClose = () => {
+  integrationsDropdownActive.value = false
   collapseNav()
 }
 
@@ -463,6 +596,44 @@ nav {
   .navbar-collapse {
     visibility: visible !important;
     display: flex !important;
+  }
+
+  /* Keep each label and its chevron on a single line (never wrap the chevron
+     under the text). */
+  .nav-link {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+}
+
+/* Tight desktop range: with 6 top-level items the row must stay one line at
+   992px. Trim per-item spacing + chevron footprint so the logo never wraps. */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar-nav {
+    padding-right: 8px;
+  }
+
+  .nav-item.me-2 {
+    margin-right: 0.125rem !important;
+  }
+
+  /* Specificity must clear Bootstrap's .navbar-expand-lg .navbar-nav .nav-link
+     (0,3,0), which otherwise pins the horizontal padding. */
+  .navbar-nav .nav-item .nav-link {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+  .nav-link .chevron-stack {
+    width: 14px;
+    height: 14px;
+    margin-left: 0;
+  }
+
+  .nav-link .chevron {
+    width: 14px;
+    height: 14px;
   }
 }
 
