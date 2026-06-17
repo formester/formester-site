@@ -100,7 +100,7 @@
               </th>
               <td>
                 <template v-if="feature.free === 'Yes'">
-                  <nuxt-img src="check-green.svg" alt="Included" />
+                  <nuxt-img src="check-violet.svg" alt="Included" />
                 </template>
                 <template v-else>
                   {{ feature.free }}
@@ -108,7 +108,7 @@
               </td>
               <td>
                 <template v-if="feature.pro === 'Yes'">
-                  <nuxt-img src="check-green.svg" alt="Included" />
+                  <nuxt-img src="check-violet.svg" alt="Included" />
                 </template>
                 <template v-else>
                   {{ feature.pro }}
@@ -116,7 +116,7 @@
               </td>
               <td>
                 <template v-if="feature.business === 'Yes'">
-                  <nuxt-img src="check-green.svg" alt="Included" />
+                  <nuxt-img src="check-violet.svg" alt="Included" />
                 </template>
                 <template v-else>
                   {{ feature.business }}
@@ -217,7 +217,7 @@
               </th>
               <td>
                 <template v-if="feature.free === 'Yes'">
-                  <nuxt-img src="check-green.svg" alt="Included" />
+                  <nuxt-img src="check-violet.svg" alt="Included" />
                 </template>
                 <template v-else>
                   {{ feature.free }}
@@ -283,7 +283,7 @@
               </th>
               <td>
                 <template v-if="feature.pro === 'Yes'">
-                  <nuxt-img src="check-green.svg" alt="Included" />
+                  <nuxt-img src="check-violet.svg" alt="Included" />
                 </template>
                 <template v-else>
                   {{ feature.pro }}
@@ -351,7 +351,7 @@
               </th>
               <td>
                 <template v-if="feature.business === 'Yes'">
-                  <nuxt-img src="check-green.svg" alt="Included" />
+                  <nuxt-img src="check-violet.svg" alt="Included" />
                 </template>
                 <template v-else>
                   {{ feature.business }}
@@ -423,6 +423,12 @@ table td {
   min-width: 169px;
 }
 
+/* comparison checkmarks — legible but proportionate to the 14px row text */
+table td img {
+  width: 18px;
+  height: 18px;
+}
+
 table tr:nth-child(even) {
   background: #f9fafb;
 }
@@ -434,18 +440,17 @@ table tr:nth-child(even) {
 }
 
 .table__button {
-  padding: 8px 12px;
+  padding: 9px 14px;
   background-color: var(--clr-primary-light);
   color: var(--clr-primary);
-  border-radius: 4px;
+  border-radius: 8px;
   font-weight: 600;
-  transition: all 0.3s ease-out;
+  transition: background 160ms ease, color 160ms ease;
   white-space: nowrap;
 }
 
 .table__button:hover {
   color: #371d72;
-  border-radius: 4px;
   background: #d1ceff;
 }
 
@@ -455,9 +460,7 @@ table tr:nth-child(even) {
 }
 
 .table__button.hglt:hover {
-  border-radius: 4px;
   background: var(--clr-primary-hover);
-  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
 }
 
 .table__button.muted {
@@ -488,7 +491,7 @@ table tr:nth-child(even) {
   padding-inline: 8px ;
   padding-top: 32px;
   padding-bottom: 16px;
-  border-bottom: 2px solid #e2e8f0;
+  border-bottom: 1px solid #eaecf0;
 }
 
 /* Tooltip Styles */
@@ -577,11 +580,14 @@ table tr:nth-child(even) {
 
 .badge {
   color: var(--clr-primary);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  background: #f9f5ff;
-  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: #f4ebff;
+  border-radius: 999px;
+  padding: 4px 9px;
 }
 
 .pricing__amount {

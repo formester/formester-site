@@ -160,6 +160,14 @@ export const comparisonTableFeatures =
     "category": "AI native",
     "features": [
       {
+        "name": "AI credits",
+        "description": "Credits for AI-powered features, included each month",
+        "free": "$0.25/mo",
+        "pro": "$0.50/mo",
+        "business": "$2.50/mo",
+        "link": null
+      },
+      {
         "name": "AI Form Generation",
         "description": "Create detailed forms & surveys with prompts",
         "free": "2 daily",
