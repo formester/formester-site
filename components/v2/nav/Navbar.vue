@@ -94,6 +94,70 @@
                 @mouseenter="onTemplatesDropdownMouseEnter" @mouseleave="onTemplatesDropdownMouseLeave"
                 @dropdown-close="handleTemplatesDropdownClose" />
             </li>
+            <li class="nav-item dropdown me-2 position-relative" :class="{ open: integrationsDropdownActive }"
+              @mouseenter="!isMobile && onIntegrationsDropdownMouseEnter()"
+              @mouseleave="!isMobile && onIntegrationsDropdownMouseLeave()">
+              <template v-if="isMobile">
+                <button class="nav-link" :class="{ active: integrationsDropdownActive || hoveringIntegrationsDropdown }"
+                  type="button" @click="toggleIntegrationsDropdown">
+                  Integrations
+                  <span class="chevron-stack">
+                    <nuxt-img src="/chevron-down-gray.svg" class="chevron chevron-gray" alt="Chevron"
+                      :class="{ open: integrationsDropdownActive }" />
+                    <nuxt-img src="/chevron-down-colored.svg" class="chevron chevron-colored" alt="Chevron"
+                      :class="{ open: integrationsDropdownActive }" />
+                  </span>
+                </button>
+              </template>
+              <template v-else>
+                <button class="nav-link" :class="{ active: integrationsDropdownActive || hoveringIntegrationsDropdown }"
+                  type="button" @click="toggleIntegrationsDropdown" @mouseenter="onIntegrationsDropdownMouseEnter"
+                  @mouseleave="onIntegrationsDropdownMouseLeave" :aria-expanded="integrationsDropdownActive.toString()">
+                  Integrations
+                  <span class="chevron-stack">
+                    <nuxt-img src="/chevron-down-gray.svg" class="chevron chevron-gray" alt="Chevron"
+                      :class="{ open: integrationsDropdownActive }" />
+                    <nuxt-img src="/chevron-down-colored.svg" class="chevron chevron-colored" alt="Chevron"
+                      :class="{ open: integrationsDropdownActive }" />
+                  </span>
+                </button>
+              </template>
+              <IntegrationsDropdown :dropdownActive="integrationsDropdownActive" :isMobile="isMobile"
+                @mouseenter="onIntegrationsDropdownMouseEnter" @mouseleave="onIntegrationsDropdownMouseLeave"
+                @dropdown-close="handleIntegrationsDropdownClose" />
+            </li>
+            <li class="nav-item dropdown me-2 position-relative" :class="{ open: pluginsDropdownActive }"
+              @mouseenter="!isMobile && onPluginsDropdownMouseEnter()"
+              @mouseleave="!isMobile && onPluginsDropdownMouseLeave()">
+              <template v-if="isMobile">
+                <button class="nav-link" :class="{ active: pluginsDropdownActive || hoveringPluginsDropdown }"
+                  type="button" @click="togglePluginsDropdown">
+                  Plugins
+                  <span class="chevron-stack">
+                    <nuxt-img src="/chevron-down-gray.svg" class="chevron chevron-gray" alt="Chevron"
+                      :class="{ open: pluginsDropdownActive }" />
+                    <nuxt-img src="/chevron-down-colored.svg" class="chevron chevron-colored" alt="Chevron"
+                      :class="{ open: pluginsDropdownActive }" />
+                  </span>
+                </button>
+              </template>
+              <template v-else>
+                <button class="nav-link" :class="{ active: pluginsDropdownActive || hoveringPluginsDropdown }"
+                  type="button" @click="togglePluginsDropdown" @mouseenter="onPluginsDropdownMouseEnter"
+                  @mouseleave="onPluginsDropdownMouseLeave" :aria-expanded="pluginsDropdownActive.toString()">
+                  Plugins
+                  <span class="chevron-stack">
+                    <nuxt-img src="/chevron-down-gray.svg" class="chevron chevron-gray" alt="Chevron"
+                      :class="{ open: pluginsDropdownActive }" />
+                    <nuxt-img src="/chevron-down-colored.svg" class="chevron chevron-colored" alt="Chevron"
+                      :class="{ open: pluginsDropdownActive }" />
+                  </span>
+                </button>
+              </template>
+              <PluginsDropdown :dropdownActive="pluginsDropdownActive" :isMobile="isMobile"
+                @mouseenter="onPluginsDropdownMouseEnter" @mouseleave="onPluginsDropdownMouseLeave"
+                @dropdown-close="handlePluginsDropdownClose" />
+            </li>
             <li class="nav-item dropdown me-2 position-relative" :class="{ open: resourcesDropdownActive }"
               @mouseenter="!isMobile && onResourcesDropdownMouseEnter()"
               @mouseleave="!isMobile && onResourcesDropdownMouseLeave()">
@@ -131,70 +195,6 @@
               <ResourcesDropdown :dropdownActive="resourcesDropdownActive" :isMobile="isMobile"
                 :resourcesList="resourcesList" @mouseenter="onResourcesDropdownMouseEnter"
                 @mouseleave="onResourcesDropdownMouseLeave" @dropdown-close="handleResourcesDropdownClose" />
-            </li>
-            <li class="nav-item dropdown me-2 position-relative" :class="{ open: pluginsDropdownActive }"
-              @mouseenter="!isMobile && onPluginsDropdownMouseEnter()"
-              @mouseleave="!isMobile && onPluginsDropdownMouseLeave()">
-              <template v-if="isMobile">
-                <button class="nav-link" :class="{ active: pluginsDropdownActive || hoveringPluginsDropdown }"
-                  type="button" @click="togglePluginsDropdown">
-                  Plugins
-                  <span class="chevron-stack">
-                    <nuxt-img src="/chevron-down-gray.svg" class="chevron chevron-gray" alt="Chevron"
-                      :class="{ open: pluginsDropdownActive }" />
-                    <nuxt-img src="/chevron-down-colored.svg" class="chevron chevron-colored" alt="Chevron"
-                      :class="{ open: pluginsDropdownActive }" />
-                  </span>
-                </button>
-              </template>
-              <template v-else>
-                <button class="nav-link" :class="{ active: pluginsDropdownActive || hoveringPluginsDropdown }"
-                  type="button" @click="togglePluginsDropdown" @mouseenter="onPluginsDropdownMouseEnter"
-                  @mouseleave="onPluginsDropdownMouseLeave" :aria-expanded="pluginsDropdownActive.toString()">
-                  Plugins
-                  <span class="chevron-stack">
-                    <nuxt-img src="/chevron-down-gray.svg" class="chevron chevron-gray" alt="Chevron"
-                      :class="{ open: pluginsDropdownActive }" />
-                    <nuxt-img src="/chevron-down-colored.svg" class="chevron chevron-colored" alt="Chevron"
-                      :class="{ open: pluginsDropdownActive }" />
-                  </span>
-                </button>
-              </template>
-              <PluginsDropdown :dropdownActive="pluginsDropdownActive" :isMobile="isMobile"
-                @mouseenter="onPluginsDropdownMouseEnter" @mouseleave="onPluginsDropdownMouseLeave"
-                @dropdown-close="handlePluginsDropdownClose" />
-            </li>
-            <li class="nav-item dropdown me-2 position-relative" :class="{ open: integrationsDropdownActive }"
-              @mouseenter="!isMobile && onIntegrationsDropdownMouseEnter()"
-              @mouseleave="!isMobile && onIntegrationsDropdownMouseLeave()">
-              <template v-if="isMobile">
-                <button class="nav-link" :class="{ active: integrationsDropdownActive || hoveringIntegrationsDropdown }"
-                  type="button" @click="toggleIntegrationsDropdown">
-                  Integrations
-                  <span class="chevron-stack">
-                    <nuxt-img src="/chevron-down-gray.svg" class="chevron chevron-gray" alt="Chevron"
-                      :class="{ open: integrationsDropdownActive }" />
-                    <nuxt-img src="/chevron-down-colored.svg" class="chevron chevron-colored" alt="Chevron"
-                      :class="{ open: integrationsDropdownActive }" />
-                  </span>
-                </button>
-              </template>
-              <template v-else>
-                <button class="nav-link" :class="{ active: integrationsDropdownActive || hoveringIntegrationsDropdown }"
-                  type="button" @click="toggleIntegrationsDropdown" @mouseenter="onIntegrationsDropdownMouseEnter"
-                  @mouseleave="onIntegrationsDropdownMouseLeave" :aria-expanded="integrationsDropdownActive.toString()">
-                  Integrations
-                  <span class="chevron-stack">
-                    <nuxt-img src="/chevron-down-gray.svg" class="chevron chevron-gray" alt="Chevron"
-                      :class="{ open: integrationsDropdownActive }" />
-                    <nuxt-img src="/chevron-down-colored.svg" class="chevron chevron-colored" alt="Chevron"
-                      :class="{ open: integrationsDropdownActive }" />
-                  </span>
-                </button>
-              </template>
-              <IntegrationsDropdown :dropdownActive="integrationsDropdownActive" :isMobile="isMobile"
-                @mouseenter="onIntegrationsDropdownMouseEnter" @mouseleave="onIntegrationsDropdownMouseLeave"
-                @dropdown-close="handleIntegrationsDropdownClose" />
             </li>
             <li class="nav-item me-2" @click="collapseNav">
               <NuxtLink to="/pricing/" class="nav-link">Pricing</NuxtLink>
@@ -510,6 +510,8 @@ nav {
 .nav-link {
   font-size: 14px;
   font-weight: 500;
+  display: inline-flex;
+  align-items: center;
   color: #344054;
   border-bottom: none;
   transition: background 100ms ease, color 100ms ease;
@@ -694,7 +696,7 @@ nav {
 
 .chevron {
   position: absolute;
-  top: -2px;
+  top: 0;
   left: 0;
   width: 18px;
   height: 18px;

@@ -7,6 +7,7 @@
       <!-- Grid -->
       <div class="fcg-grid" :style="gridStyle">
         <article v-for="(card, i) in cards" :key="i" class="fcg-card">
+          <div v-if="card.icon" class="fcg-card__icon" v-html="card.icon" />
           <span v-if="card.tag" class="fcg-tag" :class="`fcg-tag--${card.tagColor || 'violet'}`">
             {{ card.tag }}
           </span>
@@ -86,6 +87,23 @@ const gridStyle = computed(() => ({
   box-shadow: var(--shadow-md);
   transform: translateY(-3px);
   border-color: #e0d8f5;
+}
+
+.fcg-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--r-lg, 12px);
+  background: var(--violet-50, #f5eeff);
+  color: var(--violet-600, #5b2cc9);
+  margin-bottom: var(--space-4);
+}
+
+.fcg-card__icon :deep(svg) {
+  width: 22px;
+  height: 22px;
 }
 
 .fcg-tag {
