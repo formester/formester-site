@@ -91,7 +91,8 @@ sw.*
 # Vim swap files
 *.swp
 
-.claude
+.claude/*
+!.claude/skills/
 .claude-flow
 .mcp
 .storybook
