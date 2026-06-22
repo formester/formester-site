@@ -5,8 +5,8 @@ export const free = {
   description:
     'For individuals who need to quickly collect data through forms.',
   features: [
-    '10 forms',
-    '100 responses per month',
+    'Unlimited forms',
+    'Unlimited responses',
     'AI form creator',
     'All field types',
     'Card-style forms',
@@ -41,14 +41,14 @@ export const personalMonthly = {
     'For individuals who need to create beautiful, branded forms on a regular basis.',
   features: [
     'Everything in Free',
-    'Unlimited forms',
-    '1,000 responses per month',
     'Remove all branding',
     'Conditional logic and rules',
     'Redirect on completion',
-    'Address Autocomplete',
     'Backend only forms',
     'Connect to GTM & GA4',
+    'Add Meta tags for SEO',
+    'Email Verification',
+    'Add Custom Scripts'
   ],
 }
 
@@ -60,13 +60,14 @@ export const businessMonthly = {
     'For organizations to create unlimited forms that are fully customizable.',
     features: [
       'Everything in Personal',
-      '15,000 responses per month',
       'API access',
       'PDF exports',
       '25 Team members',
       'Real-time collaboration',
       '50 GB file storage',
+      'Address Autocomplete',
       'View partial submissions',
+      'Add Translations to forms',
     ],
 }
 
@@ -79,14 +80,14 @@ export const personalYearly = {
     'For individuals who need to create beautiful, branded forms on a regular basis.',
     features: [
       'Everything in Free',
-      'Unlimited forms',
-      '1,000 responses per month',
       'Remove all branding',
       'Conditional logic and rules',
       'Redirect on completion',
-      'Address Autocomplete',
       'Backend only forms',
       'Connect to GTM & GA4',
+      'Add Meta tags for SEO',
+      'Email Verification',
+      'Add Custom Scripts'
     ],
 }
 
@@ -99,17 +100,18 @@ export const businessYearly = {
     'For organizations to create unlimited forms that are fully customizable.',
   features: [
     'Everything in Personal',
-    '15,000 responses per month',
     'API access',
     'PDF exports',
     '25 Team members',
     'Real-time collaboration',
     '50 GB file storage',
+    'Address Autocomplete',
     'View partial submissions',
+    'Add Translations to forms',
   ],
 }
 
-export const comparisonTableFeatures = 
+export const comparisonTableFeatures =
 [
   {
     "category": "Usage",
@@ -117,7 +119,7 @@ export const comparisonTableFeatures =
       {
         "name": "Number of Forms",
         "description": "Total forms you can create",
-        "free": 10.0,
+        "free": "Unlimited",
         "pro": "Unlimited",
         "business": "Unlimited",
         "link": null
@@ -125,9 +127,9 @@ export const comparisonTableFeatures =
       {
         "name": "Responses",
         "description": "Monthly responses you can collect",
-        "free": 100.0,
-        "pro": "1k",
-        "business": "15k",
+        "free": "Unlimited",
+        "pro": "Unlimited",
+        "business": "Unlimited",
         "link": null
       },
       {
@@ -291,7 +293,7 @@ export const comparisonTableFeatures =
         "name": "Address Autocomplete",
         "description": "Auto-fill address fields with Google Maps API",
         "free": "-",
-        "pro": "Yes",
+        "pro": "-",
         "business": "Yes",
         "link": null
       },
