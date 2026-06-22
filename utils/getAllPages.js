@@ -39,9 +39,13 @@ function processItem(item) {
     updatedAt,
   }
   const siteMetaData = getSiteMeta(metaData)
+  // Canonical: prefer meta.link (cleaner) over meta.url, trailing-slashed to match og:url.
+  const toSlash = (h) => (h ? h.replace(/([^/])$/, '$1/') : h)
+  const authoredCanonical = (meta?.link || []).find((l) => l?.rel === 'canonical')
+  const canonical = toSlash(authoredCanonical?.href || meta?.url)
   head = {
     title: meta?.title,
-    link: meta?.link,
+    link: canonical ? [{ hid: 'canonical', rel: 'canonical', href: canonical }] : [],
     meta: [...siteMetaData],
   }
   jsonld = normalizeJsonLd(meta?.jsonld)
