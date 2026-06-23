@@ -196,7 +196,7 @@ useHead(() => {
 })
 
 useJsonld(() => {
-  const { name, description, previewImageUrl, category } = template.value || {}
+  const { name, description, previewImageUrl, category, schemaMarkup } = template.value || {}
   const jsonldData = [
     {
       '@context': 'https://schema.org',
@@ -221,15 +221,14 @@ useJsonld(() => {
         '@type': 'CollectionPage',
         name: category?.name,
         url: `https://formester.com/templates/categories/${category?.slug}/`,
-        description:
-          'Browse our collection of Research Form templates for free.',
+        description: `Browse our collection of ${category?.name || 'form'} templates for free.`,
       },
     },
   ]
   if (faqsSchema.value) {
     jsonldData.push(faqsSchema.value)
   }
-  return jsonldData
+  return mergeJsonld(jsonldData, schemaMarkup)
 })
 
 

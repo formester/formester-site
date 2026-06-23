@@ -92,7 +92,7 @@ useHead(() => ({
   ],
 }))
 
-useJsonld([
+useJsonld(() => mergeJsonld([
   {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -100,7 +100,7 @@ useJsonld([
     description: metaDescription.value,
     itemListElement: listItems.value,
   },
-])
+], currentCategory.value.schemaMarkup))
 </script>
 
 <style scoped></style>
