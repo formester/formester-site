@@ -197,6 +197,8 @@ useHead(() => {
 
 useJsonld(() => {
   const { name, description, previewImageUrl, category, schemaMarkup } = template.value || {}
+  // Custom schema, when set, fully replaces the auto-generated blocks.
+  if (schemaMarkup) return schemaMarkup
   const jsonldData = [
     {
       '@context': 'https://schema.org',
@@ -228,7 +230,7 @@ useJsonld(() => {
   if (faqsSchema.value) {
     jsonldData.push(faqsSchema.value)
   }
-  return mergeJsonld(jsonldData, schemaMarkup)
+  return jsonldData
 })
 
 
