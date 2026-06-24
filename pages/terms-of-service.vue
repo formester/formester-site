@@ -382,12 +382,30 @@ useJsonld([{
 
 <style scoped>
 .upper-margin {
-  margin-top: 8rem;
+  margin: 8rem auto 0;
+  max-width: 900px;
+  font-size: 17px;
+  line-height: 1.75;
+  color: #344054;
 }
+
+a {
+  color: #6434d0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+h1 { font-weight: 700; font-size: 34px; line-height: 1.2; margin-bottom: 20px; color: #101828; }
+h2 { font-weight: 700; font-size: 26px; line-height: 1.3; margin-top: 36px; margin-bottom: 14px; color: #101828; }
+h3 { font-weight: 600; font-size: 20px; line-height: 1.35; margin-top: 26px; margin-bottom: 10px; color: #101828; }
+
+p { margin: 0 0 1.15em; }
+ul, ol { margin: 0 0 1.15em; padding-left: 1.5em; }
+li { margin: 0.4em 0; }
 
 @media (max-width: 992px) {
   .upper-margin {
-    margin-top: 7rem;
+    margin-top: 6rem;
   }
 }
 </style>
