@@ -92,15 +92,19 @@ useHead(() => ({
   ],
 }))
 
-useJsonld([
-  {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: metaTitle.value,
-    description: metaDescription.value,
-    itemListElement: listItems.value,
-  },
-])
+useJsonld(() => {
+  // Custom schema, when set, fully replaces the auto-generated ItemList.
+  if (currentCategory.value.schemaMarkup) return currentCategory.value.schemaMarkup
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: metaTitle.value,
+      description: metaDescription.value,
+      itemListElement: listItems.value,
+    },
+  ]
+})
 </script>
 
 <style scoped></style>

@@ -22,10 +22,41 @@ export default {
 </script>
 <style scoped>
 .rich-text-content {
-  margin: 2rem 0;
+  margin: 2rem auto;
   width: 100%;
+  max-width: 900px;
   padding: 0 1rem;
   box-sizing: border-box;
+  font-size: 17px;
+  line-height: 1.75;
+  color: #344054;
+}
+
+.rich-text-content :deep(p) {
+  margin: 0 0 1.15em;
+}
+.rich-text-content :deep(ul),
+.rich-text-content :deep(ol) {
+  margin: 0 0 1.15em;
+  padding-left: 1.5em;
+}
+.rich-text-content :deep(li) {
+  margin: 0.4em 0;
+}
+.rich-text-content :deep(h3) {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 2rem 0 0.6rem;
+}
+.rich-text-content :deep(a) {
+  color: #6434d0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.rich-text-content :deep(strong) {
+  color: #101828;
+  font-weight: 600;
 }
 
 .card-ui {
@@ -68,11 +99,10 @@ export default {
 }
 
 .rich-text-content :deep(h2) {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
-  line-height: 125%;
-  margin: 0 auto;
-  margin-bottom: 24px;
+  line-height: 1.3;
+  margin: 2.2rem 0 0.7rem;
 }
 
 @media (max-width: 768px) {

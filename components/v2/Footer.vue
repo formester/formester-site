@@ -137,9 +137,6 @@
             <NuxtLink to="/about-us/" class="site-footer__link">About</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/case-study/" class="site-footer__link">Customers</NuxtLink>
-          </li>
-          <li>
             <NuxtLink to="/contact/" class="site-footer__link">Careers</NuxtLink>
           </li>
           <li>
