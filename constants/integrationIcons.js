@@ -38,7 +38,6 @@ export const INTEGRATION_ICONS = {
   gohighlevel: 'gohighlevel.svg',
   'custom smtp': 'custom-smtp.svg',
   'automotive crm (adf/xml)': 'automotive-crm.svg',
-  databricks: 'databricks.svg',
 }
 
 export function integrationIconSrc(name, iconUrl) {

@@ -44,7 +44,7 @@ export default {
         return { src: `/integrations/${this.app.img}`, alt: this.app.name, width: null, height: null }
       }
 
-      const iconSrc = integrationIconSrc(this.app.name, null)
+      const iconSrc = integrationIconSrc(this.app.name, this.app.iconUrl)
       if (iconSrc) {
         return { src: iconSrc, alt: this.app.name, width: null, height: null }
       }
