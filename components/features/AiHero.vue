@@ -95,7 +95,7 @@
               Try another
             </button>
             <span class="toolbar-title">{{ generatedTitle }}</span>
-            <a :href="claimUrl" target="_blank" class="toolbar-cta">Edit this form →</a>
+            <a :href="editUrl" target="_blank" class="toolbar-cta">Edit this form →</a>
           </div>
 
           <!-- Live form preview via iframe -->
@@ -285,8 +285,8 @@ const handleGenerate = async () => {
   }
 }
 
-const claimUrl = computed(() =>
-  `${config.public.appUrl}/ai_preview/claim?preview_token=${previewToken.value}`
+const editUrl = computed(() =>
+  `${config.public.appUrl}/guest_sessions?preview_token=${previewToken.value}`
 )
 </script>
 

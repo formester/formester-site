@@ -98,6 +98,8 @@ const props = defineProps({
   pdfData:  { type: Object, default: null },
 })
 
+const config = useRuntimeConfig()
+
 const CHAR_LIMIT = 400
 const descExpanded = ref(false)
 const isDescLong = computed(() => (props.template.description?.length ?? 0) > CHAR_LIMIT)
@@ -117,8 +119,9 @@ const formattedTime = computed(() => {
 })
 
 function redirectTo() {
+  // Guest mode: mint a guest workspace seeded from this template, straight into the builder.
   window.open(
-    `https://app.formester.com/templates?template_id=${props.template.id}`,
+    `${config.public.appUrl}/guest_sessions?template_id=${props.template.id}`,
     '_blank',
   )
 }
