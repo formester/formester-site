@@ -1,51 +1,48 @@
 <template>
-  <Templates
-    :activeCategory="activeCategory"
-    :templates="templates"
-    :templateCategories="categories"
-  />
+  <Templates :activeCategory="activeCategory" :templates="templates" :templateCategories="categories" />
 </template>
 
 <script setup>
 import Templates from '@/components/template/Templates.vue'
 import getSiteMeta from '@/utils/getSiteMeta'
 import getTemplatesAndCategories, { getCategorieRoutes } from '@/utils/getTemplatesAndCategories'
+import fetchWithRetry from '@/utils/fetchWithRetry'
+import { APP_URL } from '@/constants/urls'
 
 const route = useRoute()
 
 const slug = computed(() => route.params.slug)
 
 const { data } = await useAsyncData(`template-category-${slug.value}`, async () => {
-  const [result, categorieRoutes] = await Promise.all([
+  const [result, categorieRoutes, richRes] = await Promise.all([
     getTemplatesAndCategories(),
     getCategorieRoutes(),
+    // Rich landing payload: sub-categories (with templates), featured, faqs, html blocks.
+    // Optional — falls back gracefully to the flat category if it fails.
+    fetchWithRetry(`${APP_URL}/template_categories/${slug.value}.json`).catch(() => null),
   ])
-  const categoryRoute = categorieRoutes?.find(
-    (cate) => cate.route === `/templates/categories/${slug.value}`
-  )
+  const categoryRoute = categorieRoutes?.find((cate) => cate.route === `/templates/categories/${slug.value}`)
   return {
     templates: categoryRoute?.payload?.templates || [],
-    categories: result.categories
+    categories: result.categories,
+    richCategory: richRes?.data?.category || null,
   }
 })
 
 const categories = computed(() => data.value?.categories || {})
 const templates = computed(() => data.value?.templates || [])
+const richCategory = computed(() => data.value?.richCategory || null)
 
 const findCategoryBySlug = (slugValue) => {
   const allCategories = Object.values(categories.value).flatMap((arr) => arr)
   return allCategories.find((category) => category.slug === slugValue)
 }
 
-const activeCategory = computed(() => findCategoryBySlug(slug.value))
+// Prefer the rich landing payload (sub-categories/featured/faqs); fall back to
+// the flat category from the grouped list when the endpoint is unavailable.
+const activeCategory = computed(() => richCategory.value || findCategoryBySlug(slug.value))
 
-const currentCategory = computed(() => {
-  const allCategories = Object.values(categories.value).flat()
-  const currentCategory = allCategories.find(
-    (cate) => cate.slug === route.params.slug
-  )
-  return currentCategory || {}
-})
+const currentCategory = computed(() => activeCategory.value || {})
 
 const currentCategoryName = computed(() => currentCategory.value.name || '')
 

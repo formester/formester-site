@@ -29,8 +29,23 @@
         All Templates
       </h2>
     </NuxtLink>
+
     <div
-      v-for="(categories, categoryType) in templateCategories"
+      class="category-search"
+      :class="{ 'd-none': !showCategories && isMobile }"
+    >
+      <img class="category-search__icon" src="~/assets/images/icons/chevron-right.svg" alt="" aria-hidden="true" />
+      <input
+        v-model="search"
+        class="category-search__input"
+        type="text"
+        placeholder="Search categories"
+        aria-label="Search categories"
+      />
+    </div>
+
+    <div
+      v-for="(categories, categoryType) in filteredCategories"
       :key="categoryType"
       class="category-block"
       :class="{ 'd-none': !showCategories && isMobile }"
@@ -53,7 +68,7 @@
       <div
         class="categories"
         :id="'categories' + categoryType"
-        :class="{ 'categories-collapsed': !isExpanded[categoryType] }"
+        :class="{ 'categories-collapsed': !isExpanded[categoryType] && !search.trim() }"
       >
         <NuxtLink
           v-for="category in categories"
@@ -64,7 +79,8 @@
             class="category"
             :class="{ active: activeCategory?.slug === category.slug }"
           >
-            {{ category.name }}
+            <span class="category__name">{{ category.name }}</span>
+            <span v-if="category.templateCount" class="category__count">{{ category.templateCount }}</span>
           </h3>
         </NuxtLink>
       </div>
@@ -80,7 +96,21 @@ export default {
       showCategories: true,
       isExpanded: this.initializeExpandedState(),
       isMobile: false,
+      search: '',
     }
+  },
+  computed: {
+    // Filter categories by name; drop kinds with no matches. Empty search = all.
+    filteredCategories() {
+      const term = this.search.trim().toLowerCase()
+      if (!term) return this.templateCategories || {}
+      const result = {}
+      Object.entries(this.templateCategories || {}).forEach(([kind, cats]) => {
+        const matched = (cats || []).filter((c) => c.name?.toLowerCase().includes(term))
+        if (matched.length) result[kind] = matched
+      })
+      return result
+    },
   },
   methods: {
     initializeExpandedState() {
@@ -184,21 +214,63 @@ h2::first-letter {
   display: none;
 }
 .category {
-  padding: 4px 36px 4px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 10px;
   cursor: pointer;
   font-size: 14px;
   line-height: 24px;
   color: #272727;
   user-select: none;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   font-weight: 400;
+  border-radius: 8px;
+  transition: background 0.15s, color 0.15s;
 }
 .category.active {
   color: #4f3895;
   font-weight: 600;
+  background: var(--background-color-violet-25, #f7f3ff);
 }
 .category:hover {
   color: #643ed6;
+  background: var(--background-color-grey-50, #f9fafb);
+}
+.category__count {
+  font-size: 12px;
+  color: #98a2b3;
+  flex-shrink: 0;
+}
+
+/* ── Category search ── */
+.category-search {
+  position: relative;
+  margin: 12px 0 8px;
+}
+.category-search__icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 13px;
+  height: 13px;
+  opacity: 0.4;
+}
+.category-search__input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 10px 8px 30px;
+  font-size: 13px;
+  color: var(--clr-text-secondary, #475467);
+  border: 1px solid var(--clr-border, #d0d5dd);
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+}
+.category-search__input:focus {
+  border-color: var(--clr-primary, #7f56d9);
 }
 .collapse-arrow-btn {
   transition: all 0.3s ease-in-out;

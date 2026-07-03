@@ -5,88 +5,155 @@
         <div class="search-row">
           <TemplateSearch @searchInput="handleSearch" />
         </div>
-        <div
-          v-if="activeCategory"
-          class="breadcrumb d-flex align-items-center gap-2"
-        >
-          <NuxtLink to="/templates/" class="breadcrumb-text">
-            All Templates
-          </NuxtLink>
+        <div v-if="activeCategory" class="breadcrumb d-flex align-items-center gap-2">
+          <NuxtLink to="/templates/" class="breadcrumb-text"> All Templates </NuxtLink>
           <img src="~/assets/images/icons/chevron-right.svg" />
           <span class="breadcrumb-current">{{ activeCategory.name }}</span>
         </div>
+        <div v-if="activeCategory && heroBadge" class="hero-badge">{{ heroBadge }}</div>
         <div class="heading-row">
           <h1 class="content-heading">
             {{ activeCategory ? activeCategory.name : 'All' }}
             Templates
           </h1>
         </div>
-        <div
-          v-if="activeCategory?.description"
-          class="my-2"
-        >
+        <div v-if="activeCategory?.description" class="my-2">
           <div
             class="description-wrapper"
             :class="{
-              'expanded': showFullDescription,
-              'description-truncated': isClient && !showFullDescription
+              expanded: showFullDescription,
+              'description-truncated': isClient && !showFullDescription,
             }"
           >
-            <div
-              class="content-description mt-0 mb-1"
-              v-html="activeCategory.description"
-            />
+            <div class="content-description mt-0 mb-1" v-html="activeCategory.description" />
           </div>
-          <button
-            v-if="isClient"
-            class="content-description-handle-button text-nowrap"
-            @click="toggleDescription"
-          >
+          <button v-if="isClient" class="content-description-handle-button text-nowrap" @click="toggleDescription">
             {{ descriptionButtonLabel }}
           </button>
         </div>
 
-        <template v-if="filteredTemplates.length > 0">
-          <section class="templates-grid" aria-label="Templates">
-            <TemplateCard
-              v-for="(template, index) in filteredTemplates"
-              :key="template.id"
-              :template="template"
-              :class="{ 'template-hidden': isClient && useViewMore && index >= visibleCount }"
-            />
+        <!-- Hero actions + derivable stats -->
+        <div v-if="activeCategory && !searchActive" class="hero-meta">
+          <div class="hero-actions">
+            <a href="/users/sign_up" class="hero-btn hero-btn--primary">Create form</a>
+            <NuxtLink to="/templates/" class="hero-btn hero-btn--ghost">Browse templates</NuxtLink>
+          </div>
+          <div v-if="heroStats.length" class="hero-stats">
+            <div v-for="stat in heroStats" :key="stat.label" class="hero-stat">
+              <span class="hero-stat__value">{{ stat.value }}</span>
+              <span class="hero-stat__label">{{ stat.label }}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sub-category quick-filter tabs -->
+        <div v-if="!searchActive && subcategories.length" class="subcat-tabs">
+          <a v-for="sub in subcategories" :key="sub.id" class="subcat-tab" :href="`#subcat-${sub.slug}`">
+            {{ sub.name }}
+            <span class="subcat-tab__count">{{ sub.templates.length }}</span>
+          </a>
+        </div>
+
+        <!-- Featured templates -->
+        <section v-if="!searchActive && featuredTemplates.length" class="cat-section" aria-label="Featured templates">
+          <div class="section-eyebrow">FEATURED</div>
+          <h2 class="section-title">Most popular {{ activeCategory.name }} templates</h2>
+          <div class="templates-grid">
+            <TemplateCard v-for="template in featuredTemplates" :key="`featured-${template.id}`" :template="template" />
+          </div>
+        </section>
+
+        <!-- Sub-category sections -->
+        <template v-if="!searchActive && subcategories.length">
+          <section
+            v-for="sub in subcategories"
+            v-show="sub.templates.length"
+            :id="`subcat-${sub.slug}`"
+            :key="sub.id"
+            class="cat-section"
+            aria-label="Sub-category templates"
+          >
+            <h3 class="subcat-heading">{{ sub.name }}</h3>
+            <div v-if="sub.description" class="subcat-desc content-description" v-html="sub.description" />
+            <div class="templates-grid">
+              <TemplateCard v-for="template in sub.templates" :key="`${sub.id}-${template.id}`" :template="template" />
+            </div>
           </section>
-          <div v-if="isClient && useViewMore && visibleCount < filteredTemplates.length" class="d-flex justify-content-center mt-3">
-            <button
-              @click="viewMore"
-              class="btn-primary"
-              aria-label="View more templates"
-              type="button"
+        </template>
+
+        <!-- Flat grid: fallback (no sub-categories) and search results -->
+        <template v-else>
+          <template v-if="filteredTemplates.length > 0">
+            <section class="templates-grid" aria-label="Templates">
+              <TemplateCard
+                v-for="(template, index) in filteredTemplates"
+                :key="template.id"
+                :template="template"
+                :class="{ 'template-hidden': isClient && useViewMore && index >= visibleCount }"
+              />
+            </section>
+            <div
+              v-if="isClient && useViewMore && visibleCount < filteredTemplates.length"
+              class="d-flex justify-content-center mt-3"
             >
-              View More
-            </button>
+              <button @click="viewMore" class="btn-primary" aria-label="View more templates" type="button">
+                View More
+              </button>
+            </div>
+          </template>
+          <div v-else class="no-templates d-flex flex-column align-items-center justify-content-center w-100">
+            <nuxt-img class="img-fluid" src="/templates/no-template.svg" alt="No Template Illustration" />
+            <h4 class="mt-3">No Template Available</h4>
           </div>
         </template>
-        <div v-else class="no-templates d-flex flex-column align-items-center justify-content-center w-100">
-          <nuxt-img
-            class="img-fluid"
-            src="/templates/no-template.svg"
-            alt="No Template Illustration"
-          />
-          <h4 class="mt-3">No Template Available</h4>
-        </div>
-        <template v-if="activeCategory?.htmlBlocks?.length">
-          <StrapiRawHtml
-            v-for="block in activeCategory.htmlBlocks"
-            :key="block.name"
-            :markup="block.content"
-          />
+
+        <!-- Related categories -->
+        <section v-if="!searchActive && relatedCategories.length" class="related-section">
+          <div class="section-eyebrow">RELATED</div>
+          <h2 class="section-title">Categories teams pair with {{ activeCategory.name }}</h2>
+          <div class="related-grid">
+            <NuxtLink
+              v-for="rel in relatedCategories"
+              :key="rel.id"
+              :to="`/templates/categories/${rel.slug}/`"
+              class="related-card"
+            >
+              <span class="related-card__name">{{ rel.name }}</span>
+              <span v-if="rel.templateCount" class="related-card__count">{{ rel.templateCount }} templates</span>
+            </NuxtLink>
+          </div>
+        </section>
+
+        <!-- Learn (super-admin authored HTML blocks) -->
+        <template v-if="!searchActive && activeCategory?.htmlBlocks?.length">
+          <StrapiRawHtml v-for="block in activeCategory.htmlBlocks" :key="block.name" :markup="block.content" />
         </template>
+
+        <!-- FAQ accordion -->
+        <FaqSection
+          v-if="!searchActive && faqs.length"
+          badge="FAQ"
+          :title="`${activeCategory.name} templates — frequently asked questions`"
+          :faq-list="faqs"
+          :description-fallback="false"
+          centered
+        />
+
+        <!-- CTA banner -->
+        <section v-if="!searchActive && activeCategory" class="cat-cta">
+          <span class="cat-cta__eyebrow">READY WHEN YOU ARE</span>
+          <h2 class="cat-cta__title">Start with a {{ activeCategory.name }} template, ship today.</h2>
+          <p class="cat-cta__sub">
+            Pick a ready-made template, brand it, embed it. Free plan included, no credit card.
+          </p>
+          <div class="cat-cta__btns">
+            <a href="/users/sign_up" class="cat-cta__btn cat-cta__btn--primary"> Sign up free </a>
+            <a href="/templates/" class="cat-cta__btn cat-cta__btn--ghost"> Browse templates </a>
+          </div>
+        </section>
       </div>
       <div class="left-sidebar">
-        <TemplateCategories
-          :activeCategory="activeCategory"
-          :templateCategories="templateCategories"
-        />
+        <TemplateCategories :activeCategory="activeCategory" :templateCategories="templateCategories" />
       </div>
     </div>
   </div>
@@ -96,9 +163,10 @@
 import TemplateCategories from '@/components/template/TemplateCategories.vue'
 import TemplateCard from '@/components/template/TemplateCard.vue'
 import TemplateSearch from '@/components/template/TemplateSearch.vue'
+import FaqSection from '@/components/v2/FaqSection.vue'
 
 export default {
-  components: { TemplateCategories, TemplateCard, TemplateSearch },
+  components: { TemplateCategories, TemplateCard, TemplateSearch, FaqSection },
   props: {
     activeCategory: Object,
     templates: Array,
@@ -146,19 +214,65 @@ export default {
     },
   },
   computed: {
+    searchActive() {
+      return this.searchTerm.trim().length > 0
+    },
+    subcategories() {
+      return this.activeCategory?.subcategories || []
+    },
+    featuredTemplates() {
+      return this.activeCategory?.featuredTemplates || []
+    },
+    faqs() {
+      return this.activeCategory?.faqs || []
+    },
+    relatedCategories() {
+      return this.activeCategory?.relatedCategories || []
+    },
+    categoryTemplateCount() {
+      return this.activeCategory?.templateCount || this.allCategoryTemplates.length
+    },
+    heroBadge() {
+      const count = this.categoryTemplateCount
+      if (!count) return ''
+      const updated = this.activeCategory?.updatedAt
+      const when = updated
+        ? new Date(updated).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+        : ''
+      return when ? `${count} templates · Updated ${when}` : `${count} templates`
+    },
+    // Derivable stats only — no invented marketing numbers.
+    heroStats() {
+      const stats = [{ value: String(this.categoryTemplateCount), label: 'Templates' }]
+      if (this.subcategories.length) {
+        stats.push({ value: String(this.subcategories.length), label: 'Sub-categories' })
+      }
+      stats.push({ value: 'Free', label: 'Preview' })
+      return stats
+    },
+    // Templates of this category live across featured + sub-categories + any
+    // directly-assigned flat list. Merge + dedupe so search covers all of them.
+    allCategoryTemplates() {
+      const byId = new Map()
+      const add = (list) => (list || []).forEach((t) => byId.set(t.id, t))
+      add(this.templates)
+      add(this.featuredTemplates)
+      this.subcategories.forEach((sub) => add(sub.templates))
+      return [...byId.values()]
+    },
     useViewMore() {
       return !this.isPaginated || this.searchTerm.trim().length > 0
     },
     searchableTemplates() {
-      return this.searchTerm.trim() && this.allTemplates ? this.allTemplates : this.templates
+      if (!this.searchTerm.trim()) return this.templates
+      return this.allTemplates || this.allCategoryTemplates
     },
     filteredTemplates() {
       const searchTerm = this.searchTerm.trim().toLowerCase()
       if (!searchTerm) return this.templates
       return this.searchableTemplates.filter(
         (template) =>
-          template.name.toLowerCase().includes(searchTerm) ||
-          template.description?.toLowerCase().includes(searchTerm)
+          template.name.toLowerCase().includes(searchTerm) || template.description?.toLowerCase().includes(searchTerm)
       )
     },
     descriptionButtonLabel() {
@@ -192,7 +306,6 @@ export default {
   flex-direction: row-reverse;
   margin-top: 8rem;
 }
-
 
 .left-sidebar {
   position: sticky;
@@ -361,6 +474,265 @@ export default {
   display: none;
 }
 
+/* ── Hero badge + actions + stats ── */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--clr-primary);
+  background: var(--background-color-violet-25, #f7f3ff);
+  border: 1px solid #ece3ff;
+  padding: 5px 11px;
+  border-radius: 9999px;
+  margin-bottom: 12px;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 32px;
+  margin: 20px 0 8px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 11px 18px;
+  border-radius: 9999px;
+}
+
+.hero-btn--primary {
+  color: #fff;
+  background: var(--clr-primary);
+}
+
+.hero-btn--primary:hover {
+  background: var(--clr-primary-hover);
+}
+
+.hero-btn--ghost {
+  color: var(--clr-text-primary);
+  background: #fff;
+  border: 1px solid var(--clr-border, #d0d5dd);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 36px;
+  flex-wrap: wrap;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hero-stat__value {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--clr-text-primary);
+}
+
+.hero-stat__label {
+  font-size: 12px;
+  color: var(--clr-text-secondary);
+}
+
+/* ── Related categories ── */
+.related-section {
+  margin-top: 48px;
+  background: var(--background-color-grey-50, #f9fafb);
+  border: 1px solid var(--clr-border, #eaecf0);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.related-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid var(--clr-border, #eaecf0);
+  border-radius: 12px;
+  padding: 16px;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.related-card:hover {
+  box-shadow: 0 8px 24px -6px rgba(16, 24, 40, 0.12);
+  transform: translateY(-2px);
+}
+
+.related-card__name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--clr-text-primary);
+  text-transform: capitalize;
+}
+
+.related-card__count {
+  font-size: 12px;
+  color: var(--clr-text-secondary);
+}
+
+/* ── Sub-category quick-filter tabs ── */
+.subcat-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 24px 0 8px;
+}
+
+.subcat-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 9999px;
+  border: 1px solid var(--clr-border, #eaecf0);
+  background: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--clr-text-secondary);
+  text-transform: capitalize;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+.subcat-tab:hover {
+  border-color: var(--clr-primary);
+  color: var(--clr-primary);
+}
+
+.subcat-tab__count {
+  font-size: 12px;
+  color: var(--clr-text-secondary);
+  background: var(--background-color-grey-50, #f5f5f5);
+  border-radius: 9999px;
+  padding: 0 7px;
+}
+
+/* ── Category content sections ── */
+.cat-section {
+  margin-top: 40px;
+  scroll-margin-top: 90px;
+}
+
+.section-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  color: var(--clr-text-secondary);
+  margin-bottom: 6px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--clr-text-primary);
+  margin: 0 0 18px;
+  text-transform: capitalize;
+}
+
+.subcat-heading {
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--clr-text-primary);
+  margin: 0 0 4px;
+  text-transform: capitalize;
+}
+
+.subcat-desc {
+  font-size: 14px;
+  color: var(--clr-text-secondary);
+  margin: 0 0 16px;
+  max-width: 720px;
+}
+
+/* ── CTA banner ── */
+.cat-cta {
+  margin-top: 56px;
+  border-radius: 20px;
+  padding: 52px 32px;
+  text-align: center;
+  background: radial-gradient(60% 120% at 50% -10%, rgba(127, 86, 217, 0.55), transparent 70%), #2a1d66;
+  color: #fff;
+}
+
+.cat-cta__eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #cdbcff;
+  margin-bottom: 14px;
+}
+
+.cat-cta__title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: #fff;
+  margin: 0 auto 10px;
+  max-width: 460px;
+  line-height: 36px;
+  text-transform: capitalize;
+}
+
+.cat-cta__sub {
+  font-size: 15px;
+  color: #cbc3ec;
+  margin: 0 auto 24px;
+  max-width: 440px;
+}
+
+.cat-cta__btns {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cat-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 11px 20px;
+  border-radius: 9999px;
+}
+
+.cat-cta__btn--primary {
+  color: #53389e;
+  background: #fff;
+}
+
+.cat-cta__btn--ghost {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
 .no-templates {
   padding: 52px 0;
   gap: 1rem;
@@ -394,6 +766,9 @@ export default {
   .templates-grid {
     grid-template-columns: 1fr 1fr;
     margin-top: 0;
+  }
+  .related-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -433,6 +808,9 @@ export default {
 @media only screen and (max-width: 600px) {
   .templates-grid {
     grid-template-columns: 1fr;
+  }
+  .related-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 </style>
