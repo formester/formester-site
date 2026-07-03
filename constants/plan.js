@@ -300,8 +300,8 @@ export const comparisonTableFeatures =
       {
         "name": "Appointment Scheduling",
         "description": "Let users book time slots within the form",
-        "free": "Yes",
-        "pro": "Yes",
+        "free": "-",
+        "pro": "-",
         "business": "Yes",
         "link": "https://formester.com/features/appointment-scheduler/"
       },
