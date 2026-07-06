@@ -35,14 +35,17 @@ defineProps({
 })
 
 const searchTerm = ref('')
+let debounceTimer = null
 
 function resetSearchInput() {
   searchTerm.value = ''
+  clearTimeout(debounceTimer)
   emit('searchInput', '')
 }
 
 function emitSearchTerm() {
-  emit('searchInput', searchTerm.value)
+  clearTimeout(debounceTimer)
+  debounceTimer = setTimeout(() => emit('searchInput', searchTerm.value), 250)
 }
 </script>
 
