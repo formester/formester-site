@@ -26,6 +26,7 @@
     "@vite-pwa/nuxt": "^0.10.5",
     "axios": "^1.13.2",
     "bootstrap": "^5.3.3",
+    "lucide-vue-next": "^1.0.0",
     "marked": "^4.3.0",
     "nuxt-gtag": "^3.0.1",
     "nuxt-jsonld": "^2.2.1",

@@ -1,6 +1,6 @@
 <template>
-  <div class="template">
-    <NuxtLink :to="`/templates/${template.slug}/`">
+  <div class="template fm-card">
+    <NuxtLink class="template__link" :to="`/templates/${template.slug}/`">
       <div class="template-image-wrapper">
         <div v-if="loading" class="image-skeleton"></div>
         <img
@@ -16,6 +16,9 @@
         />
       </div>
       <div class="template-content">
+        <div v-if="categoryName" class="template-meta">
+          <span class="template-meta__cat">{{ categoryName }}</span>
+        </div>
         <h3 class="template-name pointer">
           {{ template?.name }}
         </h3>
@@ -24,6 +27,14 @@
         </p>
       </div>
     </NuxtLink>
+    <div class="template-footer">
+      <button type="button" class="template-footer__preview" @click="onPreview">
+        <LucideIcon name="eye" :size="15" /> Preview
+      </button>
+      <button type="button" class="template-footer__use" @click="onUse">
+        Use template <LucideIcon name="arrow-right" :size="14" />
+      </button>
+    </div>
   </div>
 </template>
 
@@ -33,6 +44,10 @@ export default {
     template: {
       type: Object,
       required: true,
+    },
+    categoryLabel: {
+      type: String,
+      default: '',
     },
   },
   data() {
@@ -48,10 +63,24 @@ export default {
   },
   computed: {
     previewImageUrl() {
-      return (
-        this.template.previewImageUrl ||
-        '/templates/create_form.png'
-      )
+      return this.template.previewImageUrl || '/templates/create_form.png'
+    },
+    categoryName() {
+      return this.categoryLabel || this.template.category?.name || this.template.categories?.[0]?.name || ''
+    },
+  },
+  methods: {
+    // Preview the live form, same as the template detail page's preview.
+    onPreview() {
+      if (this.template.surveyUrl) {
+        window.open(this.template.surveyUrl, '_blank')
+      } else {
+        navigateTo(`/templates/${this.template.slug}/`)
+      }
+    },
+    // Use the template — same redirect the detail page's CTA uses.
+    onUse() {
+      window.open(`https://app.formester.com/templates?template_id=${this.template.id}`, '_blank')
     },
   },
 }
@@ -59,41 +88,117 @@ export default {
 
 <style scoped>
 .template {
-  transition: all 500ms ease;
-  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 140ms ease, border-color 140ms ease, transform 140ms ease;
+  border-radius: 14px;
   border: 1px solid var(--Stroke, #eaecf0);
   background: var(--Base-White, #fff);
-  box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1),
-    0px 2px 4px -2px rgba(16, 24, 40, 0.06);
-  min-height: 130px;
+  box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
   overflow: hidden;
 }
 
-.template:hover .template-preview__img {
-  transform: scale(1.05);
+.template:hover {
+  box-shadow: 0 8px 24px -6px rgba(16, 24, 40, 0.12), 0 2px 6px -2px rgba(16, 24, 40, 0.06);
+  transform: translateY(-2px);
 }
+
+.template:hover .template-preview__img {
+  transform: scale(1.04);
+}
+
+.template__link {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  color: inherit;
+  text-decoration: none;
+}
+
 .template-content {
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex: 1;
 }
+
+.template-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #697586;
+}
+
+.template-meta__cat {
+  font-weight: 600;
+  color: #475467;
+  text-transform: capitalize;
+}
+
 .template-name {
   user-select: none;
-  color: var(--neutral-900, #171717);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
+  margin: 0;
+  color: #101828;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22px;
 }
+
 .template-description {
   margin: 0;
-  color: var(--neutral-600, #525252);
-  font-size: 12px;
+  color: #475467;
+  font-size: 13px;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 20px;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.template-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-top: 1px solid #f2f4f7;
+}
+
+.template-footer__preview,
+.template-footer__use {
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 4px 2px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.template-footer__preview {
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #475467;
+}
+
+.template-footer__preview:hover {
+  color: #101828;
+}
+
+.template-footer__use {
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6941c6;
+}
+
+.template-footer__use:hover,
+.template:hover .template-footer__use {
+  color: #53389e;
 }
 
 .template-image-wrapper {
@@ -103,7 +208,6 @@ export default {
 .image-skeleton {
   position: absolute;
   inset: 0;
-  border-radius: 8px;
   animation: skeleton-loading 1s linear infinite alternate;
   z-index: 1;
 }

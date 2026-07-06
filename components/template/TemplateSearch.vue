@@ -4,7 +4,7 @@
       <img class="search-icon" src="/templates/search.svg" alt="" aria-hidden="true" width="18" height="18" />
       <input
         type="text"
-        placeholder="Blood donation, job applicant tracker"
+        :placeholder="placeholder"
         v-model="searchTerm"
         @input="emitSearchTerm"
         class="search-input"
@@ -26,6 +26,13 @@
 
 <script setup>
 const emit = defineEmits(['searchInput'])
+
+defineProps({
+  placeholder: {
+    type: String,
+    default: 'Blood donation, job applicant tracker',
+  },
+})
 
 const searchTerm = ref('')
 

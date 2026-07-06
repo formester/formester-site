@@ -2,86 +2,172 @@
   <div>
     <div class="container template-container d-flex">
       <div class="content-wrapper w-100">
-        <div class="search-row">
+        <!-- Top search: non-V2 only (V2 moves it into the filter bar) -->
+        <div v-if="!isV2" class="search-row">
           <TemplateSearch @searchInput="handleSearch" />
         </div>
         <div v-if="activeCategory" class="breadcrumb d-flex align-items-center gap-2">
-          <NuxtLink to="/templates/" class="breadcrumb-text"> All Templates </NuxtLink>
-          <img src="~/assets/images/icons/chevron-right.svg" />
+          <NuxtLink to="/" class="breadcrumb-text">Home</NuxtLink>
+          <LucideIcon name="chevron-right" :size="13" class="breadcrumb-sep" />
+          <NuxtLink to="/templates/" class="breadcrumb-text">Templates</NuxtLink>
+          <LucideIcon name="chevron-right" :size="13" class="breadcrumb-sep" />
           <span class="breadcrumb-current">{{ activeCategory.name }}</span>
         </div>
-        <div v-if="activeCategory && heroBadge" class="hero-badge">{{ heroBadge }}</div>
-        <div class="heading-row">
-          <h1 class="content-heading">
-            {{ activeCategory ? activeCategory.name : 'All' }}
-            Templates
-          </h1>
-        </div>
-        <div v-if="activeCategory?.description" class="my-2">
-          <div
-            class="description-wrapper"
-            :class="{
-              expanded: showFullDescription,
-              'description-truncated': isClient && !showFullDescription,
-            }"
-          >
-            <div class="content-description mt-0 mb-1" v-html="activeCategory.description" />
-          </div>
-          <button v-if="isClient" class="content-description-handle-button text-nowrap" @click="toggleDescription">
-            {{ descriptionButtonLabel }}
-          </button>
-        </div>
 
-        <!-- Hero actions + derivable stats -->
-        <div v-if="activeCategory && !searchActive" class="hero-meta">
-          <div class="hero-actions">
-            <a href="/users/sign_up" class="hero-btn hero-btn--primary">Create form</a>
-            <NuxtLink to="/templates/" class="hero-btn hero-btn--ghost">Browse templates</NuxtLink>
-          </div>
-          <div v-if="heroStats.length" class="hero-stats">
-            <div v-for="stat in heroStats" :key="stat.label" class="hero-stat">
-              <span class="hero-stat__value">{{ stat.value }}</span>
-              <span class="hero-stat__label">{{ stat.label }}</span>
+        <!-- HERO -->
+        <div class="hero-wrap" :class="{ 'hero-wrap--v2': isV2 && activeCategory }">
+          <div class="hero-left">
+            <div v-if="activeCategory && heroBadge" class="hero-badge">
+              <LucideIcon name="sparkles" :size="13" /> {{ heroBadge }}
+            </div>
+            <div class="heading-row">
+              <h1 class="content-heading" :class="{ 'content-heading--v2': isV2 && pageContent.heroTitle }">
+                <template v-if="isV2 && pageContent.heroTitle"
+                  ><span
+                    v-for="(tok, i) in heroTitleTokens"
+                    :key="i"
+                    :class="{ 'hero-highlight': tok.highlight }"
+                    >{{ tok.text }}</span
+                  ></template
+                >
+                <template v-else>{{ activeCategory ? activeCategory.name : 'All' }} Templates</template>
+              </h1>
+            </div>
+            <p v-if="isV2 && pageContent.heroSubtitle" class="hero-subtitle">{{ pageContent.heroSubtitle }}</p>
+            <div v-if="!isV2 && activeCategory?.description" class="my-2">
+              <div
+                class="description-wrapper"
+                :class="{
+                  expanded: showFullDescription,
+                  'description-truncated': isClient && !showFullDescription,
+                }"
+              >
+                <div class="content-description mt-0 mb-1" v-html="activeCategory.description" />
+              </div>
+              <button v-if="isClient" class="content-description-handle-button text-nowrap" @click="toggleDescription">
+                {{ descriptionButtonLabel }}
+              </button>
+            </div>
+
+            <!-- Hero actions + derivable stats -->
+            <div v-if="isV2 && activeCategory && !searchActive" class="hero-meta">
+              <div class="hero-actions">
+                <a href="/users/sign_up" class="hero-btn hero-btn--primary">Create form</a>
+                <NuxtLink to="/templates/" class="hero-btn hero-btn--ghost">Browse templates</NuxtLink>
+              </div>
+              <div v-if="heroStats.length" class="hero-stats">
+                <div v-for="stat in heroStats" :key="stat.label" class="hero-stat">
+                  <span class="hero-stat__value">{{ stat.value }}</span>
+                  <span class="hero-stat__label">{{ stat.label }}</span>
+                </div>
+              </div>
             </div>
           </div>
+
+          <!-- Admin-authored hero side asset (HTML blocks), when provided -->
+          <div
+            v-if="isV2 && activeCategory && heroArtBlocks.length"
+            class="hero-art hero-art--custom"
+          >
+            <StrapiRawHtml v-for="(block, i) in heroArtBlocks" :key="i" :markup="block.content" />
+          </div>
+          <!-- Default decorative card-stack art (V2, desktop only) -->
+          <div v-else-if="isV2 && activeCategory" class="hero-art" aria-hidden="true">
+            <div class="art-card art-card--amber"><span class="art-chip art-chip--amber"><LucideIcon name="search" :size="19" /></span></div>
+            <div class="art-card art-card--red"><span class="art-chip art-chip--red"><LucideIcon name="activity" :size="19" /></span></div>
+            <div class="art-card art-card--blue">
+              <span class="art-chip art-chip--blue"><LucideIcon name="user-check" :size="24" /></span>
+              <span class="art-card__label">{{ activeCategory.name }}</span>
+            </div>
+            <div class="art-float">
+              <span class="art-float__chip"><LucideIcon name="file-check-2" :size="16" /></span>
+              <div class="art-float__text">
+                <span class="art-float__title">{{ categoryTemplateCount }} templates</span>
+                <span class="art-float__sub">Ready to ship</span>
+              </div>
+            </div>
+            <div class="art-pill"><LucideIcon name="badge-check" :size="14" /> E-signed &amp; audited</div>
+          </div>
         </div>
 
-        <!-- Sub-category quick-filter tabs -->
-        <div v-if="!searchActive && subcategories.length" class="subcat-tabs">
-          <a v-for="sub in subcategories" :key="sub.id" class="subcat-tab" :href="`#subcat-${sub.slug}`">
-            {{ sub.name }}
-            <span class="subcat-tab__count">{{ sub.templates.length }}</span>
-          </a>
+        <!-- FILTER BAR (V2): search + sub-category pills -->
+        <div v-if="isV2 && activeCategory" class="filter-bar">
+          <div class="filter-bar__search">
+            <TemplateSearch
+              :placeholder="`Search ${categoryTemplateCount} ${activeCategory.name} templates`"
+              @searchInput="handleSearch"
+            />
+          </div>
+          <div v-if="!searchActive && subcategories.length" class="subcat-tabs">
+            <button
+              type="button"
+              class="subcat-tab"
+              :class="{ 'subcat-tab--active': !activeFilter }"
+              @click="activeFilter = null"
+            >
+              All
+              <span class="subcat-tab__count">{{ categoryTemplateCount }}</span>
+            </button>
+            <button
+              v-for="sub in subcategories"
+              :key="sub.id"
+              type="button"
+              class="subcat-tab"
+              :class="{ 'subcat-tab--active': activeFilter === sub.slug }"
+              @click="activeFilter = sub.slug"
+            >
+              {{ shortSubName(sub) }}
+            </button>
+          </div>
         </div>
 
         <!-- Featured templates -->
-        <section v-if="!searchActive && featuredTemplates.length" class="cat-section" aria-label="Featured templates">
+        <section
+          v-if="isV2 && !searchActive && !activeFilter && featuredTemplates.length"
+          class="cat-section"
+          aria-label="Featured templates"
+        >
           <div class="section-eyebrow">FEATURED</div>
-          <h2 class="section-title">Most popular {{ activeCategory.name }} templates</h2>
+          <h2 class="section-title">{{ featuredTitle }}</h2>
+          <p v-if="featuredSubtitle" class="section-subtitle">{{ featuredSubtitle }}</p>
           <div class="templates-grid">
-            <TemplateCard v-for="template in featuredTemplates" :key="`featured-${template.id}`" :template="template" />
+            <TemplateCard
+              v-for="template in featuredTemplates"
+              :key="`featured-${template.id}`"
+              :template="template"
+              :category-label="activeCategory.name"
+            />
           </div>
         </section>
 
         <!-- Sub-category sections -->
-        <template v-if="!searchActive && subcategories.length">
+        <template v-if="isV2 && !searchActive && subcategories.length">
           <section
-            v-for="sub in subcategories"
+            v-for="sub in visibleSubcategories"
             v-show="sub.templates.length"
             :id="`subcat-${sub.slug}`"
             :key="sub.id"
             class="cat-section"
             aria-label="Sub-category templates"
           >
-            <h3 class="subcat-heading">{{ sub.name }}</h3>
+            <div class="subcat-header">
+              <span class="subcat-header__chip"><LucideIcon :name="sub.icon" :size="17" /></span>
+              <h3 class="subcat-heading">{{ sub.name }}</h3>
+              <span class="subcat-header__count">{{ sub.templates.length }} templates</span>
+            </div>
             <div v-if="sub.description" class="subcat-desc content-description" v-html="sub.description" />
             <div class="templates-grid">
-              <TemplateCard v-for="template in sub.templates" :key="`${sub.id}-${template.id}`" :template="template" />
+              <TemplateCard
+                v-for="template in sub.templates"
+                :key="`${sub.id}-${template.id}`"
+                :template="template"
+                :category-label="shortSubName(sub)"
+              />
             </div>
           </section>
         </template>
 
-        <!-- Flat grid: fallback (no sub-categories) and search results -->
+        <!-- Flat grid: fallback (non-V2) and search results -->
         <template v-else>
           <template v-if="filteredTemplates.length > 0">
             <section class="templates-grid" aria-label="Templates">
@@ -89,6 +175,7 @@
                 v-for="(template, index) in filteredTemplates"
                 :key="template.id"
                 :template="template"
+                :category-label="!searchActive && activeCategory ? activeCategory.name : ''"
                 :class="{ 'template-hidden': isClient && useViewMore && index >= visibleCount }"
               />
             </section>
@@ -108,7 +195,7 @@
         </template>
 
         <!-- Related categories -->
-        <section v-if="!searchActive && relatedCategories.length" class="related-section">
+        <section v-if="isV2 && !searchActive && relatedCategories.length" class="related-section">
           <div class="section-eyebrow">RELATED</div>
           <h2 class="section-title">Categories teams pair with {{ activeCategory.name }}</h2>
           <div class="related-grid">
@@ -116,8 +203,9 @@
               v-for="rel in relatedCategories"
               :key="rel.id"
               :to="`/templates/categories/${rel.slug}/`"
-              class="related-card"
+              class="related-card fm-card"
             >
+              <span class="related-card__chip"><LucideIcon :name="rel.icon" :size="18" /></span>
               <span class="related-card__name">{{ rel.name }}</span>
               <span v-if="rel.templateCount" class="related-card__count">{{ rel.templateCount }} templates</span>
             </NuxtLink>
@@ -125,13 +213,13 @@
         </section>
 
         <!-- Learn (super-admin authored HTML blocks) -->
-        <template v-if="!searchActive && activeCategory?.htmlBlocks?.length">
+        <template v-if="isV2 && !searchActive && activeCategory?.htmlBlocks?.length">
           <StrapiRawHtml v-for="block in activeCategory.htmlBlocks" :key="block.name" :markup="block.content" />
         </template>
 
         <!-- FAQ accordion -->
         <FaqSection
-          v-if="!searchActive && faqs.length"
+          v-if="isV2 && !searchActive && faqs.length"
           badge="FAQ"
           :title="`${activeCategory.name} templates — frequently asked questions`"
           :faq-list="faqs"
@@ -140,8 +228,8 @@
         />
 
         <!-- CTA banner -->
-        <section v-if="!searchActive && activeCategory" class="cat-cta">
-          <span class="cat-cta__eyebrow">READY WHEN YOU ARE</span>
+        <section v-if="isV2 && !searchActive && activeCategory" class="cat-cta">
+          <span class="cat-cta__eyebrow"><LucideIcon name="rocket" :size="14" /> READY WHEN YOU ARE</span>
           <h2 class="cat-cta__title">Start with a {{ activeCategory.name }} template, ship today.</h2>
           <p class="cat-cta__sub">
             Pick a ready-made template, brand it, embed it. Free plan included, no credit card.
@@ -187,6 +275,7 @@ export default {
       showFullDescription: false,
       visibleCount: 12,
       isClient: false,
+      activeFilter: null,
     }
   },
   mounted() {
@@ -197,6 +286,7 @@ export default {
       immediate: true,
       handler() {
         this.showFullDescription = false
+        this.activeFilter = null
       },
     },
   },
@@ -212,13 +302,52 @@ export default {
     viewMore() {
       this.visibleCount += 12
     },
+    // Trim words the sub-category shares with its parent, e.g.
+    // "Healthcare Consent" under "Consent Forms" → "Healthcare".
+    shortSubName(sub) {
+      const parentWords = new Set((this.activeCategory?.name || '').toLowerCase().split(/\s+/))
+      const kept = (sub.name || '').split(/\s+/).filter((w) => !parentWords.has(w.toLowerCase()))
+      return (kept.join(' ') || sub.name || '').trim()
+    },
   },
   computed: {
     searchActive() {
       return this.searchTerm.trim().length > 0
     },
+    isV2() {
+      return !!this.activeCategory?.v2Enabled
+    },
+    pageContent() {
+      return this.activeCategory?.pageContent || {}
+    },
+    featuredTitle() {
+      return this.pageContent.featuredTitle || `Most popular ${this.activeCategory?.name || ''} templates`
+    },
+    featuredSubtitle() {
+      return this.pageContent.featuredSubtitle || ''
+    },
+    heroArtBlocks() {
+      return this.activeCategory?.pageContent?.heroArtBlocks || []
+    },
+    // Hero title supports inline *asterisk* highlights (multiple allowed):
+    // "Free *consent form* templates" → "consent form" in the brand accent.
+    heroTitleTokens() {
+      const title = this.pageContent.heroTitle || ''
+      return title
+        .split(/(\*[^*]+\*)/g)
+        .filter((p) => p !== '')
+        .map((p) =>
+          p.length > 2 && p.startsWith('*') && p.endsWith('*')
+            ? { text: p.slice(1, -1), highlight: true }
+            : { text: p, highlight: false }
+        )
+    },
     subcategories() {
       return this.activeCategory?.subcategories || []
+    },
+    visibleSubcategories() {
+      if (!this.activeFilter) return this.subcategories
+      return this.subcategories.filter((s) => s.slug === this.activeFilter)
     },
     featuredTemplates() {
       return this.activeCategory?.featuredTemplates || []
@@ -241,11 +370,15 @@ export default {
         : ''
       return when ? `${count} templates · Updated ${when}` : `${count} templates`
     },
-    // Derivable stats only — no invented marketing numbers.
+    // Templates + Free are derivable; forms-shipped / setup are admin-entered
+    // (blank => omitted, so we never invent numbers).
     heroStats() {
       const stats = [{ value: String(this.categoryTemplateCount), label: 'Templates' }]
-      if (this.subcategories.length) {
-        stats.push({ value: String(this.subcategories.length), label: 'Sub-categories' })
+      if (this.pageContent.statFormsShipped) {
+        stats.push({ value: this.pageContent.statFormsShipped, label: 'Forms shipped' })
+      }
+      if (this.pageContent.statSetup) {
+        stats.push({ value: this.pageContent.statSetup, label: 'Setup' })
       }
       stats.push({ value: 'Free', label: 'Preview' })
       return stats
@@ -314,7 +447,8 @@ export default {
   margin-bottom: 1.5rem;
   min-width: 264px;
   overflow-y: scroll;
-  padding-bottom: 1.5rem;
+  padding: 0 16px 1.5rem 0;
+  border-right: 1px solid var(--clr-border, #eaecf0);
 }
 
 .left-sidebar::-webkit-scrollbar {
@@ -365,6 +499,23 @@ export default {
   line-height: 48px;
   letter-spacing: -0.64px;
   flex-shrink: 0;
+}
+
+/* V2 hero title: render as authored (sentence case) with an accent phrase.
+   flex-shrink + max-width let it wrap to ~2 lines instead of running under
+   the hero art (the base .content-heading has flex-shrink: 0). */
+.content-heading--v2 {
+  text-transform: none;
+  flex-shrink: 1;
+  min-width: 0;
+  max-width: 560px;
+  font-size: 38px;
+  line-height: 46px;
+  letter-spacing: -0.02em;
+}
+
+.hero-highlight {
+  color: var(--clr-primary, #7f56d9);
 }
 
 .description-wrapper {
@@ -474,6 +625,239 @@ export default {
   display: none;
 }
 
+/* ── Hero two-column layout + decorative art ── */
+.hero-wrap--v2 {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.hero-wrap--v2 .hero-left {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 560px;
+}
+
+.hero-art {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-art {
+  position: relative;
+  height: 300px;
+  width: 380px;
+  flex: 0 0 380px;
+}
+
+/* Custom (admin HTML) art: give the raw-html block the full 380×300 canvas
+   instead of the flex-centering that collapses absolutely-positioned children. */
+.hero-art--custom {
+  display: block;
+}
+.hero-art--custom :deep(section) {
+  width: 100%;
+  height: 100%;
+}
+.hero-art--custom :deep(.raw-html-content) {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.art-card {
+  position: absolute;
+  border-radius: 18px;
+  display: flex;
+  padding: 16px;
+}
+
+.art-card--amber {
+  left: 30px;
+  top: 30px;
+  width: 150px;
+  height: 188px;
+  background: #f2a33a;
+  transform: rotate(-9deg);
+  box-shadow: 0 18px 40px -12px rgba(242, 163, 58, 0.45);
+  align-items: flex-start;
+}
+
+.art-card--red {
+  right: 34px;
+  top: 14px;
+  width: 150px;
+  height: 188px;
+  background: #ef5b52;
+  transform: rotate(8deg);
+  box-shadow: 0 18px 40px -12px rgba(239, 91, 82, 0.45);
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.art-card--blue {
+  left: 88px;
+  top: 78px;
+  width: 170px;
+  height: 206px;
+  background: #4c8df0;
+  box-shadow: 0 24px 48px -12px rgba(76, 141, 240, 0.5);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 18px;
+}
+
+.art-chip {
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.art-chip--amber,
+.art-chip--red {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+}
+
+.art-chip--amber {
+  color: #b8740c;
+}
+
+.art-chip--red {
+  color: #c0392b;
+}
+
+.art-chip--blue {
+  width: 46px;
+  height: 46px;
+  color: #2563eb;
+}
+
+.art-card__label {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.art-float {
+  position: absolute;
+  right: -6px;
+  bottom: 18px;
+  background: #fff;
+  border: 1px solid #eaecf0;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px -8px rgba(16, 24, 40, 0.18);
+  padding: 11px 13px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.art-float__chip {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: #f0ebfa;
+  color: var(--clr-primary, #7f56d9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.art-float__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.art-float__title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #101828;
+}
+
+.art-float__sub {
+  font-size: 11px;
+  color: #697586;
+}
+
+.art-pill {
+  position: absolute;
+  left: 6px;
+  bottom: 50px;
+  background: #fff;
+  border-radius: 9999px;
+  box-shadow: 0 8px 20px -6px rgba(16, 24, 40, 0.16);
+  padding: 6px 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #067647;
+}
+
+/* ── Filter bar (search + sub-category pills, single row) ── */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-top: 1px solid var(--clr-border, #eaecf0);
+  border-bottom: 1px solid var(--clr-border, #eaecf0);
+  margin: 8px 0 36px;
+  flex-wrap: nowrap;
+}
+
+.filter-bar__search {
+  flex: 0 0 280px;
+  max-width: 280px;
+}
+
+/* Compact the shared search box inside the filter bar. */
+.filter-bar__search :deep(.search-box) {
+  min-width: 0;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+/* Tabs take the remaining width, right-aligned; overflow scrolls sideways. */
+.filter-bar .subcat-tabs {
+  flex: 0 1 auto;
+  margin-left: auto;
+  min-width: 0;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 2px;
+}
+
+.filter-bar .subcat-tab {
+  flex-shrink: 0;
+}
+
+.filter-bar .subcat-tabs::-webkit-scrollbar {
+  height: 4px;
+}
+
+.filter-bar .subcat-tabs::-webkit-scrollbar-thumb {
+  background-color: #d0d5dd;
+  border-radius: 4px;
+}
+
 /* ── Hero badge + actions + stats ── */
 .hero-badge {
   display: inline-flex;
@@ -506,9 +890,9 @@ export default {
 .hero-btn {
   display: inline-flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
-  padding: 11px 18px;
+  padding: 9px 16px;
   border-radius: 9999px;
 }
 
@@ -582,6 +966,17 @@ export default {
   transform: translateY(-2px);
 }
 
+.related-card__chip {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--background-color-violet-25, #f0ebfa);
+  color: var(--clr-primary, #7f56d9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .related-card__name {
   font-size: 14px;
   font-weight: 600;
@@ -599,21 +994,22 @@ export default {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 24px 0 8px;
 }
 
 .subcat-tab {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 7px 14px;
+  padding: 4px 12px;
   border-radius: 9999px;
   border: 1px solid var(--clr-border, #eaecf0);
   background: #fff;
-  font-size: 13px;
+  font-family: inherit;
+  font-size: 12px;
   font-weight: 500;
   color: var(--clr-text-secondary);
   text-transform: capitalize;
+  cursor: pointer;
   transition: border-color 0.15s, color 0.15s, background 0.15s;
 }
 
@@ -622,12 +1018,28 @@ export default {
   color: var(--clr-primary);
 }
 
+.subcat-tab--active {
+  background: #101828;
+  border-color: #101828;
+  color: #fff;
+  font-weight: 600;
+}
+
+.subcat-tab--active:hover {
+  color: #fff;
+}
+
 .subcat-tab__count {
   font-size: 12px;
   color: var(--clr-text-secondary);
   background: var(--background-color-grey-50, #f5f5f5);
   border-radius: 9999px;
   padding: 0 7px;
+}
+
+.subcat-tab--active .subcat-tab__count {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.18);
 }
 
 /* ── Category content sections ── */
@@ -653,19 +1065,59 @@ export default {
   text-transform: capitalize;
 }
 
+.section-subtitle {
+  font-size: 14px;
+  color: var(--clr-text-secondary);
+  margin: 0 0 18px;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--clr-text-secondary);
+  margin: 10px 0 0;
+  max-width: 520px;
+}
+
+.subcat-header {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 5px;
+}
+
+.subcat-header__chip {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--background-color-violet-25, #f0ebfa);
+  color: var(--clr-primary, #7f56d9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
 .subcat-heading {
   font-size: 19px;
   font-weight: 600;
   letter-spacing: -0.01em;
   color: var(--clr-text-primary);
-  margin: 0 0 4px;
+  margin: 0;
   text-transform: capitalize;
+}
+
+.subcat-header__count {
+  margin-left: auto;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--clr-primary, #6941c6);
 }
 
 .subcat-desc {
   font-size: 14px;
   color: var(--clr-text-secondary);
-  margin: 0 0 16px;
+  margin: 0 0 16px 41px;
   max-width: 720px;
 }
 
@@ -680,7 +1132,9 @@ export default {
 }
 
 .cat-cta__eyebrow {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -743,18 +1197,28 @@ export default {
 }
 
 .breadcrumb-text {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 400;
   line-height: 20px;
-  color: var(--clr-primary);
+  color: #697586;
   text-transform: capitalize;
 }
 
+.breadcrumb-text:hover {
+  color: var(--clr-primary);
+}
+
+.breadcrumb-sep {
+  color: #697586;
+  opacity: 0.55;
+  flex-shrink: 0;
+}
+
 .breadcrumb-current {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 500;
   line-height: 20px;
-  color: var(--clr-text-secondary);
+  color: #344054;
   text-transform: capitalize;
 }
 
@@ -802,6 +1266,26 @@ export default {
     position: static;
     margin: 0;
     overflow-y: auto;
+    border-right: none;
+    padding: 0;
+  }
+  .hero-wrap--v2 {
+    flex-direction: column;
+    gap: 0;
+    align-items: stretch;
+  }
+  .hero-art {
+    display: none;
+  }
+  .filter-bar {
+    flex-wrap: wrap;
+  }
+  .filter-bar__search {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+  .filter-bar .subcat-tabs {
+    margin: 8px 0 0;
   }
 }
 

@@ -20,15 +20,6 @@ async function _fetchTemplatesAndCategories(options = {}) {
 
   const { data: categories } = await fetchWithRetry(`${APP_URL}/template_categories.json`, { params: cacheBust })
 
-  // Drop sub-categories (those with a parent) from the grouped list — they are
-  // surfaced nested inside their parent's landing payload, not as top-level
-  // sidebar entries.
-  Object.keys(categories).forEach((kind) => {
-    if (Array.isArray(categories[kind])) {
-      categories[kind] = categories[kind].filter((c) => !c.parentId)
-    }
-  })
-
   const dummyDescription =
     'Check out this pre-designed template and start customising with just a single click. Personalise with your branding, incorporate electronic signatures for security and add multiple collaborators to make changes simultaneously. Use this template and start getting data driven actionable insights with robust analytics.'
 
