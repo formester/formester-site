@@ -55,6 +55,9 @@
           <li>
             <NuxtLink to="/pricing/" class="site-footer__link">Pricing</NuxtLink>
           </li>
+          <li>
+            <NuxtLink to="/originals/" class="site-footer__link">Originals</NuxtLink>
+          </li>
         </ul>
       </div>
 
