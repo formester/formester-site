@@ -30,7 +30,7 @@
         We build with the people who use it.
       </h1>
       <p style="font-size:20px; line-height:1.6; color:var(--text-soft); max-width:56ch; margin:24px 0 0;">
-        Every so often we open something new to a small group first — the people who actually want it. The ones who show up early help shape what it becomes. And the price they join at? They keep it. Forever.
+        Every so often we open something new to a small group first — the people who actually want it. The ones who show up early help shape what it becomes. And the price they join at? Theirs to keep — long after the deal is gone.
       </p>
       <p class="voice" style="font-size:23px; line-height:1.5; color:var(--accent-600); margin:26px 0 0;">
         No countdown tricks, no fake scarcity. Just a gift for showing up — because we think about people.
@@ -58,7 +58,7 @@
         </div>
         <div class="card" style="padding:22px;">
           <div style="width:38px; height:38px; border-radius:11px; background:var(--accent-tint); color:var(--accent-600); display:grid; place-items:center; font-weight:700; font-size:15px;">03</div>
-          <h3 style="font-size:16px; margin:16px 0 6px;">Your price is locked, for good</h3>
+          <h3 style="font-size:16px; margin:16px 0 6px;">Your founding price is locked in</h3>
           <p style="font-size:14px; color:var(--text-soft); margin:0; line-height:1.6;">Whatever it costs to join now is what you pay — even when the feature goes mainstream and the price goes up.</p>
         </div>
       </div>
@@ -116,13 +116,15 @@
                   <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
                     <span style="font-size:13px; font-weight:700; letter-spacing:.08em; color:var(--text-muted);">GUILD 36</span>
                     <span class="badge badge--live"><span class="badge__dot"></span>Live now</span>
-                    <span class="chip" style="background:var(--accent-tint); color:var(--accent-600);">🎁 $5-off coupon on social</span>
+                    <span class="chip" style="background:var(--accent-tint); color:var(--accent-600);">🎁 First month free</span>
                   </div>
                   <h3 style="font-size:26px; letter-spacing:-0.02em; margin:14px 0 0;">The Scheduler</h3>
-                  <p style="font-size:15px; color:var(--text-soft); margin:9px 0 0; max-width:60ch; line-height:1.6;">A booking + scheduling feature, opening to founding members at <b style="color:var(--text);">$5/month — locked forever.</b> Everything in Free, minus the Formester branding, plus the new scheduler.</p>
+                  <p style="font-size:15px; color:var(--text-soft); margin:9px 0 0; max-width:60ch; line-height:1.6;">A booking + scheduling feature, opening to <b style="color:var(--text);">100 founding members</b> at <b style="color:var(--text);">$5/month — locked for {{ priceLock }}</b> (first month free). Everything in Free, minus the Formester branding, plus the new scheduler.</p>
                   <div style="display:flex; align-items:center; gap:8px; margin-top:16px; font-size:13.5px; color:var(--warning); font-weight:600;">
                     <IconClock :size="15" />
-                    Closes in {{ closesIn }} · then the price goes up
+                    <span v-if="isFull">Founding spots are full — join the waitlist</span>
+                    <span v-else-if="isExpired">Window closed — share on social to still get in</span>
+                    <span v-else>{{ spotsLeft }} of {{ spotsTotal }} spots left · closes in {{ closesIn }}</span>
                   </div>
                 </div>
                 <div style="text-align:right; flex:none;">
@@ -199,19 +201,30 @@
 import IconArrowRight from '~/components/icons/IconArrowRight.vue'
 import IconPlus from '~/components/icons/IconPlus.vue'
 import IconClock from '~/components/icons/IconClock.vue'
+import { guild36 } from '~/constants/guild.js'
 
 definePageMeta({ layout: 'originals' })
 
-const END = new Date('2026-08-01T23:59:59').getTime()
+const END = new Date(guild36.closesAt).getTime()
+const spotsTotal = guild36.spotsTotal
+const spotsLeft = Math.max(0, guild36.spotsTotal - guild36.spotsClaimed)
+const isFull = spotsLeft <= 0
+const priceLock = guild36.priceLockLabel
 const now = ref(END)
+const ready = ref(false)
 
 let timer = null
 onMounted(() => {
   now.value = Date.now()
-  timer = setInterval(() => { now.value = Date.now() }, 1000)
+  ready.value = true
+  timer = setInterval(() => {
+    now.value = Date.now()
+    if (now.value >= END) clearInterval(timer)
+  }, 1000)
 })
 onBeforeUnmount(() => clearInterval(timer))
 
+const isExpired = computed(() => ready.value && now.value >= END)
 const closesIn = computed(() => {
   const diff = Math.max(0, END - now.value)
   return Math.floor(diff / 86400000) + ' days'
@@ -220,6 +233,9 @@ const closesIn = computed(() => {
 useHead({
   title: 'Formester Originals — We build with the people who use it',
   bodyAttrs: { style: 'background:#faf9fb;' },
+  meta: [
+    { name: 'robots', content: 'noindex, nofollow' },
+  ],
   link: [
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
     { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },

@@ -12,7 +12,8 @@
         </a>
         <div style="display:flex; align-items:center; gap:10px;">
           <span style="font-size:13px; font-weight:700; letter-spacing:.08em; color:var(--text-muted);">GUILD 36</span>
-          <span class="badge badge--live"><span class="badge__dot"></span>Live now</span>
+          <span v-if="state === 'open'" class="badge badge--live"><span class="badge__dot"></span>Live now</span>
+          <span v-else class="badge" style="background:var(--border-soft); color:var(--text-muted);"><span class="badge__dot"></span>{{ state === 'full' ? 'Full' : 'Closed' }}</span>
         </div>
       </div>
     </nav>
@@ -27,12 +28,23 @@
         Book meetings inside the tool you already build with.
       </h1>
       <p style="font-size:19px; line-height:1.6; color:var(--text-soft); max-width:56ch; margin:20px auto 0;">
-        We're opening our new Scheduler to a small founding guild. <b style="color:var(--text);">Your first month is on us</b> — after that it's just <b style="color:var(--text);">$5/month</b>, and that price stays yours for as long as you keep it. Even when the feature goes mainstream and the price climbs.
+        We're opening our new Scheduler to a small founding guild. <b style="color:var(--text);">Your first month is on us</b> — after that it's just <b style="color:var(--text);">$5/month, locked for {{ priceLock }}</b>. Even when the feature goes mainstream and the price climbs, yours holds.
       </p>
 
-      <!-- Countdown -->
-      <div style="margin:38px auto 0; display:inline-flex; flex-direction:column; align-items:center; gap:12px;">
-        <div style="font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--text-muted);">This guild closes in</div>
+      <!-- Founding spots -->
+      <div style="margin:34px auto 0; max-width:440px;">
+        <div style="display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:9px;">
+          <span style="font-size:14px; font-weight:600; color:var(--text-soft);"><b style="color:var(--accent-600);">{{ spotsLeft }}</b> of {{ spotsTotal }} founding spots left</span>
+          <span style="font-size:12.5px; color:var(--text-muted);">{{ spotsClaimed }} claimed</span>
+        </div>
+        <div style="height:10px; border-radius:9999px; background:var(--accent-tint); overflow:hidden;">
+          <div :style="{ width: spotsPct + '%' }" style="height:100%; border-radius:9999px; background:linear-gradient(90deg,#6434d0,#472594); transition:width .4s ease;"></div>
+        </div>
+      </div>
+
+      <!-- Open: countdown -->
+      <div v-if="state === 'open'" style="margin:34px auto 0; display:inline-flex; flex-direction:column; align-items:center; gap:12px;">
+        <div style="font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--text-muted);">Closes when they're gone — or in</div>
         <div class="g-countdown" style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
           <div class="card" style="padding:16px 20px; min-width:88px;">
             <div class="tnum" style="font-size:42px; font-weight:800; letter-spacing:-0.02em; line-height:1; color:var(--accent-600);">{{ cd.dd }}</div>
@@ -51,7 +63,19 @@
             <div style="font-size:12px; color:var(--text-muted); margin-top:8px; letter-spacing:.05em;">SECONDS</div>
           </div>
         </div>
-        <p class="voice" style="font-size:16px; color:var(--text-soft); margin:6px 0 0;">When it closes, the price closes with it. No extensions, no "last chance" repeats.</p>
+        <p class="voice" style="font-size:16px; color:var(--text-soft); margin:6px 0 0;">When it closes, the public price closes with it. But there's still one way in — see below.</p>
+      </div>
+
+      <!-- Expired: social-unlock -->
+      <div v-else-if="state === 'expired'" style="margin:32px auto 0; max-width:52ch;">
+        <span class="badge" style="background:var(--border-soft); color:var(--text-muted); font-weight:700; font-size:13px; padding:6px 14px;">The founding window has closed</span>
+        <p class="voice" style="font-size:17px; color:var(--text-soft); margin:14px 0 0;">Missed the deadline? Give us a shout-out on social and we'll still hand you the founding deal — <b style="color:var(--text);">$5/month, locked for {{ priceLock }}</b>.</p>
+      </div>
+
+      <!-- Full: waitlist -->
+      <div v-else style="margin:32px auto 0; max-width:48ch;">
+        <span class="badge" style="background:var(--accent-tint); color:var(--accent-600); font-weight:700; font-size:13px; padding:6px 14px;">All 100 founding spots are taken</span>
+        <p class="voice" style="font-size:17px; color:var(--text-soft); margin:14px 0 0;">The founding circle is complete. Leave your email below and you'll be first to know when the next guild opens.</p>
       </div>
     </header>
 
@@ -65,14 +89,14 @@
               <div style="font-size:13px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--accent-600);">Founding plan</div>
               <div class="chip" style="flex:none; background:#fff; color:var(--accent-600); font-weight:700; box-shadow:var(--shadow-rest); white-space:nowrap;">
                 <IconLockClosed :size="14" />
-                Locked forever
+                Locked for {{ priceLock }}
               </div>
             </div>
             <div style="display:flex; align-items:baseline; gap:8px; margin-top:8px;">
               <span style="font-size:48px; font-weight:800; letter-spacing:-0.03em; color:var(--text);">$0</span>
               <span style="font-size:16px; color:var(--text-soft); white-space:nowrap;">first month</span>
             </div>
-            <div style="font-size:14px; color:var(--text-soft); margin-top:6px;">then <b style="color:var(--text);">$5/month</b>, for as long as you keep it</div>
+            <div style="font-size:14px; color:var(--text-soft); margin-top:6px;">then <b style="color:var(--text);">$5/month</b>, locked for {{ priceLock }}</div>
             <div style="font-size:12.5px; color:var(--accent-600); font-weight:600; margin-top:4px;">Your founding coupon covers month one.</div>
           </div>
           <div style="padding:22px 28px;">
@@ -102,8 +126,10 @@
                 <div><b>A permanent spot</b> on the Wall of Believers.</div>
               </div>
             </div>
-            <a href="#request" style="text-decoration:none;"><span class="btn btn--primary" style="width:100%; margin-top:22px; padding:13px;">Claim my free first month</span></a>
-            <p style="font-size:12.5px; color:var(--text-muted); text-align:center; margin:10px 0 0;">Cancel anytime. If you leave and come back later, the $5 price is gone — so we won't pretend otherwise.</p>
+            <a href="#request" style="text-decoration:none;"><span class="btn btn--primary" style="width:100%; margin-top:22px; padding:13px;">{{ state === 'full' ? 'Join the waitlist' : state === 'expired' ? 'Share to unlock it' : 'Claim my free first month' }}</span></a>
+            <p v-if="state === 'open'" style="font-size:12.5px; color:var(--text-muted); text-align:center; margin:10px 0 0;">Cancel anytime. If you leave and come back later, the $5 price is gone — so we won't pretend otherwise.</p>
+            <p v-else-if="state === 'expired'" style="font-size:12.5px; color:var(--text-muted); text-align:center; margin:10px 0 0;">The window's closed — but a shout-out on social still gets you in.</p>
+            <p v-else style="font-size:12.5px; color:var(--text-muted); text-align:center; margin:10px 0 0;">All 100 founding spots are taken — join the waitlist for the next round.</p>
           </div>
         </div>
 
@@ -125,7 +151,7 @@
           </div>
           <div class="alert alert--info" style="align-items:center;">
             <IconInfoCircle :size="18" />
-            <div><span class="alert__title">How the free month works.</span> When you join, we email you a $5-off coupon — exactly one month of Scheduler. Apply it and month one is $0; after that it's $5/month, locked. The coupon's good for two weeks, so don't sit on it.</div>
+            <div><span class="alert__title">How the free month works.</span> Once you're approved, we email you a $5-off coupon — exactly one month of Scheduler. Apply it and month one is $0; after that it's $5/month, locked for {{ priceLock }}. The coupon's good for two weeks, so don't sit on it.</div>
           </div>
         </div>
       </div>
@@ -138,15 +164,15 @@
           <div style="width:56px; height:56px; border-radius:50%; background:var(--success-bg); color:var(--success); display:grid; place-items:center; margin:0 auto;">
             <IconCheck :size="28" :stroke-width="2.5" />
           </div>
-          <h3 style="font-size:24px; letter-spacing:-0.02em; margin:18px 0 0;">You're on the list, {{ firstName }}.</h3>
-          <p style="font-size:15.5px; color:var(--text-soft); max-width:44ch; margin:12px auto 0; line-height:1.6;">Your coupon — your free first month — is on its way to your inbox, and your name is being added to the wall. Keep an eye out — a builder usually says hi within a day.</p>
-          <button @click="reset" class="btn btn--ghost" style="margin-top:20px;">Request another</button>
+          <h3 style="font-size:24px; letter-spacing:-0.02em; margin:18px 0 0;">{{ copy.successHeading }}, {{ firstName }}.</h3>
+          <p style="font-size:15.5px; color:var(--text-soft); max-width:44ch; margin:12px auto 0; line-height:1.6;">{{ copy.successBody }}</p>
+          <button @click="reset" class="btn btn--ghost" style="margin-top:20px;">Submit another</button>
         </div>
         <div v-else class="rgrid" style="display:grid; grid-template-columns:.8fr 1.2fr; gap:32px; align-items:start;">
           <div>
-            <div style="font-size:12px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--accent-600);">Request your coupon</div>
-            <h2 style="font-size:28px; letter-spacing:-0.02em; margin:12px 0 0;">Tell us a little, get your free month.</h2>
-            <p style="font-size:15px; color:var(--text-soft); line-height:1.6; margin:14px 0 0;">We read every one of these by hand — it's how we decide what the Scheduler needs to do. We'll email your $5-off coupon — enough to cover month one — valid for two weeks.</p>
+            <div style="font-size:12px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--accent-600);">{{ copy.eyebrow }}</div>
+            <h2 style="font-size:28px; letter-spacing:-0.02em; margin:12px 0 0;">{{ copy.heading }}</h2>
+            <p style="font-size:15px; color:var(--text-soft); line-height:1.6; margin:14px 0 0;">{{ copy.intro }}</p>
             <div class="voice" style="font-size:16px; color:var(--accent-600); margin-top:18px;">Real reply, real person. Promise.</div>
           </div>
           <div style="display:flex; flex-direction:column; gap:18px;">
@@ -157,14 +183,14 @@
             <div class="field">
               <label class="field__label" for="rq-email">Email</label>
               <input id="rq-email" class="input" type="email" placeholder="you@studio.com" v-model="email">
-              <div class="field__hint">This is where your coupon goes — and where a builder will reach you.</div>
+              <div class="field__hint">{{ copy.emailHint }}</div>
             </div>
-            <div class="field">
-              <label class="field__label" for="rq-use">What would you use scheduling for?</label>
-              <textarea id="rq-use" class="input" rows="3" style="resize:vertical; font-family:inherit;" placeholder="Coaching calls, client intake, demo bookings…" v-model="use"></textarea>
+            <div v-if="copy.showUse" class="field">
+              <label class="field__label" for="rq-use">{{ copy.useLabel }}</label>
+              <textarea id="rq-use" class="input" rows="3" style="resize:vertical; font-family:inherit;" :placeholder="copy.usePlaceholder" v-model="use"></textarea>
             </div>
             <button @click="submit" class="btn btn--primary" style="padding:13px; font-size:15px;" :disabled="disabled">
-              {{ submitting ? 'Sending…' : 'Send me the coupon' }}
+              {{ submitting ? copy.sending : copy.button }}
               <IconSendArrow v-if="!submitting" :size="16" />
             </button>
             <p v-if="error" role="alert" style="font-size:13px; color:#b91c1c; margin:0;">{{ error }}</p>
@@ -211,19 +237,31 @@
       </div>
     </section>
 
-    <!-- Founding members so far (starts at 0) -->
+    <!-- Founding members so far -->
     <section class="g-sec" style="max-width:1000px; margin:0 auto; padding:52px 28px;">
       <div style="display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap;">
         <h2 style="font-size:26px; letter-spacing:-0.02em; margin:0;">Founding members so far</h2>
-        <span style="font-size:14px; color:var(--text-muted);"><b style="color:var(--accent-600); font-size:16px;">0</b> Originals so far — be the first</span>
+        <span style="font-size:14px; color:var(--text-muted);"><b style="color:var(--accent-600); font-size:16px;">{{ spotsClaimed }}</b> of {{ spotsTotal }} claimed<template v-if="spotsClaimed === 0"> — be the first</template><template v-else-if="!isFull"> · {{ spotsLeft }} spots left</template></span>
       </div>
       <div class="card" style="margin-top:22px; padding:36px 24px; text-align:center; border-style:dashed; background:transparent;">
         <div style="width:52px; height:52px; border-radius:50%; background:var(--accent-tint); color:var(--accent-600); display:grid; place-items:center; margin:0 auto;">
           <IconUsersPlus :size="24" />
         </div>
-        <h3 style="font-size:19px; margin:16px 0 0;">No names yet — and we won't invent any.</h3>
-        <p style="font-size:15px; color:var(--text-soft); max-width:46ch; margin:10px auto 0; line-height:1.6;">This guild just opened. The first person to join Guild 36 is the first name on the wall — the founding circle of makers starts right here. <span class="voice" style="color:var(--accent-600); font-size:16px;">It could be you.</span></p>
-        <a href="#request" style="text-decoration:none;"><span class="btn btn--primary" style="margin-top:18px; padding:11px 20px;">Be the first Original</span></a>
+        <template v-if="isFull">
+          <h3 style="font-size:19px; margin:16px 0 0;">The founding circle is complete.</h3>
+          <p style="font-size:15px; color:var(--text-soft); max-width:46ch; margin:10px auto 0; line-height:1.6;">All 100 founders are in. Join the waitlist and you'll be first to hear when the next guild opens. <span class="voice" style="color:var(--accent-600); font-size:16px;">There's always a next one.</span></p>
+          <a href="#request" style="text-decoration:none;"><span class="btn btn--primary" style="margin-top:18px; padding:11px 20px;">Join the waitlist</span></a>
+        </template>
+        <template v-else-if="spotsClaimed === 0">
+          <h3 style="font-size:19px; margin:16px 0 0;">No names yet — and we won't invent any.</h3>
+          <p style="font-size:15px; color:var(--text-soft); max-width:46ch; margin:10px auto 0; line-height:1.6;">This guild just opened. The first person to join Guild 36 is the first name on the wall — the founding circle of makers starts right here. <span class="voice" style="color:var(--accent-600); font-size:16px;">It could be you.</span></p>
+          <a href="#request" style="text-decoration:none;"><span class="btn btn--primary" style="margin-top:18px; padding:11px 20px;">Be the first Original</span></a>
+        </template>
+        <template v-else>
+          <h3 style="font-size:19px; margin:16px 0 0;">{{ spotsClaimed }} founders in — {{ spotsLeft }} spots left.</h3>
+          <p style="font-size:15px; color:var(--text-soft); max-width:46ch; margin:10px auto 0; line-height:1.6;">The founding circle is filling up. Grab one of the remaining spots before Guild 36 closes. <span class="voice" style="color:var(--accent-600); font-size:16px;">It could be you.</span></p>
+          <a href="#request" style="text-decoration:none;"><span class="btn btn--primary" style="margin-top:18px; padding:11px 20px;">Claim your spot</span></a>
+        </template>
       </div>
       <div style="text-align:center; margin-top:28px;">
         <a href="/originals" style="text-decoration:none;"><span class="btn btn--secondary" style="padding:11px 20px;">
@@ -245,10 +283,25 @@ import IconInfoCircle from '~/components/icons/IconInfoCircle.vue'
 import IconSendArrow from '~/components/icons/IconSendArrow.vue'
 import IconUsersPlus from '~/components/icons/IconUsersPlus.vue'
 
+import { guild36 } from '~/constants/guild.js'
+
 definePageMeta({ layout: 'originals' })
 
-const END = new Date('2026-08-01T23:59:59').getTime()
+const END = new Date(guild36.closesAt).getTime()
 
+// Founding-cohort cap (manually maintained in constants/guild.js)
+const spotsTotal = guild36.spotsTotal
+const spotsClaimed = Math.min(guild36.spotsClaimed, guild36.spotsTotal)
+const spotsLeft = computed(() => Math.max(0, spotsTotal - spotsClaimed))
+const isFull = computed(() => spotsLeft.value <= 0)
+const spotsPct = computed(() => Math.min(100, Math.round((spotsClaimed / spotsTotal) * 100)))
+
+// How long the founding $5 price is held.
+const priceLock = guild36.priceLockLabel
+
+// `ready` gates time-based state so we don't flash "expired" before the client
+// clock is read (now is seeded to END for SSR).
+const ready = ref(false)
 const SUBMIT_URL = 'https://app.formester.com/forms/HZZomLdfb/submissions'
 
 const now = ref(END)
@@ -262,9 +315,17 @@ const error = ref('')
 let timer = null
 onMounted(() => {
   now.value = Date.now()
-  timer = setInterval(() => { now.value = Date.now() }, 1000)
+  ready.value = true
+  timer = setInterval(() => {
+    now.value = Date.now()
+    if (now.value >= END) clearInterval(timer) // stop ticking once expired
+  }, 1000)
 })
 onBeforeUnmount(() => clearInterval(timer))
+
+// Time-based expiry, and the resolved page state (cap wins over the clock).
+const isExpired = computed(() => ready.value && now.value >= END)
+const state = computed(() => isFull.value ? 'full' : (isExpired.value ? 'expired' : 'open'))
 
 const pad = (n) => String(n).padStart(2, '0')
 
@@ -281,6 +342,49 @@ const cd = computed(() => {
 const firstName = computed(() => name.value.trim().split(' ')[0] || 'friend')
 const valid = computed(() => !!name.value.trim() && /.+@.+\..+/.test(email.value.trim()))
 const disabled = computed(() => !valid.value || submitting.value)
+
+// Form copy switches across the three states: open / expired (social unlock) / full.
+const copy = computed(() => {
+  if (state.value === 'full') return {
+    eyebrow: 'Join the waitlist',
+    heading: 'Guild 36 is full — get in line for the next one.',
+    intro: "All 100 founding spots are taken. Leave your details and you'll be first to hear when the next founding guild opens.",
+    emailHint: "We'll email you the moment the next guild opens.",
+    showUse: false,
+    useLabel: '',
+    usePlaceholder: '',
+    button: 'Join the waitlist',
+    sending: 'Adding you…',
+    successHeading: "You're on the waitlist",
+    successBody: "We'll email you the moment the next founding guild opens. Thanks for wanting in.",
+  }
+  if (state.value === 'expired') return {
+    eyebrow: 'The window closed — share your way in',
+    heading: 'Missed it? Get in with a shout-out.',
+    intro: `The founding window has closed — but we love people who spread the word. Post about Formester, tag us, and we'll still hand you the founding deal: $5/month locked for ${priceLock}.`,
+    emailHint: "Where we'll send your founding coupon once we spot your post.",
+    showUse: true,
+    useLabel: 'Link to your post about us',
+    usePlaceholder: 'Paste the link to your tweet, LinkedIn post, video…',
+    button: 'Request via shout-out',
+    sending: 'Sending…',
+    successHeading: "Nice — we'll look for your post",
+    successBody: `As soon as we spot your shout-out, we'll email your founding coupon — $5/month locked for ${priceLock}. Thanks for spreading the word.`,
+  }
+  return {
+    eyebrow: 'Apply for your spot',
+    heading: 'Tell us a little, claim your spot.',
+    intro: "We read every application by hand — Guild 36 is capped at 100 founders. If you're a fit, your coupon (your free first month) lands in your inbox within a day or two.",
+    emailHint: 'This is where your coupon goes — and where a builder will reach you.',
+    showUse: true,
+    useLabel: 'What would you use scheduling for?',
+    usePlaceholder: 'Coaching calls, client intake, demo bookings…',
+    button: 'Apply for my spot',
+    sending: 'Sending…',
+    successHeading: "You're in the running",
+    successBody: "We review every application by hand. If you're a fit for Guild 36, your coupon — your free first month — lands in your inbox within a day or two.",
+  }
+})
 
 // app.formester.com sends a Cross-Origin-Resource-Policy header that makes the
 // browser block any fetch/XHR response (even in no-cors mode). A native form
@@ -318,6 +422,7 @@ const submit = () => {
   error.value = ''
   try {
     postViaHiddenForm(SUBMIT_URL, {
+      status: state.value === 'full' ? 'waitlist' : state.value === 'expired' ? 'social-unlock' : 'application',
       name: name.value.trim(),
       email: email.value.trim(),
       use: use.value.trim(),
@@ -335,6 +440,9 @@ const reset = () => { submitted.value = false; error.value = ''; name.value = ''
 useHead({
   title: 'Guild 36 · The Scheduler — Formester Originals',
   bodyAttrs: { style: 'background:#faf9fb;' },
+  meta: [
+    { name: 'robots', content: 'noindex, nofollow' },
+  ],
   link: [
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
     { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
