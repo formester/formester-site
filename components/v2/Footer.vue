@@ -55,6 +55,9 @@
           <li>
             <NuxtLink to="/pricing/" class="site-footer__link">Pricing</NuxtLink>
           </li>
+          <li>
+            <NuxtLink to="/originals/" class="site-footer__link site-footer__link--originals">Originals<span class="site-footer__badge" aria-hidden="true"><span class="site-footer__badge-dot"></span>NEW</span></NuxtLink>
+          </li>
         </ul>
       </div>
 
@@ -257,6 +260,58 @@ const SOCIAL_ICON_SIZE = 30;
 .site-footer__link:hover {
   color: var(--violet-500);
   text-decoration: underline;
+}
+
+/* Originals link — a violet "NEW" badge with a live pulse to draw the eye */
+.site-footer__link--originals {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-footer__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 7px 2px 6px;
+  border-radius: 9999px;
+  background: var(--violet-500);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  animation: footerBadgePulse 2.2s ease-in-out infinite;
+}
+
+.site-footer__badge-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #fff;
+  flex: none;
+  animation: footerBadgeBlink 2.2s ease-in-out infinite;
+}
+
+/* keep the underline-on-hover off the badge */
+.site-footer__link--originals:hover .site-footer__badge { text-decoration: none; }
+
+@keyframes footerBadgePulse {
+  0%   { box-shadow: 0 0 0 0 rgba(100, 52, 208, 0.5); }
+  70%  { box-shadow: 0 0 0 6px rgba(100, 52, 208, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(100, 52, 208, 0); }
+}
+
+@keyframes footerBadgeBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-footer__badge,
+  .site-footer__badge-dot { animation: none; }
 }
 
 /* Bottom bar */
