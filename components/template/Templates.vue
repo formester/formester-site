@@ -141,6 +141,7 @@
               :key="`featured-${template.id}`"
               :template="template"
               :category-label="activeCategory.name"
+              @preview="openPreview"
             />
           </div>
         </section>
@@ -167,6 +168,25 @@
                 :key="`${sub.id}-${template.id}`"
                 :template="template"
                 :category-label="shortSubName(sub)"
+                @preview="openPreview"
+              />
+            </div>
+          </section>
+
+          <!-- Directly-assigned templates that are neither featured nor in a sub-category -->
+          <section
+            v-if="!activeFilter && unsectionedTemplates.length"
+            class="cat-section"
+            aria-label="More templates"
+          >
+            <h3 class="subcat-heading">More {{ activeCategory.name }} templates</h3>
+            <div class="templates-grid">
+              <TemplateCard
+                v-for="template in unsectionedTemplates"
+                :key="`more-${template.id}`"
+                :template="template"
+                :category-label="activeCategory.name"
+              @preview="openPreview"
               />
             </div>
           </section>
@@ -182,6 +202,7 @@
                 :template="template"
                 :category-label="!searchActive && activeCategory ? activeCategory.name : ''"
                 :class="{ 'template-hidden': isClient && useViewMore && index >= visibleCount }"
+                @preview="openPreview"
               />
             </section>
             <div
@@ -249,6 +270,7 @@
         <TemplateCategories :activeCategory="activeCategory" :templateCategories="templateCategories" />
       </div>
     </div>
+    <TemplatePreviewModal :is-open="!!previewUrl" :survey-url="previewUrl || ''" @close="closePreview" />
   </div>
 </template>
 
@@ -257,9 +279,10 @@ import TemplateCategories from '@/components/template/TemplateCategories.vue'
 import TemplateCard from '@/components/template/TemplateCard.vue'
 import TemplateSearch from '@/components/template/TemplateSearch.vue'
 import FaqSection from '@/components/v2/FaqSection.vue'
+import TemplatePreviewModal from '@/components/v2/template/TemplatePreviewModal.vue'
 
 export default {
-  components: { TemplateCategories, TemplateCard, TemplateSearch, FaqSection },
+  components: { TemplateCategories, TemplateCard, TemplateSearch, FaqSection, TemplatePreviewModal },
   props: {
     activeCategory: Object,
     templates: Array,
@@ -281,6 +304,7 @@ export default {
       visibleCount: 12,
       isClient: false,
       activeFilter: null,
+      previewUrl: null,
     }
   },
   mounted() {
@@ -304,6 +328,14 @@ export default {
     toggleDescription() {
       this.showFullDescription = !this.showFullDescription
     },
+    openPreview(template) {
+      this.previewUrl = template.surveyUrl
+      document.body.style.overflow = 'hidden'
+    },
+    closePreview() {
+      this.previewUrl = null
+      document.body.style.overflow = ''
+    },
     viewMore() {
       this.visibleCount += 12
     },
@@ -324,10 +356,10 @@ export default {
     isV2() {
       return !!this.activeCategory
     },
-    // No curated hero copy yet => "default view": description + Show more
-    // instead of CTAs/stats.
+    // The hero subtitle replaces the old description; until it's curated the
+    // page keeps the description + Show more and hides the CTAs/stats.
     hasHeroContent() {
-      return !!(this.pageContent.heroTitle || this.pageContent.heroSubtitle)
+      return !!this.pageContent.heroSubtitle
     },
     pageContent() {
       return this.activeCategory?.pageContent || {}
@@ -385,6 +417,13 @@ export default {
       }
       stats.push({ value: 'Free', label: 'Preview' })
       return stats
+    },
+    // Directly-assigned templates that would otherwise be invisible on a
+    // category with sub-categories (not featured, not in any sub).
+    unsectionedTemplates() {
+      const sectioned = new Set(this.featuredTemplates.map((t) => t.id))
+      this.subcategories.forEach((sub) => (sub.templates || []).forEach((t) => sectioned.add(t.id)))
+      return (this.templates || []).filter((t) => !sectioned.has(t.id))
     },
     // Templates of this category live across featured + sub-categories + any
     // directly-assigned flat list. Merge + dedupe so search covers all of them.
@@ -507,6 +546,13 @@ export default {
 /* V2 hero title: render as authored (sentence case) with an accent phrase.
    flex-shrink + max-width let it wrap to ~2 lines instead of running under
    the hero art (the base .content-heading has flex-shrink: 0). */
+/* Default-view titles (no heroTitle) must also wrap inside the hero column
+   instead of running under the art — the base rule has flex-shrink: 0. */
+.hero-wrap--v2 .content-heading {
+  flex-shrink: 1;
+  min-width: 0;
+}
+
 .content-heading--v2 {
   text-transform: none;
   flex-shrink: 1;
@@ -617,6 +663,7 @@ export default {
   background: transparent;
   text-decoration: underline;
   margin-top: 4px;
+  font-size: 14px;
 }
 
 .templates-grid {
@@ -715,9 +762,10 @@ export default {
   box-shadow: 0 24px 48px -12px rgba(76, 141, 240, 0.5);
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* Content sits high so the floating pill/count cards never cover the label. */
+  justify-content: flex-start;
   gap: 14px;
-  padding: 18px;
+  padding: 34px 18px 18px;
 }
 
 .art-chip {
@@ -752,7 +800,7 @@ export default {
 
 .art-card__label {
   color: #fff;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   line-height: 1.3;
   text-align: center;
@@ -768,8 +816,8 @@ export default {
 
 .art-float {
   position: absolute;
-  right: -6px;
-  bottom: 18px;
+  right: 4px;
+  bottom: 12px;
   background: #fff;
   border: 1px solid #eaecf0;
   border-radius: 12px;
@@ -799,19 +847,21 @@ export default {
 
 .art-float__title {
   font-size: 12px;
+  line-height: 20px;
   font-weight: 600;
   color: #101828;
 }
 
 .art-float__sub {
   font-size: 11px;
+  line-height: 16px;
   color: #697586;
 }
 
 .art-pill {
   position: absolute;
-  left: 6px;
-  bottom: 50px;
+  left: 0;
+  bottom: 6px;
   background: #fff;
   border-radius: 9999px;
   box-shadow: 0 8px 20px -6px rgba(16, 24, 40, 0.16);
@@ -851,7 +901,6 @@ export default {
 .filter-bar__search :deep(.search-box) {
   min-width: 0;
   padding: 12px 16px;
-  border-radius: 8px;
 }
 
 /* Tabs take the remaining width, right-aligned; overflow scrolls sideways. */
@@ -880,11 +929,12 @@ export default {
 }
 
 /* ── Hero actions + stats ── */
+/* Actions and stats stack as two separate rows. */
 .hero-meta {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
   margin: 20px 0 8px;
 }
 

@@ -50,6 +50,7 @@ export default {
       default: '',
     },
   },
+  emits: ['preview'],
   data() {
     return {
       loading: true,
@@ -70,10 +71,10 @@ export default {
     },
   },
   methods: {
-    // Preview the live form, same as the template detail page's preview.
+    // Preview the live form — the parent grid opens the shared preview modal.
     onPreview() {
       if (this.template.surveyUrl) {
-        window.open(this.template.surveyUrl, '_blank')
+        this.$emit('preview', this.template)
       } else {
         navigateTo(`/templates/${this.template.slug}/`)
       }

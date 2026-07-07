@@ -184,7 +184,7 @@ export default {
 }
 
 /* ── Category search (reuses the shared TemplateSearch for a consistent
-   pill + focus ring; override its min-width so it fits the narrow sidebar). ── */
+   box + focus ring; override its min-width so it fits the narrow sidebar). ── */
 .category-search {
   margin: 12px 0 18px;
 }
