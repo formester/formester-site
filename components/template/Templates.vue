@@ -17,9 +17,6 @@
         <!-- HERO -->
         <div class="hero-wrap" :class="{ 'hero-wrap--v2': isV2 && activeCategory }">
           <div class="hero-left">
-            <div v-if="activeCategory && heroBadge" class="hero-badge">
-              <LucideIcon name="sparkles" :size="13" /> {{ heroBadge }}
-            </div>
             <div class="heading-row">
               <h1 class="content-heading" :class="{ 'content-heading--v2': isV2 && pageContent.heroTitle }">
                 <template v-if="isV2 && pageContent.heroTitle"
@@ -34,14 +31,8 @@
               </h1>
             </div>
             <p v-if="isV2 && pageContent.heroSubtitle" class="hero-subtitle">{{ pageContent.heroSubtitle }}</p>
-            <div v-if="!isV2 && activeCategory?.description" class="my-2">
-              <div
-                class="description-wrapper"
-                :class="{
-                  expanded: showFullDescription,
-                  'description-truncated': isClient && !showFullDescription,
-                }"
-              >
+            <div v-if="!hasHeroContent && activeCategory?.description" class="my-2">
+              <div class="description-wrapper" :class="{ 'description-truncated': isClient }">
                 <div class="content-description mt-0 mb-1" v-html="activeCategory.description" />
               </div>
               <button v-if="isClient" class="content-description-handle-button text-nowrap" @click="toggleDescription">
@@ -49,8 +40,8 @@
               </button>
             </div>
 
-            <!-- Hero actions + derivable stats -->
-            <div v-if="isV2 && activeCategory && !searchActive" class="hero-meta">
+            <!-- Hero actions + derivable stats (only once hero content is curated) -->
+            <div v-if="hasHeroContent && activeCategory && !searchActive" class="hero-meta">
               <div class="hero-actions">
                 <a href="/users/sign_up" class="hero-btn hero-btn--primary">Create form</a>
                 <NuxtLink to="/templates/" class="hero-btn hero-btn--ghost">Browse templates</NuxtLink>
@@ -76,7 +67,7 @@
             <div class="art-card art-card--amber"><span class="art-chip art-chip--amber"><LucideIcon name="search" :size="19" /></span></div>
             <div class="art-card art-card--red"><span class="art-chip art-chip--red"><LucideIcon name="activity" :size="19" /></span></div>
             <div class="art-card art-card--blue">
-              <span class="art-chip art-chip--blue"><LucideIcon name="user-check" :size="24" /></span>
+              <span class="art-chip art-chip--blue"><LucideIcon :name="activeCategory.icon || 'user-check'" :size="24" /></span>
               <span class="art-card__label">{{ activeCategory.name }}</span>
             </div>
             <div class="art-float">
@@ -90,9 +81,23 @@
           </div>
         </div>
 
+        <!-- Full description, expanded from the hero's Show more (default view only) -->
+        <div
+          v-if="!hasHeroContent && showFullDescription && activeCategory?.description"
+          class="description-expanded"
+        >
+          <div class="description-wrapper">
+            <div class="content-description mt-0 mb-1" v-html="activeCategory.description" />
+          </div>
+          <button class="content-description-handle-button text-nowrap" @click="toggleDescription">Show less</button>
+        </div>
+
         <!-- FILTER BAR (V2): search + sub-category pills -->
         <div v-if="isV2 && activeCategory" class="filter-bar">
-          <div class="filter-bar__search">
+          <div
+            class="filter-bar__search"
+            :class="{ 'filter-bar__search--wide': searchActive || !subcategories.length }"
+          >
             <TemplateSearch
               :placeholder="`Search ${categoryTemplateCount} ${activeCategory.name} templates`"
               @searchInput="handleSearch"
@@ -314,8 +319,15 @@ export default {
     searchActive() {
       return this.searchTerm.trim().length > 0
     },
+    // Every category page uses the V2 layout; the all-templates page
+    // (no activeCategory) keeps the flat grid.
     isV2() {
-      return !!this.activeCategory?.v2Enabled
+      return !!this.activeCategory
+    },
+    // No curated hero copy yet => "default view": description + Show more
+    // instead of CTAs/stats.
+    hasHeroContent() {
+      return !!(this.pageContent.heroTitle || this.pageContent.heroSubtitle)
     },
     pageContent() {
       return this.activeCategory?.pageContent || {}
@@ -360,15 +372,6 @@ export default {
     },
     categoryTemplateCount() {
       return this.activeCategory?.templateCount || this.allCategoryTemplates.length
-    },
-    heroBadge() {
-      const count = this.categoryTemplateCount
-      if (!count) return ''
-      const updated = this.activeCategory?.updatedAt
-      const when = updated
-        ? new Date(updated).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
-        : ''
-      return when ? `${count} templates · Updated ${when}` : `${count} templates`
     },
     // Templates + Free are derivable; forms-shipped / setup are admin-entered
     // (blank => omitted, so we never invent numbers).
@@ -528,9 +531,13 @@ export default {
   overflow: hidden;
 }
 
-.description-wrapper.expanded {
-  max-height: none;
-  overflow: visible;
+/* Full description, expanded below the hero so the hero layout never jumps. */
+.description-expanded {
+  background: var(--background-color-grey-50, #f9fafb);
+  border: 1px solid var(--clr-border, #eaecf0);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 8px 0 16px;
 }
 
 .description-wrapper .content-description {
@@ -747,8 +754,16 @@ export default {
   color: #fff;
   font-size: 14px;
   font-weight: 600;
+  line-height: 1.3;
   text-align: center;
   text-transform: capitalize;
+  padding: 0 6px;
+  max-width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-word;
 }
 
 .art-float {
@@ -826,6 +841,12 @@ export default {
   max-width: 280px;
 }
 
+/* No sub-category pills sharing the row => give search the space. */
+.filter-bar__search--wide {
+  flex: 1 1 auto;
+  max-width: 560px;
+}
+
 /* Compact the shared search box inside the filter bar. */
 .filter-bar__search :deep(.search-box) {
   min-width: 0;
@@ -858,21 +879,7 @@ export default {
   border-radius: 4px;
 }
 
-/* ── Hero badge + actions + stats ── */
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--clr-primary);
-  background: var(--background-color-violet-25, #f7f3ff);
-  border: 1px solid #ece3ff;
-  padding: 5px 11px;
-  border-radius: 9999px;
-  margin-bottom: 12px;
-}
-
+/* ── Hero actions + stats ── */
 .hero-meta {
   display: flex;
   flex-wrap: wrap;
