@@ -196,7 +196,7 @@ export default {
   display: none;
 }
 
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 900px) {
   .category-bar {
     display: flex;
     justify-content: space-between;

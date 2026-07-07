@@ -1283,7 +1283,15 @@ export default {
   gap: 8px;
 }
 
-@media (max-width: 991px) {
+/* Intermediate band: the sidebar (264px) + fixed 380px art leave too little
+   room for the hero text, and 3-column cards get crushed. */
+@media (max-width: 1199px) {
+  .hero-art {
+    display: none;
+  }
+  .hero-wrap--v2 .hero-left {
+    max-width: none;
+  }
   .templates-grid {
     grid-template-columns: 1fr 1fr;
     margin-top: 0;
@@ -1293,7 +1301,8 @@ export default {
   }
 }
 
-@media only screen and (max-width: 840px) {
+/* Full mobile layout — matches the navbar's hamburger breakpoint (900px). */
+@media only screen and (max-width: 900px) {
   .heading-row {
     flex-direction: column;
     align-items: flex-start;

@@ -120,7 +120,7 @@ function emitSearchTerm() {
   background: var(--gray-200);
 }
 
-@media (max-width: 840px) {
+@media (max-width: 900px) {
   .search-box {
     max-width: 100%;
     width: 100%;
