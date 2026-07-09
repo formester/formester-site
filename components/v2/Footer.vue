@@ -157,6 +157,7 @@
         <NuxtLink to="/dpa/" class="site-footer__legal-link">DPA</NuxtLink>
         <NuxtLink to="/privacy/" class="site-footer__legal-link">Privacy</NuxtLink>
         <NuxtLink to="/terms-of-service/" class="site-footer__legal-link">Terms</NuxtLink>
+        <NuxtLink to="/cookie-policy/" class="site-footer__legal-link">Cookies</NuxtLink>
         <NuxtLink to="/status/" class="site-footer__legal-link">Status</NuxtLink>
         <NuxtLink to="/security/" class="site-footer__legal-link">Security</NuxtLink>
       </nav>
