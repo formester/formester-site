@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import * as lucide from 'lucide-vue-next'
+import * as lucide from '@lucide/vue'
 
 // kebab-case ("file-check-2") -> PascalCase ("FileCheck2")
 function toPascal(name) {
