@@ -4,7 +4,7 @@
       <img class="search-icon" src="/templates/search.svg" alt="" aria-hidden="true" width="18" height="18" />
       <input
         type="text"
-        placeholder="Blood donation, job applicant tracker"
+        :placeholder="placeholder"
         v-model="searchTerm"
         @input="emitSearchTerm"
         class="search-input"
@@ -27,15 +27,25 @@
 <script setup>
 const emit = defineEmits(['searchInput'])
 
+defineProps({
+  placeholder: {
+    type: String,
+    default: 'Blood donation, job applicant tracker',
+  },
+})
+
 const searchTerm = ref('')
+let debounceTimer = null
 
 function resetSearchInput() {
   searchTerm.value = ''
+  clearTimeout(debounceTimer)
   emit('searchInput', '')
 }
 
 function emitSearchTerm() {
-  emit('searchInput', searchTerm.value)
+  clearTimeout(debounceTimer)
+  debounceTimer = setTimeout(() => emit('searchInput', searchTerm.value), 250)
 }
 </script>
 
@@ -45,7 +55,7 @@ function emitSearchTerm() {
   align-items: center;
   background: var(--bg-primary);
   border: 1px solid var(--border-light);
-  border-radius: 40px;
+  border-radius: 8px;
   padding: var(--space-3) var(--space-4);
   box-shadow: var(--shadow-xs);
   transition: box-shadow 0.15s ease, border-color 0.15s ease;
@@ -110,7 +120,7 @@ function emitSearchTerm() {
   background: var(--gray-200);
 }
 
-@media (max-width: 840px) {
+@media (max-width: 900px) {
   .search-box {
     max-width: 100%;
     width: 100%;

@@ -12,8 +12,10 @@
           v-for="(template, idx) in templates"
           :key="idx"
           :template="template"
+          @preview="openPreview"
         />
       </div>
+      <TemplatePreviewModal :is-open="!!previewUrl" :survey-url="previewUrl || ''" @close="closePreview" />
       <div class="d-flex align-items-center justify-content-center mt-4">
         <NuxtLink :to="`/templates/`">
           <button class="btn-all-templates">More Templates</button>
@@ -25,7 +27,18 @@
 
 <script setup>
 import TemplateCard from './template/TemplateCard.vue'
+import TemplatePreviewModal from '@/components/v2/template/TemplatePreviewModal.vue'
 import { getRandomTemplates } from '@/utils/getTemplatesAndCategories'
+
+const previewUrl = ref(null)
+function openPreview(template) {
+  previewUrl.value = template.surveyUrl
+  document.body.style.overflow = 'hidden'
+}
+function closePreview() {
+  previewUrl.value = null
+  document.body.style.overflow = ''
+}
 
 const props = defineProps({
   slug: { type: String },

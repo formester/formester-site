@@ -1,6 +1,6 @@
 <template>
   <div class="template-categories">
-    <!-- Category bar for small devices to show hide categories -->
+    <!-- Category bar for small devices to show/hide categories -->
     <div class="category-bar" @click="showCategories = !showCategories">
       <span class="our-template-heading">Our Templates</span>
       <nuxt-img
@@ -17,96 +17,71 @@
       />
     </div>
 
-    <NuxtLink
-      to="/templates/"
-    >
-      <h2
-        class="all-category-heading"
-        :class="{
-          'd-none': !showCategories && isMobile,
-        }"
-      >
+    <NuxtLink to="/templates/">
+      <h2 class="all-category-heading" :class="{ 'd-none': !showCategories && isMobile }">
+        <LucideIcon name="layout-grid" :size="17" class="all-category-heading__icon" />
         All Templates
       </h2>
     </NuxtLink>
-    <div
-      v-for="(categories, categoryType) in templateCategories"
-      :key="categoryType"
-      class="category-block"
-      :class="{ 'd-none': !showCategories && isMobile }"
-    >
-      <div @click="toggleCollapse(categoryType)">
-        <div
-          class="categoryType-container d-flex align-items-center justify-content-between"
-        >
-          <h2 class="category-heading pointer">{{ formatCategoryHeading(categoryType) }}</h2>
-          <div>
-            <nuxt-img
-              class="collapse-arrow-btn pointer"
-              :class="{ 'rotate-arrow': isExpanded[categoryType] }"
-              src="templates/collapseDown-arrow.svg"
-              alt="category-arrow-button"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="categories"
-        :id="'categories' + categoryType"
-        :class="{ 'categories-collapsed': !isExpanded[categoryType] }"
-      >
+
+    <div class="category-search" :class="{ 'd-none': !showCategories && isMobile }">
+      <TemplateSearch placeholder="Search categories" @searchInput="search = $event" />
+    </div>
+
+    <div class="category-list" :class="{ 'd-none': !showCategories && isMobile }">
+      <div v-for="group in groupedCategories" :key="group.kind" class="category-group">
+        <div class="by-category-label">{{ group.label }}</div>
         <NuxtLink
-          v-for="category in categories"
+          v-for="category in group.items"
           :key="category.id"
           :to="`/templates/categories/${category.slug}/`"
         >
-          <h3
-            class="category"
-            :class="{ active: activeCategory?.slug === category.slug }"
-          >
-            {{ category.name }}
+          <h3 class="category" :class="{ active: activeCategory?.slug === category.slug }">
+            <LucideIcon :name="category.icon" :size="17" class="category__icon" />
+            <span class="category__name">{{ category.name }}</span>
+            <span v-if="category.templateCount" class="category__count">{{ category.templateCount }}</span>
           </h3>
         </NuxtLink>
       </div>
+      <p v-if="!groupedCategories.length" class="category-empty">No categories found</p>
     </div>
   </div>
 </template>
 
 <script>
+// Kind groups, in display order, each with its uppercase eyebrow label.
+const KIND_ORDER = ['purpose', 'department', 'industry', 'pdfTemplates']
+const KIND_LABELS = {
+  purpose: 'BY PURPOSE',
+  department: 'BY DEPARTMENT',
+  industry: 'BY INDUSTRY',
+  pdfTemplates: 'PDF TEMPLATES',
+}
+
 export default {
   props: ['activeCategory', 'templateCategories'],
   data() {
     return {
       showCategories: true,
-      isExpanded: this.initializeExpandedState(),
       isMobile: false,
+      search: '',
     }
   },
+  computed: {
+    // Grouped by kind (purpose → department → industry → pdf), each an
+    // alphabetically-sorted list, filtered by the search box; empty kinds dropped.
+    groupedCategories() {
+      const term = this.search.trim().toLowerCase()
+      const src = this.templateCategories || {}
+      return KIND_ORDER.map((kind) => {
+        let items = src[kind] || []
+        if (term) items = items.filter((c) => c.name?.toLowerCase().includes(term))
+        items = [...items].sort((a, b) => (a.name || '').localeCompare(b.name || ''))
+        return { kind, label: KIND_LABELS[kind], items }
+      }).filter((g) => g.items.length)
+    },
+  },
   methods: {
-    initializeExpandedState() {
-      // For SSR: expand all categories by default for SEO
-      const allExpanded = {}
-      if (this.templateCategories) {
-        Object.keys(this.templateCategories).forEach(key => {
-          allExpanded[key] = true
-        })
-      }
-      return allExpanded
-    },
-    formatCategoryHeading(str) {
-      if (!str) return '';
-      // Insert space before all caps and replace underscores with space
-      let formatted = str.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/_/g, ' ');
-      // Replace any occurrence of 'Pdf' (case-insensitive) with 'PDF'
-      return formatted.replace(/Pdf/gi, 'PDF');
-    },
-    toggleCollapse(categoryType) {
-      this.isExpanded[categoryType] = !this.isExpanded[categoryType]
-      localStorage.setItem('isCollapsedState', JSON.stringify(this.isExpanded))
-    },
-    clearIsExpandedState() {
-      localStorage.removeItem('isCollapsedState')
-    },
     handleResize() {
       this.isMobile = window.innerWidth <= 840
     },
@@ -116,27 +91,10 @@ export default {
       this.handleResize()
       this.showCategories = !this.isMobile
       window.addEventListener('resize', this.handleResize)
-
-      // On client-side, apply saved state or collapse all except first
-      const savedState = localStorage.getItem('isCollapsedState')
-      if (savedState) {
-        this.isExpanded = JSON.parse(savedState)
-      } else {
-        // Collapse all except first category after initial render
-        const collapsedState = {}
-        Object.keys(this.templateCategories).forEach((key, index) => {
-          collapsedState[key] = index === 0
-        })
-        this.isExpanded = collapsedState
-      }
-
-      window.addEventListener('beforeunload', this.clearIsExpandedState)
     }
   },
   beforeDestroy() {
-    // Remove the event listener when the component is destroyed
     window.removeEventListener('resize', this.handleResize)
-    window.removeEventListener('beforeunload', this.clearIsExpandedState)
   },
 }
 </script>
@@ -151,75 +109,94 @@ export default {
   display: none;
 }
 .all-category-heading {
-  color: var(--neutral-900, #404040);
-  padding: 8px 36px 8px 0;
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 24px;
-  user-select: none;
-  font-weight: 500;
-  letter-spacing: 0em;
-}
-.category-block {
-  margin-top: 16px;
-}
-h2::first-letter {
-  text-transform: uppercase;
-}
-.category-heading {
-  color: var(--neutral-700, #404040);
-  padding: 8px 0;
-  margin: 0;
-  font-size: 16px;
-  font-weight: 500 !important;
-  line-height: 24px;
-  letter-spacing: 0em;
-  text-align: left;
-  text-transform: capitalize;
-}
-.categoryType-container {
-  padding-right: 35px;
-}
-.category-menu-btn {
-  display: none;
-}
-.category {
-  padding: 4px 36px 4px 0;
+  color: var(--neutral-900, #101828);
+  padding: 8px 10px;
   cursor: pointer;
   font-size: 14px;
   line-height: 24px;
-  color: #272727;
   user-select: none;
-  margin-bottom: 4px;
-  font-weight: 400;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.all-category-heading__icon {
+  color: var(--clr-primary, #7f56d9);
+}
+
+/* ── BY CATEGORY list ── */
+.by-category-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #98a2b3;
+  padding: 0 10px 8px;
+}
+.category-list {
+  margin-top: 6px;
+}
+.category-group {
+  margin-bottom: 16px;
+}
+.category {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 20px;
+  color: #344054;
+  user-select: none;
+  margin-bottom: 2px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background 0.15s, color 0.15s;
 }
 .category.active {
-  color: #4f3895;
+  color: #53389e;
   font-weight: 600;
+  background: var(--background-color-violet-25, #f7f3ff);
 }
 .category:hover {
-  color: #643ed6;
+  color: #101828;
+  background: var(--background-color-grey-50, #f9fafb);
 }
-.collapse-arrow-btn {
-  transition: all 0.3s ease-in-out;
+.category__name {
+  flex: 1;
 }
-.rotate-arrow {
-  transform: rotate(180deg);
-  transition: all 0.3s ease-in-out;
+.category__count {
+  font-size: 12px;
+  color: #98a2b3;
+  flex-shrink: 0;
+}
+.category__icon {
+  flex-shrink: 0;
+  color: #667085;
+}
+.category.active .category__icon {
+  color: #53389e;
+}
+.category-empty {
+  padding: 8px 10px;
+  font-size: 13px;
+  color: #98a2b3;
 }
 
-.categories {
-  max-height: 2000px; /* Large enough to fit all categories */
-  overflow: visible;
-  transition: max-height 0.3s ease;
+/* ── Category search (reuses the shared TemplateSearch for a consistent
+   box + focus ring; override its min-width so it fits the narrow sidebar). ── */
+.category-search {
+  margin: 12px 0 18px;
+}
+.category-search :deep(.search-box) {
+  min-width: 0;
 }
 
-.categories-collapsed {
-  max-height: 0;
-  overflow: hidden;
+.category-menu-btn {
+  display: none;
 }
 
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 900px) {
   .category-bar {
     display: flex;
     justify-content: space-between;
@@ -229,19 +206,8 @@ h2::first-letter {
     border-radius: 12px;
     background: var(--neutral-100, #f5f5f5);
   }
-  .sidebar-heading {
-    display: none;
-  }
   .our-template-heading {
     display: block;
-  }
-  .category-heading {
-    color: var(--neutral-900, #171717);
-    padding: 0;
-    margin: 0;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
   }
   .category-menu-btn {
     display: flex;
@@ -249,20 +215,12 @@ h2::first-letter {
     justify-content: center;
   }
   .all-category-heading {
-    color: var(--neutral-900, #171717);
-    padding: 4px 8px 4px 8px;
+    padding: 4px 8px;
     font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
-    transition: none;
-  }
-  .categoryType-container {
-    padding: 0 8px 4px 8px;
+    font-weight: 600;
   }
   .category {
-    padding: 4px 8px 4px 8px;
-    font-weight: 400;
-    line-height: 21px;
+    padding: 6px 8px;
     transition: none;
   }
 }
