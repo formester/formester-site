@@ -26,13 +26,60 @@
         >
           <div v-if="isDragging" class="drop-overlay">Drop files here</div>
 
-          <textarea
-            v-model="prompt"
-            class="canvas-textarea"
-            :placeholder="typedPlaceholder || placeholder"
-            rows="4"
-            @paste="onPaste"
-          ></textarea>
+          <div class="chat-box">
+            <textarea
+              v-model="prompt"
+              class="chat-textarea"
+              :placeholder="typedPlaceholder || placeholder"
+              rows="4"
+              @paste="onPaste"
+            ></textarea>
+
+            <input
+              ref="fileInputRef"
+              type="file"
+              :accept="ACCEPTED_TYPES.join(',')"
+              multiple
+              style="display: none"
+              @change="handleFileSelect"
+            />
+
+            <div class="attach-tray">
+              <div v-if="fileEntries.length" class="file-chips">
+                <div
+                  v-for="entry in fileEntries"
+                  :key="entry.uid"
+                  class="file-chip"
+                  :title="entry.file.name"
+                >
+                  <span v-if="entry.status === 'uploading'" class="file-chip-spinner"></span>
+                  <img
+                    v-else-if="entry.file.type.startsWith('image/')"
+                    :src="getPreviewUrl(entry)"
+                    class="file-chip-img"
+                    alt=""
+                  />
+                  <svg v-else width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="file-chip-icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  <span class="file-chip-name">{{ entry.file.name }}</span>
+                  <button type="button" class="file-chip-remove" @click="removeFile(entry.uid)">✕</button>
+                </div>
+              </div>
+
+              <div class="attach-row">
+                <button
+                  type="button"
+                  class="attach-btn"
+                  :disabled="fileEntries.length >= MAX_FILES"
+                  @click="fileInputRef.click()"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                  Attach files
+                </button>
+                <span class="attach-meta">PDF or image · max 10 MB · up to {{ MAX_FILES }} files</span>
+              </div>
+              <p v-if="uploadError" class="upload-error">{{ uploadError }}</p>
+            </div>
+          </div>
 
           <div v-if="suggestions && suggestions.length" class="canvas-chips">
             <button
@@ -42,49 +89,6 @@
               @click="setPrompt(chip.text)"
             >{{ chip.label || chip.text }}</button>
           </div>
-
-          <input
-            ref="fileInputRef"
-            type="file"
-            :accept="ACCEPTED_TYPES.join(',')"
-            multiple
-            style="display: none"
-            @change="handleFileSelect"
-          />
-
-          <div v-if="fileEntries.length" class="file-chips">
-            <div
-              v-for="entry in fileEntries"
-              :key="entry.uid"
-              class="file-chip"
-              :title="entry.file.name"
-            >
-              <span v-if="entry.status === 'uploading'" class="file-chip-spinner"></span>
-              <img
-                v-else-if="entry.file.type.startsWith('image/')"
-                :src="getPreviewUrl(entry)"
-                class="file-chip-img"
-                alt=""
-              />
-              <svg v-else width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="file-chip-icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              <span class="file-chip-name">{{ entry.file.name }}</span>
-              <button type="button" class="file-chip-remove" @click="removeFile(entry.uid)">✕</button>
-            </div>
-          </div>
-
-          <div class="attach-row">
-            <button
-              type="button"
-              class="attach-btn"
-              :disabled="fileEntries.length >= MAX_FILES"
-              @click="fileInputRef.click()"
-            >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
-              Attach files
-            </button>
-            <span class="attach-meta">PDF or image · max 10 MB · up to {{ MAX_FILES }} files</span>
-          </div>
-          <p v-if="uploadError" class="upload-error">{{ uploadError }}</p>
 
           <button
             class="canvas-btn"
@@ -393,24 +397,39 @@ const editUrl = computed(() =>
   box-shadow: 0 8px 32px rgba(100, 52, 208, 0.08), 0 2px 8px rgba(0,0,0,0.04);
 }
 
-.canvas-textarea {
-  width: 100%;
+/* Chat box: textarea + attachment tray in one bordered container */
+.chat-box {
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--clr-secondary-gray-stroke);
-  border-radius: 10px;
+  border-radius: 12px;
+  background: #ffffff;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-bottom: 16px;
+}
+
+.chat-box:focus-within {
+  border-color: var(--clr-primary);
+  box-shadow: 0 0 0 3px rgba(100, 52, 208, 0.1);
+}
+
+.chat-textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
   padding: 14px 16px;
   font-size: 15px;
   font-family: inherit;
   color: var(--clr-text-primary);
   resize: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
-  margin-bottom: 14px;
   line-height: 1.5;
 }
 
-.canvas-textarea:focus {
-  outline: none;
-  border-color: var(--clr-primary);
-  box-shadow: 0 0 0 3px rgba(100, 52, 208, 0.1);
+.attach-tray {
+  border-top: 1px solid var(--clr-secondary-gray-stroke);
+  padding: 10px 12px;
 }
 
 .canvas-chips {
@@ -446,7 +465,7 @@ const editUrl = computed(() =>
   position: relative;
 }
 
-.canvas-input.is-dragging {
+.canvas-input.is-dragging .chat-box {
   border-color: var(--clr-primary);
   box-shadow: 0 0 0 3px rgba(100, 52, 208, 0.15);
 }
@@ -471,7 +490,7 @@ const editUrl = computed(() =>
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .file-chip {
@@ -537,28 +556,28 @@ const editUrl = computed(() =>
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
-  margin-bottom: 16px;
 }
 
 .attach-btn {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 8px 14px;
+  padding: 6px 12px;
   background: none;
-  border: 1px dashed var(--clr-secondary-gray-stroke);
+  border: 1px solid var(--clr-secondary-gray-stroke);
   border-radius: 8px;
   font-size: 13px;
   font-weight: 500;
   color: var(--clr-text-secondary);
   cursor: pointer;
   font-family: inherit;
-  transition: border-color 0.15s, color 0.15s;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
 }
 
 .attach-btn:hover:not(:disabled) {
   border-color: var(--clr-primary);
   color: var(--clr-primary);
+  background: var(--clr-primary-light);
 }
 
 .attach-btn:disabled {
@@ -575,7 +594,7 @@ const editUrl = computed(() =>
 .upload-error {
   font-size: 12px;
   color: #d92d20;
-  margin: -8px 0 12px;
+  margin: 10px 0 0;
 }
 
 .canvas-btn {
