@@ -429,7 +429,7 @@ const editUrl = computed(() =>
 
 .attach-tray {
   border-top: 1px solid var(--clr-secondary-gray-stroke);
-  padding: 10px 12px;
+  padding: 8px 10px;
 }
 
 .canvas-chips {
@@ -496,23 +496,25 @@ const editUrl = computed(() =>
 .file-chip {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  max-width: 180px;
-  padding: 5px 8px;
+  gap: 5px;
+  max-width: 160px;
+  padding: 3px 7px;
   background: var(--clr-primary-light);
   border: 1px solid var(--clr-primary-light-hover);
-  border-radius: 8px;
-  font-size: 12px;
+  border-radius: 6px;
+  font-size: 11px;
   color: var(--clr-primary);
 }
 
 .file-chip-icon {
   flex-shrink: 0;
+  width: 12px;
+  height: 12px;
 }
 
 .file-chip-img {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   object-fit: cover;
   border-radius: 4px;
   flex-shrink: 0;
@@ -561,17 +563,22 @@ const editUrl = computed(() =>
 .attach-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
+  gap: 5px;
+  padding: 5px 10px;
   background: none;
   border: 1px solid var(--clr-secondary-gray-stroke);
-  border-radius: 8px;
-  font-size: 13px;
+  border-radius: 6px;
+  font-size: 12px;
   font-weight: 500;
   color: var(--clr-text-secondary);
   cursor: pointer;
   font-family: inherit;
   transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+.attach-btn svg {
+  width: 12px;
+  height: 12px;
 }
 
 .attach-btn:hover:not(:disabled) {
@@ -586,15 +593,15 @@ const editUrl = computed(() =>
 }
 
 .attach-meta {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--clr-text-secondary);
   opacity: 0.8;
 }
 
 .upload-error {
-  font-size: 12px;
+  font-size: 11px;
   color: #d92d20;
-  margin: 10px 0 0;
+  margin: 8px 0 0;
 }
 
 .canvas-btn {
