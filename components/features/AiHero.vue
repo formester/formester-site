@@ -14,13 +14,72 @@
       <Transition name="canvas-fade" mode="out-in">
 
         <!-- State: Input -->
-        <div v-if="!isGenerating && !surveyUrl" key="input" class="canvas-input">
-          <textarea
-            v-model="prompt"
-            class="canvas-textarea"
-            :placeholder="typedPlaceholder || placeholder"
-            rows="4"
-          ></textarea>
+        <div
+          v-if="!isGenerating && !surveyUrl"
+          key="input"
+          class="canvas-input"
+          :class="{ 'is-dragging': isDragging }"
+          @dragenter.prevent="onDragEnter"
+          @dragover.prevent
+          @dragleave.prevent="onDragLeave"
+          @drop.prevent="onDrop"
+        >
+          <div v-if="isDragging" class="drop-overlay">Drop files here</div>
+
+          <div class="chat-box">
+            <textarea
+              v-model="prompt"
+              class="chat-textarea"
+              :placeholder="typedPlaceholder || placeholder"
+              rows="4"
+              @paste="onPaste"
+            ></textarea>
+
+            <input
+              ref="fileInputRef"
+              type="file"
+              :accept="ACCEPTED_TYPES.join(',')"
+              multiple
+              style="display: none"
+              @change="handleFileSelect"
+            />
+
+            <div class="attach-tray">
+              <div v-if="fileEntries.length" class="file-chips">
+                <div
+                  v-for="entry in fileEntries"
+                  :key="entry.uid"
+                  class="file-chip"
+                  :title="entry.file.name"
+                >
+                  <span v-if="entry.status === 'uploading'" class="file-chip-spinner"></span>
+                  <img
+                    v-else-if="entry.file.type.startsWith('image/')"
+                    :src="getPreviewUrl(entry)"
+                    class="file-chip-img"
+                    alt=""
+                  />
+                  <svg v-else width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="file-chip-icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  <span class="file-chip-name">{{ entry.file.name }}</span>
+                  <button type="button" class="file-chip-remove" @click="removeFile(entry.uid)">✕</button>
+                </div>
+              </div>
+
+              <div class="attach-row">
+                <button
+                  type="button"
+                  class="attach-btn"
+                  :disabled="fileEntries.length >= MAX_FILES"
+                  @click="fileInputRef.click()"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                  Attach files
+                </button>
+                <span class="attach-meta">PDF or image · max 10 MB · up to {{ MAX_FILES }} files</span>
+              </div>
+              <p v-if="uploadError" class="upload-error">{{ uploadError }}</p>
+            </div>
+          </div>
 
           <div v-if="suggestions && suggestions.length" class="canvas-chips">
             <button
@@ -31,30 +90,9 @@
             >{{ chip.label || chip.text }}</button>
           </div>
 
-          <!-- PDF upload (commented out until prompt+PDF UX is finalized)
-          <input
-            ref="fileInputRef"
-            type="file"
-            accept=".pdf,application/pdf"
-            style="display: none"
-            @change="onFileChange"
-          />
-
-          <div v-if="selectedFile" class="pdf-selected">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            <span class="pdf-selected__name">{{ selectedFile.name }}</span>
-            <button class="pdf-selected__remove" @click="clearFile">✕</button>
-          </div>
-
-          <button v-else class="pdf-upload-btn" @click="fileInputRef.click()">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-            Upload PDF
-          </button>
-          -->
-
           <button
             class="canvas-btn"
-            :disabled="!prompt"
+            :disabled="!prompt || isAnyUploading"
             @click="handleGenerate"
           >
             {{ buttonText }}
@@ -176,10 +214,24 @@ function stopProgress() {
   slowInterval = null
 }
 
-// PDF refs (commented out until prompt+PDF UX is finalized)
-// const isUploading = ref(false)
-// const selectedFile = ref(null)
-// const fileInputRef = ref(null)
+const fileInputRef = ref(null)
+const {
+  fileEntries,
+  uploadError,
+  isDragging,
+  isAnyUploading,
+  readyFiles,
+  ACCEPTED_TYPES,
+  MAX_FILES,
+  getPreviewUrl,
+  onDragEnter,
+  onDragLeave,
+  onDrop,
+  onPaste,
+  handleFileSelect,
+  removeFile,
+  clearFiles,
+} = useAiFileAttachments()
 
 const setPrompt = (text) => { prompt.value = text }
 
@@ -200,31 +252,13 @@ onMounted(() => {
 })
 onBeforeUnmount(() => clearInterval(typeTimer))
 
-// const onFileChange = (e) => { selectedFile.value = e.target.files[0] || null }
-
-// const clearFile = () => {
-//   selectedFile.value = null
-//   if (fileInputRef.value) fileInputRef.value.value = ''
-// }
-
 const reset = () => {
   prompt.value = ''
   surveyUrl.value = ''
   generatedTitle.value = ''
   previewToken.value = ''
-  // clearFile()
+  clearFiles()
 }
-
-// const uploadPdf = async (file) => {
-//   isUploading.value = true
-//   const { data: presign } = await axios.post(
-//     `${config.public.appUrl}/api/site/public_ai_previews/presign`,
-//     { filename: file.name }
-//   )
-//   await axios.put(presign.upload_url, file, { headers: { 'Content-Type': file.type } })
-//   isUploading.value = false
-//   return presign.object_url
-// }
 
 const pollStatus = async (processId) => {
   return new Promise((resolve, reject) => {
@@ -258,12 +292,7 @@ const handleGenerate = async () => {
 
   try {
     const body = { prompt: prompt.value, type: apiType.value }
-
-    // PDF branch (commented out until prompt+PDF UX is finalized)
-    // if (selectedFile.value) {
-    //   body.file_uri = await uploadPdf(selectedFile.value)
-    //   delete body.prompt
-    // }
+    if (readyFiles.value.length) body.files = readyFiles.value
 
     const { data } = await axios.post(`${config.public.appUrl}/api/site/public_ai_previews`, body)
     const result = await pollStatus(data.process_id)
@@ -281,7 +310,6 @@ const handleGenerate = async () => {
     $notify({ text: 'Unable to generate your form. Please try again.', type: 'error' })
   } finally {
     isGenerating.value = false
-    // isUploading.value = false
   }
 }
 
@@ -369,24 +397,39 @@ const editUrl = computed(() =>
   box-shadow: 0 8px 32px rgba(100, 52, 208, 0.08), 0 2px 8px rgba(0,0,0,0.04);
 }
 
-.canvas-textarea {
-  width: 100%;
+/* Chat box: textarea + attachment tray in one bordered container */
+.chat-box {
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--clr-secondary-gray-stroke);
-  border-radius: 10px;
+  border-radius: 12px;
+  background: #ffffff;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-bottom: 16px;
+}
+
+.chat-box:focus-within {
+  border-color: var(--clr-primary);
+  box-shadow: 0 0 0 3px rgba(100, 52, 208, 0.1);
+}
+
+.chat-textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
   padding: 14px 16px;
   font-size: 15px;
   font-family: inherit;
   color: var(--clr-text-primary);
   resize: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
-  margin-bottom: 14px;
   line-height: 1.5;
 }
 
-.canvas-textarea:focus {
-  outline: none;
-  border-color: var(--clr-primary);
-  box-shadow: 0 0 0 3px rgba(100, 52, 208, 0.1);
+.attach-tray {
+  border-top: 1px solid var(--clr-secondary-gray-stroke);
+  padding: 8px 10px;
 }
 
 .canvas-chips {
@@ -418,58 +461,147 @@ const editUrl = computed(() =>
   transform: translateY(-1px);
 }
 
-.pdf-upload-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 14px;
-  background: none;
-  border: 1px dashed var(--clr-secondary-gray-stroke);
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--clr-text-secondary);
-  cursor: pointer;
-  font-family: inherit;
-  transition: border-color 0.15s, color 0.15s;
-  margin-bottom: 16px;
+.canvas-input {
+  position: relative;
 }
 
-.pdf-upload-btn:hover {
+.canvas-input.is-dragging .chat-box {
   border-color: var(--clr-primary);
-  color: var(--clr-primary);
+  box-shadow: 0 0 0 3px rgba(100, 52, 208, 0.15);
 }
 
-.pdf-selected {
+.drop-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 14px;
+  justify-content: center;
+  background: rgba(245, 240, 255, 0.94);
+  border: 2px dashed var(--clr-primary);
+  border-radius: 20px;
+  color: var(--clr-primary);
+  font-size: 14px;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.file-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.file-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  max-width: 160px;
+  padding: 3px 7px;
   background: var(--clr-primary-light);
   border: 1px solid var(--clr-primary-light-hover);
-  border-radius: 8px;
-  margin-bottom: 16px;
+  border-radius: 6px;
+  font-size: 11px;
   color: var(--clr-primary);
 }
 
-.pdf-selected__name {
+.file-chip-icon {
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+}
+
+.file-chip-img {
+  width: 16px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.file-chip-spinner {
+  width: 13px;
+  height: 13px;
+  border: 2px solid rgba(100, 52, 208, 0.2);
+  border-top-color: var(--clr-primary);
+  border-radius: 50%;
+  animation: chip-spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes chip-spin {
+  to { transform: rotate(360deg); }
+}
+
+.file-chip-name {
   flex: 1;
-  font-size: 13px;
-  font-weight: 500;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-weight: 500;
 }
 
-.pdf-selected__remove {
+.file-chip-remove {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 11px;
   color: var(--clr-primary);
   padding: 0 2px;
   line-height: 1;
   flex-shrink: 0;
+}
+
+.attach-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.attach-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  background: none;
+  border: 1px solid var(--clr-secondary-gray-stroke);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--clr-text-secondary);
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+.attach-btn svg {
+  width: 12px;
+  height: 12px;
+}
+
+.attach-btn:hover:not(:disabled) {
+  border-color: var(--clr-primary);
+  color: var(--clr-primary);
+  background: var(--clr-primary-light);
+}
+
+.attach-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.attach-meta {
+  font-size: 11px;
+  color: var(--clr-text-secondary);
+  opacity: 0.8;
+}
+
+.upload-error {
+  font-size: 11px;
+  color: #d92d20;
+  margin: 8px 0 0;
 }
 
 .canvas-btn {
