@@ -266,26 +266,23 @@ const jsonldData = computed(() => {
     },
   ]
 
-  if (blogData.value?.schema) {
+  blogData.value?.schema?.forEach((s) => {
     try {
-      blogData.value.schema.forEach((s) => {
-        const parsedSchema = JSON.parse(s.type)
-        if (parsedSchema && typeof parsedSchema === 'object') {
-          const withContext = !parsedSchema['@context'] || typeof parsedSchema['@context'] !== 'string'
-            ? { '@context': 'https://schema.org', ...parsedSchema }
-            : parsedSchema
-          jsonData.push(withContext)
-        }
-      })
+      // Strapi json field: already an object, unless an editor pasted a JSON string
+      const parsed = typeof s.type === 'string' ? JSON.parse(s.type) : s.type
+      if (!parsed || typeof parsed !== 'object') return
+      jsonData.push(
+        typeof parsed['@context'] === 'string' ? parsed : { '@context': 'https://schema.org', ...parsed }
+      )
     } catch (error) {
       console.error('Error parsing schema:', error)
     }
-  }
+  })
 
   return jsonData
 })
 
-useJsonld(jsonldData.value)
+useJsonld(() => jsonldData.value)
 </script>
 
 <style scoped>
