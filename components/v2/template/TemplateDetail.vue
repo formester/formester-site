@@ -63,7 +63,7 @@ onMounted(() => {
 .tmpl-detail__sticky-header {
   position: sticky;
   /* stick when hero has scrolled fully out; 80px = site navbar height */
-  top: calc(-1 * var(--hero-h, 0px) + 80px);
+  top: calc(-1 * var(--hero-h, 0px) + 80px + var(--banner-h, 0px));
   z-index: 20;
   background: var(--bg-primary);
 }

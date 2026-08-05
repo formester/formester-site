@@ -288,7 +288,7 @@ useJsonld(() => jsonldData.value)
 <style scoped>
 .read-progress {
   position: fixed;
-  top: 0;
+  top: var(--banner-h, 0px);
   left: 0;
   right: 0;
   height: 3px;

@@ -24,7 +24,7 @@ export default {
   },
   computed: {
     showBanner() {
-      return this.$route.path === '/' && !this.bannerDismissed
+      return !this.bannerDismissed
     },
   },
   mounted() {
