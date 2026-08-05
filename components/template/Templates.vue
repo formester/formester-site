@@ -484,7 +484,7 @@ export default {
 
 .left-sidebar {
   position: sticky;
-  top: 80px;
+  top: calc(80px + var(--banner-h, 0px));
   max-height: calc(100vh - 70px);
   margin-bottom: 1.5rem;
   min-width: 264px;
@@ -1102,7 +1102,7 @@ export default {
 /* ── Category content sections ── */
 .cat-section {
   margin-top: 40px;
-  scroll-margin-top: 90px;
+  scroll-margin-top: calc(90px + var(--banner-h, 0px));
 }
 
 .section-eyebrow {

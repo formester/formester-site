@@ -124,7 +124,7 @@ const formattedDate = computed(() => {
 /* Sidebar */
 .tmpl-detail__sidebar {
   position: sticky;
-  top: 170px;
+  top: calc(170px + var(--banner-h, 0px));
   display: flex;
   flex-direction: column;
   gap: var(--space-6);

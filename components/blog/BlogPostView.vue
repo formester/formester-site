@@ -403,7 +403,7 @@ a.art-author__name:hover {
 
 .art-toc {
   position: sticky;
-  top: 104px;
+  top: calc(104px + var(--banner-h, 0px));
   align-self: start;
   max-height: calc(100vh - 130px);
   overflow-y: auto;
@@ -460,7 +460,7 @@ a.art-author__name:hover {
 
 .art-share {
   position: sticky;
-  top: 104px;
+  top: calc(104px + var(--banner-h, 0px));
   align-self: start;
   display: flex;
   flex-direction: column;
@@ -649,7 +649,7 @@ a.art-author__name:hover {
   color: var(--fg-1);
   margin-top: 44px;
   margin-bottom: 16px;
-  scroll-margin-top: 96px;
+  scroll-margin-top: calc(96px + var(--banner-h, 0px));
 }
 
 .nuxt-content h3 {
@@ -660,7 +660,7 @@ a.art-author__name:hover {
   color: var(--fg-1);
   margin-top: 30px;
   margin-bottom: 12px;
-  scroll-margin-top: 96px;
+  scroll-margin-top: calc(96px + var(--banner-h, 0px));
 }
 
 .nuxt-content strong {

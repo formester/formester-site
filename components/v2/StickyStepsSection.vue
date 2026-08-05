@@ -88,7 +88,7 @@ defineProps({
 
   .steps-left {
     position: sticky;
-    top: 90px;
+    top: calc(90px + var(--banner-h, 0px));
   }
 }
 
