@@ -121,7 +121,7 @@ const toggle = (id) => {
     width: 38%;
     flex-shrink: 0;
     position: sticky;
-    top: 6rem;
+    top: calc(6rem + var(--banner-h, 0px));
     align-self: flex-start;
   }
 }

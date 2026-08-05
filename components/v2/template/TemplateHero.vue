@@ -157,7 +157,7 @@ function openPreviewModal() {
 /* ── Preview column ── */
 .tmpl-detail__preview-col {
   position: sticky;
-  top: 80px;
+  top: calc(80px + var(--banner-h, 0px));
   align-self: start;
   min-width: 0;
 }
@@ -165,7 +165,7 @@ function openPreviewModal() {
 /* ── Info column ── */
 .tmpl-detail__info-col {
   position: sticky;
-  top: 80px;
+  top: calc(80px + var(--banner-h, 0px));
   align-self: start;
   display: flex;
   flex-direction: column;
