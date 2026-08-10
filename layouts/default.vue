@@ -1,6 +1,5 @@
 <template>
-  <div class="layout-wrapper opacity-100" :class="{ 'has-banner': showBanner }">
-    <ProductHuntBanner v-if="showBanner" @dismiss="dismissBanner" />
+  <div class="layout-wrapper opacity-100">
     <Navbar />
     <main class="main-content">
       <NuxtPage />
@@ -13,41 +12,13 @@
 <script>
 import Navbar from '../components/v2/nav/Navbar.vue'
 import CookieConsent from '../components/CookieConsent.vue'
-import ProductHuntBanner from '../components/ProductHuntBanner.vue'
-
-const PH_BANNER_DISMISS_KEY = 'formester_ph_banner_dismissed'
 
 export default {
-  components: { Navbar, CookieConsent, ProductHuntBanner },
-  data() {
-    return { bannerDismissed: false }
-  },
-  computed: {
-    showBanner() {
-      return !this.bannerDismissed
-    },
-  },
+  components: { Navbar, CookieConsent },
   mounted() {
     this.trackReferrer()
-
-    try {
-      if (sessionStorage.getItem(PH_BANNER_DISMISS_KEY) === '1') {
-        this.bannerDismissed = true
-      }
-    } catch (error) {
-      // sessionStorage can throw in private mode — banner just stays visible.
-    }
   },
   methods: {
-    dismissBanner() {
-      this.bannerDismissed = true
-      try {
-        sessionStorage.setItem(PH_BANNER_DISMISS_KEY, '1')
-      } catch (error) {
-        // Non-fatal: dismissal simply won't persist across page loads.
-      }
-    },
-
     trackReferrer() {
       try {
         // Get the referrer information
@@ -143,21 +114,5 @@ export default {
 
 .main-content {
   flex: 1;
-}
-
-/* Promo banner is fixed, so reserve its height and push the floating navbar
-   down by the same amount (Navbar reads --banner-h). */
-.has-banner {
-  --banner-h: 44px;
-}
-
-.has-banner .main-content {
-  padding-top: var(--banner-h);
-}
-
-@media screen and (max-width: 575px) {
-  .has-banner {
-    --banner-h: 40px;
-  }
 }
 </style>

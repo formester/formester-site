@@ -453,8 +453,7 @@ onBeforeUnmount(() => {
   position: fixed;
   left: 0;
   right: 0;
-  /* --banner-h is set by the layout when a promo banner is on screen. */
-  top: calc(12px + var(--banner-h, 0px));
+  top: 12px;
   display: flex;
   justify-content: center;
   width: 100%;

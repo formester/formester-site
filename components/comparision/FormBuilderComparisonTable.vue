@@ -285,7 +285,7 @@ function onPlanChange(e) {
 
 .formbuilder__logo-container {
   position: sticky;
-  top: calc(86px + var(--banner-h, 0px));
+  top: 86px;
   background: white;
   padding-left: 354px;
   z-index: 100;
