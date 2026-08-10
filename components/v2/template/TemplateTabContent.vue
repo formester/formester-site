@@ -1,5 +1,5 @@
 <template>
-  <div v-if="template.tabs?.length" ref="contentRef" class="tmpl-detail__content-area" :style="{ 'scroll-margin-top': `calc(${scrollOffset}px + var(--banner-h, 0px))` }">
+  <div v-if="template.tabs?.length" ref="contentRef" class="tmpl-detail__content-area" :style="{ 'scroll-margin-top': scrollOffset + 'px' }">
     <div v-for="tab in template.tabs" :key="tab.id" v-show="activeTabId === tab.id">
       <component :is="resolvedComponents[tab.type]" v-bind="tab.props" />
     </div>

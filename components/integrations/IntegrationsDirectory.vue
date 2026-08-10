@@ -273,7 +273,7 @@ const hubIcons = computed(() => {
   max-width: 1120px;
   margin: 0 auto;
   padding: var(--space-16) var(--space-6);
-  scroll-margin-top: calc(90px + var(--banner-h, 0px));
+  scroll-margin-top: 90px;
 }
 
 .dir__header {
