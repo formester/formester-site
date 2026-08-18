@@ -7,11 +7,10 @@
     "node": ">=18.20.0"
   },
   "scripts": {
-    "dev": "npm run fetch-navbar && nuxt dev",
-    "build": "npm run fetch-navbar && nuxt build",
-    "start": "npm run fetch-navbar && nuxt preview",
-    "generate": "npm run fetch-navbar && nuxt generate",
-    "fetch-navbar": "node scripts/fetch-navbar.js",
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "start": "nuxt preview",
+    "generate": "nuxt generate",
     "postinstall": "nuxt prepare",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
