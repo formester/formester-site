@@ -1,0 +1,16 @@
+{
+  "name": "s3-uploader",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Local-only S3 browse/upload tool — drag a file in, get a public URL back.",
+  "engines": {
+    "node": ">=20.6.0"
+  },
+  "scripts": {
+    "start": "node --env-file=.env server.js"
+  },
+  "dependencies": {
+    "aws4fetch": "^1.0.20"
+  }
+}
