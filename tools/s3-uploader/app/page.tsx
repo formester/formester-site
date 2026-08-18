@@ -37,6 +37,13 @@ export default function Home() {
     setLoading(true)
     const res = await fetch('/api/objects')
     const data = await res.json()
+    if (!res.ok) {
+      setStatus(`Failed to load bucket contents: ${data.error}`)
+      setObjects([])
+      setNextToken(null)
+      setLoading(false)
+      return
+    }
     setObjects(data.objects)
     setNextToken(data.nextContinuationToken)
     setLoading(false)
@@ -47,6 +54,11 @@ export default function Home() {
     setLoadingMore(true)
     const res = await fetch(`/api/objects?continuationToken=${encodeURIComponent(nextToken)}`)
     const data = await res.json()
+    if (!res.ok) {
+      setStatus(`Failed to load more: ${data.error}`)
+      setLoadingMore(false)
+      return
+    }
     setObjects((prev) => [...prev, ...data.objects])
     setNextToken(data.nextContinuationToken)
     setLoadingMore(false)
@@ -82,9 +94,8 @@ export default function Home() {
     setTimeout(() => setCopiedKey((k) => (k === obj.key ? null : k)), 1200)
   }, [])
 
-  const filtered = search.trim()
-    ? objects.filter((o) => o.key.toLowerCase().includes(search.trim().toLowerCase()))
-    : objects
+  const term = search.trim().toLowerCase()
+  const filtered = term ? objects.filter((o) => o.key.toLowerCase().includes(term)) : objects
 
   return (
     <main className="mx-auto max-w-5xl p-6">
