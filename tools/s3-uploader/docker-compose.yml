@@ -1,0 +1,36 @@
+services:
+  minio:
+    image: minio/minio:latest
+    ports:
+      - '9000:9000' # S3 API
+      - '9001:9001' # Web console
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin123
+    command: server /data --console-address ":9001"
+    volumes:
+      - minio-data:/data
+    healthcheck:
+      test: ['CMD', 'mc', 'ready', 'local']
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # One-shot: creates the bucket and makes it publicly readable, matching
+  # the real S3 bucket's public-read ACL (@strapi/provider-upload-aws-s3
+  # already uses public-read today) — so URLs from this tool work the same
+  # way against MinIO as they do against the real bucket.
+  createbuckets:
+    image: minio/mc:latest
+    depends_on:
+      minio:
+        condition: service_healthy
+    entrypoint: >
+      /bin/sh -c "
+      mc alias set local http://minio:9000 minioadmin minioadmin123 &&
+      mc mb --ignore-existing local/formester-uploads &&
+      mc anonymous set download local/formester-uploads
+      "
+
+volumes:
+  minio-data:

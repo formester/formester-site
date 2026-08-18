@@ -13,18 +13,26 @@ AWS credentials stay on this local server process — the browser only talks
 to `localhost`, never to S3 directly, so no bucket CORS configuration is
 needed.
 
-## Setup
+## Try it locally against MinIO (no real AWS bucket needed)
 
 ```bash
 cd tools/s3-uploader
+docker compose up -d       # starts MinIO + creates the "formester-uploads" bucket
 npm install
-cp .env.example .env
-# fill in S3_ACCESS_KEY_ID, S3_SECRET_ACCESS_KEY, S3_BUCKET, S3_REGION
+cp .env.example .env       # already prefilled to match the MinIO setup above
 npm start
 ```
 
-Open http://localhost:5757 (or whatever `PORT` you set).
+Open http://localhost:5757 — upload/browse against your local MinIO instance.
+The MinIO web console (bucket browser, object inspector) is at
+http://localhost:9001 (login: `minioadmin` / `minioadmin123`).
 
-See `.env.example` for optional settings: `S3_ENDPOINT` (non-AWS S3-compatible
-storage), `S3_PREFIX` (folder new uploads land in), `S3_SCOPE_PREFIX`
-(restrict browsing to one folder — useful if sharing a bucket with Strapi).
+## Use with the real S3 bucket
+
+Same steps, minus `docker compose up`: `cp .env.example .env`, then replace
+`S3_ACCESS_KEY_ID` / `S3_SECRET_ACCESS_KEY` / `S3_BUCKET` / `S3_REGION` with
+the real bucket's values and delete the `S3_ENDPOINT` line (only needed for
+non-AWS/local S3-compatible endpoints like MinIO).
+
+See `.env.example` for `S3_PREFIX` — scopes both browsing and new uploads to
+one folder, useful if sharing a bucket with Strapi.
