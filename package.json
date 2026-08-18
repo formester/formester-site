@@ -7,7 +7,7 @@
     "node": ">=18.20.0"
   },
   "scripts": {
-    "dev": "nuxt dev",
+    "dev": "STUDIO_ENABLED=true nuxt dev",
     "build": "nuxt build",
     "start": "nuxt preview",
     "generate": "nuxt generate",
@@ -21,11 +21,9 @@
     "@lucide/vue": "^1.23.0",
     "@nuxt/content": "^3.7.1",
     "@nuxt/image": "^1.8.1",
-    "@nuxthub/core": "^0.10.8",
     "@nuxtjs/robots": "^6.1.5",
     "@nuxtjs/sitemap": "^8.3.4",
     "@vite-pwa/nuxt": "^0.10.5",
-    "aws4fetch": "^1.0.20",
     "axios": "^1.13.2",
     "better-sqlite3": "^12.11.1",
     "bootstrap": "^5.3.3",
@@ -34,7 +32,6 @@
     "nuxt-jsonld": "^2.2.1",
     "nuxt-schema-org": "^6.2.9",
     "nuxt-site-config": "^4.2.3",
-    "nuxt-studio": "^1.7.0",
     "reading-time": "^1.5.0",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.1.14",
