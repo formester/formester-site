@@ -7,13 +7,14 @@
     "node": ">=18.20.0"
   },
   "scripts": {
-    "dev": "STUDIO_ENABLED=true nuxt dev",
+    "dev": "nuxt dev",
     "build": "nuxt build",
     "start": "nuxt preview",
     "generate": "nuxt generate",
     "postinstall": "nuxt prepare",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "s3-uploader": "npm --prefix tools/s3-uploader start"
   },
   "dependencies": {
     "@builder.io/partytown": "^0.10.3",
