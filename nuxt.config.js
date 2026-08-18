@@ -2,6 +2,14 @@
 import { getFeatureRoutes, getPageRoutes } from './utils/getRoutes.js'
 import { STRAPI_URL, APP_URL } from './constants/urls'
 
+// Nuxt Studio (visual/form editor for content/*.json) is a LOCAL-ONLY,
+// opt-in dev tool — never enabled in the production static build. Set
+// STUDIO_ENABLED=true in your local .env to turn it on for `nuxt dev`.
+// Do NOT set this in Amplify/Netlify/CI env vars: @nuxthub/core (which
+// backs Studio's S3 media picker) is incompatible with `nuxt generate`
+// and will hard-fail the static build if enabled there.
+const studioEnabled = process.env.STUDIO_ENABLED === 'true'
+
 export default defineNuxtConfig({
   // Global page headers
   app: {
@@ -82,8 +90,35 @@ export default defineNuxtConfig({
     'nuxt-gtag',
     '@vite-pwa/nuxt',
     '@nuxt/image',
-    'nuxt-jsonld'
+    'nuxt-jsonld',
+    // @nuxthub/core + nuxt-studio: local-only editing tools, gated behind
+    // studioEnabled (see comment above). Never loaded for the production
+    // static build. @nuxthub/core must load before nuxt-studio — it
+    // provides the blob storage binding Studio's external-media mode
+    // writes uploads through.
+    ...(studioEnabled ? ['@nuxthub/core', 'nuxt-studio'] : [])
   ],
+
+  // NuxtHub blob storage — backs Studio's media picker so uploads go
+  // straight to S3 instead of the repo's /public dir. Same S3 bucket
+  // pattern the CMS already uses today (@strapi/provider-upload-aws-s3),
+  // just a different upload path into it. Requires S3_* env vars — see
+  // .env.example. Only meaningful when studioEnabled (module not loaded
+  // otherwise).
+  ...(studioEnabled && {
+    hub: {
+      blob: true
+    },
+
+    // Nuxt Studio — self-hosted visual/form editor for content/*.json,
+    // reading the schemas in content.config.ts to render real per-field
+    // forms (see plans/session-handoff.md for the full research notes).
+    studio: {
+      media: {
+        external: true
+      }
+    }
+  }),
 
   // GTM/Gtag configuration
   gtag: {
