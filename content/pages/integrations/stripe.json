@@ -1,0 +1,435 @@
+{
+  "slug": "integrations/stripe",
+  "head": {
+    "title": "Stripe Payment Forms — Stripe Integration | Formester",
+    "link": [
+      {
+        "hid": "canonical",
+        "rel": "canonical",
+        "href": "https://formester.com/integrations/stripe/"
+      }
+    ],
+    "meta": [
+      {
+        "property": "article:modified_time",
+        "content": "2026-06-14T15:17:12.576Z"
+      },
+      {
+        "hid": "description",
+        "name": "description",
+        "content": "Collect secure Stripe payments inside your forms. Dynamic totals, multiple currencies, customizable checkout — set up in minutes with Formester."
+      },
+      {
+        "hid": "og:site_name",
+        "name": "og:site_name",
+        "content": "Stripe Payment Forms — Stripe Integration | Formester"
+      },
+      {
+        "hid": "og:type",
+        "property": "og:type",
+        "content": "website"
+      },
+      {
+        "hid": "og:url",
+        "property": "og:url",
+        "content": "https://formester.com/integrations/stripe/"
+      },
+      {
+        "hid": "og:title",
+        "property": "og:title",
+        "content": "Stripe Payment Forms — Stripe Integration | Formester"
+      },
+      {
+        "hid": "og:description",
+        "property": "og:description",
+        "content": "Collect secure Stripe payments inside your forms. Dynamic totals, multiple currencies, customizable checkout — set up in minutes with Formester."
+      },
+      {
+        "hid": "og:image",
+        "property": "og:image",
+        "content": "https://formester.com/formester-logo-meta-image.png"
+      },
+      {
+        "hid": "og:image:alt",
+        "name": "og:image:alt",
+        "content": "Formester Stripe integration"
+      },
+      {
+        "hid": "twitter:url",
+        "name": "twitter:url",
+        "content": "https://formester.com/integrations/stripe/"
+      },
+      {
+        "name": "twitter:site",
+        "content": "@_formester_"
+      },
+      {
+        "hid": "twitter:title",
+        "name": "twitter:title",
+        "content": "Stripe Payment Forms — Stripe Integration | Formester"
+      },
+      {
+        "hid": "twitter:description",
+        "name": "twitter:description",
+        "content": "Collect secure Stripe payments inside your forms. Dynamic totals, multiple currencies, customizable checkout — set up in minutes with Formester."
+      },
+      {
+        "hid": "twitter:image",
+        "name": "twitter:image",
+        "content": "https://formester.com/formester-logo-meta-image.png"
+      },
+      {
+        "hid": "twitter:image:alt",
+        "name": "twitter:image:alt",
+        "content": "Formester Stripe integration"
+      },
+      {
+        "hid": "twitter:card",
+        "name": "twitter:card",
+        "content": "summary_large_image"
+      },
+      {
+        "hid": "apple-mobile-web-app-title",
+        "name": "apple-mobile-web-app-title",
+        "content": "Formester"
+      },
+      {
+        "hid": "image",
+        "name": "image",
+        "property": "og:image",
+        "content": "https://formester.com/formester-logo-meta-image.png"
+      },
+      {
+        "hid": "keywords",
+        "name": "keywords",
+        "content": [
+          "stripe form integration",
+          "payment forms stripe",
+          "collect payments online form",
+          "formester stripe"
+        ]
+      }
+    ]
+  },
+  "jsonld": [
+    {
+      "@context": "https://schema.org",
+      "type": "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"What does the Stripe integration do?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"It adds a secure Stripe payment step to your form, so you can collect payments for products, services, donations, or registrations as part of the submission.\"}}, {\"@type\": \"Question\", \"name\": \"How do I add Stripe payments to a form?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Add Stripe from Integrations → Payment and log in to connect. Then add a calculation field for your total, drop in the Stripe payment element linked with @, pick a currency, and publish.\"}}, {\"@type\": \"Question\", \"name\": \"Can the amount change based on answers?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes — link the payment amount to a calculation field and it updates dynamically with quantities, selected items, or options.\"}}, {\"@type\": \"Question\", \"name\": \"Which currencies are supported?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"You can charge in USD, CAD, EUR, and other major currencies, selected per payment field.\"}}, {\"@type\": \"Question\", \"name\": \"How do I test before going live?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Use Stripe's test mode to run sample transactions and verify your calculation logic with different item combinations before enabling live payments.\"}}, {\"@type\": \"Question\", \"name\": \"What is Formester?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Formester is an online form builder for creating forms, surveys, and quizzes with a drag-and-drop editor or AI. It connects with the tools your team already uses — Google Sheets, Slack, HubSpot, Zapier, and more — so your form data flows wherever you need it.\"}}]}"
+    },
+    {
+      "@context": "https://schema.org",
+      "type": "{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://formester.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Integrations\", \"item\": \"https://formester.com/integrations/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"name\": \"Stripe\", \"item\": \"https://formester.com/integrations/stripe/\"}]}"
+    }
+  ],
+  "components": [
+    {
+      "id": 180,
+      "__component": "macro-components.hero-v2",
+      "description": "Sell products, take bookings, and collect donations right inside your form. Stripe processes the payment securely; you just publish the form.",
+      "trustText": "✓ Secure Stripe checkout · ✓ Dynamic totals with calculations · ✓ Multiple currencies",
+      "blobColorA": "#f5eeff",
+      "blobColorB": "#f1ebff",
+      "blobColorC": "#f4efff",
+      "mockupHtml": "<div class='raw-html-embed'><style>.iw{font-family:'Inter',ui-sans-serif,system-ui,sans-serif;position:relative;max-width:480px;margin:0 auto;padding-top:10px;} .iw *{box-sizing:border-box;} .iw__pair{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:18px;} .iw__logo{width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #eaecf0;box-shadow:0 2px 8px rgba(15,14,26,.06);flex-shrink:0;} .iw__logo img{width:30px;height:30px;object-fit:contain;} .iw__flow{display:flex;align-items:center;gap:5px;} .iw__dot{width:6px;height:6px;border-radius:50%;background:#9777e0;opacity:.35;animation:iwd 1.6s linear infinite;} .iw__dot:nth-child(2){animation-delay:.2s}.iw__dot:nth-child(3){animation-delay:.4s} @keyframes iwd{0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}} .iw__win{background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 18px 50px rgba(15,14,26,.12);overflow:hidden;} .iw__bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#f9fafb;border-bottom:1px solid #eaecf0;} .iw__cdot{width:10px;height:10px;border-radius:50%;flex-shrink:0;} .iw__title{font-size:11px;color:#697586;margin-left:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;} @keyframes iwnew{0%,10%{opacity:0;transform:translateY(-6px)}18%,88%{opacity:1;transform:translateY(0)}97%,100%{opacity:0}} @media(max-width:600px){.iw__toast{right:-4px !important;bottom:-30px !important;}} .iw__toast{position:absolute;bottom:-28px;right:-36px;display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #eaecf0;border-radius:12px;box-shadow:0 8px 24px rgba(15,14,26,.14);padding:9px 13px;font-size:12px;font-weight:600;color:#101828;animation:iwnew 5s ease-in-out infinite;} .iw__toast small{display:block;font-size:10px;font-weight:500;color:#697586;} .iw__tick{width:22px;height:22px;border-radius:7px;background:#11c15b;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;} .iw__anim{animation:iwnew 5s ease-in-out infinite;}</style><div class='iw'><div class='iw__pair'><span class='iw__logo'><img src='/formester-icon.svg' alt='Formester'/></span><span class='iw__flow'><span class='iw__dot'></span><span class='iw__dot'></span><span class='iw__dot'></span></span><span class='iw__logo'><img src='/integrations/stripe.svg' alt=''/></span></div><div class='iw__win'><div class='iw__bar'><span class='iw__cdot' style='background:#ff6058'></span><span class='iw__cdot' style='background:#ffbd2e'></span><span class='iw__cdot' style='background:#27c93f'></span><span class='iw__title'>Checkout · Stripe</span></div><div style='padding:14px;text-align:center;'><div class='iw__anim' style='display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:#ecfdf3;margin-bottom:8px;'><svg width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='#11c15b' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'><path d='M5 12l4 4L19 6'/></svg></div><div style='font-size:13px;font-weight:700;color:#101828;'>Payment successful</div><div style='font-size:20px;font-weight:700;color:#101828;margin:4px 0 8px;'>$49.00</div><div style='border-top:1px solid #f2f4f7;'><div style='display:flex;justify-content:space-between;gap:10px;padding:8px 14px;border-bottom:1px solid #f2f4f7;font-size:11px;'><span style='color:#697586;'>Item</span><span style='color:#101828;font-weight:500;text-align:right;'>VIP Ticket × 1</span></div><div style='display:flex;justify-content:space-between;gap:10px;padding:8px 14px;border-bottom:1px solid #f2f4f7;font-size:11px;'><span style='color:#697586;'>Method</span><span style='color:#101828;font-weight:500;text-align:right;'>Card •••• 4242 · Stripe</span></div></div></div></div><div class='iw__toast'><span class='iw__tick'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'><path d='M5 12l4 4L19 6'/></svg></span><span>Payment captured<small>just now · $49.00</small></span></div></div></div>",
+      "layout": "split",
+      "title": [
+        {
+          "id": 5247,
+          "text": "Collect payments in your forms with ",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        },
+        {
+          "id": 5248,
+          "text": "Stripe",
+          "highlight": true,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": 1842,
+          "link": "https://help.formester.com/en/article/stripe-1nl4445/",
+          "text": "Read the setup guide",
+          "type": "Primary",
+          "showArrow": true
+        },
+        {
+          "id": 1843,
+          "link": "https://app.formester.com/users/sign_up",
+          "text": "Start free",
+          "type": "Secondary",
+          "showArrow": false
+        }
+      ],
+      "badge": {
+        "id": 180,
+        "text": "Stripe",
+        "tag": "Integrations",
+        "link": "/integrations/"
+      },
+      "tabCardContent": [],
+      "image": null
+    },
+    {
+      "id": 624,
+      "__component": "macro-components.trust-seals",
+      "label": "Trusted by 56k+ teams worldwide",
+      "heading": null,
+      "description": null,
+      "showTrustBadges": false,
+      "rawHtml": null,
+      "title": [],
+      "logos": []
+    },
+    {
+      "id": 246,
+      "__component": "macro-components.card-grid",
+      "eyebrow": "Why connect them",
+      "description": "No checkout page to build — the payment happens inside the form.",
+      "columns": "2",
+      "background": null,
+      "title": [
+        {
+          "id": 5245,
+          "text": "From form to ",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        },
+        {
+          "id": 5243,
+          "text": "paid order",
+          "highlight": true,
+          "color": "#475467",
+          "bold": false
+        },
+        {
+          "id": 5242,
+          "text": " in one step",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "cards": [
+        {
+          "id": 916,
+          "tag": "Revenue",
+          "tagColor": "violet",
+          "title": "Sell directly in forms",
+          "body": "Order forms, registrations, and donation forms collect payment as part of submission — no redirect to a separate store.",
+          "mockHtml": null,
+          "icon": null
+        },
+        {
+          "id": 915,
+          "tag": "Flexibility",
+          "tagColor": "blue",
+          "title": "Dynamic totals",
+          "body": "Pair the payment field with calculation fields so the amount updates with quantities, options, and add-ons.",
+          "mockHtml": null,
+          "icon": null
+        },
+        {
+          "id": 918,
+          "tag": "Currencies",
+          "tagColor": "green",
+          "title": "USD, EUR, CAD and more",
+          "body": "Charge in the currency your customers expect, with a customizable payment button.",
+          "mockHtml": null,
+          "icon": null
+        },
+        {
+          "id": 917,
+          "tag": "Security",
+          "tagColor": "amber",
+          "title": "Stripe-grade security",
+          "body": "Card details go straight to Stripe's PCI-compliant gateway — they never touch your form data.",
+          "mockHtml": null,
+          "icon": null
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "__component": "macro-components.sticky-steps-section",
+      "badge": "How it works",
+      "heading": "Set up Stripe payments in 3 steps",
+      "description": "Add the integration, log in, drop in the payment field, and start charging.",
+      "background": "#f9fafb",
+      "steps": [
+        {
+          "id": 344,
+          "title": "Add Stripe from the Payment tab",
+          "description": "From your dashboard, open Integrations → Payment, find Stripe, and click Add integration.",
+          "rawHtml": "<div class='raw-html-embed'><div style='font-family:Inter,ui-sans-serif,system-ui,sans-serif;max-width:320px;'><div style='display:flex;gap:14px;font-size:10px;color:#697586;padding:0 4px 7px;'><span>Email</span><span style='color:#6434d0;font-weight:700;border-bottom:2px solid #6434d0;padding-bottom:5px;'>Payment</span><span>CRM</span></div><div style='border:1px solid #eaecf0;border-radius:10px;background:#fff;box-shadow:0 4px 14px rgba(15,14,26,.06);overflow:hidden;'><div style='display:flex;align-items:center;gap:8px;padding:11px 13px 4px;'><img src='/integrations/stripe.svg' alt='' style='width:20px;height:20px;object-fit:contain;'/><span style='font-size:12.5px;font-weight:700;color:#101828;'>Stripe</span></div><div style='padding:0 13px 10px;font-size:10.5px;color:#697586;line-height:1.45;'>Securely accept card payments with Stripe's reliable and scalable payment platform.</div><div style='display:flex;justify-content:flex-end;border-top:1px solid #f2f4f7;padding:9px 13px;font-size:10.5px;'><span style='color:#6434d0;font-weight:700;'>+ Add integration</span></div></div></div></div>",
+          "image": null
+        },
+        {
+          "id": 343,
+          "title": "Connect by logging in",
+          "description": "Log in with your Stripe account to link it — make sure the account is verified so payouts work.",
+          "rawHtml": "<div class='raw-html-embed'><div style='font-family:Inter,ui-sans-serif,system-ui,sans-serif;max-width:320px;'><div style='border:1px solid #eaecf0;border-radius:10px;background:#fff;box-shadow:0 4px 14px rgba(15,14,26,.06);padding:12px 14px;'><div style='display:flex;align-items:center;gap:8px;'><img src='/integrations/stripe.svg' alt='' style='width:20px;height:20px;object-fit:contain;'/><span style='font-size:12.5px;font-weight:700;color:#101828;'>Stripe</span><span style='margin-left:auto;font-size:9.5px;font-weight:700;color:#11c15b;border:1px solid #a6f4c5;border-radius:999px;padding:3px 10px;line-height:1;'>Success</span></div><div style='font-size:10px;color:#697586;margin-top:8px;'>Account Email: <b style='color:#101828;'>you@yourcompany.com</b></div></div></div></div>",
+          "image": null
+        },
+        {
+          "id": 342,
+          "title": "Add the payment field, publish, and test",
+          "description": "Add a calculation field for the total, drop in the Stripe payment element referencing it with @, then run a test-mode transaction before going live.",
+          "rawHtml": "<div class='raw-html-embed'><div style='font-family:Inter,ui-sans-serif,system-ui,sans-serif;max-width:320px;'><div style='border:1px solid #eaecf0;border-radius:10px;background:#fff;box-shadow:0 4px 14px rgba(15,14,26,.06);padding:13px;'><div style='font-size:11px;font-weight:700;color:#101828;'>Stripe payment field</div><div style='font-size:10.5px;font-weight:700;color:#101828;margin:8px 0 4px;'>Amount</div><div style='border:1px solid #eaecf0;border-radius:8px;padding:8px 11px;font-size:10px;color:#98a2b3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;'>@order_total</div><div style='font-size:10.5px;font-weight:700;color:#101828;margin:8px 0 4px;'>Currency</div><div style='border:1px solid #eaecf0;border-radius:8px;padding:8px 11px;font-size:10.5px;color:#101828;display:flex;justify-content:space-between;align-items:center;'>USD<span style='font-size:8px;color:#697586;'>&#9662;</span></div><div style='font-size:10.5px;font-weight:700;color:#101828;margin:8px 0 4px;'>Button text</div><div style='border:1px solid #eaecf0;border-radius:8px;padding:8px 11px;font-size:10px;color:#98a2b3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;'>Pay now</div><div style='margin-top:11px;'><span style='font-size:10.5px;font-weight:700;color:#fff;background:#6434d0;border-radius:7px;padding:7px 16px;line-height:1;'>Save</span></div></div></div></div>",
+          "image": null
+        }
+      ],
+      "buttons": []
+    },
+    {
+      "id": 10,
+      "__component": "macro-components.testimonial-wall",
+      "description": "Real reviews from G2, Trustpilot, Product Hunt, and Capterra.",
+      "showG2": true,
+      "showTrustpilot": true,
+      "showProductHunt": true,
+      "showCapterra": true,
+      "title": [
+        {
+          "id": 5244,
+          "text": "What teams say about Formester",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "pickedReviews": [],
+      "excludedReviews": []
+    },
+    {
+      "id": 79,
+      "__component": "macro-components.integrations-grid",
+      "title": "Explore more integrations",
+      "integrations": [
+        {
+          "id": 300,
+          "name": "PayPal",
+          "description": "Accept PayPal payments directly through your forms.",
+          "link": "/integrations/paypal/"
+        },
+        {
+          "id": 301,
+          "name": "Authorize.net",
+          "description": "Accept card payments via Authorize.net's hosted checkout.",
+          "link": "/integrations/authorize-net/"
+        },
+        {
+          "id": 302,
+          "name": "Google Sheets",
+          "description": "Sync every form submission to Google Sheets in real time.",
+          "link": "/integrations/google-sheets/"
+        },
+        {
+          "id": 304,
+          "name": "HubSpot CRM",
+          "description": "Push new form leads to HubSpot CRM instantly.",
+          "link": "/integrations/hubspot-crm/"
+        },
+        {
+          "id": 303,
+          "name": "Zapier",
+          "description": "Connect your forms to 8,000+ apps using Zapier.",
+          "link": "/integrations/zapier/"
+        },
+        {
+          "id": 305,
+          "name": "Slack",
+          "description": "Get instant Slack alerts when a new form is submitted.",
+          "link": "/integrations/slack/"
+        }
+      ]
+    },
+    {
+      "id": 1343,
+      "__component": "macro-components.faqs",
+      "description": null,
+      "centered": true,
+      "title": [
+        {
+          "id": 5246,
+          "text": "Stripe integration FAQs",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "faqList": [
+        {
+          "id": 2817,
+          "header": "What does the Stripe integration do?",
+          "body": "It adds a secure Stripe payment step to your form, so you can collect payments for products, services, donations, or registrations as part of the submission.",
+          "body_markdown": "",
+          "list": []
+        },
+        {
+          "id": 2814,
+          "header": "How do I add Stripe payments to a form?",
+          "body": "Add Stripe from Integrations → Payment and log in to connect. Then add a calculation field for your total, drop in the Stripe payment element linked with @, pick a currency, and publish.",
+          "body_markdown": "",
+          "list": []
+        },
+        {
+          "id": 2813,
+          "header": "Can the amount change based on answers?",
+          "body": "Yes — link the payment amount to a calculation field and it updates dynamically with quantities, selected items, or options.",
+          "body_markdown": "",
+          "list": []
+        },
+        {
+          "id": 2815,
+          "header": "Which currencies are supported?",
+          "body": "You can charge in USD, CAD, EUR, and other major currencies, selected per payment field.",
+          "body_markdown": "",
+          "list": []
+        },
+        {
+          "id": 2816,
+          "header": "How do I test before going live?",
+          "body": "Use Stripe's test mode to run sample transactions and verify your calculation logic with different item combinations before enabling live payments.",
+          "body_markdown": "",
+          "list": []
+        },
+        {
+          "id": 2818,
+          "header": "What is Formester?",
+          "body": "Formester is an online form builder for creating forms, surveys, and quizzes with a drag-and-drop editor or AI. It connects with the tools your team already uses — Google Sheets, Slack, HubSpot, Zapier, and more — so your form data flows wherever you need it.",
+          "body_markdown": "",
+          "list": []
+        }
+      ]
+    },
+    {
+      "id": 179,
+      "__component": "macro-components.cta-dark",
+      "badge": "Free to start",
+      "heading": "Start charging through your forms",
+      "description": "Connect Stripe and turn any form into a checkout — order forms, bookings, donations, and more.",
+      "trustText": null,
+      "buttons": [
+        {
+          "id": 1840,
+          "link": "https://app.formester.com/users/sign_up",
+          "text": "Start free",
+          "type": "Primary",
+          "showArrow": true
+        },
+        {
+          "id": 1841,
+          "link": "/pricing/",
+          "text": "See pricing",
+          "type": "White",
+          "showArrow": false
+        }
+      ]
+    }
+  ]
+}

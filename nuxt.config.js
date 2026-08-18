@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import getRoutes, { getFeatureRoutes, getPageRoutes, getTemplateRoutes } from './utils/getRoutes.js'
+import { getFeatureRoutes, getPageRoutes } from './utils/getRoutes.js'
 import { STRAPI_URL, APP_URL } from './constants/urls'
 
 export default defineNuxtConfig({
@@ -77,8 +77,8 @@ export default defineNuxtConfig({
   // Modules
   modules: [
     '@nuxtjs/robots',
-    '@nuxt/content',
     '@nuxtjs/sitemap',
+    '@nuxt/content',
     'nuxt-gtag',
     '@vite-pwa/nuxt',
     '@nuxt/image',
@@ -117,30 +117,22 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: ['/', '/sitemap.xml'],
-      ignore: ['/api'],
+      ignore: ['/api', '/blog', '/templates', '/comparison-tool'],
       concurrency: 15, // Increased: pages now render from in-memory cache
       interval: 10, // Reduced: minimal API I/O with batch caching
       failOnError: false
     },
     hooks: {
       async 'prerender:routes'(routes) {
-        const blogs = await getRoutes()
+        // Blog and templates are skipped for now — still Strapi-backed,
+        // migrated in a later phase (see plans/nuxt-content-migration.md).
         const features = await getFeatureRoutes()
         const pages = await getPageRoutes()
-        const templates = await getTemplateRoutes()
 
-        // Extract URLs from the objects returned by route functions
-        const blogUrls = blogs.map(item => item.url)
         const featureUrls = features.map(item => item.url)
         const pageUrls = pages.map(item => item.url)
-        const templateUrls = templates.map(item => item.url)
 
-        const allRoutes = [
-          ...pageUrls,
-          ...featureUrls,
-          ...blogUrls,
-          ...templateUrls,
-        ].filter(Boolean)
+        const allRoutes = [...pageUrls, ...featureUrls].filter(Boolean)
 
         for (const route of allRoutes) {
           routes.add(route)
@@ -148,10 +140,6 @@ export default defineNuxtConfig({
       }
     }
   },
-  content: {
-    // Nuxt Content v2 configuration
-  },
-
   // Nuxt Image
   image: {
     provider: 'none',  // Serve images directly from public/

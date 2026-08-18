@@ -1,0 +1,778 @@
+{
+  "slug": "custom-css-forms",
+  "navTitle": "Custom CSS",
+  "navDescription": "Take full control over form design.",
+  "featureCategory": "White label forms",
+  "featurePlan": "Business",
+  "head": {
+    "title": "Custom CSS Forms | Full Control Over Form Design",
+    "link": [
+      {
+        "hid": "canonical",
+        "rel": "canonical",
+        "href": "https://formester.com/features/custom-css-forms/"
+      }
+    ],
+    "meta": [
+      {
+        "property": "article:modified_time",
+        "content": "2026-06-15T10:45:43.176Z"
+      },
+      {
+        "hid": "description",
+        "name": "description",
+        "content": "Style every form with custom CSS — brand colors, fonts, spacing, button shapes, and animations. Target the whole form or a single field, with no plugins and a live mobile preview."
+      },
+      {
+        "hid": "og:site_name",
+        "name": "og:site_name",
+        "content": "Custom CSS Forms | Full Control Over Form Design"
+      },
+      {
+        "hid": "og:type",
+        "property": "og:type",
+        "content": "website"
+      },
+      {
+        "hid": "og:url",
+        "property": "og:url",
+        "content": "https://formester.com/features/custom-css-forms/"
+      },
+      {
+        "hid": "og:title",
+        "property": "og:title",
+        "content": "Custom CSS Forms | Full Control Over Form Design"
+      },
+      {
+        "hid": "og:description",
+        "property": "og:description",
+        "content": "Style every form with custom CSS — brand colors, fonts, spacing, button shapes, and animations. Target the whole form or a single field, with no plugins and a live mobile preview."
+      },
+      {
+        "hid": "og:image",
+        "property": "og:image",
+        "content": "https://formester.com/formester-logo-meta-image.png"
+      },
+      {
+        "hid": "og:image:alt",
+        "name": "og:image:alt",
+        "content": "Formester Logo"
+      },
+      {
+        "hid": "twitter:url",
+        "name": "twitter:url",
+        "content": "https://formester.com/features/custom-css-forms/"
+      },
+      {
+        "name": "twitter:site",
+        "content": "@_formester_"
+      },
+      {
+        "hid": "twitter:title",
+        "name": "twitter:title",
+        "content": "Custom CSS Forms | Full Control Over Form Design"
+      },
+      {
+        "hid": "twitter:description",
+        "name": "twitter:description",
+        "content": "Style every form with custom CSS — brand colors, fonts, spacing, button shapes, and animations. Target the whole form or a single field, with no plugins and a live mobile preview."
+      },
+      {
+        "hid": "twitter:image",
+        "name": "twitter:image",
+        "content": "https://formester.com/formester-logo-meta-image.png"
+      },
+      {
+        "hid": "twitter:image:alt",
+        "name": "twitter:image:alt",
+        "content": "Formester Logo"
+      },
+      {
+        "hid": "twitter:card",
+        "name": "twitter:card",
+        "content": "summary_large_image"
+      },
+      {
+        "hid": "apple-mobile-web-app-title",
+        "name": "apple-mobile-web-app-title",
+        "content": "Formester"
+      },
+      {
+        "hid": "image",
+        "name": "image",
+        "property": "og:image",
+        "content": "https://formester.com/formester-logo-meta-image.png"
+      },
+      {
+        "hid": "keywords",
+        "name": "keywords",
+        "content": [
+          "custom css forms"
+        ]
+      }
+    ]
+  },
+  "jsonld": [
+    {
+      "@context": "https://schema.org",
+      "url": "https://formester.com",
+      "logo": "https://formester.com/logo.svg",
+      "name": "Formester",
+      "@type": "Organization"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "name": "Do I need coding skills to use custom CSS in Formester?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Not necessarily, but you will need to write or paste CSS to restyle your form. You can generate ready-to-use CSS with a tool like ChatGPT and apply it through Formester's CSS Selector Mode.",
+            "@type": "Answer"
+          }
+        },
+        {
+          "name": "Will my custom CSS work on all devices?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Yes. Every style change is responsive by default, and you can preview how the form looks on desktop, tablet, and mobile before you publish.",
+            "@type": "Answer"
+          }
+        },
+        {
+          "name": "Can I undo or reset CSS changes if something goes wrong?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Absolutely. You can revert to the default styles at any time with a single click, or save multiple CSS versions so rolling back is easy.",
+            "@type": "Answer"
+          }
+        },
+        {
+          "name": "Can I use custom animations or transitions?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Yes. Add your own CSS animation rules for hover effects, fade-ins, and movement to give your form a modern, dynamic feel.",
+            "@type": "Answer"
+          }
+        },
+        {
+          "name": "Can I apply my company's branding across all my forms?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Yes. Pair custom CSS with Formester's Branding Kit to keep brand colors, typography, and button styles consistent across every form.",
+            "@type": "Answer"
+          }
+        },
+        {
+          "name": "Will custom CSS slow down my forms?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "No. Formester loads CSS efficiently, so your forms stay fast and responsive even with advanced styling.",
+            "@type": "Answer"
+          }
+        },
+        {
+          "name": "Can multiple team members edit the same form's CSS?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Yes. If your plan includes collaboration, teammates can edit and review CSS together in the builder without overwriting each other's work.",
+            "@type": "Answer"
+          }
+        },
+        {
+          "name": "What happens when I embed a styled form on my website?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Your styling stays intact. Embedded forms keep all of their design, spacing, and animation settings exactly as you saw them in preview.",
+            "@type": "Answer"
+          }
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": 76,
+      "__component": "macro-components.hero-v2",
+      "description": "Style any form with your own CSS — brand colors, fonts, spacing, button shapes, and smooth animations. Target the whole form or a single field, with no plugins and a responsive preview built in.",
+      "trustText": null,
+      "blobColorA": "#f5eeff",
+      "blobColorB": "#f1ebff",
+      "blobColorC": "#f4efff",
+      "mockupHtml": "<style>.cf-l0{animation:cf-l0 12s linear infinite;}.cf-l1{animation:cf-l1 12s linear infinite;}.cf-l2{animation:cf-l2 12s linear infinite;}.cf-l3{animation:cf-l3 12s linear infinite;}.cf-l4{animation:cf-l4 12s linear infinite;}.cf-l5{animation:cf-l5 12s linear infinite;}.cf-l6{animation:cf-l6 12s linear infinite;}.cf-l7{animation:cf-l7 12s linear infinite;}.cf-l8{animation:cf-l8 12s linear infinite;}.cf-l9{animation:cf-l9 12s linear infinite;}.ccf-form{animation:cf-font 12s ease-in-out infinite;}.ccf-inp{animation:cf-inp 12s ease-in-out infinite;}.ccf-cta{animation:cf-bg 12s ease-in-out infinite,cf-rad 12s ease-in-out infinite;}@keyframes cf-l0{0%,3%{width:0}7%,93%{width:11ch}96%,100%{width:0}}@keyframes cf-l1{0%,9%{width:0}13%,93%{width:20ch}96%,100%{width:0}}@keyframes cf-l2{0%,15%{width:0}19%,93%{width:2ch}96%,100%{width:0}}@keyframes cf-l3{0%,21%{width:0}25%,93%{width:12ch}96%,100%{width:0}}@keyframes cf-l4{0%,27%{width:0}31%,93%{width:21ch}96%,100%{width:0}}@keyframes cf-l5{0%,33%{width:0}37%,93%{width:2ch}96%,100%{width:0}}@keyframes cf-l6{0%,39%{width:0}43%,93%{width:13ch}96%,100%{width:0}}@keyframes cf-l7{0%,45%{width:0}49%,93%{width:21ch}96%,100%{width:0}}@keyframes cf-l8{0%,51%{width:0}55%,93%{width:22ch}96%,100%{width:0}}@keyframes cf-l9{0%,57%{width:0}61%,93%{width:2ch}96%,100%{width:0}}@keyframes cf-font{0%,13%{font-family:ui-sans-serif,system-ui,-apple-system,sans-serif}15%,93%{font-family:Georgia,'Times New Roman',serif}96%,100%{font-family:ui-sans-serif,system-ui,-apple-system,sans-serif}}@keyframes cf-inp{0%,31%{border-radius:3px;border-color:#dfe3e8}33%,93%{border-radius:11px;border-color:#d8cdf2}96%,100%{border-radius:3px;border-color:#dfe3e8}}@keyframes cf-bg{0%,49%{background:#aab2bd}51%,93%{background:#6434d0}96%,100%{background:#aab2bd}}@keyframes cf-rad{0%,55%{border-radius:4px}57%,93%{border-radius:999px}96%,100%{border-radius:4px}}@media(prefers-reduced-motion:reduce){.cf-l0{width:auto!important;animation:none!important;}.cf-l1{width:auto!important;animation:none!important;}.cf-l2{width:auto!important;animation:none!important;}.cf-l3{width:auto!important;animation:none!important;}.cf-l4{width:auto!important;animation:none!important;}.cf-l5{width:auto!important;animation:none!important;}.cf-l6{width:auto!important;animation:none!important;}.cf-l7{width:auto!important;animation:none!important;}.cf-l8{width:auto!important;animation:none!important;}.cf-l9{width:auto!important;animation:none!important;}.ccf-form{animation:none!important;font-family:Georgia,'Times New Roman',serif!important;}.ccf-inp{animation:none!important;border-radius:11px!important;border-color:#d8cdf2!important;}.ccf-cta{animation:none!important;background:#6434d0!important;border-radius:999px!important;}}</style><div style='display:grid;grid-template-columns:1.1fr .9fr;gap:14px;align-items:center;max-width:560px;margin:0 auto;'><div style='background:#1d1933;border:1px solid #2d2747;border-radius:14px;box-shadow:0 24px 80px rgba(15,14,26,.28);overflow:hidden;'><div style='display:flex;align-items:center;gap:6px;padding:10px 13px;background:#171327;border-bottom:1px solid #2d2747;'><span style='width:10px;height:10px;border-radius:50%;background:#ff6058;'></span><span style='width:10px;height:10px;border-radius:50%;background:#ffbd2e;'></span><span style='width:10px;height:10px;border-radius:50%;background:#27c93f;'></span><span style='margin-left:8px;font-size:11px;color:#8b85a6;line-height:1.1;'>form.css</span></div><div style='padding:14px 15px;font-family:ui-monospace,Menlo,monospace;font-size:11px;line-height:1.7;color:#cbc6e0;min-height:170px;'><div style=''><span class='cf-l0' style='display:inline-block;overflow:hidden;white-space:pre;width:0;vertical-align:bottom;line-height:1.7;'><span style='color:#7c9cff;'>.fm-form</span> {</span></div><div style='padding-left:14px;'><span class='cf-l1' style='display:inline-block;overflow:hidden;white-space:pre;width:0;vertical-align:bottom;line-height:1.7;'><span style='color:#9ae6b4;'>font-family</span>: <span style='color:#ffd58a;'>serif</span>;</span></div><div style=''><span class='cf-l2' style='display:inline-block;overflow:hidden;white-space:pre;width:0;vertical-align:bottom;line-height:1.7;'>}</span></div><div style=''><span class='cf-l3' style='display:inline-block;overflow:hidden;white-space:pre;width:0;vertical-align:bottom;line-height:1.7;'><span style='color:#7c9cff;'>.fm-input</span> {</span></div><div style='padding-left:14px;'><span class='cf-l4' style='display:inline-block;overflow:hidden;white-space:pre;width:0;vertical-align:bottom;line-height:1.7;'><span style='color:#9ae6b4;'>border-radius</span>: <span style='color:#d6a4ff;'>11px</span>;</span></div><div style=''><span class='cf-l5' style='display:inline-block;overflow:hidden;white-space:pre;width:0;vertical-align:bottom;line-height:1.7;'>}</span></div><div style=''><span class='cf-l6' style='display:inline-block;overflow:hidden;white-space:pre;width:0;vertical-align:bottom;line-height:1.7;'><span style='color:#7c9cff;'>.fm-button</span> {</span></div><div style='padding-left:14px;'><span class='cf-l7' style='display:inline-block;overflow:hidden;white-space:pre;width:0;vertical-align:bottom;line-height:1.7;'><span style='color:#9ae6b4;'>background</span>: <span style='color:#d6a4ff;'>#6434d0</span>;</span></div><div style='padding-left:14px;'><span class='cf-l8' style='display:inline-block;overflow:hidden;white-space:pre;width:0;vertical-align:bottom;line-height:1.7;'><span style='color:#9ae6b4;'>border-radius</span>: <span style='color:#d6a4ff;'>999px</span>;</span></div><div style=''><span class='cf-l9' style='display:inline-block;overflow:hidden;white-space:pre;width:0;vertical-align:bottom;line-height:1.7;'>}</span></div></div></div><div class='ccf-form' style='background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 16px 48px rgba(15,14,26,.1);padding:16px;font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;'><div style='width:30px;height:30px;border-radius:8px;background:#6434d0;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:14px;line-height:1;margin-bottom:11px;'>F</div><div style='font-size:15px;font-weight:700;color:#101828;line-height:1.2;margin-bottom:12px;'>Get in touch</div><div style='font-size:9.5px;color:#697586;margin-bottom:3px;line-height:1.2;'>Name</div><div class='ccf-inp' style='border:1px solid #dfe3e8;border-radius:3px;padding:7px 9px;margin-bottom:10px;font-size:10.5px;color:#98a2b3;line-height:1.2;'>Jane Cooper</div><div style='font-size:9.5px;color:#697586;margin-bottom:3px;line-height:1.2;'>Email</div><div class='ccf-inp' style='border:1px solid #dfe3e8;border-radius:3px;padding:7px 9px;margin-bottom:14px;font-size:10.5px;color:#98a2b3;line-height:1.2;'>jane@acme.com</div><div class='ccf-cta' style='text-align:center;color:#fff;font-size:12px;font-weight:600;padding:9px 0;border-radius:4px;background:#aab2bd;line-height:1.2;'>Submit</div></div></div>",
+      "layout": "split",
+      "title": [
+        {
+          "id": 4672,
+          "text": "Take full control of ",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        },
+        {
+          "id": 4673,
+          "text": "how your forms look",
+          "highlight": true,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": 1523,
+          "link": "https://app.formester.com/users/sign_up",
+          "text": "Get Started",
+          "type": "Primary",
+          "showArrow": true
+        }
+      ],
+      "badge": {
+        "id": 77,
+        "text": "Custom CSS Forms",
+        "tag": "Business",
+        "link": null
+      },
+      "image": null,
+      "tabCardContent": []
+    },
+    {
+      "id": 513,
+      "__component": "macro-components.trust-seals",
+      "label": "Trusted by 56k+ teams worldwide",
+      "heading": null,
+      "description": null,
+      "showTrustBadges": true,
+      "rawHtml": null,
+      "title": [],
+      "logos": []
+    },
+    {
+      "id": 30,
+      "__component": "macro-components.alternating-rows",
+      "eyebrow": "What you can style",
+      "description": "From a single accent color to a full design system, custom CSS lets you control every part of the form.",
+      "background": null,
+      "title": [
+        {
+          "id": 4667,
+          "text": "Make every form ",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        },
+        {
+          "id": 4669,
+          "text": "unmistakably yours",
+          "highlight": true,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "rows": [
+        {
+          "id": 87,
+          "kicker": "Brand colors & logo",
+          "title": "Match your brand, down to the pixel",
+          "body": "Set your brand color, drop in your logo, and recolor backgrounds, borders, and headings so the form looks like it has always lived on your site.",
+          "mediaHtml": "<div style='background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 8px 24px rgba(15,14,26,.06);padding:18px;display:flex;flex-direction:column;gap:12px;'><div style='display:flex;align-items:center;gap:9px;'><span style='width:30px;height:30px;border-radius:8px;background:#6434d0;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:14px;line-height:1;'>F</span><span style='font-size:13px;font-weight:700;color:#101828;line-height:1.1;'>Acme Co.</span></div><div style='display:flex;gap:9px;'><span style='flex:1;height:34px;border-radius:8px;background:#6434d0;'></span><span style='flex:1;height:34px;border-radius:8px;background:#7c4ce0;'></span><span style='flex:1;height:34px;border-radius:8px;background:#b9a6ec;'></span><span style='flex:1;height:34px;border-radius:8px;background:#f0ebfa;border:1px solid #e9e4f5;'></span></div><div style='display:flex;align-items:center;gap:7px;font-size:11px;color:#697586;line-height:1.1;'><span style='font-family:ui-monospace,Menlo,monospace;color:#6434d0;background:#f0ebfa;border-radius:6px;padding:3px 8px;'>#6434d0</span><span>Brand palette applied</span></div></div>"
+        },
+        {
+          "id": 86,
+          "kicker": "Fonts & custom CSS",
+          "title": "Write the CSS, or paste it in",
+          "body": "Open the script editor and set fonts, spacing, and field styles. Write your own rules or paste ready-made CSS — even from a tool like ChatGPT — and apply it through CSS Selector Mode.",
+          "mediaHtml": "<div style='background:#1d1933;border:1px solid #2d2747;border-radius:14px;box-shadow:0 8px 24px rgba(15,14,26,.12);overflow:hidden;'><div style='display:flex;align-items:center;gap:6px;padding:9px 13px;background:#171327;border-bottom:1px solid #2d2747;'><span style='width:9px;height:9px;border-radius:50%;background:#ff6058;'></span><span style='width:9px;height:9px;border-radius:50%;background:#ffbd2e;'></span><span style='width:9px;height:9px;border-radius:50%;background:#27c93f;'></span><span style='margin-left:8px;font-size:11px;color:#8b85a6;line-height:1.1;'>Script editor</span></div><div style='padding:14px;font-family:ui-monospace,Menlo,monospace;font-size:11.5px;line-height:1.7;color:#cbc6e0;'><div><span style='color:#7c9cff;'>.fm-input</span> <span>{</span></div><div style='padding-left:14px;'><span style='color:#9ae6b4;'>border-radius</span>: <span style='color:#d6a4ff;'>12px</span>;</div><div style='padding-left:14px;'><span style='color:#9ae6b4;'>font-family</span>: <span style='color:#ffd58a;'>'Inter'</span>;</div><div style='padding-left:14px;'><span style='color:#9ae6b4;'>padding</span>: <span style='color:#d6a4ff;'>14px</span>;</div><div><span>}</span></div></div></div>"
+        },
+        {
+          "id": 88,
+          "kicker": "Full control",
+          "title": "Style any element in the form",
+          "body": "It's real CSS, so nothing is off-limits. Target buttons, inputs, labels, help text, error messages, and spacing — and their hover, focus, and validation states. If you can select it, you can style it.",
+          "mediaHtml": "<div style='background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 8px 24px rgba(15,14,26,.06);padding:18px;display:flex;flex-direction:column;gap:12px;'><div style='display:flex;align-items:center;gap:8px;'><span style='font-size:11px;font-weight:600;color:#101828;line-height:1.2;'>Email address</span><span style='font-size:9px;font-weight:700;color:#6434d0;background:#f0ebfa;border-radius:5px;padding:2px 6px;line-height:1.2;font-family:ui-monospace,Menlo,monospace;white-space:nowrap;'>.fm-label</span></div><div style='display:flex;align-items:center;gap:8px;'><span style='flex:1;border:1.5px dashed #b9a6ec;border-radius:8px;padding:8px 10px;background:#fbfaff;line-height:1.2;'>&nbsp;</span><span style='font-size:9px;font-weight:700;color:#6434d0;background:#f0ebfa;border-radius:5px;padding:2px 6px;line-height:1.2;font-family:ui-monospace,Menlo,monospace;white-space:nowrap;'>.fm-input</span></div><div style='display:flex;align-items:center;gap:8px;'><span style='font-size:10px;color:#d92d20;line-height:1.2;'>Please enter a valid email</span><span style='font-size:9px;font-weight:700;color:#6434d0;background:#f0ebfa;border-radius:5px;padding:2px 6px;line-height:1.2;font-family:ui-monospace,Menlo,monospace;white-space:nowrap;'>.fm-error</span></div><div style='display:flex;align-items:center;gap:8px;'><span style='background:#6434d0;color:#fff;font-size:11px;font-weight:600;border-radius:999px;padding:7px 16px;line-height:1.2;'>Submit</span><span style='font-size:9px;font-weight:700;color:#6434d0;background:#f0ebfa;border-radius:5px;padding:2px 6px;line-height:1.2;font-family:ui-monospace,Menlo,monospace;white-space:nowrap;'>.fm-button</span></div></div>"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "__component": "macro-components.callout-diagram",
+      "eyebrow": "Anatomy",
+      "description": "Custom CSS reaches each element on the form — so the logo, colors, type, and button all carry your brand.",
+      "background": null,
+      "mockHtml": "<div style='max-width:330px;margin:0 auto;background:#fff;border:1px solid #eaecf0;border-radius:16px;box-shadow:0 16px 48px rgba(15,14,26,.1);padding:22px;'><div style='display:flex;align-items:center;gap:9px;margin-bottom:16px;'><span style='width:32px;height:32px;border-radius:8px;background:#6434d0;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:15px;line-height:1;'>F</span><span style='font-size:14px;font-weight:700;color:#101828;line-height:1.1;'>Acme Co.</span></div><div style='font-size:15px;font-weight:700;color:#101828;line-height:1.2;margin-bottom:4px;'>Request a demo</div><div style='font-size:11px;color:#697586;line-height:1.3;margin-bottom:15px;'>Set in your brand typeface</div><div style='height:34px;border:1px solid #e9e4f5;border-radius:9px;margin-bottom:10px;'></div><div style='height:34px;border:1px solid #6434d0;border-radius:9px;box-shadow:0 0 0 3px #f0ebfa;margin-bottom:16px;'></div><div style='text-align:center;font-size:13px;font-weight:600;color:#fff;background:#6434d0;border-radius:999px;padding:11px 0;'>Submit</div></div>",
+      "title": [
+        {
+          "id": 4666,
+          "text": "Every part of a ",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        },
+        {
+          "id": 4671,
+          "text": "fully-branded form",
+          "highlight": true,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "pins": [
+        {
+          "id": 61,
+          "label": "Logo",
+          "body": "Add your own logo to the top of the form so respondents know exactly whose form they're filling out."
+        },
+        {
+          "id": 63,
+          "label": "Brand color",
+          "body": "Recolor accents, focus rings, and the submit button to your exact brand hex."
+        },
+        {
+          "id": 62,
+          "label": "Custom font",
+          "body": "Switch the form to your brand typeface so the copy matches your website and emails."
+        },
+        {
+          "id": 64,
+          "label": "Button radius",
+          "body": "Set the corner radius and padding on the submit button — from sharp corners to a fully rounded pill."
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "__component": "macro-components.sticky-steps-section",
+      "badge": "How it works",
+      "heading": "Style your form in four steps",
+      "description": "Build the form, open the design tab, pick what to style, then preview and publish.",
+      "background": "#f9fafb",
+      "steps": [
+        {
+          "id": 131,
+          "title": "Open the design tab",
+          "description": "Create your form with the AI form builder, then open it and click the Design tab at the top — every styling option lives here.",
+          "rawHtml": "<div style='display:flex;align-items:center;gap:6px;background:#fff;border:1px solid #eaecf0;border-radius:10px;padding:6px;'><span style='font-size:12px;color:#697586;padding:6px 12px;line-height:1.1;'>Build</span><span style='font-size:12px;font-weight:600;color:#fff;background:#6434d0;border-radius:7px;padding:6px 14px;line-height:1.1;'>Design</span><span style='font-size:12px;color:#697586;padding:6px 12px;line-height:1.1;'>Share</span></div>",
+          "image": null
+        },
+        {
+          "id": 130,
+          "title": "Turn on CSS Selector Mode",
+          "description": "Scroll to the Custom CSS section and switch on CSS Selector Mode — this lets you target the whole form or any single element.",
+          "rawHtml": "<div style='display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #eaecf0;border-radius:10px;padding:10px 12px;'><span style='font-size:12px;font-weight:600;color:#101828;line-height:1.1;'>CSS Selector Mode</span><span style='margin-left:auto;width:34px;height:19px;border-radius:999px;background:#6434d0;position:relative;'><span style='position:absolute;top:2px;right:2px;width:15px;height:15px;border-radius:50%;background:#fff;'></span></span></div>",
+          "image": null
+        },
+        {
+          "id": 132,
+          "title": "Pick what to style",
+          "description": "Hover the whole form, or a single field, title, or button. Add a class selector to style all fields of a type, or an individual selector for just one.",
+          "rawHtml": "<div style='display:flex;flex-direction:column;gap:8px;'><div style='display:flex;align-items:center;gap:8px;border:1px solid #eaecf0;border-radius:9px;padding:8px 11px;font-size:11.5px;color:#101828;'><span style='font-family:ui-monospace,Menlo,monospace;color:#6434d0;background:#f0ebfa;border-radius:6px;padding:2px 7px;line-height:1.1;'>.fm-input</span><span style='margin-left:auto;color:#697586;'>Class selector</span></div><div style='display:flex;align-items:center;gap:8px;border:1px solid #6434d0;border-radius:9px;padding:8px 11px;font-size:11.5px;color:#101828;box-shadow:0 0 0 3px #f0ebfa;'><span style='font-family:ui-monospace,Menlo,monospace;color:#6434d0;background:#f0ebfa;border-radius:6px;padding:2px 7px;line-height:1.1;'>#email-field</span><span style='margin-left:auto;color:#697586;'>Individual</span></div></div>",
+          "image": null
+        },
+        {
+          "id": 133,
+          "title": "Preview and publish",
+          "description": "Check the form on desktop, tablet, and mobile to be sure every style holds. When it looks right, save and publish to go live.",
+          "rawHtml": "<div style='display:flex;align-items:center;gap:9px;border:1px solid #6434d0;border-radius:9px;padding:8px 11px;font-size:12.5px;color:#101828;background:#fff;box-shadow:0 4px 12px rgba(100,52,208,.16);'><span style='width:18px;height:18px;border-radius:50%;background:#ecfdf3;color:#027a48;display:inline-flex;align-items:center;justify-content:center;'><svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.6'><path d='M5 12l4 4L19 6'/></svg></span><span style='font-weight:600;'>Published</span><span style='margin-left:auto;font-size:11px;color:#697586;'>Looks great on every device</span></div>",
+          "image": null
+        }
+      ],
+      "buttons": []
+    },
+    {
+      "id": 1133,
+      "__component": "macro-components.testimonials",
+      "description": null,
+      "version": "feature",
+      "heading": [
+        {
+          "id": 4668,
+          "text": "Teams ship on-brand forms with Formester",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "testimonials": [
+        {
+          "id": 1,
+          "name": "Dr. Michele Ross",
+          "position": "Founder",
+          "organization": "Infused Health",
+          "comment": "I'm migrating my forms from Paperform, where I've been a user for over 4 years. Loving the software so far! I've already replaced Paperform form embeds & popups on my sites & my husband's websites with Formester forms",
+          "createdAt": "2024-06-18T03:47:14.605Z",
+          "updatedAt": "2025-01-22T02:57:30.159Z",
+          "publishedAt": "2024-06-18T03:47:18.889Z",
+          "companyLogo": {
+            "id": 227,
+            "imageAlt": "Dr. Michele Ross",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 1685,
+              "name": "dr._michelelogo.webp",
+              "alternativeText": null,
+              "caption": null,
+              "width": 300,
+              "height": 59,
+              "formats": {
+                "thumbnail": {
+                  "ext": ".webp",
+                  "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_dr_michelelogo_2269ae2211.webp",
+                  "hash": "thumbnail_dr_michelelogo_2269ae2211",
+                  "mime": "image/webp",
+                  "name": "thumbnail_dr._michelelogo.webp",
+                  "path": null,
+                  "size": 5.58,
+                  "width": 245,
+                  "height": 48
+                }
+              },
+              "hash": "dr_michelelogo_2269ae2211",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 5.87,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/dr_michelelogo_2269ae2211.webp",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2024-08-01T14:38:23.944Z",
+              "updatedAt": "2024-08-01T14:38:23.944Z"
+            }
+          }
+        },
+        {
+          "id": 2,
+          "name": "Jilson",
+          "position": "Organiser",
+          "organization": "Vue Conference",
+          "comment": "Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.",
+          "createdAt": "2024-06-18T03:48:46.610Z",
+          "updatedAt": "2025-01-22T02:57:08.760Z",
+          "publishedAt": "2024-06-18T03:48:50.595Z",
+          "companyLogo": {
+            "id": 228,
+            "imageAlt": "photo-of-vue-conference",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 1680,
+              "name": "vueconf.webp",
+              "alternativeText": "photo-of-vue-conference",
+              "caption": "photo-of-vue-conference",
+              "width": 80,
+              "height": 80,
+              "formats": null,
+              "hash": "vueconf_1bc3dc0827",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 1.07,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2024-08-01T14:38:23.731Z",
+              "updatedAt": "2024-12-01T07:47:11.024Z"
+            }
+          }
+        },
+        {
+          "id": 4,
+          "name": "Costanza Casullo",
+          "position": "Volunteer",
+          "organization": "Wato Coding Hub",
+          "comment": "Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.",
+          "createdAt": "2024-06-18T03:51:15.232Z",
+          "updatedAt": "2025-01-22T02:58:03.674Z",
+          "publishedAt": "2024-06-18T03:51:21.477Z",
+          "companyLogo": {
+            "id": 225,
+            "imageAlt": "wato-coding-hub-logo",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 1681,
+              "name": "wato-coding-hub.webp",
+              "alternativeText": "wato-coding-hub-logo",
+              "caption": "wato-coding-hub-logo",
+              "width": 80,
+              "height": 81,
+              "formats": null,
+              "hash": "wato_coding_hub_e054f0ea9d",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 1.88,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/wato_coding_hub_e054f0ea9d.webp",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2024-08-01T14:38:23.738Z",
+              "updatedAt": "2024-12-01T07:49:13.371Z"
+            }
+          }
+        },
+        {
+          "id": 5,
+          "name": "Deanna Bugalski",
+          "position": "Founder/CEO",
+          "organization": "Suggesterfy",
+          "comment": "I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formester was super easy to set up, and the usability is seamless! I highly recommend!",
+          "createdAt": "2024-06-18T03:52:39.354Z",
+          "updatedAt": "2025-01-22T02:57:47.756Z",
+          "publishedAt": "2024-06-18T03:52:43.800Z",
+          "companyLogo": {
+            "id": 226,
+            "imageAlt": "suggesterfy-logo",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 1683,
+              "name": "suggesterfy_logo.webp",
+              "alternativeText": "suggesterfy-logo",
+              "caption": "suggesterfy-logo",
+              "width": 100,
+              "height": 50,
+              "formats": null,
+              "hash": "suggesterfy_logo_d1d7f996b9",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 1.91,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/suggesterfy_logo_d1d7f996b9.webp",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2024-08-01T14:38:23.921Z",
+              "updatedAt": "2024-12-01T07:49:52.459Z"
+            }
+          }
+        },
+        {
+          "id": 6,
+          "name": "Thibaud Martinez",
+          "position": "Organiser",
+          "organization": "Tedx",
+          "comment": "I really enjoy Formester. It’s clean and straight-forward and it does well, what it is supposed to do.",
+          "createdAt": "2024-06-18T03:53:38.957Z",
+          "updatedAt": "2025-01-22T02:56:48.567Z",
+          "publishedAt": "2024-06-18T03:53:40.693Z",
+          "companyLogo": {
+            "id": 229,
+            "imageAlt": "tedx-logo",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 1684,
+              "name": "tedx.webp",
+              "alternativeText": "tedx-logo",
+              "caption": "tedx-logo",
+              "width": 109,
+              "height": 38,
+              "formats": null,
+              "hash": "tedx_2fce0eee2e",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 1.09,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/tedx_2fce0eee2e.webp",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2024-08-01T14:38:23.941Z",
+              "updatedAt": "2024-12-01T07:50:31.505Z"
+            }
+          }
+        },
+        {
+          "id": 34,
+          "name": "Bency",
+          "position": "Product Manager",
+          "organization": "Northgate Digital Solutions",
+          "comment": "Formester's AI form generator transformed how quickly we build forms. The drag-and-drop builder paired with AI-generated templates means I can spin up a survey or poll in minutes, not hours. Conditional logic, file uploads, and seamless integrations make it incredibly versatile and the customization options let every form match our branding perfectly. Their support team is exceptional too. It's the only form and survey tool we recommend",
+          "createdAt": "2025-06-29T23:23:10.541Z",
+          "updatedAt": "2026-05-03T09:30:00.533Z",
+          "publishedAt": "2026-05-03T09:30:00.530Z",
+          "companyLogo": {
+            "id": 3652,
+            "imageAlt": null,
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": null
+          }
+        },
+        {
+          "id": 35,
+          "name": "Roger",
+          "position": "Marketing Specialist",
+          "organization": "BrightPath Technologies",
+          "comment": "I use Formester for my form-building needs and I’m thoroughly impressed. The platform is rich with features… What really sets them apart is their exceptional customer service (responses typically within 10 minutes). The pricing is also very reasonable… Highly recommended!\n",
+          "createdAt": "2025-06-29T23:29:19.225Z",
+          "updatedAt": "2025-10-31T04:00:58.697Z",
+          "publishedAt": "2025-06-29T23:29:21.134Z",
+          "companyLogo": {
+            "id": 3649,
+            "imageAlt": "brightpath-logo",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 4094,
+              "name": "brightpath-logo.png",
+              "alternativeText": "brightpath-logo",
+              "caption": "brightpath-logo",
+              "width": 200,
+              "height": 49,
+              "formats": null,
+              "hash": "brightpath_logo_6ef0922a60",
+              "ext": ".png",
+              "mime": "image/png",
+              "size": 2.5,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/brightpath_logo_6ef0922a60.png",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2025-10-31T04:00:11.712Z",
+              "updatedAt": "2025-10-31T04:00:11.712Z"
+            }
+          }
+        },
+        {
+          "id": 36,
+          "name": "Ye Qi Lai",
+          "position": "UX Designer",
+          "organization": "Eastview Consulting",
+          "comment": "Formester is one of the best underrated survey tools out there… It’s extremely customizable… Their support is awesome… I absolutely recommend this to anyone looking for an alternative to the usual form creators.",
+          "createdAt": "2025-06-29T23:30:04.374Z",
+          "updatedAt": "2025-10-31T04:00:30.746Z",
+          "publishedAt": "2025-06-29T23:30:06.260Z",
+          "companyLogo": {
+            "id": 3648,
+            "imageAlt": "eastview-logo-header",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 4097,
+              "name": "eastview-logo-header-300x120 1.png",
+              "alternativeText": "eastview-logo-header",
+              "caption": "eastview-logo-header",
+              "width": 200,
+              "height": 80,
+              "formats": null,
+              "hash": "eastview_logo_header_300x120_1_d9c231e93b",
+              "ext": ".png",
+              "mime": "image/png",
+              "size": 3.18,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/eastview_logo_header_300x120_1_d9c231e93b.png",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2025-10-31T04:00:11.854Z",
+              "updatedAt": "2025-10-31T04:00:11.854Z"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 1233,
+      "__component": "macro-components.faqs",
+      "description": null,
+      "centered": true,
+      "title": [
+        {
+          "id": 4670,
+          "text": "Custom CSS FAQs",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "faqList": [
+        {
+          "id": 2299,
+          "header": "Do I need coding skills to use custom CSS in Formester?",
+          "body": "Not necessarily, but you will need to write or paste CSS to restyle your form. You can generate ready-to-use CSS with a tool like ChatGPT and apply it through Formester's CSS Selector Mode.",
+          "body_markdown": null,
+          "list": []
+        },
+        {
+          "id": 2300,
+          "header": "Will my custom CSS work on all devices?",
+          "body": "Yes. Every style change is responsive by default, and you can preview how the form looks on desktop, tablet, and mobile before you publish.",
+          "body_markdown": null,
+          "list": []
+        },
+        {
+          "id": 2301,
+          "header": "Can I undo or reset CSS changes if something goes wrong?",
+          "body": "Absolutely. You can revert to the default styles at any time with a single click, or save multiple CSS versions so rolling back is easy.",
+          "body_markdown": null,
+          "list": []
+        },
+        {
+          "id": 2306,
+          "header": "Can I use custom animations or transitions?",
+          "body": "Yes. Add your own CSS animation rules for hover effects, fade-ins, and movement to give your form a modern, dynamic feel.",
+          "body_markdown": null,
+          "list": []
+        },
+        {
+          "id": 2302,
+          "header": "Can I apply my company's branding across all my forms?",
+          "body": "Yes. Pair custom CSS with Formester's Branding Kit to keep brand colors, typography, and button styles consistent across every form.",
+          "body_markdown": null,
+          "list": []
+        },
+        {
+          "id": 2303,
+          "header": "Will custom CSS slow down my forms?",
+          "body": "No. Formester loads CSS efficiently, so your forms stay fast and responsive even with advanced styling.",
+          "body_markdown": null,
+          "list": []
+        },
+        {
+          "id": 2304,
+          "header": "Can multiple team members edit the same form's CSS?",
+          "body": "Yes. If your plan includes collaboration, teammates can edit and review CSS together in the builder without overwriting each other's work.",
+          "body_markdown": null,
+          "list": []
+        },
+        {
+          "id": 2305,
+          "header": "What happens when I embed a styled form on my website?",
+          "body": "Your styling stays intact. Embedded forms keep all of their design, spacing, and animation settings exactly as you saw them in preview.",
+          "body_markdown": null,
+          "list": []
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "__component": "macro-components.cta-dark",
+      "badge": "Business plan",
+      "heading": "Design a form that's truly yours",
+      "description": "Take full control of colors, fonts, spacing, and animation with custom CSS.",
+      "trustText": null,
+      "buttons": [
+        {
+          "id": 1522,
+          "link": "https://app.formester.com/users/sign_up",
+          "text": "Get Started",
+          "type": "Primary",
+          "showArrow": true
+        },
+        {
+          "id": 1521,
+          "link": "/pricing",
+          "text": "See pricing",
+          "type": "White",
+          "showArrow": false
+        }
+      ]
+    }
+  ]
+}

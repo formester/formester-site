@@ -1,96 +1,26 @@
-import getSiteMeta from './getSiteMeta.js'
-import { STRAPI_URL } from '../constants/urls.js'
-import fetchWithRetry from './fetchWithRetry.js'
-
-let cachePromise = null
-
-function processItem(item) {
-  const components = item?.components || []
-  const meta = item?.meta || null
-  const updatedAt = item?.updatedAt || null
-  let head = {}
-  let jsonld = []
-
-  const normalizeJsonLd = (input) => {
-    if (!input) return []
-    let arr = Array.isArray(input) ? input : [input]
-    return arr
-      .filter((entry) => entry && typeof entry === 'object')
-      .map((entry) => {
-        if (!entry['@context'] || typeof entry['@context'] !== 'string') {
-          return { '@context': 'https://schema.org', ...entry }
-        }
-        return entry
-      })
-  }
-
-  if (!components.length || !meta) {
-    return { head, jsonld, components }
-  }
-
-  const metaData = {
-    url: meta?.url,
-    type: meta?.type,
-    title: meta?.title,
-    description: meta?.description,
-    mainImage: meta?.mainImage?.imageUrl || meta?.mainImage?.image?.url,
-    mainImageAlt: meta?.mainImage?.imageAlt,
-    keywords: meta?.keywords?.map((k) => k?.text),
-    updatedAt,
-  }
-  const siteMetaData = getSiteMeta(metaData)
-  // Canonical: prefer meta.link (cleaner) over meta.url, trailing-slashed to match og:url.
-  const toSlash = (h) => (h ? h.replace(/([^/])$/, '$1/') : h)
-  const authoredCanonical = (meta?.link || []).find((l) => l?.rel === 'canonical')
-  const canonical = toSlash(authoredCanonical?.href || meta?.url)
-  head = {
-    title: meta?.title,
-    link: canonical ? [{ hid: 'canonical', rel: 'canonical', href: canonical }] : [],
-    meta: [...siteMetaData],
-  }
-  jsonld = normalizeJsonLd(meta?.jsonld)
-
-  return { head, jsonld, components }
-}
-
-async function _fetchAllPages() {
-  console.log('[getAllPages] Fetching all pages from CMS...')
-  const {
-    data: { data },
-  } = await fetchWithRetry(`${STRAPI_URL}/api/pages`, {
-    params: {
-      populate: 'deep',
-    },
-  })
-
-  const items = data || []
-  const map = { __home__: null }
-  for (const item of items) {
-    const processed = processItem(item)
-    if (item.slug) {
-      map[item.slug] = processed
-    } else {
-      map.__home__ = processed
-    }
-  }
-
-  console.log(`[getAllPages] Cached ${Object.keys(map).length} pages`)
-  return map
-}
-
-export async function getAllPages() {
-  if (!cachePromise || import.meta.dev) {
-    cachePromise = _fetchAllPages()
-  }
-  return cachePromise
-}
+// Nuxt Content v3 backed replacement for the old Strapi-fetching version.
+// Same exported function names/shapes as before so pages/index.vue and
+// pages/[...slug].vue need zero changes.
 
 export async function getPageBySlug(slug) {
-  const pages = await getAllPages()
-  return pages[slug] || null
+  const doc = await queryCollection('pages').where('slug', '=', slug).first()
+  if (!doc) return null
+  return { head: doc.head || {}, jsonld: doc.jsonld || [], components: doc.components || [] }
 }
 
 export async function getHomePage() {
-  const pages = await getAllPages()
-  return pages.__home__ || null
+  const doc = await queryCollection('home').first()
+  if (!doc) return null
+  return { head: doc.head || {}, jsonld: doc.jsonld || [], components: doc.components || [] }
+}
+
+// Kept for callers that still want the full slug set (route pre-generation
+// now reads content/pages/**/*.json directly — see utils/getRoutes.js).
+export async function getAllPages() {
+  const docs = await queryCollection('pages').all()
+  const map = {}
+  for (const doc of docs) {
+    map[doc.slug] = { head: doc.head || {}, jsonld: doc.jsonld || [], components: doc.components || [] }
+  }
+  return map
 }

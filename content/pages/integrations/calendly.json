@@ -1,0 +1,616 @@
+{
+  "slug": "integrations/calendly",
+  "head": {
+    "title": "Calendly Integration — Book Meetings in Forms | Formester",
+    "link": [
+      {
+        "hid": "canonical",
+        "rel": "canonical",
+        "href": "https://formester.com/integrations/calendly/"
+      }
+    ],
+    "meta": [
+      {
+        "property": "article:modified_time",
+        "content": "2026-06-14T15:16:32.595Z"
+      },
+      {
+        "hid": "description",
+        "name": "description",
+        "content": "Let respondents book Calendly meetings inside your forms. Scheduler field with autofill, no code — set up in minutes."
+      },
+      {
+        "hid": "og:site_name",
+        "name": "og:site_name",
+        "content": "Calendly Integration — Book Meetings in Forms | Formester"
+      },
+      {
+        "hid": "og:type",
+        "property": "og:type",
+        "content": "website"
+      },
+      {
+        "hid": "og:url",
+        "property": "og:url",
+        "content": "https://formester.com/integrations/calendly/"
+      },
+      {
+        "hid": "og:title",
+        "property": "og:title",
+        "content": "Calendly Integration — Book Meetings in Forms | Formester"
+      },
+      {
+        "hid": "og:description",
+        "property": "og:description",
+        "content": "Let respondents book Calendly meetings inside your forms. Scheduler field with autofill, no code — set up in minutes."
+      },
+      {
+        "hid": "og:image",
+        "property": "og:image",
+        "content": "https://formester.com/formester-logo-meta-image.png"
+      },
+      {
+        "hid": "og:image:alt",
+        "name": "og:image:alt",
+        "content": "Formester Calendly integration"
+      },
+      {
+        "hid": "twitter:url",
+        "name": "twitter:url",
+        "content": "https://formester.com/integrations/calendly/"
+      },
+      {
+        "name": "twitter:site",
+        "content": "@_formester_"
+      },
+      {
+        "hid": "twitter:title",
+        "name": "twitter:title",
+        "content": "Calendly Integration — Book Meetings in Forms | Formester"
+      },
+      {
+        "hid": "twitter:description",
+        "name": "twitter:description",
+        "content": "Let respondents book Calendly meetings inside your forms. Scheduler field with autofill, no code — set up in minutes."
+      },
+      {
+        "hid": "twitter:image",
+        "name": "twitter:image",
+        "content": "https://formester.com/formester-logo-meta-image.png"
+      },
+      {
+        "hid": "twitter:image:alt",
+        "name": "twitter:image:alt",
+        "content": "Formester Calendly integration"
+      },
+      {
+        "hid": "twitter:card",
+        "name": "twitter:card",
+        "content": "summary_large_image"
+      },
+      {
+        "hid": "apple-mobile-web-app-title",
+        "name": "apple-mobile-web-app-title",
+        "content": "Formester"
+      },
+      {
+        "hid": "image",
+        "name": "image",
+        "property": "og:image",
+        "content": "https://formester.com/formester-logo-meta-image.png"
+      },
+      {
+        "hid": "keywords",
+        "name": "keywords",
+        "content": [
+          "calendly form integration",
+          "book meetings in form",
+          "form with scheduler",
+          "formester calendly"
+        ]
+      }
+    ]
+  },
+  "jsonld": [
+    {
+      "@context": "https://schema.org",
+      "type": "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"What does the Calendly integration do?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"It adds a scheduler field to your form so respondents can book a meeting on your Calendly while filling out the form — no separate booking step.\"}}, {\"@type\": \"Question\", \"name\": \"How do I add Calendly to a form?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Click Add Elements → Appointment Scheduler (under Date & Time), choose Calendly under Schedule With, paste your Calendly link, and publish.\"}}, {\"@type\": \"Question\", \"name\": \"Can the booking reuse their name and email?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes — enable autofill in the field properties and the respondent's name and email carry into the Calendly booking.\"}}, {\"@type\": \"Question\", \"name\": \"What kinds of meetings can people book?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Anything your Calendly offers — demos, consultations, interviews, support calls — controlled by the appointment link you paste in.\"}}, {\"@type\": \"Question\", \"name\": \"What is Formester?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Formester is an online form builder for creating forms, surveys, and quizzes with a drag-and-drop editor or AI. It connects with the tools your team already uses — Google Sheets, Slack, HubSpot, Zapier, and more — so your form data flows wherever you need it.\"}}]}"
+    },
+    {
+      "@context": "https://schema.org",
+      "type": "{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://formester.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Integrations\", \"item\": \"https://formester.com/integrations/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"name\": \"Calendly\", \"item\": \"https://formester.com/integrations/calendly/\"}]}"
+    }
+  ],
+  "components": [
+    {
+      "id": 161,
+      "__component": "macro-components.hero-v2",
+      "description": "Add a scheduler field to any form and respondents pick a time slot as they submit — no back-and-forth emails, no separate booking link.",
+      "trustText": "✓ Scheduler field built in · ✓ Autofills name and email · ✓ Minutes to set up",
+      "blobColorA": "#f5eeff",
+      "blobColorB": "#f1ebff",
+      "blobColorC": "#f4efff",
+      "mockupHtml": "<div class='raw-html-embed'><style>.iw{font-family:'Inter',ui-sans-serif,system-ui,sans-serif;position:relative;max-width:480px;margin:0 auto;padding-top:10px;} .iw *{box-sizing:border-box;} .iw__pair{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:18px;} .iw__logo{width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #eaecf0;box-shadow:0 2px 8px rgba(15,14,26,.06);flex-shrink:0;} .iw__logo img{width:30px;height:30px;object-fit:contain;} .iw__flow{display:flex;align-items:center;gap:5px;} .iw__dot{width:6px;height:6px;border-radius:50%;background:#9777e0;opacity:.35;animation:iwd 1.6s linear infinite;} .iw__dot:nth-child(2){animation-delay:.2s}.iw__dot:nth-child(3){animation-delay:.4s} @keyframes iwd{0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}} .iw__win{background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 18px 50px rgba(15,14,26,.12);overflow:hidden;} .iw__bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#f9fafb;border-bottom:1px solid #eaecf0;} .iw__cdot{width:10px;height:10px;border-radius:50%;flex-shrink:0;} .iw__title{font-size:11px;color:#697586;margin-left:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;} @keyframes iwnew{0%,10%{opacity:0;transform:translateY(-6px)}18%,88%{opacity:1;transform:translateY(0)}97%,100%{opacity:0}} @media(max-width:600px){.iw__toast{right:-4px !important;bottom:-30px !important;}} .iw__toast{position:absolute;bottom:-28px;right:-36px;display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #eaecf0;border-radius:12px;box-shadow:0 8px 24px rgba(15,14,26,.14);padding:9px 13px;font-size:12px;font-weight:600;color:#101828;animation:iwnew 5s ease-in-out infinite;} .iw__toast small{display:block;font-size:10px;font-weight:500;color:#697586;} .iw__tick{width:22px;height:22px;border-radius:7px;background:#11c15b;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;} .iw__anim{animation:iwnew 5s ease-in-out infinite;}</style><div class='iw'><div class='iw__pair'><span class='iw__logo'><img src='/formester-icon.svg' alt='Formester'/></span><span class='iw__flow'><span class='iw__dot'></span><span class='iw__dot'></span><span class='iw__dot'></span></span><span class='iw__logo'><img src='/integrations/calendly.svg' alt=''/></span></div><div class='iw__win'><div class='iw__bar'><span class='iw__cdot' style='background:#ff6058'></span><span class='iw__cdot' style='background:#ffbd2e'></span><span class='iw__cdot' style='background:#27c93f'></span><span class='iw__title'>Book a meeting · Calendly</span></div><div style='padding:12px 14px;'><div style='font-size:11px;font-weight:700;color:#101828;margin-bottom:8px;'>Pick a time — Tue, Jun 16</div><div style='display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:10px;'><span style='font-size:10px;font-weight:600;padding:6px 0;text-align:center;border:1px solid #eaecf0;border-radius:7px;color:#475467;background:#fff;'>10:00</span><span style='font-size:10px;font-weight:600;padding:6px 0;text-align:center;border:1px solid #eaecf0;border-radius:7px;color:#475467;background:#fff;'>10:45</span><span style='font-size:10px;font-weight:600;padding:6px 0;text-align:center;border:1px solid #6434d0;border-radius:7px;color:#fff;background:#6434d0;'>11:30</span><span style='font-size:10px;font-weight:600;padding:6px 0;text-align:center;border:1px solid #eaecf0;border-radius:7px;color:#475467;background:#fff;'>13:15</span></div><div class='iw__anim'><span style='display:inline-flex;font-size:9.5px;font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:3px 9px;line-height:1;'>Booked: Tue 11:30 — invite sent ✓</span></div></div></div><div class='iw__toast'><span class='iw__tick'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'><path d='M5 12l4 4L19 6'/></svg></span><span>Meeting booked<small>Tue 11:30 · invite sent</small></span></div></div></div>",
+      "layout": "split",
+      "title": [
+        {
+          "id": 5136,
+          "text": "Let people book ",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        },
+        {
+          "id": 5135,
+          "text": "Calendly",
+          "highlight": true,
+          "color": "#475467",
+          "bold": false
+        },
+        {
+          "id": 5137,
+          "text": " meetings inside your forms",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": 1766,
+          "link": "https://help.formester.com/en/article/calendly-integration-11ultwz/",
+          "text": "Read the setup guide",
+          "type": "Primary",
+          "showArrow": true
+        },
+        {
+          "id": 1767,
+          "link": "https://app.formester.com/users/sign_up",
+          "text": "Start free",
+          "type": "Secondary",
+          "showArrow": false
+        }
+      ],
+      "badge": {
+        "id": 161,
+        "text": "Calendly",
+        "tag": "Integrations",
+        "link": "/integrations/"
+      },
+      "tabCardContent": [],
+      "image": null
+    },
+    {
+      "id": 605,
+      "__component": "macro-components.trust-seals",
+      "label": "Trusted by 56k+ teams worldwide",
+      "heading": null,
+      "description": null,
+      "showTrustBadges": false,
+      "rawHtml": null,
+      "title": [],
+      "logos": []
+    },
+    {
+      "id": 227,
+      "__component": "macro-components.card-grid",
+      "eyebrow": "Why connect them",
+      "description": "Qualification and scheduling happen in the same form — momentum never breaks.",
+      "columns": "2",
+      "background": null,
+      "title": [
+        {
+          "id": 5132,
+          "text": "From form fill to ",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        },
+        {
+          "id": 5131,
+          "text": "booked call",
+          "highlight": true,
+          "color": "#475467",
+          "bold": false
+        },
+        {
+          "id": 5133,
+          "text": " in one flow",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "cards": [
+        {
+          "id": 840,
+          "tag": "Conversion",
+          "tagColor": "violet",
+          "title": "Book while they're warm",
+          "body": "Respondents schedule the meeting at peak interest — not days later over email.",
+          "mockHtml": null,
+          "icon": null
+        },
+        {
+          "id": 839,
+          "tag": "Experience",
+          "tagColor": "blue",
+          "title": "No email ping-pong",
+          "body": "Time-slot picking happens right in the form, synced to your Calendly availability.",
+          "mockHtml": null,
+          "icon": null
+        },
+        {
+          "id": 841,
+          "tag": "Autofill",
+          "tagColor": "green",
+          "title": "Details carried over",
+          "body": "Optionally autofill the respondent's name and email into the booking — no double entry.",
+          "mockHtml": null,
+          "icon": null
+        },
+        {
+          "id": 842,
+          "tag": "Use cases",
+          "tagColor": "amber",
+          "title": "Demos, consults, intakes",
+          "body": "Sales demos, consultations, interviews, onboarding calls — any form can end in a meeting.",
+          "mockHtml": null,
+          "icon": null
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "__component": "macro-components.sticky-steps-section",
+      "badge": "How it works",
+      "heading": "Add Calendly in 3 steps",
+      "description": "It's a form field — drop it in, point it at your Calendly link, publish.",
+      "background": "#f9fafb",
+      "steps": [
+        {
+          "id": 281,
+          "title": "Add the Appointment Scheduler field",
+          "description": "In the form builder, click Add Elements and pick Appointment Scheduler from the Date & Time category.",
+          "rawHtml": "<div class='raw-html-embed'><div style='font-family:Inter,ui-sans-serif,system-ui,sans-serif;max-width:320px;'><div style='border:1px solid #eaecf0;border-radius:10px;background:#fff;box-shadow:0 4px 14px rgba(15,14,26,.06);padding:13px;'><div style='font-size:11px;font-weight:700;color:#101828;margin-bottom:8px;'>Add Elements</div><div style='font-size:9.5px;font-weight:700;color:#697586;text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px;'>Date & Time</div><div style='display:flex;align-items:center;gap:8px;border:1px solid #6434d0;background:#faf8ff;border-radius:8px;padding:8px 11px;font-size:11px;color:#101828;font-weight:600;margin-bottom:5px;'>Appointment Scheduler<span style='margin-left:auto;color:#6434d0;font-weight:700;'>+</span></div><div style='display:flex;align-items:center;gap:8px;border:1px solid #eaecf0;border-radius:8px;padding:8px 11px;font-size:11px;color:#697586;'>Time</div></div></div></div>",
+          "image": null
+        },
+        {
+          "id": 283,
+          "title": "Point it at your Calendly",
+          "description": "In the field properties, choose Calendly under Schedule With and paste your Calendly link — you can also autofill the respondent's name and email into the booking.",
+          "rawHtml": "<div class='raw-html-embed'><div style='font-family:Inter,ui-sans-serif,system-ui,sans-serif;max-width:320px;'><div style='border:1px solid #eaecf0;border-radius:10px;background:#fff;box-shadow:0 4px 14px rgba(15,14,26,.06);padding:13px;'><div style='font-size:11px;font-weight:700;color:#101828;margin-bottom:8px;'>Scheduler · General Properties</div><div style='font-size:10.5px;font-weight:700;color:#101828;margin-bottom:4px;'>Scheduler Type</div><div style='display:flex;border:1px solid #eaecf0;border-radius:8px;overflow:hidden;margin-bottom:9px;'><span style='flex:1;text-align:center;font-size:10.5px;font-weight:700;color:#fff;background:#6434d0;padding:7px 0;'>Legacy</span><span style='flex:1;text-align:center;font-size:10.5px;color:#475467;padding:7px 0;'>Native</span></div><div style='font-size:10.5px;font-weight:700;color:#101828;margin-bottom:4px;'>Schedule With</div><div style='border:1px solid #eaecf0;border-radius:8px;padding:8px 11px;font-size:10.5px;color:#101828;display:flex;justify-content:space-between;align-items:center;margin-bottom:9px;'>Calendly<span style='font-size:8px;color:#697586;'>&#9662;</span></div><div style='font-size:10.5px;font-weight:700;color:#101828;margin-bottom:4px;'>Calendly Link</div><div style='border:1px solid #eaecf0;border-radius:8px;padding:8px 11px;font-size:10px;color:#98a2b3;'>https://calendly.com/username</div></div></div></div>",
+          "image": null
+        },
+        {
+          "id": 282,
+          "title": "Publish and book a test slot",
+          "description": "Publish the form, open it in preview, pick a time slot, and submit — the booking lands on your calendar.",
+          "rawHtml": "<div class='raw-html-embed'><div style='font-family:Inter,ui-sans-serif,system-ui,sans-serif;max-width:320px;'><div style='display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:7px 13px;'><svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'><path d='M5 12l4 4L19 6'/></svg>Booked: Tue 11:30 — invite sent</div></div></div>",
+          "image": null
+        }
+      ],
+      "buttons": []
+    },
+    {
+      "id": 1219,
+      "__component": "macro-components.testimonials",
+      "description": null,
+      "version": "feature",
+      "heading": [],
+      "testimonials": [
+        {
+          "id": 4,
+          "name": "Costanza Casullo",
+          "position": "Volunteer",
+          "organization": "Wato Coding Hub",
+          "comment": "Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.",
+          "createdAt": "2024-06-18T03:51:15.232Z",
+          "updatedAt": "2025-01-22T02:58:03.674Z",
+          "publishedAt": "2024-06-18T03:51:21.477Z",
+          "companyLogo": {
+            "id": 225,
+            "imageAlt": "wato-coding-hub-logo",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 1681,
+              "name": "wato-coding-hub.webp",
+              "alternativeText": "wato-coding-hub-logo",
+              "caption": "wato-coding-hub-logo",
+              "width": 80,
+              "height": 81,
+              "formats": null,
+              "hash": "wato_coding_hub_e054f0ea9d",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 1.88,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/wato_coding_hub_e054f0ea9d.webp",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2024-08-01T14:38:23.738Z",
+              "updatedAt": "2024-12-01T07:49:13.371Z"
+            }
+          }
+        },
+        {
+          "id": 5,
+          "name": "Deanna Bugalski",
+          "position": "Founder/CEO",
+          "organization": "Suggesterfy",
+          "comment": "I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formester was super easy to set up, and the usability is seamless! I highly recommend!",
+          "createdAt": "2024-06-18T03:52:39.354Z",
+          "updatedAt": "2025-01-22T02:57:47.756Z",
+          "publishedAt": "2024-06-18T03:52:43.800Z",
+          "companyLogo": {
+            "id": 226,
+            "imageAlt": "suggesterfy-logo",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 1683,
+              "name": "suggesterfy_logo.webp",
+              "alternativeText": "suggesterfy-logo",
+              "caption": "suggesterfy-logo",
+              "width": 100,
+              "height": 50,
+              "formats": null,
+              "hash": "suggesterfy_logo_d1d7f996b9",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 1.91,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/suggesterfy_logo_d1d7f996b9.webp",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2024-08-01T14:38:23.921Z",
+              "updatedAt": "2024-12-01T07:49:52.459Z"
+            }
+          }
+        },
+        {
+          "id": 1,
+          "name": "Dr. Michele Ross",
+          "position": "Founder",
+          "organization": "Infused Health",
+          "comment": "I'm migrating my forms from Paperform, where I've been a user for over 4 years. Loving the software so far! I've already replaced Paperform form embeds & popups on my sites & my husband's websites with Formester forms",
+          "createdAt": "2024-06-18T03:47:14.605Z",
+          "updatedAt": "2025-01-22T02:57:30.159Z",
+          "publishedAt": "2024-06-18T03:47:18.889Z",
+          "companyLogo": {
+            "id": 227,
+            "imageAlt": "Dr. Michele Ross",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 1685,
+              "name": "dr._michelelogo.webp",
+              "alternativeText": null,
+              "caption": null,
+              "width": 300,
+              "height": 59,
+              "formats": {
+                "thumbnail": {
+                  "ext": ".webp",
+                  "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_dr_michelelogo_2269ae2211.webp",
+                  "hash": "thumbnail_dr_michelelogo_2269ae2211",
+                  "mime": "image/webp",
+                  "name": "thumbnail_dr._michelelogo.webp",
+                  "path": null,
+                  "size": 5.58,
+                  "width": 245,
+                  "height": 48
+                }
+              },
+              "hash": "dr_michelelogo_2269ae2211",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 5.87,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/dr_michelelogo_2269ae2211.webp",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2024-08-01T14:38:23.944Z",
+              "updatedAt": "2024-08-01T14:38:23.944Z"
+            }
+          }
+        },
+        {
+          "id": 2,
+          "name": "Jilson",
+          "position": "Organiser",
+          "organization": "Vue Conference",
+          "comment": "Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.",
+          "createdAt": "2024-06-18T03:48:46.610Z",
+          "updatedAt": "2025-01-22T02:57:08.760Z",
+          "publishedAt": "2024-06-18T03:48:50.595Z",
+          "companyLogo": {
+            "id": 228,
+            "imageAlt": "photo-of-vue-conference",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 1680,
+              "name": "vueconf.webp",
+              "alternativeText": "photo-of-vue-conference",
+              "caption": "photo-of-vue-conference",
+              "width": 80,
+              "height": 80,
+              "formats": null,
+              "hash": "vueconf_1bc3dc0827",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 1.07,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2024-08-01T14:38:23.731Z",
+              "updatedAt": "2024-12-01T07:47:11.024Z"
+            }
+          }
+        },
+        {
+          "id": 6,
+          "name": "Thibaud Martinez",
+          "position": "Organiser",
+          "organization": "Tedx",
+          "comment": "I really enjoy Formester. It’s clean and straight-forward and it does well, what it is supposed to do.",
+          "createdAt": "2024-06-18T03:53:38.957Z",
+          "updatedAt": "2025-01-22T02:56:48.567Z",
+          "publishedAt": "2024-06-18T03:53:40.693Z",
+          "companyLogo": {
+            "id": 229,
+            "imageAlt": "tedx-logo",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 1684,
+              "name": "tedx.webp",
+              "alternativeText": "tedx-logo",
+              "caption": "tedx-logo",
+              "width": 109,
+              "height": 38,
+              "formats": null,
+              "hash": "tedx_2fce0eee2e",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 1.09,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/tedx_2fce0eee2e.webp",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2024-08-01T14:38:23.941Z",
+              "updatedAt": "2024-12-01T07:50:31.505Z"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "__component": "macro-components.integrations-grid",
+      "title": "Explore more integrations",
+      "integrations": [
+        {
+          "id": 189,
+          "name": "Google Sheets",
+          "description": "Sync every form submission to Google Sheets in real time.",
+          "link": "/integrations/google-sheets/"
+        },
+        {
+          "id": 188,
+          "name": "Slack",
+          "description": "Get instant Slack alerts when a new form is submitted.",
+          "link": "/integrations/slack/"
+        },
+        {
+          "id": 190,
+          "name": "HubSpot CRM",
+          "description": "Push new form leads to HubSpot CRM instantly.",
+          "link": "/integrations/hubspot-crm/"
+        },
+        {
+          "id": 191,
+          "name": "Zapier",
+          "description": "Connect your forms to 8,000+ apps using Zapier.",
+          "link": "/integrations/zapier/"
+        },
+        {
+          "id": 192,
+          "name": "Gmail",
+          "description": "Send Gmail emails from your forms using your own address.",
+          "link": "/integrations/gmail/"
+        },
+        {
+          "id": 193,
+          "name": "Monday.com",
+          "description": "Send form submissions to your Monday.com boards automatically.",
+          "link": "/integrations/monday/"
+        }
+      ]
+    },
+    {
+      "id": 1324,
+      "__component": "macro-components.faqs",
+      "description": null,
+      "centered": true,
+      "title": [
+        {
+          "id": 5134,
+          "text": "Calendly integration FAQs",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "faqList": [
+        {
+          "id": 2715,
+          "header": "What does the Calendly integration do?",
+          "body": "It adds a scheduler field to your form so respondents can book a meeting on your Calendly while filling out the form — no separate booking step.",
+          "body_markdown": "",
+          "list": []
+        },
+        {
+          "id": 2714,
+          "header": "How do I add Calendly to a form?",
+          "body": "Click Add Elements → Appointment Scheduler (under Date & Time), choose Calendly under Schedule With, paste your Calendly link, and publish.",
+          "body_markdown": "",
+          "list": []
+        },
+        {
+          "id": 2717,
+          "header": "Can the booking reuse their name and email?",
+          "body": "Yes — enable autofill in the field properties and the respondent's name and email carry into the Calendly booking.",
+          "body_markdown": "",
+          "list": []
+        },
+        {
+          "id": 2716,
+          "header": "What kinds of meetings can people book?",
+          "body": "Anything your Calendly offers — demos, consultations, interviews, support calls — controlled by the appointment link you paste in.",
+          "body_markdown": "",
+          "list": []
+        },
+        {
+          "id": 2718,
+          "header": "What is Formester?",
+          "body": "Formester is an online form builder for creating forms, surveys, and quizzes with a drag-and-drop editor or AI. It connects with the tools your team already uses — Google Sheets, Slack, HubSpot, Zapier, and more — so your form data flows wherever you need it.",
+          "body_markdown": "",
+          "list": []
+        }
+      ]
+    },
+    {
+      "id": 160,
+      "__component": "macro-components.cta-dark",
+      "badge": "Free to start",
+      "heading": "Turn submissions into booked meetings",
+      "description": "Add the Calendly scheduler to your forms and skip the scheduling emails forever.",
+      "trustText": null,
+      "buttons": [
+        {
+          "id": 1764,
+          "link": "https://app.formester.com/users/sign_up",
+          "text": "Start free",
+          "type": "Primary",
+          "showArrow": true
+        },
+        {
+          "id": 1765,
+          "link": "/pricing/",
+          "text": "See pricing",
+          "type": "White",
+          "showArrow": false
+        }
+      ]
+    }
+  ]
+}

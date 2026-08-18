@@ -1,0 +1,790 @@
+{
+  "slug": "custom-form-building-service",
+  "head": {
+    "title": "Form Building As a Service | Custom Forms, Surveys & Quizzes",
+    "link": [
+      {
+        "hid": "canonical",
+        "rel": "canonical",
+        "href": "https://formester.com/custom-form-building-service/"
+      }
+    ],
+    "meta": [
+      {
+        "property": "article:modified_time",
+        "content": "2025-04-25T03:42:12.764Z"
+      },
+      {
+        "hid": "description",
+        "name": "description",
+        "content": "Tired of complex form creation? Let our experts build custom forms, surveys and quizzes that will suite all your needs. 24/7 Support. Get Started!"
+      },
+      {
+        "hid": "og:site_name",
+        "name": "og:site_name",
+        "content": "Form Building As a Service | Custom Forms, Surveys & Quizzes"
+      },
+      {
+        "hid": "og:type",
+        "property": "og:type",
+        "content": "website"
+      },
+      {
+        "hid": "og:url",
+        "property": "og:url",
+        "content": "https://formester.com/custom-form-building-service/"
+      },
+      {
+        "hid": "og:title",
+        "property": "og:title",
+        "content": "Form Building As a Service | Custom Forms, Surveys & Quizzes"
+      },
+      {
+        "hid": "og:description",
+        "property": "og:description",
+        "content": "Tired of complex form creation? Let our experts build custom forms, surveys and quizzes that will suite all your needs. 24/7 Support. Get Started!"
+      },
+      {
+        "hid": "og:image",
+        "property": "og:image",
+        "content": "https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png"
+      },
+      {
+        "hid": "og:image:alt",
+        "name": "og:image:alt",
+        "content": "Formester Logo"
+      },
+      {
+        "hid": "twitter:url",
+        "name": "twitter:url",
+        "content": "https://formester.com/custom-form-building-service/"
+      },
+      {
+        "name": "twitter:site",
+        "content": "@_formester_"
+      },
+      {
+        "hid": "twitter:title",
+        "name": "twitter:title",
+        "content": "Form Building As a Service | Custom Forms, Surveys & Quizzes"
+      },
+      {
+        "hid": "twitter:description",
+        "name": "twitter:description",
+        "content": "Tired of complex form creation? Let our experts build custom forms, surveys and quizzes that will suite all your needs. 24/7 Support. Get Started!"
+      },
+      {
+        "hid": "twitter:image",
+        "name": "twitter:image",
+        "content": "https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png"
+      },
+      {
+        "hid": "twitter:image:alt",
+        "name": "twitter:image:alt",
+        "content": "Formester Logo"
+      },
+      {
+        "hid": "twitter:card",
+        "name": "twitter:card",
+        "content": "summary_large_image"
+      },
+      {
+        "hid": "apple-mobile-web-app-title",
+        "name": "apple-mobile-web-app-title",
+        "content": "Formester"
+      },
+      {
+        "hid": "image",
+        "name": "image",
+        "property": "og:image",
+        "content": "https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png"
+      },
+      {
+        "hid": "keywords",
+        "name": "keywords",
+        "content": []
+      }
+    ]
+  },
+  "jsonld": [],
+  "components": [
+    {
+      "id": 34,
+      "__component": "macro-components.hero-centered-dark",
+      "description": "Get professionally designed forms, surveys, and quizzes. No effort required!",
+      "title": [
+        {
+          "id": 831,
+          "text": "Custom Forms, Surveys & Quizzes Built for You",
+          "highlight": false,
+          "color": null,
+          "bold": null
+        }
+      ],
+      "button": {
+        "id": 728,
+        "link": "https://formester.com/contact/",
+        "text": "Let's Talk",
+        "type": "Primary",
+        "showArrow": null
+      },
+      "clickTriggers": [
+        {
+          "id": 1405,
+          "text": "5000+ Active Users"
+        },
+        {
+          "id": 1406,
+          "text": "24/7 Support"
+        }
+      ],
+      "background": {
+        "id": 1405,
+        "imageAlt": "a mockup of formester's form building service",
+        "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/a_mockup_of_formester_s_form_building_service_d64e6c1eb4.svg",
+        "width": null,
+        "height": null,
+        "image": null
+      }
+    },
+    {
+      "id": 100,
+      "__component": "macro-components.trust-seals",
+      "label": null,
+      "heading": null,
+      "description": null,
+      "showTrustBadges": null,
+      "rawHtml": null,
+      "title": [],
+      "logos": [
+        {
+          "id": 1406,
+          "imageAlt": "Tedx Paris Organizer",
+          "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/tedx_3c0e17bf72.png",
+          "width": 110,
+          "height": null,
+          "image": null
+        },
+        {
+          "id": 1407,
+          "imageAlt": "Vue Jobs",
+          "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/vue_jobs_9705e4cfbe.svg",
+          "width": 110,
+          "height": null,
+          "image": null
+        },
+        {
+          "id": 1408,
+          "imageAlt": "Vue Conference Toronto",
+          "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_black_43e8b6a164.png",
+          "width": 110,
+          "height": null,
+          "image": null
+        },
+        {
+          "id": 1409,
+          "imageAlt": "Mayple",
+          "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/mayple_67fe487816.png",
+          "width": 110,
+          "height": null,
+          "image": null
+        },
+        {
+          "id": 1410,
+          "imageAlt": "Equipal",
+          "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/equipment_connect_b753319419.png",
+          "width": 110,
+          "height": null,
+          "image": null
+        }
+      ]
+    },
+    {
+      "id": 199,
+      "__component": "macro-components.two-column-benefits",
+      "description": null,
+      "title": [
+        {
+          "id": 1107,
+          "text": "Why Choose Formester?",
+          "highlight": false,
+          "color": null,
+          "bold": null
+        }
+      ],
+      "itemList": [
+        {
+          "id": 1172,
+          "title": "Effortless Setup",
+          "description": "Our experts take care of form, survey, and quiz creation, so you can avoid the hassle and launch them quickly.",
+          "description_markdown": "Our experts take care of form, survey, and quiz creation, so you can avoid the hassle and launch them quickly.",
+          "icon": null,
+          "cardImage": {
+            "id": 1411,
+            "imageAlt": "formester automation icon",
+            "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/dataflow_01_b806bceec3.svg",
+            "width": null,
+            "height": null,
+            "image": null
+          }
+        },
+        {
+          "id": 1175,
+          "title": "Custom Designs",
+          "description": "We ensure your forms, surveys, and quizzes match your brand perfectly, with no need for you to worry about design.",
+          "description_markdown": "We ensure your forms, surveys, and quizzes match your brand perfectly, with no need for you to worry about design.",
+          "icon": null,
+          "cardImage": {
+            "id": 1414,
+            "imageAlt": "formester design icon",
+            "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/palette_5b4002a356.svg",
+            "width": null,
+            "height": null,
+            "image": null
+          }
+        },
+        {
+          "id": 1173,
+          "title": "No Learning Curve",
+          "description": "Forget spending hours figuring out how to use form builders. We’ll handle everything for you, saving you time and frustration.",
+          "description_markdown": "Forget spending hours figuring out how to use form builders. We’ll handle everything for you, saving you time and frustration.",
+          "icon": null,
+          "cardImage": {
+            "id": 1413,
+            "imageAlt": "formester analytics icon",
+            "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/line_chart_up_02_64fbb99e61.svg",
+            "width": null,
+            "height": null,
+            "image": null
+          }
+        },
+        {
+          "id": 1174,
+          "title": "Ongoing Customer Support",
+          "description": "Enjoy continuous assistance from our team to ensure your forms, surveys, and quizzes are running smoothly and meeting your needs.",
+          "description_markdown": "Enjoy continuous assistance from our team to ensure your forms, surveys, and quizzes are running smoothly and meeting your needs.",
+          "icon": null,
+          "cardImage": {
+            "id": 1412,
+            "imageAlt": "formester message icon",
+            "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/message_text_square_02_5014683c23.svg",
+            "width": null,
+            "height": null,
+            "image": null
+          }
+        }
+      ]
+    },
+    {
+      "id": 595,
+      "__component": "macro-components.feature-showcase",
+      "description": null,
+      "steps": false,
+      "title": [
+        {
+          "id": 835,
+          "text": "How Does It Work?",
+          "highlight": false,
+          "color": null,
+          "bold": null
+        }
+      ],
+      "itemList": [
+        {
+          "id": 1189,
+          "title": "Tell Us What You Need",
+          "description": "Whether it’s a basic contact form, a survey to gather customer feedback, or a multi-step application form, simply tell us what you need. We’ll take care of the rest.",
+          "description_markdown": "Whether it’s a basic contact form, a survey to gather customer feedback, or a multi-step application form, simply tell us what you need. We’ll take care of the rest.",
+          "icon": null,
+          "cardImage": {
+            "id": 1431,
+            "imageAlt": "an illustration of formester's support",
+            "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_983_c0472efeb5.svg",
+            "width": null,
+            "height": null,
+            "image": null
+          }
+        },
+        {
+          "id": 1188,
+          "title": "Leave the Design & Functionality to Us",
+          "description": "Our expert team will design and build your form from scratch, adding the right fields, design, and functionality – including any advanced features like conditional logic or workflow automation.",
+          "description_markdown": "Our expert team will design and build your form from scratch, adding the right fields, design, and functionality – including any advanced features like conditional logic or workflow automation.",
+          "icon": null,
+          "cardImage": {
+            "id": 1430,
+            "imageAlt": "an illustration of formester's advanced features tab",
+            "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_984_39b8a0b5fa.svg",
+            "width": null,
+            "height": null,
+            "image": null
+          }
+        },
+        {
+          "id": 1190,
+          "title": "We Deliver Your Custom Form",
+          "description": "Once it’s built, we’ll provide your form in the format you need. Whether you want it embedded on your site, linked to a page, or with a custom URL – it’s ready to go.",
+          "description_markdown": "Once it’s built, we’ll provide your form in the format you need. Whether you want it embedded on your site, linked to a page, or with a custom URL – it’s ready to go.",
+          "icon": null,
+          "cardImage": {
+            "id": 1433,
+            "imageAlt": "an illustration of formester's form building service",
+            "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_985_9138871d2a.svg",
+            "width": null,
+            "height": null,
+            "image": null
+          }
+        },
+        {
+          "id": 1191,
+          "title": "Sit Back & Relax",
+          "description": "No learning curve, no stress. You don’t have to worry about anything. We’ll ensure your form looks great on any device and works seamlessly.",
+          "description_markdown": "No learning curve, no stress. You don’t have to worry about anything. We’ll ensure your form looks great on any device and works seamlessly.",
+          "icon": null,
+          "cardImage": {
+            "id": 1432,
+            "imageAlt": "an illustration of formester's custom surveys",
+            "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_986_effb1e923f.svg",
+            "width": null,
+            "height": null,
+            "image": null
+          }
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "__component": "macro-components.standout-feature-detail",
+      "description": null,
+      "title": [
+        {
+          "id": 833,
+          "text": "Our Services",
+          "highlight": false,
+          "color": null,
+          "bold": null
+        }
+      ],
+      "itemList": [
+        {
+          "id": 1182,
+          "title": "Custom Forms",
+          "description": "Simple or advanced – contact, registration, application, or feedback forms, built to your needs.",
+          "description_markdown": "Simple or advanced – contact, registration, application, or feedback forms, built to your needs.",
+          "icon": null,
+          "cardImage": {
+            "id": 1419,
+            "imageAlt": "an illustration of form builder service",
+            "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_990_3d8da82534.svg",
+            "width": null,
+            "height": null,
+            "image": null
+          }
+        },
+        {
+          "id": 1180,
+          "title": "Custom Surveys",
+          "description": "Get in-depth insights with surveys that are tailored to gather the data you need.",
+          "description_markdown": "Get in-depth insights with surveys that are tailored to gather the data you need.",
+          "icon": null,
+          "cardImage": {
+            "id": 1420,
+            "imageAlt": "an illustration of formester's custom surveys",
+            "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_987_1c40e3683f.svg",
+            "width": null,
+            "height": null,
+            "image": null
+          }
+        },
+        {
+          "id": 1183,
+          "title": "Advanced Forms",
+          "description": "We’ll handle adding features such as conditional logic, scoring, file uploads and many more into your forms and surveys.",
+          "description_markdown": "We’ll handle adding features such as conditional logic, scoring, file uploads and many more into your forms and surveys.",
+          "icon": null,
+          "cardImage": {
+            "id": 1421,
+            "imageAlt": "an illustration of formester multilingual forms",
+            "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_988_2c7b464f47.svg",
+            "width": null,
+            "height": null,
+            "image": null
+          }
+        },
+        {
+          "id": 1181,
+          "title": "Multi-Language Forms",
+          "description": "Serve a global audience with forms that support multiple languages.",
+          "description_markdown": "Serve a global audience with forms that support multiple languages.",
+          "icon": null,
+          "cardImage": {
+            "id": 1422,
+            "imageAlt": "an illustration of formester multilingual forms",
+            "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_989_c545ba2069.svg",
+            "width": null,
+            "height": null,
+            "image": null
+          }
+        },
+        {
+          "id": 1184,
+          "title": "Workflow Automation",
+          "description": "Connect your form to your CRM, email marketing platform, or other tools to automate your workflow.",
+          "description_markdown": "Connect your form to your CRM, email marketing platform, or other tools to automate your workflow.",
+          "icon": null,
+          "cardImage": {
+            "id": 1423,
+            "imageAlt": "an illustration of formester's form builder integration",
+            "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_991_91f098ac69.svg",
+            "width": null,
+            "height": null,
+            "image": null
+          }
+        },
+        {
+          "id": 1192,
+          "title": "Tailored Quizzes",
+          "description": "Struggling with Quizzes? Let us create interactive quizzes that educate, engage, and convert, customized to fit your goals and audience.",
+          "description_markdown": "Struggling with Quizzes? Let us create interactive quizzes that educate, engage, and convert, customized to fit your goals and audience.",
+          "icon": null,
+          "cardImage": {
+            "id": 1434,
+            "imageAlt": "an illustration of multi language online forms",
+            "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_925_3_ea725ad08f.svg",
+            "width": null,
+            "height": null,
+            "image": null
+          }
+        }
+      ]
+    },
+    {
+      "id": 595,
+      "__component": "macro-components.testimonials",
+      "description": "See what our customers have to say about their experience with us!",
+      "version": "home",
+      "heading": [
+        {
+          "id": 827,
+          "text": "Testimonials",
+          "highlight": false,
+          "color": null,
+          "bold": null
+        }
+      ],
+      "testimonials": [
+        {
+          "id": 6,
+          "name": "Thibaud Martinez",
+          "position": "Organiser",
+          "organization": "Tedx",
+          "comment": "I really enjoy Formester. It’s clean and straight-forward and it does well, what it is supposed to do.",
+          "createdAt": "2024-06-18T03:53:38.957Z",
+          "updatedAt": "2025-01-22T02:56:48.567Z",
+          "publishedAt": "2024-06-18T03:53:40.693Z",
+          "companyLogo": {
+            "id": 229,
+            "imageAlt": "tedx-logo",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 1684,
+              "name": "tedx.webp",
+              "alternativeText": "tedx-logo",
+              "caption": "tedx-logo",
+              "width": 109,
+              "height": 38,
+              "formats": null,
+              "hash": "tedx_2fce0eee2e",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 1.09,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/tedx_2fce0eee2e.webp",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2024-08-01T14:38:23.941Z",
+              "updatedAt": "2024-12-01T07:50:31.505Z"
+            }
+          }
+        },
+        {
+          "id": 2,
+          "name": "Jilson",
+          "position": "Organiser",
+          "organization": "Vue Conference",
+          "comment": "Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.",
+          "createdAt": "2024-06-18T03:48:46.610Z",
+          "updatedAt": "2025-01-22T02:57:08.760Z",
+          "publishedAt": "2024-06-18T03:48:50.595Z",
+          "companyLogo": {
+            "id": 228,
+            "imageAlt": "photo-of-vue-conference",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 1680,
+              "name": "vueconf.webp",
+              "alternativeText": "photo-of-vue-conference",
+              "caption": "photo-of-vue-conference",
+              "width": 80,
+              "height": 80,
+              "formats": null,
+              "hash": "vueconf_1bc3dc0827",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 1.07,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2024-08-01T14:38:23.731Z",
+              "updatedAt": "2024-12-01T07:47:11.024Z"
+            }
+          }
+        },
+        {
+          "id": 4,
+          "name": "Costanza Casullo",
+          "position": "Volunteer",
+          "organization": "Wato Coding Hub",
+          "comment": "Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.",
+          "createdAt": "2024-06-18T03:51:15.232Z",
+          "updatedAt": "2025-01-22T02:58:03.674Z",
+          "publishedAt": "2024-06-18T03:51:21.477Z",
+          "companyLogo": {
+            "id": 225,
+            "imageAlt": "wato-coding-hub-logo",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 1681,
+              "name": "wato-coding-hub.webp",
+              "alternativeText": "wato-coding-hub-logo",
+              "caption": "wato-coding-hub-logo",
+              "width": 80,
+              "height": 81,
+              "formats": null,
+              "hash": "wato_coding_hub_e054f0ea9d",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 1.88,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/wato_coding_hub_e054f0ea9d.webp",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2024-08-01T14:38:23.738Z",
+              "updatedAt": "2024-12-01T07:49:13.371Z"
+            }
+          }
+        },
+        {
+          "id": 5,
+          "name": "Deanna Bugalski",
+          "position": "Founder/CEO",
+          "organization": "Suggesterfy",
+          "comment": "I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formester was super easy to set up, and the usability is seamless! I highly recommend!",
+          "createdAt": "2024-06-18T03:52:39.354Z",
+          "updatedAt": "2025-01-22T02:57:47.756Z",
+          "publishedAt": "2024-06-18T03:52:43.800Z",
+          "companyLogo": {
+            "id": 226,
+            "imageAlt": "suggesterfy-logo",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 1683,
+              "name": "suggesterfy_logo.webp",
+              "alternativeText": "suggesterfy-logo",
+              "caption": "suggesterfy-logo",
+              "width": 100,
+              "height": 50,
+              "formats": null,
+              "hash": "suggesterfy_logo_d1d7f996b9",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 1.91,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/suggesterfy_logo_d1d7f996b9.webp",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2024-08-01T14:38:23.921Z",
+              "updatedAt": "2024-12-01T07:49:52.459Z"
+            }
+          }
+        },
+        {
+          "id": 1,
+          "name": "Dr. Michele Ross",
+          "position": "Founder",
+          "organization": "Infused Health",
+          "comment": "I'm migrating my forms from Paperform, where I've been a user for over 4 years. Loving the software so far! I've already replaced Paperform form embeds & popups on my sites & my husband's websites with Formester forms",
+          "createdAt": "2024-06-18T03:47:14.605Z",
+          "updatedAt": "2025-01-22T02:57:30.159Z",
+          "publishedAt": "2024-06-18T03:47:18.889Z",
+          "companyLogo": {
+            "id": 227,
+            "imageAlt": "Dr. Michele Ross",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 1685,
+              "name": "dr._michelelogo.webp",
+              "alternativeText": null,
+              "caption": null,
+              "width": 300,
+              "height": 59,
+              "formats": {
+                "thumbnail": {
+                  "ext": ".webp",
+                  "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_dr_michelelogo_2269ae2211.webp",
+                  "hash": "thumbnail_dr_michelelogo_2269ae2211",
+                  "mime": "image/webp",
+                  "name": "thumbnail_dr._michelelogo.webp",
+                  "path": null,
+                  "size": 5.58,
+                  "width": 245,
+                  "height": 48
+                }
+              },
+              "hash": "dr_michelelogo_2269ae2211",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 5.87,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/dr_michelelogo_2269ae2211.webp",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2024-08-01T14:38:23.944Z",
+              "updatedAt": "2024-08-01T14:38:23.944Z"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 595,
+      "__component": "macro-components.cta",
+      "ctaValue": {
+        "id": 67,
+        "description": "Get access to advanced AI, unlimited forms & more. See pricing for more details.",
+        "type": "default",
+        "createdAt": "2024-11-04T07:07:43.916Z",
+        "updatedAt": "2025-06-12T18:47:31.840Z",
+        "publishedAt": "2024-11-04T07:08:18.018Z",
+        "locale": "en",
+        "title": [
+          {
+            "id": 393,
+            "text": "Ready to build your perfect form?",
+            "highlight": false,
+            "color": null,
+            "bold": null
+          }
+        ],
+        "buttons": [
+          {
+            "id": 338,
+            "link": "https://app.formester.com/users/sign_up",
+            "text": "Get Started–It’s Free!",
+            "type": "Primary",
+            "showArrow": null
+          }
+        ],
+        "localizations": []
+      }
+    },
+    {
+      "id": 628,
+      "__component": "macro-components.faqs",
+      "description": null,
+      "centered": null,
+      "title": [
+        {
+          "id": 830,
+          "text": "FAQs",
+          "highlight": false,
+          "color": null,
+          "bold": null
+        }
+      ],
+      "faqList": [
+        {
+          "id": 663,
+          "header": "Why should I pay for a custom form when I can use a free form builder?",
+          "body": "Free form builders often lack advanced features, customization, and expert setup. With our service, you get a professionally built form tailored to your exact needs—without wasting time figuring things out yourself.",
+          "body_markdown": "Free form builders often lack advanced features, customization, and expert setup. With our service, you get a professionally built form tailored to your exact needs—without wasting time figuring things out yourself.",
+          "list": []
+        },
+        {
+          "id": 664,
+          "header": "How long will it take to build my form?",
+          "body": "We deliver most forms within a few days, depending on complexity. Need it urgently? Let us know, and we’ll prioritize your request.\n\n",
+          "body_markdown": "We deliver most forms within a few days, depending on complexity. Need it urgently? Let us know, and we’ll prioritize your request.\n\n",
+          "list": []
+        },
+        {
+          "id": 661,
+          "header": "Can I request changes after the form is built?",
+          "body": "Yes! We include a revision period to ensure your form meets your expectations.\n\n",
+          "body_markdown": "Yes! We include a revision period to ensure your form meets your expectations.\n\n",
+          "list": []
+        },
+        {
+          "id": 662,
+          "header": "Will my form work on mobile devices?",
+          "body": "Absolutely. Every form we build is fully responsive and works smoothly on all screen sizes.\n\n",
+          "body_markdown": "Absolutely. Every form we build is fully responsive and works smoothly on all screen sizes.\n\n",
+          "list": []
+        },
+        {
+          "id": 668,
+          "header": "Can my form accept payments?",
+          "body": "Yes! We can integrate payment gateways like Stripe, PayPal, or your preferred provider for seamless transactions.",
+          "body_markdown": "Yes! We can integrate payment gateways like Stripe, PayPal, or your preferred provider for seamless transactions.",
+          "list": []
+        },
+        {
+          "id": 667,
+          "header": "What if I need to collect sensitive or confidential data?",
+          "body": "We ensure secure form setup with encryption and compliance with data protection regulations.",
+          "body_markdown": "We ensure secure form setup with encryption and compliance with data protection regulations.",
+          "list": []
+        },
+        {
+          "id": 665,
+          "header": "Do I need a website to use the form?",
+          "body": "Not at all! We can provide a shareable link or even host the form for you.",
+          "body_markdown": "Not at all! We can provide a shareable link or even host the form for you.",
+          "list": []
+        },
+        {
+          "id": 666,
+          "header": "Can my form be integrated with my CRM or other tools?",
+          "body": "Yes! We support integrations with CRMs, email marketing platforms, and automation tools to streamline your workflow.",
+          "body_markdown": "Yes! We support integrations with CRMs, email marketing platforms, and automation tools to streamline your workflow.",
+          "list": []
+        },
+        {
+          "id": 669,
+          "header": "What if I need multiple forms?",
+          "body": "We can create as many as you need, with bulk pricing options available.\n\n",
+          "body_markdown": "We can create as many as you need, with bulk pricing options available.\n\n",
+          "list": []
+        },
+        {
+          "id": 670,
+          "header": "What happens if I face any issues after the form is delivered?",
+          "body": "We provide post-launch support to ensure everything runs smoothly.",
+          "body_markdown": "We provide post-launch support to ensure everything runs smoothly.",
+          "list": []
+        }
+      ]
+    }
+  ]
+}

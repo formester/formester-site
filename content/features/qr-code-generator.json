@@ -1,0 +1,721 @@
+{
+  "slug": "qr-code-generator",
+  "navTitle": "QR Code Generator",
+  "navDescription": "Share forms via QR",
+  "featureCategory": "Form embedding and sharing",
+  "featurePlan": "Free",
+  "head": {
+    "title": "Free QR Code Generator for Forms, Surveys & RSVPs | Formester",
+    "link": [
+      {
+        "hid": "canonical",
+        "rel": "canonical",
+        "href": "https://formester.com/features/qr-code-generator/"
+      }
+    ],
+    "meta": [
+      {
+        "property": "article:modified_time",
+        "content": "2026-06-15T10:45:45.017Z"
+      },
+      {
+        "hid": "description",
+        "name": "description",
+        "content": "Turn any form into a QR code so people scan to open it on their phone. Customize the style, color, and format, download it, and add it to posters, flyers, packaging, or invitations."
+      },
+      {
+        "hid": "og:site_name",
+        "name": "og:site_name",
+        "content": "Free QR Code Generator for Forms, Surveys & RSVPs | Formester"
+      },
+      {
+        "hid": "og:type",
+        "property": "og:type",
+        "content": "website"
+      },
+      {
+        "hid": "og:url",
+        "property": "og:url",
+        "content": "https://formester.com/features/qr-code-generator/"
+      },
+      {
+        "hid": "og:title",
+        "property": "og:title",
+        "content": "Free QR Code Generator for Forms, Surveys & RSVPs | Formester"
+      },
+      {
+        "hid": "og:description",
+        "property": "og:description",
+        "content": "Turn any form into a QR code so people scan to open it on their phone. Customize the style, color, and format, download it, and add it to posters, flyers, packaging, or invitations."
+      },
+      {
+        "hid": "og:image",
+        "property": "og:image",
+        "content": "https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_s_qr_code_generator_feature_page_hero_image_7965672c7a.png"
+      },
+      {
+        "hid": "og:image:alt",
+        "name": "og:image:alt",
+        "content": "Free QR Code Generator for Forms, Surveys & RSVPs | Formester"
+      },
+      {
+        "hid": "twitter:url",
+        "name": "twitter:url",
+        "content": "https://formester.com/features/qr-code-generator/"
+      },
+      {
+        "name": "twitter:site",
+        "content": "@_formester_"
+      },
+      {
+        "hid": "twitter:title",
+        "name": "twitter:title",
+        "content": "Free QR Code Generator for Forms, Surveys & RSVPs | Formester"
+      },
+      {
+        "hid": "twitter:description",
+        "name": "twitter:description",
+        "content": "Turn any form into a QR code so people scan to open it on their phone. Customize the style, color, and format, download it, and add it to posters, flyers, packaging, or invitations."
+      },
+      {
+        "hid": "twitter:image",
+        "name": "twitter:image",
+        "content": "https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_s_qr_code_generator_feature_page_hero_image_7965672c7a.png"
+      },
+      {
+        "hid": "twitter:image:alt",
+        "name": "twitter:image:alt",
+        "content": "Free QR Code Generator for Forms, Surveys & RSVPs | Formester"
+      },
+      {
+        "hid": "twitter:card",
+        "name": "twitter:card",
+        "content": "summary_large_image"
+      },
+      {
+        "hid": "apple-mobile-web-app-title",
+        "name": "apple-mobile-web-app-title",
+        "content": "Formester"
+      },
+      {
+        "hid": "image",
+        "name": "image",
+        "property": "og:image",
+        "content": "https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_s_qr_code_generator_feature_page_hero_image_7965672c7a.png"
+      },
+      {
+        "hid": "keywords",
+        "name": "keywords",
+        "content": [
+          "qr code generator"
+        ]
+      }
+    ]
+  },
+  "jsonld": [
+    {
+      "@context": "https://schema.org",
+      "url": "https://formester.com",
+      "logo": "https://formester.com/logo.svg",
+      "name": "Formester",
+      "@type": "Organization"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "name": "How do I create a QR code for my form?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Build your form, survey, or RSVP page in Formester, then use the Generate QR Code option to create a QR code linked to it. Customize the style and download it, then place it anywhere people can scan to open your form.",
+            "@type": "Answer"
+          }
+        },
+        {
+          "name": "Can I create a free RSVP QR code for events?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Yes. You can create a free RSVP QR code for event registrations, weddings, or meetups. Guests scan it with their phone camera and confirm attendance in seconds — no link to type and no app to install.",
+            "@type": "Answer"
+          }
+        },
+        {
+          "name": "Where can I use my QR code after creating it?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Anywhere people can see it. Add it to posters, flyers, invitations, packaging, table tents, emails, websites, or social media. Anyone who scans it is taken straight to your form or page.",
+            "@type": "Answer"
+          }
+        },
+        {
+          "name": "Can I customize my QR code design?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Yes. You can adjust the style, color, and format of the QR code and download it so it matches your brand or print design.",
+            "@type": "Answer"
+          }
+        },
+        {
+          "name": "Is the QR code generator free to use?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Yes. You can generate and download QR codes for your forms, surveys, and RSVP pages for free.",
+            "@type": "Answer"
+          }
+        },
+        {
+          "name": "Will the QR code work on all devices?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Yes. QR codes can be scanned using any smartphone camera or QR scanner app and work smoothly across iPhone, Android, and tablets.",
+            "@type": "Answer"
+          }
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": 95,
+      "__component": "macro-components.hero-v2",
+      "description": "Generate a QR code for any Formester form, survey, or RSVP page. Customize the style, color, and format, download it, and add it to posters, flyers, or packaging — people scan with their phone and the form opens instantly, no link to type.",
+      "trustText": "Generate QR codes for your forms — free to start",
+      "blobColorA": "#f5eeff",
+      "blobColorB": "#f1ebff",
+      "blobColorC": "#f4efff",
+      "mockupHtml": "<style>@keyframes qr-scan{0%,8%{top:6%;opacity:0}14%{opacity:1}50%{top:88%;opacity:1}56%{opacity:0}100%{top:88%;opacity:0}}@keyframes qr-phone{0%,52%{opacity:0;transform:translateY(10px) scale(.97)}66%,100%{opacity:1;transform:translateY(0) scale(1)}}@keyframes qr-beam{0%,52%{opacity:0}66%,100%{opacity:1}}@keyframes qr-blank{0%,60%{opacity:1}70%,100%{opacity:0}}.qr-line{animation:qr-scan 5.5s ease-in-out infinite}.qr-phoneform{animation:qr-phone 5.5s ease-in-out infinite}.qr-beam{animation:qr-beam 5.5s ease-in-out infinite}.qr-blank{animation:qr-blank 5.5s ease-in-out infinite}@media (prefers-reduced-motion:reduce){.qr-line{animation:none;opacity:0}.qr-phoneform{animation:none;opacity:1;transform:none}.qr-beam{animation:none;opacity:1}.qr-blank{animation:none;opacity:0}}</style><div style='display:grid;grid-template-columns:auto auto auto;gap:14px;align-items:center;justify-content:center;max-width:560px;margin:0 auto;'><div style='background:#fff;border:1px solid #eaecf0;border-radius:16px;box-shadow:0 24px 80px rgba(15,14,26,.14),0 8px 24px rgba(15,14,26,.06);padding:16px;'><div style='font-size:9px;line-height:1;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#6434d0;margin-bottom:10px;text-align:center;'>Scan to open</div><div style='position:relative;width:140px;height:140px;margin:0 auto;background:#fff;border-radius:8px;overflow:hidden;'><div style='position:absolute;inset:9px;'><svg viewBox='0 0 21 21' width='100%' height='100%' shape-rendering='crispEdges' style='display:block;'><rect x='0' y='0' width='1' height='1' fill='#101828'/><rect x='1' y='0' width='1' height='1' fill='#101828'/><rect x='2' y='0' width='1' height='1' fill='#101828'/><rect x='3' y='0' width='1' height='1' fill='#101828'/><rect x='4' y='0' width='1' height='1' fill='#101828'/><rect x='5' y='0' width='1' height='1' fill='#101828'/><rect x='6' y='0' width='1' height='1' fill='#101828'/><rect x='11' y='0' width='1' height='1' fill='#6434d0'/><rect x='12' y='0' width='1' height='1' fill='#101828'/><rect x='14' y='0' width='1' height='1' fill='#101828'/><rect x='15' y='0' width='1' height='1' fill='#101828'/><rect x='16' y='0' width='1' height='1' fill='#101828'/><rect x='17' y='0' width='1' height='1' fill='#101828'/><rect x='18' y='0' width='1' height='1' fill='#101828'/><rect x='19' y='0' width='1' height='1' fill='#101828'/><rect x='20' y='0' width='1' height='1' fill='#101828'/><rect x='0' y='1' width='1' height='1' fill='#101828'/><rect x='6' y='1' width='1' height='1' fill='#101828'/><rect x='10' y='1' width='1' height='1' fill='#6434d0'/><rect x='14' y='1' width='1' height='1' fill='#101828'/><rect x='20' y='1' width='1' height='1' fill='#101828'/><rect x='0' y='2' width='1' height='1' fill='#101828'/><rect x='2' y='2' width='1' height='1' fill='#101828'/><rect x='3' y='2' width='1' height='1' fill='#101828'/><rect x='4' y='2' width='1' height='1' fill='#101828'/><rect x='6' y='2' width='1' height='1' fill='#101828'/><rect x='8' y='2' width='1' height='1' fill='#101828'/><rect x='9' y='2' width='1' height='1' fill='#6434d0'/><rect x='14' y='2' width='1' height='1' fill='#101828'/><rect x='16' y='2' width='1' height='1' fill='#101828'/><rect x='17' y='2' width='1' height='1' fill='#101828'/><rect x='18' y='2' width='1' height='1' fill='#101828'/><rect x='20' y='2' width='1' height='1' fill='#101828'/><rect x='0' y='3' width='1' height='1' fill='#101828'/><rect x='2' y='3' width='1' height='1' fill='#101828'/><rect x='3' y='3' width='1' height='1' fill='#101828'/><rect x='4' y='3' width='1' height='1' fill='#101828'/><rect x='6' y='3' width='1' height='1' fill='#101828'/><rect x='11' y='3' width='1' height='1' fill='#101828'/><rect x='12' y='3' width='1' height='1' fill='#101828'/><rect x='14' y='3' width='1' height='1' fill='#101828'/><rect x='16' y='3' width='1' height='1' fill='#101828'/><rect x='17' y='3' width='1' height='1' fill='#101828'/><rect x='18' y='3' width='1' height='1' fill='#101828'/><rect x='20' y='3' width='1' height='1' fill='#101828'/><rect x='0' y='4' width='1' height='1' fill='#101828'/><rect x='2' y='4' width='1' height='1' fill='#101828'/><rect x='3' y='4' width='1' height='1' fill='#101828'/><rect x='4' y='4' width='1' height='1' fill='#101828'/><rect x='6' y='4' width='1' height='1' fill='#101828'/><rect x='8' y='4' width='1' height='1' fill='#101828'/><rect x='10' y='4' width='1' height='1' fill='#101828'/><rect x='11' y='4' width='1' height='1' fill='#101828'/><rect x='14' y='4' width='1' height='1' fill='#101828'/><rect x='16' y='4' width='1' height='1' fill='#101828'/><rect x='17' y='4' width='1' height='1' fill='#101828'/><rect x='18' y='4' width='1' height='1' fill='#101828'/><rect x='20' y='4' width='1' height='1' fill='#101828'/><rect x='0' y='5' width='1' height='1' fill='#101828'/><rect x='6' y='5' width='1' height='1' fill='#101828'/><rect x='8' y='5' width='1' height='1' fill='#101828'/><rect x='9' y='5' width='1' height='1' fill='#101828'/><rect x='10' y='5' width='1' height='1' fill='#101828'/><rect x='14' y='5' width='1' height='1' fill='#101828'/><rect x='20' y='5' width='1' height='1' fill='#101828'/><rect x='0' y='6' width='1' height='1' fill='#101828'/><rect x='1' y='6' width='1' height='1' fill='#101828'/><rect x='2' y='6' width='1' height='1' fill='#101828'/><rect x='3' y='6' width='1' height='1' fill='#101828'/><rect x='4' y='6' width='1' height='1' fill='#101828'/><rect x='5' y='6' width='1' height='1' fill='#101828'/><rect x='6' y='6' width='1' height='1' fill='#101828'/><rect x='8' y='6' width='1' height='1' fill='#101828'/><rect x='10' y='6' width='1' height='1' fill='#101828'/><rect x='12' y='6' width='1' height='1' fill='#101828'/><rect x='14' y='6' width='1' height='1' fill='#101828'/><rect x='15' y='6' width='1' height='1' fill='#101828'/><rect x='16' y='6' width='1' height='1' fill='#101828'/><rect x='17' y='6' width='1' height='1' fill='#101828'/><rect x='18' y='6' width='1' height='1' fill='#101828'/><rect x='19' y='6' width='1' height='1' fill='#101828'/><rect x='20' y='6' width='1' height='1' fill='#101828'/><rect x='10' y='7' width='1' height='1' fill='#101828'/><rect x='11' y='7' width='1' height='1' fill='#101828'/><rect x='12' y='7' width='1' height='1' fill='#101828'/><rect x='2' y='8' width='1' height='1' fill='#101828'/><rect x='3' y='8' width='1' height='1' fill='#6434d0'/><rect x='6' y='8' width='1' height='1' fill='#101828'/><rect x='8' y='8' width='1' height='1' fill='#101828'/><rect x='9' y='8' width='1' height='1' fill='#101828'/><rect x='13' y='8' width='1' height='1' fill='#101828'/><rect x='14' y='8' width='1' height='1' fill='#6434d0'/><rect x='15' y='8' width='1' height='1' fill='#101828'/><rect x='16' y='8' width='1' height='1' fill='#101828'/><rect x='19' y='8' width='1' height='1' fill='#101828'/><rect x='20' y='8' width='1' height='1' fill='#101828'/><rect x='1' y='9' width='1' height='1' fill='#101828'/><rect x='5' y='9' width='1' height='1' fill='#101828'/><rect x='7' y='9' width='1' height='1' fill='#101828'/><rect x='12' y='9' width='1' height='1' fill='#101828'/><rect x='13' y='9' width='1' height='1' fill='#6434d0'/><rect x='14' y='9' width='1' height='1' fill='#101828'/><rect x='17' y='9' width='1' height='1' fill='#101828'/><rect x='18' y='9' width='1' height='1' fill='#101828'/><rect x='19' y='9' width='1' height='1' fill='#101828'/><rect x='0' y='10' width='1' height='1' fill='#101828'/><rect x='4' y='10' width='1' height='1' fill='#101828'/><rect x='5' y='10' width='1' height='1' fill='#101828'/><rect x='6' y='10' width='1' height='1' fill='#101828'/><rect x='7' y='10' width='1' height='1' fill='#101828'/><rect x='11' y='10' width='1' height='1' fill='#101828'/><rect x='12' y='10' width='1' height='1' fill='#6434d0'/><rect x='16' y='10' width='1' height='1' fill='#101828'/><rect x='17' y='10' width='1' height='1' fill='#101828'/><rect x='18' y='10' width='1' height='1' fill='#101828'/><rect x='19' y='10' width='1' height='1' fill='#101828'/><rect x='0' y='11' width='1' height='1' fill='#6434d0'/><rect x='3' y='11' width='1' height='1' fill='#101828'/><rect x='4' y='11' width='1' height='1' fill='#101828'/><rect x='8' y='11' width='1' height='1' fill='#101828'/><rect x='9' y='11' width='1' height='1' fill='#101828'/><rect x='10' y='11' width='1' height='1' fill='#101828'/><rect x='15' y='11' width='1' height='1' fill='#101828'/><rect x='16' y='11' width='1' height='1' fill='#101828'/><rect x='19' y='11' width='1' height='1' fill='#101828'/><rect x='20' y='11' width='1' height='1' fill='#101828'/><rect x='1' y='12' width='1' height='1' fill='#101828'/><rect x='2' y='12' width='1' height='1' fill='#101828'/><rect x='3' y='12' width='1' height='1' fill='#101828'/><rect x='6' y='12' width='1' height='1' fill='#101828'/><rect x='7' y='12' width='1' height='1' fill='#101828'/><rect x='9' y='12' width='1' height='1' fill='#101828'/><rect x='11' y='12' width='1' height='1' fill='#101828'/><rect x='12' y='12' width='1' height='1' fill='#101828'/><rect x='13' y='12' width='1' height='1' fill='#101828'/><rect x='14' y='12' width='1' height='1' fill='#101828'/><rect x='18' y='12' width='1' height='1' fill='#101828'/><rect x='19' y='12' width='1' height='1' fill='#101828'/><rect x='20' y='12' width='1' height='1' fill='#101828'/><rect x='10' y='13' width='1' height='1' fill='#101828'/><rect x='11' y='13' width='1' height='1' fill='#101828'/><rect x='12' y='13' width='1' height='1' fill='#101828'/><rect x='13' y='13' width='1' height='1' fill='#101828'/><rect x='16' y='13' width='1' height='1' fill='#101828'/><rect x='17' y='13' width='1' height='1' fill='#101828'/><rect x='18' y='13' width='1' height='1' fill='#101828'/><rect x='0' y='14' width='1' height='1' fill='#101828'/><rect x='1' y='14' width='1' height='1' fill='#101828'/><rect x='2' y='14' width='1' height='1' fill='#101828'/><rect x='3' y='14' width='1' height='1' fill='#101828'/><rect x='4' y='14' width='1' height='1' fill='#101828'/><rect x='5' y='14' width='1' height='1' fill='#101828'/><rect x='6' y='14' width='1' height='1' fill='#101828'/><rect x='10' y='14' width='1' height='1' fill='#101828'/><rect x='11' y='14' width='1' height='1' fill='#101828'/><rect x='15' y='14' width='1' height='1' fill='#101828'/><rect x='16' y='14' width='1' height='1' fill='#101828'/><rect x='20' y='14' width='1' height='1' fill='#101828'/><rect x='0' y='15' width='1' height='1' fill='#101828'/><rect x='6' y='15' width='1' height='1' fill='#101828'/><rect x='8' y='15' width='1' height='1' fill='#101828'/><rect x='9' y='15' width='1' height='1' fill='#101828'/><rect x='13' y='15' width='1' height='1' fill='#101828'/><rect x='14' y='15' width='1' height='1' fill='#101828'/><rect x='15' y='15' width='1' height='1' fill='#101828'/><rect x='19' y='15' width='1' height='1' fill='#101828'/><rect x='0' y='16' width='1' height='1' fill='#101828'/><rect x='2' y='16' width='1' height='1' fill='#101828'/><rect x='3' y='16' width='1' height='1' fill='#101828'/><rect x='4' y='16' width='1' height='1' fill='#101828'/><rect x='6' y='16' width='1' height='1' fill='#101828'/><rect x='10' y='16' width='1' height='1' fill='#101828'/><rect x='11' y='16' width='1' height='1' fill='#101828'/><rect x='12' y='16' width='1' height='1' fill='#101828'/><rect x='17' y='16' width='1' height='1' fill='#6434d0'/><rect x='18' y='16' width='1' height='1' fill='#101828'/><rect x='19' y='16' width='1' height='1' fill='#101828'/><rect x='0' y='17' width='1' height='1' fill='#101828'/><rect x='2' y='17' width='1' height='1' fill='#101828'/><rect x='3' y='17' width='1' height='1' fill='#101828'/><rect x='4' y='17' width='1' height='1' fill='#101828'/><rect x='6' y='17' width='1' height='1' fill='#101828'/><rect x='9' y='17' width='1' height='1' fill='#101828'/><rect x='10' y='17' width='1' height='1' fill='#101828'/><rect x='12' y='17' width='1' height='1' fill='#101828'/><rect x='15' y='17' width='1' height='1' fill='#101828'/><rect x='16' y='17' width='1' height='1' fill='#6434d0'/><rect x='17' y='17' width='1' height='1' fill='#101828'/><rect x='20' y='17' width='1' height='1' fill='#101828'/><rect x='0' y='18' width='1' height='1' fill='#101828'/><rect x='2' y='18' width='1' height='1' fill='#101828'/><rect x='3' y='18' width='1' height='1' fill='#101828'/><rect x='4' y='18' width='1' height='1' fill='#101828'/><rect x='6' y='18' width='1' height='1' fill='#101828'/><rect x='8' y='18' width='1' height='1' fill='#101828'/><rect x='9' y='18' width='1' height='1' fill='#101828'/><rect x='12' y='18' width='1' height='1' fill='#101828'/><rect x='13' y='18' width='1' height='1' fill='#101828'/><rect x='14' y='18' width='1' height='1' fill='#101828'/><rect x='15' y='18' width='1' height='1' fill='#6434d0'/><rect x='19' y='18' width='1' height='1' fill='#101828'/><rect x='20' y='18' width='1' height='1' fill='#101828'/><rect x='0' y='19' width='1' height='1' fill='#101828'/><rect x='6' y='19' width='1' height='1' fill='#101828'/><rect x='11' y='19' width='1' height='1' fill='#101828'/><rect x='12' y='19' width='1' height='1' fill='#101828'/><rect x='13' y='19' width='1' height='1' fill='#101828'/><rect x='17' y='19' width='1' height='1' fill='#101828'/><rect x='18' y='19' width='1' height='1' fill='#101828'/><rect x='0' y='20' width='1' height='1' fill='#101828'/><rect x='1' y='20' width='1' height='1' fill='#101828'/><rect x='2' y='20' width='1' height='1' fill='#101828'/><rect x='3' y='20' width='1' height='1' fill='#101828'/><rect x='4' y='20' width='1' height='1' fill='#101828'/><rect x='5' y='20' width='1' height='1' fill='#101828'/><rect x='6' y='20' width='1' height='1' fill='#101828'/><rect x='8' y='20' width='1' height='1' fill='#101828'/><rect x='10' y='20' width='1' height='1' fill='#101828'/><rect x='11' y='20' width='1' height='1' fill='#101828'/><rect x='12' y='20' width='1' height='1' fill='#101828'/><rect x='15' y='20' width='1' height='1' fill='#101828'/><rect x='16' y='20' width='1' height='1' fill='#101828'/><rect x='17' y='20' width='1' height='1' fill='#101828'/><rect x='18' y='20' width='1' height='1' fill='#101828'/></svg></div><div class='qr-line' style='position:absolute;left:6%;right:6%;height:3px;border-radius:3px;background:#6434d0;box-shadow:0 0 10px 2px rgba(100,52,208,.5);'></div></div></div><div class='qr-beam' style='display:flex;flex-direction:column;align-items:center;gap:5px;color:#6434d0;'><svg width='34' height='18' viewBox='0 0 34 18' fill='none' stroke='currentColor' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><path d='M2 9h28M22 3l8 6-8 6'/></svg><span style='font-size:8.5px;line-height:1;font-weight:600;'>opens</span></div><div style='width:118px;background:#14121f;border-radius:20px;padding:8px;box-shadow:0 24px 80px rgba(15,14,26,.2),0 8px 24px rgba(15,14,26,.1);'><div style='background:#fff;border-radius:13px;overflow:hidden;'><div style='height:14px;background:#f9fafb;border-bottom:1px solid #eaecf0;display:flex;align-items:center;justify-content:center;'><span style='width:30px;height:4px;border-radius:3px;background:#d0d5dd;'></span></div><div style='padding:11px 11px 13px;position:relative;min-height:118px;'><div class='qr-blank' style='position:absolute;left:11px;right:11px;top:11px;'><div style='height:7px;width:64%;background:#e4e7ec;border-radius:3px;margin-bottom:7px;'></div><div style='height:5px;width:42%;background:#eef0f3;border-radius:3px;'></div></div><div class='qr-phoneform'><div style='font-size:10px;line-height:1.2;font-weight:700;color:#101828;margin-bottom:2px;'>Event RSVP</div><div style='font-size:7px;line-height:1.3;color:#697586;margin-bottom:10px;'>formester.com / rsvp</div><div style='font-size:7px;line-height:1;color:#475467;margin-bottom:3px;'>Your name</div><div style='height:15px;border:1px solid #d0d5dd;border-radius:5px;margin-bottom:8px;'></div><div style='font-size:7px;line-height:1;color:#475467;margin-bottom:3px;'>Attending?</div><div style='display:flex;gap:5px;margin-bottom:10px;'><div style='flex:1;height:15px;border-radius:5px;background:#6434d0;'></div><div style='flex:1;height:15px;border:1px solid #d0d5dd;border-radius:5px;'></div></div><div style='background:#6434d0;color:#fff;font-size:8px;line-height:1;font-weight:600;text-align:center;border-radius:5px;padding:7px 0;'>RSVP</div></div></div></div></div></div>",
+      "layout": "split",
+      "title": [
+        {
+          "id": 4850,
+          "text": "Turn your form ",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        },
+        {
+          "id": 4851,
+          "text": "into a scan-to-open QR code",
+          "highlight": true,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": 1599,
+          "link": "https://app.formester.com/users/sign_up",
+          "text": "Get Started — It's Free",
+          "type": "Primary",
+          "showArrow": true
+        },
+        {
+          "id": 1598,
+          "link": "https://youtu.be/rpn0tptMRnc",
+          "text": "Watch demo",
+          "type": "Secondary",
+          "showArrow": false
+        }
+      ],
+      "badge": {
+        "id": 96,
+        "text": "QR Code Generator",
+        "tag": null,
+        "link": null
+      },
+      "image": null,
+      "tabCardContent": []
+    },
+    {
+      "id": 532,
+      "__component": "macro-components.trust-seals",
+      "label": "Trusted by 56k+ teams, creators & event organizers",
+      "heading": null,
+      "description": null,
+      "showTrustBadges": true,
+      "rawHtml": null,
+      "title": [],
+      "logos": []
+    },
+    {
+      "id": 162,
+      "__component": "macro-components.card-grid",
+      "eyebrow": "What you get",
+      "description": "Generate a QR code for any form in seconds, style it to fit your design, and download it ready for print or screen. People scan and the form opens — no links to type, no friction.",
+      "columns": "3",
+      "background": null,
+      "title": [
+        {
+          "id": 4846,
+          "text": "Everything you need to ",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        },
+        {
+          "id": 4845,
+          "text": "share a form by scan",
+          "highlight": true,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "cards": [
+        {
+          "id": 651,
+          "tag": "One scan",
+          "tagColor": "violet",
+          "title": "Instant QR for any form",
+          "body": "Turn any Formester form, survey, or RSVP page into a QR code with one click. People point their phone camera at it and your form opens instantly — no app, no typing a link.",
+          "mockHtml": "<div style='display:flex;align-items:center;gap:12px;'><div style='display:grid;grid-template-columns:repeat(5,7px);grid-template-rows:repeat(5,7px);gap:2px;flex-shrink:0;'><div style='background:#14121f;'></div><div style='background:#14121f;'></div><div></div><div style='background:#14121f;'></div><div style='background:#14121f;'></div><div style='background:#14121f;'></div><div></div><div style='background:#6434d0;'></div><div></div><div style='background:#14121f;'></div><div></div><div style='background:#14121f;'></div><div style='background:#14121f;'></div><div style='background:#14121f;'></div><div></div><div style='background:#14121f;'></div><div></div><div style='background:#14121f;'></div><div></div><div style='background:#14121f;'></div><div style='background:#14121f;'></div><div style='background:#14121f;'></div><div></div><div style='background:#14121f;'></div><div style='background:#14121f;'></div></div><svg width='18' height='14' viewBox='0 0 28 16' fill='none' stroke='#6434d0' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><path d='M2 8h22M18 3l6 5-6 5'/></svg><div style='font-size:11px;line-height:1.2;font-weight:600;color:#101828;'>Form opens</div></div>",
+          "icon": null
+        },
+        {
+          "id": 654,
+          "tag": "On brand",
+          "tagColor": "blue",
+          "title": "Customize style, color & format",
+          "body": "Match the QR code to your brand or print piece — adjust its style and color, then download in the format you need so it looks right on a flyer, poster, or screen.",
+          "mockHtml": "<div style='display:flex;align-items:center;gap:10px;'><div style='display:flex;gap:6px;'><span style='width:18px;height:18px;border-radius:50%;background:#6434d0;border:2px solid #fff;box-shadow:0 0 0 1px #d6ccf2;'></span><span style='width:18px;height:18px;border-radius:50%;background:#101828;'></span><span style='width:18px;height:18px;border-radius:50%;background:#0e7090;'></span></div><span style='width:1px;height:20px;background:#eaecf0;'></span><div style='display:flex;gap:5px;'><span style='font-size:9.5px;line-height:1;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:4px 7px;'>PNG</span><span style='font-size:9.5px;line-height:1;font-weight:700;color:#475467;background:#f9fafb;border:1px solid #eaecf0;border-radius:6px;padding:4px 7px;'>SVG</span></div></div>",
+          "icon": null
+        },
+        {
+          "id": 653,
+          "tag": "Print ready",
+          "tagColor": "green",
+          "title": "Download & print anywhere",
+          "body": "Download the QR code and drop it onto posters, flyers, invitations, packaging, or table tents. It stays crisp at any size, so it scans reliably whether it's on a card or a banner.",
+          "mockHtml": "<div style='display:flex;align-items:center;gap:8px;border:1px solid #eaecf0;border-radius:9px;padding:9px 11px;background:#fff;'><span style='width:24px;height:24px;border-radius:7px;background:#ecfdf3;color:#027a48;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><path d='M12 3v12m0 0l-4-4m4 4l4-4M5 21h14'/></svg></span><span style='font-size:11px;line-height:1.2;font-weight:600;color:#101828;'>qr-rsvp.png · downloaded</span></div>",
+          "icon": null
+        },
+        {
+          "id": 655,
+          "tag": "No setup",
+          "tagColor": "amber",
+          "title": "Zero technical work",
+          "body": "No coding, no separate QR tool, and no design skills. The code lives next to your form, so updating the form behind it never changes the code you've already printed.",
+          "mockHtml": "<div style='display:flex;flex-wrap:wrap;gap:6px;'><span style='font-size:10px;line-height:1;font-weight:600;color:#475467;background:#f9fafb;border:1px solid #eaecf0;border-radius:7px;padding:5px 9px;'>No code</span><span style='font-size:10px;line-height:1;font-weight:600;color:#475467;background:#f9fafb;border:1px solid #eaecf0;border-radius:7px;padding:5px 9px;'>No extra tool</span><span style='font-size:10px;line-height:1;font-weight:600;color:#475467;background:#f9fafb;border:1px solid #eaecf0;border-radius:7px;padding:5px 9px;'>One click</span></div>",
+          "icon": null
+        },
+        {
+          "id": 656,
+          "tag": "Any phone",
+          "tagColor": "rose",
+          "title": "Scans on every device",
+          "body": "Any smartphone camera or QR scanner app opens the form — iPhone, Android, or tablet. The form itself is fully responsive, so it looks right the moment it loads on their screen.",
+          "mockHtml": "<div style='display:flex;align-items:flex-end;gap:8px;'><div style='width:22px;height:38px;border:1px solid #6434d0;border-radius:5px;background:#faf8ff;'></div><div style='width:34px;height:30px;border:1px solid #d0d5dd;border-radius:5px;'></div><div style='width:46px;height:26px;border:1px solid #d0d5dd;border-radius:5px;'></div></div>",
+          "icon": null
+        },
+        {
+          "id": 652,
+          "tag": "Faster replies",
+          "tagColor": "violet",
+          "title": "Collect responses on the spot",
+          "body": "People respond in the moment they see the code — at an event, a store exit, or on packaging — instead of remembering a URL later. Every scan that converts lands in your dashboard.",
+          "mockHtml": "<div style='display:flex;align-items:center;gap:10px;border:1px solid #eaecf0;border-radius:10px;padding:10px 12px;background:#fff;'><div style='width:40px;height:40px;border-radius:50%;background:conic-gradient(#6434d0 0 76%,#e9e4f5 76% 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;'><div style='width:27px;height:27px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:9px;line-height:1;font-weight:700;color:#6434d0;'>1,284</div></div><div style='font-size:11px;line-height:1.4;color:#475467;'>scans turned into <span style='font-weight:700;color:#101828;'>responses</span></div></div>",
+          "icon": null
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "__component": "macro-components.sticky-steps-section",
+      "badge": "How it works",
+      "heading": "Generate your form's QR code in four steps",
+      "description": "Build your form, generate its QR code, style it, and share it. People scan to open the form — every response flows straight back to Formester.",
+      "background": "#f9fafb",
+      "steps": [
+        {
+          "id": 154,
+          "title": "Build your form, survey, or RSVP page",
+          "description": "Create what you want people to fill out in Formester — an event RSVP, a feedback survey, a donation page, or any form.",
+          "rawHtml": "<div style='display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #eaecf0;border-radius:10px;padding:10px 12px;'><span style='width:24px;height:24px;border-radius:7px;background:#f0ebfa;color:#6434d0;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><path d='M4 4h16v16H4z'/><path d='M8 9h8M8 13h5'/></svg></span><div style='font-size:12px;line-height:1.2;font-weight:600;color:#101828;'>Event RSVP form · ready</div></div>",
+          "image": null
+        },
+        {
+          "id": 155,
+          "title": "Generate the QR code",
+          "description": "Once your form is ready, click Generate QR Code and Formester instantly creates a code linked straight to it.",
+          "rawHtml": "<div style='display:flex;align-items:center;gap:11px;'><span style='display:flex;align-items:center;gap:7px;background:#6434d0;color:#fff;font-size:11.5px;line-height:1;font-weight:600;border-radius:8px;padding:9px 12px;box-shadow:0 4px 12px rgba(100,52,208,.18);'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='2.4'><path d='M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h3v3h-3zM20 14v6M14 20h6'/></svg>Generate QR Code</span><svg width='20' height='14' viewBox='0 0 28 16' fill='none' stroke='#b9a6ec' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><path d='M2 8h22M18 3l6 5-6 5'/></svg><div style='display:grid;grid-template-columns:repeat(5,5px);grid-template-rows:repeat(5,5px);gap:2px;'><div style='background:#14121f;'></div><div style='background:#14121f;'></div><div></div><div style='background:#14121f;'></div><div style='background:#14121f;'></div><div style='background:#14121f;'></div><div></div><div style='background:#6434d0;'></div><div></div><div style='background:#14121f;'></div><div></div><div style='background:#14121f;'></div><div style='background:#14121f;'></div><div style='background:#14121f;'></div><div></div><div style='background:#14121f;'></div><div></div><div style='background:#14121f;'></div><div></div><div style='background:#14121f;'></div><div style='background:#14121f;'></div><div style='background:#14121f;'></div><div></div><div style='background:#14121f;'></div><div style='background:#14121f;'></div></div></div>",
+          "image": null
+        },
+        {
+          "id": 156,
+          "title": "Customize style, color & format",
+          "description": "Tune the QR code's style and color so it matches your brand, then pick the download format you need for print or screen.",
+          "rawHtml": "<div style='display:flex;flex-direction:column;gap:8px;'><div style='display:flex;align-items:center;gap:9px;'><span style='font-size:11.5px;line-height:1;font-weight:600;color:#101828;width:46px;'>Color</span><span style='display:flex;gap:6px;'><span style='width:18px;height:18px;border-radius:50%;background:#6434d0;border:2px solid #fff;box-shadow:0 0 0 1.5px #6434d0;'></span><span style='width:18px;height:18px;border-radius:50%;background:#101828;'></span><span style='width:18px;height:18px;border-radius:50%;background:#0e7090;'></span></span></div><div style='display:flex;align-items:center;gap:9px;'><span style='font-size:11.5px;line-height:1;font-weight:600;color:#101828;width:46px;'>Format</span><span style='display:flex;gap:5px;'><span style='font-size:9.5px;line-height:1;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:4px 8px;'>PNG</span><span style='font-size:9.5px;line-height:1;font-weight:700;color:#475467;background:#f9fafb;border:1px solid #eaecf0;border-radius:6px;padding:4px 8px;'>SVG</span></span></div></div>",
+          "image": null
+        },
+        {
+          "id": 157,
+          "title": "Download & share it anywhere",
+          "description": "Download your QR code and add it to flyers, posters, invitations, packaging, or emails. People scan to open the form and their responses land in Formester.",
+          "rawHtml": "<div style='display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #eaecf0;border-radius:10px;padding:10px 12px;'><span style='width:24px;height:24px;border-radius:50%;background:#ecfdf3;color:#027a48;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.4'><path d='M5 12l4 4L19 6'/></svg></span><div style='font-size:12px;line-height:1.2;font-weight:600;color:#101828;'>On posters, flyers & packaging</div></div>",
+          "image": null
+        }
+      ],
+      "buttons": []
+    },
+    {
+      "id": 161,
+      "__component": "macro-components.card-grid",
+      "eyebrow": "Where it shines",
+      "description": "A QR code meets people in the physical world — on a poster, a table, or a package — and opens your form on the device already in their hand.",
+      "columns": "2",
+      "background": null,
+      "title": [
+        {
+          "id": 4844,
+          "text": "Put a scannable form ",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        },
+        {
+          "id": 4848,
+          "text": "wherever people already are",
+          "highlight": true,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "cards": [
+        {
+          "id": 657,
+          "tag": "Events & RSVPs",
+          "tagColor": "violet",
+          "title": "RSVPs on invitations & posters",
+          "body": "Weddings, workshops, and corporate gatherings make RSVPs tricky. Add an RSVP QR code to invitations or posters and guests confirm attendance in seconds from their phone.",
+          "mockHtml": null,
+          "icon": null
+        },
+        {
+          "id": 659,
+          "tag": "Feedback",
+          "tagColor": "blue",
+          "title": "Feedback at the point of experience",
+          "body": "Place a feedback survey QR code at store exits, on receipts, on tables, or on packaging. Customers scan and share their opinion right then, so you collect far more responses.",
+          "mockHtml": null,
+          "icon": null
+        },
+        {
+          "id": 658,
+          "tag": "Fundraising",
+          "tagColor": "green",
+          "title": "Donations from a single scan",
+          "body": "Link a donation form to a QR code and print it on flyers, banners, or event programs. Supporters scan and give on the spot — perfect for fundraisers and offline campaigns.",
+          "mockHtml": null,
+          "icon": null
+        },
+        {
+          "id": 660,
+          "tag": "Education",
+          "tagColor": "amber",
+          "title": "Surveys in class or at a workshop",
+          "body": "Distribute a survey by QR code during a class, session, or workshop. Participants scan and complete it immediately on their own device, lifting participation and speeding up data collection.",
+          "mockHtml": null,
+          "icon": null
+        }
+      ]
+    },
+    {
+      "id": 1152,
+      "__component": "macro-components.testimonials",
+      "description": null,
+      "version": "feature",
+      "heading": [
+        {
+          "id": 4847,
+          "text": "Teams share forms by QR with Formester",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "testimonials": [
+        {
+          "id": 2,
+          "name": "Jilson",
+          "position": "Organiser",
+          "organization": "Vue Conference",
+          "comment": "Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.",
+          "createdAt": "2024-06-18T03:48:46.610Z",
+          "updatedAt": "2025-01-22T02:57:08.760Z",
+          "publishedAt": "2024-06-18T03:48:50.595Z",
+          "companyLogo": {
+            "id": 228,
+            "imageAlt": "photo-of-vue-conference",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 1680,
+              "name": "vueconf.webp",
+              "alternativeText": "photo-of-vue-conference",
+              "caption": "photo-of-vue-conference",
+              "width": 80,
+              "height": 80,
+              "formats": null,
+              "hash": "vueconf_1bc3dc0827",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 1.07,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2024-08-01T14:38:23.731Z",
+              "updatedAt": "2024-12-01T07:47:11.024Z"
+            }
+          }
+        },
+        {
+          "id": 5,
+          "name": "Deanna Bugalski",
+          "position": "Founder/CEO",
+          "organization": "Suggesterfy",
+          "comment": "I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formester was super easy to set up, and the usability is seamless! I highly recommend!",
+          "createdAt": "2024-06-18T03:52:39.354Z",
+          "updatedAt": "2025-01-22T02:57:47.756Z",
+          "publishedAt": "2024-06-18T03:52:43.800Z",
+          "companyLogo": {
+            "id": 226,
+            "imageAlt": "suggesterfy-logo",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 1683,
+              "name": "suggesterfy_logo.webp",
+              "alternativeText": "suggesterfy-logo",
+              "caption": "suggesterfy-logo",
+              "width": 100,
+              "height": 50,
+              "formats": null,
+              "hash": "suggesterfy_logo_d1d7f996b9",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 1.91,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/suggesterfy_logo_d1d7f996b9.webp",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2024-08-01T14:38:23.921Z",
+              "updatedAt": "2024-12-01T07:49:52.459Z"
+            }
+          }
+        },
+        {
+          "id": 34,
+          "name": "Bency",
+          "position": "Product Manager",
+          "organization": "Northgate Digital Solutions",
+          "comment": "Formester's AI form generator transformed how quickly we build forms. The drag-and-drop builder paired with AI-generated templates means I can spin up a survey or poll in minutes, not hours. Conditional logic, file uploads, and seamless integrations make it incredibly versatile and the customization options let every form match our branding perfectly. Their support team is exceptional too. It's the only form and survey tool we recommend",
+          "createdAt": "2025-06-29T23:23:10.541Z",
+          "updatedAt": "2026-05-03T09:30:00.533Z",
+          "publishedAt": "2026-05-03T09:30:00.530Z",
+          "companyLogo": {
+            "id": 3652,
+            "imageAlt": null,
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": null
+          }
+        },
+        {
+          "id": 35,
+          "name": "Roger",
+          "position": "Marketing Specialist",
+          "organization": "BrightPath Technologies",
+          "comment": "I use Formester for my form-building needs and I’m thoroughly impressed. The platform is rich with features… What really sets them apart is their exceptional customer service (responses typically within 10 minutes). The pricing is also very reasonable… Highly recommended!\n",
+          "createdAt": "2025-06-29T23:29:19.225Z",
+          "updatedAt": "2025-10-31T04:00:58.697Z",
+          "publishedAt": "2025-06-29T23:29:21.134Z",
+          "companyLogo": {
+            "id": 3649,
+            "imageAlt": "brightpath-logo",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 4094,
+              "name": "brightpath-logo.png",
+              "alternativeText": "brightpath-logo",
+              "caption": "brightpath-logo",
+              "width": 200,
+              "height": 49,
+              "formats": null,
+              "hash": "brightpath_logo_6ef0922a60",
+              "ext": ".png",
+              "mime": "image/png",
+              "size": 2.5,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/brightpath_logo_6ef0922a60.png",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2025-10-31T04:00:11.712Z",
+              "updatedAt": "2025-10-31T04:00:11.712Z"
+            }
+          }
+        },
+        {
+          "id": 36,
+          "name": "Ye Qi Lai",
+          "position": "UX Designer",
+          "organization": "Eastview Consulting",
+          "comment": "Formester is one of the best underrated survey tools out there… It’s extremely customizable… Their support is awesome… I absolutely recommend this to anyone looking for an alternative to the usual form creators.",
+          "createdAt": "2025-06-29T23:30:04.374Z",
+          "updatedAt": "2025-10-31T04:00:30.746Z",
+          "publishedAt": "2025-06-29T23:30:06.260Z",
+          "companyLogo": {
+            "id": 3648,
+            "imageAlt": "eastview-logo-header",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 4097,
+              "name": "eastview-logo-header-300x120 1.png",
+              "alternativeText": "eastview-logo-header",
+              "caption": "eastview-logo-header",
+              "width": 200,
+              "height": 80,
+              "formats": null,
+              "hash": "eastview_logo_header_300x120_1_d9c231e93b",
+              "ext": ".png",
+              "mime": "image/png",
+              "size": 3.18,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/eastview_logo_header_300x120_1_d9c231e93b.png",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2025-10-31T04:00:11.854Z",
+              "updatedAt": "2025-10-31T04:00:11.854Z"
+            }
+          }
+        },
+        {
+          "id": 6,
+          "name": "Thibaud Martinez",
+          "position": "Organiser",
+          "organization": "Tedx",
+          "comment": "I really enjoy Formester. It’s clean and straight-forward and it does well, what it is supposed to do.",
+          "createdAt": "2024-06-18T03:53:38.957Z",
+          "updatedAt": "2025-01-22T02:56:48.567Z",
+          "publishedAt": "2024-06-18T03:53:40.693Z",
+          "companyLogo": {
+            "id": 229,
+            "imageAlt": "tedx-logo",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 1684,
+              "name": "tedx.webp",
+              "alternativeText": "tedx-logo",
+              "caption": "tedx-logo",
+              "width": 109,
+              "height": 38,
+              "formats": null,
+              "hash": "tedx_2fce0eee2e",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 1.09,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/tedx_2fce0eee2e.webp",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2024-08-01T14:38:23.941Z",
+              "updatedAt": "2024-12-01T07:50:31.505Z"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 1252,
+      "__component": "macro-components.faqs",
+      "description": null,
+      "centered": true,
+      "title": [
+        {
+          "id": 4849,
+          "text": "QR code generator FAQs",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "faqList": [
+        {
+          "id": 2418,
+          "header": "How do I create a QR code for my form?",
+          "body": "Build your form, survey, or RSVP page in Formester, then use the Generate QR Code option to create a QR code linked to it. Customize the style and download it, then place it anywhere people can scan to open your form.",
+          "body_markdown": null,
+          "list": []
+        },
+        {
+          "id": 2423,
+          "header": "Can I create a free RSVP QR code for events?",
+          "body": "Yes. You can create a free RSVP QR code for event registrations, weddings, or meetups. Guests scan it with their phone camera and confirm attendance in seconds — no link to type and no app to install.",
+          "body_markdown": null,
+          "list": []
+        },
+        {
+          "id": 2420,
+          "header": "Where can I use my QR code after creating it?",
+          "body": "Anywhere people can see it. Add it to posters, flyers, invitations, packaging, table tents, emails, websites, or social media. Anyone who scans it is taken straight to your form or page.",
+          "body_markdown": null,
+          "list": []
+        },
+        {
+          "id": 2421,
+          "header": "Can I customize my QR code design?",
+          "body": "Yes. You can adjust the style, color, and format of the QR code and download it so it matches your brand or print design.",
+          "body_markdown": null,
+          "list": []
+        },
+        {
+          "id": 2422,
+          "header": "Is the QR code generator free to use?",
+          "body": "Yes. You can generate and download QR codes for your forms, surveys, and RSVP pages for free.",
+          "body_markdown": null,
+          "list": []
+        },
+        {
+          "id": 2419,
+          "header": "Will the QR code work on all devices?",
+          "body": "Yes. QR codes can be scanned using any smartphone camera or QR scanner app and work smoothly across iPhone, Android, and tablets.",
+          "body_markdown": null,
+          "list": []
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "__component": "macro-components.cta-dark",
+      "badge": "Free to start",
+      "heading": "Share your form with a scan",
+      "description": "Generate a QR code for your form, survey, or RSVP, customize it, and download it for posters, flyers, or packaging — people scan to open the form and respond on the spot.",
+      "trustText": null,
+      "buttons": [
+        {
+          "id": 1596,
+          "link": "https://app.formester.com/users/sign_up",
+          "text": "Get Started — It's Free",
+          "type": "Primary",
+          "showArrow": true
+        },
+        {
+          "id": 1597,
+          "link": "/pricing",
+          "text": "See pricing",
+          "type": "White",
+          "showArrow": false
+        }
+      ]
+    }
+  ]
+}

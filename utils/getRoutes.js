@@ -1,7 +1,30 @@
+import fs from 'node:fs'
+import path from 'node:path'
 import { getAllBlogs } from './getAllBlogs.js'
-import { getAllFeatures } from './getAllFeatures.js'
-import { getAllPages } from './getAllPages.js'
 import getTemplatesAndCategories from './getTemplatesAndCategories.js'
+
+const CONTENT_DIR = path.resolve(import.meta.dirname, '../content')
+
+// Reads content/<collection>/**/*.json directly instead of queryCollection() —
+// this hook runs at build time outside any Vue/request context, where
+// queryCollection is not reliably available (nuxt/content#3586).
+function listSlugsFromDisk(subdir) {
+  const root = path.join(CONTENT_DIR, subdir)
+  if (!fs.existsSync(root)) return []
+  const slugs = []
+  const walk = (dir) => {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name)
+      if (entry.isDirectory()) {
+        walk(full)
+      } else if (entry.name.endsWith('.json')) {
+        slugs.push(path.relative(root, full).replace(/\.json$/, ''))
+      }
+    }
+  }
+  walk(root)
+  return slugs
+}
 
 export default async () => {
   const data = await getAllBlogs()
@@ -35,25 +58,15 @@ export default async () => {
 }
 
 export const getFeatureRoutes = async () => {
-  const featuresMap = await getAllFeatures()
-
-  const features = Object.keys(featuresMap).map((slug) => ({
+  return listSlugsFromDisk('features').map((slug) => ({
     url: `/features/${slug}/`,
   }))
-
-  return features
 }
 
 export const getPageRoutes = async () => {
-  const pagesMap = await getAllPages()
-
-  const pages = Object.keys(pagesMap)
-    .filter((slug) => slug !== '__home__')
-    .map((slug) => ({
-      url: `/${slug}/`,
-    }))
-
-  return pages
+  return listSlugsFromDisk('pages').map((slug) => ({
+    url: `/${slug}/`,
+  }))
 }
 
 export const getTemplateRoutes = async () => {

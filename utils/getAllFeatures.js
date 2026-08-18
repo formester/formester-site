@@ -1,88 +1,18 @@
-import getSiteMeta from './getSiteMeta.js'
-import { STRAPI_URL } from '../constants/urls.js'
-import fetchWithRetry from './fetchWithRetry.js'
+// Nuxt Content v3 backed replacement for the old Strapi-fetching version.
+// Same exported function names/shapes as before so pages/features/[slug].vue
+// needs zero changes.
 
-let cachePromise = null
-
-function processItem(item) {
-  const components = item?.components || []
-  const meta = item?.meta || null
-  const updatedAt = item?.updatedAt || null
-  let head = {}
-  let jsonld = []
-
-  const normalizeJsonLd = (input) => {
-    if (!input) return []
-    let arr = Array.isArray(input) ? input : [input]
-    return arr
-      .filter((entry) => entry && typeof entry === 'object')
-      .map((entry) => {
-        if (!entry['@context'] || typeof entry['@context'] !== 'string') {
-          return { '@context': 'https://schema.org', ...entry }
-        }
-        return entry
-      })
-  }
-
-  if (!components.length || !meta) {
-    return { head, jsonld, components }
-  }
-
-  const metaData = {
-    url: meta?.url,
-    type: meta?.type,
-    title: meta?.title,
-    description: meta?.description,
-    mainImage: meta?.mainImage?.imageUrl || meta?.mainImage?.image?.url,
-    mainImageAlt: meta?.mainImage?.imageAlt,
-    keywords: meta?.keywords?.map((k) => k?.text),
-    updatedAt,
-  }
-  const siteMetaData = getSiteMeta(metaData)
-  // Canonical: prefer meta.link (cleaner) over meta.url, trailing-slashed to match og:url.
-  const toSlash = (h) => (h ? h.replace(/([^/])$/, '$1/') : h)
-  const authoredCanonical = (meta?.link || []).find((l) => l?.rel === 'canonical')
-  const canonical = toSlash(authoredCanonical?.href || meta?.url)
-  head = {
-    title: meta?.title,
-    link: canonical ? [{ hid: 'canonical', rel: 'canonical', href: canonical }] : [],
-    meta: [...siteMetaData],
-  }
-  jsonld = normalizeJsonLd(meta?.jsonld)
-
-  return { head, jsonld, components }
-}
-
-async function _fetchAllFeatures() {
-  console.log('[getAllFeatures] Fetching all features from CMS...')
-  const {
-    data: { data },
-  } = await fetchWithRetry(`${STRAPI_URL}/api/features`, {
-    params: {
-      populate: 'deep',
-    },
-  })
-
-  const items = data || []
-  const map = {}
-  for (const item of items) {
-    if (item.slug) {
-      map[item.slug] = processItem(item)
-    }
-  }
-
-  console.log(`[getAllFeatures] Cached ${Object.keys(map).length} features`)
-  return map
+export async function getFeatureBySlug(slug) {
+  const doc = await queryCollection('features').where('slug', '=', slug).first()
+  if (!doc) return null
+  return { head: doc.head || {}, jsonld: doc.jsonld || [], components: doc.components || [] }
 }
 
 export async function getAllFeatures() {
-  if (!cachePromise || import.meta.dev) {
-    cachePromise = _fetchAllFeatures()
+  const docs = await queryCollection('features').all()
+  const map = {}
+  for (const doc of docs) {
+    map[doc.slug] = { head: doc.head || {}, jsonld: doc.jsonld || [], components: doc.components || [] }
   }
-  return cachePromise
-}
-
-export async function getFeatureBySlug(slug) {
-  const features = await getAllFeatures()
-  return features[slug] || null
+  return map
 }

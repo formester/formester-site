@@ -1,0 +1,349 @@
+{
+  "slug": "plugins/canva-form-builder",
+  "head": {
+    "title": "Canva Form Builder Online for Websites | Formester",
+    "link": [
+      {
+        "hid": "canonical",
+        "rel": "canonical",
+        "href": "https://formester.com/plugins/canva-form-builder/"
+      }
+    ],
+    "meta": [
+      {
+        "property": "article:modified_time",
+        "content": "2026-06-17T07:13:42.177Z"
+      },
+      {
+        "hid": "description",
+        "name": "description",
+        "content": "Create and embed forms on your Canva website with the best Canva form builder online. No code, secure, GDPR-ready. Start free today."
+      },
+      {
+        "hid": "og:site_name",
+        "name": "og:site_name",
+        "content": "Canva Form Builder Online for Websites | Formester"
+      },
+      {
+        "hid": "og:type",
+        "property": "og:type",
+        "content": "website"
+      },
+      {
+        "hid": "og:url",
+        "property": "og:url",
+        "content": "https://formester.com/plugins/canva-form-builder/"
+      },
+      {
+        "hid": "og:title",
+        "property": "og:title",
+        "content": "Canva Form Builder Online for Websites | Formester"
+      },
+      {
+        "hid": "og:description",
+        "property": "og:description",
+        "content": "Create and embed forms on your Canva website with the best Canva form builder online. No code, secure, GDPR-ready. Start free today."
+      },
+      {
+        "hid": "og:image",
+        "property": "og:image",
+        "content": "https://formester.com/formester-logo-meta-image.png"
+      },
+      {
+        "hid": "og:image:alt",
+        "name": "og:image:alt",
+        "content": "Formester Canva form builder"
+      },
+      {
+        "hid": "twitter:url",
+        "name": "twitter:url",
+        "content": "https://formester.com/plugins/canva-form-builder/"
+      },
+      {
+        "name": "twitter:site",
+        "content": "@_formester_"
+      },
+      {
+        "hid": "twitter:title",
+        "name": "twitter:title",
+        "content": "Canva Form Builder Online for Websites | Formester"
+      },
+      {
+        "hid": "twitter:description",
+        "name": "twitter:description",
+        "content": "Create and embed forms on your Canva website with the best Canva form builder online. No code, secure, GDPR-ready. Start free today."
+      },
+      {
+        "hid": "twitter:image",
+        "name": "twitter:image",
+        "content": "https://formester.com/formester-logo-meta-image.png"
+      },
+      {
+        "hid": "twitter:image:alt",
+        "name": "twitter:image:alt",
+        "content": "Formester Canva form builder"
+      },
+      {
+        "hid": "twitter:card",
+        "name": "twitter:card",
+        "content": "summary_large_image"
+      },
+      {
+        "hid": "apple-mobile-web-app-title",
+        "name": "apple-mobile-web-app-title",
+        "content": "Formester"
+      },
+      {
+        "hid": "image",
+        "name": "image",
+        "property": "og:image",
+        "content": "https://formester.com/formester-logo-meta-image.png"
+      },
+      {
+        "hid": "keywords",
+        "name": "keywords",
+        "content": [
+          "Canva form builder",
+          "Canva forms",
+          "embed forms Canva",
+          "Canva website form",
+          "no-code forms"
+        ]
+      }
+    ]
+  },
+  "jsonld": [
+    {
+      "@context": "https://schema.org",
+      "type": "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"Can I create interactive forms in Canva using Formester?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes. With Formester\\u2019s Canva form builder, you can create interactive and fillable forms for your Canva website without any coding. Setup takes only a few minutes.\"}}, {\"@type\": \"Question\", \"name\": \"How do I connect Canva forms to Google Sheets?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"You can connect your Canva forms to Google Sheets using Formester integrations. Once enabled, all form submissions are saved automatically in your spreadsheet.\"}}, {\"@type\": \"Question\", \"name\": \"Does Formester support file uploads in Canva forms?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes. Your visitors can upload files such as images, resumes, and PDFs directly through your Canva forms using Formester.\"}}, {\"@type\": \"Question\", \"name\": \"Are Formester Canva forms mobile-friendly?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes. All forms created with our Canva form builder online work smoothly on desktop, tablet, and mobile devices.\"}}, {\"@type\": \"Question\", \"name\": \"Do I need coding skills to add forms to my Canva website?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"No. You can build your form, copy the embed code, and paste it into your Canva website. No technical skills are required.\"}}, {\"@type\": \"Question\", \"name\": \"How does Formester prevent spam in Canva forms?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Formester protects your Canva forms with built-in tools like reCAPTCHA and Turnstile to block bots and reduce unwanted submissions.\"}}]}"
+    },
+    {
+      "@context": "https://schema.org",
+      "type": "{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Plugins\", \"item\": \"https://formester.com/plugins/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Canva\", \"item\": \"https://formester.com/plugins/canva-form-builder/\"}]}"
+    }
+  ],
+  "components": [
+    {
+      "id": 184,
+      "__component": "macro-components.hero-v2",
+      "description": "Build, customize, and embed powerful forms on your Canva website in minutes. No coding required. Collect leads, feedback, and payments securely with Formester.",
+      "trustText": "✓ Free Plan · ✓ Higher Submission Limits · ✓ Trusted by 5,000+ Users",
+      "blobColorA": "#f5eeff",
+      "blobColorB": "#f1ebff",
+      "blobColorC": "#f4efff",
+      "mockupHtml": "<img src=\"https://formester-strapi.s3.ap-south-1.amazonaws.com/an_illustration_of_formester_s_form_plugin_for_canva_website_201e30c38c.svg\" alt=\"Formester form plugin for a Canva website\" style=\"width:100%;max-width:480px;height:auto;display:block;margin:0 auto\"/>",
+      "layout": "split",
+      "title": [
+        {
+          "id": 5278,
+          "text": "Canva Form Builder Online for ",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        },
+        {
+          "id": 5279,
+          "text": "High-Converting Websites",
+          "highlight": true,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": 1864,
+          "link": "https://app.formester.com/users/sign_up",
+          "text": "Get started free",
+          "type": "Primary",
+          "showArrow": true
+        },
+        {
+          "id": 1865,
+          "link": "#how",
+          "text": "See how it works",
+          "type": "Secondary",
+          "showArrow": false
+        }
+      ],
+      "badge": {
+        "id": 184,
+        "text": "Canva",
+        "tag": "Plugins",
+        "link": "/plugins/"
+      },
+      "tabCardContent": [],
+      "image": null
+    },
+    {
+      "id": 634,
+      "__component": "macro-components.trust-seals",
+      "label": "Trusted by 10,000+ teams collecting data on the web",
+      "heading": null,
+      "description": null,
+      "showTrustBadges": true,
+      "rawHtml": null,
+      "title": [],
+      "logos": []
+    },
+    {
+      "id": 883,
+      "__component": "micro-components.raw-html",
+      "markup": "<style>\n.fpl{--fpl-font:'Inter',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;\n--fpl-fg1:#101828;--fpl-fg2:#475467;--fpl-fg3:#697586;--fpl-bg:#fff;--fpl-grey25:#fcfcfd;--fpl-grey50:#f9fafb;--fpl-grey100:#f2f4f7;\n--fpl-violet25:#f7f3ff;--fpl-violet50:#f0ebfa;--fpl-violet100:#f4ebff;--fpl-violet500:#7f56d9;--fpl-violet600:#6434d0;--fpl-violet700:#53389e;\n--fpl-border:#eaecf0;--fpl-border-dk:#d0d5dd;--fpl-r:8px;--fpl-r-lg:12px;--fpl-r-xl:16px;--fpl-r-full:9999px;\n--fpl-shadow-xs:0 1px 2px 0 rgba(16,24,40,.05);--fpl-shadow-lg:0 8px 24px -4px rgba(16,24,40,.08),0 4px 8px -2px rgba(16,24,40,.04);\n--fpl-accent:#21759b}\n.fpl,.fpl *{box-sizing:border-box}\n.fpl{font-family:var(--fpl-font);color:var(--fpl-fg1);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}\n.fpl h1,.fpl h2,.fpl h3,.fpl h4{color:var(--fpl-fg1);margin:0 0 12px;letter-spacing:-.02em;font-weight:600;line-height:1.2}\n.fpl h2{font-size:clamp(26px,3.2vw,34px)}.fpl h3{font-size:20px}.fpl h4{font-size:17px}\n.fpl p{color:var(--fpl-fg2);margin:0 0 16px;font-size:16px;line-height:1.7}\n.fpl a{color:var(--fpl-violet600);text-decoration:none}.fpl a:hover{color:var(--fpl-violet700)}\n.fpl-container{max-width:1160px;margin:0 auto;padding:0 24px}\n.fpl-section{padding:72px 0}\n.fpl-section--grey{background:var(--fpl-grey50);border-top:1px solid var(--fpl-border);border-bottom:1px solid var(--fpl-border)}\n.fpl-head{max-width:680px;margin:0 auto 44px;text-align:center}\n.fpl-head p{font-size:17px}\n.fpl-eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--fpl-violet600);margin-bottom:14px}\n.fpl-btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:12px 22px;border-radius:var(--fpl-r);border:1px solid transparent;cursor:pointer;transition:all .14s ease}\n.fpl-btn--primary{background:var(--fpl-violet600);color:#fff}.fpl-btn--primary:hover{background:var(--fpl-violet700);color:#fff}\n.fpl-btn--secondary{background:#fff;color:var(--fpl-fg1);border-color:var(--fpl-border-dk);box-shadow:var(--fpl-shadow-xs)}.fpl-btn--secondary:hover{background:var(--fpl-grey50)}\n/* hero */\n.fpl-hero{position:relative;overflow:hidden;padding:80px 0 56px}\n.fpl-hero::before{content:\"\";position:absolute;inset:0 0 auto 0;height:560px;background:radial-gradient(ellipse 680px 320px at 82% 8%,rgba(33,117,155,.07),transparent 70%),linear-gradient(180deg,var(--fpl-violet25),rgba(247,243,255,0));pointer-events:none}\n.fpl-hero-inner{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:52px;align-items:center}\n.fpl-pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--fpl-border);box-shadow:var(--fpl-shadow-xs);border-radius:var(--fpl-r-full);padding:5px 14px 5px 6px;font-size:13px;font-weight:500;color:#344054;margin-bottom:20px}\n.fpl-pill img{width:18px;height:18px}\n.fpl-hero h1{font-size:clamp(36px,4.6vw,52px);line-height:1.08;margin-bottom:18px;text-wrap:balance}\n.fpl-hero h1 i{font-style:normal;color:var(--fpl-violet600)}\n.fpl-lede{font-size:18px;line-height:1.6;color:var(--fpl-fg2);margin-bottom:26px;max-width:540px}\n.fpl-hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:22px}\n.fpl-hero-meta{display:flex;flex-wrap:wrap;gap:10px;font-size:14px;color:var(--fpl-fg3)}.fpl-hero-meta strong{color:var(--fpl-fg1)}\n.fpl-hero-art{display:flex;justify-content:center}.fpl-hero-art img{width:100%;max-width:440px;height:auto}\n/* split content rows */\n.fpl-split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}\n.fpl-split--rev .fpl-split-media{order:2}\n.fpl-split-media img{width:100%;max-width:460px;height:auto;display:block;margin:0 auto}\n.fpl-split-body h2{margin-bottom:16px}\n/* steps */\n.fpl-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}\n.fpl-step{background:#fff;border:1px solid var(--fpl-border);border-radius:var(--fpl-r-xl);overflow:hidden;box-shadow:var(--fpl-shadow-xs)}\n.fpl-step-img{background:var(--fpl-grey50);border-bottom:1px solid var(--fpl-border);padding:20px;display:flex;align-items:center;justify-content:center;min-height:150px}\n.fpl-step-img img{max-width:100%;max-height:150px;height:auto}\n.fpl-step-body{padding:20px 22px 24px}\n.fpl-num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:8px;background:var(--fpl-violet50);color:var(--fpl-violet600);font-weight:700;font-size:14px;margin-bottom:12px}\n/* card grids */\n.fpl-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}\n.fpl-grid--3{grid-template-columns:repeat(3,1fr)}\n.fpl-card{background:#fff;border:1px solid var(--fpl-border);border-radius:var(--fpl-r-xl);padding:24px}\n.fpl-ic{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:10px;background:var(--fpl-violet50);color:var(--fpl-violet600);margin-bottom:14px}\n.fpl-ic svg{width:22px;height:22px}\n.fpl-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}\n.fpl-tag{font-size:12px;font-weight:600;color:var(--fpl-violet700);background:var(--fpl-violet50);border-radius:var(--fpl-r-full);padding:3px 10px}\n@media(max-width:860px){\n.fpl-hero-inner,.fpl-split{grid-template-columns:1fr;gap:32px}\n.fpl-hero-art{order:-1}.fpl-split--rev .fpl-split-media{order:-1}\n.fpl-steps,.fpl-grid,.fpl-grid--3{grid-template-columns:1fr}\n.fpl-section{padding:52px 0}.fpl-hero{padding:48px 0 36px}\n}\n</style><style>.fpl-fs-row{display:grid;grid-template-columns:1fr minmax(0,42%);gap:36px;align-items:center;background:#fff;border:1px solid var(--fpl-border);border-radius:var(--fpl-r-xl);padding:28px 30px;margin-bottom:20px;box-shadow:var(--fpl-shadow-xs)}.fpl-fs-row:last-child{margin-bottom:0}.fpl-fs-media{background:var(--fpl-grey50);border:1px solid var(--fpl-border);border-radius:var(--fpl-r-lg);padding:18px;display:flex;align-items:center;justify-content:center;min-height:180px}.fpl-fs-media img{max-width:100%;max-height:210px;height:auto}.fpl-fs-body h3{margin:6px 0 8px}.fpl-fs-body p{margin:0;font-size:15px;line-height:1.65}@media(max-width:860px){.fpl-fs-row{grid-template-columns:1fr;gap:18px;padding:22px}.fpl-fs-media{order:-1}}</style><div class=\"fpl\"><section class=\"fpl-section\"><div class=\"fpl-container\"><div class=\"fpl-head\"><span class=\"fpl-eyebrow\">Why Formester for Canva</span><h2>Why Choose Our Canva Form Builder Plugin?</h2></div><div class=\"fpl-grid fpl-grid--3\"><div class=\"fpl-card\"><span class=\"fpl-ic\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><circle cx=\"9\" cy=\"6\" r=\"1\"/><circle cx=\"9\" cy=\"12\" r=\"1\"/><circle cx=\"9\" cy=\"18\" r=\"1\"/><circle cx=\"15\" cy=\"6\" r=\"1\"/><circle cx=\"15\" cy=\"12\" r=\"1\"/><circle cx=\"15\" cy=\"18\" r=\"1\"/></svg></span><h4>Create Fillable Forms</h4><p>Easily add interactive, fillable forms to your Canva website without any coding. Customize colors, fonts, layouts, and fields to match your brand perfectly.</p></div><div class=\"fpl-card\"><span class=\"fpl-ic\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><rect x=\"3\" y=\"3\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"3\" y=\"14\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"14\" y=\"14\" width=\"7\" height=\"7\" rx=\"1\"/></svg></span><h4>Pre-Built Templates</h4><p>Save time with ready-made form templates for Canva! Choose from contact forms, feedback forms, sign-up forms, event registrations, and more.</p></div><div class=\"fpl-card\"><span class=\"fpl-ic\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"/><path d=\"M14 2v6h6\"/></svg></span><h4>Easy Embedding</h4><p>Embedding forms in Canva is super easy! Just copy the embed code from Formester and paste it into your Canva website.</p></div></div></div></section></div>",
+      "useContainer": false
+    },
+    {
+      "id": 882,
+      "__component": "micro-components.raw-html",
+      "markup": "<div class=\"fpl\"><section class=\"fpl-section fpl-section--grey\" id=\"how\"><div class=\"fpl-container\"><div class=\"fpl-head\"><span class=\"fpl-eyebrow\">How it works</span><h2>How to Add Forms to Your Canva Website in Minutes</h2></div><div class=\"fpl-fs-row\"><div class=\"fpl-fs-body\"><span class=\"fpl-num\">1</span><h3>Create a Form in Formester</h3><p>Use Formester’s drag-and-drop form builder or <a href=\"/ai-form-generator/\">AI Form Generator</a> to design your form in minutes. Choose from <a href=\"/templates/\">pre-made templates</a> or build a custom form from scratch.</p></div><div class=\"fpl-fs-media\"><img src=\"https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_997_615467a3c6.svg\" alt=\"Create a Form in Formester\"/></div></div><div class=\"fpl-fs-row\"><div class=\"fpl-fs-body\"><span class=\"fpl-num\">2</span><h3>Customize to Match Your Canva Website</h3><p>Adjust layouts, colors, and fonts to blend perfectly with your Canva website. Add smart features like conditional logic, multi-step forms, and <a href=\"/features/file-upload-forms/\">file uploads</a>.</p></div><div class=\"fpl-fs-media\"><img src=\"https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_1002_00ffc80a3e.svg\" alt=\"Customize to Match Your Canva Website\"/></div></div><div class=\"fpl-fs-row\"><div class=\"fpl-fs-body\"><span class=\"fpl-num\">3</span><h3>Embed the Form in Canva</h3><p>Once your form is ready, open <strong>Canva Apps</strong> and search for <strong>Formester</strong>. Copy your form’s URL from Formester, paste it into the plugin, and select <strong>Add to Design</strong>. Your form will be instantly embedded into your Canva website.</p></div><div class=\"fpl-fs-media\"><img src=\"https://formester-strapi.s3.ap-south-1.amazonaws.com/1_7b50914059.svg\" alt=\"Embed the Form in Canva\"/></div></div><div class=\"fpl-fs-row\"><div class=\"fpl-fs-body\"><span class=\"fpl-num\">4</span><h3>Collect Responses & Analyze Data</h3><p>Start collecting submissions in real time! Use Formester’s <a href=\"/features/form-analytics/\">built-in form analytics</a> to track responses. Connect your forms to Google Sheets for easy organization and reporting.</p></div><div class=\"fpl-fs-media\"><img src=\"https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_1004_26e69201de.svg\" alt=\"Collect Responses & Analyze Data\"/></div></div></div></section></div>",
+      "useContainer": false
+    },
+    {
+      "id": 884,
+      "__component": "micro-components.raw-html",
+      "markup": "<div class=\"fpl\"><section class=\"fpl-section\"><div class=\"fpl-container\"><div class=\"fpl-head\"><span class=\"fpl-eyebrow\">Advanced</span><h2>Advanced Features of Canva form builder</h2></div><div class=\"fpl-grid\"><div class=\"fpl-card\"><span class=\"fpl-ic\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><rect x=\"2\" y=\"5\" width=\"20\" height=\"14\" rx=\"2\"/><path d=\"M2 10h20\"/></svg></span><h4>Secure Payment Collection</h4><p>Turn your Canva forms into order forms, donation pages, or registration forms by accepting <a href=\"/features/online-payments/\">secure payments via PayPal and Stripe</a>. No extra setup needed, just enable payments and start collecting!</p></div><div class=\"fpl-card\"><span class=\"fpl-ic\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9\"/><path d=\"M13.7 21a2 2 0 0 1-3.4 0\"/></svg></span><h4>Email Auto-Responders</h4><p>Send automatic confirmation emails to users after they submit a form using the <a href=\"/features/autoresponder-email/\">email auto responder</a>. You can customize these emails with personalized messages, attachments, or follow-up instructions.</p></div><div class=\"fpl-card\"><span class=\"fpl-ic\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"/></svg></span><h4>Spam & Bot Protection</h4><p>Protect your forms from spam and fake submissions with reCAPTCHA, Turnstile and <a href=\"/features/spam-protection/\">advanced spam protection</a>. Ensure you receive only genuine responses without any hassle.</p></div><div class=\"fpl-card\"><span class=\"fpl-ic\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"/><path d=\"M14 2v6h6\"/></svg></span><h4>GDPR-Compliant Forms</h4><p>Keep user data secure and comply with privacy regulations. Formester ensures that your forms meet GDPR standards, so you can collect information with confidence.</p></div></div></div></section></div>",
+      "useContainer": false
+    },
+    {
+      "id": 13,
+      "__component": "macro-components.testimonial-wall",
+      "description": "Real reviews from teams using Formester to collect data across their sites and apps.",
+      "showG2": true,
+      "showTrustpilot": true,
+      "showProductHunt": true,
+      "showCapterra": true,
+      "title": [
+        {
+          "id": 5274,
+          "text": "Loved by Canva ",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        },
+        {
+          "id": 5275,
+          "text": "website creators",
+          "highlight": true,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "pickedReviews": [],
+      "excludedReviews": []
+    },
+    {
+      "id": 83,
+      "__component": "macro-components.integrations-grid",
+      "title": "Explore more plugins",
+      "integrations": [
+        {
+          "id": 324,
+          "name": "WordPress",
+          "description": "Embed forms on your WordPress site",
+          "link": "/plugins/wordpress/"
+        },
+        {
+          "id": 325,
+          "name": "Shopify",
+          "description": "Add forms to your Shopify store",
+          "link": "/plugins/shopify-form-builder/"
+        },
+        {
+          "id": 326,
+          "name": "Wix",
+          "description": "Put forms on your Wix site",
+          "link": "/plugins/wix-forms/"
+        }
+      ]
+    },
+    {
+      "id": 1348,
+      "__component": "macro-components.faqs",
+      "description": null,
+      "centered": true,
+      "title": [
+        {
+          "id": 5276,
+          "text": "Canva form builder ",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        },
+        {
+          "id": 5277,
+          "text": "FAQs",
+          "highlight": true,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "faqList": [
+        {
+          "id": 2838,
+          "header": "Can I create interactive forms in Canva using Formester?",
+          "body": "Yes. With Formester’s Canva form builder, you can create interactive and fillable forms for your Canva website without any coding. Setup takes only a few minutes.",
+          "body_markdown": "Yes. With Formester’s Canva form builder, you can create interactive and fillable forms for your Canva website without any coding. Setup takes only a few minutes.",
+          "list": []
+        },
+        {
+          "id": 2839,
+          "header": "How do I connect Canva forms to Google Sheets?",
+          "body": "You can connect your Canva forms to Google Sheets using Formester integrations. Once enabled, all form submissions are saved automatically in your spreadsheet.",
+          "body_markdown": "You can connect your Canva forms to Google Sheets using Formester integrations. Once enabled, all form submissions are saved automatically in your spreadsheet.",
+          "list": []
+        },
+        {
+          "id": 2842,
+          "header": "Does Formester support file uploads in Canva forms?",
+          "body": "Yes. Your visitors can upload files such as images, resumes, and PDFs directly through your Canva forms using Formester.",
+          "body_markdown": "Yes. Your visitors can upload files such as images, resumes, and PDFs directly through your Canva forms using Formester.",
+          "list": []
+        },
+        {
+          "id": 2840,
+          "header": "Are Formester Canva forms mobile-friendly?",
+          "body": "Yes. All forms created with our Canva form builder online work smoothly on desktop, tablet, and mobile devices.",
+          "body_markdown": "Yes. All forms created with our Canva form builder online work smoothly on desktop, tablet, and mobile devices.",
+          "list": []
+        },
+        {
+          "id": 2841,
+          "header": "Do I need coding skills to add forms to my Canva website?",
+          "body": "No. You can build your form, copy the embed code, and paste it into your Canva website. No technical skills are required.",
+          "body_markdown": "No. You can build your form, copy the embed code, and paste it into your Canva website. No technical skills are required.",
+          "list": []
+        },
+        {
+          "id": 2843,
+          "header": "How does Formester prevent spam in Canva forms?",
+          "body": "Formester protects your Canva forms with built-in tools like reCAPTCHA and Turnstile to block bots and reduce unwanted submissions.",
+          "body_markdown": "Formester protects your Canva forms with built-in tools like reCAPTCHA and Turnstile to block bots and reduce unwanted submissions.",
+          "list": []
+        }
+      ]
+    },
+    {
+      "id": 184,
+      "__component": "macro-components.cta-dark",
+      "badge": "Free to start",
+      "heading": "Add forms to your Canva website today",
+      "description": "Create your first form, embed it on your Canva website, and start collecting leads and payments on the free plan.",
+      "trustText": null,
+      "buttons": [
+        {
+          "id": 1863,
+          "link": "https://app.formester.com/users/sign_up",
+          "text": "Start free",
+          "type": "Primary",
+          "showArrow": true
+        },
+        {
+          "id": 1862,
+          "link": "/pricing/",
+          "text": "See pricing",
+          "type": "Secondary",
+          "showArrow": false
+        }
+      ]
+    }
+  ]
+}

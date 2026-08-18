@@ -1,0 +1,755 @@
+{
+  "slug": "summary-analytics",
+  "navTitle": "Summary Analytics",
+  "navDescription": "View stats & trends",
+  "featureCategory": "Form Analytics and Notification",
+  "featurePlan": "Free",
+  "head": {
+    "title": "Response Summary Analytics | See Question Wise Results",
+    "link": [
+      {
+        "hid": "canonical",
+        "rel": "canonical",
+        "href": "https://formester.com/features/summary-analytics/"
+      }
+    ],
+    "meta": [
+      {
+        "property": "article:modified_time",
+        "content": "2026-06-15T10:45:54.050Z"
+      },
+      {
+        "hid": "description",
+        "name": "description",
+        "content": "Get a clear breakdown of survey, poll, and quiz responses. See how many people chose each option per question, with percentages and visuals — no manual counting."
+      },
+      {
+        "hid": "og:site_name",
+        "name": "og:site_name",
+        "content": "Response Summary Analytics | See Question Wise Results"
+      },
+      {
+        "hid": "og:type",
+        "property": "og:type",
+        "content": "website"
+      },
+      {
+        "hid": "og:url",
+        "property": "og:url",
+        "content": "https://formester.com/features/summary-analytics/"
+      },
+      {
+        "hid": "og:title",
+        "property": "og:title",
+        "content": "Response Summary Analytics | See Question Wise Results"
+      },
+      {
+        "hid": "og:description",
+        "property": "og:description",
+        "content": "Get a clear breakdown of survey, poll, and quiz responses. See how many people chose each option per question, with percentages and visuals — no manual counting."
+      },
+      {
+        "hid": "og:image",
+        "property": "og:image",
+        "content": "https://formester.com/formester-logo-meta-image.png"
+      },
+      {
+        "hid": "og:image:alt",
+        "name": "og:image:alt",
+        "content": "Formester Logo"
+      },
+      {
+        "hid": "twitter:url",
+        "name": "twitter:url",
+        "content": "https://formester.com/features/summary-analytics/"
+      },
+      {
+        "name": "twitter:site",
+        "content": "@_formester_"
+      },
+      {
+        "hid": "twitter:title",
+        "name": "twitter:title",
+        "content": "Response Summary Analytics | See Question Wise Results"
+      },
+      {
+        "hid": "twitter:description",
+        "name": "twitter:description",
+        "content": "Get a clear breakdown of survey, poll, and quiz responses. See how many people chose each option per question, with percentages and visuals — no manual counting."
+      },
+      {
+        "hid": "twitter:image",
+        "name": "twitter:image",
+        "content": "https://formester.com/formester-logo-meta-image.png"
+      },
+      {
+        "hid": "twitter:image:alt",
+        "name": "twitter:image:alt",
+        "content": "Formester Logo"
+      },
+      {
+        "hid": "twitter:card",
+        "name": "twitter:card",
+        "content": "summary_large_image"
+      },
+      {
+        "hid": "apple-mobile-web-app-title",
+        "name": "apple-mobile-web-app-title",
+        "content": "Formester"
+      },
+      {
+        "hid": "image",
+        "name": "image",
+        "property": "og:image",
+        "content": "https://formester.com/formester-logo-meta-image.png"
+      },
+      {
+        "hid": "keywords",
+        "name": "keywords",
+        "content": [
+          "survey data analysis"
+        ]
+      }
+    ]
+  },
+  "jsonld": [
+    {
+      "@context": "https://schema.org",
+      "url": "https://formester.com",
+      "logo": "https://formester.com/logo.svg",
+      "name": "Formester",
+      "@type": "Organization"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "name": "What is summary analytics?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Summary analytics breaks down responses to multiple-choice, picture-choice, and rating questions like a poll result, so you can see how many people chose each option — as a percentage — without reviewing every submission.",
+            "@type": "Answer"
+          }
+        },
+        {
+          "name": "Which questions does it summarise?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Choice-style questions — multiple-choice, picture-choice, and rating-scale. Each one gets its own per-option breakdown so you can read the trend question by question.",
+            "@type": "Answer"
+          }
+        },
+        {
+          "name": "Where do I find the summary?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Open your form, go to Results, then the Summary tab. You'll see an organised breakdown of how respondents answered each choice question.",
+            "@type": "Answer"
+          }
+        },
+        {
+          "name": "How is this different from form analytics?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Summary analytics is about answers — how people responded to each question. Form analytics is about behaviour — views, submissions, time to complete, and where people drop off.",
+            "@type": "Answer"
+          }
+        },
+        {
+          "name": "What can I use it for?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Surveys, polls, quizzes, and feedback forms — customer feedback, employee satisfaction, market research, and event feedback are common uses.",
+            "@type": "Answer"
+          }
+        },
+        {
+          "name": "Is summary analytics available for free?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Yes. Build a survey, collect responses, and view the summary breakdown for free.",
+            "@type": "Answer"
+          }
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": 100,
+      "__component": "macro-components.hero-v2",
+      "description": "Summary analytics breaks down every multiple-choice, picture-choice, and rating question like a poll result — how many people chose each option, as a percentage. No scrolling through individual responses.",
+      "trustText": null,
+      "blobColorA": "#f5eeff",
+      "blobColorB": "#f1ebff",
+      "blobColorC": "#f4efff",
+      "mockupHtml": "<div style='max-width:520px;margin:0 auto;background:#fff;border:1px solid #eaecf0;border-radius:16px;box-shadow:0 24px 80px rgba(15,14,26,.12),0 8px 24px rgba(15,14,26,.06);overflow:hidden;'><div style='display:flex;align-items:center;gap:6px;padding:12px 16px;background:#f9fafb;border-bottom:1px solid #eaecf0;'><span style='width:11px;height:11px;border-radius:50%;background:#ff6058;'></span><span style='width:11px;height:11px;border-radius:50%;background:#ffbd2e;'></span><span style='width:11px;height:11px;border-radius:50%;background:#27c93f;'></span><span style='margin-left:10px;font-size:12px;color:#697586;'>app.formester.com · Summary</span></div><div style='padding:18px;text-align:left;'><div style='display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;'><div style='font-size:13px;font-weight:600;color:#101828;'>How would you rate our support?</div><span style='font-size:10px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:999px;padding:3px 9px;'>Choice</span></div><div style='display:flex;align-items:center;gap:18px;'><div style='flex:1;display:flex;flex-direction:column;gap:11px;'><div style='display:flex;align-items:center;gap:10px;'><span style='width:64px;font-size:11px;color:#475467;'>Excellent</span><span style='flex:1;height:9px;border-radius:5px;background:#e9e4f5;overflow:hidden;'><span style='display:block;width:78%;height:100%;background:#6434d0;'></span></span><span style='font-size:11px;font-weight:700;color:#101828;'>78%</span></div><div style='display:flex;align-items:center;gap:10px;'><span style='width:64px;font-size:11px;color:#475467;'>Good</span><span style='flex:1;height:9px;border-radius:5px;background:#e9e4f5;overflow:hidden;'><span style='display:block;width:52%;height:100%;background:#7c4ce0;'></span></span><span style='font-size:11px;font-weight:700;color:#101828;'>52%</span></div><div style='display:flex;align-items:center;gap:10px;'><span style='width:64px;font-size:11px;color:#475467;'>Fair</span><span style='flex:1;height:9px;border-radius:5px;background:#e9e4f5;overflow:hidden;'><span style='display:block;width:24%;height:100%;background:#b9a6ec;'></span></span><span style='font-size:11px;font-weight:700;color:#101828;'>24%</span></div></div><div style='width:92px;height:92px;border-radius:50%;background:conic-gradient(#6434d0 0 78%,#7c4ce0 78% 92%,#e9e4f5 92% 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;'><div style='width:60px;height:60px;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;'><span style='font-weight:700;color:#101828;font-size:15px;line-height:1;'>1,284</span><span style='font-size:9px;line-height:1.1;color:#697586;'>responses</span></div></div></div></div></div>",
+      "layout": "split",
+      "title": [
+        {
+          "id": 4896,
+          "text": "See how everyone ",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        },
+        {
+          "id": 4895,
+          "text": "answered, at a glance",
+          "highlight": true,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": 1618,
+          "link": "https://app.formester.com/users/sign_up",
+          "text": "Get Started — It's Free",
+          "type": "Primary",
+          "showArrow": true
+        },
+        {
+          "id": 1619,
+          "link": "https://youtu.be/dqFqwxqTFMU",
+          "text": "Watch demo",
+          "type": "Secondary",
+          "showArrow": false
+        }
+      ],
+      "badge": {
+        "id": 101,
+        "text": "Summary Analytics",
+        "tag": null,
+        "link": null
+      },
+      "image": null,
+      "tabCardContent": []
+    },
+    {
+      "id": 537,
+      "__component": "macro-components.trust-seals",
+      "label": "Trusted by leading organisations",
+      "heading": null,
+      "description": null,
+      "showTrustBadges": true,
+      "rawHtml": null,
+      "title": [],
+      "logos": []
+    },
+    {
+      "id": 24,
+      "__component": "macro-components.callout-diagram",
+      "eyebrow": "Anatomy",
+      "description": "Open Results → Summary and Formester turns every choice question into a poll-style breakdown — so you read the trend, not the raw rows.",
+      "background": null,
+      "mockHtml": "<div style='max-width:360px;margin:0 auto;background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 16px 48px rgba(15,14,26,.1);overflow:hidden;'><div style='display:flex;align-items:center;justify-content:space-between;padding:11px 14px;background:#f9fafb;border-bottom:1px solid #eaecf0;'><span style='font-size:12px;font-weight:600;color:#101828;'>app.formester.com · Summary</span><span style='font-size:10px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:999px;padding:3px 9px;'>Choice</span></div><div style='padding:16px;'><div style='font-size:12.5px;font-weight:600;color:#101828;margin-bottom:12px;'>How would you rate our support?</div><div style='display:flex;flex-direction:column;gap:9px;margin-bottom:14px;'><div style='display:flex;align-items:center;gap:9px;'><span style='width:58px;font-size:11px;color:#475467;'>Excellent</span><span style='flex:1;height:8px;border-radius:5px;background:#e9e4f5;overflow:hidden;'><span style='display:block;width:78%;height:100%;background:#6434d0;'></span></span><span style='font-size:11px;font-weight:700;color:#101828;'>78%</span></div><div style='display:flex;align-items:center;gap:9px;'><span style='width:58px;font-size:11px;color:#475467;'>Good</span><span style='flex:1;height:8px;border-radius:5px;background:#e9e4f5;overflow:hidden;'><span style='display:block;width:52%;height:100%;background:#7c4ce0;'></span></span><span style='font-size:11px;font-weight:700;color:#101828;'>52%</span></div><div style='display:flex;align-items:center;gap:9px;'><span style='width:58px;font-size:11px;color:#475467;'>Fair</span><span style='flex:1;height:8px;border-radius:5px;background:#e9e4f5;overflow:hidden;'><span style='display:block;width:24%;height:100%;background:#b9a6ec;'></span></span><span style='font-size:11px;font-weight:700;color:#101828;'>24%</span></div></div><div style='display:flex;align-items:center;gap:13px;border-top:1px solid #f2f4f7;padding-top:13px;'><div style='width:64px;height:64px;border-radius:50%;background:conic-gradient(#6434d0 0 78%,#7c4ce0 78% 92%,#e9e4f5 92% 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;'><div style='width:42px;height:42px;border-radius:50%;background:#fff;'></div></div><div><div style='font-size:15px;font-weight:700;color:#101828;line-height:1.1;'>1,284</div><div style='font-size:11px;color:#697586;'>responses to this question</div></div></div></div></div>",
+      "title": [
+        {
+          "id": 4890,
+          "text": "What a response",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        },
+        {
+          "id": 4891,
+          "text": "summary shows you",
+          "highlight": true,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "pins": [
+        {
+          "id": 94,
+          "label": "The question",
+          "body": "Each multiple-choice, picture-choice, or rating question gets its own summary, exactly as respondents saw it."
+        },
+        {
+          "id": 93,
+          "label": "Per-option bars",
+          "body": "Every option shows the share of respondents who chose it, ranked so the most popular answer stands out."
+        },
+        {
+          "id": 95,
+          "label": "Response count",
+          "body": "See how many people answered the question, so percentages always have context."
+        },
+        {
+          "id": 96,
+          "label": "Visual breakdown",
+          "body": "A donut puts the split into one glance — ideal for sharing with a stakeholder or a deck."
+        }
+      ]
+    },
+    {
+      "id": 170,
+      "__component": "macro-components.card-grid",
+      "eyebrow": "Why use it",
+      "description": "Summary analytics does the counting for you, so a survey, poll, or quiz turns into clear answers the moment responses come in.",
+      "columns": "3",
+      "background": null,
+      "title": [
+        {
+          "id": 4893,
+          "text": "Read your results",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        },
+        {
+          "id": 4889,
+          "text": "without the spreadsheet",
+          "highlight": true,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "cards": [
+        {
+          "id": 691,
+          "tag": "No manual work",
+          "tagColor": "violet",
+          "title": "Skip the tallying",
+          "body": "No going through individual answers. Formester counts every option for you and shows the breakdown automatically.",
+          "mockHtml": "<div style='display:flex;flex-direction:column;gap:8px;'><div style='display:flex;align-items:center;gap:9px;'><span style='width:48px;font-size:11px;color:#475467;'>Yes</span><span style='flex:1;height:8px;border-radius:5px;background:#e9e4f5;overflow:hidden;'><span style='display:block;width:64%;height:100%;background:#6434d0;'></span></span><span style='font-size:11px;font-weight:700;color:#101828;'>64%</span></div><div style='display:flex;align-items:center;gap:9px;'><span style='width:48px;font-size:11px;color:#475467;'>No</span><span style='flex:1;height:8px;border-radius:5px;background:#e9e4f5;overflow:hidden;'><span style='display:block;width:36%;height:100%;background:#b9a6ec;'></span></span><span style='font-size:11px;font-weight:700;color:#101828;'>36%</span></div></div>",
+          "icon": null
+        },
+        {
+          "id": 692,
+          "tag": "Decide faster",
+          "tagColor": "green",
+          "title": "Spot the trend instantly",
+          "body": "See which options win at a glance and make data-driven decisions without exporting or building charts by hand.",
+          "mockHtml": "<div style='display:flex;align-items:center;gap:12px;'><div style='width:54px;height:54px;border-radius:50%;background:conic-gradient(#6434d0 0 64%,#e9e4f5 64% 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;'><div style='width:34px;height:34px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#6434d0;'>64%</div></div><div style='font-size:12px;color:#475467;line-height:1.4;'>Most chose <span style='font-weight:700;color:#101828;'>Option A</span></div></div>",
+          "icon": null
+        },
+        {
+          "id": 693,
+          "tag": "Every question type",
+          "tagColor": "blue",
+          "title": "Built for choice questions",
+          "body": "Works across multiple-choice, picture-choice, and rating-scale questions — each one gets its own summary.",
+          "mockHtml": "<div style='display:flex;flex-direction:column;gap:7px;'><div style='display:flex;align-items:center;gap:8px;'><span style='font-size:11px;color:#101828;font-weight:600;'>Multiple choice</span><span style='margin-left:auto;font-size:10px;font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:2px 8px;'>Summarised</span></div><div style='display:flex;align-items:center;gap:8px;'><span style='font-size:11px;color:#101828;font-weight:600;'>Picture choice</span><span style='margin-left:auto;font-size:10px;font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:2px 8px;'>Summarised</span></div><div style='display:flex;align-items:center;gap:8px;'><span style='font-size:11px;color:#101828;font-weight:600;'>Rating scale</span><span style='margin-left:auto;font-size:10px;font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:2px 8px;'>Summarised</span></div></div>",
+          "icon": null
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "__component": "macro-components.sticky-steps-section",
+      "badge": "How it works",
+      "heading": "View summary analytics in three steps",
+      "description": "Build the survey, share it, then open the summary — Formester handles the counting.",
+      "background": "#f9fafb",
+      "steps": [
+        {
+          "id": 170,
+          "title": "Build & publish your survey",
+          "description": "Add multiple-choice, picture-choice, or rating-scale questions, then publish and share the link by email, social, or an embed.",
+          "rawHtml": "<div style='display:flex;gap:8px;align-items:center;'><span style='background:#6434d0;color:#fff;font-size:12px;font-weight:600;border-radius:8px;padding:8px 16px;'>Publish</span><span style='flex:1;border:1px solid #d0d5dd;border-radius:8px;padding:8px 12px;font-size:12px;color:#697586;'>formester.com/f/feedback</span></div>",
+          "image": null
+        },
+        {
+          "id": 169,
+          "title": "Collect responses",
+          "description": "As people answer, Formester gathers and stores every response in the Results tab, ready for analysis.",
+          "rawHtml": "<div style='display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #eaecf0;border-radius:10px;padding:10px 12px;'><span style='width:24px;height:24px;border-radius:50%;background:#ecfdf3;color:#027a48;display:inline-flex;align-items:center;justify-content:center;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.4'><path d='M5 12l4 4L19 6'/></svg></span><div style='font-size:12px;font-weight:600;color:#101828;'>1,284 responses collected</div></div>",
+          "image": null
+        },
+        {
+          "id": 168,
+          "title": "Open Results → Summary",
+          "description": "Go to the Summary view to see an organised breakdown of how respondents answered each choice question.",
+          "rawHtml": "<div style='display:flex;align-items:center;gap:9px;border:1px solid #6434d0;border-radius:9px;padding:8px 11px;font-size:12.5px;color:#101828;background:#fff;box-shadow:0 4px 12px rgba(100,52,208,.16);'><span style='font-size:12px;color:#697586;'>Results</span><span style='color:#b9a6ec;font-weight:700;'>&#8594;</span><span style='font-weight:600;'>Summary</span><span style='margin-left:auto;width:18px;height:18px;border-radius:50%;background:conic-gradient(#6434d0 0 70%,#e9e4f5 70% 100%);'></span></div>",
+          "image": null
+        }
+      ],
+      "buttons": []
+    },
+    {
+      "id": 1157,
+      "__component": "macro-components.testimonials",
+      "description": null,
+      "version": "feature",
+      "heading": [
+        {
+          "id": 4892,
+          "text": "Teams analyse responses with Formester",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "testimonials": [
+        {
+          "id": 1,
+          "name": "Dr. Michele Ross",
+          "position": "Founder",
+          "organization": "Infused Health",
+          "comment": "I'm migrating my forms from Paperform, where I've been a user for over 4 years. Loving the software so far! I've already replaced Paperform form embeds & popups on my sites & my husband's websites with Formester forms",
+          "createdAt": "2024-06-18T03:47:14.605Z",
+          "updatedAt": "2025-01-22T02:57:30.159Z",
+          "publishedAt": "2024-06-18T03:47:18.889Z",
+          "companyLogo": {
+            "id": 227,
+            "imageAlt": "Dr. Michele Ross",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 1685,
+              "name": "dr._michelelogo.webp",
+              "alternativeText": null,
+              "caption": null,
+              "width": 300,
+              "height": 59,
+              "formats": {
+                "thumbnail": {
+                  "ext": ".webp",
+                  "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_dr_michelelogo_2269ae2211.webp",
+                  "hash": "thumbnail_dr_michelelogo_2269ae2211",
+                  "mime": "image/webp",
+                  "name": "thumbnail_dr._michelelogo.webp",
+                  "path": null,
+                  "size": 5.58,
+                  "width": 245,
+                  "height": 48
+                }
+              },
+              "hash": "dr_michelelogo_2269ae2211",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 5.87,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/dr_michelelogo_2269ae2211.webp",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2024-08-01T14:38:23.944Z",
+              "updatedAt": "2024-08-01T14:38:23.944Z"
+            }
+          }
+        },
+        {
+          "id": 2,
+          "name": "Jilson",
+          "position": "Organiser",
+          "organization": "Vue Conference",
+          "comment": "Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.",
+          "createdAt": "2024-06-18T03:48:46.610Z",
+          "updatedAt": "2025-01-22T02:57:08.760Z",
+          "publishedAt": "2024-06-18T03:48:50.595Z",
+          "companyLogo": {
+            "id": 228,
+            "imageAlt": "photo-of-vue-conference",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 1680,
+              "name": "vueconf.webp",
+              "alternativeText": "photo-of-vue-conference",
+              "caption": "photo-of-vue-conference",
+              "width": 80,
+              "height": 80,
+              "formats": null,
+              "hash": "vueconf_1bc3dc0827",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 1.07,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2024-08-01T14:38:23.731Z",
+              "updatedAt": "2024-12-01T07:47:11.024Z"
+            }
+          }
+        },
+        {
+          "id": 4,
+          "name": "Costanza Casullo",
+          "position": "Volunteer",
+          "organization": "Wato Coding Hub",
+          "comment": "Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.",
+          "createdAt": "2024-06-18T03:51:15.232Z",
+          "updatedAt": "2025-01-22T02:58:03.674Z",
+          "publishedAt": "2024-06-18T03:51:21.477Z",
+          "companyLogo": {
+            "id": 225,
+            "imageAlt": "wato-coding-hub-logo",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 1681,
+              "name": "wato-coding-hub.webp",
+              "alternativeText": "wato-coding-hub-logo",
+              "caption": "wato-coding-hub-logo",
+              "width": 80,
+              "height": 81,
+              "formats": null,
+              "hash": "wato_coding_hub_e054f0ea9d",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 1.88,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/wato_coding_hub_e054f0ea9d.webp",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2024-08-01T14:38:23.738Z",
+              "updatedAt": "2024-12-01T07:49:13.371Z"
+            }
+          }
+        },
+        {
+          "id": 5,
+          "name": "Deanna Bugalski",
+          "position": "Founder/CEO",
+          "organization": "Suggesterfy",
+          "comment": "I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formester was super easy to set up, and the usability is seamless! I highly recommend!",
+          "createdAt": "2024-06-18T03:52:39.354Z",
+          "updatedAt": "2025-01-22T02:57:47.756Z",
+          "publishedAt": "2024-06-18T03:52:43.800Z",
+          "companyLogo": {
+            "id": 226,
+            "imageAlt": "suggesterfy-logo",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 1683,
+              "name": "suggesterfy_logo.webp",
+              "alternativeText": "suggesterfy-logo",
+              "caption": "suggesterfy-logo",
+              "width": 100,
+              "height": 50,
+              "formats": null,
+              "hash": "suggesterfy_logo_d1d7f996b9",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 1.91,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/suggesterfy_logo_d1d7f996b9.webp",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2024-08-01T14:38:23.921Z",
+              "updatedAt": "2024-12-01T07:49:52.459Z"
+            }
+          }
+        },
+        {
+          "id": 6,
+          "name": "Thibaud Martinez",
+          "position": "Organiser",
+          "organization": "Tedx",
+          "comment": "I really enjoy Formester. It’s clean and straight-forward and it does well, what it is supposed to do.",
+          "createdAt": "2024-06-18T03:53:38.957Z",
+          "updatedAt": "2025-01-22T02:56:48.567Z",
+          "publishedAt": "2024-06-18T03:53:40.693Z",
+          "companyLogo": {
+            "id": 229,
+            "imageAlt": "tedx-logo",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 1684,
+              "name": "tedx.webp",
+              "alternativeText": "tedx-logo",
+              "caption": "tedx-logo",
+              "width": 109,
+              "height": 38,
+              "formats": null,
+              "hash": "tedx_2fce0eee2e",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 1.09,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/tedx_2fce0eee2e.webp",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2024-08-01T14:38:23.941Z",
+              "updatedAt": "2024-12-01T07:50:31.505Z"
+            }
+          }
+        },
+        {
+          "id": 34,
+          "name": "Bency",
+          "position": "Product Manager",
+          "organization": "Northgate Digital Solutions",
+          "comment": "Formester's AI form generator transformed how quickly we build forms. The drag-and-drop builder paired with AI-generated templates means I can spin up a survey or poll in minutes, not hours. Conditional logic, file uploads, and seamless integrations make it incredibly versatile and the customization options let every form match our branding perfectly. Their support team is exceptional too. It's the only form and survey tool we recommend",
+          "createdAt": "2025-06-29T23:23:10.541Z",
+          "updatedAt": "2026-05-03T09:30:00.533Z",
+          "publishedAt": "2026-05-03T09:30:00.530Z",
+          "companyLogo": {
+            "id": 3652,
+            "imageAlt": null,
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": null
+          }
+        },
+        {
+          "id": 35,
+          "name": "Roger",
+          "position": "Marketing Specialist",
+          "organization": "BrightPath Technologies",
+          "comment": "I use Formester for my form-building needs and I’m thoroughly impressed. The platform is rich with features… What really sets them apart is their exceptional customer service (responses typically within 10 minutes). The pricing is also very reasonable… Highly recommended!\n",
+          "createdAt": "2025-06-29T23:29:19.225Z",
+          "updatedAt": "2025-10-31T04:00:58.697Z",
+          "publishedAt": "2025-06-29T23:29:21.134Z",
+          "companyLogo": {
+            "id": 3649,
+            "imageAlt": "brightpath-logo",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 4094,
+              "name": "brightpath-logo.png",
+              "alternativeText": "brightpath-logo",
+              "caption": "brightpath-logo",
+              "width": 200,
+              "height": 49,
+              "formats": null,
+              "hash": "brightpath_logo_6ef0922a60",
+              "ext": ".png",
+              "mime": "image/png",
+              "size": 2.5,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/brightpath_logo_6ef0922a60.png",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2025-10-31T04:00:11.712Z",
+              "updatedAt": "2025-10-31T04:00:11.712Z"
+            }
+          }
+        },
+        {
+          "id": 36,
+          "name": "Ye Qi Lai",
+          "position": "UX Designer",
+          "organization": "Eastview Consulting",
+          "comment": "Formester is one of the best underrated survey tools out there… It’s extremely customizable… Their support is awesome… I absolutely recommend this to anyone looking for an alternative to the usual form creators.",
+          "createdAt": "2025-06-29T23:30:04.374Z",
+          "updatedAt": "2025-10-31T04:00:30.746Z",
+          "publishedAt": "2025-06-29T23:30:06.260Z",
+          "companyLogo": {
+            "id": 3648,
+            "imageAlt": "eastview-logo-header",
+            "imageUrl": null,
+            "width": null,
+            "height": null,
+            "image": {
+              "id": 4097,
+              "name": "eastview-logo-header-300x120 1.png",
+              "alternativeText": "eastview-logo-header",
+              "caption": "eastview-logo-header",
+              "width": 200,
+              "height": 80,
+              "formats": null,
+              "hash": "eastview_logo_header_300x120_1_d9c231e93b",
+              "ext": ".png",
+              "mime": "image/png",
+              "size": 3.18,
+              "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/eastview_logo_header_300x120_1_d9c231e93b.png",
+              "previewUrl": null,
+              "provider": "aws-s3",
+              "provider_metadata": null,
+              "createdAt": "2025-10-31T04:00:11.854Z",
+              "updatedAt": "2025-10-31T04:00:11.854Z"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 1257,
+      "__component": "macro-components.faqs",
+      "description": null,
+      "centered": true,
+      "title": [
+        {
+          "id": 4894,
+          "text": "Summary analytics FAQs",
+          "highlight": false,
+          "color": "#475467",
+          "bold": false
+        }
+      ],
+      "faqList": [
+        {
+          "id": 2449,
+          "header": "What is summary analytics?",
+          "body": "Summary analytics breaks down responses to multiple-choice, picture-choice, and rating questions like a poll result, so you can see how many people chose each option — as a percentage — without reviewing every submission.",
+          "body_markdown": null,
+          "list": []
+        },
+        {
+          "id": 2450,
+          "header": "Which questions does it summarise?",
+          "body": "Choice-style questions — multiple-choice, picture-choice, and rating-scale. Each one gets its own per-option breakdown so you can read the trend question by question.",
+          "body_markdown": null,
+          "list": []
+        },
+        {
+          "id": 2451,
+          "header": "Where do I find the summary?",
+          "body": "Open your form, go to Results, then the Summary tab. You'll see an organised breakdown of how respondents answered each choice question.",
+          "body_markdown": null,
+          "list": []
+        },
+        {
+          "id": 2452,
+          "header": "How is this different from form analytics?",
+          "body": "Summary analytics is about answers — how people responded to each question. Form analytics is about behaviour — views, submissions, time to complete, and where people drop off.",
+          "body_markdown": null,
+          "list": []
+        },
+        {
+          "id": 2454,
+          "header": "What can I use it for?",
+          "body": "Surveys, polls, quizzes, and feedback forms — customer feedback, employee satisfaction, market research, and event feedback are common uses.",
+          "body_markdown": null,
+          "list": []
+        },
+        {
+          "id": 2453,
+          "header": "Is summary analytics available for free?",
+          "body": "Yes. Build a survey, collect responses, and view the summary breakdown for free.",
+          "body_markdown": null,
+          "list": []
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "__component": "macro-components.cta-dark",
+      "badge": "Free to start",
+      "heading": "See your responses summarised in seconds",
+      "description": "Build a survey, collect responses, and let Formester turn every choice question into a clear breakdown.",
+      "trustText": null,
+      "buttons": [
+        {
+          "id": 1616,
+          "link": "https://app.formester.com/users/sign_up",
+          "text": "Get Started — It's Free",
+          "type": "Primary",
+          "showArrow": true
+        },
+        {
+          "id": 1617,
+          "link": "/pricing",
+          "text": "See pricing",
+          "type": "White",
+          "showArrow": false
+        }
+      ]
+    }
+  ]
+}
