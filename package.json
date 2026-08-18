@@ -14,7 +14,10 @@
     "postinstall": "nuxt prepare",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "s3-uploader": "npm --prefix tools/s3-uploader run dev"
+    "s3-uploader": "npm --prefix tools/s3-uploader run dev",
+    "s3-uploader:install": "npm --prefix tools/s3-uploader install",
+    "s3-uploader:build": "npm --prefix tools/s3-uploader run build",
+    "s3-uploader:start": "npm --prefix tools/s3-uploader run start"
   },
   "dependencies": {
     "@builder.io/partytown": "^0.10.3",
