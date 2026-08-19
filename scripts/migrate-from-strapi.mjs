@@ -61,11 +61,11 @@ function processItem(item) {
   return { head, jsonld, components }
 }
 
-async function fetchAllPaginated(endpoint) {
+async function fetchAllPaginated(endpoint, extraParams = 'populate=deep') {
   const items = []
   let page = 1
   for (;;) {
-    const url = `${STRAPI_URL}/api/${endpoint}?populate=deep&pagination[page]=${page}&pagination[pageSize]=${PAGE_SIZE}`
+    const url = `${STRAPI_URL}/api/${endpoint}?${extraParams}&pagination[page]=${page}&pagination[pageSize]=${PAGE_SIZE}`
     const res = await fetch(url)
     if (!res.ok) throw new Error(`${endpoint} page ${page} failed: ${res.status}`)
     const json = await res.json()
@@ -75,6 +75,14 @@ async function fetchAllPaginated(endpoint) {
     page += 1
   }
   return items
+}
+
+// Slug-safe filename for content types with no natural slug field.
+function slugifyName(name) {
+  return String(name)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
 }
 
 function writeJson(filePath, data) {
@@ -125,9 +133,164 @@ async function migrateFeatures() {
   console.log(`[migrate] wrote ${count} features`)
 }
 
+// blogs/form-builders/form-builder-features come back as classic Strapi v4
+// {id, attributes: {...}} — unlike pages/features/recommended-templates,
+// which the CMS's response-flattening returns flat. Both shapes exist side
+// by side depending on content type; this just unwraps the nested one.
+function attrs(item) {
+  return { id: item.id, ...(item.attributes || {}) }
+}
+
+async function migrateBlog() {
+  const items = await fetchAllPaginated('blogs')
+  let count = 0
+  for (const raw of items) {
+    const item = attrs(raw)
+    if (!item.slug) continue
+    const cover = item.coverImg?.data?.attributes
+    writeJson(path.join(CONTENT_DIR, 'blog', `${item.slug}.json`), {
+      slug: item.slug,
+      title: item.title,
+      description: item.description,
+      metaTitle: item.metaTitle,
+      metaDescription: item.metaDescription,
+      keywords: item.keywords,
+      author: item.author,
+      authorProfile: item.authorProfile,
+      coverImgAlt: item.coverImgAlt,
+      featured: Boolean(item.featured),
+      body: item.body,
+      coverImg: cover ? { url: cover.url, width: cover.width, height: cover.height } : null,
+      metaImage: item.metaImage || [],
+      jsonld: normalizeJsonLd((item.schema || []).map((s) => s.type)),
+      createdAt: item.createdAt,
+      updatedAt: item.updatedAt,
+      publishedAt: item.publishedAt,
+    })
+    count += 1
+  }
+  console.log(`[migrate] wrote ${count} blog posts`)
+}
+
+// Flattens the awkward plan.features[].form_builder_feature.data.attributes
+// relation nesting into a clean `feature: {id, title, description}` so the
+// committed JSON doesn't carry Strapi's relation-wrapper shape forever.
+function flattenPlans(planList) {
+  return (planList || []).map((p) => ({
+    id: p.id,
+    name: p.name,
+    amount: p.amount,
+    features: (p.features || []).map((f) => {
+      const fbf = f.form_builder_feature?.data
+      return {
+        id: f.id,
+        value: f.value,
+        feature: fbf ? { id: fbf.id, title: fbf.attributes?.title, description: fbf.attributes?.description } : null,
+      }
+    }),
+  }))
+}
+
+async function migrateFormBuilders() {
+  const items = await fetchAllPaginated('form-builders')
+  let count = 0
+  for (const raw of items) {
+    const item = attrs(raw)
+    const logo = item.logo?.data?.attributes
+    writeJson(path.join(CONTENT_DIR, 'comparison-tool', 'form-builders', `${item.id}.json`), {
+      strapiId: item.id,
+      name: item.name,
+      logo: logo ? { url: logo.url, alternativeText: logo.alternativeText } : null,
+      plan: flattenPlans(item.plan),
+      createdAt: item.createdAt,
+      updatedAt: item.updatedAt,
+      publishedAt: item.publishedAt,
+    })
+    count += 1
+  }
+  console.log(`[migrate] wrote ${count} form builders`)
+}
+
+async function migrateFormBuilderFeatures() {
+  const items = await fetchAllPaginated('form-builder-features')
+  let count = 0
+  for (const raw of items) {
+    const item = attrs(raw)
+    writeJson(path.join(CONTENT_DIR, 'comparison-tool', 'form-builder-features', `${item.id}.json`), {
+      strapiId: item.id,
+      title: item.title,
+      description: item.description,
+      category: item.category || null,
+    })
+    count += 1
+  }
+  console.log(`[migrate] wrote ${count} form builder features`)
+}
+
+async function migratePlatformTestimonials() {
+  const items = await fetchAllPaginated('platform-testimonials')
+  let count = 0
+  for (const item of items) {
+    writeJson(path.join(CONTENT_DIR, 'platform-testimonials', `${item.id}.json`), {
+      strapiId: item.id,
+      platform: item.platform,
+      rating: item.rating,
+      text: item.text,
+      authorName: item.authorName,
+      authorRole: item.authorRole,
+      reviewDate: item.reviewDate,
+      verified: Boolean(item.verified),
+      hidden: Boolean(item.hidden),
+    })
+    count += 1
+  }
+  console.log(`[migrate] wrote ${count} platform testimonials`)
+}
+
+async function migratePdfTemplates() {
+  const items = await fetchAllPaginated('pdf-templates')
+  let count = 0
+  for (const item of items) {
+    if (!item.slug) continue
+    writeJson(path.join(CONTENT_DIR, 'templates', 'pdf-templates', `${item.slug}.json`), {
+      slug: item.slug,
+      previewImages: item.previewImages || [],
+    })
+    count += 1
+  }
+  console.log(`[migrate] wrote ${count} pdf templates`)
+}
+
+async function migrateRecommendedTemplates() {
+  const items = await fetchAllPaginated('recommended-templates')
+  let count = 0
+  for (const item of items) {
+    if (!item.specificTemplate) continue
+    writeJson(
+      path.join(CONTENT_DIR, 'templates', 'recommended-templates', `${slugifyName(item.specificTemplate)}.json`),
+      {
+        specificTemplate: item.specificTemplate,
+        description: item.description || '',
+        hideDefaultRecommended: Boolean(item.hideDefaultRecommended),
+        title: item.title || [],
+        content: item.content || [],
+        recommendedTemplates: item.recommendedTemplates || [],
+      }
+    )
+    count += 1
+  }
+  console.log(`[migrate] wrote ${count} recommended-template entries`)
+}
+
 async function main() {
   await migratePagesAndHome()
   await migrateFeatures()
+  await migrateBlog()
+  await migrateFormBuilders()
+  await migrateFormBuilderFeatures()
+  await migratePlatformTestimonials()
+  await migratePdfTemplates()
+  await migrateRecommendedTemplates()
 }
 
 main().catch((err) => {
