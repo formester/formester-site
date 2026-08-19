@@ -9,6 +9,12 @@ import { anyObject, media, id, titleRuns } from './shared'
 // app.formester.com template data (which stays a live fetch — it's product
 // data, not CMS content).
 
+// `type: 'page'` collection — `rawbody` is a reserved Nuxt Content field:
+// it's auto-populated with the file's raw, unparsed body text (bypassing
+// the markdown-to-AST pipeline), so BlogPostView.vue's own marked()/TOC/FAQ
+// pipeline keeps working on a plain string unchanged. The reserved `body`
+// field (parsed AST) is unused — getAllBlogs.js maps rawbody -> body at the
+// adapter boundary instead.
 export const blog = z.object({
   slug: z.string(),
   title: z.string(),
@@ -20,7 +26,7 @@ export const blog = z.object({
   authorProfile: z.string().optional(),
   coverImgAlt: z.string().optional(),
   featured: z.boolean().default(false),
-  body: z.string(),
+  rawbody: z.string(),
   coverImg: media,
   metaImage: z.array(z.object({ imageURL: z.string().optional() }).passthrough()).default([]),
   jsonld: z.array(anyObject).default([]),

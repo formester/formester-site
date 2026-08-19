@@ -60,8 +60,8 @@ export default defineContentConfig({
       }),
     }),
     blog: defineCollection({
-      type: 'data',
-      source: 'blog/**/*.json',
+      type: 'page',
+      source: 'blog/**/*.md',
       schema: blog,
     }),
     formBuilders: defineCollection({
