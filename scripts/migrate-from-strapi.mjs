@@ -90,6 +90,18 @@ function writeJson(filePath, data) {
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2) + '\n')
 }
 
+// Writes a `type: 'page'` Nuxt Content file: YAML frontmatter (one
+// `key: JSON.stringify(value)` line per field — valid YAML, since JSON is a
+// YAML subset, with none of the hand-rolled-escaping risk) followed by the
+// raw body text verbatim. See scripts/convert-blog-json-to-md.mjs for the
+// one-off JSON->MD conversion this mirrors for blog.
+function writeMarkdown(filePath, { body, ...frontmatterFields }) {
+  fs.mkdirSync(path.dirname(filePath), { recursive: true })
+  const frontmatterLines = Object.entries(frontmatterFields).map(([key, value]) => `${key}: ${JSON.stringify(value)}`)
+  const md = `---\n${frontmatterLines.join('\n')}\n---\n${body || ''}\n`
+  fs.writeFileSync(filePath, md)
+}
+
 // Home page is NOT the separate `home-page` singleton (stale — the live site
 // never reads it). It's the `pages` collection entry with no slug, exactly
 // like utils/getAllPages.js's `map.__home__` handling.
@@ -148,7 +160,7 @@ async function migrateBlog() {
     const item = attrs(raw)
     if (!item.slug) continue
     const cover = item.coverImg?.data?.attributes
-    writeJson(path.join(CONTENT_DIR, 'blog', `${item.slug}.json`), {
+    writeMarkdown(path.join(CONTENT_DIR, 'blog', `${item.slug}.md`), {
       slug: item.slug,
       title: item.title,
       description: item.description,
