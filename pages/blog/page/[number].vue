@@ -5,11 +5,7 @@
       <div class="blog-container-wrapper">
         <div class="blog-container">
           <transition-group name="fade" tag="div" class="blog-grid" mode="out-in">
-            <BlogCard
-              v-for="article in paginatedArticles"
-              :key="article.slug"
-              :article="article"
-            />
+            <BlogCard v-for="article in paginatedArticles" :key="article.slug" :article="article" />
           </transition-group>
         </div>
         <ClientOnly>
@@ -28,12 +24,7 @@
         >
           ← Previous
         </nuxt-link>
-        <span
-          v-else
-          class="custom-page-btn prev disabled"
-        >
-          ← Previous
-        </span>
+        <span v-else class="custom-page-btn prev disabled"> ← Previous </span>
         <div class="custom-pagination-center">
           <span v-for="item in paginationPages" :key="item.key">
             <nuxt-link
@@ -48,19 +39,10 @@
             <span v-else class="custom-ellipsis">...</span>
           </span>
         </div>
-        <nuxt-link
-          v-if="currentPage < totalPages"
-          class="custom-page-btn next"
-          :to="`/blog/page/${currentPage + 1}/`"
-        >
+        <nuxt-link v-if="currentPage < totalPages" class="custom-page-btn next" :to="`/blog/page/${currentPage + 1}/`">
           Next →
         </nuxt-link>
-        <span
-          v-else
-          class="custom-page-btn next disabled"
-        >
-          Next →
-        </span>
+        <span v-else class="custom-page-btn next disabled"> Next → </span>
       </div>
     </nav>
   </div>
@@ -112,11 +94,7 @@ const paginationPages = computed(() => {
     if (current > 3) {
       pages.push({ type: 'ellipsis', key: 'start-ellipsis' })
     }
-    for (
-      let i = Math.max(2, current - 1);
-      i <= Math.min(total - 1, current + 1);
-      i++
-    ) {
+    for (let i = Math.max(2, current - 1); i <= Math.min(total - 1, current + 1); i++) {
       if (i === 1 || i === total) continue
       pages.push({ type: 'page', page: i, key: `page-${i}` })
     }
@@ -133,7 +111,8 @@ const meta = computed(() => {
     type: 'website',
     url: `https://formester.com/blog/page/${currentPage.value}/`,
     title: `Latest form Builder Software in 2023 | Page ${currentPage.value} - Formester`,
-    description: "Best Online, No-Code Form Builder Software in 2023 - Formester's Blog Resource | Discover trending content related to all things form-building.",
+    description:
+      "Best Online, No-Code Form Builder Software in 2023 - Formester's Blog Resource | Discover trending content related to all things form-building.",
     mainImage: 'https://formester.com/formester-logo-meta-image.png',
     mainImageAlt: 'Formester Logo',
   }
@@ -151,17 +130,29 @@ useHead({
       rel: 'canonical',
       href: `https://formester.com/blog/page/${currentPage.value}/`,
     },
-    ...(currentPage.value > 2 ? [{
-      rel: 'prev',
-      href: currentPage.value === 2 ? baseUrl : `${baseUrl}page/${currentPage.value - 1}/`,
-    }] : currentPage.value === 2 ? [{
-      rel: 'prev',
-      href: baseUrl,
-    }] : []),
-    ...(currentPage.value < totalPages.value ? [{
-      rel: 'next',
-      href: `${baseUrl}page/${currentPage.value + 1}/`,
-    }] : []),
+    ...(currentPage.value > 2
+      ? [
+          {
+            rel: 'prev',
+            href: currentPage.value === 2 ? baseUrl : `${baseUrl}page/${currentPage.value - 1}/`,
+          },
+        ]
+      : currentPage.value === 2
+        ? [
+            {
+              rel: 'prev',
+              href: baseUrl,
+            },
+          ]
+        : []),
+    ...(currentPage.value < totalPages.value
+      ? [
+          {
+            rel: 'next',
+            href: `${baseUrl}page/${currentPage.value + 1}/`,
+          },
+        ]
+      : []),
   ],
 })
 
@@ -172,7 +163,8 @@ useJsonld([
     '@type': 'Corporation',
     '@id': 'https://acornglobus.com',
     name: 'Formester',
-    description: "Best Online, No-Code Form Builder Software in 2023 - Formester's Blog Resource | Discover trending content related to all things form-building.",
+    description:
+      "Best Online, No-Code Form Builder Software in 2023 - Formester's Blog Resource | Discover trending content related to all things form-building.",
     logo: 'https://formester.com/logo.png',
     url: 'https://formester.com',
     address: {
@@ -209,28 +201,31 @@ useJsonld([
 ])
 
 // Watch for route changes (for client-side navigation)
-watch(() => route.params.number, () => {
-  isLoading.value = true
+watch(
+  () => route.params.number,
+  () => {
+    isLoading.value = true
 
-  if (process.client) {
+    if (process.client) {
+      nextTick(() => {
+        const allBlogsSection = document.getElementById('all-blogs')
+        if (allBlogsSection) {
+          const rect = allBlogsSection.getBoundingClientRect()
+          const scrollTop = window.pageYOffset + rect.top - 80
+          window.scrollTo({ top: scrollTop, behavior: 'smooth' })
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' })
+        }
+      })
+    }
+
     nextTick(() => {
-      const allBlogsSection = document.getElementById('all-blogs')
-      if (allBlogsSection) {
-        const rect = allBlogsSection.getBoundingClientRect()
-        const scrollTop = window.pageYOffset + rect.top - 80
-        window.scrollTo({ top: scrollTop, behavior: 'smooth' })
-      } else {
-        window.scrollTo({ top: 0, behavior: 'smooth' })
-      }
+      setTimeout(() => {
+        isLoading.value = false
+      }, 300)
     })
-  }
-
-  nextTick(() => {
-    setTimeout(() => {
-      isLoading.value = false
-    }, 300)
-  })
-})
+  },
+)
 </script>
 
 <style scoped>
@@ -322,7 +317,10 @@ watch(() => route.params.number, () => {
   color: var(--fg-2);
   cursor: pointer;
   outline: none;
-  transition: background 140ms ease, color 140ms ease, border-color 140ms ease;
+  transition:
+    background 140ms ease,
+    color 140ms ease,
+    border-color 140ms ease;
   padding: 0 14px;
 }
 
@@ -398,15 +396,21 @@ watch(() => route.params.number, () => {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Transition effects */
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.3s;
 }
-.fade-enter, .fade-leave-to {
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
 }
 </style>

@@ -10,9 +10,7 @@
     />
     <nav v-if="totalPages > 1 && !isSearchActive" class="container">
       <div class="custom-pagination-bar">
-        <span class="custom-page-btn prev disabled">
-          Previous
-        </span>
+        <span class="custom-page-btn prev disabled"> Previous </span>
         <div class="custom-pagination-center">
           <span v-for="item in paginationPages" :key="item.key">
             <nuxt-link
@@ -27,19 +25,10 @@
             <span v-else class="custom-ellipsis">...</span>
           </span>
         </div>
-        <nuxt-link
-          v-if="currentPage < totalPages"
-          class="custom-page-btn next"
-          :to="`/templates/page/2/`"
-        >
+        <nuxt-link v-if="currentPage < totalPages" class="custom-page-btn next" :to="`/templates/page/2/`">
           Next
         </nuxt-link>
-        <span
-          v-else
-          class="custom-page-btn next disabled"
-        >
-          Next
-        </span>
+        <span v-else class="custom-page-btn next disabled"> Next </span>
       </div>
     </nav>
   </div>
@@ -86,11 +75,7 @@ const paginationPages = computed(() => {
     if (current > 3) {
       pages.push({ type: 'ellipsis', key: 'start-ellipsis' })
     }
-    for (
-      let i = Math.max(2, current - 1);
-      i <= Math.min(total - 1, current + 1);
-      i++
-    ) {
+    for (let i = Math.max(2, current - 1); i <= Math.min(total - 1, current + 1); i++) {
       if (i === 1 || i === total) continue
       pages.push({ type: 'page', page: i, key: `page-${i}` })
     }
@@ -123,7 +108,7 @@ const listItems = computed(() =>
     name: template.name,
     image: template.previewImageUrl,
     description: template.description,
-  }))
+  })),
 )
 
 useHead({
@@ -134,10 +119,14 @@ useHead({
       rel: 'canonical',
       href: 'https://formester.com/templates/',
     },
-    ...(totalPages.value > 1 ? [{
-      rel: 'next',
-      href: 'https://formester.com/templates/page/2/',
-    }] : []),
+    ...(totalPages.value > 1
+      ? [
+          {
+            rel: 'next',
+            href: 'https://formester.com/templates/page/2/',
+          },
+        ]
+      : []),
   ],
 })
 
@@ -231,7 +220,10 @@ useJsonld([
   color: var(--clr-text-secondary);
   cursor: pointer;
   outline: none;
-  transition: background 0.2s, color 0.2s, border 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border 0.2s;
   padding: 0 16px;
 }
 

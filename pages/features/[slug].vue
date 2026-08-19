@@ -16,7 +16,7 @@ const { data: pageData, error: fetchError } = await useAsyncData(`feature-${slug
     throw createError({
       statusCode: 404,
       statusMessage: 'Page not found',
-      fatal: true
+      fatal: true,
     })
   }
 
@@ -25,10 +25,10 @@ const { data: pageData, error: fetchError } = await useAsyncData(`feature-${slug
 
 // If there was an error fetching data, throw it
 if (fetchError.value) {
-  throw createError({ 
-    statusCode: 404, 
+  throw createError({
+    statusCode: 404,
     statusMessage: 'Page not found',
-    fatal: true 
+    fatal: true,
   })
 }
 

@@ -17,12 +17,7 @@
         >
           Previous
         </nuxt-link>
-        <span
-          v-else
-          class="custom-page-btn prev disabled"
-        >
-          Previous
-        </span>
+        <span v-else class="custom-page-btn prev disabled"> Previous </span>
         <div class="custom-pagination-center">
           <span v-for="item in paginationPages" :key="item.key">
             <nuxt-link
@@ -44,12 +39,7 @@
         >
           Next
         </nuxt-link>
-        <span
-          v-else
-          class="custom-page-btn next disabled"
-        >
-          Next
-        </span>
+        <span v-else class="custom-page-btn next disabled"> Next </span>
       </div>
     </nav>
   </div>
@@ -102,11 +92,7 @@ const paginationPages = computed(() => {
     if (current > 3) {
       pages.push({ type: 'ellipsis', key: 'start-ellipsis' })
     }
-    for (
-      let i = Math.max(2, current - 1);
-      i <= Math.min(total - 1, current + 1);
-      i++
-    ) {
+    for (let i = Math.max(2, current - 1); i <= Math.min(total - 1, current + 1); i++) {
       if (i === 1 || i === total) continue
       pages.push({ type: 'page', page: i, key: `page-${i}` })
     }
@@ -142,17 +128,29 @@ useHead({
       rel: 'canonical',
       href: `https://formester.com/templates/page/${currentPage.value}/`,
     },
-    ...(currentPage.value > 2 ? [{
-      rel: 'prev',
-      href: currentPage.value === 2 ? baseUrl : `${baseUrl}page/${currentPage.value - 1}/`,
-    }] : currentPage.value === 2 ? [{
-      rel: 'prev',
-      href: baseUrl,
-    }] : []),
-    ...(currentPage.value < totalPages.value ? [{
-      rel: 'next',
-      href: `${baseUrl}page/${currentPage.value + 1}/`,
-    }] : []),
+    ...(currentPage.value > 2
+      ? [
+          {
+            rel: 'prev',
+            href: currentPage.value === 2 ? baseUrl : `${baseUrl}page/${currentPage.value - 1}/`,
+          },
+        ]
+      : currentPage.value === 2
+        ? [
+            {
+              rel: 'prev',
+              href: baseUrl,
+            },
+          ]
+        : []),
+    ...(currentPage.value < totalPages.value
+      ? [
+          {
+            rel: 'next',
+            href: `${baseUrl}page/${currentPage.value + 1}/`,
+          },
+        ]
+      : []),
   ],
 })
 
@@ -252,7 +250,10 @@ useJsonld([
   color: var(--clr-text-secondary);
   cursor: pointer;
   outline: none;
-  transition: background 0.2s, color 0.2s, border 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border 0.2s;
   padding: 0 16px;
 }
 
