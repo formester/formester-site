@@ -9,8 +9,15 @@ let cachePromise = null
 async function _fetchAllBlogs() {
   const docs = await queryCollection('blog').order('publishedAt', 'DESC').all()
   const blogs = docs.map((doc) => {
-    const { id, ...attributes } = doc
-    return { id, attributes }
+    // `blog` is a `type: 'page'` collection now (markdown + frontmatter), so
+    // `doc` also carries Nuxt Content's page-collection internals (parsed
+    // AST `body`, `path`, `stem`, `extension`, `seo`, `navigation`, `meta`,
+    // `__metadata`) alongside our own frontmatter fields. Drop those and use
+    // the reserved `rawbody` field (raw, unparsed source text) as `body` —
+    // same plain-string shape BlogPostView.vue's marked()/TOC/FAQ pipeline
+    // already expects.
+    const { id, rawbody, body: _parsedBody, path, stem, extension, seo, navigation, meta, __metadata, ...rest } = doc
+    return { id, attributes: { ...rest, body: rawbody } }
   })
   console.log(`[getAllBlogs] Loaded ${blogs.length} blogs from content/blog`)
   return blogs
