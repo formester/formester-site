@@ -1,6 +1,14 @@
 import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 import { anyObject } from './content/schemas/shared'
 import { block } from './content/schemas/blocks'
+import {
+  blog,
+  formBuilder,
+  formBuilderFeature,
+  platformTestimonial,
+  pdfTemplate,
+  recommendedTemplate,
+} from './content/schemas/misc'
 
 // Phase 4 — schema hardening. Each real `__component` type from the Strapi
 // dynamic zones has a strict shape (see content/schemas/blocks.ts) instead of
@@ -50,6 +58,36 @@ export default defineContentConfig({
         featureCategory: z.string().optional(),
         featurePlan: z.string().optional(),
       }),
+    }),
+    blog: defineCollection({
+      type: 'data',
+      source: 'blog/**/*.json',
+      schema: blog,
+    }),
+    formBuilders: defineCollection({
+      type: 'data',
+      source: 'comparison-tool/form-builders/**/*.json',
+      schema: formBuilder,
+    }),
+    formBuilderFeatures: defineCollection({
+      type: 'data',
+      source: 'comparison-tool/form-builder-features/**/*.json',
+      schema: formBuilderFeature,
+    }),
+    platformTestimonials: defineCollection({
+      type: 'data',
+      source: 'platform-testimonials/**/*.json',
+      schema: platformTestimonial,
+    }),
+    pdfTemplates: defineCollection({
+      type: 'data',
+      source: 'templates/pdf-templates/**/*.json',
+      schema: pdfTemplate,
+    }),
+    recommendedTemplates: defineCollection({
+      type: 'data',
+      source: 'templates/recommended-templates/**/*.json',
+      schema: recommendedTemplate,
     }),
   },
 })
