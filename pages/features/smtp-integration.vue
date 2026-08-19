@@ -1,0 +1,709 @@
+<template>
+  <div>
+    <HeroV2
+      :description="c0_description"
+      blobColorA="#f5eeff"
+      blobColorB="#f1ebff"
+      blobColorC="#f4efff"
+      :mockupHtml="c0_mockupHtml"
+      layout="split"
+      :title="c0_title"
+      :buttons="c0_buttons"
+      :badge="c0_badge"
+      :tabCardContent="c0_tabCardContent"
+      class="page-component-item"
+    />
+
+    <TrustSeals
+      label="Trusted by 56k+ teams worldwide"
+      showTrustBadges
+      :title="c1_title"
+      :logos="c1_logos"
+      class="page-component-item"
+    />
+
+    <CardGrid
+      eyebrow="Why it matters"
+      :description="c2_description"
+      columns="3"
+      :title="c2_title"
+      :cards="c2_cards"
+      class="page-component-item"
+    />
+
+    <StickyStepsSection
+      badge="How it works"
+      heading="Connect your email in three steps"
+      description="Open Integrations, add your account with OAuth or SMTP details, then pick it as the sender — Formester sends every form email from your address from then on."
+      background="#f9fafb"
+      :steps="c3_steps"
+      :buttons="c3_buttons"
+      class="page-component-item"
+    />
+
+    <CardGrid
+      eyebrow="Who it's for"
+      description="Anywhere form emails go out under your brand, your own sender keeps them recognisable, deliverable, and consistent with the rest of your mail."
+      columns="3"
+      :title="c4_title"
+      :cards="c4_cards"
+      class="page-component-item"
+    />
+
+    <TestimonialsV2
+      version="feature"
+      :heading="c5_heading"
+      :testimonials="c5_testimonials"
+      class="page-component-item"
+    />
+
+    <FaqSection
+      centered
+      :title="c6_title"
+      :faqList="c6_faqList"
+      class="page-component-item"
+    />
+
+    <CtaDark
+      badge="Free to start"
+      heading="Send form emails from your own domain"
+      description="Connect Gmail, Outlook, or your own SMTP server, pick it as the sender, and let every notification and auto-reply go out from your address."
+      :buttons="c7_buttons"
+      class="page-component-item"
+    />
+  </div>
+</template>
+
+<script setup>
+import CardGrid from '@/components/v2/CardGrid.vue'
+import CtaDark from '@/components/v2/CtaDark.vue'
+import FaqSection from '@/components/v2/FaqSection.vue'
+import HeroV2 from '@/components/v2/HeroV2.vue'
+import StickyStepsSection from '@/components/v2/StickyStepsSection.vue'
+import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
+import TrustSeals from '@/components/v2/TrustSeals.vue'
+
+const c0_description = "Connect Gmail, Outlook, or any SMTP server — Mailgun, SendGrid, Amazon SES — and Formester sends your form's notifications and autoresponders from your own address. Better deliverability, instant brand trust, and no code to maintain."
+const c0_mockupHtml = "\u003Cstyle>.sm-dot{opacity:.45;animation:smDot 6.5s ease-in-out infinite;}@keyframes smDot{0%,8%{opacity:.45;background:#d0d5dd;}14%,100%{opacity:1;background:#12b76a;}}.sm-conn-wait{animation:smWait 6.5s ease-in-out infinite;}@keyframes smWait{0%,8%{opacity:1;}14%,100%{opacity:0;}}.sm-conn-ok{opacity:0;animation:smOk 6.5s ease-in-out infinite;}@keyframes smOk{0%,10%{opacity:0;}16%,100%{opacity:1;}}.sm-mail{opacity:0;transform:translateY(14px);animation:smMail 6.5s ease-in-out infinite;}@keyframes smMail{0%,18%{opacity:0;transform:translateY(14px);}28%,100%{opacity:1;transform:translateY(0);}}.sm-check{transform:scale(.4);opacity:0;animation:smCheck 6.5s ease-in-out infinite;}@keyframes smCheck{0%,30%{transform:scale(.4);opacity:0;}38%{transform:scale(1.15);opacity:1;}44%,100%{transform:scale(1);opacity:1;}}@media (prefers-reduced-motion:reduce){.sm-dot,.sm-conn-wait,.sm-conn-ok,.sm-mail,.sm-check{animation:none !important;}.sm-dot{opacity:1 !important;background:#12b76a !important;}.sm-conn-wait{opacity:0 !important;}.sm-conn-ok,.sm-mail,.sm-check{opacity:1 !important;transform:none !important;}}\u003C/style><div style='max-width:420px;margin:0 auto;display:flex;flex-direction:column;gap:14px;'><div style='background:#fff;border:1px solid #eaecf0;border-radius:16px;box-shadow:0 24px 80px rgba(15,14,26,.12),0 8px 24px rgba(15,14,26,.06);overflow:hidden;'><div style='display:flex;align-items:center;gap:9px;padding:12px 15px;background:#f9fafb;border-bottom:1px solid #eaecf0;'><span style='width:26px;height:26px;border-radius:7px;background:#f0ebfa;color:#6434d0;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;'><svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M4 7h16v12H4z'/><path d='m4 8 8 6 8-6'/><path d='M2 4h6'/></svg></span><span style='font-size:12px;font-weight:700;line-height:1;color:#101828;'>SMTP settings</span><span class='sm-conn-ok' style='margin-left:auto;display:inline-flex;align-items:center;gap:5px;font-size:9.5px;font-weight:700;line-height:1;color:#027a48;background:#ecfdf3;border-radius:999px;padding:4px 9px;'><span style='width:7px;height:7px;border-radius:50%;background:#12b76a;'></span>Connected</span></div><div style='padding:15px 16px;display:flex;flex-direction:column;gap:11px;text-align:left;'><div style='display:flex;align-items:center;justify-content:space-between;line-height:1.1;'><span style='font-size:11px;font-weight:600;color:#697586;'>SMTP server</span><span style='font-size:12px;font-weight:600;color:#101828;font-family:ui-monospace,Menlo,monospace;'>smtp.yourco.com</span></div><div style='display:flex;align-items:center;justify-content:space-between;line-height:1.1;'><span style='font-size:11px;font-weight:600;color:#697586;'>Port</span><span style='font-size:12px;font-weight:600;color:#101828;font-family:ui-monospace,Menlo,monospace;'>587</span></div><div style='display:flex;align-items:center;justify-content:space-between;line-height:1.1;'><span style='font-size:11px;font-weight:600;color:#697586;'>From address</span><span style='font-size:12px;font-weight:600;color:#6434d0;font-family:ui-monospace,Menlo,monospace;'>forms@yourco.com</span></div><div style='display:flex;align-items:center;gap:8px;margin-top:2px;'><span class='sm-conn-wait' style='display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:600;line-height:1;color:#697586;'><span class='sm-dot' style='width:8px;height:8px;border-radius:50%;background:#d0d5dd;'></span>Verifying connection…</span></div></div></div><div style='display:flex;justify-content:center;color:#b9a6ec;'><svg width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='#6434d0' stroke-width='2.4'><path d='M12 5v14M5 12l7 7 7-7'/></svg></div><div class='sm-mail' style='background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 16px 48px rgba(15,14,26,.10);padding:14px 16px;text-align:left;'><div style='display:flex;align-items:center;gap:10px;'><span style='width:34px;height:34px;border-radius:9px;background:#6434d0;color:#fff;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;'><svg width='17' height='17' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M4 4h16v16H4z'/><path d='m4 6 8 6 8-6'/></svg></span><div style='display:flex;flex-direction:column;gap:2px;min-width:0;'><div style='font-size:12.5px;font-weight:700;line-height:1.2;color:#101828;'>New form submission</div><div style='font-size:10.5px;line-height:1.2;color:#697586;'>from <span style='font-weight:700;color:#6434d0;'>forms@yourco.com</span></div></div><span class='sm-check' style='margin-left:auto;display:inline-flex;align-items:center;gap:4px;font-size:9px;font-weight:700;line-height:1;color:#027a48;background:#ecfdf3;border-radius:999px;padding:4px 8px;flex-shrink:0;'><svg width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='#027a48' stroke-width='3'><path d='M5 12l4 4L19 6'/></svg>Delivered</span></div><div style='margin-top:11px;font-size:11.5px;line-height:1.55;color:#475467;'>Sent from your domain — not a generic no-reply. Recipients see <span style='font-weight:700;color:#101828;'>your brand</span>, and it lands in the inbox.</div></div></div>"
+const c0_title = [
+  {
+    "id": 4879,
+    "text": "Send form emails ",
+    "highlight": false,
+    "color": "#475467",
+    "bold": false
+  },
+  {
+    "id": 4880,
+    "text": "from your own domain",
+    "highlight": true,
+    "color": "#475467",
+    "bold": false
+  }
+]
+const c0_buttons = [
+  {
+    "id": 1610,
+    "link": "https://app.formester.com/users/sign_up",
+    "text": "Get Started — It's Free",
+    "type": "Primary",
+    "showArrow": true
+  },
+  {
+    "id": 1611,
+    "link": "/pricing",
+    "text": "See pricing",
+    "type": "Secondary",
+    "showArrow": false
+  }
+]
+const c0_badge = {
+  "id": 99,
+  "text": "SMTP Integration",
+  "tag": null,
+  "link": null
+}
+const c0_tabCardContent = []
+const c1_title = []
+const c1_logos = []
+const c2_description = "By default, form emails go out from Formester's sender. Connect your own email and every notification and auto-reply comes from your address instead — better deliverability and instant brand trust."
+const c2_title = [
+  {
+    "id": 4875,
+    "text": "Your forms, ",
+    "highlight": false,
+    "color": "#475467",
+    "bold": false
+  },
+  {
+    "id": 4876,
+    "text": "your email identity",
+    "highlight": true,
+    "color": "#475467",
+    "bold": false
+  }
+]
+const c2_cards = [
+  {
+    "id": 683,
+    "tag": "From your domain",
+    "tagColor": "violet",
+    "title": "Email that looks like you",
+    "body": "Alerts and replies go out from forms@yourco.com, not a generic no-reply. Recipients recognise the sender, so your form emails feel like a real message from your business.",
+    "mockHtml": "<div style='display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #eaecf0;border-radius:10px;padding:10px 12px;'><span style='width:26px;height:26px;border-radius:7px;background:#6434d0;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;line-height:1;flex-shrink:0;'>YC</span><div style='display:flex;flex-direction:column;gap:2px;min-width:0;'><span style='font-size:11px;font-weight:600;line-height:1.2;color:#101828;'>Your Co</span><span style='font-size:10px;line-height:1.2;color:#697586;'>forms@yourco.com</span></div></div>",
+    "icon": null
+  },
+  {
+    "id": 681,
+    "tag": "Deliverability",
+    "tagColor": "green",
+    "title": "Land in the inbox, not spam",
+    "body": "Sending through your own provider — Gmail, Outlook, Mailgun, SendGrid, or SES — uses your established reputation, so notifications and auto-replies reach people reliably.",
+    "mockHtml": "<div style='display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #eaecf0;border-radius:10px;padding:10px 12px;'><span style='width:24px;height:24px;border-radius:50%;background:#ecfdf3;color:#027a48;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.6'><path d='M5 12l4 4L19 6'/></svg></span><div style='font-size:11.5px;font-weight:600;line-height:1.2;color:#101828;'>Delivered to inbox</div><span style='margin-left:auto;font-size:9px;font-weight:700;line-height:1;color:#697586;'>0 spam</span></div>",
+    "icon": null
+  },
+  {
+    "id": 682,
+    "tag": "Full control",
+    "tagColor": "blue",
+    "title": "Use the provider you trust",
+    "body": "Keep your email on the service you already run. Pick OAuth for Gmail and Outlook, or any SMTP host for full control over how your form emails are sent.",
+    "mockHtml": "<div style='display:flex;flex-wrap:wrap;gap:7px;align-items:center;'><span style='font-size:11px;font-weight:600;line-height:1;color:#475467;background:#f9fafb;border:1px solid #eaecf0;border-radius:7px;padding:5px 9px;'>Gmail</span><span style='font-size:11px;font-weight:600;line-height:1;color:#475467;background:#f9fafb;border:1px solid #eaecf0;border-radius:7px;padding:5px 9px;'>Outlook</span><span style='font-size:11px;font-weight:600;line-height:1;color:#475467;background:#f9fafb;border:1px solid #eaecf0;border-radius:7px;padding:5px 9px;'>Mailgun</span><span style='font-size:11px;font-weight:600;line-height:1;color:#475467;background:#f9fafb;border:1px solid #eaecf0;border-radius:7px;padding:5px 9px;'>SendGrid</span><span style='font-size:11px;font-weight:600;line-height:1;color:#697586;background:#f9fafb;border:1px solid #eaecf0;border-radius:7px;padding:5px 9px;'>Amazon SES</span></div>",
+    "icon": null
+  }
+]
+const c3_steps = [
+  {
+    "id": 164,
+    "title": "Open Integrations and add an account",
+    "description": "In Formester, go to Integrations and click Add Integration. Choose Gmail or Outlook for an instant one-click connection over OAuth, or pick a custom SMTP server for any other provider.",
+    "rawHtml": "<div style='display:flex;flex-direction:column;gap:8px;'><div style='display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #eaecf0;border-radius:9px;padding:8px 11px;'><span style='font-size:12px;font-weight:600;line-height:1.1;color:#101828;'>Gmail</span><span style='margin-left:auto;font-size:9.5px;font-weight:700;line-height:1;color:#027a48;background:#ecfdf3;border-radius:999px;padding:3px 8px;'>OAuth</span></div><div style='display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #eaecf0;border-radius:9px;padding:8px 11px;'><span style='font-size:12px;font-weight:600;line-height:1.1;color:#101828;'>Outlook</span><span style='margin-left:auto;font-size:9.5px;font-weight:700;line-height:1;color:#027a48;background:#ecfdf3;border-radius:999px;padding:3px 8px;'>OAuth</span></div><div style='display:flex;align-items:center;gap:9px;border:1px solid #6434d0;border-radius:9px;padding:8px 11px;background:#fff;box-shadow:0 4px 12px rgba(100,52,208,.16);'><span style='font-size:12px;font-weight:600;line-height:1.1;color:#101828;'>Custom SMTP server</span><span style='margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#fff;background:#6434d0;border-radius:6px;padding:5px 9px;'><svg width='11' height='11' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='3'><path d='M12 5v14M5 12h14'/></svg>Add</span></div></div>",
+    "image": null
+  },
+  {
+    "id": 163,
+    "title": "Enter your SMTP details",
+    "description": "For a custom server, click the three dots then Add Account and fill in your integration name, username, password, port, SMTP server (e.g. smtp.mailgun.org), from name, and from address. Save to activate.",
+    "rawHtml": "<div style='display:flex;flex-direction:column;gap:8px;'><div style='display:flex;align-items:center;justify-content:space-between;background:#fff;border:1px solid #eaecf0;border-radius:8px;padding:8px 11px;line-height:1.1;'><span style='font-size:11px;font-weight:600;color:#697586;'>SMTP server</span><span style='font-size:12px;font-weight:600;color:#101828;font-family:ui-monospace,Menlo,monospace;'>smtp.mailgun.org</span></div><div style='display:flex;align-items:center;justify-content:space-between;background:#fff;border:1px solid #eaecf0;border-radius:8px;padding:8px 11px;line-height:1.1;'><span style='font-size:11px;font-weight:600;color:#697586;'>Port</span><span style='font-size:12px;font-weight:600;color:#101828;font-family:ui-monospace,Menlo,monospace;'>587</span></div><div style='display:flex;align-items:center;justify-content:space-between;background:#fff;border:1px solid #eaecf0;border-radius:8px;padding:8px 11px;line-height:1.1;'><span style='font-size:11px;font-weight:600;color:#697586;'>From address</span><span style='font-size:12px;font-weight:600;color:#6434d0;font-family:ui-monospace,Menlo,monospace;'>forms@yourco.com</span></div></div>",
+    "image": null
+  },
+  {
+    "id": 162,
+    "title": "Pick it as the sender",
+    "description": "Open your form's Email Notifications and Autoresponders and select your new address as the sender. From now on every alert and auto-reply for that form sends from your own email.",
+    "rawHtml": "<div style='display:flex;flex-direction:column;gap:8px;'><div style='display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #eaecf0;border-radius:9px;padding:8px 11px;'><span style='font-size:12px;font-weight:600;line-height:1.1;color:#101828;'>Notifications</span><span style='margin-left:auto;font-size:11px;font-weight:600;line-height:1;color:#6434d0;font-family:ui-monospace,Menlo,monospace;'>forms@yourco.com</span></div><div style='display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #eaecf0;border-radius:9px;padding:8px 11px;'><span style='font-size:12px;font-weight:600;line-height:1.1;color:#101828;'>Autoresponder</span><span style='margin-left:auto;font-size:11px;font-weight:600;line-height:1;color:#6434d0;font-family:ui-monospace,Menlo,monospace;'>forms@yourco.com</span></div><div style='display:flex;align-items:center;gap:8px;font-size:10.5px;font-weight:600;line-height:1;color:#027a48;'><span style='width:14px;height:14px;border-radius:50%;background:#ecfdf3;display:inline-flex;align-items:center;justify-content:center;'><svg width='9' height='9' viewBox='0 0 24 24' fill='none' stroke='#027a48' stroke-width='3'><path d='M5 12l4 4L19 6'/></svg></span>Sending from your domain</div></div>",
+    "image": null
+  }
+]
+const c3_buttons = []
+const c4_title = [
+  {
+    "id": 4873,
+    "text": "Made for teams who ",
+    "highlight": false,
+    "color": "#475467",
+    "bold": false
+  },
+  {
+    "id": 4877,
+    "text": "send from their own name",
+    "highlight": true,
+    "color": "#475467",
+    "bold": false
+  }
+]
+const c4_cards = [
+  {
+    "id": 684,
+    "tag": "Agencies",
+    "tagColor": "violet",
+    "title": "Client-branded sending",
+    "body": "Run forms for clients and send each one's notifications and auto-replies from that client's own domain — so every email matches the brand it belongs to.",
+    "mockHtml": null,
+    "icon": null
+  },
+  {
+    "id": 685,
+    "tag": "Businesses",
+    "tagColor": "blue",
+    "title": "A consistent sending domain",
+    "body": "Keep form emails on the same address as the rest of your business mail, so respondents always see one trusted sender instead of a third-party no-reply.",
+    "mockHtml": null,
+    "icon": null
+  },
+  {
+    "id": 686,
+    "tag": "High volume",
+    "tagColor": "green",
+    "title": "High-volume senders",
+    "body": "Route through Mailgun, SendGrid, or Amazon SES to send large batches of confirmations and alerts on infrastructure built for deliverability at scale.",
+    "mockHtml": null,
+    "icon": null
+  }
+]
+const c5_heading = [
+  {
+    "id": 4874,
+    "text": "Teams send on-brand form emails with Formester",
+    "highlight": false,
+    "color": "#475467",
+    "bold": false
+  }
+]
+const c5_testimonials = [
+  {
+    "id": 2,
+    "name": "Jilson",
+    "position": "Organiser",
+    "organization": "Vue Conference",
+    "comment": "Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.",
+    "createdAt": "2024-06-18T03:48:46.610Z",
+    "updatedAt": "2025-01-22T02:57:08.760Z",
+    "publishedAt": "2024-06-18T03:48:50.595Z",
+    "companyLogo": {
+      "id": 228,
+      "imageAlt": "photo-of-vue-conference",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 1680,
+        "name": "vueconf.webp",
+        "alternativeText": "photo-of-vue-conference",
+        "caption": "photo-of-vue-conference",
+        "width": 80,
+        "height": 80,
+        "formats": null,
+        "hash": "vueconf_1bc3dc0827",
+        "ext": ".webp",
+        "mime": "image/webp",
+        "size": 1.07,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2024-08-01T14:38:23.731Z",
+        "updatedAt": "2024-12-01T07:47:11.024Z"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "name": "Costanza Casullo",
+    "position": "Volunteer",
+    "organization": "Wato Coding Hub",
+    "comment": "Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.",
+    "createdAt": "2024-06-18T03:51:15.232Z",
+    "updatedAt": "2025-01-22T02:58:03.674Z",
+    "publishedAt": "2024-06-18T03:51:21.477Z",
+    "companyLogo": {
+      "id": 225,
+      "imageAlt": "wato-coding-hub-logo",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 1681,
+        "name": "wato-coding-hub.webp",
+        "alternativeText": "wato-coding-hub-logo",
+        "caption": "wato-coding-hub-logo",
+        "width": 80,
+        "height": 81,
+        "formats": null,
+        "hash": "wato_coding_hub_e054f0ea9d",
+        "ext": ".webp",
+        "mime": "image/webp",
+        "size": 1.88,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/wato_coding_hub_e054f0ea9d.webp",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2024-08-01T14:38:23.738Z",
+        "updatedAt": "2024-12-01T07:49:13.371Z"
+      }
+    }
+  },
+  {
+    "id": 5,
+    "name": "Deanna Bugalski",
+    "position": "Founder/CEO",
+    "organization": "Suggesterfy",
+    "comment": "I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formester was super easy to set up, and the usability is seamless! I highly recommend!",
+    "createdAt": "2024-06-18T03:52:39.354Z",
+    "updatedAt": "2025-01-22T02:57:47.756Z",
+    "publishedAt": "2024-06-18T03:52:43.800Z",
+    "companyLogo": {
+      "id": 226,
+      "imageAlt": "suggesterfy-logo",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 1683,
+        "name": "suggesterfy_logo.webp",
+        "alternativeText": "suggesterfy-logo",
+        "caption": "suggesterfy-logo",
+        "width": 100,
+        "height": 50,
+        "formats": null,
+        "hash": "suggesterfy_logo_d1d7f996b9",
+        "ext": ".webp",
+        "mime": "image/webp",
+        "size": 1.91,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/suggesterfy_logo_d1d7f996b9.webp",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2024-08-01T14:38:23.921Z",
+        "updatedAt": "2024-12-01T07:49:52.459Z"
+      }
+    }
+  },
+  {
+    "id": 6,
+    "name": "Thibaud Martinez",
+    "position": "Organiser",
+    "organization": "Tedx",
+    "comment": "I really enjoy Formester. It’s clean and straight-forward and it does well, what it is supposed to do.",
+    "createdAt": "2024-06-18T03:53:38.957Z",
+    "updatedAt": "2025-01-22T02:56:48.567Z",
+    "publishedAt": "2024-06-18T03:53:40.693Z",
+    "companyLogo": {
+      "id": 229,
+      "imageAlt": "tedx-logo",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 1684,
+        "name": "tedx.webp",
+        "alternativeText": "tedx-logo",
+        "caption": "tedx-logo",
+        "width": 109,
+        "height": 38,
+        "formats": null,
+        "hash": "tedx_2fce0eee2e",
+        "ext": ".webp",
+        "mime": "image/webp",
+        "size": 1.09,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/tedx_2fce0eee2e.webp",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2024-08-01T14:38:23.941Z",
+        "updatedAt": "2024-12-01T07:50:31.505Z"
+      }
+    }
+  },
+  {
+    "id": 34,
+    "name": "Bency",
+    "position": "Product Manager",
+    "organization": "Northgate Digital Solutions",
+    "comment": "Formester's AI form generator transformed how quickly we build forms. The drag-and-drop builder paired with AI-generated templates means I can spin up a survey or poll in minutes, not hours. Conditional logic, file uploads, and seamless integrations make it incredibly versatile and the customization options let every form match our branding perfectly. Their support team is exceptional too. It's the only form and survey tool we recommend",
+    "createdAt": "2025-06-29T23:23:10.541Z",
+    "updatedAt": "2026-05-03T09:30:00.533Z",
+    "publishedAt": "2026-05-03T09:30:00.530Z",
+    "companyLogo": {
+      "id": 3652,
+      "imageAlt": null,
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": null
+    }
+  },
+  {
+    "id": 35,
+    "name": "Roger",
+    "position": "Marketing Specialist",
+    "organization": "BrightPath Technologies",
+    "comment": "I use Formester for my form-building needs and I’m thoroughly impressed. The platform is rich with features… What really sets them apart is their exceptional customer service (responses typically within 10 minutes). The pricing is also very reasonable… Highly recommended!\n",
+    "createdAt": "2025-06-29T23:29:19.225Z",
+    "updatedAt": "2025-10-31T04:00:58.697Z",
+    "publishedAt": "2025-06-29T23:29:21.134Z",
+    "companyLogo": {
+      "id": 3649,
+      "imageAlt": "brightpath-logo",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 4094,
+        "name": "brightpath-logo.png",
+        "alternativeText": "brightpath-logo",
+        "caption": "brightpath-logo",
+        "width": 200,
+        "height": 49,
+        "formats": null,
+        "hash": "brightpath_logo_6ef0922a60",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 2.5,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/brightpath_logo_6ef0922a60.png",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2025-10-31T04:00:11.712Z",
+        "updatedAt": "2025-10-31T04:00:11.712Z"
+      }
+    }
+  }
+]
+const c6_title = [
+  {
+    "id": 4878,
+    "text": "SMTP integration FAQs",
+    "highlight": false,
+    "color": "#475467",
+    "bold": false
+  }
+]
+const c6_faqList = [
+  {
+    "id": 2436,
+    "header": "What is SMTP integration in Formester?",
+    "body": "It lets you send your form's email notifications and autoresponders through your own email account or SMTP server instead of Formester's default sender. Connect Gmail or Outlook, or add a custom SMTP server, and every form email goes out from your own address.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2439,
+    "header": "Which email providers can I connect?",
+    "body": "Connect Gmail or Outlook in one click over OAuth, or set up any SMTP provider manually — Mailgun, SendGrid, Amazon SES, your company mail server, or any service that gives you SMTP credentials.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2437,
+    "header": "How do I set up a custom SMTP server?",
+    "body": "Open Integrations, click Add Integration, then Add Account, and fill in your integration name, username, password, port, SMTP server (for example smtp.mailgun.org), from name, and from address. Save to activate, then select that address as the sender on your form's notifications and autoresponders.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2438,
+    "header": "Why send form emails from my own domain?",
+    "body": "Emails sent from your own domain land in the inbox more reliably and look trustworthy to recipients. Instead of a generic no-reply, alerts and auto-replies come from your business address, so they match your brand and respondents recognise the sender.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2440,
+    "header": "Does SMTP integration apply to both notifications and autoresponders?",
+    "body": "Yes. Once your account is connected you can pick it as the sender for both the internal notifications your team receives and the autoresponder replies that go to respondents, so every email from the form is sent from your address.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2442,
+    "header": "Do I need to write any code to use SMTP integration?",
+    "body": "No. The whole setup is in your Formester dashboard — connect with OAuth or paste your SMTP details, save, and choose the sender. There's nothing to install and no code to maintain.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2441,
+    "header": "Is SMTP integration free to use?",
+    "body": "Yes. SMTP integration is included free — connect your own email provider and start sending form emails from your domain at no extra cost.",
+    "body_markdown": null,
+    "list": []
+  }
+]
+const c7_buttons = [
+  {
+    "id": 1608,
+    "link": "https://app.formester.com/users/sign_up",
+    "text": "Get Started — It's Free",
+    "type": "Primary",
+    "showArrow": true
+  },
+  {
+    "id": 1609,
+    "link": "/pricing",
+    "text": "See pricing",
+    "type": "White",
+    "showArrow": false
+  }
+]
+
+useHead({
+  "title": "SMTP Integration for Forms | Send Emails from Your Own Domain",
+  "link": [
+    {
+      "hid": "canonical",
+      "rel": "canonical",
+      "href": "https://formester.com/features/smtp-integration/"
+    }
+  ],
+  "meta": [
+    {
+      "property": "article:modified_time",
+      "content": "2026-06-15T10:45:52.922Z"
+    },
+    {
+      "hid": "description",
+      "name": "description",
+      "content": "Connect Gmail, Outlook, or any SMTP server — Mailgun, SendGrid, Amazon SES — and send your form's notifications and autoresponders from your own address. Better deliverability and brand trust, no code."
+    },
+    {
+      "hid": "og:site_name",
+      "name": "og:site_name",
+      "content": "SMTP Integration for Forms | Send Emails from Your Own Domain"
+    },
+    {
+      "hid": "og:type",
+      "property": "og:type",
+      "content": "website"
+    },
+    {
+      "hid": "og:url",
+      "property": "og:url",
+      "content": "https://formester.com/features/smtp-integration/"
+    },
+    {
+      "hid": "og:title",
+      "property": "og:title",
+      "content": "SMTP Integration for Forms | Send Emails from Your Own Domain"
+    },
+    {
+      "hid": "og:description",
+      "property": "og:description",
+      "content": "Connect Gmail, Outlook, or any SMTP server — Mailgun, SendGrid, Amazon SES — and send your form's notifications and autoresponders from your own address. Better deliverability and brand trust, no code."
+    },
+    {
+      "hid": "og:image",
+      "property": "og:image",
+      "content": "https://formester.com/formester-logo-meta-image.png"
+    },
+    {
+      "hid": "og:image:alt",
+      "name": "og:image:alt",
+      "content": "Formester Logo"
+    },
+    {
+      "hid": "twitter:url",
+      "name": "twitter:url",
+      "content": "https://formester.com/features/smtp-integration/"
+    },
+    {
+      "name": "twitter:site",
+      "content": "@_formester_"
+    },
+    {
+      "hid": "twitter:title",
+      "name": "twitter:title",
+      "content": "SMTP Integration for Forms | Send Emails from Your Own Domain"
+    },
+    {
+      "hid": "twitter:description",
+      "name": "twitter:description",
+      "content": "Connect Gmail, Outlook, or any SMTP server — Mailgun, SendGrid, Amazon SES — and send your form's notifications and autoresponders from your own address. Better deliverability and brand trust, no code."
+    },
+    {
+      "hid": "twitter:image",
+      "name": "twitter:image",
+      "content": "https://formester.com/formester-logo-meta-image.png"
+    },
+    {
+      "hid": "twitter:image:alt",
+      "name": "twitter:image:alt",
+      "content": "Formester Logo"
+    },
+    {
+      "hid": "twitter:card",
+      "name": "twitter:card",
+      "content": "summary_large_image"
+    },
+    {
+      "hid": "apple-mobile-web-app-title",
+      "name": "apple-mobile-web-app-title",
+      "content": "Formester"
+    },
+    {
+      "hid": "image",
+      "name": "image",
+      "property": "og:image",
+      "content": "https://formester.com/formester-logo-meta-image.png"
+    },
+    {
+      "hid": "keywords",
+      "name": "keywords",
+      "content": [
+        "send form emails from your own domain"
+      ]
+    }
+  ]
+})
+useJsonld([
+  {
+    "@context": "https://schema.org",
+    "url": "https://formester.com",
+    "logo": "https://formester.com/logo.svg",
+    "name": "Formester",
+    "@type": "Organization"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "name": "What is SMTP integration in Formester?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "It lets you send your form's email notifications and autoresponders through your own email account or SMTP server instead of Formester's default sender. Connect Gmail or Outlook, or add a custom SMTP server, and every form email goes out from your own address.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "Which email providers can I connect?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "Connect Gmail or Outlook in one click over OAuth, or set up any SMTP provider manually — Mailgun, SendGrid, Amazon SES, your company mail server, or any service that gives you SMTP credentials.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "How do I set up a custom SMTP server?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "Open Integrations, click Add Integration, then Add Account, and fill in your integration name, username, password, port, SMTP server (for example smtp.mailgun.org), from name, and from address. Save to activate, then select that address as the sender on your form's notifications and autoresponders.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "Why send form emails from my own domain?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "Emails sent from your own domain land in the inbox more reliably and look trustworthy to recipients. Instead of a generic no-reply, alerts and auto-replies come from your business address, so they match your brand and respondents recognise the sender.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "Does SMTP integration apply to both notifications and autoresponders?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "Yes. Once your account is connected you can pick it as the sender for both the internal notifications your team receives and the autoresponder replies that go to respondents, so every email from the form is sent from your address.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "Do I need to write any code to use SMTP integration?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "No. The whole setup is in your Formester dashboard — connect with OAuth or paste your SMTP details, save, and choose the sender. There's nothing to install and no code to maintain.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "Is SMTP integration free to use?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "Yes. SMTP integration is included free — connect your own email provider and start sending form emails from your domain at no extra cost.",
+          "@type": "Answer"
+        }
+      }
+    ]
+  }
+])
+</script>

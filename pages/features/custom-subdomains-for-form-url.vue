@@ -1,0 +1,814 @@
+<template>
+  <div>
+    <HeroV2
+      :description="c0_description"
+      trustText="Available on the Business plan"
+      blobColorA="#f5eeff"
+      blobColorB="#f1ebff"
+      blobColorC="#f4efff"
+      :mockupHtml="c0_mockupHtml"
+      layout="split"
+      :title="c0_title"
+      :buttons="c0_buttons"
+      :badge="c0_badge"
+      :tabCardContent="c0_tabCardContent"
+      class="page-component-item"
+    />
+
+    <TrustSeals
+      label="Trusted by 56k+ teams worldwide"
+      showTrustBadges
+      :title="c1_title"
+      :logos="c1_logos"
+      class="page-component-item"
+    />
+
+    <CalloutDiagram
+      eyebrow="Anatomy"
+      description="Instead of a generic Formester link, the whole address carries your business — from the secure padlock to your subdomain to the form's path."
+      :mockHtml="c2_mockHtml"
+      :title="c2_title"
+      :pins="c2_pins"
+      class="page-component-item"
+    />
+
+    <CardGrid
+      eyebrow="Why it matters"
+      description="Your form URL is often the first thing a respondent sees. When it carries your name, it reassures people and lifts your brand at every click."
+      columns="4"
+      :title="c3_title"
+      :cards="c3_cards"
+      class="page-component-item"
+    />
+
+    <CardGrid
+      eyebrow="Who it's for"
+      description="Anywhere a form represents your business, a branded subdomain keeps the experience seamless and credible."
+      columns="3"
+      :title="c4_title"
+      :cards="c4_cards"
+      class="page-component-item"
+    />
+
+    <TestimonialsV2
+      version="feature"
+      :heading="c5_heading"
+      :testimonials="c5_testimonials"
+      class="page-component-item"
+    />
+
+    <FaqSection
+      centered
+      :title="c6_title"
+      :faqList="c6_faqList"
+      class="page-component-item"
+    />
+
+    <CtaDark
+      badge="Business plan"
+      heading="Make every form link your own"
+      description="Connect a branded subdomain like forms.yourbrand.com and serve every form from a URL respondents recognize and trust."
+      :buttons="c7_buttons"
+      class="page-component-item"
+    />
+  </div>
+</template>
+
+<script setup>
+import CalloutDiagram from '@/components/v2/CalloutDiagram.vue'
+import CardGrid from '@/components/v2/CardGrid.vue'
+import CtaDark from '@/components/v2/CtaDark.vue'
+import FaqSection from '@/components/v2/FaqSection.vue'
+import HeroV2 from '@/components/v2/HeroV2.vue'
+import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
+import TrustSeals from '@/components/v2/TrustSeals.vue'
+
+const c0_description = "Serve every form from a branded subdomain like forms.yourbrand.com instead of a generic Formester link. Respondents see your business in the address bar, so each form feels like a natural part of your site."
+const c0_mockupHtml = "\u003Cstyle>.cs-def{animation:cs-def 6s ease-in-out infinite;}.cs-brand{animation:cs-brand 6s ease-in-out infinite;}.cs-caret{animation:cs-caret 6s ease-in-out infinite;}.cs-tag{animation:cs-tag 6s ease-in-out infinite;}@keyframes cs-def{0%,10%{opacity:1;}18%,93%{opacity:0;}100%{opacity:1;}}@keyframes cs-brand{0%,12%{opacity:0;}20%,94%{opacity:1;}100%{opacity:0;}}@keyframes cs-caret{0%,16%{opacity:1;}17%,100%{opacity:0;}}@keyframes cs-tag{0%,18%{opacity:0;transform:translateY(3px);}26%,94%{opacity:1;transform:translateY(0);}100%{opacity:0;transform:translateY(3px);}}@media (prefers-reduced-motion:reduce){.cs-def{display:none !important;}.cs-brand{animation:none !important;opacity:1 !important;}.cs-caret{display:none !important;}.cs-tag{animation:none !important;opacity:1 !important;transform:none !important;}}\u003C/style><div style='max-width:540px;margin:0 auto;background:#fff;border:1px solid #eaecf0;border-radius:16px;box-shadow:0 24px 80px rgba(15,14,26,.12),0 8px 24px rgba(15,14,26,.06);overflow:hidden;'><div style='display:flex;align-items:center;gap:6px;padding:12px 16px;background:#f9fafb;border-bottom:1px solid #eaecf0;'><span style='width:11px;height:11px;border-radius:50%;background:#ff6058;'></span><span style='width:11px;height:11px;border-radius:50%;background:#ffbd2e;'></span><span style='width:11px;height:11px;border-radius:50%;background:#27c93f;'></span><div style='margin-left:8px;flex:1;display:flex;align-items:center;gap:7px;background:#fff;border:1px solid #eaecf0;border-radius:8px;padding:6px 10px;font-size:11.5px;line-height:1.3;overflow:hidden;white-space:nowrap;'><svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='#12b76a' stroke-width='2.2' style='flex-shrink:0;'><rect x='4' y='11' width='16' height='10' rx='2'/><path d='M8 11V7a4 4 0 0 1 8 0v4'/></svg><span style='position:relative;display:inline-grid;line-height:1.3;'><span class='cs-def' style='grid-area:1/1;color:#98a2b3;'>formester.com<span style='color:#cbd2dc;'>/f/aB3xK9</span></span><span class='cs-brand' style='grid-area:1/1;'><span style='color:#6434d0;font-weight:600;'>forms.yourbrand.com</span><span style='color:#98a2b3;'>/contact</span></span></span><span class='cs-caret' style='width:1px;height:13px;background:#6434d0;display:inline-block;line-height:1.3;'></span></div></div><div style='padding:20px;text-align:left;'><div style='display:flex;align-items:center;gap:9px;margin-bottom:15px;'><span style='width:30px;height:30px;border-radius:8px;background:#6434d0;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:14px;line-height:1;'>Y</span><span style='font-size:13px;font-weight:700;color:#101828;line-height:1.1;'>Your Brand</span><span class='cs-tag' style='margin-left:auto;font-size:9px;font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:3px 9px;line-height:1.2;'>On your domain</span></div><div style='font-size:15px;font-weight:700;color:#101828;line-height:1.2;margin-bottom:14px;'>Get in touch</div><div style='font-size:10px;font-weight:600;color:#475467;margin-bottom:4px;line-height:1.1;'>Email</div><div style='border:1px solid #eaecf0;border-radius:9px;padding:9px 11px;font-size:11.5px;line-height:1.1;color:#98a2b3;margin-bottom:12px;'>you@company.com</div><div style='font-size:10px;font-weight:600;color:#475467;margin-bottom:4px;line-height:1.1;'>Message</div><div style='border:1px dashed #d0d5dd;border-radius:9px;padding:9px 11px;font-size:11.5px;line-height:1.1;color:#98a2b3;margin-bottom:14px;'>How can we help?</div><div style='text-align:center;font-size:12px;font-weight:600;color:#fff;background:#6434d0;border-radius:9px;padding:10px 0;line-height:1.2;'>Submit</div></div></div>"
+const c0_title = [
+  {
+    "id": 4682,
+    "text": "Put your forms on ",
+    "highlight": false,
+    "color": "#475467",
+    "bold": false
+  },
+  {
+    "id": 4683,
+    "text": "your own domain",
+    "highlight": true,
+    "color": "#475467",
+    "bold": false
+  }
+]
+const c0_buttons = [
+  {
+    "id": 1526,
+    "link": "https://app.formester.com/users/sign_up",
+    "text": "Get Started",
+    "type": "Primary",
+    "showArrow": true
+  },
+  {
+    "id": 1527,
+    "link": "/pricing",
+    "text": "See pricing",
+    "type": "Secondary",
+    "showArrow": false
+  }
+]
+const c0_badge = {
+  "id": 78,
+  "text": "Custom Subdomains",
+  "tag": "Business",
+  "link": null
+}
+const c0_tabCardContent = []
+const c1_title = []
+const c1_logos = []
+const c2_mockHtml = "<div style='max-width:380px;margin:0 auto;display:flex;flex-direction:column;gap:12px;'><div style='display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #eaecf0;border-radius:10px;box-shadow:0 12px 36px rgba(15,14,26,.08);padding:11px 13px;font-size:12px;line-height:1.4;overflow:hidden;white-space:nowrap;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='#12b76a' stroke-width='2.2' style='flex-shrink:0;'><rect x='4' y='11' width='16' height='10' rx='2'/><path d='M8 11V7a4 4 0 0 1 8 0v4'/></svg><span style='color:#6434d0;font-weight:700;'>forms.</span><span style='color:#101828;font-weight:700;'>yourbrand.com</span><span style='color:#98a2b3;'>/contact</span></div><div style='display:grid;grid-template-columns:repeat(4,1fr);gap:7px;'><div style='display:flex;flex-direction:column;align-items:center;gap:5px;'><span style='width:20px;height:20px;border-radius:50%;background:#6434d0;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;'>1</span><span style='font-size:9px;color:#697586;text-align:center;line-height:1.2;'>Secure</span></div><div style='display:flex;flex-direction:column;align-items:center;gap:5px;'><span style='width:20px;height:20px;border-radius:50%;background:#6434d0;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;'>2</span><span style='font-size:9px;color:#697586;text-align:center;line-height:1.2;'>Subdomain</span></div><div style='display:flex;flex-direction:column;align-items:center;gap:5px;'><span style='width:20px;height:20px;border-radius:50%;background:#6434d0;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;'>3</span><span style='font-size:9px;color:#697586;text-align:center;line-height:1.2;'>Your domain</span></div><div style='display:flex;flex-direction:column;align-items:center;gap:5px;'><span style='width:20px;height:20px;border-radius:50%;background:#6434d0;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;'>4</span><span style='font-size:9px;color:#697586;text-align:center;line-height:1.2;'>Form path</span></div></div><div style='display:flex;align-items:center;gap:8px;background:#fbfaff;border:1px solid #e9e4f5;border-radius:10px;padding:9px 12px;'><span style='font-size:11px;color:#697586;line-height:1.2;'>vs. default</span><span style='margin-left:auto;font-family:ui-monospace,Menlo,monospace;font-size:10.5px;color:#98a2b3;line-height:1.2;text-decoration:line-through;'>formester.com/f/aB3xK9</span></div></div>"
+const c2_title = [
+  {
+    "id": 4680,
+    "text": "Every part of a ",
+    "highlight": false,
+    "color": "#475467",
+    "bold": false
+  },
+  {
+    "id": 4675,
+    "text": "branded form URL",
+    "highlight": true,
+    "color": "#475467",
+    "bold": false
+  }
+]
+const c2_pins = [
+  {
+    "id": 65,
+    "label": "Secure HTTPS",
+    "body": "The padlock and an HTTPS connection are always there, so respondents see the form is safe before they type a thing."
+  },
+  {
+    "id": 66,
+    "label": "Your subdomain",
+    "body": "The form is served from a subdomain you control, like forms. or apply. — set up with one CNAME record in your DNS."
+  },
+  {
+    "id": 67,
+    "label": "Your domain, not ours",
+    "body": "Respondents read your own domain in the bar — yourbrand.com — instead of formester.com, so the link looks unmistakably yours."
+  },
+  {
+    "id": 68,
+    "label": "The form path",
+    "body": "A clean path points to the specific form, like /contact or /apply, keeping every link tidy and easy to recognize."
+  }
+]
+const c3_title = [
+  {
+    "id": 4681,
+    "text": "A branded link ",
+    "highlight": false,
+    "color": "#475467",
+    "bold": false
+  },
+  {
+    "id": 4674,
+    "text": "earns more trust",
+    "highlight": true,
+    "color": "#475467",
+    "bold": false
+  }
+]
+const c3_cards = [
+  {
+    "id": 514,
+    "tag": "Brand trust",
+    "tagColor": "violet",
+    "title": "Familiar feels safe",
+    "body": "People trust what they recognize. A link on your own domain feels safe to open, so more respondents start and finish your forms.",
+    "mockHtml": "<div style='display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #eaecf0;border-radius:9px;padding:9px 11px;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='#12b76a' stroke-width='2.2' style='flex-shrink:0;'><rect x='4' y='11' width='16' height='10' rx='2'/><path d='M8 11V7a4 4 0 0 1 8 0v4'/></svg><span style='font-size:11px;line-height:1.2;'><span style='color:#6434d0;font-weight:700;'>forms.</span><span style='color:#101828;font-weight:700;'>yourbrand.com</span></span></div>",
+    "icon": null
+  },
+  {
+    "id": 513,
+    "tag": "Consistent identity",
+    "tagColor": "blue",
+    "title": "One brand, everywhere",
+    "body": "Every form link matches your site, emails, and product. There's no jarring jump to an unfamiliar domain mid-journey.",
+    "mockHtml": "<div style='display:flex;flex-direction:column;gap:7px;'><div style='display:flex;align-items:center;gap:7px;font-size:11px;line-height:1.2;color:#101828;'><span style='width:16px;height:16px;border-radius:4px;background:#6434d0;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0;line-height:1;'>Y</span><span>yourbrand.com</span></div><div style='display:flex;align-items:center;gap:7px;font-size:11px;line-height:1.2;color:#101828;'><span style='width:16px;height:16px;border-radius:4px;background:#6434d0;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0;line-height:1;'>Y</span><span>forms.yourbrand.com</span></div></div>",
+    "icon": null
+  },
+  {
+    "id": 515,
+    "tag": "Professional",
+    "tagColor": "green",
+    "title": "Look ready for business",
+    "body": "Sending forms to clients or partners? A branded link signals you're serious and organized, not someone using a free tool's default URL.",
+    "mockHtml": "<div style='display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #eaecf0;border-radius:9px;padding:9px 11px;'><span style='font-size:9px;font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:3px 9px;line-height:1.2;'>Verified sender</span><span style='font-size:11px;color:#475467;line-height:1.2;'>on your domain</span></div>",
+    "icon": null
+  },
+  {
+    "id": 516,
+    "tag": "Deliverability",
+    "tagColor": "amber",
+    "title": "Reach more inboxes",
+    "body": "Generic shared links are more likely to be flagged. A recognizable branded subdomain looks trustworthy, so fewer links land in spam.",
+    "mockHtml": "<div style='display:flex;flex-direction:column;gap:7px;'><div style='display:flex;align-items:center;gap:7px;font-size:11px;line-height:1.2;color:#101828;'><span style='width:16px;height:16px;border-radius:50%;background:#ecfdf3;color:#027a48;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;'><svg width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3'><path d='M5 12l4 4L19 6'/></svg></span><span style='font-weight:600;'>Inbox</span></div><div style='display:flex;align-items:center;gap:7px;font-size:11px;line-height:1.2;color:#98a2b3;'><span style='width:16px;height:16px;border-radius:50%;background:#f2f4f7;display:inline-flex;flex-shrink:0;'></span><span>Spam</span></div></div>",
+    "icon": null
+  }
+]
+const c4_title = [
+  {
+    "id": 4679,
+    "text": "Built for teams that ",
+    "highlight": false,
+    "color": "#475467",
+    "bold": false
+  },
+  {
+    "id": 4678,
+    "text": "live or die by brand",
+    "highlight": true,
+    "color": "#475467",
+    "bold": false
+  }
+]
+const c4_cards = [
+  {
+    "id": 517,
+    "tag": "Agencies",
+    "tagColor": "violet",
+    "title": "Deliver on the client's brand",
+    "body": "Run intake, feedback, and onboarding forms on a subdomain that matches each client's identity — so the work looks like theirs, not a generic form tool's.",
+    "mockHtml": null,
+    "icon": null
+  },
+  {
+    "id": 519,
+    "tag": "Enterprise",
+    "tagColor": "blue",
+    "title": "Meet brand and trust standards",
+    "body": "Keep every external form on your corporate domain so security teams, partners, and customers see a consistent, recognizable address every time.",
+    "mockHtml": null,
+    "icon": null
+  },
+  {
+    "id": 518,
+    "tag": "White-label",
+    "tagColor": "green",
+    "title": "Remove every trace of Formester",
+    "body": "Pair a custom subdomain with white-label forms to strip Formester branding entirely — the form, the URL, and the experience are fully yours.",
+    "mockHtml": null,
+    "icon": null
+  }
+]
+const c5_heading = [
+  {
+    "id": 4677,
+    "text": "Teams keep every form on-brand with Formester",
+    "highlight": false,
+    "color": "#475467",
+    "bold": false
+  }
+]
+const c5_testimonials = [
+  {
+    "id": 1,
+    "name": "Dr. Michele Ross",
+    "position": "Founder",
+    "organization": "Infused Health",
+    "comment": "I'm migrating my forms from Paperform, where I've been a user for over 4 years. Loving the software so far! I've already replaced Paperform form embeds & popups on my sites & my husband's websites with Formester forms",
+    "createdAt": "2024-06-18T03:47:14.605Z",
+    "updatedAt": "2025-01-22T02:57:30.159Z",
+    "publishedAt": "2024-06-18T03:47:18.889Z",
+    "companyLogo": {
+      "id": 227,
+      "imageAlt": "Dr. Michele Ross",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 1685,
+        "name": "dr._michelelogo.webp",
+        "alternativeText": null,
+        "caption": null,
+        "width": 300,
+        "height": 59,
+        "formats": {
+          "thumbnail": {
+            "ext": ".webp",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_dr_michelelogo_2269ae2211.webp",
+            "hash": "thumbnail_dr_michelelogo_2269ae2211",
+            "mime": "image/webp",
+            "name": "thumbnail_dr._michelelogo.webp",
+            "path": null,
+            "size": 5.58,
+            "width": 245,
+            "height": 48
+          }
+        },
+        "hash": "dr_michelelogo_2269ae2211",
+        "ext": ".webp",
+        "mime": "image/webp",
+        "size": 5.87,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/dr_michelelogo_2269ae2211.webp",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2024-08-01T14:38:23.944Z",
+        "updatedAt": "2024-08-01T14:38:23.944Z"
+      }
+    }
+  },
+  {
+    "id": 2,
+    "name": "Jilson",
+    "position": "Organiser",
+    "organization": "Vue Conference",
+    "comment": "Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.",
+    "createdAt": "2024-06-18T03:48:46.610Z",
+    "updatedAt": "2025-01-22T02:57:08.760Z",
+    "publishedAt": "2024-06-18T03:48:50.595Z",
+    "companyLogo": {
+      "id": 228,
+      "imageAlt": "photo-of-vue-conference",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 1680,
+        "name": "vueconf.webp",
+        "alternativeText": "photo-of-vue-conference",
+        "caption": "photo-of-vue-conference",
+        "width": 80,
+        "height": 80,
+        "formats": null,
+        "hash": "vueconf_1bc3dc0827",
+        "ext": ".webp",
+        "mime": "image/webp",
+        "size": 1.07,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2024-08-01T14:38:23.731Z",
+        "updatedAt": "2024-12-01T07:47:11.024Z"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "name": "Costanza Casullo",
+    "position": "Volunteer",
+    "organization": "Wato Coding Hub",
+    "comment": "Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.",
+    "createdAt": "2024-06-18T03:51:15.232Z",
+    "updatedAt": "2025-01-22T02:58:03.674Z",
+    "publishedAt": "2024-06-18T03:51:21.477Z",
+    "companyLogo": {
+      "id": 225,
+      "imageAlt": "wato-coding-hub-logo",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 1681,
+        "name": "wato-coding-hub.webp",
+        "alternativeText": "wato-coding-hub-logo",
+        "caption": "wato-coding-hub-logo",
+        "width": 80,
+        "height": 81,
+        "formats": null,
+        "hash": "wato_coding_hub_e054f0ea9d",
+        "ext": ".webp",
+        "mime": "image/webp",
+        "size": 1.88,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/wato_coding_hub_e054f0ea9d.webp",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2024-08-01T14:38:23.738Z",
+        "updatedAt": "2024-12-01T07:49:13.371Z"
+      }
+    }
+  },
+  {
+    "id": 5,
+    "name": "Deanna Bugalski",
+    "position": "Founder/CEO",
+    "organization": "Suggesterfy",
+    "comment": "I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formester was super easy to set up, and the usability is seamless! I highly recommend!",
+    "createdAt": "2024-06-18T03:52:39.354Z",
+    "updatedAt": "2025-01-22T02:57:47.756Z",
+    "publishedAt": "2024-06-18T03:52:43.800Z",
+    "companyLogo": {
+      "id": 226,
+      "imageAlt": "suggesterfy-logo",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 1683,
+        "name": "suggesterfy_logo.webp",
+        "alternativeText": "suggesterfy-logo",
+        "caption": "suggesterfy-logo",
+        "width": 100,
+        "height": 50,
+        "formats": null,
+        "hash": "suggesterfy_logo_d1d7f996b9",
+        "ext": ".webp",
+        "mime": "image/webp",
+        "size": 1.91,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/suggesterfy_logo_d1d7f996b9.webp",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2024-08-01T14:38:23.921Z",
+        "updatedAt": "2024-12-01T07:49:52.459Z"
+      }
+    }
+  },
+  {
+    "id": 6,
+    "name": "Thibaud Martinez",
+    "position": "Organiser",
+    "organization": "Tedx",
+    "comment": "I really enjoy Formester. It’s clean and straight-forward and it does well, what it is supposed to do.",
+    "createdAt": "2024-06-18T03:53:38.957Z",
+    "updatedAt": "2025-01-22T02:56:48.567Z",
+    "publishedAt": "2024-06-18T03:53:40.693Z",
+    "companyLogo": {
+      "id": 229,
+      "imageAlt": "tedx-logo",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 1684,
+        "name": "tedx.webp",
+        "alternativeText": "tedx-logo",
+        "caption": "tedx-logo",
+        "width": 109,
+        "height": 38,
+        "formats": null,
+        "hash": "tedx_2fce0eee2e",
+        "ext": ".webp",
+        "mime": "image/webp",
+        "size": 1.09,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/tedx_2fce0eee2e.webp",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2024-08-01T14:38:23.941Z",
+        "updatedAt": "2024-12-01T07:50:31.505Z"
+      }
+    }
+  },
+  {
+    "id": 34,
+    "name": "Bency",
+    "position": "Product Manager",
+    "organization": "Northgate Digital Solutions",
+    "comment": "Formester's AI form generator transformed how quickly we build forms. The drag-and-drop builder paired with AI-generated templates means I can spin up a survey or poll in minutes, not hours. Conditional logic, file uploads, and seamless integrations make it incredibly versatile and the customization options let every form match our branding perfectly. Their support team is exceptional too. It's the only form and survey tool we recommend",
+    "createdAt": "2025-06-29T23:23:10.541Z",
+    "updatedAt": "2026-05-03T09:30:00.533Z",
+    "publishedAt": "2026-05-03T09:30:00.530Z",
+    "companyLogo": {
+      "id": 3652,
+      "imageAlt": null,
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": null
+    }
+  },
+  {
+    "id": 35,
+    "name": "Roger",
+    "position": "Marketing Specialist",
+    "organization": "BrightPath Technologies",
+    "comment": "I use Formester for my form-building needs and I’m thoroughly impressed. The platform is rich with features… What really sets them apart is their exceptional customer service (responses typically within 10 minutes). The pricing is also very reasonable… Highly recommended!\n",
+    "createdAt": "2025-06-29T23:29:19.225Z",
+    "updatedAt": "2025-10-31T04:00:58.697Z",
+    "publishedAt": "2025-06-29T23:29:21.134Z",
+    "companyLogo": {
+      "id": 3649,
+      "imageAlt": "brightpath-logo",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 4094,
+        "name": "brightpath-logo.png",
+        "alternativeText": "brightpath-logo",
+        "caption": "brightpath-logo",
+        "width": 200,
+        "height": 49,
+        "formats": null,
+        "hash": "brightpath_logo_6ef0922a60",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 2.5,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/brightpath_logo_6ef0922a60.png",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2025-10-31T04:00:11.712Z",
+        "updatedAt": "2025-10-31T04:00:11.712Z"
+      }
+    }
+  },
+  {
+    "id": 36,
+    "name": "Ye Qi Lai",
+    "position": "UX Designer",
+    "organization": "Eastview Consulting",
+    "comment": "Formester is one of the best underrated survey tools out there… It’s extremely customizable… Their support is awesome… I absolutely recommend this to anyone looking for an alternative to the usual form creators.",
+    "createdAt": "2025-06-29T23:30:04.374Z",
+    "updatedAt": "2025-10-31T04:00:30.746Z",
+    "publishedAt": "2025-06-29T23:30:06.260Z",
+    "companyLogo": {
+      "id": 3648,
+      "imageAlt": "eastview-logo-header",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 4097,
+        "name": "eastview-logo-header-300x120 1.png",
+        "alternativeText": "eastview-logo-header",
+        "caption": "eastview-logo-header",
+        "width": 200,
+        "height": 80,
+        "formats": null,
+        "hash": "eastview_logo_header_300x120_1_d9c231e93b",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 3.18,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/eastview_logo_header_300x120_1_d9c231e93b.png",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2025-10-31T04:00:11.854Z",
+        "updatedAt": "2025-10-31T04:00:11.854Z"
+      }
+    }
+  }
+]
+const c6_title = [
+  {
+    "id": 4676,
+    "text": "Custom subdomain FAQs",
+    "highlight": false,
+    "color": "#475467",
+    "bold": false
+  }
+]
+const c6_faqList = [
+  {
+    "id": 2307,
+    "header": "What is a custom subdomain for a form URL?",
+    "body": "It's your own branded web address for your forms — like forms.yourbrand.com — instead of the default Formester link. Respondents see your business name in the address bar, so the form feels like a native part of your site.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2313,
+    "header": "How do I connect my custom subdomain?",
+    "body": "Open the Domains section in your dashboard, click Add Domain, and follow the step-by-step instructions. You'll add a CNAME record in your DNS settings — usually found in your hosting or domain provider account — to point your subdomain at Formester.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2308,
+    "header": "Do I need a developer to set it up?",
+    "body": "Not necessarily. If you can edit DNS records for your domain, you can add the single CNAME record Formester gives you in a few minutes. The guided steps in the Domains section walk you through exactly what to add.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2309,
+    "header": "Is the form link secure on my subdomain?",
+    "body": "Yes. Forms served on your custom subdomain stay on HTTPS, so the padlock and secure connection respondents expect are always there.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2310,
+    "header": "Will using my own subdomain help email deliverability?",
+    "body": "It can help. Generic shared links are more likely to be flagged, while a recognizable branded subdomain looks trustworthy to recipients and filters — so more of your form links reach the inbox and get opened.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2311,
+    "header": "Can I use my subdomain across all of my forms?",
+    "body": "Yes. Once your subdomain is connected, any form you publish can use it, so every link you send stays consistently on-brand.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2312,
+    "header": "Does it work with embedded forms?",
+    "body": "Yes. Embed a form on your website and the browser keeps your custom subdomain, so the whole experience stays seamless and on-brand from page to form.",
+    "body_markdown": null,
+    "list": []
+  }
+]
+const c7_buttons = [
+  {
+    "id": 1524,
+    "link": "https://app.formester.com/users/sign_up",
+    "text": "Get Started",
+    "type": "Primary",
+    "showArrow": true
+  },
+  {
+    "id": 1525,
+    "link": "/pricing",
+    "text": "See pricing",
+    "type": "White",
+    "showArrow": false
+  }
+]
+
+useHead({
+  "title": "Custom Subdomains for Form URLs | Branded Form Links",
+  "link": [
+    {
+      "hid": "canonical",
+      "rel": "canonical",
+      "href": "https://formester.com/features/custom-subdomains-for-form-url/"
+    }
+  ],
+  "meta": [
+    {
+      "property": "article:modified_time",
+      "content": "2026-06-15T10:45:43.792Z"
+    },
+    {
+      "hid": "description",
+      "name": "description",
+      "content": "Serve your forms on your own branded subdomain like forms.yourbrand.com instead of a generic Formester URL. Build trust, stay on-brand, and improve deliverability with a quick CNAME setup."
+    },
+    {
+      "hid": "og:site_name",
+      "name": "og:site_name",
+      "content": "Custom Subdomains for Form URLs | Branded Form Links"
+    },
+    {
+      "hid": "og:type",
+      "property": "og:type",
+      "content": "website"
+    },
+    {
+      "hid": "og:url",
+      "property": "og:url",
+      "content": "https://formester.com/features/custom-subdomains-for-form-url/"
+    },
+    {
+      "hid": "og:title",
+      "property": "og:title",
+      "content": "Custom Subdomains for Form URLs | Branded Form Links"
+    },
+    {
+      "hid": "og:description",
+      "property": "og:description",
+      "content": "Serve your forms on your own branded subdomain like forms.yourbrand.com instead of a generic Formester URL. Build trust, stay on-brand, and improve deliverability with a quick CNAME setup."
+    },
+    {
+      "hid": "og:image",
+      "property": "og:image",
+      "content": "https://formester.com/formester-logo-meta-image.png"
+    },
+    {
+      "hid": "og:image:alt",
+      "name": "og:image:alt",
+      "content": "Formester Logo"
+    },
+    {
+      "hid": "twitter:url",
+      "name": "twitter:url",
+      "content": "https://formester.com/features/custom-subdomains-for-form-url/"
+    },
+    {
+      "name": "twitter:site",
+      "content": "@_formester_"
+    },
+    {
+      "hid": "twitter:title",
+      "name": "twitter:title",
+      "content": "Custom Subdomains for Form URLs | Branded Form Links"
+    },
+    {
+      "hid": "twitter:description",
+      "name": "twitter:description",
+      "content": "Serve your forms on your own branded subdomain like forms.yourbrand.com instead of a generic Formester URL. Build trust, stay on-brand, and improve deliverability with a quick CNAME setup."
+    },
+    {
+      "hid": "twitter:image",
+      "name": "twitter:image",
+      "content": "https://formester.com/formester-logo-meta-image.png"
+    },
+    {
+      "hid": "twitter:image:alt",
+      "name": "twitter:image:alt",
+      "content": "Formester Logo"
+    },
+    {
+      "hid": "twitter:card",
+      "name": "twitter:card",
+      "content": "summary_large_image"
+    },
+    {
+      "hid": "apple-mobile-web-app-title",
+      "name": "apple-mobile-web-app-title",
+      "content": "Formester"
+    },
+    {
+      "hid": "image",
+      "name": "image",
+      "property": "og:image",
+      "content": "https://formester.com/formester-logo-meta-image.png"
+    },
+    {
+      "hid": "keywords",
+      "name": "keywords",
+      "content": []
+    }
+  ]
+})
+useJsonld([
+  {
+    "@context": "https://schema.org",
+    "url": "https://formester.com",
+    "logo": "https://formester.com/logo.svg",
+    "name": "Formester",
+    "@type": "Organization"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "name": "What is a custom subdomain for a form URL?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "It's your own branded web address for your forms — like forms.yourbrand.com — instead of the default Formester link. Respondents see your business name in the address bar, so the form feels like a native part of your site.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "How do I connect my custom subdomain?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "Open the Domains section in your dashboard, click Add Domain, and follow the step-by-step instructions. You'll add a CNAME record in your DNS settings — usually found in your hosting or domain provider account — to point your subdomain at Formester.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "Do I need a developer to set it up?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "Not necessarily. If you can edit DNS records for your domain, you can add the single CNAME record Formester gives you in a few minutes. The guided steps in the Domains section walk you through exactly what to add.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "Is the form link secure on my subdomain?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "Yes. Forms served on your custom subdomain stay on HTTPS, so the padlock and secure connection respondents expect are always there.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "Will using my own subdomain help email deliverability?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "It can help. Generic shared links are more likely to be flagged, while a recognizable branded subdomain looks trustworthy to recipients and filters — so more of your form links reach the inbox and get opened.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "Can I use my subdomain across all of my forms?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "Yes. Once your subdomain is connected, any form you publish can use it, so every link you send stays consistently on-brand.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "Does it work with embedded forms?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "Yes. Embed a form on your website and the browser keeps your custom subdomain, so the whole experience stays seamless and on-brand from page to form.",
+          "@type": "Answer"
+        }
+      }
+    ]
+  }
+])
+</script>

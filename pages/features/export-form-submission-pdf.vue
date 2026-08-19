@@ -1,0 +1,794 @@
+<template>
+  <div>
+    <HeroV2
+      :description="c0_description"
+      trustText="Available on the Business plan"
+      blobColorA="#f5eeff"
+      blobColorB="#f1ebff"
+      blobColorC="#f4efff"
+      :mockupHtml="c0_mockupHtml"
+      layout="split"
+      :title="c0_title"
+      :buttons="c0_buttons"
+      :badge="c0_badge"
+      :tabCardContent="c0_tabCardContent"
+      class="page-component-item"
+    />
+
+    <TrustSeals
+      label="Trusted by 56k+ businesses worldwide"
+      showTrustBadges
+      :title="c1_title"
+      :logos="c1_logos"
+      class="page-component-item"
+    />
+
+    <StickyStepsSection
+      badge="How it works"
+      heading="Export a submission as a PDF in a few clicks"
+      description="Collect a response, open it in your results, and download it as a formatted PDF — or send a copy automatically."
+      background="#f9fafb"
+      :steps="c2_steps"
+      :buttons="c2_buttons"
+      class="page-component-item"
+    />
+
+    <CardGrid
+      eyebrow="What you get"
+      description="Every export is a clean, formatted PDF — built for records, sharing, and archiving without copying data by hand."
+      columns="3"
+      :title="c3_title"
+      :cards="c3_cards"
+      class="page-component-item"
+    />
+
+    <CardGrid
+      eyebrow="Where it shines"
+      description="Anywhere a response needs to live as a document — signed, stored, shared, or audited — exporting to PDF keeps a clean, unchangeable copy."
+      columns="2"
+      :title="c4_title"
+      :cards="c4_cards"
+      class="page-component-item"
+    />
+
+    <TestimonialsV2
+      version="feature"
+      :heading="c5_heading"
+      :testimonials="c5_testimonials"
+      class="page-component-item"
+    />
+
+    <FaqSection
+      centered
+      :title="c6_title"
+      :faqList="c6_faqList"
+      class="page-component-item"
+    />
+
+    <CtaDark
+      badge="Business plan"
+      heading="Turn your next submission into a PDF"
+      description="Collect a response, click the PDF icon, and download a clean, shareable document — or auto-attach it to every confirmation."
+      :buttons="c7_buttons"
+      class="page-component-item"
+    />
+  </div>
+</template>
+
+<script setup>
+import CardGrid from '@/components/v2/CardGrid.vue'
+import CtaDark from '@/components/v2/CtaDark.vue'
+import FaqSection from '@/components/v2/FaqSection.vue'
+import HeroV2 from '@/components/v2/HeroV2.vue'
+import StickyStepsSection from '@/components/v2/StickyStepsSection.vue'
+import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
+import TrustSeals from '@/components/v2/TrustSeals.vue'
+
+const c0_description = "Export form responses as formatted, downloadable PDFs — one at a time or in bulk. Perfect for records, sharing, and archiving, and you can auto-attach a copy to the respondent's confirmation email. No coding required."
+const c0_mockupHtml = "\u003Cstyle>.ep-doc{opacity:0;transform:translateY(8px);animation:epDoc 5.5s ease-in-out infinite;}.ep-row{opacity:0;animation:epRow 5.5s ease-in-out infinite;}.ep-row.r2{animation-delay:.25s;}.ep-row.r3{animation-delay:.5s;}.ep-row.r4{animation-delay:.75s;}.ep-dl{opacity:0;transform:scale(.9);animation:epDl 5.5s ease-in-out infinite;}.ep-arrow{animation:epArrow 5.5s ease-in-out infinite;}@keyframes epDoc{0%,18%{opacity:0;transform:translateY(8px);}30%,90%{opacity:1;transform:translateY(0);}100%{opacity:0;transform:translateY(8px);}}@keyframes epRow{0%,28%{opacity:0;}40%,90%{opacity:1;}100%{opacity:0;}}@keyframes epDl{0%,60%{opacity:0;transform:scale(.9);}72%,90%{opacity:1;transform:scale(1);}100%{opacity:0;transform:scale(.9);}}@keyframes epArrow{0%,18%{opacity:.35;}30%,55%{opacity:1;}70%,100%{opacity:.35;}}@media (prefers-reduced-motion:reduce){.ep-doc{opacity:1!important;transform:none!important;animation:none!important;}.ep-row{opacity:1!important;animation:none!important;}.ep-dl{opacity:1!important;transform:none!important;animation:none!important;}.ep-arrow{opacity:1!important;animation:none!important;}}\u003C/style><div style='display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;max-width:560px;margin:0 auto;'><div style='background:#fff;border:1px solid #eaecf0;border-radius:12px;box-shadow:0 12px 36px rgba(15,14,26,.1);overflow:hidden;'><div style='display:flex;align-items:center;gap:5px;padding:9px 12px;background:#f9fafb;border-bottom:1px solid #eaecf0;'><span style='width:8px;height:8px;border-radius:50%;background:#ff6058;'></span><span style='width:8px;height:8px;border-radius:50%;background:#ffbd2e;'></span><span style='width:8px;height:8px;border-radius:50%;background:#27c93f;'></span><span style='margin-left:6px;font-size:9px;color:#98a2b3;line-height:1;'>Submission</span></div><div style='padding:14px 14px 16px;'><div style='font-size:11px;font-weight:700;color:#101828;margin-bottom:11px;line-height:1.1;'>Client Agreement</div><div style='margin-bottom:9px;'><div style='font-size:9px;color:#697586;margin-bottom:3px;line-height:1.1;'>Full name</div><div style='font-size:10.5px;color:#101828;border:1px solid #eaecf0;border-radius:8px;padding:8px 10px;background:#fbfaff;line-height:1.1;'>Jordan Reyes</div></div><div style='margin-bottom:9px;'><div style='font-size:9px;color:#697586;margin-bottom:3px;line-height:1.1;'>Company</div><div style='font-size:10.5px;color:#101828;border:1px solid #eaecf0;border-radius:8px;padding:8px 10px;background:#fbfaff;line-height:1.1;'>Acme Co.</div></div><div><div style='font-size:9px;color:#697586;margin-bottom:3px;line-height:1.1;'>Submitted</div><div style='font-size:10.5px;color:#101828;border:1px solid #eaecf0;border-radius:8px;padding:8px 10px;background:#fbfaff;line-height:1.1;'>12 Jun 2026</div></div></div></div><div class='ep-arrow' style='display:flex;flex-direction:column;align-items:center;gap:4px;color:#6434d0;'><svg width='26' height='26' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.2'><path d='M5 12h14M13 6l6 6-6 6'/></svg><span style='font-size:8.5px;font-weight:700;letter-spacing:.04em;color:#472594;line-height:1.1;text-align:center;'>Export<br>PDF</span></div><div style='position:relative;'><div class='ep-doc' style='background:#fff;border:1px solid #eaecf0;border-radius:12px;box-shadow:0 16px 44px rgba(15,14,26,.14);padding:16px 15px;'><div style='display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;'><span style='display:inline-flex;align-items:center;gap:6px;font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#d92d20;line-height:1;'><span style='display:inline-flex;align-items:center;justify-content:center;width:18px;height:22px;border-radius:3px;background:#fef3f2;color:#d92d20;font-size:7px;font-weight:800;line-height:1;'>PDF</span>Agreement.pdf</span><span style='width:20px;height:20px;border-radius:50%;background:#f0ebfa;color:#6434d0;display:inline-flex;align-items:center;justify-content:center;'><svg width='11' height='11' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.6'><path d='M5 12l4 4L19 6'/></svg></span></div><div style='height:7px;width:60%;background:#101828;border-radius:4px;margin-bottom:11px;'></div><div class='ep-row r1' style='display:flex;justify-content:space-between;font-size:9px;line-height:1.3;margin-bottom:7px;'><span style='color:#98a2b3;'>Full name</span><span style='color:#344054;font-weight:600;'>Jordan Reyes</span></div><div class='ep-row r2' style='display:flex;justify-content:space-between;font-size:9px;line-height:1.3;margin-bottom:7px;'><span style='color:#98a2b3;'>Company</span><span style='color:#344054;font-weight:600;'>Acme Co.</span></div><div class='ep-row r3' style='display:flex;justify-content:space-between;font-size:9px;line-height:1.3;margin-bottom:7px;'><span style='color:#98a2b3;'>Submitted</span><span style='color:#344054;font-weight:600;'>12 Jun 2026</span></div><div class='ep-row r4' style='display:flex;justify-content:space-between;font-size:9px;line-height:1.3;border-top:1px solid #f2f4f7;padding-top:8px;'><span style='color:#98a2b3;'>Reference</span><span style='color:#344054;font-weight:600;'>SUB-4821</span></div></div><div class='ep-dl' style='position:absolute;left:50%;transform:translateX(-50%);bottom:-13px;display:inline-flex;align-items:center;gap:6px;background:#6434d0;color:#fff;font-size:10px;font-weight:600;border-radius:999px;padding:7px 14px;box-shadow:0 8px 20px rgba(100,52,208,.32);line-height:1;'><svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.4'><path d='M12 3v12M7 10l5 5 5-5M5 21h14'/></svg>Download</div></div></div>"
+const c0_title = [
+  {
+    "id": 4738,
+    "text": "Turn every submission into a ",
+    "highlight": false,
+    "color": "#475467",
+    "bold": false
+  },
+  {
+    "id": 4739,
+    "text": "clean PDF document",
+    "highlight": true,
+    "color": "#475467",
+    "bold": false
+  }
+]
+const c0_buttons = [
+  {
+    "id": 1550,
+    "link": "https://app.formester.com/users/sign_up",
+    "text": "Get Started",
+    "type": "Primary",
+    "showArrow": true
+  },
+  {
+    "id": 1551,
+    "link": "https://youtu.be/CoK3_IIwDCM",
+    "text": "Watch demo",
+    "type": "Secondary",
+    "showArrow": false
+  }
+]
+const c0_badge = {
+  "id": 84,
+  "text": "Export to PDF",
+  "tag": "Business",
+  "link": null
+}
+const c0_tabCardContent = []
+const c1_title = []
+const c1_logos = []
+const c2_steps = [
+  {
+    "id": 141,
+    "title": "Collect your submissions",
+    "description": "Publish your form, or run a quick test submission, so you have responses to work with. Every entry lands in your form's results.",
+    "rawHtml": "<div style='display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #eaecf0;border-radius:10px;padding:10px 12px;'><span style='width:7px;height:7px;border-radius:50%;background:#27c93f;'></span><div style='font-size:12px;font-weight:600;color:#101828;line-height:1.1;'>New response · Jordan Reyes</div><span style='margin-left:auto;font-size:11px;color:#697586;line-height:1.1;'>148 total</span></div>",
+    "image": null
+  },
+  {
+    "id": 142,
+    "title": "Open Results and pick submissions",
+    "description": "Go to the Results tab, then Submissions, and tick the responses you want — a single entry, a handful, or all of them at once.",
+    "rawHtml": "<div style='display:flex;flex-direction:column;gap:7px;'><div style='display:flex;align-items:center;gap:9px;border:1px solid #6434d0;border-radius:9px;padding:8px 11px;font-size:11.5px;color:#101828;background:#fff;box-shadow:0 0 0 3px #f0ebfa;'><span style='width:15px;height:15px;border-radius:4px;background:#6434d0;color:#fff;display:inline-flex;align-items:center;justify-content:center;'><svg width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3'><path d='M5 12l4 4L19 6'/></svg></span><span style='line-height:1.1;'>Jordan Reyes</span><span style='margin-left:auto;color:#697586;'>12 Jun</span></div><div style='display:flex;align-items:center;gap:9px;border:1px solid #6434d0;border-radius:9px;padding:8px 11px;font-size:11.5px;color:#101828;background:#fff;box-shadow:0 0 0 3px #f0ebfa;'><span style='width:15px;height:15px;border-radius:4px;background:#6434d0;color:#fff;display:inline-flex;align-items:center;justify-content:center;'><svg width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3'><path d='M5 12l4 4L19 6'/></svg></span><span style='line-height:1.1;'>Priya Shah</span><span style='margin-left:auto;color:#697586;'>12 Jun</span></div></div>",
+    "image": null
+  },
+  {
+    "id": 143,
+    "title": "Click the PDF icon to export",
+    "description": "Hit the PDF icon under Submitted At. Formester lays each field out neatly and generates a clean PDF document you can download instantly.",
+    "rawHtml": "<div style='display:flex;align-items:center;gap:9px;border:1px solid #eaecf0;border-radius:10px;padding:9px 12px;background:#fff;'><span style='display:inline-flex;align-items:center;justify-content:center;width:20px;height:24px;border-radius:4px;background:#fef3f2;color:#d92d20;font-size:8px;font-weight:800;line-height:1;'>PDF</span><div style='font-size:12px;font-weight:600;color:#101828;line-height:1.1;'>Agreement.pdf</div><span style='margin-left:auto;display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;color:#6434d0;line-height:1.1;'><svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.4'><path d='M12 3v12M7 10l5 5 5-5M5 21h14'/></svg>Download</span></div>",
+    "image": null
+  },
+  {
+    "id": 144,
+    "title": "Auto-send a copy (optional)",
+    "description": "Want respondents to keep their own record? Turn on the Autoresponder under Automation to attach the PDF to their confirmation email automatically.",
+    "rawHtml": "<div style='display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #eaecf0;border-radius:10px;padding:10px 12px;'><span style='width:26px;height:26px;border-radius:7px;background:#f0ebfa;color:#6434d0;display:inline-flex;align-items:center;justify-content:center;'><svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M4 6h16v12H4z'/><path d='M4 7l8 6 8-6'/></svg></span><div style='font-size:12px;font-weight:600;color:#101828;line-height:1.1;'>Attach PDF to confirmation</div><span style='margin-left:auto;width:34px;height:19px;border-radius:999px;background:#6434d0;position:relative;'><span style='position:absolute;top:2px;right:2px;width:15px;height:15px;border-radius:50%;background:#fff;'></span></span></div>",
+    "image": null
+  }
+]
+const c2_buttons = []
+const c3_title = [
+  {
+    "id": 4732,
+    "text": "Submissions become ",
+    "highlight": false,
+    "color": "#475467",
+    "bold": false
+  },
+  {
+    "id": 4733,
+    "text": "documents you can use anywhere",
+    "highlight": true,
+    "color": "#475467",
+    "bold": false
+  }
+]
+const c3_cards = [
+  {
+    "id": 571,
+    "tag": null,
+    "tagColor": "violet",
+    "title": "A clean, formatted layout",
+    "body": "Each response is laid out as a tidy document — fields and answers in order, easy to read and ready to file. No spreadsheets to wrangle or screenshots to stitch together.",
+    "mockHtml": "<div style='background:#fff;border:1px solid #eaecf0;border-radius:10px;box-shadow:0 6px 18px rgba(15,14,26,.06);padding:13px;'><div style='display:flex;align-items:center;gap:6px;margin-bottom:10px;'><span style='display:inline-flex;align-items:center;justify-content:center;width:17px;height:21px;border-radius:3px;background:#fef3f2;color:#d92d20;font-size:7px;font-weight:800;line-height:1;'>PDF</span><span style='height:6px;width:54%;background:#101828;border-radius:4px;'></span></div><div style='display:flex;justify-content:space-between;font-size:9px;line-height:1.3;margin-bottom:6px;'><span style='color:#98a2b3;'>Full name</span><span style='color:#344054;font-weight:600;'>Jordan Reyes</span></div><div style='display:flex;justify-content:space-between;font-size:9px;line-height:1.3;margin-bottom:6px;'><span style='color:#98a2b3;'>Email</span><span style='color:#344054;font-weight:600;'>jordan@acme.com</span></div><div style='display:flex;justify-content:space-between;font-size:9px;line-height:1.3;'><span style='color:#98a2b3;'>Plan</span><span style='color:#344054;font-weight:600;'>Pro</span></div></div>",
+    "icon": null
+  },
+  {
+    "id": 570,
+    "tag": null,
+    "tagColor": "violet",
+    "title": "One response or all of them",
+    "body": "Download a single submission for a quick share, or select many — or all — and export them together. Handy when you need a batch of records at once.",
+    "mockHtml": "<div style='display:flex;flex-direction:column;gap:7px;'><div style='display:flex;align-items:center;gap:8px;border:1px solid #eaecf0;border-radius:8px;padding:7px 10px;font-size:11px;color:#101828;line-height:1.1;'><span style='width:14px;height:14px;border-radius:4px;background:#6434d0;color:#fff;display:inline-flex;align-items:center;justify-content:center;'><svg width='9' height='9' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3'><path d='M5 12l4 4L19 6'/></svg></span>Jordan Reyes</div><div style='display:flex;align-items:center;gap:8px;border:1px solid #eaecf0;border-radius:8px;padding:7px 10px;font-size:11px;color:#101828;line-height:1.1;'><span style='width:14px;height:14px;border-radius:4px;background:#6434d0;color:#fff;display:inline-flex;align-items:center;justify-content:center;'><svg width='9' height='9' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3'><path d='M5 12l4 4L19 6'/></svg></span>Priya Shah</div><div style='display:flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:#6434d0;line-height:1.1;padding-left:2px;'><svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.4'><path d='M12 3v12M7 10l5 5 5-5M5 21h14'/></svg>Export 2 as PDF</div></div>",
+    "icon": null
+  },
+  {
+    "id": 572,
+    "tag": null,
+    "tagColor": "violet",
+    "title": "Share, archive, or attach automatically",
+    "body": "Email a PDF to a client, store it in your records, or auto-attach it to the respondent's confirmation with the Autoresponder — so everyone keeps a copy.",
+    "mockHtml": "<div style='display:flex;flex-direction:column;gap:9px;'><div style='display:flex;align-items:center;gap:8px;font-size:11px;color:#101828;line-height:1.2;'><span style='width:22px;height:22px;border-radius:6px;background:#f0ebfa;color:#6434d0;display:inline-flex;align-items:center;justify-content:center;'><svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M4 6h16v12H4z'/><path d='M4 7l8 6 8-6'/></svg></span>Email a copy</div><div style='display:flex;align-items:center;gap:8px;font-size:11px;color:#101828;line-height:1.2;'><span style='width:22px;height:22px;border-radius:6px;background:#f0ebfa;color:#6434d0;display:inline-flex;align-items:center;justify-content:center;'><svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M3 7h18v13H3z'/><path d='M3 7l2-3h14l2 3'/></svg></span>Archive for records</div><div style='display:flex;align-items:center;gap:8px;font-size:11px;color:#101828;line-height:1.2;'><span style='width:22px;height:22px;border-radius:6px;background:#ecfdf3;color:#027a48;display:inline-flex;align-items:center;justify-content:center;'><svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.4'><path d='M5 12l4 4L19 6'/></svg></span>Auto-attach to confirmation</div></div>",
+    "icon": null
+  }
+]
+const c4_title = [
+  {
+    "id": 4735,
+    "text": "PDFs for the records ",
+    "highlight": false,
+    "color": "#475467",
+    "bold": false
+  },
+  {
+    "id": 4734,
+    "text": "your business has to keep",
+    "highlight": true,
+    "color": "#475467",
+    "bold": false
+  }
+]
+const c4_cards = [
+  {
+    "id": 573,
+    "tag": "Legal",
+    "tagColor": "violet",
+    "title": "Client agreements & contracts",
+    "body": "Convert online client agreements into PDFs you can securely store and share with everyone involved — no printing, no scanning back.",
+    "mockHtml": "<div style='display:flex;align-items:center;gap:9px;'><span style='display:inline-flex;align-items:center;justify-content:center;width:20px;height:24px;border-radius:4px;background:#fef3f2;color:#d92d20;font-size:8px;font-weight:800;line-height:1;'>PDF</span><div style='flex:1;'><div style='font-size:11px;font-weight:600;color:#101828;line-height:1.2;'>Service Agreement.pdf</div><div style='font-size:9.5px;color:#98a2b3;line-height:1.2;'>Signed · stored securely</div></div><span style='font-size:9px;font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:3px 9px;line-height:1.1;'>Filed</span></div>",
+    "icon": null
+  },
+  {
+    "id": 574,
+    "tag": "HR",
+    "tagColor": "blue",
+    "title": "Employee onboarding",
+    "body": "Export onboarding forms as PDFs to share new-hire details with HR quickly and keep a tidy record for each employee file.",
+    "mockHtml": "<div style='display:flex;flex-direction:column;gap:7px;'><div style='display:flex;align-items:center;gap:8px;font-size:11px;color:#101828;line-height:1.1;'><span style='display:inline-flex;align-items:center;justify-content:center;width:18px;height:22px;border-radius:3px;background:#fef3f2;color:#d92d20;font-size:7px;font-weight:800;line-height:1;'>PDF</span>New_Hire_Reyes.pdf</div><div style='font-size:9.5px;color:#697586;background:#f9fafb;border:1px solid #eaecf0;border-radius:8px;padding:7px 9px;line-height:1.3;'>Sent to HR · added to employee file</div></div>",
+    "icon": null
+  },
+  {
+    "id": 575,
+    "tag": "Events",
+    "tagColor": "green",
+    "title": "Event registration",
+    "body": "Create printable records of attendees by exporting registration responses as PDFs — easier check-ins and quick sharing with your team.",
+    "mockHtml": "<div style='display:flex;flex-direction:column;gap:6px;'><div style='display:flex;justify-content:space-between;font-size:10px;color:#101828;line-height:1.2;'><span>Jordan Reyes</span><span style='color:#027a48;font-weight:600;'>Checked in</span></div><div style='display:flex;justify-content:space-between;font-size:10px;color:#101828;line-height:1.2;'><span>Priya Shah</span><span style='color:#027a48;font-weight:600;'>Checked in</span></div><div style='display:flex;justify-content:space-between;font-size:10px;color:#697586;line-height:1.2;'><span>Attendee list</span><span>PDF export</span></div></div>",
+    "icon": null
+  },
+  {
+    "id": 576,
+    "tag": "Compliance",
+    "tagColor": "amber",
+    "title": "Compliance documentation",
+    "body": "Keep secure, unchangeable PDF records of every submission so audits and compliance reviews are straightforward — and nothing gets edited after the fact.",
+    "mockHtml": "<div style='display:flex;align-items:center;gap:9px;border:1px solid #eaecf0;border-radius:9px;padding:9px 11px;background:#fff;'><span style='width:24px;height:24px;border-radius:7px;background:#f0ebfa;color:#6434d0;display:inline-flex;align-items:center;justify-content:center;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z'/></svg></span><div style='font-size:11px;color:#101828;line-height:1.3;'>Locked PDF record<br><span style='font-size:9.5px;color:#98a2b3;'>Audit-ready · tamper-resistant</span></div></div>",
+    "icon": null
+  }
+]
+const c5_heading = [
+  {
+    "id": 4736,
+    "text": "Businesses keep their records on Formester",
+    "highlight": false,
+    "color": "#475467",
+    "bold": false
+  }
+]
+const c5_testimonials = [
+  {
+    "id": 1,
+    "name": "Dr. Michele Ross",
+    "position": "Founder",
+    "organization": "Infused Health",
+    "comment": "I'm migrating my forms from Paperform, where I've been a user for over 4 years. Loving the software so far! I've already replaced Paperform form embeds & popups on my sites & my husband's websites with Formester forms",
+    "createdAt": "2024-06-18T03:47:14.605Z",
+    "updatedAt": "2025-01-22T02:57:30.159Z",
+    "publishedAt": "2024-06-18T03:47:18.889Z",
+    "companyLogo": {
+      "id": 227,
+      "imageAlt": "Dr. Michele Ross",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 1685,
+        "name": "dr._michelelogo.webp",
+        "alternativeText": null,
+        "caption": null,
+        "width": 300,
+        "height": 59,
+        "formats": {
+          "thumbnail": {
+            "ext": ".webp",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_dr_michelelogo_2269ae2211.webp",
+            "hash": "thumbnail_dr_michelelogo_2269ae2211",
+            "mime": "image/webp",
+            "name": "thumbnail_dr._michelelogo.webp",
+            "path": null,
+            "size": 5.58,
+            "width": 245,
+            "height": 48
+          }
+        },
+        "hash": "dr_michelelogo_2269ae2211",
+        "ext": ".webp",
+        "mime": "image/webp",
+        "size": 5.87,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/dr_michelelogo_2269ae2211.webp",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2024-08-01T14:38:23.944Z",
+        "updatedAt": "2024-08-01T14:38:23.944Z"
+      }
+    }
+  },
+  {
+    "id": 2,
+    "name": "Jilson",
+    "position": "Organiser",
+    "organization": "Vue Conference",
+    "comment": "Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.",
+    "createdAt": "2024-06-18T03:48:46.610Z",
+    "updatedAt": "2025-01-22T02:57:08.760Z",
+    "publishedAt": "2024-06-18T03:48:50.595Z",
+    "companyLogo": {
+      "id": 228,
+      "imageAlt": "photo-of-vue-conference",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 1680,
+        "name": "vueconf.webp",
+        "alternativeText": "photo-of-vue-conference",
+        "caption": "photo-of-vue-conference",
+        "width": 80,
+        "height": 80,
+        "formats": null,
+        "hash": "vueconf_1bc3dc0827",
+        "ext": ".webp",
+        "mime": "image/webp",
+        "size": 1.07,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2024-08-01T14:38:23.731Z",
+        "updatedAt": "2024-12-01T07:47:11.024Z"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "name": "Costanza Casullo",
+    "position": "Volunteer",
+    "organization": "Wato Coding Hub",
+    "comment": "Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.",
+    "createdAt": "2024-06-18T03:51:15.232Z",
+    "updatedAt": "2025-01-22T02:58:03.674Z",
+    "publishedAt": "2024-06-18T03:51:21.477Z",
+    "companyLogo": {
+      "id": 225,
+      "imageAlt": "wato-coding-hub-logo",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 1681,
+        "name": "wato-coding-hub.webp",
+        "alternativeText": "wato-coding-hub-logo",
+        "caption": "wato-coding-hub-logo",
+        "width": 80,
+        "height": 81,
+        "formats": null,
+        "hash": "wato_coding_hub_e054f0ea9d",
+        "ext": ".webp",
+        "mime": "image/webp",
+        "size": 1.88,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/wato_coding_hub_e054f0ea9d.webp",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2024-08-01T14:38:23.738Z",
+        "updatedAt": "2024-12-01T07:49:13.371Z"
+      }
+    }
+  },
+  {
+    "id": 5,
+    "name": "Deanna Bugalski",
+    "position": "Founder/CEO",
+    "organization": "Suggesterfy",
+    "comment": "I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formester was super easy to set up, and the usability is seamless! I highly recommend!",
+    "createdAt": "2024-06-18T03:52:39.354Z",
+    "updatedAt": "2025-01-22T02:57:47.756Z",
+    "publishedAt": "2024-06-18T03:52:43.800Z",
+    "companyLogo": {
+      "id": 226,
+      "imageAlt": "suggesterfy-logo",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 1683,
+        "name": "suggesterfy_logo.webp",
+        "alternativeText": "suggesterfy-logo",
+        "caption": "suggesterfy-logo",
+        "width": 100,
+        "height": 50,
+        "formats": null,
+        "hash": "suggesterfy_logo_d1d7f996b9",
+        "ext": ".webp",
+        "mime": "image/webp",
+        "size": 1.91,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/suggesterfy_logo_d1d7f996b9.webp",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2024-08-01T14:38:23.921Z",
+        "updatedAt": "2024-12-01T07:49:52.459Z"
+      }
+    }
+  },
+  {
+    "id": 6,
+    "name": "Thibaud Martinez",
+    "position": "Organiser",
+    "organization": "Tedx",
+    "comment": "I really enjoy Formester. It’s clean and straight-forward and it does well, what it is supposed to do.",
+    "createdAt": "2024-06-18T03:53:38.957Z",
+    "updatedAt": "2025-01-22T02:56:48.567Z",
+    "publishedAt": "2024-06-18T03:53:40.693Z",
+    "companyLogo": {
+      "id": 229,
+      "imageAlt": "tedx-logo",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 1684,
+        "name": "tedx.webp",
+        "alternativeText": "tedx-logo",
+        "caption": "tedx-logo",
+        "width": 109,
+        "height": 38,
+        "formats": null,
+        "hash": "tedx_2fce0eee2e",
+        "ext": ".webp",
+        "mime": "image/webp",
+        "size": 1.09,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/tedx_2fce0eee2e.webp",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2024-08-01T14:38:23.941Z",
+        "updatedAt": "2024-12-01T07:50:31.505Z"
+      }
+    }
+  },
+  {
+    "id": 34,
+    "name": "Bency",
+    "position": "Product Manager",
+    "organization": "Northgate Digital Solutions",
+    "comment": "Formester's AI form generator transformed how quickly we build forms. The drag-and-drop builder paired with AI-generated templates means I can spin up a survey or poll in minutes, not hours. Conditional logic, file uploads, and seamless integrations make it incredibly versatile and the customization options let every form match our branding perfectly. Their support team is exceptional too. It's the only form and survey tool we recommend",
+    "createdAt": "2025-06-29T23:23:10.541Z",
+    "updatedAt": "2026-05-03T09:30:00.533Z",
+    "publishedAt": "2026-05-03T09:30:00.530Z",
+    "companyLogo": {
+      "id": 3652,
+      "imageAlt": null,
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": null
+    }
+  },
+  {
+    "id": 35,
+    "name": "Roger",
+    "position": "Marketing Specialist",
+    "organization": "BrightPath Technologies",
+    "comment": "I use Formester for my form-building needs and I’m thoroughly impressed. The platform is rich with features… What really sets them apart is their exceptional customer service (responses typically within 10 minutes). The pricing is also very reasonable… Highly recommended!\n",
+    "createdAt": "2025-06-29T23:29:19.225Z",
+    "updatedAt": "2025-10-31T04:00:58.697Z",
+    "publishedAt": "2025-06-29T23:29:21.134Z",
+    "companyLogo": {
+      "id": 3649,
+      "imageAlt": "brightpath-logo",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 4094,
+        "name": "brightpath-logo.png",
+        "alternativeText": "brightpath-logo",
+        "caption": "brightpath-logo",
+        "width": 200,
+        "height": 49,
+        "formats": null,
+        "hash": "brightpath_logo_6ef0922a60",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 2.5,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/brightpath_logo_6ef0922a60.png",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2025-10-31T04:00:11.712Z",
+        "updatedAt": "2025-10-31T04:00:11.712Z"
+      }
+    }
+  },
+  {
+    "id": 36,
+    "name": "Ye Qi Lai",
+    "position": "UX Designer",
+    "organization": "Eastview Consulting",
+    "comment": "Formester is one of the best underrated survey tools out there… It’s extremely customizable… Their support is awesome… I absolutely recommend this to anyone looking for an alternative to the usual form creators.",
+    "createdAt": "2025-06-29T23:30:04.374Z",
+    "updatedAt": "2025-10-31T04:00:30.746Z",
+    "publishedAt": "2025-06-29T23:30:06.260Z",
+    "companyLogo": {
+      "id": 3648,
+      "imageAlt": "eastview-logo-header",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 4097,
+        "name": "eastview-logo-header-300x120 1.png",
+        "alternativeText": "eastview-logo-header",
+        "caption": "eastview-logo-header",
+        "width": 200,
+        "height": 80,
+        "formats": null,
+        "hash": "eastview_logo_header_300x120_1_d9c231e93b",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 3.18,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/eastview_logo_header_300x120_1_d9c231e93b.png",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2025-10-31T04:00:11.854Z",
+        "updatedAt": "2025-10-31T04:00:11.854Z"
+      }
+    }
+  }
+]
+const c6_title = [
+  {
+    "id": 4737,
+    "text": "Export to PDF FAQs",
+    "highlight": false,
+    "color": "#475467",
+    "bold": false
+  }
+]
+const c6_faqList = [
+  {
+    "id": 2350,
+    "header": "How do I export form submissions as PDF?",
+    "body": "Open your form's Results, go to Submissions, and select individual or all responses. Click the PDF icon under Submitted At to generate a formatted PDF document you can download for storage, sharing, or reporting.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2346,
+    "header": "Can I export all form submissions at once?",
+    "body": "Yes. You can export all submissions at once or download selected entries as PDF files, making it easy to manage bulk responses and keep organized records.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2347,
+    "header": "Why export form submissions as PDF?",
+    "body": "Exporting to PDF helps with secure storage, easy sharing, and permanent record-keeping. PDFs are universally accessible and ideal for documentation, reporting, and compliance.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2348,
+    "header": "Where can I use exported form submission PDFs?",
+    "body": "Use exported PDFs for client reports, internal documentation, lead records, order details, registrations, and compliance tracking. Store them locally or share them with your team and clients.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2349,
+    "header": "Can I share exported PDFs or send them to respondents automatically?",
+    "body": "Yes. Share PDF files by email, cloud storage, or team collaboration tools — and turn on the Autoresponder under Automation to attach a copy to the respondent's confirmation email automatically.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2351,
+    "header": "Are exported form submission PDFs secure?",
+    "body": "Yes. Exported PDFs keep a secure, stable record of each response, preventing unwanted edits so your collected data stays accurate and reliable.",
+    "body_markdown": null,
+    "list": []
+  }
+]
+const c7_buttons = [
+  {
+    "id": 1549,
+    "link": "https://app.formester.com/users/sign_up",
+    "text": "Get Started",
+    "type": "Primary",
+    "showArrow": true
+  },
+  {
+    "id": 1548,
+    "link": "/pricing",
+    "text": "See pricing",
+    "type": "White",
+    "showArrow": false
+  }
+]
+
+useHead({
+  "title": "Export Form Submissions as PDF | Download Responses with Formester",
+  "link": [
+    {
+      "hid": "canonical",
+      "rel": "canonical",
+      "href": "https://formester.com/features/export-form-submission-pdf/"
+    }
+  ],
+  "meta": [
+    {
+      "property": "article:modified_time",
+      "content": "2026-06-15T10:45:41.948Z"
+    },
+    {
+      "hid": "description",
+      "name": "description",
+      "content": "Export form submissions as formatted PDF documents — download a single response or in bulk, share by email, archive for records, and auto-attach to notifications. Available on the Business plan."
+    },
+    {
+      "hid": "og:site_name",
+      "name": "og:site_name",
+      "content": "Export Form Submissions as PDF | Download Responses with Formester"
+    },
+    {
+      "hid": "og:type",
+      "property": "og:type",
+      "content": "website"
+    },
+    {
+      "hid": "og:url",
+      "property": "og:url",
+      "content": "https://formester.com/features/export-form-submission-pdf/"
+    },
+    {
+      "hid": "og:title",
+      "property": "og:title",
+      "content": "Export Form Submissions as PDF | Download Responses with Formester"
+    },
+    {
+      "hid": "og:description",
+      "property": "og:description",
+      "content": "Export form submissions as formatted PDF documents — download a single response or in bulk, share by email, archive for records, and auto-attach to notifications. Available on the Business plan."
+    },
+    {
+      "hid": "og:image",
+      "property": "og:image",
+      "content": "https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_s_pdf_export_feature_page_hero_image_eafaebc6e8.png"
+    },
+    {
+      "hid": "og:image:alt",
+      "name": "og:image:alt",
+      "content": "Export Form Submissions as PDF | Download Responses with Formester"
+    },
+    {
+      "hid": "twitter:url",
+      "name": "twitter:url",
+      "content": "https://formester.com/features/export-form-submission-pdf/"
+    },
+    {
+      "name": "twitter:site",
+      "content": "@_formester_"
+    },
+    {
+      "hid": "twitter:title",
+      "name": "twitter:title",
+      "content": "Export Form Submissions as PDF | Download Responses with Formester"
+    },
+    {
+      "hid": "twitter:description",
+      "name": "twitter:description",
+      "content": "Export form submissions as formatted PDF documents — download a single response or in bulk, share by email, archive for records, and auto-attach to notifications. Available on the Business plan."
+    },
+    {
+      "hid": "twitter:image",
+      "name": "twitter:image",
+      "content": "https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_s_pdf_export_feature_page_hero_image_eafaebc6e8.png"
+    },
+    {
+      "hid": "twitter:image:alt",
+      "name": "twitter:image:alt",
+      "content": "Export Form Submissions as PDF | Download Responses with Formester"
+    },
+    {
+      "hid": "twitter:card",
+      "name": "twitter:card",
+      "content": "summary_large_image"
+    },
+    {
+      "hid": "apple-mobile-web-app-title",
+      "name": "apple-mobile-web-app-title",
+      "content": "Formester"
+    },
+    {
+      "hid": "image",
+      "name": "image",
+      "property": "og:image",
+      "content": "https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_s_pdf_export_feature_page_hero_image_eafaebc6e8.png"
+    },
+    {
+      "hid": "keywords",
+      "name": "keywords",
+      "content": [
+        "export forms"
+      ]
+    }
+  ]
+})
+useJsonld([
+  {
+    "@context": "https://schema.org",
+    "url": "https://formester.com",
+    "logo": "https://formester.com/logo.svg",
+    "name": "Formester",
+    "@type": "Organization"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "name": "How do I export form submissions as PDF?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "Open your form's Results, go to Submissions, and select individual or all responses. Click the PDF icon under Submitted At to generate a formatted PDF document you can download for storage, sharing, or reporting.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "Can I export all form submissions at once?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "Yes. You can export all submissions at once or download selected entries as PDF files, making it easy to manage bulk responses and keep organized records.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "Why export form submissions as PDF?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "Exporting to PDF helps with secure storage, easy sharing, and permanent record-keeping. PDFs are universally accessible and ideal for documentation, reporting, and compliance.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "Where can I use exported form submission PDFs?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "Use exported PDFs for client reports, internal documentation, lead records, order details, registrations, and compliance tracking. Store them locally or share them with your team and clients.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "Can I share exported PDFs or send them to respondents automatically?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "Yes. Share PDF files by email, cloud storage, or team collaboration tools — and turn on the Autoresponder under Automation to attach a copy to the respondent's confirmation email automatically.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "Are exported form submission PDFs secure?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "Yes. Exported PDFs keep a secure, stable record of each response, preventing unwanted edits so your collected data stays accurate and reliable.",
+          "@type": "Answer"
+        }
+      }
+    ]
+  }
+])
+</script>

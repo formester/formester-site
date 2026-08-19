@@ -1,0 +1,819 @@
+<template>
+  <div>
+    <HeroV2
+      description="Invite your team to work on forms and surveys together. Control who can view, edit, and manage submissions from one shared workspace."
+      trustText="Available on the Business plan"
+      blobColorA="#f5eeff"
+      blobColorB="#f1ebff"
+      blobColorC="#f4efff"
+      :mockupHtml="c0_mockupHtml"
+      layout="split"
+      :title="c0_title"
+      :buttons="c0_buttons"
+      :badge="c0_badge"
+      :tabCardContent="c0_tabCardContent"
+      class="page-component-item"
+    />
+
+    <TrustSeals
+      label="Trusted by leading organisations"
+      showTrustBadges
+      :title="c1_title"
+      :logos="c1_logos"
+      class="page-component-item"
+    />
+
+    <CardGrid
+      eyebrow="Why teams use it"
+      description="Work together on forms, manage who has access, protect sensitive data, and keep every submission in one place."
+      columns="3"
+      :title="c2_title"
+      :cards="c2_cards"
+      class="page-component-item"
+    />
+
+    <section class="page-component-item">
+      <div class="raw-html-content">
+<section class='cfl-sec'><div class='cfl-wrap'><div class='cfl-head'><span class='cfl-eyebrow'>Access control</span><h2 class='cfl-h2'>Manage permissions at three levels</h2><p class='cfl-lead'>Set access where it makes sense — across your whole organization, within a team, or on a single form or survey.</p></div><div class='cfl-grid'><div class='cfl-card'><div class='cfl-icon'>1</div><div><span class='cfl-kicker'>Organization</span><h3 class='cfl-title'>Account-wide</h3></div><p class='cfl-body'>Invite members across your entire account and give each one of two access types.</p><div class='cfl-roles'><div class='cfl-role'><b>Admin</b><span>Full control over every form and setting in your organization.</span></div><div class='cfl-role'><b>Staff</b><span>Access only the forms they were given at the form level.</span></div></div></div><div class='cfl-card'><div class='cfl-icon'>2</div><div><span class='cfl-kicker'>Team</span><h3 class='cfl-title'>Per team</h3></div><p class='cfl-body'>Create teams, invite members by email, and manage access for each team separately.</p><div class='cfl-roles'><div class='cfl-role'><b>Maintainer</b><span>Manages members and roles, with full access to the team’s forms.</span></div><div class='cfl-role'><b>Member</b><span>Works on forms assigned to the team but can’t manage members.</span></div></div></div><div class='cfl-card'><div class='cfl-icon'>3</div><div><span class='cfl-kicker'>Form &amp; survey</span><h3 class='cfl-title'>Per form</h3></div><p class='cfl-body'>From the Share tab, assign roles to individuals or whole teams on each form.</p><div class='cfl-roles'><div class='cfl-role'><b>Maintainer · Editor</b><span>Manage access and edit content, or edit content and submissions only.</span></div><div class='cfl-role'><b>Viewer · Submitter</b><span>View submissions and analytics, or simply submit the form.</span></div></div></div></div></div></section>
+      </div>
+    </section>
+
+    <StickyStepsSection
+      badge="Field-level permissions"
+      heading="Control who can edit each individual field"
+      description="In a delivery form, for example, the delivery person can only collect e-signatures — every other field stays locked to the rest of the team."
+      background="#f9fafb"
+      :steps="c4_steps"
+      :buttons="c4_buttons"
+      class="page-component-item"
+    />
+
+    <CardGrid
+      eyebrow="Real-life use cases"
+      columns="3"
+      :title="c5_title"
+      :cards="c5_cards"
+      class="page-component-item"
+    />
+
+    <TestimonialsV2
+      version="feature"
+      :heading="c6_heading"
+      :testimonials="c6_testimonials"
+      class="page-component-item"
+    />
+
+    <FaqSection
+      centered
+      :title="c7_title"
+      :faqList="c7_faqList"
+      class="page-component-item"
+    />
+
+    <CtaDark
+      badge="Available on the Business plan"
+      heading="Ready to build your forms as a team?"
+      description="Invite your team, set roles, and start collaborating in minutes."
+      :buttons="c8_buttons"
+      class="page-component-item"
+    />
+  </div>
+</template>
+
+<script setup>
+import CardGrid from '@/components/v2/CardGrid.vue'
+import CtaDark from '@/components/v2/CtaDark.vue'
+import FaqSection from '@/components/v2/FaqSection.vue'
+import HeroV2 from '@/components/v2/HeroV2.vue'
+import StickyStepsSection from '@/components/v2/StickyStepsSection.vue'
+import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
+import TrustSeals from '@/components/v2/TrustSeals.vue'
+
+const c0_mockupHtml = "\u003Cstyle>@media (max-width:600px){.cf-hero-mock-grid{grid-template-columns:1fr !important;}}\u003C/style><div style='position:relative;max-width:880px;margin:0 auto;'><div style='background:#fff;border:1px solid #eaecf0;border-radius:16px;box-shadow:0 24px 80px rgba(15,14,26,.12),0 8px 24px rgba(15,14,26,.06);overflow:hidden;'><div style='display:flex;align-items:center;gap:6px;padding:12px 16px;background:#f9fafb;border-bottom:1px solid #eaecf0;'><span style='width:11px;height:11px;border-radius:50%;background:#ff6058;'></span><span style='width:11px;height:11px;border-radius:50%;background:#ffbd2e;'></span><span style='width:11px;height:11px;border-radius:50%;background:#27c93f;'></span><span style='margin-left:10px;font-size:12px;color:#697586;background:#fff;border:1px solid #eaecf0;border-radius:6px;padding:3px 12px;'>app.formester.com · Employee onboarding</span><span style='margin-left:auto;display:inline-flex;align-items:center;'><span style='width:24px;height:24px;border-radius:50%;border:2px solid #fff;background:#6434d0;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;'>MK</span><span style='width:24px;height:24px;border-radius:50%;border:2px solid #fff;background:#0e9384;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-left:-8px;'>JT</span><span style='width:24px;height:24px;border-radius:50%;border:2px solid #fff;background:#dd2590;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-left:-8px;'>RA</span></span></div><div class='cf-hero-mock-grid' style='display:grid;grid-template-columns:1.3fr .95fr;gap:16px;padding:18px;text-align:left;'><div style='display:flex;flex-direction:column;gap:12px;'><div style='border:1px solid #eaecf0;border-radius:10px;padding:11px 13px;'><div style='font-size:12px;color:#475467;margin-bottom:5px;'>Full name</div><div style='font-size:13px;color:#101828;'>Jordan Lee</div></div><div style='border:1px solid #6434d0;border-radius:10px;padding:11px 13px;box-shadow:0 0 0 4px #f0ebfa;'><div style='font-size:12px;color:#475467;margin-bottom:5px;display:flex;justify-content:space-between;align-items:center;'><span>Salary</span><span style='font-size:10px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:999px;padding:2px 8px;'>HR only</span></div><div style='font-size:14px;color:#98a2b3;letter-spacing:3px;'>••••••</div></div><div style='border:1px solid #eaecf0;border-radius:10px;padding:11px 13px;'><div style='font-size:12px;color:#475467;margin-bottom:5px;'>Start date</div><div style='font-size:13px;color:#101828;'>12 Jun 2026</div></div></div><div style='border:1px solid #eaecf0;border-radius:12px;background:#f9fafb;padding:13px;'><div style='font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#697586;margin-bottom:11px;'>Shared with</div><div style='display:flex;flex-direction:column;gap:9px;'><div style='display:flex;align-items:center;gap:8px;'><span style='width:24px;height:24px;border-radius:50%;background:#6434d0;color:#fff;font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;'>MK</span><span style='font-size:12px;font-weight:600;color:#101828;'>Maya K.</span><span style='margin-left:auto;font-size:10px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:999px;padding:2px 8px;'>Admin</span></div><div style='display:flex;align-items:center;gap:8px;'><span style='width:24px;height:24px;border-radius:50%;background:#0e9384;color:#fff;font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;'>JT</span><span style='font-size:12px;font-weight:600;color:#101828;'>Jamie T.</span><span style='margin-left:auto;font-size:10px;font-weight:700;color:#175cd3;background:#eff8ff;border-radius:999px;padding:2px 8px;'>Editor</span></div><div style='display:flex;align-items:center;gap:8px;'><span style='width:24px;height:24px;border-radius:50%;background:#dd2590;color:#fff;font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;'>RA</span><span style='font-size:12px;font-weight:600;color:#101828;'>Riya A.</span><span style='margin-left:auto;font-size:10px;font-weight:700;color:#697586;background:#f2f4f7;border-radius:999px;padding:2px 8px;'>Viewer</span></div></div></div></div></div></div>"
+const c0_title = [
+  {
+    "id": 4637,
+    "text": "Build forms ",
+    "highlight": false,
+    "color": "#475467",
+    "bold": false
+  },
+  {
+    "id": 4638,
+    "text": "together",
+    "highlight": true,
+    "color": "#475467",
+    "bold": false
+  },
+  {
+    "id": 4639,
+    "text": ", manage submissions as a team",
+    "highlight": false,
+    "color": "#475467",
+    "bold": false
+  }
+]
+const c0_buttons = [
+  {
+    "id": 1508,
+    "link": "https://app.formester.com/users/sign_up",
+    "text": "Start Collaborating",
+    "type": "Primary",
+    "showArrow": true
+  }
+]
+const c0_badge = {
+  "id": 73,
+  "text": "Collaborative Forms",
+  "tag": "Business",
+  "link": null
+}
+const c0_tabCardContent = []
+const c1_title = []
+const c1_logos = []
+const c2_title = [
+  {
+    "id": 4631,
+    "text": "Why teams build forms on",
+    "highlight": false,
+    "color": "#475467",
+    "bold": false
+  },
+  {
+    "id": 4632,
+    "text": "Formester",
+    "highlight": true,
+    "color": "#475467",
+    "bold": false
+  }
+]
+const c2_cards = [
+  {
+    "id": 482,
+    "tag": "Roles",
+    "tagColor": "violet",
+    "title": "Assign roles in a click",
+    "body": "Decide who can view, edit, and manage each form with role-based access for every teammate.",
+    "mockHtml": "<div style='display:flex;align-items:center;gap:9px;'><span style='width:26px;height:26px;border-radius:50%;background:#6434d0;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;'>RA</span><span style='font-size:12px;font-weight:600;color:#101828;'>Riya A.</span><span style='margin-left:auto;font-size:10px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:999px;padding:3px 9px;'>Editor</span></div>",
+    "icon": null
+  },
+  {
+    "id": 481,
+    "tag": "Workspace",
+    "tagColor": "violet",
+    "title": "Work together in one workspace",
+    "body": "Your whole team builds, edits, and manages forms from one shared place — no scattered copies or email threads.",
+    "mockHtml": "<div style='display:flex;align-items:center;gap:10px;'><span style='width:30px;height:30px;border-radius:8px;background:#f0ebfa;color:#6434d0;display:flex;align-items:center;justify-content:center;font-weight:700;'>F</span><div style='flex:1;min-width:0;'><div style='font-size:12px;font-weight:600;color:#101828;'>Onboarding form</div><div style='font-size:11px;color:#697586;'>Shared with 4 teammates</div></div><span style='display:inline-flex;'><span style='width:20px;height:20px;border-radius:50%;border:2px solid #fff;background:#6434d0;'></span><span style='width:20px;height:20px;border-radius:50%;border:2px solid #fff;background:#0e9384;margin-left:-7px;'></span><span style='width:20px;height:20px;border-radius:50%;border:2px solid #fff;background:#dd2590;margin-left:-7px;'></span></span></div>",
+    "icon": null
+  },
+  {
+    "id": 483,
+    "tag": "Security",
+    "tagColor": "green",
+    "title": "Protect sensitive data",
+    "body": "Restrict who can see responses and lock private answers with secure, per-role permission controls.",
+    "mockHtml": "<div style='display:flex;flex-direction:column;gap:9px;'><div style='display:flex;align-items:center;gap:9px;font-size:12px;color:#101828;'><span style='width:30px;height:18px;border-radius:999px;background:#6434d0;position:relative;flex-shrink:0;'><span style='position:absolute;top:2px;right:2px;width:14px;height:14px;border-radius:50%;background:#fff;'></span></span>Salary · HR only</div><div style='display:flex;align-items:center;gap:9px;font-size:12px;color:#697586;'><span style='width:30px;height:18px;border-radius:999px;background:#e4e7ec;position:relative;flex-shrink:0;'><span style='position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;background:#fff;'></span></span>Notes · Everyone</div></div>",
+    "icon": null
+  },
+  {
+    "id": 484,
+    "tag": "Workflow",
+    "tagColor": "amber",
+    "title": "Speed up approvals",
+    "body": "Cut delays with streamlined access and clear ownership, so reviews and sign-offs move faster.",
+    "mockHtml": "<div style='font-size:12px;color:#475467;'><div style='display:flex;align-items:center;gap:8px;'><span style='width:16px;height:13px;border-radius:3px;background:#6434d0;display:inline-block;'></span><span style='font-weight:600;color:#101828;'>Marketing team</span></div><div style='margin-top:7px;padding-left:24px;color:#697586;'>Lead capture form · Event survey</div></div>",
+    "icon": null
+  },
+  {
+    "id": 486,
+    "tag": "Branding",
+    "tagColor": "rose",
+    "title": "Stay on brand",
+    "body": "Build shared templates and control who can change them, so every form stays consistent and professional.",
+    "mockHtml": "<div style='display:flex;align-items:center;gap:7px;'><span style='width:22px;height:22px;border-radius:6px;background:#6434d0;'></span><span style='width:22px;height:22px;border-radius:6px;background:#0e9384;'></span><span style='width:22px;height:22px;border-radius:6px;background:#101828;'></span><span style='font-size:11px;color:#697586;margin-left:5px;'>Brand kit applied</span></div>",
+    "icon": null
+  },
+  {
+    "id": 485,
+    "tag": "Storage",
+    "tagColor": "blue",
+    "title": "One secure home for data",
+    "body": "Store, manage, and reach every form and response securely from a single dashboard.",
+    "mockHtml": "<div style='display:flex;align-items:center;gap:8px;font-size:12px;color:#475467;'><span style='width:20px;height:20px;border-radius:5px;background:#ecfdf3;color:#027a48;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;'>✓</span>GDPR · Audit log · SSO</div>",
+    "icon": null
+  }
+]
+const c4_steps = [
+  {
+    "id": 122,
+    "title": "Invite members",
+    "description": "In the Teams section, invite by email and set their role as Member — not Maintainer, who can edit the whole form.",
+    "rawHtml": null,
+    "image": null
+  },
+  {
+    "id": 121,
+    "title": "Turn on Field Assignee",
+    "description": "Select the field you want to restrict, open Advanced settings, and enable Field Assignee.",
+    "rawHtml": "<div style='display:inline-flex;align-items:center;gap:9px;font-size:13px;color:#101828;border:1px solid #eaecf0;border-radius:10px;padding:9px 12px;background:#fff;'><span style='width:32px;height:19px;border-radius:999px;background:#6434d0;position:relative;'><span style='position:absolute;top:2px;right:2px;width:15px;height:15px;border-radius:50%;background:#fff;'></span></span>Field Assignee · On</div>",
+    "image": null
+  },
+  {
+    "id": 119,
+    "title": "Create a form role",
+    "description": "Choose Add Role, give it a name, then add members or a whole team. Only they can edit and fill out this field.",
+    "rawHtml": null,
+    "image": null
+  },
+  {
+    "id": 120,
+    "title": "Publish & share",
+    "description": "Repeat for any other restricted fields, then publish the form and share the link.",
+    "rawHtml": "<div style='display:flex;gap:8px;align-items:center;'><span style='background:#6434d0;color:#fff;font-size:12px;font-weight:600;border-radius:8px;padding:8px 16px;'>Publish</span><span style='flex:1;border:1px solid #d0d5dd;border-radius:8px;padding:8px 12px;font-size:12px;color:#697586;'>formester.com/f/onboarding</span></div>",
+    "image": null
+  }
+]
+const c4_buttons = []
+const c5_title = [
+  {
+    "id": 4633,
+    "text": "Where teams collaborate on",
+    "highlight": false,
+    "color": "#475467",
+    "bold": false
+  },
+  {
+    "id": 4634,
+    "text": "Formester",
+    "highlight": true,
+    "color": "#475467",
+    "bold": false
+  }
+]
+const c5_cards = [
+  {
+    "id": 488,
+    "tag": "HR",
+    "tagColor": "blue",
+    "title": "Employee performance reviews",
+    "body": "HR, managers, and employees work on reviews, self-assessments, and feedback to streamline evaluations.",
+    "mockHtml": null,
+    "icon": null
+  },
+  {
+    "id": 487,
+    "tag": "Product",
+    "tagColor": "green",
+    "title": "Customer feedback collection",
+    "body": "Teams gather customer insight, track responses, and improve products based on what they hear.",
+    "mockHtml": null,
+    "icon": null
+  },
+  {
+    "id": 489,
+    "tag": "Events",
+    "tagColor": "amber",
+    "title": "Event registration & management",
+    "body": "Planners, sales, and admins manage registrations, VIPs, and confirmations in one shared form.",
+    "mockHtml": null,
+    "icon": null
+  },
+  {
+    "id": 490,
+    "tag": "Hiring",
+    "tagColor": "violet",
+    "title": "Job applications & hiring",
+    "body": "Recruiters and hiring managers review applications, track candidates, and move hiring along together.",
+    "mockHtml": null,
+    "icon": null
+  },
+  {
+    "id": 491,
+    "tag": "Research",
+    "tagColor": "rose",
+    "title": "Market research & data",
+    "body": "Teams design surveys, collect data, and analyze trends to make informed business decisions.",
+    "mockHtml": null,
+    "icon": null
+  },
+  {
+    "id": 492,
+    "tag": "Compliance",
+    "tagColor": "blue",
+    "title": "Compliance & audit checklists",
+    "body": "Teams complete, verify, and audit compliance forms to meet regulations efficiently.",
+    "mockHtml": null,
+    "icon": null
+  }
+]
+const c6_heading = [
+  {
+    "id": 4635,
+    "text": "Loved by teams of every size",
+    "highlight": false,
+    "color": "#475467",
+    "bold": false
+  }
+]
+const c6_testimonials = [
+  {
+    "id": 1,
+    "name": "Dr. Michele Ross",
+    "position": "Founder",
+    "organization": "Infused Health",
+    "comment": "I'm migrating my forms from Paperform, where I've been a user for over 4 years. Loving the software so far! I've already replaced Paperform form embeds & popups on my sites & my husband's websites with Formester forms",
+    "createdAt": "2024-06-18T03:47:14.605Z",
+    "updatedAt": "2025-01-22T02:57:30.159Z",
+    "publishedAt": "2024-06-18T03:47:18.889Z",
+    "companyLogo": {
+      "id": 227,
+      "imageAlt": "Dr. Michele Ross",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 1685,
+        "name": "dr._michelelogo.webp",
+        "alternativeText": null,
+        "caption": null,
+        "width": 300,
+        "height": 59,
+        "formats": {
+          "thumbnail": {
+            "ext": ".webp",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_dr_michelelogo_2269ae2211.webp",
+            "hash": "thumbnail_dr_michelelogo_2269ae2211",
+            "mime": "image/webp",
+            "name": "thumbnail_dr._michelelogo.webp",
+            "path": null,
+            "size": 5.58,
+            "width": 245,
+            "height": 48
+          }
+        },
+        "hash": "dr_michelelogo_2269ae2211",
+        "ext": ".webp",
+        "mime": "image/webp",
+        "size": 5.87,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/dr_michelelogo_2269ae2211.webp",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2024-08-01T14:38:23.944Z",
+        "updatedAt": "2024-08-01T14:38:23.944Z"
+      }
+    }
+  },
+  {
+    "id": 2,
+    "name": "Jilson",
+    "position": "Organiser",
+    "organization": "Vue Conference",
+    "comment": "Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.",
+    "createdAt": "2024-06-18T03:48:46.610Z",
+    "updatedAt": "2025-01-22T02:57:08.760Z",
+    "publishedAt": "2024-06-18T03:48:50.595Z",
+    "companyLogo": {
+      "id": 228,
+      "imageAlt": "photo-of-vue-conference",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 1680,
+        "name": "vueconf.webp",
+        "alternativeText": "photo-of-vue-conference",
+        "caption": "photo-of-vue-conference",
+        "width": 80,
+        "height": 80,
+        "formats": null,
+        "hash": "vueconf_1bc3dc0827",
+        "ext": ".webp",
+        "mime": "image/webp",
+        "size": 1.07,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2024-08-01T14:38:23.731Z",
+        "updatedAt": "2024-12-01T07:47:11.024Z"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "name": "Costanza Casullo",
+    "position": "Volunteer",
+    "organization": "Wato Coding Hub",
+    "comment": "Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.",
+    "createdAt": "2024-06-18T03:51:15.232Z",
+    "updatedAt": "2025-01-22T02:58:03.674Z",
+    "publishedAt": "2024-06-18T03:51:21.477Z",
+    "companyLogo": {
+      "id": 225,
+      "imageAlt": "wato-coding-hub-logo",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 1681,
+        "name": "wato-coding-hub.webp",
+        "alternativeText": "wato-coding-hub-logo",
+        "caption": "wato-coding-hub-logo",
+        "width": 80,
+        "height": 81,
+        "formats": null,
+        "hash": "wato_coding_hub_e054f0ea9d",
+        "ext": ".webp",
+        "mime": "image/webp",
+        "size": 1.88,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/wato_coding_hub_e054f0ea9d.webp",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2024-08-01T14:38:23.738Z",
+        "updatedAt": "2024-12-01T07:49:13.371Z"
+      }
+    }
+  },
+  {
+    "id": 5,
+    "name": "Deanna Bugalski",
+    "position": "Founder/CEO",
+    "organization": "Suggesterfy",
+    "comment": "I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formester was super easy to set up, and the usability is seamless! I highly recommend!",
+    "createdAt": "2024-06-18T03:52:39.354Z",
+    "updatedAt": "2025-01-22T02:57:47.756Z",
+    "publishedAt": "2024-06-18T03:52:43.800Z",
+    "companyLogo": {
+      "id": 226,
+      "imageAlt": "suggesterfy-logo",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 1683,
+        "name": "suggesterfy_logo.webp",
+        "alternativeText": "suggesterfy-logo",
+        "caption": "suggesterfy-logo",
+        "width": 100,
+        "height": 50,
+        "formats": null,
+        "hash": "suggesterfy_logo_d1d7f996b9",
+        "ext": ".webp",
+        "mime": "image/webp",
+        "size": 1.91,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/suggesterfy_logo_d1d7f996b9.webp",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2024-08-01T14:38:23.921Z",
+        "updatedAt": "2024-12-01T07:49:52.459Z"
+      }
+    }
+  },
+  {
+    "id": 6,
+    "name": "Thibaud Martinez",
+    "position": "Organiser",
+    "organization": "Tedx",
+    "comment": "I really enjoy Formester. It’s clean and straight-forward and it does well, what it is supposed to do.",
+    "createdAt": "2024-06-18T03:53:38.957Z",
+    "updatedAt": "2025-01-22T02:56:48.567Z",
+    "publishedAt": "2024-06-18T03:53:40.693Z",
+    "companyLogo": {
+      "id": 229,
+      "imageAlt": "tedx-logo",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 1684,
+        "name": "tedx.webp",
+        "alternativeText": "tedx-logo",
+        "caption": "tedx-logo",
+        "width": 109,
+        "height": 38,
+        "formats": null,
+        "hash": "tedx_2fce0eee2e",
+        "ext": ".webp",
+        "mime": "image/webp",
+        "size": 1.09,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/tedx_2fce0eee2e.webp",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2024-08-01T14:38:23.941Z",
+        "updatedAt": "2024-12-01T07:50:31.505Z"
+      }
+    }
+  },
+  {
+    "id": 34,
+    "name": "Bency",
+    "position": "Product Manager",
+    "organization": "Northgate Digital Solutions",
+    "comment": "Formester's AI form generator transformed how quickly we build forms. The drag-and-drop builder paired with AI-generated templates means I can spin up a survey or poll in minutes, not hours. Conditional logic, file uploads, and seamless integrations make it incredibly versatile and the customization options let every form match our branding perfectly. Their support team is exceptional too. It's the only form and survey tool we recommend",
+    "createdAt": "2025-06-29T23:23:10.541Z",
+    "updatedAt": "2026-05-03T09:30:00.533Z",
+    "publishedAt": "2026-05-03T09:30:00.530Z",
+    "companyLogo": {
+      "id": 3652,
+      "imageAlt": null,
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": null
+    }
+  }
+]
+const c7_title = [
+  {
+    "id": 4636,
+    "text": "Questions about collaborative forms",
+    "highlight": false,
+    "color": "#475467",
+    "bold": false
+  }
+]
+const c7_faqList = [
+  {
+    "id": 2269,
+    "header": "What is a collaborative form?",
+    "body": "A collaborative form is an online form that multiple people on your team can build, edit, and manage together from one shared workspace, each with their own role and level of access.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2268,
+    "header": "Who should use collaborative forms?",
+    "body": "They’re ideal for teams, businesses, and remote workers who collect feedback, run surveys, or build forms together and need clear control over who can do what.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2270,
+    "header": "Can multiple people work on the same form?",
+    "body": "Yes. You can invite your whole team to a form and assign each person a role, so everyone works from the same form instead of separate copies.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2275,
+    "header": "Can I control who can view or edit each form?",
+    "body": "Yes. You set form-level permissions and choose who can view, edit, or manage each form. Access can be given to individual users or entire teams.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2271,
+    "header": "How does Formester keep my form data secure?",
+    "body": "Formester uses role-based access control to protect your data. You decide who can reach sensitive information by assigning roles like Viewer, Editor, or Admin.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2272,
+    "header": "What happens when a team member leaves?",
+    "body": "You can remove their access at any time, which immediately blocks them from all forms, responses, and data.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2273,
+    "header": "Will changing a user’s role affect existing work?",
+    "body": "No. Updating someone’s role changes their access permissions without deleting or interrupting any ongoing work.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2274,
+    "header": "Does access work across multiple teams?",
+    "body": "Yes. You can organize users into teams and manage permissions for each team separately, which makes collaboration easier for larger organizations.",
+    "body_markdown": null,
+    "list": []
+  },
+  {
+    "id": 2276,
+    "header": "Is collaborative access available on all plans?",
+    "body": "Advanced access management and team permissions are available on the Business and Enterprise plans. Check the pricing page for details.",
+    "body_markdown": null,
+    "list": []
+  }
+]
+const c8_buttons = [
+  {
+    "id": 1506,
+    "link": "https://app.formester.com/users/sign_up",
+    "text": "Start Collaborating",
+    "type": "Primary",
+    "showArrow": true
+  },
+  {
+    "id": 1507,
+    "link": "/pricing",
+    "text": "See pricing",
+    "type": "White",
+    "showArrow": false
+  }
+]
+
+useHead({
+  "title": "Collaborative Forms for Teams | Share Access & Manage Roles - Formester",
+  "link": [
+    {
+      "hid": "canonical",
+      "rel": "canonical",
+      "href": "https://formester.com/features/collaborative-forms/"
+    }
+  ],
+  "meta": [
+    {
+      "property": "article:modified_time",
+      "content": "2026-06-15T10:45:32.741Z"
+    },
+    {
+      "hid": "description",
+      "name": "description",
+      "content": "Build forms together as a team. Assign roles, control who can view, edit, and manage submissions, and set permissions at the organization, team, and form level."
+    },
+    {
+      "hid": "og:site_name",
+      "name": "og:site_name",
+      "content": "Collaborative Forms for Teams | Share Access & Manage Roles - Formester"
+    },
+    {
+      "hid": "og:type",
+      "property": "og:type",
+      "content": "website"
+    },
+    {
+      "hid": "og:url",
+      "property": "og:url",
+      "content": "https://formester.com/features/collaborative-forms/"
+    },
+    {
+      "hid": "og:title",
+      "property": "og:title",
+      "content": "Collaborative Forms for Teams | Share Access & Manage Roles - Formester"
+    },
+    {
+      "hid": "og:description",
+      "property": "og:description",
+      "content": "Build forms together as a team. Assign roles, control who can view, edit, and manage submissions, and set permissions at the organization, team, and form level."
+    },
+    {
+      "hid": "og:image",
+      "property": "og:image",
+      "content": "https://formester.com/formester-logo-meta-image.png"
+    },
+    {
+      "hid": "og:image:alt",
+      "name": "og:image:alt",
+      "content": "Formester Logo"
+    },
+    {
+      "hid": "twitter:url",
+      "name": "twitter:url",
+      "content": "https://formester.com/features/collaborative-forms/"
+    },
+    {
+      "name": "twitter:site",
+      "content": "@_formester_"
+    },
+    {
+      "hid": "twitter:title",
+      "name": "twitter:title",
+      "content": "Collaborative Forms for Teams | Share Access & Manage Roles - Formester"
+    },
+    {
+      "hid": "twitter:description",
+      "name": "twitter:description",
+      "content": "Build forms together as a team. Assign roles, control who can view, edit, and manage submissions, and set permissions at the organization, team, and form level."
+    },
+    {
+      "hid": "twitter:image",
+      "name": "twitter:image",
+      "content": "https://formester.com/formester-logo-meta-image.png"
+    },
+    {
+      "hid": "twitter:image:alt",
+      "name": "twitter:image:alt",
+      "content": "Formester Logo"
+    },
+    {
+      "hid": "twitter:card",
+      "name": "twitter:card",
+      "content": "summary_large_image"
+    },
+    {
+      "hid": "apple-mobile-web-app-title",
+      "name": "apple-mobile-web-app-title",
+      "content": "Formester"
+    },
+    {
+      "hid": "image",
+      "name": "image",
+      "property": "og:image",
+      "content": "https://formester.com/formester-logo-meta-image.png"
+    },
+    {
+      "hid": "keywords",
+      "name": "keywords",
+      "content": []
+    }
+  ]
+})
+useJsonld([
+  {
+    "@context": "https://schema.org",
+    "url": "https://formester.com",
+    "logo": "https://formester.com/logo.svg",
+    "name": "Formester",
+    "@type": "Organization"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "name": "What is a collaborative form?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "A collaborative form is an online form that multiple people on your team can build, edit, and manage together from one shared workspace, each with their own role and level of access.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "Who should use collaborative forms?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "They’re ideal for teams, businesses, and remote workers who collect feedback, run surveys, or build forms together and need clear control over who can do what.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "Can multiple people work on the same form?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "Yes. You can invite your whole team to a form and assign each person a role, so everyone works from the same form instead of separate copies.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "Can I control who can view or edit each form?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "Yes. You set form-level permissions and choose who can view, edit, or manage each form. Access can be given to individual users or entire teams.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "How does Formester keep my form data secure?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "Formester uses role-based access control to protect your data. You decide who can reach sensitive information by assigning roles like Viewer, Editor, or Admin.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "What happens when a team member leaves?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "You can remove their access at any time, which immediately blocks them from all forms, responses, and data.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "Will changing a user’s role affect existing work?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "No. Updating someone’s role changes their access permissions without deleting or interrupting any ongoing work.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "Does access work across multiple teams?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "Yes. You can organize users into teams and manage permissions for each team separately, which makes collaboration easier for larger organizations.",
+          "@type": "Answer"
+        }
+      },
+      {
+        "name": "Is collaborative access available on all plans?",
+        "@type": "Question",
+        "acceptedAnswer": {
+          "text": "Advanced access management and team permissions are available on the Business and Enterprise plans. Check the pricing page for details.",
+          "@type": "Answer"
+        }
+      }
+    ]
+  }
+])
+</script>
+
+
+<style scoped>
+.cfl-sec{padding:72px 24px;}.cfl-wrap{max-width:1200px;margin:0 auto;}.cfl-head{text-align:center;max-width:680px;margin:0 auto 44px;}.cfl-eyebrow{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.05em;color:#6434d0;margin-bottom:12px;}.cfl-h2{font-size:clamp(28px,3.5vw,40px);font-weight:700;letter-spacing:-.02em;color:#101828;margin:0 0 14px;line-height:1.15;}.cfl-lead{font-size:16px;line-height:1.6;color:#475467;margin:0;}.cfl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}.cfl-card{display:flex;flex-direction:column;gap:14px;background:#fff;border:1px solid #eaecf0;border-radius:16px;padding:24px;box-shadow:0 1px 3px rgba(16,24,40,.06);}.cfl-icon{width:42px;height:42px;border-radius:12px;background:#f0ebfa;color:#6434d0;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;}.cfl-kicker{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#6434d0;}.cfl-title{font-size:18px;font-weight:600;letter-spacing:-.01em;color:#101828;margin:2px 0 0;}.cfl-body{font-size:13.5px;line-height:1.6;color:#475467;margin:0;}.cfl-roles{display:flex;flex-direction:column;gap:8px;margin-top:auto;}.cfl-role{background:#f9fafb;border:1px solid #eaecf0;border-radius:10px;padding:11px 13px;}.cfl-role b{display:block;font-size:13px;font-weight:600;color:#472594;margin-bottom:2px;}.cfl-role span{font-size:12.5px;line-height:1.5;color:#697586;}@media(max-width:900px){.cfl-grid{grid-template-columns:1fr;}}
+</style>
