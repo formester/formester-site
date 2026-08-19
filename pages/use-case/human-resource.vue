@@ -39,26 +39,24 @@ import KeyBenefits from '@/components/hr-solution/KeyBenefits.vue'
 import SeamlessIntegration from '@/components/hr-solution/SeamlessIntegration.vue'
 import BlogCard from '@/components/blog/BlogCard.vue'
 import readingTime from '@/utils/readingTime'
-
-const config = useRuntimeConfig()
+import { getAllBlogs } from '@/utils/getAllBlogs'
 
 const { data: blogsData } = await useAsyncData('hr-blogs', async () => {
   try {
-    const res = await $fetch(`${config.public.strapiUrl}/api/blogs`, {
-      params: {
-        'filters[$or][0][title][$contains]': 'HR',
-        'filters[$or][1][title][$containsi]': 'human resource',
-        sort: 'publishedAt:desc',
-        populate: '*',
-      },
-    })
-
-    let articles = (res?.data || [])
+    // getAllBlogs() is already sorted publishedAt DESC. Same title match as
+    // the old Strapi filter: "HR" (case-sensitive) OR "human resource"
+    // (case-insensitive).
+    const allBlogs = await getAllBlogs()
+    let articles = allBlogs
+      .filter((item) => {
+        const title = item.attributes.title || ''
+        return title.includes('HR') || /human resource/i.test(title)
+      })
       .map((item) => ({
         id: item.id,
         ...item.attributes,
-        coverImg: item?.attributes?.coverImg?.data?.attributes?.url,
-        readingStats: readingTime(item?.attributes?.body || ''),
+        coverImg: item.attributes.coverImg?.url,
+        readingStats: readingTime(item.attributes.body || ''),
       }))
       .filter((a) => a.coverImg)
 
