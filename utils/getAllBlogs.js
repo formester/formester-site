@@ -6,6 +6,18 @@
 // reconstructed here rather than changing every call site.
 let cachePromise = null
 
+// Nuxt Content's reserved `rawbody` field is the whole raw file, frontmatter
+// fences included — NOT "the body with frontmatter already stripped" (that
+// assumption was wrong; verified against the actual SQLite content index).
+// Strip the leading `---\n...\n---\n` block ourselves so `body` matches
+// exactly what BlogPostView.vue's marked()/TOC/FAQ pipeline expects: post
+// content only, no frontmatter.
+function stripFrontmatter(raw) {
+  if (!raw.startsWith('---\n')) return raw
+  const closeIdx = raw.indexOf('\n---\n', 4)
+  return closeIdx === -1 ? raw : raw.slice(closeIdx + 5)
+}
+
 async function _fetchAllBlogs() {
   const docs = await queryCollection('blog').order('publishedAt', 'DESC').all()
   const blogs = docs.map((doc) => {
@@ -13,11 +25,11 @@ async function _fetchAllBlogs() {
     // `doc` also carries Nuxt Content's page-collection internals (parsed
     // AST `body`, `path`, `stem`, `extension`, `seo`, `navigation`, `meta`,
     // `__metadata`) alongside our own frontmatter fields. Drop those and use
-    // the reserved `rawbody` field (raw, unparsed source text) as `body` —
-    // same plain-string shape BlogPostView.vue's marked()/TOC/FAQ pipeline
-    // already expects.
+    // the reserved `rawbody` field (raw source text, frontmatter stripped)
+    // as `body` — same plain-string shape BlogPostView.vue's
+    // marked()/TOC/FAQ pipeline already expects.
     const { id, rawbody, body: _parsedBody, path, stem, extension, seo, navigation, meta, __metadata, ...rest } = doc
-    return { id, attributes: { ...rest, body: rawbody } }
+    return { id, attributes: { ...rest, body: stripFrontmatter(rawbody) } }
   })
   console.log(`[getAllBlogs] Loaded ${blogs.length} blogs from content/blog`)
   return blogs
