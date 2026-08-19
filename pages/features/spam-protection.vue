@@ -67,12 +67,7 @@
       class="page-component-item"
     />
 
-    <FaqSection
-      centered
-      :title="c7_title"
-      :faqList="c7_faqList"
-      class="page-component-item"
-    />
+    <FaqSection centered :title="c7_title" :faqList="c7_faqList" class="page-component-item" />
 
     <CtaDark
       badge="Free to start"
@@ -95,721 +90,743 @@ import StickyStepsSection from '@/components/v2/StickyStepsSection.vue'
 import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
 import TrustSeals from '@/components/v2/TrustSeals.vue'
 
-const c0_description = "Web forms are an easy target for spam. Formester layers smart CAPTCHA, honeypot traps, rate limiting, and AI detection to block fake submissions automatically — so your list stays clean and genuine respondents sail through."
-const c0_mockupHtml = "\u003Cstyle>.sp-row{display:flex;align-items:center;gap:10px;padding:11px 13px;border:1px solid #eaecf0;border-radius:10px;background:#fff;}.sp-av{width:28px;height:28px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;line-height:1;}.sp-meta{display:flex;flex-direction:column;gap:2px;min-width:0;}.sp-name{font-size:12px;font-weight:600;color:#101828;line-height:1.1;}.sp-mail{font-size:10.5px;color:#697586;line-height:1.1;}.sp-pill{margin-left:auto;font-size:9.5px;font-weight:700;border-radius:999px;padding:3px 8px;line-height:1;white-space:nowrap;}.sp-pass{color:#027a48;background:#ecfdf3;}.sp-block{color:#b42318;background:#fef3f2;}.sp-spam{position:relative;animation:spStrike 6s infinite;}.sp-spam .sp-name,.sp-spam .sp-mail{text-decoration:line-through;color:#98a2b3;}.sp-shield{position:absolute;top:-9px;right:9px;display:inline-flex;align-items:center;gap:4px;font-size:9px;font-weight:700;color:#fff;background:#b42318;border-radius:999px;padding:3px 8px;line-height:1;opacity:0;transform:scale(.6);animation:spShield 6s infinite;}@keyframes spStrike{0%,18%{opacity:.45;}30%,100%{opacity:.45;}}@keyframes spShield{0%,14%{opacity:0;transform:scale(.6);}26%,90%{opacity:1;transform:scale(1);}100%{opacity:1;transform:scale(1);}}@media (prefers-reduced-motion:reduce){.sp-spam,.sp-shield{animation:none!important;}.sp-shield{opacity:1;transform:scale(1);}}\u003C/style><div style='max-width:430px;margin:0 auto;background:#fff;border:1px solid #eaecf0;border-radius:16px;box-shadow:0 24px 80px rgba(15,14,26,.12),0 8px 24px rgba(15,14,26,.06);overflow:hidden;'><div style='display:flex;align-items:center;gap:6px;padding:12px 16px;background:#f9fafb;border-bottom:1px solid #eaecf0;'><span style='width:11px;height:11px;border-radius:50%;background:#ff6058;'></span><span style='width:11px;height:11px;border-radius:50%;background:#ffbd2e;'></span><span style='width:11px;height:11px;border-radius:50%;background:#27c93f;'></span><span style='margin-left:10px;font-size:12px;color:#697586;'>app.formester.com · Submissions</span></div><div style='padding:16px;display:flex;flex-direction:column;gap:9px;text-align:left;'><div class='sp-row'><span class='sp-av' style='background:#6434d0;'>AL</span><div class='sp-meta'><span class='sp-name'>Aisha Lawal</span><span class='sp-mail'>aisha@brightlabs.co</span></div><span class='sp-pill sp-pass'>Human · passed</span></div><div class='sp-row sp-spam'><span class='sp-shield'><svg width='9' height='9' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/></svg>Blocked</span><span class='sp-av' style='background:#d0d5dd;'>?</span><div class='sp-meta'><span class='sp-name'>xX_winner_Xx</span><span class='sp-mail'>noreply@spam-bot.ru</span></div><span class='sp-pill sp-block'>Bot · caught</span></div><div class='sp-row'><span class='sp-av' style='background:#7c4ce0;'>TM</span><div class='sp-meta'><span class='sp-name'>Theo Martins</span><span class='sp-mail'>theo@northpeak.io</span></div><span class='sp-pill sp-pass'>Human · passed</span></div></div></div>"
+const c0_description =
+  'Web forms are an easy target for spam. Formester layers smart CAPTCHA, honeypot traps, rate limiting, and AI detection to block fake submissions automatically — so your list stays clean and genuine respondents sail through.'
+const c0_mockupHtml =
+  "\u003Cstyle>.sp-row{display:flex;align-items:center;gap:10px;padding:11px 13px;border:1px solid #eaecf0;border-radius:10px;background:#fff;}.sp-av{width:28px;height:28px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;line-height:1;}.sp-meta{display:flex;flex-direction:column;gap:2px;min-width:0;}.sp-name{font-size:12px;font-weight:600;color:#101828;line-height:1.1;}.sp-mail{font-size:10.5px;color:#697586;line-height:1.1;}.sp-pill{margin-left:auto;font-size:9.5px;font-weight:700;border-radius:999px;padding:3px 8px;line-height:1;white-space:nowrap;}.sp-pass{color:#027a48;background:#ecfdf3;}.sp-block{color:#b42318;background:#fef3f2;}.sp-spam{position:relative;animation:spStrike 6s infinite;}.sp-spam .sp-name,.sp-spam .sp-mail{text-decoration:line-through;color:#98a2b3;}.sp-shield{position:absolute;top:-9px;right:9px;display:inline-flex;align-items:center;gap:4px;font-size:9px;font-weight:700;color:#fff;background:#b42318;border-radius:999px;padding:3px 8px;line-height:1;opacity:0;transform:scale(.6);animation:spShield 6s infinite;}@keyframes spStrike{0%,18%{opacity:.45;}30%,100%{opacity:.45;}}@keyframes spShield{0%,14%{opacity:0;transform:scale(.6);}26%,90%{opacity:1;transform:scale(1);}100%{opacity:1;transform:scale(1);}}@media (prefers-reduced-motion:reduce){.sp-spam,.sp-shield{animation:none!important;}.sp-shield{opacity:1;transform:scale(1);}}\u003C/style><div style='max-width:430px;margin:0 auto;background:#fff;border:1px solid #eaecf0;border-radius:16px;box-shadow:0 24px 80px rgba(15,14,26,.12),0 8px 24px rgba(15,14,26,.06);overflow:hidden;'><div style='display:flex;align-items:center;gap:6px;padding:12px 16px;background:#f9fafb;border-bottom:1px solid #eaecf0;'><span style='width:11px;height:11px;border-radius:50%;background:#ff6058;'></span><span style='width:11px;height:11px;border-radius:50%;background:#ffbd2e;'></span><span style='width:11px;height:11px;border-radius:50%;background:#27c93f;'></span><span style='margin-left:10px;font-size:12px;color:#697586;'>app.formester.com · Submissions</span></div><div style='padding:16px;display:flex;flex-direction:column;gap:9px;text-align:left;'><div class='sp-row'><span class='sp-av' style='background:#6434d0;'>AL</span><div class='sp-meta'><span class='sp-name'>Aisha Lawal</span><span class='sp-mail'>aisha@brightlabs.co</span></div><span class='sp-pill sp-pass'>Human · passed</span></div><div class='sp-row sp-spam'><span class='sp-shield'><svg width='9' height='9' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/></svg>Blocked</span><span class='sp-av' style='background:#d0d5dd;'>?</span><div class='sp-meta'><span class='sp-name'>xX_winner_Xx</span><span class='sp-mail'>noreply@spam-bot.ru</span></div><span class='sp-pill sp-block'>Bot · caught</span></div><div class='sp-row'><span class='sp-av' style='background:#7c4ce0;'>TM</span><div class='sp-meta'><span class='sp-name'>Theo Martins</span><span class='sp-mail'>theo@northpeak.io</span></div><span class='sp-pill sp-pass'>Human · passed</span></div></div></div>"
 const c0_title = [
   {
-    "id": 4887,
-    "text": "Keep the bots out, ",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
+    id: 4887,
+    text: 'Keep the bots out, ',
+    highlight: false,
+    color: '#475467',
+    bold: false,
   },
   {
-    "id": 4888,
-    "text": "let real people in",
-    "highlight": true,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4888,
+    text: 'let real people in',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c0_buttons = [
   {
-    "id": 1615,
-    "link": "https://app.formester.com/users/sign_up",
-    "text": "Get Started — It's Free",
-    "type": "Primary",
-    "showArrow": true
+    id: 1615,
+    link: 'https://app.formester.com/users/sign_up',
+    text: "Get Started — It's Free",
+    type: 'Primary',
+    showArrow: true,
   },
   {
-    "id": 1614,
-    "link": "https://youtu.be/wb_u0TW8W-s",
-    "text": "Watch demo",
-    "type": "Secondary",
-    "showArrow": false
-  }
+    id: 1614,
+    link: 'https://youtu.be/wb_u0TW8W-s',
+    text: 'Watch demo',
+    type: 'Secondary',
+    showArrow: false,
+  },
 ]
 const c0_badge = {
-  "id": 100,
-  "text": "Spam Protection",
-  "tag": null,
-  "link": null
+  id: 100,
+  text: 'Spam Protection',
+  tag: null,
+  link: null,
 }
 const c0_tabCardContent = []
 const c1_title = []
 const c1_logos = []
-const c2_note = "Without protection, every bot submission costs you twice — once in storage and again in the hours spent cleaning skewed data. Formester catches it before it ever reaches your results."
+const c2_note =
+  'Without protection, every bot submission costs you twice — once in storage and again in the hours spent cleaning skewed data. Formester catches it before it ever reaches your results.'
 const c2_title = [
   {
-    "id": 4881,
-    "text": "Clean data with",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
+    id: 4881,
+    text: 'Clean data with',
+    highlight: false,
+    color: '#475467',
+    bold: false,
   },
   {
-    "id": 4884,
-    "text": "spam protection on",
-    "highlight": true,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4884,
+    text: 'spam protection on',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c2_rows = [
   {
-    "id": 98,
-    "feature": "Bot & automated submissions",
-    "us": "Blocked automatically",
-    "them": "Flood your inbox"
+    id: 98,
+    feature: 'Bot & automated submissions',
+    us: 'Blocked automatically',
+    them: 'Flood your inbox',
   },
   {
-    "id": 97,
-    "feature": "Fake leads & junk entries",
-    "us": "Filtered out",
-    "them": "Pollute your list"
+    id: 97,
+    feature: 'Fake leads & junk entries',
+    us: 'Filtered out',
+    them: 'Pollute your list',
   },
   {
-    "id": 100,
-    "feature": "Data & analytics accuracy",
-    "us": "Real responses only",
-    "them": "Skewed by spam"
+    id: 100,
+    feature: 'Data & analytics accuracy',
+    us: 'Real responses only',
+    them: 'Skewed by spam',
   },
   {
-    "id": 102,
-    "feature": "CAPTCHA friction for users",
-    "us": "Invisible by default",
-    "them": "Puzzles or none"
+    id: 102,
+    feature: 'CAPTCHA friction for users',
+    us: 'Invisible by default',
+    them: 'Puzzles or none',
   },
   {
-    "id": 101,
-    "feature": "Repeat abuse from one source",
-    "us": "Rate-limited & IP-aware",
-    "them": "Unchecked"
+    id: 101,
+    feature: 'Repeat abuse from one source',
+    us: 'Rate-limited & IP-aware',
+    them: 'Unchecked',
   },
   {
-    "id": 99,
-    "feature": "Setup time",
-    "us": "One click",
-    "them": "Manual cleanup"
-  }
+    id: 99,
+    feature: 'Setup time',
+    us: 'One click',
+    them: 'Manual cleanup',
+  },
 ]
 const c3_title = [
   {
-    "id": 4882,
-    "text": "Four ways Formester",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
+    id: 4882,
+    text: 'Four ways Formester',
+    highlight: false,
+    color: '#475467',
+    bold: false,
   },
   {
-    "id": 4883,
-    "text": "stops spam",
-    "highlight": true,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4883,
+    text: 'stops spam',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c3_cards = [
   {
-    "id": 687,
-    "tag": "Smart CAPTCHA",
-    "tagColor": "violet",
-    "title": "One-click reCAPTCHA & Turnstile",
-    "body": "Enable Google reCAPTCHA or Cloudflare Turnstile in under a minute. Invisible challenges verify real humans in the background — no puzzles, no friction.",
-    "mockHtml": "<div style='display:flex;align-items:center;gap:10px;border:1px solid #eaecf0;border-radius:10px;padding:11px 13px;background:#fff;'><span style='width:22px;height:22px;border-radius:6px;background:#6434d0;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='3'><path d='M5 12l4 4L19 6'/></svg></span><span style='font-size:12px;font-weight:600;color:#101828;line-height:1.1;'>Verified — you're human</span><span style='margin-left:auto;font-size:9.5px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:999px;padding:3px 8px;line-height:1;'>Invisible</span></div>",
-    "icon": null
+    id: 687,
+    tag: 'Smart CAPTCHA',
+    tagColor: 'violet',
+    title: 'One-click reCAPTCHA & Turnstile',
+    body: 'Enable Google reCAPTCHA or Cloudflare Turnstile in under a minute. Invisible challenges verify real humans in the background — no puzzles, no friction.',
+    mockHtml:
+      "<div style='display:flex;align-items:center;gap:10px;border:1px solid #eaecf0;border-radius:10px;padding:11px 13px;background:#fff;'><span style='width:22px;height:22px;border-radius:6px;background:#6434d0;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='3'><path d='M5 12l4 4L19 6'/></svg></span><span style='font-size:12px;font-weight:600;color:#101828;line-height:1.1;'>Verified — you're human</span><span style='margin-left:auto;font-size:9.5px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:999px;padding:3px 8px;line-height:1;'>Invisible</span></div>",
+    icon: null,
   },
   {
-    "id": 689,
-    "tag": "Honeypot",
-    "tagColor": "green",
-    "title": "Hidden traps for bots",
-    "body": "A decoy field stays invisible to people but tempts automated scripts. Anything that fills it is flagged and blocked instantly — zero impact on real respondents.",
-    "mockHtml": "<div style='display:flex;flex-direction:column;gap:8px;'><div style='display:flex;align-items:center;gap:8px;font-size:11px;color:#475467;'><span style='width:13px;height:13px;border:1.5px dashed #d0d5dd;border-radius:3px;flex-shrink:0;'></span><span style='line-height:1.1;'>Hidden field (humans never see)</span></div><div style='display:flex;align-items:center;gap:8px;border:1px solid #fecdca;background:#fef3f2;border-radius:8px;padding:8px 10px;'><span style='font-size:11px;color:#b42318;font-weight:600;line-height:1.1;'>Bot filled it →</span><span style='margin-left:auto;font-size:9.5px;font-weight:700;color:#b42318;background:#fee4e2;border-radius:999px;padding:3px 8px;line-height:1;'>Blocked</span></div></div>",
-    "icon": null
+    id: 689,
+    tag: 'Honeypot',
+    tagColor: 'green',
+    title: 'Hidden traps for bots',
+    body: 'A decoy field stays invisible to people but tempts automated scripts. Anything that fills it is flagged and blocked instantly — zero impact on real respondents.',
+    mockHtml:
+      "<div style='display:flex;flex-direction:column;gap:8px;'><div style='display:flex;align-items:center;gap:8px;font-size:11px;color:#475467;'><span style='width:13px;height:13px;border:1.5px dashed #d0d5dd;border-radius:3px;flex-shrink:0;'></span><span style='line-height:1.1;'>Hidden field (humans never see)</span></div><div style='display:flex;align-items:center;gap:8px;border:1px solid #fecdca;background:#fef3f2;border-radius:8px;padding:8px 10px;'><span style='font-size:11px;color:#b42318;font-weight:600;line-height:1.1;'>Bot filled it →</span><span style='margin-left:auto;font-size:9.5px;font-weight:700;color:#b42318;background:#fee4e2;border-radius:999px;padding:3px 8px;line-height:1;'>Blocked</span></div></div>",
+    icon: null,
   },
   {
-    "id": 688,
-    "tag": "Rate limiting",
-    "tagColor": "blue",
-    "title": "IP & user-agent monitoring",
-    "body": "Most attacks come as a burst from one source. Track and throttle repeated submissions by IP or user-agent so a single bad actor can't spam your form at scale.",
-    "mockHtml": "<div style='display:flex;flex-direction:column;gap:7px;'><div style='display:flex;align-items:center;gap:8px;'><span style='font-size:11px;color:#101828;font-weight:600;line-height:1.1;'>198.51.100.4</span><span style='margin-left:auto;font-size:10px;color:#475467;'>12 attempts</span><span style='font-size:9.5px;font-weight:700;color:#b42318;background:#fef3f2;border-radius:999px;padding:2px 8px;line-height:1;'>Throttled</span></div><div style='display:flex;align-items:center;gap:8px;'><span style='font-size:11px;color:#101828;font-weight:600;line-height:1.1;'>203.0.113.9</span><span style='margin-left:auto;font-size:10px;color:#475467;'>1 attempt</span><span style='font-size:9.5px;font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:2px 8px;line-height:1;'>Allowed</span></div></div>",
-    "icon": null
+    id: 688,
+    tag: 'Rate limiting',
+    tagColor: 'blue',
+    title: 'IP & user-agent monitoring',
+    body: "Most attacks come as a burst from one source. Track and throttle repeated submissions by IP or user-agent so a single bad actor can't spam your form at scale.",
+    mockHtml:
+      "<div style='display:flex;flex-direction:column;gap:7px;'><div style='display:flex;align-items:center;gap:8px;'><span style='font-size:11px;color:#101828;font-weight:600;line-height:1.1;'>198.51.100.4</span><span style='margin-left:auto;font-size:10px;color:#475467;'>12 attempts</span><span style='font-size:9.5px;font-weight:700;color:#b42318;background:#fef3f2;border-radius:999px;padding:2px 8px;line-height:1;'>Throttled</span></div><div style='display:flex;align-items:center;gap:8px;'><span style='font-size:11px;color:#101828;font-weight:600;line-height:1.1;'>203.0.113.9</span><span style='margin-left:auto;font-size:10px;color:#475467;'>1 attempt</span><span style='font-size:9.5px;font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:2px 8px;line-height:1;'>Allowed</span></div></div>",
+    icon: null,
   },
   {
-    "id": 690,
-    "tag": "AI detection",
-    "tagColor": "violet",
-    "title": "Smart filters that learn",
-    "body": "Machine-learning models score every submission for spam signals and adapt as new tactics appear. Every form you run makes the prediction sharper.",
-    "mockHtml": "<div style='display:flex;align-items:center;gap:12px;border:1px solid #eaecf0;border-radius:10px;padding:11px 13px;background:#fff;'><div style='width:48px;height:48px;border-radius:50%;background:conic-gradient(#6434d0 0 88%,#e9e4f5 88% 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;'><div style='width:32px;height:32px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#6434d0;line-height:1;'>88%</div></div><div style='font-size:11.5px;color:#475467;line-height:1.4;'>Spam confidence on this entry — <span style='font-weight:700;color:#101828;'>auto-blocked</span></div></div>",
-    "icon": null
-  }
+    id: 690,
+    tag: 'AI detection',
+    tagColor: 'violet',
+    title: 'Smart filters that learn',
+    body: 'Machine-learning models score every submission for spam signals and adapt as new tactics appear. Every form you run makes the prediction sharper.',
+    mockHtml:
+      "<div style='display:flex;align-items:center;gap:12px;border:1px solid #eaecf0;border-radius:10px;padding:11px 13px;background:#fff;'><div style='width:48px;height:48px;border-radius:50%;background:conic-gradient(#6434d0 0 88%,#e9e4f5 88% 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;'><div style='width:32px;height:32px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#6434d0;line-height:1;'>88%</div></div><div style='font-size:11.5px;color:#475467;line-height:1.4;'>Spam confidence on this entry — <span style='font-weight:700;color:#101828;'>auto-blocked</span></div></div>",
+    icon: null,
+  },
 ]
 const c4_stats = [
   {
-    "id": 105,
-    "value": "99%",
-    "label": "of bot and automated submissions blocked when smart CAPTCHA, honeypot, and rate limiting are combined — leaving you clean data and real leads"
-  }
+    id: 105,
+    value: '99%',
+    label:
+      'of bot and automated submissions blocked when smart CAPTCHA, honeypot, and rate limiting are combined — leaving you clean data and real leads',
+  },
 ]
 const c5_steps = [
   {
-    "id": 167,
-    "title": "Open your form's security settings",
-    "description": "In the form builder, head to Settings → Spam Protection. Every option lives in one place, ready to switch on.",
-    "rawHtml": "<div style='display:flex;align-items:center;gap:9px;border:1px solid #6434d0;border-radius:9px;padding:8px 11px;font-size:12.5px;color:#101828;background:#fff;box-shadow:0 4px 12px rgba(100,52,208,.16);'><span style='font-size:12px;color:#697586;'>Settings</span><span style='color:#b9a6ec;font-weight:700;'>&#8594;</span><span style='font-weight:600;'>Spam Protection</span><span style='margin-left:auto;width:22px;height:22px;border-radius:6px;background:#6434d0;display:inline-flex;align-items:center;justify-content:center;'><svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='3'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/></svg></span></div>",
-    "image": null
+    id: 167,
+    title: "Open your form's security settings",
+    description:
+      'In the form builder, head to Settings → Spam Protection. Every option lives in one place, ready to switch on.',
+    rawHtml:
+      "<div style='display:flex;align-items:center;gap:9px;border:1px solid #6434d0;border-radius:9px;padding:8px 11px;font-size:12.5px;color:#101828;background:#fff;box-shadow:0 4px 12px rgba(100,52,208,.16);'><span style='font-size:12px;color:#697586;'>Settings</span><span style='color:#b9a6ec;font-weight:700;'>&#8594;</span><span style='font-weight:600;'>Spam Protection</span><span style='margin-left:auto;width:22px;height:22px;border-radius:6px;background:#6434d0;display:inline-flex;align-items:center;justify-content:center;'><svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='3'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/></svg></span></div>",
+    image: null,
   },
   {
-    "id": 165,
-    "title": "Choose your protection layers",
-    "description": "Flip on CAPTCHA, honeypot, rate limiting, or AI detection — individually or all at once. Use Formester's one-click setup or plug in your own reCAPTCHA keys for full control.",
-    "rawHtml": "<div style='display:flex;flex-direction:column;gap:8px;'><div style='display:flex;align-items:center;gap:9px;'><span style='font-size:12px;font-weight:600;color:#101828;'>Smart CAPTCHA</span><span style='margin-left:auto;width:34px;height:19px;border-radius:999px;background:#6434d0;position:relative;'><span style='position:absolute;top:2px;right:2px;width:15px;height:15px;border-radius:50%;background:#fff;'></span></span></div><div style='display:flex;align-items:center;gap:9px;'><span style='font-size:12px;font-weight:600;color:#101828;'>Honeypot</span><span style='margin-left:auto;width:34px;height:19px;border-radius:999px;background:#6434d0;position:relative;'><span style='position:absolute;top:2px;right:2px;width:15px;height:15px;border-radius:50%;background:#fff;'></span></span></div></div>",
-    "image": null
+    id: 165,
+    title: 'Choose your protection layers',
+    description:
+      "Flip on CAPTCHA, honeypot, rate limiting, or AI detection — individually or all at once. Use Formester's one-click setup or plug in your own reCAPTCHA keys for full control.",
+    rawHtml:
+      "<div style='display:flex;flex-direction:column;gap:8px;'><div style='display:flex;align-items:center;gap:9px;'><span style='font-size:12px;font-weight:600;color:#101828;'>Smart CAPTCHA</span><span style='margin-left:auto;width:34px;height:19px;border-radius:999px;background:#6434d0;position:relative;'><span style='position:absolute;top:2px;right:2px;width:15px;height:15px;border-radius:50%;background:#fff;'></span></span></div><div style='display:flex;align-items:center;gap:9px;'><span style='font-size:12px;font-weight:600;color:#101828;'>Honeypot</span><span style='margin-left:auto;width:34px;height:19px;border-radius:999px;background:#6434d0;position:relative;'><span style='position:absolute;top:2px;right:2px;width:15px;height:15px;border-radius:50%;background:#fff;'></span></span></div></div>",
+    image: null,
   },
   {
-    "id": 166,
-    "title": "Publish — and collect clean data",
-    "description": "Real respondents fill your form as normal while bots and fake entries are filtered out before they ever land in your results.",
-    "rawHtml": "<div style='display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #eaecf0;border-radius:10px;padding:10px 12px;'><span style='width:24px;height:24px;border-radius:50%;background:#ecfdf3;color:#027a48;display:inline-flex;align-items:center;justify-content:center;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.4'><path d='M5 12l4 4L19 6'/></svg></span><div style='font-size:12px;font-weight:600;color:#101828;line-height:1.1;'>Spam filtered · real entries only</div></div>",
-    "image": null
-  }
+    id: 166,
+    title: 'Publish — and collect clean data',
+    description:
+      'Real respondents fill your form as normal while bots and fake entries are filtered out before they ever land in your results.',
+    rawHtml:
+      "<div style='display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #eaecf0;border-radius:10px;padding:10px 12px;'><span style='width:24px;height:24px;border-radius:50%;background:#ecfdf3;color:#027a48;display:inline-flex;align-items:center;justify-content:center;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.4'><path d='M5 12l4 4L19 6'/></svg></span><div style='font-size:12px;font-weight:600;color:#101828;line-height:1.1;'>Spam filtered · real entries only</div></div>",
+    image: null,
+  },
 ]
 const c5_buttons = []
 const c6_heading = [
   {
-    "id": 4885,
-    "text": "Teams keep their forms clean with Formester",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4885,
+    text: 'Teams keep their forms clean with Formester',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c6_testimonials = [
   {
-    "id": 1,
-    "name": "Dr. Michele Ross",
-    "position": "Founder",
-    "organization": "Infused Health",
-    "comment": "I'm migrating my forms from Paperform, where I've been a user for over 4 years. Loving the software so far! I've already replaced Paperform form embeds & popups on my sites & my husband's websites with Formester forms",
-    "createdAt": "2024-06-18T03:47:14.605Z",
-    "updatedAt": "2025-01-22T02:57:30.159Z",
-    "publishedAt": "2024-06-18T03:47:18.889Z",
-    "companyLogo": {
-      "id": 227,
-      "imageAlt": "Dr. Michele Ross",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 1685,
-        "name": "dr._michelelogo.webp",
-        "alternativeText": null,
-        "caption": null,
-        "width": 300,
-        "height": 59,
-        "formats": {
-          "thumbnail": {
-            "ext": ".webp",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_dr_michelelogo_2269ae2211.webp",
-            "hash": "thumbnail_dr_michelelogo_2269ae2211",
-            "mime": "image/webp",
-            "name": "thumbnail_dr._michelelogo.webp",
-            "path": null,
-            "size": 5.58,
-            "width": 245,
-            "height": 48
-          }
+    id: 1,
+    name: 'Dr. Michele Ross',
+    position: 'Founder',
+    organization: 'Infused Health',
+    comment:
+      "I'm migrating my forms from Paperform, where I've been a user for over 4 years. Loving the software so far! I've already replaced Paperform form embeds & popups on my sites & my husband's websites with Formester forms",
+    createdAt: '2024-06-18T03:47:14.605Z',
+    updatedAt: '2025-01-22T02:57:30.159Z',
+    publishedAt: '2024-06-18T03:47:18.889Z',
+    companyLogo: {
+      id: 227,
+      imageAlt: 'Dr. Michele Ross',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1685,
+        name: 'dr._michelelogo.webp',
+        alternativeText: null,
+        caption: null,
+        width: 300,
+        height: 59,
+        formats: {
+          thumbnail: {
+            ext: '.webp',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_dr_michelelogo_2269ae2211.webp',
+            hash: 'thumbnail_dr_michelelogo_2269ae2211',
+            mime: 'image/webp',
+            name: 'thumbnail_dr._michelelogo.webp',
+            path: null,
+            size: 5.58,
+            width: 245,
+            height: 48,
+          },
         },
-        "hash": "dr_michelelogo_2269ae2211",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 5.87,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/dr_michelelogo_2269ae2211.webp",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2024-08-01T14:38:23.944Z",
-        "updatedAt": "2024-08-01T14:38:23.944Z"
-      }
-    }
+        hash: 'dr_michelelogo_2269ae2211',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 5.87,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/dr_michelelogo_2269ae2211.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.944Z',
+        updatedAt: '2024-08-01T14:38:23.944Z',
+      },
+    },
   },
   {
-    "id": 2,
-    "name": "Jilson",
-    "position": "Organiser",
-    "organization": "Vue Conference",
-    "comment": "Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.",
-    "createdAt": "2024-06-18T03:48:46.610Z",
-    "updatedAt": "2025-01-22T02:57:08.760Z",
-    "publishedAt": "2024-06-18T03:48:50.595Z",
-    "companyLogo": {
-      "id": 228,
-      "imageAlt": "photo-of-vue-conference",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 1680,
-        "name": "vueconf.webp",
-        "alternativeText": "photo-of-vue-conference",
-        "caption": "photo-of-vue-conference",
-        "width": 80,
-        "height": 80,
-        "formats": null,
-        "hash": "vueconf_1bc3dc0827",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 1.07,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2024-08-01T14:38:23.731Z",
-        "updatedAt": "2024-12-01T07:47:11.024Z"
-      }
-    }
+    id: 2,
+    name: 'Jilson',
+    position: 'Organiser',
+    organization: 'Vue Conference',
+    comment:
+      'Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.',
+    createdAt: '2024-06-18T03:48:46.610Z',
+    updatedAt: '2025-01-22T02:57:08.760Z',
+    publishedAt: '2024-06-18T03:48:50.595Z',
+    companyLogo: {
+      id: 228,
+      imageAlt: 'photo-of-vue-conference',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1680,
+        name: 'vueconf.webp',
+        alternativeText: 'photo-of-vue-conference',
+        caption: 'photo-of-vue-conference',
+        width: 80,
+        height: 80,
+        formats: null,
+        hash: 'vueconf_1bc3dc0827',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.07,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.731Z',
+        updatedAt: '2024-12-01T07:47:11.024Z',
+      },
+    },
   },
   {
-    "id": 4,
-    "name": "Costanza Casullo",
-    "position": "Volunteer",
-    "organization": "Wato Coding Hub",
-    "comment": "Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.",
-    "createdAt": "2024-06-18T03:51:15.232Z",
-    "updatedAt": "2025-01-22T02:58:03.674Z",
-    "publishedAt": "2024-06-18T03:51:21.477Z",
-    "companyLogo": {
-      "id": 225,
-      "imageAlt": "wato-coding-hub-logo",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 1681,
-        "name": "wato-coding-hub.webp",
-        "alternativeText": "wato-coding-hub-logo",
-        "caption": "wato-coding-hub-logo",
-        "width": 80,
-        "height": 81,
-        "formats": null,
-        "hash": "wato_coding_hub_e054f0ea9d",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 1.88,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/wato_coding_hub_e054f0ea9d.webp",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2024-08-01T14:38:23.738Z",
-        "updatedAt": "2024-12-01T07:49:13.371Z"
-      }
-    }
+    id: 4,
+    name: 'Costanza Casullo',
+    position: 'Volunteer',
+    organization: 'Wato Coding Hub',
+    comment:
+      "Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.",
+    createdAt: '2024-06-18T03:51:15.232Z',
+    updatedAt: '2025-01-22T02:58:03.674Z',
+    publishedAt: '2024-06-18T03:51:21.477Z',
+    companyLogo: {
+      id: 225,
+      imageAlt: 'wato-coding-hub-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1681,
+        name: 'wato-coding-hub.webp',
+        alternativeText: 'wato-coding-hub-logo',
+        caption: 'wato-coding-hub-logo',
+        width: 80,
+        height: 81,
+        formats: null,
+        hash: 'wato_coding_hub_e054f0ea9d',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.88,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/wato_coding_hub_e054f0ea9d.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.738Z',
+        updatedAt: '2024-12-01T07:49:13.371Z',
+      },
+    },
   },
   {
-    "id": 5,
-    "name": "Deanna Bugalski",
-    "position": "Founder/CEO",
-    "organization": "Suggesterfy",
-    "comment": "I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formester was super easy to set up, and the usability is seamless! I highly recommend!",
-    "createdAt": "2024-06-18T03:52:39.354Z",
-    "updatedAt": "2025-01-22T02:57:47.756Z",
-    "publishedAt": "2024-06-18T03:52:43.800Z",
-    "companyLogo": {
-      "id": 226,
-      "imageAlt": "suggesterfy-logo",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 1683,
-        "name": "suggesterfy_logo.webp",
-        "alternativeText": "suggesterfy-logo",
-        "caption": "suggesterfy-logo",
-        "width": 100,
-        "height": 50,
-        "formats": null,
-        "hash": "suggesterfy_logo_d1d7f996b9",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 1.91,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/suggesterfy_logo_d1d7f996b9.webp",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2024-08-01T14:38:23.921Z",
-        "updatedAt": "2024-12-01T07:49:52.459Z"
-      }
-    }
+    id: 5,
+    name: 'Deanna Bugalski',
+    position: 'Founder/CEO',
+    organization: 'Suggesterfy',
+    comment:
+      'I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formester was super easy to set up, and the usability is seamless! I highly recommend!',
+    createdAt: '2024-06-18T03:52:39.354Z',
+    updatedAt: '2025-01-22T02:57:47.756Z',
+    publishedAt: '2024-06-18T03:52:43.800Z',
+    companyLogo: {
+      id: 226,
+      imageAlt: 'suggesterfy-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1683,
+        name: 'suggesterfy_logo.webp',
+        alternativeText: 'suggesterfy-logo',
+        caption: 'suggesterfy-logo',
+        width: 100,
+        height: 50,
+        formats: null,
+        hash: 'suggesterfy_logo_d1d7f996b9',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.91,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/suggesterfy_logo_d1d7f996b9.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.921Z',
+        updatedAt: '2024-12-01T07:49:52.459Z',
+      },
+    },
   },
   {
-    "id": 6,
-    "name": "Thibaud Martinez",
-    "position": "Organiser",
-    "organization": "Tedx",
-    "comment": "I really enjoy Formester. It’s clean and straight-forward and it does well, what it is supposed to do.",
-    "createdAt": "2024-06-18T03:53:38.957Z",
-    "updatedAt": "2025-01-22T02:56:48.567Z",
-    "publishedAt": "2024-06-18T03:53:40.693Z",
-    "companyLogo": {
-      "id": 229,
-      "imageAlt": "tedx-logo",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 1684,
-        "name": "tedx.webp",
-        "alternativeText": "tedx-logo",
-        "caption": "tedx-logo",
-        "width": 109,
-        "height": 38,
-        "formats": null,
-        "hash": "tedx_2fce0eee2e",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 1.09,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/tedx_2fce0eee2e.webp",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2024-08-01T14:38:23.941Z",
-        "updatedAt": "2024-12-01T07:50:31.505Z"
-      }
-    }
+    id: 6,
+    name: 'Thibaud Martinez',
+    position: 'Organiser',
+    organization: 'Tedx',
+    comment: 'I really enjoy Formester. It’s clean and straight-forward and it does well, what it is supposed to do.',
+    createdAt: '2024-06-18T03:53:38.957Z',
+    updatedAt: '2025-01-22T02:56:48.567Z',
+    publishedAt: '2024-06-18T03:53:40.693Z',
+    companyLogo: {
+      id: 229,
+      imageAlt: 'tedx-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1684,
+        name: 'tedx.webp',
+        alternativeText: 'tedx-logo',
+        caption: 'tedx-logo',
+        width: 109,
+        height: 38,
+        formats: null,
+        hash: 'tedx_2fce0eee2e',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.09,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/tedx_2fce0eee2e.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.941Z',
+        updatedAt: '2024-12-01T07:50:31.505Z',
+      },
+    },
   },
   {
-    "id": 34,
-    "name": "Bency",
-    "position": "Product Manager",
-    "organization": "Northgate Digital Solutions",
-    "comment": "Formester's AI form generator transformed how quickly we build forms. The drag-and-drop builder paired with AI-generated templates means I can spin up a survey or poll in minutes, not hours. Conditional logic, file uploads, and seamless integrations make it incredibly versatile and the customization options let every form match our branding perfectly. Their support team is exceptional too. It's the only form and survey tool we recommend",
-    "createdAt": "2025-06-29T23:23:10.541Z",
-    "updatedAt": "2026-05-03T09:30:00.533Z",
-    "publishedAt": "2026-05-03T09:30:00.530Z",
-    "companyLogo": {
-      "id": 3652,
-      "imageAlt": null,
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": null
-    }
+    id: 34,
+    name: 'Bency',
+    position: 'Product Manager',
+    organization: 'Northgate Digital Solutions',
+    comment:
+      "Formester's AI form generator transformed how quickly we build forms. The drag-and-drop builder paired with AI-generated templates means I can spin up a survey or poll in minutes, not hours. Conditional logic, file uploads, and seamless integrations make it incredibly versatile and the customization options let every form match our branding perfectly. Their support team is exceptional too. It's the only form and survey tool we recommend",
+    createdAt: '2025-06-29T23:23:10.541Z',
+    updatedAt: '2026-05-03T09:30:00.533Z',
+    publishedAt: '2026-05-03T09:30:00.530Z',
+    companyLogo: {
+      id: 3652,
+      imageAlt: null,
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: null,
+    },
   },
   {
-    "id": 35,
-    "name": "Roger",
-    "position": "Marketing Specialist",
-    "organization": "BrightPath Technologies",
-    "comment": "I use Formester for my form-building needs and I’m thoroughly impressed. The platform is rich with features… What really sets them apart is their exceptional customer service (responses typically within 10 minutes). The pricing is also very reasonable… Highly recommended!\n",
-    "createdAt": "2025-06-29T23:29:19.225Z",
-    "updatedAt": "2025-10-31T04:00:58.697Z",
-    "publishedAt": "2025-06-29T23:29:21.134Z",
-    "companyLogo": {
-      "id": 3649,
-      "imageAlt": "brightpath-logo",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4094,
-        "name": "brightpath-logo.png",
-        "alternativeText": "brightpath-logo",
-        "caption": "brightpath-logo",
-        "width": 200,
-        "height": 49,
-        "formats": null,
-        "hash": "brightpath_logo_6ef0922a60",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 2.5,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/brightpath_logo_6ef0922a60.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-10-31T04:00:11.712Z",
-        "updatedAt": "2025-10-31T04:00:11.712Z"
-      }
-    }
+    id: 35,
+    name: 'Roger',
+    position: 'Marketing Specialist',
+    organization: 'BrightPath Technologies',
+    comment:
+      'I use Formester for my form-building needs and I’m thoroughly impressed. The platform is rich with features… What really sets them apart is their exceptional customer service (responses typically within 10 minutes). The pricing is also very reasonable… Highly recommended!\n',
+    createdAt: '2025-06-29T23:29:19.225Z',
+    updatedAt: '2025-10-31T04:00:58.697Z',
+    publishedAt: '2025-06-29T23:29:21.134Z',
+    companyLogo: {
+      id: 3649,
+      imageAlt: 'brightpath-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4094,
+        name: 'brightpath-logo.png',
+        alternativeText: 'brightpath-logo',
+        caption: 'brightpath-logo',
+        width: 200,
+        height: 49,
+        formats: null,
+        hash: 'brightpath_logo_6ef0922a60',
+        ext: '.png',
+        mime: 'image/png',
+        size: 2.5,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/brightpath_logo_6ef0922a60.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-31T04:00:11.712Z',
+        updatedAt: '2025-10-31T04:00:11.712Z',
+      },
+    },
   },
   {
-    "id": 36,
-    "name": "Ye Qi Lai",
-    "position": "UX Designer",
-    "organization": "Eastview Consulting",
-    "comment": "Formester is one of the best underrated survey tools out there… It’s extremely customizable… Their support is awesome… I absolutely recommend this to anyone looking for an alternative to the usual form creators.",
-    "createdAt": "2025-06-29T23:30:04.374Z",
-    "updatedAt": "2025-10-31T04:00:30.746Z",
-    "publishedAt": "2025-06-29T23:30:06.260Z",
-    "companyLogo": {
-      "id": 3648,
-      "imageAlt": "eastview-logo-header",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4097,
-        "name": "eastview-logo-header-300x120 1.png",
-        "alternativeText": "eastview-logo-header",
-        "caption": "eastview-logo-header",
-        "width": 200,
-        "height": 80,
-        "formats": null,
-        "hash": "eastview_logo_header_300x120_1_d9c231e93b",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 3.18,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/eastview_logo_header_300x120_1_d9c231e93b.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-10-31T04:00:11.854Z",
-        "updatedAt": "2025-10-31T04:00:11.854Z"
-      }
-    }
-  }
+    id: 36,
+    name: 'Ye Qi Lai',
+    position: 'UX Designer',
+    organization: 'Eastview Consulting',
+    comment:
+      'Formester is one of the best underrated survey tools out there… It’s extremely customizable… Their support is awesome… I absolutely recommend this to anyone looking for an alternative to the usual form creators.',
+    createdAt: '2025-06-29T23:30:04.374Z',
+    updatedAt: '2025-10-31T04:00:30.746Z',
+    publishedAt: '2025-06-29T23:30:06.260Z',
+    companyLogo: {
+      id: 3648,
+      imageAlt: 'eastview-logo-header',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4097,
+        name: 'eastview-logo-header-300x120 1.png',
+        alternativeText: 'eastview-logo-header',
+        caption: 'eastview-logo-header',
+        width: 200,
+        height: 80,
+        formats: null,
+        hash: 'eastview_logo_header_300x120_1_d9c231e93b',
+        ext: '.png',
+        mime: 'image/png',
+        size: 3.18,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/eastview_logo_header_300x120_1_d9c231e93b.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-31T04:00:11.854Z',
+        updatedAt: '2025-10-31T04:00:11.854Z',
+      },
+    },
+  },
 ]
 const c7_title = [
   {
-    "id": 4886,
-    "text": "Spam protection FAQs",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4886,
+    text: 'Spam protection FAQs',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c7_faqList = [
   {
-    "id": 2444,
-    "header": "What spam protection options does Formester offer?",
-    "body": "Formester gives you multiple layers: one-click reCAPTCHA, invisible reCAPTCHA, Cloudflare Turnstile, honeypot fields, IP and user-agent rate limiting, and AI-based spam detection. Use any one or stack them all for maximum protection.",
-    "body_markdown": null,
-    "list": []
+    id: 2444,
+    header: 'What spam protection options does Formester offer?',
+    body: 'Formester gives you multiple layers: one-click reCAPTCHA, invisible reCAPTCHA, Cloudflare Turnstile, honeypot fields, IP and user-agent rate limiting, and AI-based spam detection. Use any one or stack them all for maximum protection.',
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2445,
-    "header": "How does invisible CAPTCHA work?",
-    "body": "Invisible reCAPTCHA and Cloudflare Turnstile run quietly in the background, analysing behaviour to tell bots from humans. Real visitors are verified without solving a puzzle, so there's no friction on your form.",
-    "body_markdown": null,
-    "list": []
+    id: 2445,
+    header: 'How does invisible CAPTCHA work?',
+    body: "Invisible reCAPTCHA and Cloudflare Turnstile run quietly in the background, analysing behaviour to tell bots from humans. Real visitors are verified without solving a puzzle, so there's no friction on your form.",
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2446,
-    "header": "What is honeypot protection and how does it stop spam?",
-    "body": "A honeypot adds a hidden field that humans never see but automated bots tend to fill in. Any submission that completes that field is flagged as spam and blocked automatically — with zero impact on real respondents.",
-    "body_markdown": null,
-    "list": []
+    id: 2446,
+    header: 'What is honeypot protection and how does it stop spam?',
+    body: 'A honeypot adds a hidden field that humans never see but automated bots tend to fill in. Any submission that completes that field is flagged as spam and blocked automatically — with zero impact on real respondents.',
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2443,
-    "header": "How does AI spam detection help?",
-    "body": "Formester's AI scores submissions in real time using machine learning to spot suspicious patterns. It adapts as new spam tactics appear, and every form you run sharpens the prediction — a defence that keeps improving.",
-    "body_markdown": null,
-    "list": []
+    id: 2443,
+    header: 'How does AI spam detection help?',
+    body: "Formester's AI scores submissions in real time using machine learning to spot suspicious patterns. It adapts as new spam tactics appear, and every form you run sharpens the prediction — a defence that keeps improving.",
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2447,
-    "header": "Can I combine multiple spam protection methods on one form?",
-    "body": "Yes. Stack reCAPTCHA, honeypot, rate limiting, and AI detection on the same form. This layered approach guards against both automated bots and more sophisticated spam attempts.",
-    "body_markdown": null,
-    "list": []
+    id: 2447,
+    header: 'Can I combine multiple spam protection methods on one form?',
+    body: 'Yes. Stack reCAPTCHA, honeypot, rate limiting, and AI detection on the same form. This layered approach guards against both automated bots and more sophisticated spam attempts.',
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2448,
-    "header": "Is spam protection free to use?",
-    "body": "Yes. Turn on one-click CAPTCHA and honeypot protection on your forms for free — no code and no extra setup required.",
-    "body_markdown": null,
-    "list": []
-  }
+    id: 2448,
+    header: 'Is spam protection free to use?',
+    body: 'Yes. Turn on one-click CAPTCHA and honeypot protection on your forms for free — no code and no extra setup required.',
+    body_markdown: null,
+    list: [],
+  },
 ]
 const c8_buttons = [
   {
-    "id": 1613,
-    "link": "https://app.formester.com/users/sign_up",
-    "text": "Get Started — It's Free",
-    "type": "Primary",
-    "showArrow": true
+    id: 1613,
+    link: 'https://app.formester.com/users/sign_up',
+    text: "Get Started — It's Free",
+    type: 'Primary',
+    showArrow: true,
   },
   {
-    "id": 1612,
-    "link": "/pricing",
-    "text": "See pricing",
-    "type": "White",
-    "showArrow": false
-  }
+    id: 1612,
+    link: '/pricing',
+    text: 'See pricing',
+    type: 'White',
+    showArrow: false,
+  },
 ]
 
 useHead({
-  "title": "Form Spam Protection | Block Bots & Fake Submissions",
-  "link": [
+  title: 'Form Spam Protection | Block Bots & Fake Submissions',
+  link: [
     {
-      "hid": "canonical",
-      "rel": "canonical",
-      "href": "https://formester.com/features/spam-protection/"
-    }
+      hid: 'canonical',
+      rel: 'canonical',
+      href: 'https://formester.com/features/spam-protection/',
+    },
   ],
-  "meta": [
+  meta: [
     {
-      "property": "article:modified_time",
-      "content": "2026-06-15T10:45:54.602Z"
+      property: 'article:modified_time',
+      content: '2026-06-15T10:45:54.602Z',
     },
     {
-      "hid": "description",
-      "name": "description",
-      "content": "Stop bot and fake form submissions with Formester. Smart CAPTCHA, honeypot, rate limiting, and AI detection block spam automatically — so your data stays clean and real people get through."
+      hid: 'description',
+      name: 'description',
+      content:
+        'Stop bot and fake form submissions with Formester. Smart CAPTCHA, honeypot, rate limiting, and AI detection block spam automatically — so your data stays clean and real people get through.',
     },
     {
-      "hid": "og:site_name",
-      "name": "og:site_name",
-      "content": "Form Spam Protection | Block Bots & Fake Submissions"
+      hid: 'og:site_name',
+      name: 'og:site_name',
+      content: 'Form Spam Protection | Block Bots & Fake Submissions',
     },
     {
-      "hid": "og:type",
-      "property": "og:type",
-      "content": "website"
+      hid: 'og:type',
+      property: 'og:type',
+      content: 'website',
     },
     {
-      "hid": "og:url",
-      "property": "og:url",
-      "content": "https://formester.com/features/spam-protection/"
+      hid: 'og:url',
+      property: 'og:url',
+      content: 'https://formester.com/features/spam-protection/',
     },
     {
-      "hid": "og:title",
-      "property": "og:title",
-      "content": "Form Spam Protection | Block Bots & Fake Submissions"
+      hid: 'og:title',
+      property: 'og:title',
+      content: 'Form Spam Protection | Block Bots & Fake Submissions',
     },
     {
-      "hid": "og:description",
-      "property": "og:description",
-      "content": "Stop bot and fake form submissions with Formester. Smart CAPTCHA, honeypot, rate limiting, and AI detection block spam automatically — so your data stays clean and real people get through."
+      hid: 'og:description',
+      property: 'og:description',
+      content:
+        'Stop bot and fake form submissions with Formester. Smart CAPTCHA, honeypot, rate limiting, and AI detection block spam automatically — so your data stays clean and real people get through.',
     },
     {
-      "hid": "og:image",
-      "property": "og:image",
-      "content": "https://formester.com/formester-logo-meta-image.png"
+      hid: 'og:image',
+      property: 'og:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
     },
     {
-      "hid": "og:image:alt",
-      "name": "og:image:alt",
-      "content": "Formester Logo"
+      hid: 'og:image:alt',
+      name: 'og:image:alt',
+      content: 'Formester Logo',
     },
     {
-      "hid": "twitter:url",
-      "name": "twitter:url",
-      "content": "https://formester.com/features/spam-protection/"
+      hid: 'twitter:url',
+      name: 'twitter:url',
+      content: 'https://formester.com/features/spam-protection/',
     },
     {
-      "name": "twitter:site",
-      "content": "@_formester_"
+      name: 'twitter:site',
+      content: '@_formester_',
     },
     {
-      "hid": "twitter:title",
-      "name": "twitter:title",
-      "content": "Form Spam Protection | Block Bots & Fake Submissions"
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: 'Form Spam Protection | Block Bots & Fake Submissions',
     },
     {
-      "hid": "twitter:description",
-      "name": "twitter:description",
-      "content": "Stop bot and fake form submissions with Formester. Smart CAPTCHA, honeypot, rate limiting, and AI detection block spam automatically — so your data stays clean and real people get through."
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content:
+        'Stop bot and fake form submissions with Formester. Smart CAPTCHA, honeypot, rate limiting, and AI detection block spam automatically — so your data stays clean and real people get through.',
     },
     {
-      "hid": "twitter:image",
-      "name": "twitter:image",
-      "content": "https://formester.com/formester-logo-meta-image.png"
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
     },
     {
-      "hid": "twitter:image:alt",
-      "name": "twitter:image:alt",
-      "content": "Formester Logo"
+      hid: 'twitter:image:alt',
+      name: 'twitter:image:alt',
+      content: 'Formester Logo',
     },
     {
-      "hid": "twitter:card",
-      "name": "twitter:card",
-      "content": "summary_large_image"
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image',
     },
     {
-      "hid": "apple-mobile-web-app-title",
-      "name": "apple-mobile-web-app-title",
-      "content": "Formester"
+      hid: 'apple-mobile-web-app-title',
+      name: 'apple-mobile-web-app-title',
+      content: 'Formester',
     },
     {
-      "hid": "image",
-      "name": "image",
-      "property": "og:image",
-      "content": "https://formester.com/formester-logo-meta-image.png"
+      hid: 'image',
+      name: 'image',
+      property: 'og:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
     },
     {
-      "hid": "keywords",
-      "name": "keywords",
-      "content": [
-        "form spam protection"
-      ]
-    }
-  ]
+      hid: 'keywords',
+      name: 'keywords',
+      content: ['form spam protection'],
+    },
+  ],
 })
 useJsonld([
   {
-    "@context": "https://schema.org",
-    "url": "https://formester.com",
-    "logo": "https://formester.com/logo.svg",
-    "name": "Formester",
-    "@type": "Organization"
+    '@context': 'https://schema.org',
+    url: 'https://formester.com',
+    logo: 'https://formester.com/logo.svg',
+    name: 'Formester',
+    '@type': 'Organization',
   },
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
       {
-        "name": "What spam protection options does Formester offer?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "Formester gives you multiple layers: one-click reCAPTCHA, invisible reCAPTCHA, Cloudflare Turnstile, honeypot fields, IP and user-agent rate limiting, and AI-based spam detection. Use any one or stack them all for maximum protection.",
-          "@type": "Answer"
-        }
+        name: 'What spam protection options does Formester offer?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'Formester gives you multiple layers: one-click reCAPTCHA, invisible reCAPTCHA, Cloudflare Turnstile, honeypot fields, IP and user-agent rate limiting, and AI-based spam detection. Use any one or stack them all for maximum protection.',
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "How does invisible CAPTCHA work?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "Invisible reCAPTCHA and Cloudflare Turnstile run quietly in the background, analysing behaviour to tell bots from humans. Real visitors are verified without solving a puzzle, so there's no friction on your form.",
-          "@type": "Answer"
-        }
+        name: 'How does invisible CAPTCHA work?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: "Invisible reCAPTCHA and Cloudflare Turnstile run quietly in the background, analysing behaviour to tell bots from humans. Real visitors are verified without solving a puzzle, so there's no friction on your form.",
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "What is honeypot protection and how does it stop spam?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "A honeypot adds a hidden field that humans never see but automated bots tend to fill in. Any submission that completes that field is flagged as spam and blocked automatically — with zero impact on real respondents.",
-          "@type": "Answer"
-        }
+        name: 'What is honeypot protection and how does it stop spam?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'A honeypot adds a hidden field that humans never see but automated bots tend to fill in. Any submission that completes that field is flagged as spam and blocked automatically — with zero impact on real respondents.',
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "How does AI spam detection help?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "Formester's AI scores submissions in real time using machine learning to spot suspicious patterns. It adapts as new spam tactics appear, and every form you run sharpens the prediction — a defence that keeps improving.",
-          "@type": "Answer"
-        }
+        name: 'How does AI spam detection help?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: "Formester's AI scores submissions in real time using machine learning to spot suspicious patterns. It adapts as new spam tactics appear, and every form you run sharpens the prediction — a defence that keeps improving.",
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "Can I combine multiple spam protection methods on one form?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "Yes. Stack reCAPTCHA, honeypot, rate limiting, and AI detection on the same form. This layered approach guards against both automated bots and more sophisticated spam attempts.",
-          "@type": "Answer"
-        }
+        name: 'Can I combine multiple spam protection methods on one form?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'Yes. Stack reCAPTCHA, honeypot, rate limiting, and AI detection on the same form. This layered approach guards against both automated bots and more sophisticated spam attempts.',
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "Is spam protection free to use?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "Yes. Turn on one-click CAPTCHA and honeypot protection on your forms for free — no code and no extra setup required.",
-          "@type": "Answer"
-        }
-      }
-    ]
-  }
+        name: 'Is spam protection free to use?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'Yes. Turn on one-click CAPTCHA and honeypot protection on your forms for free — no code and no extra setup required.',
+          '@type': 'Answer',
+        },
+      },
+    ],
+  },
 ])
 </script>

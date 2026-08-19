@@ -42,13 +42,7 @@
       class="page-component-item"
     />
 
-    <CardGrid
-      eyebrow="Where it helps"
-      columns="4"
-      :title="c4_title"
-      :cards="c4_cards"
-      class="page-component-item"
-    />
+    <CardGrid eyebrow="Where it helps" columns="4" :title="c4_title" :cards="c4_cards" class="page-component-item" />
 
     <TestimonialsV2
       version="feature"
@@ -57,12 +51,7 @@
       class="page-component-item"
     />
 
-    <FaqSection
-      centered
-      :title="c6_title"
-      :faqList="c6_faqList"
-      class="page-component-item"
-    />
+    <FaqSection centered :title="c6_title" :faqList="c6_faqList" class="page-component-item" />
 
     <CtaDark
       badge="Available on the Personal plan"
@@ -83,647 +72,664 @@ import StickyStepsSection from '@/components/v2/StickyStepsSection.vue'
 import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
 import TrustSeals from '@/components/v2/TrustSeals.vue'
 
-const c0_description = "Point your own HTML form at Formester and we handle storage, notifications, and spam — no server to build. Just set the form action and start receiving submissions."
-const c0_mockupHtml = "<div style='position:relative;max-width:600px;margin:0 auto;'><div style='background:#14121f;border:1px solid #2a2740;border-radius:14px;box-shadow:0 24px 80px rgba(15,14,26,.22),0 8px 24px rgba(15,14,26,.12);overflow:hidden;'><div style='display:flex;align-items:center;gap:6px;padding:11px 14px;background:#1c1930;border-bottom:1px solid #2a2740;'><span style='width:11px;height:11px;border-radius:50%;background:#ff6058;'></span><span style='width:11px;height:11px;border-radius:50%;background:#ffbd2e;'></span><span style='width:11px;height:11px;border-radius:50%;background:#27c93f;'></span><span style='margin-left:8px;font-size:12px;color:#8b87a8;font-family:ui-monospace,Menlo,monospace;'>index.html</span></div><pre style='margin:0;padding:18px 20px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;line-height:1.75;color:#c8c4e0;overflow-x:auto;white-space:pre;'><span style='color:#8b87a8;'>&lt;form</span> <span style='color:#9db4ff;'>action</span>=<span style='color:#7ee0b8;'>&quot;https://formester.com/f/inbox&quot;</span> <span style='color:#9db4ff;'>method</span>=<span style='color:#7ee0b8;'>&quot;POST&quot;</span><span style='color:#8b87a8;'>&gt;</span>\n  <span style='color:#8b87a8;'>&lt;input</span> <span style='color:#9db4ff;'>name</span>=<span style='color:#7ee0b8;'>&quot;email&quot;</span> <span style='color:#9db4ff;'>type</span>=<span style='color:#7ee0b8;'>&quot;email&quot;</span> <span style='color:#8b87a8;'>/&gt;</span>\n  <span style='color:#8b87a8;'>&lt;textarea</span> <span style='color:#9db4ff;'>name</span>=<span style='color:#7ee0b8;'>&quot;message&quot;</span><span style='color:#8b87a8;'>&gt;&lt;/textarea&gt;</span>\n  <span style='color:#8b87a8;'>&lt;button&gt;</span>Send<span style='color:#8b87a8;'>&lt;/button&gt;</span>\n<span style='color:#8b87a8;'>&lt;/form&gt;</span></pre></div><div style='display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #eaecf0;box-shadow:0 8px 24px rgba(15,14,26,.1);border-radius:10px;padding:9px 13px;position:absolute;right:-12px;bottom:-16px;'><span style='width:22px;height:22px;border-radius:6px;background:#ecfdf3;color:#027a48;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;'>✓</span><span style='font-size:12px;font-weight:600;color:#101828;'>Submissions land in your dashboard</span></div></div>"
+const c0_description =
+  'Point your own HTML form at Formester and we handle storage, notifications, and spam — no server to build. Just set the form action and start receiving submissions.'
+const c0_mockupHtml =
+  "<div style='position:relative;max-width:600px;margin:0 auto;'><div style='background:#14121f;border:1px solid #2a2740;border-radius:14px;box-shadow:0 24px 80px rgba(15,14,26,.22),0 8px 24px rgba(15,14,26,.12);overflow:hidden;'><div style='display:flex;align-items:center;gap:6px;padding:11px 14px;background:#1c1930;border-bottom:1px solid #2a2740;'><span style='width:11px;height:11px;border-radius:50%;background:#ff6058;'></span><span style='width:11px;height:11px;border-radius:50%;background:#ffbd2e;'></span><span style='width:11px;height:11px;border-radius:50%;background:#27c93f;'></span><span style='margin-left:8px;font-size:12px;color:#8b87a8;font-family:ui-monospace,Menlo,monospace;'>index.html</span></div><pre style='margin:0;padding:18px 20px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;line-height:1.75;color:#c8c4e0;overflow-x:auto;white-space:pre;'><span style='color:#8b87a8;'>&lt;form</span> <span style='color:#9db4ff;'>action</span>=<span style='color:#7ee0b8;'>&quot;https://formester.com/f/inbox&quot;</span> <span style='color:#9db4ff;'>method</span>=<span style='color:#7ee0b8;'>&quot;POST&quot;</span><span style='color:#8b87a8;'>&gt;</span>\n  <span style='color:#8b87a8;'>&lt;input</span> <span style='color:#9db4ff;'>name</span>=<span style='color:#7ee0b8;'>&quot;email&quot;</span> <span style='color:#9db4ff;'>type</span>=<span style='color:#7ee0b8;'>&quot;email&quot;</span> <span style='color:#8b87a8;'>/&gt;</span>\n  <span style='color:#8b87a8;'>&lt;textarea</span> <span style='color:#9db4ff;'>name</span>=<span style='color:#7ee0b8;'>&quot;message&quot;</span><span style='color:#8b87a8;'>&gt;&lt;/textarea&gt;</span>\n  <span style='color:#8b87a8;'>&lt;button&gt;</span>Send<span style='color:#8b87a8;'>&lt;/button&gt;</span>\n<span style='color:#8b87a8;'>&lt;/form&gt;</span></pre></div><div style='display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #eaecf0;box-shadow:0 8px 24px rgba(15,14,26,.1);border-radius:10px;padding:9px 13px;position:absolute;right:-12px;bottom:-16px;'><span style='width:22px;height:22px;border-radius:6px;background:#ecfdf3;color:#027a48;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;'>✓</span><span style='font-size:12px;font-weight:600;color:#101828;'>Submissions land in your dashboard</span></div></div>"
 const c0_title = [
   {
-    "id": 4784,
-    "text": "Keep your HTML, ",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
+    id: 4784,
+    text: 'Keep your HTML, ',
+    highlight: false,
+    color: '#475467',
+    bold: false,
   },
   {
-    "id": 4785,
-    "text": "lose the backend code",
-    "highlight": true,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4785,
+    text: 'lose the backend code',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c0_buttons = [
   {
-    "id": 1571,
-    "link": "https://app.formester.com/users/sign_up",
-    "text": "Start Collecting Submissions",
-    "type": "Primary",
-    "showArrow": true
+    id: 1571,
+    link: 'https://app.formester.com/users/sign_up',
+    text: 'Start Collecting Submissions',
+    type: 'Primary',
+    showArrow: true,
   },
   {
-    "id": 1570,
-    "link": "https://youtu.be/piZhVFEXcjY",
-    "text": "Watch demo",
-    "type": "Secondary",
-    "showArrow": false
-  }
+    id: 1570,
+    link: 'https://youtu.be/piZhVFEXcjY',
+    text: 'Watch demo',
+    type: 'Secondary',
+    showArrow: false,
+  },
 ]
 const c0_badge = {
-  "id": 89,
-  "text": "HTML Form Backend",
-  "tag": "Personal",
-  "link": null
+  id: 89,
+  text: 'HTML Form Backend',
+  tag: 'Personal',
+  link: null,
 }
 const c0_tabCardContent = []
 const c1_title = []
 const c1_logos = []
 const c2_title = [
   {
-    "id": 4778,
-    "text": "A backend",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
+    id: 4778,
+    text: 'A backend',
+    highlight: false,
+    color: '#475467',
+    bold: false,
   },
   {
-    "id": 4781,
-    "text": "without the backend",
-    "highlight": true,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4781,
+    text: 'without the backend',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c2_cards = [
   {
-    "id": 604,
-    "tag": "Endpoint",
-    "tagColor": "violet",
-    "title": "Just set the action",
-    "body": "Point your form's action attribute at a Formester endpoint — no server, no API wiring.",
-    "mockHtml": "<div style='font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#475467;'><span style='color:#98a2b3;'>action=</span><span style='color:#6434d0;font-weight:600;'>\"…/f/inbox\"</span></div>",
-    "icon": null
+    id: 604,
+    tag: 'Endpoint',
+    tagColor: 'violet',
+    title: 'Just set the action',
+    body: "Point your form's action attribute at a Formester endpoint — no server, no API wiring.",
+    mockHtml:
+      "<div style='font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#475467;'><span style='color:#98a2b3;'>action=</span><span style='color:#6434d0;font-weight:600;'>\"…/f/inbox\"</span></div>",
+    icon: null,
   },
   {
-    "id": 606,
-    "tag": "Markup",
-    "tagColor": "violet",
-    "title": "Keep your own markup",
-    "body": "Your HTML, your styling. Formester never touches how the form looks on your site.",
-    "mockHtml": "<div style='font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#475467;'><span style='color:#98a2b3;'>&lt;input</span> <span style='color:#6434d0;font-weight:600;'>name</span>=<span style='color:#027a48;'>\"email\"</span><span style='color:#98a2b3;'>/&gt;</span></div>",
-    "icon": null
+    id: 606,
+    tag: 'Markup',
+    tagColor: 'violet',
+    title: 'Keep your own markup',
+    body: 'Your HTML, your styling. Formester never touches how the form looks on your site.',
+    mockHtml:
+      "<div style='font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#475467;'><span style='color:#98a2b3;'>&lt;input</span> <span style='color:#6434d0;font-weight:600;'>name</span>=<span style='color:#027a48;'>\"email\"</span><span style='color:#98a2b3;'>/&gt;</span></div>",
+    icon: null,
   },
   {
-    "id": 608,
-    "tag": "Inbox",
-    "tagColor": "blue",
-    "title": "Responses stored & searchable",
-    "body": "Every submission is saved to a dashboard you can search, filter, and export.",
-    "mockHtml": "<div style='display:flex;flex-direction:column;gap:6px;'><div style='display:flex;align-items:center;gap:8px;font-size:12px;color:#101828;'><span style='width:20px;height:20px;border-radius:50%;background:#f0ebfa;color:#6434d0;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;'>JL</span>jordan@acme.co</div><div style='display:flex;align-items:center;gap:8px;font-size:12px;color:#697586;'><span style='width:20px;height:20px;border-radius:50%;background:#ecfdf3;color:#027a48;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;'>MK</span>maya@studio.io</div></div>",
-    "icon": null
+    id: 608,
+    tag: 'Inbox',
+    tagColor: 'blue',
+    title: 'Responses stored & searchable',
+    body: 'Every submission is saved to a dashboard you can search, filter, and export.',
+    mockHtml:
+      "<div style='display:flex;flex-direction:column;gap:6px;'><div style='display:flex;align-items:center;gap:8px;font-size:12px;color:#101828;'><span style='width:20px;height:20px;border-radius:50%;background:#f0ebfa;color:#6434d0;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;'>JL</span>jordan@acme.co</div><div style='display:flex;align-items:center;gap:8px;font-size:12px;color:#697586;'><span style='width:20px;height:20px;border-radius:50%;background:#ecfdf3;color:#027a48;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;'>MK</span>maya@studio.io</div></div>",
+    icon: null,
   },
   {
-    "id": 607,
-    "tag": "Alerts",
-    "tagColor": "green",
-    "title": "Instant notifications",
-    "body": "Get pinged the moment a form is submitted — by email, Slack, or 100+ connected apps.",
-    "mockHtml": "<div style='display:flex;gap:7px;align-items:center;'><span style='font-size:11px;font-weight:600;color:#475467;background:#f9fafb;border:1px solid #eaecf0;border-radius:7px;padding:4px 9px;'>Email</span><span style='font-size:11px;font-weight:600;color:#475467;background:#f9fafb;border:1px solid #eaecf0;border-radius:7px;padding:4px 9px;'>Slack</span><span style='font-size:11px;font-weight:600;color:#697586;background:#f9fafb;border:1px solid #eaecf0;border-radius:7px;padding:4px 9px;'>+100</span></div>",
-    "icon": null
+    id: 607,
+    tag: 'Alerts',
+    tagColor: 'green',
+    title: 'Instant notifications',
+    body: 'Get pinged the moment a form is submitted — by email, Slack, or 100+ connected apps.',
+    mockHtml:
+      "<div style='display:flex;gap:7px;align-items:center;'><span style='font-size:11px;font-weight:600;color:#475467;background:#f9fafb;border:1px solid #eaecf0;border-radius:7px;padding:4px 9px;'>Email</span><span style='font-size:11px;font-weight:600;color:#475467;background:#f9fafb;border:1px solid #eaecf0;border-radius:7px;padding:4px 9px;'>Slack</span><span style='font-size:11px;font-weight:600;color:#697586;background:#f9fafb;border:1px solid #eaecf0;border-radius:7px;padding:4px 9px;'>+100</span></div>",
+    icon: null,
   },
   {
-    "id": 605,
-    "tag": "Protection",
-    "tagColor": "amber",
-    "title": "Spam filtering built in",
-    "body": "Automatic spam protection keeps junk out of your inbox without a CAPTCHA on your form.",
-    "mockHtml": "<div style='display:flex;align-items:center;gap:8px;font-size:12px;color:#475467;'><span style='width:20px;height:20px;border-radius:6px;background:#fffaeb;color:#b54708;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;'>✓</span>3 spam entries blocked</div>",
-    "icon": null
+    id: 605,
+    tag: 'Protection',
+    tagColor: 'amber',
+    title: 'Spam filtering built in',
+    body: 'Automatic spam protection keeps junk out of your inbox without a CAPTCHA on your form.',
+    mockHtml:
+      "<div style='display:flex;align-items:center;gap:8px;font-size:12px;color:#475467;'><span style='width:20px;height:20px;border-radius:6px;background:#fffaeb;color:#b54708;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;'>✓</span>3 spam entries blocked</div>",
+    icon: null,
   },
   {
-    "id": 609,
-    "tag": "Portability",
-    "tagColor": "blue",
-    "title": "Own your data",
-    "body": "Zero-friction import and export. Take everything with you as CSV or Google Sheets, any time.",
-    "mockHtml": "<div style='display:flex;gap:7px;align-items:center;'><span style='font-size:11px;font-weight:600;color:#475467;background:#f9fafb;border:1px solid #eaecf0;border-radius:7px;padding:4px 9px;'>CSV</span><span style='font-size:11px;font-weight:600;color:#475467;background:#f9fafb;border:1px solid #eaecf0;border-radius:7px;padding:4px 9px;'>Google Sheets</span></div>",
-    "icon": null
-  }
+    id: 609,
+    tag: 'Portability',
+    tagColor: 'blue',
+    title: 'Own your data',
+    body: 'Zero-friction import and export. Take everything with you as CSV or Google Sheets, any time.',
+    mockHtml:
+      "<div style='display:flex;gap:7px;align-items:center;'><span style='font-size:11px;font-weight:600;color:#475467;background:#f9fafb;border:1px solid #eaecf0;border-radius:7px;padding:4px 9px;'>CSV</span><span style='font-size:11px;font-weight:600;color:#475467;background:#f9fafb;border:1px solid #eaecf0;border-radius:7px;padding:4px 9px;'>Google Sheets</span></div>",
+    icon: null,
+  },
 ]
 const c3_steps = [
   {
-    "id": 149,
-    "title": "Point the action at Formester",
-    "description": "Set your HTML form's action attribute to your Formester endpoint and keep method as POST.",
-    "rawHtml": "<div style='font-family:ui-monospace,Menlo,monospace;font-size:12.5px;background:#14121f;border-radius:10px;padding:12px 14px;color:#c8c4e0;overflow-x:auto;'><span style='color:#8b87a8;'>&lt;form</span> <span style='color:#9db4ff;'>action</span>=<span style='color:#7ee0b8;'>&quot;https://formester.com/f/inbox&quot;</span><span style='color:#8b87a8;'>&gt;</span></div>",
-    "image": null
+    id: 149,
+    title: 'Point the action at Formester',
+    description: "Set your HTML form's action attribute to your Formester endpoint and keep method as POST.",
+    rawHtml:
+      "<div style='font-family:ui-monospace,Menlo,monospace;font-size:12.5px;background:#14121f;border-radius:10px;padding:12px 14px;color:#c8c4e0;overflow-x:auto;'><span style='color:#8b87a8;'>&lt;form</span> <span style='color:#9db4ff;'>action</span>=<span style='color:#7ee0b8;'>&quot;https://formester.com/f/inbox&quot;</span><span style='color:#8b87a8;'>&gt;</span></div>",
+    image: null,
   },
   {
-    "id": 150,
-    "title": "Add name attributes",
-    "description": "Give every input, select, and textarea a name attribute so its value shows up in your submissions.",
-    "rawHtml": "<div style='font-family:ui-monospace,Menlo,monospace;font-size:12.5px;background:#14121f;border-radius:10px;padding:12px 14px;color:#c8c4e0;overflow-x:auto;'><span style='color:#8b87a8;'>&lt;input</span> <span style='color:#9db4ff;'>name</span>=<span style='color:#7ee0b8;'>&quot;email&quot;</span> <span style='color:#8b87a8;'>/&gt;</span></div>",
-    "image": null
+    id: 150,
+    title: 'Add name attributes',
+    description: 'Give every input, select, and textarea a name attribute so its value shows up in your submissions.',
+    rawHtml:
+      "<div style='font-family:ui-monospace,Menlo,monospace;font-size:12.5px;background:#14121f;border-radius:10px;padding:12px 14px;color:#c8c4e0;overflow-x:auto;'><span style='color:#8b87a8;'>&lt;input</span> <span style='color:#9db4ff;'>name</span>=<span style='color:#7ee0b8;'>&quot;email&quot;</span> <span style='color:#8b87a8;'>/&gt;</span></div>",
+    image: null,
   },
   {
-    "id": 148,
-    "title": "Submit and confirm",
-    "description": "Submit once to confirm your email, then watch every response arrive in your Formester dashboard.",
-    "rawHtml": "<div style='display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #eaecf0;border-radius:10px;padding:10px 12px;'><span style='width:24px;height:24px;border-radius:50%;background:#f0ebfa;color:#6434d0;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;'>JL</span><div style='font-size:12px;font-weight:600;color:#101828;'>New submission · jordan@acme.co</div><span style='margin-left:auto;font-size:10px;font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:2px 8px;'>New</span></div>",
-    "image": null
-  }
+    id: 148,
+    title: 'Submit and confirm',
+    description: 'Submit once to confirm your email, then watch every response arrive in your Formester dashboard.',
+    rawHtml:
+      "<div style='display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #eaecf0;border-radius:10px;padding:10px 12px;'><span style='width:24px;height:24px;border-radius:50%;background:#f0ebfa;color:#6434d0;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;'>JL</span><div style='font-size:12px;font-weight:600;color:#101828;'>New submission · jordan@acme.co</div><span style='margin-left:auto;font-size:10px;font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:2px 8px;'>New</span></div>",
+    image: null,
+  },
 ]
 const c3_buttons = []
 const c4_title = [
   {
-    "id": 4782,
-    "text": "Built for people who",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
+    id: 4782,
+    text: 'Built for people who',
+    highlight: false,
+    color: '#475467',
+    bold: false,
   },
   {
-    "id": 4780,
-    "text": "write their own HTML",
-    "highlight": true,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4780,
+    text: 'write their own HTML',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c4_cards = [
   {
-    "id": 610,
-    "tag": "Devs",
-    "tagColor": "blue",
-    "title": "Static & JAMstack sites",
-    "body": "Add a working form to a static site with no backend or serverless function to deploy.",
-    "mockHtml": null,
-    "icon": null
+    id: 610,
+    tag: 'Devs',
+    tagColor: 'blue',
+    title: 'Static & JAMstack sites',
+    body: 'Add a working form to a static site with no backend or serverless function to deploy.',
+    mockHtml: null,
+    icon: null,
   },
   {
-    "id": 611,
-    "tag": "Custom",
-    "tagColor": "green",
-    "title": "Hand-coded forms",
-    "body": "Keep full control of your markup, styling, and validation — Formester only handles the data.",
-    "mockHtml": null,
-    "icon": null
+    id: 611,
+    tag: 'Custom',
+    tagColor: 'green',
+    title: 'Hand-coded forms',
+    body: 'Keep full control of your markup, styling, and validation — Formester only handles the data.',
+    mockHtml: null,
+    icon: null,
   },
   {
-    "id": 612,
-    "tag": "Speed",
-    "tagColor": "amber",
-    "title": "Quick launches",
-    "body": "Ship a form in minutes when you don't have time to stand up a server or database.",
-    "mockHtml": null,
-    "icon": null
+    id: 612,
+    tag: 'Speed',
+    tagColor: 'amber',
+    title: 'Quick launches',
+    body: "Ship a form in minutes when you don't have time to stand up a server or database.",
+    mockHtml: null,
+    icon: null,
   },
   {
-    "id": 613,
-    "tag": "Agencies",
-    "tagColor": "violet",
-    "title": "Client builds",
-    "body": "Hand off sites with working forms and no backend for the client to maintain.",
-    "mockHtml": null,
-    "icon": null
-  }
+    id: 613,
+    tag: 'Agencies',
+    tagColor: 'violet',
+    title: 'Client builds',
+    body: 'Hand off sites with working forms and no backend for the client to maintain.',
+    mockHtml: null,
+    icon: null,
+  },
 ]
 const c5_heading = [
   {
-    "id": 4779,
-    "text": "Builders ship forms with Formester",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4779,
+    text: 'Builders ship forms with Formester',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c5_testimonials = [
   {
-    "id": 2,
-    "name": "Jilson",
-    "position": "Organiser",
-    "organization": "Vue Conference",
-    "comment": "Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.",
-    "createdAt": "2024-06-18T03:48:46.610Z",
-    "updatedAt": "2025-01-22T02:57:08.760Z",
-    "publishedAt": "2024-06-18T03:48:50.595Z",
-    "companyLogo": {
-      "id": 228,
-      "imageAlt": "photo-of-vue-conference",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 1680,
-        "name": "vueconf.webp",
-        "alternativeText": "photo-of-vue-conference",
-        "caption": "photo-of-vue-conference",
-        "width": 80,
-        "height": 80,
-        "formats": null,
-        "hash": "vueconf_1bc3dc0827",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 1.07,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2024-08-01T14:38:23.731Z",
-        "updatedAt": "2024-12-01T07:47:11.024Z"
-      }
-    }
+    id: 2,
+    name: 'Jilson',
+    position: 'Organiser',
+    organization: 'Vue Conference',
+    comment:
+      'Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.',
+    createdAt: '2024-06-18T03:48:46.610Z',
+    updatedAt: '2025-01-22T02:57:08.760Z',
+    publishedAt: '2024-06-18T03:48:50.595Z',
+    companyLogo: {
+      id: 228,
+      imageAlt: 'photo-of-vue-conference',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1680,
+        name: 'vueconf.webp',
+        alternativeText: 'photo-of-vue-conference',
+        caption: 'photo-of-vue-conference',
+        width: 80,
+        height: 80,
+        formats: null,
+        hash: 'vueconf_1bc3dc0827',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.07,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.731Z',
+        updatedAt: '2024-12-01T07:47:11.024Z',
+      },
+    },
   },
   {
-    "id": 5,
-    "name": "Deanna Bugalski",
-    "position": "Founder/CEO",
-    "organization": "Suggesterfy",
-    "comment": "I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formester was super easy to set up, and the usability is seamless! I highly recommend!",
-    "createdAt": "2024-06-18T03:52:39.354Z",
-    "updatedAt": "2025-01-22T02:57:47.756Z",
-    "publishedAt": "2024-06-18T03:52:43.800Z",
-    "companyLogo": {
-      "id": 226,
-      "imageAlt": "suggesterfy-logo",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 1683,
-        "name": "suggesterfy_logo.webp",
-        "alternativeText": "suggesterfy-logo",
-        "caption": "suggesterfy-logo",
-        "width": 100,
-        "height": 50,
-        "formats": null,
-        "hash": "suggesterfy_logo_d1d7f996b9",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 1.91,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/suggesterfy_logo_d1d7f996b9.webp",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2024-08-01T14:38:23.921Z",
-        "updatedAt": "2024-12-01T07:49:52.459Z"
-      }
-    }
+    id: 5,
+    name: 'Deanna Bugalski',
+    position: 'Founder/CEO',
+    organization: 'Suggesterfy',
+    comment:
+      'I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formester was super easy to set up, and the usability is seamless! I highly recommend!',
+    createdAt: '2024-06-18T03:52:39.354Z',
+    updatedAt: '2025-01-22T02:57:47.756Z',
+    publishedAt: '2024-06-18T03:52:43.800Z',
+    companyLogo: {
+      id: 226,
+      imageAlt: 'suggesterfy-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1683,
+        name: 'suggesterfy_logo.webp',
+        alternativeText: 'suggesterfy-logo',
+        caption: 'suggesterfy-logo',
+        width: 100,
+        height: 50,
+        formats: null,
+        hash: 'suggesterfy_logo_d1d7f996b9',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.91,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/suggesterfy_logo_d1d7f996b9.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.921Z',
+        updatedAt: '2024-12-01T07:49:52.459Z',
+      },
+    },
   },
   {
-    "id": 34,
-    "name": "Bency",
-    "position": "Product Manager",
-    "organization": "Northgate Digital Solutions",
-    "comment": "Formester's AI form generator transformed how quickly we build forms. The drag-and-drop builder paired with AI-generated templates means I can spin up a survey or poll in minutes, not hours. Conditional logic, file uploads, and seamless integrations make it incredibly versatile and the customization options let every form match our branding perfectly. Their support team is exceptional too. It's the only form and survey tool we recommend",
-    "createdAt": "2025-06-29T23:23:10.541Z",
-    "updatedAt": "2026-05-03T09:30:00.533Z",
-    "publishedAt": "2026-05-03T09:30:00.530Z",
-    "companyLogo": {
-      "id": 3652,
-      "imageAlt": null,
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": null
-    }
+    id: 34,
+    name: 'Bency',
+    position: 'Product Manager',
+    organization: 'Northgate Digital Solutions',
+    comment:
+      "Formester's AI form generator transformed how quickly we build forms. The drag-and-drop builder paired with AI-generated templates means I can spin up a survey or poll in minutes, not hours. Conditional logic, file uploads, and seamless integrations make it incredibly versatile and the customization options let every form match our branding perfectly. Their support team is exceptional too. It's the only form and survey tool we recommend",
+    createdAt: '2025-06-29T23:23:10.541Z',
+    updatedAt: '2026-05-03T09:30:00.533Z',
+    publishedAt: '2026-05-03T09:30:00.530Z',
+    companyLogo: {
+      id: 3652,
+      imageAlt: null,
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: null,
+    },
   },
   {
-    "id": 35,
-    "name": "Roger",
-    "position": "Marketing Specialist",
-    "organization": "BrightPath Technologies",
-    "comment": "I use Formester for my form-building needs and I’m thoroughly impressed. The platform is rich with features… What really sets them apart is their exceptional customer service (responses typically within 10 minutes). The pricing is also very reasonable… Highly recommended!\n",
-    "createdAt": "2025-06-29T23:29:19.225Z",
-    "updatedAt": "2025-10-31T04:00:58.697Z",
-    "publishedAt": "2025-06-29T23:29:21.134Z",
-    "companyLogo": {
-      "id": 3649,
-      "imageAlt": "brightpath-logo",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4094,
-        "name": "brightpath-logo.png",
-        "alternativeText": "brightpath-logo",
-        "caption": "brightpath-logo",
-        "width": 200,
-        "height": 49,
-        "formats": null,
-        "hash": "brightpath_logo_6ef0922a60",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 2.5,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/brightpath_logo_6ef0922a60.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-10-31T04:00:11.712Z",
-        "updatedAt": "2025-10-31T04:00:11.712Z"
-      }
-    }
+    id: 35,
+    name: 'Roger',
+    position: 'Marketing Specialist',
+    organization: 'BrightPath Technologies',
+    comment:
+      'I use Formester for my form-building needs and I’m thoroughly impressed. The platform is rich with features… What really sets them apart is their exceptional customer service (responses typically within 10 minutes). The pricing is also very reasonable… Highly recommended!\n',
+    createdAt: '2025-06-29T23:29:19.225Z',
+    updatedAt: '2025-10-31T04:00:58.697Z',
+    publishedAt: '2025-06-29T23:29:21.134Z',
+    companyLogo: {
+      id: 3649,
+      imageAlt: 'brightpath-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4094,
+        name: 'brightpath-logo.png',
+        alternativeText: 'brightpath-logo',
+        caption: 'brightpath-logo',
+        width: 200,
+        height: 49,
+        formats: null,
+        hash: 'brightpath_logo_6ef0922a60',
+        ext: '.png',
+        mime: 'image/png',
+        size: 2.5,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/brightpath_logo_6ef0922a60.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-31T04:00:11.712Z',
+        updatedAt: '2025-10-31T04:00:11.712Z',
+      },
+    },
   },
   {
-    "id": 36,
-    "name": "Ye Qi Lai",
-    "position": "UX Designer",
-    "organization": "Eastview Consulting",
-    "comment": "Formester is one of the best underrated survey tools out there… It’s extremely customizable… Their support is awesome… I absolutely recommend this to anyone looking for an alternative to the usual form creators.",
-    "createdAt": "2025-06-29T23:30:04.374Z",
-    "updatedAt": "2025-10-31T04:00:30.746Z",
-    "publishedAt": "2025-06-29T23:30:06.260Z",
-    "companyLogo": {
-      "id": 3648,
-      "imageAlt": "eastview-logo-header",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4097,
-        "name": "eastview-logo-header-300x120 1.png",
-        "alternativeText": "eastview-logo-header",
-        "caption": "eastview-logo-header",
-        "width": 200,
-        "height": 80,
-        "formats": null,
-        "hash": "eastview_logo_header_300x120_1_d9c231e93b",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 3.18,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/eastview_logo_header_300x120_1_d9c231e93b.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-10-31T04:00:11.854Z",
-        "updatedAt": "2025-10-31T04:00:11.854Z"
-      }
-    }
+    id: 36,
+    name: 'Ye Qi Lai',
+    position: 'UX Designer',
+    organization: 'Eastview Consulting',
+    comment:
+      'Formester is one of the best underrated survey tools out there… It’s extremely customizable… Their support is awesome… I absolutely recommend this to anyone looking for an alternative to the usual form creators.',
+    createdAt: '2025-06-29T23:30:04.374Z',
+    updatedAt: '2025-10-31T04:00:30.746Z',
+    publishedAt: '2025-06-29T23:30:06.260Z',
+    companyLogo: {
+      id: 3648,
+      imageAlt: 'eastview-logo-header',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4097,
+        name: 'eastview-logo-header-300x120 1.png',
+        alternativeText: 'eastview-logo-header',
+        caption: 'eastview-logo-header',
+        width: 200,
+        height: 80,
+        formats: null,
+        hash: 'eastview_logo_header_300x120_1_d9c231e93b',
+        ext: '.png',
+        mime: 'image/png',
+        size: 3.18,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/eastview_logo_header_300x120_1_d9c231e93b.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-31T04:00:11.854Z',
+        updatedAt: '2025-10-31T04:00:11.854Z',
+      },
+    },
   },
   {
-    "id": 6,
-    "name": "Thibaud Martinez",
-    "position": "Organiser",
-    "organization": "Tedx",
-    "comment": "I really enjoy Formester. It’s clean and straight-forward and it does well, what it is supposed to do.",
-    "createdAt": "2024-06-18T03:53:38.957Z",
-    "updatedAt": "2025-01-22T02:56:48.567Z",
-    "publishedAt": "2024-06-18T03:53:40.693Z",
-    "companyLogo": {
-      "id": 229,
-      "imageAlt": "tedx-logo",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 1684,
-        "name": "tedx.webp",
-        "alternativeText": "tedx-logo",
-        "caption": "tedx-logo",
-        "width": 109,
-        "height": 38,
-        "formats": null,
-        "hash": "tedx_2fce0eee2e",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 1.09,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/tedx_2fce0eee2e.webp",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2024-08-01T14:38:23.941Z",
-        "updatedAt": "2024-12-01T07:50:31.505Z"
-      }
-    }
-  }
+    id: 6,
+    name: 'Thibaud Martinez',
+    position: 'Organiser',
+    organization: 'Tedx',
+    comment: 'I really enjoy Formester. It’s clean and straight-forward and it does well, what it is supposed to do.',
+    createdAt: '2024-06-18T03:53:38.957Z',
+    updatedAt: '2025-01-22T02:56:48.567Z',
+    publishedAt: '2024-06-18T03:53:40.693Z',
+    companyLogo: {
+      id: 229,
+      imageAlt: 'tedx-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1684,
+        name: 'tedx.webp',
+        alternativeText: 'tedx-logo',
+        caption: 'tedx-logo',
+        width: 109,
+        height: 38,
+        formats: null,
+        hash: 'tedx_2fce0eee2e',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.09,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/tedx_2fce0eee2e.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.941Z',
+        updatedAt: '2024-12-01T07:50:31.505Z',
+      },
+    },
+  },
 ]
 const c6_title = [
   {
-    "id": 4783,
-    "text": "HTML form backend FAQs",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4783,
+    text: 'HTML form backend FAQs',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c6_faqList = [
   {
-    "id": 2376,
-    "header": "What is an HTML form backend?",
-    "body": "It's a service that receives and stores submissions from your own HTML form. You keep the markup on your site and point the form's action at Formester, which handles storage, notifications, and spam — no server code on your end.",
-    "body_markdown": null,
-    "list": []
+    id: 2376,
+    header: 'What is an HTML form backend?',
+    body: "It's a service that receives and stores submissions from your own HTML form. You keep the markup on your site and point the form's action at Formester, which handles storage, notifications, and spam — no server code on your end.",
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2377,
-    "header": "How do I connect my HTML form to a backend?",
-    "body": "Set your form's action attribute to your Formester endpoint, keep the method as POST, and add a name attribute to each field. Submit once to confirm your email and you're live.",
-    "body_markdown": null,
-    "list": []
+    id: 2377,
+    header: 'How do I connect my HTML form to a backend?',
+    body: "Set your form's action attribute to your Formester endpoint, keep the method as POST, and add a name attribute to each field. Submit once to confirm your email and you're live.",
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2378,
-    "header": "Do I need a server to handle HTML form submissions?",
-    "body": "No. There's no backend to build or maintain — Formester is the backend. It works with static sites, JAMstack, and hand-coded pages.",
-    "body_markdown": null,
-    "list": []
+    id: 2378,
+    header: 'Do I need a server to handle HTML form submissions?',
+    body: "No. There's no backend to build or maintain — Formester is the backend. It works with static sites, JAMstack, and hand-coded pages.",
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2379,
-    "header": "How can I collect form submissions without coding a backend?",
-    "body": "Point your form action at Formester. Every submission is captured, stored in a searchable dashboard, and available to export — without writing or hosting any server code.",
-    "body_markdown": null,
-    "list": []
+    id: 2379,
+    header: 'How can I collect form submissions without coding a backend?',
+    body: 'Point your form action at Formester. Every submission is captured, stored in a searchable dashboard, and available to export — without writing or hosting any server code.',
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2380,
-    "header": "How do I receive email notifications from HTML forms?",
-    "body": "Notifications are on by default — you're alerted on each new submission by email, and you can also route them to Slack or 100+ connected apps.",
-    "body_markdown": null,
-    "list": []
+    id: 2380,
+    header: 'How do I receive email notifications from HTML forms?',
+    body: "Notifications are on by default — you're alerted on each new submission by email, and you can also route them to Slack or 100+ connected apps.",
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2381,
-    "header": "Is using an HTML form backend secure?",
-    "body": "Yes. Submissions are transmitted securely, spam is filtered automatically, and you stay in full control of your data with import and export any time.",
-    "body_markdown": null,
-    "list": []
-  }
+    id: 2381,
+    header: 'Is using an HTML form backend secure?',
+    body: 'Yes. Submissions are transmitted securely, spam is filtered automatically, and you stay in full control of your data with import and export any time.',
+    body_markdown: null,
+    list: [],
+  },
 ]
 const c7_buttons = [
   {
-    "id": 1568,
-    "link": "https://app.formester.com/users/sign_up",
-    "text": "Start Collecting Submissions",
-    "type": "Primary",
-    "showArrow": true
+    id: 1568,
+    link: 'https://app.formester.com/users/sign_up',
+    text: 'Start Collecting Submissions',
+    type: 'Primary',
+    showArrow: true,
   },
   {
-    "id": 1569,
-    "link": "/pricing",
-    "text": "See pricing",
-    "type": "White",
-    "showArrow": false
-  }
+    id: 1569,
+    link: '/pricing',
+    text: 'See pricing',
+    type: 'White',
+    showArrow: false,
+  },
 ]
 
 useHead({
-  "title": "HTML Form Backend to Collect Form Submissions Easily | Formester",
-  "link": [
+  title: 'HTML Form Backend to Collect Form Submissions Easily | Formester',
+  link: [
     {
-      "hid": "canonical",
-      "rel": "canonical",
-      "href": "https://formester.com/features/html-form-backend/"
-    }
+      hid: 'canonical',
+      rel: 'canonical',
+      href: 'https://formester.com/features/html-form-backend/',
+    },
   ],
-  "meta": [
+  meta: [
     {
-      "property": "article:modified_time",
-      "content": "2026-06-15T10:45:46.265Z"
+      property: 'article:modified_time',
+      content: '2026-06-15T10:45:46.265Z',
     },
     {
-      "hid": "description",
-      "name": "description",
-      "content": "Point your own HTML form's action URL at Formester and collect submissions with no server code. Get a searchable dashboard, instant notifications, spam filtering, and exports."
+      hid: 'description',
+      name: 'description',
+      content:
+        "Point your own HTML form's action URL at Formester and collect submissions with no server code. Get a searchable dashboard, instant notifications, spam filtering, and exports.",
     },
     {
-      "hid": "og:site_name",
-      "name": "og:site_name",
-      "content": "HTML Form Backend to Collect Form Submissions Easily | Formester"
+      hid: 'og:site_name',
+      name: 'og:site_name',
+      content: 'HTML Form Backend to Collect Form Submissions Easily | Formester',
     },
     {
-      "hid": "og:type",
-      "property": "og:type",
-      "content": "website"
+      hid: 'og:type',
+      property: 'og:type',
+      content: 'website',
     },
     {
-      "hid": "og:url",
-      "property": "og:url",
-      "content": "https://formester.com/features/html-form-backend/"
+      hid: 'og:url',
+      property: 'og:url',
+      content: 'https://formester.com/features/html-form-backend/',
     },
     {
-      "hid": "og:title",
-      "property": "og:title",
-      "content": "HTML Form Backend to Collect Form Submissions Easily | Formester"
+      hid: 'og:title',
+      property: 'og:title',
+      content: 'HTML Form Backend to Collect Form Submissions Easily | Formester',
     },
     {
-      "hid": "og:description",
-      "property": "og:description",
-      "content": "Point your own HTML form's action URL at Formester and collect submissions with no server code. Get a searchable dashboard, instant notifications, spam filtering, and exports."
+      hid: 'og:description',
+      property: 'og:description',
+      content:
+        "Point your own HTML form's action URL at Formester and collect submissions with no server code. Get a searchable dashboard, instant notifications, spam filtering, and exports.",
     },
     {
-      "hid": "og:image",
-      "property": "og:image",
-      "content": "https://formester.com/formester-logo-meta-image.png"
+      hid: 'og:image',
+      property: 'og:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
     },
     {
-      "hid": "og:image:alt",
-      "name": "og:image:alt",
-      "content": "Formester Logo"
+      hid: 'og:image:alt',
+      name: 'og:image:alt',
+      content: 'Formester Logo',
     },
     {
-      "hid": "twitter:url",
-      "name": "twitter:url",
-      "content": "https://formester.com/features/html-form-backend/"
+      hid: 'twitter:url',
+      name: 'twitter:url',
+      content: 'https://formester.com/features/html-form-backend/',
     },
     {
-      "name": "twitter:site",
-      "content": "@_formester_"
+      name: 'twitter:site',
+      content: '@_formester_',
     },
     {
-      "hid": "twitter:title",
-      "name": "twitter:title",
-      "content": "HTML Form Backend to Collect Form Submissions Easily | Formester"
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: 'HTML Form Backend to Collect Form Submissions Easily | Formester',
     },
     {
-      "hid": "twitter:description",
-      "name": "twitter:description",
-      "content": "Point your own HTML form's action URL at Formester and collect submissions with no server code. Get a searchable dashboard, instant notifications, spam filtering, and exports."
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content:
+        "Point your own HTML form's action URL at Formester and collect submissions with no server code. Get a searchable dashboard, instant notifications, spam filtering, and exports.",
     },
     {
-      "hid": "twitter:image",
-      "name": "twitter:image",
-      "content": "https://formester.com/formester-logo-meta-image.png"
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
     },
     {
-      "hid": "twitter:image:alt",
-      "name": "twitter:image:alt",
-      "content": "Formester Logo"
+      hid: 'twitter:image:alt',
+      name: 'twitter:image:alt',
+      content: 'Formester Logo',
     },
     {
-      "hid": "twitter:card",
-      "name": "twitter:card",
-      "content": "summary_large_image"
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image',
     },
     {
-      "hid": "apple-mobile-web-app-title",
-      "name": "apple-mobile-web-app-title",
-      "content": "Formester"
+      hid: 'apple-mobile-web-app-title',
+      name: 'apple-mobile-web-app-title',
+      content: 'Formester',
     },
     {
-      "hid": "image",
-      "name": "image",
-      "property": "og:image",
-      "content": "https://formester.com/formester-logo-meta-image.png"
+      hid: 'image',
+      name: 'image',
+      property: 'og:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
     },
     {
-      "hid": "keywords",
-      "name": "keywords",
-      "content": [
-        "html forms"
-      ]
-    }
-  ]
+      hid: 'keywords',
+      name: 'keywords',
+      content: ['html forms'],
+    },
+  ],
 })
 useJsonld([
   {
-    "@context": "https://schema.org",
-    "url": "https://formester.com",
-    "logo": "https://formester.com/logo.svg",
-    "name": "Formester",
-    "@type": "Organization"
+    '@context': 'https://schema.org',
+    url: 'https://formester.com',
+    logo: 'https://formester.com/logo.svg',
+    name: 'Formester',
+    '@type': 'Organization',
   },
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
       {
-        "name": "What is an HTML form backend?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "It's a service that receives and stores submissions from your own HTML form. You keep the markup on your site and point the form's action at Formester, which handles storage, notifications, and spam — no server code on your end.",
-          "@type": "Answer"
-        }
+        name: 'What is an HTML form backend?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: "It's a service that receives and stores submissions from your own HTML form. You keep the markup on your site and point the form's action at Formester, which handles storage, notifications, and spam — no server code on your end.",
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "How do I connect my HTML form to a backend?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "Set your form's action attribute to your Formester endpoint, keep the method as POST, and add a name attribute to each field. Submit once to confirm your email and you're live.",
-          "@type": "Answer"
-        }
+        name: 'How do I connect my HTML form to a backend?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: "Set your form's action attribute to your Formester endpoint, keep the method as POST, and add a name attribute to each field. Submit once to confirm your email and you're live.",
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "Do I need a server to handle HTML form submissions?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "No. There's no backend to build or maintain — Formester is the backend. It works with static sites, JAMstack, and hand-coded pages.",
-          "@type": "Answer"
-        }
+        name: 'Do I need a server to handle HTML form submissions?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: "No. There's no backend to build or maintain — Formester is the backend. It works with static sites, JAMstack, and hand-coded pages.",
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "How can I collect form submissions without coding a backend?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "Point your form action at Formester. Every submission is captured, stored in a searchable dashboard, and available to export — without writing or hosting any server code.",
-          "@type": "Answer"
-        }
+        name: 'How can I collect form submissions without coding a backend?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'Point your form action at Formester. Every submission is captured, stored in a searchable dashboard, and available to export — without writing or hosting any server code.',
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "How do I receive email notifications from HTML forms?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "Notifications are on by default — you're alerted on each new submission by email, and you can also route them to Slack or 100+ connected apps.",
-          "@type": "Answer"
-        }
+        name: 'How do I receive email notifications from HTML forms?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: "Notifications are on by default — you're alerted on each new submission by email, and you can also route them to Slack or 100+ connected apps.",
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "Is using an HTML form backend secure?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "Yes. Submissions are transmitted securely, spam is filtered automatically, and you stay in full control of your data with import and export any time.",
-          "@type": "Answer"
-        }
-      }
-    ]
-  }
+        name: 'Is using an HTML form backend secure?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'Yes. Submissions are transmitted securely, spam is filtered automatically, and you stay in full control of your data with import and export any time.',
+          '@type': 'Answer',
+        },
+      },
+    ],
+  },
 ])
 </script>

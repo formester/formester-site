@@ -1,122 +1,122 @@
 <template>
   <div>
-    <RichText
-      :code="c0_code"
-      :cardUI="false"
-      class="page-component-item"
-    />
+    <RichText :code="c0_code" :cardUI="false" class="page-component-item" />
   </div>
 </template>
 
 <script setup>
 import RichText from '@/components/strapi/RichText.vue'
 
-const c0_code = "<br />\n<br />\n<br />\n\n# About Formester\n\n**From a Freelancer’s Frustration to a Global Solution**\n\nFormester started with a simple need, **a better way to collect leads.** In 2018, our founder, **Ankit Singhaniya**, left his full-time job to freelance. Like many freelancers, he struggled to collect client info and manage leads efficiently. So, he built a basic online form tool for himself. That tool? It later became **Formester**.\n\n### Why We Exist\nWe believe anyone, **even with zero coding skills**, should be able to build powerful online forms, surveys, and quizzes. Whether you’re a **marketer, business owner, teacher, or freelancer**, Formester helps you launch faster and grow smarter.\n\n### Our Journey\nIn 2021, Ankit teamed up with fellow software engineer **Tarun Bhukya** to reimagine Formester as a full no-code form builder. Since then, we've been building features that actually solve real problems:\n\n* **AI Form Generator** – Build full forms in seconds\n\n* **Multilingual Forms** – Reach users in any language\n\n* **Calculation Fields & Logic** – Personalize experiences\n\n* **Collaboration, Prefill, PDF to Form, Partial Submission** – And more!\n\nFormester is now trusted by **10000+ users** and growing, all without a single dollar of outside funding.\n\n### What Drives Us\nWe’re bootstrapped, so **our only boss is you.** Every feature, every update, every fix comes from user feedback. We're not chasing investor slides, we’re focused on solving your everyday problems.\n\n### The Future\nWe’re scaling up, hiring passionate people, and expanding features. But our core promise stays the same, **make online form building fast, easy, and fun.**\n\n### Join our journey\n Whether you're launching a side hustle, gathering feedback, or running a global team, Formester is built for you."
+const c0_code =
+  "<br />\n<br />\n<br />\n\n# About Formester\n\n**From a Freelancer’s Frustration to a Global Solution**\n\nFormester started with a simple need, **a better way to collect leads.** In 2018, our founder, **Ankit Singhaniya**, left his full-time job to freelance. Like many freelancers, he struggled to collect client info and manage leads efficiently. So, he built a basic online form tool for himself. That tool? It later became **Formester**.\n\n### Why We Exist\nWe believe anyone, **even with zero coding skills**, should be able to build powerful online forms, surveys, and quizzes. Whether you’re a **marketer, business owner, teacher, or freelancer**, Formester helps you launch faster and grow smarter.\n\n### Our Journey\nIn 2021, Ankit teamed up with fellow software engineer **Tarun Bhukya** to reimagine Formester as a full no-code form builder. Since then, we've been building features that actually solve real problems:\n\n* **AI Form Generator** – Build full forms in seconds\n\n* **Multilingual Forms** – Reach users in any language\n\n* **Calculation Fields & Logic** – Personalize experiences\n\n* **Collaboration, Prefill, PDF to Form, Partial Submission** – And more!\n\nFormester is now trusted by **10000+ users** and growing, all without a single dollar of outside funding.\n\n### What Drives Us\nWe’re bootstrapped, so **our only boss is you.** Every feature, every update, every fix comes from user feedback. We're not chasing investor slides, we’re focused on solving your everyday problems.\n\n### The Future\nWe’re scaling up, hiring passionate people, and expanding features. But our core promise stays the same, **make online form building fast, easy, and fun.**\n\n### Join our journey\n Whether you're launching a side hustle, gathering feedback, or running a global team, Formester is built for you."
 
 useHead({
-  "title": "About Formester",
-  "link": [
+  title: 'About Formester',
+  link: [
     {
-      "hid": "canonical",
-      "rel": "canonical",
-      "href": "https://formester.com/about-us/"
-    }
+      hid: 'canonical',
+      rel: 'canonical',
+      href: 'https://formester.com/about-us/',
+    },
   ],
-  "meta": [
+  meta: [
     {
-      "property": "article:modified_time",
-      "content": "2026-05-04T05:51:11.816Z"
+      property: 'article:modified_time',
+      content: '2026-05-04T05:51:11.816Z',
     },
     {
-      "hid": "description",
-      "name": "description",
-      "content": "Formester is a free AI powered form generator that let's you create any kind of form, survey & quizzes in seconds. Get started it’s free!"
+      hid: 'description',
+      name: 'description',
+      content:
+        "Formester is a free AI powered form generator that let's you create any kind of form, survey & quizzes in seconds. Get started it’s free!",
     },
     {
-      "hid": "og:site_name",
-      "name": "og:site_name",
-      "content": "About Formester"
+      hid: 'og:site_name',
+      name: 'og:site_name',
+      content: 'About Formester',
     },
     {
-      "hid": "og:type",
-      "property": "og:type",
-      "content": "website"
+      hid: 'og:type',
+      property: 'og:type',
+      content: 'website',
     },
     {
-      "hid": "og:url",
-      "property": "og:url",
-      "content": "https://formester.com/about-us/"
+      hid: 'og:url',
+      property: 'og:url',
+      content: 'https://formester.com/about-us/',
     },
     {
-      "hid": "og:title",
-      "property": "og:title",
-      "content": "About Formester"
+      hid: 'og:title',
+      property: 'og:title',
+      content: 'About Formester',
     },
     {
-      "hid": "og:description",
-      "property": "og:description",
-      "content": "Formester is a free AI powered form generator that let's you create any kind of form, survey & quizzes in seconds. Get started it’s free!"
+      hid: 'og:description',
+      property: 'og:description',
+      content:
+        "Formester is a free AI powered form generator that let's you create any kind of form, survey & quizzes in seconds. Get started it’s free!",
     },
     {
-      "hid": "og:image",
-      "property": "og:image",
-      "content": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Frame_1321321077_8128a74cb8.png"
+      hid: 'og:image',
+      property: 'og:image',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Frame_1321321077_8128a74cb8.png',
     },
     {
-      "hid": "og:image:alt",
-      "name": "og:image:alt",
-      "content": "Formester Logo"
+      hid: 'og:image:alt',
+      name: 'og:image:alt',
+      content: 'Formester Logo',
     },
     {
-      "hid": "twitter:url",
-      "name": "twitter:url",
-      "content": "https://formester.com/about-us/"
+      hid: 'twitter:url',
+      name: 'twitter:url',
+      content: 'https://formester.com/about-us/',
     },
     {
-      "name": "twitter:site",
-      "content": "@_formester_"
+      name: 'twitter:site',
+      content: '@_formester_',
     },
     {
-      "hid": "twitter:title",
-      "name": "twitter:title",
-      "content": "About Formester"
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: 'About Formester',
     },
     {
-      "hid": "twitter:description",
-      "name": "twitter:description",
-      "content": "Formester is a free AI powered form generator that let's you create any kind of form, survey & quizzes in seconds. Get started it’s free!"
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content:
+        "Formester is a free AI powered form generator that let's you create any kind of form, survey & quizzes in seconds. Get started it’s free!",
     },
     {
-      "hid": "twitter:image",
-      "name": "twitter:image",
-      "content": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Frame_1321321077_8128a74cb8.png"
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Frame_1321321077_8128a74cb8.png',
     },
     {
-      "hid": "twitter:image:alt",
-      "name": "twitter:image:alt",
-      "content": "Formester Logo"
+      hid: 'twitter:image:alt',
+      name: 'twitter:image:alt',
+      content: 'Formester Logo',
     },
     {
-      "hid": "twitter:card",
-      "name": "twitter:card",
-      "content": "summary_large_image"
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image',
     },
     {
-      "hid": "apple-mobile-web-app-title",
-      "name": "apple-mobile-web-app-title",
-      "content": "Formester"
+      hid: 'apple-mobile-web-app-title',
+      name: 'apple-mobile-web-app-title',
+      content: 'Formester',
     },
     {
-      "hid": "image",
-      "name": "image",
-      "property": "og:image",
-      "content": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Frame_1321321077_8128a74cb8.png"
+      hid: 'image',
+      name: 'image',
+      property: 'og:image',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Frame_1321321077_8128a74cb8.png',
     },
     {
-      "hid": "keywords",
-      "name": "keywords",
-      "content": []
-    }
-  ]
+      hid: 'keywords',
+      name: 'keywords',
+      content: [],
+    },
+  ],
 })
 </script>

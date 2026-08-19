@@ -57,12 +57,7 @@
       class="page-component-item"
     />
 
-    <FaqSection
-      centered
-      :title="c6_title"
-      :faqList="c6_faqList"
-      class="page-component-item"
-    />
+    <FaqSection centered :title="c6_title" :faqList="c6_faqList" class="page-component-item" />
 
     <CtaDark
       badge="Free to start"
@@ -83,704 +78,727 @@ import StickyStepsSection from '@/components/v2/StickyStepsSection.vue'
 import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
 import TrustSeals from '@/components/v2/TrustSeals.vue'
 
-const c0_description = "Stop juggling rows and guessing which response is which. Formester stamps every form submission with its own unique reference — your prefix, your digit length, your starting number — so each entry is instantly trackable, searchable, and easy to quote."
-const c0_mockupHtml = "\u003Cstyle>.au-row{display:flex;align-items:center;gap:11px;padding:10px 13px;border:1px solid #eaecf0;border-radius:10px;background:#fff;}.au-id{font-size:11px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:4px 8px;line-height:1;white-space:nowrap;font-family:ui-monospace,Menlo,monospace;}.au-meta{display:flex;flex-direction:column;gap:2px;min-width:0;}.au-name{font-size:12px;font-weight:600;color:#101828;line-height:1.1;}.au-sub{font-size:10px;color:#697586;line-height:1.1;}.au-new{opacity:0;transform:translateY(-8px);animation:auNew 6s ease-in-out infinite;}.au-new .au-id{position:relative;}.au-stamp{display:inline-flex;align-items:center;gap:4px;font-size:9px;font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:3px 8px;line-height:1;white-space:nowrap;opacity:0;animation:auStamp 6s ease-in-out infinite;}@keyframes auNew{0%,18%{opacity:0;transform:translateY(-8px);}34%,100%{opacity:1;transform:translateY(0);}}@keyframes auStamp{0%,30%{opacity:0;transform:scale(.6);}44%,90%{opacity:1;transform:scale(1);}100%{opacity:1;transform:scale(1);}}@media (prefers-reduced-motion:reduce){.au-new{animation:none!important;opacity:1!important;transform:none!important;}.au-stamp{animation:none!important;opacity:1!important;transform:none!important;}}\u003C/style><div style='max-width:430px;margin:0 auto;background:#fff;border:1px solid #eaecf0;border-radius:16px;box-shadow:0 24px 80px rgba(15,14,26,.12),0 8px 24px rgba(15,14,26,.06);overflow:hidden;'><div style='display:flex;align-items:center;gap:6px;padding:12px 16px;background:#f9fafb;border-bottom:1px solid #eaecf0;'><span style='width:11px;height:11px;border-radius:50%;background:#ff6058;'></span><span style='width:11px;height:11px;border-radius:50%;background:#ffbd2e;'></span><span style='width:11px;height:11px;border-radius:50%;background:#27c93f;'></span><span style='margin-left:10px;font-size:12px;color:#697586;line-height:1.1;'>app.formester.com · Submissions</span></div><div style='padding:16px;display:flex;flex-direction:column;gap:9px;text-align:left;'><div class='au-row'><span class='au-id'>#REG-00041</span><div class='au-meta'><span class='au-name'>Aisha Lawal</span><span class='au-sub'>Submitted 09:12</span></div></div><div class='au-row'><span class='au-id'>#REG-00042</span><div class='au-meta'><span class='au-name'>Theo Martins</span><span class='au-sub'>Submitted 09:27</span></div></div><div class='au-row au-new'><span class='au-id'>#REG-00043</span><div class='au-meta'><span class='au-name'>Mara Devlin</span><span class='au-sub'>Just submitted</span></div><span class='au-stamp' style='margin-left:auto;'><svg width='9' height='9' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3'><path d='M5 12l4 4L19 6'/></svg>ID assigned</span></div></div></div>"
+const c0_description =
+  'Stop juggling rows and guessing which response is which. Formester stamps every form submission with its own unique reference — your prefix, your digit length, your starting number — so each entry is instantly trackable, searchable, and easy to quote.'
+const c0_mockupHtml =
+  "\u003Cstyle>.au-row{display:flex;align-items:center;gap:11px;padding:10px 13px;border:1px solid #eaecf0;border-radius:10px;background:#fff;}.au-id{font-size:11px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:4px 8px;line-height:1;white-space:nowrap;font-family:ui-monospace,Menlo,monospace;}.au-meta{display:flex;flex-direction:column;gap:2px;min-width:0;}.au-name{font-size:12px;font-weight:600;color:#101828;line-height:1.1;}.au-sub{font-size:10px;color:#697586;line-height:1.1;}.au-new{opacity:0;transform:translateY(-8px);animation:auNew 6s ease-in-out infinite;}.au-new .au-id{position:relative;}.au-stamp{display:inline-flex;align-items:center;gap:4px;font-size:9px;font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:3px 8px;line-height:1;white-space:nowrap;opacity:0;animation:auStamp 6s ease-in-out infinite;}@keyframes auNew{0%,18%{opacity:0;transform:translateY(-8px);}34%,100%{opacity:1;transform:translateY(0);}}@keyframes auStamp{0%,30%{opacity:0;transform:scale(.6);}44%,90%{opacity:1;transform:scale(1);}100%{opacity:1;transform:scale(1);}}@media (prefers-reduced-motion:reduce){.au-new{animation:none!important;opacity:1!important;transform:none!important;}.au-stamp{animation:none!important;opacity:1!important;transform:none!important;}}\u003C/style><div style='max-width:430px;margin:0 auto;background:#fff;border:1px solid #eaecf0;border-radius:16px;box-shadow:0 24px 80px rgba(15,14,26,.12),0 8px 24px rgba(15,14,26,.06);overflow:hidden;'><div style='display:flex;align-items:center;gap:6px;padding:12px 16px;background:#f9fafb;border-bottom:1px solid #eaecf0;'><span style='width:11px;height:11px;border-radius:50%;background:#ff6058;'></span><span style='width:11px;height:11px;border-radius:50%;background:#ffbd2e;'></span><span style='width:11px;height:11px;border-radius:50%;background:#27c93f;'></span><span style='margin-left:10px;font-size:12px;color:#697586;line-height:1.1;'>app.formester.com · Submissions</span></div><div style='padding:16px;display:flex;flex-direction:column;gap:9px;text-align:left;'><div class='au-row'><span class='au-id'>#REG-00041</span><div class='au-meta'><span class='au-name'>Aisha Lawal</span><span class='au-sub'>Submitted 09:12</span></div></div><div class='au-row'><span class='au-id'>#REG-00042</span><div class='au-meta'><span class='au-name'>Theo Martins</span><span class='au-sub'>Submitted 09:27</span></div></div><div class='au-row au-new'><span class='au-id'>#REG-00043</span><div class='au-meta'><span class='au-name'>Mara Devlin</span><span class='au-sub'>Just submitted</span></div><span class='au-stamp' style='margin-left:auto;'><svg width='9' height='9' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3'><path d='M5 12l4 4L19 6'/></svg>ID assigned</span></div></div></div>"
 const c0_title = [
   {
-    "id": 4593,
-    "text": "Give every submission ",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
+    id: 4593,
+    text: 'Give every submission ',
+    highlight: false,
+    color: '#475467',
+    bold: false,
   },
   {
-    "id": 4594,
-    "text": "its own unique ID",
-    "highlight": true,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4594,
+    text: 'its own unique ID',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c0_buttons = [
   {
-    "id": 1488,
-    "link": "https://app.formester.com/users/sign_up",
-    "text": "Get Started — It's Free",
-    "type": "Primary",
-    "showArrow": true
+    id: 1488,
+    link: 'https://app.formester.com/users/sign_up',
+    text: "Get Started — It's Free",
+    type: 'Primary',
+    showArrow: true,
   },
   {
-    "id": 1489,
-    "link": "https://youtu.be/c0R5fZVeK6E",
-    "text": "Watch demo",
-    "type": "Secondary",
-    "showArrow": false
-  }
+    id: 1489,
+    link: 'https://youtu.be/c0R5fZVeK6E',
+    text: 'Watch demo',
+    type: 'Secondary',
+    showArrow: false,
+  },
 ]
 const c0_badge = {
-  "id": 68,
-  "text": "Auto Unique ID",
-  "tag": null,
-  "link": null
+  id: 68,
+  text: 'Auto Unique ID',
+  tag: null,
+  link: null,
 }
 const c0_tabCardContent = []
 const c1_title = []
 const c1_logos = []
 const c2_title = [
   {
-    "id": 4587,
-    "text": "A reference number ",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
+    id: 4587,
+    text: 'A reference number ',
+    highlight: false,
+    color: '#475467',
+    bold: false,
   },
   {
-    "id": 4591,
-    "text": "on every response",
-    "highlight": true,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4591,
+    text: 'on every response',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c2_cards = [
   {
-    "id": 449,
-    "tag": "Auto-generated",
-    "tagColor": "violet",
-    "title": "A unique ID per submission",
-    "body": "Every response gets its own sequential reference the moment it lands — no two are ever the same. The field stays hidden from respondents and appears beside each entry in your dashboard.",
-    "mockHtml": "<div style='display:flex;flex-direction:column;gap:7px;'><div style='display:flex;align-items:center;gap:9px;'><span style='font-size:10.5px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:4px 8px;line-height:1;font-family:ui-monospace,Menlo,monospace;'>#ORD-00128</span><span style='font-size:10.5px;color:#697586;line-height:1.1;'>Priya S.</span></div><div style='display:flex;align-items:center;gap:9px;'><span style='font-size:10.5px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:4px 8px;line-height:1;font-family:ui-monospace,Menlo,monospace;'>#ORD-00129</span><span style='font-size:10.5px;color:#697586;line-height:1.1;'>Liam O.</span></div></div>",
-    "icon": null
+    id: 449,
+    tag: 'Auto-generated',
+    tagColor: 'violet',
+    title: 'A unique ID per submission',
+    body: 'Every response gets its own sequential reference the moment it lands — no two are ever the same. The field stays hidden from respondents and appears beside each entry in your dashboard.',
+    mockHtml:
+      "<div style='display:flex;flex-direction:column;gap:7px;'><div style='display:flex;align-items:center;gap:9px;'><span style='font-size:10.5px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:4px 8px;line-height:1;font-family:ui-monospace,Menlo,monospace;'>#ORD-00128</span><span style='font-size:10.5px;color:#697586;line-height:1.1;'>Priya S.</span></div><div style='display:flex;align-items:center;gap:9px;'><span style='font-size:10.5px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:4px 8px;line-height:1;font-family:ui-monospace,Menlo,monospace;'>#ORD-00129</span><span style='font-size:10.5px;color:#697586;line-height:1.1;'>Liam O.</span></div></div>",
+    icon: null,
   },
   {
-    "id": 454,
-    "tag": "Custom format",
-    "tagColor": "green",
-    "title": "Your prefix, digits & start point",
-    "body": "Add a prefix like ORD or REG for instant context, choose how many digits the number runs to, and set the starting count. You can even pull in answers with @ to build smarter references.",
-    "mockHtml": "<div style='display:flex;flex-direction:column;gap:8px;'><div style='display:flex;align-items:center;gap:8px;font-size:10.5px;color:#475467;line-height:1.1;'><span style='width:64px;flex-shrink:0;'>Prefix</span><span style='font-weight:600;color:#101828;background:#f9fafb;border:1px solid #eaecf0;border-radius:6px;padding:4px 8px;line-height:1;'>REG</span></div><div style='display:flex;align-items:center;gap:8px;font-size:10.5px;color:#475467;line-height:1.1;'><span style='width:64px;flex-shrink:0;'>Digits</span><span style='font-weight:600;color:#101828;background:#f9fafb;border:1px solid #eaecf0;border-radius:6px;padding:4px 8px;line-height:1;'>5</span></div><div style='display:flex;align-items:center;gap:8px;font-size:10.5px;color:#475467;line-height:1.1;'><span style='width:64px;flex-shrink:0;'>Start at</span><span style='font-weight:600;color:#101828;background:#f9fafb;border:1px solid #eaecf0;border-radius:6px;padding:4px 8px;line-height:1;'>1</span><span style='margin-left:auto;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:4px 8px;line-height:1;font-family:ui-monospace,Menlo,monospace;'>REG-00001</span></div></div>",
-    "icon": null
+    id: 454,
+    tag: 'Custom format',
+    tagColor: 'green',
+    title: 'Your prefix, digits & start point',
+    body: 'Add a prefix like ORD or REG for instant context, choose how many digits the number runs to, and set the starting count. You can even pull in answers with @ to build smarter references.',
+    mockHtml:
+      "<div style='display:flex;flex-direction:column;gap:8px;'><div style='display:flex;align-items:center;gap:8px;font-size:10.5px;color:#475467;line-height:1.1;'><span style='width:64px;flex-shrink:0;'>Prefix</span><span style='font-weight:600;color:#101828;background:#f9fafb;border:1px solid #eaecf0;border-radius:6px;padding:4px 8px;line-height:1;'>REG</span></div><div style='display:flex;align-items:center;gap:8px;font-size:10.5px;color:#475467;line-height:1.1;'><span style='width:64px;flex-shrink:0;'>Digits</span><span style='font-weight:600;color:#101828;background:#f9fafb;border:1px solid #eaecf0;border-radius:6px;padding:4px 8px;line-height:1;'>5</span></div><div style='display:flex;align-items:center;gap:8px;font-size:10.5px;color:#475467;line-height:1.1;'><span style='width:64px;flex-shrink:0;'>Start at</span><span style='font-weight:600;color:#101828;background:#f9fafb;border:1px solid #eaecf0;border-radius:6px;padding:4px 8px;line-height:1;'>1</span><span style='margin-left:auto;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:4px 8px;line-height:1;font-family:ui-monospace,Menlo,monospace;'>REG-00001</span></div></div>",
+    icon: null,
   },
   {
-    "id": 450,
-    "tag": "Easy to track",
-    "tagColor": "blue",
-    "title": "Search, filter & reference",
-    "body": "Quote one ID instead of hunting through rows. IDs are searchable in your dashboard and stay fixed even if a submission is edited — so every reference you share keeps pointing to the right entry.",
-    "mockHtml": "<div style='display:flex;flex-direction:column;gap:7px;'><div style='display:flex;align-items:center;gap:8px;border:1px solid #eaecf0;border-radius:8px;padding:7px 10px;background:#fff;'><svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='#697586' stroke-width='2' style='flex-shrink:0;'><circle cx='11' cy='11' r='7'/><path d='M21 21l-4.3-4.3'/></svg><span style='font-size:11px;color:#101828;font-weight:600;line-height:1.1;font-family:ui-monospace,Menlo,monospace;'>ORD-00129</span></div><div style='display:flex;align-items:center;gap:8px;border:1px solid #d8c9f5;background:#fbfaff;border-radius:8px;padding:7px 10px;'><span style='font-size:9.5px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:999px;padding:3px 8px;line-height:1;'>1 match</span><span style='font-size:10.5px;color:#475467;line-height:1.1;'>Liam O. · paid</span></div></div>",
-    "icon": null
-  }
+    id: 450,
+    tag: 'Easy to track',
+    tagColor: 'blue',
+    title: 'Search, filter & reference',
+    body: 'Quote one ID instead of hunting through rows. IDs are searchable in your dashboard and stay fixed even if a submission is edited — so every reference you share keeps pointing to the right entry.',
+    mockHtml:
+      "<div style='display:flex;flex-direction:column;gap:7px;'><div style='display:flex;align-items:center;gap:8px;border:1px solid #eaecf0;border-radius:8px;padding:7px 10px;background:#fff;'><svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='#697586' stroke-width='2' style='flex-shrink:0;'><circle cx='11' cy='11' r='7'/><path d='M21 21l-4.3-4.3'/></svg><span style='font-size:11px;color:#101828;font-weight:600;line-height:1.1;font-family:ui-monospace,Menlo,monospace;'>ORD-00129</span></div><div style='display:flex;align-items:center;gap:8px;border:1px solid #d8c9f5;background:#fbfaff;border-radius:8px;padding:7px 10px;'><span style='font-size:9.5px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:999px;padding:3px 8px;line-height:1;'>1 match</span><span style='font-size:10.5px;color:#475467;line-height:1.1;'>Liam O. · paid</span></div></div>",
+    icon: null,
+  },
 ]
 const c3_steps = [
   {
-    "id": 110,
-    "title": "Add the Auto Unique ID field",
-    "description": "Open the form builder and drag the Auto Unique ID field in from the elements panel. It works on any form — no code, no extra setup.",
-    "rawHtml": "<div style='display:flex;align-items:center;gap:9px;border:1px dashed #6434d0;border-radius:9px;padding:9px 12px;font-size:12px;color:#101828;background:#fbfaff;'><span style='width:24px;height:24px;border-radius:7px;background:#6434d0;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='2.4'><path d='M4 7h16'/><path d='M4 12h16'/><path d='M4 17h10'/></svg></span><span style='font-weight:600;'>Auto Unique ID</span><span style='margin-left:auto;font-size:9.5px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:999px;padding:3px 8px;line-height:1;'>Drag to add</span></div>",
-    "image": null
+    id: 110,
+    title: 'Add the Auto Unique ID field',
+    description:
+      'Open the form builder and drag the Auto Unique ID field in from the elements panel. It works on any form — no code, no extra setup.',
+    rawHtml:
+      "<div style='display:flex;align-items:center;gap:9px;border:1px dashed #6434d0;border-radius:9px;padding:9px 12px;font-size:12px;color:#101828;background:#fbfaff;'><span style='width:24px;height:24px;border-radius:7px;background:#6434d0;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='2.4'><path d='M4 7h16'/><path d='M4 12h16'/><path d='M4 17h10'/></svg></span><span style='font-weight:600;'>Auto Unique ID</span><span style='margin-left:auto;font-size:9.5px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:999px;padding:3px 8px;line-height:1;'>Drag to add</span></div>",
+    image: null,
   },
   {
-    "id": 111,
-    "title": "Set your prefix and format",
-    "description": "Add a prefix for context (ORD, REG, APP), set the number of digits, and pick the starting count. Need a smarter reference? Use @ to fold an earlier answer into the ID.",
-    "rawHtml": "<div style='display:flex;flex-direction:column;gap:8px;'><div style='display:flex;align-items:center;gap:8px;'><span style='font-size:11px;color:#475467;line-height:1.1;width:58px;flex-shrink:0;'>Prefix</span><span style='font-size:11.5px;font-weight:600;color:#101828;border:1px solid #6434d0;border-radius:6px;padding:5px 9px;line-height:1;background:#fff;'>ORD</span></div><div style='display:flex;align-items:center;gap:8px;'><span style='font-size:11px;color:#475467;line-height:1.1;width:58px;flex-shrink:0;'>Digits</span><span style='font-size:11.5px;font-weight:600;color:#101828;border:1px solid #eaecf0;border-radius:6px;padding:5px 9px;line-height:1;background:#fff;'>5</span><span style='margin-left:auto;font-size:11px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:5px 9px;line-height:1;font-family:ui-monospace,Menlo,monospace;'>ORD-00001</span></div></div>",
-    "image": null
+    id: 111,
+    title: 'Set your prefix and format',
+    description:
+      'Add a prefix for context (ORD, REG, APP), set the number of digits, and pick the starting count. Need a smarter reference? Use @ to fold an earlier answer into the ID.',
+    rawHtml:
+      "<div style='display:flex;flex-direction:column;gap:8px;'><div style='display:flex;align-items:center;gap:8px;'><span style='font-size:11px;color:#475467;line-height:1.1;width:58px;flex-shrink:0;'>Prefix</span><span style='font-size:11.5px;font-weight:600;color:#101828;border:1px solid #6434d0;border-radius:6px;padding:5px 9px;line-height:1;background:#fff;'>ORD</span></div><div style='display:flex;align-items:center;gap:8px;'><span style='font-size:11px;color:#475467;line-height:1.1;width:58px;flex-shrink:0;'>Digits</span><span style='font-size:11.5px;font-weight:600;color:#101828;border:1px solid #eaecf0;border-radius:6px;padding:5px 9px;line-height:1;background:#fff;'>5</span><span style='margin-left:auto;font-size:11px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:5px 9px;line-height:1;font-family:ui-monospace,Menlo,monospace;'>ORD-00001</span></div></div>",
+    image: null,
   },
   {
-    "id": 112,
-    "title": "Save, publish & collect",
-    "description": "Publish your form and start collecting. From the first response on, every submission is stamped with the next ID in sequence — fixed for life and ready to track.",
-    "rawHtml": "<div style='display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #eaecf0;border-radius:10px;padding:10px 12px;'><span style='width:24px;height:24px;border-radius:50%;background:#ecfdf3;color:#027a48;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.6'><path d='M5 12l4 4L19 6'/></svg></span><span style='font-size:11px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:4px 8px;line-height:1;font-family:ui-monospace,Menlo,monospace;'>#ORD-00001</span><span style='font-size:12px;font-weight:600;color:#101828;line-height:1.1;'>assigned</span></div>",
-    "image": null
-  }
+    id: 112,
+    title: 'Save, publish & collect',
+    description:
+      'Publish your form and start collecting. From the first response on, every submission is stamped with the next ID in sequence — fixed for life and ready to track.',
+    rawHtml:
+      "<div style='display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #eaecf0;border-radius:10px;padding:10px 12px;'><span style='width:24px;height:24px;border-radius:50%;background:#ecfdf3;color:#027a48;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.6'><path d='M5 12l4 4L19 6'/></svg></span><span style='font-size:11px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:4px 8px;line-height:1;font-family:ui-monospace,Menlo,monospace;'>#ORD-00001</span><span style='font-size:12px;font-weight:600;color:#101828;line-height:1.1;'>assigned</span></div>",
+    image: null,
+  },
 ]
 const c3_buttons = []
 const c4_title = [
   {
-    "id": 4589,
-    "text": "One ID, ",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
+    id: 4589,
+    text: 'One ID, ',
+    highlight: false,
+    color: '#475467',
+    bold: false,
   },
   {
-    "id": 4588,
-    "text": "endless ways to track",
-    "highlight": true,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4588,
+    text: 'endless ways to track',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c4_cards = [
   {
-    "id": 451,
-    "tag": "Support",
-    "tagColor": "violet",
-    "title": "Support tickets",
-    "body": "Give every query its own ticket number so nothing slips through. Both you and the customer can quote one ID to follow up — no more 'which message was that again?'",
-    "mockHtml": "<div style='display:flex;align-items:center;gap:9px;border:1px solid #eaecf0;border-radius:10px;padding:10px 12px;background:#fff;'><span style='font-size:11px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:4px 8px;line-height:1;font-family:ui-monospace,Menlo,monospace;flex-shrink:0;'>#TKT-00318</span><div style='font-size:11px;line-height:1.3;color:#475467;'>Billing question <span style='font-weight:700;color:#101828;'>· open</span></div></div>",
-    "icon": null
+    id: 451,
+    tag: 'Support',
+    tagColor: 'violet',
+    title: 'Support tickets',
+    body: "Give every query its own ticket number so nothing slips through. Both you and the customer can quote one ID to follow up — no more 'which message was that again?'",
+    mockHtml:
+      "<div style='display:flex;align-items:center;gap:9px;border:1px solid #eaecf0;border-radius:10px;padding:10px 12px;background:#fff;'><span style='font-size:11px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:4px 8px;line-height:1;font-family:ui-monospace,Menlo,monospace;flex-shrink:0;'>#TKT-00318</span><div style='font-size:11px;line-height:1.3;color:#475467;'>Billing question <span style='font-weight:700;color:#101828;'>· open</span></div></div>",
+    icon: null,
   },
   {
-    "id": 452,
-    "tag": "Commerce",
-    "tagColor": "green",
-    "title": "Orders & invoices",
-    "body": "Tag each order with a reference number to confirm purchases, sort fulfilment, and track order history. Customers get a clean number to quote on every follow-up.",
-    "mockHtml": "<div style='display:flex;flex-direction:column;gap:7px;'><div style='display:flex;align-items:center;gap:8px;'><span style='font-size:10.5px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:4px 8px;line-height:1;font-family:ui-monospace,Menlo,monospace;'>#ORD-00742</span><span style='margin-left:auto;font-size:9.5px;font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:3px 8px;line-height:1;'>Paid</span></div><div style='display:flex;align-items:center;gap:8px;'><span style='font-size:10.5px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:4px 8px;line-height:1;font-family:ui-monospace,Menlo,monospace;'>#ORD-00743</span><span style='margin-left:auto;font-size:9.5px;font-weight:700;color:#b54708;background:#fffaeb;border-radius:999px;padding:3px 8px;line-height:1;'>Packing</span></div></div>",
-    "icon": null
+    id: 452,
+    tag: 'Commerce',
+    tagColor: 'green',
+    title: 'Orders & invoices',
+    body: 'Tag each order with a reference number to confirm purchases, sort fulfilment, and track order history. Customers get a clean number to quote on every follow-up.',
+    mockHtml:
+      "<div style='display:flex;flex-direction:column;gap:7px;'><div style='display:flex;align-items:center;gap:8px;'><span style='font-size:10.5px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:4px 8px;line-height:1;font-family:ui-monospace,Menlo,monospace;'>#ORD-00742</span><span style='margin-left:auto;font-size:9.5px;font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:3px 8px;line-height:1;'>Paid</span></div><div style='display:flex;align-items:center;gap:8px;'><span style='font-size:10.5px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:4px 8px;line-height:1;font-family:ui-monospace,Menlo,monospace;'>#ORD-00743</span><span style='margin-left:auto;font-size:9.5px;font-weight:700;color:#b54708;background:#fffaeb;border-radius:999px;padding:3px 8px;line-height:1;'>Packing</span></div></div>",
+    icon: null,
   },
   {
-    "id": 455,
-    "tag": "Hiring",
-    "tagColor": "blue",
-    "title": "Applications",
-    "body": "Assign each applicant a reference so your team can track candidates, share updates, and point to a single ID through every interview round — for jobs, admissions, or grants.",
-    "mockHtml": "<div style='display:flex;align-items:center;gap:9px;border:1px solid #eaecf0;border-radius:10px;padding:10px 12px;background:#fff;'><span style='font-size:11px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:4px 8px;line-height:1;font-family:ui-monospace,Menlo,monospace;flex-shrink:0;'>#APP-00057</span><div style='font-size:11px;line-height:1.3;color:#475467;'>Candidate · <span style='font-weight:700;color:#101828;'>shortlisted</span></div></div>",
-    "icon": null
+    id: 455,
+    tag: 'Hiring',
+    tagColor: 'blue',
+    title: 'Applications',
+    body: 'Assign each applicant a reference so your team can track candidates, share updates, and point to a single ID through every interview round — for jobs, admissions, or grants.',
+    mockHtml:
+      "<div style='display:flex;align-items:center;gap:9px;border:1px solid #eaecf0;border-radius:10px;padding:10px 12px;background:#fff;'><span style='font-size:11px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:4px 8px;line-height:1;font-family:ui-monospace,Menlo,monospace;flex-shrink:0;'>#APP-00057</span><div style='font-size:11px;line-height:1.3;color:#475467;'>Candidate · <span style='font-weight:700;color:#101828;'>shortlisted</span></div></div>",
+    icon: null,
   },
   {
-    "id": 453,
-    "tag": "Events",
-    "tagColor": "violet",
-    "title": "Registrations",
-    "body": "Hand every attendee a unique registration ID to verify sign-ups, speed up check-in, and reconcile numbers after the event — perfect for conferences, workshops, and surveys.",
-    "mockHtml": "<div style='display:flex;flex-direction:column;gap:7px;'><div style='display:flex;align-items:center;gap:8px;'><span style='font-size:10.5px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:4px 8px;line-height:1;font-family:ui-monospace,Menlo,monospace;'>#REG-01204</span><span style='margin-left:auto;font-size:9.5px;font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:3px 8px;line-height:1;'>Checked in</span></div><div style='display:flex;align-items:center;gap:8px;'><span style='font-size:10.5px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:4px 8px;line-height:1;font-family:ui-monospace,Menlo,monospace;'>#REG-01205</span><span style='margin-left:auto;font-size:9.5px;font-weight:700;color:#697586;background:#f2f4f7;border-radius:999px;padding:3px 8px;line-height:1;'>Expected</span></div></div>",
-    "icon": null
-  }
+    id: 453,
+    tag: 'Events',
+    tagColor: 'violet',
+    title: 'Registrations',
+    body: 'Hand every attendee a unique registration ID to verify sign-ups, speed up check-in, and reconcile numbers after the event — perfect for conferences, workshops, and surveys.',
+    mockHtml:
+      "<div style='display:flex;flex-direction:column;gap:7px;'><div style='display:flex;align-items:center;gap:8px;'><span style='font-size:10.5px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:4px 8px;line-height:1;font-family:ui-monospace,Menlo,monospace;'>#REG-01204</span><span style='margin-left:auto;font-size:9.5px;font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:3px 8px;line-height:1;'>Checked in</span></div><div style='display:flex;align-items:center;gap:8px;'><span style='font-size:10.5px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:4px 8px;line-height:1;font-family:ui-monospace,Menlo,monospace;'>#REG-01205</span><span style='margin-left:auto;font-size:9.5px;font-weight:700;color:#697586;background:#f2f4f7;border-radius:999px;padding:3px 8px;line-height:1;'>Expected</span></div></div>",
+    icon: null,
+  },
 ]
 const c5_heading = [
   {
-    "id": 4590,
-    "text": "Teams keep every submission organized with Formester",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4590,
+    text: 'Teams keep every submission organized with Formester',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c5_testimonials = [
   {
-    "id": 1,
-    "name": "Dr. Michele Ross",
-    "position": "Founder",
-    "organization": "Infused Health",
-    "comment": "I'm migrating my forms from Paperform, where I've been a user for over 4 years. Loving the software so far! I've already replaced Paperform form embeds & popups on my sites & my husband's websites with Formester forms",
-    "createdAt": "2024-06-18T03:47:14.605Z",
-    "updatedAt": "2025-01-22T02:57:30.159Z",
-    "publishedAt": "2024-06-18T03:47:18.889Z",
-    "companyLogo": {
-      "id": 227,
-      "imageAlt": "Dr. Michele Ross",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 1685,
-        "name": "dr._michelelogo.webp",
-        "alternativeText": null,
-        "caption": null,
-        "width": 300,
-        "height": 59,
-        "formats": {
-          "thumbnail": {
-            "ext": ".webp",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_dr_michelelogo_2269ae2211.webp",
-            "hash": "thumbnail_dr_michelelogo_2269ae2211",
-            "mime": "image/webp",
-            "name": "thumbnail_dr._michelelogo.webp",
-            "path": null,
-            "size": 5.58,
-            "width": 245,
-            "height": 48
-          }
+    id: 1,
+    name: 'Dr. Michele Ross',
+    position: 'Founder',
+    organization: 'Infused Health',
+    comment:
+      "I'm migrating my forms from Paperform, where I've been a user for over 4 years. Loving the software so far! I've already replaced Paperform form embeds & popups on my sites & my husband's websites with Formester forms",
+    createdAt: '2024-06-18T03:47:14.605Z',
+    updatedAt: '2025-01-22T02:57:30.159Z',
+    publishedAt: '2024-06-18T03:47:18.889Z',
+    companyLogo: {
+      id: 227,
+      imageAlt: 'Dr. Michele Ross',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1685,
+        name: 'dr._michelelogo.webp',
+        alternativeText: null,
+        caption: null,
+        width: 300,
+        height: 59,
+        formats: {
+          thumbnail: {
+            ext: '.webp',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_dr_michelelogo_2269ae2211.webp',
+            hash: 'thumbnail_dr_michelelogo_2269ae2211',
+            mime: 'image/webp',
+            name: 'thumbnail_dr._michelelogo.webp',
+            path: null,
+            size: 5.58,
+            width: 245,
+            height: 48,
+          },
         },
-        "hash": "dr_michelelogo_2269ae2211",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 5.87,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/dr_michelelogo_2269ae2211.webp",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2024-08-01T14:38:23.944Z",
-        "updatedAt": "2024-08-01T14:38:23.944Z"
-      }
-    }
+        hash: 'dr_michelelogo_2269ae2211',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 5.87,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/dr_michelelogo_2269ae2211.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.944Z',
+        updatedAt: '2024-08-01T14:38:23.944Z',
+      },
+    },
   },
   {
-    "id": 2,
-    "name": "Jilson",
-    "position": "Organiser",
-    "organization": "Vue Conference",
-    "comment": "Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.",
-    "createdAt": "2024-06-18T03:48:46.610Z",
-    "updatedAt": "2025-01-22T02:57:08.760Z",
-    "publishedAt": "2024-06-18T03:48:50.595Z",
-    "companyLogo": {
-      "id": 228,
-      "imageAlt": "photo-of-vue-conference",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 1680,
-        "name": "vueconf.webp",
-        "alternativeText": "photo-of-vue-conference",
-        "caption": "photo-of-vue-conference",
-        "width": 80,
-        "height": 80,
-        "formats": null,
-        "hash": "vueconf_1bc3dc0827",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 1.07,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2024-08-01T14:38:23.731Z",
-        "updatedAt": "2024-12-01T07:47:11.024Z"
-      }
-    }
+    id: 2,
+    name: 'Jilson',
+    position: 'Organiser',
+    organization: 'Vue Conference',
+    comment:
+      'Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.',
+    createdAt: '2024-06-18T03:48:46.610Z',
+    updatedAt: '2025-01-22T02:57:08.760Z',
+    publishedAt: '2024-06-18T03:48:50.595Z',
+    companyLogo: {
+      id: 228,
+      imageAlt: 'photo-of-vue-conference',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1680,
+        name: 'vueconf.webp',
+        alternativeText: 'photo-of-vue-conference',
+        caption: 'photo-of-vue-conference',
+        width: 80,
+        height: 80,
+        formats: null,
+        hash: 'vueconf_1bc3dc0827',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.07,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.731Z',
+        updatedAt: '2024-12-01T07:47:11.024Z',
+      },
+    },
   },
   {
-    "id": 4,
-    "name": "Costanza Casullo",
-    "position": "Volunteer",
-    "organization": "Wato Coding Hub",
-    "comment": "Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.",
-    "createdAt": "2024-06-18T03:51:15.232Z",
-    "updatedAt": "2025-01-22T02:58:03.674Z",
-    "publishedAt": "2024-06-18T03:51:21.477Z",
-    "companyLogo": {
-      "id": 225,
-      "imageAlt": "wato-coding-hub-logo",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 1681,
-        "name": "wato-coding-hub.webp",
-        "alternativeText": "wato-coding-hub-logo",
-        "caption": "wato-coding-hub-logo",
-        "width": 80,
-        "height": 81,
-        "formats": null,
-        "hash": "wato_coding_hub_e054f0ea9d",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 1.88,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/wato_coding_hub_e054f0ea9d.webp",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2024-08-01T14:38:23.738Z",
-        "updatedAt": "2024-12-01T07:49:13.371Z"
-      }
-    }
+    id: 4,
+    name: 'Costanza Casullo',
+    position: 'Volunteer',
+    organization: 'Wato Coding Hub',
+    comment:
+      "Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.",
+    createdAt: '2024-06-18T03:51:15.232Z',
+    updatedAt: '2025-01-22T02:58:03.674Z',
+    publishedAt: '2024-06-18T03:51:21.477Z',
+    companyLogo: {
+      id: 225,
+      imageAlt: 'wato-coding-hub-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1681,
+        name: 'wato-coding-hub.webp',
+        alternativeText: 'wato-coding-hub-logo',
+        caption: 'wato-coding-hub-logo',
+        width: 80,
+        height: 81,
+        formats: null,
+        hash: 'wato_coding_hub_e054f0ea9d',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.88,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/wato_coding_hub_e054f0ea9d.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.738Z',
+        updatedAt: '2024-12-01T07:49:13.371Z',
+      },
+    },
   },
   {
-    "id": 5,
-    "name": "Deanna Bugalski",
-    "position": "Founder/CEO",
-    "organization": "Suggesterfy",
-    "comment": "I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formester was super easy to set up, and the usability is seamless! I highly recommend!",
-    "createdAt": "2024-06-18T03:52:39.354Z",
-    "updatedAt": "2025-01-22T02:57:47.756Z",
-    "publishedAt": "2024-06-18T03:52:43.800Z",
-    "companyLogo": {
-      "id": 226,
-      "imageAlt": "suggesterfy-logo",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 1683,
-        "name": "suggesterfy_logo.webp",
-        "alternativeText": "suggesterfy-logo",
-        "caption": "suggesterfy-logo",
-        "width": 100,
-        "height": 50,
-        "formats": null,
-        "hash": "suggesterfy_logo_d1d7f996b9",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 1.91,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/suggesterfy_logo_d1d7f996b9.webp",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2024-08-01T14:38:23.921Z",
-        "updatedAt": "2024-12-01T07:49:52.459Z"
-      }
-    }
+    id: 5,
+    name: 'Deanna Bugalski',
+    position: 'Founder/CEO',
+    organization: 'Suggesterfy',
+    comment:
+      'I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formester was super easy to set up, and the usability is seamless! I highly recommend!',
+    createdAt: '2024-06-18T03:52:39.354Z',
+    updatedAt: '2025-01-22T02:57:47.756Z',
+    publishedAt: '2024-06-18T03:52:43.800Z',
+    companyLogo: {
+      id: 226,
+      imageAlt: 'suggesterfy-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1683,
+        name: 'suggesterfy_logo.webp',
+        alternativeText: 'suggesterfy-logo',
+        caption: 'suggesterfy-logo',
+        width: 100,
+        height: 50,
+        formats: null,
+        hash: 'suggesterfy_logo_d1d7f996b9',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.91,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/suggesterfy_logo_d1d7f996b9.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.921Z',
+        updatedAt: '2024-12-01T07:49:52.459Z',
+      },
+    },
   },
   {
-    "id": 6,
-    "name": "Thibaud Martinez",
-    "position": "Organiser",
-    "organization": "Tedx",
-    "comment": "I really enjoy Formester. It’s clean and straight-forward and it does well, what it is supposed to do.",
-    "createdAt": "2024-06-18T03:53:38.957Z",
-    "updatedAt": "2025-01-22T02:56:48.567Z",
-    "publishedAt": "2024-06-18T03:53:40.693Z",
-    "companyLogo": {
-      "id": 229,
-      "imageAlt": "tedx-logo",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 1684,
-        "name": "tedx.webp",
-        "alternativeText": "tedx-logo",
-        "caption": "tedx-logo",
-        "width": 109,
-        "height": 38,
-        "formats": null,
-        "hash": "tedx_2fce0eee2e",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 1.09,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/tedx_2fce0eee2e.webp",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2024-08-01T14:38:23.941Z",
-        "updatedAt": "2024-12-01T07:50:31.505Z"
-      }
-    }
+    id: 6,
+    name: 'Thibaud Martinez',
+    position: 'Organiser',
+    organization: 'Tedx',
+    comment: 'I really enjoy Formester. It’s clean and straight-forward and it does well, what it is supposed to do.',
+    createdAt: '2024-06-18T03:53:38.957Z',
+    updatedAt: '2025-01-22T02:56:48.567Z',
+    publishedAt: '2024-06-18T03:53:40.693Z',
+    companyLogo: {
+      id: 229,
+      imageAlt: 'tedx-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1684,
+        name: 'tedx.webp',
+        alternativeText: 'tedx-logo',
+        caption: 'tedx-logo',
+        width: 109,
+        height: 38,
+        formats: null,
+        hash: 'tedx_2fce0eee2e',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.09,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/tedx_2fce0eee2e.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.941Z',
+        updatedAt: '2024-12-01T07:50:31.505Z',
+      },
+    },
   },
   {
-    "id": 34,
-    "name": "Bency",
-    "position": "Product Manager",
-    "organization": "Northgate Digital Solutions",
-    "comment": "Formester's AI form generator transformed how quickly we build forms. The drag-and-drop builder paired with AI-generated templates means I can spin up a survey or poll in minutes, not hours. Conditional logic, file uploads, and seamless integrations make it incredibly versatile and the customization options let every form match our branding perfectly. Their support team is exceptional too. It's the only form and survey tool we recommend",
-    "createdAt": "2025-06-29T23:23:10.541Z",
-    "updatedAt": "2026-05-03T09:30:00.533Z",
-    "publishedAt": "2026-05-03T09:30:00.530Z",
-    "companyLogo": {
-      "id": 3652,
-      "imageAlt": null,
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": null
-    }
+    id: 34,
+    name: 'Bency',
+    position: 'Product Manager',
+    organization: 'Northgate Digital Solutions',
+    comment:
+      "Formester's AI form generator transformed how quickly we build forms. The drag-and-drop builder paired with AI-generated templates means I can spin up a survey or poll in minutes, not hours. Conditional logic, file uploads, and seamless integrations make it incredibly versatile and the customization options let every form match our branding perfectly. Their support team is exceptional too. It's the only form and survey tool we recommend",
+    createdAt: '2025-06-29T23:23:10.541Z',
+    updatedAt: '2026-05-03T09:30:00.533Z',
+    publishedAt: '2026-05-03T09:30:00.530Z',
+    companyLogo: {
+      id: 3652,
+      imageAlt: null,
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: null,
+    },
   },
   {
-    "id": 35,
-    "name": "Roger",
-    "position": "Marketing Specialist",
-    "organization": "BrightPath Technologies",
-    "comment": "I use Formester for my form-building needs and I’m thoroughly impressed. The platform is rich with features… What really sets them apart is their exceptional customer service (responses typically within 10 minutes). The pricing is also very reasonable… Highly recommended!\n",
-    "createdAt": "2025-06-29T23:29:19.225Z",
-    "updatedAt": "2025-10-31T04:00:58.697Z",
-    "publishedAt": "2025-06-29T23:29:21.134Z",
-    "companyLogo": {
-      "id": 3649,
-      "imageAlt": "brightpath-logo",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4094,
-        "name": "brightpath-logo.png",
-        "alternativeText": "brightpath-logo",
-        "caption": "brightpath-logo",
-        "width": 200,
-        "height": 49,
-        "formats": null,
-        "hash": "brightpath_logo_6ef0922a60",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 2.5,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/brightpath_logo_6ef0922a60.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-10-31T04:00:11.712Z",
-        "updatedAt": "2025-10-31T04:00:11.712Z"
-      }
-    }
+    id: 35,
+    name: 'Roger',
+    position: 'Marketing Specialist',
+    organization: 'BrightPath Technologies',
+    comment:
+      'I use Formester for my form-building needs and I’m thoroughly impressed. The platform is rich with features… What really sets them apart is their exceptional customer service (responses typically within 10 minutes). The pricing is also very reasonable… Highly recommended!\n',
+    createdAt: '2025-06-29T23:29:19.225Z',
+    updatedAt: '2025-10-31T04:00:58.697Z',
+    publishedAt: '2025-06-29T23:29:21.134Z',
+    companyLogo: {
+      id: 3649,
+      imageAlt: 'brightpath-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4094,
+        name: 'brightpath-logo.png',
+        alternativeText: 'brightpath-logo',
+        caption: 'brightpath-logo',
+        width: 200,
+        height: 49,
+        formats: null,
+        hash: 'brightpath_logo_6ef0922a60',
+        ext: '.png',
+        mime: 'image/png',
+        size: 2.5,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/brightpath_logo_6ef0922a60.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-31T04:00:11.712Z',
+        updatedAt: '2025-10-31T04:00:11.712Z',
+      },
+    },
   },
   {
-    "id": 36,
-    "name": "Ye Qi Lai",
-    "position": "UX Designer",
-    "organization": "Eastview Consulting",
-    "comment": "Formester is one of the best underrated survey tools out there… It’s extremely customizable… Their support is awesome… I absolutely recommend this to anyone looking for an alternative to the usual form creators.",
-    "createdAt": "2025-06-29T23:30:04.374Z",
-    "updatedAt": "2025-10-31T04:00:30.746Z",
-    "publishedAt": "2025-06-29T23:30:06.260Z",
-    "companyLogo": {
-      "id": 3648,
-      "imageAlt": "eastview-logo-header",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4097,
-        "name": "eastview-logo-header-300x120 1.png",
-        "alternativeText": "eastview-logo-header",
-        "caption": "eastview-logo-header",
-        "width": 200,
-        "height": 80,
-        "formats": null,
-        "hash": "eastview_logo_header_300x120_1_d9c231e93b",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 3.18,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/eastview_logo_header_300x120_1_d9c231e93b.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-10-31T04:00:11.854Z",
-        "updatedAt": "2025-10-31T04:00:11.854Z"
-      }
-    }
-  }
+    id: 36,
+    name: 'Ye Qi Lai',
+    position: 'UX Designer',
+    organization: 'Eastview Consulting',
+    comment:
+      'Formester is one of the best underrated survey tools out there… It’s extremely customizable… Their support is awesome… I absolutely recommend this to anyone looking for an alternative to the usual form creators.',
+    createdAt: '2025-06-29T23:30:04.374Z',
+    updatedAt: '2025-10-31T04:00:30.746Z',
+    publishedAt: '2025-06-29T23:30:06.260Z',
+    companyLogo: {
+      id: 3648,
+      imageAlt: 'eastview-logo-header',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4097,
+        name: 'eastview-logo-header-300x120 1.png',
+        alternativeText: 'eastview-logo-header',
+        caption: 'eastview-logo-header',
+        width: 200,
+        height: 80,
+        formats: null,
+        hash: 'eastview_logo_header_300x120_1_d9c231e93b',
+        ext: '.png',
+        mime: 'image/png',
+        size: 3.18,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/eastview_logo_header_300x120_1_d9c231e93b.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-31T04:00:11.854Z',
+        updatedAt: '2025-10-31T04:00:11.854Z',
+      },
+    },
+  },
 ]
 const c6_title = [
   {
-    "id": 4592,
-    "text": "Auto Unique ID FAQs",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4592,
+    text: 'Auto Unique ID FAQs',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c6_faqList = [
   {
-    "id": 2238,
-    "header": "What is a unique form ID in Formester?",
-    "body": "A unique form ID is an identifier automatically assigned to every form response. The Auto Unique ID field gives each submission its own reference number so you can track, manage, and look up any entry — no two responses ever share the same ID.",
-    "body_markdown": null,
-    "list": []
+    id: 2238,
+    header: 'What is a unique form ID in Formester?',
+    body: 'A unique form ID is an identifier automatically assigned to every form response. The Auto Unique ID field gives each submission its own reference number so you can track, manage, and look up any entry — no two responses ever share the same ID.',
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2241,
-    "header": "How does the Auto Unique ID feature work?",
-    "body": "Drag the Auto Unique ID field into your form and Formester generates a unique ID for every submission automatically. The field is hidden from respondents but appears alongside each response in your dashboard, ready for tracking and record keeping.",
-    "body_markdown": null,
-    "list": []
+    id: 2241,
+    header: 'How does the Auto Unique ID feature work?',
+    body: 'Drag the Auto Unique ID field into your form and Formester generates a unique ID for every submission automatically. The field is hidden from respondents but appears alongside each response in your dashboard, ready for tracking and record keeping.',
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2239,
-    "header": "Can I customize the format of the submission ID?",
-    "body": "Yes. Add a prefix for context (such as ORD for orders or REG for registrations), set the number of digits, and choose the starting count. A 5-digit ID starting at 1 with the prefix REG produces REG-00001, REG-00002, and so on.",
-    "body_markdown": null,
-    "list": []
+    id: 2239,
+    header: 'Can I customize the format of the submission ID?',
+    body: 'Yes. Add a prefix for context (such as ORD for orders or REG for registrations), set the number of digits, and choose the starting count. A 5-digit ID starting at 1 with the prefix REG produces REG-00001, REG-00002, and so on.',
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2243,
-    "header": "Does the unique form ID change if I edit a submission?",
-    "body": "No. Once generated, the unique ID is fixed for the life of the submission. Editing a response never changes its ID, so your references stay reliable and your records stay consistent.",
-    "body_markdown": null,
-    "list": []
+    id: 2243,
+    header: 'Does the unique form ID change if I edit a submission?',
+    body: 'No. Once generated, the unique ID is fixed for the life of the submission. Editing a response never changes its ID, so your references stay reliable and your records stay consistent.',
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2242,
-    "header": "Can I search and filter submissions using the unique ID?",
-    "body": "Yes. Every unique ID is searchable in your dashboard, so you can sort, filter, and jump straight to a specific entry. Quoting a single reference number is far faster than scrolling through rows of responses.",
-    "body_markdown": null,
-    "list": []
+    id: 2242,
+    header: 'Can I search and filter submissions using the unique ID?',
+    body: 'Yes. Every unique ID is searchable in your dashboard, so you can sort, filter, and jump straight to a specific entry. Quoting a single reference number is far faster than scrolling through rows of responses.',
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2240,
-    "header": "Is the Auto Unique ID field free to use?",
-    "body": "Yes. Add the Auto Unique ID field to any form on Formester's free plan, set your prefix and format, and start collecting trackable submissions — no code and no credit card required.",
-    "body_markdown": null,
-    "list": []
-  }
+    id: 2240,
+    header: 'Is the Auto Unique ID field free to use?',
+    body: "Yes. Add the Auto Unique ID field to any form on Formester's free plan, set your prefix and format, and start collecting trackable submissions — no code and no credit card required.",
+    body_markdown: null,
+    list: [],
+  },
 ]
 const c7_buttons = [
   {
-    "id": 1486,
-    "link": "https://app.formester.com/users/sign_up",
-    "text": "Get Started — It's Free",
-    "type": "Primary",
-    "showArrow": true
+    id: 1486,
+    link: 'https://app.formester.com/users/sign_up',
+    text: "Get Started — It's Free",
+    type: 'Primary',
+    showArrow: true,
   },
   {
-    "id": 1487,
-    "link": "/pricing",
-    "text": "See pricing",
-    "type": "White",
-    "showArrow": false
-  }
+    id: 1487,
+    link: '/pricing',
+    text: 'See pricing',
+    type: 'White',
+    showArrow: false,
+  },
 ]
 
 useHead({
-  "title": "Auto Unique ID | Generate a Unique ID for Every Form Submission",
-  "link": [
+  title: 'Auto Unique ID | Generate a Unique ID for Every Form Submission',
+  link: [
     {
-      "hid": "canonical",
-      "rel": "canonical",
-      "href": "https://formester.com/features/auto-unique-id/"
-    }
+      hid: 'canonical',
+      rel: 'canonical',
+      href: 'https://formester.com/features/auto-unique-id/',
+    },
   ],
-  "meta": [
+  meta: [
     {
-      "property": "article:modified_time",
-      "content": "2026-06-15T10:45:39.386Z"
+      property: 'article:modified_time',
+      content: '2026-06-15T10:45:39.386Z',
     },
     {
-      "hid": "description",
-      "name": "description",
-      "content": "Automatically stamp every form submission with its own unique ID. Add a custom prefix, set the digit length, and pick a starting number — perfect for tracking applications, orders, registrations, and support tickets. No coding required."
+      hid: 'description',
+      name: 'description',
+      content:
+        'Automatically stamp every form submission with its own unique ID. Add a custom prefix, set the digit length, and pick a starting number — perfect for tracking applications, orders, registrations, and support tickets. No coding required.',
     },
     {
-      "hid": "og:site_name",
-      "name": "og:site_name",
-      "content": "Auto Unique ID | Generate a Unique ID for Every Form Submission"
+      hid: 'og:site_name',
+      name: 'og:site_name',
+      content: 'Auto Unique ID | Generate a Unique ID for Every Form Submission',
     },
     {
-      "hid": "og:type",
-      "property": "og:type",
-      "content": "website"
+      hid: 'og:type',
+      property: 'og:type',
+      content: 'website',
     },
     {
-      "hid": "og:url",
-      "property": "og:url",
-      "content": "https://formester.com/features/auto-unique-id/"
+      hid: 'og:url',
+      property: 'og:url',
+      content: 'https://formester.com/features/auto-unique-id/',
     },
     {
-      "hid": "og:title",
-      "property": "og:title",
-      "content": "Auto Unique ID | Generate a Unique ID for Every Form Submission"
+      hid: 'og:title',
+      property: 'og:title',
+      content: 'Auto Unique ID | Generate a Unique ID for Every Form Submission',
     },
     {
-      "hid": "og:description",
-      "property": "og:description",
-      "content": "Automatically stamp every form submission with its own unique ID. Add a custom prefix, set the digit length, and pick a starting number — perfect for tracking applications, orders, registrations, and support tickets. No coding required."
+      hid: 'og:description',
+      property: 'og:description',
+      content:
+        'Automatically stamp every form submission with its own unique ID. Add a custom prefix, set the digit length, and pick a starting number — perfect for tracking applications, orders, registrations, and support tickets. No coding required.',
     },
     {
-      "hid": "og:image",
-      "property": "og:image",
-      "content": "https://formester.com/formester-logo-meta-image.png"
+      hid: 'og:image',
+      property: 'og:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
     },
     {
-      "hid": "og:image:alt",
-      "name": "og:image:alt",
-      "content": "Formester Logo"
+      hid: 'og:image:alt',
+      name: 'og:image:alt',
+      content: 'Formester Logo',
     },
     {
-      "hid": "twitter:url",
-      "name": "twitter:url",
-      "content": "https://formester.com/features/auto-unique-id/"
+      hid: 'twitter:url',
+      name: 'twitter:url',
+      content: 'https://formester.com/features/auto-unique-id/',
     },
     {
-      "name": "twitter:site",
-      "content": "@_formester_"
+      name: 'twitter:site',
+      content: '@_formester_',
     },
     {
-      "hid": "twitter:title",
-      "name": "twitter:title",
-      "content": "Auto Unique ID | Generate a Unique ID for Every Form Submission"
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: 'Auto Unique ID | Generate a Unique ID for Every Form Submission',
     },
     {
-      "hid": "twitter:description",
-      "name": "twitter:description",
-      "content": "Automatically stamp every form submission with its own unique ID. Add a custom prefix, set the digit length, and pick a starting number — perfect for tracking applications, orders, registrations, and support tickets. No coding required."
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content:
+        'Automatically stamp every form submission with its own unique ID. Add a custom prefix, set the digit length, and pick a starting number — perfect for tracking applications, orders, registrations, and support tickets. No coding required.',
     },
     {
-      "hid": "twitter:image",
-      "name": "twitter:image",
-      "content": "https://formester.com/formester-logo-meta-image.png"
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
     },
     {
-      "hid": "twitter:image:alt",
-      "name": "twitter:image:alt",
-      "content": "Formester Logo"
+      hid: 'twitter:image:alt',
+      name: 'twitter:image:alt',
+      content: 'Formester Logo',
     },
     {
-      "hid": "twitter:card",
-      "name": "twitter:card",
-      "content": "summary_large_image"
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image',
     },
     {
-      "hid": "apple-mobile-web-app-title",
-      "name": "apple-mobile-web-app-title",
-      "content": "Formester"
+      hid: 'apple-mobile-web-app-title',
+      name: 'apple-mobile-web-app-title',
+      content: 'Formester',
     },
     {
-      "hid": "image",
-      "name": "image",
-      "property": "og:image",
-      "content": "https://formester.com/formester-logo-meta-image.png"
+      hid: 'image',
+      name: 'image',
+      property: 'og:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
     },
     {
-      "hid": "keywords",
-      "name": "keywords",
-      "content": [
-        "unique form id generator"
-      ]
-    }
-  ]
+      hid: 'keywords',
+      name: 'keywords',
+      content: ['unique form id generator'],
+    },
+  ],
 })
 useJsonld([
   {
-    "@context": "https://schema.org",
-    "url": "https://formester.com",
-    "logo": "https://formester.com/logo.svg",
-    "name": "Formester",
-    "@type": "Organization"
+    '@context': 'https://schema.org',
+    url: 'https://formester.com',
+    logo: 'https://formester.com/logo.svg',
+    name: 'Formester',
+    '@type': 'Organization',
   },
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
       {
-        "name": "What is a unique form ID in Formester?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "A unique form ID is an identifier automatically assigned to every form response. The Auto Unique ID field gives each submission its own reference number so you can track, manage, and look up any entry — no two responses ever share the same ID.",
-          "@type": "Answer"
-        }
+        name: 'What is a unique form ID in Formester?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'A unique form ID is an identifier automatically assigned to every form response. The Auto Unique ID field gives each submission its own reference number so you can track, manage, and look up any entry — no two responses ever share the same ID.',
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "How does the Auto Unique ID feature work?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "Drag the Auto Unique ID field into your form and Formester generates a unique ID for every submission automatically. The field is hidden from respondents but appears alongside each response in your dashboard, ready for tracking and record keeping.",
-          "@type": "Answer"
-        }
+        name: 'How does the Auto Unique ID feature work?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'Drag the Auto Unique ID field into your form and Formester generates a unique ID for every submission automatically. The field is hidden from respondents but appears alongside each response in your dashboard, ready for tracking and record keeping.',
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "Can I customize the format of the submission ID?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "Yes. Add a prefix for context (such as ORD for orders or REG for registrations), set the number of digits, and choose the starting count. A 5-digit ID starting at 1 with the prefix REG produces REG-00001, REG-00002, and so on.",
-          "@type": "Answer"
-        }
+        name: 'Can I customize the format of the submission ID?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'Yes. Add a prefix for context (such as ORD for orders or REG for registrations), set the number of digits, and choose the starting count. A 5-digit ID starting at 1 with the prefix REG produces REG-00001, REG-00002, and so on.',
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "Does the unique form ID change if I edit a submission?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "No. Once generated, the unique ID is fixed for the life of the submission. Editing a response never changes its ID, so your references stay reliable and your records stay consistent.",
-          "@type": "Answer"
-        }
+        name: 'Does the unique form ID change if I edit a submission?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'No. Once generated, the unique ID is fixed for the life of the submission. Editing a response never changes its ID, so your references stay reliable and your records stay consistent.',
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "Can I search and filter submissions using the unique ID?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "Yes. Every unique ID is searchable in your dashboard, so you can sort, filter, and jump straight to a specific entry. Quoting a single reference number is far faster than scrolling through rows of responses.",
-          "@type": "Answer"
-        }
+        name: 'Can I search and filter submissions using the unique ID?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'Yes. Every unique ID is searchable in your dashboard, so you can sort, filter, and jump straight to a specific entry. Quoting a single reference number is far faster than scrolling through rows of responses.',
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "Is the Auto Unique ID field free to use?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "Yes. Add the Auto Unique ID field to any form on Formester's free plan, set your prefix and format, and start collecting trackable submissions — no code and no credit card required.",
-          "@type": "Answer"
-        }
-      }
-    ]
-  }
+        name: 'Is the Auto Unique ID field free to use?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: "Yes. Add the Auto Unique ID field to any form on Formester's free plan, set your prefix and format, and start collecting trackable submissions — no code and no credit card required.",
+          '@type': 'Answer',
+        },
+      },
+    ],
+  },
 ])
 </script>

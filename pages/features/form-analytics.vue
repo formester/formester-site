@@ -31,12 +31,7 @@
       class="page-component-item"
     />
 
-    <AlternatingRows
-      eyebrow="How it helps"
-      :title="c3_title"
-      :rows="c3_rows"
-      class="page-component-item"
-    />
+    <AlternatingRows eyebrow="How it helps" :title="c3_title" :rows="c3_rows" class="page-component-item" />
 
     <StatsBanner
       variant="band"
@@ -70,12 +65,7 @@
       class="page-component-item"
     />
 
-    <FaqSection
-      centered
-      :title="c8_title"
-      :faqList="c8_faqList"
-      class="page-component-item"
-    />
+    <FaqSection centered :title="c8_title" :faqList="c8_faqList" class="page-component-item" />
 
     <CtaDark
       badge="Free to start"
@@ -98,702 +88,718 @@ import StatsBanner from '@/components/v2/StatsBanner.vue'
 import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
 import TrustSeals from '@/components/v2/TrustSeals.vue'
 
-const c0_description = "See how people interact with your forms — views, submissions, time to complete, drop-off, top countries, and devices. Find the page that loses users and turn data into more submissions."
-const c0_mockupHtml = "<div style='max-width:600px;margin:0 auto;background:#fff;border:1px solid #eaecf0;border-radius:16px;box-shadow:0 24px 80px rgba(15,14,26,.12),0 8px 24px rgba(15,14,26,.06);overflow:hidden;'><div style='display:flex;align-items:center;gap:6px;padding:12px 16px;background:#f9fafb;border-bottom:1px solid #eaecf0;'><span style='width:11px;height:11px;border-radius:50%;background:#ff6058;'></span><span style='width:11px;height:11px;border-radius:50%;background:#ffbd2e;'></span><span style='width:11px;height:11px;border-radius:50%;background:#27c93f;'></span><span style='margin-left:10px;font-size:12px;color:#697586;'>app.formester.com · Analytics</span></div><div style='padding:18px;text-align:left;'><div style='display:flex;gap:22px;margin-bottom:16px;'><div><div style='font-size:22px;font-weight:700;color:#101828;letter-spacing:-.02em;'>4,820</div><div style='font-size:11px;color:#697586;'>Views</div></div><div><div style='font-size:22px;font-weight:700;color:#6434d0;letter-spacing:-.02em;'>2,988</div><div style='font-size:11px;color:#697586;'>Submissions</div></div><div><div style='font-size:22px;font-weight:700;color:#101828;letter-spacing:-.02em;'>38%</div><div style='font-size:11px;color:#697586;'>Drop-off</div></div></div><div style='display:flex;align-items:center;gap:20px;'><div style='flex:1;display:flex;flex-direction:column;gap:9px;'><div style='display:flex;align-items:center;gap:10px;'><span style='width:64px;font-size:11px;color:#697586;'>Page 1</span><span style='flex:1;height:9px;border-radius:5px;background:#e9e4f5;overflow:hidden;'><span style='display:block;width:91%;height:100%;background:#6434d0;'></span></span><span style='font-size:11px;font-weight:600;color:#101828;'>91%</span></div><div style='display:flex;align-items:center;gap:10px;'><span style='width:64px;font-size:11px;color:#697586;'>Page 2</span><span style='flex:1;height:9px;border-radius:5px;background:#e9e4f5;overflow:hidden;'><span style='display:block;width:64%;height:100%;background:linear-gradient(90deg,#fda29b,#d92d20);'></span></span><span style='font-size:11px;font-weight:600;color:#d92d20;'>64%</span></div><div style='display:flex;align-items:center;gap:10px;'><span style='width:64px;font-size:11px;color:#697586;'>Submit</span><span style='flex:1;height:9px;border-radius:5px;background:#e9e4f5;overflow:hidden;'><span style='display:block;width:62%;height:100%;background:#6434d0;'></span></span><span style='font-size:11px;font-weight:600;color:#101828;'>62%</span></div></div><div style='width:84px;height:84px;border-radius:50%;background:conic-gradient(#6434d0 0 38%,#eceaf5 38% 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;'><div style='width:56px;height:56px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;color:#6434d0;font-size:14px;'>38%</div></div></div></div></div>"
+const c0_description =
+  'See how people interact with your forms — views, submissions, time to complete, drop-off, top countries, and devices. Find the page that loses users and turn data into more submissions.'
+const c0_mockupHtml =
+  "<div style='max-width:600px;margin:0 auto;background:#fff;border:1px solid #eaecf0;border-radius:16px;box-shadow:0 24px 80px rgba(15,14,26,.12),0 8px 24px rgba(15,14,26,.06);overflow:hidden;'><div style='display:flex;align-items:center;gap:6px;padding:12px 16px;background:#f9fafb;border-bottom:1px solid #eaecf0;'><span style='width:11px;height:11px;border-radius:50%;background:#ff6058;'></span><span style='width:11px;height:11px;border-radius:50%;background:#ffbd2e;'></span><span style='width:11px;height:11px;border-radius:50%;background:#27c93f;'></span><span style='margin-left:10px;font-size:12px;color:#697586;'>app.formester.com · Analytics</span></div><div style='padding:18px;text-align:left;'><div style='display:flex;gap:22px;margin-bottom:16px;'><div><div style='font-size:22px;font-weight:700;color:#101828;letter-spacing:-.02em;'>4,820</div><div style='font-size:11px;color:#697586;'>Views</div></div><div><div style='font-size:22px;font-weight:700;color:#6434d0;letter-spacing:-.02em;'>2,988</div><div style='font-size:11px;color:#697586;'>Submissions</div></div><div><div style='font-size:22px;font-weight:700;color:#101828;letter-spacing:-.02em;'>38%</div><div style='font-size:11px;color:#697586;'>Drop-off</div></div></div><div style='display:flex;align-items:center;gap:20px;'><div style='flex:1;display:flex;flex-direction:column;gap:9px;'><div style='display:flex;align-items:center;gap:10px;'><span style='width:64px;font-size:11px;color:#697586;'>Page 1</span><span style='flex:1;height:9px;border-radius:5px;background:#e9e4f5;overflow:hidden;'><span style='display:block;width:91%;height:100%;background:#6434d0;'></span></span><span style='font-size:11px;font-weight:600;color:#101828;'>91%</span></div><div style='display:flex;align-items:center;gap:10px;'><span style='width:64px;font-size:11px;color:#697586;'>Page 2</span><span style='flex:1;height:9px;border-radius:5px;background:#e9e4f5;overflow:hidden;'><span style='display:block;width:64%;height:100%;background:linear-gradient(90deg,#fda29b,#d92d20);'></span></span><span style='font-size:11px;font-weight:600;color:#d92d20;'>64%</span></div><div style='display:flex;align-items:center;gap:10px;'><span style='width:64px;font-size:11px;color:#697586;'>Submit</span><span style='flex:1;height:9px;border-radius:5px;background:#e9e4f5;overflow:hidden;'><span style='display:block;width:62%;height:100%;background:#6434d0;'></span></span><span style='font-size:11px;font-weight:600;color:#101828;'>62%</span></div></div><div style='width:84px;height:84px;border-radius:50%;background:conic-gradient(#6434d0 0 38%,#eceaf5 38% 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;'><div style='width:56px;height:56px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;color:#6434d0;font-size:14px;'>38%</div></div></div></div></div>"
 const c0_title = [
   {
-    "id": 4756,
-    "text": "Measure every form, ",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
+    id: 4756,
+    text: 'Measure every form, ',
+    highlight: false,
+    color: '#475467',
+    bold: false,
   },
   {
-    "id": 4757,
-    "text": "improve every conversion",
-    "highlight": true,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4757,
+    text: 'improve every conversion',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c0_buttons = [
   {
-    "id": 1558,
-    "link": "https://app.formester.com/users/sign_up",
-    "text": "Get Started — It's Free",
-    "type": "Primary",
-    "showArrow": true
+    id: 1558,
+    link: 'https://app.formester.com/users/sign_up',
+    text: "Get Started — It's Free",
+    type: 'Primary',
+    showArrow: true,
   },
   {
-    "id": 1559,
-    "link": "/pricing",
-    "text": "See pricing",
-    "type": "Secondary",
-    "showArrow": false
-  }
+    id: 1559,
+    link: '/pricing',
+    text: 'See pricing',
+    type: 'Secondary',
+    showArrow: false,
+  },
 ]
 const c0_badge = {
-  "id": 86,
-  "text": "Form Analytics",
-  "tag": null,
-  "link": null
+  id: 86,
+  text: 'Form Analytics',
+  tag: null,
+  link: null,
 }
 const c0_tabCardContent = []
 const c1_title = []
 const c1_logos = []
-const c2_description = "No setup, no tracking code to install. The moment your form goes live, Formester tracks views, submissions, time to complete, drop-off, top countries, and devices automatically."
+const c2_description =
+  'No setup, no tracking code to install. The moment your form goes live, Formester tracks views, submissions, time to complete, drop-off, top countries, and devices automatically.'
 const c2_stats = [
   {
-    "id": 91,
-    "value": "6",
-    "label": "metrics tracked automatically — views, submissions, time to complete, drop-off rate, top countries, and views & submissions by device"
-  }
+    id: 91,
+    value: '6',
+    label:
+      'metrics tracked automatically — views, submissions, time to complete, drop-off rate, top countries, and views & submissions by device',
+  },
 ]
 const c3_title = [
   {
-    "id": 4750,
-    "text": "Understand your forms,",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
+    id: 4750,
+    text: 'Understand your forms,',
+    highlight: false,
+    color: '#475467',
+    bold: false,
   },
   {
-    "id": 4748,
-    "text": "then improve them",
-    "highlight": true,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4748,
+    text: 'then improve them',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c3_rows = [
   {
-    "id": 93,
-    "kicker": "Know your audience",
-    "title": "See who fills out your forms",
-    "body": "See where your form's traffic comes from and how people complete it — top countries, device split, and time to complete.",
-    "mediaHtml": "<div style='background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 8px 24px rgba(15,14,26,.06);padding:18px;'><div style='font-size:12px;font-weight:600;color:#697586;margin-bottom:12px;'>Devices</div><div style='display:flex;flex-direction:column;gap:10px;'><div style='display:flex;align-items:center;gap:10px;'><span style='width:70px;font-size:12px;color:#475467;'>Desktop</span><span style='flex:1;height:10px;border-radius:5px;background:#eef0f4;overflow:hidden;'><span style='display:block;width:58%;height:100%;background:#6434d0;'></span></span><span style='font-size:12px;font-weight:600;color:#101828;'>58%</span></div><div style='display:flex;align-items:center;gap:10px;'><span style='width:70px;font-size:12px;color:#475467;'>Mobile</span><span style='flex:1;height:10px;border-radius:5px;background:#eef0f4;overflow:hidden;'><span style='display:block;width:34%;height:100%;background:#7c4ce0;'></span></span><span style='font-size:12px;font-weight:600;color:#101828;'>34%</span></div><div style='display:flex;align-items:center;gap:10px;'><span style='width:70px;font-size:12px;color:#475467;'>Tablet</span><span style='flex:1;height:10px;border-radius:5px;background:#eef0f4;overflow:hidden;'><span style='display:block;width:8%;height:100%;background:#b9a6ec;'></span></span><span style='font-size:12px;font-weight:600;color:#101828;'>8%</span></div></div></div>"
+    id: 93,
+    kicker: 'Know your audience',
+    title: 'See who fills out your forms',
+    body: "See where your form's traffic comes from and how people complete it — top countries, device split, and time to complete.",
+    mediaHtml:
+      "<div style='background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 8px 24px rgba(15,14,26,.06);padding:18px;'><div style='font-size:12px;font-weight:600;color:#697586;margin-bottom:12px;'>Devices</div><div style='display:flex;flex-direction:column;gap:10px;'><div style='display:flex;align-items:center;gap:10px;'><span style='width:70px;font-size:12px;color:#475467;'>Desktop</span><span style='flex:1;height:10px;border-radius:5px;background:#eef0f4;overflow:hidden;'><span style='display:block;width:58%;height:100%;background:#6434d0;'></span></span><span style='font-size:12px;font-weight:600;color:#101828;'>58%</span></div><div style='display:flex;align-items:center;gap:10px;'><span style='width:70px;font-size:12px;color:#475467;'>Mobile</span><span style='flex:1;height:10px;border-radius:5px;background:#eef0f4;overflow:hidden;'><span style='display:block;width:34%;height:100%;background:#7c4ce0;'></span></span><span style='font-size:12px;font-weight:600;color:#101828;'>34%</span></div><div style='display:flex;align-items:center;gap:10px;'><span style='width:70px;font-size:12px;color:#475467;'>Tablet</span><span style='flex:1;height:10px;border-radius:5px;background:#eef0f4;overflow:hidden;'><span style='display:block;width:8%;height:100%;background:#b9a6ec;'></span></span><span style='font-size:12px;font-weight:600;color:#101828;'>8%</span></div></div></div>",
   },
   {
-    "id": 92,
-    "kicker": "Reduce abandonment",
-    "title": "Find exactly where users drop off",
-    "body": "Drop-off analysis shows the page where people leave, so you can fix the problem step and recover more submissions.",
-    "mediaHtml": "<div style='background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 8px 24px rgba(15,14,26,.06);padding:18px;'><div style='font-size:12px;font-weight:600;color:#697586;margin-bottom:12px;'>Drop-off by page</div><div style='display:flex;flex-direction:column;gap:8px;'><div style='display:flex;align-items:center;gap:10px;'><span style='width:60px;font-size:12px;color:#475467;'>Page 1</span><span style='flex:1;height:10px;border-radius:5px;background:#eef0f4;overflow:hidden;'><span style='display:block;width:6%;height:100%;background:#6434d0;'></span></span><span style='font-size:12px;font-weight:600;color:#101828;'>6%</span></div><div style='display:flex;align-items:center;gap:10px;'><span style='width:60px;font-size:12px;color:#475467;'>Page 2</span><span style='flex:1;height:10px;border-radius:5px;background:#eef0f4;overflow:hidden;'><span style='display:block;width:12%;height:100%;background:#6434d0;'></span></span><span style='font-size:12px;font-weight:600;color:#101828;'>12%</span></div><div style='display:flex;align-items:center;gap:10px;'><span style='width:60px;font-size:12px;color:#d92d20;font-weight:600;'>Page 3</span><span style='flex:1;height:10px;border-radius:5px;background:#eef0f4;overflow:hidden;'><span style='display:block;width:46%;height:100%;background:linear-gradient(90deg,#fda29b,#d92d20);'></span></span><span style='font-size:12px;font-weight:700;color:#d92d20;'>46%</span></div></div><div style='margin-top:10px;font-size:11px;color:#b42318;background:#fef3f2;border-radius:7px;padding:6px 9px;'>46% drop on Page 3 — consider shortening it</div></div>"
+    id: 92,
+    kicker: 'Reduce abandonment',
+    title: 'Find exactly where users drop off',
+    body: 'Drop-off analysis shows the page where people leave, so you can fix the problem step and recover more submissions.',
+    mediaHtml:
+      "<div style='background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 8px 24px rgba(15,14,26,.06);padding:18px;'><div style='font-size:12px;font-weight:600;color:#697586;margin-bottom:12px;'>Drop-off by page</div><div style='display:flex;flex-direction:column;gap:8px;'><div style='display:flex;align-items:center;gap:10px;'><span style='width:60px;font-size:12px;color:#475467;'>Page 1</span><span style='flex:1;height:10px;border-radius:5px;background:#eef0f4;overflow:hidden;'><span style='display:block;width:6%;height:100%;background:#6434d0;'></span></span><span style='font-size:12px;font-weight:600;color:#101828;'>6%</span></div><div style='display:flex;align-items:center;gap:10px;'><span style='width:60px;font-size:12px;color:#475467;'>Page 2</span><span style='flex:1;height:10px;border-radius:5px;background:#eef0f4;overflow:hidden;'><span style='display:block;width:12%;height:100%;background:#6434d0;'></span></span><span style='font-size:12px;font-weight:600;color:#101828;'>12%</span></div><div style='display:flex;align-items:center;gap:10px;'><span style='width:60px;font-size:12px;color:#d92d20;font-weight:600;'>Page 3</span><span style='flex:1;height:10px;border-radius:5px;background:#eef0f4;overflow:hidden;'><span style='display:block;width:46%;height:100%;background:linear-gradient(90deg,#fda29b,#d92d20);'></span></span><span style='font-size:12px;font-weight:700;color:#d92d20;'>46%</span></div></div><div style='margin-top:10px;font-size:11px;color:#b42318;background:#fef3f2;border-radius:7px;padding:6px 9px;'>46% drop on Page 3 — consider shortening it</div></div>",
   },
   {
-    "id": 94,
-    "kicker": "Act on it",
-    "title": "Turn insight into more submissions",
-    "body": "Pick any date range and watch submissions, views, and drop-off trends. Use what you learn to tune the form and lift conversions.",
-    "mediaHtml": "<div style='background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 8px 24px rgba(15,14,26,.06);padding:18px;display:flex;align-items:center;gap:18px;'><div style='width:84px;height:84px;border-radius:50%;background:conic-gradient(#6434d0 0 38%,#eceaf5 38% 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;'><div style='width:56px;height:56px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;color:#6434d0;font-size:14px;'>38%</div></div><div style='flex:1;'><div style='font-size:12px;font-weight:600;color:#697586;margin-bottom:8px;'>Last 30 days</div><div style='display:flex;flex-direction:column;gap:7px;'><div style='display:flex;justify-content:space-between;font-size:12px;color:#101828;'><span>Drop-off</span><span style='font-weight:600;color:#027a48;'>▼ 38%</span></div><div style='display:flex;justify-content:space-between;font-size:12px;color:#101828;'><span>Submissions</span><span style='font-weight:600;'>2,988</span></div></div></div></div>"
-  }
+    id: 94,
+    kicker: 'Act on it',
+    title: 'Turn insight into more submissions',
+    body: 'Pick any date range and watch submissions, views, and drop-off trends. Use what you learn to tune the form and lift conversions.',
+    mediaHtml:
+      "<div style='background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 8px 24px rgba(15,14,26,.06);padding:18px;display:flex;align-items:center;gap:18px;'><div style='width:84px;height:84px;border-radius:50%;background:conic-gradient(#6434d0 0 38%,#eceaf5 38% 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;'><div style='width:56px;height:56px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;color:#6434d0;font-size:14px;'>38%</div></div><div style='flex:1;'><div style='font-size:12px;font-weight:600;color:#697586;margin-bottom:8px;'>Last 30 days</div><div style='display:flex;flex-direction:column;gap:7px;'><div style='display:flex;justify-content:space-between;font-size:12px;color:#101828;'><span>Drop-off</span><span style='font-weight:600;color:#027a48;'>▼ 38%</span></div><div style='display:flex;justify-content:space-between;font-size:12px;color:#101828;'><span>Submissions</span><span style='font-weight:600;'>2,988</span></div></div></div></div>",
+  },
 ]
 const c4_stats = [
   {
-    "id": 93,
-    "value": "56k+",
-    "label": "businesses tracking forms"
+    id: 93,
+    value: '56k+',
+    label: 'businesses tracking forms',
   },
   {
-    "id": 94,
-    "value": "CSV",
-    "label": "+ Google Sheets export"
+    id: 94,
+    value: 'CSV',
+    label: '+ Google Sheets export',
   },
   {
-    "id": 90,
-    "value": "All",
-    "label": "devices & locations"
+    id: 90,
+    value: 'All',
+    label: 'devices & locations',
   },
   {
-    "id": 92,
-    "value": "GDPR",
-    "label": "compliant & encrypted"
-  }
+    id: 92,
+    value: 'GDPR',
+    label: 'compliant & encrypted',
+  },
 ]
 const c5_title = [
   {
-    "id": 4749,
-    "text": "Analytics, not just",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
+    id: 4749,
+    text: 'Analytics, not just',
+    highlight: false,
+    color: '#475467',
+    bold: false,
   },
   {
-    "id": 4751,
-    "text": "a response list",
-    "highlight": true,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4751,
+    text: 'a response list',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c5_rows = [
   {
-    "id": 73,
-    "feature": "Page-by-page drop-off",
-    "us": "Built in",
-    "them": "No"
+    id: 73,
+    feature: 'Page-by-page drop-off',
+    us: 'Built in',
+    them: 'No',
   },
   {
-    "id": 75,
-    "feature": "Submissions & drop-off rate",
-    "us": "Tracked automatically",
-    "them": "Manual maths"
+    id: 75,
+    feature: 'Submissions & drop-off rate',
+    us: 'Tracked automatically',
+    them: 'Manual maths',
   },
   {
-    "id": 74,
-    "feature": "Views by country & device",
-    "us": "Built in",
-    "them": "No"
+    id: 74,
+    feature: 'Views by country & device',
+    us: 'Built in',
+    them: 'No',
   },
   {
-    "id": 76,
-    "feature": "Date-range reports",
-    "us": "Any range",
-    "them": "Limited"
+    id: 76,
+    feature: 'Date-range reports',
+    us: 'Any range',
+    them: 'Limited',
   },
   {
-    "id": 78,
-    "feature": "Summary (poll) analytics",
-    "us": "Per question",
-    "them": "No"
+    id: 78,
+    feature: 'Summary (poll) analytics',
+    us: 'Per question',
+    them: 'No',
   },
   {
-    "id": 77,
-    "feature": "Export",
-    "us": "CSV & Google Sheets",
-    "them": "CSV only"
-  }
+    id: 77,
+    feature: 'Export',
+    us: 'CSV & Google Sheets',
+    them: 'CSV only',
+  },
 ]
 const c6_title = [
   {
-    "id": 4752,
-    "text": "Who uses",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
+    id: 4752,
+    text: 'Who uses',
+    highlight: false,
+    color: '#475467',
+    bold: false,
   },
   {
-    "id": 4753,
-    "text": "form analytics",
-    "highlight": true,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4753,
+    text: 'form analytics',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c6_cards = [
   {
-    "id": 587,
-    "tag": "Marketing",
-    "tagColor": "violet",
-    "title": "Campaign performance",
-    "body": "Track submissions and engagement per campaign to see what's converting and double down.",
-    "mockHtml": null,
-    "icon": null
+    id: 587,
+    tag: 'Marketing',
+    tagColor: 'violet',
+    title: 'Campaign performance',
+    body: "Track submissions and engagement per campaign to see what's converting and double down.",
+    mockHtml: null,
+    icon: null,
   },
   {
-    "id": 588,
-    "tag": "HR",
-    "tagColor": "blue",
-    "title": "Hiring & recruitment",
-    "body": "Track where applicants drop off to smooth out the steps that lose candidates.",
-    "mockHtml": null,
-    "icon": null
+    id: 588,
+    tag: 'HR',
+    tagColor: 'blue',
+    title: 'Hiring & recruitment',
+    body: 'Track where applicants drop off to smooth out the steps that lose candidates.',
+    mockHtml: null,
+    icon: null,
   },
   {
-    "id": 589,
-    "tag": "Education",
-    "tagColor": "green",
-    "title": "Registrations",
-    "body": "Track student sign-ups and engagement to manage enrollments and improve programs.",
-    "mockHtml": null,
-    "icon": null
+    id: 589,
+    tag: 'Education',
+    tagColor: 'green',
+    title: 'Registrations',
+    body: 'Track student sign-ups and engagement to manage enrollments and improve programs.',
+    mockHtml: null,
+    icon: null,
   },
   {
-    "id": 590,
-    "tag": "E-commerce",
-    "tagColor": "amber",
-    "title": "Feedback & inquiries",
-    "body": "Measure inquiry and feedback responses to improve the shopping experience and boost sales.",
-    "mockHtml": null,
-    "icon": null
-  }
+    id: 590,
+    tag: 'E-commerce',
+    tagColor: 'amber',
+    title: 'Feedback & inquiries',
+    body: 'Measure inquiry and feedback responses to improve the shopping experience and boost sales.',
+    mockHtml: null,
+    icon: null,
+  },
 ]
 const c7_heading = [
   {
-    "id": 4754,
-    "text": "Teams optimize forms with Formester",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4754,
+    text: 'Teams optimize forms with Formester',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c7_testimonials = [
   {
-    "id": 4,
-    "name": "Costanza Casullo",
-    "position": "Volunteer",
-    "organization": "Wato Coding Hub",
-    "comment": "Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.",
-    "createdAt": "2024-06-18T03:51:15.232Z",
-    "updatedAt": "2025-01-22T02:58:03.674Z",
-    "publishedAt": "2024-06-18T03:51:21.477Z",
-    "companyLogo": {
-      "id": 225,
-      "imageAlt": "wato-coding-hub-logo",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 1681,
-        "name": "wato-coding-hub.webp",
-        "alternativeText": "wato-coding-hub-logo",
-        "caption": "wato-coding-hub-logo",
-        "width": 80,
-        "height": 81,
-        "formats": null,
-        "hash": "wato_coding_hub_e054f0ea9d",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 1.88,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/wato_coding_hub_e054f0ea9d.webp",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2024-08-01T14:38:23.738Z",
-        "updatedAt": "2024-12-01T07:49:13.371Z"
-      }
-    }
+    id: 4,
+    name: 'Costanza Casullo',
+    position: 'Volunteer',
+    organization: 'Wato Coding Hub',
+    comment:
+      "Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.",
+    createdAt: '2024-06-18T03:51:15.232Z',
+    updatedAt: '2025-01-22T02:58:03.674Z',
+    publishedAt: '2024-06-18T03:51:21.477Z',
+    companyLogo: {
+      id: 225,
+      imageAlt: 'wato-coding-hub-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1681,
+        name: 'wato-coding-hub.webp',
+        alternativeText: 'wato-coding-hub-logo',
+        caption: 'wato-coding-hub-logo',
+        width: 80,
+        height: 81,
+        formats: null,
+        hash: 'wato_coding_hub_e054f0ea9d',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.88,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/wato_coding_hub_e054f0ea9d.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.738Z',
+        updatedAt: '2024-12-01T07:49:13.371Z',
+      },
+    },
   },
   {
-    "id": 5,
-    "name": "Deanna Bugalski",
-    "position": "Founder/CEO",
-    "organization": "Suggesterfy",
-    "comment": "I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formester was super easy to set up, and the usability is seamless! I highly recommend!",
-    "createdAt": "2024-06-18T03:52:39.354Z",
-    "updatedAt": "2025-01-22T02:57:47.756Z",
-    "publishedAt": "2024-06-18T03:52:43.800Z",
-    "companyLogo": {
-      "id": 226,
-      "imageAlt": "suggesterfy-logo",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 1683,
-        "name": "suggesterfy_logo.webp",
-        "alternativeText": "suggesterfy-logo",
-        "caption": "suggesterfy-logo",
-        "width": 100,
-        "height": 50,
-        "formats": null,
-        "hash": "suggesterfy_logo_d1d7f996b9",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 1.91,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/suggesterfy_logo_d1d7f996b9.webp",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2024-08-01T14:38:23.921Z",
-        "updatedAt": "2024-12-01T07:49:52.459Z"
-      }
-    }
+    id: 5,
+    name: 'Deanna Bugalski',
+    position: 'Founder/CEO',
+    organization: 'Suggesterfy',
+    comment:
+      'I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formester was super easy to set up, and the usability is seamless! I highly recommend!',
+    createdAt: '2024-06-18T03:52:39.354Z',
+    updatedAt: '2025-01-22T02:57:47.756Z',
+    publishedAt: '2024-06-18T03:52:43.800Z',
+    companyLogo: {
+      id: 226,
+      imageAlt: 'suggesterfy-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1683,
+        name: 'suggesterfy_logo.webp',
+        alternativeText: 'suggesterfy-logo',
+        caption: 'suggesterfy-logo',
+        width: 100,
+        height: 50,
+        formats: null,
+        hash: 'suggesterfy_logo_d1d7f996b9',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.91,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/suggesterfy_logo_d1d7f996b9.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.921Z',
+        updatedAt: '2024-12-01T07:49:52.459Z',
+      },
+    },
   },
   {
-    "id": 1,
-    "name": "Dr. Michele Ross",
-    "position": "Founder",
-    "organization": "Infused Health",
-    "comment": "I'm migrating my forms from Paperform, where I've been a user for over 4 years. Loving the software so far! I've already replaced Paperform form embeds & popups on my sites & my husband's websites with Formester forms",
-    "createdAt": "2024-06-18T03:47:14.605Z",
-    "updatedAt": "2025-01-22T02:57:30.159Z",
-    "publishedAt": "2024-06-18T03:47:18.889Z",
-    "companyLogo": {
-      "id": 227,
-      "imageAlt": "Dr. Michele Ross",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 1685,
-        "name": "dr._michelelogo.webp",
-        "alternativeText": null,
-        "caption": null,
-        "width": 300,
-        "height": 59,
-        "formats": {
-          "thumbnail": {
-            "ext": ".webp",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_dr_michelelogo_2269ae2211.webp",
-            "hash": "thumbnail_dr_michelelogo_2269ae2211",
-            "mime": "image/webp",
-            "name": "thumbnail_dr._michelelogo.webp",
-            "path": null,
-            "size": 5.58,
-            "width": 245,
-            "height": 48
-          }
+    id: 1,
+    name: 'Dr. Michele Ross',
+    position: 'Founder',
+    organization: 'Infused Health',
+    comment:
+      "I'm migrating my forms from Paperform, where I've been a user for over 4 years. Loving the software so far! I've already replaced Paperform form embeds & popups on my sites & my husband's websites with Formester forms",
+    createdAt: '2024-06-18T03:47:14.605Z',
+    updatedAt: '2025-01-22T02:57:30.159Z',
+    publishedAt: '2024-06-18T03:47:18.889Z',
+    companyLogo: {
+      id: 227,
+      imageAlt: 'Dr. Michele Ross',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1685,
+        name: 'dr._michelelogo.webp',
+        alternativeText: null,
+        caption: null,
+        width: 300,
+        height: 59,
+        formats: {
+          thumbnail: {
+            ext: '.webp',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_dr_michelelogo_2269ae2211.webp',
+            hash: 'thumbnail_dr_michelelogo_2269ae2211',
+            mime: 'image/webp',
+            name: 'thumbnail_dr._michelelogo.webp',
+            path: null,
+            size: 5.58,
+            width: 245,
+            height: 48,
+          },
         },
-        "hash": "dr_michelelogo_2269ae2211",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 5.87,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/dr_michelelogo_2269ae2211.webp",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2024-08-01T14:38:23.944Z",
-        "updatedAt": "2024-08-01T14:38:23.944Z"
-      }
-    }
+        hash: 'dr_michelelogo_2269ae2211',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 5.87,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/dr_michelelogo_2269ae2211.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.944Z',
+        updatedAt: '2024-08-01T14:38:23.944Z',
+      },
+    },
   },
   {
-    "id": 35,
-    "name": "Roger",
-    "position": "Marketing Specialist",
-    "organization": "BrightPath Technologies",
-    "comment": "I use Formester for my form-building needs and I’m thoroughly impressed. The platform is rich with features… What really sets them apart is their exceptional customer service (responses typically within 10 minutes). The pricing is also very reasonable… Highly recommended!\n",
-    "createdAt": "2025-06-29T23:29:19.225Z",
-    "updatedAt": "2025-10-31T04:00:58.697Z",
-    "publishedAt": "2025-06-29T23:29:21.134Z",
-    "companyLogo": {
-      "id": 3649,
-      "imageAlt": "brightpath-logo",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4094,
-        "name": "brightpath-logo.png",
-        "alternativeText": "brightpath-logo",
-        "caption": "brightpath-logo",
-        "width": 200,
-        "height": 49,
-        "formats": null,
-        "hash": "brightpath_logo_6ef0922a60",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 2.5,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/brightpath_logo_6ef0922a60.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-10-31T04:00:11.712Z",
-        "updatedAt": "2025-10-31T04:00:11.712Z"
-      }
-    }
+    id: 35,
+    name: 'Roger',
+    position: 'Marketing Specialist',
+    organization: 'BrightPath Technologies',
+    comment:
+      'I use Formester for my form-building needs and I’m thoroughly impressed. The platform is rich with features… What really sets them apart is their exceptional customer service (responses typically within 10 minutes). The pricing is also very reasonable… Highly recommended!\n',
+    createdAt: '2025-06-29T23:29:19.225Z',
+    updatedAt: '2025-10-31T04:00:58.697Z',
+    publishedAt: '2025-06-29T23:29:21.134Z',
+    companyLogo: {
+      id: 3649,
+      imageAlt: 'brightpath-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4094,
+        name: 'brightpath-logo.png',
+        alternativeText: 'brightpath-logo',
+        caption: 'brightpath-logo',
+        width: 200,
+        height: 49,
+        formats: null,
+        hash: 'brightpath_logo_6ef0922a60',
+        ext: '.png',
+        mime: 'image/png',
+        size: 2.5,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/brightpath_logo_6ef0922a60.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-31T04:00:11.712Z',
+        updatedAt: '2025-10-31T04:00:11.712Z',
+      },
+    },
   },
   {
-    "id": 2,
-    "name": "Jilson",
-    "position": "Organiser",
-    "organization": "Vue Conference",
-    "comment": "Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.",
-    "createdAt": "2024-06-18T03:48:46.610Z",
-    "updatedAt": "2025-01-22T02:57:08.760Z",
-    "publishedAt": "2024-06-18T03:48:50.595Z",
-    "companyLogo": {
-      "id": 228,
-      "imageAlt": "photo-of-vue-conference",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 1680,
-        "name": "vueconf.webp",
-        "alternativeText": "photo-of-vue-conference",
-        "caption": "photo-of-vue-conference",
-        "width": 80,
-        "height": 80,
-        "formats": null,
-        "hash": "vueconf_1bc3dc0827",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 1.07,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2024-08-01T14:38:23.731Z",
-        "updatedAt": "2024-12-01T07:47:11.024Z"
-      }
-    }
+    id: 2,
+    name: 'Jilson',
+    position: 'Organiser',
+    organization: 'Vue Conference',
+    comment:
+      'Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.',
+    createdAt: '2024-06-18T03:48:46.610Z',
+    updatedAt: '2025-01-22T02:57:08.760Z',
+    publishedAt: '2024-06-18T03:48:50.595Z',
+    companyLogo: {
+      id: 228,
+      imageAlt: 'photo-of-vue-conference',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1680,
+        name: 'vueconf.webp',
+        alternativeText: 'photo-of-vue-conference',
+        caption: 'photo-of-vue-conference',
+        width: 80,
+        height: 80,
+        formats: null,
+        hash: 'vueconf_1bc3dc0827',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.07,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.731Z',
+        updatedAt: '2024-12-01T07:47:11.024Z',
+      },
+    },
   },
   {
-    "id": 36,
-    "name": "Ye Qi Lai",
-    "position": "UX Designer",
-    "organization": "Eastview Consulting",
-    "comment": "Formester is one of the best underrated survey tools out there… It’s extremely customizable… Their support is awesome… I absolutely recommend this to anyone looking for an alternative to the usual form creators.",
-    "createdAt": "2025-06-29T23:30:04.374Z",
-    "updatedAt": "2025-10-31T04:00:30.746Z",
-    "publishedAt": "2025-06-29T23:30:06.260Z",
-    "companyLogo": {
-      "id": 3648,
-      "imageAlt": "eastview-logo-header",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4097,
-        "name": "eastview-logo-header-300x120 1.png",
-        "alternativeText": "eastview-logo-header",
-        "caption": "eastview-logo-header",
-        "width": 200,
-        "height": 80,
-        "formats": null,
-        "hash": "eastview_logo_header_300x120_1_d9c231e93b",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 3.18,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/eastview_logo_header_300x120_1_d9c231e93b.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-10-31T04:00:11.854Z",
-        "updatedAt": "2025-10-31T04:00:11.854Z"
-      }
-    }
-  }
+    id: 36,
+    name: 'Ye Qi Lai',
+    position: 'UX Designer',
+    organization: 'Eastview Consulting',
+    comment:
+      'Formester is one of the best underrated survey tools out there… It’s extremely customizable… Their support is awesome… I absolutely recommend this to anyone looking for an alternative to the usual form creators.',
+    createdAt: '2025-06-29T23:30:04.374Z',
+    updatedAt: '2025-10-31T04:00:30.746Z',
+    publishedAt: '2025-06-29T23:30:06.260Z',
+    companyLogo: {
+      id: 3648,
+      imageAlt: 'eastview-logo-header',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4097,
+        name: 'eastview-logo-header-300x120 1.png',
+        alternativeText: 'eastview-logo-header',
+        caption: 'eastview-logo-header',
+        width: 200,
+        height: 80,
+        formats: null,
+        hash: 'eastview_logo_header_300x120_1_d9c231e93b',
+        ext: '.png',
+        mime: 'image/png',
+        size: 3.18,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/eastview_logo_header_300x120_1_d9c231e93b.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-31T04:00:11.854Z',
+        updatedAt: '2025-10-31T04:00:11.854Z',
+      },
+    },
+  },
 ]
 const c8_title = [
   {
-    "id": 4755,
-    "text": "Form analytics FAQs",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4755,
+    text: 'Form analytics FAQs',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c8_faqList = [
   {
-    "id": 2358,
-    "header": "What is form analytics?",
-    "body": "Form analytics measures how people interact with your forms — how many view them, how many complete them, where they drop off, and which devices and locations they come from — so you can improve conversions with real data.",
-    "body_markdown": null,
-    "list": []
+    id: 2358,
+    header: 'What is form analytics?',
+    body: 'Form analytics measures how people interact with your forms — how many view them, how many complete them, where they drop off, and which devices and locations they come from — so you can improve conversions with real data.',
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2359,
-    "header": "Which metrics can I track?",
-    "body": "Out of the box you get number of views, submissions, time to complete, and drop-off rate, plus distribution of views by top country and views and submissions by device — all over any date range you choose.",
-    "body_markdown": null,
-    "list": []
+    id: 2359,
+    header: 'Which metrics can I track?',
+    body: 'Out of the box you get number of views, submissions, time to complete, and drop-off rate, plus distribution of views by top country and views and submissions by device — all over any date range you choose.',
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2360,
-    "header": "How does drop-off tracking work?",
-    "body": "Formester records how far each respondent gets, so you can see the exact page where people abandon the form and fix the step that's costing you submissions.",
-    "body_markdown": null,
-    "list": []
+    id: 2360,
+    header: 'How does drop-off tracking work?',
+    body: "Formester records how far each respondent gets, so you can see the exact page where people abandon the form and fix the step that's costing you submissions.",
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2361,
-    "header": "Can I export the data?",
-    "body": "Yes. Export submissions and reports as a CSV file or sync them to Google Sheets for deeper analysis and record-keeping.",
-    "body_markdown": null,
-    "list": []
+    id: 2361,
+    header: 'Can I export the data?',
+    body: 'Yes. Export submissions and reports as a CSV file or sync them to Google Sheets for deeper analysis and record-keeping.',
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2362,
-    "header": "What is summary analytics?",
-    "body": "Summary analytics breaks down responses to multiple-choice and ranking questions like a poll result, so you can see which options are most popular without reviewing every submission.",
-    "body_markdown": null,
-    "list": []
+    id: 2362,
+    header: 'What is summary analytics?',
+    body: 'Summary analytics breaks down responses to multiple-choice and ranking questions like a poll result, so you can see which options are most popular without reviewing every submission.',
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2363,
-    "header": "Is my form data secure?",
-    "body": "Yes. Data is stored with encryption and GDPR-compliant security measures to keep respondent information protected.",
-    "body_markdown": null,
-    "list": []
-  }
+    id: 2363,
+    header: 'Is my form data secure?',
+    body: 'Yes. Data is stored with encryption and GDPR-compliant security measures to keep respondent information protected.',
+    body_markdown: null,
+    list: [],
+  },
 ]
 const c9_buttons = [
   {
-    "id": 1556,
-    "link": "https://app.formester.com/users/sign_up",
-    "text": "Get Started — It's Free",
-    "type": "Primary",
-    "showArrow": true
+    id: 1556,
+    link: 'https://app.formester.com/users/sign_up',
+    text: "Get Started — It's Free",
+    type: 'Primary',
+    showArrow: true,
   },
   {
-    "id": 1557,
-    "link": "/pricing",
-    "text": "See pricing",
-    "type": "White",
-    "showArrow": false
-  }
+    id: 1557,
+    link: '/pricing',
+    text: 'See pricing',
+    type: 'White',
+    showArrow: false,
+  },
 ]
 
 useHead({
-  "title": "Advanced Form Analytics Tool for Online Form Submissions | Formester",
-  "link": [
+  title: 'Advanced Form Analytics Tool for Online Form Submissions | Formester',
+  link: [
     {
-      "hid": "canonical",
-      "rel": "canonical",
-      "href": "https://formester.com/features/form-analytics/"
-    }
+      hid: 'canonical',
+      rel: 'canonical',
+      href: 'https://formester.com/features/form-analytics/',
+    },
   ],
-  "meta": [
+  meta: [
     {
-      "property": "article:modified_time",
-      "content": "2026-06-15T10:45:53.496Z"
+      property: 'article:modified_time',
+      content: '2026-06-15T10:45:53.496Z',
     },
     {
-      "hid": "description",
-      "name": "description",
-      "content": "Measure how people interact with your forms — views, submissions, time to complete, drop-off rate, top countries, and devices. Find where users abandon and improve conversions with form analytics."
+      hid: 'description',
+      name: 'description',
+      content:
+        'Measure how people interact with your forms — views, submissions, time to complete, drop-off rate, top countries, and devices. Find where users abandon and improve conversions with form analytics.',
     },
     {
-      "hid": "og:site_name",
-      "name": "og:site_name",
-      "content": "Advanced Form Analytics Tool for Online Form Submissions | Formester"
+      hid: 'og:site_name',
+      name: 'og:site_name',
+      content: 'Advanced Form Analytics Tool for Online Form Submissions | Formester',
     },
     {
-      "hid": "og:type",
-      "property": "og:type",
-      "content": "website"
+      hid: 'og:type',
+      property: 'og:type',
+      content: 'website',
     },
     {
-      "hid": "og:url",
-      "property": "og:url",
-      "content": "https://formester.com/features/form-analytics/"
+      hid: 'og:url',
+      property: 'og:url',
+      content: 'https://formester.com/features/form-analytics/',
     },
     {
-      "hid": "og:title",
-      "property": "og:title",
-      "content": "Advanced Form Analytics Tool for Online Form Submissions | Formester"
+      hid: 'og:title',
+      property: 'og:title',
+      content: 'Advanced Form Analytics Tool for Online Form Submissions | Formester',
     },
     {
-      "hid": "og:description",
-      "property": "og:description",
-      "content": "Measure how people interact with your forms — views, submissions, time to complete, drop-off rate, top countries, and devices. Find where users abandon and improve conversions with form analytics."
+      hid: 'og:description',
+      property: 'og:description',
+      content:
+        'Measure how people interact with your forms — views, submissions, time to complete, drop-off rate, top countries, and devices. Find where users abandon and improve conversions with form analytics.',
     },
     {
-      "hid": "og:image",
-      "property": "og:image",
-      "content": "https://formester.com/formester-logo-meta-image.png"
+      hid: 'og:image',
+      property: 'og:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
     },
     {
-      "hid": "og:image:alt",
-      "name": "og:image:alt",
-      "content": "Formester Logo"
+      hid: 'og:image:alt',
+      name: 'og:image:alt',
+      content: 'Formester Logo',
     },
     {
-      "hid": "twitter:url",
-      "name": "twitter:url",
-      "content": "https://formester.com/features/form-analytics/"
+      hid: 'twitter:url',
+      name: 'twitter:url',
+      content: 'https://formester.com/features/form-analytics/',
     },
     {
-      "name": "twitter:site",
-      "content": "@_formester_"
+      name: 'twitter:site',
+      content: '@_formester_',
     },
     {
-      "hid": "twitter:title",
-      "name": "twitter:title",
-      "content": "Advanced Form Analytics Tool for Online Form Submissions | Formester"
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: 'Advanced Form Analytics Tool for Online Form Submissions | Formester',
     },
     {
-      "hid": "twitter:description",
-      "name": "twitter:description",
-      "content": "Measure how people interact with your forms — views, submissions, time to complete, drop-off rate, top countries, and devices. Find where users abandon and improve conversions with form analytics."
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content:
+        'Measure how people interact with your forms — views, submissions, time to complete, drop-off rate, top countries, and devices. Find where users abandon and improve conversions with form analytics.',
     },
     {
-      "hid": "twitter:image",
-      "name": "twitter:image",
-      "content": "https://formester.com/formester-logo-meta-image.png"
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
     },
     {
-      "hid": "twitter:image:alt",
-      "name": "twitter:image:alt",
-      "content": "Formester Logo"
+      hid: 'twitter:image:alt',
+      name: 'twitter:image:alt',
+      content: 'Formester Logo',
     },
     {
-      "hid": "twitter:card",
-      "name": "twitter:card",
-      "content": "summary_large_image"
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image',
     },
     {
-      "hid": "apple-mobile-web-app-title",
-      "name": "apple-mobile-web-app-title",
-      "content": "Formester"
+      hid: 'apple-mobile-web-app-title',
+      name: 'apple-mobile-web-app-title',
+      content: 'Formester',
     },
     {
-      "hid": "image",
-      "name": "image",
-      "property": "og:image",
-      "content": "https://formester.com/formester-logo-meta-image.png"
+      hid: 'image',
+      name: 'image',
+      property: 'og:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
     },
     {
-      "hid": "keywords",
-      "name": "keywords",
-      "content": []
-    }
-  ]
+      hid: 'keywords',
+      name: 'keywords',
+      content: [],
+    },
+  ],
 })
 useJsonld([
   {
-    "@context": "https://schema.org",
-    "url": "https://formester.com",
-    "logo": "https://formester.com/logo.svg",
-    "name": "Formester",
-    "@type": "Organization"
+    '@context': 'https://schema.org',
+    url: 'https://formester.com',
+    logo: 'https://formester.com/logo.svg',
+    name: 'Formester',
+    '@type': 'Organization',
   },
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
       {
-        "name": "What is form analytics?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "Form analytics measures how people interact with your forms — how many view them, how many complete them, where they drop off, and which devices and locations they come from — so you can improve conversions with real data.",
-          "@type": "Answer"
-        }
+        name: 'What is form analytics?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'Form analytics measures how people interact with your forms — how many view them, how many complete them, where they drop off, and which devices and locations they come from — so you can improve conversions with real data.',
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "Which metrics can I track?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "Out of the box you get number of views, submissions, time to complete, and drop-off rate, plus distribution of views by top country and views and submissions by device — all over any date range you choose.",
-          "@type": "Answer"
-        }
+        name: 'Which metrics can I track?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'Out of the box you get number of views, submissions, time to complete, and drop-off rate, plus distribution of views by top country and views and submissions by device — all over any date range you choose.',
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "How does drop-off tracking work?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "Formester records how far each respondent gets, so you can see the exact page where people abandon the form and fix the step that's costing you submissions.",
-          "@type": "Answer"
-        }
+        name: 'How does drop-off tracking work?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: "Formester records how far each respondent gets, so you can see the exact page where people abandon the form and fix the step that's costing you submissions.",
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "Can I export the data?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "Yes. Export submissions and reports as a CSV file or sync them to Google Sheets for deeper analysis and record-keeping.",
-          "@type": "Answer"
-        }
+        name: 'Can I export the data?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'Yes. Export submissions and reports as a CSV file or sync them to Google Sheets for deeper analysis and record-keeping.',
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "What is summary analytics?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "Summary analytics breaks down responses to multiple-choice and ranking questions like a poll result, so you can see which options are most popular without reviewing every submission.",
-          "@type": "Answer"
-        }
+        name: 'What is summary analytics?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'Summary analytics breaks down responses to multiple-choice and ranking questions like a poll result, so you can see which options are most popular without reviewing every submission.',
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "Is my form data secure?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "Yes. Data is stored with encryption and GDPR-compliant security measures to keep respondent information protected.",
-          "@type": "Answer"
-        }
-      }
-    ]
-  }
+        name: 'Is my form data secure?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'Yes. Data is stored with encryption and GDPR-compliant security measures to keep respondent information protected.',
+          '@type': 'Answer',
+        },
+      },
+    ],
+  },
 ])
 </script>

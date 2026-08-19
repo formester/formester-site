@@ -23,12 +23,7 @@
       class="page-component-item"
     />
 
-    <AlternatingRows
-      eyebrow="How it works"
-      :title="c2_title"
-      :rows="c2_rows"
-      class="page-component-item"
-    />
+    <AlternatingRows eyebrow="How it works" :title="c2_title" :rows="c2_rows" class="page-component-item" />
 
     <CardGrid
       eyebrow="What you can automate"
@@ -39,13 +34,7 @@
       class="page-component-item"
     />
 
-    <CardGrid
-      eyebrow="Use cases"
-      columns="4"
-      :title="c4_title"
-      :cards="c4_cards"
-      class="page-component-item"
-    />
+    <CardGrid eyebrow="Use cases" columns="4" :title="c4_title" :cards="c4_cards" class="page-component-item" />
 
     <TestimonialsV2
       version="feature"
@@ -54,12 +43,7 @@
       class="page-component-item"
     />
 
-    <FaqSection
-      centered
-      :title="c6_title"
-      :faqList="c6_faqList"
-      class="page-component-item"
-    />
+    <FaqSection centered :title="c6_title" :faqList="c6_faqList" class="page-component-item" />
 
     <CtaDark
       badge="Available on the Business plan"
@@ -80,681 +64,698 @@ import HeroV2 from '@/components/v2/HeroV2.vue'
 import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
 import TrustSeals from '@/components/v2/TrustSeals.vue'
 
-const c0_description = "Write a plain-English prompt and Formester runs it on every form submission — reading, summarizing, scoring, or routing the moment a response lands. The AI does the first pass so the human starts from a clean summary."
-const c0_mockupHtml = "<div style='max-width:520px;margin:0 auto;background:#fff;border:1px solid #eaecf0;border-radius:16px;box-shadow:0 24px 80px rgba(15,14,26,.12),0 8px 24px rgba(15,14,26,.06);overflow:hidden;'><div style='display:flex;align-items:center;gap:6px;padding:12px 16px;background:#f9fafb;border-bottom:1px solid #eaecf0;'><span style='width:11px;height:11px;border-radius:50%;background:#ff6058;'></span><span style='width:11px;height:11px;border-radius:50%;background:#ffbd2e;'></span><span style='width:11px;height:11px;border-radius:50%;background:#27c93f;'></span><span style='margin-left:10px;font-size:12px;color:#697586;'>app.formester.com · AI Workflows</span></div><div style='padding:18px;text-align:left;display:flex;flex-direction:column;gap:12px;'><div style='border:1px solid #6434d0;border-radius:12px;padding:13px;box-shadow:0 0 0 4px #f0ebfa;'><div style='display:flex;align-items:center;gap:8px;margin-bottom:9px;'><span style='display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:7px;background:#6434d0;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='2'><path d='M12 3l1.6 4.4L18 9l-4.4 1.6L12 15l-1.6-4.4L6 9l4.4-1.6z'/></svg></span><span style='font-size:12px;font-weight:600;color:#472594;'>AI prompt</span></div><div style='font-size:13px;color:#101828;line-height:1.5;'>Read each support submission. Output a category, a severity, and a suggested first reply.</div></div><div style='display:flex;align-items:center;gap:7px;font-size:11px;color:#697586;padding-left:2px;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='#6434d0' stroke-width='2'><path d='M12 5v14M5 12l7 7 7-7'/></svg>Generated steps</div><div style='display:flex;flex-direction:column;gap:8px;'><div style='display:flex;align-items:center;gap:8px;font-size:12px;color:#101828;border:1px solid #eaecf0;border-radius:9px;padding:9px 11px;'><span style='width:8px;height:8px;border-radius:50%;background:#6434d0;flex-shrink:0;'></span>When a response is submitted &rarr; run AI prompt</div><div style='display:flex;align-items:center;gap:8px;font-size:12px;color:#101828;border:1px solid #eaecf0;border-radius:9px;padding:9px 11px;'><span style='width:8px;height:8px;border-radius:50%;background:#175cd3;flex-shrink:0;'></span>If severity is P1 &rarr; notify the #support channel</div><div style='display:flex;align-items:center;gap:8px;font-size:12px;color:#101828;border:1px solid #eaecf0;border-radius:9px;padding:9px 11px;'><span style='width:8px;height:8px;border-radius:50%;background:#027a48;flex-shrink:0;'></span>Write the summary to a custom field</div></div></div></div>"
+const c0_description =
+  'Write a plain-English prompt and Formester runs it on every form submission — reading, summarizing, scoring, or routing the moment a response lands. The AI does the first pass so the human starts from a clean summary.'
+const c0_mockupHtml =
+  "<div style='max-width:520px;margin:0 auto;background:#fff;border:1px solid #eaecf0;border-radius:16px;box-shadow:0 24px 80px rgba(15,14,26,.12),0 8px 24px rgba(15,14,26,.06);overflow:hidden;'><div style='display:flex;align-items:center;gap:6px;padding:12px 16px;background:#f9fafb;border-bottom:1px solid #eaecf0;'><span style='width:11px;height:11px;border-radius:50%;background:#ff6058;'></span><span style='width:11px;height:11px;border-radius:50%;background:#ffbd2e;'></span><span style='width:11px;height:11px;border-radius:50%;background:#27c93f;'></span><span style='margin-left:10px;font-size:12px;color:#697586;'>app.formester.com · AI Workflows</span></div><div style='padding:18px;text-align:left;display:flex;flex-direction:column;gap:12px;'><div style='border:1px solid #6434d0;border-radius:12px;padding:13px;box-shadow:0 0 0 4px #f0ebfa;'><div style='display:flex;align-items:center;gap:8px;margin-bottom:9px;'><span style='display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:7px;background:#6434d0;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='2'><path d='M12 3l1.6 4.4L18 9l-4.4 1.6L12 15l-1.6-4.4L6 9l4.4-1.6z'/></svg></span><span style='font-size:12px;font-weight:600;color:#472594;'>AI prompt</span></div><div style='font-size:13px;color:#101828;line-height:1.5;'>Read each support submission. Output a category, a severity, and a suggested first reply.</div></div><div style='display:flex;align-items:center;gap:7px;font-size:11px;color:#697586;padding-left:2px;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='#6434d0' stroke-width='2'><path d='M12 5v14M5 12l7 7 7-7'/></svg>Generated steps</div><div style='display:flex;flex-direction:column;gap:8px;'><div style='display:flex;align-items:center;gap:8px;font-size:12px;color:#101828;border:1px solid #eaecf0;border-radius:9px;padding:9px 11px;'><span style='width:8px;height:8px;border-radius:50%;background:#6434d0;flex-shrink:0;'></span>When a response is submitted &rarr; run AI prompt</div><div style='display:flex;align-items:center;gap:8px;font-size:12px;color:#101828;border:1px solid #eaecf0;border-radius:9px;padding:9px 11px;'><span style='width:8px;height:8px;border-radius:50%;background:#175cd3;flex-shrink:0;'></span>If severity is P1 &rarr; notify the #support channel</div><div style='display:flex;align-items:center;gap:8px;font-size:12px;color:#101828;border:1px solid #eaecf0;border-radius:9px;padding:9px 11px;'><span style='width:8px;height:8px;border-radius:50%;background:#027a48;flex-shrink:0;'></span>Write the summary to a custom field</div></div></div></div>"
 const c0_title = [
   {
-    "id": 4575,
-    "text": "Turn every submission into ",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
+    id: 4575,
+    text: 'Turn every submission into ',
+    highlight: false,
+    color: '#475467',
+    bold: false,
   },
   {
-    "id": 4576,
-    "text": "AI-processed data",
-    "highlight": true,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4576,
+    text: 'AI-processed data',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c0_buttons = [
   {
-    "id": 1481,
-    "link": "https://app.formester.com/users/sign_up",
-    "text": "Get Started",
-    "type": "Primary",
-    "showArrow": true
+    id: 1481,
+    link: 'https://app.formester.com/users/sign_up',
+    text: 'Get Started',
+    type: 'Primary',
+    showArrow: true,
   },
   {
-    "id": 1482,
-    "link": "/pricing",
-    "text": "See pricing",
-    "type": "Secondary",
-    "showArrow": false
-  }
+    id: 1482,
+    link: '/pricing',
+    text: 'See pricing',
+    type: 'Secondary',
+    showArrow: false,
+  },
 ]
 const c0_badge = {
-  "id": 66,
-  "text": "AI Workflows",
-  "tag": "Business",
-  "link": null
+  id: 66,
+  text: 'AI Workflows',
+  tag: 'Business',
+  link: null,
 }
 const c0_tabCardContent = []
 const c1_title = []
 const c1_logos = []
 const c2_title = [
   {
-    "id": 4568,
-    "text": "Describe the job — ",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
+    id: 4568,
+    text: 'Describe the job — ',
+    highlight: false,
+    color: '#475467',
+    bold: false,
   },
   {
-    "id": 4569,
-    "text": "Formester runs it for you",
-    "highlight": true,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4569,
+    text: 'Formester runs it for you',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c2_rows = [
   {
-    "id": 68,
-    "kicker": "Describe",
-    "title": "Tell the AI what you want",
-    "body": "Write a plain-English instruction in your form's Automate tab. No code, no JSON, no third-party tool — the AI sees the full submission's field-by-field data.",
-    "mediaHtml": "<div style='max-width:520px;margin:0 auto;background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 8px 24px rgba(15,14,26,.06);padding:18px;'><div style='display:flex;align-items:center;gap:8px;margin-bottom:11px;'><span style='display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:7px;background:#6434d0;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='2'><path d='M12 3l1.6 4.4L18 9l-4.4 1.6L12 15l-1.6-4.4L6 9l4.4-1.6z'/></svg></span><span style='font-size:12px;font-weight:600;color:#472594;'>Workflow prompt</span></div><div style='border:1px solid #6434d0;border-radius:10px;padding:12px;box-shadow:0 0 0 4px #f0ebfa;font-size:13px;color:#101828;line-height:1.5;'>Read this job application and give me a 3-line summary plus a risk flag if any experience claim looks inflated.</div></div>"
+    id: 68,
+    kicker: 'Describe',
+    title: 'Tell the AI what you want',
+    body: "Write a plain-English instruction in your form's Automate tab. No code, no JSON, no third-party tool — the AI sees the full submission's field-by-field data.",
+    mediaHtml:
+      "<div style='max-width:520px;margin:0 auto;background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 8px 24px rgba(15,14,26,.06);padding:18px;'><div style='display:flex;align-items:center;gap:8px;margin-bottom:11px;'><span style='display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:7px;background:#6434d0;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='2'><path d='M12 3l1.6 4.4L18 9l-4.4 1.6L12 15l-1.6-4.4L6 9l4.4-1.6z'/></svg></span><span style='font-size:12px;font-weight:600;color:#472594;'>Workflow prompt</span></div><div style='border:1px solid #6434d0;border-radius:10px;padding:12px;box-shadow:0 0 0 4px #f0ebfa;font-size:13px;color:#101828;line-height:1.5;'>Read this job application and give me a 3-line summary plus a risk flag if any experience claim looks inflated.</div></div>",
   },
   {
-    "id": 69,
-    "kicker": "Build",
-    "title": "AI builds the flow and rules",
-    "body": "Choose a trigger and Formester wires up the workflow: run on every new response, or only when you click run in the dashboard. The rules sit in your form, ready to go.",
-    "mediaHtml": "<div style='max-width:520px;margin:0 auto;background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 8px 24px rgba(15,14,26,.06);padding:18px;display:flex;flex-direction:column;gap:9px;'><div style='display:flex;align-items:center;gap:9px;font-size:12px;color:#101828;border:1px solid #6434d0;background:#f0ebfa;border-radius:9px;padding:10px 12px;'><span style='width:8px;height:8px;border-radius:50%;background:#6434d0;flex-shrink:0;'></span>Trigger&nbsp;·&nbsp;<span style='font-weight:600;'>On form submission</span></div><div style='display:flex;align-items:center;gap:7px;font-size:11px;color:#472594;padding-left:8px;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='#6434d0' stroke-width='2'><path d='M12 5v14M5 12l7 7 7-7'/></svg></div><div style='display:flex;align-items:center;gap:9px;font-size:12px;color:#101828;border:1px solid #eaecf0;border-radius:9px;padding:10px 12px;'><span style='width:8px;height:8px;border-radius:50%;background:#175cd3;flex-shrink:0;'></span>Run AI prompt on the submission</div><div style='display:flex;align-items:center;gap:9px;font-size:12px;color:#101828;border:1px solid #eaecf0;border-radius:9px;padding:10px 12px;'><span style='width:8px;height:8px;border-radius:50%;background:#027a48;flex-shrink:0;'></span>Send the output where it is needed</div></div>"
+    id: 69,
+    kicker: 'Build',
+    title: 'AI builds the flow and rules',
+    body: 'Choose a trigger and Formester wires up the workflow: run on every new response, or only when you click run in the dashboard. The rules sit in your form, ready to go.',
+    mediaHtml:
+      "<div style='max-width:520px;margin:0 auto;background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 8px 24px rgba(15,14,26,.06);padding:18px;display:flex;flex-direction:column;gap:9px;'><div style='display:flex;align-items:center;gap:9px;font-size:12px;color:#101828;border:1px solid #6434d0;background:#f0ebfa;border-radius:9px;padding:10px 12px;'><span style='width:8px;height:8px;border-radius:50%;background:#6434d0;flex-shrink:0;'></span>Trigger&nbsp;·&nbsp;<span style='font-weight:600;'>On form submission</span></div><div style='display:flex;align-items:center;gap:7px;font-size:11px;color:#472594;padding-left:8px;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='#6434d0' stroke-width='2'><path d='M12 5v14M5 12l7 7 7-7'/></svg></div><div style='display:flex;align-items:center;gap:9px;font-size:12px;color:#101828;border:1px solid #eaecf0;border-radius:9px;padding:10px 12px;'><span style='width:8px;height:8px;border-radius:50%;background:#175cd3;flex-shrink:0;'></span>Run AI prompt on the submission</div><div style='display:flex;align-items:center;gap:9px;font-size:12px;color:#101828;border:1px solid #eaecf0;border-radius:9px;padding:10px 12px;'><span style='width:8px;height:8px;border-radius:50%;background:#027a48;flex-shrink:0;'></span>Send the output where it is needed</div></div>",
   },
   {
-    "id": 70,
-    "kicker": "Run",
-    "title": "It runs on every submission",
-    "body": "Submit a test response, confirm the output, and flip it live. From then on every new submission is read, scored, or summarized the moment it lands.",
-    "mediaHtml": "<div style='max-width:520px;margin:0 auto;background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 8px 24px rgba(15,14,26,.06);padding:18px;display:flex;flex-direction:column;gap:10px;'><div style='display:flex;align-items:center;justify-content:space-between;'><span style='font-size:12px;color:#475467;'>New submission</span><span style='display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:#027a48;background:#ecfdf3;border-radius:999px;padding:4px 10px;'><span style='width:7px;height:7px;border-radius:50%;background:#027a48;'></span>Processed</span></div><div style='border:1px solid #eaecf0;border-radius:10px;padding:11px 13px;'><div style='font-size:11px;color:#697586;margin-bottom:5px;'>AI output</div><div style='font-size:13px;color:#101828;line-height:1.5;'>Category: Billing&nbsp;&middot;&nbsp;Severity: <span style='color:#b54708;font-weight:600;'>P2</span>&nbsp;&middot;&nbsp;Reply drafted</div></div><div style='display:flex;gap:7px;flex-wrap:wrap;'><span style='font-size:11px;color:#175cd3;background:#eff8ff;border-radius:999px;padding:4px 10px;'>&rarr; Slack</span><span style='font-size:11px;color:#472594;background:#f0ebfa;border-radius:999px;padding:4px 10px;'>&rarr; Custom field</span><span style='font-size:11px;color:#475467;background:#f9fafb;border:1px solid #eaecf0;border-radius:999px;padding:4px 10px;'>&rarr; CRM</span></div></div>"
-  }
+    id: 70,
+    kicker: 'Run',
+    title: 'It runs on every submission',
+    body: 'Submit a test response, confirm the output, and flip it live. From then on every new submission is read, scored, or summarized the moment it lands.',
+    mediaHtml:
+      "<div style='max-width:520px;margin:0 auto;background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 8px 24px rgba(15,14,26,.06);padding:18px;display:flex;flex-direction:column;gap:10px;'><div style='display:flex;align-items:center;justify-content:space-between;'><span style='font-size:12px;color:#475467;'>New submission</span><span style='display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:#027a48;background:#ecfdf3;border-radius:999px;padding:4px 10px;'><span style='width:7px;height:7px;border-radius:50%;background:#027a48;'></span>Processed</span></div><div style='border:1px solid #eaecf0;border-radius:10px;padding:11px 13px;'><div style='font-size:11px;color:#697586;margin-bottom:5px;'>AI output</div><div style='font-size:13px;color:#101828;line-height:1.5;'>Category: Billing&nbsp;&middot;&nbsp;Severity: <span style='color:#b54708;font-weight:600;'>P2</span>&nbsp;&middot;&nbsp;Reply drafted</div></div><div style='display:flex;gap:7px;flex-wrap:wrap;'><span style='font-size:11px;color:#175cd3;background:#eff8ff;border-radius:999px;padding:4px 10px;'>&rarr; Slack</span><span style='font-size:11px;color:#472594;background:#f0ebfa;border-radius:999px;padding:4px 10px;'>&rarr; Custom field</span><span style='font-size:11px;color:#475467;background:#f9fafb;border:1px solid #eaecf0;border-radius:999px;padding:4px 10px;'>&rarr; CRM</span></div></div>",
+  },
 ]
 const c3_title = [
   {
-    "id": 4571,
-    "text": "One prompt, ",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
+    id: 4571,
+    text: 'One prompt, ',
+    highlight: false,
+    color: '#475467',
+    bold: false,
   },
   {
-    "id": 4570,
-    "text": "the first pass done for you",
-    "highlight": true,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4570,
+    text: 'the first pass done for you',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c3_cards = [
   {
-    "id": 433,
-    "tag": "Summarize",
-    "tagColor": "violet",
-    "title": "Summarize long answers",
-    "body": "Turn a paragraph of free text into a one-line summary tagged by sentiment, so review stops being a long read.",
-    "mockHtml": "<div style='background:#fff;border:1px solid #eaecf0;border-radius:10px;padding:12px;text-align:left;'><div style='font-size:11px;color:#697586;margin-bottom:6px;'>Summary</div><div style='font-size:12px;color:#101828;line-height:1.5;'>Happy with onboarding, wants SSO.</div><div style='margin-top:8px;'><span style='font-size:11px;font-weight:600;color:#027a48;background:#ecfdf3;border-radius:999px;padding:3px 9px;'>Positive</span></div></div>",
-    "icon": null
+    id: 433,
+    tag: 'Summarize',
+    tagColor: 'violet',
+    title: 'Summarize long answers',
+    body: 'Turn a paragraph of free text into a one-line summary tagged by sentiment, so review stops being a long read.',
+    mockHtml:
+      "<div style='background:#fff;border:1px solid #eaecf0;border-radius:10px;padding:12px;text-align:left;'><div style='font-size:11px;color:#697586;margin-bottom:6px;'>Summary</div><div style='font-size:12px;color:#101828;line-height:1.5;'>Happy with onboarding, wants SSO.</div><div style='margin-top:8px;'><span style='font-size:11px;font-weight:600;color:#027a48;background:#ecfdf3;border-radius:999px;padding:3px 9px;'>Positive</span></div></div>",
+    icon: null,
   },
   {
-    "id": 432,
-    "tag": "Score",
-    "tagColor": "blue",
-    "title": "Score and rank submissions",
-    "body": "Output a 1-to-10 score with a one-line reason, so the strongest leads or applicants surface at the top of the list.",
-    "mockHtml": "<div style='background:#fff;border:1px solid #eaecf0;border-radius:10px;padding:12px;text-align:left;'><div style='display:flex;align-items:baseline;gap:8px;'><span style='font-size:26px;font-weight:700;color:#6434d0;line-height:1;'>9</span><span style='font-size:12px;color:#697586;'>/ 10</span></div><div style='margin-top:7px;font-size:12px;color:#475467;line-height:1.4;'>Enterprise size, clear budget, ready now.</div></div>",
-    "icon": null
+    id: 432,
+    tag: 'Score',
+    tagColor: 'blue',
+    title: 'Score and rank submissions',
+    body: 'Output a 1-to-10 score with a one-line reason, so the strongest leads or applicants surface at the top of the list.',
+    mockHtml:
+      "<div style='background:#fff;border:1px solid #eaecf0;border-radius:10px;padding:12px;text-align:left;'><div style='display:flex;align-items:baseline;gap:8px;'><span style='font-size:26px;font-weight:700;color:#6434d0;line-height:1;'>9</span><span style='font-size:12px;color:#697586;'>/ 10</span></div><div style='margin-top:7px;font-size:12px;color:#475467;line-height:1.4;'>Enterprise size, clear budget, ready now.</div></div>",
+    icon: null,
   },
   {
-    "id": 431,
-    "tag": "Classify",
-    "tagColor": "green",
-    "title": "Classify and route",
-    "body": "Tag each response by category, severity, or case type and route it to the right owner, channel, or pipeline stage automatically.",
-    "mockHtml": "<div style='background:#fff;border:1px solid #eaecf0;border-radius:10px;padding:12px;text-align:left;display:flex;flex-direction:column;gap:7px;'><div style='display:flex;gap:7px;'><span style='font-size:11px;color:#175cd3;background:#eff8ff;border-radius:999px;padding:3px 9px;'>Bug</span><span style='font-size:11px;color:#b54708;background:#fffaeb;border-radius:999px;padding:3px 9px;'>P1</span></div><div style='font-size:12px;color:#475467;'>Routed to engineering queue</div></div>",
-    "icon": null
-  }
+    id: 431,
+    tag: 'Classify',
+    tagColor: 'green',
+    title: 'Classify and route',
+    body: 'Tag each response by category, severity, or case type and route it to the right owner, channel, or pipeline stage automatically.',
+    mockHtml:
+      "<div style='background:#fff;border:1px solid #eaecf0;border-radius:10px;padding:12px;text-align:left;display:flex;flex-direction:column;gap:7px;'><div style='display:flex;gap:7px;'><span style='font-size:11px;color:#175cd3;background:#eff8ff;border-radius:999px;padding:3px 9px;'>Bug</span><span style='font-size:11px;color:#b54708;background:#fffaeb;border-radius:999px;padding:3px 9px;'>P1</span></div><div style='font-size:12px;color:#475467;'>Routed to engineering queue</div></div>",
+    icon: null,
+  },
 ]
 const c4_title = [
   {
-    "id": 4567,
-    "text": "What teams ",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
+    id: 4567,
+    text: 'What teams ',
+    highlight: false,
+    color: '#475467',
+    bold: false,
   },
   {
-    "id": 4572,
-    "text": "actually use this for",
-    "highlight": true,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4572,
+    text: 'actually use this for',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c4_cards = [
   {
-    "id": 435,
-    "tag": "Sales",
-    "tagColor": "blue",
-    "title": "Lead scoring",
-    "body": "Read company size, budget, and timeline, then output a score that sorts your lead list so qualified leads surface first.",
-    "mockHtml": null,
-    "icon": null
+    id: 435,
+    tag: 'Sales',
+    tagColor: 'blue',
+    title: 'Lead scoring',
+    body: 'Read company size, budget, and timeline, then output a score that sorts your lead list so qualified leads surface first.',
+    mockHtml: null,
+    icon: null,
   },
   {
-    "id": 434,
-    "tag": "Hiring",
-    "tagColor": "violet",
-    "title": "Resume screening",
-    "body": "Read the resume and screening answers, then output a 3-line candidate summary and a fit score against the role spec.",
-    "mockHtml": null,
-    "icon": null
+    id: 434,
+    tag: 'Hiring',
+    tagColor: 'violet',
+    title: 'Resume screening',
+    body: 'Read the resume and screening answers, then output a 3-line candidate summary and a fit score against the role spec.',
+    mockHtml: null,
+    icon: null,
   },
   {
-    "id": 436,
-    "tag": "Support",
-    "tagColor": "green",
-    "title": "Ticket triage",
-    "body": "Read the issue description and output a category, a severity, and a suggested first reply to route the queue from one view.",
-    "mockHtml": null,
-    "icon": null
+    id: 436,
+    tag: 'Support',
+    tagColor: 'green',
+    title: 'Ticket triage',
+    body: 'Read the issue description and output a category, a severity, and a suggested first reply to route the queue from one view.',
+    mockHtml: null,
+    icon: null,
   },
   {
-    "id": 437,
-    "tag": "Research",
-    "tagColor": "amber",
-    "title": "Feedback summaries",
-    "body": "Summarize NPS or survey responses by sentiment and surface the top themes, instead of a long manual read each week.",
-    "mockHtml": null,
-    "icon": null
+    id: 437,
+    tag: 'Research',
+    tagColor: 'amber',
+    title: 'Feedback summaries',
+    body: 'Summarize NPS or survey responses by sentiment and surface the top themes, instead of a long manual read each week.',
+    mockHtml: null,
+    icon: null,
   },
   {
-    "id": 438,
-    "tag": "Procurement",
-    "tagColor": "rose",
-    "title": "RFP scoring",
-    "body": "Score vendor submissions against your rubric and output a weighted score plus a short procurement memo to start from.",
-    "mockHtml": null,
-    "icon": null
+    id: 438,
+    tag: 'Procurement',
+    tagColor: 'rose',
+    title: 'RFP scoring',
+    body: 'Score vendor submissions against your rubric and output a weighted score plus a short procurement memo to start from.',
+    mockHtml: null,
+    icon: null,
   },
   {
-    "id": 439,
-    "tag": "Intake",
-    "tagColor": "blue",
-    "title": "Intake classification",
-    "body": "Classify legal, healthcare, or consulting intake by case type and urgency, then set the pipeline stage and assign a specialist.",
-    "mockHtml": null,
-    "icon": null
+    id: 439,
+    tag: 'Intake',
+    tagColor: 'blue',
+    title: 'Intake classification',
+    body: 'Classify legal, healthcare, or consulting intake by case type and urgency, then set the pipeline stage and assign a specialist.',
+    mockHtml: null,
+    icon: null,
   },
   {
-    "id": 441,
-    "tag": "Insights",
-    "tagColor": "violet",
-    "title": "Survey insights",
-    "body": "Pull out specific features, products, or competitor mentions from open responses into clean, structured output.",
-    "mockHtml": null,
-    "icon": null
+    id: 441,
+    tag: 'Insights',
+    tagColor: 'violet',
+    title: 'Survey insights',
+    body: 'Pull out specific features, products, or competitor mentions from open responses into clean, structured output.',
+    mockHtml: null,
+    icon: null,
   },
   {
-    "id": 440,
-    "tag": "Compliance",
-    "tagColor": "green",
-    "title": "Compliance flags",
-    "body": "Flag any submission that contains sensitive details the form did not ask for, so the right fields get reviewed first.",
-    "mockHtml": null,
-    "icon": null
-  }
+    id: 440,
+    tag: 'Compliance',
+    tagColor: 'green',
+    title: 'Compliance flags',
+    body: 'Flag any submission that contains sensitive details the form did not ask for, so the right fields get reviewed first.',
+    mockHtml: null,
+    icon: null,
+  },
 ]
 const c5_heading = [
   {
-    "id": 4573,
-    "text": "What teams are saying about Formester",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4573,
+    text: 'What teams are saying about Formester',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c5_testimonials = [
   {
-    "id": 2,
-    "name": "Jilson",
-    "position": "Organiser",
-    "organization": "Vue Conference",
-    "comment": "Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.",
-    "createdAt": "2024-06-18T03:48:46.610Z",
-    "updatedAt": "2025-01-22T02:57:08.760Z",
-    "publishedAt": "2024-06-18T03:48:50.595Z",
-    "companyLogo": {
-      "id": 228,
-      "imageAlt": "photo-of-vue-conference",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 1680,
-        "name": "vueconf.webp",
-        "alternativeText": "photo-of-vue-conference",
-        "caption": "photo-of-vue-conference",
-        "width": 80,
-        "height": 80,
-        "formats": null,
-        "hash": "vueconf_1bc3dc0827",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 1.07,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2024-08-01T14:38:23.731Z",
-        "updatedAt": "2024-12-01T07:47:11.024Z"
-      }
-    }
+    id: 2,
+    name: 'Jilson',
+    position: 'Organiser',
+    organization: 'Vue Conference',
+    comment:
+      'Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.',
+    createdAt: '2024-06-18T03:48:46.610Z',
+    updatedAt: '2025-01-22T02:57:08.760Z',
+    publishedAt: '2024-06-18T03:48:50.595Z',
+    companyLogo: {
+      id: 228,
+      imageAlt: 'photo-of-vue-conference',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1680,
+        name: 'vueconf.webp',
+        alternativeText: 'photo-of-vue-conference',
+        caption: 'photo-of-vue-conference',
+        width: 80,
+        height: 80,
+        formats: null,
+        hash: 'vueconf_1bc3dc0827',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.07,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.731Z',
+        updatedAt: '2024-12-01T07:47:11.024Z',
+      },
+    },
   },
   {
-    "id": 1,
-    "name": "Dr. Michele Ross",
-    "position": "Founder",
-    "organization": "Infused Health",
-    "comment": "I'm migrating my forms from Paperform, where I've been a user for over 4 years. Loving the software so far! I've already replaced Paperform form embeds & popups on my sites & my husband's websites with Formester forms",
-    "createdAt": "2024-06-18T03:47:14.605Z",
-    "updatedAt": "2025-01-22T02:57:30.159Z",
-    "publishedAt": "2024-06-18T03:47:18.889Z",
-    "companyLogo": {
-      "id": 227,
-      "imageAlt": "Dr. Michele Ross",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 1685,
-        "name": "dr._michelelogo.webp",
-        "alternativeText": null,
-        "caption": null,
-        "width": 300,
-        "height": 59,
-        "formats": {
-          "thumbnail": {
-            "ext": ".webp",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_dr_michelelogo_2269ae2211.webp",
-            "hash": "thumbnail_dr_michelelogo_2269ae2211",
-            "mime": "image/webp",
-            "name": "thumbnail_dr._michelelogo.webp",
-            "path": null,
-            "size": 5.58,
-            "width": 245,
-            "height": 48
-          }
+    id: 1,
+    name: 'Dr. Michele Ross',
+    position: 'Founder',
+    organization: 'Infused Health',
+    comment:
+      "I'm migrating my forms from Paperform, where I've been a user for over 4 years. Loving the software so far! I've already replaced Paperform form embeds & popups on my sites & my husband's websites with Formester forms",
+    createdAt: '2024-06-18T03:47:14.605Z',
+    updatedAt: '2025-01-22T02:57:30.159Z',
+    publishedAt: '2024-06-18T03:47:18.889Z',
+    companyLogo: {
+      id: 227,
+      imageAlt: 'Dr. Michele Ross',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1685,
+        name: 'dr._michelelogo.webp',
+        alternativeText: null,
+        caption: null,
+        width: 300,
+        height: 59,
+        formats: {
+          thumbnail: {
+            ext: '.webp',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_dr_michelelogo_2269ae2211.webp',
+            hash: 'thumbnail_dr_michelelogo_2269ae2211',
+            mime: 'image/webp',
+            name: 'thumbnail_dr._michelelogo.webp',
+            path: null,
+            size: 5.58,
+            width: 245,
+            height: 48,
+          },
         },
-        "hash": "dr_michelelogo_2269ae2211",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 5.87,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/dr_michelelogo_2269ae2211.webp",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2024-08-01T14:38:23.944Z",
-        "updatedAt": "2024-08-01T14:38:23.944Z"
-      }
-    }
+        hash: 'dr_michelelogo_2269ae2211',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 5.87,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/dr_michelelogo_2269ae2211.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.944Z',
+        updatedAt: '2024-08-01T14:38:23.944Z',
+      },
+    },
   },
   {
-    "id": 34,
-    "name": "Bency",
-    "position": "Product Manager",
-    "organization": "Northgate Digital Solutions",
-    "comment": "Formester's AI form generator transformed how quickly we build forms. The drag-and-drop builder paired with AI-generated templates means I can spin up a survey or poll in minutes, not hours. Conditional logic, file uploads, and seamless integrations make it incredibly versatile and the customization options let every form match our branding perfectly. Their support team is exceptional too. It's the only form and survey tool we recommend",
-    "createdAt": "2025-06-29T23:23:10.541Z",
-    "updatedAt": "2026-05-03T09:30:00.533Z",
-    "publishedAt": "2026-05-03T09:30:00.530Z",
-    "companyLogo": {
-      "id": 3652,
-      "imageAlt": null,
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": null
-    }
+    id: 34,
+    name: 'Bency',
+    position: 'Product Manager',
+    organization: 'Northgate Digital Solutions',
+    comment:
+      "Formester's AI form generator transformed how quickly we build forms. The drag-and-drop builder paired with AI-generated templates means I can spin up a survey or poll in minutes, not hours. Conditional logic, file uploads, and seamless integrations make it incredibly versatile and the customization options let every form match our branding perfectly. Their support team is exceptional too. It's the only form and survey tool we recommend",
+    createdAt: '2025-06-29T23:23:10.541Z',
+    updatedAt: '2026-05-03T09:30:00.533Z',
+    publishedAt: '2026-05-03T09:30:00.530Z',
+    companyLogo: {
+      id: 3652,
+      imageAlt: null,
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: null,
+    },
   },
   {
-    "id": 4,
-    "name": "Costanza Casullo",
-    "position": "Volunteer",
-    "organization": "Wato Coding Hub",
-    "comment": "Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.",
-    "createdAt": "2024-06-18T03:51:15.232Z",
-    "updatedAt": "2025-01-22T02:58:03.674Z",
-    "publishedAt": "2024-06-18T03:51:21.477Z",
-    "companyLogo": {
-      "id": 225,
-      "imageAlt": "wato-coding-hub-logo",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 1681,
-        "name": "wato-coding-hub.webp",
-        "alternativeText": "wato-coding-hub-logo",
-        "caption": "wato-coding-hub-logo",
-        "width": 80,
-        "height": 81,
-        "formats": null,
-        "hash": "wato_coding_hub_e054f0ea9d",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 1.88,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/wato_coding_hub_e054f0ea9d.webp",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2024-08-01T14:38:23.738Z",
-        "updatedAt": "2024-12-01T07:49:13.371Z"
-      }
-    }
+    id: 4,
+    name: 'Costanza Casullo',
+    position: 'Volunteer',
+    organization: 'Wato Coding Hub',
+    comment:
+      "Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.",
+    createdAt: '2024-06-18T03:51:15.232Z',
+    updatedAt: '2025-01-22T02:58:03.674Z',
+    publishedAt: '2024-06-18T03:51:21.477Z',
+    companyLogo: {
+      id: 225,
+      imageAlt: 'wato-coding-hub-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1681,
+        name: 'wato-coding-hub.webp',
+        alternativeText: 'wato-coding-hub-logo',
+        caption: 'wato-coding-hub-logo',
+        width: 80,
+        height: 81,
+        formats: null,
+        hash: 'wato_coding_hub_e054f0ea9d',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.88,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/wato_coding_hub_e054f0ea9d.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.738Z',
+        updatedAt: '2024-12-01T07:49:13.371Z',
+      },
+    },
   },
   {
-    "id": 35,
-    "name": "Roger",
-    "position": "Marketing Specialist",
-    "organization": "BrightPath Technologies",
-    "comment": "I use Formester for my form-building needs and I’m thoroughly impressed. The platform is rich with features… What really sets them apart is their exceptional customer service (responses typically within 10 minutes). The pricing is also very reasonable… Highly recommended!\n",
-    "createdAt": "2025-06-29T23:29:19.225Z",
-    "updatedAt": "2025-10-31T04:00:58.697Z",
-    "publishedAt": "2025-06-29T23:29:21.134Z",
-    "companyLogo": {
-      "id": 3649,
-      "imageAlt": "brightpath-logo",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4094,
-        "name": "brightpath-logo.png",
-        "alternativeText": "brightpath-logo",
-        "caption": "brightpath-logo",
-        "width": 200,
-        "height": 49,
-        "formats": null,
-        "hash": "brightpath_logo_6ef0922a60",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 2.5,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/brightpath_logo_6ef0922a60.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-10-31T04:00:11.712Z",
-        "updatedAt": "2025-10-31T04:00:11.712Z"
-      }
-    }
+    id: 35,
+    name: 'Roger',
+    position: 'Marketing Specialist',
+    organization: 'BrightPath Technologies',
+    comment:
+      'I use Formester for my form-building needs and I’m thoroughly impressed. The platform is rich with features… What really sets them apart is their exceptional customer service (responses typically within 10 minutes). The pricing is also very reasonable… Highly recommended!\n',
+    createdAt: '2025-06-29T23:29:19.225Z',
+    updatedAt: '2025-10-31T04:00:58.697Z',
+    publishedAt: '2025-06-29T23:29:21.134Z',
+    companyLogo: {
+      id: 3649,
+      imageAlt: 'brightpath-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4094,
+        name: 'brightpath-logo.png',
+        alternativeText: 'brightpath-logo',
+        caption: 'brightpath-logo',
+        width: 200,
+        height: 49,
+        formats: null,
+        hash: 'brightpath_logo_6ef0922a60',
+        ext: '.png',
+        mime: 'image/png',
+        size: 2.5,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/brightpath_logo_6ef0922a60.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-31T04:00:11.712Z',
+        updatedAt: '2025-10-31T04:00:11.712Z',
+      },
+    },
   },
   {
-    "id": 36,
-    "name": "Ye Qi Lai",
-    "position": "UX Designer",
-    "organization": "Eastview Consulting",
-    "comment": "Formester is one of the best underrated survey tools out there… It’s extremely customizable… Their support is awesome… I absolutely recommend this to anyone looking for an alternative to the usual form creators.",
-    "createdAt": "2025-06-29T23:30:04.374Z",
-    "updatedAt": "2025-10-31T04:00:30.746Z",
-    "publishedAt": "2025-06-29T23:30:06.260Z",
-    "companyLogo": {
-      "id": 3648,
-      "imageAlt": "eastview-logo-header",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4097,
-        "name": "eastview-logo-header-300x120 1.png",
-        "alternativeText": "eastview-logo-header",
-        "caption": "eastview-logo-header",
-        "width": 200,
-        "height": 80,
-        "formats": null,
-        "hash": "eastview_logo_header_300x120_1_d9c231e93b",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 3.18,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/eastview_logo_header_300x120_1_d9c231e93b.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-10-31T04:00:11.854Z",
-        "updatedAt": "2025-10-31T04:00:11.854Z"
-      }
-    }
-  }
+    id: 36,
+    name: 'Ye Qi Lai',
+    position: 'UX Designer',
+    organization: 'Eastview Consulting',
+    comment:
+      'Formester is one of the best underrated survey tools out there… It’s extremely customizable… Their support is awesome… I absolutely recommend this to anyone looking for an alternative to the usual form creators.',
+    createdAt: '2025-06-29T23:30:04.374Z',
+    updatedAt: '2025-10-31T04:00:30.746Z',
+    publishedAt: '2025-06-29T23:30:06.260Z',
+    companyLogo: {
+      id: 3648,
+      imageAlt: 'eastview-logo-header',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4097,
+        name: 'eastview-logo-header-300x120 1.png',
+        alternativeText: 'eastview-logo-header',
+        caption: 'eastview-logo-header',
+        width: 200,
+        height: 80,
+        formats: null,
+        hash: 'eastview_logo_header_300x120_1_d9c231e93b',
+        ext: '.png',
+        mime: 'image/png',
+        size: 3.18,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/eastview_logo_header_300x120_1_d9c231e93b.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-31T04:00:11.854Z',
+        updatedAt: '2025-10-31T04:00:11.854Z',
+      },
+    },
+  },
 ]
 const c6_title = [
   {
-    "id": 4574,
-    "text": "Common questions",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 4574,
+    text: 'Common questions',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c6_faqList = [
   {
-    "id": 2226,
-    "header": "What is an AI form workflow?",
-    "body": "It is a prompt that runs against every form submission you collect. The form does the data-gathering; the AI does the reading, summarizing, scoring, or routing on the structured output — automatically, every time someone submits.",
-    "body_markdown": null,
-    "list": []
+    id: 2226,
+    header: 'What is an AI form workflow?',
+    body: 'It is a prompt that runs against every form submission you collect. The form does the data-gathering; the AI does the reading, summarizing, scoring, or routing on the structured output — automatically, every time someone submits.',
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2231,
-    "header": "Do I need to write any code?",
-    "body": "No. You write a plain-English instruction in your form's Automate tab. There is no code, no JSON, and no third-party tool to set up — you configure it once and it runs on every submission after that.",
-    "body_markdown": null,
-    "list": []
+    id: 2231,
+    header: 'Do I need to write any code?',
+    body: "No. You write a plain-English instruction in your form's Automate tab. There is no code, no JSON, and no third-party tool to set up — you configure it once and it runs on every submission after that.",
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2227,
-    "header": "When does the workflow run?",
-    "body": "You choose. Pick 'On form submission' so every new response triggers the workflow automatically, or 'Manual trigger' so it only runs when you click run from the dashboard.",
-    "body_markdown": null,
-    "list": []
+    id: 2227,
+    header: 'When does the workflow run?',
+    body: "You choose. Pick 'On form submission' so every new response triggers the workflow automatically, or 'Manual trigger' so it only runs when you click run from the dashboard.",
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2228,
-    "header": "Where does the AI output go?",
-    "body": "Send it to your dashboard, an email, a custom field on the submission, or downstream to your CRM and 100+ connected apps via Formester integrations.",
-    "body_markdown": null,
-    "list": []
+    id: 2228,
+    header: 'Where does the AI output go?',
+    body: 'Send it to your dashboard, an email, a custom field on the submission, or downstream to your CRM and 100+ connected apps via Formester integrations.',
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2229,
-    "header": "How is this different from Zapier or Make?",
-    "body": "Zapier and Make chain many apps together for general automation. AI Workflows does one job well: run AI on the submission you just collected. The two coexist — Formester runs the AI workflow, then fans the result out to other tools if you need it.",
-    "body_markdown": null,
-    "list": []
+    id: 2229,
+    header: 'How is this different from Zapier or Make?',
+    body: 'Zapier and Make chain many apps together for general automation. AI Workflows does one job well: run AI on the submission you just collected. The two coexist — Formester runs the AI workflow, then fans the result out to other tools if you need it.',
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 2230,
-    "header": "Which plan includes AI Workflows?",
-    "body": "AI Workflows is available on the Business plan and up. Check the pricing page for full details.",
-    "body_markdown": null,
-    "list": []
-  }
+    id: 2230,
+    header: 'Which plan includes AI Workflows?',
+    body: 'AI Workflows is available on the Business plan and up. Check the pricing page for full details.',
+    body_markdown: null,
+    list: [],
+  },
 ]
 const c7_buttons = [
   {
-    "id": 1479,
-    "link": "https://app.formester.com/users/sign_up",
-    "text": "Get Started",
-    "type": "Primary",
-    "showArrow": true
+    id: 1479,
+    link: 'https://app.formester.com/users/sign_up',
+    text: 'Get Started',
+    type: 'Primary',
+    showArrow: true,
   },
   {
-    "id": 1480,
-    "link": "/pricing",
-    "text": "See pricing",
-    "type": "White",
-    "showArrow": false
-  }
+    id: 1480,
+    link: '/pricing',
+    text: 'See pricing',
+    type: 'White',
+    showArrow: false,
+  },
 ]
 
 useHead({
-  "title": "AI Workflows for Form Submissions: Summarize, Score, Triage with One Prompt",
-  "link": [
+  title: 'AI Workflows for Form Submissions: Summarize, Score, Triage with One Prompt',
+  link: [
     {
-      "hid": "canonical",
-      "rel": "canonical",
-      "href": "https://formester.com/features/ai-workflows/"
-    }
+      hid: 'canonical',
+      rel: 'canonical',
+      href: 'https://formester.com/features/ai-workflows/',
+    },
   ],
-  "meta": [
+  meta: [
     {
-      "property": "article:modified_time",
-      "content": "2026-06-15T10:45:38.671Z"
+      property: 'article:modified_time',
+      content: '2026-06-15T10:45:38.671Z',
     },
     {
-      "hid": "description",
-      "name": "description",
-      "content": "Run an AI prompt on every form submission. Summarize, score, classify, and route responses automatically — to your dashboard, email, a custom field, or 100+ connected apps. No code, set up once."
+      hid: 'description',
+      name: 'description',
+      content:
+        'Run an AI prompt on every form submission. Summarize, score, classify, and route responses automatically — to your dashboard, email, a custom field, or 100+ connected apps. No code, set up once.',
     },
     {
-      "hid": "og:site_name",
-      "name": "og:site_name",
-      "content": "AI Workflows for Form Submissions: Summarize, Score, Triage with One Prompt"
+      hid: 'og:site_name',
+      name: 'og:site_name',
+      content: 'AI Workflows for Form Submissions: Summarize, Score, Triage with One Prompt',
     },
     {
-      "hid": "og:type",
-      "property": "og:type",
-      "content": "website"
+      hid: 'og:type',
+      property: 'og:type',
+      content: 'website',
     },
     {
-      "hid": "og:url",
-      "property": "og:url",
-      "content": "https://formester.com/features/ai-workflows/"
+      hid: 'og:url',
+      property: 'og:url',
+      content: 'https://formester.com/features/ai-workflows/',
     },
     {
-      "hid": "og:title",
-      "property": "og:title",
-      "content": "AI Workflows for Form Submissions: Summarize, Score, Triage with One Prompt"
+      hid: 'og:title',
+      property: 'og:title',
+      content: 'AI Workflows for Form Submissions: Summarize, Score, Triage with One Prompt',
     },
     {
-      "hid": "og:description",
-      "property": "og:description",
-      "content": "Run an AI prompt on every form submission. Summarize, score, classify, and route responses automatically — to your dashboard, email, a custom field, or 100+ connected apps. No code, set up once."
+      hid: 'og:description',
+      property: 'og:description',
+      content:
+        'Run an AI prompt on every form submission. Summarize, score, classify, and route responses automatically — to your dashboard, email, a custom field, or 100+ connected apps. No code, set up once.',
     },
     {
-      "hid": "og:image",
-      "property": "og:image",
-      "content": "https://formester.com/formester-logo-meta-image.png"
+      hid: 'og:image',
+      property: 'og:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
     },
     {
-      "hid": "og:image:alt",
-      "name": "og:image:alt",
-      "content": "Formester Logo"
+      hid: 'og:image:alt',
+      name: 'og:image:alt',
+      content: 'Formester Logo',
     },
     {
-      "hid": "twitter:url",
-      "name": "twitter:url",
-      "content": "https://formester.com/features/ai-workflows/"
+      hid: 'twitter:url',
+      name: 'twitter:url',
+      content: 'https://formester.com/features/ai-workflows/',
     },
     {
-      "name": "twitter:site",
-      "content": "@_formester_"
+      name: 'twitter:site',
+      content: '@_formester_',
     },
     {
-      "hid": "twitter:title",
-      "name": "twitter:title",
-      "content": "AI Workflows for Form Submissions: Summarize, Score, Triage with One Prompt"
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: 'AI Workflows for Form Submissions: Summarize, Score, Triage with One Prompt',
     },
     {
-      "hid": "twitter:description",
-      "name": "twitter:description",
-      "content": "Run an AI prompt on every form submission. Summarize, score, classify, and route responses automatically — to your dashboard, email, a custom field, or 100+ connected apps. No code, set up once."
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content:
+        'Run an AI prompt on every form submission. Summarize, score, classify, and route responses automatically — to your dashboard, email, a custom field, or 100+ connected apps. No code, set up once.',
     },
     {
-      "hid": "twitter:image",
-      "name": "twitter:image",
-      "content": "https://formester.com/formester-logo-meta-image.png"
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
     },
     {
-      "hid": "twitter:image:alt",
-      "name": "twitter:image:alt",
-      "content": "Formester Logo"
+      hid: 'twitter:image:alt',
+      name: 'twitter:image:alt',
+      content: 'Formester Logo',
     },
     {
-      "hid": "twitter:card",
-      "name": "twitter:card",
-      "content": "summary_large_image"
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image',
     },
     {
-      "hid": "apple-mobile-web-app-title",
-      "name": "apple-mobile-web-app-title",
-      "content": "Formester"
+      hid: 'apple-mobile-web-app-title',
+      name: 'apple-mobile-web-app-title',
+      content: 'Formester',
     },
     {
-      "hid": "image",
-      "name": "image",
-      "property": "og:image",
-      "content": "https://formester.com/formester-logo-meta-image.png"
+      hid: 'image',
+      name: 'image',
+      property: 'og:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
     },
     {
-      "hid": "keywords",
-      "name": "keywords",
-      "content": []
-    }
-  ]
+      hid: 'keywords',
+      name: 'keywords',
+      content: [],
+    },
+  ],
 })
 useJsonld([
   {
-    "@context": "https://schema.org",
-    "url": "https://formester.com",
-    "logo": "https://formester.com/logo.svg",
-    "name": "Formester",
-    "@type": "Organization"
+    '@context': 'https://schema.org',
+    url: 'https://formester.com',
+    logo: 'https://formester.com/logo.svg',
+    name: 'Formester',
+    '@type': 'Organization',
   },
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
       {
-        "name": "What is an AI form workflow?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "It is a prompt that runs against every form submission you collect. The form does the data-gathering; the AI does the reading, summarizing, scoring, or routing on the structured output — automatically, every time someone submits.",
-          "@type": "Answer"
-        }
+        name: 'What is an AI form workflow?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'It is a prompt that runs against every form submission you collect. The form does the data-gathering; the AI does the reading, summarizing, scoring, or routing on the structured output — automatically, every time someone submits.',
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "Do I need to write any code?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "No. You write a plain-English instruction in your form's Automate tab. There is no code, no JSON, and no third-party tool to set up — you configure it once and it runs on every submission after that.",
-          "@type": "Answer"
-        }
+        name: 'Do I need to write any code?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: "No. You write a plain-English instruction in your form's Automate tab. There is no code, no JSON, and no third-party tool to set up — you configure it once and it runs on every submission after that.",
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "When does the workflow run?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "You choose. Pick 'On form submission' so every new response triggers the workflow automatically, or 'Manual trigger' so it only runs when you click run from the dashboard.",
-          "@type": "Answer"
-        }
+        name: 'When does the workflow run?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: "You choose. Pick 'On form submission' so every new response triggers the workflow automatically, or 'Manual trigger' so it only runs when you click run from the dashboard.",
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "Where does the AI output go?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "Send it to your dashboard, an email, a custom field on the submission, or downstream to your CRM and 100+ connected apps via Formester integrations.",
-          "@type": "Answer"
-        }
+        name: 'Where does the AI output go?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'Send it to your dashboard, an email, a custom field on the submission, or downstream to your CRM and 100+ connected apps via Formester integrations.',
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "How is this different from Zapier or Make?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "Zapier and Make chain many apps together for general automation. AI Workflows does one job well: run AI on the submission you just collected. The two coexist — Formester runs the AI workflow, then fans the result out to other tools if you need it.",
-          "@type": "Answer"
-        }
+        name: 'How is this different from Zapier or Make?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'Zapier and Make chain many apps together for general automation. AI Workflows does one job well: run AI on the submission you just collected. The two coexist — Formester runs the AI workflow, then fans the result out to other tools if you need it.',
+          '@type': 'Answer',
+        },
       },
       {
-        "name": "Which plan includes AI Workflows?",
-        "@type": "Question",
-        "acceptedAnswer": {
-          "text": "AI Workflows is available on the Business plan and up. Check the pricing page for full details.",
-          "@type": "Answer"
-        }
-      }
-    ]
-  }
+        name: 'Which plan includes AI Workflows?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'AI Workflows is available on the Business plan and up. Check the pricing page for full details.',
+          '@type': 'Answer',
+        },
+      },
+    ],
+  },
 ])
 </script>

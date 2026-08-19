@@ -10,59 +10,23 @@
       class="page-component-item"
     />
 
-    <TrustSeals
-      :title="c1_title"
-      :logos="c1_logos"
-      class="page-component-item"
-    />
+    <TrustSeals :title="c1_title" :logos="c1_logos" class="page-component-item" />
 
-    <Trustbadges
-      :title="c2_title"
-      :badges="c2_badges"
-      class="page-component-item"
-    />
+    <Trustbadges :title="c2_title" :badges="c2_badges" class="page-component-item" />
 
-    <FaqSection
-      :title="c3_title"
-      :faqList="c3_faqList"
-      class="page-component-item"
-    />
+    <FaqSection :title="c3_title" :faqList="c3_faqList" class="page-component-item" />
 
-    <StandoutFeatureDetail
-      :title="c4_title"
-      :itemList="c4_itemList"
-      class="page-component-item"
-    />
+    <StandoutFeatureDetail :title="c4_title" :itemList="c4_itemList" class="page-component-item" />
 
-    <Table
-      :title="c5_title"
-      :rows="c5_rows"
-      class="page-component-item"
-    />
+    <Table :title="c5_title" :rows="c5_rows" class="page-component-item" />
 
-    <Table
-      :title="c6_title"
-      :rows="c6_rows"
-      class="page-component-item"
-    />
+    <Table :title="c6_title" :rows="c6_rows" class="page-component-item" />
 
-    <Table
-      :title="c7_title"
-      :rows="c7_rows"
-      class="page-component-item"
-    />
+    <Table :title="c7_title" :rows="c7_rows" class="page-component-item" />
 
-    <SimpleStepsCreate
-      :title="c8_title"
-      :itemList="c8_itemList"
-      class="page-component-item"
-    />
+    <SimpleStepsCreate :title="c8_title" :itemList="c8_itemList" class="page-component-item" />
 
-    <MostUsedFeatures
-      :itemList="c9_itemList"
-      :heading="c9_heading"
-      class="page-component-item"
-    />
+    <MostUsedFeatures :itemList="c9_itemList" :heading="c9_heading" class="page-component-item" />
 
     <TemplateSection
       description="Get started with our free templates!"
@@ -93,22 +57,11 @@
       class="page-component-item"
     />
 
-    <FeatureDetailsSection
-      :title="c14_title"
-      :itemList="c14_itemList"
-      class="page-component-item"
-    />
+    <FeatureDetailsSection :title="c14_title" :itemList="c14_itemList" class="page-component-item" />
 
-    <FaqSection
-      :title="c15_title"
-      :faqList="c15_faqList"
-      class="page-component-item"
-    />
+    <FaqSection :title="c15_title" :faqList="c15_faqList" class="page-component-item" />
 
-    <CallToActionSection
-      :ctaValue="c16_ctaValue"
-      class="page-component-item"
-    />
+    <CallToActionSection :ctaValue="c16_ctaValue" class="page-component-item" />
   </div>
 </template>
 
@@ -130,2182 +83,2209 @@ import Usecase from '@/components/home/Usecases/Usecase.vue'
 
 const c0_title = [
   {
-    "id": 2524,
-    "text": "Formester, the perfect Formstack alternative!",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 2524,
+    text: 'Formester, the perfect Formstack alternative!',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c0_button = [
   {
-    "id": 1094,
-    "link": "https://app.formester.com/users/sign_up",
-    "text": "Get Started - it’s free!",
-    "type": "Primary",
-    "showArrow": null
-  }
+    id: 1094,
+    link: 'https://app.formester.com/users/sign_up',
+    text: 'Get Started - it’s free!',
+    type: 'Primary',
+    showArrow: null,
+  },
 ]
 const c0_clickTriggers = [
   {
-    "id": 1763,
-    "text": "Free forever"
+    id: 1763,
+    text: 'Free forever',
   },
   {
-    "id": 1762,
-    "text": "No credit card"
+    id: 1762,
+    text: 'No credit card',
   },
   {
-    "id": 1764,
-    "text": "Secure storage"
-  }
+    id: 1764,
+    text: 'Secure storage',
+  },
 ]
 const c0_tabCardContent = [
   {
-    "id": 80,
-    "navTitle": "Faster creation",
-    "title": "Build complete forms in seconds",
-    "image": {
-      "id": 3039,
-      "imageAlt": "a screenshot of Formester's AI form builder",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 3999,
-        "name": "AINative.svg",
-        "alternativeText": null,
-        "caption": null,
-        "width": 644,
-        "height": 430,
-        "formats": null,
-        "hash": "AI_Native_c17f4ed1fa",
-        "ext": ".svg",
-        "mime": "image/svg+xml",
-        "size": 424.42,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/AI_Native_c17f4ed1fa.svg",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-09-19T02:23:44.541Z",
-        "updatedAt": "2025-09-19T02:23:44.541Z"
-      }
+    id: 80,
+    navTitle: 'Faster creation',
+    title: 'Build complete forms in seconds',
+    image: {
+      id: 3039,
+      imageAlt: "a screenshot of Formester's AI form builder",
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3999,
+        name: 'AINative.svg',
+        alternativeText: null,
+        caption: null,
+        width: 644,
+        height: 430,
+        formats: null,
+        hash: 'AI_Native_c17f4ed1fa',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 424.42,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/AI_Native_c17f4ed1fa.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-09-19T02:23:44.541Z',
+        updatedAt: '2025-09-19T02:23:44.541Z',
+      },
     },
-    "feature": [
+    feature: [
       {
-        "id": 111,
-        "featureTitle": "Use AI to create and edit forms instantly without manual effort.",
-        "icon": {
-          "id": 3047,
-          "imageAlt": "check icon",
-          "imageUrl": null,
-          "width": null,
-          "height": null,
-          "image": {
-            "id": 3879,
-            "name": "check icon.png",
-            "alternativeText": "check icon",
-            "caption": "check icon",
-            "width": 50,
-            "height": 50,
-            "formats": null,
-            "hash": "check_icon_79357fa908",
-            "ext": ".png",
-            "mime": "image/png",
-            "size": 0.5,
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/check_icon_79357fa908.png",
-            "previewUrl": null,
-            "provider": "aws-s3",
-            "provider_metadata": null,
-            "createdAt": "2025-08-29T03:53:54.469Z",
-            "updatedAt": "2025-08-29T03:53:54.469Z"
-          }
-        }
+        id: 111,
+        featureTitle: 'Use AI to create and edit forms instantly without manual effort.',
+        icon: {
+          id: 3047,
+          imageAlt: 'check icon',
+          imageUrl: null,
+          width: null,
+          height: null,
+          image: {
+            id: 3879,
+            name: 'check icon.png',
+            alternativeText: 'check icon',
+            caption: 'check icon',
+            width: 50,
+            height: 50,
+            formats: null,
+            hash: 'check_icon_79357fa908',
+            ext: '.png',
+            mime: 'image/png',
+            size: 0.5,
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/check_icon_79357fa908.png',
+            previewUrl: null,
+            provider: 'aws-s3',
+            provider_metadata: null,
+            createdAt: '2025-08-29T03:53:54.469Z',
+            updatedAt: '2025-08-29T03:53:54.469Z',
+          },
+        },
       },
       {
-        "id": 110,
-        "featureTitle": "Access 100 percent customizable templates for any use case.",
-        "icon": {
-          "id": 3050,
-          "imageAlt": "check icon",
-          "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/check_icon_79357fa908.png",
-          "width": null,
-          "height": null,
-          "image": null
-        }
+        id: 110,
+        featureTitle: 'Access 100 percent customizable templates for any use case.',
+        icon: {
+          id: 3050,
+          imageAlt: 'check icon',
+          imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/check_icon_79357fa908.png',
+          width: null,
+          height: null,
+          image: null,
+        },
       },
       {
-        "id": 108,
-        "featureTitle": "Save time with ready-to-use free templates designed for every need.",
-        "icon": {
-          "id": 3046,
-          "imageAlt": "check icon",
-          "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/check_icon_79357fa908.png",
-          "width": null,
-          "height": null,
-          "image": null
-        }
-      }
-    ]
+        id: 108,
+        featureTitle: 'Save time with ready-to-use free templates designed for every need.',
+        icon: {
+          id: 3046,
+          imageAlt: 'check icon',
+          imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/check_icon_79357fa908.png',
+          width: null,
+          height: null,
+          image: null,
+        },
+      },
+    ],
   },
   {
-    "id": 79,
-    "navTitle": "Better UI",
-    "title": "Work with a clean, modern interface",
-    "image": {
-      "id": 3037,
-      "imageAlt": "a screenshot of Formester's Form Building UI",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 3996,
-        "name": "Forms.svg",
-        "alternativeText": null,
-        "caption": null,
-        "width": 644,
-        "height": 430,
-        "formats": null,
-        "hash": "Forms_736206c42d",
-        "ext": ".svg",
-        "mime": "image/svg+xml",
-        "size": 1285.31,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Forms_736206c42d.svg",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-09-19T02:23:22.380Z",
-        "updatedAt": "2025-09-19T02:23:22.380Z"
-      }
+    id: 79,
+    navTitle: 'Better UI',
+    title: 'Work with a clean, modern interface',
+    image: {
+      id: 3037,
+      imageAlt: "a screenshot of Formester's Form Building UI",
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3996,
+        name: 'Forms.svg',
+        alternativeText: null,
+        caption: null,
+        width: 644,
+        height: 430,
+        formats: null,
+        hash: 'Forms_736206c42d',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 1285.31,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Forms_736206c42d.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-09-19T02:23:22.380Z',
+        updatedAt: '2025-09-19T02:23:22.380Z',
+      },
     },
-    "feature": [
+    feature: [
       {
-        "id": 106,
-        "featureTitle": "Enjoy a minimal yet powerful dashboard built for speed.",
-        "icon": {
-          "id": 3043,
-          "imageAlt": "check icon",
-          "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/check_icon_79357fa908.png",
-          "width": null,
-          "height": null,
-          "image": null
-        }
+        id: 106,
+        featureTitle: 'Enjoy a minimal yet powerful dashboard built for speed.',
+        icon: {
+          id: 3043,
+          imageAlt: 'check icon',
+          imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/check_icon_79357fa908.png',
+          width: null,
+          height: null,
+          image: null,
+        },
       },
       {
-        "id": 103,
-        "featureTitle": "Design forms that look great and perform better.",
-        "icon": {
-          "id": 3044,
-          "imageAlt": "check icon",
-          "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/check_icon_79357fa908.png",
-          "width": null,
-          "height": null,
-          "image": null
-        }
+        id: 103,
+        featureTitle: 'Design forms that look great and perform better.',
+        icon: {
+          id: 3044,
+          imageAlt: 'check icon',
+          imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/check_icon_79357fa908.png',
+          width: null,
+          height: null,
+          image: null,
+        },
       },
       {
-        "id": 104,
-        "featureTitle": "Give users a smooth experience that drives more responses.",
-        "icon": {
-          "id": 3042,
-          "imageAlt": "check icon",
-          "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/check_icon_79357fa908.png",
-          "width": null,
-          "height": null,
-          "image": null
-        }
-      }
-    ]
+        id: 104,
+        featureTitle: 'Give users a smooth experience that drives more responses.',
+        icon: {
+          id: 3042,
+          imageAlt: 'check icon',
+          imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/check_icon_79357fa908.png',
+          width: null,
+          height: null,
+          image: null,
+        },
+      },
+    ],
   },
   {
-    "id": 82,
-    "navTitle": "Data security",
-    "title": "Keep every response safe and private",
-    "image": {
-      "id": 3041,
-      "imageAlt": "a screenshot of Formester's data security",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 3995,
-        "name": "3.svg",
-        "alternativeText": null,
-        "caption": null,
-        "width": 644,
-        "height": 430,
-        "formats": null,
-        "hash": "3_f6980b5e1d",
-        "ext": ".svg",
-        "mime": "image/svg+xml",
-        "size": 4809.22,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/3_f6980b5e1d.svg",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-09-19T02:23:21.734Z",
-        "updatedAt": "2025-09-19T02:23:21.734Z"
-      }
+    id: 82,
+    navTitle: 'Data security',
+    title: 'Keep every response safe and private',
+    image: {
+      id: 3041,
+      imageAlt: "a screenshot of Formester's data security",
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3995,
+        name: '3.svg',
+        alternativeText: null,
+        caption: null,
+        width: 644,
+        height: 430,
+        formats: null,
+        hash: '3_f6980b5e1d',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 4809.22,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/3_f6980b5e1d.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-09-19T02:23:21.734Z',
+        updatedAt: '2025-09-19T02:23:21.734Z',
+      },
     },
-    "feature": [
+    feature: [
       {
-        "id": 113,
-        "featureTitle": "Rely on enterprise-grade protection for your data.",
-        "icon": {
-          "id": 3052,
-          "imageAlt": "check icon",
-          "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/check_icon_79357fa908.png",
-          "width": null,
-          "height": null,
-          "image": null
-        }
+        id: 113,
+        featureTitle: 'Rely on enterprise-grade protection for your data.',
+        icon: {
+          id: 3052,
+          imageAlt: 'check icon',
+          imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/check_icon_79357fa908.png',
+          width: null,
+          height: null,
+          image: null,
+        },
       },
       {
-        "id": 112,
-        "featureTitle": "Prevent breaches with advanced security protocols.",
-        "icon": {
-          "id": 3049,
-          "imageAlt": "check icon",
-          "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/check_icon_79357fa908.png",
-          "width": null,
-          "height": null,
-          "image": null
-        }
+        id: 112,
+        featureTitle: 'Prevent breaches with advanced security protocols.',
+        icon: {
+          id: 3049,
+          imageAlt: 'check icon',
+          imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/check_icon_79357fa908.png',
+          width: null,
+          height: null,
+          image: null,
+        },
       },
       {
-        "id": 114,
-        "featureTitle": "Stay compliant with global data standards and policies.",
-        "icon": {
-          "id": 3053,
-          "imageAlt": "check icon",
-          "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/check_icon_79357fa908.png",
-          "width": null,
-          "height": null,
-          "image": null
-        }
-      }
-    ]
+        id: 114,
+        featureTitle: 'Stay compliant with global data standards and policies.',
+        icon: {
+          id: 3053,
+          imageAlt: 'check icon',
+          imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/check_icon_79357fa908.png',
+          width: null,
+          height: null,
+          image: null,
+        },
+      },
+    ],
   },
   {
-    "id": 81,
-    "navTitle": "Team collaboration",
-    "title": "Work together without friction",
-    "image": {
-      "id": 3040,
-      "imageAlt": "a mockup of team collaboration in Formester",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 3998,
-        "name": "Collaboration.svg",
-        "alternativeText": null,
-        "caption": null,
-        "width": 644,
-        "height": 430,
-        "formats": null,
-        "hash": "Collaboration_c73d6f0d4c",
-        "ext": ".svg",
-        "mime": "image/svg+xml",
-        "size": 3004.76,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Collaboration_c73d6f0d4c.svg",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-09-19T02:23:23.032Z",
-        "updatedAt": "2025-09-19T02:23:23.032Z"
-      }
+    id: 81,
+    navTitle: 'Team collaboration',
+    title: 'Work together without friction',
+    image: {
+      id: 3040,
+      imageAlt: 'a mockup of team collaboration in Formester',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3998,
+        name: 'Collaboration.svg',
+        alternativeText: null,
+        caption: null,
+        width: 644,
+        height: 430,
+        formats: null,
+        hash: 'Collaboration_c73d6f0d4c',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 3004.76,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Collaboration_c73d6f0d4c.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-09-19T02:23:23.032Z',
+        updatedAt: '2025-09-19T02:23:23.032Z',
+      },
     },
-    "feature": [
+    feature: [
       {
-        "id": 105,
-        "featureTitle": "Invite your team to build and manage forms in real time.",
-        "icon": {
-          "id": 3045,
-          "imageAlt": "check icon",
-          "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/check_icon_79357fa908.png",
-          "width": null,
-          "height": null,
-          "image": null
-        }
+        id: 105,
+        featureTitle: 'Invite your team to build and manage forms in real time.',
+        icon: {
+          id: 3045,
+          imageAlt: 'check icon',
+          imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/check_icon_79357fa908.png',
+          width: null,
+          height: null,
+          image: null,
+        },
       },
       {
-        "id": 109,
-        "featureTitle": "Assign roles and control permissions with ease.",
-        "icon": {
-          "id": 3048,
-          "imageAlt": "check icon",
-          "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/check_icon_79357fa908.png",
-          "width": null,
-          "height": null,
-          "image": null
-        }
+        id: 109,
+        featureTitle: 'Assign roles and control permissions with ease.',
+        icon: {
+          id: 3048,
+          imageAlt: 'check icon',
+          imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/check_icon_79357fa908.png',
+          width: null,
+          height: null,
+          image: null,
+        },
       },
       {
-        "id": 107,
-        "featureTitle": "Stay aligned with shared dashboards and instant updates.",
-        "icon": {
-          "id": 3051,
-          "imageAlt": "check icon",
-          "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/check_icon_79357fa908.png",
-          "width": null,
-          "height": null,
-          "image": null
-        }
-      }
-    ]
-  }
+        id: 107,
+        featureTitle: 'Stay aligned with shared dashboards and instant updates.',
+        icon: {
+          id: 3051,
+          imageAlt: 'check icon',
+          imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/check_icon_79357fa908.png',
+          width: null,
+          height: null,
+          image: null,
+        },
+      },
+    ],
+  },
 ]
 const c1_title = []
 const c1_logos = []
 const c2_title = [
   {
-    "id": 2516,
-    "text": "Join 15,000+ happy users",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 2516,
+    text: 'Join 15,000+ happy users',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c2_badges = []
 const c3_title = [
   {
-    "id": 2909,
-    "text": "Why look for a Formstack alternative?",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 2909,
+    text: 'Why look for a Formstack alternative?',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c3_faqList = [
   {
-    "id": 1270,
-    "header": "Affordable and flexible pricing",
-    "body": "Formester offers plans for all teams, including a free tier, avoiding Formstack’s high costs and feature restrictions.",
-    "body_markdown": "Formester offers plans for all teams, including a free tier, avoiding Formstack’s high costs and feature restrictions.",
-    "list": []
+    id: 1270,
+    header: 'Affordable and flexible pricing',
+    body: 'Formester offers plans for all teams, including a free tier, avoiding Formstack’s high costs and feature restrictions.',
+    body_markdown:
+      'Formester offers plans for all teams, including a free tier, avoiding Formstack’s high costs and feature restrictions.',
+    list: [],
   },
   {
-    "id": 1292,
-    "header": "Full customization and branding",
-    "body": "Design fully branded, visually engaging forms with complete control over fonts, layouts, and themes.",
-    "body_markdown": "Design fully branded, visually engaging forms with complete control over fonts, layouts, and themes.",
-    "list": []
+    id: 1292,
+    header: 'Full customization and branding',
+    body: 'Design fully branded, visually engaging forms with complete control over fonts, layouts, and themes.',
+    body_markdown:
+      'Design fully branded, visually engaging forms with complete control over fonts, layouts, and themes.',
+    list: [],
   },
   {
-    "id": 1293,
-    "header": "Seamless integrations and automation",
-    "body": "Connect reliably to third-party tools and automate workflows without the complexity or disruptions of Formstack.",
-    "body_markdown": "Connect reliably to third-party tools and automate workflows without the complexity or disruptions of Formstack.",
-    "list": []
+    id: 1293,
+    header: 'Seamless integrations and automation',
+    body: 'Connect reliably to third-party tools and automate workflows without the complexity or disruptions of Formstack.',
+    body_markdown:
+      'Connect reliably to third-party tools and automate workflows without the complexity or disruptions of Formstack.',
+    list: [],
   },
   {
-    "id": 1294,
-    "header": "Modern features built-in",
-    "body": "AI-assisted creation, advanced analytics, and mobile-ready forms are included on every plan, improving efficiency and results.",
-    "body_markdown": "AI-assisted creation, advanced analytics, and mobile-ready forms are included on every plan, improving efficiency and results.",
-    "list": []
-  }
+    id: 1294,
+    header: 'Modern features built-in',
+    body: 'AI-assisted creation, advanced analytics, and mobile-ready forms are included on every plan, improving efficiency and results.',
+    body_markdown:
+      'AI-assisted creation, advanced analytics, and mobile-ready forms are included on every plan, improving efficiency and results.',
+    list: [],
+  },
 ]
 const c4_title = [
   {
-    "id": 2519,
-    "text": "What's the difference?",
-    "highlight": false,
-    "color": null,
-    "bold": null
-  }
+    id: 2519,
+    text: "What's the difference?",
+    highlight: false,
+    color: null,
+    bold: null,
+  },
 ]
 const c4_itemList = [
   {
-    "id": 2100,
-    "title": "Formester ",
-    "description": "Formester is the perfect Formstack alternative. Build forms, surveys, and quizzes faster with a clean interface, smart features, advanced logic, team collaboration, and seamless integrations, all without hidden costs or steep learning curves.",
-    "description_markdown": "Formester is the perfect Formstack alternative. Build forms, surveys, and quizzes faster with a clean interface, smart features, advanced logic, team collaboration, and seamless integrations, all without hidden costs or steep learning curves.",
-    "icon": null,
-    "cardImage": {
-      "id": 2979,
-      "imageAlt": "a screenshot of formester form builder",
-      "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Landing_Page_d9ed9426b5.svg",
-      "width": null,
-      "height": null,
-      "image": null
-    }
+    id: 2100,
+    title: 'Formester ',
+    description:
+      'Formester is the perfect Formstack alternative. Build forms, surveys, and quizzes faster with a clean interface, smart features, advanced logic, team collaboration, and seamless integrations, all without hidden costs or steep learning curves.',
+    description_markdown:
+      'Formester is the perfect Formstack alternative. Build forms, surveys, and quizzes faster with a clean interface, smart features, advanced logic, team collaboration, and seamless integrations, all without hidden costs or steep learning curves.',
+    icon: null,
+    cardImage: {
+      id: 2979,
+      imageAlt: 'a screenshot of formester form builder',
+      imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Landing_Page_d9ed9426b5.svg',
+      width: null,
+      height: null,
+      image: null,
+    },
   },
   {
-    "id": 2099,
-    "title": "Formstack",
-    "description": "Formstack is a popular tool for building forms, surveys, and workflows. It offers more features than basic form builders, but its complex interface, high pricing, limited customization, and slow performance can make it frustrating for fast, flexible form creation.",
-    "description_markdown": "Formstack is a popular tool for building forms, surveys, and workflows. It offers more features than basic form builders, but its complex interface, high pricing, limited customization, and slow performance can make it frustrating for fast, flexible form creation.",
-    "icon": null,
-    "cardImage": {
-      "id": 2981,
-      "imageAlt": "a screenshot of formstack",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 3949,
-        "name": "image 556.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 1710,
-        "height": 1422,
-        "formats": {
-          "large": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/large_image_556_478e723ec1.png",
-            "hash": "large_image_556_478e723ec1",
-            "mime": "image/png",
-            "name": "large_image 556.png",
-            "path": null,
-            "size": 320.69,
-            "width": 1000,
-            "height": 832
+    id: 2099,
+    title: 'Formstack',
+    description:
+      'Formstack is a popular tool for building forms, surveys, and workflows. It offers more features than basic form builders, but its complex interface, high pricing, limited customization, and slow performance can make it frustrating for fast, flexible form creation.',
+    description_markdown:
+      'Formstack is a popular tool for building forms, surveys, and workflows. It offers more features than basic form builders, but its complex interface, high pricing, limited customization, and slow performance can make it frustrating for fast, flexible form creation.',
+    icon: null,
+    cardImage: {
+      id: 2981,
+      imageAlt: 'a screenshot of formstack',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3949,
+        name: 'image 556.png',
+        alternativeText: null,
+        caption: null,
+        width: 1710,
+        height: 1422,
+        formats: {
+          large: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/large_image_556_478e723ec1.png',
+            hash: 'large_image_556_478e723ec1',
+            mime: 'image/png',
+            name: 'large_image 556.png',
+            path: null,
+            size: 320.69,
+            width: 1000,
+            height: 832,
           },
-          "small": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/small_image_556_478e723ec1.png",
-            "hash": "small_image_556_478e723ec1",
-            "mime": "image/png",
-            "name": "small_image 556.png",
-            "path": null,
-            "size": 103.57,
-            "width": 500,
-            "height": 416
+          small: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/small_image_556_478e723ec1.png',
+            hash: 'small_image_556_478e723ec1',
+            mime: 'image/png',
+            name: 'small_image 556.png',
+            path: null,
+            size: 103.57,
+            width: 500,
+            height: 416,
           },
-          "medium": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_image_556_478e723ec1.png",
-            "hash": "medium_image_556_478e723ec1",
-            "mime": "image/png",
-            "name": "medium_image 556.png",
-            "path": null,
-            "size": 200.39,
-            "width": 750,
-            "height": 624
+          medium: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_image_556_478e723ec1.png',
+            hash: 'medium_image_556_478e723ec1',
+            mime: 'image/png',
+            name: 'medium_image 556.png',
+            path: null,
+            size: 200.39,
+            width: 750,
+            height: 624,
           },
-          "thumbnail": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_image_556_478e723ec1.png",
-            "hash": "thumbnail_image_556_478e723ec1",
-            "mime": "image/png",
-            "name": "thumbnail_image 556.png",
-            "path": null,
-            "size": 22.5,
-            "width": 188,
-            "height": 156
-          }
+          thumbnail: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_image_556_478e723ec1.png',
+            hash: 'thumbnail_image_556_478e723ec1',
+            mime: 'image/png',
+            name: 'thumbnail_image 556.png',
+            path: null,
+            size: 22.5,
+            width: 188,
+            height: 156,
+          },
         },
-        "hash": "image_556_478e723ec1",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 202.34,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/image_556_478e723ec1.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-09-12T04:19:53.839Z",
-        "updatedAt": "2025-09-12T04:19:53.839Z"
-      }
-    }
-  }
+        hash: 'image_556_478e723ec1',
+        ext: '.png',
+        mime: 'image/png',
+        size: 202.34,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/image_556_478e723ec1.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-09-12T04:19:53.839Z',
+        updatedAt: '2025-09-12T04:19:53.839Z',
+      },
+    },
+  },
 ]
 const c5_title = [
   {
-    "id": 2829,
-    "text": "Why Formester is better?",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 2829,
+    text: 'Why Formester is better?',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c5_rows = [
   {
-    "id": 589,
-    "rowType": "head"
+    id: 589,
+    rowType: 'head',
   },
   {
-    "id": 592,
-    "rowType": "body"
+    id: 592,
+    rowType: 'body',
   },
   {
-    "id": 591,
-    "rowType": "body"
+    id: 591,
+    rowType: 'body',
   },
   {
-    "id": 590,
-    "rowType": "body"
-  }
+    id: 590,
+    rowType: 'body',
+  },
 ]
 const c6_title = [
   {
-    "id": 2518,
-    "text": "Head to head comparison",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 2518,
+    text: 'Head to head comparison',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c6_rows = [
   {
-    "id": 468,
-    "rowType": "head"
+    id: 468,
+    rowType: 'head',
   },
   {
-    "id": 454,
-    "rowType": "body"
+    id: 454,
+    rowType: 'body',
   },
   {
-    "id": 463,
-    "rowType": "body"
+    id: 463,
+    rowType: 'body',
   },
   {
-    "id": 460,
-    "rowType": "body"
+    id: 460,
+    rowType: 'body',
   },
   {
-    "id": 464,
-    "rowType": "body"
+    id: 464,
+    rowType: 'body',
   },
   {
-    "id": 461,
-    "rowType": "body"
+    id: 461,
+    rowType: 'body',
   },
   {
-    "id": 474,
-    "rowType": "body"
+    id: 474,
+    rowType: 'body',
   },
   {
-    "id": 466,
-    "rowType": "body"
+    id: 466,
+    rowType: 'body',
   },
   {
-    "id": 469,
-    "rowType": "body"
+    id: 469,
+    rowType: 'body',
   },
   {
-    "id": 462,
-    "rowType": "body"
+    id: 462,
+    rowType: 'body',
   },
   {
-    "id": 465,
-    "rowType": "body"
+    id: 465,
+    rowType: 'body',
   },
   {
-    "id": 467,
-    "rowType": "body"
+    id: 467,
+    rowType: 'body',
   },
   {
-    "id": 455,
-    "rowType": "body"
+    id: 455,
+    rowType: 'body',
   },
   {
-    "id": 473,
-    "rowType": "body"
+    id: 473,
+    rowType: 'body',
   },
   {
-    "id": 471,
-    "rowType": "body"
+    id: 471,
+    rowType: 'body',
   },
   {
-    "id": 470,
-    "rowType": "body"
+    id: 470,
+    rowType: 'body',
   },
   {
-    "id": 472,
-    "rowType": "body"
+    id: 472,
+    rowType: 'body',
   },
   {
-    "id": 457,
-    "rowType": "body"
+    id: 457,
+    rowType: 'body',
   },
   {
-    "id": 456,
-    "rowType": "body"
+    id: 456,
+    rowType: 'body',
   },
   {
-    "id": 475,
-    "rowType": "body"
+    id: 475,
+    rowType: 'body',
   },
   {
-    "id": 458,
-    "rowType": "body"
+    id: 458,
+    rowType: 'body',
   },
   {
-    "id": 459,
-    "rowType": "body"
+    id: 459,
+    rowType: 'body',
   },
   {
-    "id": 476,
-    "rowType": "body"
+    id: 476,
+    rowType: 'body',
   },
   {
-    "id": 477,
-    "rowType": "body"
+    id: 477,
+    rowType: 'body',
   },
   {
-    "id": 594,
-    "rowType": "body"
+    id: 594,
+    rowType: 'body',
   },
   {
-    "id": 595,
-    "rowType": "body"
+    id: 595,
+    rowType: 'body',
   },
   {
-    "id": 593,
-    "rowType": "body"
-  }
+    id: 593,
+    rowType: 'body',
+  },
 ]
 const c7_title = [
   {
-    "id": 3334,
-    "text": "What about advanced features?",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 3334,
+    text: 'What about advanced features?',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c7_rows = [
   {
-    "id": 752,
-    "rowType": "head"
+    id: 752,
+    rowType: 'head',
   },
   {
-    "id": 749,
-    "rowType": "body"
+    id: 749,
+    rowType: 'body',
   },
   {
-    "id": 750,
-    "rowType": "body"
+    id: 750,
+    rowType: 'body',
   },
   {
-    "id": 751,
-    "rowType": "body"
+    id: 751,
+    rowType: 'body',
   },
   {
-    "id": 760,
-    "rowType": "body"
+    id: 760,
+    rowType: 'body',
   },
   {
-    "id": 753,
-    "rowType": "body"
+    id: 753,
+    rowType: 'body',
   },
   {
-    "id": 754,
-    "rowType": "body"
+    id: 754,
+    rowType: 'body',
   },
   {
-    "id": 759,
-    "rowType": "body"
+    id: 759,
+    rowType: 'body',
   },
   {
-    "id": 763,
-    "rowType": "body"
+    id: 763,
+    rowType: 'body',
   },
   {
-    "id": 757,
-    "rowType": "body"
+    id: 757,
+    rowType: 'body',
   },
   {
-    "id": 765,
-    "rowType": "body"
+    id: 765,
+    rowType: 'body',
   },
   {
-    "id": 769,
-    "rowType": "body"
+    id: 769,
+    rowType: 'body',
   },
   {
-    "id": 755,
-    "rowType": "body"
+    id: 755,
+    rowType: 'body',
   },
   {
-    "id": 768,
-    "rowType": "body"
+    id: 768,
+    rowType: 'body',
   },
   {
-    "id": 756,
-    "rowType": "body"
+    id: 756,
+    rowType: 'body',
   },
   {
-    "id": 766,
-    "rowType": "body"
+    id: 766,
+    rowType: 'body',
   },
   {
-    "id": 764,
-    "rowType": "body"
-  }
+    id: 764,
+    rowType: 'body',
+  },
 ]
 const c8_title = [
   {
-    "id": 2520,
-    "text": "How to switch?",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 2520,
+    text: 'How to switch?',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c8_itemList = [
   {
-    "id": 2097,
-    "title": "Create or import",
-    "description": "Start from scratch or use the powerful AI to generate both single and multi page forms in seconds.",
-    "description_markdown": "Start from scratch or use the powerful AI to generate both single and multi page forms in seconds.",
-    "icon": null,
-    "cardImage": {
-      "id": 2982,
-      "imageAlt": "a screenshot of Formester's form builder",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 3913,
-        "name": "Group 105.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 1364,
-        "height": 1042,
-        "formats": {
-          "large": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/large_Group_105_5b6d5586e0.png",
-            "hash": "large_Group_105_5b6d5586e0",
-            "mime": "image/png",
-            "name": "large_Group 105.png",
-            "path": null,
-            "size": 72.08,
-            "width": 1000,
-            "height": 764
+    id: 2097,
+    title: 'Create or import',
+    description: 'Start from scratch or use the powerful AI to generate both single and multi page forms in seconds.',
+    description_markdown:
+      'Start from scratch or use the powerful AI to generate both single and multi page forms in seconds.',
+    icon: null,
+    cardImage: {
+      id: 2982,
+      imageAlt: "a screenshot of Formester's form builder",
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3913,
+        name: 'Group 105.png',
+        alternativeText: null,
+        caption: null,
+        width: 1364,
+        height: 1042,
+        formats: {
+          large: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/large_Group_105_5b6d5586e0.png',
+            hash: 'large_Group_105_5b6d5586e0',
+            mime: 'image/png',
+            name: 'large_Group 105.png',
+            path: null,
+            size: 72.08,
+            width: 1000,
+            height: 764,
           },
-          "small": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/small_Group_105_5b6d5586e0.png",
-            "hash": "small_Group_105_5b6d5586e0",
-            "mime": "image/png",
-            "name": "small_Group 105.png",
-            "path": null,
-            "size": 27.9,
-            "width": 500,
-            "height": 382
+          small: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/small_Group_105_5b6d5586e0.png',
+            hash: 'small_Group_105_5b6d5586e0',
+            mime: 'image/png',
+            name: 'small_Group 105.png',
+            path: null,
+            size: 27.9,
+            width: 500,
+            height: 382,
           },
-          "medium": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_Group_105_5b6d5586e0.png",
-            "hash": "medium_Group_105_5b6d5586e0",
-            "mime": "image/png",
-            "name": "medium_Group 105.png",
-            "path": null,
-            "size": 49.34,
-            "width": 750,
-            "height": 573
+          medium: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_Group_105_5b6d5586e0.png',
+            hash: 'medium_Group_105_5b6d5586e0',
+            mime: 'image/png',
+            name: 'medium_Group 105.png',
+            path: null,
+            size: 49.34,
+            width: 750,
+            height: 573,
           },
-          "thumbnail": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_Group_105_5b6d5586e0.png",
-            "hash": "thumbnail_Group_105_5b6d5586e0",
-            "mime": "image/png",
-            "name": "thumbnail_Group 105.png",
-            "path": null,
-            "size": 8.93,
-            "width": 204,
-            "height": 156
-          }
+          thumbnail: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_Group_105_5b6d5586e0.png',
+            hash: 'thumbnail_Group_105_5b6d5586e0',
+            mime: 'image/png',
+            name: 'thumbnail_Group 105.png',
+            path: null,
+            size: 8.93,
+            width: 204,
+            height: 156,
+          },
         },
-        "hash": "Group_105_5b6d5586e0",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 18.97,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Group_105_5b6d5586e0.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-09-03T01:28:30.672Z",
-        "updatedAt": "2025-09-03T01:28:30.672Z"
-      }
-    }
+        hash: 'Group_105_5b6d5586e0',
+        ext: '.png',
+        mime: 'image/png',
+        size: 18.97,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Group_105_5b6d5586e0.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-09-03T01:28:30.672Z',
+        updatedAt: '2025-09-03T01:28:30.672Z',
+      },
+    },
   },
   {
-    "id": 2098,
-    "title": "Customize fields",
-    "description": "Use the drag and drop editor, add logic, layout, and branding.",
-    "description_markdown": null,
-    "icon": null,
-    "cardImage": {
-      "id": 2980,
-      "imageAlt": "a screenshot of Formester's form builder",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 3919,
-        "name": "Group 103.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 1364,
-        "height": 1042,
-        "formats": {
-          "large": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/large_Group_103_fbf4745295.png",
-            "hash": "large_Group_103_fbf4745295",
-            "mime": "image/png",
-            "name": "large_Group 103.png",
-            "path": null,
-            "size": 206.49,
-            "width": 1000,
-            "height": 764
+    id: 2098,
+    title: 'Customize fields',
+    description: 'Use the drag and drop editor, add logic, layout, and branding.',
+    description_markdown: null,
+    icon: null,
+    cardImage: {
+      id: 2980,
+      imageAlt: "a screenshot of Formester's form builder",
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3919,
+        name: 'Group 103.png',
+        alternativeText: null,
+        caption: null,
+        width: 1364,
+        height: 1042,
+        formats: {
+          large: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/large_Group_103_fbf4745295.png',
+            hash: 'large_Group_103_fbf4745295',
+            mime: 'image/png',
+            name: 'large_Group 103.png',
+            path: null,
+            size: 206.49,
+            width: 1000,
+            height: 764,
           },
-          "small": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/small_Group_103_fbf4745295.png",
-            "hash": "small_Group_103_fbf4745295",
-            "mime": "image/png",
-            "name": "small_Group 103.png",
-            "path": null,
-            "size": 68.18,
-            "width": 500,
-            "height": 382
+          small: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/small_Group_103_fbf4745295.png',
+            hash: 'small_Group_103_fbf4745295',
+            mime: 'image/png',
+            name: 'small_Group 103.png',
+            path: null,
+            size: 68.18,
+            width: 500,
+            height: 382,
           },
-          "medium": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_Group_103_fbf4745295.png",
-            "hash": "medium_Group_103_fbf4745295",
-            "mime": "image/png",
-            "name": "medium_Group 103.png",
-            "path": null,
-            "size": 129.6,
-            "width": 750,
-            "height": 573
+          medium: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_Group_103_fbf4745295.png',
+            hash: 'medium_Group_103_fbf4745295',
+            mime: 'image/png',
+            name: 'medium_Group 103.png',
+            path: null,
+            size: 129.6,
+            width: 750,
+            height: 573,
           },
-          "thumbnail": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_Group_103_fbf4745295.png",
-            "hash": "thumbnail_Group_103_fbf4745295",
-            "mime": "image/png",
-            "name": "thumbnail_Group 103.png",
-            "path": null,
-            "size": 19.27,
-            "width": 204,
-            "height": 156
-          }
+          thumbnail: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_Group_103_fbf4745295.png',
+            hash: 'thumbnail_Group_103_fbf4745295',
+            mime: 'image/png',
+            name: 'thumbnail_Group 103.png',
+            path: null,
+            size: 19.27,
+            width: 204,
+            height: 156,
+          },
         },
-        "hash": "Group_103_fbf4745295",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 57.98,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Group_103_fbf4745295.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-09-03T01:28:38.635Z",
-        "updatedAt": "2025-09-03T01:28:38.635Z"
-      }
-    }
+        hash: 'Group_103_fbf4745295',
+        ext: '.png',
+        mime: 'image/png',
+        size: 57.98,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Group_103_fbf4745295.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-09-03T01:28:38.635Z',
+        updatedAt: '2025-09-03T01:28:38.635Z',
+      },
+    },
   },
   {
-    "id": 2102,
-    "title": "Collect submissions",
-    "description": "Share your form and collect responses in real time.",
-    "description_markdown": "Share your form and collect responses in real time.",
-    "icon": null,
-    "cardImage": {
-      "id": 2983,
-      "imageAlt": "a screenshot of Formester's form builder",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 3915,
-        "name": "Group 104.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 1364,
-        "height": 1042,
-        "formats": {
-          "large": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/large_Group_104_2494059987.png",
-            "hash": "large_Group_104_2494059987",
-            "mime": "image/png",
-            "name": "large_Group 104.png",
-            "path": null,
-            "size": 102.29,
-            "width": 1000,
-            "height": 764
+    id: 2102,
+    title: 'Collect submissions',
+    description: 'Share your form and collect responses in real time.',
+    description_markdown: 'Share your form and collect responses in real time.',
+    icon: null,
+    cardImage: {
+      id: 2983,
+      imageAlt: "a screenshot of Formester's form builder",
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3915,
+        name: 'Group 104.png',
+        alternativeText: null,
+        caption: null,
+        width: 1364,
+        height: 1042,
+        formats: {
+          large: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/large_Group_104_2494059987.png',
+            hash: 'large_Group_104_2494059987',
+            mime: 'image/png',
+            name: 'large_Group 104.png',
+            path: null,
+            size: 102.29,
+            width: 1000,
+            height: 764,
           },
-          "small": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/small_Group_104_2494059987.png",
-            "hash": "small_Group_104_2494059987",
-            "mime": "image/png",
-            "name": "small_Group 104.png",
-            "path": null,
-            "size": 37.21,
-            "width": 500,
-            "height": 382
+          small: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/small_Group_104_2494059987.png',
+            hash: 'small_Group_104_2494059987',
+            mime: 'image/png',
+            name: 'small_Group 104.png',
+            path: null,
+            size: 37.21,
+            width: 500,
+            height: 382,
           },
-          "medium": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_Group_104_2494059987.png",
-            "hash": "medium_Group_104_2494059987",
-            "mime": "image/png",
-            "name": "medium_Group 104.png",
-            "path": null,
-            "size": 67,
-            "width": 750,
-            "height": 573
+          medium: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_Group_104_2494059987.png',
+            hash: 'medium_Group_104_2494059987',
+            mime: 'image/png',
+            name: 'medium_Group 104.png',
+            path: null,
+            size: 67,
+            width: 750,
+            height: 573,
           },
-          "thumbnail": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_Group_104_2494059987.png",
-            "hash": "thumbnail_Group_104_2494059987",
-            "mime": "image/png",
-            "name": "thumbnail_Group 104.png",
-            "path": null,
-            "size": 10.96,
-            "width": 204,
-            "height": 156
-          }
+          thumbnail: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_Group_104_2494059987.png',
+            hash: 'thumbnail_Group_104_2494059987',
+            mime: 'image/png',
+            name: 'thumbnail_Group 104.png',
+            path: null,
+            size: 10.96,
+            width: 204,
+            height: 156,
+          },
         },
-        "hash": "Group_104_2494059987",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 24.85,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Group_104_2494059987.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-09-03T01:28:32.911Z",
-        "updatedAt": "2025-09-03T01:28:32.911Z"
-      }
-    }
-  }
+        hash: 'Group_104_2494059987',
+        ext: '.png',
+        mime: 'image/png',
+        size: 24.85,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Group_104_2494059987.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-09-03T01:28:32.911Z',
+        updatedAt: '2025-09-03T01:28:32.911Z',
+      },
+    },
+  },
 ]
 const c9_itemList = [
   {
-    "id": 2105,
-    "title": "Make forms your own",
-    "description": "Customize fonts, colors, logos, and layouts so every form feels on-brand. Seamlessly embed them into your website’s design.",
-    "description_markdown": null,
-    "icon": {
-      "id": 2975,
-      "imageAlt": "pen icon",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 3891,
-        "name": "pen.svg",
-        "alternativeText": "",
-        "caption": null,
-        "width": 38,
-        "height": 38,
-        "formats": null,
-        "hash": "pen_aab0275ee2",
-        "ext": ".svg",
-        "mime": "image/svg+xml",
-        "size": 1.01,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/pen_aab0275ee2.svg",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-08-29T04:10:02.677Z",
-        "updatedAt": "2025-08-29T04:10:16.354Z"
-      }
+    id: 2105,
+    title: 'Make forms your own',
+    description:
+      'Customize fonts, colors, logos, and layouts so every form feels on-brand. Seamlessly embed them into your website’s design.',
+    description_markdown: null,
+    icon: {
+      id: 2975,
+      imageAlt: 'pen icon',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3891,
+        name: 'pen.svg',
+        alternativeText: '',
+        caption: null,
+        width: 38,
+        height: 38,
+        formats: null,
+        hash: 'pen_aab0275ee2',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 1.01,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/pen_aab0275ee2.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-08-29T04:10:02.677Z',
+        updatedAt: '2025-08-29T04:10:16.354Z',
+      },
     },
-    "cardImage": {
-      "id": 2988,
-      "imageAlt": null,
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 3920,
-        "name": "1.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 593,
-        "height": 582,
-        "formats": {
-          "small": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/small_1_03e1f049a6.png",
-            "hash": "small_1_03e1f049a6",
-            "mime": "image/png",
-            "name": "small_1.png",
-            "path": null,
-            "size": 212.79,
-            "width": 500,
-            "height": 491
+    cardImage: {
+      id: 2988,
+      imageAlt: null,
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3920,
+        name: '1.png',
+        alternativeText: null,
+        caption: null,
+        width: 593,
+        height: 582,
+        formats: {
+          small: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/small_1_03e1f049a6.png',
+            hash: 'small_1_03e1f049a6',
+            mime: 'image/png',
+            name: 'small_1.png',
+            path: null,
+            size: 212.79,
+            width: 500,
+            height: 491,
           },
-          "thumbnail": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_1_03e1f049a6.png",
-            "hash": "thumbnail_1_03e1f049a6",
-            "mime": "image/png",
-            "name": "thumbnail_1.png",
-            "path": null,
-            "size": 31.11,
-            "width": 159,
-            "height": 156
-          }
+          thumbnail: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_1_03e1f049a6.png',
+            hash: 'thumbnail_1_03e1f049a6',
+            mime: 'image/png',
+            name: 'thumbnail_1.png',
+            path: null,
+            size: 31.11,
+            width: 159,
+            height: 156,
+          },
         },
-        "hash": "1_03e1f049a6",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 60.87,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/1_03e1f049a6.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-09-03T01:28:38.866Z",
-        "updatedAt": "2025-09-03T01:28:38.866Z"
-      }
-    }
+        hash: '1_03e1f049a6',
+        ext: '.png',
+        mime: 'image/png',
+        size: 60.87,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/1_03e1f049a6.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-09-03T01:28:38.866Z',
+        updatedAt: '2025-09-03T01:28:38.866Z',
+      },
+    },
   },
   {
-    "id": 2109,
-    "title": "Secure every submission",
-    "description": "Keep data safe with enterprise-level protection and privacy standards.",
-    "description_markdown": null,
-    "icon": {
-      "id": 2978,
-      "imageAlt": "form icon",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 3892,
-        "name": "form.svg",
-        "alternativeText": null,
-        "caption": null,
-        "width": 38,
-        "height": 38,
-        "formats": null,
-        "hash": "form_29962eaefb",
-        "ext": ".svg",
-        "mime": "image/svg+xml",
-        "size": 0.95,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/form_29962eaefb.svg",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-08-29T04:10:02.686Z",
-        "updatedAt": "2025-08-29T04:10:02.686Z"
-      }
+    id: 2109,
+    title: 'Secure every submission',
+    description: 'Keep data safe with enterprise-level protection and privacy standards.',
+    description_markdown: null,
+    icon: {
+      id: 2978,
+      imageAlt: 'form icon',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3892,
+        name: 'form.svg',
+        alternativeText: null,
+        caption: null,
+        width: 38,
+        height: 38,
+        formats: null,
+        hash: 'form_29962eaefb',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 0.95,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/form_29962eaefb.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-08-29T04:10:02.686Z',
+        updatedAt: '2025-08-29T04:10:02.686Z',
+      },
     },
-    "cardImage": {
-      "id": 2991,
-      "imageAlt": null,
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 3918,
-        "name": "2.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 593,
-        "height": 582,
-        "formats": {
-          "small": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/small_2_fd98de152d.png",
-            "hash": "small_2_fd98de152d",
-            "mime": "image/png",
-            "name": "small_2.png",
-            "path": null,
-            "size": 128.28,
-            "width": 500,
-            "height": 491
+    cardImage: {
+      id: 2991,
+      imageAlt: null,
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3918,
+        name: '2.png',
+        alternativeText: null,
+        caption: null,
+        width: 593,
+        height: 582,
+        formats: {
+          small: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/small_2_fd98de152d.png',
+            hash: 'small_2_fd98de152d',
+            mime: 'image/png',
+            name: 'small_2.png',
+            path: null,
+            size: 128.28,
+            width: 500,
+            height: 491,
           },
-          "thumbnail": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_2_fd98de152d.png",
-            "hash": "thumbnail_2_fd98de152d",
-            "mime": "image/png",
-            "name": "thumbnail_2.png",
-            "path": null,
-            "size": 21.94,
-            "width": 159,
-            "height": 156
-          }
+          thumbnail: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_2_fd98de152d.png',
+            hash: 'thumbnail_2_fd98de152d',
+            mime: 'image/png',
+            name: 'thumbnail_2.png',
+            path: null,
+            size: 21.94,
+            width: 159,
+            height: 156,
+          },
         },
-        "hash": "2_fd98de152d",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 32.84,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/2_fd98de152d.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-09-03T01:28:35.734Z",
-        "updatedAt": "2025-09-03T01:28:35.734Z"
-      }
-    }
+        hash: '2_fd98de152d',
+        ext: '.png',
+        mime: 'image/png',
+        size: 32.84,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/2_fd98de152d.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-09-03T01:28:35.734Z',
+        updatedAt: '2025-09-03T01:28:35.734Z',
+      },
+    },
   },
   {
-    "id": 2106,
-    "title": "Capture every lead",
-    "description": "Ensure no response slips through with reliable notifications and tracking.",
-    "description_markdown": null,
-    "icon": {
-      "id": 2976,
-      "imageAlt": null,
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 3889,
-        "name": "check.svg",
-        "alternativeText": null,
-        "caption": null,
-        "width": 38,
-        "height": 38,
-        "formats": null,
-        "hash": "check_6dcfe8a588",
-        "ext": ".svg",
-        "mime": "image/svg+xml",
-        "size": 0.91,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/check_6dcfe8a588.svg",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-08-29T04:10:02.634Z",
-        "updatedAt": "2025-08-29T04:10:02.634Z"
-      }
+    id: 2106,
+    title: 'Capture every lead',
+    description: 'Ensure no response slips through with reliable notifications and tracking.',
+    description_markdown: null,
+    icon: {
+      id: 2976,
+      imageAlt: null,
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3889,
+        name: 'check.svg',
+        alternativeText: null,
+        caption: null,
+        width: 38,
+        height: 38,
+        formats: null,
+        hash: 'check_6dcfe8a588',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 0.91,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/check_6dcfe8a588.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-08-29T04:10:02.634Z',
+        updatedAt: '2025-08-29T04:10:02.634Z',
+      },
     },
-    "cardImage": {
-      "id": 2987,
-      "imageAlt": null,
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 3917,
-        "name": "3.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 593,
-        "height": 582,
-        "formats": {
-          "small": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/small_3_decaab2d39.png",
-            "hash": "small_3_decaab2d39",
-            "mime": "image/png",
-            "name": "small_3.png",
-            "path": null,
-            "size": 150.95,
-            "width": 500,
-            "height": 491
+    cardImage: {
+      id: 2987,
+      imageAlt: null,
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3917,
+        name: '3.png',
+        alternativeText: null,
+        caption: null,
+        width: 593,
+        height: 582,
+        formats: {
+          small: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/small_3_decaab2d39.png',
+            hash: 'small_3_decaab2d39',
+            mime: 'image/png',
+            name: 'small_3.png',
+            path: null,
+            size: 150.95,
+            width: 500,
+            height: 491,
           },
-          "thumbnail": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_3_decaab2d39.png",
-            "hash": "thumbnail_3_decaab2d39",
-            "mime": "image/png",
-            "name": "thumbnail_3.png",
-            "path": null,
-            "size": 21.23,
-            "width": 159,
-            "height": 156
-          }
+          thumbnail: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_3_decaab2d39.png',
+            hash: 'thumbnail_3_decaab2d39',
+            mime: 'image/png',
+            name: 'thumbnail_3.png',
+            path: null,
+            size: 21.23,
+            width: 159,
+            height: 156,
+          },
         },
-        "hash": "3_decaab2d39",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 37.79,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/3_decaab2d39.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-09-03T01:28:33.473Z",
-        "updatedAt": "2025-09-03T01:28:33.473Z"
-      }
-    }
+        hash: '3_decaab2d39',
+        ext: '.png',
+        mime: 'image/png',
+        size: 37.79,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/3_decaab2d39.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-09-03T01:28:33.473Z',
+        updatedAt: '2025-09-03T01:28:33.473Z',
+      },
+    },
   },
   {
-    "id": 2108,
-    "title": "Track what drives results",
-    "description": "See which forms perform best and optimize with real-time insights.",
-    "description_markdown": null,
-    "icon": {
-      "id": 2977,
-      "imageAlt": null,
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 3890,
-        "name": "analytics.svg",
-        "alternativeText": null,
-        "caption": null,
-        "width": 38,
-        "height": 38,
-        "formats": null,
-        "hash": "analytics_49e5ccdd6d",
-        "ext": ".svg",
-        "mime": "image/svg+xml",
-        "size": 0.6,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/analytics_49e5ccdd6d.svg",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-08-29T04:10:02.636Z",
-        "updatedAt": "2025-08-29T04:10:02.636Z"
-      }
+    id: 2108,
+    title: 'Track what drives results',
+    description: 'See which forms perform best and optimize with real-time insights.',
+    description_markdown: null,
+    icon: {
+      id: 2977,
+      imageAlt: null,
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3890,
+        name: 'analytics.svg',
+        alternativeText: null,
+        caption: null,
+        width: 38,
+        height: 38,
+        formats: null,
+        hash: 'analytics_49e5ccdd6d',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 0.6,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/analytics_49e5ccdd6d.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-08-29T04:10:02.636Z',
+        updatedAt: '2025-08-29T04:10:02.636Z',
+      },
     },
-    "cardImage": {
-      "id": 2990,
-      "imageAlt": null,
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 3923,
-        "name": "4.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 593,
-        "height": 582,
-        "formats": {
-          "small": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/small_4_fa90be04fa.png",
-            "hash": "small_4_fa90be04fa",
-            "mime": "image/png",
-            "name": "small_4.png",
-            "path": null,
-            "size": 181.81,
-            "width": 500,
-            "height": 491
+    cardImage: {
+      id: 2990,
+      imageAlt: null,
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3923,
+        name: '4.png',
+        alternativeText: null,
+        caption: null,
+        width: 593,
+        height: 582,
+        formats: {
+          small: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/small_4_fa90be04fa.png',
+            hash: 'small_4_fa90be04fa',
+            mime: 'image/png',
+            name: 'small_4.png',
+            path: null,
+            size: 181.81,
+            width: 500,
+            height: 491,
           },
-          "thumbnail": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_4_fa90be04fa.png",
-            "hash": "thumbnail_4_fa90be04fa",
-            "mime": "image/png",
-            "name": "thumbnail_4.png",
-            "path": null,
-            "size": 27.65,
-            "width": 159,
-            "height": 156
-          }
+          thumbnail: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_4_fa90be04fa.png',
+            hash: 'thumbnail_4_fa90be04fa',
+            mime: 'image/png',
+            name: 'thumbnail_4.png',
+            path: null,
+            size: 27.65,
+            width: 159,
+            height: 156,
+          },
         },
-        "hash": "4_fa90be04fa",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 49.35,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/4_fa90be04fa.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-09-03T01:28:51.949Z",
-        "updatedAt": "2025-09-03T01:28:51.949Z"
-      }
-    }
-  }
+        hash: '4_fa90be04fa',
+        ext: '.png',
+        mime: 'image/png',
+        size: 49.35,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/4_fa90be04fa.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-09-03T01:28:51.949Z',
+        updatedAt: '2025-09-03T01:28:51.949Z',
+      },
+    },
+  },
 ]
 const c9_heading = [
   {
-    "id": 2581,
-    "text": "Why Choose Formester?",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 2581,
+    text: 'Why Choose Formester?',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c10_title = [
   {
-    "id": 2523,
-    "text": "Here are some example templates",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 2523,
+    text: 'Here are some example templates',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c10_button = {
-  "id": 1093,
-  "link": "/templates/",
-  "text": "Explore more...",
-  "type": "Primary",
-  "showArrow": null
+  id: 1093,
+  link: '/templates/',
+  text: 'Explore more...',
+  type: 'Primary',
+  showArrow: null,
 }
 const c10_specificTemplate = [
   {
-    "id": 1721,
-    "text": "job-application-form-699"
+    id: 1721,
+    text: 'job-application-form-699',
   },
   {
-    "id": 1722,
-    "text": "beauty-wellness-2815"
+    id: 1722,
+    text: 'beauty-wellness-2815',
   },
   {
-    "id": 1723,
-    "text": "workshop-registration-form-6535"
-  }
+    id: 1723,
+    text: 'workshop-registration-form-6535',
+  },
 ]
 const c11_heading = [
   {
-    "id": 2517,
-    "text": "User Stories",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 2517,
+    text: 'User Stories',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c11_testimonials = [
   {
-    "id": 39,
-    "name": "Alex",
-    "position": "Customer Success Manager",
-    "organization": "Orion Growth Partners",
-    "comment": "Tried like 4 quiz tools for our lead gen funnel before this and honestly this is the only one I didn't end up hating. AI did most of the work and the customization actually works.",
-    "createdAt": "2025-06-29T23:32:05.746Z",
-    "updatedAt": "2026-05-11T05:16:55.955Z",
-    "publishedAt": "2025-06-29T23:32:07.219Z",
-    "companyLogo": {
-      "id": 3647,
-      "imageAlt": "logo of orion",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4092,
-        "name": "logo_aa3937fea2ff4aeb3e7d9efd6740d05f_1x.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 200,
-        "height": 86,
-        "formats": null,
-        "hash": "logo_aa3937fea2ff4aeb3e7d9efd6740d05f_1x_1cd61284bd",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 3,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/logo_aa3937fea2ff4aeb3e7d9efd6740d05f_1x_1cd61284bd.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-10-29T17:02:25.502Z",
-        "updatedAt": "2025-10-29T17:02:25.502Z"
-      }
-    }
+    id: 39,
+    name: 'Alex',
+    position: 'Customer Success Manager',
+    organization: 'Orion Growth Partners',
+    comment:
+      "Tried like 4 quiz tools for our lead gen funnel before this and honestly this is the only one I didn't end up hating. AI did most of the work and the customization actually works.",
+    createdAt: '2025-06-29T23:32:05.746Z',
+    updatedAt: '2026-05-11T05:16:55.955Z',
+    publishedAt: '2025-06-29T23:32:07.219Z',
+    companyLogo: {
+      id: 3647,
+      imageAlt: 'logo of orion',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4092,
+        name: 'logo_aa3937fea2ff4aeb3e7d9efd6740d05f_1x.png',
+        alternativeText: null,
+        caption: null,
+        width: 200,
+        height: 86,
+        formats: null,
+        hash: 'logo_aa3937fea2ff4aeb3e7d9efd6740d05f_1x_1cd61284bd',
+        ext: '.png',
+        mime: 'image/png',
+        size: 3,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/logo_aa3937fea2ff4aeb3e7d9efd6740d05f_1x_1cd61284bd.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-29T17:02:25.502Z',
+        updatedAt: '2025-10-29T17:02:25.502Z',
+      },
+    },
   },
   {
-    "id": 34,
-    "name": "Bency",
-    "position": "Product Manager",
-    "organization": "Northgate Digital Solutions",
-    "comment": "Formester's AI form generator transformed how quickly we build forms. The drag-and-drop builder paired with AI-generated templates means I can spin up a survey or poll in minutes, not hours. Conditional logic, file uploads, and seamless integrations make it incredibly versatile and the customization options let every form match our branding perfectly. Their support team is exceptional too. It's the only form and survey tool we recommend",
-    "createdAt": "2025-06-29T23:23:10.541Z",
-    "updatedAt": "2026-05-03T09:30:00.533Z",
-    "publishedAt": "2026-05-03T09:30:00.530Z",
-    "companyLogo": {
-      "id": 3652,
-      "imageAlt": null,
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": null
-    }
+    id: 34,
+    name: 'Bency',
+    position: 'Product Manager',
+    organization: 'Northgate Digital Solutions',
+    comment:
+      "Formester's AI form generator transformed how quickly we build forms. The drag-and-drop builder paired with AI-generated templates means I can spin up a survey or poll in minutes, not hours. Conditional logic, file uploads, and seamless integrations make it incredibly versatile and the customization options let every form match our branding perfectly. Their support team is exceptional too. It's the only form and survey tool we recommend",
+    createdAt: '2025-06-29T23:23:10.541Z',
+    updatedAt: '2026-05-03T09:30:00.533Z',
+    publishedAt: '2026-05-03T09:30:00.530Z',
+    companyLogo: {
+      id: 3652,
+      imageAlt: null,
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: null,
+    },
   },
   {
-    "id": 38,
-    "name": "Bob",
-    "position": "Senior Web Developer",
-    "organization": "PixelWorks Innovations",
-    "comment": "We have been in business for over thirty years and were never happy with our forms until we found Formester. Now, we have clients actually enjoying completing and submitting online forms. If you are looking for a platform to create online forms... look no further – Formester is the best. Your clients will thank you!",
-    "createdAt": "2025-06-29T23:31:21.818Z",
-    "updatedAt": "2025-10-31T04:02:08.868Z",
-    "publishedAt": "2025-06-29T23:31:27.535Z",
-    "companyLogo": {
-      "id": 3651,
-      "imageAlt": "pixelworks-logo",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4093,
-        "name": "pixelworks-logo.png",
-        "alternativeText": "pixelworks-logo",
-        "caption": "pixelworks-logo",
-        "width": 200,
-        "height": 35,
-        "formats": null,
-        "hash": "pixelworks_logo_4c4b983d1f",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 1.31,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/pixelworks_logo_4c4b983d1f.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-10-31T04:00:11.709Z",
-        "updatedAt": "2025-10-31T04:00:11.709Z"
-      }
-    }
+    id: 38,
+    name: 'Bob',
+    position: 'Senior Web Developer',
+    organization: 'PixelWorks Innovations',
+    comment:
+      'We have been in business for over thirty years and were never happy with our forms until we found Formester. Now, we have clients actually enjoying completing and submitting online forms. If you are looking for a platform to create online forms... look no further – Formester is the best. Your clients will thank you!',
+    createdAt: '2025-06-29T23:31:21.818Z',
+    updatedAt: '2025-10-31T04:02:08.868Z',
+    publishedAt: '2025-06-29T23:31:27.535Z',
+    companyLogo: {
+      id: 3651,
+      imageAlt: 'pixelworks-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4093,
+        name: 'pixelworks-logo.png',
+        alternativeText: 'pixelworks-logo',
+        caption: 'pixelworks-logo',
+        width: 200,
+        height: 35,
+        formats: null,
+        hash: 'pixelworks_logo_4c4b983d1f',
+        ext: '.png',
+        mime: 'image/png',
+        size: 1.31,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/pixelworks_logo_4c4b983d1f.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-31T04:00:11.709Z',
+        updatedAt: '2025-10-31T04:00:11.709Z',
+      },
+    },
   },
   {
-    "id": 6,
-    "name": "Thibaud Martinez",
-    "position": "Organiser",
-    "organization": "Tedx",
-    "comment": "I really enjoy Formester. It’s clean and straight-forward and it does well, what it is supposed to do.",
-    "createdAt": "2024-06-18T03:53:38.957Z",
-    "updatedAt": "2025-01-22T02:56:48.567Z",
-    "publishedAt": "2024-06-18T03:53:40.693Z",
-    "companyLogo": {
-      "id": 229,
-      "imageAlt": "tedx-logo",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 1684,
-        "name": "tedx.webp",
-        "alternativeText": "tedx-logo",
-        "caption": "tedx-logo",
-        "width": 109,
-        "height": 38,
-        "formats": null,
-        "hash": "tedx_2fce0eee2e",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 1.09,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/tedx_2fce0eee2e.webp",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2024-08-01T14:38:23.941Z",
-        "updatedAt": "2024-12-01T07:50:31.505Z"
-      }
-    }
+    id: 6,
+    name: 'Thibaud Martinez',
+    position: 'Organiser',
+    organization: 'Tedx',
+    comment: 'I really enjoy Formester. It’s clean and straight-forward and it does well, what it is supposed to do.',
+    createdAt: '2024-06-18T03:53:38.957Z',
+    updatedAt: '2025-01-22T02:56:48.567Z',
+    publishedAt: '2024-06-18T03:53:40.693Z',
+    companyLogo: {
+      id: 229,
+      imageAlt: 'tedx-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1684,
+        name: 'tedx.webp',
+        alternativeText: 'tedx-logo',
+        caption: 'tedx-logo',
+        width: 109,
+        height: 38,
+        formats: null,
+        hash: 'tedx_2fce0eee2e',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.09,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/tedx_2fce0eee2e.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.941Z',
+        updatedAt: '2024-12-01T07:50:31.505Z',
+      },
+    },
   },
   {
-    "id": 2,
-    "name": "Jilson",
-    "position": "Organiser",
-    "organization": "Vue Conference",
-    "comment": "Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.",
-    "createdAt": "2024-06-18T03:48:46.610Z",
-    "updatedAt": "2025-01-22T02:57:08.760Z",
-    "publishedAt": "2024-06-18T03:48:50.595Z",
-    "companyLogo": {
-      "id": 228,
-      "imageAlt": "photo-of-vue-conference",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 1680,
-        "name": "vueconf.webp",
-        "alternativeText": "photo-of-vue-conference",
-        "caption": "photo-of-vue-conference",
-        "width": 80,
-        "height": 80,
-        "formats": null,
-        "hash": "vueconf_1bc3dc0827",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 1.07,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2024-08-01T14:38:23.731Z",
-        "updatedAt": "2024-12-01T07:47:11.024Z"
-      }
-    }
+    id: 2,
+    name: 'Jilson',
+    position: 'Organiser',
+    organization: 'Vue Conference',
+    comment:
+      'Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.',
+    createdAt: '2024-06-18T03:48:46.610Z',
+    updatedAt: '2025-01-22T02:57:08.760Z',
+    publishedAt: '2024-06-18T03:48:50.595Z',
+    companyLogo: {
+      id: 228,
+      imageAlt: 'photo-of-vue-conference',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1680,
+        name: 'vueconf.webp',
+        alternativeText: 'photo-of-vue-conference',
+        caption: 'photo-of-vue-conference',
+        width: 80,
+        height: 80,
+        formats: null,
+        hash: 'vueconf_1bc3dc0827',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.07,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.731Z',
+        updatedAt: '2024-12-01T07:47:11.024Z',
+      },
+    },
   },
   {
-    "id": 37,
-    "name": "Chris",
-    "position": "Operations Lead",
-    "organization": "SummitCloud Software",
-    "comment": "Very intuitive and the surveys look genuinely professional out of the box. Most importantly, I requested a custom rating scale and they shipped it within hours. Stellar support that is hands-down better than the Jotform.",
-    "createdAt": "2025-06-29T23:30:38.521Z",
-    "updatedAt": "2026-05-11T05:18:51.458Z",
-    "publishedAt": "2025-06-29T23:30:40.007Z",
-    "companyLogo": {
-      "id": 3650,
-      "imageAlt": "summit-logo",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4096,
-        "name": "summit-logo.png",
-        "alternativeText": "summit-logo",
-        "caption": "summit-logo",
-        "width": 200,
-        "height": 26,
-        "formats": null,
-        "hash": "summit_logo_f5bfb8ce29",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 1.42,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/summit_logo_f5bfb8ce29.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-10-31T04:00:11.826Z",
-        "updatedAt": "2025-10-31T04:00:11.826Z"
-      }
-    }
-  }
+    id: 37,
+    name: 'Chris',
+    position: 'Operations Lead',
+    organization: 'SummitCloud Software',
+    comment:
+      'Very intuitive and the surveys look genuinely professional out of the box. Most importantly, I requested a custom rating scale and they shipped it within hours. Stellar support that is hands-down better than the Jotform.',
+    createdAt: '2025-06-29T23:30:38.521Z',
+    updatedAt: '2026-05-11T05:18:51.458Z',
+    publishedAt: '2025-06-29T23:30:40.007Z',
+    companyLogo: {
+      id: 3650,
+      imageAlt: 'summit-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4096,
+        name: 'summit-logo.png',
+        alternativeText: 'summit-logo',
+        caption: 'summit-logo',
+        width: 200,
+        height: 26,
+        formats: null,
+        hash: 'summit_logo_f5bfb8ce29',
+        ext: '.png',
+        mime: 'image/png',
+        size: 1.42,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/summit_logo_f5bfb8ce29.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-31T04:00:11.826Z',
+        updatedAt: '2025-10-31T04:00:11.826Z',
+      },
+    },
+  },
 ]
 const c12_title = [
   {
-    "id": 2515,
-    "text": "Integrate with your favorite tools",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 2515,
+    text: 'Integrate with your favorite tools',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c13_title = [
   {
-    "id": 2522,
-    "text": "Made for all purposes!",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 2522,
+    text: 'Made for all purposes!',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c13_usecase = [
   {
-    "id": 102,
-    "title": "Business Forms",
-    "description": "Collect payments, leads, and client requests.",
-    "image": {
-      "id": 3894,
-      "name": "fin.jpg",
-      "alternativeText": null,
-      "caption": null,
-      "width": 750,
-      "height": 500,
-      "formats": {
-        "small": {
-          "ext": ".jpg",
-          "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/small_fin_5a47cde3ef.jpg",
-          "hash": "small_fin_5a47cde3ef",
-          "mime": "image/jpeg",
-          "name": "small_fin.jpg",
-          "path": null,
-          "size": 18.65,
-          "width": 500,
-          "height": 333
+    id: 102,
+    title: 'Business Forms',
+    description: 'Collect payments, leads, and client requests.',
+    image: {
+      id: 3894,
+      name: 'fin.jpg',
+      alternativeText: null,
+      caption: null,
+      width: 750,
+      height: 500,
+      formats: {
+        small: {
+          ext: '.jpg',
+          url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/small_fin_5a47cde3ef.jpg',
+          hash: 'small_fin_5a47cde3ef',
+          mime: 'image/jpeg',
+          name: 'small_fin.jpg',
+          path: null,
+          size: 18.65,
+          width: 500,
+          height: 333,
         },
-        "thumbnail": {
-          "ext": ".jpg",
-          "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_fin_5a47cde3ef.jpg",
-          "hash": "thumbnail_fin_5a47cde3ef",
-          "mime": "image/jpeg",
-          "name": "thumbnail_fin.jpg",
-          "path": null,
-          "size": 6.23,
-          "width": 234,
-          "height": 156
-        }
+        thumbnail: {
+          ext: '.jpg',
+          url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_fin_5a47cde3ef.jpg',
+          hash: 'thumbnail_fin_5a47cde3ef',
+          mime: 'image/jpeg',
+          name: 'thumbnail_fin.jpg',
+          path: null,
+          size: 6.23,
+          width: 234,
+          height: 156,
+        },
       },
-      "hash": "fin_5a47cde3ef",
-      "ext": ".jpg",
-      "mime": "image/jpeg",
-      "size": 33.64,
-      "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/fin_5a47cde3ef.jpg",
-      "previewUrl": null,
-      "provider": "aws-s3",
-      "provider_metadata": null,
-      "createdAt": "2025-08-29T04:17:24.067Z",
-      "updatedAt": "2025-08-29T04:17:24.067Z"
-    }
+      hash: 'fin_5a47cde3ef',
+      ext: '.jpg',
+      mime: 'image/jpeg',
+      size: 33.64,
+      url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/fin_5a47cde3ef.jpg',
+      previewUrl: null,
+      provider: 'aws-s3',
+      provider_metadata: null,
+      createdAt: '2025-08-29T04:17:24.067Z',
+      updatedAt: '2025-08-29T04:17:24.067Z',
+    },
   },
   {
-    "id": 101,
-    "title": "HR Teams",
-    "description": "Manage hiring, feedback, and onboarding digitally.",
-    "image": {
-      "id": 3896,
-      "name": "hr.jpg",
-      "alternativeText": null,
-      "caption": null,
-      "width": 750,
-      "height": 500,
-      "formats": {
-        "small": {
-          "ext": ".jpg",
-          "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/small_hr_6c678b7986.jpg",
-          "hash": "small_hr_6c678b7986",
-          "mime": "image/jpeg",
-          "name": "small_hr.jpg",
-          "path": null,
-          "size": 36.04,
-          "width": 500,
-          "height": 333
+    id: 101,
+    title: 'HR Teams',
+    description: 'Manage hiring, feedback, and onboarding digitally.',
+    image: {
+      id: 3896,
+      name: 'hr.jpg',
+      alternativeText: null,
+      caption: null,
+      width: 750,
+      height: 500,
+      formats: {
+        small: {
+          ext: '.jpg',
+          url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/small_hr_6c678b7986.jpg',
+          hash: 'small_hr_6c678b7986',
+          mime: 'image/jpeg',
+          name: 'small_hr.jpg',
+          path: null,
+          size: 36.04,
+          width: 500,
+          height: 333,
         },
-        "thumbnail": {
-          "ext": ".jpg",
-          "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_hr_6c678b7986.jpg",
-          "hash": "thumbnail_hr_6c678b7986",
-          "mime": "image/jpeg",
-          "name": "thumbnail_hr.jpg",
-          "path": null,
-          "size": 9.86,
-          "width": 234,
-          "height": 156
-        }
+        thumbnail: {
+          ext: '.jpg',
+          url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_hr_6c678b7986.jpg',
+          hash: 'thumbnail_hr_6c678b7986',
+          mime: 'image/jpeg',
+          name: 'thumbnail_hr.jpg',
+          path: null,
+          size: 9.86,
+          width: 234,
+          height: 156,
+        },
       },
-      "hash": "hr_6c678b7986",
-      "ext": ".jpg",
-      "mime": "image/jpeg",
-      "size": 68.58,
-      "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/hr_6c678b7986.jpg",
-      "previewUrl": null,
-      "provider": "aws-s3",
-      "provider_metadata": null,
-      "createdAt": "2025-08-29T04:17:24.246Z",
-      "updatedAt": "2025-08-29T04:17:24.246Z"
-    }
+      hash: 'hr_6c678b7986',
+      ext: '.jpg',
+      mime: 'image/jpeg',
+      size: 68.58,
+      url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/hr_6c678b7986.jpg',
+      previewUrl: null,
+      provider: 'aws-s3',
+      provider_metadata: null,
+      createdAt: '2025-08-29T04:17:24.246Z',
+      updatedAt: '2025-08-29T04:17:24.246Z',
+    },
   },
   {
-    "id": 103,
-    "title": "Marketing",
-    "description": "Run sign-ups, campaigns, and track performance.",
-    "image": {
-      "id": 3895,
-      "name": "leadgen.jpg",
-      "alternativeText": null,
-      "caption": null,
-      "width": 500,
-      "height": 750,
-      "formats": {
-        "small": {
-          "ext": ".jpg",
-          "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/small_leadgen_3c6de13060.jpg",
-          "hash": "small_leadgen_3c6de13060",
-          "mime": "image/jpeg",
-          "name": "small_leadgen.jpg",
-          "path": null,
-          "size": 25.4,
-          "width": 333,
-          "height": 500
+    id: 103,
+    title: 'Marketing',
+    description: 'Run sign-ups, campaigns, and track performance.',
+    image: {
+      id: 3895,
+      name: 'leadgen.jpg',
+      alternativeText: null,
+      caption: null,
+      width: 500,
+      height: 750,
+      formats: {
+        small: {
+          ext: '.jpg',
+          url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/small_leadgen_3c6de13060.jpg',
+          hash: 'small_leadgen_3c6de13060',
+          mime: 'image/jpeg',
+          name: 'small_leadgen.jpg',
+          path: null,
+          size: 25.4,
+          width: 333,
+          height: 500,
         },
-        "thumbnail": {
-          "ext": ".jpg",
-          "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_leadgen_3c6de13060.jpg",
-          "hash": "thumbnail_leadgen_3c6de13060",
-          "mime": "image/jpeg",
-          "name": "thumbnail_leadgen.jpg",
-          "path": null,
-          "size": 4.59,
-          "width": 104,
-          "height": 156
-        }
+        thumbnail: {
+          ext: '.jpg',
+          url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_leadgen_3c6de13060.jpg',
+          hash: 'thumbnail_leadgen_3c6de13060',
+          mime: 'image/jpeg',
+          name: 'thumbnail_leadgen.jpg',
+          path: null,
+          size: 4.59,
+          width: 104,
+          height: 156,
+        },
       },
-      "hash": "leadgen_3c6de13060",
-      "ext": ".jpg",
-      "mime": "image/jpeg",
-      "size": 45.79,
-      "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/leadgen_3c6de13060.jpg",
-      "previewUrl": null,
-      "provider": "aws-s3",
-      "provider_metadata": null,
-      "createdAt": "2025-08-29T04:17:24.148Z",
-      "updatedAt": "2025-08-29T04:17:24.148Z"
-    }
+      hash: 'leadgen_3c6de13060',
+      ext: '.jpg',
+      mime: 'image/jpeg',
+      size: 45.79,
+      url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/leadgen_3c6de13060.jpg',
+      previewUrl: null,
+      provider: 'aws-s3',
+      provider_metadata: null,
+      createdAt: '2025-08-29T04:17:24.148Z',
+      updatedAt: '2025-08-29T04:17:24.148Z',
+    },
   },
   {
-    "id": 100,
-    "title": "Education",
-    "description": "Create quizzes, surveys, and instant feedback forms.",
-    "image": {
-      "id": 3893,
-      "name": "ass.jpg",
-      "alternativeText": null,
-      "caption": null,
-      "width": 500,
-      "height": 750,
-      "formats": {
-        "small": {
-          "ext": ".jpg",
-          "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/small_ass_24fff97160.jpg",
-          "hash": "small_ass_24fff97160",
-          "mime": "image/jpeg",
-          "name": "small_ass.jpg",
-          "path": null,
-          "size": 23.44,
-          "width": 333,
-          "height": 500
+    id: 100,
+    title: 'Education',
+    description: 'Create quizzes, surveys, and instant feedback forms.',
+    image: {
+      id: 3893,
+      name: 'ass.jpg',
+      alternativeText: null,
+      caption: null,
+      width: 500,
+      height: 750,
+      formats: {
+        small: {
+          ext: '.jpg',
+          url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/small_ass_24fff97160.jpg',
+          hash: 'small_ass_24fff97160',
+          mime: 'image/jpeg',
+          name: 'small_ass.jpg',
+          path: null,
+          size: 23.44,
+          width: 333,
+          height: 500,
         },
-        "thumbnail": {
-          "ext": ".jpg",
-          "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_ass_24fff97160.jpg",
-          "hash": "thumbnail_ass_24fff97160",
-          "mime": "image/jpeg",
-          "name": "thumbnail_ass.jpg",
-          "path": null,
-          "size": 4.06,
-          "width": 104,
-          "height": 156
-        }
+        thumbnail: {
+          ext: '.jpg',
+          url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_ass_24fff97160.jpg',
+          hash: 'thumbnail_ass_24fff97160',
+          mime: 'image/jpeg',
+          name: 'thumbnail_ass.jpg',
+          path: null,
+          size: 4.06,
+          width: 104,
+          height: 156,
+        },
       },
-      "hash": "ass_24fff97160",
-      "ext": ".jpg",
-      "mime": "image/jpeg",
-      "size": 42.11,
-      "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/ass_24fff97160.jpg",
-      "previewUrl": null,
-      "provider": "aws-s3",
-      "provider_metadata": null,
-      "createdAt": "2025-08-29T04:17:24.036Z",
-      "updatedAt": "2025-08-29T04:17:24.036Z"
-    }
-  }
+      hash: 'ass_24fff97160',
+      ext: '.jpg',
+      mime: 'image/jpeg',
+      size: 42.11,
+      url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/ass_24fff97160.jpg',
+      previewUrl: null,
+      provider: 'aws-s3',
+      provider_metadata: null,
+      createdAt: '2025-08-29T04:17:24.036Z',
+      updatedAt: '2025-08-29T04:17:24.036Z',
+    },
+  },
 ]
 const c14_title = [
   {
-    "id": 2521,
-    "text": "Get more done!",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 2521,
+    text: 'Get more done!',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c14_itemList = [
   {
-    "id": 2107,
-    "title": "Capture Better Leads Faster",
-    "description": "Want more than just names? Use logic, file upload, and smart flows to qualify leads better than most forms offer.",
-    "description_markdown": "Create better **[lead forms](/templates/categories/lead-generation/)** with features like conditional logic, file upload, and Google Sheets integration for easy data collection.",
-    "icon": null,
-    "cardImage": {
-      "id": 2989,
-      "imageAlt": "lead capture",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 3938,
-        "name": "Component 1126.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 1364,
-        "height": 1042,
-        "formats": {
-          "large": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/large_Component_1126_97c1c6c3c2.png",
-            "hash": "large_Component_1126_97c1c6c3c2",
-            "mime": "image/png",
-            "name": "large_Component 1126.png",
-            "path": null,
-            "size": 190.82,
-            "width": 1000,
-            "height": 764
+    id: 2107,
+    title: 'Capture Better Leads Faster',
+    description:
+      'Want more than just names? Use logic, file upload, and smart flows to qualify leads better than most forms offer.',
+    description_markdown:
+      'Create better **[lead forms](/templates/categories/lead-generation/)** with features like conditional logic, file upload, and Google Sheets integration for easy data collection.',
+    icon: null,
+    cardImage: {
+      id: 2989,
+      imageAlt: 'lead capture',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3938,
+        name: 'Component 1126.png',
+        alternativeText: null,
+        caption: null,
+        width: 1364,
+        height: 1042,
+        formats: {
+          large: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/large_Component_1126_97c1c6c3c2.png',
+            hash: 'large_Component_1126_97c1c6c3c2',
+            mime: 'image/png',
+            name: 'large_Component 1126.png',
+            path: null,
+            size: 190.82,
+            width: 1000,
+            height: 764,
           },
-          "small": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/small_Component_1126_97c1c6c3c2.png",
-            "hash": "small_Component_1126_97c1c6c3c2",
-            "mime": "image/png",
-            "name": "small_Component 1126.png",
-            "path": null,
-            "size": 49.09,
-            "width": 500,
-            "height": 382
+          small: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/small_Component_1126_97c1c6c3c2.png',
+            hash: 'small_Component_1126_97c1c6c3c2',
+            mime: 'image/png',
+            name: 'small_Component 1126.png',
+            path: null,
+            size: 49.09,
+            width: 500,
+            height: 382,
           },
-          "medium": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_Component_1126_97c1c6c3c2.png",
-            "hash": "medium_Component_1126_97c1c6c3c2",
-            "mime": "image/png",
-            "name": "medium_Component 1126.png",
-            "path": null,
-            "size": 109.73,
-            "width": 750,
-            "height": 573
+          medium: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_Component_1126_97c1c6c3c2.png',
+            hash: 'medium_Component_1126_97c1c6c3c2',
+            mime: 'image/png',
+            name: 'medium_Component 1126.png',
+            path: null,
+            size: 109.73,
+            width: 750,
+            height: 573,
           },
-          "thumbnail": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_Component_1126_97c1c6c3c2.png",
-            "hash": "thumbnail_Component_1126_97c1c6c3c2",
-            "mime": "image/png",
-            "name": "thumbnail_Component 1126.png",
-            "path": null,
-            "size": 12.58,
-            "width": 204,
-            "height": 156
-          }
+          thumbnail: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_Component_1126_97c1c6c3c2.png',
+            hash: 'thumbnail_Component_1126_97c1c6c3c2',
+            mime: 'image/png',
+            name: 'thumbnail_Component 1126.png',
+            path: null,
+            size: 12.58,
+            width: 204,
+            height: 156,
+          },
         },
-        "hash": "Component_1126_97c1c6c3c2",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 68.43,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_1126_97c1c6c3c2.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-09-05T04:36:09.116Z",
-        "updatedAt": "2025-09-05T04:36:09.116Z"
-      }
-    }
+        hash: 'Component_1126_97c1c6c3c2',
+        ext: '.png',
+        mime: 'image/png',
+        size: 68.43,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_1126_97c1c6c3c2.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-09-05T04:36:09.116Z',
+        updatedAt: '2025-09-05T04:36:09.116Z',
+      },
+    },
   },
   {
-    "id": 2103,
-    "title": "Simplify Hiring and Employee Feedback",
-    "description": "Create branded forms with logic and notifications. Handle everything from onboarding to reviews using one tool.",
-    "description_markdown": "Create branded forms with logic and notifications. Handle everything from onboarding to reviews using one tool.",
-    "icon": null,
-    "cardImage": {
-      "id": 2985,
-      "imageAlt": "Job Applications",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 3940,
-        "name": "Component 1128.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 1364,
-        "height": 1042,
-        "formats": {
-          "large": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/large_Component_1128_90b20029d7.png",
-            "hash": "large_Component_1128_90b20029d7",
-            "mime": "image/png",
-            "name": "large_Component 1128.png",
-            "path": null,
-            "size": 414.28,
-            "width": 1000,
-            "height": 764
+    id: 2103,
+    title: 'Simplify Hiring and Employee Feedback',
+    description:
+      'Create branded forms with logic and notifications. Handle everything from onboarding to reviews using one tool.',
+    description_markdown:
+      'Create branded forms with logic and notifications. Handle everything from onboarding to reviews using one tool.',
+    icon: null,
+    cardImage: {
+      id: 2985,
+      imageAlt: 'Job Applications',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3940,
+        name: 'Component 1128.png',
+        alternativeText: null,
+        caption: null,
+        width: 1364,
+        height: 1042,
+        formats: {
+          large: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/large_Component_1128_90b20029d7.png',
+            hash: 'large_Component_1128_90b20029d7',
+            mime: 'image/png',
+            name: 'large_Component 1128.png',
+            path: null,
+            size: 414.28,
+            width: 1000,
+            height: 764,
           },
-          "small": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/small_Component_1128_90b20029d7.png",
-            "hash": "small_Component_1128_90b20029d7",
-            "mime": "image/png",
-            "name": "small_Component 1128.png",
-            "path": null,
-            "size": 125.64,
-            "width": 500,
-            "height": 382
+          small: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/small_Component_1128_90b20029d7.png',
+            hash: 'small_Component_1128_90b20029d7',
+            mime: 'image/png',
+            name: 'small_Component 1128.png',
+            path: null,
+            size: 125.64,
+            width: 500,
+            height: 382,
           },
-          "medium": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_Component_1128_90b20029d7.png",
-            "hash": "medium_Component_1128_90b20029d7",
-            "mime": "image/png",
-            "name": "medium_Component 1128.png",
-            "path": null,
-            "size": 250.39,
-            "width": 750,
-            "height": 573
+          medium: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_Component_1128_90b20029d7.png',
+            hash: 'medium_Component_1128_90b20029d7',
+            mime: 'image/png',
+            name: 'medium_Component 1128.png',
+            path: null,
+            size: 250.39,
+            width: 750,
+            height: 573,
           },
-          "thumbnail": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_Component_1128_90b20029d7.png",
-            "hash": "thumbnail_Component_1128_90b20029d7",
-            "mime": "image/png",
-            "name": "thumbnail_Component 1128.png",
-            "path": null,
-            "size": 31.64,
-            "width": 204,
-            "height": 156
-          }
+          thumbnail: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_Component_1128_90b20029d7.png',
+            hash: 'thumbnail_Component_1128_90b20029d7',
+            mime: 'image/png',
+            name: 'thumbnail_Component 1128.png',
+            path: null,
+            size: 31.64,
+            width: 204,
+            height: 156,
+          },
         },
-        "hash": "Component_1128_90b20029d7",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 131.39,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_1128_90b20029d7.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-09-05T04:36:09.900Z",
-        "updatedAt": "2025-09-05T04:36:09.900Z"
-      }
-    }
+        hash: 'Component_1128_90b20029d7',
+        ext: '.png',
+        mime: 'image/png',
+        size: 131.39,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_1128_90b20029d7.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-09-05T04:36:09.900Z',
+        updatedAt: '2025-09-05T04:36:09.900Z',
+      },
+    },
   },
   {
-    "id": 2101,
-    "title": "Collect Feedback That Actually Helps",
-    "description": "Go beyond basic forms. Use **[feedback forms](/templates/categories/feedback-forms)** your customers will love to engage and provide valuable feedback.",
-    "description_markdown": "Go beyond basic forms. Use **[feedback forms](/templates/categories/feedback-forms)** your customers will love to engage and provide valuable feedback.",
-    "icon": null,
-    "cardImage": {
-      "id": 2984,
-      "imageAlt": "Product Feedback and Surveys",
-      "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_1130_e28a5eb7e6.png",
-      "width": null,
-      "height": null,
-      "image": null
-    }
+    id: 2101,
+    title: 'Collect Feedback That Actually Helps',
+    description:
+      'Go beyond basic forms. Use **[feedback forms](/templates/categories/feedback-forms)** your customers will love to engage and provide valuable feedback.',
+    description_markdown:
+      'Go beyond basic forms. Use **[feedback forms](/templates/categories/feedback-forms)** your customers will love to engage and provide valuable feedback.',
+    icon: null,
+    cardImage: {
+      id: 2984,
+      imageAlt: 'Product Feedback and Surveys',
+      imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_1130_e28a5eb7e6.png',
+      width: null,
+      height: null,
+      image: null,
+    },
   },
   {
-    "id": 2104,
-    "title": "Train Your Team the Right Way",
-    "description": "\nBuild interactive quizzes using smart paths, scoring, and tracking. A great use for teams switching from Google Forms.\n",
-    "description_markdown": "Build interactive **[quizzes](/templates/categories/quizzes)** using smart paths, scoring, and tracking. A great use for teams switching from Google Forms.\n",
-    "icon": null,
-    "cardImage": {
-      "id": 2986,
-      "imageAlt": "an illustration of teams",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 3939,
-        "name": "Component 1131.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 1364,
-        "height": 1042,
-        "formats": {
-          "large": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/large_Component_1131_2ec4dffa9c.png",
-            "hash": "large_Component_1131_2ec4dffa9c",
-            "mime": "image/png",
-            "name": "large_Component 1131.png",
-            "path": null,
-            "size": 328.91,
-            "width": 1000,
-            "height": 764
+    id: 2104,
+    title: 'Train Your Team the Right Way',
+    description:
+      '\nBuild interactive quizzes using smart paths, scoring, and tracking. A great use for teams switching from Google Forms.\n',
+    description_markdown:
+      'Build interactive **[quizzes](/templates/categories/quizzes)** using smart paths, scoring, and tracking. A great use for teams switching from Google Forms.\n',
+    icon: null,
+    cardImage: {
+      id: 2986,
+      imageAlt: 'an illustration of teams',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3939,
+        name: 'Component 1131.png',
+        alternativeText: null,
+        caption: null,
+        width: 1364,
+        height: 1042,
+        formats: {
+          large: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/large_Component_1131_2ec4dffa9c.png',
+            hash: 'large_Component_1131_2ec4dffa9c',
+            mime: 'image/png',
+            name: 'large_Component 1131.png',
+            path: null,
+            size: 328.91,
+            width: 1000,
+            height: 764,
           },
-          "small": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/small_Component_1131_2ec4dffa9c.png",
-            "hash": "small_Component_1131_2ec4dffa9c",
-            "mime": "image/png",
-            "name": "small_Component 1131.png",
-            "path": null,
-            "size": 92.24,
-            "width": 500,
-            "height": 382
+          small: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/small_Component_1131_2ec4dffa9c.png',
+            hash: 'small_Component_1131_2ec4dffa9c',
+            mime: 'image/png',
+            name: 'small_Component 1131.png',
+            path: null,
+            size: 92.24,
+            width: 500,
+            height: 382,
           },
-          "medium": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_Component_1131_2ec4dffa9c.png",
-            "hash": "medium_Component_1131_2ec4dffa9c",
-            "mime": "image/png",
-            "name": "medium_Component 1131.png",
-            "path": null,
-            "size": 192.27,
-            "width": 750,
-            "height": 573
+          medium: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_Component_1131_2ec4dffa9c.png',
+            hash: 'medium_Component_1131_2ec4dffa9c',
+            mime: 'image/png',
+            name: 'medium_Component 1131.png',
+            path: null,
+            size: 192.27,
+            width: 750,
+            height: 573,
           },
-          "thumbnail": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_Component_1131_2ec4dffa9c.png",
-            "hash": "thumbnail_Component_1131_2ec4dffa9c",
-            "mime": "image/png",
-            "name": "thumbnail_Component 1131.png",
-            "path": null,
-            "size": 22.69,
-            "width": 204,
-            "height": 156
-          }
+          thumbnail: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_Component_1131_2ec4dffa9c.png',
+            hash: 'thumbnail_Component_1131_2ec4dffa9c',
+            mime: 'image/png',
+            name: 'thumbnail_Component 1131.png',
+            path: null,
+            size: 22.69,
+            width: 204,
+            height: 156,
+          },
         },
-        "hash": "Component_1131_2ec4dffa9c",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 100.72,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_1131_2ec4dffa9c.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-09-05T04:36:09.817Z",
-        "updatedAt": "2025-09-05T04:36:09.817Z"
-      }
-    }
-  }
+        hash: 'Component_1131_2ec4dffa9c',
+        ext: '.png',
+        mime: 'image/png',
+        size: 100.72,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_1131_2ec4dffa9c.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-09-05T04:36:09.817Z',
+        updatedAt: '2025-09-05T04:36:09.817Z',
+      },
+    },
+  },
 ]
 const c15_title = [
   {
-    "id": 2525,
-    "text": "FAQs",
-    "highlight": false,
-    "color": null,
-    "bold": null
-  }
+    id: 2525,
+    text: 'FAQs',
+    highlight: false,
+    color: null,
+    bold: null,
+  },
 ]
 const c15_faqList = [
   {
-    "id": 1222,
-    "header": "Why switch from Formstack to Formester?",
-    "body": "Formester is faster, easier, and more intuitive. You can build forms, quizzes, and surveys without the steep learning curve or complex interface that Formstack often requires.",
-    "body_markdown": "Formester is faster, easier, and more intuitive. You can build forms, quizzes, and surveys without the steep learning curve or complex interface that Formstack often requires.",
-    "list": []
+    id: 1222,
+    header: 'Why switch from Formstack to Formester?',
+    body: 'Formester is faster, easier, and more intuitive. You can build forms, quizzes, and surveys without the steep learning curve or complex interface that Formstack often requires.',
+    body_markdown:
+      'Formester is faster, easier, and more intuitive. You can build forms, quizzes, and surveys without the steep learning curve or complex interface that Formstack often requires.',
+    list: [],
   },
   {
-    "id": 1226,
-    "header": "Does Formester offer the same advanced features as Formstack?",
-    "body": "Yes. You get conditional logic, calculations, AI suggestions, submission controls, and integrations—without paying high fees or dealing with cluttered settings.",
-    "body_markdown": "Yes. You get conditional logic, calculations, AI suggestions, submission controls, and integrations—without paying high fees or dealing with cluttered settings.",
-    "list": []
+    id: 1226,
+    header: 'Does Formester offer the same advanced features as Formstack?',
+    body: 'Yes. You get conditional logic, calculations, AI suggestions, submission controls, and integrations—without paying high fees or dealing with cluttered settings.',
+    body_markdown:
+      'Yes. You get conditional logic, calculations, AI suggestions, submission controls, and integrations—without paying high fees or dealing with cluttered settings.',
+    list: [],
   },
   {
-    "id": 1225,
-    "header": "Is Formester more affordable than Formstack?",
-    "body": "Absolutely. Formester provides advanced features at a lower cost, with no hidden fees or expensive add-ons, making it a smarter choice for teams of any size.",
-    "body_markdown": "Absolutely. Formester provides advanced features at a lower cost, with no hidden fees or expensive add-ons, making it a smarter choice for teams of any size.",
-    "list": []
+    id: 1225,
+    header: 'Is Formester more affordable than Formstack?',
+    body: 'Absolutely. Formester provides advanced features at a lower cost, with no hidden fees or expensive add-ons, making it a smarter choice for teams of any size.',
+    body_markdown:
+      'Absolutely. Formester provides advanced features at a lower cost, with no hidden fees or expensive add-ons, making it a smarter choice for teams of any size.',
+    list: [],
   },
   {
-    "id": 1223,
-    "header": "Can I collect payments or approvals like in Formstack?",
-    "body": "Yes. Formester supports secure payment collection, approvals, and workflow automation—all in one place without needing extra tools or add-ons.",
-    "body_markdown": "Yes. Formester supports secure payment collection, approvals, and workflow automation—all in one place without needing extra tools or add-ons.",
-    "list": []
+    id: 1223,
+    header: 'Can I collect payments or approvals like in Formstack?',
+    body: 'Yes. Formester supports secure payment collection, approvals, and workflow automation—all in one place without needing extra tools or add-ons.',
+    body_markdown:
+      'Yes. Formester supports secure payment collection, approvals, and workflow automation—all in one place without needing extra tools or add-ons.',
+    list: [],
   },
   {
-    "id": 1224,
-    "header": "How easy is it to collaborate with my team?",
-    "body": "Formester lets your team build, edit, and manage forms together in real time. Unlike Formstack, you don’t need complicated setups or multiple accounts for collaboration.",
-    "body_markdown": "Formester lets your team build, edit, and manage forms together in real time. Unlike Formstack, you don’t need complicated setups or multiple accounts for collaboration.",
-    "list": []
-  }
+    id: 1224,
+    header: 'How easy is it to collaborate with my team?',
+    body: 'Formester lets your team build, edit, and manage forms together in real time. Unlike Formstack, you don’t need complicated setups or multiple accounts for collaboration.',
+    body_markdown:
+      'Formester lets your team build, edit, and manage forms together in real time. Unlike Formstack, you don’t need complicated setups or multiple accounts for collaboration.',
+    list: [],
+  },
 ]
 const c16_ctaValue = {
-  "id": 67,
-  "description": "Get access to advanced AI, unlimited forms & more. See pricing for more details.",
-  "type": "default",
-  "createdAt": "2024-11-04T07:07:43.916Z",
-  "updatedAt": "2025-06-12T18:47:31.840Z",
-  "publishedAt": "2024-11-04T07:08:18.018Z",
-  "locale": "en",
-  "title": [
+  id: 67,
+  description: 'Get access to advanced AI, unlimited forms & more. See pricing for more details.',
+  type: 'default',
+  createdAt: '2024-11-04T07:07:43.916Z',
+  updatedAt: '2025-06-12T18:47:31.840Z',
+  publishedAt: '2024-11-04T07:08:18.018Z',
+  locale: 'en',
+  title: [
     {
-      "id": 393,
-      "text": "Ready to build your perfect form?",
-      "highlight": false,
-      "color": null,
-      "bold": null
-    }
+      id: 393,
+      text: 'Ready to build your perfect form?',
+      highlight: false,
+      color: null,
+      bold: null,
+    },
   ],
-  "buttons": [
+  buttons: [
     {
-      "id": 338,
-      "link": "https://app.formester.com/users/sign_up",
-      "text": "Get Started–It’s Free!",
-      "type": "Primary",
-      "showArrow": null
-    }
+      id: 338,
+      link: 'https://app.formester.com/users/sign_up',
+      text: 'Get Started–It’s Free!',
+      type: 'Primary',
+      showArrow: null,
+    },
   ],
-  "localizations": []
+  localizations: [],
 }
 
 useHead({
-  "title": "Formester: A free Formstack alternative",
-  "link": [
+  title: 'Formester: A free Formstack alternative',
+  link: [
     {
-      "hid": "canonical",
-      "rel": "canonical",
-      "href": "https://formester.com/formstack-alternative/"
-    }
+      hid: 'canonical',
+      rel: 'canonical',
+      href: 'https://formester.com/formstack-alternative/',
+    },
   ],
-  "meta": [
+  meta: [
     {
-      "property": "article:modified_time",
-      "content": "2025-09-24T03:09:10.446Z"
+      property: 'article:modified_time',
+      content: '2025-09-24T03:09:10.446Z',
     },
     {
-      "hid": "description",
-      "name": "description",
-      "content": "Formester is a free alternative to Formstack. Create any type of forms, surveys, and quizzes in seconds. Get started--it's free!"
+      hid: 'description',
+      name: 'description',
+      content:
+        "Formester is a free alternative to Formstack. Create any type of forms, surveys, and quizzes in seconds. Get started--it's free!",
     },
     {
-      "hid": "og:site_name",
-      "name": "og:site_name",
-      "content": "Formester: A free Formstack alternative"
+      hid: 'og:site_name',
+      name: 'og:site_name',
+      content: 'Formester: A free Formstack alternative',
     },
     {
-      "hid": "og:type",
-      "property": "og:type",
-      "content": "website"
+      hid: 'og:type',
+      property: 'og:type',
+      content: 'website',
     },
     {
-      "hid": "og:url",
-      "property": "og:url",
-      "content": "https://formester.com/formstack-alternative/"
+      hid: 'og:url',
+      property: 'og:url',
+      content: 'https://formester.com/formstack-alternative/',
     },
     {
-      "hid": "og:title",
-      "property": "og:title",
-      "content": "Formester: A free Formstack alternative"
+      hid: 'og:title',
+      property: 'og:title',
+      content: 'Formester: A free Formstack alternative',
     },
     {
-      "hid": "og:description",
-      "property": "og:description",
-      "content": "Formester is a free alternative to Formstack. Create any type of forms, surveys, and quizzes in seconds. Get started--it's free!"
+      hid: 'og:description',
+      property: 'og:description',
+      content:
+        "Formester is a free alternative to Formstack. Create any type of forms, surveys, and quizzes in seconds. Get started--it's free!",
     },
     {
-      "hid": "og:image",
-      "property": "og:image",
-      "content": "https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png"
+      hid: 'og:image',
+      property: 'og:image',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png',
     },
     {
-      "hid": "og:image:alt",
-      "name": "og:image:alt",
-      "content": "Formester Logo"
+      hid: 'og:image:alt',
+      name: 'og:image:alt',
+      content: 'Formester Logo',
     },
     {
-      "hid": "twitter:url",
-      "name": "twitter:url",
-      "content": "https://formester.com/formstack-alternative/"
+      hid: 'twitter:url',
+      name: 'twitter:url',
+      content: 'https://formester.com/formstack-alternative/',
     },
     {
-      "name": "twitter:site",
-      "content": "@_formester_"
+      name: 'twitter:site',
+      content: '@_formester_',
     },
     {
-      "hid": "twitter:title",
-      "name": "twitter:title",
-      "content": "Formester: A free Formstack alternative"
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: 'Formester: A free Formstack alternative',
     },
     {
-      "hid": "twitter:description",
-      "name": "twitter:description",
-      "content": "Formester is a free alternative to Formstack. Create any type of forms, surveys, and quizzes in seconds. Get started--it's free!"
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content:
+        "Formester is a free alternative to Formstack. Create any type of forms, surveys, and quizzes in seconds. Get started--it's free!",
     },
     {
-      "hid": "twitter:image",
-      "name": "twitter:image",
-      "content": "https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png"
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png',
     },
     {
-      "hid": "twitter:image:alt",
-      "name": "twitter:image:alt",
-      "content": "Formester Logo"
+      hid: 'twitter:image:alt',
+      name: 'twitter:image:alt',
+      content: 'Formester Logo',
     },
     {
-      "hid": "twitter:card",
-      "name": "twitter:card",
-      "content": "summary_large_image"
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image',
     },
     {
-      "hid": "apple-mobile-web-app-title",
-      "name": "apple-mobile-web-app-title",
-      "content": "Formester"
+      hid: 'apple-mobile-web-app-title',
+      name: 'apple-mobile-web-app-title',
+      content: 'Formester',
     },
     {
-      "hid": "image",
-      "name": "image",
-      "property": "og:image",
-      "content": "https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png"
+      hid: 'image',
+      name: 'image',
+      property: 'og:image',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png',
     },
     {
-      "hid": "keywords",
-      "name": "keywords",
-      "content": [
-        "formstack alternative",
-        "best alternative to formstack",
-        "alternative to formstack"
-      ]
-    }
-  ]
+      hid: 'keywords',
+      name: 'keywords',
+      content: ['formstack alternative', 'best alternative to formstack', 'alternative to formstack'],
+    },
+  ],
 })
 </script>

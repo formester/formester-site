@@ -12,11 +12,7 @@
       class="page-component-item"
     />
 
-    <TrustSeals
-      :title="c1_title"
-      :logos="c1_logos"
-      class="page-component-item"
-    />
+    <TrustSeals :title="c1_title" :logos="c1_logos" class="page-component-item" />
 
     <Trustbadges
       description="Used by startups, agencies, and enterprises to create secure SMS verification forms and OTP-protected submissions."
@@ -32,18 +28,9 @@
       class="page-component-item"
     />
 
-    <StandoutFeatureDetail
-      :title="c4_title"
-      :itemList="c4_itemList"
-      class="page-component-item"
-    />
+    <StandoutFeatureDetail :title="c4_title" :itemList="c4_itemList" class="page-component-item" />
 
-    <FeatureShowcase
-      steps
-      :title="c5_title"
-      :itemList="c5_itemList"
-      class="page-component-item"
-    />
+    <FeatureShowcase steps :title="c5_title" :itemList="c5_itemList" class="page-component-item" />
 
     <StandoutFeatureDetail
       description="Use SMS OTP verification forms to collect real user data, prevent fake submissions, and improve communication with verified customers."
@@ -68,16 +55,9 @@
       class="page-component-item"
     />
 
-    <CallToActionSection
-      :ctaValue="c9_ctaValue"
-      class="page-component-item"
-    />
+    <CallToActionSection :ctaValue="c9_ctaValue" class="page-component-item" />
 
-    <FaqSection
-      :title="c10_title"
-      :faqList="c10_faqList"
-      class="page-component-item"
-    />
+    <FaqSection :title="c10_title" :faqList="c10_faqList" class="page-component-item" />
   </div>
 </template>
 
@@ -93,1234 +73,1267 @@ import ThreeColBenefits from '@/components/features/ThreeColBenefits.vue'
 import Trustbadges from '@/components/strapi/Trustbadges.vue'
 import TrustSeals from '@/components/v2/TrustSeals.vue'
 
-const c0_description = "Verify real users with SMS OTP verification and stop fake submissions. Create secure SMS opt-in and verification forms to protect your data and improve form quality."
+const c0_description =
+  'Verify real users with SMS OTP verification and stop fake submissions. Create secure SMS opt-in and verification forms to protect your data and improve form quality.'
 const c0_buttons = []
 const c0_titleParts = []
 const c0_button = {
-  "id": 1160,
-  "link": "https://app.formester.com/users/sign_up",
-  "text": "Start Building Forms for Free",
-  "type": "Secondary",
-  "showArrow": null
+  id: 1160,
+  link: 'https://app.formester.com/users/sign_up',
+  text: 'Start Building Forms for Free',
+  type: 'Secondary',
+  showArrow: null,
 }
 const c0_clickTriggers = [
   {
-    "id": 2059,
-    "text": "Verify real phone numbers"
+    id: 2059,
+    text: 'Verify real phone numbers',
   },
   {
-    "id": 2060,
-    "text": "Stop spam submissions"
+    id: 2060,
+    text: 'Stop spam submissions',
   },
   {
-    "id": 2061,
-    "text": "No coding required"
+    id: 2061,
+    text: 'No coding required',
   },
   {
-    "id": 2062,
-    "text": "Works with any form"
-  }
+    id: 2062,
+    text: 'Works with any form',
+  },
 ]
 const c0_heroImage = {
-  "id": 3729,
-  "imageAlt": "a screenshot of sms verfication form",
-  "imageUrl": null,
-  "width": null,
-  "height": null,
-  "image": {
-    "id": 4321,
-    "name": "a screenshot of sms verfication form.svg",
-    "alternativeText": "a screenshot of sms verfication form",
-    "caption": "a screenshot of sms verfication form",
-    "width": 682,
-    "height": 521,
-    "formats": null,
-    "hash": "a_screenshot_of_sms_verfication_form_f81213ec0e",
-    "ext": ".svg",
-    "mime": "image/svg+xml",
-    "size": 223.48,
-    "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/a_screenshot_of_sms_verfication_form_f81213ec0e.svg",
-    "previewUrl": null,
-    "provider": "aws-s3",
-    "provider_metadata": null,
-    "createdAt": "2026-01-06T04:40:52.236Z",
-    "updatedAt": "2026-01-06T04:40:52.236Z"
-  }
+  id: 3729,
+  imageAlt: 'a screenshot of sms verfication form',
+  imageUrl: null,
+  width: null,
+  height: null,
+  image: {
+    id: 4321,
+    name: 'a screenshot of sms verfication form.svg',
+    alternativeText: 'a screenshot of sms verfication form',
+    caption: 'a screenshot of sms verfication form',
+    width: 682,
+    height: 521,
+    formats: null,
+    hash: 'a_screenshot_of_sms_verfication_form_f81213ec0e',
+    ext: '.svg',
+    mime: 'image/svg+xml',
+    size: 223.48,
+    url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/a_screenshot_of_sms_verfication_form_f81213ec0e.svg',
+    previewUrl: null,
+    provider: 'aws-s3',
+    provider_metadata: null,
+    createdAt: '2026-01-06T04:40:52.236Z',
+    updatedAt: '2026-01-06T04:40:52.236Z',
+  },
 }
 const c0_stats = []
 const c1_title = []
 const c1_logos = []
 const c2_title = [
   {
-    "id": 3745,
-    "text": "Trusted by 50,000+ Businesses Worldwide",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 3745,
+    text: 'Trusted by 50,000+ Businesses Worldwide',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c2_badges = []
 const c3_title = [
   {
-    "id": 3747,
-    "text": "Secure Your Submissions with OTP Verification Forms",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 3747,
+    text: 'Secure Your Submissions with OTP Verification Forms',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c3_itemList = [
   {
-    "id": 2305,
-    "title": "Verify Real Phone Numbers with OTP",
-    "description": "Confirm phone numbers before form submission using SMS OTP verification. Collect accurate data and prevent fake or incorrect entries in your SMS forms.",
-    "description_markdown": "Confirm phone numbers using SMS OTP verification before form submission. Collect accurate data and block fake entries instantly.",
-    "icon": null,
-    "cardImage": {
-      "id": 3730,
-      "imageAlt": "design icon",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4195,
-        "name": "icons8-reminders-100 (1).png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 100,
-        "height": 100,
-        "formats": null,
-        "hash": "icons8_reminders_100_1_a388eaffbc",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 1.55,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/icons8_reminders_100_1_a388eaffbc.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-12-03T03:09:25.779Z",
-        "updatedAt": "2025-12-03T03:09:25.779Z"
-      }
-    }
+    id: 2305,
+    title: 'Verify Real Phone Numbers with OTP',
+    description:
+      'Confirm phone numbers before form submission using SMS OTP verification. Collect accurate data and prevent fake or incorrect entries in your SMS forms.',
+    description_markdown:
+      'Confirm phone numbers using SMS OTP verification before form submission. Collect accurate data and block fake entries instantly.',
+    icon: null,
+    cardImage: {
+      id: 3730,
+      imageAlt: 'design icon',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4195,
+        name: 'icons8-reminders-100 (1).png',
+        alternativeText: null,
+        caption: null,
+        width: 100,
+        height: 100,
+        formats: null,
+        hash: 'icons8_reminders_100_1_a388eaffbc',
+        ext: '.png',
+        mime: 'image/png',
+        size: 1.55,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/icons8_reminders_100_1_a388eaffbc.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-12-03T03:09:25.779Z',
+        updatedAt: '2025-12-03T03:09:25.779Z',
+      },
+    },
   },
   {
-    "id": 2303,
-    "title": "Reduce Spam and Misuse",
-    "description": "Only users who successfully complete OTP verification can submit the form. Automatically block bots, duplicate entries, and spam submissions.",
-    "description_markdown": "Only users who enter the OTP can submit. The system automatically stops bots and random submissions.",
-    "icon": null,
-    "cardImage": {
-      "id": 3732,
-      "imageAlt": "script icon",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4196,
-        "name": "icons8-email-100.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 100,
-        "height": 100,
-        "formats": null,
-        "hash": "icons8_email_100_033e3a8848",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 1.24,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/icons8_email_100_033e3a8848.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-12-03T03:09:25.801Z",
-        "updatedAt": "2025-12-03T03:09:25.801Z"
-      }
-    }
+    id: 2303,
+    title: 'Reduce Spam and Misuse',
+    description:
+      'Only users who successfully complete OTP verification can submit the form. Automatically block bots, duplicate entries, and spam submissions.',
+    description_markdown:
+      'Only users who enter the OTP can submit. The system automatically stops bots and random submissions.',
+    icon: null,
+    cardImage: {
+      id: 3732,
+      imageAlt: 'script icon',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4196,
+        name: 'icons8-email-100.png',
+        alternativeText: null,
+        caption: null,
+        width: 100,
+        height: 100,
+        formats: null,
+        hash: 'icons8_email_100_033e3a8848',
+        ext: '.png',
+        mime: 'image/png',
+        size: 1.24,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/icons8_email_100_033e3a8848.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-12-03T03:09:25.801Z',
+        updatedAt: '2025-12-03T03:09:25.801Z',
+      },
+    },
   },
   {
-    "id": 2304,
-    "title": "Country-Based Phone Validation",
-    "description": "Let users select their country code for accurate phone formatting. Reduce SMS delivery failures and improve verification success rates.",
-    "description_markdown": "Users choose their country code first, preventing number format errors and SMS delivery failures.\n",
-    "icon": null,
-    "cardImage": {
-      "id": 3731,
-      "imageAlt": "form icon",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4198,
-        "name": "icons8-enter-100 (1).png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 100,
-        "height": 100,
-        "formats": null,
-        "hash": "icons8_enter_100_1_59ab91998b",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 1.66,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/icons8_enter_100_1_59ab91998b.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-12-03T03:09:25.803Z",
-        "updatedAt": "2025-12-03T03:09:25.803Z"
-      }
-    }
-  }
+    id: 2304,
+    title: 'Country-Based Phone Validation',
+    description:
+      'Let users select their country code for accurate phone formatting. Reduce SMS delivery failures and improve verification success rates.',
+    description_markdown:
+      'Users choose their country code first, preventing number format errors and SMS delivery failures.\n',
+    icon: null,
+    cardImage: {
+      id: 3731,
+      imageAlt: 'form icon',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4198,
+        name: 'icons8-enter-100 (1).png',
+        alternativeText: null,
+        caption: null,
+        width: 100,
+        height: 100,
+        formats: null,
+        hash: 'icons8_enter_100_1_59ab91998b',
+        ext: '.png',
+        mime: 'image/png',
+        size: 1.66,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/icons8_enter_100_1_59ab91998b.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-12-03T03:09:25.803Z',
+        updatedAt: '2025-12-03T03:09:25.803Z',
+      },
+    },
+  },
 ]
 const c4_title = [
   {
-    "id": 3744,
-    "text": "Types of OTP Verification",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 3744,
+    text: 'Types of OTP Verification',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c4_itemList = [
   {
-    "id": 2302,
-    "title": "SMS OTP Verification",
-    "description": "Use OTP verification to send a one time code by SMS and confirm phone numbers fast for signups and lead capture forms.",
-    "description_markdown": "Use OTP verification to send a one time code by SMS and confirm phone numbers fast for signups and lead capture forms.",
-    "icon": null,
-    "cardImage": {
-      "id": 3727,
-      "imageAlt": "a mockup of sms verification in formester",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4264,
-        "name": "3.svg",
-        "alternativeText": null,
-        "caption": null,
-        "width": 682,
-        "height": 521,
-        "formats": null,
-        "hash": "3_7ab5fd09a3",
-        "ext": ".svg",
-        "mime": "image/svg+xml",
-        "size": 307.1,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/3_7ab5fd09a3.svg",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-12-31T03:15:42.814Z",
-        "updatedAt": "2025-12-31T03:15:42.814Z"
-      }
-    }
+    id: 2302,
+    title: 'SMS OTP Verification',
+    description:
+      'Use OTP verification to send a one time code by SMS and confirm phone numbers fast for signups and lead capture forms.',
+    description_markdown:
+      'Use OTP verification to send a one time code by SMS and confirm phone numbers fast for signups and lead capture forms.',
+    icon: null,
+    cardImage: {
+      id: 3727,
+      imageAlt: 'a mockup of sms verification in formester',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4264,
+        name: '3.svg',
+        alternativeText: null,
+        caption: null,
+        width: 682,
+        height: 521,
+        formats: null,
+        hash: '3_7ab5fd09a3',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 307.1,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/3_7ab5fd09a3.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-12-31T03:15:42.814Z',
+        updatedAt: '2025-12-31T03:15:42.814Z',
+      },
+    },
   },
   {
-    "id": 2301,
-    "title": "Email OTP Verification",
-    "description": "Use OTP verification to send a one-time code to the inbox. Confirm email addresses before submission to ensure clean data.",
-    "description_markdown": "Use OTP verification to send a one-time code to the inbox. Confirm email addresses before submission to ensure clean data.\n\n**[Learn more...](/features/email-verification/)**",
-    "icon": null,
-    "cardImage": {
-      "id": 3728,
-      "imageAlt": "an illustration of turning on email verification in formester",
-      "imageUrl": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_948_f03f9c31d1.png",
-      "width": null,
-      "height": null,
-      "image": null
-    }
-  }
+    id: 2301,
+    title: 'Email OTP Verification',
+    description:
+      'Use OTP verification to send a one-time code to the inbox. Confirm email addresses before submission to ensure clean data.',
+    description_markdown:
+      'Use OTP verification to send a one-time code to the inbox. Confirm email addresses before submission to ensure clean data.\n\n**[Learn more...](/features/email-verification/)**',
+    icon: null,
+    cardImage: {
+      id: 3728,
+      imageAlt: 'an illustration of turning on email verification in formester',
+      imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_948_f03f9c31d1.png',
+      width: null,
+      height: null,
+      image: null,
+    },
+  },
 ]
 const c5_title = [
   {
-    "id": 3749,
-    "text": "How to Enable SMS OTP Verification?",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 3749,
+    text: 'How to Enable SMS OTP Verification?',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c5_itemList = [
   {
-    "id": 2310,
-    "title": "Add the phone field",
-    "description": "Open your Formester builder.\nClick Add Elements and choose the Phone field from the Personal section.\nPlace it anywhere in your form.\n",
-    "description_markdown": "\n- Open your Formester builder.\n\n- Click Add Elements and choose the Phone field from the Personal section.\n\n- Place it anywhere in your form.\n",
-    "icon": null,
-    "cardImage": {
-      "id": 3735,
-      "imageAlt": "a mockup of phone field in formester",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4261,
-        "name": "1 (4).svg",
-        "alternativeText": null,
-        "caption": null,
-        "width": 682,
-        "height": 521,
-        "formats": null,
-        "hash": "1_4_d24776aa86",
-        "ext": ".svg",
-        "mime": "image/svg+xml",
-        "size": 153.18,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/1_4_d24776aa86.svg",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-12-31T03:15:42.383Z",
-        "updatedAt": "2025-12-31T03:15:42.383Z"
-      }
-    }
+    id: 2310,
+    title: 'Add the phone field',
+    description:
+      'Open your Formester builder.\nClick Add Elements and choose the Phone field from the Personal section.\nPlace it anywhere in your form.\n',
+    description_markdown:
+      '\n- Open your Formester builder.\n\n- Click Add Elements and choose the Phone field from the Personal section.\n\n- Place it anywhere in your form.\n',
+    icon: null,
+    cardImage: {
+      id: 3735,
+      imageAlt: 'a mockup of phone field in formester',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4261,
+        name: '1 (4).svg',
+        alternativeText: null,
+        caption: null,
+        width: 682,
+        height: 521,
+        formats: null,
+        hash: '1_4_d24776aa86',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 153.18,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/1_4_d24776aa86.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-12-31T03:15:42.383Z',
+        updatedAt: '2025-12-31T03:15:42.383Z',
+      },
+    },
   },
   {
-    "id": 2308,
-    "title": "Customize phone settings",
-    "description": "Select the phone field to open its settings.\nEdit the label and choose a default country from the General tab.\n",
-    "description_markdown": "\n- Select the phone field to open its settings.\n\n- Edit the label and choose a default country from the General tab.\n",
-    "icon": null,
-    "cardImage": {
-      "id": 3737,
-      "imageAlt": "a mockup of sms verification in formester",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4262,
-        "name": "2 (1).svg",
-        "alternativeText": null,
-        "caption": null,
-        "width": 682,
-        "height": 521,
-        "formats": null,
-        "hash": "2_1_9d741c7b75",
-        "ext": ".svg",
-        "mime": "image/svg+xml",
-        "size": 261.65,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/2_1_9d741c7b75.svg",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-12-31T03:15:42.755Z",
-        "updatedAt": "2025-12-31T03:15:42.755Z"
-      }
-    }
+    id: 2308,
+    title: 'Customize phone settings',
+    description:
+      'Select the phone field to open its settings.\nEdit the label and choose a default country from the General tab.\n',
+    description_markdown:
+      '\n- Select the phone field to open its settings.\n\n- Edit the label and choose a default country from the General tab.\n',
+    icon: null,
+    cardImage: {
+      id: 3737,
+      imageAlt: 'a mockup of sms verification in formester',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4262,
+        name: '2 (1).svg',
+        alternativeText: null,
+        caption: null,
+        width: 682,
+        height: 521,
+        formats: null,
+        hash: '2_1_9d741c7b75',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 261.65,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/2_1_9d741c7b75.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-12-31T03:15:42.755Z',
+        updatedAt: '2025-12-31T03:15:42.755Z',
+      },
+    },
   },
   {
-    "id": 2311,
-    "title": " Enable OTP verification",
-    "description": "Go to the Advanced tab.\nTurn on SMS verification to activate OTP for that field.\n",
-    "description_markdown": "\n- Go to the Advanced tab.\n\n- Turn on SMS verification to activate OTP for that field.\n",
-    "icon": null,
-    "cardImage": {
-      "id": 3739,
-      "imageAlt": "a mockup of sms verification in formester",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4264,
-        "name": "3.svg",
-        "alternativeText": null,
-        "caption": null,
-        "width": 682,
-        "height": 521,
-        "formats": null,
-        "hash": "3_7ab5fd09a3",
-        "ext": ".svg",
-        "mime": "image/svg+xml",
-        "size": 307.1,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/3_7ab5fd09a3.svg",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-12-31T03:15:42.814Z",
-        "updatedAt": "2025-12-31T03:15:42.814Z"
-      }
-    }
+    id: 2311,
+    title: ' Enable OTP verification',
+    description: 'Go to the Advanced tab.\nTurn on SMS verification to activate OTP for that field.\n',
+    description_markdown: '\n- Go to the Advanced tab.\n\n- Turn on SMS verification to activate OTP for that field.\n',
+    icon: null,
+    cardImage: {
+      id: 3739,
+      imageAlt: 'a mockup of sms verification in formester',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4264,
+        name: '3.svg',
+        alternativeText: null,
+        caption: null,
+        width: 682,
+        height: 521,
+        formats: null,
+        hash: '3_7ab5fd09a3',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 307.1,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/3_7ab5fd09a3.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-12-31T03:15:42.814Z',
+        updatedAt: '2025-12-31T03:15:42.814Z',
+      },
+    },
   },
   {
-    "id": 2313,
-    "title": "Create your SMS message",
-    "description": "Write the SMS text users will receive with the OTP.\nSet how long the OTP stays valid.\n",
-    "description_markdown": "\n- Write the SMS text users will receive with the OTP.\n\n- Set how long the OTP stays valid.\n",
-    "icon": null,
-    "cardImage": {
-      "id": 3738,
-      "imageAlt": "a mockup of sms verification in formester",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4265,
-        "name": "4.svg",
-        "alternativeText": null,
-        "caption": null,
-        "width": 682,
-        "height": 521,
-        "formats": null,
-        "hash": "4_370a47c3c5",
-        "ext": ".svg",
-        "mime": "image/svg+xml",
-        "size": 314.92,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/4_370a47c3c5.svg",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-12-31T03:15:42.871Z",
-        "updatedAt": "2025-12-31T03:15:42.871Z"
-      }
-    }
+    id: 2313,
+    title: 'Create your SMS message',
+    description: 'Write the SMS text users will receive with the OTP.\nSet how long the OTP stays valid.\n',
+    description_markdown:
+      '\n- Write the SMS text users will receive with the OTP.\n\n- Set how long the OTP stays valid.\n',
+    icon: null,
+    cardImage: {
+      id: 3738,
+      imageAlt: 'a mockup of sms verification in formester',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4265,
+        name: '4.svg',
+        alternativeText: null,
+        caption: null,
+        width: 682,
+        height: 521,
+        formats: null,
+        hash: '4_370a47c3c5',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 314.92,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/4_370a47c3c5.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-12-31T03:15:42.871Z',
+        updatedAt: '2025-12-31T03:15:42.871Z',
+      },
+    },
   },
   {
-    "id": 2312,
-    "title": "Track usage and manage credits",
-    "description": "View SMS usage inside Billing and Plans.\nBuy credits based on your country and volume needs.\n",
-    "description_markdown": "\n- View SMS usage inside Billing and Plans.\n\n- Buy credits based on your country and volume needs.\n",
-    "icon": null,
-    "cardImage": {
-      "id": 3740,
-      "imageAlt": "a mockup of billing and usage in formester",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4263,
-        "name": "5.svg",
-        "alternativeText": null,
-        "caption": null,
-        "width": 682,
-        "height": 521,
-        "formats": null,
-        "hash": "5_6f32989110",
-        "ext": ".svg",
-        "mime": "image/svg+xml",
-        "size": 360.99,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/5_6f32989110.svg",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-12-31T03:15:42.806Z",
-        "updatedAt": "2025-12-31T03:15:42.806Z"
-      }
-    }
-  }
+    id: 2312,
+    title: 'Track usage and manage credits',
+    description: 'View SMS usage inside Billing and Plans.\nBuy credits based on your country and volume needs.\n',
+    description_markdown:
+      '\n- View SMS usage inside Billing and Plans.\n\n- Buy credits based on your country and volume needs.\n',
+    icon: null,
+    cardImage: {
+      id: 3740,
+      imageAlt: 'a mockup of billing and usage in formester',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4263,
+        name: '5.svg',
+        alternativeText: null,
+        caption: null,
+        width: 682,
+        height: 521,
+        formats: null,
+        hash: '5_6f32989110',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 360.99,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/5_6f32989110.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-12-31T03:15:42.806Z',
+        updatedAt: '2025-12-31T03:15:42.806Z',
+      },
+    },
+  },
 ]
 const c6_title = [
   {
-    "id": 3750,
-    "text": "Example use cases",
-    "highlight": false,
-    "color": null,
-    "bold": null
-  }
+    id: 3750,
+    text: 'Example use cases',
+    highlight: false,
+    color: null,
+    bold: null,
+  },
 ]
 const c6_itemList = [
   {
-    "id": 2306,
-    "title": "Lead Generation",
-    "description": "Use an SMS verification form to confirm real phone numbers before submission. Your sales team receives genuine, reachable leads instead of fake entries.\n\nPerfect for lead generation forms where verified contact details improve conversion and follow-ups.",
-    "description_markdown": "Use an SMS verification form to confirm real phone numbers before submission. Your sales team receives genuine, reachable leads instead of fake entries.\n\nPerfect for **[lead generation](/templates/lead-generation-form-700/)** forms where verified contact details improve conversion and follow-ups.",
-    "icon": null,
-    "cardImage": {
-      "id": 3733,
-      "imageAlt": "a screenshot of formester's custom branding",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4271,
-        "name": "modern-equipped-computer-lab-min 1.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 4096,
-        "height": 2731,
-        "formats": {
-          "large": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/large_modern_equipped_computer_lab_min_1_123c5ece36.png",
-            "hash": "large_modern_equipped_computer_lab_min_1_123c5ece36",
-            "mime": "image/png",
-            "name": "large_modern-equipped-computer-lab-min 1.png",
-            "path": null,
-            "size": 1270.75,
-            "width": 1000,
-            "height": 667
+    id: 2306,
+    title: 'Lead Generation',
+    description:
+      'Use an SMS verification form to confirm real phone numbers before submission. Your sales team receives genuine, reachable leads instead of fake entries.\n\nPerfect for lead generation forms where verified contact details improve conversion and follow-ups.',
+    description_markdown:
+      'Use an SMS verification form to confirm real phone numbers before submission. Your sales team receives genuine, reachable leads instead of fake entries.\n\nPerfect for **[lead generation](/templates/lead-generation-form-700/)** forms where verified contact details improve conversion and follow-ups.',
+    icon: null,
+    cardImage: {
+      id: 3733,
+      imageAlt: "a screenshot of formester's custom branding",
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4271,
+        name: 'modern-equipped-computer-lab-min 1.png',
+        alternativeText: null,
+        caption: null,
+        width: 4096,
+        height: 2731,
+        formats: {
+          large: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/large_modern_equipped_computer_lab_min_1_123c5ece36.png',
+            hash: 'large_modern_equipped_computer_lab_min_1_123c5ece36',
+            mime: 'image/png',
+            name: 'large_modern-equipped-computer-lab-min 1.png',
+            path: null,
+            size: 1270.75,
+            width: 1000,
+            height: 667,
           },
-          "small": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/small_modern_equipped_computer_lab_min_1_123c5ece36.png",
-            "hash": "small_modern_equipped_computer_lab_min_1_123c5ece36",
-            "mime": "image/png",
-            "name": "small_modern-equipped-computer-lab-min 1.png",
-            "path": null,
-            "size": 344.28,
-            "width": 500,
-            "height": 333
+          small: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/small_modern_equipped_computer_lab_min_1_123c5ece36.png',
+            hash: 'small_modern_equipped_computer_lab_min_1_123c5ece36',
+            mime: 'image/png',
+            name: 'small_modern-equipped-computer-lab-min 1.png',
+            path: null,
+            size: 344.28,
+            width: 500,
+            height: 333,
           },
-          "medium": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_modern_equipped_computer_lab_min_1_123c5ece36.png",
-            "hash": "medium_modern_equipped_computer_lab_min_1_123c5ece36",
-            "mime": "image/png",
-            "name": "medium_modern-equipped-computer-lab-min 1.png",
-            "path": null,
-            "size": 729.82,
-            "width": 750,
-            "height": 500
+          medium: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_modern_equipped_computer_lab_min_1_123c5ece36.png',
+            hash: 'medium_modern_equipped_computer_lab_min_1_123c5ece36',
+            mime: 'image/png',
+            name: 'medium_modern-equipped-computer-lab-min 1.png',
+            path: null,
+            size: 729.82,
+            width: 750,
+            height: 500,
           },
-          "thumbnail": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_modern_equipped_computer_lab_min_1_123c5ece36.png",
-            "hash": "thumbnail_modern_equipped_computer_lab_min_1_123c5ece36",
-            "mime": "image/png",
-            "name": "thumbnail_modern-equipped-computer-lab-min 1.png",
-            "path": null,
-            "size": 85.41,
-            "width": 234,
-            "height": 156
-          }
+          thumbnail: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_modern_equipped_computer_lab_min_1_123c5ece36.png',
+            hash: 'thumbnail_modern_equipped_computer_lab_min_1_123c5ece36',
+            mime: 'image/png',
+            name: 'thumbnail_modern-equipped-computer-lab-min 1.png',
+            path: null,
+            size: 85.41,
+            width: 234,
+            height: 156,
+          },
         },
-        "hash": "modern_equipped_computer_lab_min_1_123c5ece36",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 3980.71,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/modern_equipped_computer_lab_min_1_123c5ece36.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-12-31T05:44:33.727Z",
-        "updatedAt": "2025-12-31T05:44:33.727Z"
-      }
-    }
+        hash: 'modern_equipped_computer_lab_min_1_123c5ece36',
+        ext: '.png',
+        mime: 'image/png',
+        size: 3980.71,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/modern_equipped_computer_lab_min_1_123c5ece36.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-12-31T05:44:33.727Z',
+        updatedAt: '2025-12-31T05:44:33.727Z',
+      },
+    },
   },
   {
-    "id": 2309,
-    "title": "User Signups & Registrations",
-    "description": "Stop fake accounts by confirming each user’s phone number with SMS OTP before signup completes.",
-    "description_markdown": "Stop fake accounts by confirming each user’s phone number with SMS OTP before signup completes.",
-    "icon": null,
-    "cardImage": {
-      "id": 3736,
-      "imageAlt": "an illustration of formester's embedding form on wix",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4270,
-        "name": "happy-young-businesswoman-looking-partner-signing-contract-min-min 1.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 4096,
-        "height": 2731,
-        "formats": {
-          "large": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/large_happy_young_businesswoman_looking_partner_signing_contract_min_min_1_8b498e3c23.png",
-            "hash": "large_happy_young_businesswoman_looking_partner_signing_contract_min_min_1_8b498e3c23",
-            "mime": "image/png",
-            "name": "large_happy-young-businesswoman-looking-partner-signing-contract-min-min 1.png",
-            "path": null,
-            "size": 1038.43,
-            "width": 1000,
-            "height": 667
+    id: 2309,
+    title: 'User Signups & Registrations',
+    description: 'Stop fake accounts by confirming each user’s phone number with SMS OTP before signup completes.',
+    description_markdown:
+      'Stop fake accounts by confirming each user’s phone number with SMS OTP before signup completes.',
+    icon: null,
+    cardImage: {
+      id: 3736,
+      imageAlt: "an illustration of formester's embedding form on wix",
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4270,
+        name: 'happy-young-businesswoman-looking-partner-signing-contract-min-min 1.png',
+        alternativeText: null,
+        caption: null,
+        width: 4096,
+        height: 2731,
+        formats: {
+          large: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/large_happy_young_businesswoman_looking_partner_signing_contract_min_min_1_8b498e3c23.png',
+            hash: 'large_happy_young_businesswoman_looking_partner_signing_contract_min_min_1_8b498e3c23',
+            mime: 'image/png',
+            name: 'large_happy-young-businesswoman-looking-partner-signing-contract-min-min 1.png',
+            path: null,
+            size: 1038.43,
+            width: 1000,
+            height: 667,
           },
-          "small": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/small_happy_young_businesswoman_looking_partner_signing_contract_min_min_1_8b498e3c23.png",
-            "hash": "small_happy_young_businesswoman_looking_partner_signing_contract_min_min_1_8b498e3c23",
-            "mime": "image/png",
-            "name": "small_happy-young-businesswoman-looking-partner-signing-contract-min-min 1.png",
-            "path": null,
-            "size": 281.46,
-            "width": 500,
-            "height": 333
+          small: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/small_happy_young_businesswoman_looking_partner_signing_contract_min_min_1_8b498e3c23.png',
+            hash: 'small_happy_young_businesswoman_looking_partner_signing_contract_min_min_1_8b498e3c23',
+            mime: 'image/png',
+            name: 'small_happy-young-businesswoman-looking-partner-signing-contract-min-min 1.png',
+            path: null,
+            size: 281.46,
+            width: 500,
+            height: 333,
           },
-          "medium": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_happy_young_businesswoman_looking_partner_signing_contract_min_min_1_8b498e3c23.png",
-            "hash": "medium_happy_young_businesswoman_looking_partner_signing_contract_min_min_1_8b498e3c23",
-            "mime": "image/png",
-            "name": "medium_happy-young-businesswoman-looking-partner-signing-contract-min-min 1.png",
-            "path": null,
-            "size": 596.59,
-            "width": 750,
-            "height": 500
+          medium: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_happy_young_businesswoman_looking_partner_signing_contract_min_min_1_8b498e3c23.png',
+            hash: 'medium_happy_young_businesswoman_looking_partner_signing_contract_min_min_1_8b498e3c23',
+            mime: 'image/png',
+            name: 'medium_happy-young-businesswoman-looking-partner-signing-contract-min-min 1.png',
+            path: null,
+            size: 596.59,
+            width: 750,
+            height: 500,
           },
-          "thumbnail": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_happy_young_businesswoman_looking_partner_signing_contract_min_min_1_8b498e3c23.png",
-            "hash": "thumbnail_happy_young_businesswoman_looking_partner_signing_contract_min_min_1_8b498e3c23",
-            "mime": "image/png",
-            "name": "thumbnail_happy-young-businesswoman-looking-partner-signing-contract-min-min 1.png",
-            "path": null,
-            "size": 70.59,
-            "width": 234,
-            "height": 156
-          }
+          thumbnail: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_happy_young_businesswoman_looking_partner_signing_contract_min_min_1_8b498e3c23.png',
+            hash: 'thumbnail_happy_young_businesswoman_looking_partner_signing_contract_min_min_1_8b498e3c23',
+            mime: 'image/png',
+            name: 'thumbnail_happy-young-businesswoman-looking-partner-signing-contract-min-min 1.png',
+            path: null,
+            size: 70.59,
+            width: 234,
+            height: 156,
+          },
         },
-        "hash": "happy_young_businesswoman_looking_partner_signing_contract_min_min_1_8b498e3c23",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 3889,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/happy_young_businesswoman_looking_partner_signing_contract_min_min_1_8b498e3c23.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-12-31T05:44:30.814Z",
-        "updatedAt": "2025-12-31T05:44:30.814Z"
-      }
-    }
+        hash: 'happy_young_businesswoman_looking_partner_signing_contract_min_min_1_8b498e3c23',
+        ext: '.png',
+        mime: 'image/png',
+        size: 3889,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/happy_young_businesswoman_looking_partner_signing_contract_min_min_1_8b498e3c23.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-12-31T05:44:30.814Z',
+        updatedAt: '2025-12-31T05:44:30.814Z',
+      },
+    },
   },
   {
-    "id": 2307,
-    "title": "Orders, Bookings, and Inquiries",
-    "description": "Confirm customer phone numbers to prevent fake orders, missed bookings, and follow-up issues.",
-    "description_markdown": "Confirm customer phone numbers to prevent fake orders, missed bookings, and follow-up issues.",
-    "icon": null,
-    "cardImage": {
-      "id": 3734,
-      "imageAlt": "a mockup of formester's custom pdf feature",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4272,
-        "name": "talking-client-min-min 1.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 4096,
-        "height": 2731,
-        "formats": {
-          "large": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/large_talking_client_min_min_1_903b564300.png",
-            "hash": "large_talking_client_min_min_1_903b564300",
-            "mime": "image/png",
-            "name": "large_talking-client-min-min 1.png",
-            "path": null,
-            "size": 1369.22,
-            "width": 1000,
-            "height": 667
+    id: 2307,
+    title: 'Orders, Bookings, and Inquiries',
+    description: 'Confirm customer phone numbers to prevent fake orders, missed bookings, and follow-up issues.',
+    description_markdown:
+      'Confirm customer phone numbers to prevent fake orders, missed bookings, and follow-up issues.',
+    icon: null,
+    cardImage: {
+      id: 3734,
+      imageAlt: "a mockup of formester's custom pdf feature",
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4272,
+        name: 'talking-client-min-min 1.png',
+        alternativeText: null,
+        caption: null,
+        width: 4096,
+        height: 2731,
+        formats: {
+          large: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/large_talking_client_min_min_1_903b564300.png',
+            hash: 'large_talking_client_min_min_1_903b564300',
+            mime: 'image/png',
+            name: 'large_talking-client-min-min 1.png',
+            path: null,
+            size: 1369.22,
+            width: 1000,
+            height: 667,
           },
-          "small": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/small_talking_client_min_min_1_903b564300.png",
-            "hash": "small_talking_client_min_min_1_903b564300",
-            "mime": "image/png",
-            "name": "small_talking-client-min-min 1.png",
-            "path": null,
-            "size": 372.56,
-            "width": 500,
-            "height": 333
+          small: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/small_talking_client_min_min_1_903b564300.png',
+            hash: 'small_talking_client_min_min_1_903b564300',
+            mime: 'image/png',
+            name: 'small_talking-client-min-min 1.png',
+            path: null,
+            size: 372.56,
+            width: 500,
+            height: 333,
           },
-          "medium": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_talking_client_min_min_1_903b564300.png",
-            "hash": "medium_talking_client_min_min_1_903b564300",
-            "mime": "image/png",
-            "name": "medium_talking-client-min-min 1.png",
-            "path": null,
-            "size": 790.42,
-            "width": 750,
-            "height": 500
+          medium: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_talking_client_min_min_1_903b564300.png',
+            hash: 'medium_talking_client_min_min_1_903b564300',
+            mime: 'image/png',
+            name: 'medium_talking-client-min-min 1.png',
+            path: null,
+            size: 790.42,
+            width: 750,
+            height: 500,
           },
-          "thumbnail": {
-            "ext": ".png",
-            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_talking_client_min_min_1_903b564300.png",
-            "hash": "thumbnail_talking_client_min_min_1_903b564300",
-            "mime": "image/png",
-            "name": "thumbnail_talking-client-min-min 1.png",
-            "path": null,
-            "size": 91.93,
-            "width": 234,
-            "height": 156
-          }
+          thumbnail: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_talking_client_min_min_1_903b564300.png',
+            hash: 'thumbnail_talking_client_min_min_1_903b564300',
+            mime: 'image/png',
+            name: 'thumbnail_talking-client-min-min 1.png',
+            path: null,
+            size: 91.93,
+            width: 234,
+            height: 156,
+          },
         },
-        "hash": "talking_client_min_min_1_903b564300",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 3609.89,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/talking_client_min_min_1_903b564300.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-12-31T05:44:55.165Z",
-        "updatedAt": "2025-12-31T05:44:55.165Z"
-      }
-    }
-  }
+        hash: 'talking_client_min_min_1_903b564300',
+        ext: '.png',
+        mime: 'image/png',
+        size: 3609.89,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/talking_client_min_min_1_903b564300.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-12-31T05:44:55.165Z',
+        updatedAt: '2025-12-31T05:44:55.165Z',
+      },
+    },
+  },
 ]
 const c7_title = [
   {
-    "id": 3751,
-    "text": "Pre-built templates",
-    "highlight": false,
-    "color": "#475467",
-    "bold": false
-  }
+    id: 3751,
+    text: 'Pre-built templates',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
 ]
 const c7_button = {
-  "id": 1161,
-  "link": "/templates/",
-  "text": "More Templates",
-  "type": "Primary",
-  "showArrow": null
+  id: 1161,
+  link: '/templates/',
+  text: 'More Templates',
+  type: 'Primary',
+  showArrow: null,
 }
 const c7_specificTemplate = [
   {
-    "id": 2056,
-    "text": "lead-generation-form-700"
+    id: 2056,
+    text: 'lead-generation-form-700',
   },
   {
-    "id": 2057,
-    "text": "new-customer-registration-form-1891"
+    id: 2057,
+    text: 'new-customer-registration-form-1891',
   },
   {
-    "id": 2058,
-    "text": "employee-training-webinar-form-6595"
-  }
+    id: 2058,
+    text: 'employee-training-webinar-form-6595',
+  },
 ]
 const c8_heading = [
   {
-    "id": 3746,
-    "text": "Testimonials",
-    "highlight": false,
-    "color": null,
-    "bold": null
-  }
+    id: 3746,
+    text: 'Testimonials',
+    highlight: false,
+    color: null,
+    bold: null,
+  },
 ]
 const c8_testimonials = [
   {
-    "id": 37,
-    "name": "Chris",
-    "position": "Operations Lead",
-    "organization": "SummitCloud Software",
-    "comment": "Very intuitive and the surveys look genuinely professional out of the box. Most importantly, I requested a custom rating scale and they shipped it within hours. Stellar support that is hands-down better than the Jotform.",
-    "createdAt": "2025-06-29T23:30:38.521Z",
-    "updatedAt": "2026-05-11T05:18:51.458Z",
-    "publishedAt": "2025-06-29T23:30:40.007Z",
-    "companyLogo": {
-      "id": 3650,
-      "imageAlt": "summit-logo",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4096,
-        "name": "summit-logo.png",
-        "alternativeText": "summit-logo",
-        "caption": "summit-logo",
-        "width": 200,
-        "height": 26,
-        "formats": null,
-        "hash": "summit_logo_f5bfb8ce29",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 1.42,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/summit_logo_f5bfb8ce29.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-10-31T04:00:11.826Z",
-        "updatedAt": "2025-10-31T04:00:11.826Z"
-      }
-    }
+    id: 37,
+    name: 'Chris',
+    position: 'Operations Lead',
+    organization: 'SummitCloud Software',
+    comment:
+      'Very intuitive and the surveys look genuinely professional out of the box. Most importantly, I requested a custom rating scale and they shipped it within hours. Stellar support that is hands-down better than the Jotform.',
+    createdAt: '2025-06-29T23:30:38.521Z',
+    updatedAt: '2026-05-11T05:18:51.458Z',
+    publishedAt: '2025-06-29T23:30:40.007Z',
+    companyLogo: {
+      id: 3650,
+      imageAlt: 'summit-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4096,
+        name: 'summit-logo.png',
+        alternativeText: 'summit-logo',
+        caption: 'summit-logo',
+        width: 200,
+        height: 26,
+        formats: null,
+        hash: 'summit_logo_f5bfb8ce29',
+        ext: '.png',
+        mime: 'image/png',
+        size: 1.42,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/summit_logo_f5bfb8ce29.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-31T04:00:11.826Z',
+        updatedAt: '2025-10-31T04:00:11.826Z',
+      },
+    },
   },
   {
-    "id": 38,
-    "name": "Bob",
-    "position": "Senior Web Developer",
-    "organization": "PixelWorks Innovations",
-    "comment": "We have been in business for over thirty years and were never happy with our forms until we found Formester. Now, we have clients actually enjoying completing and submitting online forms. If you are looking for a platform to create online forms... look no further – Formester is the best. Your clients will thank you!",
-    "createdAt": "2025-06-29T23:31:21.818Z",
-    "updatedAt": "2025-10-31T04:02:08.868Z",
-    "publishedAt": "2025-06-29T23:31:27.535Z",
-    "companyLogo": {
-      "id": 3651,
-      "imageAlt": "pixelworks-logo",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4093,
-        "name": "pixelworks-logo.png",
-        "alternativeText": "pixelworks-logo",
-        "caption": "pixelworks-logo",
-        "width": 200,
-        "height": 35,
-        "formats": null,
-        "hash": "pixelworks_logo_4c4b983d1f",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 1.31,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/pixelworks_logo_4c4b983d1f.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-10-31T04:00:11.709Z",
-        "updatedAt": "2025-10-31T04:00:11.709Z"
-      }
-    }
+    id: 38,
+    name: 'Bob',
+    position: 'Senior Web Developer',
+    organization: 'PixelWorks Innovations',
+    comment:
+      'We have been in business for over thirty years and were never happy with our forms until we found Formester. Now, we have clients actually enjoying completing and submitting online forms. If you are looking for a platform to create online forms... look no further – Formester is the best. Your clients will thank you!',
+    createdAt: '2025-06-29T23:31:21.818Z',
+    updatedAt: '2025-10-31T04:02:08.868Z',
+    publishedAt: '2025-06-29T23:31:27.535Z',
+    companyLogo: {
+      id: 3651,
+      imageAlt: 'pixelworks-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4093,
+        name: 'pixelworks-logo.png',
+        alternativeText: 'pixelworks-logo',
+        caption: 'pixelworks-logo',
+        width: 200,
+        height: 35,
+        formats: null,
+        hash: 'pixelworks_logo_4c4b983d1f',
+        ext: '.png',
+        mime: 'image/png',
+        size: 1.31,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/pixelworks_logo_4c4b983d1f.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-31T04:00:11.709Z',
+        updatedAt: '2025-10-31T04:00:11.709Z',
+      },
+    },
   },
   {
-    "id": 4,
-    "name": "Costanza Casullo",
-    "position": "Volunteer",
-    "organization": "Wato Coding Hub",
-    "comment": "Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.",
-    "createdAt": "2024-06-18T03:51:15.232Z",
-    "updatedAt": "2025-01-22T02:58:03.674Z",
-    "publishedAt": "2024-06-18T03:51:21.477Z",
-    "companyLogo": {
-      "id": 225,
-      "imageAlt": "wato-coding-hub-logo",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 1681,
-        "name": "wato-coding-hub.webp",
-        "alternativeText": "wato-coding-hub-logo",
-        "caption": "wato-coding-hub-logo",
-        "width": 80,
-        "height": 81,
-        "formats": null,
-        "hash": "wato_coding_hub_e054f0ea9d",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 1.88,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/wato_coding_hub_e054f0ea9d.webp",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2024-08-01T14:38:23.738Z",
-        "updatedAt": "2024-12-01T07:49:13.371Z"
-      }
-    }
+    id: 4,
+    name: 'Costanza Casullo',
+    position: 'Volunteer',
+    organization: 'Wato Coding Hub',
+    comment:
+      "Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.",
+    createdAt: '2024-06-18T03:51:15.232Z',
+    updatedAt: '2025-01-22T02:58:03.674Z',
+    publishedAt: '2024-06-18T03:51:21.477Z',
+    companyLogo: {
+      id: 225,
+      imageAlt: 'wato-coding-hub-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1681,
+        name: 'wato-coding-hub.webp',
+        alternativeText: 'wato-coding-hub-logo',
+        caption: 'wato-coding-hub-logo',
+        width: 80,
+        height: 81,
+        formats: null,
+        hash: 'wato_coding_hub_e054f0ea9d',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.88,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/wato_coding_hub_e054f0ea9d.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.738Z',
+        updatedAt: '2024-12-01T07:49:13.371Z',
+      },
+    },
   },
   {
-    "id": 2,
-    "name": "Jilson",
-    "position": "Organiser",
-    "organization": "Vue Conference",
-    "comment": "Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.",
-    "createdAt": "2024-06-18T03:48:46.610Z",
-    "updatedAt": "2025-01-22T02:57:08.760Z",
-    "publishedAt": "2024-06-18T03:48:50.595Z",
-    "companyLogo": {
-      "id": 228,
-      "imageAlt": "photo-of-vue-conference",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 1680,
-        "name": "vueconf.webp",
-        "alternativeText": "photo-of-vue-conference",
-        "caption": "photo-of-vue-conference",
-        "width": 80,
-        "height": 80,
-        "formats": null,
-        "hash": "vueconf_1bc3dc0827",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 1.07,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2024-08-01T14:38:23.731Z",
-        "updatedAt": "2024-12-01T07:47:11.024Z"
-      }
-    }
+    id: 2,
+    name: 'Jilson',
+    position: 'Organiser',
+    organization: 'Vue Conference',
+    comment:
+      'Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.',
+    createdAt: '2024-06-18T03:48:46.610Z',
+    updatedAt: '2025-01-22T02:57:08.760Z',
+    publishedAt: '2024-06-18T03:48:50.595Z',
+    companyLogo: {
+      id: 228,
+      imageAlt: 'photo-of-vue-conference',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1680,
+        name: 'vueconf.webp',
+        alternativeText: 'photo-of-vue-conference',
+        caption: 'photo-of-vue-conference',
+        width: 80,
+        height: 80,
+        formats: null,
+        hash: 'vueconf_1bc3dc0827',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.07,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.731Z',
+        updatedAt: '2024-12-01T07:47:11.024Z',
+      },
+    },
   },
   {
-    "id": 35,
-    "name": "Roger",
-    "position": "Marketing Specialist",
-    "organization": "BrightPath Technologies",
-    "comment": "I use Formester for my form-building needs and I’m thoroughly impressed. The platform is rich with features… What really sets them apart is their exceptional customer service (responses typically within 10 minutes). The pricing is also very reasonable… Highly recommended!\n",
-    "createdAt": "2025-06-29T23:29:19.225Z",
-    "updatedAt": "2025-10-31T04:00:58.697Z",
-    "publishedAt": "2025-06-29T23:29:21.134Z",
-    "companyLogo": {
-      "id": 3649,
-      "imageAlt": "brightpath-logo",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4094,
-        "name": "brightpath-logo.png",
-        "alternativeText": "brightpath-logo",
-        "caption": "brightpath-logo",
-        "width": 200,
-        "height": 49,
-        "formats": null,
-        "hash": "brightpath_logo_6ef0922a60",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 2.5,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/brightpath_logo_6ef0922a60.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-10-31T04:00:11.712Z",
-        "updatedAt": "2025-10-31T04:00:11.712Z"
-      }
-    }
+    id: 35,
+    name: 'Roger',
+    position: 'Marketing Specialist',
+    organization: 'BrightPath Technologies',
+    comment:
+      'I use Formester for my form-building needs and I’m thoroughly impressed. The platform is rich with features… What really sets them apart is their exceptional customer service (responses typically within 10 minutes). The pricing is also very reasonable… Highly recommended!\n',
+    createdAt: '2025-06-29T23:29:19.225Z',
+    updatedAt: '2025-10-31T04:00:58.697Z',
+    publishedAt: '2025-06-29T23:29:21.134Z',
+    companyLogo: {
+      id: 3649,
+      imageAlt: 'brightpath-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4094,
+        name: 'brightpath-logo.png',
+        alternativeText: 'brightpath-logo',
+        caption: 'brightpath-logo',
+        width: 200,
+        height: 49,
+        formats: null,
+        hash: 'brightpath_logo_6ef0922a60',
+        ext: '.png',
+        mime: 'image/png',
+        size: 2.5,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/brightpath_logo_6ef0922a60.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-31T04:00:11.712Z',
+        updatedAt: '2025-10-31T04:00:11.712Z',
+      },
+    },
   },
   {
-    "id": 39,
-    "name": "Alex",
-    "position": "Customer Success Manager",
-    "organization": "Orion Growth Partners",
-    "comment": "Tried like 4 quiz tools for our lead gen funnel before this and honestly this is the only one I didn't end up hating. AI did most of the work and the customization actually works.",
-    "createdAt": "2025-06-29T23:32:05.746Z",
-    "updatedAt": "2026-05-11T05:16:55.955Z",
-    "publishedAt": "2025-06-29T23:32:07.219Z",
-    "companyLogo": {
-      "id": 3647,
-      "imageAlt": "logo of orion",
-      "imageUrl": null,
-      "width": null,
-      "height": null,
-      "image": {
-        "id": 4092,
-        "name": "logo_aa3937fea2ff4aeb3e7d9efd6740d05f_1x.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 200,
-        "height": 86,
-        "formats": null,
-        "hash": "logo_aa3937fea2ff4aeb3e7d9efd6740d05f_1x_1cd61284bd",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 3,
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/logo_aa3937fea2ff4aeb3e7d9efd6740d05f_1x_1cd61284bd.png",
-        "previewUrl": null,
-        "provider": "aws-s3",
-        "provider_metadata": null,
-        "createdAt": "2025-10-29T17:02:25.502Z",
-        "updatedAt": "2025-10-29T17:02:25.502Z"
-      }
-    }
-  }
+    id: 39,
+    name: 'Alex',
+    position: 'Customer Success Manager',
+    organization: 'Orion Growth Partners',
+    comment:
+      "Tried like 4 quiz tools for our lead gen funnel before this and honestly this is the only one I didn't end up hating. AI did most of the work and the customization actually works.",
+    createdAt: '2025-06-29T23:32:05.746Z',
+    updatedAt: '2026-05-11T05:16:55.955Z',
+    publishedAt: '2025-06-29T23:32:07.219Z',
+    companyLogo: {
+      id: 3647,
+      imageAlt: 'logo of orion',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4092,
+        name: 'logo_aa3937fea2ff4aeb3e7d9efd6740d05f_1x.png',
+        alternativeText: null,
+        caption: null,
+        width: 200,
+        height: 86,
+        formats: null,
+        hash: 'logo_aa3937fea2ff4aeb3e7d9efd6740d05f_1x_1cd61284bd',
+        ext: '.png',
+        mime: 'image/png',
+        size: 3,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/logo_aa3937fea2ff4aeb3e7d9efd6740d05f_1x_1cd61284bd.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-29T17:02:25.502Z',
+        updatedAt: '2025-10-29T17:02:25.502Z',
+      },
+    },
+  },
 ]
 const c9_ctaValue = {
-  "id": 67,
-  "description": "Get access to advanced AI, unlimited forms & more. See pricing for more details.",
-  "type": "default",
-  "createdAt": "2024-11-04T07:07:43.916Z",
-  "updatedAt": "2025-06-12T18:47:31.840Z",
-  "publishedAt": "2024-11-04T07:08:18.018Z",
-  "locale": "en",
-  "title": [
+  id: 67,
+  description: 'Get access to advanced AI, unlimited forms & more. See pricing for more details.',
+  type: 'default',
+  createdAt: '2024-11-04T07:07:43.916Z',
+  updatedAt: '2025-06-12T18:47:31.840Z',
+  publishedAt: '2024-11-04T07:08:18.018Z',
+  locale: 'en',
+  title: [
     {
-      "id": 393,
-      "text": "Ready to build your perfect form?",
-      "highlight": false,
-      "color": null,
-      "bold": null
-    }
+      id: 393,
+      text: 'Ready to build your perfect form?',
+      highlight: false,
+      color: null,
+      bold: null,
+    },
   ],
-  "buttons": [
+  buttons: [
     {
-      "id": 338,
-      "link": "https://app.formester.com/users/sign_up",
-      "text": "Get Started–It’s Free!",
-      "type": "Primary",
-      "showArrow": null
-    }
+      id: 338,
+      link: 'https://app.formester.com/users/sign_up',
+      text: 'Get Started–It’s Free!',
+      type: 'Primary',
+      showArrow: null,
+    },
   ],
-  "localizations": []
+  localizations: [],
 }
 const c10_title = [
   {
-    "id": 3748,
-    "text": "FAQs",
-    "highlight": false,
-    "color": null,
-    "bold": null
-  }
+    id: 3748,
+    text: 'FAQs',
+    highlight: false,
+    color: null,
+    bold: null,
+  },
 ]
 const c10_faqList = [
   {
-    "id": 1464,
-    "header": "What is an SMS verification form?",
-    "body": "An SMS verification form is a form that sends a one-time password (OTP) to a user’s mobile number before submission. It helps verify real users, reduce spam, and ensure accurate phone number collection.",
-    "body_markdown": "When a user enters their phone number, they receive an SMS with an OTP code. They must enter this code to submit the form.",
-    "list": []
+    id: 1464,
+    header: 'What is an SMS verification form?',
+    body: 'An SMS verification form is a form that sends a one-time password (OTP) to a user’s mobile number before submission. It helps verify real users, reduce spam, and ensure accurate phone number collection.',
+    body_markdown:
+      'When a user enters their phone number, they receive an SMS with an OTP code. They must enter this code to submit the form.',
+    list: [],
   },
   {
-    "id": 1558,
-    "header": "How does SMS OTP verification work in forms?",
-    "body": "When a user enters their phone number, an OTP is sent via SMS. The form is submitted only after the correct code is entered, ensuring genuine and verified submissions.",
-    "body_markdown": null,
-    "list": []
+    id: 1558,
+    header: 'How does SMS OTP verification work in forms?',
+    body: 'When a user enters their phone number, an OTP is sent via SMS. The form is submitted only after the correct code is entered, ensuring genuine and verified submissions.',
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 1560,
-    "header": "Why use SMS verification in online forms?",
-    "body": "SMS verification helps prevent fake submissions, improves lead quality, and confirms real phone numbers. It is useful for lead generation, registrations, bookings, and order forms.",
-    "body_markdown": null,
-    "list": []
+    id: 1560,
+    header: 'Why use SMS verification in online forms?',
+    body: 'SMS verification helps prevent fake submissions, improves lead quality, and confirms real phone numbers. It is useful for lead generation, registrations, bookings, and order forms.',
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 1557,
-    "header": "Can I create an OTP verification form without coding?",
-    "body": "Yes. With Formester, you can create SMS OTP verification forms without coding. Simply add a phone field, enable OTP verification, and start collecting verified submissions.",
-    "body_markdown": null,
-    "list": []
+    id: 1557,
+    header: 'Can I create an OTP verification form without coding?',
+    body: 'Yes. With Formester, you can create SMS OTP verification forms without coding. Simply add a phone field, enable OTP verification, and start collecting verified submissions.',
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 1559,
-    "header": "Can SMS verification forms reduce spam and fake entries?",
-    "body": "Yes. SMS OTP validation blocks bots and fake users by allowing only verified phone numbers to submit forms, helping you collect genuine data and improve conversion quality.",
-    "body_markdown": null,
-    "list": []
+    id: 1559,
+    header: 'Can SMS verification forms reduce spam and fake entries?',
+    body: 'Yes. SMS OTP validation blocks bots and fake users by allowing only verified phone numbers to submit forms, helping you collect genuine data and improve conversion quality.',
+    body_markdown: null,
+    list: [],
   },
   {
-    "id": 1561,
-    "header": "Where can SMS OTP forms be used?",
-    "body": "SMS verification forms can be used for lead generation, user registrations, bookings, surveys, and order forms anywhere you need verified phone numbers and secure submissions.",
-    "body_markdown": null,
-    "list": []
-  }
+    id: 1561,
+    header: 'Where can SMS OTP forms be used?',
+    body: 'SMS verification forms can be used for lead generation, user registrations, bookings, surveys, and order forms anywhere you need verified phone numbers and secure submissions.',
+    body_markdown: null,
+    list: [],
+  },
 ]
 
 useHead({
-  "title": "OTP Verification Form Builder for SMS & Phone Verification",
-  "link": [
+  title: 'OTP Verification Form Builder for SMS & Phone Verification',
+  link: [
     {
-      "hid": "canonical",
-      "rel": "canonical",
-      "href": "https://formester.com/features/sms-verification-forms/"
-    }
+      hid: 'canonical',
+      rel: 'canonical',
+      href: 'https://formester.com/features/sms-verification-forms/',
+    },
   ],
-  "meta": [
+  meta: [
     {
-      "property": "article:modified_time",
-      "content": "2026-06-15T10:45:57.362Z"
+      property: 'article:modified_time',
+      content: '2026-06-15T10:45:57.362Z',
     },
     {
-      "hid": "description",
-      "name": "description",
-      "content": "Create SMS verification and OTP forms to validate phone numbers, reduce spam, and protect submissions. Simple, secure, and easy to set up."
+      hid: 'description',
+      name: 'description',
+      content:
+        'Create SMS verification and OTP forms to validate phone numbers, reduce spam, and protect submissions. Simple, secure, and easy to set up.',
     },
     {
-      "hid": "og:site_name",
-      "name": "og:site_name",
-      "content": "OTP Verification Form Builder for SMS & Phone Verification"
+      hid: 'og:site_name',
+      name: 'og:site_name',
+      content: 'OTP Verification Form Builder for SMS & Phone Verification',
     },
     {
-      "hid": "og:type",
-      "property": "og:type",
-      "content": "website"
+      hid: 'og:type',
+      property: 'og:type',
+      content: 'website',
     },
     {
-      "hid": "og:url",
-      "property": "og:url",
-      "content": "https://formester.com/features/sms-verification-forms/"
+      hid: 'og:url',
+      property: 'og:url',
+      content: 'https://formester.com/features/sms-verification-forms/',
     },
     {
-      "hid": "og:title",
-      "property": "og:title",
-      "content": "OTP Verification Form Builder for SMS & Phone Verification"
+      hid: 'og:title',
+      property: 'og:title',
+      content: 'OTP Verification Form Builder for SMS & Phone Verification',
     },
     {
-      "hid": "og:description",
-      "property": "og:description",
-      "content": "Create SMS verification and OTP forms to validate phone numbers, reduce spam, and protect submissions. Simple, secure, and easy to set up."
+      hid: 'og:description',
+      property: 'og:description',
+      content:
+        'Create SMS verification and OTP forms to validate phone numbers, reduce spam, and protect submissions. Simple, secure, and easy to set up.',
     },
     {
-      "hid": "og:image",
-      "property": "og:image",
-      "content": "https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png"
+      hid: 'og:image',
+      property: 'og:image',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png',
     },
     {
-      "hid": "og:image:alt",
-      "name": "og:image:alt",
-      "content": "Formester Logo"
+      hid: 'og:image:alt',
+      name: 'og:image:alt',
+      content: 'Formester Logo',
     },
     {
-      "hid": "twitter:url",
-      "name": "twitter:url",
-      "content": "https://formester.com/features/sms-verification-forms/"
+      hid: 'twitter:url',
+      name: 'twitter:url',
+      content: 'https://formester.com/features/sms-verification-forms/',
     },
     {
-      "name": "twitter:site",
-      "content": "@_formester_"
+      name: 'twitter:site',
+      content: '@_formester_',
     },
     {
-      "hid": "twitter:title",
-      "name": "twitter:title",
-      "content": "OTP Verification Form Builder for SMS & Phone Verification"
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: 'OTP Verification Form Builder for SMS & Phone Verification',
     },
     {
-      "hid": "twitter:description",
-      "name": "twitter:description",
-      "content": "Create SMS verification and OTP forms to validate phone numbers, reduce spam, and protect submissions. Simple, secure, and easy to set up."
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content:
+        'Create SMS verification and OTP forms to validate phone numbers, reduce spam, and protect submissions. Simple, secure, and easy to set up.',
     },
     {
-      "hid": "twitter:image",
-      "name": "twitter:image",
-      "content": "https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png"
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png',
     },
     {
-      "hid": "twitter:image:alt",
-      "name": "twitter:image:alt",
-      "content": "Formester Logo"
+      hid: 'twitter:image:alt',
+      name: 'twitter:image:alt',
+      content: 'Formester Logo',
     },
     {
-      "hid": "twitter:card",
-      "name": "twitter:card",
-      "content": "summary_large_image"
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image',
     },
     {
-      "hid": "apple-mobile-web-app-title",
-      "name": "apple-mobile-web-app-title",
-      "content": "Formester"
+      hid: 'apple-mobile-web-app-title',
+      name: 'apple-mobile-web-app-title',
+      content: 'Formester',
     },
     {
-      "hid": "image",
-      "name": "image",
-      "property": "og:image",
-      "content": "https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png"
+      hid: 'image',
+      name: 'image',
+      property: 'og:image',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png',
     },
     {
-      "hid": "keywords",
-      "name": "keywords",
-      "content": []
-    }
-  ]
+      hid: 'keywords',
+      name: 'keywords',
+      content: [],
+    },
+  ],
 })
 useJsonld([
   {
-    "@graph": [
+    '@graph': [
       {
-        "@id": "https://formester.com/#organization",
-        "url": "https://formester.com/",
-        "logo": {
-          "url": "https://formester.com/logo.svg",
-          "@type": "ImageObject"
+        '@id': 'https://formester.com/#organization',
+        url: 'https://formester.com/',
+        logo: {
+          url: 'https://formester.com/logo.svg',
+          '@type': 'ImageObject',
         },
-        "name": "Formester",
-        "@type": "Organization",
-        "email": "support@formester.com",
-        "sameAs": [
-          "https://www.linkedin.com/company/formester-inc/",
-          "https://www.youtube.com/channel/UCVfBesiZINubCEC9Xu5Z6gQ",
-          "https://www.instagram.com/_formester_?utm_medium=copy_link",
-          "https://www.facebook.com/formester",
-          "https://x.com/_Formester_?t=-m1pNwXvxR6KOf9kfPi9lQ&s=09"
+        name: 'Formester',
+        '@type': 'Organization',
+        email: 'support@formester.com',
+        sameAs: [
+          'https://www.linkedin.com/company/formester-inc/',
+          'https://www.youtube.com/channel/UCVfBesiZINubCEC9Xu5Z6gQ',
+          'https://www.instagram.com/_formester_?utm_medium=copy_link',
+          'https://www.facebook.com/formester',
+          'https://x.com/_Formester_?t=-m1pNwXvxR6KOf9kfPi9lQ&s=09',
         ],
-        "address": [
+        address: [
           {
-            "@type": "PostalAddress",
-            "streetAddress": "49D, Jugsalai",
-            "addressCountry": "India",
-            "addressLocality": "Jamshedpur"
+            '@type': 'PostalAddress',
+            streetAddress: '49D, Jugsalai',
+            addressCountry: 'India',
+            addressLocality: 'Jamshedpur',
           },
           {
-            "@type": "PostalAddress",
-            "addressRegion": "Delaware",
-            "streetAddress": "2035 Sunset Lake",
-            "addressCountry": "USA"
-          }
-        ]
+            '@type': 'PostalAddress',
+            addressRegion: 'Delaware',
+            streetAddress: '2035 Sunset Lake',
+            addressCountry: 'USA',
+          },
+        ],
       },
       {
-        "url": "https://formester.com/features/sms-verification-forms/",
-        "name": "Formester SMS Verification Forms",
-        "@type": "SoftwareApplication",
-        "offers": {
-          "url": "https://formester.com/pricing/",
-          "@type": "Offer",
-          "price": "13",
-          "priceCurrency": "USD"
+        url: 'https://formester.com/features/sms-verification-forms/',
+        name: 'Formester SMS Verification Forms',
+        '@type': 'SoftwareApplication',
+        offers: {
+          url: 'https://formester.com/pricing/',
+          '@type': 'Offer',
+          price: '13',
+          priceCurrency: 'USD',
         },
-        "description": "Formester allows you to create SMS verification forms with OTP validation to verify real phone numbers, prevent spam submissions, and secure online forms without coding.",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "bestRating": "5",
-          "ratingCount": "33",
-          "ratingValue": "4.7"
+        description:
+          'Formester allows you to create SMS verification forms with OTP validation to verify real phone numbers, prevent spam submissions, and secure online forms without coding.',
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          bestRating: '5',
+          ratingCount: '33',
+          ratingValue: '4.7',
         },
-        "operatingSystem": "Web",
-        "applicationCategory": "BusinessApplication"
+        operatingSystem: 'Web',
+        applicationCategory: 'BusinessApplication',
       },
       {
-        "@id": "https://formester.com/features/sms-verification-forms/#webpage",
-        "url": "https://formester.com/features/sms-verification-forms/",
-        "name": "SMS Verification Forms with OTP Protection | Formester",
-        "@type": "WebPage",
-        "publisher": {
-          "@id": "https://formester.com/#organization"
+        '@id': 'https://formester.com/features/sms-verification-forms/#webpage',
+        url: 'https://formester.com/features/sms-verification-forms/',
+        name: 'SMS Verification Forms with OTP Protection | Formester',
+        '@type': 'WebPage',
+        publisher: {
+          '@id': 'https://formester.com/#organization',
         },
-        "description": "Create SMS verification and OTP forms to validate real users, reduce spam, and protect form submissions without coding."
+        description:
+          'Create SMS verification and OTP forms to validate real users, reduce spam, and protect form submissions without coding.',
       },
       {
-        "url": "https://formester.com/contact",
-        "name": "Contact Formester",
-        "@type": "ContactPage"
+        url: 'https://formester.com/contact',
+        name: 'Contact Formester',
+        '@type': 'ContactPage',
       },
       {
-        "@id": "https://formester.com/features/sms-verification-forms/#faq",
-        "@type": "FAQPage",
-        "mainEntity": [
+        '@id': 'https://formester.com/features/sms-verification-forms/#faq',
+        '@type': 'FAQPage',
+        mainEntity: [
           {
-            "name": "What is an SMS verification form?",
-            "@type": "Question",
-            "acceptedAnswer": {
-              "text": "An SMS verification form sends a one-time password to a user’s mobile number before submission. It helps verify real users, reduce spam, and ensure accurate phone number collection.",
-              "@type": "Answer"
-            }
+            name: 'What is an SMS verification form?',
+            '@type': 'Question',
+            acceptedAnswer: {
+              text: 'An SMS verification form sends a one-time password to a user’s mobile number before submission. It helps verify real users, reduce spam, and ensure accurate phone number collection.',
+              '@type': 'Answer',
+            },
           },
           {
-            "name": "How does SMS OTP verification work in forms?",
-            "@type": "Question",
-            "acceptedAnswer": {
-              "text": "When a user enters their phone number, an OTP is sent via SMS. The form is submitted only after the correct code is entered, ensuring genuine and verified submissions.",
-              "@type": "Answer"
-            }
+            name: 'How does SMS OTP verification work in forms?',
+            '@type': 'Question',
+            acceptedAnswer: {
+              text: 'When a user enters their phone number, an OTP is sent via SMS. The form is submitted only after the correct code is entered, ensuring genuine and verified submissions.',
+              '@type': 'Answer',
+            },
           },
           {
-            "name": "Why use SMS verification in online forms?",
-            "@type": "Question",
-            "acceptedAnswer": {
-              "text": "SMS verification prevents fake submissions, improves lead quality, and confirms real phone numbers. It is useful for lead generation, registrations, bookings, and order forms.",
-              "@type": "Answer"
-            }
+            name: 'Why use SMS verification in online forms?',
+            '@type': 'Question',
+            acceptedAnswer: {
+              text: 'SMS verification prevents fake submissions, improves lead quality, and confirms real phone numbers. It is useful for lead generation, registrations, bookings, and order forms.',
+              '@type': 'Answer',
+            },
           },
           {
-            "name": "Can I create an OTP verification form without coding?",
-            "@type": "Question",
-            "acceptedAnswer": {
-              "text": "Yes. With Formester, you can create SMS OTP verification forms without coding by enabling phone verification in your form settings.",
-              "@type": "Answer"
-            }
+            name: 'Can I create an OTP verification form without coding?',
+            '@type': 'Question',
+            acceptedAnswer: {
+              text: 'Yes. With Formester, you can create SMS OTP verification forms without coding by enabling phone verification in your form settings.',
+              '@type': 'Answer',
+            },
           },
           {
-            "name": "Can SMS verification forms reduce spam and fake entries?",
-            "@type": "Question",
-            "acceptedAnswer": {
-              "text": "Yes. SMS OTP validation blocks bots and fake users by allowing only verified phone numbers to submit forms, helping you collect genuine data.",
-              "@type": "Answer"
-            }
+            name: 'Can SMS verification forms reduce spam and fake entries?',
+            '@type': 'Question',
+            acceptedAnswer: {
+              text: 'Yes. SMS OTP validation blocks bots and fake users by allowing only verified phone numbers to submit forms, helping you collect genuine data.',
+              '@type': 'Answer',
+            },
           },
           {
-            "name": "Where can SMS OTP forms be used?",
-            "@type": "Question",
-            "acceptedAnswer": {
-              "text": "SMS verification forms can be used for lead generation, registrations, bookings, surveys, and order forms wherever verified phone numbers are required.",
-              "@type": "Answer"
-            }
-          }
-        ]
-      }
+            name: 'Where can SMS OTP forms be used?',
+            '@type': 'Question',
+            acceptedAnswer: {
+              text: 'SMS verification forms can be used for lead generation, registrations, bookings, surveys, and order forms wherever verified phone numbers are required.',
+              '@type': 'Answer',
+            },
+          },
+        ],
+      },
     ],
-    "@context": "https://schema.org"
-  }
+    '@context': 'https://schema.org',
+  },
 ])
 </script>
