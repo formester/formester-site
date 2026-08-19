@@ -1,0 +1,750 @@
+---
+slug: "how-to-setup-auto-email-response-on-form-submissions"
+title: "How to Set Up Auto Email Response on Form Submissions (2026 Guide)"
+description: "Find out how to set up automatic email responses on form submissions using Formester’s email auto responder. Perfect for invoices, followups and many more!"
+metaTitle: "How to Set Up Auto Email Response on Form Submissions (2026 Guide)"
+metaDescription: "Send automatic email replies on form submissions in 3 steps. Personalize with form data, attach PDFs, route to multiple recipients. Works in Google Forms + Formester."
+keywords: "how to set up automatic email responses,\nhow to set up automatic email responses on form submissions,\nemail autoresponder,"
+author: "Harish Kumar"
+authorProfile: "https://www.linkedin.com/in/harish-kumar2424/"
+coverImgAlt: "an illustration on how to setup auto email response on form submissions"
+featured: false
+coverImg: {"url":"https://formester-strapi.s3.ap-south-1.amazonaws.com/an_illustration_on_how_to_setup_auto_email_response_on_form_submissions_750a865067.png","width":1214,"height":630}
+metaImage: []
+jsonld: []
+createdAt: "2025-02-03T03:56:06.024Z"
+updatedAt: "2026-06-08T11:39:38.858Z"
+publishedAt: "2026-06-05T01:50:06.000Z"
+---
+<style>
+/* host-link-override */
+.fmstr-cmp-aer-body a { text-decoration: none !important; }
+.fmstr-cmp-aer-body {
+--c-bg-card: #ffffff;
+--c-bg-soft: #f9fafb;
+--c-fg-1: #101828; --c-fg-2: #475467; --c-fg-3: #697586;
+--c-violet-500: #7f56d9; --c-violet-600: #6941c6;
+--c-tint: #f7f3ff; --c-edge: #e4d7ff; --c-border: #eaecf0;
+background: transparent; padding: 24px;
+font-family: inherit;
+color: var(--c-fg-1);
+}
+.fmstr-cmp-aer-body *, .fmstr-cmp-aer-body *::before, .fmstr-cmp-aer-body *::after { box-sizing: border-box; }
+.fmstr-cmp-aer-body__container { max-width: 820px; margin: 0 auto; }
+.fmstr-cmp-aer-body__sub { font-size: 17px !important; line-height: 1.6 !important; color: var(--c-fg-3); font-style: italic; margin: 0 0 24px !important; }
+.fmstr-cmp-aer-body__intro p { font-size: 17px !important; line-height: 1.7 !important; color: var(--c-fg-2); margin: 0 0 16px !important; }
+.fmstr-cmp-aer-body__intro a { color: var(--c-violet-600) !important; text-decoration: none !important; font-weight: 500; }
+.fmstr-cmp-aer-body__intro a:hover { text-decoration: underline !important; }
+@media (max-width: 600px) {
+.fmstr-cmp-aer-body { padding: 16px; }
+.fmstr-cmp-aer-body__sub { font-size: 16px !important; }
+.fmstr-cmp-aer-body__intro p { font-size: 16px !important; }
+}
+</style>
+
+<style>
+.fmstr-cmp-tmpl-tldr a { text-decoration: none !important; }
+.fmstr-cmp-tmpl-tldr {
+--c-card: #f7f3ff;
+--c-fg-1: #101828; --c-fg-2: #475467; --c-fg-3: #697586;
+--c-violet-500: #7f56d9; --c-violet-600: #6941c6; --c-violet-700: #5b34b1;
+--c-edge: #e4d7ff; --c-border: #d6c2f7;
+--c-shadow: 0 1px 3px rgba(16,24,40,.05);
+background: transparent;
+padding: 28px 0 40px;
+font-family: inherit;
+color: var(--c-fg-1);
+text-align: left !important;
+}
+.fmstr-cmp-tmpl-tldr *, .fmstr-cmp-tmpl-tldr *::before, .fmstr-cmp-tmpl-tldr *::after { box-sizing: border-box; }
+.fmstr-cmp-tmpl-tldr__container { max-width: 1200px; margin: 0 auto; }
+.fmstr-cmp-tmpl-tldr__card {
+background: var(--c-card);
+border: 1px solid var(--c-border);
+border-left: 4px solid var(--c-violet-500);
+border-radius: 14px;
+padding: 22px 26px;
+box-shadow: var(--c-shadow);
+display: flex; flex-direction: column; gap: 10px;
+}
+.fmstr-cmp-tmpl-tldr__label {
+font-size: 12px !important;
+font-weight: 700 !important;
+letter-spacing: 0.08em !important;
+text-transform: uppercase;
+color: var(--c-violet-700) !important;
+display: inline-flex;
+align-items: center;
+gap: 8px;
+margin: 0 !important;
+}
+.fmstr-cmp-tmpl-tldr__label::before {
+content: "";
+width: 8px; height: 8px; border-radius: 9999px;
+background: var(--c-violet-500);
+display: inline-block;
+}
+.fmstr-cmp-tmpl-tldr__body {
+font-size: 16px !important;
+line-height: 1.65 !important;
+color: var(--c-fg-1);
+margin: 0 !important;
+font-weight: 500 !important;
+}
+.fmstr-cmp-tmpl-tldr__body strong { color: var(--c-violet-700); font-weight: 700; }
+
+@media (max-width: 540px) {
+.fmstr-cmp-tmpl-tldr { padding: 20px 0 28px; }
+.fmstr-cmp-tmpl-tldr__card { padding: 18px 20px; }
+.fmstr-cmp-tmpl-tldr__body { font-size: 15px !important;}
+}
+</style>
+
+<section class="fmstr-cmp-tmpl-tldr" aria-labelledby="fmstr-cmp-tmpl-tldr-label">
+<div class="fmstr-cmp-tmpl-tldr__container">
+<div class="fmstr-cmp-tmpl-tldr__card">
+<p class="fmstr-cmp-tmpl-tldr__label" id="fmstr-cmp-tmpl-tldr-label">Quick answer</p>
+<p class="fmstr-cmp-tmpl-tldr__body">To set up an auto email response on form submissions, open your form's settings, turn on Email autoresponder (Formester) or install a Google Forms add-on like Email Notifications, write the email body using merge tags for the respondent's name and answers, set the sender name and reply-to address, then test by submitting the form. The 3 steps below cover both Google Forms and Formester paths with screenshots.</p>
+</div>
+</div>
+</section>
+
+
+<section class="fmstr-cmp-aer-body">
+<div class="fmstr-cmp-aer-body__container">
+
+<p class="fmstr-cmp-aer-body__sub">Automated confirmations, receipts, and follow-ups triggered the moment someone submits your form.</p>
+
+<div class="fmstr-cmp-aer-body__intro">
+To set up an auto email response on form submissions, open your form's settings, turn on Email autoresponder (Formester) or install a Google Forms add-on like Email Notifications, write the email body using merge tags for the respondent's name and answers, set the sender name and reply-to address, then test by submitting the form. The 3 steps below cover both Google Forms and Formester paths with screenshots.
+</div>
+
+</div>
+</section>
+
+<style>
+.fmstr-cmp-tmpl-steps a { text-decoration: none !important; }
+.fmstr-cmp-tmpl-steps {
+--c-card: #ffffff;
+--c-fg-1: #101828; --c-fg-2: #475467; --c-fg-3: #697586;
+--c-violet-500: #7f56d9; --c-violet-600: #6941c6; --c-violet-700: #5b34b1;
+--c-tint: #f7f3ff; --c-edge: #e4d7ff;
+--c-border: #eaecf0;
+--c-shadow: 0 1px 3px rgba(16,24,40,.05);
+background: transparent;
+padding: 48px 0;
+font-family: inherit;
+color: var(--c-fg-1);
+text-align: left !important;
+overflow-x: hidden;
+}
+.fmstr-cmp-tmpl-steps *, .fmstr-cmp-tmpl-steps *::before, .fmstr-cmp-tmpl-steps *::after { box-sizing: border-box; }
+.fmstr-cmp-tmpl-steps > *, .fmstr-cmp-tmpl-steps > * > * { min-width: 0; }
+.fmstr-cmp-tmpl-steps__container { max-width: 1200px; margin: 0 auto; }
+.fmstr-cmp-tmpl-steps__head { margin: 0 0 28px !important;}
+.fmstr-cmp-tmpl-steps__h2 {
+font-size: clamp(26px, 3vw, 36px) !important; font-weight: 700 !important; line-height: 1.15 !important;
+letter-spacing: -.02em !important; margin: 0 !important; color: var(--c-fg-1);
+}
+.fmstr-cmp-tmpl-steps__intro { color: var(--c-fg-3); font-size: 17px !important; line-height: 1.6 !important; margin: 14px 0 0 !important; }
+.fmstr-cmp-tmpl-steps__list {
+display: flex; flex-direction: column; gap: 14px;
+counter-reset: step-counter;
+margin: 0; padding: 0; list-style: none;
+}
+.fmstr-cmp-tmpl-steps__item {
+background: var(--c-card);
+border: 1px solid var(--c-border);
+border-radius: 14px;
+padding: 22px 24px;
+box-shadow: var(--c-shadow);
+display: flex; gap: 18px;
+align-items: flex-start;
+min-width: 0;
+}
+.fmstr-cmp-tmpl-steps__num {
+flex-shrink: 0;
+width: 38px; height: 38px; border-radius: 10px;
+background: var(--c-tint);
+border: 1px solid var(--c-edge);
+color: var(--c-violet-700) !important;
+font-weight: 800; font-size: 16px;
+display: inline-flex; align-items: center; justify-content: center;
+}
+.fmstr-cmp-tmpl-steps__main { flex: 1; min-width: 0; }
+.fmstr-cmp-tmpl-steps__title {
+font-size: 17px !important; font-weight: 700 !important; line-height: 1.3 !important;
+color: var(--c-fg-1); margin: 0 0 6px !important;
+}
+.fmstr-cmp-tmpl-steps__body {
+font-size: 15px !important; line-height: 1.6 !important;
+color: var(--c-fg-2); margin: 0 !important;
+}
+
+@media (max-width: 540px) {
+.fmstr-cmp-tmpl-steps { padding: 36px 0; }
+.fmstr-cmp-tmpl-steps__item { padding: 18px 20px; gap: 14px; }
+.fmstr-cmp-tmpl-steps__num { width: 34px; height: 34px; font-size: 15px; }
+.fmstr-cmp-tmpl-steps__title { font-size: 16px !important;}
+.fmstr-cmp-tmpl-steps__body { font-size: 14.5px !important;}
+}
+</style>
+
+<section class="fmstr-cmp-tmpl-steps" aria-labelledby="fmstr-cmp-tmpl-steps-h2">
+<div class="fmstr-cmp-tmpl-steps__container">
+<div class="fmstr-cmp-tmpl-steps__head">
+<h2 class="fmstr-cmp-tmpl-steps__h2" id="fmstr-cmp-tmpl-steps-h2">The 3-step setup</h2>
+<p class="fmstr-cmp-tmpl-steps__intro">Works for Formester (native), Google Forms (via add-on), or Apps Script.</p>
+</div>
+<ol class="fmstr-cmp-tmpl-steps__list">
+
+<li class="fmstr-cmp-tmpl-steps__item">
+<span class="fmstr-cmp-tmpl-steps__num" aria-hidden="true">1</span>
+<div class="fmstr-cmp-tmpl-steps__main">
+<h3 class="fmstr-cmp-tmpl-steps__title">Open the form's settings and find the autoresponder</h3>
+<p class="fmstr-cmp-tmpl-steps__body">In Formester: Settings → Email autoresponder. In Google Forms: install 'Email Notifications for Google Forms' from the Workspace Marketplace, then open the add-on settings.</p>
+</div>
+</li>
+
+<li class="fmstr-cmp-tmpl-steps__item">
+<span class="fmstr-cmp-tmpl-steps__num" aria-hidden="true">2</span>
+<div class="fmstr-cmp-tmpl-steps__main">
+<h3 class="fmstr-cmp-tmpl-steps__title">Write the email body with merge tags</h3>
+<p class="fmstr-cmp-tmpl-steps__body">Compose the subject and body. Use merge tags like {{name}} and {{email}} to pull form values into the email. Example: 'Hi {{first_name}}, thanks for submitting!'</p>
+</div>
+</li>
+
+<li class="fmstr-cmp-tmpl-steps__item">
+<span class="fmstr-cmp-tmpl-steps__num" aria-hidden="true">3</span>
+<div class="fmstr-cmp-tmpl-steps__main">
+<h3 class="fmstr-cmp-tmpl-steps__title">Set the sender and test</h3>
+<p class="fmstr-cmp-tmpl-steps__body">Set the From name, From email, and Reply-to address. Submit a test response. Check that the email arrives, the merge tags rendered, and the email didn't land in spam.</p>
+</div>
+</li>
+
+</ol>
+</div>
+</section>
+
+
+
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/gllVMDqryog?si=nUUm52udvCLgcuzy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Sending emails manually takes time. However with Formester’s <strong><a href="/features/autoresponder-email/">email autoresponder</a></strong>, you can send automatic replies to people who fill out your forms. This keeps them informed and improves their experience. In this guide, you’ll learn how to set up and use autoresponders easily.  
+
+Before you begin, it’s important to make sure your emails actually reach the inbox. If your domain isn’t properly authenticated, your messages might land in spam or get blocked. You can quickly check your setup using a <strong><a href="https://easydmarc.com/tools/dmarc-lookup">EasyDMARC DMARC checker</a></strong> a free tool that helps validate your DMARC configuration and improve deliverability.
+
+## <strong>Set Up Your Autoresponder</strong>  
+
+<strong>Step 1: Create an Autoresponder in Formester</strong>  
+
+Go to <strong><a href="/">Formester</a></strong> and log into your account. Choose the form where you want to add an autoresponder. Find the <strong>"Autoresponder"</strong> option in the settings and turn it on.  
+
+<strong>Step 2: Write Your Email Message</strong>  
+
+Keep your email clear and friendly. Use a simple subject line like <strong>"Thank you for your submission!"</strong> Start with a greeting, such as <strong>"Hi [Name]"</strong>, and confirm the submission. You can also add extra details, such as the next steps or helpful links.  
+
+<strong>Step 3: Personalize with Merge Tags</strong>  
+
+Merge tags help you add personal details automatically. Instead of a generic message, you can say:  
+
+- <strong>"Hi {{first_name}}, thanks for reaching out!"</strong>  
+- <strong>"We received your request at {{email}}."</strong>  
+
+This makes your emails feel more personal and engaging.  
+
+### <strong>Customize Your Autoresponder Settings</strong>  
+
+<strong>Set Triggers for Emails</strong>  
+
+Decide when the email should be sent. You can send it immediately after form submission or after a delay. For example, send a <strong>confirmation email one hour later</strong> to make it feel more personal.  
+
+<strong>Use Conditional Logic for Smarter Replies</strong>  
+
+You can send different emails based on answers in the form using <strong><a href="/features/conditional-logic/">conditional logic</a></strong>. For example, if someone selects <strong>"Business Inquiry,"</strong> they get a different email than someone who chooses <strong>"Support Request."</strong>  
+
+### <strong>Track and Improve Your Emails</strong>  
+
+Check your email performance by tracking open and click rates. If people don’t open your emails, try changing the subject line. A/B testing helps you find what works best.  
+
+### <strong>Stay Compliant and Professional</strong>  
+
+Follow email rules like <strong>GDPR</strong> and <strong>CAN-SPAM</strong> by including an unsubscribe option. This ensures users can opt out if they no longer want emails.  Additionally, ensure your email domain is properly authenticated by setting up SPF, DKIM, and DMARC records, tools like an <strong><a href="https://powerdmarc.com/spf-record-generator/">SPF generator</a></strong>  can help simplify this process.
+
+### <strong>Start Automating Today!</strong>  
+
+<strong><a href="https://app.formester.com/users/sign_up">Signup to Formester</a></strong> to save time and improve communication. Set it up today and make your emails work for you, automatically! 
+
+<style>
+/* host-link-override */
+.fmstr-cmp-aer-faq a { text-decoration: none !important; }
+.fmstr-cmp-aer-faq {
+--c-card: #ffffff;
+--c-fg-1: #101828; --c-fg-2: #475467; --c-fg-3: #697586;
+--c-violet-600: #6941c6;
+--c-tint: #f7f3ff; --c-edge: #e4d7ff;
+--c-border: #eaecf0;
+--c-shadow: 0 1px 3px rgba(16,24,40,.05);
+background: transparent; padding: 56px 24px;
+font-family: inherit;
+color: var(--c-fg-1);
+text-align: left !important;
+}
+.fmstr-cmp-aer-faq *, .fmstr-cmp-aer-faq *::before, .fmstr-cmp-aer-faq *::after { box-sizing: border-box; }
+.fmstr-cmp-aer-faq__container { max-width: 1200px; margin: 0 auto; }
+.fmstr-cmp-aer-faq__h2 { font-size: clamp(26px, 3vw, 36px) !important; font-weight: 700 !important; line-height: 1.15 !important; letter-spacing: -.02em !important; margin: 0 !important; margin-top: 0 !important; color: var(--c-fg-1); text-align: left; }
+.fmstr-cmp-aer-faq__intro { color: var(--c-fg-3); font-size: 17px !important; line-height: 1.6 !important; margin: 14px 0 28px !important; text-align: left; }
+.fmstr-cmp-aer-faq__list { display: flex; flex-direction: column; gap: 12px; }
+.fmstr-cmp-aer-faq__item {
+background: var(--c-card); border: 1px solid var(--c-border);
+border-radius: 14px; box-shadow: var(--c-shadow); overflow: hidden;
+}
+.fmstr-cmp-aer-faq__item summary {
+list-style: none; cursor: pointer;
+padding: 18px 22px; font-size: 16.5px; font-weight: 600; color: var(--c-fg-1);
+display: flex; align-items: center; justify-content: space-between; gap: 14px;
+}
+.fmstr-cmp-aer-faq__item summary::-webkit-details-marker { display: none; }
+.fmstr-cmp-aer-faq__item summary::after {
+content: "+"; flex-shrink: 0;
+width: 24px; height: 24px; border-radius: 6px;
+display: grid; place-items: center;
+background: var(--c-tint); color: var(--c-violet-600);
+font-size: 16px; font-weight: 700; transition: transform .2s ease;
+}
+.fmstr-cmp-aer-faq__item[open] summary::after { content: "−"; transform: rotate(180deg); }
+.fmstr-cmp-aer-faq__answer {
+padding: 0 22px 18px;
+font-size: 15.5px !important; line-height: 1.65 !important; color: var(--c-fg-2);
+margin: 0 !important;
+}
+.fmstr-cmp-aer-faq__answer a { color: var(--c-violet-600) !important; font-weight: 500; }
+.fmstr-cmp-aer-faq__answer a:hover { text-decoration: underline !important; }
+@media (max-width: 600px) {
+.fmstr-cmp-aer-faq { padding: 40px 16px; }
+.fmstr-cmp-aer-faq__item summary { padding: 16px 18px; font-size: 15.5px; }
+.fmstr-cmp-aer-faq__answer { padding: 0 18px 16px; font-size: 15px !important; }
+}
+</style>
+
+
+
+<style>
+.fmstr-cmp-tmpl-cmp a { text-decoration: none !important; }
+.fmstr-cmp-tmpl-cmp {
+--c-card: #ffffff;
+--c-fg-1: #101828; --c-fg-2: #475467; --c-fg-3: #697586;
+--c-violet-500: #7f56d9; --c-violet-600: #6941c6; --c-violet-700: #5b34b1;
+--c-tint: #f7f3ff; --c-edge: #e4d7ff;
+--c-border: #eaecf0;
+--c-shadow: 0 1px 3px rgba(16,24,40,.05);
+--c-good: #12b76a; --c-bad: #f04438;
+background: transparent;
+padding: 48px 0;
+font-family: inherit;
+color: var(--c-fg-1);
+text-align: left !important;
+overflow-x: hidden;
+}
+.fmstr-cmp-tmpl-cmp *, .fmstr-cmp-tmpl-cmp *::before, .fmstr-cmp-tmpl-cmp *::after { box-sizing: border-box; }
+.fmstr-cmp-tmpl-cmp > *, .fmstr-cmp-tmpl-cmp > * > * { min-width: 0; }
+.fmstr-cmp-tmpl-cmp__container { max-width: 1200px; margin: 0 auto; }
+.fmstr-cmp-tmpl-cmp__head { margin: 0 0 28px !important;}
+.fmstr-cmp-tmpl-cmp__h2 {
+font-size: clamp(26px, 3vw, 36px) !important; font-weight: 700 !important; line-height: 1.15 !important;
+letter-spacing: -.02em !important; margin: 0 !important; color: var(--c-fg-1);
+}
+.fmstr-cmp-tmpl-cmp__intro { color: var(--c-fg-3); font-size: 17px !important; line-height: 1.6 !important; margin: 14px 0 0 !important; }
+.fmstr-cmp-tmpl-cmp__grid {
+display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+}
+.fmstr-cmp-tmpl-cmp__card {
+background: var(--c-card);
+border: 1px solid var(--c-border);
+border-radius: 14px;
+padding: 22px;
+box-shadow: var(--c-shadow);
+display: flex; flex-direction: column; gap: 12px;
+min-width: 0;
+}
+.fmstr-cmp-tmpl-cmp__card--featured {
+border-color: var(--c-edge);
+background: var(--c-tint);
+box-shadow: 0 4px 18px rgba(105,65,198,.10);
+}
+.fmstr-cmp-tmpl-cmp__chip {
+display: inline-flex; align-items: center;
+font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+text-transform: uppercase; color: var(--c-violet-700) !important;
+background: var(--c-tint); border: 1px solid var(--c-edge);
+padding: 4px 10px; border-radius: 9999px;
+align-self: flex-start;
+}
+.fmstr-cmp-tmpl-cmp__name {
+font-size: 18px; font-weight: 700; color: var(--c-fg-1);
+margin: 0; line-height: 1.3;
+}
+.fmstr-cmp-tmpl-cmp__best {
+font-size: 13.5px; color: var(--c-fg-3); margin: 0;
+}
+.fmstr-cmp-tmpl-cmp__best strong { color: var(--c-fg-1); font-weight: 600; }
+.fmstr-cmp-tmpl-cmp__divider {
+height: 1px; background: var(--c-border); margin: 4px 0; border: 0;
+}
+.fmstr-cmp-tmpl-cmp__list {
+margin: 0; padding: 0; list-style: none;
+display: flex; flex-direction: column; gap: 8px;
+}
+.fmstr-cmp-tmpl-cmp__item {
+display: flex; gap: 8px; align-items: flex-start;
+font-size: 14px; line-height: 1.5; color: var(--c-fg-2);
+}
+.fmstr-cmp-tmpl-cmp__item::before {
+content: "✓"; flex-shrink: 0;
+color: var(--c-good); font-weight: 700; line-height: 1.45;
+}
+.fmstr-cmp-tmpl-cmp__item--con::before { content: "✗"; color: var(--c-bad); }
+
+@media (max-width: 920px) {
+.fmstr-cmp-tmpl-cmp__grid { grid-template-columns: 1fr; gap: 12px; }
+}
+@media (max-width: 540px) {
+.fmstr-cmp-tmpl-cmp { padding: 36px 0; }
+.fmstr-cmp-tmpl-cmp__card { padding: 18px 20px; }
+}
+</style>
+
+<section class="fmstr-cmp-tmpl-cmp" aria-labelledby="fmstr-cmp-tmpl-cmp-h2">
+<div class="fmstr-cmp-tmpl-cmp__container">
+<div class="fmstr-cmp-tmpl-cmp__head">
+<h2 class="fmstr-cmp-tmpl-cmp__h2" id="fmstr-cmp-tmpl-cmp-h2">The 3 methods compared</h2>
+<p class="fmstr-cmp-tmpl-cmp__intro">Pick by which form builder you use and how much customization you need.</p>
+</div>
+<div class="fmstr-cmp-tmpl-cmp__grid">
+
+<div class="fmstr-cmp-tmpl-cmp__card">
+<span class="fmstr-cmp-tmpl-cmp__chip">Method 1</span>
+<h3 class="fmstr-cmp-tmpl-cmp__name">Google Forms add-on</h3>
+<p class="fmstr-cmp-tmpl-cmp__best"><strong>Best for:</strong> Working in Google Forms with low volume</p>
+<hr class="fmstr-cmp-tmpl-cmp__divider">
+<ul class="fmstr-cmp-tmpl-cmp__list">
+<li class="fmstr-cmp-tmpl-cmp__item">Free up to 20 emails/day</li>
+<li class="fmstr-cmp-tmpl-cmp__item">5-minute setup</li>
+<li class="fmstr-cmp-tmpl-cmp__item">Works inside Workspace</li>
+<li class="fmstr-cmp-tmpl-cmp__item fmstr-cmp-tmpl-cmp__item--con">Limited template control</li>
+<li class="fmstr-cmp-tmpl-cmp__item fmstr-cmp-tmpl-cmp__item--con">Caps at 20 emails/day on free tier</li>
+<li class="fmstr-cmp-tmpl-cmp__item fmstr-cmp-tmpl-cmp__item--con">No conditional routing</li>
+</ul>
+</div>
+
+<div class="fmstr-cmp-tmpl-cmp__card">
+<span class="fmstr-cmp-tmpl-cmp__chip">Method 2</span>
+<h3 class="fmstr-cmp-tmpl-cmp__name">Google Apps Script</h3>
+<p class="fmstr-cmp-tmpl-cmp__best"><strong>Best for:</strong> Developers comfortable with code</p>
+<hr class="fmstr-cmp-tmpl-cmp__divider">
+<ul class="fmstr-cmp-tmpl-cmp__list">
+<li class="fmstr-cmp-tmpl-cmp__item">Unlimited emails</li>
+<li class="fmstr-cmp-tmpl-cmp__item">Full template control</li>
+<li class="fmstr-cmp-tmpl-cmp__item">Custom conditional logic</li>
+<li class="fmstr-cmp-tmpl-cmp__item fmstr-cmp-tmpl-cmp__item--con">Requires writing JavaScript</li>
+<li class="fmstr-cmp-tmpl-cmp__item fmstr-cmp-tmpl-cmp__item--con">Quotas on emails per day per Workspace account</li>
+<li class="fmstr-cmp-tmpl-cmp__item fmstr-cmp-tmpl-cmp__item--con">Harder to maintain</li>
+</ul>
+</div>
+
+<div class="fmstr-cmp-tmpl-cmp__card fmstr-cmp-tmpl-cmp__card--featured">
+<span class="fmstr-cmp-tmpl-cmp__chip">Method 3</span>
+<h3 class="fmstr-cmp-tmpl-cmp__name">Formester native autoresponder</h3>
+<p class="fmstr-cmp-tmpl-cmp__best"><strong>Best for:</strong> Sending personalized auto-replies at any volume</p>
+<hr class="fmstr-cmp-tmpl-cmp__divider">
+<ul class="fmstr-cmp-tmpl-cmp__list">
+<li class="fmstr-cmp-tmpl-cmp__item">Built in on free plan</li>
+<li class="fmstr-cmp-tmpl-cmp__item">Conditional routing per respondent</li>
+<li class="fmstr-cmp-tmpl-cmp__item">PDF attachments + merge tags</li>
+<li class="fmstr-cmp-tmpl-cmp__item">No daily caps on paid plans</li>
+<li class="fmstr-cmp-tmpl-cmp__item fmstr-cmp-tmpl-cmp__item--con">Requires switching from Google Forms</li>
+</ul>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section class="fmstr-cmp-aer-faq" aria-labelledby="fmstr-cmp-aer-faq-h2">
+<div class="fmstr-cmp-aer-faq__container">
+<h2 class="fmstr-cmp-aer-faq__h2" id="fmstr-cmp-aer-faq-h2">Frequently asked questions</h2>
+<p class="fmstr-cmp-aer-faq__intro">Common questions about this guide.</p>
+<div class="fmstr-cmp-aer-faq__list">
+
+<details class="fmstr-cmp-aer-faq__item">
+<summary>Can Google Forms send automatic email responses?</summary>
+<div class="fmstr-cmp-aer-faq__answer">Not natively. To send auto-replies from Google Forms, install an add-on like Email Notifications for Google Forms, or write a Google Apps Script. For a one-click native option, use Formester's built-in autoresponder.</div>
+</details>
+
+<details class="fmstr-cmp-aer-faq__item">
+<summary>How do I set up an auto-reply for form submissions?</summary>
+<div class="fmstr-cmp-aer-faq__answer">In Formester, open your form's Settings, turn on Email autoresponder, write the message using merge tags (e.g., {{name}} and {{email}}), set the reply-to address, and save. Every submission now triggers a personalized email.</div>
+</details>
+
+<details class="fmstr-cmp-aer-faq__item">
+<summary>Can I personalize the auto email with form data?</summary>
+<div class="fmstr-cmp-aer-faq__answer">Yes. Use merge tags to pull any form field into the email body, subject line, or sender name. Example: 'Hi {{first\_name}}, thanks for submitting your order for {{product}}.'</div>
+</details>
+
+<details class="fmstr-cmp-aer-faq__item">
+<summary>Can I attach a PDF to the auto-response email?</summary>
+<div class="fmstr-cmp-aer-faq__answer">Yes. Formester can attach a PDF copy of the respondent's submission to the confirmation email. Useful for receipts, signed contracts, and order confirmations.</div>
+</details>
+
+<details class="fmstr-cmp-aer-faq__item">
+<summary>Can I send different emails to different respondents?</summary>
+<div class="fmstr-cmp-aer-faq__answer">Yes. Use conditional logic to route respondents to different autoresponder messages based on their answers. Common use: VIP customers get one message, others get a standard reply.</div>
+</details>
+
+<details class="fmstr-cmp-aer-faq__item">
+<summary>How do I avoid the auto-reply landing in spam?</summary>
+<div class="fmstr-cmp-aer-faq__answer">Set the From address to a domain you own, use a custom sender name, authenticate with SPF and DKIM records, and avoid spam-trigger words like FREE or URGENT in the subject line.</div>
+</details>
+
+<details class="fmstr-cmp-aer-faq__item">
+<summary>Can I send the auto-response to multiple email addresses?</summary>
+<div class="fmstr-cmp-aer-faq__answer">Yes. Add multiple recipients in the To, Cc, or Bcc fields. Common use: respondent on To, your team on Bcc.</div>
+</details>
+
+<details class="fmstr-cmp-aer-faq__item">
+<summary>Can I delay the auto-response by a few hours?</summary>
+<div class="fmstr-cmp-aer-faq__answer">Most form builders send immediately. For delayed responses, use Zapier or Make to receive the form submission and trigger an email after a delay.</div>
+</details>
+
+<details class="fmstr-cmp-aer-faq__item">
+<summary>Is the auto-response feature free in Google Forms?</summary>
+<div class="fmstr-cmp-aer-faq__answer">Email Notifications for Google Forms is free for up to 20 emails per day. Beyond that, you need the paid version or a different solution like Formester (free up to plan limits).</div>
+</details>
+
+<details class="fmstr-cmp-aer-faq__item">
+<summary>What's the best alternative to Google Forms for auto email response?</summary>
+<div class="fmstr-cmp-aer-faq__answer">Formester has the autoresponder built-in on the free plan. No add-ons, no Apps Script, no per-email limits on lower paid tiers. The autoresponder also supports attachments, merge tags, and conditional routing.</div>
+</details>
+
+</div>
+</div>
+</section>
+
+<style>
+/* host-link-override */
+.fmstr-cmp-aer-rel a { text-decoration: none !important; }
+.fmstr-cmp-aer-rel {
+--c-bg: transparent;
+--c-card: #ffffff;
+--c-fg-1: #101828; --c-fg-2: #475467; --c-fg-3: #697586;
+--c-violet-500: #7f56d9; --c-violet-600: #6941c6; --c-violet-700: #5b34b1;
+--c-tint: #f7f3ff; --c-edge: #e4d7ff;
+--c-border: #eaecf0;
+background: var(--c-bg);
+padding: 8px 0 0;
+font-family: inherit;
+color: var(--c-fg-1);
+}
+.fmstr-cmp-aer-rel *, .fmstr-cmp-aer-rel *::before, .fmstr-cmp-aer-rel *::after { box-sizing: border-box; }
+.fmstr-cmp-aer-rel__container { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
+.fmstr-cmp-aer-rel__head { margin: 0 0 28px; max-width: 760px; }
+.fmstr-cmp-aer-rel__eyebrow {
+display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+color: var(--c-violet-600); background: #f4ebff;
+padding: 4px 10px; border-radius: 9999px; margin: 0 0 12px;
+}
+.fmstr-cmp-aer-rel__h2 {
+font-size: clamp(22px, 2.4vw, 28px) !important;
+font-weight: 700 !important;
+line-height: 1.2 !important;
+letter-spacing: -.02em !important;
+margin: 0 !important; margin-top: 0 !important;
+color: var(--c-fg-1);
+}
+.fmstr-cmp-aer-rel__intro {
+color: var(--c-fg-3);
+font-size: 15px !important; line-height: 1.5 !important;
+margin: 8px 0 0 !important; margin-bottom: 0 !important;
+}
+.fmstr-cmp-aer-rel__grid {
+display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+align-items: start;
+margin: 0;
+}
+.fmstr-cmp-aer-rel__card {
+display: flex; align-items: center; gap: 12px;
+background: var(--c-card); border: 1px solid var(--c-border);
+border-radius: 12px; padding: 12px 14px;
+color: inherit !important; text-decoration: none !important;
+transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease, background .15s ease;
+min-width: 0;
+position: relative;
+}
+.fmstr-cmp-aer-rel__card:hover {
+border-color: #d6c5fa;
+background: #fbfaff;
+box-shadow: 0 4px 16px rgba(105, 65, 198, 0.08);
+transform: translateY(-1px);
+}
+.fmstr-cmp-aer-rel__icon {
+flex-shrink: 0;
+width: 36px; height: 36px;
+display: grid; place-items: center;
+background: linear-gradient(135deg, var(--c-tint) 0%, #efe4ff 100%);
+border: 1px solid var(--c-edge);
+border-radius: 8px;
+color: var(--c-violet-600);
+}
+.fmstr-cmp-aer-rel__icon svg { width: 18px; height: 18px; }
+.fmstr-cmp-aer-rel__text { flex: 1; min-width: 0; }
+.fmstr-cmp-aer-rel__title {
+font-size: 14.5px !important;
+font-weight: 600 !important;
+color: var(--c-fg-1);
+line-height: 1.3 !important;
+margin: 0 0 2px !important; margin-top: 0 !important;
+letter-spacing: -.005em;
+display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+overflow: hidden;
+}
+.fmstr-cmp-aer-rel__sub {
+font-size: 12.5px !important; line-height: 1.4 !important;
+color: var(--c-fg-3); margin: 0 !important; margin-bottom: 0 !important;
+display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+overflow: hidden;
+}
+.fmstr-cmp-aer-rel__arrow {
+flex-shrink: 0;
+width: 22px; height: 22px;
+display: grid; place-items: center;
+color: var(--c-violet-600);
+font-size: 14px; font-weight: 700;
+transition: transform .15s ease;
+}
+.fmstr-cmp-aer-rel__card:hover .fmstr-cmp-aer-rel__arrow { transform: translateX(3px); }
+@media (max-width: 560px) {
+.fmstr-cmp-aer-rel { padding: 8px 0 0; }
+.fmstr-cmp-aer-rel__grid { grid-template-columns: 1fr; gap: 10px; }
+.fmstr-cmp-aer-rel__card { padding: 12px; }
+}
+</style>
+
+<section class="fmstr-cmp-aer-rel" aria-labelledby="fmstr-cmp-aer-rel-h2">
+<div class="fmstr-cmp-aer-rel__container">
+<div class="fmstr-cmp-aer-rel__head">
+<div class="fmstr-cmp-aer-rel__eyebrow">More on Formester</div>
+<h2 class="fmstr-cmp-aer-rel__h2" id="fmstr-cmp-aer-rel-h2">More on form automation</h2>
+<p class="fmstr-cmp-aer-rel__intro">Auto-replies, integrations, and the surrounding workflow features.</p>
+</div>
+
+<div class="fmstr-cmp-aer-rel__grid">
+
+<a class="fmstr-cmp-aer-rel__card" href="https://formester.com/features/autoresponder-email/">
+<span class="fmstr-cmp-aer-rel__icon" aria-hidden="true">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+</span>
+<div class="fmstr-cmp-aer-rel__text">
+<h3 class="fmstr-cmp-aer-rel__title">Autoresponder email feature</h3>
+<p class="fmstr-cmp-aer-rel__sub">Native auto-reply on submit</p>
+</div>
+<span class="fmstr-cmp-aer-rel__arrow" aria-hidden="true">&rarr;</span>
+</a>
+
+<a class="fmstr-cmp-aer-rel__card" href="https://formester.com/features/conditional-logic/">
+<span class="fmstr-cmp-aer-rel__icon" aria-hidden="true">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 3 6 21"/><polyline points="18 3 18 9"/><path d="M6 9c0 6 12 6 12 12"/></svg>
+</span>
+<div class="fmstr-cmp-aer-rel__text">
+<h3 class="fmstr-cmp-aer-rel__title">Conditional logic</h3>
+<p class="fmstr-cmp-aer-rel__sub">Different reply per answer</p>
+</div>
+<span class="fmstr-cmp-aer-rel__arrow" aria-hidden="true">&rarr;</span>
+</a>
+
+<a class="fmstr-cmp-aer-rel__card" href="https://formester.com/ai-form-generator/">
+<span class="fmstr-cmp-aer-rel__icon" aria-hidden="true">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"/><path d="m14 7 3 3"/><path d="M5 6v4"/><path d="M19 14v4"/><path d="M10 2v2"/><path d="M7 8H3"/><path d="M21 16h-4"/><path d="M11 3H9"/></svg>
+</span>
+<div class="fmstr-cmp-aer-rel__text">
+<h3 class="fmstr-cmp-aer-rel__title">AI Form Generator</h3>
+<p class="fmstr-cmp-aer-rel__sub">Forms from one prompt</p>
+</div>
+<span class="fmstr-cmp-aer-rel__arrow" aria-hidden="true">&rarr;</span>
+</a>
+
+<a class="fmstr-cmp-aer-rel__card" href="https://formester.com/integrations/">
+<span class="fmstr-cmp-aer-rel__icon" aria-hidden="true">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-5"/><path d="M9 7V2"/><path d="M15 7V2"/><path d="M6 13V8a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4"/></svg>
+</span>
+<div class="fmstr-cmp-aer-rel__text">
+<h3 class="fmstr-cmp-aer-rel__title">Integrations</h3>
+<p class="fmstr-cmp-aer-rel__sub">Slack, CRMs, Zapier</p>
+</div>
+<span class="fmstr-cmp-aer-rel__arrow" aria-hidden="true">&rarr;</span>
+</a>
+
+<a class="fmstr-cmp-aer-rel__card" href="https://formester.com/features/form-limiter/">
+<span class="fmstr-cmp-aer-rel__icon" aria-hidden="true">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+</span>
+<div class="fmstr-cmp-aer-rel__text">
+<h3 class="fmstr-cmp-aer-rel__title">Form Limiter</h3>
+<p class="fmstr-cmp-aer-rel__sub">Response caps + deadlines</p>
+</div>
+<span class="fmstr-cmp-aer-rel__arrow" aria-hidden="true">&rarr;</span>
+</a>
+
+<a class="fmstr-cmp-aer-rel__card" href="https://formester.com/templates/categories/contact-forms/">
+<span class="fmstr-cmp-aer-rel__icon" aria-hidden="true">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+</span>
+<div class="fmstr-cmp-aer-rel__text">
+<h3 class="fmstr-cmp-aer-rel__title">Contact form templates</h3>
+<p class="fmstr-cmp-aer-rel__sub">Pre-built with autoresponders</p>
+</div>
+<span class="fmstr-cmp-aer-rel__arrow" aria-hidden="true">&rarr;</span>
+</a>
+
+<a class="fmstr-cmp-aer-rel__card" href="https://formester.com/templates/categories/survey-forms/">
+<span class="fmstr-cmp-aer-rel__icon" aria-hidden="true">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
+</span>
+<div class="fmstr-cmp-aer-rel__text">
+<h3 class="fmstr-cmp-aer-rel__title">Survey templates</h3>
+<p class="fmstr-cmp-aer-rel__sub">Auto-confirm on submission</p>
+</div>
+<span class="fmstr-cmp-aer-rel__arrow" aria-hidden="true">&rarr;</span>
+</a>
+
+<a class="fmstr-cmp-aer-rel__card" href="https://formester.com/blog/how-to-make-a-questionnaire-in-google-forms/">
+<span class="fmstr-cmp-aer-rel__icon" aria-hidden="true">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+</span>
+<div class="fmstr-cmp-aer-rel__text">
+<h3 class="fmstr-cmp-aer-rel__title">Questionnaire in Google Forms</h3>
+<p class="fmstr-cmp-aer-rel__sub">Step-by-step</p>
+</div>
+<span class="fmstr-cmp-aer-rel__arrow" aria-hidden="true">&rarr;</span>
+</a>
+
+<a class="fmstr-cmp-aer-rel__card" href="https://formester.com/blog/5-ways-to-view-responses-in-google-forms/">
+<span class="fmstr-cmp-aer-rel__icon" aria-hidden="true">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 16V8"/><path d="M12 16V4"/><path d="M17 16v-4"/></svg>
+</span>
+<div class="fmstr-cmp-aer-rel__text">
+<h3 class="fmstr-cmp-aer-rel__title">5 ways to view responses</h3>
+<p class="fmstr-cmp-aer-rel__sub">Summary, sheet, CSV</p>
+</div>
+<span class="fmstr-cmp-aer-rel__arrow" aria-hidden="true">&rarr;</span>
+</a>
+
+</div>
+</div>
+</section>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can Google Forms send automatic email responses?", "acceptedAnswer": {"@type": "Answer", "text": "Not natively. To send auto-replies from Google Forms, install an add-on like Email Notifications for Google Forms, or write a Google Apps Script. For a one-click native option, use Formester's built-in autoresponder."}}, {"@type": "Question", "name": "How do I set up an auto-reply for form submissions?", "acceptedAnswer": {"@type": "Answer", "text": "In Formester, open your form's Settings, turn on Email autoresponder, write the message using merge tags (e.g., {{name}} and {{email}}), set the reply-to address, and save. Every submission now triggers a personalized email."}}, {"@type": "Question", "name": "Can I personalize the auto email with form data?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Use merge tags to pull any form field into the email body, subject line, or sender name. Example: 'Hi {{first\\_name}}, thanks for submitting your order for {{product}}.'"}}, {"@type": "Question", "name": "Can I attach a PDF to the auto-response email?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Formester can attach a PDF copy of the respondent's submission to the confirmation email. Useful for receipts, signed contracts, and order confirmations."}}, {"@type": "Question", "name": "Can I send different emails to different respondents?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Use conditional logic to route respondents to different autoresponder messages based on their answers. Common use: VIP customers get one message, others get a standard reply."}}, {"@type": "Question", "name": "How do I avoid the auto-reply landing in spam?", "acceptedAnswer": {"@type": "Answer", "text": "Set the From address to a domain you own, use a custom sender name, authenticate with SPF and DKIM records, and avoid spam-trigger words like FREE or URGENT in the subject line."}}, {"@type": "Question", "name": "Can I send the auto-response to multiple email addresses?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Add multiple recipients in the To, Cc, or Bcc fields. Common use: respondent on To, your team on Bcc."}}, {"@type": "Question", "name": "Can I delay the auto-response by a few hours?", "acceptedAnswer": {"@type": "Answer", "text": "Most form builders send immediately. For delayed responses, use Zapier or Make to receive the form submission and trigger an email after a delay."}}, {"@type": "Question", "name": "Is the auto-response feature free in Google Forms?", "acceptedAnswer": {"@type": "Answer", "text": "Email Notifications for Google Forms is free for up to 20 emails per day. Beyond that, you need the paid version or a different solution like Formester (free up to plan limits)."}}, {"@type": "Question", "name": "What's the best alternative to Google Forms for auto email response?", "acceptedAnswer": {"@type": "Answer", "text": "Formester has the autoresponder built-in on the free plan. No add-ons, no Apps Script, no per-email limits on lower paid tiers. The autoresponder also supports attachments, merge tags, and conditional routing."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to Set Up Auto Email Response on Form Submissions (3 Steps)", "description": "Send automatic email replies on form submissions in 3 steps. Personalize with form data, attach PDFs, route to multiple recipients. Works in Google Forms + Formester.", "author": {"@type": "Person", "name": "Harish Kumar", "url": "https://www.linkedin.com/in/harish-kumar2424/"}, "publisher": {"@type": "Organization", "name": "Formester", "logo": {"@type": "ImageObject", "url": "https://formester.com/logo.svg"}}, "dateModified": "2026-06-05"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://formester.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://formester.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "How to Set Up Auto Email Response on Form Submissions (3 Steps)", "item": "https://formester.com/blog/how-to-setup-auto-email-response-on-form-submissions/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "name": "How to Set Up Auto Email Response on Form Submissions (3 Steps)", "description": "Send automatic email replies on form submissions in 3 steps. Personalize with form data, attach PDFs, route to multiple recipients. Works in Google Forms + Formester.", "thumbnailUrl": "https://img.youtube.com/vi/gllVMDqryog/maxresdefault.jpg", "uploadDate": "2025-05-15", "contentUrl": "https://www.youtube.com/watch?v=gllVMDqryog", "embedUrl": "https://www.youtube.com/embed/gllVMDqryog"}</script>

@@ -1,0 +1,68 @@
+---
+slug: "how-to-integrate-sendgrid-smtp-with-formester"
+title: "How to integrate SendGrid SMTP with Formester"
+description: "Are you looking how to integrate Sendgrid SMTP with Formester? This blog post will show you how to configure Sendgrid SMTP so you can start using it with Formester.This guide helps you configure SMTP settings for SendGrid SMTP on Formester. You can then start sending all emails through your personalized emails and receive response directly in your inbox"
+metaTitle: "How to Integrate SendGrid SMTP with Formester - Easy Steps"
+metaDescription: "Need help integrating Sendgrid SMTP with Formester? Our latest blog post shows you the setup process for seamless email communications."
+keywords: "SendGrid SMTP, Sendgrid smtp credentials, get SendGrid smtp integration"
+author: "Ravindra Kumar Verma"
+authorProfile: "https://www.linkedin.com/in/ravindraverma12/"
+coverImgAlt: "An illustration of how to integrate sendgrid smtp with Formester"
+featured: false
+coverImg: {"url":"https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_sendgrid_smtp_with_formester_2b6ed650f3.png","width":1200,"height":630}
+metaImage: [{"id":116,"imageURL":"https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_sendgrid_smtp_with_formester_home_screen_062b563d44.png"},{"id":119,"imageURL":"https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_sendgrid_smtp_with_formester_signup_13e09a9f71.png"},{"id":124,"imageURL":"https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_sendgrid_smtp_with_formester_some_extra_detail_1fe187e06c.png"},{"id":123,"imageURL":"https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_sendgrid_smtp_with_formester_dashboard_01e3375ba3.png"},{"id":120,"imageURL":"https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_sendgrid_smtp_with_formester_create_a_sender_9fb58de1e4.png"},{"id":121,"imageURL":"https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_sendgrid_smtp_with_formester_goto_smtp_relay_e81b2d1596.png"},{"id":122,"imageURL":"https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_sendgrid_smtp_with_formester_create_api_key_a8b27b8d44.png"},{"id":118,"imageURL":"https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_sendgrid_smtp_with_formester_verify_025ab3573c.png"},{"id":117,"imageURL":"https://formester-strapi.s3.ap-south-1.amazonaws.com/test_credentails_424f6b70b5.png"}]
+jsonld: []
+createdAt: "2024-04-07T10:04:44.079Z"
+updatedAt: "2024-06-13T19:31:53.775Z"
+publishedAt: "2022-12-19T05:18:45.522Z"
+---
+**How to use SendGrid SMTP Server**
+[SendGrid](https://sendgrid.com/ "SendGrid") is a great option for sending large volumes of emails. For instance, this service would work well if you have to email an entire mailing list manually. It can be time-consuming and difficult to send a lot of emails all at once
+
+**Step 1:** Visit [SendGrid](https://sendgrid.com/ "SendGrid") and click on start for free button.
+
+![Go to SendGrid website and click start for free](https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_sendgrid_smtp_with_formester_home_screen_957b0f9118.png "Go to SendGrid website and click start for free")
+
+![Signup with Sendgrid by filling the correct details](https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_sendgrid_smtp_with_formester_signup_8490a5eb91.png "Signup with Sendgrid by filling the correct details")
+
+**Step 2:**  Create an account and in next step fill the details asked
+
+![Some extra details is required to get started with sendgrid, fill in details and get started ](https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_sendgrid_smtp_with_formester_some_extra_detail_2bf5e89c07.png "Some extra details is required to get started with sendgrid, fill in details and get started ")
+
+**S﻿tep 3:** First of all verify your email and now create a single Sender
+
+![On sendGrid dashboard click on create a single sender](https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_sendgrid_smtp_with_formester_dashboard_3b46ffa4a5.png "On sendGrid dashboard click on create a single sender")
+
+**S﻿tep 4:** Fill in the details and create a sender
+
+![Create a single sender to send a mail](https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_sendgrid_smtp_with_formester_create_a_sender_719a00f60c.png "Create a single sender to send a mail")
+
+**S﻿tep 5:** After creating a single sender, verify it by receiving an email in your provided email account.   Now go to the Integration guide option under Email API. And Select SMTP relay.
+
+![Go to integration under Email Api to select SMTP Relay for smtp](https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_sendgrid_smtp_with_formester_goto_smtp_relay_baee9f5f9c.png "Go to integration under Email Api to select SMTP Relay for smtp")
+
+**S﻿tep 6:** Enter an API key name and click on Create Key to generate a password. And save your details somewhere. Click on Verify Integration button below to verify your integration details.
+
+![Enter an API key to generate a api with password](https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_sendgrid_smtp_with_formester_create_api_key_bbbc436f97.png "Enter an API key to generate a api with password")
+
+![Verify your credentials by receiving a mail in Sendgrid email section](https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_sendgrid_smtp_with_formester_verify_016f0e7977.png "Verify your credentials by receiving a mail in Sendgrid email section")
+
+**Step 7:** Final step, check your integration credentials with Formester to verify if it’s working or not,
+
+**Login to your account -> select a form -> Click on SMTP Integration from the top -> Click on Add Account**
+
+![Visit Formester and go to SMTP Integration to add your account and test it](https://formester-strapi.s3.ap-south-1.amazonaws.com/test_credentails_37da65e7d8.png "Visit Formester and go to SMTP Integration to add your account and test it")
+
+**Use**
+
+```
+Use:
+* Name – Can be anything of your choice
+* SMTP server - smtp.sendgrid.net
+* Port - 587  ( Some users may have different ports do checkout other ports as well 25/465/587/2525)
+* Username - apikey
+* Password - password created at the time of apikey generation
+* From email – your SendGrid account id
+```
+
+Add your credentials and click on three dots at the end of the mail account and select the Test option. Wait for a few seconds for the result.
