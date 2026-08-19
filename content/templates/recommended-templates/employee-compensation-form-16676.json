@@ -1,0 +1,29 @@
+{
+  "specificTemplate": "employee-compensation-form-16676",
+  "description": "",
+  "hideDefaultRecommended": false,
+  "title": [],
+  "content": [],
+  "recommendedTemplates": [
+    {
+      "id": 1898,
+      "text": "benefits-enrollment-form-2781"
+    },
+    {
+      "id": 1899,
+      "text": "expense-reimbursement-form-25341"
+    },
+    {
+      "id": 1900,
+      "text": "employee-timesheet-form-2116"
+    },
+    {
+      "id": 1901,
+      "text": "employee-laptop-agreement-form-2806"
+    },
+    {
+      "id": 1902,
+      "text": "crew-daily-job-payroll-sheet-7502"
+    }
+  ]
+}

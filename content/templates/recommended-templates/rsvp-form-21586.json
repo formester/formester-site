@@ -1,0 +1,33 @@
+{
+  "specificTemplate": "rsvp-form-21586",
+  "description": "",
+  "hideDefaultRecommended": false,
+  "title": [],
+  "content": [],
+  "recommendedTemplates": [
+    {
+      "id": 2009,
+      "text": "simple-rsvp-form-21589"
+    },
+    {
+      "id": 2008,
+      "text": "wedding-rsvp-form-21587"
+    },
+    {
+      "id": 2010,
+      "text": "banquet-rsvp-form-21590"
+    },
+    {
+      "id": 2011,
+      "text": "guest-list-form-1910"
+    },
+    {
+      "id": 2012,
+      "text": "event-signup-form-27614"
+    },
+    {
+      "id": 2013,
+      "text": "party-rsvp-form"
+    }
+  ]
+}

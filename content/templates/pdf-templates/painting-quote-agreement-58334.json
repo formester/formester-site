@@ -1,0 +1,76 @@
+{
+  "slug": "painting-quote-agreement-58334",
+  "previewImages": [
+    {
+      "id": 2578,
+      "imageAlt": "a pdf preview of painting quote agreement",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 3862,
+        "name": "paintin_page-0001.jpg",
+        "alternativeText": null,
+        "caption": null,
+        "width": 1241,
+        "height": 1755,
+        "formats": {
+          "large": {
+            "ext": ".jpg",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/large_paintin_page_0001_266d3eeb24.jpg",
+            "hash": "large_paintin_page_0001_266d3eeb24",
+            "mime": "image/jpeg",
+            "name": "large_paintin_page-0001.jpg",
+            "path": null,
+            "size": 63.46,
+            "width": 707,
+            "height": 1000
+          },
+          "small": {
+            "ext": ".jpg",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/small_paintin_page_0001_266d3eeb24.jpg",
+            "hash": "small_paintin_page_0001_266d3eeb24",
+            "mime": "image/jpeg",
+            "name": "small_paintin_page-0001.jpg",
+            "path": null,
+            "size": 22,
+            "width": 353,
+            "height": 500
+          },
+          "medium": {
+            "ext": ".jpg",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_paintin_page_0001_266d3eeb24.jpg",
+            "hash": "medium_paintin_page_0001_266d3eeb24",
+            "mime": "image/jpeg",
+            "name": "medium_paintin_page-0001.jpg",
+            "path": null,
+            "size": 40.73,
+            "width": 530,
+            "height": 750
+          },
+          "thumbnail": {
+            "ext": ".jpg",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_paintin_page_0001_266d3eeb24.jpg",
+            "hash": "thumbnail_paintin_page_0001_266d3eeb24",
+            "mime": "image/jpeg",
+            "name": "thumbnail_paintin_page-0001.jpg",
+            "path": null,
+            "size": 3.05,
+            "width": 110,
+            "height": 156
+          }
+        },
+        "hash": "paintin_page_0001_266d3eeb24",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 131.55,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/paintin_page_0001_266d3eeb24.jpg",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2025-08-29T01:13:27.922Z",
+        "updatedAt": "2025-08-29T01:13:27.922Z"
+      }
+    }
+  ]
+}

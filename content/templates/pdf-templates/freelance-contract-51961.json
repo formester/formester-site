@@ -1,0 +1,76 @@
+{
+  "slug": "freelance-contract-51961",
+  "previewImages": [
+    {
+      "id": 2671,
+      "imageAlt": "a pdf preview of freelance contract",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 3873,
+        "name": "freelance contract_page-0001.jpg",
+        "alternativeText": null,
+        "caption": null,
+        "width": 1241,
+        "height": 1755,
+        "formats": {
+          "large": {
+            "ext": ".jpg",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/large_freelance_contract_page_0001_3533bd09dc.jpg",
+            "hash": "large_freelance_contract_page_0001_3533bd09dc",
+            "mime": "image/jpeg",
+            "name": "large_freelance contract_page-0001.jpg",
+            "path": null,
+            "size": 53.91,
+            "width": 707,
+            "height": 1000
+          },
+          "small": {
+            "ext": ".jpg",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/small_freelance_contract_page_0001_3533bd09dc.jpg",
+            "hash": "small_freelance_contract_page_0001_3533bd09dc",
+            "mime": "image/jpeg",
+            "name": "small_freelance contract_page-0001.jpg",
+            "path": null,
+            "size": 18.96,
+            "width": 353,
+            "height": 500
+          },
+          "medium": {
+            "ext": ".jpg",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_freelance_contract_page_0001_3533bd09dc.jpg",
+            "hash": "medium_freelance_contract_page_0001_3533bd09dc",
+            "mime": "image/jpeg",
+            "name": "medium_freelance contract_page-0001.jpg",
+            "path": null,
+            "size": 36.96,
+            "width": 530,
+            "height": 750
+          },
+          "thumbnail": {
+            "ext": ".jpg",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_freelance_contract_page_0001_3533bd09dc.jpg",
+            "hash": "thumbnail_freelance_contract_page_0001_3533bd09dc",
+            "mime": "image/jpeg",
+            "name": "thumbnail_freelance contract_page-0001.jpg",
+            "path": null,
+            "size": 3.24,
+            "width": 110,
+            "height": 156
+          }
+        },
+        "hash": "freelance_contract_page_0001_3533bd09dc",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 114.4,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/freelance_contract_page_0001_3533bd09dc.jpg",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2025-08-29T03:10:59.817Z",
+        "updatedAt": "2025-08-29T03:10:59.817Z"
+      }
+    }
+  ]
+}

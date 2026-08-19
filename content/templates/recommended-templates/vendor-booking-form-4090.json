@@ -1,0 +1,33 @@
+{
+  "specificTemplate": "vendor-booking-form-4090",
+  "description": "",
+  "hideDefaultRecommended": false,
+  "title": [],
+  "content": [],
+  "recommendedTemplates": [
+    {
+      "id": 2039,
+      "text": "event-feedback-survey-698"
+    },
+    {
+      "id": 2038,
+      "text": "guest-list-form-1910"
+    },
+    {
+      "id": 2040,
+      "text": "conference-registration-form-1875"
+    },
+    {
+      "id": 2041,
+      "text": "registration-form-template-1662"
+    },
+    {
+      "id": 2042,
+      "text": "event-signup-form-27614"
+    },
+    {
+      "id": 2043,
+      "text": "venue-options-form-template-2498"
+    }
+  ]
+}

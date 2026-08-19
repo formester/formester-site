@@ -1,0 +1,76 @@
+{
+  "slug": "prenuptial-agreement-pdf-form-template-49910",
+  "previewImages": [
+    {
+      "id": 2667,
+      "imageAlt": "a pdf preview of prenup agreement",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 3874,
+        "name": "prenup agreement_page-0001.jpg",
+        "alternativeText": null,
+        "caption": null,
+        "width": 1241,
+        "height": 1755,
+        "formats": {
+          "large": {
+            "ext": ".jpg",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/large_prenup_agreement_page_0001_d767719b9a.jpg",
+            "hash": "large_prenup_agreement_page_0001_d767719b9a",
+            "mime": "image/jpeg",
+            "name": "large_prenup agreement_page-0001.jpg",
+            "path": null,
+            "size": 54.95,
+            "width": 707,
+            "height": 1000
+          },
+          "small": {
+            "ext": ".jpg",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/small_prenup_agreement_page_0001_d767719b9a.jpg",
+            "hash": "small_prenup_agreement_page_0001_d767719b9a",
+            "mime": "image/jpeg",
+            "name": "small_prenup agreement_page-0001.jpg",
+            "path": null,
+            "size": 18.8,
+            "width": 353,
+            "height": 500
+          },
+          "medium": {
+            "ext": ".jpg",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_prenup_agreement_page_0001_d767719b9a.jpg",
+            "hash": "medium_prenup_agreement_page_0001_d767719b9a",
+            "mime": "image/jpeg",
+            "name": "medium_prenup agreement_page-0001.jpg",
+            "path": null,
+            "size": 36.19,
+            "width": 530,
+            "height": 750
+          },
+          "thumbnail": {
+            "ext": ".jpg",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_prenup_agreement_page_0001_d767719b9a.jpg",
+            "hash": "thumbnail_prenup_agreement_page_0001_d767719b9a",
+            "mime": "image/jpeg",
+            "name": "thumbnail_prenup agreement_page-0001.jpg",
+            "path": null,
+            "size": 3.42,
+            "width": 110,
+            "height": 156
+          }
+        },
+        "hash": "prenup_agreement_page_0001_d767719b9a",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 124.14,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/prenup_agreement_page_0001_d767719b9a.jpg",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2025-08-29T03:10:59.880Z",
+        "updatedAt": "2025-08-29T03:10:59.880Z"
+      }
+    }
+  ]
+}

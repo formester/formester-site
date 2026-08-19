@@ -1,0 +1,33 @@
+{
+  "specificTemplate": "product-manager-job-application-form-4402",
+  "description": "",
+  "hideDefaultRecommended": false,
+  "title": [],
+  "content": [],
+  "recommendedTemplates": [
+    {
+      "id": 1927,
+      "text": "job-application-form-699"
+    },
+    {
+      "id": 1928,
+      "text": "software-engineer-job-application-form-3980"
+    },
+    {
+      "id": 1929,
+      "text": "online-job-interview-preliminary-screening-form-2107"
+    },
+    {
+      "id": 1930,
+      "text": "interview-consent-form-13882"
+    },
+    {
+      "id": 1931,
+      "text": "employee-application-form-43931"
+    },
+    {
+      "id": 1932,
+      "text": "work-from-home-template-4444"
+    }
+  ]
+}

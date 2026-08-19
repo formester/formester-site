@@ -1,0 +1,33 @@
+{
+  "specificTemplate": "training-evaluation-form-6597",
+  "description": "",
+  "hideDefaultRecommended": false,
+  "title": [],
+  "content": [],
+  "recommendedTemplates": [
+    {
+      "id": 1939,
+      "text": "training-verification-form-6600"
+    },
+    {
+      "id": 1940,
+      "text": "job-hazard-training-form-6601"
+    },
+    {
+      "id": 1941,
+      "text": "employee-coaching-form-43974"
+    },
+    {
+      "id": 1942,
+      "text": "employee-training-webinar-form-6595"
+    },
+    {
+      "id": 1943,
+      "text": "training-application-form-1877"
+    },
+    {
+      "id": 1944,
+      "text": "cybersecurity-training-form-6596"
+    }
+  ]
+}

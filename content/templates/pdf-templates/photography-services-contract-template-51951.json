@@ -1,0 +1,76 @@
+{
+  "slug": "photography-services-contract-template-51951",
+  "previewImages": [
+    {
+      "id": 2675,
+      "imageAlt": "a pdf preview of photography contract",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 3867,
+        "name": "photo agreement_page-0001.jpg",
+        "alternativeText": null,
+        "caption": null,
+        "width": 1241,
+        "height": 1755,
+        "formats": {
+          "large": {
+            "ext": ".jpg",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/large_photo_agreement_page_0001_80bc50bf8e.jpg",
+            "hash": "large_photo_agreement_page_0001_80bc50bf8e",
+            "mime": "image/jpeg",
+            "name": "large_photo agreement_page-0001.jpg",
+            "path": null,
+            "size": 58.87,
+            "width": 707,
+            "height": 1000
+          },
+          "small": {
+            "ext": ".jpg",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/small_photo_agreement_page_0001_80bc50bf8e.jpg",
+            "hash": "small_photo_agreement_page_0001_80bc50bf8e",
+            "mime": "image/jpeg",
+            "name": "small_photo agreement_page-0001.jpg",
+            "path": null,
+            "size": 21.16,
+            "width": 353,
+            "height": 500
+          },
+          "medium": {
+            "ext": ".jpg",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_photo_agreement_page_0001_80bc50bf8e.jpg",
+            "hash": "medium_photo_agreement_page_0001_80bc50bf8e",
+            "mime": "image/jpeg",
+            "name": "medium_photo agreement_page-0001.jpg",
+            "path": null,
+            "size": 40.3,
+            "width": 530,
+            "height": 750
+          },
+          "thumbnail": {
+            "ext": ".jpg",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_photo_agreement_page_0001_80bc50bf8e.jpg",
+            "hash": "thumbnail_photo_agreement_page_0001_80bc50bf8e",
+            "mime": "image/jpeg",
+            "name": "thumbnail_photo agreement_page-0001.jpg",
+            "path": null,
+            "size": 2.76,
+            "width": 110,
+            "height": 156
+          }
+        },
+        "hash": "photo_agreement_page_0001_80bc50bf8e",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 122.44,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/photo_agreement_page_0001_80bc50bf8e.jpg",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2025-08-29T03:10:59.578Z",
+        "updatedAt": "2025-08-29T03:10:59.578Z"
+      }
+    }
+  ]
+}

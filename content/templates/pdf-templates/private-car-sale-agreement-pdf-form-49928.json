@@ -1,0 +1,76 @@
+{
+  "slug": "private-car-sale-agreement-pdf-form-49928",
+  "previewImages": [
+    {
+      "id": 2668,
+      "imageAlt": "a pdf preview of car sale agreement",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 3866,
+        "name": "vehicle sale agreement_page-0001.jpg",
+        "alternativeText": null,
+        "caption": null,
+        "width": 1241,
+        "height": 1755,
+        "formats": {
+          "large": {
+            "ext": ".jpg",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/large_vehicle_sale_agreement_page_0001_a2c2f4198b.jpg",
+            "hash": "large_vehicle_sale_agreement_page_0001_a2c2f4198b",
+            "mime": "image/jpeg",
+            "name": "large_vehicle sale agreement_page-0001.jpg",
+            "path": null,
+            "size": 51.55,
+            "width": 707,
+            "height": 1000
+          },
+          "small": {
+            "ext": ".jpg",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/small_vehicle_sale_agreement_page_0001_a2c2f4198b.jpg",
+            "hash": "small_vehicle_sale_agreement_page_0001_a2c2f4198b",
+            "mime": "image/jpeg",
+            "name": "small_vehicle sale agreement_page-0001.jpg",
+            "path": null,
+            "size": 16.09,
+            "width": 353,
+            "height": 500
+          },
+          "medium": {
+            "ext": ".jpg",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_vehicle_sale_agreement_page_0001_a2c2f4198b.jpg",
+            "hash": "medium_vehicle_sale_agreement_page_0001_a2c2f4198b",
+            "mime": "image/jpeg",
+            "name": "medium_vehicle sale agreement_page-0001.jpg",
+            "path": null,
+            "size": 33.29,
+            "width": 530,
+            "height": 750
+          },
+          "thumbnail": {
+            "ext": ".jpg",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_vehicle_sale_agreement_page_0001_a2c2f4198b.jpg",
+            "hash": "thumbnail_vehicle_sale_agreement_page_0001_a2c2f4198b",
+            "mime": "image/jpeg",
+            "name": "thumbnail_vehicle sale agreement_page-0001.jpg",
+            "path": null,
+            "size": 2.34,
+            "width": 110,
+            "height": 156
+          }
+        },
+        "hash": "vehicle_sale_agreement_page_0001_a2c2f4198b",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 121.91,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/vehicle_sale_agreement_page_0001_a2c2f4198b.jpg",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2025-08-29T03:10:59.520Z",
+        "updatedAt": "2025-08-29T03:10:59.520Z"
+      }
+    }
+  ]
+}

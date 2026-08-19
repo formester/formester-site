@@ -1,0 +1,33 @@
+{
+  "specificTemplate": "incident-report-form-2783",
+  "description": "",
+  "hideDefaultRecommended": false,
+  "title": [],
+  "content": [],
+  "recommendedTemplates": [
+    {
+      "id": 1963,
+      "text": "job-hazard-training-form-6601"
+    },
+    {
+      "id": 1964,
+      "text": "employee-complaint-form-43971"
+    },
+    {
+      "id": 1965,
+      "text": "employee-discipline-form-43943"
+    },
+    {
+      "id": 1966,
+      "text": "employee-writeup-form-43926"
+    },
+    {
+      "id": 1967,
+      "text": "employee-emergency-contact-form-43964"
+    },
+    {
+      "id": 1968,
+      "text": "employee-termination-form-43966"
+    }
+  ]
+}

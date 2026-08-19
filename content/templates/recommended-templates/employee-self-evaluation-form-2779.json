@@ -1,0 +1,33 @@
+{
+  "specificTemplate": "employee-self-evaluation-form-2779",
+  "description": "",
+  "hideDefaultRecommended": false,
+  "title": [],
+  "content": [],
+  "recommendedTemplates": [
+    {
+      "id": 1951,
+      "text": "employee-engagement-survey-template-1661"
+    },
+    {
+      "id": 1952,
+      "text": "performance-appraisal-form-2569"
+    },
+    {
+      "id": 1953,
+      "text": "employee-coaching-form-43974"
+    },
+    {
+      "id": 1954,
+      "text": "training-evaluation-form-6597"
+    },
+    {
+      "id": 1955,
+      "text": "exit-interview-form-2784"
+    },
+    {
+      "id": 1956,
+      "text": "employee-application-form-43931"
+    }
+  ]
+}

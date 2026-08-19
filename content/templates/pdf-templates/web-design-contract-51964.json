@@ -1,0 +1,76 @@
+{
+  "slug": "web-design-contract-51964",
+  "previewImages": [
+    {
+      "id": 2672,
+      "imageAlt": "a pdf preview of web design contract",
+      "imageUrl": null,
+      "width": null,
+      "height": null,
+      "image": {
+        "id": 3869,
+        "name": "webdesign contract_page-0001.jpg",
+        "alternativeText": null,
+        "caption": null,
+        "width": 1241,
+        "height": 1755,
+        "formats": {
+          "large": {
+            "ext": ".jpg",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/large_webdesign_contract_page_0001_a5724cfdf8.jpg",
+            "hash": "large_webdesign_contract_page_0001_a5724cfdf8",
+            "mime": "image/jpeg",
+            "name": "large_webdesign contract_page-0001.jpg",
+            "path": null,
+            "size": 73.4,
+            "width": 707,
+            "height": 1000
+          },
+          "small": {
+            "ext": ".jpg",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/small_webdesign_contract_page_0001_a5724cfdf8.jpg",
+            "hash": "small_webdesign_contract_page_0001_a5724cfdf8",
+            "mime": "image/jpeg",
+            "name": "small_webdesign contract_page-0001.jpg",
+            "path": null,
+            "size": 25.71,
+            "width": 353,
+            "height": 500
+          },
+          "medium": {
+            "ext": ".jpg",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_webdesign_contract_page_0001_a5724cfdf8.jpg",
+            "hash": "medium_webdesign_contract_page_0001_a5724cfdf8",
+            "mime": "image/jpeg",
+            "name": "medium_webdesign contract_page-0001.jpg",
+            "path": null,
+            "size": 50.49,
+            "width": 530,
+            "height": 750
+          },
+          "thumbnail": {
+            "ext": ".jpg",
+            "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_webdesign_contract_page_0001_a5724cfdf8.jpg",
+            "hash": "thumbnail_webdesign_contract_page_0001_a5724cfdf8",
+            "mime": "image/jpeg",
+            "name": "thumbnail_webdesign contract_page-0001.jpg",
+            "path": null,
+            "size": 3.52,
+            "width": 110,
+            "height": 156
+          }
+        },
+        "hash": "webdesign_contract_page_0001_a5724cfdf8",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 147.67,
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/webdesign_contract_page_0001_a5724cfdf8.jpg",
+        "previewUrl": null,
+        "provider": "aws-s3",
+        "provider_metadata": null,
+        "createdAt": "2025-08-29T03:10:59.682Z",
+        "updatedAt": "2025-08-29T03:10:59.682Z"
+      }
+    }
+  ]
+}

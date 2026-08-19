@@ -1,0 +1,33 @@
+{
+  "specificTemplate": "event-signup-form-27614",
+  "description": "",
+  "hideDefaultRecommended": false,
+  "title": [],
+  "content": [],
+  "recommendedTemplates": [
+    {
+      "id": 2044,
+      "text": "event-feedback-survey-698"
+    },
+    {
+      "id": 2045,
+      "text": "vendor-booking-form-4090"
+    },
+    {
+      "id": 2046,
+      "text": "guest-list-form-1910"
+    },
+    {
+      "id": 2047,
+      "text": "rsvp-form-21586"
+    },
+    {
+      "id": 2048,
+      "text": "conference-registration-form-1875"
+    },
+    {
+      "id": 2049,
+      "text": "registration-form-template-1662"
+    }
+  ]
+}

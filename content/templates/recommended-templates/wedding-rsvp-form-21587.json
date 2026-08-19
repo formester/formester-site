@@ -1,0 +1,33 @@
+{
+  "specificTemplate": "wedding-rsvp-form-21587",
+  "description": "",
+  "hideDefaultRecommended": false,
+  "title": [],
+  "content": [],
+  "recommendedTemplates": [
+    {
+      "id": 2020,
+      "text": "rsvp-form-21586"
+    },
+    {
+      "id": 2021,
+      "text": "party-rsvp-form"
+    },
+    {
+      "id": 2022,
+      "text": "event-signup-form-27614"
+    },
+    {
+      "id": 2023,
+      "text": "guest-list-form-1910"
+    },
+    {
+      "id": 2024,
+      "text": "banquet-rsvp-form-21590"
+    },
+    {
+      "id": 2025,
+      "text": "simple-rsvp-form-21589"
+    }
+  ]
+}
