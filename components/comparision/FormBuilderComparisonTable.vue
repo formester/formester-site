@@ -127,7 +127,7 @@
 </template>
 
 <script setup>
-import { computed, reactive, ref, watch } from 'vue'
+import { computed, reactive, watch } from 'vue'
 import FormBuilderFeatureList from '@/components/comparision/FormBuilderFeatureList.vue'
 import FormBuilderDetails from '@/components/comparision/FormBuilderDetails.vue'
 import FormBuilderFeatureAccordion from '@/components/comparision/FormBuilderFeatureAccordion.vue'
@@ -146,38 +146,20 @@ const props = defineProps({
 // reactive map: fb.id -> plan name
 const selectedPlans = reactive({})
 
-// runtime config + fetch features from Strapi
-const config = useRuntimeConfig()
-
-// useFetch returns { data, pending, error }
-const { data: featureResp, error: featureError } = await useFetch(
-  () => `${config.public.strapiUrl}/api/form-builder-features`,
-  {
-    query: { sort: 'createdAt', populate: 'category' },
-    // If you fetch on client only, uncomment:
-    // server: false,
-    // key helps Nuxt cache/dedupe between SSR/CSR
-    key: 'form-builder-features'
-  }
+// No createdAt on this collection (never migrated for this content type) —
+// harmless to fetch unordered since groupedFeatures below re-sorts every
+// category's features by position/name regardless of fetch order.
+const { data: featureDocs } = await useAsyncData('form-builder-features', () =>
+  queryCollection('formBuilderFeatures').all()
 )
 
-const featureList = ref([])
-
-// Safely parse Strapi v4 response shapes
-watch(
-  () => featureResp.value,
-  (val) => {
-    // Some setups return { data: [...] }, others nest more deeply when proxied.
-    const arr =
-      (val && Array.isArray(val.data) && val.data) ||
-      (val && val.data && Array.isArray(val.data.data) && val.data.data) ||
-      []
-    featureList.value = arr.map((item) => ({
-      id: item.id,
-      ...(item.attributes || {})
-    }))
-  },
-  { immediate: true }
+const featureList = computed(() =>
+  (featureDocs.value || []).map((item) => ({
+    id: item.strapiId,
+    title: item.title,
+    description: item.description,
+    category: item.category,
+  }))
 )
 
 // (Re)seed selected plans whenever formBuilders changes
