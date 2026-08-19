@@ -1,0 +1,64 @@
+{
+  "slug": "how-to-integrate-amazon-ses-smtp-with-formester",
+  "title": "How to integrate Amazon SES SMTP with Formester",
+  "description": "This guide helps you configure SMTP settings for Amazon SES SMTP on Formester. You can then start sending all emails through your personalized emails and receive responses directly in your inbox.",
+  "metaTitle": "How to integrate Amazon SES SMTP with Formester?",
+  "metaDescription": "How to seamlessly integrate Amazon SES SMTP with Formester for efficient Email delivery | Step-by-step guide for a smooth setup process",
+  "keywords": "amazon, smtp, amazon smtp, ses smtp integration, amazon smtp credentials",
+  "author": "Ravindra Kumar Verma",
+  "authorProfile": "https://www.linkedin.com/in/ravindraverma12/",
+  "coverImgAlt": "How to integrate Amazon SES SMTP with formester",
+  "featured": false,
+  "body": "If you plan to send email through the Amazon SES SMTP interface in more than one AWS Region, you must generate SMTP credentials for each Region.\n\n**How to use Amazon SES SMTP Server**\n\n**Step 1:** Visit [Amazon SES](https://aws.amazon.com/ses/) and click on create an AWS account\n\n![Visit amazon ses home page](https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_amazon_ses_smtp_with_formester_home_page_d19f435de2.png \"Visit amazon ses home page\")\n\n**Step 2:**  Fill in your details, click on verify email address and complete the signup process\n\n![Login to your amazon account](https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_amazon_ses_smtp_with_formester_signup_for_ses_966dad1ced.png \"Login to your amazon account\")\n\n**Step 3:** Click on the create identity button\n\n![Click on create identity on right hand top corner](https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_amazon_ses_smtp_with_formester_click_to_create_identity_d22c78ee8d.png \"Click on create identity on right hand top corner\")\n\n**Step 4:** Select either of the option to set your identity\n\n![Select either of the option to create identity](https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_amazon_ses_smtp_with_formester_create_verification_identity_c9c9be747c.png \"Select either of the option to create identity\")\n\n**Step 5:** In case of creating identity using Doman enter your domain name and click on create identity\n\n![Select domain to proceed with domain ](https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_amazon_ses_smtp_with_formester_create_verification_identity_using_domain_eb312ce182.png \"Select domain to proceed with domain \")\n\nOr in case of creating identity using an Email address enter your email address and click on create identity\n\n![Select email to proceed with email ](https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_amazon_ses_smtp_with_formester_create_verification_identity_using_email_address_32c5e6a4f0.png \"Select email to proceed with email \")\n\n**Step 6:** Check your domain or email is verified or not from the verified identities option under Configuration\n\n![Click on verified identities option under Configuration to check if domain/email is verified or not ](https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_amazon_ses_smtp_with_formester_check_your_domain_under_configuration_f64c160eea.png \"Click on verified identities option under Configuration to check if domain/email is verified or not \")\n\n**Step 7:**  Now go to SMTP settings options\n\n![Now go to smtp settings from left hand side options](https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_amazon_ses_smtp_with_formester_smtp_setting_option_b390468584.png \"Now go to smtp settings from left hand side options\")\n\n**Step 8:**  Click on create SMTP credentials button\n\n![Click on create smtp to create your smtp account](https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_amazon_ses_smtp_with_formester_smtp_credentials_button_55b0efabb1.png \"Click on create smtp to create your smtp account\")\n\n**Step 9:** Enter a name and click on create button\n\n![Enter a name for smtp and click create button](https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_amazon_ses_smtp_with_formester_enter_a_name_548fa895f2.png \"Enter a name for smtp and click create button\")\n\n**Step 10:** Smtp credentials image\n\n![Copy your credentials to use it](https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_amazon_ses_smtp_with_formester_smtp_credentials_ses_6402c9e906.png \"Copy your credentials to use it\")\n\n**Step 11:** Final step, check your integration credentials with Formester to verify if it’s working or not,\n\n**Login to your account -> select a form -> Click on SMTP Integration from the top -> Click on Add Account**\n\n![Visit Formester's SMTP Integration section add a new account and test it](https://formester-strapi.s3.ap-south-1.amazonaws.com/test_credentails_6e72a056b3.png \"Visit Formester's SMTP Integration section add a new account and test it\")\n\n```\nFill in the required fiels as mentioned below:\n* Name – Can be anything of your choice\n* SMTP server - Your user id from above credentials\n* Port - 587 ( Some users may have different ports do checkout other ports as well 25/465/587/2525)\n* Username - Your user id from above credentials\n* Password - Your password from above credentials\n* From email – Your Amazon account id\n```\n\nAdd your credentials and click on three dots at the end of the mail account and select the Test option. Wait for a few seconds for the result.",
+  "coverImg": {
+    "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_amazon_ses_smtp_with_formester_bb73c67657.png",
+    "width": 1200,
+    "height": 630
+  },
+  "metaImage": [
+    {
+      "id": 94,
+      "imageURL": "https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_amazon_ses_smtp_with_formester_home_page_abf39688b1.png"
+    },
+    {
+      "id": 103,
+      "imageURL": "https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_amazon_ses_smtp_with_formester_signup_for_ses_b8327be911.png"
+    },
+    {
+      "id": 101,
+      "imageURL": "https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_amazon_ses_smtp_with_formester_click_to_create_identity_7e348e60e6.png"
+    },
+    {
+      "id": 95,
+      "imageURL": "https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_amazon_ses_smtp_with_formester_create_verification_identity_f8b28be4cd.png"
+    },
+    {
+      "id": 96,
+      "imageURL": "https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_amazon_ses_smtp_with_formester_create_verification_identity_using_domain_733633039f.png"
+    },
+    {
+      "id": 102,
+      "imageURL": "https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_amazon_ses_smtp_with_formester_create_verification_identity_using_email_address_2dafa586ca.png"
+    },
+    {
+      "id": 97,
+      "imageURL": "https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_amazon_ses_smtp_with_formester_check_your_domain_under_configuration_e9f9d6ec14.png"
+    },
+    {
+      "id": 98,
+      "imageURL": "https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_amazon_ses_smtp_with_formester_smtp_setting_option_eff6ac0e82.png"
+    },
+    {
+      "id": 99,
+      "imageURL": "https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_integrate_amazon_ses_smtp_with_formester_smtp_credentials_button_cc67332eca.png"
+    },
+    {
+      "id": 100,
+      "imageURL": "https://formester-strapi.s3.ap-south-1.amazonaws.com/test_credentails_f3cd85206c.png"
+    }
+  ],
+  "jsonld": [],
+  "createdAt": "2024-04-07T10:04:43.054Z",
+  "updatedAt": "2024-04-07T10:04:43.054Z",
+  "publishedAt": "2023-03-16T10:27:12.358Z"
+}
