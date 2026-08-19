@@ -1,0 +1,10 @@
+{
+  "strapiId": 174,
+  "title": "Fields per form",
+  "description": " The number of Form Elements/Questions you can add to a single Form.",
+  "category": {
+    "id": 67,
+    "name": "Usage limits",
+    "position": 5
+  }
+}

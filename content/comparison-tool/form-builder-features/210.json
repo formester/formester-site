@@ -1,0 +1,10 @@
+{
+  "strapiId": 210,
+  "title": "Set Response Limits",
+  "description": "Set limits on the number of submissions for your forms",
+  "category": {
+    "id": 105,
+    "name": "Set Response & Time Limits",
+    "position": 1
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "strapiId": 144,
+  "title": "2-Factor Authentication",
+  "description": "Increase security with two factor authentication.",
+  "category": {
+    "id": 1,
+    "name": "Security & Compliance",
+    "position": 3
+  }
+}

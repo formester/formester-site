@@ -1,0 +1,10 @@
+{
+  "strapiId": 213,
+  "title": "Conditional Autoresponder",
+  "description": "Send customized notification based on the user's input in the form.",
+  "category": {
+    "id": 108,
+    "name": "Email Notification",
+    "position": 3
+  }
+}

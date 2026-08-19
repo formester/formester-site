@@ -1,0 +1,10 @@
+{
+  "strapiId": 79,
+  "title": "Custom fonts",
+  "description": "Customize fonts within the form.",
+  "category": {
+    "id": 25,
+    "name": "Customization",
+    "position": 3
+  }
+}

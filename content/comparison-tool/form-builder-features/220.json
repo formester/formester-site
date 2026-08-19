@@ -1,0 +1,10 @@
+{
+  "strapiId": 220,
+  "title": "Honeypot Integration",
+  "description": "Prevent spam using Honeypot fields which are only visible to bots.",
+  "category": {
+    "id": 115,
+    "name": "Spam Protection",
+    "position": 4
+  }
+}

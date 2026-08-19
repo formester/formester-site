@@ -1,0 +1,10 @@
+{
+  "strapiId": 109,
+  "title": "GDPR Compliance",
+  "description": "Make sure your forms meet European data protection standards.",
+  "category": {
+    "id": 57,
+    "name": "Security & Compliance",
+    "position": 5
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "strapiId": 223,
+  "title": "Customize Email IDs for Notifications",
+  "description": "Customize the email ID's that will receive alerts on form responses.",
+  "category": {
+    "id": 119,
+    "name": "Email Notification",
+    "position": 5
+  }
+}

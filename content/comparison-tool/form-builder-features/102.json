@@ -1,0 +1,10 @@
+{
+  "strapiId": 102,
+  "title": "Rating Scales",
+  "description": "Users can rate on a scale of 1-5",
+  "category": {
+    "id": 44,
+    "name": "Form Fields & Creation",
+    "position": 10
+  }
+}

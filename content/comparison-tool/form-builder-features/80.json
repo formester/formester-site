@@ -1,0 +1,10 @@
+{
+  "strapiId": 80,
+  "title": "Custom Themes",
+  "description": "Customize themes of your forms.",
+  "category": {
+    "id": 26,
+    "name": "Customization",
+    "position": 4
+  }
+}

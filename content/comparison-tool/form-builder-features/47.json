@@ -1,0 +1,10 @@
+{
+  "strapiId": 47,
+  "title": "File Uploads",
+  "description": "Users can upload & submit their documents or images in the form. ",
+  "category": {
+    "id": 10,
+    "name": "Usage limits",
+    "position": 6
+  }
+}

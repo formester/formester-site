@@ -1,0 +1,10 @@
+{
+  "strapiId": 217,
+  "title": "Automated Analytics",
+  "description": "Automate data analytics of your form submission data using AI.",
+  "category": {
+    "id": 112,
+    "name": "AI Capabilities",
+    "position": 3
+  }
+}

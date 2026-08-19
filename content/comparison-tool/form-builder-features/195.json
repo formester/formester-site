@@ -1,0 +1,10 @@
+{
+  "strapiId": 195,
+  "title": "Airtable Integration",
+  "description": "Integrate your online forms with Airtable.",
+  "category": {
+    "id": 90,
+    "name": "CRM Integrations",
+    "position": 5
+  }
+}

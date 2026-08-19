@@ -1,0 +1,10 @@
+{
+  "strapiId": 42,
+  "title": "No. of Users",
+  "description": "Number of people who can use the form builder.",
+  "category": {
+    "id": 6,
+    "name": "Usage limits",
+    "position": 1
+  }
+}

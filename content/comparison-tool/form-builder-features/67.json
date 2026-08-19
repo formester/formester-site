@@ -1,0 +1,10 @@
+{
+  "strapiId": 67,
+  "title": "Google Analytics Integration",
+  "description": "Integrate your forms with Google Analytics to track user behavior.",
+  "category": {
+    "id": 53,
+    "name": "Reporting & Analytics",
+    "position": 10
+  }
+}

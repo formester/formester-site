@@ -1,0 +1,2950 @@
+{
+  "strapiId": 271,
+  "name": "Zapof",
+  "logo": {
+    "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/zapof_f35fd5d55a.svg",
+    "alternativeText": "zapof logo"
+  },
+  "plan": [
+    {
+      "id": 391,
+      "name": "Starter",
+      "amount": 0,
+      "features": [
+        {
+          "id": 21314,
+          "value": "1",
+          "feature": {
+            "id": 42,
+            "title": "No. of Users",
+            "description": "Number of people who can use the form builder."
+          }
+        },
+        {
+          "id": 21316,
+          "value": "5",
+          "feature": {
+            "id": 43,
+            "title": "No. of Forms",
+            "description": "Number of forms you can create."
+          }
+        },
+        {
+          "id": 21315,
+          "value": "100/mo",
+          "feature": {
+            "id": 44,
+            "title": "Form Responses",
+            "description": "Number of times people can submit the forms."
+          }
+        },
+        {
+          "id": 21322,
+          "value": "-",
+          "feature": {
+            "id": 45,
+            "title": "Form Views",
+            "description": "The number of times your form has been accessed or viewed by users."
+          }
+        },
+        {
+          "id": 21321,
+          "value": "53",
+          "feature": {
+            "id": 174,
+            "title": "Fields per form",
+            "description": " The number of Form Elements/Questions you can add to a single Form."
+          }
+        },
+        {
+          "id": 21320,
+          "value": "Yes",
+          "feature": {
+            "id": 47,
+            "title": "File Uploads",
+            "description": "Users can upload & submit their documents or images in the form. "
+          }
+        },
+        {
+          "id": 21324,
+          "value": "-",
+          "feature": {
+            "id": 175,
+            "title": "Upload Size Limit/File",
+            "description": "Maximum file size you could upload in a form."
+          }
+        },
+        {
+          "id": 21318,
+          "value": "100 MB",
+          "feature": {
+            "id": 48,
+            "title": "Total File Storage",
+            "description": "Total space available for storing uploaded files."
+          }
+        },
+        {
+          "id": 21319,
+          "value": "397+",
+          "feature": {
+            "id": 75,
+            "title": "No. of Free Templates",
+            "description": "Pre-made form designs you can use."
+          }
+        },
+        {
+          "id": 21317,
+          "value": "Yes",
+          "feature": {
+            "id": 89,
+            "title": "Embeddable Forms",
+            "description": "Forms that can be easily embedded into websites."
+          }
+        },
+        {
+          "id": 21325,
+          "value": "Yes",
+          "feature": {
+            "id": 55,
+            "title": "Save & Resume",
+            "description": "Allow users to save their progress and return to complete the form later."
+          }
+        },
+        {
+          "id": 21327,
+          "value": "No",
+          "feature": {
+            "id": 62,
+            "title": "Collect Payments",
+            "description": "Accept payments through the form."
+          }
+        },
+        {
+          "id": 21323,
+          "value": "Yes",
+          "feature": {
+            "id": 91,
+            "title": "Conditional Logic ",
+            "description": "Display or hide fields based on user responses."
+          }
+        },
+        {
+          "id": 21326,
+          "value": "Yes",
+          "feature": {
+            "id": 101,
+            "title": "E-Signatures/Form",
+            "description": "Number of E-signatures you can collect within a single form."
+          }
+        },
+        {
+          "id": 21332,
+          "value": "-",
+          "feature": {
+            "id": 93,
+            "title": "Lookup Field",
+            "description": "Fields that retrieve data from other sources."
+          }
+        },
+        {
+          "id": 21328,
+          "value": "Yes",
+          "feature": {
+            "id": 98,
+            "title": "Validation Rules",
+            "description": "Set rules to ensure users input data correctly."
+          }
+        },
+        {
+          "id": 21331,
+          "value": "Yes",
+          "feature": {
+            "id": 92,
+            "title": "Calculating Fields",
+            "description": "Fields that can perform calculations."
+          }
+        },
+        {
+          "id": 21329,
+          "value": "Yes",
+          "feature": {
+            "id": 102,
+            "title": "Rating Scales",
+            "description": "Users can rate on a scale of 1-5"
+          }
+        },
+        {
+          "id": 21330,
+          "value": "No",
+          "feature": {
+            "id": 96,
+            "title": "Repeater Fields",
+            "description": "Add repeating sections in a form."
+          }
+        },
+        {
+          "id": 21333,
+          "value": "Yes",
+          "feature": {
+            "id": 141,
+            "title": "Hidden Fields",
+            "description": "Allows you to store data without showing up to the user."
+          }
+        },
+        {
+          "id": 21334,
+          "value": "-",
+          "feature": {
+            "id": 176,
+            "title": "Address Auto-complete",
+            "description": "Auto fills Users address using Google Places API."
+          }
+        },
+        {
+          "id": 21335,
+          "value": "Yes",
+          "feature": {
+            "id": 177,
+            "title": "Information Recall",
+            "description": "Allows you to recall answers from previous questions to later ones."
+          }
+        },
+        {
+          "id": 21340,
+          "value": "-",
+          "feature": {
+            "id": 105,
+            "title": "Form Booking/Scheduling",
+            "description": "Users can schedule appointments through the form."
+          }
+        },
+        {
+          "id": 21336,
+          "value": "No",
+          "feature": {
+            "id": 178,
+            "title": "Offline Forms",
+            "description": "Users can fill in the form even when they are offline."
+          }
+        },
+        {
+          "id": 21341,
+          "value": "Yes",
+          "feature": {
+            "id": 97,
+            "title": "Multi-Page Forms",
+            "description": "Forms split into several pages."
+          }
+        },
+        {
+          "id": 21338,
+          "value": "Yes",
+          "feature": {
+            "id": 179,
+            "title": "Multi-language Forms",
+            "description": "Users can fill the form in multiple languages."
+          }
+        },
+        {
+          "id": 21339,
+          "value": "-",
+          "feature": {
+            "id": 180,
+            "title": "Multiplied field groups",
+            "description": "Allows you to group a set of fields that repeats as needed, allowing users to input multiple data."
+          }
+        },
+        {
+          "id": 21337,
+          "value": "No",
+          "feature": {
+            "id": 50,
+            "title": "Multi-User Collaboration",
+            "description": "Multiple Users can collaborate to build and respond to a form."
+          }
+        },
+        {
+          "id": 21342,
+          "value": "No",
+          "feature": {
+            "id": 94,
+            "title": "Quiz Scoring",
+            "description": "Allows you to automatically generate scores based on the user's answers."
+          }
+        },
+        {
+          "id": 21345,
+          "value": "No",
+          "feature": {
+            "id": 181,
+            "title": "Quiz With Countdown Timer",
+            "description": "Allows you to set-up timed quizzes."
+          }
+        },
+        {
+          "id": 21346,
+          "value": "No",
+          "feature": {
+            "id": 182,
+            "title": "Outcome Based Quizzes",
+            "description": "Shows different outcomes by linking answers to endings."
+          }
+        },
+        {
+          "id": 21344,
+          "value": "Yes",
+          "feature": {
+            "id": 81,
+            "title": "Remove Form Builder logo",
+            "description": "Remove the form builder's branding."
+          }
+        },
+        {
+          "id": 21348,
+          "value": "Yes",
+          "feature": {
+            "id": 183,
+            "title": "White Labeling ",
+            "description": "Gain full customization & ownership over your forms."
+          }
+        },
+        {
+          "id": 21343,
+          "value": "Yes",
+          "feature": {
+            "id": 184,
+            "title": "Custom Branding Kit",
+            "description": "Customize the forms to reflect your brand."
+          }
+        },
+        {
+          "id": 21356,
+          "value": "Yes",
+          "feature": {
+            "id": 77,
+            "title": "Add logo",
+            "description": "Put your logo on the form."
+          }
+        },
+        {
+          "id": 21349,
+          "value": "-",
+          "feature": {
+            "id": 78,
+            "title": "Custom Favicon",
+            "description": "Use your own favicon for the domain."
+          }
+        },
+        {
+          "id": 21351,
+          "value": "Yes",
+          "feature": {
+            "id": 79,
+            "title": "Custom fonts",
+            "description": "Customize fonts within the form."
+          }
+        },
+        {
+          "id": 21355,
+          "value": "Yes",
+          "feature": {
+            "id": 80,
+            "title": "Custom Themes",
+            "description": "Customize themes of your forms."
+          }
+        },
+        {
+          "id": 21353,
+          "value": "-",
+          "feature": {
+            "id": 103,
+            "title": "Custom HTML & CSS",
+            "description": "Design and style your forms with custom code."
+          }
+        },
+        {
+          "id": 21347,
+          "value": "Yes",
+          "feature": {
+            "id": 84,
+            "title": "Custom Thank You Pages",
+            "description": "Customize thank you pages after form submission."
+          }
+        },
+        {
+          "id": 21361,
+          "value": "No",
+          "feature": {
+            "id": 76,
+            "title": "Custom Domain",
+            "description": "Use your own website address for the form."
+          }
+        },
+        {
+          "id": 21370,
+          "value": "No",
+          "feature": {
+            "id": 185,
+            "title": "Custom Link For Forms",
+            "description": "Create unique URLs for your individual forms."
+          }
+        },
+        {
+          "id": 21352,
+          "value": "Yes",
+          "feature": {
+            "id": 186,
+            "title": "Edit Share Preview",
+            "description": "Edit the Title, Description & Thumbnail of your forms in Shared Preview."
+          }
+        },
+        {
+          "id": 21354,
+          "value": "No",
+          "feature": {
+            "id": 187,
+            "title": "Generate QR Codes",
+            "description": "Generate QR codes for your forms within the form builder."
+          }
+        },
+        {
+          "id": 21350,
+          "value": "No",
+          "feature": {
+            "id": 188,
+            "title": "Share on Social Platforms",
+            "description": "Share your forms on social media directly from the form builder "
+          }
+        },
+        {
+          "id": 21365,
+          "value": "No",
+          "feature": {
+            "id": 56,
+            "title": "Third-Party Integration",
+            "description": "Connect the form with third-party apps and services."
+          }
+        },
+        {
+          "id": 21359,
+          "value": "No",
+          "feature": {
+            "id": 49,
+            "title": "API access",
+            "description": "Connect your forms with third-party APIs"
+          }
+        },
+        {
+          "id": 21357,
+          "value": "No",
+          "feature": {
+            "id": 58,
+            "title": "Webhooks Integration",
+            "description": "Connect your forms with apps or services that do not have specific native integrations."
+          }
+        },
+        {
+          "id": 21358,
+          "value": "No",
+          "feature": {
+            "id": 61,
+            "title": "Zapier integration ",
+            "description": "Integrate with thousands of apps using Zapier."
+          }
+        },
+        {
+          "id": 21368,
+          "value": "No",
+          "feature": {
+            "id": 189,
+            "title": "Make Integration",
+            "description": "Integrate your forms with thousands of apps using Make."
+          }
+        },
+        {
+          "id": 21360,
+          "value": "0%",
+          "feature": {
+            "id": 190,
+            "title": "Commission on Payments (%)",
+            "description": "A % of the payment goes to the form builder as commission."
+          }
+        },
+        {
+          "id": 21363,
+          "value": "Yes",
+          "feature": {
+            "id": 69,
+            "title": "PayPal Integration",
+            "description": "Accept PayPal payments through the form."
+          }
+        },
+        {
+          "id": 21369,
+          "value": "Yes",
+          "feature": {
+            "id": 70,
+            "title": "Stripe Integration",
+            "description": "Accept Stripe payments through the form."
+          }
+        },
+        {
+          "id": 21366,
+          "value": "No",
+          "feature": {
+            "id": 71,
+            "title": "Square Integration",
+            "description": "Accept Square payments through the form."
+          }
+        },
+        {
+          "id": 21362,
+          "value": "No",
+          "feature": {
+            "id": 72,
+            "title": "Braintree Integration",
+            "description": "Accept Braintree payments through the form."
+          }
+        },
+        {
+          "id": 21364,
+          "value": "No",
+          "feature": {
+            "id": 73,
+            "title": "Razorpay Integration",
+            "description": "Accept Razorpay payments through the form."
+          }
+        },
+        {
+          "id": 21371,
+          "value": "No",
+          "feature": {
+            "id": 74,
+            "title": "Google Pay Integration",
+            "description": "Accept Google Pay payments through the form."
+          }
+        },
+        {
+          "id": 21367,
+          "value": "No",
+          "feature": {
+            "id": 191,
+            "title": "Zoho CRM Integration",
+            "description": "Integrate your online forms with Zoho CRM. "
+          }
+        },
+        {
+          "id": 21372,
+          "value": "No",
+          "feature": {
+            "id": 192,
+            "title": "HubSpot Integration",
+            "description": "Integrate your online forms with HubSpot."
+          }
+        },
+        {
+          "id": 21382,
+          "value": "No",
+          "feature": {
+            "id": 193,
+            "title": "Salesforce Integration",
+            "description": "Integrate your online forms with Salesforce."
+          }
+        },
+        {
+          "id": 21375,
+          "value": "No",
+          "feature": {
+            "id": 194,
+            "title": "Pipedrive Integration",
+            "description": "Integrate your online forms with Pipedrive."
+          }
+        },
+        {
+          "id": 21373,
+          "value": "No",
+          "feature": {
+            "id": 195,
+            "title": "Airtable Integration",
+            "description": "Integrate your online forms with Airtable."
+          }
+        },
+        {
+          "id": 21374,
+          "value": "No",
+          "feature": {
+            "id": 196,
+            "title": "Mailchimp Integration",
+            "description": "Integrate your online forms with Mailchimp email marketing platform."
+          }
+        },
+        {
+          "id": 21376,
+          "value": "No",
+          "feature": {
+            "id": 197,
+            "title": "ActiveCampaign Integration",
+            "description": "Integrate your online forms with ActiveCampaign email marketing platform."
+          }
+        },
+        {
+          "id": 21378,
+          "value": "No",
+          "feature": {
+            "id": 198,
+            "title": "Google Sheets Integration",
+            "description": "Integrate your online forms with Google Sheets."
+          }
+        },
+        {
+          "id": 21380,
+          "value": "No",
+          "feature": {
+            "id": 199,
+            "title": "Slack Integration",
+            "description": "Integrate your online forms with Slack."
+          }
+        },
+        {
+          "id": 21377,
+          "value": "No",
+          "feature": {
+            "id": 200,
+            "title": "Discord Integration",
+            "description": "Integrate your online forms with Discord."
+          }
+        },
+        {
+          "id": 21381,
+          "value": "No",
+          "feature": {
+            "id": 201,
+            "title": "Microsoft Teams Integration",
+            "description": "Integrate your online forms with Microsoft Teams."
+          }
+        },
+        {
+          "id": 21383,
+          "value": "No",
+          "feature": {
+            "id": 202,
+            "title": "Shopify Integration",
+            "description": "Integrate your online forms with Shopify."
+          }
+        },
+        {
+          "id": 21384,
+          "value": "No",
+          "feature": {
+            "id": 203,
+            "title": "WooCommerce Integration",
+            "description": "Integrate your online forms with WooCommerce."
+          }
+        },
+        {
+          "id": 21379,
+          "value": "No",
+          "feature": {
+            "id": 204,
+            "title": "BigCommerce Integration",
+            "description": "Integrate your online forms with BigCommerce."
+          }
+        },
+        {
+          "id": 21385,
+          "value": "No",
+          "feature": {
+            "id": 205,
+            "title": "Inventory Management",
+            "description": "Create products & options that can be used in Order Cart & Dropdown fields on your forms."
+          }
+        },
+        {
+          "id": 21386,
+          "value": "Yes",
+          "feature": {
+            "id": 51,
+            "title": "Submission Reports",
+            "description": "Reports on the data submitted through forms."
+          }
+        },
+        {
+          "id": 21388,
+          "value": "Yes",
+          "feature": {
+            "id": 87,
+            "title": "Export Submissions",
+            "description": "Download your form responses in different formats."
+          }
+        },
+        {
+          "id": 21390,
+          "value": "Yes",
+          "feature": {
+            "id": 206,
+            "title": "View Partial Submissions",
+            "description": "View & analyse partial or incomplete forms."
+          }
+        },
+        {
+          "id": 21387,
+          "value": "-",
+          "feature": {
+            "id": 207,
+            "title": "Completion Rates",
+            "description": "The total number of people who completed form divided by the total number of people who visited the form."
+          }
+        },
+        {
+          "id": 21399,
+          "value": "-",
+          "feature": {
+            "id": 208,
+            "title": "Drop off rates",
+            "description": "Number of people abandoned their purchase/ number of people who initiated it."
+          }
+        },
+        {
+          "id": 21393,
+          "value": "-",
+          "feature": {
+            "id": 209,
+            "title": "Heatmap",
+            "description": "View the areas where users interact the most."
+          }
+        },
+        {
+          "id": 21392,
+          "value": "Yes",
+          "feature": {
+            "id": 90,
+            "title": "Custom Reports",
+            "description": "Create detailed and tailored reports from your form data."
+          }
+        },
+        {
+          "id": 21389,
+          "value": "-",
+          "feature": {
+            "id": 88,
+            "title": "Custom PDFs",
+            "description": "Generate personalized PDFs of form submission data."
+          }
+        },
+        {
+          "id": 21391,
+          "value": "No",
+          "feature": {
+            "id": 65,
+            "title": "Google Tag Manager Integration",
+            "description": "Integrate your forms with Google Tag Manager."
+          }
+        },
+        {
+          "id": 21397,
+          "value": "No",
+          "feature": {
+            "id": 67,
+            "title": "Google Analytics Integration",
+            "description": "Integrate your forms with Google Analytics to track user behavior."
+          }
+        },
+        {
+          "id": 21396,
+          "value": "No",
+          "feature": {
+            "id": 68,
+            "title": "Meta Pixel Integration",
+            "description": "Use Meta (Facebook) Pixel with the form."
+          }
+        },
+        {
+          "id": 21395,
+          "value": "No",
+          "feature": {
+            "id": 210,
+            "title": "Set Response Limits",
+            "description": "Set limits on the number of submissions for your forms"
+          }
+        },
+        {
+          "id": 21394,
+          "value": "No",
+          "feature": {
+            "id": 211,
+            "title": "Set Submission Start Date",
+            "description": "Gain control over the start date of the form submissions."
+          }
+        },
+        {
+          "id": 21398,
+          "value": "No",
+          "feature": {
+            "id": 212,
+            "title": "Set Submission End Date",
+            "description": "Set a deadline over your form submissions."
+          }
+        },
+        {
+          "id": 21400,
+          "value": "Yes",
+          "feature": {
+            "id": 83,
+            "title": "Get Submission Notifications",
+            "description": "Receive alerts when someone fills your forms."
+          }
+        },
+        {
+          "id": 21401,
+          "value": "Yes",
+          "feature": {
+            "id": 142,
+            "title": "Email Autoresponder",
+            "description": "Automatically send emails to respondents upon form submission."
+          }
+        },
+        {
+          "id": 21405,
+          "value": "-",
+          "feature": {
+            "id": 213,
+            "title": "Conditional Autoresponder",
+            "description": "Send customized notification based on the user's input in the form."
+          }
+        },
+        {
+          "id": 21403,
+          "value": "Yes",
+          "feature": {
+            "id": 82,
+            "title": "Customize Email Notifications",
+            "description": "Personalized email alerts for form submissions."
+          }
+        },
+        {
+          "id": 21404,
+          "value": "No",
+          "feature": {
+            "id": 214,
+            "title": "SMTP (Simple Mail Transfer Protocol)",
+            "description": "Send emails through your own SMTP server."
+          }
+        },
+        {
+          "id": 21402,
+          "value": "No",
+          "feature": {
+            "id": 215,
+            "title": "AI-Generated Forms",
+            "description": "Create surveys, forms and quizzes with AI-powered question generation."
+          }
+        },
+        {
+          "id": 21406,
+          "value": "No",
+          "feature": {
+            "id": 216,
+            "title": "Smart Data Validation",
+            "description": "Automate the process of data validation using AI."
+          }
+        },
+        {
+          "id": 21407,
+          "value": "No",
+          "feature": {
+            "id": 217,
+            "title": "Automated Analytics",
+            "description": "Automate data analytics of your form submission data using AI."
+          }
+        },
+        {
+          "id": 21408,
+          "value": "No",
+          "feature": {
+            "id": 218,
+            "title": "AI-Spam Protection",
+            "description": "Automatically check and flag spams using AI trained model."
+          }
+        },
+        {
+          "id": 21410,
+          "value": "Yes",
+          "feature": {
+            "id": 219,
+            "title": "reCAPTCHA",
+            "description": "Integrate Google's reCAPTCHA into the forms to prevent spam."
+          }
+        },
+        {
+          "id": 21409,
+          "value": "-",
+          "feature": {
+            "id": 224,
+            "title": "hCaptcha",
+            "description": "Integrate image based spam protection into your forms."
+          }
+        },
+        {
+          "id": 21413,
+          "value": "No",
+          "feature": {
+            "id": 220,
+            "title": "Honeypot Integration",
+            "description": "Prevent spam using Honeypot fields which are only visible to bots."
+          }
+        },
+        {
+          "id": 21411,
+          "value": "No",
+          "feature": {
+            "id": 225,
+            "title": "IP Blocking ",
+            "description": "Block submissions form determined list of IPs."
+          }
+        },
+        {
+          "id": 21414,
+          "value": "No",
+          "feature": {
+            "id": 226,
+            "title": "Email Verification",
+            "description": "Prompt the user for email verification to complete the submission."
+          }
+        },
+        {
+          "id": 21412,
+          "value": "-",
+          "feature": {
+            "id": 221,
+            "title": "Single sign-on (SSO Login)",
+            "description": "Allow users to login using only one set of login credentials."
+          }
+        },
+        {
+          "id": 21415,
+          "value": "Yes",
+          "feature": {
+            "id": 143,
+            "title": "SSL Encryption",
+            "description": "Protect data with secure, encrypted connections."
+          }
+        },
+        {
+          "id": 21416,
+          "value": "No",
+          "feature": {
+            "id": 144,
+            "title": "2-Factor Authentication",
+            "description": "Increase security with two factor authentication."
+          }
+        },
+        {
+          "id": 21417,
+          "value": "-",
+          "feature": {
+            "id": 222,
+            "title": "Audit-log",
+            "description": "Secure your forms with Audit-logs which tracks the changes done to the forms."
+          }
+        },
+        {
+          "id": 21420,
+          "value": "Yes",
+          "feature": {
+            "id": 109,
+            "title": "GDPR Compliance",
+            "description": "Make sure your forms meet European data protection standards."
+          }
+        },
+        {
+          "id": 21419,
+          "value": "-",
+          "feature": {
+            "id": 110,
+            "title": "HIPAA Compliance",
+            "description": "Make sure your forms meet healthcare data protection standards."
+          }
+        },
+        {
+          "id": 21418,
+          "value": "Yes",
+          "feature": {
+            "id": 113,
+            "title": "General Support",
+            "description": "Standard email support."
+          }
+        },
+        {
+          "id": 21421,
+          "value": "-",
+          "feature": {
+            "id": 112,
+            "title": "Priority support",
+            "description": "Expedited customer support to resolve your issues faster."
+          }
+        }
+      ]
+    },
+    {
+      "id": 392,
+      "name": "Pro",
+      "amount": 20,
+      "features": [
+        {
+          "id": 21530,
+          "value": "1",
+          "feature": {
+            "id": 42,
+            "title": "No. of Users",
+            "description": "Number of people who can use the form builder."
+          }
+        },
+        {
+          "id": 21531,
+          "value": "Unlimited",
+          "feature": {
+            "id": 43,
+            "title": "No. of Forms",
+            "description": "Number of forms you can create."
+          }
+        },
+        {
+          "id": 21535,
+          "value": "Unlimited",
+          "feature": {
+            "id": 44,
+            "title": "Form Responses",
+            "description": "Number of times people can submit the forms."
+          }
+        },
+        {
+          "id": 21536,
+          "value": "-",
+          "feature": {
+            "id": 45,
+            "title": "Form Views",
+            "description": "The number of times your form has been accessed or viewed by users."
+          }
+        },
+        {
+          "id": 21538,
+          "value": "53",
+          "feature": {
+            "id": 174,
+            "title": "Fields per form",
+            "description": " The number of Form Elements/Questions you can add to a single Form."
+          }
+        },
+        {
+          "id": 21534,
+          "value": "Yes",
+          "feature": {
+            "id": 47,
+            "title": "File Uploads",
+            "description": "Users can upload & submit their documents or images in the form. "
+          }
+        },
+        {
+          "id": 21532,
+          "value": "-",
+          "feature": {
+            "id": 175,
+            "title": "Upload Size Limit/File",
+            "description": "Maximum file size you could upload in a form."
+          }
+        },
+        {
+          "id": 21533,
+          "value": "2 GB",
+          "feature": {
+            "id": 48,
+            "title": "Total File Storage",
+            "description": "Total space available for storing uploaded files."
+          }
+        },
+        {
+          "id": 21537,
+          "value": "397+",
+          "feature": {
+            "id": 75,
+            "title": "No. of Free Templates",
+            "description": "Pre-made form designs you can use."
+          }
+        },
+        {
+          "id": 21540,
+          "value": "Yes",
+          "feature": {
+            "id": 89,
+            "title": "Embeddable Forms",
+            "description": "Forms that can be easily embedded into websites."
+          }
+        },
+        {
+          "id": 21539,
+          "value": "Yes",
+          "feature": {
+            "id": 55,
+            "title": "Save & Resume",
+            "description": "Allow users to save their progress and return to complete the form later."
+          }
+        },
+        {
+          "id": 21541,
+          "value": "Yes",
+          "feature": {
+            "id": 62,
+            "title": "Collect Payments",
+            "description": "Accept payments through the form."
+          }
+        },
+        {
+          "id": 21544,
+          "value": "Yes",
+          "feature": {
+            "id": 91,
+            "title": "Conditional Logic ",
+            "description": "Display or hide fields based on user responses."
+          }
+        },
+        {
+          "id": 21543,
+          "value": "Yes",
+          "feature": {
+            "id": 101,
+            "title": "E-Signatures/Form",
+            "description": "Number of E-signatures you can collect within a single form."
+          }
+        },
+        {
+          "id": 21542,
+          "value": "-",
+          "feature": {
+            "id": 93,
+            "title": "Lookup Field",
+            "description": "Fields that retrieve data from other sources."
+          }
+        },
+        {
+          "id": 21545,
+          "value": "Yes",
+          "feature": {
+            "id": 98,
+            "title": "Validation Rules",
+            "description": "Set rules to ensure users input data correctly."
+          }
+        },
+        {
+          "id": 21549,
+          "value": "Yes",
+          "feature": {
+            "id": 92,
+            "title": "Calculating Fields",
+            "description": "Fields that can perform calculations."
+          }
+        },
+        {
+          "id": 21546,
+          "value": "Yes",
+          "feature": {
+            "id": 102,
+            "title": "Rating Scales",
+            "description": "Users can rate on a scale of 1-5"
+          }
+        },
+        {
+          "id": 21550,
+          "value": "No",
+          "feature": {
+            "id": 96,
+            "title": "Repeater Fields",
+            "description": "Add repeating sections in a form."
+          }
+        },
+        {
+          "id": 21548,
+          "value": "Yes",
+          "feature": {
+            "id": 141,
+            "title": "Hidden Fields",
+            "description": "Allows you to store data without showing up to the user."
+          }
+        },
+        {
+          "id": 21547,
+          "value": "-",
+          "feature": {
+            "id": 176,
+            "title": "Address Auto-complete",
+            "description": "Auto fills Users address using Google Places API."
+          }
+        },
+        {
+          "id": 21553,
+          "value": "Yes",
+          "feature": {
+            "id": 177,
+            "title": "Information Recall",
+            "description": "Allows you to recall answers from previous questions to later ones."
+          }
+        },
+        {
+          "id": 21552,
+          "value": "-",
+          "feature": {
+            "id": 105,
+            "title": "Form Booking/Scheduling",
+            "description": "Users can schedule appointments through the form."
+          }
+        },
+        {
+          "id": 21551,
+          "value": "No",
+          "feature": {
+            "id": 178,
+            "title": "Offline Forms",
+            "description": "Users can fill in the form even when they are offline."
+          }
+        },
+        {
+          "id": 21554,
+          "value": "Yes",
+          "feature": {
+            "id": 97,
+            "title": "Multi-Page Forms",
+            "description": "Forms split into several pages."
+          }
+        },
+        {
+          "id": 21556,
+          "value": "Yes",
+          "feature": {
+            "id": 179,
+            "title": "Multi-language Forms",
+            "description": "Users can fill the form in multiple languages."
+          }
+        },
+        {
+          "id": 21555,
+          "value": "-",
+          "feature": {
+            "id": 180,
+            "title": "Multiplied field groups",
+            "description": "Allows you to group a set of fields that repeats as needed, allowing users to input multiple data."
+          }
+        },
+        {
+          "id": 21558,
+          "value": "Yes",
+          "feature": {
+            "id": 50,
+            "title": "Multi-User Collaboration",
+            "description": "Multiple Users can collaborate to build and respond to a form."
+          }
+        },
+        {
+          "id": 21557,
+          "value": "No",
+          "feature": {
+            "id": 94,
+            "title": "Quiz Scoring",
+            "description": "Allows you to automatically generate scores based on the user's answers."
+          }
+        },
+        {
+          "id": 21559,
+          "value": "No",
+          "feature": {
+            "id": 181,
+            "title": "Quiz With Countdown Timer",
+            "description": "Allows you to set-up timed quizzes."
+          }
+        },
+        {
+          "id": 21560,
+          "value": "No",
+          "feature": {
+            "id": 182,
+            "title": "Outcome Based Quizzes",
+            "description": "Shows different outcomes by linking answers to endings."
+          }
+        },
+        {
+          "id": 21561,
+          "value": "Yes",
+          "feature": {
+            "id": 81,
+            "title": "Remove Form Builder logo",
+            "description": "Remove the form builder's branding."
+          }
+        },
+        {
+          "id": 21567,
+          "value": "Yes",
+          "feature": {
+            "id": 183,
+            "title": "White Labeling ",
+            "description": "Gain full customization & ownership over your forms."
+          }
+        },
+        {
+          "id": 21562,
+          "value": "Yes",
+          "feature": {
+            "id": 184,
+            "title": "Custom Branding Kit",
+            "description": "Customize the forms to reflect your brand."
+          }
+        },
+        {
+          "id": 21564,
+          "value": "Yes",
+          "feature": {
+            "id": 77,
+            "title": "Add logo",
+            "description": "Put your logo on the form."
+          }
+        },
+        {
+          "id": 21563,
+          "value": "-",
+          "feature": {
+            "id": 78,
+            "title": "Custom Favicon",
+            "description": "Use your own favicon for the domain."
+          }
+        },
+        {
+          "id": 21568,
+          "value": "Yes",
+          "feature": {
+            "id": 79,
+            "title": "Custom fonts",
+            "description": "Customize fonts within the form."
+          }
+        },
+        {
+          "id": 21565,
+          "value": "Yes",
+          "feature": {
+            "id": 80,
+            "title": "Custom Themes",
+            "description": "Customize themes of your forms."
+          }
+        },
+        {
+          "id": 21566,
+          "value": "-",
+          "feature": {
+            "id": 103,
+            "title": "Custom HTML & CSS",
+            "description": "Design and style your forms with custom code."
+          }
+        },
+        {
+          "id": 21569,
+          "value": "Yes",
+          "feature": {
+            "id": 84,
+            "title": "Custom Thank You Pages",
+            "description": "Customize thank you pages after form submission."
+          }
+        },
+        {
+          "id": 21570,
+          "value": "Yes",
+          "feature": {
+            "id": 76,
+            "title": "Custom Domain",
+            "description": "Use your own website address for the form."
+          }
+        },
+        {
+          "id": 21573,
+          "value": "Yes",
+          "feature": {
+            "id": 185,
+            "title": "Custom Link For Forms",
+            "description": "Create unique URLs for your individual forms."
+          }
+        },
+        {
+          "id": 21571,
+          "value": "Yes",
+          "feature": {
+            "id": 186,
+            "title": "Edit Share Preview",
+            "description": "Edit the Title, Description & Thumbnail of your forms in Shared Preview."
+          }
+        },
+        {
+          "id": 21575,
+          "value": "No",
+          "feature": {
+            "id": 187,
+            "title": "Generate QR Codes",
+            "description": "Generate QR codes for your forms within the form builder."
+          }
+        },
+        {
+          "id": 21572,
+          "value": "No",
+          "feature": {
+            "id": 188,
+            "title": "Share on Social Platforms",
+            "description": "Share your forms on social media directly from the form builder "
+          }
+        },
+        {
+          "id": 21578,
+          "value": "Yes",
+          "feature": {
+            "id": 56,
+            "title": "Third-Party Integration",
+            "description": "Connect the form with third-party apps and services."
+          }
+        },
+        {
+          "id": 21574,
+          "value": "No",
+          "feature": {
+            "id": 49,
+            "title": "API access",
+            "description": "Connect your forms with third-party APIs"
+          }
+        },
+        {
+          "id": 21576,
+          "value": "No",
+          "feature": {
+            "id": 58,
+            "title": "Webhooks Integration",
+            "description": "Connect your forms with apps or services that do not have specific native integrations."
+          }
+        },
+        {
+          "id": 21579,
+          "value": "Yes",
+          "feature": {
+            "id": 61,
+            "title": "Zapier integration ",
+            "description": "Integrate with thousands of apps using Zapier."
+          }
+        },
+        {
+          "id": 21577,
+          "value": "No",
+          "feature": {
+            "id": 189,
+            "title": "Make Integration",
+            "description": "Integrate your forms with thousands of apps using Make."
+          }
+        },
+        {
+          "id": 21580,
+          "value": "0%",
+          "feature": {
+            "id": 190,
+            "title": "Commission on Payments (%)",
+            "description": "A % of the payment goes to the form builder as commission."
+          }
+        },
+        {
+          "id": 21581,
+          "value": "Yes",
+          "feature": {
+            "id": 69,
+            "title": "PayPal Integration",
+            "description": "Accept PayPal payments through the form."
+          }
+        },
+        {
+          "id": 21588,
+          "value": "Yes",
+          "feature": {
+            "id": 70,
+            "title": "Stripe Integration",
+            "description": "Accept Stripe payments through the form."
+          }
+        },
+        {
+          "id": 21589,
+          "value": "No",
+          "feature": {
+            "id": 71,
+            "title": "Square Integration",
+            "description": "Accept Square payments through the form."
+          }
+        },
+        {
+          "id": 21587,
+          "value": "No",
+          "feature": {
+            "id": 72,
+            "title": "Braintree Integration",
+            "description": "Accept Braintree payments through the form."
+          }
+        },
+        {
+          "id": 21582,
+          "value": "No",
+          "feature": {
+            "id": 73,
+            "title": "Razorpay Integration",
+            "description": "Accept Razorpay payments through the form."
+          }
+        },
+        {
+          "id": 21583,
+          "value": "No",
+          "feature": {
+            "id": 74,
+            "title": "Google Pay Integration",
+            "description": "Accept Google Pay payments through the form."
+          }
+        },
+        {
+          "id": 21586,
+          "value": "No",
+          "feature": {
+            "id": 191,
+            "title": "Zoho CRM Integration",
+            "description": "Integrate your online forms with Zoho CRM. "
+          }
+        },
+        {
+          "id": 21585,
+          "value": "No",
+          "feature": {
+            "id": 192,
+            "title": "HubSpot Integration",
+            "description": "Integrate your online forms with HubSpot."
+          }
+        },
+        {
+          "id": 21584,
+          "value": "No",
+          "feature": {
+            "id": 193,
+            "title": "Salesforce Integration",
+            "description": "Integrate your online forms with Salesforce."
+          }
+        },
+        {
+          "id": 21590,
+          "value": "No",
+          "feature": {
+            "id": 194,
+            "title": "Pipedrive Integration",
+            "description": "Integrate your online forms with Pipedrive."
+          }
+        },
+        {
+          "id": 21592,
+          "value": "No",
+          "feature": {
+            "id": 195,
+            "title": "Airtable Integration",
+            "description": "Integrate your online forms with Airtable."
+          }
+        },
+        {
+          "id": 21591,
+          "value": "No",
+          "feature": {
+            "id": 196,
+            "title": "Mailchimp Integration",
+            "description": "Integrate your online forms with Mailchimp email marketing platform."
+          }
+        },
+        {
+          "id": 21594,
+          "value": "No",
+          "feature": {
+            "id": 197,
+            "title": "ActiveCampaign Integration",
+            "description": "Integrate your online forms with ActiveCampaign email marketing platform."
+          }
+        },
+        {
+          "id": 21593,
+          "value": "No",
+          "feature": {
+            "id": 198,
+            "title": "Google Sheets Integration",
+            "description": "Integrate your online forms with Google Sheets."
+          }
+        },
+        {
+          "id": 21595,
+          "value": "No",
+          "feature": {
+            "id": 199,
+            "title": "Slack Integration",
+            "description": "Integrate your online forms with Slack."
+          }
+        },
+        {
+          "id": 21596,
+          "value": "No",
+          "feature": {
+            "id": 200,
+            "title": "Discord Integration",
+            "description": "Integrate your online forms with Discord."
+          }
+        },
+        {
+          "id": 21604,
+          "value": "No",
+          "feature": {
+            "id": 201,
+            "title": "Microsoft Teams Integration",
+            "description": "Integrate your online forms with Microsoft Teams."
+          }
+        },
+        {
+          "id": 21599,
+          "value": "No",
+          "feature": {
+            "id": 202,
+            "title": "Shopify Integration",
+            "description": "Integrate your online forms with Shopify."
+          }
+        },
+        {
+          "id": 21597,
+          "value": "No",
+          "feature": {
+            "id": 203,
+            "title": "WooCommerce Integration",
+            "description": "Integrate your online forms with WooCommerce."
+          }
+        },
+        {
+          "id": 21598,
+          "value": "No",
+          "feature": {
+            "id": 204,
+            "title": "BigCommerce Integration",
+            "description": "Integrate your online forms with BigCommerce."
+          }
+        },
+        {
+          "id": 21605,
+          "value": "No",
+          "feature": {
+            "id": 205,
+            "title": "Inventory Management",
+            "description": "Create products & options that can be used in Order Cart & Dropdown fields on your forms."
+          }
+        },
+        {
+          "id": 21603,
+          "value": "Yes",
+          "feature": {
+            "id": 51,
+            "title": "Submission Reports",
+            "description": "Reports on the data submitted through forms."
+          }
+        },
+        {
+          "id": 21600,
+          "value": "Yes",
+          "feature": {
+            "id": 87,
+            "title": "Export Submissions",
+            "description": "Download your form responses in different formats."
+          }
+        },
+        {
+          "id": 21602,
+          "value": "Yes",
+          "feature": {
+            "id": 206,
+            "title": "View Partial Submissions",
+            "description": "View & analyse partial or incomplete forms."
+          }
+        },
+        {
+          "id": 21606,
+          "value": "-",
+          "feature": {
+            "id": 207,
+            "title": "Completion Rates",
+            "description": "The total number of people who completed form divided by the total number of people who visited the form."
+          }
+        },
+        {
+          "id": 21601,
+          "value": "-",
+          "feature": {
+            "id": 208,
+            "title": "Drop off rates",
+            "description": "Number of people abandoned their purchase/ number of people who initiated it."
+          }
+        },
+        {
+          "id": 21607,
+          "value": "-",
+          "feature": {
+            "id": 209,
+            "title": "Heatmap",
+            "description": "View the areas where users interact the most."
+          }
+        },
+        {
+          "id": 21608,
+          "value": "Yes",
+          "feature": {
+            "id": 90,
+            "title": "Custom Reports",
+            "description": "Create detailed and tailored reports from your form data."
+          }
+        },
+        {
+          "id": 21609,
+          "value": "Yes",
+          "feature": {
+            "id": 88,
+            "title": "Custom PDFs",
+            "description": "Generate personalized PDFs of form submission data."
+          }
+        },
+        {
+          "id": 21612,
+          "value": "No",
+          "feature": {
+            "id": 65,
+            "title": "Google Tag Manager Integration",
+            "description": "Integrate your forms with Google Tag Manager."
+          }
+        },
+        {
+          "id": 21610,
+          "value": "Yes",
+          "feature": {
+            "id": 67,
+            "title": "Google Analytics Integration",
+            "description": "Integrate your forms with Google Analytics to track user behavior."
+          }
+        },
+        {
+          "id": 21611,
+          "value": "No",
+          "feature": {
+            "id": 68,
+            "title": "Meta Pixel Integration",
+            "description": "Use Meta (Facebook) Pixel with the form."
+          }
+        },
+        {
+          "id": 21613,
+          "value": "No",
+          "feature": {
+            "id": 210,
+            "title": "Set Response Limits",
+            "description": "Set limits on the number of submissions for your forms"
+          }
+        },
+        {
+          "id": 21614,
+          "value": "No",
+          "feature": {
+            "id": 211,
+            "title": "Set Submission Start Date",
+            "description": "Gain control over the start date of the form submissions."
+          }
+        },
+        {
+          "id": 21615,
+          "value": "No",
+          "feature": {
+            "id": 212,
+            "title": "Set Submission End Date",
+            "description": "Set a deadline over your form submissions."
+          }
+        },
+        {
+          "id": 21619,
+          "value": "Yes",
+          "feature": {
+            "id": 83,
+            "title": "Get Submission Notifications",
+            "description": "Receive alerts when someone fills your forms."
+          }
+        },
+        {
+          "id": 21616,
+          "value": "Yes",
+          "feature": {
+            "id": 142,
+            "title": "Email Autoresponder",
+            "description": "Automatically send emails to respondents upon form submission."
+          }
+        },
+        {
+          "id": 21618,
+          "value": "-",
+          "feature": {
+            "id": 213,
+            "title": "Conditional Autoresponder",
+            "description": "Send customized notification based on the user's input in the form."
+          }
+        },
+        {
+          "id": 21617,
+          "value": "Yes",
+          "feature": {
+            "id": 82,
+            "title": "Customize Email Notifications",
+            "description": "Personalized email alerts for form submissions."
+          }
+        },
+        {
+          "id": 21620,
+          "value": "No",
+          "feature": {
+            "id": 214,
+            "title": "SMTP (Simple Mail Transfer Protocol)",
+            "description": "Send emails through your own SMTP server."
+          }
+        },
+        {
+          "id": 21623,
+          "value": "No",
+          "feature": {
+            "id": 215,
+            "title": "AI-Generated Forms",
+            "description": "Create surveys, forms and quizzes with AI-powered question generation."
+          }
+        },
+        {
+          "id": 21622,
+          "value": "No",
+          "feature": {
+            "id": 216,
+            "title": "Smart Data Validation",
+            "description": "Automate the process of data validation using AI."
+          }
+        },
+        {
+          "id": 21624,
+          "value": "No",
+          "feature": {
+            "id": 217,
+            "title": "Automated Analytics",
+            "description": "Automate data analytics of your form submission data using AI."
+          }
+        },
+        {
+          "id": 21621,
+          "value": "No",
+          "feature": {
+            "id": 218,
+            "title": "AI-Spam Protection",
+            "description": "Automatically check and flag spams using AI trained model."
+          }
+        },
+        {
+          "id": 21633,
+          "value": "Yes",
+          "feature": {
+            "id": 219,
+            "title": "reCAPTCHA",
+            "description": "Integrate Google's reCAPTCHA into the forms to prevent spam."
+          }
+        },
+        {
+          "id": 21628,
+          "value": "-",
+          "feature": {
+            "id": 224,
+            "title": "hCaptcha",
+            "description": "Integrate image based spam protection into your forms."
+          }
+        },
+        {
+          "id": 21632,
+          "value": "No",
+          "feature": {
+            "id": 220,
+            "title": "Honeypot Integration",
+            "description": "Prevent spam using Honeypot fields which are only visible to bots."
+          }
+        },
+        {
+          "id": 21625,
+          "value": "No",
+          "feature": {
+            "id": 225,
+            "title": "IP Blocking ",
+            "description": "Block submissions form determined list of IPs."
+          }
+        },
+        {
+          "id": 21626,
+          "value": "No",
+          "feature": {
+            "id": 226,
+            "title": "Email Verification",
+            "description": "Prompt the user for email verification to complete the submission."
+          }
+        },
+        {
+          "id": 21627,
+          "value": "-",
+          "feature": {
+            "id": 221,
+            "title": "Single sign-on (SSO Login)",
+            "description": "Allow users to login using only one set of login credentials."
+          }
+        },
+        {
+          "id": 21629,
+          "value": "Yes",
+          "feature": {
+            "id": 143,
+            "title": "SSL Encryption",
+            "description": "Protect data with secure, encrypted connections."
+          }
+        },
+        {
+          "id": 21630,
+          "value": "No",
+          "feature": {
+            "id": 144,
+            "title": "2-Factor Authentication",
+            "description": "Increase security with two factor authentication."
+          }
+        },
+        {
+          "id": 21634,
+          "value": "-",
+          "feature": {
+            "id": 222,
+            "title": "Audit-log",
+            "description": "Secure your forms with Audit-logs which tracks the changes done to the forms."
+          }
+        },
+        {
+          "id": 21631,
+          "value": "Yes",
+          "feature": {
+            "id": 109,
+            "title": "GDPR Compliance",
+            "description": "Make sure your forms meet European data protection standards."
+          }
+        },
+        {
+          "id": 21636,
+          "value": "-",
+          "feature": {
+            "id": 110,
+            "title": "HIPAA Compliance",
+            "description": "Make sure your forms meet healthcare data protection standards."
+          }
+        },
+        {
+          "id": 21635,
+          "value": "Yes",
+          "feature": {
+            "id": 113,
+            "title": "General Support",
+            "description": "Standard email support."
+          }
+        },
+        {
+          "id": 21637,
+          "value": "-",
+          "feature": {
+            "id": 112,
+            "title": "Priority support",
+            "description": "Expedited customer support to resolve your issues faster."
+          }
+        }
+      ]
+    },
+    {
+      "id": 390,
+      "name": "Business",
+      "amount": 40,
+      "features": [
+        {
+          "id": 21422,
+          "value": "1+",
+          "feature": {
+            "id": 42,
+            "title": "No. of Users",
+            "description": "Number of people who can use the form builder."
+          }
+        },
+        {
+          "id": 21423,
+          "value": "Unlimited",
+          "feature": {
+            "id": 43,
+            "title": "No. of Forms",
+            "description": "Number of forms you can create."
+          }
+        },
+        {
+          "id": 21424,
+          "value": "Unlimited",
+          "feature": {
+            "id": 44,
+            "title": "Form Responses",
+            "description": "Number of times people can submit the forms."
+          }
+        },
+        {
+          "id": 21426,
+          "value": "-",
+          "feature": {
+            "id": 45,
+            "title": "Form Views",
+            "description": "The number of times your form has been accessed or viewed by users."
+          }
+        },
+        {
+          "id": 21431,
+          "value": "53",
+          "feature": {
+            "id": 174,
+            "title": "Fields per form",
+            "description": " The number of Form Elements/Questions you can add to a single Form."
+          }
+        },
+        {
+          "id": 21425,
+          "value": "Yes",
+          "feature": {
+            "id": 47,
+            "title": "File Uploads",
+            "description": "Users can upload & submit their documents or images in the form. "
+          }
+        },
+        {
+          "id": 21427,
+          "value": "-",
+          "feature": {
+            "id": 175,
+            "title": "Upload Size Limit/File",
+            "description": "Maximum file size you could upload in a form."
+          }
+        },
+        {
+          "id": 21430,
+          "value": "5 GB",
+          "feature": {
+            "id": 48,
+            "title": "Total File Storage",
+            "description": "Total space available for storing uploaded files."
+          }
+        },
+        {
+          "id": 21433,
+          "value": "397+",
+          "feature": {
+            "id": 75,
+            "title": "No. of Free Templates",
+            "description": "Pre-made form designs you can use."
+          }
+        },
+        {
+          "id": 21429,
+          "value": "Yes",
+          "feature": {
+            "id": 89,
+            "title": "Embeddable Forms",
+            "description": "Forms that can be easily embedded into websites."
+          }
+        },
+        {
+          "id": 21436,
+          "value": "Yes",
+          "feature": {
+            "id": 55,
+            "title": "Save & Resume",
+            "description": "Allow users to save their progress and return to complete the form later."
+          }
+        },
+        {
+          "id": 21428,
+          "value": "Yes",
+          "feature": {
+            "id": 62,
+            "title": "Collect Payments",
+            "description": "Accept payments through the form."
+          }
+        },
+        {
+          "id": 21434,
+          "value": "Yes",
+          "feature": {
+            "id": 91,
+            "title": "Conditional Logic ",
+            "description": "Display or hide fields based on user responses."
+          }
+        },
+        {
+          "id": 21437,
+          "value": "Yes",
+          "feature": {
+            "id": 101,
+            "title": "E-Signatures/Form",
+            "description": "Number of E-signatures you can collect within a single form."
+          }
+        },
+        {
+          "id": 21435,
+          "value": "-",
+          "feature": {
+            "id": 93,
+            "title": "Lookup Field",
+            "description": "Fields that retrieve data from other sources."
+          }
+        },
+        {
+          "id": 21432,
+          "value": "Yes",
+          "feature": {
+            "id": 98,
+            "title": "Validation Rules",
+            "description": "Set rules to ensure users input data correctly."
+          }
+        },
+        {
+          "id": 21438,
+          "value": "Yes",
+          "feature": {
+            "id": 92,
+            "title": "Calculating Fields",
+            "description": "Fields that can perform calculations."
+          }
+        },
+        {
+          "id": 21439,
+          "value": "Yes",
+          "feature": {
+            "id": 102,
+            "title": "Rating Scales",
+            "description": "Users can rate on a scale of 1-5"
+          }
+        },
+        {
+          "id": 21443,
+          "value": "No",
+          "feature": {
+            "id": 96,
+            "title": "Repeater Fields",
+            "description": "Add repeating sections in a form."
+          }
+        },
+        {
+          "id": 21441,
+          "value": "Yes",
+          "feature": {
+            "id": 141,
+            "title": "Hidden Fields",
+            "description": "Allows you to store data without showing up to the user."
+          }
+        },
+        {
+          "id": 21445,
+          "value": "-",
+          "feature": {
+            "id": 176,
+            "title": "Address Auto-complete",
+            "description": "Auto fills Users address using Google Places API."
+          }
+        },
+        {
+          "id": 21440,
+          "value": "Yes",
+          "feature": {
+            "id": 177,
+            "title": "Information Recall",
+            "description": "Allows you to recall answers from previous questions to later ones."
+          }
+        },
+        {
+          "id": 21444,
+          "value": "-",
+          "feature": {
+            "id": 105,
+            "title": "Form Booking/Scheduling",
+            "description": "Users can schedule appointments through the form."
+          }
+        },
+        {
+          "id": 21442,
+          "value": "No",
+          "feature": {
+            "id": 178,
+            "title": "Offline Forms",
+            "description": "Users can fill in the form even when they are offline."
+          }
+        },
+        {
+          "id": 21446,
+          "value": "Yes",
+          "feature": {
+            "id": 97,
+            "title": "Multi-Page Forms",
+            "description": "Forms split into several pages."
+          }
+        },
+        {
+          "id": 21449,
+          "value": "Yes",
+          "feature": {
+            "id": 179,
+            "title": "Multi-language Forms",
+            "description": "Users can fill the form in multiple languages."
+          }
+        },
+        {
+          "id": 21448,
+          "value": "-",
+          "feature": {
+            "id": 180,
+            "title": "Multiplied field groups",
+            "description": "Allows you to group a set of fields that repeats as needed, allowing users to input multiple data."
+          }
+        },
+        {
+          "id": 21447,
+          "value": "Yes",
+          "feature": {
+            "id": 50,
+            "title": "Multi-User Collaboration",
+            "description": "Multiple Users can collaborate to build and respond to a form."
+          }
+        },
+        {
+          "id": 21450,
+          "value": "No",
+          "feature": {
+            "id": 94,
+            "title": "Quiz Scoring",
+            "description": "Allows you to automatically generate scores based on the user's answers."
+          }
+        },
+        {
+          "id": 21451,
+          "value": "No",
+          "feature": {
+            "id": 181,
+            "title": "Quiz With Countdown Timer",
+            "description": "Allows you to set-up timed quizzes."
+          }
+        },
+        {
+          "id": 21452,
+          "value": "No",
+          "feature": {
+            "id": 182,
+            "title": "Outcome Based Quizzes",
+            "description": "Shows different outcomes by linking answers to endings."
+          }
+        },
+        {
+          "id": 21454,
+          "value": "Yes",
+          "feature": {
+            "id": 81,
+            "title": "Remove Form Builder logo",
+            "description": "Remove the form builder's branding."
+          }
+        },
+        {
+          "id": 21453,
+          "value": "Yes",
+          "feature": {
+            "id": 183,
+            "title": "White Labeling ",
+            "description": "Gain full customization & ownership over your forms."
+          }
+        },
+        {
+          "id": 21455,
+          "value": "Yes",
+          "feature": {
+            "id": 184,
+            "title": "Custom Branding Kit",
+            "description": "Customize the forms to reflect your brand."
+          }
+        },
+        {
+          "id": 21458,
+          "value": "Yes",
+          "feature": {
+            "id": 77,
+            "title": "Add logo",
+            "description": "Put your logo on the form."
+          }
+        },
+        {
+          "id": 21456,
+          "value": "-",
+          "feature": {
+            "id": 78,
+            "title": "Custom Favicon",
+            "description": "Use your own favicon for the domain."
+          }
+        },
+        {
+          "id": 21459,
+          "value": "Yes",
+          "feature": {
+            "id": 79,
+            "title": "Custom fonts",
+            "description": "Customize fonts within the form."
+          }
+        },
+        {
+          "id": 21460,
+          "value": "Yes",
+          "feature": {
+            "id": 80,
+            "title": "Custom Themes",
+            "description": "Customize themes of your forms."
+          }
+        },
+        {
+          "id": 21457,
+          "value": "-",
+          "feature": {
+            "id": 103,
+            "title": "Custom HTML & CSS",
+            "description": "Design and style your forms with custom code."
+          }
+        },
+        {
+          "id": 21461,
+          "value": "Yes",
+          "feature": {
+            "id": 84,
+            "title": "Custom Thank You Pages",
+            "description": "Customize thank you pages after form submission."
+          }
+        },
+        {
+          "id": 21464,
+          "value": "Yes",
+          "feature": {
+            "id": 76,
+            "title": "Custom Domain",
+            "description": "Use your own website address for the form."
+          }
+        },
+        {
+          "id": 21465,
+          "value": "Yes",
+          "feature": {
+            "id": 185,
+            "title": "Custom Link For Forms",
+            "description": "Create unique URLs for your individual forms."
+          }
+        },
+        {
+          "id": 21462,
+          "value": "Yes",
+          "feature": {
+            "id": 186,
+            "title": "Edit Share Preview",
+            "description": "Edit the Title, Description & Thumbnail of your forms in Shared Preview."
+          }
+        },
+        {
+          "id": 21463,
+          "value": "No",
+          "feature": {
+            "id": 187,
+            "title": "Generate QR Codes",
+            "description": "Generate QR codes for your forms within the form builder."
+          }
+        },
+        {
+          "id": 21466,
+          "value": "No",
+          "feature": {
+            "id": 188,
+            "title": "Share on Social Platforms",
+            "description": "Share your forms on social media directly from the form builder "
+          }
+        },
+        {
+          "id": 21467,
+          "value": "Yes",
+          "feature": {
+            "id": 56,
+            "title": "Third-Party Integration",
+            "description": "Connect the form with third-party apps and services."
+          }
+        },
+        {
+          "id": 21468,
+          "value": "Yes",
+          "feature": {
+            "id": 49,
+            "title": "API access",
+            "description": "Connect your forms with third-party APIs"
+          }
+        },
+        {
+          "id": 21471,
+          "value": "Yes",
+          "feature": {
+            "id": 58,
+            "title": "Webhooks Integration",
+            "description": "Connect your forms with apps or services that do not have specific native integrations."
+          }
+        },
+        {
+          "id": 21469,
+          "value": "Yes",
+          "feature": {
+            "id": 61,
+            "title": "Zapier integration ",
+            "description": "Integrate with thousands of apps using Zapier."
+          }
+        },
+        {
+          "id": 21470,
+          "value": "No",
+          "feature": {
+            "id": 189,
+            "title": "Make Integration",
+            "description": "Integrate your forms with thousands of apps using Make."
+          }
+        },
+        {
+          "id": 21472,
+          "value": "0%",
+          "feature": {
+            "id": 190,
+            "title": "Commission on Payments (%)",
+            "description": "A % of the payment goes to the form builder as commission."
+          }
+        },
+        {
+          "id": 21474,
+          "value": "Yes",
+          "feature": {
+            "id": 69,
+            "title": "PayPal Integration",
+            "description": "Accept PayPal payments through the form."
+          }
+        },
+        {
+          "id": 21475,
+          "value": "Yes",
+          "feature": {
+            "id": 70,
+            "title": "Stripe Integration",
+            "description": "Accept Stripe payments through the form."
+          }
+        },
+        {
+          "id": 21473,
+          "value": "No",
+          "feature": {
+            "id": 71,
+            "title": "Square Integration",
+            "description": "Accept Square payments through the form."
+          }
+        },
+        {
+          "id": 21480,
+          "value": "No",
+          "feature": {
+            "id": 72,
+            "title": "Braintree Integration",
+            "description": "Accept Braintree payments through the form."
+          }
+        },
+        {
+          "id": 21477,
+          "value": "No",
+          "feature": {
+            "id": 73,
+            "title": "Razorpay Integration",
+            "description": "Accept Razorpay payments through the form."
+          }
+        },
+        {
+          "id": 21481,
+          "value": "No",
+          "feature": {
+            "id": 74,
+            "title": "Google Pay Integration",
+            "description": "Accept Google Pay payments through the form."
+          }
+        },
+        {
+          "id": 21478,
+          "value": "No",
+          "feature": {
+            "id": 191,
+            "title": "Zoho CRM Integration",
+            "description": "Integrate your online forms with Zoho CRM. "
+          }
+        },
+        {
+          "id": 21479,
+          "value": "No",
+          "feature": {
+            "id": 192,
+            "title": "HubSpot Integration",
+            "description": "Integrate your online forms with HubSpot."
+          }
+        },
+        {
+          "id": 21482,
+          "value": "No",
+          "feature": {
+            "id": 193,
+            "title": "Salesforce Integration",
+            "description": "Integrate your online forms with Salesforce."
+          }
+        },
+        {
+          "id": 21476,
+          "value": "No",
+          "feature": {
+            "id": 194,
+            "title": "Pipedrive Integration",
+            "description": "Integrate your online forms with Pipedrive."
+          }
+        },
+        {
+          "id": 21483,
+          "value": "No",
+          "feature": {
+            "id": 195,
+            "title": "Airtable Integration",
+            "description": "Integrate your online forms with Airtable."
+          }
+        },
+        {
+          "id": 21486,
+          "value": "No",
+          "feature": {
+            "id": 196,
+            "title": "Mailchimp Integration",
+            "description": "Integrate your online forms with Mailchimp email marketing platform."
+          }
+        },
+        {
+          "id": 21484,
+          "value": "No",
+          "feature": {
+            "id": 197,
+            "title": "ActiveCampaign Integration",
+            "description": "Integrate your online forms with ActiveCampaign email marketing platform."
+          }
+        },
+        {
+          "id": 21485,
+          "value": "No",
+          "feature": {
+            "id": 198,
+            "title": "Google Sheets Integration",
+            "description": "Integrate your online forms with Google Sheets."
+          }
+        },
+        {
+          "id": 21487,
+          "value": "No",
+          "feature": {
+            "id": 199,
+            "title": "Slack Integration",
+            "description": "Integrate your online forms with Slack."
+          }
+        },
+        {
+          "id": 21489,
+          "value": "No",
+          "feature": {
+            "id": 200,
+            "title": "Discord Integration",
+            "description": "Integrate your online forms with Discord."
+          }
+        },
+        {
+          "id": 21488,
+          "value": "No",
+          "feature": {
+            "id": 201,
+            "title": "Microsoft Teams Integration",
+            "description": "Integrate your online forms with Microsoft Teams."
+          }
+        },
+        {
+          "id": 21490,
+          "value": "No",
+          "feature": {
+            "id": 202,
+            "title": "Shopify Integration",
+            "description": "Integrate your online forms with Shopify."
+          }
+        },
+        {
+          "id": 21492,
+          "value": "No-",
+          "feature": {
+            "id": 203,
+            "title": "WooCommerce Integration",
+            "description": "Integrate your online forms with WooCommerce."
+          }
+        },
+        {
+          "id": 21491,
+          "value": "No",
+          "feature": {
+            "id": 204,
+            "title": "BigCommerce Integration",
+            "description": "Integrate your online forms with BigCommerce."
+          }
+        },
+        {
+          "id": 21495,
+          "value": "No",
+          "feature": {
+            "id": 205,
+            "title": "Inventory Management",
+            "description": "Create products & options that can be used in Order Cart & Dropdown fields on your forms."
+          }
+        },
+        {
+          "id": 21494,
+          "value": "Yes",
+          "feature": {
+            "id": 51,
+            "title": "Submission Reports",
+            "description": "Reports on the data submitted through forms."
+          }
+        },
+        {
+          "id": 21493,
+          "value": "Yes",
+          "feature": {
+            "id": 87,
+            "title": "Export Submissions",
+            "description": "Download your form responses in different formats."
+          }
+        },
+        {
+          "id": 21502,
+          "value": "Yes",
+          "feature": {
+            "id": 206,
+            "title": "View Partial Submissions",
+            "description": "View & analyse partial or incomplete forms."
+          }
+        },
+        {
+          "id": 21500,
+          "value": "-",
+          "feature": {
+            "id": 207,
+            "title": "Completion Rates",
+            "description": "The total number of people who completed form divided by the total number of people who visited the form."
+          }
+        },
+        {
+          "id": 21496,
+          "value": "-",
+          "feature": {
+            "id": 208,
+            "title": "Drop off rates",
+            "description": "Number of people abandoned their purchase/ number of people who initiated it."
+          }
+        },
+        {
+          "id": 21497,
+          "value": "-",
+          "feature": {
+            "id": 209,
+            "title": "Heatmap",
+            "description": "View the areas where users interact the most."
+          }
+        },
+        {
+          "id": 21503,
+          "value": "Yes",
+          "feature": {
+            "id": 90,
+            "title": "Custom Reports",
+            "description": "Create detailed and tailored reports from your form data."
+          }
+        },
+        {
+          "id": 21498,
+          "value": "Yes",
+          "feature": {
+            "id": 88,
+            "title": "Custom PDFs",
+            "description": "Generate personalized PDFs of form submission data."
+          }
+        },
+        {
+          "id": 21504,
+          "value": "No",
+          "feature": {
+            "id": 65,
+            "title": "Google Tag Manager Integration",
+            "description": "Integrate your forms with Google Tag Manager."
+          }
+        },
+        {
+          "id": 21499,
+          "value": "Yes",
+          "feature": {
+            "id": 67,
+            "title": "Google Analytics Integration",
+            "description": "Integrate your forms with Google Analytics to track user behavior."
+          }
+        },
+        {
+          "id": 21509,
+          "value": "No",
+          "feature": {
+            "id": 68,
+            "title": "Meta Pixel Integration",
+            "description": "Use Meta (Facebook) Pixel with the form."
+          }
+        },
+        {
+          "id": 21505,
+          "value": "No",
+          "feature": {
+            "id": 210,
+            "title": "Set Response Limits",
+            "description": "Set limits on the number of submissions for your forms"
+          }
+        },
+        {
+          "id": 21501,
+          "value": "No",
+          "feature": {
+            "id": 211,
+            "title": "Set Submission Start Date",
+            "description": "Gain control over the start date of the form submissions."
+          }
+        },
+        {
+          "id": 21506,
+          "value": "No",
+          "feature": {
+            "id": 212,
+            "title": "Set Submission End Date",
+            "description": "Set a deadline over your form submissions."
+          }
+        },
+        {
+          "id": 21507,
+          "value": "Yes",
+          "feature": {
+            "id": 83,
+            "title": "Get Submission Notifications",
+            "description": "Receive alerts when someone fills your forms."
+          }
+        },
+        {
+          "id": 21510,
+          "value": "Yes",
+          "feature": {
+            "id": 142,
+            "title": "Email Autoresponder",
+            "description": "Automatically send emails to respondents upon form submission."
+          }
+        },
+        {
+          "id": 21508,
+          "value": "-",
+          "feature": {
+            "id": 213,
+            "title": "Conditional Autoresponder",
+            "description": "Send customized notification based on the user's input in the form."
+          }
+        },
+        {
+          "id": 21512,
+          "value": "Yes",
+          "feature": {
+            "id": 82,
+            "title": "Customize Email Notifications",
+            "description": "Personalized email alerts for form submissions."
+          }
+        },
+        {
+          "id": 21514,
+          "value": "-",
+          "feature": {
+            "id": 214,
+            "title": "SMTP (Simple Mail Transfer Protocol)",
+            "description": "Send emails through your own SMTP server."
+          }
+        },
+        {
+          "id": 21511,
+          "value": "No",
+          "feature": {
+            "id": 215,
+            "title": "AI-Generated Forms",
+            "description": "Create surveys, forms and quizzes with AI-powered question generation."
+          }
+        },
+        {
+          "id": 21517,
+          "value": "No",
+          "feature": {
+            "id": 216,
+            "title": "Smart Data Validation",
+            "description": "Automate the process of data validation using AI."
+          }
+        },
+        {
+          "id": 21513,
+          "value": "No",
+          "feature": {
+            "id": 217,
+            "title": "Automated Analytics",
+            "description": "Automate data analytics of your form submission data using AI."
+          }
+        },
+        {
+          "id": 21515,
+          "value": "No",
+          "feature": {
+            "id": 218,
+            "title": "AI-Spam Protection",
+            "description": "Automatically check and flag spams using AI trained model."
+          }
+        },
+        {
+          "id": 21516,
+          "value": "Yes",
+          "feature": {
+            "id": 219,
+            "title": "reCAPTCHA",
+            "description": "Integrate Google's reCAPTCHA into the forms to prevent spam."
+          }
+        },
+        {
+          "id": 21518,
+          "value": "-",
+          "feature": {
+            "id": 224,
+            "title": "hCaptcha",
+            "description": "Integrate image based spam protection into your forms."
+          }
+        },
+        {
+          "id": 21519,
+          "value": "No",
+          "feature": {
+            "id": 220,
+            "title": "Honeypot Integration",
+            "description": "Prevent spam using Honeypot fields which are only visible to bots."
+          }
+        },
+        {
+          "id": 21520,
+          "value": "No",
+          "feature": {
+            "id": 225,
+            "title": "IP Blocking ",
+            "description": "Block submissions form determined list of IPs."
+          }
+        },
+        {
+          "id": 21521,
+          "value": "No",
+          "feature": {
+            "id": 226,
+            "title": "Email Verification",
+            "description": "Prompt the user for email verification to complete the submission."
+          }
+        },
+        {
+          "id": 21527,
+          "value": "-",
+          "feature": {
+            "id": 221,
+            "title": "Single sign-on (SSO Login)",
+            "description": "Allow users to login using only one set of login credentials."
+          }
+        },
+        {
+          "id": 21524,
+          "value": "Yes",
+          "feature": {
+            "id": 143,
+            "title": "SSL Encryption",
+            "description": "Protect data with secure, encrypted connections."
+          }
+        },
+        {
+          "id": 21525,
+          "value": "No",
+          "feature": {
+            "id": 144,
+            "title": "2-Factor Authentication",
+            "description": "Increase security with two factor authentication."
+          }
+        },
+        {
+          "id": 21522,
+          "value": "-",
+          "feature": {
+            "id": 222,
+            "title": "Audit-log",
+            "description": "Secure your forms with Audit-logs which tracks the changes done to the forms."
+          }
+        },
+        {
+          "id": 21526,
+          "value": "Yes",
+          "feature": {
+            "id": 109,
+            "title": "GDPR Compliance",
+            "description": "Make sure your forms meet European data protection standards."
+          }
+        },
+        {
+          "id": 21523,
+          "value": "-",
+          "feature": {
+            "id": 110,
+            "title": "HIPAA Compliance",
+            "description": "Make sure your forms meet healthcare data protection standards."
+          }
+        },
+        {
+          "id": 21528,
+          "value": "Yes",
+          "feature": {
+            "id": 113,
+            "title": "General Support",
+            "description": "Standard email support."
+          }
+        },
+        {
+          "id": 21529,
+          "value": "-",
+          "feature": {
+            "id": 112,
+            "title": "Priority support",
+            "description": "Expedited customer support to resolve your issues faster."
+          }
+        }
+      ]
+    }
+  ],
+  "createdAt": "2024-07-30T20:16:24.210Z",
+  "updatedAt": "2024-07-31T01:34:21.777Z",
+  "publishedAt": "2024-07-30T20:16:26.812Z"
+}

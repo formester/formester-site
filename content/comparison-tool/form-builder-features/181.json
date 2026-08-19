@@ -1,0 +1,10 @@
+{
+  "strapiId": 181,
+  "title": "Quiz With Countdown Timer",
+  "description": "Allows you to set-up timed quizzes.",
+  "category": {
+    "id": 76,
+    "name": "Quiz Features",
+    "position": 2
+  }
+}

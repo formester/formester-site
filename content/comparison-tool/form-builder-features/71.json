@@ -1,0 +1,10 @@
+{
+  "strapiId": 71,
+  "title": "Square Integration",
+  "description": "Accept Square payments through the form.",
+  "category": {
+    "id": 37,
+    "name": "Payment Integrations",
+    "position": 4
+  }
+}

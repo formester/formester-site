@@ -1,0 +1,10 @@
+{
+  "strapiId": 202,
+  "title": "Shopify Integration",
+  "description": "Integrate your online forms with Shopify.",
+  "category": {
+    "id": 97,
+    "name": "Ecommerce Integrations",
+    "position": 1
+  }
+}

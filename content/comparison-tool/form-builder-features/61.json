@@ -1,0 +1,10 @@
+{
+  "strapiId": 61,
+  "title": "Zapier integration ",
+  "description": "Integrate with thousands of apps using Zapier.",
+  "category": {
+    "id": 48,
+    "name": "Workflow Automation",
+    "position": 4
+  }
+}

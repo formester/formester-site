@@ -1,0 +1,10 @@
+{
+  "strapiId": 207,
+  "title": "Completion Rates",
+  "description": "The total number of people who completed form divided by the total number of people who visited the form.",
+  "category": {
+    "id": 102,
+    "name": "Reporting & Analytics",
+    "position": 4
+  }
+}

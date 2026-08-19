@@ -1,0 +1,10 @@
+{
+  "strapiId": 103,
+  "title": "Custom HTML & CSS",
+  "description": "Design and style your forms with custom code.",
+  "category": {
+    "id": 29,
+    "name": "Customization",
+    "position": 5
+  }
+}

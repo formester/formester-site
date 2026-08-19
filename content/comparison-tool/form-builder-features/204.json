@@ -1,0 +1,10 @@
+{
+  "strapiId": 204,
+  "title": "BigCommerce Integration",
+  "description": "Integrate your online forms with BigCommerce.",
+  "category": {
+    "id": 99,
+    "name": "Ecommerce Integrations",
+    "position": 3
+  }
+}

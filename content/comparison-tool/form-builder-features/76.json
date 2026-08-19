@@ -1,0 +1,10 @@
+{
+  "strapiId": 76,
+  "title": "Custom Domain",
+  "description": "Use your own website address for the form.",
+  "category": {
+    "id": 23,
+    "name": "Publishing & Sharing",
+    "position": 1
+  }
+}

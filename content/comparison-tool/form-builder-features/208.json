@@ -1,0 +1,10 @@
+{
+  "strapiId": 208,
+  "title": "Drop off rates",
+  "description": "Number of people abandoned their purchase/ number of people who initiated it.",
+  "category": {
+    "id": 103,
+    "name": "Reporting & Analytics",
+    "position": 5
+  }
+}

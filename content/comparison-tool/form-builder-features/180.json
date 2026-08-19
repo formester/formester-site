@@ -1,0 +1,10 @@
+{
+  "strapiId": 180,
+  "title": "Multiplied field groups",
+  "description": "Allows you to group a set of fields that repeats as needed, allowing users to input multiple data.",
+  "category": {
+    "id": 74,
+    "name": "Form Fields & Creation",
+    "position": 19
+  }
+}

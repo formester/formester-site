@@ -1,0 +1,10 @@
+{
+  "strapiId": 206,
+  "title": "View Partial Submissions",
+  "description": "View & analyse partial or incomplete forms.",
+  "category": {
+    "id": 101,
+    "name": "Reporting & Analytics",
+    "position": 3
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "strapiId": 218,
+  "title": "AI-Spam Protection",
+  "description": "Automatically check and flag spams using AI trained model.",
+  "category": {
+    "id": 113,
+    "name": "Spam Protection",
+    "position": 1
+  }
+}

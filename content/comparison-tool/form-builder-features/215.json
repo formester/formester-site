@@ -1,0 +1,10 @@
+{
+  "strapiId": 215,
+  "title": "AI-Generated Forms",
+  "description": "Create surveys, forms and quizzes with AI-powered question generation.",
+  "category": {
+    "id": 110,
+    "name": "AI Capabilities",
+    "position": 1
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "strapiId": 93,
+  "title": "Lookup Field",
+  "description": "Fields that retrieve data from other sources.",
+  "category": {
+    "id": 43,
+    "name": "Form Fields & Creation",
+    "position": 7
+  }
+}

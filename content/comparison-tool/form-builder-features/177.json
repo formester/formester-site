@@ -1,0 +1,10 @@
+{
+  "strapiId": 177,
+  "title": "Information Recall",
+  "description": "Allows you to recall answers from previous questions to later ones.",
+  "category": {
+    "id": 71,
+    "name": "Form Fields & Creation",
+    "position": 14
+  }
+}

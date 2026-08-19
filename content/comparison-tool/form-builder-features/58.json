@@ -1,0 +1,10 @@
+{
+  "strapiId": 58,
+  "title": "Webhooks Integration",
+  "description": "Connect your forms with apps or services that do not have specific native integrations.",
+  "category": {
+    "id": 41,
+    "name": "Workflow Automation",
+    "position": 3
+  }
+}

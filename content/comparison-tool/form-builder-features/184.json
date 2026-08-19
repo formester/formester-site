@@ -1,0 +1,10 @@
+{
+  "strapiId": 184,
+  "title": "Custom Branding Kit",
+  "description": "Customize the forms to reflect your brand.",
+  "category": {
+    "id": 79,
+    "name": "Branding",
+    "position": 3
+  }
+}

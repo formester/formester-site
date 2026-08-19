@@ -1,0 +1,10 @@
+{
+  "strapiId": 201,
+  "title": "Microsoft Teams Integration",
+  "description": "Integrate your online forms with Microsoft Teams.",
+  "category": {
+    "id": 96,
+    "name": "Collaboration Tool Integrations",
+    "position": 4
+  }
+}

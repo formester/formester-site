@@ -1,0 +1,10 @@
+{
+  "strapiId": 224,
+  "title": "hCaptcha",
+  "description": "Integrate image based spam protection into your forms.",
+  "category": {
+    "id": 120,
+    "name": "Spam Protection",
+    "position": 3
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "strapiId": 219,
+  "title": "reCAPTCHA",
+  "description": "Integrate Google's reCAPTCHA into the forms to prevent spam.",
+  "category": {
+    "id": 114,
+    "name": "Spam Protection",
+    "position": 2
+  }
+}

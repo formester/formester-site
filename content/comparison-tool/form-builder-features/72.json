@@ -1,0 +1,10 @@
+{
+  "strapiId": 72,
+  "title": "Braintree Integration",
+  "description": "Accept Braintree payments through the form.",
+  "category": {
+    "id": 39,
+    "name": "Payment Integrations",
+    "position": 5
+  }
+}

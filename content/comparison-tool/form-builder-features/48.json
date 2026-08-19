@@ -1,0 +1,10 @@
+{
+  "strapiId": 48,
+  "title": "Total File Storage",
+  "description": "Total space available for storing uploaded files.",
+  "category": {
+    "id": 11,
+    "name": "Usage limits",
+    "position": 8
+  }
+}

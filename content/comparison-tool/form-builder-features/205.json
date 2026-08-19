@@ -1,0 +1,10 @@
+{
+  "strapiId": 205,
+  "title": "Inventory Management",
+  "description": "Create products & options that can be used in Order Cart & Dropdown fields on your forms.",
+  "category": {
+    "id": 100,
+    "name": "Ecommerce Integrations",
+    "position": 4
+  }
+}

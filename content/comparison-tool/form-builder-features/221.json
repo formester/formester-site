@@ -1,0 +1,10 @@
+{
+  "strapiId": 221,
+  "title": "Single sign-on (SSO Login)",
+  "description": "Allow users to login using only one set of login credentials.",
+  "category": {
+    "id": 116,
+    "name": "Security & Compliance",
+    "position": 1
+  }
+}

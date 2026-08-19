@@ -1,0 +1,10 @@
+{
+  "strapiId": 62,
+  "title": "Collect Payments",
+  "description": "Accept payments through the form.",
+  "category": {
+    "id": 33,
+    "name": "Form Fields & Creation",
+    "position": 4
+  }
+}

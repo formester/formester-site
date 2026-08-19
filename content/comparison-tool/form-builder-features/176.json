@@ -1,0 +1,10 @@
+{
+  "strapiId": 176,
+  "title": "Address Auto-complete",
+  "description": "Auto fills Users address using Google Places API.",
+  "category": {
+    "id": 70,
+    "name": "Form Fields & Creation",
+    "position": 13
+  }
+}

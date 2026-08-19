@@ -1,0 +1,10 @@
+{
+  "strapiId": 92,
+  "title": "Calculating Fields",
+  "description": "Fields that can perform calculations.",
+  "category": {
+    "id": 42,
+    "name": "Form Fields & Creation",
+    "position": 9
+  }
+}

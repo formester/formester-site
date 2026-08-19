@@ -1,0 +1,10 @@
+{
+  "strapiId": 209,
+  "title": "Heatmap",
+  "description": "View the areas where users interact the most.",
+  "category": {
+    "id": 104,
+    "name": "Reporting & Analytics",
+    "position": 6
+  }
+}

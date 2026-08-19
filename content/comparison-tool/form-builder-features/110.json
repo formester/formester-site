@@ -1,0 +1,10 @@
+{
+  "strapiId": 110,
+  "title": "HIPAA Compliance",
+  "description": "Make sure your forms meet healthcare data protection standards.",
+  "category": {
+    "id": 58,
+    "name": "Security & Compliance",
+    "position": 6
+  }
+}

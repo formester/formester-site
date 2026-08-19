@@ -1,0 +1,10 @@
+{
+  "strapiId": 226,
+  "title": "Email Verification",
+  "description": "Prompt the user for email verification to complete the submission.",
+  "category": {
+    "id": 122,
+    "name": "Spam Protection",
+    "position": 6
+  }
+}

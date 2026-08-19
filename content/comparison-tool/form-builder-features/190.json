@@ -1,0 +1,10 @@
+{
+  "strapiId": 190,
+  "title": "Commission on Payments (%)",
+  "description": "A % of the payment goes to the form builder as commission.",
+  "category": {
+    "id": 85,
+    "name": "Payment Integrations",
+    "position": 1
+  }
+}

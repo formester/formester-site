@@ -1,0 +1,10 @@
+{
+  "strapiId": 225,
+  "title": "IP Blocking ",
+  "description": "Block submissions form determined list of IPs.",
+  "category": {
+    "id": 121,
+    "name": "Spam Protection",
+    "position": 5
+  }
+}

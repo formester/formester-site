@@ -1,0 +1,10 @@
+{
+  "strapiId": 84,
+  "title": "Custom Thank You Pages",
+  "description": "Customize thank you pages after form submission.",
+  "category": {
+    "id": 30,
+    "name": "Customization",
+    "position": 6
+  }
+}

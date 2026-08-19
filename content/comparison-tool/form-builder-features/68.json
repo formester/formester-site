@@ -1,0 +1,10 @@
+{
+  "strapiId": 68,
+  "title": "Meta Pixel Integration",
+  "description": "Use Meta (Facebook) Pixel with the form.",
+  "category": {
+    "id": 54,
+    "name": "Reporting & Analytics",
+    "position": 11
+  }
+}

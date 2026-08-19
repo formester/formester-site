@@ -1,0 +1,10 @@
+{
+  "strapiId": 214,
+  "title": "SMTP (Simple Mail Transfer Protocol)",
+  "description": "Send emails through your own SMTP server.",
+  "category": {
+    "id": 109,
+    "name": "Email Notification",
+    "position": 6
+  }
+}

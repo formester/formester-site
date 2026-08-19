@@ -1,0 +1,10 @@
+{
+  "strapiId": 90,
+  "title": "Custom Reports",
+  "description": "Create detailed and tailored reports from your form data.",
+  "category": {
+    "id": 32,
+    "name": "Reporting & Analytics",
+    "position": 7
+  }
+}

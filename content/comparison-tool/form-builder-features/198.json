@@ -1,0 +1,10 @@
+{
+  "strapiId": 198,
+  "title": "Google Sheets Integration",
+  "description": "Integrate your online forms with Google Sheets.",
+  "category": {
+    "id": 93,
+    "name": "Collaboration Tool Integrations",
+    "position": 1
+  }
+}

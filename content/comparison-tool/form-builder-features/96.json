@@ -1,0 +1,10 @@
+{
+  "strapiId": 96,
+  "title": "Repeater Fields",
+  "description": "Add repeating sections in a form.",
+  "category": {
+    "id": 61,
+    "name": "Form Fields & Creation",
+    "position": 11
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "strapiId": 44,
+  "title": "Form Responses",
+  "description": "Number of times people can submit the forms.",
+  "category": {
+    "id": 8,
+    "name": "Usage limits",
+    "position": 3
+  }
+}

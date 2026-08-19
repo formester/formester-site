@@ -1,0 +1,10 @@
+{
+  "strapiId": 56,
+  "title": "Third-Party Integration",
+  "description": "Connect the form with third-party apps and services.",
+  "category": {
+    "id": 45,
+    "name": "Workflow Automation",
+    "position": 1
+  }
+}

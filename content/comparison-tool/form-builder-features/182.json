@@ -1,0 +1,10 @@
+{
+  "strapiId": 182,
+  "title": "Outcome Based Quizzes",
+  "description": "Shows different outcomes by linking answers to endings.",
+  "category": {
+    "id": 77,
+    "name": "Quiz Features",
+    "position": 3
+  }
+}

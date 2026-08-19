@@ -1,0 +1,10 @@
+{
+  "strapiId": 70,
+  "title": "Stripe Integration",
+  "description": "Accept Stripe payments through the form.",
+  "category": {
+    "id": 36,
+    "name": "Payment Integrations",
+    "position": 3
+  }
+}

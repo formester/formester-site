@@ -1,0 +1,10 @@
+{
+  "strapiId": 200,
+  "title": "Discord Integration",
+  "description": "Integrate your online forms with Discord.",
+  "category": {
+    "id": 95,
+    "name": "Collaboration Tool Integrations",
+    "position": 3
+  }
+}
