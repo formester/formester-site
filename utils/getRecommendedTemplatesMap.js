@@ -1,6 +1,3 @@
-import { STRAPI_URL } from '../constants/urls.js'
-import fetchWithRetry from './fetchWithRetry.js'
-
 let cachePromise = null
 
 // Extract showcase tabs from a dynamic-zone `content` array.
@@ -21,17 +18,9 @@ async function _fetchRecommendedTemplatesMap() {
     '[getRecommendedTemplatesMap] Fetching all recommended templates from CMS...',
   )
   try {
-    const {
-      data: { data },
-    } = await fetchWithRetry(`${STRAPI_URL}/api/recommended-templates`, {
-      params: {
-        'pagination[pageSize]': 1000,
-        populate: 'deep',
-      },
-    })
+    const items = await queryCollection('recommendedTemplates').all()
 
     const map = {}
-    const items = data || []
     for (const item of items) {
       const templateSlug = item.specificTemplate
       if (!templateSlug) continue
