@@ -182,24 +182,24 @@ import ComparisonCard from '@/components/comparision/ComparisonCard.vue'
 import FormBuilderComparisonTable from '@/components/comparision/FormBuilderComparisonTable.vue'
 import Faq from '@/components/features/Faq.vue'
 import getSiteMeta from '@/utils/getSiteMeta'
-import axios from 'axios'
-
-const config = useRuntimeConfig()
 
 const { data: fetchedData, error: fetchError } = await useAsyncData('comparison-tool', async () => {
   try {
-    const {
-      data: { data },
-    } = await axios.get(`${config.public.strapiUrl}/api/form-builders`, {
-      params: {
-        sort: 'name',
-        populate: ['logo', 'plan', 'plan.features', 'plan.features.form_builder_feature'],
-      },
-    })
+    const docs = await queryCollection('formBuilders').order('name', 'ASC').all()
 
-    const formBuilders = data.map((item) => ({
-      id: item.id,
-      ...item.attributes,
+    // Reconstruct the nested Strapi media shape (`logo.data.attributes.url`)
+    // that this page and FormBuilderComparisonTable.vue's template already
+    // read directly, so neither needs to change.
+    const formBuilders = docs.map((item) => ({
+      id: item.strapiId,
+      name: item.name,
+      logo: item.logo
+        ? { data: { attributes: { url: item.logo.url, alternativeText: item.logo.alternativeText } } }
+        : null,
+      plan: item.plan,
+      createdAt: item.createdAt,
+      updatedAt: item.updatedAt,
+      publishedAt: item.publishedAt,
     }))
 
     const options = formBuilders.map((fb) => fb.name)
