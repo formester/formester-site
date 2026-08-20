@@ -2728,8 +2728,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-attributes {
   --fmstr-cmp-attributes-bg: #f9fafb;
   --fmstr-cmp-attributes-bg-card: #ffffff;
@@ -2918,8 +2916,6 @@ useJsonld([
     padding: var(--fmstr-cmp-attributes-space-6);
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-asg-quality-control {
   --fmstr-cmp-asg-quality-control-bg-section: #0f0921;
@@ -3120,8 +3116,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-comparison-table {
   --fmstr-cmp-comparison-table-bg: #f9fafb;
   --fmstr-cmp-comparison-table-bg-card: #ffffff;
@@ -3303,8 +3297,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-benefits {
   --fmstr-cmp-benefits-bg-card: #ffffff;
   --fmstr-cmp-benefits-bg-pill: #f4ebff;
@@ -3466,8 +3458,6 @@ useJsonld([
     grid-template-columns: 1fr;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-persona-grid {
   --fmstr-cmp-persona-grid-bg-tint: #f7f3ff;
@@ -3647,8 +3637,6 @@ useJsonld([
     grid-template-columns: 1fr;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-templates-grid {
   --fmstr-cmp-templates-grid-bg-card: #ffffff;
@@ -3835,8 +3823,6 @@ useJsonld([
     grid-template-columns: 1fr;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-privacy-data-trust {
   --fmstr-cmp-privacy-data-trust-bg-section: #0f0921;
@@ -4035,8 +4021,6 @@ useJsonld([
     padding: var(--fmstr-cmp-privacy-data-trust-space-6);
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-api-mcp {
   --fmstr-cmp-api-mcp-bg: #f9fafb;
@@ -4241,8 +4225,6 @@ useJsonld([
     padding: var(--fmstr-cmp-api-mcp-space-6);
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-cross-sell {
   --fmstr-cmp-cross-sell-bg-card: #ffffff;

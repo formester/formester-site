@@ -4087,8 +4087,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-inputs {
   --fmstr-cmp-inputs-bg-violet-25: #f7f3ff;
   --fmstr-cmp-inputs-fg-1: #101828;
@@ -4286,8 +4284,6 @@ useJsonld([
     padding: var(--fmstr-cmp-inputs-space-1) var(--fmstr-cmp-inputs-space-3);
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-tc-quality-control {
   --fmstr-cmp-tc-quality-control-bg-section: #0f0921;
@@ -4488,8 +4484,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-tc-why-pick {
   --fmstr-cmp-tc-why-pick-bg-card: #ffffff;
   --fmstr-cmp-tc-why-pick-bg-violet-25: #f7f3ff;
@@ -4662,8 +4656,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-who-uses-formester {
   --fmstr-cmp-who-uses-formester-bg-section: #f9fafb;
   --fmstr-cmp-who-uses-formester-bg-card: #ffffff;
@@ -4825,8 +4817,6 @@ useJsonld([
     gap: var(--fmstr-cmp-who-uses-formester-space-3);
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-tc-api-mcp {
   --fmstr-cmp-tc-api-mcp-bg-card: #ffffff;
@@ -5045,8 +5035,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-privacy-data-ownership {
   --fmstr-cmp-privacy-data-ownership-bg-section: #0f0921;
   --fmstr-cmp-privacy-data-ownership-bg-glow: radial-gradient(
@@ -5245,8 +5233,6 @@ useJsonld([
     padding: var(--fmstr-cmp-privacy-data-ownership-space-6);
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-more-from-formester {
   --fmstr-cmp-more-from-formester-bg-section: #f9fafb;

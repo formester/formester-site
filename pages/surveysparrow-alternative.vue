@@ -2200,13 +2200,15 @@ useJsonld([
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @property --fmstr-svs-ring {
   syntax: '<angle>';
   initial-value: 0deg;
   inherits: false;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 .fmstr-cmp-svs-hero {
   --p-bg-glow: radial-gradient(60% 70% at 50% 0%, #f7f3ff 0%, #ffffff 70%);
@@ -2409,8 +2411,6 @@ useJsonld([
     border-radius: 12px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-svs-answer {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -2575,8 +2575,6 @@ useJsonld([
     order: 3;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-svs-glance {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -2889,8 +2887,6 @@ useJsonld([
   initial-value: 0deg;
   inherits: false;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-svs-demos {
   --p-bg-card: #ffffff;
   --p-bg-track: #f2f4f7;
@@ -3052,11 +3048,6 @@ useJsonld([
   animation: fmstr-svs-ring-spin 7s linear infinite;
   box-shadow: var(--p-shadow-xs);
 }
-@keyframes fmstr-svs-ring-spin {
-  to {
-    --fmstr-svs-ring: 360deg;
-  }
-}
 @media (prefers-reduced-motion: reduce) {
   .fmstr-cmp-svs-demos__frame {
     animation: none;
@@ -3122,8 +3113,6 @@ useJsonld([
     padding: 16px 20px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-svs-why-leave {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -3248,8 +3237,6 @@ useJsonld([
   font-size: 13px;
   color: #697586;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-svs-pricing {
   --p-bg: #f9fafb;
   --p-bg-card: #ffffff;
@@ -3482,8 +3469,6 @@ useJsonld([
     gap: 12px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-svs-api-mcp {
   --p-bg-card: #ffffff;
   --p-bg-tint: #f7f3ff;
@@ -3657,8 +3642,6 @@ useJsonld([
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-svs-why-pick {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -3790,8 +3773,6 @@ useJsonld([
     padding: 20px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-svs-switch {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -3932,8 +3913,6 @@ useJsonld([
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-svs-when-wins {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -4091,8 +4070,6 @@ useJsonld([
   font-weight: 600;
   line-height: 1.5;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-svs-privacy {
   --p-bg-section: #0f0921;
@@ -4263,8 +4240,6 @@ useJsonld([
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-svs-ask {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -4409,8 +4384,6 @@ useJsonld([
     grid-template-columns: 1fr;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-svs-other-alts {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -4537,8 +4510,6 @@ useJsonld([
     grid-template-columns: 1fr;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-svs-faqs {
   --p-bg-card: #ffffff;
   --p-bg-header: #f9fafb;
@@ -4663,8 +4634,6 @@ useJsonld([
     font-size: 15px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-svs-more-ai {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -4803,8 +4772,6 @@ useJsonld([
     grid-template-columns: 1fr;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 .fmstr-cmp-svs-cta {
   --p-bg-violet: #6941c6;

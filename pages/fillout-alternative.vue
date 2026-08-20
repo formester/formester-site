@@ -1677,6 +1677,8 @@ useJsonld([
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 .fmstr-cmp-fil-vs {
   --c-fg-1: #101828;
   --c-fg-2: #475467;
@@ -1760,8 +1762,6 @@ useJsonld([
     grid-template-columns: 1fr;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-fil-glance {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -1903,8 +1903,6 @@ useJsonld([
     line-height: 32px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-fil-why-leave {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -2024,8 +2022,6 @@ useJsonld([
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-fil-pricing {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -2147,8 +2143,6 @@ useJsonld([
     line-height: 32px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-fil-api-mcp {
   --p-bg-card: #ffffff;
   --p-bg-tint: #f7f3ff;
@@ -2322,8 +2316,6 @@ useJsonld([
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-fil-why-pick {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -2455,8 +2447,6 @@ useJsonld([
     padding: 20px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-fil-switch {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -2597,8 +2587,6 @@ useJsonld([
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-fil-when-wins {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -2720,8 +2708,6 @@ useJsonld([
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-fil-other-alts {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -3014,8 +3000,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-fil-privacy {
   --p-bg-section: #0f0921;
   --p-bg-glow: radial-gradient(
@@ -3185,8 +3169,6 @@ useJsonld([
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-fil-ask {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -3331,8 +3313,6 @@ useJsonld([
     grid-template-columns: 1fr;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 .fmstr-cmp-fil-cta {
   --p-bg-violet: #6941c6;

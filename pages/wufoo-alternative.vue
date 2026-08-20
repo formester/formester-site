@@ -2093,13 +2093,15 @@ useJsonld([
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @property --fmstr-wuf-ring {
   syntax: '<angle>';
   initial-value: 0deg;
   inherits: false;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 .fmstr-cmp-wuf-hero {
   --p-bg-glow: radial-gradient(60% 70% at 50% 0%, #f7f3ff 0%, #ffffff 70%);
@@ -2302,8 +2304,6 @@ useJsonld([
     border-radius: 12px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-wuf-answer {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -2468,8 +2468,6 @@ useJsonld([
     order: 3;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-wuf-glance {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -2782,8 +2780,6 @@ useJsonld([
   initial-value: 0deg;
   inherits: false;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-wuf-demos {
   --p-bg-card: #ffffff;
   --p-bg-track: #f2f4f7;
@@ -2945,11 +2941,6 @@ useJsonld([
   animation: fmstr-wuf-ring-spin 7s linear infinite;
   box-shadow: var(--p-shadow-xs);
 }
-@keyframes fmstr-wuf-ring-spin {
-  to {
-    --fmstr-wuf-ring: 360deg;
-  }
-}
 @media (prefers-reduced-motion: reduce) {
   .fmstr-cmp-wuf-demos__frame {
     animation: none;
@@ -3015,8 +3006,6 @@ useJsonld([
     padding: 16px 20px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-wuf-why-leave {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -3141,8 +3130,6 @@ useJsonld([
   font-size: 13px;
   color: #697586;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-wuf-pricing {
   --p-bg: #f9fafb;
   --p-bg-card: #ffffff;
@@ -3375,8 +3362,6 @@ useJsonld([
     gap: 12px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-wuf-api-mcp {
   --p-bg-card: #ffffff;
   --p-bg-tint: #f7f3ff;
@@ -3550,8 +3535,6 @@ useJsonld([
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-wuf-why-pick {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -3683,8 +3666,6 @@ useJsonld([
     padding: 20px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-wuf-switch {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -3825,8 +3806,6 @@ useJsonld([
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-wuf-when-wins {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -3984,8 +3963,6 @@ useJsonld([
   font-weight: 600;
   line-height: 1.5;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-wuf-privacy {
   --p-bg-section: #0f0921;
@@ -4156,8 +4133,6 @@ useJsonld([
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-wuf-ask {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -4302,8 +4277,6 @@ useJsonld([
     grid-template-columns: 1fr;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-wuf-other-alts {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -4430,8 +4403,6 @@ useJsonld([
     grid-template-columns: 1fr;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-wuf-faqs {
   --p-bg-card: #ffffff;
   --p-bg-header: #f9fafb;
@@ -4556,8 +4527,6 @@ useJsonld([
     font-size: 15px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-wuf-more-ai {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -4696,8 +4665,6 @@ useJsonld([
     grid-template-columns: 1fr;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 .fmstr-cmp-wuf-cta {
   --p-bg-violet: #6941c6;

@@ -11,33 +11,57 @@ import getTemplatesAndCategories from './getTemplatesAndCategories.js'
 // but keep it consistent with getTemplatesAndCategories.js, which hit this
 // exact bug once imported from a .vue page.
 const CONTENT_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../content')
+const PAGES_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../pages')
 
-// Reads content/<collection>/**/*.json directly instead of queryCollection() —
-// this hook runs at build time outside any Vue/request context, where
-// queryCollection is not reliably available (nuxt/content#3586).
-function listSlugsFromDisk(subdir) {
-  const root = path.join(CONTENT_DIR, subdir)
+// Features are fully migrated off content/features JSON to static pages/features/*.vue
+// files (one per slug), so route generation reads the slugs straight off the
+// pages/features directory instead. Skips index.vue (the /features/ listing page,
+// seeded separately) and any [bracket].vue dynamic-route file.
+function listFeatureSlugsFromDisk() {
+  const root = path.join(PAGES_DIR, 'features')
   if (!fs.existsSync(root)) return []
+  return fs
+    .readdirSync(root, { withFileTypes: true })
+    .filter((entry) => entry.isFile() && entry.name.endsWith('.vue'))
+    .map((entry) => entry.name.replace(/\.vue$/, ''))
+    .filter((name) => name !== 'index' && !name.startsWith('['))
+}
+
+// content/pages is fully migrated too, same reasoning as listFeatureSlugsFromDisk
+// above — read slugs straight off pages/**/*.vue instead. Excludes subdirectories
+// that already have their own dedicated route-generation function (blog/,
+// templates/, features/) or aren't content pages at all (__TOOLS__/), plus the
+// handful of top-level system/tool pages that aren't part of the content-driven
+// "pages" set and are handled elsewhere (ignored by nitro.prerender, excluded
+// from the sitemap, or just always linked from nav/footer).
+const PAGE_SKIP_DIRS = new Set(['blog', 'templates', 'features', '__TOOLS__'])
+const PAGE_SKIP_FILES = new Set([
+  'index', 'preview', 'design-preview', 'template-preview', 'comparison-tool',
+  'contact', 'pricing', 'security', 'terms-of-service', 'jotform-101', 'typeform-101',
+])
+
+function listPageSlugsFromDisk() {
   const slugs = []
-  const walk = (dir) => {
+  const walk = (dir, isRoot) => {
     for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-      const full = path.join(dir, entry.name)
       if (entry.isDirectory()) {
-        walk(full)
-      } else if (entry.name.endsWith('.json')) {
-        slugs.push(path.relative(root, full).replace(/\.json$/, ''))
+        if (isRoot && PAGE_SKIP_DIRS.has(entry.name)) continue
+        walk(path.join(dir, entry.name), false)
+      } else if (entry.name.endsWith('.vue') && !entry.name.startsWith('[')) {
+        const slug = path.relative(PAGES_DIR, path.join(dir, entry.name)).replace(/\.vue$/, '')
+        if (isRoot && PAGE_SKIP_FILES.has(slug)) continue
+        slugs.push(slug)
       }
     }
   }
-  walk(root)
+  walk(PAGES_DIR, true)
   return slugs
 }
 
-// Same reasoning as listSlugsFromDisk above, but blog posts are markdown
-// with YAML frontmatter now, and route generation needs more than just the
-// slug (updatedAt/featured/publishedAt for lastmod + pagination math) — so
-// read each file's frontmatter directly instead of going through
-// queryCollection('blog') at all. This mirrors the exact frontmatter format
+// Blog posts are markdown with YAML frontmatter, and route generation needs
+// more than just the slug (updatedAt/featured/publishedAt for lastmod +
+// pagination math) — so read each file's frontmatter directly instead of
+// going through queryCollection('blog') at all. This mirrors the exact frontmatter format
 // scripts/generate-pages-from-content.mjs and getAllBlogs.js's
 // stripFrontmatter already assume: `---\nkey: <JSON value>\n...\n---\n<body>`.
 function readBlogFrontmatter(filePath) {
@@ -100,13 +124,13 @@ export default async () => {
 }
 
 export const getFeatureRoutes = async () => {
-  return listSlugsFromDisk('features').map((slug) => ({
+  return listFeatureSlugsFromDisk().map((slug) => ({
     url: `/features/${slug}/`,
   }))
 }
 
 export const getPageRoutes = async () => {
-  return listSlugsFromDisk('pages').map((slug) => ({
+  return listPageSlugsFromDisk().map((slug) => ({
     url: `/${slug}/`,
   }))
 }

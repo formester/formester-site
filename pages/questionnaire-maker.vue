@@ -2935,8 +2935,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-qm-quality-control {
   --fmstr-cmp-qm-quality-control-bg-section: #0f0921;
   --fmstr-cmp-qm-quality-control-bg-glow: radial-gradient(
@@ -3136,8 +3134,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-questionnaire-vs-survey-vs-form {
   --fmstr-cmp-questionnaire-vs-survey-vs-form-bg-section: #f9fafb;
   --fmstr-cmp-questionnaire-vs-survey-vs-form-bg-card: #ffffff;
@@ -3332,8 +3328,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-completion-rate-benchmarks {
   --fmstr-cmp-completion-rate-benchmarks-bg-section: #f9fafb;
   --fmstr-cmp-completion-rate-benchmarks-bg-card: #ffffff;
@@ -3527,8 +3521,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-question-types {
   --fmstr-cmp-question-types-bg-section: #ffffff;
   --fmstr-cmp-question-types-bg-card: #ffffff;
@@ -3694,8 +3686,6 @@ useJsonld([
     grid-template-columns: 1fr;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-methodology-research {
   --fmstr-cmp-methodology-research-bg-section: #0f0921;
@@ -3890,8 +3880,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-who-builds-questionnaires {
   --fmstr-cmp-who-builds-questionnaires-bg-section: #f9fafb;
   --fmstr-cmp-who-builds-questionnaires-bg-card: #ffffff;
@@ -4075,8 +4063,6 @@ useJsonld([
     gap: var(--fmstr-cmp-who-builds-questionnaires-space-3);
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-api-mcp-developers {
   --fmstr-cmp-api-mcp-developers-bg-section: #f9fafb;
@@ -4290,8 +4276,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-qm-privacy {
   --fmstr-cmp-qm-privacy-bg-section: #0f0921;
   --fmstr-cmp-qm-privacy-bg-glow: radial-gradient(
@@ -4487,8 +4471,6 @@ useJsonld([
     padding: var(--fmstr-cmp-qm-privacy-space-6);
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-more-ai-tools-qm {
   --fmstr-cmp-more-ai-tools-qm-bg-section: #ffffff;

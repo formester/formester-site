@@ -66,7 +66,6 @@
 
 <script setup>
 import HeroV2 from '@/components/v2/HeroV2.vue'
-import { getPageBySlug } from '@/utils/getAllPages'
 import TrustSeals from '@/components/v2/TrustSeals.vue'
 import StatsSection from '@/components/v2/StatsSection.vue'
 import StickyStepsSection from '@/components/v2/StickyStepsSection.vue'

@@ -2779,8 +2779,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-question-quality {
   --fmstr-cmp-question-quality-bg-section: #0f0921;
   --fmstr-cmp-question-quality-bg-glow: radial-gradient(
@@ -2972,8 +2970,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-how-to-build-a-quiz {
   --fmstr-cmp-how-to-build-a-quiz-bg-section: #f9fafb;
   --fmstr-cmp-how-to-build-a-quiz-bg-card: #ffffff;
@@ -3115,8 +3111,6 @@ useJsonld([
     grid-template-columns: 1fr;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-why-teams-pick-formester {
   --fmstr-cmp-why-teams-pick-formester-bg-section: #f9fafb;
@@ -3286,8 +3280,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-start-from-template {
   --fmstr-cmp-start-from-template-bg-section: #ffffff;
   --fmstr-cmp-start-from-template-bg-card: #ffffff;
@@ -3445,8 +3437,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-ai-vs-traditional {
   --fmstr-cmp-ai-vs-traditional-bg-section: #f9fafb;
   --fmstr-cmp-ai-vs-traditional-bg-card: #ffffff;
@@ -3603,8 +3593,6 @@ useJsonld([
     min-width: 640px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-api-mcp-developers {
   --fmstr-cmp-api-mcp-developers-bg-section: #f9fafb;
@@ -3818,8 +3806,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-privacy-data-ownership {
   --fmstr-cmp-privacy-data-ownership-bg-section: #0f0921;
   --fmstr-cmp-privacy-data-ownership-bg-glow: radial-gradient(
@@ -4018,8 +4004,6 @@ useJsonld([
     padding: var(--fmstr-cmp-privacy-data-ownership-space-6);
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-more-ai-tools-aqm {
   --fmstr-cmp-more-ai-tools-aqm-bg-section: #ffffff;

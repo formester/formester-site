@@ -68,6 +68,27 @@ function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'))
 }
 
+// content/pages/**/*.json isn't flat — integrations/, plugins/, tools/, and
+// use-case/ are nested subdirs. Their `slug` field already carries the
+// nested path (e.g. "integrations/airtable"), so a plain recursive listing
+// is enough; the existing writeFile()'s mkdirSync({recursive:true}) handles
+// creating the matching pages/<subdir>/ output directory.
+function listJsonFilesRecursive(dir) {
+  const files = []
+  const walk = (current) => {
+    for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
+      const full = path.join(current, entry.name)
+      if (entry.isDirectory()) {
+        walk(full)
+      } else if (entry.name.endsWith('.json')) {
+        files.push(full)
+      }
+    }
+  }
+  walk(dir)
+  return files
+}
+
 // ---------- generic (page/feature/home) rendering ----------
 
 // A raw-html block goes through the real <RawHtml> component (v-html + its
@@ -138,6 +159,81 @@ function isWellFormedCss(css) {
   } catch {
     return false
   }
+}
+
+// The final <style scoped> block is a straight concatenation of every
+// raw-html component's own <style> block on the page, in component order.
+// That's enough to produce two real problems once combined:
+// - @import/@charset must precede every other rule per the CSS spec; a
+//   later component's @import ends up stranded mid-stylesheet and gets
+//   dropped or warned on by Vite's PostCSS pass.
+// - the same rule (e.g. a shared keyframes or utility class) can appear
+//   verbatim in more than one snippet, since each raw-html block was
+//   authored independently.
+// Clean both up here, once, after all per-component CSS is joined.
+function ruleSignature(rule) {
+  const decls = rule.nodes
+    .filter((node) => node.type === 'decl')
+    .map((decl) => `${decl.prop}:${decl.value}${decl.important ? ' !important' : ''}`)
+    .sort()
+    .join(';')
+  return `${rule.selector}{${decls}}`
+}
+
+function processHarvestedCss(cssText) {
+  if (!cssText.trim()) return cssText
+  const root = postcss.parse(cssText)
+
+  // Dedupe: drop a rule if an earlier rule already has the exact same
+  // selector + declarations. Rules that share a selector but differ in
+  // declarations are left alone — that's legitimate cascading, not a dupe.
+  const seenRules = new Set()
+  root.walkRules((rule) => {
+    const signature = ruleSignature(rule)
+    if (seenRules.has(signature)) {
+      rule.remove()
+    } else {
+      seenRules.add(signature)
+    }
+  })
+
+  // Same idea for blockless at-rules (@import, @charset, and anything else
+  // with no nested body — `atRule.nodes` is undefined for these, unlike
+  // @keyframes/@font-face which do have one). It's common for the exact same
+  // @import to appear in more than one raw-html snippet on the same page
+  // (e.g. a shared web-font import) — collapse those down to one.
+  const seenAtRules = new Set()
+  root.walkAtRules((atRule) => {
+    if (atRule.nodes !== undefined) return
+    const signature = `@${atRule.name} ${atRule.params}`
+    if (seenAtRules.has(signature)) {
+      atRule.remove()
+    } else {
+      seenAtRules.add(signature)
+    }
+  })
+
+  // Strip rules/at-rules left empty by dedup above, or already empty in
+  // the source markup. @import/@charset have no block to be "empty" —
+  // walkAtRules' nodes is undefined for them, so they're untouched here.
+  root.walkRules((rule) => {
+    if (!rule.nodes.length) rule.remove()
+  })
+  root.walkAtRules((atRule) => {
+    if (atRule.nodes && atRule.nodes.length === 0) atRule.remove()
+  })
+
+  // Hoist @import/@charset to the top last, so nothing above re-shuffles
+  // them afterward. Order preserved among themselves; @charset (if present)
+  // naturally sorts first since it must already precede @import in valid CSS.
+  const hoisted = []
+  root.walkAtRules(/^(import|charset)$/, (atRule) => {
+    hoisted.push(atRule)
+    atRule.remove()
+  })
+  hoisted.reverse().forEach((atRule) => root.prepend(atRule))
+
+  return root.toString()
 }
 
 function renderComponentBlock(component, index, mapping, importsUsed, warnings, harvestedCss) {
@@ -229,7 +325,9 @@ function buildGenericPage(data, mapping, warnings) {
 
   const templateBody = tagLines.length ? tagLines.join('\n\n') : '    <p>No components to display</p>'
 
-  const styleBlock = harvestedCss.length ? `\n\n<style scoped>\n${harvestedCss.join('\n\n')}\n</style>\n` : ''
+  const styleBlock = harvestedCss.length
+    ? `\n\n<style scoped>\n${processHarvestedCss(harvestedCss.join('\n\n'))}\n</style>\n`
+    : ''
 
   return `<template>\n  <div>\n${templateBody}\n  </div>\n</template>\n\n<script setup>\n${scriptParts.join('\n')}\n</script>\n${styleBlock}`
 }
@@ -587,10 +685,11 @@ function main() {
   const homeData = readJson(path.join(CONTENT_DIR, 'home.json'))
   writeFile(path.join(PAGES_DIR, 'index.vue'), buildGenericPage(homeData, mapping, warnings))
 
-  // content/pages/*.json -> pages/<slug>.vue
-  const pageFiles = fs.readdirSync(path.join(CONTENT_DIR, 'pages')).filter((f) => f.endsWith('.json'))
+  // content/pages/**/*.json -> pages/<slug>.vue (slug may be nested, e.g.
+  // "integrations/airtable" -> pages/integrations/airtable.vue)
+  const pageFiles = listJsonFilesRecursive(path.join(CONTENT_DIR, 'pages'))
   for (const file of pageFiles) {
-    const data = readJson(path.join(CONTENT_DIR, 'pages', file))
+    const data = readJson(file)
     const outPath = path.join(PAGES_DIR, `${data.slug}.vue`)
     writeFile(outPath, buildGenericPage(data, mapping, warnings))
     pageCount += 1

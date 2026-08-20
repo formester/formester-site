@@ -1250,6 +1250,7 @@ useJsonld([
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-cfg-hero a {
   text-decoration: none !important;
 }
@@ -1531,8 +1532,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-cfg-inputs {
   --fmstr-cmp-cfg-inputs-bg-card: #ffffff;
   --fmstr-cmp-cfg-inputs-bg-violet-25: #f7f3ff;
@@ -1691,8 +1690,6 @@ useJsonld([
     padding: var(--fmstr-cmp-cfg-inputs-space-6);
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-cfg-quality-control {
   --fmstr-cmp-cfg-quality-control-bg-section: #0f0921;
@@ -1897,8 +1894,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-cfg-who-uses {
   --fmstr-cmp-cfg-who-uses-bg-card: #ffffff;
   --fmstr-cmp-cfg-who-uses-bg-violet-25: #f7f3ff;
@@ -2078,8 +2073,6 @@ useJsonld([
     padding: var(--fmstr-cmp-cfg-who-uses-space-6);
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-cfg-api-mcp {
   --fmstr-cmp-cfg-api-mcp-bg-card: #ffffff;
@@ -2298,8 +2291,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-cfg-privacy-data-ownership {
   --fmstr-cmp-cfg-privacy-data-ownership-bg-section: #0f0921;
   --fmstr-cmp-cfg-privacy-data-ownership-bg-glow: radial-gradient(
@@ -2498,8 +2489,6 @@ useJsonld([
     padding: var(--fmstr-cmp-cfg-privacy-data-ownership-space-6);
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-cfg-more-tools {
   --fmstr-cmp-cfg-more-tools-bg-card: #ffffff;

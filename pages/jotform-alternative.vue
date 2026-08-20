@@ -2279,7 +2279,7 @@ useJsonld([
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jot-hero {
   --p-bg-glow: radial-gradient(60% 70% at 50% 0%, #f7f3ff 0%, #ffffff 70%);
   --p-fg-1: #101828;
@@ -2432,8 +2432,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-jot-trust {
   --p-bg-card: #ffffff;
   --p-fg-1: #101828;
@@ -2524,8 +2522,6 @@ useJsonld([
     text-align: center;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jot-glance {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -2667,8 +2663,6 @@ useJsonld([
     line-height: 32px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jot-why-leave {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -2788,8 +2782,6 @@ useJsonld([
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jot-free {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -2905,8 +2897,6 @@ useJsonld([
     line-height: 32px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jot-pricing {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -3028,8 +3018,6 @@ useJsonld([
     line-height: 32px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jot-paid {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -3162,8 +3150,6 @@ useJsonld([
     line-height: 32px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-jot-lio {
   --p-bg-card: #ffffff;
@@ -3332,8 +3318,6 @@ useJsonld([
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jot-api-mcp {
   --p-bg-card: #ffffff;
   --p-bg-tint: #f7f3ff;
@@ -3507,8 +3491,6 @@ useJsonld([
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jot-why-pick {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -3640,8 +3622,6 @@ useJsonld([
     padding: 20px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jot-switch {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -3782,8 +3762,6 @@ useJsonld([
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jot-when-wins {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -3905,8 +3883,6 @@ useJsonld([
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jot-other-alts {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -4199,8 +4175,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-jot-privacy {
   --p-bg-section: #0f0921;
   --p-bg-glow: radial-gradient(
@@ -4370,8 +4344,6 @@ useJsonld([
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jot-ask {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -4516,8 +4488,6 @@ useJsonld([
     grid-template-columns: 1fr;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 .fmstr-cmp-jot-cta {
   --p-bg-violet: #6941c6;

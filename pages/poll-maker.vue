@@ -2704,7 +2704,6 @@ useJsonld([
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-why-teams-pick {
   --fmstr-cmp-why-teams-pick-bg-card: #ffffff;
   --fmstr-cmp-why-teams-pick-bg-tile: #f7f3ff;
@@ -2843,8 +2842,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-personas {
   --fmstr-cmp-personas-bg-card: #ffffff;
   --fmstr-cmp-personas-bg-tile: #f7f3ff;
@@ -2976,8 +2973,6 @@ useJsonld([
     grid-template-columns: 1fr;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-privacy {
   --fmstr-cmp-privacy-bg-dark: #0f0921;
@@ -3177,8 +3172,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-comparison-table {
   --fmstr-cmp-comparison-table-bg-section: #f9fafb;
   --fmstr-cmp-comparison-table-bg-table: #ffffff;
@@ -3332,8 +3325,6 @@ useJsonld([
     line-height: var(--fmstr-cmp-comparison-table-lh-2xl);
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-real-polls {
   --fmstr-cmp-real-polls-bg-card: #ffffff;
@@ -3558,8 +3549,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-poll-attributes {
   --fmstr-cmp-poll-attributes-bg-section: #f9fafb;
   --fmstr-cmp-poll-attributes-bg-card: #ffffff;
@@ -3726,8 +3715,6 @@ useJsonld([
     padding: var(--fmstr-cmp-poll-attributes-space-2) var(--fmstr-cmp-poll-attributes-space-5);
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-agents-api {
   --fmstr-cmp-agents-api-bg-card-top: #ffffff;
@@ -3934,8 +3921,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-templates-grid {
   --fmstr-cmp-templates-grid-bg-section: #f9fafb;
   --fmstr-cmp-templates-grid-bg-card: #ffffff;
@@ -4097,8 +4082,6 @@ useJsonld([
     grid-template-columns: 1fr;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-more-ai-tools {
   --fmstr-cmp-more-ai-tools-bg-card: #ffffff;

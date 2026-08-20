@@ -950,7 +950,7 @@
                     <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9Z" /></svg
                 ></span>
                 <h3 class="fmstr-cmp-lfm-more-tools__title">Consent Form Generator</h3>
-                <p class="fmstr-cmp-lfm-more-tools__desc">Legally valid consent forms with e-signature.</p> </a
+                <p class="fmstr-cmp-lfm-more-tools__desc">Legally valid consent forms with e-signature.</p></a
               ><a class="fmstr-cmp-lfm-more-tools__card" href="https://formester.com/contact-form-generator/"
                 ><span class="fmstr-cmp-lfm-more-tools__icon" aria-hidden="true"
                   ><svg
@@ -967,7 +967,7 @@
                     <polyline points="22,6 12,13 2,6" /></svg
                 ></span>
                 <h3 class="fmstr-cmp-lfm-more-tools__title">Contact Form Generator</h3>
-                <p class="fmstr-cmp-lfm-more-tools__desc">Free contact forms with AI generation.</p> </a
+                <p class="fmstr-cmp-lfm-more-tools__desc">Free contact forms with AI generation.</p></a
               ><a class="fmstr-cmp-lfm-more-tools__card" href="https://formester.com/ai-form-generator/"
                 ><span class="fmstr-cmp-lfm-more-tools__icon" aria-hidden="true"
                   ><svg
@@ -985,7 +985,7 @@
                     /></svg
                 ></span>
                 <h3 class="fmstr-cmp-lfm-more-tools__title">AI Form Generator</h3>
-                <p class="fmstr-cmp-lfm-more-tools__desc">Type a prompt, get a form in 30 seconds.</p> </a
+                <p class="fmstr-cmp-lfm-more-tools__desc">Type a prompt, get a form in 30 seconds.</p></a
               ><a
                 class="fmstr-cmp-lfm-more-tools__card"
                 href="https://formester.com/templates/job-application-form-template/"
@@ -1006,8 +1006,8 @@
                     <line x1="9" y1="17" x2="15" y2="17" /></svg
                 ></span>
                 <h3 class="fmstr-cmp-lfm-more-tools__title">Job Application Form Template</h3>
-                <p class="fmstr-cmp-lfm-more-tools__desc">Free hiring form with scoring built in.</p>
-              </a>
+                <p class="fmstr-cmp-lfm-more-tools__desc">Free hiring form with scoring built in.</p></a
+              >
             </div>
           </div>
         </section>
@@ -1480,10 +1480,10 @@ useJsonld([
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-lfm-3ways a {
   text-decoration: none !important;
 }
-
 .fmstr-cmp-lfm-3ways {
   --c-card: #ffffff;
   --c-fg-1: #101828;
@@ -1502,26 +1502,22 @@ useJsonld([
   text-align: left !important;
   overflow-x: hidden;
 }
-
 .fmstr-cmp-lfm-3ways *,
 .fmstr-cmp-lfm-3ways *::before,
 .fmstr-cmp-lfm-3ways *::after {
   box-sizing: border-box;
 }
-
 .fmstr-cmp-lfm-3ways__container {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 24px;
   min-width: 0;
 }
-
 .fmstr-cmp-lfm-3ways__header {
   margin: 0 auto 40px;
   max-width: 760px;
   text-align: center;
 }
-
 .fmstr-cmp-lfm-3ways__eyebrow {
   font-size: 12px;
   font-weight: 700;
@@ -1534,7 +1530,6 @@ useJsonld([
   border-radius: 9999px;
   margin: 0 0 16px;
 }
-
 .fmstr-cmp-lfm-3ways__h2 {
   font-size: clamp(26px, 3vw, 36px);
   font-weight: 600;
@@ -1543,21 +1538,18 @@ useJsonld([
   margin: 0 0 14px;
   color: var(--c-fg-1);
 }
-
 .fmstr-cmp-lfm-3ways__sub {
   color: var(--c-fg-2);
   font-size: 17px;
   line-height: 1.6;
   margin: 0;
 }
-
 .fmstr-cmp-lfm-3ways__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   min-width: 0;
 }
-
 .fmstr-cmp-lfm-3ways__card {
   min-width: 0;
   background: var(--c-card);
@@ -1572,12 +1564,10 @@ useJsonld([
     border-color 0.15s ease,
     box-shadow 0.15s ease;
 }
-
 .fmstr-cmp-lfm-3ways__card:hover {
   border-color: #9777e0;
   box-shadow: 0 2px 4px 0 rgba(16, 24, 40, 0.06);
 }
-
 .fmstr-cmp-lfm-3ways__icon {
   width: 40px;
   height: 40px;
@@ -1588,12 +1578,10 @@ useJsonld([
   place-items: center;
   color: var(--c-violet-600);
 }
-
 .fmstr-cmp-lfm-3ways__icon svg {
   width: 22px;
   height: 22px;
 }
-
 .fmstr-cmp-lfm-3ways__title {
   font-size: 18px;
   font-weight: 600;
@@ -1601,14 +1589,12 @@ useJsonld([
   margin: 0;
   color: var(--c-fg-1);
 }
-
 .fmstr-cmp-lfm-3ways__body {
   color: var(--c-fg-2);
   font-size: 15px;
   line-height: 1.55;
   margin: 0;
 }
-
 .fmstr-cmp-lfm-3ways__example {
   background: var(--c-tint);
   border-left: 3px solid var(--c-violet-500);
@@ -1619,23 +1605,18 @@ useJsonld([
   color: var(--c-fg-1);
   font-style: italic;
 }
-
 @media (max-width: 760px) {
   .fmstr-cmp-lfm-3ways {
     padding: 48px 16px;
   }
-
   .fmstr-cmp-lfm-3ways__grid {
     grid-template-columns: 1fr;
     gap: 14px;
   }
-
   .fmstr-cmp-lfm-3ways__h2 {
     font-size: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-lfm-quality-control {
   --fmstr-cmp-lfm-quality-control-bg-section: #0f0921;
@@ -1747,7 +1728,6 @@ useJsonld([
   color: rgba(255, 255, 255, 0.78);
   margin: 0 0 var(--fmstr-cmp-lfm-quality-control-space-4);
 }
-
 .fmstr-cmp-lfm-quality-control__body p:last-child {
   margin-bottom: 0;
 }
@@ -1815,7 +1795,6 @@ useJsonld([
   line-height: 22px;
   color: var(--fmstr-cmp-lfm-quality-control-fg-row);
 }
-
 .fmstr-cmp-lfm-quality-control__item-text strong {
   color: #ffffff;
   font-weight: var(--fmstr-cmp-lfm-quality-control-fw-bold);
@@ -1825,22 +1804,18 @@ useJsonld([
   .fmstr-cmp-lfm-quality-control {
     padding: var(--fmstr-cmp-lfm-quality-control-space-8) var(--fmstr-cmp-lfm-quality-control-space-4);
   }
-
   .fmstr-cmp-lfm-quality-control__container {
     padding: var(--fmstr-cmp-lfm-quality-control-space-7);
     border-radius: 20px;
   }
-
   .fmstr-cmp-lfm-quality-control__inner {
     grid-template-columns: 1fr;
     gap: var(--fmstr-cmp-lfm-quality-control-space-8);
   }
-
   .fmstr-cmp-lfm-quality-control__heading {
     font-size: var(--fmstr-cmp-lfm-quality-control-fs-2xl);
     line-height: var(--fmstr-cmp-lfm-quality-control-lh-2xl);
   }
-
   .fmstr-cmp-lfm-quality-control__card {
     padding: var(--fmstr-cmp-lfm-quality-control-space-6);
   }
@@ -1858,26 +1833,22 @@ useJsonld([
   color: var(--c-fg-1);
   overflow-x: hidden;
 }
-
 .fmstr-cmp-lfm-steps-video *,
 .fmstr-cmp-lfm-steps-video *::before,
 .fmstr-cmp-lfm-steps-video *::after {
   box-sizing: border-box;
 }
-
 .fmstr-cmp-lfm-steps-video__container {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 24px;
   min-width: 0;
 }
-
 .fmstr-cmp-lfm-steps-video__header {
   margin: 0 auto 40px;
   max-width: 760px;
   text-align: center;
 }
-
 .fmstr-cmp-lfm-steps-video__eyebrow {
   font-size: 12px;
   font-weight: 700;
@@ -1890,7 +1861,6 @@ useJsonld([
   border-radius: 9999px;
   margin: 0 0 16px;
 }
-
 .fmstr-cmp-lfm-steps-video__h2 {
   font-size: clamp(26px, 3vw, 36px);
   font-weight: 600;
@@ -1899,21 +1869,18 @@ useJsonld([
   margin: 0 0 14px;
   color: var(--c-fg-1);
 }
-
 .fmstr-cmp-lfm-steps-video__sub {
   color: var(--c-fg-2);
   font-size: 17px;
   line-height: 1.6;
   margin: 0;
 }
-
 .fmstr-cmp-lfm-steps-video__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   min-width: 0;
 }
-
 .fmstr-cmp-lfm-steps-video__card {
   min-width: 0;
   display: flex;
@@ -1928,12 +1895,10 @@ useJsonld([
     border-color 0.15s ease,
     box-shadow 0.15s ease;
 }
-
 .fmstr-cmp-lfm-steps-video__card:hover {
   border-color: #9777e0;
   box-shadow: 0 2px 4px 0 rgba(16, 24, 40, 0.06);
 }
-
 .fmstr-cmp-lfm-steps-video__frame {
   border-radius: 10px;
   overflow: hidden;
@@ -1941,14 +1906,12 @@ useJsonld([
   background: #fafafa;
   aspect-ratio: 16/9;
 }
-
 .fmstr-cmp-lfm-steps-video__video {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
 }
-
 .fmstr-cmp-lfm-steps-video__title {
   font-size: 17px;
   font-weight: 600;
@@ -1956,30 +1919,25 @@ useJsonld([
   margin: 0;
   color: var(--c-fg-1);
 }
-
 .fmstr-cmp-lfm-steps-video__body {
   color: var(--c-fg-2);
   font-size: 14px;
   line-height: 1.55;
   margin: 0;
 }
-
 @media (max-width: 900px) {
   .fmstr-cmp-lfm-steps-video__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 640px) {
   .fmstr-cmp-lfm-steps-video {
     padding: 48px 16px;
   }
-
   .fmstr-cmp-lfm-steps-video__grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
-
   .fmstr-cmp-lfm-steps-video__h2 {
     font-size: 24px;
   }
@@ -1996,26 +1954,22 @@ useJsonld([
   color: var(--c-fg-1);
   overflow-x: hidden;
 }
-
 .fmstr-cmp-lfm-videos *,
 .fmstr-cmp-lfm-videos *::before,
 .fmstr-cmp-lfm-videos *::after {
   box-sizing: border-box;
 }
-
 .fmstr-cmp-lfm-videos__container {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 24px;
   min-width: 0;
 }
-
 .fmstr-cmp-lfm-videos__header {
   margin: 0 auto 40px;
   max-width: 760px;
   text-align: center;
 }
-
 .fmstr-cmp-lfm-videos__eyebrow {
   font-size: 12px;
   font-weight: 700;
@@ -2028,7 +1982,6 @@ useJsonld([
   border-radius: 9999px;
   margin: 0 0 16px;
 }
-
 .fmstr-cmp-lfm-videos__h2 {
   font-size: clamp(26px, 3vw, 36px);
   font-weight: 600;
@@ -2037,21 +1990,18 @@ useJsonld([
   margin: 0 0 14px;
   color: var(--c-fg-1);
 }
-
 .fmstr-cmp-lfm-videos__sub {
   color: var(--c-fg-2);
   font-size: 17px;
   line-height: 1.6;
   margin: 0;
 }
-
 .fmstr-cmp-lfm-videos__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   min-width: 0;
 }
-
 .fmstr-cmp-lfm-videos__card {
   min-width: 0;
   display: flex;
@@ -2066,12 +2016,10 @@ useJsonld([
     border-color 0.15s ease,
     box-shadow 0.15s ease;
 }
-
 .fmstr-cmp-lfm-videos__card:hover {
   border-color: #9777e0;
   box-shadow: 0 2px 4px 0 rgba(16, 24, 40, 0.06);
 }
-
 .fmstr-cmp-lfm-videos__frame {
   border-radius: 10px;
   overflow: hidden;
@@ -2079,14 +2027,12 @@ useJsonld([
   background: #fafafa;
   aspect-ratio: 16/10;
 }
-
 .fmstr-cmp-lfm-videos__media {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
 }
-
 .fmstr-cmp-lfm-videos__title {
   font-size: 18px;
   font-weight: 600;
@@ -2094,30 +2040,24 @@ useJsonld([
   margin: 0;
   color: var(--c-fg-1);
 }
-
 .fmstr-cmp-lfm-videos__body {
   color: var(--c-fg-2);
   font-size: 14.5px;
   line-height: 1.55;
   margin: 0;
 }
-
 @media (max-width: 760px) {
   .fmstr-cmp-lfm-videos {
     padding: 48px 16px;
   }
-
   .fmstr-cmp-lfm-videos__grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
-
   .fmstr-cmp-lfm-videos__h2 {
     font-size: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-lfm-who-uses {
   --fmstr-cmp-lfm-who-uses-bg-card: #ffffff;
@@ -2223,7 +2163,6 @@ useJsonld([
     box-shadow 200ms ease,
     transform 200ms ease;
 }
-
 .fmstr-cmp-lfm-who-uses__card:hover {
   border-color: var(--fmstr-cmp-lfm-who-uses-border-violet);
   box-shadow: var(--fmstr-cmp-lfm-who-uses-shadow-md);
@@ -2273,7 +2212,6 @@ useJsonld([
   gap: var(--fmstr-cmp-lfm-who-uses-space-1);
   transition: color 150ms ease;
 }
-
 .fmstr-cmp-lfm-who-uses__cta:hover {
   color: var(--fmstr-cmp-lfm-who-uses-violet-700);
   text-decoration: underline;
@@ -2289,22 +2227,17 @@ useJsonld([
   .fmstr-cmp-lfm-who-uses {
     padding: var(--fmstr-cmp-lfm-who-uses-space-12) var(--fmstr-cmp-lfm-who-uses-space-4);
   }
-
   .fmstr-cmp-lfm-who-uses__heading {
     font-size: var(--fmstr-cmp-lfm-who-uses-fs-2xl);
     line-height: var(--fmstr-cmp-lfm-who-uses-lh-2xl);
   }
-
   .fmstr-cmp-lfm-who-uses__grid {
     grid-template-columns: 1fr;
   }
-
   .fmstr-cmp-lfm-who-uses__card {
     padding: var(--fmstr-cmp-lfm-who-uses-space-6);
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-lfm-api-mcp {
   --fmstr-cmp-lfm-api-mcp-bg-card: #ffffff;
@@ -2421,7 +2354,6 @@ useJsonld([
     border-color 150ms ease,
     box-shadow 150ms ease;
 }
-
 .fmstr-cmp-lfm-api-mcp__card:hover {
   border-color: var(--fmstr-cmp-lfm-api-mcp-violet-300);
   box-shadow: var(--fmstr-cmp-lfm-api-mcp-shadow-md);
@@ -2453,7 +2385,6 @@ useJsonld([
   margin-bottom: var(--fmstr-cmp-lfm-api-mcp-space-3);
   align-self: flex-start;
 }
-
 .fmstr-cmp-lfm-api-mcp__badge--alt {
   background: var(--fmstr-cmp-lfm-api-mcp-bg-tint);
   color: var(--fmstr-cmp-lfm-api-mcp-violet-600);
@@ -2501,7 +2432,6 @@ useJsonld([
   text-decoration: none;
   align-self: flex-start;
 }
-
 .fmstr-cmp-lfm-api-mcp__cta:hover {
   text-decoration: underline;
   color: var(--fmstr-cmp-lfm-api-mcp-violet-600) !important;
@@ -2511,27 +2441,21 @@ useJsonld([
   .fmstr-cmp-lfm-api-mcp {
     padding: var(--fmstr-cmp-lfm-api-mcp-space-12) var(--fmstr-cmp-lfm-api-mcp-space-4);
   }
-
   .fmstr-cmp-lfm-api-mcp__title {
     font-size: var(--fmstr-cmp-lfm-api-mcp-fs-2xl);
     line-height: 32px;
   }
-
   .fmstr-cmp-lfm-api-mcp__intro {
     font-size: var(--fmstr-cmp-lfm-api-mcp-fs-md);
     line-height: var(--fmstr-cmp-lfm-api-mcp-lh-md);
   }
-
   .fmstr-cmp-lfm-api-mcp__grid {
     grid-template-columns: 1fr;
   }
-
   .fmstr-cmp-lfm-api-mcp__card {
     padding: var(--fmstr-cmp-lfm-api-mcp-space-6);
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-lfm-privacy-data-ownership {
   --fmstr-cmp-lfm-privacy-data-ownership-bg-section: #0f0921;
@@ -2640,7 +2564,6 @@ useJsonld([
   color: rgba(255, 255, 255, 0.78);
   margin: 0 0 var(--fmstr-cmp-lfm-privacy-data-ownership-space-4);
 }
-
 .fmstr-cmp-lfm-privacy-data-ownership__body p:last-child {
   margin-bottom: 0;
 }
@@ -2712,27 +2635,22 @@ useJsonld([
   .fmstr-cmp-lfm-privacy-data-ownership {
     padding: var(--fmstr-cmp-lfm-privacy-data-ownership-space-8) var(--fmstr-cmp-lfm-privacy-data-ownership-space-4);
   }
-
   .fmstr-cmp-lfm-privacy-data-ownership__container {
     padding: var(--fmstr-cmp-lfm-privacy-data-ownership-space-7);
     border-radius: 20px;
   }
-
   .fmstr-cmp-lfm-privacy-data-ownership__inner {
     grid-template-columns: 1fr;
     gap: var(--fmstr-cmp-lfm-privacy-data-ownership-space-8);
   }
-
   .fmstr-cmp-lfm-privacy-data-ownership__heading {
     font-size: var(--fmstr-cmp-lfm-privacy-data-ownership-fs-2xl);
     line-height: var(--fmstr-cmp-lfm-privacy-data-ownership-lh-2xl);
   }
-
   .fmstr-cmp-lfm-privacy-data-ownership__quote {
     font-size: var(--fmstr-cmp-lfm-privacy-data-ownership-fs-md);
     line-height: var(--fmstr-cmp-lfm-privacy-data-ownership-lh-md);
   }
-
   .fmstr-cmp-lfm-privacy-data-ownership__card {
     padding: var(--fmstr-cmp-lfm-privacy-data-ownership-space-6);
   }
@@ -2751,26 +2669,22 @@ useJsonld([
   background: transparent;
   overflow-x: hidden;
 }
-
 .fmstr-cmp-lfm-feat *,
 .fmstr-cmp-lfm-feat *::before,
 .fmstr-cmp-lfm-feat *::after {
   box-sizing: border-box;
 }
-
 .fmstr-cmp-lfm-feat__container {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 24px;
   min-width: 0;
 }
-
 .fmstr-cmp-lfm-feat__header {
   margin: 0 auto 40px;
   max-width: 760px;
   text-align: center;
 }
-
 .fmstr-cmp-lfm-feat__h2 {
   font-size: clamp(26px, 3vw, 36px);
   font-weight: 600;
@@ -2779,21 +2693,18 @@ useJsonld([
   margin: 0 0 14px;
   color: var(--c-fg-1);
 }
-
 .fmstr-cmp-lfm-feat__sub {
   color: var(--c-fg-2);
   font-size: 17px;
   line-height: 1.6;
   margin: 0;
 }
-
 .fmstr-cmp-lfm-feat__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   min-width: 0;
 }
-
 .fmstr-cmp-lfm-feat__card {
   min-width: 0;
   background: #ffffff;
@@ -2809,13 +2720,11 @@ useJsonld([
     box-shadow 0.15s ease,
     transform 0.15s ease;
 }
-
 .fmstr-cmp-lfm-feat__card:hover {
   border-color: #9777e0;
   box-shadow: 0 2px 4px 0 rgba(16, 24, 40, 0.06);
   transform: translateY(-2px);
 }
-
 .fmstr-cmp-lfm-feat__icon {
   width: 40px;
   height: 40px;
@@ -2827,7 +2736,6 @@ useJsonld([
   color: var(--c-violet-600);
   flex-shrink: 0;
 }
-
 .fmstr-cmp-lfm-feat__title {
   font-size: 18px;
   font-weight: 600;
@@ -2835,25 +2743,21 @@ useJsonld([
   margin: 0;
   color: var(--c-fg-1);
 }
-
 .fmstr-cmp-lfm-feat__body {
   font-size: 15px;
   line-height: 1.55;
   color: var(--c-fg-2);
   margin: 0;
 }
-
 @media (max-width: 900px) {
   .fmstr-cmp-lfm-feat__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 640px) {
   .fmstr-cmp-lfm-feat {
     padding: 48px 16px;
   }
-
   .fmstr-cmp-lfm-feat__grid {
     grid-template-columns: 1fr;
   }
@@ -2863,7 +2767,6 @@ useJsonld([
   text-decoration: none !important;
   color: inherit !important;
 }
-
 .fmstr-cmp-lfm-more-tools {
   --c-fg-1: #101828;
   --c-fg-2: #475467;
@@ -2877,20 +2780,17 @@ useJsonld([
   color: var(--c-fg-1);
   overflow-x: hidden;
 }
-
 .fmstr-cmp-lfm-more-tools *,
 .fmstr-cmp-lfm-more-tools *::before,
 .fmstr-cmp-lfm-more-tools *::after {
   box-sizing: border-box;
 }
-
 .fmstr-cmp-lfm-more-tools__inner {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 24px;
   min-width: 0;
 }
-
 .fmstr-cmp-lfm-more-tools__heading {
   font-size: clamp(26px, 3vw, 36px);
   font-weight: 600;
@@ -2900,14 +2800,12 @@ useJsonld([
   margin: 0 0 40px;
   color: var(--c-fg-1);
 }
-
 .fmstr-cmp-lfm-more-tools__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   min-width: 0;
 }
-
 .fmstr-cmp-lfm-more-tools__card {
   min-width: 0;
   display: flex;
@@ -2923,13 +2821,11 @@ useJsonld([
     box-shadow 0.15s ease,
     transform 0.15s ease;
 }
-
 .fmstr-cmp-lfm-more-tools__card:hover {
   border-color: #9777e0;
   box-shadow: 0 2px 4px 0 rgba(16, 24, 40, 0.06);
   transform: translateY(-2px);
 }
-
 .fmstr-cmp-lfm-more-tools__icon {
   width: 40px;
   height: 40px;
@@ -2940,7 +2836,6 @@ useJsonld([
   place-items: center;
   color: var(--c-violet-600);
 }
-
 .fmstr-cmp-lfm-more-tools__title {
   font-size: 16px;
   font-weight: 600;
@@ -2948,25 +2843,21 @@ useJsonld([
   margin: 0;
   color: var(--c-fg-1) !important;
 }
-
 .fmstr-cmp-lfm-more-tools__desc {
   font-size: 14px;
   line-height: 1.5;
   margin: 0;
   color: var(--c-fg-2) !important;
 }
-
 @media (max-width: 900px) {
   .fmstr-cmp-lfm-more-tools__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 540px) {
   .fmstr-cmp-lfm-more-tools {
     padding: 48px 16px;
   }
-
   .fmstr-cmp-lfm-more-tools__grid {
     grid-template-columns: 1fr;
   }

@@ -1,0 +1,969 @@
+<template>
+  <div>
+    <HeroCenteredDark
+      description="Collect feedback, measure impact, and improve every training session with dynamic training evaluation forms."
+      :title="c0_title"
+      :button="c0_button"
+      :clickTriggers="c0_clickTriggers"
+      :background="c0_background"
+      class="page-component-item"
+    />
+
+    <TrustSeals :title="c1_title" :logos="c1_logos" class="page-component-item" />
+
+    <ThreeColBenefits :title="c2_title" :itemList="c2_itemList" class="page-component-item" />
+
+    <StandoutFeatureDetail :title="c3_title" :itemList="c3_itemList" class="page-component-item" />
+
+    <FeatureShowcase :steps="false" :title="c4_title" :itemList="c4_itemList" class="page-component-item" />
+
+    <FeatureDetailsSection :title="c5_title" :itemList="c5_itemList" class="page-component-item" />
+
+    <CallToActionSection :ctaValue="c6_ctaValue" class="page-component-item" />
+
+    <FaqSection :title="c7_title" :faqList="c7_faqList" class="page-component-item" />
+  </div>
+</template>
+
+<script setup>
+import CallToActionSection from '@/components/CallToActionSection.vue'
+import FaqSection from '@/components/v2/FaqSection.vue'
+import FeatureDetailsSection from '@/components/features/FeatureDetailsSection.vue'
+import FeatureShowcase from '@/components/features/FeatureShowcase.vue'
+import HeroCenteredDark from '@/components/strapi/HeroCenteredDark.vue'
+import StandoutFeatureDetail from '@/components/features/StandoutFeatureDetail.vue'
+import ThreeColBenefits from '@/components/features/ThreeColBenefits.vue'
+import TrustSeals from '@/components/v2/TrustSeals.vue'
+
+const c0_title = [
+  {
+    id: 1099,
+    text: 'Training Evaluations Made Easy with Formester',
+    highlight: false,
+    color: null,
+    bold: null,
+  },
+]
+const c0_button = {
+  id: 958,
+  link: 'https://app.formester.com/users/sign_up',
+  text: 'Create Form for Free',
+  type: 'Primary',
+  showArrow: null,
+}
+const c0_clickTriggers = [
+  {
+    id: 1294,
+    text: 'No More Paper Forms',
+  },
+  {
+    id: 1296,
+    text: 'Easy Tracking of Assessments',
+  },
+  {
+    id: 1295,
+    text: 'Faster Enrollments & Feedback',
+  },
+]
+const c0_background = {
+  id: 1933,
+  imageAlt: 'background-texture',
+  imageUrl: null,
+  width: null,
+  height: null,
+  image: {
+    id: 2433,
+    name: '08.svg',
+    alternativeText: null,
+    caption: null,
+    width: 1920,
+    height: 1920,
+    formats: null,
+    hash: '08_543ec28a0f',
+    ext: '.svg',
+    mime: 'image/svg+xml',
+    size: 35.46,
+    url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/08_543ec28a0f.svg',
+    previewUrl: null,
+    provider: 'aws-s3',
+    provider_metadata: null,
+    createdAt: '2024-11-19T17:29:17.338Z',
+    updatedAt: '2024-11-19T17:29:17.338Z',
+  },
+}
+const c1_title = []
+const c1_logos = [
+  {
+    id: 1949,
+    imageAlt: 'Tedx Paris Organizer',
+    imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/tedx_3c0e17bf72.png',
+    width: 110,
+    height: null,
+    image: null,
+  },
+  {
+    id: 1950,
+    imageAlt: 'Vue Jobs',
+    imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/vue_jobs_9705e4cfbe.svg',
+    width: 110,
+    height: null,
+    image: null,
+  },
+  {
+    id: 1951,
+    imageAlt: 'Vue Conference Toronto',
+    imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_black_43e8b6a164.png',
+    width: 110,
+    height: null,
+    image: null,
+  },
+  {
+    id: 1953,
+    imageAlt: 'Mayple',
+    imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/mayple_67fe487816.png',
+    width: 110,
+    height: null,
+    image: null,
+  },
+  {
+    id: 1952,
+    imageAlt: 'Equipal',
+    imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/equipment_connect_b753319419.png',
+    width: 110,
+    height: null,
+    image: null,
+  },
+]
+const c2_title = [
+  {
+    id: 1094,
+    text: 'Why Training Evaluations Matter?',
+    highlight: false,
+    color: null,
+    bold: null,
+  },
+]
+const c2_itemList = [
+  {
+    id: 1659,
+    title: ' Better Learning Outcomes',
+    description: ' Find out what’s effective in your training and what needs to be improved.',
+    description_markdown: ' Find out what’s effective in your training and what needs to be improved.',
+    icon: null,
+    cardImage: {
+      id: 1921,
+      imageAlt: 'rocket icon',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 2334,
+        name: 'rocket icon.svg',
+        alternativeText: 'rocket icon',
+        caption: 'rocket icon',
+        width: 68,
+        height: 68,
+        formats: null,
+        hash: 'robust_analytics_2_352aa8f482',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 1.26,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/robust_analytics_2_352aa8f482.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-11-05T18:59:37.152Z',
+        updatedAt: '2025-01-20T09:58:41.072Z',
+      },
+    },
+  },
+  {
+    id: 1668,
+    title: 'Higher Team Performance',
+    description: 'Check if employees apply new skills in real work after training sessions.',
+    description_markdown: 'Check if employees apply new skills in real work after training sessions.',
+    icon: null,
+    cardImage: {
+      id: 1918,
+      imageAlt: 'lightning icon',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 2329,
+        name: 'lightning icon.svg',
+        alternativeText: 'lightning icon',
+        caption: 'lightning icon',
+        width: 68,
+        height: 68,
+        formats: null,
+        hash: 'robust_analytics_1_b405fd6170',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 1.01,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/robust_analytics_1_b405fd6170.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-11-05T18:58:22.595Z',
+        updatedAt: '2025-01-20T09:58:53.385Z',
+      },
+    },
+  },
+  {
+    id: 1651,
+    title: 'Improved ROI on Training',
+    description: ' Measure how training boosts sales, productivity, and customer experience.',
+    description_markdown: ' Measure how training boosts sales, productivity, and customer experience.',
+    icon: null,
+    cardImage: {
+      id: 1920,
+      imageAlt: 'analytics icon',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 2313,
+        name: 'robust-analytics-1.svg',
+        alternativeText: 'analytics icon',
+        caption: 'analytics icon',
+        width: 68,
+        height: 68,
+        formats: null,
+        hash: 'robust_analytics_1_60c516b608',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 0.86,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/robust_analytics_1_60c516b608.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-11-05T18:35:22.235Z',
+        updatedAt: '2024-12-11T03:15:12.399Z',
+      },
+    },
+  },
+]
+const c3_title = [
+  {
+    id: 1093,
+    text: 'How Formester Can Help?',
+    highlight: false,
+    color: null,
+    bold: null,
+  },
+]
+const c3_itemList = [
+  {
+    id: 1670,
+    title: 'AI Quiz Generator',
+    description:
+      'Just tell us your training goal and our AI will instantly create a tailored test that fits your exact needs',
+    description_markdown:
+      'Just tell us your training goal and our AI will instantly create a tailored form that fits your exact needs',
+    icon: null,
+    cardImage: {
+      id: 1939,
+      imageAlt: "a screenshot of formester's ai quiz generator",
+      imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_1083_e3105c4f2c.svg',
+      width: null,
+      height: null,
+      image: null,
+    },
+  },
+  {
+    id: 1679,
+    title: 'Embed Videos in Forms',
+    description:
+      'Easily add YouTube or Vimeo videos to your forms to let participants study or watch instructions before completing assessments or surveys, with no coding required.',
+    description_markdown:
+      'Easily add YouTube or Vimeo videos to your forms to let participants study or watch instructions before completing assessments or surveys, with no coding required.',
+    icon: null,
+    cardImage: {
+      id: 1945,
+      imageAlt: "a screenshot of formester's drag and drop interface",
+      imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_1084_8e99241a08.svg',
+      width: null,
+      height: null,
+      image: null,
+    },
+  },
+  {
+    id: 1680,
+    title: 'Auto Scoring',
+    description:
+      'Automatically calculate scores based on user answers, perfect for quizzes or assessments where instant feedback is crucial, saving time for both the creator and participant.',
+    description_markdown:
+      'Automatically calculate scores based on user answers, perfect for quizzes or assessments where instant feedback is crucial, saving time for both the creator and participant.',
+    icon: null,
+    cardImage: {
+      id: 1944,
+      imageAlt: "a screenshot of formester's answer validation",
+      imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_1086_72b53677ee.svg',
+      width: null,
+      height: null,
+      image: null,
+    },
+  },
+  {
+    id: 1678,
+    title: 'Outcome Based Quizzes',
+    description:
+      'Tailor thank-you pages based on quiz answers, perfect for training evaluations with personalized feedback.',
+    description_markdown:
+      'Tailor thank-you pages based on quiz answers, perfect for training evaluations with personalized feedback.',
+    icon: null,
+    cardImage: {
+      id: 1946,
+      imageAlt: "a screenshot of formester's outcome quiz feature",
+      imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_1087_02715b3bd7.svg',
+      width: null,
+      height: null,
+      image: null,
+    },
+  },
+  {
+    id: 1681,
+    title: 'Certification with Fillable PDFs',
+    description:
+      'Automatically generate and share certificates upon completing training evaluations, using fillable PDFs.',
+    description_markdown:
+      'Automatically generate and share certificates upon completing training evaluations, using fillable PDFs.',
+    icon: null,
+    cardImage: {
+      id: 1947,
+      imageAlt: "a screenshot of formester's pdf editor",
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 2903,
+        name: "a screenshot of formester's pdf editor.svg",
+        alternativeText: "a screenshot of formester's pdf editor",
+        caption: "a screenshot of formester's pdf editor",
+        width: 682,
+        height: 521,
+        formats: null,
+        hash: 'Component_1019_7b4e380ab7',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 364.12,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_1019_7b4e380ab7.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-02-28T02:35:52.198Z',
+        updatedAt: '2025-02-28T02:42:25.977Z',
+      },
+    },
+  },
+  {
+    id: 1682,
+    title: 'AI Multilingual Translation',
+    description:
+      'Automatically translate training forms and evaluations into multiple languages, making them accessible to a global audience.',
+    description_markdown:
+      'Automatically translate training forms and evaluations into multiple languages, making them accessible to a global audience.',
+    icon: null,
+    cardImage: {
+      id: 1948,
+      imageAlt: "a screenshot of formester's multi language translation feature",
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1989,
+        name: "a screenshot of formester's multi language translation feature.svg",
+        alternativeText: "a screenshot of formester's multi language translation feature",
+        caption: "a screenshot of formester's multi language translation feature",
+        width: 682,
+        height: 521,
+        formats: null,
+        hash: 'Component_925_06b93a29c8',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 110.4,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_925_06b93a29c8.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-09-06T10:42:17.335Z',
+        updatedAt: '2024-09-06T10:43:33.255Z',
+      },
+    },
+  },
+]
+const c4_title = [
+  {
+    id: 1095,
+    text: 'How to create a training evaluation form',
+    highlight: false,
+    color: null,
+    bold: null,
+  },
+]
+const c4_itemList = [
+  {
+    id: 1676,
+    title: 'Generate Your Training Evaluation Form',
+    description:
+      'Use Formester’s AI form generator to create your training evaluation form instantly.\nPick from our ready-to-use templates or start fresh.\nNo matter your experience level, creating the form is quick and easy.\n',
+    description_markdown:
+      'Use Formester’s AI form generator to create your training evaluation form instantly.\n\nPick from our ready-to-use templates or start fresh.\n\nNo matter your experience level, creating the form is quick and easy.\n',
+    icon: null,
+    cardImage: {
+      id: 1942,
+      imageAlt: "a screenshot of formester's create form ui",
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 2661,
+        name: "a screenshot of formester's create form ui.svg",
+        alternativeText: "a screenshot of formester's create form ui",
+        caption: "a screenshot of formester's create form ui",
+        width: 682,
+        height: 521,
+        formats: null,
+        hash: 'a_screenshot_of_formester_s_create_form_ui_0fd3fa73de',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 61.51,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/a_screenshot_of_formester_s_create_form_ui_0fd3fa73de.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-01-24T04:13:20.229Z',
+        updatedAt: '2025-01-24T04:13:20.229Z',
+      },
+    },
+  },
+  {
+    id: 1675,
+    title: 'Customize Your Form Settings',
+    description:
+      'Personalize your evaluation form by adding fields like rating scales, text boxes, or Likert scales.\nSet up email autoresponders or embed videos to provide clear instructions to participants.\nTailor the form to your exact needs with just a few clicks.\n',
+    description_markdown:
+      'Personalize your evaluation form by adding fields like rating scales, text boxes, or Likert scales.\n\nSet up email autoresponders or embed videos to provide clear instructions to participants.\n\nTailor the form to your exact needs with just a few clicks.\n',
+    icon: null,
+    cardImage: {
+      id: 1943,
+      imageAlt: "a screenshot of formester's advanced features",
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 2659,
+        name: "a screenshot of formester's advanced features.svg",
+        alternativeText: "a screenshot of formester's advanced features",
+        caption: "a screenshot of formester's advanced features",
+        width: 682,
+        height: 521,
+        formats: null,
+        hash: 'a_screenshot_of_formester_s_advanced_features_f29d85740e',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 189.87,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/a_screenshot_of_formester_s_advanced_features_f29d85740e.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-01-24T04:02:51.950Z',
+        updatedAt: '2025-01-24T04:02:51.950Z',
+      },
+    },
+  },
+  {
+    id: 1677,
+    title: 'Share & View Responses',
+    description:
+      'Once your form is ready, easily share it via email, embed it on your website, or distribute it via a link.\nMonitor responses and track progress in real-time through Formester’s analytics dashboard.\nCreate and share training evaluation forms easily with Formester. Gather feedback, improve sessions, and track progress with powerful online forms!\n',
+    description_markdown:
+      'Once your form is ready, easily share it via email, embed it on your website, or distribute it via a link. \n\nMonitor responses and track progress in real-time through Formester’s analytics dashboard.\n\nCreate and share training evaluation forms easily with Formester. Gather feedback, improve sessions, and track progress with powerful online forms!\n',
+    icon: null,
+    cardImage: {
+      id: 1941,
+      imageAlt: 'a screenshot of form submissions tab in formester',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3083,
+        name: 'a screenshot of form submissions tab in formester.svg',
+        alternativeText: 'a screenshot of form submissions tab in formester',
+        caption: 'a screenshot of form submissions tab in formester',
+        width: 682,
+        height: 521,
+        formats: null,
+        hash: 'Component_1058_7b38e5fec0',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 289.72,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_1058_7b38e5fec0.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-03-20T03:03:13.485Z',
+        updatedAt: '2025-04-22T12:35:16.580Z',
+      },
+    },
+  },
+]
+const c5_title = [
+  {
+    id: 1097,
+    text: 'Real-Life Use Cases',
+    highlight: false,
+    color: null,
+    bold: null,
+  },
+]
+const c5_itemList = [
+  {
+    id: 1661,
+    title: 'Onboarding New Employees',
+    description: 'Evaluate onboarding effectiveness to improve clarity and satisfaction for new hires.',
+    description_markdown: 'Evaluate onboarding effectiveness to improve clarity and satisfaction for new hires.',
+    icon: null,
+    cardImage: {
+      id: 1924,
+      imageAlt: 'an illustration of onboarding new employees',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3334,
+        name: 'an illustration of onboarding new employees.svg',
+        alternativeText: 'an illustration of onboarding new employees',
+        caption: 'an illustration of onboarding new employees',
+        width: 682,
+        height: 521,
+        formats: null,
+        hash: 'Component_1122_f02f2be50c',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 149.31,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_1122_f02f2be50c.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-04-22T12:21:57.048Z',
+        updatedAt: '2025-04-22T12:24:47.502Z',
+      },
+    },
+  },
+  {
+    id: 1662,
+    title: 'Sales Training Program',
+    description:
+      'Assess sales skills development and identify areas for improvement in closing deals and product knowledge.',
+    description_markdown:
+      'Assess sales skills development and identify areas for improvement in closing deals and product knowledge.',
+    icon: null,
+    cardImage: {
+      id: 1929,
+      imageAlt: 'an illustration of sales team',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3333,
+        name: 'an illustration of sales training program.svg',
+        alternativeText: 'an illustration of sales training program',
+        caption: 'an illustration of sales training program',
+        width: 682,
+        height: 521,
+        formats: null,
+        hash: 'Component_975_51f0790273',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 53.86,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_975_51f0790273.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-04-22T12:21:56.231Z',
+        updatedAt: '2025-04-22T12:24:31.288Z',
+      },
+    },
+  },
+  {
+    id: 1664,
+    title: 'Leadership Development Program',
+    description: 'Track the impact of leadership training on employee readiness for managerial roles.',
+    description_markdown: 'Track the impact of leadership training on employee readiness for managerial roles.',
+    icon: null,
+    cardImage: {
+      id: 1931,
+      imageAlt: 'an illustration of leadership training',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3330,
+        name: 'an illustration of leadership training.svg',
+        alternativeText: 'an illustration of leadership training',
+        caption: 'an illustration of leadership training',
+        width: 682,
+        height: 521,
+        formats: null,
+        hash: 'Component_972_1cc9a62707',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 48.25,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_972_1cc9a62707.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-04-22T12:21:56.080Z',
+        updatedAt: '2025-04-22T12:25:07.242Z',
+      },
+    },
+  },
+  {
+    id: 1658,
+    title: 'Compliance and Safety Training',
+    description:
+      'Gauge employee understanding of safety protocols and training effectiveness to reduce workplace accidents.',
+    description_markdown:
+      'Gauge employee understanding of safety protocols and training effectiveness to reduce workplace accidents.',
+    icon: null,
+    cardImage: {
+      id: 1923,
+      imageAlt: 'an illustration of safety training',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3329,
+        name: 'an illustration of safety training.svg',
+        alternativeText: 'an illustration of safety training',
+        caption: 'an illustration of safety training',
+        width: 682,
+        height: 521,
+        formats: null,
+        hash: 'Component_1123_88a9420e20',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 53.54,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_1123_88a9420e20.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-04-22T12:21:56.061Z',
+        updatedAt: '2025-04-22T12:25:24.420Z',
+      },
+    },
+  },
+  {
+    id: 1667,
+    title: 'Customer Service Training',
+    description: 'Measure call center agents’ confidence in customer service skills and use of support tools.',
+    description_markdown: 'Measure call center agents’ confidence in customer service skills and use of support tools.',
+    icon: null,
+    cardImage: {
+      id: 1932,
+      imageAlt: 'an illustration of customer service training',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3332,
+        name: 'an illustration of customer service training.svg',
+        alternativeText: 'an illustration of customer service training',
+        caption: 'an illustration of customer service training',
+        width: 682,
+        height: 521,
+        formats: null,
+        hash: 'Component_1125_f411462aff',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 93.46,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_1125_f411462aff.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-04-22T12:21:56.228Z',
+        updatedAt: '2025-04-22T12:25:37.693Z',
+      },
+    },
+  },
+  {
+    id: 1657,
+    title: 'Software Training for Employees',
+    description: "Evaluate employees' ability to use new software efficiently and identify training gaps.",
+    description_markdown: "Evaluate employees' ability to use new software efficiently and identify training gaps.",
+    icon: null,
+    cardImage: {
+      id: 1922,
+      imageAlt: 'an illustration of software training',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3331,
+        name: 'an illustration of software training.svg',
+        alternativeText: 'an illustration of software training',
+        caption: 'an illustration of software training',
+        width: 682,
+        height: 521,
+        formats: null,
+        hash: 'Component_1124_7524f58e11',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 96.65,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_1124_7524f58e11.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-04-22T12:21:56.123Z',
+        updatedAt: '2025-04-22T12:25:52.550Z',
+      },
+    },
+  },
+]
+const c6_ctaValue = {
+  id: 67,
+  description: 'Get access to advanced AI, unlimited forms & more. See pricing for more details.',
+  type: 'default',
+  createdAt: '2024-11-04T07:07:43.916Z',
+  updatedAt: '2025-06-12T18:47:31.840Z',
+  publishedAt: '2024-11-04T07:08:18.018Z',
+  locale: 'en',
+  title: [
+    {
+      id: 393,
+      text: 'Ready to build your perfect form?',
+      highlight: false,
+      color: null,
+      bold: null,
+    },
+  ],
+  buttons: [
+    {
+      id: 338,
+      link: 'https://app.formester.com/users/sign_up',
+      text: 'Get Started–It’s Free!',
+      type: 'Primary',
+      showArrow: null,
+    },
+  ],
+  localizations: [],
+}
+const c7_title = [
+  {
+    id: 1096,
+    text: 'FAQs',
+    highlight: false,
+    color: null,
+    bold: null,
+  },
+]
+const c7_faqList = [
+  {
+    id: 969,
+    header: ' Is it difficult to set up a training evaluation form?',
+    body: 'No! With Formester’s easy-to-use templates and AI form generator, you can create your training evaluation forms in minutes, no technical skills required.',
+    body_markdown:
+      'No! With Formester’s easy-to-use templates and AI form generator, you can create your training evaluation forms in minutes, no technical skills required.',
+    list: [],
+  },
+  {
+    id: 967,
+    header: 'Will I need coding knowledge to customize the form?',
+    body: "Not at all! Formester's drag-and-drop builder lets you add custom fields like rating scales and text boxes without coding, making customization simple.",
+    body_markdown:
+      "Not at all! Formester's drag-and-drop builder lets you add custom fields like rating scales and text boxes without coding, making customization simple.",
+    list: [],
+  },
+  {
+    id: 965,
+    header: 'Can I track responses in real time?',
+    body: 'Yes! Our Analytics Dashboard shows real-time insights, so you can monitor training feedback instantly and make improvements quickly.',
+    body_markdown:
+      'Yes! Our Analytics Dashboard shows real-time insights, so you can monitor training feedback instantly and make improvements quickly.',
+    list: [],
+  },
+  {
+    id: 973,
+    header: 'What if I don’t know what questions to ask in my evaluation form?',
+    body: 'Formester’s AI Form Generator helps you create a training evaluation form in seconds by just describing your goal. It’s that simple!',
+    body_markdown:
+      'Formester’s AI Form Generator helps you create a training evaluation form in seconds by just describing your goal. It’s that simple!',
+    list: [],
+  },
+  {
+    id: 966,
+    header: 'Can I integrate videos or other media into my training forms?',
+    body: 'Absolutely! You can easily embed videos, images, and documents to make your evaluation forms more interactive and engaging for participants.',
+    body_markdown:
+      'Absolutely! You can easily embed videos, images, and documents to make your evaluation forms more interactive and engaging for participants.',
+    list: [],
+  },
+  {
+    id: 972,
+    header: ' How secure is the data collected from my forms?',
+    body: 'Formester takes data security seriously. We use encryption and comply with industry standards to keep your data safe.',
+    body_markdown:
+      'Formester takes data security seriously. We use encryption and comply with industry standards to keep your data safe.',
+    list: [],
+  },
+  {
+    id: 970,
+    header: 'How can I share my training evaluation form with my team?',
+    body: 'You can easily share your form through a link, embed it on your website, or send it via email, ensuring it’s accessible to everyone involved.',
+    body_markdown:
+      'You can easily share your form through a link, embed it on your website, or send it via email, ensuring it’s accessible to everyone involved.',
+    list: [],
+  },
+  {
+    id: 971,
+    header: 'Can I automate follow-up emails to participants?',
+    body: 'Yes! You can set up automatic email responses to participants, keeping them informed and engaged throughout the training process.',
+    body_markdown:
+      'Yes! You can set up automatic email responses to participants, keeping them informed and engaged throughout the training process.',
+    list: [],
+  },
+  {
+    id: 968,
+    header: ' What if I need help customizing my form or analyzing results?',
+    body: 'Our dedicated support team is here to assist you. Whether it’s form customization or analyzing feedback, we’ve got you covered.',
+    body_markdown:
+      'Our dedicated support team is here to assist you. Whether it’s form customization or analyzing feedback, we’ve got you covered.',
+    list: [],
+  },
+  {
+    id: 974,
+    header: 'Will Formester help improve my training program over time?',
+    body: 'Definitely! By tracking feedback and response trends, Formester helps you pinpoint areas for improvement and refine your training programs.',
+    body_markdown:
+      'Definitely! By tracking feedback and response trends, Formester helps you pinpoint areas for improvement and refine your training programs.',
+    list: [],
+  },
+]
+
+useHead({
+  title: 'Formester for Training Evaluations | Evaluation Forms',
+  link: [
+    {
+      hid: 'canonical',
+      rel: 'canonical',
+      href: 'https://formester.com/use-case/formester-for-training-evaluations/',
+    },
+  ],
+  meta: [
+    {
+      property: 'article:modified_time',
+      content: '2025-04-30T03:05:29.743Z',
+    },
+    {
+      hid: 'description',
+      name: 'description',
+      content:
+        'Create and share training evaluation forms easily with Formester. Gather feedback, improve sessions, and track progress with powerful online forms!',
+    },
+    {
+      hid: 'og:site_name',
+      name: 'og:site_name',
+      content: 'Formester for Training Evaluations | Evaluation Forms',
+    },
+    {
+      hid: 'og:type',
+      property: 'og:type',
+      content: 'website',
+    },
+    {
+      hid: 'og:url',
+      property: 'og:url',
+      content: 'https://formester.com/use-case/formester-for-training-evaluations/',
+    },
+    {
+      hid: 'og:title',
+      property: 'og:title',
+      content: 'Formester for Training Evaluations | Evaluation Forms',
+    },
+    {
+      hid: 'og:description',
+      property: 'og:description',
+      content:
+        'Create and share training evaluation forms easily with Formester. Gather feedback, improve sessions, and track progress with powerful online forms!',
+    },
+    {
+      hid: 'og:image',
+      property: 'og:image',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png',
+    },
+    {
+      hid: 'og:image:alt',
+      name: 'og:image:alt',
+      content: 'Formester Logo',
+    },
+    {
+      hid: 'twitter:url',
+      name: 'twitter:url',
+      content: 'https://formester.com/use-case/formester-for-training-evaluations/',
+    },
+    {
+      name: 'twitter:site',
+      content: '@_formester_',
+    },
+    {
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: 'Formester for Training Evaluations | Evaluation Forms',
+    },
+    {
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content:
+        'Create and share training evaluation forms easily with Formester. Gather feedback, improve sessions, and track progress with powerful online forms!',
+    },
+    {
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png',
+    },
+    {
+      hid: 'twitter:image:alt',
+      name: 'twitter:image:alt',
+      content: 'Formester Logo',
+    },
+    {
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image',
+    },
+    {
+      hid: 'apple-mobile-web-app-title',
+      name: 'apple-mobile-web-app-title',
+      content: 'Formester',
+    },
+    {
+      hid: 'image',
+      name: 'image',
+      property: 'og:image',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png',
+    },
+    {
+      hid: 'keywords',
+      name: 'keywords',
+      content: [
+        'Training form',
+        'training evaluation form',
+        'training course evaluation form',
+        'training request form',
+        'training acknowledgment form',
+        'training and development evaluation form',
+        'safety training',
+        'workplace training',
+        'employee training system',
+        'online safety training',
+        'staff training',
+        'workplace safety training',
+        'employee development training',
+        'employee training software',
+      ],
+    },
+  ],
+})
+</script>

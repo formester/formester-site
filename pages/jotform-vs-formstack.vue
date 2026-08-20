@@ -3679,7 +3679,7 @@ useJsonld([
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jvf-hero {
   --p-bg-glow: radial-gradient(60% 70% at 50% 0%, #f7f3ff 0%, #ffffff 70%);
   --p-fg-1: #101828;
@@ -3832,8 +3832,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-jvf-trust {
   --p-bg-card: #ffffff;
   --p-fg-1: #101828;
@@ -3924,8 +3922,6 @@ useJsonld([
     text-align: center;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jvf-glance {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -4190,8 +4186,6 @@ useJsonld([
     font-size: 12px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jvf-why-leave {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -4311,8 +4305,6 @@ useJsonld([
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jvf-pricing {
   --p-bg: #f9fafb;
   --p-bg-card: #ffffff;
@@ -4503,8 +4495,6 @@ useJsonld([
     line-height: 34px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jvf-free {
   --p-bg: #ffffff;
   --p-bg-card: #ffffff;
@@ -4683,8 +4673,6 @@ useJsonld([
     font-size: 13.5px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jvf-paid {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -4876,8 +4864,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-jvf-lio {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -5052,8 +5038,6 @@ useJsonld([
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jvf-api-mcp {
   --p-bg-card: #ffffff;
   --p-bg-tint: #f7f3ff;
@@ -5227,8 +5211,6 @@ useJsonld([
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jvf-why-pick {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -5360,8 +5342,6 @@ useJsonld([
     padding: 20px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jvf-switch {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -5502,8 +5482,6 @@ useJsonld([
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jvf-when-wins {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -5625,8 +5603,6 @@ useJsonld([
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jvf-other-alts {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -5753,8 +5729,6 @@ useJsonld([
     grid-template-columns: 1fr;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-jvf-privacy {
   --p-bg-section: #0f0921;
@@ -5925,8 +5899,6 @@ useJsonld([
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jvf-ask {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -6071,8 +6043,6 @@ useJsonld([
     grid-template-columns: 1fr;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jvf-more-ai {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -6198,8 +6168,6 @@ useJsonld([
     grid-template-columns: 1fr;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-jvf-faqs {
   --p-bg-card: #ffffff;
   --p-bg-header: #f9fafb;
@@ -6324,8 +6292,6 @@ useJsonld([
     font-size: 15px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 .fmstr-cmp-jvf-cta {
   --p-bg-violet: #6941c6;

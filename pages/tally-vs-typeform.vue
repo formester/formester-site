@@ -3658,7 +3658,7 @@ useJsonld([
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-tvt-hero {
   --p-bg-glow: radial-gradient(60% 70% at 50% 0%, #f7f3ff 0%, #ffffff 70%);
   --p-fg-1: #101828;
@@ -3811,8 +3811,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-tvt-trust {
   --p-bg-card: #ffffff;
   --p-fg-1: #101828;
@@ -3903,8 +3901,6 @@ useJsonld([
     text-align: center;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-tvt-glance {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -4169,8 +4165,6 @@ useJsonld([
     font-size: 12px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-tvt-why-leave {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -4300,8 +4294,6 @@ ul.fmstr-cmp-tvt-why-leave__body {
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-tvt-pricing {
   --p-bg: #f9fafb;
   --p-bg-card: #ffffff;
@@ -4492,8 +4484,6 @@ ul.fmstr-cmp-tvt-why-leave__body {
     line-height: 34px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-tvt-free {
   --p-bg: #ffffff;
   --p-bg-card: #ffffff;
@@ -4672,8 +4662,6 @@ ul.fmstr-cmp-tvt-why-leave__body {
     font-size: 13.5px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-tvt-paid {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -4865,8 +4853,6 @@ ul.fmstr-cmp-tvt-why-leave__body {
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-tvt-lio {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -5041,8 +5027,6 @@ ul.fmstr-cmp-tvt-why-leave__body {
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-tvt-api-mcp {
   --p-bg-card: #ffffff;
   --p-bg-tint: #f7f3ff;
@@ -5216,8 +5200,6 @@ ul.fmstr-cmp-tvt-why-leave__body {
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-tvt-why-pick {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -5349,8 +5331,6 @@ ul.fmstr-cmp-tvt-why-leave__body {
     padding: 20px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-tvt-switch {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -5491,8 +5471,6 @@ ul.fmstr-cmp-tvt-why-leave__body {
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-tvt-when-wins {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -5614,8 +5592,6 @@ ul.fmstr-cmp-tvt-why-leave__body {
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-tvt-other-alts {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -5742,8 +5718,6 @@ ul.fmstr-cmp-tvt-why-leave__body {
     grid-template-columns: 1fr;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-tvt-privacy {
   --p-bg-section: #0f0921;
@@ -5914,8 +5888,6 @@ ul.fmstr-cmp-tvt-why-leave__body {
     padding: 24px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-tvt-ask {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -6060,8 +6032,6 @@ ul.fmstr-cmp-tvt-why-leave__body {
     grid-template-columns: 1fr;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-tvt-more-ai {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -6187,8 +6157,6 @@ ul.fmstr-cmp-tvt-why-leave__body {
     grid-template-columns: 1fr;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 .fmstr-cmp-tvt-faqs {
   --p-bg-card: #ffffff;
   --p-bg-header: #f9fafb;
@@ -6313,8 +6281,6 @@ ul.fmstr-cmp-tvt-why-leave__body {
     font-size: 15px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 .fmstr-cmp-tvt-cta {
   --p-bg-violet: #6941c6;

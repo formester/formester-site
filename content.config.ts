@@ -41,24 +41,6 @@ export default defineContentConfig({
       source: 'home.json',
       schema: pageMeta,
     }),
-    pages: defineCollection({
-      type: 'data',
-      source: 'pages/**/*.json',
-      schema: pageMeta.extend({
-        slug: z.string(),
-      }),
-    }),
-    features: defineCollection({
-      type: 'data',
-      source: 'features/**/*.json',
-      schema: pageMeta.extend({
-        slug: z.string(),
-        navTitle: z.string().optional(),
-        navDescription: z.string().optional(),
-        featureCategory: z.string().optional(),
-        featurePlan: z.string().optional(),
-      }),
-    }),
     blog: defineCollection({
       type: 'page',
       source: 'blog/**/*.md',

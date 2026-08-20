@@ -2527,8 +2527,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-cl-popular-use-cases {
   --fmstr-cmp-cl-popular-use-cases-bg-card: #ffffff;
   --fmstr-cmp-cl-popular-use-cases-bg-pill: #f4ebff;
@@ -2723,8 +2721,6 @@ useJsonld([
     padding: var(--fmstr-cmp-cl-popular-use-cases-space-6);
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-cl-comparison {
   --fmstr-cmp-cl-comparison-bg-card: #ffffff;
@@ -2934,8 +2930,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-cl-privacy-data-trust {
   --fmstr-cmp-cl-privacy-data-trust-bg-section: #0f0921;
   --fmstr-cmp-cl-privacy-data-trust-bg-glow: radial-gradient(
@@ -3134,8 +3128,6 @@ useJsonld([
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-cl-more-ai-tools {
   --fmstr-cmp-cl-more-ai-tools-bg-card: #ffffff;
   --fmstr-cmp-cl-more-ai-tools-bg-tile: #f7f3ff;
@@ -3317,8 +3309,6 @@ useJsonld([
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 .fmstr-cmp-cl-related-resources {
   --fmstr-cmp-cl-related-resources-bg-section: #f9fafb;
