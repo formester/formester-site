@@ -18,13 +18,38 @@ export default defineEventHandler(async (event) => {
   const recursive = query.recursive === '1' || query.recursive === 'true'
 
   const client = getProfileClient(config)
+  const delimiter = (search || recursive) ? undefined : '/'
   const result = await client.send(new ListObjectsV2Command({
     Bucket: config.bucket,
     Prefix: prefix || undefined,
-    Delimiter: (search || recursive) ? undefined : '/',
+    Delimiter: delimiter,
     ContinuationToken: continuationToken,
     MaxKeys: 200
   }))
+
+  // S3 has no direct "count" API — when the folder has more than one page,
+  // walk the remaining pages (cheap: bounded by this folder's direct
+  // children thanks to Delimiter, not the whole bucket) just to tally sizes,
+  // without presigning URLs, to report an exact total alongside the page.
+  let totalCount: number | null = null
+  if (!search) {
+    let count = (result.Contents?.length ?? 0) + (result.CommonPrefixes?.length ?? 0)
+    let truncated = result.IsTruncated
+    let token = result.NextContinuationToken
+    while (truncated) {
+      const page = await client.send(new ListObjectsV2Command({
+        Bucket: config.bucket,
+        Prefix: prefix || undefined,
+        Delimiter: delimiter,
+        ContinuationToken: token,
+        MaxKeys: 1000
+      }))
+      count += (page.Contents?.length ?? 0) + (page.CommonPrefixes?.length ?? 0)
+      truncated = page.IsTruncated
+      token = page.NextContinuationToken
+    }
+    totalCount = count
+  }
 
   const folders = (result.CommonPrefixes || [])
     .map(p => p.Prefix)
@@ -59,6 +84,7 @@ export default defineEventHandler(async (event) => {
     prefix,
     folders,
     files,
+    totalCount,
     nextContinuationToken: result.IsTruncated ? result.NextContinuationToken : null
   }
 })

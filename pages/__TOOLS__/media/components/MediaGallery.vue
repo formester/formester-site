@@ -309,6 +309,7 @@ const viewFilterOpen = ref(false)
 const folders = ref([])
 const files = ref([])
 const nextContinuationToken = ref(null)
+const totalCount = ref(null)
 const loading = ref(false)
 const appending = ref(false)
 const navLoading = computed(() => loading.value && !appending.value)
@@ -424,9 +425,9 @@ const canCopySelected = computed(() => selectedKeys.value.some((id) => files.val
 const allSelectedOnPage = computed(() => items.value.length > 0 && items.value.every((i) => i.isSelected))
 const resultsLabel = computed(() => {
   const n = items.value.length
-  return isSearching.value
-    ? `${n} ${n === 1 ? 'result' : 'results'} for "${searchQuery.value}"`
-    : `${n} ${n === 1 ? 'item' : 'items'}`
+  if (isSearching.value) return `${n} ${n === 1 ? 'result' : 'results'} for "${searchQuery.value}"`
+  if (totalCount.value != null && totalCount.value > n) return `Showing ${n} of ${totalCount.value} items`
+  return `${n} ${n === 1 ? 'item' : 'items'}`
 })
 
 function setViewMode(mode) {
@@ -459,6 +460,7 @@ async function fetchItems({ append = false } = {}) {
   loading.value = true
   appending.value = append
   loadError.value = ''
+  if (!append) totalCount.value = null
   try {
     const res = await listItems({
       prefix: prefix.value,
@@ -469,6 +471,7 @@ async function fetchItems({ append = false } = {}) {
     folders.value = res.folders
     files.value = append ? [...files.value, ...res.files] : res.files
     nextContinuationToken.value = res.nextContinuationToken
+    if (!append) totalCount.value = res.totalCount ?? null
     if (!append) {
       focusedId.value = items.value[0]?.id ?? null
     }
