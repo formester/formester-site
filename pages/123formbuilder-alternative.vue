@@ -2230,7 +2230,6 @@ useJsonld([
     sans-serif;
   color: var(--p-fg-1);
 }
-
 .fmstr-cmp-fb-hero *,
 .fmstr-cmp-fb-hero *::before,
 .fmstr-cmp-fb-hero *::after {
@@ -2264,7 +2263,6 @@ useJsonld([
   color: var(--p-fg-1);
   margin: 0 0 20px;
 }
-
 .fmstr-cmp-fb-hero__heading-accent {
   color: var(--p-violet-600);
 }
@@ -2299,25 +2297,21 @@ useJsonld([
     background-color 0.15s ease,
     box-shadow 0.15s ease;
 }
-
 .fmstr-cmp-fb-hero__btn--primary {
   background: var(--p-violet-600);
   color: #ffffff;
   box-shadow: var(--p-shadow-btn);
 }
-
 .fmstr-cmp-fb-hero__btn--primary:hover {
   color: #ffffff;
   background: var(--p-violet-700);
   transform: translateY(-1px);
 }
-
 .fmstr-cmp-fb-hero__btn--ghost {
   background: transparent;
   color: var(--p-violet-700);
   border: 1px solid var(--p-violet-200);
 }
-
 .fmstr-cmp-fb-hero__btn--ghost:hover {
   color: var(--p-violet-700);
   background: var(--p-violet-50);
@@ -2331,7 +2325,6 @@ useJsonld([
   color: var(--p-fg-meta);
   font-weight: 500;
 }
-
 .fmstr-cmp-fb-hero__meta-dot {
   width: 4px;
   height: 4px;
@@ -2339,7 +2332,6 @@ useJsonld([
   background: var(--p-fg-meta);
   flex-shrink: 0;
 }
-
 .fmstr-cmp-fb-hero__meta-check {
   color: var(--p-emerald-600);
   flex-shrink: 0;
@@ -2363,7 +2355,6 @@ useJsonld([
   animation: fmstr-fb-ring-spin 7s linear infinite;
   box-shadow: 0 24px 64px rgba(105, 65, 198, 0.18);
 }
-
 .fmstr-cmp-fb-hero__video video {
   display: block;
   width: 100%;
@@ -2373,13 +2364,11 @@ useJsonld([
   border: 0;
   background: #0a0817;
 }
-
 @keyframes fmstr-fb-ring-spin {
   to {
     --fmstr-fb-ring: 360deg;
   }
 }
-
 @media (prefers-reduced-motion: reduce) {
   .fmstr-cmp-fb-hero__video {
     animation: none;
@@ -2390,43 +2379,35 @@ useJsonld([
   .fmstr-cmp-fb-hero {
     padding: 104px 16px 40px;
   }
-
   .fmstr-cmp-fb-hero__eyebrow {
     font-size: 11px;
     letter-spacing: 0.06em;
     padding: 5px 14px;
   }
-
   .fmstr-cmp-fb-hero__heading {
     font-size: 36px;
     line-height: 1.15;
   }
-
   .fmstr-cmp-fb-hero__sub {
     font-size: 16px;
   }
-
   .fmstr-cmp-fb-hero__btn {
     width: 100%;
     justify-content: center;
   }
-
   .fmstr-cmp-fb-hero__cta-row {
     flex-direction: column;
   }
-
   .fmstr-cmp-fb-hero__video {
     margin: 0 auto 28px;
     border-radius: 14px;
   }
-
   .fmstr-cmp-fb-hero__video video {
     border-radius: 12px;
   }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-fb-answer {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -2449,18 +2430,15 @@ useJsonld([
     sans-serif;
   color: var(--p-fg-1);
 }
-
 .fmstr-cmp-fb-answer *,
 .fmstr-cmp-fb-answer *::before,
 .fmstr-cmp-fb-answer *::after {
   box-sizing: border-box;
 }
-
 .fmstr-cmp-fb-answer__container {
   max-width: 900px;
   margin: 0 auto;
 }
-
 .fmstr-cmp-fb-answer__card {
   background: var(--p-bg-card);
   border: 1px solid var(--p-violet-200);
@@ -2468,13 +2446,11 @@ useJsonld([
   overflow: hidden;
   box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
 }
-
 .fmstr-cmp-fb-answer__top {
   background: var(--p-violet-25);
   padding: 26px 30px 24px;
   border-bottom: 1px solid var(--p-violet-200);
 }
-
 .fmstr-cmp-fb-answer__head {
   display: flex;
   align-items: center;
@@ -2482,7 +2458,6 @@ useJsonld([
   flex-wrap: wrap;
   margin-bottom: 12px;
 }
-
 .fmstr-cmp-fb-answer__badge {
   display: inline-block;
   padding: 5px 11px 7px;
@@ -2494,7 +2469,6 @@ useJsonld([
   line-height: 1;
   letter-spacing: 0.09em;
 }
-
 .fmstr-cmp-fb-answer__title {
   margin: 0;
   font-size: 22px;
@@ -2502,20 +2476,17 @@ useJsonld([
   font-weight: 700;
   letter-spacing: -0.01em;
 }
-
 .fmstr-cmp-fb-answer__answer {
   margin: 0;
   font-size: 16px;
   line-height: 26px;
   color: var(--p-fg-2);
 }
-
 .fmstr-cmp-fb-answer__list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
 .fmstr-cmp-fb-answer__row {
   display: flex;
   align-items: center;
@@ -2523,11 +2494,9 @@ useJsonld([
   padding: 15px 30px;
   border-bottom: 1px solid var(--p-border-light);
 }
-
 .fmstr-cmp-fb-answer__row:last-child {
   border-bottom: 0;
 }
-
 .fmstr-cmp-fb-answer__ic {
   width: 34px;
   height: 34px;
@@ -2537,28 +2506,23 @@ useJsonld([
   align-items: center;
   justify-content: center;
 }
-
 .fmstr-cmp-fb-answer__ic--f {
   background: #f7f3ff;
   color: var(--p-violet-600);
 }
-
 .fmstr-cmp-fb-answer__ic--c {
   background: var(--p-bg-grey);
   color: var(--p-fg-2);
 }
-
 .fmstr-cmp-fb-answer__ic svg {
   display: block;
 }
-
 .fmstr-cmp-fb-answer__need {
   flex: 1 1 auto;
   font-size: 15px;
   line-height: 22px;
   font-weight: 600;
 }
-
 .fmstr-cmp-fb-answer__pick {
   flex-shrink: 0;
   display: inline-block;
@@ -2570,56 +2534,46 @@ useJsonld([
   border: 1px solid transparent;
   white-space: nowrap;
 }
-
 .fmstr-cmp-fb-answer__pick--f {
   background: var(--p-bg-pill);
   color: var(--p-violet-600);
   border-color: var(--p-violet-200);
 }
-
 .fmstr-cmp-fb-answer__pick--c {
   background: var(--p-bg-grey);
   color: var(--p-fg-2);
   border-color: var(--p-border-light);
 }
-
 @media (max-width: 760px) {
   .fmstr-cmp-fb-answer {
     padding: 40px 16px 4px;
   }
-
   .fmstr-cmp-fb-answer__top {
     padding: 20px 20px 18px;
   }
-
   .fmstr-cmp-fb-answer__title {
     font-size: 19px;
     line-height: 27px;
   }
-
   .fmstr-cmp-fb-answer__answer {
     font-size: 15px;
     line-height: 25px;
   }
-
   .fmstr-cmp-fb-answer__row {
     flex-wrap: wrap;
     gap: 10px;
     padding: 14px 20px;
   }
-
   .fmstr-cmp-fb-answer__need {
     flex: 1 1 100%;
     order: 2;
   }
-
   .fmstr-cmp-fb-answer__pick {
     order: 3;
   }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-fb-glance {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -2646,24 +2600,20 @@ useJsonld([
     sans-serif;
   color: var(--p-fg-1);
 }
-
 .fmstr-cmp-fb-glance *,
 .fmstr-cmp-fb-glance *::before,
 .fmstr-cmp-fb-glance *::after {
   box-sizing: border-box;
 }
-
 .fmstr-cmp-fb-glance__container {
   max-width: 1180px;
   margin: 0 auto;
 }
-
 .fmstr-cmp-fb-glance__header {
   max-width: 760px;
   margin: 0 auto 40px;
   text-align: center;
 }
-
 .fmstr-cmp-fb-glance__eyebrow {
   display: inline-block;
   padding: 4px 12px;
@@ -2676,7 +2626,6 @@ useJsonld([
   text-transform: uppercase;
   margin-bottom: 16px;
 }
-
 .fmstr-cmp-fb-glance__heading {
   font-size: 36px;
   line-height: 44px;
@@ -2684,7 +2633,6 @@ useJsonld([
   letter-spacing: -0.02em;
   margin: 0 0 12px;
 }
-
 .fmstr-cmp-fb-glance__sub {
   font-size: 16px;
   line-height: 24px;
@@ -2700,7 +2648,6 @@ useJsonld([
   -webkit-overflow-scrolling: touch;
   box-shadow: 0 4px 24px rgba(16, 24, 40, 0.04);
 }
-
 .fmstr-cmp-fb-glance__table {
   width: 100%;
   border-collapse: collapse;
@@ -2718,19 +2665,16 @@ useJsonld([
   border-bottom: 1px solid var(--p-border);
   vertical-align: top;
 }
-
 .fmstr-cmp-fb-glance__col-attr {
   background: var(--p-bg-header);
   color: var(--p-fg-3);
   width: 34%;
 }
-
 .fmstr-cmp-fb-glance__col-formester {
   background: linear-gradient(180deg, var(--p-bg-violet-25) 0%, #ffffff 100%);
   color: var(--p-violet-700);
   width: 22%;
 }
-
 .fmstr-cmp-fb-glance__col-comp {
   background: var(--p-bg-header);
   color: var(--p-fg-3);
@@ -2746,12 +2690,10 @@ useJsonld([
   text-transform: none;
   margin-bottom: 8px;
 }
-
 .fmstr-cmp-fb-glance__col-formester .fmstr-cmp-fb-glance__col-brand {
   color: var(--p-violet-700);
   font-size: 17px;
 }
-
 .fmstr-cmp-fb-glance__col-tag {
   display: inline-block;
   padding: 2px 10px;
@@ -2764,7 +2706,6 @@ useJsonld([
   text-transform: uppercase;
   margin-bottom: 12px;
 }
-
 .fmstr-cmp-fb-glance__col-cta {
   display: inline-flex;
   align-items: center;
@@ -2780,12 +2721,10 @@ useJsonld([
   transition: background 0.15s ease;
   box-shadow: 0 6px 16px rgba(105, 65, 198, 0.25);
 }
-
 .fmstr-cmp-fb-glance__col-cta:hover {
   color: #ffffff;
   background: var(--p-violet-700);
 }
-
 .fmstr-cmp-fb-glance__col-cta::after {
   content: '';
   width: 6px;
@@ -2794,7 +2733,6 @@ useJsonld([
   border-right: 2px solid #fff;
   transform: rotate(45deg);
 }
-
 .fmstr-cmp-fb-glance__col-note {
   display: block;
   font-size: 11.5px;
@@ -2812,18 +2750,15 @@ useJsonld([
   vertical-align: middle;
   line-height: 22px;
 }
-
 .fmstr-cmp-fb-glance__attr {
   font-weight: 600;
   color: var(--p-fg-1);
   background: var(--p-bg-header);
   text-align: left;
 }
-
 .fmstr-cmp-fb-glance__cell {
   color: var(--p-fg-2);
 }
-
 .fmstr-cmp-fb-glance__cell--formester {
   background: rgba(247, 243, 255, 0.65);
   color: var(--p-fg-1);
@@ -2831,33 +2766,27 @@ useJsonld([
   border-left: 2px solid var(--p-border-violet);
   border-right: 1px solid var(--p-border);
 }
-
 .fmstr-cmp-fb-glance__col-formester {
   border-left: 2px solid var(--p-border-violet);
   border-right: 1px solid var(--p-border);
 }
-
 .fmstr-cmp-fb-glance__table tbody tr:last-child td,
 .fmstr-cmp-fb-glance__table tbody tr:last-child .fmstr-cmp-fb-glance__attr {
   border-bottom: none;
 }
-
 .fmstr-cmp-fb-glance__check {
   vertical-align: -3px;
   margin-right: 6px;
 }
-
 .fmstr-cmp-fb-glance__cross {
   vertical-align: -3px;
   margin-right: 6px;
 }
-
 .fmstr-cmp-fb-glance__note-inline {
   font-size: 13px;
   color: var(--p-fg-3);
   font-weight: 500;
 }
-
 .fmstr-cmp-fb-glance__cell--formester .fmstr-cmp-fb-glance__note-inline {
   color: var(--p-fg-2);
   font-weight: 600;
@@ -2866,7 +2795,6 @@ useJsonld([
 .fmstr-cmp-fb-glance__mobile-cta {
   display: none;
 }
-
 .fmstr-cmp-fb-glance__note {
   margin-top: 16px;
   font-size: 12px;
@@ -2878,41 +2806,33 @@ useJsonld([
   .fmstr-cmp-fb-glance {
     padding: 48px 16px;
   }
-
   .fmstr-cmp-fb-glance__heading {
     font-size: 26px;
     line-height: 34px;
   }
-
   .fmstr-cmp-fb-glance__col-cta {
     white-space: nowrap;
   }
 }
-
 @media (max-width: 760px) {
   .fmstr-cmp-fb-glance__table {
     min-width: 640px;
     font-size: 13.5px;
   }
-
   .fmstr-cmp-fb-glance__table thead th {
     padding: 14px 14px;
     font-size: 11px;
   }
-
   .fmstr-cmp-fb-glance__col-brand {
     font-size: 14px;
   }
-
   .fmstr-cmp-fb-glance__col-formester .fmstr-cmp-fb-glance__col-brand {
     font-size: 15px;
   }
-
   .fmstr-cmp-fb-glance__attr,
   .fmstr-cmp-fb-glance__cell {
     padding: 12px 12px;
   }
-
   .fmstr-cmp-fb-glance__col-cta {
     padding: 8px 14px;
     font-size: 12px;
@@ -2930,7 +2850,6 @@ useJsonld([
   border-radius: 14px;
   padding: 18px 20px;
 }
-
 .fmstr-cmp-fb-glance__callout-ic {
   width: 34px;
   height: 34px;
@@ -2942,23 +2861,19 @@ useJsonld([
   align-items: center;
   justify-content: center;
 }
-
 .fmstr-cmp-fb-glance__callout-ic svg {
   display: block;
 }
-
 .fmstr-cmp-fb-glance__callout-text {
   margin: 0;
   font-size: 15px;
   line-height: 24px;
   color: #475467;
 }
-
 .fmstr-cmp-fb-glance__callout-text strong {
   color: #101828;
   font-weight: 700;
 }
-
 @media (max-width: 760px) {
   .fmstr-cmp-fb-glance__callout {
     padding: 16px;
@@ -2973,7 +2888,6 @@ useJsonld([
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-fb-demos {
   --p-bg-card: #ffffff;
   --p-bg-track: #f2f4f7;
@@ -3000,24 +2914,20 @@ useJsonld([
   color: var(--p-fg-1);
   overflow-x: hidden;
 }
-
 .fmstr-cmp-fb-demos *,
 .fmstr-cmp-fb-demos *::before,
 .fmstr-cmp-fb-demos *::after {
   box-sizing: border-box;
 }
-
 .fmstr-cmp-fb-demos__container {
   max-width: 1180px;
   margin: 0 auto;
 }
-
 .fmstr-cmp-fb-demos__header {
   max-width: 760px;
   margin: 0 auto 32px;
   text-align: center;
 }
-
 .fmstr-cmp-fb-demos__eyebrow {
   display: inline-block;
   padding: 4px 12px;
@@ -3030,7 +2940,6 @@ useJsonld([
   text-transform: uppercase;
   margin-bottom: 16px;
 }
-
 .fmstr-cmp-fb-demos__heading {
   font-size: 36px;
   line-height: 44px;
@@ -3038,7 +2947,6 @@ useJsonld([
   letter-spacing: -0.02em;
   margin: 0 0 12px;
 }
-
 .fmstr-cmp-fb-demos__sub {
   font-size: 16px;
   line-height: 24px;
@@ -3063,7 +2971,6 @@ useJsonld([
   width: fit-content;
   margin: 0 auto 36px;
 }
-
 .fmstr-cmp-fb-demos__tab {
   display: inline-flex;
   align-items: center;
@@ -3081,11 +2988,9 @@ useJsonld([
   user-select: none;
   min-height: 44px;
 }
-
 .fmstr-cmp-fb-demos__tab:hover {
   color: var(--p-violet-600);
 }
-
 .fmstr-cmp-fb-demos__tab svg {
   flex-shrink: 0;
 }
@@ -3097,7 +3002,6 @@ useJsonld([
   color: #ffffff;
   box-shadow: 0 2px 8px rgba(105, 65, 198, 0.28);
 }
-
 .fmstr-cmp-fb-demos__t1:focus-visible ~ .fmstr-cmp-fb-demos__tabbar .fmstr-cmp-fb-demos__tab--1,
 .fmstr-cmp-fb-demos__t2:focus-visible ~ .fmstr-cmp-fb-demos__tabbar .fmstr-cmp-fb-demos__tab--2,
 .fmstr-cmp-fb-demos__t3:focus-visible ~ .fmstr-cmp-fb-demos__tabbar .fmstr-cmp-fb-demos__tab--3 {
@@ -3110,7 +3014,6 @@ useJsonld([
   max-width: 900px;
   margin: 0 auto;
 }
-
 .fmstr-cmp-fb-demos__panel {
   grid-area: 1 / 1;
   opacity: 0;
@@ -3121,7 +3024,6 @@ useJsonld([
     transform 320ms ease,
     visibility 0s linear 320ms;
 }
-
 .fmstr-cmp-fb-demos__t1:checked ~ .fmstr-cmp-fb-demos__panels .fmstr-cmp-fb-demos__panel--1,
 .fmstr-cmp-fb-demos__t2:checked ~ .fmstr-cmp-fb-demos__panels .fmstr-cmp-fb-demos__panel--2,
 .fmstr-cmp-fb-demos__t3:checked ~ .fmstr-cmp-fb-demos__panels .fmstr-cmp-fb-demos__panel--3 {
@@ -3147,25 +3049,21 @@ useJsonld([
   animation: fmstr-fb-ring-spin 7s linear infinite;
   box-shadow: var(--p-shadow-xs);
 }
-
 @keyframes fmstr-fb-ring-spin {
   to {
     --fmstr-fb-ring: 360deg;
   }
 }
-
 @media (prefers-reduced-motion: reduce) {
   .fmstr-cmp-fb-demos__frame {
     animation: none;
   }
 }
-
 .fmstr-cmp-fb-demos__card {
   background: var(--p-bg-card);
   border-radius: 14px;
   overflow: hidden;
 }
-
 .fmstr-cmp-fb-demos__text {
   padding: 22px 26px;
   display: flex;
@@ -3174,21 +3072,18 @@ useJsonld([
   flex-wrap: wrap;
   border-bottom: 1px solid var(--p-border-light);
 }
-
 .fmstr-cmp-fb-demos__title {
   margin: 0;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
 }
-
 .fmstr-cmp-fb-demos__body {
   margin: 0;
   font-size: 14px;
   line-height: 22px;
   color: var(--p-fg-2);
 }
-
 .fmstr-cmp-fb-demos__media {
   display: block;
   width: 100%;
@@ -3200,12 +3095,10 @@ useJsonld([
   .fmstr-cmp-fb-demos {
     padding: 48px 16px;
   }
-
   .fmstr-cmp-fb-demos__heading {
     font-size: 24px;
     line-height: 32px;
   }
-
   .fmstr-cmp-fb-demos__tabbar {
     width: 100%;
     flex-direction: column;
@@ -3214,7 +3107,6 @@ useJsonld([
     padding: 5px;
     border-radius: 18px;
   }
-
   .fmstr-cmp-fb-demos__tab {
     width: 100%;
     justify-content: center;
@@ -3223,14 +3115,12 @@ useJsonld([
     border-radius: 13px;
     min-height: 46px;
   }
-
   .fmstr-cmp-fb-demos__text {
     padding: 16px 20px;
   }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-fb-why-leave {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -3253,24 +3143,20 @@ useJsonld([
     sans-serif;
   color: var(--p-fg-1);
 }
-
 .fmstr-cmp-fb-why-leave *,
 .fmstr-cmp-fb-why-leave *::before,
 .fmstr-cmp-fb-why-leave *::after {
   box-sizing: border-box;
 }
-
 .fmstr-cmp-fb-why-leave__container {
   max-width: 1180px;
   margin: 0 auto;
 }
-
 .fmstr-cmp-fb-why-leave__header {
   max-width: 760px;
   margin: 0 auto 40px;
   text-align: center;
 }
-
 .fmstr-cmp-fb-why-leave__eyebrow {
   display: inline-block;
   padding: 4px 12px;
@@ -3283,7 +3169,6 @@ useJsonld([
   text-transform: uppercase;
   margin-bottom: 16px;
 }
-
 .fmstr-cmp-fb-why-leave__heading {
   font-size: 36px;
   line-height: 44px;
@@ -3291,21 +3176,18 @@ useJsonld([
   letter-spacing: -0.02em;
   margin: 0 0 12px;
 }
-
 .fmstr-cmp-fb-why-leave__sub {
   font-size: 16px;
   line-height: 24px;
   color: var(--p-fg-3);
   margin: 0;
 }
-
 .fmstr-cmp-fb-why-leave__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: stretch;
   gap: 20px;
 }
-
 .fmstr-cmp-fb-why-leave__card {
   display: flex;
   flex-direction: column;
@@ -3319,26 +3201,22 @@ useJsonld([
     box-shadow 200ms ease,
     transform 200ms ease;
 }
-
 .fmstr-cmp-fb-why-leave__card:hover {
   box-shadow: var(--p-shadow-md);
   transform: translateY(-2px);
 }
-
 .fmstr-cmp-fb-why-leave__title {
   margin: 0;
   font-size: 18px;
   line-height: 28px;
   font-weight: 700;
 }
-
 .fmstr-cmp-fb-why-leave__body {
   margin: 0;
   font-size: 14px;
   line-height: 22px;
   color: var(--p-fg-2);
 }
-
 .fmstr-cmp-fb-why-leave__source {
   margin-top: auto;
   padding-top: 12px;
@@ -3347,26 +3225,21 @@ useJsonld([
   color: var(--p-fg-3);
   font-style: italic;
 }
-
 @media (max-width: 760px) {
   .fmstr-cmp-fb-why-leave {
     padding: 48px 16px;
   }
-
   .fmstr-cmp-fb-why-leave__heading {
     font-size: 24px;
     line-height: 32px;
   }
-
   .fmstr-cmp-fb-why-leave__grid {
     grid-template-columns: 1fr;
   }
-
   .fmstr-cmp-fb-why-leave__card {
     padding: 24px;
   }
 }
-
 .fmstr-cmp-fb-why-leave__src {
   margin: 10px 0 0;
   font-size: 13px;
@@ -3374,7 +3247,6 @@ useJsonld([
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-fb-pricing {
   --p-bg: #f9fafb;
   --p-bg-card: #ffffff;
@@ -3398,24 +3270,20 @@ useJsonld([
   color: var(--p-fg-1);
   background: var(--p-bg);
 }
-
 .fmstr-cmp-fb-pricing *,
 .fmstr-cmp-fb-pricing *::before,
 .fmstr-cmp-fb-pricing *::after {
   box-sizing: border-box;
 }
-
 .fmstr-cmp-fb-pricing__container {
   max-width: 1180px;
   margin: 0 auto;
 }
-
 .fmstr-cmp-fb-pricing__header {
   max-width: 760px;
   margin: 0 auto 40px;
   text-align: center;
 }
-
 .fmstr-cmp-fb-pricing__eyebrow {
   display: inline-block;
   padding: 4px 12px;
@@ -3428,7 +3296,6 @@ useJsonld([
   text-transform: uppercase;
   margin-bottom: 16px;
 }
-
 .fmstr-cmp-fb-pricing__heading {
   font-size: 36px;
   line-height: 44px;
@@ -3436,21 +3303,18 @@ useJsonld([
   letter-spacing: -0.02em;
   margin: 0 0 12px;
 }
-
 .fmstr-cmp-fb-pricing__sub {
   font-size: 16px;
   line-height: 24px;
   color: var(--p-fg-3);
   margin: 0;
 }
-
 .fmstr-cmp-fb-pricing__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   align-items: stretch;
 }
-
 .fmstr-cmp-fb-pricing__card {
   background: var(--p-bg-card);
   border: 1px solid var(--p-border);
@@ -3460,13 +3324,11 @@ useJsonld([
   flex-direction: column;
   box-shadow: 0 1px 3px rgba(16, 24, 40, 0.04);
 }
-
 .fmstr-cmp-fb-pricing__card--formester {
   background: linear-gradient(180deg, var(--p-bg-violet-25) 0%, var(--p-bg-card) 55%);
   border: 2px solid var(--p-border-violet);
   box-shadow: 0 8px 32px rgba(105, 65, 198, 0.12);
 }
-
 .fmstr-cmp-fb-pricing__tag {
   display: inline-block;
   padding: 3px 12px;
@@ -3480,7 +3342,6 @@ useJsonld([
   margin-bottom: 12px;
   align-self: flex-start;
 }
-
 .fmstr-cmp-fb-pricing__card-brand {
   font-size: 22px;
   font-weight: 800;
@@ -3488,31 +3349,25 @@ useJsonld([
   color: var(--p-fg-1);
   letter-spacing: -0.01em;
 }
-
 .fmstr-cmp-fb-pricing__card--formester .fmstr-cmp-fb-pricing__card-brand {
   color: var(--p-violet-700);
 }
-
 .fmstr-cmp-fb-pricing__card-note {
   color: var(--p-fg-3);
   font-size: 12px;
   margin: 0 0 20px;
 }
-
 .fmstr-cmp-fb-pricing__tiers {
   flex: 1;
 }
-
 .fmstr-cmp-fb-pricing__tier {
   border-top: 1px solid var(--p-border);
   padding: 16px 0;
 }
-
 .fmstr-cmp-fb-pricing__tier:first-child {
   border-top: none;
   padding-top: 0;
 }
-
 .fmstr-cmp-fb-pricing__tier-head {
   display: flex;
   justify-content: space-between;
@@ -3520,27 +3375,23 @@ useJsonld([
   gap: 10px;
   margin-bottom: 6px;
 }
-
 .fmstr-cmp-fb-pricing__tier-name {
   font-weight: 700;
   color: var(--p-fg-1);
   font-size: 15px;
 }
-
 .fmstr-cmp-fb-pricing__tier-cost {
   font-weight: 700;
   color: var(--p-violet-600);
   font-size: 15px;
   white-space: nowrap;
 }
-
 .fmstr-cmp-fb-pricing__tier-body {
   color: var(--p-fg-2);
   font-size: 13px;
   margin: 0;
   line-height: 1.55;
 }
-
 .fmstr-cmp-fb-pricing__cta {
   display: inline-flex;
   align-items: center;
@@ -3559,12 +3410,10 @@ useJsonld([
   box-shadow: 0 6px 16px rgba(105, 65, 198, 0.25);
   transition: background 0.15s ease;
 }
-
 .fmstr-cmp-fb-pricing__cta:hover {
   color: #fff;
   background: var(--p-violet-700);
 }
-
 .fmstr-cmp-fb-pricing__cta::after {
   content: '';
   width: 6px;
@@ -3573,19 +3422,16 @@ useJsonld([
   border-right: 2px solid #fff;
   transform: rotate(45deg);
 }
-
 @media (max-width: 900px) {
   .fmstr-cmp-fb-pricing__grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
 }
-
 @media (max-width: 760px) {
   .fmstr-cmp-fb-pricing {
     padding: 48px 16px;
   }
-
   .fmstr-cmp-fb-pricing__heading {
     font-size: 26px;
     line-height: 34px;
@@ -3603,7 +3449,6 @@ useJsonld([
   border-radius: 14px;
   padding: 18px 20px;
 }
-
 .fmstr-cmp-fb-pricing__callout-ic {
   width: 34px;
   height: 34px;
@@ -3615,23 +3460,19 @@ useJsonld([
   align-items: center;
   justify-content: center;
 }
-
 .fmstr-cmp-fb-pricing__callout-ic svg {
   display: block;
 }
-
 .fmstr-cmp-fb-pricing__callout-text {
   margin: 0;
   font-size: 15px;
   line-height: 24px;
   color: #475467;
 }
-
 .fmstr-cmp-fb-pricing__callout-text strong {
   color: #101828;
   font-weight: 700;
 }
-
 @media (max-width: 760px) {
   .fmstr-cmp-fb-pricing__callout {
     padding: 16px;
@@ -3640,7 +3481,6 @@ useJsonld([
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-fb-api-mcp {
   --p-bg-card: #ffffff;
   --p-bg-tint: #f7f3ff;
@@ -3665,24 +3505,20 @@ useJsonld([
     sans-serif;
   color: var(--p-fg-1);
 }
-
 .fmstr-cmp-fb-api-mcp *,
 .fmstr-cmp-fb-api-mcp *::before,
 .fmstr-cmp-fb-api-mcp *::after {
   box-sizing: border-box;
 }
-
 .fmstr-cmp-fb-api-mcp__container {
   max-width: 1180px;
   margin: 0 auto;
 }
-
 .fmstr-cmp-fb-api-mcp__header {
   max-width: 760px;
   margin: 0 auto 40px;
   text-align: center;
 }
-
 .fmstr-cmp-fb-api-mcp__eyebrow {
   display: inline-block;
   padding: 4px 12px;
@@ -3695,7 +3531,6 @@ useJsonld([
   text-transform: uppercase;
   margin-bottom: 16px;
 }
-
 .fmstr-cmp-fb-api-mcp__title {
   font-size: 36px;
   line-height: 44px;
@@ -3703,21 +3538,18 @@ useJsonld([
   letter-spacing: -0.02em;
   margin: 0 0 12px;
 }
-
 .fmstr-cmp-fb-api-mcp__intro {
   font-size: 18px;
   line-height: 28px;
   color: var(--p-fg-2);
   margin: 0;
 }
-
 .fmstr-cmp-fb-api-mcp__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   align-items: stretch;
 }
-
 .fmstr-cmp-fb-api-mcp__card {
   background: var(--p-bg-card);
   border: 1px solid var(--p-border);
@@ -3729,12 +3561,10 @@ useJsonld([
     border-color 150ms ease,
     box-shadow 150ms ease;
 }
-
 .fmstr-cmp-fb-api-mcp__card:hover {
   border-color: var(--p-violet-300);
   box-shadow: var(--p-shadow-md);
 }
-
 .fmstr-cmp-fb-api-mcp__icon {
   width: 52px;
   height: 52px;
@@ -3747,7 +3577,6 @@ useJsonld([
   margin-bottom: 20px;
   flex-shrink: 0;
 }
-
 .fmstr-cmp-fb-api-mcp__badge {
   display: inline-block;
   padding: 4px 10px;
@@ -3761,12 +3590,10 @@ useJsonld([
   margin-bottom: 12px;
   align-self: flex-start;
 }
-
 .fmstr-cmp-fb-api-mcp__badge--alt {
   background: var(--p-bg-tint);
   color: var(--p-violet-600);
 }
-
 .fmstr-cmp-fb-api-mcp__card-title {
   font-size: 20px;
   line-height: 30px;
@@ -3774,14 +3601,12 @@ useJsonld([
   letter-spacing: -0.01em;
   margin: 0 0 16px;
 }
-
 .fmstr-cmp-fb-api-mcp__chips {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 16px;
 }
-
 .fmstr-cmp-fb-api-mcp__chip {
   display: inline-block;
   padding: 4px 10px;
@@ -3792,7 +3617,6 @@ useJsonld([
   font-weight: 600;
   line-height: 20px;
 }
-
 .fmstr-cmp-fb-api-mcp__body {
   font-size: 16px;
   line-height: 24px;
@@ -3800,7 +3624,6 @@ useJsonld([
   margin: 0 0 20px;
   flex: 1 1 auto;
 }
-
 .fmstr-cmp-fb-api-mcp__cta {
   color: var(--p-violet-600);
   font-weight: 600;
@@ -3808,38 +3631,31 @@ useJsonld([
   text-decoration: none;
   align-self: flex-start;
 }
-
 .fmstr-cmp-fb-api-mcp__cta:hover {
   color: var(--p-violet-600);
   text-decoration: underline;
 }
-
 @media (max-width: 760px) {
   .fmstr-cmp-fb-api-mcp {
     padding: 48px 16px;
   }
-
   .fmstr-cmp-fb-api-mcp__title {
     font-size: 24px;
     line-height: 32px;
   }
-
   .fmstr-cmp-fb-api-mcp__intro {
     font-size: 16px;
     line-height: 24px;
   }
-
   .fmstr-cmp-fb-api-mcp__grid {
     grid-template-columns: 1fr;
   }
-
   .fmstr-cmp-fb-api-mcp__card {
     padding: 24px;
   }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-fb-why-pick {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -3863,24 +3679,20 @@ useJsonld([
     sans-serif;
   color: var(--p-fg-1);
 }
-
 .fmstr-cmp-fb-why-pick *,
 .fmstr-cmp-fb-why-pick *::before,
 .fmstr-cmp-fb-why-pick *::after {
   box-sizing: border-box;
 }
-
 .fmstr-cmp-fb-why-pick__container {
   max-width: 1180px;
   margin: 0 auto;
 }
-
 .fmstr-cmp-fb-why-pick__header {
   max-width: 760px;
   margin: 0 auto 40px;
   text-align: center;
 }
-
 .fmstr-cmp-fb-why-pick__eyebrow {
   display: inline-block;
   padding: 4px 12px;
@@ -3893,7 +3705,6 @@ useJsonld([
   text-transform: uppercase;
   margin-bottom: 16px;
 }
-
 .fmstr-cmp-fb-why-pick__heading {
   font-size: 36px;
   line-height: 44px;
@@ -3901,21 +3712,18 @@ useJsonld([
   letter-spacing: -0.02em;
   margin: 0 0 12px;
 }
-
 .fmstr-cmp-fb-why-pick__sub {
   font-size: 16px;
   line-height: 24px;
   color: var(--p-fg-3);
   margin: 0;
 }
-
 .fmstr-cmp-fb-why-pick__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   align-items: stretch;
 }
-
 .fmstr-cmp-fb-why-pick__card {
   display: flex;
   flex-direction: column;
@@ -3930,13 +3738,11 @@ useJsonld([
     box-shadow 200ms ease,
     transform 200ms ease;
 }
-
 .fmstr-cmp-fb-why-pick__card:hover {
   border-color: var(--p-border-violet);
   box-shadow: var(--p-shadow-md);
   transform: translateY(-2px);
 }
-
 .fmstr-cmp-fb-why-pick__icon {
   width: 40px;
   height: 40px;
@@ -3948,14 +3754,12 @@ useJsonld([
   justify-content: center;
   flex-shrink: 0;
 }
-
 .fmstr-cmp-fb-why-pick__title {
   margin: 0;
   font-size: 16px;
   line-height: 22px;
   font-weight: 700;
 }
-
 .fmstr-cmp-fb-why-pick__body {
   margin: 0;
   font-size: 14px;
@@ -3968,28 +3772,23 @@ useJsonld([
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 760px) {
   .fmstr-cmp-fb-why-pick {
     padding: 48px 16px;
   }
-
   .fmstr-cmp-fb-why-pick__heading {
     font-size: 24px;
     line-height: 32px;
   }
-
   .fmstr-cmp-fb-why-pick__grid {
     grid-template-columns: 1fr;
   }
-
   .fmstr-cmp-fb-why-pick__card {
     padding: 20px;
   }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-fb-switch {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -4013,24 +3812,20 @@ useJsonld([
     sans-serif;
   color: var(--p-fg-1);
 }
-
 .fmstr-cmp-fb-switch *,
 .fmstr-cmp-fb-switch *::before,
 .fmstr-cmp-fb-switch *::after {
   box-sizing: border-box;
 }
-
 .fmstr-cmp-fb-switch__container {
   max-width: 1180px;
   margin: 0 auto;
 }
-
 .fmstr-cmp-fb-switch__header {
   max-width: 760px;
   margin: 0 auto 40px;
   text-align: center;
 }
-
 .fmstr-cmp-fb-switch__eyebrow {
   display: inline-block;
   padding: 4px 12px;
@@ -4043,7 +3838,6 @@ useJsonld([
   text-transform: uppercase;
   margin-bottom: 16px;
 }
-
 .fmstr-cmp-fb-switch__heading {
   font-size: 36px;
   line-height: 44px;
@@ -4051,21 +3845,18 @@ useJsonld([
   letter-spacing: -0.02em;
   margin: 0 0 12px;
 }
-
 .fmstr-cmp-fb-switch__sub {
   font-size: 16px;
   line-height: 24px;
   color: var(--p-fg-3);
   margin: 0;
 }
-
 .fmstr-cmp-fb-switch__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   align-items: stretch;
 }
-
 .fmstr-cmp-fb-switch__step {
   display: flex;
   flex-direction: column;
@@ -4080,13 +3871,11 @@ useJsonld([
     box-shadow 200ms ease,
     transform 200ms ease;
 }
-
 .fmstr-cmp-fb-switch__step:hover {
   border-color: var(--p-border-violet);
   box-shadow: var(--p-shadow-md);
   transform: translateY(-2px);
 }
-
 .fmstr-cmp-fb-switch__num {
   width: 36px;
   height: 36px;
@@ -4100,21 +3889,18 @@ useJsonld([
   font-weight: 700;
   flex-shrink: 0;
 }
-
 .fmstr-cmp-fb-switch__title {
   margin: 0;
   font-size: 18px;
   line-height: 28px;
   font-weight: 700;
 }
-
 .fmstr-cmp-fb-switch__body {
   margin: 0;
   font-size: 14px;
   line-height: 22px;
   color: var(--p-fg-2);
 }
-
 .fmstr-cmp-fb-switch__hint {
   margin-top: auto;
   padding-top: 12px;
@@ -4122,35 +3908,29 @@ useJsonld([
   font-size: 12px;
   color: var(--p-fg-3);
 }
-
 .fmstr-cmp-fb-switch__hint strong {
   color: var(--p-fg-1);
   font-weight: 700;
 }
-
 @media (max-width: 1024px) {
   .fmstr-cmp-fb-switch__grid {
     grid-template-columns: 1fr;
   }
 }
-
 @media (max-width: 760px) {
   .fmstr-cmp-fb-switch {
     padding: 48px 16px;
   }
-
   .fmstr-cmp-fb-switch__heading {
     font-size: 24px;
     line-height: 32px;
   }
-
   .fmstr-cmp-fb-switch__step {
     padding: 24px;
   }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-fb-when-wins {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -4173,24 +3953,20 @@ useJsonld([
     sans-serif;
   color: var(--p-fg-1);
 }
-
 .fmstr-cmp-fb-when-wins *,
 .fmstr-cmp-fb-when-wins *::before,
 .fmstr-cmp-fb-when-wins *::after {
   box-sizing: border-box;
 }
-
 .fmstr-cmp-fb-when-wins__container {
   max-width: 1180px;
   margin: 0 auto;
 }
-
 .fmstr-cmp-fb-when-wins__header {
   max-width: 760px;
   margin: 0 auto 40px;
   text-align: center;
 }
-
 .fmstr-cmp-fb-when-wins__eyebrow {
   display: inline-block;
   padding: 4px 12px;
@@ -4203,7 +3979,6 @@ useJsonld([
   text-transform: uppercase;
   margin-bottom: 16px;
 }
-
 .fmstr-cmp-fb-when-wins__heading {
   font-size: 36px;
   line-height: 44px;
@@ -4211,21 +3986,18 @@ useJsonld([
   letter-spacing: -0.02em;
   margin: 0 0 12px;
 }
-
 .fmstr-cmp-fb-when-wins__sub {
   font-size: 16px;
   line-height: 24px;
   color: var(--p-fg-3);
   margin: 0;
 }
-
 .fmstr-cmp-fb-when-wins__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: stretch;
   gap: 20px;
 }
-
 .fmstr-cmp-fb-when-wins__card {
   display: flex;
   flex-direction: column;
@@ -4239,19 +4011,16 @@ useJsonld([
     box-shadow 200ms ease,
     transform 200ms ease;
 }
-
 .fmstr-cmp-fb-when-wins__card:hover {
   box-shadow: var(--p-shadow-md);
   transform: translateY(-2px);
 }
-
 .fmstr-cmp-fb-when-wins__title {
   margin: 0;
   font-size: 18px;
   line-height: 28px;
   font-weight: 700;
 }
-
 .fmstr-cmp-fb-when-wins__list {
   margin: 0;
   padding-left: 20px;
@@ -4259,37 +4028,30 @@ useJsonld([
   flex-direction: column;
   gap: 8px;
 }
-
 .fmstr-cmp-fb-when-wins__list li {
   font-size: 14px;
   line-height: 22px;
   color: var(--p-fg-2);
 }
-
 .fmstr-cmp-fb-when-wins__list li strong {
   color: var(--p-fg-1);
   font-weight: 700;
 }
-
 @media (max-width: 760px) {
   .fmstr-cmp-fb-when-wins {
     padding: 48px 16px;
   }
-
   .fmstr-cmp-fb-when-wins__heading {
     font-size: 24px;
     line-height: 32px;
   }
-
   .fmstr-cmp-fb-when-wins__grid {
     grid-template-columns: 1fr;
   }
-
   .fmstr-cmp-fb-when-wins__card {
     padding: 24px;
   }
 }
-
 .fmstr-cmp-fb-when-wins__cicon {
   width: 40px;
   height: 40px;
@@ -4301,14 +4063,12 @@ useJsonld([
   color: #6941c6;
   margin-bottom: 14px;
 }
-
 .fmstr-cmp-fb-when-wins__desc {
   margin: 0 0 12px;
   color: #475467;
   font-size: 15px;
   line-height: 1.55;
 }
-
 .fmstr-cmp-fb-when-wins__list {
   margin: 0 0 14px;
   padding-left: 18px;
@@ -4316,11 +4076,9 @@ useJsonld([
   font-size: 14.5px;
   line-height: 1.7;
 }
-
 .fmstr-cmp-fb-when-wins__list li {
   margin: 0 0 4px;
 }
-
 .fmstr-cmp-fb-when-wins__tradeoff {
   margin: 0;
   padding-top: 12px;
@@ -4412,7 +4170,6 @@ useJsonld([
   color: rgba(255, 255, 255, 0.78);
   margin: 0 0 16px;
 }
-
 .fmstr-cmp-fb-privacy__body p:last-child {
   margin-bottom: 0;
 }
@@ -4474,7 +4231,6 @@ useJsonld([
   font-size: 14px;
   text-decoration: none;
 }
-
 .fmstr-cmp-fb-privacy__links a:hover {
   color: var(--p-fg-link-hover);
   text-decoration: underline;
@@ -4484,34 +4240,28 @@ useJsonld([
   .fmstr-cmp-fb-privacy {
     padding: 32px 16px;
   }
-
   .fmstr-cmp-fb-privacy__container {
     padding: 28px;
     border-radius: 20px;
   }
-
   .fmstr-cmp-fb-privacy__inner {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-
   .fmstr-cmp-fb-privacy__heading {
     font-size: 24px;
     line-height: 32px;
   }
-
   .fmstr-cmp-fb-privacy__quote {
     font-size: 16px;
     line-height: 24px;
   }
-
   .fmstr-cmp-fb-privacy__card {
     padding: 24px;
   }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-fb-ask {
   --p-bg-card: #ffffff;
   --p-bg-violet-25: #f7f3ff;
@@ -4536,24 +4286,20 @@ useJsonld([
     sans-serif;
   color: var(--p-fg-1);
 }
-
 .fmstr-cmp-fb-ask *,
 .fmstr-cmp-fb-ask *::before,
 .fmstr-cmp-fb-ask *::after {
   box-sizing: border-box;
 }
-
 .fmstr-cmp-fb-ask__container {
   max-width: 1180px;
   margin: 0 auto;
 }
-
 .fmstr-cmp-fb-ask__header {
   max-width: 760px;
   margin: 0 auto 40px;
   text-align: center;
 }
-
 .fmstr-cmp-fb-ask__eyebrow {
   display: inline-block;
   padding: 4px 12px;
@@ -4566,7 +4312,6 @@ useJsonld([
   text-transform: uppercase;
   margin-bottom: 16px;
 }
-
 .fmstr-cmp-fb-ask__heading {
   font-size: 36px;
   line-height: 44px;
@@ -4574,21 +4319,18 @@ useJsonld([
   letter-spacing: -0.02em;
   margin: 0 0 12px;
 }
-
 .fmstr-cmp-fb-ask__sub {
   font-size: 16px;
   line-height: 24px;
   color: var(--p-fg-3);
   margin: 0;
 }
-
 .fmstr-cmp-fb-ask__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   align-items: stretch;
 }
-
 .fmstr-cmp-fb-ask__card {
   display: flex;
   flex-direction: column;
@@ -4605,14 +4347,12 @@ useJsonld([
     box-shadow 200ms ease,
     transform 200ms ease;
 }
-
 .fmstr-cmp-fb-ask__card:hover {
   border-color: var(--p-border-violet);
   box-shadow: var(--p-shadow-md);
   transform: translateY(-2px);
   text-decoration: none;
 }
-
 .fmstr-cmp-fb-ask__brand {
   display: inline-flex;
   align-items: center;
@@ -4623,14 +4363,12 @@ useJsonld([
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-
 .fmstr-cmp-fb-ask__brand-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: var(--p-violet-600);
 }
-
 .fmstr-cmp-fb-ask__title {
   margin: 0;
   font-size: 16px;
@@ -4638,7 +4376,6 @@ useJsonld([
   font-weight: 700;
   color: var(--p-fg-1);
 }
-
 .fmstr-cmp-fb-ask__body {
   margin: 0;
   padding: 12px;
@@ -4649,7 +4386,6 @@ useJsonld([
   color: var(--p-fg-2);
   font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 }
-
 .fmstr-cmp-fb-ask__cta {
   margin-top: auto;
   font-size: 12px;
@@ -4658,24 +4394,20 @@ useJsonld([
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
-
 @media (max-width: 760px) {
   .fmstr-cmp-fb-ask {
     padding: 48px 16px;
   }
-
   .fmstr-cmp-fb-ask__heading {
     font-size: 24px;
     line-height: 32px;
   }
-
   .fmstr-cmp-fb-ask__grid {
     grid-template-columns: 1fr;
   }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-fb-other-alts {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -4698,24 +4430,20 @@ useJsonld([
     sans-serif;
   color: var(--p-fg-1);
 }
-
 .fmstr-cmp-fb-other-alts *,
 .fmstr-cmp-fb-other-alts *::before,
 .fmstr-cmp-fb-other-alts *::after {
   box-sizing: border-box;
 }
-
 .fmstr-cmp-fb-other-alts__container {
   max-width: 1180px;
   margin: 0 auto;
 }
-
 .fmstr-cmp-fb-other-alts__header {
   max-width: 760px;
   margin: 0 auto 40px;
   text-align: center;
 }
-
 .fmstr-cmp-fb-other-alts__eyebrow {
   display: inline-block;
   padding: 4px 12px;
@@ -4728,7 +4456,6 @@ useJsonld([
   text-transform: uppercase;
   margin-bottom: 16px;
 }
-
 .fmstr-cmp-fb-other-alts__heading {
   font-size: 36px;
   line-height: 44px;
@@ -4736,21 +4463,18 @@ useJsonld([
   letter-spacing: -0.02em;
   margin: 0 0 12px;
 }
-
 .fmstr-cmp-fb-other-alts__sub {
   font-size: 16px;
   line-height: 24px;
   color: var(--p-fg-3);
   margin: 0;
 }
-
 .fmstr-cmp-fb-other-alts__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
   align-items: stretch;
 }
-
 .fmstr-cmp-fb-other-alts__tile {
   display: flex;
   flex-direction: column;
@@ -4767,28 +4491,24 @@ useJsonld([
     box-shadow 200ms ease,
     transform 200ms ease;
 }
-
 .fmstr-cmp-fb-other-alts__tile:hover {
   border-color: var(--p-border-violet);
   box-shadow: var(--p-shadow-md);
   transform: translateY(-2px);
   text-decoration: none;
 }
-
 .fmstr-cmp-fb-other-alts__name {
   margin: 0;
   font-size: 16px;
   line-height: 22px;
   font-weight: 700;
 }
-
 .fmstr-cmp-fb-other-alts__bestfor {
   margin: 0;
   font-size: 14px;
   line-height: 20px;
   color: var(--p-fg-2);
 }
-
 .fmstr-cmp-fb-other-alts__link {
   margin-top: auto;
   font-size: 12px;
@@ -4797,30 +4517,25 @@ useJsonld([
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
-
 @media (max-width: 1024px) {
   .fmstr-cmp-fb-other-alts__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 760px) {
   .fmstr-cmp-fb-other-alts {
     padding: 48px 16px;
   }
-
   .fmstr-cmp-fb-other-alts__heading {
     font-size: 24px;
     line-height: 32px;
   }
-
   .fmstr-cmp-fb-other-alts__grid {
     grid-template-columns: 1fr;
   }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-fb-faqs {
   --p-bg-card: #ffffff;
   --p-bg-header: #f9fafb;
@@ -4843,24 +4558,20 @@ useJsonld([
   color: var(--p-fg-1);
   background: var(--p-bg-header);
 }
-
 .fmstr-cmp-fb-faqs *,
 .fmstr-cmp-fb-faqs *::before,
 .fmstr-cmp-fb-faqs *::after {
   box-sizing: border-box;
 }
-
 .fmstr-cmp-fb-faqs__container {
   max-width: 900px;
   margin: 0 auto;
 }
-
 .fmstr-cmp-fb-faqs__header {
   text-align: center;
   margin: 0 auto 40px;
   max-width: 720px;
 }
-
 .fmstr-cmp-fb-faqs__eyebrow {
   display: inline-block;
   padding: 4px 12px;
@@ -4873,7 +4584,6 @@ useJsonld([
   text-transform: uppercase;
   margin-bottom: 16px;
 }
-
 .fmstr-cmp-fb-faqs__heading {
   font-size: 36px;
   line-height: 44px;
@@ -4881,19 +4591,16 @@ useJsonld([
   letter-spacing: -0.02em;
   margin: 0 0 12px;
 }
-
 .fmstr-cmp-fb-faqs__sub {
   font-size: 16px;
   line-height: 24px;
   color: var(--p-fg-3);
   margin: 0;
 }
-
 .fmstr-cmp-fb-faqs__list {
   display: grid;
   gap: 12px;
 }
-
 .fmstr-cmp-fb-faqs__item {
   background: var(--p-bg-card);
   border: 1px solid var(--p-border);
@@ -4901,7 +4608,6 @@ useJsonld([
   box-shadow: 0 1px 3px rgba(16, 24, 40, 0.04);
   overflow: hidden;
 }
-
 .fmstr-cmp-fb-faqs__q {
   padding: 20px 24px;
   cursor: pointer;
@@ -4914,11 +4620,9 @@ useJsonld([
   list-style: none;
   gap: 16px;
 }
-
 .fmstr-cmp-fb-faqs__q::-webkit-details-marker {
   display: none;
 }
-
 .fmstr-cmp-fb-faqs__q::after {
   content: '+';
   color: var(--p-violet-600);
@@ -4927,37 +4631,30 @@ useJsonld([
   flex-shrink: 0;
   line-height: 1;
 }
-
 .fmstr-cmp-fb-faqs__item[open] .fmstr-cmp-fb-faqs__q::after {
   content: '\2013';
 }
-
 .fmstr-cmp-fb-faqs__item[open] .fmstr-cmp-fb-faqs__q {
   color: var(--p-violet-700);
 }
-
 .fmstr-cmp-fb-faqs__a {
   padding: 0 24px 22px 24px;
   color: var(--p-fg-2);
   font-size: 15.5px;
   line-height: 1.65;
 }
-
 @media (max-width: 760px) {
   .fmstr-cmp-fb-faqs {
     padding: 48px 16px;
   }
-
   .fmstr-cmp-fb-faqs__heading {
     font-size: 26px;
     line-height: 34px;
   }
-
   .fmstr-cmp-fb-faqs__q {
     padding: 16px 18px;
     font-size: 15.5px;
   }
-
   .fmstr-cmp-fb-faqs__a {
     padding: 0 18px 18px 18px;
     font-size: 15px;
@@ -4965,7 +4662,6 @@ useJsonld([
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 .fmstr-cmp-fb-more-ai {
   --p-bg-card: #ffffff;
   --p-bg-pill: #f4ebff;
@@ -4988,24 +4684,20 @@ useJsonld([
     sans-serif;
   color: var(--p-fg-1);
 }
-
 .fmstr-cmp-fb-more-ai *,
 .fmstr-cmp-fb-more-ai *::before,
 .fmstr-cmp-fb-more-ai *::after {
   box-sizing: border-box;
 }
-
 .fmstr-cmp-fb-more-ai__inner {
   max-width: 1180px;
   margin: 0 auto;
 }
-
 .fmstr-cmp-fb-more-ai__header {
   max-width: 760px;
   margin: 0 auto 40px;
   text-align: center;
 }
-
 .fmstr-cmp-fb-more-ai__eyebrow {
   display: inline-block;
   padding: 4px 12px;
@@ -5018,7 +4710,6 @@ useJsonld([
   text-transform: uppercase;
   margin-bottom: 16px;
 }
-
 .fmstr-cmp-fb-more-ai__heading {
   font-size: 36px;
   line-height: 44px;
@@ -5026,21 +4717,18 @@ useJsonld([
   letter-spacing: -0.02em;
   margin: 0 0 12px;
 }
-
 .fmstr-cmp-fb-more-ai__sub {
   font-size: 16px;
   line-height: 24px;
   color: var(--p-fg-3);
   margin: 0;
 }
-
 .fmstr-cmp-fb-more-ai__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
   align-items: stretch;
 }
-
 .fmstr-cmp-fb-more-ai__tile {
   background: var(--p-bg-card);
   border: 1px solid var(--p-border-light);
@@ -5057,14 +4745,12 @@ useJsonld([
     box-shadow 200ms ease,
     transform 200ms ease;
 }
-
 .fmstr-cmp-fb-more-ai__tile:hover {
   border-color: var(--p-border-violet);
   box-shadow: var(--p-shadow-md);
   transform: translateY(-2px);
   text-decoration: none;
 }
-
 .fmstr-cmp-fb-more-ai__thumb {
   width: 40px;
   height: 40px;
@@ -5076,21 +4762,18 @@ useJsonld([
   justify-content: center;
   flex-shrink: 0;
 }
-
 .fmstr-cmp-fb-more-ai__title {
   margin: 0;
   font-size: 16px;
   line-height: 22px;
   font-weight: 700;
 }
-
 .fmstr-cmp-fb-more-ai__body {
   margin: 0;
   font-size: 14px;
   line-height: 20px;
   color: var(--p-fg-2);
 }
-
 .fmstr-cmp-fb-more-ai__link {
   margin-top: auto;
   font-size: 12px;
@@ -5105,17 +4788,14 @@ useJsonld([
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 760px) {
   .fmstr-cmp-fb-more-ai {
     padding: 48px 16px;
   }
-
   .fmstr-cmp-fb-more-ai__heading {
     font-size: 24px;
     line-height: 32px;
   }
-
   .fmstr-cmp-fb-more-ai__grid {
     grid-template-columns: 1fr;
   }
@@ -5170,7 +4850,6 @@ useJsonld([
   position: absolute;
   pointer-events: none;
 }
-
 .fmstr-cmp-fb-cta__shape--circle-lg {
   width: 280px;
   height: 280px;
@@ -5180,7 +4859,6 @@ useJsonld([
   right: -140px;
   transform: translateY(-50%);
 }
-
 .fmstr-cmp-fb-cta__shape--circle-md {
   width: 140px;
   height: 140px;
@@ -5189,7 +4867,6 @@ useJsonld([
   top: -50px;
   right: 220px;
 }
-
 .fmstr-cmp-fb-cta__shape--circle-sm {
   width: 80px;
   height: 80px;
@@ -5198,7 +4875,6 @@ useJsonld([
   bottom: -20px;
   left: 60px;
 }
-
 .fmstr-cmp-fb-cta__shape--square-lg {
   width: 180px;
   height: 180px;
@@ -5207,7 +4883,6 @@ useJsonld([
   right: 80px;
   transform: rotate(8deg);
 }
-
 .fmstr-cmp-fb-cta__shape--square-sm {
   width: 70px;
   height: 70px;
@@ -5256,7 +4931,6 @@ useJsonld([
     transform 0.15s ease,
     box-shadow 0.15s ease;
 }
-
 .fmstr-cmp-fb-cta__btn:hover {
   color: var(--p-btn-fg);
   transform: translateY(-2px);
@@ -5267,35 +4941,28 @@ useJsonld([
   .fmstr-cmp-fb-cta {
     padding: 48px 16px;
   }
-
   .fmstr-cmp-fb-cta__card {
     padding: 48px 24px;
     border-radius: 20px;
   }
-
   .fmstr-cmp-fb-cta__heading {
     font-size: 28px;
   }
-
   .fmstr-cmp-fb-cta__sub {
     font-size: 15px;
   }
-
   .fmstr-cmp-fb-cta__btn {
     width: 100%;
     justify-content: center;
   }
-
   .fmstr-cmp-fb-cta__shape--circle-lg {
     width: 200px;
     height: 200px;
     right: -100px;
   }
-
   .fmstr-cmp-fb-cta__shape--circle-md {
     display: none;
   }
-
   .fmstr-cmp-fb-cta__shape--square-lg {
     width: 120px;
     height: 120px;
