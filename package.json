@@ -12,16 +12,15 @@
     "start": "nuxt preview",
     "generate": "nuxt generate",
     "generate:dev": "PRERENDER_CONCURRENCY=4 NODE_OPTIONS=\"--max-old-space-size=4096\" nuxt generate",
+    "serve": "npx serve .output/public",
     "postinstall": "nuxt prepare",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "s3-uploader": "npm --prefix tools/s3-uploader run dev",
-    "s3-uploader:install": "npm --prefix tools/s3-uploader install",
-    "s3-uploader:build": "npm --prefix tools/s3-uploader run build",
-    "s3-uploader:start": "npm --prefix tools/s3-uploader run start",
-    "format:pages": "prettier --write \"pages/**/*.vue\""
+    "format:pages": "prettier --write \"pages/**/*.vue\"",
+    "minio:up": "docker compose -f docker-compose.minio.yml up -d",
+    "minio:down": "docker compose -f docker-compose.minio.yml down"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.658.1",
+    "@aws-sdk/s3-request-presigner": "^3.658.1",
     "@builder.io/partytown": "^0.10.3",
     "@kyvg/vue3-notification": "^3.4.2",
     "@lucide/vue": "^1.23.0",

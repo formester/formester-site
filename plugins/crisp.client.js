@@ -1,7 +1,7 @@
 /*
   Crisp chat integration (client-only)
-  - Injects Crisp on initial load unless route is a blog page
-  - Toggles visibility based on route changes (hides on blog pages)
+  - Injects Crisp on initial load unless route is a blog page or internal tool
+  - Toggles visibility based on route changes (hides on those routes)
 */
 
 export default defineNuxtPlugin(() => {
@@ -17,6 +17,14 @@ export default defineNuxtPlugin(() => {
     const path = route?.path || ''
     return path === '/blog' || path.startsWith('/blog/')
   }
+
+  // Internal dev tools (e.g. /__TOOLS__/media) shouldn't show customer-facing chat
+  const isToolsRoute = (route) => {
+    const path = route?.path || ''
+    return path.toLowerCase().startsWith('/__tools__/')
+  }
+
+  const isExcludedRoute = (route) => isBlogRoute(route) || isToolsRoute(route)
 
   // Create and append Crisp loader script once
   const loadCrisp = () => {
@@ -63,7 +71,7 @@ export default defineNuxtPlugin(() => {
   }
 
   const handleRoute = (route) => {
-    if (isBlogRoute(route)) {
+    if (isExcludedRoute(route)) {
       hideCrisp()
     } else {
       // Load on first non-blog page visit, then ensure it's shown
