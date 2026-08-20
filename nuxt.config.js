@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { getFeatureRoutes, getPageRoutes } from './utils/getRoutes.js'
+import getBlogRoutes, { getFeatureRoutes, getPageRoutes, getTemplateRoutes } from './utils/getRoutes.js'
 import { STRAPI_URL, APP_URL } from './constants/urls'
 
 export default defineNuxtConfig({
@@ -42,7 +42,7 @@ export default defineNuxtConfig({
   // Robots configuration
   robots: {
     UserAgent: '*',
-    Disallow: ['/_nuxt/static/', '/status/', '/api/'],
+    Disallow: ['/_nuxt/static/', '/status/', '/api/', '/__TOOLS__/'],
     Sitemap: 'https://formester.com/sitemap.xml'
   },
 
@@ -56,7 +56,7 @@ export default defineNuxtConfig({
     sources: [
       '/api/__sitemap__/urls'
     ],
-    exclude: ['/status/**', '/design-preview']
+    exclude: ['/status/**', '/design-preview', '/__TOOLS__/**']
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -117,22 +117,30 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: ['/', '/sitemap.xml'],
-      ignore: ['/api', '/blog', '/templates', '/comparison-tool'],
-      concurrency: 15, // Increased: pages now render from in-memory cache
+      ignore: ['/api', '/comparison-tool', '/__TOOLS__'],
+      // Lower via PRERENDER_CONCURRENCY on memory-constrained machines —
+      // e.g. a 6.7GB-RAM local dev box OOM'd at the default 16 with
+      // --max-old-space-size=4096 (needed for the full blog+templates
+      // build); each concurrent render holds its own fetched/rendered data,
+      // so fewer in flight at once directly lowers peak memory.
+      // Set PRERENDER_CONCURRENCY=4 locally; leave unset in CI (more RAM).
+      concurrency: Number(process.env.PRERENDER_CONCURRENCY) || 16,
       interval: 10, // Reduced: minimal API I/O with batch caching
       failOnError: false
     },
     hooks: {
       async 'prerender:routes'(routes) {
-        // Blog and templates are skipped for now — still Strapi-backed,
-        // migrated in a later phase (see plans/nuxt-content-migration.md).
         const features = await getFeatureRoutes()
         const pages = await getPageRoutes()
+        const blogs = await getBlogRoutes()
+        const templates = await getTemplateRoutes()
 
         const featureUrls = features.map(item => item.url)
         const pageUrls = pages.map(item => item.url)
+        const blogUrls = blogs.map(item => item.url)
+        const templateUrls = templates.map(item => item.url)
 
-        const allRoutes = [...pageUrls, ...featureUrls].filter(Boolean)
+        const allRoutes = [...pageUrls, ...featureUrls, ...blogUrls, ...templateUrls].filter(Boolean)
 
         for (const route of allRoutes) {
           routes.add(route)
