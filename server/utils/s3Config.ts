@@ -12,7 +12,7 @@ export interface S3Profile {
   acl: 'public-read' | 'private'
   publicUrlBase?: string
   // Not exposed in the config UI (AWS S3 only by design) — settable only by
-  // hand-editing tmp/s3_config.json, for pointing at an S3-compatible
+  // hand-editing tmp/media/s3_config.json, for pointing at an S3-compatible
   // endpoint (e.g. MinIO) during local testing.
   endpoint?: string
   forcePathStyle?: boolean
@@ -23,7 +23,7 @@ interface Store {
   activeProfileId: string | null
 }
 
-const CONFIG_DIR = join(process.cwd(), 'tmp')
+const CONFIG_DIR = join(process.cwd(), 'tmp', 'media')
 const CONFIG_PATH = join(CONFIG_DIR, 's3_config.json')
 
 let cachedClients: Record<string, { key: string; client: S3Client }> = {}
