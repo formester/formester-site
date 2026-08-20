@@ -11,6 +11,7 @@
     "build": "nuxt build",
     "start": "nuxt preview",
     "generate": "nuxt generate",
+    "generate:dev": "PRERENDER_CONCURRENCY=4 NODE_OPTIONS=\"--max-old-space-size=4096\" nuxt generate",
     "postinstall": "nuxt prepare",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
