@@ -11,6 +11,7 @@
 
 import fs from 'node:fs'
 import path from 'node:path'
+import postcss from 'postcss'
 import readingTime from '../utils/readingTime.js'
 import getSiteMeta from '../utils/getSiteMeta.js'
 
@@ -124,12 +125,27 @@ function isWellFormedHtml(markup) {
   return stack.length === 0
 }
 
+// Browsers/v-html tolerate malformed CSS silently (bad rules just get
+// dropped); PostCSS (what Vite uses to process <style scoped> at build
+// time) throws a hard parse error instead. Source raw-html markup has been
+// found with genuinely broken embedded CSS (a truncated @keyframes rule
+// followed by an orphaned rule body) — validate before hoisting.
+function isWellFormedCss(css) {
+  if (!css.trim()) return true
+  try {
+    postcss.parse(css)
+    return true
+  } catch {
+    return false
+  }
+}
+
 function renderComponentBlock(component, index, mapping, importsUsed, warnings, harvestedCss) {
   const key = component.__component
 
   if (key === 'micro-components.raw-html' && !needsRawHtmlComponent(component.markup || '')) {
     const { cleanMarkup, css } = extractStyles(component.markup || '')
-    if (isWellFormedHtml(cleanMarkup)) {
+    if (isWellFormedHtml(cleanMarkup) && css.every(isWellFormedCss)) {
       harvestedCss.push(...css)
       const sectionClass = component.useContainer ? 'page-component-item container' : 'page-component-item'
       const tag = [
