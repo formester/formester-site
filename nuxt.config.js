@@ -137,6 +137,15 @@ export default defineNuxtConfig({
       interval: 10, // Reduced: minimal API I/O with batch caching
       failOnError: false
     },
+    // Nitro's prerender payload cache (internal:nuxt:prerender:payload) has no
+    // default disk mount, so it falls back to the in-memory storage driver and
+    // retains EVERY prerendered route's payload for the whole build with no
+    // eviction — a known Nitro issue (unjs/nitro#1480/#1535) that shows up as
+    // heap climbing linearly with route count on large static builds. Mounting
+    // it to fs spills that cache to disk instead of RAM.
+    storage: {
+      'internal:nuxt:prerender:payload': { driver: 'fs', base: '.data/prerender-payload-cache' }
+    },
     hooks: {
       async 'prerender:routes'(routes) {
         const pages = await getPageRoutes()

@@ -12,6 +12,7 @@
     "start": "nuxt preview",
     "generate": "nuxt generate",
     "generate:dev": "PRERENDER_CONCURRENCY=4 NODE_OPTIONS=\"--max-old-space-size=4096\" nuxt generate",
+    "build:debug": "PRERENDER_CONCURRENCY=16 NODE_OPTIONS=\"--heapsnapshot-near-heap-limit=3 --diagnostic-dir=./heap-snapshots\" node --max-old-space-size=4096 --trace-gc node_modules/nuxt/bin/nuxt.mjs build",
     "serve": "npx serve .output/public",
     "postinstall": "nuxt prepare",
     "format:pages": "prettier --write \"pages/**/*.vue\""
