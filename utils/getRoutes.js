@@ -13,32 +13,21 @@ import getTemplatesAndCategories from './getTemplatesAndCategories.js'
 const CONTENT_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../content')
 const PAGES_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../pages')
 
-// Features are fully migrated off content/features JSON to static pages/features/*.vue
-// files (one per slug), so route generation reads the slugs straight off the
-// pages/features directory instead. Skips index.vue (the /features/ listing page,
-// seeded separately) and any [bracket].vue dynamic-route file.
-function listFeatureSlugsFromDisk() {
-  const root = path.join(PAGES_DIR, 'features')
-  if (!fs.existsSync(root)) return []
-  return fs
-    .readdirSync(root, { withFileTypes: true })
-    .filter((entry) => entry.isFile() && entry.name.endsWith('.vue'))
-    .map((entry) => entry.name.replace(/\.vue$/, ''))
-    .filter((name) => name !== 'index' && !name.startsWith('['))
-}
-
-// content/pages is fully migrated too, same reasoning as listFeatureSlugsFromDisk
-// above — read slugs straight off pages/**/*.vue instead. Excludes subdirectories
-// that already have their own dedicated route-generation function (blog/,
-// templates/, features/) or aren't content pages at all (__TOOLS__/), plus the
-// handful of top-level system/tool pages that aren't part of the content-driven
-// "pages" set and are handled elsewhere (ignored by nitro.prerender, excluded
-// from the sitemap, or just always linked from nav/footer).
-const PAGE_SKIP_DIRS = new Set(['blog', 'templates', 'features', '__TOOLS__'])
+// content/pages is fully migrated too — read slugs straight off pages/**/*.vue
+// instead. Excludes subdirectories that aren't backed 1:1 by a .vue file per
+// route (blog/ is markdown content, templates/ comes from a live API) or
+// aren't content pages at all (__TOOLS__/), plus the handful of top-level
+// system/tool pages that aren't part of the content-driven "pages" set and
+// are handled elsewhere (ignored by nitro.prerender, excluded from the
+// sitemap, or just always linked from nav/footer).
+const PAGE_SKIP_DIRS = new Set(['blog', 'templates', '__TOOLS__'])
 const PAGE_SKIP_FILES = new Set([
   'index', 'preview', 'design-preview', 'template-preview', 'comparison-tool',
   'contact', 'pricing', 'security', 'terms-of-service', 'jotform-101', 'typeform-101',
 ])
+// Listing pages seeded separately (not through this walker) even though they
+// live as an index.vue alongside their per-slug siblings.
+const INDEX_SKIP_DIRS = new Set(['features'])
 
 function listPageSlugsFromDisk() {
   const slugs = []
@@ -48,6 +37,12 @@ function listPageSlugsFromDisk() {
         if (isRoot && PAGE_SKIP_DIRS.has(entry.name)) continue
         walk(path.join(dir, entry.name), false)
       } else if (entry.name.endsWith('.vue') && !entry.name.startsWith('[')) {
+        if (!isRoot && entry.name === 'index.vue') {
+          // pages/foo/index.vue routes to /foo/, not /foo/index/
+          // if (INDEX_SKIP_DIRS.has(path.basename(dir))) continue
+          slugs.push(path.relative(PAGES_DIR, dir))
+          continue
+        }
         const slug = path.relative(PAGES_DIR, path.join(dir, entry.name)).replace(/\.vue$/, '')
         if (isRoot && PAGE_SKIP_FILES.has(slug)) continue
         slugs.push(slug)
@@ -121,12 +116,6 @@ export default async () => {
   }
 
   return [...articles, ...paginationUrls]
-}
-
-export const getFeatureRoutes = async () => {
-  return listFeatureSlugsFromDisk().map((slug) => ({
-    url: `/features/${slug}/`,
-  }))
 }
 
 export const getPageRoutes = async () => {

@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import getBlogRoutes, { getFeatureRoutes, getPageRoutes, getTemplateRoutes } from './utils/getRoutes.js'
+import getBlogRoutes, { getPageRoutes, getTemplateRoutes } from './utils/getRoutes.js'
 import { STRAPI_URL, APP_URL } from './constants/urls'
 
 // Vercel sets DEPLOY_ENV to 'production' only for the prod deployment/domain;
@@ -139,17 +139,19 @@ export default defineNuxtConfig({
     },
     hooks: {
       async 'prerender:routes'(routes) {
-        const features = await getFeatureRoutes()
         const pages = await getPageRoutes()
         const blogs = await getBlogRoutes()
         const templates = await getTemplateRoutes()
 
-        const featureUrls = features.map(item => item.url)
         const pageUrls = pages.map(item => item.url)
         const blogUrls = blogs.map(item => item.url)
         const templateUrls = templates.map(item => item.url)
 
-        const allRoutes = [...pageUrls, ...featureUrls, ...blogUrls, ...templateUrls].filter(Boolean)
+        const allRoutes = [
+          ...pageUrls,
+          ...blogUrls,
+          ...templateUrls
+        ].filter(Boolean)
 
         for (const route of allRoutes) {
           routes.add(route)
