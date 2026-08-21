@@ -67,6 +67,7 @@
 import { computed } from 'vue'
 import SectionHeader from '@/components/v2/SectionHeader.vue'
 import StarRatingIcons from '@/components/icons/StarRatingIcons.vue'
+import { platformTestimonials } from '@/constants/platform-testimonials'
 
 const props = defineProps({
   title: { type: Array, default: () => [] },
@@ -79,28 +80,22 @@ const props = defineProps({
   excludedReviews: { type: Array, default: () => [] },
 })
 
-// When no reviews are hand-picked, pull the whole collection (build-time fetch).
-const { data: allReviews } = props.pickedReviews?.length
-  ? { data: ref([]) }
-  : await useAsyncData('platform-testimonials', async () => {
-      try {
-        const docs = await queryCollection('platformTestimonials').all()
-        return docs.map((item) => ({
-          id: item.strapiId,
-          platform: item.platform,
-          rating: item.rating,
-          text: item.text,
-          authorName: item.authorName,
-          authorRole: item.authorRole,
-          reviewDate: item.reviewDate,
-          verified: item.verified,
-          hidden: item.hidden,
-        }))
-      } catch (e) {
-        console.error('TestimonialWall: failed to fetch reviews', e)
-        return []
-      }
-    })
+// When no reviews are hand-picked, use the whole constant list.
+const allReviews = computed(() =>
+  props.pickedReviews?.length
+    ? []
+    : platformTestimonials.map((item) => ({
+        id: item.strapiId,
+        platform: item.platform,
+        rating: item.rating,
+        text: item.text,
+        authorName: item.authorName,
+        authorRole: item.authorRole,
+        reviewDate: item.reviewDate,
+        verified: item.verified,
+        hidden: item.hidden,
+      }))
+)
 
 const platformOn = computed(() => ({
   G2: props.showG2,

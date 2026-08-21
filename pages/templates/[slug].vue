@@ -46,7 +46,7 @@ const { data: fetchedData, error: fetchError } = useAsyncData(
       let moreTemplatesTitle = []
       let moreTemplatesDescription = ''
       try {
-        const recMap = await getRecommendedTemplatesMap()
+        const recMap = getRecommendedTemplatesMap()
         const entry = recMap[slug] || {}
         const defaultSlugs = entry.defaultRecommendedSlugs || []
         const hideDefault = entry.hideDefaultRecommended === true

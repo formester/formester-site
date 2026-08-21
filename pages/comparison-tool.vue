@@ -182,45 +182,26 @@ import ComparisonCard from '@/components/comparision/ComparisonCard.vue'
 import FormBuilderComparisonTable from '@/components/comparision/FormBuilderComparisonTable.vue'
 import Faq from '@/components/features/Faq.vue'
 import getSiteMeta from '@/utils/getSiteMeta'
+import { formBuilders as rawFormBuilders } from '@/constants/form-builders'
 
-const { data: fetchedData, error: fetchError } = await useAsyncData('comparison-tool', async () => {
-  try {
-    const docs = await queryCollection('formBuilders').order('name', 'ASC').all()
+// Reconstruct the nested Strapi media shape (`logo.data.attributes.url`)
+// that this page and FormBuilderComparisonTable.vue's template already read
+// directly, so neither needs further changes. Sorted by name ASC.
+const formBuilders = [...rawFormBuilders]
+  .sort((a, b) => (a.name || '').localeCompare(b.name || ''))
+  .map((item) => ({
+    id: item.strapiId,
+    name: item.name,
+    logo: item.logo
+      ? { data: { attributes: { url: item.logo.url, alternativeText: item.logo.alternativeText } } }
+      : null,
+    plan: item.plan,
+    createdAt: item.createdAt,
+    updatedAt: item.updatedAt,
+    publishedAt: item.publishedAt,
+  }))
 
-    // Reconstruct the nested Strapi media shape (`logo.data.attributes.url`)
-    // that this page and FormBuilderComparisonTable.vue's template already
-    // read directly, so neither needs to change.
-    const formBuilders = docs.map((item) => ({
-      id: item.strapiId,
-      name: item.name,
-      logo: item.logo
-        ? { data: { attributes: { url: item.logo.url, alternativeText: item.logo.alternativeText } } }
-        : null,
-      plan: item.plan,
-      createdAt: item.createdAt,
-      updatedAt: item.updatedAt,
-      publishedAt: item.publishedAt,
-    }))
-
-    const options = formBuilders.map((fb) => fb.name)
-
-    return { formBuilders, options }
-  } catch (error) {
-    console.error('Error fetching form builders:', error)
-    throw error
-  }
-})
-
-if (fetchError.value) {
-  throw createError({
-    statusCode: 500,
-    statusMessage: 'Failed to load comparison data',
-    fatal: true,
-  })
-}
-
-const formBuilders = computed(() => fetchedData.value?.formBuilders || [])
-const options = computed(() => fetchedData.value?.options || [])
+const options = formBuilders.map((fb) => fb.name)
 
 const selectedFormBuildersOption = ref(['', '', '', ''])
 const selectedFormBuildersDetails = reactive({ 0: null, 1: null, 2: null, 3: null })
@@ -261,7 +242,7 @@ const meta = computed(() => {
 
 const formBuildersLogoSrc = computed(() => {
   const logoSrc = {}
-  formBuilders.value.forEach((fb) => {
+  formBuilders.forEach((fb) => {
     if (fb.logo && fb.logo.data && fb.logo.data.attributes) {
       logoSrc[fb.name] = fb.logo.data.attributes.url
     } else {
@@ -277,7 +258,7 @@ const filteredSelectedFormBuildersDetails = computed(() => {
 
 const filteredOptions = (cardNumber) => {
   const selectedOptions = selectedFormBuildersOption.value.filter(Boolean)
-  return options.value.filter(
+  return options.filter(
     (option) => !selectedOptions.includes(option) || selectedFormBuildersOption.value[cardNumber] === option,
   )
 }
@@ -286,7 +267,7 @@ const handleOptionChange = (selectedOption, cardNumber) => {
   selectedFormBuildersOption.value[cardNumber] = selectedOption
 
   if (selectedOption) {
-    const newFormBuilder = formBuilders.value.find((fb) => fb.name === selectedOption)
+    const newFormBuilder = formBuilders.find((fb) => fb.name === selectedOption)
     if (newFormBuilder) {
       selectedFormBuildersDetails[cardNumber] = newFormBuilder
     }

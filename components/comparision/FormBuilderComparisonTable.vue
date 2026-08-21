@@ -131,6 +131,7 @@ import { computed, reactive, watch } from 'vue'
 import FormBuilderFeatureList from '@/components/comparision/FormBuilderFeatureList.vue'
 import FormBuilderDetails from '@/components/comparision/FormBuilderDetails.vue'
 import FormBuilderFeatureAccordion from '@/components/comparision/FormBuilderFeatureAccordion.vue'
+import { formBuilderFeatures } from '@/constants/form-builder-features'
 
 const props = defineProps({
   selectedFormBuildersDetails: {
@@ -146,15 +147,11 @@ const props = defineProps({
 // reactive map: fb.id -> plan name
 const selectedPlans = reactive({})
 
-// No createdAt on this collection (never migrated for this content type) —
-// harmless to fetch unordered since groupedFeatures below re-sorts every
-// category's features by position/name regardless of fetch order.
-const { data: featureDocs } = await useAsyncData('form-builder-features', () =>
-  queryCollection('formBuilderFeatures').all()
-)
-
+// No createdAt on this collection — harmless to read unordered since
+// groupedFeatures below re-sorts every category's features by
+// position/name regardless of source order.
 const featureList = computed(() =>
-  (featureDocs.value || []).map((item) => ({
+  formBuilderFeatures.map((item) => ({
     id: item.strapiId,
     title: item.title,
     description: item.description,

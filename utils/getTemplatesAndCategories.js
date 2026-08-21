@@ -1,39 +1,10 @@
-import fs from 'node:fs'
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
 import { APP_URL } from '../constants/urls.js'
+import { pdfTemplates } from '../constants/pdf-templates.js'
 import fetchWithRetry from './fetchWithRetry.js'
 import { adaptTemplateToV2 } from './adaptTemplateToV2.js'
 
 let cachePromise = null
 let categorieRoutesPromise = null
-
-// getTemplateRoutes() (utils/getRoutes.js) reaches this function from both
-// the nuxt.config.js prerender:routes build hook and server/api/__sitemap__,
-// neither of which reliably has queryCollection available (nuxt/content#3586)
-// — so read the plain flat JSON straight off disk instead, same reasoning as
-// getRoutes.js's disk-based feature/page/blog listers.
-//
-// This file is imported directly by page components (pages/templates/*.vue),
-// so it gets bundled for the client too — node:fs/node:path/node:url don't
-// exist there. Everything Node-only stays inside this function, gated by
-// import.meta.server, so Vite dead-code-eliminates it from the client build
-// instead of crashing on a non-functional client-side fileURLToPath stub.
-function readPdfTemplatesFromDisk() {
-  if (!import.meta.server) return []
-  // import.meta.dirname isn't reliably preserved once Vite/Rollup bundles
-  // this file into a Nitro server chunk (it evaluates to undefined at
-  // runtime, breaking path.resolve) — import.meta.url is a required,
-  // spec-compliant ESM feature bundlers must rewrite correctly, so use
-  // that instead.
-  const contentDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../content')
-  const dir = path.join(contentDir, 'templates/pdf-templates')
-  if (!fs.existsSync(dir)) return []
-  return fs
-    .readdirSync(dir)
-    .filter((f) => f.endsWith('.json'))
-    .map((f) => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')))
-}
 
 async function _fetchTemplatesAndCategories(options = {}) {
   console.log('[getTemplatesAndCategories] Fetching all templates and categories...')
@@ -53,8 +24,6 @@ async function _fetchTemplatesAndCategories(options = {}) {
   const dummyDescription =
     'Check out this pre-designed template and start customising with just a single click. Personalise with your branding, incorporate electronic signatures for security and add multiple collaborators to make changes simultaneously. Use this template and start getting data driven actionable insights with robust analytics.'
 
-  const data = readPdfTemplatesFromDisk()
-
   templates = templates.map((template) =>
     adaptTemplateToV2({
       ...template,
@@ -71,7 +40,7 @@ async function _fetchTemplatesAndCategories(options = {}) {
   })
 
   const templateRoutes = templates.map((template) => {
-    const pdfTemplate = data.find((pdfTemplate) => pdfTemplate.slug === template.slug)
+    const pdfTemplate = pdfTemplates.find((pt) => pt.slug === template.slug)
     return {
       route: `/templates/${template.slug}`,
       payload: { template, categories, data: pdfTemplate },
