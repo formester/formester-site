@@ -3,10 +3,7 @@
     <ComparisonToolHero />
     <div class="container">
       <div class="comparison_card-container mx-auto my-5">
-        <div
-          v-for="(selectedFB, index) in selectedFormBuildersOption"
-          :key="selectedFB + index"
-        >
+        <div v-for="(selectedFB, index) in selectedFormBuildersOption" :key="selectedFB + index">
           <ComparisonOptionCard
             :options="filteredOptions(index)"
             :selected-option="selectedFB"
@@ -21,16 +18,12 @@
         :form-builders="formBuilders"
       />
 
-      <div
-        v-if="!selectedFormBuildersOption.filter(Boolean).length"
-        class="how-section"
-      >
+      <div v-if="!selectedFormBuildersOption.filter(Boolean).length" class="how-section">
         <div class="how-section__header">
           <h2>How to Use the Tool?</h2>
           <p>
-            Using our comparison tool to find the best form builder is simple
-            and effective. First, select up to four form builders from our list
-            that you want to compare.
+            Using our comparison tool to find the best form builder is simple and effective. First, select up to four
+            form builders from our list that you want to compare.
           </p>
         </div>
         <div class="how-section__body">
@@ -38,16 +31,10 @@
             <div class="step__content">
               <span>STEP 1</span>
               <h3>Select Form Builders</h3>
-              <p>
-                First, select up to four form builders from our list that you
-                want to compare.
-              </p>
+              <p>First, select up to four form builders from our list that you want to compare.</p>
             </div>
             <div class="step__image">
-              <img
-                src="../assets/images/comparision/how-to-use-step-1.svg"
-                alt="Select Form Builders"
-              />
+              <img src="../assets/images/comparision/how-to-use-step-1.svg" alt="Select Form Builders" />
             </div>
           </div>
           <div class="section-body__step step-2">
@@ -55,19 +42,14 @@
               <span>STEP 2</span>
               <h3>Select Right Plans for Each Form Builder</h3>
               <p>
-                Then select the pricing plan of the tool you are trying to
-                compare, Our tool will display a table with pricing plans and
-                features. The features include conditional logic, form fields,
-                email autoresponder, number of users, number of forms available,
-                and more for each option. This makes it simple to compare the
-                different options.
+                Then select the pricing plan of the tool you are trying to compare, Our tool will display a table with
+                pricing plans and features. The features include conditional logic, form fields, email autoresponder,
+                number of users, number of forms available, and more for each option. This makes it simple to compare
+                the different options.
               </p>
             </div>
             <div class="step__image">
-              <img
-                src="../assets/images/comparision/how-to-use-step-2.svg"
-                alt="Select Form Builders"
-              />
+              <img src="../assets/images/comparision/how-to-use-step-2.svg" alt="Select Form Builders" />
             </div>
           </div>
           <div class="section-body__step step-3">
@@ -75,45 +57,32 @@
               <span>STEP 3</span>
               <h3>Compare different Form Builders</h3>
               <p>
-                You can easily see what each form builder offers for each of
-                their pricing plan, helping you decide which one suits your
-                needs best. Find the best form builder for your business or
-                personal use with our tool. Get all the information you need in
-                one place. Our tool is made to help you save time and make
+                You can easily see what each form builder offers for each of their pricing plan, helping you decide
+                which one suits your needs best. Find the best form builder for your business or personal use with our
+                tool. Get all the information you need in one place. Our tool is made to help you save time and make
                 decisions easier.
               </p>
             </div>
             <div class="step__image">
-              <img
-                src="../assets/images/comparision/how-to-use-step-3.svg"
-                alt="Select Form Builders"
-              />
+              <img src="../assets/images/comparision/how-to-use-step-3.svg" alt="Select Form Builders" />
             </div>
           </div>
         </div>
       </div>
 
-      <div
-        v-if="!selectedFormBuildersOption.filter(Boolean).length"
-        class="why-section"
-      >
+      <div v-if="!selectedFormBuildersOption.filter(Boolean).length" class="why-section">
         <div class="why-section__content">
           <h2>Why Is This Tool Awesome?</h2>
           <p>
-            This tool is great for easily finding the best form builder
-            software. It works for small businesses, freelancers, and large
-            companies. You can compare options quickly and effectively with our
-            tool.
+            This tool is great for easily finding the best form builder software. It works for small businesses,
+            freelancers, and large companies. You can compare options quickly and effectively with our tool.
             <br /><br />
-            Use our tool to find the best form software for your needs, whether
-            it's for simple contact forms or complex surveys such as brand
-            awareness surveys. Gain confidence in your choice with our
-            comparison tool.
+            Use our tool to find the best form software for your needs, whether it's for simple contact forms or complex
+            surveys such as brand awareness surveys. Gain confidence in your choice with our comparison tool.
             <br /><br />
-            You'll save a lot of time and effort by avoiding the need to visit
-            multiple websites to gather information. Instead, we conveniently
-            present everything you need in one place, making your
-            decision-making process more informed!
+            You'll save a lot of time and effort by avoiding the need to visit multiple websites to gather information.
+            Instead, we conveniently present everything you need in one place, making your decision-making process more
+            informed!
           </p>
           <!-- <p>
             Use our tool to find the best form software for your needs, whether
@@ -129,85 +98,54 @@
           </p> -->
         </div>
         <div class="why-section__image">
-          <img
-            src="../assets/images/comparision/why-this-tool-awesome.svg"
-            alt="Why use comparison tool"
-          />
+          <img src="../assets/images/comparision/why-this-tool-awesome.svg" alt="Why use comparison tool" />
         </div>
       </div>
 
-      <div
-        v-if="!selectedFormBuildersOption.filter(Boolean).length"
-        class="features-section"
-      >
+      <div v-if="!selectedFormBuildersOption.filter(Boolean).length" class="features-section">
         <h2>Key Features of Our Tool</h2>
         <div class="features-section__body">
           <div class="feature">
-            <img
-              src="../assets/images/comparision/features/feature-1.svg"
-              alt="1"
-            />
+            <img src="../assets/images/comparision/features/feature-1.svg" alt="1" />
             <h3>Unique Tool</h3>
             <p>
-              Our tool is unique because it lets you compare prices and features
-              of the top form builder tools on the market.
+              Our tool is unique because it lets you compare prices and features of the top form builder tools on the
+              market.
             </p>
           </div>
           <div class="feature">
-            <img
-              src="../assets/images/comparision/features/feature-2.svg"
-              alt="2"
-            />
+            <img src="../assets/images/comparision/features/feature-2.svg" alt="2" />
             <h3>Easy Comparison</h3>
             <p>
-              You can easily customize your comparison by choosing up to four
-              form builders at once. This helps you see a detailed comparison
-              with a clear focus.
+              You can easily customize your comparison by choosing up to four form builders at once. This helps you see
+              a detailed comparison with a clear focus.
             </p>
           </div>
           <div class="feature">
-            <img
-              src="../assets/images/comparision/features/feature-3.svg"
-              alt="3"
-            />
+            <img src="../assets/images/comparision/features/feature-3.svg" alt="3" />
             <h3>Compare Pricing Plans</h3>
-            <p>
-              You can compare pricing plans of online form builders to decide
-              which one is best for you.
-            </p>
+            <p>You can compare pricing plans of online form builders to decide which one is best for you.</p>
           </div>
           <div class="feature">
-            <img
-              src="../assets/images/comparision/features/feature-4.svg"
-              alt="4"
-            />
+            <img src="../assets/images/comparision/features/feature-4.svg" alt="4" />
             <h3>Find the best tool</h3>
             <p>
-              This feature helps people find the best software for making forms.
-              It shows which tool has the right features at the best price.
+              This feature helps people find the best software for making forms. It shows which tool has the right
+              features at the best price.
             </p>
           </div>
           <div class="feature">
-            <img
-              src="../assets/images/comparision/features/feature-5.svg"
-              alt="5"
-            />
+            <img src="../assets/images/comparision/features/feature-5.svg" alt="5" />
             <h3>Regular Updates</h3>
             <p>
-              Our tool is regularly updated to give you the most current and
-              accurate information on all form builders.
+              Our tool is regularly updated to give you the most current and accurate information on all form builders.
             </p>
           </div>
         </div>
       </div>
 
-      <div
-        v-if="!selectedFormBuildersOption.filter(Boolean).length"
-        class="popular-comparisons"
-      >
-        <h2 class="popular-comparisons__heading">
-          Popular Form Builder Comparisons
-        </h2>
+      <div v-if="!selectedFormBuildersOption.filter(Boolean).length" class="popular-comparisons">
+        <h2 class="popular-comparisons__heading">Popular Form Builder Comparisons</h2>
         <div class="popular-comparisons__grid">
           <ComparisonCard
             imgSrc="/form-building-platforms/formester-vs-typeform.svg"
@@ -230,14 +168,8 @@
         </div>
       </div>
 
-      <div
-        v-if="!selectedFormBuildersOption.filter(Boolean).length"
-        class="faq-section"
-      >
-        <Faq 
-          :faqList="faqs" 
-          title="Frequently Asked Questions"
-        />
+      <div v-if="!selectedFormBuildersOption.filter(Boolean).length" class="faq-section">
+        <Faq :faqList="faqs" title="Frequently Asked Questions" />
       </div>
     </div>
   </div>
@@ -250,50 +182,26 @@ import ComparisonCard from '@/components/comparision/ComparisonCard.vue'
 import FormBuilderComparisonTable from '@/components/comparision/FormBuilderComparisonTable.vue'
 import Faq from '@/components/features/Faq.vue'
 import getSiteMeta from '@/utils/getSiteMeta'
-import axios from 'axios'
+import { formBuilders as rawFormBuilders } from '@/constants/form-builders'
 
-const config = useRuntimeConfig()
+// Reconstruct the nested Strapi media shape (`logo.data.attributes.url`)
+// that this page and FormBuilderComparisonTable.vue's template already read
+// directly, so neither needs further changes. Sorted by name ASC.
+const formBuilders = [...rawFormBuilders]
+  .sort((a, b) => (a.name || '').localeCompare(b.name || ''))
+  .map((item) => ({
+    id: item.strapiId,
+    name: item.name,
+    logo: item.logo
+      ? { data: { attributes: { url: item.logo.url, alternativeText: item.logo.alternativeText } } }
+      : null,
+    plan: item.plan,
+    createdAt: item.createdAt,
+    updatedAt: item.updatedAt,
+    publishedAt: item.publishedAt,
+  }))
 
-const { data: fetchedData, error: fetchError } = await useAsyncData('comparison-tool', async () => {
-  try {
-    const {
-      data: { data },
-    } = await axios.get(`${config.public.strapiUrl}/api/form-builders`, {
-      params: {
-        sort: 'name',
-        populate: [
-          'logo',
-          'plan',
-          'plan.features',
-          'plan.features.form_builder_feature',
-        ],
-      },
-    })
-
-    const formBuilders = data.map((item) => ({
-      id: item.id,
-      ...item.attributes,
-    }))
-
-    const options = formBuilders.map((fb) => fb.name)
-
-    return { formBuilders, options }
-  } catch (error) {
-    console.error('Error fetching form builders:', error)
-    throw error
-  }
-})
-
-if (fetchError.value) {
-  throw createError({
-    statusCode: 500,
-    statusMessage: 'Failed to load comparison data',
-    fatal: true
-  })
-}
-
-const formBuilders = computed(() => fetchedData.value?.formBuilders || [])
-const options = computed(() => fetchedData.value?.options || [])
+const options = formBuilders.map((fb) => fb.name)
 
 const selectedFormBuildersOption = ref(['', '', '', ''])
 const selectedFormBuildersDetails = reactive({ 0: null, 1: null, 2: null, 3: null })
@@ -301,8 +209,7 @@ const selectedFormBuildersDetails = reactive({ 0: null, 1: null, 2: null, 3: nul
 const faqs = [
   {
     header: 'What key features should I look for in an online form builder?',
-    body:
-      'When choosing an online form builder, look for features like easy drag-and-drop design, a variety of templates, integration with other apps (like email and CRM tools), customizable fields, responsive design for mobile devices, and reliable customer support. These features will help you create effective forms that meet your needs.',
+    body: 'When choosing an online form builder, look for features like easy drag-and-drop design, a variety of templates, integration with other apps (like email and CRM tools), customizable fields, responsive design for mobile devices, and reliable customer support. These features will help you create effective forms that meet your needs.',
   },
   {
     header: 'How often do you update the information?',
@@ -327,14 +234,15 @@ const meta = computed(() => {
     type: 'website',
     url: 'https://formester.com/comparison-tool/',
     title: 'Easy way to compare Form Builders!',
-    description: "Compare features and pricing of 30+ form builders. Unbiased analysis to help you choose the perfect tool for your needs."
+    description:
+      'Compare features and pricing of 30+ form builders. Unbiased analysis to help you choose the perfect tool for your needs.',
   }
   return getSiteMeta(metaData)
 })
 
 const formBuildersLogoSrc = computed(() => {
   const logoSrc = {}
-  formBuilders.value.forEach((fb) => {
+  formBuilders.forEach((fb) => {
     if (fb.logo && fb.logo.data && fb.logo.data.attributes) {
       logoSrc[fb.name] = fb.logo.data.attributes.url
     } else {
@@ -350,10 +258,8 @@ const filteredSelectedFormBuildersDetails = computed(() => {
 
 const filteredOptions = (cardNumber) => {
   const selectedOptions = selectedFormBuildersOption.value.filter(Boolean)
-  return options.value.filter(
-    (option) =>
-      !selectedOptions.includes(option) ||
-      selectedFormBuildersOption.value[cardNumber] === option
+  return options.filter(
+    (option) => !selectedOptions.includes(option) || selectedFormBuildersOption.value[cardNumber] === option,
   )
 }
 
@@ -361,9 +267,7 @@ const handleOptionChange = (selectedOption, cardNumber) => {
   selectedFormBuildersOption.value[cardNumber] = selectedOption
 
   if (selectedOption) {
-    const newFormBuilder = formBuilders.value.find(
-      (fb) => fb.name === selectedOption
-    )
+    const newFormBuilder = formBuilders.find((fb) => fb.name === selectedOption)
     if (newFormBuilder) {
       selectedFormBuildersDetails[cardNumber] = newFormBuilder
     }
@@ -376,17 +280,18 @@ const handleViewComparisonClick = (formBuilder1, formBuilder2) => {
 }
 
 useHead({
-  title:
-    'Compare the Best Form Builder Software: Pricing & Features Comparison',
+  title: 'Compare the Best Form Builder Software: Pricing & Features Comparison',
   meta: [
     ...meta.value,
     {
       name: 'description',
-      content: 'Find the best software to create forms. Use our comparison tool to see prices and features side-by-side. Find your form builder today!',
+      content:
+        'Find the best software to create forms. Use our comparison tool to see prices and features side-by-side. Find your form builder today!',
     },
     {
       name: 'keywords',
-      content: 'best form builder, best software to create forms, best form software, software to build forms, best form buider tools',
+      content:
+        'best form builder, best software to create forms, best form software, software to build forms, best form buider tools',
     },
   ],
   link: [

@@ -107,7 +107,7 @@
   line-height: 36px;
 }
 .step__section-description {
-  color: var(--neutral #404040);
+  color: var(--neutral, #404040);
   font-size: 18px;
   font-weight: 400;
   line-height: 28.8px;

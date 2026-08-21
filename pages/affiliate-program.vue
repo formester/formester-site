@@ -1,0 +1,646 @@
+<template>
+  <div>
+    <HeroRowLayout
+      title="Become Affiliate!"
+      description="Turn your online presence into a source of income. Share Formester, the smarter form builder, and earn 30% recurring commissions for lifetime!"
+      :buttons="c0_buttons"
+      :titleParts="c0_titleParts"
+      :button="c0_button"
+      :clickTriggers="c0_clickTriggers"
+      :heroImage="c0_heroImage"
+      :stats="c0_stats"
+      class="page-component-item"
+    />
+
+    <Trustbadges :title="c1_title" :badges="c1_badges" class="page-component-item" />
+
+    <StandoutFeatureDetail :title="c2_title" :itemList="c2_itemList" class="page-component-item" />
+
+    <ThreeColBenefits :title="c3_title" :itemList="c3_itemList" class="page-component-item" />
+
+    <FaqSection :title="c4_title" :faqList="c4_faqList" class="page-component-item" />
+  </div>
+</template>
+
+<script setup>
+import FaqSection from '@/components/v2/FaqSection.vue'
+import HeroRowLayout from '@/components/v2/HeroRowLayout.vue'
+import StandoutFeatureDetail from '@/components/features/StandoutFeatureDetail.vue'
+import ThreeColBenefits from '@/components/features/ThreeColBenefits.vue'
+import Trustbadges from '@/components/strapi/Trustbadges.vue'
+
+const c0_buttons = []
+const c0_titleParts = []
+const c0_button = {
+  id: 1104,
+  link: 'https://formester.affonso.io/auth',
+  text: 'Join the Affiliate Program',
+  type: 'Primary',
+  showArrow: null,
+}
+const c0_clickTriggers = [
+  {
+    id: 1798,
+    text: 'Recurring rewards',
+  },
+  {
+    id: 1799,
+    text: 'Passive income',
+  },
+  {
+    id: 1800,
+    text: 'Instant earnings',
+  },
+]
+const c0_heroImage = {
+  id: 3546,
+  imageAlt: 'man-wearing-t-shirt-gesturing ',
+  imageUrl:
+    'https://formester-strapi.s3.ap-south-1.amazonaws.com/attractive_girl_fashionable_outfit_creats_influence_content_shows_peace_sign_smartphone_front_camera_poses_selfie_smiles_gladfully_poses_urban_place_spends_vacation_big_city_1_d579c6f4ce.png',
+  width: null,
+  height: null,
+  image: null,
+}
+const c0_stats = []
+const c1_title = []
+const c1_badges = []
+const c2_title = [
+  {
+    id: 3522,
+    text: 'Who is this for?',
+    highlight: false,
+    color: null,
+    bold: null,
+  },
+]
+const c2_itemList = [
+  {
+    id: 2177,
+    title: 'Social media influencers',
+    description:
+      'Share Formester with your followers and earn 30% recurring commissions every month. Highlight its simplicity, powerful features, and flexibility to help your audience build smarter forms easily.',
+    description_markdown:
+      'Share Formester with your followers and earn 30% recurring commissions every month. Highlight its simplicity, powerful features, and flexibility to help your audience build smarter forms easily.',
+    icon: null,
+    cardImage: {
+      id: 3554,
+      imageAlt:
+        'attractive-girl-fashionable-outfit-creats-influence-content-shows-peace-sign-smartphone-front-camera-poses-selfie-smiles-gladfully-poses-urban-place-spends-vacation-big-city',
+      imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/man_wearing_t_shirt_gesturing_1_7fb2bb4db6.png',
+      width: null,
+      height: null,
+      image: null,
+    },
+  },
+  {
+    id: 2172,
+    title: 'Bloggers and writers',
+    description:
+      'Recommend Formester in your blog posts or guides. Explain how it saves time, simplifies form building, and improves workflows while earning 30% recurring commissions for every user who upgrades.',
+    description_markdown:
+      'Recommend Formester in your blog posts or guides. Explain how it saves time, simplifies form building, and improves workflows while earning 30% recurring commissions for every user who upgrades.',
+    icon: null,
+    cardImage: {
+      id: 3553,
+      imageAlt: 'young-smiling-man-working-with-laptop-office ',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4036,
+        name: 'young-smiling-man-working-with-laptop-office 1.png',
+        alternativeText: null,
+        caption: null,
+        width: 602,
+        height: 522,
+        formats: {
+          small: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/small_young_smiling_man_working_with_laptop_office_1_ecdc6042ac.png',
+            hash: 'small_young_smiling_man_working_with_laptop_office_1_ecdc6042ac',
+            mime: 'image/png',
+            name: 'small_young-smiling-man-working-with-laptop-office 1.png',
+            path: null,
+            size: 388.02,
+            width: 500,
+            height: 434,
+          },
+          thumbnail: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_young_smiling_man_working_with_laptop_office_1_ecdc6042ac.png',
+            hash: 'thumbnail_young_smiling_man_working_with_laptop_office_1_ecdc6042ac',
+            mime: 'image/png',
+            name: 'thumbnail_young-smiling-man-working-with-laptop-office 1.png',
+            path: null,
+            size: 62.64,
+            width: 180,
+            height: 156,
+          },
+        },
+        hash: 'young_smiling_man_working_with_laptop_office_1_ecdc6042ac',
+        ext: '.png',
+        mime: 'image/png',
+        size: 136.21,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/young_smiling_man_working_with_laptop_office_1_ecdc6042ac.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-17T01:04:45.077Z',
+        updatedAt: '2025-10-17T01:04:45.077Z',
+      },
+    },
+  },
+  {
+    id: 2176,
+    title: 'Website owners',
+    description:
+      'Add Formester banners or links to your site and turn traffic into steady income. Promote a reliable, fully featured form builder that helps your visitors create professional forms with ease and speed.',
+    description_markdown:
+      'Add Formester banners or links to your site and turn traffic into steady income. Promote a reliable, fully featured form builder that helps your visitors create professional forms with ease and speed.',
+    icon: null,
+    cardImage: {
+      id: 3558,
+      imageAlt: 'guy-working-laptop-having-icons-surrounding-him ',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4035,
+        name: 'guy-working-laptop-having-icons-surrounding-him 1.png',
+        alternativeText: null,
+        caption: null,
+        width: 602,
+        height: 522,
+        formats: {
+          small: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/small_guy_working_laptop_having_icons_surrounding_him_1_b8889fe64c.png',
+            hash: 'small_guy_working_laptop_having_icons_surrounding_him_1_b8889fe64c',
+            mime: 'image/png',
+            name: 'small_guy-working-laptop-having-icons-surrounding-him 1.png',
+            path: null,
+            size: 559.54,
+            width: 500,
+            height: 434,
+          },
+          thumbnail: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_guy_working_laptop_having_icons_surrounding_him_1_b8889fe64c.png',
+            hash: 'thumbnail_guy_working_laptop_having_icons_surrounding_him_1_b8889fe64c',
+            mime: 'image/png',
+            name: 'thumbnail_guy-working-laptop-having-icons-surrounding-him 1.png',
+            path: null,
+            size: 84.3,
+            width: 180,
+            height: 156,
+          },
+        },
+        hash: 'guy_working_laptop_having_icons_surrounding_him_1_b8889fe64c',
+        ext: '.png',
+        mime: 'image/png',
+        size: 152.68,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/guy_working_laptop_having_icons_surrounding_him_1_b8889fe64c.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-17T01:04:45.072Z',
+        updatedAt: '2025-10-17T01:04:45.072Z',
+      },
+    },
+  },
+  {
+    id: 2175,
+    title: 'Email marketers',
+    description:
+      'Promote Formester to your email list with practical tips or guides. Showcase how it helps users create smart forms and earn 30% recurring commissions whenever someone upgrades through your referral link.',
+    description_markdown:
+      'Promote Formester to your email list with practical tips or guides. Showcase how it helps users create smart forms and earn 30% recurring commissions whenever someone upgrades through your referral link.',
+    icon: null,
+    cardImage: {
+      id: 3557,
+      imageAlt: 'young-person-intership',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4034,
+        name: 'young-person-intership 1.png',
+        alternativeText: null,
+        caption: null,
+        width: 602,
+        height: 522,
+        formats: {
+          small: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/small_young_person_intership_1_8af97be5f4.png',
+            hash: 'small_young_person_intership_1_8af97be5f4',
+            mime: 'image/png',
+            name: 'small_young-person-intership 1.png',
+            path: null,
+            size: 434.57,
+            width: 500,
+            height: 434,
+          },
+          thumbnail: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_young_person_intership_1_8af97be5f4.png',
+            hash: 'thumbnail_young_person_intership_1_8af97be5f4',
+            mime: 'image/png',
+            name: 'thumbnail_young-person-intership 1.png',
+            path: null,
+            size: 68.06,
+            width: 180,
+            height: 156,
+          },
+        },
+        hash: 'young_person_intership_1_8af97be5f4',
+        ext: '.png',
+        mime: 'image/png',
+        size: 142.48,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/young_person_intership_1_8af97be5f4.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-17T01:04:44.855Z',
+        updatedAt: '2025-10-17T01:04:44.855Z',
+      },
+    },
+  },
+  {
+    id: 2173,
+    title: 'Freelancers & small business owners',
+    description:
+      'Introduce Formester to your clients and show how it automates workflows, collects data faster, and boosts efficiency while earning recurring commissions from every upgraded customer you refer.',
+    description_markdown:
+      'Introduce Formester to your clients and show how it automates workflows, collects data faster, and boosts efficiency while earning recurring commissions from every upgraded customer you refer.',
+    icon: null,
+    cardImage: {
+      id: 3556,
+      imageAlt: 'front-view-man-working-travel-agency 1',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4037,
+        name: 'front-view-man-working-travel-agency 1.png',
+        alternativeText: null,
+        caption: null,
+        width: 602,
+        height: 522,
+        formats: {
+          small: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/small_front_view_man_working_travel_agency_1_898a7b9f24.png',
+            hash: 'small_front_view_man_working_travel_agency_1_898a7b9f24',
+            mime: 'image/png',
+            name: 'small_front-view-man-working-travel-agency 1.png',
+            path: null,
+            size: 423.56,
+            width: 500,
+            height: 434,
+          },
+          thumbnail: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_front_view_man_working_travel_agency_1_898a7b9f24.png',
+            hash: 'thumbnail_front_view_man_working_travel_agency_1_898a7b9f24',
+            mime: 'image/png',
+            name: 'thumbnail_front-view-man-working-travel-agency 1.png',
+            path: null,
+            size: 65.48,
+            width: 180,
+            height: 156,
+          },
+        },
+        hash: 'front_view_man_working_travel_agency_1_898a7b9f24',
+        ext: '.png',
+        mime: 'image/png',
+        size: 150.33,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/front_view_man_working_travel_agency_1_898a7b9f24.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-17T01:04:45.602Z',
+        updatedAt: '2025-10-17T01:04:45.602Z',
+      },
+    },
+  },
+  {
+    id: 2174,
+    title: 'YouTubers and content creators',
+    description:
+      'Feature Formester in your videos or tutorials and show how easy it is to build forms, quizzes, and surveys. Add your link in descriptions and earn 30% recurring commissions for every upgrade.',
+    description_markdown:
+      'Feature Formester in your videos or tutorials and show how easy it is to build forms, quizzes, and surveys. Add your link in descriptions and earn 30% recurring commissions for every upgrade.',
+    icon: null,
+    cardImage: {
+      id: 3555,
+      imageAlt: 'influencer-entering-home-studio-doing-live-broadcast 1',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4038,
+        name: 'influencer-entering-home-studio-doing-live-broadcast 1.png',
+        alternativeText: null,
+        caption: null,
+        width: 602,
+        height: 522,
+        formats: {
+          small: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/small_influencer_entering_home_studio_doing_live_broadcast_1_4f289bd06f.png',
+            hash: 'small_influencer_entering_home_studio_doing_live_broadcast_1_4f289bd06f',
+            mime: 'image/png',
+            name: 'small_influencer-entering-home-studio-doing-live-broadcast 1.png',
+            path: null,
+            size: 384.08,
+            width: 500,
+            height: 434,
+          },
+          thumbnail: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_influencer_entering_home_studio_doing_live_broadcast_1_4f289bd06f.png',
+            hash: 'thumbnail_influencer_entering_home_studio_doing_live_broadcast_1_4f289bd06f',
+            mime: 'image/png',
+            name: 'thumbnail_influencer-entering-home-studio-doing-live-broadcast 1.png',
+            path: null,
+            size: 62,
+            width: 180,
+            height: 156,
+          },
+        },
+        hash: 'influencer_entering_home_studio_doing_live_broadcast_1_4f289bd06f',
+        ext: '.png',
+        mime: 'image/png',
+        size: 120.31,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/influencer_entering_home_studio_doing_live_broadcast_1_4f289bd06f.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-17T01:04:45.787Z',
+        updatedAt: '2025-10-17T01:04:45.787Z',
+      },
+    },
+  },
+]
+const c3_title = [
+  {
+    id: 3526,
+    text: 'Why become our Affiliate?',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c3_itemList = [
+  {
+    id: 2169,
+    title: 'Recurring income',
+    description: 'Earn 30% commission every month for up to a year for each paid referral.',
+    description_markdown: 'Earn 30% commission every month for lifetime!',
+    icon: null,
+    cardImage: {
+      id: 3550,
+      imageAlt: 'wallet icon',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4041,
+        name: 'wallet 1.png',
+        alternativeText: null,
+        caption: null,
+        width: 100,
+        height: 100,
+        formats: null,
+        hash: 'wallet_1_fcdf86662d',
+        ext: '.png',
+        mime: 'image/png',
+        size: 1.04,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/wallet_1_fcdf86662d.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-17T01:10:17.053Z',
+        updatedAt: '2025-10-17T01:10:17.053Z',
+      },
+    },
+  },
+  {
+    id: 2171,
+    title: 'Fast setup',
+    description: 'Sign up in under a minute and get your unique affiliate link instantly.',
+    description_markdown: 'Sign up in under a minute and get your unique affiliate link instantly.',
+    icon: null,
+    cardImage: {
+      id: 3549,
+      imageAlt: 'setup icon',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4042,
+        name: 'management 1.png',
+        alternativeText: null,
+        caption: null,
+        width: 100,
+        height: 100,
+        formats: null,
+        hash: 'management_1_ce3b05814d',
+        ext: '.png',
+        mime: 'image/png',
+        size: 2.1,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/management_1_ce3b05814d.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-17T01:10:17.054Z',
+        updatedAt: '2025-10-17T01:10:17.054Z',
+      },
+    },
+  },
+  {
+    id: 2170,
+    title: 'Transparent updates',
+    description: 'Get email reports on your referrals and earnings to track your income.',
+    description_markdown: 'Get email reports on your referrals and earnings to track your income.',
+    icon: null,
+    cardImage: {
+      id: 3551,
+      imageAlt: 'email icon',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4040,
+        name: 'email 1.png',
+        alternativeText: null,
+        caption: null,
+        width: 100,
+        height: 100,
+        formats: null,
+        hash: 'email_1_e513c6f672',
+        ext: '.png',
+        mime: 'image/png',
+        size: 0.64,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/email_1_e513c6f672.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-17T01:10:17.052Z',
+        updatedAt: '2025-10-17T01:10:17.052Z',
+      },
+    },
+  },
+]
+const c4_title = [
+  {
+    id: 3527,
+    text: 'FAQs',
+    highlight: false,
+    color: null,
+    bold: null,
+  },
+]
+const c4_faqList = [
+  {
+    id: 1337,
+    header: 'How long does the commission last?',
+    body: 'You earn 30% recurring commission for up to 12 months for every upgraded referral.\n',
+    body_markdown: null,
+    list: [],
+  },
+  {
+    id: 1339,
+    header: 'Who can join?',
+    body: 'Anyone with an online presence: bloggers, influencers, freelancers, website owners, and small business owners.',
+    body_markdown:
+      'Anyone with an online presence: bloggers, influencers, freelancers, website owners, and small business owners.',
+    list: [],
+  },
+  {
+    id: 1338,
+    header: 'How quickly can I start earning?',
+    body: 'You can sign up in under a minute and get your unique affiliate link immediately.',
+    body_markdown: 'You can sign up in under a minute and get your unique affiliate link immediately.',
+    list: [],
+  },
+  {
+    id: 1336,
+    header: 'Do I need to pay to join?',
+    body: 'No, the program is completely free to join.',
+    body_markdown: 'No, the program is completely free to join.',
+    list: [],
+  },
+]
+
+useHead({
+  title: 'Formester | Affiliate Program',
+  link: [
+    {
+      hid: 'canonical',
+      rel: 'canonical',
+      href: 'https://formester.com/affiliate-program/',
+    },
+  ],
+  meta: [
+    {
+      property: 'article:modified_time',
+      content: '2026-05-05T05:39:59.116Z',
+    },
+    {
+      hid: 'description',
+      name: 'description',
+      content:
+        'Join Formester’s affiliate program and earn 30% commission for 12 months by recommending Formester to your audience!',
+    },
+    {
+      hid: 'og:site_name',
+      name: 'og:site_name',
+      content: 'Formester | Affiliate Program',
+    },
+    {
+      hid: 'og:type',
+      property: 'og:type',
+      content: 'website',
+    },
+    {
+      hid: 'og:url',
+      property: 'og:url',
+      content: 'https://formester.com/affiliate-program/',
+    },
+    {
+      hid: 'og:title',
+      property: 'og:title',
+      content: 'Formester | Affiliate Program',
+    },
+    {
+      hid: 'og:description',
+      property: 'og:description',
+      content:
+        'Join Formester’s affiliate program and earn 30% commission for 12 months by recommending Formester to your audience!',
+    },
+    {
+      hid: 'og:image',
+      property: 'og:image',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png',
+    },
+    {
+      hid: 'og:image:alt',
+      name: 'og:image:alt',
+      content: 'Formester Logo',
+    },
+    {
+      hid: 'twitter:url',
+      name: 'twitter:url',
+      content: 'https://formester.com/affiliate-program/',
+    },
+    {
+      name: 'twitter:site',
+      content: '@_formester_',
+    },
+    {
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: 'Formester | Affiliate Program',
+    },
+    {
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content:
+        'Join Formester’s affiliate program and earn 30% commission for 12 months by recommending Formester to your audience!',
+    },
+    {
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png',
+    },
+    {
+      hid: 'twitter:image:alt',
+      name: 'twitter:image:alt',
+      content: 'Formester Logo',
+    },
+    {
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image',
+    },
+    {
+      hid: 'apple-mobile-web-app-title',
+      name: 'apple-mobile-web-app-title',
+      content: 'Formester',
+    },
+    {
+      hid: 'image',
+      name: 'image',
+      property: 'og:image',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png',
+    },
+    {
+      hid: 'keywords',
+      name: 'keywords',
+      content: [],
+    },
+  ],
+})
+</script>

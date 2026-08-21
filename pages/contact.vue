@@ -4,8 +4,8 @@
       <div class="col-lg-6">
         <h1 class="section__heading">We are happy to help</h1>
         <p>
-          Need more information about our product, pricing or anything else?
-          Fill out the form, and we'll be in touch shortly.
+          Need more information about our product, pricing or anything else? Fill out the form, and we'll be in touch
+          shortly.
         </p>
         <div class="">
           <div class="div mt-5">
@@ -37,9 +37,7 @@
               <path
                 d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
               />
-              <path
-                d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
-              /></svg
+              <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" /></svg
             >49D, Jugsalai, Jamshedpur - India
           </div>
           <div class="div my-3">
@@ -54,9 +52,7 @@
               <path
                 d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
               />
-              <path
-                d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
-              /></svg
+              <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" /></svg
             >2035 Sunset Lake, Delaware
           </div>
         </div>
@@ -69,13 +65,7 @@
         >
           <div class="mb-3">
             <label for="name" class="form-label">Name</label>
-            <input
-              type="text"
-              class="form-control auth__inputField"
-              id="name"
-              name="name"
-              required
-            />
+            <input type="text" class="form-control auth__inputField" id="name" name="name" required />
           </div>
           <div class="mb-3">
             <label for="email" class="form-label">Email Address</label>
@@ -110,9 +100,7 @@
               required
             ></textarea>
           </div>
-          <button type="submit" class="button contact__button mt-4">
-            Send
-          </button>
+          <button type="submit" class="button contact__button mt-4">Send</button>
         </form>
       </div>
     </div>
@@ -128,7 +116,8 @@ const meta = computed(() => {
     type: 'website',
     url: 'https://formester.com/contact/',
     title: 'Contact | Online Form Builder - Formester',
-    description: 'Create custom online forms with ease using Formester - the top-rated online form builder. Contact us today to start building your perfect form!',
+    description:
+      'Create custom online forms with ease using Formester - the top-rated online form builder. Contact us today to start building your perfect form!',
     mainImage: 'https://formester.com/formester-logo-meta-image.png',
     mainImageAlt: 'Formester Logo',
   }
@@ -151,7 +140,8 @@ useJsonld([
     '@context': 'https://schema.org',
     '@type': 'ContactPage',
     name: 'Contact | Online Form Builder - Formester',
-    description: 'Create custom online forms with ease using Formester - the top-rated online form builder. Contact us today to start building your perfect form!',
+    description:
+      'Create custom online forms with ease using Formester - the top-rated online form builder. Contact us today to start building your perfect form!',
     url: 'https://formester.com/contact/',
     address: {
       '@type': 'PostalAddress',

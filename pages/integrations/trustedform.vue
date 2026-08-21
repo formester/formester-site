@@ -1,0 +1,443 @@
+<template>
+  <div>
+    <HeroV2
+      description="Every submission gets a TrustedForm certificate — proof of origin, authenticity, and consent — so your leads stand up to TCPA and CASL compliance scrutiny."
+      trustText="✓ Automatic certificate per lead · ✓ TCPA &amp; CASL compliance · ✓ Toggle on, no code"
+      blobColorA="#f5eeff"
+      blobColorB="#f1ebff"
+      blobColorC="#f4efff"
+      :mockupHtml="c0_mockupHtml"
+      layout="split"
+      :title="c0_title"
+      :buttons="c0_buttons"
+      :badge="c0_badge"
+      :tabCardContent="c0_tabCardContent"
+      class="page-component-item"
+    />
+
+    <TrustSeals
+      label="Trusted by 56k+ teams worldwide"
+      :showTrustBadges="false"
+      :title="c1_title"
+      :logos="c1_logos"
+      class="page-component-item"
+    />
+
+    <CardGrid
+      eyebrow="Why connect them"
+      description="Independent certification of when, where, and how each lead consented."
+      columns="2"
+      :title="c2_title"
+      :cards="c2_cards"
+      class="page-component-item"
+    />
+
+    <StickyStepsSection
+      badge="How it works"
+      heading="Enable TrustedForm in 3 steps"
+      description="One toggle in your form — certification runs automatically from then on."
+      background="#f9fafb"
+      :steps="c3_steps"
+      :buttons="c3_buttons"
+      class="page-component-item"
+    />
+
+    <TestimonialWall
+      description="Real reviews from G2, Trustpilot, Product Hunt, and Capterra."
+      showG2
+      showTrustpilot
+      showProductHunt
+      showCapterra
+      :title="c4_title"
+      :pickedReviews="c4_pickedReviews"
+      :excludedReviews="c4_excludedReviews"
+      class="page-component-item"
+    />
+
+    <IntegrationsGrid title="Explore more integrations" :integrations="c5_integrations" class="page-component-item" />
+
+    <FaqSection centered :title="c6_title" :faqList="c6_faqList" class="page-component-item" />
+
+    <CtaDark
+      badge="Free to start"
+      heading="Make every lead provable"
+      description="Toggle on TrustedForm and collect compliant, certified leads automatically."
+      :buttons="c7_buttons"
+      class="page-component-item"
+    />
+  </div>
+</template>
+
+<script setup>
+import CardGrid from '@/components/v2/CardGrid.vue'
+import CtaDark from '@/components/v2/CtaDark.vue'
+import FaqSection from '@/components/v2/FaqSection.vue'
+import HeroV2 from '@/components/v2/HeroV2.vue'
+import IntegrationsGrid from '@/components/integrations/IntegrationsGrid.vue'
+import StickyStepsSection from '@/components/v2/StickyStepsSection.vue'
+import TestimonialWall from '@/components/v2/TestimonialWall.vue'
+import TrustSeals from '@/components/v2/TrustSeals.vue'
+
+const c0_mockupHtml =
+  "<div class='raw-html-embed'>\u003Cstyle>.iw{font-family:'Inter',ui-sans-serif,system-ui,sans-serif;position:relative;max-width:480px;margin:0 auto;padding-top:10px;} .iw *{box-sizing:border-box;} .iw__pair{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:18px;} .iw__logo{width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #eaecf0;box-shadow:0 2px 8px rgba(15,14,26,.06);flex-shrink:0;} .iw__logo img{width:30px;height:30px;object-fit:contain;} .iw__flow{display:flex;align-items:center;gap:5px;} .iw__dot{width:6px;height:6px;border-radius:50%;background:#9777e0;opacity:.35;animation:iwd 1.6s linear infinite;} .iw__dot:nth-child(2){animation-delay:.2s}.iw__dot:nth-child(3){animation-delay:.4s} @keyframes iwd{0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}} .iw__win{background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 18px 50px rgba(15,14,26,.12);overflow:hidden;} .iw__bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#f9fafb;border-bottom:1px solid #eaecf0;} .iw__cdot{width:10px;height:10px;border-radius:50%;flex-shrink:0;} .iw__title{font-size:11px;color:#697586;margin-left:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;} @keyframes iwnew{0%,10%{opacity:0;transform:translateY(-6px)}18%,88%{opacity:1;transform:translateY(0)}97%,100%{opacity:0}} @media(max-width:600px){.iw__toast{right:-4px !important;bottom:-30px !important;}} .iw__toast{position:absolute;bottom:-28px;right:-36px;display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #eaecf0;border-radius:12px;box-shadow:0 8px 24px rgba(15,14,26,.14);padding:9px 13px;font-size:12px;font-weight:600;color:#101828;animation:iwnew 5s ease-in-out infinite;} .iw__toast small{display:block;font-size:10px;font-weight:500;color:#697586;} .iw__tick{width:22px;height:22px;border-radius:7px;background:#11c15b;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;} .iw__anim{animation:iwnew 5s ease-in-out infinite;}\u003C/style><div class='iw'><div class='iw__pair'><span class='iw__logo'><img src='/formester-icon.svg' alt='Formester'/></span><span class='iw__flow'><span class='iw__dot'></span><span class='iw__dot'></span><span class='iw__dot'></span></span><span class='iw__logo'><img src='/integrations/trustedform.png' alt=''/></span></div><div class='iw__win'><div class='iw__bar'><span class='iw__cdot' style='background:#ff6058'></span><span class='iw__cdot' style='background:#ffbd2e'></span><span class='iw__cdot' style='background:#27c93f'></span><span class='iw__title'>Certificates · TrustedForm</span></div><div><div style='display:flex;justify-content:space-between;gap:10px;padding:8px 14px;border-bottom:1px solid #f2f4f7;font-size:11px;'><span style='color:#697586;'>Certificate</span><span style='color:#101828;font-weight:700;text-align:right;'>cert · 7f3a…c91d</span></div><div style='display:flex;justify-content:space-between;gap:10px;padding:8px 14px;border-bottom:1px solid #f2f4f7;font-size:11px;'><span style='color:#697586;'>Captured</span><span style='color:#101828;font-weight:500;text-align:right;'>IP · device · timestamp</span></div><div style='display:flex;justify-content:space-between;gap:10px;padding:8px 14px;border-bottom:1px solid #f2f4f7;font-size:11px;'><span style='color:#697586;'>Consent</span><span style='color:#101828;font-weight:700;text-align:right;'>Verified ✓</span></div><div style='padding:10px 14px;'><span style='display:inline-flex;font-size:9.5px;font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:3px 9px;line-height:1;'>TrustedForm certificate issued</span></div></div></div><div class='iw__toast'><span class='iw__tick'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'><path d='M5 12l4 4L19 6'/></svg></span><span>Certificate issued<small>just now · cert 7f3a…c91d</small></span></div></div></div>"
+const c0_title = [
+  {
+    id: 5253,
+    text: 'Certify every lead with ',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+  {
+    id: 5254,
+    text: 'TrustedForm',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c0_buttons = [
+  {
+    id: 1846,
+    link: 'https://help.formester.com/en/article/trustedform-certification-1l5d7fb/',
+    text: 'Read the setup guide',
+    type: 'Primary',
+    showArrow: true,
+  },
+  {
+    id: 1847,
+    link: 'https://app.formester.com/users/sign_up',
+    text: 'Start free',
+    type: 'Secondary',
+    showArrow: false,
+  },
+]
+const c0_badge = {
+  id: 181,
+  text: 'TrustedForm',
+  tag: 'Integrations',
+  link: '/integrations/',
+}
+const c0_tabCardContent = []
+const c1_title = []
+const c1_logos = []
+const c2_title = [
+  {
+    id: 5249,
+    text: 'Leads you can ',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+  {
+    id: 5250,
+    text: 'prove',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c2_cards = [
+  {
+    id: 921,
+    tag: 'Compliance',
+    tagColor: 'violet',
+    title: 'TCPA & CASL ready',
+    body: 'Certificates document consent for phone (TCPA) and Canadian email (CASL) compliance.',
+    mockHtml: null,
+    icon: null,
+  },
+  {
+    id: 920,
+    tag: 'Evidence',
+    tagColor: 'blue',
+    title: 'Proof of origin',
+    body: 'Each certificate captures IP, device, timestamp, and bot verification for the submission.',
+    mockHtml: null,
+    icon: null,
+  },
+  {
+    id: 919,
+    tag: 'Automatic',
+    tagColor: 'green',
+    title: 'Zero per-lead effort',
+    body: 'Formester injects the TrustedForm script automatically — every submission gets certified.',
+    mockHtml: null,
+    icon: null,
+  },
+  {
+    id: 922,
+    tag: 'Buyer trust',
+    tagColor: 'amber',
+    title: 'Sell leads with confidence',
+    body: 'Lead buyers can independently verify authenticity through ActiveProspect.',
+    mockHtml: null,
+    icon: null,
+  },
+]
+const c3_steps = [
+  {
+    id: 346,
+    title: 'Toggle on TrustedForm Certificates',
+    description: "Open your form's Automation → Integrations section and switch on TrustedForm Certificates.",
+    rawHtml:
+      "<div class='raw-html-embed'><div style='font-family:Inter,ui-sans-serif,system-ui,sans-serif;max-width:320px;'><div style='border:1px solid #eaecf0;border-radius:10px;background:#fff;box-shadow:0 4px 14px rgba(15,14,26,.06);padding:13px;'><div style='font-size:11px;font-weight:700;color:#101828;'>Integrations</div><div style='display:flex;justify-content:space-between;align-items:center;font-size:10.5px;color:#101828;margin:7px 0;'>TrustedForm Certificates<span style='width:26px;height:15px;border-radius:999px;background:#6434d0;position:relative;display:inline-block;'><span style='position:absolute;top:2px;right:2px;width:11px;height:11px;border-radius:50%;background:#fff;'></span></span></div></div></div></div>",
+    image: null,
+  },
+  {
+    id: 345,
+    title: 'Publish and share your form',
+    description:
+      'Publish, then embed the form on your site or share its URL in your campaigns — the certification script is injected automatically.',
+    rawHtml:
+      "<div class='raw-html-embed'><div style='font-family:Inter,ui-sans-serif,system-ui,sans-serif;max-width:320px;'><div style='border:1px solid #eaecf0;border-radius:10px;background:#fff;box-shadow:0 4px 14px rgba(15,14,26,.06);padding:13px;'><div style='font-size:11px;font-weight:700;color:#101828;'>Share</div><div style='font-size:10.5px;font-weight:700;color:#101828;margin:8px 0 4px;'>Form URL</div><div style='border:1px solid #eaecf0;border-radius:8px;padding:8px 11px;font-size:10px;color:#98a2b3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;'>https://app.formester.com/f/lead-intake</div><div style='display:flex;justify-content:space-between;align-items:center;font-size:10.5px;color:#101828;margin:7px 0;'>Embedded on site<span style='width:26px;height:15px;border-radius:999px;background:#6434d0;position:relative;display:inline-block;'><span style='position:absolute;top:2px;right:2px;width:11px;height:11px;border-radius:50%;background:#fff;'></span></span></div><div style='margin-top:11px;'><span style='font-size:10.5px;font-weight:700;color:#fff;background:#6434d0;border-radius:7px;padding:7px 16px;line-height:1;'>Copy link</span></div></div></div></div>",
+    image: null,
+  },
+  {
+    id: 347,
+    title: 'View certificates in Results',
+    description:
+      "As submissions arrive, open the Results tab to see each lead's certificate; URLs open in your ActiveProspect account for full detail.",
+    rawHtml:
+      "<div class='raw-html-embed'><div style='font-family:Inter,ui-sans-serif,system-ui,sans-serif;max-width:320px;'><div style='display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:7px 13px;'><svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'><path d='M5 12l4 4L19 6'/></svg>Certificate issued for every lead</div></div></div>",
+    image: null,
+  },
+]
+const c3_buttons = []
+const c4_title = [
+  {
+    id: 5251,
+    text: 'What teams say about Formester',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c4_pickedReviews = []
+const c4_excludedReviews = []
+const c5_integrations = [
+  {
+    id: 307,
+    name: 'reCAPTCHA',
+    description: 'Stop spam form submissions with built in reCAPTCHA.',
+    link: '/integrations/recaptcha/',
+  },
+  {
+    id: 306,
+    name: 'Cloudflare Turnstile',
+    description: 'Block spam while keeping forms fast and user friendly.',
+    link: '/integrations/cloudflare-turnstile/',
+  },
+  {
+    id: 308,
+    name: 'HubSpot CRM',
+    description: 'Push new form leads to HubSpot CRM instantly.',
+    link: '/integrations/hubspot-crm/',
+  },
+  {
+    id: 309,
+    name: 'Google Sheets',
+    description: 'Sync every form submission to Google Sheets in real time.',
+    link: '/integrations/google-sheets/',
+  },
+  {
+    id: 310,
+    name: 'Webhook',
+    description: 'Send form data to any tool instantly using webhooks.',
+    link: '/integrations/webhook/',
+  },
+  {
+    id: 311,
+    name: 'Zapier',
+    description: 'Connect your forms to 8,000+ apps using Zapier.',
+    link: '/integrations/zapier/',
+  },
+]
+const c6_title = [
+  {
+    id: 5252,
+    text: 'TrustedForm integration FAQs',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c6_faqList = [
+  {
+    id: 2819,
+    header: 'What does the TrustedForm integration do?',
+    body: 'It generates a TrustedForm certificate for every form submission — capturing IP, device, timestamp, and consent — as independent proof of lead origin and authenticity.',
+    body_markdown: '',
+    list: [],
+  },
+  {
+    id: 2820,
+    header: 'How do I enable it?',
+    body: 'Open Automation → Integrations in your form, toggle on TrustedForm Certificates, and publish. Formester injects the script automatically.',
+    body_markdown: '',
+    list: [],
+  },
+  {
+    id: 2821,
+    header: 'Where do I see the certificates?',
+    body: "In the form's Results tab — each submission shows its certificate, and the URL opens full details in your ActiveProspect account.",
+    body_markdown: '',
+    list: [],
+  },
+  {
+    id: 2822,
+    header: 'Do I need an ActiveProspect account?',
+    body: 'Viewing full certificate details requires a separate ActiveProspect account — the capture itself happens automatically in Formester.',
+    body_markdown: '',
+    list: [],
+  },
+  {
+    id: 2823,
+    header: 'What is Formester?',
+    body: 'Formester is an online form builder for creating forms, surveys, and quizzes with a drag-and-drop editor or AI. It connects with the tools your team already uses — Google Sheets, Slack, HubSpot, Zapier, and more — so your form data flows wherever you need it.',
+    body_markdown: '',
+    list: [],
+  },
+]
+const c7_buttons = [
+  {
+    id: 1844,
+    link: 'https://app.formester.com/users/sign_up',
+    text: 'Start free',
+    type: 'Primary',
+    showArrow: true,
+  },
+  {
+    id: 1845,
+    link: '/pricing/',
+    text: 'See pricing',
+    type: 'White',
+    showArrow: false,
+  },
+]
+
+useHead({
+  title: 'TrustedForm Integration — Certified Leads | Formester',
+  link: [
+    {
+      hid: 'canonical',
+      rel: 'canonical',
+      href: 'https://formester.com/integrations/trustedform/',
+    },
+  ],
+  meta: [
+    {
+      property: 'article:modified_time',
+      content: '2026-06-14T15:17:19.587Z',
+    },
+    {
+      hid: 'description',
+      name: 'description',
+      content:
+        'Issue a TrustedForm certificate for every form submission. TCPA/CASL-ready proof of consent, toggled on in seconds — no code.',
+    },
+    {
+      hid: 'og:site_name',
+      name: 'og:site_name',
+      content: 'TrustedForm Integration — Certified Leads | Formester',
+    },
+    {
+      hid: 'og:type',
+      property: 'og:type',
+      content: 'website',
+    },
+    {
+      hid: 'og:url',
+      property: 'og:url',
+      content: 'https://formester.com/integrations/trustedform/',
+    },
+    {
+      hid: 'og:title',
+      property: 'og:title',
+      content: 'TrustedForm Integration — Certified Leads | Formester',
+    },
+    {
+      hid: 'og:description',
+      property: 'og:description',
+      content:
+        'Issue a TrustedForm certificate for every form submission. TCPA/CASL-ready proof of consent, toggled on in seconds — no code.',
+    },
+    {
+      hid: 'og:image',
+      property: 'og:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
+    },
+    {
+      hid: 'og:image:alt',
+      name: 'og:image:alt',
+      content: 'Formester Trustedform integration',
+    },
+    {
+      hid: 'twitter:url',
+      name: 'twitter:url',
+      content: 'https://formester.com/integrations/trustedform/',
+    },
+    {
+      name: 'twitter:site',
+      content: '@_formester_',
+    },
+    {
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: 'TrustedForm Integration — Certified Leads | Formester',
+    },
+    {
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content:
+        'Issue a TrustedForm certificate for every form submission. TCPA/CASL-ready proof of consent, toggled on in seconds — no code.',
+    },
+    {
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
+    },
+    {
+      hid: 'twitter:image:alt',
+      name: 'twitter:image:alt',
+      content: 'Formester Trustedform integration',
+    },
+    {
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image',
+    },
+    {
+      hid: 'apple-mobile-web-app-title',
+      name: 'apple-mobile-web-app-title',
+      content: 'Formester',
+    },
+    {
+      hid: 'image',
+      name: 'image',
+      property: 'og:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
+    },
+    {
+      hid: 'keywords',
+      name: 'keywords',
+      content: [
+        'trustedform integration',
+        'tcpa compliant lead forms',
+        'lead certification forms',
+        'formester trustedform',
+      ],
+    },
+  ],
+})
+useJsonld([
+  {
+    '@context': 'https://schema.org',
+    type: '{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does the TrustedForm integration do?", "acceptedAnswer": {"@type": "Answer", "text": "It generates a TrustedForm certificate for every form submission — capturing IP, device, timestamp, and consent — as independent proof of lead origin and authenticity."}}, {"@type": "Question", "name": "How do I enable it?", "acceptedAnswer": {"@type": "Answer", "text": "Open Automation → Integrations in your form, toggle on TrustedForm Certificates, and publish. Formester injects the script automatically."}}, {"@type": "Question", "name": "Where do I see the certificates?", "acceptedAnswer": {"@type": "Answer", "text": "In the form\'s Results tab — each submission shows its certificate, and the URL opens full details in your ActiveProspect account."}}, {"@type": "Question", "name": "Do I need an ActiveProspect account?", "acceptedAnswer": {"@type": "Answer", "text": "Viewing full certificate details requires a separate ActiveProspect account — the capture itself happens automatically in Formester."}}, {"@type": "Question", "name": "What is Formester?", "acceptedAnswer": {"@type": "Answer", "text": "Formester is an online form builder for creating forms, surveys, and quizzes with a drag-and-drop editor or AI. It connects with the tools your team already uses — Google Sheets, Slack, HubSpot, Zapier, and more — so your form data flows wherever you need it."}}]}',
+  },
+  {
+    '@context': 'https://schema.org',
+    type: '{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://formester.com/"}, {"@type": "ListItem", "position": 2, "name": "Integrations", "item": "https://formester.com/integrations/"}, {"@type": "ListItem", "position": 3, "name": "Trustedform", "item": "https://formester.com/integrations/trustedform/"}]}',
+  },
+])
+</script>

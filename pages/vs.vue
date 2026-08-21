@@ -1,0 +1,688 @@
+<template>
+  <div>
+    <HeroRowLayout
+      title="Looking for a Better Form Builder?"
+      description="See how Formester stacks up against popular tools like Typeform, Jotform, Google Forms, and more."
+      :buttons="c0_buttons"
+      :titleParts="c0_titleParts"
+      :button="c0_button"
+      :clickTriggers="c0_clickTriggers"
+      :heroImage="c0_heroImage"
+      :stats="c0_stats"
+      class="page-component-item"
+    />
+
+    <ThreeColBenefits :title="c1_title" :itemList="c1_itemList" class="page-component-item" />
+
+    <StandoutFeatureDetail :title="c2_title" :itemList="c2_itemList" class="page-component-item" />
+
+    <TestimonialsV2
+      description="Discover what our customers have to say about their experience with us"
+      version="feature"
+      :heading="c3_heading"
+      :testimonials="c3_testimonials"
+      class="page-component-item"
+    />
+
+    <CallToActionSection :ctaValue="c4_ctaValue" class="page-component-item" />
+
+    <FaqSection :title="c5_title" :faqList="c5_faqList" class="page-component-item" />
+  </div>
+</template>
+
+<script setup>
+import CallToActionSection from '@/components/CallToActionSection.vue'
+import FaqSection from '@/components/v2/FaqSection.vue'
+import HeroRowLayout from '@/components/v2/HeroRowLayout.vue'
+import StandoutFeatureDetail from '@/components/features/StandoutFeatureDetail.vue'
+import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
+import ThreeColBenefits from '@/components/features/ThreeColBenefits.vue'
+
+const c0_buttons = []
+const c0_titleParts = []
+const c0_button = {
+  id: 1002,
+  link: 'https://app.formester.com/users/sign_up',
+  text: 'Get Started!',
+  type: 'Primary',
+  showArrow: null,
+}
+const c0_clickTriggers = []
+const c0_heroImage = {
+  id: 2403,
+  imageAlt: "a mockup of formester's form builder",
+  imageUrl: null,
+  width: null,
+  height: null,
+  image: {
+    id: 2738,
+    name: "a mockup of formester's form builder.svg",
+    alternativeText: "a mockup of formester's form builder",
+    caption: "a mockup of formester's form builder",
+    width: null,
+    height: null,
+    formats: null,
+    hash: 'a_mockup_of_formester_s_form_building_service_d64e6c1eb4',
+    ext: '.svg',
+    mime: 'image/svg+xml',
+    size: 17048.06,
+    url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/a_mockup_of_formester_s_form_building_service_d64e6c1eb4.svg',
+    previewUrl: null,
+    provider: 'aws-s3',
+    provider_metadata: null,
+    createdAt: '2025-02-03T07:52:13.800Z',
+    updatedAt: '2025-06-20T01:48:44.299Z',
+  },
+}
+const c0_stats = []
+const c1_title = []
+const c1_itemList = [
+  {
+    id: 1856,
+    title: 'Fast Forms',
+    description: 'Your forms load fast and work on every screen.',
+    description_markdown: 'Your forms load fast and work on every screen.',
+    icon: null,
+    cardImage: {
+      id: 2401,
+      imageAlt: 'rocket icon',
+      imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/robust_analytics_2_352aa8f482.svg',
+      width: null,
+      height: null,
+      image: null,
+    },
+  },
+  {
+    id: 1857,
+    title: 'Better Builder',
+    description: 'Build modern forms without limits or confusion.',
+    description_markdown: 'Build modern forms without limits or confusion.',
+    icon: null,
+    cardImage: {
+      id: 2400,
+      imageAlt: 'form icon',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 2319,
+        name: 'form icon.svg',
+        alternativeText: 'form icon',
+        caption: 'form icon',
+        width: 68,
+        height: 68,
+        formats: null,
+        hash: 'Form_02c936e043',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 1.06,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Form_02c936e043.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-11-05T18:39:46.248Z',
+        updatedAt: '2025-02-28T02:41:18.307Z',
+      },
+    },
+  },
+  {
+    id: 1858,
+    title: 'Easy Integrations',
+    description: 'Connect forms with apps you already use easily.',
+    description_markdown: 'Connect forms with apps you already use easily.',
+    icon: null,
+    cardImage: {
+      id: 2402,
+      imageAlt: 'click icon',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 2332,
+        name: 'robust-analytics-3.svg',
+        alternativeText: 'click icon',
+        caption: 'click icon',
+        width: 68,
+        height: 68,
+        formats: null,
+        hash: 'robust_analytics_3_31e60d1ac7',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 0.87,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/robust_analytics_3_31e60d1ac7.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-11-05T18:59:22.852Z',
+        updatedAt: '2025-01-31T03:04:21.700Z',
+      },
+    },
+  },
+]
+const c2_title = [
+  {
+    id: 1405,
+    text: 'Best Form Builder Alternative',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c2_itemList = [
+  {
+    id: 1860,
+    title: 'Formester vs Typeform ',
+    description: "Typeform alternative that's cleaner, faster, and simpler.",
+    description_markdown:
+      "Typeform alternative that's cleaner, faster, and simpler.\n\n**[Learn more ->](/typeform-alternative/)**",
+    icon: null,
+    cardImage: {
+      id: 2405,
+      imageAlt: 'formester vs typeform',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3559,
+        name: 'formester vs typeform.svg',
+        alternativeText: 'formester vs typeform',
+        caption: 'formester vs typeform',
+        width: 542,
+        height: 465,
+        formats: null,
+        hash: 'Group_4_07185f1b4e',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 18.5,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Group_4_07185f1b4e.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-06-20T01:44:28.541Z',
+        updatedAt: '2025-06-20T01:47:24.552Z',
+      },
+    },
+  },
+  {
+    id: 1859,
+    title: 'Formester vs Jotform ',
+    description: 'Jotform alternative with easier steps and full control.',
+    description_markdown:
+      'Jotform alternative with easier steps and full control.\n\n**[Learn more ->](/jotform-alternative/)**',
+    icon: null,
+    cardImage: {
+      id: 2408,
+      imageAlt: 'formester vs jotform',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3565,
+        name: 'formester vs jotform.svg',
+        alternativeText: 'formester vs jotform',
+        caption: 'formester vs jotform',
+        width: 491,
+        height: 465,
+        formats: null,
+        hash: 'Group_5_3fc95312df',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 60.98,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Group_5_3fc95312df.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-06-20T01:44:29.121Z',
+        updatedAt: '2025-06-20T01:47:13.458Z',
+      },
+    },
+  },
+  {
+    id: 1861,
+    title: 'Formester vs Google Forms ',
+    description: 'Google Forms alternative with smarter, modern forms.',
+    description_markdown:
+      'Google Forms alternative with smarter, modern forms.\n\n**[Learn more ->](/google-forms-alternative/)**',
+    icon: null,
+    cardImage: {
+      id: 2406,
+      imageAlt: 'formester vs google forms',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3563,
+        name: 'formester vs google forms.svg',
+        alternativeText: 'formester vs google forms',
+        caption: 'formester vs google forms',
+        width: 542,
+        height: 465,
+        formats: null,
+        hash: 'Group_8_7ac51fc922',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 34.56,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Group_8_7ac51fc922.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-06-20T01:44:28.832Z',
+        updatedAt: '2025-06-20T01:47:03.618Z',
+      },
+    },
+  },
+  {
+    id: 1864,
+    title: 'Formester vs forms.app ',
+    description: 'forms.pp alternative with quick setup and more options.',
+    description_markdown:
+      'Forms App alternative with quick setup and more options.\n\n**[Learn more ->](/forms-app-alternative/)**',
+    icon: null,
+    cardImage: {
+      id: 2404,
+      imageAlt: 'formester vs forms.app',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3560,
+        name: 'formester vs forms.app.svg',
+        alternativeText: 'formester vs forms.app',
+        caption: 'formester vs forms.app',
+        width: 542,
+        height: 466,
+        formats: null,
+        hash: 'Group_3_3e4c4ad387',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 26.2,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Group_3_3e4c4ad387.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-06-20T01:44:28.568Z',
+        updatedAt: '2025-06-20T01:46:52.108Z',
+      },
+    },
+  },
+  {
+    id: 1862,
+    title: 'Formester vs Zoho Form ',
+    description: "Zoho Form alternative that's clean, fast, and simple.",
+    description_markdown:
+      "Zoho Form alternative that's clean, fast, and simple.\n\n**[Learn more ->](/zoho-forms-alternative/)**",
+    icon: null,
+    cardImage: {
+      id: 2407,
+      imageAlt: 'formester vs zohoform',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3558,
+        name: 'formester vs zohoform.svg',
+        alternativeText: 'formester vs zohoform',
+        caption: 'formester vs zohoform',
+        width: 542,
+        height: 465,
+        formats: null,
+        hash: 'Group_1_662bec161c',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 29.88,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Group_1_662bec161c.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-06-20T01:44:28.456Z',
+        updatedAt: '2025-06-20T01:46:40.522Z',
+      },
+    },
+  },
+  {
+    id: 1867,
+    title: 'Formester vs Paperform ',
+    description: 'Paperform alternative with better logic and speed.',
+    description_markdown:
+      'Paperform alternative with better logic and speed.\n\n**[Learn more ->](/paperform-alternative/)**',
+    icon: null,
+    cardImage: {
+      id: 2411,
+      imageAlt: 'formester vs paperform',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3561,
+        name: 'formester vs paperform.svg',
+        alternativeText: 'formester vs paperform',
+        caption: 'formester vs paperform',
+        width: 542,
+        height: 465,
+        formats: null,
+        hash: 'Group_2_00b4e4206f',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 39.13,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Group_2_00b4e4206f.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-06-20T01:44:28.620Z',
+        updatedAt: '2025-06-20T01:46:30.472Z',
+      },
+    },
+  },
+  {
+    id: 1865,
+    title: 'Formester vs Formstack ',
+    description: 'Formstack alternative without all the extra stuff.',
+    description_markdown:
+      'Formstack alternative without all the extra stuff.\n\n**[Learn more ->](/formstack-alternative/)**',
+    icon: null,
+    cardImage: {
+      id: 2412,
+      imageAlt: 'formester vs formstack',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3564,
+        name: 'formester vs formstack.svg',
+        alternativeText: 'formester vs formstack',
+        caption: 'formester vs formstack',
+        width: 504,
+        height: 465,
+        formats: null,
+        hash: 'Group_6_33827dc4da',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 42.93,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Group_6_33827dc4da.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-06-20T01:44:28.960Z',
+        updatedAt: '2025-06-20T01:46:20.807Z',
+      },
+    },
+  },
+]
+const c3_heading = [
+  {
+    id: 1403,
+    text: 'Testimonials',
+    highlight: false,
+    color: null,
+    bold: null,
+  },
+]
+const c3_testimonials = [
+  {
+    id: 5,
+    name: 'Deanna Bugalski',
+    position: 'Founder/CEO',
+    organization: 'Suggesterfy',
+    comment:
+      'I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formester was super easy to set up, and the usability is seamless! I highly recommend!',
+    createdAt: '2024-06-18T03:52:39.354Z',
+    updatedAt: '2025-01-22T02:57:47.756Z',
+    publishedAt: '2024-06-18T03:52:43.800Z',
+    companyLogo: {
+      id: 226,
+      imageAlt: 'suggesterfy-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1683,
+        name: 'suggesterfy_logo.webp',
+        alternativeText: 'suggesterfy-logo',
+        caption: 'suggesterfy-logo',
+        width: 100,
+        height: 50,
+        formats: null,
+        hash: 'suggesterfy_logo_d1d7f996b9',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.91,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/suggesterfy_logo_d1d7f996b9.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.921Z',
+        updatedAt: '2024-12-01T07:49:52.459Z',
+      },
+    },
+  },
+  {
+    id: 2,
+    name: 'Jilson',
+    position: 'Organiser',
+    organization: 'Vue Conference',
+    comment:
+      'Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.',
+    createdAt: '2024-06-18T03:48:46.610Z',
+    updatedAt: '2025-01-22T02:57:08.760Z',
+    publishedAt: '2024-06-18T03:48:50.595Z',
+    companyLogo: {
+      id: 228,
+      imageAlt: 'photo-of-vue-conference',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1680,
+        name: 'vueconf.webp',
+        alternativeText: 'photo-of-vue-conference',
+        caption: 'photo-of-vue-conference',
+        width: 80,
+        height: 80,
+        formats: null,
+        hash: 'vueconf_1bc3dc0827',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.07,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.731Z',
+        updatedAt: '2024-12-01T07:47:11.024Z',
+      },
+    },
+  },
+]
+const c4_ctaValue = {
+  id: 67,
+  description: 'Get access to advanced AI, unlimited forms & more. See pricing for more details.',
+  type: 'default',
+  createdAt: '2024-11-04T07:07:43.916Z',
+  updatedAt: '2025-06-12T18:47:31.840Z',
+  publishedAt: '2024-11-04T07:08:18.018Z',
+  locale: 'en',
+  title: [
+    {
+      id: 393,
+      text: 'Ready to build your perfect form?',
+      highlight: false,
+      color: null,
+      bold: null,
+    },
+  ],
+  buttons: [
+    {
+      id: 338,
+      link: 'https://app.formester.com/users/sign_up',
+      text: 'Get Started–It’s Free!',
+      type: 'Primary',
+      showArrow: null,
+    },
+  ],
+  localizations: [],
+}
+const c5_title = [
+  {
+    id: 1404,
+    text: 'Frequently Asked Questions',
+    highlight: false,
+    color: null,
+    bold: null,
+  },
+]
+const c5_faqList = [
+  {
+    id: 1077,
+    header: 'Is Formester a good Typeform alternative?',
+    body: 'Yes. You get all the modern features of Typeform—like logic jumps and clean layouts—without the price or learning curve.',
+    body_markdown:
+      'Yes. You get all the modern features of Typeform—like logic jumps and clean layouts—without the price or learning curve.',
+    list: [],
+  },
+  {
+    id: 1078,
+    header: 'What makes Formester a better formbuilder?',
+    body: 'It’s faster to use, easier to set up, and gives you full control without technical skills.',
+    body_markdown: 'It’s faster to use, easier to set up, and gives you full control without technical skills.',
+    list: [],
+  },
+  {
+    id: 1079,
+    header: 'Can I import forms from other platforms?',
+    body: 'Yes. You can recreate forms easily, and our team can help with onboarding if needed.',
+    body_markdown: 'Yes. You can recreate forms easily, and our team can help with onboarding if needed.',
+    list: [],
+  },
+  {
+    id: 1076,
+    header: 'Is Formester good for teams?',
+    body: 'Absolutely. You can collaborate, manage access, and build forms together without confusion.',
+    body_markdown: 'Absolutely. You can collaborate, manage access, and build forms together without confusion.',
+    list: [],
+  },
+  {
+    id: 1080,
+    header: 'Do I need to know how to code?',
+    body: 'No. Everything is drag and drop. Build powerful forms without touching a single line of code.',
+    body_markdown: 'No. Everything is drag and drop. Build powerful forms without touching a single line of code.',
+    list: [],
+  },
+]
+
+useHead({
+  title: 'Formester - Better Alternative to Other Form Builders',
+  link: [
+    {
+      hid: 'canonical',
+      rel: 'canonical',
+      href: 'https://formester.com/vs/',
+    },
+  ],
+  meta: [
+    {
+      property: 'article:modified_time',
+      content: '2026-01-28T04:35:54.344Z',
+    },
+    {
+      hid: 'description',
+      name: 'description',
+      content:
+        'Create modern, responsive forms without the clutter. Build faster, connect with your tools, and grow without limits using a smarter form builder.',
+    },
+    {
+      hid: 'og:site_name',
+      name: 'og:site_name',
+      content: 'Formester - Better Alternative to Other Form Builders',
+    },
+    {
+      hid: 'og:type',
+      property: 'og:type',
+      content: 'website',
+    },
+    {
+      hid: 'og:url',
+      property: 'og:url',
+      content: 'https://formester.com/vs/ /',
+    },
+    {
+      hid: 'og:title',
+      property: 'og:title',
+      content: 'Formester - Better Alternative to Other Form Builders',
+    },
+    {
+      hid: 'og:description',
+      property: 'og:description',
+      content:
+        'Create modern, responsive forms without the clutter. Build faster, connect with your tools, and grow without limits using a smarter form builder.',
+    },
+    {
+      hid: 'og:image',
+      property: 'og:image',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png',
+    },
+    {
+      hid: 'og:image:alt',
+      name: 'og:image:alt',
+      content: 'Formester Logo',
+    },
+    {
+      hid: 'twitter:url',
+      name: 'twitter:url',
+      content: 'https://formester.com/vs/ /',
+    },
+    {
+      name: 'twitter:site',
+      content: '@_formester_',
+    },
+    {
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: 'Formester - Better Alternative to Other Form Builders',
+    },
+    {
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content:
+        'Create modern, responsive forms without the clutter. Build faster, connect with your tools, and grow without limits using a smarter form builder.',
+    },
+    {
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png',
+    },
+    {
+      hid: 'twitter:image:alt',
+      name: 'twitter:image:alt',
+      content: 'Formester Logo',
+    },
+    {
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image',
+    },
+    {
+      hid: 'apple-mobile-web-app-title',
+      name: 'apple-mobile-web-app-title',
+      content: 'Formester',
+    },
+    {
+      hid: 'image',
+      name: 'image',
+      property: 'og:image',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png',
+    },
+    {
+      hid: 'keywords',
+      name: 'keywords',
+      content: [
+        'form builder',
+        'typeform alternative',
+        'jotform alternative',
+        'formstack alternative',
+        'paperform alternative',
+        'formsapp alternative',
+      ],
+    },
+  ],
+})
+</script>

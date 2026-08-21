@@ -1,0 +1,829 @@
+<template>
+  <div>
+    <HeroV2
+      :description="c0_description"
+      trustText="Available on the Business plan"
+      blobColorA="#f5eeff"
+      blobColorB="#f1ebff"
+      blobColorC="#f4efff"
+      :mockupHtml="c0_mockupHtml"
+      layout="split"
+      :title="c0_title"
+      :buttons="c0_buttons"
+      :badge="c0_badge"
+      :tabCardContent="c0_tabCardContent"
+      class="page-component-item"
+    />
+
+    <TrustSeals
+      label="Trusted by leading organisations"
+      showTrustBadges
+      :title="c1_title"
+      :logos="c1_logos"
+      class="page-component-item"
+    />
+
+    <CardGrid
+      eyebrow="What you get"
+      description="Build the form in your language, add the translations, and let every respondent answer in the one they understand — all from a single form."
+      columns="3"
+      :title="c2_title"
+      :cards="c2_cards"
+      class="page-component-item"
+    />
+
+    <ComparisonTable
+      eyebrow="Why it matters"
+      colUs="Formester multi-language forms"
+      colThem="Separate form per language"
+      :note="c3_note"
+      :title="c3_title"
+      :rows="c3_rows"
+      class="page-component-item"
+    />
+
+    <CardGrid
+      eyebrow="Real-life use cases"
+      columns="4"
+      :title="c4_title"
+      :cards="c4_cards"
+      class="page-component-item"
+    />
+
+    <TestimonialsV2
+      version="feature"
+      :heading="c5_heading"
+      :testimonials="c5_testimonials"
+      class="page-component-item"
+    />
+
+    <FaqSection centered :title="c6_title" :faqList="c6_faqList" class="page-component-item" />
+
+    <CtaDark
+      badge="Available on the Business plan"
+      heading="Reach every respondent in their language"
+      description="Translate one form, add a language switcher, and publish to a global audience."
+      :buttons="c7_buttons"
+      class="page-component-item"
+    />
+  </div>
+</template>
+
+<script setup>
+import CardGrid from '@/components/v2/CardGrid.vue'
+import ComparisonTable from '@/components/v2/ComparisonTable.vue'
+import CtaDark from '@/components/v2/CtaDark.vue'
+import FaqSection from '@/components/v2/FaqSection.vue'
+import HeroV2 from '@/components/v2/HeroV2.vue'
+import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
+import TrustSeals from '@/components/v2/TrustSeals.vue'
+
+const c0_description =
+  'Translate a single form into multiple languages and let respondents pick the one they read best. Reach a global audience without duplicating or maintaining a separate form for each language.'
+const c0_mockupHtml =
+  "\u003Cstyle>.mlg-blk{display:grid;}.mlg-stk{display:inline-grid;vertical-align:middle;}.mlg-blk>span,.mlg-stk>span{grid-area:1/1;}.mlg-ctr>span{text-align:center;}.ml-en{opacity:1;animation:mlEN 5.5s infinite;}.ml-es,.ml-fr{opacity:0;}.ml-es{animation:mlES 5.5s infinite;}.ml-fr{animation:mlFR 5.5s infinite;}@keyframes mlEN{0%,12%{opacity:1}18%,84%{opacity:0}90%,100%{opacity:1}}@keyframes mlES{0%,12%{opacity:0}18%,48%{opacity:1}54%,100%{opacity:0}}@keyframes mlFR{0%,48%{opacity:0}54%,84%{opacity:1}90%,100%{opacity:0}}@media(prefers-reduced-motion:reduce){.ml-en,.ml-es,.ml-fr{animation:none!important}}\u003C/style><div style='max-width:520px;margin:0 auto;background:#fff;border:1px solid #eaecf0;border-radius:16px;box-shadow:0 24px 80px rgba(15,14,26,.12),0 8px 24px rgba(15,14,26,.06);overflow:hidden;'><div style='display:flex;align-items:center;gap:6px;padding:12px 16px;background:#f9fafb;border-bottom:1px solid #eaecf0;'><span style='width:11px;height:11px;border-radius:50%;background:#ff6058;'></span><span style='width:11px;height:11px;border-radius:50%;background:#ffbd2e;'></span><span style='width:11px;height:11px;border-radius:50%;background:#27c93f;'></span><span style='margin-left:10px;font-size:12px;color:#697586;'>forms.formester.com</span></div><div style='position:relative;padding:18px;text-align:left;'><div style='position:absolute;top:14px;right:16px;z-index:2;display:inline-flex;align-items:center;gap:8px;border:1px solid #d0d5dd;border-radius:9px;padding:7px 11px;background:#fff;box-shadow:0 1px 2px rgba(16,24,40,.06);line-height:1;'><svg width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='#6434d0' stroke-width='2' style='flex-shrink:0;'><circle cx='12' cy='12' r='9'/><path d='M3 12h18M12 3c2.5 2.5 2.5 15.5 0 18M12 3c-2.5 2.5-2.5 15.5 0 18'/></svg><span class='mlg-stk' style='font-size:12.5px;font-weight:600;color:#101828;'><span class='ml-en'>English</span><span class='ml-es'>Español</span><span class='ml-fr'>Français</span></span><svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='#98a2b3' stroke-width='2' style='flex-shrink:0;'><path d='M6 9l6 6 6-6'/></svg></div><div class='mlg-blk' style='max-width:290px;font-size:15px;font-weight:700;color:#101828;letter-spacing:-.01em;line-height:1.3;margin-bottom:22px;'><span class='ml-en'>Contact request</span><span class='ml-es'>Solicitud de contacto</span><span class='ml-fr'>Demande de contact</span></div><div style='display:flex;flex-direction:column;gap:16px;'><div><div class='mlg-blk' style='font-size:12px;color:#475467;line-height:1.4;margin-bottom:7px;'><span class='ml-en'>Full name</span><span class='ml-es'>Nombre completo</span><span class='ml-fr'>Nom complet</span></div><div style='border:1px solid #eaecf0;border-radius:9px;padding:10px 12px;font-size:13px;color:#101828;'>Jordan Lee</div></div><div><div class='mlg-blk' style='font-size:12px;color:#475467;line-height:1.4;margin-bottom:7px;'><span class='ml-en'>Email address</span><span class='ml-es'>Correo electrónico</span><span class='ml-fr'>Adresse e-mail</span></div><div style='border:1px solid #6434d0;border-radius:9px;padding:10px 12px;font-size:13px;color:#101828;box-shadow:0 0 0 4px #f0ebfa;'>jordan@acme.co</div></div></div><div style='margin-top:18px;background:#6434d0;color:#fff;font-size:14px;font-weight:600;text-align:center;border-radius:10px;padding:12px;line-height:1.4;'><span class='mlg-stk mlg-ctr'><span class='ml-en'>Submit</span><span class='ml-es'>Enviar</span><span class='ml-fr'>Envoyer</span></span></div></div></div>"
+const c0_title = [
+  {
+    id: 4804,
+    text: 'One form, ',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+  {
+    id: 4805,
+    text: 'every language',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c0_buttons = [
+  {
+    id: 1578,
+    link: 'https://app.formester.com/users/sign_up',
+    text: 'Start Building',
+    type: 'Primary',
+    showArrow: true,
+  },
+  {
+    id: 1579,
+    link: 'https://youtu.be/2F31_RqtFI0',
+    text: 'Watch demo',
+    type: 'Secondary',
+    showArrow: false,
+  },
+]
+const c0_badge = {
+  id: 91,
+  text: 'Multi-Language Forms',
+  tag: 'Business',
+  link: null,
+}
+const c0_tabCardContent = []
+const c1_title = []
+const c1_logos = []
+const c2_title = [
+  {
+    id: 4803,
+    text: 'Translate once,',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+  {
+    id: 4800,
+    text: 'publish everywhere',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c2_cards = [
+  {
+    id: 624,
+    tag: 'One form',
+    tagColor: 'violet',
+    title: 'Add languages to a single form',
+    body: 'Keep one form and one response table. Add each language as a translation instead of duplicating and re-maintaining the form.',
+    mockHtml:
+      "<div style='display:flex;flex-direction:column;gap:8px;'><div style='display:flex;align-items:center;gap:9px;font-size:12.5px;color:#101828;'><span style='font-size:11px;font-weight:700;color:#6434d0;background:#f0ebfa;border-radius:6px;padding:2px 8px;'>EN</span>English<span style='margin-left:auto;font-size:10px;font-weight:700;color:#697586;background:#f2f4f7;border-radius:999px;padding:2px 8px;'>Default</span></div><div style='display:flex;align-items:center;gap:9px;font-size:12.5px;color:#101828;'><span style='font-size:11px;font-weight:700;color:#6434d0;background:#f0ebfa;border-radius:6px;padding:2px 8px;'>ES</span>Español<span style='margin-left:auto;font-size:10px;font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:2px 8px;'>Live</span></div><div style='display:flex;align-items:center;gap:9px;font-size:12.5px;color:#101828;'><span style='font-size:11px;font-weight:700;color:#6434d0;background:#f0ebfa;border-radius:6px;padding:2px 8px;'>FR</span>Français<span style='margin-left:auto;font-size:10px;font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:2px 8px;'>Live</span></div></div>",
+    icon: null,
+  },
+  {
+    id: 625,
+    tag: 'Respondent choice',
+    tagColor: 'blue',
+    title: 'Respondents pick their language',
+    body: "A language switcher lets each person read and answer in the language they prefer, so the form feels native wherever it's shared.",
+    mockHtml:
+      "<div style='display:flex;align-items:center;gap:7px;'><span style='display:flex;align-items:center;gap:6px;font-size:12px;color:#697586;'><svg width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='#6434d0' stroke-width='2'><circle cx='12' cy='12' r='9'/><path d='M3 12h18M12 3c2.5 2.5 2.5 15.5 0 18M12 3c-2.5 2.5-2.5 15.5 0 18'/></svg></span><span style='font-size:11px;font-weight:600;color:#697586;border:1px solid #eaecf0;border-radius:999px;padding:4px 11px;'>EN</span><span style='font-size:11px;font-weight:700;color:#fff;background:#6434d0;border-radius:999px;padding:4px 11px;'>ES</span><span style='font-size:11px;font-weight:600;color:#697586;border:1px solid #eaecf0;border-radius:999px;padding:4px 11px;'>FR</span><span style='font-size:11px;font-weight:600;color:#697586;border:1px solid #eaecf0;border-radius:999px;padding:4px 11px;'>DE</span></div>",
+    icon: null,
+  },
+  {
+    id: 626,
+    tag: 'Global reach',
+    tagColor: 'green',
+    title: 'Reach a global audience',
+    body: 'Collect responses from people across regions and locales, all flowing back into one place for easy review and export.',
+    mockHtml:
+      "<div style='display:flex;flex-direction:column;gap:8px;'><div style='display:flex;align-items:center;gap:10px;'><span style='width:54px;font-size:11px;color:#475467;'>Español</span><span style='flex:1;height:9px;border-radius:5px;background:#eef0f4;overflow:hidden;'><span style='display:block;width:46%;height:100%;background:#6434d0;'></span></span><span style='font-size:11px;font-weight:600;color:#101828;'>46%</span></div><div style='display:flex;align-items:center;gap:10px;'><span style='width:54px;font-size:11px;color:#475467;'>English</span><span style='flex:1;height:9px;border-radius:5px;background:#eef0f4;overflow:hidden;'><span style='display:block;width:34%;height:100%;background:#7c4ce0;'></span></span><span style='font-size:11px;font-weight:600;color:#101828;'>34%</span></div><div style='display:flex;align-items:center;gap:10px;'><span style='width:54px;font-size:11px;color:#475467;'>Français</span><span style='flex:1;height:9px;border-radius:5px;background:#eef0f4;overflow:hidden;'><span style='display:block;width:20%;height:100%;background:#b9a6ec;'></span></span><span style='font-size:11px;font-weight:600;color:#101828;'>20%</span></div></div>",
+    icon: null,
+  },
+]
+const c3_note =
+  'Duplicating a form for every language means every edit happens many times and responses scatter. One translated form keeps the work — and the data — in a single place.'
+const c3_title = [
+  {
+    id: 4798,
+    text: 'One translated form,',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+  {
+    id: 4796,
+    text: 'not a form per language',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c3_rows = [
+  {
+    id: 91,
+    feature: 'Forms to maintain',
+    us: 'One',
+    them: 'One per language',
+  },
+  {
+    id: 92,
+    feature: 'Add a new language',
+    us: 'Add a translation',
+    them: 'Build a new form',
+  },
+  {
+    id: 94,
+    feature: 'Respondent language switcher',
+    us: 'Built in',
+    them: 'Manual links',
+  },
+  {
+    id: 93,
+    feature: 'Responses',
+    us: 'One combined table',
+    them: 'Split across forms',
+  },
+  {
+    id: 95,
+    feature: 'Keeping copy in sync',
+    us: 'Edit once',
+    them: 'Edit each form',
+  },
+  {
+    id: 96,
+    feature: 'Reporting across languages',
+    us: 'In one place',
+    them: 'Manual merge',
+  },
+]
+const c4_title = [
+  {
+    id: 4801,
+    text: 'Who reaches further with',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+  {
+    id: 4799,
+    text: 'multi-language forms',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c4_cards = [
+  {
+    id: 620,
+    tag: 'Global teams',
+    tagColor: 'violet',
+    title: 'Cross-border operations',
+    body: 'Collect requests and feedback from customers and staff in every region with one form they can read in their own language.',
+    mockHtml: null,
+    icon: null,
+  },
+  {
+    id: 621,
+    tag: 'Events',
+    tagColor: 'blue',
+    title: 'International registration',
+    body: 'Let attendees from different countries register in their preferred language while you manage one registration list.',
+    mockHtml: null,
+    icon: null,
+  },
+  {
+    id: 622,
+    tag: 'Education',
+    tagColor: 'green',
+    title: 'Multilingual enrollment',
+    body: 'Reach students and families who speak different languages with one application instead of several parallel forms.',
+    mockHtml: null,
+    icon: null,
+  },
+  {
+    id: 623,
+    tag: 'Nonprofits',
+    tagColor: 'amber',
+    title: 'Community outreach',
+    body: 'Serve diverse communities by offering surveys and intake forms in the languages your audience actually speaks.',
+    mockHtml: null,
+    icon: null,
+  },
+]
+const c5_heading = [
+  {
+    id: 4797,
+    text: 'Teams reach a wider audience with Formester',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c5_testimonials = [
+  {
+    id: 1,
+    name: 'Dr. Michele Ross',
+    position: 'Founder',
+    organization: 'Infused Health',
+    comment:
+      "I'm migrating my forms from Paperform, where I've been a user for over 4 years. Loving the software so far! I've already replaced Paperform form embeds & popups on my sites & my husband's websites with Formester forms",
+    createdAt: '2024-06-18T03:47:14.605Z',
+    updatedAt: '2025-01-22T02:57:30.159Z',
+    publishedAt: '2024-06-18T03:47:18.889Z',
+    companyLogo: {
+      id: 227,
+      imageAlt: 'Dr. Michele Ross',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1685,
+        name: 'dr._michelelogo.webp',
+        alternativeText: null,
+        caption: null,
+        width: 300,
+        height: 59,
+        formats: {
+          thumbnail: {
+            ext: '.webp',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_dr_michelelogo_2269ae2211.webp',
+            hash: 'thumbnail_dr_michelelogo_2269ae2211',
+            mime: 'image/webp',
+            name: 'thumbnail_dr._michelelogo.webp',
+            path: null,
+            size: 5.58,
+            width: 245,
+            height: 48,
+          },
+        },
+        hash: 'dr_michelelogo_2269ae2211',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 5.87,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/dr_michelelogo_2269ae2211.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.944Z',
+        updatedAt: '2024-08-01T14:38:23.944Z',
+      },
+    },
+  },
+  {
+    id: 2,
+    name: 'Jilson',
+    position: 'Organiser',
+    organization: 'Vue Conference',
+    comment:
+      'Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.',
+    createdAt: '2024-06-18T03:48:46.610Z',
+    updatedAt: '2025-01-22T02:57:08.760Z',
+    publishedAt: '2024-06-18T03:48:50.595Z',
+    companyLogo: {
+      id: 228,
+      imageAlt: 'photo-of-vue-conference',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1680,
+        name: 'vueconf.webp',
+        alternativeText: 'photo-of-vue-conference',
+        caption: 'photo-of-vue-conference',
+        width: 80,
+        height: 80,
+        formats: null,
+        hash: 'vueconf_1bc3dc0827',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.07,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.731Z',
+        updatedAt: '2024-12-01T07:47:11.024Z',
+      },
+    },
+  },
+  {
+    id: 4,
+    name: 'Costanza Casullo',
+    position: 'Volunteer',
+    organization: 'Wato Coding Hub',
+    comment:
+      "Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.",
+    createdAt: '2024-06-18T03:51:15.232Z',
+    updatedAt: '2025-01-22T02:58:03.674Z',
+    publishedAt: '2024-06-18T03:51:21.477Z',
+    companyLogo: {
+      id: 225,
+      imageAlt: 'wato-coding-hub-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1681,
+        name: 'wato-coding-hub.webp',
+        alternativeText: 'wato-coding-hub-logo',
+        caption: 'wato-coding-hub-logo',
+        width: 80,
+        height: 81,
+        formats: null,
+        hash: 'wato_coding_hub_e054f0ea9d',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.88,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/wato_coding_hub_e054f0ea9d.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.738Z',
+        updatedAt: '2024-12-01T07:49:13.371Z',
+      },
+    },
+  },
+  {
+    id: 5,
+    name: 'Deanna Bugalski',
+    position: 'Founder/CEO',
+    organization: 'Suggesterfy',
+    comment:
+      'I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formester was super easy to set up, and the usability is seamless! I highly recommend!',
+    createdAt: '2024-06-18T03:52:39.354Z',
+    updatedAt: '2025-01-22T02:57:47.756Z',
+    publishedAt: '2024-06-18T03:52:43.800Z',
+    companyLogo: {
+      id: 226,
+      imageAlt: 'suggesterfy-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1683,
+        name: 'suggesterfy_logo.webp',
+        alternativeText: 'suggesterfy-logo',
+        caption: 'suggesterfy-logo',
+        width: 100,
+        height: 50,
+        formats: null,
+        hash: 'suggesterfy_logo_d1d7f996b9',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.91,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/suggesterfy_logo_d1d7f996b9.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.921Z',
+        updatedAt: '2024-12-01T07:49:52.459Z',
+      },
+    },
+  },
+  {
+    id: 6,
+    name: 'Thibaud Martinez',
+    position: 'Organiser',
+    organization: 'Tedx',
+    comment: 'I really enjoy Formester. It’s clean and straight-forward and it does well, what it is supposed to do.',
+    createdAt: '2024-06-18T03:53:38.957Z',
+    updatedAt: '2025-01-22T02:56:48.567Z',
+    publishedAt: '2024-06-18T03:53:40.693Z',
+    companyLogo: {
+      id: 229,
+      imageAlt: 'tedx-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1684,
+        name: 'tedx.webp',
+        alternativeText: 'tedx-logo',
+        caption: 'tedx-logo',
+        width: 109,
+        height: 38,
+        formats: null,
+        hash: 'tedx_2fce0eee2e',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.09,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/tedx_2fce0eee2e.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.941Z',
+        updatedAt: '2024-12-01T07:50:31.505Z',
+      },
+    },
+  },
+  {
+    id: 34,
+    name: 'Bency',
+    position: 'Product Manager',
+    organization: 'Northgate Digital Solutions',
+    comment:
+      "Formester's AI form generator transformed how quickly we build forms. The drag-and-drop builder paired with AI-generated templates means I can spin up a survey or poll in minutes, not hours. Conditional logic, file uploads, and seamless integrations make it incredibly versatile and the customization options let every form match our branding perfectly. Their support team is exceptional too. It's the only form and survey tool we recommend",
+    createdAt: '2025-06-29T23:23:10.541Z',
+    updatedAt: '2026-05-03T09:30:00.533Z',
+    publishedAt: '2026-05-03T09:30:00.530Z',
+    companyLogo: {
+      id: 3652,
+      imageAlt: null,
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: null,
+    },
+  },
+  {
+    id: 35,
+    name: 'Roger',
+    position: 'Marketing Specialist',
+    organization: 'BrightPath Technologies',
+    comment:
+      'I use Formester for my form-building needs and I’m thoroughly impressed. The platform is rich with features… What really sets them apart is their exceptional customer service (responses typically within 10 minutes). The pricing is also very reasonable… Highly recommended!\n',
+    createdAt: '2025-06-29T23:29:19.225Z',
+    updatedAt: '2025-10-31T04:00:58.697Z',
+    publishedAt: '2025-06-29T23:29:21.134Z',
+    companyLogo: {
+      id: 3649,
+      imageAlt: 'brightpath-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4094,
+        name: 'brightpath-logo.png',
+        alternativeText: 'brightpath-logo',
+        caption: 'brightpath-logo',
+        width: 200,
+        height: 49,
+        formats: null,
+        hash: 'brightpath_logo_6ef0922a60',
+        ext: '.png',
+        mime: 'image/png',
+        size: 2.5,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/brightpath_logo_6ef0922a60.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-31T04:00:11.712Z',
+        updatedAt: '2025-10-31T04:00:11.712Z',
+      },
+    },
+  },
+  {
+    id: 36,
+    name: 'Ye Qi Lai',
+    position: 'UX Designer',
+    organization: 'Eastview Consulting',
+    comment:
+      'Formester is one of the best underrated survey tools out there… It’s extremely customizable… Their support is awesome… I absolutely recommend this to anyone looking for an alternative to the usual form creators.',
+    createdAt: '2025-06-29T23:30:04.374Z',
+    updatedAt: '2025-10-31T04:00:30.746Z',
+    publishedAt: '2025-06-29T23:30:06.260Z',
+    companyLogo: {
+      id: 3648,
+      imageAlt: 'eastview-logo-header',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4097,
+        name: 'eastview-logo-header-300x120 1.png',
+        alternativeText: 'eastview-logo-header',
+        caption: 'eastview-logo-header',
+        width: 200,
+        height: 80,
+        formats: null,
+        hash: 'eastview_logo_header_300x120_1_d9c231e93b',
+        ext: '.png',
+        mime: 'image/png',
+        size: 3.18,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/eastview_logo_header_300x120_1_d9c231e93b.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-31T04:00:11.854Z',
+        updatedAt: '2025-10-31T04:00:11.854Z',
+      },
+    },
+  },
+]
+const c6_title = [
+  {
+    id: 4802,
+    text: 'Multi-language form FAQs',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c6_faqList = [
+  {
+    id: 2389,
+    header: 'What is a multi-language form?',
+    body: "It's a single form translated into more than one language. You build the form once, add translations, and each respondent answers in the language they choose.",
+    body_markdown: null,
+    list: [],
+  },
+  {
+    id: 2388,
+    header: 'How do respondents choose their language?',
+    body: 'The form shows a language switcher. Respondents select their preferred language and the labels, questions, and buttons update instantly — without leaving the form.',
+    body_markdown: null,
+    list: [],
+  },
+  {
+    id: 2390,
+    header: 'Do I have to build a separate form for each language?',
+    body: "No. You keep one form and add each language as a translation, so there's only one form to maintain and one place to review responses.",
+    body_markdown: null,
+    list: [],
+  },
+  {
+    id: 2391,
+    header: 'Where do the responses go?',
+    body: 'All responses flow into one combined table regardless of the language a respondent used, so you can review and export everything together.',
+    body_markdown: null,
+    list: [],
+  },
+  {
+    id: 2393,
+    header: 'Which languages are supported?',
+    body: 'You can add translations for the languages your audience speaks and edit every label and question yourself, so the wording reads naturally in each one.',
+    body_markdown: null,
+    list: [],
+  },
+  {
+    id: 2392,
+    header: 'Which plan includes multi-language forms?',
+    body: 'Multi-language form translations are available on the Business plan and up. Check the pricing page for details.',
+    body_markdown: null,
+    list: [],
+  },
+]
+const c7_buttons = [
+  {
+    id: 1576,
+    link: 'https://app.formester.com/users/sign_up',
+    text: 'Start Building',
+    type: 'Primary',
+    showArrow: true,
+  },
+  {
+    id: 1577,
+    link: '/pricing',
+    text: 'See pricing',
+    type: 'White',
+    showArrow: false,
+  },
+]
+
+useHead({
+  title: 'Create Multi-Language Online Forms | Formester',
+  link: [
+    {
+      hid: 'canonical',
+      rel: 'canonical',
+      href: 'https://formester.com/features/multi-language-form-translations/',
+    },
+  ],
+  meta: [
+    {
+      property: 'article:modified_time',
+      content: '2026-06-15T10:45:33.351Z',
+    },
+    {
+      hid: 'description',
+      name: 'description',
+      content:
+        'Translate one form into multiple languages and let respondents choose their own. Reach a global audience with multi-language form translations — no duplicate forms to maintain.',
+    },
+    {
+      hid: 'og:site_name',
+      name: 'og:site_name',
+      content: 'Create Multi-Language Online Forms | Formester',
+    },
+    {
+      hid: 'og:type',
+      property: 'og:type',
+      content: 'website',
+    },
+    {
+      hid: 'og:url',
+      property: 'og:url',
+      content: 'https://formester.com/features/multi-language-form-translations/',
+    },
+    {
+      hid: 'og:title',
+      property: 'og:title',
+      content: 'Create Multi-Language Online Forms | Formester',
+    },
+    {
+      hid: 'og:description',
+      property: 'og:description',
+      content:
+        'Translate one form into multiple languages and let respondents choose their own. Reach a global audience with multi-language form translations — no duplicate forms to maintain.',
+    },
+    {
+      hid: 'og:image',
+      property: 'og:image',
+      content:
+        'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_s_multilingual_forms_feature_page_hero_image_099a56518d.png',
+    },
+    {
+      hid: 'og:image:alt',
+      name: 'og:image:alt',
+      content: 'Create Multi-Language Online Forms | Formester',
+    },
+    {
+      hid: 'twitter:url',
+      name: 'twitter:url',
+      content: 'https://formester.com/features/multi-language-form-translations/',
+    },
+    {
+      name: 'twitter:site',
+      content: '@_formester_',
+    },
+    {
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: 'Create Multi-Language Online Forms | Formester',
+    },
+    {
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content:
+        'Translate one form into multiple languages and let respondents choose their own. Reach a global audience with multi-language form translations — no duplicate forms to maintain.',
+    },
+    {
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content:
+        'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_s_multilingual_forms_feature_page_hero_image_099a56518d.png',
+    },
+    {
+      hid: 'twitter:image:alt',
+      name: 'twitter:image:alt',
+      content: 'Create Multi-Language Online Forms | Formester',
+    },
+    {
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image',
+    },
+    {
+      hid: 'apple-mobile-web-app-title',
+      name: 'apple-mobile-web-app-title',
+      content: 'Formester',
+    },
+    {
+      hid: 'image',
+      name: 'image',
+      property: 'og:image',
+      content:
+        'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_s_multilingual_forms_feature_page_hero_image_099a56518d.png',
+    },
+    {
+      hid: 'keywords',
+      name: 'keywords',
+      content: ['form translations'],
+    },
+  ],
+})
+useJsonld([
+  {
+    '@context': 'https://schema.org',
+    url: 'https://formester.com',
+    logo: 'https://formester.com/logo.svg',
+    name: 'Formester',
+    '@type': 'Organization',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        name: 'What is a multi-language form?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: "It's a single form translated into more than one language. You build the form once, add translations, and each respondent answers in the language they choose.",
+          '@type': 'Answer',
+        },
+      },
+      {
+        name: 'How do respondents choose their language?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'The form shows a language switcher. Respondents select their preferred language and the labels, questions, and buttons update instantly — without leaving the form.',
+          '@type': 'Answer',
+        },
+      },
+      {
+        name: 'Do I have to build a separate form for each language?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: "No. You keep one form and add each language as a translation, so there's only one form to maintain and one place to review responses.",
+          '@type': 'Answer',
+        },
+      },
+      {
+        name: 'Where do the responses go?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'All responses flow into one combined table regardless of the language a respondent used, so you can review and export everything together.',
+          '@type': 'Answer',
+        },
+      },
+      {
+        name: 'Which languages are supported?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'You can add translations for the languages your audience speaks and edit every label and question yourself, so the wording reads naturally in each one.',
+          '@type': 'Answer',
+        },
+      },
+      {
+        name: 'Which plan includes multi-language forms?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'Multi-language form translations are available on the Business plan and up. Check the pricing page for details.',
+          '@type': 'Answer',
+        },
+      },
+    ],
+  },
+])
+</script>

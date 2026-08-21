@@ -6,9 +6,17 @@
     <div v-else-if="error || !template" class="flex items-center justify-center min-h-screen">
       <p class="text-red-500">{{ error?.message || 'Template not found.' }}</p>
     </div>
-    <V2TemplateDetail v-else :template="template" :pdf-data="null" :categories="{}" :showcase-tabs="[]"
-      :has-custom-showcase="false" :more-templates-title="[]" more-templates-description=""
-      :show-more-templates="false" />
+    <V2TemplateDetail
+      v-else
+      :template="template"
+      :pdf-data="null"
+      :categories="{}"
+      :showcase-tabs="[]"
+      :has-custom-showcase="false"
+      :more-templates-title="[]"
+      more-templates-description=""
+      :show-more-templates="false"
+    />
   </div>
 </template>
 
@@ -29,7 +37,11 @@ if (process.client && !slug) {
   throw createError({ statusCode: 400, statusMessage: 'Missing slug query parameter', fatal: true })
 }
 
-const { data: template, pending, error } = await useAsyncData(
+const {
+  data: template,
+  pending,
+  error,
+} = await useAsyncData(
   `template-preview-${slug}`,
   async () => {
     const res = await $fetch(`${config.public.appUrl}/templates/${slug}.json`, {
@@ -37,6 +49,6 @@ const { data: template, pending, error } = await useAsyncData(
     })
     return adaptTemplateToV2(res)
   },
-  { server: false }
+  { server: false },
 )
 </script>

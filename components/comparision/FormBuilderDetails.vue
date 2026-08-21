@@ -47,16 +47,14 @@ export default {
         }))
       }
 
-      // Extracting features and filtering out null form_builder_feature
+      // Extracting features and filtering out ones with no matched feature
       const features = Object.values(selectedPlan.features).filter(
-        (feature) =>
-          feature.form_builder_feature && feature.form_builder_feature.data
+        (feature) => feature.feature
       )
 
       // Creating a map for quick lookup
       const featureMap = features.reduce((map, feature) => {
-        const title = feature.form_builder_feature.data.attributes.title
-        map[title] = feature.value
+        map[feature.feature.title] = feature.value
         return map
       }, {})
 

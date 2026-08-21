@@ -1,7 +1,5 @@
 <template>
-  <div v-if="pending" style="padding: 4rem; text-align: center; color: #666">
-    Loading draft&hellip;
-  </div>
+  <div v-if="pending" style="padding: 4rem; text-align: center; color: #666">Loading draft&hellip;</div>
   <div v-else-if="fetchError" style="padding: 4rem; text-align: center; color: #c0392b">
     {{ fetchError.message || 'Failed to load draft' }}
   </div>
@@ -9,9 +7,7 @@
   <div v-else-if="previewData?.type === 'blog' && blogData" class="blog-preview-container">
     <BlogPostView :blog-data="blogPostViewData" />
   </div>
-  <div v-else style="padding: 4rem; text-align: center; color: #666">
-    No components found for this draft.
-  </div>
+  <div v-else style="padding: 4rem; text-align: center; color: #666">No components found for this draft.</div>
 </template>
 
 <script setup>
@@ -27,12 +23,16 @@ if (process.client && (!token || !type)) {
   throw createError({ statusCode: 400, statusMessage: 'Missing preview token or type', fatal: true })
 }
 
-const { data: previewData, pending, error: fetchError } = await useAsyncData(
+const {
+  data: previewData,
+  pending,
+  error: fetchError,
+} = await useAsyncData(
   `preview-${token}`,
   async () => {
     const { data } = await axios.get(
       `${config.public.strapiUrl}/api/preview-entry?token=${encodeURIComponent(token)}&type=${encodeURIComponent(type)}`,
-      { timeout: 15000 }
+      { timeout: 15000 },
     )
 
     if (!data?.type || !data?.data) {
@@ -53,7 +53,8 @@ const { data: previewData, pending, error: fetchError } = await useAsyncData(
       return {
         type: 'blog',
         components: [],
-        title: item.metaTitle || item.attributes?.metaTitle || item.title || item.attributes?.title || 'Draft Blog Preview',
+        title:
+          item.metaTitle || item.attributes?.metaTitle || item.title || item.attributes?.title || 'Draft Blog Preview',
         blogData: {
           title: item.title || item.attributes?.title,
           body: item.body || item.attributes?.body || '',
@@ -76,7 +77,7 @@ const { data: previewData, pending, error: fetchError } = await useAsyncData(
 
     throw new Error(`Unknown entry type: "${data.type}"`)
   },
-  { server: false }
+  { server: false },
 )
 
 const components = computed(() => previewData.value?.components || [])
