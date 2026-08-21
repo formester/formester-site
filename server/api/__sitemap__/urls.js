@@ -1,4 +1,4 @@
-import getRoutes, { getFeatureRoutes, getPageRoutes, getTemplateRoutes } from '~/utils/getRoutes.js'
+import getRoutes, { getPageRoutes, getTemplateRoutes } from '~/utils/getRoutes.js'
 
 // Cache for sitemap data
 let sitemapCache = null
@@ -12,7 +12,6 @@ export default defineEventHandler(async () => {
 
     // Get other routes (includes blog articles and pagination)
     const blogs = await getRoutes()
-    const features = await getFeatureRoutes()
     const pages = await getPageRoutes()
     const templates = await getTemplateRoutes()
 
@@ -23,7 +22,6 @@ export default defineEventHandler(async () => {
     // Combine all routes
     const result = [
       ...filteredPages.map(item => ({ loc: item.url, lastmod: item.lastmod })),
-      ...features.map(item => ({ loc: item.url, lastmod: item.lastmod })),
       ...blogs.map(item => ({ loc: item.url, lastmod: item.lastmod })),
       ...templates.map(item => ({ loc: item.url, lastmod: item.lastmod }))
     ]

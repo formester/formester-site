@@ -1,4 +1,5 @@
-import { STRAPI_URL, APP_URL } from '../constants/urls.js'
+import { APP_URL } from '../constants/urls.js'
+import { pdfTemplates } from '../constants/pdf-templates.js'
 import fetchWithRetry from './fetchWithRetry.js'
 import { adaptTemplateToV2 } from './adaptTemplateToV2.js'
 
@@ -23,14 +24,6 @@ async function _fetchTemplatesAndCategories(options = {}) {
   const dummyDescription =
     'Check out this pre-designed template and start customising with just a single click. Personalise with your branding, incorporate electronic signatures for security and add multiple collaborators to make changes simultaneously. Use this template and start getting data driven actionable insights with robust analytics.'
 
-  const {
-    data: { data },
-  } = await fetchWithRetry(`${STRAPI_URL}/api/pdf-templates`, {
-    params: {
-      populate: 'deep',
-    },
-  })
-
   templates = templates.map((template) =>
     adaptTemplateToV2({
       ...template,
@@ -47,7 +40,7 @@ async function _fetchTemplatesAndCategories(options = {}) {
   })
 
   const templateRoutes = templates.map((template) => {
-    const pdfTemplate = data.find((pdfTemplate) => pdfTemplate.slug === template.slug)
+    const pdfTemplate = pdfTemplates.find((pt) => pt.slug === template.slug)
     return {
       route: `/templates/${template.slug}`,
       payload: { template, categories, data: pdfTemplate },
