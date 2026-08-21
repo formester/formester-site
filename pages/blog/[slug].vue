@@ -80,7 +80,7 @@ const { data: blogResponse } = await useAsyncData(`blog-${route.params.slug}`, a
       throw createError({ statusCode: 404, message: 'Page not found' })
     }
 
-    const cover = blog.attributes.coverImg?.data?.attributes
+    const cover = blog.attributes.coverImg
     const blogData = {
       id: blog.id,
       ...blog.attributes,
@@ -96,7 +96,7 @@ const { data: blogResponse } = await useAsyncData(`blog-${route.params.slug}`, a
     const otherBlogs = allBlogs.filter((item) => item.attributes.slug !== route.params.slug)
     const shuffled = [...otherBlogs].sort(() => Math.random() - 0.5)
     const relatedArticles = shuffled.slice(0, 4).map((item) => {
-      const c = item.attributes.coverImg?.data?.attributes
+      const c = item.attributes.coverImg
       return {
         ...item.attributes,
         id: item.id,

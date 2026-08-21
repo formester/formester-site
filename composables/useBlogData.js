@@ -10,7 +10,7 @@ export const useBlogData = async () => {
       const data = await getAllBlogs()
 
       let articles = data.map((item) => {
-        const cover = item.attributes.coverImg?.data?.attributes
+        const cover = item.attributes.coverImg
         return {
           id: item.id,
           ...item.attributes,
