@@ -11,7 +11,7 @@
     "build": "nuxt build",
     "start": "nuxt preview",
     "generate": "nuxt generate",
-    "generate:dev": "PRERENDER_CONCURRENCY=8 NODE_OPTIONS=\"--max-old-space-size=4096\" nuxt generate",
+    "generate:dev": "PRERENDER_CONCURRENCY=4 NODE_OPTIONS=\"--max-old-space-size=4096\" nuxt generate",
     "serve": "npx serve .output/public",
     "postinstall": "nuxt prepare",
     "format:pages": "prettier --write \"pages/**/*.vue\""

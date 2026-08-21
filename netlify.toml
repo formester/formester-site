@@ -1,7 +1,8 @@
 [build]
-  command = "npm run generate:dev"
+  command = "npm run build"
   publish = ".output/public"
 
 [build.environment]
   NODE_VERSION = "20"
-  NODE_OPTIONS = "--max-old-space-size=4096"
+  NODE_OPTIONS = "--max-old-space-size=6144"
+  PRERENDER_CONCURRENCY = "6"
