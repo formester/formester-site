@@ -107,3 +107,4 @@ stories
 .stories
 public/design-files
 .playwright-mcp
+.vercel

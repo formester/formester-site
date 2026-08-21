@@ -2,6 +2,10 @@
 import getBlogRoutes, { getFeatureRoutes, getPageRoutes, getTemplateRoutes } from './utils/getRoutes.js'
 import { STRAPI_URL, APP_URL } from './constants/urls'
 
+// Vercel sets DEPLOY_ENV to 'production' only for the prod deployment/domain;
+// preview/test deploys (plain `vercel`, no --prod) get 'preview' or 'development'.
+const isProductionDeploy = process.env?.DEPLOY_ENV !== 'DEVELOPMENT'
+
 export default defineNuxtConfig({
   // Global page headers
   app: {
@@ -15,7 +19,7 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           name: 'robots',
-          content: 'index, follow',
+          content: isProductionDeploy ? 'index, follow' : 'noindex, nofollow',
         },
         { name: 'format-detection', content: 'telephone=no' },
       ],
@@ -40,11 +44,16 @@ export default defineNuxtConfig({
   },
 
   // Robots configuration
-  robots: {
-    UserAgent: '*',
-    Disallow: ['/_nuxt/static/', '/status/', '/api/', '/__TOOLS__/'],
-    Sitemap: 'https://formester.com/sitemap.xml'
-  },
+  robots: isProductionDeploy
+    ? {
+        UserAgent: '*',
+        Disallow: ['/_nuxt/static/', '/status/', '/api/'],
+        Sitemap: 'https://formester.com/sitemap.xml'
+      }
+    : {
+        UserAgent: '*',
+        Disallow: ['/']
+      },
 
   site: {
     url: 'https://formester.com/',
@@ -56,7 +65,7 @@ export default defineNuxtConfig({
     sources: [
       '/api/__sitemap__/urls'
     ],
-    exclude: ['/status/**', '/design-preview', '/__TOOLS__/**']
+    exclude: ['/status/**', '/design-preview']
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -117,7 +126,7 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: ['/', '/sitemap.xml'],
-      ignore: ['/api', '/comparison-tool', '/__TOOLS__'],
+      ignore: ['/api', '/comparison-tool'],
       // Lower via PRERENDER_CONCURRENCY on memory-constrained machines —
       // e.g. a 6.7GB-RAM local dev box OOM'd at the default 16 with
       // --max-old-space-size=4096 (needed for the full blog+templates

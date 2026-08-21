@@ -11,16 +11,12 @@
     "build": "nuxt build",
     "start": "nuxt preview",
     "generate": "nuxt generate",
-    "generate:dev": "PRERENDER_CONCURRENCY=4 NODE_OPTIONS=\"--max-old-space-size=4096\" nuxt generate",
+    "generate:dev": "PRERENDER_CONCURRENCY=8 NODE_OPTIONS=\"--max-old-space-size=4096\" nuxt generate",
     "serve": "npx serve .output/public",
     "postinstall": "nuxt prepare",
-    "format:pages": "prettier --write \"pages/**/*.vue\"",
-    "minio:up": "docker compose -f docker-compose.minio.yml up -d",
-    "minio:down": "docker compose -f docker-compose.minio.yml down"
+    "format:pages": "prettier --write \"pages/**/*.vue\""
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.658.1",
-    "@aws-sdk/s3-request-presigner": "^3.658.1",
     "@builder.io/partytown": "^0.10.3",
     "@kyvg/vue3-notification": "^3.4.2",
     "@lucide/vue": "^1.23.0",
