@@ -294,15 +294,57 @@ async function migrateRecommendedTemplates() {
   console.log(`[migrate] wrote ${count} recommended-template entries`)
 }
 
+const TASKS = {
+  pages: { fn: migratePagesAndHome, desc: 'pages + home' },
+  features: { fn: migrateFeatures, desc: 'features' },
+  blogs: { fn: migrateBlog, desc: 'blog posts' },
+  'form-builders': { fn: migrateFormBuilders, desc: 'form builders (comparison tool)' },
+  'form-builder-features': { fn: migrateFormBuilderFeatures, desc: 'form builder features (comparison tool)' },
+  'platform-testimonials': { fn: migratePlatformTestimonials, desc: 'platform testimonials' },
+  'pdf-templates': { fn: migratePdfTemplates, desc: 'pdf templates' },
+  'recommended-templates': { fn: migrateRecommendedTemplates, desc: 'recommended templates' },
+}
+
+function printHelp() {
+  console.log(`Usage: node scripts/migrate-from-strapi.mjs [--<task> ...] [--help]
+
+Pulls published content from the live Strapi API and writes it into content/
+as Nuxt Content files. With no flags, runs every task below. Pass one or more
+--<task> flags to run only those tasks.
+
+Tasks:
+${Object.entries(TASKS)
+  .map(([name, { desc }]) => `  --${name.padEnd(24)} ${desc}`)
+  .join('\n')}
+
+Options:
+  -h, --help                 Show this help and exit
+`)
+}
+
+function parseArgs(argv) {
+  const requested = []
+  for (const arg of argv) {
+    if (arg === '-h' || arg === '--help') return { help: true }
+    const match = /^--(.+)$/.exec(arg)
+    const name = match?.[1]
+    if (!name || !TASKS[name]) {
+      throw new Error(`Unknown flag: ${arg}\nRun with --help to see available tasks.`)
+    }
+    requested.push(name)
+  }
+  return { help: false, tasks: requested.length ? requested : Object.keys(TASKS) }
+}
+
 async function main() {
-  await migratePagesAndHome()
-  await migrateFeatures()
-  await migrateBlog()
-  await migrateFormBuilders()
-  await migrateFormBuilderFeatures()
-  await migratePlatformTestimonials()
-  await migratePdfTemplates()
-  await migrateRecommendedTemplates()
+  const { help, tasks } = parseArgs(process.argv.slice(2))
+  if (help) {
+    printHelp()
+    return
+  }
+  for (const name of tasks) {
+    await TASKS[name].fn()
+  }
 }
 
 main().catch((err) => {
