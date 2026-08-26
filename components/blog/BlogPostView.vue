@@ -875,6 +875,12 @@ a.art-author__name:hover {
   color: #fff;
 }
 
+/* Brand variant, for the one CTA on a page that should carry weight */
+.nuxt-content .cta--brand {
+  background: var(--violet-25);
+  border-color: var(--border-violet);
+}
+
 /* Auto-numbered steps */
 .nuxt-content ol.steps {
   list-style: none;
