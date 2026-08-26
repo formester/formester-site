@@ -1,0 +1,627 @@
+<template>
+  <div>
+    <HeroV2
+      description="Collect payments for products, services, donations, and event registrations through PayPal's trusted checkout — without leaving the form."
+      trustText="✓ PayPal business checkout · ✓ Dynamic totals · ✓ Multiple currencies"
+      blobColorA="#f5eeff"
+      blobColorB="#f1ebff"
+      blobColorC="#f4efff"
+      :mockupHtml="c0_mockupHtml"
+      layout="split"
+      :title="c0_title"
+      :buttons="c0_buttons"
+      :badge="c0_badge"
+      :tabCardContent="c0_tabCardContent"
+      class="page-component-item"
+    />
+
+    <TrustSeals
+      label="Trusted by 56k+ teams worldwide"
+      :showTrustBadges="false"
+      :title="c1_title"
+      :logos="c1_logos"
+      class="page-component-item"
+    />
+
+    <CardGrid
+      eyebrow="Why connect them"
+      description="Millions of buyers already have PayPal — let them pay the way they prefer."
+      columns="2"
+      :title="c2_title"
+      :cards="c2_cards"
+      class="page-component-item"
+    />
+
+    <StickyStepsSection
+      badge="How it works"
+      heading="Set up PayPal in 3 steps"
+      description="Add the integration, log in, add the element, and start accepting payments."
+      background="#f9fafb"
+      :steps="c3_steps"
+      :buttons="c3_buttons"
+      class="page-component-item"
+    />
+
+    <TestimonialsV2
+      version="feature"
+      :heading="c4_heading"
+      :testimonials="c4_testimonials"
+      class="page-component-item"
+    />
+
+    <IntegrationsGrid title="Explore more integrations" :integrations="c5_integrations" class="page-component-item" />
+
+    <FaqSection centered :title="c6_title" :faqList="c6_faqList" class="page-component-item" />
+
+    <CtaDark
+      badge="Free to start"
+      heading="Start accepting PayPal in your forms"
+      description="Connect once and any form becomes a payment page."
+      :buttons="c7_buttons"
+      class="page-component-item"
+    />
+  </div>
+</template>
+
+<script setup>
+import CardGrid from '@/components/v2/CardGrid.vue'
+import CtaDark from '@/components/v2/CtaDark.vue'
+import FaqSection from '@/components/v2/FaqSection.vue'
+import HeroV2 from '@/components/v2/HeroV2.vue'
+import IntegrationsGrid from '@/components/integrations/IntegrationsGrid.vue'
+import StickyStepsSection from '@/components/v2/StickyStepsSection.vue'
+import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
+import TrustSeals from '@/components/v2/TrustSeals.vue'
+
+const c0_mockupHtml =
+  "<div class='raw-html-embed'>\u003Cstyle>.iw{font-family:'Inter',ui-sans-serif,system-ui,sans-serif;position:relative;max-width:480px;margin:0 auto;padding-top:10px;} .iw *{box-sizing:border-box;} .iw__pair{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:18px;} .iw__logo{width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #eaecf0;box-shadow:0 2px 8px rgba(15,14,26,.06);flex-shrink:0;} .iw__logo img{width:30px;height:30px;object-fit:contain;} .iw__flow{display:flex;align-items:center;gap:5px;} .iw__dot{width:6px;height:6px;border-radius:50%;background:#9777e0;opacity:.35;animation:iwd 1.6s linear infinite;} .iw__dot:nth-child(2){animation-delay:.2s}.iw__dot:nth-child(3){animation-delay:.4s} @keyframes iwd{0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}} .iw__win{background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 18px 50px rgba(15,14,26,.12);overflow:hidden;} .iw__bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#f9fafb;border-bottom:1px solid #eaecf0;} .iw__cdot{width:10px;height:10px;border-radius:50%;flex-shrink:0;} .iw__title{font-size:11px;color:#697586;margin-left:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;} @keyframes iwnew{0%,10%{opacity:0;transform:translateY(-6px)}18%,88%{opacity:1;transform:translateY(0)}97%,100%{opacity:0}} @media(max-width:600px){.iw__toast{right:-4px !important;bottom:-30px !important;}} .iw__toast{position:absolute;bottom:-28px;right:-36px;display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #eaecf0;border-radius:12px;box-shadow:0 8px 24px rgba(15,14,26,.14);padding:9px 13px;font-size:12px;font-weight:600;color:#101828;animation:iwnew 5s ease-in-out infinite;} .iw__toast small{display:block;font-size:10px;font-weight:500;color:#697586;} .iw__tick{width:22px;height:22px;border-radius:7px;background:#11c15b;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;} .iw__anim{animation:iwnew 5s ease-in-out infinite;}\u003C/style><div class='iw'><div class='iw__pair'><span class='iw__logo'><img src='/formester-icon.svg' alt='Formester'/></span><span class='iw__flow'><span class='iw__dot'></span><span class='iw__dot'></span><span class='iw__dot'></span></span><span class='iw__logo'><img src='/integrations/paypal.svg' alt=''/></span></div><div class='iw__win'><div class='iw__bar'><span class='iw__cdot' style='background:#ff6058'></span><span class='iw__cdot' style='background:#ffbd2e'></span><span class='iw__cdot' style='background:#27c93f'></span><span class='iw__title'>Checkout · PayPal</span></div><div style='padding:14px;text-align:center;'><div class='iw__anim' style='display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:#ecfdf3;margin-bottom:8px;'><svg width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='#11c15b' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'><path d='M5 12l4 4L19 6'/></svg></div><div style='font-size:13px;font-weight:700;color:#101828;'>Payment successful</div><div style='font-size:20px;font-weight:700;color:#101828;margin:4px 0 8px;'>$49.00</div><div style='border-top:1px solid #f2f4f7;'><div style='display:flex;justify-content:space-between;gap:10px;padding:8px 14px;border-bottom:1px solid #f2f4f7;font-size:11px;'><span style='color:#697586;'>Item</span><span style='color:#101828;font-weight:500;text-align:right;'>VIP Ticket × 1</span></div><div style='display:flex;justify-content:space-between;gap:10px;padding:8px 14px;border-bottom:1px solid #f2f4f7;font-size:11px;'><span style='color:#697586;'>Method</span><span style='color:#101828;font-weight:500;text-align:right;'>PayPal · jonas@verge.dev</span></div></div></div></div><div class='iw__toast'><span class='iw__tick'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'><path d='M5 12l4 4L19 6'/></svg></span><span>Payment received<small>just now · $49.00</small></span></div></div></div>"
+const c0_title = [
+  {
+    id: 5221,
+    text: 'Accept ',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+  {
+    id: 5223,
+    text: 'PayPal',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
+  {
+    id: 5222,
+    text: ' payments right in your forms',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c0_buttons = [
+  {
+    id: 1826,
+    link: 'https://help.formester.com/en/article/paypal-1we03oc/',
+    text: 'Read the setup guide',
+    type: 'Primary',
+    showArrow: true,
+  },
+  {
+    id: 1827,
+    link: 'https://app.formester.com/users/sign_up',
+    text: 'Start free',
+    type: 'Secondary',
+    showArrow: false,
+  },
+]
+const c0_badge = {
+  id: 176,
+  text: 'PayPal',
+  tag: 'Integrations',
+  link: '/integrations/',
+}
+const c0_tabCardContent = []
+const c1_title = []
+const c1_logos = []
+const c2_title = [
+  {
+    id: 5219,
+    text: 'The checkout ',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+  {
+    id: 5218,
+    text: 'everyone already trusts',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c2_cards = [
+  {
+    id: 899,
+    tag: 'Conversion',
+    tagColor: 'violet',
+    title: 'Familiar checkout',
+    body: 'Buyers pay with the PayPal account they already have — fewer abandoned payments.',
+    mockHtml: null,
+    icon: null,
+  },
+  {
+    id: 901,
+    tag: 'Flexibility',
+    tagColor: 'blue',
+    title: 'Dynamic totals',
+    body: 'Link the amount to calculation fields so totals update with quantities and options.',
+    mockHtml: null,
+    icon: null,
+  },
+  {
+    id: 900,
+    tag: 'Currencies',
+    tagColor: 'green',
+    title: 'USD, EUR, GBP and more',
+    body: 'Choose the currency per payment field and customize the button text.',
+    mockHtml: null,
+    icon: null,
+  },
+  {
+    id: 902,
+    tag: 'Use cases',
+    tagColor: 'amber',
+    title: 'Sell almost anything',
+    body: 'Order forms, donations, event registrations, service bookings — one integration covers them all.',
+    mockHtml: null,
+    icon: null,
+  },
+]
+const c3_steps = [
+  {
+    id: 330,
+    title: 'Add PayPal from the Payment tab',
+    description: 'From your dashboard, open Integrations → Payment, find PayPal, and click Add integration.',
+    rawHtml:
+      "<div class='raw-html-embed'><div style='font-family:Inter,ui-sans-serif,system-ui,sans-serif;max-width:320px;'><div style='display:flex;gap:14px;font-size:10px;color:#697586;padding:0 4px 7px;'><span>Email</span><span style='color:#6434d0;font-weight:700;border-bottom:2px solid #6434d0;padding-bottom:5px;'>Payment</span><span>CRM</span></div><div style='border:1px solid #eaecf0;border-radius:10px;background:#fff;box-shadow:0 4px 14px rgba(15,14,26,.06);overflow:hidden;'><div style='display:flex;align-items:center;gap:8px;padding:11px 13px 4px;'><img src='/integrations/paypal.svg' alt='' style='width:20px;height:20px;object-fit:contain;'/><span style='font-size:12.5px;font-weight:700;color:#101828;'>Paypal</span></div><div style='padding:0 13px 10px;font-size:10.5px;color:#697586;line-height:1.45;'>Accept payments globally with PayPal's fast and trusted checkout experience.</div><div style='display:flex;justify-content:flex-end;border-top:1px solid #f2f4f7;padding:9px 13px;font-size:10.5px;'><span style='color:#6434d0;font-weight:700;'>+ Add integration</span></div></div></div></div>",
+    image: null,
+  },
+  {
+    id: 331,
+    title: 'Connect by logging in',
+    description: 'Log in with your PayPal business account to link it to Formester.',
+    rawHtml:
+      "<div class='raw-html-embed'><div style='font-family:Inter,ui-sans-serif,system-ui,sans-serif;max-width:320px;'><div style='border:1px solid #eaecf0;border-radius:10px;background:#fff;box-shadow:0 4px 14px rgba(15,14,26,.06);padding:12px 14px;'><div style='display:flex;align-items:center;gap:8px;'><img src='/integrations/paypal.svg' alt='' style='width:20px;height:20px;object-fit:contain;'/><span style='font-size:12.5px;font-weight:700;color:#101828;'>Paypal</span><span style='margin-left:auto;font-size:9.5px;font-weight:700;color:#11c15b;border:1px solid #a6f4c5;border-radius:999px;padding:3px 10px;line-height:1;'>Success</span></div><div style='font-size:10px;color:#697586;margin-top:8px;'>Account Email: <b style='color:#101828;'>you@yourcompany.com</b></div></div></div></div>",
+    image: null,
+  },
+  {
+    id: 329,
+    title: 'Add the PayPal element, publish, and test',
+    description:
+      "Create a calculation field for the total, add the PayPal element referencing it with @, pick your currency, then test in PayPal's sandbox mode before going live.",
+    rawHtml:
+      "<div class='raw-html-embed'><div style='font-family:Inter,ui-sans-serif,system-ui,sans-serif;max-width:320px;'><div style='border:1px solid #eaecf0;border-radius:10px;background:#fff;box-shadow:0 4px 14px rgba(15,14,26,.06);padding:13px;'><div style='font-size:11px;font-weight:700;color:#101828;'>PayPal payment field</div><div style='font-size:10.5px;font-weight:700;color:#101828;margin:8px 0 4px;'>Amount</div><div style='border:1px solid #eaecf0;border-radius:8px;padding:8px 11px;font-size:10px;color:#98a2b3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;'>@order_total</div><div style='font-size:10.5px;font-weight:700;color:#101828;margin:8px 0 4px;'>Currency</div><div style='border:1px solid #eaecf0;border-radius:8px;padding:8px 11px;font-size:10.5px;color:#101828;display:flex;justify-content:space-between;align-items:center;'>USD<span style='font-size:8px;color:#697586;'>&#9662;</span></div><div style='display:flex;justify-content:space-between;align-items:center;font-size:10.5px;color:#101828;margin:7px 0;'>Required field<span style='width:26px;height:15px;border-radius:999px;background:#6434d0;position:relative;display:inline-block;'><span style='position:absolute;top:2px;right:2px;width:11px;height:11px;border-radius:50%;background:#fff;'></span></span></div><div style='margin-top:11px;'><span style='font-size:10.5px;font-weight:700;color:#fff;background:#6434d0;border-radius:7px;padding:7px 16px;line-height:1;'>Save</span></div></div></div></div>",
+    image: null,
+  },
+]
+const c3_buttons = []
+const c4_heading = []
+const c4_testimonials = [
+  {
+    id: 4,
+    name: 'Costanza Casullo',
+    position: 'Volunteer',
+    organization: 'Wato Coding Hub',
+    comment:
+      "Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.",
+    createdAt: '2024-06-18T03:51:15.232Z',
+    updatedAt: '2025-01-22T02:58:03.674Z',
+    publishedAt: '2024-06-18T03:51:21.477Z',
+    companyLogo: {
+      id: 225,
+      imageAlt: 'wato-coding-hub-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1681,
+        name: 'wato-coding-hub.webp',
+        alternativeText: 'wato-coding-hub-logo',
+        caption: 'wato-coding-hub-logo',
+        width: 80,
+        height: 81,
+        formats: null,
+        hash: 'wato_coding_hub_e054f0ea9d',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.88,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/wato_coding_hub_e054f0ea9d.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.738Z',
+        updatedAt: '2024-12-01T07:49:13.371Z',
+      },
+    },
+  },
+  {
+    id: 5,
+    name: 'Deanna Bugalski',
+    position: 'Founder/CEO',
+    organization: 'Suggesterfy',
+    comment:
+      'I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formester was super easy to set up, and the usability is seamless! I highly recommend!',
+    createdAt: '2024-06-18T03:52:39.354Z',
+    updatedAt: '2025-01-22T02:57:47.756Z',
+    publishedAt: '2024-06-18T03:52:43.800Z',
+    companyLogo: {
+      id: 226,
+      imageAlt: 'suggesterfy-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1683,
+        name: 'suggesterfy_logo.webp',
+        alternativeText: 'suggesterfy-logo',
+        caption: 'suggesterfy-logo',
+        width: 100,
+        height: 50,
+        formats: null,
+        hash: 'suggesterfy_logo_d1d7f996b9',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.91,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/suggesterfy_logo_d1d7f996b9.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.921Z',
+        updatedAt: '2024-12-01T07:49:52.459Z',
+      },
+    },
+  },
+  {
+    id: 1,
+    name: 'Dr. Michele Ross',
+    position: 'Founder',
+    organization: 'Infused Health',
+    comment:
+      "I'm migrating my forms from Paperform, where I've been a user for over 4 years. Loving the software so far! I've already replaced Paperform form embeds & popups on my sites & my husband's websites with Formester forms",
+    createdAt: '2024-06-18T03:47:14.605Z',
+    updatedAt: '2025-01-22T02:57:30.159Z',
+    publishedAt: '2024-06-18T03:47:18.889Z',
+    companyLogo: {
+      id: 227,
+      imageAlt: 'Dr. Michele Ross',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1685,
+        name: 'dr._michelelogo.webp',
+        alternativeText: null,
+        caption: null,
+        width: 300,
+        height: 59,
+        formats: {
+          thumbnail: {
+            ext: '.webp',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_dr_michelelogo_2269ae2211.webp',
+            hash: 'thumbnail_dr_michelelogo_2269ae2211',
+            mime: 'image/webp',
+            name: 'thumbnail_dr._michelelogo.webp',
+            path: null,
+            size: 5.58,
+            width: 245,
+            height: 48,
+          },
+        },
+        hash: 'dr_michelelogo_2269ae2211',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 5.87,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/dr_michelelogo_2269ae2211.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.944Z',
+        updatedAt: '2024-08-01T14:38:23.944Z',
+      },
+    },
+  },
+  {
+    id: 2,
+    name: 'Jilson',
+    position: 'Organiser',
+    organization: 'Vue Conference',
+    comment:
+      'Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.',
+    createdAt: '2024-06-18T03:48:46.610Z',
+    updatedAt: '2025-01-22T02:57:08.760Z',
+    publishedAt: '2024-06-18T03:48:50.595Z',
+    companyLogo: {
+      id: 228,
+      imageAlt: 'photo-of-vue-conference',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1680,
+        name: 'vueconf.webp',
+        alternativeText: 'photo-of-vue-conference',
+        caption: 'photo-of-vue-conference',
+        width: 80,
+        height: 80,
+        formats: null,
+        hash: 'vueconf_1bc3dc0827',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.07,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.731Z',
+        updatedAt: '2024-12-01T07:47:11.024Z',
+      },
+    },
+  },
+  {
+    id: 6,
+    name: 'Thibaud Martinez',
+    position: 'Organiser',
+    organization: 'Tedx',
+    comment: 'I really enjoy Formester. It’s clean and straight-forward and it does well, what it is supposed to do.',
+    createdAt: '2024-06-18T03:53:38.957Z',
+    updatedAt: '2025-01-22T02:56:48.567Z',
+    publishedAt: '2024-06-18T03:53:40.693Z',
+    companyLogo: {
+      id: 229,
+      imageAlt: 'tedx-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1684,
+        name: 'tedx.webp',
+        alternativeText: 'tedx-logo',
+        caption: 'tedx-logo',
+        width: 109,
+        height: 38,
+        formats: null,
+        hash: 'tedx_2fce0eee2e',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.09,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/tedx_2fce0eee2e.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.941Z',
+        updatedAt: '2024-12-01T07:50:31.505Z',
+      },
+    },
+  },
+]
+const c5_integrations = [
+  {
+    id: 278,
+    name: 'Stripe',
+    description: 'Collect secure Stripe payments directly inside your forms.',
+    link: '/integrations/stripe/',
+  },
+  {
+    id: 276,
+    name: 'Authorize.net',
+    description: "Accept card payments via Authorize.net's hosted checkout.",
+    link: '/integrations/authorize-net/',
+  },
+  {
+    id: 277,
+    name: 'Google Sheets',
+    description: 'Sync every form submission to Google Sheets in real time.',
+    link: '/integrations/google-sheets/',
+  },
+  {
+    id: 279,
+    name: 'Zapier',
+    description: 'Connect your forms to 8,000+ apps using Zapier.',
+    link: '/integrations/zapier/',
+  },
+  {
+    id: 280,
+    name: 'Slack',
+    description: 'Get instant Slack alerts when a new form is submitted.',
+    link: '/integrations/slack/',
+  },
+  {
+    id: 281,
+    name: 'HubSpot CRM',
+    description: 'Push new form leads to HubSpot CRM instantly.',
+    link: '/integrations/hubspot-crm/',
+  },
+]
+const c6_title = [
+  {
+    id: 5220,
+    text: 'PayPal integration FAQs',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c6_faqList = [
+  {
+    id: 2793,
+    header: 'What does the PayPal integration do?',
+    body: "It adds PayPal checkout to your forms so you can collect payments for products, services, donations, and event registrations through PayPal's secure gateway.",
+    body_markdown: '',
+    list: [],
+  },
+  {
+    id: 2794,
+    header: 'What do I need to connect PayPal?',
+    body: 'Just a PayPal business account — add the integration from Integrations → Payment and log in to connect it.',
+    body_markdown: '',
+    list: [],
+  },
+  {
+    id: 2795,
+    header: 'Can the amount change based on answers?',
+    body: 'Yes — reference a calculation field with the @ symbol in the Amount field and the total updates with quantities and options.',
+    body_markdown: '',
+    list: [],
+  },
+  {
+    id: 2796,
+    header: 'How do I test before going live?',
+    body: "Use PayPal's sandbox mode to run test payments with different product combinations before enabling live checkout.",
+    body_markdown: '',
+    list: [],
+  },
+  {
+    id: 2797,
+    header: 'What is Formester?',
+    body: 'Formester is an online form builder for creating forms, surveys, and quizzes with a drag-and-drop editor or AI. It connects with the tools your team already uses — Google Sheets, Slack, HubSpot, Zapier, and more — so your form data flows wherever you need it.',
+    body_markdown: '',
+    list: [],
+  },
+]
+const c7_buttons = [
+  {
+    id: 1824,
+    link: 'https://app.formester.com/users/sign_up',
+    text: 'Start free',
+    type: 'Primary',
+    showArrow: true,
+  },
+  {
+    id: 1825,
+    link: '/pricing/',
+    text: 'See pricing',
+    type: 'White',
+    showArrow: false,
+  },
+]
+
+useHead({
+  title: 'PayPal Payment Forms — PayPal Integration | Formester',
+  link: [
+    {
+      hid: 'canonical',
+      rel: 'canonical',
+      href: 'https://formester.com/integrations/paypal/',
+    },
+  ],
+  meta: [
+    {
+      property: 'article:modified_time',
+      content: '2026-06-14T15:17:04.557Z',
+    },
+    {
+      hid: 'description',
+      name: 'description',
+      content:
+        'Accept PayPal payments directly in your forms — products, donations, registrations. Dynamic totals and multiple currencies, set up in minutes.',
+    },
+    {
+      hid: 'og:site_name',
+      name: 'og:site_name',
+      content: 'PayPal Payment Forms — PayPal Integration | Formester',
+    },
+    {
+      hid: 'og:type',
+      property: 'og:type',
+      content: 'website',
+    },
+    {
+      hid: 'og:url',
+      property: 'og:url',
+      content: 'https://formester.com/integrations/paypal/',
+    },
+    {
+      hid: 'og:title',
+      property: 'og:title',
+      content: 'PayPal Payment Forms — PayPal Integration | Formester',
+    },
+    {
+      hid: 'og:description',
+      property: 'og:description',
+      content:
+        'Accept PayPal payments directly in your forms — products, donations, registrations. Dynamic totals and multiple currencies, set up in minutes.',
+    },
+    {
+      hid: 'og:image',
+      property: 'og:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
+    },
+    {
+      hid: 'og:image:alt',
+      name: 'og:image:alt',
+      content: 'Formester PayPal integration',
+    },
+    {
+      hid: 'twitter:url',
+      name: 'twitter:url',
+      content: 'https://formester.com/integrations/paypal/',
+    },
+    {
+      name: 'twitter:site',
+      content: '@_formester_',
+    },
+    {
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: 'PayPal Payment Forms — PayPal Integration | Formester',
+    },
+    {
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content:
+        'Accept PayPal payments directly in your forms — products, donations, registrations. Dynamic totals and multiple currencies, set up in minutes.',
+    },
+    {
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
+    },
+    {
+      hid: 'twitter:image:alt',
+      name: 'twitter:image:alt',
+      content: 'Formester PayPal integration',
+    },
+    {
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image',
+    },
+    {
+      hid: 'apple-mobile-web-app-title',
+      name: 'apple-mobile-web-app-title',
+      content: 'Formester',
+    },
+    {
+      hid: 'image',
+      name: 'image',
+      property: 'og:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
+    },
+    {
+      hid: 'keywords',
+      name: 'keywords',
+      content: ['paypal form integration', 'payment forms paypal', 'accept paypal payments form', 'formester paypal'],
+    },
+  ],
+})
+useJsonld([
+  {
+    '@context': 'https://schema.org',
+    type: '{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does the PayPal integration do?", "acceptedAnswer": {"@type": "Answer", "text": "It adds PayPal checkout to your forms so you can collect payments for products, services, donations, and event registrations through PayPal\'s secure gateway."}}, {"@type": "Question", "name": "What do I need to connect PayPal?", "acceptedAnswer": {"@type": "Answer", "text": "Just a PayPal business account — add the integration from Integrations → Payment and log in to connect it."}}, {"@type": "Question", "name": "Can the amount change based on answers?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — reference a calculation field with the @ symbol in the Amount field and the total updates with quantities and options."}}, {"@type": "Question", "name": "How do I test before going live?", "acceptedAnswer": {"@type": "Answer", "text": "Use PayPal\'s sandbox mode to run test payments with different product combinations before enabling live checkout."}}, {"@type": "Question", "name": "What is Formester?", "acceptedAnswer": {"@type": "Answer", "text": "Formester is an online form builder for creating forms, surveys, and quizzes with a drag-and-drop editor or AI. It connects with the tools your team already uses — Google Sheets, Slack, HubSpot, Zapier, and more — so your form data flows wherever you need it."}}]}',
+  },
+  {
+    '@context': 'https://schema.org',
+    type: '{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://formester.com/"}, {"@type": "ListItem", "position": 2, "name": "Integrations", "item": "https://formester.com/integrations/"}, {"@type": "ListItem", "position": 3, "name": "PayPal", "item": "https://formester.com/integrations/paypal/"}]}',
+  },
+])
+</script>

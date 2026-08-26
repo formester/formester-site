@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class=" upper-margin text-center px-3">
+    <div class="upper-margin text-center px-3">
       <SectionHeader
         tag="h1"
         size="xl"
@@ -10,37 +10,26 @@
         description="Select the perfect plan for your needs, and start building beautiful forms!"
       />
 
-      <div
-        class="d-none d-sm-flex justify-content-center align-items-center plan_toggle__switch"
-      >
+      <div class="d-none d-sm-flex justify-content-center align-items-center plan_toggle__switch">
         <span>Monthly pricing</span>
         <label class="switch">
           <input type="checkbox" class="plan_toggle" v-model="isYearly" />
           <div class="slider round"></div>
         </label>
-        <span
-          >Annual pricing <span class="text__primary">(save 20%)</span></span
-        >
+        <span>Annual pricing <span class="text__primary">(save 20%)</span></span>
       </div>
 
-      <div
-        class="d-flex d-sm-none justify-content-center align-items-center plan_toggle__switch"
-      >
+      <div class="d-flex d-sm-none justify-content-center align-items-center plan_toggle__switch">
         <label class="switch">
           <input type="checkbox" class="plan_toggle" v-model="isYearly" />
           <div class="slider round"></div>
         </label>
         <span v-if="!isYearly">Monthly pricing</span>
-        <span v-else
-          >Annual pricing <span class="text__primary">(save 20%)</span></span
-        >
+        <span v-else>Annual pricing <span class="text__primary">(save 20%)</span></span>
       </div>
 
       <div class="mw-1200 mx-auto">
-        <div
-          :class="['pricing-cards-container', { 'pricing-hidden': isYearly }]"
-          :v-show="isYearly"
-        >
+        <div :class="['pricing-cards-container', { 'pricing-hidden': isYearly }]" :v-show="isYearly">
           <div class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3">
             <PricingCard :plan="free" muted />
             <PricingCard :plan="personalMonthly" />
@@ -48,10 +37,7 @@
             <PricingCard :plan="enterprise" contact-sales />
           </div>
         </div>
-        <div
-          :class="['pricing-cards-container', { 'pricing-hidden': !isYearly }]"
-          :v-show="!isYearly"
-        >
+        <div :class="['pricing-cards-container', { 'pricing-hidden': !isYearly }]" :v-show="!isYearly">
           <div class="row gx-3 d-flex align-items-start justify-content-center mt-5 pt-3">
             <PricingCard :plan="free" muted />
             <PricingCard :plan="personalYearly" />
@@ -140,8 +126,7 @@ const meta = computed(() => {
     type: 'website',
     url: 'https://formester.com/pricing/',
     title: 'Pricing that feels just right',
-    description:
-      'Select the perfect plan for your needs, and star building beautiful forms!',
+    description: 'Select the perfect plan for your needs, and star building beautiful forms!',
     mainImage: 'https://formester.com/formester-logo-meta-image.png',
     mainImageAlt: 'Formester Logo',
   }

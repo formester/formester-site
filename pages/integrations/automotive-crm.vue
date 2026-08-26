@@ -1,0 +1,4811 @@
+<template>
+  <div>
+    <section class="page-component-item">
+      <div class="raw-html-content">
+        <div class="raw-html-embed">
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap"
+            rel="stylesheet"
+          />
+          <link rel="icon" type="image/svg+xml" href="assets/formester-icon.svg" />
+        </div>
+      </div>
+    </section>
+
+    <section class="page-component-item">
+      <div class="raw-html-content">
+        <div class="raw-html-embed">
+          <section class="fmstr-cmp-adf-hero" aria-labelledby="fmstr-cmp-adf-hero-h1">
+            <div class="fmstr-cmp-adf-hero__body">
+              <div class="fmstr-cmp-adf-hero__container">
+                <div class="fmstr-cmp-adf-hero__header">
+                  <span class="fmstr-cmp-adf-hero__eyebrow">
+                    <span class="fmstr-cmp-adf-hero__eyebrow-pill">Automotive</span>
+                    ADF/XML integration for dealerships and lead vendors
+                  </span>
+                  <h1 class="fmstr-cmp-adf-hero__h1" id="fmstr-cmp-adf-hero-h1">
+                    Send dealership form leads to your automotive CRM as
+                    <span class="fmstr-cmp-adf-hero__h1-accent">ADF/XML</span>.
+                  </h1>
+                  <p class="fmstr-cmp-adf-hero__lede">
+                    Build the form in Formester. Paste your CRM's lead intake email. Map fields once. The next
+                    submission lands as a structured prospect, no manual entry and no Zapier chain.
+                  </p>
+                  <div class="fmstr-cmp-adf-hero__ctas">
+                    <a
+                      href="https://app.formester.com/users/sign_up"
+                      class="fmstr-cmp-adf-hero__btn fmstr-cmp-adf-hero__btn--primary fmstr-cmp-adf-hero__btn--lg"
+                    >
+                      Get started
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="#fmstr-cmp-adf-output-sample"
+                      class="fmstr-cmp-adf-hero__btn fmstr-cmp-adf-hero__btn--secondary fmstr-cmp-adf-hero__btn--lg"
+                      >See a sample lead</a
+                    >
+                  </div>
+                  <div class="fmstr-cmp-adf-hero__meta">
+                    <span>Available on Business plan and above</span>
+                    <span class="fmstr-cmp-adf-hero__meta-dot"></span>
+                    <span>Trusted by 56,000+ teams</span>
+                    <span class="fmstr-cmp-adf-hero__meta-dot"></span>
+                    <span>Live in 10 minutes</span>
+                  </div>
+                </div>
+
+                <div class="fmstr-cmp-adf-hero__flow" aria-hidden="true">
+                  <div class="fmstr-cmp-adf-hero__flow-node">
+                    <div class="fmstr-cmp-adf-hero__flow-head">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                        <path d="M9 8h6"></path>
+                        <path d="M9 12h6"></path>
+                        <path d="M9 16h3"></path>
+                      </svg>
+                      <span>Formester form</span>
+                    </div>
+                    <div class="fmstr-cmp-adf-hero__flow-body">
+                      <div class="fmstr-cmp-adf-hero__form-row">
+                        <div class="fmstr-cmp-adf-hero__form-field">
+                          <span class="fmstr-cmp-adf-hero__form-label">First name</span>
+                          <span class="fmstr-cmp-adf-hero__form-input">Jordan</span>
+                        </div>
+                        <div class="fmstr-cmp-adf-hero__form-field">
+                          <span class="fmstr-cmp-adf-hero__form-label">Last name</span>
+                          <span class="fmstr-cmp-adf-hero__form-input">Reyes</span>
+                        </div>
+                      </div>
+                      <div class="fmstr-cmp-adf-hero__form-field">
+                        <span class="fmstr-cmp-adf-hero__form-label">Email</span>
+                        <span class="fmstr-cmp-adf-hero__form-input">jordan.reyes@example.com</span>
+                      </div>
+                      <div class="fmstr-cmp-adf-hero__form-field">
+                        <span class="fmstr-cmp-adf-hero__form-label">Vehicle of interest</span>
+                        <span class="fmstr-cmp-adf-hero__form-input">2024 Toyota RAV4 · Used</span>
+                      </div>
+                      <span class="fmstr-cmp-adf-hero__form-submit"
+                        >Send
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="m12 5 7 7-7 7"></path>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="fmstr-cmp-adf-hero__flow-arrow">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                  </div>
+
+                  <div class="fmstr-cmp-adf-hero__flow-node">
+                    <div class="fmstr-cmp-adf-hero__flow-head">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <path d="M14 2v6h6"></path>
+                      </svg>
+                      <span>ADF/XML email</span>
+                    </div>
+                    <div class="fmstr-cmp-adf-hero__flow-body">
+                      <div class="fmstr-cmp-adf-hero__xml">
+                        <span class="fmstr-cmp-adf-hero__xml-pi">&lt;?xml version="1.0"?&gt;</span>
+                        <span class="fmstr-cmp-adf-hero__xml-bracket">&lt;</span
+                        ><span class="fmstr-cmp-adf-hero__xml-tag">adf</span
+                        ><span class="fmstr-cmp-adf-hero__xml-bracket">&gt;</span>
+                        <span class="fmstr-cmp-adf-hero__xml-bracket">&lt;</span
+                        ><span class="fmstr-cmp-adf-hero__xml-tag">prospect</span
+                        ><span class="fmstr-cmp-adf-hero__xml-bracket">&gt;</span>
+                        <span class="fmstr-cmp-adf-hero__xml-bracket">&lt;</span
+                        ><span class="fmstr-cmp-adf-hero__xml-tag">requestdate</span
+                        ><span class="fmstr-cmp-adf-hero__xml-bracket">&gt;</span
+                        ><span class="fmstr-cmp-adf-hero__xml-text">2026-05-26</span
+                        ><span class="fmstr-cmp-adf-hero__xml-bracket">&lt;/</span
+                        ><span class="fmstr-cmp-adf-hero__xml-tag">requestdate</span
+                        ><span class="fmstr-cmp-adf-hero__xml-bracket">&gt;</span>
+                        <span class="fmstr-cmp-adf-hero__xml-bracket">&lt;</span
+                        ><span class="fmstr-cmp-adf-hero__xml-tag">vehicle</span>
+                        <span class="fmstr-cmp-adf-hero__xml-attr">interest</span
+                        ><span class="fmstr-cmp-adf-hero__xml-bracket">=</span
+                        ><span class="fmstr-cmp-adf-hero__xml-val">"buy"</span>
+                        <span class="fmstr-cmp-adf-hero__xml-attr">status</span
+                        ><span class="fmstr-cmp-adf-hero__xml-bracket">=</span
+                        ><span class="fmstr-cmp-adf-hero__xml-val">"used"</span
+                        ><span class="fmstr-cmp-adf-hero__xml-bracket">&gt;</span>
+                        <span class="fmstr-cmp-adf-hero__xml-bracket">&lt;</span
+                        ><span class="fmstr-cmp-adf-hero__xml-tag">year</span
+                        ><span class="fmstr-cmp-adf-hero__xml-bracket">&gt;</span
+                        ><span class="fmstr-cmp-adf-hero__xml-text">2024</span
+                        ><span class="fmstr-cmp-adf-hero__xml-bracket">&lt;/</span
+                        ><span class="fmstr-cmp-adf-hero__xml-tag">year</span
+                        ><span class="fmstr-cmp-adf-hero__xml-bracket">&gt;</span>
+                        <span class="fmstr-cmp-adf-hero__xml-bracket">&lt;</span
+                        ><span class="fmstr-cmp-adf-hero__xml-tag">make</span
+                        ><span class="fmstr-cmp-adf-hero__xml-bracket">&gt;</span
+                        ><span class="fmstr-cmp-adf-hero__xml-text">Toyota</span
+                        ><span class="fmstr-cmp-adf-hero__xml-bracket">&lt;/</span
+                        ><span class="fmstr-cmp-adf-hero__xml-tag">make</span
+                        ><span class="fmstr-cmp-adf-hero__xml-bracket">&gt;</span>
+                        <span class="fmstr-cmp-adf-hero__xml-bracket">&lt;</span
+                        ><span class="fmstr-cmp-adf-hero__xml-tag">model</span
+                        ><span class="fmstr-cmp-adf-hero__xml-bracket">&gt;</span
+                        ><span class="fmstr-cmp-adf-hero__xml-text">RAV4</span
+                        ><span class="fmstr-cmp-adf-hero__xml-bracket">&lt;/</span
+                        ><span class="fmstr-cmp-adf-hero__xml-tag">model</span
+                        ><span class="fmstr-cmp-adf-hero__xml-bracket">&gt;</span>
+                        <span class="fmstr-cmp-adf-hero__xml-bracket">&lt;/</span
+                        ><span class="fmstr-cmp-adf-hero__xml-tag">vehicle</span
+                        ><span class="fmstr-cmp-adf-hero__xml-bracket">&gt;</span>
+                        <span class="fmstr-cmp-adf-hero__xml-bracket">&lt;</span
+                        ><span class="fmstr-cmp-adf-hero__xml-tag">customer</span
+                        ><span class="fmstr-cmp-adf-hero__xml-bracket">&gt;</span
+                        ><span class="fmstr-cmp-adf-hero__xml-text">...</span
+                        ><span class="fmstr-cmp-adf-hero__xml-bracket">&lt;/</span
+                        ><span class="fmstr-cmp-adf-hero__xml-tag">customer</span
+                        ><span class="fmstr-cmp-adf-hero__xml-bracket">&gt;</span>
+                        <span class="fmstr-cmp-adf-hero__xml-bracket">&lt;/</span
+                        ><span class="fmstr-cmp-adf-hero__xml-tag">prospect</span
+                        ><span class="fmstr-cmp-adf-hero__xml-bracket">&gt;</span>
+                        <span class="fmstr-cmp-adf-hero__xml-bracket">&lt;/</span
+                        ><span class="fmstr-cmp-adf-hero__xml-tag">adf</span
+                        ><span class="fmstr-cmp-adf-hero__xml-bracket">&gt;</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="fmstr-cmp-adf-hero__flow-arrow">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                  </div>
+
+                  <div class="fmstr-cmp-adf-hero__flow-node">
+                    <div class="fmstr-cmp-adf-hero__flow-head">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                      </svg>
+                      <span>Your CRM · Leads</span>
+                    </div>
+                    <div class="fmstr-cmp-adf-hero__flow-body">
+                      <div class="fmstr-cmp-adf-hero__crm-stack">
+                        <div class="fmstr-cmp-adf-hero__crm-row fmstr-cmp-adf-hero__crm-row--fresh">
+                          <div class="fmstr-cmp-adf-hero__crm-av">JR</div>
+                          <div class="fmstr-cmp-adf-hero__crm-text">
+                            <div class="fmstr-cmp-adf-hero__crm-name">
+                              Jordan Reyes<span class="fmstr-cmp-adf-hero__crm-pulse"></span>
+                            </div>
+                            <div class="fmstr-cmp-adf-hero__crm-meta">RAV4 (Used) · <b>New</b> · just now</div>
+                          </div>
+                          <div class="fmstr-cmp-adf-hero__crm-src">Formester</div>
+                        </div>
+                        <div class="fmstr-cmp-adf-hero__crm-row">
+                          <div class="fmstr-cmp-adf-hero__crm-av">MC</div>
+                          <div class="fmstr-cmp-adf-hero__crm-text">
+                            <div class="fmstr-cmp-adf-hero__crm-name">Maya Chen</div>
+                            <div class="fmstr-cmp-adf-hero__crm-meta">Camry · 4 min ago</div>
+                          </div>
+                          <div class="fmstr-cmp-adf-hero__crm-src">ADF</div>
+                        </div>
+                        <div class="fmstr-cmp-adf-hero__crm-row">
+                          <div class="fmstr-cmp-adf-hero__crm-av">DT</div>
+                          <div class="fmstr-cmp-adf-hero__crm-text">
+                            <div class="fmstr-cmp-adf-hero__crm-name">Derek Tan</div>
+                            <div class="fmstr-cmp-adf-hero__crm-meta">Tacoma · 18 min ago</div>
+                          </div>
+                          <div class="fmstr-cmp-adf-hero__crm-src">ADF</div>
+                        </div>
+                        <div class="fmstr-cmp-adf-hero__crm-row">
+                          <div class="fmstr-cmp-adf-hero__crm-av">AS</div>
+                          <div class="fmstr-cmp-adf-hero__crm-text">
+                            <div class="fmstr-cmp-adf-hero__crm-name">Aisha Singh</div>
+                            <div class="fmstr-cmp-adf-hero__crm-meta">Highlander · 42 min ago</div>
+                          </div>
+                          <div class="fmstr-cmp-adf-hero__crm-src">ADF</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-component-item">
+      <div class="raw-html-content">
+        <div class="raw-html-embed">
+          <section
+            class="fmstr-cmp-adf-crm-grid"
+            id="fmstr-cmp-adf-crm-grid"
+            aria-labelledby="fmstr-cmp-adf-crm-grid-h2"
+          >
+            <div class="fmstr-cmp-adf-crm-grid__container">
+              <div class="fmstr-cmp-adf-crm-grid__header">
+                <span class="fmstr-cmp-adf-crm-grid__eyebrow">Works with every major automotive CRM</span>
+                <h2 class="fmstr-cmp-adf-crm-grid__h2" id="fmstr-cmp-adf-crm-grid-h2">
+                  If your CRM accepts an ADF/XML email, Formester can feed it.
+                </h2>
+                <p class="fmstr-cmp-adf-crm-grid__sub">
+                  Connect Formester to VinSolutions, DealerSocket, CDK, and every automotive CRM that accepts ADF/XML.
+                  One connector, configured once per form.
+                </p>
+              </div>
+
+              <div class="fmstr-cmp-adf-crm-grid__grid">
+                <div class="fmstr-cmp-adf-crm-grid__tile">
+                  <div class="fmstr-cmp-adf-crm-grid__logo">
+                    <img
+                      src="https://formester-strapi.s3.ap-south-1.amazonaws.com/vinsolutions_65e108170a.svg"
+                      alt="VinSolutions"
+                    />
+                  </div>
+                  <p class="fmstr-cmp-adf-crm-grid__name">VinSolutions</p>
+                </div>
+                <div class="fmstr-cmp-adf-crm-grid__tile">
+                  <div class="fmstr-cmp-adf-crm-grid__logo">
+                    <img
+                      src="https://formester-strapi.s3.ap-south-1.amazonaws.com/dealersocket_83df71a7ab.png"
+                      alt="DealerSocket"
+                    />
+                  </div>
+                  <p class="fmstr-cmp-adf-crm-grid__name">DealerSocket</p>
+                </div>
+                <div class="fmstr-cmp-adf-crm-grid__tile">
+                  <div class="fmstr-cmp-adf-crm-grid__logo">
+                    <img
+                      src="https://formester-strapi.s3.ap-south-1.amazonaws.com/cdk_global_6def947185.png"
+                      alt="CDK Global"
+                    />
+                  </div>
+                  <p class="fmstr-cmp-adf-crm-grid__name">CDK Global</p>
+                </div>
+                <div class="fmstr-cmp-adf-crm-grid__tile">
+                  <div class="fmstr-cmp-adf-crm-grid__logo">
+                    <img
+                      src="https://formester-strapi.s3.ap-south-1.amazonaws.com/reynolds_e262de382f.png"
+                      alt="Reynolds and Reynolds"
+                    />
+                  </div>
+                  <p class="fmstr-cmp-adf-crm-grid__name">Reynolds and Reynolds</p>
+                </div>
+                <div class="fmstr-cmp-adf-crm-grid__tile">
+                  <div class="fmstr-cmp-adf-crm-grid__logo">
+                    <img
+                      src="https://formester-strapi.s3.ap-south-1.amazonaws.com/drivecentric_00bdbbbc3e.png"
+                      alt="DriveCentric"
+                    />
+                  </div>
+                  <p class="fmstr-cmp-adf-crm-grid__name">DriveCentric</p>
+                </div>
+                <div class="fmstr-cmp-adf-crm-grid__tile">
+                  <div class="fmstr-cmp-adf-crm-grid__logo" style="height: auto">
+                    <img
+                      src="https://formester-strapi.s3.ap-south-1.amazonaws.com/promax_e0166e8a7b.png"
+                      alt="ProMax"
+                      style="max-height: 68px"
+                      data-comment-anchor="9900fbd01a-img"
+                    />
+                  </div>
+                  <p class="fmstr-cmp-adf-crm-grid__name">ProMax</p>
+                </div>
+                <div class="fmstr-cmp-adf-crm-grid__tile">
+                  <div class="fmstr-cmp-adf-crm-grid__logo" style="color: #0f172a" aria-label="Keyloop">
+                    <svg
+                      aria-hidden="true"
+                      style="height: 26px; width: auto; display: block"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 581.38 148.56"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M509.66 105.45c-16.47 0-27.17-12.19-27.17-30.61s10.7-30.61 27.17-30.61 26.98 12.19 26.98 30.61-10.79 30.61-26.98 30.61m3.44-78.99c-12.75 0-23.54 5.68-29.12 14.33V27.95H463.6v120.61h20.38v-38.55c5.3 8.09 15.91 13.21 27.82 13.21 28 0 45.31-20.1 45.31-48.38s-16.38-48.38-44.01-48.38m-104.28 78.52c-20.28 0-25.68-20.75-39.26-20.75s-19.07 20.75-39.17 20.75c-16.1 0-27.72-12.56-27.72-30.15s11.63-30.14 27.72-30.14c20.1 0 25.59 20.75 39.17 20.75s18.98-20.75 39.26-20.75c16 0 27.54 12.56 27.54 30.14s-11.54 30.15-27.54 30.15m1.68-78.53c-26.7 0-33.03 18.51-40.94 18.51s-14.33-18.51-40.93-18.51-46.71 20.56-46.71 48.38 19.07 48.38 46.71 48.38 33.03-18.51 40.93-18.51 14.23 18.51 40.94 18.51 46.61-20.56 46.61-48.38-18.98-48.38-46.61-48.38M255.23 0h20.37v121.73h-20.37V0zM231.6 27.95h21.02l-32.84 89.87-10.52 30.74h-19.51l9.1-26.37-34.52-94.25h20.93l23.17 67.36 23.17-67.36zM123.77 42.28c14.51 0 23.44 9.21 24.47 22.33H98.56c2.61-14.89 11.45-22.33 25.21-22.33m1.86 63.73c-15.44 0-26.05-10.89-27.63-27.26h70.43c.19-1.77.37-4.65.37-7.44 0-23.07-14.79-44.84-45.03-44.84S78.18 48.89 78.18 74.38s17.58 48.85 47.45 48.85c23.07 0 40.28-12.75 43.73-32.38h-20.19c-2.51 9.77-10.79 15.17-23.54 15.17M46.14 72.64l44 49.1H63.23l-38.1-42.79-4.57-5.13v47.92H0V0h20.56v70.32l4.9-4.96L62.4 27.95h27.58L46.14 72.63zm522.45-31.5V27.92h3.46l2.94 5.7h.23l2.9-5.7h3.27v13.22h-2.71v-5.23l.23-4.11h-.19l-3.74 7.05-3.73-7.05h-.19l.23 4.11v5.23h-2.71zm-8.27 0V30.35h-3.74v-2.43h10.46v2.43h-3.69v10.79h-3.04z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <p class="fmstr-cmp-adf-crm-grid__name">Keyloop</p>
+                </div>
+                <div class="fmstr-cmp-adf-crm-grid__tile">
+                  <div class="fmstr-cmp-adf-crm-grid__logo">
+                    <span
+                      class="fmstr-cmp-adf-crm-grid__autoraptor"
+                      data-comment-anchor="04ed1de116-span"
+                      style="width: 154px; justify-content: center"
+                    >
+                      <img
+                        src="https://www.autoraptor.com/wp-content/uploads/AutoRaptor-Logo-Inverse.svg"
+                        alt="AutoRaptor"
+                        onerror="
+                          this.style.display = 'none'
+                          this.nextElementSibling.style.display = 'inline-flex'
+                        "
+                        style="object-fit: contain; width: 101px"
+                      />
+                      <span class="fmstr-cmp-adf-crm-grid__autoraptor-text">Auto<span>Raptor</span></span>
+                    </span>
+                  </div>
+                  <p class="fmstr-cmp-adf-crm-grid__name">AutoRaptor</p>
+                </div>
+                <div class="fmstr-cmp-adf-crm-grid__tile">
+                  <div class="fmstr-cmp-adf-crm-grid__logo">
+                    <span
+                      class="fmstr-cmp-adf-crm-grid__wordmark fmstr-cmp-adf-crm-grid__wordmark--elead"
+                      aria-label="eLEAD"
+                      ><span class="fmstr-cmp-adf-crm-grid__wordmark-accent">e</span>LEAD</span
+                    >
+                  </div>
+                  <p class="fmstr-cmp-adf-crm-grid__name">eLEAD</p>
+                </div>
+              </div>
+
+              <div class="fmstr-cmp-adf-crm-grid__banner">
+                <span class="fmstr-cmp-adf-crm-grid__banner-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.75"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M4 4h16v12H5.17L4 17.17V4z"></path>
+                    <path d="M8 8h8"></path>
+                    <path d="M8 12h5"></path>
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="fmstr-cmp-adf-crm-grid__banner-h3">Don't see yours? It almost certainly still works.</h3>
+                  <p class="fmstr-cmp-adf-crm-grid__banner-p">
+                    If your CRM has a lead intake email address that accepts ADF/XML, Formester will work with it.
+                    <em>Almost every dealership-grade CRM does.</em> The integration is to the format, not the brand.
+                  </p>
+                </div>
+                <a
+                  href="mailto:support@formester.com?subject=Will%20Formester%20work%20with%20my%20CRM%3F"
+                  class="fmstr-cmp-adf-crm-grid__banner-cta"
+                >
+                  Ask us about yours
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-component-item">
+      <div class="raw-html-content">
+        <div class="raw-html-embed">
+          <section
+            class="fmstr-cmp-adf-field-coverage"
+            id="fmstr-cmp-adf-field-coverage"
+            aria-labelledby="fmstr-cmp-adf-field-coverage-h2"
+          >
+            <div class="fmstr-cmp-adf-field-coverage__container">
+              <div class="fmstr-cmp-adf-field-coverage__header">
+                <span class="fmstr-cmp-adf-field-coverage__eyebrow">Field coverage</span>
+                <h2 class="fmstr-cmp-adf-field-coverage__h2" id="fmstr-cmp-adf-field-coverage-h2">
+                  Every ADF/XML field, mapped to a form question.
+                </h2>
+                <p class="fmstr-cmp-adf-field-coverage__sub">
+                  Map any of these to a form question once, and Formester routes every submission into the matching ADF
+                  node. Covers customer details, vehicle interest, and your dealership's vendor block.
+                </p>
+              </div>
+
+              <div class="fmstr-cmp-adf-field-coverage__groups">
+                <div class="fmstr-cmp-adf-field-coverage__tablist" role="tablist" aria-label="ADF field groups">
+                  <button
+                    type="button"
+                    id="fmstr-cmp-adf-field-coverage-tab-customer"
+                    class="fmstr-cmp-adf-field-coverage__tab"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="fmstr-cmp-adf-field-coverage-panel-customer"
+                    tabindex="0"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="9" cy="7" r="4"></circle>
+                    </svg>
+                    Customer
+                    <span class="fmstr-cmp-adf-field-coverage__tab-count">12</span>
+                  </button>
+                  <button
+                    type="button"
+                    id="fmstr-cmp-adf-field-coverage-tab-vehicle"
+                    class="fmstr-cmp-adf-field-coverage__tab"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="fmstr-cmp-adf-field-coverage-panel-vehicle"
+                    tabindex="-1"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9l-1.7-.5L17 6.6C16.6 5.7 15.8 5 14.8 5h-5.6C8.2 5 7.4 5.7 7 6.6L5.2 10.6 3.5 11.1C2.7 11.3 2 12.1 2 13v3c0 .6.4 1 1 1h2"
+                      ></path>
+                      <circle cx="7" cy="17" r="2"></circle>
+                      <circle cx="17" cy="17" r="2"></circle>
+                    </svg>
+                    Vehicle
+                    <span class="fmstr-cmp-adf-field-coverage__tab-count">18</span>
+                  </button>
+                  <button
+                    type="button"
+                    id="fmstr-cmp-adf-field-coverage-tab-vendor"
+                    class="fmstr-cmp-adf-field-coverage__tab"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="fmstr-cmp-adf-field-coverage-panel-vendor"
+                    tabindex="-1"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M3 21h18"></path>
+                      <path d="M5 21V7l8-4v18"></path>
+                      <path d="M19 21V11l-6-4"></path>
+                      <path d="M9 9v.01"></path>
+                      <path d="M9 12v.01"></path>
+                      <path d="M9 15v.01"></path>
+                      <path d="M9 18v.01"></path>
+                    </svg>
+                    Vendor
+                    <span class="fmstr-cmp-adf-field-coverage__tab-count">10</span>
+                  </button>
+                </div>
+
+                <div
+                  class="fmstr-cmp-adf-field-coverage__group"
+                  role="tabpanel"
+                  id="fmstr-cmp-adf-field-coverage-panel-customer"
+                  aria-labelledby="fmstr-cmp-adf-field-coverage-tab-customer"
+                >
+                  <div class="fmstr-cmp-adf-field-coverage__group-head">
+                    <div class="fmstr-cmp-adf-field-coverage__group-meta">
+                      <h3 class="fmstr-cmp-adf-field-coverage__group-title">Customer</h3>
+                      <p class="fmstr-cmp-adf-field-coverage__group-sub">
+                        Who the lead is, how to reach them, and what they wrote.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="fmstr-cmp-adf-field-coverage__scroll-wrap">
+                    <div class="fmstr-cmp-adf-field-coverage__scroll">
+                      <ul class="fmstr-cmp-adf-field-coverage__list">
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">First name</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type">Text</span>
+                          <span class="fmstr-cmp-adf-field-coverage__node">customer/contact/name[first]</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Last name</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type">Text</span>
+                          <span class="fmstr-cmp-adf-field-coverage__node">customer/contact/name[last]</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Email</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type fmstr-cmp-adf-field-coverage__type--email"
+                            >Email</span
+                          >
+                          <span class="fmstr-cmp-adf-field-coverage__node">customer/contact/email</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Phone (voice)</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type fmstr-cmp-adf-field-coverage__type--phone"
+                            >Phone</span
+                          >
+                          <span class="fmstr-cmp-adf-field-coverage__node">customer/contact/phone[voice]</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Phone (cell)</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type fmstr-cmp-adf-field-coverage__type--phone"
+                            >Phone</span
+                          >
+                          <span class="fmstr-cmp-adf-field-coverage__node">customer/contact/phone[cell]</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Street address</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type">Text</span>
+                          <span class="fmstr-cmp-adf-field-coverage__node">customer/contact/address/street</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">City</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type">Text</span>
+                          <span class="fmstr-cmp-adf-field-coverage__node">customer/contact/address/city</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">State or region</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type fmstr-cmp-adf-field-coverage__type--choice"
+                            >Choice</span
+                          >
+                          <span class="fmstr-cmp-adf-field-coverage__node">customer/contact/address/regioncode</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">ZIP or postal code</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type">Text</span>
+                          <span class="fmstr-cmp-adf-field-coverage__node">customer/contact/address/postalcode</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Country</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type fmstr-cmp-adf-field-coverage__type--choice"
+                            >Choice</span
+                          >
+                          <span class="fmstr-cmp-adf-field-coverage__node">customer/contact/address/country</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Customer comments</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type">Long text</span>
+                          <span class="fmstr-cmp-adf-field-coverage__node">customer/comments</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Purchase timeframe</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type fmstr-cmp-adf-field-coverage__type--choice"
+                            >Choice</span
+                          >
+                          <span class="fmstr-cmp-adf-field-coverage__node">customer/timeframe</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="fmstr-cmp-adf-field-coverage__group"
+                  role="tabpanel"
+                  id="fmstr-cmp-adf-field-coverage-panel-vehicle"
+                  aria-labelledby="fmstr-cmp-adf-field-coverage-tab-vehicle"
+                  hidden=""
+                >
+                  <div class="fmstr-cmp-adf-field-coverage__group-head">
+                    <div class="fmstr-cmp-adf-field-coverage__group-meta">
+                      <h3 class="fmstr-cmp-adf-field-coverage__group-title">Vehicle</h3>
+                      <p class="fmstr-cmp-adf-field-coverage__group-sub">
+                        What the customer is asking about. Repeat the block for a trade-in.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="fmstr-cmp-adf-field-coverage__scroll-wrap">
+                    <div class="fmstr-cmp-adf-field-coverage__scroll">
+                      <ul class="fmstr-cmp-adf-field-coverage__list">
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Interest (buy or lease)</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type fmstr-cmp-adf-field-coverage__type--choice"
+                            >Choice</span
+                          >
+                          <span class="fmstr-cmp-adf-field-coverage__node">vehicle[interest]</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Status (new or used)</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type fmstr-cmp-adf-field-coverage__type--choice"
+                            >Choice</span
+                          >
+                          <span class="fmstr-cmp-adf-field-coverage__node">vehicle[status]</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Year</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type fmstr-cmp-adf-field-coverage__type--number"
+                            >Number</span
+                          >
+                          <span class="fmstr-cmp-adf-field-coverage__node">vehicle/year</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Make</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type fmstr-cmp-adf-field-coverage__type--choice"
+                            >Choice</span
+                          >
+                          <span class="fmstr-cmp-adf-field-coverage__node">vehicle/make</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Model</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type fmstr-cmp-adf-field-coverage__type--choice"
+                            >Choice</span
+                          >
+                          <span class="fmstr-cmp-adf-field-coverage__node">vehicle/model</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Trim</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type">Text</span>
+                          <span class="fmstr-cmp-adf-field-coverage__node">vehicle/trim</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">VIN</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type">Text</span>
+                          <span class="fmstr-cmp-adf-field-coverage__node">vehicle/vin</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Stock number</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type">Text</span>
+                          <span class="fmstr-cmp-adf-field-coverage__node">vehicle/stock</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Body style</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type fmstr-cmp-adf-field-coverage__type--choice"
+                            >Choice</span
+                          >
+                          <span class="fmstr-cmp-adf-field-coverage__node">vehicle/bodystyle</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Doors</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type fmstr-cmp-adf-field-coverage__type--number"
+                            >Number</span
+                          >
+                          <span class="fmstr-cmp-adf-field-coverage__node">vehicle/doors</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Transmission</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type fmstr-cmp-adf-field-coverage__type--choice"
+                            >Choice</span
+                          >
+                          <span class="fmstr-cmp-adf-field-coverage__node">vehicle/transmission</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Exterior color</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type">Text</span>
+                          <span class="fmstr-cmp-adf-field-coverage__node">vehicle/colorcombination/exteriorcolor</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Interior color</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type">Text</span>
+                          <span class="fmstr-cmp-adf-field-coverage__node">vehicle/colorcombination/interiorcolor</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Mileage</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type fmstr-cmp-adf-field-coverage__type--number"
+                            >Number</span
+                          >
+                          <span class="fmstr-cmp-adf-field-coverage__node">vehicle/odometer</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Price</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type fmstr-cmp-adf-field-coverage__type--currency"
+                            >Currency</span
+                          >
+                          <span class="fmstr-cmp-adf-field-coverage__node">vehicle/price</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Finance details</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type">Long text</span>
+                          <span class="fmstr-cmp-adf-field-coverage__node">vehicle/finance</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Options</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type fmstr-cmp-adf-field-coverage__type--choice"
+                            >Multi-choice</span
+                          >
+                          <span class="fmstr-cmp-adf-field-coverage__node">vehicle/option/optionname</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Vehicle notes</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type">Long text</span>
+                          <span class="fmstr-cmp-adf-field-coverage__node">vehicle/comments</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="fmstr-cmp-adf-field-coverage__group"
+                  role="tabpanel"
+                  id="fmstr-cmp-adf-field-coverage-panel-vendor"
+                  aria-labelledby="fmstr-cmp-adf-field-coverage-tab-vendor"
+                  hidden=""
+                >
+                  <div class="fmstr-cmp-adf-field-coverage__group-head">
+                    <div class="fmstr-cmp-adf-field-coverage__group-meta">
+                      <h3 class="fmstr-cmp-adf-field-coverage__group-title">Vendor</h3>
+                      <p class="fmstr-cmp-adf-field-coverage__group-sub">
+                        Your dealership block. Filled in once in Formester, sent with every lead.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="fmstr-cmp-adf-field-coverage__scroll-wrap">
+                    <div class="fmstr-cmp-adf-field-coverage__scroll">
+                      <ul class="fmstr-cmp-adf-field-coverage__list">
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Vendor ID</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type">Text</span>
+                          <span class="fmstr-cmp-adf-field-coverage__node">vendor/id</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Vendor name</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type">Text</span>
+                          <span class="fmstr-cmp-adf-field-coverage__node">vendor/vendorname</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Vendor contact name</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type">Text</span>
+                          <span class="fmstr-cmp-adf-field-coverage__node">vendor/contact/name</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Vendor contact email</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type fmstr-cmp-adf-field-coverage__type--email"
+                            >Email</span
+                          >
+                          <span class="fmstr-cmp-adf-field-coverage__node">vendor/contact/email</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Vendor contact phone</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type fmstr-cmp-adf-field-coverage__type--phone"
+                            >Phone</span
+                          >
+                          <span class="fmstr-cmp-adf-field-coverage__node">vendor/contact/phone</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Vendor street</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type">Text</span>
+                          <span class="fmstr-cmp-adf-field-coverage__node">vendor/contact/address/street</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Vendor city</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type">Text</span>
+                          <span class="fmstr-cmp-adf-field-coverage__node">vendor/contact/address/city</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Vendor state or region</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type fmstr-cmp-adf-field-coverage__type--choice"
+                            >Choice</span
+                          >
+                          <span class="fmstr-cmp-adf-field-coverage__node">vendor/contact/address/regioncode</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Vendor ZIP or postal code</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type">Text</span>
+                          <span class="fmstr-cmp-adf-field-coverage__node">vendor/contact/address/postalcode</span>
+                        </li>
+                        <li class="fmstr-cmp-adf-field-coverage__row">
+                          <span class="fmstr-cmp-adf-field-coverage__check"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12"></polyline></svg
+                          ></span>
+                          <span class="fmstr-cmp-adf-field-coverage__label">Vendor website</span>
+                          <span class="fmstr-cmp-adf-field-coverage__type">URL</span>
+                          <span class="fmstr-cmp-adf-field-coverage__node">vendor/url</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-component-item">
+      <div class="raw-html-content">
+        <div class="raw-html-embed">
+          <section
+            class="fmstr-cmp-adf-output-sample"
+            id="fmstr-cmp-adf-output-sample"
+            aria-labelledby="fmstr-cmp-adf-output-sample-h2"
+          >
+            <div class="fmstr-cmp-adf-output-sample__container">
+              <div class="fmstr-cmp-adf-output-sample__header">
+                <span class="fmstr-cmp-adf-output-sample__eyebrow">What lands in your CRM</span>
+                <h2 class="fmstr-cmp-adf-output-sample__h2" id="fmstr-cmp-adf-output-sample-h2">
+                  A real form. The actual ADF/XML it produces.
+                </h2>
+                <p class="fmstr-cmp-adf-output-sample__sub">
+                  Left: a Formester form on a dealership site. Right: the byte-for-byte email Formester sends when it is
+                  submitted. Copy the XML, hand it to your CRM admin, they will recognize it.
+                </p>
+              </div>
+
+              <div class="fmstr-cmp-adf-output-sample__split">
+                <div class="fmstr-cmp-adf-output-sample__pane fmstr-cmp-adf-output-sample__pane--left">
+                  <div class="fmstr-cmp-adf-output-sample__pane-head">
+                    <span class="fmstr-cmp-adf-output-sample__pane-label">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                        <path d="M9 8h6"></path>
+                        <path d="M9 12h6"></path>
+                        <path d="M9 16h3"></path>
+                      </svg>
+                      Submitted form
+                    </span>
+                    <span class="fmstr-cmp-adf-output-sample__pane-label"
+                      ><span class="fmstr-cmp-adf-output-sample__pane-label-lit"></span> Live</span
+                    >
+                  </div>
+
+                  <div class="fmstr-cmp-adf-output-sample__form">
+                    <div class="fmstr-cmp-adf-output-sample__form-brand">
+                      <div class="fmstr-cmp-adf-output-sample__form-mark">HCT</div>
+                      <div>
+                        <div class="fmstr-cmp-adf-output-sample__form-name">Hill Country Toyota</div>
+                        <div class="fmstr-cmp-adf-output-sample__form-sub">Request a quote</div>
+                      </div>
+                    </div>
+
+                    <h3 class="fmstr-cmp-adf-output-sample__form-title">Tell us what you are looking for</h3>
+                    <p class="fmstr-cmp-adf-output-sample__form-desc">
+                      A specialist will get back to you within an hour during business hours.
+                    </p>
+
+                    <div class="fmstr-cmp-adf-output-sample__form-grid">
+                      <div class="fmstr-cmp-adf-output-sample__form-field">
+                        <label class="fmstr-cmp-adf-output-sample__form-label"
+                          >First name <span class="fmstr-cmp-adf-output-sample__form-req">*</span></label
+                        >
+                        <input class="fmstr-cmp-adf-output-sample__form-input" value="Jordan" readonly="" />
+                      </div>
+                      <div class="fmstr-cmp-adf-output-sample__form-field">
+                        <label class="fmstr-cmp-adf-output-sample__form-label"
+                          >Last name <span class="fmstr-cmp-adf-output-sample__form-req">*</span></label
+                        >
+                        <input class="fmstr-cmp-adf-output-sample__form-input" value="Reyes" readonly="" />
+                      </div>
+                      <div class="fmstr-cmp-adf-output-sample__form-field">
+                        <label class="fmstr-cmp-adf-output-sample__form-label"
+                          >Email <span class="fmstr-cmp-adf-output-sample__form-req">*</span></label
+                        >
+                        <input
+                          class="fmstr-cmp-adf-output-sample__form-input"
+                          value="jordan.reyes@example.com"
+                          readonly=""
+                        />
+                      </div>
+                      <div class="fmstr-cmp-adf-output-sample__form-field">
+                        <label class="fmstr-cmp-adf-output-sample__form-label">Phone</label>
+                        <input class="fmstr-cmp-adf-output-sample__form-input" value="(512) 555-0143" readonly="" />
+                      </div>
+                      <div class="fmstr-cmp-adf-output-sample__form-field">
+                        <label class="fmstr-cmp-adf-output-sample__form-label">ZIP</label>
+                        <input class="fmstr-cmp-adf-output-sample__form-input" value="78704" readonly="" />
+                      </div>
+                      <div class="fmstr-cmp-adf-output-sample__form-field">
+                        <label class="fmstr-cmp-adf-output-sample__form-label">New or used?</label>
+                        <select
+                          class="fmstr-cmp-adf-output-sample__form-input fmstr-cmp-adf-output-sample__form-input--select"
+                          disabled=""
+                        >
+                          <option>Used</option>
+                        </select>
+                      </div>
+                      <div
+                        class="fmstr-cmp-adf-output-sample__form-field fmstr-cmp-adf-output-sample__form-field--full"
+                      >
+                        <label class="fmstr-cmp-adf-output-sample__form-label"
+                          >Vehicle of interest <span class="fmstr-cmp-adf-output-sample__form-req">*</span></label
+                        >
+                        <input class="fmstr-cmp-adf-output-sample__form-input" value="2024 Toyota RAV4" readonly="" />
+                      </div>
+                      <div
+                        class="fmstr-cmp-adf-output-sample__form-field fmstr-cmp-adf-output-sample__form-field--full"
+                      >
+                        <label class="fmstr-cmp-adf-output-sample__form-label">Trading in a vehicle?</label>
+                        <div class="fmstr-cmp-adf-output-sample__form-radios">
+                          <div
+                            class="fmstr-cmp-adf-output-sample__form-radio fmstr-cmp-adf-output-sample__form-radio--checked"
+                          >
+                            <span class="fmstr-cmp-adf-output-sample__form-radio-ring"></span>Yes
+                          </div>
+                          <div class="fmstr-cmp-adf-output-sample__form-radio">
+                            <span class="fmstr-cmp-adf-output-sample__form-radio-ring"></span>No
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="fmstr-cmp-adf-output-sample__form-field fmstr-cmp-adf-output-sample__form-field--full"
+                      >
+                        <label class="fmstr-cmp-adf-output-sample__form-label">Tell us more</label>
+                        <textarea class="fmstr-cmp-adf-output-sample__form-textarea" readonly="">
+Looking for a low-mileage AWD. Trading in a 2018 Honda CR-V, 62k miles, clean title.</textarea>
+                      </div>
+                    </div>
+
+                    <button
+                      class="fmstr-cmp-adf-output-sample__form-submit"
+                      type="button"
+                      style="height: 40px; width: 155px"
+                    >
+                      Send to dealer
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        style="width: 13px"
+                      >
+                        <path d="M22 2 11 13"></path>
+                        <path d="M22 2l-7 20-4-9-9-4 20-7z"></path>
+                      </svg>
+                    </button>
+                    <div class="fmstr-cmp-adf-output-sample__form-foot">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="12"
+                        height="12"
+                      >
+                        <rect width="18" height="11" x="3" y="11" rx="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                      </svg>
+                      Secure, powered by Formester
+                    </div>
+                  </div>
+                </div>
+
+                <div class="fmstr-cmp-adf-output-sample__pane fmstr-cmp-adf-output-sample__pane--right">
+                  <div class="fmstr-cmp-adf-output-sample__pane-head">
+                    <span class="fmstr-cmp-adf-output-sample__pane-label">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                      </svg>
+                      ADF/XML email body
+                    </span>
+                  </div>
+                  <div class="fmstr-cmp-adf-output-sample__xml-bar">
+                    <span class="fmstr-cmp-adf-output-sample__xml-file"
+                      >lead-2026-05-26.<span class="fmstr-cmp-adf-output-sample__xml-ext">xml</span></span
+                    >
+                    <span class="fmstr-cmp-adf-output-sample__xml-spacer"></span>
+                    <button
+                      class="fmstr-cmp-adf-output-sample__copy-btn"
+                      id="fmstr-cmp-adf-output-sample-copy"
+                      type="button"
+                      aria-label="Copy XML"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect width="14" height="14" x="8" y="8" rx="2"></rect>
+                        <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                      </svg>
+                      <span class="fmstr-cmp-adf-output-sample__copy-lbl">Copy</span>
+                    </button>
+                  </div>
+                  <pre
+                    class="fmstr-cmp-adf-output-sample__xml"
+                    id="fmstr-cmp-adf-output-sample-xml"
+                  ><span class="fmstr-cmp-adf-output-sample__xml-line"><span class="fmstr-cmp-adf-output-sample__xml-pi">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;</span><span class="fmstr-cmp-adf-output-sample__xml-tag">adf</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i1"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;</span><span class="fmstr-cmp-adf-output-sample__xml-tag">prospect</span> <span class="fmstr-cmp-adf-output-sample__xml-attr">status</span>=<span class="fmstr-cmp-adf-output-sample__xml-str">"new"</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i2"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;</span><span class="fmstr-cmp-adf-output-sample__xml-tag">requestdate</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span><span class="fmstr-cmp-adf-output-sample__xml-text">2026-05-26T14:32:11-05:00</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;/</span><span class="fmstr-cmp-adf-output-sample__xml-tag">requestdate</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i2"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;</span><span class="fmstr-cmp-adf-output-sample__xml-tag">vehicle</span> <span class="fmstr-cmp-adf-output-sample__xml-attr">interest</span>=<span class="fmstr-cmp-adf-output-sample__xml-str">"buy"</span> <span class="fmstr-cmp-adf-output-sample__xml-attr">status</span>=<span class="fmstr-cmp-adf-output-sample__xml-str">"used"</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i3"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;</span><span class="fmstr-cmp-adf-output-sample__xml-tag">year</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span><span class="fmstr-cmp-adf-output-sample__xml-text">2024</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;/</span><span class="fmstr-cmp-adf-output-sample__xml-tag">year</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i3"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;</span><span class="fmstr-cmp-adf-output-sample__xml-tag">make</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span><span class="fmstr-cmp-adf-output-sample__xml-text">Toyota</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;/</span><span class="fmstr-cmp-adf-output-sample__xml-tag">make</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i3"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;</span><span class="fmstr-cmp-adf-output-sample__xml-tag">model</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span><span class="fmstr-cmp-adf-output-sample__xml-text">RAV4</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;/</span><span class="fmstr-cmp-adf-output-sample__xml-tag">model</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i2"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;/</span><span class="fmstr-cmp-adf-output-sample__xml-tag">vehicle</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i2"><span class="fmstr-cmp-adf-output-sample__xml-cmt">&lt;!-- trade-in repeats the vehicle block --&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i2"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;</span><span class="fmstr-cmp-adf-output-sample__xml-tag">vehicle</span> <span class="fmstr-cmp-adf-output-sample__xml-attr">interest</span>=<span class="fmstr-cmp-adf-output-sample__xml-str">"trade-in"</span> <span class="fmstr-cmp-adf-output-sample__xml-attr">status</span>=<span class="fmstr-cmp-adf-output-sample__xml-str">"used"</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i3"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;</span><span class="fmstr-cmp-adf-output-sample__xml-tag">year</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span><span class="fmstr-cmp-adf-output-sample__xml-text">2018</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;/</span><span class="fmstr-cmp-adf-output-sample__xml-tag">year</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i3"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;</span><span class="fmstr-cmp-adf-output-sample__xml-tag">make</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span><span class="fmstr-cmp-adf-output-sample__xml-text">Honda</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;/</span><span class="fmstr-cmp-adf-output-sample__xml-tag">make</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i3"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;</span><span class="fmstr-cmp-adf-output-sample__xml-tag">model</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span><span class="fmstr-cmp-adf-output-sample__xml-text">CR-V</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;/</span><span class="fmstr-cmp-adf-output-sample__xml-tag">model</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i3"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;</span><span class="fmstr-cmp-adf-output-sample__xml-tag">odometer</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span><span class="fmstr-cmp-adf-output-sample__xml-text">62000</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;/</span><span class="fmstr-cmp-adf-output-sample__xml-tag">odometer</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i2"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;/</span><span class="fmstr-cmp-adf-output-sample__xml-tag">vehicle</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i2"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;</span><span class="fmstr-cmp-adf-output-sample__xml-tag">customer</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i3"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;</span><span class="fmstr-cmp-adf-output-sample__xml-tag">contact</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i4"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;</span><span class="fmstr-cmp-adf-output-sample__xml-tag">name</span> <span class="fmstr-cmp-adf-output-sample__xml-attr">part</span>=<span class="fmstr-cmp-adf-output-sample__xml-str">"first"</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span><span class="fmstr-cmp-adf-output-sample__xml-text">Jordan</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;/</span><span class="fmstr-cmp-adf-output-sample__xml-tag">name</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i4"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;</span><span class="fmstr-cmp-adf-output-sample__xml-tag">name</span> <span class="fmstr-cmp-adf-output-sample__xml-attr">part</span>=<span class="fmstr-cmp-adf-output-sample__xml-str">"last"</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span><span class="fmstr-cmp-adf-output-sample__xml-text">Reyes</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;/</span><span class="fmstr-cmp-adf-output-sample__xml-tag">name</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i4"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;</span><span class="fmstr-cmp-adf-output-sample__xml-tag">email</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span><span class="fmstr-cmp-adf-output-sample__xml-text">jordan.reyes@example.com</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;/</span><span class="fmstr-cmp-adf-output-sample__xml-tag">email</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i4"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;</span><span class="fmstr-cmp-adf-output-sample__xml-tag">phone</span> <span class="fmstr-cmp-adf-output-sample__xml-attr">type</span>=<span class="fmstr-cmp-adf-output-sample__xml-str">"voice"</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span><span class="fmstr-cmp-adf-output-sample__xml-text">(512) 555-0143</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;/</span><span class="fmstr-cmp-adf-output-sample__xml-tag">phone</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i4"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;</span><span class="fmstr-cmp-adf-output-sample__xml-tag">address</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i4">  <span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;</span><span class="fmstr-cmp-adf-output-sample__xml-tag">postalcode</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span><span class="fmstr-cmp-adf-output-sample__xml-text">78704</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;/</span><span class="fmstr-cmp-adf-output-sample__xml-tag">postalcode</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i4"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;/</span><span class="fmstr-cmp-adf-output-sample__xml-tag">address</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i3"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;/</span><span class="fmstr-cmp-adf-output-sample__xml-tag">contact</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i3"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;</span><span class="fmstr-cmp-adf-output-sample__xml-tag">comments</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span><span class="fmstr-cmp-adf-output-sample__xml-text">Looking for a low-mileage AWD. Trading in a 2018 Honda CR-V, 62k miles, clean title.</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;/</span><span class="fmstr-cmp-adf-output-sample__xml-tag">comments</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i2"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;/</span><span class="fmstr-cmp-adf-output-sample__xml-tag">customer</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i2"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;</span><span class="fmstr-cmp-adf-output-sample__xml-tag">vendor</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i3"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;</span><span class="fmstr-cmp-adf-output-sample__xml-tag">vendorname</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span><span class="fmstr-cmp-adf-output-sample__xml-text">Hill Country Toyota</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;/</span><span class="fmstr-cmp-adf-output-sample__xml-tag">vendorname</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i2"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;/</span><span class="fmstr-cmp-adf-output-sample__xml-tag">vendor</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line fmstr-cmp-adf-output-sample__xml-line--i1"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;/</span><span class="fmstr-cmp-adf-output-sample__xml-tag">prospect</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span><span class="fmstr-cmp-adf-output-sample__xml-line"><span class="fmstr-cmp-adf-output-sample__xml-bracket">&lt;/</span><span class="fmstr-cmp-adf-output-sample__xml-tag">adf</span><span class="fmstr-cmp-adf-output-sample__xml-bracket">&gt;</span></span></pre>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-component-item">
+      <div class="raw-html-content">
+        <div class="raw-html-embed">
+          <section
+            class="fmstr-cmp-adf-setup-steps"
+            id="fmstr-cmp-adf-setup-steps"
+            aria-labelledby="fmstr-cmp-adf-setup-steps-h2"
+          >
+            <div class="fmstr-cmp-adf-setup-steps__container">
+              <div class="fmstr-cmp-adf-setup-steps__header">
+                <span class="fmstr-cmp-adf-setup-steps__eyebrow">Setup</span>
+                <h2 class="fmstr-cmp-adf-setup-steps__h2" id="fmstr-cmp-adf-setup-steps-h2">
+                  Three steps. Once. Then it runs.
+                </h2>
+                <p class="fmstr-cmp-adf-setup-steps__sub">
+                  Build the form, paste your CRM's intake email, map fields and test. Per-CRM walkthroughs
+                  (VinSolutions, DealerSocket, CDK, others) live in the docs.
+                </p>
+              </div>
+
+              <div class="fmstr-cmp-adf-setup-steps__grid">
+                <article class="fmstr-cmp-adf-setup-steps__card">
+                  <div class="fmstr-cmp-adf-setup-steps__thumb">
+                    <div class="fmstr-cmp-adf-setup-steps__win">
+                      <div class="fmstr-cmp-adf-setup-steps__win-top">
+                        <span class="fmstr-cmp-adf-setup-steps__win-brand"
+                          ><span class="fmstr-cmp-adf-setup-steps__win-mark"></span>Formester</span
+                        >
+                        <span class="fmstr-cmp-adf-setup-steps__win-tabs">
+                          <span class="fmstr-cmp-adf-setup-steps__win-tab fmstr-cmp-adf-setup-steps__win-tab--active"
+                            >Build</span
+                          >
+                          <span class="fmstr-cmp-adf-setup-steps__win-tab">Results</span>
+                          <span class="fmstr-cmp-adf-setup-steps__win-tab">Automate</span>
+                        </span>
+                      </div>
+                      <div class="fmstr-cmp-adf-setup-steps__win-stage">
+                        <div class="fmstr-cmp-adf-setup-steps__formprev">
+                          <div class="fmstr-cmp-adf-setup-steps__formprev-row">
+                            <div class="fmstr-cmp-adf-setup-steps__formprev-f">
+                              <span class="fmstr-cmp-adf-setup-steps__formprev-l">First name</span
+                              ><span
+                                class="fmstr-cmp-adf-setup-steps__formprev-i fmstr-cmp-adf-setup-steps__formprev-i--filled"
+                                >Jordan</span
+                              >
+                            </div>
+                            <div class="fmstr-cmp-adf-setup-steps__formprev-f">
+                              <span class="fmstr-cmp-adf-setup-steps__formprev-l">Last name</span
+                              ><span
+                                class="fmstr-cmp-adf-setup-steps__formprev-i fmstr-cmp-adf-setup-steps__formprev-i--filled"
+                                >Reyes</span
+                              >
+                            </div>
+                          </div>
+                          <div class="fmstr-cmp-adf-setup-steps__formprev-f">
+                            <span class="fmstr-cmp-adf-setup-steps__formprev-l">Email</span
+                            ><span
+                              class="fmstr-cmp-adf-setup-steps__formprev-i fmstr-cmp-adf-setup-steps__formprev-i--filled"
+                              >jordan.reyes@example.com</span
+                            >
+                          </div>
+                          <div class="fmstr-cmp-adf-setup-steps__formprev-f">
+                            <span class="fmstr-cmp-adf-setup-steps__formprev-l">Vehicle of interest</span
+                            ><span class="fmstr-cmp-adf-setup-steps__formprev-i">2024 Toyota RAV4 · Used</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fmstr-cmp-adf-setup-steps__body">
+                    <span class="fmstr-cmp-adf-setup-steps__num">01</span>
+                    <h3 class="fmstr-cmp-adf-setup-steps__h3">Build the form</h3>
+                    <p class="fmstr-cmp-adf-setup-steps__p">
+                      Drag in the fields your sales floor actually needs: name, contact, vehicle interest, trade-in,
+                      ZIP. Same Formester builder you would use for any other form.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="fmstr-cmp-adf-setup-steps__card">
+                  <div class="fmstr-cmp-adf-setup-steps__thumb">
+                    <div class="fmstr-cmp-adf-setup-steps__win">
+                      <div class="fmstr-cmp-adf-setup-steps__win-top">
+                        <span class="fmstr-cmp-adf-setup-steps__win-brand"
+                          ><span class="fmstr-cmp-adf-setup-steps__win-mark"></span>Formester</span
+                        >
+                        <span class="fmstr-cmp-adf-setup-steps__win-tabs">
+                          <span class="fmstr-cmp-adf-setup-steps__win-tab">Build</span>
+                          <span class="fmstr-cmp-adf-setup-steps__win-tab">Results</span>
+                          <span class="fmstr-cmp-adf-setup-steps__win-tab fmstr-cmp-adf-setup-steps__win-tab--active"
+                            >Automate</span
+                          >
+                        </span>
+                      </div>
+                      <div class="fmstr-cmp-adf-setup-steps__win-sub">
+                        <span class="fmstr-cmp-adf-setup-steps__win-crumb">Automate</span>
+                        <span class="fmstr-cmp-adf-setup-steps__win-crumb"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline></svg
+                          >Integrations</span
+                        >
+                        <span class="fmstr-cmp-adf-setup-steps__win-crumb fmstr-cmp-adf-setup-steps__win-crumb--active"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline></svg
+                          >Connection</span
+                        >
+                      </div>
+                      <div class="fmstr-cmp-adf-setup-steps__win-stage">
+                        <div class="fmstr-cmp-adf-setup-steps__panel">
+                          <div class="fmstr-cmp-adf-setup-steps__panel-h">
+                            <span class="fmstr-cmp-adf-setup-steps__panel-badge"
+                              ><svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                <path d="m22 7-10 5L2 7"></path></svg
+                            ></span>
+                            Connect your CRM
+                          </div>
+                          <div class="fmstr-cmp-adf-setup-steps__fld">
+                            <span class="fmstr-cmp-adf-setup-steps__fld-lab">CRM intake email</span>
+                            <span class="fmstr-cmp-adf-setup-steps__fld-inp fmstr-cmp-adf-setup-steps__fld-inp--focus"
+                              >leads@crm.hillcountrytoyota.com<span class="fmstr-cmp-adf-setup-steps__caret"></span
+                            ></span>
+                          </div>
+                          <div class="fmstr-cmp-adf-setup-steps__fld">
+                            <span class="fmstr-cmp-adf-setup-steps__fld-lab">Send from</span>
+                            <span class="fmstr-cmp-adf-setup-steps__fld-inp"
+                              >forms@hillcountrytoyota.com (SMTP)
+                              <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              >
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fmstr-cmp-adf-setup-steps__body">
+                    <span class="fmstr-cmp-adf-setup-steps__num">02</span>
+                    <h3 class="fmstr-cmp-adf-setup-steps__h3">Paste your CRM intake email</h3>
+                    <p class="fmstr-cmp-adf-setup-steps__p">
+                      Open <em>Automate, Integrations, Automotive CRM</em>. Paste the CRM intake email. Connect SMTP so
+                      leads send from your own domain.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="fmstr-cmp-adf-setup-steps__card">
+                  <div class="fmstr-cmp-adf-setup-steps__thumb">
+                    <div class="fmstr-cmp-adf-setup-steps__win">
+                      <div class="fmstr-cmp-adf-setup-steps__win-top">
+                        <span class="fmstr-cmp-adf-setup-steps__win-brand"
+                          ><span class="fmstr-cmp-adf-setup-steps__win-mark"></span>Formester</span
+                        >
+                        <span class="fmstr-cmp-adf-setup-steps__win-tabs">
+                          <span class="fmstr-cmp-adf-setup-steps__win-tab">Build</span>
+                          <span class="fmstr-cmp-adf-setup-steps__win-tab">Results</span>
+                          <span class="fmstr-cmp-adf-setup-steps__win-tab fmstr-cmp-adf-setup-steps__win-tab--active"
+                            >Automate</span
+                          >
+                        </span>
+                      </div>
+                      <div class="fmstr-cmp-adf-setup-steps__win-sub">
+                        <span class="fmstr-cmp-adf-setup-steps__win-crumb">Integrations</span>
+                        <span class="fmstr-cmp-adf-setup-steps__win-crumb"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline></svg
+                          >Field mapping</span
+                        >
+                        <span class="fmstr-cmp-adf-setup-steps__win-crumb fmstr-cmp-adf-setup-steps__win-crumb--active"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline></svg
+                          >Preview</span
+                        >
+                      </div>
+                      <div class="fmstr-cmp-adf-setup-steps__win-stage">
+                        <div class="fmstr-cmp-adf-setup-steps__panel">
+                          <div class="fmstr-cmp-adf-setup-steps__map">
+                            <div class="fmstr-cmp-adf-setup-steps__map-h">
+                              <span>Form field</span><span></span><span>ADF node</span>
+                            </div>
+                            <div class="fmstr-cmp-adf-setup-steps__map-row">
+                              <span class="fmstr-cmp-adf-setup-steps__map-src">First name</span>
+                              <span class="fmstr-cmp-adf-setup-steps__map-arrow"
+                                ><svg
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path d="M5 12h14"></path>
+                                  <path d="m12 5 7 7-7 7"></path></svg
+                              ></span>
+                              <span class="fmstr-cmp-adf-setup-steps__map-dst">name[first]</span>
+                            </div>
+                            <div class="fmstr-cmp-adf-setup-steps__map-row">
+                              <span class="fmstr-cmp-adf-setup-steps__map-src">Email</span>
+                              <span class="fmstr-cmp-adf-setup-steps__map-arrow"
+                                ><svg
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path d="M5 12h14"></path>
+                                  <path d="m12 5 7 7-7 7"></path></svg
+                              ></span>
+                              <span class="fmstr-cmp-adf-setup-steps__map-dst">contact/email</span>
+                            </div>
+                            <div class="fmstr-cmp-adf-setup-steps__map-row">
+                              <span class="fmstr-cmp-adf-setup-steps__map-src">Vehicle (Used)</span>
+                              <span class="fmstr-cmp-adf-setup-steps__map-arrow"
+                                ><svg
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path d="M5 12h14"></path>
+                                  <path d="m12 5 7 7-7 7"></path></svg
+                              ></span>
+                              <span class="fmstr-cmp-adf-setup-steps__map-dst">vehicle[status="used"]</span>
+                            </div>
+                            <div class="fmstr-cmp-adf-setup-steps__map-row">
+                              <span class="fmstr-cmp-adf-setup-steps__map-src">"SUV"</span>
+                              <span class="fmstr-cmp-adf-setup-steps__map-arrow"
+                                ><svg
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                >
+                                  <path d="M5 12h14"></path>
+                                  <path d="m12 5 7 7-7 7"></path></svg
+                              ></span>
+                              <span class="fmstr-cmp-adf-setup-steps__map-dst">bodystyle</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fmstr-cmp-adf-setup-steps__body">
+                    <span class="fmstr-cmp-adf-setup-steps__num">03</span>
+                    <h3 class="fmstr-cmp-adf-setup-steps__h3">Map fields and test</h3>
+                    <p class="fmstr-cmp-adf-setup-steps__p">
+                      Drop your form questions onto ADF nodes. Translate values where they differ (<code>"SUV"</code> to
+                      <code>bodystyle</code>). Send a test lead. Save.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-component-item">
+      <div class="raw-html-content">
+        <div class="raw-html-embed">
+          <section
+            class="fmstr-cmp-adf-vs-alternatives"
+            id="fmstr-cmp-adf-vs-alternatives"
+            aria-labelledby="fmstr-cmp-adf-vs-alternatives-h2"
+          >
+            <div class="fmstr-cmp-adf-vs-alternatives__container">
+              <div class="fmstr-cmp-adf-vs-alternatives__header">
+                <span class="fmstr-cmp-adf-vs-alternatives__eyebrow">Why Formester</span>
+                <h2 class="fmstr-cmp-adf-vs-alternatives__h2" id="fmstr-cmp-adf-vs-alternatives-h2">
+                  Formester, vs Zapier, vs a BDC rep retyping leads.
+                </h2>
+                <p class="fmstr-cmp-adf-vs-alternatives__sub">
+                  The three ways dealerships move web leads into a CRM today. Side by side, on what actually matters at
+                  the end of the month.
+                </p>
+              </div>
+
+              <div class="fmstr-cmp-adf-vs-alternatives__table-wrap">
+                <table class="fmstr-cmp-adf-vs-alternatives__table">
+                  <thead>
+                    <tr>
+                      <th
+                        scope="col"
+                        class="fmstr-cmp-adf-vs-alternatives__th-row"
+                        style="background: var(--c-bg-soft)"
+                      >
+                        Capability
+                      </th>
+                      <th scope="col" class="fmstr-cmp-adf-vs-alternatives__th-formester">Formester</th>
+                      <th scope="col">Zapier chain</th>
+                      <th scope="col">Manual entry</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row" class="fmstr-cmp-adf-vs-alternatives__th-row">
+                        <span class="fmstr-cmp-adf-vs-alternatives__row-label">Per-lead cost</span>
+                        <span class="fmstr-cmp-adf-vs-alternatives__row-hint"
+                          >What this costs as lead volume scales.</span
+                        >
+                      </th>
+                      <td class="fmstr-cmp-adf-vs-alternatives__cell--us">
+                        <span
+                          class="fmstr-cmp-adf-vs-alternatives__cell-pill fmstr-cmp-adf-vs-alternatives__cell-pill--ok"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <polyline points="20 6 9 17 4 12"></polyline></svg
+                          >Flat plan</span
+                        >
+                        <div class="fmstr-cmp-adf-vs-alternatives__cell-body">
+                          No per-lead fee. Volume on a Friday does not surprise you on the invoice.
+                        </div>
+                      </td>
+                      <td>
+                        <span
+                          class="fmstr-cmp-adf-vs-alternatives__cell-pill fmstr-cmp-adf-vs-alternatives__cell-pill--bad"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <line x1="18" x2="6" y1="6" y2="18"></line>
+                            <line x1="6" x2="18" y1="6" y2="18"></line></svg
+                          >Per-task</span
+                        >
+                        <div class="fmstr-cmp-adf-vs-alternatives__cell-body">
+                          Each step counts, code steps cost more, volume on a Friday stings.
+                        </div>
+                      </td>
+                      <td>
+                        <span
+                          class="fmstr-cmp-adf-vs-alternatives__cell-pill fmstr-cmp-adf-vs-alternatives__cell-pill--meh"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" x2="12" y1="8" y2="12"></line>
+                            <line x1="12" x2="12.01" y1="16" y2="16"></line></svg
+                          >BDC time</span
+                        >
+                        <div class="fmstr-cmp-adf-vs-alternatives__cell-body">
+                          Paid in hours. Always more than you think once you measure it.
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row" class="fmstr-cmp-adf-vs-alternatives__th-row">
+                        <span class="fmstr-cmp-adf-vs-alternatives__row-label">Real ADF/XML format</span>
+                        <span class="fmstr-cmp-adf-vs-alternatives__row-hint"
+                          >Does the lead land as a structured ADF prospect?</span
+                        >
+                      </th>
+                      <td class="fmstr-cmp-adf-vs-alternatives__cell--us">
+                        <span
+                          class="fmstr-cmp-adf-vs-alternatives__cell-pill fmstr-cmp-adf-vs-alternatives__cell-pill--ok"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <polyline points="20 6 9 17 4 12"></polyline></svg
+                          >Native</span
+                        >
+                        <div class="fmstr-cmp-adf-vs-alternatives__cell-body">
+                          Spec-conformant <code>&lt;adf&gt;</code> email. Your CRM parses it as a real prospect.
+                        </div>
+                      </td>
+                      <td>
+                        <span
+                          class="fmstr-cmp-adf-vs-alternatives__cell-pill fmstr-cmp-adf-vs-alternatives__cell-pill--bad"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <line x1="18" x2="6" y1="6" y2="18"></line>
+                            <line x1="6" x2="18" y1="6" y2="18"></line></svg
+                          >JSON in email</span
+                        >
+                        <div class="fmstr-cmp-adf-vs-alternatives__cell-body">
+                          Sends JSON in the body or attached as a file. Most CRMs ignore it.
+                        </div>
+                      </td>
+                      <td>
+                        <span
+                          class="fmstr-cmp-adf-vs-alternatives__cell-pill fmstr-cmp-adf-vs-alternatives__cell-pill--bad"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <line x1="18" x2="6" y1="6" y2="18"></line>
+                            <line x1="6" x2="18" y1="6" y2="18"></line></svg
+                          >Free text</span
+                        >
+                        <div class="fmstr-cmp-adf-vs-alternatives__cell-body">
+                          Vehicle, trade-in, ZIP, everything ends up smushed in a single notes field.
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row" class="fmstr-cmp-adf-vs-alternatives__th-row">
+                        <span class="fmstr-cmp-adf-vs-alternatives__row-label">Value mapping</span>
+                        <span class="fmstr-cmp-adf-vs-alternatives__row-hint"
+                          >Translate form answers to ADF values.</span
+                        >
+                      </th>
+                      <td class="fmstr-cmp-adf-vs-alternatives__cell--us">
+                        <span
+                          class="fmstr-cmp-adf-vs-alternatives__cell-pill fmstr-cmp-adf-vs-alternatives__cell-pill--ok"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <polyline points="20 6 9 17 4 12"></polyline></svg
+                          >Built in</span
+                        >
+                        <div class="fmstr-cmp-adf-vs-alternatives__cell-body">
+                          Map <code>"SUV"</code> to <code>vehicle status="used"</code> on the same screen, no code step.
+                        </div>
+                      </td>
+                      <td>
+                        <span
+                          class="fmstr-cmp-adf-vs-alternatives__cell-pill fmstr-cmp-adf-vs-alternatives__cell-pill--meh"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" x2="12" y1="8" y2="12"></line>
+                            <line x1="12" x2="12.01" y1="16" y2="16"></line></svg
+                          >Code step</span
+                        >
+                        <div class="fmstr-cmp-adf-vs-alternatives__cell-body">
+                          A formatter or Code-by-Zapier step per translation. One per CRM, per form.
+                        </div>
+                      </td>
+                      <td>
+                        <span
+                          class="fmstr-cmp-adf-vs-alternatives__cell-pill fmstr-cmp-adf-vs-alternatives__cell-pill--meh"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" x2="12" y1="8" y2="12"></line>
+                            <line x1="12" x2="12.01" y1="16" y2="16"></line></svg
+                          >BDC judgement</span
+                        >
+                        <div class="fmstr-cmp-adf-vs-alternatives__cell-body">
+                          Whichever BDC rep is on call decides what the answer maps to.
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row" class="fmstr-cmp-adf-vs-alternatives__th-row">
+                        <span class="fmstr-cmp-adf-vs-alternatives__row-label">Send from your domain</span>
+                        <span class="fmstr-cmp-adf-vs-alternatives__row-hint"
+                          >Does the lead leave from your dealership's email server?</span
+                        >
+                      </th>
+                      <td class="fmstr-cmp-adf-vs-alternatives__cell--us">
+                        <span
+                          class="fmstr-cmp-adf-vs-alternatives__cell-pill fmstr-cmp-adf-vs-alternatives__cell-pill--ok"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <polyline points="20 6 9 17 4 12"></polyline></svg
+                          >SMTP</span
+                        >
+                        <div class="fmstr-cmp-adf-vs-alternatives__cell-body">
+                          Google Workspace, Microsoft 365, SendGrid, Postmark, anything that speaks SMTP.
+                        </div>
+                      </td>
+                      <td>
+                        <span
+                          class="fmstr-cmp-adf-vs-alternatives__cell-pill fmstr-cmp-adf-vs-alternatives__cell-pill--meh"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" x2="12" y1="8" y2="12"></line>
+                            <line x1="12" x2="12.01" y1="16" y2="16"></line></svg
+                          >Shared sender</span
+                        >
+                        <div class="fmstr-cmp-adf-vs-alternatives__cell-body">
+                          Default sender is a shared Zapier address. Custom domain takes extra setup.
+                        </div>
+                      </td>
+                      <td>
+                        <span
+                          class="fmstr-cmp-adf-vs-alternatives__cell-pill fmstr-cmp-adf-vs-alternatives__cell-pill--ok"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <polyline points="20 6 9 17 4 12"></polyline></svg
+                          >Yes</span
+                        >
+                        <div class="fmstr-cmp-adf-vs-alternatives__cell-body">
+                          Comes from whichever rep typed it. Useful but not consistent.
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row" class="fmstr-cmp-adf-vs-alternatives__th-row">
+                        <span class="fmstr-cmp-adf-vs-alternatives__row-label">BCC managers</span>
+                        <span class="fmstr-cmp-adf-vs-alternatives__row-hint"
+                          >Loop in sales managers automatically.</span
+                        >
+                      </th>
+                      <td class="fmstr-cmp-adf-vs-alternatives__cell--us">
+                        <span
+                          class="fmstr-cmp-adf-vs-alternatives__cell-pill fmstr-cmp-adf-vs-alternatives__cell-pill--ok"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <polyline points="20 6 9 17 4 12"></polyline></svg
+                          >Per-form</span
+                        >
+                        <div class="fmstr-cmp-adf-vs-alternatives__cell-body">
+                          Add BCC addresses on each form. Sent on every lead, no human in the loop.
+                        </div>
+                      </td>
+                      <td>
+                        <span
+                          class="fmstr-cmp-adf-vs-alternatives__cell-pill fmstr-cmp-adf-vs-alternatives__cell-pill--meh"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" x2="12" y1="8" y2="12"></line>
+                            <line x1="12" x2="12.01" y1="16" y2="16"></line></svg
+                          >Extra step</span
+                        >
+                        <div class="fmstr-cmp-adf-vs-alternatives__cell-body">
+                          Second Zap or a duplicate path. More tasks billed, more places to break.
+                        </div>
+                      </td>
+                      <td>
+                        <span
+                          class="fmstr-cmp-adf-vs-alternatives__cell-pill fmstr-cmp-adf-vs-alternatives__cell-pill--bad"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <line x1="18" x2="6" y1="6" y2="18"></line>
+                            <line x1="6" x2="18" y1="6" y2="18"></line></svg
+                          >Forwarded</span
+                        >
+                        <div class="fmstr-cmp-adf-vs-alternatives__cell-body">
+                          The BDC rep remembers to forward. Sometimes.
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row" class="fmstr-cmp-adf-vs-alternatives__th-row">
+                        <span class="fmstr-cmp-adf-vs-alternatives__row-label">Setup time</span>
+                        <span class="fmstr-cmp-adf-vs-alternatives__row-hint"
+                          >From signed-up to first lead in CRM.</span
+                        >
+                      </th>
+                      <td class="fmstr-cmp-adf-vs-alternatives__cell--us">
+                        <span
+                          class="fmstr-cmp-adf-vs-alternatives__cell-pill fmstr-cmp-adf-vs-alternatives__cell-pill--ok"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <polyline points="20 6 9 17 4 12"></polyline></svg
+                          >Minutes</span
+                        >
+                        <div class="fmstr-cmp-adf-vs-alternatives__cell-body">
+                          Build form, paste intake email, map and test. Once per CRM, then it runs.
+                        </div>
+                      </td>
+                      <td>
+                        <span
+                          class="fmstr-cmp-adf-vs-alternatives__cell-pill fmstr-cmp-adf-vs-alternatives__cell-pill--meh"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" x2="12" y1="8" y2="12"></line>
+                            <line x1="12" x2="12.01" y1="16" y2="16"></line></svg
+                          >Hours per Zap</span
+                        >
+                        <div class="fmstr-cmp-adf-vs-alternatives__cell-body">
+                          Triggers, formatters, value translations, sender setup, then test on the right CRM.
+                        </div>
+                      </td>
+                      <td>
+                        <span
+                          class="fmstr-cmp-adf-vs-alternatives__cell-pill fmstr-cmp-adf-vs-alternatives__cell-pill--ok"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <polyline points="20 6 9 17 4 12"></polyline></svg
+                          >None</span
+                        >
+                        <div class="fmstr-cmp-adf-vs-alternatives__cell-body">
+                          No setup. Cost surfaces as ongoing salary instead.
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p class="fmstr-cmp-adf-vs-alternatives__foot">
+                Compliance covered the same way across all three: GDPR, UK GDPR, and CCPA. Data delivered over TLS.
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <RawHtml :markup="c7_markup" :useContainer="false" class="page-component-item" />
+
+    <RawHtml :markup="c8_markup" :useContainer="false" class="page-component-item" />
+  </div>
+</template>
+
+<script setup>
+import RawHtml from '@/components/strapi/RawHtml.vue'
+
+const c7_markup =
+  '<div class="raw-html-embed">\u003Cscript type="application/ld+json">\n{\n  "@context": "https://schema.org",\n  "@type": "FAQPage",\n  "mainEntity": [\n    {\n      "@type": "Question",\n      "name": "What is ADF/XML, and why do automotive CRMs use it?",\n      "acceptedAnswer": {\n        "@type": "Answer",\n        "text": "ADF, the Auto-lead Data Format, is the XML schema the automotive industry settled on for moving sales leads between websites and CRMs. A lead is sent as an email with the XML in the body or as an attachment. Every dealership-grade CRM has an intake address that parses these emails and creates a prospect record from the XML."\n      }\n    },\n    {\n      "@type": "Question",\n      "name": "My CRM isn\'t listed. Will it still work?",\n      "acceptedAnswer": {\n        "@type": "Answer",\n        "text": "Yes if it accepts ADF/XML lead emails. Formester sends to the format, not the brand. Email support@formester.com with the CRM name and we will confirm within one business day."\n      }\n    },\n    {\n      "@type": "Question",\n      "name": "Which automotive CRMs does Formester integrate with?",\n      "acceptedAnswer": {\n        "@type": "Answer",\n        "text": "Every automotive CRM that accepts ADF/XML lead emails. That includes VinSolutions, DealerSocket, CDK Global, Reynolds and Reynolds, DriveCentric, ProMax, Keyloop, AutoRaptor, eLEAD, and others. The integration is to the format, not the brand, so new CRMs work the moment they expose an ADF intake email."\n      }\n    },\n    {\n      "@type": "Question",\n      "name": "Do I need a separate dealership CRM integration for each system?",\n      "acceptedAnswer": {\n        "@type": "Answer",\n        "text": "No. The integration is one ADF/XML connector, configured per form. Switching from VinSolutions to DealerSocket means changing one email address in the form\'s automation settings."\n      }\n    },\n    {\n      "@type": "Question",\n      "name": "Can I send from my own email domain?",\n      "acceptedAnswer": {\n        "@type": "Answer",\n        "text": "Yes, through SMTP. Connect your dealership\'s outbound mail server (Google Workspace, Microsoft 365, SendGrid, Postmark, anything that speaks SMTP). Every ADF lead leaves your server signed by your domain, which keeps you off shared IP reputations and out of the spam folder."\n      }\n    },\n    {\n      "@type": "Question",\n      "name": "How do I find my CRM\'s intake email?",\n      "acceptedAnswer": {\n        "@type": "Answer",\n        "text": "Usually under Lead Sources, Lead Routing, or ADF Integrations in admin settings. The fastest path is to ask your CRM provider\'s support team for your ADF lead intake email address. Per-CRM walkthroughs live in the Formester docs."\n      }\n    }\n  ]\n}\n\u003C/script>\n\u003Cstyle>\n@import url(\'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap\');\n/* host-link-override */\n.fmstr-cmp-adf-faq a { text-decoration: none !important; color: inherit !important; }\n.fmstr-cmp-adf-faq {\n  --c-fg-1: #101828; --c-fg-2: #475467; --c-fg-3: #697586;\n  --c-fg-strong: #344054; --c-fg-muted: #98a2b3;\n  --c-violet-500: #7f56d9; --c-violet-600: #6941c6; --c-violet-700: #5b34b1;\n  --c-violet-300: #b692f6; --c-tint: #f7f3ff; --c-edge: #e4d7ff;\n  --c-border: #eaecf0;\n  --c-bg-card: #ffffff; --c-bg-soft: #f9fafb; --c-bg-soft2: #f2f4f7;\n  --c-chip-bg: #f4f4f7;\n  --c-shadow-xs: 0 1px 2px rgba(16,24,40,.04);\n  background: var(--c-bg-soft);\n  border-top: 1px solid var(--c-border);\n  border-bottom: 1px solid var(--c-border);\n  padding: 104px 0;\n  font-family: \'Inter\', system-ui, sans-serif;\n  color: var(--c-fg-1);\n}\n.fmstr-cmp-adf-faq *, .fmstr-cmp-adf-faq *::before, .fmstr-cmp-adf-faq *::after { box-sizing: border-box; }\n.fmstr-cmp-adf-faq__container { max-width: 820px; margin: 0 auto; padding: 0 32px; }\n.fmstr-cmp-adf-faq__header { text-align: center; max-width: 760px; margin: 0 auto 40px; }\n.fmstr-cmp-adf-faq__eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 4px 10px 4px 8px; border-radius: 999px; background: var(--c-tint); color: var(--c-violet-700); font-size: 12px; font-weight: 600; letter-spacing: 0.02em; margin-bottom: 16px; }\n.fmstr-cmp-adf-faq__eyebrow::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--c-violet-500); }\n.fmstr-cmp-adf-faq__h2 { font-size: clamp(28px, 3.4vw, 40px); line-height: 1.12; letter-spacing: -0.022em; font-weight: 600; color: var(--c-fg-1); margin: 0 0 14px; text-wrap: balance; }\n.fmstr-cmp-adf-faq__sub { font-size: 17px; line-height: 26px; color: var(--c-fg-2); margin: 0 auto; max-width: 640px; text-wrap: pretty; }\n.fmstr-cmp-adf-faq__list { display: flex; flex-direction: column; gap: 12px; }\n.fmstr-cmp-adf-faq__item { background: var(--c-bg-card); border: 1px solid var(--c-border); border-radius: 14px; box-shadow: var(--c-shadow-xs); overflow: hidden; }\n.fmstr-cmp-adf-faq__item > summary { padding: 18px 22px; cursor: pointer; font-weight: 600; font-size: 16.5px; color: var(--c-fg-1); display: flex; align-items: center; gap: 14px; list-style: none; }\n.fmstr-cmp-adf-faq__item > summary::-webkit-details-marker { display: none; }\n.fmstr-cmp-adf-faq__item > summary::before { content: ""; width: 28px; height: 28px; border-radius: 8px; flex-shrink: 0; background-color: var(--c-chip-bg); background-image: url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'14\' height=\'14\' viewBox=\'0 0 14 14\' fill=\'none\' stroke=\'%2375747f\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3E%3Cpath d=\'M3 5l4 4 4-4\'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: center; transition: transform .15s ease, background-color .15s ease; }\n.fmstr-cmp-adf-faq__item[open] > summary::before { transform: rotate(180deg); background-color: var(--c-tint); background-image: url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'14\' height=\'14\' viewBox=\'0 0 14 14\' fill=\'none\' stroke=\'%236941c6\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3E%3Cpath d=\'M3 5l4 4 4-4\'/%3E%3C/svg%3E"); }\n.fmstr-cmp-adf-faq__item[open] > summary { color: var(--c-violet-600); }\n.fmstr-cmp-adf-faq__h3 { font-weight: 600; font-size: 16.5px; color: inherit; margin: 0; flex: 1; letter-spacing: -0.01em; }\n.fmstr-cmp-adf-faq__answer { padding: 0 22px 22px 64px; color: var(--c-fg-2); font-size: 15.5px; line-height: 1.7; }\n.fmstr-cmp-adf-faq__answer p { margin: 0 0 10px; }\n.fmstr-cmp-adf-faq__answer p:last-child { margin-bottom: 0; }\n.fmstr-cmp-adf-faq__answer a { color: var(--c-violet-600) !important; text-decoration: none !important; font-weight: 500; }\n.fmstr-cmp-adf-faq__answer a:hover { text-decoration: underline !important; color: var(--c-violet-700) !important; }\n.fmstr-cmp-adf-faq__contact { margin-top: 28px; padding: 18px 22px; border: 1px solid var(--c-border); border-radius: 12px; background: var(--c-bg-card); display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }\n.fmstr-cmp-adf-faq__contact-text { color: var(--c-fg-2); font-size: 14px; line-height: 21px; }\n.fmstr-cmp-adf-faq__contact-text b { color: var(--c-fg-1); font-weight: 600; }\n.fmstr-cmp-adf-faq__contact a { color: var(--c-violet-600) !important; text-decoration: none !important; font-weight: 600; font-size: 14px; }\n.fmstr-cmp-adf-faq__contact a:hover { text-decoration: underline !important; color: var(--c-violet-700) !important; }\n@media (max-width: 760px) {\n  .fmstr-cmp-adf-faq { padding: 72px 0; }\n  .fmstr-cmp-adf-faq__container { padding: 0 20px; }\n  .fmstr-cmp-adf-faq__item > summary { padding: 16px; font-size: 15.5px; gap: 12px; }\n  .fmstr-cmp-adf-faq__item > summary::before { width: 26px; height: 26px; }\n  .fmstr-cmp-adf-faq__answer { padding: 0 16px 18px 16px; font-size: 15px; line-height: 1.65; }\n  .fmstr-cmp-adf-faq__h3 { font-size: 15.5px; }\n}\n\u003C/style>\n\n<section class="fmstr-cmp-adf-faq" id="fmstr-cmp-adf-faq" aria-labelledby="fmstr-cmp-adf-faq-h2">\n  <div class="fmstr-cmp-adf-faq__container">\n    <div class="fmstr-cmp-adf-faq__header">\n      <span class="fmstr-cmp-adf-faq__eyebrow">FAQ</span>\n      <h2 class="fmstr-cmp-adf-faq__h2" id="fmstr-cmp-adf-faq-h2">Questions buyers actually ask.</h2>\n      <p class="fmstr-cmp-adf-faq__sub">Six questions we get from every dealership and lead vendor. Anything else, write to us directly.</p>\n    </div>\n\n    <div class="fmstr-cmp-adf-faq__list">\n\n      <details class="fmstr-cmp-adf-faq__item" open="">\n        <summary>\n          <h3 class="fmstr-cmp-adf-faq__h3">What is ADF/XML, and why do automotive CRMs use it?</h3>\n        </summary>\n        <div class="fmstr-cmp-adf-faq__answer">\n          <p>ADF, the Auto-lead Data Format, is the XML schema the automotive industry settled on for moving sales leads between websites and CRMs. A lead is sent as an email with the XML in the body or as an attachment.</p>\n          <p>Every dealership-grade CRM has an intake address that parses these emails and creates a prospect record from the XML. It is not a new protocol, it is the one your CRM already speaks.</p>\n        </div>\n      </details>\n\n      <details class="fmstr-cmp-adf-faq__item">\n        <summary>\n          <h3 class="fmstr-cmp-adf-faq__h3">My CRM isn\'t listed. Will it still work?</h3>\n        </summary>\n        <div class="fmstr-cmp-adf-faq__answer">\n          <p>Yes if it accepts ADF/XML lead emails. Formester sends to the format, not the brand, so almost every dealership-grade CRM works.</p>\n          <p>Email <a href="mailto:support@formester.com">support@formester.com</a> with the CRM name and we will confirm within one business day.</p>\n        </div>\n      </details>\n\n      <details class="fmstr-cmp-adf-faq__item">\n        <summary>\n          <h3 class="fmstr-cmp-adf-faq__h3">Which automotive CRMs does Formester integrate with?</h3>\n        </summary>\n        <div class="fmstr-cmp-adf-faq__answer">\n          <p>Every automotive CRM that accepts ADF/XML lead emails. That includes <b>VinSolutions, DealerSocket, CDK Global, Reynolds and Reynolds, DriveCentric, ProMax, Keyloop, AutoRaptor, eLEAD</b>, and others.</p>\n          <p>The integration is to the format, not the brand, so new CRMs work the moment they expose an ADF intake email.</p>\n        </div>\n      </details>\n\n      <details class="fmstr-cmp-adf-faq__item">\n        <summary>\n          <h3 class="fmstr-cmp-adf-faq__h3">Do I need a separate dealership CRM integration for each system?</h3>\n        </summary>\n        <div class="fmstr-cmp-adf-faq__answer">\n          <p>No. The integration is one ADF/XML connector, configured per form.</p>\n          <p>Switching from VinSolutions to DealerSocket means changing one email address in the form\'s automation settings.</p>\n        </div>\n      </details>\n\n      <details class="fmstr-cmp-adf-faq__item">\n        <summary>\n          <h3 class="fmstr-cmp-adf-faq__h3">Can I send from my own email domain?</h3>\n        </summary>\n        <div class="fmstr-cmp-adf-faq__answer">\n          <p>Yes, through SMTP. Connect your dealership\'s outbound mail server (Google Workspace, Microsoft 365, SendGrid, Postmark, anything that speaks SMTP), enter the host, port, and credentials once, and every ADF lead leaves your server signed by your domain.</p>\n          <p>Your CRM sees the email coming from your sales address, not from a Formester relay, which keeps you off shared IP reputations and out of the spam folder.</p>\n        </div>\n      </details>\n\n      <details class="fmstr-cmp-adf-faq__item">\n        <summary>\n          <h3 class="fmstr-cmp-adf-faq__h3">How do I find my CRM\'s intake email?</h3>\n        </summary>\n        <div class="fmstr-cmp-adf-faq__answer" style="height: 94px">\n          <p>Usually under Lead Sources, Lead Routing, or ADF Integrations in admin settings. The fastest path is to ask your CRM provider\'s support team for your ADF lead intake email address.</p>\n          <p>\n</p>\n        </div>\n      </details>\n\n    </div>\n\n    <div class="fmstr-cmp-adf-faq__contact">\n      <span class="fmstr-cmp-adf-faq__contact-text"><b>Talk to someone who has done this before.</b> We answer every dealership and lead-vendor question directly.</span>\n      <a href="mailto:support@formester.com">support@formester.com</a>\n    </div>\n  </div>\n</section></div>'
+const c8_markup =
+  '<div class="raw-html-embed">\u003Cstyle>\n@import url(\'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap\');\n/* host-link-override */\n.fmstr-cmp-adf-cta a { text-decoration: none !important; }\n.fmstr-cmp-adf-cta {\n  --c-fg-1: #101828; --c-fg-2: #475467; --c-fg-3: #697586;\n  --c-fg-strong: #344054;\n  --c-violet-500: #7f56d9; --c-violet-600: #6941c6; --c-violet-700: #5b34b1;\n  --c-violet-300: #b692f6; --c-violet-100: #ede4ff;\n  --c-tint: #f7f3ff; --c-edge: #e4d7ff;\n  --c-border: #eaecf0;\n  --c-shadow-xs: 0 1px 2px rgba(16,24,40,.04);\n  background: var(--c-tint);\n  padding: 104px 0;\n  font-family: \'Inter\', system-ui, sans-serif;\n  color: var(--c-fg-1);\n  position: relative;\n  overflow: hidden;\n}\n.fmstr-cmp-adf-cta *, .fmstr-cmp-adf-cta *::before, .fmstr-cmp-adf-cta *::after { box-sizing: border-box; }\n.fmstr-cmp-adf-cta::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 900px 380px at 50% 0%, rgba(127,86,217,.18), transparent 70%); pointer-events: none; }\n.fmstr-cmp-adf-cta__container { max-width: 880px; margin: 0 auto; padding: 0 32px; position: relative; text-align: center; }\n.fmstr-cmp-adf-cta__h2 { font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; letter-spacing: -0.022em; font-weight: 600; color: var(--c-fg-1); margin: 0 0 16px; text-wrap: balance; }\n.fmstr-cmp-adf-cta__h2-accent { color: var(--c-violet-700); }\n.fmstr-cmp-adf-cta__sub { font-size: 17px; line-height: 26px; color: var(--c-fg-2); margin: 0 auto 28px; max-width: 600px; text-wrap: pretty; }\n.fmstr-cmp-adf-cta__btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; background: var(--c-violet-500); color: #ffffff !important; font-size: 15.5px; font-weight: 600; line-height: 22px; border-radius: 10px; box-shadow: 0 6px 18px -6px rgba(127,86,217,.55), var(--c-shadow-xs); transition: background 140ms ease, transform 140ms ease; }\n.fmstr-cmp-adf-cta__btn:hover { background: var(--c-violet-600); transform: translateY(-1px); }\n.fmstr-cmp-adf-cta__btn svg { width: 18px; height: 18px; flex: none; }\n.fmstr-cmp-adf-cta__meta { margin-top: 20px; font-size: 13px; color: var(--c-fg-3); display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; }\n.fmstr-cmp-adf-cta__meta-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--c-violet-300); }\n@media (max-width: 760px) {\n  .fmstr-cmp-adf-cta { padding: 72px 0; }\n  .fmstr-cmp-adf-cta__container { padding: 0 20px; }\n}\n\u003C/style>\n\n<section class="fmstr-cmp-adf-cta" id="fmstr-cmp-adf-cta" aria-labelledby="fmstr-cmp-adf-cta-h2">\n  <div class="fmstr-cmp-adf-cta__container">\n    <h2 class="fmstr-cmp-adf-cta__h2" id="fmstr-cmp-adf-cta-h2">Send your first <span class="fmstr-cmp-adf-cta__h2-accent">ADF lead</span> in the next 10 minutes.</h2>\n    <p class="fmstr-cmp-adf-cta__sub">Build the form, paste your CRM\'s intake email, send a test lead. The next real submission lands in your CRM as a structured prospect.</p>\n    <a href="https://app.formester.com/users/sign_up" class="fmstr-cmp-adf-cta__btn">\n      Get started\n      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>\n    </a>\n    <div class="fmstr-cmp-adf-cta__meta">\n      <span>Available on Business plan and above</span>\n      <span class="fmstr-cmp-adf-cta__meta-dot"></span>\n      <span>Cancel anytime</span>\n      <span class="fmstr-cmp-adf-cta__meta-dot"></span>\n      <span>GDPR, UK GDPR, and CCPA ready</span>\n    </div>\n  </div>\n</section>\n\n\u003Cscript>\n  // Copy XML button (component 4)\n  (function () {\n    var btn = document.getElementById(\'fmstr-cmp-adf-output-sample-copy\');\n    var pre = document.getElementById(\'fmstr-cmp-adf-output-sample-xml\');\n    if (!btn || !pre) return;\n    btn.addEventListener(\'click\', function () {\n      var text = pre.innerText.replace(/\\u00a0/g, \' \');\n      var done = function () {\n        btn.classList.add(\'fmstr-cmp-adf-output-sample__copy-btn--copied\');\n        var lbl = btn.querySelector(\'.fmstr-cmp-adf-output-sample__copy-lbl\');\n        if (lbl) lbl.textContent = \'Copied\';\n        setTimeout(function () {\n          btn.classList.remove(\'fmstr-cmp-adf-output-sample__copy-btn--copied\');\n          if (lbl) lbl.textContent = \'Copy\';\n        }, 1800);\n      };\n      if (navigator.clipboard && navigator.clipboard.writeText) {\n        navigator.clipboard.writeText(text).then(done).catch(function () {\n          var ta = document.createElement(\'textarea\');\n          ta.value = text; document.body.appendChild(ta); ta.select();\n          try { document.execCommand(\'copy\'); } catch (_) {}\n          document.body.removeChild(ta); done();\n        });\n      } else {\n        var ta = document.createElement(\'textarea\');\n        ta.value = text; document.body.appendChild(ta); ta.select();\n        try { document.execCommand(\'copy\'); } catch (_) {}\n        document.body.removeChild(ta); done();\n      }\n    });\n  })();\n\n  // Field-coverage tabs + scroll fade (component 3)\n  (function () {\n    var tabs = Array.prototype.slice.call(document.querySelectorAll(\'.fmstr-cmp-adf-field-coverage__tab\'));\n    var panels = Array.prototype.slice.call(document.querySelectorAll(\'.fmstr-cmp-adf-field-coverage__group[role="tabpanel"]\'));\n    if (tabs.length && panels.length) {\n      function select(tab, focus) {\n        var target = tab.getAttribute(\'aria-controls\');\n        tabs.forEach(function (t) {\n          var on = t === tab;\n          t.setAttribute(\'aria-selected\', on ? \'true\' : \'false\');\n          t.tabIndex = on ? 0 : -1;\n        });\n        panels.forEach(function (p) { p.hidden = p.id !== target; });\n        if (focus) tab.focus();\n        // Recompute fade on the now-visible panel\n        var active = panels.find(function (p) { return p.id === target; });\n        if (active) {\n          var wrap = active.querySelector(\'.fmstr-cmp-adf-field-coverage__scroll-wrap\');\n          if (wrap && wrap.__update) wrap.__update();\n        }\n      }\n      tabs.forEach(function (tab, i) {\n        tab.addEventListener(\'click\', function () { select(tab, false); });\n        tab.addEventListener(\'keydown\', function (e) {\n          var idx;\n          if (e.key === \'ArrowRight\' || e.key === \'ArrowDown\') idx = (i + 1) % tabs.length;\n          else if (e.key === \'ArrowLeft\' || e.key === \'ArrowUp\') idx = (i - 1 + tabs.length) % tabs.length;\n          else if (e.key === \'Home\') idx = 0;\n          else if (e.key === \'End\') idx = tabs.length - 1;\n          else return;\n          e.preventDefault();\n          select(tabs[idx], true);\n        });\n      });\n    }\n\n    var wraps = document.querySelectorAll(\'.fmstr-cmp-adf-field-coverage__scroll-wrap\');\n    wraps.forEach(function (wrap) {\n      var sc = wrap.querySelector(\'.fmstr-cmp-adf-field-coverage__scroll\');\n      if (!sc) return;\n      function update() {\n        var notScrollable = sc.scrollHeight <= sc.clientHeight + 1;\n        var atBottom = sc.scrollTop + sc.clientHeight >= sc.scrollHeight - 1;\n        wrap.setAttribute(\'data-at-bottom\', (notScrollable || atBottom) ? \'true\' : \'false\');\n      }\n      wrap.__update = update;\n      sc.addEventListener(\'scroll\', update, { passive: true });\n      window.addEventListener(\'resize\', update);\n      update();\n    });\n  })();\n\u003C/script>\n\n<template id="__bundler_thumbnail" data-bg-color="#f7f3ff">\n  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">\n    <rect x="220" y="280" width="220" height="240" rx="18" fill="#ffffff" stroke="#eaecf0" stroke-width="3"></rect>\n    <rect x="250" y="320" width="160" height="14" rx="4" fill="#eaecf0"></rect>\n    <rect x="250" y="360" width="120" height="14" rx="4" fill="#eaecf0"></rect>\n    <rect x="250" y="400" width="160" height="14" rx="4" fill="#eaecf0"></rect>\n    <rect x="250" y="440" width="100" height="14" rx="4" fill="#eaecf0"></rect>\n    <rect x="250" y="478" width="80" height="24" rx="6" fill="#6434D0"></rect>\n    <line x1="470" y1="400" x2="540" y2="400" stroke="#9777e0" stroke-width="3" stroke-dasharray="6 6" stroke-linecap="round"></line>\n    <polygon points="540,392 552,400 540,408" fill="#6434D0"></polygon>\n    <rect x="570" y="280" width="220" height="240" rx="18" fill="#0f1623"></rect>\n    <rect x="600" y="320" width="160" height="10" rx="3" fill="#b794f4"></rect>\n    <rect x="610" y="346" width="140" height="10" rx="3" fill="#f6a364"></rect>\n    <rect x="620" y="372" width="120" height="10" rx="3" fill="#facc15"></rect>\n    <rect x="620" y="398" width="100" height="10" rx="3" fill="#6ee7b7"></rect>\n    <rect x="610" y="424" width="140" height="10" rx="3" fill="#f6a364"></rect>\n    <rect x="600" y="450" width="160" height="10" rx="3" fill="#b794f4"></rect>\n    <rect x="610" y="476" width="100" height="10" rx="3" fill="#facc15"></rect>\n    <line x1="820" y1="400" x2="890" y2="400" stroke="#9777e0" stroke-width="3" stroke-dasharray="6 6" stroke-linecap="round"></line>\n    <polygon points="890,392 902,400 890,408" fill="#6434D0"></polygon>\n    <rect x="920" y="280" width="220" height="240" rx="18" fill="#ffffff" stroke="#eaecf0" stroke-width="3"></rect>\n    <rect x="940" y="310" width="180" height="36" rx="6" fill="#f5f0ff" stroke="#9777e0" stroke-width="2"></rect>\n    <circle cx="958" cy="328" r="10" fill="#6434D0"></circle>\n    <rect x="976" y="320" width="80" height="6" rx="2" fill="#101828"></rect>\n    <rect x="976" y="332" width="60" height="5" rx="2" fill="#697586"></rect>\n    <rect x="940" y="360" width="180" height="32" rx="6" fill="#ffffff" stroke="#eaecf0" stroke-width="2"></rect>\n    <circle cx="958" cy="376" r="9" fill="#eaecf0"></circle>\n    <rect x="976" y="368" width="70" height="6" rx="2" fill="#101828"></rect>\n    <rect x="976" y="380" width="50" height="5" rx="2" fill="#697586"></rect>\n    <rect x="940" y="406" width="180" height="32" rx="6" fill="#ffffff" stroke="#eaecf0" stroke-width="2"></rect>\n    <circle cx="958" cy="422" r="9" fill="#eaecf0"></circle>\n    <rect x="976" y="414" width="70" height="6" rx="2" fill="#101828"></rect>\n    <rect x="976" y="426" width="50" height="5" rx="2" fill="#697586"></rect>\n  </svg>\n</template></div>'
+
+useHead({
+  title: 'Automotive CRM integration · Send dealership leads as ADF/XML · Formester',
+  link: [
+    {
+      hid: 'canonical',
+      rel: 'canonical',
+      href: 'https://formester.com/integrations/automotive-crm/',
+    },
+  ],
+  meta: [
+    {
+      property: 'article:modified_time',
+      content: '2026-05-27T12:22:15.779Z',
+    },
+    {
+      hid: 'description',
+      name: 'description',
+      content:
+        'Capture leads with Formester forms. Deliver them to any automotive CRM that accepts ADF/XML email: VinSolutions, DealerSocket, CDK Global, Reynolds and Reynolds, DriveCentric, ProMax, Keyloop, AutoRaptor, and more.',
+    },
+    {
+      hid: 'og:site_name',
+      name: 'og:site_name',
+      content: 'Automotive CRM integration · Send dealership leads as ADF/XML · Formester',
+    },
+    {
+      hid: 'og:type',
+      property: 'og:type',
+      content: 'website',
+    },
+    {
+      hid: 'og:url',
+      property: 'og:url',
+      content: 'https://formester.com/integrations/automotive-crm/',
+    },
+    {
+      hid: 'og:title',
+      property: 'og:title',
+      content: 'Automotive CRM integration · Send dealership leads as ADF/XML · Formester',
+    },
+    {
+      hid: 'og:description',
+      property: 'og:description',
+      content:
+        'Capture leads with Formester forms. Deliver them to any automotive CRM that accepts ADF/XML email: VinSolutions, DealerSocket, CDK Global, Reynolds and Reynolds, DriveCentric, ProMax, Keyloop, AutoRaptor, and more.',
+    },
+    {
+      hid: 'og:image',
+      property: 'og:image',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Draft_Preview_05_26_2026_05_53_PM_d356fbbb74.png',
+    },
+    {
+      hid: 'og:image:alt',
+      name: 'og:image:alt',
+      content: 'Automotive CRM integration preview',
+    },
+    {
+      hid: 'twitter:url',
+      name: 'twitter:url',
+      content: 'https://formester.com/integrations/automotive-crm/',
+    },
+    {
+      name: 'twitter:site',
+      content: '@_formester_',
+    },
+    {
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: 'Automotive CRM integration · Send dealership leads as ADF/XML · Formester',
+    },
+    {
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content:
+        'Capture leads with Formester forms. Deliver them to any automotive CRM that accepts ADF/XML email: VinSolutions, DealerSocket, CDK Global, Reynolds and Reynolds, DriveCentric, ProMax, Keyloop, AutoRaptor, and more.',
+    },
+    {
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Draft_Preview_05_26_2026_05_53_PM_d356fbbb74.png',
+    },
+    {
+      hid: 'twitter:image:alt',
+      name: 'twitter:image:alt',
+      content: 'Automotive CRM integration preview',
+    },
+    {
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image',
+    },
+    {
+      hid: 'apple-mobile-web-app-title',
+      name: 'apple-mobile-web-app-title',
+      content: 'Formester',
+    },
+    {
+      hid: 'image',
+      name: 'image',
+      property: 'og:image',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Draft_Preview_05_26_2026_05_53_PM_d356fbbb74.png',
+    },
+    {
+      hid: 'keywords',
+      name: 'keywords',
+      content: [
+        ' automotive CRM integration',
+        ' ADF/XML',
+        'ADF XML lead',
+        'dealership lead form',
+        'car dealer CRM',
+        'VinSolutions',
+        'DealerSocket',
+        'dealership forms',
+        'lead intake email',
+        'Formester',
+      ],
+    },
+  ],
+})
+useJsonld([
+  {
+    '@graph': [
+      {
+        '@id': 'https://formester.com/integrations/automotive-crm#webpage',
+        url: 'https://formester.com/integrations/automotive-crm',
+        name: 'Automotive CRM integration · Send dealership leads as ADF/XML · Formester',
+        '@type': 'WebPage',
+        isPartOf: {
+          '@id': 'https://formester.com/#website',
+        },
+        breadcrumb: {
+          '@id': 'https://formester.com/integrations/automotive-crm#breadcrumb',
+        },
+        inLanguage: 'en',
+        description:
+          'Capture leads with Formester forms and deliver them to any automotive CRM that accepts ADF/XML email.',
+      },
+      {
+        '@id': 'https://formester.com/integrations/automotive-crm#breadcrumb',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            item: 'https://formester.com/',
+            name: 'Home',
+            '@type': 'ListItem',
+            position: 1,
+          },
+          {
+            item: 'https://formester.com/integrations/',
+            name: 'Integrations',
+            '@type': 'ListItem',
+            position: 2,
+          },
+          {
+            name: 'Automotive CRM',
+            '@type': 'ListItem',
+            position: 3,
+          },
+        ],
+      },
+    ],
+    '@context': 'https://schema.org',
+  },
+])
+</script>
+
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+/* host-link-override */
+.fmstr-cmp-adf-hero a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+.fmstr-cmp-adf-hero a.fmstr-cmp-adf-hero__btn--primary {
+  color: #ffffff !important;
+}
+.fmstr-cmp-adf-hero a.fmstr-cmp-adf-hero__btn--primary:hover {
+  color: #ffffff !important;
+}
+.fmstr-cmp-adf-hero {
+  --c-fg-1: #101828;
+  --c-fg-2: #475467;
+  --c-fg-3: #697586;
+  --c-fg-strong: #344054;
+  --c-fg-muted: #98a2b3;
+  --c-violet-500: #7f56d9;
+  --c-violet-600: #6941c6;
+  --c-violet-700: #5b34b1;
+  --c-violet-300: #b692f6;
+  --c-tint: #f7f3ff;
+  --c-edge: #e4d7ff;
+  --c-border: #eaecf0;
+  --c-border-dark: #d0d5dd;
+  --c-bg-card: #ffffff;
+  --c-bg-soft: #f9fafb;
+  --c-bg-soft2: #f2f4f7;
+  --c-success: #16a34a;
+  --c-shadow-xs: 0 1px 2px rgba(16, 24, 40, 0.04);
+  --c-shadow-sm: 0 1px 3px rgba(16, 24, 40, 0.06), 0 1px 2px rgba(16, 24, 40, 0.04);
+  --c-shadow-lg: 0 12px 32px -8px rgba(16, 24, 40, 0.12), 0 4px 8px -4px rgba(16, 24, 40, 0.04);
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--c-fg-1);
+  background: #ffffff;
+}
+.fmstr-cmp-adf-hero *,
+.fmstr-cmp-adf-hero *::before,
+.fmstr-cmp-adf-hero *::after {
+  box-sizing: border-box;
+}
+.fmstr-cmp-adf-hero__topbar {
+  border-bottom: 1px solid var(--c-border);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.fmstr-cmp-adf-hero__nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 16px;
+}
+.fmstr-cmp-adf-hero__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.fmstr-cmp-adf-hero__brand-mark {
+  width: 20px;
+  height: 27px;
+  background: var(--c-violet-600);
+  border-radius: 4px;
+  position: relative;
+  flex: none;
+  display: inline-block;
+}
+.fmstr-cmp-adf-hero__brand-mark::before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  top: 7px;
+  height: 7px;
+  background: #fff;
+  border-radius: 3px;
+}
+.fmstr-cmp-adf-hero__brand-mark::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 9.5px;
+  width: 2.5px;
+  height: 2.5px;
+  border-radius: 50%;
+  background: var(--c-violet-600);
+  box-shadow: 5px 0 0 var(--c-violet-600);
+}
+.fmstr-cmp-adf-hero__brand-text {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--c-fg-1);
+  letter-spacing: -0.02em;
+}
+.fmstr-cmp-adf-hero__crumb {
+  color: var(--c-fg-3) !important;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+.fmstr-cmp-adf-hero__crumb-sep {
+  color: var(--c-fg-muted);
+  margin: 0 -2px;
+}
+.fmstr-cmp-adf-hero__crumb--active {
+  color: var(--c-violet-700) !important;
+  background: var(--c-tint);
+}
+.fmstr-cmp-adf-hero__navlinks {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.fmstr-cmp-adf-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition:
+    background 140ms ease,
+    color 140ms ease,
+    border-color 140ms ease,
+    box-shadow 140ms ease,
+    transform 140ms ease;
+}
+.fmstr-cmp-adf-hero__btn--ghost {
+  background: transparent;
+  color: var(--c-fg-strong) !important;
+  padding: 8px 12px;
+}
+.fmstr-cmp-adf-hero__btn--ghost:hover {
+  background: var(--c-bg-soft2);
+  color: var(--c-fg-1) !important;
+}
+.fmstr-cmp-adf-hero__btn--primary {
+  background: var(--c-violet-500);
+  color: #ffffff !important;
+  box-shadow:
+    0 6px 18px -6px rgba(127, 86, 217, 0.55),
+    var(--c-shadow-xs);
+}
+.fmstr-cmp-adf-hero__btn--primary:hover {
+  background: var(--c-violet-600);
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+.fmstr-cmp-adf-hero__btn--secondary {
+  background: #ffffff;
+  color: var(--c-fg-strong) !important;
+  border-color: var(--c-border-dark);
+  box-shadow: var(--c-shadow-xs);
+}
+.fmstr-cmp-adf-hero__btn--secondary:hover {
+  background: var(--c-bg-soft);
+  color: var(--c-fg-1) !important;
+}
+.fmstr-cmp-adf-hero__btn--lg {
+  padding: 12px 20px;
+  font-size: 15px;
+  line-height: 22px;
+}
+.fmstr-cmp-adf-hero__btn svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
+}
+.fmstr-cmp-adf-hero__body {
+  padding: 120px 0 56px;
+  position: relative;
+}
+.fmstr-cmp-adf-hero__body::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  bottom: 30%;
+  background: linear-gradient(180deg, var(--c-tint) 0%, rgba(247, 243, 255, 0) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+.fmstr-cmp-adf-hero__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+  z-index: 1;
+}
+.fmstr-cmp-adf-hero__header {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+.fmstr-cmp-adf-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px 5px 6px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid var(--c-border);
+  box-shadow: var(--c-shadow-xs);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--c-fg-strong);
+  margin-bottom: 24px;
+}
+.fmstr-cmp-adf-hero__eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  background: var(--c-tint);
+  color: var(--c-violet-700);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 999px;
+}
+.fmstr-cmp-adf-hero__eyebrow-pill::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-violet-500);
+  margin-right: 6px;
+}
+.fmstr-cmp-adf-hero__h1 {
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+  color: var(--c-fg-1);
+  margin: 0 0 18px;
+  text-wrap: balance;
+}
+.fmstr-cmp-adf-hero__h1-accent {
+  color: var(--c-violet-600);
+  font-style: italic;
+  font-family: 'Instrument Serif', Georgia, serif;
+}
+.fmstr-cmp-adf-hero__lede {
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--c-fg-2);
+  max-width: 640px;
+  margin: 0 auto 28px;
+  text-wrap: pretty;
+}
+.fmstr-cmp-adf-hero__ctas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.fmstr-cmp-adf-hero__meta {
+  margin-top: 18px;
+  font-size: 13px;
+  color: var(--c-fg-3);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.fmstr-cmp-adf-hero__meta-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--c-border-dark);
+}
+.fmstr-cmp-adf-hero__flow {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: 1fr auto 1.05fr auto 1fr;
+  align-items: stretch;
+  gap: 0;
+}
+.fmstr-cmp-adf-hero__flow-node {
+  background: #ffffff;
+  border: 1px solid var(--c-border);
+  border-radius: 16px;
+  box-shadow: var(--c-shadow-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.fmstr-cmp-adf-hero__flow-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--c-border);
+  background: #fcfcfd;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--c-fg-3);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.fmstr-cmp-adf-hero__flow-head svg {
+  width: 14px;
+  height: 14px;
+  color: var(--c-violet-600);
+}
+.fmstr-cmp-adf-hero__flow-body {
+  padding: 16px;
+  flex: 1;
+}
+.fmstr-cmp-adf-hero__flow-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  position: relative;
+}
+.fmstr-cmp-adf-hero__flow-arrow::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  border-top: 1.5px dashed var(--c-violet-300);
+}
+.fmstr-cmp-adf-hero__flow-arrow svg {
+  width: 22px;
+  height: 22px;
+  background: #ffffff;
+  padding: 4px;
+  border-radius: 50%;
+  color: var(--c-violet-600);
+  position: relative;
+  z-index: 1;
+}
+.fmstr-cmp-adf-hero__form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.fmstr-cmp-adf-hero__form-field {
+  display: block;
+  margin-bottom: 10px;
+}
+.fmstr-cmp-adf-hero__form-row .fmstr-cmp-adf-hero__form-field {
+  margin-bottom: 0;
+}
+.fmstr-cmp-adf-hero__form-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--c-fg-3);
+  margin-bottom: 4px;
+}
+.fmstr-cmp-adf-hero__form-input {
+  display: block;
+  padding: 7px 9px;
+  border: 1px solid var(--c-border);
+  border-radius: 6px;
+  background: #ffffff;
+  font-size: 12px;
+  color: var(--c-fg-1);
+  min-height: 30px;
+}
+.fmstr-cmp-adf-hero__form-submit {
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background: var(--c-violet-500);
+  color: #ffffff;
+  font-size: 11.5px;
+  font-weight: 600;
+  border-radius: 6px;
+}
+.fmstr-cmp-adf-hero__form-submit svg {
+  width: 11px;
+  height: 11px;
+}
+.fmstr-cmp-adf-hero__xml {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+  line-height: 17px;
+  color: var(--c-fg-1);
+  background: #fcfcfd;
+  padding: 12px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--c-border);
+  height: 100%;
+  overflow: hidden;
+  white-space: pre;
+}
+.fmstr-cmp-adf-hero__xml-tag {
+  color: #c2410c;
+  font-weight: 500;
+}
+.fmstr-cmp-adf-hero__xml-bracket {
+  color: #64748b;
+}
+.fmstr-cmp-adf-hero__xml-text {
+  color: var(--c-fg-1);
+}
+.fmstr-cmp-adf-hero__xml-attr {
+  color: #a16207;
+}
+.fmstr-cmp-adf-hero__xml-val {
+  color: #047857;
+}
+.fmstr-cmp-adf-hero__xml-pi {
+  color: #7c3aed;
+}
+.fmstr-cmp-adf-hero__crm-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.fmstr-cmp-adf-hero__crm-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border: 1px solid var(--c-border);
+  border-radius: 6px;
+  background: #ffffff;
+}
+.fmstr-cmp-adf-hero__crm-row--fresh {
+  background: var(--c-tint);
+  border-color: var(--c-violet-300);
+}
+.fmstr-cmp-adf-hero__crm-av {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #f2f4f7;
+  color: var(--c-fg-strong);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  flex: none;
+}
+.fmstr-cmp-adf-hero__crm-row--fresh .fmstr-cmp-adf-hero__crm-av {
+  background: var(--c-violet-500);
+  color: #ffffff;
+}
+.fmstr-cmp-adf-hero__crm-text {
+  flex: 1;
+  min-width: 0;
+}
+.fmstr-cmp-adf-hero__crm-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--c-fg-1);
+}
+.fmstr-cmp-adf-hero__crm-meta {
+  font-size: 11px;
+  color: var(--c-fg-3);
+}
+.fmstr-cmp-adf-hero__crm-meta b {
+  color: var(--c-violet-600);
+  font-weight: 600;
+}
+.fmstr-cmp-adf-hero__crm-src {
+  font-size: 10px;
+  color: var(--c-fg-3);
+  font-weight: 500;
+}
+.fmstr-cmp-adf-hero__crm-pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-success);
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+@media (max-width: 1100px) {
+  .fmstr-cmp-adf-hero__flow {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .fmstr-cmp-adf-hero__flow-arrow {
+    transform: rotate(90deg);
+    width: 100%;
+    height: 44px;
+  }
+  .fmstr-cmp-adf-hero__flow-arrow::before {
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    right: auto;
+    border-top: none;
+    border-left: 1.5px dashed var(--c-violet-300);
+  }
+}
+@media (max-width: 880px) {
+  .fmstr-cmp-adf-hero__crumb {
+    display: none;
+  }
+  .fmstr-cmp-adf-hero__crumb-sep {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  .fmstr-cmp-adf-hero__body {
+    padding: 96px 0 56px;
+  }
+  .fmstr-cmp-adf-hero__h1 {
+    font-size: clamp(30px, 7vw, 40px);
+  }
+  .fmstr-cmp-adf-hero__lede {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .fmstr-cmp-adf-hero__container {
+    padding: 0 20px;
+  }
+  .fmstr-cmp-adf-hero__nav {
+    padding: 0 20px;
+  }
+}
+/* host-link-override */
+.fmstr-cmp-adf-crm-grid a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+.fmstr-cmp-adf-crm-grid {
+  --c-fg-1: #101828;
+  --c-fg-2: #475467;
+  --c-fg-3: #697586;
+  --c-fg-strong: #344054;
+  --c-violet-500: #7f56d9;
+  --c-violet-600: #6941c6;
+  --c-violet-700: #5b34b1;
+  --c-tint: #f7f3ff;
+  --c-edge: #e4d7ff;
+  --c-border: #eaecf0;
+  --c-border-dark: #d0d5dd;
+  --c-bg-card: #ffffff;
+  --c-bg-soft: #f9fafb;
+  --c-shadow-xs: 0 1px 2px rgba(16, 24, 40, 0.04);
+  --c-shadow-sm: 0 1px 3px rgba(16, 24, 40, 0.06), 0 1px 2px rgba(16, 24, 40, 0.04);
+  background: var(--c-bg-soft);
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+  padding: 104px 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--c-fg-1);
+}
+.fmstr-cmp-adf-crm-grid *,
+.fmstr-cmp-adf-crm-grid *::before,
+.fmstr-cmp-adf-crm-grid *::after {
+  box-sizing: border-box;
+}
+.fmstr-cmp-adf-crm-grid__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.fmstr-cmp-adf-crm-grid__header {
+  max-width: 760px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+.fmstr-cmp-adf-crm-grid__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px 4px 8px;
+  border-radius: 999px;
+  background: var(--c-tint);
+  color: var(--c-violet-700);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+.fmstr-cmp-adf-crm-grid__eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-violet-500);
+}
+.fmstr-cmp-adf-crm-grid__h2 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  line-height: 1.12;
+  letter-spacing: -0.022em;
+  font-weight: 600;
+  color: var(--c-fg-1);
+  margin: 0 0 14px;
+  text-wrap: balance;
+}
+.fmstr-cmp-adf-crm-grid__sub {
+  font-size: 17px;
+  line-height: 26px;
+  color: var(--c-fg-2);
+  margin: 0 auto;
+  max-width: 640px;
+  text-wrap: pretty;
+}
+.fmstr-cmp-adf-crm-grid__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+.fmstr-cmp-adf-crm-grid__tile {
+  flex: 0 0 calc((100% - 32px) / 3);
+  background: var(--c-bg-card);
+  border: 1px solid var(--c-border);
+  border-radius: 12px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 128px;
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease,
+    transform 140ms ease;
+}
+.fmstr-cmp-adf-crm-grid__tile:hover {
+  border-color: var(--c-border-dark);
+  box-shadow: var(--c-shadow-sm);
+  transform: translateY(-1px);
+}
+.fmstr-cmp-adf-crm-grid__logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+}
+.fmstr-cmp-adf-crm-grid__logo img {
+  max-height: 100%;
+  max-width: 80%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+.fmstr-cmp-adf-crm-grid__name {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.fmstr-cmp-adf-crm-grid__autoraptor {
+  background: #202e37;
+  padding: 8px 14px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+  line-height: 1;
+  font-weight: 800;
+  font-size: 17px;
+  color: #ffffff;
+  letter-spacing: -0.025em;
+}
+.fmstr-cmp-adf-crm-grid__autoraptor img {
+  display: block;
+  height: 26px;
+  width: auto;
+}
+.fmstr-cmp-adf-crm-grid__autoraptor-text {
+  display: none;
+  align-items: center;
+  gap: 1px;
+  line-height: 1;
+  font-weight: 800;
+  font-size: 17px;
+  color: #ffffff;
+  letter-spacing: -0.025em;
+}
+.fmstr-cmp-adf-crm-grid__autoraptor-text span {
+  color: #22c55e;
+}
+.fmstr-cmp-adf-crm-grid__wordmark {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  color: #0f172a;
+  display: inline-block;
+}
+.fmstr-cmp-adf-crm-grid__wordmark--elead {
+  color: #1e293b;
+}
+.fmstr-cmp-adf-crm-grid__wordmark--elead .fmstr-cmp-adf-crm-grid__wordmark-accent {
+  color: #e11d48;
+  font-style: italic;
+  font-weight: 800;
+}
+.fmstr-cmp-adf-crm-grid__banner {
+  margin-top: 32px;
+  padding: 28px 36px;
+  border: 1px solid var(--c-border);
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--c-bg-card) 0%, var(--c-tint) 100%);
+  box-shadow: var(--c-shadow-xs);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 28px;
+  align-items: center;
+}
+.fmstr-cmp-adf-crm-grid__banner-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: var(--c-bg-card);
+  border: 1px solid var(--c-border);
+  box-shadow: var(--c-shadow-xs);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-violet-600);
+}
+.fmstr-cmp-adf-crm-grid__banner-icon svg {
+  width: 24px;
+  height: 24px;
+}
+.fmstr-cmp-adf-crm-grid__banner-h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--c-fg-1);
+  margin: 0 0 4px;
+  letter-spacing: -0.01em;
+}
+.fmstr-cmp-adf-crm-grid__banner-p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 23px;
+  color: var(--c-fg-2);
+  max-width: 720px;
+}
+.fmstr-cmp-adf-crm-grid__banner-p em {
+  font-style: normal;
+  color: var(--c-violet-700);
+  font-weight: 600;
+}
+.fmstr-cmp-adf-crm-grid__banner-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--c-violet-600) !important;
+  white-space: nowrap;
+}
+.fmstr-cmp-adf-crm-grid__banner-cta:hover {
+  color: var(--c-violet-700) !important;
+  text-decoration: underline !important;
+}
+.fmstr-cmp-adf-crm-grid__banner-cta svg {
+  width: 14px;
+  height: 14px;
+}
+@media (max-width: 880px) {
+  .fmstr-cmp-adf-crm-grid__tile {
+    flex: 0 0 calc((100% - 16px) / 2);
+  }
+  .fmstr-cmp-adf-crm-grid__banner {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 22px;
+  }
+}
+@media (max-width: 760px) {
+  .fmstr-cmp-adf-crm-grid {
+    padding: 72px 0;
+  }
+  .fmstr-cmp-adf-crm-grid__container {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 540px) {
+  .fmstr-cmp-adf-crm-grid__tile {
+    flex: 0 0 100%;
+    padding: 22px 16px;
+    min-height: 132px;
+  }
+}
+/* host-link-override */
+.fmstr-cmp-adf-field-coverage a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+.fmstr-cmp-adf-field-coverage {
+  --c-fg-1: #101828;
+  --c-fg-2: #475467;
+  --c-fg-3: #697586;
+  --c-fg-strong: #344054;
+  --c-fg-muted: #98a2b3;
+  --c-violet-500: #7f56d9;
+  --c-violet-600: #6941c6;
+  --c-violet-700: #5b34b1;
+  --c-violet-100: #ede4ff;
+  --c-tint: #f7f3ff;
+  --c-edge: #e4d7ff;
+  --c-border: #eaecf0;
+  --c-border-dark: #d0d5dd;
+  --c-bg-card: #ffffff;
+  --c-bg-soft: #f9fafb;
+  --c-bg-soft2: #f2f4f7;
+  --c-success: #16a34a;
+  --c-success-tint: #ecfdf3;
+  --c-blue-tint: #eff8ff;
+  --c-blue: #2570eb;
+  --c-amber-tint: #fef7ec;
+  --c-amber: #b45309;
+  --c-shadow-xs: 0 1px 2px rgba(16, 24, 40, 0.04);
+  background: #ffffff;
+  padding: 104px 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--c-fg-1);
+}
+.fmstr-cmp-adf-field-coverage *,
+.fmstr-cmp-adf-field-coverage *::before,
+.fmstr-cmp-adf-field-coverage *::after {
+  box-sizing: border-box;
+}
+.fmstr-cmp-adf-field-coverage__container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.fmstr-cmp-adf-field-coverage__header {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+.fmstr-cmp-adf-field-coverage__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px 4px 8px;
+  border-radius: 999px;
+  background: var(--c-tint);
+  color: var(--c-violet-700);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+.fmstr-cmp-adf-field-coverage__eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-violet-500);
+}
+.fmstr-cmp-adf-field-coverage__h2 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  line-height: 1.12;
+  letter-spacing: -0.022em;
+  font-weight: 600;
+  color: var(--c-fg-1);
+  margin: 0 0 14px;
+  text-wrap: balance;
+}
+.fmstr-cmp-adf-field-coverage__sub {
+  font-size: 17px;
+  line-height: 26px;
+  color: var(--c-fg-2);
+  margin: 0 auto;
+  max-width: 640px;
+  text-wrap: pretty;
+}
+.fmstr-cmp-adf-field-coverage__sub code {
+  background: var(--c-bg-soft2);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 14.5px;
+  color: var(--c-fg-1);
+  border: 1px solid var(--c-border);
+}
+.fmstr-cmp-adf-field-coverage__groups {
+  background: var(--c-bg-card);
+  border: 1px solid var(--c-border);
+  border-radius: 16px;
+  box-shadow: var(--c-shadow-xs);
+  overflow: hidden;
+}
+.fmstr-cmp-adf-field-coverage__tablist {
+  display: flex;
+  gap: 4px;
+  padding: 8px;
+  border-bottom: 1px solid var(--c-border);
+  background: var(--c-bg-soft);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.fmstr-cmp-adf-field-coverage__tablist::-webkit-scrollbar {
+  display: none;
+}
+.fmstr-cmp-adf-field-coverage__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--c-fg-2);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background 140ms ease,
+    color 140ms ease,
+    border-color 140ms ease,
+    box-shadow 140ms ease;
+}
+.fmstr-cmp-adf-field-coverage__tab:hover {
+  color: var(--c-fg-1);
+  background: var(--c-bg-card);
+}
+.fmstr-cmp-adf-field-coverage__tab[aria-selected='true'] {
+  color: var(--c-violet-700);
+  background: var(--c-bg-card);
+  border-color: var(--c-border);
+  box-shadow: var(--c-shadow-xs);
+}
+.fmstr-cmp-adf-field-coverage__tab svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  color: var(--c-fg-3);
+}
+.fmstr-cmp-adf-field-coverage__tab[aria-selected='true'] svg {
+  color: var(--c-violet-600);
+}
+.fmstr-cmp-adf-field-coverage__tab-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--c-bg-soft2);
+  color: var(--c-fg-3);
+  font-size: 11px;
+  font-weight: 600;
+}
+.fmstr-cmp-adf-field-coverage__tab[aria-selected='true'] .fmstr-cmp-adf-field-coverage__tab-count {
+  background: var(--c-tint);
+  color: var(--c-violet-700);
+}
+.fmstr-cmp-adf-field-coverage__group[hidden] {
+  display: none;
+}
+.fmstr-cmp-adf-field-coverage__group-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--c-border);
+  background: #ffffff;
+}
+.fmstr-cmp-adf-field-coverage__scroll-wrap {
+  position: relative;
+}
+.fmstr-cmp-adf-field-coverage__scroll-wrap::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 36px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 160ms ease;
+}
+.fmstr-cmp-adf-field-coverage__scroll-wrap[data-at-bottom='true']::after {
+  opacity: 0;
+}
+.fmstr-cmp-adf-field-coverage__scroll {
+  max-height: 280px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--c-border-dark) transparent;
+}
+.fmstr-cmp-adf-field-coverage__scroll::-webkit-scrollbar {
+  width: 8px;
+}
+.fmstr-cmp-adf-field-coverage__scroll::-webkit-scrollbar-thumb {
+  background: var(--c-border-dark);
+  border-radius: 999px;
+}
+.fmstr-cmp-adf-field-coverage__scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.fmstr-cmp-adf-field-coverage__group-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--c-violet-100);
+  color: var(--c-violet-700);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+.fmstr-cmp-adf-field-coverage__group-icon svg {
+  width: 18px;
+  height: 18px;
+}
+.fmstr-cmp-adf-field-coverage__group-meta {
+  flex: 1;
+  min-width: 0;
+}
+.fmstr-cmp-adf-field-coverage__group-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--c-fg-1);
+  margin: 0 0 2px;
+  letter-spacing: -0.01em;
+}
+.fmstr-cmp-adf-field-coverage__group-sub {
+  font-size: 13px;
+  color: var(--c-fg-3);
+  margin: 0;
+}
+.fmstr-cmp-adf-field-coverage__group-count {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--c-fg-3);
+  padding: 4px 10px;
+  background: var(--c-bg-card);
+  border: 1px solid var(--c-border);
+  border-radius: 999px;
+  flex: none;
+}
+.fmstr-cmp-adf-field-coverage__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.fmstr-cmp-adf-field-coverage__row {
+  display: grid;
+  grid-template-columns: 24px 1fr auto auto;
+  gap: 14px;
+  align-items: center;
+  padding: 12px 24px;
+  border-top: 1px solid var(--c-border);
+}
+.fmstr-cmp-adf-field-coverage__row:first-child {
+  border-top: none;
+}
+.fmstr-cmp-adf-field-coverage__check {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--c-success-tint);
+  color: var(--c-success);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+.fmstr-cmp-adf-field-coverage__check svg {
+  width: 12px;
+  height: 12px;
+}
+.fmstr-cmp-adf-field-coverage__label {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--c-fg-1);
+}
+.fmstr-cmp-adf-field-coverage__type {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: var(--c-fg-2);
+  background: var(--c-bg-soft2);
+  border: 1px solid var(--c-border);
+  white-space: nowrap;
+}
+.fmstr-cmp-adf-field-coverage__type--email {
+  color: var(--c-blue);
+  background: var(--c-blue-tint);
+  border-color: rgba(37, 112, 235, 0.18);
+}
+.fmstr-cmp-adf-field-coverage__type--phone {
+  color: var(--c-success);
+  background: var(--c-success-tint);
+  border-color: rgba(22, 163, 74, 0.18);
+}
+.fmstr-cmp-adf-field-coverage__type--choice {
+  color: var(--c-violet-700);
+  background: var(--c-tint);
+  border-color: var(--c-edge);
+}
+.fmstr-cmp-adf-field-coverage__type--number,
+.fmstr-cmp-adf-field-coverage__type--currency {
+  color: var(--c-amber);
+  background: var(--c-amber-tint);
+  border-color: rgba(180, 83, 9, 0.18);
+}
+.fmstr-cmp-adf-field-coverage__node {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 12px;
+  color: var(--c-fg-3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 280px;
+}
+@media (max-width: 760px) {
+  .fmstr-cmp-adf-field-coverage {
+    padding: 72px 0;
+  }
+  .fmstr-cmp-adf-field-coverage__container {
+    padding: 0 20px;
+  }
+  .fmstr-cmp-adf-field-coverage__row {
+    grid-template-columns: 20px 1fr auto;
+    padding: 12px 18px;
+    gap: 12px;
+  }
+  .fmstr-cmp-adf-field-coverage__node {
+    grid-column: 2 / -1;
+    max-width: none;
+    padding-top: 2px;
+    font-size: 11.5px;
+  }
+  .fmstr-cmp-adf-field-coverage__type {
+    grid-column: 3 / 4;
+  }
+  .fmstr-cmp-adf-field-coverage__group-head {
+    padding: 14px 18px;
+  }
+  .fmstr-cmp-adf-field-coverage__scroll {
+    max-height: 240px;
+  }
+  .fmstr-cmp-adf-field-coverage__tab {
+    padding: 8px 12px;
+    font-size: 13.5px;
+  }
+}
+/* host-link-override */
+.fmstr-cmp-adf-output-sample a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+.fmstr-cmp-adf-output-sample {
+  --c-fg-1: #101828;
+  --c-fg-2: #475467;
+  --c-fg-3: #697586;
+  --c-fg-strong: #344054;
+  --c-violet-500: #7f56d9;
+  --c-violet-600: #6941c6;
+  --c-violet-700: #5b34b1;
+  --c-violet-300: #b692f6;
+  --c-tint: #f7f3ff;
+  --c-edge: #e4d7ff;
+  --c-border: #eaecf0;
+  --c-border-dark: #d0d5dd;
+  --c-bg-card: #ffffff;
+  --c-bg-soft: #f9fafb;
+  --c-error: #d92d20;
+  --c-success: #16a34a;
+  --c-shadow-xs: 0 1px 2px rgba(16, 24, 40, 0.04);
+  --c-shadow-lg: 0 12px 32px -8px rgba(16, 24, 40, 0.12), 0 4px 8px -4px rgba(16, 24, 40, 0.04);
+  background: #ffffff;
+  padding: 104px 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--c-fg-1);
+}
+.fmstr-cmp-adf-output-sample *,
+.fmstr-cmp-adf-output-sample *::before,
+.fmstr-cmp-adf-output-sample *::after {
+  box-sizing: border-box;
+}
+.fmstr-cmp-adf-output-sample__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.fmstr-cmp-adf-output-sample__header {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+.fmstr-cmp-adf-output-sample__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px 4px 8px;
+  border-radius: 999px;
+  background: var(--c-tint);
+  color: var(--c-violet-700);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+.fmstr-cmp-adf-output-sample__eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-violet-500);
+}
+.fmstr-cmp-adf-output-sample__h2 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  line-height: 1.12;
+  letter-spacing: -0.022em;
+  font-weight: 600;
+  color: var(--c-fg-1);
+  margin: 0 0 14px;
+  text-wrap: balance;
+}
+.fmstr-cmp-adf-output-sample__sub {
+  font-size: 17px;
+  line-height: 26px;
+  color: var(--c-fg-2);
+  margin: 0 auto;
+  max-width: 640px;
+  text-wrap: pretty;
+}
+.fmstr-cmp-adf-output-sample__split {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 0;
+  background: var(--c-fg-1);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid #0a1320;
+  box-shadow: var(--c-shadow-lg);
+}
+.fmstr-cmp-adf-output-sample__pane {
+  padding: 28px 32px;
+}
+.fmstr-cmp-adf-output-sample__pane--left {
+  background: var(--c-bg-soft);
+  border-right: 1px solid var(--c-border);
+}
+.fmstr-cmp-adf-output-sample__pane--right {
+  background: #0f1623;
+  color: #e6e9f2;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.fmstr-cmp-adf-output-sample__pane-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.fmstr-cmp-adf-output-sample__pane-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--c-fg-3);
+}
+.fmstr-cmp-adf-output-sample__pane-label svg {
+  width: 14px;
+  height: 14px;
+}
+.fmstr-cmp-adf-output-sample__pane--right .fmstr-cmp-adf-output-sample__pane-label {
+  color: #8e95a6;
+}
+.fmstr-cmp-adf-output-sample__pane-label-lit {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-success);
+}
+.fmstr-cmp-adf-output-sample__form {
+  background: #ffffff;
+  border: 1px solid var(--c-border);
+  border-radius: 16px;
+  padding: 22px 24px 24px;
+  box-shadow: var(--c-shadow-xs);
+}
+.fmstr-cmp-adf-output-sample__form-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--c-border);
+  margin-bottom: 18px;
+}
+.fmstr-cmp-adf-output-sample__form-mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #1f3a8a, #1d4ed8);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+}
+.fmstr-cmp-adf-output-sample__form-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--c-fg-1);
+}
+.fmstr-cmp-adf-output-sample__form-sub {
+  font-size: 12px;
+  color: var(--c-fg-3);
+}
+.fmstr-cmp-adf-output-sample__form-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--c-fg-1);
+  margin: 0 0 4px;
+  letter-spacing: -0.01em;
+}
+.fmstr-cmp-adf-output-sample__form-desc {
+  font-size: 13px;
+  color: var(--c-fg-2);
+  margin: 0 0 18px;
+}
+.fmstr-cmp-adf-output-sample__form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.fmstr-cmp-adf-output-sample__form-field {
+  display: block;
+}
+.fmstr-cmp-adf-output-sample__form-field--full {
+  grid-column: 1 / -1;
+}
+.fmstr-cmp-adf-output-sample__form-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--c-fg-strong);
+  margin-bottom: 5px;
+}
+.fmstr-cmp-adf-output-sample__form-req {
+  color: var(--c-error);
+}
+.fmstr-cmp-adf-output-sample__form-input {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid var(--c-border-dark);
+  border-radius: 8px;
+  padding: 9px 12px;
+  font:
+    400 13.5px/20px 'Inter',
+    system-ui,
+    sans-serif;
+  color: var(--c-fg-1);
+}
+.fmstr-cmp-adf-output-sample__form-input--select {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23697586' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+  appearance: none;
+}
+.fmstr-cmp-adf-output-sample__form-textarea {
+  width: 100%;
+  min-height: 60px;
+  background: #ffffff;
+  border: 1px solid var(--c-border-dark);
+  border-radius: 8px;
+  padding: 9px 12px;
+  font:
+    400 13.5px/20px 'Inter',
+    system-ui,
+    sans-serif;
+  color: var(--c-fg-1);
+  resize: none;
+}
+.fmstr-cmp-adf-output-sample__form-radios {
+  display: flex;
+  gap: 8px;
+}
+.fmstr-cmp-adf-output-sample__form-radio {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #ffffff;
+  border: 1px solid var(--c-border-dark);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--c-fg-strong);
+  cursor: default;
+}
+.fmstr-cmp-adf-output-sample__form-radio-ring {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1.5px solid var(--c-border-dark);
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.fmstr-cmp-adf-output-sample__form-radio--checked {
+  border-color: var(--c-violet-300);
+  background: var(--c-tint);
+  color: var(--c-violet-700);
+}
+.fmstr-cmp-adf-output-sample__form-radio--checked .fmstr-cmp-adf-output-sample__form-radio-ring {
+  border-color: var(--c-violet-600);
+}
+.fmstr-cmp-adf-output-sample__form-radio--checked .fmstr-cmp-adf-output-sample__form-radio-ring::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-violet-600);
+}
+.fmstr-cmp-adf-output-sample__form-submit {
+  margin-top: 18px;
+  width: 100%;
+  background: var(--c-violet-500);
+  color: #ffffff;
+  border: none;
+  padding: 11px 16px;
+  border-radius: 8px;
+  font:
+    600 14px/20px 'Inter',
+    system-ui,
+    sans-serif;
+  box-shadow: var(--c-shadow-xs);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.fmstr-cmp-adf-output-sample__form-foot {
+  margin-top: 14px;
+  font-size: 11px;
+  color: var(--c-fg-3);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+}
+.fmstr-cmp-adf-output-sample__xml-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.fmstr-cmp-adf-output-sample__xml-file {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 12px;
+  color: #c7cad6;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+.fmstr-cmp-adf-output-sample__xml-ext {
+  color: var(--c-violet-300);
+}
+.fmstr-cmp-adf-output-sample__xml-spacer {
+  flex: 1;
+}
+.fmstr-cmp-adf-output-sample__copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #c7cad6;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font:
+    600 12px/16px 'Inter',
+    system-ui,
+    sans-serif;
+  cursor: pointer;
+}
+.fmstr-cmp-adf-output-sample__copy-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+.fmstr-cmp-adf-output-sample__copy-btn svg {
+  width: 12px;
+  height: 12px;
+}
+.fmstr-cmp-adf-output-sample__copy-btn--copied {
+  color: #6ee7b7;
+}
+.fmstr-cmp-adf-output-sample__xml {
+  margin: 0;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 13px;
+  line-height: 22px;
+  color: #e6e9f2;
+  overflow: auto;
+  padding-right: 8px;
+  counter-reset: line;
+  flex: 1;
+}
+.fmstr-cmp-adf-output-sample__xml-line {
+  display: block;
+  padding-left: 36px;
+  position: relative;
+}
+.fmstr-cmp-adf-output-sample__xml-line::before {
+  counter-increment: line;
+  content: counter(line);
+  position: absolute;
+  left: 0;
+  width: 26px;
+  text-align: right;
+  color: #4d556a;
+  font-size: 11px;
+  user-select: none;
+}
+.fmstr-cmp-adf-output-sample__xml-line--i1 {
+  padding-left: 56px;
+}
+.fmstr-cmp-adf-output-sample__xml-line--i2 {
+  padding-left: 76px;
+}
+.fmstr-cmp-adf-output-sample__xml-line--i3 {
+  padding-left: 96px;
+}
+.fmstr-cmp-adf-output-sample__xml-line--i4 {
+  padding-left: 116px;
+}
+.fmstr-cmp-adf-output-sample__xml-pi {
+  color: #b794f4;
+}
+.fmstr-cmp-adf-output-sample__xml-tag {
+  color: #f6a364;
+}
+.fmstr-cmp-adf-output-sample__xml-bracket {
+  color: #6b7280;
+}
+.fmstr-cmp-adf-output-sample__xml-attr {
+  color: #facc15;
+}
+.fmstr-cmp-adf-output-sample__xml-str {
+  color: #6ee7b7;
+}
+.fmstr-cmp-adf-output-sample__xml-text {
+  color: #e6e9f2;
+}
+.fmstr-cmp-adf-output-sample__xml-cmt {
+  color: #5b6478;
+  font-style: italic;
+}
+@media (max-width: 1100px) {
+  .fmstr-cmp-adf-output-sample__split {
+    grid-template-columns: 1fr;
+  }
+  .fmstr-cmp-adf-output-sample__pane--left {
+    border-right: none;
+    border-bottom: 1px solid var(--c-border);
+  }
+}
+@media (max-width: 760px) {
+  .fmstr-cmp-adf-output-sample {
+    padding: 72px 0;
+  }
+  .fmstr-cmp-adf-output-sample__container {
+    padding: 0 20px;
+  }
+  .fmstr-cmp-adf-output-sample__pane {
+    padding: 20px;
+  }
+  .fmstr-cmp-adf-output-sample__form {
+    padding: 18px 18px 20px;
+  }
+  .fmstr-cmp-adf-output-sample__xml {
+    font-size: 11.5px;
+    line-height: 20px;
+  }
+}
+/* host-link-override */
+.fmstr-cmp-adf-setup-steps a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+.fmstr-cmp-adf-setup-steps {
+  --c-fg-1: #101828;
+  --c-fg-2: #475467;
+  --c-fg-3: #697586;
+  --c-fg-strong: #344054;
+  --c-fg-muted: #98a2b3;
+  --c-violet-500: #7f56d9;
+  --c-violet-600: #6941c6;
+  --c-violet-700: #5b34b1;
+  --c-violet-300: #b692f6;
+  --c-violet-100: #ede4ff;
+  --c-tint: #f7f3ff;
+  --c-edge: #e4d7ff;
+  --c-border: #eaecf0;
+  --c-border-dark: #d0d5dd;
+  --c-bg-card: #ffffff;
+  --c-bg-soft: #f9fafb;
+  --c-bg-soft2: #fcfcfd;
+  --c-shadow-xs: 0 1px 2px rgba(16, 24, 40, 0.04);
+  background: var(--c-bg-soft);
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+  padding: 104px 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--c-fg-1);
+}
+.fmstr-cmp-adf-setup-steps *,
+.fmstr-cmp-adf-setup-steps *::before,
+.fmstr-cmp-adf-setup-steps *::after {
+  box-sizing: border-box;
+}
+.fmstr-cmp-adf-setup-steps__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.fmstr-cmp-adf-setup-steps__header {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+.fmstr-cmp-adf-setup-steps__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px 4px 8px;
+  border-radius: 999px;
+  background: var(--c-tint);
+  color: var(--c-violet-700);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+.fmstr-cmp-adf-setup-steps__eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-violet-500);
+}
+.fmstr-cmp-adf-setup-steps__h2 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  line-height: 1.12;
+  letter-spacing: -0.022em;
+  font-weight: 600;
+  color: var(--c-fg-1);
+  margin: 0 0 14px;
+  text-wrap: balance;
+}
+.fmstr-cmp-adf-setup-steps__sub {
+  font-size: 17px;
+  line-height: 26px;
+  color: var(--c-fg-2);
+  margin: 0 auto;
+  max-width: 640px;
+  text-wrap: pretty;
+}
+.fmstr-cmp-adf-setup-steps__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.fmstr-cmp-adf-setup-steps__card {
+  background: var(--c-bg-card);
+  border: 1px solid var(--c-border);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--c-shadow-xs);
+}
+.fmstr-cmp-adf-setup-steps__thumb {
+  height: 248px;
+  background: var(--c-bg-soft);
+  border-bottom: 1px solid var(--c-border);
+  padding: 14px;
+  overflow: hidden;
+  display: flex;
+}
+.fmstr-cmp-adf-setup-steps__thumb > * {
+  flex: 1;
+  min-width: 0;
+}
+.fmstr-cmp-adf-setup-steps__body {
+  padding: 22px 24px 26px;
+}
+.fmstr-cmp-adf-setup-steps__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: var(--c-violet-100);
+  color: var(--c-violet-700);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.fmstr-cmp-adf-setup-steps__h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 6px;
+  color: var(--c-fg-1);
+  letter-spacing: -0.01em;
+}
+.fmstr-cmp-adf-setup-steps__p {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--c-fg-2);
+  margin: 0;
+}
+.fmstr-cmp-adf-setup-steps__p code {
+  background: var(--c-bg-soft2);
+  border: 1px solid var(--c-border);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 12.5px;
+  color: var(--c-fg-1);
+}
+.fmstr-cmp-adf-setup-steps__p em {
+  font-style: normal;
+  color: var(--c-violet-700);
+  font-weight: 600;
+}
+/* In-app screenshot illustrations */
+.fmstr-cmp-adf-setup-steps__win {
+  background: #ffffff;
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  box-shadow: var(--c-shadow-xs);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.fmstr-cmp-adf-setup-steps__win-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 12px;
+  border-bottom: 1px solid var(--c-border);
+  background: #ffffff;
+  flex: none;
+}
+.fmstr-cmp-adf-setup-steps__win-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--c-violet-600);
+  letter-spacing: -0.02em;
+}
+.fmstr-cmp-adf-setup-steps__win-mark {
+  width: 11px;
+  height: 14px;
+  background: var(--c-violet-600);
+  border-radius: 2px;
+  position: relative;
+  flex: none;
+  display: inline-block;
+}
+.fmstr-cmp-adf-setup-steps__win-mark::before {
+  content: '';
+  position: absolute;
+  left: 1.5px;
+  right: 1.5px;
+  top: 3.5px;
+  height: 3.5px;
+  background: #ffffff;
+  border-radius: 2px;
+}
+.fmstr-cmp-adf-setup-steps__win-mark::after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 4.5px;
+  width: 1.5px;
+  height: 1.5px;
+  border-radius: 50%;
+  background: var(--c-violet-600);
+  box-shadow: 3.5px 0 0 var(--c-violet-600);
+}
+.fmstr-cmp-adf-setup-steps__win-tabs {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-left: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--c-fg-strong);
+}
+.fmstr-cmp-adf-setup-steps__win-tab {
+  position: relative;
+  padding: 2px 0;
+}
+.fmstr-cmp-adf-setup-steps__win-tab--active {
+  color: var(--c-violet-600);
+  font-weight: 600;
+}
+.fmstr-cmp-adf-setup-steps__win-tab--active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 2px;
+  background: var(--c-violet-600);
+}
+.fmstr-cmp-adf-setup-steps__win-sub {
+  display: flex;
+  gap: 14px;
+  padding: 7px 12px;
+  background: var(--c-bg-soft2);
+  border-bottom: 1px solid var(--c-border);
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--c-fg-3);
+  flex: none;
+  white-space: nowrap;
+}
+.fmstr-cmp-adf-setup-steps__win-crumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.fmstr-cmp-adf-setup-steps__win-crumb svg {
+  width: 9px;
+  height: 9px;
+  color: var(--c-fg-muted);
+}
+.fmstr-cmp-adf-setup-steps__win-crumb--active {
+  color: var(--c-violet-700);
+  font-weight: 600;
+}
+.fmstr-cmp-adf-setup-steps__win-crumb--active::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--c-violet-500);
+  display: inline-block;
+  margin-right: 2px;
+}
+.fmstr-cmp-adf-setup-steps__win-stage {
+  flex: 1;
+  background: var(--c-bg-soft);
+  padding: 10px;
+  overflow: hidden;
+  min-height: 0;
+}
+/* Step 1 — form preview */
+.fmstr-cmp-adf-setup-steps__formprev {
+  background: #ffffff;
+  border-radius: 6px;
+  border: 1px solid var(--c-border);
+  padding: 10px 14px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  overflow: hidden;
+}
+.fmstr-cmp-adf-setup-steps__formprev-f {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.fmstr-cmp-adf-setup-steps__formprev-l {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--c-fg-strong);
+}
+.fmstr-cmp-adf-setup-steps__formprev-i {
+  background: #ffffff;
+  border: 1px solid var(--c-border-dark);
+  border-radius: 5px;
+  padding: 6px 8px;
+  font-size: 10px;
+  color: var(--c-fg-muted);
+  min-height: 22px;
+  display: flex;
+  align-items: center;
+}
+.fmstr-cmp-adf-setup-steps__formprev-i--filled {
+  color: var(--c-fg-1);
+}
+.fmstr-cmp-adf-setup-steps__formprev-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+/* Step 2 — connection panel */
+.fmstr-cmp-adf-setup-steps__panel {
+  background: #ffffff;
+  border-radius: 6px;
+  border: 1px solid var(--c-border);
+  padding: 10px 12px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: hidden;
+}
+.fmstr-cmp-adf-setup-steps__panel-h {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--c-fg-1);
+  letter-spacing: -0.01em;
+}
+.fmstr-cmp-adf-setup-steps__panel-badge {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background: var(--c-violet-100);
+  color: var(--c-violet-600);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+.fmstr-cmp-adf-setup-steps__panel-badge svg {
+  width: 10px;
+  height: 10px;
+}
+.fmstr-cmp-adf-setup-steps__fld {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.fmstr-cmp-adf-setup-steps__fld-lab {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--c-fg-1);
+}
+.fmstr-cmp-adf-setup-steps__fld-inp {
+  background: #ffffff;
+  border: 1px solid var(--c-border-dark);
+  border-radius: 5px;
+  padding: 6px 8px;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 9.5px;
+  color: var(--c-fg-1);
+  min-height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.fmstr-cmp-adf-setup-steps__fld-inp--focus {
+  border-color: var(--c-violet-300);
+  box-shadow: 0 0 0 3px rgba(127, 86, 217, 0.18);
+}
+.fmstr-cmp-adf-setup-steps__fld-inp svg {
+  width: 10px;
+  height: 10px;
+  color: var(--c-fg-3);
+  flex: none;
+}
+.fmstr-cmp-adf-setup-steps__caret {
+  width: 2px;
+  height: 12px;
+  background: var(--c-violet-600);
+  animation: fmstr-cmp-adf-setup-steps-blink 1s steps(2) infinite;
+  display: inline-block;
+  margin-left: 1px;
+}
+@keyframes fmstr-cmp-adf-setup-steps-blink {
+  50% {
+    opacity: 0;
+  }
+}
+/* Step 3 — preview / mapping */
+.fmstr-cmp-adf-setup-steps__map {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.fmstr-cmp-adf-setup-steps__map-h {
+  display: grid;
+  grid-template-columns: 1fr 14px 1fr;
+  gap: 8px;
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--c-fg-3);
+  padding: 0 2px 4px;
+  border-bottom: 1px solid var(--c-border);
+  margin-bottom: 2px;
+}
+.fmstr-cmp-adf-setup-steps__map-h span:last-child {
+  color: var(--c-violet-700);
+}
+.fmstr-cmp-adf-setup-steps__map-row {
+  display: grid;
+  grid-template-columns: 1fr 14px 1fr;
+  align-items: center;
+  gap: 8px;
+}
+.fmstr-cmp-adf-setup-steps__map-src {
+  background: #ffffff;
+  border: 1px solid var(--c-border-dark);
+  border-radius: 5px;
+  padding: 5px 7px;
+  font-size: 10px;
+  color: var(--c-fg-1);
+}
+.fmstr-cmp-adf-setup-steps__map-dst {
+  background: var(--c-tint);
+  border: 1px solid var(--c-violet-300);
+  border-radius: 5px;
+  padding: 5px 7px;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 9.5px;
+  color: var(--c-violet-700);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.fmstr-cmp-adf-setup-steps__map-arrow {
+  color: var(--c-violet-300);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.fmstr-cmp-adf-setup-steps__map-arrow svg {
+  width: 12px;
+  height: 12px;
+  display: block;
+}
+@media (max-width: 1100px) {
+  .fmstr-cmp-adf-setup-steps__grid {
+    grid-template-columns: 1fr;
+  }
+  .fmstr-cmp-adf-setup-steps__thumb {
+    height: 280px;
+  }
+}
+@media (max-width: 760px) {
+  .fmstr-cmp-adf-setup-steps {
+    padding: 72px 0;
+  }
+  .fmstr-cmp-adf-setup-steps__container {
+    padding: 0 20px;
+  }
+}
+/* host-link-override */
+.fmstr-cmp-adf-vs-alternatives a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+.fmstr-cmp-adf-vs-alternatives {
+  --c-fg-1: #101828;
+  --c-fg-2: #475467;
+  --c-fg-3: #697586;
+  --c-fg-strong: #344054;
+  --c-fg-muted: #98a2b3;
+  --c-violet-500: #7f56d9;
+  --c-violet-600: #6941c6;
+  --c-violet-700: #5b34b1;
+  --c-violet-300: #b692f6;
+  --c-violet-100: #ede4ff;
+  --c-tint: #f7f3ff;
+  --c-edge: #e4d7ff;
+  --c-border: #eaecf0;
+  --c-border-dark: #d0d5dd;
+  --c-bg-card: #ffffff;
+  --c-bg-soft: #f9fafb;
+  --c-bg-soft2: #f2f4f7;
+  --c-success: #16a34a;
+  --c-success-tint: #ecfdf3;
+  --c-warning: #b45309;
+  --c-warning-tint: #fef7ec;
+  --c-error: #d92d20;
+  --c-error-tint: #fef3f2;
+  --c-shadow-xs: 0 1px 2px rgba(16, 24, 40, 0.04);
+  --c-shadow-sm: 0 1px 3px rgba(16, 24, 40, 0.06), 0 1px 2px rgba(16, 24, 40, 0.04);
+  background: #ffffff;
+  padding: 104px 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--c-fg-1);
+}
+.fmstr-cmp-adf-vs-alternatives *,
+.fmstr-cmp-adf-vs-alternatives *::before,
+.fmstr-cmp-adf-vs-alternatives *::after {
+  box-sizing: border-box;
+}
+.fmstr-cmp-adf-vs-alternatives__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.fmstr-cmp-adf-vs-alternatives__header {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+.fmstr-cmp-adf-vs-alternatives__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px 4px 8px;
+  border-radius: 999px;
+  background: var(--c-tint);
+  color: var(--c-violet-700);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+.fmstr-cmp-adf-vs-alternatives__eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-violet-500);
+}
+.fmstr-cmp-adf-vs-alternatives__h2 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  line-height: 1.12;
+  letter-spacing: -0.022em;
+  font-weight: 600;
+  color: var(--c-fg-1);
+  margin: 0 0 14px;
+  text-wrap: balance;
+}
+.fmstr-cmp-adf-vs-alternatives__sub {
+  font-size: 17px;
+  line-height: 26px;
+  color: var(--c-fg-2);
+  margin: 0 auto;
+  max-width: 640px;
+  text-wrap: pretty;
+}
+.fmstr-cmp-adf-vs-alternatives__table-wrap {
+  background: var(--c-bg-card);
+  border: 1px solid var(--c-border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--c-shadow-sm);
+}
+.fmstr-cmp-adf-vs-alternatives__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14.5px;
+  line-height: 22px;
+}
+.fmstr-cmp-adf-vs-alternatives__table th,
+.fmstr-cmp-adf-vs-alternatives__table td {
+  padding: 18px 22px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--c-border);
+}
+.fmstr-cmp-adf-vs-alternatives__table tr:last-child th,
+.fmstr-cmp-adf-vs-alternatives__table tr:last-child td {
+  border-bottom: none;
+}
+.fmstr-cmp-adf-vs-alternatives__table thead th {
+  background: var(--c-bg-soft);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--c-fg-3);
+  text-transform: uppercase;
+  padding: 14px 22px;
+}
+.fmstr-cmp-adf-vs-alternatives__th-formester {
+  color: var(--c-violet-700) !important;
+  background: var(--c-tint) !important;
+  position: relative;
+}
+.fmstr-cmp-adf-vs-alternatives__th-formester::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--c-violet-500);
+}
+.fmstr-cmp-adf-vs-alternatives__th-row {
+  background: #fcfcfd;
+  font-weight: 600;
+  color: var(--c-fg-1);
+  width: 240px;
+}
+.fmstr-cmp-adf-vs-alternatives__row-label {
+  display: block;
+  font-weight: 600;
+  color: var(--c-fg-1);
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+.fmstr-cmp-adf-vs-alternatives__row-hint {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--c-fg-3);
+  line-height: 19px;
+}
+.fmstr-cmp-adf-vs-alternatives__cell--us {
+  background: rgba(127, 86, 217, 0.04);
+  color: var(--c-fg-1);
+}
+.fmstr-cmp-adf-vs-alternatives__cell-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 9px 3px 7px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+.fmstr-cmp-adf-vs-alternatives__cell-pill--ok {
+  background: var(--c-success-tint);
+  color: var(--c-success);
+}
+.fmstr-cmp-adf-vs-alternatives__cell-pill--meh {
+  background: var(--c-warning-tint);
+  color: var(--c-warning);
+}
+.fmstr-cmp-adf-vs-alternatives__cell-pill--bad {
+  background: var(--c-error-tint);
+  color: var(--c-error);
+}
+.fmstr-cmp-adf-vs-alternatives__cell-pill svg {
+  width: 12px;
+  height: 12px;
+}
+.fmstr-cmp-adf-vs-alternatives__cell-body {
+  color: var(--c-fg-2);
+  font-size: 14px;
+  line-height: 21px;
+}
+.fmstr-cmp-adf-vs-alternatives__cell--us .fmstr-cmp-adf-vs-alternatives__cell-body {
+  color: var(--c-fg-1);
+}
+.fmstr-cmp-adf-vs-alternatives__cell code {
+  background: var(--c-bg-soft2);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 12.5px;
+  color: var(--c-fg-1);
+  border: 1px solid var(--c-border);
+}
+.fmstr-cmp-adf-vs-alternatives__cell--us code {
+  background: rgba(127, 86, 217, 0.1);
+  border-color: var(--c-edge);
+  color: var(--c-violet-700);
+}
+.fmstr-cmp-adf-vs-alternatives__foot {
+  margin-top: 18px;
+  font-size: 13px;
+  color: var(--c-fg-3);
+  text-align: center;
+}
+@media (max-width: 880px) {
+  .fmstr-cmp-adf-vs-alternatives__table-wrap {
+    overflow-x: auto;
+  }
+  .fmstr-cmp-adf-vs-alternatives__table {
+    min-width: 720px;
+  }
+  .fmstr-cmp-adf-vs-alternatives__th-row {
+    width: 200px;
+  }
+  .fmstr-cmp-adf-vs-alternatives__table th,
+  .fmstr-cmp-adf-vs-alternatives__table td {
+    padding: 14px 16px;
+  }
+}
+@media (max-width: 760px) {
+  .fmstr-cmp-adf-vs-alternatives {
+    padding: 72px 0;
+  }
+  .fmstr-cmp-adf-vs-alternatives__container {
+    padding: 0 20px;
+  }
+}
+</style>

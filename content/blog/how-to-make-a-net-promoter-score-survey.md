@@ -1,0 +1,161 @@
+---
+slug: "how-to-make-a-net-promoter-score-survey"
+title: "How to Create a Net Promoter Score (NPS) Survey in Minutes"
+description: "In this post, we'll cover what an online Net Promoter Score (NPS) survey is and how to create, customize and analyze results to see how satisfied your customers are with your product or service."
+metaTitle: "How to Create a Net Promoter Score (NPS) Survey | Formester"
+metaDescription: "In this post, we'll cover what an online Net Promoter Score (NPS) survey is, how to create, and analyze results to see how loyal your customers are."
+keywords: "offline survey app,offline surveys,survey offline,offline feedback surveys,mobile surveys,offline survey tool,offline survey maker,offline survey software,offline data collection,offline forms,offline forms addon,offline forms app,offline forms free,offline form 2021,wpforms offline forms,wordpress offline form,offline form kaise bhare,offline mode,free offline forms,forms,online form,create offline forms,mobile forms offline,offline mobile forms"
+author: "Harish Kumar"
+authorProfile: "https://www.linkedin.com/in/harish-kumar2424/"
+coverImgAlt: "how to make an nps survey"
+featured: false
+coverImg: {"url":"https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_make_an_nps_survey_f45f71a201.png","width":1214,"height":630}
+metaImage: []
+jsonld: []
+createdAt: "2024-11-13T03:29:56.377Z"
+updatedAt: "2026-06-22T05:06:39.640Z"
+publishedAt: "2026-06-22T05:06:22.803Z"
+---
+<p style="font-size: inherit;">An NPS survey asks customers one question: how likely are you to recommend us, on a scale of 0 to 10. That single number tells you who loves you, who could leave, and where loyalty is leaking.</p>
+
+<p>This guide walks through the question to ask, the follow-ups that pull out the why, how the score is calculated, and what counts as a good NPS. Then you build one in a few minutes.</p>
+
+<p>Want to skip ahead and start collecting? Spin up an NPS survey with a <a href="https://formester.com/online-survey-maker/">free survey maker</a> and a ready-made scale field.</p>
+
+<h2>What Is an NPS Survey?</h2>
+
+<p>An NPS survey is a one-question loyalty survey. It asks people to rate, from 0 to 10, how likely they are to recommend your product or service to someone they know.</p>
+
+<p>Their answers sort them into three groups:</p>
+
+<ul>
+<li>Promoters (9-10): your happiest, most loyal customers, the ones who refer others.</li>
+<li>Passives (7-8): satisfied but lukewarm, easy to lure away by a competitor.</li>
+<li>Detractors (0-6): unhappy customers who can spread negative word of mouth.</li>
+</ul>
+
+<p>Subtract the percentage of detractors from the percentage of promoters and you get one number between -100 and +100. The higher it climbs, the stronger your loyalty base.</p>
+
+<h2>NPS Survey Questions (Copy and Paste)</h2>
+
+<p>Every NPS survey starts with one required rating question, then one open follow-up that explains the score. Here are versions you can lift straight into your form.</p>
+
+<h3>The core rating question (0 to 10)</h3>
+
+<ul>
+<li>How likely are you to recommend us to a friend or colleague?</li>
+<li>How likely are you to recommend [product] to someone with the same need?</li>
+</ul>
+
+<h3>Follow-up for promoters (9-10)</h3>
+
+<ul>
+<li>What did you enjoy most about using us?</li>
+<li>What is the one thing you would tell a friend about us?</li>
+</ul>
+
+<h3>Follow-up for passives (7-8)</h3>
+
+<ul>
+<li>What would have made this a 9 or a 10?</li>
+<li>What is one thing we could do better?</li>
+</ul>
+
+<h3>Follow-up for detractors (0-6)</h3>
+
+<ul>
+<li>What went wrong, and what would you change first?</li>
+<li>What stopped this from being a better experience?</li>
+</ul>
+
+<p>Keep the rating question required and the follow-up optional. One rating plus one open question is the format that keeps response rates high. Build the whole set in minutes with the <a href="https://formester.com/online-survey-maker/">online survey maker</a> using a scale field for the rating and conditional logic for the follow-ups.</p>
+
+<h2>How to Create an NPS Survey in 6 Steps</h2>
+
+<p>You can build a working NPS survey in a few minutes. Here is the full flow, from blank form to live results.</p>
+
+<h3>Step 1: Start Building Your Form</h3>
+
+<p>Open your form builder and click New Form. You can start from scratch, generate one with AI, or pick a <a href="https://formester.com/templates/">free template</a>. We will start from scratch.</p>
+
+<ul>
+<li>Rename: give the survey a clear title so respondents know what they are answering.</li>
+<li>Add elements: a scale rating question (0 to 10), fields for name and email, and two short follow-ups, "What went wrong?" and "What did you enjoy?"</li>
+</ul>
+
+<h3>Step 2: Design Your Survey</h3>
+
+<p>Match the look to your brand with the <a href="https://formester.com/features/branding-kit/">branding kit</a> so the survey feels like part of your product, not a third-party pop-up. Make the rating field required so every response counts toward the score.</p>
+
+<h3>Step 3: Create Three Thank You Pages</h3>
+
+<p>Set up three separate thank you pages so each group gets the right message:</p>
+
+<ul>
+<li>Scores 9-10: route to a Promoters page (ask for a review or referral).</li>
+<li>Scores 7-8: route to a Passives page (ask what would make it a 10).</li>
+<li>Scores 0-6: route to a Detractors page (ask what went wrong and offer to make it right).</li>
+</ul>
+
+<h3>Step 4: Set Up Conditional Rules</h3>
+
+<p>Now wire the routing so each score lands on the right page. Open the Advanced section, find Form Control, and set the rules:</p>
+
+<ul>
+<li>Score 9 or above, show the Promoters page.</li>
+<li>Score 7 or 8, show the Passives page.</li>
+<li>Score 6 or below, show the Detractors page.</li>
+</ul>
+
+<p>You can also show or hide follow-up questions based on the rating, so a detractor only sees "What went wrong?" Here is how <a href="https://formester.com/build-conditional-logic-forms-with-ai/">conditional logic forms work and how to build one with AI</a>.</p>
+
+<h3>Step 5: Test Your Survey</h3>
+
+<p>Run the survey yourself before you publish. Submit a few test scores and check that each one lands on the correct thank you page and shows the right follow-up. Enter a 5 and you should see only the "What went wrong?" question, not the promoter prompt.</p>
+
+<h3>Step 6: Publish and Analyze Your Survey</h3>
+
+<p>Publish the survey and start collecting. Generate a <a href="https://formester.com/features/qr-code-generator/">QR code</a> to print on receipts, flyers, or packaging so people can scan and answer on the spot.</p>
+
+<p>As responses land, open the submissions view and filter by score to see your promoter, passive, and detractor split. Summary analytics on the scale field show the distribution at a glance, so you can read the trend without exporting anything.</p>
+
+<h2>How to Calculate Your NPS</h2>
+
+<p>The math is simple. Take the percentage of promoters and subtract the percentage of detractors. Passives are left out.</p>
+
+<ul>
+<li>Sort responses into promoters (9-10), passives (7-8), and detractors (0-6).</li>
+<li>Work out what percent of all responses are promoters, and what percent are detractors.</li>
+<li>Subtract: NPS = %Promoters minus %Detractors.</li>
+</ul>
+
+<p>Say 100 people respond: 60 promoters, 25 passives, 15 detractors. That is 60% minus 15%, an NPS of +45. The result always sits between -100 and +100. Export the raw data to Excel or <a href="https://formester.com/integrations/">connect Google Sheets</a> if you want to slice it further.</p>
+
+<h2>What Is a Good NPS Score?</h2>
+
+<p>Any score above zero means you have more promoters than detractors, which is a fine place to start. As a rough guide:</p>
+
+<ul>
+<li>Above 0: more fans than critics, a positive baseline.</li>
+<li>Above 30: good. Most customers are happy and some will refer you.</li>
+<li>Above 50: excellent. Loyalty is a real growth lever for you.</li>
+<li>Above 70: world-class, the territory of brands people rave about unprompted.</li>
+</ul>
+
+<p>Benchmarks shift by industry, so the honest read is your own trend. Track NPS the same way each quarter and watch whether the number is climbing. The direction matters more than any single snapshot.</p>
+
+<h2>Start Measuring Loyalty Today</h2>
+
+<p>An NPS survey turns one simple question into a number you can act on. Ask it well, route each group to the right follow-up, and track the score over time instead of obsessing over a single reading.</p>
+
+<p>Ready to run yours? Build an NPS survey with a scale field and conditional thank-you pages, then read the split in built-in analytics. <a href="https://app.formester.com/users/sign_up">Start building free with Formester</a> or grab a ready-made <a href="https://formester.com/templates/categories/survey-forms/">survey template</a> to launch even faster.</p>
+
+<section class="faq">
+<h2>NPS Survey FAQ</h2>
+<details><summary>What is an NPS survey?</summary><div>A one-question loyalty survey that asks how likely someone is to recommend you on a 0 to 10 scale, then sorts them into promoters, passives, and detractors.</div></details>
+<details><summary>What is the standard NPS survey question?</summary><div>How likely are you to recommend us to a friend or colleague, answered on a 0 to 10 scale where 0 is not at all likely and 10 is extremely likely.</div></details>
+<details><summary>How is the Net Promoter Score calculated?</summary><div>Subtract the percentage of detractors (0 to 6) from the percentage of promoters (9 to 10). Passives (7 to 8) are left out. The result lands between -100 and +100.</div></details>
+<details><summary>What is a good NPS score?</summary><div>Anything above zero is positive. Above 30 is good, above 50 is excellent, and above 70 is world-class, though the bar moves by industry.</div></details>
+<details><summary>How many questions should an NPS survey have?</summary><div>One required rating question plus one optional open follow-up asking why. Keeping it short is what keeps response rates high.</div></details>
+</section>
+

@@ -1,0 +1,445 @@
+<template>
+  <div>
+    <HeroV2
+      :description="c0_description"
+      trustText="✓ Native integration · ✓ Your own sending domain · ✓ Minutes to set up"
+      blobColorA="#f5eeff"
+      blobColorB="#f1ebff"
+      blobColorC="#f4efff"
+      :mockupHtml="c0_mockupHtml"
+      layout="split"
+      :title="c0_title"
+      :buttons="c0_buttons"
+      :badge="c0_badge"
+      :tabCardContent="c0_tabCardContent"
+      class="page-component-item"
+    />
+
+    <TrustSeals
+      label="Trusted by 56k+ teams worldwide"
+      :showTrustBadges="false"
+      :title="c1_title"
+      :logos="c1_logos"
+      class="page-component-item"
+    />
+
+    <CardGrid
+      eyebrow="Why connect them"
+      description="Route every form email through your Sendgrid account for deliverability you control."
+      columns="2"
+      :title="c2_title"
+      :cards="c2_cards"
+      class="page-component-item"
+    />
+
+    <StickyStepsSection
+      badge="How it works"
+      heading="Connect Sendgrid in 3 steps"
+      description="Set it up once from your dashboard — every form can use it after that."
+      background="#f9fafb"
+      :steps="c3_steps"
+      :buttons="c3_buttons"
+      class="page-component-item"
+    />
+
+    <TestimonialWall
+      description="Real reviews from G2, Trustpilot, Product Hunt, and Capterra."
+      showG2
+      showTrustpilot
+      showProductHunt
+      showCapterra
+      :title="c4_title"
+      :pickedReviews="c4_pickedReviews"
+      :excludedReviews="c4_excludedReviews"
+      class="page-component-item"
+    />
+
+    <IntegrationsGrid title="Explore more integrations" :integrations="c5_integrations" class="page-component-item" />
+
+    <FaqSection centered :title="c6_title" :faqList="c6_faqList" class="page-component-item" />
+
+    <CtaDark
+      badge="Free to start"
+      heading="Send form emails through Sendgrid today"
+      description="Connect once, and every confirmation and notification goes out from your own domain."
+      :buttons="c7_buttons"
+      class="page-component-item"
+    />
+  </div>
+</template>
+
+<script setup>
+import CardGrid from '@/components/v2/CardGrid.vue'
+import CtaDark from '@/components/v2/CtaDark.vue'
+import FaqSection from '@/components/v2/FaqSection.vue'
+import HeroV2 from '@/components/v2/HeroV2.vue'
+import IntegrationsGrid from '@/components/integrations/IntegrationsGrid.vue'
+import StickyStepsSection from '@/components/v2/StickyStepsSection.vue'
+import TestimonialWall from '@/components/v2/TestimonialWall.vue'
+import TrustSeals from '@/components/v2/TrustSeals.vue'
+
+const c0_description =
+  'Connect your SendGrid account and send branded form emails at any volume. Confirmations, notifications, and auto-replies go out from your own domain — not a generic system address.'
+const c0_mockupHtml =
+  "<div class='raw-html-embed'>\u003Cstyle>.iw{font-family:'Inter',ui-sans-serif,system-ui,sans-serif;position:relative;max-width:480px;margin:0 auto;padding-top:10px;} .iw *{box-sizing:border-box;} .iw__pair{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:18px;} .iw__logo{width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #eaecf0;box-shadow:0 2px 8px rgba(15,14,26,.06);flex-shrink:0;} .iw__logo img{width:30px;height:30px;object-fit:contain;} .iw__flow{display:flex;align-items:center;gap:5px;} .iw__dot{width:6px;height:6px;border-radius:50%;background:#9777e0;opacity:.35;animation:iwd 1.6s linear infinite;} .iw__dot:nth-child(2){animation-delay:.2s}.iw__dot:nth-child(3){animation-delay:.4s} @keyframes iwd{0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}} .iw__win{background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 18px 50px rgba(15,14,26,.12);overflow:hidden;} .iw__bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#f9fafb;border-bottom:1px solid #eaecf0;} .iw__cdot{width:10px;height:10px;border-radius:50%;flex-shrink:0;} .iw__title{font-size:11px;color:#697586;margin-left:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;} @keyframes iwnew{0%,10%{opacity:0;transform:translateY(-6px)}18%,88%{opacity:1;transform:translateY(0)}97%,100%{opacity:0}} @media(max-width:600px){.iw__toast{right:-4px !important;bottom:-30px !important;}} .iw__toast{position:absolute;bottom:-28px;right:-36px;display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #eaecf0;border-radius:12px;box-shadow:0 8px 24px rgba(15,14,26,.14);padding:9px 13px;font-size:12px;font-weight:600;color:#101828;animation:iwnew 5s ease-in-out infinite;} .iw__toast small{display:block;font-size:10px;font-weight:500;color:#697586;} .iw__tick{width:22px;height:22px;border-radius:7px;background:#11c15b;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;} .iw__anim{animation:iwnew 5s ease-in-out infinite;}\u003C/style><div class='iw'><div class='iw__pair'><span class='iw__logo'><img src='/formester-icon.svg' alt='Formester'/></span><span class='iw__flow'><span class='iw__dot'></span><span class='iw__dot'></span><span class='iw__dot'></span></span><span class='iw__logo'><img src='/integrations/sendgrid.svg' alt=''/></span></div><div class='iw__win'><div class='iw__bar'><span class='iw__cdot' style='background:#ff6058'></span><span class='iw__cdot' style='background:#ffbd2e'></span><span class='iw__cdot' style='background:#27c93f'></span><span class='iw__title'>Sent · Sendgrid</span></div><div><div style='display:flex;justify-content:space-between;gap:10px;padding:8px 14px;border-bottom:1px solid #f2f4f7;font-size:11px;'><span style='color:#697586;'>To</span><span style='color:#101828;font-weight:500;text-align:right;'>jonas@verge.dev</span></div><div style='display:flex;justify-content:space-between;gap:10px;padding:8px 14px;border-bottom:1px solid #f2f4f7;font-size:11px;'><span style='color:#697586;'>From</span><span style='color:#101828;font-weight:700;text-align:right;'>hello@yourcompany.com <span style='color:#98a2b3;font-weight:500;'>via Sendgrid</span></span></div><div style='display:flex;justify-content:space-between;gap:10px;padding:8px 14px;border-bottom:1px solid #f2f4f7;font-size:11px;'><span style='color:#697586;'>Subject</span><span style='color:#101828;font-weight:700;text-align:right;'>Thanks for your submission!</span></div><div style='padding:11px 14px;font-size:11px;color:#475467;line-height:1.6;'>Hi Jonas,<br/>We received your response — our team will get back to you shortly.</div><div style='padding:0 14px 12px;'><span style='display:inline-flex;font-size:9.5px;font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:3px 9px;line-height:1;'>Delivered · just now</span></div></div></div><div class='iw__toast'><span class='iw__tick'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'><path d='M5 12l4 4L19 6'/></svg></span><span>Email delivered<small>just now · via Sendgrid</small></span></div></div></div>"
+const c0_title = [
+  {
+    id: 5235,
+    text: 'Send form emails with ',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+  {
+    id: 5234,
+    text: 'Sendgrid',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c0_buttons = [
+  {
+    id: 1835,
+    link: 'https://help.formester.com/en/article/sendgrid-integration-1ny64j6/',
+    text: 'Read the setup guide',
+    type: 'Primary',
+    showArrow: true,
+  },
+  {
+    id: 1834,
+    link: 'https://app.formester.com/users/sign_up',
+    text: 'Start free',
+    type: 'Secondary',
+    showArrow: false,
+  },
+]
+const c0_badge = {
+  id: 178,
+  text: 'Sendgrid',
+  tag: 'Integrations',
+  link: '/integrations/',
+}
+const c0_tabCardContent = []
+const c1_title = []
+const c1_logos = []
+const c2_title = [
+  {
+    id: 5232,
+    text: 'Email that comes from ',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+  {
+    id: 5230,
+    text: 'your brand',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c2_cards = [
+  {
+    id: 907,
+    tag: 'Branding',
+    tagColor: 'violet',
+    title: 'Your own from-address',
+    body: 'Confirmations and replies are sent from your domain, so recipients recognize and trust every email.',
+    mockHtml: null,
+    icon: null,
+  },
+  {
+    id: 909,
+    tag: 'Deliverability',
+    tagColor: 'blue',
+    title: 'Reliable delivery',
+    body: "Lean on SendGrid's infrastructure so confirmations and notifications reliably reach the inbox.",
+    mockHtml: null,
+    icon: null,
+  },
+  {
+    id: 908,
+    tag: 'Automation',
+    tagColor: 'green',
+    title: 'Hands-free follow-ups',
+    body: 'Autoresponders and notification emails fire on every submission — no manual sending.',
+    mockHtml: null,
+    icon: null,
+  },
+  {
+    id: 910,
+    tag: 'Scale',
+    tagColor: 'amber',
+    title: 'Built for volume',
+    body: 'Handle high-volume campaigns and busy forms without hitting personal-mailbox limits.',
+    mockHtml: null,
+    icon: null,
+  },
+]
+const c3_steps = [
+  {
+    id: 335,
+    title: 'Add a Custom SMTP integration',
+    description: 'From your dashboard, open Integrations, find Custom SMTP, and click Add integration.',
+    rawHtml:
+      "<div class='raw-html-embed'><div style='font-family:Inter,ui-sans-serif,system-ui,sans-serif;max-width:320px;'><div style='display:flex;gap:14px;font-size:10px;color:#697586;padding:0 4px 7px;'><span>All</span><span style='color:#6434d0;font-weight:700;border-bottom:2px solid #6434d0;padding-bottom:5px;'>Email</span><span>Payment</span></div><div style='border:1px solid #eaecf0;border-radius:10px;background:#fff;box-shadow:0 4px 14px rgba(15,14,26,.06);overflow:hidden;'><div style='display:flex;align-items:center;gap:8px;padding:11px 13px 4px;'><img src='/integrations/custom-smtp.svg' alt='' style='width:20px;height:20px;object-fit:contain;'/><span style='font-size:12.5px;font-weight:700;color:#101828;'>Custom SMTP</span></div><div style='padding:0 13px 10px;font-size:10.5px;color:#697586;line-height:1.45;'>Use your own email server for sending emails by configuring SMTP settings.</div><div style='display:flex;justify-content:flex-end;border-top:1px solid #f2f4f7;padding:9px 13px;font-size:10.5px;'><span style='color:#6434d0;font-weight:700;'>+ Add integration</span></div></div></div></div>",
+    image: null,
+  },
+  {
+    id: 336,
+    title: 'Add your Sendgrid SMTP account',
+    description:
+      'In the Add SMTP Account modal, pick Sendgrid as the service — the port and SMTP server fill in for you — then add your username, integration password, and from name and address.',
+    rawHtml:
+      "<div class='raw-html-embed'><div style='font-family:Inter,ui-sans-serif,system-ui,sans-serif;max-width:320px;'><div style='border:1px solid #eaecf0;border-radius:10px;background:#fff;box-shadow:0 4px 14px rgba(15,14,26,.06);padding:13px;'><div style='font-size:11px;font-weight:700;color:#101828;'>Add SMTP Account</div><div style='font-size:10.5px;font-weight:700;color:#101828;margin:8px 0 4px;'>Select Smtp Service</div><div style='border:1px solid #eaecf0;border-radius:8px;padding:8px 11px;font-size:10.5px;color:#101828;display:flex;justify-content:space-between;align-items:center;'>Sendgrid<span style='font-size:8px;color:#697586;'>&#9662;</span></div><div style='font-size:10.5px;font-weight:700;color:#101828;margin:8px 0 4px;'>Username</div><div style='border:1px solid #eaecf0;border-radius:8px;padding:8px 11px;font-size:10px;color:#98a2b3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;'>Enter Username</div><div style='font-size:10.5px;font-weight:700;color:#101828;margin:8px 0 4px;'>Integration Password</div><div style='border:1px solid #eaecf0;border-radius:8px;padding:8px 11px;font-size:10px;color:#98a2b3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;'>••••••••••••</div><div style='font-size:10.5px;font-weight:700;color:#101828;margin:8px 0 4px;'>SMTP Server</div><div style='border:1px solid #eaecf0;border-radius:8px;padding:8px 11px;font-size:10px;color:#98a2b3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;'>smtp.sendgrid.net</div><div style='font-size:10.5px;font-weight:700;color:#101828;margin:8px 0 4px;'>From Address</div><div style='border:1px solid #eaecf0;border-radius:8px;padding:8px 11px;font-size:10px;color:#98a2b3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;'>hello@yourcompany.com</div><div style='margin-top:11px;'><span style='font-size:10.5px;font-weight:700;color:#fff;background:#6434d0;border-radius:7px;padding:7px 16px;line-height:1;'>Add account</span></div></div></div></div>",
+    image: null,
+  },
+  {
+    id: 337,
+    title: 'Use it in your form and test',
+    description:
+      "Pick the integration in your form's email notifications, publish, and send a test submission to confirm delivery.",
+    rawHtml:
+      "<div class='raw-html-embed'><div style='font-family:Inter,ui-sans-serif,system-ui,sans-serif;max-width:320px;'><div style='display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:7px 13px;'><svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'><path d='M5 12l4 4L19 6'/></svg>Test email delivered</div></div></div>",
+    image: null,
+  },
+]
+const c3_buttons = []
+const c4_title = [
+  {
+    id: 5231,
+    text: 'What teams say about Formester',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c4_pickedReviews = []
+const c4_excludedReviews = []
+const c5_integrations = [
+  {
+    id: 289,
+    name: 'Gmail',
+    description: 'Send Gmail emails from your forms using your own address.',
+    link: '/integrations/gmail/',
+  },
+  {
+    id: 288,
+    name: 'Outlook',
+    description: 'Send Outlook emails from your forms using your own SMTP.',
+    link: '/integrations/outlook/',
+  },
+  {
+    id: 290,
+    name: 'Mailgun',
+    description: 'Deliver personalized form emails using Mailgun.',
+    link: '/integrations/mailgun/',
+  },
+  {
+    id: 291,
+    name: 'Amazon SES',
+    description: 'Send reliable form emails at scale using Amazon SES.',
+    link: '/integrations/amazon-ses/',
+  },
+  {
+    id: 292,
+    name: 'Google Sheets',
+    description: 'Sync every form submission to Google Sheets in real time.',
+    link: '/integrations/google-sheets/',
+  },
+  {
+    id: 293,
+    name: 'Zapier',
+    description: 'Connect your forms to 8,000+ apps using Zapier.',
+    link: '/integrations/zapier/',
+  },
+]
+const c6_title = [
+  {
+    id: 5233,
+    text: 'Sendgrid integration FAQs',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c6_faqList = [
+  {
+    id: 2803,
+    header: 'What does the Sendgrid integration do?',
+    body: "It routes the emails your forms send — confirmations, notifications, and auto-replies — through your own Sendgrid account, so they come from your domain with Sendgrid's deliverability.",
+    body_markdown: '',
+    list: [],
+  },
+  {
+    id: 2807,
+    header: 'How do I connect Sendgrid to Formester?',
+    body: 'From your dashboard, open Integrations and click Add integration under Custom SMTP. In the Add SMTP Account modal, select Sendgrid as the service and enter your username, integration password, and from name and address — the port and SMTP server fill in for you.',
+    body_markdown: '',
+    list: [],
+  },
+  {
+    id: 2804,
+    header: 'Which emails will use this integration?',
+    body: 'Any form email you configure — respondent confirmations, internal alerts to your team, and automated replies.',
+    body_markdown: '',
+    list: [],
+  },
+  {
+    id: 2805,
+    header: 'What if emails stop sending?',
+    body: 'Check that your Sendgrid credentials are still valid and re-save the integration. If the issue continues, our support team can help.',
+    body_markdown: '',
+    list: [],
+  },
+  {
+    id: 2806,
+    header: 'What is Formester?',
+    body: 'Formester is an online form builder for creating forms, surveys, and quizzes with a drag-and-drop editor or AI. It connects with the tools your team already uses — Google Sheets, Slack, HubSpot, Zapier, and more — so your form data flows wherever you need it.',
+    body_markdown: '',
+    list: [],
+  },
+]
+const c7_buttons = [
+  {
+    id: 1833,
+    link: 'https://app.formester.com/users/sign_up',
+    text: 'Start free',
+    type: 'Primary',
+    showArrow: true,
+  },
+  {
+    id: 1832,
+    link: '/pricing/',
+    text: 'See pricing',
+    type: 'White',
+    showArrow: false,
+  },
+]
+
+useHead({
+  title: 'Sendgrid Integration for Online Forms | Formester',
+  link: [
+    {
+      hid: 'canonical',
+      rel: 'canonical',
+      href: 'https://formester.com/integrations/sendgrid/',
+    },
+  ],
+  meta: [
+    {
+      property: 'article:modified_time',
+      content: '2026-06-14T15:17:07.772Z',
+    },
+    {
+      hid: 'description',
+      name: 'description',
+      content:
+        'Send form confirmations and notifications through your own Sendgrid account. Branded, reliable email delivery from your forms — set up in minutes.',
+    },
+    {
+      hid: 'og:site_name',
+      name: 'og:site_name',
+      content: 'Sendgrid Integration for Online Forms | Formester',
+    },
+    {
+      hid: 'og:type',
+      property: 'og:type',
+      content: 'website',
+    },
+    {
+      hid: 'og:url',
+      property: 'og:url',
+      content: 'https://formester.com/integrations/sendgrid/',
+    },
+    {
+      hid: 'og:title',
+      property: 'og:title',
+      content: 'Sendgrid Integration for Online Forms | Formester',
+    },
+    {
+      hid: 'og:description',
+      property: 'og:description',
+      content:
+        'Send form confirmations and notifications through your own Sendgrid account. Branded, reliable email delivery from your forms — set up in minutes.',
+    },
+    {
+      hid: 'og:image',
+      property: 'og:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
+    },
+    {
+      hid: 'og:image:alt',
+      name: 'og:image:alt',
+      content: 'Formester Sendgrid integration',
+    },
+    {
+      hid: 'twitter:url',
+      name: 'twitter:url',
+      content: 'https://formester.com/integrations/sendgrid/',
+    },
+    {
+      name: 'twitter:site',
+      content: '@_formester_',
+    },
+    {
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: 'Sendgrid Integration for Online Forms | Formester',
+    },
+    {
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content:
+        'Send form confirmations and notifications through your own Sendgrid account. Branded, reliable email delivery from your forms — set up in minutes.',
+    },
+    {
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
+    },
+    {
+      hid: 'twitter:image:alt',
+      name: 'twitter:image:alt',
+      content: 'Formester Sendgrid integration',
+    },
+    {
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image',
+    },
+    {
+      hid: 'apple-mobile-web-app-title',
+      name: 'apple-mobile-web-app-title',
+      content: 'Formester',
+    },
+    {
+      hid: 'image',
+      name: 'image',
+      property: 'og:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
+    },
+    {
+      hid: 'keywords',
+      name: 'keywords',
+      content: [
+        'sendgrid form integration',
+        'send form emails sendgrid',
+        'form email notifications',
+        'formester sendgrid',
+      ],
+    },
+  ],
+})
+useJsonld([
+  {
+    '@context': 'https://schema.org',
+    type: '{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does the Sendgrid integration do?", "acceptedAnswer": {"@type": "Answer", "text": "It routes the emails your forms send — confirmations, notifications, and auto-replies — through your own Sendgrid account, so they come from your domain with Sendgrid\'s deliverability."}}, {"@type": "Question", "name": "How do I connect Sendgrid to Formester?", "acceptedAnswer": {"@type": "Answer", "text": "From your dashboard, open Integrations and click Add integration under Custom SMTP. In the Add SMTP Account modal, select Sendgrid as the service and enter your username, integration password, and from name and address — the port and SMTP server fill in for you."}}, {"@type": "Question", "name": "Which emails will use this integration?", "acceptedAnswer": {"@type": "Answer", "text": "Any form email you configure — respondent confirmations, internal alerts to your team, and automated replies."}}, {"@type": "Question", "name": "What if emails stop sending?", "acceptedAnswer": {"@type": "Answer", "text": "Check that your Sendgrid credentials are still valid and re-save the integration. If the issue continues, our support team can help."}}, {"@type": "Question", "name": "What is Formester?", "acceptedAnswer": {"@type": "Answer", "text": "Formester is an online form builder for creating forms, surveys, and quizzes with a drag-and-drop editor or AI. It connects with the tools your team already uses — Google Sheets, Slack, HubSpot, Zapier, and more — so your form data flows wherever you need it."}}]}',
+  },
+  {
+    '@context': 'https://schema.org',
+    type: '{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://formester.com/"}, {"@type": "ListItem", "position": 2, "name": "Integrations", "item": "https://formester.com/integrations/"}, {"@type": "ListItem", "position": 3, "name": "Sendgrid", "item": "https://formester.com/integrations/sendgrid/"}]}',
+  },
+])
+</script>

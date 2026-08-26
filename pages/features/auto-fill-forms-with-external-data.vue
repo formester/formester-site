@@ -1,0 +1,827 @@
+<template>
+  <div>
+    <HeroV2
+      :description="c0_description"
+      blobColorA="#f5eeff"
+      blobColorB="#f1ebff"
+      blobColorC="#f4efff"
+      :mockupHtml="c0_mockupHtml"
+      layout="split"
+      :title="c0_title"
+      :buttons="c0_buttons"
+      :badge="c0_badge"
+      :tabCardContent="c0_tabCardContent"
+      class="page-component-item"
+    />
+
+    <TrustSeals
+      label="Trusted by 56k+ teams worldwide"
+      showTrustBadges
+      :title="c1_title"
+      :logos="c1_logos"
+      class="page-component-item"
+    />
+
+    <CardGrid
+      eyebrow="What you can do"
+      description="Start from a template for the source you use, or write your own fetch. Either way, you control how the record maps onto your fields and when it loads."
+      columns="2"
+      :title="c2_title"
+      :cards="c2_cards"
+      class="page-component-item"
+    />
+
+    <StatsBanner
+      variant="band"
+      eyebrow="Why teams use it"
+      heading="Stop retyping data you already have"
+      :stats="c3_stats"
+      class="page-component-item"
+    />
+
+    <AlternatingRows eyebrow="How it works" :title="c4_title" :rows="c4_rows" class="page-component-item" />
+
+    <CardGrid
+      eyebrow="Real-life use cases"
+      description="Anywhere a respondent's details already live in a record, a fetch turns a blank form into a quick confirmation."
+      columns="3"
+      :title="c5_title"
+      :cards="c5_cards"
+      class="page-component-item"
+    />
+
+    <TestimonialsV2
+      version="feature"
+      :heading="c6_heading"
+      :testimonials="c6_testimonials"
+      class="page-component-item"
+    />
+
+    <FaqSection centered :title="c7_title" :faqList="c7_faqList" class="page-component-item" />
+
+    <CtaDark
+      badge="Business plan"
+      heading="Let your forms fill themselves"
+      description="Start from an Airtable, Google Sheets, or Notion template — or write your own JavaScript fetch — and watch the record load your fields automatically."
+      :buttons="c8_buttons"
+      class="page-component-item"
+    />
+  </div>
+</template>
+
+<script setup>
+import AlternatingRows from '@/components/v2/AlternatingRows.vue'
+import CardGrid from '@/components/v2/CardGrid.vue'
+import CtaDark from '@/components/v2/CtaDark.vue'
+import FaqSection from '@/components/v2/FaqSection.vue'
+import HeroV2 from '@/components/v2/HeroV2.vue'
+import StatsBanner from '@/components/v2/StatsBanner.vue'
+import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
+import TrustSeals from '@/components/v2/TrustSeals.vue'
+
+const c0_description =
+  'Start from a ready-made Airtable, Google Sheets, or Notion template — or write a short JavaScript fetch of your own. Formester runs it when the form loads, pulls the matching record, and drops each value into place. Less typing, fewer errors, faster submissions.'
+const c0_mockupHtml =
+  "\u003Cstyle>.af-chip{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:600;line-height:1;border-radius:999px;padding:5px 10px;border:1px solid #2b2747;color:#9b91c9;background:#171430;white-space:nowrap;}.af-chip-on{border-color:#6434d0;background:#241a47;color:#fff;}.af-cl{display:block;font-size:11.5px;line-height:1.75;white-space:nowrap;}.af-v{opacity:0;}.af-idv{opacity:0;animation:afIdVal 7s ease-in-out infinite;}.af-idbox{animation:afIdBox 7s ease-in-out infinite;}.af-fetch{opacity:0;animation:afFetch 7s ease-in-out infinite;}.af-dot{animation:afDot 1s linear infinite;}.af-v1{animation:afV1 7s ease-in-out infinite;}.af-v2{animation:afV2 7s ease-in-out infinite;}.af-v3{animation:afV3 7s ease-in-out infinite;}.af-v4{animation:afV4 7s ease-in-out infinite;}@keyframes afIdVal{0%,9%{opacity:0;}17%,96%{opacity:1;}100%{opacity:0;}}@keyframes afIdBox{0%,11%{border-color:#eaecf0;background:#fff;}18%,96%{border-color:#6434d0;background:#fbfaff;}100%{border-color:#eaecf0;background:#fff;}}@keyframes afFetch{0%,24%{opacity:0;}30%,40%{opacity:1;}46%,100%{opacity:0;}}@keyframes afDot{0%{transform:rotate(0);}100%{transform:rotate(360deg);}}@keyframes afV1{0%,44%{opacity:0;}52%,96%{opacity:1;}100%{opacity:0;}}@keyframes afV2{0%,52%{opacity:0;}60%,96%{opacity:1;}100%{opacity:0;}}@keyframes afV3{0%,60%{opacity:0;}68%,96%{opacity:1;}100%{opacity:0;}}@keyframes afV4{0%,68%{opacity:0;}76%,96%{opacity:1;}100%{opacity:0;}}@media (prefers-reduced-motion:reduce){.af-v,.af-idv{opacity:1!important;animation:none!important;}.af-idbox{animation:none!important;border-color:#6434d0!important;background:#fbfaff!important;}.af-fetch,.af-dot{animation:none!important;}.af-fetch{opacity:0!important;}}\u003C/style><div style='max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:13px;'><div style='background:#0f0e1a;border:1px solid #211d3d;border-radius:16px;box-shadow:0 24px 80px rgba(15,14,26,.18);overflow:hidden;'><div style='display:flex;align-items:center;gap:6px;padding:11px 14px;background:#141127;border-bottom:1px solid #211d3d;'><span style='width:11px;height:11px;border-radius:50%;background:#ff6058;'></span><span style='width:11px;height:11px;border-radius:50%;background:#ffbd2e;'></span><span style='width:11px;height:11px;border-radius:50%;background:#27c93f;'></span><span style='margin-left:8px;font-size:11px;line-height:1;color:#8780a8;'>autofill.js · Custom</span></div><div style='padding:11px 14px;display:flex;flex-wrap:wrap;gap:7px;border-bottom:1px solid #211d3d;'><span class='af-chip'>Airtable</span><span class='af-chip'>Google Sheets</span><span class='af-chip'>Notion</span><span class='af-chip af-chip-on'><span style='width:7px;height:7px;border-radius:2px;background:#6434d0;display:inline-block;'></span>Custom</span></div><div style='padding:13px 15px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;text-align:left;border-bottom:1px solid #211d3d;'><span class='af-cl'><span style='color:#c792ea;'>const</span> <span style='color:#fff;'>id</span> <span style='color:#89ddff;'>=</span> <span style='color:#fff;'>values</span><span style='color:#89ddff;'>[</span><span style='color:#c3e88d;'>'employee_id'</span><span style='color:#89ddff;'>]</span></span><span class='af-cl'><span style='color:#c792ea;'>const</span> <span style='color:#fff;'>rec</span> <span style='color:#89ddff;'>=</span> <span style='color:#c792ea;'>await</span> <span style='color:#82aaff;'>fetch</span><span style='color:#89ddff;'>(</span><span style='color:#c3e88d;'>`/api/staff/${id}`</span><span style='color:#89ddff;'>)</span></span><span class='af-cl'><span style='color:#c792ea;'>return</span> <span style='color:#c792ea;'>await</span> <span style='color:#fff;'>rec</span><span style='color:#89ddff;'>.</span><span style='color:#82aaff;'>json</span><span style='color:#89ddff;'>()</span></span><span class='af-cl'><span style='color:#5f7e97;'>// just fetch &amp; return — fields recall it with @</span></span></div><div style='padding:11px 15px;display:flex;align-items:center;gap:9px;flex-wrap:wrap;background:#120f24;'><svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='#b9a6ec' stroke-width='2.2' style='flex-shrink:0;'><path d='M13 2L3 14h8l-1 8 10-12h-8z'/></svg><span style='font-size:11px;font-weight:600;color:#9b91c9;line-height:1.1;'>Trigger field</span><span style='font-size:11px;font-weight:700;color:#fff;line-height:1.1;background:#241a47;border:1px solid #6434d0;border-radius:7px;padding:4px 9px;'>Employee ID</span><span style='font-size:10.5px;color:#6e6790;line-height:1.1;'>· fetches when filled</span></div></div><div style='display:flex;justify-content:center;color:#6434d0;'><svg width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='#6434d0' stroke-width='2.4'><path d='M12 5v14M5 12l7 7 7-7'/></svg></div><div style='background:#fff;border:1px solid #eaecf0;border-radius:16px;box-shadow:0 18px 60px rgba(15,14,26,.12),0 6px 18px rgba(15,14,26,.05);overflow:hidden;'><div style='padding:11px 16px;background:#f9fafb;border-bottom:1px solid #eaecf0;font-size:11px;line-height:1;color:#697586;text-align:left;'>app.formester.com · New employee</div><div style='padding:9px 16px;background:#faf8ff;border-bottom:1px solid #f0ebfa;font-size:10.5px;line-height:1.25;color:#6434d0;text-align:left;'>Each field's value is set with information recall — no mapping code</div><div style='padding:15px 18px;text-align:left;display:flex;flex-direction:column;gap:10px;'><div><div style='font-size:11px;font-weight:600;color:#475467;margin-bottom:4px;line-height:1.1;'>Employee ID</div><div class='af-idbox' style='border:1px solid #eaecf0;border-radius:9px;padding:8px 11px;font-size:12.5px;line-height:1.15;color:#101828;'><span class='af-idv'>E-10472</span></div></div><div class='af-fetch' style='display:flex;align-items:center;gap:7px;font-size:11px;line-height:1.1;color:#6434d0;'><svg class='af-dot' width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='#6434d0' stroke-width='2.6' style='flex-shrink:0;'><path d='M21 12a9 9 0 1 1-6.2-8.5'/></svg><span style='font-style:italic;'>Fetching record…</span></div><div><div style='font-size:11px;font-weight:600;color:#475467;margin-bottom:4px;line-height:1.1;'>Full name</div><div style='display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px solid #eaecf0;border-radius:9px;padding:8px 11px;background:#fff;'><span class='af-v af-v1' style='font-size:12.5px;line-height:1.15;color:#101828;'>Jordan Reyes</span><span class='af-v af-v1' style='font-size:10.5px;font-weight:700;line-height:1;color:#6434d0;background:#f0ebfa;border:1px solid #e3d8f7;border-radius:6px;padding:3px 7px;white-space:nowrap;'>@Name</span></div></div><div><div style='font-size:11px;font-weight:600;color:#475467;margin-bottom:4px;line-height:1.1;'>Work email</div><div style='display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px solid #eaecf0;border-radius:9px;padding:8px 11px;background:#fff;'><span class='af-v af-v2' style='font-size:12.5px;line-height:1.15;color:#101828;'>jordan@acme.com</span><span class='af-v af-v2' style='font-size:10.5px;font-weight:700;line-height:1;color:#6434d0;background:#f0ebfa;border:1px solid #e3d8f7;border-radius:6px;padding:3px 7px;white-space:nowrap;'>@Email</span></div></div><div><div style='font-size:11px;font-weight:600;color:#475467;margin-bottom:4px;line-height:1.1;'>Department</div><div style='display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px solid #eaecf0;border-radius:9px;padding:8px 11px;background:#fff;'><span class='af-v af-v3' style='font-size:12.5px;line-height:1.15;color:#101828;'>Engineering</span><span class='af-v af-v3' style='font-size:10.5px;font-weight:700;line-height:1;color:#6434d0;background:#f0ebfa;border:1px solid #e3d8f7;border-radius:6px;padding:3px 7px;white-space:nowrap;'>@Department</span></div></div><div><div style='font-size:11px;font-weight:600;color:#475467;margin-bottom:4px;line-height:1.1;'>Joining date</div><div style='display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px solid #eaecf0;border-radius:9px;padding:8px 11px;background:#fff;'><span class='af-v af-v4' style='font-size:12.5px;line-height:1.15;color:#101828;'>12 Mar 2021</span><span class='af-v af-v4' style='font-size:10.5px;font-weight:700;line-height:1;color:#6434d0;background:#f0ebfa;border:1px solid #e3d8f7;border-radius:6px;padding:3px 7px;white-space:nowrap;'>@JoinDate</span></div></div></div></div></div>"
+const c0_title = [
+  {
+    id: 4586,
+    text: 'Pull a record in, ',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+  {
+    id: 4585,
+    text: 'the form fills itself',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c0_buttons = [
+  {
+    id: 1485,
+    link: 'https://app.formester.com/users/sign_up',
+    text: 'Get Started',
+    type: 'Primary',
+    showArrow: true,
+  },
+]
+const c0_badge = {
+  id: 67,
+  text: 'Auto-Fill From External Data',
+  tag: 'Business',
+  link: null,
+}
+const c0_tabCardContent = []
+const c1_title = []
+const c1_logos = []
+const c2_title = [
+  {
+    id: 4581,
+    text: 'Everything you need to ',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+  {
+    id: 4577,
+    text: 'fill forms from your data',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c2_cards = [
+  {
+    id: 443,
+    tag: 'Templates',
+    tagColor: 'violet',
+    title: 'Predefined Airtable, Sheets & Notion starters',
+    body: 'Skip the boilerplate. Pick the predefined template for Airtable, Google Sheets, or Notion, point it at your record, and the fetch is handled for you.',
+    mockHtml:
+      "<div style='display:flex;flex-direction:column;gap:8px;'><div style='display:flex;align-items:center;gap:9px;border:1px solid #6434d0;background:#fbfaff;border-radius:9px;padding:8px 11px;'><span style='width:9px;height:9px;border-radius:3px;background:#6434d0;flex-shrink:0;'></span><span style='font-size:12px;font-weight:600;color:#101828;line-height:1.1;'>Airtable</span><span style='margin-left:auto;font-size:9.5px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:999px;padding:3px 8px;line-height:1;'>Selected</span></div><div style='display:flex;align-items:center;gap:9px;border:1px solid #eaecf0;border-radius:9px;padding:8px 11px;'><span style='width:9px;height:9px;border-radius:3px;background:#d0d5dd;flex-shrink:0;'></span><span style='font-size:12px;font-weight:600;color:#475467;line-height:1.1;'>Google Sheets</span></div><div style='display:flex;align-items:center;gap:9px;border:1px solid #eaecf0;border-radius:9px;padding:8px 11px;'><span style='width:9px;height:9px;border-radius:3px;background:#d0d5dd;flex-shrink:0;'></span><span style='font-size:12px;font-weight:600;color:#475467;line-height:1.1;'>Notion</span></div></div>",
+    icon: null,
+  },
+  {
+    id: 445,
+    tag: 'Custom fetch',
+    tagColor: 'blue',
+    title: 'Write your own JavaScript fetch',
+    body: 'Need a different source? Drop in a short JavaScript snippet that fetches a record from any endpoint you can reach — your CRM, database, or internal API — and returns it. Formester runs it for you; you place the data with information recall.',
+    mockHtml:
+      "<div style='background:#0f0e1a;border-radius:10px;padding:11px 13px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;text-align:left;'><div style='font-size:11px;line-height:1.7;white-space:nowrap;'><span style='color:#c792ea;'>const</span> <span style='color:#fff;'>rec</span> <span style='color:#89ddff;'>=</span> <span style='color:#c792ea;'>await</span> <span style='color:#82aaff;'>fetch</span><span style='color:#89ddff;'>(</span><span style='color:#c3e88d;'>url</span><span style='color:#89ddff;'>)</span></div><div style='font-size:11px;line-height:1.7;white-space:nowrap;'><span style='color:#c792ea;'>return</span> <span style='color:#fff;'>rec</span></div></div>",
+    icon: null,
+  },
+  {
+    id: 444,
+    tag: 'Information recall',
+    tagColor: 'green',
+    title: 'Set fields with information recall (@)',
+    body: "No mapping code. Once the fetch returns the record, set any field's value with information recall — the Name field becomes @Name, Email becomes @Email. Mix recalled and freshly-collected fields however you like.",
+    mockHtml:
+      "<div style='display:flex;flex-direction:column;gap:8px;'><div style='display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px solid #eaecf0;border-radius:9px;padding:8px 11px;'><span style='font-size:12px;font-weight:600;color:#101828;line-height:1.1;'>Name</span><span style='font-size:11px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:3px 9px;line-height:1.1;font-family:ui-monospace,Menlo,monospace;'>@Name</span></div><div style='display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px solid #eaecf0;border-radius:9px;padding:8px 11px;'><span style='font-size:12px;font-weight:600;color:#101828;line-height:1.1;'>Email</span><span style='font-size:11px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:3px 9px;line-height:1.1;font-family:ui-monospace,Menlo,monospace;'>@Email</span></div></div>",
+    icon: null,
+  },
+  {
+    id: 442,
+    tag: 'when a trigger field is filled',
+    tagColor: 'amber',
+    title: 'Runs on your trigger field',
+    body: 'Pick a trigger field — say Employee ID. The moment a respondent fills it, the fetch runs and every field bound with @ fills in with their current record.',
+    mockHtml:
+      "<div style='display:flex;align-items:center;gap:10px;border:1px solid #eaecf0;border-radius:10px;padding:10px 12px;background:#fff;'><span style='width:24px;height:24px;border-radius:50%;background:#ecfdf3;color:#027a48;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;'><svg width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.4'><path d='M5 12l4 4L19 6'/></svg></span><div style='font-size:11.5px;line-height:1.3;color:#475467;'>Record fetched when a trigger field is filled — <span style='font-weight:700;color:#101828;'>3 fields filled</span></div></div>",
+    icon: null,
+  },
+]
+const c3_stats = [
+  {
+    id: 75,
+    value: '3 sources',
+    label: 'templated — Airtable, Google Sheets & Notion',
+  },
+  {
+    id: 76,
+    value: 'Fewer',
+    label: 'fields to type from scratch',
+  },
+  {
+    id: 77,
+    value: 'Live',
+    label: 'records, fetched fresh on every open',
+  },
+]
+const c4_title = [
+  {
+    id: 4580,
+    text: 'From an external record to ',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+  {
+    id: 4579,
+    text: "a form that's already filled",
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c4_rows = [
+  {
+    id: 72,
+    kicker: 'Pick or write',
+    title: 'Start from a template, or bring your own fetch',
+    body: 'Choose the predefined template for Airtable, Google Sheets, or Notion — or paste a short JavaScript snippet that fetches from any source you can reach. The template handles the request for you; the custom route gives you the keys.',
+    mediaHtml:
+      "<div style='background:#0f0e1a;border:1px solid #211d3d;border-radius:14px;box-shadow:0 14px 40px rgba(15,14,26,.18);overflow:hidden;'><div style='padding:12px 14px;display:flex;flex-wrap:wrap;gap:7px;border-bottom:1px solid #211d3d;'><span style='display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;line-height:1;border-radius:999px;padding:5px 10px;border:1px solid #6434d0;background:#241a47;color:#fff;'><span style='width:7px;height:7px;border-radius:2px;background:#6434d0;display:inline-block;'></span>Airtable</span><span style='font-size:11px;font-weight:600;line-height:1;border-radius:999px;padding:5px 10px;border:1px solid #2b2747;color:#9b91c9;background:#171430;'>Google Sheets</span><span style='font-size:11px;font-weight:600;line-height:1;border-radius:999px;padding:5px 10px;border:1px solid #2b2747;color:#9b91c9;background:#171430;'>Notion</span></div><div style='padding:13px 15px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;text-align:left;'><div style='font-size:11.5px;line-height:1.7;white-space:nowrap;'><span style='color:#c792ea;'>const</span> <span style='color:#fff;'>rec</span> <span style='color:#89ddff;'>=</span> <span style='color:#c792ea;'>await</span> <span style='color:#82aaff;'>fetch</span><span style='color:#89ddff;'>(</span><span style='color:#c3e88d;'>airtableUrl</span><span style='color:#89ddff;'>)</span></div><div style='font-size:11.5px;line-height:1.7;white-space:nowrap;'><span style='color:#5f7e97;'>// map record fields below</span></div></div></div>",
+  },
+  {
+    id: 71,
+    kicker: 'Recall',
+    title: 'Drop returned values into fields with information recall',
+    body: 'No mapping code. The fetch just returns the record; in the form you set each field with information recall — the Name field becomes @Name, Email becomes @Email. Mix auto-filled and manual fields freely.',
+    mediaHtml:
+      "<div style='background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 8px 24px rgba(15,14,26,.06);padding:18px;'><div style='font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#98a2b3;margin-bottom:12px;line-height:1;'>Information recall</div><div style='display:flex;flex-direction:column;gap:10px;'><div style='border:1px solid #eaecf0;border-radius:9px;padding:9px 11px;'><div style='font-size:10px;font-weight:600;color:#697586;margin-bottom:4px;line-height:1.1;'>Name</div><div style='display:flex;align-items:center;gap:7px;line-height:1.1;'><span style='font-size:13px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:3px 9px;font-family:ui-monospace,Menlo,monospace;'>@Name</span><span style='font-size:10.5px;color:#98a2b3;'>recalled</span></div></div><div style='border:1px solid #eaecf0;border-radius:9px;padding:9px 11px;'><div style='font-size:10px;font-weight:600;color:#697586;margin-bottom:4px;line-height:1.1;'>Email</div><div style='display:flex;align-items:center;gap:7px;line-height:1.1;'><span style='font-size:13px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:3px 9px;font-family:ui-monospace,Menlo,monospace;'>@Email</span><span style='font-size:10.5px;color:#98a2b3;'>recalled</span></div></div><div style='border:1px solid #eaecf0;border-radius:9px;padding:9px 11px;'><div style='font-size:10px;font-weight:600;color:#697586;margin-bottom:4px;line-height:1.1;'>Company</div><div style='display:flex;align-items:center;gap:7px;line-height:1.1;'><span style='font-size:13px;font-weight:700;color:#472594;background:#f0ebfa;border-radius:6px;padding:3px 9px;font-family:ui-monospace,Menlo,monospace;'>@Company</span><span style='font-size:10.5px;color:#98a2b3;'>recalled</span></div></div></div></div>",
+  },
+  {
+    id: 73,
+    kicker: 'Fill',
+    title: 'Fill the trigger field — the rest recalls itself',
+    body: 'When a respondent fills your trigger field, the fetch runs, the record comes back, and every field bound with @ fills in. They confirm what’s there and answer only what’s new.',
+    mediaHtml:
+      "<div style='background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 8px 24px rgba(15,14,26,.06);overflow:hidden;'><div style='padding:11px 14px;background:#f9fafb;border-bottom:1px solid #eaecf0;font-size:11px;line-height:1;color:#697586;'>app.formester.com · Onboarding</div><div style='padding:16px 18px;display:flex;flex-direction:column;gap:11px;'><div><div style='font-size:11px;font-weight:600;color:#475467;margin-bottom:4px;line-height:1.1;'>Email</div><div style='border:1px solid #6434d0;background:#fbfaff;border-radius:9px;padding:9px 11px;font-size:12.5px;line-height:1.1;color:#101828;'>jo@acme.com</div></div><div><div style='font-size:11px;font-weight:600;color:#475467;margin-bottom:4px;line-height:1.1;'>Company</div><div style='border:1px solid #6434d0;background:#fbfaff;border-radius:9px;padding:9px 11px;font-size:12.5px;line-height:1.1;color:#101828;'>Acme Inc.</div></div><div><div style='font-size:11px;font-weight:600;color:#475467;margin-bottom:4px;line-height:1.1;'>Plan</div><div style='border:1px solid #6434d0;background:#fbfaff;border-radius:9px;padding:9px 11px;font-size:12.5px;line-height:1.1;color:#101828;'>Pro</div></div></div></div>",
+  },
+]
+const c5_title = [
+  {
+    id: 4578,
+    text: 'Where an auto-filled form ',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+  {
+    id: 4584,
+    text: 'saves the most time',
+    highlight: true,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c5_cards = [
+  {
+    id: 446,
+    tag: 'Sales & CRM',
+    tagColor: 'violet',
+    title: 'CRM record lookups',
+    body: "Open a quote or inquiry form with the lead's name, company, and contact details already pulled from your CRM record — so reps qualify and close faster.",
+    mockHtml:
+      "<div style='display:flex;flex-direction:column;gap:7px;'><div style='display:flex;align-items:center;gap:8px;font-size:11px;line-height:1.1;color:#101828;'><span style='font-weight:600;'>Contact</span><span style='margin-left:auto;color:#697586;'>Jo Patel</span></div><div style='display:flex;align-items:center;gap:8px;font-size:11px;line-height:1.1;color:#101828;'><span style='font-weight:600;'>Company</span><span style='margin-left:auto;color:#697586;'>Acme Inc.</span></div><div style='display:flex;align-items:center;gap:8px;font-size:10px;line-height:1.1;'><span style='font-weight:700;color:#027a48;background:#ecfdf3;border-radius:999px;padding:3px 8px;'>Fetched into form</span></div></div>",
+    icon: null,
+  },
+  {
+    id: 447,
+    tag: 'Operations',
+    tagColor: 'blue',
+    title: 'Inventory & pricing',
+    body: 'Pull the current SKU, stock level, or price straight from your Google Sheets or Airtable into an order form, so respondents see live numbers instead of stale ones.',
+    mockHtml:
+      "<div style='display:flex;flex-direction:column;gap:7px;'><div style='display:flex;align-items:center;gap:8px;font-size:11px;line-height:1.1;color:#101828;'><span style='font-weight:600;'>SKU</span><span style='margin-left:auto;color:#697586;'>AC-2048</span></div><div style='display:flex;align-items:center;gap:8px;font-size:11px;line-height:1.1;color:#101828;'><span style='font-weight:600;'>Price</span><span style='margin-left:auto;font-weight:700;color:#101828;'>$129.00</span></div><div style='display:flex;align-items:center;gap:8px;font-size:10px;line-height:1.1;'><span style='font-weight:700;color:#472594;background:#f0ebfa;border-radius:999px;padding:3px 8px;'>From Sheets</span></div></div>",
+    icon: null,
+  },
+  {
+    id: 448,
+    tag: 'Member data',
+    tagColor: 'green',
+    title: 'Member & onboarding details',
+    body: "Fetch a member's record from Notion or your database to pre-load onboarding, renewal, or intake forms — they confirm what's there and fill only the gaps.",
+    mockHtml:
+      "<div style='display:flex;flex-direction:column;gap:7px;'><div style='border:1px solid #6434d0;background:#fbfaff;border-radius:8px;padding:7px 10px;font-size:11px;line-height:1.1;color:#101828;'>Jo Patel</div><div style='display:flex;align-items:center;gap:8px;font-size:11px;line-height:1.1;color:#475467;'><span style='font-weight:600;color:#101828;'>Tier</span><span style='margin-left:auto;font-weight:700;color:#472594;background:#f0ebfa;border-radius:999px;padding:2px 8px;'>Member</span></div></div>",
+    icon: null,
+  },
+]
+const c6_heading = [
+  {
+    id: 4583,
+    text: 'Teams build smarter forms with Formester',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c6_testimonials = [
+  {
+    id: 1,
+    name: 'Dr. Michele Ross',
+    position: 'Founder',
+    organization: 'Infused Health',
+    comment:
+      "I'm migrating my forms from Paperform, where I've been a user for over 4 years. Loving the software so far! I've already replaced Paperform form embeds & popups on my sites & my husband's websites with Formester forms",
+    createdAt: '2024-06-18T03:47:14.605Z',
+    updatedAt: '2025-01-22T02:57:30.159Z',
+    publishedAt: '2024-06-18T03:47:18.889Z',
+    companyLogo: {
+      id: 227,
+      imageAlt: 'Dr. Michele Ross',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1685,
+        name: 'dr._michelelogo.webp',
+        alternativeText: null,
+        caption: null,
+        width: 300,
+        height: 59,
+        formats: {
+          thumbnail: {
+            ext: '.webp',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_dr_michelelogo_2269ae2211.webp',
+            hash: 'thumbnail_dr_michelelogo_2269ae2211',
+            mime: 'image/webp',
+            name: 'thumbnail_dr._michelelogo.webp',
+            path: null,
+            size: 5.58,
+            width: 245,
+            height: 48,
+          },
+        },
+        hash: 'dr_michelelogo_2269ae2211',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 5.87,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/dr_michelelogo_2269ae2211.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.944Z',
+        updatedAt: '2024-08-01T14:38:23.944Z',
+      },
+    },
+  },
+  {
+    id: 2,
+    name: 'Jilson',
+    position: 'Organiser',
+    organization: 'Vue Conference',
+    comment:
+      'Formester is really easy to use and an exceptional alternative for Typeform. We use it for call for papers, lead registrations, feedback and surveys and it cannot be simpler.',
+    createdAt: '2024-06-18T03:48:46.610Z',
+    updatedAt: '2025-01-22T02:57:08.760Z',
+    publishedAt: '2024-06-18T03:48:50.595Z',
+    companyLogo: {
+      id: 228,
+      imageAlt: 'photo-of-vue-conference',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1680,
+        name: 'vueconf.webp',
+        alternativeText: 'photo-of-vue-conference',
+        caption: 'photo-of-vue-conference',
+        width: 80,
+        height: 80,
+        formats: null,
+        hash: 'vueconf_1bc3dc0827',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.07,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_1bc3dc0827.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.731Z',
+        updatedAt: '2024-12-01T07:47:11.024Z',
+      },
+    },
+  },
+  {
+    id: 4,
+    name: 'Costanza Casullo',
+    position: 'Volunteer',
+    organization: 'Wato Coding Hub',
+    comment:
+      "Formester is simple enough for non-developers and sophisticated enough for developers. I'd say being able to choose between simplicity and complexity is one of this product's strengths. In addition, the founder is available to answer questions and doubts, which does not happen every day.",
+    createdAt: '2024-06-18T03:51:15.232Z',
+    updatedAt: '2025-01-22T02:58:03.674Z',
+    publishedAt: '2024-06-18T03:51:21.477Z',
+    companyLogo: {
+      id: 225,
+      imageAlt: 'wato-coding-hub-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1681,
+        name: 'wato-coding-hub.webp',
+        alternativeText: 'wato-coding-hub-logo',
+        caption: 'wato-coding-hub-logo',
+        width: 80,
+        height: 81,
+        formats: null,
+        hash: 'wato_coding_hub_e054f0ea9d',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.88,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/wato_coding_hub_e054f0ea9d.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.738Z',
+        updatedAt: '2024-12-01T07:49:13.371Z',
+      },
+    },
+  },
+  {
+    id: 5,
+    name: 'Deanna Bugalski',
+    position: 'Founder/CEO',
+    organization: 'Suggesterfy',
+    comment:
+      'I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formester was super easy to set up, and the usability is seamless! I highly recommend!',
+    createdAt: '2024-06-18T03:52:39.354Z',
+    updatedAt: '2025-01-22T02:57:47.756Z',
+    publishedAt: '2024-06-18T03:52:43.800Z',
+    companyLogo: {
+      id: 226,
+      imageAlt: 'suggesterfy-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1683,
+        name: 'suggesterfy_logo.webp',
+        alternativeText: 'suggesterfy-logo',
+        caption: 'suggesterfy-logo',
+        width: 100,
+        height: 50,
+        formats: null,
+        hash: 'suggesterfy_logo_d1d7f996b9',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.91,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/suggesterfy_logo_d1d7f996b9.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.921Z',
+        updatedAt: '2024-12-01T07:49:52.459Z',
+      },
+    },
+  },
+  {
+    id: 6,
+    name: 'Thibaud Martinez',
+    position: 'Organiser',
+    organization: 'Tedx',
+    comment: 'I really enjoy Formester. It’s clean and straight-forward and it does well, what it is supposed to do.',
+    createdAt: '2024-06-18T03:53:38.957Z',
+    updatedAt: '2025-01-22T02:56:48.567Z',
+    publishedAt: '2024-06-18T03:53:40.693Z',
+    companyLogo: {
+      id: 229,
+      imageAlt: 'tedx-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1684,
+        name: 'tedx.webp',
+        alternativeText: 'tedx-logo',
+        caption: 'tedx-logo',
+        width: 109,
+        height: 38,
+        formats: null,
+        hash: 'tedx_2fce0eee2e',
+        ext: '.webp',
+        mime: 'image/webp',
+        size: 1.09,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/tedx_2fce0eee2e.webp',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-01T14:38:23.941Z',
+        updatedAt: '2024-12-01T07:50:31.505Z',
+      },
+    },
+  },
+  {
+    id: 34,
+    name: 'Bency',
+    position: 'Product Manager',
+    organization: 'Northgate Digital Solutions',
+    comment:
+      "Formester's AI form generator transformed how quickly we build forms. The drag-and-drop builder paired with AI-generated templates means I can spin up a survey or poll in minutes, not hours. Conditional logic, file uploads, and seamless integrations make it incredibly versatile and the customization options let every form match our branding perfectly. Their support team is exceptional too. It's the only form and survey tool we recommend",
+    createdAt: '2025-06-29T23:23:10.541Z',
+    updatedAt: '2026-05-03T09:30:00.533Z',
+    publishedAt: '2026-05-03T09:30:00.530Z',
+    companyLogo: {
+      id: 3652,
+      imageAlt: null,
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: null,
+    },
+  },
+  {
+    id: 35,
+    name: 'Roger',
+    position: 'Marketing Specialist',
+    organization: 'BrightPath Technologies',
+    comment:
+      'I use Formester for my form-building needs and I’m thoroughly impressed. The platform is rich with features… What really sets them apart is their exceptional customer service (responses typically within 10 minutes). The pricing is also very reasonable… Highly recommended!\n',
+    createdAt: '2025-06-29T23:29:19.225Z',
+    updatedAt: '2025-10-31T04:00:58.697Z',
+    publishedAt: '2025-06-29T23:29:21.134Z',
+    companyLogo: {
+      id: 3649,
+      imageAlt: 'brightpath-logo',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4094,
+        name: 'brightpath-logo.png',
+        alternativeText: 'brightpath-logo',
+        caption: 'brightpath-logo',
+        width: 200,
+        height: 49,
+        formats: null,
+        hash: 'brightpath_logo_6ef0922a60',
+        ext: '.png',
+        mime: 'image/png',
+        size: 2.5,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/brightpath_logo_6ef0922a60.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-31T04:00:11.712Z',
+        updatedAt: '2025-10-31T04:00:11.712Z',
+      },
+    },
+  },
+  {
+    id: 36,
+    name: 'Ye Qi Lai',
+    position: 'UX Designer',
+    organization: 'Eastview Consulting',
+    comment:
+      'Formester is one of the best underrated survey tools out there… It’s extremely customizable… Their support is awesome… I absolutely recommend this to anyone looking for an alternative to the usual form creators.',
+    createdAt: '2025-06-29T23:30:04.374Z',
+    updatedAt: '2025-10-31T04:00:30.746Z',
+    publishedAt: '2025-06-29T23:30:06.260Z',
+    companyLogo: {
+      id: 3648,
+      imageAlt: 'eastview-logo-header',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 4097,
+        name: 'eastview-logo-header-300x120 1.png',
+        alternativeText: 'eastview-logo-header',
+        caption: 'eastview-logo-header',
+        width: 200,
+        height: 80,
+        formats: null,
+        hash: 'eastview_logo_header_300x120_1_d9c231e93b',
+        ext: '.png',
+        mime: 'image/png',
+        size: 3.18,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/eastview_logo_header_300x120_1_d9c231e93b.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-10-31T04:00:11.854Z',
+        updatedAt: '2025-10-31T04:00:11.854Z',
+      },
+    },
+  },
+]
+const c7_title = [
+  {
+    id: 4582,
+    text: 'Auto-fill from external data FAQs',
+    highlight: false,
+    color: '#475467',
+    bold: false,
+  },
+]
+const c7_faqList = [
+  {
+    id: 2232,
+    header: 'How does auto-fill from external data work?',
+    body: 'You give Formester a snippet of JavaScript that fetches a record from your external source. When the form loads, the code runs, the data comes back, and the matching fields populate automatically. To get going fast, start from a predefined template for Airtable, Google Sheets, or Notion instead of writing the fetch yourself.',
+    body_markdown: null,
+    list: [],
+  },
+  {
+    id: 2237,
+    header: 'Which sources have ready-made templates?',
+    body: 'Formester ships predefined templates for Airtable, Google Sheets, and Notion. Pick one, point it at your record, and map the response to your fields — no fetch code to write. For anything else, write your own JavaScript to fetch from any source you can reach.',
+    body_markdown: null,
+    list: [],
+  },
+  {
+    id: 2233,
+    header: 'Do I need to know how to code?',
+    body: "Not to use the templates. The Airtable, Google Sheets, and Notion starters handle the fetch for you — you just map the response to your fields. If you want to pull from a source we don't template, you write a short JavaScript fetch, so a little technical help is handy there.",
+    body_markdown: null,
+    list: [],
+  },
+  {
+    id: 2234,
+    header: 'Can I choose which fields get auto-filled?',
+    body: 'Yes. You map each value in the fetched record to a specific field, so you decide exactly what gets filled. Leave the rest of the form blank for the respondent to complete, and keep some fields manual if you prefer.',
+    body_markdown: null,
+    list: [],
+  },
+  {
+    id: 2235,
+    header: 'What if my external data changes after I set it up?',
+    body: 'The fetch runs when the form loads, so it pulls the current record each time. Update the row in Airtable, Google Sheets, or Notion — or whatever your code reads — and the form shows the latest values on the next open.',
+    body_markdown: null,
+    list: [],
+  },
+  {
+    id: 2236,
+    header: 'Can respondents edit the values that get auto-filled?',
+    body: "Yes. Auto-filled values are editable by default, so respondents can confirm or correct what's there before submitting — giving you cleaner, verified data.",
+    body_markdown: null,
+    list: [],
+  },
+]
+const c8_buttons = [
+  {
+    id: 1483,
+    link: 'https://app.formester.com/users/sign_up',
+    text: 'Get Started',
+    type: 'Primary',
+    showArrow: true,
+  },
+  {
+    id: 1484,
+    link: '/pricing',
+    text: 'See pricing',
+    type: 'White',
+    showArrow: false,
+  },
+]
+
+useHead({
+  title: 'Auto-Fill Forms With External Data | Airtable, Sheets & Notion',
+  link: [
+    {
+      hid: 'canonical',
+      rel: 'canonical',
+      href: 'https://formester.com/features/auto-fill-forms-with-external-data/',
+    },
+  ],
+  meta: [
+    {
+      property: 'article:modified_time',
+      content: '2026-06-15T10:45:38.059Z',
+    },
+    {
+      hid: 'description',
+      name: 'description',
+      content:
+        'Auto-fill form fields from an external source. Start from a ready-made Airtable, Google Sheets, or Notion template, or write your own JavaScript fetch — the record loads and your fields populate automatically.',
+    },
+    {
+      hid: 'og:site_name',
+      name: 'og:site_name',
+      content: 'Auto-Fill Forms With External Data | Airtable, Sheets & Notion',
+    },
+    {
+      hid: 'og:type',
+      property: 'og:type',
+      content: 'website',
+    },
+    {
+      hid: 'og:url',
+      property: 'og:url',
+      content: 'https://formester.com/features/auto-fill-forms-with-external-data/',
+    },
+    {
+      hid: 'og:title',
+      property: 'og:title',
+      content: 'Auto-Fill Forms With External Data | Airtable, Sheets & Notion',
+    },
+    {
+      hid: 'og:description',
+      property: 'og:description',
+      content:
+        'Auto-fill form fields from an external source. Start from a ready-made Airtable, Google Sheets, or Notion template, or write your own JavaScript fetch — the record loads and your fields populate automatically.',
+    },
+    {
+      hid: 'og:image',
+      property: 'og:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
+    },
+    {
+      hid: 'og:image:alt',
+      name: 'og:image:alt',
+      content: 'Formester Logo',
+    },
+    {
+      hid: 'twitter:url',
+      name: 'twitter:url',
+      content: 'https://formester.com/features/auto-fill-forms-with-external-data/',
+    },
+    {
+      name: 'twitter:site',
+      content: '@_formester_',
+    },
+    {
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: 'Auto-Fill Forms With External Data | Airtable, Sheets & Notion',
+    },
+    {
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content:
+        'Auto-fill form fields from an external source. Start from a ready-made Airtable, Google Sheets, or Notion template, or write your own JavaScript fetch — the record loads and your fields populate automatically.',
+    },
+    {
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
+    },
+    {
+      hid: 'twitter:image:alt',
+      name: 'twitter:image:alt',
+      content: 'Formester Logo',
+    },
+    {
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image',
+    },
+    {
+      hid: 'apple-mobile-web-app-title',
+      name: 'apple-mobile-web-app-title',
+      content: 'Formester',
+    },
+    {
+      hid: 'image',
+      name: 'image',
+      property: 'og:image',
+      content: 'https://formester.com/formester-logo-meta-image.png',
+    },
+    {
+      hid: 'keywords',
+      name: 'keywords',
+      content: ['Pre fill fields'],
+    },
+  ],
+})
+useJsonld([
+  {
+    '@context': 'https://schema.org',
+    url: 'https://formester.com',
+    logo: 'https://formester.com/logo.svg',
+    name: 'Formester',
+    '@type': 'Organization',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        name: 'How does auto-fill from external data work?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'You give Formester a snippet of JavaScript that fetches a record from your external source. When the form loads, the code runs, the data comes back, and the matching fields populate automatically. To get going fast, start from a predefined template for Airtable, Google Sheets, or Notion instead of writing the fetch yourself.',
+          '@type': 'Answer',
+        },
+      },
+      {
+        name: 'Which sources have ready-made templates?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'Formester ships predefined templates for Airtable, Google Sheets, and Notion. Pick one, point it at your record, and map the response to your fields — no fetch code to write. For anything else, write your own JavaScript to fetch from any source you can reach.',
+          '@type': 'Answer',
+        },
+      },
+      {
+        name: 'Do I need to know how to code?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: "Not to use the templates. The Airtable, Google Sheets, and Notion starters handle the fetch for you — you just map the response to your fields. If you want to pull from a source we don't template, you write a short JavaScript fetch, so a little technical help is handy there.",
+          '@type': 'Answer',
+        },
+      },
+      {
+        name: 'Can I choose which fields get auto-filled?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'Yes. You map each value in the fetched record to a specific field, so you decide exactly what gets filled. Leave the rest of the form blank for the respondent to complete, and keep some fields manual if you prefer.',
+          '@type': 'Answer',
+        },
+      },
+      {
+        name: 'What if my external data changes after I set it up?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: 'The fetch runs when the form loads, so it pulls the current record each time. Update the row in Airtable, Google Sheets, or Notion — or whatever your code reads — and the form shows the latest values on the next open.',
+          '@type': 'Answer',
+        },
+      },
+      {
+        name: 'Can respondents edit the values that get auto-filled?',
+        '@type': 'Question',
+        acceptedAnswer: {
+          text: "Yes. Auto-filled values are editable by default, so respondents can confirm or correct what's there before submitting — giving you cleaner, verified data.",
+          '@type': 'Answer',
+        },
+      },
+    ],
+  },
+])
+</script>

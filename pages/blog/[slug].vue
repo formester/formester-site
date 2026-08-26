@@ -5,8 +5,8 @@
     </div>
 
     <div v-if="blogData" :class="{ 'mb-3rem': !(blogData?.cta && blogData.cta.hidden) }">
-        <BlogPostView v-if="blogPostViewData" :blog-data="blogPostViewData">
-          <template #actions>
+      <BlogPostView v-if="blogPostViewData" :blog-data="blogPostViewData">
+        <template #actions>
           <div class="social__links">
             <a
               :href="`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${blogData?.title} by @_Formester_ `"
@@ -36,25 +36,25 @@
               <IconLinkChain />
             </span>
           </div>
-          </template>
-        </BlogPostView>
-        <notifications position="bottom right" class="my-notification" />
+        </template>
+      </BlogPostView>
+      <notifications position="bottom right" class="my-notification" />
 
-        <div v-if="relatedArticles && relatedArticles.length" class="container related-container">
-          <div class="related-section">
-            <div class="section-label">
-              <h2>Related Blogs</h2>
-              <span class="rule"></span>
-            </div>
-            <div class="related-grid">
-              <RelatedArticleCard
-                v-for="relatedArticle in relatedArticles"
-                :key="relatedArticle.slug"
-                :article="relatedArticle"
-              />
-            </div>
+      <div v-if="relatedArticles && relatedArticles.length" class="container related-container">
+        <div class="related-section">
+          <div class="section-label">
+            <h2>Related Blogs</h2>
+            <span class="rule"></span>
+          </div>
+          <div class="related-grid">
+            <RelatedArticleCard
+              v-for="relatedArticle in relatedArticles"
+              :key="relatedArticle.slug"
+              :article="relatedArticle"
+            />
           </div>
         </div>
+      </div>
     </div>
     <CallToActionSection :content="blogData?.cta" />
   </div>
@@ -80,7 +80,7 @@ const { data: blogResponse } = await useAsyncData(`blog-${route.params.slug}`, a
       throw createError({ statusCode: 404, message: 'Page not found' })
     }
 
-    const cover = blog.attributes.coverImg?.data?.attributes
+    const cover = blog.attributes.coverImg
     const blogData = {
       id: blog.id,
       ...blog.attributes,
@@ -96,7 +96,7 @@ const { data: blogResponse } = await useAsyncData(`blog-${route.params.slug}`, a
     const otherBlogs = allBlogs.filter((item) => item.attributes.slug !== route.params.slug)
     const shuffled = [...otherBlogs].sort(() => Math.random() - 0.5)
     const relatedArticles = shuffled.slice(0, 4).map((item) => {
-      const c = item.attributes.coverImg?.data?.attributes
+      const c = item.attributes.coverImg
       return {
         ...item.attributes,
         id: item.id,
@@ -271,9 +271,7 @@ const jsonldData = computed(() => {
       // Strapi json field: already an object, unless an editor pasted a JSON string
       const parsed = typeof s.type === 'string' ? JSON.parse(s.type) : s.type
       if (!parsed || typeof parsed !== 'object') return
-      jsonData.push(
-        typeof parsed['@context'] === 'string' ? parsed : { '@context': 'https://schema.org', ...parsed }
-      )
+      jsonData.push(typeof parsed['@context'] === 'string' ? parsed : { '@context': 'https://schema.org', ...parsed })
     } catch (error) {
       console.error('Error parsing schema:', error)
     }

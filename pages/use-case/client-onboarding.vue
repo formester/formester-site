@@ -1,0 +1,863 @@
+<template>
+  <div>
+    <HeroCenteredDark
+      description="Simplify the client onboarding process with secure, customizable online forms that gather all the essential data quickly and accurately!"
+      :title="c0_title"
+      :button="c0_button"
+      :clickTriggers="c0_clickTriggers"
+      :background="c0_background"
+      class="page-component-item"
+    />
+
+    <TrustSeals :title="c1_title" :logos="c1_logos" class="page-component-item" />
+
+    <ThreeColBenefits :title="c2_title" :itemList="c2_itemList" class="page-component-item" />
+
+    <StandoutFeatureDetail :title="c3_title" :itemList="c3_itemList" class="page-component-item" />
+
+    <FeatureShowcase :steps="false" :title="c4_title" :itemList="c4_itemList" class="page-component-item" />
+
+    <FeatureDetailsSection :title="c5_title" :itemList="c5_itemList" class="page-component-item" />
+
+    <CallToActionSection :ctaValue="c6_ctaValue" class="page-component-item" />
+
+    <FaqSection :title="c7_title" :faqList="c7_faqList" class="page-component-item" />
+  </div>
+</template>
+
+<script setup>
+import CallToActionSection from '@/components/CallToActionSection.vue'
+import FaqSection from '@/components/v2/FaqSection.vue'
+import FeatureDetailsSection from '@/components/features/FeatureDetailsSection.vue'
+import FeatureShowcase from '@/components/features/FeatureShowcase.vue'
+import HeroCenteredDark from '@/components/strapi/HeroCenteredDark.vue'
+import StandoutFeatureDetail from '@/components/features/StandoutFeatureDetail.vue'
+import ThreeColBenefits from '@/components/features/ThreeColBenefits.vue'
+import TrustSeals from '@/components/v2/TrustSeals.vue'
+
+const c0_title = [
+  {
+    id: 1133,
+    text: 'Client Onboarding Made Easy with Formester',
+    highlight: false,
+    color: null,
+    bold: null,
+  },
+]
+const c0_button = {
+  id: 962,
+  link: 'https://app.formester.com/users/sign_up',
+  text: 'Create Form for Free',
+  type: 'Primary',
+  showArrow: null,
+}
+const c0_clickTriggers = [
+  {
+    id: 1436,
+    text: 'No More Paper Forms',
+  },
+  {
+    id: 1437,
+    text: 'Easy Tracking of Assessments',
+  },
+  {
+    id: 1435,
+    text: 'Faster Enrollments & Feedback',
+  },
+]
+const c0_background = {
+  id: 2215,
+  imageAlt: 'background-texture',
+  imageUrl: null,
+  width: null,
+  height: null,
+  image: {
+    id: 2433,
+    name: '08.svg',
+    alternativeText: null,
+    caption: null,
+    width: 1920,
+    height: 1920,
+    formats: null,
+    hash: '08_543ec28a0f',
+    ext: '.svg',
+    mime: 'image/svg+xml',
+    size: 35.46,
+    url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/08_543ec28a0f.svg',
+    previewUrl: null,
+    provider: 'aws-s3',
+    provider_metadata: null,
+    createdAt: '2024-11-19T17:29:17.338Z',
+    updatedAt: '2024-11-19T17:29:17.338Z',
+  },
+}
+const c1_title = []
+const c1_logos = [
+  {
+    id: 2195,
+    imageAlt: 'Tedx Paris Organizer',
+    imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/tedx_3c0e17bf72.png',
+    width: 110,
+    height: null,
+    image: null,
+  },
+  {
+    id: 2193,
+    imageAlt: 'Vue Jobs',
+    imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/vue_jobs_9705e4cfbe.svg',
+    width: 110,
+    height: null,
+    image: null,
+  },
+  {
+    id: 2192,
+    imageAlt: 'Vue Conference Toronto',
+    imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/vueconf_black_43e8b6a164.png',
+    width: 110,
+    height: null,
+    image: null,
+  },
+  {
+    id: 2196,
+    imageAlt: 'Mayple',
+    imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/mayple_67fe487816.png',
+    width: 110,
+    height: null,
+    image: null,
+  },
+  {
+    id: 2194,
+    imageAlt: 'Equipal',
+    imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/equipment_connect_b753319419.png',
+    width: 110,
+    height: null,
+    image: null,
+  },
+]
+const c2_title = [
+  {
+    id: 1132,
+    text: 'Why Fast Client Info Collection Matters?',
+    highlight: false,
+    color: null,
+    bold: null,
+  },
+]
+const c2_itemList = [
+  {
+    id: 1724,
+    title: 'Speed Up Onboarding',
+    description: 'Get all required documents and data upfront without delays or chasing.',
+    description_markdown: 'Get all required documents and data upfront without delays or chasing.',
+    icon: null,
+    cardImage: {
+      id: 2200,
+      imageAlt: 'rocket icon',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 2318,
+        name: 'rocket icon.svg',
+        alternativeText: 'rocket icon',
+        caption: 'rocket icon',
+        width: 68,
+        height: 68,
+        formats: null,
+        hash: 'Rocket_3a244016f9',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 1.26,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Rocket_3a244016f9.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-11-05T18:39:38.688Z',
+        updatedAt: '2025-02-28T02:41:08.277Z',
+      },
+    },
+  },
+  {
+    id: 1725,
+    title: 'Improve Customer Experience',
+    description: 'Make it easy for clients to submit information from any device at any time.',
+    description_markdown: 'Make it easy for clients to submit information from any device at any time.',
+    icon: null,
+    cardImage: {
+      id: 2205,
+      imageAlt: 'people icon',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 2330,
+        name: 'people icon.svg',
+        alternativeText: 'people icon',
+        caption: 'people icon',
+        width: 69,
+        height: 69,
+        formats: null,
+        hash: 'flexible_06a6ab66ac',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 0.98,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/flexible_06a6ab66ac.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-11-05T18:58:40.671Z',
+        updatedAt: '2025-04-30T01:43:48.716Z',
+      },
+    },
+  },
+  {
+    id: 1721,
+    title: 'Reduce Manual Work',
+    description: 'Automate repetitive tasks and free up your team for high value work.',
+    description_markdown: 'Automate repetitive tasks and free up your team for high value work.',
+    icon: null,
+    cardImage: {
+      id: 2197,
+      imageAlt: 'data icon',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 2317,
+        name: 'data icon.svg',
+        alternativeText: 'data icon',
+        caption: 'data icon',
+        width: 68,
+        height: 68,
+        formats: null,
+        hash: 'Integrate_1c339fe8ed',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 1.64,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Integrate_1c339fe8ed.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-11-05T18:39:31.563Z',
+        updatedAt: '2025-01-20T09:58:26.735Z',
+      },
+    },
+  },
+]
+const c3_title = [
+  {
+    id: 1129,
+    text: 'How Formester Can Help?',
+    highlight: false,
+    color: null,
+    bold: null,
+  },
+]
+const c3_itemList = [
+  {
+    id: 1717,
+    title: 'Branded No Code Forms',
+    description:
+      'Build clean forms that match your brand. No coding needed. Just drag, drop, and share with clients in minutes.\n\n',
+    description_markdown:
+      'Build clean forms that match your brand. No coding needed. Just drag, drop, and share with clients in minutes.\n\n',
+    icon: null,
+    cardImage: {
+      id: 2198,
+      imageAlt: "a screenshot of formester's custom branding",
+      imageUrl:
+        'https://formester-strapi.s3.ap-south-1.amazonaws.com/a_screenshot_of_formester_s_custom_branding_fa5fdd549d.svg',
+      width: null,
+      height: null,
+      image: null,
+    },
+  },
+  {
+    id: 1718,
+    title: ' File Uploads',
+    description:
+      'Let clients send files like contracts or photos directly through the form. No emails or extra steps needed.\n\n',
+    description_markdown:
+      'Let clients **[upload files](/features/file-upload-forms/)** like contracts or photos directly through the form. No emails or extra steps needed.\n\n',
+    icon: null,
+    cardImage: {
+      id: 2202,
+      imageAlt: 'formester file upload field',
+      imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_file_upload_field_0d25eaef0f.svg',
+      width: null,
+      height: null,
+      image: null,
+    },
+  },
+  {
+    id: 1723,
+    title: 'Autoresponders and Notifications',
+    description:
+      'Send a quick thank you or next steps right after a form is submitted. Get instant alerts when a new client signs up.\n\n',
+    description_markdown:
+      'Use **[email autoresponder](/features/autoresponder-email/)** to send a quick thank you  or next steps right after a form is submitted. Get instant alerts when a new client signs up.\n\n',
+    icon: null,
+    cardImage: {
+      id: 2204,
+      imageAlt: 'Autoresponder',
+      imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_925_1_48610068bc.svg',
+      width: null,
+      height: null,
+      image: null,
+    },
+  },
+  {
+    id: 1726,
+    title: 'CRM and Tool Integrations',
+    description:
+      'Connect forms to tools like HubSpot or Slack. Move client data where you need it without copying and pasting.\n\n',
+    description_markdown:
+      '**[Connect forms to tools](/integrations/)** like HubSpot or Slack. Move client data where you need it without copying and pasting.\n\n',
+    icon: null,
+    cardImage: {
+      id: 2207,
+      imageAlt: "a screenshot of formester's integration page",
+      imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_993_6c835367bc.svg',
+      width: null,
+      height: null,
+      image: null,
+    },
+  },
+  {
+    id: 1735,
+    title: 'Pre Filled Forms',
+    description:
+      'Send forms with some answers already filled in. Save clients time and reduce mistakes on repeat submissions.\n\n',
+    description_markdown:
+      'Send forms with some answers already filled in. Save clients time and reduce mistakes on repeat submissions.\n\n',
+    icon: null,
+    cardImage: {
+      id: 2217,
+      imageAlt: "a screenshot of formester's pre fill fields",
+      imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_1042_0e1c235718.svg',
+      width: null,
+      height: null,
+      image: null,
+    },
+  },
+]
+const c4_title = [
+  {
+    id: 1130,
+    text: 'How to Collect Client Information?',
+    highlight: false,
+    color: null,
+    bold: null,
+  },
+]
+const c4_itemList = [
+  {
+    id: 1733,
+    title: 'Create Your Form Instantly',
+    description:
+      ' Use Formester’s AI Form Generator or choose from ready made templates designed for banks, advisors, and lenders.',
+    description_markdown:
+      ' Use Formester’s **[AI Form Generator](/ai-form-generator/)** or choose from ready made templates designed for banks, advisors, and lenders.',
+    icon: null,
+    cardImage: {
+      id: 2209,
+      imageAlt: "formester's ai form generator",
+      imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_926_fb9cb57952.svg',
+      width: null,
+      height: null,
+      image: null,
+    },
+  },
+  {
+    id: 1729,
+    title: 'Customize Fields and Workflows',
+    description:
+      ' Add client specific fields like ID upload, address proof, or signature fields.\n Set up autoresponders or thank you messages for instant follow up.',
+    description_markdown:
+      ' Add client specific fields like ID upload, address proof, or signature fields.\n \n Set up autoresponders or thank you messages for instant follow up.',
+    icon: null,
+    cardImage: {
+      id: 2206,
+      imageAlt: 'Customize Your Form',
+      imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_925_1_706a3f27b6.svg',
+      width: null,
+      height: null,
+      image: null,
+    },
+  },
+  {
+    id: 1722,
+    title: 'Share the Form and Track Responses',
+    description:
+      'Embed the form on your website, email it to prospects, or send it via a link.\n\nTrack every submission in real time and export clean structured data.',
+    description_markdown:
+      '**[Embed the form](/features/embed-forms/)** on your website, email it to prospects, or send it via a link.\n\nTrack every submission in real time and export clean structured data.',
+    icon: null,
+    cardImage: {
+      id: 2201,
+      imageAlt: 'Share & Collect Responses',
+      imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_926_2_edc08bfa9d.svg',
+      width: null,
+      height: null,
+      image: null,
+    },
+  },
+]
+const c5_title = [
+  {
+    id: 1128,
+    text: 'Real-Life Use Cases',
+    highlight: false,
+    color: null,
+    bold: null,
+  },
+]
+const c5_itemList = [
+  {
+    id: 1741,
+    title: 'New Account Opening',
+    description: 'Collect KYC documents, personal information, and ID proofs through one form.',
+    description_markdown: 'Collect KYC documents, personal information, and ID proofs through one form.',
+    icon: null,
+    cardImage: {
+      id: 2222,
+      imageAlt: 'an illustration of person analyzing results',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 2627,
+        name: 'an illustration of person analyzing results.svg',
+        alternativeText: 'an illustration of person analyzing results',
+        caption: 'an illustration of person analyzing results',
+        width: 682,
+        height: 521,
+        formats: null,
+        hash: 'an_illustration_of_person_analyzing_0e6b5a2914',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 47.9,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/an_illustration_of_person_analyzing_0e6b5a2914.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-01-20T09:24:57.392Z',
+        updatedAt: '2025-01-20T09:53:36.792Z',
+      },
+    },
+  },
+  {
+    id: 1738,
+    title: 'Loan Applications',
+    description: 'Let clients fill loan details, upload documents, and get started without visiting a branch.',
+    description_markdown: 'Let clients fill loan details, upload documents, and get started without visiting a branch.',
+    icon: null,
+    cardImage: {
+      id: 2221,
+      imageAlt: 'an illustration of person saving money',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 2628,
+        name: 'an illustration of person saving money.svg',
+        alternativeText: 'an illustration of person saving money',
+        caption: 'an illustration of person saving money',
+        width: 682,
+        height: 521,
+        formats: null,
+        hash: 'an_illustration_of_person_and_credit_payment_527f19c40f',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 73.3,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/an_illustration_of_person_and_credit_payment_527f19c40f.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-01-20T09:24:57.538Z',
+        updatedAt: '2025-01-20T09:52:53.450Z',
+      },
+    },
+  },
+  {
+    id: 1739,
+    title: 'Financial Planning Consultations',
+    description: 'Prequalify clients with a detailed intake form and understand their goals before the first call.',
+    description_markdown:
+      'Prequalify clients with a detailed intake form and understand their goals before the first call.',
+    icon: null,
+    cardImage: {
+      id: 2219,
+      imageAlt: 'an illustration of exporting form submissions as pdf',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 1793,
+        name: 'an illustration of exporting form submissions as pdf.png',
+        alternativeText: 'an illustration of exporting form submissions as pdf',
+        caption: 'an illustration of exporting form submissions as pdf',
+        width: 1364,
+        height: 1043,
+        formats: {
+          large: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/large_image_c9a336f280.png',
+            hash: 'large_image_c9a336f280',
+            mime: 'image/png',
+            name: 'large_image.png',
+            path: null,
+            size: 173.22,
+            width: 1000,
+            height: 765,
+          },
+          small: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/small_image_c9a336f280.png',
+            hash: 'small_image_c9a336f280',
+            mime: 'image/png',
+            name: 'small_image.png',
+            path: null,
+            size: 72.65,
+            width: 500,
+            height: 382,
+          },
+          medium: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/medium_image_c9a336f280.png',
+            hash: 'medium_image_c9a336f280',
+            mime: 'image/png',
+            name: 'medium_image.png',
+            path: null,
+            size: 121.4,
+            width: 750,
+            height: 573,
+          },
+          thumbnail: {
+            ext: '.png',
+            url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/thumbnail_image_c9a336f280.png',
+            hash: 'thumbnail_image_c9a336f280',
+            mime: 'image/png',
+            name: 'thumbnail_image.png',
+            path: null,
+            size: 22.8,
+            width: 204,
+            height: 156,
+          },
+        },
+        hash: 'image_c9a336f280',
+        ext: '.png',
+        mime: 'image/png',
+        size: 35.03,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/image_c9a336f280.png',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2024-08-26T08:33:16.884Z',
+        updatedAt: '2024-08-26T08:36:02.877Z',
+      },
+    },
+  },
+  {
+    id: 1740,
+    title: 'Wealth Management Onboarding',
+    description: 'Gather asset information, risk preferences, and investment history quickly.',
+    description_markdown: 'Gather asset information, risk preferences, and investment history quickly.',
+    icon: null,
+    cardImage: {
+      id: 2220,
+      imageAlt: 'an illustration of online rental agreements',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 2899,
+        name: 'an illustration of online rental agreements.svg',
+        alternativeText: 'an illustration of online rental agreements',
+        caption: 'an illustration of online rental agreements',
+        width: 682,
+        height: 521,
+        formats: null,
+        hash: 'Component_1026_c6abf6f38f',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 79.82,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Component_1026_c6abf6f38f.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-02-28T02:35:50.827Z',
+        updatedAt: '2025-04-30T02:41:31.372Z',
+      },
+    },
+  },
+  {
+    id: 1737,
+    title: 'Mortgage Pre Approval',
+    description: 'Speed up pre approval with forms that capture income, liabilities, and document uploads.',
+    description_markdown: 'Speed up pre approval with forms that capture income, liabilities, and document uploads.',
+    icon: null,
+    cardImage: {
+      id: 2223,
+      imageAlt: 'an illustration of rental agreements',
+      imageUrl: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Realtor_pana_1_6f3dbcdd74.svg',
+      width: null,
+      height: null,
+      image: null,
+    },
+  },
+  {
+    id: 1736,
+    title: 'Tax or Accounting Services',
+    description: 'Get personal and financial details ahead of consultations and save hours in back and forth.',
+    description_markdown: 'Get personal and financial details ahead of consultations and save hours in back and forth.',
+    icon: null,
+    cardImage: {
+      id: 2218,
+      imageAlt: 'an illustration of legal document',
+      imageUrl: null,
+      width: null,
+      height: null,
+      image: {
+        id: 3064,
+        name: 'an illustration of legal document.svg',
+        alternativeText: 'an illustration of legal document',
+        caption: 'an illustration of legal document',
+        width: 500,
+        height: 500,
+        formats: null,
+        hash: 'Universal_declaration_of_human_rights_amico_06138befe8',
+        ext: '.svg',
+        mime: 'image/svg+xml',
+        size: 84.63,
+        url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/Universal_declaration_of_human_rights_amico_06138befe8.svg',
+        previewUrl: null,
+        provider: 'aws-s3',
+        provider_metadata: null,
+        createdAt: '2025-03-20T03:02:41.962Z',
+        updatedAt: '2025-03-20T03:34:50.316Z',
+      },
+    },
+  },
+]
+const c6_ctaValue = {
+  id: 67,
+  description: 'Get access to advanced AI, unlimited forms & more. See pricing for more details.',
+  type: 'default',
+  createdAt: '2024-11-04T07:07:43.916Z',
+  updatedAt: '2025-06-12T18:47:31.840Z',
+  publishedAt: '2024-11-04T07:08:18.018Z',
+  locale: 'en',
+  title: [
+    {
+      id: 393,
+      text: 'Ready to build your perfect form?',
+      highlight: false,
+      color: null,
+      bold: null,
+    },
+  ],
+  buttons: [
+    {
+      id: 338,
+      link: 'https://app.formester.com/users/sign_up',
+      text: 'Get Started–It’s Free!',
+      type: 'Primary',
+      showArrow: null,
+    },
+  ],
+  localizations: [],
+}
+const c7_title = [
+  {
+    id: 1131,
+    text: 'FAQs',
+    highlight: false,
+    color: null,
+    bold: null,
+  },
+]
+const c7_faqList = [
+  {
+    id: 1017,
+    header: 'Is it hard to set up a client intake form',
+    body: 'No, it is very easy. You can start with a template or use AI to build your form in minutes.',
+    body_markdown: 'No, it is very easy. You can start with a template or use AI to build your form in minutes.',
+    list: [],
+  },
+  {
+    id: 1011,
+    header: 'Can clients upload documents securely',
+    body: 'Yes Formester supports secure file uploads perfect for IDs, pay slips, or statements.',
+    body_markdown: 'Yes, Formester supports secure file uploads perfect for IDs, pay slips, or statements.',
+    list: [],
+  },
+  {
+    id: 1013,
+    header: 'Do I need coding skills to customize my form',
+    body: 'No coding needed Use our drag and drop builder to customize fields your way.',
+    body_markdown: 'No coding needed Use our drag and drop builder to customize fields your way.',
+    list: [],
+  },
+  {
+    id: 1010,
+    header: 'Can I track submissions in real time',
+    body: 'Yes You get live updates, form analytics, and can export client data instantly.',
+    body_markdown: 'Yes, you get live updates, form analytics, and can export client data instantly.',
+    list: [],
+  },
+  {
+    id: 1014,
+    header: 'What if I do not know what fields to add',
+    body: 'Just describe your goal and our AI will generate the perfect form for you.',
+    body_markdown: 'Just describe your goal and our AI will generate the perfect form for you.',
+    list: [],
+  },
+  {
+    id: 1012,
+    header: 'Can I add digital signatures',
+    body: 'Yes, clients can sign directly on the form without printing or scanning.',
+    body_markdown: 'Yes, clients can sign directly on the form without printing or scanning.',
+    list: [],
+  },
+  {
+    id: 1018,
+    header: 'Is my client data safe',
+    body: ' Yes We follow top industry standards to keep your data secure and encrypted.',
+    body_markdown: ' Yes, we follow top industry standards to keep your data secure and encrypted.',
+    list: [],
+  },
+  {
+    id: 1015,
+    header: 'Can I automate follow ups',
+    body: 'Yes Set up email notifications and autoresponders for instant communication.',
+    body_markdown: 'Yes, set up email notifications and autoresponders for instant communication.',
+    list: [],
+  },
+  {
+    id: 1016,
+    header: 'Can I integrate the form into my website',
+    body: 'Yes You can easily embed the form on your website or email it directly.',
+    body_markdown: 'Yes, you can easily embed the form on your website or email it directly.',
+    list: [],
+  },
+  {
+    id: 1019,
+    header: 'Will this save time for my team',
+    body: ' Definitely No more sorting documents, manual data entry, or chasing information. Everything is centralized and automated.',
+    body_markdown:
+      ' Definitely No more sorting documents, manual data entry, or chasing information. Everything is centralized and automated.',
+    list: [],
+  },
+]
+
+useHead({
+  title: 'Improve Client Onboarding with Online Forms | Formester',
+  link: [
+    {
+      hid: 'canonical',
+      rel: 'canonical',
+      href: 'https://formester.com/use-case/client-onboarding/',
+    },
+  ],
+  meta: [
+    {
+      property: 'article:modified_time',
+      content: '2025-04-30T02:46:08.434Z',
+    },
+    {
+      hid: 'description',
+      name: 'description',
+      content:
+        'Simplify your client onboarding process with Formester. Create secure, customizable forms for financial services, KYC, and account setups in minutes.',
+    },
+    {
+      hid: 'og:site_name',
+      name: 'og:site_name',
+      content: 'Improve Client Onboarding with Online Forms | Formester',
+    },
+    {
+      hid: 'og:type',
+      property: 'og:type',
+      content: 'website',
+    },
+    {
+      hid: 'og:url',
+      property: 'og:url',
+      content: 'https://formester.com/use-case/client-onboarding/',
+    },
+    {
+      hid: 'og:title',
+      property: 'og:title',
+      content: 'Improve Client Onboarding with Online Forms | Formester',
+    },
+    {
+      hid: 'og:description',
+      property: 'og:description',
+      content:
+        'Simplify your client onboarding process with Formester. Create secure, customizable forms for financial services, KYC, and account setups in minutes.',
+    },
+    {
+      hid: 'og:image',
+      property: 'og:image',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png',
+    },
+    {
+      hid: 'og:image:alt',
+      name: 'og:image:alt',
+      content: 'Formester Logo',
+    },
+    {
+      hid: 'twitter:url',
+      name: 'twitter:url',
+      content: 'https://formester.com/use-case/client-onboarding/',
+    },
+    {
+      name: 'twitter:site',
+      content: '@_formester_',
+    },
+    {
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: 'Improve Client Onboarding with Online Forms | Formester',
+    },
+    {
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content:
+        'Simplify your client onboarding process with Formester. Create secure, customizable forms for financial services, KYC, and account setups in minutes.',
+    },
+    {
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png',
+    },
+    {
+      hid: 'twitter:image:alt',
+      name: 'twitter:image:alt',
+      content: 'Formester Logo',
+    },
+    {
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image',
+    },
+    {
+      hid: 'apple-mobile-web-app-title',
+      name: 'apple-mobile-web-app-title',
+      content: 'Formester',
+    },
+    {
+      hid: 'image',
+      name: 'image',
+      property: 'og:image',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png',
+    },
+    {
+      hid: 'keywords',
+      name: 'keywords',
+      content: ['Client onboarding form', 'Intake form', 'client onboarding process', 'client onboarding'],
+    },
+  ],
+})
+</script>

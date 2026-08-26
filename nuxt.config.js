@@ -1,6 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import getRoutes, { getFeatureRoutes, getPageRoutes, getTemplateRoutes } from './utils/getRoutes.js'
+import getBlogRoutes, { getPageRoutes, getTemplateRoutes } from './utils/getRoutes.js'
 import { STRAPI_URL, APP_URL } from './constants/urls'
+
+// Vercel sets DEPLOY_ENV to 'production' only for the prod deployment/domain;
+// preview/test deploys (plain `vercel`, no --prod) get 'preview' or 'development'.
+const isProductionDeploy = process.env?.DEPLOY_ENV !== 'DEVELOPMENT'
 
 export default defineNuxtConfig({
   // Global page headers
@@ -15,7 +19,7 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           name: 'robots',
-          content: 'index, follow',
+          content: isProductionDeploy ? 'index, follow' : 'noindex, nofollow',
         },
         { name: 'format-detection', content: 'telephone=no' },
       ],
@@ -40,11 +44,16 @@ export default defineNuxtConfig({
   },
 
   // Robots configuration
-  robots: {
-    UserAgent: '*',
-    Disallow: ['/_nuxt/static/', '/status/', '/api/'],
-    Sitemap: 'https://formester.com/sitemap.xml'
-  },
+  robots: isProductionDeploy
+    ? {
+        UserAgent: '*',
+        Disallow: ['/_nuxt/static/', '/status/', '/api/'],
+        Sitemap: 'https://formester.com/sitemap.xml'
+      }
+    : {
+        UserAgent: '*',
+        Disallow: ['/']
+      },
 
   site: {
     url: 'https://formester.com/',
@@ -77,8 +86,8 @@ export default defineNuxtConfig({
   // Modules
   modules: [
     '@nuxtjs/robots',
-    '@nuxt/content',
     '@nuxtjs/sitemap',
+    '@nuxt/content',
     'nuxt-gtag',
     '@vite-pwa/nuxt',
     '@nuxt/image',
@@ -117,29 +126,40 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: ['/', '/sitemap.xml'],
-      ignore: ['/api'],
-      concurrency: 15, // Increased: pages now render from in-memory cache
+      ignore: ['/api', '/comparison-tool'],
+      // Lower via PRERENDER_CONCURRENCY on memory-constrained machines —
+      // e.g. a 6.7GB-RAM local dev box OOM'd at the default 16 with
+      // --max-old-space-size=4096 (needed for the full blog+templates
+      // build); each concurrent render holds its own fetched/rendered data,
+      // so fewer in flight at once directly lowers peak memory.
+      // Set PRERENDER_CONCURRENCY=4 locally; leave unset in CI (more RAM).
+      concurrency: Number(process.env.PRERENDER_CONCURRENCY) || 16,
       interval: 10, // Reduced: minimal API I/O with batch caching
       failOnError: false
     },
+    // Nitro's prerender payload cache (internal:nuxt:prerender:payload) has no
+    // default disk mount, so it falls back to the in-memory storage driver and
+    // retains EVERY prerendered route's payload for the whole build with no
+    // eviction — a known Nitro issue (unjs/nitro#1480/#1535) that shows up as
+    // heap climbing linearly with route count on large static builds. Mounting
+    // it to fs spills that cache to disk instead of RAM.
+    storage: {
+      'internal:nuxt:prerender:payload': { driver: 'fs', base: '.data/prerender-payload-cache' }
+    },
     hooks: {
       async 'prerender:routes'(routes) {
-        const blogs = await getRoutes()
-        const features = await getFeatureRoutes()
         const pages = await getPageRoutes()
+        const blogs = await getBlogRoutes()
         const templates = await getTemplateRoutes()
 
-        // Extract URLs from the objects returned by route functions
-        const blogUrls = blogs.map(item => item.url)
-        const featureUrls = features.map(item => item.url)
         const pageUrls = pages.map(item => item.url)
+        const blogUrls = blogs.map(item => item.url)
         const templateUrls = templates.map(item => item.url)
 
         const allRoutes = [
           ...pageUrls,
-          ...featureUrls,
           ...blogUrls,
-          ...templateUrls,
+          ...templateUrls
         ].filter(Boolean)
 
         for (const route of allRoutes) {
@@ -148,10 +168,6 @@ export default defineNuxtConfig({
       }
     }
   },
-  content: {
-    // Nuxt Content v2 configuration
-  },
-
   // Nuxt Image
   image: {
     provider: 'none',  // Serve images directly from public/
