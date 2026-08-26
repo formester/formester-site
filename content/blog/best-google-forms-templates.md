@@ -17,9 +17,10 @@ updatedAt: "2026-08-26T12:42:46Z"
 publishedAt: "2026-06-04T14:26:39.065Z"
 ---
 
+
 <p style="font-size: inherit;">Google Forms has a built-in template gallery. Most articles about it either undercount what is in there or quietly list templates from a different product, so here is the actual contents, section by section, with what each one is good for and where it falls down.</p>
 
-<blockquote><p><strong>Quick answer.</strong> Google Forms ships <strong>17 templates</strong> in its native gallery, split across Work (6), Personal (6) and Education (5). Open them at <a href="https://docs.google.com/forms/u/0/?ftv=1">forms.google.com</a> and click one. It opens as a new form in your Drive straight away. There is no separate "copy" step and no cost.</p></blockquote>
+<blockquote><p>Google Forms ships <strong>17 templates</strong> in its native gallery, split across Work (6), Personal (6) and Education (5). Open them at <a href="https://docs.google.com/forms/u/0/?ftv=1">forms.google.com</a> and click one. It opens as a new form in your Drive straight away. There is no separate "copy" step and no cost.</p></blockquote>
 
 <h2>The 17 templates Google Forms actually ships</h2>
 
@@ -29,37 +30,95 @@ publishedAt: "2026-06-04T14:26:39.065Z"
 
 <p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/gforms_template_gallery_work_fcd75d04b6.jpg" alt="Google Forms template gallery Work section showing Event Feedback, Order Form, Job Application, Time Off Request, Work Request and Customer Feedback" loading="lazy" style="width:100%;max-width:900px;height:auto;border-radius:8px;border:1px solid #e5e7eb;margin:16px 0;" /></p>
 
-<ul>
-<li><strong>Event Feedback.</strong> Post-event ratings and open comments. Linear scales for the numbers, one paragraph field for the things people actually remember.</li>
-<li><strong>Order Form.</strong> Item picker, quantity, delivery details. Worth knowing before you commit: it cannot take payment, and there is no field that multiplies quantity by price, so the total is typed by hand or worked out later.</li>
-<li><strong>Job Application.</strong> Name, contact, position, file upload for a CV. The upload counts against your Drive quota, which matters once a role gets a few hundred applicants.</li>
-<li><strong>Time Off Request.</strong> Dates, type of leave, cover arrangements. No approval routing, so the manager finds out by watching the response sheet.</li>
-<li><strong>Work Request.</strong> Internal ticket intake: requester, category, priority, description.</li>
-<li><strong>Customer Feedback.</strong> Feedback type, rating, free text. The closest thing in the gallery to an NPS survey, though it does not calculate a score.</li>
-</ul>
+<h4>Event Feedback</h4>
+<p>Linear scales for the ratings and one paragraph field for the comments people actually remember. Five questions, no title page.</p>
+<p><strong>Where it stops.</strong> It cannot calculate an average, so the score you report is worked out in the response sheet afterwards.</p>
+<p><strong>Formester equivalent.</strong> <a href="https://formester.com/templates/event-feedback-survey-698/">Event Feedback Survey</a>. Rating summaries are computed for you per question, and drop-off analytics show where people abandoned.</p>
+
+<h4>Order Form</h4>
+<p>Item picker, quantity, delivery address. The closest the gallery gets to commerce.</p>
+<p><strong>Where it stops.</strong> There is no payment field and no field that multiplies quantity by price, so the total is typed by hand and never validated.</p>
+<p><strong>Formester equivalent.</strong> <a href="https://formester.com/templates/product-order-form-33229/">Product Order Form</a>. Calculated line totals, and Stripe or PayPal collected on the form itself instead of a separate payment step.</p>
+
+<h4>Job Application</h4>
+<p>Name, contact and position applied for, plus a file upload for the CV.</p>
+<p><strong>Where it stops.</strong> Uploads consume your Drive quota, and every applicant answers the same questions regardless of the role.</p>
+<p><strong>Formester equivalent.</strong> <a href="https://formester.com/templates/job-application-form-699/">Job Application Form</a>. Uploads sit outside your Drive quota, and conditional questions branch by role so a developer is not asked about a driving licence.</p>
+
+<h4>Time Off Request</h4>
+<p>Start and end dates, leave type, cover arrangements.</p>
+<p><strong>Where it stops.</strong> No approval step exists. The manager finds out by watching the response sheet, and the requester never gets a decision back.</p>
+<p><strong>Formester equivalent.</strong> <a href="https://formester.com/templates/time-off-request-form-2780/">Time Off Request Form</a>. Routes to an approver and emails the outcome back, so the request has an end state rather than sitting in a spreadsheet.</p>
+
+<h4>Work Request</h4>
+<p>Internal ticket intake: requester, category, priority, description.</p>
+<p><strong>Where it stops.</strong> Priority is a dropdown with no routing behind it, so an urgent request looks identical to a trivial one until someone reads it.</p>
+<p><strong>Formester equivalent.</strong> <a href="https://formester.com/templates/change-request-form-23801/">Change Request Form</a>. Priority drives the notification, so urgent tickets reach the right person immediately.</p>
+
+<h4>Customer Feedback</h4>
+<p>Feedback type and a rating, plus free text. The nearest thing to an NPS survey in the gallery.</p>
+<p><strong>Where it stops.</strong> It records the rating but does not score it, so there is no NPS number without building the formula yourself.</p>
+<p><strong>Formester equivalent.</strong> <a href="https://formester.com/templates/customer-feedback-form-31840/">Customer Feedback Form</a>. Rating fields roll up into a summary automatically, including per-question breakdowns.</p>
 
 <h3>Personal (6 templates)</h3>
+<h4>Contact Information</h4>
+<p>Name, email, address, phone. The plainest template in the gallery and the most copied.</p>
+<p><strong>Where it stops.</strong> Nothing checks the email is real, so a typo enters your list looking perfectly valid.</p>
+<p><strong>Formester equivalent.</strong> <a href="https://formester.com/templates/contact-form-template-1660/">Contact Form Template</a>. Email Confirmation sends a one-time code to the address, so only a working inbox gets through.</p>
 
-<ul>
-<li><strong>Contact Information.</strong> Name, email, address, phone. The plainest template in the gallery and the most copied.</li>
-<li><strong>Find a Time.</strong> A checkbox grid of days against time slots. Useful for scheduling a group without a scheduling tool, and it does not check anyone's calendar.</li>
-<li><strong>RSVP.</strong> Attending yes or no, guest count, dietary notes.</li>
-<li><strong>Party Invite.</strong> RSVP with a friendlier header image and a what-are-you-bringing question.</li>
-<li><strong>T-Shirt Sign Up.</strong> Size picker plus name. No stock control, so two people can claim the last large.</li>
-<li><strong>Event Registration.</strong> Attendee details, session choice, contact. The one to start from for anything ticketed, keeping in mind there is no payment field and no capacity cap on a question.</li>
-</ul>
+<h4>Find a Time</h4>
+<p>A checkbox grid of days against time slots, so a group can mark when they are free.</p>
+<p><strong>Where it stops.</strong> It does not read anyone's calendar and it does not close a slot once it fills, so two people can pick the same time.</p>
+<p><strong>Formester equivalent.</strong> <a href="https://formester.com/templates/appointment-request-form-13454/">Appointment Request Form</a>. Offers real slots and stops accepting a slot once it is taken, instead of collecting preferences you reconcile by hand.</p>
+
+<h4>RSVP</h4>
+<p>Attending yes or no, guest count, dietary notes.</p>
+<p><strong>Where it stops.</strong> There is no capacity limit on a question, so RSVPs keep arriving after the room is full.</p>
+<p><strong>Formester equivalent.</strong> <a href="https://formester.com/templates/rsvp-form-21586/">RSVP Form</a>. Guest-count logic plus a submission cap, and the attendee gets a formatted confirmation back.</p>
+
+<h4>Party Invite</h4>
+<p>The RSVP shape with a friendlier header image and a what-are-you-bringing question.</p>
+<p><strong>Where it stops.</strong> Same capacity problem as RSVP, and the header image is the only thing you can really style.</p>
+<p><strong>Formester equivalent.</strong> <a href="https://formester.com/templates/party-rsvp-form-21592/">Party RSVP Form</a>. Full branding rather than a header image, and a closing date so the invite stops accepting replies on its own.</p>
+
+<h4>T-Shirt Sign Up</h4>
+<p>A size picker plus a name field, for ordering team or event shirts.</p>
+<p><strong>Where it stops.</strong> No stock control at all, so two people can both claim the last large and you find out later.</p>
+<p><strong>Formester equivalent.</strong> <a href="https://formester.com/templates/apparel-order-form-32860/">Apparel Order Form</a>. Per-option limits, so a size disappears from the picker once it runs out, and payment collected inline.</p>
+
+<h4>Event Registration</h4>
+<p>Attendee details, session choice, contact information. The one to start from for anything ticketed.</p>
+<p><strong>Where it stops.</strong> No payment field and no capacity cap, which are the two things a ticketed event needs most.</p>
+<p><strong>Formester equivalent.</strong> <a href="https://formester.com/templates/event-registration-form-1827/">Event Registration Form</a>. Takes the ticket payment on the form and closes registration at your cap without you watching it.</p>
 
 <h3>Education (5 templates)</h3>
 
 <p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/gforms_template_gallery_education_19e9a2f22f.jpg" alt="Google Forms template gallery Education section showing Blank Quiz, Exit Ticket, Assessment, Worksheet and Course Evaluation" loading="lazy" style="width:100%;max-width:900px;height:auto;border-radius:8px;border:1px solid #e5e7eb;margin:16px 0;" /></p>
 
-<ul>
-<li><strong>Blank Quiz.</strong> The only template with <strong>Make this a quiz</strong> already switched on, so answer keys and point values are available from the first question. Start here for anything graded rather than converting a form later.</li>
-<li><strong>Exit Ticket.</strong> Three short questions for the end of a lesson. Short enough that it gets answered on the way out.</li>
-<li><strong>Assessment.</strong> A longer graded set with name and email capture at the top.</li>
-<li><strong>Worksheet.</strong> Structured practice questions with an image field per question.</li>
-<li><strong>Course Evaluation.</strong> End-of-course ratings across teaching, materials and workload.</li>
-</ul>
+<h4>Blank Quiz</h4>
+<p>The only template with Make this a quiz already switched on, so answer keys and point values are live from the first question.</p>
+<p><strong>Where it stops.</strong> No timer and no partial credit. A short answer near miss is left ungraded rather than marked wrong.</p>
+<p><strong>Formester equivalent.</strong> <a href="https://formester.com/templates/general-knowledge-mcq-quiz-27608/">General Knowledge MCQ Quiz</a>. Adds a timer, negative marking and partial credit, so a mixed-format quiz grades itself end to end.</p>
+
+<h4>Exit Ticket</h4>
+<p>Three short questions for the end of a lesson. Short enough that it actually gets answered on the way out.</p>
+<p><strong>Where it stops.</strong> Responses are not grouped by class or date, so a weekly exit ticket becomes one long undifferentiated sheet.</p>
+<p><strong>Formester equivalent.</strong> None that matches directly. The closest options are in the <a href="https://formester.com/templates/categories/quizzes/">quiz templates</a> category, which solve grading rather than this particular shape.</p>
+
+<h4>Assessment</h4>
+<p>A longer graded question set with name and email capture at the top.</p>
+<p><strong>Where it stops.</strong> Answer keys only work on six question types, so anything free-form still needs marking by hand.</p>
+<p><strong>Formester equivalent.</strong> <a href="https://formester.com/templates/spelling-bee-practice-test-46207/">Spelling Bee Practice Test</a>. Instant feedback and explanations on wrong answers, so the test teaches rather than only scoring.</p>
+
+<h4>Worksheet</h4>
+<p>Structured practice questions with an image field per question, for homework and in-class work.</p>
+<p><strong>Where it stops.</strong> There is no way to reuse one worksheet across classes without duplicating the whole form each time.</p>
+<p><strong>Formester equivalent.</strong> None that matches directly either. The same quiz templates category is the nearest thing, and it solves grading rather than reuse across classes.</p>
+
+<h4>Course Evaluation</h4>
+<p>End-of-course ratings across teaching, materials and workload.</p>
+<p><strong>Where it stops.</strong> Anonymity and duplicate prevention are mutually exclusive here: stopping repeat submissions requires sign-in, which removes the anonymity.</p>
+<p><strong>Formester equivalent.</strong> <a href="https://formester.com/templates/course-evaluation-form-25364/">Course Evaluation Form</a>. Anonymous submissions that still block duplicates, so honest feedback and one-response-per-student both hold.</p>
 
 <h2>How to open a Google Forms template</h2>
 
@@ -139,34 +198,6 @@ publishedAt: "2026-06-04T14:26:39.065Z"
 </div>
 
 <p>Formester's templates are not Google Forms templates and will not open in your Drive. If staying inside Google is the requirement, use the 17 above and accept the ceiling. If the ceiling is the problem, <a href="https://formester.com/templates/">browse the library</a> and start from something closer to the finished thing.</p>
-
-<h2>Formester equivalents, mapped to the same use cases</h2>
-
-<p>If one of the 17 gets you 80 percent of the way and stalls on the last bit, this is where the equivalent sits and what it adds. These open in Formester, not in your Drive.</p>
-
-<div class="table-wrap">
-<table>
-<thead><tr><th>Use case</th><th>Formester template</th><th>What it adds over the Google version</th></tr></thead>
-<tbody>
-<tr><td>Event registration</td><td><a href="https://formester.com/templates/event-registration-form-1827/">Event Registration Form</a></td><td>Takes payment on the form and caps registrations</td></tr>
-<tr><td>Order form</td><td><a href="https://formester.com/templates/product-order-form-33229/">Product Order Form</a></td><td>Calculated line totals and Stripe or PayPal checkout</td></tr>
-<tr><td>Job application</td><td><a href="https://formester.com/templates/job-application-form-699/">Job Application Form</a></td><td>File uploads that do not consume Drive quota, plus conditional follow-ups per role</td></tr>
-<tr><td>Customer feedback</td><td><a href="https://formester.com/templates/customer-feedback-form-31840/">Customer Feedback Form</a></td><td>Rating summaries and drop-off analytics per question</td></tr>
-<tr><td>Client onboarding</td><td><a href="https://formester.com/templates/client-onboarding-form-21915/">Client Onboarding Form</a></td><td>Branches by service line instead of one form for everyone</td></tr>
-<tr><td>Contact details</td><td><a href="https://formester.com/templates/contact-form-template-1660/">Contact Form Template</a></td><td>Email confirmation by one-time code, so the address is real</td></tr>
-<tr><td>RSVP</td><td><a href="https://formester.com/templates/rsvp-form-21586/">RSVP Form</a></td><td>Guest-count logic and a formatted confirmation back to the attendee</td></tr>
-<tr><td>Time off request</td><td><a href="https://formester.com/templates/time-off-request-form-2780/">Time Off Request Form</a></td><td>Routes to an approver rather than landing in a sheet</td></tr>
-<tr><td>Course evaluation</td><td><a href="https://formester.com/templates/course-evaluation-form-25364/">Course Evaluation Form</a></td><td>Anonymous mode that still prevents duplicate submissions</td></tr>
-<tr><td>Graded quiz</td><td><a href="https://formester.com/templates/general-knowledge-mcq-quiz-27608/">General Knowledge MCQ Quiz</a></td><td>Timers, negative marking and partial credit</td></tr>
-<tr><td>Appointment booking</td><td><a href="https://formester.com/templates/appointment-request-form-13454/">Appointment Request Form</a></td><td>Slot availability instead of a free-text date</td></tr>
-<tr><td>Project intake</td><td><a href="https://formester.com/templates/project-intake-form-12251/">Project Intake Form</a></td><td>Multi-page flow with a progress indicator</td></tr>
-<tr><td>Employee feedback</td><td><a href="https://formester.com/templates/employee-feedback-form-31842/">Employee Feedback Form</a></td><td>True anonymous submissions, with no identity stored</td></tr>
-<tr><td>Consultation request</td><td><a href="https://formester.com/templates/client-consultation-form-1866/">Client Consultation Form</a></td><td>Qualifying logic that skips irrelevant questions</td></tr>
-</tbody>
-</table>
-</div>
-
-<p>Two honest notes on that table. Everything in the right-hand column is available on a paid plan except anonymous mode and multi-page flows, which work on the free plan. And if your requirement is simply "it must live in Google Drive next to everything else", none of this is worth the switch.</p>
 
 <section class="faq">
 <h2>Google Forms templates FAQ</h2>
