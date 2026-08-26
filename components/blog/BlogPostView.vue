@@ -858,7 +858,8 @@ a.art-author__name:hover {
   font-weight: var(--fw-medium);
   color: var(--fg-1);
 }
-.nuxt-content .cta a {
+.nuxt-content .cta a,
+.nuxt-content .better .btn {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -870,7 +871,9 @@ a.art-author__name:hover {
   font-weight: var(--fw-semibold);
   white-space: nowrap;
 }
-.nuxt-content .cta a:hover {
+.nuxt-content .cta a:hover,
+.nuxt-content .better .btn:hover,
+.nuxt-content .better .btn:focus {
   background: var(--violet-700);
   color: #fff;
 }
@@ -879,6 +882,51 @@ a.art-author__name:hover {
 .nuxt-content .cta--brand {
   background: var(--violet-25);
   border-color: var(--border-violet);
+}
+
+/* "Why Formester's X is the better choice" block: centred title and CTA,
+   left-aligned reasons in between. */
+.nuxt-content .better {
+  background: var(--violet-25);
+  border: 1px solid var(--border-violet);
+  border-radius: var(--r-xl);
+  padding: 24px 26px;
+  margin: 28px 0;
+}
+.nuxt-content .better > h5 {
+  margin: 0 0 10px;
+  text-align: center;
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  color: var(--violet-600);
+}
+.nuxt-content .better > p {
+  margin: 0 0 14px;
+}
+.nuxt-content .better ul {
+  margin: 0 0 20px;
+  padding-left: 1.25em;
+}
+.nuxt-content .better li {
+  margin: 0 0 8px;
+}
+.nuxt-content .better li:last-child {
+  margin-bottom: 0;
+}
+.nuxt-content .better > p:last-child {
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .nuxt-content .better {
+    padding: 20px 18px;
+  }
+  .nuxt-content .better .btn {
+    display: block;
+    text-align: center;
+    white-space: normal;
+  }
 }
 
 /* Auto-numbered steps */
