@@ -185,7 +185,6 @@ publishedAt: "2026-06-04T14:26:39.065Z"
 <p>Three short questions for the end of a lesson. Short enough that it actually gets answered on the way out.</p>
 <p><img src="/blog/google-forms-templates/13-exit-ticket.jpg" alt="Google Forms Exit Ticket template asking what one important thing the student learned in class today" loading="lazy" style="width:100%;max-width:652px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
 <p><strong>Where it stops.</strong> Responses are not grouped by class or date, so a weekly exit ticket becomes one long undifferentiated sheet.</p>
-<p>Formester has no direct match for this one. The closest are its <a href="https://formester.com/templates/categories/quizzes/">quiz templates</a>, which solve grading rather than this shape.</p>
 
 <h4 id="assessment">Assessment</h4>
 <p>A longer graded question set with name and email capture at the top.</p>
@@ -200,7 +199,6 @@ publishedAt: "2026-06-04T14:26:39.065Z"
 <p>Structured practice questions with an image field per question, for homework and in-class work.</p>
 <p><img src="/blog/google-forms-templates/15-worksheet.jpg" alt="Google Forms Worksheet template showing Name and Email fields above an image-based question" loading="lazy" style="width:100%;max-width:652px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
 <p><strong>Where it stops.</strong> There is no way to reuse one worksheet across classes without duplicating the whole form each time.</p>
-<p>No direct Formester match here either. The nearest options solve grading, not reuse across classes.</p>
 
 <h4 id="course-evaluation">Course Evaluation</h4>
 <p>End-of-course ratings across teaching, materials and workload.</p>
