@@ -56,6 +56,7 @@ publishedAt: "2026-08-27T00:00:00.000Z"
 <h2 id="build-it">Building the form: the three fields that matter</h2>
 
 <p>Most evaluation forms need only three question types. The rest is wording.</p>
+<p><img src="/blog/google-forms-evaluation/01-question-types.jpg" alt="The Google Forms question type dropdown showing Linear scale, Rating, Multiple choice grid and Checkbox grid" loading="lazy" style="width:100%;max-width:240px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
 <ol>
 <li><strong>Multiple choice grid</strong> for the criteria block. Rows are your criteria (communication, punctuality, accuracy). Columns are the rating labels. One grid replaces a dozen separate questions and keeps the scale consistent across all of them.</li>
 <li><strong>Linear scale</strong> for a single overall rating. Pick 1 to 5 and label both ends, because an unlabelled 3 means different things to different people.</li>
@@ -76,12 +77,14 @@ publishedAt: "2026-08-27T00:00:00.000Z"
 <h2 id="anonymity">The anonymity trap on course evaluations</h2>
 
 <p>Course and staff evaluations usually need two things that Google Forms cannot give you together.</p>
+<p><img src="/blog/google-forms-evaluation/02-limit-1-response.jpg" alt="The Google Forms Limit to 1 response setting sitting under a REQUIRES SIGN IN label" loading="lazy" style="width:100%;max-width:692px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
 <p>Blocking repeat submissions requires <strong>Limit to 1 response</strong>, which requires sign-in, which records who submitted. Keeping it genuinely anonymous means leaving that off, which means one student can submit five times. You pick one.</p>
 <p>The usual workaround is a private link plus trust, which is fine for a friendly cohort and useless for a contested review.</p>
 
 <h2 id="reading-results">Reading the results</h2>
 
 <p>The <strong>Summary</strong> tab charts each question on its own, which is genuinely useful for a cohort-wide course evaluation and close to useless for a per-person review, because there is no way to filter to one evaluatee.</p>
+<p><img src="/blog/google-forms-evaluation/03-summary-tab.jpg" alt="The Google Forms Summary tab charting one question at a time, with no way to filter to a single evaluatee" loading="lazy" style="width:100%;max-width:791px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
 <p>For anything per-person, work in the linked Sheet instead. Filter by the name column, and keep your weighted total in a formula beside it.</p>
 
 <div class="better">
@@ -93,6 +96,7 @@ publishedAt: "2026-08-27T00:00:00.000Z"
 <li>Start from the <a href="https://formester.com/templates/course-evaluation-form-25364/">Course Evaluation Form</a> rather than building the criteria grid from scratch</li>
 <li>Conditional logic can skip whole criteria blocks that do not apply to a role (Personal plan)</li>
 </ul>
+<p><img src="/blog/formester-ui/summary-analytics.jpg" alt="Formester's Summary tab showing per-question response breakdowns with Download all and Filters controls" loading="lazy" style="width:100%;max-width:848px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
 <p><a class="btn" href="https://app.formester.com/users/sign_up">Try Formester free</a></p>
 </div>
 

@@ -39,6 +39,7 @@ publishedAt: "2026-08-27T00:00:00.000Z"
 <h2 id="own-copy">1. You filled in a form and want your own answers</h2>
 
 <p>This is the most common version of the search and the one with the least satisfying answer. Whether you can get your answers back was decided by the form owner before you hit submit.</p>
+<p><img src="/blog/google-forms-sendcopy/01-send-a-copy-greyed.jpg" alt="The Send responders a copy of their response setting greyed out and off, which is why no receipt arrives" loading="lazy" style="width:100%;max-width:692px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
 <ul>
 <li><strong>Check your inbox first.</strong> If the owner enabled receipts, Google emailed your answers at submission time. Search your mail for the form's title rather than the word Google.</li>
 <li><strong>Look for an edit link.</strong> If the owner also allowed response editing, that same email carries an <strong>Edit your response</strong> link, which reopens your submission with your answers still filled in.</li>
@@ -49,6 +50,7 @@ publishedAt: "2026-08-27T00:00:00.000Z"
 <h2 id="auto-send">2. You own the form and want respondents to get a copy</h2>
 
 <p>This is the setting people are usually looking for, and it has one prerequisite that trips everyone up.</p>
+<p><img src="/blog/google-forms-sendcopy/02-responses-settings.jpg" alt="The Google Forms Settings Responses panel showing Collect email addresses set to Do not collect and Send responders a copy requiring it" loading="lazy" style="width:100%;max-width:791px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
 <ol>
 <li>Open the form and click <strong>Settings</strong>.</li>
 <li>Expand <strong>Responses</strong>.</li>
@@ -60,6 +62,7 @@ publishedAt: "2026-08-27T00:00:00.000Z"
 <h2 id="copy-form">3. You want to duplicate the form itself</h2>
 
 <p>A smaller share of this search is people wanting a second copy of the form, usually to reuse it next term or next cycle.</p>
+<p><img src="/blog/google-forms-translate/02-make-a-copy.jpg" alt="The Google Forms editor three-dot menu with Make a copy at the top" loading="lazy" style="width:100%;max-width:292px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
 <p>Open the form, use the three-dot menu and choose <strong>Make a copy</strong>. You get a fresh form with the same questions and settings.</p>
 <p><strong>What does not come with it.</strong> The responses. A copied form starts empty, and it gets its own response sheet. That is usually what you want for a new cycle and a nasty surprise if you assumed the data travelled. To move the data instead, export the CSV or copy the linked Sheet.</p>
 
@@ -82,6 +85,7 @@ publishedAt: "2026-08-27T00:00:00.000Z"
 <li>No email-collection prerequisite, and no dependence on the respondent noticing a tickbox</li>
 <li>Partial submissions are captured too, so an abandoned form is still recoverable on your side</li>
 </ul>
+<p><img src="/blog/formester-ui/autoresponder-send-copy.jpg" alt="Formester's autoresponder settings with the option to send the submitter a copy of their submission" loading="lazy" style="width:100%;max-width:900px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
 <p><a class="btn" href="https://app.formester.com/users/sign_up">Try Formester free</a></p>
 </div>
 
