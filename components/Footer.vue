@@ -325,6 +325,11 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
+                <NuxtLink to="/cookie-policy/" class="footer__link">
+                  Cookie Policy
+                </NuxtLink>
+              </li>
+              <li class="mt-2">
                 <a href="https://docs.formester.com/" class="footer__link">
                   Documentation
                 </a>

@@ -5,7 +5,7 @@
         <div class="cookie-heading">We use cookies to improve your experience</div>
         <div class="cookie-subtext">
           Cookies help us understand site performance, visitor interactions, and technical issues.
-          Learn more in our <nuxt-link class="link-underline" to="/privacy/">Privacy Policy</nuxt-link>.
+          Learn more in our <nuxt-link class="link-underline" to="/cookie-policy/">Cookie Policy</nuxt-link>.
         </div>
         <div class="cookie-actions">
           <button class="btn reject" @click="reject">Reject</button>
