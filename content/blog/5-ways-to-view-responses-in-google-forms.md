@@ -96,6 +96,7 @@ publishedAt: "2026-05-15T03:47:28.261Z"
 <h2 id="delete-a-response">How to delete a response</h2>
 
 <p>Deleting is per response and it is permanent, so read the row before you click.</p>
+<p><img src="/blog/google-forms-responses/06-delete-all-responses.jpg" alt="The Google Forms Responses three-dot menu with Delete all responses at the bottom" loading="lazy" style="width:100%;max-width:410px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
 <ol>
 <li>Click <strong>Responses</strong>, then <strong>Individual</strong>.</li>
 <li>Page to the submission you want gone.</li>
@@ -129,9 +130,8 @@ publishedAt: "2026-05-15T03:47:28.261Z"
 <p><a class="btn" href="https://app.formester.com/users/sign_up">Try Formester free</a></p>
 </div>
 
-<h2 id="faq">Google Forms responses FAQ</h2>
-
 <section class="faq">
+<h2>Google Forms responses FAQ</h2>
 <details><summary>How do I view responses in Google Forms?</summary><p>Open the form and click <strong>Responses</strong>. Use the Summary tab for charts, the Question tab to read every answer to one question, and the Individual tab to see one person's full submission.</p></details>
 <details><summary>How do I see who responded to my Google Form?</summary><p>Only if the form collects respondent emails. Turn that on in Settings before you share the form, then each row in the Individual tab and the linked Sheet carries an email address. Without it, submissions are anonymous and cannot be attributed afterwards.</p></details>
 <details><summary>Can I see my own response to a Google Form after submitting?</summary><p>Not on your own. You get a copy only if the owner enabled response receipts and the form collects emails, in which case Google emails your answers to you. If the owner also allowed editing, that email has an Edit your response link. Otherwise ask the form owner to look you up.</p></details>

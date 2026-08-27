@@ -112,9 +112,8 @@ publishedAt: "2026-08-26T00:00:00.000Z"
 <p><a class="btn" href="https://app.formester.com/users/sign_up">Try Formester free</a></p>
 </div>
 
-<h2 id="faq">Translating Google Forms FAQ</h2>
-
 <section class="faq">
+<h2>Translating Google Forms FAQ</h2>
 <details><summary>Can Google Forms be translated?</summary><p>Not by Google Forms itself. There is no translation or language setting in the editor. You either let the respondent's browser translate the page, install a Marketplace add-on that rewrites the form, or duplicate the form and translate it by hand.</p></details>
 <details><summary>How do I translate an entire Google form?</summary><p>The add-on route is the only one that translates a whole form in one action. Install Forms Translator from the Workspace Marketplace, open it from the add-ons menu, choose a target language and run it. It rewrites the questions in place.</p></details>
 <details><summary>How can I translate Google Forms into English?</summary><p>The same three routes, with English as the target. If you are a respondent looking at a form in another language, right-click the page and choose Translate, or accept your browser's prompt.</p></details>

@@ -54,6 +54,7 @@ publishedAt: "2025-10-26T17:24:02.503Z"
 <h2 id="response-summary">2. Save the response summary as PDF</h2>
 
 <p>Produces the charts and aggregate counts from the summary tab. Use it for a one-page readout for a meeting.</p>
+<p><img src="/blog/google-forms-pdf/04-summary-tab.jpg" alt="The Google Forms Summary tab showing response charts, the view to print from for a summary PDF" loading="lazy" style="width:100%;max-width:791px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
 <ol>
 <li>Open the <strong>Responses</strong> tab and stay on <strong>Summary</strong>.</li>
 <li>Print the page from your browser with Ctrl+P, or Cmd+P on a Mac.</li>
@@ -64,6 +65,7 @@ publishedAt: "2025-10-26T17:24:02.503Z"
 <h2 id="one-question">3. Save one question as PDF</h2>
 
 <p>Produces every answer given to a single question. Use it for circulating one question's results without the rest.</p>
+<p><img src="/blog/google-forms-pdf/05-question-tab.jpg" alt="The Google Forms Question tab showing every answer to a single question, the view to print from for one question" loading="lazy" style="width:100%;max-width:791px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
 <ol>
 <li>Open <strong>Responses</strong>, then the <strong>Question</strong> tab.</li>
 <li>Use the arrows to reach the question you want.</li>
@@ -119,12 +121,12 @@ publishedAt: "2025-10-26T17:24:02.503Z"
 <li>Go the other direction too and <a href="https://formester.com/features/convert-pdf-to-fillable-form/">turn an existing PDF into a fillable form</a>, rather than rebuilding it question by question</li>
 <li>Start from a document-shaped template, like the <a href="https://formester.com/templates/categories/agreement">agreement templates</a>, when the output matters as much as the answers</li>
 </ul>
+<p><img src="/blog/formester-ui/autoresponder-send-copy.jpg" alt="Formester's autoresponder settings with the option to send the submitter a copy of their submission" loading="lazy" style="width:100%;max-width:900px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
 <p><a class="btn" href="https://app.formester.com/users/sign_up">Try Formester free</a></p>
 </div>
 
-<h2 id="faq">Google Forms to PDF FAQ</h2>
-
 <section class="faq">
+<h2>Google Forms to PDF FAQ</h2>
 <details><summary>Does Google Forms have an export to PDF option?</summary><p>No. There is no export-as-PDF button anywhere in Google Forms. Every route goes through your browser's print dialog with the destination set to Save as PDF.</p></details>
 <details><summary>How do I copy a Google Form to a PDF?</summary><p>Open the form in the editor, click the three-dot menu, choose Print, then set the destination to Save as PDF. That gives you the questions with no answers in them.</p></details>
 <details><summary>How do I download Google Forms responses as PDFs?</summary><p>Open the Responses tab. Print all responses in the three-dot menu gives you every submission as one document. For a single person, go to the Individual tab, page to their response and use the print icon above it.</p></details>
