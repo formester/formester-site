@@ -124,9 +124,11 @@ const blogPostViewData = computed(() => {
     body: blogData.value.body,
     author: blogData.value.author,
     authorProfile: blogData.value.authorProfile,
+    authorImage: blogData.value.authorImage,
     coverImgUrl: null,
     coverImgAlt: blogData.value.coverImgAlt,
     publishedAt: blogData.value.publishedAt,
+    updatedAt: blogData.value.updatedAt,
     readingStats: blogData.value.readingStats,
   }
 })

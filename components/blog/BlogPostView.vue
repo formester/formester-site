@@ -10,7 +10,16 @@
         <h1 class="art-title">{{ blogData.title }}</h1>
         <div class="art-byline">
           <div v-if="blogData.author" class="art-author">
-            <span class="art-avatar" aria-hidden="true">{{ authorInitials }}</span>
+            <img
+              v-if="blogData.authorImage"
+              :src="blogData.authorImage"
+              :alt="blogData.author"
+              class="art-avatar art-avatar--img"
+              width="42"
+              height="42"
+              loading="lazy"
+            />
+            <span v-else class="art-avatar" aria-hidden="true">{{ authorInitials }}</span>
             <a
               v-if="blogData.authorProfile"
               :href="blogData.authorProfile"
@@ -23,6 +32,10 @@
           <template v-if="blogData.publishedAt">
             <span class="art-byline__dot"></span>
             <span class="art-byline__meta">{{ formatDate(blogData.publishedAt) }}</span>
+          </template>
+          <template v-if="showUpdated">
+            <span class="art-byline__dot"></span>
+            <span class="art-byline__meta">Updated {{ formatDate(blogData.updatedAt) }}</span>
           </template>
           <template v-if="blogData.readingStats">
             <span class="art-byline__dot"></span>
@@ -117,6 +130,16 @@ const authorInitials = computed(() =>
     .join('')
     .toUpperCase()
 )
+
+// Only surface an Updated date when it differs from the published day, so a
+// post that has never been revised does not read "Published X - Updated X".
+const showUpdated = computed(() => {
+  const u = props.blogData?.updatedAt
+  const p = props.blogData?.publishedAt
+  if (!u) return false
+  if (!p) return true
+  return new Date(u).toDateString() !== new Date(p).toDateString()
+})
 
 const formatDate = (date) => {
   const options = { year: 'numeric', month: 'long', day: 'numeric' }
@@ -347,6 +370,11 @@ watch(() => props.blogData?.body, () => {
   gap: 11px;
 }
 
+.art-avatar--img {
+  object-fit: cover;
+  display: block;
+  background: transparent;
+}
 .art-avatar {
   display: inline-flex;
   align-items: center;
