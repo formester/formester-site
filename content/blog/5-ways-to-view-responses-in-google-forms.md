@@ -127,6 +127,7 @@ publishedAt: "2026-05-15T03:47:28.261Z"
 <li>Search, star and spam-mark individual submissions, plus <a href="https://formester.com/features/export-form-submission-pdf/">a PDF of any single response</a></li>
 <li>Partial submissions captured, so an abandoned form is still data</li>
 </ul>
+<p><img src="/blog/formester-ui/summary-analytics.jpg" alt="Formester's Summary tab showing per-question response breakdowns with percentage bars, plus Download all and Filters controls" loading="lazy" style="width:100%;max-width:848px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
 <p><a class="btn" href="https://app.formester.com/users/sign_up">Try Formester free</a></p>
 </div>
 
