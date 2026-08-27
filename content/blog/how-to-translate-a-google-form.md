@@ -49,6 +49,7 @@ publishedAt: "2026-08-26T00:00:00.000Z"
 <h2 id="add-on">2. Use a Marketplace add-on</h2>
 
 <p>One click rewrites the whole form into another language.</p>
+<p><img src="/blog/google-forms-translate/01-get-add-ons.jpg" alt="The Google Forms editor three-dot menu with Get add-ons, the route to installing a translation add-on" loading="lazy" style="width:100%;max-width:292px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
 <ol>
 <li>In the form editor, open the three-dot menu and choose <strong>Get add-ons</strong>.</li>
 <li>Search for <strong>Forms Translator</strong> and install it.</li>
@@ -59,6 +60,7 @@ publishedAt: "2026-08-26T00:00:00.000Z"
 <h2 id="duplicate">3. Duplicate the form per language</h2>
 
 <p>A separate, fully controlled form for each language.</p>
+<p><img src="/blog/google-forms-translate/02-make-a-copy.jpg" alt="The Google Forms editor three-dot menu with Make a copy at the top, the route to duplicating a form per language" loading="lazy" style="width:100%;max-width:292px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
 <ol>
 <li>Open the form, use the three-dot menu and choose <strong>Make a copy</strong>.</li>
 <li>Translate every question, option and description by hand, or paste in translations you already have.</li>
