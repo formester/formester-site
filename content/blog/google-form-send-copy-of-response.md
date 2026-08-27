@@ -20,7 +20,7 @@ publishedAt: "2026-08-27T00:00:00.000Z"
 
 ![Cover art for a guide to sending a copy of Google Form responses](/blog/google-form-send-copy-of-response.jpg)
 
-<p style="font-size: inherit;">A response copy in Google Forms is an automatic email of a person's own answers, sent at the moment they submit. It exists for anyone who needs a record of what they filled in: an applicant, a customer placing an order, a student handing in an exit ticket. Three unrelated jobs share this one search, which is why half the results for it are forum threads rather than answers.</p>
+<p style="font-size: inherit;">A response copy in Google Forms is an automatic email of a person's own answers, sent at the moment they submit. It exists for anyone who needs a record of what they filled in, from a job applicant to someone placing an order. Three unrelated jobs share this one search, which is why half the results for it are forum threads rather than answers.</p>
 
 <div class="tldr">
 <p><strong>Key facts</strong></p>
@@ -50,7 +50,7 @@ publishedAt: "2026-08-27T00:00:00.000Z"
 
 <h2 id="own-copy">How do you get a copy of your own Google Form answers after submitting?</h2>
 
-<p>Check your email for a receipt, and if none arrived there is no way to retrieve your answers yourself. This is the most common version of the search and the one with the least satisfying answer: whether you can get your answers back was decided by the form owner before you hit submit.</p>
+<p>Check your email for a receipt. If none arrived, you cannot retrieve your answers yourself. This is the most common version of the search and the one with the least satisfying answer, because whether you can get your answers back was decided by the form owner before you ever hit submit.</p>
 <p><img src="/blog/google-forms-sendcopy/01-send-a-copy-greyed.jpg" alt="The Send responders a copy of their response setting greyed out and off, which is why no receipt arrives" loading="lazy" style="width:100%;max-width:692px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
 <ul>
 <li><strong>Search your inbox by the form's title.</strong> If the owner enabled receipts, Google emailed your answers at submission time. Searching for the form's name works better than searching for the word Google.</li>
@@ -71,35 +71,32 @@ publishedAt: "2026-08-27T00:00:00.000Z"
 <li>Set <strong>Send responders a copy of their response</strong> to <a href="https://support.google.com/docs/answer/139706" target="_blank" rel="noopener"><strong>Always</strong> or <strong>When requested</strong></a>, depending on whether you want every person to get one or each person to opt in with a tickbox.</li>
 </ol>
 <p><strong>Where it stops.</strong> The copy is a plain-text email of the answers, not a document. There is no template, no branding and no attachment. Google also notes in the same documentation that responders may not receive an expected receipt because of spam filters or other counter-abuse measures, which is worth knowing before you rely on it as a confirmation. Owners hit this often enough that <a href="https://support.google.com/docs/thread/253116380/google-forms-send-responders-a-copy-of-their-response-not-working" target="_blank" rel="noopener">"Send responders a copy of their response not working"</a> is its own thread in the Docs Editors Community.</p>
-<p>Google Forms will send a receipt and will not guarantee it arrives.</p>
 
 <h2 id="greyed-out">Why is "Send responders a copy" greyed out?</h2>
 
-<p>Because <strong>Collect email addresses</strong> is off. Google has no address to send anything to until that is enabled, so the control stays disabled rather than telling you why. Set email collection to a collecting option and the receipt dropdown becomes selectable immediately, no reload needed.</p>
+<p>Because <strong>Collect email addresses</strong> is off. That is the whole answer. Google has no address to send anything to until you enable it, so the control sits there greyed out without telling you why, and you can switch email collection on and watch the receipt dropdown become selectable straight away, no reload needed.</p>
 <p>This trips people up because the two settings sit in the same panel with no visible link between them, so the greyed-out control reads like a paid feature or a bug. It is neither. It is a dependency with no error message attached.</p>
 
 <h2 id="retroactive">Can you send copies for responses already submitted?</h2>
 
 <p>No. The setting applies only to submissions made after you switch it on, and Google Forms offers no way to resend or backfill. If you turn receipts on halfway through a hiring round, the first forty applicants get nothing and the last ten get a confirmation.</p>
 <p>The only route for the earlier responses is manual: open the linked Sheet, filter to the rows that predate the change, and email those people their answers yourself. On a small list that is twenty minutes. On a large one it is the reason people move the form.</p>
-<p>Response receipts in Google Forms are not retroactive, so the setting has to be right before the form goes out rather than after.</p>
 
 <h2 id="copy-form">How do you duplicate a Google Form without losing the responses?</h2>
 
 <p>You cannot, in one step. Open the form, use the three-dot menu and choose <strong>Make a copy</strong>, and you get a fresh form with the same questions and settings and an empty response set.</p>
 <p><img src="/blog/google-forms-translate/02-make-a-copy.jpg" alt="The Google Forms editor three-dot menu with Make a copy at the top" loading="lazy" style="width:100%;max-width:292px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
 <p><strong>What does not come with it.</strong> The responses. A copied form gets its own response sheet and starts from zero. That is usually what you want for a new term or a new cycle, and a nasty surprise if you assumed the data travelled. To keep the history, move it separately: download the CSV from the <strong>Responses</strong> tab, or make a copy of the linked Google Sheet before you touch the form.</p>
-<p>Make a copy in Google Forms duplicates the questions and settings and carries no responses with it.</p>
 
 <h2 id="why-plain">Why does the Google Forms confirmation email look so plain?</h2>
 
 <p>Because it is a rendering of the answers rather than a document you control. Google generates it from the submission, and nothing about it is configurable.</p>
 <ul>
-<li><strong>No branding.</strong> No logo, no colours, and no sender name of your choosing.</li>
+<li><strong>No branding.</strong> No logo, no colours, no sender name of your choosing.</li>
 <li><strong>No attachment.</strong> Nothing the recipient can file, forward as a record, or sign.</li>
 <li><strong>No custom wording.</strong> You cannot add a thank-you note, next steps or a link.</li>
 </ul>
-<p>For a class exit ticket that is fine. For an order, a booking or a consent form, a plain list of answers in an email body is not a receipt anyone would keep, and it is the point at which most people go looking for a form builder that generates a document instead.</p>
+<p>For a class exit ticket that is fine. For an order or a signed consent form, a plain list of answers in an email body is not a receipt anyone would keep, and it is usually the point at which people go looking for a builder that generates a document instead.</p>
 
 <div class="better">
 <h5>Why Formester's response copies are the better choice</h5>

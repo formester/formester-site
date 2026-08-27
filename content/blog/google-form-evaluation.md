@@ -20,11 +20,11 @@ publishedAt: "2026-08-27T00:00:00.000Z"
 
 ![Cover art for a guide to building evaluation forms in Google Forms](/blog/google-form-evaluation.jpg)
 
-<p style="font-size: inherit;">An evaluation form in Google Forms is a rating sheet: a set of criteria, a scale to score each one against, and a box for the comment people actually read afterwards. It suits managers running a review cycle, instructors collecting course feedback, and coaches scoring observable skills. It stops suiting you the moment the evaluation needs a total, because Google Forms has no field that calculates one.</p>
+<p style="font-size: inherit;">An evaluation form in Google Forms is a rating sheet: a set of criteria, a scale to score each one against, and a box for the comment people actually read afterwards. It suits a manager running a review cycle, or an instructor collecting course feedback at the end of term. Coaches use it too, for scoring things they can watch happen. Where it stops suiting you is the moment the evaluation needs a total, because Google Forms has no field that works one out.</p>
 
 <div class="tldr">
 <p><strong>Key facts</strong></p>
-<p>Google Forms collects an evaluation well and cannot score one. Build the criteria as a Multiple choice grid, add a Linear scale for the overall rating and a Paragraph field for comments, then calculate any weighted total in the linked Google Sheet. Anonymity and one-response-per-person cannot both hold.</p>
+<p>Google Forms will collect an evaluation. It will not score one. Build the criteria as a Multiple choice grid, add a Linear scale for the overall rating and a Paragraph field for comments, then work out any weighted total in the linked Google Sheet. On anonymity you get one or the other: an anonymous form, or one response per person.</p>
 <ul>
 <li><strong>4 question types built for rating:</strong> Linear scale, Rating, Multiple choice grid and Checkbox grid (<a href="https://support.google.com/docs/answer/7322334" target="_blank" rel="noopener">Google Docs Editors Help</a>)</li>
 <li><strong>Linear scale range:</strong> starts at zero or one, ends on any whole number from 2 to 10 (<a href="https://support.google.com/docs/answer/7322334" target="_blank" rel="noopener">Google Docs Editors Help</a>)</li>
@@ -50,25 +50,23 @@ publishedAt: "2026-08-27T00:00:00.000Z"
 
 <h2 id="performance">How do you build a performance or employee review in Google Forms?</h2>
 
-<p>One form per review cycle, one response per manager, and the criteria fixed before it goes out. Put the criteria in a single grid so every manager rates against the same labels, and keep the form to one screen so it gets finished in the meeting rather than after it.</p>
-<p>The problem shows up when you read the results. Every criterion carries equal weight, so a missed deadline scores the same as an untidy desk. If your review framework says accuracy matters three times as much as tidiness, that ratio has nowhere to live inside the form. You either accept a flat average or you rebuild the maths in a spreadsheet, which is the route almost everyone ends up taking.</p>
-<p>A Google Forms performance review is a data-entry screen for a spreadsheet, not a review system.</p>
+<p>One form per review cycle, one response per manager. Fix the criteria before it goes out. Put them in a single grid so every manager rates against the same labels, and keep the whole thing to one screen so it gets finished in the meeting rather than after it.</p>
+<p>The problem shows up when you read the results. Every criterion carries equal weight, so a missed deadline scores the same as an untidy desk. And if your review framework already says that accuracy matters three times as much as tidiness, you will find there is nowhere inside the form for that ratio to live, which leaves you accepting a flat average you do not believe in or rebuilding the arithmetic in a spreadsheet. Almost everyone rebuilds it.</p>
+<p>Which is why most teams end up doing the arithmetic in the Sheet and pasting the number back into their HR system by hand.</p>
 
 <h2 id="course">How do you run a course or instructor evaluation in Google Forms?</h2>
 
 <p>One form shared with the whole cohort, answered anonymously, read as an aggregate. This is the use case Google Forms is genuinely good at: the <strong>Summary</strong> tab charts each question on its own, which is exactly how you want to read forty students rating the same six statements.</p>
-<p>The catch is response integrity. Leave the form open and one student can submit five times, which skews a cohort of forty badly. Close it with <strong>Limit to 1 response</strong> and every student has to sign in to a Google Account first, which nobody reads as anonymous. Instructors have been asking Google for a way out of this since at least 2020, in threads like <a href="https://support.google.com/docs/thread/57816064/limit-a-google-form-to-one-answer-with-the-same-e-mail-without-their-needing-to-login-with-google" target="_blank" rel="noopener">this one in the Docs Editors Community</a>, and the answer has not changed.</p>
-<p>Google Forms will give you an anonymous course evaluation or a duplicate-proof one, never both.</p>
+<p>The catch is response integrity. Leave the form open and one student can submit five times, which skews a cohort of forty badly. Lock it down with <strong>Limit to 1 response</strong> and you have just asked every student to sign in to a Google Account first, which nobody reads as anonymous. Instructors have been asking Google for a way out of this since at least 2020, in threads like <a href="https://support.google.com/docs/thread/57816064/limit-a-google-form-to-one-answer-with-the-same-e-mail-without-their-needing-to-login-with-google" target="_blank" rel="noopener">this one in the Docs Editors Community</a>, and the answer has not changed.</p>
+<p>Most departments pick anonymity and live with the occasional duplicate. That is the right call at forty students and the wrong one at four hundred.</p>
 
 <h2 id="skills">How do you score a skills or athlete assessment in Google Forms?</h2>
 
-<p>One form, one response per person assessed, filled in by a coach or assessor watching the thing happen. Grids work well here because the criteria are observable and the scale is short, and a phone fills a grid faster than it fills eight separate questions.</p>
+<p>You are filling this one in while the thing happens, usually on a phone, usually standing up. Grids suit that. The criteria are observable and the scale is short, and a phone taps through a grid far faster than it works through eight separate questions stacked down the screen.</p>
 <p>What breaks is the score. An assessment usually ends with a number that decides something: a placement, a squad, a pass mark. Google Forms records the individual ratings and hands you nothing that adds them up, so the assessor finishes the form and then opens a spreadsheet to find out what the result was. On a tryout with sixty athletes that gap is the whole job.</p>
-<p>Google Forms captures a skills assessment and cannot tell you the result.</p>
-
 <h2 id="build-it">Which question types should an evaluation form use?</h2>
 
-<p>Google's question-type documentation lists twelve options. An evaluation form needs three of them, and the rest of the work is wording.</p>
+<p>Google's question-type documentation lists twelve options. You need three. The rest of the work is wording.</p>
 <p><img src="/blog/google-forms-evaluation/01-question-types.jpg" alt="The Google Forms question type dropdown showing Linear scale, Rating, Multiple choice grid and Checkbox grid" loading="lazy" style="width:100%;max-width:240px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
 <ol>
 <li><strong>Multiple choice grid</strong> for the criteria block. Rows are your criteria (communication, punctuality, accuracy and initiative). Columns are the rating labels. One grid replaces a dozen separate questions and keeps the scale consistent across all of them.</li>
@@ -79,13 +77,13 @@ publishedAt: "2026-08-27T00:00:00.000Z"
 
 <h2 id="scoring">Can Google Forms score an evaluation automatically?</h2>
 
-<p>No. There is no calculation field anywhere in Google Forms, so nothing multiplies, adds or averages across questions. This is the single fact that sends evaluation forms out of Google Forms, and it catches most people only after the responses have arrived.</p>
+<p>No. There is no calculation field anywhere in Google Forms, so nothing multiplies or averages across questions. This is the one fact that pushes evaluation forms out of Google Forms altogether, and you will usually discover it at the worst moment: the responses are in, the review meeting is tomorrow, and you are looking at forty rows with no total column anywhere in sight.</p>
 <ul>
 <li><strong>Quiz mode does not fill the gap.</strong> Turning on <strong>Make this a quiz</strong> lets you build an <a href="https://support.google.com/docs/answer/7032287" target="_blank" rel="noopener">answer key</a> and attach points to the answers you mark correct. An evaluation has no correct answer, so there is nothing for the points to attach to.</li>
 <li><strong>Weighting is manual.</strong> If accuracy matters three times as much as tidiness, that ratio lives in a spreadsheet formula, not in the form.</li>
 <li><strong>Respondents see nothing.</strong> Google Forms cannot show a computed result on the confirmation screen of a non-quiz form, so the person being evaluated learns their score only if you email it.</li>
 </ul>
-<p>Google Forms has twelve question types and zero fields that calculate.</p>
+<p>Twelve question types, none of them arithmetic.</p>
 
 <h2 id="weighting">How do you weight evaluation criteria in the linked Google Sheet?</h2>
 
@@ -101,7 +99,7 @@ publishedAt: "2026-08-27T00:00:00.000Z"
 </tbody>
 </table></div>
 <p>Two things to watch. Grid answers land as text labels, not numbers, so either label your columns 1 to 5 in the form or convert them in the Sheet before the formula will run. And new responses append below your formula rather than inheriting it, so wrap it in <code>ARRAYFORMULA</code> or the totals stop appearing after row two.</p>
-<p>The weighting in a Google Forms evaluation lives in the Sheet, which means it is only ever as current as the last person who dragged the formula down.</p>
+<p>Worth being clear-eyed about what this means: whoever owns the Sheet now owns the scoring rubric. Fine until they leave.</p>
 
 <h2 id="anonymity">Can a course evaluation be anonymous and still block repeat submissions?</h2>
 
@@ -114,14 +112,13 @@ publishedAt: "2026-08-27T00:00:00.000Z"
 
 <p>One, and only for the education use case. The native gallery ships <strong>Course Evaluation</strong> under Education, which gives you a rating grid and a comment box to edit down. There is no employee performance review template and no skills assessment template, so those start from a blank form or a copy of last cycle's.</p>
 <p>Copying last cycle's is the faster route and carries a trap: <strong>Make a copy</strong> duplicates the questions and settings and leaves the responses behind, which is what you want for a new cycle and a shock if you assumed the history travelled with it.</p>
-<p>Google Forms ships one evaluation template out of the seventeen in its gallery, and it is aimed at courses rather than people.</p>
+<p>One template out of the seventeen in the gallery, and it is pointed at courses rather than people.</p>
 
 <h2 id="reading-results">How do you read evaluation results in Google Forms?</h2>
 
-<p>The <strong>Summary</strong> tab charts each question on its own. That is genuinely useful for a cohort-wide course evaluation and close to useless for a per-person review, because there is no way to filter the summary down to one evaluatee.</p>
+<p>The <strong>Summary</strong> tab charts each question on its own. If you are reading a whole cohort that is exactly what you want. If you are reading one person, it is close to useless, because you cannot filter the summary down to a single evaluatee.</p>
 <p><img src="/blog/google-forms-evaluation/03-summary-tab.jpg" alt="The Google Forms Summary tab charting one question at a time, with no way to filter to a single evaluatee" loading="lazy" style="width:100%;max-width:791px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
 <p>For anything per-person, work in the linked Sheet. Filter by the name column and keep the weighted total from the formula above beside it. The <strong>Individual</strong> tab will show you one submission at a time, which helps when you want to read a single manager's comments and not when you want to compare six of them.</p>
-<p>Google Forms can chart an evaluation question by question and cannot show you one person's evaluation as a whole.</p>
 
 <div class="better">
 <h5>Why Formester's evaluation forms are the better choice</h5>
