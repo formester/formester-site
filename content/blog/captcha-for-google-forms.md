@@ -37,6 +37,8 @@ publishedAt: "2026-08-29T00:00:00.000Z"
 <h2>Can you add CAPTCHA to Google Forms?</h2>
 
 <p>No, and it helps to know why, because the reason rules out most of the suggestions you will find. reCAPTCHA works by putting a script and a site key into the HTML of the page holding the form, then verifying the token server-side. Google Forms gives you no access to either. Even embedding the form on your own site does not help, because what you embed is an iframe served by Google, and your page's scripts cannot reach inside it.</p>
+<p><img src="/blog/google-forms-captcha/01-question-types.jpg" alt="The Google Forms question type list showing all twelve options, none of which is a CAPTCHA field" loading="lazy" style="width:100%;max-width:248px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
+<p>The question type list is the quickest way to see it for yourself. Twelve options, and nothing that challenges a bot.</p>
 <p>So the question people are actually asking, once you strip out the impossible answer, is how to stop bots submitting a Google Form. That has real answers, they are just not CAPTCHA.</p>
 
 <div class="table-wrap">
@@ -54,6 +56,7 @@ publishedAt: "2026-08-29T00:00:00.000Z"
 
 <p>Make people sign in. It is the only setting in Google Forms that meaningfully stops automated submissions, and it works because a script now needs a Google account rather than just the form URL.</p>
 <p>You get there two ways. Restrict the form to users in your organisation, or turn on <strong>Limit to 1 response</strong>, which requires sign-in as a side effect. Google's documentation is direct about the consequence: to fill out the form, users must sign in to their Google Account.</p>
+<p><img src="/blog/google-forms-evaluation/02-limit-1-response.jpg" alt="The Google Forms Limit to 1 response setting sitting under a REQUIRES SIGN IN label" loading="lazy" style="width:100%;max-width:692px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
 <p>That is a real trade, not a free win. Anyone without a Google account is now locked out, and a form that demands a login before it will take feedback gets less feedback. For an internal form it costs nothing. For a public campaign form it can cost you most of your responses, which is usually worse than the spam.</p>
 
 <h2 id="regex">Does the response validation trick work as a CAPTCHA?</h2>
