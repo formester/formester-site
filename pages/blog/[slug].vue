@@ -124,9 +124,11 @@ const blogPostViewData = computed(() => {
     body: blogData.value.body,
     author: blogData.value.author,
     authorProfile: blogData.value.authorProfile,
+    authorImage: blogData.value.authorImage,
     coverImgUrl: null,
     coverImgAlt: blogData.value.coverImgAlt,
     publishedAt: blogData.value.publishedAt,
+    updatedAt: blogData.value.updatedAt,
     readingStats: blogData.value.readingStats,
   }
 })
@@ -266,9 +268,28 @@ const jsonldData = computed(() => {
     },
   ]
 
+  // Front-matter `jsonld` is the authority when a post supplies one. Migrating off
+  // Strapi renamed this field (`schema` -> `jsonld`), so the loop below used to
+  // iterate a field that no longer exists and every post's schema went unrendered.
+  // A post that ships its own graph already contains its article entity, so the
+  // generated BlogPosting above is dropped rather than emitted twice.
+  const authored = []
+  for (const entry of blogData.value?.jsonld ?? []) {
+    try {
+      const parsed = typeof entry === 'string' ? JSON.parse(entry) : entry
+      if (!parsed || typeof parsed !== 'object') continue
+      authored.push(
+        typeof parsed['@context'] === 'string' ? parsed : { '@context': 'https://schema.org', ...parsed }
+      )
+    } catch (error) {
+      console.error('Error parsing jsonld for', blogData.value?.slug, error)
+    }
+  }
+  if (authored.length > 0) return authored
+
+  // Legacy Strapi shape, kept so any record still carrying `schema` keeps working.
   blogData.value?.schema?.forEach((s) => {
     try {
-      // Strapi json field: already an object, unless an editor pasted a JSON string
       const parsed = typeof s.type === 'string' ? JSON.parse(s.type) : s.type
       if (!parsed || typeof parsed !== 'object') return
       jsonData.push(typeof parsed['@context'] === 'string' ? parsed : { '@context': 'https://schema.org', ...parsed })

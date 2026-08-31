@@ -1,532 +1,132 @@
 ---
 slug: "how-to-add-conditional-questions-in-google-forms"
-title: "How to Add Conditional Questions in Google Forms in 6 Steps"
-description: "Add conditional (branching, skip-logic) questions in Google Forms in 6 steps with screenshots and a video walkthrough. Plus when Formester's per-question conditional logic beats Google's section-based branching."
-metaTitle: "How to Add Conditional Questions in Google Forms (Step-by-Step Guide)"
-metaDescription: "Add conditional (branching, skip-logic) questions in Google Forms in 6 steps with screenshots and a video walkthrough. Plus when Formester's per-question conditional logic beats Google's section-based branching."
-keywords: "conditional questions,\nconditional logic,\nhow to add conditional questions in google forms,\nhow to make google forms,\n"
-author: "Harish Kumar"
-authorProfile: "https://www.linkedin.com/in/harish-kumar2424/"
-coverImgAlt: "a blog post cover about how to add conditional questions in google forms"
+title: "How to Add Conditional Questions in Google Forms"
+description: "Google Forms routes on sections, not on individual questions, and only Multiple choice and Dropdown can branch. Here is how to set it up, and where the model runs out."
+metaTitle: "Conditional Questions in Google Forms: Full Guide"
+metaDescription: "Add conditional logic to Google Forms with sections and Go to section based on answer. See the two question types that can branch and the limits."
+keywords: "google form conditional questions,google forms conditional logic,conditional logic in google forms,google form questions based on answers,google forms skip logic,google forms branching,google forms dependent questions,google forms if yes then"
+author: "Harsh Shah"
+authorProfile: "https://www.linkedin.com/in/harshshahseo/"
+authorImage: "https://formester-strapi.s3.ap-south-1.amazonaws.com/41fc6df7f8a7952a_harsh-shah.jpg"
+coverImgAlt: "Cover art for a guide to conditional questions in Google Forms"
 featured: false
-coverImg: {"url":"https://formester-strapi.s3.ap-south-1.amazonaws.com/How_to_Make_User_Research_Survey_7_d018d9bf1a.png","width":1214,"height":630}
+coverImg: {"url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/a513d622d207233c_how-to-add-conditional-questions-in-google-forms.jpg", "width": 2400, "height": 1350}
 metaImage: []
-jsonld: []
-createdAt: "2025-05-26T02:49:30.026Z"
-updatedAt: "2026-05-15T04:13:56.867Z"
+jsonld: [{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://formester.com/#organization","url":"https://formester.com/","name":"Formester","logo":{"@type":"ImageObject","url":"https://formester.com/logo.png"}},{"@type":"WebPage","@id":"https://formester.com/blog/how-to-add-conditional-questions-in-google-forms/#webpage","url":"https://formester.com/blog/how-to-add-conditional-questions-in-google-forms/","name":"Conditional Questions in Google Forms: Full Guide","isPartOf":{"@id":"https://formester.com/#organization"},"breadcrumb":{"@id":"https://formester.com/blog/how-to-add-conditional-questions-in-google-forms/#breadcrumb"},"inLanguage":"en-US","description":"Google Forms routes on sections, not on individual questions, and only Multiple choice and Dropdown can branch. Here is how to set it up, and where the model runs out.","datePublished":"2026-05-15","dateModified":"2026-08-30"},{"@type":"BreadcrumbList","@id":"https://formester.com/blog/how-to-add-conditional-questions-in-google-forms/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://formester.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://formester.com/blog/"},{"@type":"ListItem","position":3,"name":"How to Add Conditional Questions in Google Forms","item":"https://formester.com/blog/how-to-add-conditional-questions-in-google-forms/"}]},{"@type":"BlogPosting","@id":"https://formester.com/blog/how-to-add-conditional-questions-in-google-forms/#article","headline":"How to Add Conditional Questions in Google Forms","image":"https://formester-strapi.s3.ap-south-1.amazonaws.com/a513d622d207233c_how-to-add-conditional-questions-in-google-forms.jpg","author":{"@type":"Person","name":"Harsh Shah","url":"https://www.linkedin.com/in/harshshahseo/","image":"https://formester-strapi.s3.ap-south-1.amazonaws.com/41fc6df7f8a7952a_harsh-shah.jpg"},"publisher":{"@id":"https://formester.com/#organization"},"inLanguage":"en-US","description":"Google Forms routes on sections, not on individual questions, and only Multiple choice and Dropdown can branch. Here is how to set it up, and where the model runs out.","datePublished":"2026-05-15","dateModified":"2026-08-30","mainEntityOfPage":{"@id":"https://formester.com/blog/how-to-add-conditional-questions-in-google-forms/#webpage"},"about":[{"@type":"SoftwareApplication","name":"Google Forms","applicationCategory":"BusinessApplication","url":"https://docs.google.com/forms/","operatingSystem":"Web"}],"mentions":[{"@id":"https://formester.com/#software"}],"citation":[{"@type":"WebPage","name":"Show questions based on answers","url":"https://support.google.com/docs/answer/141062","publisher":{"@type":"Organization","name":"Google"}},{"@type":"WebPage","name":"Choose a type of question for your form","url":"https://support.google.com/docs/answer/7322334","publisher":{"@type":"Organization","name":"Google"}}]},{"@type":"FAQPage","@id":"https://formester.com/blog/how-to-add-conditional-questions-in-google-forms/#faq","mainEntity":[{"@type":"Question","name":"How do I add conditional questions in Google Forms?","acceptedAnswer":{"@type":"Answer","text":"Split the form into sections, then open the three-dot menu on a Multiple choice or Dropdown question and choose Go to section based on answer. Each answer option gets its own destination, so picking an option sends the respondent to the section you point it at."}},{"@type":"Question","name":"Does Google Forms have conditional logic?","acceptedAnswer":{"@type":"Answer","text":"It has section-based branching rather than per-question logic. An answer can send someone to a different section, but no question can be shown or hidden on its own inside a section. Everything in a section is displayed together."}},{"@type":"Question","name":"Which question types support Go to section based on answer?","acceptedAnswer":{"@type":"Answer","text":"Two. Google's documentation states that Go to section based on answer is only available for Multiple choice and Dropdown question types. Checkboxes, Short answer, Linear scale and every grid type cannot branch."}},{"@type":"Question","name":"What is the difference between skip logic and conditional logic?","acceptedAnswer":{"@type":"Answer","text":"Skip logic sends a respondent past questions they do not need, which is what Google Forms does at the section level. Conditional logic usually means showing or hiding individual fields as someone answers, which Google Forms does not do."}},{"@type":"Question","name":"Can Google Forms show a question based on a checkbox answer?","acceptedAnswer":{"@type":"Answer","text":"No. Checkboxes allow several selections at once, so a single destination cannot be resolved from the answer, and Google does not offer branching on that type. Rework the question as Multiple choice if the branch matters more than multiple selection."}},{"@type":"Question","name":"How do I make a Google Form end early based on an answer?","acceptedAnswer":{"@type":"Answer","text":"In the same Go to section based on answer dropdown, set the option's destination to Submit form. Anyone choosing that answer skips the remaining sections and goes straight to submission."}},{"@type":"Question","name":"Why is Go to section based on answer missing from my question?","acceptedAnswer":{"@type":"Answer","text":"Either the question is not a Multiple choice or Dropdown, or the form has only one section. Add a second section first, because there is nowhere to branch to until at least one other section exists."}},{"@type":"Question","name":"Can respondents go backwards through a branched Google Form?","acceptedAnswer":{"@type":"Answer","text":"Yes, using the Back button. That is worth knowing before you rely on branching for anything sensitive, because someone can change an earlier answer and take a different route through the form."}}]},{"@type":"HowTo","@id":"https://formester.com/blog/how-to-add-conditional-questions-in-google-forms/#howto","name":"Add conditional questions in Google Forms","description":"Use sections plus Go to section based on answer to route respondents down different paths.","step":[{"@type":"HowToStep","position":1,"name":"Plan the branches","text":"Decide which answer should lead where before touching the form, because rebuilding section order later is tedious."},{"@type":"HowToStep","position":2,"name":"Add a section for each path","text":"Use Add section in the right toolbar so every branch has somewhere to land."},{"@type":"HowToStep","position":3,"name":"Add a Multiple choice or Dropdown question","text":"Only these two types can branch, so the deciding question has to be one of them."},{"@type":"HowToStep","position":4,"name":"Open Go to section based on answer","text":"Click the three-dot menu on that question and choose Go to section based on answer."},{"@type":"HowToStep","position":5,"name":"Point each option at a section","text":"Every answer option gets its own dropdown. Choose a section, or choose Submit form to end the form there."},{"@type":"HowToStep","position":6,"name":"Set what happens after each section","text":"Use the After section dropdown so a branch does not fall through into a section meant for someone else."},{"@type":"HowToStep","position":7,"name":"Preview every path","text":"Open the preview and walk each branch end to end, because a wrong destination is invisible in the editor."}]},{"@type":"SoftwareApplication","@id":"https://formester.com/#software","url":"https://formester.com/","name":"Formester","applicationCategory":"BusinessApplication","operatingSystem":"Web, iOS, Android","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Free forever plan, no credit card required"}}]}]
+createdAt: "2026-05-15T04:13:56.863Z"
+updatedAt: "2026-08-30T00:00:00.000Z"
 publishedAt: "2026-05-15T04:13:56.863Z"
 ---
-![a blog post cover about how to add conditional questions in google forms](https://formester-strapi.s3.ap-south-1.amazonaws.com/How_to_Make_User_Research_Survey_7_d018d9bf1a.png)
 
-Conditional questions show or skip parts of a form based on prior answers. 
+![Cover art for a guide to conditional questions in Google Forms](https://formester-strapi.s3.ap-south-1.amazonaws.com/a513d622d207233c_how-to-add-conditional-questions-in-google-forms.jpg)
 
-In Google Forms, this works via **section-based branching**: you split your form into sections, then route respondents to different sections based on a multiple-choice answer. It's functional but clunky that you can't branch per-question, you can't have multi-branch trees, and the rule editor is hidden three menus deep.
+<p style="font-size: inherit;">A conditional question is one that only appears when an earlier answer makes it relevant, which is how a single form can serve a new customer and a returning one without showing either of them the other's questions. Google Forms supports a version of this, though not the version most people picture when they go looking for it. The routing happens between sections rather than between individual questions, and only two of the twelve question types can trigger it.</p>
 
-This guide shows the 6-step Google Forms setup with screenshots and a video, names the limits you'll hit, and shows where [Formester's per-question conditional logic](/features/conditional-logic/) takes over with a visual rule builder and multi-branch support.
+<div class="tldr">
+<p><strong>Key facts</strong></p>
+<p>Split the form into sections, then open the three-dot menu on a Multiple choice or Dropdown question and pick <strong>Go to section based on answer</strong>. Each answer option gets its own destination, so choosing an option sends that respondent to the section you point it at, or straight to submission.</p>
+<ul>
+<li><strong>Question types that can branch: 2.</strong> Multiple choice and Dropdown, and Google says so explicitly (<a href="https://support.google.com/docs/answer/141062" target="_blank" rel="noopener">Google Docs Editors Help</a>)</li>
+<li><strong>The unit of logic is the section</strong>, not the question, so nothing hides or appears inside a section</li>
+<li><strong>4 destinations per answer:</strong> continue to the next section, jump to any section, go back to an earlier one, or <strong>Submit form</strong></li>
+<li><strong>Question types that cannot branch: 10</strong>, including Checkboxes, Short answer, Linear scale and every grid (<a href="https://support.google.com/docs/answer/7322334" target="_blank" rel="noopener">Google Docs Editors Help</a>)</li>
+<li><strong>Respondents can go back</strong> and change an earlier answer, which re-routes them down a different path</li>
+</ul>
+</div>
 
-<style>
-    /* host-link-override */
-    .fmstr-cmp-gfcq-vid a {
-        text-decoration: none !important;
-    }
+<h2 id="what">What are conditional questions in Google Forms?</h2>
 
-    .fmstr-cmp-gfcq-vid {
-        --c-bg-card: #ffffff;
-        --c-bg-tint: #f7f3ff;
-        --c-bg-edge: #e4d7ff;
-        --c-fg-1: #101828;
-        --c-fg-2: #475467;
-        --c-fg-3: #697586;
-        --c-violet-500: #7f56d9;
-        --c-violet-600: #6941c6;
-        --c-border: #eaecf0;
-        --c-shadow: 0 4px 20px rgba(16, 24, 40, .06), 0 2px 6px rgba(16, 24, 40, .04);
+<p>They are questions a respondent only reaches because of how they answered something earlier. In a support form, choosing "Billing" takes someone to billing questions while choosing "Bug report" takes them somewhere else entirely, and neither person sees the other path.</p>
+<p>Google Forms builds this out of two pieces that work together. Sections divide the form into pages, and an answer on a Multiple choice or Dropdown question decides which page comes next. That distinction matters more than it sounds, because it sets the limit you will hit later: you can route people around whole sections, but you cannot show or hide one field inside a section based on the answer above it.</p>
 
-        background: transparent;
-        padding: 56px 24px;
-        font-family: inherit;
-        color: var(--c-fg-1);
-    }
-
-    .fmstr-cmp-gfcq-vid *,
-    .fmstr-cmp-gfcq-vid *::before,
-    .fmstr-cmp-gfcq-vid *::after {
-        box-sizing: border-box;
-    }
-
-    .fmstr-cmp-gfcq-vid__container {
-        max-width: 880px;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .fmstr-cmp-gfcq-vid__eyebrow {
-        display: inline-block;
-        padding: 5px 12px;
-        border-radius: 9999px;
-        background: var(--c-bg-tint);
-        color: var(--c-violet-600);
-        font-size: 12px;
-        font-weight: 600;
-        letter-spacing: .04em;
-        text-transform: uppercase;
-        border: 1px solid var(--c-bg-edge);
-        margin: 0 0 14px;
-    }
-
-    .fmstr-cmp-gfcq-vid__h2 {
-        font-size: clamp(24px, 2.6vw, 32px);
-        font-weight: 700;
-        line-height: 1.2;
-        letter-spacing: -.02em;
-        margin: 0;
-        color: var(--c-fg-1);
-    }
-
-    .fmstr-cmp-gfcq-vid__intro {
-        color: var(--c-fg-3);
-        font-size: 16.5px;
-        line-height: 1.6;
-        max-width: 720px;
-        margin: 12px auto 24px;
-    }
-
-    .fmstr-cmp-gfcq-vid__frame {
-        position: relative;
-        width: 100%;
-        aspect-ratio: 16 / 9;
-        border-radius: 16px;
-        overflow: hidden;
-        background: #000;
-        border: 1px solid var(--c-border);
-        box-shadow: var(--c-shadow);
-    }
-
-    .fmstr-cmp-gfcq-vid__frame iframe {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-    }
-
-    .fmstr-cmp-gfcq-vid__caption {
-        margin: 14px auto 0;
-        font-size: 13.5px;
-        color: var(--c-fg-3);
-        line-height: 1.6;
-    }
-
-    .fmstr-cmp-gfcq-vid__caption a {
-        color: var(--c-violet-600) !important;
-        text-decoration: none !important;
-        font-weight: 500;
-    }
-
-    .fmstr-cmp-gfcq-vid__caption a:hover {
-        text-decoration: underline !important;
-    }
-
-    @media (max-width: 760px) {
-        .fmstr-cmp-gfcq-vid {
-            padding: 40px 16px;
-        }
-
-        .fmstr-cmp-gfcq-vid__intro {
-            font-size: 15.5px;
-        }
-
-        .fmstr-cmp-gfcq-vid__frame {
-            border-radius: 12px;
-        }
-    }
-</style>
-
-<section class="fmstr-cmp-gfcq-vid" aria-labelledby="fmstr-cmp-gfcq-vid-h2">
-    <div class="fmstr-cmp-gfcq-vid__container">
-        <span class="fmstr-cmp-gfcq-vid__eyebrow">90-second walkthrough</span>
-        <h2 class="fmstr-cmp-gfcq-vid__h2" id="fmstr-cmp-gfcq-vid-h2">Watch the full Google Forms conditional questions
-            setup</h2>
-        <p class="fmstr-cmp-gfcq-vid__intro">The video covers the 6-step section-based flow, the most common routing
-            mistake, and where per-question logic in <a href="https://formester.com/features/conditional-logic/"
-                style="color: var(--c-violet-600); text-decoration: none;">Formester</a> takes over.</p>
-        <div class="fmstr-cmp-gfcq-vid__frame">
-            <iframe src="https://www.youtube.com/embed/xUxos49HDRI?si=MzTpji8eZooiOHqq"
-                title="How to add conditional questions in Google Forms (6 steps)" loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <p class="fmstr-cmp-gfcq-vid__caption">Replace VIDEO_ID_PLACEHOLDER with the YouTube video ID once the tutorial
-            is published. Pair the embed with VideoObject schema for rich-result eligibility.</p>
-    </div>
-</section>
-
-
-## What Are Conditional Questions?
-Conditional questions, also called skip logic or branching, allow you to show or hide questions based on someone’s answer to a previous question.
-
-For example, imagine you ask, "**Do you own a pet?**"
-
-- If someone selects "**Yes**," you can show follow-up questions like "**What kind of pet do you have?**"
- 
-- If they select "**No**," you can skip those **pet-related questions** and move on to the next section.
- 
-This helps you keep your form short and personalized. It also makes the experience smoother for the person filling it out.
-
-## Section-based branching vs per-question conditional logic
-Two different mental models, both called "conditional questions":
-
-**Section-based branching (Google Forms).** You split a form into sections (each with its own H1 page break). 
-
-A multiple-choice question routes respondents to different sections based on their answer. The section after the branch question is "Go to section based on answer." Limit: you can only branch on multiple-choice or dropdown not on linear scales, ratings, text inputs, or checkboxes. 
-
-And you can only branch ONCE per question.
-
-**Per-question conditional logic ([Formester](/features/conditional-logic/), Typeform, Jotform).** 
-
-Any question can show or hide based on any prior answer, regardless of question type. Multi-branch: one question can trigger five different downstream paths. 
-
-Visual rule builder makes the logic obvious. No section juggling.
-
-If your form has 3 sections and one branching question, Google Forms is fine. Past that, the section model becomes painful and branches multiply, edits break the routing, and respondents see "Section 4 of 12" progress bars that don't reflect their actual path.
-
-## When Should You Use Conditional Logic?
-
-Use it whenever a respondent's answer changes what they need to fill out next. Common cases:
-
-- **Pricing tier survey.** "Which plan?" → show plan-specific feedback questions only to people on that plan.
-
-- **Application form.** "Are you a current student?" → show education questions only to current students; show work questions to alumni.
-- **Multi-language form.** "Preferred language?" → route to the right translated section.
-- **Bug report.** "Browser?" → route to browser-specific reproduction questions.
-- **Customer feedback.** "NPS score?" → ask detractors what went wrong; ask promoters what to keep doing.
-
-Each of these is doable in Google Forms with sections. Whether Google Forms is the right tool depends on how many branches you need and how often you'll edit the form.
-
-## How to add conditional questions in Google Forms in 6 steps
-
-### Step 1: Open Google Forms
-Go to forms.google.com and either start a new form or open an existing one.
-
-### Step 2: Add Sections 
-Google Forms uses sections to organize different paths. You need to **[create separate form sections](/blog/how-create-form-sections-in-google-forms/)** for each logic branch.
-&nbsp;
-Click the “**Add section**” button. It looks like two rectangles stacked on top of each other. You can find this option at the bottom of your questions menu.
-&nbsp;
-
-### Step 3: Add a Multiple Choice Question
-Conditional logic only works with **multiple choice or dropdown questions** in Google Forms. You cannot apply it to short answer or checkbox questions.
-
-**For example:**
- - "Do you own a pet?"
- 
- - Options: Yes or No
- 
- &nbsp;
-
-### Step 4: Set Up the Logic
-Click the three vertical dots on the bottom right of the multiple choice question. Then select “**Go to section based on answer.**”
-
-Now assign where each answer should lead.
-
-- If someone selects “Yes,” send them to Section 2, where you ask pet-related questions.
- 
-- If they select “No,” send them to Section 3 or the end of the form.
-
-&nbsp;
-
-### Step 5: Add Questions to Each Section
-Now build each section based on the logic path. You can ask follow-up questions or simply direct them to the next step.
-
-You can also choose what happens after someone completes each section. Google Forms lets you decide whether they go to another section or submit the form.
-
-&nbsp;
-
-### Step 6: Test the Form
-Click the preview button (it looks like an eye) at the top right of the screen. Test every path to make sure it works correctly. If the logic does not connect, people might get confused or stuck.
-
-**Limitations of Google Forms Logic**
-
-Google Forms is good for simple logic, but it does not offer advanced rules. You cannot create conditions using answers from text fields. 
-
-You also cannot combine rules like “**If Question A is Yes and Question B is No.**” If you try to build a complex form, things can quickly get messy and hard to manage.
-
-
-## When Formester's conditional logic beats Google Forms
-[Formester's conditional logic](/features/conditional-logic/) is per-question, not per-section. Any question can show or hide based on any prior answer, in any combination, with a visual rule builder that's actually visual.
-
-Specific cases where Formester wins:
-
-- **Multi-branch logic.** Google Forms branches once per question. Formester supports trees: one answer triggers a path that has its own branches inside it.
-
-- **Conditional logic on non-MCQ.** Google Forms can't branch on linear scales, ratings, dates, or text answers. Formester can.
-- **Visual rule editor.** Formester shows the rules as a flow diagram. Google Forms shows them as hidden dropdowns inside a three-dot menu.
-- **Cross-form logic.** Trigger a different form based on the answer here. Google Forms can't do this without Apps Script.
-- **No Google sign-in.** Respondents don't need a Google account.
-
-If your form has 2-3 branches and you're a Google Workspace shop, Google Forms is fine. If you're building anything more complex, the per-question model saves the time you'd spend juggling sections.
-
-<style>
-/* host-link-override */
-.fmstr-cmp-gfcq-cmp a { text-decoration: none !important; }
-.fmstr-cmp-gfcq-cmp {
---c-bg-section: #f4f4f7; --c-bg-card: #ffffff;
---c-bg-tint: #f7f3ff; --c-bg-edge: #e4d7ff; --c-bg-row: #fafafb;
---c-fg-1: #101828; --c-fg-2: #475467; --c-fg-3: #697586;
---c-violet-600: #6941c6;
---c-border: #eaecf0;
---c-shadow: 0 4px 20px rgba(16,24,40,.06), 0 2px 6px rgba(16,24,40,.04);
-
-background: transparent; padding: 56px 24px;
-font-family: inherit;
-color: var(--c-fg-1);
-}
-.fmstr-cmp-gfcq-cmp *, .fmstr-cmp-gfcq-cmp *::before, .fmstr-cmp-gfcq-cmp *::after { box-sizing: border-box; }
-.fmstr-cmp-gfcq-cmp__container { max-width: 1180px; margin: 0 auto; text-align: center; }
-.fmstr-cmp-gfcq-cmp__eyebrow {
-display: inline-block; padding: 5px 12px; border-radius: 9999px;
-background: var(--c-bg-tint); color: var(--c-violet-600);
-font-size: 12px; font-weight: 600; letter-spacing: .04em;
-text-transform: uppercase; border: 1px solid var(--c-bg-edge); margin: 0 0 14px;
-}
-.fmstr-cmp-gfcq-cmp__h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 700; line-height: 1.15; letter-spacing: -.02em; margin: 0; color: var(--c-fg-1); }
-.fmstr-cmp-gfcq-cmp__intro { color: var(--c-fg-3); font-size: 17px; line-height: 1.6; max-width: 820px; margin: 14px auto 28px; }
-.fmstr-cmp-gfcq-cmp__card { background: var(--c-bg-card); border: 1px solid var(--c-border); border-radius: 20px; overflow: hidden; box-shadow: var(--c-shadow); text-align: left; }
-.fmstr-cmp-gfcq-cmp__table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
-.fmstr-cmp-gfcq-cmp__table th, .fmstr-cmp-gfcq-cmp__table td { padding: 14px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--c-border); }
-.fmstr-cmp-gfcq-cmp__table thead th { background: var(--c-bg-tint); color: var(--c-violet-600); font-weight: 700; font-size: 13.5px; text-transform: uppercase; letter-spacing: .04em; }
-.fmstr-cmp-gfcq-cmp__table tbody th { font-weight: 600; color: var(--c-fg-1); background: var(--c-bg-row); width: 22%; }
-.fmstr-cmp-gfcq-cmp__table tbody td { color: var(--c-fg-2); }
-.fmstr-cmp-gfcq-cmp__table tbody tr:last-child th, .fmstr-cmp-gfcq-cmp__table tbody tr:last-child td { border-bottom: 0; }
-.fmstr-cmp-gfcq-cmp__table a { color: var(--c-violet-600) !important; text-decoration: none !important; }
-.fmstr-cmp-gfcq-cmp__table a:hover { text-decoration: underline !important; }
-.fmstr-cmp-gfcq-cmp__close { margin: 20px auto 0; font-size: 15px; color: var(--c-fg-3); line-height: 1.6; max-width: 880px; text-align: center; }
-
-@media (max-width: 760px) {
-.fmstr-cmp-gfcq-cmp { padding: 40px 16px; }
-.fmstr-cmp-gfcq-cmp__intro { font-size: 15.5px; }
-.fmstr-cmp-gfcq-cmp__close { font-size: 14.5px; }
-.fmstr-cmp-gfcq-cmp__table thead { display: none; }
-.fmstr-cmp-gfcq-cmp__table tbody th { width: 100%; display: block; background: var(--c-bg-tint); }
-.fmstr-cmp-gfcq-cmp__table tbody td { display: block; }
-.fmstr-cmp-gfcq-cmp__table tbody td::before { content: attr(data-h) ": "; font-weight: 600; color: var(--c-fg-1); }
-.fmstr-cmp-gfcq-cmp__table th, .fmstr-cmp-gfcq-cmp__table td { padding: 12px 14px; }
-}
-</style>
-
-<section class="fmstr-cmp-gfcq-cmp" aria-labelledby="fmstr-cmp-gfcq-cmp-h2">
-<div class="fmstr-cmp-gfcq-cmp__container">
-<span class="fmstr-cmp-gfcq-cmp__eyebrow">Pick the right conditional-logic tool</span>
-<h2 class="fmstr-cmp-gfcq-cmp__h2" id="fmstr-cmp-gfcq-cmp-h2">Google Forms section-based, Typeform logic jumps, or Formester per-question</h2>
-<p class="fmstr-cmp-gfcq-cmp__intro">Three tools, three logic models. The right pick depends on the count and depth of your branches, not the tool name.</p>
-<div class="fmstr-cmp-gfcq-cmp__card">
-<table class="fmstr-cmp-gfcq-cmp__table">
-<thead>
-<tr>
-<th>Dimension</th>
-<th>Google Forms</th>
-<th>Typeform</th>
-<th>Formester</th>
-</tr>
-</thead>
+<div class="table-wrap">
+<table>
+<thead><tr><th>What you want</th><th>Google Forms</th><th>Where it lands</th></tr></thead>
 <tbody>
-<tr><th>Logic model</th><td data-h="Google Forms">Section-based</td><td data-h="Typeform">Per-question (Logic Jumps)</td><td data-h="Formester"><a href="https://formester.com/features/conditional-logic/">Per-question + multi-branch</a></td></tr>
-<tr><th>Branch on any question type</th><td data-h="Google Forms">Multiple choice and dropdown only</td><td data-h="Typeform">All types</td><td data-h="Formester">All types</td></tr>
-<tr><th>Multi-branch trees</th><td data-h="Google Forms">One branch per question</td><td data-h="Typeform">Yes</td><td data-h="Formester">Yes</td></tr>
-<tr><th>Visual rule builder</th><td data-h="Google Forms">No (three-dot dropdown)</td><td data-h="Typeform">Partial (per question)</td><td data-h="Formester">Yes (flow diagram)</td></tr>
-<tr><th>Cross-form logic</th><td data-h="Google Forms">No (Apps Script required)</td><td data-h="Typeform">Limited</td><td data-h="Formester">Yes</td></tr>
-<tr><th>Respondent sign-in</th><td data-h="Google Forms">Google account if dedup is on</td><td data-h="Typeform">None</td><td data-h="Formester">None</td></tr>
+<tr><td>Send people down different paths</td><td>Yes, by section</td><td>Works well. This guide covers it</td></tr>
+<tr><td>Show one extra field when someone answers Yes</td><td>No</td><td>The field needs its own section, or it stays visible to everyone</td></tr>
+<tr><td>Branch from a Checkbox answer</td><td>No</td><td>Rework the question as Multiple choice</td></tr>
+<tr><td>End the form early for some answers</td><td>Yes</td><td>Set the option's destination to Submit form</td></tr>
 </tbody>
-</table>
+</table></div>
+
+<h2 id="how">How do you add conditional questions in Google Forms?</h2>
+
+<p>Seven steps, and the order matters because the branching option does not appear until there is somewhere to branch to.</p>
+
+<h3>1. Plan the branches before you build them</h3>
+<p>Write down which answer should lead where. This sounds like advice you can skip, and then you reorder sections halfway through and discover that every destination you already set has quietly followed the section it pointed at.</p>
+
+<h3>2. Add a section for each path</h3>
+<p>Use the bottom icon in the right-hand toolbar to add a section. Each branch needs its own landing place, and Google numbers them as you go, so a form with a fork in it starts life as Section 1 of 2.</p>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/afe21e989134305f_01-sections.jpg" alt="A Google Form split into Section 1 of 2 and Section 2 of 2, with the After section 1 routing dropdown between them" loading="lazy" style="width:100%;max-width:810px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
+
+<h3>3. Make the deciding question Multiple choice or Dropdown</h3>
+<p>This is the constraint that catches people, and it is documented rather than accidental: Go to section based on answer is only available for those two types. If your deciding question is a Checkbox list, nothing you do will make it branch, because several boxes could be ticked at once and there would be no single destination to resolve.</p>
+
+<h3>4. Open Go to section based on answer</h3>
+<p>Click the three-dot menu at the bottom right of the question card. The option sits between Description and Shuffle option order.</p>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/858d513dac7ca35a_02-go-to-section.jpg" alt="The Google Forms question menu showing Go to section based on answer between Description and Shuffle option order" loading="lazy" style="width:100%;max-width:340px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
+
+<h3>5. Point each answer at a section</h3>
+<p>Every option now has its own dropdown on the right. You can continue to the next section, jump to any section in the form, send someone back to an earlier one, or end things immediately with Submit form.</p>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/749552ecc40a1c3e_03-per-option-routing.jpg" alt="The per-option routing dropdown in Google Forms offering Continue to next section, Go to section 1, Go to section 2 and Submit form" loading="lazy" style="width:100%;max-width:294px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
+
+<h3>6. Set what happens after each section</h3>
+<p>Underneath every section is an <strong>After section</strong> dropdown, and leaving it on the default is the single most common way branched forms break. A respondent who finishes the billing section will fall straight through into the bug-report section unless you tell that section to submit or to skip ahead.</p>
+
+<h3>7. Preview every path end to end</h3>
+<p>Open the preview and walk each branch as a respondent would. A destination pointed at the wrong section looks completely normal in the editor, and the only way to catch it is to answer the question and see where you land.</p>
+
+<div class="fmstr-blog-cta">
+<p><strong>Need logic on the question rather than the section?</strong> Formester shows and hides individual fields as people answer, with no sections to maintain.</p>
+<p><a class="fmstr-blog-cta__btn" href="https://app.formester.com/users/sign_up">Try Formester free</a></p>
+<p class="fmstr-blog-cta__meta">Free forever plan &middot; No credit card &middot; Setup in 2 minutes</p>
 </div>
-<p class="fmstr-cmp-gfcq-cmp__close">A two-branch survey works in Google Forms. A multi-step product onboarding works in Typeform. A complex application form with conditional pricing fits <a href="https://formester.com/features/conditional-logic/" style="color: var(--c-violet-600) !important;">Formester</a>. Pick by the count and depth of your branches, not by the tool name.</p>
+
+<h2 id="limits">Where does Google Forms conditional logic run out?</h2>
+
+<p>Three limits account for almost every "why can't I do this" thread about branching, and none of them has a workaround inside Google Forms.</p>
+<ul>
+<li><strong>No per-question visibility.</strong> A field cannot appear when someone answers Yes above it. Every field in a section shows at once, so a single conditional field needs a section of its own, and a form with eight of them needs eight sections.</li>
+<li><strong>No logic on the answer's content.</strong> Routing reads which option was chosen, so you cannot branch on a number being over a threshold, on a date, or on text someone typed.</li>
+<li><strong>No combining conditions.</strong> There is no way to express "if they chose Enterprise and picked more than 50 seats", because each option carries exactly one destination and nothing compares two answers.</li>
+</ul>
+<p>For a support triage form or a two-audience survey, none of this gets in the way. For a quote form where the questions depend on numbers people type, the section model stops fitting quite quickly.</p>
+
+<h2 id="vs">Section branching or per-question logic: which do you need?</h2>
+
+<p>The honest test is how many conditional fields you have. One or two forks, each leading to a group of questions, is exactly what sections are for and Google Forms handles it without complaint. A dozen individually conditional fields turns into a dozen sections, and maintaining the After section dropdown on each one becomes its own job.</p>
+
+<div class="better">
+<h5>Why Formester's conditional logic is the better choice</h5>
+<p>Logic that lives on the field instead of the page.</p>
+<ul>
+<li>Show or hide <a href="https://formester.com/features/conditional-logic/">individual questions</a> as someone answers, with no sections to create or maintain</li>
+<li>Branch from any field type, including checkboxes, text and numbers, rather than only two of them</li>
+<li>Conditions can read what was actually entered, so a number over a threshold or a specific date can drive the form</li>
+<li>One page can hold the whole flow, which keeps the completion rate up on mobile</li>
+</ul>
+<p><a class="btn" href="https://app.formester.com/users/sign_up">Try Formester free</a></p>
 </div>
+
+<section class="faq">
+<h2>Google Forms conditional questions FAQ</h2>
+<details><summary>How do I add conditional questions in Google Forms?</summary><p>Split the form into sections, then open the three-dot menu on a Multiple choice or Dropdown question and choose Go to section based on answer. Each answer option gets its own destination, so picking an option sends the respondent to the section you point it at.</p></details>
+<details><summary>Does Google Forms have conditional logic?</summary><p>It has section-based branching rather than per-question logic. An answer can send someone to a different section, but no question can be shown or hidden on its own inside a section. Everything in a section is displayed together.</p></details>
+<details><summary>Which question types support Go to section based on answer?</summary><p>Two. Google's documentation states that Go to section based on answer is only available for Multiple choice and Dropdown question types. Checkboxes, Short answer, Linear scale and every grid type cannot branch.</p></details>
+<details><summary>What is the difference between skip logic and conditional logic?</summary><p>Skip logic sends a respondent past questions they do not need, which is what Google Forms does at the section level. Conditional logic usually means showing or hiding individual fields as someone answers, which Google Forms does not do.</p></details>
+<details><summary>Can Google Forms show a question based on a checkbox answer?</summary><p>No. Checkboxes allow several selections at once, so a single destination cannot be resolved from the answer, and Google does not offer branching on that type. Rework the question as Multiple choice if the branch matters more than multiple selection.</p></details>
+<details><summary>How do I make a Google Form end early based on an answer?</summary><p>In the same Go to section based on answer dropdown, set the option's destination to Submit form. Anyone choosing that answer skips the remaining sections and goes straight to submission.</p></details>
+<details><summary>Why is Go to section based on answer missing from my question?</summary><p>Either the question is not a Multiple choice or Dropdown, or the form has only one section. Add a second section first, because there is nowhere to branch to until at least one other section exists.</p></details>
+<details><summary>Can respondents go backwards through a branched Google Form?</summary><p>Yes, using the Back button. That is worth knowing before you rely on branching for anything sensitive, because someone can change an earlier answer and take a different route through the form.</p></details>
 </section>
 
-<style>
-/* host-link-override */
-.fmstr-cmp-gfcq-faq a { text-decoration: none !important; }
-.fmstr-cmp-gfcq-faq {
---c-bg: #fafafb; --c-card: #ffffff;
---c-fg-1: #101828; --c-fg-2: #475467;
---c-violet-600: #6941c6; --c-tint: #f7f3ff; --c-edge: #e4d7ff;
---c-border: #eaecf0; --c-chip-bg: #f4f4f7;
---c-shadow: 0 1px 3px rgba(16,24,40,.05);
+<h2>Related reading</h2>
 
-background: transparent; padding: 56px 24px;
-font-family: inherit;
-color: var(--c-fg-1);
-}
-.fmstr-cmp-gfcq-faq *, .fmstr-cmp-gfcq-faq *::before, .fmstr-cmp-gfcq-faq *::after { box-sizing: border-box; }
-.fmstr-cmp-gfcq-faq__container { max-width: 820px; margin: 0 auto; }
-.fmstr-cmp-gfcq-faq__h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 700; line-height: 1.15; letter-spacing: -.02em; text-align: center; margin: 0; color: var(--c-fg-1); }
-.fmstr-cmp-gfcq-faq__intro { color: #697586; text-align: center; font-size: 17px; line-height: 1.6; margin: 14px auto 28px; }
-.fmstr-cmp-gfcq-faq__list { display: flex; flex-direction: column; gap: 12px; }
-.fmstr-cmp-gfcq-faq__item {
-background: var(--c-card); border: 1px solid var(--c-border);
-border-radius: 14px; box-shadow: var(--c-shadow); overflow: hidden;
-}
-.fmstr-cmp-gfcq-faq__item > summary {
-padding: 18px 22px; cursor: pointer; font-weight: 600; font-size: 16.5px;
-color: var(--c-fg-1); display: flex; align-items: center; gap: 14px;
-list-style: none;
-}
-.fmstr-cmp-gfcq-faq__item > summary::-webkit-details-marker { display: none; }
-.fmstr-cmp-gfcq-faq__item > summary::before {
-content: ""; width: 28px; height: 28px; border-radius: 8px; flex-shrink: 0;
-background-color: var(--c-chip-bg);
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none' stroke='%2375747f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 5l4 4 4-4'/%3E%3C/svg%3E");
-background-repeat: no-repeat; background-position: center;
-transition: transform .15s ease, background-color .15s ease;
-}
-.fmstr-cmp-gfcq-faq__item[open] > summary::before { transform: rotate(180deg); background-color: var(--c-tint); }
-.fmstr-cmp-gfcq-faq__item[open] > summary { color: var(--c-violet-600); }
-.fmstr-cmp-gfcq-faq__answer { padding: 0 22px 22px 64px; color: var(--c-fg-2); font-size: 15.5px; line-height: 1.7; }
-.fmstr-cmp-gfcq-faq__answer a { color: var(--c-violet-600) !important; text-decoration: none !important; }
-.fmstr-cmp-gfcq-faq__answer a:hover { text-decoration: underline !important; }
-
-@media (max-width: 760px) {
-.fmstr-cmp-gfcq-faq { padding: 40px 16px; }
-.fmstr-cmp-gfcq-faq__intro { font-size: 15.5px; }
-.fmstr-cmp-gfcq-faq__item > summary { padding: 16px 16px; font-size: 15.5px; gap: 12px; }
-.fmstr-cmp-gfcq-faq__item > summary::before { width: 26px; height: 26px; }
-.fmstr-cmp-gfcq-faq__answer { padding: 0 16px 18px 16px; font-size: 15px; line-height: 1.65; }
-}
-</style>
-
-<section class="fmstr-cmp-gfcq-faq" aria-labelledby="fmstr-cmp-gfcq-faq-h2">
-<div class="fmstr-cmp-gfcq-faq__container">
-<h2 class="fmstr-cmp-gfcq-faq__h2" id="fmstr-cmp-gfcq-faq-h2">Google Forms conditional questions FAQ</h2>
-<p class="fmstr-cmp-gfcq-faq__intro">Answers that mirror the FAQPage JSON-LD on the live page.</p>
-<div class="fmstr-cmp-gfcq-faq__list">
-<details class="fmstr-cmp-gfcq-faq__item">
-<summary>Can Google Forms have conditional questions?</summary>
-<div class="fmstr-cmp-gfcq-faq__answer">Yes, via section-based branching. You split the form into sections and route respondents based on a multiple-choice or dropdown answer. You can&rsquo;t branch on text answers, ratings, linear scales, or checkboxes. The 6-step walkthrough above covers the full setup.</div>
-</details>
-<details class="fmstr-cmp-gfcq-faq__item">
-<summary>What&rsquo;s the difference between conditional logic, branching logic, and skip logic?</summary>
-<div class="fmstr-cmp-gfcq-faq__answer">Same concept, different names. Conditional logic is the umbrella term. Branching logic emphasises the routing tree. Skip logic emphasises the &ldquo;hide irrelevant questions&rdquo; outcome. Google Forms implements them all via section-based branching.</div>
-</details>
-<details class="fmstr-cmp-gfcq-faq__item">
-<summary>How do I make a question optional or required based on a previous answer?</summary>
-<div class="fmstr-cmp-gfcq-faq__answer">Google Forms can&rsquo;t change a question&rsquo;s required status conditionally. Workaround: put the required version of the question in one section and the optional version in another, then branch to the right section. For native conditional required fields, use <a href="https://formester.com/features/conditional-logic/">Formester&rsquo;s per-question logic</a>.</div>
-</details>
-<details class="fmstr-cmp-gfcq-faq__item">
-<summary>Can I branch on a numeric or text answer in Google Forms?</summary>
-<div class="fmstr-cmp-gfcq-faq__answer">No. Branching only works on multiple-choice and dropdown questions. Workaround: convert the answer to a multiple choice by grouping (instead of asking age as a number, ask &ldquo;Age group: 18-25 / 26-35 / 36+&rdquo;). Then branch on the group.</div>
-</details>
-<details class="fmstr-cmp-gfcq-faq__item">
-<summary>How do I add multiple branches off one question?</summary>
-<div class="fmstr-cmp-gfcq-faq__answer">Google Forms supports one branch per answer choice. Three options means three branches. If you need a single answer to trigger five downstream paths (one path conditional on another answer), you need nested sections plus multiple branching questions, which gets messy fast. Per-question tools like <a href="https://formester.com/features/conditional-logic/">Formester</a> handle this cleanly.</div>
-</details>
-<details class="fmstr-cmp-gfcq-faq__item">
-<summary>Why isn&rsquo;t my Google Forms branching working?</summary>
-<div class="fmstr-cmp-gfcq-faq__answer">Top causes, in order: (1) forgot to set &ldquo;After Section X &rarr; Submit form,&rdquo; so respondents fall into the next branch; (2) the question type isn&rsquo;t multiple choice or dropdown; (3) renamed a section after wiring up routes; (4) used &ldquo;Required&rdquo; inconsistently across branches.</div>
-</details>
-</div>
-</div>
-</section>
-
-
-### Final Thoughts
-Conditional questions make your forms smarter and more personal. Google Forms gives you a simple way to add logic, and it works well for basic use cases. But if you need something more advanced or easier to manage, consider using a tool like **Formester**.
-
-The right logic helps people finish your form faster. And that means more responses, better data, and happier users.
-
-<style>
-/* host-link-override */
-.fmstr-cmp-gfcq-rel a { text-decoration: none !important; }
-.fmstr-cmp-gfcq-rel {
---c-bg: #f4f4f7; --c-card: #ffffff;
---c-fg-1: #101828; --c-fg-2: #475467; --c-fg-3: #697586;
---c-violet-500: #7f56d9; --c-violet-600: #6941c6;
---c-tint: #f7f3ff; --c-edge: #e4d7ff; --c-border: #eaecf0;
---c-shadow: 0 4px 20px rgba(16,24,40,.06);
-
-background: transparent; padding: 56px 24px;
-font-family: inherit;
-color: var(--c-fg-1);
-}
-.fmstr-cmp-gfcq-rel *, .fmstr-cmp-gfcq-rel *::before, .fmstr-cmp-gfcq-rel *::after { box-sizing: border-box; }
-.fmstr-cmp-gfcq-rel__container { max-width: 1180px; margin: 0 auto; }
-.fmstr-cmp-gfcq-rel__h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 700; line-height: 1.15; letter-spacing: -.02em; margin: 0; text-align: center; }
-.fmstr-cmp-gfcq-rel__intro { color: var(--c-fg-3); font-size: 17px; line-height: 1.6; max-width: 780px; margin: 14px auto 28px; text-align: center; }
-.fmstr-cmp-gfcq-rel__grid {
-display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
-}
-.fmstr-cmp-gfcq-rel__card {
-background: var(--c-card); border: 1px solid var(--c-border);
-border-radius: 14px; padding: 18px 20px; display: flex; align-items: center; gap: 14px;
-text-decoration: none !important; color: inherit !important; transition: all .15s ease;
-}
-.fmstr-cmp-gfcq-rel__card:hover { border-color: var(--c-edge); box-shadow: var(--c-shadow); transform: translateY(-1px); }
-.fmstr-cmp-gfcq-rel__icon { width: 40px; height: 40px; border-radius: 10px; background: var(--c-tint); display: grid; place-items: center; flex-shrink: 0; font-size: 18px; }
-.fmstr-cmp-gfcq-rel__text { flex-grow: 1; }
-.fmstr-cmp-gfcq-rel__text h3 { font-size: 14.5px; font-weight: 600; color: var(--c-fg-1); margin: 0; }
-.fmstr-cmp-gfcq-rel__text small { font-size: 12.5px; color: var(--c-fg-3); display: block; margin-top: 2px; }
-.fmstr-cmp-gfcq-rel__arrow { color: var(--c-violet-500); font-size: 18px; }
-
-@media (max-width: 880px) { .fmstr-cmp-gfcq-rel__grid { grid-template-columns: 1fr 1fr; gap: 12px; } }
-@media (max-width: 760px) {
-.fmstr-cmp-gfcq-rel { padding: 40px 16px; }
-.fmstr-cmp-gfcq-rel__intro { font-size: 15.5px; }
-.fmstr-cmp-gfcq-rel__card { padding: 16px; gap: 12px; }
-}
-@media (max-width: 540px) { .fmstr-cmp-gfcq-rel__grid { grid-template-columns: 1fr; gap: 12px; } }
-</style>
-
-<section class="fmstr-cmp-gfcq-rel" aria-labelledby="fmstr-cmp-gfcq-rel-h2">
-<div class="fmstr-cmp-gfcq-rel__container">
-<h2 class="fmstr-cmp-gfcq-rel__h2" id="fmstr-cmp-gfcq-rel-h2">More from Formester for conditional forms</h2>
-<p class="fmstr-cmp-gfcq-rel__intro">Tools, features, and Google Forms guides that pair with this page.</p>
-<div class="fmstr-cmp-gfcq-rel__grid">
-<a class="fmstr-cmp-gfcq-rel__card" href="https://formester.com/features/conditional-logic/">
-<div class="fmstr-cmp-gfcq-rel__icon" aria-hidden="true">&#128279;</div>
-<div class="fmstr-cmp-gfcq-rel__text"><h3>Conditional Logic</h3><small>Per-question show / hide rules</small></div>
-<span class="fmstr-cmp-gfcq-rel__arrow" aria-hidden="true">&rarr;</span>
-</a>
-<a class="fmstr-cmp-gfcq-rel__card" href="https://formester.com/questionnaire-maker/">
-<div class="fmstr-cmp-gfcq-rel__icon" aria-hidden="true">&#128221;</div>
-<div class="fmstr-cmp-gfcq-rel__text"><h3>Questionnaire Maker</h3><small>Build branching surveys</small></div>
-<span class="fmstr-cmp-gfcq-rel__arrow" aria-hidden="true">&rarr;</span>
-</a>
-<a class="fmstr-cmp-gfcq-rel__card" href="https://formester.com/features/branding-kit/">
-<div class="fmstr-cmp-gfcq-rel__icon" aria-hidden="true">&#127912;</div>
-<div class="fmstr-cmp-gfcq-rel__text"><h3>Branding Kit</h3><small>Fonts, colors, logo on every form</small></div>
-<span class="fmstr-cmp-gfcq-rel__arrow" aria-hidden="true">&rarr;</span>
-</a>
-<a class="fmstr-cmp-gfcq-rel__card" href="https://formester.com/features/form-limiter/">
-<div class="fmstr-cmp-gfcq-rel__icon" aria-hidden="true">&#9203;</div>
-<div class="fmstr-cmp-gfcq-rel__text"><h3>Form Limiter</h3><small>Close forms on date or quota</small></div>
-<span class="fmstr-cmp-gfcq-rel__arrow" aria-hidden="true">&rarr;</span>
-</a>
-<a class="fmstr-cmp-gfcq-rel__card" href="https://formester.com/ai-form-generator/">
-<div class="fmstr-cmp-gfcq-rel__icon" aria-hidden="true">&#10024;</div>
-<div class="fmstr-cmp-gfcq-rel__text"><h3>AI Form Generator</h3><small>Topic to form in 30s</small></div>
-<span class="fmstr-cmp-gfcq-rel__arrow" aria-hidden="true">&rarr;</span>
-</a>
-<a class="fmstr-cmp-gfcq-rel__card" href="https://formester.com/templates/categories/survey-forms/">
-<div class="fmstr-cmp-gfcq-rel__icon" aria-hidden="true">&#128202;</div>
-<div class="fmstr-cmp-gfcq-rel__text"><h3>Survey templates</h3><small>Browse the library</small></div>
-<span class="fmstr-cmp-gfcq-rel__arrow" aria-hidden="true">&rarr;</span>
-</a>
-<a class="fmstr-cmp-gfcq-rel__card" href="https://formester.com/blog/how-to-make-a-questionnaire-in-google-forms/">
-<div class="fmstr-cmp-gfcq-rel__icon" aria-hidden="true">&#10067;</div>
-<div class="fmstr-cmp-gfcq-rel__text"><h3>Questionnaire in Google Forms</h3><small>How-to blog</small></div>
-<span class="fmstr-cmp-gfcq-rel__arrow" aria-hidden="true">&rarr;</span>
-</a>
-<a class="fmstr-cmp-gfcq-rel__card" href="https://formester.com/blog/how-to-create-signup-sheets-in-google-forms/">
-<div class="fmstr-cmp-gfcq-rel__icon" aria-hidden="true">&#128100;</div>
-<div class="fmstr-cmp-gfcq-rel__text"><h3>Signup sheets in Google Forms</h3><small>How-to blog</small></div>
-<span class="fmstr-cmp-gfcq-rel__arrow" aria-hidden="true">&rarr;</span>
-</a>
-<a class="fmstr-cmp-gfcq-rel__card" href="https://formester.com/blog/how-to-make-a-poll-on-google-forms/">
-<div class="fmstr-cmp-gfcq-rel__icon" aria-hidden="true">&#128499;</div>
-<div class="fmstr-cmp-gfcq-rel__text"><h3>Poll in Google Forms</h3><small>How-to blog</small></div>
-<span class="fmstr-cmp-gfcq-rel__arrow" aria-hidden="true">&rarr;</span>
-</a>
-</div>
-</div>
-</section>
-
-
+<ul>
+<li><a href="https://formester.com/blog/how-create-form-sections-in-google-forms/"><strong>Create sections in Google Forms</strong></a> - the building block every branch depends on.</li>
+<li><a href="https://formester.com/blog/5-ways-to-view-responses-in-google-forms/"><strong>View responses in Google Forms</strong></a> - how branched answers arrive once people start submitting.</li>
+<li><a href="https://formester.com/blog/how-to-make-multi-page-google-forms/"><strong>Multi-page Google Forms</strong></a> - splitting a long form up without adding logic.</li>
+<li><a href="https://formester.com/blog/google-form-evaluation/"><strong>Evaluation forms in Google Forms</strong></a> - where skipping criteria per role runs into the same limit.</li>
+</ul>

@@ -20,6 +20,7 @@ export const blog = z.object({
   keywords: z.string().optional(),
   author: z.string().optional(),
   authorProfile: z.string().optional(),
+  authorImage: z.string().optional(),
   coverImgAlt: z.string().optional(),
   featured: z.boolean().default(false),
   rawbody: z.string(),

@@ -10,7 +10,16 @@
         <h1 class="art-title">{{ blogData.title }}</h1>
         <div class="art-byline">
           <div v-if="blogData.author" class="art-author">
-            <span class="art-avatar" aria-hidden="true">{{ authorInitials }}</span>
+            <img
+              v-if="blogData.authorImage"
+              :src="blogData.authorImage"
+              :alt="blogData.author"
+              class="art-avatar art-avatar--img"
+              width="42"
+              height="42"
+              loading="lazy"
+            />
+            <span v-else class="art-avatar" aria-hidden="true">{{ authorInitials }}</span>
             <a
               v-if="blogData.authorProfile"
               :href="blogData.authorProfile"
@@ -23,6 +32,10 @@
           <template v-if="blogData.publishedAt">
             <span class="art-byline__dot"></span>
             <span class="art-byline__meta">{{ formatDate(blogData.publishedAt) }}</span>
+          </template>
+          <template v-if="showUpdated">
+            <span class="art-byline__dot"></span>
+            <span class="art-byline__meta">Updated {{ formatDate(blogData.updatedAt) }}</span>
           </template>
           <template v-if="blogData.readingStats">
             <span class="art-byline__dot"></span>
@@ -117,6 +130,16 @@ const authorInitials = computed(() =>
     .join('')
     .toUpperCase()
 )
+
+// Only surface an Updated date when it differs from the published day, so a
+// post that has never been revised does not read "Published X - Updated X".
+const showUpdated = computed(() => {
+  const u = props.blogData?.updatedAt
+  const p = props.blogData?.publishedAt
+  if (!u) return false
+  if (!p) return true
+  return new Date(u).toDateString() !== new Date(p).toDateString()
+})
 
 const formatDate = (date) => {
   const options = { year: 'numeric', month: 'long', day: 'numeric' }
@@ -347,6 +370,11 @@ watch(() => props.blogData?.body, () => {
   gap: 11px;
 }
 
+.art-avatar--img {
+  object-fit: cover;
+  display: block;
+  background: transparent;
+}
 .art-avatar {
   display: inline-flex;
   align-items: center;
@@ -858,7 +886,8 @@ a.art-author__name:hover {
   font-weight: var(--fw-medium);
   color: var(--fg-1);
 }
-.nuxt-content .cta a {
+.nuxt-content .cta a,
+.nuxt-content .better .btn {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -870,9 +899,62 @@ a.art-author__name:hover {
   font-weight: var(--fw-semibold);
   white-space: nowrap;
 }
-.nuxt-content .cta a:hover {
+.nuxt-content .cta a:hover,
+.nuxt-content .better .btn:hover,
+.nuxt-content .better .btn:focus {
   background: var(--violet-700);
   color: #fff;
+}
+
+/* Brand variant, for the one CTA on a page that should carry weight */
+.nuxt-content .cta--brand {
+  background: var(--violet-25);
+  border-color: var(--border-violet);
+}
+
+/* "Why Formester's X is the better choice" block: centred title and CTA,
+   left-aligned reasons in between. */
+.nuxt-content .better {
+  background: var(--violet-25);
+  border: 1px solid var(--border-violet);
+  border-radius: var(--r-xl);
+  padding: 24px 26px;
+  margin: 28px 0;
+}
+.nuxt-content .better > h5 {
+  margin: 0 0 10px;
+  text-align: center;
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  color: var(--violet-600);
+}
+.nuxt-content .better > p {
+  margin: 0 0 14px;
+}
+.nuxt-content .better ul {
+  margin: 0 0 20px;
+  padding-left: 1.25em;
+}
+.nuxt-content .better li {
+  margin: 0 0 8px;
+}
+.nuxt-content .better li:last-child {
+  margin-bottom: 0;
+}
+.nuxt-content .better > p:last-child {
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .nuxt-content .better {
+    padding: 20px 18px;
+  }
+  .nuxt-content .better .btn {
+    display: block;
+    text-align: center;
+    white-space: normal;
+  }
 }
 
 /* Auto-numbered steps */
