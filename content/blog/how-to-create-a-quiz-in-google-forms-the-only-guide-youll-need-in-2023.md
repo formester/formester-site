@@ -1,7 +1,7 @@
 ---
 slug: "how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023"
 title: "How to Create a Google Forms Quiz With Automatic Scoring"
-description: "Discover a simple guide to creating online quizzes in Google Forms for 2024. Explore popular quiz types used in diverse industries like Education, Entertainment, and Business. Get 10 tips for creating engaging educational quizzes. Whether for fun, education, or business, follow our six-step process. Explore Formester for simpler alternatives. Start quizzing now!"
+description: "Discover a simple guide to creating online quizzes in Google Forms . Explore popular quiz types used in diverse industries like Education, Entertainment, and Business. Get 10 tips for creating engaging educational quizzes. Whether for fun, education, or business, follow our six-step process. Explore Formester for simpler alternatives. Start quizzing now!"
 metaTitle: "Google Forms Quiz: How to Build One With Scoring in 6 Steps"
 metaDescription: "Build a Google Forms quiz with answer keys, points and automatic scoring in six steps. Also covers releasing grades and where Forms stops."
 keywords: "How to create an online quiz in google forms, create quiz, How do I make my Google form a quiz?, How do you create an online quiz?, How do you create a quiz question?, How do i create a google form quiz, How do i create a google form 2024 free, google form create, How do I create a Google Form step by step?, Can I design my Google Form?, google forms quiz, google quiz maker, google forms quiz, free google forms quiz, create google form quiz for friends, google quiz questions and answers, google form quiz for students, google quizzes and tests, How do I create a Google Form 2024?, How do I make my Google form a quiz?, How do I get answers to Google Forms 2024?, Can I create a timed quiz in Google Forms?, create an online quiz in google forms, google forms score, google forms calculation, google forms assessment, google forms lead scoring, formester, online quiz on formester, create online quiz on formeste, How to create a quiz in Google Forms, Formester Blog, online form advice, small business tips, quizzes, educational use for teachers and students, or even professional use at work, surveys, applications, polls, online form software help, quickest way to create a quiz, make a new quiz, create a new quiz, create a new online quiz, educational quiz, entertainment quiz, buzzfeed quiz, lead generation quiz, business quiz, aptitude quiz,  online quiz in google forms, quiz in google forms, google forms quiz, google forms "
@@ -11,9 +11,9 @@ coverImgAlt: "How to Create A Quiz in Google Forms: The Only Guide You\u2019ll N
 featured: false
 coverImg: {"url":"https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_create_a_quiz_in_google_forms_the_only_guide_you_ll_need_in_2023_6fcb97e07d.png","width":1200,"height":630}
 metaImage: [{"id":70,"imageURL":"https://formester-strapi.s3.ap-south-1.amazonaws.com/use_as_needed_14_a55fce3a64.png"},{"id":71,"imageURL":"https://formester-strapi.s3.ap-south-1.amazonaws.com/light_blue_doodle_illustration_company_values_graph_1_dc009c0ed9.png"},{"id":72,"imageURL":"https://formester-strapi.s3.ap-south-1.amazonaws.com/main_features_of_google_forms_6a8c08c1fb.png"},{"id":73,"imageURL":"https://formester-strapi.s3.ap-south-1.amazonaws.com/use_as_needed_3_c4984764a9.png"},{"id":76,"imageURL":"https://formester-strapi.s3.ap-south-1.amazonaws.com/use_as_needed_4_9c0ba282e2.png"},{"id":74,"imageURL":"https://formester-strapi.s3.ap-south-1.amazonaws.com/use_as_needed_5_a867ecf486.png"},{"id":75,"imageURL":"https://formester-strapi.s3.ap-south-1.amazonaws.com/use_as_needed_6_e76b6edb3a.png"},{"id":77,"imageURL":"https://formester-strapi.s3.ap-south-1.amazonaws.com/use_as_needed_7_d8c92a5d51.png"},{"id":78,"imageURL":"https://formester-strapi.s3.ap-south-1.amazonaws.com/use_as_needed_8_4b8e780b1b.png"},{"id":79,"imageURL":"https://formester-strapi.s3.ap-south-1.amazonaws.com/use_as_needed_9_3e82e603ff.png"},{"id":80,"imageURL":"https://formester-strapi.s3.ap-south-1.amazonaws.com/use_as_needed_10_198e2f59ad.png"},{"id":83,"imageURL":"https://formester-strapi.s3.ap-south-1.amazonaws.com/use_as_needed_15_fa83913977.png"},{"id":81,"imageURL":"https://formester-strapi.s3.ap-south-1.amazonaws.com/use_as_needed_12_1da3f69b35.png"},{"id":84,"imageURL":"https://formester-strapi.s3.ap-south-1.amazonaws.com/use_as_needed_13_6148ebf0f8.png"},{"id":82,"imageURL":"https://formester-strapi.s3.ap-south-1.amazonaws.com/orange_white_modern_minimal_product_features_instagram_post_2_285744a195.png"}]
-jsonld: [{"@context":"https://schema.org","@graph":[{"@id":"https://formester.com/#organization","url":"https://formester.com/","logo":{"url":"https://formester.com/logo.png","@type":"ImageObject"},"name":"Formester","@type":"Organization"},{"@id":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/#webpage","url":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/","name":"Google Forms Quiz: How to Build One With Scoring in 6 Steps","@type":"WebPage","isPartOf":{"@id":"https://formester.com/#organization"},"breadcrumb":{"@id":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/#breadcrumb"},"inLanguage":"en-US","description":"Build a Google Forms quiz with answer keys, points and automatic scoring in six steps. Also covers releasing grades and where Forms stops.","dateModified":"2026-08-25","datePublished":"2023-04-24"},{"@id":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"item":"https://formester.com/","name":"Home","@type":"ListItem","position":1},{"item":"https://formester.com/blog/","name":"Blog","@type":"ListItem","position":2},{"item":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/","name":"How to Create a Google Forms Quiz With Automatic Scoring","@type":"ListItem","position":3}]},{"@id":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/#article","@type":"BlogPosting","image":"https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_create_a_quiz_in_google_forms_the_only_guide_you_ll_need_in_2023_6fcb97e07d.png","author":{"url":"https://linkedin.com/in/harshshahseo","name":"Navni Dighe","@type":"Person"},"headline":"How to Create a Google Forms Quiz With Automatic Scoring","publisher":{"@id":"https://formester.com/#organization"},"inLanguage":"en-US","description":"Build a Google Forms quiz with answer keys, points and automatic scoring in six steps. Also covers releasing grades and where Forms stops.","dateModified":"2026-08-25","datePublished":"2023-04-24","mainEntityOfPage":{"@id":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/#webpage"}},{"@id":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/#faq","@type":"FAQPage","mainEntity":[{"name":"Is Google Forms really free to use?","@type":"Question","acceptedAnswer":{"text":"Yes, for any Google account, with no cap on quizzes or responses. Storage is the real limit: file-upload answers consume your Drive quota, and a full Drive stops the form accepting them.","@type":"Answer"}},{"name":"How do I put my name in a Google Forms quiz?","@type":"Question","acceptedAnswer":{"text":"Add a short-answer question asking for it, or set Collect email addresses to Verified so Google records the signed-in account instead. Verified is more reliable because nobody can mistype it, but it forces everyone to sign in.","@type":"Answer"}},{"name":"How do I create a Google Forms quiz with answers?","@type":"Question","acceptedAnswer":{"text":"Switch on Make this a quiz in Settings, then open each question and click Answer key. Pick the correct option and set the point value. Google marks against those keys automatically on submission.","@type":"Answer"}},{"name":"What are the limitations of Google Forms quizzes?","@type":"Question","acceptedAnswer":{"text":"No timer, no partial credit, no score-based branching, no proctoring. Answer keys also only work on six question types, so file uploads and linear scales cannot be auto-marked. So whether, you want to have some fun with your friends by using a quiz to determine what kind of pizza they are, or create an aptitude test for your career counselling business, or you are a teacher wanting to create an online quiz for your students; All you have to do, is literally, just sign-up for free and start accessing all the powerful features!","@type":"Answer"}}]},{"@id":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/#howto","name":"How to Create a Google Forms Quiz With Automatic Scoring","step":[{"url":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/","name":"Step 1 - Create/Sign-in to your Google account and visit Google Forms","@type":"HowToStep","position":1},{"url":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/","name":"Step 2- Create a New Form","@type":"HowToStep","position":2},{"url":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/","name":"Step 3 - Form Title and Settings","@type":"HowToStep","position":3},{"url":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/","name":"Step 4 - Adding Questions to Your Quiz","@type":"HowToStep","position":4},{"url":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/","name":"Step 5 - Add your Custom Grading Scheme","@type":"HowToStep","position":5},{"url":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/","name":"Step 6 - Preview and Publish","@type":"HowToStep","position":6}],"@type":"HowTo","description":"Build a Google Forms quiz with answer keys, points and automatic scoring in six steps. Also covers releasing grades and where Forms stops."},{"@id":"https://formester.com/#software","url":"https://formester.com/","name":"Formester","@type":"SoftwareApplication","offers":{"@type":"Offer","price":"0","description":"Free forever plan, no credit card required","priceCurrency":"USD"},"operatingSystem":"Web, iOS, Android","applicationCategory":"BusinessApplication"}]}]
+jsonld: [{"@context":"https://schema.org","@graph":[{"@id":"https://formester.com/#organization","url":"https://formester.com/","logo":{"url":"https://formester.com/logo.png","@type":"ImageObject"},"name":"Formester","@type":"Organization"},{"@id":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/#webpage","url":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/","name":"Google Forms Quiz: How to Build One With Scoring in 6 Steps","@type":"WebPage","isPartOf":{"@id":"https://formester.com/#organization"},"breadcrumb":{"@id":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/#breadcrumb"},"inLanguage":"en-US","description":"Build a Google Forms quiz with answer keys, points and automatic scoring in six steps. Also covers releasing grades and where Forms stops.","dateModified":"2026-08-25","datePublished":"2023-04-24"},{"@id":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"item":"https://formester.com/","name":"Home","@type":"ListItem","position":1},{"item":"https://formester.com/blog/","name":"Blog","@type":"ListItem","position":2},{"item":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/","name":"How to Create a Google Forms Quiz With Automatic Scoring","@type":"ListItem","position":3}]},{"@id":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/#article","@type":"BlogPosting","image":"https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_create_a_quiz_in_google_forms_the_only_guide_you_ll_need_in_2023_6fcb97e07d.png","author":{"url":"https://linkedin.com/in/harshshahseo","name":"Navni Dighe","@type":"Person"},"headline":"How to Create a Google Forms Quiz With Automatic Scoring","publisher":{"@id":"https://formester.com/#organization"},"inLanguage":"en-US","description":"Build a Google Forms quiz with answer keys, points and automatic scoring in six steps. Also covers releasing grades and where Forms stops.","dateModified":"2026-08-31","datePublished":"2023-04-24","mainEntityOfPage":{"@id":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/#webpage"},"about":[{"@type":"SoftwareApplication","name":"Google Forms","applicationCategory":"BusinessApplication","url":"https://docs.google.com/forms/","operatingSystem":"Web"}],"mentions":[{"@id":"https://formester.com/#software"}],"citation":[{"@type":"WebPage","name":"Create & grade quizzes with Google Forms","url":"https://support.google.com/docs/answer/7032287","publisher":{"@type":"Organization","name":"Google"}},{"@type":"WebPage","name":"Choose a type of question for your form","url":"https://support.google.com/docs/answer/7322334","publisher":{"@type":"Organization","name":"Google"}}]},{"@id":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/#faq","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Google Forms really free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes, for any Google account, with no cap on quizzes or responses. Storage is the real limit: file-upload answers consume your Drive quota, and a full Drive stops the form accepting them."}},{"@type":"Question","name":"How do I put my name in a Google Forms quiz?","acceptedAnswer":{"@type":"Answer","text":"Add a short-answer question asking for it, or set Collect email addresses to Verified so Google records the signed-in account instead. Verified is more reliable because nobody can mistype it, but it forces everyone to sign in."}},{"@type":"Question","name":"How do I create a Google Forms quiz with answers?","acceptedAnswer":{"@type":"Answer","text":"Switch on Make this a quiz in Settings, then open each question and click Answer key. Pick the correct option and set the point value. Google marks against those keys automatically on submission."}},{"@type":"Question","name":"What are the limitations of Google Forms quizzes?","acceptedAnswer":{"@type":"Answer","text":"No timer, no partial credit, no score-based branching, no proctoring. Answer keys also only work on six question types, so file uploads and linear scales cannot be auto-marked."}},{"@type":"Question","name":"How do I create a Google Forms quiz with multiple questions?","acceptedAnswer":{"@type":"Answer","text":"Add each question with the plus icon in the right-hand toolbar, then set an answer key and a point value on every one. There is no cap on how many questions a quiz can hold. If it runs long, use One question per page style sections so respondents are not scrolling a single wall of fields."}},{"@type":"Question","name":"How do I share a Google Forms quiz link?","acceptedAnswer":{"@type":"Answer","text":"Click Publish, then copy the link from the dialog. Tick the shortener option if you want a forms.gle address. A form that has never been published returns a \"not published\" page instead of the quiz, which is the usual reason a shared link appears broken."}},{"@type":"Question","name":"Does Google Forms have a quiz timer?","acceptedAnswer":{"@type":"Answer","text":"No. There is no native time limit on a Google Forms quiz. Every workaround relies on an add-on or an Apps Script, and both stop working if the script owner's permissions change."}},{"@type":"Question","name":"Can respondents see their score straight away?","acceptedAnswer":{"@type":"Answer","text":"Only if Release grades is set to Immediately after each submission. Set it to Later, after manual review and Google holds every score until you send them, which also forces Collect email addresses on so it knows where to send. So whether, you want to have some fun with your friends by using a quiz to determine what kind of pizza they are, or create an aptitude test for your career counselling business, or you are a teacher wanting to create an online quiz for your students; All you have to do, is literally, just [sign-up for free and start accessing all the powerful features](https://app.formester.com/users/sign_up)!"}}]},{"@id":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/#howto","name":"How to Create a Google Forms Quiz With Automatic Scoring","step":[{"url":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/","name":"Step 1 - Create/Sign-in to your Google account and visit Google Forms","@type":"HowToStep","position":1},{"url":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/","name":"Step 2- Create a New Form","@type":"HowToStep","position":2},{"url":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/","name":"Step 3 - Form Title and Settings","@type":"HowToStep","position":3},{"url":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/","name":"Step 4 - Adding Questions to Your Quiz","@type":"HowToStep","position":4},{"url":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/","name":"Step 5 - Add your Custom Grading Scheme","@type":"HowToStep","position":5},{"url":"https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/","name":"Step 6 - Preview and Publish","@type":"HowToStep","position":6}],"@type":"HowTo","description":"Build a Google Forms quiz with answer keys, points and automatic scoring in six steps. Also covers releasing grades and where Forms stops."},{"@id":"https://formester.com/#software","url":"https://formester.com/","name":"Formester","@type":"SoftwareApplication","offers":{"@type":"Offer","price":"0","description":"Free forever plan, no credit card required","priceCurrency":"USD"},"operatingSystem":"Web, iOS, Android","applicationCategory":"BusinessApplication"}]}]
 createdAt: "2024-04-07T10:04:40.635Z"
-updatedAt: "2026-08-26T05:52:02.530Z"
+updatedAt: "2026-08-31T00:00:00.000Z"
 publishedAt: "2023-04-24T07:41:22.594Z"
 ---
 Open **Settings**, switch on **Make this a quiz**, then go back to your questions and set an answer key and a point value on each one. Google marks submissions against those keys and totals the score for you.
@@ -38,7 +38,20 @@ Regardless of the category you relate to, ever wondered how you can create such 
 
 Today we discuss, one such platform which enables this, and that platform is…
 
-## What a Google Forms quiz actually does
+
+<div class="tldr">
+<p><strong>Key facts</strong></p>
+<p>Turn on <strong>Make this a quiz</strong> in Settings, then open each question and set an answer key and a point value. Google marks every submission against those keys automatically. What catches people out is that only half the question types can carry an answer key at all.</p>
+<ul>
+<li><strong>Question types that can be auto-graded: 6 of 12.</strong> Short answer, Multiple choice, Checkboxes, Dropdown, Multiple choice grid and Checkbox grid (<a href="https://support.google.com/docs/answer/7032287" target="_blank" rel="noopener">Google Docs Editors Help</a>)</li>
+<li><strong>Cannot be auto-graded:</strong> Paragraph, File upload, Linear scale, Rating, Date and Time (<a href="https://support.google.com/docs/answer/7322334" target="_blank" rel="noopener">Google Docs Editors Help</a>)</li>
+<li><strong>Two grade-release modes:</strong> immediately after each submission, or later after manual review (<a href="https://support.google.com/docs/answer/7032287" target="_blank" rel="noopener">Google Docs Editors Help</a>)</li>
+<li><strong>Defaults:</strong> grades release immediately and email addresses are not collected</li>
+<li><strong>No native timer, no partial credit, no proctoring.</strong> Every timer answer you will find is an add-on or an Apps Script</li>
+</ul>
+</div>
+
+## What does a Google Forms quiz actually do?
 
 Developed and integrated as a part of the [free, web-based Google Docs Editors suite](https://www.google.com/docs/about/), it is offered by the [Big Tech, Google](https://about.google/).
 
@@ -50,7 +63,7 @@ It has several quality features, making it a popular choice, both amongst busine
 
 So without further adieu, let's get you started with,
 
-## Creating A Quiz Using Google Forms in 6 simple steps
+## How do you create a quiz in Google Forms?
 
 As intuitive and easy to use, as it may seem, the process is deserving of a definitive guide, for both first-time users as well as those looking to create advanced quizzes using more complex features.
 
@@ -73,6 +86,8 @@ At the top right corner, under the **Start a New Form** Section, click on the **
 You now have a blank form ready to edit.
 
 ### Step 3 - Form Title and Settings
+
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/f54eee23f272ca0c_quiz-01-make-this-a-quiz.jpg" alt="The Make this a quiz toggle in Google Forms Settings, marked with a red arrow" loading="lazy" style="width:100%;max-width:800px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
 
 Click on **Untitled Form**, and rename it as per a suitable title.
 
@@ -124,6 +139,8 @@ Or you may simply click on the **Duplicate** button to have the same template an
 
 ### Step 5 - Add your Custom Grading Scheme
 
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/0610506e634af4b2_quiz-04-points.jpg" alt="The Google Forms answer key screen with the points field marked by a red arrow" loading="lazy" style="width:100%;max-width:790px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
+
 Once you've added your questions and answers, you can also add your custom grading system.
 
 In each of the question fields, you'll find an **Answer key** button. Click on this button to add the correct response. 
@@ -158,7 +175,9 @@ Y﻿ou also get the option to integrate your responses into a **Google Sheets Sp
 
 P﻿.S., did you know, you could [also add a timer to your Google Quiz](/blog/how-to-add-a-timer-to-your-google-quiz-includes-latest-alternative-works-without-add-ons-2023/)!
 
-## How scoring works in a Google Forms quiz
+## How does scoring work in a Google Forms quiz?
+
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/6d67b019caaf07d5_quiz-03-answer-key.jpg" alt="The Answer key link under a Google Forms question, marked with a red arrow" loading="lazy" style="width:100%;max-width:790px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
 
 Answer keys are available on six question types: multiple choice, checkboxes, dropdown, short answer, paragraph, multiple choice grid. Anything else, including file upload and linear scale, can carry points but cannot be auto-marked.
 
@@ -173,7 +192,7 @@ Answer keys are available on six question types: multiple choice, checkboxes, dr
 
 The practical consequence is that a quiz mixing short answer with everything else is not really automatic. It is automatic for most questions and manual for the rest.
 
-## Customising a Google Forms quiz
+## How do you customise a Google Forms quiz?
 
 Customisation in Google Forms means presentation, not logic. You can change the header image, the theme colour, the font pairing and the background, and that is the extent of it.
 
@@ -186,7 +205,7 @@ Two things worth setting before you share:
 
 What you cannot do is branch on a score. Forms can send someone to a different section based on a multiple-choice answer, but not based on how many points they have accumulated.
 
-## How to share a Google Forms quiz
+## How do you share a Google Forms quiz?
 
 Click **Publish**, then copy the link. Since the 2025 publishing change, a form that has never been published returns a "not published" page rather than the quiz, which catches out anyone reusing an old draft link.
 
@@ -205,9 +224,9 @@ Infact, [online learning can be dated back to 1982](https://en.wikipedia.org/wik
 
 According to the [World Economic Forum](https://www.weforum.org/agenda/2020/04/coronavirus-education-global-covid19-online-digital-learning/) - **Even before COVID-19, there was already high growth and adoption in education technology, with global edtech investments reaching US$18.66 billion in 2019 and the overall market for online education projected to reach $350 Billion by 2025.** 
 
-Having said this, it is evident that diverse efforts are being made to develop softwares, tools, services, platforms, apps and more to facilitate Online Learning.
+Having said this, it is evident that diverse efforts are being made to develop softwares, tools, services, platforms, apps and more to support Online Learning.
 
-As a matter of fact, pursuing a **<a href="https://und.edu/programs/early-childhood-education-bsed/index.html">childhood education degree</a>** online has become more accessible, allowing educators to gain essential skills while adapting to the digital learning landscape.
+As a matter of fact, pursuing a **<a href="https://und.edu/programs/early-childhood-education-bsed/index.html">childhood education degree</a>** online has become more accessible, allowing educators to gain essential skills while adapting to digital learning.
 
 Google Forms is one such software;
 
@@ -244,7 +263,7 @@ Finding and setting-up, all the [necessary settings will be a no-brainer](/featu
 
 What's more, we have [pre-designed and customizable templates](/templates/), all set in place, to get you going, right away!
 
-## What Google Forms quizzes cannot do
+## What can Google Forms quizzes not do?
 
 For a classroom check or a quick internal test, Google Forms is genuinely the right answer and free. Four limits show up once the stakes rise.
 
@@ -255,41 +274,33 @@ For a classroom check or a quick internal test, Google Forms is genuinely the ri
 
 If any of those matter, the quiz needs a tool built for assessment rather than a form with answer keys bolted on, or a [scored test builder](https://formester.com/test-creator/) that handles marking natively. Formester can [generate a quiz from a prompt](https://formester.com/ai-quiz-maker/) and score it, and there is a roundup of [quiz tools built for teachers](https://formester.com/blog/best-online-quiz-maker-for-teachers/) if you want to compare.
 
-## Frequently asked questions
+<div class="fmstr-blog-cta">
+<p><strong>Need a timer or partial credit?</strong> Formester scores quizzes with weighted answers and a real time limit, no add-on required.</p>
+<p><a class="fmstr-blog-cta__btn" href="https://app.formester.com/users/sign_up">Try Formester free</a></p>
+<p class="fmstr-blog-cta__meta">Free forever plan &middot; No credit card &middot; Setup in 2 minutes</p>
+</div>
 
-### Is Google Forms really free to use?
+<div class="better">
+<h5>Why Formester's quiz maker is the better choice</h5>
+<p>The three things Google Forms quizzes cannot do.</p>
+<ul>
+<li>A real time limit on the quiz itself, rather than an <a href="https://formester.com/blog/how-to-add-a-timer-to-your-google-quiz-includes-latest-alternative-works-without-add-ons-2023/">add-on that breaks when the script stops</a></li>
+<li>Auto-scoring on every field type, so a rating or a scale can carry marks instead of being skipped</li>
+<li><a href="https://formester.com/features/quiz-maker-features/">Calculated outcomes</a> shown on the confirmation screen, so a respondent sees a band or a result rather than a raw number</li>
+<li>Conditional paths based on the answer, which Google Forms can only do between whole sections</li>
+</ul>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/e90d133ba1164749_quiz-02-release-grades.jpg" alt="Google Forms Release grades options, with Later after manual review marked in red because it turns on email collection" loading="lazy" style="width:100%;max-width:720px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
+<p><a class="btn" href="https://app.formester.com/users/sign_up">Try Formester free</a></p>
+</div>
 
-Yes, for any Google account, with no cap on quizzes or responses. Storage is the real limit: file-upload answers consume your Drive quota, and a full Drive stops the form accepting them.
-
-### How do I put my name in a Google Forms quiz?
-
-Add a short-answer question asking for it, or set **Collect email addresses** to Verified so Google records the signed-in account instead. Verified is more reliable because nobody can mistype it, but it forces everyone to sign in.
-
-### How do I create a Google Forms quiz with answers?
-
-Switch on **Make this a quiz** in Settings, then open each question and click **Answer key**. Pick the correct option and set the point value. Google marks against those keys automatically on submission.
-
-### What are the limitations of Google Forms quizzes?
-
-No timer, no partial credit, no score-based branching, no proctoring. Answer keys also only work on six question types, so file uploads and linear scales cannot be auto-marked.
-
-### How do I create a Google Forms quiz with multiple questions?
-
-Add each question with the plus icon in the right-hand toolbar, then set an answer key and a point value on every one. There is no cap on how many questions a quiz can hold. If it runs long, use **One question per page** style sections so respondents are not scrolling a single wall of fields.
-
-### How do I share a Google Forms quiz link?
-
-Click **Publish**, then copy the link from the dialog. Tick the shortener option if you want a `forms.gle` address. A form that has never been published returns a "not published" page instead of the quiz, which is the usual reason a shared link appears broken.
-
-### Does Google Forms have a quiz timer?
-
-No. There is no native time limit on a Google Forms quiz. Every workaround relies on an add-on or an Apps Script, and both stop working if the script owner's permissions change.
-
-### Can respondents see their score straight away?
-
-Only if **Release grades** is set to Immediately after each submission. Set it to Later, after manual review and Google holds every score until you send them, which also forces Collect email addresses on so it knows where to send.
-
-
-So whether, you want to have some fun with your friends by using a quiz to determine what kind of pizza they are, or create an aptitude test for your career counselling business, or you are a teacher wanting to create an online quiz for your students;
-
-All you have to do, is literally, just [sign-up for free and start accessing all the powerful features](https://app.formester.com/users/sign_up)!
+<section class="faq">
+<h2>Google Forms quiz FAQ</h2>
+<details><summary>Is Google Forms really free to use?</summary><p>Yes, for any Google account, with no cap on quizzes or responses. Storage is the real limit: file-upload answers consume your Drive quota, and a full Drive stops the form accepting them.</p></details>
+<details><summary>How do I put my name in a Google Forms quiz?</summary><p>Add a short-answer question asking for it, or set <strong>Collect email addresses</strong> to Verified so Google records the signed-in account instead. Verified is more reliable because nobody can mistype it, but it forces everyone to sign in.</p></details>
+<details><summary>How do I create a Google Forms quiz with answers?</summary><p>Switch on <strong>Make this a quiz</strong> in Settings, then open each question and click <strong>Answer key</strong>. Pick the correct option and set the point value. Google marks against those keys automatically on submission.</p></details>
+<details><summary>What are the limitations of Google Forms quizzes?</summary><p>No timer, no partial credit, no score-based branching, no proctoring. Answer keys also only work on six question types, so file uploads and linear scales cannot be auto-marked.</p></details>
+<details><summary>How do I create a Google Forms quiz with multiple questions?</summary><p>Add each question with the plus icon in the right-hand toolbar, then set an answer key and a point value on every one. There is no cap on how many questions a quiz can hold. If it runs long, use <strong>One question per page</strong> style sections so respondents are not scrolling a single wall of fields.</p></details>
+<details><summary>How do I share a Google Forms quiz link?</summary><p>Click <strong>Publish</strong>, then copy the link from the dialog. Tick the shortener option if you want a <code>forms.gle</code> address. A form that has never been published returns a "not published" page instead of the quiz, which is the usual reason a shared link appears broken.</p></details>
+<details><summary>Does Google Forms have a quiz timer?</summary><p>No. There is no native time limit on a Google Forms quiz. Every workaround relies on an add-on or an Apps Script, and both stop working if the script owner's permissions change.</p></details>
+<details><summary>Can respondents see their score straight away?</summary><p>Only if <strong>Release grades</strong> is set to Immediately after each submission. Set it to Later, after manual review and Google holds every score until you send them, which also forces Collect email addresses on so it knows where to send. So whether, you want to have some fun with your friends by using a quiz to determine what kind of pizza they are, or create an aptitude test for your career counselling business, or you are a teacher wanting to create an online quiz for your students; All you have to do, is literally, just [sign-up for free and start accessing all the powerful features](https://app.formester.com/users/sign_up)!</p></details>
+</section>
