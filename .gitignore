@@ -109,3 +109,6 @@ stories
 public/design-files
 .playwright-mcp
 .vercel
+
+# Content-ops cover assets are local working files; finals live in the CMS
+.claude/content-ops/covers/
