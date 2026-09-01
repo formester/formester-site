@@ -17,7 +17,7 @@ carries class names only, never CSS.
 
 ## Hard rules
 - **Verbatim content.** Never reword, shorten, summarise, add sentences, or invent facts/stats. Structure only.
-- **No styling in the content:** no `<style>`, no `style="..."`, no `<svg>`/icons/emoji-as-UI, no colors, no gradients.
+- **No styling in the content:** no `<style>`, no `style="..."`, no `<svg>`/icons/emoji-as-UI, no colors, no gradients. Sole exception: the sanctioned gradient CTA card below, copied verbatim in structure.
 - **Start at `<h2>`.** No `<h1>`, title, author, date, or cover image — the page renders those.
 - **Plain semantic HTML needs NO class:** `h2 h3 h4 p ul ol li a strong em table figure blockquote details summary`.
 - **Use a class ONLY for the custom blocks below** (un-prefixed names). Unknown classes get no styling.
@@ -62,10 +62,16 @@ carries class names only, never CSS.
 <tbody><tr><td>Formester</td><td>...</td></tr></tbody></table>
 </div>
 
-<!-- Inline CTA — at most one per article -->
-<div class="cta">
-<p>Build this in minutes with Formester.</p>
-<a href="https://app.formester.com/users/sign_up">Get started free</a>
+<!-- Inline CTA — at most one per article, and only where it genuinely fits (Ankit, Sep 2026).
+     This gradient card is the ONE sanctioned inline-styled block (exception to the no-style rule).
+     Copy the pattern exactly; customize headline + subtext per post (verified claims only, in the
+     post's own words); keep the violet gradient unless the post's context clearly justifies another
+     brand-adjacent color. Skip the CTA entirely when it doesn't fit — don't force one. -->
+<div style="background:linear-gradient(135deg,#7f56d9 0%,#6941c6 100%);padding:32px 28px;margin:36px 0;border-radius:12px;color:#ffffff;font-family:inherit;text-align:center;">
+<p style="margin:0 0 12px 0;font-size:18px;font-weight:700;color:#ffffff;font-family:inherit;">Post-specific headline</p>
+<p style="margin:0 0 20px 0;font-size:14px;line-height:1.55;color:#f4ebff;font-family:inherit;">One or two sentences tying Formester to this post's problem. Verified claims only.</p>
+<a href="https://app.formester.com/users/sign_up" style="display:inline-block;padding:12px 24px;background:#ffffff;color:#6941c6;text-decoration:none;font-weight:700;border-radius:9999px;font-family:inherit;">Try Formester free</a>
+<p style="margin:12px 0 0 0;font-size:13px;color:#e9d7fe;font-family:inherit;">Free forever · No credit card · 56,000+ teams</p>
 </div>
 
 <!-- FAQ — always last -->

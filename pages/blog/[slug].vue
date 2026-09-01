@@ -298,6 +298,12 @@ const jsonldData = computed(() => {
     }
   })
 
+  // Markdown frontmatter `jsonld`: an array of plain schema.org objects
+  blogData.value?.jsonld?.forEach((entry) => {
+    if (!entry || typeof entry !== 'object') return
+    jsonData.push(typeof entry['@context'] === 'string' ? entry : { '@context': 'https://schema.org', ...entry })
+  })
+
   return jsonData
 })
 

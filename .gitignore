@@ -96,6 +96,7 @@ sw.*
 
 .claude/*
 !.claude/skills/
+!.claude/content-ops/
 .claude-flow
 .mcp
 .storybook
