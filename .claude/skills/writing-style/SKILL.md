@@ -47,7 +47,9 @@ read, it's wrong. Rewrite it plainly instead of decorating it.
   fast-paced world…", "Let's dive in". Start with the reader's problem.
 - **No hype words.** seamless, revolutionary, game-changing, effortless, empower, unlock.
 - Parentheses for quick asides are fine. Bold for the few phrases that carry the point,
-  not for keyword stuffing.
+  not for keyword stuffing. **Never bold the target keyword or a feature name in body
+  copy** ("**response validation in Google Forms**") — a reader gets nothing from it and
+  it reads as SEO markup. Bold is for UI element names and rare genuine emphasis only.
 
 ## Claude-isms (banned — Ankit's feedback, Sep 2026)
 
@@ -83,6 +85,48 @@ These are words and patterns that read as AI-written. Never use them, and flag t
   ("These two get mixed up all the time, and most guides answer the wrong one.") Rewrite
   as two plain sentences that say the useful thing: "People mix these up, and the fix is
   different for each. Figure out which one you have first."
+- **Parallel-example stacking:** two or more sentences built on the same skeleton to
+  create rhythm: "You ask for a phone number and get a name. You ask for an email
+  address and get one with a typo." Merge the examples into one plain sentence: "When
+  you ask for a phone number or email, you get a name or a typo that makes your message
+  bounce." One example sentence is fine; a repeated frame is a drumbeat.
+- **Invented-cost dramatization:** made-up specifics that raise the stakes: "costs you
+  an afternoon", "after a hundred submissions", "eats your whole morning". The numbers
+  and time costs are fabricated for punch. State the consequence plainly ("you end up
+  fixing entries by hand later") or use a real, sourced number.
+- **Pronoun-punch opener:** a short sentence whose only content is a back-reference to
+  the previous paragraph: "Response validation in Google Forms prevents it.", "This
+  fixes that." It withholds the substance for a beat. Lead with what the thing actually
+  does ("Response validation lets you set rules an answer must follow before
+  submission"), then state the benefit in the next sentence.
+- **Abstract capability stacks:** a run of "can require / can accept / can check"
+  statements where the actor is a field or feature: "An age field can require a number.
+  An email field can require a valid format. A feedback box can require 50 characters."
+  Grammatically active, but nobody is doing anything, so it reads passive. Replace the
+  stack with ONE worked example where the reader is the actor: "If someone submits an
+  email without an @, the form blocks it until they fix it." (This pairs with
+  parallel-example stacking above; capability stacks usually commit both sins.)
+- **Redundant restatement:** re-explaining a fact from an earlier paragraph in fresh
+  wording ("blocks the submission until they fix it" … next paragraph: "refuses to
+  accept the form until the answer is fixed"). Each fact gets said once. If the second
+  pass adds one new detail (the error shows in red under the question), move that detail
+  into the first mention and delete the rest. Before handing over a draft, read adjacent
+  paragraphs asking: does this paragraph tell the reader anything the last one didn't?
+- **Enumerations buried in a paragraph:** a paragraph that is really a mapping, where
+  each sentence pairs an item with what it gets or does ("Short answer questions get
+  the full set. Paragraph questions get length and regex only. Checkbox questions can
+  only limit selections."). Break it into a list, one line per item, reader as actor:
+  "For paragraph questions: you can apply length and regex rules." The distinction from
+  parallel-example stacking above: illustrations collapse to one example; reference
+  facts the reader needs all of become a list. Don't drop facts while converting — every
+  item in the prose version keeps its line in the list.
+- **Instructions written as prose:** a how-to paragraph that chains sequential actions
+  into sentences ("Go to forms.google.com and open the form you're working on. Click
+  the question you want to validate, and make sure its type is..."). Break it into a
+  numbered step list, one action per line. Step headings name ONE action, the step's
+  goal ("Pick a question"); prerequisites and sub-actions (open the form) go in the
+  step body, never bundled into the heading. Short single-action step headings also
+  extract better into Google's list featured snippets.
 
 The pattern behind all of these: a punchy, clever-sounding phrase where a plain sentence
 would do. When a line feels quotable, rewrite it flat.
@@ -119,6 +163,13 @@ sentence so no marker is needed.
   campaign"), each self-contained.
 - **A worked example inside explanations.** "For example, for a lead generation form you
   would need name, email, phone…" Whenever a claim feels abstract, add one.
+- **The option-explainer template.** When a section walks through a set of options (rule
+  types, plans, field types), give every subsection the same three beats: what it does,
+  when to use it, one worked example with the reader as actor. When the option checks a
+  format, end the example with a pass and a fail ("So 555-123-4567 passes and 5551234567
+  doesn't."). Define jargon on first use in the plainest inline way ("Regular expression,
+  or regex, validation..."). Parallel structure ACROSS subsections is good template
+  design, not the banned drumbeat; the drumbeat ban applies within a paragraph.
 - **"Put yourself in the respondent's shoes"** framing when giving form-building advice.
 - **Internal links woven into sentences** with descriptive anchors, never "click here".
 - **Close with a branded, action-focused section** ("Step up your form building game with
@@ -129,7 +180,10 @@ sentence so no marker is needed.
 1. Search the draft for "—" and "–". Count must be zero.
    Also grep for the Claude-isms above (land/lands, honest, genuinely, heavy lifting,
    "N rules/decisions/views/walls" count setups, "step by step", "all the time",
-   "more than you think", "most guides", "nobody talks about") and rewrite every hit.
+   "more than you think", "most guides", "nobody talks about", "costs you a",
+   "prevents it", "fixes that") and rewrite every hit. Then scan for repeated sentence
+   skeletons (two neighboring sentences opening with the same words) and for bolded
+   keyword/feature phrases in body copy; rewrite those too.
 2. Read the intro out loud. Does it state the reader's problem in plain words by sentence two?
 3. Find your three fanciest sentences. Rewrite each so a seventh grader gets it in one read.
 4. Every section: does it say why before how?
