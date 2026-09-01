@@ -42,6 +42,8 @@ to be applied) → publish.
    `blog-post` for body block structure (steps, tldr, note, faq, cta blocks). All metadata
    comes from the plan: `title`, `metaTitle` (≤60 chars), `metaDescription` (≤155 chars),
    `keywords`, `coverImgAlt`, dates. `featured: false` unless told otherwise.
+   When `author` is Ankit Singhaniya, always set
+   `authorProfile: "https://linkedin.com/in/ankitsinghaniyaz"`.
 6. **Structured data (`jsonld`).** If the post has an FAQ section, the frontmatter `jsonld`
    array MUST carry a matching `FAQPage` schema object — every question/answer copied
    verbatim from the FAQ (plain text, no HTML/links in answers). Skip `HowTo` schema

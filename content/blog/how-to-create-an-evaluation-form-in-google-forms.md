@@ -1,11 +1,12 @@
 ---
 slug: "how-to-create-an-evaluation-form-in-google-forms"
 title: "How to Create an Evaluation Form in Google Forms"
-description: "Create an evaluation form in Google Forms step by step: rating scales, quiz mode for scored evaluations, and ready-to-use questions for employee, course, teacher, and event evaluations."
+description: "Create an evaluation form in Google Forms: rating scales, quiz mode for scored evaluations, and ready-to-use questions for employee, course, teacher, and event evaluations."
 metaTitle: "How to Create an Evaluation Form in Google Forms"
-metaDescription: "Create an evaluation form in Google Forms step by step: rating scales, quiz mode, and ready-to-use questions for employee, course, and event evals."
+metaDescription: "Create an evaluation form in Google Forms: rating scales, quiz mode, and ready-to-use questions for employee, course, and event evals."
 keywords: "google forms evaluation, evaluation form google forms, evaluation form template, google forms evaluation template"
 author: "Ankit Singhaniya"
+authorProfile: "https://linkedin.com/in/ankitsinghaniyaz"
 coverImgAlt: "Creating an evaluation form in Google Forms"
 featured: false
 coverImg: {"url":"https://formester-strapi.s3.ap-south-1.amazonaws.com/e5abe9af43ba01e6_how-to-create-an-evaluation-form-in-google-forms-cover.png","width":1200,"height":630}

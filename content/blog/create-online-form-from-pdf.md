@@ -6,6 +6,7 @@ metaTitle: "How to Create an Online Form from a PDF | Formester"
 metaDescription: "Create an online form from a PDF in minutes. Upload it, let AI detect the fields, and share a mobile-friendly form by link or QR. No manual rebuilding."
 keywords: "create online form from pdf, pdf to online form, convert pdf to online form, turn pdf into online form, pdf to web form"
 author: "Ankit Singhaniya"
+authorProfile: "https://linkedin.com/in/ankitsinghaniyaz"
 coverImgAlt: "converting a pdf document into an online form with formester"
 featured: false
 coverImg: {"url":"https://formester-strapi.s3.ap-south-1.amazonaws.com/a2072fece402e28d_create-online-form-from-pdf-cover.png","width":1200,"height":630}
@@ -23,20 +24,20 @@ There is a faster way. You can **create an online form from a PDF** you already 
 
 In most cases, you don't need the PDF back. You need the answers people write in it. An online form gives you exactly that. And if you do need the document too, each submission can still generate a filled PDF for your records.
 
-Here is how it works, step by step. We will also cover when a fillable PDF is the better choice.
+Here's how to do it, and when a fillable PDF is the better choice.
 
 <div class="tldr">
 <p>Quick answer</p>
 <ul>
 <li>Upload your PDF to Formester and AI <strong>auto-detects the fields</strong>: text boxes, checkboxes, dates, signatures.</li>
 <li>You get a <strong>mobile-friendly online form</strong>, not another PDF. Share it by link, QR code, or embed.</li>
-<li>Submissions land in one dashboard, and you can still <a href="/blog/how-to-auto-fill-and-sign-pdfs-with-a-form/">generate a filled PDF per response</a>.</li>
+<li>Submissions show up in one dashboard, and you can still <a href="/blog/how-to-auto-fill-and-sign-pdfs-with-a-form/">generate a filled PDF per response</a>.</li>
 </ul>
 </div>
 
 ## Fillable PDF vs. online form: which one do you need?
 
-These two get mixed up all the time, and most guides answer the wrong one. So let's clear it up first.
+These two sound similar but solve different problems. Figure out which one you need before you build anything.
 
 A **fillable PDF** is still a PDF. People download it, open it in the right app, type into it, and send the file back. That works when the document itself must stay a document. A government form you must submit as-is is a good example. If that is your case, read our guide on how to [convert a PDF to a fillable form](/blog/how-to-convert-pdf-to-fillable-form/) instead.
 
