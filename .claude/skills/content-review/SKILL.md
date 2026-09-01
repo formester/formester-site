@@ -45,7 +45,10 @@ what's left to the user instead of grinding).
 - Heading hierarchy sane (H2 → H3, no skips). FAQ present if the plan called for one.
 - Internal links: every plan link present, anchors descriptive, routes exist in the repo
   (`pages/`, `content/blog/`). Broken internal link = P1.
-- Exactly one CTA. Image placeholders follow the `placeholder://` convention.
+- At most one CTA, and it must be the sanctioned gradient CTA card from the `blog-post`
+  skill (plain `div.cta` blocks are retired — flag as P2). Its headline/subtext claims are
+  product claims: verify them. A missing CTA is fine when no pitch fits the post.
+- Image placeholders follow the `placeholder://` convention.
 
 **Copy quality**
 - Matches the `writing-style` skill (load it and run its self-check): no em dashes anywhere,

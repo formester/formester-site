@@ -29,8 +29,10 @@ to be applied) → publish.
    - Every internal link from the plan appears with descriptive anchor text. Verify routes
      exist before linking.
    - FAQ section from the plan's PAA questions, answers 2–4 sentences each.
-   - One CTA max, near the end, linking to `https://app.formester.com/users/sign_up` or the
-     most relevant feature page.
+   - One CTA max, near the end, and only where a Formester pitch genuinely fits the post —
+     skip it otherwise. Use the sanctioned gradient CTA card from the `blog-post` skill
+     (headline + subtext customized to this post's problem, verified claims only). Never the
+     old plain `div.cta` block.
 4. **Image placeholders.** For every image slot in the plan, insert:
    `![<final alt text>](placeholder://<slug>-<n>)` followed on the next line by
    `<!-- IMAGE: what to capture, e.g. "Formester dashboard, Create Form modal, PDF upload tab" -->`

@@ -1,5 +1,7 @@
 # Plan: How to Create an Evaluation Form in Google Forms
 
+> Merge note (2026-09-01): folded in the strongest parts of the external writer's draft, in our voice: Sheets weighting section (SUMPRODUCT/ARRAYFORMULA + ownership note), linear-scale range detail (0/1 to 2–10), the anonymity vs Limit-to-1-response trade-off details (username not recorded with email collection off; no-Google-account exclusion), the rubric section (define what a 3 means), 3 extra FAQ items, and the verified Rumie testimonial. Corrected his IP-based duplicate claim to the verified unique-submission-links feature. Skipped: unverified plan-name pricing claims and his 1,310/mo volume figure (DataForSEO says 260).
+
 - Slug: how-to-create-an-evaluation-form-in-google-forms
 - Type: how-to
 - Primary keyword: google forms evaluation (vol 260, KD 17) — phrased in title as "evaluation form in Google Forms"
