@@ -3048,27 +3048,6 @@
                 </p>
                 <span class="fmstr-cmp-tvg-other-alts__link">Compare &rarr;</span>
               </a>
-              <a class="fmstr-cmp-tvg-other-alts__tile" href="https://formester.com/google-forms-alternative/">
-                <h3 class="fmstr-cmp-tvg-other-alts__name">Google Forms alternative</h3>
-                <p class="fmstr-cmp-tvg-other-alts__bestfor">
-                  Best for free internal Google Workspace use with Sheets as the destination.
-                </p>
-                <span class="fmstr-cmp-tvg-other-alts__link">Compare &rarr;</span>
-              </a>
-              <a class="fmstr-cmp-tvg-other-alts__tile" href="https://formester.com/microsoft-forms-alternative/">
-                <h3 class="fmstr-cmp-tvg-other-alts__name">Microsoft Forms alternative</h3>
-                <p class="fmstr-cmp-tvg-other-alts__bestfor">
-                  Best for Microsoft 365 teams who already pay for the suite.
-                </p>
-                <span class="fmstr-cmp-tvg-other-alts__link">Compare &rarr;</span>
-              </a>
-              <a class="fmstr-cmp-tvg-other-alts__tile" href="https://formester.com/forms-app-alternative/">
-                <h3 class="fmstr-cmp-tvg-other-alts__name">forms.app alternative</h3>
-                <p class="fmstr-cmp-tvg-other-alts__bestfor">
-                  Best for EU teams who want ISO 27001 hosting in Belgium and AI features.
-                </p>
-                <span class="fmstr-cmp-tvg-other-alts__link">Compare &rarr;</span>
-              </a>
               <a class="fmstr-cmp-tvg-other-alts__tile" href="https://formester.com/zoho-forms-alternative/">
                 <h3 class="fmstr-cmp-tvg-other-alts__name">Zoho Forms alternative</h3>
                 <p class="fmstr-cmp-tvg-other-alts__bestfor">

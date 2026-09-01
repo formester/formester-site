@@ -133,7 +133,7 @@ Ideal for businesses seeking versatility, Formester's **[shopify form plugin](/p
 
 #### Pricing
 
-Formester offers a Free plan to start with for upto 10 forms and 100 submissions per month.\
+Formester offers a Free plan with unlimited forms and unlimited submissions.\
 Additionally, there are two paid plans available, with added upgrades and features:
 
 * Personal Plan: $13/month 

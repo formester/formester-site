@@ -176,9 +176,9 @@ const surveysTemplates = [
 
 const quizzesTemplates = [
   { id: 1, title: 'General Knowledge Quiz', slug: '/templates/general-knowledge-mcq-quiz-27608/' },
-  { id: 2, title: 'Personality Quiz',       slug: '/templates/uncover-your-inner-you-4124/' },
+  { id: 2, title: 'Personality Quiz',       slug: '/templates/fun-personality-quiz/' },
   { id: 3, title: 'Trivia Quiz',            slug: '/templates/funny-trivia-quiz-14818/' },
-  { id: 4, title: 'Magazine Quiz',          slug: '/templates/magazine-quiz-27610/' },
+  { id: 4, title: 'Magazine Quiz',          slug: '/templates/magazine-quiz-template/' },
   { id: 5, title: 'Vocabulary Quiz',        slug: '/templates/vocabulary-quiz-27609/' },
 ]
 

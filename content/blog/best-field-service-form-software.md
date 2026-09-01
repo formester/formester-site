@@ -324,7 +324,7 @@ min-width: 145px;
 </div>
 <p class="fmstr-cmp-bfs-body__block-title">Pricing</p>
 <ul class="fmstr-cmp-bfs-body__pricing">
-<li><strong>Free Plan:</strong> Yes (100 responses/month, unlimited forms)</li>
+<li><strong>Free Plan:</strong> Yes (unlimited forms and responses)</li>
 <li><strong>Starting Price:</strong> $13/month Personal ($12/month annual)</li>
 <li><strong>Most Popular Plan:</strong> $49/month Business ($45/month annual)</li>
 <li><strong>Enterprise Plan:</strong> Custom pricing</li>

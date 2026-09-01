@@ -822,7 +822,7 @@ content: "\2192"; transition: transform .15s ease; display: inline-block;
 <span class="fmstr-cmp-tmpl-rel__arrow">Open</span>
 </a>
 
-<a class="fmstr-cmp-tmpl-rel__card" href="https://formester.com/google-forms-alternative/">
+<a class="fmstr-cmp-tmpl-rel__card" href="/blog/why-formester-is-the-best-google-forms-alternative/">
 <span class="fmstr-cmp-tmpl-rel__chip">Alternative</span>
 <h3 class="fmstr-cmp-tmpl-rel__title">Google Forms alternative</h3>
 <p class="fmstr-cmp-tmpl-rel__body">When Google Forms cannot do what your team needs.</p>

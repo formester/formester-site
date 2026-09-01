@@ -144,7 +144,7 @@ publishedAt: "2026-06-22T05:06:22.803Z"
 <li>Report: completion rates, drop-off pages, and summary analytics, with one-click CSV export.</li>
 </ul>
 
-<p>It is GDPR and CCPA compliant, and the free plan covers 10 forms and 100 responses a month so you can run a real form before you pay.</p>
+<p>It is GDPR and CCPA compliant, and the free plan covers unlimited forms and responses so you can run a real form before you pay.</p>
 
 <h2>Take Control of Your Forms</h2>
 

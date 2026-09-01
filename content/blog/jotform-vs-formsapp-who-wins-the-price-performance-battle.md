@@ -439,7 +439,7 @@ Forms.App's API is not as powerful and flexible as Jotform's API. This means tha
 
 ## The Final Word on Jotform vs. Forms.App
 
-So here's the deal: Jotform packs the power of customization and adaptability, while Forms.App offers targeted solutions for things like appointment scheduling. Both have their A-game, but they aren't perfect – Jotform might trip you up with complex surveys, and Forms.App could miss out on covering the whole spectrum, in such cases you can use Formester, the perfect [forms.app alternative](/forms-app-alternative/)
+So here's the deal: Jotform packs the power of customization and adaptability, while Forms.App offers targeted solutions for things like appointment scheduling. Both have their A-game, but they aren't perfect – Jotform might trip you up with complex surveys, and Forms.App could miss out on covering the whole spectrum, in such cases you can use Formester, the perfect forms.app alternative
 
 Ultimately, the best form builder for you will depend on your specific needs and budget. 
 

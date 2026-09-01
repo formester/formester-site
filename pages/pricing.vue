@@ -89,7 +89,7 @@ const isYearly = ref(true)
 const faqs = [
   {
     header: 'Can I try before I buy?',
-    body: "It's free to set up an account and create a campaign. But to get more than 100 submissions, you'll need to choose a plan.",
+    body: "It's free to set up an account and start collecting responses — every plan, including Free, comes with unlimited forms and unlimited responses. Paid plans add branding removal, integrations, and team features.",
   },
   {
     header: 'Can I change plans at anytime?',
@@ -187,36 +187,18 @@ const jsonLd = {
         price: '0.00',
         priceCurrency: 'USD',
         name: 'Formester FREE subscription',
-        referenceQuantity: {
-          '@type': 'QuantitativeValue',
-          value: '100',
-          unitCode: 'SUB',
-          unitText: 'Submissions',
-        },
       },
       {
         '@type': 'UnitPriceSpecification',
         price: '13.00',
         priceCurrency: 'USD',
         name: 'Formester personal subscription',
-        referenceQuantity: {
-          '@type': 'QuantitativeValue',
-          value: '1000',
-          unitCode: 'SUB',
-          unitText: 'Submissions',
-        },
       },
       {
         '@type': 'UnitPriceSpecification',
         price: '49.00',
         priceCurrency: 'USD',
         name: 'Formester business subscription',
-        referenceQuantity: {
-          '@type': 'QuantitativeValue',
-          value: '15000',
-          unitCode: 'SUB',
-          unitText: 'Submissions',
-        },
       },
     ],
   },

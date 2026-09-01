@@ -40,7 +40,7 @@ publishedAt: "2026-06-22T05:06:22.803Z"
 <tbody>
 <tr><td>Form pages</td><td>Single-page only</td><td>Multi-page forms with one field per page and progress indicators</td></tr>
 <tr><td>File uploads</td><td>Premium-only</td><td>Included on every plan, with admin-set file types, size limits, and camera capture</td></tr>
-<tr><td>Free-plan cap</td><td>Four forms</td><td>10 forms and 100 responses a month</td></tr>
+<tr><td>Free-plan cap</td><td>Four forms</td><td>Unlimited forms and responses</td></tr>
 <tr><td>Payments</td><td>Routes through its own checkout</td><td>Stripe or PayPal fields directly in the form</td></tr>
 <tr><td>Analytics</td><td>Shows submissions</td><td>Completion rate, drop-off pages, and per-field summaries</td></tr>
 </tbody>
@@ -123,6 +123,6 @@ publishedAt: "2026-06-22T05:06:22.803Z"
 <details><summary>What are the limits of Wix's built-in form builder?</summary><div>Wix's native forms are single-page only, file uploads and e-signatures need a premium plan, and the free plan caps you at four forms. For multi-page forms, file uploads, or detailed analytics, a third-party builder is usually the better fit.</div></details>
 <details><summary>How do I add a contact form with file upload to Wix?</summary><div>Build the form in a tool that supports a file upload field, then embed it in Wix with an Embedded HTML element. Formester supports file upload fields with admin-set file types and size limits, plus camera capture, on every plan.</div></details>
 <details><summary>Can I collect payments through a form on my Wix site?</summary><div>Yes. Build a payment form with a Stripe or PayPal field, then embed it in Wix. The visitor pays without leaving your page, and you keep all the submission data in one dashboard.</div></details>
-<details><summary>Is Wix's form builder free?</summary><div>Wix offers a free form builder, but it limits you to four forms and keeps file uploads and e-signatures behind a paid plan. Formester's free plan includes 10 forms, all field types, and embed on any site.</div></details>
+<details><summary>Is Wix's form builder free?</summary><div>Wix offers a free form builder, but it limits you to four forms and keeps file uploads and e-signatures behind a paid plan. Formester's free plan includes unlimited forms and responses, all field types, and embed on any site.</div></details>
 </section>
 

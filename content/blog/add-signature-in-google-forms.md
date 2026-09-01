@@ -17,7 +17,7 @@ updatedAt: "2026-01-28T04:48:32.327Z"
 publishedAt: "2024-05-13T07:37:13.844Z"
 ---
 
-We are living in a time where online documentation and verification is becoming more prevalent with each passing day. Online forms are extensively being used for all sorts of purposes of data collection, [Google Forms being one of the most popular tools](/google-forms-alternative/). 
+We are living in a time where online documentation and verification is becoming more prevalent with each passing day. Online forms are extensively being used for all sorts of purposes of data collection, [Google Forms being one of the most popular tools](/blog/why-formester-is-the-best-google-forms-alternative/). 
 
 Therefore, knowing how to add an electronic signature in Google Forms can be immensely useful. Whether you're [collecting agreements](/templates/employee-laptop-agreement-form-2806/), approvals, or [consent forms](/templates/video-consent-form-2491/), having a signature adds an extra layer of authenticity and verification to your forms.
 

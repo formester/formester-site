@@ -300,9 +300,7 @@
               <p class="fmstr-cmp-mlf-cmp__closing">
                 Microsoft Forms hits an 11-language ceiling per form; Google Forms relies on the respondent's browser to
                 translate. If a form has to ship in more than a handful of languages, or has to render in Arabic or
-                Hebrew, the choice gets straightforward. (See
-                <a href="https://formester.com/microsoft-forms-alternative/">Microsoft Forms alternative</a> ·
-                <a href="https://formester.com/google-forms-alternative/">Google Forms alternative</a>.)
+                Hebrew, the choice gets straightforward.
               </p>
             </div>
           </section>
@@ -860,73 +858,7 @@
                   </span>
                 </a>
 
-                <a href="https://formester.com/microsoft-forms-alternative/" class="fmstr-cmp-mlf-related__row">
-                  <span class="fmstr-cmp-mlf-related__icon" aria-hidden="true">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <rect x="3" y="3" width="8" height="8"></rect>
-                      <rect x="13" y="3" width="8" height="8"></rect>
-                      <rect x="3" y="13" width="8" height="8"></rect>
-                      <rect x="13" y="13" width="8" height="8"></rect>
-                    </svg>
-                  </span>
-                  <span class="fmstr-cmp-mlf-related__label">Microsoft Forms alternative</span>
-                  <span class="fmstr-cmp-mlf-related__arrow" aria-hidden="true">
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M5 12h14M13 6l6 6-6 6"></path>
-                    </svg>
-                  </span>
-                </a>
 
-                <a href="https://formester.com/google-forms-alternative/" class="fmstr-cmp-mlf-related__row">
-                  <span class="fmstr-cmp-mlf-related__icon" aria-hidden="true">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M14 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-                      <path d="M9 12h6M9 16h4M9 8h6"></path>
-                    </svg>
-                  </span>
-                  <span class="fmstr-cmp-mlf-related__label">Google Forms alternative</span>
-                  <span class="fmstr-cmp-mlf-related__arrow" aria-hidden="true">
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M5 12h14M13 6l6 6-6 6"></path>
-                    </svg>
-                  </span>
-                </a>
               </div>
             </div>
           </section>

@@ -230,7 +230,7 @@ vertical-align: top;
 <td data-label="Best for">All-rounder: web + offline + payments</td>
 <td data-label="Offline-first?">Web with cached forms</td>
 <td data-label="Auto-sync">Yes, on reconnect</td>
-<td data-label="Free tier">Yes (100 responses)</td>
+<td data-label="Free tier">Yes (unlimited responses)</td>
 <td data-label="Cheapest paid">$13/mo Personal</td>
 </tr>
 <tr>
@@ -542,7 +542,7 @@ min-width: 145px;
 
 <p class="fmstr-cmp-bof-body__block-title">Pricing</p>
 <ul class="fmstr-cmp-bof-body__pricing">
-<li><strong>Free Plan:</strong> Yes (100 responses/month, unlimited forms)</li>
+<li><strong>Free Plan:</strong> Yes (unlimited forms and responses)</li>
 <li><strong>Starting Price:</strong> $13/month Personal ($12/month annual)</li>
 <li><strong>Most Popular Plan:</strong> $49/month Business ($45/month annual)</li>
 <li><strong>Enterprise Plan:</strong> Custom pricing</li>
@@ -1020,7 +1020,7 @@ font-family: inherit; color: var(--c-fg-1);
 <span class="fmstr-cmp-bof-rel__arrow">&rarr;</span>
 </a>
 
-<a class="fmstr-cmp-bof-rel__card" href="/google-forms-alternative/">
+<a class="fmstr-cmp-bof-rel__card" href="/blog/why-formester-is-the-best-google-forms-alternative/">
 <span class="fmstr-cmp-bof-rel__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg></span>
 <div class="fmstr-cmp-bof-rel__text"><h3 class="fmstr-cmp-bof-rel__title">Google Forms alternative</h3><p class="fmstr-cmp-bof-rel__sub">Why teams switch from Google Forms</p></div>
 <span class="fmstr-cmp-bof-rel__arrow">&rarr;</span>

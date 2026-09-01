@@ -988,7 +988,7 @@
                 <p class="fmstr-cmp-lfm-more-tools__desc">Type a prompt, get a form in 30 seconds.</p></a
               ><a
                 class="fmstr-cmp-lfm-more-tools__card"
-                href="https://formester.com/templates/job-application-form-template/"
+                href="https://formester.com/templates/job-application-form-2450/"
                 ><span class="fmstr-cmp-lfm-more-tools__icon" aria-hidden="true"
                   ><svg
                     width="20"

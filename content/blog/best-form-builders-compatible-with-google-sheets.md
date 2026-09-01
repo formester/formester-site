@@ -213,7 +213,7 @@ vertical-align: middle;
 <div class="fmstr-cmp-bfg-tldr__card">
 <p class="fmstr-cmp-bfg-tldr__label" id="fmstr-cmp-bfg-tldr-label">Quick answer</p>
 <ul class="fmstr-cmp-bfg-tldr__list">
-<li><span class="fmstr-cmp-bfg-tldr__tag">Best overall</span><strong><a href="https://formester.com/">Formester</a></strong>, native Google Sheets sync, 100 responses/month free, no Apps Script.</li>
+<li><span class="fmstr-cmp-bfg-tldr__tag">Best overall</span><strong><a href="https://formester.com/">Formester</a></strong>, native Google Sheets sync, unlimited responses free, no Apps Script.</li>
 <li><span class="fmstr-cmp-bfg-tldr__tag">Best free</span><strong><a href="https://docs.google.com/forms/">Google Forms</a></strong>, free forever, auto-builds the sheet, limited logic.</li>
 <li><span class="fmstr-cmp-bfg-tldr__tag">Best technical</span><strong><a href="https://www.fillout.com/">Fillout</a></strong>, 1,000 responses/month free, native Sheets, Airtable and Notion sync in one tool.</li>
 </ul>
@@ -558,7 +558,7 @@ transition: background .15s ease;
 
 <div class="fmstr-cmp-bfg-body__row">
 <p class="fmstr-cmp-bfg-body__block-title">Plan needed</p>
-<p class="fmstr-cmp-bfg-body__p">Free plan covers 100 responses/month with the integration on. Personal at $12/month lifts that to 1,000 responses and removes branding.</p>
+<p class="fmstr-cmp-bfg-body__p">Free plan covers unlimited responses with the integration on. Personal at $12/month removes Formester branding and adds conditional logic.</p>
 </div>
 
 <p class="fmstr-cmp-bfg-body__verdict"><strong>Verdict:</strong> The combination of native sync, two-way auto-fill, <a href="https://formester.com/ai-form-generator/">AI form generation from a prompt, PDF or URL</a>, and a free tier that includes the integration is the cleanest setup on this list. Pick it if you don't want to pay for Zapier on top of your form tool.</p>
@@ -581,7 +581,7 @@ transition: background .15s ease;
 <p class="fmstr-cmp-bfg-body__p">Free for personal Google accounts. Workspace plans start at <a href="https://workspace.google.com/pricing.html">$6/user/month</a> for admin features, but the Sheets connection itself stays free.</p>
 </div>
 
-<p class="fmstr-cmp-bfg-body__verdict"><strong>Verdict:</strong> Unbeatable on price and setup time. The trade-offs hit when you need conditional logic deeper than section branching, file uploads on a personal account, or any styling beyond a header image. If you need more than a survey, see our <a href="https://formester.com/google-forms-alternative/">Google Forms alternative</a> guide.</p>
+<p class="fmstr-cmp-bfg-body__verdict"><strong>Verdict:</strong> Unbeatable on price and setup time. The trade-offs hit when you need conditional logic deeper than section branching, file uploads on a personal account, or any styling beyond a header image. If you need more than a survey, see our <a href="/blog/why-formester-is-the-best-google-forms-alternative/">Google Forms alternative</a> guide.</p>
 </article>
 
 <article class="fmstr-cmp-bfg-body__tool">
@@ -767,7 +767,7 @@ transition: background .15s ease;
 <div class="fmstr-cmp-tmpl-midcta__inner">
 <span class="fmstr-cmp-tmpl-midcta__eyebrow">Native Sheets sync</span>
 <h2 class="fmstr-cmp-tmpl-midcta__h2" id="fmstr-cmp-tmpl-midcta-h2">Connect any form to Google Sheets, without Zapier in the middle</h2>
-<p class="fmstr-cmp-tmpl-midcta__body">Five-minute setup, two-way sync, free plan includes 100 responses/month. Spam control and conditional logic built in.</p>
+<p class="fmstr-cmp-tmpl-midcta__body">Five-minute setup, two-way sync, free plan includes unlimited responses. Spam control and conditional logic built in.</p>
 <a class="fmstr-cmp-tmpl-midcta__cta" href="https://app.formester.com/users/sign_up" style="background: #7f56d9 !important; color: #ffffff !important; border-color: #7f56d9 !important; text-decoration: none !important;">Start free on Formester</a>
 <p class="fmstr-cmp-tmpl-midcta__strip">Free forever plan<span>&bull;</span>No credit card<span>&bull;</span>Setup in 2 minutes</p>
 </div>
@@ -830,7 +830,7 @@ text-align: left !important;
 
 <details class="fmstr-cmp-bfg-faq__item">
 <summary>Is there a free form builder with a real Google Sheets integration?</summary>
-<div class="fmstr-cmp-bfg-faq__answer">Yes, several. Formester's free plan includes the native Sheets integration on 100 responses/month. <a href="https://www.fillout.com/pricing">Fillout's free plan</a> covers 1,000 responses with native sync. Google Forms is free with unlimited responses, capped by Drive storage and the <a href="https://support.google.com/drive/answer/37603">10 million cell limit</a> in Sheets. Tally's free plan covers unlimited forms with the native connector.</div>
+<div class="fmstr-cmp-bfg-faq__answer">Yes, several. Formester's free plan includes the native Sheets integration with unlimited responses. <a href="https://www.fillout.com/pricing">Fillout's free plan</a> covers 1,000 responses with native sync. Google Forms is free with unlimited responses, capped by Drive storage and the <a href="https://support.google.com/drive/answer/37603">10 million cell limit</a> in Sheets. Tally's free plan covers unlimited forms with the native connector.</div>
 </details>
 
 <details class="fmstr-cmp-bfg-faq__item">
@@ -935,7 +935,7 @@ content: "\2192"; transition: transform .15s ease; display: inline-block;
 </a>
 
 
-<a class="fmstr-cmp-tmpl-rel__card" href="/google-forms-alternative/">
+<a class="fmstr-cmp-tmpl-rel__card" href="/blog/why-formester-is-the-best-google-forms-alternative/">
 <span class="fmstr-cmp-tmpl-rel__chip">Feature</span>
 <h3 class="fmstr-cmp-tmpl-rel__title">Google Forms alternative</h3>
 <p class="fmstr-cmp-tmpl-rel__body">7 tools that go beyond a survey</p>

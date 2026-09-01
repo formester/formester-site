@@ -768,7 +768,7 @@
                       <td>
                         <span class="fmstr-cmp-mdy-vs__yes"
                           >Native, see
-                          <a href="https://formester.com/features/online-order-form/">online order form</a></span
+                          <a href="https://formester.com/features/product-order-form/">online order form</a></span
                         >
                       </td>
                     </tr>

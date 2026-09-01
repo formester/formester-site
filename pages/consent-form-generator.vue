@@ -930,9 +930,9 @@ const c9_itemList = [
     id: 3028,
     title: 'PDF export of signed records',
     description:
-      'Every signed consent renders as a formatted PDF on Business and above.\n\n**[Learn more-->](/features/pdf-export/)**',
+      'Every signed consent renders as a formatted PDF on Business and above.\n\n**[Learn more-->](/features/export-form-submission-pdf/)**',
     description_markdown:
-      'Every signed consent renders as a formatted PDF on Business and above.\n\n**[Learn more-->](/features/pdf-export/)**',
+      'Every signed consent renders as a formatted PDF on Business and above.\n\n**[Learn more-->](/features/export-form-submission-pdf/)**',
     icon: null,
     cardImage: null,
   },

@@ -710,7 +710,7 @@
                       <td>
                         <span class="fmstr-cmp-ghl-vs__yes"
                           >Native Stripe and PayPal, see
-                          <a href="https://formester.com/features/online-order-form/">online order form</a></span
+                          <a href="https://formester.com/features/product-order-form/">online order form</a></span
                         >
                       </td>
                     </tr>
@@ -724,7 +724,7 @@
                       <td><span class="fmstr-cmp-ghl-vs__no">No</span></td>
                       <td>
                         <span class="fmstr-cmp-ghl-vs__yes"
-                          >Yes, see <a href="https://formester.com/ai-form-builder/">AI form builder</a></span
+                          >Yes, see <a href="https://formester.com/ai-form-generator/">AI form builder</a></span
                         >
                       </td>
                     </tr>
