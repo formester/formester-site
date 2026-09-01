@@ -109,3 +109,6 @@ stories
 public/design-files
 .playwright-mcp
 .vercel
+
+# Content-ops working files (plans, reviews, cover assets) stay local; finals live in the CMS / blog md
+.claude/content-ops/

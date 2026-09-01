@@ -70,8 +70,27 @@ These are words and patterns that read as AI-written. Never use them, and flag t
   keep paragraphs 2 to 4 sentences by default. Once or twice is emphasis; constant use
   reads as AI content marketing.
 
+- **Format announcers:** a standalone sentence that describes the shape of the next block
+  instead of starting it: "Here is how it works, step by step.", "Let's break it down",
+  "Here's how it works". Delete it and start the content; at most a plain lead-in
+  ("Here's how:"). Avoid the phrase "step by step" everywhere, headings included.
+- **Vague intensifiers:** "all the time", "more than you think", "more often than you'd
+  think", "constantly" with no source. Cut it, or say who and why specifically.
+- **Meta-commentary about other content:** "most guides get this wrong", "most articles
+  skip this", "nobody talks about". Nobody checked most guides; it's the article marketing
+  itself. State the distinction directly instead of posturing over competitors.
+- **The comma-pivot twist sentence:** [relatable observation], and [contrarian turn].
+  ("These two get mixed up all the time, and most guides answer the wrong one.") Rewrite
+  as two plain sentences that say the useful thing: "People mix these up, and the fix is
+  different for each. Figure out which one you have first."
+
 The pattern behind all of these: a punchy, clever-sounding phrase where a plain sentence
 would do. When a line feels quotable, rewrite it flat.
+
+**The across-the-desk test** (companion to the seventh-grader test): would you say this
+sentence out loud to a coworker across the desk? You'd never say "most guides answer the
+wrong one" out loud. You'd say "figure out which one you actually have first." Sentences
+that perform insight or talk about the content instead of being the content fail this test.
 
 ## No quotation marks in body copy (Ankit's feedback, Sep 2026)
 
@@ -109,7 +128,8 @@ sentence so no marker is needed.
 
 1. Search the draft for "—" and "–". Count must be zero.
    Also grep for the Claude-isms above (land/lands, honest, genuinely, heavy lifting,
-   "N rules/decisions/views/walls" count setups) and rewrite every hit.
+   "N rules/decisions/views/walls" count setups, "step by step", "all the time",
+   "more than you think", "most guides", "nobody talks about") and rewrite every hit.
 2. Read the intro out loud. Does it state the reader's problem in plain words by sentence two?
 3. Find your three fanciest sentences. Rewrite each so a seventh grader gets it in one read.
 4. Every section: does it say why before how?
