@@ -120,7 +120,7 @@ text-transform: uppercase; border: 1px solid var(--c-edge); margin: 0 0 14px;
 </tr>
 </thead>
 <tbody>
-<tr class="is-pick"><th><a href="https://formester.com/test-creator/">Formester</a><span class="fmstr-cmp-tmct-cmp__pill">AI-first</span></th><td data-h="AI generation">Yes (prompt or PDF)</td><td data-h="Auto-grading">Per-question, weighted, negative marking</td><td data-h="Timer + randomization">Yes</td><td data-h="Free plan caps">10 forms, 100 responses/mo</td><td data-h="Best for">AI-first builds with branding and analytics</td></tr>
+<tr class="is-pick"><th><a href="https://formester.com/test-creator/">Formester</a><span class="fmstr-cmp-tmct-cmp__pill">AI-first</span></th><td data-h="AI generation">Yes (prompt or PDF)</td><td data-h="Auto-grading">Per-question, weighted, negative marking</td><td data-h="Timer + randomization">Yes</td><td data-h="Free plan caps">Unlimited forms and responses</td><td data-h="Best for">AI-first builds with branding and analytics</td></tr>
 <tr><th>Google Forms</th><td data-h="AI generation">No</td><td data-h="Auto-grading">Multiple choice only</td><td data-h="Timer + randomization">Add-on only</td><td data-h="Free plan caps">Unlimited with Google account</td><td data-h="Best for">Teachers already on Google Workspace</td></tr>
 <tr><th>FlexiQuiz</th><td data-h="AI generation">Limited</td><td data-h="Auto-grading">Yes</td><td data-h="Timer + randomization">Yes</td><td data-h="Free plan caps">3 quizzes, 100 attempts/mo</td><td data-h="Best for">Trainers needing deep reporting</td></tr>
 <tr><th>EasyTestMaker</th><td data-h="AI generation">No</td><td data-h="Auto-grading">Yes (online)</td><td data-h="Timer + randomization">Paid only</td><td data-h="Free plan caps">25 questions, 100 results/mo</td><td data-h="Best for">Teachers who also need printable tests</td></tr>
@@ -178,7 +178,7 @@ Where Formester separates from the rest of this list: AI translation across [180
 - No direct Google Classroom, Moodle, or Canvas LMS export (use CSV or REST API).
 - No webcam proctoring; anti-cheat is limited to timers, randomization, and one-response-per-user.
 
-**Pricing:** Free plan: 10 forms, 100 responses/month, AI quiz generation included. Personal $12/mo (annual). Business $45/mo (annual) adds API, PDF exports, 50GB storage, and team collaboration. [See pricing](/pricing/).
+**Pricing:** Free plan: unlimited forms and responses, AI quiz generation included. Personal $12/mo (annual). Business $45/mo (annual) adds API, PDF exports, 50GB storage, and team collaboration. [See pricing](/pricing/).
 
 ### 2. Google Forms (best free option inside Google Workspace)
 ![a mockup of google forms](https://formester-strapi.s3.ap-south-1.amazonaws.com/google_forms_659df8ce54.png)
@@ -425,7 +425,7 @@ The shift across this list in 2026 is AI question generation. Half the tools we 
 
 The other half are still in the manual-builder era and lose teachers in week one.
 
-[Formester](/test-creator/) sits at the AI-first end with a real free plan (10 forms, 100 responses a month, AI quiz generation included), full branding, per-question analytics, and a [REST API](https://docs.formester.com/formester-api.html) and [MCP server](https://docs.formester.com/formester-mcp-server.html) for teams who want submissions piped into their stack. If you are starting a 2026 test workflow from scratch, that is where to start.
+[Formester](/test-creator/) sits at the AI-first end with a real free plan (unlimited forms and responses, AI quiz generation included), full branding, per-question analytics, and a [REST API](https://docs.formester.com/formester-api.html) and [MCP server](https://docs.formester.com/formester-mcp-server.html) for teams who want submissions piped into their stack. If you are starting a 2026 test workflow from scratch, that is where to start.
 
 [Build your first AI-generated multiple choice test on Formester's free plan](https://app.formester.com/users/sign_up/).
 
@@ -493,7 +493,7 @@ transition: transform .15s ease, background-color .15s ease;
 
 <details class="fmstr-cmp-tmct-faq__item">
 <summary>What is the best free multiple choice test maker?</summary>
-<div class="fmstr-cmp-tmct-faq__answer">For an AI-first build, <a href="https://formester.com/pricing/">Formester&rsquo;s free plan</a> (10 forms, 100 responses a month, AI generation included). For teachers inside Google Workspace, Google Forms. For students self-quizzing, Revisely or Quizgecko.</div>
+<div class="fmstr-cmp-tmct-faq__answer">For an AI-first build, <a href="https://formester.com/pricing/">Formester&rsquo;s free plan</a> (unlimited forms and responses, AI generation included). For teachers inside Google Workspace, Google Forms. For students self-quizzing, Revisely or Quizgecko.</div>
 </details>
 
 <details class="fmstr-cmp-tmct-faq__item">
