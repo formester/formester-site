@@ -135,9 +135,11 @@ Here is a concrete example. A clinic hands every new patient a four-page intake 
 
 Starting from scratch instead of a PDF? Skip the upload and describe your form in plain words to the [AI form generator](/ai-form-generator/). Same builder, same sharing options.
 
-<div class="cta">
-<p>Upload a PDF and watch it become a working online form in minutes.</p>
-<a href="https://app.formester.com/users/sign_up">Try Formester free</a>
+<div style="background:linear-gradient(135deg,#7f56d9 0%,#6941c6 100%);padding:32px 28px;margin:36px 0;border-radius:12px;color:#ffffff;font-family:inherit;text-align:center;">
+<p style="margin:0 0 12px 0;font-size:18px;font-weight:700;color:#ffffff;font-family:inherit;">Turn your next PDF into an online form</p>
+<p style="margin:0 0 20px 0;font-size:14px;line-height:1.55;color:#f4ebff;font-family:inherit;">Upload the PDF, let AI detect the fields, and share a mobile-friendly form by link or QR code. Each submission can still generate a filled PDF for your records.</p>
+<a href="https://app.formester.com/users/sign_up" style="display:inline-block;padding:12px 24px;background:#ffffff;color:#6941c6;text-decoration:none;font-weight:700;border-radius:9999px;font-family:inherit;">Try Formester free</a>
+<p style="margin:12px 0 0 0;font-size:13px;color:#e9d7fe;font-family:inherit;">Free forever · No credit card · 56,000+ teams</p>
 </div>
 
 <section class="faq">
