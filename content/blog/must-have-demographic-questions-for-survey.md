@@ -656,7 +656,7 @@ border-radius: 6px;
 <div class="fmstr-cmp-tmpl-midcta__inner">
 <span class="fmstr-cmp-tmpl-midcta__eyebrow">Survey builder</span>
 <h2 class="fmstr-cmp-tmpl-midcta__h2" id="fmstr-cmp-tmpl-midcta-h2">Ask the right demographic questions, without survey-tool sprawl</h2>
-<p class="fmstr-cmp-tmpl-midcta__body">Multi-step forms, conditional logic, templates for every survey type. Free plan includes 100 responses/month.</p>
+<p class="fmstr-cmp-tmpl-midcta__body">Multi-step forms, conditional logic, templates for every survey type. Free plan includes unlimited responses.</p>
 <a class="fmstr-cmp-tmpl-midcta__cta" href="https://app.formester.com/users/sign_up" style="background: #7f56d9 !important; color: #ffffff !important; border-color: #7f56d9 !important; text-decoration: none !important;">Start free on Formester</a>
 <p class="fmstr-cmp-tmpl-midcta__strip">Free forever plan<span>&bull;</span>No credit card<span>&bull;</span>Setup in 2 minutes</p>
 </div>
@@ -852,7 +852,7 @@ content: "\2192"; transition: transform .15s ease; display: inline-block;
 </div>
 <div class="fmstr-cmp-demo-rel__grid">
 
-<a class="fmstr-cmp-demo-rel__card" href="https://formester.com/survey-maker/">
+<a class="fmstr-cmp-demo-rel__card" href="https://formester.com/online-survey-maker/">
 <span class="fmstr-cmp-demo-rel__chip">Formester</span>
 <h3 class="fmstr-cmp-demo-rel__title">No-code survey maker</h3>
 <p class="fmstr-cmp-demo-rel__body">Drag and drop builder with native conditional logic and "Prefer not to say" on every field.</p>

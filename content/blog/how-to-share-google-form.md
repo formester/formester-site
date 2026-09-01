@@ -68,7 +68,7 @@ Google Forms is great for simple surveys and quizzes. However, it can feel limit
 
 ### A Better Alternative: Formester
 
-Formester is a free **[Google Forms alternative](/google-forms-alternative/)** that solves these problems:
+Formester is a free **[Google Forms alternative](/blog/why-formester-is-the-best-google-forms-alternative/)** that solves these problems:
 
 - Create **[custom form URLs](/features/custom-subdomains-for-form-url/)** for easy sharing.  
 - Generate **QR codes** so people can fill forms with a quick scan.  

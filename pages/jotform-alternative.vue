@@ -364,7 +364,7 @@
                     <tr>
                       <td class="fmstr-cmp-jot-free__attr">MCP server for AI agents</td>
                       <td class="fmstr-cmp-jot-free__cell--formester">Yes (Business)</td>
-                      <td>No</td>
+                      <td>Yes (remote MCP at mcp.jotform.com)</td>
                     </tr>
                   </tbody>
                 </table>
@@ -549,7 +549,7 @@
                     <tr>
                       <td class="fmstr-cmp-jot-paid__attr">MCP server (Claude / ChatGPT / agents)</td>
                       <td class="fmstr-cmp-jot-paid__cell--formester">Yes (Business)</td>
-                      <td>No</td>
+                      <td>Yes (remote MCP)</td>
                     </tr>
                     <tr>
                       <td class="fmstr-cmp-jot-paid__attr">E-signature</td>
@@ -705,7 +705,7 @@
                   <p class="fmstr-cmp-jot-lio__body">
                     Native HubSpot, Google Sheets, Slack, Stripe, PayPal, Calendly, n8n, Pabbly, OttoKit, GA4, and GTM.
                     Webhooks fire on every plan. REST API v2 on Business plus an MCP server that plugs into Claude or
-                    ChatGPT. Jotform has 100+ integrations and Jotform Sign, but no MCP server.
+                    ChatGPT. Jotform has 100+ integrations, Jotform Sign, and its own remote MCP server too — the difference is scope, not existence.
                   </p>
                   <div class="fmstr-cmp-jot-lio__compare">
                     <div class="fmstr-cmp-jot-lio__row">
@@ -743,7 +743,7 @@
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
                       <span class="fmstr-cmp-jot-lio__value"
-                        >100+ integrations, Jotform Sign, 40+ payment gateways, no MCP</span
+                        >100+ integrations, Jotform Sign, 40+ payment gateways, remote MCP server</span
                       >
                     </div>
                   </div>
@@ -1259,27 +1259,6 @@
               </header>
 
               <div class="fmstr-cmp-jot-other-alts__grid">
-                <a class="fmstr-cmp-jot-other-alts__tile" href="https://formester.com/google-forms-alternative/">
-                  <h3 class="fmstr-cmp-jot-other-alts__name">Google Forms alternative</h3>
-                  <p class="fmstr-cmp-jot-other-alts__bestfor">
-                    Best for free internal Google Workspace use with Sheets as the destination.
-                  </p>
-                  <span class="fmstr-cmp-jot-other-alts__link">Compare →</span>
-                </a>
-                <a class="fmstr-cmp-jot-other-alts__tile" href="https://formester.com/forms-app-alternative/">
-                  <h3 class="fmstr-cmp-jot-other-alts__name">forms.app alternative</h3>
-                  <p class="fmstr-cmp-jot-other-alts__bestfor">
-                    Best for EU teams who want ISO 27001 hosting in Belgium and AI features.
-                  </p>
-                  <span class="fmstr-cmp-jot-other-alts__link">Compare →</span>
-                </a>
-                <a class="fmstr-cmp-jot-other-alts__tile" href="https://formester.com/microsoft-forms-alternative/">
-                  <h3 class="fmstr-cmp-jot-other-alts__name">Microsoft Forms alternative</h3>
-                  <p class="fmstr-cmp-jot-other-alts__bestfor">
-                    Best for Microsoft 365 teams who already pay for the suite.
-                  </p>
-                  <span class="fmstr-cmp-jot-other-alts__link">Compare →</span>
-                </a>
                 <a class="fmstr-cmp-jot-other-alts__tile" href="https://formester.com/zoho-forms-alternative/">
                   <h3 class="fmstr-cmp-jot-other-alts__name">Zoho Forms alternative</h3>
                   <p class="fmstr-cmp-jot-other-alts__bestfor">

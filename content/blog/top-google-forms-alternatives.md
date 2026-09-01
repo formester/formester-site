@@ -75,7 +75,7 @@ Mobile-friendly layouts for better response rates
 
 ### 1) [Formester](/)
 
-Formester stands as the **[best free Google Forms Alternative](/google-forms-alternative/)** due to its minimal yet powerful nature. It has been designed to provide users with a highly customisable form-building experience and **[robust analytics](/features/form-analytics/)** capabilities. Whether you're collecting data, conducting surveys, or processing payments, Formester is your one-stop solution.
+Formester stands as the **[best free Google Forms Alternative](/blog/why-formester-is-the-best-google-forms-alternative/)** due to its minimal yet powerful nature. It has been designed to provide users with a highly customisable form-building experience and **[robust analytics](/features/form-analytics/)** capabilities. Whether you're collecting data, conducting surveys, or processing payments, Formester is your one-stop solution.
 
 ![Formester Website Home Page Image](https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_0c02e64a2c.png "Formester")
 
@@ -89,7 +89,7 @@ Formester stands as the **[best free Google Forms Alternative](/google-forms-alt
 
 #### Pricing Plans
 
-* **Free:** The Free plan lets you create 10 forms with a limit of 100 submissions per month.
+* **Free:** The Free plan includes unlimited forms and unlimited submissions.
 * **Personal**: Priced at $12 per month, the plan is perfect for personal use, offering customised branding, payment processing  and unlimited forms and surveys.
 * **Business:** Priced at 45$ per month, the business plan is tailored for large organisations and provides API Access along with a custom domain.
 

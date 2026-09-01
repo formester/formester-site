@@ -1525,60 +1525,6 @@
             </header>
 
             <div class="fmstr-cmp-qua-other-alts__grid">
-              <a class="fmstr-cmp-qua-other-alts__tile" href="https://formester.com/google-forms-alternative/">
-                <h3 class="fmstr-cmp-qua-other-alts__name">
-                  <span style="display: inline-flex; align-items: center; gap: 8px"
-                    ><img
-                      src="https://ssl.gstatic.com/docs/forms/device_home/android_192.png"
-                      alt=""
-                      width="20"
-                      height="20"
-                      loading="lazy"
-                      style="width: 20px; height: 20px; border-radius: 4px; display: block; flex-shrink: 0"
-                    />Google Forms alternative</span
-                  >
-                </h3>
-                <p class="fmstr-cmp-qua-other-alts__bestfor">
-                  Best for free internal Google Workspace use with Sheets as the destination.
-                </p>
-                <span class="fmstr-cmp-qua-other-alts__link">Compare &rarr;</span>
-              </a>
-              <a class="fmstr-cmp-qua-other-alts__tile" href="https://formester.com/microsoft-forms-alternative/">
-                <h3 class="fmstr-cmp-qua-other-alts__name">
-                  <span style="display: inline-flex; align-items: center; gap: 8px"
-                    ><img
-                      src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://forms.office.com&amp;size=64"
-                      alt=""
-                      width="20"
-                      height="20"
-                      loading="lazy"
-                      style="width: 20px; height: 20px; border-radius: 4px; display: block; flex-shrink: 0"
-                    />Microsoft Forms alternative</span
-                  >
-                </h3>
-                <p class="fmstr-cmp-qua-other-alts__bestfor">
-                  Best for Microsoft 365 teams who already pay for the suite.
-                </p>
-                <span class="fmstr-cmp-qua-other-alts__link">Compare &rarr;</span>
-              </a>
-              <a class="fmstr-cmp-qua-other-alts__tile" href="https://formester.com/forms-app-alternative/">
-                <h3 class="fmstr-cmp-qua-other-alts__name">
-                  <span style="display: inline-flex; align-items: center; gap: 8px"
-                    ><img
-                      src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://forms.app&amp;size=64"
-                      alt=""
-                      width="20"
-                      height="20"
-                      loading="lazy"
-                      style="width: 20px; height: 20px; border-radius: 4px; display: block; flex-shrink: 0"
-                    />forms.app alternative</span
-                  >
-                </h3>
-                <p class="fmstr-cmp-qua-other-alts__bestfor">
-                  Best for EU teams that want EU data residency and built-in AI features.
-                </p>
-                <span class="fmstr-cmp-qua-other-alts__link">Compare &rarr;</span>
-              </a>
               <a class="fmstr-cmp-qua-other-alts__tile" href="https://formester.com/zoho-forms-alternative/">
                 <h3 class="fmstr-cmp-qua-other-alts__name">
                   <span style="display: inline-flex; align-items: center; gap: 8px"

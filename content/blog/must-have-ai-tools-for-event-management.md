@@ -43,7 +43,7 @@ Guests complete the registration process fast. You collect clean event data insi
 
 It gives you a smooth start and saves you hours of manual work.
 
->**Pricing:** Free plan available upto 10 forms and 100 submissions per month, paid plan starts at 13$/mo. 
+>**Pricing:** Free plan with unlimited forms and submissions, paid plan starts at $13/mo. 
 
 ### 2. AI Tool for Content Creation and Marketing - Jasper
 ![a screenshot of jasper](https://formester-strapi.s3.ap-south-1.amazonaws.com/a_screenshot_of_jasper_2fadbfcd28.png)

@@ -261,7 +261,7 @@ text-transform: uppercase; border: 1px solid var(--c-bg-edge); margin: 0 0 14px 
 <tr><th><a href="https://zapier.com/pricing">Zapier</a></th><td data-h="Free tier">100 tasks/mo</td><td data-h="Real-time">1 to 2 min delay on free</td><td data-h="Two-way sync">No</td><td data-h="Setup time">10 min</td><td data-h="Best for">Multi-step automations beyond Sheets</td></tr>
 <tr><th><a href="https://www.make.com/en/pricing">Make</a></th><td data-h="Free tier">1,000 ops/mo</td><td data-h="Real-time">15 min polling on free</td><td data-h="Two-way sync">No</td><td data-h="Setup time">15 min</td><td data-h="Best for">Cheaper Zapier alternative at volume</td></tr>
 <tr><th><a href="https://sheetmonkey.io/pricing">Sheet Monkey</a> or <a href="https://www.leadtosheet.com/">LeadToSheet</a></th><td data-h="Free tier">Free with caps</td><td data-h="Real-time">Real-time</td><td data-h="Two-way sync">No</td><td data-h="Setup time">10 min</td><td data-h="Best for">Direct webhook, no Zap chain</td></tr>
-<tr class="is-pick"><th>Formester embed + native Sheets</th><td data-h="Free tier">Free, 100 responses/mo</td><td data-h="Real-time">Real-time</td><td data-h="Two-way sync">Yes</td><td data-h="Setup time">12 min</td><td data-h="Best for">Anyone burned by the reconnect bug</td></tr>
+<tr class="is-pick"><th>Formester embed + native Sheets</th><td data-h="Free tier">Free, unlimited responses</td><td data-h="Real-time">Real-time</td><td data-h="Two-way sync">Yes</td><td data-h="Setup time">12 min</td><td data-h="Best for">Anyone burned by the reconnect bug</td></tr>
 </tbody>
 </table>
 </div>
@@ -458,7 +458,7 @@ border-radius: 6px;
 <h3 class="fmstr-cmp-tmpl-steps__h3">Skip Squarespace Forms, embed a Formester form</h3>
 </div>
 <p class="fmstr-cmp-tmpl-steps__lede">Every method above starts from the same broken assumption: that Squarespace's form block is the right collection layer. Cleaner pattern: embed a <a href="https://formester.com/">Formester</a> form inside a Squarespace Code Block and use Formester's native Google Sheets integration. The form still lives on your Squarespace page. The submission flow no longer touches Squarespace's storage layer.</p>
-<p class="fmstr-cmp-tmpl-steps__meta"><span><strong>Free tier:</strong> <a href="https://formester.com/pricing/">10 forms, 100 responses per month</a>, Sheets integration included on every plan. Paid starts at $13 per month.</span></p>
+<p class="fmstr-cmp-tmpl-steps__meta"><span><strong>Free tier:</strong> <a href="https://formester.com/pricing/">Unlimited forms and responses</a>, Sheets integration included on every plan. Paid starts at $13 per month.</span></p>
 <ol class="fmstr-cmp-tmpl-steps__list">
 <li class="fmstr-cmp-tmpl-steps__item"><span class="fmstr-cmp-tmpl-steps__num" aria-hidden="true">1</span><div class="fmstr-cmp-tmpl-steps__main"><p class="fmstr-cmp-tmpl-steps__body">Build the form in Formester. Pick the Google Sheets integration in the <strong>Automate</strong> tab, connect the Google account, pick the Sheet.</p></div></li>
 <li class="fmstr-cmp-tmpl-steps__item"><span class="fmstr-cmp-tmpl-steps__num" aria-hidden="true">2</span><div class="fmstr-cmp-tmpl-steps__main"><p class="fmstr-cmp-tmpl-steps__body">In Formester, open <strong>Share, Embed</strong>. Copy the embed code (toggle auto-height off if you want a fixed frame).</p></div></li>

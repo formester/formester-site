@@ -282,7 +282,7 @@ letter-spacing: -.02em; margin: 0; color: var(--c-fg-1);
 </div>
 </div>
 
-<p class="fmstr-cmp-tmpl-cmp__caption">If you are sending the form to people inside your Workspace and you do not care how it looks, Google Forms is free and works. If the visitor's first impression matters, <a href="https://formester.com/features/share-embed/">embed your form on any site</a> with Formester, or read the deeper <a href="https://formester.com/blog/google-forms-vs-jotform/">Google Forms vs Jotform comparison</a>.</p>
+<p class="fmstr-cmp-tmpl-cmp__caption">If you are sending the form to people inside your Workspace and you do not care how it looks, Google Forms is free and works. If the visitor's first impression matters, <a href="https://formester.com/features/embed-forms/">embed your form on any site</a> with Formester, or read the deeper <a href="https://formester.com/blog/google-forms-vs-jotform-the-comparison-everyone-asked-for/">Google Forms vs Jotform comparison</a>.</p>
 
 </div>
 </section>
@@ -464,7 +464,7 @@ padding: 12px 14px; background: #fafafb; border: 1px solid var(--c-border); bord
 <span class="fmstr-cmp-tmpl-steps__num" aria-hidden="true">3</span>
 <div class="fmstr-cmp-tmpl-steps__main">
 <h4 class="fmstr-cmp-tmpl-steps__title">Set the width and height</h4>
-<p class="fmstr-cmp-tmpl-steps__body">Default is 640 by 480. Most layouts need at least 700 by 1200 for a single-page form. Underestimate the height and the form scrolls inside its own box, which kills completion rates. Common embeds include simple contact forms and <a href="https://formester.com/blog/how-to-create-a-quiz-in-google-forms/">quizzes built in Google Forms</a>.</p>
+<p class="fmstr-cmp-tmpl-steps__body">Default is 640 by 480. Most layouts need at least 700 by 1200 for a single-page form. Underestimate the height and the form scrolls inside its own box, which kills completion rates. Common embeds include simple contact forms and <a href="https://formester.com/blog/how-to-create-a-quiz-in-google-forms-the-only-guide-youll-need-in-2023/">quizzes built in Google Forms</a>.</p>
 </div>
 </li>
 
@@ -499,7 +499,7 @@ padding: 12px 14px; background: #fafafb; border: 1px solid var(--c-border); bord
     Loading...
   &lt;/iframe&gt;
 &lt;/div&gt;</pre>
-<div class="fmstr-cmp-tmpl-steps__note"><strong>Pitfall:</strong> Google does not auto-resize iframes. Your height is a guess. Add a question, and the form scrolls. Edit it down, and you have whitespace. Most teams set the min-height 200px above the expected form height and accept the small empty band. Once the form is live, you can also <a href="https://formester.com/blog/integrating-google-forms-google-sheets/">connect Google Forms to Sheets</a> to capture responses.</div>
+<div class="fmstr-cmp-tmpl-steps__note"><strong>Pitfall:</strong> Google does not auto-resize iframes. Your height is a guess. Add a question, and the form scrolls. Edit it down, and you have whitespace. Most teams set the min-height 200px above the expected form height and accept the small empty band. Once the form is live, you can also <a href="https://formester.com/blog/google-forms-to-google-sheets/">connect Google Forms to Sheets</a> to capture responses.</div>
 </div>
 </li>
 
@@ -689,7 +689,7 @@ transition: transform .15s ease, background-color .15s ease;
 
 <details class="fmstr-cmp-tmpl-faq__item">
 <summary>Can I style an embedded Google Form to match my site?</summary>
-<div class="fmstr-cmp-tmpl-faq__answer">Not really. You can set a single theme color and font inside Google Forms, but the form chrome (header, logo, "Required" markers, submit button) stays Google-branded. Tools like <a href="https://formester.com/google-forms-alternative/">Formester</a> let you fully white-label the form, including fonts, button styles, and field spacing.</div>
+<div class="fmstr-cmp-tmpl-faq__answer">Not really. You can set a single theme color and font inside Google Forms, but the form chrome (header, logo, "Required" markers, submit button) stays Google-branded. Tools like <a href="/blog/why-formester-is-the-best-google-forms-alternative/">Formester</a> let you fully white-label the form, including fonts, button styles, and field spacing.</div>
 </details>
 
 <details class="fmstr-cmp-tmpl-faq__item">
@@ -773,7 +773,7 @@ content: "\2192"; transition: transform .15s ease; display: inline-block;
 </div>
 <div class="fmstr-cmp-tmpl-rel__grid">
 
-<a class="fmstr-cmp-tmpl-rel__card" href="https://formester.com/google-forms-alternative/">
+<a class="fmstr-cmp-tmpl-rel__card" href="/blog/why-formester-is-the-best-google-forms-alternative/">
 <span class="fmstr-cmp-tmpl-rel__chip">Alternative</span>
 <h3 class="fmstr-cmp-tmpl-rel__title">Best Google Forms alternative</h3>
 <p class="fmstr-cmp-tmpl-rel__body">Six embed modes, full white-label, payments, e-signature. Side-by-side with Google Forms.</p>

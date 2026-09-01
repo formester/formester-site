@@ -1554,42 +1554,6 @@
                 </p>
                 <span class="fmstr-cmp-cfa-other-alts__link">Compare &rarr;</span>
               </a>
-              <a class="fmstr-cmp-cfa-other-alts__tile" href="https://formester.com/google-forms-alternative/">
-                <h3 class="fmstr-cmp-cfa-other-alts__name">
-                  <span style="display: inline-flex; align-items: center; gap: 8px"
-                    ><img
-                      src="https://ssl.gstatic.com/docs/forms/device_home/android_192.png"
-                      alt="Google Forms alternative logo"
-                      width="20"
-                      height="20"
-                      loading="lazy"
-                      style="width: 20px; height: 20px; border-radius: 4px; display: block; flex-shrink: 0"
-                    />Google Forms alternative</span
-                  >
-                </h3>
-                <p class="fmstr-cmp-cfa-other-alts__bestfor">
-                  Best for free internal forms inside Google Workspace with Sheets as the destination.
-                </p>
-                <span class="fmstr-cmp-cfa-other-alts__link">Compare &rarr;</span>
-              </a>
-              <a class="fmstr-cmp-cfa-other-alts__tile" href="https://formester.com/forms-app-alternative/">
-                <h3 class="fmstr-cmp-cfa-other-alts__name">
-                  <span style="display: inline-flex; align-items: center; gap: 8px"
-                    ><img
-                      src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://forms.app&amp;size=64"
-                      alt="forms.app alternative logo"
-                      width="20"
-                      height="20"
-                      loading="lazy"
-                      style="width: 20px; height: 20px; border-radius: 4px; display: block; flex-shrink: 0"
-                    />forms.app alternative</span
-                  >
-                </h3>
-                <p class="fmstr-cmp-cfa-other-alts__bestfor">
-                  Best for EU-based teams that want a builder with built-in AI features.
-                </p>
-                <span class="fmstr-cmp-cfa-other-alts__link">Compare &rarr;</span>
-              </a>
               <a class="fmstr-cmp-cfa-other-alts__tile" href="https://formester.com/zoho-forms-alternative/">
                 <h3 class="fmstr-cmp-cfa-other-alts__name">
                   <span style="display: inline-flex; align-items: center; gap: 8px"

@@ -25,11 +25,8 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: 'https://formester.com/',
-        },
+        // Default per-route canonical lives in app.vue (a static href here
+        // would canonicalize every page without its own tag to the homepage).
       ],
       script: [
         {

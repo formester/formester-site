@@ -291,7 +291,7 @@ color: var(--c-good); font-weight: 700; line-height: 1.45;
 <li class="fmstr-cmp-rtl-cmp__item">RTL alignment auto-applies per language</li>
 <li class="fmstr-cmp-rtl-cmp__item">AI translation across <a href="/ai-powered-multilingual-forms/">180+ languages</a></li>
 <li class="fmstr-cmp-rtl-cmp__item">Built-in respondent language switcher</li>
-<li class="fmstr-cmp-rtl-cmp__item fmstr-cmp-rtl-cmp__item--con">Free plan caps at 100 responses/month</li>
+<li class="fmstr-cmp-rtl-cmp__item fmstr-cmp-rtl-cmp__item--con">Offline mode and translations sit on paid plans</li>
 <li class="fmstr-cmp-rtl-cmp__item fmstr-cmp-rtl-cmp__item--con">Branding removal is Personal+</li>
 </ul>
 </div>
@@ -974,7 +974,7 @@ content: "\2192"; transition: transform .15s ease; display: inline-block;
 <span class="fmstr-cmp-rtl-rel__arrow">Read the guide</span>
 </a>
 
-<a class="fmstr-cmp-rtl-rel__card" href="/google-forms-alternative/">
+<a class="fmstr-cmp-rtl-rel__card" href="/blog/why-formester-is-the-best-google-forms-alternative/">
 <span class="fmstr-cmp-rtl-rel__chip">Switching guide</span>
 <h3 class="fmstr-cmp-rtl-rel__title">Google Forms alternatives</h3>
 <p class="fmstr-cmp-rtl-rel__body">Side-by-side comparison of the builders worth switching to when Google Forms falls short on RTL, branding, conditional logic, or payments.</p>

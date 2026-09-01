@@ -227,7 +227,7 @@ export default {
         {
           id: 2,
           title: 'Personality Quiz',
-          slug: '/templates/uncover-your-inner-you-4124/',
+          slug: '/templates/fun-personality-quiz/',
         },
         {
           id: 3,
@@ -237,7 +237,7 @@ export default {
         {
           id: 4,
           title: 'Magazine Quiz',
-          slug: '/templates/magazine-quiz-27610/',
+          slug: '/templates/magazine-quiz-template/',
         },
         {
           id: 5,

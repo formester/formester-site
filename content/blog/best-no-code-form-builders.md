@@ -101,7 +101,7 @@ publishedAt: "2026-06-05T11:00:13.000Z"
 <table class="fmstr-cmp-bnc-tbl__table">
 <thead><tr><th>Tool</th><th>Best for</th><th>Free plan limit</th><th>Cheapest paid</th><th>AI form generation</th><th>Native payments</th></tr></thead>
 <tbody>
-<tr class="is-featured"><td data-label="Tool"><span class="fmstr-cmp-bnc-tbl__name fmstr-cmp-bnc-tbl__name--brand">Formester</span><span class="fmstr-cmp-bnc-tbl__badge">Editor's pick</span></td><td data-label="Best for">All-rounder: AI + offline + payments</td><td data-label="Free plan limit">100 responses/mo, unlimited forms</td><td data-label="Cheapest paid">$13/mo Personal</td><td data-label="AI form generation">Yes (Gemini-powered)</td><td data-label="Native payments">Stripe, PayPal</td></tr>
+<tr class="is-featured"><td data-label="Tool"><span class="fmstr-cmp-bnc-tbl__name fmstr-cmp-bnc-tbl__name--brand">Formester</span><span class="fmstr-cmp-bnc-tbl__badge">Editor's pick</span></td><td data-label="Best for">All-rounder: AI + offline + payments</td><td data-label="Free plan limit">Unlimited forms and responses</td><td data-label="Cheapest paid">$13/mo Personal</td><td data-label="AI form generation">Yes (Gemini-powered)</td><td data-label="Native payments">Stripe, PayPal</td></tr>
 <tr><td data-label="Tool"><span class="fmstr-cmp-bnc-tbl__name">Jotform</span></td><td data-label="Best for">Biggest template library, HIPAA</td><td data-label="Free plan limit">100 submissions/mo, 5 forms</td><td data-label="Cheapest paid">$34/mo Bronze</td><td data-label="AI form generation">Yes</td><td data-label="Native payments">Stripe, PayPal, Square + 30 others</td></tr>
 <tr><td data-label="Tool"><span class="fmstr-cmp-bnc-tbl__name">Typeform</span></td><td data-label="Best for">Conversational UX</td><td data-label="Free plan limit">10 responses/mo, 1 form</td><td data-label="Cheapest paid">$25/mo Basic</td><td data-label="AI form generation">Yes (limited)</td><td data-label="Native payments">Stripe</td></tr>
 <tr><td data-label="Tool"><span class="fmstr-cmp-bnc-tbl__name">Tally</span></td><td data-label="Best for">Most generous free tier</td><td data-label="Free plan limit">Unlimited responses + forms</td><td data-label="Cheapest paid">$24/mo Pro</td><td data-label="AI form generation">No</td><td data-label="Native payments">Stripe</td></tr>
@@ -137,13 +137,13 @@ publishedAt: "2026-06-05T11:00:13.000Z"
 <li>Native <a href="/features/offline-forms/">offline mode</a>: forms cache in the browser, sync on reconnect</li>
 <li>Real-time team collaboration on the Business plan</li>
 <li>Native Stripe + PayPal payments with AES-256 encryption</li>
-<li>Honest free tier: 100 responses/month, unlimited forms, no submission-cap throttling</li>
+<li>Honest free tier: unlimited forms and responses, no submission-cap throttling</li>
 <li>Conditional logic, file uploads (100MB free / 1GB Personal), partial submissions, kiosk mode</li>
 </ul>
 </div>
 <p class="fmstr-cmp-bnc-body__block-title">Pricing</p>
 <ul class="fmstr-cmp-bnc-body__pricing">
-<li><strong>Free Plan:</strong> Yes (100 responses/month, unlimited forms)</li>
+<li><strong>Free Plan:</strong> Yes (unlimited forms and responses)</li>
 <li><strong>Starting Price:</strong> $13/month Personal ($12/month annual)</li>
 <li><strong>Most Popular Plan:</strong> $49/month Business ($45/month annual)</li>
 <li><strong>Enterprise Plan:</strong> Custom pricing</li>

@@ -488,7 +488,7 @@
                 <span class="fmstr-cmp-ifb-tpl__cta">Use template →</span></a
               >
               <a
-                href="https://formester.com/templates/construction-safety-violation-form-17386/"
+                href="https://formester.com/templates/construction-safety-violation-form/"
                 class="fmstr-cmp-ifb-tpl__card"
                 ><span class="fmstr-cmp-ifb-tpl__emoji">⚠️</span>
                 <h3 class="fmstr-cmp-ifb-tpl__title">Safety Violation</h3>

@@ -250,7 +250,7 @@ const resourcesList = [
   { id: 2, title: 'Blogs',       description: 'Read our latest articles and guides',   imageUrl: '/blog.svg',       imageAlt: 'Blogs icon',        slug: 'blog' },
   { id: 3, title: 'Enterprise',  description: 'Solutions for large organizations',     imageUrl: '/enterprise.svg', imageAlt: 'Enterprise icon',   slug: 'enterprise' },
   { id: 4, title: 'API Docs',    description: 'Comprehensive API documentation',       imageUrl: '/api-docs.svg',   imageAlt: 'API Docs icon',     href: 'https://docs.formester.com/formester-api.html' },
-  { id: 5, title: 'Help Center', description: 'Get help and support',                  imageUrl: '/support.svg',    imageAlt: 'Help Center icon',  href: 'https://help.formester.com/' },
+  { id: 5, title: 'Help Center', description: 'Get help and support',                  imageUrl: '/support.svg',    imageAlt: 'Help Center icon',  href: 'https://help.formester.com/en' },
 ]
 
 const MOBILE_MQ = '(max-width: 991px)'

@@ -473,7 +473,7 @@
                 >
               </div>
               <div class="sfl-final-cta-meta">
-                <span><strong>Free</strong> for up to 50 submissions/mo</span> <span>•</span>
+                <span><strong>Free</strong> — unlimited forms &amp; responses</span> <span>•</span>
                 <span>Removes in 1 click</span> <span>•</span> <span>Used by 3,400+ teams</span>
               </div>
             </div>
@@ -492,7 +492,19 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+useHead({
+  title: 'Slack Forms — Create & Fill Forms in Slack | Formester',
+  meta: [
+    {
+      hid: 'description',
+      name: 'description',
+      content:
+        'Build forms with AI and collect responses without leaving Slack. Run /formester new, share forms in channels, and get submissions posted where your team works.',
+    },
+  ],
+})
+</script>
 
 <style scoped>
 /* ==========================================================================

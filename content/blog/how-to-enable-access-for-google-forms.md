@@ -24,7 +24,7 @@ This guide handles all three jobs on one page. Give editors edit access (Section
 
 Fix the "You need permission" error when someone can't open your form (Section 3). Each path has screenshots and the gotcha that breaks it. 
 
-If you keep running into Google's sign-in and organization walls, the last section shows how [Formester](/google-forms-alternative/) handles form access with link-based public forms, password protection, and team collaborators on the Business plan, no Google account required.
+If you keep running into Google's sign-in and organization walls, the last section shows how [Formester](/blog/why-formester-is-the-best-google-forms-alternative/) handles form access with link-based public forms, password protection, and team collaborators on the Business plan, no Google account required.
 
 ## The two Google Forms access lanes (and why people confuse them)
 Google Forms generates two different links from the same form, and treats them as two different worlds.
@@ -136,7 +136,7 @@ Forms can be paused (manually or via a third-party limiter script). Paused forms
 On managed Workspace accounts, the admin can disable Forms for some or all users. Respondents whose accounts have Forms disabled cannot open any form, regardless of the form's own settings.
 
 - Owner-side fix: not yours to fix. The respondent needs to contact their Workspace admin (or use a personal Google account / no-account form).
-- Workaround: if respondents repeatedly hit this wall, switch to a [Formester form](/google-forms-alternative/), which works in any browser without a Google account.
+- Workaround: if respondents repeatedly hit this wall, switch to a [Formester form](/blog/why-formester-is-the-best-google-forms-alternative/), which works in any browser without a Google account.
 
 If you have walked through all five and the error persists, open the form in an **incognito window** while signed out of every Google account. If incognito works, the issue is on the respondent's side. If incognito also fails, it is one of the five causes above.
 
@@ -155,7 +155,7 @@ Three workflow habits that prevent the next round of access problems:
 - Restrict responses to specific Workspace org units (HR can fill it; everyone else cannot).
 - Force sign-in on a per-form basis without making the form private.
 
-If your team is constantly working around Google's access rules, the friction signal is real. [Formester](/google-forms-alternative/) handles form access without the Google sign-in dance: link-based public forms, password-protected respondent access, role-based team collaborators on the Business plan (25 seats), no Workspace admin required.
+If your team is constantly working around Google's access rules, the friction signal is real. [Formester](/blog/why-formester-is-the-best-google-forms-alternative/) handles form access without the Google sign-in dance: link-based public forms, password-protected respondent access, role-based team collaborators on the Business plan (25 seats), no Workspace admin required.
 
 <style>
     /* host-link-override */
@@ -478,7 +478,7 @@ If your team is constantly working around Google's access rules, the friction si
             </table>
         </div>
         <p class="fmstr-cmp-gfa-cmp__close">If your access problems trace back to Google&rsquo;s sign-in or org walls,
-            the platform is the friction. <a href="https://formester.com/google-forms-alternative/">Try Formester</a>
+            the platform is the friction. <a href="/blog/why-formester-is-the-best-google-forms-alternative/">Try Formester</a>
             and rebuild your form in 5 minutes. 56,000+ teams use it.</p>
     </div>
 </section>
@@ -560,7 +560,7 @@ transition: transform .15s ease, background-color .15s ease;
 
 <details class="fmstr-cmp-gfa-faq__item">
 <summary>How do I make Google Forms accessible to anyone?</summary>
-<div class="fmstr-cmp-gfa-faq__answer">Open the form &rarr; Settings &rarr; Responses &rarr; uncheck &ldquo;Restrict to users in [Your Organization] and its trusted organizations&rdquo; and &ldquo;Limit to 1 response.&rdquo; Then click Send &rarr; link tab and share that URL. Test it in an incognito window before sending broadly. If anyone-can-access matters and Google&rsquo;s settings keep getting in the way, use a <a href="https://formester.com/google-forms-alternative/">Formester form</a> instead. The public link works without any settings dance.</div>
+<div class="fmstr-cmp-gfa-faq__answer">Open the form &rarr; Settings &rarr; Responses &rarr; uncheck &ldquo;Restrict to users in [Your Organization] and its trusted organizations&rdquo; and &ldquo;Limit to 1 response.&rdquo; Then click Send &rarr; link tab and share that URL. Test it in an incognito window before sending broadly. If anyone-can-access matters and Google&rsquo;s settings keep getting in the way, use a <a href="/blog/why-formester-is-the-best-google-forms-alternative/">Formester form</a> instead. The public link works without any settings dance.</div>
 </details>
 
 <details class="fmstr-cmp-gfa-faq__item">
@@ -580,7 +580,7 @@ transition: transform .15s ease, background-color .15s ease;
 
 <details class="fmstr-cmp-gfa-faq__item">
 <summary>How do I share a Google Form with non-Gmail users?</summary>
-<div class="fmstr-cmp-gfa-faq__answer">Yes, possible. Settings &rarr; Responses &rarr; &ldquo;Restrict to users in [Your Organization]&rdquo; must be off. With that toggle off, anyone with the link can respond, including non-Gmail addresses. If &ldquo;Collect email addresses&rdquo; is set to &ldquo;Verified,&rdquo; respondents still need a Google account. Switch it to &ldquo;Responder input&rdquo; instead so non-Gmail users can type their email manually. For a cleaner path, <a href="https://formester.com/google-forms-alternative/">Formester</a> accepts responses from anyone with no email-verification step.</div>
+<div class="fmstr-cmp-gfa-faq__answer">Yes, possible. Settings &rarr; Responses &rarr; &ldquo;Restrict to users in [Your Organization]&rdquo; must be off. With that toggle off, anyone with the link can respond, including non-Gmail addresses. If &ldquo;Collect email addresses&rdquo; is set to &ldquo;Verified,&rdquo; respondents still need a Google account. Switch it to &ldquo;Responder input&rdquo; instead so non-Gmail users can type their email manually. For a cleaner path, <a href="/blog/why-formester-is-the-best-google-forms-alternative/">Formester</a> accepts responses from anyone with no email-verification step.</div>
 </details>
 
 </div>
@@ -636,7 +636,7 @@ text-decoration: none !important; color: inherit !important; transition: all .15
 </div>
 <div class="fmstr-cmp-gfa-rel__grid">
 
-<a class="fmstr-cmp-gfa-rel__card" href="https://formester.com/google-forms-alternative/">
+<a class="fmstr-cmp-gfa-rel__card" href="/blog/why-formester-is-the-best-google-forms-alternative/">
 <div class="fmstr-cmp-gfa-rel__icon" aria-hidden="true">&#128640;</div>
 <div class="fmstr-cmp-gfa-rel__text"><h4>Google Forms alternative</h4><small>Why teams switch to Formester</small></div>
 <span class="fmstr-cmp-gfa-rel__arrow" aria-hidden="true">&rarr;</span>
