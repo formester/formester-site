@@ -123,7 +123,7 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: ['/', '/sitemap.xml'],
-      ignore: ['/api', '/comparison-tool'],
+      ignore: ['/api'],
       // Lower via PRERENDER_CONCURRENCY on memory-constrained machines —
       // e.g. a 6.7GB-RAM local dev box OOM'd at the default 16 with
       // --max-old-space-size=4096 (needed for the full blog+templates
