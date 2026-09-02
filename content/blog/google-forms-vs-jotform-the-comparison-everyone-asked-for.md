@@ -49,7 +49,7 @@ Google Forms offers a user-friendly and intuitive interface, making it easy for 
 
 #### 3. Native Integration with Google Workspace
 
-As a product developed by Google, to be a part of its [Google Workspace](https://workspace.google.com/intl/en_in/) (formerly, **Google Editor's Suite**) [Google Forms seamlessly integrates with other Google services such as Google Sheets](/blog/integrating-google-forms-google-sheets-a-match-made-in-digital-heaven-essential-basics/), Google Drive, and Google Calendar. Such integrations enable efficient data collection, storage, and scheduling, all under the same roof of the Google ecosystem.
+As a product developed by Google, to be a part of its [Google Workspace](https://workspace.google.com/intl/en_in/) (formerly, **Google Editor's Suite**) [Google Forms seamlessly integrates with other Google services such as Google Sheets](/blog/google-forms-to-google-sheets/), Google Drive, and Google Calendar. Such integrations enable efficient data collection, storage, and scheduling, all under the same roof of the Google ecosystem.
 
 #### 4. Real-time Collaboration
 
@@ -257,7 +257,7 @@ Jotform's reporting capabilities give users more flexibility in analyzing form d
 
 ![Screenshot showing: Example of Google Forms' Workflow Automation ](https://formester-strapi.s3.ap-south-1.amazonaws.com/google_forms_vs_jotform_14_6bb60c7df3.png "Example of Google Forms' Workflow Automation ")
 
-For example, you can set up automated data organization by [linking Google Forms to Google Sheets](/blog/integrating-google-forms-google-sheets-a-match-made-in-digital-heaven-essential-basics/), where form responses are automatically recorded, stored and organized in a spreadsheet.
+For example, you can set up automated data organization by [linking Google Forms to Google Sheets](/blog/google-forms-to-google-sheets/), where form responses are automatically recorded, stored and organized in a spreadsheet.
 
 **Jotform:** Jotform provides more [advanced workflow automation features](https://www.jotform.com/integrations/category/automation-integrations). 
 

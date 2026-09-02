@@ -25,7 +25,7 @@ Therefore, knowing how to add an electronic signature in Google Forms can be imm
 
 Google Forms is a free tool offered by Google for creating online forms and surveys. While it's straightforward to use, adding a signature field is not an in-built feature. In this article, we'll look at the process to easily incorporate signatures into your Google Forms.
 
-Google Forms is a part of [Google's suite of productivity tools](/blog/integrating-google-forms-google-sheets-a-match-made-in-digital-heaven-essential-basics/), allowing users to create customizable forms for various purposes. It offers a simple interface for designing forms and collecting responses, making it ideal for surveys, event registrations, feedback forms, and more.
+Google Forms is a part of [Google's suite of productivity tools](/blog/google-forms-to-google-sheets/), allowing users to create customizable forms for various purposes. It offers a simple interface for designing forms and collecting responses, making it ideal for surveys, event registrations, feedback forms, and more.
 
 ### Why Add a Signature in Google Forms?
 
