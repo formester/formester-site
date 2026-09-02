@@ -594,7 +594,7 @@ transition: transform .15s ease, background-color .15s ease;
 
 <details class="fmstr-cmp-tmpl-faq__item">
 <summary>How do I create a fillable form in Word without the Developer tab?</summary>
-<div class="fmstr-cmp-tmpl-faq__answer">You cannot. Content controls only appear when the Developer tab is enabled. If you cannot enable it (locked-down corporate device, school account, Word for the Web), use a browser-based form builder instead. <a href="https://formester.com/form-builder/">Formester</a> does not require Word, Office, or any install.</div>
+<div class="fmstr-cmp-tmpl-faq__answer">You cannot. Content controls only appear when the Developer tab is enabled. If you cannot enable it (locked-down corporate device, school account, Word for the Web), use a browser-based form builder instead. <a href="https://formester.com/features/drag-and-drop-form-builder/">Formester</a> does not require Word, Office, or any install.</div>
 </details>
 
 <details class="fmstr-cmp-tmpl-faq__item">

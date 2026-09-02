@@ -240,7 +240,7 @@ letter-spacing: -.02em; margin: 0; color: var(--c-fg-1);
 <tr>
 <td>Custom branding</td>
 <td><span class="fmstr-cmp-tmpl-cmp__tag fmstr-cmp-tmpl-cmp__tag--no">No</span> Google chrome stays</td>
-<td><a href="https://formester.com/features/branding/">Full white-label, brand colors, custom fonts</a></td>
+<td><a href="https://formester.com/features/branding-kit/">Full white-label, brand colors, custom fonts</a></td>
 </tr>
 <tr>
 <td>Native CMS integrations</td>
@@ -780,7 +780,7 @@ content: "\2192"; transition: transform .15s ease; display: inline-block;
 <span class="fmstr-cmp-tmpl-rel__arrow">Compare</span>
 </a>
 
-<a class="fmstr-cmp-tmpl-rel__card" href="https://formester.com/form-builder/">
+<a class="fmstr-cmp-tmpl-rel__card" href="https://formester.com/features/drag-and-drop-form-builder/">
 <span class="fmstr-cmp-tmpl-rel__chip">Product</span>
 <h3 class="fmstr-cmp-tmpl-rel__title">Formester form builder</h3>
 <p class="fmstr-cmp-tmpl-rel__body">Build a form, pick an embed mode, paste one snippet. Inline, popup, sidebar, side tab, popover, fullscreen.</p>
