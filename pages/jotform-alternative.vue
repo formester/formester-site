@@ -180,13 +180,15 @@
                   <tbody>
                     <tr>
                       <td class="fmstr-cmp-jot-glance__attr">Free response cap</td>
-                      <td class="fmstr-cmp-jot-glance__cell fmstr-cmp-jot-glance__cell--formester">100 / month</td>
+                      <td class="fmstr-cmp-jot-glance__cell fmstr-cmp-jot-glance__cell--formester">Unlimited</td>
                       <td class="fmstr-cmp-jot-glance__cell">100 / month</td>
-                      <td class="fmstr-cmp-jot-glance__verdict fmstr-cmp-jot-glance__verdict--wins-tied">Tied</td>
+                      <td class="fmstr-cmp-jot-glance__verdict fmstr-cmp-jot-glance__verdict--wins-formester">
+                        Formester wins
+                      </td>
                     </tr>
                     <tr>
                       <td class="fmstr-cmp-jot-glance__attr">Free form cap</td>
-                      <td class="fmstr-cmp-jot-glance__cell fmstr-cmp-jot-glance__cell--formester">10</td>
+                      <td class="fmstr-cmp-jot-glance__cell fmstr-cmp-jot-glance__cell--formester">Unlimited</td>
                       <td class="fmstr-cmp-jot-glance__cell">5</td>
                       <td class="fmstr-cmp-jot-glance__verdict fmstr-cmp-jot-glance__verdict--wins-formester">
                         Formester wins
@@ -313,12 +315,12 @@
                   <tbody>
                     <tr>
                       <td class="fmstr-cmp-jot-free__attr">Monthly response cap</td>
-                      <td class="fmstr-cmp-jot-free__cell--formester">100</td>
+                      <td class="fmstr-cmp-jot-free__cell--formester">Unlimited</td>
                       <td>100</td>
                     </tr>
                     <tr>
                       <td class="fmstr-cmp-jot-free__attr">Forms allowed</td>
-                      <td class="fmstr-cmp-jot-free__cell--formester">10</td>
+                      <td class="fmstr-cmp-jot-free__cell--formester">Unlimited</td>
                       <td>5</td>
                     </tr>
                     <tr>
@@ -407,7 +409,7 @@
                         $0 · unlimited responses, unlimited forms, AI generator, payments
                       </td>
                       <td>$0 · 100 responses/mo, 5 forms, 100 MB</td>
-                      <td class="fmstr-cmp-jot-pricing__note">Formester offers 2x the form cap on free</td>
+                      <td class="fmstr-cmp-jot-pricing__note">Formester offers unlimited forms on free</td>
                     </tr>
                     <tr>
                       <td><span class="fmstr-cmp-jot-pricing__tier">Entry paid</span></td>
@@ -1936,7 +1938,7 @@ const c20_faqList = [
   {
     id: 3421,
     header: ' How does Jotform pricing compare to Formester in 2026? ',
-    body: "At 1,000 submissions a month, Formester Personal is $12 per month, billed annually, and Jotform Bronze is $39 per month monthly (or $34 per month billed annually). At 10,000 submissions, Formester Business is $45 per month, billed annually, and Jotform Gold is $99 per month, billed annually. The Formester free plan also gives you 10 forms vs Jotform's 5.",
+    body: "At 1,000 submissions a month, Formester Personal is $12 per month, billed annually, and Jotform Bronze is $39 per month monthly (or $34 per month billed annually). At 10,000 submissions, Formester Business is $45 per month, billed annually, and Jotform Gold is $99 per month, billed annually. The Formester free plan also gives you unlimited forms vs Jotform's 5.",
     body_markdown: '',
     list: [],
   },
