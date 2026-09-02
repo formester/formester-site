@@ -174,7 +174,7 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/gravity-forms-alternative/" class="footer__link">
+                <NuxtLink to="/blog/best-gravity-forms-alternatives/" class="footer__link">
                   Formester vs Gravity Forms
                 </NuxtLink>
               </li>
