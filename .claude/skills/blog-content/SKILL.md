@@ -7,14 +7,14 @@ description: Create, edit, list, or delete Formester blog posts stored as markdo
 
 Manages the **file and frontmatter** lifecycle of blog posts. This repo no longer pulls blog
 content from Strapi at build time — every post is a real file at `content/blog/<slug>.md`,
-validated against the `blog` zod schema in `content/schemas/misc.ts` and loaded through the
+validated against the `blog` zod schema in `content/schemas/blog.ts` and loaded through the
 `blog` collection in `content.config.ts` (`type: 'page'`, `source: 'blog/**/*.md'`).
 
 **Division of labor:** this skill owns the frontmatter and file itself. If the task is about
 writing or restructuring the post's *body* (headings, steps, FAQ, comparison tables, tone),
 use the **`blog-post`** skill for that part — invoke it, then drop its output in as the file body.
 
-## The schema (`content/schemas/misc.ts` → `export const blog`)
+## The schema (`content/schemas/blog.ts` → `export const blog`)
 
 ```ts
 export const blog = z.object({

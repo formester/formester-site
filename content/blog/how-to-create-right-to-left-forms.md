@@ -291,7 +291,7 @@ color: var(--c-good); font-weight: 700; line-height: 1.45;
 <li class="fmstr-cmp-rtl-cmp__item">RTL alignment auto-applies per language</li>
 <li class="fmstr-cmp-rtl-cmp__item">AI translation across <a href="/ai-powered-multilingual-forms/">180+ languages</a></li>
 <li class="fmstr-cmp-rtl-cmp__item">Built-in respondent language switcher</li>
-<li class="fmstr-cmp-rtl-cmp__item fmstr-cmp-rtl-cmp__item--con">Free plan caps at 100 responses/month</li>
+<li class="fmstr-cmp-rtl-cmp__item fmstr-cmp-rtl-cmp__item--con">Offline mode and translations sit on paid plans</li>
 <li class="fmstr-cmp-rtl-cmp__item fmstr-cmp-rtl-cmp__item--con">Branding removal is Personal+</li>
 </ul>
 </div>

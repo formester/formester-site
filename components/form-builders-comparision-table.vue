@@ -170,7 +170,7 @@ export default {
           typeform:
             'Starts Free for Unlimited Forms but only 10 submissions per month',
           formester:
-            'Starts Free for upto 10 Forms and 100 submissions per month',
+            'Starts Free with Unlimited Forms and Unlimited submissions',
           formstack: 'A Free 14 day Trial',
           paperform:
             'Starts at $20 for Unlimited Forms and 1000 submissions per month',

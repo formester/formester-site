@@ -684,7 +684,7 @@ transition: transform .15s ease, background-color .15s ease;
 
 <details class="fmstr-cmp-tmpl-faq__item">
 <summary>How do I create an order form for free?</summary>
-<div class="fmstr-cmp-tmpl-faq__answer">Pick a free template from the Formester order form templates, swap in your products and prices, connect Stripe or PayPal, and publish. The Free plan supports 10 forms and 100 responses per month, enough for most small businesses launching their first order form.</div>
+<div class="fmstr-cmp-tmpl-faq__answer">Pick a free template from the Formester order form templates, swap in your products and prices, connect Stripe or PayPal, and publish. The Free plan includes unlimited forms and responses, enough for any small business launching its first order form.</div>
 </details>
 
 <details class="fmstr-cmp-tmpl-faq__item">

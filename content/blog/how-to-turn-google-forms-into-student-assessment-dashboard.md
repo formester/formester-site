@@ -113,7 +113,7 @@ Test your workflow with a few sample responses. If you plan to use multiple asse
 
 This setup works well for simple and medium size assessments. But it becomes slow and hard to maintain when you manage many forms, many sheets, or advanced dashboards. You may also need automation for grading, notifications, or data cleaning.
 
-In these cases, a **[free Google Forms alternative like Formester](/google-forms-alternative/)** helps you handle everything inside one platform. You can make quizzes with AI. You can grade them right away.
+In these cases, a **[free Google Forms alternative like Formester](/blog/why-formester-is-the-best-google-forms-alternative/)** helps you handle everything inside one platform. You can make quizzes with AI. You can grade them right away.
 
 You can use clean data. You can link the results to dashboards without any manual setup.
 

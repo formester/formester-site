@@ -253,7 +253,7 @@
                   </h3>
                   <p class="fmstr-cmp-zoh-why-leave__body">
                     Zoho Forms Free covers 3 forms and 500 submissions per month. Two campaigns or a single high-traffic
-                    form fills it. Formester's free plan covers unlimited forms and 100 monthly responses with the AI
+                    form fills it. Formester's free plan covers unlimited forms and unlimited responses with the AI
                     generator already on.
                   </p>
                 </article>
@@ -1287,30 +1287,9 @@
                   </p>
                   <span class="fmstr-cmp-zoh-other-alts__link">Compare →</span>
                 </a>
-                <a class="fmstr-cmp-zoh-other-alts__tile" href="https://formester.com/microsoft-forms-alternative/">
-                  <h3 class="fmstr-cmp-zoh-other-alts__name">Microsoft Forms alternative</h3>
-                  <p class="fmstr-cmp-zoh-other-alts__bestfor">
-                    Best for Microsoft 365 teams who already pay for the suite.
-                  </p>
-                  <span class="fmstr-cmp-zoh-other-alts__link">Compare →</span>
-                </a>
-                <a class="fmstr-cmp-zoh-other-alts__tile" href="https://formester.com/google-forms-alternative/">
-                  <h3 class="fmstr-cmp-zoh-other-alts__name">Google Forms alternative</h3>
-                  <p class="fmstr-cmp-zoh-other-alts__bestfor">
-                    Best for Google Workspace teams running internal surveys.
-                  </p>
-                  <span class="fmstr-cmp-zoh-other-alts__link">Compare →</span>
-                </a>
                 <a class="fmstr-cmp-zoh-other-alts__tile" href="https://formester.com/fillout-alternative/">
                   <h3 class="fmstr-cmp-zoh-other-alts__name">Fillout alternative</h3>
                   <p class="fmstr-cmp-zoh-other-alts__bestfor">Best for Airtable / Notion-first workflows.</p>
-                  <span class="fmstr-cmp-zoh-other-alts__link">Compare →</span>
-                </a>
-                <a class="fmstr-cmp-zoh-other-alts__tile" href="https://formester.com/forms-app-alternative/">
-                  <h3 class="fmstr-cmp-zoh-other-alts__name">forms.app alternative</h3>
-                  <p class="fmstr-cmp-zoh-other-alts__bestfor">
-                    Best for EU teams who want ISO 27001 hosting in Belgium and AI features.
-                  </p>
                   <span class="fmstr-cmp-zoh-other-alts__link">Compare →</span>
                 </a>
               </div>
@@ -1982,9 +1961,9 @@ const c19_faqList = [
   {
     id: 3440,
     header: 'Is Zoho Forms free, and what is in the free plan?',
-    body: "Yes, Zoho Forms has a free plan. It covers 3 forms, 500 submissions a month, and about 200 MB of storage with Zoho branding shown. Zia AI features and most advanced fields sit on Basic ($10 per month, billed annually) and above. Formester's free plan covers 10 forms, 100 responses a month, the AI form generator, drop-off analytics, payment collection, and 100 MB file uploads. Pick Zoho's free plan if response volume is the bottleneck and you stay within 3 forms. Pick Formester's free plan if AI access, form count, or offline submissions matter more.\n",
+    body: "Yes, Zoho Forms has a free plan. It covers 3 forms, 500 submissions a month, and about 200 MB of storage with Zoho branding shown. Zia AI features and most advanced fields sit on Basic ($10 per month, billed annually) and above. Formester's free plan covers unlimited forms and unlimited responses, the AI form generator, drop-off analytics, payment collection, and 100 MB file uploads. Pick Formester's free plan if volume, AI access, form count, or offline submissions matter.\n",
     body_markdown:
-      "Yes, Zoho Forms has a free plan. It covers 3 forms, 500 submissions a month, and about 200 MB of storage with Zoho branding shown. Zia AI features and most advanced fields sit on Basic ($10 per month, billed annually) and above. Formester's free plan covers 10 forms, 100 responses a month, the AI form generator, drop-off analytics, payment collection, and 100 MB file uploads. Pick Zoho's free plan if response volume is the bottleneck and you stay within 3 forms. Pick Formester's free plan if AI access, form count, or offline submissions matter more.\n",
+      "Yes, Zoho Forms has a free plan. It covers 3 forms, 500 submissions a month, and about 200 MB of storage with Zoho branding shown. Zia AI features and most advanced fields sit on Basic ($10 per month, billed annually) and above. Formester's free plan covers unlimited forms and unlimited responses, the AI form generator, drop-off analytics, payment collection, and 100 MB file uploads. Pick Formester's free plan if volume, AI access, form count, or offline submissions matter.\n",
     list: [],
   },
   {
@@ -2006,9 +1985,9 @@ const c19_faqList = [
   {
     id: 3438,
     header: 'How does Formester pricing compare to Zoho Forms tier by tier?',
-    body: 'Free: Formester gives 100 responses a month plus AI on free; Zoho gives 500 submissions but no Zia. Personal at $12 vs Zoho Basic at $10 (billed annually) are within $2; Zoho gives 10,000 submissions, Formester gives 1,000 plus branding removal and conditional logic. Business at $45 vs Zoho Standard at $25 (billed annually) is the toughest comparison: Zoho is cheaper per submission at this tier, Formester adds API access, PDF exports, AI multilingual translations, 50 GB storage, and 25 team seats. At the top, Zoho Premium at $90 a month covers 150,000 submissions; Formester Enterprise is custom-priced. Pick on what you actually need at each tier, not on the headline number.',
+    body: 'Free: Formester gives unlimited responses plus AI on free; Zoho gives 500 submissions but no Zia. Personal at $12 vs Zoho Basic at $10 (billed annually) are within $2; Zoho meters you at 10,000 submissions, Formester stays unmetered and adds branding removal and conditional logic. Business at $45 vs Zoho Standard at $25 (billed annually) is the toughest comparison: Zoho is cheaper per submission at this tier, Formester adds API access, PDF exports, AI multilingual translations, 50 GB storage, and 25 team seats. At the top, Zoho Premium at $90 a month covers 150,000 submissions; Formester Enterprise is custom-priced. Pick on what you actually need at each tier, not on the headline number.',
     body_markdown:
-      'Free: Formester gives 100 responses a month plus AI on free; Zoho gives 500 submissions but no Zia. Personal at $12 vs Zoho Basic at $10 (billed annually) are within $2; Zoho gives 10,000 submissions, Formester gives 1,000 plus branding removal and conditional logic. Business at $45 vs Zoho Standard at $25 (billed annually) is the toughest comparison: Zoho is cheaper per submission at this tier, Formester adds API access, PDF exports, AI multilingual translations, 50 GB storage, and 25 team seats. At the top, Zoho Premium at $90 a month covers 150,000 submissions; Formester Enterprise is custom-priced. Pick on what you actually need at each tier, not on the headline number.',
+      'Free: Formester gives unlimited responses plus AI on free; Zoho gives 500 submissions but no Zia. Personal at $12 vs Zoho Basic at $10 (billed annually) are within $2; Zoho meters you at 10,000 submissions, Formester stays unmetered and adds branding removal and conditional logic. Business at $45 vs Zoho Standard at $25 (billed annually) is the toughest comparison: Zoho is cheaper per submission at this tier, Formester adds API access, PDF exports, AI multilingual translations, 50 GB storage, and 25 team seats. At the top, Zoho Premium at $90 a month covers 150,000 submissions; Formester Enterprise is custom-priced. Pick on what you actually need at each tier, not on the headline number.',
     list: [],
   },
 ]
@@ -2226,7 +2205,7 @@ useJsonld([
             name: 'Is Zoho Forms free, and what is in the free plan?',
             '@type': 'Question',
             acceptedAnswer: {
-              text: "Yes, Zoho Forms has a free plan. It covers 3 forms, 500 submissions a month, and about 200 MB of storage with Zoho branding shown. Zia AI features and most advanced fields sit on Basic ($10 per month, billed annually) and above. Formester's free plan covers 10 forms, 100 responses a month, the AI form generator, drop-off analytics, payment collection, and 100 MB file uploads. Pick Zoho's free plan if response volume is the bottleneck and you stay within 3 forms. Pick Formester's free plan if AI access, form count, or offline submissions matter more.",
+              text: "Yes, Zoho Forms has a free plan. It covers 3 forms, 500 submissions a month, and about 200 MB of storage with Zoho branding shown. Zia AI features and most advanced fields sit on Basic ($10 per month, billed annually) and above. Formester's free plan covers unlimited forms and unlimited responses, the AI form generator, drop-off analytics, payment collection, and 100 MB file uploads. Pick Formester's free plan if volume, AI access, form count, or offline submissions matter.",
               '@type': 'Answer',
             },
           },
@@ -2250,7 +2229,7 @@ useJsonld([
             name: 'How does Formester pricing compare to Zoho Forms tier by tier?',
             '@type': 'Question',
             acceptedAnswer: {
-              text: 'Free: Formester gives 100 responses a month plus AI on free; Zoho gives 500 submissions but no Zia. Personal at $12 vs Zoho Basic at $10 (billed annually) are within $2; Zoho gives 10,000 submissions, Formester gives 1,000 plus branding removal and conditional logic. Business at $45 vs Zoho Standard at $25 (billed annually) is the toughest comparison: Zoho is cheaper per submission at this tier, Formester adds API access, PDF exports, AI multilingual translations, 50 GB storage, and 25 team seats. At the top, Zoho Premium at $90 a month covers 150,000 submissions; Formester Enterprise is custom-priced. Pick on what you actually need at each tier, not on the headline number.',
+              text: 'Free: Formester gives unlimited responses plus AI on free; Zoho gives 500 submissions but no Zia. Personal at $12 vs Zoho Basic at $10 (billed annually) are within $2; Zoho meters you at 10,000 submissions, Formester stays unmetered and adds branding removal and conditional logic. Business at $45 vs Zoho Standard at $25 (billed annually) is the toughest comparison: Zoho is cheaper per submission at this tier, Formester adds API access, PDF exports, AI multilingual translations, 50 GB storage, and 25 team seats. At the top, Zoho Premium at $90 a month covers 150,000 submissions; Formester Enterprise is custom-priced. Pick on what you actually need at each tier, not on the headline number.',
               '@type': 'Answer',
             },
           },

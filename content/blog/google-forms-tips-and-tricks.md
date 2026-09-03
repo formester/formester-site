@@ -167,6 +167,6 @@ If you know a bit of coding, **Google Apps Script** lets you do things like send
 ### Final Thoughts
 These 10 tips will help you take your Google Forms to the next level. Whether you're collecting event registrations, job applications, or survey responses, you’ll save time and create a better experience for your users.
 
-If you want even more advanced features without relying on add-ons or code, try **[Formester-the best Google Forms alternative](/google-forms-alternative/). It gives you built-in automation, logic, document generation, and analytics, all in one place.
+If you want even more advanced features without relying on add-ons or code, try **[Formester-the best Google Forms alternative](/blog/why-formester-is-the-best-google-forms-alternative/). It gives you built-in automation, logic, document generation, and analytics, all in one place.
 
 Ready to build better forms? **[Start with Formester today](https://app.formester.com/users/sign_up)**.

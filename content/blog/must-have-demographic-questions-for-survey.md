@@ -656,7 +656,7 @@ border-radius: 6px;
 <div class="fmstr-cmp-tmpl-midcta__inner">
 <span class="fmstr-cmp-tmpl-midcta__eyebrow">Survey builder</span>
 <h2 class="fmstr-cmp-tmpl-midcta__h2" id="fmstr-cmp-tmpl-midcta-h2">Ask the right demographic questions, without survey-tool sprawl</h2>
-<p class="fmstr-cmp-tmpl-midcta__body">Multi-step forms, conditional logic, templates for every survey type. Free plan includes 100 responses/month.</p>
+<p class="fmstr-cmp-tmpl-midcta__body">Multi-step forms, conditional logic, templates for every survey type. Free plan includes unlimited responses.</p>
 <a class="fmstr-cmp-tmpl-midcta__cta" href="https://app.formester.com/users/sign_up" style="background: #7f56d9 !important; color: #ffffff !important; border-color: #7f56d9 !important; text-decoration: none !important;">Start free on Formester</a>
 <p class="fmstr-cmp-tmpl-midcta__strip">Free forever plan<span>&bull;</span>No credit card<span>&bull;</span>Setup in 2 minutes</p>
 </div>

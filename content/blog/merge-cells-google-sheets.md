@@ -34,7 +34,7 @@ publishedAt: "2026-06-22T05:06:22.803Z"
 
 <h2>A Quick Example</h2>
 
-<p>Say you collect signups through a form that feeds a Google Sheet (Formester forms write straight to Sheets through the native <a href="https://formester.com/blog/integrating-google-forms-google-sheets-a-match-made-in-digital-heaven-essential-basics/">Google Sheets integration</a>). You want a single title across the name, email, and status columns at the top. Merging those three header cells gives you one clean banner instead of three half-filled boxes.</p>
+<p>Say you collect signups through a form that feeds a Google Sheet (Formester forms write straight to Sheets through the native <a href="https://formester.com/blog/google-forms-to-google-sheets/">Google Sheets integration</a>). You want a single title across the name, email, and status columns at the top. Merging those three header cells gives you one clean banner instead of three half-filled boxes.</p>
 
 <h2>How to Merge Cells in Google Sheets: Step by Step</h2>
 

@@ -180,13 +180,15 @@
                   <tbody>
                     <tr>
                       <td class="fmstr-cmp-jot-glance__attr">Free response cap</td>
-                      <td class="fmstr-cmp-jot-glance__cell fmstr-cmp-jot-glance__cell--formester">100 / month</td>
+                      <td class="fmstr-cmp-jot-glance__cell fmstr-cmp-jot-glance__cell--formester">Unlimited</td>
                       <td class="fmstr-cmp-jot-glance__cell">100 / month</td>
-                      <td class="fmstr-cmp-jot-glance__verdict fmstr-cmp-jot-glance__verdict--wins-tied">Tied</td>
+                      <td class="fmstr-cmp-jot-glance__verdict fmstr-cmp-jot-glance__verdict--wins-formester">
+                        Formester wins
+                      </td>
                     </tr>
                     <tr>
                       <td class="fmstr-cmp-jot-glance__attr">Free form cap</td>
-                      <td class="fmstr-cmp-jot-glance__cell fmstr-cmp-jot-glance__cell--formester">10</td>
+                      <td class="fmstr-cmp-jot-glance__cell fmstr-cmp-jot-glance__cell--formester">Unlimited</td>
                       <td class="fmstr-cmp-jot-glance__cell">5</td>
                       <td class="fmstr-cmp-jot-glance__verdict fmstr-cmp-jot-glance__verdict--wins-formester">
                         Formester wins
@@ -313,12 +315,12 @@
                   <tbody>
                     <tr>
                       <td class="fmstr-cmp-jot-free__attr">Monthly response cap</td>
-                      <td class="fmstr-cmp-jot-free__cell--formester">100</td>
+                      <td class="fmstr-cmp-jot-free__cell--formester">Unlimited</td>
                       <td>100</td>
                     </tr>
                     <tr>
                       <td class="fmstr-cmp-jot-free__attr">Forms allowed</td>
-                      <td class="fmstr-cmp-jot-free__cell--formester">10</td>
+                      <td class="fmstr-cmp-jot-free__cell--formester">Unlimited</td>
                       <td>5</td>
                     </tr>
                     <tr>
@@ -364,7 +366,7 @@
                     <tr>
                       <td class="fmstr-cmp-jot-free__attr">MCP server for AI agents</td>
                       <td class="fmstr-cmp-jot-free__cell--formester">Yes (Business)</td>
-                      <td>No</td>
+                      <td>Yes (remote MCP at mcp.jotform.com)</td>
                     </tr>
                   </tbody>
                 </table>
@@ -407,7 +409,7 @@
                         $0 · unlimited responses, unlimited forms, AI generator, payments
                       </td>
                       <td>$0 · 100 responses/mo, 5 forms, 100 MB</td>
-                      <td class="fmstr-cmp-jot-pricing__note">Formester offers 2x the form cap on free</td>
+                      <td class="fmstr-cmp-jot-pricing__note">Formester offers unlimited forms on free</td>
                     </tr>
                     <tr>
                       <td><span class="fmstr-cmp-jot-pricing__tier">Entry paid</span></td>
@@ -549,7 +551,7 @@
                     <tr>
                       <td class="fmstr-cmp-jot-paid__attr">MCP server (Claude / ChatGPT / agents)</td>
                       <td class="fmstr-cmp-jot-paid__cell--formester">Yes (Business)</td>
-                      <td>No</td>
+                      <td>Yes (remote MCP)</td>
                     </tr>
                     <tr>
                       <td class="fmstr-cmp-jot-paid__attr">E-signature</td>
@@ -705,7 +707,7 @@
                   <p class="fmstr-cmp-jot-lio__body">
                     Native HubSpot, Google Sheets, Slack, Stripe, PayPal, Calendly, n8n, Pabbly, OttoKit, GA4, and GTM.
                     Webhooks fire on every plan. REST API v2 on Business plus an MCP server that plugs into Claude or
-                    ChatGPT. Jotform has 100+ integrations and Jotform Sign, but no MCP server.
+                    ChatGPT. Jotform has 100+ integrations, Jotform Sign, and its own remote MCP server too — the difference is scope, not existence.
                   </p>
                   <div class="fmstr-cmp-jot-lio__compare">
                     <div class="fmstr-cmp-jot-lio__row">
@@ -743,7 +745,7 @@
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
                       <span class="fmstr-cmp-jot-lio__value"
-                        >100+ integrations, Jotform Sign, 40+ payment gateways, no MCP</span
+                        >100+ integrations, Jotform Sign, 40+ payment gateways, remote MCP server</span
                       >
                     </div>
                   </div>
@@ -1259,27 +1261,6 @@
               </header>
 
               <div class="fmstr-cmp-jot-other-alts__grid">
-                <a class="fmstr-cmp-jot-other-alts__tile" href="https://formester.com/google-forms-alternative/">
-                  <h3 class="fmstr-cmp-jot-other-alts__name">Google Forms alternative</h3>
-                  <p class="fmstr-cmp-jot-other-alts__bestfor">
-                    Best for free internal Google Workspace use with Sheets as the destination.
-                  </p>
-                  <span class="fmstr-cmp-jot-other-alts__link">Compare →</span>
-                </a>
-                <a class="fmstr-cmp-jot-other-alts__tile" href="https://formester.com/forms-app-alternative/">
-                  <h3 class="fmstr-cmp-jot-other-alts__name">forms.app alternative</h3>
-                  <p class="fmstr-cmp-jot-other-alts__bestfor">
-                    Best for EU teams who want ISO 27001 hosting in Belgium and AI features.
-                  </p>
-                  <span class="fmstr-cmp-jot-other-alts__link">Compare →</span>
-                </a>
-                <a class="fmstr-cmp-jot-other-alts__tile" href="https://formester.com/microsoft-forms-alternative/">
-                  <h3 class="fmstr-cmp-jot-other-alts__name">Microsoft Forms alternative</h3>
-                  <p class="fmstr-cmp-jot-other-alts__bestfor">
-                    Best for Microsoft 365 teams who already pay for the suite.
-                  </p>
-                  <span class="fmstr-cmp-jot-other-alts__link">Compare →</span>
-                </a>
                 <a class="fmstr-cmp-jot-other-alts__tile" href="https://formester.com/zoho-forms-alternative/">
                   <h3 class="fmstr-cmp-jot-other-alts__name">Zoho Forms alternative</h3>
                   <p class="fmstr-cmp-jot-other-alts__bestfor">
@@ -1957,7 +1938,7 @@ const c20_faqList = [
   {
     id: 3421,
     header: ' How does Jotform pricing compare to Formester in 2026? ',
-    body: "At 1,000 submissions a month, Formester Personal is $12 per month, billed annually, and Jotform Bronze is $39 per month monthly (or $34 per month billed annually). At 10,000 submissions, Formester Business is $45 per month, billed annually, and Jotform Gold is $99 per month, billed annually. The Formester free plan also gives you 10 forms vs Jotform's 5.",
+    body: "At 1,000 submissions a month, Formester Personal is $12 per month, billed annually, and Jotform Bronze is $39 per month monthly (or $34 per month billed annually). At 10,000 submissions, Formester Business is $45 per month, billed annually, and Jotform Gold is $99 per month, billed annually. The Formester free plan also gives you unlimited forms vs Jotform's 5.",
     body_markdown: '',
     list: [],
   },

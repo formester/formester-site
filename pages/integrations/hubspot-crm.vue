@@ -518,7 +518,9 @@ useHead({
     {
       hid: 'canonical',
       rel: 'canonical',
-      href: 'https://formester.com/integrations/hubspot-crm/',
+      // Duplicate of /integrations/hubspot/ (same content, different slug) —
+      // canonicalize there so the two pages don't compete for the same query.
+      href: 'https://formester.com/integrations/hubspot/',
     },
   ],
   meta: [

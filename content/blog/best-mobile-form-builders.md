@@ -170,7 +170,7 @@ overflow-x: hidden;
 <table class="fmstr-cmp-bmf-tbl__table">
 <thead><tr><th>Tool</th><th>Mobile UX</th><th>Offline mode</th><th>Native app</th><th>Free plan</th><th>Cheapest paid</th></tr></thead>
 <tbody>
-<tr class="is-featured"><td data-label="Tool"><span class="fmstr-cmp-bmf-tbl__name fmstr-cmp-bmf-tbl__name--brand">Formester</span><span class="fmstr-cmp-bmf-tbl__badge">Editor's pick</span></td><td data-label="Mobile UX">Mobile-responsive web</td><td data-label="Offline mode">Yes (cached browser)</td><td data-label="Native app">No</td><td data-label="Free plan">100 responses/mo</td><td data-label="Cheapest paid">$13/mo Personal</td></tr>
+<tr class="is-featured"><td data-label="Tool"><span class="fmstr-cmp-bmf-tbl__name fmstr-cmp-bmf-tbl__name--brand">Formester</span><span class="fmstr-cmp-bmf-tbl__badge">Editor's pick</span></td><td data-label="Mobile UX">Mobile-responsive web</td><td data-label="Offline mode">Yes (cached browser)</td><td data-label="Native app">No</td><td data-label="Free plan">Unlimited forms and responses</td><td data-label="Cheapest paid">$13/mo Personal</td></tr>
 <tr class=""><td data-label="Tool"><span class="fmstr-cmp-bmf-tbl__name">Jotform Mobile Forms</span></td><td data-label="Mobile UX">Native + responsive web</td><td data-label="Offline mode">Yes (mobile app)</td><td data-label="Native app">iOS + Android</td><td data-label="Free plan">100 submissions/mo</td><td data-label="Cheapest paid">$34/mo Bronze</td></tr>
 <tr class=""><td data-label="Tool"><span class="fmstr-cmp-bmf-tbl__name">forms.app</span></td><td data-label="Mobile UX">Hybrid web + AI-first</td><td data-label="Offline mode">No</td><td data-label="Native app">iOS + Android</td><td data-label="Free plan">100 responses/mo</td><td data-label="Cheapest paid">$19/mo Basic</td></tr>
 <tr class=""><td data-label="Tool"><span class="fmstr-cmp-bmf-tbl__name">Typeform</span></td><td data-label="Mobile UX">Mobile-responsive web</td><td data-label="Offline mode">No</td><td data-label="Native app">No</td><td data-label="Free plan">10 responses/mo</td><td data-label="Cheapest paid">$25/mo Basic</td></tr>
@@ -323,7 +323,7 @@ min-width: 145px;
 </div>
 <p class="fmstr-cmp-bmf-body__block-title">Pricing</p>
 <ul class="fmstr-cmp-bmf-body__pricing">
-<li><strong>Free Plan:</strong> Yes (100 responses/month, unlimited forms)</li>
+<li><strong>Free Plan:</strong> Yes (unlimited forms and responses)</li>
 <li><strong>Starting Price:</strong> $13/month Personal ($12/month annual)</li>
 <li><strong>Most Popular Plan:</strong> $49/month Business ($45/month annual)</li>
 <li><strong>Enterprise Plan:</strong> Custom pricing</li>

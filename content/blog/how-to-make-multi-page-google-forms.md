@@ -24,7 +24,7 @@ With Google Forms, you can split your form into sections. You can also use branc
 
 This way, users see only the questions that matter to them. This creates a smoother experience overall. 
 
-This guide will show you how to create a multi-page Google form step by step. It will share best practices and compare it to a more advanced **[Google Forms alternative like Formester](/google-forms-alternative/)**.
+This guide will show you how to create a multi-page Google form step by step. It will share best practices and compare it to a more advanced **[Google Forms alternative like Formester](/blog/why-formester-is-the-best-google-forms-alternative/)**.
 
 ## Why Break Your Form into Multiple Pages
 Long, scrolling forms can overwhelm users. Multi-page forms break that monotony, helping respondents focus on one topic at a time. Here’s why this approach works so well:

@@ -17,7 +17,7 @@ updatedAt: "2026-01-28T04:48:32.327Z"
 publishedAt: "2024-05-13T07:37:13.844Z"
 ---
 
-We are living in a time where online documentation and verification is becoming more prevalent with each passing day. Online forms are extensively being used for all sorts of purposes of data collection, [Google Forms being one of the most popular tools](/google-forms-alternative/). 
+We are living in a time where online documentation and verification is becoming more prevalent with each passing day. Online forms are extensively being used for all sorts of purposes of data collection, [Google Forms being one of the most popular tools](/blog/why-formester-is-the-best-google-forms-alternative/). 
 
 Therefore, knowing how to add an electronic signature in Google Forms can be immensely useful. Whether you're [collecting agreements](/templates/employee-laptop-agreement-form-2806/), approvals, or [consent forms](/templates/video-consent-form-2491/), having a signature adds an extra layer of authenticity and verification to your forms.
 
@@ -25,7 +25,7 @@ Therefore, knowing how to add an electronic signature in Google Forms can be imm
 
 Google Forms is a free tool offered by Google for creating online forms and surveys. While it's straightforward to use, adding a signature field is not an in-built feature. In this article, we'll look at the process to easily incorporate signatures into your Google Forms.
 
-Google Forms is a part of [Google's suite of productivity tools](/blog/integrating-google-forms-google-sheets-a-match-made-in-digital-heaven-essential-basics/), allowing users to create customizable forms for various purposes. It offers a simple interface for designing forms and collecting responses, making it ideal for surveys, event registrations, feedback forms, and more.
+Google Forms is a part of [Google's suite of productivity tools](/blog/google-forms-to-google-sheets/), allowing users to create customizable forms for various purposes. It offers a simple interface for designing forms and collecting responses, making it ideal for surveys, event registrations, feedback forms, and more.
 
 ### Why Add a Signature in Google Forms?
 

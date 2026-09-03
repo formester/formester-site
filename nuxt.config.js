@@ -25,11 +25,8 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: 'https://formester.com/',
-        },
+        // Default per-route canonical lives in app.vue (a static href here
+        // would canonicalize every page without its own tag to the homepage).
       ],
       script: [
         {
@@ -126,7 +123,7 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: ['/', '/sitemap.xml'],
-      ignore: ['/api', '/comparison-tool'],
+      ignore: ['/api'],
       // Lower via PRERENDER_CONCURRENCY on memory-constrained machines —
       // e.g. a 6.7GB-RAM local dev box OOM'd at the default 16 with
       // --max-old-space-size=4096 (needed for the full blog+templates

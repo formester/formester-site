@@ -611,7 +611,7 @@ text-transform: uppercase; border: 1px solid var(--c-bg-edge); margin: 0 0 14px;
 <tr><th>File uploads</th><td data-h="Google Forms native">1GB per response, files in Drive</td><td data-h="Formester">100MB Free / 1GB Personal / 50GB Business (<a href="https://formester.com/features/file-upload-forms/">file uploads</a>)</td></tr>
 <tr><th>Pre-fill from a Sheet on load</th><td data-h="Google Forms native">No (manual prefilled link only)</td><td data-h="Formester">Yes (<a href="https://formester.com/features/auto-fill-forms-with-external-data/">auto-fill from external data</a>)</td></tr>
 <tr><th>Webhooks + API</th><td data-h="Google Forms native">No</td><td data-h="Formester">Yes</td></tr>
-<tr><th>Free tier</th><td data-h="Google Forms native">Unlimited responses (Google account)</td><td data-h="Formester">10 forms, 100 responses/month</td></tr>
+<tr><th>Free tier</th><td data-h="Google Forms native">Unlimited responses (Google account)</td><td data-h="Formester">Unlimited forms and responses</td></tr>
 </tbody>
 </table>
 </div>

@@ -2248,7 +2248,7 @@ const c16_testimonials = [
 const c17_ctaValue = {
   id: 100,
   description:
-    'Free plan: 10 questionnaires, 100 responses per month, AI generator, all field types, drop-off analytics. No credit card required to start',
+    'Free plan: unlimited questionnaires and responses, AI generator, all field types, drop-off analytics. No credit card required to start',
   type: 'Questionnaire CTA',
   createdAt: '2026-04-28T10:47:37.393Z',
   updatedAt: '2026-05-07T18:23:42.339Z',

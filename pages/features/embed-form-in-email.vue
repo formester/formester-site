@@ -2112,7 +2112,7 @@
                     <polyline points="12 5 19 12 12 19"></polyline>
                   </svg>
                 </a>
-                <a class="fmstr-cmp-eie-cta__cta-secondary" href="https://formester.com/templates/categories/surveys/"
+                <a class="fmstr-cmp-eie-cta__cta-secondary" href="https://formester.com/templates/categories/survey-forms/"
                   >See email-form templates</a
                 >
               </div>

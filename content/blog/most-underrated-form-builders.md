@@ -18,7 +18,7 @@ publishedAt: "2025-10-29T03:47:54.111Z"
 ---
 ![a blog post cover about most underrated form builders](https://formester-strapi.s3.ap-south-1.amazonaws.com/How_to_Make_User_Research_Survey_40_a924a020f7.png)
 
-When it comes to **online form builders**, everyone talks about the big names like **[Google Forms](/google-forms-alternative/)**, Typeform, or Jotform. But what about the lesser known tools that deliver just as much, if not more?
+When it comes to **online form builders**, everyone talks about the big names like **[Google Forms](/blog/why-formester-is-the-best-google-forms-alternative/)**, Typeform, or Jotform. But what about the lesser known tools that deliver just as much, if not more?
 
 If you are tired of slow, overcomplicated platforms or limited customization, this list is for you.
 

@@ -989,7 +989,7 @@ content: "\2192"; transition: transform .15s ease; display: inline-block;
 <span class="fmstr-cmp-gfo-rel__arrow">Read more</span>
 </a>
 
-<a class="fmstr-cmp-gfo-rel__card" href="https://formester.com/blog/why-formester-is-the-best-google-forms-alternative/">
+<a class="fmstr-cmp-gfo-rel__card" href="/blog/why-formester-is-the-best-google-forms-alternative/">
 <span class="fmstr-cmp-gfo-rel__chip">Alternative</span>
 <h3 class="fmstr-cmp-gfo-rel__title">Google Forms alternative</h3>
 <p class="fmstr-cmp-gfo-rel__body">Where Google Forms stops working for revenue, and what to replace it with.</p>

@@ -149,24 +149,6 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/google-forms-alternative/" class="footer__link">
-                  Formester vs Google Forms
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink
-                  to="/microsoft-forms-alternative/"
-                  class="footer__link"
-                >
-                  Formester vs Microsoft Forms
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
-                <NuxtLink to="/forms-app-alternative/" class="footer__link">
-                  Formester vs Forms App
-                </NuxtLink>
-              </li>
-              <li class="mt-2">
                 <NuxtLink to="/zoho-forms-alternative/" class="footer__link">
                   Formester vs Zoho Forms
                 </NuxtLink>
@@ -192,7 +174,7 @@
                 </NuxtLink>
               </li>
               <li class="mt-2">
-                <NuxtLink to="/gravity-forms-alternative/" class="footer__link">
+                <NuxtLink to="/blog/best-gravity-forms-alternatives/" class="footer__link">
                   Formester vs Gravity Forms
                 </NuxtLink>
               </li>

@@ -689,7 +689,7 @@ transition: transform .15s ease, background-color .15s ease;
 
 <details class="fmstr-cmp-tmpl-faq__item">
 <summary>Can I style an embedded Google Form to match my site?</summary>
-<div class="fmstr-cmp-tmpl-faq__answer">Not really. You can set a single theme color and font inside Google Forms, but the form chrome (header, logo, "Required" markers, submit button) stays Google-branded. Tools like <a href="https://formester.com/blog/why-formester-is-the-best-google-forms-alternative/">Formester</a> let you fully white-label the form, including fonts, button styles, and field spacing.</div>
+<div class="fmstr-cmp-tmpl-faq__answer">Not really. You can set a single theme color and font inside Google Forms, but the form chrome (header, logo, "Required" markers, submit button) stays Google-branded. Tools like <a href="/blog/why-formester-is-the-best-google-forms-alternative/">Formester</a> let you fully white-label the form, including fonts, button styles, and field spacing.</div>
 </details>
 
 <details class="fmstr-cmp-tmpl-faq__item">
@@ -773,7 +773,7 @@ content: "\2192"; transition: transform .15s ease; display: inline-block;
 </div>
 <div class="fmstr-cmp-tmpl-rel__grid">
 
-<a class="fmstr-cmp-tmpl-rel__card" href="https://formester.com/blog/why-formester-is-the-best-google-forms-alternative/">
+<a class="fmstr-cmp-tmpl-rel__card" href="/blog/why-formester-is-the-best-google-forms-alternative/">
 <span class="fmstr-cmp-tmpl-rel__chip">Alternative</span>
 <h3 class="fmstr-cmp-tmpl-rel__title">Best Google Forms alternative</h3>
 <p class="fmstr-cmp-tmpl-rel__body">Six embed modes, full white-label, payments, e-signature. Side-by-side with Google Forms.</p>

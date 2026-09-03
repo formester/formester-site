@@ -494,7 +494,7 @@ res.<span class="t">redirect</span>(<span class="s">'/thank-you'</span>);
 <ul class="fmstr-cmp-ffh-back__list">
 <li class="fmstr-cmp-ffh-back__row fmstr-cmp-ffh-back__row--good"><span><strong>Submissions land in the dashboard.</strong> View, filter, <a href="https://formester.com/features/export-form-submission-pdf/">export to PDF</a>, push to Sheets/Slack/HubSpot.</span></li>
 <li class="fmstr-cmp-ffh-back__row fmstr-cmp-ffh-back__row--good"><span><strong>Spam protection built in.</strong> Honeypot plus <a href="https://formester.com/features/spam-protection/">reCAPTCHA-style checks</a> on every submission.</span></li>
-<li class="fmstr-cmp-ffh-back__row fmstr-cmp-ffh-back__row--good"><span><strong>Free for 100 submissions/month.</strong> Email notifications, dashboard, integrations included. Used by 56,000+ teams.</span></li>
+<li class="fmstr-cmp-ffh-back__row fmstr-cmp-ffh-back__row--good"><span><strong>Free with unlimited submissions.</strong> Email notifications, dashboard, integrations included. Used by 56,000+ teams.</span></li>
 </ul>
 <a class="fmstr-cmp-ffh-back__cta" href="https://formester.com/features/html-form-backend/">See the HTML form backend &rarr;</a>
 </article>

@@ -602,7 +602,7 @@ font-size: 13.5px; color: var(--c-fg-3); margin: 0;
 </div>
 <div class="fmstr-cmp-gfgs-wedge__cta-row">
 <a class="fmstr-cmp-gfgs-wedge__cta" href="https://app.formester.com/users/sign_up">Start free with Formester <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-<p class="fmstr-cmp-gfgs-wedge__meta">Free plan covers 100 submissions/month. No credit card required.</p>
+<p class="fmstr-cmp-gfgs-wedge__meta">Free plan includes unlimited forms and responses. No credit card required.</p>
 </div>
 </div>
 </div>
@@ -844,7 +844,6 @@ text-decoration: none !important; color: inherit !important; transition: all .15
 <div class="fmstr-cmp-gfgs-rel__text"><h3>5 ways to view responses</h3><small>Google Forms how-to</small></div>
 <span class="fmstr-cmp-gfgs-rel__arrow" aria-hidden="true">&rarr;</span>
 </a>
-
 <a class="fmstr-cmp-gfgs-rel__card" href="https://formester.com/blog/how-to-add-conditional-questions-in-google-forms/">
 <div class="fmstr-cmp-gfgs-rel__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M6 8.5v3c0 2 1.5 3.5 3.5 3.5h5C16.5 15 18 13.5 18 11.5v-3"/></svg></div>
 <div class="fmstr-cmp-gfgs-rel__text"><h3>Conditional questions in Google Forms</h3><small>How-to blog</small></div>
@@ -860,7 +859,7 @@ text-decoration: none !important; color: inherit !important; transition: all .15
 <div class="fmstr-cmp-gfgs-rel__text"><h3>Enable access for Google Forms</h3><small>How-to blog</small></div>
 <span class="fmstr-cmp-gfgs-rel__arrow" aria-hidden="true">&rarr;</span>
 </a>
-<a class="fmstr-cmp-gfgs-rel__card" href="https://formester.com/blog/why-formester-is-the-best-google-forms-alternative/">
+<a class="fmstr-cmp-gfgs-rel__card" href="/blog/why-formester-is-the-best-google-forms-alternative/">
 <div class="fmstr-cmp-gfgs-rel__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8l4-4 4 4M17 4v8M21 16l-4 4-4-4M7 20v-8"/></svg></div>
 <div class="fmstr-cmp-gfgs-rel__text"><h3>Google Forms alternative</h3><small>Formester vs Google Forms</small></div>
 <span class="fmstr-cmp-gfgs-rel__arrow" aria-hidden="true">&rarr;</span>

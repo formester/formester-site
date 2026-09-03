@@ -740,7 +740,7 @@ content: "\2192"; transition: transform .15s ease; display: inline-block;
 <span class="fmstr-cmp-tmpl-rel__arrow">Open</span>
 </a>
 
-<a class="fmstr-cmp-tmpl-rel__card" href="https://formester.com/form-builder/">
+<a class="fmstr-cmp-tmpl-rel__card" href="https://formester.com/features/drag-and-drop-form-builder/">
 <span class="fmstr-cmp-tmpl-rel__chip">Product</span>
 <h3 class="fmstr-cmp-tmpl-rel__title">Online form builder</h3>
 <p class="fmstr-cmp-tmpl-rel__body">Drag-and-drop form builder with conditional logic, payments, and unlimited responses on the free plan.</p>

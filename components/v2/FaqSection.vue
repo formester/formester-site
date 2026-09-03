@@ -268,6 +268,7 @@ const toggle = (id) => {
 }
 
 .faq-answer {
+  text-align: left;
   padding-bottom: var(--space-3);
   color: var(--fg-2);
   font-size: var(--fs-sm);

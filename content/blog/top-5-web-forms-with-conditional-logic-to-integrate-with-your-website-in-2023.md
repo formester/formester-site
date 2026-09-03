@@ -151,7 +151,7 @@ Formester also offers [customizable, pre-designed and free Templates](/templates
 
 #### Pricing
 
-The Basic plan is free for upto 10 forms and 100 submissions, giving you the [scope to explore and make the right decision](/pricing/).
+The Free plan includes unlimited forms and submissions, giving you the [scope to explore and make the right decision](/pricing/).
 
 ### 2. Jotform
 
