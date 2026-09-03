@@ -1,5 +1,5 @@
 <template>
-  <section class="ai-hero">
+  <section id="ai-form-builder" class="ai-hero">
     <div class="ai-hero__grid">
     <div class="ai-hero__header">
       <div class="ai-hero__badge">

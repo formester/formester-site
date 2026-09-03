@@ -114,8 +114,7 @@
                 <div class="fmstr-cmp-afg-compare__eyebrow">Comparison</div>
                 <h2 class="fmstr-cmp-afg-compare__h2">How Formester compares to Jotform, Fillout, and Google Forms</h2>
                 <p class="fmstr-cmp-afg-compare__sub">
-                  Use the table for current limits and pricing. The better question is whether you can go from source
-                  material to an editable, publishable form without rebuilding it by hand.
+                  Compare current free-plan limits and pricing.
                 </p>
               </div>
               <div class="fmstr-cmp-afg-compare__scroll">
@@ -238,8 +237,8 @@
                   <h2 class="fmstr-cmp-afg-freeplan__h2">Free forever: unlimited forms, unlimited responses</h2>
                 </div>
                 <p class="fmstr-cmp-afg-freeplan__body">
-                  Build as many forms as you need. There are no caps on forms, responses, or fields. Free includes two
-                  AI form generations a day, every field type, quiz auto-scoring,
+                  Build as many forms as you need. There are no caps on forms, responses, or fields. Free includes every
+                  field type, quiz auto-scoring,
                   <a
                     href="/features/form-analytics/"
                     style="color: #6941c6 !important; text-decoration: underline !important; text-underline-offset: 2px"
@@ -884,7 +883,7 @@
                 The generator runs on Google Gemini. When you submit a prompt, a question list, or a PDF, the model maps
                 your input against Formester's field library: it writes the questions, picks a field type for each one
                 (short answer, multiple choice, rating scale, file upload), and wires conditional logic where the flow
-                needs it. A typical form is ready in about 30 seconds, and you can edit the result by hand or ask the AI
+                needs it. A typical form is ready in 30 seconds, and you can edit the result by hand or ask the AI
                 to revise it. Your content is never used to train any model, ours or anyone else's.
               </p>
             </div>
@@ -1228,7 +1227,7 @@ import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
 import TrustSeals from '@/components/v2/TrustSeals.vue'
 
 const c0_description =
-  'Describe the outcome, paste a URL, or upload a PDF or image. Formester generates an editable form in about 30 seconds, then you can publish it and collect responses. Free includes unlimited forms and responses.'
+  'Describe the outcome, paste a URL, or upload a PDF or image. Formester generates an editable form in 30 seconds, then you can publish it and collect responses. Free includes unlimited forms and responses.'
 const c0_title = [
   {
     id: 5963,
@@ -1239,7 +1238,7 @@ const c0_title = [
   },
   {
     id: 5962,
-    text: 'in about 30 seconds',
+    text: 'in 30 seconds',
     highlight: true,
     color: '#000000',
     bold: false,
@@ -1273,7 +1272,7 @@ const c0_footerItems = [
   },
   {
     id: 3591,
-    text: '2 AI generations/day on Free',
+    text: 'Free forever',
   },
   {
     id: 3590,
@@ -1323,7 +1322,7 @@ const c14_ctaValue = {
   title: [
     {
       id: 393,
-      text: 'Start with a form you can actually publish',
+      text: 'Need a form? Generate it now.',
       highlight: false,
       color: null,
       bold: null,
@@ -1332,8 +1331,8 @@ const c14_ctaValue = {
   buttons: [
     {
       id: 338,
-      link: 'https://app.formester.com/users/sign_up',
-      text: 'Build a form free',
+      link: '#ai-form-builder',
+      text: 'Generate a form',
       type: 'Primary',
       showArrow: null,
     },
@@ -1360,14 +1359,14 @@ const c15_faqList = [
   {
     id: 3833,
     header: 'How does the AI Form Generator work?',
-    body: '<p>You give it an input: a written description, a list of questions you already have, or a PDF. The AI reads it, writes the fields, picks the right question type for each, and assembles a live form. From there you can edit any field, restyle the form, or ask the AI to make the changes for you. Most generations finish in about 30 seconds.</p>',
+    body: '<p>You give it an input: a written description, a list of questions you already have, or a PDF. The AI reads it, writes the fields, picks the right question type for each, and assembles a live form. From there you can edit any field, restyle the form, or ask the AI to make the changes for you. Most generations finish in 30 seconds.</p>',
     body_markdown: null,
     list: [],
   },
   {
     id: 3828,
     header: 'Can I use the AI Form Generator for free?',
-    body: '<p>Yes. No credit card at signup, and the free plan has no caps on forms or responses. Free accounts include 2 AI form generations a day; Personal raises that to 10 and Business to 50. Paid plans also unlock custom branding, conditional logic, and API access.</p>',
+    body: '<p>Yes. No credit card at signup, and the free plan has no caps on forms or responses. Paid plans add custom branding, conditional logic, and API access. See pricing for plan details.</p>',
     body_markdown: null,
     list: [],
   },
@@ -1468,7 +1467,7 @@ useHead({
       hid: 'description',
       name: 'description',
       content:
-        'Build a live form from a prompt, PDF, image, or URL. Edit every field, publish it, and collect unlimited responses on the free plan. 2 AI generations/day.',
+        'Build a live form from a prompt, PDF, image, or URL. Edit every field, publish it, and collect unlimited responses on the free plan. Trusted by 56,000+ teams.',
     },
     {
       hid: 'og:site_name',
@@ -1494,7 +1493,7 @@ useHead({
       hid: 'og:description',
       property: 'og:description',
       content:
-        'Build a live form from a prompt, PDF, image, or URL. Edit every field, publish it, and collect unlimited responses on the free plan. 2 AI generations/day.',
+        'Build a live form from a prompt, PDF, image, or URL. Edit every field, publish it, and collect unlimited responses on the free plan. Trusted by 56,000+ teams.',
     },
     {
       hid: 'og:image',
@@ -1524,7 +1523,7 @@ useHead({
       hid: 'twitter:description',
       name: 'twitter:description',
       content:
-        'Build a live form from a prompt, PDF, image, or URL. Edit every field, publish it, and collect unlimited responses on the free plan. 2 AI generations/day.',
+        'Build a live form from a prompt, PDF, image, or URL. Edit every field, publish it, and collect unlimited responses on the free plan. Trusted by 56,000+ teams.',
     },
     {
       hid: 'twitter:image',
@@ -1596,7 +1595,7 @@ useJsonld([
         url: 'https://formester.com/ai-form-generator/',
         name: 'Free AI Form Builder: Create, Edit & Publish Forms | Formester',
         '@type': 'WebPage',
-        headline: 'Free AI Form Builder: create, edit, and publish a form in about 30 seconds',
+        headline: 'Free AI Form Builder: create, edit, and publish a form in 30 seconds',
         isPartOf: {
           '@id': 'https://formester.com/#organization',
         },
@@ -1605,7 +1604,7 @@ useJsonld([
         },
         inLanguage: 'en-US',
         description:
-          'Build a live form from a prompt, PDF, image, or URL. Edit every field, publish it, and collect unlimited responses on the free plan. 2 AI generations/day.',
+          'Build a live form from a prompt, PDF, image, or URL. Edit every field, publish it, and collect unlimited responses on the free plan. Trusted by 56,000+ teams.',
         dateModified: '2026-08-09',
         datePublished: '2024-07-12',
         primaryImageOfPage: {
@@ -1666,7 +1665,7 @@ useJsonld([
           '@id': 'https://formester.com/#organization',
         },
         description:
-          "Formester's AI form builder turns a prompt, PDF, URL, or image into an editable, live form in about 30 seconds. The Free plan includes unlimited forms and responses plus 2 AI generations a day.",
+          "Formester's AI form builder turns a prompt, PDF, URL, or image into an editable, live form in 30 seconds. The Free plan includes unlimited forms and responses.",
         aggregateRating: {
           '@type': 'AggregateRating',
           ratingCount: '450',
@@ -1691,7 +1690,7 @@ useJsonld([
             name: 'How does the AI Form Generator work?',
             '@type': 'Question',
             acceptedAnswer: {
-              text: 'You give it an input: a written description, a list of questions you already have, or a PDF. The AI reads it, writes the fields, picks the right question type for each, and assembles a live form. From there you can edit any field, restyle the form, or ask the AI to make the changes for you. Most generations finish in about 30 seconds.',
+              text: 'You give it an input: a written description, a list of questions you already have, or a PDF. The AI reads it, writes the fields, picks the right question type for each, and assembles a live form. From there you can edit any field, restyle the form, or ask the AI to make the changes for you. Most generations finish in 30 seconds.',
               '@type': 'Answer',
             },
           },
@@ -1699,7 +1698,7 @@ useJsonld([
             name: 'Can I use the AI Form Generator for free?',
             '@type': 'Question',
             acceptedAnswer: {
-              text: 'Yes. No credit card at signup, and the free plan has no caps on forms or responses. Free accounts include 2 AI form generations a day; Personal raises that to 10 and Business to 50. Paid plans also unlock custom branding, conditional logic, and API access.',
+              text: 'Yes. No credit card at signup, and the free plan has no caps on forms or responses. Paid plans add custom branding, conditional logic, and API access. See pricing for plan details.',
               '@type': 'Answer',
             },
           },

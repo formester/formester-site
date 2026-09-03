@@ -5,19 +5,31 @@ import test from 'node:test'
 const page = await readFile(new URL('../pages/ai-form-generator.vue', import.meta.url), 'utf8')
 const hero = await readFile(new URL('../components/features/AiHero.vue', import.meta.url), 'utf8')
 const faq = await readFile(new URL('../components/v2/FaqSection.vue', import.meta.url), 'utf8')
+const cta = await readFile(new URL('../components/CallToActionSection.vue', import.meta.url), 'utf8')
 const testimonials = await readFile(new URL('../components/v2/testimonials/TestimonialsV2.vue', import.meta.url), 'utf8')
 
-test('AI form builder page makes the category, outcome, and free limit explicit', () => {
+test('AI form builder page leads with proof and does not market a daily AI limit', () => {
   assert.match(page, /Free AI Form Builder/)
-  assert.match(page, /2 AI generations a day/)
+  assert.match(page, /Trusted by 56,000\+ teams/)
+  assert.match(page, /Free forever/)
+  assert.doesNotMatch(page, /2 AI generations/)
+  assert.doesNotMatch(page, /about 30 seconds/)
   assert.match(page, /AI Form Builder: create, edit, and publish a form/i)
-  assert.match(page, /prompt, PDF, image, URL, or your existing questions/i)
-  assert.match(page, /editable\s+form you can publish/i)
+  assert.match(page, /in 30 seconds/)
+  assert.match(page, /Compare current free-plan limits and pricing\./)
 })
 
 test('generated-form result gives visitors a save path, not only an edit path', () => {
   assert.match(hero, /Save this form free/)
   assert.match(hero, /No account yet\? Save your form and keep editing it free\./)
+})
+
+test('the lower CTA returns visitors to the live generator', () => {
+  assert.match(hero, /id="ai-form-builder"/)
+  assert.match(page, /link: '#ai-form-builder'/)
+  assert.match(page, /text: 'Generate a form'/)
+  assert.match(cta, /primaryButton\.link/)
+  assert.match(cta, /primaryButton\.text/)
 })
 
 test('page avoids duplicate how-it-works labels and uses the standard testimonial carousel', () => {
