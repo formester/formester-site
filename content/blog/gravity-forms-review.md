@@ -219,7 +219,7 @@ publishedAt: "2026-07-19T15:39:50.432Z"
 
 <p><strong>If your workflow is form-to-PDF.</strong> Formester exports every submission as a PDF on the free plan. Gravity Forms requires the PDF Extended add-on (third-party, not first-party) at $69 to $199/year on top of the license.</p>
 
-<p>Full comparison and switching guide: <a href="https://formester.com/gravity-forms-alternative/">Formester vs Gravity Forms</a>.</p>
+<p>Full comparison and switching guide: <a href="https://formester.com/blog/best-gravity-forms-alternatives/">Formester vs Gravity Forms</a>.</p>
 
 
 <h2>When Gravity Forms is the better pick</h2>

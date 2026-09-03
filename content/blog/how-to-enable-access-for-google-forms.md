@@ -103,7 +103,7 @@ Three ways to share the responder link:
 Security extras worth turning on:
 - **CAPTCHA / spam filter:** add a reCAPTCHA question if you are getting bot submissions.
 - **Limit responses:** cap the form once you have enough replies, using a [form limiter](/features/form-limiter/) or a third-party Apps Script.
-- **Avoid collecting sensitive data:** Google Forms is not HIPAA-friendly out of the box. If you are collecting medical, financial, or personally identifiable data at scale, the platform is the wrong fit. [Formester's GDPR-ready forms](/features/data-storage-policies/) give cleaner controls.
+- **Avoid collecting sensitive data:** Google Forms is not HIPAA-friendly out of the box. If you are collecting medical, financial, or personally identifiable data at scale, the platform is the wrong fit. [Formester's GDPR-ready forms](/security/) give cleaner controls.
 
 ## Fix "You need permission to access this form
 

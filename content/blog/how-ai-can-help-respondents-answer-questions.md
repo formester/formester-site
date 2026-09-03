@@ -330,7 +330,7 @@ color: var(--c-fg-3); margin: 0 !important;
 <p class="fmstr-cmp-tmpl-steps__meta"><strong>Example:</strong> A support intake form asks "what product are you using?" The field autocompletes on the first three characters from the product catalog. Free-text noise that used to need manual cleanup goes to near zero.</p>
 <p class="fmstr-cmp-tmpl-steps__meta"><strong>Impact:</strong> Autocomplete reduces typing time and standardizes answers, which makes downstream analysis tractable.</p>
 <p class="fmstr-cmp-tmpl-steps__meta"><strong>When to use:</strong> Text fields with a known but large answer space (products, job titles, cities, technologies).</p>
-<p class="fmstr-cmp-tmpl-steps__meta"><strong>Formester:</strong> Ships <a href="https://formester.com/features/select-options/">dropdown fields with searchable options</a> and external data connections for dynamic option lists.</p>
+<p class="fmstr-cmp-tmpl-steps__meta"><strong>Formester:</strong> Ships dropdown fields with searchable options and external data connections for dynamic option lists.</p>
 </div>
 </li>
 

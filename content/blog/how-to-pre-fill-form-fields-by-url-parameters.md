@@ -732,17 +732,6 @@ transition: transform .15s ease;
 <span class="fmstr-cmp-pfu-rel__arrow" aria-hidden="true">&rarr;</span>
 </a>
 
-<a class="fmstr-cmp-pfu-rel__card" href="https://formester.com/features/share-form/">
-<span class="fmstr-cmp-pfu-rel__icon" aria-hidden="true">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-</span>
-<div class="fmstr-cmp-pfu-rel__text">
-<h3 class="fmstr-cmp-pfu-rel__title">Share form</h3>
-<p class="fmstr-cmp-pfu-rel__sub">Pre-filled URLs in share menu</p>
-</div>
-<span class="fmstr-cmp-pfu-rel__arrow" aria-hidden="true">&rarr;</span>
-</a>
-
 <a class="fmstr-cmp-pfu-rel__card" href="https://formester.com/features/conditional-logic/">
 <span class="fmstr-cmp-pfu-rel__icon" aria-hidden="true">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 3 6 21"/><polyline points="18 3 18 9"/><path d="M6 9c0 6 12 6 12 12"/></svg>

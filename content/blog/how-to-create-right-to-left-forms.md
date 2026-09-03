@@ -168,7 +168,7 @@ font-weight: 500;
 <div class="fmstr-cmp-rtl-tldr__card">
 <p class="fmstr-cmp-rtl-tldr__label" id="fmstr-cmp-rtl-tldr-label">Quick answer</p>
 <p class="fmstr-cmp-rtl-tldr__body"><strong>Google Forms does not have a right-to-left toggle.</strong> The only workaround is to change your Google account's Forms language to Hebrew or Arabic, which flips the form RTL in your editor view, but respondents still see it left-to-right.</p>
-<p class="fmstr-cmp-rtl-tldr__body">For respondent-facing RTL, use a native builder: <a href="/form-builder/">Formester</a> (toggle Multilanguage, pick Arabic, Hebrew, Urdu, Persian, Pashto, or Sindhi, AI translates and aligns), <a href="https://fillout.com/help/right-to-left-forms">Fillout</a> (per-form RTL flag), or <a href="https://www.jotform.com/help/how-to-align-your-forms-to-a-right-to-left-direction/">Jotform</a> (custom CSS).</p>
+<p class="fmstr-cmp-rtl-tldr__body">For respondent-facing RTL, use a native builder: <a href="/features/drag-and-drop-form-builder/">Formester</a> (toggle Multilanguage, pick Arabic, Hebrew, Urdu, Persian, Pashto, or Sindhi, AI translates and aligns), <a href="https://fillout.com/help/right-to-left-forms">Fillout</a> (per-form RTL flag), or <a href="https://www.jotform.com/help/how-to-align-your-forms-to-a-right-to-left-direction/">Jotform</a> (custom CSS).</p>
 <p class="fmstr-cmp-rtl-tldr__body">For developers, <code>dir="rtl"</code> with the right <code>lang</code> attribute is the W3C-documented approach.</p>
 </div>
 </div>
