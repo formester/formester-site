@@ -13,7 +13,7 @@
       class="page-component-item"
     />
 
-    <TrustSeals :title="c1_title" :logos="c1_logos" class="page-component-item" />
+    <TrustSeals class="page-component-item" />
 
     <section class="page-component-item">
       <div class="raw-html-content">
@@ -21,12 +21,13 @@
           <section class="fmstr-cmp-afg-3ways" aria-labelledby="fmstr-cmp-afg-3ways-h2">
             <div class="fmstr-cmp-afg-3ways__container">
               <div class="fmstr-cmp-afg-3ways__header">
-                <div class="fmstr-cmp-afg-3ways__eyebrow">How it works</div>
+                <div class="fmstr-cmp-afg-3ways__eyebrow">What you can start with</div>
                 <h2 class="fmstr-cmp-afg-3ways__h2" id="fmstr-cmp-afg-3ways-h2">
-                  The 3 Ways the AI Form Generator Builds Your Form
+                  An AI Form Builder that takes you from idea to live form
                 </h2>
                 <p class="fmstr-cmp-afg-3ways__sub">
-                  Pick whichever input you have. The output is the same: a live, shareable form in under 30 seconds.
+                  Start with a prompt, PDF, image, URL, or your existing questions. Formester generates an editable
+                  form you can publish as a link, embed, payment form, CRM workflow, or dashboard source.
                 </p>
               </div>
 
@@ -46,8 +47,8 @@
                   </div>
                   <h3 class="fmstr-cmp-afg-3ways__title">Prompt</h3>
                   <p class="fmstr-cmp-afg-3ways__body">
-                    Type what you need. The AI picks the question types, sets up conditional logic, and ships the form
-                    ready to share.
+                    Describe the outcome you need. The AI drafts the questions, chooses field types, and sets up the
+                    form ready for your review.
                   </p>
                   <p class="fmstr-cmp-afg-3ways__example">
                     "Build a 7-question post-event feedback survey with rating scales and one open-ended question."
@@ -72,8 +73,8 @@
                   </div>
                   <h3 class="fmstr-cmp-afg-3ways__title">PDF</h3>
                   <p class="fmstr-cmp-afg-3ways__body">
-                    Upload a non-fillable PDF: intake form, application, consent form. The AI detects the fields,
-                    recreates them as interactive inputs, and gives you a fillable URL.
+                    Upload an intake form, application, or consent form. The AI detects the fields, recreates them as
+                    interactive inputs, and gives you a fillable URL.
                   </p>
                 </div>
 
@@ -93,8 +94,8 @@
                   </div>
                   <h3 class="fmstr-cmp-afg-3ways__title">URL or image</h3>
                   <p class="fmstr-cmp-afg-3ways__body">
-                    Paste a public URL or upload a screenshot. The AI reads the structure and rebuilds it as a Formester
-                    form, fields and logic intact.
+                    Paste a public URL or upload a screenshot. The AI reads its structure, then rebuilds it as a
+                    Formester form you can edit before publishing.
                   </p>
                 </div>
               </div>
@@ -113,7 +114,8 @@
                 <div class="fmstr-cmp-afg-compare__eyebrow">Comparison</div>
                 <h2 class="fmstr-cmp-afg-compare__h2">How Formester compares to Jotform, Fillout, and Google Forms</h2>
                 <p class="fmstr-cmp-afg-compare__sub">
-                  The three tools most people weigh against Formester, compared on the numbers that decide it.
+                  Use the table for current limits and pricing. The better question is whether you can go from source
+                  material to an editable, publishable form without rebuilding it by hand.
                 </p>
               </div>
               <div class="fmstr-cmp-afg-compare__scroll">
@@ -236,8 +238,8 @@
                   <h2 class="fmstr-cmp-afg-freeplan__h2">Free forever: unlimited forms, unlimited responses</h2>
                 </div>
                 <p class="fmstr-cmp-afg-freeplan__body">
-                  The free plan has no volume caps. You get unlimited forms, unlimited responses, and unlimited fields
-                  per form, plus the AI form creator, every field type, quiz auto-scoring,
+                  Build as many forms as you need. There are no caps on forms, responses, or fields. Free includes two
+                  AI form generations a day, every field type, quiz auto-scoring,
                   <a
                     href="/features/form-analytics/"
                     style="color: #6941c6 !important; text-decoration: underline !important; text-underline-offset: 2px"
@@ -267,7 +269,11 @@
     <section class="page-component-item">
       <div class="raw-html-content">
         <div class="raw-html-embed">
-          <section class="fmstr-cmp-afg-quality-control" aria-labelledby="fmstr-cmp-afg-quality-control-heading">
+          <section
+            v-if="false"
+            class="fmstr-cmp-afg-quality-control"
+            aria-labelledby="fmstr-cmp-afg-quality-control-heading"
+          >
             <div class="fmstr-cmp-afg-quality-control__container">
               <div class="fmstr-cmp-afg-quality-control__inner">
                 <div class="fmstr-cmp-afg-quality-control__text">
@@ -1103,21 +1109,9 @@
       </div>
     </section>
 
-    <TestimonialWall
-      description="Real reviews from G2, Trustpilot, and Product Hunt."
-      showG2
-      showTrustpilot
-      showProductHunt
-      showCapterra
-      :title="c13_title"
-      :pickedReviews="c13_pickedReviews"
-      :excludedReviews="c13_excludedReviews"
-      class="page-component-item"
-    />
+    <TestimonialsV2 :heading="c13_title" :testimonials="c13_testimonials" class="page-component-item" />
 
     <CallToActionSection :ctaValue="c14_ctaValue" class="page-component-item" />
-
-    <FaqSection :title="c15_title" :faqList="c15_faqList" class="page-component-item" />
 
     <section class="page-component-item">
       <div class="raw-html-content">
@@ -1221,6 +1215,8 @@
         </div>
       </div>
     </section>
+
+    <FaqSection :title="c15_title" :faqList="c15_faqList" class="page-component-item" />
   </div>
 </template>
 
@@ -1228,22 +1224,22 @@
 import AiHero from '@/components/features/AiHero.vue'
 import CallToActionSection from '@/components/CallToActionSection.vue'
 import FaqSection from '@/components/v2/FaqSection.vue'
-import TestimonialWall from '@/components/v2/TestimonialWall.vue'
+import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
 import TrustSeals from '@/components/v2/TrustSeals.vue'
 
 const c0_description =
-  'Describe your form in plain English, paste a URL, or upload a PDF or an image. The AI builds it in under 30 seconds, ready to share. The free plan includes unlimited forms and unlimited responses.'
+  'Describe the outcome, paste a URL, or upload a PDF or image. Formester generates an editable form in about 30 seconds, then you can publish it and collect responses. Free includes unlimited forms and responses.'
 const c0_title = [
   {
     id: 5963,
-    text: 'The Free AI Form Generator That Builds Your Form ',
+    text: 'Free AI Form Builder: create, edit, and publish a form ',
     highlight: false,
     color: '#000000',
     bold: false,
   },
   {
     id: 5962,
-    text: 'in 30 Seconds',
+    text: 'in about 30 seconds',
     highlight: true,
     color: '#000000',
     bold: false,
@@ -1277,15 +1273,14 @@ const c0_footerItems = [
   },
   {
     id: 3591,
-    text: 'Free forever',
+    text: '2 AI generations/day on Free',
   },
   {
     id: 3590,
     text: 'No credit card required',
   },
 ]
-const c1_title = []
-const c1_logos = []
+
 const c13_title = [
   {
     id: 5961,
@@ -1295,11 +1290,31 @@ const c13_title = [
     bold: false,
   },
 ]
-const c13_pickedReviews = []
-const c13_excludedReviews = []
+const c13_testimonials = [
+  {
+    id: 1,
+    name: 'Shawn',
+    position: 'Trustpilot reviewer · April 2026',
+    comment:
+      "The AI form builder makes things a breeze to set up and completed 75% of my build and then another 25% tweaking. Combined with the AI agent workflow automation after forms are submitted, it's one amazing package.",
+  },
+  {
+    id: 2,
+    name: 'Natasha',
+    position: 'Trustpilot reviewer · June 2026',
+    comment:
+      'Figured out a creative solution for making my form look and function exactly as I intended. Very quick to respond too and so helpful!',
+  },
+  {
+    id: 3,
+    name: 'Heléne Jordaan',
+    position: 'Trustpilot reviewer · August 2025',
+    comment: "The free plan is the best out of all the options I've compared. The AI is also very helpful.",
+  },
+]
 const c14_ctaValue = {
   id: 67,
-  description: 'Get access to advanced AI, unlimited forms & more. See pricing for more details.',
+  description: 'Start with a generated form, make it yours, then publish it when it is ready. Free includes unlimited forms and responses.',
   type: 'default',
   createdAt: '2024-11-04T07:07:43.916Z',
   updatedAt: '2025-06-12T18:47:31.840Z',
@@ -1308,7 +1323,7 @@ const c14_ctaValue = {
   title: [
     {
       id: 393,
-      text: 'Ready to build your perfect form?',
+      text: 'Start with a form you can actually publish',
       highlight: false,
       color: null,
       bold: null,
@@ -1318,7 +1333,7 @@ const c14_ctaValue = {
     {
       id: 338,
       link: 'https://app.formester.com/users/sign_up',
-      text: 'Get Started–It’s Free!',
+      text: 'Build a form free',
       type: 'Primary',
       showArrow: null,
     },
@@ -1436,7 +1451,7 @@ const c15_faqList = [
 ]
 
 useHead({
-  title: 'Free AI Form Generator. Unlimited Forms in 30 Seconds | Formester',
+  title: 'Free AI Form Builder: Create, Edit & Publish Forms | Formester',
   link: [
     {
       hid: 'canonical',
@@ -1453,12 +1468,12 @@ useHead({
       hid: 'description',
       name: 'description',
       content:
-        'The free AI form generator that turns a prompt, PDF, or URL into a live form in 30 seconds. Unlimited forms and responses on the free plan. 56,000+ teams.',
+        'Build a live form from a prompt, PDF, image, or URL. Edit every field, publish it, and collect unlimited responses on the free plan. 2 AI generations/day.',
     },
     {
       hid: 'og:site_name',
       name: 'og:site_name',
-      content: 'Free AI Form Generator. Unlimited Forms in 30 Seconds | Formester',
+      content: 'Free AI Form Builder: Create, Edit & Publish Forms | Formester',
     },
     {
       hid: 'og:type',
@@ -1473,13 +1488,13 @@ useHead({
     {
       hid: 'og:title',
       property: 'og:title',
-      content: 'Free AI Form Generator. Unlimited Forms in 30 Seconds | Formester',
+      content: 'Free AI Form Builder: Create, Edit & Publish Forms | Formester',
     },
     {
       hid: 'og:description',
       property: 'og:description',
       content:
-        'The free AI form generator that turns a prompt, PDF, or URL into a live form in 30 seconds. Unlimited forms and responses on the free plan. 56,000+ teams.',
+        'Build a live form from a prompt, PDF, image, or URL. Edit every field, publish it, and collect unlimited responses on the free plan. 2 AI generations/day.',
     },
     {
       hid: 'og:image',
@@ -1503,13 +1518,13 @@ useHead({
     {
       hid: 'twitter:title',
       name: 'twitter:title',
-      content: 'Free AI Form Generator. Unlimited Forms in 30 Seconds | Formester',
+      content: 'Free AI Form Builder: Create, Edit & Publish Forms | Formester',
     },
     {
       hid: 'twitter:description',
       name: 'twitter:description',
       content:
-        'The free AI form generator that turns a prompt, PDF, or URL into a live form in 30 seconds. Unlimited forms and responses on the free plan. 56,000+ teams.',
+        'Build a live form from a prompt, PDF, image, or URL. Edit every field, publish it, and collect unlimited responses on the free plan. 2 AI generations/day.',
     },
     {
       hid: 'twitter:image',
@@ -1579,9 +1594,9 @@ useJsonld([
       {
         '@id': 'https://formester.com/ai-form-generator/#webpage',
         url: 'https://formester.com/ai-form-generator/',
-        name: 'Free AI Form Generator. Unlimited Forms in 30 Seconds | Formester',
+        name: 'Free AI Form Builder: Create, Edit & Publish Forms | Formester',
         '@type': 'WebPage',
-        headline: 'The Free AI Form Generator That Builds Your Form in 30 Seconds',
+        headline: 'Free AI Form Builder: create, edit, and publish a form in about 30 seconds',
         isPartOf: {
           '@id': 'https://formester.com/#organization',
         },
@@ -1590,7 +1605,7 @@ useJsonld([
         },
         inLanguage: 'en-US',
         description:
-          'The free AI form generator that turns a prompt, PDF, or URL into a live form in 30 seconds. Unlimited forms and responses on the free plan. 56,000+ teams.',
+          'Build a live form from a prompt, PDF, image, or URL. Edit every field, publish it, and collect unlimited responses on the free plan. 2 AI generations/day.',
         dateModified: '2026-08-09',
         datePublished: '2024-07-12',
         primaryImageOfPage: {
@@ -1651,7 +1666,7 @@ useJsonld([
           '@id': 'https://formester.com/#organization',
         },
         description:
-          "Formester's AI form generator turns a prompt, a PDF, a URL, or an image into a live, shareable form in about 30 seconds. Free plan with unlimited forms and unlimited responses.",
+          "Formester's AI form builder turns a prompt, PDF, URL, or image into an editable, live form in about 30 seconds. The Free plan includes unlimited forms and responses plus 2 AI generations a day.",
         aggregateRating: {
           '@type': 'AggregateRating',
           ratingCount: '450',

@@ -133,7 +133,10 @@
               Try another
             </button>
             <span class="toolbar-title">{{ generatedTitle }}</span>
-            <a :href="editUrl" target="_blank" class="toolbar-cta">Edit this form →</a>
+            <div class="toolbar-actions">
+              <span class="toolbar-save-note">No account yet? Save your form and keep editing it free.</span>
+              <a :href="editUrl" target="_blank" class="toolbar-cta">Save this form free →</a>
+            </div>
           </div>
 
           <!-- Live form preview via iframe -->
@@ -787,6 +790,21 @@ const editUrl = computed(() =>
   text-align: center;
 }
 
+.toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.toolbar-save-note {
+  max-width: 170px;
+  color: var(--clr-text-secondary);
+  font-size: 11px;
+  line-height: 1.3;
+  text-align: right;
+}
+
 .toolbar-cta {
   display: inline-flex;
   align-items: center;
@@ -803,6 +821,13 @@ const editUrl = computed(() =>
 }
 
 .toolbar-cta:hover { background: var(--clr-primary-hover); color: #ffffff; }
+
+@media (max-width: 640px) {
+  .result-toolbar { align-items: flex-start; flex-wrap: wrap; }
+  .toolbar-title { order: 3; flex-basis: 100%; text-align: left; }
+  .toolbar-actions { margin-left: auto; }
+  .toolbar-save-note { display: none; }
+}
 
 .result-iframe {
   width: 100%;
