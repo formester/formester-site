@@ -9,7 +9,7 @@ author: "Ankit Singhaniya"
 authorProfile: "https://linkedin.com/in/ankitsinghaniyaz"
 coverImgAlt: "Cover art for a guide to auto-filling Google Forms with pre-fill links and extensions"
 featured: false
-coverImg: {"url":"placeholder://google-form-auto-filler-cover","width":1200,"height":630}
+coverImg: {"url":"https://formester-strapi.s3.ap-south-1.amazonaws.com/1761380fe68fe6cd_google-form-auto-filler-cover.png","width":1200,"height":630}
 metaImage: []
 jsonld: [{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I automatically fill in a Google Form?", "acceptedAnswer": {"@type": "Answer", "text": "Open the form in the editor, click the three-dot menu in the top right, choose Pre-fill form, enter the answers you want, and click Get link. Anyone who opens the link sees those answers already filled in and can still change them before submitting."}}, {"@type": "Question", "name": "Is there a bot that can automatically fill out Google Forms?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A script can open a form and submit it with set values as many times as you like. It can break when the form's questions change, and using one on a form you do not own goes against Google's terms of service. For your own form, a pre-filled link or the linked response sheet covers most common needs."}}, {"@type": "Question", "name": "Can respondents change pre-filled answers?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A pre-filled link only sets the starting value of a field. The respondent can edit or clear it before submitting. Google Forms has no setting that locks a pre-filled value in place."}}, {"@type": "Question", "name": "Does a pre-filled link work on mobile?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It is an ordinary link, so it opens the form with the answers already filled in in any mobile browser. Browser extensions such as Google Forms Auto Filler run on desktop Chrome only, which is one reason a link is the better option when you own the form."}}, {"@type": "Question", "name": "Why is my pre-filled link not filling the answers?", "acceptedAnswer": {"@type": "Answer", "text": "Common causes are a question that was deleted and added back, which gives it a new entry ID; a multiple choice value that does not match an option word for word; or a special character that was not URL-encoded. Generate a fresh link in the editor and compare its entry numbers with the old link."}}, {"@type": "Question", "name": "Can I pre-fill a Google Form from a spreadsheet?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Create one link per row. First generate one pre-filled link to learn the entry IDs, then build the URL in a formula with ENCODEURL around each cell value and drag the formula down. Each row gets a link that opens the form with that row's details already filled in."}}]}]
 createdAt: "2026-09-01T00:00:00.000Z"
@@ -17,7 +17,7 @@ updatedAt: "2026-09-01T12:00:00.000Z"
 publishedAt: "2026-09-01T00:00:00.000Z"
 ---
 
-![Cover art for a guide to auto-filling Google Forms with pre-fill links and extensions](placeholder://google-form-auto-filler-cover)
+![Cover art for a guide to auto-filling Google Forms with pre-fill links and extensions](https://formester-strapi.s3.ap-south-1.amazonaws.com/1761380fe68fe6cd_google-form-auto-filler-cover.png)
 <!-- IMAGE: cover per cover-design layout A, title "Auto-Fill a Google Form" with Auto-Fill in orange, UI card showing a form with three fields already populated and a link bar above it -->
 
 <p style="font-size: inherit;">A Google Form auto filler can mean two things. It can be a link with answers already filled in, or a browser tool that fills in your saved details. Which one you need depends on whether you made the form or you are filling it out. If you made the form, use the link. If someone sent you the form, use the tool. This guide covers both, plus the scripts people use to submit forms automatically.</p>
@@ -48,14 +48,10 @@ publishedAt: "2026-09-01T00:00:00.000Z"
 <li>
 <h3>Choose Pre-fill form</h3>
 <p>Click the three-dot <strong>More</strong> menu in the top right and select <strong>Pre-fill form</strong>. Google Forms opens a version of the form where anything you type becomes a starting answer.</p>
-<p><img src="placeholder://google-form-auto-filler-1" alt="Google Forms editor with the More menu open and the Pre-fill form option highlighted"></p>
-<!-- IMAGE: Google Forms editor, three-dot More menu open in the top right, Pre-fill form highlighted -->
 </li>
 <li>
 <h3>Type the answers you want filled in</h3>
 <p>Fill only the fields you want to pre-fill and leave the rest empty. For multiple choice and dropdown questions, use the exact option text. The link matches the answer word for word.</p>
-<p><img src="placeholder://google-form-auto-filler-2" alt="The Pre-fill form view with a name typed into the first question and the Get link button at the bottom"></p>
-<!-- IMAGE: Pre-fill form view, one answer typed into the first question, Get link button visible at the bottom -->
 </li>
 <li>
 <h3>Get the link</h3>
@@ -68,8 +64,6 @@ publishedAt: "2026-09-01T00:00:00.000Z"
 
 <p>Open the link you copied and look at the end of the URL. Google adds something like this:</p>
 <p><code>?usp=pp_url&amp;entry.1234567890=Priya+Sharma&amp;entry.987654321=Marketing</code></p>
-<p><img src="placeholder://google-form-auto-filler-3" alt="A pre-filled Google Form URL in the browser address bar with the entry ID and value highlighted"></p>
-<!-- IMAGE: browser address bar showing a pre-filled URL, annotate the usp=pp_url part and one entry.NNNN=value pair -->
 <p>Each <code>entry.</code> number is the ID for a question. The text after the equals sign is the answer. The ID stays the same as long as the question exists, so you can change the answers by hand without opening the form editor again.</p>
 <p>Spaces become a plus sign or <code>%20</code>. Other special characters need URL encoding. Otherwise, the answer may not show up correctly.</p>
 
@@ -81,8 +75,6 @@ publishedAt: "2026-09-01T00:00:00.000Z"
 <li>In a new column, build the link with a formula. With the base URL in A1 and the person's name and team in B2 and C2, use: <code>=A1&amp;"?usp=pp_url&amp;entry.1234567890="&amp;ENCODEURL(B2)&amp;"&amp;entry.987654321="&amp;ENCODEURL(C2)</code></li>
 <li>Drag the formula down. Each row gets its own link, and ENCODEURL handles spaces and symbols for you.</li>
 </ol>
-<p><img src="placeholder://google-form-auto-filler-4" alt="A Google Sheet with a name column, a team column, and a formula column building one pre-filled link per row"></p>
-<!-- IMAGE: Google Sheet, columns for base URL, name, team, and a Link column with the ENCODEURL formula filled down -->
 <p>This is the closest thing Google Forms has to a mail merge. It works, but watch the entry numbers. One wrong digit can send a value to the wrong field.</p>
 
 <h2>Which extensions auto-fill Google Forms for you?</h2>

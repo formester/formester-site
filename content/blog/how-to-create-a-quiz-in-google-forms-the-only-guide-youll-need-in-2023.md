@@ -237,12 +237,6 @@ For a classroom check or a quick internal test, Google Forms is genuinely the ri
 
 If any of those matter, the quiz needs a tool built for assessment rather than a form with answer keys bolted on, or a [scored test builder](https://formester.com/test-creator/) that handles marking natively. Formester can [generate a quiz from a prompt](https://formester.com/ai-quiz-maker/) and score it, and there is a roundup of [quiz tools built for teachers](https://formester.com/blog/best-online-quiz-maker-for-teachers/) if you want to compare.
 
-<div class="fmstr-blog-cta">
-<p><strong>Need a timer or partial credit?</strong> Formester scores quizzes with weighted answers and a real time limit, no add-on required.</p>
-<p><a class="fmstr-blog-cta__btn" href="https://app.formester.com/users/sign_up">Try Formester free</a></p>
-<p class="fmstr-blog-cta__meta">Free forever plan &middot; No credit card &middot; Setup in 2 minutes</p>
-</div>
-
 <div class="better">
 <h5>Why Formester's quiz maker is the better choice</h5>
 <p>The three things Google Forms quizzes cannot do.</p>
@@ -253,7 +247,13 @@ If any of those matter, the quiz needs a tool built for assessment rather than a
 <li>Conditional paths based on the answer, which Google Forms can only do between whole sections</li>
 </ul>
 <p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/e90d133ba1164749_quiz-02-release-grades.jpg" alt="Google Forms Release grades options, with Later after manual review marked in red because it turns on email collection" loading="lazy" style="width:100%;max-width:720px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
-<p><a class="btn" href="https://app.formester.com/users/sign_up">Try Formester free</a></p>
+</div>
+
+<div style="background:linear-gradient(135deg,#7f56d9 0%,#6941c6 100%);padding:32px 28px;margin:36px 0;border-radius:12px;color:#ffffff;font-family:inherit;text-align:center;">
+<p style="margin:0 0 12px 0;font-size:18px;font-weight:700;color:#ffffff;font-family:inherit;">Score the quiz without an add-on</p>
+<p style="margin:0 0 20px 0;font-size:14px;line-height:1.55;color:#f4ebff;font-family:inherit;">A real time limit on the quiz itself and weighted points per question, with the score shown on the confirmation screen. Free plan with unlimited forms and responses.</p>
+<a href="https://app.formester.com/users/sign_up" style="display:inline-block;padding:12px 24px;background:#ffffff;color:#6941c6;text-decoration:none;font-weight:700;border-radius:9999px;font-family:inherit;">Try Formester free</a>
+<p style="margin:12px 0 0 0;font-size:13px;color:#e9d7fe;font-family:inherit;">Free forever · No credit card · 56,000+ teams</p>
 </div>
 
 <section class="faq">
