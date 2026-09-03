@@ -2,10 +2,6 @@
   <section id="ai-form-builder" class="ai-hero">
     <div class="ai-hero__grid">
     <div class="ai-hero__header">
-      <div class="ai-hero__badge">
-        <span class="dot"></span>
-        {{ badgeText }}
-      </div>
       <SectionHeader :title="title" :description="description" tag="h1" size="xl" spacing="none" align="left" />
     </div>
 
@@ -166,7 +162,6 @@ const props = defineProps({
   suggestions: { type: Array, default: () => [] },
   buttonText: { type: String, default: 'Generate Form' },
   placeholder: { type: String, default: 'Describe the form you need…' },
-  badgeText: { type: String, default: 'TRY IT NOW. NO SIGN-UP REQUIRED.' },
   footerItems: { type: Array, default: () => [
     { text: 'Free forever' },
     { text: 'No credit card' },
@@ -324,20 +319,32 @@ const editUrl = computed(() =>
 <style scoped>
 /* ─── Section ───────────────────────────────────────────── */
 .ai-hero {
-  padding: var(--space-30) 20px var(--space-20);
-  background: radial-gradient(ellipse at 50% 0%, #f5f0ff 0%, #ffffff 60%);
+  min-height: 720px;
+  padding: 96px 24px 80px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfaff 60%, #f7f3ff 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .ai-hero__grid {
   max-width: 1180px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 64px;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 56px;
   align-items: center;
 }
 
+.ai-hero__header {
+  max-width: 560px;
+}
+
 @media (max-width: 991px) {
+  .ai-hero {
+    min-height: 0;
+  }
+
   .ai-hero__grid {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -345,9 +352,7 @@ const editUrl = computed(() =>
 }
 
 /* ─── Header ────────────────────────────────────────────── */
-.ai-hero__header {
-  text-align: left;
-}
+.ai-hero__header { text-align: left; }
 
 .canvas-footer {
   margin-top: 12px;
@@ -360,31 +365,6 @@ const editUrl = computed(() =>
   margin: 0 4px;
 }
 
-.ai-hero__badge {
-  margin-bottom: 18px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 16px;
-  background: var(--clr-primary-light);
-  color: var(--clr-primary);
-  border-radius: 100px;
-  font-size: 13px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.ai-hero__badge .dot {
-  width: 8px;
-  height: 8px;
-  background: var(--clr-primary);
-  border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(100, 52, 208, 0.2);
-}
-
-
 /* ─── Canvas ────────────────────────────────────────────── */
 .ai-canvas {
   width: 100%;
@@ -394,18 +374,18 @@ const editUrl = computed(() =>
 /* ─── Input state ───────────────────────────────────────── */
 .canvas-input {
   background: #ffffff;
-  border: 1px solid var(--clr-secondary-gray-stroke);
-  border-radius: 20px;
+  border: 1px solid #eaecf0;
+  border-radius: 18px;
   padding: 24px;
-  box-shadow: 0 8px 32px rgba(100, 52, 208, 0.08), 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 20px 50px rgba(16, 24, 40, 0.12);
 }
 
 /* Chat box: textarea + attachment tray in one bordered container */
 .chat-box {
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--clr-secondary-gray-stroke);
-  border-radius: 12px;
+  border: 1px solid #eaecf0;
+  border-radius: 10px;
   background: #ffffff;
   overflow: hidden;
   transition: border-color 0.2s, box-shadow 0.2s;
@@ -431,25 +411,27 @@ const editUrl = computed(() =>
 }
 
 .attach-tray {
-  border-top: 1px solid var(--clr-secondary-gray-stroke);
-  padding: 8px 10px;
+  border-top: 1px solid #eaecf0;
+  padding: 10px 12px;
+  background: #f9fafb;
 }
 
 .canvas-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 20px;
+  gap: 10px;
+  margin-bottom: 22px;
 }
 
 .canvas-chip {
-  padding: 6px 14px;
-  background: var(--clr-primary-light);
-  border: 1px solid var(--clr-primary-light-hover);
-  color: var(--clr-primary);
-  border-radius: 100px;
-  font-size: 13px;
-  font-weight: 500;
+  padding: 8px 12px;
+  background: #ffffff;
+  border: 1px solid #e4d7ff;
+  color: #5b34b1;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+  font-size: 12.5px;
+  font-weight: 600;
   cursor: pointer;
   transition: background 0.15s, transform 0.15s;
   font-family: inherit;
@@ -460,7 +442,8 @@ const editUrl = computed(() =>
 }
 
 .canvas-chip:hover {
-  background: var(--clr-primary-light-hover);
+  background: #f7f3ff;
+  border-color: #b9a2f3;
   transform: translateY(-1px);
 }
 
@@ -569,8 +552,8 @@ const editUrl = computed(() =>
   gap: 5px;
   padding: 5px 10px;
   background: none;
-  border: 1px solid var(--clr-secondary-gray-stroke);
-  border-radius: 6px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
   font-size: 12px;
   font-weight: 500;
   color: var(--clr-text-secondary);
@@ -609,12 +592,14 @@ const editUrl = computed(() =>
 
 .canvas-btn {
   width: 100%;
-  padding: 14px;
-  background: var(--clr-primary);
+  min-height: 48px;
+  padding: 14px 22px;
+  background: #7f56d9;
   color: #fff;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
+  border: 1px solid #7f56d9;
+  border-radius: 9999px;
+  box-shadow: 0 6px 16px rgba(127, 86, 217, 0.28);
+  font-size: 15.5px;
   font-weight: 600;
   font-family: inherit;
   cursor: pointer;
@@ -622,13 +607,17 @@ const editUrl = computed(() =>
 }
 
 .canvas-btn:hover:not(:disabled) {
-  background: var(--clr-primary-hover);
+  background: #6941c6;
+  border-color: #6941c6;
   transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(127, 86, 217, 0.34);
 }
 
 .canvas-btn:disabled {
-  background: var(--clr-secondary-gray-stroke);
-  color: #98a2b3;
+  background: #f4f0ff;
+  border-color: #e4d7ff;
+  box-shadow: none;
+  color: #a18ad1;
   cursor: not-allowed;
 }
 
@@ -636,11 +625,11 @@ const editUrl = computed(() =>
 /* ─── Loading state ─────────────────────────────────────── */
 .canvas-loading {
   background: #ffffff;
-  border: 1px solid var(--clr-secondary-gray-stroke);
-  border-radius: 20px;
+  border: 1px solid #eaecf0;
+  border-radius: 18px;
   padding: 28px 24px;
   min-height: 420px;
-  box-shadow: 0 8px 32px rgba(100, 52, 208, 0.08);
+  box-shadow: 0 20px 50px rgba(16, 24, 40, 0.12);
 }
 
 .loading-label {
@@ -740,10 +729,10 @@ const editUrl = computed(() =>
 
 /* ─── Result state ──────────────────────────────────────── */
 .canvas-result {
-  border: 1px solid var(--clr-secondary-gray-stroke);
-  border-radius: 20px;
+  border: 1px solid #eaecf0;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(100, 52, 208, 0.08), 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 20px 50px rgba(16, 24, 40, 0.12);
   background: #ffffff;
 }
 

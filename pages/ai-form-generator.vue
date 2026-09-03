@@ -6,7 +6,6 @@
       :hideIcons="false"
       buttonText="Generate my form"
       placeholder="Describe the form you need. Example: A customer satisfaction survey with a 5-star rating, an open feedback field, and a follow-up permission toggle"
-      badgeText="TRY IT NOW. NO SIGN-UP REQUIRED."
       :title="c0_title"
       :suggestions="c0_suggestions"
       :footerItems="c0_footerItems"
