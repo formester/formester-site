@@ -242,7 +242,7 @@ One popular question type in Google Forms is the linear scale question. It lets 
 
 This is perfect for <strong><a href="/blog/best-customer-feedback-collection-tools/">gathering quick feedback</a></strong>, checking satisfaction levels, or measuring opinions.
 
-In this guide, you’ll learn what <strong>linear scale questions</strong> are, when to use them, how to add them in Google Forms, and how to do it more easily using <strong>Formester– a <a href="/google-forms-alternative/">free Google Forms alternative</a></strong>.
+In this guide, you’ll learn what <strong>linear scale questions</strong> are, when to use them, how to add them in Google Forms, and how to do it more easily using <strong>Formester– a <a href="/blog/why-formester-is-the-best-google-forms-alternative/">free Google Forms alternative</a></strong>.
 
 ## What Is a Linear Scale Question?
 A linear scale question allows someone to answer using a number range.

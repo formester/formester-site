@@ -848,12 +848,7 @@ content: "\2192"; transition: transform .15s ease; display: inline-block;
 <span class="fmstr-cmp-tmpl-rel__arrow">Read</span>
 </a>
 
-<a class="fmstr-cmp-tmpl-rel__card" href="https://formester.com/blog/how-to-create-google-sheets-api-and-use-as-live-backend/">
-<span class="fmstr-cmp-tmpl-rel__chip">How-to</span>
-<h3 class="fmstr-cmp-tmpl-rel__title">How to create a Google Sheets API and use it as a live backend</h3>
-<p class="fmstr-cmp-tmpl-rel__body">Treat a Sheet as a read/write database for a real app.</p>
-<span class="fmstr-cmp-tmpl-rel__arrow">Read</span>
-</a>
+
 
 <a class="fmstr-cmp-tmpl-rel__card" href="https://formester.com/blog/how-to-link-google-sheets-to-google-forms/">
 <span class="fmstr-cmp-tmpl-rel__chip">How-to</span>

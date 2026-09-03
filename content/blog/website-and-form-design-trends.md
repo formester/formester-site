@@ -414,7 +414,7 @@ margin-top: 1px;
 <li class="fmstr-cmp-tmpl-steps__item">
 <h3 class="fmstr-cmp-tmpl-steps__title"><span class="fmstr-cmp-tmpl-steps__num" aria-hidden="true">10</span>Visible Trust Signals on Every Form</h3>
 <p class="fmstr-cmp-tmpl-steps__body">Forms ask for personal data. Users are warier than they were in 2020. The lift comes from making the security visible, not just real.</p>
-<p class="fmstr-cmp-tmpl-steps__body">What goes on a high-trust form: a one-line privacy note next to the email field, a padlock icon near payment inputs, a "we will never sell your data" link to a real policy, <a href="https://formester.com/features/gdpr-compliant-forms/">GDPR-compliant data handling</a> for any EU user, and a clear sender identity if you are emailing them after submission.</p>
+<p class="fmstr-cmp-tmpl-steps__body">What goes on a high-trust form: a one-line privacy note next to the email field, a padlock icon near payment inputs, a "we will never sell your data" link to a real policy, <a href="https://formester.com/security/">GDPR-compliant data handling</a> for any EU user, and a clear sender identity if you are emailing them after submission.</p>
 <p class="fmstr-cmp-tmpl-steps__brands"><strong>Brands doing it well:</strong> PayPal (badge stack on checkout), Stripe (compliance badges at every payment point), GOV.UK ("we collect this to..." inline copy).</p>
 <ul class="fmstr-cmp-tmpl-steps__triad">
 <li><span class="fmstr-cmp-tmpl-steps__tag fmstr-cmp-tmpl-steps__tag--copy">Copy</span><span>Tell users what each field is for in a sentence under it. The phone number on a contact form should say "we use this only to schedule the demo, not for marketing."</span></li>
@@ -709,7 +709,7 @@ content: "\2192"; transition: transform .15s ease; display: inline-block;
 <span class="fmstr-cmp-tmpl-rel__arrow">Read</span>
 </a>
 
-<a class="fmstr-cmp-tmpl-rel__card" href="https://formester.com/features/gdpr-compliant-forms/">
+<a class="fmstr-cmp-tmpl-rel__card" href="https://formester.com/security/">
 <span class="fmstr-cmp-tmpl-rel__chip">Formester</span>
 <h3 class="fmstr-cmp-tmpl-rel__title">GDPR-Compliant Forms</h3>
 <p class="fmstr-cmp-tmpl-rel__body">The trust-signal layer for any EU-facing form in 2026.</p>

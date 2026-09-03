@@ -581,7 +581,7 @@ transition: background .15s ease;
 <p class="fmstr-cmp-bfg-body__p">Free for personal Google accounts. Workspace plans start at <a href="https://workspace.google.com/pricing.html">$6/user/month</a> for admin features, but the Sheets connection itself stays free.</p>
 </div>
 
-<p class="fmstr-cmp-bfg-body__verdict"><strong>Verdict:</strong> Unbeatable on price and setup time. The trade-offs hit when you need conditional logic deeper than section branching, file uploads on a personal account, or any styling beyond a header image. If you need more than a survey, see our <a href="https://formester.com/google-forms-alternative/">Google Forms alternative</a> guide.</p>
+<p class="fmstr-cmp-bfg-body__verdict"><strong>Verdict:</strong> Unbeatable on price and setup time. The trade-offs hit when you need conditional logic deeper than section branching, file uploads on a personal account, or any styling beyond a header image. If you need more than a survey, see our <a href="https://formester.com/blog/why-formester-is-the-best-google-forms-alternative/">Google Forms alternative</a> guide.</p>
 </article>
 
 <article class="fmstr-cmp-bfg-body__tool">
@@ -935,7 +935,7 @@ content: "\2192"; transition: transform .15s ease; display: inline-block;
 </a>
 
 
-<a class="fmstr-cmp-tmpl-rel__card" href="/google-forms-alternative/">
+<a class="fmstr-cmp-tmpl-rel__card" href="/blog/why-formester-is-the-best-google-forms-alternative/">
 <span class="fmstr-cmp-tmpl-rel__chip">Feature</span>
 <h3 class="fmstr-cmp-tmpl-rel__title">Google Forms alternative</h3>
 <p class="fmstr-cmp-tmpl-rel__body">7 tools that go beyond a survey</p>

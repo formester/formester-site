@@ -852,7 +852,7 @@ content: "\2192"; transition: transform .15s ease; display: inline-block;
 </div>
 <div class="fmstr-cmp-demo-rel__grid">
 
-<a class="fmstr-cmp-demo-rel__card" href="https://formester.com/survey-maker/">
+<a class="fmstr-cmp-demo-rel__card" href="https://formester.com/online-survey-maker/">
 <span class="fmstr-cmp-demo-rel__chip">Formester</span>
 <h3 class="fmstr-cmp-demo-rel__title">No-code survey maker</h3>
 <p class="fmstr-cmp-demo-rel__body">Drag and drop builder with native conditional logic and "Prefer not to say" on every field.</p>

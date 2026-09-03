@@ -509,7 +509,7 @@ color: var(--c-fg-2); margin: 0 !important;
 <span class="fmstr-cmp-tmpl-steps__num" aria-hidden="true">3</span>
 <div class="fmstr-cmp-tmpl-steps__main">
 <h3 class="fmstr-cmp-tmpl-steps__title">Add conditional logic and payments</h3>
-<p class="fmstr-cmp-tmpl-steps__body">Turn on conditional logic for any field that depends on a previous answer. Show the VIP track only when the user picks the VIP tier, show the second guest fields only when "Number of attendees" is 2 or more. If the form is paid, connect <a href="https://formester.com/features/payments/">Stripe or PayPal through the payments feature</a> and set a fixed price or a per-tier price.</p>
+<p class="fmstr-cmp-tmpl-steps__body">Turn on conditional logic for any field that depends on a previous answer. Show the VIP track only when the user picks the VIP tier, show the second guest fields only when "Number of attendees" is 2 or more. If the form is paid, connect <a href="https://formester.com/features/online-payments/">Stripe or PayPal through the payments feature</a> and set a fixed price or a per-tier price.</p>
 </div>
 </li>
 

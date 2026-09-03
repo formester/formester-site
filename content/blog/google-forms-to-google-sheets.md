@@ -844,11 +844,7 @@ text-decoration: none !important; color: inherit !important; transition: all .15
 <div class="fmstr-cmp-gfgs-rel__text"><h3>5 ways to view responses</h3><small>Google Forms how-to</small></div>
 <span class="fmstr-cmp-gfgs-rel__arrow" aria-hidden="true">&rarr;</span>
 </a>
-<a class="fmstr-cmp-gfgs-rel__card" href="https://formester.com/blog/how-to-create-google-sheets-api-and-use-as-live-backend/">
-<div class="fmstr-cmp-gfgs-rel__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.6 5.6L3 18l3 3 6.1-6.1a4 4 0 0 0 5.6-5.6l-2.5 2.5-2.4-2.4z"/></svg></div>
-<div class="fmstr-cmp-gfgs-rel__text"><h3>Google Sheets API as live backend</h3><small>How-to blog</small></div>
-<span class="fmstr-cmp-gfgs-rel__arrow" aria-hidden="true">&rarr;</span>
-</a>
+
 <a class="fmstr-cmp-gfgs-rel__card" href="https://formester.com/blog/how-to-add-conditional-questions-in-google-forms/">
 <div class="fmstr-cmp-gfgs-rel__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M6 8.5v3c0 2 1.5 3.5 3.5 3.5h5C16.5 15 18 13.5 18 11.5v-3"/></svg></div>
 <div class="fmstr-cmp-gfgs-rel__text"><h3>Conditional questions in Google Forms</h3><small>How-to blog</small></div>
@@ -864,7 +860,7 @@ text-decoration: none !important; color: inherit !important; transition: all .15
 <div class="fmstr-cmp-gfgs-rel__text"><h3>Enable access for Google Forms</h3><small>How-to blog</small></div>
 <span class="fmstr-cmp-gfgs-rel__arrow" aria-hidden="true">&rarr;</span>
 </a>
-<a class="fmstr-cmp-gfgs-rel__card" href="https://formester.com/google-forms-alternative/">
+<a class="fmstr-cmp-gfgs-rel__card" href="https://formester.com/blog/why-formester-is-the-best-google-forms-alternative/">
 <div class="fmstr-cmp-gfgs-rel__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8l4-4 4 4M17 4v8M21 16l-4 4-4-4M7 20v-8"/></svg></div>
 <div class="fmstr-cmp-gfgs-rel__text"><h3>Google Forms alternative</h3><small>Formester vs Google Forms</small></div>
 <span class="fmstr-cmp-gfgs-rel__arrow" aria-hidden="true">&rarr;</span>
