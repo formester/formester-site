@@ -571,9 +571,12 @@
             <div class="fmstr-cmp-afg-who-uses__container">
               <header class="fmstr-cmp-afg-who-uses__header">
                 <h2 id="fmstr-cmp-afg-who-uses-heading" class="fmstr-cmp-afg-who-uses__heading">
-                  Start with a template. Make it yours with AI.
+                  Templates for every team. Make yours with AI.
                 </h2>
-                <p class="fmstr-cmp-afg-who-uses__sub">Choose a proven template, then use AI to adapt the questions, fields, and flow to your workflow.</p>
+                <p class="fmstr-cmp-afg-who-uses__sub">
+                  For marketers, HR teams, educators, and operations teams: choose a proven template, then use AI to adapt
+                  the questions, fields, and flow to your workflow.
+                </p>
               </header>
 
               <div class="fmstr-cmp-afg-who-uses__grid">
@@ -1491,7 +1494,7 @@ const c15_faqList = [
 ]
 
 useHead({
-  title: 'Free AI Form Builder & Generator: Create Forms | Formester',
+  title: 'Free AI Form Builder & Generator | Formester',
   link: [
     {
       hid: 'canonical',
@@ -1508,12 +1511,12 @@ useHead({
       hid: 'description',
       name: 'description',
       content:
-        'Build a live form from a prompt, PDF, image, or URL. Edit every field, publish it, and collect unlimited responses on the free plan. Trusted by 56,000+ teams.',
+        'Create a live form in 30 seconds from a prompt, PDF, image, or URL. Edit every field, publish it, and collect unlimited responses on the free plan. Trusted by 56,000+ teams.',
     },
     {
       hid: 'og:site_name',
       name: 'og:site_name',
-      content: 'Free AI Form Builder & Generator: Create Forms | Formester',
+      content: 'Free AI Form Builder & Generator | Formester',
     },
     {
       hid: 'og:type',
@@ -1528,13 +1531,13 @@ useHead({
     {
       hid: 'og:title',
       property: 'og:title',
-      content: 'Free AI Form Builder & Generator: Create Forms | Formester',
+      content: 'Free AI Form Builder & Generator | Formester',
     },
     {
       hid: 'og:description',
       property: 'og:description',
       content:
-        'Build a live form from a prompt, PDF, image, or URL. Edit every field, publish it, and collect unlimited responses on the free plan. Trusted by 56,000+ teams.',
+        'Create a live form in 30 seconds from a prompt, PDF, image, or URL. Edit every field, publish it, and collect unlimited responses on the free plan. Trusted by 56,000+ teams.',
     },
     {
       hid: 'og:image',
@@ -1558,13 +1561,13 @@ useHead({
     {
       hid: 'twitter:title',
       name: 'twitter:title',
-      content: 'Free AI Form Builder & Generator: Create Forms | Formester',
+      content: 'Free AI Form Builder & Generator | Formester',
     },
     {
       hid: 'twitter:description',
       name: 'twitter:description',
       content:
-        'Build a live form from a prompt, PDF, image, or URL. Edit every field, publish it, and collect unlimited responses on the free plan. Trusted by 56,000+ teams.',
+        'Create a live form in 30 seconds from a prompt, PDF, image, or URL. Edit every field, publish it, and collect unlimited responses on the free plan. Trusted by 56,000+ teams.',
     },
     {
       hid: 'twitter:image',
@@ -1634,7 +1637,7 @@ useJsonld([
       {
         '@id': 'https://formester.com/ai-form-generator/#webpage',
         url: 'https://formester.com/ai-form-generator/',
-        name: 'Free AI Form Builder & Generator: Create Forms | Formester',
+        name: 'Free AI Form Builder & Generator | Formester',
         '@type': 'WebPage',
         headline: 'Free AI Form Builder: create, edit, and publish a form in 30 seconds',
         isPartOf: {
@@ -1645,7 +1648,7 @@ useJsonld([
         },
         inLanguage: 'en-US',
         description:
-          'Build a live form from a prompt, PDF, image, or URL. Edit every field, publish it, and collect unlimited responses on the free plan. Trusted by 56,000+ teams.',
+          'Create a live form in 30 seconds from a prompt, PDF, image, or URL. Edit every field, publish it, and collect unlimited responses on the free plan. Trusted by 56,000+ teams.',
         dateModified: '2026-09-04',
         datePublished: '2024-07-12',
         primaryImageOfPage: {

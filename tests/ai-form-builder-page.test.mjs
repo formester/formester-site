@@ -9,7 +9,8 @@ const cta = await readFile(new URL('../components/CallToActionSection.vue', impo
 const testimonials = await readFile(new URL('../components/v2/testimonials/TestimonialsV2.vue', import.meta.url), 'utf8')
 
 test('AI form builder page leads with proof and does not market a daily AI limit', () => {
-  assert.match(page, /Free AI Form Builder & Generator: Create Forms \| Formester/)
+  assert.match(page, /Free AI Form Builder & Generator \| Formester/)
+  assert.match(page, /Create a live form in 30 seconds from a prompt, PDF, image, or URL\./)
   assert.match(page, /Trusted by 56,000\+ teams/)
   assert.match(page, /Free forever/)
   assert.doesNotMatch(page, /2 AI generations/)
@@ -61,7 +62,8 @@ test('page keeps one visible workflow and uses linked template use cases', () =>
   assert.match(page, /v-if="false"\s+class="fmstr-cmp-afg-3ways"/)
   assert.match(page, /v-if="false"\s+class="fmstr-cmp-afg-freeplan"/)
   assert.match(page, /v-if="false"\s+class="fmstr-cmp-afg-engine"/)
-  assert.match(page, /Start with a template\. Make it yours with AI\./)
+  assert.match(page, /Templates for every team\. Make yours with AI\./)
+  assert.match(page, /For marketers, HR teams, educators, and operations teams/)
   for (const category of ['lead-generation', 'job-application-forms', 'quizzes', 'training-forms', 'feedback-forms', 'analysis-and-assessment', 'registration-forms', 'donation-forms']) {
     assert.match(page, new RegExp(`/templates/categories/${category}/`))
   }
