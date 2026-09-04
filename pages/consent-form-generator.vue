@@ -920,9 +920,9 @@ const c9_itemList = [
     id: 3027,
     title: 'AI form generator',
     description:
-      'Generate a form from a prompt, question list, or PDF upload in 30 seconds.\n\n**[Learn more-->](/ai-form-generator/)**',
+      'Generate a form from a prompt, question list, or PDF upload in 30 seconds.\n\n**[Turn a consent PDF into an editable form →](/ai-form-generator/#pdf-to-form)**',
     description_markdown:
-      'Generate a form from a prompt, question list, or PDF upload in 30 seconds.\n\n**[Learn more-->](/ai-form-generator/)**',
+      'Generate a form from a prompt, question list, or PDF upload in 30 seconds.\n\n**[Turn a consent PDF into an editable form →](/ai-form-generator/#pdf-to-form)**',
     icon: null,
     cardImage: null,
   },

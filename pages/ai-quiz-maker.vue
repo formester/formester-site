@@ -1136,7 +1136,7 @@
               </h2>
 
               <div class="fmstr-cmp-more-ai-tools-aqm__grid">
-                <a class="fmstr-cmp-more-ai-tools-aqm__card" href="https://formester.com/ai-form-generator/">
+                <a class="fmstr-cmp-more-ai-tools-aqm__card" href="/ai-form-generator/#ai-form-builder">
                   <span class="fmstr-cmp-more-ai-tools-aqm__icon" aria-hidden="true">
                     <svg
                       width="20"

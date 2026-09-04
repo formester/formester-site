@@ -1,11 +1,12 @@
 <template>
-  <section class="ai-hero">
+  <section id="ai-form-builder" class="ai-hero">
+    <div aria-hidden="true" class="ai-hero__blobs">
+      <div class="ai-hero__blob ai-hero__blob--a"></div>
+      <div class="ai-hero__blob ai-hero__blob--b"></div>
+      <div class="ai-hero__blob ai-hero__blob--c"></div>
+    </div>
     <div class="ai-hero__grid">
     <div class="ai-hero__header">
-      <div class="ai-hero__badge">
-        <span class="dot"></span>
-        {{ badgeText }}
-      </div>
       <SectionHeader :title="title" :description="description" tag="h1" size="xl" spacing="none" align="left" />
     </div>
 
@@ -26,12 +27,25 @@
         >
           <div v-if="isDragging" class="drop-overlay">Drop files here</div>
 
+          <div class="source-picker" aria-label="Choose a form source">
+            <span class="source-picker__label">Start with</span>
+            <button
+              v-for="source in sources"
+              :key="source.id"
+              type="button"
+              class="source-picker__option"
+              :class="{ 'is-active': selectedSource === source.id }"
+              @click="selectSource(source.id)"
+            >{{ source.label }}</button>
+          </div>
+
           <div class="chat-box">
             <textarea
+              ref="textareaRef"
               v-model="prompt"
               class="chat-textarea"
-              :placeholder="typedPlaceholder || placeholder"
-              rows="4"
+              :placeholder="activePlaceholder"
+              rows="3"
               @paste="onPaste"
             ></textarea>
 
@@ -44,8 +58,8 @@
               @change="handleFileSelect"
             />
 
-            <div class="attach-tray">
-              <div v-if="fileEntries.length" class="file-chips">
+            <div v-if="fileEntries.length" class="attach-tray">
+              <div class="file-chips">
                 <div
                   v-for="entry in fileEntries"
                   :key="entry.uid"
@@ -53,32 +67,18 @@
                   :title="entry.file.name"
                 >
                   <span v-if="entry.status === 'uploading'" class="file-chip-spinner"></span>
-                  <img
-                    v-else-if="entry.file.type.startsWith('image/')"
-                    :src="getPreviewUrl(entry)"
-                    class="file-chip-img"
-                    alt=""
-                  />
+                  <img v-else-if="entry.file.type.startsWith('image/')" :src="getPreviewUrl(entry)" class="file-chip-img" alt="" />
                   <svg v-else width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="file-chip-icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
                   <span class="file-chip-name">{{ entry.file.name }}</span>
                   <button type="button" class="file-chip-remove" @click="removeFile(entry.uid)">✕</button>
                 </div>
               </div>
-
-              <div class="attach-row">
-                <button
-                  type="button"
-                  class="attach-btn"
-                  :disabled="fileEntries.length >= MAX_FILES"
-                  @click="fileInputRef.click()"
-                >
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
-                  Attach files
-                </button>
-                <span class="attach-meta">PDF or image · max 10 MB · up to {{ MAX_FILES }} files</span>
-              </div>
-              <p v-if="uploadError" class="upload-error">{{ uploadError }}</p>
             </div>
+
+            <button type="button" class="attach-fab" :disabled="fileEntries.length >= MAX_FILES" aria-label="Attach a PDF or image" @click="fileInputRef.click()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+            </button>
+            <p v-if="uploadError" class="upload-error">{{ uploadError }}</p>
           </div>
 
           <div v-if="suggestions && suggestions.length" class="canvas-chips">
@@ -133,7 +133,10 @@
               Try another
             </button>
             <span class="toolbar-title">{{ generatedTitle }}</span>
-            <a :href="editUrl" target="_blank" class="toolbar-cta">Edit this form →</a>
+            <div class="toolbar-actions">
+              <span class="toolbar-save-note">No account yet? Save your form and keep editing it free.</span>
+              <a :href="editUrl" target="_blank" class="toolbar-cta">Save this form free →</a>
+            </div>
           </div>
 
           <!-- Live form preview via iframe -->
@@ -163,7 +166,6 @@ const props = defineProps({
   suggestions: { type: Array, default: () => [] },
   buttonText: { type: String, default: 'Generate Form' },
   placeholder: { type: String, default: 'Describe the form you need…' },
-  badgeText: { type: String, default: 'TRY IT NOW. NO SIGN-UP REQUIRED.' },
   footerItems: { type: Array, default: () => [
     { text: 'Free forever' },
     { text: 'No credit card' },
@@ -181,6 +183,8 @@ const apiType = computed(() => CMS_TYPE_MAP[props.type] || props.type || 'form')
 const config = useRuntimeConfig()
 const { $notify } = useNuxtApp()
 const prompt = ref('')
+const textareaRef = ref(null)
+const selectedSource = ref('describe')
 const isGenerating = ref(false)
 const surveyUrl = ref('')
 const generatedTitle = ref('')
@@ -232,6 +236,30 @@ const {
   removeFile,
   clearFiles,
 } = useAiFileAttachments()
+
+const sources = [
+  { id: 'describe', label: 'Describe it' },
+  { id: 'questions', label: 'Paste questions' },
+  { id: 'pdf', label: 'PDF' },
+  { id: 'image', label: 'Image' },
+  { id: 'url', label: 'URL' },
+]
+
+const activePlaceholder = computed(() => {
+  if (selectedSource.value === 'questions') return 'Paste the questions you already have…'
+  if (selectedSource.value === 'url') return 'Paste a public URL you want to turn into a form…'
+  return typedPlaceholder.value || props.placeholder
+})
+
+function selectSource(source) {
+  selectedSource.value = source
+  if (source === 'pdf' || source === 'image') {
+    fileInputRef.value.accept = source === 'pdf' ? 'application/pdf' : 'image/*'
+    fileInputRef.value.click()
+    return
+  }
+  textareaRef.value?.focus()
+}
 
 const setPrompt = (text) => { prompt.value = text }
 
@@ -321,20 +349,89 @@ const editUrl = computed(() =>
 <style scoped>
 /* ─── Section ───────────────────────────────────────────── */
 .ai-hero {
-  padding: var(--space-30) 20px var(--space-20);
-  background: radial-gradient(ellipse at 50% 0%, #f5f0ff 0%, #ffffff 60%);
-}
-
-.ai-hero__grid {
-  max-width: 1180px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 64px;
+  min-height: 0;
+  padding: 104px 24px 80px;
+  position: relative;
+  isolation: isolate;
+  background: #ffffff;
+  overflow: hidden;
+  display: flex;
   align-items: center;
 }
 
+.ai-hero__blobs {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ai-hero__blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: .76;
+  will-change: transform;
+}
+
+.ai-hero__blob--a {
+  width: 900px;
+  height: 594px;
+  background: #f5eeff;
+  animation: ai-hero-blob-a 14s ease-in-out infinite alternate;
+}
+
+.ai-hero__blob--b {
+  width: 700px;
+  height: 497px;
+  background: #f1ebff;
+  animation: ai-hero-blob-b 17s ease-in-out infinite alternate;
+}
+
+.ai-hero__blob--c {
+  width: 600px;
+  height: 420px;
+  background: #f4efff;
+  animation: ai-hero-blob-c 16s ease-in-out infinite alternate;
+}
+
+@keyframes ai-hero-blob-a {
+  from { transform: translate(42vw, -260px) scale(.96); }
+  to { transform: translate(58vw, -160px) scale(1.06); }
+}
+
+@keyframes ai-hero-blob-b {
+  from { transform: translate(-340px, 210px) scale(1.04); }
+  to { transform: translate(-120px, 310px) scale(.94); }
+}
+
+@keyframes ai-hero-blob-c {
+  from { transform: translate(18vw, 230px) scale(.96); }
+  to { transform: translate(42vw, 140px) scale(1.05); }
+}
+
+.ai-hero__grid {
+  position: relative;
+  z-index: 1;
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.ai-hero__header {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 @media (max-width: 991px) {
+  .ai-hero {
+    min-height: 0;
+  }
+
   .ai-hero__grid {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -342,8 +439,16 @@ const editUrl = computed(() =>
 }
 
 /* ─── Header ────────────────────────────────────────────── */
-.ai-hero__header {
-  text-align: left;
+.ai-hero__header { text-align: center; }
+
+.ai-hero__header :deep(.sh) {
+  align-items: center;
+  text-align: center;
+}
+
+.ai-canvas {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .canvas-footer {
@@ -357,30 +462,45 @@ const editUrl = computed(() =>
   margin: 0 4px;
 }
 
-.ai-hero__badge {
-  margin-bottom: 18px;
-  display: inline-flex;
+.source-picker {
+  display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 8px;
-  padding: 6px 16px;
-  background: var(--clr-primary-light);
-  color: var(--clr-primary);
-  border-radius: 100px;
-  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+.source-picker__label {
+  color: #667085;
+  font-size: 12.5px;
   font-weight: 600;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
-.ai-hero__badge .dot {
-  width: 8px;
-  height: 8px;
-  background: var(--clr-primary);
-  border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(100, 52, 208, 0.2);
+.source-picker__option {
+  padding: 7px 11px;
+  background: #ffffff;
+  border: 1px solid #e4d7ff;
+  border-radius: 8px;
+  color: #5b34b1;
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .15s, border-color .15s, color .15s;
 }
 
+.source-picker__option:hover,
+.source-picker__option.is-active {
+  background: #f4f0ff;
+  border-color: #9777e0;
+  color: #53389e;
+}
+
+.source-picker__option:focus-visible {
+  outline: 3px solid rgba(127, 86, 217, .24);
+  outline-offset: 2px;
+}
 
 /* ─── Canvas ────────────────────────────────────────────── */
 .ai-canvas {
@@ -391,18 +511,19 @@ const editUrl = computed(() =>
 /* ─── Input state ───────────────────────────────────────── */
 .canvas-input {
   background: #ffffff;
-  border: 1px solid var(--clr-secondary-gray-stroke);
-  border-radius: 20px;
+  border: 1px solid #eaecf0;
+  border-radius: 18px;
   padding: 24px;
-  box-shadow: 0 8px 32px rgba(100, 52, 208, 0.08), 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 20px 50px rgba(16, 24, 40, 0.12);
 }
 
 /* Chat box: textarea + attachment tray in one bordered container */
 .chat-box {
+  position: relative;
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--clr-secondary-gray-stroke);
-  border-radius: 12px;
+  border: 1px solid #eaecf0;
+  border-radius: 10px;
   background: #ffffff;
   overflow: hidden;
   transition: border-color 0.2s, box-shadow 0.2s;
@@ -419,7 +540,7 @@ const editUrl = computed(() =>
   border: none;
   outline: none;
   background: transparent;
-  padding: 14px 16px;
+  padding: 14px 16px 44px;
   font-size: 15px;
   font-family: inherit;
   color: var(--clr-text-primary);
@@ -428,25 +549,58 @@ const editUrl = computed(() =>
 }
 
 .attach-tray {
-  border-top: 1px solid var(--clr-secondary-gray-stroke);
-  padding: 8px 10px;
+  border-top: 1px solid #eaecf0;
+  padding: 5px 8px;
+  background: #f9fafb;
+}
+
+.attach-fab {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid #d0d5dd;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #667085;
+  cursor: pointer;
+  transition: background .15s, border-color .15s, color .15s;
+}
+
+.attach-fab:hover:not(:disabled) {
+  border-color: #9777e0;
+  background: #f7f3ff;
+  color: #6941c6;
+}
+
+.attach-fab:disabled { opacity: .45; cursor: not-allowed; }
+
+.attach-fab:focus-visible {
+  outline: 3px solid rgba(127, 86, 217, .24);
+  outline-offset: 2px;
 }
 
 .canvas-chips {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .canvas-chip {
-  padding: 6px 14px;
-  background: var(--clr-primary-light);
-  border: 1px solid var(--clr-primary-light-hover);
-  color: var(--clr-primary);
-  border-radius: 100px;
-  font-size: 13px;
-  font-weight: 500;
+  padding: 6px 10px;
+  background: #ffffff;
+  border: 1px solid #e4d7ff;
+  color: #5b34b1;
+  border-radius: 9999px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+  font-size: 12px;
+  font-weight: 600;
   cursor: pointer;
   transition: background 0.15s, transform 0.15s;
   font-family: inherit;
@@ -457,7 +611,8 @@ const editUrl = computed(() =>
 }
 
 .canvas-chip:hover {
-  background: var(--clr-primary-light-hover);
+  background: #f7f3ff;
+  border-color: #b9a2f3;
   transform: translateY(-1px);
 }
 
@@ -564,10 +719,10 @@ const editUrl = computed(() =>
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  padding: 5px 10px;
+  padding: 3px 8px;
   background: none;
-  border: 1px solid var(--clr-secondary-gray-stroke);
-  border-radius: 6px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
   font-size: 12px;
   font-weight: 500;
   color: var(--clr-text-secondary);
@@ -593,7 +748,7 @@ const editUrl = computed(() =>
 }
 
 .attach-meta {
-  font-size: 11px;
+  font-size: 10px;
   color: var(--clr-text-secondary);
   opacity: 0.8;
 }
@@ -606,12 +761,14 @@ const editUrl = computed(() =>
 
 .canvas-btn {
   width: 100%;
-  padding: 14px;
-  background: var(--clr-primary);
+  min-height: 48px;
+  padding: 14px 22px;
+  background: #7f56d9;
   color: #fff;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
+  border: 1px solid #7f56d9;
+  border-radius: 9999px;
+  box-shadow: 0 6px 16px rgba(127, 86, 217, 0.28);
+  font-size: 15.5px;
   font-weight: 600;
   font-family: inherit;
   cursor: pointer;
@@ -619,13 +776,17 @@ const editUrl = computed(() =>
 }
 
 .canvas-btn:hover:not(:disabled) {
-  background: var(--clr-primary-hover);
+  background: #6941c6;
+  border-color: #6941c6;
   transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(127, 86, 217, 0.34);
 }
 
 .canvas-btn:disabled {
-  background: var(--clr-secondary-gray-stroke);
-  color: #98a2b3;
+  background: #f4f0ff;
+  border-color: #e4d7ff;
+  box-shadow: none;
+  color: #a18ad1;
   cursor: not-allowed;
 }
 
@@ -633,11 +794,11 @@ const editUrl = computed(() =>
 /* ─── Loading state ─────────────────────────────────────── */
 .canvas-loading {
   background: #ffffff;
-  border: 1px solid var(--clr-secondary-gray-stroke);
-  border-radius: 20px;
+  border: 1px solid #eaecf0;
+  border-radius: 18px;
   padding: 28px 24px;
   min-height: 420px;
-  box-shadow: 0 8px 32px rgba(100, 52, 208, 0.08);
+  box-shadow: 0 20px 50px rgba(16, 24, 40, 0.12);
 }
 
 .loading-label {
@@ -709,6 +870,7 @@ const editUrl = computed(() =>
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .ai-hero__blob { animation: none; }
   .sk-row { animation: none; opacity: 1; }
   .sk-input { animation: none; }
 }
@@ -737,10 +899,10 @@ const editUrl = computed(() =>
 
 /* ─── Result state ──────────────────────────────────────── */
 .canvas-result {
-  border: 1px solid var(--clr-secondary-gray-stroke);
-  border-radius: 20px;
+  border: 1px solid #eaecf0;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(100, 52, 208, 0.08), 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 20px 50px rgba(16, 24, 40, 0.12);
   background: #ffffff;
 }
 
@@ -787,6 +949,21 @@ const editUrl = computed(() =>
   text-align: center;
 }
 
+.toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.toolbar-save-note {
+  max-width: 170px;
+  color: var(--clr-text-secondary);
+  font-size: 11px;
+  line-height: 1.3;
+  text-align: right;
+}
+
 .toolbar-cta {
   display: inline-flex;
   align-items: center;
@@ -803,6 +980,13 @@ const editUrl = computed(() =>
 }
 
 .toolbar-cta:hover { background: var(--clr-primary-hover); color: #ffffff; }
+
+@media (max-width: 640px) {
+  .result-toolbar { align-items: flex-start; flex-wrap: wrap; }
+  .toolbar-title { order: 3; flex-basis: 100%; text-align: left; }
+  .toolbar-actions { margin-left: auto; }
+  .toolbar-save-note { display: none; }
+}
 
 .result-iframe {
   width: 100%;

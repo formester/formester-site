@@ -78,12 +78,18 @@ const resolvedDescription = computed(
   () => props.description || (props.descriptionFallback ? DEFAULT_DESCRIPTION : ''),
 )
 
+const toPlainText = (value) =>
+  String(value || '')
+    .replace(/<[^>]*>/g, '')
+    .replace(/&nbsp;/g, ' ')
+    .trim()
+
 const resolvedFaqs = computed(() =>
   props.faqList.map((faq, i) => ({
     ...faq,
     id: faq.id ?? i,
     question: faq.question || faq.header,
-    answer: faq.answer || faq.body,
+    answer: toPlainText(faq.answer || faq.body),
   })),
 )
 

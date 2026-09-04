@@ -1239,7 +1239,7 @@
               </header>
 
               <div class="fmstr-cmp-cross-sell__grid">
-                <a href="https://formester.com/ai-form-generator/" class="fmstr-cmp-cross-sell__tile">
+                <a href="/ai-form-generator/#ai-form-builder" class="fmstr-cmp-cross-sell__tile">
                   <span class="fmstr-cmp-cross-sell__thumb" aria-hidden="true"
                     ><svg
                       width="24"

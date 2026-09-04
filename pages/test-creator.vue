@@ -1042,7 +1042,7 @@
                   <h3 class="fmstr-cmp-tc-why-pick__title">AI test generator on the free plan</h3>
                   <p class="fmstr-cmp-tc-why-pick__body">
                     Generate a complete test from a prompt, a syllabus PDF, or a question list before you decide whether
-                    to pay. No credit card, no trial expiry, no watermark on the printed test.
+                    to pay. You can also <a href="/ai-form-generator/#ai-form-builder">turn that same source into an editable form with AI</a>. No credit card, no trial expiry, no watermark on the printed test.
                   </p>
                 </article>
 

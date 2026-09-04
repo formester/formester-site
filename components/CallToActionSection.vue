@@ -31,14 +31,11 @@
         </div>
         <div class="cta-v2__actions">
           <a
-            :href="
-              content.btnPrimaryLink ||
-              'https://app.formester.com/users/sign_up'
-            "
+            :href="primaryButton.link"
             class="cta-v2__btn cta-v2__btn--primary"
-            target="_blank"
+            :target="primaryButton.link.startsWith('#') ? undefined : '_blank'"
           >
-            {{ content.btnPrimaryText || 'Get Started – It’s Free!' }}
+            {{ primaryButton.text }}
           </a>
         </div>
       </div>
@@ -67,6 +64,13 @@ export default {
     },
     buttons() {
       return this.ctaValue?.buttons || []
+    },
+    primaryButton() {
+      const button = this.buttons[0] || {}
+      return {
+        link: this.content.btnPrimaryLink || button.link || 'https://app.formester.com/users/sign_up',
+        text: this.content.btnPrimaryText || button.text || 'Get Started – It’s Free!',
+      }
     },
   },
 }
