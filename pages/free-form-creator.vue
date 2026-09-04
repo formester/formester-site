@@ -254,7 +254,7 @@
                 </p>
                 <p>
                   The Formester free plan ships <strong>the product, not a trailer</strong>. Same
-                  <a href="https://formester.com/ai-form-generator/">AI form generator</a>, same payment fields, same
+                  <a href="/ai-form-generator/#ai-form-builder">AI form generator</a>, same payment fields, same
                   file uploads as the paid plans. Capped on volume, not on capability.
                 </p>
               </div>
@@ -1836,7 +1836,7 @@
               </p>
             </div>
             <div class="fmstr-cmp-ffc-rel__grid">
-              <a href="https://formester.com/ai-form-generator/" class="fmstr-cmp-ffc-rel__card">
+              <a href="/ai-form-generator/#ai-form-builder" class="fmstr-cmp-ffc-rel__card">
                 <span class="fmstr-cmp-ffc-rel__icon"
                   ><svg
                     viewBox="0 0 24 24"

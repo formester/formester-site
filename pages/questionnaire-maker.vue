@@ -416,7 +416,7 @@
                         <a href="https://formester.com/templates/categories/questionnaire/">Questionnaire templates</a>
                       </td>
                       <td><a href="https://formester.com/ai-survey-generator/">AI Survey Generator</a></td>
-                      <td><a href="https://formester.com/ai-form-generator/">AI Form Generator</a></td>
+                      <td><a href="/ai-form-generator/#ai-form-builder">AI Form Generator</a></td>
                     </tr>
                   </tbody>
                 </table>
@@ -1179,7 +1179,7 @@
               </header>
 
               <div class="fmstr-cmp-more-ai-tools-qm__grid">
-                <a class="fmstr-cmp-more-ai-tools-qm__card" href="https://formester.com/ai-form-generator/">
+                <a class="fmstr-cmp-more-ai-tools-qm__card" href="/ai-form-generator/#ai-form-builder">
                   <span class="fmstr-cmp-more-ai-tools-qm__icon" aria-hidden="true">
                     <svg
                       width="20"

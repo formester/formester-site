@@ -1,5 +1,10 @@
 <template>
   <section id="ai-form-builder" class="ai-hero">
+    <div aria-hidden="true" class="ai-hero__blobs">
+      <div class="ai-hero__blob ai-hero__blob--a"></div>
+      <div class="ai-hero__blob ai-hero__blob--b"></div>
+      <div class="ai-hero__blob ai-hero__blob--c"></div>
+    </div>
     <div class="ai-hero__grid">
     <div class="ai-hero__header">
       <SectionHeader :title="title" :description="description" tag="h1" size="xl" spacing="none" align="left" />
@@ -22,12 +27,25 @@
         >
           <div v-if="isDragging" class="drop-overlay">Drop files here</div>
 
+          <div class="source-picker" aria-label="Choose a form source">
+            <span class="source-picker__label">Start with</span>
+            <button
+              v-for="source in sources"
+              :key="source.id"
+              type="button"
+              class="source-picker__option"
+              :class="{ 'is-active': selectedSource === source.id }"
+              @click="selectSource(source.id)"
+            >{{ source.label }}</button>
+          </div>
+
           <div class="chat-box">
             <textarea
+              ref="textareaRef"
               v-model="prompt"
               class="chat-textarea"
-              :placeholder="typedPlaceholder || placeholder"
-              rows="4"
+              :placeholder="activePlaceholder"
+              rows="3"
               @paste="onPaste"
             ></textarea>
 
@@ -40,8 +58,8 @@
               @change="handleFileSelect"
             />
 
-            <div class="attach-tray">
-              <div v-if="fileEntries.length" class="file-chips">
+            <div v-if="fileEntries.length" class="attach-tray">
+              <div class="file-chips">
                 <div
                   v-for="entry in fileEntries"
                   :key="entry.uid"
@@ -49,32 +67,18 @@
                   :title="entry.file.name"
                 >
                   <span v-if="entry.status === 'uploading'" class="file-chip-spinner"></span>
-                  <img
-                    v-else-if="entry.file.type.startsWith('image/')"
-                    :src="getPreviewUrl(entry)"
-                    class="file-chip-img"
-                    alt=""
-                  />
+                  <img v-else-if="entry.file.type.startsWith('image/')" :src="getPreviewUrl(entry)" class="file-chip-img" alt="" />
                   <svg v-else width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="file-chip-icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
                   <span class="file-chip-name">{{ entry.file.name }}</span>
                   <button type="button" class="file-chip-remove" @click="removeFile(entry.uid)">✕</button>
                 </div>
               </div>
-
-              <div class="attach-row">
-                <button
-                  type="button"
-                  class="attach-btn"
-                  :disabled="fileEntries.length >= MAX_FILES"
-                  @click="fileInputRef.click()"
-                >
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
-                  Attach files
-                </button>
-                <span class="attach-meta">PDF or image · max 10 MB · up to {{ MAX_FILES }} files</span>
-              </div>
-              <p v-if="uploadError" class="upload-error">{{ uploadError }}</p>
             </div>
+
+            <button type="button" class="attach-fab" :disabled="fileEntries.length >= MAX_FILES" aria-label="Attach a PDF or image" @click="fileInputRef.click()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+            </button>
+            <p v-if="uploadError" class="upload-error">{{ uploadError }}</p>
           </div>
 
           <div v-if="suggestions && suggestions.length" class="canvas-chips">
@@ -179,6 +183,8 @@ const apiType = computed(() => CMS_TYPE_MAP[props.type] || props.type || 'form')
 const config = useRuntimeConfig()
 const { $notify } = useNuxtApp()
 const prompt = ref('')
+const textareaRef = ref(null)
+const selectedSource = ref('describe')
 const isGenerating = ref(false)
 const surveyUrl = ref('')
 const generatedTitle = ref('')
@@ -230,6 +236,30 @@ const {
   removeFile,
   clearFiles,
 } = useAiFileAttachments()
+
+const sources = [
+  { id: 'describe', label: 'Describe it' },
+  { id: 'questions', label: 'Paste questions' },
+  { id: 'pdf', label: 'PDF' },
+  { id: 'image', label: 'Image' },
+  { id: 'url', label: 'URL' },
+]
+
+const activePlaceholder = computed(() => {
+  if (selectedSource.value === 'questions') return 'Paste the questions you already have…'
+  if (selectedSource.value === 'url') return 'Paste a public URL you want to turn into a form…'
+  return typedPlaceholder.value || props.placeholder
+})
+
+function selectSource(source) {
+  selectedSource.value = source
+  if (source === 'pdf' || source === 'image') {
+    fileInputRef.value.accept = source === 'pdf' ? 'application/pdf' : 'image/*'
+    fileInputRef.value.click()
+    return
+  }
+  textareaRef.value?.focus()
+}
 
 const setPrompt = (text) => { prompt.value = text }
 
@@ -319,25 +349,82 @@ const editUrl = computed(() =>
 <style scoped>
 /* ─── Section ───────────────────────────────────────────── */
 .ai-hero {
-  min-height: 720px;
-  padding: 96px 24px 80px;
-  background: linear-gradient(180deg, #ffffff 0%, #fbfaff 60%, #f7f3ff 100%);
+  min-height: 0;
+  padding: 104px 24px 80px;
+  position: relative;
+  isolation: isolate;
+  background: #ffffff;
   overflow: hidden;
   display: flex;
   align-items: center;
 }
 
+.ai-hero__blobs {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ai-hero__blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: .76;
+  will-change: transform;
+}
+
+.ai-hero__blob--a {
+  width: 900px;
+  height: 594px;
+  background: #f5eeff;
+  animation: ai-hero-blob-a 14s ease-in-out infinite alternate;
+}
+
+.ai-hero__blob--b {
+  width: 700px;
+  height: 497px;
+  background: #f1ebff;
+  animation: ai-hero-blob-b 17s ease-in-out infinite alternate;
+}
+
+.ai-hero__blob--c {
+  width: 600px;
+  height: 420px;
+  background: #f4efff;
+  animation: ai-hero-blob-c 16s ease-in-out infinite alternate;
+}
+
+@keyframes ai-hero-blob-a {
+  from { transform: translate(42vw, -260px) scale(.96); }
+  to { transform: translate(58vw, -160px) scale(1.06); }
+}
+
+@keyframes ai-hero-blob-b {
+  from { transform: translate(-340px, 210px) scale(1.04); }
+  to { transform: translate(-120px, 310px) scale(.94); }
+}
+
+@keyframes ai-hero-blob-c {
+  from { transform: translate(18vw, 230px) scale(.96); }
+  to { transform: translate(42vw, 140px) scale(1.05); }
+}
+
 .ai-hero__grid {
+  position: relative;
+  z-index: 1;
   max-width: 1180px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: 56px;
+  grid-template-columns: 1fr;
+  gap: 36px;
   align-items: center;
 }
 
 .ai-hero__header {
-  max-width: 560px;
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 @media (max-width: 991px) {
@@ -352,7 +439,17 @@ const editUrl = computed(() =>
 }
 
 /* ─── Header ────────────────────────────────────────────── */
-.ai-hero__header { text-align: left; }
+.ai-hero__header { text-align: center; }
+
+.ai-hero__header :deep(.sh) {
+  align-items: center;
+  text-align: center;
+}
+
+.ai-canvas {
+  max-width: 900px;
+  margin: 0 auto;
+}
 
 .canvas-footer {
   margin-top: 12px;
@@ -363,6 +460,46 @@ const editUrl = computed(() =>
 
 .canvas-footer__sep {
   margin: 0 4px;
+}
+
+.source-picker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.source-picker__label {
+  color: #667085;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.source-picker__option {
+  padding: 7px 11px;
+  background: #ffffff;
+  border: 1px solid #e4d7ff;
+  border-radius: 8px;
+  color: #5b34b1;
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .15s, border-color .15s, color .15s;
+}
+
+.source-picker__option:hover,
+.source-picker__option.is-active {
+  background: #f4f0ff;
+  border-color: #9777e0;
+  color: #53389e;
+}
+
+.source-picker__option:focus-visible {
+  outline: 3px solid rgba(127, 86, 217, .24);
+  outline-offset: 2px;
 }
 
 /* ─── Canvas ────────────────────────────────────────────── */
@@ -382,6 +519,7 @@ const editUrl = computed(() =>
 
 /* Chat box: textarea + attachment tray in one bordered container */
 .chat-box {
+  position: relative;
   display: flex;
   flex-direction: column;
   border: 1px solid #eaecf0;
@@ -402,7 +540,7 @@ const editUrl = computed(() =>
   border: none;
   outline: none;
   background: transparent;
-  padding: 14px 16px;
+  padding: 14px 16px 44px;
   font-size: 15px;
   font-family: inherit;
   color: var(--clr-text-primary);
@@ -412,25 +550,56 @@ const editUrl = computed(() =>
 
 .attach-tray {
   border-top: 1px solid #eaecf0;
-  padding: 10px 12px;
+  padding: 5px 8px;
   background: #f9fafb;
+}
+
+.attach-fab {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid #d0d5dd;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #667085;
+  cursor: pointer;
+  transition: background .15s, border-color .15s, color .15s;
+}
+
+.attach-fab:hover:not(:disabled) {
+  border-color: #9777e0;
+  background: #f7f3ff;
+  color: #6941c6;
+}
+
+.attach-fab:disabled { opacity: .45; cursor: not-allowed; }
+
+.attach-fab:focus-visible {
+  outline: 3px solid rgba(127, 86, 217, .24);
+  outline-offset: 2px;
 }
 
 .canvas-chips {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 22px;
+  gap: 8px;
+  margin-bottom: 18px;
 }
 
 .canvas-chip {
-  padding: 8px 12px;
+  padding: 6px 10px;
   background: #ffffff;
   border: 1px solid #e4d7ff;
   color: #5b34b1;
-  border-radius: 10px;
+  border-radius: 9999px;
   box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.15s, transform 0.15s;
@@ -550,7 +719,7 @@ const editUrl = computed(() =>
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  padding: 5px 10px;
+  padding: 3px 8px;
   background: none;
   border: 1px solid #d0d5dd;
   border-radius: 8px;
@@ -579,7 +748,7 @@ const editUrl = computed(() =>
 }
 
 .attach-meta {
-  font-size: 11px;
+  font-size: 10px;
   color: var(--clr-text-secondary);
   opacity: 0.8;
 }
@@ -701,6 +870,7 @@ const editUrl = computed(() =>
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .ai-hero__blob { animation: none; }
   .sk-row { animation: none; opacity: 1; }
   .sk-input { animation: none; }
 }

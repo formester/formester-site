@@ -658,7 +658,7 @@
               </div>
 
               <div class="fmstr-cmp-cl-more-ai-tools__grid">
-                <a class="fmstr-cmp-cl-more-ai-tools__tile" href="https://formester.com/ai-form-generator/">
+                <a class="fmstr-cmp-cl-more-ai-tools__tile" href="/ai-form-generator/#editable-form">
                   <span class="fmstr-cmp-cl-more-ai-tools__icon-tile" aria-hidden="true">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <rect x="4" y="3" width="16" height="18" rx="2" stroke="currentColor" stroke-width="1.8"></rect>

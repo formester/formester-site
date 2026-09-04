@@ -10,6 +10,10 @@
       class="page-component-item"
     />
 
+    <section class="page-component-item event-ai-bridge">
+      <p>Have an event brief or registration PDF? <a href="/ai-form-generator/#pdf-to-form">Turn it into an editable registration form with AI.</a></p>
+    </section>
+
     <TrustSeals :title="c1_title" :logos="c1_logos" class="page-component-item" />
 
     <Trustbadges
@@ -1756,3 +1760,15 @@ useJsonld([
   },
 ])
 </script>
+
+<style scoped>
+.event-ai-bridge {
+  max-width: 1180px;
+  margin: -20px auto 0;
+  padding: 0 24px;
+  text-align: center;
+  color: #475467;
+}
+.event-ai-bridge p { margin: 0; }
+.event-ai-bridge a { color: #6941c6; font-weight: 600; }
+</style>

@@ -17,7 +17,98 @@
     <section class="page-component-item">
       <div class="raw-html-content">
         <div class="raw-html-embed">
-          <section class="fmstr-cmp-afg-3ways" aria-labelledby="fmstr-cmp-afg-3ways-h2">
+          <section id="editable-form" class="fmstr-cmp-afg-steps" aria-labelledby="fmstr-cmp-afg-steps-h2">
+            <div class="fmstr-cmp-afg-steps__container">
+              <div class="fmstr-cmp-afg-steps__header">
+                <div class="fmstr-cmp-afg-steps__eyebrow">From idea to live form</div>
+                <h2 class="fmstr-cmp-afg-steps__h2" id="fmstr-cmp-afg-steps-h2">
+                  Your form is real — and fully editable
+                </h2>
+                <p class="fmstr-cmp-afg-steps__sub">Start with a prompt, PDF, image, or URL. Formester builds a live form you can edit and publish.</p>
+              </div>
+              <div class="fmstr-cmp-afg-steps__grid">
+                <div class="fmstr-cmp-afg-steps__list">
+                  <div class="fmstr-cmp-afg-steps__step"><div class="fmstr-cmp-afg-steps__num">1</div><div><h3>Get editable fields, not a text draft</h3><p>Review field types, validation, and conditional logic in the Formester editor.</p></div></div>
+                  <div class="fmstr-cmp-afg-steps__step"><div class="fmstr-cmp-afg-steps__num">2</div><div><h3>Publish wherever your work happens</h3><p>Share a link, embed the form, collect payments, or send responses to your CRM.</p></div></div>
+                </div>
+                <div class="fmstr-cmp-afg-steps__panel"><div class="fmstr-cmp-afg-steps__frame"><img class="fmstr-cmp-afg-steps__media" src="https://formester-strapi.s3.ap-south-1.amazonaws.com/ai_generate_v2_a9ab64f591.gif" alt="Formester AI creating a real editable form from a typed prompt" loading="eager" /></div></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="page-component-item">
+      <div class="raw-html-content">
+        <div class="raw-html-embed">
+          <section id="pdf-to-form" class="fmstr-cmp-afg-pdf" aria-labelledby="fmstr-cmp-afg-pdf-h2">
+            <div class="fmstr-cmp-afg-pdf__container">
+              <div class="fmstr-cmp-afg-pdf__header">
+                <div class="fmstr-cmp-afg-pdf__eyebrow">PDF to form</div>
+                <h2 class="fmstr-cmp-afg-pdf__h2" id="fmstr-cmp-afg-pdf-h2">Turn any PDF into a fillable form</h2>
+                <p class="fmstr-cmp-afg-pdf__sub">
+                  Plenty of the forms teams need already exist as PDFs: intake packets, registration sheets, consent
+                  forms, applications. Instead of rebuilding them field by field,
+                  <a
+                    href="/features/convert-pdf-to-fillable-form/"
+                    style="color: #6941c6 !important; text-decoration: underline !important; text-underline-offset: 2px"
+                    >upload the file</a
+                  >.
+                </p>
+              </div>
+              <div class="fmstr-cmp-afg-pdf__grid">
+                <div class="fmstr-cmp-afg-pdf__list">
+                  <div class="fmstr-cmp-afg-pdf__step">
+                    <div class="fmstr-cmp-afg-pdf__num">1</div>
+                    <p>Upload your PDF. It can be a designed document or a scan of a paper form.</p>
+                  </div>
+                  <div class="fmstr-cmp-afg-pdf__step">
+                    <div class="fmstr-cmp-afg-pdf__num">2</div>
+                    <p>
+                      The AI detects the fields and recreates each one as an interactive input: text boxes, checkboxes,
+                      dropdowns.
+                    </p>
+                  </div>
+                  <div class="fmstr-cmp-afg-pdf__step">
+                    <div class="fmstr-cmp-afg-pdf__num">3</div>
+                    <p>
+                      Publish. Respondents fill it out at a link, and submissions land in your dashboard instead of your
+                      inbox.
+                    </p>
+                  </div>
+                </div>
+                <div class="fmstr-cmp-afg-pdf__panel">
+                  <div class="fmstr-cmp-afg-pdf__frame">
+                    <img
+                      class="fmstr-cmp-afg-pdf__media"
+                      src="https://formester-strapi.s3.ap-south-1.amazonaws.com/pdf_to_form_v2_9968415264.gif"
+                      alt="Uploading a PDF and Formester AI converting it into a fillable form"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+              <p class="fmstr-cmp-afg-pdf__note">
+                Formester can also send every respondent
+                <a
+                  href="/features/export-form-submission-pdf/"
+                  style="color: #6941c6 !important; text-decoration: underline !important; text-underline-offset: 2px"
+                  >a PDF copy of their submission</a
+                >
+                automatically, so signed intake forms and applications go back into your document workflow on their own.
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-component-item">
+      <div class="raw-html-content">
+        <div class="raw-html-embed">
+          <section v-if="false" class="fmstr-cmp-afg-3ways" aria-labelledby="fmstr-cmp-afg-3ways-h2">
             <div class="fmstr-cmp-afg-3ways__container">
               <div class="fmstr-cmp-afg-3ways__header">
                 <div class="fmstr-cmp-afg-3ways__eyebrow">What you can start with</div>
@@ -228,7 +319,7 @@
     <section class="page-component-item">
       <div class="raw-html-content">
         <div class="raw-html-embed">
-          <section class="fmstr-cmp-afg-freeplan">
+          <section v-if="false" class="fmstr-cmp-afg-freeplan">
             <div class="fmstr-cmp-afg-freeplan__container">
               <div class="fmstr-cmp-afg-freeplan__panel">
                 <div class="fmstr-cmp-afg-freeplan__header">
@@ -400,7 +491,7 @@
     <section class="page-component-item">
       <div class="raw-html-content">
         <div class="raw-html-embed">
-          <section class="fmstr-cmp-afg-steps" aria-labelledby="fmstr-cmp-afg-steps-h2">
+          <section v-if="false" class="fmstr-cmp-afg-steps" aria-labelledby="fmstr-cmp-afg-steps-h2">
             <div class="fmstr-cmp-afg-steps__container">
               <div class="fmstr-cmp-afg-steps__header">
                 <div class="fmstr-cmp-afg-steps__eyebrow">How it works</div>
@@ -472,81 +563,17 @@
       </div>
     </section>
 
-    <section class="page-component-item">
-      <div class="raw-html-content">
-        <div class="raw-html-embed">
-          <section class="fmstr-cmp-afg-pdf" aria-labelledby="fmstr-cmp-afg-pdf-h2">
-            <div class="fmstr-cmp-afg-pdf__container">
-              <div class="fmstr-cmp-afg-pdf__header">
-                <div class="fmstr-cmp-afg-pdf__eyebrow">PDF to form</div>
-                <h2 class="fmstr-cmp-afg-pdf__h2" id="fmstr-cmp-afg-pdf-h2">Turn any PDF into a fillable form</h2>
-                <p class="fmstr-cmp-afg-pdf__sub">
-                  Plenty of the forms teams need already exist as PDFs: intake packets, registration sheets, consent
-                  forms, applications. Instead of rebuilding them field by field,
-                  <a
-                    href="/features/convert-pdf-to-fillable-form/"
-                    style="color: #6941c6 !important; text-decoration: underline !important; text-underline-offset: 2px"
-                    >upload the file</a
-                  >.
-                </p>
-              </div>
-              <div class="fmstr-cmp-afg-pdf__grid">
-                <div class="fmstr-cmp-afg-pdf__list">
-                  <div class="fmstr-cmp-afg-pdf__step">
-                    <div class="fmstr-cmp-afg-pdf__num">1</div>
-                    <p>Upload your PDF. It can be a designed document or a scan of a paper form.</p>
-                  </div>
-                  <div class="fmstr-cmp-afg-pdf__step">
-                    <div class="fmstr-cmp-afg-pdf__num">2</div>
-                    <p>
-                      The AI detects the fields and recreates each one as an interactive input: text boxes, checkboxes,
-                      dropdowns.
-                    </p>
-                  </div>
-                  <div class="fmstr-cmp-afg-pdf__step">
-                    <div class="fmstr-cmp-afg-pdf__num">3</div>
-                    <p>
-                      Publish. Respondents fill it out at a link, and submissions land in your dashboard instead of your
-                      inbox.
-                    </p>
-                  </div>
-                </div>
-                <div class="fmstr-cmp-afg-pdf__panel">
-                  <div class="fmstr-cmp-afg-pdf__frame">
-                    <img
-                      class="fmstr-cmp-afg-pdf__media"
-                      src="https://formester-strapi.s3.ap-south-1.amazonaws.com/pdf_to_form_v2_9968415264.gif"
-                      alt="Uploading a PDF and Formester AI converting it into a fillable form"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-              </div>
-              <p class="fmstr-cmp-afg-pdf__note">
-                Formester can also send every respondent
-                <a
-                  href="/features/export-form-submission-pdf/"
-                  style="color: #6941c6 !important; text-decoration: underline !important; text-underline-offset: 2px"
-                  >a PDF copy of their submission</a
-                >
-                automatically, so signed intake forms and applications go back into your document workflow on their own.
-              </p>
-            </div>
-          </section>
-        </div>
-      </div>
-    </section>
 
     <section class="page-component-item">
       <div class="raw-html-content">
         <div class="raw-html-embed">
-          <section class="fmstr-cmp-afg-who-uses" aria-labelledby="fmstr-cmp-afg-who-uses-heading">
+          <section id="templates" class="fmstr-cmp-afg-who-uses" aria-labelledby="fmstr-cmp-afg-who-uses-heading">
             <div class="fmstr-cmp-afg-who-uses__container">
               <header class="fmstr-cmp-afg-who-uses__header">
                 <h2 id="fmstr-cmp-afg-who-uses-heading" class="fmstr-cmp-afg-who-uses__heading">
-                  Who uses the AI form generator
+                  Start with a template. Make it yours with AI.
                 </h2>
-                <p class="fmstr-cmp-afg-who-uses__sub">Teams turning prompts into live forms every week</p>
+                <p class="fmstr-cmp-afg-who-uses__sub">Choose a proven template, then use AI to adapt the questions, fields, and flow to your workflow.</p>
               </header>
 
               <div class="fmstr-cmp-afg-who-uses__grid">
@@ -572,6 +599,8 @@
                     Lead capture, event registration, and campaign feedback. Build a campaign-specific form in the time
                     it takes to write the brief, then push responses straight to your CRM.
                   </p>
+                  <hr class="fmstr-cmp-afg-who-uses__divider" />
+                  <a class="fmstr-cmp-afg-who-uses__cta" href="/templates/categories/lead-generation/">Browse lead generation templates →</a>
                 </article>
 
                 <article class="fmstr-cmp-afg-who-uses__card">
@@ -597,6 +626,8 @@
                     Job applications, onboarding surveys, and 360° feedback. Paste the job description and the AI drafts
                     the application form, resume upload and salary dropdown included.
                   </p>
+                  <hr class="fmstr-cmp-afg-who-uses__divider" />
+                  <a class="fmstr-cmp-afg-who-uses__cta" href="/templates/categories/job-application-forms/">Browse job application templates →</a>
                 </article>
 
                 <article class="fmstr-cmp-afg-who-uses__card">
@@ -622,8 +653,8 @@
                     seconds with the AI Quiz Maker.
                   </p>
                   <hr class="fmstr-cmp-afg-who-uses__divider" />
-                  <a class="fmstr-cmp-afg-who-uses__cta" href="https://formester.com/ai-quiz-maker/"
-                    >Generate Quizzes in Seconds →</a
+                  <a class="fmstr-cmp-afg-who-uses__cta" href="/templates/categories/quizzes/"
+                    >Browse quiz templates →</a
                   >
                 </article>
 
@@ -650,6 +681,8 @@
                     Training needs assessments, skill-gap diagnostics, and post-session feedback. Turn a syllabus into a
                     pre-assessment in one prompt.
                   </p>
+                  <hr class="fmstr-cmp-afg-who-uses__divider" />
+                  <a class="fmstr-cmp-afg-who-uses__cta" href="/templates/categories/training-forms/">Browse training templates →</a>
                 </article>
 
                 <article class="fmstr-cmp-afg-who-uses__card">
@@ -677,8 +710,8 @@
                     read the drop-off analytics the same day.
                   </p>
                   <hr class="fmstr-cmp-afg-who-uses__divider" />
-                  <a class="fmstr-cmp-afg-who-uses__cta" href="https://formester.com/ai-survey-generator/"
-                    >Analyze Customer Feedback →</a
+                  <a class="fmstr-cmp-afg-who-uses__cta" href="/templates/categories/feedback-forms/"
+                    >Browse feedback templates →</a
                   >
                 </article>
 
@@ -714,8 +747,8 @@
                     design.
                   </p>
                   <hr class="fmstr-cmp-afg-who-uses__divider" />
-                  <a class="fmstr-cmp-afg-who-uses__cta" href="https://formester.com/ai-survey-generator/"
-                    >Generate Surveys with AI in Seconds →</a
+                  <a class="fmstr-cmp-afg-who-uses__cta" href="/templates/categories/analysis-and-assessment/"
+                    >Browse assessment templates →</a
                   >
                 </article>
 
@@ -742,6 +775,8 @@
                     Registration, speaker submissions, and post-event feedback. Build the whole event stack from three
                     prompts, then watch responses arrive live.
                   </p>
+                  <hr class="fmstr-cmp-afg-who-uses__divider" />
+                  <a class="fmstr-cmp-afg-who-uses__cta" href="/templates/categories/registration-forms/">Browse event registration templates →</a>
                 </article>
 
                 <article class="fmstr-cmp-afg-who-uses__card">
@@ -766,6 +801,8 @@
                     Volunteer signups, donor intake, and grant applications. Generate compliance-ready forms from a
                     funding-requirement PDF in seconds.
                   </p>
+                  <hr class="fmstr-cmp-afg-who-uses__divider" />
+                  <a class="fmstr-cmp-afg-who-uses__cta" href="/templates/categories/donation-forms/">Browse donation templates →</a>
                 </article>
               </div>
             </div>
@@ -872,7 +909,7 @@
     <section class="page-component-item">
       <div class="raw-html-content">
         <div class="raw-html-embed">
-          <section class="fmstr-cmp-afg-engine">
+          <section v-if="false" class="fmstr-cmp-afg-engine">
             <div class="fmstr-cmp-afg-engine__container">
               <div class="fmstr-cmp-afg-engine__header">
                 <div class="fmstr-cmp-afg-engine__eyebrow">Under the hood</div>
@@ -910,10 +947,8 @@
                       power AI features inherits the same boundary.
                     </p>
                     <p>
-                      Encrypted in transit and at rest, hosted on Heroku and AWS, automated encrypted backups with a
-                      90-day retention, and full data deletion on request. We are GDPR, UK GDPR, and CCPA compliant. We
-                      are not SOC 2 or ISO 27001 certified yet, and we will tell you so directly rather than dance
-                      around it.
+                      Your form content is encrypted in transit and at rest, with encrypted backups and deletion on request.
+                      Formester supports GDPR, UK GDPR, and CCPA compliance.
                     </p>
                   </div>
                 </div>
@@ -1230,15 +1265,22 @@ const c0_description =
 const c0_title = [
   {
     id: 5963,
-    text: 'Free AI Form Builder: create, edit, and publish a form ',
+    text: 'Free ',
     highlight: false,
     color: '#000000',
     bold: false,
   },
   {
     id: 5962,
-    text: 'in 30 seconds',
+    text: 'AI Form Builder',
     highlight: true,
+    color: '#000000',
+    bold: false,
+  },
+  {
+    id: 5961,
+    text: ' — create, edit, and publish a form in 30 seconds',
+    highlight: false,
     color: '#000000',
     bold: false,
   },
@@ -1364,14 +1406,14 @@ const c15_faqList = [
   },
   {
     id: 3828,
-    header: 'Can I use the AI Form Generator for free?',
+    header: 'Is an AI form builder free?',
     body: '<p>Yes. No credit card at signup, and the free plan has no caps on forms or responses. Paid plans add custom branding, conditional logic, and API access. See pricing for plan details.</p>',
     body_markdown: null,
     list: [],
   },
   {
     id: 3827,
-    header: 'Is the AI Form Generator easy to use?',
+    header: 'Can I edit a generated form?',
     body: '<p>Yes. You describe the form and the generator returns a working version, so there is nothing to learn before you start. Editing afterward is drag and drop, and if you would rather not touch the editor, you can tell the AI what to change instead.</p>',
     body_markdown: null,
     list: [],
@@ -1385,21 +1427,21 @@ const c15_faqList = [
   },
   {
     id: 3829,
-    header: 'Can ChatGPT create a form?',
+    header: 'Can ChatGPT make a form?',
     body: '<p>ChatGPT can draft form questions and field labels, but it cannot host a live, fillable form you can share with respondents, collect answers in, or connect to your CRM. An AI form generator like Formester does both halves. It generates the questions and deploys them as a live form at a shareable URL with a backend that stores responses.</p>',
     body_markdown: null,
     list: [],
   },
   {
     id: 3835,
-    header: 'Can AI make a form fillable?',
+    header: 'Can I turn a PDF, image, or URL into a form?',
     body: "<p>Yes. Upload a non-fillable PDF, for example a scanned tax form or a printable registration sheet, and Formester's AI detects the fields, recreates them as interactive inputs, and publishes the result as a fillable online form. No manual rebuilding.</p>",
     body_markdown: null,
     list: [],
   },
   {
     id: 3834,
-    header: 'Which AI can generate forms?',
+    header: 'Which AI is best for creating forms?',
     body: '<p>Tools built specifically for AI form generation include Formester, Jotform, Fillout, Makeform, Weavely, and Typeform. General-purpose assistants like ChatGPT and Gemini can suggest form content but do not publish live forms. When choosing, look for free generation without sign-up, support for multiple input sources (prompt, PDF, image, URL), and a direct connection to your CRM and automation tools.</p>',
     body_markdown: null,
     list: [],
@@ -1449,7 +1491,7 @@ const c15_faqList = [
 ]
 
 useHead({
-  title: 'Free AI Form Builder: Create, Edit & Publish Forms | Formester',
+  title: 'Free AI Form Builder & Generator: Create Forms | Formester',
   link: [
     {
       hid: 'canonical',
@@ -1460,7 +1502,7 @@ useHead({
   meta: [
     {
       property: 'article:modified_time',
-      content: '2026-08-09T15:28:48.263Z',
+      content: '2026-09-04T03:53:34Z',
     },
     {
       hid: 'description',
@@ -1471,7 +1513,7 @@ useHead({
     {
       hid: 'og:site_name',
       name: 'og:site_name',
-      content: 'Free AI Form Builder: Create, Edit & Publish Forms | Formester',
+      content: 'Free AI Form Builder & Generator: Create Forms | Formester',
     },
     {
       hid: 'og:type',
@@ -1486,7 +1528,7 @@ useHead({
     {
       hid: 'og:title',
       property: 'og:title',
-      content: 'Free AI Form Builder: Create, Edit & Publish Forms | Formester',
+      content: 'Free AI Form Builder & Generator: Create Forms | Formester',
     },
     {
       hid: 'og:description',
@@ -1516,7 +1558,7 @@ useHead({
     {
       hid: 'twitter:title',
       name: 'twitter:title',
-      content: 'Free AI Form Builder: Create, Edit & Publish Forms | Formester',
+      content: 'Free AI Form Builder & Generator: Create Forms | Formester',
     },
     {
       hid: 'twitter:description',
@@ -1592,7 +1634,7 @@ useJsonld([
       {
         '@id': 'https://formester.com/ai-form-generator/#webpage',
         url: 'https://formester.com/ai-form-generator/',
-        name: 'Free AI Form Builder: Create, Edit & Publish Forms | Formester',
+        name: 'Free AI Form Builder & Generator: Create Forms | Formester',
         '@type': 'WebPage',
         headline: 'Free AI Form Builder: create, edit, and publish a form in 30 seconds',
         isPartOf: {
@@ -1604,7 +1646,7 @@ useJsonld([
         inLanguage: 'en-US',
         description:
           'Build a live form from a prompt, PDF, image, or URL. Edit every field, publish it, and collect unlimited responses on the free plan. Trusted by 56,000+ teams.',
-        dateModified: '2026-08-09',
+        dateModified: '2026-09-04',
         datePublished: '2024-07-12',
         primaryImageOfPage: {
           url: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_logo_meta_image_68c8b28e07.png',
@@ -1694,7 +1736,7 @@ useJsonld([
             },
           },
           {
-            name: 'Can I use the AI Form Generator for free?',
+            name: 'Is an AI form builder free?',
             '@type': 'Question',
             acceptedAnswer: {
               text: 'Yes. No credit card at signup, and the free plan has no caps on forms or responses. Paid plans add custom branding, conditional logic, and API access. See pricing for plan details.',
@@ -1702,7 +1744,7 @@ useJsonld([
             },
           },
           {
-            name: 'Is the AI Form Generator easy to use?',
+            name: 'Can I edit a generated form?',
             '@type': 'Question',
             acceptedAnswer: {
               text: 'Yes. You describe the form and the generator returns a working version, so there is nothing to learn before you start. Editing afterward is drag and drop, and if you would rather not touch the editor, you can tell the AI what to change instead.',
@@ -1718,7 +1760,7 @@ useJsonld([
             },
           },
           {
-            name: 'Can ChatGPT create a form?',
+            name: 'Can ChatGPT make a form?',
             '@type': 'Question',
             acceptedAnswer: {
               text: 'ChatGPT can draft form questions and field labels, but it cannot host a live, fillable form you can share with respondents, collect answers in, or connect to your CRM. An AI form generator like Formester does both halves. It generates the questions and deploys them as a live form at a shareable URL with a backend that stores responses.',
@@ -1726,7 +1768,7 @@ useJsonld([
             },
           },
           {
-            name: 'Can AI make a form fillable?',
+            name: 'Can I turn a PDF, image, or URL into a form?',
             '@type': 'Question',
             acceptedAnswer: {
               text: "Yes. Upload a non-fillable PDF, for example a scanned tax form or a printable registration sheet, and Formester's AI detects the fields, recreates them as interactive inputs, and publishes the result as a fillable online form. No manual rebuilding.",
@@ -1734,7 +1776,7 @@ useJsonld([
             },
           },
           {
-            name: 'Which AI can generate forms?',
+            name: 'Which AI is best for creating forms?',
             '@type': 'Question',
             acceptedAnswer: {
               text: 'Tools built specifically for AI form generation include Formester, Jotform, Fillout, Makeform, Weavely, and Typeform. General-purpose assistants like ChatGPT and Gemini can suggest form content but do not publish live forms. When choosing, look for free generation without sign-up, support for multiple input sources (prompt, PDF, image, URL), and a direct connection to your CRM and automation tools.',
@@ -2454,7 +2496,7 @@ useJsonld([
   line-height: 1.15;
   letter-spacing: -0.02em;
   margin: 0 0 14px;
-  color: #475467;
+  color: var(--c-fg-1);
 }
 .fmstr-cmp-afg-steps__h2 span {
   color: var(--c-brand);
