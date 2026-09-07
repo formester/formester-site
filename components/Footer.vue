@@ -255,12 +255,10 @@
 
             <ul class="list-unstyled mt-2">
               <li class="mt-2">
-                <NuxtLink
-                  to="/tools/event-registration-software/"
-                  class="footer__link"
-                >
-                Event Registration Software
-                </NuxtLink>
+                <NuxtLink to="/tools/fillable-pdf-creator/" class="footer__link"> Fillable PDF Creator </NuxtLink>
+              </li>
+              <li class="mt-2">
+                <NuxtLink to="/tools/" class="footer__link"> All free tools </NuxtLink>
               </li>
             </ul>
           </div>

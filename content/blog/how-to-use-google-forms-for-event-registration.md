@@ -197,7 +197,7 @@ publishedAt: "2026-06-22T05:13:58.086Z"
 <li>You need to cap seats or collect ticket fees.</li>
 </ul>
 
-<p>Rule of thumb: free community event, stay on Google Forms. Paid, recurring, or brand-facing event, move to a dedicated <a href="https://formester.com/tools/event-registration-software/">event registration tool</a>.</p>
+<p>Rule of thumb: free community event, stay on Google Forms. Paid, recurring, or brand-facing event, move to a dedicated <a href="https://formester.com/templates/categories/event-management/">event registration tool</a>.</p>
 
 <h2>Pro Tips for a Smoother Registration</h2>
 

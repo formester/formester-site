@@ -1,0 +1,393 @@
+{
+  "version": "1",
+  "page": {
+    "defaults": {
+      "size": "A4",
+      "orientation": "portrait",
+      "backgroundColor": "#ffffff",
+      "margin": {
+        "top": 18,
+        "bottom": 18,
+        "left": 18,
+        "right": 18
+      },
+      "typography": {
+        "labelFontFamily": "Roboto",
+        "labelFontSize": 12,
+        "labelColor": "#344054",
+        "labelFontWeight": "bold",
+        "labelFontStyle": "normal",
+        "labelAlign": "left",
+        "answerFontFamily": "Roboto",
+        "answerFontSize": 12,
+        "answerColor": "#101828",
+        "answerFontWeight": "normal",
+        "answerFontStyle": "normal",
+        "answerAlign": "left",
+        "labelLayout": "stacked",
+        "labelSpacing": 4,
+        "showBorder": true,
+        "lineColor": "#d0d5dd",
+        "lineThickness": 0.5
+      }
+    },
+    "validSizes": [
+      "A4",
+      "A5",
+      "Letter"
+    ],
+    "validOrientations": [
+      "portrait",
+      "landscape"
+    ],
+    "fontFamilies": [
+      {
+        "label": "Roboto",
+        "value": "Roboto"
+      }
+    ]
+  },
+  "elements": {
+    "header": {
+      "label": "Header",
+      "group": "basic",
+      "icon": "heading",
+      "dimensions": {
+        "w": 400,
+        "h": 36
+      },
+      "content": {
+        "text": "Header"
+      },
+      "style": {
+        "fontSize": 24,
+        "fontWeight": "bold",
+        "fontStyle": "normal",
+        "color": "#101828",
+        "align": "left",
+        "lineHeight": 1.4
+      }
+    },
+    "text": {
+      "label": "Text",
+      "group": "basic",
+      "icon": "type",
+      "dimensions": {
+        "w": 200,
+        "h": 28
+      },
+      "content": {
+        "text": ""
+      },
+      "style": {
+        "fontWeight": "normal",
+        "fontStyle": "normal",
+        "color": "#101828",
+        "align": "left",
+        "lineHeight": 1.4
+      }
+    },
+    "field": {
+      "label": "Form Field",
+      "group": "field",
+      "icon": "type",
+      "dimensions": {
+        "w": 220,
+        "h": 44
+      },
+      "content": {
+        "label": ""
+      },
+      "style": {}
+    },
+    "image": {
+      "label": "Image",
+      "group": "basic",
+      "icon": "image",
+      "dimensions": {
+        "w": 150,
+        "h": 150
+      },
+      "content": {},
+      "style": {
+        "objectFit": "contain",
+        "borderRadius": 0
+      }
+    },
+    "signature": {
+      "label": "Signature",
+      "group": "basic",
+      "icon": "pen-tool",
+      "dimensions": {
+        "w": 220,
+        "h": 80
+      },
+      "content": {
+        "label": "Signature"
+      },
+      "style": {}
+    },
+    "line": {
+      "label": "Line",
+      "group": "shape",
+      "icon": "minus",
+      "dimensions": {
+        "w": 200,
+        "h": 4
+      },
+      "content": {},
+      "style": {
+        "color": "#98A2B3",
+        "thickness": 1
+      }
+    },
+    "rectangle": {
+      "label": "Rectangle",
+      "group": "shape",
+      "icon": "square",
+      "dimensions": {
+        "w": 150,
+        "h": 100
+      },
+      "content": {},
+      "style": {
+        "fill": "",
+        "stroke": "#98A2B3",
+        "strokeWidth": 1,
+        "borderRadius": 0
+      }
+    },
+    "circle": {
+      "label": "Circle",
+      "group": "shape",
+      "icon": "circle",
+      "dimensions": {
+        "w": 100,
+        "h": 100
+      },
+      "content": {},
+      "style": {
+        "fill": "",
+        "stroke": "#98A2B3",
+        "strokeWidth": 1
+      }
+    },
+    "star-rating": {
+      "label": "Star Rating",
+      "group": "field",
+      "icon": "star",
+      "dimensions": {
+        "w": 220,
+        "h": 52
+      },
+      "content": {
+        "label": ""
+      },
+      "style": {
+        "starColor": "#f79009",
+        "maxRating": 5
+      }
+    },
+    "scale-rating": {
+      "label": "Scale Rating",
+      "group": "field",
+      "icon": "sliders-horizontal",
+      "dimensions": {
+        "w": 300,
+        "h": 56
+      },
+      "content": {
+        "label": ""
+      },
+      "style": {
+        "scaleColor": "#344054",
+        "steps": 10
+      }
+    },
+    "radio": {
+      "label": "Radio",
+      "group": "field",
+      "icon": "circle-dot",
+      "dimensions": {
+        "w": 220,
+        "h": 72
+      },
+      "content": {
+        "label": ""
+      },
+      "style": {
+        "showAllOptions": true,
+        "optionLayout": "1col"
+      }
+    },
+    "multiple-checkbox": {
+      "label": "Multiple Checkbox",
+      "group": "field",
+      "icon": "check-square",
+      "dimensions": {
+        "w": 220,
+        "h": 72
+      },
+      "content": {
+        "label": ""
+      },
+      "style": {
+        "showAllOptions": true,
+        "optionLayout": "1col"
+      }
+    },
+    "dropdown": {
+      "label": "Dropdown",
+      "group": "field",
+      "icon": "chevrons-up-down",
+      "dimensions": {
+        "w": 220,
+        "h": 44
+      },
+      "content": {
+        "label": ""
+      },
+      "style": {
+        "optionLayout": "1col"
+      }
+    },
+    "terms": {
+      "label": "Terms & Conditions",
+      "group": "field",
+      "icon": "check-square",
+      "dimensions": {
+        "w": 220,
+        "h": 20
+      },
+      "content": {
+        "label": ""
+      },
+      "style": {}
+    },
+    "file": {
+      "label": "File Upload",
+      "group": "field",
+      "icon": "upload",
+      "dimensions": {
+        "w": 220,
+        "h": 64
+      },
+      "content": {
+        "label": ""
+      },
+      "style": {}
+    },
+    "ranking": {
+      "label": "Ranking",
+      "group": "field",
+      "icon": "list-ordered",
+      "dimensions": {
+        "w": 220,
+        "h": 96
+      },
+      "content": {
+        "label": ""
+      },
+      "style": {}
+    },
+    "repeat-field": {
+      "label": "Repeater",
+      "group": "field",
+      "icon": "table",
+      "dimensions": {
+        "w": 400,
+        "h": 120
+      },
+      "content": {
+        "label": ""
+      },
+      "style": {}
+    },
+    "placeholder": {
+      "label": "Placeholder",
+      "group": "field",
+      "icon": "type",
+      "dimensions": {
+        "w": 200,
+        "h": 18
+      },
+      "content": {
+        "fieldId": null,
+        "label": "Field"
+      },
+      "style": {
+        "fontSize": 11,
+        "color": "#101828",
+        "fontWeight": "normal",
+        "fontStyle": "normal",
+        "labelFontFamily": "Roboto"
+      }
+    },
+    "matrix": {
+      "label": "Matrix",
+      "group": "field",
+      "icon": "table",
+      "dimensions": {
+        "w": 460,
+        "h": 180
+      },
+      "content": {
+        "label": ""
+      },
+      "style": {
+        "matrixDisplay": "grid",
+        "borderColor": "#d0d5dd",
+        "borderWidth": 0.3,
+        "headerColor": "#f2f4f7",
+        "emptyCellStyle": "empty",
+        "showColumnHeader": true,
+        "showRowHeader": true
+      }
+    },
+    "fillable": {
+      "label": "Fillable field",
+      "group": "fillable",
+      "icon": "square-pen",
+      "dimensions": {
+        "w": 216,
+        "h": 24
+      },
+      "content": {
+        "fieldType": "text",
+        "name": "",
+        "required": false,
+        "readOnly": false,
+        "defaultValue": "",
+        "tooltip": "",
+        "maxLength": null,
+        "comb": false,
+        "options": [],
+        "optionValue": "",
+        "editable": false
+      },
+      "style": {
+        "fontSize": 10,
+        "textColor": "#101828",
+        "borderColor": "#98a2b3",
+        "borderWidth": 1,
+        "backgroundColor": "",
+        "align": "left"
+      }
+    }
+  },
+  "formFieldMap": {
+    "picture-checkbox": "multiple-checkbox",
+    "dropdown": "dropdown",
+    "radio": "radio",
+    "multiple-checkbox": "multiple-checkbox",
+    "star-rating": "star-rating",
+    "scale-rating": "scale-rating",
+    "ranking": "ranking",
+    "file": "file",
+    "repeat-field": "repeat-field",
+    "matrix": "matrix",
+    "signature": "signature",
+    "image": "image",
+    "terms": "terms"
+  }
+}

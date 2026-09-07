@@ -32,7 +32,7 @@ Whova shines with its comprehensive suite of features, making it ideal for compl
 
 ![31.png](https://formester-strapi.s3.ap-south-1.amazonaws.com/31_be89de83f9.png)
 
-Formester is an No-Code online form building software that can also be used as an **[Event Registration Tool](/tools/event-registration-software/)**. It boasts advanced features such as conditional logic which can help you segment event attendees with [smart event registration forms](/templates/event-registration-form-1827/). It easily integrates with 1000+ third party apps such as Calendly or any other event regitstration tool in this list with the help of workflow automation tools. It stands as No.2 due to it's minimalist and easy to use interface while being a budget-friendly option.
+Formester is an No-Code online form building software that can also be used as an **[Event Registration Tool](/templates/categories/event-management/)**. It boasts advanced features such as conditional logic which can help you segment event attendees with [smart event registration forms](/templates/event-registration-form-1827/). It easily integrates with 1000+ third party apps such as Calendly or any other event regitstration tool in this list with the help of workflow automation tools. It stands as No.2 due to it's minimalist and easy to use interface while being a budget-friendly option.
 
 ### 3. <a href="https://www.eventcube.io/">Eventcube</a>
 ![a mockup of eventcube](https://formester-strapi.s3.ap-south-1.amazonaws.com/a_mockup_of_eventcube_e2b1fd3835.png)
