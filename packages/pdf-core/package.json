@@ -1,0 +1,36 @@
+{
+  "name": "@formester/pdf-core",
+  "version": "0.1.0",
+  "description": "Formester's PDF render core: element → PDF generation via pdfme, plus a fillable-field (AcroForm) plugin and AcroForm import.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./fillable": "./src/plugins/fillable-field.js",
+    "./acroform": "./src/acroform.js",
+    "./composables/*": "./src/composables/*",
+    "./constants/*": "./src/constants/*"
+  },
+  "files": ["src"],
+  "publishConfig": { "registry": "https://npm.pkg.github.com" },
+  "repository": { "type": "git", "url": "https://github.com/formester/formester-pdf.git", "directory": "packages/pdf-core" },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@pdfme/common": "^5.3.19",
+    "@pdfme/generator": "^5.3.19",
+    "@pdfme/pdf-lib": "^6.0.6",
+    "@pdfme/schemas": "^5.3.19",
+    "pdfjs-dist": "^5.6.205"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.0"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.4",
+    "vue": "^3.5.0"
+  },
+  "license": "UNLICENSED"
+}

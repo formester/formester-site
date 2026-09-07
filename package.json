@@ -15,7 +15,8 @@
     "build:debug": "PRERENDER_CONCURRENCY=16 NODE_OPTIONS=\"--heapsnapshot-near-heap-limit=3 --diagnostic-dir=./heap-snapshots\" node --max-old-space-size=4096 --trace-gc node_modules/nuxt/bin/nuxt.mjs build",
     "serve": "npx serve .output/public",
     "postinstall": "nuxt prepare",
-    "format:pages": "prettier --write \"pages/**/*.vue\""
+    "format:pages": "prettier --write \"pages/**/*.vue\"",
+    "test:pdf": "npm test -w packages/pdf-core -w packages/pdf-canvas"
   },
   "dependencies": {
     "@builder.io/partytown": "^0.10.3",
@@ -37,7 +38,9 @@
     "reading-time": "^1.5.0",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.1.14",
-    "vue3-carousel": "^0.3.4"
+    "vue3-carousel": "^0.3.4",
+    "@formester/pdf-core": "*",
+    "@formester/pdf-canvas": "*"
   },
   "devDependencies": {
     "@storybook/vue3-vite": "^10.3.6",
@@ -46,5 +49,8 @@
     "postcss": "^8.5.26",
     "prettier": "^3.7.3",
     "storybook": "^10.3.6"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

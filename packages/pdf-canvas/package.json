@@ -1,0 +1,34 @@
+{
+  "name": "@formester/pdf-canvas",
+  "version": "0.1.0",
+  "description": "Vue 3 canvas components for Formester's PDF builder: page, element renderer (incl. fillable AcroForm fields), page controls.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./tokens.css": "./src/tokens.css",
+    "./components/*": "./src/*"
+  },
+  "files": ["src"],
+  "publishConfig": { "registry": "https://npm.pkg.github.com" },
+  "repository": { "type": "git", "url": "https://github.com/formester/formester-pdf.git", "directory": "packages/pdf-canvas" },
+  "scripts": {
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@formester/pdf-core": "^0.1.0"
+  },
+  "peerDependencies": {
+    "@lucide/vue": ">=1.0.0",
+    "vue": "^3.3.0"
+  },
+  "devDependencies": {
+    "@lucide/vue": "^1.23.0",
+    "@vitejs/plugin-vue": "^5.2.4",
+    "@vue/test-utils": "^2.4.6",
+    "jsdom": "^26.1.0",
+    "vitest": "^3.2.4",
+    "vue": "^3.5.0"
+  },
+  "license": "UNLICENSED"
+}
