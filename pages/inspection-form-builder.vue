@@ -639,7 +639,10 @@
                   extinguisher, signage, PPE compliance. Each fail triggers a photo field and severity dropdown via
                   conditional logic. Foreman signs at the bottom. Phone has no signal in the basement. Submissions
                   queue. At lunch the truck pulls into range, every check syncs, ops dashboard updates, supervisor sees
-                  the two fails before the afternoon meeting.
+                  the two fails before the afternoon meeting. Use the
+                  <a href="/integrations/asana/#capabilities"
+                    >Asana integration to turn failed checks into trackable Asana tasks</a
+                  >.
                 </p>
               </div>
               <div class="fmstr-cmp-ifb-wf__card">
@@ -3193,6 +3196,12 @@ useJsonld([
   font-size: 14.5px;
   line-height: 1.65;
   color: var(--c-fg-2);
+}
+.fmstr-cmp-ifb-wf__body a {
+  color: var(--c-violet-700);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 @media (max-width: 880px) {
   .fmstr-cmp-ifb-wf {

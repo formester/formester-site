@@ -2,7 +2,6 @@
   <section class="steps-section">
     <div class="steps-inner">
       <div class="steps-grid">
-
         <!-- Left: sticky panel -->
         <div class="steps-left">
           <SectionBadge v-if="badge" :text="badge" class="steps-badge" />
@@ -24,11 +23,7 @@
 
         <!-- Right: scrolling step cards -->
         <div class="steps-cards">
-          <div
-            v-for="(step, idx) in steps"
-            :key="step.id || idx"
-            class="step-card"
-          >
+          <div v-for="(step, idx) in steps" :key="step.id || idx" class="step-card">
             <span class="step-num">{{ String(idx + 1).padStart(2, '0') }}</span>
             <div>
               <h3 class="step-title">{{ step.title }}</h3>
@@ -40,7 +35,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -49,14 +43,15 @@
 <script setup>
 import FButton from '@/components/UI/FButton.vue'
 import SectionBadge from '@/components/UI/SectionBadge.vue'
+import IconArrowRight from '@/components/icons/ArrowRightIcon.vue'
 
 defineProps({
-  badge:       { type: String, default: '' },
-  heading:     { type: String, default: '' },
+  badge: { type: String, default: '' },
+  heading: { type: String, default: '' },
   description: { type: String, default: '' },
-  buttons:     { type: Array,  default: () => [] },
-  steps:       { type: Array,  default: () => [] },
-  background:  { type: String, default: '' },
+  buttons: { type: Array, default: () => [] },
+  steps: { type: Array, default: () => [] },
+  background: { type: String, default: '' },
 })
 </script>
 

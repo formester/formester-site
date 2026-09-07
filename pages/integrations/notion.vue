@@ -413,9 +413,9 @@ const c5_integrations = [
   },
   {
     id: 254,
-    name: 'Google Drive',
-    description: 'Upload submission files and PDFs straight to a Drive folder you choose.',
-    link: '/integrations/google-drive/',
+    name: 'Asana',
+    description: 'Create Asana tasks automatically from form submissions.',
+    link: '/integrations/asana/',
   },
   {
     id: 253,

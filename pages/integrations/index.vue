@@ -6,7 +6,7 @@
       searchPlaceholder="Search integrations — Sheets, Slack, Stripe…"
       directoryEyebrow="Browse"
       directoryDescription="Search by name or scroll the full list — every native integration connects in minutes, no code needed."
-      metaText="28 native integrations · 8,000+ more via Zapier · Free to connect"
+      metaText="32 native integrations · 8,000+ more via Zapier · No-code setup"
       showMarquee
       wedgeTitle="Don't see your tool?"
       wedgeBody="Zapier, n8n, and webhooks connect Formester to 8,000+ apps. And if you'd rather have it native, tell us — requests shape our roadmap."
@@ -119,6 +119,15 @@ const c0_integrations = [
     link: '/integrations/monday/',
     category: 'Work Management',
     badge: null,
+    iconUrl: null,
+  },
+  {
+    id: 102,
+    name: 'Asana',
+    description: 'Create Asana tasks automatically from form submissions.',
+    link: '/integrations/asana/',
+    category: 'Work Management',
+    badge: 'New',
     iconUrl: null,
   },
   {
