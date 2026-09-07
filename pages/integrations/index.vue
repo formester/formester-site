@@ -194,6 +194,15 @@ const c0_integrations = [
     iconUrl: null,
   },
   {
+    id: 57,
+    name: 'Salesforce',
+    description: 'Push new form leads straight into Salesforce, mapped to any object.',
+    link: '/integrations/salesforce/',
+    category: 'CRM & Sales',
+    badge: null,
+    iconUrl: null,
+  },
+  {
     id: 40,
     name: 'Automotive CRM (ADF/XML)',
     description: 'Send submissions as ADF/XML leads to VinSolutions, DealerSocket, ELEAD, ProMax, and more.',

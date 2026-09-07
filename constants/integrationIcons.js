@@ -36,6 +36,7 @@ export const INTEGRATION_ICONS = {
   'authorize.net': 'authorize-net.webp',
   'monday.com': 'monday-com.svg',
   gohighlevel: 'gohighlevel.svg',
+  salesforce: 'salesforce.png',
   'custom smtp': 'custom-smtp.svg',
   'automotive crm (adf/xml)': 'automotive-crm.svg',
 }
