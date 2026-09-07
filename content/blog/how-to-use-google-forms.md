@@ -338,6 +338,8 @@ Creating a Google Form is simple and only takes a few steps. Here’s a complete
 
 * You can also add a header image, like a logo or banner, to make the form more personalized.
 
+For the full set of theme options, and the things Google will not let you change, see our guide to [customizing Google Forms](/blog/how-to-customize-google-forms/).
+
 ### 5. Preview Your Form
 
 * Click the “Preview” icon (eye) at the top to see how your form will look to users.
