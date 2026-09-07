@@ -486,6 +486,10 @@ useJsonld([
   background: radial-gradient(closest-side, var(--violet-25), rgba(247, 243, 255, 0));
   pointer-events: none;
 }
+/* The italic display face overhangs on "f"; give the highlighted word visible breathing room after the comma. */
+.fpc-hero :deep(.sh__hl) {
+  margin-left: 0.1em;
+}
 .fpc-hero__inner {
   position: relative;
   max-width: 1040px;

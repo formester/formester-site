@@ -33,7 +33,7 @@ This guide shows you the **best AI tools for event management**. Each tool focus
 
 **Before the event even begins**, you need a smooth way to collect signups so you can start strong and welcome every attendee without stress.
 
-Formester is an **[event registration software](/tools/event-registration-software/)** that makes event registration easy. Most tools feel slow or confusing.
+Formester is an **[event registration software](/templates/categories/event-management/)** that makes event registration easy. Most tools feel slow or confusing.
 
 It keeps everything simple. You type what you want and the ai powered builder creates the full form for you. You can create event forms for workshops, meetups, training sessions, or large conferences in seconds.
 

@@ -22,7 +22,7 @@ publishedAt: "2025-11-02T17:43:27.272Z"
 
 No matter what type of event you are planning, engaging attendees is key to your success. This applies to virtual conferences, hybrid trade shows, and in-person events. It also depends on how you tell your story and turn excitement into results.
 
-In this guide, we will look at what event marketing is and why it is important today. We will also share over **10 proven event marketing ideas** to try in 2026. These ideas will help you attract your target audience, increase **[event registrations](/tools/event-registration-software/)**, and improve your return on investment (ROI).
+In this guide, we will look at what event marketing is and why it is important today. We will also share over **10 proven event marketing ideas** to try in 2026. These ideas will help you attract your target audience, increase **[event registrations](/templates/categories/event-management/)**, and improve your return on investment (ROI).
 
 
 ### What Is Event Marketing?

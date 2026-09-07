@@ -21,7 +21,7 @@ publishedAt: "2025-10-26T17:32:31.389Z"
 
 **Product events** are more than just launches, demos, or webinars. They are opportunities to connect with your audience, showcase your product, and drive engagement. But managing these events manually can be overwhelming, time-consuming, and prone to errors. This is where product events marketing automation comes in.
 
-With automation, you can streamline planning, promotion, **[event registration](/tools/event-registration-software/)**, reminders, and follow-ups, saving time and increasing results. In this guide, we’ll explain what it is, why it matters, and how to implement it effectively.
+With automation, you can streamline planning, promotion, **[event registration](/templates/categories/event-management/)**, reminders, and follow-ups, saving time and increasing results. In this guide, we’ll explain what it is, why it matters, and how to implement it effectively.
 
 ### What is Product Events Marketing Automation?
 

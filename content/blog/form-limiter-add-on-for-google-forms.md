@@ -196,7 +196,7 @@ publishedAt: "2026-08-26T05:25:39.442Z"
 
 <ul>
 <li><a href="https://formester.com/blog/how-to-set-response-and-time-limits-in-your-forms/"><strong>How to set response and time limits on a form</strong></a> - the full walkthrough for caps, open dates and close dates together.</li>
-<li><a href="https://formester.com/tools/event-registration-software/"><strong>Event registration software</strong></a> - capacity caps, deadlines and attendee lists in one place.</li>
+<li><a href="https://formester.com/templates/categories/event-management/"><strong>Event registration software</strong></a> - capacity caps, deadlines and attendee lists in one place.</li>
 <li><a href="https://formester.com/templates/categories/rsvp-forms/"><strong>RSVP form templates</strong></a> - ready-made forms for events with a fixed number of seats.</li>
 <li><a href="https://formester.com/blog/why-formester-is-the-best-google-forms-alternative/"><strong>Why teams move off Google Forms</strong></a> - an honest look at where it stops being the right tool.</li>
 </ul>
