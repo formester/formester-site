@@ -239,7 +239,8 @@
                 <h3 class="fmstr-cmp-cfg-inputs__title">Choice inputs</h3>
                 <p class="fmstr-cmp-cfg-inputs__body">
                   Dropdown, radio, checkbox, rating scale, matrix. Route submissions based on any choice: support to
-                  Slack, sales to CRM, feedback to Notion.
+                  Slack, sales to CRM,
+                  <a href="/integrations/asana/#capabilities">project requests to Asana</a>, feedback to Notion.
                 </p>
               </article>
 
@@ -1667,6 +1668,13 @@ useJsonld([
   font-size: var(--fmstr-cmp-cfg-inputs-fs-md);
   line-height: var(--fmstr-cmp-cfg-inputs-lh-md);
   color: var(--fmstr-cmp-cfg-inputs-fg-2);
+}
+
+.fmstr-cmp-cfg-inputs__body a {
+  color: var(--fmstr-cmp-cfg-inputs-violet-600);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 @media (max-width: 1024px) {
