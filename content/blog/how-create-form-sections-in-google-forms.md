@@ -123,6 +123,7 @@ publishedAt: "2026-06-05T03:35:16.000Z"
 <li><a href="/blog/how-to-add-conditional-questions-in-google-forms/">Conditional questions in Google Forms</a>, for what Google Forms can and cannot do when one question needs to depend on another.</li>
 <li><a href="/blog/how-to-make-a-questionnaire-in-google-forms/">Make a questionnaire in Google Forms</a>, for deciding what goes on each page in the first place.</li>
 <li><a href="/blog/how-to-create-online-section-based-tests-and-quizzes-with-negative-scores-and-timer/">Section-based tests in Formester</a>, for a timed test with negative marking, one subject per page.</li>
+<li><a href="/blog/how-to-customize-google-forms/">Customize Google Forms</a>, for the visual side of the form.</li>
 </ul>
 
 <section class="faq">

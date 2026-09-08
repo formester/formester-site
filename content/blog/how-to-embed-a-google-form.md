@@ -154,6 +154,7 @@ publishedAt: "2026-06-15T04:50:44.267Z"
 <li><a href="/blog/how-to-embed-online-forms-in-wix-website/">Embed a form in a Wix website</a>, using the embed code or the Formester Wix app.</li>
 <li><a href="/blog/how-to-add-a-form-to-webflow/">Add a form to Webflow</a>, using the Embed element.</li>
 <li><a href="/blog/how-to-add-a-wordpress-contact-form-without-a-plugin/">Add a WordPress contact form without a plugin</a>, if you want a form built in Formester on your WordPress site.</li>
+<li><a href="/blog/how-to-customize-google-forms/">Customize Google Forms</a>, and what the theme panel can and cannot change.</li>
 </ul>
 
 <section class="faq">
