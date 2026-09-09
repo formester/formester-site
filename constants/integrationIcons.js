@@ -26,6 +26,7 @@ export const INTEGRATION_ICONS = {
   outlook: 'ms_outlook.svg',
   sendgrid: 'sendgrid.svg',
   mailgun: 'mailgun.svg',
+  mailchimp: 'mailchimp.svg',
   'amazon ses': 'aws-ses.svg',
   zapier: 'zapier.svg',
   'ottokit (formerly suretriggers)': 'suretriggers.png',

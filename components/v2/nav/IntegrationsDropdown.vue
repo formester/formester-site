@@ -47,6 +47,10 @@
                   <span class="intg-icon"><nuxt-img src="/integrations/ms_outlook.svg" alt="Outlook" width="18" height="18" /></span>
                   <span class="intg-item-name">Outlook</span>
                 </NuxtLink>
+                <NuxtLink to="/integrations/mailchimp/" class="intg-item" @click="$emit('dropdown-close')">
+                  <span class="intg-icon"><nuxt-img src="/integrations/mailchimp.svg" alt="Mailchimp" width="18" height="18" /></span>
+                  <span class="intg-item-name">Mailchimp</span>
+                </NuxtLink>
               </div>
             </div>
           </div>
