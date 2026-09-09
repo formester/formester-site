@@ -26,6 +26,7 @@ export const blog = z.object({
   keywords: z.string().optional(),
   author: z.string().optional(),
   authorProfile: z.string().optional(),
+  authorImage: z.string().optional(),
   coverImgAlt: z.string().optional(),
   featured: z.boolean().default(false),
   rawbody: z.string(),
@@ -42,6 +43,18 @@ export const blog = z.object({
   auto-populates `rawbody` with the file's raw text and `getAllBlogs.js` remaps it to
   `attributes.body`. **Never hand-write a `rawbody` frontmatter field** — leave it out of new
   files entirely; it's populated at read time, not authored.
+- **Byline defaults to Harsh Shah.** Every new post ships with these three fields exactly as
+  written, unless the user names a different author:
+
+  ```yaml
+  author: "Harsh Shah"
+  authorProfile: "https://linkedin.com/in/harshshahseo"
+  authorImage: "https://formester-strapi.s3.ap-south-1.amazonaws.com/41fc6df7f8a7952a_harsh-shah.jpg"
+  ```
+
+  `authorImage` renders as the 42px avatar in the byline (`BlogPostView.vue`); without it the
+  byline falls back to initials in a circle. The same name, URL and image go into the
+  `BlogPosting.author` Person node in `jsonld`, including `image`.
 - **`slug` must match the filename.** File `content/blog/<slug>.md` and frontmatter
   `slug: "<slug>"` must be identical (kebab-case). Nothing enforces this automatically — check
   it by hand.
@@ -72,8 +85,9 @@ description: "One paragraph summary used for previews/meta."
 metaTitle: "SEO title, can differ from title"
 metaDescription: "SEO meta description."
 keywords: "comma, separated, keywords"
-author: "Author Name"
-authorProfile: "https://www.linkedin.com/in/..."
+author: "Harsh Shah"
+authorProfile: "https://linkedin.com/in/harshshahseo"
+authorImage: "https://formester-strapi.s3.ap-south-1.amazonaws.com/41fc6df7f8a7952a_harsh-shah.jpg"
 coverImgAlt: "Alt text for the cover image"
 featured: false
 coverImg: {"url":"https://.../cover.png","width":1200,"height":631}
@@ -96,7 +110,8 @@ misparse unquoted). Omit `rawbody` entirely.
 2. Get the body content — if it's not already structured, invoke the **`blog-post`** skill to
    turn finished copy into the on-brand body HTML/markdown. Never invent body content yourself.
 3. Fill frontmatter per the schema above. Required: `slug`, `title`, `rawbody` is omitted,
-   `coverImg` (ask for a hosted image URL + dimensions if not given), sensible defaults for the
+   `coverImg` (ask for a hosted image URL + dimensions if not given), the default byline
+   (`author` / `authorProfile` / `authorImage` per the rule above), and sensible defaults for the
    rest (`featured: false`, `jsonld: []`, `metaImage: []`, current-time ISO strings for
    `createdAt`/`updatedAt`/`publishedAt` unless told otherwise).
 3. Write `content/blog/<slug>.md`.
