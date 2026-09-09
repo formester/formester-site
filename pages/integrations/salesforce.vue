@@ -108,8 +108,8 @@ const c0_buttons = [
   },
   {
     id: 1821,
-    link: '/integrations/',
-    text: 'Browse all integrations',
+    link: 'https://help.formester.com/en/article/how-to-push-form-submissions-to-salesforce-lb9dpv/',
+    text: 'Read the setup guide',
     type: 'Secondary',
     showArrow: false,
   },
