@@ -431,9 +431,9 @@ const c5_integrations = [
   },
   {
     id: 239,
-    name: 'Automotive CRM (ADF/XML)',
-    description: 'Send submissions as ADF/XML leads to automotive CRMs.',
-    link: '/integrations/automotive-crm/',
+    name: 'Mailchimp',
+    description: 'Add or update Mailchimp audience contacts from form submissions.',
+    link: '/integrations/mailchimp/',
   },
   {
     id: 240,

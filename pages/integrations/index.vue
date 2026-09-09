@@ -6,7 +6,7 @@
       searchPlaceholder="Search integrations — Sheets, Slack, Stripe…"
       directoryEyebrow="Browse"
       directoryDescription="Search by name or scroll the full list — every native integration connects in minutes, no code needed."
-      metaText="28 native integrations · 8,000+ more via Zapier · Free to connect"
+      metaText="29 native integrations · 8,000+ more via Zapier · Free to connect"
       showMarquee
       wedgeTitle="Don't see your tool?"
       wedgeBody="Zapier, n8n, and webhooks connect Formester to 8,000+ apps. And if you'd rather have it native, tell us — requests shape our roadmap."
@@ -164,6 +164,15 @@ const c0_integrations = [
     link: '/integrations/mailgun/',
     category: 'Communication & Email',
     badge: null,
+    iconUrl: null,
+  },
+  {
+    id: 60,
+    name: 'Mailchimp',
+    description: 'Add or update Mailchimp audience contacts from form submissions.',
+    link: '/integrations/mailchimp/',
+    category: 'Communication & Email',
+    badge: 'New',
     iconUrl: null,
   },
   {
