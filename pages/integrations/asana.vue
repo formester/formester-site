@@ -111,7 +111,13 @@ const heroTitle = [
 
 const heroButtons = [
   { id: 1, link: 'https://app.formester.com/users/sign_up', text: 'Start free', type: 'Primary', showArrow: true },
-  { id: 2, link: '#setup', text: 'See setup steps', type: 'Secondary', showArrow: false },
+  {
+    id: 2,
+    link: 'https://help.formester.com/en/article/asana-integration-v1tuq7/',
+    text: 'Read the setup guide',
+    type: 'Secondary',
+    showArrow: false,
+  },
 ]
 
 const heroBadge = { id: 1, text: 'Asana', tag: 'Integrations', link: '/integrations/' }

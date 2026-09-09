@@ -21,6 +21,8 @@ test('Asana page targets the integration intent and documents the real workflow'
   assert.match(page, /Sync existing submissions/i)
   assert.match(page, /Native integration/i)
   assert.match(page, /available on Formester Business plans/)
+  assert.match(page, /https:\/\/help\.formester\.com\/en\/article\/asana-integration-v1tuq7\//)
+  assert.match(page, /Read the setup guide/)
 })
 
 test('Asana page has complete SEO metadata and aligned structured data', () => {
@@ -53,8 +55,8 @@ test('integrations directory links to Asana and reports its verified total', () 
   const integrationCount = [...integrationBlock.matchAll(/\n\s+name: '[^']+',/g)].length
   const declaredCount = Number(directory.match(/metaText="(\d+) native integrations/)?.[1])
   assert.equal(declaredCount, integrationCount)
-  assert.equal(integrationCount, 32)
-  assert.match(directory, /32 native integrations · 8,000\+ more via Zapier · No-code setup/)
+  assert.equal(integrationCount, 34)
+  assert.match(directory, /34 native integrations · 8,000\+ more via Zapier · No-code setup/)
   assert.match(icons, /asana: 'asana\.svg'/)
 })
 
