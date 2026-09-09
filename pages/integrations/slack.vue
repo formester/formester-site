@@ -440,9 +440,9 @@ const c5_integrations = [
   },
   {
     id: 298,
-    name: 'Gmail',
-    description: 'Send Gmail emails from your forms using your own address.',
-    link: '/integrations/gmail/',
+    name: 'Asana',
+    description: 'Create Asana tasks automatically from form submissions.',
+    link: '/integrations/asana/',
   },
   {
     id: 299,

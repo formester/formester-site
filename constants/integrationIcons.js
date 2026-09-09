@@ -36,7 +36,9 @@ export const INTEGRATION_ICONS = {
   notion: 'notion.png',
   'authorize.net': 'authorize-net.webp',
   'monday.com': 'monday-com.svg',
+  asana: 'asana.svg',
   gohighlevel: 'gohighlevel.svg',
+  salesforce: 'salesforce.png',
   'custom smtp': 'custom-smtp.svg',
   'automotive crm (adf/xml)': 'automotive-crm.svg',
 }

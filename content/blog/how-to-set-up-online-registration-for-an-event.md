@@ -128,7 +128,7 @@ Here’s a complete workflow to set up an online event registration system that 
 #### Step 2: Choose the Right Event Registration Platform
 ![a mockup of Formester](https://formester-strapi.s3.ap-south-1.amazonaws.com/a_mockup_of_Formester_a08e6b3206.png)
 
-Pick a tool that allows customization options, automation, secure payments, and analytics. Formester is an ideal **[event registration software](/tools/event-registration-software/)**, enabling event planners to build mobile-friendly, branded registration forms quickly.
+Pick a tool that allows customization options, automation, secure payments, and analytics. Formester is an ideal **[event registration software](/templates/categories/event-management/)**, enabling event planners to build mobile-friendly, branded registration forms quickly.
 
 - Limit responses per user to avoid duplicates
 

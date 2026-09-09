@@ -55,7 +55,7 @@ Timing and delivery matter. Here’s how to get the most responses:
 
 - **Reminders: Send one or two gentle reminders over the next two weeks, but avoid overdoing it.
 
-Tools like **[Formester](/tools/event-registration-software/)** help you schedule surveys, create links or QR codes, and customize forms for your brand. This is all done without overwhelming your attendees.
+Tools like **[Formester](/templates/categories/event-management/)** help you schedule surveys, create links or QR codes, and customize forms for your brand. This is all done without overwhelming your attendees.
 
 ### Free Event Feedback Survey Template
 If you’re unsure what questions to ask, get started with this **[free event feedback survey template](https://formester.com/templates/event-feedback-survey-698)** below or use Formester’s **[AI survey maker](/ai-survey-generator/)** to create one instantly with a simple prompt.

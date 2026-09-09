@@ -6,7 +6,7 @@
       searchPlaceholder="Search integrations — Sheets, Slack, Stripe…"
       directoryEyebrow="Browse"
       directoryDescription="Search by name or scroll the full list — every native integration connects in minutes, no code needed."
-      metaText="29 native integrations · 8,000+ more via Zapier · Free to connect"
+      metaText="34 native integrations · 8,000+ more via Zapier · No-code setup"
       showMarquee
       wedgeTitle="Don't see your tool?"
       wedgeBody="Zapier, n8n, and webhooks connect Formester to 8,000+ apps. And if you'd rather have it native, tell us — requests shape our roadmap."
@@ -122,6 +122,15 @@ const c0_integrations = [
     iconUrl: null,
   },
   {
+    id: 102,
+    name: 'Asana',
+    description: 'Create Asana tasks automatically from form submissions.',
+    link: '/integrations/asana/',
+    category: 'Work Management',
+    badge: 'New',
+    iconUrl: null,
+  },
+  {
     id: 35,
     name: 'Slack',
     description: 'Get instant Slack alerts when a new form is submitted.',
@@ -198,6 +207,15 @@ const c0_integrations = [
     name: 'GoHighLevel',
     description: 'Sync form submissions with your GoHighLevel CRM automatically.',
     link: '/integrations/gohighlevel/',
+    category: 'CRM & Sales',
+    badge: null,
+    iconUrl: null,
+  },
+  {
+    id: 57,
+    name: 'Salesforce',
+    description: 'Push new form leads straight into Salesforce, mapped to any object.',
+    link: '/integrations/salesforce/',
     category: 'CRM & Sales',
     badge: null,
     iconUrl: null,

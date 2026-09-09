@@ -519,6 +519,10 @@
                   Vendor intake, purchase requests, facility tickets, project intake. Rule-based routing to the right
                   owner.
                 </p>
+                <hr class="fmstr-cmp-fmg-who-uses__divider" />
+                <a class="fmstr-cmp-fmg-who-uses__cta" href="/integrations/asana/#capabilities"
+                  >Turn submissions into Asana tasks &rarr;</a
+                >
               </article>
 
               <article class="fmstr-cmp-fmg-who-uses__card">

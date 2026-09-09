@@ -130,6 +130,7 @@ const blogPostViewData = computed(() => {
     publishedAt: blogData.value.publishedAt,
     updatedAt: blogData.value.updatedAt,
     readingStats: blogData.value.readingStats,
+    promoPopup: blogData.value.promoPopup,
   }
 })
 

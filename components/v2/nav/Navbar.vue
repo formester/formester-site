@@ -251,6 +251,7 @@ const resourcesList = [
   { id: 3, title: 'Enterprise',  description: 'Solutions for large organizations',     imageUrl: '/enterprise.svg', imageAlt: 'Enterprise icon',   slug: 'enterprise' },
   { id: 4, title: 'API Docs',    description: 'Comprehensive API documentation',       imageUrl: '/api-docs.svg',   imageAlt: 'API Docs icon',     href: 'https://docs.formester.com/formester-api.html' },
   { id: 5, title: 'Help Center', description: 'Get help and support',                  imageUrl: '/support.svg',    imageAlt: 'Help Center icon',  href: 'https://help.formester.com/en' },
+  { id: 6, title: 'Fillable PDF creator', description: 'Add form fields to any PDF, free', imageUrl: '/pdf-tool.svg', imageAlt: 'PDF tool icon', slug: 'tools/fillable-pdf-creator' },
 ]
 
 const MOBILE_MQ = '(max-width: 991px)'

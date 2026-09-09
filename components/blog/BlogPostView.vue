@@ -107,12 +107,16 @@
       :faqList="faq.list"
       centered
     />
+
+    <!-- Optional per-post conversion card, opted into from frontmatter -->
+    <PromoPopup v-if="blogData.promoPopup && blogData.promoPopup.enabled" :promo="blogData.promoPopup" />
   </div>
 </template>
 
 <script setup>
 import { marked } from 'marked'
 import FaqSection from '@/components/v2/FaqSection.vue'
+import PromoPopup from '@/components/blog/PromoPopup.vue'
 
 const props = defineProps({
   blogData: {

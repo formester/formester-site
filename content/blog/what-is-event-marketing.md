@@ -138,7 +138,7 @@ Here are some practical tips to make your event marketing more effective:
 
 Several tools can simplify event marketing and help you collect feedback effectively. For example:
 
-- **[Event registration software](/tools/event-registration-software/)** to streamline registration process and collect attendee feedback. You can analyze responses to improve future events.
+- **[Event registration software](/templates/categories/event-management/)** to streamline registration process and collect attendee feedback. You can analyze responses to improve future events.
 
 - **Email marketing platforms** help you **[promote your event via email](/blog/how-to-rsvp-via-text-or-email/)** and send follow-ups.
 

@@ -1,0 +1,30 @@
+/* CSS variables the canvas components expect. Values are the app's design tokens
+   (app/assets/stylesheets/pages/themes/corporate/_var.scss) mapped onto the site's
+   Violet palette where the two differ. Import once in the host. */
+:root {
+  --color-primary: #6434d0;
+  --color-primary-text: #101828;
+  --color-secondary-text: #475467;
+  --color-gray-700: #344054;
+  --color-white: #fff;
+  --color-border-light: #eaecf0;
+  --color-border-dark: #d0d5dd;
+  --color-error: #d92d20;
+  --color-error-50: #fef3f2;
+  --color-rose-100: #fee2e2;
+  --color-warning-500: #f79009;
+  --background-color-grey-50: #f9fafb;
+  --background-color-grey-100: #f2f4f7;
+  --background-color-violet-50: #f0ebfa;
+  --font-weight-medium: 500;
+  --font-size-xs: 12px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --rounded-sm: 2px;
+  --rounded: 4px;
+  --rounded-md: 6px;
+  --rounded-lg: 8px;
+  --rounded-half: 50%;
+  --rounded-pill: 9999px;
+  --box-shadow-lg: 0 8px 24px -4px rgba(16, 24, 40, 0.08), 0 4px 8px -2px rgba(16, 24, 40, 0.04);
+}

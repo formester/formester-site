@@ -77,6 +77,7 @@ import IntegrationsGrid from '@/components/integrations/IntegrationsGrid.vue'
 import StickyStepsSection from '@/components/v2/StickyStepsSection.vue'
 import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
 import TrustSeals from '@/components/v2/TrustSeals.vue'
+import { platformTestimonials } from '@/constants/platform-testimonials'
 
 const pageTitle = 'Mailchimp Form Integration for Online Forms | Formester'
 const pageDescription =
@@ -245,28 +246,27 @@ const testimonialHeading = [
   { id: 6107, text: 'trust to grow', highlight: true },
 ]
 
+const sharedTestimonials = [28, 1].map((strapiId) => {
+  const testimonial = platformTestimonials.find((item) => item.strapiId === strapiId)
+
+  return {
+    id: `platform-${testimonial.strapiId}`,
+    name: testimonial.authorName,
+    position: [testimonial.platform, testimonial.authorRole].filter(Boolean).join(' · '),
+    comment: testimonial.text,
+  }
+})
+
 const testimonials = [
+  sharedTestimonials[0],
   {
-    id: 1,
-    name: 'Bency M Kurian',
-    position: 'Trustpilot reviewer',
-    comment:
-      "Formester's drag-and-drop functionality and pre-designed templates make creating forms extremely quick and easy. Its extensive customisation options allow you to tailor forms to your specific needs and branding. The conditional logic, file uploads, and integrations with popular tools like Mailchimp and Zapier make Formester extremely versatile too.",
-  },
-  {
-    id: 2,
+    id: 'suggesterfy',
     name: 'Deanna Bugalski',
     position: 'Founder and CEO, Suggesterfy',
     comment:
       'I was searching for a long time for a product I could use to send newsletters and surveys to my database. I tried so many different types of software and I found many of them difficult to use and slow to learn how to operate. But Formester was super easy to set up, and the usability is seamless! I highly recommend!',
   },
-  {
-    id: 3,
-    name: 'Karthik B.',
-    position: 'G2 · Social Media Manager',
-    comment:
-      "I use forms on a regular basis for surveys, research, lead collection and event RSVPs at my company. Formester offers a ton of features and my developer loves using it to integrate to various marketing pages. It's quick and easy to create using drag and drop like other builders. Their support is top notch.",
-  },
+  sharedTestimonials[1],
 ]
 
 const relatedIntegrations = [

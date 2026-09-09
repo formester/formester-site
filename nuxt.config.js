@@ -122,7 +122,9 @@ export default defineNuxtConfig({
     minify: false, // Disable minification to save memory
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/sitemap.xml'],
+      // /state-of-online-forms is listed explicitly: nothing links to it yet,
+      // so crawlLinks alone would never reach it.
+      routes: ['/', '/sitemap.xml', '/state-of-online-forms'],
       ignore: ['/api'],
       // Lower via PRERENDER_CONCURRENCY on memory-constrained machines —
       // e.g. a 6.7GB-RAM local dev box OOM'd at the default 16 with
