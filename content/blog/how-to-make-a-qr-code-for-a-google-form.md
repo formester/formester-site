@@ -41,10 +41,12 @@ publishedAt: "2024-06-20T22:18:04.926Z"
 <ol class="steps">
 <li>
 <h3>Publish the form</h3>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/bf32a620640e1900_gforms-qr-step1-publish.gif" alt="Clicking Publish in Google Forms and confirming that anyone with the link can respond" loading="lazy"></p>
 <p>Click <strong>Publish</strong> in the top right of the editor. The first time, Google asks who can respond. Leave it on anyone with the link unless you are deliberately restricting the form to your organisation, because a QR code on a poster is going to be scanned by people who are not signed in to anything.</p>
 </li>
 <li>
 <h3>Copy the responder link, shortened</h3>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/e89973f430bbae6a_gforms-qr-step2-copy-responder-link.gif" alt="Opening Copy responder link in Google Forms, ticking Shorten URL and copying the forms.gle link" loading="lazy"></p>
 <p>Click the link icon next to Publish, or open the Publish panel again and choose <strong>Copy responder link</strong>. Tick <strong>Shorten URL</strong> first. The short forms.gle address has fewer characters, which means a simpler QR pattern with bigger squares, and a simpler pattern scans faster from further away and survives a bad print.</p>
 </li>
 <li>

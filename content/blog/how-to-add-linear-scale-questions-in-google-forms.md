@@ -39,14 +39,17 @@ publishedAt: "2026-06-05T02:14:37.000Z"
 <ol class="steps">
 <li>
 <h3>Add a question and type it</h3>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/ce55c7962735d894_gforms-ls-step1-type-question.gif" alt="Typing a question into a new Google Forms question card" loading="lazy"></p>
 <p>Click the plus icon in the floating toolbar to the right of the form. Type the question in the Question field before you change the type; a linear scale reads best as a single, concrete statement, so "How satisfied were you with the session?" rather than "Session feedback".</p>
 </li>
 <li>
 <h3>Change the type to Linear scale</h3>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/203905783fa804d2_gforms-ls-step2-select-linear-scale.gif" alt="Opening the question type dropdown in Google Forms and choosing Linear scale" loading="lazy"></p>
 <p>Open the question type dropdown, which says Multiple choice on a new question, and choose <strong>Linear scale</strong>. The options list is replaced by two dropdowns reading 1 to 5 and two label fields.</p>
 </li>
 <li>
 <h3>Set the range</h3>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/632795081eb1c69c_gforms-ls-step3-set-range.gif" alt="Setting a Google Forms linear scale to run from 1 to 5 with the two range dropdowns" loading="lazy"></p>
 <p>The first dropdown offers <strong>0</strong> or <strong>1</strong>. The second offers <strong>2 to 10</strong>. That is the whole range Google Forms allows: the smallest scale is 0 to 2 and the largest is 0 to 10. Pick 1 to 5 for satisfaction, 0 to 10 for a Net Promoter Score question, 1 to 7 if you are copying an academic agreement scale.</p>
 </li>
 <li>
