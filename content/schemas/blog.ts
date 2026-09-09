@@ -27,6 +27,9 @@ export const blog = z.object({
   coverImg: media,
   metaImage: z.array(z.object({ imageURL: z.string().optional() }).passthrough()).default([]),
   jsonld: z.array(anyObject).default([]),
+  // Optional per-post conversion card (see components/blog/PromoPopup.vue).
+  // Wrapped as an object with a catchall, never a bare z.any() (Phase 0 bug).
+  promoPopup: anyObject.nullable().optional(),
   createdAt: z.string().optional(),
   updatedAt: z.string().optional(),
   publishedAt: z.string().optional(),
