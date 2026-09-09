@@ -1,172 +1,176 @@
 ---
 slug: "how-to-make-a-qr-code-for-a-google-form"
-title: "How to Make a QR Code for a Google Form?"
-description: "Learn how to make a QR code for a Google Form with this easy step-by-step guide. This will help you make your forms more accessible and improve user engagement. With QR codes, users can quickly and easily access your forms."
-metaTitle: "How to Make a QR Code for a Google Form? Simple Steps"
-metaDescription: "Learn how to make a QR code for a Google Form with this comprehensive step-by-step guide. Streamline access to your forms and improve user engagement."
-keywords: "how to make a qr code for a google form, benefits of qr code, applications of qr code, uses of qr code, how to create a qr code for google form, how to create a qr code for formester"
-author: "Harish Kumar"
-authorProfile: "https://www.linkedin.com/in/harish-kumar2424/"
-coverImgAlt: "An illustration of how to make qr code for a google form guide"
+title: "How to Make a QR Code for a Google Form That Never Expires"
+description: "Google Forms cannot make a QR code. Copy the responder link, make one in Chrome or a free generator, and pick the route that keeps working after you print."
+metaTitle: "How to Make a QR Code for a Google Form That Never Expires"
+metaDescription: "Google Forms cannot make a QR code. Copy the responder link, make one in Chrome or a free generator, and pick the route that keeps working after you print."
+keywords: "qr code for google form,google form qr code,how to make a qr code for a google form,how to create a qr code for a google form,create qr code for google form,google forms qr code generator,do google form qr codes expire"
+author: "Harsh Shah"
+authorProfile: "https://linkedin.com/in/harshshahseo"
+authorImage: "https://formester-strapi.s3.ap-south-1.amazonaws.com/41fc6df7f8a7952a_harsh-shah.jpg"
+coverImgAlt: "Cover art for a guide to making a QR code for a Google Form"
 featured: false
-coverImg: {"url":"https://formester-strapi.s3.ap-south-1.amazonaws.com/an_illustration_of_how_to_make_a_qr_code_for_a_google_form_089bcf69f7.webp","width":1214,"height":630}
+coverImg: {"url":"https://formester-strapi.s3.ap-south-1.amazonaws.com/8004608720804778_how-to-make-a-qr-code-for-a-google-form-cover.png","width":1200,"height":630}
 metaImage: []
-jsonld: []
+jsonld: [{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://formester.com/#organization","url":"https://formester.com/","name":"Formester","logo":{"@type":"ImageObject","url":"https://formester.com/logo.png"}},{"@type":"WebSite","@id":"https://formester.com/#website","url":"https://formester.com/","name":"Formester","publisher":{"@id":"https://formester.com/#organization"}},{"@type":"WebPage","@id":"https://formester.com/blog/how-to-make-a-qr-code-for-a-google-form/#webpage","url":"https://formester.com/blog/how-to-make-a-qr-code-for-a-google-form/","name":"How to Make a QR Code for a Google Form That Never Expires","isPartOf":{"@id":"https://formester.com/#website"},"breadcrumb":{"@id":"https://formester.com/blog/how-to-make-a-qr-code-for-a-google-form/#breadcrumb"},"inLanguage":"en-US","description":"Google Forms cannot make a QR code. Copy the responder link, make one in Chrome or a free generator, and pick the route that keeps working after you print.","datePublished":"2024-06-20","dateModified":"2026-09-09"},{"@type":"BreadcrumbList","@id":"https://formester.com/blog/how-to-make-a-qr-code-for-a-google-form/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://formester.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://formester.com/blog/"},{"@type":"ListItem","position":3,"name":"How to Make a QR Code for a Google Form That Never Expires","item":"https://formester.com/blog/how-to-make-a-qr-code-for-a-google-form/"}]},{"@type":"BlogPosting","@id":"https://formester.com/blog/how-to-make-a-qr-code-for-a-google-form/#article","headline":"How to Make a QR Code for a Google Form That Never Expires","image":"https://formester-strapi.s3.ap-south-1.amazonaws.com/8004608720804778_how-to-make-a-qr-code-for-a-google-form-cover.png","author":{"@type":"Person","name":"Harsh Shah","url":"https://linkedin.com/in/harshshahseo","image":"https://formester-strapi.s3.ap-south-1.amazonaws.com/41fc6df7f8a7952a_harsh-shah.jpg"},"publisher":{"@id":"https://formester.com/#organization"},"inLanguage":"en-US","description":"Google Forms cannot make a QR code. Copy the responder link, make one in Chrome or a free generator, and pick the route that keeps working after you print.","datePublished":"2024-06-20","dateModified":"2026-09-09","mainEntityOfPage":{"@id":"https://formester.com/blog/how-to-make-a-qr-code-for-a-google-form/#webpage"},"about":[{"@type":"SoftwareApplication","name":"Google Forms","applicationCategory":"BusinessApplication","url":"https://docs.google.com/forms/","operatingSystem":"Web"}],"mentions":[{"@id":"https://formester.com/#software"}],"citation":[{"@type":"WebPage","name":"Send your form to people","url":"https://support.google.com/docs/answer/2839588","publisher":{"@type":"Organization","name":"Google"}},{"@type":"WebPage","name":"Create a form","url":"https://support.google.com/docs/answer/2839737","publisher":{"@type":"Organization","name":"Google"}}]},{"@type":"FAQPage","@id":"https://formester.com/blog/how-to-make-a-qr-code-for-a-google-form/#faq","mainEntity":[{"@type":"Question","name":"Can you make a QR code for a Google Form?","acceptedAnswer":{"@type":"Answer","text":"Yes, though not inside Google Forms itself. Publish the form, copy the responder link with Shorten URL ticked, then turn the link into a QR code with Chrome's share menu or a free generator site. The code opens the form for anyone who scans it, and it keeps working for as long as the form stays published."}},{"@type":"Question","name":"How do I get a QR code for a Google Form for free?","acceptedAnswer":{"@type":"Answer","text":"Open the form's responder link in Chrome, click the share icon in the address bar and choose QR code, then download the image. It costs nothing, needs no account and adds no watermark. Free generator sites such as QRCode Monkey work the same way if you want a colour or a logo in the code."}},{"@type":"Question","name":"Does Google Forms have a QR code generator?","acceptedAnswer":{"@type":"Answer","text":"No. There is no QR option in the editor, the Publish panel or Settings. The Workspace Marketplace lists a third-party add-on that puts one inside the editor, but it asks for permission to view and manage your forms, and Chrome makes the same code without an install."}},{"@type":"Question","name":"Do Google Form QR codes expire?","acceptedAnswer":{"@type":"Answer","text":"A static code, one that encodes the form's URL directly, never expires. It works until you delete or unpublish the form, and editing the questions changes nothing. A dynamic code from a generator points at the generator's redirect instead, and it stops working when that service ends your free tier, caps your scans or closes your account."}},{"@type":"Question","name":"Can I make a QR code for a Google Form on my phone?","acceptedAnswer":{"@type":"Answer","text":"Yes. Open the responder link in Chrome on Android or iPhone, tap share and choose QR code, then save the image. Safari has no QR generator, so on an iPhone without Chrome, paste the link into a generator site and save the result."}},{"@type":"Question","name":"How do you scan a QR code to open a Google Form?","acceptedAnswer":{"@type":"Answer","text":"Point the phone's camera app at the code and tap the link that appears. Recent iPhones and Android phones read QR codes without a separate app, and the form opens in the browser. Respondents do not need a Google account unless the form uses File upload or Limit to 1 response."}},{"@type":"Question","name":"Why does my Google Form QR code ask people to sign in?","acceptedAnswer":{"@type":"Answer","text":"Either the code was made from the editor URL instead of the responder link, or the form has a setting that requires a Google account: File upload questions, Limit to 1 response, or a responder restriction to your organisation. Remake the code from the Copy responder link address and turn those settings off for any form shared in public."}},{"@type":"Question","name":"How do I make a Google Form QR code for attendance?","acceptedAnswer":{"@type":"Answer","text":"Build a form that asks for a name and, if you need it, the session or class from a dropdown, then turn on Collect email addresses if you have to know who attended. Publish, copy the responder link, make a static QR code from it and put the code at the door. Responses arrive with a timestamp, which is your check-in time."}}]},{"@type":"SoftwareApplication","@id":"https://formester.com/#software","url":"https://formester.com/","name":"Formester","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Free forever plan, no credit card required"}}]}]
+promoPopup: {"enabled":true,"id":"gforms-qr-native","delaySeconds":10,"eyebrow":"Formester","heading":"Your form's QR code in one click, nothing to install","text":"Publish, click Generate QR Code, pick a colour and download. No third-party generator, no watermark, no redirect that expires.","image":"https://formester-strapi.s3.ap-south-1.amazonaws.com/f63c248a90dca8ef_formester-qr-code-customize.gif","imageAlt":"Creating a QR code for a Formester form, choosing a style and colour, then downloading it","ctaLabel":"Try Formester free","ctaHref":"https://app.formester.com/users/sign_up"}
 createdAt: "2024-06-20T16:15:59.734Z"
-updatedAt: "2025-07-10T20:31:09.904Z"
+updatedAt: "2026-09-09T00:00:00.000Z"
 publishedAt: "2024-06-20T22:18:04.926Z"
 ---
-![an illustration of how to make a qr code for a google form](https://formester-strapi.s3.ap-south-1.amazonaws.com/an_illustration_of_how_to_make_a_qr_code_for_a_google_form_089bcf69f7.webp)
-In the digital age, QR codes have become a convenient way to share & collect information quickly. QR codes are commonly used to link to Google Forms. This makes it easy for people to access and fill out forms without having to type a long URL. 
 
-We will show you how to make a QR code for a **[Google Form](https://docs.google.com/forms/)** in this clear step by step guide and compare it with Formester. We will also explain how to create a QR code for Formester. 
+![Cover art for a guide to making a QR code for a Google Form](https://formester-strapi.s3.ap-south-1.amazonaws.com/8004608720804778_how-to-make-a-qr-code-for-a-google-form-cover.png)
 
-By the end of this post, you'll be able to make a QR code for a Google Form easily and save a lot of time.
+<p style="font-size: inherit;">Google Forms cannot make a QR code. There is no button for it in the editor or the Publish panel, so the job is two steps: copy the form's responder link, then turn that link into a QR code with Chrome or a free generator. It takes under a minute.</p>
 
-## Steps to Create a QR Code for a Google Form
-Here are the steps to make a QR code for your Google Form. This will help your audience easily access and fill out your form. Just follow these instructions to make the process smoother and increase user engagement.
+<p>The part worth getting right is the second step, because some generators hand you a code that points at their server rather than your form, and that code stops working when their free tier does. A code that encodes the form link directly never expires while the form stays live.</p>
 
-### Step 1: Create Your Google Form
-Before creating a QR code, you need to have your Google Form or any other online form ready. If you haven't created one yet, follow these simple steps:
+<div class="tldr">
+<p><strong>Quick answer</strong></p>
+<ul>
+<li><strong>The one-minute route:</strong> Publish the form, click Copy responder link with Shorten URL ticked, then in Chrome click the share icon in the address bar and choose QR code. Download the PNG.</li>
+<li><strong>The rule before you print:</strong> use a static code, one that encodes the forms.gle link itself. It works for as long as the form exists. A dynamic code from a generator works for as long as your account with that generator does.</li>
+<li><strong>What to skip:</strong> the Workspace Marketplace add-on. It is a third-party install that asks for permission to view and manage your forms, for something Chrome does without any install.</li>
+</ul>
+</div>
 
-- Open your web browser and go to Google Forms. 
-
-- Click on the **"+"** button or **"Blank"** to create a new form.
-![screenshot of google forms ui](https://formester-strapi.s3.ap-south-1.amazonaws.com/screenshot_of_google_forms_ui_cbe88016f0.webp)
-- Input your questions, options, and any other necessary information for your form. You can customize your form by changing the theme, adding images, and more.
-
-### Step 2: Get the Google Form Link
-Once your form is ready, you need to get its URL to create a QR code.
-
-- In the top right corner, click on the "Send" button.
-![screenshot formester form builder ui](https://formester-strapi.s3.ap-south-1.amazonaws.com/screenshot_formester_form_builder_ui_34de597b39.webp)
-
-- Select the link icon (the chain symbol), then click on "Copy" to copy the form's URL.
-![screenshot of google forms copy link ui](https://formester-strapi.s3.ap-south-1.amazonaws.com/pika_1718864184621_1x_6674827b6a96a_7ef32ccac6.webp)
-
-### Step 3: Create the QR Code
-Now that you have the URL, you can create a QR code. You can find free QR code generators online like **[QR Code Generator](https://www.the-qrcode-generator.com/)**, **[Canva QR code generator](https://www.canva.com/qr-code-generator/)**, or **[QRCode Monkey](https://www.qrcode-monkey.com/)**.
-
-- In the QR code generator, paste the link you copied from your Google Form.
-- Click on the button to generate the QR code.
-- Save the generated QR code image to your computer. 
-- Use this QR code in your documents, presentations, posters, or anywhere you need.
-
-![screenshot of qr monkey ui](https://formester-strapi.s3.ap-south-1.amazonaws.com/pika_1718864297641_1x_66748289e3070_8d52200dc4.webp)
-
-## Benefits of Using QR Codes
-
-### 1. Accessibility
-QR codes simplify access to information. Users can quickly scan the qr code with their smartphones, eliminating the need to type long URLs or search for specific content manually.
-
-### 2. User Experience
-They provide a seamless and user-friendly experience, allowing customers or users to interact with businesses or organizations effortlessly.
-
-### 3. Data Collection
-QR codes make it easier for businesses to collect customer feedback, conduct surveys, and gather contact information at events.
-
-### 4. Versatility
-QR codes are versatile and can be used in various settings such as marketing, education, product packaging, and event management.
-
-## Practical Applications of QR Codes
-### 1. Marketing Campaigns
-Integrate QR codes into marketing materials such as posters, in the appropriate, flyers, and social media posts to drive traffic to landing pages, promotions, or product information.
-
-By scanning the code, potential customers can instantly access special offers, video content, or detailed product descriptions, enhancing the effectiveness of your marketing efforts.
-
-### 2. Event Management
-Use QR codes for event registration, attendee check-ins, and feedback surveys. They simplify logistics and enhance attendee engagement.
-
-By scanning a QR code, attendees can quickly register for the event, check-in upon arrival, and provide immediate feedback, streamlining the entire event process.
-
-### 3. Retail and E-commerce
-Incorporate QR codes on product labels or packaging to provide customers with detailed product information, user manuals, or warranty registration.
-
-This allows customers to access important information instantly, improving their overall shopping experience.
-QR codes can also link to promotional videos or customer reviews, helping to boost sales.
-
-### 4. Educational Settings
-Facilitate learning by embedding QR codes in textbooks, worksheets, or classroom displays to access supplementary resources, quizzes, or interactive content.
-
-Teachers can use QR codes to direct students to educational videos, additional readings, or interactive exercises, making learning more dynamic and engaging.
-
-### 5. Contactless Transactions
-QR codes enable contactless payments, ticketing, or ordering services, promoting hygiene and convenience in various business operations.
-
-Customers can scan a QR code to make payments, receive tickets, or place orders without physical contact, ensuring a safer and more efficient transaction process.
-
-Choosing the **<a href="https://noda.live/articles/best-qr-code-payment-apps">best QR code payment app</a>** helps businesses ensure fast, secure, and user-friendly transactions across different customer touchpoints.
-
-### 6. Healthcare Services
-In healthcare settings, QR codes can be used for patient check-ins, accessing medical records through a **<a href="https://www.findemr.com/resources/electronic-medical-record-for-solo-practice/">solo practice EMR</a>**, or scheduling appointments.
+<h2 id="make">How do you make a QR code for a Google Form?</h2>
 
 
-Patients can scan a code to quickly register their visit, retrieve their health information, or book follow-up appointments, enhancing the efficiency of healthcare services and reducing waiting times.
+<p>Everything starts with the responder link, which is the address people open to fill in the form. It is not the address in your browser while you edit, and a QR code made from the editor URL sends people to a sign-in page or a permission error. Get the right link first, then make the code.</p>
 
-### 7. Hospitality Industry
-Hotels and restaurants can use QR codes to provide menus, facilitate check-ins, or offer guest services.
+<ol class="steps">
+<li>
+<h3>Publish the form</h3>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/bf32a620640e1900_gforms-qr-step1-publish.gif" alt="Clicking Publish in Google Forms and confirming that anyone with the link can respond" loading="lazy"></p>
+<p>Click <strong>Publish</strong> in the top right of the editor. The first time, Google asks who can respond. Leave it on anyone with the link unless you are deliberately restricting the form to your organisation, because a QR code on a poster is going to be scanned by people who are not signed in to anything.</p>
+</li>
+<li>
+<h3>Copy the responder link, shortened</h3>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/e89973f430bbae6a_gforms-qr-step2-copy-responder-link.gif" alt="Opening Copy responder link in Google Forms, ticking Shorten URL and copying the forms.gle link" loading="lazy"></p>
+<p>Click the link icon next to Publish, or open the Publish panel again and choose <strong>Copy responder link</strong>. Tick <strong>Shorten URL</strong> first. The short forms.gle address has fewer characters, which means a simpler QR pattern with bigger squares, and a simpler pattern scans faster from further away and survives a bad print.</p>
+</li>
+<li>
+<h3>Make the code in Chrome</h3>
+<p>Paste the link into a new Chrome tab so the form opens, then click the share icon at the right end of the address bar and choose <strong>QR code</strong>. Chrome draws the code on the spot and offers a Download button.</p>
 
-Guests can scan a QR code to view the menu, place orders, check-in to their rooms, or request services such as housekeeping or room service, improving their overall experience.
+<p>Right-clicking the page and choosing <strong>Create QR code for this page</strong> does the same thing. No account, no watermark. The code encodes the form link directly.</p>
+</li>
+<li>
+<h3>Or make it in a generator</h3>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/ec540c52b87354d9_qr-step4-generator.gif" alt="Pasting a Google Form responder link into QRCode Monkey and creating the QR code" loading="lazy"></p>
+<p>If you want a colour, a logo in the middle or an SVG for print, paste the link into a generator such as QRCode Monkey, The QR Code Generator or Canva's QR tool. Choose the static option if the site offers static and dynamic, then download PNG for screens or SVG for anything that goes to a printer.</p>
+</li>
+<li>
+<h3>Scan it before you print it</h3>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/dc3ba61180c4da82_qr-step5-phone-check.gif" alt="The Google Form opening on a phone screen after a scan, with a value tapped on the scale" loading="lazy"></p>
+<p>Point a phone camera at the code on your screen and check that the form opens, then check it again on the first printed copy. A code that opens the editor, a sign-in page or an old version of the form is the most common mistake on this whole page, and it is a thirty-second test.</p>
+</li>
+</ol>
 
-By streamlining these touchpoints, hotels can improve operational efficiency, elevate guest satisfaction, and drive stronger performance, which in turn will positively impact the **<a href="https://hotelsmarters.com/tools/occupancy-rate-calculator">hotel occupancy rate</a>**.
+<h2 id="which">Which QR code generator should you use?</h2>
 
-### 8. Real Estate
-Real estate agents can place QR codes on property listings, signs, and brochures to provide virtual tours, additional photos, or detailed property information.
+<p>Every route produces a working code. They differ in what you hand over to get it and in what happens to the code later.</p>
 
-Potential buyers can scan the code to get a comprehensive view of the property, schedule a visit, or contact the agent directly, making the property search more convenient and informative.
+<div class="table-wrap">
+<table>
+<thead><tr><th>Route</th><th>Sign-up</th><th>Watermark</th><th>The code points at</th><th>Stops working when</th><th>Best for</th></tr></thead>
+<tbody>
+<tr><td>Chrome's built-in QR code</td><td>None</td><td>None</td><td>Your form link</td><td>You delete or unpublish the form</td><td>Almost everyone</td></tr>
+<tr><td>Static generator site</td><td>Usually none</td><td>Some free tiers</td><td>Your form link</td><td>You delete or unpublish the form</td><td>Colour, logo, SVG for print</td></tr>
+<tr><td>Canva QR tool</td><td>Canva account</td><td>None</td><td>Your form link</td><td>You delete or unpublish the form</td><td>The code is going on a designed flyer anyway</td></tr>
+<tr><td>Dynamic generator (Bitly, ME-QR and similar)</td><td>Account</td><td>Varies by tier</td><td>The generator's redirect</td><td>Free tier ends, scan cap hit, account closed</td><td>You need scan counts and accept the dependency</td></tr>
+<tr><td>Workspace Marketplace add-on</td><td>Install plus permissions on your forms</td><td>Reported on free tier</td><td>Your form link</td><td>The add-on breaks or is removed</td><td>Nobody, given the alternatives</td></tr>
+</tbody>
+</table>
+</div>
 
-### 9. Transportation
-In public transportation, QR codes can be used for ticketing, route information, and schedules. Passengers can scan a QR code to purchase tickets, view real-time route updates, or access timetables, improving their travel experience and reducing the need for physical tickets or printed schedules.
+<p>The dynamic route is the one to think about. Dynamic codes are sold on a real benefit: you can change where the code points after printing, and you get a scan count. The cost is that the code no longer contains your form's address. It contains the generator's address, and the generator forwards people on.</p>
 
-### 10. Entertainment and Media
-QR codes can enhance the experience in theaters, museums, and amusement parks by providing additional information, interactive content, or digital guides.
+<p>If that company closes your account, caps your free scans or shuts down, every printed copy of your code is dead, and the form it pointed to is fine. For a code you can reprint next week that trade may be worth it. For a code going on 500 stickers, encode the form link.</p>
 
-Visitors can scan a QR code to learn more about exhibits, watch behind-the-scenes videos, or access digital maps, making their visit more engaging and informative.
+<h2 id="expire">Do Google Form QR codes expire?</h2>
 
-In water parks, QR codes can also integrate with **<a href="https://oveit.com/markets/waterpark-software/">water park management software</a>** to provide guests with real-time wait times, show schedules, and interactive maps, improving their overall experience.
+<p>A static QR code for a Google Form does not expire. The code is only the form's URL written as a pattern, so it works for exactly as long as that URL does. Editing the form changes nothing, because questions, title and theme all live behind the same address.</p>
 
-## How to Create QR Code with Formester?
-Google Forms, while widely used, may not be the best choice because of its limited features. Directing users to a poorly designed form via QR code can result in low engagement.
+<p>Adding a section, closing responses for a week and reopening, switching the form to a quiz: all fine.</p>
 
-**[Formester, a professional form builder](/)**, stands out with its extensive features such as **[conditional logic](/features/conditional-logic/)** , electronic signatures, and has over **[7000+ integrations](/integrations/)**. 
+<p>Three things do break it. Deleting the form, obviously. Unpublishing it, which leaves the code pointing at a page that says the form is not accepting responses, and that is sometimes exactly what you want at the end of an event.</p>
 
-These enhancements can significantly improve user interaction and satisfaction. With plenty of **[pre-built free templates](/templates/)**, creating intuitive and attractive forms has never been easier.
+<p>And making a copy of the form to reuse it, because the copy has a new URL and the old printed code still points at the original. If you run the same registration every term, keep one form and clear its responses rather than duplicating it, or the posters from last time quietly send people to the wrong place.</p>
 
-Formester provides tools for creating forms that will impress your users, whether you're collecting feedback, conducting surveys, or managing events.
+<p>A dynamic code from a generator is a different story, covered above. It expires when your relationship with the generator does, not when the form does.</p>
 
-### Step 1: Sign Up and Log In
-Visit the Formester website and sign up for an account if you haven’t already.
-![screenshot formester form builder ui](https://formester-strapi.s3.ap-south-1.amazonaws.com/pika_1718864217279_1x_6674827ecc177_cbc54fa6b9.webp)
-### Step 2: Create a New Project
-Click on the "New Project" button to start creating your form or survey.
-![screenshot formester form builder ui](https://formester-strapi.s3.ap-south-1.amazonaws.com/pika_1718864231807_1x_6674827f1b47a_2b8c9291dd.webp)
+<h2 id="phone">How do you make a Google Form QR code on a phone?</h2>
 
-### Step 3: Choose a Template or Start from Scratch
-Select a template that suits your needs or begin designing your form from scratch.
-![screenshot formester form builder ui](https://formester-strapi.s3.ap-south-1.amazonaws.com/pika_1718864246412_1x_6674828256eff_a34b4ce97c.webp)
-### Step 4: Add Questions and Customize
-Use the user-friendly interface to add questions, images, videos, and other elements to your form.
+<p>Open the responder link in Chrome on Android or iPhone, tap the share button and choose <strong>QR code</strong>. Chrome shows the code and lets you save it to your photos, and from there it goes into any document or message.</p>
 
-### Step 5: Save and Publish Your Project
-Once your form is ready, save your project and proceed to publish it.
-![screenshot formester form builder ui](https://formester-strapi.s3.ap-south-1.amazonaws.com/pika_1718864271412_1x_667482862f1ad_dc8f4ee191.webp)
+<p>Safari does not have a QR generator of its own, so on an iPhone without Chrome, open the link in a generator site instead and save the image. Either way, the code you get is static and points at the form.</p>
 
-### Step 6: Generate a QR Code
-- Navigate to the 'Share & Embed' tab of your project within Formester.
-![screenshot of formester form builder ui](https://formester-strapi.s3.ap-south-1.amazonaws.com/screenshot_formester_form_builder_ui_3443aabf61.png)
+<p>The other direction, scanning a code to open a Google Form, needs nothing at all. Every recent iPhone and Android camera app reads QR codes; point the camera at it, tap the link that appears and the form opens in the browser. There is no Google Forms app to install for respondents.</p>
 
-- Navigate to the "Get Code" tab & copy the URL.
-![screenshot formester form copy script ui](https://formester-strapi.s3.ap-south-1.amazonaws.com/pika_1718864284415_1x_6674828722883_0a81cd85be.webp)
+<h2 id="uses">Where does a Google Form QR code earn its place?</h2>
 
-- Use a QR code generator to generate the QR code.
-- Download the QR code image file for use in your digital or print materials.
+<p>A QR code makes sense wherever people are standing in front of something physical and you want the form open on their phone in two seconds. The same code, the same form, whatever the setting.</p>
 
-![screenshot of qr monkey ui](https://formester-strapi.s3.ap-south-1.amazonaws.com/pika_1718864297641_1x_66748289e3070_8d52200dc4.webp)
+<ul>
+<li><strong>Attendance and check-in:</strong> a code at the door, a form that asks for a name and picks the session from a dropdown. Turn on Collect email addresses if you need to know who, and see <a href="/blog/how-to-use-google-forms-for-event-registration/">the event registration guide</a> for capping a session at a headcount.</li>
+<li><strong>Feedback at the point of experience:</strong> a code on the receipt, the table, the back of the seat or the exit door. People answer while the experience is fresh, which is the only time most of them will.</li>
+<li><strong>Classroom and training:</strong> a code on the slide or the whiteboard for a quiz, an exit ticket or a consent form. Nobody types a URL off a projector correctly.</li>
+<li><strong>Packaging and print:</strong> a warranty registration or a product survey on the box or the leaflet. Use SVG here and test the print at actual size.</li>
+</ul>
 
-## Summary
-Creating a QR code for a Google Form is easy and makes your forms more accessible and convenient. Follow the steps in this guide to quickly generate and share a QR code with your audience.
+<p>Print rules that hold up: keep the code at least 2 cm square for something held in the hand and closer to 3 cm for anything read at arm's length, leave a clear margin around it equal to about four of its small squares, keep dark squares on a light background, and never place it across a fold.</p>
 
-Consider using Formester for more advanced features and customization options. Whether you use Google Forms or **[Formester](/)**, adding a QR code helps engage your audience and collect data efficiently.
+<p>Shorten the URL first and all of this gets easier, because a shorter address makes a coarser pattern.</p>
 
-Now you know how to make a QR code for a Google Form and use it in many ways, like marketing, events, and education. Get started today and enjoy the benefits!
+<h2 id="limits">What Google Forms cannot do with a QR code</h2>
 
+<ul>
+<li><strong>Make one:</strong> there is no QR option in the editor, in the Publish panel or in Settings. You always leave Google Forms to make the code.</li>
+<li><strong>Count scans:</strong> the responses tab shows submissions, not scans, so you cannot see how many people opened the form and left. The only way to get scan data is a dynamic generator, with the dependency described above.</li>
+<li><strong>Brand the destination:</strong> the code can carry your colour if a generator draws it that way, but it opens a form with the Google Forms footer and Google's theme options. A code on a printed piece with your logo lands on a page without it.</li>
+<li><strong>Skip the sign-in for some questions:</strong> if the form uses <a href="/blog/how-to-create-a-google-form-with-photo-upload/">a File upload question</a> or Limit to 1 response, everyone who scans has to sign in to a Google account before they can answer. On a public poster that turns a two-second scan into a login screen, so avoid both settings on any form you distribute by QR code.</li>
+</ul>
+
+<h2 id="formester">Where Formester fits</h2>
+
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/e48de19cad177b69_formester-qr-code-generate.gif" alt="Formester's Publish Form panel with a Generate QR Code option next to the form link" loading="lazy"></p>
+
+<p>In Formester the QR code is part of publishing. Open <strong>Publish</strong>, and next to the form link there is <strong>Generate QR Code</strong>. Click it and the code appears with two style options, a toggle to draw it in your form's primary colour, and a format menu for PNG or SVG.</p>
+
+<p>Download and you are done: no second site, no account with a generator and no watermark. The code encodes your form's own address, so it lasts as long as the form. <a href="/features/qr-code-generator/">The QR code generator</a> is built in rather than bolted on.</p>
+
+<p>The form the code opens is also yours all the way down. Your logo at the top, your colours, your domain if you want it, no footer from anyone else, and no sign-in for a file upload question on a public link. For a code that is going on printed material with your name on it, that consistency is the point.</p>
+
+<p>What Formester does not do is count scans on the QR code itself. You see submissions and drop-off in the analytics, not how many phones pointed at the poster.</p>
+
+<div style="background:linear-gradient(135deg,#7f56d9 0%,#6941c6 100%);padding:32px 28px;margin:36px 0;border-radius:12px;color:#ffffff;font-family:inherit;text-align:center;">
+<p style="margin:0 0 12px 0;font-size:18px;font-weight:700;color:#ffffff;font-family:inherit;">A form that makes its own QR code</p>
+<p style="margin:0 0 20px 0;font-size:14px;line-height:1.55;color:#f4ebff;font-family:inherit;">Publish, click Generate QR Code, pick a colour and download. Nothing to sign up for and nothing that expires.</p>
+<a href="https://app.formester.com/users/sign_up" style="display:inline-block;padding:12px 24px;background:#ffffff;color:#6941c6;text-decoration:none;font-weight:700;border-radius:9999px;font-family:inherit;">Try Formester free</a>
+<p style="margin:12px 0 0 0;font-size:13px;color:#e9d7fe;font-family:inherit;">Free forever &middot; No credit card &middot; 56,000+ teams</p>
+</div>
+
+<h2 id="related">Related reading</h2>
+
+<ul>
+<li><a href="/blog/how-to-share-google-form/">How to share a Google Form</a>, for the link, email and embed options next to the QR route.</li>
+<li><a href="/blog/how-to-embed-a-google-form/">How to embed a Google Form</a>, when the form belongs on a web page rather than a poster.</li>
+<li><a href="/blog/how-to-create-and-share-qr-codes-for-your-forms/">Create and share QR codes for your forms</a>, the Formester-side walkthrough.</li>
+<li><a href="/blog/how-qr-codes-can-bring-more-traffic-to-web-forms/">How QR codes bring more responses to web forms</a>, on placement and response rates.</li>
+<li><a href="/blog/how-to-make-anonymous-google-form-or-survey/">How to make a Google Form anonymous</a>, for feedback codes where people need to trust the form.</li>
+<li><a href="/blog/how-to-use-google-forms/">How to use Google Forms</a>, for the parts of the builder this page assumes.</li>
+</ul>
+
+<section class="faq">
+<h2 id="faq">Google Form QR code FAQ</h2>
+<details><summary>Can you make a QR code for a Google Form?</summary><div>Yes, though not inside Google Forms itself. Publish the form, copy the responder link with Shorten URL ticked, then turn the link into a QR code with Chrome's share menu or a free generator site. The code opens the form for anyone who scans it, and it keeps working for as long as the form stays published.</div></details>
+<details><summary>How do I get a QR code for a Google Form for free?</summary><div>Open the form's responder link in Chrome, click the share icon in the address bar and choose QR code, then download the image. It costs nothing, needs no account and adds no watermark. Free generator sites such as QRCode Monkey work the same way if you want a colour or a logo in the code.</div></details>
+<details><summary>Does Google Forms have a QR code generator?</summary><div>No. There is no QR option in the editor, the Publish panel or Settings. The Workspace Marketplace lists a third-party add-on that puts one inside the editor, but it asks for permission to view and manage your forms, and Chrome makes the same code without an install.</div></details>
+<details><summary>Do Google Form QR codes expire?</summary><div>A static code, one that encodes the form's URL directly, never expires. It works until you delete or unpublish the form, and editing the questions changes nothing. A dynamic code from a generator points at the generator's redirect instead, and it stops working when that service ends your free tier, caps your scans or closes your account.</div></details>
+<details><summary>Can I make a QR code for a Google Form on my phone?</summary><div>Yes. Open the responder link in Chrome on Android or iPhone, tap share and choose QR code, then save the image. Safari has no QR generator, so on an iPhone without Chrome, paste the link into a generator site and save the result.</div></details>
+<details><summary>How do you scan a QR code to open a Google Form?</summary><div>Point the phone's camera app at the code and tap the link that appears. Recent iPhones and Android phones read QR codes without a separate app, and the form opens in the browser. Respondents do not need a Google account unless the form uses File upload or Limit to 1 response.</div></details>
+<details><summary>Why does my Google Form QR code ask people to sign in?</summary><div>Either the code was made from the editor URL instead of the responder link, or the form has a setting that requires a Google account: File upload questions, Limit to 1 response, or a responder restriction to your organisation. Remake the code from the Copy responder link address and turn those settings off for any form shared in public.</div></details>
+<details><summary>How do I make a Google Form QR code for attendance?</summary><div>Build a form that asks for a name and, if you need it, the session or class from a dropdown, then turn on Collect email addresses if you have to know who attended. Publish, copy the responder link, make a static QR code from it and put the code at the door. Responses arrive with a timestamp, which is your check-in time.</div></details>
+</section>
