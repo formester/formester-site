@@ -42,8 +42,11 @@ to be applied) → publish.
    `blog-post` for body block structure (steps, tldr, note, faq, cta blocks). All metadata
    comes from the plan: `title`, `metaTitle` (≤60 chars), `metaDescription` (≤155 chars),
    `keywords`, `coverImgAlt`, dates. `featured: false` unless told otherwise.
-   When `author` is Ankit Singhaniya, always set
-   `authorProfile: "https://linkedin.com/in/ankitsinghaniyaz"`.
+   The byline defaults to Harsh Shah: `author: "Harsh Shah"`,
+   `authorProfile: "https://linkedin.com/in/harshshahseo"`,
+   `authorImage: "https://formester-strapi.s3.ap-south-1.amazonaws.com/41fc6df7f8a7952a_harsh-shah.jpg"`.
+   Only use a different author when the user names one, and carry the same name, URL and image
+   into the `BlogPosting.author` Person node.
 6. **Structured data (`jsonld`).** If the post has an FAQ section, the frontmatter `jsonld`
    array MUST carry a matching `FAQPage` schema object — every question/answer copied
    verbatim from the FAQ (plain text, no HTML/links in answers). Skip `HowTo` schema
