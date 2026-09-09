@@ -206,7 +206,15 @@ const c3_steps = [
     image: null,
   },
 ]
-const c3_buttons = []
+const c3_buttons = [
+  {
+    id: 1822,
+    link: 'https://help.formester.com/en/article/how-to-push-form-submissions-to-salesforce-lb9dpv/',
+    text: 'Read the full setup guide',
+    type: 'Secondary',
+    icon: true,
+  },
+]
 
 const c4_heading = []
 const c4_testimonials = [
