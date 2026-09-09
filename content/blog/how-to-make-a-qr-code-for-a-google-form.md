@@ -21,7 +21,9 @@ publishedAt: "2024-06-20T22:18:04.926Z"
 
 ![Cover art for a guide to making a QR code for a Google Form](https://formester-strapi.s3.ap-south-1.amazonaws.com/8004608720804778_how-to-make-a-qr-code-for-a-google-form-cover.png)
 
-<p style="font-size: inherit;">Google Forms cannot make a QR code. There is no button for it in the editor or the Publish panel, so the job is two steps: copy the form's responder link, then turn that link into a QR code with Chrome or a free generator. It takes under a minute. The part worth getting right is the second step, because some generators hand you a code that points at their server rather than your form, and that code stops working when their free tier does. A code that encodes the form link directly never expires while the form stays live.</p>
+<p style="font-size: inherit;">Google Forms cannot make a QR code. There is no button for it in the editor or the Publish panel, so the job is two steps: copy the form's responder link, then turn that link into a QR code with Chrome or a free generator. It takes under a minute.</p>
+
+<p>The part worth getting right is the second step, because some generators hand you a code that points at their server rather than your form, and that code stops working when their free tier does. A code that encodes the form link directly never expires while the form stays live.</p>
 
 <div class="tldr">
 <p><strong>Quick answer</strong></p>
@@ -50,7 +52,9 @@ publishedAt: "2024-06-20T22:18:04.926Z"
 </li>
 <li>
 <h3>Make the code in Chrome</h3>
-<p>Paste the link into a new Chrome tab so the form opens, then click the share icon at the right end of the address bar and choose <strong>QR code</strong>. Chrome draws the code on the spot and offers a Download button. Right-clicking the page and choosing <strong>Create QR code for this page</strong> does the same thing. No account, no watermark. The code encodes the form link directly.</p>
+<p>Paste the link into a new Chrome tab so the form opens, then click the share icon at the right end of the address bar and choose <strong>QR code</strong>. Chrome draws the code on the spot and offers a Download button.</p>
+
+<p>Right-clicking the page and choosing <strong>Create QR code for this page</strong> does the same thing. No account, no watermark. The code encodes the form link directly.</p>
 </li>
 <li>
 <h3>Or make it in a generator</h3>
@@ -81,19 +85,27 @@ publishedAt: "2024-06-20T22:18:04.926Z"
 </table>
 </div>
 
-<p>The dynamic route is the one to think about. Dynamic codes are sold on a real benefit: you can change where the code points after printing, and you get a scan count. The cost is that the code no longer contains your form's address. It contains the generator's address, and the generator forwards people on. If that company closes your account, caps your free scans or shuts down, every printed copy of your code is dead, and the form it pointed to is fine. For a code you can reprint next week that trade may be worth it. For a code going on 500 stickers, encode the form link.</p>
+<p>The dynamic route is the one to think about. Dynamic codes are sold on a real benefit: you can change where the code points after printing, and you get a scan count. The cost is that the code no longer contains your form's address. It contains the generator's address, and the generator forwards people on.</p>
+
+<p>If that company closes your account, caps your free scans or shuts down, every printed copy of your code is dead, and the form it pointed to is fine. For a code you can reprint next week that trade may be worth it. For a code going on 500 stickers, encode the form link.</p>
 
 <h2 id="expire">Do Google Form QR codes expire?</h2>
 
-<p>A static QR code for a Google Form does not expire. The code is only the form's URL written as a pattern, so it works for exactly as long as that URL does. Editing the form changes nothing, because questions, title and theme all live behind the same address. Adding a section, closing responses for a week and reopening, switching the form to a quiz: all fine.</p>
+<p>A static QR code for a Google Form does not expire. The code is only the form's URL written as a pattern, so it works for exactly as long as that URL does. Editing the form changes nothing, because questions, title and theme all live behind the same address.</p>
 
-<p>Three things do break it. Deleting the form, obviously. Unpublishing it, which leaves the code pointing at a page that says the form is not accepting responses, and that is sometimes exactly what you want at the end of an event. And making a copy of the form to reuse it, because the copy has a new URL and the old printed code still points at the original. If you run the same registration every term, keep one form and clear its responses rather than duplicating it, or the posters from last time quietly send people to the wrong place.</p>
+<p>Adding a section, closing responses for a week and reopening, switching the form to a quiz: all fine.</p>
+
+<p>Three things do break it. Deleting the form, obviously. Unpublishing it, which leaves the code pointing at a page that says the form is not accepting responses, and that is sometimes exactly what you want at the end of an event.</p>
+
+<p>And making a copy of the form to reuse it, because the copy has a new URL and the old printed code still points at the original. If you run the same registration every term, keep one form and clear its responses rather than duplicating it, or the posters from last time quietly send people to the wrong place.</p>
 
 <p>A dynamic code from a generator is a different story, covered above. It expires when your relationship with the generator does, not when the form does.</p>
 
 <h2 id="phone">How do you make a Google Form QR code on a phone?</h2>
 
-<p>Open the responder link in Chrome on Android or iPhone, tap the share button and choose <strong>QR code</strong>. Chrome shows the code and lets you save it to your photos, and from there it goes into any document or message. Safari does not have a QR generator of its own, so on an iPhone without Chrome, open the link in a generator site instead and save the image. Either way, the code you get is static and points at the form.</p>
+<p>Open the responder link in Chrome on Android or iPhone, tap the share button and choose <strong>QR code</strong>. Chrome shows the code and lets you save it to your photos, and from there it goes into any document or message.</p>
+
+<p>Safari does not have a QR generator of its own, so on an iPhone without Chrome, open the link in a generator site instead and save the image. Either way, the code you get is static and points at the form.</p>
 
 <p>The other direction, scanning a code to open a Google Form, needs nothing at all. Every recent iPhone and Android camera app reads QR codes; point the camera at it, tap the link that appears and the form opens in the browser. There is no Google Forms app to install for respondents.</p>
 
@@ -108,7 +120,9 @@ publishedAt: "2024-06-20T22:18:04.926Z"
 <li><strong>Packaging and print:</strong> a warranty registration or a product survey on the box or the leaflet. Use SVG here and test the print at actual size.</li>
 </ul>
 
-<p>Print rules that hold up: keep the code at least 2 cm square for something held in the hand and closer to 3 cm for anything read at arm's length, leave a clear margin around it equal to about four of its small squares, keep dark squares on a light background, and never place it across a fold. Shorten the URL first and all of this gets easier, because a shorter address makes a coarser pattern.</p>
+<p>Print rules that hold up: keep the code at least 2 cm square for something held in the hand and closer to 3 cm for anything read at arm's length, leave a clear margin around it equal to about four of its small squares, keep dark squares on a light background, and never place it across a fold.</p>
+
+<p>Shorten the URL first and all of this gets easier, because a shorter address makes a coarser pattern.</p>
 
 <h2 id="limits">What Google Forms cannot do with a QR code</h2>
 
@@ -123,7 +137,9 @@ publishedAt: "2024-06-20T22:18:04.926Z"
 
 <p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/e48de19cad177b69_formester-qr-code-generate.gif" alt="Formester's Publish Form panel with a Generate QR Code option next to the form link" loading="lazy"></p>
 
-<p>In Formester the QR code is part of publishing. Open <strong>Publish</strong>, and next to the form link there is <strong>Generate QR Code</strong>. Click it and the code appears with two style options, a toggle to draw it in your form's primary colour, and a format menu for PNG or SVG. Download and you are done: no second site, no account with a generator and no watermark. The code encodes your form's own address, so it lasts as long as the form. <a href="/features/qr-code-generator/">The QR code generator</a> is built in rather than bolted on.</p>
+<p>In Formester the QR code is part of publishing. Open <strong>Publish</strong>, and next to the form link there is <strong>Generate QR Code</strong>. Click it and the code appears with two style options, a toggle to draw it in your form's primary colour, and a format menu for PNG or SVG.</p>
+
+<p>Download and you are done: no second site, no account with a generator and no watermark. The code encodes your form's own address, so it lasts as long as the form. <a href="/features/qr-code-generator/">The QR code generator</a> is built in rather than bolted on.</p>
 
 <p>The form the code opens is also yours all the way down. Your logo at the top, your colours, your domain if you want it, no footer from anyone else, and no sign-in for a file upload question on a public link. For a code that is going on printed material with your name on it, that consistency is the point.</p>
 

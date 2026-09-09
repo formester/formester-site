@@ -21,7 +21,9 @@ publishedAt: "2026-06-05T02:14:37.000Z"
 
 ![Cover art for a guide to linear scale questions in Google Forms](https://formester-strapi.s3.ap-south-1.amazonaws.com/f17beb4086577d94_how-to-add-linear-scale-questions-in-google-forms-cover.png)
 
-<p style="font-size: inherit;">To add a linear scale question in Google Forms, add a question, change its type to <strong>Linear scale</strong>, pick the low and high numbers, and type a label for each end. Four clicks and two labels, under a minute. Two things are worth knowing before you build a whole survey on it: the scale stops at 10 and only the two ends take a label, and there is a separate <strong>Rating</strong> type for stars, which is what many people reaching for a scale actually want.</p>
+<p style="font-size: inherit;">To add a linear scale question in Google Forms, add a question, change its type to <strong>Linear scale</strong>, pick the low and high numbers, and type a label for each end. Four clicks and two labels, under a minute.</p>
+
+<p>Two things are worth knowing before you build a whole survey on it: the scale stops at 10 and only the two ends take a label, and there is a separate <strong>Rating</strong> type for stars, which is what many people reaching for a scale actually want.</p>
 
 <div class="tldr">
 <p><strong>Quick answer</strong></p>
@@ -65,13 +67,17 @@ publishedAt: "2026-06-05T02:14:37.000Z"
 
 <h2 id="looks">What does a linear scale look like to the respondent?</h2>
 
-<p>A row of empty circles, one per number, with the numbers above them and your two labels at either end. On a phone the row stays horizontal until about seven points, then the circles get small enough that people mis-tap, which is one practical argument for 1 to 5 over 1 to 10 on a form most people will answer on a phone. One tap selects a value and there is no way to select two. If the question is required, the form will not submit until a circle is filled.</p>
+<p>A row of empty circles, one per number, with the numbers above them and your two labels at either end. On a phone the row stays horizontal until about seven points, then the circles get small enough that people mis-tap, which is one practical argument for 1 to 5 over 1 to 10 on a form most people will answer on a phone.</p>
+
+<p>One tap selects a value and there is no way to select two. If the question is required, the form will not submit until a circle is filled.</p>
 
 <p>In the Responses tab, a linear scale question shows as a bar chart of how many people chose each number. There is no average shown, so if you want a mean you export to Sheets, covered below.</p>
 
 <h2 id="rating">Linear scale or Rating: which should you use?</h2>
 
-<p>Google Forms has a <strong>Rating</strong> question type that sits directly under Linear scale in the type menu. It is the same idea, a single value on a fixed range, drawn with icons instead of numbered circles. The first dropdown sets how many levels, from <strong>3 to 10</strong>. The second picks the icon: a <strong>star</strong>, a <strong>heart</strong> or a <strong>thumbs up</strong>. There are no labels to type, and respondents tap the icon that matches.</p>
+<p>Google Forms has a <strong>Rating</strong> question type that sits directly under Linear scale in the type menu. It is the same idea, a single value on a fixed range, drawn with icons instead of numbered circles. The first dropdown sets how many levels, from <strong>3 to 10</strong>.</p>
+
+<p>The second picks the icon: a <strong>star</strong>, a <strong>heart</strong> or a <strong>thumbs up</strong>. There are no labels to type, and respondents tap the icon that matches.</p>
 
 <div class="table-wrap">
 <table>
@@ -102,7 +108,11 @@ publishedAt: "2026-06-05T02:14:37.000Z"
 
 <h2 id="likert">How do you make a Likert scale in Google Forms?</h2>
 
-<p>A Likert scale is a set of statements all answered on the same agreement scale, and the Google Forms question for that is the <strong>Multiple choice grid</strong>, not a stack of linear scales. Add a question, choose Multiple choice grid, put each statement in a row ("The session was well organised", "The speaker knew the material") and the agreement options in the columns (Strongly disagree, Disagree, Neutral, Agree, Strongly agree). Respondents pick one column per row. The grid also gives you what linear scale cannot: a label on every point, because the column headers are the labels.</p>
+<p>A Likert scale is a set of statements all answered on the same agreement scale, and the Google Forms question for that is the <strong>Multiple choice grid</strong>, not a stack of linear scales.</p>
+
+<p>Add a question, choose Multiple choice grid, put each statement in a row ("The session was well organised", "The speaker knew the material") and the agreement options in the columns (Strongly disagree, Disagree, Neutral, Agree, Strongly agree). Respondents pick one column per row.</p>
+
+<p>The grid also gives you what linear scale cannot: a label on every point, because the column headers are the labels.</p>
 
 <p>Turn on <strong>Require a response in each row</strong> from the grid's settings if every statement must be answered. For the theory behind the format, and how to word statements so the scale actually measures something, see <a href="/blog/likert-scale/">the Likert scale guide</a>, or start from <a href="/templates/likert-scale-survey-27591/">the Likert scale survey template</a>.</p>
 
@@ -110,7 +120,9 @@ publishedAt: "2026-06-05T02:14:37.000Z"
 
 <p>Google Forms does not add scores from linear scale questions. Quiz mode assigns points to choice questions with a correct answer, and a scale has no correct answer, so the total stays at zero. The Responses tab charts each question separately and shows no averages.</p>
 
-<p>The route is the spreadsheet. In the Responses tab click <strong>Link to Sheets</strong>, and every submission becomes a row with one column per question. From there, a total per respondent is <code>=SUM(B2:F2)</code> dragged down, an average per question is <code>=AVERAGE(B:B)</code> at the foot of each column, and an NPS is the percentage of 9s and 10s minus the percentage of 0s to 6s. <a href="/blog/how-to-link-google-sheets-to-google-forms/">Linking Google Forms to Google Sheets</a> covers the setup and the ways the link breaks.</p>
+<p>The route is the spreadsheet. In the Responses tab click <strong>Link to Sheets</strong>, and every submission becomes a row with one column per question.</p>
+
+<p>From there, a total per respondent is <code>=SUM(B2:F2)</code> dragged down, an average per question is <code>=AVERAGE(B:B)</code> at the foot of each column, and an NPS is the percentage of 9s and 10s minus the percentage of 0s to 6s. <a href="/blog/how-to-link-google-sheets-to-google-forms/">Linking Google Forms to Google Sheets</a> covers the setup and the ways the link breaks.</p>
 
 <h2 id="limits">What Google Forms linear scale cannot do</h2>
 
@@ -127,7 +139,11 @@ publishedAt: "2026-06-05T02:14:37.000Z"
 
 <p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/97c25bb247896fd8_formester-ai-survey-rating-one-click.gif" alt="Formester AI generating an event feedback survey that includes a five-star rating question and a ranking question" loading="lazy"></p>
 
-<p>Start by describing the survey instead of building it. On the create screen, <a href="/ai-survey-generator/">the AI survey generator</a> takes a sentence like "post-event feedback survey with a satisfaction rating and a question about which sessions were most useful" and writes the whole form, the rating scale and its labels included, with a star rating for the overall question and a matrix for rating several sessions at once. Everything it writes is editable, and the scale, star rating and ranking fields are all there in the element list if you would rather place them by hand.</p>
+<p>Start by describing the survey instead of building it.</p>
+
+<p>On the create screen, <a href="/ai-survey-generator/">the AI survey generator</a> takes a sentence like "post-event feedback survey with a satisfaction rating and a question about which sessions were most useful" and writes the whole form, the rating scale and its labels included, with a star rating for the overall question and a matrix for rating several sessions at once.</p>
+
+<p>Everything it writes is editable, and the scale, star rating and ranking fields are all there in the element list if you would rather place them by hand.</p>
 
 <p>Responses come with summary charts for every rating field, so the average that Google Forms sends you to a spreadsheet for is on screen, and the form itself carries your logo and colours rather than a theme. The form also needs no Google account from anyone answering, which matters for a feedback link on a receipt or a slide.</p>
 
