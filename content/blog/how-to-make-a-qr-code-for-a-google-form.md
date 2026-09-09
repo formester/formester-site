@@ -34,7 +34,6 @@ publishedAt: "2024-06-20T22:18:04.926Z"
 
 <h2 id="make">How do you make a QR code for a Google Form?</h2>
 
-<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/d171fe7b52a633db_gforms-publish-responder-link.gif" alt="Publishing a Google Form, then copying the shortened responder link from the share panel" loading="lazy"></p>
 
 <p>Everything starts with the responder link, which is the address people open to fill in the form. It is not the address in your browser while you edit, and a QR code made from the editor URL sends people to a sign-in page or a permission error. Get the right link first, then make the code.</p>
 
@@ -55,10 +54,12 @@ publishedAt: "2024-06-20T22:18:04.926Z"
 </li>
 <li>
 <h3>Or make it in a generator</h3>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/ec540c52b87354d9_qr-step4-generator.gif" alt="Pasting a Google Form responder link into QRCode Monkey and creating the QR code" loading="lazy"></p>
 <p>If you want a colour, a logo in the middle or an SVG for print, paste the link into a generator such as QRCode Monkey, The QR Code Generator or Canva's QR tool. Choose the static option if the site offers static and dynamic, then download PNG for screens or SVG for anything that goes to a printer.</p>
 </li>
 <li>
 <h3>Scan it before you print it</h3>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/dc3ba61180c4da82_qr-step5-phone-check.gif" alt="The Google Form opening on a phone screen after a scan, with a value tapped on the scale" loading="lazy"></p>
 <p>Point a phone camera at the code on your screen and check that the form opens, then check it again on the first printed copy. A code that opens the editor, a sign-in page or an old version of the form is the most common mistake on this whole page, and it is a thirty-second test.</p>
 </li>
 </ol>

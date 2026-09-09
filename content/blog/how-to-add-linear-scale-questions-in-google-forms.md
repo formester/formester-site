@@ -34,7 +34,6 @@ publishedAt: "2026-06-05T02:14:37.000Z"
 
 <h2 id="add">How do you add a linear scale question in Google Forms?</h2>
 
-<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/e8633c9f81f947d7_gforms-linear-scale-question.gif" alt="Changing a Google Forms question to Linear scale, setting 1 to 5, labelling the ends and marking it required" loading="lazy"></p>
 
 <ol class="steps">
 <li>
@@ -54,10 +53,12 @@ publishedAt: "2026-06-05T02:14:37.000Z"
 </li>
 <li>
 <h3>Label the two ends</h3>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/5d43fdc190f8908a_gforms-ls-step4-label-ends.gif" alt="Typing Not satisfied and Very satisfied into the two label fields of a Google Forms linear scale" loading="lazy"></p>
 <p>The two fields marked Label (optional) sit against the low and high numbers. Fill both, even though they are optional. "Not satisfied" and "Very satisfied", or "Strongly disagree" and "Strongly agree". A scale with unlabelled ends gets answered in both directions, and you will not be able to tell which respondents flipped it.</p>
 </li>
 <li>
 <h3>Mark it required, then preview</h3>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/e5f6e7a4be0a52c5_gforms-ls-step5-required.gif" alt="Switching on the Required toggle on a Google Forms linear scale question" loading="lazy"></p>
 <p>Toggle <strong>Required</strong> at the bottom right of the question if the form is pointless without this answer. Click the eye icon at the top to open the form as a respondent sees it and tap through the scale once on your phone. Google Forms saves as you go, so there is no save step.</p>
 </li>
 </ol>
