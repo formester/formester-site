@@ -1,374 +1,178 @@
 ---
 slug: "how-to-make-a-questionnaire-in-google-forms"
-title: "How to Create a Questionnaire in Google Forms (Easy Steps!)"
-description: "Create a professional questionnaire in Google Forms easily! Follow simple steps to build, customize, and share surveys for feedback, research, or quizzes.\n\n\nStep-by-step guide to building a questionnaire in Google Forms with screenshots and a video walkthrough. Plus a clear questionnaire vs survey vs form comparison, and when Formester is the better choice.\n"
-metaTitle: "How to Create a Questionnaire in Google Forms in 2026 (Step-by-Step Guide)"
-metaDescription: "Step-by-step guide to building a questionnaire in Google Forms with screenshots and a video walkthrough. Plus a clear questionnaire vs survey vs form comparison, and when Formester is the better choice."
-keywords: "how to create a questionnaire in google forms,\nhow to make a questionnaire in google forms,\nhow to create a survey in google forms,"
-author: "Harish Kumar"
-authorProfile: "https://www.linkedin.com/in/harish-kumar2424/"
-coverImgAlt: "a blog post cover about how to make a questionnaire in google forms"
+title: "How to Make a Questionnaire or Survey in Google Forms"
+description: "Google Forms builds a questionnaire in six steps once each question type matches the answer you want. The build, the types to use and how a survey differs."
+metaTitle: "How to Make a Questionnaire or Survey in Google Forms"
+metaDescription: "Google Forms builds a questionnaire in six steps once each question type matches the answer you want. The build, the types to use and how a survey differs."
+keywords: "google forms questionnaire,how to make a questionnaire in google forms,google questionnaire,google forms survey,how to make a survey in google forms,how to make a google form survey,google survey maker,questionnaire vs survey"
+author: "Harsh Shah"
+authorProfile: "https://linkedin.com/in/harshshahseo"
+authorImage: "https://formester-strapi.s3.ap-south-1.amazonaws.com/41fc6df7f8a7952a_harsh-shah.jpg"
+coverImgAlt: "Cover art for a guide to making a questionnaire in Google Forms"
 featured: false
-coverImg: {"url":"https://formester-strapi.s3.ap-south-1.amazonaws.com/a_blog_post_cover_about_how_to_make_a_questionnaire_in_google_forms_4b287a221d.png","width":1214,"height":630}
+coverImg: {"url":"https://formester-strapi.s3.ap-south-1.amazonaws.com/7d7d2a2d916266e4_how-to-make-a-questionnaire-in-google-forms-cover.png","width":1200,"height":630}
 metaImage: []
-jsonld: [{"@graph":[{"@id":"https://formester.com/blog/how-to-make-a-questionnaire-in-google-forms/#webpage","url":"https://formester.com/blog/how-to-make-a-questionnaire-in-google-forms/","name":"How to Create a Questionnaire in Google Forms in 2026 (Step-by-Step Guide)","@type":"WebPage","headline":"How to Create a Questionnaire in Google Forms (Easy Steps!)","isPartOf":{"@id":"https://formester.com/#organization"},"breadcrumb":{"@id":"https://formester.com/blog/how-to-make-a-questionnaire-in-google-forms/#breadcrumb"},"description":"Step-by-step guide to building a questionnaire in Google Forms with screenshots and a video walkthrough. Plus a clear questionnaire vs survey vs form comparison, and when Formester is the better choice.","dateModified":"2026-05-14","datePublished":"2026-01-25"},{"@id":"https://formester.com/blog/how-to-make-a-questionnaire-in-google-forms/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"item":"https://formester.com/","name":"Home","@type":"ListItem","position":1},{"item":"https://formester.com/blog/","name":"Blog","@type":"ListItem","position":2},{"item":"https://formester.com/blog/how-to-make-a-questionnaire-in-google-forms/","name":"How to Make a Questionnaire in Google Forms","@type":"ListItem","position":3}]},{"@id":"https://formester.com/blog/how-to-make-a-questionnaire-in-google-forms/#article","@type":"BlogPosting","author":{"@id":"https://formester.com/#organization"},"headline":"How to Create a Questionnaire in Google Forms (Easy Steps!)","publisher":{"@id":"https://formester.com/#organization"},"description":"Step-by-step guide to building a questionnaire in Google Forms with screenshots and a video walkthrough. Plus a clear questionnaire vs survey vs form comparison, and when Formester is the better choice.","dateModified":"2026-05-14","datePublished":"2026-01-25","mainEntityOfPage":{"@id":"https://formester.com/blog/how-to-make-a-questionnaire-in-google-forms/#webpage"}},{"@id":"https://formester.com/blog/how-to-make-a-questionnaire-in-google-forms/#faq","@type":"FAQPage","mainEntity":[{"name":"Is Google Forms a questionnaire or a survey?","@type":"Question","acceptedAnswer":{"text":"Google Forms is a generic form builder. You can build a questionnaire, a survey, a quiz, an RSVP, or a job application inside it. The naming is about the container, not the use case. The three-column matrix above explains where each one diverges.","@type":"Answer"}},{"name":"How do I create a Google Form questionnaire for free?","@type":"Question","acceptedAnswer":{"text":"Go to forms.google.com, click “Blank,” add your questions using the “+” toolbar, configure the settings, and hit “Send.” It’s free on any Google account. The 6-step walkthrough above covers the configuration details.","@type":"Answer"}},{"name":"What’s the difference between a questionnaire and a survey?","@type":"Question","acceptedAnswer":{"text":"A questionnaire is a fixed set of structured questions. A survey is a research method that uses questionnaires plus sampling, randomisation, and statistical analysis. All surveys use questionnaires; not all questionnaires are surveys.","@type":"Answer"}},{"name":"Does Google Forms have a questionnaire template?","@type":"Question","acceptedAnswer":{"text":"Yes, several. Open the Google Forms template gallery and scroll to “Education” or “Personal” for the closest fits. They’re dated and visually generic; most users start from “Blank” and write their own questions.","@type":"Answer"}},{"name":"Can I make a Google Form questionnaire anonymous?","@type":"Question","acceptedAnswer":{"text":"Partially. You can turn off “Collect email addresses” in the settings, which removes the most obvious identifier. Google Forms still tracks Google account IDs in the background if you require sign-in, which is the only way to limit one response per person. For true anonymity with dedupe, use a tool like <a href=\"https://formester.com/questionnaire-maker/\">Formester</a> that ships an anonymous-mode toggle.","@type":"Answer"}},{"name":"How do I share a Google Form questionnaire with my team?","@type":"Question","acceptedAnswer":{"text":"Hit “Send” in the top-right and pick a sharing method: email (Google sends it directly), link (copy and paste anywhere), or embed (paste the HTML snippet into your intranet or Notion page). The link works in Slack, Teams, WhatsApp, or any chat tool.","@type":"Answer"}},{"name":"How long should a questionnaire be?","@type":"Question","acceptedAnswer":{"text":"5 to 12 questions for a customer satisfaction or feedback questionnaire. Up to 20 for an academic or research questionnaire. Past 20, response rates drop sharply. Split anything longer into multiple sections so respondents see a progress bar.","@type":"Answer"}}]},{"@id":"https://formester.com/blog/how-to-make-a-questionnaire-in-google-forms/#howto","name":"How to Create a Questionnaire in Google Forms (Easy Steps!)","step":[{"name":"What Is a Questionnaire?","@type":"HowToStep","position":1},{"name":"When to Use a Questionnaire?","@type":"HowToStep","position":2},{"name":"Questionnaire vs survey vs form: which one do you actually need?","@type":"HowToStep","position":3},{"name":"Questionnaire, survey, or form. Pick the right one.","@type":"HowToStep","position":4},{"name":"How to create a questionnaire in Google Forms in 6 steps","@type":"HowToStep","position":5},{"name":"Google Forms features that matter for questionnaires","@type":"HowToStep","position":6},{"name":"When Formester is the better choice for a questionnaire","@type":"HowToStep","position":7},{"name":"Google Forms questionnaire FAQ","@type":"HowToStep","position":8},{"name":"More from Formester for questionnaires and surveys","@type":"HowToStep","position":9},{"name":"Related Blogs","@type":"HowToStep","position":10},{"name":"Ready to build your perfect form?","@type":"HowToStep","position":11}],"@type":"HowTo"},{"@id":"https://formester.com/blog/how-to-make-a-questionnaire-in-google-forms/#video","name":"How to Create a Questionnaire in Google Forms (Easy Steps!)","@type":"VideoObject","embedUrl":"https://www.youtube.com/embed/waTsMCMnDzY","uploadDate":"2026-01-25"}],"@context":"https://schema.org"}]
+jsonld: [{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://formester.com/#organization","url":"https://formester.com/","name":"Formester","logo":{"@type":"ImageObject","url":"https://formester.com/logo.png"}},{"@type":"WebSite","@id":"https://formester.com/#website","url":"https://formester.com/","name":"Formester","publisher":{"@id":"https://formester.com/#organization"}},{"@type":"WebPage","@id":"https://formester.com/blog/how-to-make-a-questionnaire-in-google-forms/#webpage","url":"https://formester.com/blog/how-to-make-a-questionnaire-in-google-forms/","name":"How to Make a Questionnaire or Survey in Google Forms","isPartOf":{"@id":"https://formester.com/#website"},"breadcrumb":{"@id":"https://formester.com/blog/how-to-make-a-questionnaire-in-google-forms/#breadcrumb"},"inLanguage":"en-US","description":"Google Forms builds a questionnaire in six steps once each question type matches the answer you want. The build, the types to use and how a survey differs.","datePublished":"2026-06-04","dateModified":"2026-09-10"},{"@type":"BreadcrumbList","@id":"https://formester.com/blog/how-to-make-a-questionnaire-in-google-forms/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://formester.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://formester.com/blog/"},{"@type":"ListItem","position":3,"name":"How to Make a Questionnaire or Survey in Google Forms","item":"https://formester.com/blog/how-to-make-a-questionnaire-in-google-forms/"}]},{"@type":"BlogPosting","@id":"https://formester.com/blog/how-to-make-a-questionnaire-in-google-forms/#article","headline":"How to Make a Questionnaire or Survey in Google Forms","image":"https://formester-strapi.s3.ap-south-1.amazonaws.com/7d7d2a2d916266e4_how-to-make-a-questionnaire-in-google-forms-cover.png","author":{"@type":"Person","name":"Harsh Shah","url":"https://linkedin.com/in/harshshahseo","image":"https://formester-strapi.s3.ap-south-1.amazonaws.com/41fc6df7f8a7952a_harsh-shah.jpg"},"publisher":{"@id":"https://formester.com/#organization"},"inLanguage":"en-US","description":"Google Forms builds a questionnaire in six steps once each question type matches the answer you want. The build, the types to use and how a survey differs.","datePublished":"2026-06-04","dateModified":"2026-09-10","mainEntityOfPage":{"@id":"https://formester.com/blog/how-to-make-a-questionnaire-in-google-forms/#webpage"},"about":[{"@type":"SoftwareApplication","name":"Google Forms","applicationCategory":"BusinessApplication","url":"https://docs.google.com/forms/","operatingSystem":"Web"}],"mentions":[{"@id":"https://formester.com/#software"}],"citation":[{"@type":"WebPage","name":"Create a form","url":"https://support.google.com/docs/answer/2839737","publisher":{"@type":"Organization","name":"Google"}},{"@type":"WebPage","name":"Choose settings for your form or quiz","url":"https://support.google.com/docs/answer/7322334","publisher":{"@type":"Organization","name":"Google"}}]},{"@type":"FAQPage","@id":"https://formester.com/blog/how-to-make-a-questionnaire-in-google-forms/#faq","mainEntity":[{"@type":"Question","name":"Can I use Google Forms to create a questionnaire?","acceptedAnswer":{"@type":"Answer","text":"Yes. Open forms.google.com, start a blank form, add one question per thing you want to know and give each the type that matches its answer. Publish and share the responder link. Answers arrive in the Responses tab and can go to a Google Sheet."}},{"@type":"Question","name":"How do I make a survey questionnaire in Google Forms?","acceptedAnswer":{"@type":"Answer","text":"Build the questionnaire, then set it up for a group: leave Collect email addresses off so it is anonymous, keep every scale the same range, use closed questions for anything you will count, and set a close date under the Published button once it is live. Send the link and read the Summary tab."}},{"@type":"Question","name":"Is Google Forms good for questionnaires?","acceptedAnswer":{"@type":"Answer","text":"For most, yes. It has every common question type, sections with branching, anonymous responses and a spreadsheet link, and it is free. It stops short on scoring outside quiz mode, branching from a scale, scales above ten points and branding."}},{"@type":"Question","name":"What is the difference between a questionnaire and a survey?","acceptedAnswer":{"@type":"Answer","text":"A questionnaire is the set of questions. A survey is that questionnaire sent to a group so the answers can be added up. In Google Forms both are the same form; a survey usually runs anonymous with a close date, a questionnaire usually collects a name."}},{"@type":"Question","name":"Does Google Forms have a questionnaire template?","acceptedAnswer":{"@type":"Answer","text":"The template gallery has feedback and survey templates, such as Event Feedback, that you can rename and edit. There is no template called Questionnaire, and a blank form with the right question types takes about the same time."}},{"@type":"Question","name":"Can I make a Google Forms questionnaire anonymous?","acceptedAnswer":{"@type":"Answer","text":"Yes. In Settings, leave Collect email addresses off, switch Limit to 1 response off, and do not ask for a name. Say in the description that it is anonymous. Limit to 1 response requires a Google sign-in, which is why it goes off."}},{"@type":"Question","name":"How long should a questionnaire be?","acceptedAnswer":{"@type":"Answer","text":"Five to twelve questions for feedback, and fewer if most people will answer on a phone. Past ten questions, split it into sections so each page is short. Every extra screen loses some of the people who started."}},{"@type":"Question","name":"How do I share a Google Forms questionnaire?","acceptedAnswer":{"@type":"Answer","text":"Click Publish, confirm who can respond, then copy the responder link with Shorten URL ticked and send it, or use the Share panel to email it or get the embed code for a website. A QR code made from the same link works for a printed notice."}}]},{"@type":"SoftwareApplication","@id":"https://formester.com/#software","url":"https://formester.com/","name":"Formester","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Free forever plan, no credit card required"}}]}]
+promoPopup: {"enabled":true,"id":"gforms-questionnaire-ai","delaySeconds":10,"eyebrow":"Formester AI","heading":"Generate this questionnaire in one click","text":"Describe who you are asking and what you want to learn. The AI writes the questions, picks the answer types and adds the rating scales.","image":"https://formester-strapi.s3.ap-south-1.amazonaws.com/2f0cfc9f493e908b_formester-ai-build-form.gif","imageAlt":"Formester AI generating a complete form from a one-line description","ctaLabel":"Build my questionnaire free","ctaHref":"https://app.formester.com/users/sign_up"}
 createdAt: "2025-05-19T02:55:15.358Z"
-updatedAt: "2026-06-04T14:27:46.059Z"
+updatedAt: "2026-09-10T00:00:00.000Z"
 publishedAt: "2026-06-04T14:27:46.055Z"
 ---
-Google Forms is the most-used free questionnaire tool in the world, with [over 50 million users on Google Workspace](https://workspace.google.com/products/forms/) building everything from one-off feedback polls to multi-page academic surveys. 
 
-The basic setup takes under five minutes; the parts people get wrong are choosing the right question types, configuring response validation, and deciding whether they actually need a questionnaire or a survey (those words don't mean the same thing).
+![Cover art for a guide to making a questionnaire in Google Forms](https://formester-strapi.s3.ap-south-1.amazonaws.com/7d7d2a2d916266e4_how-to-make-a-questionnaire-in-google-forms-cover.png)
 
-This guide covers all three, with screenshots and a short video walkthrough. At the bottom, there's a comparison of when Google Forms is the right call and when a dedicated questionnaire builder like [Formester's questionnaire maker](/questionnaire-maker/) saves more time.
+<p style="font-size: inherit;">To make a questionnaire in Google Forms, start a blank form, add one question per thing you want to know, and give each question the type that fits its answer, so one pick is Multiple choice, several picks are Checkboxes, a rating is Linear scale and an explanation is Paragraph. Publish, copy the link and the answers collect in the Responses tab.</p>
 
-If the questionnaire is straightforward and you'd rather skip the field-by-field build, Formester's [AI form generator](/ai-form-generator/) turns a plain-English description into a live questionnaire in under 30 seconds, ready to share.
+<p>That is the whole build, and it takes about fifteen minutes for ten questions. A survey is the same thing built for a crowd, so the steps below cover both, with the settings that change when you want honest answers from strangers.</p>
 
-Looking for a quick single-question poll instead of a full questionnaire? Here's [how to make a poll on Google Forms](/blog/how-to-make-a-poll-on-google-forms/) in 6 steps, including the 5 poll types and when to switch to a dedicated poll maker.
+<div class="tldr">
+<p><strong>Quick answer</strong></p>
+<ul>
+<li><strong>The six steps:</strong> blank form or template, title and description, questions typed to their answers, sections for anything longer than ten questions, settings, then Publish.</li>
+<li><strong>The type rule:</strong> one answer takes Multiple choice and several take Checkboxes. A number takes Linear scale and stars take Rating. Several statements on one scale take a Multiple choice grid, and an explanation takes Paragraph.</li>
+<li><strong>Questionnaire or survey:</strong> a questionnaire is the set of questions. A survey is a questionnaire sent to a group so you can add up the answers. In Google Forms they are the same form with different settings.</li>
+</ul>
+</div>
 
-If you're collecting signups (event RSVPs, volunteer slots, class rosters) instead of a questionnaire, check out [how to create a sign up sheet in Google Forms](/blog/how-to-create-signup-sheets-in-google-forms/) with 8 steps and the capacity-limit workarounds.
+<h2 id="build">How do you make a questionnaire in Google Forms?</h2>
 
-## What Is a Questionnaire?
-A **[questionnaire](/templates/categories/questionnaire/)** is a set of questions that helps you collect information from people. It could be about their opinions, feedback, habits, or anything else you want to know.
+<ol class="steps">
+<li>
+<h3>Start blank or from a template</h3>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/26d7694d519a1e0a_gforms-qn-step1-template-gallery.gif" alt="The Google Forms template gallery with Event Feedback and Customer Feedback templates, then Blank form opening an empty form" loading="lazy"></p>
+<p>Open <a href="https://forms.google.com" target="_blank" rel="noopener">forms.google.com</a>. <strong>Blank form</strong> gives you one empty question. The gallery next to it has feedback and survey templates such as Event Feedback, which are worth opening once to see how Google structures a short one.</p>
+</li>
+<li>
+<h3>Write the title and the description</h3>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/8884a792fe6c8803_gforms-qn-step2-title-description.gif" alt="Typing Event Feedback Questionnaire as the title and a two-line description in Google Forms" loading="lazy"></p>
+<p>The title says what the questionnaire is for. The description says how long it takes, whether it is anonymous and what happens to the answers. People decide whether to finish in those two lines.</p>
+</li>
+<li>
+<h3>Add the questions and type them to the answers</h3>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/800b4d1cdb64d0bc_gforms-qn-step3-add-questions.gif" alt="Adding three questions in Google Forms: a Multiple choice with three options, a Linear scale picked from the type dropdown and a Paragraph" loading="lazy"></p>
+<p>Click the plus icon for each question and pick the type from the dropdown. The type decides what the answer looks like in your results, so choose it for the analysis you want, not for the way the question reads. The table below covers every case.</p>
+</li>
+<li>
+<h3>Split it into sections</h3>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/1cde5611d6ce9e2b_gforms-qn-step4-add-section.gif" alt="Clicking Add section in the Google Forms toolbar and naming the new section About you" loading="lazy"></p>
+<p>Past ten questions, add a section from the toolbar so the form becomes pages. Sections also let you branch: on a Multiple choice or Dropdown question, <strong>Go to section based on answer</strong> sends people past questions that do not apply to them.</p>
+</li>
+<li>
+<h3>Set who can answer and how</h3>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/62bfab881c51bfe2_gforms-qn-step5-settings.gif" alt="The Responses settings in Google Forms with Collect email addresses left on Do not collect and Limit to 1 response off" loading="lazy"></p>
+<p>In <strong>Settings</strong>, leave <strong>Collect email addresses</strong> off for an anonymous questionnaire. Switch on <strong>Limit to 1 response</strong> only if you accept that it forces a Google sign-in. Once it is published, <strong>Set close date or response limit</strong> under the Published button ends the questionnaire on a date or at a number.</p>
+</li>
+<li>
+<h3>Preview, publish and share</h3>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/857f3a53f5b8da32_gforms-qn-step6-publish-share.gif" alt="Publishing the questionnaire in Google Forms and copying the shortened responder link" loading="lazy"></p>
+<p>Click the eye icon to answer the questionnaire once yourself on a phone, then <strong>Publish</strong>. Copy the responder link with Shorten URL ticked. <a href="/blog/how-to-share-google-form/">Sharing a Google Form</a> covers email, embedding and the other routes.</p>
+</li>
+</ol>
 
-Think of it like a survey. People fill out their answers, and you use those responses to make decisions, learn something new, or solve a problem.
+<h2 id="types">Which question type should you use for each answer?</h2>
 
-## When to Use a Questionnaire?
-Use a questionnaire when you need structured, comparable data from a fixed set of respondents: customer satisfaction, employee engagement, academic research, intake forms, or pre-event preference collection. 
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/f7697247d20dfd9a_gforms-qn-question-types-menu.png" alt="The Google Forms question type dropdown open on a rating question, showing Short answer, Paragraph, Multiple choice, Checkboxes, Dropdown, Linear scale, Rating and the grids" loading="lazy"></p>
 
-Use a survey when the result has to generalize to a population (and you care about statistical confidence). Use a generic form when the input is unique per respondent and you don't need to compare answers side by side (a job application, an event signup, a payment).
-
-If you're not sure which one fits, the three-column comparison block earlier in this guide should clear it up in under 60 seconds.
-<style>
-/* host-link-override */
-.fmstr-cmp-gfq-vs a { text-decoration: none !important; }
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-.fmstr-cmp-gfq-vs {
---c-bg: #fafafb; --c-card: #ffffff;
---c-tint: #f7f3ff; --c-edge: #e4d7ff; --c-row: #ffffff; --c-row-alt: #fafafb;
---c-fg-1: #101828; --c-fg-2: #475467; --c-fg-3: #697586;
---c-violet-600: #6941c6; --c-violet-500: #7f56d9;
---c-amber-50: #fef3c7; --c-amber-700: #b45309;
---c-border: #eaecf0;
---c-shadow: 0 4px 20px rgba(16,24,40,.06);
-
-background: transparent; padding: 56px 24px;
-font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
-color: var(--c-fg-1);
-}
-.fmstr-cmp-gfq-vs *, .fmstr-cmp-gfq-vs *::before, .fmstr-cmp-gfq-vs *::after { box-sizing: border-box; }
-.fmstr-cmp-gfq-vs__container { max-width: 1180px; margin: 0 auto; }
-.fmstr-cmp-gfq-vs__h3 { font-size: 22px; font-weight: 600; line-height: 1.2; letter-spacing: -.01em; margin: 0 0 18px; color: var(--c-fg-1); }
-.fmstr-cmp-gfq-vs__card { background: var(--c-card); border: 1px solid var(--c-border); border-radius: 20px; overflow: hidden; box-shadow: var(--c-shadow); }
-.fmstr-cmp-gfq-vs__table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
-.fmstr-cmp-gfq-vs__table th, .fmstr-cmp-gfq-vs__table td { padding: 14px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--c-border); }
-.fmstr-cmp-gfq-vs__table thead th:first-child { background: var(--c-amber-50); color: var(--c-amber-700); }
-.fmstr-cmp-gfq-vs__table thead th:nth-child(2) { background: var(--c-amber-50); color: var(--c-amber-700); }
-.fmstr-cmp-gfq-vs__table thead th:last-child { background: var(--c-tint); color: var(--c-violet-600); }
-.fmstr-cmp-gfq-vs__table thead th { font-weight: 700; font-size: 13.5px; text-transform: uppercase; letter-spacing: .04em; }
-.fmstr-cmp-gfq-vs__table tbody th { font-weight: 600; color: var(--c-fg-1); background: var(--c-row-alt); width: 26%; }
-.fmstr-cmp-gfq-vs__table tbody td { color: var(--c-fg-2); }
-.fmstr-cmp-gfq-vs__table tbody tr:last-child th, .fmstr-cmp-gfq-vs__table tbody tr:last-child td { border-bottom: 0; }
-.fmstr-cmp-gfq-vs__table a { color: var(--c-violet-600) !important; text-decoration: none !important; }
-.fmstr-cmp-gfq-vs__table a:hover { text-decoration: underline !important; }
-.fmstr-cmp-gfq-vs__close { margin-top: 18px; font-size: 15px; color: var(--c-fg-3); line-height: 1.6; max-width: 880px; }
-
-@media (max-width: 760px) {
-.fmstr-cmp-gfq-vs { padding: 40px 16px; }
-.fmstr-cmp-gfq-vs__h3 { font-size: 19px; line-height: 1.25; }
-.fmstr-cmp-gfq-vs__close { font-size: 14.5px; }
-.fmstr-cmp-gfq-vs__table thead { display: none; }
-.fmstr-cmp-gfq-vs__table tbody th { width: 100%; display: block; background: var(--c-tint); }
-.fmstr-cmp-gfq-vs__table tbody td { display: block; }
-.fmstr-cmp-gfq-vs__table tbody td::before { content: attr(data-h) ": "; font-weight: 600; color: var(--c-fg-1); }
-.fmstr-cmp-gfq-vs__table th, .fmstr-cmp-gfq-vs__table td { padding: 12px 14px; }
-}
-</style>
-
-<section class="fmstr-cmp-gfq-vs" aria-labelledby="fmstr-cmp-gfq-vs-h3">
-<div class="fmstr-cmp-gfq-vs__container">
-<h3 class="fmstr-cmp-gfq-vs__h3" id="fmstr-cmp-gfq-vs-h3">Google Forms vs Formester for questionnaires</h3>
-<div class="fmstr-cmp-gfq-vs__card">
-<table class="fmstr-cmp-gfq-vs__table">
-<thead>
-<tr><th>Dimension</th><th>Google Forms</th><th>Formester</th></tr>
-</thead>
+<div class="table-wrap">
+<table>
+<thead><tr><th>What you want to learn</th><th>Google Forms type</th><th>What you get back</th></tr></thead>
 <tbody>
-<tr><th>Anonymous mode</th><td data-h="Google Forms">Trade-off: collect emails or be truly anonymous</td><td data-h="Formester">Native toggle, dedupe without identifying data</td></tr>
-<tr><th>Conditional logic</th><td data-h="Google Forms">Section-level branching only</td><td data-h="Formester"><a href="https://formester.com/features/conditional-logic/">Per-question conditional logic</a></td></tr>
-<tr><th>Branding</th><td data-h="Google Forms">Header image + colour</td><td data-h="Formester">Full <a href="https://formester.com/features/branding-kit/">branding kit</a>: fonts, buttons, custom domain</td></tr>
-<tr><th>Response routing</th><td data-h="Google Forms">One owner email</td><td data-h="Formester">Multiple recipients + Slack / Teams / Zapier</td></tr>
-<tr><th>Payments inside questionnaire</th><td data-h="Google Forms">Not supported</td><td data-h="Formester"><a href="https://formester.com/features/online-payments/">Native payments</a></td></tr>
-<tr><th>File upload</th><td data-h="Google Forms">Requires respondents to sign in to Google</td><td data-h="Formester">No sign-in required</td></tr>
-<tr><th>Free plan response cap</th><td data-h="Google Forms">Unlimited</td><td data-h="Formester">Generous free tier; verify the current cap on the pricing page</td></tr>
+<tr><td>One choice from a list</td><td>Multiple choice or Dropdown</td><td>A pie chart of picks</td></tr>
+<tr><td>Everything that applies</td><td>Checkboxes</td><td>A bar per option</td></tr>
+<tr><td>A number on a scale</td><td>Linear scale (up to 10 points, two end labels)</td><td>A bar chart you can average in Sheets</td></tr>
+<tr><td>A quick star rating</td><td>Rating (3 to 10 stars, hearts or thumbs)</td><td>A bar chart of levels</td></tr>
+<tr><td>Agreement with several statements</td><td>Multiple choice grid</td><td>One row per statement, the Likert pattern</td></tr>
+<tr><td>A short fact</td><td>Short answer, with response validation for numbers or emails</td><td>A list</td></tr>
+<tr><td>An explanation in their words</td><td>Paragraph</td><td>Text you read one by one</td></tr>
+<tr><td>A date or a time</td><td>Date or Time</td><td>Sortable values</td></tr>
 </tbody>
 </table>
 </div>
-<p class="fmstr-cmp-gfq-vs__close">If none of these trade-offs matter for your questionnaire, Google Forms is fine. If two or more apply, the 10-minute switch pays back inside the first survey cycle.</p>
-</div>
-</section>
 
-Basically, if you need honest answers from a group of people, a questionnaire is the tool to use.
+<p>Two mistakes cost the most. A Short answer where a Multiple choice would do gives you fifty spellings of the same thing. And a Linear scale that changes range from question to question gives you numbers you cannot compare. Pick one scale and keep it. <a href="/blog/how-to-add-linear-scale-questions-in-google-forms/">The linear scale guide</a> covers the ranges and labels.</p>
 
-## Questionnaire vs survey vs form: which one do you actually need?
-A questionnaire is a set of fixed questions designed to collect specific information. A survey is a research method that uses questionnaires (and sometimes interviews and observation) to study a population. A form is a generic container for any data input, from a job application to an event RSVP. People use the words interchangeably; Google does too, which is why Google Forms is named for the container, not the use case.
-The distinction matters because each one has different best practices:
-A questionnaire wants question consistency, short response options, and a defined scoring or coding rubric.
-A survey wants statistical rigor (sample size, randomisation, weighting) and bias-aware question wording.
-A form wants UX simplicity, clear field validation, and a low completion threshold.
+<h2 id="survey">How do you make a survey in Google Forms?</h2>
 
-<style>
-/* host-link-override */
-.fmstr-cmp-gfq-mtx a { text-decoration: none !important; }
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-.fmstr-cmp-gfq-mtx {
---c-bg: #ffffff; --c-card: #ffffff;
---c-tint: #f7f3ff; --c-edge: #e4d7ff; --c-row: #fafafb;
---c-fg-1: #101828; --c-fg-2: #475467; --c-fg-3: #697586;
---c-violet-600: #6941c6;
---c-border: #eaecf0;
---c-shadow: 0 4px 20px rgba(16,24,40,.06);
+<p>The same six steps. What changes is the settings and the discipline, because a survey goes to people who owe you nothing and the answers only mean something when you add them up.</p>
 
-background: transparent; padding: 56px 24px;
-font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
-color: var(--c-fg-1);
-}
-.fmstr-cmp-gfq-mtx *, .fmstr-cmp-gfq-mtx *::before, .fmstr-cmp-gfq-mtx *::after { box-sizing: border-box; }
-.fmstr-cmp-gfq-mtx__container { max-width: 1180px; margin: 0 auto; }
-.fmstr-cmp-gfq-mtx__eyebrow {
-display: inline-block; padding: 5px 12px; border-radius: 9999px;
-background: var(--c-tint); color: var(--c-violet-600);
-font-size: 12px; font-weight: 600; letter-spacing: .04em;
-text-transform: uppercase; border: 1px solid var(--c-edge); margin: 0 0 14px;
-}
-.fmstr-cmp-gfq-mtx__h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 700; line-height: 1.15; letter-spacing: -.02em; margin: 0; }
-.fmstr-cmp-gfq-mtx__intro { color: var(--c-fg-3); font-size: 17px; line-height: 1.6; max-width: 820px; margin: 14px auto 28px; }
-.fmstr-cmp-gfq-mtx__card { background: var(--c-card); border: 1px solid var(--c-border); border-radius: 20px; overflow: hidden; box-shadow: var(--c-shadow); }
-.fmstr-cmp-gfq-mtx__table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
-.fmstr-cmp-gfq-mtx__table th, .fmstr-cmp-gfq-mtx__table td { padding: 14px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--c-border); }
-.fmstr-cmp-gfq-mtx__table thead th { background: var(--c-tint); color: var(--c-violet-600); font-weight: 700; font-size: 13.5px; text-transform: uppercase; letter-spacing: .04em; }
-.fmstr-cmp-gfq-mtx__table tbody th { font-weight: 600; color: var(--c-fg-1); background: var(--c-row); width: 22%; }
-.fmstr-cmp-gfq-mtx__table tbody td { color: var(--c-fg-2); }
-.fmstr-cmp-gfq-mtx__table tbody tr:last-child th, .fmstr-cmp-gfq-mtx__table tbody tr:last-child td { border-bottom: 0; }
-.fmstr-cmp-gfq-mtx__close { margin-top: 20px; font-size: 15px; color: var(--c-fg-3); line-height: 1.6; max-width: 880px; }
+<ul>
+<li><strong>Keep it anonymous unless you need names:</strong> Collect email addresses off, Limit to 1 response off, no name question. Say so in the description.</li>
+<li><strong>Ask fewer questions:</strong> five to twelve for feedback, fewer on a phone. Every screen loses people.</li>
+<li><strong>Use closed questions for anything you will count:</strong> Multiple choice, Checkboxes and scales. One Paragraph question at the end for the rest.</li>
+<li><strong>Keep every scale the same:</strong> 1 to 5 everywhere, or 0 to 10 for a Net Promoter Score question and nothing else.</li>
+<li><strong>Close it on a date:</strong> Set close date or response limit, so the results are a fixed set rather than a moving one.</li>
+</ul>
 
-@media (max-width: 760px) {
-.fmstr-cmp-gfq-mtx { padding: 40px 16px; }
-.fmstr-cmp-gfq-mtx__intro { font-size: 15.5px; }
-.fmstr-cmp-gfq-mtx__close { font-size: 14.5px; }
-.fmstr-cmp-gfq-mtx__table thead { display: none; }
-.fmstr-cmp-gfq-mtx__table tbody th { width: 100%; display: block; background: var(--c-tint); }
-.fmstr-cmp-gfq-mtx__table tbody td { display: block; }
-.fmstr-cmp-gfq-mtx__table tbody td::before { content: attr(data-h) ": "; font-weight: 600; color: var(--c-fg-1); }
-.fmstr-cmp-gfq-mtx__table th, .fmstr-cmp-gfq-mtx__table td { padding: 12px 14px; }
-}
-</style>
+<p>The Event Feedback template in the gallery is a reasonable survey skeleton: a scale, a couple of choices, one open question. Start there if the blank page is the problem.</p>
 
-<section class="fmstr-cmp-gfq-mtx" aria-labelledby="fmstr-cmp-gfq-mtx-h2">
-<div class="fmstr-cmp-gfq-mtx__container">
-<span class="fmstr-cmp-gfq-mtx__eyebrow">Definitions that actually help</span>
-<h2 class="fmstr-cmp-gfq-mtx__h2" id="fmstr-cmp-gfq-mtx-h2">Questionnaire, survey, or form. Pick the right one.</h2>
-<p class="fmstr-cmp-gfq-mtx__intro">Each one has a different best-practice setup in Google Forms. The table below shows where they diverge.</p>
-<div class="fmstr-cmp-gfq-mtx__card">
-<table class="fmstr-cmp-gfq-mtx__table">
-<thead>
-<tr>
-<th>Dimension</th>
-<th>Questionnaire</th>
-<th>Survey</th>
-<th>Form</th>
-</tr>
-</thead>
+<h2 id="which">Questionnaire, survey or form: which do you need?</h2>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th></th><th>Questionnaire</th><th>Survey</th><th>Form</th></tr></thead>
 <tbody>
-<tr><th>Purpose</th><td data-h="Questionnaire">Collect structured, comparable answers</td><td data-h="Survey">Study a population with statistical rigor</td><td data-h="Form">Capture per-respondent input</td></tr>
-<tr><th>Best for</th><td data-h="Questionnaire">Customer satisfaction, intake, academic research</td><td data-h="Survey">Market research, opinion polling</td><td data-h="Form">Job application, RSVP, payment</td></tr>
-<tr><th>Question style</th><td data-h="Questionnaire">Fixed, often closed-ended</td><td data-h="Survey">Mix of closed and open, randomised</td><td data-h="Form">Whatever the use case demands</td></tr>
-<tr><th>Anonymity</th><td data-h="Questionnaire">Often required</td><td data-h="Survey">Required for representative results</td><td data-h="Form">Usually identified</td></tr>
-<tr><th>Length</th><td data-h="Questionnaire">5 to 20 questions</td><td data-h="Survey">10 to 40 questions</td><td data-h="Form">3 to 12 fields</td></tr>
-<tr><th>Right Google Forms setup</th><td data-h="Questionnaire">Quiz mode off, section branching on</td><td data-h="Survey">Section branching + linear scale + response validation</td><td data-h="Form">Short answer + required validation</td></tr>
-<tr><th>When to use Formester instead</th><td data-h="Questionnaire">Anonymous mode + custom branding</td><td data-h="Survey">Conditional logic + advanced analytics</td><td data-h="Form">Payments + e-signature + file upload without Google sign-in</td></tr>
+<tr><td>What it is</td><td>A set of questions one person answers</td><td>A questionnaire sent to many people</td><td>Fields that collect details for a task</td></tr>
+<tr><td>What you do with the answers</td><td>Read each one</td><td>Count and compare them</td><td>Act on each one</td></tr>
+<tr><td>Typical example</td><td>Intake, screening, an application</td><td>Satisfaction, research, feedback</td><td>Registration, order, request</td></tr>
+<tr><td>Name on it</td><td>Usually</td><td>Usually not</td><td>Always</td></tr>
 </tbody>
 </table>
 </div>
-<p class="fmstr-cmp-gfq-mtx__close">A teacher gathering exam feedback uses a questionnaire. A marketing team studying brand awareness across 1,000 buyers uses a survey. A team running a holiday party RSVP uses a form. All three can technically be built in Google Forms, but the setup is different.</p>
+
+<p>In Google Forms all three are the same builder. The words matter for what you switch on: names and one response per person for a questionnaire or a form, anonymity and a close date for a survey.</p>
+
+<h2 id="read">How do you read the answers?</h2>
+
+<p>The <strong>Responses</strong> tab shows three views. Summary charts every question. Question walks through one question at a time. Individual shows one person's whole questionnaire. For anything beyond a glance, click <strong>Link to Sheets</strong> and every response becomes a row in a spreadsheet you can filter, average and chart.</p>
+
+<p>Google Forms does not average a scale, cross one question against another or export a report. <a href="/blog/how-to-make-pie-charts-in-google-forms/">The pie chart guide</a> covers what the Responses tab draws, and the spreadsheet covers everything else.</p>
+
+<h2 id="limits">What Google Forms cannot do for a questionnaire</h2>
+
+<ul>
+<li><strong>Branch on a scale:</strong> Go to section based on answer works on Multiple choice and Dropdown questions only.</li>
+<li><strong>Reuse an answer later:</strong> there is no way to show someone's earlier answer inside a later question.</li>
+<li><strong>Score without a quiz:</strong> points only exist in quiz mode, and only for questions with a right answer.</li>
+<li><strong>Go past 10 on a scale:</strong> the Linear scale stops at 10 and labels only its two ends.</li>
+<li><strong>Look like yours:</strong> a header image, a theme colour and Google's fonts, with the Google Forms footer on every page.</li>
+</ul>
+
+<h2 id="formester">Where Formester fits</h2>
+
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/97c25bb247896fd8_formester-ai-survey-rating-one-click.gif" alt="Formester AI generating an event feedback survey with a five-star rating question and a ranking question" loading="lazy"></p>
+
+<p>Describe the questionnaire instead of building it. <a href="/questionnaire-maker/">The questionnaire maker</a> takes a sentence, a pasted list of questions or a PDF and writes the form, with the answer types chosen for you and rating scales where they belong. Every question arrives as a suggestion you can edit.</p>
+
+<p>The results side does what the spreadsheet does in Google Forms: completion rate, drop-off by page, a summary per question and a CSV export. Branching works on rating fields as well as choices, and the form carries your logo rather than a footer.</p>
+
+<p>For a survey specifically, <a href="/ai-survey-generator/">the AI survey generator</a> starts from the established formats, so a satisfaction or NPS survey comes out with the standard questions and scales already in place.</p>
+
+<div style="background:linear-gradient(135deg,#7f56d9 0%,#6941c6 100%);padding:32px 28px;margin:36px 0;border-radius:12px;color:#ffffff;font-family:inherit;text-align:center;">
+<p style="margin:0 0 12px 0;font-size:18px;font-weight:700;color:#ffffff;font-family:inherit;">A questionnaire the AI writes for you</p>
+<p style="margin:0 0 20px 0;font-size:14px;line-height:1.55;color:#f4ebff;font-family:inherit;">Describe who you are asking and what you want to learn. The questions, the answer types and the scales arrive built.</p>
+<a href="https://app.formester.com/users/sign_up" style="display:inline-block;padding:12px 24px;background:#ffffff;color:#6941c6;text-decoration:none;font-weight:700;border-radius:9999px;font-family:inherit;">Try Formester free</a>
+<p style="margin:12px 0 0 0;font-size:13px;color:#e9d7fe;font-family:inherit;">Free forever &middot; No credit card &middot; 56,000+ teams</p>
 </div>
+
+<h2 id="related">Related reading</h2>
+
+<ul>
+<li><a href="/blog/best-survey-questions/">Survey questions worth asking</a>, for the wording of the questions themselves.</li>
+<li><a href="/blog/how-to-make-anonymous-google-form-or-survey/">How to make a Google Form anonymous</a>, for the settings that decide whether answers are honest.</li>
+<li><a href="/blog/how-to-add-conditional-questions-in-google-forms/">Conditional questions in Google Forms</a>, for the branching in step four.</li>
+<li><a href="/blog/how-create-form-sections-in-google-forms/">Sections in Google Forms</a>, for splitting a long questionnaire into pages.</li>
+<li><a href="/blog/how-to-make-a-net-promoter-score-survey/">How to make an NPS survey</a>, for the one scale question with its own rules.</li>
+<li><a href="/blog/how-to-use-google-forms/">How to use Google Forms</a>, for the parts of the builder this page assumes.</li>
+</ul>
+
+<section class="faq">
+<h2 id="faq">Google Forms questionnaire FAQ</h2>
+<details><summary>Can I use Google Forms to create a questionnaire?</summary><div>Yes. Open forms.google.com, start a blank form, add one question per thing you want to know and give each the type that matches its answer. Publish and share the responder link. Answers arrive in the Responses tab and can go to a Google Sheet.</div></details>
+<details><summary>How do I make a survey questionnaire in Google Forms?</summary><div>Build the questionnaire, then set it up for a group: leave Collect email addresses off so it is anonymous, keep every scale the same range, use closed questions for anything you will count, and set a close date under the Published button once it is live. Send the link and read the Summary tab.</div></details>
+<details><summary>Is Google Forms good for questionnaires?</summary><div>For most, yes. It has every common question type, sections with branching, anonymous responses and a spreadsheet link, and it is free. It stops short on scoring outside quiz mode, branching from a scale, scales above ten points and branding.</div></details>
+<details><summary>What is the difference between a questionnaire and a survey?</summary><div>A questionnaire is the set of questions. A survey is that questionnaire sent to a group so the answers can be added up. In Google Forms both are the same form; a survey usually runs anonymous with a close date, a questionnaire usually collects a name.</div></details>
+<details><summary>Does Google Forms have a questionnaire template?</summary><div>The template gallery has feedback and survey templates, such as Event Feedback, that you can rename and edit. There is no template called Questionnaire, and a blank form with the right question types takes about the same time.</div></details>
+<details><summary>Can I make a Google Forms questionnaire anonymous?</summary><div>Yes. In Settings, leave Collect email addresses off, switch Limit to 1 response off, and do not ask for a name. Say in the description that it is anonymous. Limit to 1 response requires a Google sign-in, which is why it goes off.</div></details>
+<details><summary>How long should a questionnaire be?</summary><div>Five to twelve questions for feedback, and fewer if most people will answer on a phone. Past ten questions, split it into sections so each page is short. Every extra screen loses some of the people who started.</div></details>
+<details><summary>How do I share a Google Forms questionnaire?</summary><div>Click Publish, confirm who can respond, then copy the responder link with Shorten URL ticked and send it, or use the Share panel to email it or get the embed code for a website. A QR code made from the same link works for a printed notice.</div></details>
 </section>
-
-
-## How to create a questionnaire in Google Forms in 6 steps
-Google Forms is free, easy to use, and great for basic questionnaires. Here’s how to create one step by step:
-
-The video below walks through the full flow in 90 seconds. Below it are the steps written out, with the configuration details Google's own help docs skip.
-
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/waTsMCMnDzY?si=zNAdLYPVcr_WZON0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-1. **Open Google Forms.** Go to [forms.google.com](https://forms.google.com) or hit the "+" in your Google Drive. Pick the "Blank" template; the pre-made templates are dated and most readers customise heavily anyway.
-2. **Name the questionnaire.** Top-left, click the "Untitled form" title. Give it a name and a short description. The description shows above question 1 to every respondent.
-3. **Add your first question.** Hit the "+" on the side toolbar to add a question. Pick the question type from the dropdown: multiple choice for one answer, checkboxes for multi-select, short answer for free text, paragraph for longer free text, linear scale for a 1-5 or 1-10 rating, multiple choice grid for matrix-style questions, date or time for scheduling. Each type has a different default validation; pick the one that matches your data.
-4. **Turn on required validation where it matters.** For each question, toggle the "Required" switch in the bottom-right. Don't make every question required; response rates fall steeply past four required questions in a row.
-5. **Add sections to break up long questionnaires.** Hit the "Add section" icon (the equals-sign icon on the right toolbar). Sections render as separate pages; respondents see a progress bar. Anything longer than 12 questions should be split into 2-3 sections.
-6. **Set up the settings.** Click the gear icon in the top-right. Under "Responses," decide whether to collect email addresses, allow editing after submission, and limit to one response per Google account. Under "Presentation," pick whether to shuffle question order and whether to show a progress bar.
-
-Once you're done, hit "Send" (top-right) to share via email, link, or embed. Responses pile up in the "Responses" tab; export to Google Sheets when you're ready to analyse.
-
-
-## Google Forms features that matter for questionnaires
-Google Forms comes with a few handy tools that make your questionnaire more useful:
-
-**Section branching.** Under each section's settings, you can choose "Go to section based on answer" to route respondents based on a previous answer. Use this for skip logic in research questionnaires.
-- **Response validation.** Per-question, you can require an answer to match a pattern (a phone number, an email, a number range, a regex). Catches data-entry mistakes at submission, not in your analysis.
-- **Linked spreadsheet.** In the "Responses" tab, hit the Google Sheets icon to dump every submission into a live spreadsheet. Sort, filter, pivot from there.
-- **Quiz mode.** Under "Settings," toggle "Make this a quiz" to enable per-question scoring, answer keys, and auto-graded results. Useful for academic questionnaires that double as knowledge checks.
-- **Templates.** The questionnaire templates are dated and visually generic, but they save time on the structure. Always rewrite the questions; never ship the default.
-
-For features Google Forms doesn't have (anonymous responses without disabling email collection, conditional logic across sections, custom branding beyond a logo, response notifications to multiple emails, e-signature, payment collection), a dedicated tool like [Formester's questionnaire maker](/questionnaire-maker/) covers them in one workflow.
-
-## When Formester is the better choice for a questionnaire
-Formester is a [free online form and questionnaire builder](/questionnaire-maker/) used by 56,000+ teachers, HR teams, and researchers. The cases where it beats Google Forms for questionnaires are specific and worth naming.
-
-- **You need anonymous responses without disabling email collection.** Google Forms forces a tradeoff: collect emails (kills anonymity) or don't (lose the ability to dedupe). Formester ships an anonymous-mode toggle that dedupes without collecting identifying data.
-- **You need conditional logic across sections.** Google Forms' branching is per-section. Formester's [conditional logic](/features/conditional-logic/) routes per-question and can branch on any prior answer.
-- **You need custom branding beyond a logo.** Google Forms gives you a header image and a colour. Formester's [branding kit](/features/branding-kit/) controls fonts, colours, button styles, submit-page copy, and custom domains.
-- **You need response notifications to multiple emails or Slack/Teams.** Google Forms emails the form owner; Formester routes to any number of recipients and integrates with Slack, Teams, and Zapier.
-- **You're collecting payment alongside the questionnaire.** Google Forms cannot. Formester [accepts payments](/features/online-payments/) inside the same form.
-
-If none of those apply, Google Forms is fine. If two or more apply, switching is worth a 10-minute setup.
-### How to build the same questionnaire in Formester in 90 seconds
-
-1. Open [questionnaire-maker](/questionnaire-maker/). Click "Use template" on the closest fit, or "Start from scratch."
-2. Drag fields from the left rail. Same question types as Google Forms, plus rating scales, signatures, payments, and file uploads with no Google sign-in required.
-3. Set anonymous mode in the settings panel if needed.
-4. Hit "Share." You get a link, an embed snippet, and a QR code by default.
-
-<style>
-/* host-link-override */
-.fmstr-cmp-gfq-faq a { text-decoration: none !important; }
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-.fmstr-cmp-gfq-faq {
---c-bg: #fafafb; --c-card: #ffffff;
---c-fg-1: #101828; --c-fg-2: #475467; --c-fg-3: #697586;
---c-violet-600: #6941c6; --c-tint: #f7f3ff; --c-chip-bg: #f4f4f7;
---c-border: #eaecf0; --c-shadow: 0 1px 3px rgba(16,24,40,.05);
-
-background: transparent; padding: 56px 24px;
-font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
-color: var(--c-fg-1);
-}
-.fmstr-cmp-gfq-faq *, .fmstr-cmp-gfq-faq *::before, .fmstr-cmp-gfq-faq *::after { box-sizing: border-box; }
-.fmstr-cmp-gfq-faq__container { max-width: 820px; margin: 0 auto; }
-.fmstr-cmp-gfq-faq__h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 700; line-height: 1.15; letter-spacing: -.02em; text-align: center; margin: 0; }
-.fmstr-cmp-gfq-faq__intro { color: var(--c-fg-3); text-align: center; font-size: 17px; line-height: 1.6; margin: 14px auto 28px; }
-.fmstr-cmp-gfq-faq__list { display: flex; flex-direction: column; gap: 12px; }
-.fmstr-cmp-gfq-faq__item { background: var(--c-card); border: 1px solid var(--c-border); border-radius: 14px; box-shadow: var(--c-shadow); overflow: hidden; }
-.fmstr-cmp-gfq-faq__item > summary {
-padding: 18px 22px; cursor: pointer; font-weight: 600; font-size: 16.5px;
-color: var(--c-fg-1); display: flex; align-items: center; gap: 14px; list-style: none;
-}
-.fmstr-cmp-gfq-faq__item > summary::-webkit-details-marker { display: none; }
-.fmstr-cmp-gfq-faq__item > summary::before {
-content: ""; width: 28px; height: 28px; border-radius: 8px; flex-shrink: 0;
-background-color: var(--c-chip-bg);
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none' stroke='%2375747f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 5l4 4 4-4'/%3E%3C/svg%3E");
-background-repeat: no-repeat; background-position: center;
-transition: transform .15s ease, background-color .15s ease;
-}
-.fmstr-cmp-gfq-faq__item[open] > summary::before { transform: rotate(180deg); background-color: var(--c-tint); }
-.fmstr-cmp-gfq-faq__item[open] > summary { color: var(--c-violet-600); }
-.fmstr-cmp-gfq-faq__answer { padding: 0 22px 22px 64px; color: var(--c-fg-2); font-size: 15.5px; line-height: 1.7; }
-.fmstr-cmp-gfq-faq__answer a { color: var(--c-violet-600) !important; text-decoration: none !important; }
-.fmstr-cmp-gfq-faq__answer a:hover { text-decoration: underline !important; }
-
-@media (max-width: 760px) {
-.fmstr-cmp-gfq-faq { padding: 40px 16px; }
-.fmstr-cmp-gfq-faq__intro { font-size: 15.5px; }
-.fmstr-cmp-gfq-faq__item > summary { padding: 16px 16px; font-size: 15.5px; gap: 12px; }
-.fmstr-cmp-gfq-faq__item > summary::before { width: 26px; height: 26px; }
-.fmstr-cmp-gfq-faq__answer { padding: 0 16px 18px 16px; font-size: 15px; line-height: 1.65; }
-}
-</style>
-
-<section class="fmstr-cmp-gfq-faq" aria-labelledby="fmstr-cmp-gfq-faq-h2">
-<div class="fmstr-cmp-gfq-faq__container">
-<h2 class="fmstr-cmp-gfq-faq__h2" id="fmstr-cmp-gfq-faq-h2">Google Forms questionnaire FAQ</h2>
-<p class="fmstr-cmp-gfq-faq__intro">Answers that mirror the FAQPage JSON-LD on the live page.</p>
-<div class="fmstr-cmp-gfq-faq__list">
-<details class="fmstr-cmp-gfq-faq__item"><summary>Is Google Forms a questionnaire or a survey?</summary><div class="fmstr-cmp-gfq-faq__answer">Google Forms is a generic form builder. You can build a questionnaire, a survey, a quiz, an RSVP, or a job application inside it. The naming is about the container, not the use case. The three-column matrix above explains where each one diverges.</div></details>
-<details class="fmstr-cmp-gfq-faq__item"><summary>How do I create a Google Form questionnaire for free?</summary><div class="fmstr-cmp-gfq-faq__answer">Go to forms.google.com, click &ldquo;Blank,&rdquo; add your questions using the &ldquo;+&rdquo; toolbar, configure the settings, and hit &ldquo;Send.&rdquo; It&rsquo;s free on any Google account. The 6-step walkthrough above covers the configuration details.</div></details>
-<details class="fmstr-cmp-gfq-faq__item"><summary>What&rsquo;s the difference between a questionnaire and a survey?</summary><div class="fmstr-cmp-gfq-faq__answer">A questionnaire is a fixed set of structured questions. A survey is a research method that uses questionnaires plus sampling, randomisation, and statistical analysis. All surveys use questionnaires; not all questionnaires are surveys.</div></details>
-<details class="fmstr-cmp-gfq-faq__item"><summary>Does Google Forms have a questionnaire template?</summary><div class="fmstr-cmp-gfq-faq__answer">Yes, several. Open the Google Forms template gallery and scroll to &ldquo;Education&rdquo; or &ldquo;Personal&rdquo; for the closest fits. They&rsquo;re dated and visually generic; most users start from &ldquo;Blank&rdquo; and write their own questions.</div></details>
-<details class="fmstr-cmp-gfq-faq__item"><summary>Can I make a Google Form questionnaire anonymous?</summary><div class="fmstr-cmp-gfq-faq__answer">Partially. You can turn off &ldquo;Collect email addresses&rdquo; in the settings, which removes the most obvious identifier. Google Forms still tracks Google account IDs in the background if you require sign-in, which is the only way to limit one response per person. For true anonymity with dedupe, use a tool like <a href="https://formester.com/questionnaire-maker/">Formester</a> that ships an anonymous-mode toggle.</div></details>
-<details class="fmstr-cmp-gfq-faq__item"><summary>How do I share a Google Form questionnaire with my team?</summary><div class="fmstr-cmp-gfq-faq__answer">Hit &ldquo;Send&rdquo; in the top-right and pick a sharing method: email (Google sends it directly), link (copy and paste anywhere), or embed (paste the HTML snippet into your intranet or Notion page). The link works in Slack, Teams, WhatsApp, or any chat tool.</div></details>
-<details class="fmstr-cmp-gfq-faq__item"><summary>How long should a questionnaire be?</summary><div class="fmstr-cmp-gfq-faq__answer">5 to 12 questions for a customer satisfaction or feedback questionnaire. Up to 20 for an academic or research questionnaire. Past 20, response rates drop sharply. Split anything longer into multiple sections so respondents see a progress bar.</div></details>
-</div>
-</div>
-</section>
-
-<style>
-/* host-link-override */
-.fmstr-cmp-gfq-rel a { text-decoration: none !important; }
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-.fmstr-cmp-gfq-rel {
---c-bg: #f4f4f7; --c-card: #ffffff;
---c-fg-1: #101828; --c-fg-3: #697586;
---c-violet-500: #7f56d9; --c-tint: #f7f3ff; --c-edge: #e4d7ff;
---c-border: #eaecf0; --c-shadow: 0 4px 20px rgba(16,24,40,.06);
-
-background: transparent; padding: 56px 24px;
-font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
-color: var(--c-fg-1);
-}
-.fmstr-cmp-gfq-rel *, .fmstr-cmp-gfq-rel *::before, .fmstr-cmp-gfq-rel *::after { box-sizing: border-box; }
-.fmstr-cmp-gfq-rel__container { max-width: 1180px; margin: 0 auto; }
-.fmstr-cmp-gfq-rel__h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 700; line-height: 1.15; letter-spacing: -.02em; margin: 0; }
-.fmstr-cmp-gfq-rel__intro { color: var(--c-fg-3); font-size: 17px; line-height: 1.6; max-width: 780px; margin: 14px 0 28px; }
-.fmstr-cmp-gfq-rel__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.fmstr-cmp-gfq-rel__card {
-background: var(--c-card); border: 1px solid var(--c-border); border-radius: 14px;
-padding: 18px 20px; display: flex; align-items: center; gap: 14px;
-text-decoration: none !important; color: inherit !important; transition: all .15s ease;
-}
-.fmstr-cmp-gfq-rel__card:hover { border-color: var(--c-edge); box-shadow: var(--c-shadow); transform: translateY(-1px); }
-.fmstr-cmp-gfq-rel__icon { width: 40px; height: 40px; border-radius: 10px; background: var(--c-tint); display: grid; place-items: center; flex-shrink: 0; font-size: 18px; }
-.fmstr-cmp-gfq-rel__text { flex-grow: 1; }
-.fmstr-cmp-gfq-rel__text h4 { font-size: 14.5px; font-weight: 600; color: var(--c-fg-1); margin: 0; }
-.fmstr-cmp-gfq-rel__text small { font-size: 12.5px; color: var(--c-fg-3); display: block; margin-top: 2px; }
-.fmstr-cmp-gfq-rel__arrow { color: var(--c-violet-500); font-size: 18px; }
-
-@media (max-width: 880px) { .fmstr-cmp-gfq-rel__grid { grid-template-columns: 1fr 1fr; gap: 12px; } }
-@media (max-width: 760px) {
-.fmstr-cmp-gfq-rel { padding: 40px 16px; }
-.fmstr-cmp-gfq-rel__intro { font-size: 15.5px; }
-.fmstr-cmp-gfq-rel__card { padding: 16px; gap: 12px; }
-}
-@media (max-width: 540px) { .fmstr-cmp-gfq-rel__grid { grid-template-columns: 1fr; gap: 12px; } }
-</style>
-
-## Final Thoughts
-
-If you want a quick and easy way to collect responses, Google Forms is a solid choice. But if you want more control over design, smarter features, and a faster setup, Formester is the better option.
-
-You can build a professional-looking questionnaire in minutes. Use AI to save time. Add logic and branding to make it yours. And manage all your responses in one place.
-
-So whether you’re gathering feedback, doing research, or just trying to understand your audience better , start with the right tool.
-
-**[Try Formester now](https://app.formester.com/users/sign_up)** and build smarter questionnaires in less time.
-
-<section class="fmstr-cmp-gfq-rel" aria-labelledby="fmstr-cmp-gfq-rel-h2">
-<div class="fmstr-cmp-gfq-rel__container">
-<h2 class="fmstr-cmp-gfq-rel__h2" id="fmstr-cmp-gfq-rel-h2">More from Formester for questionnaires and surveys</h2>
-<p class="fmstr-cmp-gfq-rel__intro">Tools and templates you can pair with this guide.</p>
-<div class="fmstr-cmp-gfq-rel__grid">
-<a class="fmstr-cmp-gfq-rel__card" href="https://formester.com/questionnaire-maker/"><div class="fmstr-cmp-gfq-rel__icon" aria-hidden="true">&#128221;</div><div class="fmstr-cmp-gfq-rel__text"><h4>Questionnaire Maker</h4><small>Formester product page</small></div><span class="fmstr-cmp-gfq-rel__arrow" aria-hidden="true">&rarr;</span></a>
-<a class="fmstr-cmp-gfq-rel__card" href="https://formester.com/blog/survey-vs-questionnaire/"><div class="fmstr-cmp-gfq-rel__icon" aria-hidden="true">&#128203;</div><div class="fmstr-cmp-gfq-rel__text"><h4>Survey vs Questionnaire</h4><small>Decision guide</small></div><span class="fmstr-cmp-gfq-rel__arrow" aria-hidden="true">&rarr;</span></a>
-<a class="fmstr-cmp-gfq-rel__card" href="https://formester.com/templates/categories/questionnaire/"><div class="fmstr-cmp-gfq-rel__icon" aria-hidden="true">&#128218;</div><div class="fmstr-cmp-gfq-rel__text"><h4>Questionnaire templates</h4><small>Browse the library</small></div><span class="fmstr-cmp-gfq-rel__arrow" aria-hidden="true">&rarr;</span></a>
-<a class="fmstr-cmp-gfq-rel__card" href="https://formester.com/blog/best-google-forms-templates/"><div class="fmstr-cmp-gfq-rel__icon" aria-hidden="true">&#11088;</div><div class="fmstr-cmp-gfq-rel__text"><h4>Best Google Forms templates</h4><small>Comparison blog</small></div><span class="fmstr-cmp-gfq-rel__arrow" aria-hidden="true">&rarr;</span></a>
-<a class="fmstr-cmp-gfq-rel__card" href="https://formester.com/blog/how-to-create-a-google-form-with-photo-upload/"><div class="fmstr-cmp-gfq-rel__icon" aria-hidden="true">&#128247;</div><div class="fmstr-cmp-gfq-rel__text"><h4>Photo upload in Google Forms</h4><small>How-to blog</small></div><span class="fmstr-cmp-gfq-rel__arrow" aria-hidden="true">&rarr;</span></a>
-<a class="fmstr-cmp-gfq-rel__card" href="https://formester.com/blog/how-to-create-signup-sheets-in-google-forms/"><div class="fmstr-cmp-gfq-rel__icon" aria-hidden="true">&#128197;</div><div class="fmstr-cmp-gfq-rel__text"><h4>Signup sheets in Google Forms</h4><small>How-to blog</small></div><span class="fmstr-cmp-gfq-rel__arrow" aria-hidden="true">&rarr;</span></a>
-<a class="fmstr-cmp-gfq-rel__card" href="https://formester.com/features/conditional-logic/"><div class="fmstr-cmp-gfq-rel__icon" aria-hidden="true">&#128279;</div><div class="fmstr-cmp-gfq-rel__text"><h4>Conditional logic</h4><small>Formester feature</small></div><span class="fmstr-cmp-gfq-rel__arrow" aria-hidden="true">&rarr;</span></a>
-<a class="fmstr-cmp-gfq-rel__card" href="https://formester.com/features/branding-kit/"><div class="fmstr-cmp-gfq-rel__icon" aria-hidden="true">&#127912;</div><div class="fmstr-cmp-gfq-rel__text"><h4>Branding kit</h4><small>Formester feature</small></div><span class="fmstr-cmp-gfq-rel__arrow" aria-hidden="true">&rarr;</span></a>
-</div>
-</div>
-</section>
-
-
