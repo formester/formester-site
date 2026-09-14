@@ -1991,7 +1991,8 @@ const c13_faqList = [
   {
     id: 1091,
     header: 'What makes Formester better than Typeform?',
-    body: 'More control, better pricing, easier setup, and actual support. You’re not just another user, you’re supported.',
+    body: 'More control, better pricing, easier setup, and actual support. You’re not just another user, you’re supported. Comparing lighter free tools too? See how Formester stacks up as a Tally Forms alternative.',
+    answerHtml: 'More control, better pricing, easier setup, and actual support. You’re not just another user, you’re supported. Comparing lighter free tools too? See how Formester stacks up as a <a href="/tally-forms-alternative/">Tally Forms alternative</a>.',
     body_markdown:
       'More control, better pricing, easier setup, and actual support. You’re not just another user, you’re supported.',
     list: [],

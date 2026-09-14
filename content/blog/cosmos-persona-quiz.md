@@ -89,7 +89,7 @@ Share your quiz easily by sending the link via email, **[creating a QR code](/fe
 ### Conclusion
 The Cosmos Persona Quiz is a fun and creative way to explore your personality with a cosmic twist. 
 
-If you want a fun way to learn about yourself or enjoy time with friends, this quiz takes you on a special journey through space. 
+If you want a fun way to learn about yourself or enjoy time with friends, this quiz takes you on a special journey through space. If animal symbolism is more your thing, the [spirit animal quiz](https://formester.com/templates/whats-your-spirit-animal-quiz-46186/) works the same way.
 
 With **Formester**, making your own Cosmos Persona Quiz is easy. You can customize, publish, and share your quiz in just a few steps.
 

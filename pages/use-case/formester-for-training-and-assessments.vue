@@ -605,8 +605,8 @@ const c5_itemList = [
   {
     id: 1607,
     title: 'Wealth Managers',
-    description: ' Easily collect client info, check risk levels, and stay on top of rules, all in one place.',
-    description_markdown: ' Easily collect client info, check risk levels, and stay on top of rules, all in one place.',
+    description: ' Easily collect client info, check risk levels, and stay on top of rules, all in one place. See Formester for compliance for KYC and audit workflows.',
+    description_markdown: ' Easily collect client info, check risk levels, and stay on top of rules, all in one place. See [Formester for compliance](/use-case/formester-for-compliance/) for KYC and audit workflows.',
     icon: null,
     cardImage: {
       id: 1834,

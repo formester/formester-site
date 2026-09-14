@@ -2256,7 +2256,8 @@
                     <p>
                       Yes. The Product Catalogue element ships on the Free plan, which includes unlimited forms and
                       unlimited responses at no cost. Formester branding shows on Free; you can remove it on the
-                      Personal plan ($13/mo).
+                      Personal plan ($13/mo). See everything the free plan includes on the
+                      <a href="https://formester.com/free-online-order-form-creator/">free online order form creator</a> page.
                     </p>
                     <p><a href="https://formester.com/pricing/">See full pricing →</a></p>
                   </div>
@@ -2663,7 +2664,7 @@ useJsonld([
             name: 'Is the online order form really free?',
             '@type': 'Question',
             acceptedAnswer: {
-              text: 'Yes. The Product Catalogue element ships on the Free plan, which includes unlimited forms and unlimited responses at no cost. Formester branding shows on Free; you can remove it on the Personal plan ($13/mo).',
+              text: 'Yes. The Product Catalogue element ships on the Free plan, which includes unlimited forms and unlimited responses at no cost. Formester branding shows on Free; you can remove it on the Personal plan ($13/mo). See everything the free plan includes on the free online order form creator page.',
               '@type': 'Answer',
             },
           },

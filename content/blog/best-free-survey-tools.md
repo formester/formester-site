@@ -606,7 +606,7 @@ margin: 0 !important;
 <article class="fmstr-cmp-bfst-body__tool">
 <div class="fmstr-cmp-bfst-body__rank"><span class="fmstr-cmp-bfst-body__rank-num">7</span></div>
 <h2 class="fmstr-cmp-bfst-body__h2">SurveySparrow: trial first, then free Basic</h2>
-<p class="fmstr-cmp-bfst-body__tagline">SurveySparrow leads with a 14-day trial of paid features and falls back to a Forever Free Basic plan suited to "students, freelancers, and personal projects". Their published Basic tier on the <a href="https://www.surveysparrow.com/pricing/">pricing page</a> starts at the entry of the paid ladder; the free fallback exists but you have to opt in to it deliberately during signup. Conversational and chat-style surveys are the differentiator.</p>
+<p class="fmstr-cmp-bfst-body__tagline">SurveySparrow leads with a 14-day trial of paid features and falls back to a Forever Free Basic plan suited to "students, freelancers, and personal projects". Their published Basic tier on the <a href="https://www.surveysparrow.com/pricing/">pricing page</a> starts at the entry of the paid ladder; the free fallback exists but you have to opt in to it deliberately during signup. Conversational and chat-style surveys are the differentiator. If the response cap is the problem, our <a href="https://formester.com/surveysparrow-alternative/">SurveySparrow alternative</a> page shows how Formester compares plan by plan.</p>
 
 <ul class="fmstr-cmp-bfst-body__specs">
 <li class="fmstr-cmp-bfst-body__spec"><p class="fmstr-cmp-bfst-body__spec-label">Free plan</p><p class="fmstr-cmp-bfst-body__spec-value">Forever Free Basic tier with limited responses and 1 user; trial unlocks Business features for 14 days</p></li>

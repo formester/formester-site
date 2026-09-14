@@ -1938,7 +1938,8 @@ const c20_faqList = [
   {
     id: 3421,
     header: ' How does Jotform pricing compare to Formester in 2026? ',
-    body: "At 1,000 submissions a month, Formester Personal is $12 per month, billed annually, and Jotform Bronze is $39 per month monthly (or $34 per month billed annually). At 10,000 submissions, Formester Business is $45 per month, billed annually, and Jotform Gold is $99 per month, billed annually. The Formester free plan also gives you unlimited forms vs Jotform's 5.",
+    body: "At 1,000 submissions a month, Formester Personal is $12 per month, billed annually, and Jotform Bronze is $39 per month monthly (or $34 per month billed annually). At 10,000 submissions, Formester Business is $45 per month, billed annually, and Jotform Gold is $99 per month, billed annually. The Formester free plan also gives you unlimited forms vs Jotform's 5. Weighing Jotform against Formstack as well? Read the Jotform vs Formstack comparison. If Typeform is also on your shortlist, our Jotform vs Typeform comparison runs the same cost-per-response numbers for both.",
+    answerHtml: 'At 1,000 submissions a month, Formester Personal is $12 per month, billed annually, and Jotform Bronze is $39 per month monthly (or $34 per month billed annually). At 10,000 submissions, Formester Business is $45 per month, billed annually, and Jotform Gold is $99 per month, billed annually. The Formester free plan also gives you unlimited forms vs Jotform\'s 5. Weighing Jotform against Formstack as well? Read the <a href="/jotform-vs-formstack/">Jotform vs Formstack comparison</a>. If Typeform is also on your shortlist, our <a href="/jotform-vs-typeform/">Jotform vs Typeform comparison</a> runs the same cost-per-response numbers for both.',
     body_markdown: '',
     list: [],
   },
