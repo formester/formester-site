@@ -16,7 +16,7 @@
           <input type="checkbox" class="plan_toggle" v-model="isYearly" />
           <div class="slider round"></div>
         </label>
-        <span>Annual pricing <span class="text__primary">(save 20%)</span></span>
+        <span>Annual pricing <span class="text__primary">(Save 1 month)</span></span>
       </div>
 
       <div class="d-flex d-sm-none justify-content-center align-items-center plan_toggle__switch">
@@ -25,7 +25,7 @@
           <div class="slider round"></div>
         </label>
         <span v-if="!isYearly">Monthly pricing</span>
-        <span v-else>Annual pricing <span class="text__primary">(save 20%)</span></span>
+        <span v-else>Annual pricing <span class="text__primary">(Save 1 month)</span></span>
       </div>
 
       <div class="mw-1200 mx-auto">
