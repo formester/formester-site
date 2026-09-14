@@ -12,7 +12,9 @@
             {{ card.tag }}
           </span>
           <h3 class="fcg-card__title">{{ card.title }}</h3>
-          <p class="fcg-card__body">{{ card.body }}</p>
+          <!-- eslint-disable-next-line vue/no-v-html -->
+          <p v-if="card.bodyHtml" class="fcg-card__body" v-html="card.bodyHtml" />
+          <p v-else class="fcg-card__body">{{ card.body }}</p>
           <div v-if="card.mockHtml" class="fcg-card__mock" v-html="card.mockHtml" />
         </article>
       </div>

@@ -610,7 +610,8 @@ const c6_faqList = [
   {
     id: 2255,
     header: 'How do I ensure my forms are mobile-friendly while using custom branding?',
-    body: 'Every form is automatically optimized for mobile. You can preview how your branded form looks across screen sizes to make sure it stays on-brand and easy to use on any device.',
+    body: 'Every form is automatically optimized for mobile because Formester is a responsive form builder by default. You can preview how your branded form looks across screen sizes to make sure it stays on-brand and easy to use on any device.',
+    answerHtml: 'Every form is automatically optimized for mobile because Formester is a <a href="/responsive-form-builder/">responsive form builder</a> by default. You can preview how your branded form looks across screen sizes to make sure it stays on-brand and easy to use on any device.',
     body_markdown: null,
     list: [],
   },
@@ -789,7 +790,7 @@ useJsonld([
         name: 'How do I ensure my forms are mobile-friendly while using custom branding?',
         '@type': 'Question',
         acceptedAnswer: {
-          text: 'Every form is automatically optimized for mobile. You can preview how your branded form looks across screen sizes to make sure it stays on-brand and easy to use on any device.',
+          text: 'Every form is automatically optimized for mobile because Formester is a responsive form builder by default. You can preview how your branded form looks across screen sizes to make sure it stays on-brand and easy to use on any device.',
           '@type': 'Answer',
         },
       },

@@ -168,6 +168,7 @@ publishedAt: "2026-05-15T03:47:28.261Z"
 <li><a href="https://formester.com/features/summary-analytics/"><strong>Summary analytics</strong></a> - the room-read dashboard, per question, without building charts.</li>
 <li><a href="https://formester.com/features/conditional-logic/"><strong>Conditional logic</strong></a> - show or hide a single question based on an earlier answer.</li>
 <li><a href="https://formester.com/blog/how-to-add-conditional-questions-in-google-forms/"><strong>Conditional questions in Google Forms</strong></a> - what section-level branching can and cannot do.</li>
+<li><a href="https://formester.com/google-forms-vs-microsoft-forms/"><strong>Google Forms vs Microsoft Forms</strong></a> - how the two suites compare on response caps, branching, and admin control.</li>
 <li><a href="https://formester.com/blog/how-to-make-a-questionnaire-in-google-forms/"><strong>Build a questionnaire in Google Forms</strong></a> - structure and question types before you collect anything.</li>
 <li><a href="https://formester.com/blog/how-to-make-a-poll-on-google-forms/"><strong>Make a poll in Google Forms</strong></a> - the quickest single-question setup.</li>
 <li><a href="https://formester.com/blog/how-to-create-signup-sheets-in-google-forms/"><strong>Signup sheets in Google Forms</strong></a> - slots, caps and the workarounds people use.</li>

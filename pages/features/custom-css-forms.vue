@@ -557,7 +557,8 @@ const c6_faqList = [
   {
     id: 2300,
     header: 'Will my custom CSS work on all devices?',
-    body: 'Yes. Every style change is responsive by default, and you can preview how the form looks on desktop, tablet, and mobile before you publish.',
+    body: 'Yes. Formester is a responsive form builder, so every style change is responsive by default, and you can preview how the form looks on desktop, tablet, and mobile before you publish.',
+    answerHtml: 'Yes. Formester is a <a href="/responsive-form-builder/">responsive form builder</a>, so every style change is responsive by default, and you can preview how the form looks on desktop, tablet, and mobile before you publish.',
     body_markdown: null,
     list: [],
   },
@@ -754,7 +755,7 @@ useJsonld([
         name: 'Will my custom CSS work on all devices?',
         '@type': 'Question',
         acceptedAnswer: {
-          text: 'Yes. Every style change is responsive by default, and you can preview how the form looks on desktop, tablet, and mobile before you publish.',
+          text: 'Yes. Formester is a responsive form builder, so every style change is responsive by default, and you can preview how the form looks on desktop, tablet, and mobile before you publish.',
           '@type': 'Answer',
         },
       },

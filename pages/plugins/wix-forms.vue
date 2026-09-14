@@ -243,7 +243,9 @@
                     <h4>Multi-User Collaboration</h4>
                     <p>
                       Formester helps teams work together better. With the multi user collaboration feature many users
-                      manage forms and analyze data as it comes in.
+                      manage forms and analyze data as it comes in. Team invites, shared editing, and field-level
+                      permissions are all part of the
+                      <a href="/forms/">Formester online form builder</a>.
                     </p>
                   </div>
                 </div>

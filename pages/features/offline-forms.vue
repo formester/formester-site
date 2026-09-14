@@ -604,7 +604,8 @@ const c7_faqList = [
   {
     id: 2395,
     header: 'Can I use offline forms on mobile phones and tablets?',
-    body: "Yes. Formester's offline form builder works on Android, iOS, tablets, and laptops. You can even install the form as an app, so it opens and collects data anywhere — with or without a connection.",
+    body: "Yes. Formester's offline form builder works on Android, iOS, tablets, and laptops. You can even install the form as an app, so it opens and collects data anywhere — with or without a connection. Field teams use the same setup as an inspection form builder for site walks with no signal.",
+    answerHtml: 'Yes. Formester\'s offline form builder works on Android, iOS, tablets, and laptops. You can even install the form as an app, so it opens and collects data anywhere — with or without a connection. Field teams use the same setup as an <a href="/inspection-form-builder/">inspection form builder</a> for site walks with no signal.',
     body_markdown: null,
     list: [],
   },
@@ -787,7 +788,7 @@ useJsonld([
         name: 'Can I use offline forms on mobile phones and tablets?',
         '@type': 'Question',
         acceptedAnswer: {
-          text: "Yes. Formester's offline form builder works on Android, iOS, tablets, and laptops. You can even install the form as an app, so it opens and collects data anywhere — with or without a connection.",
+          text: "Yes. Formester's offline form builder works on Android, iOS, tablets, and laptops. You can even install the form as an app, so it opens and collects data anywhere — with or without a connection. Field teams use the same setup as an inspection form builder for site walks with no signal.",
           '@type': 'Answer',
         },
       },

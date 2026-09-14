@@ -140,7 +140,7 @@ Now let's get you started with actualizing all these benefits, by discussing...
 ### Step 6: Integrate Social Sharing Options
 
 * Include social sharing buttons or prompts at the end of the quiz to make it easy for participants to share their quiz results on their social media handles.
-* Customize the sharing messages to include your brand name or hashtag, enabling you to promote your brand to their network.
+* Customize the sharing messages to include your brand name or hashtag, enabling you to promote your brand to their network. Personality quizzes like the [Which Greek God is Your Parent template](https://formester.com/templates/which-greek-god-is-your-parent-46189/) are built for exactly this kind of sharing, since people want to post their result.
 
 ### Step 7: Offer Incentives and Rewards
 

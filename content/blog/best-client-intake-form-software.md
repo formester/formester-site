@@ -155,7 +155,7 @@ publishedAt: "2026-08-20T05:15:01.954Z"
 
 <p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/fillout_c253622a2d.png" alt="Fillout homepage hero screenshot" style="width:100%;max-width:900px;height:auto;border-radius:8px;border:1px solid #e5e7eb;margin:16px 0;" loading="lazy" /></p>
 
-<p>Fillout suits agencies and studios whose client records already live in Airtable or Notion. Intake answers write directly into those databases and update existing records rather than creating duplicates.</p>
+<p>Fillout suits agencies and studios whose client records already live in Airtable or Notion. Intake answers write directly into those databases and update existing records rather than creating duplicates. If your records do not live there, the <a href="https://formester.com/fillout-alternative/">Fillout alternative breakdown</a> shows where Formester covers the same intake work on a free plan.</p>
 
 <p>That matters for repeat clients. A returning customer's intake can update their existing row instead of adding a second one, which is fiddly to arrange in most other tools.</p>
 

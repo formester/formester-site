@@ -170,7 +170,7 @@ font-weight: 500 !important;
 <section class="fmstr-cmp-tmpl-tldr" aria-labelledby="fmstr-cmp-tmpl-tldr-label">
 <div class="fmstr-cmp-tmpl-tldr__container">
 <div class="fmstr-cmp-tmpl-tldr__card"><p class="fmstr-cmp-tmpl-tldr__label" id="fmstr-cmp-tmpl-tldr-label">Quick answer</p>
-<p class="fmstr-cmp-tmpl-tldr__body">A registration form captures who someone is, what they want, and how they will pay, in one submission. The <strong>7 types</strong> you will actually use are event, course, webinar, conference, membership, school, and account. Each ships with a different field set, payment path, and confirmation email. Start from a free registration form template or generate one with the AI form generator, then follow the 6-step build below to go live today.</p>
+<p class="fmstr-cmp-tmpl-tldr__body">A registration form captures who someone is, what they want, and how they will pay, in one submission. The <strong>7 types</strong> you will actually use are event, course, webinar, conference, membership, school, and account. Each ships with a different field set, payment path, and confirmation email. Start from a free registration form template or generate one with the AI form generator, then follow the 6-step build below to go live today. Both routes run on the <a href="https://formester.com/free-form-creator/">free form creator</a>, so there is no card to enter and no cap on responses.</p>
 </div>
 </div>
 </section>
@@ -675,7 +675,7 @@ transition: transform .15s ease, background-color .15s ease;
 
 <details class="fmstr-cmp-tmpl-faq__item">
 <summary>Can I embed a registration form on my website?</summary>
-<div class="fmstr-cmp-tmpl-faq__answer">Yes. Every Formester form ships with an iframe embed code, a JavaScript embed, and a standalone link. Drop the iframe into your event page, landing page, or blog post. The form inherits your site's width and stays responsive on mobile.</div>
+<div class="fmstr-cmp-tmpl-faq__answer">Yes. Every Formester form ships with an iframe embed code, a JavaScript embed, and a standalone link. Drop the iframe into your event page, landing page, or blog post. The form inherits your site's width and stays responsive on mobile. If your site runs on GoDaddy, the <a href="https://formester.com/godaddy-form-builder/">GoDaddy form builder walkthrough</a> shows where the HTML section lives.</div>
 </details>
 
 </div>

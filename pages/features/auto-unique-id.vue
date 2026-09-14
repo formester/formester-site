@@ -607,7 +607,8 @@ const c6_faqList = [
   {
     id: 2240,
     header: 'Is the Auto Unique ID field free to use?',
-    body: "Yes. Add the Auto Unique ID field to any form on Formester's free plan, set your prefix and format, and start collecting trackable submissions — no code and no credit card required.",
+    body: "Yes. Add the Auto Unique ID field to any form on Formester's free plan, set your prefix and format, and start collecting trackable submissions — no code and no credit card required. For a ready example, the bank account enrolment form template gives every applicant a reference number.",
+    answerHtml: 'Yes. Add the Auto Unique ID field to any form on Formester\'s free plan, set your prefix and format, and start collecting trackable submissions — no code and no credit card required. For a ready example, the <a href="/templates/bank-account-enrolment-form-3043/">bank account enrolment form</a> template gives every applicant a reference number.',
     body_markdown: null,
     list: [],
   },
@@ -794,7 +795,7 @@ useJsonld([
         name: 'Is the Auto Unique ID field free to use?',
         '@type': 'Question',
         acceptedAnswer: {
-          text: "Yes. Add the Auto Unique ID field to any form on Formester's free plan, set your prefix and format, and start collecting trackable submissions — no code and no credit card required.",
+          text: "Yes. Add the Auto Unique ID field to any form on Formester's free plan, set your prefix and format, and start collecting trackable submissions — no code and no credit card required. For a ready example, the bank account enrolment form template gives every applicant a reference number.",
           '@type': 'Answer',
         },
       },

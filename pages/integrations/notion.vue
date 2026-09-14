@@ -455,7 +455,8 @@ const c6_faqList = [
   {
     id: 2774,
     header: 'What does the Notion integration do?',
-    body: 'It syncs form submissions to a Notion database automatically — each response becomes an entry with your form fields as properties.',
+    body: 'It syncs form submissions to a Notion database automatically — each response becomes an entry with your form fields as properties. If your team tracks work in Airtable instead, the Airtable integration works the same way.',
+    answerHtml: 'It syncs form submissions to a Notion database automatically — each response becomes an entry with your form fields as properties. If your team tracks work in Airtable instead, the <a href="/integrations/airtable/">Airtable integration</a> works the same way.',
     body_markdown: '',
     list: [],
   },
@@ -617,7 +618,7 @@ useHead({
 useJsonld([
   {
     '@context': 'https://schema.org',
-    type: '{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does the Notion integration do?", "acceptedAnswer": {"@type": "Answer", "text": "It syncs form submissions to a Notion database automatically — each response becomes an entry with your form fields as properties."}}, {"@type": "Question", "name": "How do I connect Notion?", "acceptedAnswer": {"@type": "Answer", "text": "From your form\'s Automate tab, add the Notion integration, authorize your workspace, pick the destination database, and publish."}}, {"@type": "Question", "name": "Can different forms feed different databases?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — the integration is configured per form, so each form can sync to its own database."}}, {"@type": "Question", "name": "What if syncing stops?", "acceptedAnswer": {"@type": "Answer", "text": "Reconnect Notion from the Automate tab. Your submissions always remain safely stored in Formester."}}, {"@type": "Question", "name": "What is Formester?", "acceptedAnswer": {"@type": "Answer", "text": "Formester is an online form builder for creating forms, surveys, and quizzes with a drag-and-drop editor or AI. It connects with the tools your team already uses — Google Sheets, Slack, HubSpot, Zapier, and more — so your form data flows wherever you need it."}}]}',
+    type: '{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does the Notion integration do?", "acceptedAnswer": {"@type": "Answer", "text": "It syncs form submissions to a Notion database automatically — each response becomes an entry with your form fields as properties. If your team tracks work in Airtable instead, the Airtable integration works the same way."}}, {"@type": "Question", "name": "How do I connect Notion?", "acceptedAnswer": {"@type": "Answer", "text": "From your form\'s Automate tab, add the Notion integration, authorize your workspace, pick the destination database, and publish."}}, {"@type": "Question", "name": "Can different forms feed different databases?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — the integration is configured per form, so each form can sync to its own database."}}, {"@type": "Question", "name": "What if syncing stops?", "acceptedAnswer": {"@type": "Answer", "text": "Reconnect Notion from the Automate tab. Your submissions always remain safely stored in Formester."}}, {"@type": "Question", "name": "What is Formester?", "acceptedAnswer": {"@type": "Answer", "text": "Formester is an online form builder for creating forms, surveys, and quizzes with a drag-and-drop editor or AI. It connects with the tools your team already uses — Google Sheets, Slack, HubSpot, Zapier, and more — so your form data flows wherever you need it."}}]}',
   },
   {
     '@context': 'https://schema.org',

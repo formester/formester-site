@@ -36,7 +36,9 @@
               </span>
             </button>
 
-            <div v-show="openId === item.id" class="faq-answer">
+            <!-- eslint-disable-next-line vue/no-v-html -->
+            <div v-if="item.answerHtml" v-show="openId === item.id" class="faq-answer" v-html="item.answerHtml" />
+            <div v-else v-show="openId === item.id" class="faq-answer">
               {{ item.answer }}
             </div>
           </div>
@@ -90,6 +92,7 @@ const resolvedFaqs = computed(() =>
     id: faq.id ?? i,
     question: faq.question || faq.header,
     answer: toPlainText(faq.answer || faq.body),
+    answerHtml: faq.answerHtml || null,
   })),
 )
 
