@@ -664,8 +664,6 @@ a.art-author__name:hover {
 }
 
 .nuxt-content > p:first-of-type {
-  font-size: 19px;
-  line-height: 1.65;
   color: var(--fg-1);
 }
 
@@ -914,6 +912,187 @@ a.art-author__name:hover {
 .nuxt-content .cta--brand {
   background: var(--violet-25);
   border-color: var(--border-violet);
+}
+
+/* Editorial product CTA: calm, useful and distinct from article prose */
+.nuxt-content .article-product-cta {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px;
+  gap: 28px;
+  align-items: center;
+  overflow: hidden;
+  margin: 40px 0;
+  padding: 34px 36px;
+  border: 1px solid #d9ccf7;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #fbfaff 0%, #f3eeff 100%);
+  box-shadow: 0 14px 35px rgba(74, 45, 135, 0.08);
+}
+.nuxt-content .article-product-cta::after {
+  content: '';
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  right: -126px;
+  top: -132px;
+  border-radius: 50%;
+  background: rgba(100, 52, 208, 0.08);
+}
+.nuxt-content .article-product-cta__copy {
+  position: relative;
+  z-index: 1;
+}
+.nuxt-content .article-product-cta__eyebrow {
+  margin: 0 0 10px;
+  color: var(--violet-600);
+  font-size: 11px;
+  line-height: 1.2;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.nuxt-content .article-product-cta__title {
+  max-width: 470px;
+  margin: 0 0 12px;
+  color: #241544;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.02em;
+}
+.nuxt-content .article-product-cta__body {
+  max-width: 500px;
+  margin: 0 0 22px;
+  color: var(--fg-2);
+  font-size: 16px;
+  line-height: 1.65;
+}
+.nuxt-content .article-product-cta__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 11px;
+}
+.nuxt-content .article-product-cta__actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 18px;
+  border-radius: 9px;
+  background: var(--violet-500);
+  color: #fff;
+  font-size: 14px;
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(100, 52, 208, 0.16);
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+.nuxt-content .article-product-cta__actions a:hover,
+.nuxt-content .article-product-cta__actions a:focus {
+  background: var(--violet-700);
+  color: #fff;
+  transform: translateY(-1px);
+}
+.nuxt-content .article-product-cta__actions > span {
+  color: #57486f;
+  font-size: 13px;
+  font-weight: var(--fw-medium);
+}
+.nuxt-content .article-product-cta__preview {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  min-height: 184px;
+}
+.nuxt-content .article-product-cta__preview::before {
+  content: '';
+  position: absolute;
+  width: 152px;
+  height: 186px;
+  border-radius: 12px;
+  background: #d9ccf7;
+  transform: rotate(7deg) translate(8px, 4px);
+}
+.nuxt-content .article-product-cta__sheet {
+  position: relative;
+  width: 156px;
+  height: 194px;
+  padding: 24px 20px;
+  border: 1px solid rgba(83, 56, 158, 0.12);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 14px 24px rgba(53, 32, 102, 0.13);
+  transform: rotate(-3deg);
+}
+.nuxt-content .article-product-cta__line,
+.nuxt-content .article-product-cta__field,
+.nuxt-content .article-product-cta__choice {
+  display: block;
+}
+.nuxt-content .article-product-cta__line {
+  width: 82px;
+  height: 5px;
+  margin-bottom: 11px;
+  border-radius: 4px;
+  background: #d8d0e5;
+}
+.nuxt-content .article-product-cta__line--title {
+  width: 70px;
+  height: 8px;
+  margin-bottom: 18px;
+  background: #35245f;
+}
+.nuxt-content .article-product-cta__line--short {
+  width: 50px;
+  margin-top: 16px;
+}
+.nuxt-content .article-product-cta__field {
+  width: 104px;
+  height: 27px;
+  margin-top: 8px;
+  border: 1.5px solid #9877df;
+  border-radius: 5px;
+  background: #faf8ff;
+}
+.nuxt-content .article-product-cta__choice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 9px;
+}
+.nuxt-content .article-product-cta__choice i {
+  width: 10px;
+  height: 10px;
+  border: 1.5px solid #9877df;
+  border-radius: 3px;
+}
+.nuxt-content .article-product-cta__choice b {
+  width: 48px;
+  height: 4px;
+  border-radius: 4px;
+  background: #d8d0e5;
+}
+
+@media (max-width: 640px) {
+  .nuxt-content .article-product-cta {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 28px 24px;
+  }
+  .nuxt-content .article-product-cta__title {
+    font-size: 23px;
+  }
+  .nuxt-content .article-product-cta__preview {
+    min-height: 150px;
+    order: -1;
+    transform: scale(0.88);
+  }
+  .nuxt-content .article-product-cta__actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
 /* "Why Formester's X is the better choice" block: centred title and CTA,

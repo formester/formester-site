@@ -1,680 +1,179 @@
 ---
 slug: "how-to-make-canva-pdf-fillable"
-title: "How to Make a Canva PDF Fillable (3 Methods, 2026)"
-description: "Learn how to turn your Canva PDF into a fillable form in minutes. Step-by-step guide for making interactive PDFs easily."
-metaTitle: "How to Make a Canva PDF Fillable (3 Methods, 2026)"
-metaDescription: "Make a Canva PDF fillable 3 ways: convert in Formester, edit in Adobe Acrobat, or rebuild as an online form. Step-by-step with screenshots and video."
-keywords: "how to make canva pdf fillable,\nfillable pdf form,\ncanva pdf,\npdf editor"
-author: "Harish Kumar"
-authorProfile: "https://www.linkedin.com/in/harish-kumar2424/"
-coverImgAlt: "a blog post cover about how to make canva pdf fillable"
+title: "How to Make a Canva PDF Fillable for Free (2026)"
+description: "Export your Canva design, add real text fields, checkboxes, radio buttons, and dropdowns, then download a fillable PDF free. No signup or watermark."
+metaTitle: "How to Make a Canva PDF Fillable for Free"
+metaDescription: "Export your Canva design, add real text fields, checkboxes, radio buttons, and dropdowns, then download a fillable PDF free. No signup or watermark."
+keywords: "canva fillable pdf, how to make a canva pdf fillable, create fillable pdf in canva, fillable pdf canva"
+author: "Ankit Singhaniya"
+authorProfile: "https://linkedin.com/in/ankitsinghaniyaz"
+coverImgAlt: "how to make a Canva PDF fillable for free"
 featured: false
 coverImg: {"url":"https://formester-strapi.s3.ap-south-1.amazonaws.com/How_to_Make_User_Research_Survey_11_04d7341a26.png","width":1214,"height":630}
 metaImage: []
-jsonld: []
+jsonld: [{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can you create a fillable PDF directly in Canva?","acceptedAnswer":{"@type":"Answer","text":"Canva can design a form and edit the visual content of a PDF, but downloading the design does not add native form fields for other people to complete. Export the design as a PDF, then add the interactive fields in a PDF form editor."}},{"@type":"Question","name":"Can I make a Canva PDF fillable for free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Formester's browser editor lets you upload a Canva PDF, add supported fields, and download the fillable file without signing up or adding a watermark."}},{"@type":"Question","name":"Which fields can I add to a Canva PDF?","acceptedAnswer":{"@type":"Answer","text":"You can add single-line text, multiline text, checkboxes, radio buttons, dropdowns, required fields, and default values. You can also print static text onto the PDF."}},{"@type":"Question","name":"Will the Canva design stay the same?","acceptedAnswer":{"@type":"Answer","text":"Yes. The original page remains in place, and the editor puts interactive fields over the spaces you prepared. It does not rewrite the existing text or graphics in the PDF."}},{"@type":"Question","name":"Does Formester upload or store my Canva PDF?","acceptedAnswer":{"@type":"Answer","text":"No. Ordinary editing, preview, and download happen in your browser. The file is only uploaded if you later choose a separate account-based save or automation workflow."}},{"@type":"Question","name":"What if I want people to complete the form through a link?","acceptedAnswer":{"@type":"Answer","text":"Turn the PDF into an online form instead. A hosted form gives you a shareable link, mobile-friendly questions, validation, and responses in one dashboard. Use a fillable PDF when the completed document itself is the required output."}}]}]
 createdAt: "2025-04-24T17:30:56.515Z"
-updatedAt: "2026-06-08T11:38:30.813Z"
-publishedAt: "2026-06-05T02:14:37.000Z"
+updatedAt: "2026-09-18T00:00:00.000Z"
+publishedAt: "2026-09-18T00:00:00.000Z"
 ---
-<style>
-.fmstr-cmp-tmpl-tldr a { text-decoration: none !important; }
-.fmstr-cmp-tmpl-tldr {
---c-card: #f7f3ff;
---c-fg-1: #101828; --c-fg-2: #475467; --c-fg-3: #697586;
---c-violet-500: #7f56d9; --c-violet-600: #6941c6; --c-violet-700: #5b34b1;
---c-edge: #e4d7ff; --c-border: #d6c2f7;
---c-shadow: 0 1px 3px rgba(16,24,40,.05);
-background: transparent;
-padding: 28px 0 40px;
-font-family: inherit;
-color: var(--c-fg-1);
-text-align: left !important;
-}
-.fmstr-cmp-tmpl-tldr *, .fmstr-cmp-tmpl-tldr *::before, .fmstr-cmp-tmpl-tldr *::after { box-sizing: border-box; }
-.fmstr-cmp-tmpl-tldr__container { max-width: 1200px; margin: 0 auto; }
-.fmstr-cmp-tmpl-tldr__card {
-background: var(--c-card);
-border: 1px solid var(--c-border);
-border-left: 4px solid var(--c-violet-500);
-border-radius: 14px;
-padding: 22px 26px;
-box-shadow: var(--c-shadow);
-display: flex; flex-direction: column; gap: 10px;
-}
-.fmstr-cmp-tmpl-tldr__label {
-font-size: 12px !important;
-font-weight: 700 !important;
-letter-spacing: 0.08em !important;
-text-transform: uppercase;
-color: var(--c-violet-700) !important;
-display: inline-flex;
-align-items: center;
-gap: 8px;
-margin: 0 !important;
-}
-.fmstr-cmp-tmpl-tldr__label::before {
-content: "";
-width: 8px; height: 8px; border-radius: 9999px;
-background: var(--c-violet-500);
-display: inline-block;
-}
-.fmstr-cmp-tmpl-tldr__body {
-font-size: 16px !important;
-line-height: 1.65 !important;
-color: var(--c-fg-1);
-margin: 0 !important;
-font-weight: 500 !important;
-}
-.fmstr-cmp-tmpl-tldr__body strong { color: var(--c-violet-700); font-weight: 700; }
+You designed a workbook, application, checklist, or client document in Canva. Now you want people to type into it without changing the layout.
 
-@media (max-width: 540px) {
-.fmstr-cmp-tmpl-tldr { padding: 20px 0 28px; }
-.fmstr-cmp-tmpl-tldr__card { padding: 18px 20px; }
-.fmstr-cmp-tmpl-tldr__body { font-size: 15px !important; }
-}
-</style>
+A Canva fillable PDF needs one extra step. Design the document in Canva, download it as a PDF, then add real form fields in a PDF editor. Formester's free browser tool lets you do this without Adobe Acrobat, an account, or a watermark.
 
-<section class="fmstr-cmp-tmpl-tldr" aria-labelledby="fmstr-cmp-tmpl-tldr-label">
-<div class="fmstr-cmp-tmpl-tldr__container">
-<div class="fmstr-cmp-tmpl-tldr__card">
-<p class="fmstr-cmp-tmpl-tldr__label" id="fmstr-cmp-tmpl-tldr-label">Quick answer</p>
-<p class="fmstr-cmp-tmpl-tldr__body">To make a Canva PDF fillable, download your Canva design as a PDF, upload it to Formester (or Adobe Acrobat), and the tool auto-detects fields and converts them to fillable inputs. The respondent can then complete the form online and submit responses to your dashboard. The 3 methods below cover the Formester web flow, the Adobe Acrobat desktop flow, and rebuilding the document as a native online form.</p>
-</div>
-</div>
-</section>
-
-
-<style>
-/* host-link-override */
-.fmstr-cmp-cpf-body a { text-decoration: none !important; }
-.fmstr-cmp-cpf-body {
---c-fg-1: #101828; --c-fg-2: #475467; --c-fg-3: #697586;
---c-violet-600: #6941c6;
-background: transparent; padding: 24px;
-font-family: inherit;
-color: var(--c-fg-1);
-}
-.fmstr-cmp-cpf-body *, .fmstr-cmp-cpf-body *::before, .fmstr-cmp-cpf-body *::after { box-sizing: border-box; }
-.fmstr-cmp-cpf-body__container { max-width: 820px; margin: 0 auto; }
-.fmstr-cmp-cpf-body__sub { font-size: 17px !important; line-height: 1.6 !important; color: var(--c-fg-3); font-style: italic; margin: 0 0 24px !important; }
-.fmstr-cmp-cpf-body__intro p { font-size: 17px !important; line-height: 1.7 !important; color: var(--c-fg-2); margin: 0 0 16px !important; }
-.fmstr-cmp-cpf-body__intro a { color: var(--c-violet-600) !important; text-decoration: none !important; font-weight: 500; }
-.fmstr-cmp-cpf-body__intro a:hover { text-decoration: underline !important; }
-@media (max-width: 600px) {
-.fmstr-cmp-cpf-body { padding: 16px; }
-.fmstr-cmp-cpf-body__sub { font-size: 16px !important; }
-.fmstr-cmp-cpf-body__intro p { font-size: 16px !important; }
-}
-</style>
-
-<section class="fmstr-cmp-cpf-body">
-<div class="fmstr-cmp-cpf-body__container">
-
-<p class="fmstr-cmp-cpf-body__sub">Convert your Canva PDF to a fillable form online, in Adobe Acrobat, or rebuild it as a web form. Pick the method that fits your workflow.</p>
-
-<div class="fmstr-cmp-cpf-body__intro">
-
-To make a Canva PDF fillable, download your Canva design as a PDF, upload it to Formester (or Adobe Acrobat), and the tool auto-detects fields and converts them to fillable inputs. The respondent can then complete the form online and submit responses to your dashboard. The 3 methods below cover the Formester web flow, the Adobe Acrobat desktop flow, and rebuilding the document as a native online form.
-
+<div class="tldr">
+<p>Quick answer</p>
+<ul>
+<li>Finish the layout in Canva and download it as <strong>PDF Standard</strong>.</li>
+<li>Open Formester's <a href="/tools/create-fillable-pdf/">free fillable PDF editor</a> and upload the file.</li>
+<li>Add text fields, checkboxes, radio buttons, or dropdowns over the spaces in your design.</li>
+<li>Test the fields, then download a real interactive PDF that other people can fill in.</li>
+</ul>
 </div>
 
+## Can you make a fillable PDF in Canva?
+
+Canva can create the design, but its text boxes are not PDF form fields. A text box that you add while designing can only be changed by someone who edits the Canva project. It does not become a space that a recipient can type into after downloading the PDF.
+
+A fillable PDF contains interactive fields. The recipient opens the file in a PDF viewer, clicks a field, types an answer, checks a box, or picks an option. They can then save the completed document and send it back.
+
+Use Canva for the page layout, labels, colors, and branding. Use a PDF form editor after export to add the interactive layer.
+
+<div class="note"><p>A designer in <a href="https://www.reddit.com/r/graphic_design/comments/1dl6432/adding_fillable_forms_to_canva_pdf/">a Reddit r/graphic_design thread about fillable Canva workbooks</a> wanted to keep the Canva fonts and images while adding fields for notes. After LibreOffice changed the design and Adobe failed to open the PDF, they used a free browser PDF editor.</p></div>
+
+## Choose the output before you start
+
+Do you need the completed document back, or do you need the answers in a dashboard? The right workflow depends on that final output.
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>Your goal</th><th>Use this output</th><th>What the recipient does</th></tr></thead>
+<tbody>
+<tr><td>Keep the exact Canva layout and receive a completed file</td><td>Fillable PDF</td><td>Opens the PDF, completes the fields, saves it, and sends it back</td></tr>
+<tr><td>Share a link and collect responses in one place</td><td>Online form</td><td>Opens a web page and submits the answers</td></tr>
+</tbody>
+</table>
 </div>
-</section>
 
-<style>
-.fmstr-cmp-tmpl-steps a { text-decoration: none !important; }
-.fmstr-cmp-tmpl-steps {
---c-card: #ffffff;
---c-fg-1: #101828; --c-fg-2: #475467; --c-fg-3: #697586;
---c-violet-500: #7f56d9; --c-violet-600: #6941c6; --c-violet-700: #5b34b1;
---c-tint: #f7f3ff; --c-edge: #e4d7ff;
---c-border: #eaecf0;
---c-shadow: 0 1px 3px rgba(16,24,40,.05);
-background: transparent;
-padding: 48px 0;
-font-family: inherit;
-color: var(--c-fg-1);
-text-align: left !important;
-overflow-x: hidden;
-}
-.fmstr-cmp-tmpl-steps *, .fmstr-cmp-tmpl-steps *::before, .fmstr-cmp-tmpl-steps *::after { box-sizing: border-box; }
-.fmstr-cmp-tmpl-steps > *, .fmstr-cmp-tmpl-steps > * > * { min-width: 0; }
-.fmstr-cmp-tmpl-steps__container { max-width: 1200px; margin: 0 auto; }
-.fmstr-cmp-tmpl-steps__head { margin: 0 0 28px !important; }
-.fmstr-cmp-tmpl-steps__h2 {
-font-size: clamp(26px, 3vw, 36px) !important; font-weight: 700 !important; line-height: 1.15 !important;
-letter-spacing: -.02em !important; margin: 0 !important; color: var(--c-fg-1);
-}
-.fmstr-cmp-tmpl-steps__intro { color: var(--c-fg-3); font-size: 17px !important; line-height: 1.6 !important; margin: 14px 0 0 !important; }
-.fmstr-cmp-tmpl-steps__list {
-display: flex; flex-direction: column; gap: 14px;
-counter-reset: step-counter;
-margin: 0; padding: 0; list-style: none;
-}
-.fmstr-cmp-tmpl-steps__item {
-background: var(--c-card);
-border: 1px solid var(--c-border);
-border-radius: 14px;
-padding: 22px 24px;
-box-shadow: var(--c-shadow);
-display: flex; gap: 18px;
-align-items: flex-start;
-min-width: 0;
-}
-.fmstr-cmp-tmpl-steps__num {
-flex-shrink: 0;
-width: 38px; height: 38px; border-radius: 10px;
-background: var(--c-tint);
-border: 1px solid var(--c-edge);
-color: var(--c-violet-700) !important;
-font-weight: 800; font-size: 16px;
-display: inline-flex; align-items: center; justify-content: center;
-}
-.fmstr-cmp-tmpl-steps__main { flex: 1; min-width: 0; }
-.fmstr-cmp-tmpl-steps__title {
-font-size: 17px !important; font-weight: 700 !important; line-height: 1.3 !important;
-color: var(--c-fg-1); margin: 0 0 6px !important;
-}
-.fmstr-cmp-tmpl-steps__body {
-font-size: 15px !important; line-height: 1.6 !important;
-color: var(--c-fg-2); margin: 0 !important;
-}
+This guide covers the first option. The result stays a PDF and keeps the Canva design. If you want a shareable link, validation, conditional logic, and a response dashboard, follow the separate guide to [create an online form from a PDF](/blog/create-online-form-from-pdf/). That is a different final product, not another way to make the same PDF file fillable.
 
-@media (max-width: 540px) {
-.fmstr-cmp-tmpl-steps { padding: 36px 0; }
-.fmstr-cmp-tmpl-steps__item { padding: 18px 20px; gap: 14px; }
-.fmstr-cmp-tmpl-steps__num { width: 34px; height: 34px; font-size: 15px; }
-.fmstr-cmp-tmpl-steps__title { font-size: 16px !important; }
-.fmstr-cmp-tmpl-steps__body { font-size: 14.5px !important; }
-}
-</style>
+## Prepare your Canva design for fillable fields
 
-<section class="fmstr-cmp-tmpl-steps" aria-labelledby="fmstr-cmp-tmpl-steps-h2">
-<div class="fmstr-cmp-tmpl-steps__container">
-<div class="fmstr-cmp-tmpl-steps__head">
-<h2 class="fmstr-cmp-tmpl-steps__h2" id="fmstr-cmp-tmpl-steps-h2">Pick a method and follow the steps</h2>
-<p class="fmstr-cmp-tmpl-steps__intro">Three methods. Formester is fastest; Acrobat is desktop-grade; rebuilding as a web form gives you a dashboard for responses.</p>
-</div>
-<ol class="fmstr-cmp-tmpl-steps__list">
+A few layout choices make the finished form easier to complete.
 
-<li class="fmstr-cmp-tmpl-steps__item">
-<span class="fmstr-cmp-tmpl-steps__num" aria-hidden="true">1</span>
-<div class="fmstr-cmp-tmpl-steps__main">
-<h3 class="fmstr-cmp-tmpl-steps__title">Method 1: Convert in Formester (web)</h3>
-<p class="fmstr-cmp-tmpl-steps__body">In Canva, download your design as a PDF. Go to Formester's PDF-to-form converter, upload the PDF. Formester auto-detects text boxes, checkboxes, and signatures. Customize, then publish.</p>
-</div>
+- **Leave enough blank space.** A name may fit on one line, but an address or written answer needs a larger area.
+- **Put labels outside the blank areas.** The PDF editor adds fields on top of the page. Keep labels such as Name, Email, and Comments above or beside those spaces.
+- **Use visible boxes or lines.** They show you where each interactive field should go after export.
+- **Keep choices easy to scan.** Give each checkbox or radio option its own line when possible.
+- **Use a standard page size.** Letter or A4 works well in common PDF viewers and on office printers.
+- **Check the font size.** The document may look good on your large Canva canvas but feel cramped at its real printed size.
+
+You do not need to create fake input text in Canva. Add only the labels and empty spaces. The recipient's answer will come from the interactive field you place later.
+
+## How to make a Canva fillable PDF
+
+<ol class="steps">
+<li>
+<h3>Download the design from Canva</h3>
+<p>Open the finished design and click <strong>Share</strong>, then <strong>Download</strong>. Choose <strong>PDF Standard</strong> for a form that people will mostly complete on screen. Use <strong>PDF Print</strong> only when print quality matters more than file size.</p>
+<p>Download the file and open it once. Check that every page, label, line, and graphic appears in the right place before you add fields.</p>
 </li>
-
-<li class="fmstr-cmp-tmpl-steps__item">
-<span class="fmstr-cmp-tmpl-steps__num" aria-hidden="true">2</span>
-<div class="fmstr-cmp-tmpl-steps__main">
-<h3 class="fmstr-cmp-tmpl-steps__title">Method 2: Convert in Adobe Acrobat (desktop)</h3>
-<p class="fmstr-cmp-tmpl-steps__body">Open the Canva PDF in Adobe Acrobat Pro. Click Tools → Prepare Form. Acrobat auto-detects form fields. Adjust field types and properties. Save as a fillable PDF.</p>
-</div>
+<li>
+<h3>Open the free PDF editor</h3>
+<p>Go to Formester's <a href="/tools/create-fillable-pdf/">Create a Fillable PDF tool</a>. You do not need to create an account. Your document stays in your browser during ordinary editing, preview, and download.</p>
 </li>
-
-<li class="fmstr-cmp-tmpl-steps__item">
-<span class="fmstr-cmp-tmpl-steps__num" aria-hidden="true">3</span>
-<div class="fmstr-cmp-tmpl-steps__main">
-<h3 class="fmstr-cmp-tmpl-steps__title">Method 3: Rebuild as a native online form</h3>
-<p class="fmstr-cmp-tmpl-steps__body">Use a form builder to recreate the Canva design as a web form. Best for getting submissions into a dashboard, syncing to a CRM, or running analytics on responses.</p>
-</div>
+<li>
+<h3>Upload the Canva PDF</h3>
+<p>Choose the PDF you downloaded from Canva. The editor accepts files up to 25 MB and 100 pages. It adds new fields to the document, so start with a normal PDF that does not already contain form fields.</p>
 </li>
-
+<li>
+<h3>Add fields over the blank spaces</h3>
+<p>Pick a field type, then place it over the matching area in your design. Drag or resize the field until it fits.</p>
+<ul>
+<li><strong>Text</strong> works for a name, email address, phone number, or short answer.</li>
+<li><strong>Multiline text</strong> works for comments, notes, and workbook answers.</li>
+<li><strong>Checkbox</strong> works when someone may select one or more separate items.</li>
+<li><strong>Radio buttons</strong> work when someone must choose one option from a group.</li>
+<li><strong>Dropdown</strong> works for a longer list that would take too much room on the page.</li>
+</ul>
+<p>Give each field a clear internal name, such as full_name or project_notes. The name helps you tell fields apart while editing. It does not appear as a visible label on the page, so keep the reader-facing label in the Canva design.</p>
+</li>
+<li>
+<h3>Set required fields and default values</h3>
+<p>Mark a field as required when the document should not be considered complete without it. You can also add a default value when the same answer should appear before the recipient starts.</p>
+<p>Required-field behavior depends on the PDF viewer. Some viewers warn the recipient or block an incomplete submission, while others do not enforce the flag. Do not rely on it as your only check for missing answers.</p>
+</li>
+<li>
+<h3>Fill and test the PDF</h3>
+<p>Use <strong>Fill & test</strong> to enter sample answers. Try the longest answer you expect, select every choice, and move through the form with the Tab key.</p>
+<p>Open <strong>Preview PDF</strong> to check the actual generated file. Sample answers become saved default values, so clear every test value that you do not want recipients to see. Preview the clean version again before the final download.</p>
+</li>
+<li>
+<h3>Download the interactive PDF</h3>
+<p>Download the interactive version when you want recipients to type into the fields. Keep your Canva source and an untouched exported PDF as backup copies because the browser editor does not save an editable project after you leave or refresh the page.</p>
+</li>
 </ol>
+
+## Check the file before you send it
+
+Download a separate test copy and open it in the viewer your recipients are likely to use. PDF field support can vary between a browser tab, Adobe Reader, macOS Preview, and a phone viewer. Keep the editor open while you test.
+
+Run through this short check:
+
+- Type a short and a long answer into every text field.
+- Confirm that multiline answers stay inside their boxes.
+- Check that only one radio option can be selected in each group.
+- Make sure every dropdown contains the right choices.
+- Use the Tab key and confirm that moving between fields feels sensible.
+- Save the completed PDF, close it, and reopen it to confirm the answers remain.
+- Try the file on a phone if mobile completion matters.
+
+After testing, return to the open editor and clear every sample answer that is not an intentional default. Preview it once more, then download the clean recipient copy. If one viewer does not display or save the fields correctly, tell recipients which viewer to use.
+
+## What the free editor does and does not do
+
+The editor is designed for one clear job: add new native fields to an existing PDF and download the result.
+
+The [supported fillable fields](/features/create-fillable-pdf-forms/#fillable-fields) include:
+
+- Single-line and multiline text fields
+- Checkboxes, radio buttons, and dropdowns
+- Required fields and default values
+- Static text printed onto the PDF
+- Interactive or flattened downloads
+- Up to 25 MB, 100 pages, and 300 added fields
+
+It does not edit the words or graphics already printed in the Canva PDF. It also does not run OCR, save a cloud project, or add a cryptographic digital signature. If you refresh the page before downloading, your field layout is lost.
+
+A flattened download prints the entered values onto the document and removes the new interactive fields. Use that only when you want a final, non-editable copy. Use the interactive download when another person still needs to complete the form.
+
+<div class="article-product-cta">
+<div class="article-product-cta__copy">
+<p class="article-product-cta__eyebrow">Free Canva PDF workflow</p>
+<p class="article-product-cta__title">Make your Canva PDF fillable</p>
+<p class="article-product-cta__body">Upload your exported Canva PDF, add real interactive fields, test the result, and download it free. Your document stays in your browser.</p>
+<div class="article-product-cta__actions">
+<a href="/tools/create-fillable-pdf/">Open the free PDF editor <span aria-hidden="true">→</span></a>
+<span>No signup · No watermark · Browser-local editing</span>
 </div>
+</div>
+<div class="article-product-cta__preview" aria-hidden="true">
+<div class="article-product-cta__sheet">
+<span class="article-product-cta__line article-product-cta__line--title"></span>
+<span class="article-product-cta__line"></span>
+<span class="article-product-cta__field"></span>
+<span class="article-product-cta__line article-product-cta__line--short"></span>
+<span class="article-product-cta__choice"><i></i><b></b></span>
+<span class="article-product-cta__choice"><i></i><b></b></span>
+</div>
+</div>
+</div>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<details><summary>Can you create a fillable PDF directly in Canva?</summary><div>Canva can design a form and edit the visual content of a PDF, but downloading the design does not add native form fields for other people to complete. Export the design as a PDF, then add the interactive fields in a PDF form editor.</div></details>
+<details><summary>Can I make a Canva PDF fillable for free?</summary><div>Yes. Formester's browser editor lets you upload a Canva PDF, add supported fields, and download the fillable file without signing up or adding a watermark.</div></details>
+<details><summary>Which fields can I add to a Canva PDF?</summary><div>You can add single-line text, multiline text, checkboxes, radio buttons, dropdowns, required fields, and default values. You can also print static text onto the PDF.</div></details>
+<details><summary>Will the Canva design stay the same?</summary><div>Yes. The original page remains in place, and the editor puts interactive fields over the spaces you prepared. It does not rewrite the existing text or graphics in the PDF.</div></details>
+<details><summary>Does Formester upload or store my Canva PDF?</summary><div>No. Ordinary editing, preview, and download happen in your browser. The file is only uploaded if you later choose a separate account-based save or automation workflow.</div></details>
+<details><summary>What if I want people to complete the form through a link?</summary><div>Turn the PDF into an online form instead. A hosted form gives you a shareable link, mobile-friendly questions, validation, and responses in one dashboard. Use a fillable PDF when the completed document itself is the required output.</div></details>
 </section>
-
-
-<img alt="a blog post cover about how to make canva pdf fillable" src="https://formester-strapi.s3.ap-south-1.amazonaws.com/How_to_Make_User_Research_Survey_11_04d7341a26.png" />
-
-If you’ve created a PDF in Canva, maybe a contract, <strong><a href="/templates/categories/application-and-registration/">application form</a></strong>, or feedback form and you’re wondering, “How do I make this fillable?” You’re in the right place.
-
-In this quick guide, I’ll show you how to turn your <strong><a href="/features/convert-pdf-to-fillable-form/">Canva PDF into an interactive, fillable form</a></strong> using Formester, a free <strong><a href="/ai-form-generator/">AI form builder</a></strong> that does all the heavy lifting (even if you’re not techy).
-
-## Why Canva is Great for Designing PDFs
-If you’re looking to create polished, professional-looking PDFs quickly, Canva is one of the best options out there. It’s easy to use, web-based, and gives you full control over the design.
-
-Here’s why people love using it:
-
-### Simple Drag-and-Drop Interface
-You can create any kind of document without needing technical skills. Just drag text boxes, images, icons, or logos into your layout. The whole experience feels like playing with building blocks.
-
-### Professionally Designed Templates
-Canva offers a huge variety of ready-to-use PDF templates. Whether you're making a feedback form, brochure, invoice, or checklist, you’ll find a template that fits. Just edit the text and images to match your needs.
-
-### Quick Download Options
-Once your PDF design is ready, downloading it is as easy as clicking a button. Canva lets you export your project in high-quality PDF formats that work perfectly with Formester.
-
-## How to Turn Your Canva PDF into a Fillable Form
-
-### Step 1: Create and Download Your PDF in Canva
-- Design your PDF in Canva.
-
-- Hit Download and choose PDF Standard or Print.
-
-### Step 2: Upload to Formester
-- Log in to <strong><a href="/">Formester</a></strong>.
-
-- Click New Form → <strong><a href="/features/convert-pdf-to-fillable-form/">PDF to Form</a></strong>.
-
-- Upload your Canva PDF.
-
-- Formester’s AI reads the PDF and extracts the form fields from the PDF into a fillable online form.
-
-### Step 3: Review and Customize the Form Fields
-- Check all fields and make adjustments using the drag-and-drop editor.
-
-- Rename or reorder fields as needed.
-
-- In Settings, go to Advanced Settings and turn on Connect Form to PDF to link form data to your original PDF.
-
-### Step 4: Open the PDF Editor and Map the Fields
-- Open the <strong><a href="/features/convert-pdf-to-fillable-form/">PDF Editor</a></strong>.
-
-- Upload the same Canva PDF again.
-
-- Use the Add Elements tool to place fields.
-
-- Use the @ sign to link responses from the form into the PDF. This auto-fills the PDF with user answers!
-
-### Step 5: Save and Share
-- Once everything looks good, hit Save.
-
-- Share your form link or <strong><a href="/features/embed-forms/">embed it on your website</a></strong>.
-
-- When someone submits the form, a filled-out PDF is automatically generated.
-
-### Step 6: Download the Filled PDF Submissions
-
-- Go to the Results tab in your Formester dashboard.
-
-- Click the three dots next to any submission and select Download PDF.
-
-- This downloads the personalized, filled-out PDF to your device.
-
-## Additional Features
-Once your fillable PDF form is live, Formester offers a few extra features to help you manage responses more efficiently and professionally:
-
-### E-Signature Field
-Easily add a <strong><a href="/features/electronic-signature/">signature box</a></strong> to your PDF form. This is perfect for contracts, agreements, approvals, or any document that requires user consent. 
-
-People can sign directly on the form using a mouse, stylus, or finger, no printing needed.
-
-### Auto Unique ID
-Every time someone submits the form, Formester can generate a <strong><a href="/features/auto-unique-id/">unique ID</a></strong> automatically. This is super useful for things like order tracking, invoices, application numbers, or case IDs. 
-
-You don’t have to manually assign numbers, it's all automated.
-
-### Submissions Tab
-All your form responses are saved in one place under the Submissions tab. You can filter, search, and sort through entries by name, date, or any field. 
-
-Whether you're handling 10 entries or 1,000, you’ll stay organized without touching a spreadsheet.
-
-### Final Thoughts
-With Canva and Formester, you can create fillable PDFs without paying for complex software or writing a single line of code.
-
-Design your PDF in Canva. Upload it to Formester. Use the smart editor to map form responses to your PDF. 
-
-Then publish the form and start collecting submissions that automatically generate personalized, filled-out documents.
-
-It’s fast, easy, and built for anyone whether you’re a freelancer, small business owner, teacher, or agency.
-
-Ready to make your first fillable PDF? <strong><a href="https://app.formester.com/users/sign_up">Sign up to Formester</a></strong>!
-
-<style>
-.fmstr-cmp-tmpl-cmp a { text-decoration: none !important; }
-.fmstr-cmp-tmpl-cmp {
---c-card: #ffffff;
---c-fg-1: #101828; --c-fg-2: #475467; --c-fg-3: #697586;
---c-violet-500: #7f56d9; --c-violet-600: #6941c6; --c-violet-700: #5b34b1;
---c-tint: #f7f3ff; --c-edge: #e4d7ff;
---c-border: #eaecf0;
---c-shadow: 0 1px 3px rgba(16,24,40,.05);
---c-good: #12b76a; --c-bad: #f04438;
-background: transparent;
-padding: 48px 0;
-font-family: inherit;
-color: var(--c-fg-1);
-text-align: left !important;
-overflow-x: hidden;
-}
-.fmstr-cmp-tmpl-cmp *, .fmstr-cmp-tmpl-cmp *::before, .fmstr-cmp-tmpl-cmp *::after { box-sizing: border-box; }
-.fmstr-cmp-tmpl-cmp > *, .fmstr-cmp-tmpl-cmp > * > * { min-width: 0; }
-.fmstr-cmp-tmpl-cmp__container { max-width: 1200px; margin: 0 auto; }
-.fmstr-cmp-tmpl-cmp__head { margin: 0 0 28px !important; }
-.fmstr-cmp-tmpl-cmp__h2 {
-font-size: clamp(26px, 3vw, 36px) !important; font-weight: 700 !important; line-height: 1.15 !important;
-letter-spacing: -.02em !important; margin: 0 !important; color: var(--c-fg-1);
-}
-.fmstr-cmp-tmpl-cmp__intro { color: var(--c-fg-3); font-size: 17px !important; line-height: 1.6 !important; margin: 14px 0 0 !important; }
-.fmstr-cmp-tmpl-cmp__grid {
-display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
-}
-.fmstr-cmp-tmpl-cmp__card {
-background: var(--c-card);
-border: 1px solid var(--c-border);
-border-radius: 14px;
-padding: 22px;
-box-shadow: var(--c-shadow);
-display: flex; flex-direction: column; gap: 12px;
-min-width: 0;
-}
-.fmstr-cmp-tmpl-cmp__card--featured {
-border-color: var(--c-edge);
-background: var(--c-tint);
-box-shadow: 0 4px 18px rgba(105,65,198,.10);
-}
-.fmstr-cmp-tmpl-cmp__chip {
-display: inline-flex; align-items: center;
-font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
-text-transform: uppercase; color: var(--c-violet-700) !important;
-background: var(--c-tint); border: 1px solid var(--c-edge);
-padding: 4px 10px; border-radius: 9999px;
-align-self: flex-start;
-}
-.fmstr-cmp-tmpl-cmp__name {
-font-size: 18px; font-weight: 700; color: var(--c-fg-1);
-margin: 0; line-height: 1.3;
-}
-.fmstr-cmp-tmpl-cmp__best {
-font-size: 13.5px; color: var(--c-fg-3); margin: 0;
-}
-.fmstr-cmp-tmpl-cmp__best strong { color: var(--c-fg-1); font-weight: 600; }
-.fmstr-cmp-tmpl-cmp__divider {
-height: 1px; background: var(--c-border); margin: 4px 0; border: 0;
-}
-.fmstr-cmp-tmpl-cmp__list {
-margin: 0; padding: 0; list-style: none;
-display: flex; flex-direction: column; gap: 8px;
-}
-.fmstr-cmp-tmpl-cmp__item {
-display: flex; gap: 8px; align-items: flex-start;
-font-size: 14px; line-height: 1.5; color: var(--c-fg-2);
-}
-.fmstr-cmp-tmpl-cmp__item::before {
-content: "✓"; flex-shrink: 0;
-color: var(--c-good); font-weight: 700; line-height: 1.45;
-}
-.fmstr-cmp-tmpl-cmp__item--con::before { content: "✗"; color: var(--c-bad); }
-
-@media (max-width: 920px) {
-.fmstr-cmp-tmpl-cmp__grid { grid-template-columns: 1fr; gap: 12px; }
-}
-@media (max-width: 540px) {
-.fmstr-cmp-tmpl-cmp { padding: 36px 0; }
-.fmstr-cmp-tmpl-cmp__card { padding: 18px 20px; }
-}
-</style>
-
-<section class="fmstr-cmp-tmpl-cmp" aria-labelledby="fmstr-cmp-tmpl-cmp-h2">
-<div class="fmstr-cmp-tmpl-cmp__container">
-<div class="fmstr-cmp-tmpl-cmp__head">
-<h2 class="fmstr-cmp-tmpl-cmp__h2" id="fmstr-cmp-tmpl-cmp-h2">The 3 methods compared</h2>
-<p class="fmstr-cmp-tmpl-cmp__intro">Pick by who needs to fill the form and where the responses should go.</p>
-</div>
-<div class="fmstr-cmp-tmpl-cmp__grid">
-
-<div class="fmstr-cmp-tmpl-cmp__card fmstr-cmp-tmpl-cmp__card--featured">
-<span class="fmstr-cmp-tmpl-cmp__chip">Method 1</span>
-<h3 class="fmstr-cmp-tmpl-cmp__name">Convert in Formester (web)</h3>
-<p class="fmstr-cmp-tmpl-cmp__best"><strong>Best for:</strong> Online forms with a response dashboard</p>
-<hr class="fmstr-cmp-tmpl-cmp__divider">
-<ul class="fmstr-cmp-tmpl-cmp__list">
-<li class="fmstr-cmp-tmpl-cmp__item">Auto-detects fields from the PDF</li>
-<li class="fmstr-cmp-tmpl-cmp__item">Responses save to a dashboard</li>
-<li class="fmstr-cmp-tmpl-cmp__item">Mobile-friendly out of the box</li>
-<li class="fmstr-cmp-tmpl-cmp__item">Free tier available</li>
-<li class="fmstr-cmp-tmpl-cmp__item fmstr-cmp-tmpl-cmp__item--con">Requires internet for respondents</li>
-</ul>
-</div>
-
-<div class="fmstr-cmp-tmpl-cmp__card">
-<span class="fmstr-cmp-tmpl-cmp__chip">Method 2</span>
-<h3 class="fmstr-cmp-tmpl-cmp__name">Adobe Acrobat (desktop)</h3>
-<p class="fmstr-cmp-tmpl-cmp__best"><strong>Best for:</strong> Offline fillable PDFs the respondent emails back</p>
-<hr class="fmstr-cmp-tmpl-cmp__divider">
-<ul class="fmstr-cmp-tmpl-cmp__list">
-<li class="fmstr-cmp-tmpl-cmp__item">Fillable in Adobe Acrobat Reader</li>
-<li class="fmstr-cmp-tmpl-cmp__item">Works offline</li>
-<li class="fmstr-cmp-tmpl-cmp__item">Industry-standard PDF format</li>
-<li class="fmstr-cmp-tmpl-cmp__item fmstr-cmp-tmpl-cmp__item--con">Adobe Acrobat Pro is a paid subscription</li>
-<li class="fmstr-cmp-tmpl-cmp__item fmstr-cmp-tmpl-cmp__item--con">No response dashboard</li>
-<li class="fmstr-cmp-tmpl-cmp__item fmstr-cmp-tmpl-cmp__item--con">Each submission is a separate PDF file</li>
-</ul>
-</div>
-
-<div class="fmstr-cmp-tmpl-cmp__card">
-<span class="fmstr-cmp-tmpl-cmp__chip">Method 3</span>
-<h3 class="fmstr-cmp-tmpl-cmp__name">Rebuild as native web form</h3>
-<p class="fmstr-cmp-tmpl-cmp__best"><strong>Best for:</strong> Multi-step forms with conditional logic</p>
-<hr class="fmstr-cmp-tmpl-cmp__divider">
-<ul class="fmstr-cmp-tmpl-cmp__list">
-<li class="fmstr-cmp-tmpl-cmp__item">Conditional logic and validation</li>
-<li class="fmstr-cmp-tmpl-cmp__item">Integrates with Stripe, CRM, email tools</li>
-<li class="fmstr-cmp-tmpl-cmp__item">Best conversion rate (~3x fillable PDF)</li>
-<li class="fmstr-cmp-tmpl-cmp__item fmstr-cmp-tmpl-cmp__item--con">Loses the Canva visual design 1-to-1</li>
-</ul>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<style>
-/* host-link-override */
-.fmstr-cmp-tmpl-faq a { text-decoration: none !important; }
-.fmstr-cmp-tmpl-faq {
---c-card: #ffffff;
---c-fg-1: #101828; --c-fg-2: #475467; --c-fg-3: #697586;
---c-violet-600: #6941c6;
---c-tint: #f7f3ff; --c-edge: #e4d7ff;
---c-border: #eaecf0; --c-chip-bg: #f4f4f7;
---c-shadow: 0 1px 3px rgba(16,24,40,.05);
-
-background: transparent; padding: 56px 24px;
-font-family: inherit;
-color: var(--c-fg-1);
-text-align: left !important;
-}
-.fmstr-cmp-tmpl-faq *, .fmstr-cmp-tmpl-faq *::before, .fmstr-cmp-tmpl-faq *::after { box-sizing: border-box; }
-.fmstr-cmp-tmpl-faq__container { max-width: 1200px; margin: 0 auto; }
-.fmstr-cmp-tmpl-faq__h2 { font-size: clamp(26px, 3vw, 36px) !important; font-weight: 700 !important; line-height: 1.15 !important; letter-spacing: -.02em !important; margin: 0 !important; color: var(--c-fg-1); text-align: left; }
-.fmstr-cmp-tmpl-faq__intro { color: var(--c-fg-3); font-size: 17px !important; line-height: 1.6 !important; margin: 14px 0 28px !important; text-align: left; }
-.fmstr-cmp-tmpl-faq__list { display: flex; flex-direction: column; gap: 12px; }
-.fmstr-cmp-tmpl-faq__item {
-background: var(--c-card); border: 1px solid var(--c-border);
-border-radius: 14px; box-shadow: var(--c-shadow); overflow: hidden;
-}
-.fmstr-cmp-tmpl-faq__item > summary {
-padding: 18px 22px; cursor: pointer; font-weight: 600; font-size: 16.5px;
-color: var(--c-fg-1); display: flex; align-items: center; gap: 14px;
-list-style: none;
-}
-.fmstr-cmp-tmpl-faq__item > summary::-webkit-details-marker { display: none; }
-.fmstr-cmp-tmpl-faq__item > summary::before {
-content: ""; width: 28px; height: 28px; border-radius: 8px; flex-shrink: 0;
-background-color: var(--c-chip-bg);
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none' stroke='%2375747f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 5l4 4 4-4'/%3E%3C/svg%3E");
-background-repeat: no-repeat; background-position: center;
-transition: transform .15s ease, background-color .15s ease;
-}
-.fmstr-cmp-tmpl-faq__item[open] > summary::before { transform: rotate(180deg); background-color: var(--c-tint); }
-.fmstr-cmp-tmpl-faq__item[open] > summary { color: var(--c-violet-600) !important; }
-.fmstr-cmp-tmpl-faq__answer { padding: 0 22px 22px 64px; color: var(--c-fg-2); font-size: 15.5px; line-height: 1.7; }
-.fmstr-cmp-tmpl-faq__answer a { color: var(--c-violet-600) !important; text-decoration: none !important; }
-.fmstr-cmp-tmpl-faq__answer a:hover { text-decoration: underline !important; }
-
-@media (max-width: 760px) {
-.fmstr-cmp-tmpl-faq { padding: 40px 16px; }
-.fmstr-cmp-tmpl-faq__intro { font-size: 15.5px !important; text-align: left; }
-.fmstr-cmp-tmpl-faq__item > summary { padding: 16px 16px; font-size: 15.5px; gap: 12px; }
-.fmstr-cmp-tmpl-faq__item > summary::before { width: 26px; height: 26px; }
-.fmstr-cmp-tmpl-faq__answer { padding: 0 16px 18px 16px; font-size: 15px; line-height: 1.65; }
-}
-</style>
-
-<section class="fmstr-cmp-tmpl-faq" aria-labelledby="fmstr-cmp-tmpl-faq-h2">
-<div class="fmstr-cmp-tmpl-faq__container">
-<h2 class="fmstr-cmp-tmpl-faq__h2" id="fmstr-cmp-tmpl-faq-h2">Frequently asked questions</h2>
-<p class="fmstr-cmp-tmpl-faq__intro">Common questions about converting a Canva PDF into a fillable form.</p>
-<div class="fmstr-cmp-tmpl-faq__list">
-
-<details class="fmstr-cmp-tmpl-faq__item">
-<summary>Can I make a Canva PDF fillable?</summary>
-<div class="fmstr-cmp-tmpl-faq__answer">Yes. Canva exports flat (non-fillable) PDFs by default. To make it fillable, upload the PDF to a tool like Formester or Adobe Acrobat that detects fields and converts them to fillable inputs, or rebuild the document as a native online form.</div>
-</details>
-
-<details class="fmstr-cmp-tmpl-faq__item">
-<summary>Does Canva have a built-in fillable PDF option?</summary>
-<div class="fmstr-cmp-tmpl-faq__answer">Not directly. Canva's PDF Standard and Print exports produce flat PDFs. To get fillable PDFs from Canva, you need a converter tool or a rebuild as an online form.</div>
-</details>
-
-<details class="fmstr-cmp-tmpl-faq__item">
-<summary>How do I convert a Canva PDF to a fillable form online?</summary>
-<div class="fmstr-cmp-tmpl-faq__answer">Download your Canva design as a PDF, go to Formester's PDF-to-form converter, upload the PDF, and the tool auto-detects each text box, checkbox, and signature line. Customize the field types and publish as a live form.</div>
-</details>
-
-<details class="fmstr-cmp-tmpl-faq__item">
-<summary>Can I make a Canva PDF fillable in Adobe Acrobat?</summary>
-<div class="fmstr-cmp-tmpl-faq__answer">Yes. Open the Canva PDF in Adobe Acrobat Pro, click Tools then Prepare Form. Acrobat auto-detects the form fields. Save the document as a fillable PDF. Respondents can fill it in Adobe Acrobat Reader.</div>
-</details>
-
-<details class="fmstr-cmp-tmpl-faq__item">
-<summary>Is there a free way to make a Canva PDF fillable?</summary>
-<div class="fmstr-cmp-tmpl-faq__answer">Yes. Formester's PDF-to-form converter is free on the basic tier (limited submissions per month). Adobe Acrobat Pro requires a paid subscription. PDF Escape has a free online editor with limited features.</div>
-</details>
-
-<details class="fmstr-cmp-tmpl-faq__item">
-<summary>What fields can I add to a fillable Canva PDF?</summary>
-<div class="fmstr-cmp-tmpl-faq__answer">Standard fields include text input, multi-line text, checkboxes, radio buttons, dropdowns, date pickers, signatures, and file upload. Field availability depends on the tool you use.</div>
-</details>
-
-<details class="fmstr-cmp-tmpl-faq__item">
-<summary>Can the respondent fill the form on mobile?</summary>
-<div class="fmstr-cmp-tmpl-faq__answer">Yes if the form is a web form (Formester) or a properly-formatted fillable PDF (Adobe Acrobat with mobile-friendly field sizing). Online forms render better on mobile than fillable PDFs.</div>
-</details>
-
-<details class="fmstr-cmp-tmpl-faq__item">
-<summary>Can I collect responses to a fillable PDF in a dashboard?</summary>
-<div class="fmstr-cmp-tmpl-faq__answer">Yes if you use Formester. Each submission becomes a row in your response dashboard with all field values and uploaded files. Plain fillable PDFs (Adobe Acrobat) don't auto-aggregate; you receive each submission as an email or PDF.</div>
-</details>
-
-<details class="fmstr-cmp-tmpl-faq__item">
-<summary>Can I add e-signature to a Canva PDF?</summary>
-<div class="fmstr-cmp-tmpl-faq__answer">Yes. Both Formester and Adobe Acrobat support e-signature fields. Respondents sign on mobile or desktop; the signed PDF auto-attaches to the response record.</div>
-</details>
-
-<details class="fmstr-cmp-tmpl-faq__item">
-<summary>What's the difference between a fillable PDF and an online form?</summary>
-<div class="fmstr-cmp-tmpl-faq__answer">A fillable PDF is a file the respondent downloads, fills, and emails back. An online form is a web page the respondent fills in the browser, and the response goes straight to your dashboard. Online forms convert ~3x better than fillable PDFs.</div>
-</details>
-
-</div>
-</div>
-</section>
-
-
-<style>
-/* host-link-override */
-.fmstr-cmp-tmpl-rel a { text-decoration: none !important; }
-.fmstr-cmp-tmpl-rel {
---c-card: #ffffff;
---c-fg-1: #101828; --c-fg-2: #475467; --c-fg-3: #697586;
---c-violet-500: #7f56d9; --c-violet-600: #6941c6;
---c-tint: #f7f3ff; --c-edge: #e4d7ff;
---c-border: #eaecf0;
---c-shadow: 0 4px 20px rgba(16,24,40,.06);
-
-background: transparent;
-padding: 56px 24px;
-font-family: inherit;
-color: var(--c-fg-1);
-text-align: left !important;
-}
-.fmstr-cmp-tmpl-rel *, .fmstr-cmp-tmpl-rel *::before, .fmstr-cmp-tmpl-rel *::after { box-sizing: border-box; }
-.fmstr-cmp-tmpl-rel__container { max-width: 1200px; margin: 0 auto; }
-.fmstr-cmp-tmpl-rel__head { margin: 0 0 28px !important; text-align: left; }
-.fmstr-cmp-tmpl-rel__h2 { font-size: clamp(26px, 3vw, 36px) !important; font-weight: 700 !important; line-height: 1.15 !important; letter-spacing: -.02em !important; margin: 0 !important; color: var(--c-fg-1); text-align: left; }
-.fmstr-cmp-tmpl-rel__intro { color: var(--c-fg-3); font-size: 17px !important; line-height: 1.6 !important; margin: 14px 0 0 !important; text-align: left; }
-
-.fmstr-cmp-tmpl-rel__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.fmstr-cmp-tmpl-rel__card {
-background: var(--c-card); border: 1px solid var(--c-border);
-border-radius: 14px; padding: 20px 22px; display: flex; flex-direction: column; gap: 8px;
-text-decoration: none !important; color: inherit !important; transition: all .15s ease;
-position: relative;
-}
-.fmstr-cmp-tmpl-rel__card:hover { border-color: var(--c-edge); box-shadow: var(--c-shadow); transform: translateY(-1px); }
-.fmstr-cmp-tmpl-rel__chip {
-display: inline-block; padding: 3px 10px; border-radius: 9999px;
-background: var(--c-tint); border: 1px solid var(--c-edge);
-color: var(--c-violet-600); font-size: 11.5px; font-weight: 600; letter-spacing: .02em;
-text-transform: uppercase; align-self: flex-start;
-margin-bottom: 2px;
-}
-.fmstr-cmp-tmpl-rel__title {
-font-size: 16px !important; font-weight: 700 !important; color: var(--c-fg-1); margin: 0 !important; line-height: 1.3 !important; text-align: left; }
-.fmstr-cmp-tmpl-rel__body { font-size: 14.5px !important; line-height: 1.55 !important; color: var(--c-fg-2); margin: 0 !important; }
-.fmstr-cmp-tmpl-rel__arrow {
-margin-top: 6px; color: var(--c-violet-600); font-size: 14px; font-weight: 600;
-display: inline-flex; align-items: center; gap: 6px;
-}
-.fmstr-cmp-tmpl-rel__arrow::after {
-content: "\2192"; transition: transform .15s ease; display: inline-block;
-}
-.fmstr-cmp-tmpl-rel__card:hover .fmstr-cmp-tmpl-rel__arrow::after { transform: translateX(3px); }
-
-@media (max-width: 880px) { .fmstr-cmp-tmpl-rel__grid { grid-template-columns: 1fr 1fr; gap: 14px; } }
-@media (max-width: 540px) {
-.fmstr-cmp-tmpl-rel { padding: 40px 16px; }
-.fmstr-cmp-tmpl-rel__grid { grid-template-columns: 1fr; gap: 12px; }
-.fmstr-cmp-tmpl-rel__card { padding: 18px 20px; }
-}
-</style>
-
-<section class="fmstr-cmp-tmpl-rel" aria-labelledby="fmstr-cmp-tmpl-rel-h2">
-<div class="fmstr-cmp-tmpl-rel__container">
-<div class="fmstr-cmp-tmpl-rel__head">
-<h2 class="fmstr-cmp-tmpl-rel__h2" id="fmstr-cmp-tmpl-rel-h2">Related on Formester</h2>
-<p class="fmstr-cmp-tmpl-rel__intro">See the PDF-to-form converter, fillable PDF features, and the Canva plugin.</p>
-</div>
-<div class="fmstr-cmp-tmpl-rel__grid">
-
-<a class="fmstr-cmp-tmpl-rel__card" href="https://formester.com/features/convert-pdf-to-fillable-form/">
-<span class="fmstr-cmp-tmpl-rel__chip">Formester</span>
-<h3 class="fmstr-cmp-tmpl-rel__title">Convert PDF to fillable form</h3>
-<p class="fmstr-cmp-tmpl-rel__body">Continue the workflow on Formester.</p>
-<span class="fmstr-cmp-tmpl-rel__arrow">Open</span>
-</a>
-
-<a class="fmstr-cmp-tmpl-rel__card" href="https://formester.com/features/create-fillable-pdf-forms/">
-<span class="fmstr-cmp-tmpl-rel__chip">Formester</span>
-<h3 class="fmstr-cmp-tmpl-rel__title">Create fillable PDF forms</h3>
-<p class="fmstr-cmp-tmpl-rel__body">Continue the workflow on Formester.</p>
-<span class="fmstr-cmp-tmpl-rel__arrow">Open</span>
-</a>
-
-<a class="fmstr-cmp-tmpl-rel__card" href="https://formester.com/plugins/canva-form-builder/">
-<span class="fmstr-cmp-tmpl-rel__chip">Formester</span>
-<h3 class="fmstr-cmp-tmpl-rel__title">Canva form builder</h3>
-<p class="fmstr-cmp-tmpl-rel__body">Continue the workflow on Formester.</p>
-<span class="fmstr-cmp-tmpl-rel__arrow">Open</span>
-</a>
-
-<a class="fmstr-cmp-tmpl-rel__card" href="https://formester.com/features/electronic-signature/">
-<span class="fmstr-cmp-tmpl-rel__chip">Formester</span>
-<h3 class="fmstr-cmp-tmpl-rel__title">Electronic signature</h3>
-<p class="fmstr-cmp-tmpl-rel__body">Continue the workflow on Formester.</p>
-<span class="fmstr-cmp-tmpl-rel__arrow">Open</span>
-</a>
-
-</div>
-</div>
-</section>
-
-
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I make a Canva PDF fillable?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Canva exports flat (non-fillable) PDFs by default. To make it fillable, upload the PDF to a tool like Formester or Adobe Acrobat that detects fields and converts them to fillable inputs, or rebuild the document as a native online form."}}, {"@type": "Question", "name": "Does Canva have a built-in fillable PDF option?", "acceptedAnswer": {"@type": "Answer", "text": "Not directly. Canva's PDF Standard and Print exports produce flat PDFs. To get fillable PDFs from Canva, you need a converter tool or a rebuild as an online form."}}, {"@type": "Question", "name": "How do I convert a Canva PDF to a fillable form online?", "acceptedAnswer": {"@type": "Answer", "text": "Download your Canva design as a PDF, go to Formester's PDF-to-form converter, upload the PDF, and the tool auto-detects each text box, checkbox, and signature line. Customize the field types and publish as a live form."}}, {"@type": "Question", "name": "Can I make a Canva PDF fillable in Adobe Acrobat?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Open the Canva PDF in Adobe Acrobat Pro, click Tools then Prepare Form. Acrobat auto-detects the form fields. Save the document as a fillable PDF. Respondents can fill it in Adobe Acrobat Reader."}}, {"@type": "Question", "name": "Is there a free way to make a Canva PDF fillable?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Formester's PDF-to-form converter is free on the basic tier (limited submissions per month). Adobe Acrobat Pro requires a paid subscription. PDF Escape has a free online editor with limited features."}}, {"@type": "Question", "name": "What fields can I add to a fillable Canva PDF?", "acceptedAnswer": {"@type": "Answer", "text": "Standard fields include text input, multi-line text, checkboxes, radio buttons, dropdowns, date pickers, signatures, and file upload. Field availability depends on the tool you use."}}, {"@type": "Question", "name": "Can the respondent fill the form on mobile?", "acceptedAnswer": {"@type": "Answer", "text": "Yes if the form is a web form (Formester) or a properly-formatted fillable PDF (Adobe Acrobat with mobile-friendly field sizing). Online forms render better on mobile than fillable PDFs."}}, {"@type": "Question", "name": "Can I collect responses to a fillable PDF in a dashboard?", "acceptedAnswer": {"@type": "Answer", "text": "Yes if you use Formester. Each submission becomes a row in your response dashboard with all field values and uploaded files. Plain fillable PDFs (Adobe Acrobat) don't auto-aggregate; you receive each submission as an email or PDF."}}, {"@type": "Question", "name": "Can I add e-signature to a Canva PDF?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Both Formester and Adobe Acrobat support e-signature fields. Respondents sign on mobile or desktop; the signed PDF auto-attaches to the response record."}}, {"@type": "Question", "name": "What's the difference between a fillable PDF and an online form?", "acceptedAnswer": {"@type": "Answer", "text": "A fillable PDF is a file the respondent downloads, fills, and emails back. An online form is a web page the respondent fills in the browser, and the response goes straight to your dashboard. Online forms convert ~3x better than fillable PDFs."}}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to Make a Canva PDF Fillable (3 Methods)", "description": "Make a Canva PDF fillable 3 ways: convert in Formester, edit in Adobe Acrobat, or rebuild as an online form. Step-by-step with screenshots and video.", "author": {"@type": "Person", "name": "Harish Kumar", "url": "https://www.linkedin.com/in/harish-kumar2424/"}, "publisher": {"@type": "Organization", "name": "Formester", "logo": {"@type": "ImageObject", "url": "https://formester.com/logo.svg"}}, "dateModified": "2026-06-05"}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://formester.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://formester.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "How to Make a Canva PDF Fillable (3 Methods)", "item": "https://formester.com/blog/how-to-make-canva-pdf-fillable/"}]}</script>
