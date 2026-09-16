@@ -1,759 +1,234 @@
 ---
 slug: "best-pdf-form-creator"
 title: "9 Best PDF Form Creator Tools in 2026: Compared"
-description: "9 top PDF form creator tools ranked by workflow: Formester, PDFfiller, PandaDoc, DocHub, DocuSign, Adobe Acrobat Sign, Jotform, Google Forms, Formsite. Free plans, pricing tiers, integrations, and honest weaknesses."
+description: "Compare 9 PDF form creators for existing PDFs, downloadable fillable files, online responses, signatures, privacy, and free-plan limits."
 metaTitle: "9 Best PDF Form Creator Tools in 2026: Compared | Formester"
-metaDescription: "The 9 best PDF form creator tools in 2026, ranked by use case. Free plans, pricing, e-signature, integrations, and which one fits your team."
-keywords: "best pdf form creator, pdf form maker, fillable pdf creator, online pdf form builder, best pdf form tool"
-author: "Harish Kumar"
-authorProfile: "https://www.linkedin.com/in/harish-kumar2424/"
+metaDescription: "Compare 9 PDF form creators for existing PDFs, fillable fields, signatures, privacy, downloads, and online responses. Find the right free or paid tool."
+keywords: "best pdf form creator, pdf form creator, fillable pdf creator, free pdf form creator, online pdf form builder"
+author: "Ankit Singhaniya"
+authorProfile: "https://linkedin.com/in/ankitsinghaniyaz"
 coverImgAlt: "9 best PDF form creator tools compared for 2026"
 featured: false
 coverImg: {"url":"https://formester-strapi.s3.ap-south-1.amazonaws.com/best_pdf_form_creator_9a1f920280.png","width":2400,"height":1350}
 metaImage: []
-jsonld: [{"@context":"https://schema.org","@id":"https://formester.com/#organization","url":"https://formester.com/","logo":{"url":"https://formester.com/logo.png","@type":"ImageObject"},"name":"Formester","@type":"Organization"},{"@context":"https://schema.org","@id":"https://formester.com/blog/best-pdf-form-creator/#webpage","url":"https://formester.com/blog/best-pdf-form-creator/","name":"9 Best PDF Form Creator Tools in 2026: Compared","@type":"WebPage","headline":"9 Best PDF Form Creator Tools in 2026: Compared","isPartOf":{"@id":"https://formester.com/#organization"},"breadcrumb":{"@id":"https://formester.com/blog/best-pdf-form-creator/#breadcrumb"},"inLanguage":"en-US","dateModified":"2026-07-13","datePublished":"2026-07-13"},{"@context":"https://schema.org","@id":"https://formester.com/blog/best-pdf-form-creator/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"item":"https://formester.com/","name":"Home","@type":"ListItem","position":1},{"item":"https://formester.com/blog/","name":"Blog","@type":"ListItem","position":2},{"item":"https://formester.com/blog/best-pdf-form-creator/","name":"9 Best PDF Form Creator Tools in 2026: Compared","@type":"ListItem","position":3}]},{"@context":"https://schema.org","@id":"https://formester.com/blog/best-pdf-form-creator/#article","@type":"Article","image":"https://formester-strapi.s3.ap-south-1.amazonaws.com/best_pdf_form_creator_9a1f920280.png","author":{"url":"https://www.linkedin.com/in/harish-kumar2424/","name":"Harish Kumar","@type":"Person"},"headline":"9 Best PDF Form Creator Tools in 2026: Compared","publisher":{"@id":"https://formester.com/#organization"},"description":"The 9 best PDF form creator tools in 2026, ranked by use case. Free plans, pricing, e-signature, integrations, and which one fits your team.","dateModified":"2026-07-13","datePublished":"2026-07-13","mainEntityOfPage":{"@id":"https://formester.com/blog/best-pdf-form-creator/#webpage"}},{"@context":"https://schema.org","@id":"https://formester.com/blog/best-pdf-form-creator/#faq","@type":"FAQPage","mainEntity":[{"name":"What's the best free PDF form creator?","@type":"Question","acceptedAnswer":{"text":"Formester and DocHub tie for the best free tier. Formester wins on unlimited responses + PDF export from submissions; DocHub wins if you already have an existing PDF and just need to fill it.","@type":"Answer"}},{"name":"Can I create a fillable PDF without Adobe Acrobat?","@type":"Question","acceptedAnswer":{"text":"Yes. Every tool on this list creates fillable PDFs without Acrobat. Formester, PDFfiller, PandaDoc, and DocHub all ship browser-based PDF form builders.","@type":"Answer"}},{"name":"Which PDF form tool is best for e-signatures?","@type":"Question","acceptedAnswer":{"text":"DocuSign for compliance-heavy signing (court-defensible audit). PandaDoc for sales quotes. DocHub for casual one-off signing. Formester ships e-signature on the free plan for basic use.","@type":"Answer"}},{"name":"Do PDF form creators work on mobile?","@type":"Question","acceptedAnswer":{"text":"All 9 tools on this list support mobile fill-out. Formester ships an offline mobile mode across every plan; the others require live internet.","@type":"Answer"}},{"name":"Are PDF forms legally binding?","@type":"Question","acceptedAnswer":{"text":"Yes, with a compliant e-signature. Every tool on this list ships ESIGN Act and eIDAS-compliant signatures. For court-defensibility at scale, DocuSign has the deepest audit trail.","@type":"Answer"}},{"name":"Can I export form responses to CSV as well as PDF?","@type":"Question","acceptedAnswer":{"text":"Yes on every tool on this list. Formester, Jotform, and Google Forms include CSV export in the free tier.","@type":"Answer"}},{"name":"Which PDF form tool has HIPAA compliance?","@type":"Question","acceptedAnswer":{"text":"Jotform (Silver plan and above with BAA add-on), DocuSign, Adobe Acrobat Sign, Formsite (Pro plan and above). Formester is NOT HIPAA-certified as of 2026-07; roadmap only.","@type":"Answer"}},{"name":"Can I embed the PDF form on my website?","@type":"Question","acceptedAnswer":{"text":"Yes on every tool on this list. All ship an embed snippet you paste into any CMS (WordPress, Webflow, Squarespace, Wix, Framer). ---","@type":"Answer"}}]},{"@context":"https://schema.org","@id":"https://formester.com/#software","url":"https://formester.com/","name":"Formester","@type":"SoftwareApplication","publisher":{"@id":"https://formester.com/#organization"},"aggregateRating":{"@type":"AggregateRating","bestRating":"5","ratingCount":"11","ratingValue":"4.7","worstRating":"1"},"operatingSystem":"Web","applicationCategory":"BusinessApplication"}]
+jsonld: [{"@context":"https://schema.org","@type":"WebPage","@id":"https://formester.com/blog/best-pdf-form-creator/#webpage","url":"https://formester.com/blog/best-pdf-form-creator/","name":"9 Best PDF Form Creator Tools in 2026: Compared","inLanguage":"en-US","datePublished":"2026-08-20","dateModified":"2026-09-17"},{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://formester.com/blog/best-pdf-form-creator/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://formester.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://formester.com/blog/"},{"@type":"ListItem","position":3,"name":"9 Best PDF Form Creator Tools in 2026: Compared","item":"https://formester.com/blog/best-pdf-form-creator/"}]},{"@context":"https://schema.org","@type":"Article","@id":"https://formester.com/blog/best-pdf-form-creator/#article","headline":"9 Best PDF Form Creator Tools in 2026: Compared","description":"Compare 9 PDF form creators for existing PDFs, fillable fields, signatures, privacy, downloads, and online responses. Find the right free or paid tool.","image":"https://formester-strapi.s3.ap-south-1.amazonaws.com/best_pdf_form_creator_9a1f920280.png","datePublished":"2026-08-20","dateModified":"2026-09-17","author":{"@type":"Person","name":"Ankit Singhaniya","url":"https://linkedin.com/in/ankitsinghaniyaz"},"publisher":{"@type":"Organization","name":"Formester","url":"https://formester.com/"},"mainEntityOfPage":{"@id":"https://formester.com/blog/best-pdf-form-creator/#webpage"}},{"@context":"https://schema.org","@type":"FAQPage","@id":"https://formester.com/blog/best-pdf-form-creator/#faq","mainEntity":[{"@type":"Question","name":"What is the best free PDF form creator?","acceptedAnswer":{"@type":"Answer","text":"Formester is a strong free choice when you want to add fields to an existing PDF without an account or watermark. PDFgear is another free browser option, while Sejda is useful when you need more PDF editing controls but can work within its hourly limits."}},{"@type":"Question","name":"Can I make an existing PDF fillable?","acceptedAnswer":{"@type":"Answer","text":"Yes. Upload the PDF to a PDF form creator, place text fields, checkboxes, dropdowns, radio buttons, dates, or signature fields, test the file, and download the updated interactive PDF."}},{"@type":"Question","name":"Can I create a fillable PDF without Adobe Acrobat?","acceptedAnswer":{"@type":"Answer","text":"Yes. Browser tools including Formester, PDFgear, Sejda, iLovePDF, Jotform, pdfFiller, and DocHub can create fillable PDFs without Adobe Acrobat."}},{"@type":"Question","name":"What is the difference between a fillable PDF and an online form?","acceptedAnswer":{"@type":"Answer","text":"A fillable PDF preserves a fixed document layout and can be downloaded or completed offline. An online form is responsive, easier to complete on a phone, and sends structured responses to a dashboard."}},{"@type":"Question","name":"Can a fillable PDF include a signature field?","acceptedAnswer":{"@type":"Answer","text":"Yes. Most PDF form creators can add a signature field. If you need identity verification, reminders, signer tracking, and a formal audit trail, choose a dedicated e-signature workflow rather than only a blank signature box."}},{"@type":"Question","name":"Which PDF form creators keep files in the browser?","acceptedAnswer":{"@type":"Answer","text":"Formester's free PDF creator and PDFgear state that documents are processed locally in the browser. Check each vendor's current privacy policy before uploading confidential files because processing models can change."}}]}]
 createdAt: "2026-07-14T13:02:44.760Z"
-updatedAt: "2026-08-20T05:17:29.515Z"
+updatedAt: "2026-09-17T00:00:00.000Z"
 publishedAt: "2026-08-20T05:14:18.753Z"
 ---
 ![9 best PDF form creator tools compared for 2026](https://formester-strapi.s3.ap-south-1.amazonaws.com/best_pdf_form_creator_9a1f920280.png)
 
-<div style="background:#F9FAFB;border-left:4px solid #7f56d9;padding:14px 18px;margin:0 0 24px 0;border-radius:6px;font-family:inherit;">
-<p style="margin:0;font-size:14px;color:#475467;font-family:inherit;"><strong>How we verified this:</strong> every figure on this page comes from the vendor's own pricing page or its public G2 profile. <a href="https://docs.google.com/document/d/10S4fBkyrIgdBx1MRvaPoZVhcW0WGBmjFa4n9iBpit3E/edit?usp=sharing" target="_blank" rel="noopener">You can check every source here</a>.</p>
+<h2>Which PDF form creator fits your job?</h2>
+
+<p>A PDF form creator can produce three different things. Choose the output first; it will remove most of the wrong tools from your shortlist.</p>
+
+<div class="pdf-choice-grid">
+<div class="pdf-choice">
+<p class="pdf-choice__label">PDF file</p>
+<h3>Make an existing PDF fillable</h3>
+<p>Upload a lease, intake sheet, government form, or blank PDF. Add interactive fields and download a PDF that still looks like the original.</p>
+<a href="https://formester.com/tools/fillable-pdf-creator/">Create a fillable PDF →</a>
+</div>
+<div class="pdf-choice">
+<p class="pdf-choice__label">Shareable link</p>
+<h3>Turn a PDF into an online form</h3>
+<p>Rebuild the document as a mobile-friendly web form, then collect clean responses in one dashboard instead of chasing attachments.</p>
+<a href="/features/convert-pdf-to-fillable-form/">Create an online form →</a>
+</div>
+<div class="pdf-choice">
+<p class="pdf-choice__label">Automated PDFs</p>
+<h3>Generate a PDF per submission</h3>
+<p>Start with an online form and place each answer into a PDF template. This fits certificates, contracts, applications, and reports.</p>
+<a href="/features/create-fillable-pdf-forms/">Connect responses to PDF →</a>
+</div>
 </div>
 
-<h2>Which PDF form creator should you choose?</h2>
-
-<p>PDF form work splits into two jobs that look alike and price very differently. One is editing a PDF you already have: dropping fields onto a government form, a lease, an intake sheet. The other is collecting answers online and producing a PDF at the end.</p>
-
-<p>Tools built for the first job charge per user or per document. Tools built for the second charge for responses. Picking the wrong side is what makes PDF software feel expensive, so decide which job you have before you compare anything else.</p>
-
 <div class="tldr">
-<p><strong>The 60-second TL;DR</strong></p>
+<p><strong>Quick picks</strong></p>
 <ul>
-<li><strong>Best all-around, form to PDF:</strong> Formester, unlimited responses free, PDF export on submit</li>
-<li><strong>Best for editing existing PDFs:</strong> PDFfiller, though it publishes no prices</li>
-<li><strong>Best for quotes and proposals:</strong> PandaDoc, from $35/mo</li>
-<li><strong>Best free browser PDF editor:</strong> DocHub, paid from $11/mo</li>
-<li><strong>Best for compliance-heavy signing:</strong> DocuSign, from $11/mo on annual commitment</li>
-<li><strong>Best for Adobe teams:</strong> Acrobat Standard for teams, $16.99 per licence a month</li>
-<li><strong>Best form-first tool with PDF autofill:</strong> Jotform, from $39/mo</li>
-<li><strong>Best free option for Workspace teams:</strong> Google Forms, free with any Google account</li>
-<li><strong>Best for long questionnaires:</strong> Formsite, from $24.95/mo</li>
+<li><strong>Best free browser workflow:</strong> Formester for no-signup, no-watermark PDF field creation plus a separate online response workflow.</li>
+<li><strong>Best completely free all-in-one alternative:</strong> PDFgear.</li>
+<li><strong>Best advanced browser editor:</strong> Sejda.</li>
+<li><strong>Best for turning PDFs into hosted forms:</strong> Jotform.</li>
+<li><strong>Best for complex desktop PDF work:</strong> Adobe Acrobat.</li>
+<li><strong>Best for automatic field detection:</strong> iLovePDF.</li>
+<li><strong>Best for recipient workflows:</strong> pdfFiller.</li>
+<li><strong>Best cross-platform desktop editor:</strong> UPDF.</li>
+<li><strong>Best for Google Workspace users:</strong> DocHub.</li>
 </ul>
 </div>
 
-<h2>How the nine PDF tools compare at a glance</h2>
+<h2 id="pdf-comparison">PDF form creators compared at a glance</h2>
 
-<p>The table below puts all nine side by side: what the free tier covers, where paid pricing starts on monthly billing, and which of the two jobs each tool is built for. Start here, then read the review of whichever one matches your work.</p>
-
-<div class="table-wrap">
-<table>
-<thead><tr><th>Tool</th><th>Free plan</th><th>Paid from (monthly)</th><th>Built for</th><th>G2 rating</th></tr></thead>
+<table class="pdf-compare-table">
+<thead><tr><th>Tool</th><th>Existing PDF</th><th>No signup</th><th>Online responses</th><th>Best for</th></tr></thead>
 <tbody>
-<tr><td>Formester</td><td>Unlimited forms and responses</td><td>$13/mo</td><td>Online form to PDF</td><td>4.7/5 (14 reviews)</td></tr>
-<tr><td>PDFfiller</td><td>Trial only</td><td>Not published</td><td>Editing existing PDFs</td><td>4.6/5 (923 reviews)</td></tr>
-<tr><td>PandaDoc</td><td>Free plan for e-sign</td><td>$35/mo</td><td>Quotes and proposals</td><td>4.7/5 (3,705 reviews)</td></tr>
-<tr><td>DocHub</td><td>Core features, 3 uses/mo</td><td>$11/mo</td><td>Browser PDF editing</td><td>4.6/5 (282 reviews)</td></tr>
-<tr><td>DocuSign</td><td>No free plan</td><td>$11/mo, annual commitment</td><td>Compliance-heavy signing</td><td>4.5/5 (2,629 reviews)</td></tr>
-<tr><td>Adobe Acrobat Sign</td><td>No free plan</td><td>$16.99 per licence/mo</td><td>Adobe-based teams</td><td>4.4/5 (1,070 reviews)</td></tr>
-<tr><td>Jotform</td><td>5 forms, 100 submissions/mo</td><td>$39/mo</td><td>Forms with PDF autofill</td><td>4.7/5 (5,426 reviews)</td></tr>
-<tr><td>Google Forms</td><td>Free with a Google account</td><td>Bundled with Workspace</td><td>Simple collection</td><td>No standalone profile</td></tr>
-<tr><td>Formsite</td><td>10 forms, 10 results total</td><td>$24.95/mo</td><td>Long questionnaires</td><td>4.3/5 (32 reviews)</td></tr>
+<tr><td><strong>Formester</strong></td><td>Yes</td><td>Yes</td><td>Yes, separate workflow</td><td>Free browser creation and ongoing collection</td></tr>
+<tr><td><strong>PDFgear</strong></td><td>Yes</td><td>Yes</td><td>No</td><td>Free PDF editing</td></tr>
+<tr><td><strong>Sejda</strong></td><td>Yes</td><td>Yes</td><td>Shareable fill link</td><td>Detailed browser editing</td></tr>
+<tr><td><strong>Jotform</strong></td><td>Yes</td><td>No</td><td>Yes</td><td>Hosted forms and templates</td></tr>
+<tr><td><strong>Adobe Acrobat</strong></td><td>Yes</td><td>No for creation</td><td>Paid workflow</td><td>Complex professional PDFs</td></tr>
+<tr><td><strong>iLovePDF</strong></td><td>Yes</td><td>Yes</td><td>No</td><td>Automatic field detection</td></tr>
+<tr><td><strong>pdfFiller</strong></td><td>Yes</td><td>Upload first; account to save</td><td>Yes</td><td>Sending and tracking documents</td></tr>
+<tr><td><strong>UPDF</strong></td><td>Yes</td><td>App required</td><td>No</td><td>Desktop and mobile editing</td></tr>
+<tr><td><strong>DocHub</strong></td><td>Yes</td><td>Account for saved work</td><td>Yes</td><td>Google Workspace workflow</td></tr>
 </tbody>
 </table>
+
+<h2>How we compared these PDF form creators</h2>
+
+<p>We checked each vendor's public product and pricing pages in September 2026. Features and limits change, so confirm purchase-critical details on the linked vendor page.</p>
+
+<p>We ranked tools around the decision a reader actually has to make, not around review counts alone. We looked for:</p>
+
+<ul>
+<li>whether the tool opens an existing PDF or only creates a new document;</li>
+<li>whether the output is a real downloadable fillable PDF;</li>
+<li>the field types available, including text, checkboxes, radio buttons, dropdowns, dates, and signatures;</li>
+<li>whether you can get the first useful output without creating an account;</li>
+<li>whether documents stay in the browser or are uploaded to a vendor server;</li>
+<li>whether the tool collects separate responses online; and</li>
+<li>the free limits and the point where a paid workflow becomes necessary.</li>
+</ul>
+
+<p>This is a product and feature comparison based on public vendor information, not a laboratory benchmark. We have not labelled it tested because we did not run the same controlled file through every product.</p>
+
+<h2>1. Formester, best free browser workflow</h2>
+
+<p>Formester now covers both sides of PDF form work. Its <a href="https://formester.com/tools/fillable-pdf-creator/">free fillable PDF creator</a> opens an existing PDF, lets you add real interactive fields, and downloads the finished file without an account or watermark. The document is processed locally in the browser.</p>
+
+<p>The editor supports text fields, paragraphs, checkboxes, radio groups, dropdowns, dates, and signature boxes. It also preserves existing fields, so you can adjust a partly finished form instead of starting over.</p>
+
+<p>If emailing PDFs back and forth becomes the bottleneck, Formester offers two next steps:</p>
+
+<ul>
+<li><a href="/features/convert-pdf-to-fillable-form/">turn the PDF into an online form</a> that people complete from a link; or</li>
+<li><a href="/features/create-fillable-pdf-forms/">auto-fill a PDF from each form submission</a> for contracts, certificates, applications, and reports.</li>
+</ul>
+
+<p><strong>Best for:</strong> people who want a free fillable PDF now and teams that may later need structured online collection.</p>
+<p><strong>The catch:</strong> the free browser tool adds and edits form fields; it is not a full text, OCR, or page-layout editor like Acrobat.</p>
+
+<div class="pdf-cta">
+<p class="pdf-cta__eyebrow">Free PDF creator</p>
+<h3>Add fields to your PDF without signing up</h3>
+<p>Your file stays in the browser. Add the fields, test them, and download a real fillable PDF with no watermark.</p>
+<a href="https://formester.com/tools/fillable-pdf-creator/">Make a PDF fillable →</a>
 </div>
 
-<h2>How we picked and ranked these nine tools</h2>
+<h2>2. PDFgear, best completely free all-in-one alternative</h2>
 
-<p>Everything here comes from the vendors' own pricing pages and plan limits, read in full. In this category the pricing model matters more than the feature list, because per-user and per-document billing behave very differently as a team grows.</p>
+<p><a href="https://www.pdfgear.com/create-fillable-pdf/" target="_blank" rel="noopener">PDFgear's online form creator</a> opens an existing PDF or a blank document and adds text boxes, checkboxes, dropdowns, and radio buttons. The company says browser processing is local and the online tool supports files up to 100 MB.</p>
 
-<p>The fine print changes the ranking. DocHub and PandaDoc both advertise their yearly rates, so month to month costs more than the sticker suggests.</p>
+<p>PDFgear also has downloadable apps for Windows, macOS, iOS, and Android. That makes it useful when form fields are only one part of a larger job involving editing, conversion, signatures, or page management.</p>
 
-<p>DocuSign's headline prices carry an annual commitment, and PDFfiller no longer publishes rates at all.</p>
+<p><strong>Best for:</strong> users who want free PDF utilities beyond form fields.</p>
+<p><strong>The catch:</strong> some broader editing and signing tasks move you into the downloadable app rather than staying in one browser workflow.</p>
 
-<h2>1. Formester, best all-around</h2>
+<h2>3. Sejda, best advanced browser editor</h2>
 
-<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_99e2a99609.png" alt="Formester homepage hero screenshot" style="width:100%;max-width:900px;height:auto;border-radius:8px;border:1px solid #e5e7eb;margin:16px 0;" loading="lazy" /></p>
+<p><a href="https://www.sejda.com/pdf-forms" target="_blank" rel="noopener">Sejda PDF Forms</a> combines a working upload tool with more detailed field controls than most simple free editors. You can add text, multiline text, radio buttons, checkboxes, dropdowns, and signature boxes, then configure names, required fields, text limits, alignment, and tab order.</p>
 
-<p>Formester sits on the collection side of the split: you build a form, people fill it in, then the submissions export as PDFs. That covers most of what teams actually mean when they ask for a PDF form.</p>
+<p>The free service currently states limits of 200 pages or 50 MB and three tasks per hour. Files are uploaded and automatically deleted after two hours; a desktop version is available if that processing model does not fit your documents.</p>
 
-<p>The part that separates it here is the metering. Responses are unlimited on every plan, including the free one, while the document tools on this list price per user or per document.</p>
+<p><strong>Best for:</strong> occasional browser-based form creation that needs precise field properties.</p>
+<p><strong>The catch:</strong> hourly limits interrupt repeated work, and files are processed on Sejda's service rather than staying only in your browser.</p>
 
-<p>E-signatures are included from the free plan, and paid tiers add features rather than volume. Personal is $13 a month for conditional logic, Business is $49 for a custom domain with 25 seats.</p>
+<h2>4. Jotform, best for hosted PDF form workflows</h2>
 
-<div class="table-wrap">
-<table>
-<thead><tr><th>Strengths</th><th>Weaknesses</th></tr></thead>
-<tbody>
-<tr><td>Unlimited forms and responses on the free plan</td><td>Not a PDF editor; it will not open an existing PDF for markup</td></tr>
-<tr><td>PDF export on every submission</td><td>14 G2 reviews, a small sample to judge by</td></tr>
-<tr><td>E-signature included from the free plan</td><td>No HIPAA on any tier</td></tr>
-<tr><td>Payment collection on the free plan</td><td></td></tr>
-<tr><td>Modern editor with live preview</td><td></td></tr>
-</tbody>
-</table>
-</div>
+<p><a href="https://www.jotform.com/fillable-pdf-form-creator/" target="_blank" rel="noopener">Jotform's Fillable PDF Form Creator</a> can import an existing PDF or start a new one. You can add fields and signatures, preserve the document layout, download the PDF, or turn it into a hosted submission workflow.</p>
 
-<div class="table-wrap">
-<table>
-<thead><tr><th>Plan</th><th>What you get</th></tr></thead>
-<tbody>
-<tr><td>Free</td><td>$0. Unlimited forms and responses, PDF export, e-signature</td></tr>
-<tr><td>Personal</td><td>$13/mo ($12/mo billed yearly). Adds conditional logic</td></tr>
-<tr><td>Business</td><td>$49/mo ($45/mo billed yearly). Adds custom domain and 25 seats</td></tr>
-</tbody>
-</table>
-</div>
+<p>Jotform is strongest when the PDF is part of a larger form system. Its templates, integrations, notifications, and response management are useful for recurring applications, onboarding documents, waivers, and intake forms.</p>
 
-<p><strong>Best for:</strong> teams collecting answers online who need a PDF at the end.</p>
+<p><strong>Best for:</strong> teams that want a mature hosted form platform around their PDFs.</p>
+<p><strong>The catch:</strong> an account is part of the workflow, and submission limits apply by plan.</p>
 
-<p><strong>The catch:</strong> it builds forms, it does not edit PDFs. If your job starts with a PDF someone sent you, look at DocHub or PDFfiller instead.</p>
+<h2>5. Adobe Acrobat, best for complex professional PDFs</h2>
 
-<p><strong>G2 rating:</strong> 4.7/5, from 14 reviews. High score, small sample; read it as an early signal.</p>
+<p><a href="https://www.adobe.com/acrobat/features/sign-fillable-pdf-forms.html" target="_blank" rel="noopener">Adobe Acrobat</a> remains the broadest option when the work includes form fields, OCR, text editing, calculations, page management, redaction, and signing. It can create forms from existing documents and add text fields, dropdowns, checkboxes, and signature fields.</p>
 
-<h2>2. PDFfiller, best for editing existing PDFs</h2>
+<p>Acrobat makes the most sense when the PDF itself is the source of truth and someone needs detailed control over the document—not only a quick set of fields.</p>
 
-<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/shot_pdffiller_ed5bfe54fb.png" alt="PDFfiller homepage hero screenshot" style="width:100%;max-width:900px;height:auto;border-radius:8px;border:1px solid #e5e7eb;margin:16px 0;" loading="lazy" /></p>
+<p><strong>Best for:</strong> complex forms, regulated document work, and teams already using Adobe.</p>
+<p><strong>The catch:</strong> the useful creation and editing features are paid, and Acrobat is heavier than necessary for a one-off simple form.</p>
 
-<p>PDFfiller is built for the other job: take a PDF that already exists and make it fillable. Upload a form, drop in fields, send it out, collect the completed copies. For paperwork you did not design, that workflow is hard to beat.</p>
+<h2>6. iLovePDF, best for automatic field detection</h2>
 
-<p>It also carries the deepest editing toolset here, including text editing inside the PDF plus a template library and cloud storage integrations.</p>
+<p><a href="https://www.ilovepdf.com/pdf-forms" target="_blank" rel="noopener">iLovePDF PDF Forms</a> checks an uploaded document for existing or detectable fields and also lets you add fields manually. It supports interactive text fields, checkboxes, radio buttons, and lists.</p>
 
-<p>The problem is pricing. PDFfiller no longer publishes a public pricing page; the URL returns a 404 and the homepage shows marketing figures rather than plan rates. We could not verify what it costs, so this page does not quote a number for it.</p>
+<p>The interface is direct: upload a PDF, review what the tool detects, add anything missing, and export the result. That is useful when a static document already looks like a form and you want a first pass created automatically.</p>
 
-<div class="table-wrap">
-<table>
-<thead><tr><th>Strengths</th><th>Weaknesses</th></tr></thead>
-<tbody>
-<tr><td>Edits text inside an existing PDF</td><td>No public pricing page; the pricing URL returns a 404</td></tr>
-<tr><td>Turns any uploaded PDF into a fillable form</td><td>Plan limits cannot be confirmed</td></tr>
-<tr><td>Large template library</td><td>Aimed at document work rather than online form collection</td></tr>
-<tr><td>Cloud storage integrations</td><td></td></tr>
-<tr><td>Established product with 923 G2 reviews</td><td></td></tr>
-</tbody>
-</table>
-</div>
+<p><strong>Best for:</strong> quickly detecting and adding fields to an existing PDF.</p>
+<p><strong>The catch:</strong> review every automatically detected field before sending the document, especially on scans and complex layouts.</p>
 
-<div class="table-wrap">
-<table>
-<thead><tr><th>Plan</th><th>What you get</th></tr></thead>
-<tbody>
-<tr><td>Free</td><td>Trial only; no permanent free tier found</td></tr>
-<tr><td>Paid plans</td><td>Not published. The pricing page is unavailable, so we cannot quote rates or limits</td></tr>
-</tbody>
-</table>
-</div>
+<h2>7. pdfFiller, best for recipient workflows</h2>
 
-<p><strong>Best for:</strong> teams whose work starts from PDFs that already exist.</p>
+<p><a href="https://fillable-pdf.pdffiller.com/" target="_blank" rel="noopener">pdfFiller</a> is built around documents that move between people. It uploads PDFs, adds fields, assigns fields to different recipients, sends links, collects signatures, tracks completion, and stores each returned copy.</p>
 
-<p><strong>The catch:</strong> you cannot compare its cost before talking to them, because the pricing page is gone. Budget accordingly, or shortlist a tool that publishes its rates.</p>
+<p>That makes it more than a field editor. It fits HR onboarding, client intake, rental applications, and other processes where someone must monitor who received and completed each document.</p>
 
-<p><strong>G2 rating:</strong> 4.6/5, from 923 reviews. A large, credible base; the product is well established even though the pricing is not public.</p>
+<p><strong>Best for:</strong> reusable document templates with recipients and tracking.</p>
+<p><strong>The catch:</strong> account and plan limits matter quickly, and public pricing is not as easy to compare as the free browser tools.</p>
 
-<h2>3. PandaDoc, best for sales quotes and proposals</h2>
+<h2>8. UPDF, best cross-platform desktop editor</h2>
 
-<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/shot_pandadoc_0af0d9d643.png" alt="PandaDoc homepage hero screenshot" style="width:100%;max-width:900px;height:auto;border-radius:8px;border:1px solid #e5e7eb;margin:16px 0;" loading="lazy" /></p>
+<p><a href="https://updf.com/pdf-form/fillable-pdf-creator/" target="_blank" rel="noopener">UPDF</a> provides form-field recognition, text fields, checkboxes, radio buttons, dropdowns, OCR, and broader PDF editing across Windows, macOS, iOS, and Android.</p>
 
-<p>PandaDoc is a document workflow tool that happens to produce PDFs. Its centre of gravity is the sales quote: build a proposal from a template, drop in pricing tables, send it for signature, watch the recipient open it.</p>
+<p>It is a better fit than a single-purpose web tool when you repeatedly edit document content, organize pages, convert files, and create forms on more than one device.</p>
 
-<p>For that job the extras earn their keep, with analytics on who viewed what, plus CRM integrations and approval steps before a document goes out.</p>
+<p><strong>Best for:</strong> people who want one installed PDF editor across desktop and mobile.</p>
+<p><strong>The catch:</strong> it requires an app download and uses product licensing rather than a simple no-signup browser flow.</p>
 
-<p>Pricing is per seat and the advertised rates are annual. On monthly billing, Starter is $35 per seat and Business is $65. Going over your document allowance costs extra per document, which is worth modelling before you commit.</p>
+<h2>9. DocHub, best for Google Workspace users</h2>
 
-<div class="table-wrap">
-<table>
-<thead><tr><th>Strengths</th><th>Weaknesses</th></tr></thead>
-<tbody>
-<tr><td>Purpose-built for quotes and proposals</td><td>Per-seat pricing adds up for larger teams</td></tr>
-<tr><td>Pricing tables inside the document</td><td>Advertised prices are the annual rates</td></tr>
-<tr><td>View analytics on sent documents</td><td>Document overages billed per document</td></tr>
-<tr><td>CRM integrations</td><td>Heavier than most teams need for a simple fillable PDF</td></tr>
-<tr><td>Free plan covers basic e-signature</td><td></td></tr>
-</tbody>
-</table>
-</div>
-
-<div class="table-wrap">
-<table>
-<thead><tr><th>Plan</th><th>What you get</th></tr></thead>
-<tbody>
-<tr><td>Free</td><td>$0. Unlimited e-signatures on basic documents</td></tr>
-<tr><td>Starter</td><td>$35/mo per seat ($19/mo billed annually)</td></tr>
-<tr><td>Business</td><td>$65/mo per seat ($49/mo billed annually)</td></tr>
-<tr><td>Enterprise</td><td>Custom pricing</td></tr>
-</tbody>
-</table>
-</div>
-
-<p><strong>Best for:</strong> sales teams sending quotes and proposals that need signing.</p>
-
-<p><strong>The catch:</strong> the sticker prices are annual rates. Month to month, Starter is $35 rather than $19, so check the toggle before budgeting.</p>
-
-<p><strong>G2 rating:</strong> 4.7/5, from 3,705 reviews. A large base with a consistently high score.</p>
-
-<h2>4. DocHub, best free browser PDF editor</h2>
-
-<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/shot_dochub_a6b2535417.png" alt="DocHub homepage hero screenshot" style="width:100%;max-width:900px;height:auto;border-radius:8px;border:1px solid #e5e7eb;margin:16px 0;" loading="lazy" /></p>
-
-<p>DocHub does PDF editing in the browser with no install, and its free tier is unusually capable: real editing plus signing and sending, capped at three uses a month across those features.</p>
-
-<p>The Google Workspace integration is the reason many teams find it. It opens PDFs straight from Drive and Gmail, which suits occasional document work without new software.</p>
-
-<p>Paid plans lift the caps. Monthly billing runs $11 for Basic and $16 for Pro, with a 25 percent discount for paying yearly, which brings those to $8 and $12.</p>
-
-<div class="table-wrap">
-<table>
-<thead><tr><th>Strengths</th><th>Weaknesses</th></tr></thead>
-<tbody>
-<tr><td>Genuinely capable free tier</td><td>Free tier limited to 3 uses a month across core features</td></tr>
-<tr><td>Runs in the browser with nothing to install</td><td>Advertised prices are the yearly rates</td></tr>
-<tr><td>Opens PDFs from Drive and Gmail</td><td>Lighter on workflow and analytics than PandaDoc or DocuSign</td></tr>
-<tr><td>Edits existing text inside a PDF</td><td>Not built for collecting form responses at scale</td></tr>
-<tr><td>Cheapest paid entry point in this list</td><td></td></tr>
-</tbody>
-</table>
-</div>
-
-<div class="table-wrap">
-<table>
-<thead><tr><th>Plan</th><th>What you get</th></tr></thead>
-<tbody>
-<tr><td>Free</td><td>$0. Core features with a shared limit of 3 uses a month</td></tr>
-<tr><td>Basic</td><td>$11/mo ($8/mo billed yearly). Unlimited signing and downloads</td></tr>
-<tr><td>Pro</td><td>$16/mo ($12/mo billed yearly). Adds team features</td></tr>
-<tr><td>Site License</td><td>Custom pricing</td></tr>
-</tbody>
-</table>
-</div>
-
-<p><strong>Best for:</strong> occasional PDF editing and signing, especially inside Google Workspace.</p>
-
-<p><strong>The catch:</strong> three uses a month on free goes quickly, and the advertised $8 and $12 are the yearly rates. Month to month it is $11 and $16.</p>
-
-<p><strong>G2 rating:</strong> 4.6/5, from 282 reviews. A solid base for a product of this size.</p>
-
-<h2>5. DocuSign, best for compliance-heavy signing</h2>
-
-<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/shot_docusign_b0a0e3c78e.png" alt="DocuSign homepage hero screenshot" style="width:100%;max-width:900px;height:auto;border-radius:8px;border:1px solid #e5e7eb;margin:16px 0;" loading="lazy" /></p>
-
-<p>DocuSign is the name procurement recognises, and in regulated signing that recognition is most of the product. You are buying the audit trail and the certificate that lands with every completed envelope.</p>
-
-<p>It handles fillable PDFs well, but the pricing is built around envelopes and seats rather than forms, so it fits document flows more than data collection.</p>
-
-<p>All published rates carry an annual commitment: Personal at $11 a month, Standard at $30 per user, Business Pro at $45 per user, billed as $132, $360, and $540 a year. Identity verification and SMS delivery cost extra per use.</p>
-
-<div class="table-wrap">
-<table>
-<thead><tr><th>Strengths</th><th>Weaknesses</th></tr></thead>
-<tbody>
-<tr><td>The most widely recognised e-signature brand</td><td>No free plan</td></tr>
-<tr><td>Strong audit trail and certificate of completion</td><td>All plans require an annual commitment</td></tr>
-<tr><td>Identity verification options</td><td>Per-user pricing above the Personal tier</td></tr>
-<tr><td>Broad integration coverage</td><td>Extras billed per use, including identity verification at $2.40 per attempt</td></tr>
-<tr><td>Handles fillable PDFs reliably</td><td></td></tr>
-</tbody>
-</table>
-</div>
-
-<div class="table-wrap">
-<table>
-<thead><tr><th>Plan</th><th>What you get</th></tr></thead>
-<tbody>
-<tr><td>Free</td><td>No free plan; a 30-day trial is offered</td></tr>
-<tr><td>Personal</td><td>$11/mo, annual commitment ($132/year). 5 envelopes a month, single user</td></tr>
-<tr><td>Standard</td><td>$30/user/mo, annual commitment ($360/year)</td></tr>
-<tr><td>Business Pro</td><td>$45/user/mo, annual commitment ($540/year)</td></tr>
-<tr><td>Enterprise</td><td>Custom pricing</td></tr>
-</tbody>
-</table>
-</div>
-
-<p><strong>Best for:</strong> regulated signing where the audit trail has to satisfy someone outside your team.</p>
-
-<p><strong>The catch:</strong> there is no month-to-month option at these rates. Every published plan is an annual commitment, so a short project pays for a full year.</p>
-
-<p><strong>G2 rating:</strong> 4.5/5, from 2,629 reviews. A large base, and the score has held as the product aged.</p>
-
-<h2>6. Adobe Acrobat Sign, best for Adobe ecosystem teams</h2>
-
-<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/shot_adobe_31276cbd88.png" alt="Adobe Acrobat Sign homepage hero screenshot" style="width:100%;max-width:900px;height:auto;border-radius:8px;border:1px solid #e5e7eb;margin:16px 0;" loading="lazy" /></p>
-
-<p>If your team already works in Acrobat, signing is a feature you can switch on rather than a tool you have to adopt. Files stay where they are, and the editing you already do carries over.</p>
-
-<p>Acrobat remains the most capable PDF editor here, which matters when the source document is complex: forms with calculations, or files that need real typographic control.</p>
-
-<p>Team pricing is per licence on an annual plan billed monthly: Acrobat Standard for teams at $16.99, Pro for teams at $23.99, and Studio for teams at $29.99, for up to 10 licences before you talk to sales.</p>
-
-<div class="table-wrap">
-<table>
-<thead><tr><th>Strengths</th><th>Weaknesses</th></tr></thead>
-<tbody>
-<tr><td>The strongest PDF editing engine in this list</td><td>No free plan</td></tr>
-<tr><td>Signing built into software teams already use</td><td>Annual commitment with an early-cancellation fee</td></tr>
-<tr><td>Handles complex forms and calculations</td><td>Per-licence pricing</td></tr>
-<tr><td>Admin controls on team plans</td><td>Overkill if you only need to collect responses</td></tr>
-<tr><td>Individual plans available alongside team plans</td><td></td></tr>
-</tbody>
-</table>
-</div>
-
-<div class="table-wrap">
-<table>
-<thead><tr><th>Plan</th><th>What you get</th></tr></thead>
-<tbody>
-<tr><td>Free</td><td>No free plan; a trial is offered</td></tr>
-<tr><td>Acrobat Standard for teams</td><td>$16.99 per licence/mo, annual billed monthly</td></tr>
-<tr><td>Acrobat Pro for teams</td><td>$23.99 per licence/mo, annual billed monthly</td></tr>
-<tr><td>Acrobat Studio for teams</td><td>$29.99 per licence/mo, annual billed monthly</td></tr>
-</tbody>
-</table>
-</div>
-
-<p><strong>Best for:</strong> teams already standardised on Adobe.</p>
-
-<p><strong>The catch:</strong> cancelling early costs half of what remains on the annual commitment, so treat it as a year-long decision.</p>
-
-<p><strong>G2 rating:</strong> 4.4/5, from 1,070 reviews. A large base, slightly below the others here.</p>
-
-<h2>7. Jotform, best form-first tool with PDF autofill</h2>
-
-<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/jotform_52dafaf96f.png" alt="Jotform homepage hero screenshot" style="width:100%;max-width:900px;height:auto;border-radius:8px;border:1px solid #e5e7eb;margin:16px 0;" loading="lazy" /></p>
-
-<p>Jotform approaches PDFs from the form side, like Formester. Responses flow into a PDF template you design, which suits recurring paperwork such as contracts, waivers and applications.</p>
-
-<p>The template library is the largest in this comparison at 20,000+ forms, and the PDF editor lets you map fields onto a layout that matches an existing document.</p>
-
-<p>Monthly billing costs more than the advertised annual rates: Bronze is $39, Silver $49, and Gold $129. HIPAA features become available on Gold.</p>
-
-<div class="table-wrap">
-<table>
-<thead><tr><th>Strengths</th><th>Weaknesses</th></tr></thead>
-<tbody>
-<tr><td>20,000+ templates</td><td>Free plan covers 100 submissions a month</td></tr>
-<tr><td>PDF designer maps responses onto your layout</td><td>Advertised prices are the annual rates</td></tr>
-<tr><td>40+ payment gateways</td><td>Dense interface that takes time to learn</td></tr>
-<tr><td>HIPAA features from the Gold plan</td><td>Submission caps apply on every tier</td></tr>
-<tr><td>Deep REST API</td><td></td></tr>
-</tbody>
-</table>
-</div>
-
-<div class="table-wrap">
-<table>
-<thead><tr><th>Plan</th><th>What you get</th></tr></thead>
-<tbody>
-<tr><td>Starter (free)</td><td>$0. 5 forms, 100 submissions/mo</td></tr>
-<tr><td>Bronze</td><td>$39/mo ($34/mo billed yearly). 1,000 submissions/mo</td></tr>
-<tr><td>Silver</td><td>$49/mo ($39/mo billed yearly). 2,500 submissions/mo</td></tr>
-<tr><td>Gold</td><td>$129/mo ($99/mo billed yearly). 10,000 submissions/mo, HIPAA features available</td></tr>
-</tbody>
-</table>
-</div>
-
-<p><strong>Best for:</strong> recurring paperwork where responses should land in a designed PDF.</p>
-
-<p><strong>The catch:</strong> every tier meters submissions, so a busy form moves you up the plans on volume rather than features.</p>
-
-<p><strong>G2 rating:</strong> 4.7/5, from 5,426 reviews, the largest base of any dedicated form tool here.</p>
-
-<h2>8. Google Forms, best for Google Workspace teams</h2>
-
-<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/google_forms_1165c9a16e.png" alt="Google Forms homepage hero screenshot" style="width:100%;max-width:900px;height:auto;border-radius:8px;border:1px solid #e5e7eb;margin:16px 0;" loading="lazy" /></p>
-
-<p>Google Forms does not produce PDFs on its own, and it earns a place here anyway because so many teams reach for it first. Responses land in Sheets, and printing or exporting to PDF is a manual step afterwards.</p>
-
-<p>For a simple internal collection job that ends in a document, that manual step is often acceptable, and the price is nothing.</p>
-
-<p>There is no Forms-specific paid plan. It comes with Google Workspace, where Business Starter is $7 per user a month on an annual basis, Standard is $14, and Plus is $22.</p>
-
-<div class="table-wrap">
-<table>
-<thead><tr><th>Strengths</th><th>Weaknesses</th></tr></thead>
-<tbody>
-<tr><td>Free with any Google account</td><td>No native PDF generation; exporting is manual</td></tr>
-<tr><td>Answers sync to Sheets automatically</td><td>Very limited design control</td></tr>
-<tr><td>Familiar to almost everyone</td><td>Skip-to-section logic only</td></tr>
-<tr><td>Real-time collaborative editing</td><td>Google branding stays on the form</td></tr>
-</tbody>
-</table>
-</div>
-
-<div class="table-wrap">
-<table>
-<thead><tr><th>Plan</th><th>What you get</th></tr></thead>
-<tbody>
-<tr><td>Free</td><td>$0 with any Google account. Effectively unlimited responses</td></tr>
-<tr><td>Workspace Business Starter</td><td>$7/user/mo, annual basis</td></tr>
-<tr><td>Workspace Business Standard</td><td>$14/user/mo, annual basis</td></tr>
-<tr><td>Workspace Business Plus</td><td>$22/user/mo, annual basis</td></tr>
-</tbody>
-</table>
-</div>
-
-<p><strong>Best for:</strong> simple internal collection where a manual export is fine.</p>
-
-<p><strong>The catch:</strong> it has no real PDF workflow. Every other tool here automates what Google Forms leaves you to do by hand.</p>
-
-<p><strong>G2 rating:</strong> Google Forms has no standalone G2 profile. The 4.6/5 from 48,175 reviews that gets quoted belongs to Google Workspace as a whole.</p>
-
-<h2>9. Formsite, best for enterprise questionnaires</h2>
-
-<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/shot_formsite_cdb0600aeb.png" alt="Formsite homepage hero screenshot" style="width:100%;max-width:900px;height:auto;border-radius:8px;border:1px solid #e5e7eb;margin:16px 0;" loading="lazy" /></p>
-
-<p>Formsite is built for long structured questionnaires, and it produces PDF results from them. Its per-form result caps and sub-user model suit organisations running the same survey repeatedly.</p>
-
-<p>The product is dated in places, but the reporting and the workflow rules are more capable than the interface suggests.</p>
-
-<p>Monthly pricing runs $24.95 for Personal, $39.95 for Professional, $69.95 for Business, $99.95 for Business +, and $249.95 for Enterprise. Paying yearly cuts each of those by roughly two months' cost.</p>
-
-<div class="table-wrap">
-<table>
-<thead><tr><th>Strengths</th><th>Weaknesses</th></tr></thead>
-<tbody>
-<tr><td>Built for long, structured questionnaires</td><td>Free tier is 10 results in total, not per month</td></tr>
-<tr><td>PDF results and merged documents</td><td>Interface feels dated</td></tr>
-<tr><td>Per-form result caps suit repeated surveys</td><td>Result caps are per form rather than per account</td></tr>
-<tr><td>Sub-users on higher tiers</td><td>Smallest review base in this list at 32</td></tr>
-<tr><td>24/7 support on paid plans</td><td></td></tr>
-</tbody>
-</table>
-</div>
-
-<div class="table-wrap">
-<table>
-<thead><tr><th>Plan</th><th>What you get</th></tr></thead>
-<tbody>
-<tr><td>Free</td><td>$0. 10 forms, 10 results in total, Formsite branding</td></tr>
-<tr><td>Personal</td><td>$24.95/mo ($249.95/year). 5 forms, 500 results per form</td></tr>
-<tr><td>Professional</td><td>$39.95/mo ($399.95/year). 10 forms, 1,000 results per form</td></tr>
-<tr><td>Business</td><td>$69.95/mo ($699.95/year). 25 forms, 2,500 results per form</td></tr>
-<tr><td>Business +</td><td>$99.95/mo ($999.95/year). 100 forms, 10,000 results per form</td></tr>
-<tr><td>Enterprise</td><td>$249.95/mo ($2,499.95/year)</td></tr>
-</tbody>
-</table>
-</div>
-
-<p><strong>Best for:</strong> organisations running long questionnaires that end in a PDF.</p>
-
-<p><strong>The catch:</strong> the free tier gives 10 results in total rather than per month, so it works as a trial rather than a plan.</p>
-
-<p><strong>G2 rating:</strong> 4.3/5, from 32 reviews. The smallest base here, so treat the score as indicative.</p>
-
-<div style="background: #F5F3FF; border: 1px solid #E9D5FF; border-radius: 24px; padding: clamp(28px, 5vw, 56px) clamp(20px, 4vw, 48px); margin: 40px 0; text-align: center; font-family: inherit;">
-<div style="display: inline-block; background: #FFFFFF; border: 1px solid #E9D5FF; border-radius: 9999px; padding: 6px 16px; font-size: 12px; font-weight: 700; color: #6941C6; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 22px;">Formester</div>
-<h3 style="color: #0F172A !important; font-size: clamp(24px, 3.4vw, 36px); line-height: 1.2; font-weight: 700; margin: 0 auto 14px; max-width: 720px; font-family: inherit;">Ship a PDF form workflow without response caps</h3>
-<p style="color: #475467; font-size: clamp(15px, 1.5vw, 17px); line-height: 1.55; margin: 0 auto 28px; max-width: 600px; font-family: inherit;">Formester's free plan exports every submission as a PDF and ships e-signature, with no cap on responses. No credit card.</p>
-<p style="margin: 0;"><a href="https://app.formester.com/users/sign_up" style="display: inline-block; background: #7f56d9 !important; color: #ffffff !important; text-decoration: none !important; padding: 14px 28px; border-radius: 9999px; font-weight: 600; font-size: 16px; font-family: inherit;">Try Formester free <span aria-hidden="true" style="margin-left: 4px;">&rarr;</span></a></p>
-<p style="margin: 22px 0 0; font-size: 13px; color: #697586; font-family: inherit;">Free forever plan <span style="color: #C4B5FD;">&bull;</span> No credit card <span style="color: #C4B5FD;">&bull;</span> Setup in 2 minutes</p>
-</div>
-
-<h2>How to pick the right PDF form creator</h2>
-
-<p>Go back to the split at the top, because it decides everything else. If your work starts with a PDF someone else made, you need an editor. That means DocHub for occasional jobs, PDFfiller for heavy editing, or Acrobat if your team already lives in Adobe.</p>
-
-<p>If your work starts with a question you need answered, you need a form that produces a PDF, and the choice is between Formester for unmetered responses, Jotform for template depth, and Formsite for long questionnaires.</p>
-
-<p>Signing sits across both. DocuSign is the pick when an outside party has to trust the audit trail, and PandaDoc when the document is a sales quote.</p>
+<p><a href="https://www.dochub.com/" target="_blank" rel="noopener">DocHub</a> edits and signs PDFs in the browser and connects closely with Google Drive and Gmail. It is convenient when a PDF arrives in a Workspace inbox and needs a few fields or a signature before it goes back out.</p>
+
+<p>The free tier is useful for occasional tasks, while paid plans lift usage limits and add team features.</p>
+
+<p><strong>Best for:</strong> occasional PDF editing inside a Google Workspace routine.</p>
+<p><strong>The catch:</strong> free usage is limited, and it is less suited to high-volume response collection than a form-first platform.</p>
+
+<h2>What about DocuSign, PandaDoc, Google Forms, and Formsite?</h2>
+
+<p>They solve adjacent jobs, but they are not the clearest answer when someone needs to create a fillable PDF.</p>
+
+<ul>
+<li><strong>DocuSign:</strong> choose it for identity, signing order, reminders, certificates, and audit trails.</li>
+<li><strong>PandaDoc:</strong> choose it for sales proposals, quotes, approvals, and CRM-connected documents.</li>
+<li><strong>Google Forms:</strong> choose it for simple online collection; it does not create a downloadable interactive PDF form.</li>
+<li><strong>Formsite:</strong> choose it for hosted questionnaires and reports rather than editing the fields inside an existing PDF.</li>
+</ul>
+
+<h2>How to choose without overpaying</h2>
+
+<ol>
+<li><strong>Name the final output.</strong> Do you need a downloadable PDF, a shareable web form, or a generated PDF after every submission?</li>
+<li><strong>Check the first action.</strong> If you already have a document, choose a tool that opens an existing PDF instead of asking you to rebuild it.</li>
+<li><strong>Check the handoff.</strong> Decide whether people will email completed files back or submit through a tracked link.</li>
+<li><strong>Check privacy.</strong> For sensitive files, confirm whether processing is local, uploaded temporarily, or stored in an account.</li>
+<li><strong>Check the real limit.</strong> Look beyond free access at file size, page count, hourly tasks, submissions, seats, and signature envelopes.</li>
+<li><strong>Test the output.</strong> Open the final PDF in the viewers your recipients actually use before distributing it.</li>
+</ol>
+
+<p>If you only need to add fields and download a file, start with a free browser PDF form creator. Move to a paid document platform when you need OCR, complex editing, identity verification, multi-recipient signing, or centralized records.</p>
 
 <h2>Common questions about PDF form creators</h2>
 
-<details><summary>What is a PDF form creator?</summary><div>A PDF form creator is a tool that produces a fillable or completed PDF, either by adding form fields to a PDF you already have or by collecting answers online and generating the PDF at the end. Most tools do one of those two jobs well rather than both.</div></details>
-<details><summary>What is the best free PDF form creator?</summary><div>The best free PDF form creator depends on the job. For collecting responses and exporting them as PDFs, Formester's free plan is unlimited on forms and responses. For editing an existing PDF, DocHub's free tier allows three uses a month across its core features.</div></details>
-<details><summary>Can I turn an existing PDF into a fillable form?</summary><div>Yes, you can turn an existing PDF into a fillable form with PDFfiller, DocHub, or Adobe Acrobat. Upload the file, place fields where you need them, and share it for completion. Form-first tools like Formester and Jotform build the form first and generate the PDF afterwards.</div></details>
-<details><summary>Which PDF tool is cheapest?</summary><div>The cheapest paid entry point here is DocHub at $11 a month, followed by Formester Personal at $13 and Adobe Acrobat Standard for teams at $16.99 per licence. Formester's free plan carries no response cap, and Google Forms has no practical limit either.</div></details>
-<details><summary>Do these tools include e-signatures?</summary><div>Yes, e-signatures are included across these tools, though the terms differ. Formester includes them on the free plan, DocHub allows three signing uses a month free, while DocuSign, PandaDoc and Adobe Acrobat Sign all build their paid plans around signing.</div></details>
-<details><summary>Which PDF form creator is HIPAA compliant?</summary><div>Among these tools, Jotform offers HIPAA features from the Gold plan, and DocuSign and Adobe Acrobat Sign support HIPAA workflows on their business tiers. Formester does not offer HIPAA on any tier.</div></details>
-<details><summary>Can I collect payments inside a PDF form?</summary><div>Yes, you can collect payments alongside a PDF form with Formester, which includes Stripe and PayPal on its free plan, and with Jotform, which supports 40+ payment gateways on paid tiers. PandaDoc handles payment on quotes and proposals.</div></details>
-<details><summary>Why is there no price listed for PDFfiller?</summary><div>There is no price listed for PDFfiller because its pricing page is currently unavailable and the company does not publish rates elsewhere. Contact their sales team for a quote.</div></details>
+<details><summary>What is the best free PDF form creator?</summary><div>Formester is a strong free choice when you want to add fields to an existing PDF without an account or watermark. PDFgear is another free browser option, while Sejda is useful when you need more PDF editing controls but can work within its hourly limits.</div></details>
+<details><summary>Can I make an existing PDF fillable?</summary><div>Yes. Upload the PDF to a PDF form creator, place text fields, checkboxes, dropdowns, radio buttons, dates, or signature fields, test the file, and download the updated interactive PDF.</div></details>
+<details><summary>Can I create a fillable PDF without Adobe Acrobat?</summary><div>Yes. Browser tools including Formester, PDFgear, Sejda, iLovePDF, Jotform, pdfFiller, and DocHub can create fillable PDFs without Adobe Acrobat.</div></details>
+<details><summary>What is the difference between a fillable PDF and an online form?</summary><div>A fillable PDF preserves a fixed document layout and can be downloaded or completed offline. An online form is responsive, easier to complete on a phone, and sends structured responses to a dashboard.</div></details>
+<details><summary>Can a fillable PDF include a signature field?</summary><div>Yes. Most PDF form creators can add a signature field. If you need identity verification, reminders, signer tracking, and a formal audit trail, choose a dedicated e-signature workflow rather than only a blank signature box.</div></details>
+<details><summary>Which PDF form creators keep files in the browser?</summary><div>Formester's free PDF creator and PDFgear state that documents are processed locally in the browser. Check each vendor's current privacy policy before uploading confidential files because processing models can change.</div></details>
+
+<div class="pdf-cta">
+<p class="pdf-cta__eyebrow">Start with the file you already have</p>
+<h3>Make your PDF fillable for free</h3>
+<p>Add real form fields in your browser and download the finished PDF. No signup, no watermark, and nothing to install.</p>
+<a href="https://formester.com/tools/fillable-pdf-creator/">Open the free PDF creator →</a>
+<p class="pdf-cta__secondary">Need a response dashboard instead? <a href="https://app.formester.com/users/sign_up">Build an online form free</a>.</p>
+</div>
 
 <style>
-
-.fmstr-cmp-pdf-exit {
---p-bg-card: #ffffff;
---p-bg-violet-25: #f7f3ff;
---p-bg-pill: #f4ebff;
---p-fg-1: #101828;
---p-fg-2: #475467;
---p-fg-3: #697586;
---p-violet-500: #7f56d9;
---p-violet-600: #6941c6;
---p-violet-700: #5925dc;
---p-border-light: #eaecf0;
---p-border-violet: #9777e0;
-
-position: fixed;
-inset: 0;
-z-index: 2147483000;
-display: none;
-align-items: center;
-justify-content: center;
-padding: 24px;
-font-family: inherit;
-color: var(--p-fg-1);
-}
-.fmstr-cmp-pdf-exit *, .fmstr-cmp-pdf-exit *::before, .fmstr-cmp-pdf-exit *::after { box-sizing: border-box; }
-.fmstr-cmp-pdf-exit.is-open { display: flex; }
-
-.fmstr-cmp-pdf-exit__backdrop {
-position: absolute; inset: 0;
-background: rgba(16, 10, 40, 0.55);
-backdrop-filter: blur(3px);
-opacity: 0;
-transition: opacity 220ms ease;
-}
-.fmstr-cmp-pdf-exit.is-open .fmstr-cmp-pdf-exit__backdrop { opacity: 1; }
-
-.fmstr-cmp-pdf-exit__card {
-position: relative;
-width: 100%;
-max-width: 520px;
-background: var(--p-bg-card);
-border: 1px solid var(--p-border-light);
-border-radius: 20px;
-padding: 36px 36px 30px;
-box-shadow: 0 32px 80px rgba(16, 10, 40, 0.32);
-opacity: 0;
-transform: translateY(14px) scale(0.985);
-transition: opacity 260ms ease, transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-.fmstr-cmp-pdf-exit.is-open .fmstr-cmp-pdf-exit__card { opacity: 1; transform: none; }
-
-.fmstr-cmp-pdf-exit__close {
-position: absolute;
-top: 12px; right: 12px;
-width: 40px; height: 40px;
-display: inline-flex; align-items: center; justify-content: center;
-background: transparent;
-border: 0;
-border-radius: 50%;
-color: var(--p-fg-3);
-cursor: pointer;
-transition: background-color 150ms ease, color 150ms ease;
-}
-.fmstr-cmp-pdf-exit__close:hover { background: #f2f4f7; color: var(--p-fg-1); }
-.fmstr-cmp-pdf-exit__close:focus { outline: none; }
-.fmstr-cmp-pdf-exit__close:focus-visible { outline: 2px solid var(--p-border-violet); outline-offset: 2px; }
-.fmstr-cmp-pdf-exit__cta:focus-visible,
-.fmstr-cmp-pdf-exit__dismiss:focus-visible { outline: 2px solid var(--p-border-violet); outline-offset: 2px; border-radius: 9999px; }
-
-.fmstr-cmp-pdf-exit__eyebrow {
-display: inline-block;
-padding: 5px 13px 7px;
-background: var(--p-bg-pill);
-color: var(--p-violet-600);
-border-radius: 9999px;
-font-size: 12px;
-font-weight: 700;
-line-height: 1;
-letter-spacing: 0.08em;
-text-transform: uppercase;
-margin-bottom: 16px;
-max-width: calc(100% - 46px);
-}
-
-.fmstr-cmp-pdf-exit__heading {
-margin: 0 0 12px;
-font-size: 27px;
-line-height: 1.22;
-font-weight: 800;
-letter-spacing: -0.02em;
-}
-.fmstr-cmp-pdf-exit__heading em { font-style: normal; color: var(--p-violet-600); }
-
-.fmstr-cmp-pdf-exit__sub {
-margin: 0 0 24px;
-font-size: 15px;
-line-height: 1.55;
-color: var(--p-fg-2);
-}
-
-.fmstr-cmp-pdf-exit__list { list-style: none; margin: 0 0 28px; padding: 0; display: flex; flex-direction: column; gap: 16px; }
-.fmstr-cmp-pdf-exit__item { display: flex; align-items: flex-start; gap: 14px; }
-.fmstr-cmp-pdf-exit__ic {
-width: 38px; height: 38px; flex-shrink: 0;
-border-radius: 10px;
-background: var(--p-bg-violet-25);
-color: var(--p-violet-600);
-display: inline-flex; align-items: center; justify-content: center;
-}
-.fmstr-cmp-pdf-exit__ic svg { display: block; }
-.fmstr-cmp-pdf-exit__item-title { margin: 0; font-size: 15px; line-height: 1.4; font-weight: 700; }
-.fmstr-cmp-pdf-exit__item-body { margin: 3px 0 0; font-size: 14px; line-height: 1.45; color: var(--p-fg-3); }
-
-.fmstr-cmp-pdf-exit__cta {
-display: block;
-width: 100%;
-padding: 15px 24px 16px;
-background: var(--p-violet-600) !important;
-color: #ffffff !important;
-border-radius: 9999px;
-font-size: 16px;
-font-weight: 700;
-line-height: 1;
-text-align: center;
-text-decoration: none;
-box-shadow: 0 8px 24px rgba(105, 65, 198, 0.26);
-transition: background-color 150ms ease, transform 150ms ease;
-}
-.fmstr-cmp-pdf-exit__cta:hover { background: var(--p-violet-700) !important; color: #ffffff !important; transform: translateY(-1px); }
-
-.fmstr-cmp-pdf-exit__dismiss {
-display: block;
-width: 100%;
-margin-top: 10px;
-padding: 12px;
-background: transparent;
-border: 0;
-color: var(--p-fg-3);
-font-family: inherit;
-font-size: 14px;
-font-weight: 600;
-cursor: pointer;
-}
-.fmstr-cmp-pdf-exit__dismiss:hover { color: var(--p-fg-1); }
-
-.fmstr-cmp-pdf-exit__meta {
-margin: 6px 0 0;
-text-align: center;
-font-size: 12px;
-font-weight: 500;
-color: var(--p-fg-3);
-}
-
-@media (max-width: 560px) {
-.fmstr-cmp-pdf-exit { padding: 16px; align-items: flex-end; }
-.fmstr-cmp-pdf-exit__card { padding: 28px 22px 22px; border-radius: 18px; }
-.fmstr-cmp-pdf-exit__heading { font-size: 23px; }
-.fmstr-cmp-pdf-exit__list { gap: 14px; margin-bottom: 24px; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-.fmstr-cmp-pdf-exit__backdrop,
-.fmstr-cmp-pdf-exit__card { transition: none; }
-.fmstr-cmp-pdf-exit__card { transform: none; }
-}
+.pdf-choice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0 28px}.pdf-choice{border:1px solid #e4e7ec;border-radius:14px;padding:16px;background:#fff;min-width:0;display:flex;flex-direction:column}.pdf-choice h3{margin:4px 0 8px;font-size:17px;line-height:1.25}.pdf-choice p{color:#475467;font-size:14px;line-height:1.5;margin:0 0 10px}.pdf-choice__label{margin:0!important;color:#6941c6!important;font-size:11px!important;font-weight:700;text-transform:uppercase;letter-spacing:.06em}.pdf-choice a{color:#6941c6;font-size:13px;line-height:1.4;font-weight:700;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;border-bottom:0!important;margin-top:auto}.pdf-compare-table{width:100%;table-layout:fixed;border-collapse:separate;border-spacing:0;border:1px solid #e4e7ec;border-radius:14px;overflow:hidden;margin:20px 0 34px;font-size:12px;line-height:1.35}.pdf-compare-table th,.pdf-compare-table td{text-align:left;vertical-align:top;padding:10px 8px;border-right:1px solid #eaecf0;border-bottom:1px solid #eaecf0;overflow-wrap:anywhere}.pdf-compare-table th{background:#f4ebff;color:#4a2785;font-size:10px;line-height:1.25;text-transform:uppercase;letter-spacing:.03em}.pdf-compare-table th:nth-child(1){width:15%}.pdf-compare-table th:nth-child(2){width:13%}.pdf-compare-table th:nth-child(3){width:19%}.pdf-compare-table th:nth-child(4){width:19%}.pdf-compare-table th:nth-child(5){width:34%}.pdf-compare-table tr>*:last-child{border-right:0}.pdf-compare-table tbody tr:last-child td{border-bottom:0}.pdf-compare-table tbody tr:first-child td{background:#faf8ff}.pdf-compare-table td strong{color:#101828}.pdf-cta a{color:#6941c6;font-weight:700;text-decoration:none}.pdf-cta{background:#f5f3ff;border:1px solid #e9d5ff;border-radius:20px;padding:30px;margin:36px 0}.pdf-cta h3{margin:5px 0 10px;font-size:28px}.pdf-cta p{color:#475467}.pdf-cta__eyebrow{margin:0!important;color:#6941c6!important;font-size:12px!important;font-weight:700;text-transform:uppercase;letter-spacing:.06em}.pdf-cta__secondary{margin:16px 0 0!important;font-size:14px}@media(max-width:760px){.pdf-choice-grid{grid-template-columns:1fr}.pdf-choice{padding:16px}.pdf-compare-table{display:block;width:100%;border:0;background:transparent;font-size:12px;overflow:visible}.pdf-compare-table thead{display:none}.pdf-compare-table tbody{display:block;width:100%}.pdf-compare-table tr{display:block;margin:0 0 10px;padding:10px 12px;border:1px solid #e4e7ec;border-radius:12px;background:#fff}.pdf-compare-table tbody tr:first-child{background:#faf8ff;border-color:#c4b5fd}.pdf-compare-table td{display:grid;grid-template-columns:100px minmax(0,1fr);gap:10px;width:auto!important;padding:5px 0;border:0!important;font-size:12px;line-height:1.4;overflow-wrap:normal;word-break:normal}.pdf-compare-table td:first-child{display:block;padding:0 0 8px;margin-bottom:4px;border-bottom:1px solid #eaecf0!important;font-size:14px}.pdf-compare-table td:not(:first-child)::before{color:#667085;font-size:10px;font-weight:700;letter-spacing:.03em;text-transform:uppercase}.pdf-compare-table td:nth-child(2)::before{content:'Existing PDF'}.pdf-compare-table td:nth-child(3)::before{content:'No signup'}.pdf-compare-table td:nth-child(4)::before{content:'Online responses'}.pdf-compare-table td:nth-child(5)::before{content:'Best for'}.pdf-cta{padding:24px}.pdf-cta h3{font-size:24px}}
 </style>
-
-<div class="fmstr-cmp-pdf-exit" id="fmstr-pdf-exit" role="dialog" aria-modal="true" aria-labelledby="fmstr-pdf-exit-heading" aria-hidden="true">
-<div class="fmstr-cmp-pdf-exit__backdrop" data-fmstr-exit-close></div>
-<div class="fmstr-cmp-pdf-exit__card">
-<button type="button" class="fmstr-cmp-pdf-exit__close" data-fmstr-exit-close aria-label="Close">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-</button>
-<span class="fmstr-cmp-pdf-exit__eyebrow">Before you pay per signer</span>
-<h2 id="fmstr-pdf-exit-heading" class="fmstr-cmp-pdf-exit__heading">Document tools price by seat and envelope. <em>A form does not</em></h2>
-<p class="fmstr-cmp-pdf-exit__sub">DocuSign, Adobe Acrobat Sign and PandaDoc all scale cost with people and documents. That is the part worth checking first.</p>
-<ul class="fmstr-cmp-pdf-exit__list">
-<li class="fmstr-cmp-pdf-exit__item">
-<span class="fmstr-cmp-pdf-exit__ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
-<span>
-<h3 class="fmstr-cmp-pdf-exit__item-title">E-signatures on every tier</h3>
-<p class="fmstr-cmp-pdf-exit__item-body">Including free, with no envelope allowance to watch</p>
-</span>
-</li>
-<li class="fmstr-cmp-pdf-exit__item">
-<span class="fmstr-cmp-pdf-exit__ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg></span>
-<span>
-<h3 class="fmstr-cmp-pdf-exit__item-title">No submission cap</h3>
-<p class="fmstr-cmp-pdf-exit__item-body">Unlimited responses whether it is 10 signers or 10,000</p>
-</span>
-</li>
-<li class="fmstr-cmp-pdf-exit__item">
-<span class="fmstr-cmp-pdf-exit__ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19a4.5 4.5 0 1 0 0-9h-1.8A7 7 0 1 0 4 14.9"/><path d="M12 12v9"/><path d="m8 17 4 4 4-4"/></svg></span>
-<span>
-<h3 class="fmstr-cmp-pdf-exit__item-title">Capture signatures offline</h3>
-<p class="fmstr-cmp-pdf-exit__item-body">Sign on a tablet in the field, sync when you are back online</p>
-</span>
-</li>
-</ul>
-<a href="https://app.formester.com/users/sign_up" class="fmstr-cmp-pdf-exit__cta">Try Formester free</a>
-<button type="button" class="fmstr-cmp-pdf-exit__dismiss" data-fmstr-exit-close>Keep reading the comparison</button>
-<p class="fmstr-cmp-pdf-exit__meta">Free forever plan &middot; No credit card &middot; 56,000+ teams</p>
-</div>
-</div>
-<script>
-(function () {
-if (window.__fmstrExitInit_pdf) { return; }
-window.__fmstrExitInit_pdf = true;
-
-var KEY = 'fmstr_pdf_exit_seen_v1';
-var SCROLL_TRIGGER = 0.6;
-var MIN_DWELL_MS = 12000;
-var started = Date.now();
-var root = document.getElementById('fmstr-pdf-exit');
-if (!root) { return; }
-
-function alreadySeen() {
-try { return window.sessionStorage.getItem(KEY) === '1'; } catch (e) { return false; }
-}
-function markSeen() {
-try { window.sessionStorage.setItem(KEY, '1'); } catch (e) {}
-}
-if (alreadySeen()) { return; }
-
-var opened = false;
-var prevOverflow = '';
-
-function open() {
-if (opened || alreadySeen()) { return; }
-if (!root.isConnected) { return; }
-if (Date.now() - started < MIN_DWELL_MS) { return; }
-opened = true;
-markSeen();
-root.classList.add('is-open');
-root.setAttribute('aria-hidden', 'false');
-prevOverflow = document.documentElement.style.overflow;
-document.documentElement.style.overflow = 'hidden';
-var closeBtn = root.querySelector('.fmstr-cmp-pdf-exit__close');
-if (closeBtn) { closeBtn.focus(); }
-detach();
-}
-
-function close() {
-root.classList.remove('is-open');
-root.setAttribute('aria-hidden', 'true');
-document.documentElement.style.overflow = prevOverflow;
-document.removeEventListener('keydown', onKey);
-}
-
-function onScroll() {
-var doc = document.documentElement;
-var height = Math.max(doc.scrollHeight, document.body ? document.body.scrollHeight : 0);
-if (height <= window.innerHeight) { return; }
-var seen = (window.pageYOffset + window.innerHeight) / height;
-if (seen >= SCROLL_TRIGGER) { open(); }
-}
-
-function onMouseOut(e) {
-if (e.relatedTarget || e.toElement) { return; }
-if (e.clientY > 4) { return; }
-open();
-}
-
-function onKey(e) {
-if (e.key === 'Escape' || e.keyCode === 27) { close(); }
-}
-
-function detach() {
-window.removeEventListener('scroll', onScroll);
-document.removeEventListener('mouseout', onMouseOut);
-}
-
-window.addEventListener('scroll', onScroll, { passive: true });
-var finePointer = true;
-try { finePointer = window.matchMedia('(pointer: fine)').matches; } catch (e) {}
-if (finePointer) { document.addEventListener('mouseout', onMouseOut); }
-document.addEventListener('keydown', onKey);
-
-root.addEventListener('click', function (e) {
-var t = e.target;
-while (t && t !== root) {
-if (t.hasAttribute && t.hasAttribute('data-fmstr-exit-close')) { close(); return; }
-t = t.parentNode;
-}
-});
-})();
-</script>
-
-
