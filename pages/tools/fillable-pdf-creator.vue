@@ -94,8 +94,8 @@
           </ul>
           <div class="d-flex gap-3 flex-wrap">
             <FButton variant="primary" size="lg" :href="signupHref">Try it free</FButton>
-            <FButton variant="violet-outline" size="lg" href="/features/convert-pdf-to-fillable-form/"
-              >See how connected PDFs work</FButton
+            <FButton variant="violet-outline" size="lg" href="/features/create-fillable-pdf-forms/"
+              >See how form responses auto-fill PDFs</FButton
             >
           </div>
         </div>
