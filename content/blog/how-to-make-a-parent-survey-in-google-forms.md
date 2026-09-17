@@ -42,7 +42,7 @@ publishedAt: "2026-09-14T00:00:00.000Z"
 <li>
 <h3>Open a blank form and write the title and description</h3>
 <p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/30883db4ee7fd566_gforms-ps-step1-blank-title-description.gif" alt="A blank Google Form with the title changed to Parent Survey: Start of the Year and a description saying it takes five minutes, is anonymous and closes on a date" loading="lazy"></p>
-<p>Go to <a href="https://forms.google.com" target="_blank" rel="noopener">forms.google.com</a> and click <strong>Blank form</strong>. Name it for the moment in the year, and use the description for four facts: how long it takes, whether it is anonymous, one form per child and the closing date. Parents decide whether to start in those two lines.</p>
+<p>Go to forms.google.com and click <strong>Blank form</strong>. Name it for the moment in the year, and use the description for four facts: how long it takes, whether it is anonymous, one form per child and the closing date. Parents decide whether to start in those two lines.</p>
 </li>
 <li>
 <h3>Add the first questions and type them to the answers</h3>

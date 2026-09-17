@@ -66,7 +66,7 @@ publishedAt: "2025-05-16T00:34:01.177Z"
 
 <p>It works on desktop only. And it builds one page: no sections, and running it on a form that already has questions replaces them rather than adding to them.</p>
 
-<p>Since July 2026 it can also generate a quiz, with the correct answers and points set. Google's help article on <a href="https://support.google.com/docs/answer/16346789" target="_blank" rel="noopener">creating a form with Gemini</a> lists the current plans.</p>
+<p>Since July 2026 it can also generate a quiz, with the correct answers and points set. Google's help article on creating a form with Gemini lists the current plans.</p>
 
 <h2 id="chatgpt">Route 2: ChatGPT writes the questions, Apps Script builds the form</h2>
 
@@ -76,7 +76,7 @@ publishedAt: "2025-05-16T00:34:01.177Z"
 <li>
 <h3>Ask ChatGPT for the questions</h3>
 <p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/cbab756acfdfbe9c_gforms-gpt-step1-prompt-questions.gif" alt="Typing a prompt into ChatGPT for an eight-question bakery feedback form and ChatGPT returning the questions with a question type and options for each" loading="lazy"></p>
-<p>Open <a href="https://chatgpt.com" target="_blank" rel="noopener">chatgpt.com</a> and describe the form: what it is for, who fills it in, how many questions and the answer types you want. Ask for the type next to each question. Read the list and cut or reword anything before the next step, because fixing questions here is faster than fixing them in Forms.</p>
+<p>Open chatgpt.com and describe the form: what it is for, who fills it in, how many questions and the answer types you want. Ask for the type next to each question. Read the list and cut or reword anything before the next step, because fixing questions here is faster than fixing them in Forms.</p>
 </li>
 <li>
 <h3>Ask for a Google Apps Script that creates the form</h3>
@@ -85,19 +85,24 @@ publishedAt: "2025-05-16T00:34:01.177Z"
 </li>
 <li>
 <h3>Paste the script at script.google.com</h3>
-<p>Go to <a href="https://script.google.com" target="_blank" rel="noopener">script.google.com</a>, click <strong>New project</strong>, select everything in the editor and paste over it. Give the project a name so you can find it again. Nothing has been built yet.</p>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/5e4a065e929be1a6_gforms-gpt-step3-paste-script.gif" alt="A new Apps Script project with the default myFunction replaced by the pasted FormApp script, saved, and renamed Bakery feedback form builder" loading="lazy"></p>
+<p>Go to script.google.com, click <strong>New project</strong>, select everything in the editor and paste over it. Press Cmd+S or Ctrl+S to save, and click Untitled project to give it a name so you can find it again. Nothing has been built yet.</p>
 </li>
 <li>
 <h3>Run it once and authorise it</h3>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/8a51fd4516988cca_gforms-gpt-step4-run-authorise.gif" alt="Checking that createBakeryFeedbackForm is selected in the Apps Script function dropdown, clicking Run, the Authorization required dialog, then the Execution log showing Execution completed with the form edit URL" loading="lazy"></p>
 <p>Make sure the function name in the dropdown matches the one in the script, then click <strong>Run</strong>. The first run asks you to review permissions, because the script is about to create a file in your Drive. Pick your account and allow it. Under the editor, the Execution log prints the edit URL when it finishes.</p>
 </li>
 <li>
 <h3>Open the form</h3>
-<p>Click the URL in the log, or open Drive and look for a new form with the title from the script. Every question ChatGPT listed is now a real Google Forms question with its type and options set.</p>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/aac6b643f545a30e_gforms-gpt-step5-open-form.gif" alt="The Apps Script execution log with the form edit URL, then the Google Forms home page showing the new Bakery Customer Feedback Form in Recent forms and the form open with its questions" loading="lazy"></p>
+<p>Click the URL in the log, or open the Google Forms home page or Drive and look for a new form with the title from the script. Every question ChatGPT listed is now a real Google Forms question with its type and options set.</p>
 </li>
 <li>
 <h3>Finish in Google Forms</h3>
-<p>The script builds questions, not a finished form. Add a description, pick a theme and go through Settings for the parts scripts rarely cover: collecting email addresses, limiting to one response and the confirmation message. Then <strong>Publish</strong> and copy the responder link. <a href="/blog/how-to-use-google-forms/">How to use Google Forms</a> covers each of those screens.</p>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/c40e23cd754e3ab6_gforms-gpt-step6-finish-in-forms.gif" alt="Adding a description and a theme colour to the script-built form, opening Settings, then changing the responder setting from the organisation to Anyone with the link and copying the responder link" loading="lazy"></p>
+<p>The script builds questions, not a finished form. Add a description, pick a theme and go through Settings for the parts scripts rarely cover: collecting email addresses, limiting to one response and the confirmation message.</p>
+<p>A script-built form arrives already published. On a Workspace account it is restricted to people in your organisation, so open the <strong>Published</strong> button, click Manage and set the responder view to Anyone with the link before you copy it. <a href="/blog/how-to-use-google-forms/">How to use Google Forms</a> covers each of those screens.</p>
 </li>
 </ol>
 
@@ -117,13 +122,18 @@ publishedAt: "2025-05-16T00:34:01.177Z"
     .setTitle('Which items did you buy today?')
     .setChoiceValues(['Bread', 'Pastries', 'Cakes', 'Cookies']);
 
+  form.addScaleItem()
+    .setTitle('How satisfied were you with the freshness of the items?')
+    .setBounds(1, 5)
+    .setLabels('Not fresh', 'Very fresh');
+
   form.addParagraphTextItem()
     .setTitle('What is one thing we could do to improve?');
 
   Logger.log('Form edit URL: ' + form.getEditUrl());
 }</code></pre>
 
-<p>Each item type maps to a question type in Forms: <code>addMultipleChoiceItem</code> is Multiple choice, <code>addCheckboxItem</code> is Checkboxes, <code>addListItem</code> is Dropdown, <code>addScaleItem</code> is Linear scale, <code>addTextItem</code> is Short answer and <code>addParagraphTextItem</code> is Paragraph. The <a href="https://developers.google.com/apps-script/reference/forms/form-app" target="_blank" rel="noopener">FormApp reference</a> lists the rest.</p>
+<p>Each item type maps to a question type in Forms: <code>addMultipleChoiceItem</code> is Multiple choice, <code>addCheckboxItem</code> is Checkboxes, <code>addListItem</code> is Dropdown, <code>addScaleItem</code> is Linear scale, <code>addTextItem</code> is Short answer and <code>addParagraphTextItem</code> is Paragraph. Google's FormApp reference in the Apps Script documentation lists the rest.</p>
 
 <h2 id="addon">Route 3: a ChatGPT add-on inside Google Forms</h2>
 

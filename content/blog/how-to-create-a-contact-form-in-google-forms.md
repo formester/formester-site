@@ -42,7 +42,7 @@ publishedAt: "2026-09-14T00:00:00.000Z"
 <li>
 <h3>Open the Contact Information template and rename it</h3>
 <p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/08bd2a8cad74f76b_gforms-cf-step1-template-rename.gif" alt="The Google Forms template gallery scrolled to the Personal row, opening Contact Information and renaming the form title to Contact Us with a one-line description" loading="lazy"></p>
-<p>Go to <a href="https://forms.google.com" target="_blank" rel="noopener">forms.google.com</a>, open the <strong>Template gallery</strong> and pick <strong>Contact Information</strong> from the Personal row. Change the title to Contact Us and use the description for the one thing visitors want to know: how fast you reply.</p>
+<p>Go to forms.google.com, open the <strong>Template gallery</strong> and pick <strong>Contact Information</strong> from the Personal row. Change the title to Contact Us and use the description for the one thing visitors want to know: how fast you reply.</p>
 </li>
 <li>
 <h3>Cut the fields to what you will act on</h3>

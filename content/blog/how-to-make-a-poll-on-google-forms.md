@@ -48,7 +48,7 @@ publishedAt: "2026-06-04T14:28:03.779Z"
 <li>
 <h3>Open a blank form and name it</h3>
 <p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/e9cbee0799e48bb2_gforms-poll-step1-blank-title.gif" alt="Opening a blank form at forms.google.com and typing Team offsite: which Friday? as the title with a one-line description" loading="lazy"></p>
-<p>Go to <a href="https://forms.google.com" target="_blank" rel="noopener">forms.google.com</a> and click <strong>Blank form</strong>. Type the poll question as the title, so it shows in the browser tab and in the link preview, and use the description for the deadline and how many people should vote.</p>
+<p>Go to forms.google.com and click <strong>Blank form</strong>. Type the poll question as the title, so it shows in the browser tab and in the link preview, and use the description for the deadline and how many people should vote.</p>
 </li>
 <li>
 <h3>Add the question and the options</h3>

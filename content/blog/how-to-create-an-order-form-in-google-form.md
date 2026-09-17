@@ -42,7 +42,7 @@ publishedAt: "2026-06-15T11:54:51.989Z"
 <li>
 <h3>Open the Order Form template</h3>
 <p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/4abb47dbd0334cfd_gforms-order-step1-template.gif" alt="The Google Forms template gallery with Order Form in the Work row, opening to an Order Request form with a new or existing customer question, an item question and a contact section" loading="lazy"></p>
-<p>Go to <a href="https://forms.google.com" target="_blank" rel="noopener">forms.google.com</a>, open the <strong>Template gallery</strong> and pick <strong>Order Form</strong> from the Work row. It opens as Order Request with a customer question, an item question, a colour question, a Product options paragraph and a Contact info section for name, phone and email. Change the title and the description, which is where pickup days and cut-off times belong.</p>
+<p>Go to forms.google.com, open the <strong>Template gallery</strong> and pick <strong>Order Form</strong> from the Work row. It opens as Order Request with a customer question, an item question, a colour question, a Product options paragraph and a Contact info section for name, phone and email. Change the title and the description, which is where pickup days and cut-off times belong.</p>
 </li>
 <li>
 <h3>Replace the product question with your items and prices</h3>
