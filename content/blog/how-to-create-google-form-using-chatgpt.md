@@ -36,6 +36,8 @@ publishedAt: "2025-05-16T00:34:01.177Z"
 </ul>
 </div>
 
+<div style="position:relative;padding-top:56.25%;margin:22px 0;border-radius:12px;overflow:hidden;border:1px solid #e4e7ec;"><iframe src="https://www.youtube.com/embed/YT1_T-ZX8aw" title="How to Create a Google Form With ChatGPT and Apps Script (2026)" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe></div>
+
 <h2 id="direct">Can ChatGPT create a Google Form directly?</h2>
 
 <p>No. ChatGPT has no connection to Google Forms and cannot log into your Google account, click Blank form or add a question. What it can do is write everything a form is made of: the title, the questions, the answer options, which question type each one needs and whether it is required.</p>
