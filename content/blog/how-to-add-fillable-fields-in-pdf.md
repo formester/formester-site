@@ -5,8 +5,8 @@ description: "Add text fields, checkboxes, dates and signatures to an existing P
 metaTitle: "How to Add Fillable Fields to a PDF for Free"
 metaDescription: "Learn how to add fillable fields to a PDF for free. Add text, checkboxes, dates and signatures in your browser, with no signup."
 keywords: "how to add fillable fields in pdf, add fillable fields to pdf, add editable fields to pdf, add signature field to pdf, add form fields to pdf"
-author: "Harish Kumar"
-authorProfile: "https://www.linkedin.com/in/harish-kumar2424/"
+author: "Ankit Singhaniya"
+authorProfile: "https://linkedin.com/in/ankitsinghaniyaz"
 coverImgAlt: "adding text, checkbox and signature fields to an existing PDF"
 featured: false
 coverImg: {"url":"https://formester-strapi.s3.ap-south-1.amazonaws.com/a_blog_post_cover_about_how_to_add_fillable_fields_in_pdf_e63c3260b4.png","width":1214,"height":630}
@@ -46,7 +46,7 @@ This guide covers that job. You will add interactive fields to the PDF itself an
 
 [Convert the PDF into an online form](/features/convert-pdf-to-fillable-form/) when you need to collect the same information from many people. They complete a web form, and you keep each response in one dashboard. On the Business plan, Formester can also [fill your original PDF after each submission](/features/create-fillable-pdf-forms/).
 
-Read [how to convert a PDF into an online form](/blog/how-to-convert-pdf-to-fillable-form/) if you need this workflow.
+Read [how to create an online form from a PDF](/blog/create-online-form-from-pdf/) if you need this workflow.
 
 ### Fill a PDF someone sent you
 

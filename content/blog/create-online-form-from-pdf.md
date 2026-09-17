@@ -39,7 +39,7 @@ Here's how to do it, and when a fillable PDF is the better choice.
 
 These two sound similar but solve different problems. Figure out which one you need before you build anything.
 
-A **fillable PDF** is still a PDF. People download it, open it in the right app, type into it, and send the file back. That works when the document itself must stay a document. A government form you must submit as-is is a good example. If that is your case, read our guide on how to [convert a PDF to a fillable form](/blog/how-to-convert-pdf-to-fillable-form/) instead.
+A **fillable PDF** is still a PDF. People download it, open it in the right app, type into it, and send the file back. That works when the document itself must stay a document. A government form you must submit as-is is a good example. If that is your case, [add fields and download a fillable PDF](/tools/fillable-pdf-creator/).
 
 A **PDF to online form** conversion goes further. Your PDF becomes a hosted web form with its own link. That gets you things a PDF can never do:
 

@@ -115,6 +115,14 @@ export default defineNuxtConfig({
     public: 'public'
   },
 
+  routeRules: {
+    // Retired comparison guide: preserve its accumulated discovery signals by
+    // sending file-output visitors to the working free PDF editor.
+    '/blog/how-to-convert-pdf-to-fillable-form/': {
+      redirect: { to: '/tools/fillable-pdf-creator/', statusCode: 301 },
+    },
+  },
+
   // Nitro configuration
   nitro: {
     preset: 'static', // Force static generation instead of Netlify Functions

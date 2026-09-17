@@ -614,7 +614,7 @@ transition: transform .15s ease, background-color .15s ease;
 
 <details class="fmstr-cmp-tmpl-faq__item">
 <summary>Can I make a fillable PDF from a Word form?</summary>
-<div class="fmstr-cmp-tmpl-faq__answer">Yes. Build the form in Word with content controls, then go to File, Save As, and pick PDF as the format. The content controls export as interactive PDF fields that work in any PDF reader. If you want a fillable PDF without the Word step, Formester <a href="https://formester.com/blog/how-to-convert-pdf-to-fillable-form/">exports forms directly to fillable PDF</a>.</div>
+<div class="fmstr-cmp-tmpl-faq__answer">Yes. Build the form in Word with content controls, then go to File, Save As, and pick PDF as the format. The content controls export as interactive PDF fields that work in any PDF reader. If you want to add fields to an existing PDF without the Word step, use Formester's <a href="https://formester.com/tools/fillable-pdf-creator/">free fillable PDF creator</a>.</div>
 </details>
 
 <details class="fmstr-cmp-tmpl-faq__item">
@@ -722,11 +722,11 @@ content: "\2192"; transition: transform .15s ease; display: inline-block;
 <span class="fmstr-cmp-tmpl-rel__arrow">Open</span>
 </a>
 
-<a class="fmstr-cmp-tmpl-rel__card" href="https://formester.com/blog/how-to-convert-pdf-to-fillable-form/">
+<a class="fmstr-cmp-tmpl-rel__card" href="https://formester.com/tools/fillable-pdf-creator/">
 <span class="fmstr-cmp-tmpl-rel__chip">Guide</span>
-<h3 class="fmstr-cmp-tmpl-rel__title">How to convert a PDF to a fillable form</h3>
-<p class="fmstr-cmp-tmpl-rel__body">Skip Word entirely and convert any flat PDF to an online fillable form.</p>
-<span class="fmstr-cmp-tmpl-rel__arrow">Read</span>
+<h3 class="fmstr-cmp-tmpl-rel__title">Make a PDF fillable for free</h3>
+<p class="fmstr-cmp-tmpl-rel__body">Add fields to an existing PDF, test it, and download the finished file.</p>
+<span class="fmstr-cmp-tmpl-rel__arrow">Open</span>
 </a>
 
 <a class="fmstr-cmp-tmpl-rel__card" href="https://formester.com/blog/how-to-add-fillable-fields-in-pdf/">

@@ -374,7 +374,6 @@ const faqs = [
 
 const guides = [
   { href: '/blog/how-to-add-fillable-fields-in-pdf/', title: 'How to add fillable fields in a PDF' },
-  { href: '/blog/how-to-convert-pdf-to-fillable-form/', title: 'How to convert a PDF to a fillable form' },
   { href: '/blog/how-to-make-canva-pdf-fillable/', title: 'How to make a Canva PDF fillable' },
   { href: '/blog/best-pdf-form-creator/', title: '9 best PDF form creator tools compared' },
   { href: '/blog/how-to-fill-out-pdf-forms-an-easy-step-by-step-guide/', title: 'How to fill out PDF forms' },
