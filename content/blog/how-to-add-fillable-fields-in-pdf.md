@@ -46,7 +46,7 @@ This guide covers that job. You will add interactive fields to the PDF itself an
 
 [Convert the PDF into an online form](/features/convert-pdf-to-fillable-form/) when you need to collect the same information from many people. They complete a web form, and you keep each response in one dashboard. On the Business plan, Formester can also [fill your original PDF after each submission](/features/create-fillable-pdf-forms/).
 
-Read [how to convert a PDF into an online form](/blog/how-to-convert-pdf-to-fillable-form/) if you need this workflow.
+Read [how to create an online form from a PDF](/blog/create-online-form-from-pdf/) if you need this workflow.
 
 ### Fill a PDF someone sent you
 
