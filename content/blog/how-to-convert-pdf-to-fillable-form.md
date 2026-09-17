@@ -408,7 +408,7 @@ letter-spacing: -.01em !important; margin: 0 !important; color: var(--c-fg-1);
 }
 .fmstr-cmp-tmpl-steps__list {
 display: flex; flex-direction: column; gap: 14px;
-margin: 0; padding: 0; list-style: none;
+margin: 0; padding: 0; list-style: none !important; counter-reset: none !important;
 }
 .fmstr-cmp-tmpl-steps__item {
 background: var(--c-card);
@@ -419,7 +419,11 @@ box-shadow: var(--c-shadow);
 display: flex; gap: 12px;
 align-items: flex-start;
 min-width: 0;
+list-style: none !important;
+counter-increment: none !important;
 }
+.fmstr-cmp-tmpl-steps__item::marker,
+.fmstr-cmp-tmpl-steps__item::before { content: none !important; }
 .fmstr-cmp-tmpl-steps__num {
 flex-shrink: 0;
 width: 26px; line-height: 1; height: 26px; border-radius: 7px;
@@ -438,6 +442,7 @@ color: var(--c-fg-1); margin: 0 0 6px !important;
 font-size: 15px !important; line-height: 1.6 !important;
 color: var(--c-fg-2); margin: 0 !important;
 }
+.fmstr-cmp-tmpl-steps__body + .fmstr-cmp-tmpl-steps__body { margin-top: 10px !important; }
 
 @media (max-width: 540px) {
 .fmstr-cmp-tmpl-steps { padding: 36px 0; }
@@ -466,13 +471,6 @@ color: var(--c-fg-2); margin: 0 !important;
   .fmstr-cmp-tmpl-steps__num { width: 28px; height: 28px; font-size: 13px; border-radius: 8px; }
 }
 
-/* step-inline-num-restructure */
-.fmstr-cmp-tmpl-steps__item { display: block !important; }
-.fmstr-cmp-tmpl-steps__title { display: block; }
-.fmstr-cmp-tmpl-steps__num { display: inline-block !important; vertical-align: 2px; margin-right: 8px; padding: 2px 8px; width: auto !important; height: auto !important; border-radius: 6px; font-size: 12.5px !important; line-height: 1.3 !important; }
-@media (max-width: 540px) {
-  .fmstr-cmp-tmpl-steps__num { font-size: 11.5px !important; padding: 2px 7px; margin-right: 6px; }
-}
 </style>
 
 <section class="fmstr-cmp-tmpl-steps" aria-labelledby="fmstr-cmp-tmpl-steps-h2">
@@ -685,7 +683,7 @@ color: var(--c-fg-2); margin: 0 !important;
 --c-border: #eaecf0; --c-chip-bg: #f4f4f7;
 --c-shadow: 0 1px 3px rgba(16,24,40,.05);
 
-background: transparent; padding: 56px 24px;
+background: transparent; padding: 56px 0;
 font-family: inherit;
 color: var(--c-fg-1);
 text-align: left !important; overflow-x: hidden; -webkit-text-size-adjust: 100%;}
@@ -809,7 +807,7 @@ transition: transform .15s ease, background-color .15s ease;
 --c-shadow: 0 4px 20px rgba(16,24,40,.06);
 
 background: transparent;
-padding: 56px 24px;
+padding: 56px 0;
 font-family: inherit;
 color: var(--c-fg-1);
 text-align: left !important; overflow-x: hidden; -webkit-text-size-adjust: 100%;}
