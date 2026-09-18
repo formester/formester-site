@@ -547,7 +547,9 @@ const c6_faqList = [
   {
     id: 2343,
     header: 'How do I embed a form on my website?',
-    body: "Build your form in Formester, open the Embed tab, click Get Code to copy the snippet, then paste it into your page's HTML where you want the form to appear. Publish the page and the form is live — responses flow straight back to your Formester dashboard.",
+    body: "Build your form in Formester, open the Embed tab, click Get Code to copy the snippet, then paste it into your page's HTML where you want the form to appear. Publish the page and the form is live — responses flow straight back to your Formester dashboard. On a GoDaddy site, paste the snippet into an HTML section; the GoDaddy form builder guide walks through it step by step.",
+    answerHtml:
+      "Build your form in Formester, open the Embed tab, click Get Code to copy the snippet, then paste it into your page's HTML where you want the form to appear. Publish the page and the form is live — responses flow straight back to your Formester dashboard. On a GoDaddy site, paste the snippet into an HTML section; the <a href=\"/godaddy-form-builder/\">GoDaddy form builder guide</a> walks through it step by step.",
     body_markdown: null,
     list: [],
   },
@@ -733,7 +735,7 @@ useJsonld([
         name: 'How do I embed a form on my website?',
         '@type': 'Question',
         acceptedAnswer: {
-          text: "Build your form in Formester, open the Embed tab, click Get Code to copy the snippet, then paste it into your page's HTML where you want the form to appear. Publish the page and the form is live — responses flow straight back to your Formester dashboard.",
+          text: "Build your form in Formester, open the Embed tab, click Get Code to copy the snippet, then paste it into your page's HTML where you want the form to appear. Publish the page and the form is live — responses flow straight back to your Formester dashboard. On a GoDaddy site, paste the snippet into an HTML section; the GoDaddy form builder guide walks through it step by step.",
           '@type': 'Answer',
         },
       },

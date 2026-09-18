@@ -370,7 +370,7 @@ font-family: inherit; color: var(--c-fg-1);
 <li><strong>Tally</strong> for the most generous free tier (unlimited forms + responses).</li>
 <li><strong>Jotform</strong> for the biggest template library or HIPAA needs.</li>
 <li><strong>Paperform</strong> if your form reads more like a document.</li>
-<li><strong>Fillout</strong> if your forms tie into Airtable / Notion / Sheets as the data layer.</li>
+<li><strong>Fillout</strong> if your forms tie into Airtable / Notion / Sheets as the data layer. Torn between the first and last picks? The <a href="https://formester.com/fillout-alternative/">Fillout alternative page</a> compares Formester and Fillout head to head.</li>
 </ul>
 </div>
 </div>

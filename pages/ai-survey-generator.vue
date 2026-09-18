@@ -2011,7 +2011,8 @@ const c17_faqList = [
   {
     id: 2504,
     header: 'Is Formester’s AI survey generator free?',
-    body: 'Yes. You can use basic AI survey features for free. Advanced tools are available in premium plans.',
+    body: 'Yes. You can use basic AI survey features for free. Advanced tools are available in premium plans. If you are moving off an enterprise survey tool, see how Formester compares as a Qualtrics alternative.',
+    answerHtml: 'Yes. You can use basic AI survey features for free. Advanced tools are available in premium plans. If you are moving off an enterprise survey tool, see how Formester compares as a <a href="/qualtrics-alternative/">Qualtrics alternative</a>.',
     body_markdown: null,
     list: [],
   },
@@ -2357,7 +2358,7 @@ useJsonld([
             name: 'Is Formester’s AI survey generator free?',
             '@type': 'Question',
             acceptedAnswer: {
-              text: 'Yes. You can use basic AI survey features for free. Advanced tools are available in premium plans.',
+              text: 'Yes. You can use basic AI survey features for free. Advanced tools are available in premium plans. If you are moving off an enterprise survey tool, see how Formester compares as a Qualtrics alternative.',
               '@type': 'Answer',
             },
           },

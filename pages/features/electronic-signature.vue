@@ -604,7 +604,8 @@ const c7_faqList = [
   {
     id: 2324,
     header: 'What can I use e-signature forms for?',
-    body: 'Contracts and agreements, consent forms, legal documents like waivers and affidavits, and client onboarding — anything that needs a signature.',
+    body: 'Contracts and agreements, consent forms, legal documents like waivers and affidavits, and client onboarding — anything that needs a signature. Law firms can build e-signed client intake and retainer forms with Formester\'s legal form management software.',
+    answerHtml: 'Contracts and agreements, consent forms, legal documents like waivers and affidavits, and client onboarding — anything that needs a signature. Law firms can build e-signed client intake and retainer forms with Formester\'s <a href="/legal-form-management-software/">legal form management software</a>.',
     body_markdown: null,
     list: [],
   },
@@ -790,7 +791,7 @@ useJsonld([
         name: 'What can I use e-signature forms for?',
         '@type': 'Question',
         acceptedAnswer: {
-          text: 'Contracts and agreements, consent forms, legal documents like waivers and affidavits, and client onboarding — anything that needs a signature.',
+          text: 'Contracts and agreements, consent forms, legal documents like waivers and affidavits, and client onboarding — anything that needs a signature. Law firms can build e-signed client intake and retainer forms with Formester\'s legal form management software.',
           '@type': 'Answer',
         },
       },

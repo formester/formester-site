@@ -447,7 +447,9 @@ const c1_cards = [
     tag: 'Step 1',
     tagColor: 'violet',
     title: 'Pick an integration',
-    body: "Open your form's Automate tab and choose the tool you want to connect.",
+    body: "Open your form's Automate tab and choose the tool you want to connect. Native options include Google Sheets and the SharePoint integration for Excel workbooks and Lists.",
+    bodyHtml:
+      "Open your form's Automate tab and choose the tool you want to connect. Native options include Google Sheets and the <a href=\"/integrations/sharepoint/\">SharePoint integration</a> for Excel workbooks and Lists.",
     mockHtml: null,
     icon: null,
   },

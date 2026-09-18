@@ -174,6 +174,16 @@ const decodeEntities = (s) =>
     .replace(/&#0?39;|&apos;|&rsquo;/g, "'")
     .replace(/&nbsp;/g, ' ')
 const stripTags = (s) => decodeEntities((s || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim())
+// Same as stripTags but keeps <a> tags so FAQ answers can carry internal links. Leaves &lt; / &gt; encoded.
+const keepLinks = (s) =>
+  (s || '')
+    .replace(/<(?!\/?a\b)[^>]+>/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&#0?39;|&apos;|&rsquo;/g, "'")
+    .replace(/&nbsp;/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
 
 const faq = computed(() => {
   const html = props.blogData?.body || ''
@@ -188,7 +198,11 @@ const faq = computed(() => {
   while ((m = re.exec(inner))) {
     const q = stripTags(m[1])
     const a = stripTags(m[2])
-    if (q) list.push({ question: q, answer: a })
+    if (q) {
+      const item = { question: q, answer: a }
+      if (/<a\b/i.test(m[2])) item.answerHtml = keepLinks(m[2])
+      list.push(item)
+    }
   }
   return { body: html.replace(sec[0], ''), list, title, description }
 })
