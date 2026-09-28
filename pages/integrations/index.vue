@@ -6,7 +6,7 @@
       searchPlaceholder="Search integrations — Sheets, Slack, Stripe…"
       directoryEyebrow="Browse"
       directoryDescription="Search by name or scroll the full list — every native integration connects in minutes, no code needed."
-      metaText="34 native integrations · 8,000+ more via Zapier · No-code setup"
+      metaText="35 native integrations · 8,000+ more via Zapier · No-code setup"
       showMarquee
       wedgeTitle="Don't see your tool?"
       wedgeBody="Zapier, n8n, and webhooks connect Formester to 8,000+ apps. And if you'd rather have it native, tell us — requests shape our roadmap."
@@ -200,6 +200,15 @@ const c0_integrations = [
     link: '/integrations/hubspot-crm/',
     category: 'CRM & Sales',
     badge: null,
+    iconUrl: null,
+  },
+  {
+    id: 103,
+    name: 'Pipedrive',
+    description: 'Send form submissions to Pipedrive as linked people and deals.',
+    link: '/integrations/pipedrive/',
+    category: 'CRM & Sales',
+    badge: 'New',
     iconUrl: null,
   },
   {

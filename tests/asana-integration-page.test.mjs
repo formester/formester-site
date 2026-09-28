@@ -55,8 +55,8 @@ test('integrations directory links to Asana and reports its verified total', () 
   const integrationCount = [...integrationBlock.matchAll(/\n\s+name: '[^']+',/g)].length
   const declaredCount = Number(directory.match(/metaText="(\d+) native integrations/)?.[1])
   assert.equal(declaredCount, integrationCount)
-  assert.equal(integrationCount, 34)
-  assert.match(directory, /34 native integrations · 8,000\+ more via Zapier · No-code setup/)
+  assert.equal(integrationCount, 35)
+  assert.match(directory, /35 native integrations · 8,000\+ more via Zapier · No-code setup/)
   assert.match(icons, /asana: 'asana\.svg'/)
 })
 

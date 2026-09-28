@@ -106,6 +106,7 @@ import ArrowRightIcon from '@/components/icons/ArrowRightIcon.vue'
 import HubVisual from '@/components/integrations/HubVisual.vue'
 import IntegrationCard from './IntegrationCard.vue'
 import { integrationIconSrc } from '@/constants/integrationIcons'
+import { sortIntegrationsByName } from '@/utils/sortIntegrationsByName'
 
 const props = defineProps({
   eyebrow: { type: String, default: '' },
@@ -133,10 +134,10 @@ const requestLink = computed(() => props.wedgeButtons?.find((b) => /request/i.te
 
 const shown = computed(() => {
   const q = query.value.trim().toLowerCase()
-  if (!q) return props.integrations
-  return props.integrations.filter((app) =>
+  if (!q) return sortIntegrationsByName(props.integrations)
+  return sortIntegrationsByName(props.integrations.filter((app) =>
     `${app.name} ${app.description || ''} ${app.category || ''}`.toLowerCase().includes(q),
-  )
+  ))
 })
 
 // hub shows the most recognizable logos: badged ones first, then list order

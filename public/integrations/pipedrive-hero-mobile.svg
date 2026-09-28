@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 610" role="img" aria-labelledby="title desc">
+  <title id="title">Form submission to a Pipedrive person and deal</title>
+  <desc id="desc">A Formester submission finds or creates a person by email and creates a linked deal in Pipedrive. The graphic is an example, not a screenshot.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#F3EFFF"/><stop offset="1" stop-color="#E6F5EF"/></linearGradient>
+  </defs>
+  <style>
+    .flow-pulse{animation:flow 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    .record-row{animation:highlight 6s ease-in-out infinite}
+    .record-deal{animation-delay:1.3s}
+    @keyframes flow{0%,8%{opacity:0;transform:translateY(-10px)}25%,65%{opacity:1}86%,100%{opacity:0;transform:translateY(12px)}}
+    @keyframes highlight{0%,65%,100%{fill:#F4F8F7}35%{fill:#DCF1E8}}
+    @media (prefers-reduced-motion: reduce){.flow-pulse,.record-row{animation:none}}
+  </style>
+  <rect width="360" height="610" rx="20" fill="url(#bg)"/>
+  <g transform="translate(0 -17)">
+  <rect x="17" y="51" width="326" height="182" rx="16" fill="#fff" stroke="#E2E6EB"/>
+  <svg x="39" y="68" width="22" height="30" viewBox="0 0 16 22" aria-hidden="true">
+    <rect width="16" height="21.3333" rx="1.45455" fill="#6434D0"/>
+    <rect x="2.1814" y="5.09106" width="11.6364" height="5.09091" rx="2.54545" fill="white"/>
+    <path d="M6.9086 7.62655C6.9086 8.33495 6.25738 8.90922 5.45406 8.90922C4.65073 8.90922 3.99951 8.33495 3.99951 7.62655C3.99951 6.91814 4.65073 6.36377 5.45406 6.36377C6.25738 6.36377 6.9086 6.91814 6.9086 7.62655Z" fill="#6434D0"/>
+    <ellipse cx="10.5451" cy="7.6365" rx="1.45455" ry="1.27273" fill="#6434D0"/>
+  </svg>
+  <text x="76" y="89" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#1A2533">Formester submission</text>
+  <path d="M34 113h292" stroke="#E8EBEF"/>
+  <text x="34" y="142" font-family="Arial,sans-serif" font-size="14" fill="#667587">Name</text>
+  <text x="126" y="142" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#273443">Maya Patel</text>
+  <text x="34" y="175" font-family="Arial,sans-serif" font-size="14" fill="#667587">Email</text>
+  <text x="126" y="175" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#273443">maya@example.com</text>
+  <text x="34" y="208" font-family="Arial,sans-serif" font-size="14" fill="#667587">Inquiry</text>
+  <text x="126" y="208" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#273443">Website project</text>
+  <path d="M180 243v25m-8-8 8 8 8-8" fill="none" stroke="#6950B8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="flow-pulse" cx="180" cy="249" r="4" fill="#7553D6"/>
+  <rect x="17" y="282" width="326" height="308" rx="16" fill="#fff" stroke="#E2E6EB"/>
+  <rect x="34" y="299" width="30" height="30" rx="8" fill="#173D36"/>
+  <text x="43" y="320" font-family="Arial,sans-serif" font-size="21" font-weight="700" fill="#fff">P</text>
+  <text x="76" y="320" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#1A2533">Pipedrive</text>
+  <text x="34" y="356" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1" fill="#667587">PERSON + LINKED DEAL</text>
+  <rect class="record-row" x="34" y="370" width="292" height="73" rx="9" fill="#F4F8F7"/>
+  <circle cx="52" cy="402" r="8" fill="#C5E8D9"/>
+  <text x="69" y="407" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#24463B">Person</text>
+  <text x="154" y="401" font-family="Arial,sans-serif" font-size="14" fill="#354455">Maya Patel</text>
+  <text x="69" y="428" font-family="Arial,sans-serif" font-size="12" fill="#52685F">Matched by email or created</text>
+  <rect class="record-row record-deal" x="34" y="454" width="292" height="116" rx="9" fill="#EAF5EF"/>
+  <circle cx="52" cy="491" r="8" fill="#A9DAC3"/>
+  <text x="69" y="496" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#24463B">Deal</text>
+  <text x="154" y="496" font-family="Arial,sans-serif" font-size="14" fill="#354455">Website inquiry</text>
+  <text x="69" y="531" font-family="Arial,sans-serif" font-size="12" fill="#52685F">Sales pipeline · Qualified stage</text>
+  </g>
+</svg>

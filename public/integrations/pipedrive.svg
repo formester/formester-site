@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Pipedrive</title>
+  <rect width="64" height="64" rx="14" fill="#173D36"/>
+  <path d="M20 16h11c11 0 18 7 18 17S42 50 31 50h-2v-9h2c5 0 8-3 8-8s-3-8-8-8h-2v30h-9V16Z" fill="#fff"/>
+</svg>
