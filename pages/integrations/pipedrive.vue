@@ -3,8 +3,8 @@
     <HeroV2
       layout="split"
       :title="heroTitle"
-      description="Turn form submissions into new linked people, organizations, and deals in Pipedrive. Map the details you collect and choose where deals land."
-      trustText="Native integration · Integration access depends on your plan"
+      description="Send form responses to Pipedrive as a person and deal. Match an existing person by email or create one, then add a linked deal to your chosen pipeline and stage."
+      trustText="Native integration · Business plan and above"
       :buttons="heroButtons"
       :badge="{ text: 'Pipedrive', tag: 'Integrations', link: '/integrations/' }"
       :mockupHtml="heroIllustration"
@@ -18,7 +18,7 @@
       id="capabilities"
       eyebrow="From form to CRM"
       :title="benefitTitle"
-      description="Build a Pipedrive contact form around the questions your team needs, then create the CRM records you choose."
+      description="Collect the answers your sales team needs, then send them to Pipedrive without copy-paste."
       columns="3"
       :cards="benefitCards"
     />
@@ -38,8 +38,8 @@
     <CtaDark
       badge="Pipedrive form integration"
       heading="Give every new inquiry a place in your pipeline"
-      description="Create a Formester account, build your form, and connect Pipedrive when your plan includes the integration."
-      trustText="Integration access depends on your plan"
+      description="Build your form, then connect Pipedrive on the Business plan or above."
+      trustText="Native integration · Business plan and above"
       :buttons="ctaButtons"
     />
   </div>
@@ -53,11 +53,11 @@ import HeroV2 from '@/components/v2/HeroV2.vue'
 import StickyStepsSection from '@/components/v2/StickyStepsSection.vue'
 
 const heroIllustration =
-  '<picture><source media="(max-width: 600px)" srcset="/integrations/pipedrive-hero-mobile.svg"><img src="/integrations/pipedrive-hero.svg" alt="Illustration of a Formester submission creating linked Person, Organization, and Deal records in Pipedrive, with a selected pipeline and stage" style="display:block;width:100%;height:auto" /></picture>'
+  '<picture><source media="(max-width: 600px)" srcset="/integrations/pipedrive-hero-mobile.svg"><img src="/integrations/pipedrive-hero.svg" alt="Example of a Formester submission creating or matching a Pipedrive person and adding a linked deal in the selected pipeline and stage" style="display:block;width:100%;height:auto" /></picture>'
 
 const heroTitle = [
   { id: 1, text: 'Pipedrive form integration: ', highlight: false },
-  { id: 2, text: 'create linked CRM records', highlight: true },
+  { id: 2, text: 'send form leads to your CRM', highlight: true },
 ]
 const heroButtons = [
   { id: 1, link: 'https://app.formester.com/users/sign_up', text: 'Start free', type: 'Primary', showArrow: true },
@@ -66,22 +66,22 @@ const heroButtons = [
 
 const benefitTitle = [
   { id: 1, text: 'Collect the details. ', highlight: false },
-  { id: 2, text: 'Create the right records.', highlight: true },
+  { id: 2, text: 'Keep your pipeline moving.', highlight: true },
 ]
 const benefitCards = [
   {
     id: 1,
-    tag: 'Linked records',
+    tag: 'Person + deal',
     tagColor: 'violet',
-    title: 'Choose what each response creates',
-    body: 'Enable Person, Organization, and Deal as needed. New records created from one submission are linked together when those objects are enabled.',
+    title: 'Connect each inquiry to a deal',
+    body: 'A submission can create a person and a linked deal. If a person with the same email already exists in Pipedrive, Formester links the new deal to that existing person instead.',
   },
   {
     id: 2,
     tag: 'Field mapping',
     tagColor: 'green',
     title: 'Carry useful context into Pipedrive',
-    body: 'Map published scalar form fields or fixed values to names, primary email and phone, deal title, value, and currency. Text and long-text custom fields are supported.',
+    body: 'Map form questions or fixed values to Person Name and Email, phone, deal title, value, and currency. Add supported text or address custom fields when you need more detail.',
   },
   {
     id: 3,
@@ -97,7 +97,7 @@ const setupSteps = [
     id: 1,
     title: 'Open Pipedrive on your form',
     description:
-      'In your form, go to Automations → Integrations → Pipedrive. Publish any new fields you want to map first.',
+      'Open a published form, then go to Automate → Integrations → Pipedrive and select Add integration.',
   },
   {
     id: 2,
@@ -107,15 +107,15 @@ const setupSteps = [
   },
   {
     id: 3,
-    title: 'Choose records and map fields',
+    title: 'Map the person and deal',
     description:
-      'Enable Person, Organization, or Deal as needed. Map published form fields or fixed values; for deals, select a pipeline and stage.',
+      'Turn on Person and Deal. Map Name and Email from your form questions, choose a question or fixed value for the deal title, then select a pipeline and stage.',
   },
   {
     id: 4,
     title: 'Save and test a submission',
     description:
-      'Save the integration, submit a test response, and check the new linked records in Pipedrive. You can optionally sync existing submissions; previously successful deliveries are skipped.',
+      'Save settings, submit a test response, and check the linked person and deal in Pipedrive. Run Sync existing submissions if you also want to send earlier responses.',
   },
 ]
 
@@ -134,12 +134,12 @@ const faqs = [
   {
     id: 1,
     header: 'What does the Pipedrive integration create?',
-    body: 'For each eligible new submission, Formester can create a new Person, Organization, and Deal, depending on which objects you enable. The records are linked when created together. Existing CRM records are not updated.',
+    body: 'For each new submission, Formester can create a person and a linked deal in the pipeline and stage you choose. If a person with the same email already exists, Formester links the new deal to that person without updating their details.',
   },
   {
     id: 2,
     header: 'Can I map fields from my Pipedrive contact form?',
-    body: 'Yes. Choose published scalar form fields or fixed values for supported Person, Organization, and Deal fields. Text and long-text custom fields are supported; other custom field types are not available in this integration.',
+    body: 'Yes. Map form questions or fixed values to Person Name and Email, phone, deal title, value, and currency. You can also map supported text and address custom fields.',
   },
   {
     id: 3,
@@ -148,8 +148,8 @@ const faqs = [
   },
   {
     id: 4,
-    header: 'Will this update or deduplicate people already in Pipedrive?',
-    body: 'No. Each previously undelivered submission creates new records. The integration does not look up or update existing CRM records by email, so review submissions before syncing past responses.',
+    header: 'Will this update a person already in Pipedrive?',
+    body: 'No. If a person with the same email exists in Pipedrive, Formester uses the existing person for the new deal but does not change their details. Each submission creates a new deal.',
   },
   {
     id: 5,
@@ -158,8 +158,8 @@ const faqs = [
   },
   {
     id: 6,
-    header: 'Is the Pipedrive integration included with a free account?',
-    body: 'Start free creates a Formester account. Integration access depends on your plan; check your plan’s available integrations before connecting Pipedrive.',
+    header: 'Which Formester plan includes Pipedrive?',
+    body: 'The native Pipedrive integration is available on the Business plan and above. You can create a form with a free account, then upgrade to connect Pipedrive.',
   },
 ]
 
@@ -167,7 +167,7 @@ const ctaButtons = [{ id: 1, link: 'https://app.formester.com/users/sign_up', te
 
 const seoTitle = 'Pipedrive Form Integration: Send Form Leads to CRM | Formester'
 const seoDescription =
-  'Connect Formester forms to Pipedrive. Create new linked people, organizations, and deals from submissions, map fields, and choose a deal pipeline and stage.'
+  'Connect Formester forms to Pipedrive. Create or match a person by email, add a linked deal to your pipeline, and map form answers without Zapier.'
 const canonicalUrl = 'https://formester.com/integrations/pipedrive/'
 const socialImage = 'https://formester.com/formester-logo-meta-image.png'
 

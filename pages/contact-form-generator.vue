@@ -901,7 +901,7 @@
               <div class="fmstr-cmp-cfg-faq__a">
                 To the email address associated with your Formester account, unless you route them elsewhere. You can
                 add Google Sheets, Slack, or any CRM integration in one click. If you use Pipedrive, the
-                <a href="/integrations/pipedrive/#capabilities">native integration can create new linked CRM records</a>
+                <a href="/integrations/pipedrive/#capabilities">native integration can create a person and linked deal</a>
                 from eligible submissions.
               </div>
             </details>
@@ -1187,7 +1187,7 @@ useJsonld([
             name: 'Where do submissions go by default?',
             '@type': 'Question',
             acceptedAnswer: {
-              text: 'To the email address associated with your Formester account, unless you route them elsewhere. You can add Google Sheets, Slack, or any CRM integration in one click. If you use Pipedrive, the native integration can create new linked CRM records from eligible submissions.',
+              text: 'To the email address associated with your Formester account, unless you route them elsewhere. You can add Google Sheets, Slack, or any CRM integration in one click. If you use Pipedrive, the native integration can create a person and linked deal from eligible submissions.',
               '@type': 'Answer',
             },
           },

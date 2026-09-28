@@ -205,7 +205,7 @@ const c0_integrations = [
   {
     id: 103,
     name: 'Pipedrive',
-    description: 'Create linked people, organizations, and deals from form submissions.',
+    description: 'Send form submissions to Pipedrive as linked people and deals.',
     link: '/integrations/pipedrive/',
     category: 'CRM & Sales',
     badge: 'New',

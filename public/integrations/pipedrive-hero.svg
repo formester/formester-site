@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 600" role="img" aria-labelledby="title desc">
-  <title id="title">Form submission to linked Pipedrive records</title>
-  <desc id="desc">A Formester contact form submission creates linked person, organization, and deal records in a chosen Pipedrive pipeline and stage. The graphic is an example, not a screenshot.</desc>
+  <title id="title">Form submission to a Pipedrive person and deal</title>
+  <desc id="desc">A Formester contact form submission finds or creates a person by email and creates a linked deal in a chosen Pipedrive pipeline and stage. The graphic is an example, not a screenshot.</desc>
   <defs>
     <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#F3EFFF"/><stop offset="1" stop-color="#E6F5EF"/></linearGradient>
     <filter id="shadow" x="-20%" y="-25%" width="140%" height="160%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#253949" flood-opacity=".13"/></filter>
@@ -8,8 +8,7 @@
   <style>
     .flow-pulse{animation:flow 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
     .record-row{animation:highlight 6s ease-in-out infinite}
-    .record-org{animation-delay:1.3s}
-    .record-deal{animation-delay:2.6s}
+    .record-deal{animation-delay:1.3s}
     @keyframes flow{0%,8%{opacity:0;transform:translateY(-12px)}25%,65%{opacity:1}86%,100%{opacity:0;transform:translateY(14px)}}
     @keyframes highlight{0%,65%,100%{fill:#F4F8F7}35%{fill:#DCF1E8}}
     @media (prefers-reduced-motion: reduce){.flow-pulse,.record-row{animation:none}}
@@ -30,8 +29,8 @@
     <rect x="52" y="145" width="536" height="1" fill="#E8EBEF"/>
     <text x="52" y="178" font-family="Arial,sans-serif" font-size="17" fill="#667587">Name</text>
     <text x="192" y="178" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#273443">Maya Patel</text>
-    <text x="52" y="211" font-family="Arial,sans-serif" font-size="17" fill="#667587">Company</text>
-    <text x="192" y="211" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#273443">Northstar Studio</text>
+    <text x="52" y="211" font-family="Arial,sans-serif" font-size="17" fill="#667587">Email</text>
+    <text x="192" y="211" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#273443">maya@example.com</text>
   </g>
   <path d="M320 248v32m-11-11 11 11 11-11" fill="none" stroke="#6950B8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
   <circle class="flow-pulse" cx="320" cy="253" r="5" fill="#7553D6"/>
@@ -40,20 +39,17 @@
     <rect x="52" y="315" width="37" height="37" rx="10" fill="#173D36"/>
     <path d="M62 324h9c6 0 9 4 9 9s-3 9-9 9h-2v-5h2c3 0 4-2 4-4s-1-4-4-4h-2v16h-7v-21Z" fill="#fff"/>
     <text x="102" y="341" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#1A2533">Pipedrive</text>
-    <text x="53" y="385" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1" fill="#667587">NEW LINKED RECORDS</text>
-    <rect class="record-row" x="52" y="402" width="536" height="43" rx="10" fill="#F4F8F7"/>
-    <circle cx="75" cy="423" r="10" fill="#C5E8D9"/>
-    <text x="97" y="429" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#24463B">Person</text>
-    <text x="253" y="429" font-family="Arial,sans-serif" font-size="16" fill="#354455">Maya Patel</text>
-    <rect class="record-row record-org" x="52" y="451" width="536" height="43" rx="10" fill="#F4F8F7"/>
-    <circle cx="75" cy="472" r="10" fill="#C5E8D9"/>
-    <text x="97" y="478" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#24463B">Organization</text>
-    <text x="253" y="478" font-family="Arial,sans-serif" font-size="16" fill="#354455">Northstar Studio</text>
-    <rect class="record-row record-deal" x="52" y="500" width="536" height="49" rx="10" fill="#EAF5EF"/>
-    <circle cx="75" cy="524" r="10" fill="#A9DAC3"/>
-    <text x="97" y="530" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#24463B">Deal</text>
-    <text x="253" y="520" font-family="Arial,sans-serif" font-size="16" fill="#354455">Website inquiry</text>
-    <text x="253" y="538" font-family="Arial,sans-serif" font-size="13" fill="#52685F">Pipeline: Sales · Stage: Qualified</text>
+    <text x="53" y="385" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1" fill="#667587">PERSON + LINKED DEAL</text>
+    <rect class="record-row" x="52" y="402" width="536" height="58" rx="10" fill="#F4F8F7"/>
+    <circle cx="75" cy="431" r="10" fill="#C5E8D9"/>
+    <text x="97" y="436" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#24463B">Person</text>
+    <text x="253" y="426" font-family="Arial,sans-serif" font-size="16" fill="#354455">Maya Patel</text>
+    <text x="253" y="448" font-family="Arial,sans-serif" font-size="13" fill="#52685F">Matched by email or created</text>
+    <rect class="record-row record-deal" x="52" y="468" width="536" height="82" rx="10" fill="#EAF5EF"/>
+    <circle cx="75" cy="501" r="10" fill="#A9DAC3"/>
+    <text x="97" y="506" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#24463B">Deal</text>
+    <text x="253" y="494" font-family="Arial,sans-serif" font-size="16" fill="#354455">Website inquiry</text>
+    <text x="253" y="517" font-family="Arial,sans-serif" font-size="13" fill="#52685F">Sales pipeline · Qualified stage</text>
   </g>
   </g>
 </svg>
