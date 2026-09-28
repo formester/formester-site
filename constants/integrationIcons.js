@@ -37,6 +37,7 @@ export const INTEGRATION_ICONS = {
   'authorize.net': 'authorize-net.webp',
   'monday.com': 'monday-com.svg',
   asana: 'asana.svg',
+  pipedrive: 'pipedrive.svg',
   gohighlevel: 'gohighlevel.svg',
   salesforce: 'salesforce.png',
   'custom smtp': 'custom-smtp.svg',
