@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import getBlogRoutes, { getPageRoutes, getTemplateRoutes } from './utils/getRoutes.js'
+import { NOT_FOUND_PRERENDER_ROUTE, applyNotFoundFallback, verifyNotFoundFallback } from './utils/notFoundPrerender.js'
 import { STRAPI_URL, APP_URL } from './constants/urls'
 
 // Vercel sets DEPLOY_ENV to 'production' only for the prod deployment/domain;
@@ -62,7 +63,7 @@ export default defineNuxtConfig({
     sources: [
       '/api/__sitemap__/urls'
     ],
-    exclude: ['/status/**', '/design-preview']
+    exclude: ['/status/**', '/design-preview', NOT_FOUND_PRERENDER_ROUTE]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -132,7 +133,9 @@ export default defineNuxtConfig({
       crawlLinks: true,
       // /state-of-online-forms is listed explicitly: nothing links to it yet,
       // so crawlLinks alone would never reach it.
-      routes: ['/', '/sitemap.xml', '/state-of-online-forms'],
+      // NOT_FOUND_PRERENDER_ROUTE becomes the SSR-rendered 404.html (see
+      // utils/notFoundPrerender.js and the prerender:generate hook below).
+      routes: ['/', '/sitemap.xml', '/state-of-online-forms', NOT_FOUND_PRERENDER_ROUTE],
       ignore: ['/api'],
       // Lower via PRERENDER_CONCURRENCY on memory-constrained machines —
       // e.g. a 6.7GB-RAM local dev box OOM'd at the default 16 with
@@ -172,6 +175,12 @@ export default defineNuxtConfig({
         for (const route of allRoutes) {
           routes.add(route)
         }
+      },
+      'prerender:generate'(route) {
+        applyNotFoundFallback(route)
+      },
+      async 'prerender:done'(result) {
+        await verifyNotFoundFallback(result, '.output/public')
       }
     }
   },
