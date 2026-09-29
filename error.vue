@@ -1,250 +1,192 @@
 <template>
-  <div>
-    <Navbar />
-    <div class="message-block">
-      <h1 class="message">Oops</h1>
-      <h4 class="message-detail">{{ error?.statusCode || 404 }}, {{ error?.statusCode === 404 ? "you seems to be lost" : "something went wrong" }}</h4>
-      <button class="navigate-btn" @click="handleError">Home</button>
-      <nuxt-img
-        class="abs corner-design"
-        src="/error/design-404.png"
-        alt=""
-      />
-      <nuxt-img class="abs q1" src="/error/q-mark-1.png" alt="" />
-      <nuxt-img class="abs q2" src="/error/q-mark-2.png" alt="" />
-      <nuxt-img class="abs q3" src="/error/q-mark-3.png" alt="" />
-      <nuxt-img class="abs q4" src="/error/q-mark-4.png" alt="" />
-      <nuxt-img class="abs q5" src="/error/q-mark-5.png" alt="" />
-      <nuxt-img class="abs q6" src="/error/q-mark-6.png" alt="" />
-      <nuxt-img class="abs q7" src="/error/q-mark-7.png" alt="" />
-      <nuxt-img class="abs q8" src="/error/q-mark-8.png" alt="" />
-      <nuxt-img class="abs q9" src="/error/q-mark-9.png" alt="" />
-      <nuxt-img class="abs q10" src="/error/q-mark-10.png" alt="" />
-      <nuxt-img class="abs q11" src="/error/q-mark-11.png" alt="" />
-      <nuxt-img class="abs q12" src="/error/q-mark-12.png" alt="" />
-    </div>
+  <div class="error-layout">
+    <V2NavNavbar />
+    <main class="error-page" aria-labelledby="error-page-title">
+      <div aria-hidden="true" class="error-page__glow"></div>
+      <div class="error-page__inner">
+        <p class="error-page__code" aria-hidden="true">{{ isNotFound ? '404' : statusCode }}</p>
+        <p class="error-page__eyebrow">{{ isNotFound ? 'Error 404' : `Error ${statusCode}` }}</p>
+        <h1 id="error-page-title" class="error-page__title">
+          {{ isNotFound ? 'Page not found' : 'Something went wrong' }}
+        </h1>
+        <p class="error-page__desc">{{ isNotFound ? context.message : 'We hit a snag loading this page. Please try again in a moment.' }}</p>
+
+        <div class="error-page__ctas">
+          <FButton href="/" variant="primary" size="lg">
+            <IconArrowLeft />
+            Back to homepage
+          </FButton>
+          <FButton v-if="isNotFound" :href="context.href" variant="secondary" size="lg">
+            {{ context.label }}
+            <IconArrowRight />
+          </FButton>
+        </div>
+
+        <p class="error-page__help">
+          Think something's missing? <a href="/contact/">Let us know</a>.
+        </p>
+      </div>
+    </main>
+    <V2Footer />
+    <CookieConsent />
   </div>
 </template>
 
 <script setup>
-import Navbar from '@/components/nav/Navbar.vue'
+import FButton from '@/components/UI/FButton.vue'
+import IconArrowLeft from '@/components/icons/IconArrowLeft.vue'
+import IconArrowRight from '@/components/icons/IconArrowRight.vue'
 
 const props = defineProps({
-  error: Object
+  error: { type: Object, default: () => ({}) },
 })
 
-const handleError = () => {
-  clearError({ redirect: '/' })
+const statusCode = computed(() => Number(props.error?.statusCode) || 404)
+const isNotFound = computed(() => statusCode.value === 404)
+
+const CONTEXTS = {
+  default: {
+    message: "The link may be broken, or the page may have moved. Let's get you back on track.",
+    href: '/templates/',
+    label: 'Browse form templates',
+  },
+  blog: {
+    message: 'This article may have been moved or retired. The blog has plenty more to read.',
+    href: '/blog/',
+    label: 'Browse the blog',
+  },
+  templates: {
+    message: 'This template may have been renamed or removed. There are hundreds more to start from.',
+    href: '/templates/',
+    label: 'Browse form templates',
+  },
 }
+
+// 404.html is prerendered once and served for every missing URL, so the
+// visitor's path is only known in the browser. Resolve it after mount to
+// keep server and client markup identical during hydration.
+const context = ref(CONTEXTS.default)
+onMounted(() => {
+  const section = window.location.pathname.split('/')[1]
+  context.value = CONTEXTS[section] || CONTEXTS.default
+})
+
+useHead({
+  title: computed(() => (isNotFound.value ? 'Page not found | Formester' : 'Something went wrong | Formester')),
+  meta: [{ key: 'robots', name: 'robots', content: 'noindex, follow' }],
+})
 </script>
 
 <style scoped>
-.message-block {
+.error-layout {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
+}
+
+.error-page {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-24) var(--space-6);
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-violet-25) 100%);
+}
+
+.error-page__glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(720px, 120vw);
+  aspect-ratio: 1;
+  transform: translate(-50%, -55%);
+  border-radius: var(--r-half);
+  background: radial-gradient(circle, rgba(100, 52, 208, 0.12) 0%, rgba(100, 52, 208, 0) 65%);
+  pointer-events: none;
+}
+
+.error-page__inner {
+  position: relative;
+  max-width: 640px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.error-page__code {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(96px, 18vw, 180px);
+  line-height: 1;
+  color: var(--violet-500);
+  letter-spacing: -2px;
+  margin-bottom: var(--space-4);
+}
+
+.error-page__eyebrow {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--violet-600);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-3);
+}
+
+.error-page__title {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: var(--fw-bold);
+  line-height: 1.15;
+  color: var(--fg-1);
+  letter-spacing: -1px;
+  margin-bottom: var(--space-4);
+}
+
+.error-page__desc {
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 1.7;
+  color: var(--fg-2);
+  max-width: 520px;
+  margin-bottom: var(--space-9);
+}
+
+.error-page__ctas {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(135deg, #f9fafb 0%, #f0ebfa 100%);
-  padding: 2rem;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
 }
 
-.message {
-  font-size: 72px;
-  font-weight: 700;
-  color: var(--clr-primary);
-  margin-bottom: 16px;
-  z-index: 10;
-  position: relative;
+.error-page__ctas :deep(.fbt:focus-visible),
+.error-page__help a:focus-visible {
+  outline: 2px solid var(--violet-500);
+  outline-offset: 3px;
 }
 
-.message-detail {
-  font-size: 24px;
-  font-weight: 500;
-  color: var(--clr-text-secondary);
-  margin-bottom: 32px;
-  z-index: 10;
-  position: relative;
+.error-page__help {
+  font-size: var(--fs-sm);
+  color: var(--fg-3);
+  margin: 0;
 }
 
-.navigate-btn {
-  background: var(--clr-primary);
-  color: white;
-  border: none;
-  padding: 16px 32px;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 10;
-  position: relative;
-  box-shadow: 0 4px 12px rgba(100, 52, 208, 0.2);
+.error-page__help a {
+  color: var(--violet-500);
+  font-weight: var(--fw-medium);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
-.navigate-btn:hover {
-  background: var(--clr-primary-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(100, 52, 208, 0.3);
-}
+@media (max-width: 576px) {
+  .error-page {
+    padding: var(--space-24) var(--space-5) var(--space-16);
+  }
 
-.abs {
-  position: absolute;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-}
-
-.corner-design {
-  top: 0;
-  right: 0;
-  width: 200px;
-  height: auto;
-  opacity: 0.4;
-}
-
-@media (max-width: 768px) {
-  .message {
-    font-size: 48px;
-  }
-  
-  .message-detail {
-    font-size: 18px;
-    text-align: center;
-  }
-  
-  .navigate-btn {
-    padding: 14px 28px;
-    font-size: 15px;
-  }
-  
-  .corner-design {
-    width: 120px;
-  }
-}
-
-.q1 {
-  right: 366px;
-  top: 100px;
-}
-.q2 {
-  right: 356px;
-  top: 352px;
-}
-.q3 {
-  left: 350px;
-  top: 150px;
-}
-.q4 {
-  left: 440px;
-  top: 280px;
-}
-.q5 {
-  left: 119px;
-  top: 70px;
-}
-.q6 {
-  left: 727px;
-  top: 100px;
-}
-.q7 {
-  left: 12px;
-  top: 270px;
-}
-.q8 {
-  left: 560px;
-  top: 180px;
-}
-.q9 {
-  right: 118px;
-  top: 250px;
-}
-.q10 {
-  left: 285px;
-  top: 626px;
-}
-.q11 {
-  left: 767px;
-  bottom: 60px;
-}
-.q12 {
-  right: 132px;
-  bottom: 80px;
-}
-@media only screen and (max-width: 1350px) {
-  .q1 {
-    right: 250px;
-  }
-  .q2 {
-    right: 120px;
-    top: 400px;
-  }
-  .q3 {
-    left: 220px;
-  }
-  .q4 {
-    display: none;
-  }
-}
-@media only screen and (max-width: 1200px) {
-  .q1 {
-    right: 110px;
-  }
-  .q2 {
-    right: 100px;
-    top: 450px;
-  }
-  .q3 {
-    top: 120px;
-    left: 200px;
-  }
-  .q9 {
-    right: 100px;
-    top: 300px;
-  }
-}
-@media only screen and (max-width: 992px) {
-  .q6 {
-    display: none;
-  }
-  .q11 {
-    left: 500px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .q1 {
-    display: none;
-  }
-  .q3 {
-    top: 120px;
-    left: 150px;
-  }
-  .q5 {
-    top: 50px;
-    left: 100px;
-  }
-  .q11 {
-    display: none;
-  }
-}
-@media only screen and (max-width: 576px) {
-  .q2 {
-    right: 60px;
-    top: 500px;
-  }
-  .q8 {
-    display: none;
-  }
-  .q9 {
-    right: 20px;
-    top: 260px;
-  }
-  .q10 {
-    left: 85px;
-  }
-  .q12 {
-    bottom: 50px;
+  .error-page__ctas {
+    flex-direction: column;
+    align-self: stretch;
   }
 }
 </style>

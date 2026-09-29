@@ -73,7 +73,7 @@ const route = useRoute()
 const config = useRuntimeConfig()
 const { $notify } = useNuxtApp()
 
-const { data: blogResponse } = await useAsyncData(`blog-${route.params.slug}`, async () => {
+const { data: blogResponse, error: blogError } = await useAsyncData(`blog-${route.params.slug}`, async () => {
   try {
     const blog = await getBlogBySlug(route.params.slug)
     if (!blog?.id) {
@@ -110,9 +110,21 @@ const { data: blogResponse } = await useAsyncData(`blog-${route.params.slug}`, a
     return { blogData, relatedArticles }
   } catch (error) {
     console.error('Error fetching blog:', error)
-    throw createError({ statusCode: 404, message: 'Blog not found' })
+    throw error?.statusCode === 404
+      ? error
+      : createError({ statusCode: 500, statusMessage: 'Failed to load blog' })
   }
 })
+
+// Errors inside useAsyncData land in its error ref rather than propagating.
+if (blogError.value || !blogResponse.value?.blogData) {
+  const statusCode = blogError.value?.statusCode || 500
+  throw createError({
+    statusCode,
+    statusMessage: statusCode === 404 ? 'Blog not found' : 'Failed to load blog',
+    fatal: true,
+  })
+}
 
 const blogData = computed(() => blogResponse.value?.blogData)
 const relatedArticles = computed(() => blogResponse.value?.relatedArticles || [])

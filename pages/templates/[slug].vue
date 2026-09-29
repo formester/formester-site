@@ -20,7 +20,7 @@ const route = useRoute()
 
 const isPreview = route.query.preview === 'true'
 
-const { data: fetchedData, error: fetchError } = useAsyncData(
+const { data: fetchedData, error: fetchError } = await useAsyncData(
   `template-${route.params.slug}${isPreview ? '-preview' : ''}`,
   async () => {
     try {
@@ -118,6 +118,7 @@ const { data: fetchedData, error: fetchError } = useAsyncData(
         moreTemplatesDescription,
       }
     } catch (err) {
+      if (err?.statusCode === 404) throw err
       console.error('Error fetching template:', err)
       throw createError({ statusCode: 500, message: 'Internal Server Error' })
     }
@@ -125,7 +126,12 @@ const { data: fetchedData, error: fetchError } = useAsyncData(
 )
 
 if (fetchError.value) {
-  throw createError({ statusCode: 500, message: 'Failed to load template' })
+  const notFound = fetchError.value.statusCode === 404
+  throw createError({
+    statusCode: notFound ? 404 : 500,
+    statusMessage: notFound ? 'Template not found' : 'Failed to load template',
+    fatal: true,
+  })
 }
 
 const template = computed(() => fetchedData.value?.template || {})

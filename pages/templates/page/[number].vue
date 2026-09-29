@@ -52,6 +52,12 @@ import { useTemplateData, getPaginatedTemplates } from '@/composables/useTemplat
 
 const route = useRoute()
 
+// Only canonical positive integers are real pages; /page/abc/ or /page/0/
+// would otherwise coerce to page 1 and redirect instead of 404ing.
+if (!/^[1-9]\d*$/.test(String(route.params.number))) {
+  throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
+}
+
 // Get page number from route
 const currentPage = computed(() => {
   const num = parseInt(route.params.number)
