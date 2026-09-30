@@ -35,7 +35,7 @@ It helps customers feel confident and reduces confusion, leading to fewer mistak
 ### Top 10 Strategies to Improve Customer Onboarding in Finance
 
 1.) **Simplify the Process**
-Keep the steps simple and easy to follow. Avoid overloading new customers with too much information at once. Use clear, straightforward language and avoid complex financial terms. For example, consider using **[automation tools](/blog/10-best-workflow-automation-tools-in-2024/)** to streamline repetitive tasks. 
+Keep the steps simple and easy to follow. Avoid overloading new customers with too much information at once. Use clear, straightforward language and avoid complex financial terms. For example, consider using **[automation tools](/blog/best-workflow-automation-tools/)** to streamline repetitive tasks. 
 
 2.) **Provide Personalized Guidance**
 Personalization helps make customers feel valued. Tailor onboarding steps based on their specific needs or goals, such as offering budgeting tips or investment advice based on their preferences. For example, using **[pre-filled forms](/features/pre-fill-fields/)**, can make onboarding more personalized and faster.

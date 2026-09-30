@@ -265,7 +265,8 @@
                 </h2>
                 <p class="fmstr-cmp-far-hiw__sub">
                   No Zapier. No webhooks. Autosave is on by default. The reminder is one toggle. The resume link works
-                  on every device.
+                  on every device. Need a custom follow-up sequence? Build it with
+                  the <a href="https://formester.com/features/workflows/">visual workflow builder</a>.
                 </p>
               </header>
 

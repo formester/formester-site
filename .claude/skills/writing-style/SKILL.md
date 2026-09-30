@@ -128,6 +128,13 @@ These are words and patterns that read as AI-written. Never use them, and flag t
   step body, never bundled into the heading. Short single-action step headings also
   extract better into Google's list featured snippets.
 
+- **Methodology talk (Ankit's feedback, Sep 2026):** readers want the answer, not how we
+  got it. No "How we picked / tested / compared / reviewed these tools" sections, no
+  "We checked each vendor's pricing page in <month>", no "We compared N tools by...",
+  no "We removed X from this list" lines. Cut them and go straight to the value. The
+  only exception is original data (a survey we ran, numbers we measured): then say
+  briefly where the data came from, next to the data.
+
 The pattern behind all of these: a punchy, clever-sounding phrase where a plain sentence
 would do. When a line feels quotable, rewrite it flat.
 
@@ -181,7 +188,8 @@ sentence so no marker is needed.
    Also grep for the Claude-isms above (land/lands, honest, genuinely, heavy lifting,
    "N rules/decisions/views/walls" count setups, "step by step", "all the time",
    "more than you think", "most guides", "nobody talks about", "costs you a",
-   "prevents it", "fixes that") and rewrite every hit. Then scan for repeated sentence
+   "prevents it", "fixes that", "we checked", "we compared", "we tested", "how we
+   picked") and rewrite every hit. Then scan for repeated sentence
    skeletons (two neighboring sentences opening with the same words) and for bolded
    keyword/feature phrases in body copy; rewrite those too.
 2. Read the intro out loud. Does it state the reader's problem in plain words by sentence two?

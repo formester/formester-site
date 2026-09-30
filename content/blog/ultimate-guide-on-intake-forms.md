@@ -88,7 +88,7 @@ To create a professional and effective intake form, follow these best practices:
 
 - Ensure data security. If you collect sensitive data, follow privacy laws like HIPAA (for medical forms) or GDPR (for businesses in Europe).
 
-- **[Use automation](/blog/10-best-workflow-automation-tools-in-2024/)**. Set up instant responses and integrations with your CRM or email software.
+- **[Use automation](/blog/best-workflow-automation-tools/)**. Set up instant responses and integrations with your CRM or email software.
 
 ### Conclusion
 An intake form is more than just a questionnaire, it's a powerful tool that improves your workflow, client interactions, and also make sures that you collect the right information from the start. 

@@ -1205,7 +1205,7 @@
                   <p class="fmstr-cmp-more-ai-tools-aqm__desc">Write once, auto-publish in 180+ languages.</p>
                 </a>
 
-                <a class="fmstr-cmp-more-ai-tools-aqm__card" href="https://formester.com/features/ai-workflows/">
+                <a class="fmstr-cmp-more-ai-tools-aqm__card" href="https://formester.com/features/workflows/">
                   <span class="fmstr-cmp-more-ai-tools-aqm__icon" aria-hidden="true">
                     <svg
                       width="20"
@@ -1220,7 +1220,7 @@
                       <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"></path>
                     </svg>
                   </span>
-                  <h3 class="fmstr-cmp-more-ai-tools-aqm__title">AI Workflows</h3>
+                  <h3 class="fmstr-cmp-more-ai-tools-aqm__title">Workflow Automation</h3>
                   <p class="fmstr-cmp-more-ai-tools-aqm__desc">
                     Trigger logic, routing, and notifications from form responses.
                   </p>

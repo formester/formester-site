@@ -60,7 +60,7 @@ Instead of asking clients to print, sign, and scan documents, let them sign form
 Use the e-signature field, so clients can sign agreements instantly within the form. You can also use the file upload field to collect a picture of the signature.
 
 **5. Connect Forms to Your CRM**
-Manually entering client details into your system can be a headache. Instead, use a **[workflow automation tool](/blog/10-best-workflow-automation-tools-in-2024/)** to connect your form to tools such as HubSpot, Salesforce, or Zoho CRM. This way, every new client’s info is saved automatically.
+Manually entering client details into your system can be a headache. Instead, use a **[workflow automation tool](/blog/best-workflow-automation-tools/)** to connect your form to tools such as HubSpot, Salesforce, or Zoho CRM. This way, every new client’s info is saved automatically.
 
 **6. Set up automated Emails & Reminders**
 Once a client submits the form, they should get a confirmation email with information about the next steps. You can do this using **[email autoresponders](/features/autoresponder-email/)** in which you can send personalized emails to the client upon form submission.

@@ -122,6 +122,15 @@ export default defineNuxtConfig({
     '/blog/how-to-convert-pdf-to-fillable-form/': {
       redirect: { to: '/tools/fillable-pdf-creator/', statusCode: 301 },
     },
+    // Merged into the full Workflows page when the builder was revamped (Sep 2026).
+    // Static output only emits a meta-refresh; the real 301 is an Amplify custom rule.
+    '/features/ai-workflows/': {
+      redirect: { to: '/features/workflows/', statusCode: 301 },
+    },
+    // Evergreen slug for the workflow tools list (2026 refresh). Amplify holds the real 301.
+    '/blog/10-best-workflow-automation-tools-in-2024/': {
+      redirect: { to: '/blog/best-workflow-automation-tools/', statusCode: 301 },
+    },
   },
 
   // Nitro configuration

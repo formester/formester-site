@@ -89,9 +89,9 @@ These forms let teams focus on insights, not manual reading.
 
 - **Publish the form** and share the URL with your customers  
 
-- **Go to Automate > [AI Workflows](/features/ai-workflows/)**. Create a new workflow, name it, and choose when it should run—either on new submissions or manually  
+- **Go to Automate > Workflows**, create a new workflow, and pick the **Form submitted** trigger. Leave it running automatically on new submissions, or switch it to manual.  
 
-- **In the prompt section**, instruct the AI to:  
+- **Add an AI Agent step** and, in its prompt, instruct the AI to:  
  - Analyze responses  
 
  - Determine sentiment  
@@ -138,6 +138,6 @@ This method **saves hours of manual work** and lets you quickly identify pattern
 
 **Customer feedback doesn’t have to be overwhelming.** AI-powered forms let you analyze hundreds of responses in minutes.  
 
-By combining structured feedback forms with **AI workflows in Formester**, you can make faster, data-driven decisions, uncover key insights instantly, and focus on what truly matters, improving customer experience and business outcomes.
+By combining structured feedback forms with **[AI workflows](/features/workflows/) in Formester**, you can make faster, data-driven decisions, uncover key insights instantly, and focus on what truly matters, improving customer experience and business outcomes.
 
 

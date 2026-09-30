@@ -55,7 +55,7 @@ Navigate to the Integrations
 Toggle on the webhook integration option.
 
 **Step 4: Enter Webhook URL**
-Paste the URL provided by the app you’re integrating with. You can also use a **[workflow automation tool](/blog/10-best-workflow-automation-tools-in-2024/)** to get the webhook url and create a custom workflow with other third party apps such as Hubspot CRM.
+Paste the URL provided by the app you’re integrating with. You can also use a **[workflow automation tool](/blog/best-workflow-automation-tools/)** to get the webhook url and create a custom workflow with other third party apps such as Hubspot CRM.
 
 **Step 5: Select The Event**
 Choose whether to send data when a new form submission is created, or an existing one is updated or removed.

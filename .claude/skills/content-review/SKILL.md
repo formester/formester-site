@@ -58,6 +58,9 @@ what's left to the user instead of grinding).
   `writing-style` skill ("lands/land in", "honest/genuinely" framing, numeric setup lines
   like "Three decisions matter", stock metaphors like "heavy lifting" / "bite you" /
   "hitting walls"). Every hit is a P2 with a plain-language rewrite as the fix.
+- **Methodology sections and process lines** ("How we picked/tested these tools", "We
+  checked vendor pricing pages in <month>", "We compared N tools by...") are a P2: cut
+  them. Exception: original data, where a one-line source note sits next to the data.
 - Factual claims about Formester features verifiable against `pages/features/*` — a claim
   about a feature we don't have is a P1.
 - No unexplained jargon, no walls of text (>5 sentences per paragraph).

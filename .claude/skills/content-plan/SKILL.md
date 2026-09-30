@@ -83,6 +83,9 @@ fan out per-keyword calls.
   - H3 ...
 - FAQ (from PAA): <questions>
 
+(No "How we picked/tested" methodology section in the outline. Readers want the answer;
+only original data gets a short source note, next to the data.)
+
 ## Metadata
 - title / metaTitle (≤60 chars): ...
 - metaDescription (≤155 chars): ...

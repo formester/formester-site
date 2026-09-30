@@ -177,6 +177,8 @@ Formester makes it easy to create powerful, flexible forms. And Zapier lets you 
 
 Use **[Conditional Logic](/features/conditional-logic/)** to show or hide fields based on answers. This creates a smart form that works like a real assistant.
 
+If your automation starts and ends with a form, you may not need Zapier at all. Formester's **[built-in form automation](/features/workflows/)** lets you send emails, call webhooks, wait, branch on answers, and run AI right inside Formester. You can even trigger them when a submission is edited or a form is abandoned.
+
 ### Final Thoughts
 You don’t need a developer or a complex backend to build powerful workflows. All you need is a form, Zapier, and a few minutes.
 

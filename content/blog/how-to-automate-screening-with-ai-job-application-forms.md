@@ -61,9 +61,9 @@ They allow hiring teams to focus more on interviews and decisions instead of sor
 
 - Publish the form and share the application link with candidates.
 
-- **Go to Automate** and open **[AI Workflows](/features/ai-workflows/)**, then create a new workflow, give it a name, and choose when it should run, either on new submissions or manually.
+- **Go to Automate > Workflows**, create a new workflow, and pick the **Form submitted** trigger. Leave it running automatically on new submissions, or switch it to manual.
 
-- **In the prompt section**, tell the AI to screen applicants, compare responses with an ideal candidate checklist, score applications, and add the score to the results using only submitted data.
+- **Add an AI Agent step** and, in its prompt, tell the AI to screen applicants, compare responses with an ideal candidate checklist, score applications, and add the score to the results using only submitted data.
 
 **Example Prompt:**
 ```
@@ -96,7 +96,7 @@ You can also set filters such as match score greater than a certain number to sp
 
 **Hiring does not have to be slow or manual.** AI job application forms help you screen candidates in minutes instead of hours.
 
-By using job application forms with **AI workflows in Formester**, you save time, avoid complex ATS tools, and focus on choosing the right candidates.
+By using job application forms with **[AI workflows](/features/workflows/) in Formester**, you save time, avoid complex ATS tools, and focus on choosing the right candidates.
 
 If you want faster and smarter hiring, AI powered job application forms are a simple and powerful solution.
 
