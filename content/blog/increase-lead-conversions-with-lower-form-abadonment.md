@@ -70,7 +70,7 @@ A form that looks boring feels boring to fill. Formester already gives deep desi
 
 ### Step 7. Recover Lost Leads with Partial Submissions
 
-Even the best forms will still have drop offs. This is where lead recovery becomes powerful. **[Partial submissions](/features/partial-submissions/)** allow you to capture data even if users do not submit the form. To enable this in Formester, go to Settings, open Save and continue, and toggle partial submission. Then go to the Results tab, filter partial submissions, add another filter where the email field is filled, select those entries, and send bulk follow up emails. These users already showed interest. A simple follow up can turn lost leads into conversions.
+Even the best forms will still have drop offs. This is where lead recovery becomes powerful. **[Partial submissions](/features/partial-submissions/)** allow you to capture data even if users do not submit the form. To enable this in Formester, go to Settings, open Save and continue, and toggle partial submission. Then go to the Results tab, filter partial submissions, add another filter where the email field is filled, select those entries, and send bulk follow up emails. These users already showed interest. A simple follow up can turn lost leads into conversions. To send that follow up automatically, set up an **[automated email workflow](/features/workflows/)** with the Form abandoned trigger, add a short delay, then email a link to finish the form.
 
 ### Step 8. Track Where Users Drop Off
 

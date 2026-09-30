@@ -54,7 +54,7 @@ Once you have attention, you need to collect details. Tools such as landing page
 Leads often come with incomplete data. Lead enrichment adds valuable details such as industry, company size, or recent activity. This makes it easier for your sales team to understand and prioritize them.
 
 ### Lead scoring and qualification
-Not every lead is worth the same effort. Lead scoring assigns points based on engagement, demographics, and fit. This allows you to qualify leads properly and direct sales resources where they matter most.
+Not every lead is worth the same effort. Lead scoring assigns points based on engagement, demographics, and fit. This allows you to qualify leads properly and direct sales resources where they matter most. You can hand this to **[AI workflow automation](/features/workflows/)** in Formester: an AI step scores each new lead, and a condition routes hot leads to sales while the rest get a nurture email.
 
 ### Lead distribution
 Once qualified, the team should assign leads to the right sales reps. You can base distribution on geography, product or service type, or availability. This keeps the sales pipeline moving quickly.

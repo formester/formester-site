@@ -53,9 +53,9 @@ They help teams focus on decisions instead of manual checking.
 
 - Publish the form and share it with internal teams or vendors
 
-- **Go to Automate** and open **[AI Workflows](/features/ai-workflows/)**, then create a new workflow, give it a name, and choose when it should run, either on new submissions or manually
+- **Go to Automate > Workflows**, create a new workflow, and pick the **Form submitted** trigger. Leave it running automatically on new submissions, or switch it to manual
 
-- **In the prompt section**, tell the AI to act as an audit assistant that reviews IT audit responses, checks answers using the audit checklist, scores compliance, sets risk levels, and flags high risk gaps using only submitted data
+- **Add an AI Agent step** and, in its prompt, tell the AI to act as an audit assistant that reviews IT audit responses, checks answers using the audit checklist, scores compliance, sets risk levels, and flags high risk gaps using only submitted data
 
 **Example Prompt:**
 ```
@@ -83,7 +83,7 @@ Finally, highlight high risk gaps, flag questions that need follow up, and keep 
 ### Final Thoughts
 **Large IT audits do not have to slow your team down**. AI powered audit forms help you review hundreds of questions in minutes.
 
-By using structured audit forms with **AI workflows in Formester**, you improve data security. This also cuts down on manual work and keeps internal audits consistent.
+By using structured audit forms with **[AI workflows](/features/workflows/) in Formester**, you improve data security. This also cuts down on manual work and keeps internal audits consistent.
 
 If your audits focus on protecting sensitive data and improving security, your team can focus on what really matters.
 

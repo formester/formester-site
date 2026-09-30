@@ -850,7 +850,7 @@
                 <p class="fmstr-cmp-cfg-more-tools__desc">Auto-translate any form into 50+ languages.</p>
               </a>
 
-              <a class="fmstr-cmp-cfg-more-tools__card" href="https://formester.com/features/ai-workflows/">
+              <a class="fmstr-cmp-cfg-more-tools__card" href="https://formester.com/features/workflows/">
                 <span class="fmstr-cmp-cfg-more-tools__icon" aria-hidden="true">
                   <svg
                     width="20"
@@ -865,7 +865,7 @@
                     <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" />
                   </svg>
                 </span>
-                <h3 class="fmstr-cmp-cfg-more-tools__title">AI Multilingual Forms</h3>
+                <h3 class="fmstr-cmp-cfg-more-tools__title">Workflow Automation</h3>
                 <p class="fmstr-cmp-cfg-more-tools__desc">Trigger automations on form submission.</p>
               </a>
             </div>

@@ -278,7 +278,7 @@ Additionally, check for integration capabilities with other apps you use daily t
 By considering these factors, you can select the best workflow automation software for your business. 
 When automating workflows, having an efficient tool for data collection is crucial. 
 
-That's where a good **[online form builder](/)** comes in handy. For example, tools like Formester allow you to create custom forms easily, helping you gather and manage data effortlessly as part of your automated processes.
+That's where a good **[online form builder](/)** comes in handy. For example, tools like Formester allow you to create custom forms easily, helping you gather and manage data effortlessly as part of your automated processes. With Formester's built-in **[form workflow automation](/features/workflows/)**, you can also automate what happens after each submission, like branching on answers, running AI, sending emails, or calling a webhook, without a separate automation tool.
 
 ### Recap
 We explored the top workflow automation tools in 2024. We discussed how these tools, such as SureTriggers, Zapier, and Pabbly Connect, can help businesses streamline their processes and save time by automating repetitive tasks. 

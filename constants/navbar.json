@@ -112,6 +112,22 @@
     }
   },
   {
+    "id": 664,
+    "slug": "workflows",
+    "navTitle": "Workflows",
+    "navDescription": "Automate what happens after a submit",
+    "featureCategory": "Form Logic and Automations",
+    "featurePlan": "Free",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "Workflows",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/ai_workflows_6895337538.svg",
+        "alt": "Workflows"
+      }
+    }
+  },
+  {
     "id": 9,
     "slug": "information-recall",
     "navTitle": "Information Recall",
@@ -604,22 +620,6 @@
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/generate_unique_form_submission_url_for_each_respondent_916315d091.svg",
         "alt": "Unique Links"
-      }
-    }
-  },
-  {
-    "id": 596,
-    "slug": "ai-workflows",
-    "navTitle": "AI Workflows",
-    "navDescription": "Analyze responses using AI",
-    "featureCategory": "Form Logic and Automations",
-    "featurePlan": "Business",
-    "navIcon": {
-      "imageUrl": null,
-      "imageAlt": "AI Workflows",
-      "image": {
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/ai_workflows_6895337538.svg",
-        "alt": "AI Workflows"
       }
     }
   },
