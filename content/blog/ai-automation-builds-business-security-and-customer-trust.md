@@ -53,7 +53,7 @@ Over time, the system becomes more accurate by learning from approved and reject
 
 Stronger identity and access management protection helps businesses control who can access systems and data. AI looks beyond simple passwords and checks context like login behavior, device type, and location. If something doesn’t match a user’s normal pattern, access can be restricted. 
 
-**[Automation](/blog/10-best-workflow-automation-tools-in-2024/)** makes access decisions faster and more consistent. It can enforce multi factor authentication when risk is higher and remove access when roles change or accounts become inactive. Statistics show that **[87% of companies](https://www.njda.org/news-information/news-archive/2025/11/25/multi-factor-authentication-(mfa)-statistics-you-need-to-know-in-2025---dental-technologies)** with more than 10,000 employees use MFA to protect accounts on a higher level. 
+**[Automation](/blog/best-workflow-automation-tools/)** makes access decisions faster and more consistent. It can enforce multi factor authentication when risk is higher and remove access when roles change or accounts become inactive. Statistics show that **[87% of companies](https://www.njda.org/news-information/news-archive/2025/11/25/multi-factor-authentication-(mfa)-statistics-you-need-to-know-in-2025---dental-technologies)** with more than 10,000 employees use MFA to protect accounts on a higher level. 
 
 For users, this approach feels smoother and safer. Legitimate access stays simple while risky behavior is flagged earlier on. 
 

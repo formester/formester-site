@@ -127,6 +127,10 @@ export default defineNuxtConfig({
     '/features/ai-workflows/': {
       redirect: { to: '/features/workflows/', statusCode: 301 },
     },
+    // Evergreen slug for the workflow tools list (2026 refresh). Amplify holds the real 301.
+    '/blog/10-best-workflow-automation-tools-in-2024/': {
+      redirect: { to: '/blog/best-workflow-automation-tools/', statusCode: 301 },
+    },
   },
 
   // Nitro configuration

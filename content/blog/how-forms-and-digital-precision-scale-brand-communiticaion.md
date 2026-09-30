@@ -81,7 +81,7 @@ You can have the sharpest copy in the world, but if the publishing process is in
 
 Workflows are the infrastructure behind brand communication. They ensure consistency not just in what you say, but in how and when you say it. Whether it’s internal comms, external campaigns, or customer-facing content. 
 
-**[Strong workflows](/blog/10-best-workflow-automation-tools-in-2024/)** will help you build trust within your team. When everyone knows where to find what they need, who’s responsible for what, and how decisions are made, it reduces ambiguity, speeds up production, and gives your brand a rhythm that’s consistent.
+**[Strong workflows](/blog/best-workflow-automation-tools/)** will help you build trust within your team. When everyone knows where to find what they need, who’s responsible for what, and how decisions are made, it reduces ambiguity, speeds up production, and gives your brand a rhythm that’s consistent.
 
 It’s not that messaging isn’t important. But messaging is the voice, workflows are the muscle behind it all. Without them, even the clearest message struggles to carry.
 

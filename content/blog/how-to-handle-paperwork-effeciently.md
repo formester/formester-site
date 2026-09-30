@@ -119,7 +119,7 @@ If you’re still manually renaming file names, downloading form submissions, or
 
 - Send reminders for unsigned agreements or missing documentation
 
-This is especially straightforward for documents collected through form submissions, like leave requests or onboarding data. But you can easily add team checklists, reports, and scanned files to an **[automated workflow, with the right tools](/blog/10-best-workflow-automation-tools-in-2024/)**. 
+This is especially straightforward for documents collected through form submissions, like leave requests or onboarding data. But you can easily add team checklists, reports, and scanned files to an **[automated workflow, with the right tools](/blog/best-workflow-automation-tools/)**. 
 
 Managing complex documents and requests efficiently is critical, especially when dealing with multiple vendors or partners. **<a href="https://1up.ai/rfp-automation/">AI RFP</a>** solutions take this a step further by automating the entire Request for Proposal process, reducing manual errors and speeding up vendor selection.
 

@@ -136,7 +136,7 @@ Popular lead management software includes HubSpot, Salesforce, and Zoho CRM. The
 
 - Seamless integration with your marketing campaign tools
 
-AI and **[automation](/blog/10-best-workflow-automation-tools-in-2024/)** make it easier to predict which leads are worth pursuing and suggest the next best action. Integrating with sales and marketing platforms ensures a consistent customer journey.
+AI and **[automation](/blog/best-workflow-automation-tools/)** make it easier to predict which leads are worth pursuing and suggest the next best action. Integrating with sales and marketing platforms ensures a consistent customer journey.
 
 ### Common Mistakes to Avoid in Lead Management
 Many businesses struggle by delaying follow-ups, which reduces conversion chances. Others fail to maintain data hygiene, leading to duplicate or outdated records.

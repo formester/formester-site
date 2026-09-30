@@ -68,7 +68,7 @@ Follow the simple steps below to create a form in Formester and easily integrate
 
 * Match each form field to its corresponding column in Notion.
 
-Zapier will now send responses from Formester to Notion automatically. Alternatively you can use any other **[workflow automation tool](/blog/10-best-workflow-automation-tools-in-2024/)** to do the same.
+Zapier will now send responses from Formester to Notion automatically. Alternatively you can use any other **[workflow automation tool](/blog/best-workflow-automation-tools/)** to do the same.
 
 #### 4. Test and Share
 
