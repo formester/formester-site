@@ -45,7 +45,9 @@ export default {
     },
     reject() {
       try {
-        // Do not set any cookies on reject; simply close the banner
+        // Records the refusal so the app can drop attribution evidence; no tracking cookies are set.
+        if (this.$setConsent) this.$setConsent('rejected')
+        else if (window.__setConsent) window.__setConsent('rejected')
       } finally {
         this.visible = false
       }

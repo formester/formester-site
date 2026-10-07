@@ -1,0 +1,23 @@
+{
+  "now": 1791360000000,
+  "cookie": "%7B%22v%22%3A1%2C%22first%22%3A%7B%22domain%22%3A%22www.google.com%22%2C%22utm%22%3A%7B%22campaign%22%3A%22launch%22%7D%2C%22path%22%3A%22%2Fblog%22%2C%22at%22%3A1791360000000%2C%22evidence%22%3A%22referrer_utm%22%7D%2C%22last%22%3A%7B%22domain%22%3A%22chatgpt.com%22%2C%22utm%22%3A%7B%7D%2C%22path%22%3A%22%2Fusers%22%2C%22at%22%3A1791360000000%2C%22evidence%22%3A%22referrer%22%7D%7D",
+  "decoded": {
+    "v": 1,
+    "first": {
+      "domain": "www.google.com",
+      "utm": {
+        "campaign": "launch"
+      },
+      "path": "/blog",
+      "at": 1791360000000,
+      "evidence": "referrer_utm"
+    },
+    "last": {
+      "domain": "chatgpt.com",
+      "utm": {},
+      "path": "/users",
+      "at": 1791360000000,
+      "evidence": "referrer"
+    }
+  }
+}

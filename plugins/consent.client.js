@@ -4,13 +4,15 @@
   - Exposes window.__enableTracking() that loads GTM, GA and Clarity when called
   - Auto-enables if consent cookie already present
 */
+import { acceptEntry, rejectEntry } from '../utils/signup-attribution.js'
 
 function setCookie(name, value, days) {
   const expires = new Date()
   expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000)
   const host = typeof window !== 'undefined' ? window.location.hostname : ''
-  const domain =
-    host && host.endsWith('formester.com') ? ';domain=.formester.com' : ''
+  // An exact host or a subdomain, so a lookalike like "notformester.com" cannot receive the cookie.
+  const isFormesterHost = host === 'formester.com' || host.endsWith('.formester.com')
+  const domain = isFormesterHost ? ';domain=.formester.com' : ''
   document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/${domain};SameSite=Lax`
 }
 
@@ -107,7 +109,12 @@ export default defineNuxtPlugin((nuxtApp) => {
   // Expose helpers
   if (typeof window !== 'undefined') {
     window.__enableTracking = enableTracking
-    window.__setConsent = (value) => setCookie('fm_consent', value, 180)
+    // The decision also drives the attribution cookie, which waits for an explicit answer.
+    window.__setConsent = (value) => {
+      setCookie('fm_consent', value, 180)
+      if (value === 'accepted') acceptEntry(window, document)
+      else rejectEntry(window, document)
+    }
     window.__getConsent = () => getCookie('fm_consent')
   }
 
@@ -124,7 +131,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     provide: {
       enableTracking,
       getConsent: () => getCookie('fm_consent'),
-      setConsent: (value) => setCookie('fm_consent', value, 180),
+      setConsent: (value) => window.__setConsent(value),
     },
   }
 })
