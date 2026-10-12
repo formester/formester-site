@@ -23,36 +23,44 @@ export default {
       try {
         // Get the referrer information
         const referrer = document.referrer
-        const currentUrl = window.location.href
         const currentDomain = window.location.hostname
         
         // Check if we already have referrer data in cookie (to avoid overwriting on subsequent page loads)
         const existingReferrerData = this.getCookie('formester_referrer_data')
         
-        // Only track external referrers (not internal navigation) and if no existing referrer data
-        if (referrer && !referrer.includes(currentDomain) && !existingReferrerData) {
+        // Campaign links count even without a referrer (email, apps, stripped referrers)
+        const params = new URLSearchParams(window.location.search)
+        const utm = {}
+        ;['utm_source', 'utm_medium', 'utm_campaign'].forEach((key) => {
+          if (params.get(key)) utm[key] = params.get(key).slice(0, 255)
+        })
+        const isExternal = referrer && !referrer.includes(currentDomain)
+
+        // First touch only: track external referrers or UTMs, if no existing referrer data
+        if ((isExternal || Object.keys(utm).length) && !existingReferrerData) {
           // Extract domain from referrer URL
-          const referrerDomain = new URL(referrer).hostname
+          const referrerDomain = isExternal ? new URL(referrer).hostname : null
           
-          // Create referrer data object
+          // Create referrer data object. URLs drop their query strings, which can carry personal data.
           const referrerData = {
             referrer_domain: referrerDomain,
-            referrer_url: referrer,
-            landing_page: currentUrl,
+            referrer_url: isExternal ? referrer.split('?')[0] : null,
+            landing_page: window.location.origin + window.location.pathname,
+            ...utm,
             timestamp: Date.now(),
             session_id: this.generateSessionId()
           }
           
           // Store in cross-subdomain cookie (expires in 30 days)
-          this.setCookie('formester_referrer_data', JSON.stringify(referrerData), 30, '.formester.com')
+          this.setCookie('formester_referrer_data', encodeURIComponent(JSON.stringify(referrerData)), 30, '.formester.com')
           
           // Send to GTM/Google Analytics (only if tracking enabled)
           if (typeof window !== 'undefined' && window.__trackingEnabled && typeof gtag === 'function') {
             gtag('event', 'referrer_tracking', {
               event_category: 'referrer',
               event_label: referrerDomain,
-              referrer_url: referrer,
-              landing_page: currentUrl,
+              referrer_url: referrerData.referrer_url,
+              landing_page: referrerData.landing_page,
               custom_parameter_1: referrerDomain
             })
           }
@@ -62,14 +70,10 @@ export default {
             window.dataLayer.push({
               event: 'referrer_tracked',
               referrer_domain: referrerDomain,
-              referrer_url: referrer,
-              landing_page: currentUrl
+              referrer_url: referrerData.referrer_url,
+              landing_page: referrerData.landing_page
             })
           }
-          
-          console.log('Referrer tracked and stored in cookie:', referrerData)
-        } else if (existingReferrerData) {
-          console.log('Existing referrer data found:', JSON.parse(existingReferrerData))
         }
       } catch (error) {
         console.error('Error tracking referrer:', error)
