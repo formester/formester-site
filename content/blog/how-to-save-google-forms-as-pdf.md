@@ -137,6 +137,7 @@ publishedAt: "2025-10-26T17:24:02.503Z"
 <ul>
 <li>Each response exports as a <a href="https://formester.com/features/export-form-submission-pdf/">formatted PDF</a>, one at a time or in bulk from the Submissions tab (Business plan)</li>
 <li>Turn on the Autoresponder and the PDF attaches itself to the respondent's confirmation email, so they keep their own copy without asking</li>
+<li>Need a certificate, contract, or receipt rather than a printout of answers? <a href="https://formester.com/features/document-generation/">Generate a branded PDF from every response</a> with a template you design once</li>
 <li>Go the other direction too and <a href="https://formester.com/features/convert-pdf-to-fillable-form/">turn an existing PDF into a fillable form</a>, rather than rebuilding it question by question</li>
 <li>Start from a document-shaped template, like the <a href="https://formester.com/templates/categories/agreement">agreement templates</a>, when the output matters as much as the answers</li>
 </ul>

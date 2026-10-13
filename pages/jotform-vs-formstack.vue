@@ -3017,7 +3017,10 @@
                     need generated PDFs plus e-signatures out of the box.
                   </li>
                   <li>
-                    Formester ships form output; extending to Salesforce or signed PDFs means a third-party workflow.
+                    Formester turns each submission into a branded PDF with
+                    <a href="/features/document-generation/">Formester Documents</a>, including the signature captured on the
+                    form. Salesforce object binding, or sending a finished document out for e-signature, still means a
+                    third-party workflow.
                   </li>
                   <li>
                     Honest tradeoff: for Salesforce shops or teams needing end-to-end document workflows, Formstack's
@@ -5566,6 +5569,12 @@ useJsonld([
 .fmstr-cmp-jvf-when-wins__list li strong {
   color: var(--p-fg-1);
   font-weight: 700;
+}
+.fmstr-cmp-jvf-when-wins__list li a {
+  color: var(--p-fg-1);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 @media (max-width: 760px) {
   .fmstr-cmp-jvf-when-wins {

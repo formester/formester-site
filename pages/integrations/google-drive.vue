@@ -317,7 +317,8 @@
                   <p class="fmstr-cmp-gdr-syncs__body">
                     Formester generates a clean PDF of the full submission (every question, every answer, timestamp,
                     submission ID) and saves it to Drive alongside the uploads. Useful for audit trails, signed
-                    agreements, and compliance records.
+                    agreements, and compliance records. On Business, save a
+                    <a href="/features/document-generation/">branded PDF from your own template</a> instead.
                   </p>
                   <div class="fmstr-cmp-gdr-syncs__visual" aria-hidden="true">
                     <div class="fmstr-cmp-gdr-syncs__file">

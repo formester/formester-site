@@ -111,7 +111,7 @@ Here is why many teams choose Formester for building smarter forms that work wit
 
 - More control over design and layout
 
-- Advanced features like multi-step forms, e-signatures, and **[PDF generation](/features/create-fillable-pdf-forms/)**
+- Advanced features like multi-step forms, e-signatures, and **[PDF generation](/features/document-generation/)**
 
 - Easy integration with Airtable to create new records
 

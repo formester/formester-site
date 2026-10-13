@@ -122,7 +122,7 @@ Check the saved file, not only the open browser tab.
 <p class="article-product-cta__title">Turn your PDF into a form people can fill</p>
 <p class="article-product-cta__body">Add interactive fields, download the PDF, and send a file that works.</p>
 <div class="article-product-cta__actions">
-<a href="/features/create-fillable-pdf-forms/#fillable-pdf-editor">Make this PDF fillable <span aria-hidden="true">→</span></a>
+<a href="/tools/fillable-pdf-creator/">Make this PDF fillable <span aria-hidden="true">→</span></a>
 <span>Free · No sign-up · No watermark</span>
 </div>
 </div>
