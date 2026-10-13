@@ -423,7 +423,7 @@ const c5_integrations = [
     id: 217,
     name: 'Hubspot CRM',
     description: 'Turn form submissions into HubSpot contacts and deals automatically.',
-    link: '/integrations/hubspot-crm/',
+    link: '/integrations/hubspot/',
   },
   {
     id: 222,

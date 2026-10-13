@@ -197,7 +197,7 @@ const c0_integrations = [
     id: 46,
     name: 'HubSpot CRM',
     description: 'Push new form leads to Hubspot CRM instantly.',
-    link: '/integrations/hubspot-crm/',
+    link: '/integrations/hubspot/',
     category: 'CRM & Sales',
     badge: null,
     iconUrl: null,

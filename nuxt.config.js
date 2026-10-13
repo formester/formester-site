@@ -131,6 +131,12 @@ export default defineNuxtConfig({
     '/blog/10-best-workflow-automation-tools-in-2024/': {
       redirect: { to: '/blog/best-workflow-automation-tools/', statusCode: 301 },
     },
+    // Duplicate slug of /integrations/hubspot/ (identical page, different URL).
+    // The page itself canonicalized there but the URL stayed in the sitemap and
+    // served a second copy. Amplify holds the real 301.
+    '/integrations/hubspot-crm/': {
+      redirect: { to: '/integrations/hubspot/', statusCode: 301 },
+    },
   },
 
   // Nitro configuration
