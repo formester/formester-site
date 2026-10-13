@@ -192,6 +192,22 @@
     }
   },
   {
+    "id": 665,
+    "slug": "document-generation",
+    "navTitle": "Documents",
+    "navDescription": "Branded PDFs from every submission",
+    "featureCategory": "PDF forms",
+    "featurePlan": "Business",
+    "navIcon": {
+      "imageUrl": null,
+      "imageAlt": "Documents",
+      "image": {
+        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Fillable_PDF_50b4621522.svg",
+        "alt": "Documents"
+      }
+    }
+  },
+  {
     "id": 36,
     "slug": "export-form-submission-pdf",
     "navTitle": "PDF Export",
