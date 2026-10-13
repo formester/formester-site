@@ -14,6 +14,9 @@
           <h3 class="fcg-card__title">{{ card.title }}</h3>
           <p class="fcg-card__body">{{ card.body }}</p>
           <div v-if="card.mockHtml" class="fcg-card__mock" v-html="card.mockHtml" />
+          <a v-if="card.link" :href="card.link" class="fcg-card__link">
+            {{ card.linkText || 'Learn more' }} <span aria-hidden="true">&rarr;</span>
+          </a>
         </article>
       </div>
     </div>
@@ -161,5 +164,20 @@ const gridStyle = computed(() => ({
   border-radius: var(--r-lg);
   background: var(--bg-grey-50, #f9fafb);
   padding: var(--space-3);
+}
+
+.fcg-card__link {
+  margin-top: auto;
+  padding-top: var(--space-4);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--violet-600, #5b2cc9);
+  text-decoration: none;
+}
+
+.fcg-card__link:hover,
+.fcg-card__link:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 </style>

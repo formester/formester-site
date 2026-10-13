@@ -69,9 +69,9 @@ This is how the system automatically captures both the details and the signature
 
 ![a screenshot of formester's pdf editor](https://formester-strapi.s3.ap-south-1.amazonaws.com/a_screenshot_of_formester_s_pdf_editor_cb21bfc24b.png)
 
-- Once your form is ready, head to the Advanced tab and select **[Connect to PDF](/features/create-fillable-pdf-forms/)**.
+- Once your form is ready, open the **PDF Editor** tab on the form and choose **Upload PDF**. This is Formester's [document generation](/features/document-generation/) feature.
 
-- Upload your pdf document. This could be a contract, agreement, application, or any document you want to fill and sign.
+- Upload your PDF document. This could be a contract, agreement, application, or any document you want to fill and sign.
 
 - This is the file that will get auto filled with your form fields and ready for signature.
 

@@ -1593,7 +1593,8 @@
                 <div class="fmstr-cmp-ifb-faq__answer">
                   Every submission can auto-generate a PDF and email it back to the respondent on submit. Add your
                   client's email field, turn on <em>send submission copy</em>, done. Each response is also one-click PDF
-                  exportable from the dashboard.
+                  exportable from the dashboard. For a branded inspection report, design it once in the
+                  <a href="/features/document-generation/" style="color: #6941c6 !important; text-decoration: underline !important; text-underline-offset: 2px">PDF Editor</a> and every submission fills it in.
                 </div>
               </details>
               <details class="fmstr-cmp-ifb-faq__item">
@@ -2087,7 +2088,7 @@ useJsonld([
             name: 'How do I send inspection reports to clients automatically?',
             '@type': 'Question',
             acceptedAnswer: {
-              text: "Every submission can auto-generate a PDF and email it back to the respondent on submit. Add your client's email field, turn on send submission copy, done. Each response is also one-click PDF exportable from the dashboard.",
+              text: "Every submission can auto-generate a PDF and email it back to the respondent on submit. Add your client's email field, turn on send submission copy, done. Each response is also one-click PDF exportable from the dashboard. For a branded inspection report, design it once in the PDF Editor and every submission fills it in.",
               '@type': 'Answer',
             },
           },

@@ -133,7 +133,7 @@ After testing, return to the open editor and clear every sample answer that is n
 
 The editor is designed for one clear job: add new native fields to an existing PDF and download the result.
 
-The [supported fillable fields](/features/create-fillable-pdf-forms/#fillable-fields) include:
+The [supported fillable fields](/tools/fillable-pdf-creator/) include:
 
 - Single-line and multiline text fields
 - Checkboxes, radio buttons, and dropdowns

@@ -39,7 +39,7 @@ publishedAt: "2026-08-20T05:14:18.753Z"
 <p class="pdf-choice__label">Automated PDFs</p>
 <h3>Generate a PDF per submission</h3>
 <p>Start with an online form and place each answer into a PDF template. This fits certificates, contracts, applications, and reports.</p>
-<a href="/features/create-fillable-pdf-forms/">Connect responses to PDF →</a>
+<a href="/features/document-generation/">Generate a PDF from every response →</a>
 </div>
 </div>
 
@@ -103,7 +103,7 @@ publishedAt: "2026-08-20T05:14:18.753Z"
 
 <ul>
 <li><a href="/features/convert-pdf-to-fillable-form/">turn the PDF into an online form</a> that people complete from a link; or</li>
-<li><a href="/features/create-fillable-pdf-forms/">auto-fill a PDF from each form submission</a> for contracts, certificates, applications, and reports.</li>
+<li><a href="/features/document-generation/">auto-fill a PDF from each form submission</a> for contracts, certificates, applications, and reports.</li>
 </ul>
 
 <p><strong>Best for:</strong> people who want a free fillable PDF now and teams that may later need structured online collection.</p>

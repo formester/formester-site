@@ -79,7 +79,7 @@ publishedAt: "2026-08-20T05:15:18.080Z"
 
 <p>E-signature and payment collection are included from free, which covers the common pattern of collecting client details, a signed engagement letter, and a retainer in one flow.</p>
 
-<p>Business at $49 a month covers 25 people, which is usually the whole firm, and adds a custom domain so intake sits on your own address.</p>
+<p>Business at $49 a month covers 25 people, which is usually the whole firm, and adds a custom domain so intake sits on your own address. It also adds <a href="/features/document-generation/">document generation</a>: design an engagement letter once and each signed intake produces a finished PDF.</p>
 
 <div class="table-wrap">
 <table>
@@ -100,7 +100,7 @@ publishedAt: "2026-08-20T05:15:18.080Z"
 <tbody>
 <tr><td>Free</td><td>$0. Unlimited forms and responses, e-signature, payments</td></tr>
 <tr><td>Personal</td><td>$13/mo ($12/mo billed yearly). Adds conditional logic</td></tr>
-<tr><td>Business</td><td>$49/mo ($45/mo billed yearly). 25 seats and a custom domain</td></tr>
+<tr><td>Business</td><td>$49/mo ($45/mo billed yearly). 25 seats, a custom domain, and PDF documents from each submission</td></tr>
 </tbody>
 </table>
 </div>

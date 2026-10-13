@@ -207,7 +207,7 @@ const CONTENT_DATA = {
     },
   },
   'generate-pdf': {
-    href: '/features/export-form-submission-pdf/',
+    href: '/features/document-generation/',
     title: 'Turn responses into ready-to-use downloadable PDFs.',
     desc: 'Automatically generate professional documents, invoices, or contracts the moment a form is submitted.',
     badge: 'Auto-Generation',

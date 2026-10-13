@@ -89,11 +89,9 @@ Once your form is set up with either Manual or API-Based Pre-Fill, follow these 
 
 ### Step 1. Connect Your Form with a PDF Certificate
 
-- In the Formester builder, go to the Advanced tab.
+- Open your form in Formester and go to the **PDF Editor** tab.
 
-- Select **[Connect with PDF](/features/create-fillable-pdf-forms/)**.
-
-- Upload your blank certificate template as a PDF.
+- Choose **Upload PDF** and add your blank certificate template. Each submission then [generates its own certificate PDF](/features/document-generation/).
 
 ### Step 2. Add Text and Image Elements to the Certificate
 

@@ -94,7 +94,7 @@
           </ul>
           <div class="d-flex gap-3 flex-wrap">
             <FButton variant="primary" size="lg" :href="signupHref">Try it free</FButton>
-            <FButton variant="violet-outline" size="lg" href="/features/create-fillable-pdf-forms/"
+            <FButton variant="violet-outline" size="lg" href="/features/document-generation/"
               >See how form responses auto-fill PDFs</FButton
             >
           </div>
@@ -377,7 +377,7 @@ const guides = [
   { href: '/blog/how-to-make-canva-pdf-fillable/', title: 'How to make a Canva PDF fillable' },
   { href: '/blog/best-pdf-form-creator/', title: '9 best PDF form creator tools compared' },
   { href: '/blog/how-to-fill-out-pdf-forms-an-easy-step-by-step-guide/', title: 'How to fill out PDF forms' },
-  { href: '/features/create-fillable-pdf-forms/', title: 'Connected PDFs in Formester' },
+  { href: '/features/document-generation/', title: 'Generate PDFs from form submissions' },
 ]
 
 const pageUrl = 'https://formester.com/tools/fillable-pdf-creator/'
