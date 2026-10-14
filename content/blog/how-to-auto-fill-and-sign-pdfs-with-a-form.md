@@ -99,7 +99,7 @@ publishedAt: "2025-07-07T01:02:26.108Z"
 
 <h2 id="signatures">About the signature</h2>
 
-<p>The signer draws their signature on the <a href="/features/electronic-signature/">signature field</a>, and it is printed on the PDF with the rest of their answers. Electronic signatures like this are accepted for many everyday agreements, for example under the <a href="https://www.law.cornell.edu/uscode/text/15/7001" target="_blank" rel="noopener">US ESIGN Act</a> and the <a href="https://eur-lex.europa.eu/eli/reg/2014/910/oj" target="_blank" rel="noopener">EU eIDAS regulation</a>. Rules depend on the document and the country, so check with a lawyer for anything high stakes.</p>
+<p>The signer draws their signature on the <a href="/features/electronic-signature/">signature field</a>, and it is printed on the PDF with the rest of their answers. Electronic signatures like this are accepted for many everyday agreements, for example under the US ESIGN Act and the EU eIDAS regulation. Rules depend on the document and the country, so check with a lawyer for anything high stakes.</p>
 
 <p>On the Business plan you can also turn on <strong>Sign PDF</strong> in the form's PDF settings. It adds a Formester digital certificate to the file, so people who open it can see where it came from.</p>
 
