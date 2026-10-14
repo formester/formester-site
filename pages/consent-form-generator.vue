@@ -1,2510 +1,545 @@
 <template>
   <div>
     <AiHero
-      :description="c0_description"
+      :title="heroTitle"
+      :description="heroDescription"
       type="Form"
-      :hideIcons="false"
       buttonText="Generate my consent form"
-      :placeholder="c0_placeholder"
-      badgeText="TRY IT NOW. NO SIGN-UP REQUIRED."
-      :title="c0_title"
-      :suggestions="c0_suggestions"
-      :footerItems="c0_footerItems"
+      :placeholder="heroPlaceholder"
+      :suggestions="heroSuggestions"
+      :footerItems="heroFooterItems"
       class="page-component-item"
     />
 
-    <section class="page-component-item">
-      <div class="raw-html-content">
-        <div class="raw-html-embed">
-          <section class="fmstr-cmp-csg-3ways" aria-labelledby="fmstr-cmp-csg-3ways-h2">
-            <div class="fmstr-cmp-csg-3ways__container">
-              <div class="fmstr-cmp-csg-3ways__header">
-                <div class="fmstr-cmp-csg-3ways__eyebrow">How it works</div>
-                <h2 class="fmstr-cmp-csg-3ways__h2" id="fmstr-cmp-csg-3ways-h2">
-                  Three ways to build your consent form
-                </h2>
-                <p class="fmstr-cmp-csg-3ways__sub">
-                  Pick whichever start point fits how you work. Every route ends in a shareable form that captures a
-                  legally valid e-signature with each submission.
-                </p>
-              </div>
+    <TrustSeals label="Trusted by leading organisations" class="page-component-item" />
 
-              <div class="fmstr-cmp-csg-3ways__grid">
-                <div class="fmstr-cmp-csg-3ways__card">
-                  <div class="fmstr-cmp-csg-3ways__icon" aria-hidden="true">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M3 7h18M3 12h18M3 17h12" />
-                    </svg>
-                  </div>
-                  <h3 class="fmstr-cmp-csg-3ways__title">Start from a template</h3>
-                  <p class="fmstr-cmp-csg-3ways__body">
-                    Pick from 25+ consent form templates: photo release, GDPR marketing opt-in, background check
-                    consent, participant research consent, event waiver. Swap the copy, adjust the fields, publish.
-                  </p>
-                  <p class="fmstr-cmp-csg-3ways__example">
-                    Best when the language is standard and you need something legal-clean fast.
-                  </p>
-                </div>
-
-                <div class="fmstr-cmp-csg-3ways__card">
-                  <div class="fmstr-cmp-csg-3ways__icon" aria-hidden="true">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                      <polyline points="14 2 14 8 20 8" />
-                      <line x1="9" y1="13" x2="15" y2="13" />
-                      <line x1="9" y1="17" x2="15" y2="17" />
-                    </svg>
-                  </div>
-                  <h3 class="fmstr-cmp-csg-3ways__title">Generate with AI</h3>
-                  <p class="fmstr-cmp-csg-3ways__body">
-                    Prompt: "Consent form for a Q4 photo shoot where the model releases image rights for social media."
-                    Or paste your own paragraph. Our AI picks the field types, wires the signature block, and ships in
-                    30 seconds.
-                  </p>
-                </div>
-
-                <div class="fmstr-cmp-csg-3ways__card">
-                  <div class="fmstr-cmp-csg-3ways__icon" aria-hidden="true">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                    </svg>
-                  </div>
-                  <h3 class="fmstr-cmp-csg-3ways__title">Digitize your paper PDF</h3>
-                  <p class="fmstr-cmp-csg-3ways__body">
-                    Upload the paper consent form you already have. Our AI reads the PDF, extracts every field, and
-                    rebuilds it as a digital form with a native e-signature slot at the bottom. Two clicks to modernize
-                    a 10-year-old paper process.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-    </section>
-
-    <TrustSeals
-      label="Trusted by leading organisations"
-      :showTrustBadges="false"
-      :title="c2_title"
-      :logos="c2_logos"
+    <StickyStepsSection
+      id="how-it-works"
+      badge="How it works"
+      heading="How to create an online consent form"
+      description="Start from a prompt, a template, or the paper form you use today. You can change every field before you share it."
+      :buttons="howButtons"
+      :steps="howSteps"
       class="page-component-item"
     />
 
-    <section class="page-component-item">
-      <div class="raw-html-content">
-        <section class="fmstr-cmp-csg-quality-control" aria-labelledby="fmstr-cmp-csg-quality-control-heading">
-          <div class="fmstr-cmp-csg-quality-control__container">
-            <div class="fmstr-cmp-csg-quality-control__inner">
-              <div class="fmstr-cmp-csg-quality-control__text">
-                <span class="fmstr-cmp-csg-quality-control__eyebrow">Signature validity</span>
-                <h2 id="fmstr-cmp-csg-quality-control-heading" class="fmstr-cmp-csg-quality-control__heading">
-                  Every signed consent stands up later
-                </h2>
-                <div class="fmstr-cmp-csg-quality-control__body">
-                  <p>
-                    An e-signature that gets challenged is only as good as what's captured around it. A signature image
-                    alone is not enough. Courts and auditors look for the signer's identity, the exact time it was
-                    signed, and evidence the signer had reasonable notice of what they were consenting to.
-                  </p>
-                  <p>
-                    Formester's signature field captures all of that on every submission, on every plan including free.
-                    Drawn on a mouse, trackpad, or finger, or typed in the signer's own hand. Stored encrypted at rest
-                    and available as a PDF export on Business and above. GDPR, UK GDPR, and CCPA compliant. Legally
-                    valid for the vast majority of consent workflows in the US, UK, EU, Canada, and Australia.
-                  </p>
-                </div>
-              </div>
-
-              <aside class="fmstr-cmp-csg-quality-control__card">
-                <span class="fmstr-cmp-csg-quality-control__pill">What gets captured on every submission</span>
-                <h3 class="fmstr-cmp-csg-quality-control__card-title">Five layers of proof, on by default</h3>
-                <ul class="fmstr-cmp-csg-quality-control__list">
-                  <li class="fmstr-cmp-csg-quality-control__item">
-                    <svg
-                      class="fmstr-cmp-csg-quality-control__check"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    <span class="fmstr-cmp-csg-quality-control__item-text"
-                      ><strong>Native e-signature</strong> drawn or typed, stored as a vector alongside the raw
-                      signature image.</span
-                    >
-                  </li>
-                  <li class="fmstr-cmp-csg-quality-control__item">
-                    <svg
-                      class="fmstr-cmp-csg-quality-control__check"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    <span class="fmstr-cmp-csg-quality-control__item-text"
-                      ><strong>Signer identity</strong> captured alongside the signature: full name, email, and any
-                      other fields you added.</span
-                    >
-                  </li>
-                  <li class="fmstr-cmp-csg-quality-control__item">
-                    <svg
-                      class="fmstr-cmp-csg-quality-control__check"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    <span class="fmstr-cmp-csg-quality-control__item-text"
-                      ><strong>Exact timestamp</strong> down to the second, in UTC, on every signature.</span
-                    >
-                  </li>
-                  <li class="fmstr-cmp-csg-quality-control__item">
-                    <svg
-                      class="fmstr-cmp-csg-quality-control__check"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    <span class="fmstr-cmp-csg-quality-control__item-text"
-                      ><strong>PDF export</strong> of every signed consent, on Business and above, so records can be
-                      shared with legal, HR, or a client.</span
-                    >
-                  </li>
-                  <li class="fmstr-cmp-csg-quality-control__item">
-                    <svg
-                      class="fmstr-cmp-csg-quality-control__check"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    <span class="fmstr-cmp-csg-quality-control__item-text"
-                      ><strong>GDPR, UK GDPR, CCPA compliant</strong> storage. Encryption at rest and in transit. We
-                      never share or train on your consent data (DPA §4.4).</span
-                    >
-                  </li>
-                </ul>
-              </aside>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-
-    <SimpleStepsCreate
-      description="Start from a prompt, PDF, or template. Our AI consent form generator turns it into a shareable form with a native e-signature slot in under 30 seconds."
-      :title="c4_title"
-      :itemList="c4_itemList"
+    <AlternatingRows
+      id="what-it-captures"
+      eyebrow="What gets recorded"
+      :title="capturesTitle"
+      description="Each response keeps the signer's answers and signature together, with the details you need to show who agreed and when."
+      :rows="capturesRows"
       class="page-component-item"
     />
 
-    <section class="page-component-item">
-      <div class="raw-html-content">
-        <div class="raw-html-embed">
-          <section class="fmstr-cmp-csg-demo" aria-labelledby="fmstr-cmp-csg-demo-h2">
-            <div class="fmstr-cmp-csg-demo__container">
-              <div class="fmstr-cmp-csg-demo__header">
-                <div class="fmstr-cmp-csg-demo__eyebrow">See it happen</div>
-                <h2 class="fmstr-cmp-csg-demo__h2" id="fmstr-cmp-csg-demo-h2">Watch a consent form build itself</h2>
-                <p class="fmstr-cmp-csg-demo__sub">
-                  Type the prompt, click generate, and the form is ready to edit and share.
-                </p>
-              </div>
-              <div class="fmstr-cmp-csg-demo__frame">
-                <video
-                  class="fmstr-cmp-csg-demo__media"
-                  autoplay
-                  muted
-                  loop
-                  playsinline
-                  preload="metadata"
-                  aria-label="Formester AI generating a participant informed consent form from a typed prompt"
-                >
-                  <source
-                    src="https://formester-strapi.s3.ap-south-1.amazonaws.com/ai_generate_demo_6c9e24c1b9.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-    </section>
-
-    <section class="page-component-item">
-      <div class="raw-html-content">
-        <section class="fmstr-cmp-csg-who-uses" aria-labelledby="fmstr-cmp-csg-who-uses-heading">
-          <div class="fmstr-cmp-csg-who-uses__container">
-            <header class="fmstr-cmp-csg-who-uses__header">
-              <h2 id="fmstr-cmp-csg-who-uses-heading" class="fmstr-cmp-csg-who-uses__heading">
-                Who uses our consent form generator
-              </h2>
-              <p class="fmstr-cmp-csg-who-uses__sub">
-                Teams that need signed consent to move forward, in industries where the signature has to hold up.
-              </p>
-            </header>
-
-            <div class="fmstr-cmp-csg-who-uses__grid">
-              <article class="fmstr-cmp-csg-who-uses__card">
-                <span class="fmstr-cmp-csg-who-uses__icon" aria-hidden="true">
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M3 11v2a1 1 0 0 0 1 1h3l5 4V6L7 10H4a1 1 0 0 0-1 1z" />
-                    <path d="M16 8a4 4 0 0 1 0 8" />
-                    <path d="M19 5a8 8 0 0 1 0 14" />
-                  </svg>
-                </span>
-                <h3 class="fmstr-cmp-csg-who-uses__title">Marketing teams</h3>
-                <p class="fmstr-cmp-csg-who-uses__body">
-                  Photo release forms for shoot subjects. GDPR-compliant marketing opt-in for newsletter and campaign
-                  lists. Testimonial usage consent from happy customers.
-                </p>
-              </article>
-
-              <article class="fmstr-cmp-csg-who-uses__card">
-                <span class="fmstr-cmp-csg-who-uses__icon" aria-hidden="true">
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2" />
-                    <circle cx="9.5" cy="7" r="3.5" />
-                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                  </svg>
-                </span>
-                <h3 class="fmstr-cmp-csg-who-uses__title">HR and People teams</h3>
-                <p class="fmstr-cmp-csg-who-uses__body">
-                  Background check consent from new hires. Payroll deduction authorization. Photo and video release for
-                  internal company use. Reference check consent from candidates.
-                </p>
-              </article>
-
-              <article class="fmstr-cmp-csg-who-uses__card">
-                <span class="fmstr-cmp-csg-who-uses__icon" aria-hidden="true">
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M22 10 12 5 2 10l10 5 10-5z" />
-                    <path d="M6 12v5c3 2 9 2 12 0v-5" />
-                    <path d="M22 10v6" />
-                  </svg>
-                </span>
-                <h3 class="fmstr-cmp-csg-who-uses__title">Legal and compliance</h3>
-                <p class="fmstr-cmp-csg-who-uses__body">
-                  Event liability waivers, engagement letters, non-disclosure acknowledgements, click-to-agree terms.
-                  Every signed record ships with signer identity plus a UTC timestamp on the same submission.
-                </p>
-                <hr class="fmstr-cmp-csg-who-uses__divider" />
-                <a class="fmstr-cmp-csg-who-uses__cta" href="https://formester.com/ai-quiz-maker/"
-                  >Generate Quizzes in Seconds &rarr;</a
-                >
-              </article>
-
-              <article class="fmstr-cmp-csg-who-uses__card">
-                <span class="fmstr-cmp-csg-who-uses__icon" aria-hidden="true">
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <circle cx="6" cy="6" r="3" />
-                    <circle cx="18" cy="6" r="3" />
-                    <circle cx="12" cy="18" r="3" />
-                    <path d="M8.5 8 11 16M15.5 8 13 16" />
-                  </svg>
-                </span>
-                <h3 class="fmstr-cmp-csg-who-uses__title">Clinicians (non-PHI use only)</h3>
-                <p class="fmstr-cmp-csg-who-uses__body">
-                  Formester is not HIPAA-certified. For PHI intake use Jotform Gold or Cognito Forms Enterprise. For
-                  non-PHI consent inside a clinical practice, marketing opt-in, patient education acknowledgements,
-                  event RSVPs, and photo releases, Formester fits.
-                </p>
-              </article>
-
-              <article class="fmstr-cmp-csg-who-uses__card">
-                <span class="fmstr-cmp-csg-who-uses__icon" aria-hidden="true">
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M9 11a4 4 0 1 0-3-7" />
-                    <path d="M5 21v-4a4 4 0 0 1 4-4h2" />
-                    <path d="M16 11a4 4 0 1 1 3-7" />
-                    <path d="M19 21v-4a4 4 0 0 0-4-4h-2" />
-                    <circle cx="12" cy="14" r="1" />
-                  </svg>
-                </span>
-                <h3 class="fmstr-cmp-csg-who-uses__title">Researchers</h3>
-                <p class="fmstr-cmp-csg-who-uses__body">
-                  Participant informed-consent for survey studies, user interviews, and product research. Capture the
-                  signed consent alongside the study screener in one submission.
-                </p>
-                <hr class="fmstr-cmp-csg-who-uses__divider" />
-                <a class="fmstr-cmp-csg-who-uses__cta" href="https://formester.com/ai-survey-generator/"
-                  >Analyze Customer Feedback &rarr;</a
-                >
-              </article>
-
-              <article class="fmstr-cmp-csg-who-uses__card">
-                <span class="fmstr-cmp-csg-who-uses__icon" aria-hidden="true">
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <circle cx="11" cy="11" r="7" />
-                    <path d="M21 21l-4.3-4.3" />
-                    <path d="M11 8v6M8 11h6" />
-                  </svg>
-                </span>
-                <h3 class="fmstr-cmp-csg-who-uses__title">Schools and colleges</h3>
-                <p class="fmstr-cmp-csg-who-uses__body">
-                  Field trip permission slips, media release for student photos, athletics participation waivers,
-                  technology use agreements. Parent name and student name captured on the same signed submission.
-                </p>
-                <hr class="fmstr-cmp-csg-who-uses__divider" />
-                <a class="fmstr-cmp-csg-who-uses__cta" href="https://formester.com/ai-survey-generator/"
-                  >Generate Surveys with AI in Seconds &rarr;</a
-                >
-              </article>
-
-              <article class="fmstr-cmp-csg-who-uses__card">
-                <span class="fmstr-cmp-csg-who-uses__icon" aria-hidden="true">
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <rect x="3" y="5" width="18" height="16" rx="2" />
-                    <path d="M3 9h18" />
-                    <path d="M8 3v4M16 3v4" />
-                    <path d="M8 14h2M8 17h6" />
-                  </svg>
-                </span>
-                <h3 class="fmstr-cmp-csg-who-uses__title">Event organizers</h3>
-                <p class="fmstr-cmp-csg-who-uses__body">
-                  Liability waivers for attendees, photo and video release for the event coverage, allergen and dietary
-                  consent for catered events, minor participation forms with parent signature.
-                </p>
-              </article>
-
-              <article class="fmstr-cmp-csg-who-uses__card">
-                <span class="fmstr-cmp-csg-who-uses__icon" aria-hidden="true">
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-                    />
-                  </svg>
-                </span>
-                <h3 class="fmstr-cmp-csg-who-uses__title">Nonprofits</h3>
-                <p class="fmstr-cmp-csg-who-uses__body">
-                  Volunteer liability waivers, donor recognition consent for annual reports, program participation
-                  acknowledgements. Free plan handles unlimited signed consents at $0.
-                </p>
-              </article>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-
-    <section class="page-component-item">
-      <div class="raw-html-content">
-        <section class="fmstr-cmp-csg-api-mcp" aria-labelledby="fmstr-cmp-csg-api-mcp-title">
-          <div class="fmstr-cmp-csg-api-mcp__container">
-            <header class="fmstr-cmp-csg-api-mcp__header">
-              <span class="fmstr-cmp-csg-api-mcp__eyebrow">For developers</span>
-              <h2 id="fmstr-cmp-csg-api-mcp-title" class="fmstr-cmp-csg-api-mcp__title">
-                Your submissions, ready for the CRM you already use
-              </h2>
-              <p class="fmstr-cmp-csg-api-mcp__intro">
-                Every Formester form ships with a REST API and an MCP server, so submissions don't stop at a CSV. Pipe
-                leads into your agent. Stream applications into your hiring copilot. Nobody else on this list ships MCP.
-              </p>
-            </header>
-
-            <div class="fmstr-cmp-csg-api-mcp__grid">
-              <article class="fmstr-cmp-csg-api-mcp__card">
-                <span class="fmstr-cmp-csg-api-mcp__icon" aria-hidden="true">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <circle cx="6" cy="6" r="2.5" />
-                    <circle cx="18" cy="6" r="2.5" />
-                    <circle cx="12" cy="18" r="2.5" />
-                    <path d="M8 7l3 9M16 7l-3 9" />
-                  </svg>
-                </span>
-                <span class="fmstr-cmp-csg-api-mcp__badge">MCP server</span>
-                <h3 class="fmstr-cmp-csg-api-mcp__card-title">
-                  Plug Formester into Claude, ChatGPT, or any MCP-compatible model
-                </h3>
-                <div class="fmstr-cmp-csg-api-mcp__chips">
-                  <span class="fmstr-cmp-csg-api-mcp__chip">Claude</span>
-                  <span class="fmstr-cmp-csg-api-mcp__chip">ChatGPT</span>
-                  <span class="fmstr-cmp-csg-api-mcp__chip">Custom agents</span>
-                </div>
-                <p class="fmstr-cmp-csg-api-mcp__body">
-                  Connect Formester to any MCP-compatible model and let it read your signed consent records directly.
-                  Ask Claude "which participant consents from this week's study need follow-up?" or have a custom agent
-                  flag any consent submission where the signer opted out of specific data uses so your ops team can act
-                  on it.
-                </p>
-                <a class="fmstr-cmp-csg-api-mcp__cta" href="https://docs.formester.com/formester-mcp-server.html"
-                  >Read the MCP docs &rarr;</a
-                >
-              </article>
-
-              <article class="fmstr-cmp-csg-api-mcp__card">
-                <span class="fmstr-cmp-csg-api-mcp__icon" aria-hidden="true">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="16 18 22 12 16 6" />
-                    <polyline points="8 6 2 12 8 18" />
-                    <line x1="13" y1="4" x2="11" y2="20" />
-                  </svg>
-                </span>
-                <span class="fmstr-cmp-csg-api-mcp__badge fmstr-cmp-csg-api-mcp__badge--alt">REST API v2</span>
-                <h3 class="fmstr-cmp-csg-api-mcp__card-title">Or build directly on the REST API</h3>
-                <div class="fmstr-cmp-csg-api-mcp__chips">
-                  <span class="fmstr-cmp-csg-api-mcp__chip">Self-service token</span>
-                  <span class="fmstr-cmp-csg-api-mcp__chip">Webhooks</span>
-                  <span class="fmstr-cmp-csg-api-mcp__chip">Business plan +</span>
-                </div>
-                <p class="fmstr-cmp-csg-api-mcp__body">
-                  Pull signed consent records into your CRM or data warehouse, log the timestamp to your compliance
-                  system, or push pre-filled consent URLs back from Salesforce. Self-service token at
-                  app.formester.com/api in two clicks. No support ticket, no waiting.
-                </p>
-                <a class="fmstr-cmp-csg-api-mcp__cta" href="https://docs.formester.com/formester-api.html"
-                  >Read the API docs &rarr;</a
-                >
-              </article>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-
-    <section class="page-component-item">
-      <div class="raw-html-content">
-        <section
-          class="fmstr-cmp-csg-privacy-data-ownership"
-          aria-labelledby="fmstr-cmp-csg-privacy-data-ownership-heading"
-        >
-          <div class="fmstr-cmp-csg-privacy-data-ownership__container">
-            <div class="fmstr-cmp-csg-privacy-data-ownership__inner">
-              <div class="fmstr-cmp-csg-privacy-data-ownership__text">
-                <span class="fmstr-cmp-csg-privacy-data-ownership__eyebrow">Privacy and data ownership</span>
-                <h2
-                  id="fmstr-cmp-csg-privacy-data-ownership-heading"
-                  class="fmstr-cmp-csg-privacy-data-ownership__heading"
-                >
-                  Your consent records belong to you. We don't train on them
-                </h2>
-                <div class="fmstr-cmp-csg-privacy-data-ownership__body">
-                  <p>
-                    When you upload a PDF, paste a prompt, or generate a form, that content is used to generate your
-                    form and nothing else. Per Section 4.4 of our DPA, Formester does not use Customer Data for
-                    analytics, advertising, marketing, or product training. The Google Gemini integration we use to
-                    power AI features inherits the same boundary.
-                  </p>
-                  <p>
-                    Encrypted in transit and at rest, hosted on Heroku and AWS, automated encrypted backups with a
-                    90-day retention, and full data deletion on request. We are GDPR, UK GDPR, and CCPA compliant. We
-                    are not SOC 2 or ISO 27001 certified yet, and we will tell you so directly rather than dance around
-                    it.
-                  </p>
-                </div>
-              </div>
-
-              <aside class="fmstr-cmp-csg-privacy-data-ownership__card">
-                <span class="fmstr-cmp-csg-privacy-data-ownership__pill">What's in the DPA</span>
-                <blockquote class="fmstr-cmp-csg-privacy-data-ownership__quote">
-                  "Formester does not use Customer Data for analytics, advertising, marketing, or product training."
-                </blockquote>
-                <hr class="fmstr-cmp-csg-privacy-data-ownership__divider" />
-                <p class="fmstr-cmp-csg-privacy-data-ownership__cite">
-                  Section 4.4, Formester Data Processing Agreement, effective January 2026.
-                </p>
-                <div class="fmstr-cmp-csg-privacy-data-ownership__links">
-                  <a href="https://formester.com/dpa/">Read the DPA →</a>
-                  <a href="https://formester.com/security/">Security overview →</a>
-                </div>
-              </aside>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-
-    <StandoutFeatureDetail :title="c9_title" :itemList="c9_itemList" class="page-component-item" />
-
-    <TestimonialWall
-      description="Real reviews from G2, Trustpilot, and Product Hunt."
-      showG2
-      showTrustpilot
-      showProductHunt
-      showCapterra
-      :title="c10_title"
-      :pickedReviews="c10_pickedReviews"
-      :excludedReviews="c10_excludedReviews"
+    <AlternatingRows
+      id="signed-pdf"
+      eyebrow="Business plan"
+      :title="pdfTitle"
+      description="Some consents need to live as a document. On the Business plan, from $45/mo billed yearly, each response can become a PDF with the drawn signature in place."
+      background="var(--gray-25, #fcfcfd)"
+      :rows="pdfRows"
       class="page-component-item"
     />
 
-    <CallToActionSection :ctaValue="c11_ctaValue" class="page-component-item" />
+    <CardGrid
+      id="templates"
+      eyebrow="Templates"
+      description="Every template below already has a signature field. Open one, change the wording to fit, and share it."
+      columns="4"
+      :title="templatesTitle"
+      :cards="templateCards"
+      class="page-component-item"
+    />
 
-    <FaqSection :centered="false" :title="c12_title" :faqList="c12_faqList" class="page-component-item" />
+    <CardGrid
+      id="use-cases"
+      eyebrow="Use cases"
+      description="Marketing, events, schools, HR and research teams use Formester to replace paper consent forms."
+      columns="3"
+      background="var(--gray-25, #fcfcfd)"
+      :title="useCasesTitle"
+      :cards="useCaseCards"
+      class="page-component-item"
+    />
 
-    <section class="page-component-item">
-      <div class="raw-html-content">
-        <section class="fmstr-cmp-csg-more-tools" aria-labelledby="fmstr-cmp-csg-more-tools-heading">
-          <div class="fmstr-cmp-csg-more-tools__inner">
-            <h2 id="fmstr-cmp-csg-more-tools-heading" class="fmstr-cmp-csg-more-tools__heading">
-              More Formester generators worth a look
-            </h2>
+    <CardGrid
+      id="security"
+      eyebrow="Security"
+      description="Consent forms hold personal details, so your data is encrypted and is never used to train AI."
+      columns="3"
+      :title="securityTitle"
+      :cards="securityCards"
+      class="page-component-item"
+    />
 
-            <div class="fmstr-cmp-csg-more-tools__grid">
-              <a class="fmstr-cmp-csg-more-tools__card" href="https://formester.com/ai-quiz-maker/">
-                <span class="fmstr-cmp-csg-more-tools__icon" aria-hidden="true">
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M9.5 2A2.5 2.5 0 0 0 7 4.5v.5a2.5 2.5 0 0 0-2 4 2.5 2.5 0 0 0 0 4 2.5 2.5 0 0 0 2 4v.5A2.5 2.5 0 0 0 9.5 20a2.5 2.5 0 0 0 2.5-2.5V4.5A2.5 2.5 0 0 0 9.5 2Z"
-                    />
-                    <path
-                      d="M14.5 2A2.5 2.5 0 0 1 17 4.5v.5a2.5 2.5 0 0 1 2 4 2.5 2.5 0 0 1 0 4 2.5 2.5 0 0 1-2 4v.5a2.5 2.5 0 0 1-2.5 2.5 2.5 2.5 0 0 1-2.5-2.5V4.5A2.5 2.5 0 0 1 14.5 2Z"
-                    />
-                  </svg>
-                </span>
-                <h3 class="fmstr-cmp-csg-more-tools__title">AI Form Generator</h3>
-                <p class="fmstr-cmp-csg-more-tools__desc">Generate assessments with answer keys in seconds.</p>
-              </a>
+    <TestimonialsV2 :heading="testimonialsHeading" :testimonials="testimonials" class="page-component-item" />
 
-              <a class="fmstr-cmp-csg-more-tools__card" href="https://formester.com/ai-survey-generator/">
-                <span class="fmstr-cmp-csg-more-tools__icon" aria-hidden="true">
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <line x1="3" y1="20" x2="21" y2="20" />
-                    <rect x="5" y="11" width="3.5" height="9" rx="0.5" />
-                    <rect x="10.25" y="6" width="3.5" height="14" rx="0.5" />
-                    <rect x="15.5" y="13" width="3.5" height="7" rx="0.5" />
-                  </svg>
-                </span>
-                <h3 class="fmstr-cmp-csg-more-tools__title">AI Quiz Maker</h3>
-                <p class="fmstr-cmp-csg-more-tools__desc">Research-grade survey instruments from a brief.</p>
-              </a>
+    <FaqSection id="faq" centered :title="faqTitle" :faqList="faqList" class="page-component-item" />
 
-              <a class="fmstr-cmp-csg-more-tools__card" href="https://formester.com/ai-powered-multilingual-forms/">
-                <span class="fmstr-cmp-csg-more-tools__icon" aria-hidden="true">
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="9" />
-                    <path d="M3 12h18" />
-                    <path d="M12 3a13.5 13.5 0 0 1 0 18" />
-                    <path d="M12 3a13.5 13.5 0 0 0 0 18" />
-                  </svg>
-                </span>
-                <h3 class="fmstr-cmp-csg-more-tools__title">AI Survey Generator</h3>
-                <p class="fmstr-cmp-csg-more-tools__desc">Auto-translate any form into 50+ languages.</p>
-              </a>
-
-              <a class="fmstr-cmp-csg-more-tools__card" href="https://formester.com/features/workflows/">
-                <span class="fmstr-cmp-csg-more-tools__icon" aria-hidden="true">
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" />
-                  </svg>
-                </span>
-                <h3 class="fmstr-cmp-csg-more-tools__title">Workflow Automation</h3>
-                <p class="fmstr-cmp-csg-more-tools__desc">Trigger automations on form submission.</p>
-              </a>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
+    <CtaDark
+      badge="Free to start"
+      heading="Create your consent form"
+      description="Build it and collect signatures on the free plan. Add signed PDFs with the Business plan, from $45/mo billed yearly."
+      :buttons="ctaButtons"
+      class="page-component-item"
+    />
   </div>
 </template>
 
 <script setup>
 import AiHero from '@/components/features/AiHero.vue'
-import CallToActionSection from '@/components/CallToActionSection.vue'
+import AlternatingRows from '@/components/v2/AlternatingRows.vue'
+import CardGrid from '@/components/v2/CardGrid.vue'
+import CtaDark from '@/components/v2/CtaDark.vue'
 import FaqSection from '@/components/v2/FaqSection.vue'
-import SimpleStepsCreate from '@/components/features/SimpleStepsCreate.vue'
-import StandoutFeatureDetail from '@/components/features/StandoutFeatureDetail.vue'
-import TestimonialWall from '@/components/v2/TestimonialWall.vue'
+import StickyStepsSection from '@/components/v2/StickyStepsSection.vue'
+import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
 import TrustSeals from '@/components/v2/TrustSeals.vue'
 
-const c0_description =
-  'Describe your consent form in plain English. Paste a URL. Upload a paper PDF. Watch the AI build it in under 30 seconds, ready to share with a native e-signature field.'
-const c0_placeholder =
-  'Describe the consent form you need. Example: A photo release for a Q4 marketing campaign where the model releases image rights for social media, with signature and date.'
-const c0_title = [
-  {
-    id: 5991,
-    text: 'The Free Consent Form Generator That Captures ',
-    highlight: false,
-    color: '#000000',
-    bold: false,
-  },
-  {
-    id: 5986,
-    text: 'Legally Valid Signatures',
-    highlight: true,
-    color: '#000000',
-    bold: false,
-  },
+const SIGN_UP_URL = 'https://app.formester.com/users/sign_up'
+const PAGE_URL = 'https://formester.com/consent-form-generator/'
+const META_TITLE = 'Online Consent Form Generator with E-Signature | Formester'
+const META_DESCRIPTION =
+  'Create an online consent form in minutes with AI or a template. Collect drawn signatures on any device and keep a signed PDF of every response.'
+const OG_IMAGE = 'https://formester.com/images/blog/auto-fill-pdf/blank-vs-filled-contract.webp'
+
+// Hero: the live AI generator (components/features/AiHero.vue), preset with consent prompts.
+const heroTitle = [
+  { text: 'Free online consent form generator ', highlight: false, color: '#000000', bold: false },
+  { text: 'with e-signature', highlight: true, color: '#000000', bold: false },
 ]
-const c0_suggestions = [
+const heroDescription =
+  'Describe the consent you need or upload your paper form. Formester builds an online consent form with a signature field, ready to share as a link.'
+const heroPlaceholder =
+  'Describe your consent form. For example: a photo release for a product launch shoot, with name, email, how we may use the images, a consent checkbox and a signature.'
+const heroSuggestions = [
   {
-    id: 148,
-    text: 'Create a photo release consent form for a Q4 marketing campaign with signature and image usage rights.',
     label: 'Photo release',
+    text: 'Create a photo and video release form for a marketing shoot. Ask for the person’s name and email, how we may use their images, a consent checkbox, and a signature.',
   },
   {
-    id: 149,
-    text: 'Create a GDPR marketing opt-in form for our newsletter with granular consent checkboxes.',
-    label: 'GDPR opt-in',
+    label: 'Event waiver',
+    text: 'Create a liability waiver for a weekend hiking event with participant details, an emergency contact, a risk acknowledgement checkbox, and a signature.',
   },
   {
-    id: 150,
-    text: 'Create a participant research consent form for a user study with IRB-standard language and signature capture.',
+    label: 'Parental consent',
+    text: 'Create a parental consent form for a school field trip with the student’s name, the parent’s name and phone number, permission checkboxes, and the parent’s signature.',
+  },
+  {
     label: 'Research consent',
+    text: 'Create an interview consent form for a user research study that explains how recordings are used, with opt-in checkboxes for recording and quotes, and a signature.',
   },
 ]
-const c0_footerItems = [
+const heroFooterItems = [
+  { text: 'Free to build and collect signatures' },
+  { text: 'Signed PDFs on the Business plan' },
+  { text: 'No sign-up to try' },
+]
+
+// Section: how it works.
+const howButtons = [{ id: 1, link: SIGN_UP_URL, text: 'Start free', type: 'Primary' }]
+const howSteps = [
   {
-    id: 3600,
-    text: 'Trusted by 56,000 teams',
+    title: 'Describe it or pick a template',
+    description:
+      'Type what the consent covers, upload your current paper or PDF form, or start from a consent form template. The AI turns it into an editable form in seconds.',
   },
   {
-    id: 3602,
-    text: 'Free forever',
+    title: 'Add the consent details',
+    description:
+      'Write the consent text, then add a Terms and Conditions checkbox and a Signature field. Make both required, so nobody can submit without agreeing and signing.',
   },
   {
-    id: 3603,
-    text: 'Native e-signature',
-  },
-  {
-    id: 3601,
-    text: 'PDF export of signed records',
+    title: 'Share it and collect signatures',
+    description:
+      'Send the link or embed the form on your website. People read, tick and sign with a finger, mouse or trackpad, and each response is stored in Results.',
   },
 ]
-const c2_title = []
-const c2_logos = []
-const c4_title = [
+
+// Real product screenshots, reused from the form-to-PDF and auto-fill PDF work. Sizing lives in the page CSS below.
+const shot = (file, width, height, alt) =>
+  `<img src='${file}' width='${width}' height='${height}' alt='${alt}' loading='lazy' class='cfg-shot' />`
+
+// Section: what a signed consent captures. Facts from audit.md section 2.
+const capturesTitle = [
+  { text: 'What a signed consent form ', highlight: false, color: '#475467', bold: false },
+  { text: 'captures', highlight: true, color: '#475467', bold: false },
+]
+const capturesRows = [
   {
-    id: 5987,
-    text: 'How Our ',
-    highlight: false,
-    color: '#475467',
-    bold: false,
-  },
-  {
-    id: 5988,
-    text: 'Consent Form Builder ',
-    highlight: true,
-    color: '#6434D0',
-    bold: true,
-  },
-  {
-    id: 5989,
-    text: 'Works',
-    highlight: false,
-    color: '#475467',
-    bold: false,
+    mediaHtml: shot(
+      '/images/blog/auto-fill-pdf/form-with-signature.webp',
+      1280,
+      1440,
+      'Formester form builder with a required Signature field added to the bottom of a sample form',
+    ),
+    kicker: 'Signature field',
+    title: 'One record for each signer',
+    body: 'The signature field lets people draw their signature on a phone, tablet or computer. It is saved with the rest of their answers, so the signature and what they agreed to stay together.',
+    bullets: [
+      { text: 'A drawn signature, with a button to clear it and sign again' },
+      { text: 'A consent checkbox and required fields, so nobody sends a half-finished form' },
+      { text: 'Name, date, guardian details or anything else you ask for' },
+      { text: 'File uploads for a photo ID or a supporting document' },
+      { text: 'Submission time and IP address, unless you turn on anonymous submissions' },
+      { text: 'Version history when your team edits a response later' },
+    ],
+    link: '/features/electronic-signature/',
+    linkText: 'See the signature field',
   },
 ]
-const c4_itemList = [
+
+// Section: signed PDF. Business only (can_generate_submission_pdf).
+const pdfTitle = [
+  { text: 'A signed PDF of ', highlight: false, color: '#475467', bold: false },
+  { text: 'every consent', highlight: true, color: '#475467', bold: false },
+]
+const pdfRows = [
   {
-    id: 3023,
-    title: 'Type a prompt, upload a paper PDF, or pick a template',
-    description:
-      'Describe your consent scenario in plain English. Upload the paper consent form you already use. Or start from 25+ vetted templates covering photo release, GDPR opt-in, background check, event waiver, and research consent.',
-    description_markdown:
-      'Describe your consent scenario in plain English. Upload the paper consent form you already use. Or start from 25+ vetted templates covering photo release, GDPR opt-in, background check, event waiver, and research consent.',
-    icon: null,
-    cardImage: null,
+    mediaHtml: shot(
+      '/images/blog/auto-fill-pdf/blank-vs-filled-contract.webp',
+      1640,
+      860,
+      'A blank agreement PDF next to the same PDF filled in from a form response, with the drawn signature on the signature line',
+    ),
+    kicker: 'Your layout or ours',
+    title: 'The signature appears in the PDF',
+    body: 'Use a ready-made layout that lists every answer, or design your own document in the PDF Editor and place the signature, the consent text and the submission time where you want them.',
+    link: '/features/document-generation/',
+    linkText: 'Design your own consent PDF',
   },
   {
-    id: 3025,
-    title: 'Watch the AI build the form, signature field included',
-    description:
-      'The AI picks the right question types, wires the signer identity fields, and adds a legally valid e-signature slot at the bottom with timestamp capture. All ready in 30 seconds.',
-    description_markdown:
-      'The AI picks the right question types, wires the signer identity fields, and adds a legally valid e-signature slot at the bottom with timestamp capture. All ready in 30 seconds.',
-    icon: null,
-    cardImage: null,
-  },
-  {
-    id: 3026,
-    title: 'Publish, share, and collect signed consents',
-    description:
-      'Publish on a Formester subdomain, embed on your site, or send via email. Every submission ships with signer identity, drawn or typed signature, and UTC timestamp. Export as PDF on Business and above.',
-    description_markdown:
-      'Publish on a Formester subdomain, embed on your site, or send via email. Every submission ships with signer identity, drawn or typed signature, and UTC timestamp. Export as PDF on Business and above.',
-    icon: null,
-    cardImage: null,
+    mediaHtml: shot(
+      '/images/blog/auto-fill-pdf/pdf-settings.webp',
+      1280,
+      794,
+      'Formester PDF settings with Let respondents download a PDF turned on and the default PDF type set to Connected PDF',
+    ),
+    kicker: 'Delivery',
+    title: 'Send it where it needs to go',
+    body: 'Each signed PDF is created when the response comes in. Choose where it goes:',
+    bullets: [
+      { text: 'A copy for the signer, attached to the autoresponder email' },
+      { text: 'An attachment on your team’s notification email' },
+      { text: 'A download button on the thank-you page' },
+      { text: 'A file in your Google Drive folder' },
+      { text: 'One or many PDFs downloaded from Results' },
+    ],
+    link: '/features/form-to-pdf/',
+    linkText: 'How form to PDF works',
   },
 ]
-const c9_title = [
+
+// Section: consent templates. All URLs checked for HTTP 200 on formester.com (14 Oct 2026).
+const templatesTitle = [
+  { text: 'Consent form ', highlight: false, color: '#475467', bold: false },
+  { text: 'templates', highlight: true, color: '#475467', bold: false },
+]
+const templateCards = [
   {
-    id: 5992,
-    text: 'Unlock the full power of Formester',
-    highlight: false,
-    color: '#475467',
-    bold: false,
+    tag: 'Marketing',
+    tagColor: 'violet',
+    title: 'Photo and media release',
+    body: 'Get permission to use someone’s photos and video in ads, social posts and print.',
+    link: '/templates/photo-release-form/',
+    linkText: 'Use this template',
+  },
+  {
+    tag: 'Media',
+    tagColor: 'blue',
+    title: 'Video consent form',
+    body: 'Collect consent before you film interviews, testimonials or event footage.',
+    link: '/templates/video-consent-form/',
+    linkText: 'Use this template',
+  },
+  {
+    tag: 'Schools',
+    tagColor: 'green',
+    title: 'Student consent form',
+    body: 'Parents give permission for trips, activities and photos from their phone.',
+    link: '/templates/student-consent-form-template/',
+    linkText: 'Use this template',
+  },
+  {
+    tag: 'Events',
+    tagColor: 'amber',
+    title: 'Event waiver and media release',
+    body: 'Attendees accept the event risks and agree to be photographed in one form.',
+    link: '/templates/event-waiver-form/',
+    linkText: 'Use this template',
+  },
+  {
+    tag: 'Fitness',
+    tagColor: 'rose',
+    title: 'Gym membership and liability waiver',
+    body: 'New members sign the liability waiver as part of joining.',
+    link: '/templates/gym-waiver-form/',
+    linkText: 'Use this template',
+  },
+  {
+    tag: 'HR',
+    tagColor: 'violet',
+    title: 'Background screening consent',
+    body: 'Candidates give permission for a background check before you order one.',
+    link: '/templates/background-screening-consent-form-47460/',
+    linkText: 'Use this template',
+  },
+  {
+    tag: 'Research',
+    tagColor: 'blue',
+    title: 'Interview consent form',
+    body: 'Participants agree to an interview and to how you will record and use it.',
+    link: '/templates/interview-consent-form-13882/',
+    linkText: 'Use this template',
+  },
+  {
+    tag: 'General',
+    tagColor: 'green',
+    title: 'Digital consent form',
+    body: 'A general consent form you can adapt to your own agreement.',
+    link: '/templates/digital-consent-form-47461/',
+    linkText: 'Use this template',
   },
 ]
-const c9_itemList = [
+
+// Section: use cases. Each card links to the category or feature that does that job.
+const useCasesTitle = [
+  { text: 'Consent forms for ', highlight: false, color: '#475467', bold: false },
+  { text: 'every team', highlight: true, color: '#475467', bold: false },
+]
+const useCaseCards = [
   {
-    id: 3024,
-    title: 'Native e-signature',
-    description:
-      'Legally valid drawn or typed signature with signer identity and UTC timestamp on every submission.\n\n**[Learn more-->](/features/electronic-signature/)**',
-    description_markdown:
-      'Legally valid drawn or typed signature with signer identity and UTC timestamp on every submission.\n\n**[Learn more-->](/features/electronic-signature/)**',
-    icon: null,
-    cardImage: null,
+    tag: 'Marketing',
+    tagColor: 'violet',
+    title: 'Marketing and media teams',
+    body: 'Collect a signed release from everyone in a shoot before the photos go into a campaign.',
+    link: '/templates/categories/media-release/',
+    linkText: 'Media release templates',
   },
   {
-    id: 3027,
-    title: 'AI form generator',
-    description:
-      'Generate a form from a prompt, question list, or PDF upload in 30 seconds.\n\n**[Turn a consent PDF into an editable form →](/ai-form-generator/#pdf-to-form)**',
-    description_markdown:
-      'Generate a form from a prompt, question list, or PDF upload in 30 seconds.\n\n**[Turn a consent PDF into an editable form →](/ai-form-generator/#pdf-to-form)**',
-    icon: null,
-    cardImage: null,
+    tag: 'Events',
+    tagColor: 'amber',
+    title: 'Events, gyms and studios',
+    body: 'Have every participant sign the waiver online before they arrive, so check-in stays short.',
+    link: '/templates/categories/liability-release/',
+    linkText: 'Liability release templates',
   },
   {
-    id: 3028,
-    title: 'PDF export of signed records',
-    description:
-      'Every signed consent renders as a formatted PDF on Business and above.\n\n**[Learn more-->](/features/form-to-pdf/)**',
-    description_markdown:
-      'Every signed consent renders as a formatted PDF on Business and above.\n\n**[Learn more-->](/features/form-to-pdf/)**',
-    icon: null,
-    cardImage: null,
+    tag: 'Schools',
+    tagColor: 'green',
+    title: 'Schools and youth programs',
+    body: 'Send each family a link with the student’s name already filled in, so parents only read, tick and sign.',
+    link: '/features/pre-fill-fields/',
+    linkText: 'Pre-fill form fields',
   },
   {
-    id: 3029,
-    title: 'GDPR + UK GDPR + CCPA compliant',
-    description:
-      'Formester is compliant, EU data residency on Business, no training on your consent data per DPA Section 4.4.\n\n**[Learn more-->](/security/)**',
-    description_markdown:
-      'Formester is compliant, EU data residency on Business, no training on your consent data per DPA Section 4.4.\n\n**[Learn more-->](/security/)**',
-    icon: null,
-    cardImage: null,
+    tag: 'HR',
+    tagColor: 'blue',
+    title: 'HR and recruiting',
+    body: 'Candidates sign the consent and upload a photo ID in the same form.',
+    link: '/features/file-upload-forms/',
+    linkText: 'File upload forms',
   },
   {
-    id: 3031,
-    title: 'AI conditional logic',
-    description:
-      'Show or hide fields based on answers so respondents only see what applies. On Personal at 12 dollars per month and above.\n\n**[Learn more-->](/build-conditional-logic-forms-with-ai/)**',
-    description_markdown:
-      'Show or hide fields based on answers so respondents only see what applies. On Personal at 12 dollars per month and above.\n\n**[Learn more-->](/build-conditional-logic-forms-with-ai/)**',
-    icon: null,
-    cardImage: null,
+    tag: 'Research',
+    tagColor: 'rose',
+    title: 'Research and UX teams',
+    body: 'Show recording questions only to people who agree to be recorded, with conditional logic on the Personal plan.',
+    link: '/features/conditional-logic/',
+    linkText: 'Conditional logic',
   },
   {
-    id: 3030,
-    title: 'AI multilingual forms',
-    description:
-      'Translate any consent form into 80 plus languages instantly. Reach signers in their native language with no manual work.\n\n**[Learn more-->](/ai-powered-multilingual-forms/)**',
-    description_markdown:
-      'Translate any consent form into 80 plus languages instantly. Reach signers in their native language with no manual work.\n\n**[Learn more-->](/ai-powered-multilingual-forms/)**',
-    icon: null,
-    cardImage: null,
+    tag: 'Any team',
+    tagColor: 'violet',
+    title: 'Clubs, nonprofits and small businesses',
+    body: 'Browse every consent form template and adapt the closest one to your own wording.',
+    link: '/templates/categories/consent-forms/',
+    linkText: 'All consent form templates',
   },
 ]
-const c10_title = [
+
+// Section: security. Only claims verified on /security/ and /dpa/ (audit.md 1.5).
+const securityTitle = [
+  { text: 'Your consent records ', highlight: false, color: '#475467', bold: false },
+  { text: 'stay private', highlight: true, color: '#475467', bold: false },
+]
+const securityCards = [
   {
-    id: 5990,
-    text: 'What teams are saying about Formester',
-    highlight: false,
-    color: '#475467',
-    bold: false,
+    tag: 'Encryption',
+    tagColor: 'violet',
+    title: 'Encrypted in transit and at rest',
+    body: 'Responses travel over HTTPS and are encrypted where they are stored. Backups are encrypted too.',
+    link: '/security/',
+    linkText: 'Security overview',
+  },
+  {
+    tag: 'Your data',
+    tagColor: 'blue',
+    title: 'Never used to train AI',
+    body: 'Formester does not use your form data for analytics, advertising, marketing or product training.',
+  },
+  {
+    tag: 'Privacy',
+    tagColor: 'green',
+    title: 'A DPA for GDPR, UK GDPR and CCPA',
+    body: 'Formester’s data processing agreement covers GDPR, UK GDPR and CCPA, for teams that need one on file.',
+    link: '/dpa/',
+    linkText: 'Read the DPA',
   },
 ]
-const c10_pickedReviews = []
-const c10_excludedReviews = []
-const c11_ctaValue = {
-  id: 67,
-  description: 'Get access to advanced AI, unlimited forms & more. See pricing for more details.',
-  type: 'default',
-  createdAt: '2024-11-04T07:07:43.916Z',
-  updatedAt: '2025-06-12T18:47:31.840Z',
-  publishedAt: '2024-11-04T07:08:18.018Z',
-  locale: 'en',
-  title: [
-    {
-      id: 393,
-      text: 'Ready to build your perfect form?',
-      highlight: false,
-      color: null,
-      bold: null,
-    },
-  ],
-  buttons: [
-    {
-      id: 338,
-      link: 'https://app.formester.com/users/sign_up',
-      text: 'Get Started–It’s Free!',
-      type: 'Primary',
-      showArrow: null,
-    },
-  ],
-  localizations: [],
-}
-const c12_title = [
+
+// Verbatim excerpts from public G2 reviews (g2.com/products/formester/reviews), retrieved 13 Oct 2026.
+const testimonialsHeading = [
+  { text: 'What teams say ', highlight: false, color: '#475467', bold: false },
+  { text: 'on G2', highlight: true, color: '#475467', bold: false },
+]
+const testimonials = [
   {
-    id: 5993,
-    text: 'FAQs',
-    highlight: false,
-    color: '#475467',
-    bold: false,
+    id: 1,
+    name: 'Les W.',
+    position: 'Chief Data Officer, mid-market company (G2 review)',
+    comment:
+      'The submission results page is nicely laid out as a table of entries … PDF and emailing options are solid and easy to use.',
+  },
+  {
+    id: 2,
+    name: 'Mark J.',
+    position: 'Webmaster, small business (G2 review)',
+    comment:
+      'Formester is a single, drop-in, full-service form-to-email solution that provides all the functions my website requires.',
+  },
+  {
+    id: 3,
+    name: 'Karthik B.',
+    position: 'Social Media Manager, mid-market company (G2 review)',
+    comment:
+      'Their support is top notch. They reply quickly for any query and also help in technical queries and troubleshooting.',
   },
 ]
-const c12_faqList = [
+
+// FAQ: questions from People Also Ask (research.md section 4). Plain text, reused verbatim in FAQPage JSON-LD.
+const faqTitle = [{ text: 'Consent form questions', highlight: false, color: '#475467', bold: false }]
+const faqList = [
   {
-    id: 3866,
-    header: 'Can I create my own consent form?',
-    body: "Yes. Formester's consent form generator gives you three starting points: a prompt-to-form AI, a paper PDF upload that gets digitized in one click, or a template gallery of 25+ vetted consent forms. Every route ends in a form you can share via link, embed on your site, or send by email.",
-    body_markdown: null,
-    list: [],
+    id: 1,
+    header: 'How do I create a consent form online?',
+    body: 'Describe the consent you need in the generator at the top of this page, upload your paper form, or open a consent form template. Then add your consent text, a Terms and Conditions checkbox and a Signature field, and share the form as a link or embed it on your website.',
   },
   {
-    id: 3867,
-    header: 'Is the consent form generator really free?',
-    body: 'Yes. Unlimited forms and unlimited signed submissions on the free plan, with the native e-signature field included. No trial that expires, no card required at signup, no cap on how many consents you collect.',
-    body_markdown: null,
-    list: [],
+    id: 2,
+    header: 'Can consent forms be signed electronically?',
+    body: 'Yes. Add a Signature field and people draw their signature with a finger, mouse or trackpad. E-signatures are generally recognised under the US ESIGN Act and UETA, and under eIDAS in the EU and UK. Rules differ by country and by type of consent, so check what applies to you.',
   },
   {
-    id: 3873,
-    header: 'Can I export the signed consent as a PDF?',
-    body: 'Yes, on Business and above. Every signed submission renders as a formatted PDF with the signer identity block, the exact consent language they agreed to, the signature drawn or typed, and a UTC timestamp. Free and Personal tiers still capture the same data, the PDF export is the layer that lets you share the signed record with legal, HR, or a client.',
-    body_markdown: null,
-    list: [],
+    id: 3,
+    header: 'Can I make my own consent form?',
+    body: 'Yes. You write the wording and choose the fields. Many teams start from a template or the AI generator to save time, then edit every question. If the consent carries legal risk, ask a lawyer to review the wording.',
   },
   {
-    id: 3869,
-    header: "Is Formester's electronic signature legally valid?",
-    body: 'For the vast majority of consent workflows in the US, UK, EU, Canada, and Australia, yes. E-signatures are recognized under ESIGN and UETA in the US, eIDAS in the EU and UK, and PIPEDA in Canada, as long as three conditions are met: the signer clearly agreed, the signature is attributable to them, and the record is preserved. Formester captures intent via checkbox plus signature act, attribution via signer identity plus timestamp, and preservation via encrypted storage plus PDF export.',
-    body_markdown: null,
-    list: [],
+    id: 4,
+    header: 'What is a digital consent form?',
+    body: 'A digital or electronic consent form is one that people fill in and sign online instead of on paper. The person reads the terms, ticks a box to agree and signs on screen. You get their answers, signature and submission time in one record.',
   },
   {
-    id: 3868,
-    header: 'Can I use this for research participant consent?',
-    body: 'Yes for behavioral research, user studies, surveys, and product interviews. Add your IRB-approved consent language to the form, capture the signature, export as PDF for the IRB record. For research involving PHI under HIPAA, use a HIPAA-eligible tool like Jotform Gold since Formester is not HIPAA-certified.',
-    body_markdown: null,
-    list: [],
+    id: 5,
+    header: 'What is a signed consent form, and how do I keep a PDF copy?',
+    body: 'A signed consent form is the completed form with the person’s signature, showing what they agreed to. On the Business plan ($45/mo billed yearly), Formester can turn each response into a PDF with the signature in place. You can email it to the signer, attach it to your team’s notification, save it to Google Drive or download it from Results.',
   },
   {
-    id: 3871,
-    header: 'Does Formester handle GDPR and CCPA compliance?',
-    body: 'Yes. Formester is GDPR, UK GDPR, and CCPA compliant. EU data residency is available on Business and above. The form itself can be structured with granular opt-in unbundling, separate checkboxes for marketing, analytics, and third-party sharing, so the consent you capture matches GDPR Recital 32.',
-    body_markdown: null,
-    list: [],
+    id: 6,
+    header: 'Is there a free consent form app?',
+    body: 'Yes. Formester’s free plan lets you build consent forms, add a signature field and collect unlimited responses. Forms open in the browser on phones, tablets and computers, so signers don’t install anything. Signed PDFs need the Business plan.',
   },
   {
-    id: 3870,
-    header: 'How is this different from a Google Forms consent form?',
-    body: "Google Forms lets you build a consent form, but it does not have a native e-signature field. Respondents can type their name into a text box, which is not a signature. Formester's signature field captures a drawn or typed signature, signer identity, and timestamp on every submission, then exports to PDF on Business and above.",
-    body_markdown: null,
-    list: [],
+    id: 7,
+    header: 'What should a consent form include?',
+    body: 'A clear title, who is asking and why, what the person is agreeing to, any risks, how their data or images will be used, how to withdraw consent, and a contact. End with a consent checkbox, the person’s name, the date and their signature. For a minor, add the parent or guardian’s name and relationship.',
   },
   {
-    id: 3872,
-    header: 'Can I add my own logo and branding?',
-    body: 'Yes. Personal at 12 dollars per month yearly removes Formester branding and adds a custom URL slug. Business at 45 dollars per month yearly adds a custom domain like consent.yourbrand.com plus full logo and color customization.',
-    body_markdown: null,
-    list: [],
+    id: 8,
+    header: 'How do I get parental consent online?',
+    body: 'Send parents a link to a form with the child’s details, the activity and a signature field for the parent or guardian. You can pre-fill the student’s name in the link so parents only check and sign. On the Personal plan, you can also ask parents to verify their email with a one-time code before they submit.',
   },
-  {
-    id: 3874,
-    header: 'What are the 4 types of consent?',
-    body: "In legal and healthcare frameworks, consent typically falls into four categories: implied (assumed from the person's actions or situation), express (given explicitly, verbally or in writing), informed (given after the person has been given all material facts), and specific (limited to a defined purpose or transaction). Formester's consent form generator is designed for express, informed, and specific consent workflows where a written record is required.",
-    body_markdown: null,
-    list: [],
-  },
+]
+
+const ctaButtons = [
+  { link: SIGN_UP_URL, text: 'Start free', type: 'Primary', showArrow: true },
+  { link: '#ai-form-builder', text: 'Try the generator', type: 'White', showArrow: false },
 ]
 
 useHead({
-  title: 'Free Consent Form Generator with AI + eSign | Formester',
-  link: [
-    {
-      hid: 'canonical',
-      rel: 'canonical',
-      href: 'https://formester.com/consent-form-generator/',
-    },
-  ],
+  title: META_TITLE,
+  link: [{ rel: 'canonical', href: PAGE_URL }],
   meta: [
-    {
-      property: 'article:modified_time',
-      content: '2026-08-09T15:59:36.417Z',
-    },
-    {
-      hid: 'description',
-      name: 'description',
-      content:
-        'Build legally valid consent forms in minutes. AI generator from a prompt or PDF, native e-signature capture, unlimited free responses, PDF export.',
-    },
-    {
-      hid: 'og:site_name',
-      name: 'og:site_name',
-      content: 'Free Consent Form Generator with AI + eSign | Formester',
-    },
-    {
-      hid: 'og:type',
-      property: 'og:type',
-      content: 'website',
-    },
-    {
-      hid: 'og:url',
-      property: 'og:url',
-      content: 'https://formester.com/consent-form-generator/',
-    },
-    {
-      hid: 'og:title',
-      property: 'og:title',
-      content: 'Free Consent Form Generator with AI + eSign | Formester',
-    },
-    {
-      hid: 'og:description',
-      property: 'og:description',
-      content:
-        'Build legally valid consent forms in minutes. AI generator from a prompt or PDF, native e-signature capture, unlimited free responses, PDF export.',
-    },
-    {
-      hid: 'og:image',
-      property: 'og:image',
-      content: 'https://formester.com/formester-logo-meta-image.png',
-    },
-    {
-      hid: 'og:image:alt',
-      name: 'og:image:alt',
-      content: 'Formester Logo',
-    },
-    {
-      hid: 'twitter:url',
-      name: 'twitter:url',
-      content: 'https://formester.com/consent-form-generator/',
-    },
-    {
-      name: 'twitter:site',
-      content: '@_formester_',
-    },
-    {
-      hid: 'twitter:title',
-      name: 'twitter:title',
-      content: 'Free Consent Form Generator with AI + eSign | Formester',
-    },
-    {
-      hid: 'twitter:description',
-      name: 'twitter:description',
-      content:
-        'Build legally valid consent forms in minutes. AI generator from a prompt or PDF, native e-signature capture, unlimited free responses, PDF export.',
-    },
-    {
-      hid: 'twitter:image',
-      name: 'twitter:image',
-      content: 'https://formester.com/formester-logo-meta-image.png',
-    },
-    {
-      hid: 'twitter:image:alt',
-      name: 'twitter:image:alt',
-      content: 'Formester Logo',
-    },
-    {
-      hid: 'twitter:card',
-      name: 'twitter:card',
-      content: 'summary_large_image',
-    },
-    {
-      hid: 'apple-mobile-web-app-title',
-      name: 'apple-mobile-web-app-title',
-      content: 'Formester',
-    },
-    {
-      hid: 'image',
-      name: 'image',
-      property: 'og:image',
-      content: 'https://formester.com/formester-logo-meta-image.png',
-    },
-    {
-      hid: 'keywords',
-      name: 'keywords',
-      content: [
-        'consent form generator',
-        'ai consent form generator',
-        'free consent form generator',
-        'consent form generator pdf',
-        'online consent form generator',
-      ],
-    },
+    { name: 'description', content: META_DESCRIPTION },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: PAGE_URL },
+    { property: 'og:title', content: META_TITLE },
+    { property: 'og:description', content: META_DESCRIPTION },
+    { property: 'og:image', content: OG_IMAGE },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:site', content: '@_formester_' },
+    { name: 'twitter:title', content: META_TITLE },
+    { name: 'twitter:description', content: META_DESCRIPTION },
+    { name: 'twitter:image', content: OG_IMAGE },
   ],
 })
+
 useJsonld([
   {
-    '@graph': [
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Formester Consent Form Generator',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    url: PAGE_URL,
+    description: META_DESCRIPTION,
+    offers: [
       {
-        '@id': 'https://formester.com/#organization',
-        url: 'https://formester.com/',
-        logo: {
-          url: 'https://formester.com/logo.png',
-          '@type': 'ImageObject',
-        },
-        name: 'Formester',
-        '@type': 'Organization',
+        '@type': 'Offer',
+        name: 'Free',
+        price: '0',
+        priceCurrency: 'USD',
+        description: 'Build consent forms and collect e-signatures with unlimited responses',
       },
       {
-        '@id': 'https://formester.com/consent-form-generator/#webpage',
-        url: 'https://formester.com/consent-form-generator/',
-        name: 'Free Consent Form Generator with AI + eSign | Formester',
-        '@type': 'WebPage',
-        isPartOf: {
-          '@id': 'https://formester.com/#organization',
-        },
-        breadcrumb: {
-          '@id': 'https://formester.com/consent-form-generator/#breadcrumb',
-        },
-        inLanguage: 'en-US',
-        description:
-          'Build legally valid consent forms in minutes. AI generator from a prompt or PDF, native e-signature capture, unlimited free responses, PDF export.',
-        dateModified: '2026-08-03',
-        datePublished: '2026-08-03',
-      },
-      {
-        '@id': 'https://formester.com/consent-form-generator/#breadcrumb',
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          {
-            item: 'https://formester.com/',
-            name: 'Home',
-            '@type': 'ListItem',
-            position: 1,
-          },
-          {
-            item: 'https://formester.com/consent-form-generator/',
-            name: 'Consent Form Generator',
-            '@type': 'ListItem',
-            position: 2,
-          },
-        ],
-      },
-      {
-        '@id': 'https://formester.com/consent-form-generator/#faq',
-        '@type': 'FAQPage',
-        mainEntity: [
-          {
-            name: 'Can I create my own consent form?',
-            '@type': 'Question',
-            acceptedAnswer: {
-              text: "Yes. Formester's consent form generator gives you three starting points: a prompt-to-form AI, a paper PDF upload that gets digitized in one click, or a template gallery of 25+ vetted consent forms. Every route ends in a form you can share via link, embed on your site, or send by email.",
-              '@type': 'Answer',
-            },
-          },
-          {
-            name: 'Is the consent form generator really free?',
-            '@type': 'Question',
-            acceptedAnswer: {
-              text: 'Yes. Unlimited forms and unlimited signed submissions on the free plan, with the native e-signature field included. No trial that expires, no card required at signup, no cap on how many consents you collect.',
-              '@type': 'Answer',
-            },
-          },
-          {
-            name: 'Can I export the signed consent as a PDF?',
-            '@type': 'Question',
-            acceptedAnswer: {
-              text: 'Yes, on Business and above. Every signed submission renders as a formatted PDF with the signer identity block, the exact consent language they agreed to, the signature drawn or typed, and a UTC timestamp. Free and Personal tiers still capture the same data, the PDF export is the layer that lets you share the signed record with legal, HR, or a client.',
-              '@type': 'Answer',
-            },
-          },
-          {
-            name: "Is Formester's electronic signature legally valid?",
-            '@type': 'Question',
-            acceptedAnswer: {
-              text: 'For the vast majority of consent workflows in the US, UK, EU, Canada, and Australia, yes. E-signatures are recognized under ESIGN and UETA in the US, eIDAS in the EU and UK, and PIPEDA in Canada, as long as three conditions are met: the signer clearly agreed, the signature is attributable to them, and the record is preserved. Formester captures intent via checkbox plus signature act, attribution via signer identity plus timestamp, and preservation via encrypted storage plus PDF export.',
-              '@type': 'Answer',
-            },
-          },
-          {
-            name: 'Can I use this for research participant consent?',
-            '@type': 'Question',
-            acceptedAnswer: {
-              text: 'Yes for behavioral research, user studies, surveys, and product interviews. Add your IRB-approved consent language to the form, capture the signature, export as PDF for the IRB record. For research involving PHI under HIPAA, use a HIPAA-eligible tool like Jotform Gold since Formester is not HIPAA-certified.',
-              '@type': 'Answer',
-            },
-          },
-          {
-            name: 'Does Formester handle GDPR and CCPA compliance?',
-            '@type': 'Question',
-            acceptedAnswer: {
-              text: 'Yes. Formester is GDPR, UK GDPR, and CCPA compliant. EU data residency is available on Business and above. The form itself can be structured with granular opt-in unbundling, separate checkboxes for marketing, analytics, and third-party sharing, so the consent you capture matches GDPR Recital 32.',
-              '@type': 'Answer',
-            },
-          },
-          {
-            name: 'How is this different from a Google Forms consent form?',
-            '@type': 'Question',
-            acceptedAnswer: {
-              text: "Google Forms lets you build a consent form, but it does not have a native e-signature field. Respondents can type their name into a text box, which is not a signature. Formester's signature field captures a drawn or typed signature, signer identity, and timestamp on every submission, then exports to PDF on Business and above.",
-              '@type': 'Answer',
-            },
-          },
-          {
-            name: 'Can I add my own logo and branding?',
-            '@type': 'Question',
-            acceptedAnswer: {
-              text: 'Yes. Personal at 12 dollars per month yearly removes Formester branding and adds a custom URL slug. Business at 45 dollars per month yearly adds a custom domain like consent.yourbrand.com plus full logo and color customization.',
-              '@type': 'Answer',
-            },
-          },
-          {
-            name: 'What are the 4 types of consent?',
-            '@type': 'Question',
-            acceptedAnswer: {
-              text: "In legal and healthcare frameworks, consent typically falls into four categories: implied (assumed from the person's actions or situation), express (given explicitly, verbally or in writing), informed (given after the person has been given all material facts), and specific (limited to a defined purpose or transaction). Formester's consent form generator is designed for express, informed, and specific consent workflows where a written record is required.",
-              '@type': 'Answer',
-            },
-          },
-        ],
-      },
-      {
-        '@id': 'https://formester.com/#software',
-        url: 'https://formester.com/',
-        name: 'Formester',
-        '@type': 'SoftwareApplication',
-        offers: [
-          {
-            url: 'https://formester.com/pricing/',
-            name: 'Free',
-            '@type': 'Offer',
-            price: '0',
-            availability: 'https://schema.org/InStock',
-            priceCurrency: 'USD',
-          },
-          {
-            url: 'https://formester.com/pricing/',
-            name: 'Personal',
-            '@type': 'Offer',
-            price: '13',
-            availability: 'https://schema.org/InStock',
-            priceCurrency: 'USD',
-          },
-        ],
-        publisher: {
-          '@id': 'https://formester.com/#organization',
-        },
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingCount: '11',
-          ratingValue: '4.7',
-        },
-        operatingSystem: 'Web, iOS, Android',
-        applicationCategory: 'BusinessApplication',
+        '@type': 'Offer',
+        name: 'Business',
+        price: '45',
+        priceCurrency: 'USD',
+        description: 'Adds signed PDFs of every response. Price per month, billed yearly',
       },
     ],
+  },
+  {
     '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://formester.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Consent Form Generator', item: PAGE_URL },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqList.map((faq) => ({
+      '@type': 'Question',
+      name: faq.header,
+      acceptedAnswer: { '@type': 'Answer', text: faq.body },
+    })),
   },
 ])
 </script>
 
-<style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-.fmstr-cmp-csg-3ways a {
-  text-decoration: none !important;
-}
-.fmstr-cmp-csg-3ways {
-  --c-card: #ffffff;
-  --c-fg-1: #101828;
-  --c-fg-2: #475467;
-  --c-fg-3: #697586;
-  --c-violet-500: #7f56d9;
-  --c-violet-600: #6941c6;
-  --c-tint: #f7f3ff;
-  --c-edge: #e4d7ff;
-  --c-border: #eaecf0;
-  --c-shadow: 0 1px 3px rgba(16, 24, 40, 0.05);
-  background: transparent;
-  padding: 56px 24px;
-  font-family: inherit;
-  color: var(--c-fg-1);
-  text-align: left !important;
-  overflow-x: hidden;
-}
-.fmstr-cmp-csg-3ways *,
-.fmstr-cmp-csg-3ways *::before,
-.fmstr-cmp-csg-3ways *::after {
-  box-sizing: border-box;
-}
-.fmstr-cmp-csg-3ways__container {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 0 24px;
-  min-width: 0;
-}
-.fmstr-cmp-csg-3ways__header {
-  margin: 0 auto 40px;
-  max-width: 760px;
-  text-align: center;
-}
-.fmstr-cmp-csg-3ways__eyebrow {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--c-violet-600);
-  background: #f4ebff;
-  display: inline-block;
-  padding: 4px 12px;
-  border-radius: 9999px;
-  margin: 0 0 16px;
-}
-.fmstr-cmp-csg-3ways__h2 {
-  font-size: clamp(26px, 3vw, 36px);
-  font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  margin: 0 0 14px;
-  color: var(--c-fg-1);
-}
-.fmstr-cmp-csg-3ways__sub {
-  color: var(--c-fg-2);
-  font-size: 17px;
-  line-height: 1.6;
-  margin: 0;
-}
-.fmstr-cmp-csg-3ways__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  min-width: 0;
-}
-.fmstr-cmp-csg-3ways__card {
-  min-width: 0;
-  background: var(--c-card);
-  border: 1px solid var(--c-border);
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: var(--c-shadow);
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  transition:
-    border-color 0.15s ease,
-    box-shadow 0.15s ease;
-}
-.fmstr-cmp-csg-3ways__card:hover {
-  border-color: #9777e0;
-  box-shadow: 0 2px 4px 0 rgba(16, 24, 40, 0.06);
-}
-.fmstr-cmp-csg-3ways__icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  background: var(--c-tint);
-  border: 1px solid var(--c-edge);
-  display: grid;
-  place-items: center;
-  color: var(--c-violet-600);
-}
-.fmstr-cmp-csg-3ways__icon svg {
-  width: 22px;
-  height: 22px;
-}
-.fmstr-cmp-csg-3ways__title {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.3;
-  margin: 0;
-  color: var(--c-fg-1);
-}
-.fmstr-cmp-csg-3ways__body {
-  color: var(--c-fg-2);
-  font-size: 15px;
-  line-height: 1.55;
-  margin: 0;
-}
-.fmstr-cmp-csg-3ways__example {
-  background: var(--c-tint);
-  border-left: 3px solid var(--c-violet-500);
-  padding: 10px 14px;
-  border-radius: 6px;
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--c-fg-1);
-  font-style: italic;
-}
-@media (max-width: 760px) {
-  .fmstr-cmp-csg-3ways {
-    padding: 48px 16px;
-  }
-  .fmstr-cmp-csg-3ways__grid {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-  .fmstr-cmp-csg-3ways__h2 {
-    font-size: 24px;
-  }
-}
-
-.fmstr-cmp-csg-quality-control {
-  --fmstr-cmp-csg-quality-control-bg-section: #0f0921;
-  --fmstr-cmp-csg-quality-control-bg-glow: radial-gradient(
-    ellipse 900px 600px at 95% 0%,
-    rgba(127, 86, 217, 0.45) 0%,
-    rgba(100, 52, 208, 0.15) 30%,
-    transparent 65%
-  );
-  --fmstr-cmp-csg-quality-control-bg-card: rgba(255, 255, 255, 0.04);
-  --fmstr-cmp-csg-quality-control-bg-card-glow: radial-gradient(
-    ellipse 500px 400px at 90% 5%,
-    rgba(127, 86, 217, 0.3) 0%,
-    transparent 60%
-  );
-  --fmstr-cmp-csg-quality-control-bg-pill: rgba(255, 255, 255, 0.08);
-  --fmstr-cmp-csg-quality-control-bg-row: rgba(255, 255, 255, 0.04);
-  --fmstr-cmp-csg-quality-control-fg-eyebrow: #bda6ff;
-  --fmstr-cmp-csg-quality-control-fg-row: rgba(255, 255, 255, 0.85);
-  --fmstr-cmp-csg-quality-control-fg-row-tag: #bda6ff;
-  --fmstr-cmp-csg-quality-control-fg-link: #d9c7ff;
-  --fmstr-cmp-csg-quality-control-fg-link-hover: #ffffff;
-  --fmstr-cmp-csg-quality-control-fs-xs: 12px;
-  --fmstr-cmp-csg-quality-control-fs-sm: 14px;
-  --fmstr-cmp-csg-quality-control-fs-md: 16px;
-  --fmstr-cmp-csg-quality-control-fs-lg: 18px;
-  --fmstr-cmp-csg-quality-control-fs-2xl: 24px;
-  --fmstr-cmp-csg-quality-control-fs-3xl: 32px;
-  --fmstr-cmp-csg-quality-control-fw-semibold: 600;
-  --fmstr-cmp-csg-quality-control-fw-bold: 700;
-  --fmstr-cmp-csg-quality-control-lh-md: 24px;
-  --fmstr-cmp-csg-quality-control-lh-lg: 28px;
-  --fmstr-cmp-csg-quality-control-lh-2xl: 32px;
-  --fmstr-cmp-csg-quality-control-space-1: 4px;
-  --fmstr-cmp-csg-quality-control-space-2: 8px;
-  --fmstr-cmp-csg-quality-control-space-3: 12px;
-  --fmstr-cmp-csg-quality-control-space-4: 16px;
-  --fmstr-cmp-csg-quality-control-space-5: 20px;
-  --fmstr-cmp-csg-quality-control-space-6: 24px;
-  --fmstr-cmp-csg-quality-control-space-7: 28px;
-  --fmstr-cmp-csg-quality-control-space-8: 32px;
-  --fmstr-cmp-csg-quality-control-space-12: 48px;
-  --fmstr-cmp-csg-quality-control-r-md: 8px;
-  --fmstr-cmp-csg-quality-control-r-2xl: 16px;
-  --fmstr-cmp-csg-quality-control-r-full: 9999px;
-
-  background: transparent;
-  padding: var(--fmstr-cmp-csg-quality-control-space-12) var(--fmstr-cmp-csg-quality-control-space-6);
-  font-family:
-    'Inter',
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    'Segoe UI',
-    Roboto,
-    sans-serif;
-}
-
-.fmstr-cmp-csg-quality-control *,
-.fmstr-cmp-csg-quality-control *::before,
-.fmstr-cmp-csg-quality-control *::after {
-  box-sizing: border-box;
-}
-
-.fmstr-cmp-csg-quality-control__container {
-  position: relative;
-  max-width: 1180px;
-  margin: 0 auto;
-  background-color: var(--fmstr-cmp-csg-quality-control-bg-section);
-  background-image: var(--fmstr-cmp-csg-quality-control-bg-glow);
-  border-radius: 28px;
-  padding: var(--fmstr-cmp-csg-quality-control-space-12);
-  overflow: hidden;
-}
-
-.fmstr-cmp-csg-quality-control__inner {
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: var(--fmstr-cmp-csg-quality-control-space-12);
-  align-items: center;
-}
-
-.fmstr-cmp-csg-quality-control__eyebrow {
-  display: inline-block;
-  padding: var(--fmstr-cmp-csg-quality-control-space-2) var(--fmstr-cmp-csg-quality-control-space-4);
-  background: var(--fmstr-cmp-csg-quality-control-bg-pill);
-  color: var(--fmstr-cmp-csg-quality-control-fg-eyebrow);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--fmstr-cmp-csg-quality-control-r-full);
-  font-size: var(--fmstr-cmp-csg-quality-control-fs-xs);
-  font-weight: var(--fmstr-cmp-csg-quality-control-fw-bold);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: var(--fmstr-cmp-csg-quality-control-space-5);
-}
-
-.fmstr-cmp-csg-quality-control__heading {
-  font-size: var(--fmstr-cmp-csg-quality-control-fs-3xl);
-  line-height: 40px;
-  font-weight: var(--fmstr-cmp-csg-quality-control-fw-bold);
-  letter-spacing: -0.02em;
-  color: #ffffff;
-  margin: 0 0 var(--fmstr-cmp-csg-quality-control-space-6);
-}
-
-.fmstr-cmp-csg-quality-control__body p {
-  font-size: var(--fmstr-cmp-csg-quality-control-fs-md);
-  line-height: var(--fmstr-cmp-csg-quality-control-lh-md);
-  color: rgba(255, 255, 255, 0.78);
-  margin: 0 0 var(--fmstr-cmp-csg-quality-control-space-4);
-}
-.fmstr-cmp-csg-quality-control__body p:last-child {
-  margin-bottom: 0;
-}
-
-.fmstr-cmp-csg-quality-control__card {
-  background-color: var(--fmstr-cmp-csg-quality-control-bg-card);
-  background-image: var(--fmstr-cmp-csg-quality-control-bg-card-glow);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--fmstr-cmp-csg-quality-control-r-2xl);
-  padding: var(--fmstr-cmp-csg-quality-control-space-7);
-  backdrop-filter: blur(8px);
-}
-
-.fmstr-cmp-csg-quality-control__pill {
-  display: inline-block;
-  padding: var(--fmstr-cmp-csg-quality-control-space-2) var(--fmstr-cmp-csg-quality-control-space-4);
-  background: var(--fmstr-cmp-csg-quality-control-bg-pill);
-  color: var(--fmstr-cmp-csg-quality-control-fg-eyebrow);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--fmstr-cmp-csg-quality-control-r-full);
-  font-size: var(--fmstr-cmp-csg-quality-control-fs-xs);
-  font-weight: var(--fmstr-cmp-csg-quality-control-fw-bold);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: var(--fmstr-cmp-csg-quality-control-space-5);
-}
-
-.fmstr-cmp-csg-quality-control__card-title {
-  font-size: var(--fmstr-cmp-csg-quality-control-fs-lg);
-  line-height: var(--fmstr-cmp-csg-quality-control-lh-lg);
-  font-weight: var(--fmstr-cmp-csg-quality-control-fw-bold);
-  color: #ffffff;
-  margin: 0 0 var(--fmstr-cmp-csg-quality-control-space-5);
-}
-
-.fmstr-cmp-csg-quality-control__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: var(--fmstr-cmp-csg-quality-control-space-2);
-}
-
-.fmstr-cmp-csg-quality-control__item {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--fmstr-cmp-csg-quality-control-space-3);
-  padding: var(--fmstr-cmp-csg-quality-control-space-3) var(--fmstr-cmp-csg-quality-control-space-4);
-  background: var(--fmstr-cmp-csg-quality-control-bg-row);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: var(--fmstr-cmp-csg-quality-control-r-md);
-}
-
-.fmstr-cmp-csg-quality-control__check {
-  flex-shrink: 0;
-  width: 20px;
-  height: 20px;
-  color: var(--fmstr-cmp-csg-quality-control-fg-row-tag);
-  margin-top: 2px;
-}
-
-.fmstr-cmp-csg-quality-control__item-text {
-  font-size: var(--fmstr-cmp-csg-quality-control-fs-sm);
-  line-height: 22px;
-  color: var(--fmstr-cmp-csg-quality-control-fg-row);
-}
-.fmstr-cmp-csg-quality-control__item-text strong {
-  color: #ffffff;
-  font-weight: var(--fmstr-cmp-csg-quality-control-fw-bold);
-}
-
-@media (max-width: 760px) {
-  .fmstr-cmp-csg-quality-control {
-    padding: var(--fmstr-cmp-csg-quality-control-space-8) var(--fmstr-cmp-csg-quality-control-space-4);
-  }
-  .fmstr-cmp-csg-quality-control__container {
-    padding: var(--fmstr-cmp-csg-quality-control-space-7);
-    border-radius: 20px;
-  }
-  .fmstr-cmp-csg-quality-control__inner {
-    grid-template-columns: 1fr;
-    gap: var(--fmstr-cmp-csg-quality-control-space-8);
-  }
-  .fmstr-cmp-csg-quality-control__heading {
-    font-size: var(--fmstr-cmp-csg-quality-control-fs-2xl);
-    line-height: var(--fmstr-cmp-csg-quality-control-lh-2xl);
-  }
-  .fmstr-cmp-csg-quality-control__card {
-    padding: var(--fmstr-cmp-csg-quality-control-space-6);
-  }
-}
-
-.fmstr-cmp-csg-demo {
-  --c-fg-1: #101828;
-  --c-fg-2: #475467;
-  --c-violet-600: #6941c6;
-  --c-border: #eaecf0;
-  background: transparent;
-  padding: 56px 24px;
-  font-family: inherit;
-  color: var(--c-fg-1);
-  text-align: left !important;
-  overflow-x: hidden;
-}
-.fmstr-cmp-csg-demo *,
-.fmstr-cmp-csg-demo *::before,
-.fmstr-cmp-csg-demo *::after {
-  box-sizing: border-box;
-}
-.fmstr-cmp-csg-demo__container {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 0 24px;
-  min-width: 0;
-}
-.fmstr-cmp-csg-demo__header {
-  margin: 0 auto 36px;
-  max-width: 760px;
-  text-align: center;
-}
-.fmstr-cmp-csg-demo__eyebrow {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--c-violet-600);
-  background: #f4ebff;
-  display: inline-block;
-  padding: 4px 12px;
-  border-radius: 9999px;
-  margin: 0 0 16px;
-}
-.fmstr-cmp-csg-demo__h2 {
-  font-size: clamp(26px, 3vw, 36px);
-  font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  margin: 0 0 14px;
-  color: var(--c-fg-1);
-}
-.fmstr-cmp-csg-demo__sub {
-  color: var(--c-fg-2);
-  font-size: 17px;
-  line-height: 1.6;
-  margin: 0;
-}
-.fmstr-cmp-csg-demo__frame {
-  max-width: 960px;
-  margin: 0 auto;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--c-border);
-  background: #ffffff;
-  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.05);
-  font-size: 0;
-}
-.fmstr-cmp-csg-demo__media {
+<style>
+/* Screenshots are injected as raw HTML into AlternatingRows, so this rule stays unscoped and namespaced. */
+.cfg-shot {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
-}
-@media (max-width: 760px) {
-  .fmstr-cmp-csg-demo {
-    padding: 48px 16px;
-  }
-}
-
-.fmstr-cmp-csg-who-uses {
-  --fmstr-cmp-csg-who-uses-bg-card: #ffffff;
-  --fmstr-cmp-csg-who-uses-bg-violet-25: #f7f3ff;
-  --fmstr-cmp-csg-who-uses-fg-1: #101828;
-  --fmstr-cmp-csg-who-uses-fg-2: #475467;
-  --fmstr-cmp-csg-who-uses-fg-3: #697586;
-  --fmstr-cmp-csg-who-uses-violet-600: #6941c6;
-  --fmstr-cmp-csg-who-uses-violet-700: #53389e;
-  --fmstr-cmp-csg-who-uses-border-light: #eaecf0;
-  --fmstr-cmp-csg-who-uses-border-violet: #9777e0;
-  --fmstr-cmp-csg-who-uses-shadow-xs: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
-  --fmstr-cmp-csg-who-uses-shadow-md: 0 2px 4px 0 rgba(16, 24, 40, 0.06);
-  --fmstr-cmp-csg-who-uses-fs-xs: 12px;
-  --fmstr-cmp-csg-who-uses-fs-sm: 14px;
-  --fmstr-cmp-csg-who-uses-fs-md: 16px;
-  --fmstr-cmp-csg-who-uses-fs-lg: 18px;
-  --fmstr-cmp-csg-who-uses-fs-2xl: 24px;
-  --fmstr-cmp-csg-who-uses-fs-3xl: 36px;
-  --fmstr-cmp-csg-who-uses-fw-semibold: 600;
-  --fmstr-cmp-csg-who-uses-fw-bold: 700;
-  --fmstr-cmp-csg-who-uses-lh-md: 24px;
-  --fmstr-cmp-csg-who-uses-lh-lg: 28px;
-  --fmstr-cmp-csg-who-uses-lh-2xl: 32px;
-  --fmstr-cmp-csg-who-uses-space-1: 4px;
-  --fmstr-cmp-csg-who-uses-space-2: 8px;
-  --fmstr-cmp-csg-who-uses-space-3: 12px;
-  --fmstr-cmp-csg-who-uses-space-4: 16px;
-  --fmstr-cmp-csg-who-uses-space-5: 20px;
-  --fmstr-cmp-csg-who-uses-space-6: 24px;
-  --fmstr-cmp-csg-who-uses-space-7: 28px;
-  --fmstr-cmp-csg-who-uses-space-8: 32px;
-  --fmstr-cmp-csg-who-uses-space-10: 40px;
-  --fmstr-cmp-csg-who-uses-space-12: 48px;
-  --fmstr-cmp-csg-who-uses-space-16: 64px;
-  --fmstr-cmp-csg-who-uses-r-md: 8px;
-  --fmstr-cmp-csg-who-uses-r-lg: 12px;
-  --fmstr-cmp-csg-who-uses-r-2xl: 16px;
-
-  padding: var(--fmstr-cmp-csg-who-uses-space-16) var(--fmstr-cmp-csg-who-uses-space-6);
-  font-family:
-    'Inter',
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    'Segoe UI',
-    Roboto,
-    sans-serif;
-  color: var(--fmstr-cmp-csg-who-uses-fg-1);
-}
-
-.fmstr-cmp-csg-who-uses *,
-.fmstr-cmp-csg-who-uses *::before,
-.fmstr-cmp-csg-who-uses *::after {
-  box-sizing: border-box;
-}
-
-.fmstr-cmp-csg-who-uses__container {
-  max-width: 1180px;
-  margin: 0 auto;
-}
-
-.fmstr-cmp-csg-who-uses__header {
-  max-width: 760px;
-  margin: 0 auto var(--fmstr-cmp-csg-who-uses-space-10);
-  text-align: center;
-}
-
-.fmstr-cmp-csg-who-uses__heading {
-  font-size: var(--fmstr-cmp-csg-who-uses-fs-3xl);
-  line-height: 44px;
-  font-weight: var(--fmstr-cmp-csg-who-uses-fw-bold);
-  letter-spacing: -0.02em;
-  color: var(--fmstr-cmp-csg-who-uses-fg-1);
-  margin: 0 0 var(--fmstr-cmp-csg-who-uses-space-3);
-}
-
-.fmstr-cmp-csg-who-uses__sub {
-  font-size: var(--fmstr-cmp-csg-who-uses-fs-md);
-  line-height: var(--fmstr-cmp-csg-who-uses-lh-md);
-  color: var(--fmstr-cmp-csg-who-uses-fg-3);
-  margin: 0;
-}
-
-.fmstr-cmp-csg-who-uses__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: stretch;
-  gap: var(--fmstr-cmp-csg-who-uses-space-5);
-}
-
-.fmstr-cmp-csg-who-uses__card {
-  display: flex;
-  flex-direction: column;
-  gap: var(--fmstr-cmp-csg-who-uses-space-4);
-  padding: var(--fmstr-cmp-csg-who-uses-space-7);
-  background: var(--fmstr-cmp-csg-who-uses-bg-card);
-  border: 1px solid var(--fmstr-cmp-csg-who-uses-border-light);
-  border-radius: var(--fmstr-cmp-csg-who-uses-r-2xl);
-  box-shadow: var(--fmstr-cmp-csg-who-uses-shadow-xs);
-  transition:
-    border-color 200ms ease,
-    box-shadow 200ms ease,
-    transform 200ms ease;
-}
-.fmstr-cmp-csg-who-uses__card:hover {
-  border-color: var(--fmstr-cmp-csg-who-uses-border-violet);
-  box-shadow: var(--fmstr-cmp-csg-who-uses-shadow-md);
-  transform: translateY(-2px);
-}
-
-.fmstr-cmp-csg-who-uses__icon {
-  width: 44px;
-  height: 44px;
-  border-radius: var(--fmstr-cmp-csg-who-uses-r-md);
-  background: var(--fmstr-cmp-csg-who-uses-bg-violet-25);
-  color: var(--fmstr-cmp-csg-who-uses-violet-600);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.fmstr-cmp-csg-who-uses__title {
-  margin: 0;
-  font-size: var(--fmstr-cmp-csg-who-uses-fs-lg);
-  line-height: var(--fmstr-cmp-csg-who-uses-lh-lg);
-  font-weight: var(--fmstr-cmp-csg-who-uses-fw-bold);
-  color: var(--fmstr-cmp-csg-who-uses-fg-1);
-}
-
-.fmstr-cmp-csg-who-uses__body {
-  margin: 0;
-  font-size: var(--fmstr-cmp-csg-who-uses-fs-sm);
-  line-height: 22px;
-  color: var(--fmstr-cmp-csg-who-uses-fg-2);
-}
-
-.fmstr-cmp-csg-who-uses__divider {
-  margin-top: auto;
-  border: none;
-  border-top: 1px solid var(--fmstr-cmp-csg-who-uses-border-light);
-}
-
-.fmstr-cmp-csg-who-uses__cta {
-  color: var(--fmstr-cmp-csg-who-uses-violet-600);
-  font-size: var(--fmstr-cmp-csg-who-uses-fs-sm);
-  font-weight: var(--fmstr-cmp-csg-who-uses-fw-bold);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: var(--fmstr-cmp-csg-who-uses-space-1);
-  transition: color 150ms ease;
-}
-.fmstr-cmp-csg-who-uses__cta:hover {
-  color: var(--fmstr-cmp-csg-who-uses-violet-700);
-  text-decoration: underline;
-}
-
-@media (max-width: 1024px) {
-  .fmstr-cmp-csg-who-uses__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 760px) {
-  .fmstr-cmp-csg-who-uses {
-    padding: var(--fmstr-cmp-csg-who-uses-space-12) var(--fmstr-cmp-csg-who-uses-space-4);
-  }
-  .fmstr-cmp-csg-who-uses__heading {
-    font-size: var(--fmstr-cmp-csg-who-uses-fs-2xl);
-    line-height: var(--fmstr-cmp-csg-who-uses-lh-2xl);
-  }
-  .fmstr-cmp-csg-who-uses__grid {
-    grid-template-columns: 1fr;
-  }
-  .fmstr-cmp-csg-who-uses__card {
-    padding: var(--fmstr-cmp-csg-who-uses-space-6);
-  }
-}
-
-.fmstr-cmp-csg-api-mcp {
-  --fmstr-cmp-csg-api-mcp-bg-card: #ffffff;
-  --fmstr-cmp-csg-api-mcp-bg-tint: #f7f3ff;
-  --fmstr-cmp-csg-api-mcp-bg-pill: #f4ebff;
-  --fmstr-cmp-csg-api-mcp-bg-chip: #f2f4f7;
-  --fmstr-cmp-csg-api-mcp-fg-1: #101828;
-  --fmstr-cmp-csg-api-mcp-fg-2: #475467;
-  --fmstr-cmp-csg-api-mcp-fg-strong: #344054;
-  --fmstr-cmp-csg-api-mcp-violet-500: #7f56d9;
-  --fmstr-cmp-csg-api-mcp-violet-600: #6941c6;
-  --fmstr-cmp-csg-api-mcp-violet-300: #9777e0;
-  --fmstr-cmp-csg-api-mcp-border: #eaecf0;
-  --fmstr-cmp-csg-api-mcp-fs-xs: 12px;
-  --fmstr-cmp-csg-api-mcp-fs-sm: 14px;
-  --fmstr-cmp-csg-api-mcp-fs-md: 16px;
-  --fmstr-cmp-csg-api-mcp-fs-lg: 18px;
-  --fmstr-cmp-csg-api-mcp-fs-xl: 20px;
-  --fmstr-cmp-csg-api-mcp-fs-2xl: 24px;
-  --fmstr-cmp-csg-api-mcp-fs-3xl: 36px;
-  --fmstr-cmp-csg-api-mcp-lh-md: 24px;
-  --fmstr-cmp-csg-api-mcp-lh-lg: 28px;
-  --fmstr-cmp-csg-api-mcp-lh-xl: 30px;
-  --fmstr-cmp-csg-api-mcp-fw-semibold: 600;
-  --fmstr-cmp-csg-api-mcp-fw-bold: 700;
-  --fmstr-cmp-csg-api-mcp-space-2: 8px;
-  --fmstr-cmp-csg-api-mcp-space-3: 12px;
-  --fmstr-cmp-csg-api-mcp-space-4: 16px;
-  --fmstr-cmp-csg-api-mcp-space-5: 20px;
-  --fmstr-cmp-csg-api-mcp-space-6: 24px;
-  --fmstr-cmp-csg-api-mcp-space-7: 28px;
-  --fmstr-cmp-csg-api-mcp-space-8: 32px;
-  --fmstr-cmp-csg-api-mcp-space-10: 40px;
-  --fmstr-cmp-csg-api-mcp-space-12: 48px;
-  --fmstr-cmp-csg-api-mcp-space-16: 64px;
-  --fmstr-cmp-csg-api-mcp-r-md: 6px;
-  --fmstr-cmp-csg-api-mcp-r-lg: 12px;
-  --fmstr-cmp-csg-api-mcp-r-2xl: 16px;
-  --fmstr-cmp-csg-api-mcp-r-full: 9999px;
-  --fmstr-cmp-csg-api-mcp-shadow-md: 0 2px 4px 0 rgba(16, 24, 40, 0.06);
-
-  padding: var(--fmstr-cmp-csg-api-mcp-space-16) var(--fmstr-cmp-csg-api-mcp-space-6);
-  font-family:
-    'Inter',
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    'Segoe UI',
-    Roboto,
-    sans-serif;
-}
-
-.fmstr-cmp-csg-api-mcp *,
-.fmstr-cmp-csg-api-mcp *::before,
-.fmstr-cmp-csg-api-mcp *::after {
-  box-sizing: border-box;
-}
-
-.fmstr-cmp-csg-api-mcp__container {
-  max-width: 1180px;
-  margin: 0 auto;
-}
-
-.fmstr-cmp-csg-api-mcp__header {
-  margin: 0 auto var(--fmstr-cmp-csg-api-mcp-space-10);
-  max-width: 760px;
-  text-align: center;
-}
-
-.fmstr-cmp-csg-api-mcp__eyebrow {
-  display: inline-block;
-  padding: var(--fmstr-cmp-csg-api-mcp-space-2) var(--fmstr-cmp-csg-api-mcp-space-4);
-  background: var(--fmstr-cmp-csg-api-mcp-bg-pill);
-  color: var(--fmstr-cmp-csg-api-mcp-violet-600);
-  border-radius: var(--fmstr-cmp-csg-api-mcp-r-full);
-  font-size: var(--fmstr-cmp-csg-api-mcp-fs-xs);
-  font-weight: var(--fmstr-cmp-csg-api-mcp-fw-bold);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: var(--fmstr-cmp-csg-api-mcp-space-4);
-}
-
-.fmstr-cmp-csg-api-mcp__title {
-  font-size: var(--fmstr-cmp-csg-api-mcp-fs-3xl);
-  line-height: 44px;
-  font-weight: var(--fmstr-cmp-csg-api-mcp-fw-bold);
-  letter-spacing: -0.02em;
-  color: var(--fmstr-cmp-csg-api-mcp-fg-1);
-  margin: 0 0 var(--fmstr-cmp-csg-api-mcp-space-3);
-}
-
-.fmstr-cmp-csg-api-mcp__intro {
-  font-size: var(--fmstr-cmp-csg-api-mcp-fs-lg);
-  line-height: var(--fmstr-cmp-csg-api-mcp-lh-lg);
-  color: var(--fmstr-cmp-csg-api-mcp-fg-2);
-  margin: 0;
-}
-
-.fmstr-cmp-csg-api-mcp__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--fmstr-cmp-csg-api-mcp-space-5);
-  align-items: stretch;
-}
-
-.fmstr-cmp-csg-api-mcp__card {
-  background: var(--fmstr-cmp-csg-api-mcp-bg-card);
-  border: 1px solid var(--fmstr-cmp-csg-api-mcp-border);
-  border-radius: var(--fmstr-cmp-csg-api-mcp-r-2xl);
-  padding: var(--fmstr-cmp-csg-api-mcp-space-8);
-  display: flex;
-  flex-direction: column;
-  transition:
-    border-color 150ms ease,
-    box-shadow 150ms ease;
-}
-.fmstr-cmp-csg-api-mcp__card:hover {
-  border-color: var(--fmstr-cmp-csg-api-mcp-violet-300);
-  box-shadow: var(--fmstr-cmp-csg-api-mcp-shadow-md);
-}
-
-.fmstr-cmp-csg-api-mcp__icon {
-  width: 52px;
-  height: 52px;
-  border-radius: var(--fmstr-cmp-csg-api-mcp-r-lg);
-  background: var(--fmstr-cmp-csg-api-mcp-bg-tint);
-  color: var(--fmstr-cmp-csg-api-mcp-violet-600);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: var(--fmstr-cmp-csg-api-mcp-space-5);
-  flex-shrink: 0;
-}
-
-.fmstr-cmp-csg-api-mcp__badge {
-  display: inline-block;
-  padding: 4px 10px;
-  background: var(--fmstr-cmp-csg-api-mcp-violet-500);
-  color: #ffffff;
-  border-radius: var(--fmstr-cmp-csg-api-mcp-r-md);
-  font-size: var(--fmstr-cmp-csg-api-mcp-fs-xs);
-  font-weight: var(--fmstr-cmp-csg-api-mcp-fw-bold);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-bottom: var(--fmstr-cmp-csg-api-mcp-space-3);
-  align-self: flex-start;
-}
-.fmstr-cmp-csg-api-mcp__badge--alt {
-  background: var(--fmstr-cmp-csg-api-mcp-bg-tint);
-  color: var(--fmstr-cmp-csg-api-mcp-violet-600);
-}
-
-.fmstr-cmp-csg-api-mcp__card-title {
-  font-size: var(--fmstr-cmp-csg-api-mcp-fs-xl);
-  line-height: var(--fmstr-cmp-csg-api-mcp-lh-xl);
-  font-weight: var(--fmstr-cmp-csg-api-mcp-fw-semibold);
-  letter-spacing: -0.01em;
-  color: var(--fmstr-cmp-csg-api-mcp-fg-1);
-  margin: 0 0 var(--fmstr-cmp-csg-api-mcp-space-4);
-}
-
-.fmstr-cmp-csg-api-mcp__chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--fmstr-cmp-csg-api-mcp-space-2);
-  margin-bottom: var(--fmstr-cmp-csg-api-mcp-space-4);
-}
-
-.fmstr-cmp-csg-api-mcp__chip {
-  display: inline-block;
-  padding: 4px 10px;
-  background: var(--fmstr-cmp-csg-api-mcp-bg-chip);
-  color: var(--fmstr-cmp-csg-api-mcp-fg-strong);
-  border-radius: var(--fmstr-cmp-csg-api-mcp-r-md);
-  font-size: var(--fmstr-cmp-csg-api-mcp-fs-sm);
-  font-weight: var(--fmstr-cmp-csg-api-mcp-fw-semibold);
-  line-height: 20px;
-}
-
-.fmstr-cmp-csg-api-mcp__body {
-  font-size: var(--fmstr-cmp-csg-api-mcp-fs-md);
-  line-height: var(--fmstr-cmp-csg-api-mcp-lh-md);
-  color: var(--fmstr-cmp-csg-api-mcp-fg-2);
-  margin: 0 0 var(--fmstr-cmp-csg-api-mcp-space-5);
-  flex: 1 1 auto;
-}
-
-.fmstr-cmp-csg-api-mcp__cta {
-  color: var(--fmstr-cmp-csg-api-mcp-violet-600);
-  font-weight: var(--fmstr-cmp-csg-api-mcp-fw-semibold);
-  font-size: var(--fmstr-cmp-csg-api-mcp-fs-sm);
-  text-decoration: none;
-  align-self: flex-start;
-}
-.fmstr-cmp-csg-api-mcp__cta:hover {
-  text-decoration: underline;
-  color: var(--fmstr-cmp-csg-api-mcp-violet-600) !important;
-}
-
-@media (max-width: 760px) {
-  .fmstr-cmp-csg-api-mcp {
-    padding: var(--fmstr-cmp-csg-api-mcp-space-12) var(--fmstr-cmp-csg-api-mcp-space-4);
-  }
-  .fmstr-cmp-csg-api-mcp__title {
-    font-size: var(--fmstr-cmp-csg-api-mcp-fs-2xl);
-    line-height: 32px;
-  }
-  .fmstr-cmp-csg-api-mcp__intro {
-    font-size: var(--fmstr-cmp-csg-api-mcp-fs-md);
-    line-height: var(--fmstr-cmp-csg-api-mcp-lh-md);
-  }
-  .fmstr-cmp-csg-api-mcp__grid {
-    grid-template-columns: 1fr;
-  }
-  .fmstr-cmp-csg-api-mcp__card {
-    padding: var(--fmstr-cmp-csg-api-mcp-space-6);
-  }
-}
-
-.fmstr-cmp-csg-privacy-data-ownership {
-  --fmstr-cmp-csg-privacy-data-ownership-bg-section: #0f0921;
-  --fmstr-cmp-csg-privacy-data-ownership-bg-glow: radial-gradient(
-    ellipse 900px 600px at 95% 0%,
-    rgba(127, 86, 217, 0.45) 0%,
-    rgba(100, 52, 208, 0.15) 30%,
-    transparent 65%
-  );
-  --fmstr-cmp-csg-privacy-data-ownership-bg-card: rgba(255, 255, 255, 0.04);
-  --fmstr-cmp-csg-privacy-data-ownership-bg-card-glow: radial-gradient(
-    ellipse 500px 400px at 90% 5%,
-    rgba(127, 86, 217, 0.3) 0%,
-    transparent 60%
-  );
-  --fmstr-cmp-csg-privacy-data-ownership-bg-pill: rgba(255, 255, 255, 0.08);
-  --fmstr-cmp-csg-privacy-data-ownership-fg-eyebrow: #bda6ff;
-  --fmstr-cmp-csg-privacy-data-ownership-fg-link: #bda6ff;
-  --fmstr-cmp-csg-privacy-data-ownership-fg-link-hover: #ffffff;
-  --fmstr-cmp-csg-privacy-data-ownership-fs-xs: 12px;
-  --fmstr-cmp-csg-privacy-data-ownership-fs-sm: 14px;
-  --fmstr-cmp-csg-privacy-data-ownership-fs-md: 16px;
-  --fmstr-cmp-csg-privacy-data-ownership-fs-lg: 18px;
-  --fmstr-cmp-csg-privacy-data-ownership-fs-2xl: 24px;
-  --fmstr-cmp-csg-privacy-data-ownership-fs-3xl: 32px;
-  --fmstr-cmp-csg-privacy-data-ownership-fw-semibold: 600;
-  --fmstr-cmp-csg-privacy-data-ownership-fw-bold: 700;
-  --fmstr-cmp-csg-privacy-data-ownership-lh-md: 24px;
-  --fmstr-cmp-csg-privacy-data-ownership-lh-lg: 28px;
-  --fmstr-cmp-csg-privacy-data-ownership-lh-2xl: 32px;
-  --fmstr-cmp-csg-privacy-data-ownership-space-1: 4px;
-  --fmstr-cmp-csg-privacy-data-ownership-space-2: 8px;
-  --fmstr-cmp-csg-privacy-data-ownership-space-3: 12px;
-  --fmstr-cmp-csg-privacy-data-ownership-space-4: 16px;
-  --fmstr-cmp-csg-privacy-data-ownership-space-5: 20px;
-  --fmstr-cmp-csg-privacy-data-ownership-space-6: 24px;
-  --fmstr-cmp-csg-privacy-data-ownership-space-7: 28px;
-  --fmstr-cmp-csg-privacy-data-ownership-space-8: 32px;
-  --fmstr-cmp-csg-privacy-data-ownership-space-12: 48px;
-  --fmstr-cmp-csg-privacy-data-ownership-space-16: 64px;
-  --fmstr-cmp-csg-privacy-data-ownership-r-2xl: 16px;
-  --fmstr-cmp-csg-privacy-data-ownership-r-full: 9999px;
-
-  background: transparent;
-  padding: var(--fmstr-cmp-csg-privacy-data-ownership-space-12) var(--fmstr-cmp-csg-privacy-data-ownership-space-6);
-  font-family:
-    'Inter',
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    'Segoe UI',
-    Roboto,
-    sans-serif;
-}
-
-.fmstr-cmp-csg-privacy-data-ownership *,
-.fmstr-cmp-csg-privacy-data-ownership *::before,
-.fmstr-cmp-csg-privacy-data-ownership *::after {
-  box-sizing: border-box;
-}
-
-.fmstr-cmp-csg-privacy-data-ownership__container {
-  position: relative;
-  max-width: 1180px;
-  margin: 0 auto;
-  background-color: var(--fmstr-cmp-csg-privacy-data-ownership-bg-section);
-  background-image: var(--fmstr-cmp-csg-privacy-data-ownership-bg-glow);
-  border-radius: 28px;
-  padding: var(--fmstr-cmp-csg-privacy-data-ownership-space-12);
-  overflow: hidden;
-}
-
-.fmstr-cmp-csg-privacy-data-ownership__inner {
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: var(--fmstr-cmp-csg-privacy-data-ownership-space-12);
-  align-items: center;
-}
-
-.fmstr-cmp-csg-privacy-data-ownership__eyebrow {
-  display: inline-block;
-  padding: var(--fmstr-cmp-csg-privacy-data-ownership-space-2) var(--fmstr-cmp-csg-privacy-data-ownership-space-4);
-  background: var(--fmstr-cmp-csg-privacy-data-ownership-bg-pill);
-  color: var(--fmstr-cmp-csg-privacy-data-ownership-fg-eyebrow);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--fmstr-cmp-csg-privacy-data-ownership-r-full);
-  font-size: var(--fmstr-cmp-csg-privacy-data-ownership-fs-xs);
-  font-weight: var(--fmstr-cmp-csg-privacy-data-ownership-fw-bold);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: var(--fmstr-cmp-csg-privacy-data-ownership-space-5);
-}
-
-.fmstr-cmp-csg-privacy-data-ownership__heading {
-  font-size: var(--fmstr-cmp-csg-privacy-data-ownership-fs-3xl);
-  line-height: 40px;
-  font-weight: var(--fmstr-cmp-csg-privacy-data-ownership-fw-bold);
-  letter-spacing: -0.02em;
-  color: #ffffff;
-  margin: 0 0 var(--fmstr-cmp-csg-privacy-data-ownership-space-6);
-}
-
-.fmstr-cmp-csg-privacy-data-ownership__body p {
-  font-size: var(--fmstr-cmp-csg-privacy-data-ownership-fs-md);
-  line-height: var(--fmstr-cmp-csg-privacy-data-ownership-lh-md);
-  color: rgba(255, 255, 255, 0.78);
-  margin: 0 0 var(--fmstr-cmp-csg-privacy-data-ownership-space-4);
-}
-.fmstr-cmp-csg-privacy-data-ownership__body p:last-child {
-  margin-bottom: 0;
-}
-
-.fmstr-cmp-csg-privacy-data-ownership__card {
-  background-color: var(--fmstr-cmp-csg-privacy-data-ownership-bg-card);
-  background-image: var(--fmstr-cmp-csg-privacy-data-ownership-bg-card-glow);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--fmstr-cmp-csg-privacy-data-ownership-r-2xl);
-  padding: var(--fmstr-cmp-csg-privacy-data-ownership-space-7);
-  backdrop-filter: blur(8px);
-}
-
-.fmstr-cmp-csg-privacy-data-ownership__pill {
-  display: inline-block;
-  padding: var(--fmstr-cmp-csg-privacy-data-ownership-space-2) var(--fmstr-cmp-csg-privacy-data-ownership-space-4);
-  background: var(--fmstr-cmp-csg-privacy-data-ownership-bg-pill);
-  color: var(--fmstr-cmp-csg-privacy-data-ownership-fg-eyebrow);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--fmstr-cmp-csg-privacy-data-ownership-r-full);
-  font-size: var(--fmstr-cmp-csg-privacy-data-ownership-fs-xs);
-  font-weight: var(--fmstr-cmp-csg-privacy-data-ownership-fw-bold);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: var(--fmstr-cmp-csg-privacy-data-ownership-space-5);
-}
-
-.fmstr-cmp-csg-privacy-data-ownership__quote {
-  font-size: var(--fmstr-cmp-csg-privacy-data-ownership-fs-lg);
-  line-height: var(--fmstr-cmp-csg-privacy-data-ownership-lh-lg);
-  font-weight: var(--fmstr-cmp-csg-privacy-data-ownership-fw-semibold);
-  font-style: italic;
-  color: #ffffff;
-  margin: 0 0 var(--fmstr-cmp-csg-privacy-data-ownership-space-5);
-}
-
-.fmstr-cmp-csg-privacy-data-ownership__divider {
-  border: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  margin: 0 0 var(--fmstr-cmp-csg-privacy-data-ownership-space-5);
-}
-
-.fmstr-cmp-csg-privacy-data-ownership__cite {
-  font-size: var(--fmstr-cmp-csg-privacy-data-ownership-fs-sm);
-  line-height: var(--fmstr-cmp-csg-privacy-data-ownership-lh-md);
-  color: rgba(255, 255, 255, 0.7);
-  margin: 0 0 var(--fmstr-cmp-csg-privacy-data-ownership-space-3);
-}
-
-.fmstr-cmp-csg-privacy-data-ownership__links {
-  display: flex;
-  gap: var(--fmstr-cmp-csg-privacy-data-ownership-space-4);
-  flex-wrap: wrap;
-}
-
-.fmstr-cmp-csg-privacy-data-ownership__links a {
-  color: var(--fmstr-cmp-csg-privacy-data-ownership-fg-link);
-  font-weight: var(--fmstr-cmp-csg-privacy-data-ownership-fw-semibold);
-  font-size: var(--fmstr-cmp-csg-privacy-data-ownership-fs-sm);
-  text-decoration: none;
-}
-
-.fmstr-cmp-csg-privacy-data-ownership__links a:hover {
-  color: var(--fmstr-cmp-csg-privacy-data-ownership-fg-link-hover);
-  text-decoration: underline;
-}
-
-@media (max-width: 760px) {
-  .fmstr-cmp-csg-privacy-data-ownership {
-    padding: var(--fmstr-cmp-csg-privacy-data-ownership-space-8) var(--fmstr-cmp-csg-privacy-data-ownership-space-4);
-  }
-  .fmstr-cmp-csg-privacy-data-ownership__container {
-    padding: var(--fmstr-cmp-csg-privacy-data-ownership-space-7);
-    border-radius: 20px;
-  }
-  .fmstr-cmp-csg-privacy-data-ownership__inner {
-    grid-template-columns: 1fr;
-    gap: var(--fmstr-cmp-csg-privacy-data-ownership-space-8);
-  }
-  .fmstr-cmp-csg-privacy-data-ownership__heading {
-    font-size: var(--fmstr-cmp-csg-privacy-data-ownership-fs-2xl);
-    line-height: var(--fmstr-cmp-csg-privacy-data-ownership-lh-2xl);
-  }
-  .fmstr-cmp-csg-privacy-data-ownership__quote {
-    font-size: var(--fmstr-cmp-csg-privacy-data-ownership-fs-md);
-    line-height: var(--fmstr-cmp-csg-privacy-data-ownership-lh-md);
-  }
-  .fmstr-cmp-csg-privacy-data-ownership__card {
-    padding: var(--fmstr-cmp-csg-privacy-data-ownership-space-6);
-  }
-}
-
-.fmstr-cmp-csg-more-tools {
-  --fmstr-cmp-csg-more-tools-bg-card: #ffffff;
-  --fmstr-cmp-csg-more-tools-bg-violet-25: #f7f3ff;
-  --fmstr-cmp-csg-more-tools-fg-1: #101828;
-  --fmstr-cmp-csg-more-tools-fg-2: #475467;
-  --fmstr-cmp-csg-more-tools-violet-600: #6941c6;
-  --fmstr-cmp-csg-more-tools-violet-700: #53389e;
-  --fmstr-cmp-csg-more-tools-border-light: #eaecf0;
-  --fmstr-cmp-csg-more-tools-border-violet: #9777e0;
-  --fmstr-cmp-csg-more-tools-shadow-md: 0 2px 4px 0 rgba(16, 24, 40, 0.06);
-  --fmstr-cmp-csg-more-tools-fs-sm: 14px;
-  --fmstr-cmp-csg-more-tools-fs-md: 16px;
-  --fmstr-cmp-csg-more-tools-fs-2xl: 24px;
-  --fmstr-cmp-csg-more-tools-fs-3xl: 36px;
-  --fmstr-cmp-csg-more-tools-fw-regular: 400;
-  --fmstr-cmp-csg-more-tools-fw-semibold: 600;
-  --fmstr-cmp-csg-more-tools-lh-sm: 20px;
-  --fmstr-cmp-csg-more-tools-lh-md: 24px;
-  --fmstr-cmp-csg-more-tools-lh-2xl: 32px;
-  --fmstr-cmp-csg-more-tools-space-1: 4px;
-  --fmstr-cmp-csg-more-tools-space-3: 12px;
-  --fmstr-cmp-csg-more-tools-space-4: 16px;
-  --fmstr-cmp-csg-more-tools-space-6: 24px;
-  --fmstr-cmp-csg-more-tools-space-8: 32px;
-  --fmstr-cmp-csg-more-tools-space-12: 48px;
-  --fmstr-cmp-csg-more-tools-space-16: 64px;
-  --fmstr-cmp-csg-more-tools-r-lg: 8px;
-  --fmstr-cmp-csg-more-tools-r-2xl: 16px;
-  padding: var(--fmstr-cmp-csg-more-tools-space-16) var(--fmstr-cmp-csg-more-tools-space-6);
-  font-family:
-    'Inter',
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    'Segoe UI',
-    Roboto,
-    sans-serif;
-}
-
-.fmstr-cmp-csg-more-tools *,
-.fmstr-cmp-csg-more-tools *::before,
-.fmstr-cmp-csg-more-tools *::after {
-  box-sizing: border-box;
-}
-
-.fmstr-cmp-csg-more-tools__inner {
-  max-width: 1180px;
-  margin: 0 auto;
-}
-
-.fmstr-cmp-csg-more-tools__heading {
-  font-size: var(--fmstr-cmp-csg-more-tools-fs-3xl);
-  line-height: 44px;
-  font-weight: var(--fmstr-cmp-csg-more-tools-fw-semibold);
-  letter-spacing: -0.02em;
-  color: var(--fmstr-cmp-csg-more-tools-fg-1);
-  text-align: center;
-  margin: 0 0 var(--fmstr-cmp-csg-more-tools-space-12);
-}
-
-.fmstr-cmp-csg-more-tools__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--fmstr-cmp-csg-more-tools-space-4);
-}
-
-.fmstr-cmp-csg-more-tools__card {
-  display: flex;
-  flex-direction: column;
-  gap: var(--fmstr-cmp-csg-more-tools-space-3);
-  padding: var(--fmstr-cmp-csg-more-tools-space-6);
-  background: var(--fmstr-cmp-csg-more-tools-bg-card);
-  border: 1px solid var(--fmstr-cmp-csg-more-tools-border-light);
-  border-radius: var(--fmstr-cmp-csg-more-tools-r-2xl);
-  text-decoration: none;
-  color: inherit;
-  transition:
-    border-color 160ms ease,
-    box-shadow 160ms ease,
-    transform 160ms ease;
-}
-
-.fmstr-cmp-csg-more-tools__card:hover {
-  border-color: var(--fmstr-cmp-csg-more-tools-border-violet);
-  box-shadow: var(--fmstr-cmp-csg-more-tools-shadow-md);
-  transform: translateY(-2px);
-  text-decoration: none;
-}
-
-.fmstr-cmp-csg-more-tools__icon {
-  width: 40px;
-  height: 40px;
-  border-radius: var(--fmstr-cmp-csg-more-tools-r-lg);
-  background: var(--fmstr-cmp-csg-more-tools-bg-violet-25);
-  color: var(--fmstr-cmp-csg-more-tools-violet-600);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.fmstr-cmp-csg-more-tools__title {
-  font-size: var(--fmstr-cmp-csg-more-tools-fs-md);
-  line-height: var(--fmstr-cmp-csg-more-tools-lh-md);
-  font-weight: var(--fmstr-cmp-csg-more-tools-fw-semibold);
-  color: var(--fmstr-cmp-csg-more-tools-fg-1);
-  margin: var(--fmstr-cmp-csg-more-tools-space-1) 0 0;
-}
-
-.fmstr-cmp-csg-more-tools__desc {
-  font-size: var(--fmstr-cmp-csg-more-tools-fs-sm);
-  line-height: var(--fmstr-cmp-csg-more-tools-lh-sm);
-  font-weight: var(--fmstr-cmp-csg-more-tools-fw-regular);
-  color: var(--fmstr-cmp-csg-more-tools-fg-2);
-  margin: 0;
-}
-
-@media (max-width: 760px) {
-  .fmstr-cmp-csg-more-tools {
-    padding: var(--fmstr-cmp-csg-more-tools-space-12) var(--fmstr-cmp-csg-more-tools-space-4);
-  }
-  .fmstr-cmp-csg-more-tools__heading {
-    font-size: var(--fmstr-cmp-csg-more-tools-fs-2xl);
-    line-height: var(--fmstr-cmp-csg-more-tools-lh-2xl);
-    margin-bottom: var(--fmstr-cmp-csg-more-tools-space-8);
-  }
-  .fmstr-cmp-csg-more-tools__grid {
-    grid-template-columns: 1fr;
-    gap: var(--fmstr-cmp-csg-more-tools-space-3);
-  }
+  border-radius: var(--r-xl, 12px);
+  border: 1px solid var(--gray-200, #eaecf0);
+  background: #fff;
 }
 </style>

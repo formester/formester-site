@@ -40,7 +40,7 @@ If you operate in a specific region like California in the USA, ensure the conte
 
 ### Step 2: Create the waiver form using Formester AI
 
-Now open Formester and create a new form. In the form builder, look at the top right corner. Click the star icon next to add elements. This opens the **[AI form editor](/ai-form-generator/)**.
+Now open Formester and create a new form. In the form builder, look at the top right corner. Click the star icon next to add elements. This opens the **[AI form editor](/ai-form-generator/)**. You can also try the prompt first, without an account, in the [consent and waiver form generator](/consent-form-generator/).
 
 **Type a prompt like this:**
 
