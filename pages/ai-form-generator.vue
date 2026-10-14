@@ -93,7 +93,7 @@
               <p class="fmstr-cmp-afg-pdf__note">
                 Formester can also send every respondent
                 <a
-                  href="/features/export-form-submission-pdf/"
+                  href="/features/form-to-pdf/"
                   style="color: #6941c6 !important; text-decoration: underline !important; text-underline-offset: 2px"
                   >a PDF copy of their submission</a
                 >

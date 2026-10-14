@@ -111,6 +111,8 @@ Your PDF now auto fills with the details and includes a legally binding signatur
 
 The process is fully automated. As soon as someone submits the form, you get a **ready-to-use**, signed PDF instantly.
 
+Don't need your own PDF layout? Formester can also [generate a PDF from every form submission](/features/form-to-pdf/) using a ready-made layout, with nothing to design.
+
 ### Common Use Cases
 This process works perfectly for:
 

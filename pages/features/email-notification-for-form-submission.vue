@@ -206,6 +206,8 @@ const c3_cards = [
     tagColor: 'blue',
     title: 'Triage without leaving your inbox',
     body: 'Drop the submitted answers right into the email so you can read and prioritise at a glance, and attach a full PDF copy of every submission for your records. You set how much detail each alert carries.',
+    link: '/features/form-to-pdf/',
+    linkText: 'How form to PDF works',
     mockHtml:
       "<div style='border:1px solid #eaecf0;border-radius:10px;padding:11px 13px;background:#fff;display:flex;flex-direction:column;gap:6px;'><div style='font-size:11px;font-weight:700;line-height:1.2;color:#101828;'>Submission details</div><div style='font-size:10.5px;line-height:1.3;color:#475467;'><span style='color:#8a8f9c;'>Name</span> &nbsp;Priya Nair</div><div style='font-size:10.5px;line-height:1.3;color:#475467;'><span style='color:#8a8f9c;'>Budget</span> &nbsp;$5,000+</div><div style='margin-top:3px;display:inline-flex;align-items:center;gap:6px;font-size:9.5px;font-weight:700;line-height:1;color:#6434d0;background:#f0ebfa;border-radius:7px;padding:5px 9px;align-self:flex-start;'><svg width='11' height='11' viewBox='0 0 24 24' fill='none' stroke='#6434d0' stroke-width='2'><path d='M4 4h16v16H4z'/><path d='M8 2v4M16 2v4'/></svg>submission.pdf attached</div></div>",
     icon: null,

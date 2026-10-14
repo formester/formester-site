@@ -127,6 +127,15 @@ export default defineNuxtConfig({
     '/features/ai-workflows/': {
       redirect: { to: '/features/workflows/', statusCode: 301 },
     },
+    // Renamed to target "form to PDF" searches (Oct 2026). Static output only emits a meta-refresh;
+    // the real 301 must be a host redirect rule.
+    '/features/export-form-submission-pdf/': {
+      redirect: { to: '/features/form-to-pdf/', statusCode: 301 },
+    },
+    // Merged into the Document Generation page (Oct 2026). Amplify holds the real 301 (live).
+    '/features/create-fillable-pdf-forms/': {
+      redirect: { to: '/features/document-generation/', statusCode: 301 },
+    },
     // Evergreen slug for the workflow tools list (2026 refresh). Amplify holds the real 301.
     '/blog/10-best-workflow-automation-tools-in-2024/': {
       redirect: { to: '/blog/best-workflow-automation-tools/', statusCode: 301 },

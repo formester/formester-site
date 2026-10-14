@@ -109,7 +109,7 @@ Once your form is set up with either Manual or API-Based Pre-Fill, follow these 
 
 - Click the three dots next to the submission.
 
-- Download the custom-filled certificate as a **[ready-to-use PDF](/features/export-form-submission-pdf/)**.
+- Download the custom-filled certificate as a **[ready-to-use PDF](/features/form-to-pdf/)**.
 
 - It is fast, easy, and fully automated.
 

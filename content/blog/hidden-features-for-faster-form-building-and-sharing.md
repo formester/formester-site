@@ -40,7 +40,7 @@ Make your forms neat and easy to read. Use the page break feature to split your 
 Want a modern, interactive form? With one click, you can turn your **[single page form into a multi-page](/blog/single-page-vs-multi-page-forms/)** or card-style design. Go to the page tab, click “One Field Per Page,” and you’re set. This saves time and makes your forms look amazing.
 
 ### 5. Hide Rich Text Fields
-Need internal notes or instructions on the **[PDF copy of the form submission](/features/export-form-submission-pdf/)** but not on the live form? Add a rich text field, hide it in the form, and choose “Show in PDF.” This feature is perfect for including extra information only in exported copies.
+Need internal notes or instructions on the **[PDF copy of the form submission](/features/form-to-pdf/)** but not on the live form? Add a rich text field, hide it in the form, and choose “Show in PDF.” This feature is perfect for including extra information only in exported copies.
 
 ### 6. Page Clone
 Save time with multi-page forms by cloning entire pages in one click. Use the “Clone” option in the page tab to duplicate a page along with its fields. No need to start from scratch every time.

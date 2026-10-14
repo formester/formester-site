@@ -461,7 +461,7 @@ color: var(--c-good); font-weight: 700; line-height: 1.45;
 <ul class="fmstr-cmp-tmpl-cmp__list">
 <li class="fmstr-cmp-tmpl-cmp__item">Built in on free plan</li>
 <li class="fmstr-cmp-tmpl-cmp__item">Conditional routing per respondent</li>
-<li class="fmstr-cmp-tmpl-cmp__item">PDF attachments + merge tags</li>
+<li class="fmstr-cmp-tmpl-cmp__item"><a href="/features/form-to-pdf/">PDF attachments</a> + merge tags</li>
 <li class="fmstr-cmp-tmpl-cmp__item">No daily caps on paid plans</li>
 <li class="fmstr-cmp-tmpl-cmp__item fmstr-cmp-tmpl-cmp__item--con">Requires switching from Google Forms</li>
 </ul>

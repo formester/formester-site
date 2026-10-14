@@ -103,7 +103,7 @@ publishedAt: "2026-08-27T00:00:00.000Z"
 <p>A document the respondent can keep, sent automatically.</p>
 <ul>
 <li>Turn on the Autoresponder and Formester sends the submitter a copy of their submission, with the wording and sender you set (Business plan)</li>
-<li>Attach a <a href="https://formester.com/features/export-form-submission-pdf/">formatted PDF of the response</a> so what lands is a document rather than an email body</li>
+<li>Attach a <a href="https://formester.com/features/form-to-pdf/">formatted PDF of the response</a> so what lands is a document rather than an email body</li>
 <li>No email-collection prerequisite, and no dependence on the respondent noticing a tickbox</li>
 <li>Partial submissions are captured too, so an abandoned form is still recoverable on your side</li>
 </ul>
