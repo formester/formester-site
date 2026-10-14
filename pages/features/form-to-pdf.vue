@@ -26,6 +26,16 @@
       class="page-component-item"
     />
 
+    <CardGrid
+      id="examples"
+      eyebrow="Real output"
+      description="The same Client intake submission, downloaded in each PDF style. No template needed for the first two."
+      columns="3"
+      :title="examplesTitle"
+      :cards="exampleCards"
+      class="page-component-item"
+    />
+
     <StickyStepsSection
       id="how-it-works"
       badge="How it works"
@@ -107,51 +117,23 @@ import TrustSeals from '@/components/v2/TrustSeals.vue'
 
 const SIGN_UP_URL = 'https://app.formester.com/users/sign_up'
 const PAGE_URL = 'https://formester.com/features/form-to-pdf/'
-const META_TITLE = 'Form to PDF: Generate a PDF From Every Submission | Formester'
+const META_TITLE = 'Generate PDFs From Form Submissions Automatically | Formester'
 const META_DESCRIPTION =
-  'Generate a PDF from every form submission with no setup. Download one or many, attach PDFs to emails, save them to Google Drive, or send a link by webhook.'
+  'Form to PDF with no setup: every submission becomes a PDF. Download one or many, attach PDFs to emails, save to Google Drive, or send by webhook.'
 
 const BRAND = '#6434d0'
 const BRAND_BG = '#f0ebfa'
 
 const pill = (text, fg, bg) =>
   `<span style='font-size:11px;font-weight:600;color:${fg};background:${bg};border-radius:999px;padding:3px 9px;white-space:nowrap;'>${text}</span>`
-const check = (on = true) =>
-  `<span style='flex:none;width:14px;height:14px;border-radius:4px;${on ? `background:${BRAND};` : 'border:1px solid #d0d5dd;background:#fff;'}color:#fff;display:inline-flex;align-items:center;justify-content:center;'>${on ? "<svg width='9' height='9' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3'><path d='M5 12l4 4L19 6'/></svg>" : ''}</span>`
 const pdfBadge = `<span style='flex:none;display:inline-flex;align-items:center;justify-content:center;width:18px;height:22px;border-radius:3px;background:#fef3f2;color:#d92d20;font-size:7px;font-weight:800;'>PDF</span>`
 
-// Document layout PDF: form name, then each question and its answer in order.
-const qa = (q, a) =>
-  `<div style='padding:7px 0;border-top:1px solid #f2f4f7;'><div style='font-size:10px;color:#697586;'>${q}</div><div style='font-size:11.5px;color:#101828;font-weight:500;margin-top:2px;'>${a}</div></div>`
-const documentLayout = `<div style='background:#fff;border:1px solid #eaecf0;border-radius:6px;box-shadow:0 6px 18px rgba(15,14,26,.08);padding:16px 16px 10px;text-align:left;'>
-  <div style='display:flex;align-items:center;gap:7px;margin-bottom:10px;'>${pdfBadge}<span style='font-size:12px;font-weight:700;color:#101828;'>Client intake</span></div>
-  ${qa('Full name', 'Jordan Reyes')}${qa('Email', 'jordan@acme.com')}${qa('Service needed', 'Website redesign')}${qa('Start date', '12 June 2026')}
+// Real screenshot from the Formester app (demo data): Results with 3 submissions selected and More → Download PDFs.
+const heroMockupHtml = `<div class='ftp-mock' style='width:100%;max-width:600px;min-width:0;margin:0 auto;background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 24px 80px rgba(15,14,26,.12),0 8px 24px rgba(15,14,26,.06);overflow:hidden;'>
+  <img src='/images/features/form-to-pdf/results-download-pdfs.webp' width='1690' height='744' alt='Formester Results with three submissions selected and the More menu open on Download PDFs' loading='eager' fetchpriority='high' style='display:block;width:100%;height:auto;' />
 </div>`
 
-const resultRow = (name, date, on) =>
-  `<div style='display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid ${on ? '#d9ccf5' : '#eaecf0'};border-radius:8px;background:${on ? '#fbfaff' : '#fff'};font-size:11.5px;color:#101828;'>${check(on)}<span style='white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;'>${name}</span><span style='margin-left:auto;color:#697586;white-space:nowrap;'>${date}</span></div>`
-const styleOption = (label, on) =>
-  `<div style='display:flex;align-items:center;gap:7px;font-size:11px;color:${on ? BRAND : '#344054'};font-weight:${on ? 600 : 400};padding:5px 8px;border-radius:6px;background:${on ? BRAND_BG : 'transparent'};'><span style='flex:none;width:10px;height:10px;border-radius:50%;border:${on ? `3px solid ${BRAND}` : '1px solid #d0d5dd'};background:#fff;'></span>${label}</div>`
-
-const heroMockupHtml = `<div class='ftp-mock' role='img' aria-label='Example of Formester Results: two submissions selected, PDF style set to Document layout, and the PDF that is produced' style='width:100%;max-width:540px;min-width:0;margin:0 auto;background:#fff;border:1px solid #eaecf0;border-radius:16px;box-shadow:0 24px 80px rgba(15,14,26,.12),0 8px 24px rgba(15,14,26,.06);overflow:hidden;'>
-  <div style='display:flex;align-items:center;gap:6px;padding:12px 16px;background:#f9fafb;border-bottom:1px solid #eaecf0;'>
-    <span style='width:11px;height:11px;border-radius:50%;background:#ff6058;'></span><span style='width:11px;height:11px;border-radius:50%;background:#ffbd2e;'></span><span style='width:11px;height:11px;border-radius:50%;background:#27c93f;'></span>
-    <span style='margin-left:10px;font-size:12px;color:#697586;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;'>Client intake · Results</span>
-  </div>
-  <div class='ftp-mock__body' style='display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;padding:16px;background:#f9fafb;'>
-    <div style='display:flex;flex-direction:column;gap:7px;min-width:0;'>
-      ${resultRow('Jordan Reyes', '12 Jun', true)}${resultRow('Priya Shah', '12 Jun', true)}${resultRow('Sam Okafor', '11 Jun', false)}
-      <div style='margin-top:6px;background:#fff;border:1px solid #eaecf0;border-radius:10px;padding:10px;'>
-        <div style='font-size:11px;font-weight:600;color:#101828;margin-bottom:6px;'>PDF Style</div>
-        ${styleOption('Document layout', true)}${styleOption('Form Layout', false)}${styleOption('Connected PDF', false)}
-        <div style='margin-top:9px;text-align:center;font-size:11px;font-weight:600;color:#fff;background:${BRAND};border-radius:999px;padding:7px 10px;white-space:nowrap;'>Download 2 PDFs</div>
-      </div>
-    </div>
-    <div class='ftp-mock__doc' style='min-width:0;'>${documentLayout}</div>
-  </div>
-</div>`
-
-const heroBadge = { text: 'Form to PDF', tag: 'Business', link: null }
+const heroBadge = { text: 'Form to PDF', tag: 'Business', link: '#options' }
 const heroTitle = [
   { text: 'Generate a PDF from ', highlight: false, color: '#475467', bold: false },
   { text: 'every form submission', highlight: true, color: '#475467', bold: false },
@@ -161,6 +143,51 @@ const heroDescription =
 const heroButtons = [
   { link: SIGN_UP_URL, text: 'Start free', type: 'Primary', showArrow: true },
   { link: '#how-it-works', text: 'See how it works', type: 'Secondary', showArrow: false },
+]
+
+// Section: real PDFs generated by the Formester app from one demo submission.
+const examplesTitle = [
+  { text: 'See the PDFs ', highlight: false, color: '#475467', bold: false },
+  { text: 'it makes', highlight: true, color: '#475467', bold: false },
+]
+const pdfPage = (file, h, alt) =>
+  `<img src='/images/features/form-to-pdf/${file}.webp' alt='${alt}' width='800' height='${h}' loading='lazy' style='display:block;width:100%;height:auto;max-height:320px;object-fit:cover;object-position:top;border-radius:6px;border:1px solid #eaecf0;background:#fff;' />`
+const exampleCards = [
+  {
+    tag: 'No setup',
+    tagColor: 'violet',
+    title: 'Document layout',
+    body: 'Each question and its answer in order. A clean record for your files.',
+    mockHtml: pdfPage(
+      'pdf-document-layout',
+      641,
+      'First page of a Document layout PDF generated from a client intake submission',
+    ),
+  },
+  {
+    tag: 'No setup',
+    tagColor: 'blue',
+    title: 'Form Layout',
+    body: 'The form as the respondent saw it, with their answers filled in.',
+    mockHtml: pdfPage(
+      'pdf-form-layout',
+      641,
+      'First page of a Form Layout PDF showing the filled-in client intake form',
+    ),
+  },
+  {
+    tag: 'Business',
+    tagColor: 'green',
+    title: 'Your own design',
+    body: 'A branded template built in the PDF Editor, filled with the same answers.',
+    mockHtml: pdfPage(
+      'pdf-connected-template',
+      641,
+      'First page of a branded client intake summary PDF built in the PDF Editor',
+    ),
+    link: '/features/document-generation/',
+    linkText: 'Design your own PDF',
+  },
 ]
 
 // Section: the two options. Default layouts need no setup; branded templates live on the pillar page.
@@ -440,36 +467,46 @@ const faqList = [
   },
   {
     id: 2,
+    header: 'Can I turn Google Forms or Microsoft Forms responses into PDFs?',
+    body: 'Both let you print responses one at a time from the responses view, and you save each one as a PDF yourself. Neither creates a PDF for every new response on its own. In Formester, each submission can produce a PDF automatically and go straight to email, Google Drive, or a webhook.',
+  },
+  {
+    id: 3,
+    header: 'Is this the same as a fillable PDF?',
+    body: 'No. A fillable PDF is a file people type into in a PDF reader. Form to PDF works the other way: people fill in an online form, and the PDF is generated from their answers. To turn an existing PDF into an online form, use Convert PDF to Form. To add fields to a PDF for free, use the Fillable PDF Creator.',
+  },
+  {
+    id: 4,
     header: 'Can I generate PDFs from many submissions at once?',
     body: 'Yes. Select the submissions in Results, choose Download PDFs, and pick a PDF style. We email you a download link when the PDFs are ready.',
   },
   {
-    id: 3,
+    id: 5,
     header: 'What is the difference between Document layout and Form Layout?',
     body: 'Document layout lists each question and its answer in order, like a clean record. Form Layout prints your form as the respondent saw it, with their answers filled in.',
   },
   {
-    id: 4,
+    id: 6,
     header: 'Can respondents get a PDF of their submission?',
     body: 'Yes. Attach the PDF to the autoresponder email, or turn on “Let respondents download a PDF” to show a download button after they submit.',
   },
   {
-    id: 5,
+    id: 7,
     header: 'Can PDFs be sent to Google Drive or another app?',
     body: 'Yes. The Google Drive integration saves a PDF for each submission, with an optional subfolder per submission. Webhooks can include a link to the PDF that works for 7 days, and a workflow Send email step can attach it.',
   },
   {
-    id: 6,
+    id: 8,
     header: 'Can I name the PDF files?',
     body: 'Yes. Turn on a custom PDF file name in form settings and use @ to insert answers, like “Invoice for @Name”. Email notifications and Google Drive have their own file name settings too.',
   },
   {
-    id: 7,
+    id: 9,
     header: 'Can I use my own design or letterhead?',
     body: 'Yes. Build a template in the PDF Editor from scratch, on top of a PDF you upload, or with AI. Then choose “Connected PDF” as the style, and downloads, emails, Google Drive, and webhooks use your design.',
   },
   {
-    id: 8,
+    id: 10,
     header: 'Which plan includes form to PDF?',
     body: 'PDF exports and the PDF Editor are part of the Business plan, which costs $45 a month billed yearly or $49 billed monthly. You can build and test your forms on the free plan first.',
   },
@@ -516,6 +553,15 @@ useJsonld([
     url: PAGE_URL,
     description: META_DESCRIPTION,
     offers: { '@type': 'Offer', price: '45', priceCurrency: 'USD' },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://formester.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Features', item: 'https://formester.com/features/' },
+      { '@type': 'ListItem', position: 3, name: 'Form to PDF', item: PAGE_URL },
+    ],
   },
   {
     '@context': 'https://schema.org',

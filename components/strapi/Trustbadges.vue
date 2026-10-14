@@ -2,7 +2,7 @@
   <section class="trustbadges">
     <div class="trustbadges__inner">
       <div class="trustbadges__header">
-        <SectionTitle :heading="title" />
+        <SectionTitle v-if="title?.length" :heading="title" />
         <p v-if="description" class="trustbadges__desc">{{ description }}</p>
       </div>
 
