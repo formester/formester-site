@@ -136,6 +136,10 @@ export default defineNuxtConfig({
     '/features/create-fillable-pdf-forms/': {
       redirect: { to: '/features/document-generation/', statusCode: 301 },
     },
+    // Old slug variant that picked up a few impressions (Oct 2026). Amplify holds the real 301.
+    '/blog/how-to-save-google-forms-as-pdf-all-5-routes/': {
+      redirect: { to: '/blog/how-to-save-google-forms-as-pdf/', statusCode: 301 },
+    },
     // Evergreen slug for the workflow tools list (2026 refresh). Amplify holds the real 301.
     '/blog/10-best-workflow-automation-tools-in-2024/': {
       redirect: { to: '/blog/best-workflow-automation-tools/', statusCode: 301 },
