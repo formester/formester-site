@@ -8,6 +8,7 @@ import getSiteMeta from '@/utils/getSiteMeta'
 import getTemplatesAndCategories, { getCategorieRoutes } from '@/utils/getTemplatesAndCategories'
 import fetchWithRetry from '@/utils/fetchWithRetry'
 import { APP_URL } from '@/constants/urls'
+import { rewriteRedirectedLinks } from '@/utils/rewriteRedirectedLinks'
 
 const route = useRoute()
 
@@ -25,7 +26,7 @@ const { data } = await useAsyncData(`template-category-${slug.value}`, async () 
   return {
     templates: categoryRoute?.payload?.templates || [],
     categories: result.categories,
-    richCategory: richRes?.data?.category || null,
+    richCategory: rewriteRedirectedLinks(richRes?.data?.category || null),
   }
 })
 

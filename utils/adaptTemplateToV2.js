@@ -1,3 +1,5 @@
+import { rewriteRedirectedLinks } from './rewriteRedirectedLinks.js'
+
 /**
  * adaptTemplateToV2
  *
@@ -48,7 +50,8 @@
  * Tab order in the output matches the order of the `tabs` array in the input.
  * Tabs whose content resolves to nothing (e.g. no faqs, no relatedTemplates) are omitted.
  */
-export function adaptTemplateToV2(template) {
+export function adaptTemplateToV2(rawTemplate) {
+  const template = rewriteRedirectedLinks(rawTemplate)
   const tabs = buildTabs(template)
   const { aboutTemplate, faqs, rawHtmlBlocks, tabs: _rawTabs, relatedTemplates, ...rest } = template
   return { ...rest, tabs }
