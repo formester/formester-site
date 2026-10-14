@@ -141,7 +141,7 @@ You then type the amount and pick the date. Our <a href="/blog/google-form-auto-
 <h2 id="formester">Where Formester fits</h2>
 
 <p>For a personal tracker, the Google Forms and Sheets setup above is enough. The gaps show up when a team uses a Google Form for expenses. Formester's <a href="/templates/expense-report-submission-form-2115/">expense report form template</a> comes with expense categories and a <a href="/features/file-upload-forms/">receipt upload</a> that needs no Google account from the person submitting. On the Personal plan and up, conditional logic can show only the fields for each expense type.</p>
-<p>On the Business plan, each submission can be <a href="/features/export-form-submission-pdf/">exported as a PDF</a> or attached to the confirmation email, which gives finance a record per claim. For approvals and reimbursement, the automation post linked above walks through the full workflow.</p>
+<p>On the Business plan, each submission can be <a href="/features/form-to-pdf/">exported as a PDF</a> or attached to the confirmation email, which gives finance a record per claim. For approvals and reimbursement, the automation post linked above walks through the full workflow.</p>
 
 <div style="background:linear-gradient(135deg,#7f56d9 0%,#6941c6 100%);padding:32px 28px;margin:36px 0;border-radius:12px;color:#ffffff;font-family:inherit;text-align:center;">
 <p style="margin:0 0 12px 0;font-size:18px;font-weight:700;color:#ffffff;font-family:inherit;">An expense form built for a team</p>

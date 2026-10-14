@@ -99,11 +99,12 @@ publishedAt: "2026-08-20T05:14:18.753Z"
 
 <p>The editor supports text fields, paragraphs, checkboxes, radio groups, dropdowns, dates, and signature boxes. It also preserves existing fields, so you can adjust a partly finished form instead of starting over.</p>
 
-<p>If emailing PDFs back and forth becomes the bottleneck, Formester offers two next steps:</p>
+<p>If emailing PDFs back and forth becomes the bottleneck, Formester offers three next steps:</p>
 
 <ul>
 <li><a href="/features/convert-pdf-to-fillable-form/">turn the PDF into an online form</a> that people complete from a link; or</li>
-<li><a href="/features/document-generation/">auto-fill a PDF from each form submission</a> for contracts, certificates, applications, and reports.</li>
+<li><a href="/features/document-generation/">auto-fill a PDF from each form submission</a> for contracts, certificates, applications, and reports; or</li>
+<li><a href="/features/form-to-pdf/">turn every online form response into a PDF</a> with a ready-made layout, for records and receipts.</li>
 </ul>
 
 <p><strong>Best for:</strong> people who want a free fillable PDF now and teams that may later need structured online collection.</p>

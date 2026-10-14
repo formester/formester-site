@@ -457,7 +457,7 @@ const deliveryCards = [
     title: 'Many at once',
     body: 'Select submissions in Results and download their PDFs together. We email you a ZIP when it’s ready.',
     mockHtml: deliveryMock('Download PDFs', '48 submissions selected'),
-    link: '/features/export-form-submission-pdf/',
+    link: '/features/form-to-pdf/',
     linkText: 'PDF export',
   },
 ]

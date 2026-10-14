@@ -256,6 +256,8 @@ const c4_cards = [
     tagColor: 'amber',
     title: 'Orders & appointments',
     body: 'Confirm a purchase or a booked slot with an order summary or appointment details, plus a copy of their response for their records.',
+    link: '/features/form-to-pdf/',
+    linkText: 'Send a PDF of every response',
     mockHtml:
       "<div style='display:flex;flex-direction:column;gap:7px;'><div style='display:flex;align-items:center;gap:8px;font-size:11px;line-height:1.2;color:#101828;'><span style='font-weight:600;'>Booking confirmed</span><span style='margin-left:auto;font-weight:700;color:#472594;background:#f0ebfa;border-radius:999px;padding:2px 8px;line-height:1;'>10:30 AM</span></div><div style='font-size:10.5px;line-height:1.3;color:#697586;'>Summary &amp; receipt attached</div></div>",
     icon: null,

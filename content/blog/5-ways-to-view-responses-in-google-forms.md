@@ -143,7 +143,7 @@ publishedAt: "2026-05-15T03:47:28.261Z"
 <ul>
 <li>Summary analytics per question for scale, star, ranking and choice fields, with <a href="https://formester.com/features/form-analytics/">filters and segments</a> instead of one blurred average</li>
 <li>Drop-off pages plus completion rate, so you can see where a long form loses people</li>
-<li>Search, star and spam-mark individual submissions, plus <a href="https://formester.com/features/export-form-submission-pdf/">a PDF of any single response</a></li>
+<li>Search, star and spam-mark individual submissions, plus <a href="https://formester.com/features/form-to-pdf/">a PDF of any single response</a></li>
 <li>Partial submissions captured, so an abandoned form is still data</li>
 </ul>
 <p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/edc67da91f1110bf_summary-analytics.jpg" alt="Formester's Summary tab showing per-question response breakdowns with percentage bars, plus Download all and Filters controls" loading="lazy" style="width:100%;max-width:848px;height:auto;border-radius:10px;border:1px solid #d8dce3;box-shadow:0 1px 3px rgba(16,24,40,0.08);margin:18px 0;" /></p>
