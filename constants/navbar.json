@@ -209,17 +209,17 @@
   },
   {
     "id": 36,
-    "slug": "export-form-submission-pdf",
-    "navTitle": "PDF Export",
-    "navDescription": "Download responses as PDFs",
+    "slug": "form-to-pdf",
+    "navTitle": "Form to PDF",
+    "navDescription": "A PDF of every submission",
     "featureCategory": "PDF forms",
-    "featurePlan": "Personal",
+    "featurePlan": "Business",
     "navIcon": {
       "imageUrl": null,
-      "imageAlt": "PDF Export",
+      "imageAlt": "Form to PDF",
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/export_form_submission_pdf_7b4a2f3e38.svg",
-        "alt": "PDF Export"
+        "alt": "Form to PDF"
       }
     }
   },
@@ -556,22 +556,6 @@
       "image": {
         "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/API_1d18d8d756.svg",
         "alt": "click icon"
-      }
-    }
-  },
-  {
-    "id": 530,
-    "slug": "create-fillable-pdf-forms",
-    "navTitle": "Create Fillable PDF Forms",
-    "navDescription": "Populate blank PDFs with form data.",
-    "featureCategory": "PDF forms",
-    "featurePlan": "Business",
-    "navIcon": {
-      "imageUrl": null,
-      "imageAlt": "fillable pdf icon",
-      "image": {
-        "url": "https://formester-strapi.s3.ap-south-1.amazonaws.com/Fillable_PDF_50b4621522.svg",
-        "alt": "fillable pdf icon"
       }
     }
   },
