@@ -289,6 +289,8 @@ const c5_cards = [
     body: 'Close deals faster — clients sign service agreements from anywhere, with a legally binding record.',
     mockHtml: null,
     icon: null,
+    link: '/contract-generator/',
+    linkText: 'Contract generator',
   },
   {
     id: 534,

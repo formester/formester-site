@@ -90,6 +90,9 @@
             <NuxtLink to="/ai-form-generator/" class="site-footer__link">AI Form Generator</NuxtLink>
           </li>
           <li>
+            <NuxtLink to="/contract-generator/" class="site-footer__link">AI Contract Generator</NuxtLink>
+          </li>
+          <li>
             <NuxtLink to="/ai-quiz-maker/" class="site-footer__link">AI Quiz Maker</NuxtLink>
           </li>
           <li>

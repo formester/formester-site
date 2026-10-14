@@ -106,7 +106,7 @@ publishedAt: "2025-07-07T01:02:26.108Z"
 <h2 id="use-cases">What teams auto-fill this way</h2>
 
 <ul>
-<li><strong>Client contracts:</strong> start from the <a href="/templates/freelance-contract-51961/">freelance contract template</a>, which comes with its PDF connected.</li>
+<li><strong>Client contracts:</strong> start from the <a href="/templates/freelance-contract-51961/">freelance contract template</a>, which comes with its PDF connected, or use the <a href="/contract-generator/">contract generator</a> to build a contract form with AI.</li>
 <li><strong>NDAs:</strong> the <a href="/templates/nda-agreement-pdf-form-template-49898/">NDA agreement template</a> comes with its PDF connected too.</li>
 <li><strong>Onboarding and HR forms:</strong> offer letters, policy acknowledgements and employee agreements, signed before the first day.</li>
 <li><strong>Intake and consent:</strong> clinic intake, waivers and consent forms that need a signed copy on file.</li>
