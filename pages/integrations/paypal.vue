@@ -439,7 +439,7 @@ const c5_integrations = [
     id: 281,
     name: 'HubSpot CRM',
     description: 'Push new form leads to HubSpot CRM instantly.',
-    link: '/integrations/hubspot-crm/',
+    link: '/integrations/hubspot/',
   },
 ]
 const c6_title = [

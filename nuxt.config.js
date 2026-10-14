@@ -131,6 +131,12 @@ export default defineNuxtConfig({
     '/blog/10-best-workflow-automation-tools-in-2024/': {
       redirect: { to: '/blog/best-workflow-automation-tools/', statusCode: 301 },
     },
+    // Duplicate slug of /integrations/hubspot/ (identical page, different URL).
+    // The page itself canonicalized there but the URL stayed in the sitemap and
+    // served a second copy. Amplify holds the real 301.
+    '/integrations/hubspot-crm/': {
+      redirect: { to: '/integrations/hubspot/', statusCode: 301 },
+    },
   },
 
   // Nitro configuration
@@ -205,7 +211,11 @@ export default defineNuxtConfig({
   // Runtime config (replaces env)
   runtimeConfig: {
     public: {
-      baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'http://localhost:3000',
+      // Production default: blog share URLs (pages/blog/[slug].vue) embed
+      // this base in server-rendered anchor hrefs. Defaulting to localhost
+      // leaked `http://localhost:3000/...` into the live HTML whenever
+      // NUXT_PUBLIC_BASE_URL was not set at build time.
+      baseUrl: process.env.NUXT_PUBLIC_BASE_URL || 'https://formester.com',
       strapiUrl: STRAPI_URL,
       appUrl: APP_URL,
       clarityId: 'emw9o333qb'
