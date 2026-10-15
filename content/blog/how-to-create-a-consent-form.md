@@ -27,7 +27,7 @@ publishedAt: "2026-08-04T06:59:24.898Z"
 <p>You can build the whole thing in Formester in about 20 minutes, or use one of the six templates linked at the end.</p>
 
 <blockquote>
-<p><strong>Quick answer.</strong> A consent form has to be <strong>readable, signable, and auditable</strong>. State the activity and risks in plain language, explain how the data will be used, capture an electronic signature tied to the signer with timestamp and IP, and store the signed record so you can produce it in seconds. Build the form in <a href="https://formester.com/">Formester</a> in about 20 minutes, or start from one of the six templates below.</p>
+<p><strong>Quick answer.</strong> A consent form has to be <strong>readable, signable, and auditable</strong>. State the activity and risks in plain language, explain how the data will be used, capture an electronic signature tied to the signer with timestamp and IP, and store the signed record so you can produce it in seconds. Build the form with Formester's <a href="/consent-form-generator/">online consent form generator</a> in about 20 minutes, or start from one of the six templates below.</p>
 </blockquote>
 
 <h2>What every legally usable consent form has to do</h2>

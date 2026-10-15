@@ -298,6 +298,8 @@ const c5_cards = [
     tagColor: 'green',
     title: 'Consent forms',
     body: 'Gather parental or client consent for events and procedures, compliant and documented.',
+    link: '/consent-form-generator/',
+    linkText: 'Create a consent form',
     mockHtml: null,
     icon: null,
   },

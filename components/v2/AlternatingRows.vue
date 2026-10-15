@@ -21,6 +21,9 @@
                 {{ b.text }}
               </li>
             </ul>
+            <a v-if="row.link" :href="row.link" class="zz-link">
+              {{ row.linkText || 'Learn more' }} <span aria-hidden="true">&rarr;</span>
+            </a>
           </div>
         </div>
       </div>
@@ -73,6 +76,20 @@ defineProps({
   display: block;
   border-radius: var(--r-xl);
   border: 1px solid var(--gray-200);
+}
+
+.zz-link {
+  display: inline-block;
+  margin-top: var(--space-5);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--violet-600, #5b2cc9);
+  text-decoration: none;
+}
+.zz-link:hover,
+.zz-link:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .zz-kicker {
