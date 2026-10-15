@@ -200,6 +200,8 @@ publishedAt: "2026-08-20T05:14:18.753Z"
 <li><strong>Formsite:</strong> choose it for hosted questionnaires and reports rather than editing the fields inside an existing PDF.</li>
 </ul>
 
+<p>If you need documents generated from form submissions or CRM data rather than a fillable PDF, compare the <a href="/blog/best-document-generation-software/">best document generation tools</a> instead.</p>
+
 <h2>How to choose without overpaying</h2>
 
 <ol>

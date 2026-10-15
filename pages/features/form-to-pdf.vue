@@ -74,8 +74,12 @@
       columns="3"
       :title="brandedTitle"
       :cards="brandedCards"
-      class="page-component-item"
+      class="ftp-branded page-component-item"
     />
+    <div class="ftp-compare">
+      Choosing a tool for this? See how other
+      <NuxtLink to="/blog/best-document-generation-software/">document generation tools compare</NuxtLink>.
+    </div>
 
     <CardGrid
       eyebrow="Use cases"
@@ -584,5 +588,21 @@ useJsonld([
   .ftp-mock__body {
     grid-template-columns: minmax(0, 1fr) !important;
   }
+}
+/* Comparison hand-off under the branded PDF cards. */
+.ftp-branded.page-component-item {
+  padding-bottom: var(--space-8, 32px) !important;
+}
+.ftp-compare {
+  padding: 0 var(--space-6, 24px) var(--space-16, 64px);
+  text-align: center;
+  font-size: 15px;
+  color: #475467;
+}
+.ftp-compare a {
+  color: #6434d0;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 </style>
