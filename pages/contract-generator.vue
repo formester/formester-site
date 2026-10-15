@@ -39,6 +39,10 @@
             Left: the contract PDF you upload. Right: the same PDF after one client fills in the form and signs.
           </figcaption>
         </figure>
+        <p class="cg-example__more">
+          Comparing tools? See how Formester compares with
+          <NuxtLink to="/blog/best-document-generation-software/">other document generation tools</NuxtLink>.
+        </p>
       </div>
     </section>
 
@@ -671,6 +675,18 @@ useJsonld([
 .cg-example {
   background: #fff;
   padding: var(--space-16) var(--space-6);
+}
+.cg-example__more {
+  margin: var(--space-6, 24px) 0 0;
+  text-align: center;
+  font-size: 15px;
+  color: #475467;
+}
+.cg-example__more a {
+  color: #6434d0;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 .cg-example__inner {
   max-width: 1040px;

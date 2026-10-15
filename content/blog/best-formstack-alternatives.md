@@ -144,7 +144,7 @@ This tool allows you to find your perfect form solution by examining key aspects
 - Using the comparison tool can help you identify which Formstack competitor best meets your needs and preferences.
 
 ### Summary
-Choosing the right form builder depends on your specific needs and preferences. While Formstack is a powerful tool, there are several Formstack alternatives that offer different features, pricing, and interfaces. 
+Choosing the right form builder depends on your specific needs and preferences. While Formstack is a powerful tool, there are several Formstack alternatives that offer different features, pricing, and interfaces. If you mainly use Formstack Documents to turn submissions into files, see our list of the **[best document generation software](/blog/best-document-generation-software/)**.
 
 Whether you’re looking for a more affordable option, unique functionalities, or a simpler interface, the tools listed above are some of the best available. **[Sign up for Formester](https://app.formester.com/users/sign_up)** to start building stunning online forms and surveys for free.
 

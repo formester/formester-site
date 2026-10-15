@@ -79,7 +79,7 @@ publishedAt: "2026-08-20T05:15:18.080Z"
 
 <p>E-signature and payment collection are included from free, which covers the common pattern of collecting client details, a signed engagement letter, and a retainer in one flow.</p>
 
-<p>Business at $49 a month covers 25 people, which is usually the whole firm, and adds a custom domain so intake sits on your own address. It also adds <a href="/features/document-generation/">document generation</a>: design an engagement letter once and each signed intake produces a finished PDF.</p>
+<p>Business at $49 a month covers 25 people, which is usually the whole firm, and adds a custom domain so intake sits on your own address. It also adds <a href="/features/document-generation/">document generation</a>: design an engagement letter once and each signed intake produces a finished PDF. To weigh it against other tools, see our list of the <a href="/blog/best-document-generation-software/">best document generation software</a>.</p>
 
 <div class="table-wrap">
 <table>

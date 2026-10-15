@@ -18,6 +18,11 @@
 
     <section id="what-is-document-generation" class="dg-define page-component-item">
       <SectionHeader eyebrow="Definition" :title="defineTitle" :description="defineBody" spacing="none" />
+      <p class="dg-define__more">
+        Weighing other tools?
+        <NuxtLink to="/blog/best-document-generation-software/">Compare document generation tools</NuxtLink> by where
+        your data starts, output format and price.
+      </p>
     </section>
 
     <CardGrid
@@ -697,5 +702,20 @@ useJsonld([
   max-width: 760px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.dg-define__more {
+  max-width: 760px;
+  margin: var(--space-4) auto 0;
+  text-align: center;
+  color: var(--gray-600, #475467);
+  font-size: 15px;
+}
+
+.dg-define__more a {
+  color: var(--violet-600, #6941c6);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 </style>
