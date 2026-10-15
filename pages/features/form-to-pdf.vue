@@ -376,8 +376,8 @@ const brandedCards = [
     tagColor: 'amber',
     title: 'Start from a ready-made one',
     body: 'Some form templates come with a branded PDF already connected, such as contracts, NDAs, and quotes.',
-    link: '/features/document-generation/#templates',
-    linkText: 'Browse templates with a PDF',
+    link: '/contract-generator/#templates',
+    linkText: 'Contract templates with a PDF',
   },
 ]
 

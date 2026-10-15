@@ -473,8 +473,8 @@ const useCaseCards = [
     tagColor: 'violet',
     title: 'Contracts and agreements',
     body: 'Client details, scope, and a drawn signature land in a ready-to-file agreement the moment the form is signed.',
-    link: '/templates/categories/contracts/',
-    linkText: 'Contract templates',
+    link: '/contract-generator/',
+    linkText: 'Contract generator',
   },
   {
     tag: 'Finance',
