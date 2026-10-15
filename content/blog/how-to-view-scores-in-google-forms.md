@@ -220,7 +220,7 @@ publishedAt: "2026-08-26T05:25:48.941Z"
 
 <h2>Where Google Forms scoring runs out</h2>
 
-<p>For a quick knowledge check, quiz mode is genuinely enough. The gaps show up when the quiz carries weight, like a certification, a hiring screen or an exam with a pass mark.</p>
+<p>For a quick knowledge check, quiz mode is genuinely enough. The gaps show up when the quiz carries weight, like a certification (where you might <a href="/blog/how-to-pre-fill-forms-for-certificates-and-feedback/">send a certificate only to people who pass</a>), a hiring screen or an exam with a pass mark.</p>
 
 <div class="table-wrap">
 <table>

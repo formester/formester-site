@@ -324,11 +324,10 @@ const c3_itemList = [
   },
   {
     id: 1681,
-    title: 'Certification with Fillable PDFs',
-    description:
-      'Automatically generate and share certificates upon completing training evaluations, using fillable PDFs.',
+    title: 'Certificates from every evaluation',
+    description: 'Auto-generate certificates and email them when someone completes a training evaluation.',
     description_markdown:
-      'Automatically generate and share certificates upon completing training evaluations, using fillable PDFs.',
+      '[Auto-generate certificates](/blog/how-to-pre-fill-forms-for-certificates-and-feedback/) and email them when someone completes a training evaluation.',
     icon: null,
     cardImage: {
       id: 1947,

@@ -112,7 +112,7 @@ publishedAt: "2025-07-07T01:02:26.108Z"
 <li><strong>Intake and consent:</strong> clinic intake, waivers and consent forms that need a signed copy on file.</li>
 </ul>
 
-<p>More are in the <a href="/templates/categories/contracts/">contract templates</a>. For branded documents like certificates and quotes, see <a href="/features/document-generation/">document generation</a>.</p>
+<p>More are in the <a href="/templates/categories/contracts/">contract templates</a>. For branded documents like <a href="/blog/how-to-pre-fill-forms-for-certificates-and-feedback/">certificates</a> and quotes, see <a href="/features/document-generation/">document generation</a>.</p>
 
 <div style="background:linear-gradient(135deg,#7f56d9 0%,#6941c6 100%);padding:32px 28px;margin:36px 0;border-radius:12px;color:#ffffff;font-family:inherit;text-align:center;">
 <p style="margin:0 0 12px 0;font-size:18px;font-weight:700;color:#ffffff;font-family:inherit;">Stop retyping answers into PDFs</p>

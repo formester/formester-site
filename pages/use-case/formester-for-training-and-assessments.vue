@@ -415,7 +415,7 @@ const c3_itemList = [
     description:
       'Creating and emailing certificates one by one takes forever. \n\nFormester can send them out automatically as soon as someone finishes the course or passes a quiz. \n\nThis saves you time and gives learners a great experience. They get their certificate right away without asking.\n',
     description_markdown:
-      'Creating and emailing certificates one by one takes forever. \n\nFormester can send them out automatically as soon as someone finishes the course or passes a quiz. \n\nThis saves you time and gives learners a great experience. They get their certificate right away without asking.\n',
+      'Creating and emailing certificates one by one takes forever. \n\nFormester can send them out automatically as soon as someone finishes the course or passes a quiz. [See how to set it up](/blog/how-to-pre-fill-forms-for-certificates-and-feedback/). \n\nThis saves you time and gives learners a great experience. They get their certificate right away without asking.\n',
     icon: null,
     cardImage: {
       id: 1842,
