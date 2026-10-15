@@ -160,7 +160,7 @@ publishedAt: "2026-08-20T05:15:18.080Z"
 
 <p>Combined with Formstack Sign in the Suite, a firm can go from enquiry to signed document without anyone opening a template.</p>
 
-<p>The Suite costs $299 a month on monthly billing, or $250 billed yearly. Forms alone starts at $99 monthly.</p>
+<p>The Suite costs $299 a month on monthly billing, or $250 billed yearly. Forms alone starts at $99 monthly. To fill PDFs from intake forms on a cheaper plan, see our <a href="/formstack-alternative/#documents">Formstack Documents alternative</a>.</p>
 
 <div class="table-wrap">
 <table>

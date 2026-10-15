@@ -2926,7 +2926,9 @@
                 How to switch from Formstack to Formester in 3 steps
               </h2>
               <p class="fmstr-cmp-jvf-switch__sub">
-                From "I want to leave Formstack" to "the new form is live" without losing data or missing submissions.
+                From "I want to leave Formstack" to "the new form is live" without losing data or missing submissions. Formester
+                can also import the forms themselves: see how to
+                <a href="/formstack-alternative/#switch">switch from Formstack to Formester</a>.
               </p>
             </header>
 
@@ -5385,6 +5387,10 @@ useJsonld([
   line-height: 24px;
   color: var(--p-fg-3);
   margin: 0;
+}
+.fmstr-cmp-jvf-switch__sub a {
+  color: #6434d0;
+  text-decoration: underline;
 }
 .fmstr-cmp-jvf-switch__grid {
   display: grid;

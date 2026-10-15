@@ -216,7 +216,7 @@ In Comparison to Jotform, Formstack offers:
 
 ![Infographic showing: Pricing & Submission Based Comparison between Formstack and Jotform](https://formester-strapi.s3.ap-south-1.amazonaws.com/formstackvsjotform_1a42a519e9.png "Pricing & Submission Based Comparison between Formstack and Jotform")
 
->Read more about the **[best Formstack alternatives](/blog/best-formstack-alternatives/)**
+>Read more about the **[best Formstack alternatives](/blog/best-formstack-alternatives/)**, or see how Formester compares as a **[Formstack Suite alternative](/formstack-alternative/#pricing)**
 
 ### 6. Google Forms
 
