@@ -94,6 +94,10 @@
       :rows="compareRows"
       class="page-component-item"
     />
+    <p class="dg-compare-more">
+      Coming from Formstack Documents?
+      <NuxtLink to="/formstack-alternative/#documents">See how Formester compares on price and setup</NuxtLink>.
+    </p>
 
     <CardGrid
       id="security"
@@ -693,6 +697,19 @@ useJsonld([
 </style>
 
 <style scoped>
+.dg-compare-more {
+  margin: calc(-1 * var(--space-10)) auto 0;
+  padding: 0 var(--space-6) var(--space-16);
+  max-width: 880px;
+  text-align: center;
+  font-size: 15px;
+  color: var(--gray-600, #475467);
+}
+.dg-compare-more a {
+  color: #6434d0;
+  text-decoration: underline;
+}
+
 .dg-define {
   background: #fff;
   padding: var(--space-16) var(--space-6) 0;

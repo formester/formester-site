@@ -369,6 +369,7 @@ min-width: 145px;
 <li><strong>Compliance:</strong> SOC 2 Type II, HIPAA-eligible</li>
 <li><strong>Enterprise:</strong> 12,000+ customers</li>
 </ul>
+<p class="fmstr-cmp-bef-body__p">If you want forms, approvals and PDF documents for less than the Suite price, compare plans on our <a href="/formstack-alternative/">Formstack alternative</a> page.</p>
 <div class="fmstr-cmp-bef-body__proscons">
 <div class="fmstr-cmp-bef-body__pros"><strong>Pros</strong>Most mature enterprise compliance posture. Strong document automation + e-signature.</div>
 <div class="fmstr-cmp-bef-body__cons"><strong>Cons</strong>Expensive. Sales-led procurement is slow. UI feels enterprise-corporate.</div>

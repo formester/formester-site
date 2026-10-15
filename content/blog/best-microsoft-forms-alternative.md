@@ -149,7 +149,7 @@ Formstack is a robust platform that caters to businesses needing advanced workfl
 
 **Cons:** Expensive for smaller businesses
 
-> For organizations that need powerful features, Formstack delivers. Learn more about the best **[Formstack Alternatives](/blog/best-formstack-alternatives/)** in 2024.
+> For organizations that need powerful features, Formstack delivers. Learn more about the best **[Formstack Alternatives](/blog/best-formstack-alternatives/)** in 2024, or see how Formester compares as a **[Formstack Forms alternative](/formstack-alternative/)**.
 
 ### 6. forms.app
 **Quick and Simple Form Builder**

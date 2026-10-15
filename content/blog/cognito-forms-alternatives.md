@@ -198,7 +198,7 @@ publishedAt: "2026-08-20T05:15:37.097Z"
 
 <p>Its Salesforce integration maps form fields to Salesforce records natively rather than through a connector, which is the reason most Salesforce shops choose it.</p>
 
-<p>It is also the most expensive entry point here at $99 a month, four times Cognito Forms Pro.</p>
+<p>It is also the most expensive entry point here at $99 a month, four times Cognito Forms Pro. If that price is the problem, compare plans on our <a href="/formstack-alternative/#pricing">Formstack Forms alternative</a> page.</p>
 
 <div class="table-wrap">
 <table>
