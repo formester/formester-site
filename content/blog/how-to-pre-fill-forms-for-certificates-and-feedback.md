@@ -32,7 +32,7 @@ publishedAt: "2025-07-07T01:37:25.227Z"
 <p>Certificate PDFs are part of the <a href="/pricing/">Business plan</a>.</p>
 </div>
 
-<p><img src="/images/blog/certificates-from-form/issued-certificate.webp" alt="A certificate of completion for Jordan Reyes, Workplace Safety Training, with the issue date and certificate number filled in from a form submission" width="1600" height="1236" loading="lazy" /></p>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/24cfb96ad207c331_issued-certificate.webp" alt="A certificate of completion for Jordan Reyes, Workplace Safety Training, with the issue date and certificate number filled in from a form submission" width="1440" height="1112" loading="lazy" /></p>
 
 <h2 id="what-to-collect">What your form needs to auto-generate certificates</h2>
 
@@ -57,7 +57,7 @@ publishedAt: "2025-07-07T01:37:25.227Z"
 <li>If people must pass a test to earn the certificate, make it a <a href="/blog/how-to-create-a-scored-quiz/">scored quiz</a> and give each question points.</li>
 </ol>
 
-<p><img src="/images/blog/certificates-from-form/certificate-form.webp" alt="A Workplace Safety Training completion quiz in the Formester form builder with full name, email, course and completion date fields above the first quiz question" width="2560" height="2080" loading="lazy" /></p>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/ec71574d47737865_certificate-form.webp" alt="A Workplace Safety Training completion quiz in the Formester form builder with full name, email, course and completion date fields above the first quiz question" width="1440" height="1170" loading="lazy" /></p>
 
 <h2 id="step-2">Step 2: Design the certificate in the PDF Editor</h2>
 
@@ -73,7 +73,7 @@ publishedAt: "2025-07-07T01:37:25.227Z"
 <li>If you started blank and your design is an image, you'll add it as the background in the next step.</li>
 </ol>
 
-<p><img src="/images/blog/auto-fill-pdf/pdf-editor-start-options.webp" alt="The Formester PDF Editor asking how to create the PDF: start from scratch, upload PDF, or create with AI" width="1280" height="545" loading="lazy" /></p>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/06ba17c2d44861a9_pdf-editor-start-options.webp" alt="The Formester PDF Editor asking how to create the PDF: start from scratch, upload PDF, or create with AI" width="1280" height="545" loading="lazy" /></p>
 
 <h3>Set the page to landscape</h3>
 
@@ -86,7 +86,7 @@ publishedAt: "2025-07-07T01:37:25.227Z"
 <li>Upload your artwork under <strong>Background image</strong>, or pick a <strong>Background color</strong>. Adjust the margins so text stays inside the border.</li>
 </ol>
 
-<p><img src="/images/blog/certificates-from-form/certificate-pdf-settings.webp" alt="PDF settings in the Formester PDF Editor with Letter size, Landscape page layout and a certificate background image" width="2080" height="1520" loading="lazy" /></p>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/31d6526a74e8d1a6_certificate-pdf-settings.webp" alt="PDF settings in the Formester PDF Editor with Letter size, Landscape page layout and a certificate background image" width="1440" height="1052" loading="lazy" /></p>
 
 <h3>Add each person's name, course and date</h3>
 
@@ -100,9 +100,9 @@ publishedAt: "2025-07-07T01:37:25.227Z"
 <li>Add your logo and a signature image as <strong>Image</strong> elements.</li>
 </ol>
 
-<p><img src="/images/blog/certificates-from-form/certificate-recall-fields.webp" alt="The @ recall menu open on the name line of a certificate in the Formester PDF Editor, listing form fields like Full name, Email and Course" width="2720" height="1640" loading="lazy" /></p>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/0af88204a3459587_certificate-recall-fields.webp" alt="The @ recall menu open on the name line of a certificate in the Formester PDF Editor, listing form fields like Full name, Email and Course" width="1440" height="868" loading="lazy" /></p>
 
-<p><img src="/images/blog/certificates-from-form/pdf-editor-certificate-layout.webp" alt="The Formester PDF Editor with a landscape certificate of completion: Full name and Course placed from the form, date issued and certificate number boxes, and PDF settings set to Letter and Landscape" width="2720" height="1640" loading="lazy" /></p>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/849d34fefd628014_pdf-editor-certificate-layout.webp" alt="The Formester PDF Editor with a landscape certificate of completion: Full name and Course placed from the form, date issued and certificate number boxes, and PDF settings set to Letter and Landscape" width="1440" height="868" loading="lazy" /></p>
 
 <h2 id="step-3">Step 3: Email each certificate automatically</h2>
 
@@ -117,7 +117,7 @@ publishedAt: "2025-07-07T01:37:25.227Z"
 <li>Under <strong>File Name</strong>, type Certificate and then @ with the name field, so each file is named after the person.</li>
 </ol>
 
-<p><img src="/images/blog/certificates-from-form/autoresponder-attach-certificate.webp" alt="A Formester autoresponder set to email the certificate, with the email field selected, the course in the subject, PDF Style set to the certificate and the person's name in the file name" width="1960" height="1010" loading="lazy" /></p>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/206d35bd4c2deb35_autoresponder-attach-certificate.webp" alt="A Formester autoresponder set to email the certificate, with the email field selected, the course in the subject, PDF Style set to the certificate and the person's name in the file name" width="1440" height="742" loading="lazy" /></p>
 
 <p>You can also:</p>
 
@@ -137,7 +137,7 @@ publishedAt: "2025-07-07T01:37:25.227Z"
 <li>Optional: add a second autoresponder with the opposite rule (score less than 8) and a link back to the quiz, so people can try again.</li>
 </ol>
 
-<p><img src="/images/blog/certificates-from-form/workflow-score-condition.webp" alt="An autoresponder rule in Formester that sends the certificate only when the quiz score is greater than or equal to 8" width="1960" height="1400" loading="lazy" /></p>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/386749221a285d5d_workflow-score-condition.webp" alt="An autoresponder rule in Formester that sends the certificate only when the quiz score is greater than or equal to 8" width="1440" height="1029" loading="lazy" /></p>
 
 <p>You can type @ in the email body to include the person's score in the message. The certificate itself shows their name, course, date and certificate number.</p>
 
@@ -153,7 +153,7 @@ publishedAt: "2025-07-07T01:37:25.227Z"
 
 <p>If someone loses their certificate later, open <strong>Results</strong>, select their submission, open <strong>More</strong> and choose <strong>Download PDFs</strong>. If they misspelled their name, choose <strong>Edit</strong> to fix the submission first. The PDF is created from the current answers each time you download it, so the new copy has the corrected name.</p>
 
-<p><img src="/images/features/form-to-pdf/results-download-pdfs.webp" alt="Formester Results with submissions selected and the More menu open, showing Download PDFs and Edit" width="1690" height="744" loading="lazy" /></p>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/2f72ae3446641eb1_results-download-pdfs.webp" alt="Formester Results with submissions selected and the More menu open, showing Download PDFs and Edit" width="1440" height="634" loading="lazy" /></p>
 
 <h2 id="pre-fill">Pre-fill names and course details</h2>
 
@@ -164,7 +164,7 @@ publishedAt: "2025-07-07T01:37:25.227Z"
 <li><strong>Auto-fill via API:</strong> pull details from your CRM or another system when the form opens. See <a href="/features/auto-fill-forms-with-external-data/">auto-fill forms with external data</a>.</li>
 </ul>
 
-<p><img src="/images/blog/certificates-from-form/prefill-settings.webp" alt="Formester form settings with the Prefill section open, showing Manual prefill and Auto-fill via API" width="2080" height="1320" loading="lazy" /></p>
+<p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/f1ab2bd74bda206a_prefill-settings.webp" alt="Formester form settings with the Prefill section open, showing Manual prefill and Auto-fill via API" width="1440" height="914" loading="lazy" /></p>
 
 <h2 id="certificate-types">Certificates you can issue this way</h2>
 
