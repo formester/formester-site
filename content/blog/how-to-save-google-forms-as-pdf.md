@@ -57,7 +57,7 @@ publishedAt: "2025-10-26T17:24:02.503Z"
 <p>Use this when you want a paper version to hand out, or a record of the questions for your files.</p>
 
 <ol class="steps">
-<li><h3>Open the menu</h3><p>Open the form in the editor and click the three-dot menu at the top right.</p><img src="/images/blog/google-forms-to-pdf/print-blank-form.webp" alt="The Google Forms editor three-dot menu open, with Print listed below Embed HTML" width="722" height="552" loading="lazy" /></li>
+<li><h3>Open the menu</h3><p>Open the form in the editor and click the three-dot menu at the top right.</p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/f35abc82953c34b7_print-blank-form.webp" alt="The Google Forms editor three-dot menu open, with Print listed below Embed HTML" width="722" height="552" loading="lazy" /></li>
 <li><h3>Choose Print</h3><p>Click <strong>Print</strong>. Google Forms opens your browser's print dialog.</p></li>
 <li><h3>Save as PDF</h3><p>Set the destination to <strong>Save as PDF</strong> and click <strong>Save</strong>.</p></li>
 </ol>
@@ -127,7 +127,7 @@ publishedAt: "2025-10-26T17:24:02.503Z"
 
 <p>You don't need to rebuild your form. In Formester, choose <strong>Create</strong>, <strong>Import</strong>, then <strong>Import from Google Forms</strong>, and pick the form from your Google account. Questions, sections and logic come across. Past responses stay in Google Forms, so PDFs start with the first new submission. Importing is free, and PDFs are part of the Business plan.</p>
 
-<img src="/images/features/form-to-pdf/pdf-document-layout.webp" alt="A Formester PDF of a client intake submission, listing each question and its answer" width="800" height="641" loading="lazy" />
+<img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/7cc9e69148364975_pdf-document-layout.webp" alt="A Formester PDF of a client intake submission, listing each question and its answer" width="800" height="641" loading="lazy" />
 
 <div style="background:linear-gradient(135deg,#7f56d9 0%,#6941c6 100%);padding:32px 28px;margin:36px 0;border-radius:12px;color:#ffffff;font-family:inherit;text-align:center;">
 <p style="margin:0 0 12px 0;font-size:18px;font-weight:700;color:#ffffff;font-family:inherit;">Get a PDF from every response</p>

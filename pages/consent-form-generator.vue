@@ -102,7 +102,7 @@ const PAGE_URL = 'https://formester.com/consent-form-generator/'
 const META_TITLE = 'Online Consent Form Generator with E-Signature | Formester'
 const META_DESCRIPTION =
   'Create an online consent form in minutes with AI or a template. Collect drawn signatures on any device and keep a signed PDF of every response.'
-const OG_IMAGE = 'https://formester.com/images/blog/auto-fill-pdf/blank-vs-filled-contract.webp'
+const OG_IMAGE = 'https://formester-strapi.s3.ap-south-1.amazonaws.com/4912c71a14006d76_blank-vs-filled-contract.webp'
 
 // Hero: the live AI generator (components/features/AiHero.vue), preset with consent prompts.
 const heroTitle = [
@@ -169,7 +169,7 @@ const capturesTitle = [
 const capturesRows = [
   {
     mediaHtml: shot(
-      '/images/blog/auto-fill-pdf/form-with-signature.webp',
+      'https://formester-strapi.s3.ap-south-1.amazonaws.com/021d1a77ccdba7fe_form-with-signature.webp',
       1280,
       1440,
       'Formester form builder with a required Signature field added to the bottom of a sample form',
@@ -198,9 +198,9 @@ const pdfTitle = [
 const pdfRows = [
   {
     mediaHtml: shot(
-      '/images/blog/auto-fill-pdf/blank-vs-filled-contract.webp',
-      1640,
-      860,
+      'https://formester-strapi.s3.ap-south-1.amazonaws.com/4912c71a14006d76_blank-vs-filled-contract.webp',
+      1440,
+      755,
       'A blank agreement PDF next to the same PDF filled in from a form response, with the drawn signature on the signature line',
     ),
     kicker: 'Your layout or ours',
@@ -211,7 +211,7 @@ const pdfRows = [
   },
   {
     mediaHtml: shot(
-      '/images/blog/auto-fill-pdf/pdf-settings.webp',
+      'https://formester-strapi.s3.ap-south-1.amazonaws.com/64abf4909be9a42e_pdf-settings.webp',
       1280,
       794,
       'Formester PDF settings with Let respondents download a PDF turned on and the default PDF type set to Connected PDF',

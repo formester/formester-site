@@ -134,7 +134,7 @@ const pdfBadge = `<span style='flex:none;display:inline-flex;align-items:center;
 
 // Real screenshot from the Formester app (demo data): Results with 3 submissions selected and More → Download PDFs.
 const heroMockupHtml = `<div class='ftp-mock' style='width:100%;max-width:600px;min-width:0;margin:0 auto;background:#fff;border:1px solid #eaecf0;border-radius:14px;box-shadow:0 24px 80px rgba(15,14,26,.12),0 8px 24px rgba(15,14,26,.06);overflow:hidden;'>
-  <img src='/images/features/form-to-pdf/results-download-pdfs.webp' width='1690' height='744' alt='Formester Results with three submissions selected and the More menu open on Download PDFs' loading='eager' fetchpriority='high' style='display:block;width:100%;height:auto;' />
+  <img src='https://formester-strapi.s3.ap-south-1.amazonaws.com/6d28ba9660714317_results-download-pdfs.webp' width='1440' height='634' alt='Formester Results with three submissions selected and the More menu open on Download PDFs' loading='eager' fetchpriority='high' style='display:block;width:100%;height:auto;' />
 </div>`
 
 const heroBadge = { text: 'Form to PDF', tag: 'Business', link: '#options' }
@@ -154,8 +154,16 @@ const examplesTitle = [
   { text: 'See the PDFs ', highlight: false, color: '#475467', bold: false },
   { text: 'it makes', highlight: true, color: '#475467', bold: false },
 ]
+// Images live in the CMS media library (Feature-pages/form-to-pdf).
+const PDF_PAGE_URLS = {
+  'pdf-document-layout':
+    'https://formester-strapi.s3.ap-south-1.amazonaws.com/7cc9e69148364975_pdf-document-layout.webp',
+  'pdf-form-layout': 'https://formester-strapi.s3.ap-south-1.amazonaws.com/c17b201584dc7e4c_pdf-form-layout.webp',
+  'pdf-connected-template':
+    'https://formester-strapi.s3.ap-south-1.amazonaws.com/bd22d89e9868cf36_pdf-connected-template.webp',
+}
 const pdfPage = (file, h, alt) =>
-  `<img src='/images/features/form-to-pdf/${file}.webp' alt='${alt}' width='800' height='${h}' loading='lazy' style='display:block;width:100%;height:auto;max-height:320px;object-fit:cover;object-position:top;border-radius:6px;border:1px solid #eaecf0;background:#fff;' />`
+  `<img src='${PDF_PAGE_URLS[file]}' alt='${alt}' width='800' height='${h}' loading='lazy' style='display:block;width:100%;height:auto;max-height:320px;object-fit:cover;object-position:top;border-radius:6px;border:1px solid #eaecf0;background:#fff;' />`
 const exampleCards = [
   {
     tag: 'No setup',
