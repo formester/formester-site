@@ -129,6 +129,8 @@ Unlike Google Forms, everything is built into the platform. You do not need to i
 
 Formester helps you create professional **[quizzes](/templates/categories/quizzes/)** that save time, reduce errors, and keep your data clean.
 
+Want each person who passes to get a certificate by email? [Here's how to auto-generate certificates from a form](/blog/how-to-pre-fill-forms-for-certificates-and-feedback/).
+
 ### Final Thoughts
 Google Forms can help you create basic quizzes, but it does not offer true auto-submit. You can use tools like Form Timer to set a countdown and restrict late submissions, but you will always face some limits.
 

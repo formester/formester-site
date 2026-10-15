@@ -487,10 +487,10 @@ const useCaseCards = [
   {
     tag: 'Training and events',
     tagColor: 'amber',
-    title: 'Certificates',
+    title: 'Auto-generate certificates from a form',
     body: 'Each person who passes a course or attends an event gets a certificate with their name and date.',
     link: '/blog/how-to-pre-fill-forms-for-certificates-and-feedback/',
-    linkText: 'How to auto-fill certificates',
+    linkText: 'How to auto-generate certificates',
   },
   {
     tag: 'Orders',

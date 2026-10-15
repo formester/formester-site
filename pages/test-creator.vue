@@ -1137,7 +1137,8 @@
                   </span>
                   <h3 class="fmstr-cmp-tc-why-pick__title">Score-based routing with conditional logic</h3>
                   <p class="fmstr-cmp-tc-why-pick__body">
-                    Send the test-taker to remediation if they score below 60%, to a certificate if they pass, and to
+                    Send the test-taker to remediation if they score below 60%, to
+                    <a href="/blog/how-to-pre-fill-forms-for-certificates-and-feedback/">a certificate</a> if they pass, and to
                     the next module if they ace it. Personal plan unlocks the full conditional engine.
                   </p>
                 </article>

@@ -57,7 +57,7 @@ Want to know which channel (email, social media, website) brings the most form s
 - Now you can track which channel works best.
 
 ### 3. Turn Responses into Documents Automatically
-If you're creating certificates, reports, or agreements, you don’t have to copy data manually. The Form Publisher add-on lets you turn each submission into a Google Doc, PDF, or Sheet.
+If you're creating certificates, reports, or agreements, you don’t have to copy data manually. The Form Publisher add-on lets you turn each submission into a Google Doc, PDF, or Sheet. Or [generate certificates straight from a form](/blog/how-to-pre-fill-forms-for-certificates-and-feedback/) without an add-on.
 
 **How to do it**
 

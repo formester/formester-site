@@ -21,7 +21,7 @@ publishedAt: "2025-01-19T17:40:30.896Z"
 If you're looking for a easy and automated way to evaluate individuals, scored quizzes are the perfect solution. 
 These **[online quizzes](/templates/categories/quizzes/)** let you give points for each answer. The software then calculates the total score for each person automatically. 
 
-This scoring system can be used to provide personalized results. These may include performance ratings, custom feedback, or certificates based on results. 
+This scoring system can be used to provide personalized results. These may include performance ratings, custom feedback, or [certificates sent automatically to people who pass](/blog/how-to-pre-fill-forms-for-certificates-and-feedback/).
 
 In this guide, we will show you how to create a scored quiz using Formester. We will also explain how to **[set up different outcomes based on scores](/blog/how-to-create-an-outcome-quiz/)**.
 
