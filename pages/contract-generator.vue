@@ -28,10 +28,10 @@
         <SectionHeader eyebrow="Real output" :title="exampleTitle" :description="exampleDescription" />
         <figure class="cg-example__figure">
           <img
-            src="/images/blog/auto-fill-pdf/blank-vs-filled-contract.webp"
+            src="https://formester-strapi.s3.ap-south-1.amazonaws.com/4912c71a14006d76_blank-vs-filled-contract.webp"
             alt="A blank freelance services agreement next to the same PDF filled in with a client's form answers and their drawn signature"
-            width="1640"
-            height="860"
+            width="1440"
+            height="755"
             loading="lazy"
             class="cg-example__img"
           />
@@ -127,7 +127,7 @@ const PAGE_URL = 'https://formester.com/contract-generator/'
 const META_TITLE = 'Contract Generator: Fill, Sign & Get a PDF | Formester'
 const META_DESCRIPTION =
   'Make contracts your clients fill in and sign online. Every submission creates a filled, signed contract PDF, sent to both of you.'
-const META_IMAGE = 'https://formester.com/images/blog/auto-fill-pdf/blank-vs-filled-contract.webp'
+const META_IMAGE = 'https://formester-strapi.s3.ap-south-1.amazonaws.com/4912c71a14006d76_blank-vs-filled-contract.webp'
 
 const BRAND = '#6434d0'
 const BRAND_BG = '#f0ebfa'
@@ -186,8 +186,18 @@ const heroFooterItems = [
 
 // Section: how it works. Real screenshots from the Formester app (demo data).
 const howButtons = [{ link: SIGN_UP_URL, text: 'Start free', type: 'Primary', showArrow: true }]
+// Images live in the CMS media library (Blog posts/how-to-auto-fill-and-sign-pdfs-with-a-form).
+const SHOT_URLS = {
+  'form-with-signature':
+    'https://formester-strapi.s3.ap-south-1.amazonaws.com/021d1a77ccdba7fe_form-with-signature.webp',
+  'pdf-editor-start-options':
+    'https://formester-strapi.s3.ap-south-1.amazonaws.com/f810e3fb01516ce9_pdf-editor-start-options.webp',
+  'pdf-editor-place-fields':
+    'https://formester-strapi.s3.ap-south-1.amazonaws.com/3449abc5dd91c447_pdf-editor-place-fields.webp',
+  'pdf-settings': 'https://formester-strapi.s3.ap-south-1.amazonaws.com/64abf4909be9a42e_pdf-settings.webp',
+}
 const shot = (file, w, h, alt) =>
-  `<img src='/images/blog/auto-fill-pdf/${file}.webp' alt='${alt}' width='${w}' height='${h}' loading='lazy' class='cg-step-img' />`
+  `<img src='${SHOT_URLS[file]}' alt='${alt}' width='${w}' height='${h}' loading='lazy' class='cg-step-img' />`
 const howSteps = [
   {
     title: 'Build the contract form',
