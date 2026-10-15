@@ -149,7 +149,7 @@ const PAGE_URL = 'https://formester.com/formstack-alternative/'
 const META_TITLE = 'Formstack Alternative with Forms + PDF Documents | Formester'
 const META_DESCRIPTION =
   'Formester is a Formstack alternative with forms, approvals and auto-filled PDFs in one plan. Free to start; Business is $45/mo vs Formstack Suite $250/mo.'
-const META_IMAGE = 'https://formester.com/images/formstack-alternative/formstack-alternative-og.jpg'
+const META_IMAGE = 'https://formester-strapi.s3.ap-south-1.amazonaws.com/937a2e6fd77f88bf_formstack-alternative-og.jpg'
 
 // Formstack figures: formstack.com/pricing, checked 15 Oct 2026.
 // Formester figures: constants/plan.js (formester.com/pricing). Workflow run quotas per plan:
@@ -162,7 +162,7 @@ const shot = (src, w, h, alt, eager = false) =>
   } class='fsa-shot' />`
 
 const heroMockupHtml = `<div class='fsa-hero-shot'>${shot(
-  '/images/blog/auto-fill-pdf/pdf-editor-place-fields.webp',
+  'https://formester-strapi.s3.ap-south-1.amazonaws.com/3449abc5dd91c447_pdf-editor-place-fields.webp',
   1280,
   980,
   'Formester PDF Editor with form fields placed on a contract template',
@@ -268,7 +268,7 @@ const docsRows = [
     title: 'Start from a blank page, your PDF, or AI',
     body: 'Open the PDF Editor on your form and pick how to begin. Upload the contract or letterhead you already use as the base, or describe the document and AI lays out a first draft linked to your fields.',
     mediaHtml: shot(
-      '/images/blog/auto-fill-pdf/pdf-editor-start-options.webp',
+      'https://formester-strapi.s3.ap-south-1.amazonaws.com/f810e3fb01516ce9_pdf-editor-start-options.webp',
       1280,
       545,
       'PDF Editor start options: start from scratch, upload PDF, or create with AI',
@@ -286,9 +286,9 @@ const docsRows = [
       { text: 'Preview with a real submission before it goes out' },
     ],
     mediaHtml: shot(
-      '/images/blog/auto-fill-pdf/blank-vs-filled-contract.webp',
-      1640,
-      860,
+      'https://formester-strapi.s3.ap-south-1.amazonaws.com/4912c71a14006d76_blank-vs-filled-contract.webp',
+      1440,
+      755,
       'A blank contract PDF next to the same PDF filled in with a client’s answers and drawn signature',
     ),
     link: '/contract-generator/',
@@ -299,7 +299,7 @@ const docsRows = [
     title: 'The PDF goes out on its own',
     body: 'Choose Connected PDF wherever Formester sends a submission. It is attached to your notification or the respondent’s autoresponder, offered on the thank-you page, saved to Google Drive, or sent as a link in a webhook or workflow step. You can also download many at once from Results.',
     mediaHtml: shot(
-      '/images/features/form-to-pdf/pdf-connected-template.webp',
+      'https://formester-strapi.s3.ap-south-1.amazonaws.com/bd22d89e9868cf36_pdf-connected-template.webp',
       800,
       641,
       'Client intake summary PDF generated from one Formester form submission',
