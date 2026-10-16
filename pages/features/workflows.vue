@@ -97,7 +97,7 @@ const SIGN_UP_URL = 'https://app.formester.com/users/sign_up'
 const PAGE_URL = 'https://formester.com/features/workflows/'
 const META_TITLE = 'Form Workflow Automation: Visual Workflow Builder | Formester'
 const META_DESCRIPTION =
-  'Automate what happens after a form is submitted, edited, or abandoned. Branch, run AI, wait, send email, and call webhooks on one visual canvas. Free to start.'
+  'Automate what happens after a form is submitted, edited, or abandoned. Branch, run AI, get approvals, send email, and call webhooks on one canvas. Free to start.'
 
 // Node accents, matched to the app's workflow canvas.
 const ACCENTS = {
@@ -107,6 +107,7 @@ const ACCENTS = {
   email: { fg: '#175cd3', bg: '#eff8ff' },
   webhook: { fg: '#475467', bg: '#f2f4f7' },
   wait: { fg: '#027a48', bg: '#ecfdf3' },
+  approval: { fg: '#067647', bg: '#ecfdf3' },
 }
 
 const node = (accent, label, detail, glyph) => {
@@ -129,7 +130,7 @@ const heroTitle = [
   { text: 'after the submit', highlight: true, color: '#475467', bold: false },
 ]
 const heroDescription =
-  'Build what happens next on a visual canvas. Trigger on a submission, an edit, an abandoned form, or a schedule. Then branch on answers, run AI, wait, send email, and call any API. No code, no extra tool.'
+  'Build what happens next on a visual canvas. Trigger on a submission, an edit, an abandoned form, or a schedule. Then branch on answers, run AI, ask for approval, wait, send email, and call any API. No code, no extra tool.'
 const heroButtons = [
   { link: SIGN_UP_URL, text: 'Start free', type: 'Primary', showArrow: true },
   { link: '#how-it-works', text: 'See how it works', type: 'Secondary', showArrow: false },
@@ -176,7 +177,7 @@ const stepsTitle = [
   { text: 'Every step you need, ', highlight: false, color: '#475467', bold: false },
   { text: 'on one canvas', highlight: true, color: '#475467', bold: false },
 ]
-const canvasMockHtml = `<div style='max-width:340px;margin:0 auto;background-color:#fff;background-image:radial-gradient(#e4e7ec 1px,transparent 1px);background-size:16px 16px;border:1px solid #eaecf0;border-radius:16px;padding:18px;box-shadow:0 12px 40px rgba(15,14,26,.08);'>${node('trigger', 'Form submitted', 'Job application', '&#9889;')}${connector}${node('ai', 'AI Agent', 'Read the resume, score fit', '&#10022;')}${connector}${node('logic', 'Condition', 'If fit score is high', '&#8627;')}${connector}${node('wait', 'Wait until a date', 'Interview slot, 1 day before', '&#128197;')}${connector}${node('email', 'Send email', 'Reminder to the candidate', '&#9993;')}${connector}${node('webhook', 'Webhook', 'Update your ATS', '&#8644;')}</div>`
+const canvasMockHtml = `<div style='max-width:340px;margin:0 auto;background-color:#fff;background-image:radial-gradient(#e4e7ec 1px,transparent 1px);background-size:16px 16px;border:1px solid #eaecf0;border-radius:16px;padding:18px;box-shadow:0 12px 40px rgba(15,14,26,.08);'>${node('trigger', 'Form submitted', 'Job application', '&#9889;')}${connector}${node('ai', 'AI Agent', 'Read the resume, score fit', '&#10022;')}${connector}${node('logic', 'Condition', 'If fit score is high', '&#8627;')}${connector}${node('approval', 'Approval', 'Hiring manager approves', '&#10003;')}${connector}${node('wait', 'Wait until a date', 'Interview slot, 1 day before', '&#128197;')}${connector}${node('email', 'Send email', 'Reminder to the candidate', '&#9993;')}${connector}${node('webhook', 'Webhook', 'Update your ATS', '&#8644;')}</div>`
 const stepPins = [
   {
     label: 'AI Agent',
@@ -185,6 +186,10 @@ const stepPins = [
   {
     label: 'Condition',
     body: 'Split the path on any answer, score, or AI output. Build rules the same way as form logic.',
+  },
+  {
+    label: 'Approval',
+    body: 'Email the people who need to sign off and pause until one of them responds. Each outcome you set, like Approve or Reject, gets its own path.',
   },
   {
     label: 'Merge branches',
@@ -218,7 +223,7 @@ const howSteps = [
   {
     title: 'Add steps on the canvas',
     description:
-      'Drop in AI, conditions, waits, emails, and webhooks. Type @ in any step to recall an answer or an earlier step’s output.',
+      'Drop in AI, conditions, approvals, waits, emails, and webhooks. Type @ in any step to recall an answer or an earlier step’s output.',
     rawHtml: stepCard(
       `<div style='font-size:12px;color:#101828;line-height:1.5;border:1px solid #6434d0;border-radius:8px;padding:9px 11px;box-shadow:0 0 0 3px #f0ebfa;'>Hi <span style='color:#6434d0;background:#f0ebfa;border-radius:4px;padding:1px 5px;'>@Name</span>, we got your request about <span style='color:#6434d0;background:#f0ebfa;border-radius:4px;padding:1px 5px;'>@Topic</span>.</div>`,
     ),
@@ -369,7 +374,7 @@ const compareRows = [
 
 const stats = [
   { value: '4', label: 'ways to trigger a workflow' },
-  { value: '8', label: 'step types on the canvas' },
+  { value: '11', label: 'step types on the canvas' },
   { value: '30 days', label: 'longest single delay' },
   { value: '100', label: 'free runs every month' },
 ]
@@ -403,16 +408,21 @@ const faqList = [
   },
   {
     id: 6,
+    header: 'How do approvals work?',
+    body: 'Add an Approval step and list your approvers. Each one gets an email with your outcome buttons, such as Approve and Reject, and confirms the choice on a web page. Approvers don’t need a Formester account unless you turn on sign-in. The first response decides which path the workflow takes. The emails are sent from your own connected email account (Gmail, Outlook, or SMTP), so connect one before you publish.',
+  },
+  {
+    id: 7,
     header: 'How do I test a workflow before it goes live?',
     body: 'Pick one of your 10 most recent submissions and run the workflow on it. The result shows in the run history, with each step’s input and output.',
   },
   {
-    id: 7,
+    id: 8,
     header: 'What happens if a step fails?',
     body: 'The run is marked failed and you get an email. Open the run to see which step failed and why, fix it, then rerun just the failed steps or the whole run.',
   },
   {
-    id: 8,
+    id: 9,
     header: 'How is this different from Zapier or Make?',
     body: 'Zapier and Make connect many apps. Formester Workflows run inside the form builder, so triggers like edits and abandoned forms and every answer are ready to use without a second tool. You can still send data to Zapier, Make, or any API with a webhook.',
   },

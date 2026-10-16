@@ -11,9 +11,9 @@ coverImgAlt: "How to Create a Consent Form in 5 Steps cover with clipboard signa
 featured: false
 coverImg: {"url":"https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_create_a_consent_form_cover_6d6a6f0865.png","width":2400,"height":1350}
 metaImage: []
-jsonld: [{"@graph":[{"@id":"https://formester.com/blog/how-to-create-a-consent-form/#article","@type":"BlogPosting","author":{"url":"https://linkedin.com/in/harshshahseo","name":"Harsh Shah","@type":"Person"},"headline":"How to Create a Consent Form (5 Steps + Templates)","keywords":"how to create a consent form, create consent form online, build consent form","publisher":{"logo":{"url":"https://formester.com/logo.png","@type":"ImageObject"},"name":"Formester","@type":"Organization"},"description":"Learn how to create a consent form that captures a verifiable signature, timestamps every response, and holds up to a compliance check. Templates included.","dateModified":"2026-06-12","datePublished":"2026-06-12","mainEntityOfPage":"https://formester.com/blog/how-to-create-a-consent-form/"},{"@id":"https://formester.com/blog/how-to-create-a-consent-form/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"item":"https://formester.com/","name":"Home","@type":"ListItem","position":1},{"item":"https://formester.com/blog/","name":"Blog","@type":"ListItem","position":2},{"item":"https://formester.com/blog/how-to-create-a-consent-form/","name":"How to Create a Consent Form (5 Steps + Templates)","@type":"ListItem","position":3}]},{"@id":"https://formester.com/blog/how-to-create-a-consent-form/#faq","@type":"FAQPage","mainEntity":[{"name":"Is a typed signature legally binding?","@type":"Question","acceptedAnswer":{"text":"Yes in most jurisdictions, including the US under the ESIGN Act and the EU under eIDAS, provided the signer clearly intended to sign and the record is retained with the associated metadata (timestamp, IP, form version). High-stakes consents like medical procedures and contracts often pair the typed signature with an explicit confirmation checkbox or use a drawn signature for the same reason.","@type":"Answer"}},{"name":"How long do I need to retain signed consent forms?","@type":"Question","acceptedAnswer":{"text":"It depends on the type. GDPR marketing consent should be retained only while you actively rely on it, then deleted. Employee policy acknowledgements are commonly kept for the length of employment plus seven years. Research consents follow the study's IRB-approved retention period. Medical consents follow the local medical-records retention rule, often six to ten years from the date of service. Confirm the specific window with counsel.","@type":"Answer"}},{"name":"Does Formester comply with HIPAA?","@type":"Question","acceptedAnswer":{"text":"Not currently. Formester is GDPR, UK GDPR, and CCPA compliant, and the security posture includes TLS in transit, encryption at rest, encrypted backups, and annual third-party penetration testing. However, Formester is not HIPAA-certified and does not sign a Business Associate Agreement at this time. If your form will collect protected health information governed by HIPAA in the United States, you will need a HIPAA-eligible vendor and a signed BAA.","@type":"Answer"}},{"name":"How do I prove the signer was actually the named person?","@type":"Question","acceptedAnswer":{"text":"Combine three signals: the signer's email (with a confirmed opt-in or verification step), their IP address at submission, and the timestamp. For higher-stakes consents, add a witness signature field or require the signer to upload a government ID. None of these is bulletproof on its own, but together they create a defensible record.","@type":"Answer"}},{"name":"Can a minor give consent on their own?","@type":"Question","acceptedAnswer":{"text":"In most contexts, no. Minors under 18 (or under the local age of digital consent, which is 13 in the US under COPPA and 13 to 16 across EU member states under GDPR) need a parent or legal guardian to sign on their behalf. Some jurisdictions allow minors to consent independently to specific medical services such as mental health treatment or contraception. Check the rule for your jurisdiction and use case.","@type":"Answer"}},{"name":"What's the difference between consent and a waiver?","@type":"Question","acceptedAnswer":{"text":"Consent is the signer agreeing to participate in something, with full understanding of what it involves. A waiver is the signer giving up a specific legal right, such as the right to sue for negligence. Many forms mix both, for example a photo release that includes a waiver of approval rights over the final media. They serve different legal purposes and should be labelled accurately on the form.","@type":"Answer"}},{"name":"Does GDPR consent expire?","@type":"Question","acceptedAnswer":{"text":"GDPR does not set a hard expiry date, but consent has to remain \"freely given, specific, informed, and unambiguous.\" If circumstances change (you start using the data in a new way, the signer has not engaged for a long time, or your privacy notice materially changes), the prior consent may no longer cover the new use and you should re-collect it. Many teams refresh marketing consent every two to three years as a default.","@type":"Answer"}},{"name":"How do I revoke consent on file?","@type":"Question","acceptedAnswer":{"text":"The signer should be able to withdraw consent as easily as they gave it. In Formester, the standard pattern is a unique submission ID emailed with the PDF copy, plus a link or address to email your privacy contact. On revocation, locate the submission, delete it, and confirm to the signer. Formester supports per-submission deletion and full data deletion on account-deletion request.","@type":"Answer"}}]}],"@context":"https://schema.org"}]
+jsonld: [{"@graph":[{"@id":"https://formester.com/blog/how-to-create-a-consent-form/#article","@type":"BlogPosting","author":{"url":"https://linkedin.com/in/harshshahseo","name":"Harsh Shah","@type":"Person"},"headline":"How to Create a Consent Form (5 Steps + Templates)","keywords":"how to create a consent form, create consent form online, build consent form","publisher":{"logo":{"url":"https://formester.com/logo.png","@type":"ImageObject"},"name":"Formester","@type":"Organization"},"description":"Learn how to create a consent form that captures a verifiable signature, timestamps every response, and holds up to a compliance check. Templates included.","dateModified":"2026-10-15","datePublished":"2026-06-12","mainEntityOfPage":"https://formester.com/blog/how-to-create-a-consent-form/"},{"@id":"https://formester.com/blog/how-to-create-a-consent-form/#breadcrumb","@type":"BreadcrumbList","itemListElement":[{"item":"https://formester.com/","name":"Home","@type":"ListItem","position":1},{"item":"https://formester.com/blog/","name":"Blog","@type":"ListItem","position":2},{"item":"https://formester.com/blog/how-to-create-a-consent-form/","name":"How to Create a Consent Form (5 Steps + Templates)","@type":"ListItem","position":3}]},{"@id":"https://formester.com/blog/how-to-create-a-consent-form/#faq","@type":"FAQPage","mainEntity":[{"name":"Is an electronic signature legally binding?","@type":"Question","acceptedAnswer":{"text":"Electronic signatures are generally recognised in the US under the ESIGN Act and UETA, and in the EU under eIDAS, provided the signer clearly intended to sign and the record is kept with its metadata (timestamp, IP, form version). High-stakes consents like medical procedures and contracts often pair the drawn signature with an explicit confirmation checkbox. Check the requirements in your jurisdiction.","@type":"Answer"}},{"name":"How long do I need to retain signed consent forms?","@type":"Question","acceptedAnswer":{"text":"It depends on the type. GDPR marketing consent should be retained only while you actively rely on it, then deleted. Employee policy acknowledgements are commonly kept for the length of employment plus seven years. Research consents follow the study's IRB-approved retention period. Medical consents follow the local medical-records retention rule, often six to ten years from the date of service. Confirm the specific window with counsel.","@type":"Answer"}},{"name":"How do I prove the signer was actually the named person?","@type":"Question","acceptedAnswer":{"text":"Combine these signals: the signer's email (Formester can verify it with a one-time code on the Personal plan and up), their IP address at submission, and the timestamp. For higher-stakes consents, add a witness signature field or require the signer to upload a government ID. None of these is bulletproof on its own, but together they create a defensible record.","@type":"Answer"}},{"name":"Can a minor give consent on their own?","@type":"Question","acceptedAnswer":{"text":"In most contexts, no. Minors under 18 (or under the local age of digital consent, which is 13 in the US under COPPA and 13 to 16 across EU member states under GDPR) need a parent or legal guardian to sign on their behalf. Some jurisdictions allow minors to consent independently to specific medical services such as mental health treatment or contraception. Check the rule for your jurisdiction and use case.","@type":"Answer"}},{"name":"What is the difference between consent and a waiver?","@type":"Question","acceptedAnswer":{"text":"Consent is the signer agreeing to participate in something, with full understanding of what it involves. A waiver is the signer giving up a specific legal right, such as the right to sue for negligence. Many forms mix both, for example a photo release that includes a waiver of approval rights over the final media. They serve different legal purposes and should be labelled accurately on the form.","@type":"Answer"}},{"name":"Does GDPR consent expire?","@type":"Question","acceptedAnswer":{"text":"GDPR does not set a hard expiry date, but consent has to remain \"freely given, specific, informed, and unambiguous.\" If circumstances change (you start using the data in a new way, the signer has not engaged for a long time, or your privacy notice materially changes), the prior consent may no longer cover the new use and you should re-collect it. Many teams refresh marketing consent every two to three years as a default.","@type":"Answer"}},{"name":"How do I revoke consent on file?","@type":"Question","acceptedAnswer":{"text":"The signer should be able to withdraw consent as easily as they gave it. The standard pattern is a confirmation email that tells the signer how to reach your privacy contact. On revocation, locate the submission, delete it, and confirm to the signer. Formester supports per-submission deletion and full data deletion on account-deletion request.","@type":"Answer"}}]}],"@context":"https://schema.org"}]
 createdAt: "2026-06-12T01:44:21.875Z"
-updatedAt: "2026-08-04T06:59:24.903Z"
+updatedAt: "2026-10-15T00:00:00.000Z"
 publishedAt: "2026-08-04T06:59:24.898Z"
 ---
 ![How to Create a Consent Form in 5 Steps cover with clipboard signature illustration](https://formester-strapi.s3.ap-south-1.amazonaws.com/how_to_create_a_consent_form_cover_6d6a6f0865.png)
@@ -44,11 +44,11 @@ publishedAt: "2026-08-04T06:59:24.898Z"
 
 <h3>3. Capture a signature tied to the signer</h3>
 
-<p>A name field is not a signature. The record needs the signer's typed or drawn signature, their email, the timestamp of submission, and ideally their IP address so you can prove the signature came from them.</p>
+<p>A name field is not a signature. The record needs the signer's signature, their email, the timestamp of submission, and ideally their IP address so you can prove the signature came from them.</p>
 
 <h3>4. Be retrievable as an audit record</h3>
 
-<p>When you need to produce the signed form a year later, it should take one search, not one Slack thread. The signed PDF, the form version, and the submission metadata all live together.</p>
+<p>When you need to produce the signed form a year later, it should take one search, not one Slack thread. The signature, the form version, and the submission metadata all live together.</p>
 
 <h2>How to create a consent form in 5 steps</h2>
 
@@ -86,17 +86,16 @@ publishedAt: "2026-08-04T06:59:24.898Z"
 
 <h3>Step 3. Add the signature field</h3>
 
-<p>Three ways to capture a signature on a web form, and they are not equivalent:</p>
+<p>A drawn signature can stand on its own or come with an extra confirmation step:</p>
 <p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/step_3_signature_field_dbb5fc964a.png" alt="Formester form editor showing the Consent Confirmation page with a drawn Client Signature field and Date of Signature field" loading="lazy" style="width:100%;max-width:900px;height:auto;border-radius:8px;border:1px solid #e5e7eb;margin:16px 0;" /></p>
 
 
 <ul>
-<li><strong>Typed signature.</strong> The signer types their full name in a styled font. Fast, mobile-friendly, and legally valid in most jurisdictions under the US ESIGN Act and eIDAS in the EU, provided the signer clearly intends to sign and the record is retained. Standard for marketing and policy consent.</li>
 <li><strong>Drawn signature.</strong> The signer draws their signature with a finger or stylus on a touchscreen, or with a mouse on desktop. Looks closer to a wet signature, useful when a client or regulator expects to see one. Standard for photo releases, contracts, and waivers.</li>
-<li><strong>Typed and confirmed.</strong> The signer types their name and ticks a separate "I confirm this is my electronic signature" checkbox. Adds an explicit affirmation step, which strengthens the record if the signature is ever challenged.</li>
+<li><strong>Drawn and confirmed.</strong> The signer draws their signature and ticks a separate checkbox confirming it is their electronic signature. Adds an explicit affirmation step, which strengthens the record if the signature is ever challenged.</li>
 </ul>
 
-<p>Formester's <a href="https://formester.com/features/electronic-signature/">electronic signature field</a> supports drawn and typed signatures, stores the signature image alongside the response, and includes it in the PDF copy sent to the signer. Use drawn for high-stakes consent (medical, photo release, contracts), typed-and-confirmed for everything else.</p>
+<p>Formester's <a href="https://formester.com/features/electronic-signature/">electronic signature field</a> captures a drawn signature and stores the signature image with the response. On the Business plan, it also appears in the PDF copy sent to the signer. Add the confirmation checkbox for high-stakes consent such as medical procedures, photo releases and contracts.</p>
 
 <h3>Step 4. Set up timestamp and secure storage</h3>
 
@@ -111,7 +110,7 @@ publishedAt: "2026-08-04T06:59:24.898Z"
 <li><strong>Retention policy.</strong> Decide upfront how long signed consents are kept. Research consents often need to be retained for the life of the study plus a fixed window. Marketing consent under GDPR should be kept only as long as you continue to rely on it, then deleted.</li>
 </ul>
 
-<p>Formester captures the timestamp and submission ID on every response, and form data is encrypted in transit (TLS) and at rest, with encrypted backups retained for 90 days. Sub-processors and retention defaults are listed in the <a href="https://formester.com/dpa/">Formester DPA</a> and <a href="https://formester.com/security/">security page</a>.</p>
+<p>Formester records the submission time, the signer's IP address and the form version with every response, as long as <strong>Anonymous submission</strong> stays off. Form data is encrypted in transit (TLS) and at rest, with encrypted backups retained for 90 days. Sub-processors and retention defaults are listed in the <a href="https://formester.com/dpa/">Formester DPA</a> and <a href="https://formester.com/security/">security page</a>.</p>
 
 <h3>Step 5. Send a PDF copy of the signed consent to the signer</h3>
 
@@ -119,7 +118,7 @@ publishedAt: "2026-08-04T06:59:24.898Z"
 <p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/step_5_add_autoresponder_e691077870.png" alt="Formester Add Autoresponder modal for configuring an email to the signer with the signed consent as a PDF attachment" loading="lazy" style="width:100%;max-width:900px;height:auto;border-radius:8px;border:1px solid #e5e7eb;margin:16px 0;" /></p>
 
 
-<p>In Formester, turn on <strong>Send a submission copy</strong> in the form's notification settings. The signer receives an email with the completed form, including their signature, attached as a PDF. Set the sender name to your organisation, the subject line to "Your signed [form name] copy," and include a one-line note pointing to the privacy email if they want to revoke consent later. Internal teams can also pull the PDF on demand from the Submissions tab.</p>
+<p>In Formester, add an autoresponder to the form and turn on <strong>Send submitter a copy of their submission</strong>. On the Business plan, the signer receives an email with the completed form, including their signature, attached as a PDF. Set the sender name to your organisation, the subject line to "Your signed [form name] copy," and include a one-line note pointing to the privacy email if they want to revoke consent later. On the same plan, internal teams can also download the PDF from the Submissions tab.</p>
 
 <h2>6 consent form templates ready to use</h2>
 
@@ -153,7 +152,7 @@ publishedAt: "2026-08-04T06:59:24.898Z"
 </tr>
 <tr>
 <td><strong>Employee policy acknowledgement</strong></td>
-<td>Policy name, version, effective date, role, typed-and-confirmed signature, retention note for HR.</td>
+<td>Policy name, version, effective date, role, drawn signature with a confirmation checkbox, retention note for HR.</td>
 <td>Handbook rollouts, code of conduct, IT acceptable use. <a href="https://formester.com/templates/categories/human-resource/">Browse HR templates</a></td>
 </tr>
 <tr>
@@ -166,7 +165,7 @@ publishedAt: "2026-08-04T06:59:24.898Z"
 </div>
 
 <div class="fmstr-blog-cta">
-<p><strong>Capture signed consent on a form, without DocuSign in the loop.</strong> Electronic signature, audit trail per submission, GDPR posture. Built in, on every Formester plan including free.</p>
+<p><strong>Capture signed consent on a form, without DocuSign in the loop.</strong> A drawn electronic signature, with the submission time and IP address recorded on every response. Included on every Formester plan, including Free.</p>
 <p><a class="fmstr-blog-cta__btn" href="https://app.formester.com/users/sign_up">Start free on Formester</a></p>
 <p class="fmstr-blog-cta__meta">Free forever plan · No credit card · Setup in 2 minutes</p>
 </div>
@@ -184,8 +183,8 @@ publishedAt: "2026-08-04T06:59:24.898Z"
 <section class="faq">
 
 <details>
-<summary>Is a typed signature legally binding?</summary>
-<p>Yes in most jurisdictions, including the US under the ESIGN Act and the EU under eIDAS, provided the signer clearly intended to sign and the record is retained with the associated metadata (timestamp, IP, form version). High-stakes consents like medical procedures and contracts often pair the typed signature with an explicit confirmation checkbox or use a drawn signature for the same reason.</p>
+<summary>Is an electronic signature legally binding?</summary>
+<p>Electronic signatures are generally recognised in the US under the ESIGN Act and UETA, and in the EU under eIDAS, provided the signer clearly intended to sign and the record is kept with its metadata (timestamp, IP, form version). High-stakes consents like medical procedures and contracts often pair the drawn signature with an explicit confirmation checkbox. Check the requirements in your jurisdiction.</p>
 </details>
 
 <details>
@@ -194,13 +193,8 @@ publishedAt: "2026-08-04T06:59:24.898Z"
 </details>
 
 <details>
-<summary>Does Formester comply with HIPAA?</summary>
-<p>Not currently. Formester is GDPR, UK GDPR, and CCPA compliant, and the security posture includes TLS in transit, encryption at rest, encrypted backups, and annual third-party penetration testing. However, Formester is not HIPAA-certified and does not sign a Business Associate Agreement at this time. If your form will collect protected health information governed by HIPAA in the United States, you will need a HIPAA-eligible vendor and a signed BAA.</p>
-</details>
-
-<details>
 <summary>How do I prove the signer was actually the named person?</summary>
-<p>Combine three signals: the signer's email (with a confirmed opt-in or verification step), their IP address at submission, and the timestamp. For higher-stakes consents, add a witness signature field or require the signer to upload a government ID. None of these is bulletproof on its own, but together they create a defensible record.</p>
+<p>Combine these signals: the signer's email (Formester can verify it with a one-time code on the Personal plan and up), their IP address at submission, and the timestamp. For higher-stakes consents, add a witness signature field or require the signer to upload a government ID. None of these is bulletproof on its own, but together they create a defensible record.</p>
 </details>
 
 <details>
@@ -220,7 +214,7 @@ publishedAt: "2026-08-04T06:59:24.898Z"
 
 <details>
 <summary>How do I revoke consent on file?</summary>
-<p>The signer should be able to withdraw consent as easily as they gave it. The standard pattern is a unique submission ID emailed with the PDF copy, plus a link or address to email your privacy contact. On revocation, locate the submission, delete it, and confirm to the signer. Formester supports per-submission deletion and full data deletion on account-deletion request.</p>
+<p>The signer should be able to withdraw consent as easily as they gave it. The standard pattern is a confirmation email that tells the signer how to reach your privacy contact. On revocation, locate the submission, delete it, and confirm to the signer. Formester supports per-submission deletion and full data deletion on account-deletion request.</p>
 </details>
 
 </section>

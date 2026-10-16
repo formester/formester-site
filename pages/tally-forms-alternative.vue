@@ -18,9 +18,29 @@
 
     <StandoutFeatureDetail :title="c4_title" :itemList="c4_itemList" class="page-component-item" />
 
-    <Table :title="c5_title" :rows="c5_rows" class="page-component-item" />
-
-    <Table :title="c6_title" :rows="c6_rows" class="page-component-item" />
+    <section v-for="tbl in compareTables" :id="tbl.id" :key="tbl.id" class="tfa-compare page-component-item">
+      <div class="tfa-compare__inner">
+        <SectionHeader :eyebrow="tbl.eyebrow" :title="tbl.title" :description="tbl.description" />
+        <table class="tfa-table">
+          <thead>
+            <tr>
+              <th scope="col"><span class="tfa-sr">Feature</span></th>
+              <th v-for="col in tbl.cols" :key="col.label" scope="col" :class="{ 'tfa-us': col.us }">
+                {{ col.label }}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="row in tbl.rows" :key="row.label">
+              <th scope="row">{{ row.label }}</th>
+              <td v-for="(col, i) in tbl.cols" :key="col.label" :data-label="col.label" :class="{ 'tfa-us': col.us }">
+                {{ row.values[i] }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
     <SimpleStepsCreate :title="c7_title" :itemList="c7_itemList" class="page-component-item" />
 
@@ -47,9 +67,9 @@ import CallToActionSection from '@/components/CallToActionSection.vue'
 import FaqSection from '@/components/v2/FaqSection.vue'
 import HeroTabShowcase from '@/components/home/HeroTabShowcase/HeroTabShowcase.vue'
 import MostUsedFeatures from '@/components/home/MostUsedFeatures.vue'
+import SectionHeader from '@/components/v2/SectionHeader.vue'
 import SimpleStepsCreate from '@/components/features/SimpleStepsCreate.vue'
 import StandoutFeatureDetail from '@/components/features/StandoutFeatureDetail.vue'
-import Table from '@/components/table/Table.vue'
 import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
 import Trustbadges from '@/components/strapi/Trustbadges.vue'
 import TrustSeals from '@/components/v2/TrustSeals.vue'
@@ -591,10 +611,10 @@ const c3_title = [
 const c3_faqList = [
   {
     id: 1265,
-    header: 'Limits of free plan',
-    body: 'Tally’s free plan is generous but quickly hits limits on submissions, fields, or storage, forcing upgrades. Formester’s plans provide more flexibility and a true risk-free option to grow without sudden constraints.',
+    header: 'Respondent emails on the free plan',
+    body: 'Tally’s free plan has unlimited forms and submissions, but emails to respondents and drop-off analytics need Tally Pro at $24/mo. Both are part of Formester’s free plan.',
     body_markdown:
-      'Tally’s free plan is generous but quickly hits limits on submissions, fields, or storage, forcing upgrades. Formester’s plans provide more flexibility and a true risk-free option to grow without sudden constraints.',
+      'Tally’s free plan has unlimited forms and submissions, but emails to respondents and drop-off analytics need Tally Pro at $24/mo. Both are part of Formester’s free plan.',
     list: [],
   },
   {
@@ -607,18 +627,18 @@ const c3_faqList = [
   },
   {
     id: 1296,
-    header: 'Lack of complex logic and fields',
-    body: 'Tally is ideal for simple forms but struggles with calculations, advanced conditional logic, and specialized fields. Formester supports complex forms, letting you build smarter, dynamic surveys and workflows easily.',
+    header: 'PDFs from your submissions',
+    body: 'Formester Business turns each submission into a PDF in your own layout, like a filled contract or an intake summary. It costs $45/mo billed yearly.',
     body_markdown:
-      'Tally is ideal for simple forms but struggles with calculations, advanced conditional logic, and specialized fields. Formester supports complex forms, letting you build smarter, dynamic surveys and workflows easily.',
+      'Formester Business turns each submission into a PDF in your own layout, like a filled contract or an intake summary. It costs $45/mo billed yearly.',
     list: [],
   },
   {
     id: 1297,
-    header: 'Integration shortcomings',
-    body: 'Tally’s integrations with tools like Google Sheets, Slack, or CRMs are limited or locked behind higher tiers. Formester connects seamlessly to multiple platforms, enabling smooth automation and data sync without extra costs.',
+    header: 'Lower price for common upgrades',
+    body: 'Removing branding and adding GA4 tracking cost $12/mo on Formester Personal and $24/mo on Tally Pro, billed yearly. Formester Personal also verifies respondent emails, which Tally keeps for Business at $74/mo.',
     body_markdown:
-      'Tally’s integrations with tools like Google Sheets, Slack, or CRMs are limited or locked behind higher tiers. Formester connects seamlessly to multiple platforms, enabling smooth automation and data sync without extra costs.',
+      'Removing branding and adding GA4 tracking cost $12/mo on Formester Personal and $24/mo on Tally Pro, billed yearly. Formester Personal also verifies respondent emails, which Tally keeps for Business at $74/mo.',
     list: [],
   },
   {
@@ -661,9 +681,9 @@ const c4_itemList = [
     id: 1962,
     title: 'Tally.so',
     description:
-      'Tally is a lightweight form builder designed for simple needs. It offers a clean interface but most advanced features like payments, analytics, and automations require a paid plan. Teams often face limits when trying to scale with Tally.',
+      'Tally is a form builder with unlimited forms and submissions on its free plan. Removing branding, custom domains, team members and partial submissions need Tally Pro, $24/mo billed yearly.',
     description_markdown:
-      'Tally is a lightweight form builder designed for simple needs. It offers a clean interface but most advanced features like payments, analytics, and automations require a paid plan. Teams often face limits when trying to scale with Tally.',
+      'Tally is a form builder with unlimited forms and submissions on its free plan. Removing branding, custom domains, team members and partial submissions need Tally Pro, $24/mo billed yearly.',
     icon: null,
     cardImage: {
       id: 2503,
@@ -738,194 +758,70 @@ const c4_itemList = [
     },
   },
 ]
-const c5_title = [
+// Comparison tables. Tally figures from tally.so/pricing (Pay monthly / Pay yearly toggle)
+// and tally.so/features, checked in October 2026.
+// Formester figures from constants/plan.js and formester.com/pricing.
+const compareTables = [
   {
-    id: 1602,
-    text: 'Free plan comparison',
-    highlight: false,
-    color: '#475467',
-    bold: false,
-  },
-]
-const c5_rows = [
-  {
-    id: 143,
-    rowType: 'head',
-  },
-  {
-    id: 439,
-    rowType: 'body',
-  },
-  {
-    id: 440,
-    rowType: 'body',
-  },
-  {
-    id: 450,
-    rowType: 'body',
-  },
-  {
-    id: 434,
-    rowType: 'body',
+    id: 'free-plan',
+    eyebrow: 'Free plans',
+    title: [
+      { text: 'Free plan ', highlight: false },
+      { text: 'comparison', highlight: true },
+    ],
+    description: 'Tally features from its pricing and features pages as of October 2026.',
+    cols: [{ label: 'Formester Free', us: true }, { label: 'Tally Free' }],
+    rows: [
+      { label: 'Forms', values: ['Unlimited', 'Unlimited'] },
+      { label: 'Responses', values: ['Unlimited', 'Unlimited'] },
+      { label: 'AI form creation', values: ['Included, 2 forms a day', 'Included'] },
+      { label: 'Conditional logic', values: ['Personal plan, $12/mo', 'Included'] },
+      { label: 'Signatures', values: ['Included', 'Included'] },
+      { label: 'Payments', values: ['Stripe and PayPal', 'Stripe'] },
+      { label: 'File uploads', values: ['100 MB storage in total', 'Up to 10 MB per file'] },
+      { label: 'Close a form at a response limit or date', values: ['Included', 'Included'] },
+      { label: 'Emails to respondents', values: ['Included', 'Pro plan, $24/mo'] },
+      { label: 'Drop-off analytics', values: ['Included', 'Pro plan, $24/mo'] },
+      { label: 'Google Sheets', values: ['1 connected sheet', 'Included'] },
+      { label: 'Webhooks', values: ['1 webhook', 'Included'] },
+    ],
   },
   {
-    id: 436,
-    rowType: 'body',
-  },
-  {
-    id: 437,
-    rowType: 'body',
-  },
-  {
-    id: 443,
-    rowType: 'body',
-  },
-  {
-    id: 432,
-    rowType: 'body',
-  },
-  {
-    id: 435,
-    rowType: 'body',
-  },
-  {
-    id: 431,
-    rowType: 'body',
-  },
-  {
-    id: 433,
-    rowType: 'body',
-  },
-  {
-    id: 438,
-    rowType: 'body',
-  },
-  {
-    id: 442,
-    rowType: 'body',
-  },
-  {
-    id: 447,
-    rowType: 'body',
-  },
-  {
-    id: 441,
-    rowType: 'body',
-  },
-  {
-    id: 446,
-    rowType: 'body',
-  },
-  {
-    id: 444,
-    rowType: 'body',
-  },
-  {
-    id: 448,
-    rowType: 'body',
-  },
-  {
-    id: 449,
-    rowType: 'body',
-  },
-  {
-    id: 445,
-    rowType: 'body',
-  },
-]
-const c6_title = [
-  {
-    id: 3123,
-    text: 'What about advanced features?',
-    highlight: false,
-    color: '#475467',
-    bold: false,
-  },
-]
-const c6_rows = [
-  {
-    id: 662,
-    rowType: 'head',
-  },
-  {
-    id: 663,
-    rowType: 'body',
-  },
-  {
-    id: 664,
-    rowType: 'body',
-  },
-  {
-    id: 666,
-    rowType: 'body',
-  },
-  {
-    id: 665,
-    rowType: 'body',
-  },
-  {
-    id: 669,
-    rowType: 'body',
-  },
-  {
-    id: 668,
-    rowType: 'body',
-  },
-  {
-    id: 682,
-    rowType: 'body',
-  },
-  {
-    id: 676,
-    rowType: 'body',
-  },
-  {
-    id: 667,
-    rowType: 'body',
-  },
-  {
-    id: 671,
-    rowType: 'body',
-  },
-  {
-    id: 677,
-    rowType: 'body',
-  },
-  {
-    id: 675,
-    rowType: 'body',
-  },
-  {
-    id: 670,
-    rowType: 'body',
-  },
-  {
-    id: 679,
-    rowType: 'body',
-  },
-  {
-    id: 674,
-    rowType: 'body',
-  },
-  {
-    id: 680,
-    rowType: 'body',
-  },
-  {
-    id: 673,
-    rowType: 'body',
-  },
-  {
-    id: 681,
-    rowType: 'body',
-  },
-  {
-    id: 678,
-    rowType: 'body',
-  },
-  {
-    id: 672,
-    rowType: 'body',
+    id: 'advanced-features',
+    eyebrow: 'Paid features',
+    title: [
+      { text: 'What about ', highlight: false },
+      { text: 'advanced features?', highlight: true },
+    ],
+    description: 'Prices in USD per month, billed yearly, as of October 2026.',
+    cols: [{ label: 'Formester', us: true }, { label: 'Tally' }],
+    rows: [
+      {
+        label: 'Paid plans',
+        values: [
+          'Personal $12 ($13 monthly), Business $45 ($49 monthly)',
+          'Pro $24 ($29 monthly), Business $74 ($89 monthly)',
+        ],
+      },
+      { label: 'Remove branding', values: ['Personal, $12/mo', 'Pro, $24/mo'] },
+      {
+        label: 'Analytics tracking',
+        values: ['Personal, $12/mo (GA4 and Google Tag Manager)', 'Pro, $24/mo (GA4 and Meta Pixel)'],
+      },
+      { label: 'Respondent email verification', values: ['Personal, $12/mo', 'Business, $74/mo'] },
+      { label: 'Custom domain', values: ['Business, $45/mo', 'Pro, $24/mo'] },
+      { label: 'Team members', values: ['25 on Business, $45/mo', 'Unlimited on Pro, $24/mo'] },
+      { label: 'Partial submissions', values: ['Business, $45/mo', 'Pro, $24/mo'] },
+      {
+        label: 'Larger file uploads',
+        values: ['1 GB on Personal, 50 GB on Business', 'No per-file size limit on Pro, $24/mo'],
+      },
+      {
+        label: 'PDF of each submission',
+        values: ['Custom PDF in your own layout, Business, $45/mo', 'PDF export in the form’s layout, Free'],
+      },
+      { label: 'API access', values: ['Business, $45/mo', 'Free'] },
+    ],
   },
 ]
 const c7_title = [
@@ -1520,3 +1416,110 @@ useHead({
   ],
 })
 </script>
+
+<style scoped>
+.tfa-compare {
+  background: #fff;
+  padding: var(--space-16) var(--space-6);
+}
+.tfa-compare__inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.tfa-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+.tfa-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--gray-200, #eaecf0);
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 15px;
+}
+.tfa-table th,
+.tfa-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--gray-200, #eaecf0);
+  color: var(--gray-700, #344054);
+  vertical-align: top;
+}
+.tfa-table tbody tr:last-child th,
+.tfa-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+.tfa-table thead th {
+  background: var(--gray-50, #f9fafb);
+  font-weight: 600;
+  color: var(--gray-900, #101828);
+}
+.tfa-table tbody th {
+  font-weight: 500;
+  color: var(--gray-900, #101828);
+  width: 32%;
+}
+.tfa-table .tfa-us {
+  background: #faf7ff;
+}
+.tfa-table thead .tfa-us {
+  background: #f0ebfa;
+  color: #6434d0;
+}
+
+@media (max-width: 720px) {
+  .tfa-compare {
+    padding: var(--space-12) var(--space-4);
+  }
+  .tfa-table,
+  .tfa-table tbody,
+  .tfa-table tr,
+  .tfa-table th,
+  .tfa-table td {
+    display: block;
+    width: 100%;
+  }
+  .tfa-table {
+    border: 0;
+    border-radius: 0;
+  }
+  .tfa-table thead {
+    display: none;
+  }
+  .tfa-table tbody tr {
+    border: 1px solid var(--gray-200, #eaecf0);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  .tfa-table tbody th {
+    width: 100%;
+    background: var(--gray-50, #f9fafb);
+    padding: 10px 14px;
+  }
+  .tfa-table td {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 14px;
+    text-align: right;
+  }
+  .tfa-table td::before {
+    content: attr(data-label);
+    color: var(--gray-500, #697586);
+    text-align: left;
+    flex-shrink: 0;
+  }
+  .tfa-table tbody tr:last-child td {
+    border-bottom: 1px solid var(--gray-200, #eaecf0);
+  }
+  .tfa-table tbody tr td:last-child {
+    border-bottom: 0;
+  }
+}
+</style>

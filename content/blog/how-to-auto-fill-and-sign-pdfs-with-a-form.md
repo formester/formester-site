@@ -127,6 +127,7 @@ publishedAt: "2025-07-07T01:02:26.108Z"
 <li><a href="/blog/how-to-add-fillable-fields-in-pdf/">How to add fillable fields to a PDF</a>, if you want people to type into the PDF itself.</li>
 <li><a href="/tools/fillable-pdf-creator/">Free fillable PDF creator</a>, to add fields to a PDF in your browser.</li>
 <li><a href="/blog/add-signature-in-google-forms/">How to add a signature in Google Forms</a>, and what to use when Google Forms can't.</li>
+<li><a href="/blog/best-document-generation-software/">10 best document generation software</a>, to compare tools for contracts, quotes and other documents.</li>
 </ul>
 
 <section class="faq">

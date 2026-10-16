@@ -32,12 +32,22 @@
       class="page-component-item"
     />
 
+    <CardGrid
+      id="devices"
+      eyebrow="Phones and tablets"
+      description="People sign where it suits them, in person or before they arrive. The form opens in the browser, so there is nothing to install."
+      columns="2"
+      background="var(--gray-25, #fcfcfd)"
+      :title="devicesTitle"
+      :cards="deviceCards"
+      class="page-component-item"
+    />
+
     <AlternatingRows
       id="signed-pdf"
       eyebrow="Business plan"
       :title="pdfTitle"
       description="Some consents need to live as a document. On the Business plan, from $45/mo billed yearly, each response can become a PDF with the drawn signature in place."
-      background="var(--gray-25, #fcfcfd)"
       :rows="pdfRows"
       class="page-component-item"
     />
@@ -45,19 +55,24 @@
     <CardGrid
       id="templates"
       eyebrow="Templates"
-      description="Every template below already has a signature field. Open one, change the wording to fit, and share it."
+      description="Formester has more than 20 ready consent form templates. Each one below already has a signature field, so open one, change the wording to fit, and share it."
       columns="4"
+      background="var(--gray-25, #fcfcfd)"
       :title="templatesTitle"
       :cards="templateCards"
-      class="page-component-item"
+      class="cfg-templates page-component-item"
     />
+    <div class="cfg-more">
+      <NuxtLink to="/templates/categories/consent-forms/" class="cfg-more__link">
+        Browse more than 20 consent form templates <span aria-hidden="true">&rarr;</span>
+      </NuxtLink>
+    </div>
 
     <CardGrid
       id="use-cases"
       eyebrow="Use cases"
       description="Marketing, events, schools, HR and research teams use Formester to replace paper consent forms."
       columns="3"
-      background="var(--gray-25, #fcfcfd)"
       :title="useCasesTitle"
       :cards="useCaseCards"
       class="page-component-item"
@@ -68,6 +83,7 @@
       eyebrow="Security"
       description="Consent forms hold personal details, so your data is encrypted and is never used to train AI."
       columns="3"
+      background="var(--gray-25, #fcfcfd)"
       :title="securityTitle"
       :cards="securityCards"
       class="page-component-item"
@@ -182,11 +198,33 @@ const capturesRows = [
       { text: 'A consent checkbox and required fields, so nobody sends a half-finished form' },
       { text: 'Name, date, guardian details or anything else you ask for' },
       { text: 'File uploads for a photo ID or a supporting document' },
-      { text: 'Submission time and IP address, unless you turn on anonymous submissions' },
+      { text: 'Submission time, IP address and browser details, unless you turn on anonymous submissions' },
       { text: 'Version history when your team edits a response later' },
     ],
     link: '/features/electronic-signature/',
     linkText: 'See the signature field',
+  },
+]
+
+// Section: phones and tablets. Signature pad uses pointer events (form_fields/basic/signature.vue), so it works with touch.
+const devicesTitle = [
+  { text: 'A consent form app for ', highlight: false, color: '#475467', bold: false },
+  { text: 'phones and tablets', highlight: true, color: '#475467', bold: false },
+]
+const deviceCards = [
+  {
+    tag: 'In person',
+    tagColor: 'violet',
+    title: 'On a tablet at the front desk',
+    body: 'Open the form on a tablet at reception or the check-in table. Each person reads the terms, ticks the box and signs with a finger before their appointment or activity.',
+  },
+  {
+    tag: 'Remote',
+    tagColor: 'blue',
+    title: 'On their own phone',
+    body: 'Email or text the form link, or print a QR code people scan at the door. They read and sign on their phone, and the response arrives in your Results.',
+    link: '/features/qr-code-generator/',
+    linkText: 'QR codes for forms',
   },
 ]
 
@@ -232,6 +270,7 @@ const pdfRows = [
 ]
 
 // Section: consent templates. All URLs checked for HTTP 200 on formester.com (14 Oct 2026).
+// /templates/categories/consent-forms/ listed 22 templates on 15 Oct 2026 (one is a miscategorised quiz), hence "more than 20".
 const templatesTitle = [
   { text: 'Consent form ', highlight: false, color: '#475467', bold: false },
   { text: 'templates', highlight: true, color: '#475467', bold: false },
@@ -429,35 +468,40 @@ const faqList = [
   {
     id: 2,
     header: 'Can consent forms be signed electronically?',
-    body: 'Yes. Add a Signature field and people draw their signature with a finger, mouse or trackpad. E-signatures are generally recognised under the US ESIGN Act and UETA, and under eIDAS in the EU and UK. Rules differ by country and by type of consent, so check what applies to you.',
+    body: 'Yes. Add a Signature field and people draw their e-signature on screen with a finger, mouse or trackpad. It is saved in the same response as their answers and the consent checkbox.',
   },
   {
     id: 3,
+    header: 'Is an online consent form legally valid?',
+    body: 'In many cases, yes. Electronic signatures are generally recognised under laws like the US ESIGN Act and UETA and the EU’s eIDAS regulation, which say a signature can’t be refused only because it was made electronically. Formester records the drawn signature with the submission time, IP address and browser and device details, unless you turn on anonymous submission. Some fields and countries have extra rules for certain consents, so check the requirements that apply to yours.',
+  },
+  {
+    id: 4,
     header: 'Can I make my own consent form?',
     body: 'Yes. You write the wording and choose the fields. Many teams start from a template or the AI generator to save time, then edit every question. If the consent carries legal risk, ask a lawyer to review the wording.',
   },
   {
-    id: 4,
+    id: 5,
     header: 'What is a digital consent form?',
     body: 'A digital or electronic consent form is one that people fill in and sign online instead of on paper. The person reads the terms, ticks a box to agree and signs on screen. You get their answers, signature and submission time in one record.',
   },
   {
-    id: 5,
+    id: 6,
     header: 'What is a signed consent form, and how do I keep a PDF copy?',
     body: 'A signed consent form is the completed form with the person’s signature, showing what they agreed to. On the Business plan ($45/mo billed yearly), Formester can turn each response into a PDF with the signature in place. You can email it to the signer, attach it to your team’s notification, save it to Google Drive or download it from Results.',
   },
   {
-    id: 6,
+    id: 7,
     header: 'Is there a free consent form app?',
     body: 'Yes. Formester’s free plan lets you build consent forms, add a signature field and collect unlimited responses. Forms open in the browser on phones, tablets and computers, so signers don’t install anything. Signed PDFs need the Business plan.',
   },
   {
-    id: 7,
+    id: 8,
     header: 'What should a consent form include?',
     body: 'A clear title, who is asking and why, what the person is agreeing to, any risks, how their data or images will be used, how to withdraw consent, and a contact. End with a consent checkbox, the person’s name, the date and their signature. For a minor, add the parent or guardian’s name and relationship.',
   },
   {
-    id: 8,
+    id: 9,
     header: 'How do I get parental consent online?',
     body: 'Send parents a link to a form with the child’s details, the activity and a signature field for the parent or guardian. You can pre-fill the student’s name in the link so parents only check and sign. On the Personal plan, you can also ask parents to verify their email with a one-time code before they submit.',
   },
@@ -541,5 +585,26 @@ useJsonld([
   border-radius: var(--r-xl, 12px);
   border: 1px solid var(--gray-200, #eaecf0);
   background: #fff;
+}
+</style>
+
+<style scoped>
+.cfg-templates.page-component-item {
+  padding-bottom: var(--space-8, 32px);
+}
+.cfg-more {
+  background: var(--gray-25, #fcfcfd);
+  padding: 0 var(--space-6) var(--space-16);
+  text-align: center;
+}
+.cfg-more__link {
+  font-size: 15px;
+  font-weight: 600;
+  color: #6434d0;
+  text-decoration: none;
+}
+.cfg-more__link:hover,
+.cfg-more__link:focus-visible {
+  text-decoration: underline;
 }
 </style>
