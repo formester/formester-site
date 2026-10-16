@@ -18,11 +18,29 @@
 
     <StandoutFeatureDetail :title="c4_title" :itemList="c4_itemList" class="page-component-item" />
 
-    <Table :title="c5_title" :rows="c5_rows" class="page-component-item" />
-
-    <Table :title="c6_title" :rows="c6_rows" class="page-component-item" />
-
-    <Table :title="c7_title" :rows="c7_rows" class="page-component-item" />
+    <section v-for="tbl in compareTables" :id="tbl.id" :key="tbl.id" class="pfa-compare page-component-item">
+      <div class="pfa-compare__inner">
+        <SectionHeader :eyebrow="tbl.eyebrow" :title="tbl.title" :description="tbl.description" />
+        <table class="pfa-table">
+          <thead>
+            <tr>
+              <th scope="col"><span class="pfa-sr">Feature</span></th>
+              <th v-for="col in tbl.cols" :key="col.label" scope="col" :class="{ 'pfa-us': col.us }">
+                {{ col.label }}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="row in tbl.rows" :key="row.label">
+              <th scope="row">{{ row.label }}</th>
+              <td v-for="(col, i) in tbl.cols" :key="col.label" :data-label="col.label" :class="{ 'pfa-us': col.us }">
+                {{ row.values[i] }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
     <MostUsedFeatures :itemList="c8_itemList" :heading="c8_heading" class="page-component-item" />
 
@@ -37,7 +55,7 @@
     />
 
     <TestimonialsV2
-      description="See why customers choose Formester over Typeform every time!"
+      description="See why teams choose Formester for their forms."
       version="home"
       :heading="c11_heading"
       :testimonials="c11_testimonials"
@@ -69,9 +87,9 @@ import FaqSection from '@/components/v2/FaqSection.vue'
 import HeroTabShowcase from '@/components/home/HeroTabShowcase/HeroTabShowcase.vue'
 import IntegrationsShowcase from '@/components/v2/IntegrationsShowcase.vue'
 import MostUsedFeatures from '@/components/home/MostUsedFeatures.vue'
+import SectionHeader from '@/components/v2/SectionHeader.vue'
 import SimpleStepsCreate from '@/components/features/SimpleStepsCreate.vue'
 import StandoutFeatureDetail from '@/components/features/StandoutFeatureDetail.vue'
-import Table from '@/components/table/Table.vue'
 import TemplateSection from '@/components/features/TemplateSection.vue'
 import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
 import Trustbadges from '@/components/strapi/Trustbadges.vue'
@@ -404,18 +422,18 @@ const c3_title = [
 const c3_faqList = [
   {
     id: 1271,
-    header: 'Free plan to get started',
-    body: 'Unlike Paperform, Formester lets you build and launch forms without paying upfront, giving you a risk-free way to collect responses and test workflows.',
+    header: 'A free plan with unlimited responses',
+    body: 'Paperform’s free plan takes 30 submissions a month. Formester’s free plan has no response cap, so you can collect responses and test workflows before you pay.',
     body_markdown:
-      'Unlike Paperform, Formester lets you build and launch forms without paying upfront, giving you a risk-free way to collect responses and test workflows.',
+      'Paperform’s free plan takes 30 submissions a month. Formester’s free plan has no response cap, so you can collect responses and test workflows before you pay.',
     list: [],
   },
   {
     id: 1286,
-    header: 'Advanced features included',
-    body: 'Calculations, conditional logic, answer piping, and integrations come built-in on Formester plans, so you don’t need to pay extra for essential functionality.',
+    header: 'Paid features for less',
+    body: 'Removing branding costs $12/mo on Formester Personal and $49/mo on Paperform Pro. Formester Business, at $45/mo billed yearly, adds custom PDFs, partial submissions and API access.',
     body_markdown:
-      'Calculations, conditional logic, answer piping, and integrations come built-in on Formester plans, so you don’t need to pay extra for essential functionality.',
+      'Removing branding costs $12/mo on Formester Personal and $49/mo on Paperform Pro. Formester Business, at $45/mo billed yearly, adds custom PDFs, partial submissions and API access.',
     list: [],
   },
   {
@@ -474,7 +492,7 @@ const c4_itemList = [
     id: 2128,
     title: 'Paperform',
     description:
-      'Paperform lets you build forms and surveys with a flexible design editor. It works for simple to moderate workflows, but lacks advanced AI, submission controls, and real-time collaboration, making it less ideal for fast, complex form building.',
+      'Paperform lets you build forms and surveys with a flexible design editor, and every plan includes e-signatures and workflows. Its free plan takes 30 submissions a month, and paid plans start at $49/mo billed yearly.',
     description_markdown: null,
     icon: null,
     cardImage: {
@@ -550,253 +568,96 @@ const c4_itemList = [
     },
   },
 ]
-const c5_title = [
+// Comparison tables. Paperform figures from paperform.co/pricing (plans and the feature
+// comparison table), checked in October 2026 with the Monthly/Yearly toggle.
+// Formester figures from constants/plan.js and formester.com/pricing.
+const compareTables = [
   {
-    id: 2814,
-    text: "Here's why Formester is better!",
-    highlight: false,
-    color: '#475467',
-    bold: false,
-  },
-]
-const c5_rows = [
-  {
-    id: 586,
-    rowType: 'head',
-  },
-  {
-    id: 585,
-    rowType: 'body',
-  },
-  {
-    id: 587,
-    rowType: 'body',
-  },
-  {
-    id: 588,
-    rowType: 'body',
-  },
-]
-const c6_title = [
-  {
-    id: 2663,
-    text: 'Get more from your forms!',
-    highlight: false,
-    color: '#475467',
-    bold: false,
-  },
-]
-const c6_rows = [
-  {
-    id: 504,
-    rowType: 'head',
+    id: 'pricing',
+    eyebrow: 'Pricing',
+    title: [
+      { text: 'Formester vs Paperform ', highlight: false },
+      { text: 'pricing', highlight: true },
+    ],
+    description: 'List prices in USD per month, as of October 2026.',
+    cols: [{ label: 'Formester', us: true }, { label: 'Paperform' }],
+    rows: [
+      {
+        label: 'Free plan',
+        values: ['Unlimited forms and responses', 'Unlimited forms, 30 submissions a month'],
+      },
+      {
+        label: 'First paid plan',
+        values: ['Personal: $12 billed yearly, $13 monthly', 'Pro: $49 billed yearly, $59 monthly'],
+      },
+      {
+        label: 'Business plan',
+        values: ['$45 billed yearly, $49 monthly', '$124 billed yearly, $149 monthly'],
+      },
+      {
+        label: 'Team members',
+        values: ['25 on Business', 'Unlimited users on every plan'],
+      },
+    ],
   },
   {
-    id: 509,
-    rowType: 'body',
+    id: 'free-plan',
+    eyebrow: 'Free plans',
+    title: [
+      { text: 'What each ', highlight: false },
+      { text: 'free plan', highlight: true },
+      { text: ' includes', highlight: false },
+    ],
+    description: 'Paperform features from its pricing page as of October 2026.',
+    cols: [{ label: 'Formester Free', us: true }, { label: 'Paperform Free' }],
+    rows: [
+      { label: 'Forms', values: ['Unlimited', 'Unlimited'] },
+      { label: 'Responses', values: ['Unlimited', '30 a month'] },
+      { label: 'AI form creation', values: ['Included, 2 forms a day', 'Included'] },
+      { label: 'Conditional logic', values: ['Personal plan, $12/mo', 'Included'] },
+      { label: 'Signature field', values: ['Included', 'Included'] },
+      { label: 'Payments', values: ['Stripe and PayPal', 'Stripe, PayPal, Square and Braintree'] },
+      { label: 'File upload storage', values: ['100 MB', '100 MB'] },
+      { label: 'Emails to respondents', values: ['Included', 'Pro plan, $49/mo'] },
+      { label: 'Quiz scoring', values: ['Included', 'Pro plan, $49/mo'] },
+      { label: 'Drop-off analytics', values: ['Included', 'Pro plan, $49/mo'] },
+      { label: 'Close a form at a response limit or date', values: ['Included', 'Pro plan, $49/mo'] },
+      { label: 'Webhooks', values: ['1 webhook', 'Pro plan, $49/mo'] },
+      { label: 'Save and resume for respondents', values: ['Business plan, $45/mo', 'Included'] },
+    ],
   },
   {
-    id: 506,
-    rowType: 'body',
-  },
-  {
-    id: 507,
-    rowType: 'body',
-  },
-  {
-    id: 510,
-    rowType: 'body',
-  },
-  {
-    id: 508,
-    rowType: 'body',
-  },
-  {
-    id: 514,
-    rowType: 'body',
-  },
-  {
-    id: 513,
-    rowType: 'body',
-  },
-  {
-    id: 515,
-    rowType: 'body',
-  },
-  {
-    id: 521,
-    rowType: 'body',
-  },
-  {
-    id: 511,
-    rowType: 'body',
-  },
-  {
-    id: 517,
-    rowType: 'body',
-  },
-  {
-    id: 512,
-    rowType: 'body',
-  },
-  {
-    id: 519,
-    rowType: 'body',
-  },
-  {
-    id: 523,
-    rowType: 'body',
-  },
-  {
-    id: 518,
-    rowType: 'body',
-  },
-  {
-    id: 516,
-    rowType: 'body',
-  },
-  {
-    id: 525,
-    rowType: 'body',
-  },
-  {
-    id: 527,
-    rowType: 'body',
-  },
-  {
-    id: 528,
-    rowType: 'body',
-  },
-  {
-    id: 529,
-    rowType: 'body',
-  },
-  {
-    id: 530,
-    rowType: 'body',
-  },
-  {
-    id: 522,
-    rowType: 'body',
-  },
-  {
-    id: 520,
-    rowType: 'body',
-  },
-  {
-    id: 536,
-    rowType: 'body',
-  },
-  {
-    id: 524,
-    rowType: 'body',
-  },
-  {
-    id: 531,
-    rowType: 'body',
-  },
-  {
-    id: 533,
-    rowType: 'body',
-  },
-  {
-    id: 526,
-    rowType: 'body',
-  },
-  {
-    id: 532,
-    rowType: 'body',
-  },
-  {
-    id: 535,
-    rowType: 'body',
-  },
-  {
-    id: 534,
-    rowType: 'body',
-  },
-]
-const c7_title = [
-  {
-    id: 3279,
-    text: 'What about advanced features?',
-    highlight: false,
-    color: '#475467',
-    bold: false,
-  },
-]
-const c7_rows = [
-  {
-    id: 728,
-    rowType: 'head',
-  },
-  {
-    id: 734,
-    rowType: 'body',
-  },
-  {
-    id: 736,
-    rowType: 'body',
-  },
-  {
-    id: 747,
-    rowType: 'body',
-  },
-  {
-    id: 742,
-    rowType: 'body',
-  },
-  {
-    id: 731,
-    rowType: 'body',
-  },
-  {
-    id: 730,
-    rowType: 'body',
-  },
-  {
-    id: 729,
-    rowType: 'body',
-  },
-  {
-    id: 748,
-    rowType: 'body',
-  },
-  {
-    id: 733,
-    rowType: 'body',
-  },
-  {
-    id: 727,
-    rowType: 'body',
-  },
-  {
-    id: 746,
-    rowType: 'body',
-  },
-  {
-    id: 738,
-    rowType: 'body',
-  },
-  {
-    id: 735,
-    rowType: 'body',
-  },
-  {
-    id: 732,
-    rowType: 'body',
-  },
-  {
-    id: 740,
-    rowType: 'body',
-  },
-  {
-    id: 739,
-    rowType: 'body',
-  },
-  {
-    id: 737,
-    rowType: 'body',
+    id: 'advanced-features',
+    eyebrow: 'Paid features',
+    title: [
+      { text: 'Which plan you need for ', highlight: false },
+      { text: 'advanced features', highlight: true },
+    ],
+    description: 'Prices per month, billed yearly, as of October 2026.',
+    cols: [{ label: 'Formester', us: true }, { label: 'Paperform' }],
+    rows: [
+      { label: 'Remove branding', values: ['Personal, $12/mo', 'Pro, $49/mo'] },
+      {
+        label: 'Analytics tracking',
+        values: ['Personal, $12/mo (GA4 and Google Tag Manager)', 'Pro, $49/mo (Google Analytics and Meta Pixel)'],
+      },
+      { label: 'Custom PDF from each submission', values: ['Business, $45/mo', 'Pro, $49/mo'] },
+      { label: 'Partial submissions', values: ['Business, $45/mo', 'Pro, $49/mo'] },
+      { label: 'API access', values: ['Business, $45/mo', 'Pro, $49/mo'] },
+      {
+        label: 'Custom domain',
+        values: ['Business, $45/mo', 'Pro plus a $20/mo add-on, or included on Business, $124/mo'],
+      },
+      {
+        label: 'Address autocomplete',
+        values: ['Business, $45/mo', 'Pro plus a $10/mo add-on, or included on Business, $124/mo'],
+      },
+      { label: 'Appointment booking', values: ['Business, $45/mo', 'Every plan, including Free'] },
+      {
+        label: 'File upload storage',
+        values: ['1 GB on Personal, 50 GB on Business', '10 GB on Pro, 100 GB on Business'],
+      },
+    ],
   },
 ]
 const c8_itemList = [
@@ -1295,8 +1156,7 @@ const c9_itemList = [
     id: 2122,
     title: 'Create',
     description: 'Use AI to create complete forms and surveys by describing what you need.',
-    description_markdown:
-      'Paste your Typeform URL or use AI to recreate it in seconds. Import without losing time or effort.',
+    description_markdown: 'Use AI to create complete forms and surveys by describing what you need.',
     icon: null,
     cardImage: {
       id: 3125,
@@ -2217,3 +2077,110 @@ useHead({
   ],
 })
 </script>
+
+<style scoped>
+.pfa-compare {
+  background: #fff;
+  padding: var(--space-16) var(--space-6);
+}
+.pfa-compare__inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.pfa-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+.pfa-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--gray-200, #eaecf0);
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 15px;
+}
+.pfa-table th,
+.pfa-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--gray-200, #eaecf0);
+  color: var(--gray-700, #344054);
+  vertical-align: top;
+}
+.pfa-table tbody tr:last-child th,
+.pfa-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+.pfa-table thead th {
+  background: var(--gray-50, #f9fafb);
+  font-weight: 600;
+  color: var(--gray-900, #101828);
+}
+.pfa-table tbody th {
+  font-weight: 500;
+  color: var(--gray-900, #101828);
+  width: 32%;
+}
+.pfa-table .pfa-us {
+  background: #faf7ff;
+}
+.pfa-table thead .pfa-us {
+  background: #f0ebfa;
+  color: #6434d0;
+}
+
+@media (max-width: 720px) {
+  .pfa-compare {
+    padding: var(--space-12) var(--space-4);
+  }
+  .pfa-table,
+  .pfa-table tbody,
+  .pfa-table tr,
+  .pfa-table th,
+  .pfa-table td {
+    display: block;
+    width: 100%;
+  }
+  .pfa-table {
+    border: 0;
+    border-radius: 0;
+  }
+  .pfa-table thead {
+    display: none;
+  }
+  .pfa-table tbody tr {
+    border: 1px solid var(--gray-200, #eaecf0);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  .pfa-table tbody th {
+    width: 100%;
+    background: var(--gray-50, #f9fafb);
+    padding: 10px 14px;
+  }
+  .pfa-table td {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 14px;
+    text-align: right;
+  }
+  .pfa-table td::before {
+    content: attr(data-label);
+    color: var(--gray-500, #697586);
+    text-align: left;
+    flex-shrink: 0;
+  }
+  .pfa-table tbody tr:last-child td {
+    border-bottom: 1px solid var(--gray-200, #eaecf0);
+  }
+  .pfa-table tbody tr td:last-child {
+    border-bottom: 0;
+  }
+}
+</style>

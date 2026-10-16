@@ -24,7 +24,7 @@ A Canva fillable PDF needs one extra step. Design the document in Canva, downloa
 <p>Quick answer</p>
 <ul>
 <li>Finish the layout in Canva and download it as <strong>PDF Standard</strong>.</li>
-<li>Open Formester's <a href="/tools/create-fillable-pdf/">free fillable PDF editor</a> and upload the file.</li>
+<li>Open Formester's <a href="/tools/fillable-pdf-creator/">free fillable PDF editor</a> and upload the file.</li>
 <li>Add text fields, checkboxes, radio buttons, or dropdowns over the spaces in your design.</li>
 <li>Test the fields, then download a real interactive PDF that other people can fill in.</li>
 </ul>
@@ -79,7 +79,7 @@ You do not need to create fake input text in Canva. Add only the labels and empt
 </li>
 <li>
 <h3>Open the free PDF editor</h3>
-<p>Go to Formester's <a href="/tools/create-fillable-pdf/">Create a Fillable PDF tool</a>. You do not need to create an account. Your document stays in your browser during ordinary editing, preview, and download.</p>
+<p>Go to Formester's <a href="/tools/fillable-pdf-creator/">Create a Fillable PDF tool</a>. You do not need to create an account. Your document stays in your browser during ordinary editing, preview, and download.</p>
 </li>
 <li>
 <h3>Upload the Canva PDF</h3>
@@ -152,7 +152,7 @@ A flattened download prints the entered values onto the document and removes the
 <p class="article-product-cta__title">Make your Canva PDF fillable</p>
 <p class="article-product-cta__body">Upload your exported Canva PDF, add real interactive fields, test the result, and download it free. Your document stays in your browser.</p>
 <div class="article-product-cta__actions">
-<a href="/tools/create-fillable-pdf/">Open the free PDF editor <span aria-hidden="true">→</span></a>
+<a href="/tools/fillable-pdf-creator/">Open the free PDF editor <span aria-hidden="true">→</span></a>
 <span>No signup · No watermark · Browser-local editing</span>
 </div>
 </div>

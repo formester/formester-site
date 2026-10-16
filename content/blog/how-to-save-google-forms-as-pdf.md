@@ -72,7 +72,7 @@ publishedAt: "2025-10-26T17:24:02.503Z"
 <li><h3>Print it</h3><p>Click the print icon next to the arrows, then choose <strong>Save as PDF</strong>.</p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/65c44ea4b8cdae50_03-print-one-response.jpg" alt="The Google Forms Individual view showing response 1 of 3, with the print icon on the right" width="791" height="215" loading="lazy" /></li>
 </ol>
 
-<div class="note"><p>On forms with more than 10,000 responses, Google hides the Individual view, so this method stops working. See <a href="https://support.google.com/docs/answer/139706" target="_blank" rel="noopener">Google's help on managing responses</a>.</p></div>
+<div class="note"><p>On forms with more than 10,000 responses, Google hides the Individual view, so this method stops working.</p></div>
 
 <h2 id="all-responses">3. How to save all Google Form responses as a PDF</h2>
 
@@ -150,7 +150,7 @@ publishedAt: "2025-10-26T17:24:02.503Z"
 
 <h2 id="respondent-copy">Can respondents get a PDF of their answers?</h2>
 
-<p>Not as a PDF. Google Forms can email respondents a copy of their answers: in <strong>Settings</strong>, turn on email collection, then set <strong>Send responders a copy of their response</strong> to <strong>Always</strong> or <strong>When requested</strong>. The copy arrives as an email, and <a href="https://support.google.com/docs/answer/139706" target="_blank" rel="noopener">Google notes</a> it can be caught by spam filters. To send a PDF instead, use one of the tools in <a href="#automatic">method 5</a>. Our guide on <a href="/blog/google-form-send-copy-of-response/">sending respondents a copy of their response</a> has the full setup.</p>
+<p>Not as a PDF. Google Forms can email respondents a copy of their answers: in <strong>Settings</strong>, turn on email collection, then set <strong>Send responders a copy of their response</strong> to <strong>Always</strong> or <strong>When requested</strong>. The copy arrives as an email, and Google's help page notes it can be caught by spam filters. To send a PDF instead, use one of the tools in <a href="#automatic">method 5</a>. Our guide on <a href="/blog/google-form-send-copy-of-response/">sending respondents a copy of their response</a> has the full setup.</p>
 
 <h2>Related reading</h2>
 

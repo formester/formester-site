@@ -16,11 +16,35 @@
 
     <FaqSection :title="c3_title" :faqList="c3_faqList" class="page-component-item" />
 
-    <Table :title="c4_title" :rows="c4_rows" class="page-component-item" />
-
-    <Table :title="c5_title" :rows="c5_rows" class="page-component-item" />
-
-    <Table :title="c6_title" :rows="c6_rows" class="page-component-item" />
+    <section v-for="table in compareTables" :id="table.id" :key="table.id" class="alt-cmp page-component-item">
+      <div class="alt-cmp__inner">
+        <SectionHeader :eyebrow="table.eyebrow" :title="table.title" :description="table.description" />
+        <table class="alt-cmp__table" :class="`alt-cmp__table--${table.cols.length}`">
+          <thead>
+            <tr>
+              <th scope="col"><span class="alt-cmp__sr">Feature</span></th>
+              <th v-for="col in table.cols" :key="col.key" scope="col" :class="{ 'alt-cmp__us': col.us }">
+                <span class="alt-cmp__brand">{{ col.brand }}</span>
+                {{ col.plan }}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="row in table.rows" :key="row.label">
+              <th scope="row">{{ row.label }}</th>
+              <td
+                v-for="(col, i) in table.cols"
+                :key="col.key"
+                :data-label="col.label || `${col.brand} ${col.plan}`"
+                :class="{ 'alt-cmp__us': col.us }"
+              >
+                {{ row.values[i] }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
     <MostUsedFeatures :itemList="c7_itemList" :heading="c7_heading" class="page-component-item" />
 
@@ -67,8 +91,8 @@ import FaqSection from '@/components/v2/FaqSection.vue'
 import HeroTabShowcase from '@/components/home/HeroTabShowcase/HeroTabShowcase.vue'
 import IntegrationsShowcase from '@/components/v2/IntegrationsShowcase.vue'
 import MostUsedFeatures from '@/components/home/MostUsedFeatures.vue'
+import SectionHeader from '@/components/v2/SectionHeader.vue'
 import SimpleStepsCreate from '@/components/features/SimpleStepsCreate.vue'
-import Table from '@/components/table/Table.vue'
 import TemplateSection from '@/components/features/TemplateSection.vue'
 import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
 import Trustbadges from '@/components/strapi/Trustbadges.vue'
@@ -405,9 +429,9 @@ const c3_faqList = [
   {
     id: 1278,
     header: 'Limited features on lower tiers',
-    body: 'Advanced conditional logic, approval workflows, and robust integrations are locked behind expensive plans, reducing functionality for teams on smaller budgets.',
+    body: 'Drop-off analysis, multi-language forms, and Google Analytics tracking all need the Business plan, which costs $91 a month billed yearly.',
     body_markdown:
-      'Advanced conditional logic, approval workflows, and robust integrations are locked behind expensive plans, reducing functionality for teams on smaller budgets.',
+      'Drop-off analysis, multi-language forms, and Google Analytics tracking all need the Business plan, which costs $91 a month billed yearly.',
     list: [],
   },
   {
@@ -436,148 +460,6 @@ const c4_title = [
     bold: false,
   },
 ]
-const c4_rows = [
-  {
-    id: 72,
-    rowType: 'head',
-  },
-  {
-    id: 398,
-    rowType: 'body',
-  },
-  {
-    id: 389,
-    rowType: 'body',
-  },
-  {
-    id: 388,
-    rowType: 'body',
-  },
-  {
-    id: 414,
-    rowType: 'body',
-  },
-  {
-    id: 396,
-    rowType: 'body',
-  },
-  {
-    id: 392,
-    rowType: 'body',
-  },
-  {
-    id: 399,
-    rowType: 'body',
-  },
-  {
-    id: 394,
-    rowType: 'body',
-  },
-  {
-    id: 393,
-    rowType: 'body',
-  },
-  {
-    id: 391,
-    rowType: 'body',
-  },
-  {
-    id: 397,
-    rowType: 'body',
-  },
-  {
-    id: 423,
-    rowType: 'body',
-  },
-  {
-    id: 390,
-    rowType: 'body',
-  },
-  {
-    id: 395,
-    rowType: 'body',
-  },
-  {
-    id: 413,
-    rowType: 'body',
-  },
-  {
-    id: 406,
-    rowType: 'body',
-  },
-  {
-    id: 422,
-    rowType: 'body',
-  },
-  {
-    id: 411,
-    rowType: 'body',
-  },
-  {
-    id: 405,
-    rowType: 'body',
-  },
-  {
-    id: 402,
-    rowType: 'body',
-  },
-  {
-    id: 419,
-    rowType: 'body',
-  },
-  {
-    id: 404,
-    rowType: 'body',
-  },
-  {
-    id: 403,
-    rowType: 'body',
-  },
-  {
-    id: 407,
-    rowType: 'body',
-  },
-  {
-    id: 421,
-    rowType: 'body',
-  },
-  {
-    id: 412,
-    rowType: 'body',
-  },
-  {
-    id: 416,
-    rowType: 'body',
-  },
-  {
-    id: 401,
-    rowType: 'body',
-  },
-  {
-    id: 408,
-    rowType: 'body',
-  },
-  {
-    id: 415,
-    rowType: 'body',
-  },
-  {
-    id: 417,
-    rowType: 'body',
-  },
-  {
-    id: 410,
-    rowType: 'body',
-  },
-  {
-    id: 418,
-    rowType: 'body',
-  },
-  {
-    id: 409,
-    rowType: 'body',
-  },
-]
 const c5_title = [
   {
     id: 3056,
@@ -585,92 +467,6 @@ const c5_title = [
     highlight: false,
     color: '#475467',
     bold: false,
-  },
-]
-const c5_rows = [
-  {
-    id: 646,
-    rowType: 'head',
-  },
-  {
-    id: 650,
-    rowType: 'body',
-  },
-  {
-    id: 652,
-    rowType: 'body',
-  },
-  {
-    id: 645,
-    rowType: 'body',
-  },
-  {
-    id: 647,
-    rowType: 'body',
-  },
-  {
-    id: 649,
-    rowType: 'body',
-  },
-  {
-    id: 641,
-    rowType: 'body',
-  },
-  {
-    id: 644,
-    rowType: 'body',
-  },
-  {
-    id: 651,
-    rowType: 'body',
-  },
-  {
-    id: 656,
-    rowType: 'body',
-  },
-  {
-    id: 643,
-    rowType: 'body',
-  },
-  {
-    id: 640,
-    rowType: 'body',
-  },
-  {
-    id: 648,
-    rowType: 'body',
-  },
-  {
-    id: 639,
-    rowType: 'body',
-  },
-  {
-    id: 661,
-    rowType: 'body',
-  },
-  {
-    id: 654,
-    rowType: 'body',
-  },
-  {
-    id: 659,
-    rowType: 'body',
-  },
-  {
-    id: 658,
-    rowType: 'body',
-  },
-  {
-    id: 655,
-    rowType: 'body',
-  },
-  {
-    id: 653,
-    rowType: 'body',
-  },
-  {
-    id: 660,
-    rowType: 'body',
   },
 ]
 const c6_title = [
@@ -682,22 +478,78 @@ const c6_title = [
     bold: false,
   },
 ]
-const c6_rows = [
+// Comparison tables. Competitor facts from the competitor's own pricing and help pages, as of October 2026.
+// Formester plans and prices from constants/plan.js and formester.com/pricing.
+const compareTables = [
   {
-    id: 68,
-    rowType: 'head',
+    id: 'free-plan',
+    eyebrow: 'Free plans',
+    title: c4_title,
+    description:
+      'What you get for $0 on each platform. Typeform details are from its pricing page and help center as of October 2026.',
+    cols: [
+      { key: 'fm-free', brand: 'Formester', plan: 'Free', us: true },
+      { key: 'tf-free', brand: 'Typeform', plan: 'Free' },
+    ],
+    rows: [
+      { label: 'Forms', values: ['Unlimited', 'Unlimited'] },
+      { label: 'Responses', values: ['Unlimited', '10 per month'] },
+      { label: 'Conditional logic', values: ['From Personal, $12/mo', 'Included'] },
+      { label: 'Hidden fields', values: ['Included', 'Included'] },
+      { label: 'AI form creation', values: ['2 forms a day', 'Included'] },
+      { label: 'Payments with Stripe or PayPal', values: ['Included', 'Paid plans only'] },
+      { label: 'File uploads', values: ['100 MB storage', 'Paid plans only'] },
+      { label: 'Signature field', values: ['Included', 'Paid plans only'] },
+      { label: 'reCAPTCHA spam protection', values: ['Included', 'Paid plans only'] },
+      { label: 'Drop-off analysis', values: ['Included', 'From Business, $91/mo'] },
+      { label: 'Remove branding', values: ['From Personal, $12/mo', 'From Plus, $56/mo'] },
+      { label: 'Download responses', values: ['CSV export', 'Spreadsheet export'] },
+    ],
   },
   {
-    id: 69,
-    rowType: 'body',
+    id: 'advanced-features',
+    eyebrow: 'Advanced features',
+    title: c5_title,
+    description:
+      'The cheapest plan that includes each feature. Prices are per month, billed yearly, from each pricing page as of October 2026.',
+    cols: [
+      { key: 'fm', brand: 'Plan you need', plan: 'Formester', label: 'Formester', us: true },
+      { key: 'tf', brand: 'Plan you need', plan: 'Typeform', label: 'Typeform' },
+    ],
+    rows: [
+      { label: 'Custom domain', values: ['Business, $45/mo', 'Enterprise only'] },
+      { label: 'Multi-language forms', values: ['Business, $45/mo', 'Business, $91/mo'] },
+      { label: 'Google Analytics and Tag Manager', values: ['Personal, $12/mo', 'Business, $91/mo'] },
+      { label: 'Brand kit', values: ['Personal, $12/mo', 'Plus, $56/mo'] },
+      { label: 'Payments', values: ['Free', 'Basic, $28/mo'] },
+      { label: 'Partial responses', values: ['Business, $45/mo', 'Basic, $28/mo'] },
+      { label: 'API access', values: ['Business, $45/mo', 'Free'] },
+      { label: 'Live chat support', values: ['Free', 'Plus, $56/mo'] },
+      { label: 'Priority support', values: ['Business, $45/mo', 'Business, $91/mo'] },
+    ],
   },
   {
-    id: 70,
-    rowType: 'body',
-  },
-  {
-    id: 71,
-    rowType: 'body',
+    id: 'pricing',
+    eyebrow: 'Pricing',
+    title: c6_title,
+    description:
+      'Paid plans side by side, in USD. Typeform prices are from typeform.com/pricing as of October 2026. Formester also has a free plan with unlimited responses.',
+    cols: [
+      { key: 'tf-basic', brand: 'Typeform', plan: 'Basic' },
+      { key: 'tf-plus', brand: 'Typeform', plan: 'Plus' },
+      { key: 'tf-business', brand: 'Typeform', plan: 'Business' },
+      { key: 'fm-personal', brand: 'Formester', plan: 'Personal', us: true },
+      { key: 'fm-business', brand: 'Formester', plan: 'Business', us: true },
+    ],
+    rows: [
+      { label: 'Price per month, billed yearly', values: ['$28', '$56', '$91', '$12', '$45'] },
+      { label: 'Price per month, billed monthly', values: ['$39', '$79', '$129', '$13', '$49'] },
+      { label: 'Responses included per month', values: ['100', '1,000', '10,000', 'Unlimited', 'Unlimited'] },
+      { label: 'Users', values: ['1', '3', '5', '1', '25 team members'] },
+      { label: 'Forms', values: ['Unlimited', 'Unlimited', 'Unlimited', 'Unlimited', 'Unlimited'] },
+      { label: 'File upload storage', values: ['1 GB', '2 GB', '4 GB', '1 GB', '50 GB'] },
+      { label: 'Remove branding', values: ['Not included', 'Included', 'Included', 'Included', 'Included'] },
+    ],
   },
 ]
 const c7_itemList = [
@@ -1954,9 +1806,9 @@ const c13_faqList = [
   {
     id: 1087,
     header: 'Does Formester have the same features as Typeform?',
-    body: 'It has everything Typeform offers—and more. Like AI form creation, flexible layouts, and better branding control.\n\n',
+    body: 'Formester covers the core features teams use in Typeform, like logic, hidden fields, payments, and embeds. It also adds a signature field on every plan and PDF documents from submissions on the Business plan.\n\n',
     body_markdown:
-      'It has everything Typeform offers—and more. Like AI form creation, flexible layouts, and better branding control.\n\n',
+      'Formester covers the core features teams use in Typeform, like logic, hidden fields, payments, and embeds. It also adds a signature field on every plan and PDF documents from submissions on the Business plan.\n\n',
     list: [],
   },
   {
@@ -2144,3 +1996,120 @@ useHead({
   ],
 })
 </script>
+
+<style scoped>
+.alt-cmp {
+  background: #fff;
+  padding: var(--space-16) var(--space-6);
+}
+.alt-cmp__inner {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.alt-cmp__sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+.alt-cmp__table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--gray-200, #eaecf0);
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 15px;
+}
+.alt-cmp__table--2 {
+  max-width: 880px;
+  margin: 0 auto;
+}
+.alt-cmp__table th,
+.alt-cmp__table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--gray-200, #eaecf0);
+  color: var(--gray-700, #344054);
+  vertical-align: top;
+}
+.alt-cmp__table tbody tr:last-child th,
+.alt-cmp__table tbody tr:last-child td {
+  border-bottom: 0;
+}
+.alt-cmp__table thead th {
+  background: var(--gray-50, #f9fafb);
+  font-weight: 600;
+  color: var(--gray-900, #101828);
+}
+.alt-cmp__table tbody th {
+  font-weight: 500;
+  color: var(--gray-900, #101828);
+  width: 28%;
+}
+.alt-cmp__brand {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray-500, #697586);
+}
+.alt-cmp__table .alt-cmp__us {
+  background: #faf7ff;
+}
+.alt-cmp__table thead .alt-cmp__us {
+  background: #f0ebfa;
+  color: #6434d0;
+}
+
+@media (max-width: 720px) {
+  .alt-cmp {
+    padding: var(--space-12) var(--space-4);
+  }
+  .alt-cmp__table,
+  .alt-cmp__table tbody,
+  .alt-cmp__table tr,
+  .alt-cmp__table th,
+  .alt-cmp__table td {
+    display: block;
+    width: 100%;
+  }
+  .alt-cmp__table {
+    border: 0;
+    border-radius: 0;
+  }
+  .alt-cmp__table thead {
+    display: none;
+  }
+  .alt-cmp__table tbody tr {
+    border: 1px solid var(--gray-200, #eaecf0);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  .alt-cmp__table tbody th {
+    width: 100%;
+    background: var(--gray-50, #f9fafb);
+    padding: 10px 14px;
+  }
+  .alt-cmp__table td {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 14px;
+    text-align: right;
+  }
+  .alt-cmp__table td::before {
+    content: attr(data-label);
+    color: var(--gray-500, #697586);
+    text-align: left;
+    flex-shrink: 0;
+  }
+  .alt-cmp__table tbody tr:last-child td {
+    border-bottom: 1px solid var(--gray-200, #eaecf0);
+  }
+  .alt-cmp__table tbody tr td:last-child {
+    border-bottom: 0;
+  }
+}
+</style>

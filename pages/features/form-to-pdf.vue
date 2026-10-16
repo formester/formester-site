@@ -540,8 +540,7 @@ useHead({
     { property: 'og:description', content: META_DESCRIPTION },
     {
       property: 'og:image',
-      content:
-        'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_s_pdf_export_feature_page_hero_image_eafaebc6e8.png',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/cf71e0444b46ac6b_form-to-pdf-og.png',
     },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:site', content: '@_formester_' },
@@ -549,8 +548,7 @@ useHead({
     { name: 'twitter:description', content: META_DESCRIPTION },
     {
       name: 'twitter:image',
-      content:
-        'https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_s_pdf_export_feature_page_hero_image_eafaebc6e8.png',
+      content: 'https://formester-strapi.s3.ap-south-1.amazonaws.com/cf71e0444b46ac6b_form-to-pdf-og.png',
     },
   ],
 })

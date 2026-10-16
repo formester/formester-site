@@ -17,7 +17,7 @@
       id="how-it-works"
       badge="How it works"
       heading="How to make a contract online"
-      description="Your client fills in a form and signs it. Formester puts their answers and signature into your contract and creates the PDF."
+      description="Formester is a contract maker built on forms. Your client fills in a form and signs it on screen, and their answers and electronic signature fill in your contract PDF."
       :buttons="howButtons"
       :steps="howSteps"
       class="page-component-item"
@@ -124,9 +124,9 @@ import TrustSeals from '@/components/v2/TrustSeals.vue'
 
 const SIGN_UP_URL = 'https://app.formester.com/users/sign_up'
 const PAGE_URL = 'https://formester.com/contract-generator/'
-const META_TITLE = 'Contract Generator: Fill, Sign & Get a PDF | Formester'
+const META_TITLE = 'Contract Generator & Maker with Signed PDFs | Formester'
 const META_DESCRIPTION =
-  'Make contracts your clients fill in and sign online. Every submission creates a filled, signed contract PDF, sent to both of you.'
+  'An online contract maker: your client fills in a form and e-signs it, and each submission creates a filled, signed contract PDF, sent to both of you.'
 const META_IMAGE = 'https://formester-strapi.s3.ap-south-1.amazonaws.com/4912c71a14006d76_blank-vs-filled-contract.webp'
 
 const BRAND = '#6434d0'
@@ -179,7 +179,7 @@ const heroSuggestions = [
   },
 ]
 const heroFooterItems = [
-  { id: 1, text: 'Contract forms and signatures free' },
+  { id: 1, text: 'Contract forms and e-signatures free' },
   { id: 2, text: 'No credit card' },
   { id: 3, text: 'Signed contract PDFs on Business' },
 ]
@@ -513,7 +513,7 @@ const testimonials = [
   },
 ]
 
-const faqTitle = [{ text: 'Contract generator questions', highlight: false, color: '#475467', bold: false }]
+const faqTitle = [{ text: 'Contract maker questions', highlight: false, color: '#475467', bold: false }]
 const faqList = [
   {
     id: 1,
@@ -522,36 +522,46 @@ const faqList = [
   },
   {
     id: 2,
-    header: 'Is the contract generator free?',
-    body: 'Building the contract form, generating it with AI, and collecting drawn signatures are free. Turning each signed submission into a contract PDF needs the Business plan, which costs $45 a month billed yearly or $49 billed monthly.',
+    header: 'What is an online contract maker?',
+    body: 'An online contract maker is a tool for creating a contract in your browser and getting it signed. In Formester, the contract maker is a form: your client fills in their details and draws their e-signature, and each submission fills in your contract PDF. You set up the contract wording once and reuse it for every client.',
   },
   {
     id: 3,
-    header: 'How do clients sign the contract?',
-    body: 'They draw their signature with a mouse, trackpad, or finger in the form’s signature field, on a phone or a computer. The signature then appears in the signature box on the contract PDF.',
+    header: 'Can I make a contract for free?',
+    body: 'You can start for free. On the free plan, the contract generator lets you build the contract form, generate it with AI, and collect e-signatures. Turning each signed submission into a filled contract PDF needs the Business plan, which costs $45 a month billed yearly or $49 billed monthly.',
   },
   {
     id: 4,
-    header: 'Is a contract signed online legally binding?',
-    body: 'Electronic signatures are generally accepted for everyday agreements in many countries, for example under the US ESIGN Act and the EU’s eIDAS rules. Requirements vary by document type and country, so check with a lawyer for anything high-stakes.',
+    header: 'What types of contracts can I make?',
+    body: 'Any agreement where the other person adds their details and signs: freelance and web design contracts, NDAs, service and business agreements, lease agreements, employment agreements, photography contracts, and service quotes. Each of these has a ready template with the contract PDF already connected.',
   },
   {
     id: 5,
+    header: 'How do clients sign the contract?',
+    body: 'They draw an electronic signature in the form’s signature field with a mouse, trackpad, or finger, on a phone or a computer. The e-signature then appears in the signature box on the contract PDF.',
+  },
+  {
+    id: 6,
+    header: 'Is a contract signed online legally binding?',
+    body: 'Electronic signatures are generally accepted for everyday agreements in many countries, for example under the US ESIGN Act and the EU’s eIDAS rules. Formester saves each signature with the submission time and IP address. Requirements vary by document type and country, so check with a lawyer for anything high-stakes.',
+  },
+  {
+    id: 7,
     header: 'Can I use my own contract?',
     body: 'Yes. Choose “Upload PDF” in the PDF Editor and your contract becomes the base of the template. Then drag each form field onto the line where its answer belongs, including the signature.',
   },
   {
-    id: 6,
+    id: 8,
     header: 'Can AI write a contract for me?',
     body: 'AI builds the contract form for you, and in the PDF Editor “Create with AI” lays out a first draft of the document around your form’s fields. It does not give legal advice, so write or review the contract wording yourself and have a lawyer check anything important.',
   },
   {
-    id: 7,
+    id: 9,
     header: 'What format is the finished contract?',
     body: 'Every signed contract is a PDF. You can name each file from the answers, like “Contract - Client name”, and on the Business plan you can add a Formester digital certificate to each PDF.',
   },
   {
-    id: 8,
+    id: 10,
     header: 'Where are signed contracts kept?',
     body: 'Each signed submission stays in your form’s Results, and you can download its contract PDF from there at any time. You can also email the PDF to you and your client and save a copy to Google Drive.',
   },

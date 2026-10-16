@@ -18,11 +18,35 @@
 
     <StandoutFeatureDetail :title="c4_title" :itemList="c4_itemList" class="page-component-item" />
 
-    <Table :title="c5_title" :rows="c5_rows" class="page-component-item" />
-
-    <Table :title="c6_title" :rows="c6_rows" class="page-component-item" />
-
-    <Table :title="c7_title" :rows="c7_rows" class="page-component-item" />
+    <section v-for="table in compareTables" :id="table.id" :key="table.id" class="alt-cmp page-component-item">
+      <div class="alt-cmp__inner">
+        <SectionHeader :eyebrow="table.eyebrow" :title="table.title" :description="table.description" />
+        <table class="alt-cmp__table" :class="`alt-cmp__table--${table.cols.length}`">
+          <thead>
+            <tr>
+              <th scope="col"><span class="alt-cmp__sr">Feature</span></th>
+              <th v-for="col in table.cols" :key="col.key" scope="col" :class="{ 'alt-cmp__us': col.us }">
+                <span class="alt-cmp__brand">{{ col.brand }}</span>
+                {{ col.plan }}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="row in table.rows" :key="row.label">
+              <th scope="row">{{ row.label }}</th>
+              <td
+                v-for="(col, i) in table.cols"
+                :key="col.key"
+                :data-label="col.label || `${col.brand} ${col.plan}`"
+                :class="{ 'alt-cmp__us': col.us }"
+              >
+                {{ row.values[i] }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
     <FeatureDetailsSection :title="c8_title" :itemList="c8_itemList" class="page-component-item" />
 
@@ -61,9 +85,9 @@ import FaqSection from '@/components/v2/FaqSection.vue'
 import FeatureDetailsSection from '@/components/features/FeatureDetailsSection.vue'
 import HeroTabShowcase from '@/components/home/HeroTabShowcase/HeroTabShowcase.vue'
 import IntegrationsShowcase from '@/components/v2/IntegrationsShowcase.vue'
+import SectionHeader from '@/components/v2/SectionHeader.vue'
 import SimpleStepsCreate from '@/components/features/SimpleStepsCreate.vue'
 import StandoutFeatureDetail from '@/components/features/StandoutFeatureDetail.vue'
-import Table from '@/components/table/Table.vue'
 import TemplateSection from '@/components/features/TemplateSection.vue'
 import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
 import Trustbadges from '@/components/strapi/Trustbadges.vue'
@@ -516,76 +540,6 @@ const c5_title = [
     bold: false,
   },
 ]
-const c5_rows = [
-  {
-    id: 794,
-    rowType: 'head',
-  },
-  {
-    id: 796,
-    rowType: 'body',
-  },
-  {
-    id: 795,
-    rowType: 'body',
-  },
-  {
-    id: 807,
-    rowType: 'body',
-  },
-  {
-    id: 804,
-    rowType: 'body',
-  },
-  {
-    id: 805,
-    rowType: 'body',
-  },
-  {
-    id: 812,
-    rowType: 'body',
-  },
-  {
-    id: 803,
-    rowType: 'body',
-  },
-  {
-    id: 813,
-    rowType: 'body',
-  },
-  {
-    id: 798,
-    rowType: 'body',
-  },
-  {
-    id: 808,
-    rowType: 'body',
-  },
-  {
-    id: 814,
-    rowType: 'body',
-  },
-  {
-    id: 799,
-    rowType: 'body',
-  },
-  {
-    id: 810,
-    rowType: 'body',
-  },
-  {
-    id: 797,
-    rowType: 'body',
-  },
-  {
-    id: 809,
-    rowType: 'body',
-  },
-  {
-    id: 806,
-    rowType: 'body',
-  },
-]
 const c6_title = [
   {
     id: 3391,
@@ -593,64 +547,6 @@ const c6_title = [
     highlight: false,
     color: '#475467',
     bold: false,
-  },
-]
-const c6_rows = [
-  {
-    id: 772,
-    rowType: 'head',
-  },
-  {
-    id: 771,
-    rowType: 'body',
-  },
-  {
-    id: 791,
-    rowType: 'body',
-  },
-  {
-    id: 800,
-    rowType: 'body',
-  },
-  {
-    id: 780,
-    rowType: 'body',
-  },
-  {
-    id: 778,
-    rowType: 'body',
-  },
-  {
-    id: 773,
-    rowType: 'body',
-  },
-  {
-    id: 770,
-    rowType: 'body',
-  },
-  {
-    id: 776,
-    rowType: 'body',
-  },
-  {
-    id: 783,
-    rowType: 'body',
-  },
-  {
-    id: 785,
-    rowType: 'body',
-  },
-  {
-    id: 781,
-    rowType: 'body',
-  },
-  {
-    id: 790,
-    rowType: 'body',
-  },
-  {
-    id: 793,
-    rowType: 'body',
   },
 ]
 const c7_title = [
@@ -662,22 +558,83 @@ const c7_title = [
     bold: false,
   },
 ]
-const c7_rows = [
+// Comparison tables. Competitor facts from the competitor's own pricing and help pages, as of October 2026.
+// Formester plans and prices from constants/plan.js and formester.com/pricing.
+const compareTables = [
   {
-    id: 786,
-    rowType: 'head',
+    id: 'free-plan',
+    eyebrow: 'Free plans',
+    title: c5_title,
+    description:
+      'What you get for $0 on each platform. SurveyMonkey details are from its US pricing pages as of October 2026.',
+    cols: [
+      { key: 'fm-free', brand: 'Formester', plan: 'Free', us: true },
+      { key: 'sm-basic', brand: 'SurveyMonkey', plan: 'Basic (free)' },
+    ],
+    rows: [
+      { label: 'Surveys and forms', values: ['Unlimited', 'Unlimited'] },
+      { label: 'Questions per survey', values: ['Unlimited', '10'] },
+      { label: 'Responses', values: ['Unlimited', 'Limited, amount shown after sign-up'] },
+      { label: 'Build with AI', values: ['2 forms a day', 'Included'] },
+      { label: 'Skip logic', values: ['From Personal, $12/mo', 'Limited'] },
+      { label: 'Accept payments', values: ['Included', 'Limited'] },
+      { label: 'File upload', values: ['100 MB storage', 'Limited'] },
+      { label: 'Add your logo', values: ['Included', 'Paid plans only'] },
+      { label: 'Export responses', values: ['CSV export', 'Paid plans only'] },
+      { label: 'Confirmation email to respondents', values: ['Included', 'Paid plans only'] },
+      { label: 'Embed on your website', values: ['Included', 'Included'] },
+      { label: 'Zapier integration', values: ['Included', 'Included'] },
+      { label: 'Support', values: ['Live chat with the team', 'Help bot'] },
+    ],
   },
   {
-    id: 787,
-    rowType: 'body',
+    id: 'advanced-features',
+    eyebrow: 'Advanced features',
+    title: c6_title,
+    description:
+      'The cheapest plan that includes each feature. Formester prices are per month, billed yearly. SurveyMonkey Standard is billed monthly; Advantage and Premier are billed yearly.',
+    cols: [
+      { key: 'fm', brand: 'Plan you need', plan: 'Formester', label: 'Formester', us: true },
+      { key: 'sm', brand: 'Plan you need', plan: 'SurveyMonkey', label: 'SurveyMonkey' },
+    ],
+    rows: [
+      { label: 'Remove branding', values: ['Personal, $12/mo', 'Premier, $139/mo'] },
+      { label: 'Multilingual surveys', values: ['Business, $45/mo', 'Premier, $139/mo'] },
+      { label: 'Accept payments', values: ['Free', 'Advantage, $39/mo'] },
+      { label: 'File upload', values: ['Free', 'Advantage, $39/mo'] },
+      { label: 'Custom variables (hidden fields)', values: ['Free', 'Advantage, $39/mo'] },
+      { label: 'Export responses', values: ['Free', 'Standard or Advantage, from $39/mo'] },
+      { label: 'Skip logic', values: ['Personal, $12/mo', 'Basic (free), limited'] },
+      {
+        label: 'Team accounts',
+        values: ['Business, $45/mo, 25 members', 'Team Advantage, $30 per user/mo, 3+ users'],
+      },
+    ],
   },
   {
-    id: 792,
-    rowType: 'body',
-  },
-  {
-    id: 788,
-    rowType: 'body',
+    id: 'pricing',
+    eyebrow: 'Pricing',
+    title: c7_title,
+    description:
+      'Paid plans side by side, in USD. SurveyMonkey prices are from surveymonkey.com/pricing as of October 2026. Formester also has a free plan with unlimited responses.',
+    cols: [
+      { key: 'sm-standard', brand: 'SurveyMonkey', plan: 'Standard' },
+      { key: 'sm-advantage', brand: 'SurveyMonkey', plan: 'Advantage' },
+      { key: 'sm-premier', brand: 'SurveyMonkey', plan: 'Premier' },
+      { key: 'fm-personal', brand: 'Formester', plan: 'Personal', us: true },
+      { key: 'fm-business', brand: 'Formester', plan: 'Business', us: true },
+    ],
+    rows: [
+      { label: 'Price per month, billed yearly', values: ['Not offered', '$39', '$139', '$12', '$45'] },
+      { label: 'Price per month, billed monthly', values: ['$149', 'Not offered', 'Not offered', '$13', '$49'] },
+      {
+        label: 'Responses included',
+        values: ['1,000 per month', '15,000 per year', '40,000 per year', 'Unlimited', 'Unlimited'],
+      },
+      { label: 'Extra responses', values: ['$0.15 each', '$0.15 each', '$0.15 each', 'Not needed', 'Not needed'] },
+      { label: 'Users', values: ['1', '1', '1', '1', '25 team members'] },
+      { label: 'Remove branding', values: ['Not included', 'Not included', 'Included', 'Included', 'Included'] },
+    ],
   },
 ]
 const c8_title = [
@@ -1665,7 +1622,7 @@ const c13_faqList = [
   {
     id: 1328,
     header: '6. What if I need advanced survey logic or analytics?',
-    body: 'Formester includes advanced logic, skip rules, and branching in every plan. You also get real-time analytics and exportable reports to visualize data easily. These features are available without any hidden upgrade.',
+    body: 'Conditional logic, skip rules, and branching are included from the Personal plan, at $12 a month billed yearly. Every plan, including Free, gets form analytics, drop-off analysis, and CSV export of your responses.',
     body_markdown: null,
     list: [],
   },
@@ -1830,3 +1787,120 @@ useHead({
   ],
 })
 </script>
+
+<style scoped>
+.alt-cmp {
+  background: #fff;
+  padding: var(--space-16) var(--space-6);
+}
+.alt-cmp__inner {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.alt-cmp__sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+.alt-cmp__table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--gray-200, #eaecf0);
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 15px;
+}
+.alt-cmp__table--2 {
+  max-width: 880px;
+  margin: 0 auto;
+}
+.alt-cmp__table th,
+.alt-cmp__table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--gray-200, #eaecf0);
+  color: var(--gray-700, #344054);
+  vertical-align: top;
+}
+.alt-cmp__table tbody tr:last-child th,
+.alt-cmp__table tbody tr:last-child td {
+  border-bottom: 0;
+}
+.alt-cmp__table thead th {
+  background: var(--gray-50, #f9fafb);
+  font-weight: 600;
+  color: var(--gray-900, #101828);
+}
+.alt-cmp__table tbody th {
+  font-weight: 500;
+  color: var(--gray-900, #101828);
+  width: 28%;
+}
+.alt-cmp__brand {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray-500, #697586);
+}
+.alt-cmp__table .alt-cmp__us {
+  background: #faf7ff;
+}
+.alt-cmp__table thead .alt-cmp__us {
+  background: #f0ebfa;
+  color: #6434d0;
+}
+
+@media (max-width: 720px) {
+  .alt-cmp {
+    padding: var(--space-12) var(--space-4);
+  }
+  .alt-cmp__table,
+  .alt-cmp__table tbody,
+  .alt-cmp__table tr,
+  .alt-cmp__table th,
+  .alt-cmp__table td {
+    display: block;
+    width: 100%;
+  }
+  .alt-cmp__table {
+    border: 0;
+    border-radius: 0;
+  }
+  .alt-cmp__table thead {
+    display: none;
+  }
+  .alt-cmp__table tbody tr {
+    border: 1px solid var(--gray-200, #eaecf0);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  .alt-cmp__table tbody th {
+    width: 100%;
+    background: var(--gray-50, #f9fafb);
+    padding: 10px 14px;
+  }
+  .alt-cmp__table td {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 14px;
+    text-align: right;
+  }
+  .alt-cmp__table td::before {
+    content: attr(data-label);
+    color: var(--gray-500, #697586);
+    text-align: left;
+    flex-shrink: 0;
+  }
+  .alt-cmp__table tbody tr:last-child td {
+    border-bottom: 1px solid var(--gray-200, #eaecf0);
+  }
+  .alt-cmp__table tbody tr td:last-child {
+    border-bottom: 0;
+  }
+}
+</style>
