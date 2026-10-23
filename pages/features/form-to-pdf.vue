@@ -611,6 +611,8 @@ useJsonld([
   padding-bottom: var(--space-8, 32px) !important;
 }
 .ftp-compare {
+  max-width: 760px;
+  margin: 0 auto;
   padding: 0 var(--space-6, 24px) var(--space-16, 64px);
   text-align: center;
   font-size: 15px;
