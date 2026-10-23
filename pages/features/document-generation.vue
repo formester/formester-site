@@ -84,6 +84,12 @@
       :cards="useCaseCards"
       class="page-component-item"
     />
+    <p class="dg-template-links">
+      Start from a template:
+      <NuxtLink to="/templates/freelance-invoice-form-21573/">freelance invoice form</NuxtLink>,
+      <NuxtLink to="/templates/categories/record-certificate/">certificate templates</NuxtLink>, or
+      <NuxtLink to="/templates/categories/quotes/">quote templates</NuxtLink>.
+    </p>
 
     <ComparisonTable
       eyebrow="Formester vs a separate document tool"
@@ -144,7 +150,7 @@ const SIGN_UP_URL = 'https://app.formester.com/users/sign_up'
 const PAGE_URL = 'https://formester.com/features/document-generation/'
 const META_TITLE = 'Document Generation Software: Branded PDFs From Forms | Formester'
 const META_DESCRIPTION =
-  'Generate contracts, invoices, certificates, and receipts from every form submission. Design the PDF template visually, with AI, or on your own PDF, then send it by email, Drive, or webhook.'
+  'Generate contracts, invoices and certificates from every form submission. Design the PDF visually or with AI, then send it by email, Drive or webhook.'
 
 const BRAND = '#6434d0'
 const BRAND_BG = '#f0ebfa'
@@ -657,6 +663,15 @@ useHead({
 useJsonld([
   {
     '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://formester.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Features', item: 'https://formester.com/features/' },
+      { '@type': 'ListItem', position: 3, name: 'Document generation', item: PAGE_URL },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: 'Formester Documents',
     applicationCategory: 'BusinessApplication',
@@ -706,6 +721,19 @@ useJsonld([
   color: var(--gray-600, #475467);
 }
 .dg-compare-more a {
+  color: #6434d0;
+  text-decoration: underline;
+}
+
+.dg-template-links {
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-6) var(--space-16);
+  max-width: 880px;
+  text-align: center;
+  font-size: 15px;
+  color: var(--gray-600, #475467);
+}
+.dg-template-links a {
   color: #6434d0;
   text-decoration: underline;
 }

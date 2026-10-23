@@ -255,6 +255,12 @@ const c5_integrations = [
     description: 'Sync every form submission to Google Sheets in real time.',
     link: '/integrations/google-sheets/',
   },
+  {
+    id: 211,
+    name: 'Mailchimp',
+    description: 'Add or update Mailchimp audience contacts from form submissions.',
+    link: '/integrations/mailchimp/',
+  },
 ]
 const c6_title = [
   {

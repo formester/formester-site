@@ -71,6 +71,10 @@
                   <span class="intg-icon"><nuxt-img src="/integrations/gohighlevel.svg" alt="GoHighLevel" width="18" height="18" /></span>
                   <span class="intg-item-name">GoHighLevel</span>
                 </NuxtLink>
+                <NuxtLink to="/integrations/pipedrive/" class="intg-item" @click="$emit('dropdown-close')">
+                  <span class="intg-icon"><nuxt-img src="/integrations/pipedrive.svg" alt="Pipedrive" width="18" height="18" /></span>
+                  <span class="intg-item-name">Pipedrive</span>
+                </NuxtLink>
               </div>
             </div>
 

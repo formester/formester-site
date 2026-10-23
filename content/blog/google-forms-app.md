@@ -1,10 +1,10 @@
 ---
 slug: "google-forms-app"
-title: "Is There a Google Forms App? How to Use Forms on a Phone"
-description: "There is no official Google Forms app. Here's what the apps in the stores actually are, how Google says to use Forms on your phone, and where the mobile editor has limits."
-metaTitle: "Is There a Google Forms App? How to Use Forms on a Phone"
-metaDescription: "There is no official Google Forms app. What the store apps are, how Google says to use Forms on a phone, and the one thing the mobile editor cannot do."
-keywords: "google forms app,is there a google forms app,does google forms have an app,google forms app iphone,google forms app android,google forms mobile app,google forms on phone,google forms app download"
+title: "Google Forms App: Is There One? (iPhone & Android 2026)"
+description: "No official Google Forms app exists. Here's how to use Forms on iPhone and Android, add it to your home screen, and which store apps are safe."
+metaTitle: "Google Forms App: Is There One? (iPhone & Android 2026)"
+metaDescription: "No official Google Forms app exists. Here's how to use Forms on iPhone and Android, add it to your home screen, and which store apps are safe."
+keywords: "google forms app,is there a google forms app,does google forms have an app,google forms app iphone,google forms app android,google forms mobile app,google forms on phone,google forms app download,google forms app safe,download google forms"
 author: "Harsh Shah"
 authorProfile: "https://linkedin.com/in/harshshahseo"
 authorImage: "https://formester-strapi.s3.ap-south-1.amazonaws.com/41fc6df7f8a7952a_harsh-shah.jpg"
@@ -12,20 +12,23 @@ coverImgAlt: "Cover art for a guide to using Google Forms on a phone without an 
 featured: false
 coverImg: {"url":"https://formester-strapi.s3.ap-south-1.amazonaws.com/128e49c96ffb12ec_google-forms-app-cover.png","width":1200,"height":630}
 metaImage: []
-jsonld: [{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://formester.com/#organization","url":"https://formester.com/","name":"Formester","logo":{"@type":"ImageObject","url":"https://formester.com/logo.png"}},{"@type":"WebSite","@id":"https://formester.com/#website","url":"https://formester.com/","name":"Formester","publisher":{"@id":"https://formester.com/#organization"}},{"@type":"WebPage","@id":"https://formester.com/blog/google-forms-app/#webpage","url":"https://formester.com/blog/google-forms-app/","name":"Is There a Google Forms App? How to Use Forms on a Phone","isPartOf":{"@id":"https://formester.com/#website"},"breadcrumb":{"@id":"https://formester.com/blog/google-forms-app/#breadcrumb"},"inLanguage":"en-US","description":"There is no official Google Forms app. Here's what the apps in the stores actually are, how Google says to use Forms on your phone, and where the mobile editor has limits.","datePublished":"2026-09-09","dateModified":"2026-09-09"},{"@type":"BreadcrumbList","@id":"https://formester.com/blog/google-forms-app/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://formester.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://formester.com/blog/"},{"@type":"ListItem","position":3,"name":"Is There a Google Forms App? How to Use Forms on a Phone","item":"https://formester.com/blog/google-forms-app/"}]},{"@type":"BlogPosting","@id":"https://formester.com/blog/google-forms-app/#article","headline":"Is There a Google Forms App? How to Use Forms on a Phone","image":"https://formester-strapi.s3.ap-south-1.amazonaws.com/128e49c96ffb12ec_google-forms-app-cover.png","author":{"@type":"Person","name":"Harsh Shah","url":"https://linkedin.com/in/harshshahseo","image":"https://formester-strapi.s3.ap-south-1.amazonaws.com/41fc6df7f8a7952a_harsh-shah.jpg"},"publisher":{"@id":"https://formester.com/#organization"},"inLanguage":"en-US","description":"There is no official Google Forms app. Here's what the apps in the stores actually are, how Google says to use Forms on your phone, and where the mobile editor has limits.","datePublished":"2026-09-09","dateModified":"2026-09-09","mainEntityOfPage":{"@id":"https://formester.com/blog/google-forms-app/#webpage"},"about":[{"@type":"SoftwareApplication","name":"Google Forms","applicationCategory":"BusinessApplication","url":"https://docs.google.com/forms/","operatingSystem":"Web"}],"mentions":[{"@id":"https://formester.com/#software"}],"citation":[{"@type":"WebPage","name":"How to use Google Forms","url":"https://support.google.com/docs/answer/6281888","publisher":{"@type":"Organization","name":"Google"}}]},{"@type":"FAQPage","@id":"https://formester.com/blog/google-forms-app/#faq","mainEntity":[{"@type":"Question","name":"Is there an official Google Forms app?","acceptedAnswer":{"@type":"Answer","text":"No. Google has not released a Google Forms app for iPhone, iPad, or Android. Its help page tells you to open a mobile browser such as Safari or Chrome and go to Google Forms, and you can use the Google Drive app to find forms you already have. Every app named Google Forms in the App Store or Google Play is made by a third party."}},{"@type":"Question","name":"Is there a Google Forms app for iPhone?","acceptedAnswer":{"@type":"Answer","text":"Not from Google. On an iPhone, open forms.google.com in Safari, sign in and you get the full editor. To make it open more like an app, tap Share and choose Add to Home Screen. The documented limitation is that the date and time picker is not supported on iPhone and iPad, so build date questions on a computer."}},{"@type":"Question","name":"Is there a Google Forms app for Android?","acceptedAnswer":{"@type":"Answer","text":"Not from Google. Open forms.google.com in Chrome, sign in and build or edit forms in the browser. For a home-screen icon, open Chrome's menu and choose Add to Home screen. The FormsApp listings in Google Play are third-party clients that sign in with your Google account."}},{"@type":"Question","name":"What is the Google Forms app in the App Store?","acceptedAnswer":{"@type":"Answer","text":"It is a third-party app using Google Forms in its name. Forms for Google Docs, Forms+, and the app called Google Forms App are built by independent developers. They are free with in-app purchases and work by signing in with your Google account to read and edit forms in your Drive. Their listings say they are not associated with Google."}},{"@type":"Question","name":"How do I access Google Forms on my phone?","acceptedAnswer":{"@type":"Answer","text":"Open forms.google.com in your phone's browser and sign in with your Google account. Your recent forms and template gallery will appear, and tapping a form opens the editor. You can also open the Google Drive app, find the form and tap it to launch the same browser editor."}},{"@type":"Question","name":"Can you use Google Forms offline?","acceptedAnswer":{"@type":"Answer","text":"No. Both the editor and responder page need an internet connection to load and submit, and there is no queue for responses submitted without one. If you need to collect responses without a connection, use a form builder with offline mode that saves responses on the device and syncs them later."}},{"@type":"Question","name":"Is Google Forms still free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Google Forms is free with a personal Google account, with no limit on the number of forms or responses, and it is included in paid Google Workspace plans. The third-party apps that wrap Google Forms are the ones with in-app purchases. Google Forms itself does not have a paid tier."}},{"@type":"Question","name":"Can I add Google Forms to my home screen?","acceptedAnswer":{"@type":"Answer","text":"Yes. With forms.google.com open in Safari on an iPhone, tap Share and choose Add to Home Screen. In Chrome on Android, open the menu and choose Add to Home screen. The icon opens Google Forms full-screen without the browser bar and stays signed in, which is as close to an app as Google currently offers."}}]},{"@type":"SoftwareApplication","@id":"https://formester.com/#software","url":"https://formester.com/","name":"Formester","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Free forever plan, no credit card required"}}]}]
+jsonld: [{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://formester.com/#organization","url":"https://formester.com/","name":"Formester","logo":{"@type":"ImageObject","url":"https://formester.com/logo.png"}},{"@type":"WebSite","@id":"https://formester.com/#website","url":"https://formester.com/","name":"Formester","publisher":{"@id":"https://formester.com/#organization"}},{"@type":"WebPage","@id":"https://formester.com/blog/google-forms-app/#webpage","url":"https://formester.com/blog/google-forms-app/","name":"Google Forms App: Is There One? (iPhone & Android 2026)","isPartOf":{"@id":"https://formester.com/#website"},"breadcrumb":{"@id":"https://formester.com/blog/google-forms-app/#breadcrumb"},"inLanguage":"en-US","description":"No official Google Forms app exists. Here's how to use Forms on iPhone and Android, add it to your home screen, and which store apps are safe.","datePublished":"2026-09-09","dateModified":"2026-10-23"},{"@type":"BreadcrumbList","@id":"https://formester.com/blog/google-forms-app/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://formester.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://formester.com/blog/"},{"@type":"ListItem","position":3,"name":"Google Forms App: Is There One? (iPhone & Android 2026)","item":"https://formester.com/blog/google-forms-app/"}]},{"@type":"BlogPosting","@id":"https://formester.com/blog/google-forms-app/#article","headline":"Google Forms App: Is There One? (iPhone & Android 2026)","image":"https://formester-strapi.s3.ap-south-1.amazonaws.com/128e49c96ffb12ec_google-forms-app-cover.png","author":{"@type":"Person","name":"Harsh Shah","url":"https://linkedin.com/in/harshshahseo","image":"https://formester-strapi.s3.ap-south-1.amazonaws.com/41fc6df7f8a7952a_harsh-shah.jpg"},"publisher":{"@id":"https://formester.com/#organization"},"inLanguage":"en-US","description":"No official Google Forms app exists. Here's how to use Forms on iPhone and Android, add it to your home screen, and which store apps are safe.","datePublished":"2026-09-09","dateModified":"2026-10-23","mainEntityOfPage":{"@id":"https://formester.com/blog/google-forms-app/#webpage"},"about":[{"@type":"SoftwareApplication","name":"Google Forms","applicationCategory":"BusinessApplication","url":"https://docs.google.com/forms/","operatingSystem":"Web"}],"mentions":[{"@id":"https://formester.com/#software"}],"citation":[{"@type":"WebPage","name":"How to use Google Forms","url":"https://support.google.com/docs/answer/6281888","publisher":{"@type":"Organization","name":"Google"}}]},{"@type":"FAQPage","@id":"https://formester.com/blog/google-forms-app/#faq","mainEntity":[{"@type":"Question","name":"Is there an official Google Forms app?","acceptedAnswer":{"@type":"Answer","text":"No. Google has not released a Google Forms app for iPhone, iPad, or Android. Its help page tells you to open a mobile browser such as Safari or Chrome and go to Google Forms, and you can use the Google Drive app to find forms you already have. Every app named Google Forms in the App Store or Google Play is made by a third party."}},{"@type":"Question","name":"Is there a Google Forms app for iPhone?","acceptedAnswer":{"@type":"Answer","text":"Not from Google. On an iPhone, open forms.google.com in Safari, sign in and you get the full editor. To make it open more like an app, tap Share and choose Add to Home Screen. The documented limitation is that the date and time picker is not supported on iPhone and iPad, so build date questions on a computer."}},{"@type":"Question","name":"Is there a Google Forms app for Android?","acceptedAnswer":{"@type":"Answer","text":"Not from Google. Open forms.google.com in Chrome, sign in and build or edit forms in the browser. For a home-screen icon, open Chrome's menu and choose Add to Home screen. The FormsApp listings in Google Play are third-party clients that sign in with your Google account."}},{"@type":"Question","name":"What is the Google Forms app in the App Store?","acceptedAnswer":{"@type":"Answer","text":"It is a third-party app using Google Forms in its name. Forms for Google Docs, Forms+, and the app called Google Forms App are built by independent developers. They are free with in-app purchases and work by signing in with your Google account to read and edit forms in your Drive. Their listings say they are not associated with Google."}},{"@type":"Question","name":"How do I access Google Forms on my phone?","acceptedAnswer":{"@type":"Answer","text":"Open forms.google.com in your phone's browser and sign in with your Google account. Your recent forms and template gallery will appear, and tapping a form opens the editor. You can also open the Google Drive app, find the form and tap it to launch the same browser editor."}},{"@type":"Question","name":"Can you use Google Forms offline?","acceptedAnswer":{"@type":"Answer","text":"No. Both the editor and responder page need an internet connection to load and submit, and there is no queue for responses submitted without one. If you need to collect responses without a connection, use a form builder with offline mode that saves responses on the device and syncs them later."}},{"@type":"Question","name":"Is Google Forms still free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Google Forms is free with a personal Google account, with no limit on the number of forms or responses, and it is included in paid Google Workspace plans. The third-party apps that wrap Google Forms are the ones with in-app purchases. Google Forms itself does not have a paid tier."}},{"@type":"Question","name":"Can I add Google Forms to my home screen?","acceptedAnswer":{"@type":"Answer","text":"Yes. With forms.google.com open in Safari on an iPhone, tap Share and choose Add to Home Screen. In Chrome on Android, open the menu and choose Add to Home screen. The icon opens Google Forms full-screen without the browser bar and stays signed in, which is as close to an app as Google currently offers."}},{"@type":"Question","name":"Can I download Google Forms?","acceptedAnswer":{"@type":"Answer","text":"There is no Google Forms app to download. Open forms.google.com in your phone's browser instead, and use Add to Home Screen if you want an icon. If you mean downloading responses, open the Responses tab, click the three-dot menu and choose Download responses (.csv). You can also save a form as a PDF from the browser print dialog."}},{"@type":"Question","name":"Is the Google Forms app in the App Store safe?","acceptedAnswer":{"@type":"Answer","text":"The store apps are made by independent developers, and their listings say they are not associated with Google. They ask you to sign in with your Google account so they can read and edit your forms in Drive. Read the privacy details on the listing first, and remove the app's access in your Google account security settings when you stop using it."}}]},{"@type":"SoftwareApplication","@id":"https://formester.com/#software","url":"https://formester.com/","name":"Formester","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Free forever plan, no credit card required"}}]}]
 promoPopup: {"enabled":true,"id":"gforms-app-ai","delaySeconds":10,"eyebrow":"Formester AI","heading":"Build the form from your phone in one click","text":"Describe it in a sentence and the AI writes the questions. No app to install, and the form keeps working offline once it is open.","image":"https://formester-strapi.s3.ap-south-1.amazonaws.com/2f0cfc9f493e908b_formester-ai-build-form.gif","imageAlt":"Formester AI generating a complete form from a one-line description","ctaLabel":"Build my form free","ctaHref":"https://app.formester.com/users/sign_up"}
 createdAt: "2026-09-09T00:00:00.000Z"
-updatedAt: "2026-09-09T00:00:00.000Z"
+updatedAt: "2026-10-23T00:00:00.000Z"
 publishedAt: "2026-09-09T00:00:00.000Z"
 ---
 
 ![Cover art for a guide to using Google Forms on a phone without an app](https://formester-strapi.s3.ap-south-1.amazonaws.com/128e49c96ffb12ec_google-forms-app-cover.png)
 
-<p style="font-size: inherit;">No, there is no Google Forms app. Google has never released an official one for iPhone or Android. The apps you see in the App Store and Google Play are made by other companies and work by connecting to your Google account.</p>
+<div class="tldr">
+<p><strong>Short answer</strong></p>
+<p>No. Google has no official Google Forms app for iPhone or Android. Use Google Forms in a mobile browser such as Safari or Chrome, and add it to your home screen. The Google Forms apps in the App Store and Google Play are made by third parties.</p>
+</div>
 
 <p>The official way to use Google Forms on a phone is through your browser. Open forms.google.com in Safari or Chrome, sign in and you get the same editor you use on a computer, with one documented limitation.</p>
 
-<p>For most people, that works just fine. Below, we'll explain how to make Google Forms feel more like an app, what those third-party apps are actually doing, how to build and answer forms on a phone, and what you can't do from mobile.</p>
+<p>For most people, that works just fine. Below, we'll explain how to make Google Forms feel more like an app, what those third-party apps are actually doing, whether they are safe, how to build and answer forms on a phone, and what you can't do from mobile. If you want a form tool with a native app, see our comparison of <a href="/blog/best-mobile-form-builders/">the best mobile form builders</a>.</p>
 
 <div class="tldr">
 <p><strong>Quick answer</strong></p>
@@ -36,7 +39,7 @@ publishedAt: "2026-09-09T00:00:00.000Z"
 </ul>
 </div>
 
-<h2 id="app">Is there a Google Forms app?</h2>
+<h2 id="app">Is there a Google Forms app for iPhone and Android?</h2>
 
 <p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/2029e4fe4b78254c_google-play-search-google-forms.gif" alt="Searching Google Play for google forms: the first result is a third-party FormsApp, above Google's own Docs and Sheets apps" loading="lazy"></p>
 
@@ -56,34 +59,55 @@ publishedAt: "2026-09-09T00:00:00.000Z"
 
 <p>Some of these apps are well made and have strong ratings. The important thing to understand before you install one is the access you're giving it. You're giving another company access to your forms in exchange for a native-looking interface around a website that already works on your phone.</p>
 
+<p>There's nothing these apps do that you can't do in the browser. What they add is a more native-feeling layout, a response list designed for a phone screen, and, on paid plans, things such as response notifications.</p>
+
+<h2 id="download">Google Forms app download: is it safe?</h2>
+
+<p>Each store listing below is a third-party client, and each says it is not associated with Google. When you sign in, the app can read, edit and create forms in your Google Drive, so you are trusting the developer with those files.</p>
+
 <div class="table-wrap">
 <table>
-<thead><tr><th>Listing</th><th>Developer</th><th>Price</th><th>What it is</th><th>What it asks for</th></tr></thead>
+<thead><tr><th>App</th><th>Developer</th><th>Pricing</th><th>Affiliated with Google?</th></tr></thead>
 <tbody>
-<tr><td>Forms for Google Docs (App Store)</td><td>Aurora Innovation</td><td>Free, in-app purchases</td><td>Third-party client. Listing says it is not associated with Google.</td><td>Google account sign-in</td></tr>
-<tr><td>Forms+ (App Store)</td><td>Amad Marwat</td><td>Free, in-app purchases</td><td>Third-party client with the same disclaimer.</td><td>Google account sign-in</td></tr>
-<tr><td>Google Forms App (App Store)</td><td>App Training</td><td>Free, in-app purchases</td><td>Third-party client despite the name.</td><td>Google account sign-in</td></tr>
-<tr><td>FormsApp (Google Play)</td><td>Aurora Innovation Labs</td><td>Free, ads and in-app purchases</td><td>Third-party client. Listing says it is not associated with Google Forms.</td><td>Google account sign-in</td></tr>
+<tr><td>Forms for Google Docs (App Store)</td><td>Aurora Innovation</td><td>Free, in-app purchases</td><td>No. The listing says it is not associated with Google.</td></tr>
+<tr><td>Forms+ (App Store)</td><td>Amad Marwat</td><td>Free, in-app purchases</td><td>No. Same disclaimer.</td></tr>
+<tr><td>Google Forms App (App Store)</td><td>App Training</td><td>Free, in-app purchases</td><td>No, despite the name.</td></tr>
+<tr><td>FormsApp (Google Play)</td><td>Aurora Innovation Labs</td><td>Free, ads and in-app purchases</td><td>No. The listing says it is not associated with Google Forms.</td></tr>
 </tbody>
 </table>
 </div>
 
-<p>There's nothing these apps do that you can't do in the browser. What they add is a more native-feeling layout, a response list designed for a phone screen, and, on paid plans, things such as response notifications.</p>
+<p>Before you install one, check these:</p>
 
-<p>If you decide to use one, check that the listing clearly says it is a third-party app, review its data safety information, and remove its access when you stop using it. You can manage that access through your Google account security settings.</p>
+<ul>
+<li>The listing says it is a third-party app, not an official Google product.</li>
+<li>The privacy details (App Privacy on the App Store, Data safety on Google Play) match what you are comfortable sharing.</li>
+<li>You know the plan: the apps are free to install, but paid features sit behind in-app purchases.</li>
+</ul>
 
-<p>If you don't need the native app-style interface, the browser route costs nothing extra and does not require you to give a third-party app access to your forms.</p>
+<p>When you stop using an app, remove its access to your account in your Google account security settings. If you don't need the native app look, the browser route costs nothing and doesn't give a third party access to your forms.</p>
 
 <h2 id="phone">How do you use Google Forms on a phone?</h2>
 
 <p>Pretty much the same way you use it on a computer, just in a smaller window. Google's instructions cover iPhone, iPad and Android and the basic steps work in Safari, Chrome and Samsung Internet.</p>
 
+<h3>How to open Google Forms on your phone</h3>
+
+<p>Open your phone's browser, type forms.google.com and sign in with your Google account. You see your Forms home with recent forms and the template gallery. If you're signed out, you'll see the Google sign-in page first.</p>
+
+<p>If your phone has both a work and a personal Google account signed in, check the account avatar before creating a form. The form is saved to the Drive connected to the account you're using.</p>
+
+<h3>How to access Google Forms on Android and iPhone</h3>
+
+<ul>
+<li><strong>iPhone or iPad:</strong> open Safari, go to forms.google.com and sign in.</li>
+<li><strong>Android:</strong> open Chrome, go to forms.google.com and sign in.</li>
+<li><strong>Any phone:</strong> open the Google Drive app, find your form and tap it. It opens in the browser editor.</li>
+</ul>
+
+<p>The steps below cover building, publishing and adding Forms to your home screen.</p>
+
 <ol class="steps">
-<li>
-<h3>Open forms.google.com and sign in</h3>
-<p>Type forms.google.com directly into your browser. If you're signed out, you'll see the Google sign-in page. Once you're signed in, you'll see your Forms home, recent forms and the template gallery.</p>
-<p>If your phone has both a work and personal Google account signed in, check the account avatar before creating a form. The form is saved to the Drive connected to the account you're using.</p>
-</li>
 <li>
 <h3>Start a form, or open one from Drive</h3>
 <p>Tap <strong>Blank form</strong> to start from scratch, or choose a template. If you're opening a form you already created, the Google Drive app can be quicker. Find the form in Drive, tap it and it will open in the browser editor.</p>
@@ -135,11 +159,13 @@ publishedAt: "2026-09-09T00:00:00.000Z"
 
 <p>Google hasn't given a specific reason, and people have been asking about it on Google's help forum for years.</p>
 
+<h3>Why doesn't Google have a Forms app?</h3>
+
 <p>The practical explanation is that Forms is part of Drive and Workspace rather than a standalone product. The editor also works reasonably well in a mobile browser, so a native app would largely duplicate what already exists.</p>
 
 <p>Docs and Sheets benefit more from native apps because typing documents and editing spreadsheets in a phone browser can be painful. Building a form is mostly tapping, which the browser handles well.</p>
 
-<p>Whether Google will ever release a native Forms app is something nobody outside Google can answer. For now, the practical approach is to use the browser and add Forms to your home screen.</p>
+<p>Whether Google will ever release a native Forms app is something nobody outside Google can answer. For now, the practical approach is to use the browser and add Forms to your home screen. If a store-installed app matters to you, compare <a href="/blog/best-mobile-form-builders/">mobile form builders that have native apps</a>.</p>
 
 <h2 id="formester">Where Formester fits</h2>
 
@@ -184,4 +210,6 @@ publishedAt: "2026-09-09T00:00:00.000Z"
 <details><summary>Can you use Google Forms offline?</summary><div>No. Both the editor and responder page need an internet connection to load and submit, and there is no queue for responses submitted without one. If you need to collect responses without a connection, use a form builder with offline mode that saves responses on the device and syncs them later.</div></details>
 <details><summary>Is Google Forms still free?</summary><div>Yes. Google Forms is free with a personal Google account, with no limit on the number of forms or responses, and it is included in paid Google Workspace plans. The third-party apps that wrap Google Forms are the ones with in-app purchases. Google Forms itself does not have a paid tier.</div></details>
 <details><summary>Can I add Google Forms to my home screen?</summary><div>Yes. With forms.google.com open in Safari on an iPhone, tap Share and choose Add to Home Screen. In Chrome on Android, open the menu and choose Add to Home screen. The icon opens Google Forms full-screen without the browser bar and stays signed in, which is as close to an app as Google currently offers.</div></details>
+<details><summary>Can I download Google Forms?</summary><div>There is no Google Forms app to download. Open forms.google.com in your phone's browser instead, and use Add to Home Screen if you want an icon. If you mean downloading responses, open the Responses tab, click the three-dot menu and choose Download responses (.csv). You can also save a form as a PDF from the browser print dialog.</div></details>
+<details><summary>Is the Google Forms app in the App Store safe?</summary><div>The store apps are made by independent developers, and their listings say they are not associated with Google. They ask you to sign in with your Google account so they can read and edit your forms in Drive. Read the privacy details on the listing first, and remove the app's access in your Google account security settings when you stop using it.</div></details>
 </section>
