@@ -16,8 +16,8 @@
     <StickyStepsSection
       id="how-it-works"
       badge="How it works"
-      heading="How to make a contract online"
-      description="Formester is a contract maker built on forms. Your client fills in a form and signs it on screen, and their answers and electronic signature fill in your contract PDF."
+      heading="How to create a contract online"
+      description="Formester is a contract maker built on forms. Your client fills in a form and signs it on screen, and their answers and electronic signature fill in your contract PDF. Building the form and collecting e-signatures is free. The signed contract PDF needs the Business plan."
       :buttons="howButtons"
       :steps="howSteps"
       class="page-component-item"
@@ -93,6 +93,46 @@
       class="page-component-item"
     />
 
+    <CardGrid
+      id="who-uses-it"
+      eyebrow="Who uses it"
+      description="Anyone who sends the same agreement to different people and needs each one filled in and signed."
+      columns="3"
+      background="var(--gray-25, #fcfcfd)"
+      :title="whoTitle"
+      :cards="whoCards"
+      class="page-component-item"
+    />
+
+    <section id="compare" class="cg-compare page-component-item">
+      <div class="cg-compare__inner">
+        <SectionHeader eyebrow="Contract builder comparison" :title="compareTitle" :description="compareDescription" />
+        <div class="cg-compare__scroll">
+          <table class="cg-compare__table">
+            <thead>
+              <tr>
+                <th scope="col">Tool</th>
+                <th scope="col">How you make the contract</th>
+                <th scope="col">What to know</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="row in compareRows" :key="row.tool">
+                <th scope="row">{{ row.tool }}</th>
+                <td>{{ row.how }}</td>
+                <td>{{ row.know }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="cg-compare__note">
+          Plans and limits change, so check each tool's pricing page before you choose. Looking at Jotform for more than
+          contracts? Read our
+          <NuxtLink to="/jotform-alternative/">Jotform alternative</NuxtLink> page.
+        </p>
+      </div>
+    </section>
+
     <TestimonialsV2
       version="feature"
       :heading="testimonialsHeading"
@@ -101,6 +141,11 @@
     />
 
     <FaqSection centered :title="faqTitle" :faqList="faqList" class="page-component-item" />
+
+    <p class="cg-legal page-component-item">
+      Formester provides software, not legal advice. Templates and AI-built forms are starting points, so have a lawyer
+      review any contract that matters before you use it.
+    </p>
 
     <CtaDark
       badge="Business plan, from $45/mo"
@@ -124,9 +169,10 @@ import TrustSeals from '@/components/v2/TrustSeals.vue'
 
 const SIGN_UP_URL = 'https://app.formester.com/users/sign_up'
 const PAGE_URL = 'https://formester.com/contract-generator/'
-const META_TITLE = 'Contract Generator & Maker with Signed PDFs | Formester'
+const META_TITLE = 'Create a Contract Online Free: Contract Maker | Formester'
 const META_DESCRIPTION =
-  'An online contract maker: your client fills in a form and e-signs it, and each submission creates a filled, signed contract PDF, sent to both of you.'
+  'Create a contract online in minutes. Pick a template, let AI build the form, collect e-signatures and get a signed PDF. Build free; signed PDFs on Business.'
+const DATE_MODIFIED = '2026-10-23'
 const META_IMAGE = 'https://formester-strapi.s3.ap-south-1.amazonaws.com/4912c71a14006d76_blank-vs-filled-contract.webp'
 
 const BRAND = '#6434d0'
@@ -360,6 +406,61 @@ const templateCards = [
   },
 ]
 
+// Section: who uses it. No stats, only the situations the page is built for.
+const whoTitle = [
+  { text: 'Who uses this ', highlight: false, color: '#475467', bold: false },
+  { text: 'contract maker', highlight: true, color: '#475467', bold: false },
+]
+const whoCards = [
+  {
+    tag: 'Freelancers',
+    tagColor: 'violet',
+    title: 'Get a signature before you start',
+    body: 'Send the same freelance or web design contract to every new client. They add their details and sign, and you get the finished PDF.',
+  },
+  {
+    tag: 'Agencies',
+    tagColor: 'blue',
+    title: 'One service agreement, many clients',
+    body: 'Keep one agreement for your retainers and projects. Each client fills in their company, scope, and fee, and your team gets a signed copy.',
+  },
+  {
+    tag: 'Small businesses',
+    tagColor: 'green',
+    title: 'Leases, NDAs, and hiring paperwork',
+    body: 'Collect signed NDAs, lease agreements, and employee agreements from a link, without printing or scanning.',
+  },
+]
+
+// Section: comparison. Based on each vendor's public pages (Square Contracts, Jotform Sign, Docusign pricing), Oct 2026.
+const compareTitle = [
+  { text: 'Contract builder: ', highlight: false, color: '#475467', bold: false },
+  { text: 'Formester vs Square, Jotform, Docusign', highlight: true, color: '#475467', bold: false },
+]
+const compareDescription = 'Each tool starts from a different place. Pick the one that matches how you already work.'
+const compareRows = [
+  {
+    tool: 'Formester',
+    how: 'Your client fills in a form and signs it, and the answers fill in your contract PDF.',
+    know: 'Building the form and collecting e-signatures is free. The filled, signed PDF needs the Business plan.',
+  },
+  {
+    tool: 'Square Contracts',
+    how: 'Create and customize contracts from the Square Dashboard.',
+    know: 'Square advertises contracts as free to build. It is made for businesses that already use Square.',
+  },
+  {
+    tool: 'Jotform',
+    how: 'Start from a library of agreement templates and collect signatures with Jotform Sign.',
+    know: 'A large template library. Signing and submission limits depend on your Jotform plan.',
+  },
+  {
+    tool: 'Docusign',
+    how: 'Upload a document you wrote elsewhere, add signature fields, and send it for signing.',
+    know: 'Built for signing and agreement management. Its Personal plan includes 5 envelopes a month.',
+  },
+]
+
 // Section: delivery. Each card is a real place in the app where the Connected PDF is sent or stored.
 const deliveryTitle = [
   { text: 'Where the signed contract ', highlight: false, color: '#475467', bold: false },
@@ -561,6 +662,11 @@ const faqList = [
     body: 'Every signed contract is a PDF. You can name each file from the answers, like “Contract - Client name”, and on the Business plan you can add a Formester digital certificate to each PDF.',
   },
   {
+    id: 11,
+    header: 'Can I make a fake or sample contract?',
+    body: 'Yes, for practice. Open a template, fill it in with made-up names and amounts, and test the whole flow, including the signature and the PDF. A sample contract is not a legal agreement, though. Do not present a fake contract as real to anyone. For a contract you will actually use, start from a template, fill in the real terms, and have a lawyer review it.',
+  },
+  {
     id: 10,
     header: 'Where are signed contracts kept?',
     body: 'Each signed submission stays in your form’s Results, and you can download its contract PDF from there at any time. You can also email the PDF to you and your client and save a copy to Google Drive.',
@@ -599,7 +705,16 @@ useJsonld([
     operatingSystem: 'Web',
     url: PAGE_URL,
     description: META_DESCRIPTION,
-    offers: { '@type': 'Offer', price: '45', priceCurrency: 'USD' },
+    dateModified: DATE_MODIFIED,
+    offers: [
+      {
+        '@type': 'Offer',
+        name: 'Free: build the contract form and collect e-signatures',
+        price: '0',
+        priceCurrency: 'USD',
+      },
+      { '@type': 'Offer', name: 'Business: signed contract PDFs', price: '45', priceCurrency: 'USD' },
+    ],
   },
   {
     '@context': 'https://schema.org',
@@ -612,6 +727,7 @@ useJsonld([
   {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
+    dateModified: DATE_MODIFIED,
     mainEntity: faqList.map((faq) => ({
       '@type': 'Question',
       name: faq.header,
@@ -650,6 +766,67 @@ useJsonld([
 </style>
 
 <style scoped>
+.cg-compare {
+  background: #fff;
+  padding: var(--space-16) var(--space-6);
+}
+.cg-compare__inner {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.cg-compare__scroll {
+  overflow-x: auto;
+  margin-top: var(--space-6, 24px);
+}
+.cg-compare__table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  font-size: 15px;
+  color: #475467;
+  text-align: left;
+}
+.cg-compare__table th,
+.cg-compare__table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #eaecf0;
+  vertical-align: top;
+  line-height: 1.5;
+}
+.cg-compare__table thead th {
+  font-size: 13px;
+  font-weight: 600;
+  color: #101828;
+  background: var(--gray-25, #fcfcfd);
+}
+.cg-compare__table tbody th {
+  font-weight: 600;
+  color: #101828;
+  white-space: nowrap;
+}
+.cg-compare__table tbody tr:first-child {
+  background: #f0ebfa;
+}
+.cg-compare__note {
+  margin: var(--space-4, 16px) 0 0;
+  font-size: 14px;
+  color: #667085;
+  text-align: center;
+}
+.cg-compare__note a {
+  color: #6434d0;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.cg-legal {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: var(--space-8, 32px) var(--space-6, 24px);
+  font-size: 14px;
+  color: #667085;
+  text-align: center;
+}
 .cg-templates.page-component-item {
   padding-bottom: var(--space-8, 32px);
 }

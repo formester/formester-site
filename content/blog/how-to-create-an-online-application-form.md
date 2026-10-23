@@ -119,7 +119,7 @@ section[class^="fmstr-cmp-"], section[class*=" fmstr-cmp-"] {
 
 <p class="fmstr-blog-lead">This guide walks through that exact path. Five steps, no fluff. By the time you finish, you'll have a working online application form, a clean reviewer workflow, and a way to track who's in, who's out, and who's waiting.</p>
 
-<p class="fmstr-blog-lead">If you want to skip ahead, <a href="https://formester.com/templates/">start from a Formester template</a> or <a href="https://formester.com/ai-form-generator/">generate the form with AI</a> and tailor it.</p>
+<p class="fmstr-blog-lead">If you want to skip ahead, <a href="https://formester.com/templates/">start from a Formester template</a> or <a href="https://formester.com/ai-form-generator/">generate the form with AI</a> and tailor it. Already on Google Workspace? See how to build a <a href="/blog/how-to-create-an-application-form-in-google-forms/">Google Forms application form</a>.</p>
 
 <style>
 .fmstr-cmp-oaf-tldr a { text-decoration: none !important; }

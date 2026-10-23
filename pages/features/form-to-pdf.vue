@@ -98,6 +98,12 @@
       class="page-component-item"
     />
 
+    <div class="ftp-compare">
+      Looking for Google Forms to PDF? Read how to
+      <NuxtLink to="/blog/how-to-save-google-forms-as-pdf/">save Google Forms as a PDF</NuxtLink>
+      one response at a time, or use Formester to make a PDF of every response automatically.
+    </div>
+
     <FaqSection centered :title="faqTitle" :faqList="faqList" class="page-component-item" />
 
     <CtaDark
@@ -472,6 +478,11 @@ const testimonials = [
 
 const faqTitle = [{ text: 'Form to PDF questions', highlight: false, color: '#475467', bold: false }]
 const faqList = [
+  {
+    id: 0,
+    header: 'What is form to PDF?',
+    body: 'Form to PDF turns each form submission into a PDF file. People fill in an online form, and Formester builds the PDF from their answers. You can download it from Results, attach it to emails, save it to Google Drive, or send it by webhook.',
+  },
   {
     id: 1,
     header: 'How do I convert a form submission to PDF?',

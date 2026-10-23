@@ -440,9 +440,9 @@ const c5_integrations = [
   },
   {
     id: 265,
-    name: 'Monday.com',
-    description: 'Send form submissions to your Monday.com boards automatically.',
-    link: '/integrations/monday/',
+    name: 'Pipedrive',
+    description: 'Send form submissions to Pipedrive as linked people and deals.',
+    link: '/integrations/pipedrive/',
   },
 ]
 const c6_title = [

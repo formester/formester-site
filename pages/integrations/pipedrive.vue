@@ -14,6 +14,14 @@
       blobColorC="#e8f5ee"
     />
 
+    <TrustSeals
+      label="Trusted by 56k+ teams worldwide"
+      :showTrustBadges="false"
+      :title="[]"
+      :logos="[]"
+      class="page-component-item"
+    />
+
     <CardGrid
       id="capabilities"
       eyebrow="From form to CRM"
@@ -33,6 +41,57 @@
       :buttons="setupButtons"
     />
 
+    <ComparisonTable
+      id="pipedrive-web-forms-vs-formester"
+      eyebrow="Compare"
+      :title="compareTitle"
+      description="Pipedrive has its own embeddable forms. Formester is a separate form builder that sends each submission to Pipedrive."
+      colUs="Formester"
+      colThem="Pipedrive Web Forms"
+      :rows="compareRows"
+      :note="compareNote"
+      class="page-component-item"
+    />
+
+    <section id="pipedrive-contact-form" class="pd-section page-component-item">
+      <div class="pd-inner">
+        <SectionHeader title="Pipedrive contact form" />
+        <p class="pd-text">
+          A contact form on your website is often the first place a lead shows up. If you copy those inquiries into
+          Pipedrive by hand, some get delayed or missed. Build the contact form in Formester, connect Pipedrive, and
+          each message arrives as a person with a linked deal in the pipeline stage you picked.
+        </p>
+        <p class="pd-text">
+          Ask for the details your sales team needs, such as name, email, phone, and what the person wants. Map the
+          question about their request to the deal title so you can see it in the deal list.
+        </p>
+      </div>
+    </section>
+
+    <section id="google-forms-to-pipedrive" class="pd-section pd-section--alt page-component-item">
+      <div class="pd-inner">
+        <SectionHeader title="Google Forms to Pipedrive" />
+        <p class="pd-text">
+          Google Forms has no built-in Pipedrive option. To get responses into Pipedrive, you connect the linked Google
+          Sheet with Zapier or a script, then keep that connection working. If you build the form in Formester instead,
+          you connect Pipedrive from the form's Automate tab and each response creates a person and a deal directly.
+        </p>
+      </div>
+    </section>
+
+    <TestimonialsV2
+      version="feature"
+      :heading="testimonialHeading"
+      :testimonials="testimonials"
+      class="page-component-item"
+    />
+
+    <IntegrationsGrid
+      title="Explore more integrations"
+      :integrations="relatedIntegrations"
+      class="page-component-item"
+    />
+
     <FaqSection centered :title="faqTitle" :faqList="faqs" />
 
     <CtaDark
@@ -47,10 +106,16 @@
 
 <script setup>
 import CardGrid from '@/components/v2/CardGrid.vue'
+import ComparisonTable from '@/components/v2/ComparisonTable.vue'
 import CtaDark from '@/components/v2/CtaDark.vue'
 import FaqSection from '@/components/v2/FaqSection.vue'
 import HeroV2 from '@/components/v2/HeroV2.vue'
+import IntegrationsGrid from '@/components/integrations/IntegrationsGrid.vue'
+import SectionHeader from '@/components/v2/SectionHeader.vue'
 import StickyStepsSection from '@/components/v2/StickyStepsSection.vue'
+import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
+import TrustSeals from '@/components/v2/TrustSeals.vue'
+import { platformTestimonials } from '@/constants/platform-testimonials'
 
 const heroIllustration =
   '<picture><source media="(max-width: 600px)" srcset="/integrations/pipedrive-hero-mobile.svg"><img src="/integrations/pipedrive-hero.svg" alt="Example of a Formester submission creating or matching a Pipedrive person and adding a linked deal in the selected pipeline and stage" style="display:block;width:100%;height:auto" /></picture>'
@@ -96,8 +161,7 @@ const setupSteps = [
   {
     id: 1,
     title: 'Open Pipedrive on your form',
-    description:
-      'Open a published form, then go to Automate → Integrations → Pipedrive and select Add integration.',
+    description: 'Open a published form, then go to Automate → Integrations → Pipedrive and select Add integration.',
   },
   {
     id: 2,
@@ -126,6 +190,84 @@ const setupButtons = [
     text: 'Read the setup guide',
     type: 'Secondary',
     icon: true,
+  },
+]
+
+const compareTitle = [
+  { id: 1, text: 'Pipedrive Web Forms', highlight: false },
+  { id: 2, text: 'vs Formester', highlight: true },
+]
+const compareRows = [
+  {
+    feature: 'Pipedrive add-on needed',
+    us: 'No LeadBooster add-on',
+    them: 'Part of the LeadBooster add-on',
+  },
+  {
+    feature: 'What a submission creates',
+    us: 'A person and a linked deal',
+    them: 'A lead or a deal',
+  },
+  {
+    feature: 'Where the form is built',
+    us: 'Formester, with multi-step forms, surveys, and quizzes',
+    them: 'Pipedrive, as an embeddable web form',
+  },
+]
+const compareNote =
+  'The Formester Pipedrive integration needs the Business plan or above. Pipedrive says Web Forms is part of LeadBooster, which is included in its Premium and higher plans and can be added to Lite and Growth.'
+
+const testimonialHeading = [
+  { id: 1, text: 'Forms that teams ', highlight: false },
+  { id: 2, text: 'trust to grow', highlight: true },
+]
+const testimonials = [28, 1].map((strapiId) => {
+  const testimonial = platformTestimonials.find((item) => item.strapiId === strapiId)
+
+  return {
+    id: `platform-${testimonial.strapiId}`,
+    name: testimonial.authorName,
+    position: [testimonial.platform, testimonial.authorRole].filter(Boolean).join(' · '),
+    comment: testimonial.text,
+  }
+})
+
+const relatedIntegrations = [
+  {
+    id: 1,
+    name: 'HubSpot CRM',
+    description: 'Push new form leads to HubSpot CRM instantly.',
+    link: '/integrations/hubspot/',
+  },
+  {
+    id: 2,
+    name: 'Salesforce',
+    description: 'Push new form leads straight into Salesforce, mapped to any object.',
+    link: '/integrations/salesforce/',
+  },
+  {
+    id: 3,
+    name: 'Mailchimp',
+    description: 'Add or update Mailchimp audience contacts from form submissions.',
+    link: '/integrations/mailchimp/',
+  },
+  {
+    id: 4,
+    name: 'GoHighLevel',
+    description: 'Sync form submissions with your GoHighLevel CRM automatically.',
+    link: '/integrations/gohighlevel/',
+  },
+  {
+    id: 5,
+    name: 'Google Sheets',
+    description: 'Sync every form submission to Google Sheets in real time.',
+    link: '/integrations/google-sheets/',
+  },
+  {
+    id: 6,
+    name: 'Zapier',
+    description: 'Connect your forms to 8,000+ apps using Zapier.',
+    link: '/integrations/zapier/',
   },
 ]
 
@@ -161,13 +303,33 @@ const faqs = [
     header: 'Which Formester plan includes Pipedrive?',
     body: 'The native Pipedrive integration is available on the Business plan and above. You can create a form with a free account, then upgrade to connect Pipedrive.',
   },
+  {
+    id: 7,
+    header: 'How do I add a form to Pipedrive?',
+    body: 'You have two options. Pipedrive’s own Web Forms are under Leads > Web Forms and need the LeadBooster add-on. Or build the form in Formester, open Automate → Integrations → Pipedrive, authorize with OAuth, and map the person and deal fields. Each submission then creates a person and a linked deal.',
+  },
+  {
+    id: 8,
+    header: 'Do I need Pipedrive LeadBooster?',
+    body: 'Not for the Formester integration. Formester sends data to Pipedrive through your connected account, so you do not need the LeadBooster add-on. You need LeadBooster only if you want to use Pipedrive’s own Web Forms, which Pipedrive includes in Premium and higher plans and sells as an add-on for Lite and Growth.',
+  },
+  {
+    id: 9,
+    header: 'How do I send Google Forms to Pipedrive?',
+    body: 'Google Forms has no built-in Pipedrive option, so you need Zapier or a script to pass responses from its linked Google Sheet to Pipedrive. A simpler route is to build the form in Formester and connect Pipedrive directly, so each response creates a person and a deal.',
+  },
+  {
+    id: 10,
+    header: 'Is a Formester form the same as a Pipedrive contact form?',
+    body: 'A Pipedrive contact form is any form on your site that feeds leads into Pipedrive. With Formester you build the contact form, embed or share it, and connect Pipedrive so each inquiry becomes a person and a deal in the pipeline and stage you choose.',
+  },
 ]
 
 const ctaButtons = [{ id: 1, link: 'https://app.formester.com/users/sign_up', text: 'Start free', type: 'Primary' }]
 
-const seoTitle = 'Pipedrive Form Integration: Send Form Leads to CRM | Formester'
+const seoTitle = 'Pipedrive Form Integration: Send Leads as People & Deals | Formester'
 const seoDescription =
-  'Connect Formester forms to Pipedrive. Create or match a person by email, add a linked deal to your pipeline, and map form answers without Zapier.'
+  'Build forms and send each submission to Pipedrive as a person and linked deal. Native OAuth, pipeline and stage mapping. No LeadBooster add-on required.'
 const canonicalUrl = 'https://formester.com/integrations/pipedrive/'
 const socialImage = 'https://formester.com/formester-logo-meta-image.png'
 
@@ -175,6 +337,7 @@ useHead({
   title: seoTitle,
   link: [{ hid: 'canonical', rel: 'canonical', href: canonicalUrl }],
   meta: [
+    { property: 'article:modified_time', content: '2026-10-23T00:00:00.000Z' },
     { hid: 'description', name: 'description', content: seoDescription },
     { hid: 'og:site_name', property: 'og:site_name', content: 'Formester' },
     { hid: 'og:type', property: 'og:type', content: 'website' },
@@ -205,6 +368,19 @@ useJsonld({
       })),
     },
     {
+      '@type': 'HowTo',
+      name: 'How to send form submissions to Pipedrive as a person and deal',
+      description: 'Connect a Formester form to Pipedrive and create a linked person and deal from each submission.',
+      dateModified: '2026-10-23',
+      step: setupSteps.map((step, index) => ({
+        '@type': 'HowToStep',
+        position: index + 1,
+        name: step.title,
+        text: step.description,
+        url: `${canonicalUrl}#setup`,
+      })),
+    },
+    {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://formester.com/' },
@@ -215,3 +391,22 @@ useJsonld({
   ],
 })
 </script>
+
+<style scoped>
+.pd-section {
+  padding: var(--space-16) var(--space-6);
+}
+.pd-section--alt {
+  background: #f8faf9;
+}
+.pd-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.pd-text {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--fg-1);
+  margin-bottom: var(--space-4);
+}
+</style>

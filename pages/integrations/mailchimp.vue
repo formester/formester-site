@@ -43,6 +43,75 @@
       class="page-component-item"
     />
 
+    <CardGrid
+      id="use-cases"
+      columns="2"
+      :title="useCaseTitle"
+      description="The same setup works for any form that collects an email address."
+      :cards="useCaseCards"
+      class="page-component-item"
+    />
+
+    <section id="alternatives" class="mc-section page-component-item">
+      <div class="mc-inner">
+        <SectionHeader
+          title="Looking for a Typeform, Google Forms or Formsite alternative with Mailchimp?"
+          description="You have a form tool and a Mailchimp audience. This is how the Mailchimp connection differs from tool to tool."
+        />
+        <div class="mc-scroll">
+          <table class="mc-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="mc-us">Formester</th>
+                <th>Typeform</th>
+                <th>Google Forms</th>
+                <th>Formsite</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="row in comparisonRows" :key="row.feature">
+                <th scope="row">{{ row.feature }}</th>
+                <td class="mc-us">{{ row.formester }}</td>
+                <td>{{ row.typeform }}</td>
+                <td>{{ row.googleForms }}</td>
+                <td>{{ row.formsite }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mc-note">
+          Competitor details come from each tool's public help pages and can change:
+          <a href="https://mailchimp.com/help/connect-disconnect-typeform/" target="_blank" rel="noopener">Typeform</a>,
+          <a href="https://support.formsite.com/hc/en-us/articles/47127190418579-Mailchimp" target="_blank" rel="noopener"
+            >Formsite</a
+          >. Google Forms has no Mailchimp option of its own, so what you get depends on the tool you add. For a
+          walkthrough of the Typeform route, read
+          <a href="/blog/typeform-mailchimp-integration/">how to connect Typeform to Mailchimp</a>.
+        </p>
+      </div>
+    </section>
+
+    <section id="google-forms" class="mc-section mc-section--alt page-component-item">
+      <div class="mc-inner mc-inner--narrow">
+        <SectionHeader title="Google Forms to Mailchimp" />
+        <p class="mc-text">
+          Google Forms has no Mailchimp setting. To get responses into an audience, you link the form to a Google Sheet
+          and connect that sheet to Mailchimp with Zapier, an Apps Script, or an add-on. That is another tool to set
+          up, and another thing that can stop working.
+        </p>
+        <p class="mc-text">
+          If you build the form in Formester, you connect Mailchimp from the form's Automate tab. Each response adds or
+          updates a contact in your audience, with field mapping, tags, and your choice of double opt-in.
+        </p>
+        <div class="mc-actions">
+          <FButton variant="secondary" size="lg" href="/blog/google-forms-to-mailchimp/">
+            Read the Google Forms to Mailchimp guide
+          </FButton>
+        </div>
+      </div>
+    </section>
+
     <TestimonialsV2
       version="feature"
       :heading="testimonialHeading"
@@ -72,20 +141,22 @@
 import CardGrid from '@/components/v2/CardGrid.vue'
 import CtaDark from '@/components/v2/CtaDark.vue'
 import FaqSection from '@/components/v2/FaqSection.vue'
+import FButton from '@/components/UI/FButton.vue'
 import HeroV2 from '@/components/v2/HeroV2.vue'
 import IntegrationsGrid from '@/components/integrations/IntegrationsGrid.vue'
+import SectionHeader from '@/components/v2/SectionHeader.vue'
 import StickyStepsSection from '@/components/v2/StickyStepsSection.vue'
 import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
 import TrustSeals from '@/components/v2/TrustSeals.vue'
 import { platformTestimonials } from '@/constants/platform-testimonials'
 
-const pageTitle = 'Mailchimp Form Integration for Online Forms | Formester'
+const pageTitle = 'Form to Mailchimp Integration: Connect Any Form | Formester'
 const pageDescription =
-  'Connect forms to Mailchimp and add or update audience contacts automatically. Map fields, apply tags, use double opt-in, and sync existing responses too.'
+  'Send form submissions to Mailchimp automatically. Native OAuth, field mapping, tags and double opt-in. A simpler alternative to Typeform and Google Forms add-ons.'
 const pageUrl = 'https://formester.com/integrations/mailchimp/'
 
 const heroDescription =
-  'Formester’s native Mailchimp form integration adds or updates audience contacts from every submission. Map fields, apply tags, and choose immediate signup or double opt-in — no Zapier or code required.'
+  'Formester’s native Mailchimp form integration adds or updates audience contacts from every submission. Map fields, apply tags, and choose immediate signup or double opt-in. No Zapier or code required.'
 
 const heroMockupHtml = `
   <div class="raw-html-embed">
@@ -145,7 +216,6 @@ const heroMockupHtml = `
 const heroTitle = [
   { id: 6101, text: 'Connect your forms to ', highlight: false, color: '#475467', bold: false },
   { id: 6102, text: 'Mailchimp', highlight: true, color: '#475467', bold: false },
-  { id: 6103, text: ' and grow your audience', highlight: false, color: '#475467', bold: false },
 ]
 
 const heroButtons = [
@@ -241,6 +311,87 @@ const setupSteps = [
   },
 ]
 
+const useCaseTitle = [
+  { id: 6109, text: 'Form to Mailchimp:', highlight: false, color: '#475467', bold: false },
+  { id: 6110, text: 'popular ways to use it', highlight: true, color: '#475467', bold: false },
+]
+
+const useCaseCards = [
+  {
+    id: 1105,
+    tag: 'Newsletter',
+    tagColor: 'violet',
+    title: 'Newsletter signup',
+    body: 'Share a short signup form as a link or embed it on your site. Each signup is added to your audience, and double opt-in sends the confirmation email if you want it.',
+  },
+  {
+    id: 1106,
+    tag: 'Lead magnet',
+    tagColor: 'blue',
+    title: 'Lead magnet download',
+    body: 'Ask for an email address before someone downloads a guide or checklist. Add a tag such as Ebook so you can send follow-ups to those readers only.',
+  },
+  {
+    id: 1107,
+    tag: 'Events',
+    tagColor: 'green',
+    title: 'Event registration',
+    body: 'Collect name, email, and company on a registration form. Map them to audience fields and tag each contact with the event name for reminders and follow-ups.',
+  },
+  {
+    id: 1108,
+    tag: 'Contact form',
+    tagColor: 'amber',
+    title: 'Contact form to audience',
+    body: 'Send people who write to you into Mailchimp too. Tag them as contacts to tell them apart from newsletter subscribers, and make sure the form says they will get emails.',
+  },
+]
+
+const comparisonRows = [
+  {
+    feature: 'Native Mailchimp connection',
+    formester: 'Yes',
+    typeform: 'Yes',
+    googleForms: 'No, needs Zapier, Apps Script or an add-on',
+    formsite: 'Yes (Professional plan)',
+  },
+  {
+    feature: 'How you connect',
+    formester: 'Mailchimp OAuth sign-in',
+    typeform: 'Mailchimp authorize screen',
+    googleForms: 'Depends on the tool you add',
+    formsite: 'Mailchimp API key',
+  },
+  {
+    feature: 'Field mapping',
+    formester: 'Yes',
+    typeform: 'Yes',
+    googleForms: 'In the tool you add',
+    formsite: 'Yes',
+  },
+  {
+    feature: 'Tags',
+    formester: 'Yes, one or more tags per integration',
+    typeform: 'Yes, one tag for all or tags from choice answers',
+    googleForms: 'In the tool you add',
+    formsite: 'Not listed in its docs',
+  },
+  {
+    feature: 'Double opt-in',
+    formester: 'Yes, choose per integration',
+    typeform: 'Not listed in its docs',
+    googleForms: 'In the tool you add',
+    formsite: 'Follows your audience setting',
+  },
+  {
+    feature: 'Zapier needed?',
+    formester: 'No',
+    typeform: 'No',
+    googleForms: 'Usually, or a script',
+    formsite: 'No',
+  },
+]
+
 const testimonialHeading = [
   { id: 6106, text: 'Forms that teams ', highlight: false },
   { id: 6107, text: 'trust to grow', highlight: true },
@@ -271,6 +422,12 @@ const testimonials = [
 
 const relatedIntegrations = [
   {
+    id: 607,
+    name: 'Pipedrive',
+    description: 'Send form submissions to Pipedrive as linked people and deals.',
+    link: '/integrations/pipedrive/',
+  },
+  {
     id: 601,
     name: 'HubSpot CRM',
     description: 'Push new form leads to HubSpot CRM instantly.',
@@ -293,12 +450,6 @@ const relatedIntegrations = [
     name: 'Zapier',
     description: 'Connect your forms to 8,000+ apps using Zapier.',
     link: '/integrations/zapier/',
-  },
-  {
-    id: 605,
-    name: 'Google Analytics',
-    description: 'Track form events and user behavior in real time.',
-    link: '/integrations/google-analytics/',
   },
   {
     id: 606,
@@ -369,6 +520,27 @@ const faqs = [
     body_markdown: '',
     list: [],
   },
+  {
+    id: 4109,
+    header: 'How do I connect Typeform or Google Forms to Mailchimp?',
+    body: 'Typeform has a native Mailchimp connection: open the Connect tab, choose Mailchimp, authorize your account, pick an audience, and map questions to audience fields. Google Forms has no Mailchimp option, so you connect its linked Google Sheet with Zapier, an Apps Script, or an add-on. If you build the form in Formester instead, go to Automate → Integrations → Mailchimp and connect with OAuth.',
+    body_markdown: '',
+    list: [],
+  },
+  {
+    id: 4110,
+    header: 'Formester vs Typeform for Mailchimp?',
+    body: 'Both connect to Mailchimp without Zapier, map answers to audience fields, and support tags. In Formester you select one or more tags that apply to every contact, choose immediate subscription or double opt-in, and can sync existing submissions. Typeform can also tag contacts based on choice answers, and its Mailchimp help page does not describe a double opt-in setting.',
+    body_markdown: '',
+    list: [],
+  },
+  {
+    id: 4111,
+    header: 'Can I use Mailchimp with a contact form?',
+    body: 'Yes. Build a contact form with an email question, connect Mailchimp in the form’s integrations, and map the email and name to your audience. Tag those contacts so you can tell them apart from newsletter subscribers, and tell people on the form that they will receive emails.',
+    body_markdown: '',
+    list: [],
+  },
 ]
 
 const ctaButtons = [
@@ -386,7 +558,7 @@ useHead({
   title: pageTitle,
   link: [{ hid: 'canonical', rel: 'canonical', href: pageUrl }],
   meta: [
-    { property: 'article:modified_time', content: '2026-09-09T00:00:00.000Z' },
+    { property: 'article:modified_time', content: '2026-10-23T00:00:00.000Z' },
     { hid: 'description', name: 'description', content: pageDescription },
     {
       hid: 'keywords',
@@ -428,6 +600,22 @@ useJsonld([
     '@context': 'https://schema.org',
     type: JSON.stringify({
       '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'How to connect a form to Mailchimp with Formester',
+      description: 'Connect a Formester form to a Mailchimp audience, map fields, and send form submissions automatically.',
+      step: setupSteps.map((step, index) => ({
+        '@type': 'HowToStep',
+        position: index + 1,
+        name: step.title,
+        text: step.description,
+        url: `${pageUrl}#setup`,
+      })),
+    }),
+  },
+  {
+    '@context': 'https://schema.org',
+    type: JSON.stringify({
+      '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://formester.com/' },
@@ -438,3 +626,77 @@ useJsonld([
   },
 ])
 </script>
+
+<style scoped>
+.mc-section {
+  padding: var(--space-16) var(--space-6);
+}
+.mc-section--alt {
+  background: #f9fafb;
+}
+.mc-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.mc-inner--narrow {
+  max-width: 720px;
+}
+.mc-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--r-xl);
+}
+.mc-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+}
+.mc-table th,
+.mc-table td {
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--gray-200);
+  font-size: var(--fs-sm);
+  text-align: left;
+  vertical-align: top;
+  color: var(--fg-1);
+}
+.mc-table thead th {
+  font-weight: var(--fw-semibold);
+  color: var(--fg-2);
+}
+.mc-table tbody th {
+  font-weight: var(--fw-medium);
+}
+.mc-table tbody tr:last-child th,
+.mc-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.mc-us {
+  background: var(--violet-50);
+}
+.mc-table thead th.mc-us {
+  color: var(--violet-600);
+}
+.mc-note {
+  margin-top: var(--space-5);
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+  color: var(--fg-2);
+}
+.mc-text {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--fg-1);
+  margin-bottom: var(--space-4);
+}
+.mc-actions {
+  margin-top: var(--space-6);
+  display: flex;
+  justify-content: center;
+}
+</style>

@@ -67,7 +67,22 @@
       class="page-component-item"
     />
 
+    <CardGrid
+      eyebrow="Workflow templates"
+      description="Two common workflows to copy, built only from the triggers and steps above."
+      columns="2"
+      :title="templatesTitle"
+      :cards="templateCards"
+      class="page-component-item"
+    />
+
     <StatsBanner eyebrow="Workflows at a glance" heading="Built for the work that follows a form" :stats="stats" />
+
+    <p class="wf-compare-more">
+      Choosing a tool?
+      <NuxtLink to="/blog/best-workflow-automation-tools/">Compare workflow tools</NuxtLink>
+      like Zapier, Make, n8n and Power Automate.
+    </p>
 
     <FaqSection centered :title="faqTitle" :faqList="faqList" class="page-component-item" />
 
@@ -329,6 +344,42 @@ const useCaseCards = [
   },
 ]
 
+const templatesTitle = [
+  { text: 'Start from a ', highlight: false, color: '#475467', bold: false },
+  { text: 'workflow template', highlight: true, color: '#475467', bold: false },
+]
+const templateCards = [
+  {
+    tag: 'Approvals',
+    tagColor: 'green',
+    title: 'Form approval workflow',
+    body: 'When a request form is submitted, an Approval step emails the approvers with Approve and Reject buttons. The first response decides the path, and each outcome can send its own email to the requester.',
+    mockHtml: chain([
+      ['trigger', 'Submitted'],
+      ['approval', 'Approval'],
+      ['logic', 'Approve / Reject'],
+      ['email', 'Email requester'],
+    ]),
+    link: '/templates/budget-approval-form-35164/',
+    linkText: 'Budget approval form template',
+  },
+  {
+    tag: 'Sales',
+    tagColor: 'blue',
+    title: 'Lead routing workflow',
+    body: 'When a lead form is submitted, an AI Agent scores the lead and a Condition splits the path. Hot leads alert sales by email and go to your CRM by webhook. The rest get a follow-up email later.',
+    mockHtml: chain([
+      ['trigger', 'Submitted'],
+      ['ai', 'AI score'],
+      ['logic', 'Condition'],
+      ['email', 'Alert sales'],
+      ['webhook', 'CRM'],
+    ]),
+    link: '/templates/lead-generation-form-700/',
+    linkText: 'Lead generation form template',
+  },
+]
+
 const runsTitle = [
   { text: 'See every run, ', highlight: false, color: '#475467', bold: false },
   { text: 'fix what failed', highlight: true, color: '#475467', bold: false },
@@ -454,6 +505,15 @@ useHead({
 useJsonld([
   {
     '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://formester.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Features', item: 'https://formester.com/features/' },
+      { '@type': 'ListItem', position: 3, name: 'Workflows', item: PAGE_URL },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: 'Formester Workflows',
     applicationCategory: 'BusinessApplication',
@@ -473,3 +533,18 @@ useJsonld([
   },
 ])
 </script>
+
+<style scoped>
+.wf-compare-more {
+  padding: var(--space-10, 40px) var(--space-6, 24px) 0;
+  text-align: center;
+  font-size: 15px;
+  color: #475467;
+}
+.wf-compare-more a {
+  color: #6434d0;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+</style>
