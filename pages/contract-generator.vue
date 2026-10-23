@@ -778,6 +778,20 @@ useJsonld([
   overflow-x: auto;
   margin-top: var(--space-6, 24px);
 }
+@media (max-width: 768px) {
+  .cg-compare__scroll::after {
+    content: 'Swipe sideways to see all columns \2192';
+    display: block;
+    position: sticky;
+    left: 0;
+    width: min(342px, 100%);
+    max-width: 100vw;
+    padding: 10px 0 2px;
+    text-align: center;
+    font-size: 12px;
+    color: #697586;
+  }
+}
 .cg-compare__table {
   width: 100%;
   min-width: 640px;
