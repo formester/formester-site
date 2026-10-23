@@ -10,7 +10,7 @@ authorProfile: "https://linkedin.com/in/harshshahseo"
 authorImage: "https://formester-strapi.s3.ap-south-1.amazonaws.com/41fc6df7f8a7952a_harsh-shah.jpg"
 coverImgAlt: "Cover art for a guide to the Typeform Mailchimp integration"
 featured: false
-coverImg: {"url":"placeholder://typeform-mailchimp-integration-cover","width":1200,"height":630}
+coverImg: {"url":"https://formester-strapi.s3.ap-south-1.amazonaws.com/5b03bf3139d2ea47_typeform-mailchimp-integration-cover.png","width":1200,"height":630}
 metaImage: []
 jsonld: [{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I connect Typeform to Mailchimp?","acceptedAnswer":{"@type":"Answer","text":"Open your form in Typeform, go to the Connect panel, search for Mailchimp, and click Connect. Authorize Typeform in Mailchimp, choose an audience, pick the email question, map other questions to Mailchimp fields, set tags if you use them, and click Save. The integration then runs on every new response."}},{"@type":"Question","name":"Does Typeform have a native Mailchimp integration?","acceptedAnswer":{"@type":"Answer","text":"Yes. Typeform lists Mailchimp in its Connect panel and has a help article for it. It can add new subscribers, update existing subscriber data, and personalize a Typeform embedded in a Mailchimp survey."}},{"@type":"Question","name":"Is the Typeform Mailchimp integration free?","acceptedAnswer":{"@type":"Answer","text":"Typeform's help center lists Mailchimp among the integrations available on the Free plan, which allows 10 responses per month across all your forms. For more responses you need a paid plan, so check Typeform's pricing page for the current numbers."}},{"@type":"Question","name":"Why is my Typeform not adding contacts to Mailchimp?","acceptedAnswer":{"@type":"Answer","text":"Contacts are created or updated only if the respondent gives an email address, so make the email question required. To update existing contacts you need an email URL parameter mapped to the Mailchimp email field. Also check that the form is published and the integration switch in the Connect panel is on."}},{"@type":"Question","name":"Can I connect one Typeform to more than one Mailchimp account?","acceptedAnswer":{"@type":"Answer","text":"No. Typeform's help article says each form can be integrated with one Mailchimp account. You can link several Mailchimp accounts to your Typeform account, but each individual form uses just one."}},{"@type":"Question","name":"What is a simpler alternative to the Typeform Mailchimp integration?","acceptedAnswer":{"@type":"Answer","text":"If you want to set up a Mailchimp connection without URL parameters or per-question tag mapping, Formester has a native Mailchimp integration. You choose an audience, map fields, pick tags, and choose immediate subscription or double opt-in. It only works with forms built in Formester."}}]}]
 createdAt: "2026-10-23T00:00:00.000Z"
@@ -18,8 +18,7 @@ updatedAt: "2026-10-23T00:00:00.000Z"
 publishedAt: "2026-10-23T00:00:00.000Z"
 ---
 
-![Cover art for a guide to the Typeform Mailchimp integration](placeholder://typeform-mailchimp-integration-cover)
-<!-- IMAGE: Cover: a Typeform-style one-question-at-a-time form connected to a Mailchimp audience, with a simple alternative form beside it -->
+![Cover art for a guide to the Typeform Mailchimp integration](https://formester-strapi.s3.ap-south-1.amazonaws.com/5b03bf3139d2ea47_typeform-mailchimp-integration-cover.png)
 
 You built a Typeform and you want every respondent to end up in your Mailchimp audience. Typeform has a native Mailchimp integration for this, and it takes a few minutes to set up. A few details can trip you up, mostly around email fields, updating existing contacts, and tags.
 
