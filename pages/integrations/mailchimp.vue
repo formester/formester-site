@@ -180,10 +180,10 @@ const heroMockupHtml = `
       .mcw__details{overflow:hidden;border:1px solid #eaecf0;border-radius:9px}
       .mcw__row{display:flex;justify-content:space-between;gap:10px;padding:8px 12px;border-bottom:1px solid #f2f4f7;font-size:11px}.mcw__row:last-child{border-bottom:0}
       .mcw__label{color:#697586}.mcw__value{color:#101828;font-weight:600;text-align:right}.mcw__tag{border-radius:999px;padding:3px 8px;background:#fff7d6;color:#6f5700;font-size:9.5px}
-      .mcw__toast{position:absolute;right:-30px;bottom:-28px;display:flex;align-items:center;gap:9px;padding:9px 13px;border:1px solid #eaecf0;border-radius:12px;background:#fff;box-shadow:0 8px 24px rgba(15,14,26,.14);color:#101828;font-size:12px;font-weight:600;animation:mcwnew 5s ease-in-out infinite}
+      .mcw__toast{position:absolute;right:-30px;bottom:-54px;display:flex;align-items:center;gap:9px;padding:9px 13px;border:1px solid #eaecf0;border-radius:12px;background:#fff;box-shadow:0 8px 24px rgba(15,14,26,.14);color:#101828;font-size:12px;font-weight:600;animation:mcwnew 5s ease-in-out infinite}
       .mcw__tick{display:inline-flex;width:22px;height:22px;align-items:center;justify-content:center;border-radius:7px;background:#11c15b;color:#fff;font-size:14px}.mcw__toast small{display:block;color:#697586;font-size:10px;font-weight:500}
       @keyframes mcwnew{0%,10%{opacity:0;transform:translateY(-6px)}18%,88%{opacity:1;transform:translateY(0)}97%,100%{opacity:0}}
-      @media(max-width:600px){.mcw__toast{right:-4px;bottom:-30px}}
+      @media(max-width:600px){.mcw__toast{right:-4px;bottom:-56px}}
     </style>
     <div class="mcw">
       <div class="mcw__pair">
@@ -645,6 +645,20 @@ useJsonld([
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   border-radius: var(--r-xl);
+}
+@media (max-width: 768px) {
+  .mc-scroll::after {
+    content: 'Swipe sideways to see all columns \2192';
+    display: block;
+    position: sticky;
+    left: 0;
+    width: 342px;
+    max-width: 100vw;
+    padding: 10px 0 2px;
+    text-align: center;
+    font-size: 12px;
+    color: #697586;
+  }
 }
 .mc-table {
   width: 100%;
