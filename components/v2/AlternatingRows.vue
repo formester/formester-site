@@ -15,10 +15,8 @@
             <p v-if="row.body" class="zz-body">{{ row.body }}</p>
             <ul v-if="row.bullets && row.bullets.length" class="zz-list">
               <li v-for="(b, bi) in row.bullets" :key="bi">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
-                  <path d="M5 12l4 4L19 6" />
-                </svg>
-                {{ b.text }}
+                <span class="zz-check"><IconCheck :size="16" :stroke-width="2.4" /></span>
+                <span>{{ b.text }}</span>
               </li>
             </ul>
             <a v-if="row.link" :href="row.link" class="zz-link">
@@ -32,6 +30,7 @@
 </template>
 
 <script setup>
+import IconCheck from '@/components/icons/IconCheck.vue'
 import SectionHeader from '@/components/v2/SectionHeader.vue'
 
 defineProps({
@@ -129,11 +128,16 @@ defineProps({
   gap: var(--space-2);
   font-size: var(--fs-sm);
   color: var(--fg-1);
+  --zz-lh: 1.6;
+  line-height: var(--zz-lh);
 }
-.zz-list svg {
+/* Box is one line tall, so the tick centers on the first line at any line-height. */
+.zz-check {
+  display: inline-flex;
+  align-items: center;
+  height: calc(1em * var(--zz-lh));
   color: var(--violet-500);
   flex-shrink: 0;
-  margin-top: 2px;
 }
 
 @media (max-width: 860px) {
