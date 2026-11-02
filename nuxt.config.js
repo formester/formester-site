@@ -140,11 +140,11 @@ export default defineNuxtConfig({
     minify: false, // Disable minification to save memory
     prerender: {
       crawlLinks: true,
-      // /state-of-online-forms is listed explicitly: nothing links to it yet,
+      // /state-of-online-forms and /mobile-forms-automation are listed explicitly: nothing links to them yet,
       // so crawlLinks alone would never reach it.
       // NOT_FOUND_PRERENDER_ROUTE becomes the SSR-rendered 404.html (see
       // utils/notFoundPrerender.js and the prerender:generate hook below).
-      routes: ['/', '/sitemap.xml', '/state-of-online-forms', NOT_FOUND_PRERENDER_ROUTE],
+      routes: ['/', '/sitemap.xml', '/state-of-online-forms', '/mobile-forms-automation', NOT_FOUND_PRERENDER_ROUTE],
       ignore: ['/api'],
       // Lower via PRERENDER_CONCURRENCY on memory-constrained machines —
       // e.g. a 6.7GB-RAM local dev box OOM'd at the default 16 with

@@ -4,12 +4,13 @@
       <SectionHeader :eyebrow="eyebrow" :title="title" :description="description" />
 
       <div class="cmp-scroll">
-        <table class="cmp-table">
+        <table class="cmp-table" :class="{ 'cmp-table--wide': colThem2 }">
           <thead>
             <tr>
               <th class="cmp-th"></th>
               <th class="cmp-th cmp-th--us">{{ colUs }}</th>
               <th class="cmp-th">{{ colThem }}</th>
+              <th v-if="colThem2" class="cmp-th">{{ colThem2 }}</th>
             </tr>
           </thead>
           <tbody>
@@ -17,26 +18,20 @@
               <td class="cmp-feat">{{ row.feature }}</td>
               <td class="cmp-cell cmp-cell--us">
                 <span class="cmp-yes">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6">
-                    <path d="M5 12l4 4L19 6" />
-                  </svg>
+                  <IconCheck :size="15" :stroke-width="2.6" />
                   {{ row.us }}
                 </span>
               </td>
               <td class="cmp-cell">
                 <span class="cmp-no">
-                  <svg
-                    v-if="isNegative(row.them)"
-                    width="15"
-                    height="15"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.4"
-                  >
-                    <path d="M6 6l12 12M18 6L6 18" />
-                  </svg>
+                  <IconX v-if="isNegative(row.them)" :size="15" />
                   {{ row.them }}
+                </span>
+              </td>
+              <td v-if="colThem2" class="cmp-cell">
+                <span class="cmp-no">
+                  <IconX v-if="isNegative(row.them2)" :size="15" />
+                  {{ row.them2 }}
                 </span>
               </td>
             </tr>
@@ -51,6 +46,8 @@
 
 <script setup>
 import SectionHeader from '@/components/v2/SectionHeader.vue'
+import IconCheck from '@/components/icons/IconCheck.vue'
+import IconX from '@/components/icons/X.vue'
 
 defineProps({
   eyebrow: { type: String, default: '' },
@@ -59,6 +56,8 @@ defineProps({
   background: { type: String, default: '' },
   colUs: { type: String, default: 'Formester' },
   colThem: { type: String, default: 'Alternative' },
+  // Optional second comparison column; rows then read `them2`.
+  colThem2: { type: String, default: '' },
   rows: { type: Array, default: () => [] },
   note: { type: String, default: '' },
 })
@@ -166,6 +165,9 @@ tr:last-child .cmp-cell {
   /* keep columns readable — scroll instead of crushing the 3 columns */
   .cmp-table {
     min-width: 480px;
+  }
+  .cmp-table--wide {
+    min-width: 640px;
   }
 }
 </style>
