@@ -171,6 +171,7 @@ export default defineNuxtConfig({
         '/ai-grading-software',
         '/client-intake-management',
         '/lead-capture-software',
+        '/field-service-management',
         NOT_FOUND_PRERENDER_ROUTE,
       ],
       ignore: ['/api'],
