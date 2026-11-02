@@ -26,7 +26,7 @@
         <p class="wms-problem__lead">
           A request arrives in an inbox. Someone copies the details into a spreadsheet, the approval happens in a chat
           thread, and the follow-up depends on one person remembering. By the time the work is done, nobody can say
-          where it slowed down or who owns the next step. Formester closes that gap. The form captures the work, and the
+          where it slowed down or who owns the next step. Formester closes that gap: the form captures the work, and the
           workflow manages everything that follows.
         </p>
         <h3 class="wms-problem__sub">Where form-led work breaks down</h3>
@@ -90,7 +90,7 @@
 
     <ComparisonTable
       eyebrow="Formester vs a separate automation tool"
-      description="Zapier, Make and n8n are strong tools for connecting many apps. For work that starts with a form, keeping intake and workflow management together removes a layer of setup, mapping and maintenance."
+      description="Zapier, Make and n8n are strong tools for connecting many apps. For work that starts with a form, keeping intake and workflow software together removes a layer of setup, mapping and maintenance."
       colUs="Formester Workflows"
       colThem="Form plus Zapier or Make"
       :title="compareTitle"
@@ -179,7 +179,7 @@ const heroButtons = [
   { link: SIGN_UP_URL, text: 'Build your first workflow free', type: 'Primary', showArrow: true },
   { link: '#workflow-examples', text: 'See workflow examples', type: 'Secondary', showArrow: false },
 ]
-const heroMockupHtml = `<figure class='wms-hero-shot'><div class='wms-hero-shot__frame'><img src='${CMS}6a5262ce4f9b41a6_workflow-builder-job-application-canvas.webp' width='1440' height='1300' alt='Formester workflow canvas for job application screening: AI scores the resume, a condition checks the result, the hiring manager approves, then an interview reminder and ATS webhook run' loading='eager' fetchpriority='high' class='wms-hero-shot__img'></div><figcaption class='wms-hero-shot__cap'>A job application workflow: AI reviews the resume, the hiring manager approves, and Formester sends the interview reminder on the day and updates your ATS.</figcaption></figure>`
+const heroMockupHtml = `<figure class='wms-hero-shot'><div class='wms-hero-shot__frame'><img src='${CMS}6a5262ce4f9b41a6_workflow-builder-job-application-canvas.webp' width='1440' height='1300' alt='Formester workflow canvas for job application screening: AI reviews the resume and returns a shortlist label, a condition checks the label, the hiring manager approves, then an interview reminder and ATS webhook run' loading='eager' fetchpriority='high' class='wms-hero-shot__img'></div><figcaption class='wms-hero-shot__cap'>A job application workflow: AI reviews the resume, the hiring manager approves, and Formester sends the interview reminder on the day and updates your ATS.</figcaption></figure>`
 
 const ratingsHtml = `<p class='wms-ratings'>G2 4.7/5 &middot; Trustpilot 4.7/5</p>`
 
@@ -217,7 +217,7 @@ const categoryTitle = [
   { text: 'in one workflow', highlight: true, color: '#475467', bold: false },
 ]
 const categoryDescription =
-  'Workflow management software helps teams design, run and track repeatable processes. Formester is built for processes that start with a form: a request, application, booking, order, lead, inspection or report. Instead of treating the form and the follow-up as separate tools, Formester keeps them together.'
+  'Workflow management software (sometimes called a workflow management system) helps teams design, run and track repeatable processes. Formester is built for processes that start with a form: a request, application, booking, order, lead, inspection or report. Instead of treating the form and the follow-up as separate tools, Formester keeps them together.'
 const categoryCards = [
   {
     tag: '1. Collect',
@@ -235,7 +235,7 @@ const categoryCards = [
     tag: '3. Act',
     tagColor: 'blue',
     title: 'Run the steps that follow',
-    body: 'Run approvals, send emails, wait until the right moment, and send data to your CRM or other systems.',
+    body: 'Run approvals, send emails, wait until the right moment, and send data to your CRM or other systems with a webhook.',
   },
   {
     tag: '4. Track',
@@ -276,7 +276,7 @@ const platformRows = [
   {
     kicker: 'Approval workflows',
     title: 'Keep people in control with approvals',
-    body: 'Add an Approval step when a person needs to decide before work continues. Approval emails go out from your connected Gmail, Outlook or SMTP account.',
+    body: 'Add an Approval step when a person needs to decide before work continues. Approval emails, like every workflow email, go out from your connected Gmail, Outlook or SMTP account.',
     bullets: [
       { text: 'Email the people who need to sign off.' },
       { text: 'Give each outcome, such as Approve or Reject, its own path.' },
@@ -308,7 +308,7 @@ const capabilityCards = [
     tag: 'AI',
     tagColor: 'rose',
     title: 'Put AI inside the process',
-    body: 'Add an AI Agent step to summarize, classify, score or extract details with a plain-English prompt. It reads the current submission, can open uploaded PDFs and images such as a resume, and can look up earlier submissions to the same form. It saves its results to custom fields for later steps, and your original answers are never changed.',
+    body: 'Add an AI Agent step to summarize, classify, score or extract details with a plain-English prompt. It reads the current submission, can open uploaded PDFs and images such as a resume, and can look up earlier submissions to the same form. It can save its results to custom fields for later steps, and your original answers are never changed.',
     mockHtml: chain([
       ['ai', 'AI Agent'],
       ['logic', 'Label is Shortlist?'],
@@ -319,7 +319,7 @@ const capabilityCards = [
     tag: 'Timing',
     tagColor: 'green',
     title: 'Handle time without manual reminders',
-    body: 'Pause a workflow for minutes, hours or days, up to 30 days. Or wait until a set date, a date from the form, or a booked appointment time, each in the right time zone. Use it to follow up after a set period, after an appointment, or on the day of an interview.',
+    body: 'Pause a workflow for minutes, hours or days, up to 30 days. Or wait until a set date, a date from the form, or a booked appointment time (Business plan), each in the right time zone. Use it to follow up after a set period, after an appointment, or on the day of an interview.',
     mockHtml: chain([
       ['wait', 'Wait until interview day'],
       ['email', 'Send reminder'],
@@ -384,7 +384,7 @@ const useCaseCards = [
   {
     tag: 'Lead management',
     tagColor: 'blue',
-    title: 'Score and route every lead while interest is fresh',
+    title: 'Label and route every lead while interest is fresh',
     body: 'An AI Agent labels each demo or contact request as hot or not yet. Hot leads alert sales and go to your CRM with a webhook. The rest get a timed follow-up email.',
     mockHtml: chain([
       ['trigger', 'Submitted'],
@@ -399,7 +399,7 @@ const useCaseCards = [
     tag: 'Hiring',
     tagColor: 'violet',
     title: 'Screen applications without turning the inbox into an ATS',
-    body: 'The AI Agent reads the attached resume, saves its notes to a custom field and says whether to shortlist. The hiring manager approves shortlisted candidates, and approved ones get a reminder on the interview day.',
+    body: 'The AI Agent reads the attached resume, saves its notes to a custom field and says whether to shortlist. The hiring manager approves shortlisted candidates, and approved ones get a reminder on the interview date from the form.',
     mockHtml: chain([
       ['trigger', 'Submitted'],
       ['ai', 'Read resume'],
@@ -411,7 +411,7 @@ const useCaseCards = [
     tag: 'Operations',
     tagColor: 'rose',
     title: 'React when the status changes',
-    body: 'When your team changes an order or request status to Approved, Formester can email the customer and sync the change to another system.',
+    body: 'When your team changes the status field on an order or request form to Approved, Formester can email the customer and sync the change to another system.',
     mockHtml: chain([
       ['trigger', 'Updated'],
       ['logic', 'Condition'],
@@ -478,8 +478,7 @@ const howSteps = [
   },
   {
     title: 'Test on a real submission',
-    description:
-      'Run the workflow on one of your 10 latest responses and see what each step returned before going live.',
+    description: 'Run the workflow on a recent response and see what each step returned before going live.',
     rawHtml: stepCard(
       `<div style='display:flex;justify-content:space-between;font-size:12px;color:#101828;'><span>Test run · Submission #2481</span><span style='font-weight:600;color:#027a48;'>Completed</span></div>`,
     ),
@@ -591,7 +590,7 @@ const faqList = [
   {
     id: 6,
     header: 'How do approvals work?',
-    body: 'Add an Approval step and list the approvers. They receive an email with the outcome buttons you set, such as Approve and Reject. The workflow pauses until the first response, then follows the path for that outcome. Approvers don’t need a Formester account unless sign-in is turned on. Approval emails go out from your connected Gmail, Outlook or SMTP account.',
+    body: 'Add an Approval step and list the approvers. They receive an email with the outcome buttons you set, such as Approve and Reject. The workflow pauses until the first response, then follows the path for that outcome. Approvers don’t need a Formester account unless sign-in is turned on. Approval and other workflow emails go out from your connected Gmail, Outlook or SMTP account.',
   },
   {
     id: 7,
