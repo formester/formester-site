@@ -118,7 +118,7 @@ Every request should be visible and trackable. With structured form submissions,
 
 #### Scale Without Burning Out the Team
 
-As order volume grows, manual coordination breaks. Automation handles routing, notifications, and approvals so the same team can manage more requests without added stress or long hours.
+As order volume grows, manual coordination breaks. Automation handles [routing, notifications, and approvals](/workflow-management-software/) so the same team can manage more requests without added stress or long hours.
 
 #### Reduce Fulfillment Errors and Delays
 
