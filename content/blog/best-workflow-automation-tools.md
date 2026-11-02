@@ -70,7 +70,7 @@ publishedAt: "2024-06-27T07:03:54.492Z"
 
 <p>Workflow management tools like monday.com, Asana, ClickUp, and Smartsheet help people track work. They organize tasks, projects, owners, and deadlines on boards and sheets, and they have their own rules for simple actions such as assigning a task when a status changes. Workflow automation tools like the ones below move data and trigger steps between apps without a person in the loop.</p>
 
-<p>Many teams use both. A management tool shows who is doing what, and an automation tool creates the task, sends the email, or updates the record when a form comes in. This list covers automation, plus Pipefy and Kissflow, which sit between the two for approvals and requests.</p>
+<p>Many teams use both. A management tool shows who is doing what, and an automation tool creates the task, sends the email, or updates the record when a form comes in. For work that starts with a form, Formester's <a href="/workflow-management-software/">workflow management software</a> does both. This list covers automation, plus Pipefy and Kissflow, which sit between the two for approvals and requests.</p>
 
 <h2>1. Formester Workflows, best for workflows that start with a form</h2>
 

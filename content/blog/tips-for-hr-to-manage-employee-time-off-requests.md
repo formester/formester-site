@@ -98,7 +98,7 @@ It's imperative to consider different submission methods to ensure a smooth subm
 * **Accessibility:** Digital submission systems can be accessed from computers, tablets, and smartphones, providing flexibility and convenience for employees.
 * **Convenience:** With digital submission, employees can request time off outside traditional working hours, making the process more convenient for all parties involved.
 * **Reduced Administrative Work:** HR departments benefit from increased efficiency in processing digital submissions, saving time and reducing the likelihood of errors.
-* **Notification and Tracking:** These systems often include automatic notifications and tracking features, which help HR teams manage and monitor requests in a seamless manner.
+* **Notification and Tracking:** These systems often include automatic notifications and tracking features, which help HR teams [manage and monitor requests](/workflow-management-software/) in a seamless manner.
 
 ### Centralising Request Records
 
