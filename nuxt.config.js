@@ -159,9 +159,7 @@ export default defineNuxtConfig({
     minify: false, // Disable minification to save memory
     prerender: {
       crawlLinks: true,
-      // /state-of-online-forms, /mobile-forms-automation, /ai-grading-software and /client-intake-management
-      // are listed explicitly:
-      // nothing links to them yet,
+      // New landing pages are listed explicitly: nothing links to them yet,
       // so crawlLinks alone would never reach them.
       // NOT_FOUND_PRERENDER_ROUTE becomes the SSR-rendered 404.html (see
       // utils/notFoundPrerender.js and the prerender:generate hook below).
@@ -172,6 +170,7 @@ export default defineNuxtConfig({
         '/mobile-forms-automation',
         '/ai-grading-software',
         '/client-intake-management',
+        '/lead-capture-software',
         NOT_FOUND_PRERENDER_ROUTE,
       ],
       ignore: ['/api'],
