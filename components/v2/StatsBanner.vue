@@ -71,10 +71,12 @@ defineProps({
   position: relative;
   display: flex;
   width: 100%;
-  max-width: 800px;
+  max-width: 960px;
 }
 .sb-band__stat {
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 0 var(--space-4);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,10 +89,13 @@ defineProps({
   font-size: clamp(28px, 3.4vw, 38px);
   font-weight: var(--fw-bold);
   letter-spacing: -0.02em;
+  line-height: 1.15;
   color: #fff;
+  text-align: center;
 }
 .sb-band__label {
   font-size: var(--fs-sm);
+  line-height: 1.45;
   color: rgba(255, 255, 255, 0.74);
   text-align: center;
 }
@@ -99,6 +104,9 @@ defineProps({
   .sb-band__row {
     flex-direction: column;
     gap: var(--space-6);
+  }
+  .sb-band__stat {
+    padding: 0;
   }
   .sb-band__stat + .sb-band__stat {
     border-left: none;
