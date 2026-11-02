@@ -17,7 +17,11 @@
             <tr v-for="(row, i) in rows" :key="i">
               <td class="cmp-feat">{{ row.feature }}</td>
               <td class="cmp-cell cmp-cell--us">
-                <span class="cmp-yes">
+                <span v-if="isNegative(row.us)" class="cmp-no">
+                  <IconX :size="15" />
+                  {{ row.us }}
+                </span>
+                <span v-else class="cmp-yes">
                   <IconCheck :size="15" :stroke-width="2.6" />
                   {{ row.us }}
                 </span>
@@ -62,7 +66,7 @@ defineProps({
   note: { type: String, default: '' },
 })
 
-const isNegative = (v) => !v || /^(no|none|n\/a|—|-)$/i.test(String(v).trim())
+const isNegative = (v) => !v || /^(no|none|not included|n\/a|—|-)$/i.test(String(v).trim())
 </script>
 
 <style scoped>
