@@ -7,9 +7,13 @@
       </div>
 
       <div class="trustbadges__grid">
-        <div
+        <component
           v-for="(badge, i) in displayBadges"
           :key="badge.id || i"
+          :is="badge.href ? 'a' : 'div'"
+          :href="badge.href || undefined"
+          :target="badge.href ? '_blank' : undefined"
+          :rel="badge.href ? 'noopener noreferrer' : undefined"
           class="badge-card"
         >
           <nuxt-img
@@ -29,7 +33,7 @@
               class="badge-card__stars"
             />
           </div>
-        </div>
+        </component>
       </div>
     </div>
   </section>
@@ -46,24 +50,21 @@ const DEFAULT_BADGES = [
   {
     id: 'default-product-hunt',
     ratingNumber: '5/5',
+    href: 'https://www.producthunt.com/products/formester',
     logo: { url: '/product-hunt.svg', alternativeText: 'Product Hunt', width: 171, height: 40 },
     stars: stars5,
   },
   {
     id: 'default-trustpilot',
     ratingNumber: '4.4/5',
+    href: 'https://www.trustpilot.com/review/formester.com',
     logo: { url: '/trustpilot.svg', alternativeText: 'Trustpilot', width: 163, height: 40 },
     stars: stars4_5,
   },
   {
-    id: 'default-capterra',
-    ratingNumber: '5/5',
-    logo: { url: '/capterra.svg', alternativeText: 'Capterra', width: 174, height: 40 },
-    stars: stars5,
-  },
-  {
     id: 'default-g2-crowd',
     ratingNumber: '4.7/5',
+    href: 'https://www.g2.com/products/formester/reviews',
     logo: { url: '/g2-crowd.svg', alternativeText: 'G2 Crowd', width: 40, height: 40 },
     stars: stars4_5,
   },
@@ -83,9 +84,7 @@ const props = defineProps({
   },
 })
 
-const displayBadges = computed(() =>
-  props.badges && props.badges.length ? props.badges : DEFAULT_BADGES
-)
+const displayBadges = computed(() => (props.badges && props.badges.length ? props.badges : DEFAULT_BADGES))
 
 function logoFor(badge) {
   return getStrapiImage(badge?.logo)
@@ -140,7 +139,7 @@ function starsFor(badge) {
 
 @media (min-width: 1024px) {
   .trustbadges__grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-6);
   }
 }
@@ -155,8 +154,16 @@ function starsFor(badge) {
   flex-direction: column;
   align-items: center;
   gap: var(--space-5);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
   cursor: default;
+  color: inherit;
+  text-decoration: none;
+}
+
+.badge-card[href] {
+  cursor: pointer;
 }
 
 .badge-card:hover {

@@ -1,6 +1,15 @@
 <template>
   <section class="fs">
     <div class="fs__container">
+      <header class="fs__header">
+        <span class="fs__header-label">One connected platform</span>
+        <h2 class="fs__header-title">Collect data once. Use it everywhere.</h2>
+        <p class="fs__header-desc">
+          Bring data in through forms or connected systems, then use it to generate documents, run workflows, and
+          automate what happens next.
+        </p>
+      </header>
+
       <!-- ── Tabs (all breakpoints) ────────────────────────── -->
       <div class="fs__tabs">
         <button
@@ -8,9 +17,11 @@
           :key="tab.id"
           class="fs__pill"
           :class="{ 'fs__pill--active': activeTab === tab.id }"
-          :style="activeTab === tab.id
-            ? { background: CONTENT_DATA[tab.id].theme.pillBg, color: '#fff', borderColor: 'transparent' }
-            : {}"
+          :style="
+            activeTab === tab.id
+              ? { background: CONTENT_DATA[tab.id].theme.pillBg, color: '#fff', borderColor: 'transparent' }
+              : {}
+          "
           @click="activeTab = tab.id"
         >
           {{ tab.label }}
@@ -24,109 +35,63 @@
         class="fs__card"
         :class="activeTab === tabId ? 'fs__card--visible' : 'fs__card--hidden'"
       >
+        <!-- Left: text content -->
+        <div class="fs__content">
+          <span class="fs__badge" :style="{ color: tabContent.theme.iconColor }">
+            {{ tabContent.badge }}
+          </span>
+          <h2 class="fs__title">{{ tabContent.title }}</h2>
+          <p class="fs__desc">{{ tabContent.desc }}</p>
 
-          <!-- Left: text content -->
-          <div class="fs__content">
-            <span class="fs__badge" :style="{ color: tabContent.theme.iconColor }">
-              {{ tabContent.badge }}
-            </span>
-            <h2 class="fs__title">{{ tabContent.title }}</h2>
-            <p class="fs__desc">{{ tabContent.desc }}</p>
-
-            <div class="fs__features">
-              <div v-for="(f, i) in tabContent.features" :key="i" class="fs__feature">
-                <div
-                  class="fs__feature-icon"
-                  :style="{ background: tabContent.theme.iconBg, color: tabContent.theme.iconColor }"
-                >
-                  <!-- eslint-disable-next-line vue/no-v-html -->
-                  <span class="fs__icon-svg" v-html="SVG_ICONS[f.iconKey]" />
-                </div>
-                <div class="fs__feature-body">
-                  <h4 class="fs__feature-title">{{ f.title }}</h4>
-                  <p class="fs__feature-desc">{{ f.desc }}</p>
-                </div>
+          <div class="fs__features">
+            <div v-for="(f, i) in tabContent.features" :key="i" class="fs__feature">
+              <div
+                class="fs__feature-icon"
+                :style="{ background: tabContent.theme.iconBg, color: tabContent.theme.iconColor }"
+              >
+                <!-- eslint-disable-next-line vue/no-v-html -->
+                <span class="fs__icon-svg" v-html="SVG_ICONS[f.iconKey]" />
+              </div>
+              <div class="fs__feature-body">
+                <h4 class="fs__feature-title">{{ f.title }}</h4>
+                <p class="fs__feature-desc">{{ f.desc }}</p>
               </div>
             </div>
-
-            <NuxtLink :to="tabContent.href" class="fs__explore" :style="{ color: tabContent.theme.iconColor }">
-              Explore feature
-              <svg class="fs__chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </NuxtLink>
           </div>
 
-          <!-- Right: animated visual -->
-          <div class="fs__visual" :style="{ background: tabContent.theme.bg }">
-            <div class="fs__blob fs__blob--1" :style="{ background: tabContent.theme.blob1 }" />
-            <div class="fs__blob fs__blob--2" :style="{ background: tabContent.theme.blob2 }" />
+          <NuxtLink :to="tabContent.href" class="fs__explore" :style="{ color: tabContent.theme.iconColor }">
+            {{ tabContent.cta }}
+            <svg
+              class="fs__chevron"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </NuxtLink>
+        </div>
 
-            <div class="fs__visual-inner">
+        <!-- Right: animated visual -->
+        <div class="fs__visual" :style="{ background: tabContent.theme.bg }">
+          <div class="fs__blob fs__blob--1" :style="{ background: tabContent.theme.blob1 }" />
+          <div class="fs__blob fs__blob--2" :style="{ background: tabContent.theme.blob2 }" />
 
-              <!-- Collaboration -->
-              <div v-if="tabId === 'collaboration'" class="fsv-collab">
-                <div class="fsv-collab__header" />
-                <div class="fsv-collab__row">
-                  <div class="fsv-collab__field" />
-                  <div class="fsv-collab__field" />
-                </div>
-                <div class="fsv-collab__field fsv-collab__field--full" />
-                <div class="fsv-collab__field fsv-collab__field--tall" />
-                <div class="fsv-collab__cursor fsv-collab__cursor--robin">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" />
-                  </svg>
-                  <span class="fsv-collab__label fsv-collab__label--blue">Robin</span>
-                </div>
-                <div class="fsv-collab__cursor fsv-collab__cursor--alex">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#ec4899" stroke="#be185d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" />
-                  </svg>
-                  <span class="fsv-collab__label fsv-collab__label--pink">Alex</span>
-                </div>
-              </div>
-
-              <!-- White Label -->
-              <V2FeatureShowcaseWhiteLabel v-else-if="tabId === 'whitelabel'" />
-
-              <!-- Generate PDF -->
-              <V2FeatureShowcasePdf v-else-if="tabId === 'generate-pdf'" />
-
-              <!-- Data Protection -->
-              <div v-else-if="tabId === 'data-protection'" class="fsv-dp">
-                <div class="fsv-dp__offline-bar">
-                  <div class="fsv-dp__offline-left">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <line x1="2" y1="2" x2="22" y2="22" /><path d="M8.5 16.5a5 5 0 0 1 7 0" /><path d="M2 8.82A15.02 15.02 0 0 1 4.34 7" /><path d="M8.2 4.09A14.93 14.93 0 0 1 12 3a15 15 0 0 1 10 5.82" /><path d="M5 12.86A9.97 9.97 0 0 1 12 10a9.92 9.92 0 0 1 5.92 1.94" /><line x1="12" y1="20" x2="12.01" y2="20" />
-                    </svg>
-                    <span>Offline Mode</span>
-                  </div>
-                  <span class="fsv-dp__saving">Saving locally...</span>
-                </div>
-                <div class="fsv-dp__form">
-                  <div class="fsv-dp__form-header" />
-                  <div class="fsv-dp__form-field" />
-                  <div class="fsv-dp__form-field" />
-                  <div class="fsv-dp__form-field fsv-dp__form-field--tall" />
-                </div>
-                <div class="fsv-dp__sync-pill">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-                  </svg>
-                  <span>Sync when back online</span>
-                </div>
-              </div>
-
-              <!-- Automations -->
-              <V2FeatureShowcaseAutomations v-else-if="tabId === 'automations'" />
-
-              <!-- Multi Language -->
-              <V2FeatureShowcaseMultiLanguage v-else-if="tabId === 'multi-language'" />
-
-            </div>
+          <div class="fs__visual-inner">
+            <V2FeatureShowcaseForms v-if="tabId === 'forms'" />
+            <V2FeatureShowcaseDatabase v-else-if="tabId === 'database'" />
+            <V2FeatureShowcasePdf v-else-if="tabId === 'documents'" />
+            <V2FeatureShowcaseWorkflows v-else-if="tabId === 'workflows'" />
+            <V2FeatureShowcaseAutomations v-else-if="tabId === 'automations'" />
           </div>
         </div>
+      </div>
     </div>
   </section>
 </template>
@@ -140,189 +105,254 @@ import globeIcon from '~/assets/svg/feature-icons/globe.svg?raw'
 import paletteIcon from '~/assets/svg/feature-icons/palette.svg?raw'
 import penToolIcon from '~/assets/svg/feature-icons/pen-tool.svg?raw'
 import fileTextIcon from '~/assets/svg/feature-icons/file-text.svg?raw'
-import wifiOffIcon from '~/assets/svg/feature-icons/wifi-off.svg?raw'
-import activityIcon from '~/assets/svg/feature-icons/activity.svg?raw'
 import bellRingIcon from '~/assets/svg/feature-icons/bell-ring.svg?raw'
 import layersIcon from '~/assets/svg/feature-icons/layers.svg?raw'
-import languagesIcon from '~/assets/svg/feature-icons/languages.svg?raw'
 
 const SVG_ICONS = {
-  users:              usersIcon,
-  slidersHorizontal:  slidersHorizontalIcon,
-  globe:              globeIcon,
-  palette:            paletteIcon,
-  penTool:            penToolIcon,
-  fileText:           fileTextIcon,
-  wifiOff:            wifiOffIcon,
-  activity:           activityIcon,
-  bellRing:           bellRingIcon,
-  layers:             layersIcon,
-  languages:          languagesIcon,
+  users: usersIcon,
+  slidersHorizontal: slidersHorizontalIcon,
+  globe: globeIcon,
+  palette: paletteIcon,
+  penTool: penToolIcon,
+  fileText: fileTextIcon,
+  bellRing: bellRingIcon,
+  layers: layersIcon,
 }
 
 const TABS = [
-  { id: 'collaboration',   label: 'Collaboration' },
-  { id: 'whitelabel',      label: 'White Label' },
-  { id: 'generate-pdf',    label: 'Generate PDF' },
-  { id: 'data-protection', label: 'Offline Mode' },
-  { id: 'automations',     label: 'Automations' },
-  { id: 'multi-language',  label: 'Multi Language' },
+  { id: 'forms', label: 'Forms' },
+  { id: 'database', label: 'Database' },
+  { id: 'documents', label: 'Documents' },
+  { id: 'workflows', label: 'Workflows' },
+  { id: 'automations', label: 'Automations' },
 ]
 
 const CONTENT_DATA = {
-  'collaboration': {
-    href: '/features/collaborative-forms/',
-    title: 'Invite team members to build and manage forms together.',
-    desc: 'Work in real-time with your team. Avoid back-and-forth emails and ensure everyone is on the same page.',
-    badge: 'Real-time sync',
+  forms: {
+    href: '/features/drag-and-drop-form-builder/',
+    cta: 'Explore forms',
+    title: 'Collect the right information from anyone.',
+    desc: 'Create with AI, start from a template or PDF, and prefill each form with data you already have.',
+    badge: 'Forms',
     features: [
-      { iconKey: 'users',            title: 'Co-authoring',    desc: 'Let multiple people fill the same form at once.' },
-      { iconKey: 'slidersHorizontal', title: 'Granular Control', desc: 'Manage access using permissions at the field and form levels.' },
+      {
+        iconKey: 'penTool',
+        title: 'Build faster',
+        desc: 'Turn a prompt, template, or PDF into an editable form in minutes.',
+      },
+      {
+        iconKey: 'slidersHorizontal',
+        title: 'Ask only what matters',
+        desc: 'Use logic and existing data to ask only what each person needs to answer.',
+      },
     ],
     theme: {
-      bg:        'linear-gradient(135deg, #fff7ed, #fffbeb, #ffedd5)',
-      iconBg:    '#fff7ed',
-      iconColor: '#f97316',
-      pillBg:    '#f57422',
-      blob1:     'rgba(254,215,170,0.4)',
-      blob2:     'rgba(253,230,138,0.4)',
+      bg: 'linear-gradient(135deg, #f5f3ff, #faf5ff, #ede9fe)',
+      iconBg: '#f5f3ff',
+      iconColor: '#7c3aed',
+      pillBg: '#7c3aed',
+      blob1: 'rgba(196,181,253,0.45)',
+      blob2: 'rgba(233,213,255,0.45)',
     },
   },
-  'whitelabel': {
-    href: '/features/branding-kit/',
-    title: 'Match forms to your brand with full design control.',
-    desc: 'Remove all our branding and make the forms feel completely native to your application or website.',
-    badge: 'Custom Branding',
+  database: {
+    href: '/features/auto-fill-forms-with-external-data/',
+    cta: 'Explore connected data',
+    title: 'Bring your business data together—and put it to work.',
+    desc: 'Store form responses, import records from other systems, and reuse the same data across forms, documents, workflows, and automations.',
+    badge: 'Database',
     features: [
-      { iconKey: 'globe',   title: 'Custom Domains', desc: 'Use your own domain and custom form links.' },
-      { iconKey: 'palette', title: 'Brand Identity',  desc: 'Build trust with branded, seamless user experience.' },
+      {
+        iconKey: 'fileText',
+        title: 'Bring data in',
+        desc: 'Combine form responses with records from spreadsheets, apps, and APIs.',
+      },
+      {
+        iconKey: 'layers',
+        title: 'Use it everywhere',
+        desc: 'Prefill forms, populate documents, and power every process from one data layer.',
+      },
     ],
     theme: {
-      bg:        'linear-gradient(135deg, #eff6ff, #eef2ff, #dbeafe)',
-      iconBg:    '#eff6ff',
-      iconColor: '#3b82f6',
-      pillBg:    '#2563eb',
-      blob1:     'rgba(191,219,254,0.4)',
-      blob2:     'rgba(199,210,254,0.4)',
+      bg: 'linear-gradient(135deg, #f0f9ff, #eff6ff, #e0f2fe)',
+      iconBg: '#f0f9ff',
+      iconColor: '#0284c7',
+      pillBg: '#0284c7',
+      blob1: 'rgba(125,211,252,0.4)',
+      blob2: 'rgba(147,197,253,0.4)',
     },
   },
-  'generate-pdf': {
+  documents: {
     href: '/features/document-generation/',
-    title: 'Turn responses into ready-to-use downloadable PDFs.',
-    desc: 'Automatically generate professional documents, invoices, or contracts the moment a form is submitted.',
-    badge: 'Auto-Generation',
+    cta: 'Explore documents',
+    title: 'Turn live data into documents that are ready to use.',
+    desc: 'Populate agreements, invoices, certificates, and PDFs using data from forms, the database, or connected systems.',
+    badge: 'Documents',
     features: [
-      { iconKey: 'penTool',  title: 'Custom Layouts',  desc: 'Design custom layouts for invoices or agreements.' },
-      { iconKey: 'fileText', title: 'Zero Formatting', desc: 'No formatting needed, everything auto-generated.' },
+      {
+        iconKey: 'penTool',
+        title: 'Use your own templates',
+        desc: 'Design polished documents that match your brand and existing process.',
+      },
+      {
+        iconKey: 'fileText',
+        title: 'Generate and deliver',
+        desc: 'Create the right document from current data and send it automatically.',
+      },
     ],
     theme: {
-      bg:        'linear-gradient(135deg, #faf5ff, #fdf4ff, #f3e8ff)',
-      iconBg:    '#faf5ff',
+      bg: 'linear-gradient(135deg, #faf5ff, #fdf4ff, #f3e8ff)',
+      iconBg: '#faf5ff',
       iconColor: '#a855f7',
-      pillBg:    '#9333ea',
-      blob1:     'rgba(240,171,252,0.4)',
-      blob2:     'rgba(221,214,254,0.4)',
+      pillBg: '#9333ea',
+      blob1: 'rgba(240,171,252,0.4)',
+      blob2: 'rgba(221,214,254,0.4)',
     },
   },
-  'data-protection': {
-    href: '/features/offline-forms/',
-    title: 'Let users save and finish forms across any device.',
-    desc: "Don't lose form submissions due to bad connections. Allow users to complete forms on their own schedule.",
-    badge: 'Offline Support',
+  workflows: {
+    href: '/features/workflows/',
+    cta: 'Explore workflows',
+    title: 'Guide data and people through every step.',
+    desc: 'Build multi-step processes involving forms, assignments, approvals, documents, and human decisions.',
+    badge: 'Workflows',
     features: [
-      { iconKey: 'wifiOff',  title: 'Offline Sync',   desc: 'Fill forms offline and sync when back online.' },
-      { iconKey: 'activity', title: 'Save Progress',  desc: 'Prevent drop-offs with seamless resume options.' },
+      {
+        iconKey: 'users',
+        title: 'Coordinate every participant',
+        desc: 'Give each person the right step, data, and decision at the right time.',
+      },
+      {
+        iconKey: 'layers',
+        title: 'Keep the full context',
+        desc: 'Carry the same record from intake through review, approval, and delivery.',
+      },
     ],
     theme: {
-      bg:        'linear-gradient(135deg, #ecfdf5, #f0fdfa, #d1fae5)',
-      iconBg:    '#205e45',
-      iconColor: '#ffffff',
-      pillBg:    '#098851',
-      blob1:     'rgba(153,246,228,0.4)',
-      blob2:     'rgba(167,243,208,0.4)',
+      bg: 'linear-gradient(135deg, #eef2ff, #f5f3ff, #e0e7ff)',
+      iconBg: '#eef2ff',
+      iconColor: '#4f46e5',
+      pillBg: '#4f46e5',
+      blob1: 'rgba(165,180,252,0.4)',
+      blob2: 'rgba(196,181,253,0.4)',
     },
   },
-  'automations': {
+  automations: {
     href: '/features/autoresponder-email/',
-    title: 'Send auto-confirmation and follow-up emails.',
-    desc: 'Put your communication on autopilot. Ensure every customer gets a timely response without manual effort.',
-    badge: 'Workflow Automation',
+    cta: 'Explore automations',
+    title: 'Run the next action without manual follow-up.',
+    desc: 'React to form submissions, record updates, and workflow events with emails, integrations, AI actions, and background tasks.',
+    badge: 'Automations',
     features: [
-      { iconKey: 'bellRing', title: 'Smart Routing',     desc: 'Get alerts and route responses to your team.' },
-      { iconKey: 'layers',   title: 'Deep Integrations', desc: 'Connect with CRMs, Slack, and 1000+ other tools.' },
+      {
+        iconKey: 'bellRing',
+        title: 'React to any event',
+        desc: 'Trigger timely messages and actions whenever data or status changes.',
+      },
+      {
+        iconKey: 'globe',
+        title: 'Connect every system',
+        desc: 'Send data to the apps and APIs your business already depends on.',
+      },
     ],
     theme: {
-      bg:        'linear-gradient(135deg, #fff1f2, #fdf2f8, #eef2ff)',
-      iconBg:    '#fff1f2',
+      bg: 'linear-gradient(135deg, #fff1f2, #fdf2f8, #eef2ff)',
+      iconBg: '#fff1f2',
       iconColor: '#f43f5e',
-      pillBg:    '#f43f5e',
-      blob1:     'rgba(251,207,232,0.4)',
-      blob2:     'rgba(199,210,254,0.4)',
-    },
-  },
-  'multi-language': {
-    href: '/features/multi-language-form-translations/',
-    title: 'Add multiple languages to reach global users',
-    desc: 'Break language barriers and expand your market reach by offering fully localized form experiences.',
-    badge: 'Localization',
-    features: [
-      { iconKey: 'languages', title: 'AI Translation', desc: 'Translate forms instantly using AI.' },
-      { iconKey: 'globe',     title: 'Accessibility',  desc: 'Make your forms accessible to everyone.' },
-    ],
-    theme: {
-      bg:        'linear-gradient(135deg, #f5f3ff, #faf5ff, #fdf4ff)',
-      iconBg:    '#f5f3ff',
-      iconColor: '#8b5cf6',
-      pillBg:    '#7c3aed',
-      blob1:     'rgba(196,181,253,0.4)',
-      blob2:     'rgba(240,171,252,0.4)',
+      pillBg: '#f43f5e',
+      blob1: 'rgba(251,207,232,0.4)',
+      blob2: 'rgba(199,210,254,0.4)',
     },
   },
 }
 
-const activeTab = ref('collaboration')
+const activeTab = ref('forms')
 </script>
 
 <style scoped>
 /* ── Shared keyframes ──────────────────────────────────────── */
 @keyframes cursor-robin {
-  0%, 100% { transform: translate(0, 0); }
-  50%       { transform: translate(20px, 15px); }
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(20px, 15px);
+  }
 }
 @keyframes cursor-alex {
-  0%, 100% { transform: translate(20px, 0); }
-  50%       { transform: translate(-10px, -20px); }
+  0%,
+  100% {
+    transform: translate(20px, 0);
+  }
+  50% {
+    transform: translate(-10px, -20px);
+  }
 }
 @keyframes chevron-bounce {
-  0%, 100% { transform: translateX(0); }
-  50%       { transform: translateX(5px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
 }
 @keyframes slide-up {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 @keyframes slide-down {
-  from { opacity: 0; transform: translateY(-20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 @keyframes scale-in {
-  from { opacity: 0; transform: scale(0.95); }
-  to   { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* ── Tab visibility ────────────────────────────────────────── */
-.fs__card--hidden  { display: none !important; }
-.fs__card--visible { animation: tab-card-in 0.25s ease both; }
+.fs__card--hidden {
+  display: none !important;
+}
+.fs__card--visible {
+  animation: tab-card-in 0.25s ease both;
+}
 
 @keyframes tab-card-in {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ── Section ───────────────────────────────────────────────── */
 .fs {
   position: relative;
   overflow: hidden;
+  padding: var(--space-12) var(--space-6) var(--space-24);
+  background: #fff;
 }
 
 .fs__container {
@@ -331,10 +361,48 @@ const activeTab = ref('collaboration')
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
-  padding: var(--space-6) 0;
+  padding: 0;
 }
-@media (min-width: 640px)  { .fs__container { padding: var(--space-6); } }
-@media (min-width: 1024px) { .fs__container { padding: var(--space-8); } }
+
+@media (max-width: 640px) {
+  .fs {
+    padding: var(--space-16) var(--space-5);
+  }
+}
+
+/* ── Platform positioning ───────────────────────────────────── */
+.fs__header {
+  max-width: 1100px;
+  margin: 0 auto var(--space-8);
+  text-align: center;
+}
+
+.fs__header-label {
+  display: inline-block;
+  margin-bottom: var(--space-3);
+  color: var(--violet-600);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.fs__header-title {
+  margin: 0;
+  color: var(--fg-1);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.7px;
+  line-height: 1.15;
+}
+
+.fs__header-desc {
+  max-width: 1050px;
+  margin: var(--space-4) auto 0;
+  color: var(--fg-2);
+  font-size: var(--fs-md);
+  line-height: 1.65;
+}
 
 /* ── Tabs (all breakpoints) ────────────────────────────────── */
 .fs__tabs {
@@ -346,13 +414,16 @@ const activeTab = ref('collaboration')
   -webkit-overflow-scrolling: touch;
   gap: var(--space-2);
   padding: 0 var(--space-4) var(--space-2);
-  margin: 0 calc(-1 * var(--space-4)) var(--space-5);
+  margin: 0 0 var(--space-5);
+  scroll-padding-inline: var(--space-4);
 }
-.fs__tabs::-webkit-scrollbar { display: none; }
+.fs__tabs::-webkit-scrollbar {
+  display: none;
+}
 @media (min-width: 640px) {
   .fs__tabs {
-    margin: 0 calc(-1 * var(--space-6)) var(--space-5);
-    padding: 0 var(--space-6) var(--space-2);
+    margin: 0 0 var(--space-5);
+    padding: 0 0 var(--space-2);
   }
 }
 @media (min-width: 1024px) {
@@ -381,22 +452,30 @@ const activeTab = ref('collaboration')
   box-shadow: var(--shadow-xs);
   font-family: var(--font-primary);
 }
-.fs__pill:hover:not(.fs__pill--active) { background: var(--bg-grey-50); }
-.fs__pill--active { box-shadow: var(--shadow-sm); }
+.fs__pill:hover:not(.fs__pill--active) {
+  background: var(--bg-grey-50);
+}
+.fs__pill--active {
+  box-shadow: var(--shadow-sm);
+}
 
 /* ── Feature card ──────────────────────────────────────────── */
 .fs__card {
   background: var(--bg-primary);
   border-radius: var(--r-3xl);
   overflow: hidden;
-  box-shadow: 0 20px 50px -12px rgba(0,0,0,0.08);
+  box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.08);
   border: 1px solid var(--border-light);
   display: flex;
   flex-direction: column;
   max-width: 1024px;
   margin: 0 auto;
 }
-@media (min-width: 1024px) { .fs__card { flex-direction: row; } }
+@media (min-width: 1024px) {
+  .fs__card {
+    flex-direction: row;
+  }
+}
 
 /* ── Content (left) ────────────────────────────────────────── */
 .fs__content {
@@ -407,8 +486,17 @@ const activeTab = ref('collaboration')
   justify-content: center;
   order: 2;
 }
-@media (min-width: 640px)  { .fs__content { padding: var(--space-8); } }
-@media (min-width: 1024px) { .fs__content { padding: var(--space-12); order: 1; } }
+@media (min-width: 640px) {
+  .fs__content {
+    padding: var(--space-8);
+  }
+}
+@media (min-width: 1024px) {
+  .fs__content {
+    padding: var(--space-12);
+    order: 1;
+  }
+}
 
 .fs__badge {
   display: none;
@@ -418,7 +506,11 @@ const activeTab = ref('collaboration')
   text-transform: uppercase;
   margin-bottom: var(--space-4);
 }
-@media (min-width: 1024px) { .fs__badge { display: inline-block; } }
+@media (min-width: 1024px) {
+  .fs__badge {
+    display: inline-block;
+  }
+}
 
 .fs__title {
   font-size: clamp(22px, 3vw, 32px);
@@ -436,21 +528,33 @@ const activeTab = ref('collaboration')
   line-height: 1.7;
   margin: 0 0 var(--space-8);
 }
-@media (min-width: 1024px) { .fs__desc { display: block; } }
+@media (min-width: 1024px) {
+  .fs__desc {
+    display: block;
+  }
+}
 
 .fs__features {
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
 }
-@media (min-width: 1024px) { .fs__features { gap: var(--space-6); } }
+@media (min-width: 1024px) {
+  .fs__features {
+    gap: var(--space-6);
+  }
+}
 
 .fs__feature {
   display: flex;
   gap: var(--space-4);
   align-items: center;
 }
-@media (min-width: 768px) { .fs__feature { align-items: flex-start; } }
+@media (min-width: 768px) {
+  .fs__feature {
+    align-items: flex-start;
+  }
+}
 
 .fs__feature-icon {
   flex-shrink: 0;
@@ -461,15 +565,36 @@ const activeTab = ref('collaboration')
   align-items: center;
   justify-content: center;
   margin-top: 2px;
-  box-shadow: 0 0 0 4px rgba(0,0,0,0.04), var(--shadow-xs);
+  box-shadow:
+    0 0 0 4px rgba(0, 0, 0, 0.04),
+    var(--shadow-xs);
 }
-@media (min-width: 768px) { .fs__feature-icon { width: 40px; height: 40px; } }
+@media (min-width: 768px) {
+  .fs__feature-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
 
-.fs__icon-svg { display: flex; align-items: center; }
-.fs__icon-svg :deep(svg) { width: 16px; height: 16px; }
-@media (min-width: 768px) { .fs__icon-svg :deep(svg) { width: 20px; height: 20px; } }
+.fs__icon-svg {
+  display: flex;
+  align-items: center;
+}
+.fs__icon-svg :deep(svg) {
+  width: 16px;
+  height: 16px;
+}
+@media (min-width: 768px) {
+  .fs__icon-svg :deep(svg) {
+    width: 20px;
+    height: 20px;
+  }
+}
 
-.fs__feature-body { flex: 1; min-width: 0; }
+.fs__feature-body {
+  flex: 1;
+  min-width: 0;
+}
 
 .fs__feature-title {
   display: none;
@@ -478,7 +603,11 @@ const activeTab = ref('collaboration')
   color: var(--fg-1);
   margin: 0 0 4px;
 }
-@media (min-width: 768px) { .fs__feature-title { display: block; } }
+@media (min-width: 768px) {
+  .fs__feature-title {
+    display: block;
+  }
+}
 
 .fs__feature-desc {
   margin: 0;
@@ -510,10 +639,17 @@ const activeTab = ref('collaboration')
   transition: opacity 200ms ease;
   font-family: var(--font-primary);
 }
-.fs__explore:hover { opacity: 0.75; }
-.fs__explore:hover .fs__chevron { transform: translateX(4px); }
+.fs__explore:hover {
+  opacity: 0.75;
+}
+.fs__explore:hover .fs__chevron {
+  transform: translateX(4px);
+}
 
-.fs__chevron { transition: transform 200ms ease; flex-shrink: 0; }
+.fs__chevron {
+  transition: transform 200ms ease;
+  flex-shrink: 0;
+}
 
 /* ── Visual (right) ────────────────────────────────────────── */
 .fs__visual {
@@ -526,8 +662,18 @@ const activeTab = ref('collaboration')
   justify-content: center;
   order: 1;
 }
-@media (min-width: 640px)  { .fs__visual { height: auto; min-height: 380px; } }
-@media (min-width: 1024px) { .fs__visual { min-height: 460px; order: 2; } }
+@media (min-width: 640px) {
+  .fs__visual {
+    height: auto;
+    min-height: 380px;
+  }
+}
+@media (min-width: 1024px) {
+  .fs__visual {
+    min-height: 460px;
+    order: 2;
+  }
+}
 
 .fs__blob {
   position: absolute;
@@ -537,8 +683,16 @@ const activeTab = ref('collaboration')
   filter: blur(48px);
   pointer-events: none;
 }
-.fs__blob--1 { top: 0; right: 0; transform: translate(50%, -50%); }
-.fs__blob--2 { bottom: 0; left: 0; transform: translate(-25%, 50%); }
+.fs__blob--1 {
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+.fs__blob--2 {
+  bottom: 0;
+  left: 0;
+  transform: translate(-25%, 50%);
+}
 
 .fs__visual-inner {
   position: relative;
@@ -552,7 +706,11 @@ const activeTab = ref('collaboration')
   transform: scale(0.75);
   transform-origin: center;
 }
-@media (min-width: 640px)  { .fs__visual-inner { transform: scale(1); } }
+@media (min-width: 640px) {
+  .fs__visual-inner {
+    transform: scale(1);
+  }
+}
 
 /* ─────────────────────────────────────────────────────────── */
 /* Visual: Collaboration                                       */
@@ -565,8 +723,8 @@ const activeTab = ref('collaboration')
   background: #fff6ec;
   border-radius: var(--r-2xl);
   padding: var(--space-6);
-  box-shadow: inset 0 2px 8px rgba(0,0,0,0.03);
-  border: 1px solid rgba(254,215,170,0.5);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(254, 215, 170, 0.5);
   overflow: hidden;
 }
 .fsv-collab__header {
@@ -586,11 +744,19 @@ const activeTab = ref('collaboration')
   flex: 1;
   background: var(--bg-primary);
   border-radius: var(--r-lg);
-  border: 1px solid rgba(254,215,170,0.5);
+  border: 1px solid rgba(254, 215, 170, 0.5);
   box-shadow: var(--shadow-xs);
 }
-.fsv-collab__field--full  { flex: none; width: 100%; margin-bottom: var(--space-4); }
-.fsv-collab__field--tall  { flex: none; width: 100%; height: 80px; }
+.fsv-collab__field--full {
+  flex: none;
+  width: 100%;
+  margin-bottom: var(--space-4);
+}
+.fsv-collab__field--tall {
+  flex: none;
+  width: 100%;
+  height: 80px;
+}
 
 .fsv-collab__cursor {
   position: absolute;
@@ -617,10 +783,12 @@ const activeTab = ref('collaboration')
   box-shadow: var(--shadow-sm);
   margin-left: var(--space-4);
 }
-.fsv-collab__label--blue { background: #3b82f6; }
-.fsv-collab__label--pink { background: #ec4899; }
-
-
+.fsv-collab__label--blue {
+  background: #3b82f6;
+}
+.fsv-collab__label--pink {
+  background: #ec4899;
+}
 
 /* ─────────────────────────────────────────────────────────── */
 /* Visual: Data Protection                                     */
@@ -630,16 +798,18 @@ const activeTab = ref('collaboration')
   width: 100%;
   max-width: 320px;
   height: 320px;
-  background: rgba(236,253,245,0.5);
+  background: rgba(236, 253, 245, 0.5);
   border-radius: var(--r-2xl);
   padding: var(--space-6);
-  border: 1px solid rgba(167,243,208,0.4);
+  border: 1px solid rgba(167, 243, 208, 0.4);
   overflow: hidden;
-  box-shadow: inset 0 2px 8px rgba(0,0,0,0.02);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 .fsv-dp__offline-bar {
   position: absolute;
-  top: 16px; left: 16px; right: 16px;
+  top: 16px;
+  left: 16px;
+  right: 16px;
   background: #111827;
   color: var(--bg-primary);
   border-radius: var(--r-lg);
@@ -647,7 +817,7 @@ const activeTab = ref('collaboration')
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   z-index: 2;
   animation: slide-down 0.4s ease both;
 }
@@ -667,7 +837,7 @@ const activeTab = ref('collaboration')
   background: var(--bg-primary);
   border-radius: var(--r-xl);
   box-shadow: var(--shadow-xs);
-  border: 1px solid rgba(236,253,245,0.6);
+  border: 1px solid rgba(236, 253, 245, 0.6);
   padding: var(--space-4);
   height: calc(100% - 56px - 8px);
   position: relative;
@@ -687,7 +857,9 @@ const activeTab = ref('collaboration')
   border: 1px solid var(--border-light);
   margin-bottom: var(--space-3);
 }
-.fsv-dp__form-field--tall { height: 64px; }
+.fsv-dp__form-field--tall {
+  height: 64px;
+}
 .fsv-dp__sync-pill {
   position: absolute;
   bottom: 24px;
@@ -696,7 +868,7 @@ const activeTab = ref('collaboration')
   background: var(--bg-primary);
   padding: var(--space-2) var(--space-4);
   border-radius: var(--r-full);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   border: 1px solid var(--border-light);
   display: flex;
   align-items: center;
@@ -708,5 +880,4 @@ const activeTab = ref('collaboration')
   color: var(--fg-strong);
   animation: slide-up 0.4s 0.2s ease both;
 }
-
 </style>

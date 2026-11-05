@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="_ds/formester-design-system-v3-5b832b35-ad5a-4ce0-8bfd-f2448cc7802a/preview/forms-foundation.css" />
+<script src="_ds/formester-design-system-v3-5b832b35-ad5a-4ce0-8bfd-f2448cc7802a/_ds_bundle.js"></script>
+<style>
+  html, body { overflow: hidden; }
+  body { margin: 0; background: var(--surface); }
+  a { color: var(--accent-600); text-decoration: none; }
+  a:hover { color: var(--accent-500); }
+  :root {
+    --demo-ar: 16 / 10; --demo-min-h: 0px;
+    --split-dir: row; --panel-w: 300px; --panel-h: auto; --canvas-h: auto;
+    --tabs-display: flex; --extras-display: inline-flex;
+    --form-selector-display: inline-flex; --builder-action-display: inline-flex; --prompts-display: block;
+    --preview-grid-cols: 1fr 1fr;
+  }
+  @media (max-width: 640px) {
+    :root {
+      --demo-ar: auto; --demo-min-h: 1040px;
+      --split-dir: column-reverse; --panel-w: auto; --panel-h: 430px; --canvas-h: 470px;
+      --tabs-display: none; --extras-display: none;
+      --form-selector-display: none; --builder-action-display: none; --prompts-display: none;
+      --preview-grid-cols: 1fr;
+    }
+  }
+</style>
+</helmet>
+
+<section style="background: transparent; color: var(--text); padding: 0;">
+  <div style="max-width: none; margin: 0 auto;">
+
+    <div ref="{{ hostRef }}" style="position: relative; width: 100%; margin-top: 0; border: 1px solid var(--border); border-radius: var(--r-card); background: var(--surface); box-shadow: var(--shadow-raised); overflow: hidden; aspect-ratio: var(--demo-ar); min-height: var(--demo-min-h); opacity: {{ stageOp }};">
+
+      <div style="position: absolute; inset: 0; background: var(--surface-sunken); display: flex; flex-direction: column; opacity: {{ wizardOp }}; transform: scale({{ wizardScale }}); transform-origin: 50% 44%; pointer-events: none;">
+
+        <main style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px 24px 40px;">
+          <div style="text-align: center; margin-bottom: 22px;">
+            <h3 style="font-size: var(--fs-24); font-weight: 600;">Create Form with AI</h3>
+            <p style="margin: 8px 0 0; font-size: var(--fs-13); color: var(--text-soft);">Automatically generate smart, customizable forms using AI.</p>
+          </div>
+
+          <div style="width: 100%; max-width: 560px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-card); box-shadow: var(--shadow-rest); padding: 20px;">
+            <div style="font-size: var(--fs-13); font-weight: 600; margin-bottom: 8px;">Describe Your Form<span style="color: var(--danger); margin-left: 2px;">*</span></div>
+
+            <div style="border: 1.5px solid var(--accent-500); border-radius: var(--r-xl); box-shadow: var(--focus-ring); padding: 12px 13px 10px; display: flex; flex-direction: column; gap: 11px;">
+              <div style="font-size: var(--fs-13); line-height: 1.6; color: var(--accent-600);"><span style="opacity: {{ c1 }};">Create a client onboarding form that collects company details, </span><span style="opacity: {{ c2 }};">project requirements, supporting documents, </span><span style="opacity: {{ c3 }};">and approval consent.</span><span style="opacity: {{ caret }}; color: var(--accent-500);">|</span></div>
+              <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                <span class="chip" style="font-size: var(--fs-12); background: var(--surface-sunken); border: 1px solid var(--border);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 13px; height: 13px;"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48" /></svg>Attach files
+                </span>
+                <span class="chip" style="font-size: var(--fs-12); background: var(--surface-sunken); border: 1px solid var(--border); color: var(--text-soft);">brand-brief.pdf<span style="color: var(--text-muted);">✕</span></span>
+                <span style="font-size: 11px; color: var(--text-muted);">PDF or Image · max 10 MB</span>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 14px; background: var(--surface-sunken); border: 1px solid var(--border-soft); border-radius: var(--r-xl); padding: 8px 11px;">
+              <span class="select" style="padding: 5px 9px; font-size: var(--fs-12); background: var(--surface);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 13px; height: 13px;"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .962 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.962 0z" /></svg>Core
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+              </span>
+              <span style="display: inline-flex; align-items: center; gap: 9px; font-size: var(--fs-12); font-weight: 500; color: var(--text-soft);">
+                <span style="width: 34px; height: 19px; border-radius: var(--r-full); background: var(--accent-500); position: relative; flex: none;"><span style="position: absolute; top: 2px; left: 17px; width: 15px; height: 15px; border-radius: var(--r-full); background: #fff;"></span></span>Agent mode
+              </span>
+            </div>
+
+            <div style="display: var(--prompts-display);">
+            <p style="font-size: var(--fs-12); color: var(--text-soft); margin: 16px 0 10px;">Or create using our Prompts:</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 18px;">
+              <span style="font-size: var(--fs-12); color: var(--text-soft); border: 1px solid var(--border); border-radius: var(--r-full); padding: 5px 11px;">Client Onboarding</span>
+              <span style="font-size: var(--fs-12); color: var(--text-soft); border: 1px solid var(--border); border-radius: var(--r-full); padding: 5px 11px;">Customer Feedback</span>
+              <span style="font-size: var(--fs-12); color: var(--text-soft); border: 1px solid var(--border); border-radius: var(--r-full); padding: 5px 11px;">Event Registration</span>
+              <span style="font-size: var(--fs-12); color: var(--text-soft); border: 1px solid var(--border); border-radius: var(--r-full); padding: 5px 11px;">Contact Us</span>
+              <span style="font-size: var(--fs-12); color: var(--text-soft); border: 1px solid var(--border); border-radius: var(--r-full); padding: 5px 11px;">Job Application</span>
+              <span style="font-size: var(--fs-12); color: var(--text-soft); border: 1px solid var(--border); border-radius: var(--r-full); padding: 5px 11px;">Survey Form</span>
+            </div>
+            </div>
+
+            <div style="display: flex; justify-content: flex-end;">
+              <span class="btn btn--primary" style="font-size: var(--fs-13); background: {{ genBg }}; transform: scale({{ genScale }});">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .962 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.962 0z" /></svg>{{ genLabel }}
+              </span>
+            </div>
+          </div>
+        </main>
+        <span style="position: absolute; right: 22px; bottom: 16px; font-size: var(--fs-12); font-weight: 600; color: var(--accent-600);">Formester</span>
+      </div>
+
+      <div style="position: absolute; inset: 0; display: flex; flex-direction: column; background: var(--surface); opacity: {{ appOp }}; pointer-events: none;">
+
+        <div style="flex: none; height: 46px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 12px; padding: 0 14px;">
+          <span style="display: inline-flex; align-items: center; gap: 7px; font-size: var(--fs-14); font-weight: 700; letter-spacing: -0.02em; flex: none;">
+            <svg viewBox="0 0 18 24" fill="none" aria-hidden="true" style="height: 17px; width: auto;"><rect width="17.4545" height="24" rx="2.28571" fill="#6434D0" /><rect x="2.18182" y="5.71429" width="13.0909" height="5.71429" rx="2.85714" fill="#fff" /><circle cx="5.95041" cy="8.56006" r="1.55" fill="#6434D0" /><circle cx="11.5041" cy="8.57143" r="1.55" fill="#6434D0" /></svg>Formester
+          </span>
+          <span class="select" style="display: var(--form-selector-display); padding: 5px 10px; font-size: var(--fs-12); max-width: 170px;">
+            <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ formName }}</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+          </span>
+          <span style="color: var(--text-muted); display: var(--extras-display);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 14px; height: 14px;"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z" /><path d="m15 5 4 4" /></svg>
+          </span>
+          <div class="tabs" style="display: var(--tabs-display); margin: 0 auto; padding: 3px;">
+            <span class="tab is-active" style="font-size: var(--fs-12); padding: 5px 13px;">Build</span>
+            <span class="tab" style="font-size: var(--fs-12); padding: 5px 13px;">PDF Editor</span>
+            <span class="tab" style="font-size: var(--fs-12); padding: 5px 13px;">Embed</span>
+            <span class="tab" style="font-size: var(--fs-12); padding: 5px 13px;">Share</span>
+            <span class="tab" style="font-size: var(--fs-12); padding: 5px 13px;">Results</span>
+            <span class="tab" style="font-size: var(--fs-12); padding: 5px 13px;">Automate</span>
+          </div>
+          <span style="margin-left: auto; display: flex; align-items: center; gap: 10px; flex: none;">
+            <span style="color: var(--text-muted); display: var(--extras-display);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px;"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" /><circle cx="12" cy="12" r="3" /></svg>
+            </span>
+            <span class="btn btn--primary" style="font-size: var(--fs-12); padding: 7px 14px; opacity: {{ publishOp }};">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5" /><path d="m5 12 7-7 7 7" /></svg>Publish
+            </span>
+          </span>
+        </div>
+
+        <div style="flex: none; height: 40px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 10px; padding: 0 14px; background: var(--surface);">
+          <span class="btn btn--secondary" style="display: var(--builder-action-display); font-size: var(--fs-12); padding: 6px 11px; flex: none;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14" /><path d="M5 12h14" /></svg>Add Elements
+          </span>
+          <span style="width: 26px; height: 26px; border-radius: 8px; background: var(--tint); color: var(--accent-600); display: grid; place-items: center; flex: none;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 14px; height: 14px;"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .962 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.962 0z" /></svg>
+          </span>
+          <span style="font-size: var(--fs-12); font-weight: 500; color: {{ statusFg }}; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ statusText }}</span>
+          <span style="margin-left: auto; display: flex; align-items: center; gap: 10px; flex: none;">
+            <span class="btn btn--secondary" style="font-size: var(--fs-12); padding: 6px 11px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" /><circle cx="12" cy="12" r="3" /></svg>Preview
+            </span>
+            <span style="color: var(--text-muted); display: var(--extras-display);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 15px; height: 15px;"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /><path d="M3 3v5h5" /><path d="M12 7v5l4 2" /></svg>
+            </span>
+          </span>
+        </div>
+
+        <div style="position: relative; flex: 1; min-height: 0; display: flex; flex-direction: var(--split-dir);">
+
+          <div style="flex: 1; min-width: 0; height: var(--canvas-h); overflow: hidden; padding: 18px 22px; position: relative;">
+            <div style="display: flex; flex-direction: column; gap: 16px; transition: transform .5s cubic-bezier(.4,0,.2,1); transform: translateY(-{{ shift }}px);">
+              <sc-for list="{{ fields }}" as="f" hint-placeholder-count="4">
+                <div style="display: {{ f.disp }}; flex: none; flex-direction: column; gap: 6px; height: {{ f.h }}px; opacity: {{ f.op }}; transform: translateY({{ f.ty }}px); border: 1px solid {{ f.cardBorder }}; background: {{ f.cardBg }}; border-radius: var(--r-xl); padding: {{ f.pad }};">
+                  <sc-if value="{{ f.isReview }}" hint-placeholder-val="{{ false }}">
+                    <div style="display: flex; align-items: center; gap: 8px; margin: -2px 0 4px;">
+                      <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 600; color: {{ f.reviewFg }};">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 12px; height: 12px;"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .962 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.962 0z" /></svg>{{ f.reviewLabel }}
+                      </span>
+                      <span style="font-size: 11px; color: var(--text-muted);">{{ f.reviewCount }}</span>
+                      <span style="margin-left: auto; display: flex; align-items: center; gap: 6px; opacity: {{ f.actionsOp }};">
+                        <span class="btn btn--primary" style="font-size: 11px; padding: 5px 10px;">✓ Approve</span>
+                        <span class="btn btn--ghost" style="font-size: 11px; padding: 5px 8px;">✕ Reject</span>
+                      </span>
+                    </div>
+                  </sc-if>
+
+                  <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="font-size: var(--fs-14); font-weight: 600; color: var(--text);">{{ f.label }}</span>
+                    <sc-if value="{{ f.isCond }}" hint-placeholder-val="{{ false }}">
+                      <span class="chip chip--selected" style="font-size: 11px; padding: 2px 9px; font-weight: 600;">Conditional</span>
+                    </sc-if>
+                  </div>
+                  <sc-if value="{{ f.hasHint }}" hint-placeholder-val="{{ false }}">
+                    <span style="font-size: var(--fs-12); color: var(--text-muted);">{{ f.hint }}</span>
+                  </sc-if>
+
+                  <sc-if value="{{ f.isText }}" hint-placeholder-val="{{ true }}">
+                    <span class="input" style="display: flex; align-items: center; height: 34px; padding: 0 12px; font-size: var(--fs-13); color: var(--text-muted);">{{ f.ph }}</span>
+                  </sc-if>
+                  <sc-if value="{{ f.isLong }}" hint-placeholder-val="{{ false }}">
+                    <span class="input" style="display: block; height: 52px; padding: 9px 12px; font-size: var(--fs-13); color: var(--text-muted);">{{ f.ph }}</span>
+                  </sc-if>
+                  <sc-if value="{{ f.isChoice }}" hint-placeholder-val="{{ false }}">
+                    <span style="display: flex; flex-wrap: wrap; align-items: center; gap: 7px; min-height: 34px;">
+                      <sc-for list="{{ f.options }}" as="o" hint-placeholder-count="3">
+                        <span class="chip" style="font-size: var(--fs-12); padding: 6px 12px; background: {{ o.bg }}; color: {{ o.fg }};">{{ o.label }}</span>
+                      </sc-for>
+                    </span>
+                  </sc-if>
+                  <sc-if value="{{ f.isFile }}" hint-placeholder-val="{{ false }}">
+                    <span class="dropzone" style="display: grid; place-items: center; height: 42px; padding: 0; font-size: var(--fs-12); color: var(--text-muted); border-radius: var(--r-lg);">Drop files or browse · PDF, DOCX, PNG</span>
+                  </sc-if>
+                  <sc-if value="{{ f.isCheck }}" hint-placeholder-val="{{ false }}">
+                    <span style="display: flex; align-items: center; gap: 9px; height: 26px;">
+                      <span style="width: 18px; height: 18px; flex: none; border-radius: 6px; border: 1.5px solid #d0d5dd; background: var(--surface);"></span>
+                      <span style="font-size: var(--fs-13); color: var(--text-soft);">I approve the scope and timeline</span>
+                    </span>
+                  </sc-if>
+
+                  <sc-if value="{{ f.isReview }}" hint-placeholder-val="{{ false }}">
+                    <div style="display: flex; align-items: center; gap: 7px; margin-top: 4px;">
+                      <span style="font-size: 10px; font-weight: 600; letter-spacing: 0.05em; color: var(--text-muted);">SETTINGS</span>
+                      <span class="chip chip--selected" style="font-size: 10px; padding: 2px 8px;">Required · On</span>
+                      <span class="chip chip--selected" style="font-size: 10px; padding: 2px 8px;">Shows if Project type = Website redesign</span>
+                      <span style="margin-left: auto; font-size: 10px; font-weight: 600; color: var(--accent-600);">All settings</span>
+                    </div>
+                  </sc-if>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+
+          <div style="flex: none; width: var(--panel-w); height: var(--panel-h); min-width: 0; border-left: 1px solid var(--border); background: var(--surface); padding: 11px; display: flex; flex-direction: column; gap: 9px; overflow: hidden;">
+            <div class="tabs" style="width: 100%; padding: 3px;">
+              <span class="tab is-active" style="flex: 1; justify-content: center; font-size: var(--fs-12); padding: 5px 0;">AI</span>
+              <span class="tab" style="flex: 1; justify-content: center; font-size: var(--fs-12); padding: 5px 0;">Design</span>
+              <span class="tab" style="flex: 1; justify-content: center; font-size: var(--fs-12); padding: 5px 0;">Advanced</span>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+              <span style="display: inline-flex; align-items: center; gap: 8px; font-size: var(--fs-12); color: var(--text-soft);">
+                <span style="width: 30px; height: 17px; border-radius: var(--r-full); background: {{ autoBg }}; position: relative; flex: none; transition: background .3s ease;"><span style="position: absolute; top: 2px; left: {{ autoX }}px; width: 13px; height: 13px; border-radius: var(--r-full); background: #fff; transition: left .3s ease;"></span></span>Auto-approve
+              </span>
+              <span style="display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 500; color: var(--accent-600);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 12px; height: 12px;"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .962 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.962 0z" /></svg>Core
+              </span>
+            </div>
+
+            <div style="background: var(--tint); border-radius: var(--r-xl); padding: 10px 12px; font-size: var(--fs-12); line-height: 1.55; color: var(--accent-600);">Create a client onboarding form that collects company details, project requirements, supporting documents, and approval consent.</div>
+            <div style="display: flex; justify-content: flex-end;">
+              <span class="chip" style="font-size: 11px; background: var(--surface-sunken); border: 1px solid var(--border); color: var(--text-soft);">brand-brief.pdf</span>
+            </div>
+
+            <div style="font-size: var(--fs-12); line-height: 1.5; color: var(--text-soft); opacity: {{ msgOp }};">Eight questions on one page, with email validation and a follow-up for website work.</div>
+
+            <div style="display: flex; flex-direction: column; gap: 4px;">
+              <sc-for list="{{ tasks }}" as="task" hint-placeholder-count="5">
+                <div style="display: flex; align-items: center; gap: 8px; padding: 4px 7px; border-radius: 8px; background: {{ task.rowBg }}; opacity: {{ task.op }}; transform: translateY({{ task.ty }}px);">
+                  <span style="width: 15px; height: 15px; flex: none; border-radius: var(--r-full); border: 1.5px solid {{ task.bc }}; background: {{ task.bg }}; color: #fff; display: grid; place-items: center; font-size: 9px; line-height: 1;">{{ task.mark }}</span>
+                  <span style="flex: 1; min-width: 0; font-size: var(--fs-12); font-weight: 500; color: {{ task.fg }}; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ task.label }}</span>
+                  <span style="flex: none; font-size: 10px; font-weight: 600; color: {{ task.metaFg }};">{{ task.meta }}</span>
+                </div>
+              </sc-for>
+            </div>
+
+            <div style="font-size: var(--fs-12); line-height: 1.5; color: var(--accent-600); opacity: {{ noteOp }};">The website follow-up needs your call — I added it as a conditional question.</div>
+
+            <div style="margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding-top: 10px; border-top: 1px solid var(--border-soft); opacity: {{ waitingOp }};">
+              <span style="font-size: var(--fs-12); color: var(--text-soft);"><b style="color: var(--text);">{{ waitingCount }}</b> {{ waitingLabel }}</span>
+              <span class="btn btn--secondary" style="font-size: 11px; padding: 6px 10px; border-color: {{ approveBorder }}; color: {{ approveFg }};">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>Approve all
+              </span>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 8px; border: 1px solid var(--border); border-radius: var(--r-xl); padding: 8px 10px;">
+              <span style="flex: 1; font-size: var(--fs-12); color: var(--text-muted);">Ask for a change…</span>
+              <span style="width: 22px; height: 22px; border-radius: var(--r-full); background: var(--tint); color: var(--accent-600); display: grid; place-items: center; flex: none;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 12px; height: 12px;"><path d="M12 19V5" /><path d="m5 12 7-7 7 7" /></svg>
+              </span>
+            </div>
+          </div>
+
+          <div style="position: absolute; inset: 0; background: var(--surface-sunken); display: flex; flex-direction: column; opacity: {{ previewOp }};">
+            <div style="flex: none; display: flex; align-items: center; gap: 10px; padding: 12px 18px; background: var(--surface); border-bottom: 1px solid var(--border);">
+              <span class="btn btn--ghost" style="font-size: var(--fs-12); padding: 5px 8px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7" /><path d="M19 12H5" /></svg>Back to editor
+              </span>
+              <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted);">Respondent preview</span>
+              <span class="badge" style="margin-left: auto; background: {{ badgeBg }}; color: {{ badgeFg }};"><span class="badge__dot"></span>{{ badgeText }}</span>
+            </div>
+            <div style="flex: 1; min-height: 0; overflow: hidden; display: flex; justify-content: center; padding: 16px;">
+              <div style="width: 100%; max-width: 560px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-card); box-shadow: var(--shadow-rest); padding: 18px 20px; display: flex; flex-direction: column; gap: 12px;">
+                <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;">
+                  <div>
+                    <div style="font-size: var(--fs-20); font-weight: 600; letter-spacing: -0.02em;">Client onboarding</div>
+                    <div style="font-size: var(--fs-12); color: var(--text-muted); margin-top: 3px;">7 questions · about 3 minutes</div>
+                  </div>
+                  <span class="chip chip--selected" style="font-size: 10px; padding: 3px 8px;">Ready</span>
+                </div>
+
+                <div style="font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-600);">Company details</div>
+                <div style="display: grid; grid-template-columns: var(--preview-grid-cols); gap: 10px;">
+                  <div class="field">
+                    <span class="field__label">Contact name</span>
+                    <span class="input" style="display: flex; align-items: center; height: 36px; color: var(--text-muted);">First and last name</span>
+                  </div>
+                  <div class="field">
+                    <span class="field__label">Work email</span>
+                    <span class="input" style="display: flex; align-items: center; height: 36px; color: var(--text-muted);">name@company.com</span>
+                  </div>
+                </div>
+                <div class="field">
+                  <span class="field__label">Company name</span>
+                  <span class="input" style="display: flex; align-items: center; height: 36px; color: var(--text-muted);">Registered company name</span>
+                </div>
+
+                <div style="font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-600); margin-top: 2px;">Project requirements</div>
+                <div class="field">
+                  <span class="field__label">Project type</span>
+                  <span style="display: flex; flex-wrap: wrap; gap: 7px;">
+                    <span class="chip chip--selected" style="font-size: var(--fs-12); padding: 6px 10px;">Website redesign</span>
+                    <span class="chip" style="font-size: var(--fs-12); padding: 6px 10px;">New product build</span>
+                    <span class="chip" style="font-size: var(--fs-12); padding: 6px 10px;">Ongoing support</span>
+                  </span>
+                </div>
+                <div class="field">
+                  <span class="field__label">Project brief</span>
+                  <span class="input" style="display: block; height: 46px; padding-top: 8px; color: var(--text-muted);">What are you trying to achieve?</span>
+                </div>
+                <div class="field">
+                  <span class="field__label">Supporting documents</span>
+                  <span class="dropzone" style="display: grid; place-items: center; padding: 11px; font-size: var(--fs-12); color: var(--text-muted);">Drop files or browse · PDF, DOCX, PNG</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 9px; font-size: var(--fs-12); color: var(--text-soft);">
+                  <span style="width: 17px; height: 17px; flex: none; border-radius: 5px; border: 1.5px solid var(--accent-500); background: var(--tint); display: grid; place-items: center; color: var(--accent-600); font-size: 10px;">✓</span>
+                  I approve the project details and consent to follow-up.
+                </div>
+
+                <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 4px; border-top: 1px solid var(--border-soft);">
+                  <span style="font-size: var(--fs-12); color: var(--text-muted);">Every field stays editable.</span>
+                  <span class="btn btn--primary">Submit request</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="flex: none; height: 34px; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 12px; padding: 0 14px;">
+          <span style="display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 500; color: var(--text-soft);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 13px; height: 13px;"><path d="M12 5v14" /><path d="M5 12h14" /></svg>Add Page
+          </span>
+          <span class="chip chip--selected" style="font-size: 11px; padding: 2px 9px;">Page 1</span>
+          <span style="font-size: 11px; color: var(--text-muted);">Thank You 1</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 22px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px 28px;">
+      <span style="display: flex; align-items: center; gap: 8px; font-size: var(--fs-13); font-weight: 500; color: {{ ch1 }}; transition: color .4s ease;"><span style="width: 6px; height: 6px; border-radius: var(--r-full); background: currentColor;"></span>Describe</span>
+      <span style="display: flex; align-items: center; gap: 8px; font-size: var(--fs-13); font-weight: 500; color: {{ ch2 }}; transition: color .4s ease;"><span style="width: 6px; height: 6px; border-radius: var(--r-full); background: currentColor;"></span>Watch it build</span>
+      <span style="display: flex; align-items: center; gap: 8px; font-size: var(--fs-13); font-weight: 500; color: {{ ch3 }}; transition: color .4s ease;"><span style="width: 6px; height: 6px; border-radius: var(--r-full); background: currentColor;"></span>Review and publish</span>
+    </div>
+
+    <div style="margin-top: 16px; display: flex; align-items: center; justify-content: center; gap: 12px;">
+      <button type="button" onClick="{{ toggle }}" aria-label="{{ playLabel }}" style="width: 30px; height: 30px; flex: none; border: 1px solid var(--border); border-radius: var(--r-full); background: var(--surface); color: var(--text-soft); font-size: 10px; line-height: 1; cursor: pointer; display: grid; place-items: center;" style-hover="background: var(--hover); color: var(--text);" style-focus="outline: none; box-shadow: var(--focus-ring);">{{ playIcon }}</button>
+      <span class="progress" style="display: block; width: 220px; max-width: 40vw; height: 3px;"><span class="progress__bar" style="display: block; width: {{ progressPct }}%;"></span></span>
+    </div>
+
+  </div>
+</section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;speed&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0.5,&quot;max&quot;:2,&quot;step&quot;:0.1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;loop&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;autoplay&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.T = 15400;
+    this.hostRef = React.createRef();
+    this.inView = true;
+    this.state = { t: 0, playing: true, reduced: false };
+    this.toggle = () => this.setState(s => ({ playing: !s.playing }));
+  }
+
+  componentDidMount() {
+    const reduced = typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) { this.setState({ reduced: true, playing: false, t: 13000 }); return; }
+    if (this.props.autoplay === false) this.setState({ playing: false });
+    if (this.hostRef.current && typeof IntersectionObserver === 'function') {
+      this.io = new IntersectionObserver(es => { this.inView = es[0].isIntersecting; }, { threshold: 0.2 });
+      this.io.observe(this.hostRef.current);
+    }
+    this.last = performance.now();
+    this.tick = now => {
+      const dt = Math.min(now - this.last, 64);
+      this.last = now;
+      if (this.state.playing && this.inView) {
+        const speed = this.props.speed ?? 1;
+        let t = this.state.t + dt * speed;
+        if (t > this.T) t = this.props.loop === false ? this.T : t - this.T;
+        this.setState({ t });
+      }
+      this.raf = requestAnimationFrame(this.tick);
+    };
+    this.raf = requestAnimationFrame(this.tick);
+  }
+
+  componentWillUnmount() {
+    if (this.raf) cancelAnimationFrame(this.raf);
+    if (this.io) this.io.disconnect();
+  }
+
+  renderVals() {
+    const t = this.state.t;
+    const cl = x => (x < 0 ? 0 : x > 1 ? 1 : x);
+    const R = (t0, d) => { const x = cl((t - t0) / d); return 1 - Math.pow(1 - x, 3); };
+
+    const written = Math.min(8, Math.max(0, Math.floor((t - 3500) / 520) + 1));
+    const taskDefs = [
+      { label: 'Read brand-brief.pdf', at: 2150, dur: 620, meta: '0.9s' },
+      { label: 'Planned 8 questions, 1 page', at: 2800, dur: 680, meta: '1.8s' },
+      { label: 'Writing questions', at: 3500, dur: 4100, meta: written + '/8' },
+      { label: 'Adding validation', at: 7700, dur: 620, meta: '0.7s' },
+      { label: 'Adding conditional logic', at: 8350, dur: 700, meta: '0.9s' }
+    ];
+    const tasks = taskDefs.map(d => {
+      const p = cl((t - d.at) / d.dur);
+      const done = p >= 1;
+      const active = p > 0 && !done;
+      const op = R(d.at - 300, 320);
+      return {
+        label: d.label, op, ty: (1 - op) * 5,
+        meta: done || active ? d.meta : '',
+        metaFg: active ? 'var(--accent-600)' : 'var(--text-muted)',
+        mark: done ? '✓' : '',
+        bg: done ? 'var(--accent-500)' : 'var(--surface)',
+        bc: done || active ? 'var(--accent-500)' : '#d0cddb',
+        fg: p > 0 ? 'var(--text)' : 'var(--text-muted)',
+        rowBg: active ? 'var(--tint)' : 'transparent'
+      };
+    });
+
+    const typeSel = t > 8100;
+    const chip = (label, on) => ({ label, bg: on ? 'var(--tint)' : 'var(--border-soft)', fg: on ? 'var(--accent-600)' : 'var(--text-soft)' });
+    const approved = t > 10600;
+    const defs = [
+      { at: 3700, h: 66, label: 'Contact name', kind: 'text', ph: 'First and last name' },
+      { at: 4250, h: 88, label: 'Work email', kind: 'text', ph: 'name@company.com', hint: 'Must be a valid work email address.' },
+      { at: 4800, h: 66, label: 'Company name', kind: 'text', ph: 'Registered company name' },
+      { at: 5350, h: 66, label: 'Project type', kind: 'choice', options: [chip('Website redesign', typeSel), chip('New product build', false), chip('Ongoing support', false)] },
+      { at: 8600, h: 150, label: 'Which pages need redesigning?', kind: 'text', ph: 'List the pages or sections', cond: true, review: true },
+      { at: 5900, h: 84, label: 'Project brief', kind: 'long', ph: 'What are you trying to achieve?' },
+      { at: 6450, h: 74, label: 'Supporting documents', kind: 'file' },
+      { at: 7000, h: 56, label: 'Approval consent', kind: 'check' }
+    ];
+    const fields = defs.map(d => {
+      const op = R(d.at, 400);
+      const shown = t >= d.at;
+      const isReview = !!d.review && !approved;
+      return {
+        label: d.label, ph: d.ph || '', hint: d.hint || '', hasHint: !!d.hint,
+        h: d.h - (d.review && approved ? 68 : 0),
+        op, ty: (1 - op) * 10,
+        disp: shown ? 'flex' : 'none',
+        pad: isReview ? '11px 13px' : '0px',
+        cardBg: isReview ? '#f3fbf6' : 'transparent',
+        cardBorder: isReview ? '#c7ebd5' : 'transparent',
+        isReview,
+        reviewLabel: 'AI added this field',
+        reviewFg: 'var(--success)',
+        reviewCount: '1 of 1',
+        actionsOp: t > 10200 && t < 10600 ? 0.55 : 1,
+        isText: d.kind === 'text', isLong: d.kind === 'long', isChoice: d.kind === 'choice',
+        isFile: d.kind === 'file', isCheck: d.kind === 'check',
+        isCond: !!d.cond, options: d.options || []
+      };
+    });
+
+    let bottom = 0, acc = 0;
+    defs.forEach((d, i) => {
+      const h = fields[i].h;
+      if (t >= d.at) bottom = acc + h;
+      acc += h + 16;
+    });
+    const viewport = 470;
+
+    const badge = t < 11700
+      ? { text: 'Draft ready', bg: '#eef1f5', fg: '#5b6472' }
+      : { text: 'Ready to publish', bg: 'var(--success-bg)', fg: 'var(--success)' };
+
+    const status = t < 8600
+      ? { text: 'AI is building this form…', fg: 'var(--accent-600)' }
+      : t < 10600
+        ? { text: '1 field waiting on canvas', fg: 'var(--accent-600)' }
+        : t < 11700
+          ? { text: 'Draft ready · all changes approved', fg: 'var(--text-soft)' }
+          : { text: 'Ready to publish', fg: 'var(--success)' };
+
+    return {
+      hostRef: this.hostRef,
+      toggle: this.toggle,
+      playIcon: this.state.playing ? '❙❙' : '▶',
+      playLabel: this.state.playing ? 'Pause the product demonstration' : 'Play the product demonstration',
+      progressPct: Math.round((t / this.T) * 100),
+      stageOp: 1,
+      c1: 1, c2: R(60, 260), c3: R(260, 260),
+      caret: t > 500 && t % 900 < 450 ? 1 : 0,
+      genLabel: t > 1350 ? 'Generating…' : 'Generate Form',
+      genBg: t > 1350 ? 'var(--accent-600)' : 'var(--accent-500)',
+      genScale: t > 1250 && t < 1450 ? 0.96 : 1,
+      wizardOp: 1 - R(1700, 500),
+      wizardScale: 1 - 0.03 * R(1700, 600),
+      appOp: R(1850, 550),
+      formName: t < 5200 ? 'Untitled Form' : 'Client onboarding',
+      tasks, fields,
+      shift: Math.max(0, Math.round(bottom - viewport)),
+      msgOp: R(2600, 500),
+      noteOp: R(8700, 500) * (approved ? 0.45 : 1),
+      waitingOp: R(8700, 400),
+      waitingCount: approved ? '0' : '1',
+      waitingLabel: approved ? 'waiting on you' : 'waiting on you',
+      approveBorder: t > 9600 && t < 10600 ? 'var(--accent-500)' : 'var(--border)',
+      approveFg: t > 9600 && t < 10600 ? 'var(--accent-600)' : 'var(--text)',
+      autoBg: approved ? 'var(--accent-500)' : '#d7d5e0',
+      autoX: approved ? 15 : 2,
+      previewOp: R(11100, 700),
+      publishOp: 0.6 + 0.4 * R(11700, 600),
+      badgeText: badge.text, badgeBg: badge.bg, badgeFg: badge.fg,
+      statusText: status.text, statusFg: status.fg,
+      ch1: t < 1900 ? 'var(--accent-600)' : 'var(--text-muted)',
+      ch2: t >= 1900 && t < 10700 ? 'var(--accent-600)' : 'var(--text-muted)',
+      ch3: t >= 10700 ? 'var(--accent-600)' : 'var(--text-muted)'
+    };
+  }
+}
+
+</script>
+</body>
+</html>
