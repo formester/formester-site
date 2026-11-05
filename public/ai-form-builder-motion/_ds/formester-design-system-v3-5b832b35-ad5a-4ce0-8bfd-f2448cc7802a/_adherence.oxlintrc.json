@@ -1,0 +1,124 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "preview/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--accent-500",
+      "--accent-600",
+      "--accent-tint",
+      "--border",
+      "--border-soft",
+      "--canvas",
+      "--danger",
+      "--danger-bg",
+      "--focus-ring",
+      "--font",
+      "--fs-12",
+      "--fs-13",
+      "--fs-14",
+      "--fs-15",
+      "--fs-18",
+      "--fs-22",
+      "--fs-28",
+      "--hover",
+      "--info",
+      "--info-bg",
+      "--r-card",
+      "--r-full",
+      "--r-input",
+      "--selected",
+      "--shadow-raised",
+      "--shadow-rest",
+      "--success",
+      "--success-bg",
+      "--surface",
+      "--text",
+      "--text-muted",
+      "--text-soft",
+      "--warning",
+      "--warning-bg"
+    ],
+    "tokenKinds": {
+      "--accent-500": "color",
+      "--accent-600": "color",
+      "--accent-tint": "color",
+      "--canvas": "color",
+      "--surface": "color",
+      "--border": "color",
+      "--border-soft": "color",
+      "--text": "font",
+      "--text-soft": "font",
+      "--text-muted": "font",
+      "--hover": "color",
+      "--selected": "color",
+      "--focus-ring": "color",
+      "--success": "color",
+      "--success-bg": "color",
+      "--warning": "color",
+      "--warning-bg": "color",
+      "--danger": "color",
+      "--danger-bg": "color",
+      "--info": "color",
+      "--info-bg": "color",
+      "--r-input": "spacing",
+      "--r-card": "spacing",
+      "--r-full": "spacing",
+      "--shadow-rest": "shadow",
+      "--shadow-raised": "shadow",
+      "--font": "font",
+      "--fs-12": "spacing",
+      "--fs-13": "spacing",
+      "--fs-14": "spacing",
+      "--fs-15": "spacing",
+      "--fs-18": "spacing",
+      "--fs-22": "spacing",
+      "--fs-28": "spacing"
+    },
+    "fontFamilies": []
+  }
+}

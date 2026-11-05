@@ -1,5 +1,5 @@
 <template>
-  <section class="trust-seals-section">
+  <section class="trust-seals-section" :class="{ 'trust-seals-section--compact': compact }">
     <div class="flex justify-center text-center mb-4" v-if="label">
       <UISectionBadge :text="label" />
     </div>
@@ -38,6 +38,7 @@ defineProps({
   heading: { type: String, default: null },
   description: { type: String, default: null },
   showTrustBadges: { type: Boolean, default: false },
+  compact: { type: Boolean, default: false },
   rawHtml: { type: String, default: null },
 })
 
@@ -123,22 +124,49 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .trust-seals-section {
-  margin-top: 96px;
-  margin-bottom: 48px;
+  padding-top: 64px;
+  padding-bottom: 48px;
+  background: #fbfcfe;
   overflow: hidden;
   width: 100%;
 }
 
 @media (max-width: 400px) {
   .trust-seals-section {
-    margin-top: 64px;
-    margin-bottom: 32px;
+    padding-top: 64px;
+    padding-bottom: 32px;
   }
+}
+
+.trust-seals-section--compact {
+  padding-top: 48px;
+  padding-bottom: 32px;
+}
+
+.trust-seals-section--compact .trust-seals-header {
+  margin-bottom: var(--space-8);
+}
+
+@media (max-width: 1023px) {
+  .trust-seals-section--compact :deep(.trustbadges__grid > :last-child:nth-child(odd)) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - var(--space-2));
+  }
+}
+
+.trust-seals-section--compact .trust-seals-heading {
+  margin-bottom: var(--space-3);
+}
+
+.trust-seals-section :deep(.badge-label::before),
+.trust-seals-section :deep(.badge-label::after) {
+  display: none;
 }
 
 .trust-seals-header {
   text-align: center;
-  max-width: 720px;
+  max-width: 1000px;
   margin-inline: auto;
   margin-bottom: var(--space-12);
   padding-inline: var(--space-6);
@@ -219,12 +247,12 @@ onBeforeUnmount(() => {
 
 .gradient-overlay.left {
   left: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to right, rgba(251, 252, 254, 1) 0%, rgba(251, 252, 254, 0) 100%);
 }
 
 .gradient-overlay.right {
   right: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to left, rgba(251, 252, 254, 1) 0%, rgba(251, 252, 254, 0) 100%);
 }
 
 @media (max-width: 800px) {

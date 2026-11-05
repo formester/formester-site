@@ -1,5 +1,12 @@
 <template>
-  <section ref="sectionEl" class="hero-v2" :class="{ 'hero-v2--split': layout === 'split' }">
+  <section
+    ref="sectionEl"
+    class="hero-v2"
+    :class="{
+      'hero-v2--split': layout === 'split',
+      'hero-v2--full-height': fullHeight,
+    }"
+  >
     <div aria-hidden="true" class="hero-v2__blobs">
       <div ref="blobA" class="hero-v2__blob hero-v2__blob--a" :style="{ background: blobColorA }"></div>
       <div ref="blobB" class="hero-v2__blob hero-v2__blob--b" :style="{ background: blobColorB }"></div>
@@ -74,6 +81,7 @@ defineProps({
   mockupHtml: { type: String, default: '' },
   layout: { type: String, default: 'centered' },
   tabCardContent: { type: Array, default: () => [] },
+  fullHeight: { type: Boolean, default: false },
   blobColorA: { type: String, default: '#f5eeff' },
   blobColorB: { type: String, default: '#f1ebff' },
   blobColorC: { type: String, default: '#f4efff' },
@@ -191,6 +199,18 @@ onBeforeUnmount(() => {
   z-index: 1;
 }
 
+@media (min-width: 768px) {
+  .hero-v2--full-height {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-v2--full-height .hero-v2__grid {
+    width: 100%;
+  }
+}
+
 .hero-v2--split .hero-v2__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -257,7 +277,7 @@ onBeforeUnmount(() => {
 }
 
 .hero-v2__heading {
-  font-size: clamp(44px, 6vw, 72px);
+  font-size: clamp(40px, 5.4vw, 64px);
   font-weight: var(--fw-bold);
   line-height: 1.1;
   color: var(--fg-1);
@@ -276,7 +296,7 @@ onBeforeUnmount(() => {
 }
 
 .hero-v2__desc {
-  font-size: clamp(16px, 2vw, 20px);
+  font-size: clamp(15px, 1.7vw, 18px);
   color: var(--fg-2);
   line-height: 1.7;
   max-width: 560px;
@@ -292,9 +312,53 @@ onBeforeUnmount(() => {
   margin-bottom: var(--space-4);
 }
 
+:deep(.hero-v2__btn.fbt--primary) {
+  min-height: 54px;
+  padding: 15px 30px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--violet-500) 0%, #5625bd 100%);
+  border-color: transparent;
+  box-shadow:
+    0 14px 30px rgba(100, 52, 208, 0.28),
+    0 4px 10px rgba(86, 37, 189, 0.16);
+  font-size: 16px;
+  font-weight: var(--fw-bold);
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    background 160ms ease;
+}
+
+:deep(.hero-v2__btn.fbt--primary:hover) {
+  color: #fff;
+  background: linear-gradient(135deg, var(--violet-600) 0%, #4c1d95 100%);
+  box-shadow:
+    0 18px 36px rgba(100, 52, 208, 0.34),
+    0 6px 14px rgba(76, 29, 149, 0.2);
+  transform: translateY(-2px);
+}
+
+:deep(.hero-v2__btn.fbt--primary:active) {
+  transform: translateY(0);
+}
+
+:deep(.hero-v2__btn.fbt--primary:focus-visible) {
+  outline: 3px solid rgba(124, 58, 237, 0.28);
+  outline-offset: 4px;
+}
+
+:deep(.hero-v2__btn.fbt--primary svg) {
+  transition: transform 160ms ease;
+}
+
+:deep(.hero-v2__btn.fbt--primary:hover svg) {
+  transform: translateX(2px);
+}
+
 .hero-v2__trust {
-  font-size: var(--fs-xs);
-  color: var(--fg-muted);
+  font-size: 13px;
+  color: var(--fg-2);
+  font-weight: var(--fw-medium);
   margin-bottom: var(--space-14);
 }
 

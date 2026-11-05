@@ -1,44 +1,32 @@
 <template>
   <div>
     <HeroV2
-      description="Build reliable online forms for intakes, applications, and everyday workflows. Drag-and-drop, conditional logic, AI-powered. Free forever — no credit card."
-      trustText="Free forever plan · No credit card · Setup in 2 minutes"
+      fullHeight
+      description="Create simple forms or automate multi-step intake, approval, payment, and document workflows—free and without code."
+      trustText="Unlimited responses · Human support when you need it"
       blobColorA="#f5eeff"
       blobColorB="#f1ebff"
       blobColorC="#f4efff"
       :title="c0_title"
       :buttons="c0_buttons"
-      :badge="c0_badge"
-      :tabCardContent="c0_tabCardContent"
       class="page-component-item"
     />
+
+    <FeatureShowcase class="page-component-item" />
 
     <TrustSeals
       label="Trusted by leading companies"
-      heading="Trusted by 56,000+ businesses using our online form builder"
-      description="Teams and creators use Formester to build forms, collect data, and automate workflows without coding."
+      heading="56,000+ businesses build with Formester"
+      description="Teams use Formester to collect data, create documents, and automate the work that follows."
       showTrustBadges
+      compact
       :title="c1_title"
       :logos="c1_logos"
+      style="background-color: #fbfcfe"
       class="page-component-item"
     />
 
-    <StatsSection
-      badge="By the numbers"
-      heading="Why teams switch to Formester — and stay."
-      description="Independent data from 12,000+ Formester customers across HR, marketing, education, and finance teams."
-      :stats="c2_stats"
-      class="page-component-item"
-    />
-
-    <StickyStepsSection
-      badge="AI Form Builder"
-      heading="From a sentence to a shipped form."
-      :description="c3_description"
-      :steps="c3_steps"
-      :buttons="c3_buttons"
-      class="page-component-item"
-    />
+    <AiFormBuilderMotionSection class="page-component-item" />
 
     <CardCarousel
       badge="Built for every team"
@@ -61,8 +49,8 @@
     <CtaDark
       badge="Get started in a minute"
       heading="Ship your next form before your coffee gets cold."
-      description="Free forever plan. No credit card required. Upgrade when you're ready."
-      trustText="56,000+ teams · Free forever · Live support"
+      description="Unlimited forms and responses on every plan, with human support when you need it."
+      trustText="56,000+ businesses · Unlimited responses · Live support"
       :buttons="c8_buttons"
       class="page-component-item"
     />
@@ -79,24 +67,24 @@
 import CardCarousel from '@/components/v2/CardCarousel.vue'
 import CtaDark from '@/components/v2/CtaDark.vue'
 import FaqSection from '@/components/v2/FaqSection.vue'
+import FeatureShowcase from '@/components/v2/FeatureShowcase.vue'
 import HeroV2 from '@/components/v2/HeroV2.vue'
 import IntegrationsShowcase from '@/components/v2/IntegrationsShowcase.vue'
-import StatsSection from '@/components/v2/StatsSection.vue'
-import StickyStepsSection from '@/components/v2/StickyStepsSection.vue'
+import AiFormBuilderMotionSection from '@/components/v2/AiFormBuilderMotionSection.vue'
 import TestimonialsV2 from '@/components/v2/testimonials/TestimonialsV2.vue'
 import TrustSeals from '@/components/v2/TrustSeals.vue'
 
 const c0_title = [
   {
     id: 4011,
-    text: 'Reliable Online Form Builder, ',
+    text: 'Online Form Builder for ',
     highlight: false,
     color: '#000000',
     bold: false,
   },
   {
     id: 4012,
-    text: 'Free Forever',
+    text: 'Every Business Workflow',
     highlight: true,
     color: null,
     bold: false,
@@ -106,24 +94,11 @@ const c0_buttons = [
   {
     id: 1241,
     link: 'https://app.formester.com/users/sign_up',
-    text: 'Start free',
+    text: 'Create a free form',
     type: 'Primary',
     showArrow: true,
   },
-  {
-    id: 1242,
-    link: 'https://calendar.app.google/So3CCei31oYjhoM47',
-    text: 'Book a demo',
-    type: 'Secondary',
-    showArrow: false,
-  },
 ]
-const c0_badge = {
-  id: 3,
-  text: 'Now with form generation from a single prompt',
-  tag: 'AI · V2.0',
-  link: '/ai-form-generator/',
-}
 const c0_tabCardContent = [
   {
     id: 135,
@@ -205,65 +180,7 @@ const c0_tabCardContent = [
 ]
 const c1_title = []
 const c1_logos = []
-const c2_stats = [
-  {
-    id: 9,
-    value: '3.4×',
-    label: 'higher completion vs. industry average',
-  },
-  {
-    id: 11,
-    value: '50k+',
-    label: 'businesses on Formester',
-  },
-  {
-    id: 12,
-    value: '4.7',
-    label: 'rating on Capterra · G2 (2,800+ reviews)',
-  },
-  {
-    id: 10,
-    value: '12 min',
-    label: 'from signup to first published form',
-  },
-]
-const c3_description =
-  'Describe your audience, goals, and field types. Formester structures the questions, picks field types, sets validation rules, and adds conditional logic — all editable.'
-const c3_steps = [
-  {
-    id: 7,
-    title: 'Describe your form',
-    description: 'Type "Customer onboarding survey, 8 questions, contact info first" — and stop.',
-    rawHtml:
-      '\u003Cstyle>@keyframes fmst-blink{0%,100%{opacity:1}50%{opacity:0}}\u003C/style><div style="margin-top:16px;border-radius:12px;background-color:#f3f4f6;padding:16px 20px;font-family:monospace;font-size:14px;line-height:1.625"><span style="color:#8b5cf6">›</span><span style="color:#1f2937;margin-left:8px">Customer onboarding survey,</span><br><span style="color:#6b7280;margin-left:16px">8 questions, contact first…</span><span style="display:inline-block;width:8px;height:13px;background-color:#7c3aed;vertical-align:text-bottom;margin-left:3px;animation:fmst-blink 1s step-end infinite"></span></div>',
-    image: null,
-  },
-  {
-    id: 8,
-    title: 'Review the draft',
-    description: 'Formester drafts every field, validation rules, and conditional logic. You get to edit everything.',
-    rawHtml:
-      '<div style="margin-top:16px;border-radius:12px;border:1px solid #e5e7eb;overflow:hidden;font-size:14px"><div style="display:flex;align-items:center;padding:12px 16px;border-bottom:1px solid #f3f4f6"><span style="font-family:monospace;font-size:12px;color:#9ca3af;width:24px;flex-shrink:0">01</span><span style="margin-left:12px;font-weight:500;color:#111827;flex:1">Full name</span><span style="font-size:12px;color:#9ca3af">Short text</span></div><div style="display:flex;align-items:center;padding:12px 16px;border-bottom:1px solid #f3f4f6"><span style="font-family:monospace;font-size:12px;color:#9ca3af;width:24px;flex-shrink:0">02</span><span style="margin-left:12px;font-weight:500;color:#111827;flex:1">Work email</span><span style="font-size:12px;color:#9ca3af">Email · validated</span></div><div style="display:flex;align-items:center;padding:12px 16px"><span style="font-family:monospace;font-size:12px;color:#9ca3af;width:24px;flex-shrink:0">03</span><span style="margin-left:12px;font-weight:500;color:#111827;flex:1">Company size</span><span style="font-size:12px;color:#9ca3af;margin-right:8px">Multiple choice</span><span style="font-size:12px;font-weight:600;background-color:#ede9fe;color:#7c3aed;border-radius:4px;padding:2px 6px">AI</span></div></div>',
-    image: null,
-  },
-  {
-    id: 9,
-    title: 'Ship and iterate',
-    description: 'Embed, share via link or QR. Watch responses come in with analytics that flag drop-in spots.',
-    rawHtml:
-      '<div style="margin-top:16px;border-radius:12px;border:1px solid #e5e7eb;background-color:#fff;padding:16px 20px"><p style="font-size:10px;font-weight:600;letter-spacing:0.1em;color:#9ca3af;text-transform:uppercase;margin:0 0 4px">Responses · Today</p><p style="font-size:30px;font-weight:700;color:#111827;line-height:1;margin:0">1,247</p><p style="font-size:12px;color:#16a34a;margin:4px 0 0">↑ 38% vs last week</p><div style="margin-top:16px;display:flex;align-items:flex-end;gap:6px;height:40px"><div style="flex:1;border-radius:2px;background-color:#ede9fe;height:35%"></div><div style="flex:1;border-radius:2px;background-color:#ede9fe;height:55%"></div><div style="flex:1;border-radius:2px;background-color:#ede9fe;height:45%"></div><div style="flex:1;border-radius:2px;background-color:#ddd6fe;height:70%"></div><div style="flex:1;border-radius:2px;background-color:#ddd6fe;height:60%"></div><div style="flex:1;border-radius:2px;background-color:#c4b5fd;height:80%"></div><div style="flex:1;border-radius:2px;background-color:#7c3aed;height:100%"></div></div></div>',
-    image: null,
-  },
-]
-const c3_buttons = [
-  {
-    id: 1240,
-    link: 'https://formester.com/ai-form-generator',
-    text: 'Try the AI builder',
-    type: 'Primary',
-    showArrow: false,
-  },
-]
+
 const c4_usecases = [
   {
     id: 13,
@@ -806,21 +723,14 @@ const c8_buttons = [
   {
     id: 1238,
     link: 'https://app.formester.com/users/sign_up',
-    text: 'Start free',
+    text: 'Create a free form',
     type: 'Primary',
-    showArrow: false,
-  },
-  {
-    id: 1239,
-    link: 'https://calendar.app.google/So3CCei31oYjhoM47',
-    text: 'Talk to sales',
-    type: 'Secondary',
-    showArrow: false,
+    showArrow: true,
   },
 ]
 
 useHead({
-  title: 'Free Online Form Builder for Forms, Surveys & Payments | Formester',
+  title: 'Free Online Form Builder for Business Workflows | Formester',
   link: [
     {
       hid: 'canonical',
@@ -837,12 +747,12 @@ useHead({
       hid: 'description',
       name: 'description',
       content:
-        'Create smart forms with our AI-powered online form builder. Drag-and-drop fields, logic, payments & integrations. Start free with Formester today.',
+        'Create free online forms with AI, collect unlimited responses, and automate intake, approvals, payments, and PDFs. No code or credit card needed.',
     },
     {
       hid: 'og:site_name',
       name: 'og:site_name',
-      content: 'Free Online Form Builder for Forms, Surveys & Payments | Formester',
+      content: 'Free Online Form Builder for Business Workflows | Formester',
     },
     {
       hid: 'og:type',
@@ -857,13 +767,13 @@ useHead({
     {
       hid: 'og:title',
       property: 'og:title',
-      content: 'Free Online Form Builder for Forms, Surveys & Payments | Formester',
+      content: 'Free Online Form Builder for Business Workflows | Formester',
     },
     {
       hid: 'og:description',
       property: 'og:description',
       content:
-        'Create smart forms with our AI-powered online form builder. Drag-and-drop fields, logic, payments & integrations. Start free with Formester today.',
+        'Create free online forms with AI, collect unlimited responses, and automate intake, approvals, payments, and PDFs. No code or credit card needed.',
     },
     {
       hid: 'og:image',
@@ -887,13 +797,13 @@ useHead({
     {
       hid: 'twitter:title',
       name: 'twitter:title',
-      content: 'Free Online Form Builder for Forms, Surveys & Payments | Formester',
+      content: 'Free Online Form Builder for Business Workflows | Formester',
     },
     {
       hid: 'twitter:description',
       name: 'twitter:description',
       content:
-        'Create smart forms with our AI-powered online form builder. Drag-and-drop fields, logic, payments & integrations. Start free with Formester today.',
+        'Create free online forms with AI, collect unlimited responses, and automate intake, approvals, payments, and PDFs. No code or credit card needed.',
     },
     {
       hid: 'twitter:image',
@@ -984,7 +894,7 @@ useJsonld([
         offers: {
           url: 'https://formester.com/pricing/',
           '@type': 'Offer',
-          price: '13',
+          price: '0',
           availability: 'https://schema.org/InStock',
           priceCurrency: 'USD',
         },
@@ -999,17 +909,6 @@ useJsonld([
         },
         operatingSystem: 'Web',
         applicationCategory: 'BusinessApplication',
-      },
-      {
-        name: 'Formester',
-        '@type': 'Product',
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          bestRating: '5',
-          ratingValue: '4.7',
-          reviewCount: '33',
-          worstRating: '1',
-        },
       },
       {
         '@type': 'FAQPage',
