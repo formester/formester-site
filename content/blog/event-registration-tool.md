@@ -59,6 +59,8 @@ EventBookings is a complete event registration and ticketing software. Whether y
 
 ### 6. [Checkout Page](https://checkoutpage.com/)
 
+![Checkout Page homepage](/blog/checkout-page.png)
+
 Checkout Page is a no-code event registration tool for organizers who want to create a branded registration experience. With Checkout Page, creating tickets is straightforward. You get custom fields, conditional logic, discount codes, and order bumps all built in directly within the system. Moreover, it runs on your own Stripe account, with no additional charges beyond a flat monthly fee rather than per-ticket fees.
 
 ### 7. Bizzabo
