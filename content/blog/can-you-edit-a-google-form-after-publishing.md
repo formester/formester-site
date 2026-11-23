@@ -110,7 +110,7 @@ publishedAt: "2026-09-03T00:00:00.000Z"
 
 <h2 id="formester">Where Formester fits</h2>
 
-<p>Google Forms gives the owner no way to correct a submitted answer. In Formester you can <a href="https://help.formester.com/en/article/form-submissions-qa40bi/" target="_blank" rel="noopener">edit any submission directly from the dashboard</a>, so you fix the typo in someone's email without deleting the response and asking them to submit again.</p>
+<p>Google Forms gives the owner no way to correct a submitted answer. <a href="/">Formester</a> is a form builder that keeps responses editable: you can <a href="https://help.formester.com/en/article/form-submissions-qa40bi/" target="_blank" rel="noopener">edit any submission directly from the dashboard</a>, so you fix the typo in someone's email without deleting the response and asking them to submit again.</p>
 <p>For respondents, the same help article covers a secure edit link you can send from the dashboard so they can correct their own submission after they have sent it. On the Business plan, <a href="/features/save-and-continue/">save and continue</a> gives each person a resume link that reopens the form with every answer in place. A team on the same plan can <a href="/features/collaborate-on-form-submission/">work on one submission together</a> and send a single response.</p>
 
 <div style="background:linear-gradient(135deg,#7f56d9 0%,#6941c6 100%);padding:32px 28px;margin:36px 0;border-radius:12px;color:#ffffff;font-family:inherit;text-align:center;">
