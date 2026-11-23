@@ -39,7 +39,7 @@ publishedAt: "2026-06-22T05:06:22.803Z"
 
 <h3>Surveys and customer feedback</h3>
 
-<p>Put a QR code on a receipt, table tent, or packaging and you capture opinions while the experience is fresh. Build the survey first with Formester's <a href="https://formester.com/online-survey-maker/">online survey maker</a>, then generate the code from it.</p>
+<p>Put a QR code on a receipt, table tent, or packaging and you capture opinions while the experience is fresh. Build the survey first with Formester's <a href="https://formester.com/ai-survey-generator/">AI survey generator</a>, then generate the code from it.</p>
 
 <h3>Marketing campaigns</h3>
 

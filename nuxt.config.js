@@ -150,6 +150,12 @@ export default defineNuxtConfig({
     '/integrations/hubspot-crm/': {
       redirect: { to: '/integrations/hubspot/', statusCode: 301 },
     },
+    // Retired Nov 2026: 13 clicks in 90 days (1 non-brand) and overlapped the AI Survey Generator,
+    // which owns survey intent and converts best. Static output only emits a meta-refresh;
+    // Amplify holds the real 301.
+    '/online-survey-maker/': {
+      redirect: { to: '/ai-survey-generator/', statusCode: 301 },
+    },
   },
 
   // Nitro configuration

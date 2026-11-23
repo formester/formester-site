@@ -652,9 +652,9 @@ text-decoration: none !important; color: inherit !important; transition: all .15
 <span class="fmstr-cmp-csq-rel__arrow" aria-hidden="true">&rarr;</span>
 </a>
 
-<a class="fmstr-cmp-csq-rel__card" href="https://formester.com/online-survey-maker/">
+<a class="fmstr-cmp-csq-rel__card" href="https://formester.com/ai-survey-generator/">
 <div class="fmstr-cmp-csq-rel__icon" aria-hidden="true">&#128221;</div>
-<div class="fmstr-cmp-csq-rel__text"><h4>Online Survey Maker</h4><small>Drag-and-drop builder</small></div>
+<div class="fmstr-cmp-csq-rel__text"><h4>AI Survey Generator</h4><small>Survey from a prompt</small></div>
 <span class="fmstr-cmp-csq-rel__arrow" aria-hidden="true">&rarr;</span>
 </a>
 
