@@ -1177,6 +1177,61 @@
     <section class="page-component-item">
       <div class="raw-html-content">
         <div class="raw-html-embed">
+          <section class="fmstr-cmp-tc-why-pick" aria-labelledby="fmstr-cmp-tc-exam-heading">
+            <div class="fmstr-cmp-tc-why-pick__container">
+              <header class="fmstr-cmp-tc-why-pick__header">
+                <span class="fmstr-cmp-tc-why-pick__eyebrow">Exam maker</span>
+                <h2 id="fmstr-cmp-tc-exam-heading" class="fmstr-cmp-tc-why-pick__heading">
+                  Run it as an exam, not just a quiz
+                </h2>
+                <p class="fmstr-cmp-tc-why-pick__sub">
+                  A practice quiz can be loose. A midterm or a certification exam can't. When the score counts, you need
+                  a clock, a fair way to score guesses, and a fixed window to take it. Formester gives you all of that in
+                  the same test you just generated.
+                </p>
+              </header>
+
+              <div class="fmstr-cmp-tc-why-pick__grid">
+                <article class="fmstr-cmp-tc-why-pick__card">
+                  <h3 class="fmstr-cmp-tc-why-pick__title">A timer that starts where you want</h3>
+                  <p class="fmstr-cmp-tc-why-pick__body">
+                    Turn on <strong>Timed Submissions</strong> in the form settings and give students two hours, 40
+                    minutes, or any time you need. Pick the page where the clock starts, so the instructions page
+                    doesn't eat into exam time.
+                  </p>
+                </article>
+
+                <article class="fmstr-cmp-tc-why-pick__card">
+                  <h3 class="fmstr-cmp-tc-why-pick__title">Negative marking for guesses</h3>
+                  <p class="fmstr-cmp-tc-why-pick__body">
+                    Give the right option one point and a wrong option minus one. Students who guess lose points, so the
+                    score shows what they know.
+                    <a
+                      href="/blog/how-to-create-online-section-based-tests-and-quizzes-with-negative-scores-and-timer/"
+                      >See how to set up a timed exam with negative marking</a
+                    >.
+                  </p>
+                </article>
+
+                <article class="fmstr-cmp-tc-why-pick__card">
+                  <h3 class="fmstr-cmp-tc-why-pick__title">Sections and a fixed exam window</h3>
+                  <p class="fmstr-cmp-tc-why-pick__body">
+                    Put each subject on its own page, like math, science, and English. Then
+                    <a href="/features/form-limiter/">schedule when the exam opens and closes</a>, so nobody submits
+                    after the deadline. For essay and short answers, <a href="/ai-grading-software/">AI grading</a>
+                    suggests a score you can accept or change.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-component-item">
+      <div class="raw-html-content">
+        <div class="raw-html-embed">
           <section class="fmstr-cmp-who-uses-formester" aria-labelledby="fmstr-cmp-who-uses-formester-heading">
             <div class="fmstr-cmp-who-uses-formester__inner">
               <header class="fmstr-cmp-who-uses-formester__header">
@@ -1873,7 +1928,7 @@ const c0_description =
 const c0_title = [
   {
     id: 4953,
-    text: 'AI Test Generator That Turns a PDF, or Prompt Into ',
+    text: 'AI Test and Exam Generator That Turns a PDF or Prompt Into ',
     highlight: false,
     color: '#000000',
     bold: false,
@@ -3018,16 +3073,22 @@ const c15_categories = [
         id: 2529,
         header: 'What is an AI test creator?',
         body: 'An AI test creator is a tool that helps you generate complete tests automatically. You simply enter a topic or short prompt, and the system creates questions, answer options, and scoring rules for you. It saves time and removes the need to write every question manually.',
+        body_markdown: null,
+        list: [],
+      },
+      {
+        id: 9001,
+        header: 'Can I use Formester as an exam maker?',
+        body: 'Yes. Generate the questions from your syllabus, notes, or a PDF, then split the exam into sections with one page each. Set a time limit, add negative marking if you want to discourage guessing, and schedule when the exam opens and closes. Formester grades the objective questions on submit.',
         body_markdown:
-          'An AI test creator is a smart tool that helps you generate quizzes or exams in seconds using artificial intelligence. Just type a topic, and it builds questions, answers, and scoring for you—no manual work needed.',
+          'Yes. Generate the questions from your syllabus, notes, or a PDF, then split the exam into sections with one page each. Set a time limit, add negative marking if you want to discourage guessing, and [schedule when the exam opens and closes](/features/form-limiter/). Formester grades the objective questions on submit, and [AI grading](/ai-grading-software/) helps with written answers.',
         list: [],
       },
       {
         id: 2531,
         header: 'How does an AI test generator work?',
         body: 'You type a topic such as “basic algebra test” or “employee safety training quiz.” The AI analyzes your input and generates relevant questions with answer choices. You can then edit the questions, adjust difficulty, set scores, and publish the test.\n',
-        body_markdown:
-          'AI testing in high schools saves time, boosts engagement, and helps teachers focus on teaching. AI can generate tests, grade answers, and track student performance instantly.\n\n',
+        body_markdown: null,
         list: [],
       },
       {
@@ -3042,8 +3103,7 @@ const c15_categories = [
         id: 2545,
         header: 'Can I create a test without coding?',
         body: 'Yes. You can create and publish a complete online test without writing any code. Everything works through a simple interface where you enter a topic, review the generated questions, and customize as needed.',
-        body_markdown:
-          'It’s used to make tests for schools, training, hiring, or fun quizzes. You can create, share, and grade tests online—fast and easy.',
+        body_markdown: null,
         list: [],
       },
       {
@@ -3115,8 +3175,9 @@ const c15_categories = [
       {
         id: 2540,
         header: 'Can I set time limits for my test?',
-        body: 'Yes. You can define how much time someone has to complete the test. This is useful for exams, timed practice quizzes, or certification assessments.\n',
-        body_markdown: 'Definitely. You can limit how long someone has to complete the test.\n\n',
+        body: 'Yes. Turn on Timed Submissions under Form Behavior, set the time in hours, minutes, or seconds, and pick the page where the clock starts. This works for exams, timed practice quizzes, and certification assessments.',
+        body_markdown:
+          'Yes. Turn on **Timed Submissions** under **Form Behavior**, set the time in hours, minutes, or seconds, and pick the page where the clock starts. For exams, you can pair the timer with negative marking. This guide shows both: [how to build a timed exam with negative marking](/blog/how-to-create-online-section-based-tests-and-quizzes-with-negative-scores-and-timer/).',
         list: [],
       },
       {
@@ -3195,7 +3256,7 @@ const c15_categories = [
 ]
 
 useHead({
-  title: 'Free AI Test Generator: PDF, Prompt, URL to Test in Seconds',
+  title: 'Free AI Test Generator and Exam Maker: PDF or Prompt to Test',
   link: [
     {
       hid: 'canonical',
@@ -3206,18 +3267,18 @@ useHead({
   meta: [
     {
       property: 'article:modified_time',
-      content: '2026-06-08T11:30:26.239Z',
+      content: '2026-11-23T09:00:00.000Z',
     },
     {
       hid: 'description',
       name: 'description',
       content:
-        'Free AI test generator for teachers, trainers, and L&D. Upload a PDF, paste a prompt, or drop a URL. Get a full test with an answer key, auto-grading, and Moodle or Google Forms export in seconds.',
+        'Free AI test generator and exam maker for teachers, trainers, and L&D. Upload a PDF, paste a prompt, or drop a URL. Get a timed exam with an answer key, auto-grading, and Moodle or Google Forms export.',
     },
     {
       hid: 'og:site_name',
       name: 'og:site_name',
-      content: 'Free AI Test Generator: PDF, Prompt, URL to Test in Seconds',
+      content: 'Free AI Test Generator and Exam Maker: PDF or Prompt to Test',
     },
     {
       hid: 'og:type',
@@ -3232,13 +3293,13 @@ useHead({
     {
       hid: 'og:title',
       property: 'og:title',
-      content: 'Free AI Test Generator: PDF, Prompt, URL to Test in Seconds',
+      content: 'Free AI Test Generator and Exam Maker: PDF or Prompt to Test',
     },
     {
       hid: 'og:description',
       property: 'og:description',
       content:
-        'Free AI test generator for teachers, trainers, and L&D. Upload a PDF, paste a prompt, or drop a URL. Get a full test with an answer key, auto-grading, and Moodle or Google Forms export in seconds.',
+        'Free AI test generator and exam maker for teachers, trainers, and L&D. Upload a PDF, paste a prompt, or drop a URL. Get a timed exam with an answer key, auto-grading, and Moodle or Google Forms export.',
     },
     {
       hid: 'og:image',
@@ -3262,13 +3323,13 @@ useHead({
     {
       hid: 'twitter:title',
       name: 'twitter:title',
-      content: 'Free AI Test Generator: PDF, Prompt, URL to Test in Seconds',
+      content: 'Free AI Test Generator and Exam Maker: PDF or Prompt to Test',
     },
     {
       hid: 'twitter:description',
       name: 'twitter:description',
       content:
-        'Free AI test generator for teachers, trainers, and L&D. Upload a PDF, paste a prompt, or drop a URL. Get a full test with an answer key, auto-grading, and Moodle or Google Forms export in seconds.',
+        'Free AI test generator and exam maker for teachers, trainers, and L&D. Upload a PDF, paste a prompt, or drop a URL. Get a timed exam with an answer key, auto-grading, and Moodle or Google Forms export.',
     },
     {
       hid: 'twitter:image',
@@ -3305,6 +3366,10 @@ useHead({
         'test generator',
         'ai test maker',
         'exam creator',
+        'exam maker',
+        'exam generator',
+        'ai exam generator',
+        'online exam maker',
         'math quiz',
         'multiple choice test',
         'vocabulary quiz',
@@ -3359,16 +3424,16 @@ useJsonld([
       {
         '@id': 'https://formester.com/test-creator/#webpage',
         url: 'https://formester.com/test-creator/',
-        name: 'Free AI Test Generator: PDF, Prompt, URL to Test in Seconds',
+        name: 'Free AI Test Generator and Exam Maker: PDF or Prompt to Test',
         '@type': 'WebPage',
-        headline: 'AI Test Generator That Turns a PDF, or Prompt Into a Scored Test',
+        headline: 'AI Test and Exam Generator That Turns a PDF or Prompt Into a Scored Test',
         isPartOf: {
           '@id': 'https://formester.com/#organization',
         },
         breadcrumb: {
           '@id': 'https://formester.com/test-creator/#breadcrumb',
         },
-        dateModified: '2026-05-07',
+        dateModified: '2026-11-23',
         datePublished: '2025-06-07',
       },
       {
@@ -3435,7 +3500,15 @@ useJsonld([
             name: 'What is an AI test creator?',
             '@type': 'Question',
             acceptedAnswer: {
-              text: 'An AI test creator is a smart tool that helps you generate quizzes or exams in seconds using artificial intelligence. Just type a topic, and it builds questions, answers, and scoring for you—no manual work needed.',
+              text: 'An AI test creator is a tool that helps you generate complete tests automatically. You simply enter a topic or short prompt, and the system creates questions, answer options, and scoring rules for you. It saves time and removes the need to write every question manually.',
+              '@type': 'Answer',
+            },
+          },
+          {
+            name: 'Can I use Formester as an exam maker?',
+            '@type': 'Question',
+            acceptedAnswer: {
+              text: 'Yes. Generate the questions from your syllabus, notes, or a PDF, then split the exam into sections with one page each. Set a time limit, add negative marking if you want to discourage guessing, and <a href="https://formester.com/features/form-limiter/">schedule when the exam opens and closes</a>. Formester grades the objective questions on submit, and <a href="https://formester.com/ai-grading-software/">AI grading</a> helps with written answers.',
               '@type': 'Answer',
             },
           },
@@ -3443,7 +3516,7 @@ useJsonld([
             name: 'How does an AI test generator work?',
             '@type': 'Question',
             acceptedAnswer: {
-              text: 'AI testing in high schools saves time, boosts engagement, and helps teachers focus on teaching. AI can generate tests, grade answers, and track student performance instantly.',
+              text: 'You type a topic such as “basic algebra test” or “employee safety training quiz.” The AI analyzes your input and generates relevant questions with answer choices. You can then edit the questions, adjust difficulty, set scores, and publish the test.',
               '@type': 'Answer',
             },
           },
@@ -3459,7 +3532,7 @@ useJsonld([
             name: 'Can I create a test without coding?',
             '@type': 'Question',
             acceptedAnswer: {
-              text: 'It’s used to make tests for schools, training, hiring, or fun quizzes. You can create, share, and grade tests online—fast and easy.',
+              text: 'Yes. You can create and publish a complete online test without writing any code. Everything works through a simple interface where you enter a topic, review the generated questions, and customize as needed.',
               '@type': 'Answer',
             },
           },
@@ -3523,7 +3596,7 @@ useJsonld([
             name: 'Can I set time limits for my test?',
             '@type': 'Question',
             acceptedAnswer: {
-              text: 'Definitely. You can limit how long someone has to complete the test.',
+              text: 'Yes. Turn on Timed Submissions under Form Behavior, set the time in hours, minutes, or seconds, and pick the page where the clock starts. For exams, you can pair the timer with negative marking. This guide shows both: <a href="https://formester.com/blog/how-to-create-online-section-based-tests-and-quizzes-with-negative-scores-and-timer/">how to build a timed exam with negative marking</a>.',
               '@type': 'Answer',
             },
           },
