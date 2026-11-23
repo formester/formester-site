@@ -150,6 +150,23 @@ export default defineNuxtConfig({
     '/integrations/hubspot-crm/': {
       redirect: { to: '/integrations/hubspot/', statusCode: 301 },
     },
+    // Retired Nov 2026: unlinked landing pages with zero Google impressions and no ad traffic in
+    // their first three weeks. Static output only emits a meta-refresh; Amplify holds the real 301.
+    '/workflow-management-software/': {
+      redirect: { to: '/features/workflows/', statusCode: 301 },
+    },
+    '/client-intake-management/': {
+      redirect: { to: '/use-case/client-onboarding/', statusCode: 301 },
+    },
+    '/lead-capture-software/': {
+      redirect: { to: '/blog/best-lead-capture-software/', statusCode: 301 },
+    },
+    '/mobile-forms-automation/': {
+      redirect: { to: '/features/offline-forms/', statusCode: 301 },
+    },
+    '/field-service-management/': {
+      redirect: { to: '/inspection-form-builder/', statusCode: 301 },
+    },
   },
 
   // Nitro configuration
@@ -159,19 +176,15 @@ export default defineNuxtConfig({
     minify: false, // Disable minification to save memory
     prerender: {
       crawlLinks: true,
-      // New landing pages are listed explicitly: nothing links to them yet,
-      // so crawlLinks alone would never reach them.
+      // Pages nothing links to yet are listed explicitly, so crawlLinks alone
+      // would never reach them.
       // NOT_FOUND_PRERENDER_ROUTE becomes the SSR-rendered 404.html (see
       // utils/notFoundPrerender.js and the prerender:generate hook below).
       routes: [
         '/',
         '/sitemap.xml',
         '/state-of-online-forms',
-        '/mobile-forms-automation',
         '/ai-grading-software',
-        '/client-intake-management',
-        '/lead-capture-software',
-        '/field-service-management',
         NOT_FOUND_PRERENDER_ROUTE,
       ],
       ignore: ['/api'],
