@@ -486,7 +486,7 @@ color: var(--c-violet-600); margin: 0 0 4px;
 <h3>HR survey: anonymous routing</h3>
 </div>
 </div>
-<p class="fmstr-cmp-wicl-ex__body">Ask "Would you like to remain anonymous?" If yes, hide the name and email fields and route the response to a separate anonymised submission inbox. If no, collect contact details and route to the standard HR queue. Use Formester's <a href="https://formester.com/online-survey-maker/">survey maker</a> with <a href="https://formester.com/blog/best-survey-questions/">good survey question patterns</a> so the responses you collect are usable.</p>
+<p class="fmstr-cmp-wicl-ex__body">Ask "Would you like to remain anonymous?" If yes, hide the name and email fields and route the response to a separate anonymised submission inbox. If no, collect contact details and route to the standard HR queue. Use Formester's <a href="https://formester.com/ai-survey-generator/">survey maker</a> with <a href="https://formester.com/blog/best-survey-questions/">good survey question patterns</a> so the responses you collect are usable.</p>
 </article>
 
 <article class="fmstr-cmp-wicl-ex__block">
@@ -761,9 +761,9 @@ content: "\2192"; transition: transform .15s ease; display: inline-block;
 <span class="fmstr-cmp-tmpl-rel__arrow">Open</span>
 </a>
 
-<a class="fmstr-cmp-tmpl-rel__card" href="https://formester.com/online-survey-maker/">
+<a class="fmstr-cmp-tmpl-rel__card" href="https://formester.com/ai-survey-generator/">
 <span class="fmstr-cmp-tmpl-rel__chip">Product</span>
-<h3 class="fmstr-cmp-tmpl-rel__title">Online survey maker</h3>
+<h3 class="fmstr-cmp-tmpl-rel__title">AI survey generator</h3>
 <p class="fmstr-cmp-tmpl-rel__body">Build branching surveys with skip logic, anonymous routing, and conditional notifications to the right inbox.</p>
 <span class="fmstr-cmp-tmpl-rel__arrow">Open</span>
 </a>

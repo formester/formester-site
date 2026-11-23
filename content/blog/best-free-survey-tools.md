@@ -726,7 +726,7 @@ margin: 0 0 14px !important;
 <div class="fmstr-cmp-bfst-wdg__card">
 <h2 class="fmstr-cmp-bfst-wdg__h2" id="fmstr-cmp-bfst-wdg-h2">When you need more than a survey tool</h2>
 <p class="fmstr-cmp-bfst-wdg__p">A survey tool is built for one job: ask questions, see results, move on. Most of the above are excellent at that.</p>
-<p class="fmstr-cmp-bfst-wdg__p">The picture changes when the survey is not the end of the workflow. If a "yes" on question 7 needs to trigger a different email than a "no", route the response to a different CRM stage, charge a different price, or hand off to a different team owner, you are not building a survey anymore. You are building a workflow with a survey in front of it. Pure survey tools do not handle this cleanly: they will export to Sheets and expect you to bolt on Zapier, Make, or a custom script. That is fine until the third or fourth condition, when the duct tape starts to show. The same is true if you are collecting payments alongside answers, asking for file uploads that need to land in a specific Drive folder by respondent type, or running a form that has to feel branded end-to-end on mobile. At that point a form builder with survey logic outperforms a survey tool with a payments add-on. <a href="https://formester.com/online-survey-maker/">Formester</a> is built for that hybrid case: conditional logic, payments, file uploads, signatures, Google Sheets and CRM sync, and custom branding all on the same plan, no Zapier required.</p>
+<p class="fmstr-cmp-bfst-wdg__p">The picture changes when the survey is not the end of the workflow. If a "yes" on question 7 needs to trigger a different email than a "no", route the response to a different CRM stage, charge a different price, or hand off to a different team owner, you are not building a survey anymore. You are building a workflow with a survey in front of it. Pure survey tools do not handle this cleanly: they will export to Sheets and expect you to bolt on Zapier, Make, or a custom script. That is fine until the third or fourth condition, when the duct tape starts to show. The same is true if you are collecting payments alongside answers, asking for file uploads that need to land in a specific Drive folder by respondent type, or running a form that has to feel branded end-to-end on mobile. At that point a form builder with survey logic outperforms a survey tool with a payments add-on. <a href="https://formester.com/ai-survey-generator/">Formester</a> is built for that hybrid case: conditional logic, payments, file uploads, signatures, Google Sheets and CRM sync, and custom branding all on the same plan, no Zapier required.</p>
 </div>
 </div>
 </section>
@@ -956,7 +956,7 @@ font-style: italic;
 </tr>
 
 <tr class="is-featured">
-<td data-label="Tool"><a href="https://formester.com/online-survey-maker/"><span class="fmstr-cmp-bfst-tbl__name fmstr-cmp-bfst-tbl__name--brand">Formester</span></a><span class="fmstr-cmp-bfst-tbl__badge">Hybrid pick</span></td>
+<td data-label="Tool"><a href="https://formester.com/ai-survey-generator/"><span class="fmstr-cmp-bfst-tbl__name fmstr-cmp-bfst-tbl__name--brand">Formester</span></a><span class="fmstr-cmp-bfst-tbl__badge">Hybrid pick</span></td>
 <td data-label="Free response cap">Per plan; full feature parity across tiers</td>
 <td data-label="Logic supported">Conditional, multi-step, calculations</td>
 <td data-label="Export on free"><span class="fmstr-cmp-bfst-tbl__yes">Yes (Sheets, CRM, API)</span></td>
@@ -1307,9 +1307,9 @@ content: "\2192"; transition: transform .15s ease; display: inline-block;
 </div>
 <div class="fmstr-cmp-bfst-rel__grid">
 
-<a class="fmstr-cmp-bfst-rel__card" href="https://formester.com/online-survey-maker/">
+<a class="fmstr-cmp-bfst-rel__card" href="https://formester.com/ai-survey-generator/">
 <span class="fmstr-cmp-bfst-rel__chip">Survey maker</span>
-<h3 class="fmstr-cmp-bfst-rel__title">Online survey maker</h3>
+<h3 class="fmstr-cmp-bfst-rel__title">AI survey generator</h3>
 <p class="fmstr-cmp-bfst-rel__body">Form builder with survey logic, payments, and Sheets sync on the same plan.</p>
 <span class="fmstr-cmp-bfst-rel__arrow">Build a survey</span>
 </a>

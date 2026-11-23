@@ -81,8 +81,7 @@
     <p class="wf-compare-more">
       Choosing a tool?
       <NuxtLink to="/blog/best-workflow-automation-tools/">Compare workflow tools</NuxtLink>
-      like Zapier, Make, n8n and Power Automate. Running approvals, requests and follow-ups across a team? See how
-      Formester works as <NuxtLink to="/workflow-management-software/">workflow management software</NuxtLink>.
+      like Zapier, Make, n8n and Power Automate.
     </p>
 
     <FaqSection centered :title="faqTitle" :faqList="faqList" class="page-component-item" />

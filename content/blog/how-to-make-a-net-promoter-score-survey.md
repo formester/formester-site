@@ -20,7 +20,7 @@ publishedAt: "2026-06-22T05:06:22.803Z"
 
 <p>This guide walks through the question to ask, the follow-ups that pull out the why, how the score is calculated, and what counts as a good NPS. Then you build one in a few minutes.</p>
 
-<p>Want to skip ahead and start collecting? Spin up an NPS survey with a <a href="https://formester.com/online-survey-maker/">free survey maker</a> and a ready-made scale field.</p>
+<p>Want to skip ahead and start collecting? Spin up an NPS survey with a <a href="https://formester.com/ai-survey-generator/">free AI survey generator</a> and a ready-made scale field.</p>
 
 <h2>What Is an NPS Survey?</h2>
 
@@ -68,7 +68,7 @@ publishedAt: "2026-06-22T05:06:22.803Z"
 <li>What stopped this from being a better experience?</li>
 </ul>
 
-<p>Keep the rating question required and the follow-up optional. One rating plus one open question is the format that keeps response rates high. Build the whole set in minutes with the <a href="https://formester.com/online-survey-maker/">online survey maker</a> using a scale field for the rating and conditional logic for the follow-ups.</p>
+<p>Keep the rating question required and the follow-up optional. One rating plus one open question is the format that keeps response rates high. Build the whole set in minutes with Formester's <a href="https://formester.com/ai-survey-generator/">AI survey generator</a> using a scale field for the rating and conditional logic for the follow-ups.</p>
 
 <h2>How to Create an NPS Survey in 6 Steps</h2>
 

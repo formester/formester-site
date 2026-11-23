@@ -126,7 +126,7 @@ This test ensures your conditions, autoresponder, and SMTP setup are working cor
 
 ### Why Use Formester for Your Intake Process?
 
-With **[Formester](/)**, you can [manage your entire intake process in one place](/workflow-management-software/):
+With **[Formester](/)**, you can [manage your entire intake process in one place](/features/workflows/):
 
 - Capture details with AI-powered forms
 

@@ -84,7 +84,14 @@ const props = defineProps({
   },
 })
 
-const displayBadges = computed(() => (props.badges && props.badges.length ? props.badges : DEFAULT_BADGES))
+// The grid is three columns wide. Capterra is retired (it wrapped onto a lone
+// second row), so drop it even if a page passes it, and never show more than three.
+const isRetiredBadge = (badge) => /capterra/i.test(JSON.stringify(badge?.logo || {}))
+
+const displayBadges = computed(() => {
+  const source = props.badges && props.badges.length ? props.badges : DEFAULT_BADGES
+  return source.filter((badge) => !isRetiredBadge(badge)).slice(0, 3)
+})
 
 function logoFor(badge) {
   return getStrapiImage(badge?.logo)
@@ -132,14 +139,19 @@ function starsFor(badge) {
 
 .trustbadges__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-4);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-2);
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .trustbadges__grid {
+    gap: var(--space-4);
+  }
 }
 
 @media (min-width: 1024px) {
   .trustbadges__grid {
-    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-6);
   }
 }
@@ -149,11 +161,12 @@ function starsFor(badge) {
   border: 1px solid var(--border-light);
   border-radius: var(--r-xl);
   box-shadow: var(--shadow-sm);
-  padding: var(--space-6) var(--space-4);
+  padding: var(--space-4) var(--space-2);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-5);
+  gap: var(--space-3);
+  min-width: 0;
   transition:
     box-shadow 0.2s ease,
     transform 0.2s ease;
@@ -172,7 +185,8 @@ function starsFor(badge) {
 }
 
 .badge-card__logo {
-  height: 36px;
+  height: 24px;
+  width: auto;
   max-width: 100%;
   object-fit: contain;
 }
@@ -180,6 +194,7 @@ function starsFor(badge) {
 @media (min-width: 768px) {
   .badge-card {
     padding: var(--space-8) var(--space-6);
+    gap: var(--space-5);
   }
 
   .badge-card__logo {
@@ -195,7 +210,7 @@ function starsFor(badge) {
 }
 
 .badge-card__number {
-  font-size: var(--fs-2xl);
+  font-size: var(--fs-xl);
   font-weight: var(--fw-bold);
   color: var(--fg-1);
   line-height: 1;
@@ -209,7 +224,9 @@ function starsFor(badge) {
 }
 
 .badge-card__stars {
-  height: 20px;
+  height: 14px;
+  width: auto;
+  max-width: 100%;
   display: block;
 }
 

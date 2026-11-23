@@ -119,7 +119,7 @@ publishedAt: "2026-05-17T04:03:49.230Z"
 <h2 id="formester">Where Formester fits</h2>
 
 <p>Google ties editor access to Google accounts, and several responder settings force a sign-in too. If your respondents keep getting asked to sign in, or your team needs more than one editor role, a form that does not depend on Google accounts is simpler to run.</p>
-<p>Formester forms open for anyone with the link, with no account on the respondent's side. You can add a password to a form when it should only be open to certain people, without asking them to sign in. On the Business plan, <a href="/features/collaborative-forms/">collaborative forms</a> let you give each teammate a role, such as Editor or Viewer. A reviewer with the Viewer role can see responses without being able to change the questions.</p>
+<p>Forms you build in <a href="/">Formester's online form builder</a> open for anyone with the link, with no account on the respondent's side. You can add a password to a form when it should only be open to certain people, without asking them to sign in. On the Business plan, <a href="/features/collaborative-forms/">collaborative forms</a> let you give each teammate a role, such as Editor or Viewer. A reviewer with the Viewer role can see responses without being able to change the questions.</p>
 
 <div style="background:linear-gradient(135deg,#7f56d9 0%,#6941c6 100%);padding:32px 28px;margin:36px 0;border-radius:12px;color:#ffffff;font-family:inherit;text-align:center;">
 <p style="margin:0 0 12px 0;font-size:18px;font-weight:700;color:#ffffff;font-family:inherit;">Share a form without the sign-in wall</p>

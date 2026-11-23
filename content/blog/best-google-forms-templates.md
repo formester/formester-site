@@ -375,7 +375,7 @@ publishedAt: "2026-06-04T14:26:39.065Z"
 </table>
 </div>
 
-<p>Formester's templates are not Google Forms templates and will not open in your Drive. If staying inside Google is the requirement, use the 17 above and accept the ceiling. If the ceiling is the problem, <a href="https://formester.com/templates/">browse the library</a> and start from something closer to the finished thing.</p>
+<p>Formester's templates are not Google Forms templates and will not open in your Drive. If staying inside Google is the requirement, use the 17 above and accept the ceiling. If the ceiling is the problem, <a href="https://formester.com/templates/">browse the library</a> and start from something closer to the finished thing. Every template opens in Formester's <a href="https://formester.com/">online form builder</a>, where you can change the fields, logic and branding.</p>
 
 <section class="faq">
 <h2>Google Forms templates FAQ</h2>

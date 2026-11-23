@@ -123,7 +123,7 @@ publishedAt: "2026-06-04T13:55:51.000Z"
 
 <p><img src="https://formester-strapi.s3.ap-south-1.amazonaws.com/formester_close_date_and_submission_limit_61c5f1258f.jpg" alt="Formester's Form Limiter settings with a maximum response count and open and close dates" loading="lazy"></p>
 
-<p>Start by describing the sheet. <a href="/ai-form-generator/">The AI generator</a> takes a sentence like "volunteer sign up for three Saturday shifts with name, email and phone" and writes the form, options included. Edit anything, then publish.</p>
+<p>Start by describing the sheet. <a href="/ai-form-generator/">The AI generator</a> takes a sentence like "volunteer sign up for three Saturday shifts with name, email and phone" and writes the form, options included. Edit anything in the <a href="/">form builder</a>, then publish.</p>
 
 <p>The difference is what happens at capacity. <a href="/features/form-limiter/">Form Limiter</a> sets a maximum number of responses and the dates the form stays open, counts every entry and closes the form by itself with a message when the cap is hit. For a signup that is really a booking, <a href="/features/appointment-scheduler/">the appointment scheduler</a> gives each slot its own availability.</p>
 
