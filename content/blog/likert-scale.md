@@ -87,7 +87,7 @@ publishedAt: "2026-06-22T05:06:22.803Z"
 </ul>
 
 <div class="note">
-<p>Keep the wording neutral and measure one idea per question. Build any of these in minutes with Formester's <a href="https://formester.com/online-survey-maker/">online survey maker</a> using a scale or rating field.</p>
+<p>Keep the wording neutral and measure one idea per question. Build any of these in minutes with Formester's <a href="https://formester.com/ai-survey-generator/">AI survey generator</a> using a scale or rating field.</p>
 </div>
 
 <h2>Is a Likert Scale Quantitative or Qualitative?</h2>

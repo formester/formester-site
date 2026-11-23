@@ -486,7 +486,7 @@ color: var(--c-fg-2); font-size: 15.5px; line-height: 1.65; text-align: center;
 
 </div>
 
-<div class="fmstr-cmp-smsq-method__close">Build the survey in any <a href="https://formester.com/online-survey-maker/">online survey maker</a> you like. We obviously recommend Formester for branding, response analytics, and the <a href="https://formester.com/ai-survey-generator/">AI Survey Generator</a> that drafts the first 10 questions from a one-line brief.</div>
+<div class="fmstr-cmp-smsq-method__close">Build the survey in any <a href="https://formester.com/ai-survey-generator/">online survey maker</a> you like. We obviously recommend Formester for branding, response analytics, and the <a href="https://formester.com/ai-survey-generator/">AI Survey Generator</a> that drafts the first 10 questions from a one-line brief.</div>
 
 </div>
 </section>
@@ -827,9 +827,9 @@ text-decoration: none !important; color: inherit !important; transition: all .15
 <span class="fmstr-cmp-smsq-rel__arrow" aria-hidden="true">&rarr;</span>
 </a>
 
-<a class="fmstr-cmp-smsq-rel__card" href="https://formester.com/online-survey-maker/">
+<a class="fmstr-cmp-smsq-rel__card" href="https://formester.com/ai-survey-generator/">
 <div class="fmstr-cmp-smsq-rel__icon" aria-hidden="true">&#128203;</div>
-<div class="fmstr-cmp-smsq-rel__text"><h4>Online Survey Maker</h4><small>Branded builder, response analytics</small></div>
+<div class="fmstr-cmp-smsq-rel__text"><h4>AI Survey Generator</h4><small>Branded surveys, response analytics</small></div>
 <span class="fmstr-cmp-smsq-rel__arrow" aria-hidden="true">&rarr;</span>
 </a>
 

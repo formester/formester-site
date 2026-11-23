@@ -114,7 +114,7 @@ publishedAt: "2026-06-22T05:06:22.803Z"
 
 <p>Don't build it from scratch. The template below is ready to send: rating scales, open-text boxes, and a friendly intro already set up.</p>
 
-<p>Customize it in Formester's <a href="https://formester.com/online-survey-maker/">online survey maker</a>, add your camp's logo and colors, then share it as a link, QR code, or embed. Want a different mix of questions? Build your own from a prompt with the AI survey generator, or start from this one. (Keep the embedded form here.)</p>
+<p>Customize it in Formester's <a href="https://formester.com/ai-survey-generator/">AI survey generator</a>, add your camp's logo and colors, then share it as a link, QR code, or embed. Want a different mix of questions? Build your own from a prompt with the AI survey generator, or start from this one. (Keep the embedded form here.)</p>
 
 <h2>How to Share Your Survey and Boost Responses</h2>
 
