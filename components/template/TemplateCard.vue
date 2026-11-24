@@ -19,11 +19,9 @@
         </div>
       </slot>
       <div class="template-content">
-        <slot name="meta">
-          <div v-if="categoryName" class="template-meta">
-            <span class="template-meta__cat">{{ categoryName }}</span>
-          </div>
-        </slot>
+        <div v-if="showCategoryLabel && categoryName" class="template-meta">
+          <span class="template-meta__cat">{{ categoryName }}</span>
+        </div>
         <h3 class="template-name pointer">
           {{ template?.name }}
         </h3>
@@ -58,6 +56,8 @@ const props = defineProps({
   to: { type: String, default: '' },
   // Where Use template goes; empty opens the form template in the app.
   useUrl: { type: String, default: '' },
+  // Off for cards that list every category as tags instead.
+  showCategoryLabel: { type: Boolean, default: true },
 })
 
 const emit = defineEmits(['preview'])

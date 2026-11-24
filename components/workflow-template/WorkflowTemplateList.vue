@@ -26,11 +26,11 @@
               :template="template"
               :to="workflowTemplateUrl(template.slug)"
               :use-url="workflowTemplateUseUrl(appUrl, template.slug)"
+              :show-category-label="false"
             >
               <template #preview>
                 <WorkflowStepIcons :step-types="template.stepTypes" />
               </template>
-              <template #meta />
               <template v-if="template.categories.length" #tags>
                 <FTag
                   v-for="category in template.categories"
