@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import getBlogRoutes, { getPageRoutes, getTemplateRoutes } from './utils/getRoutes.js'
+import getBlogRoutes, { getPageRoutes, getTemplateRoutes, getWorkflowTemplateRoutes } from './utils/getRoutes.js'
 import { NOT_FOUND_PRERENDER_ROUTE, applyNotFoundFallback, verifyNotFoundFallback } from './utils/notFoundPrerender.js'
 import { STRAPI_URL, APP_URL } from './constants/urls'
 
@@ -218,15 +218,18 @@ export default defineNuxtConfig({
         const pages = await getPageRoutes()
         const blogs = await getBlogRoutes()
         const templates = await getTemplateRoutes()
+        const workflowTemplates = await getWorkflowTemplateRoutes()
 
         const pageUrls = pages.map(item => item.url)
         const blogUrls = blogs.map(item => item.url)
         const templateUrls = templates.map(item => item.url)
+        const workflowTemplateUrls = workflowTemplates.map(item => item.url)
 
         const allRoutes = [
           ...pageUrls,
           ...blogUrls,
-          ...templateUrls
+          ...templateUrls,
+          ...workflowTemplateUrls
         ].filter(Boolean)
 
         for (const route of allRoutes) {

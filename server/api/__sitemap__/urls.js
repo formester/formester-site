@@ -1,4 +1,4 @@
-import getRoutes, { getPageRoutes, getTemplateRoutes } from '~/utils/getRoutes.js'
+import getRoutes, { getPageRoutes, getTemplateRoutes, getWorkflowTemplateRoutes } from '~/utils/getRoutes.js'
 
 // Cache for sitemap data
 let sitemapCache = null
@@ -14,6 +14,7 @@ export default defineEventHandler(async () => {
     const blogs = await getRoutes()
     const pages = await getPageRoutes()
     const templates = await getTemplateRoutes()
+    const workflowTemplates = await getWorkflowTemplateRoutes()
 
     const filteredPages = pages.filter(
       item => !item.url?.startsWith('/status')
@@ -23,7 +24,8 @@ export default defineEventHandler(async () => {
     const result = [
       ...filteredPages.map(item => ({ loc: item.url, lastmod: item.lastmod })),
       ...blogs.map(item => ({ loc: item.url, lastmod: item.lastmod })),
-      ...templates.map(item => ({ loc: item.url, lastmod: item.lastmod }))
+      ...templates.map(item => ({ loc: item.url, lastmod: item.lastmod })),
+      ...workflowTemplates.map(item => ({ loc: item.url, lastmod: item.lastmod }))
     ]
 
     // Cache the result
