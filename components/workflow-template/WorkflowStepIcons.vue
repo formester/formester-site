@@ -18,14 +18,16 @@
 <script setup>
 import { workflowStep } from '@/constants/workflow-steps'
 
-const MAX_VISIBLE = 6
+// Four chips and the "+N" count fit the narrowest card without clipping.
+const MAX_VISIBLE = 4
 
 const props = defineProps({
   // The template's step types in order, e.g. ["form_submission", "approval", "send_email"].
   stepTypes: { type: Array, required: true },
 })
 
-const steps = computed(() => props.stepTypes.map(workflowStep))
+// Each step type once, in the order it first appears: a second "Send email" adds nothing to the preview.
+const steps = computed(() => [...new Set(props.stepTypes)].map(workflowStep))
 const visibleSteps = computed(() => steps.value.slice(0, MAX_VISIBLE))
 const hiddenCount = computed(() => steps.value.length - visibleSteps.value.length)
 const ariaLabel = computed(() => `Steps: ${steps.value.map((step) => step.label).join(', ')}`)
@@ -37,6 +39,7 @@ const ariaLabel = computed(() => `Steps: ${steps.value.map((step) => step.label)
   align-items: center;
   gap: var(--space-1);
   padding: var(--space-4) var(--space-4) 0;
+  overflow: hidden;
 }
 
 .step-icons__chip {
@@ -58,6 +61,7 @@ const ariaLabel = computed(() => `Steps: ${steps.value.map((step) => step.label)
 }
 
 .step-icons__more {
+  flex: none;
   margin-left: var(--space-1);
   font-size: var(--fs-xs);
   font-weight: var(--fw-semibold);
