@@ -19,14 +19,7 @@
       <div v-if="categories?.length" class="tmpl-detail__sidebar-block">
         <h3 class="tmpl-detail__sidebar-h3">Category</h3>
         <div class="tmpl-detail__chips">
-          <template v-for="cat in categories" :key="cat.name">
-            <NuxtLink
-              v-if="cat.slug"
-              :to="`/templates/categories/${cat.slug}`"
-              class="tmpl-detail__chip tmpl-detail__chip--link"
-            >{{ cat.name }}</NuxtLink>
-            <span v-else class="tmpl-detail__chip">{{ cat.name }}</span>
-          </template>
+          <FTag v-for="cat in categories" :key="cat.name" :to="categoryUrl(cat)">{{ cat.name }}</FTag>
         </div>
       </div>
     </aside>
@@ -34,11 +27,17 @@
 </template>
 
 <script setup>
+import FTag from '@/components/UI/FTag.vue'
+
 const props = defineProps({
   aboutTemplate: { type: String, default: '' },
   updatedAt:     { type: String, default: null },
   categories:    { type: Array, default: () => [] },
+  // Root of the category pages the chips link to, without a trailing slash.
+  categoryBasePath: { type: String, default: '/templates/categories' },
 })
+
+const categoryUrl = (category) => (category.slug ? `${props.categoryBasePath}/${category.slug}/` : '')
 
 const formattedDate = computed(() => {
   if (!props.updatedAt) return ''
@@ -165,22 +164,7 @@ const formattedDate = computed(() => {
   gap: var(--space-2);
 }
 
-.tmpl-detail__chip {
-  display: inline-block;
-  padding: 0 var(--space-3);
-  border: 1px solid var(--border-dark);
-  border-radius: var(--r-full);
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-medium);
-  color: var(--fg-2);
-  background: var(--bg-primary);
-  text-decoration: none;
-}
 
-.tmpl-detail__chip--link:hover {
-  border-color: var(--violet-500);
-  color: var(--violet-500);
-}
 
 .tmpl-detail__creator {
   display: flex;
