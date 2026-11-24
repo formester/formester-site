@@ -17,10 +17,10 @@
       />
     </div>
 
-    <NuxtLink to="/templates/">
+    <NuxtLink :to="`${basePath}/`">
       <h2 class="all-category-heading" :class="{ 'd-none': !showCategories && isMobile }">
         <LucideIcon name="layout-grid" :size="17" class="all-category-heading__icon" />
-        All Templates
+        {{ allLabel }}
       </h2>
     </NuxtLink>
 
@@ -34,7 +34,7 @@
         <NuxtLink
           v-for="category in group.items"
           :key="category.id"
-          :to="`/templates/categories/${category.slug}/`"
+          :to="`${basePath}/categories/${category.slug}/`"
         >
           <h3 class="category" :class="{ active: activeCategory?.slug === category.slug }">
             <LucideIcon :name="category.icon" :size="17" class="category__icon" />
@@ -48,7 +48,7 @@
   </div>
 </template>
 
-<script>
+<script setup>
 // Kind groups, in display order, each with its uppercase eyebrow label.
 const KIND_ORDER = ['purpose', 'department', 'industry', 'pdfTemplates']
 const KIND_LABELS = {
@@ -57,46 +57,47 @@ const KIND_LABELS = {
   industry: 'BY INDUSTRY',
   pdfTemplates: 'PDF TEMPLATES',
 }
+const MOBILE_MAX_WIDTH = 840
 
-export default {
-  props: ['activeCategory', 'templateCategories'],
-  data() {
-    return {
-      showCategories: true,
-      isMobile: false,
-      search: '',
-    }
-  },
-  computed: {
-    // Grouped by kind (purpose → department → industry → pdf), each an
-    // alphabetically-sorted list, filtered by the search box; empty kinds dropped.
-    groupedCategories() {
-      const term = this.search.trim().toLowerCase()
-      const src = this.templateCategories || {}
-      return KIND_ORDER.map((kind) => {
-        let items = src[kind] || []
-        if (term) items = items.filter((c) => c.name?.toLowerCase().includes(term))
-        items = [...items].sort((a, b) => (a.name || '').localeCompare(b.name || ''))
-        return { kind, label: KIND_LABELS[kind], items }
-      }).filter((g) => g.items.length)
-    },
-  },
-  methods: {
-    handleResize() {
-      this.isMobile = window.innerWidth <= 840
-    },
-  },
-  mounted() {
-    if (process.client) {
-      this.handleResize()
-      this.showCategories = !this.isMobile
-      window.addEventListener('resize', this.handleResize)
-    }
-  },
-  beforeDestroy() {
-    window.removeEventListener('resize', this.handleResize)
-  },
+const props = defineProps({
+  activeCategory: { type: Object, default: null },
+  // Categories keyed by kind, e.g. {purpose: [{id, slug, name, icon, templateCount}]}.
+  templateCategories: { type: Object, default: () => ({}) },
+  // The listing's root path without a trailing slash; category pages live under <basePath>/categories/.
+  basePath: { type: String, default: '/templates' },
+  allLabel: { type: String, default: 'All Templates' },
+})
+
+const showCategories = ref(true)
+const isMobile = ref(false)
+const search = ref('')
+
+// Grouped by kind (purpose → department → industry → pdf), each an
+// alphabetically-sorted list, filtered by the search box; empty kinds dropped.
+const groupedCategories = computed(() => {
+  const term = search.value.trim().toLowerCase()
+  const src = props.templateCategories || {}
+  return KIND_ORDER.map((kind) => {
+    let items = src[kind] || []
+    if (term) items = items.filter((c) => c.name?.toLowerCase().includes(term))
+    items = [...items].sort((a, b) => (a.name || '').localeCompare(b.name || ''))
+    return { kind, label: KIND_LABELS[kind], items }
+  }).filter((g) => g.items.length)
+})
+
+const handleResize = () => {
+  isMobile.value = window.innerWidth <= MOBILE_MAX_WIDTH
 }
+
+onMounted(() => {
+  handleResize()
+  showCategories.value = !isMobile.value
+  window.addEventListener('resize', handleResize)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', handleResize)
+})
 </script>
 
 <style scoped>
