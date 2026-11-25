@@ -165,6 +165,22 @@ const shownTemplates = computed(() => {
   padding: 0 var(--space-4) var(--space-6) 0;
   overflow-y: auto;
   border-right: 1px solid var(--border-light);
+  scrollbar-width: thin;
+  scrollbar-color: var(--gray-200) transparent;
+}
+
+/* Safari reads only the -webkit- rules; the same thin, light bar as the form template sidebar. */
+.list-sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.list-sidebar::-webkit-scrollbar-thumb {
+  border-radius: var(--r);
+  background-color: var(--gray-200);
+}
+
+.list-sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: var(--gray-400);
 }
 
 .list-content {
