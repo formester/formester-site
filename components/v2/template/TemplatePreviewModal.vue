@@ -6,7 +6,7 @@
         class="modal-overlay"
         role="dialog"
         aria-modal="true"
-        aria-label="Form preview"
+        :aria-label="label"
         @click.self="$emit('close')"
       >
         <Transition name="modal-card">
@@ -16,7 +16,7 @@
             <div class="modal-banner">
               <div class="modal-banner-left">
                 <span class="modal-preview-badge">Preview Mode</span>
-                <span class="modal-banner-text">This is a read-only preview — responses won't be saved</span>
+                <span class="modal-banner-text">{{ bannerText }}</span>
               </div>
               <button
                 type="button"
@@ -28,14 +28,16 @@
               </button>
             </div>
 
-            <!-- Form iframe -->
-            <iframe
-              :src="surveyUrl"
-              frameborder="0"
-              class="modal-iframe"
-              loading="lazy"
-              title="Full form preview"
-            />
+            <!-- Form iframe, or what the page previews instead (a workflow template's diagram). -->
+            <slot>
+              <iframe
+                :src="surveyUrl"
+                frameborder="0"
+                class="modal-iframe"
+                loading="lazy"
+                title="Full form preview"
+              />
+            </slot>
 
           </div>
         </Transition>
@@ -49,7 +51,9 @@ import IconX from '@/components/icons/X.vue'
 
 defineProps({
   isOpen:    { type: Boolean, required: true },
-  surveyUrl: { type: String, required: true },
+  surveyUrl: { type: String, default: '' },
+  label:     { type: String, default: 'Form preview' },
+  bannerText: { type: String, default: "This is a read-only preview — responses won't be saved" },
 })
 
 defineEmits(['close'])
