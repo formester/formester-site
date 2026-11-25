@@ -3,22 +3,24 @@
     <div class="tmpl-detail__hero-inner">
 
       <div class="tmpl-detail__preview-col">
-        <TemplatePreviewPanel
-          ref="previewPanelRef"
-          :pdf-data="pdfData"
-          :survey-url="template.surveyUrl"
-        />
+        <slot name="preview">
+          <TemplatePreviewPanel
+            ref="previewPanelRef"
+            :pdf-data="pdfData"
+            :survey-url="template.surveyUrl"
+          />
+        </slot>
       </div>
 
       <div class="tmpl-detail__info-col">
 
         <!-- Breadcrumb -->
         <nav class="tmpl-detail__breadcrumb" aria-label="breadcrumb">
-          <NuxtLink to="/templates/" class="tmpl-detail__bc-link">Form Templates</NuxtLink>
+          <NuxtLink :to="`${basePath}/`" class="tmpl-detail__bc-link">{{ rootLabel }}</NuxtLink>
           <span class="tmpl-detail__bc-sep" aria-hidden="true">›</span>
           <NuxtLink
             v-if="template.category?.slug"
-            :to="`/templates/categories/${template.category.slug}/`"
+            :to="`${basePath}/categories/${template.category.slug}/`"
             class="tmpl-detail__bc-link"
           >{{ template.category.name }}</NuxtLink>
           <span v-else class="tmpl-detail__bc-text">Templates</span>
@@ -32,6 +34,7 @@
           <p
             class="tmpl-detail__desc"
             :class="{ 'tmpl-detail__desc--clamped': !descExpanded }"
+            :style="{ '--desc-lines': descriptionLines }"
           >{{ template.description }}</p>
           <button
             v-if="isDescLong"
@@ -45,35 +48,39 @@
         </div>
 
         <!-- Metadata chips -->
-        <div v-if="hasAnyMeta" class="tmpl-detail__meta">
-          <span v-if="template.category?.name" class="tmpl-detail__chip tmpl-detail__chip--violet">
-            <IconDocument />
-            {{ template.category.name }}
-          </span>
-          <span v-if="template.fieldCount" class="tmpl-detail__chip">
-            <IconListLines />
-            {{ template.fieldCount }} {{ template.fieldCount === 1 ? 'Field' : 'Fields' }}
-          </span>
-          <span v-if="template.sectionCount" class="tmpl-detail__chip">
-            <IconLayout />
-            {{ template.sectionCount }} {{ template.sectionCount === 1 ? 'Section' : 'Sections' }}
-          </span>
-          <span v-if="template.estimatedSeconds" class="tmpl-detail__chip">
-            <IconClock />
-            {{ formattedTime }}
-          </span>
-        </div>
+        <slot name="meta">
+          <div v-if="hasAnyMeta" class="tmpl-detail__meta">
+            <span v-if="template.category?.name" class="tmpl-detail__chip tmpl-detail__chip--violet">
+              <IconDocument />
+              {{ template.category.name }}
+            </span>
+            <span v-if="template.fieldCount" class="tmpl-detail__chip">
+              <IconListLines />
+              {{ template.fieldCount }} {{ template.fieldCount === 1 ? 'Field' : 'Fields' }}
+            </span>
+            <span v-if="template.sectionCount" class="tmpl-detail__chip">
+              <IconLayout />
+              {{ template.sectionCount }} {{ template.sectionCount === 1 ? 'Section' : 'Sections' }}
+            </span>
+            <span v-if="template.estimatedSeconds" class="tmpl-detail__chip">
+              <IconClock />
+              {{ formattedTime }}
+            </span>
+          </div>
+        </slot>
 
         <!-- CTA group -->
         <div class="tmpl-detail__cta-group">
-          <FButton size="lg" class="tmpl-detail__cta-full" @click="redirectTo">
-            <IconCopy :size="17" />
-            Use Template
-          </FButton>
-          <FButton size="lg" variant="violet-text" class="tmpl-detail__cta-full" @click="openPreviewModal">
-            <IconEye :size="15" />
-            Preview full form
-          </FButton>
+          <slot name="actions">
+            <FButton size="lg" class="tmpl-detail__cta-full" @click="redirectTo">
+              <IconCopy :size="17" />
+              Use Template
+            </FButton>
+            <FButton size="lg" variant="violet-text" class="tmpl-detail__cta-full" @click="openPreviewModal">
+              <IconEye :size="15" />
+              Preview full form
+            </FButton>
+          </slot>
         </div>
 
       </div>
@@ -96,13 +103,21 @@ import IconEye          from '@/components/icons/Eye.vue'
 const props = defineProps({
   template: { type: Object, required: true },
   pdfData:  { type: Object, default: null },
+  // The breadcrumb's first link and the root of its category link, e.g. "Workflow Templates" and "/workflow-templates".
+  rootLabel: { type: String, default: 'Form Templates' },
+  basePath:  { type: String, default: '/templates' },
+  // Lines of description shown before Read more, e.g. 6 on workflow template pages.
+  descriptionLines: { type: Number, default: 8 },
 })
 
 const config = useRuntimeConfig()
 
-const CHAR_LIMIT = 400
+// About how many characters fit on one line of the info column; 8 lines keeps the form pages' 400.
+const CHARS_PER_LINE = 50
 const descExpanded = ref(false)
-const isDescLong = computed(() => (props.template.description?.length ?? 0) > CHAR_LIMIT)
+const isDescLong = computed(
+  () => (props.template.description?.length ?? 0) > props.descriptionLines * CHARS_PER_LINE
+)
 
 const previewPanelRef = useTemplateRef('previewPanelRef')
 
@@ -228,7 +243,7 @@ function openPreviewModal() {
 
 .tmpl-detail__desc--clamped {
   display: -webkit-box;
-  -webkit-line-clamp: 8;
+  -webkit-line-clamp: var(--desc-lines, 8);
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
