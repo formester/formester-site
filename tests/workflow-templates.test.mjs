@@ -63,3 +63,29 @@ test('the sidebar leaves out categories with no templates, whose pages do not ex
   ])
   assert.deepEqual(sidebar.purpose.map((category) => category.slug), ['approvals'])
 })
+
+const { workflowCategoryUrl } = await import('../utils/getWorkflowTemplates.js')
+
+test('category pages are listed for categories with templates, lastmod from their newest template', () => {
+  const templates = [
+    { updatedAt: '2026-11-02T00:00:00Z', categories: [{ slug: 'approvals', name: 'Approvals' }] },
+    { updatedAt: '2026-11-09T00:00:00Z', categories: [{ slug: 'email', name: 'Email' }] },
+  ]
+  const categories = [
+    { slug: 'approvals', templatesCount: 1 },
+    { slug: 'email', templatesCount: 1 },
+    { slug: 'sms', templatesCount: 0 },
+  ]
+  const routes = buildWorkflowTemplateRoutes(templates, categories)
+  assert.deepEqual(
+    routes.filter((route) => route.url.includes('/categories/')),
+    [
+      { url: '/workflow-templates/categories/approvals/', lastmod: '2026-11-02T00:00:00Z' },
+      { url: '/workflow-templates/categories/email/', lastmod: '2026-11-09T00:00:00Z' },
+    ]
+  )
+})
+
+test('category link', () => {
+  assert.equal(workflowCategoryUrl('approvals'), '/workflow-templates/categories/approvals/')
+})

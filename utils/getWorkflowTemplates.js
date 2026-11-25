@@ -99,3 +99,11 @@ export function workflowTemplateUseUrl(appUrl, slug) {
 export function workflowTemplateUrl(slug) {
   return `${WORKFLOW_TEMPLATES_PATH}/${slug}/`
 }
+
+/**
+ * @param {string} slug e.g. "approvals"
+ * @returns {string} e.g. "/workflow-templates/categories/approvals/"
+ */
+export function workflowCategoryUrl(slug) {
+  return `${WORKFLOW_TEMPLATES_PATH}/categories/${slug}/`
+}
