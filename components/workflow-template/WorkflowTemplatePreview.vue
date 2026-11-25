@@ -11,8 +11,9 @@
         v-model="active"
         :tabs="tabs"
         id-prefix="preview"
-        :style="{ '--tab-surface': TAB_SURFACES[active] }"
+        :style="{ '--tab-surface': tabSurface }"
       />
+      <TemplatePreviewDeviceSwitcher v-if="active === 'form'" v-model="device" class="preview__devices" />
     </div>
 
     <div
@@ -23,8 +24,18 @@
     >
       <WorkflowDiagram :graph="graph" :form-name="form?.name" />
     </div>
-    <div v-if="form" v-show="active === 'form'" id="preview-panel-form" role="tabpanel" aria-labelledby="preview-tab-form">
-      <TemplatePreviewIframe :survey-url="form.surveyUrl" active-device="desktop" />
+    <div
+      v-if="form"
+      v-show="active === 'form'"
+      id="preview-panel-form"
+      role="tabpanel"
+      aria-labelledby="preview-tab-form"
+      class="preview__form"
+    >
+      <!-- Tablet and phone narrow the form on the grey canvas; the frame keeps its size. -->
+      <div class="preview__form-column" :class="`preview__form-column--${device}`">
+        <TemplatePreviewIframe :survey-url="form.surveyUrl" :active-device="device" />
+      </div>
     </div>
 
     <TemplatePreviewModal
@@ -66,6 +77,7 @@
 </template>
 
 <script setup>
+import TemplatePreviewDeviceSwitcher from '@/components/v2/template/TemplatePreviewDeviceSwitcher.vue'
 import TemplatePreviewIframe from '@/components/v2/template/TemplatePreviewIframe.vue'
 import TemplatePreviewModal from '@/components/v2/template/TemplatePreviewModal.vue'
 import WorkflowDiagram from '@/components/workflow-template/WorkflowDiagram.vue'
@@ -86,6 +98,16 @@ const BANNER_TEXTS = {
   workflow: 'A read-only view of the workflow; use the template to edit it.',
   form: "This is a read-only preview — responses won't be saved",
 }
+
+// The size the form is previewed at on the page, "desktop", "tablet" or "mobile"
+const device = ref('desktop')
+const tabSurface = computed(() => {
+  // A narrowed form sits on the grey canvas, so its tab stays grey too.
+  if (active.value === 'form' && device.value !== 'desktop') {
+    return TAB_SURFACES.workflow
+  }
+  return TAB_SURFACES[active.value]
+})
 
 const tabs = computed(() => (props.form ? [WORKFLOW_TAB, FORM_TAB] : [WORKFLOW_TAB]))
 // The open tab, "workflow" or "form"; the page names its preview button after it.
@@ -148,6 +170,51 @@ defineExpose({ openPreview })
   height: 10px;
   border-radius: var(--r-full);
   background: var(--gray-300);
+}
+
+.preview__devices {
+  align-self: center;
+  margin-left: auto;
+  background: var(--bg-primary);
+}
+
+/* On the white pill, the picked size is marked in violet rather than white. */
+.preview__devices :deep(.device-btn.active) {
+  background: var(--violet-50);
+  box-shadow: none;
+}
+
+/* Device sizes mean little on a small screen, as on form template pages. */
+@media (max-width: 1024px) {
+  .preview__devices {
+    display: none;
+  }
+}
+
+.preview__form {
+  display: flex;
+  justify-content: center;
+}
+
+.preview__form-column {
+  width: 100%;
+  background: var(--bg-primary);
+}
+
+.preview__form-column--tablet,
+.preview__form-column--mobile {
+  border-inline: 1px solid var(--border-light);
+  box-shadow: var(--shadow-lg);
+}
+
+.preview__form-column--tablet {
+  width: 520px;
+  max-width: 100%;
+}
+
+.preview__form-column--mobile {
+  width: 320px;
+  max-width: 100%;
 }
 
 .preview-modal__panel {
