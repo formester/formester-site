@@ -116,3 +116,73 @@ export const useWorkflowTemplateCategorySeo = ({ category, templates }) => {
     },
   ])
 }
+
+/**
+ * Head tags and JSON-LD for one workflow template's page; the template's own meta wins when set, and its own schema
+ * replaces ours.
+ * @param {{slug: string, name: string, description: ?string, metaTitle: ?string, metaDescription: ?string, keywords: ?string, faqs: Array<{question: string, answer: string}>, schemaMarkup: ?Object, categories: Array<{slug: string, name: string}>}} template
+ */
+export const useWorkflowTemplateSeo = (template) => {
+  const pageUrl = `${SITE_URL}${workflowTemplateUrl(template.slug)}`
+  const title = template.metaTitle || `${template.name} Workflow Template | Formester`
+  const description =
+    template.metaDescription ||
+    template.description ||
+    `A free ${template.name.toLowerCase()} workflow for your forms. Copy it into Formester and run it after every response.`
+  const meta = getSiteMeta({
+    type: 'website',
+    url: pageUrl,
+    title,
+    description,
+    mainImage: `${SITE_URL}/formester-logo-meta-image.png`,
+    mainImageAlt: 'Formester Logo',
+  })
+  if (template.keywords) meta.push({ name: 'keywords', content: template.keywords })
+
+  useHead({ title, meta, link: [{ rel: 'canonical', href: pageUrl }] })
+  useJsonld(template.schemaMarkup || templateSchema(template, { pageUrl, title, description }))
+}
+
+function templateSchema(template, { pageUrl, title, description }) {
+  const [category] = template.categories
+  const breadcrumbs = [
+    { name: 'Home', item: SITE_URL },
+    { name: 'Workflow Templates', item: LIST_URL },
+    category && { name: category.name, item: `${SITE_URL}${workflowCategoryUrl(category.slug)}` },
+    { name: template.name, item: pageUrl },
+  ].filter(Boolean)
+
+  const schema = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: title,
+      description,
+      url: pageUrl,
+      mainEntity: {
+        '@type': 'CreativeWork',
+        name: template.name,
+        description,
+        url: pageUrl,
+        author: { '@type': 'Organization', name: 'Formester', url: `${SITE_URL}/` },
+      },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: breadcrumbs.map((crumb, index) => ({ '@type': 'ListItem', position: index + 1, ...crumb })),
+    },
+  ]
+  if (template.faqs.length) {
+    schema.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: template.faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+      })),
+    })
+  }
+  return schema
+}
