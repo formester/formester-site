@@ -25,8 +25,12 @@ test('workflowStep resolves the accent colours', () => {
 })
 
 test('categories are reshaped for the template category sidebar', () => {
-  const sidebar = toSidebarCategories([{ slug: 'approvals', name: 'Approvals', templatesCount: 3, position: 0 }])
-  assert.deepEqual(sidebar, { purpose: [{ id: 'approvals', slug: 'approvals', name: 'Approvals', templateCount: 3 }] })
+  const sidebar = toSidebarCategories([
+    { slug: 'approvals', name: 'Approvals', icon: 'user-check', templatesCount: 3, position: 0 },
+  ])
+  assert.deepEqual(sidebar, {
+    purpose: [{ id: 'approvals', slug: 'approvals', name: 'Approvals', icon: 'user-check', templateCount: 3 }],
+  })
 })
 
 test('template and use links', () => {

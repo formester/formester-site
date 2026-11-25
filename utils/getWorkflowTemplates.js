@@ -9,6 +9,7 @@ let cachePromise = null
  * @typedef {Object} WorkflowTemplateCategory
  * @property {string} slug e.g. "approvals"
  * @property {string} name e.g. "Approvals"
+ * @property {?string} icon a Lucide icon name, e.g. "user-check"
  * @property {number} templatesCount e.g. 11
  */
 
@@ -67,16 +68,17 @@ export default async function getWorkflowTemplatesAndCategories() {
 /**
  * Workflow categories in the shape the template category sidebar groups by kind.
  * @param {Array<WorkflowTemplateCategory>} categories
- * @returns {{purpose: Array<{id: string, slug: string, name: string, templateCount: number}>}} e.g. {purpose: [{id: "approvals", slug: "approvals", name: "Approvals", templateCount: 11}]}
+ * @returns {{purpose: Array<{id: string, slug: string, name: string, icon: ?string, templateCount: number}>}} e.g. {purpose: [{id: "approvals", slug: "approvals", name: "Approvals", icon: "user-check", templateCount: 11}]}
  */
 export function toSidebarCategories(categories) {
   // A category with no listed templates has no page to link to.
   const purpose = categories
     .filter(({ templatesCount }) => templatesCount > 0)
-    .map(({ slug, name, templatesCount }) => ({
-    id: slug,
-    slug,
-    name,
+    .map(({ slug, name, icon, templatesCount }) => ({
+      id: slug,
+      slug,
+      name,
+      icon,
       templateCount: templatesCount,
     }))
   return { purpose }
