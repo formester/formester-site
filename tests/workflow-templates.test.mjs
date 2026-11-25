@@ -42,13 +42,24 @@ test('template and use links', () => {
 })
 
 test('listing routes cover every page of 12, with the latest update as lastmod', () => {
-  const templates = Array.from({ length: 25 }, (_, i) => ({ updatedAt: `2026-11-${String(i + 1).padStart(2, '0')}T00:00:00Z` }))
-  const routes = buildWorkflowTemplateRoutes(templates)
+  const templates = Array.from({ length: 25 }, (_, i) => ({
+    slug: `template-${i + 1}`,
+    categories: [],
+    updatedAt: `2026-11-${String(i + 1).padStart(2, '0')}T00:00:00Z`,
+  }))
+  const routes = buildWorkflowTemplateRoutes(templates).filter((route) => !/template-\d+/.test(route.url))
   assert.deepEqual(
     routes.map((route) => route.url),
     ['/workflow-templates/', '/workflow-templates/page/2/', '/workflow-templates/page/3/']
   )
   assert.ok(routes.every((route) => route.lastmod === '2026-11-25T00:00:00Z'))
+})
+
+test('every template has its own page, lastmod from its own update', () => {
+  const routes = buildWorkflowTemplateRoutes([
+    { slug: 'expense-claim-approval', categories: [], updatedAt: '2026-11-03T00:00:00Z' },
+  ])
+  assert.deepEqual(routes.at(-1), { url: '/workflow-templates/expense-claim-approval/', lastmod: '2026-11-03T00:00:00Z' })
 })
 
 test('no templates still gives the index page', () => {

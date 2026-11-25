@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import getTemplatesAndCategories from './getTemplatesAndCategories.js'
-import getWorkflowTemplatesAndCategories, { WORKFLOW_TEMPLATES_PATH, workflowCategoryUrl } from './getWorkflowTemplates.js'
+import getWorkflowTemplatesAndCategories, { WORKFLOW_TEMPLATES_PATH, workflowCategoryUrl, workflowTemplateUrl } from './getWorkflowTemplates.js'
 
 // import.meta.dirname isn't reliably preserved once Vite/Rollup bundles a
 // module into a Nitro server chunk (evaluates to undefined at runtime,
@@ -185,6 +185,9 @@ export function buildWorkflowTemplateRoutes(templates, categories = []) {
   for (const category of categories.filter(({ templatesCount }) => templatesCount > 0)) {
     const categoryTemplates = templates.filter((template) => template.categories.some(({ slug }) => slug === category.slug))
     routes.push({ url: workflowCategoryUrl(category.slug), lastmod: latestUpdate(categoryTemplates) })
+  }
+  for (const template of templates) {
+    routes.push({ url: workflowTemplateUrl(template.slug), lastmod: template.updatedAt })
   }
   return routes
 }
