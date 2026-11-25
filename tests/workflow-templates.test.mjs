@@ -55,3 +55,11 @@ test('the disk page walker skips workflow-templates, which has its own route bui
   const source = await readFile(new URL('../utils/getRoutes.js', import.meta.url), 'utf8')
   assert.match(source, /PAGE_SKIP_DIRS = new Set\(\[[^\]]*'workflow-templates'/)
 })
+
+test('the sidebar leaves out categories with no templates, whose pages do not exist', () => {
+  const sidebar = toSidebarCategories([
+    { slug: 'approvals', name: 'Approvals', templatesCount: 3 },
+    { slug: 'sms', name: 'SMS', templatesCount: 0 },
+  ])
+  assert.deepEqual(sidebar.purpose.map((category) => category.slug), ['approvals'])
+})

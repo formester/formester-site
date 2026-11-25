@@ -70,12 +70,15 @@ export default async function getWorkflowTemplatesAndCategories() {
  * @returns {{purpose: Array<{id: string, slug: string, name: string, templateCount: number}>}} e.g. {purpose: [{id: "approvals", slug: "approvals", name: "Approvals", templateCount: 11}]}
  */
 export function toSidebarCategories(categories) {
-  const purpose = categories.map(({ slug, name, templatesCount }) => ({
+  // A category with no listed templates has no page to link to.
+  const purpose = categories
+    .filter(({ templatesCount }) => templatesCount > 0)
+    .map(({ slug, name, templatesCount }) => ({
     id: slug,
     slug,
     name,
-    templateCount: templatesCount,
-  }))
+      templateCount: templatesCount,
+    }))
   return { purpose }
 }
 
