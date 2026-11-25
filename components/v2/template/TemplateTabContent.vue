@@ -1,7 +1,7 @@
 <template>
   <div v-if="template.tabs?.length" ref="contentRef" class="tmpl-detail__content-area" :style="{ 'scroll-margin-top': scrollOffset + 'px' }">
     <div v-for="tab in template.tabs" :key="tab.id" v-show="activeTabId === tab.id">
-      <component :is="resolvedComponents[tab.type]" v-bind="tab.props" />
+      <component :is="tab.component || resolvedComponents[tab.type]" v-bind="tab.props" />
     </div>
   </div>
 </template>
@@ -10,6 +10,7 @@
 import componentMapping from '@/constants/componentMapping'
 
 const props = defineProps({
+  // Each tab names a CMS component `type`, or passes its own `component` (the workflow template page does).
   template:     { type: Object, required: true },
   activeTabId:  { type: String, default: null },
   scrollOffset: { type: Number, default: 80 },
