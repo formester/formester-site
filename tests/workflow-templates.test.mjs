@@ -89,3 +89,10 @@ test('category pages are listed for categories with templates, lastmod from thei
 test('category link', () => {
   assert.equal(workflowCategoryUrl('approvals'), '/workflow-templates/categories/approvals/')
 })
+
+const { categoryLook } = await import('../constants/workflow-category-looks.js')
+
+test('a category without its own illustration gets the generic one', () => {
+  assert.equal(categoryLook('approvals').kind, 'approvals')
+  assert.equal(categoryLook('lead-generation').kind, 'generic')
+})
