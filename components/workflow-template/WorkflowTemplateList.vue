@@ -33,11 +33,14 @@
               </template>
               <template v-if="template.categories.length" #tags>
                 <FTag
-                  v-for="category in template.categories"
+                  v-for="category in shownTags(template)"
                   :key="category.slug"
                   :to="`${WORKFLOW_TEMPLATES_PATH}/categories/${category.slug}/`"
                 >
                   {{ category.name }}
+                </FTag>
+                <FTag v-if="hiddenTags(template).length" :title="hiddenTagNames(template)">
+                  +{{ hiddenTags(template).length }} more
                 </FTag>
               </template>
             </TemplateCard>
@@ -88,6 +91,13 @@ const props = defineProps({
 })
 
 const { appUrl } = useRuntimeConfig().public
+
+// More tags than this collapse into a "+N more" chip so every card keeps the same height.
+const MAX_CARD_TAGS = 3
+
+const shownTags = (template) => template.categories.slice(0, MAX_CARD_TAGS)
+const hiddenTags = (template) => template.categories.slice(MAX_CARD_TAGS)
+const hiddenTagNames = (template) => hiddenTags(template).map((category) => category.name).join(', ')
 
 const searchTerm = ref('')
 
