@@ -66,6 +66,25 @@ export default async function getWorkflowTemplatesAndCategories() {
 }
 
 /**
+ * One workflow template's page data, with its categories and related templates' categories named.
+ * @param {string} slug e.g. "expense-claim-approval"
+ * @returns {Promise<Object>} the API's template, e.g. {slug, name, graph: {nodes, edges}, categories: [{slug: "approvals", name: "Approvals"}], relatedTemplates: [...], formTemplate: {slug, name, surveyUrl}}
+ * @throws {AxiosError} with `response.status` 404 when no listed template has this slug
+ */
+export async function getWorkflowTemplate(slug) {
+  const [{ data: template }, { categories }] = await Promise.all([
+    fetchWithRetry(`${APP_URL}/workflow_templates/${encodeURIComponent(slug)}.json`),
+    getWorkflowTemplatesAndCategories(),
+  ])
+  const categoriesBySlug = new Map(categories.map((category) => [category.slug, category]))
+
+  return {
+    ...withCategories(template, categoriesBySlug),
+    relatedTemplates: template.relatedTemplates.map((related) => withCategories(related, categoriesBySlug)),
+  }
+}
+
+/**
  * Workflow categories in the shape the template category sidebar groups by kind.
  * @param {Array<WorkflowTemplateCategory>} categories
  * @returns {{purpose: Array<{id: string, slug: string, name: string, icon: ?string, templateCount: number}>}} e.g. {purpose: [{id: "approvals", slug: "approvals", name: "Approvals", icon: "user-check", templateCount: 11}]}
