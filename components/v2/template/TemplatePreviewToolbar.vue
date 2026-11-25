@@ -16,20 +16,11 @@
     </div>
 
     <!-- Device switcher — hidden when PDF tab active -->
-    <div class="device-switcher" :class="{ hidden: hasPdf && activeTab === 'pdf' }">
-      <button type="button" class="device-btn" :class="{ active: activeDevice === 'desktop' }" aria-label="Desktop view"
-        @click="$emit('update:activeDevice', 'desktop')">
-        <IconMonitor :size="14" />
-      </button>
-      <button type="button" class="device-btn" :class="{ active: activeDevice === 'tablet' }" aria-label="Tablet view"
-        @click="$emit('update:activeDevice', 'tablet')">
-        <IconTablet :size="14" />
-      </button>
-      <button type="button" class="device-btn" :class="{ active: activeDevice === 'mobile' }" aria-label="Mobile view"
-        @click="$emit('update:activeDevice', 'mobile')">
-        <IconPhone :size="14" />
-      </button>
-    </div>
+    <TemplatePreviewDeviceSwitcher
+      :model-value="activeDevice"
+      :class="{ hidden: hasPdf && activeTab === 'pdf' }"
+      @update:model-value="$emit('update:activeDevice', $event)"
+    />
 
   </div>
 </template>
@@ -37,9 +28,7 @@
 <script setup>
 import IconFormPreview from '@/components/icons/FormPreview.vue'
 import IconPdfDoc from '@/components/icons/PdfDoc.vue'
-import IconMonitor from '@/components/icons/Monitor.vue'
-import IconTablet from '@/components/icons/Tablet.vue'
-import IconPhone from '@/components/icons/Phone.vue'
+import TemplatePreviewDeviceSwitcher from './TemplatePreviewDeviceSwitcher.vue'
 
 defineProps({
   hasPdf: { type: Boolean, default: false },
@@ -126,44 +115,9 @@ defineEmits(['update:activeTab', 'update:activeDevice'])
 }
 
 /* Device switcher */
-.device-switcher {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  background: var(--bg-grey-100);
-  border: 1px solid var(--border-light);
-  border-radius: var(--r-lg);
-  padding: 3px;
-  transition: opacity 200ms, visibility 200ms;
-}
-
 .device-switcher.hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-}
-
-.device-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 28px;
-  border: none;
-  border-radius: var(--r-md);
-  background: transparent;
-  color: var(--fg-3);
-  cursor: pointer;
-  transition: background 120ms, color 120ms, box-shadow 120ms;
-}
-
-.device-btn:hover {
-  color: var(--fg-1);
-}
-
-.device-btn.active {
-  background: #fff;
-  color: var(--violet-600);
-  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.12), 0 1px 2px rgba(16, 24, 40, 0.06);
 }
 </style>
