@@ -29,6 +29,11 @@
                 >
                 <template v-else>{{ activeCategory ? activeCategory.name : 'All' }} Templates</template>
               </h1>
+              <NuxtLink v-if="!activeCategory" to="/workflow-templates/" class="workflow-templates-link">
+                <span class="workflow-templates-link__badge">New</span>
+                Workflow templates
+                <LucideIcon name="arrow-right" :size="16" />
+              </NuxtLink>
             </div>
             <p v-if="isV2 && pageContent.heroSubtitle" class="hero-subtitle">{{ pageContent.heroSubtitle }}</p>
             <div v-if="!hasHeroContent && activeCategory?.description" class="my-2">
@@ -460,6 +465,37 @@ export default {
 
 .heading-row {
   margin-top: 4px;
+}
+
+/* Leads from the form templates index to workflow templates. */
+.workflow-templates-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 6px 14px 6px 6px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-full);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--fg-1);
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.workflow-templates-link:hover {
+  border-color: var(--violet-300);
+  color: var(--color-primary);
+}
+
+.workflow-templates-link__badge {
+  padding: 2px 8px;
+  border-radius: var(--r-full);
+  background: var(--violet-50);
+  font-size: var(--fs-tiny);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--violet-700);
 }
 
 .heading-row {
