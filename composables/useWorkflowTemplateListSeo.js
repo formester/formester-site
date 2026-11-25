@@ -8,10 +8,6 @@ const DESCRIPTION =
   'Ready-made workflow templates for approvals, reminders, AI summaries and more. Copy one into Formester and run it after every form response.'
 
 /**
- * @param {number} page e.g. 2
- * @returns {string} e.g. "https://formester.com/workflow-templates/page/2/"
- */
-/**
  * @param {Array<{slug: string, name: string}>} templates
  * @returns {Object} a schema.org ItemList of the templates' pages
  */
@@ -25,6 +21,10 @@ const itemListOf = (templates) => ({
   })),
 })
 
+/**
+ * @param {number} page e.g. 2
+ * @returns {string} e.g. "https://formester.com/workflow-templates/page/2/"
+ */
 const listPageUrl = (page) => (page === 1 ? LIST_URL : `${LIST_URL}page/${page}/`)
 
 /**
