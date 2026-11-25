@@ -39,28 +39,7 @@
 
         <TemplateGrid :templates="shownTemplates" :view-more-step="viewMoreStep">
           <template #card="{ template }">
-            <TemplateCard
-              :template="template"
-              :to="workflowTemplateUrl(template.slug)"
-              :use-url="workflowTemplateUseUrl(appUrl, template.slug)"
-              :show-category-label="false"
-            >
-              <template #preview>
-                <WorkflowStepIcons :step-types="template.stepTypes" />
-              </template>
-              <template v-if="template.categories.length" #tags>
-                <FTag
-                  v-for="category in shownTags(template)"
-                  :key="category.slug"
-                  :to="`${WORKFLOW_TEMPLATES_PATH}/categories/${category.slug}/`"
-                >
-                  {{ category.name }}
-                </FTag>
-                <FTag v-if="hiddenTags(template).length" :title="hiddenTagNames(template)">
-                  +{{ hiddenTags(template).length }} more
-                </FTag>
-              </template>
-            </TemplateCard>
+            <WorkflowTemplateCard :template="template" />
           </template>
         </TemplateGrid>
 
@@ -88,20 +67,13 @@
 </template>
 
 <script setup>
-import FTag from '@/components/UI/FTag.vue'
-import TemplateCard from '@/components/template/TemplateCard.vue'
 import TemplateCategories from '@/components/template/TemplateCategories.vue'
 import TemplateGrid from '@/components/template/TemplateGrid.vue'
 import TemplatePagination from '@/components/template/TemplatePagination.vue'
 import TemplateSearch from '@/components/template/TemplateSearch.vue'
 import WorkflowCategoryHero from '@/components/workflow-template/WorkflowCategoryHero.vue'
-import WorkflowStepIcons from '@/components/workflow-template/WorkflowStepIcons.vue'
-import {
-  WORKFLOW_TEMPLATES_PATH,
-  toSidebarCategories,
-  workflowTemplateUrl,
-  workflowTemplateUseUrl,
-} from '@/utils/getWorkflowTemplates'
+import WorkflowTemplateCard from '@/components/workflow-template/WorkflowTemplateCard.vue'
+import { WORKFLOW_TEMPLATES_PATH, toSidebarCategories } from '@/utils/getWorkflowTemplates'
 
 const props = defineProps({
   // Every listed template (a category page: the category's); the page shows its slice and searches all of them.
@@ -113,15 +85,6 @@ const props = defineProps({
   // The category page's category, e.g. {slug: "approvals", name: "Approvals", description: "..."}; null on the index.
   activeCategory: { type: Object, default: null },
 })
-
-const { appUrl } = useRuntimeConfig().public
-
-// More tags than this collapse into a "+N more" chip so every card keeps the same height.
-const MAX_CARD_TAGS = 3
-
-const shownTags = (template) => template.categories.slice(0, MAX_CARD_TAGS)
-const hiddenTags = (template) => template.categories.slice(MAX_CARD_TAGS)
-const hiddenTagNames = (template) => hiddenTags(template).map((category) => category.name).join(', ')
 
 const searchTerm = ref('')
 
