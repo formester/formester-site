@@ -1,5 +1,5 @@
 <template>
-  <div class="preview" :class="`preview--${active}`">
+  <div class="preview">
     <!-- A browser tab strip: each preview is a tab, and the open one joins the content below it. -->
     <div class="preview__strip">
       <span class="preview__dots" aria-hidden="true">
@@ -7,23 +7,12 @@
         <span class="preview__dot"></span>
         <span class="preview__dot"></span>
       </span>
-      <div class="preview__tabs" role="tablist" aria-label="Preview">
-        <button
-          v-for="tab in tabs"
-          :id="`preview-tab-${tab.id}`"
-          :key="tab.id"
-          type="button"
-          role="tab"
-          class="preview__tab"
-          :class="{ 'preview__tab--active': active === tab.id }"
-          :aria-selected="active === tab.id"
-          :aria-controls="`preview-panel-${tab.id}`"
-          @click="active = tab.id"
-        >
-          <LucideIcon :name="tab.icon" :size="14" />
-          {{ tab.label }}
-        </button>
-      </div>
+      <WorkflowPreviewTabs
+        v-model="active"
+        :tabs="tabs"
+        id-prefix="preview"
+        :style="{ '--tab-surface': TAB_SURFACES[active] }"
+      />
     </div>
 
     <div
@@ -38,14 +27,40 @@
       <TemplatePreviewIframe :survey-url="form.surveyUrl" active-device="desktop" />
     </div>
 
-    <TemplatePreviewModal v-if="form" :is-open="modal === 'form'" :survey-url="form.surveyUrl" @close="closeModal" />
     <TemplatePreviewModal
-      :is-open="modal === 'workflow'"
-      label="Workflow preview"
-      banner-text="A read-only view of the workflow; use the template to edit it."
+      :is-open="isModalOpen"
+      label="Template preview"
+      :banner-text="BANNER_TEXTS[active]"
       @close="closeModal"
     >
-      <WorkflowDiagram :graph="graph" :form-name="form?.name" fill />
+      <template #tabs>
+        <WorkflowPreviewTabs
+          v-model="active"
+          :tabs="tabs"
+          id-prefix="modal-preview"
+          :style="{ '--tab-surface': TAB_SURFACES[active] }"
+        />
+      </template>
+
+      <div
+        v-show="active === 'workflow'"
+        id="modal-preview-panel-workflow"
+        role="tabpanel"
+        aria-labelledby="modal-preview-tab-workflow"
+        class="preview-modal__panel"
+      >
+        <WorkflowDiagram :graph="graph" :form-name="form?.name" fill />
+      </div>
+      <div
+        v-if="form"
+        v-show="active === 'form'"
+        id="modal-preview-panel-form"
+        role="tabpanel"
+        aria-labelledby="modal-preview-tab-form"
+        class="preview-modal__panel"
+      >
+        <iframe :src="form.surveyUrl" class="preview-modal__iframe" loading="lazy" title="Full form preview" />
+      </div>
     </TemplatePreviewModal>
   </div>
 </template>
@@ -54,6 +69,7 @@
 import TemplatePreviewIframe from '@/components/v2/template/TemplatePreviewIframe.vue'
 import TemplatePreviewModal from '@/components/v2/template/TemplatePreviewModal.vue'
 import WorkflowDiagram from '@/components/workflow-template/WorkflowDiagram.vue'
+import WorkflowPreviewTabs from '@/components/workflow-template/WorkflowPreviewTabs.vue'
 
 const props = defineProps({
   // The template's `graph`, e.g. {nodes: [...], edges: [...]}
@@ -64,27 +80,33 @@ const props = defineProps({
 
 const WORKFLOW_TAB = { id: 'workflow', label: 'Workflow', icon: 'workflow' }
 const FORM_TAB = { id: 'form', label: 'Form', icon: 'file-text' }
+// The open tab takes the colour of what it shows: the diagram's grey canvas or the white form.
+const TAB_SURFACES = { workflow: 'var(--bg-grey-50)', form: 'var(--bg-primary)' }
+const BANNER_TEXTS = {
+  workflow: 'A read-only view of the workflow; use the template to edit it.',
+  form: "This is a read-only preview — responses won't be saved",
+}
 
 const tabs = computed(() => (props.form ? [WORKFLOW_TAB, FORM_TAB] : [WORKFLOW_TAB]))
 // The open tab, "workflow" or "form"; the page names its preview button after it.
 const active = defineModel('tab', { type: String, default: 'workflow' })
-// Which preview is open full screen: "workflow", "form", or null.
-const modal = ref(null)
+// The pop-up shares the open tab with the page, so it opens on the tab being looked at.
+const isModalOpen = ref(false)
 
-/** Opens the open tab's preview full screen. */
+/** Opens the preview full screen, on the open tab. */
 function openPreview() {
-  modal.value = active.value
+  isModalOpen.value = true
   document.body.style.overflow = 'hidden'
 }
 
 function closeModal() {
-  modal.value = null
+  isModalOpen.value = false
   document.body.style.overflow = ''
 }
 
 // Escape closes the pop-up, as on form template pages.
 function onKeydown(event) {
-  if (event.key === 'Escape' && modal.value) closeModal()
+  if (event.key === 'Escape' && isModalOpen.value) closeModal()
 }
 
 onMounted(() => window.addEventListener('keydown', onKeydown))
@@ -98,17 +120,11 @@ defineExpose({ openPreview })
 
 <style scoped>
 .preview {
-  /* The open tab takes the colour of what it shows: the diagram's grey canvas or the white form. */
-  --tab-surface: var(--bg-grey-50);
   overflow: hidden;
   border: 1px solid var(--border-light);
   border-radius: var(--r-xl);
   background: var(--bg-grey-50);
   box-shadow: var(--shadow-lg);
-}
-
-.preview--form {
-  --tab-surface: var(--bg-primary);
 }
 
 .preview__strip {
@@ -134,48 +150,18 @@ defineExpose({ openPreview })
   background: var(--gray-300);
 }
 
-.preview__tabs {
+.preview-modal__panel {
+  flex: 1;
+  min-height: 0;
   display: flex;
-  align-items: flex-end;
-  gap: 2px;
-  height: 100%;
+  flex-direction: column;
 }
 
-.preview__tab {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  height: 32px;
-  margin-bottom: var(--space-1);
-  padding: 0 var(--space-4);
+.preview-modal__iframe {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
   border: 0;
-  border-radius: var(--r-lg);
-  background: transparent;
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-medium);
-  color: var(--fg-2);
-  cursor: pointer;
-}
-
-.preview__tab:hover {
-  color: var(--fg-1);
-}
-
-/* Sits 1px over the strip's bottom border, in the content's colour, so the tab and the content read as one. */
-.preview__tab--active {
-  position: relative;
-  top: 1px;
-  height: 36px;
-  margin-bottom: 0;
-  border: 1px solid var(--border-light);
-  border-bottom-color: var(--tab-surface);
-  border-radius: var(--r-lg) var(--r-lg) 0 0;
-  background: var(--tab-surface);
-  font-weight: var(--fw-semibold);
-  color: var(--fg-1);
-}
-
-.preview__tab--active :deep(svg) {
-  color: var(--color-primary);
+  display: block;
 }
 </style>
