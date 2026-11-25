@@ -57,7 +57,7 @@ const route = useRoute()
 const { appUrl } = useRuntimeConfig().public
 
 const { data: template, error } = await useAsyncData(`workflow-template-${route.params.slug}`, () =>
-  getWorkflowTemplate(route.params.slug)
+  getWorkflowTemplate(route.params.slug, appUrl)
 )
 
 if (error.value) {

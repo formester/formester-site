@@ -24,10 +24,10 @@ let cachePromise = null
  * @property {string} updatedAt e.g. "2026-11-24T10:22:50.920Z"
  */
 
-async function fetchWorkflowTemplatesAndCategories() {
+async function fetchWorkflowTemplatesAndCategories(appUrl) {
   const [{ data: templates }, { data: categories }] = await Promise.all([
-    fetchWithRetry(`${APP_URL}/workflow_templates.json`),
-    fetchWithRetry(`${APP_URL}/workflow_template_categories.json`),
+    fetchWithRetry(`${appUrl}/workflow_templates.json`),
+    fetchWithRetry(`${appUrl}/workflow_template_categories.json`),
   ])
   const sortedCategories = [...categories].sort(byPositionThenName)
   const categoriesBySlug = new Map(sortedCategories.map((category) => [category.slug, category]))
@@ -53,14 +53,15 @@ function byPositionThenName(a, b) {
 
 /**
  * Every listed workflow template and category from the app, fetched once per build (every time in dev).
+ * @param {string} [appUrl] the runtime config's `appUrl` inside Nuxt, since `process.env` is empty in the browser; e.g. "http://localhost:5000"
  * @returns {Promise<{templates: Array<WorkflowTemplate>, categories: Array<WorkflowTemplateCategory>}>}
  */
-export default async function getWorkflowTemplatesAndCategories() {
+export default async function getWorkflowTemplatesAndCategories(appUrl = APP_URL) {
   if (import.meta.dev) {
-    return fetchWorkflowTemplatesAndCategories()
+    return fetchWorkflowTemplatesAndCategories(appUrl)
   }
   if (!cachePromise) {
-    cachePromise = fetchWorkflowTemplatesAndCategories()
+    cachePromise = fetchWorkflowTemplatesAndCategories(appUrl)
   }
   return cachePromise
 }
@@ -68,13 +69,14 @@ export default async function getWorkflowTemplatesAndCategories() {
 /**
  * One workflow template's page data, with its categories and related templates' categories named.
  * @param {string} slug e.g. "expense-claim-approval"
+ * @param {string} [appUrl] the runtime config's `appUrl`, e.g. "http://localhost:5000"
  * @returns {Promise<Object>} the API's template, e.g. {slug, name, graph: {nodes, edges}, categories: [{slug: "approvals", name: "Approvals"}], relatedTemplates: [...], formTemplate: {slug, name, surveyUrl}}
  * @throws {AxiosError} with `response.status` 404 when no listed template has this slug
  */
-export async function getWorkflowTemplate(slug) {
+export async function getWorkflowTemplate(slug, appUrl = APP_URL) {
   const [{ data: template }, { categories }] = await Promise.all([
-    fetchWithRetry(`${APP_URL}/workflow_templates/${encodeURIComponent(slug)}.json`),
-    getWorkflowTemplatesAndCategories(),
+    fetchWithRetry(`${appUrl}/workflow_templates/${encodeURIComponent(slug)}.json`),
+    getWorkflowTemplatesAndCategories(appUrl),
   ])
   const categoriesBySlug = new Map(categories.map((category) => [category.slug, category]))
 
