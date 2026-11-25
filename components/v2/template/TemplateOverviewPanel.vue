@@ -1,8 +1,19 @@
 <template>
   <div class="tmpl-detail__two-col">
     <div class="tmpl-detail__main">
-      <h2 class="tmpl-detail__content-h2">About this template</h2>
-      <div class="tmpl-detail__about-html" v-html="aboutTemplate" />
+      <template v-if="howItWorks.length">
+        <h2 class="tmpl-detail__content-h2">How it works</h2>
+        <ol class="tmpl-detail__steps">
+          <li v-for="(step, index) in howItWorks" :key="index" class="tmpl-detail__step">
+            <span class="tmpl-detail__step-number">{{ index + 1 }}</span>
+            <span><strong v-if="leadIn(step)" class="tmpl-detail__step-lead">{{ leadIn(step) }}</strong>{{ step.slice(leadIn(step).length) }}</span>
+          </li>
+        </ol>
+      </template>
+      <template v-if="aboutTemplate">
+        <h2 class="tmpl-detail__content-h2">About this template</h2>
+        <div class="tmpl-detail__about-html" v-html="aboutTemplate" />
+      </template>
     </div>
     <aside class="tmpl-detail__sidebar">
       <div class="tmpl-detail__sidebar-block">
@@ -15,12 +26,23 @@
           </svg>
           <span class="tmpl-detail__sidebar-text">Last updated: <strong>{{ formattedDate }}</strong></span>
         </div>
+        <div v-if="stepCount" class="tmpl-detail__sidebar-row">
+          <LucideIcon class="tmpl-detail__sidebar-icon" name="workflow" :size="16" />
+          <span class="tmpl-detail__sidebar-text">Steps: <strong>{{ stepCount }}</strong></span>
+        </div>
       </div>
       <div v-if="categories?.length" class="tmpl-detail__sidebar-block">
         <h3 class="tmpl-detail__sidebar-h3">Category</h3>
         <div class="tmpl-detail__chips">
           <FTag v-for="cat in categories" :key="cat.name" :to="categoryUrl(cat)">{{ cat.name }}</FTag>
         </div>
+      </div>
+      <div v-if="form" class="tmpl-detail__sidebar-block">
+        <h3 class="tmpl-detail__sidebar-h3">Form used</h3>
+        <NuxtLink :to="form.to" class="tmpl-detail__form-link">
+          <LucideIcon name="file-text" :size="16" />
+          {{ form.name }}
+        </NuxtLink>
       </div>
     </aside>
   </div>
@@ -35,7 +57,15 @@ const props = defineProps({
   categories:    { type: Array, default: () => [] },
   // Root of the category pages the chips link to, without a trailing slash.
   categoryBasePath: { type: String, default: '/templates/categories' },
+  // Workflow templates only: the numbered steps, e.g. ["The manager approves or rejects the claim."]
+  howItWorks: { type: Array, default: () => [] },
+  stepCount: { type: Number, default: 0 },
+  // The form the workflow comes with, e.g. {name: "Expense claim form", to: "/templates/expense-claim-form/"}
+  form: { type: Object, default: null },
 })
+
+// A step's opening sentence when it is a short title, e.g. "Form submitted." in "Form submitted. An employee fills in..."
+const leadIn = (step) => step.match(/^[^.]{1,40}\.(?=\s)/)?.[0] || ''
 
 const categoryUrl = (category) => (category.slug ? `${props.categoryBasePath}/${category.slug}/` : '')
 
@@ -66,6 +96,42 @@ const formattedDate = computed(() => {
   color: var(--fg-1);
   line-height: 1.25;
   margin-bottom: var(--space-6);
+}
+
+/* How it works */
+.tmpl-detail__steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin: 0 0 var(--space-10);
+  padding: 0;
+  list-style: none;
+}
+
+.tmpl-detail__step {
+  display: flex;
+  gap: var(--space-3);
+  font-size: var(--fs-md);
+  line-height: var(--lh-lg);
+  color: var(--fg-2);
+}
+
+.tmpl-detail__step-lead {
+  color: var(--fg-1);
+}
+
+.tmpl-detail__step-number {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--r-full);
+  background: var(--violet-50);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--violet-700);
 }
 
 /* About HTML rich text */
@@ -140,6 +206,25 @@ const formattedDate = computed(() => {
   font-weight: var(--fw-semibold);
   color: var(--fg-1);
   letter-spacing: 0.01em;
+}
+
+.tmpl-detail__form-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-xl);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--fg-1);
+  text-decoration: none;
+  transition: border-color 0.15s;
+}
+
+.tmpl-detail__form-link:hover {
+  border-color: var(--violet-300);
+  color: var(--violet-700);
 }
 
 .tmpl-detail__sidebar-row {
