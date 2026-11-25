@@ -3,9 +3,9 @@
     <!-- A browser tab strip: each preview is a tab, and the open one joins the content below it. -->
     <div class="preview__strip">
       <span class="preview__dots" aria-hidden="true">
-        <span class="preview__dot"></span>
-        <span class="preview__dot"></span>
-        <span class="preview__dot"></span>
+        <span class="preview__dot preview__dot--red"></span>
+        <span class="preview__dot preview__dot--yellow"></span>
+        <span class="preview__dot preview__dot--green"></span>
       </span>
       <WorkflowPreviewTabs
         v-model="active"
@@ -169,7 +169,19 @@ defineExpose({ openPreview })
   width: 10px;
   height: 10px;
   border-radius: var(--r-full);
-  background: var(--gray-300);
+}
+
+/* The same window-button colours as the form template preview's browser bar. */
+.preview__dot--red {
+  background: #ff5f57;
+}
+
+.preview__dot--yellow {
+  background: #ffbd2e;
+}
+
+.preview__dot--green {
+  background: #28c840;
 }
 
 .preview__devices {
