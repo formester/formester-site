@@ -79,6 +79,12 @@
     <StatsBanner eyebrow="Workflows at a glance" heading="Built for the work that follows a form" :stats="stats" />
 
     <p class="wf-compare-more">
+      Want a head start?
+      <NuxtLink to="/workflow-templates/">Browse workflow templates</NuxtLink>
+      for approvals, reminders and follow-ups.
+    </p>
+
+    <p class="wf-compare-more wf-compare-more--next">
       Choosing a tool?
       <NuxtLink to="/blog/best-workflow-automation-tools/">Compare workflow tools</NuxtLink>
       like Zapier, Make, n8n and Power Automate.
@@ -531,6 +537,9 @@ useJsonld([
   text-align: center;
   font-size: 15px;
   color: #475467;
+}
+.wf-compare-more--next {
+  padding-top: var(--space-3, 12px);
 }
 .wf-compare-more a {
   color: #6434d0;
