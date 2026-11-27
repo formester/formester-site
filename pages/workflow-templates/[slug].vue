@@ -107,7 +107,7 @@ const tabs = computed(() => {
 
   return [
     { id: 'overview', name: 'Overview', component: TemplateOverviewPanel, props: overview },
-    faqs.length && { id: 'faq', name: 'FAQ', component: FaqSection, props: { faqList: faqs, badge: '' } },
+    faqs.length && { id: 'faq', name: 'FAQ', component: FaqSection, props: { faqList: faqs, badge: '', compact: true } },
     relatedTemplates.length && {
       id: 'related',
       name: 'Related Templates',

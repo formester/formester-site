@@ -1,5 +1,5 @@
 <template>
-  <section class="faq-section">
+  <section class="faq-section" :class="{ 'faq-section--compact': compact }">
     <div class="faq-inner">
       <div class="faq-layout" :class="{ 'faq-layout--centered': centered }">
         <!-- Left: heading + CTA -->
@@ -61,6 +61,8 @@ const props = defineProps({
   centered: { type: Boolean, default: false },
   // false = no default description; show only if provided.
   descriptionFallback: { type: Boolean, default: true },
+  // Tighter spacing for a FAQ inside a tab panel, e.g. on workflow template pages.
+  compact: { type: Boolean, default: false },
 })
 
 const DEFAULT_DESCRIPTION = 'Find answers to common questions below, or reach out to our team for more help.'
@@ -103,6 +105,20 @@ const toggle = (id) => {
 .faq-section {
   padding-block: 5rem;
   background: v-bind(background);
+}
+
+.faq-section--compact {
+  padding-block: var(--space-8);
+}
+
+@media (max-width: 1023px) {
+  .faq-section--compact .faq-layout {
+    gap: var(--space-6);
+  }
+}
+
+.faq-section--compact .faq-description {
+  margin-bottom: 0;
 }
 
 .faq-inner {
