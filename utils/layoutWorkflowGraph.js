@@ -56,10 +56,12 @@ export function layoutWorkflowGraph({ nodes, edges }) {
   const loops = loopEdgeIds(nodes, knownEdges, roots)
   const forwardEdges = knownEdges.filter((edge) => !loops.has(edge.id))
 
-  const depths = depthsFrom(roots, nodes, forwardEdges)
-  const rows = columnsByNode(nodes, forwardEdges, roots, depths)
-
   const routes = new Map(nodes.map((step) => [step.id, routesFor(step, knownEdges)]))
+  const orderedEdges = inChipOrder(forwardEdges, routes)
+
+  const depths = depthsFrom(roots, nodes, orderedEdges)
+  const rows = columnsByNode(nodes, orderedEdges, roots, depths)
+
   const heights = new Map(nodes.map((step) => [step.id, CARD_HEIGHT + (routes.get(step.id).length ? ROUTES_HEIGHT : 0)]))
   const rowTops = rowTopsFor(depths, heights)
 
@@ -150,6 +152,22 @@ function outcomesOf(step, edges) {
     const known = KNOWN_HANDLES[handle] || { label: humanize(handle), tone: 'slate' }
     return { handle, label: known.label, color: TONE_COLORS[known.tone] }
   })
+}
+
+/**
+ * Sorts edges so each step's outgoing lines follow its outcome chips left to right (Approve before Reject), whatever
+ * order the template saved them in; lines from no chip keep their place after the chipped ones.
+ * @param {Array<{source: string, sourceHandle: ?string}>} edges
+ * @param {Map<string, Array<{handle: string}>>} routes e.g. Map {"napproval" => [{handle: "approved"}, {handle: "rejected"}]}
+ * @returns {Array<Object>} the same edges, reordered
+ */
+function inChipOrder(edges, routes) {
+  const chipIndex = (edge) => {
+    const index = routes.get(edge.source).findIndex((route) => route.handle === handleOf(edge))
+    return index === -1 ? Number.MAX_SAFE_INTEGER : index
+  }
+  // Stable, and every reader filters edges by source, so sorting on the chip alone orders each step's lines.
+  return [...edges].sort((a, b) => chipIndex(a) - chipIndex(b))
 }
 
 function hasNode(nodes, id) {
