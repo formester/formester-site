@@ -100,3 +100,21 @@ test('a rate-limited request waits as long as the app asks and tries again', asy
   assert.deepEqual(data, CATEGORIES)
   assert.equal(calls, 2)
 })
+
+test('the build fails when a workflow template page was not written', async () => {
+  const { verifyPrerenderedPages } = await import('../utils/verifyPrerenderedPages.js')
+  const expected = ['/workflow-templates/leave-request-approval/', '/workflow-templates/ai-lead-qualification/']
+  const prerenderedRoutes = [
+    { route: '/workflow-templates/ai-lead-qualification/' },
+    { route: '/workflow-templates/leave-request-approval/', error: Object.assign(new Error('[500]'), { statusCode: 500 }) },
+  ]
+
+  assert.throws(
+    () => verifyPrerenderedPages({ prerenderedRoutes }, expected),
+    /\/workflow-templates\/leave-request-approval\//,
+  )
+  assert.doesNotThrow(() => verifyPrerenderedPages({ prerenderedRoutes: [
+    { route: '/workflow-templates/leave-request-approval' },
+    { route: '/workflow-templates/ai-lead-qualification/' },
+  ] }, expected))
+})
