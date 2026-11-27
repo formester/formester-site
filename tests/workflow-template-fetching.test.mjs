@@ -41,6 +41,45 @@ const freshModule = () => import(`../utils/getWorkflowTemplates.js?copy=${copy++
 
 test.afterEach(() => mock.restoreAll())
 
+test('every template page is built from the one list request, without a request per page', async () => {
+  const requested = stubApp({
+    [`${APP}/workflow_templates.json?with_details=true`]: [
+      detailedTemplate('leave-request-approval', 'Leave request approval'),
+      detailedTemplate('expense-reimbursement-approval', 'Expense reimbursement approval'),
+    ],
+    [`${APP}/workflow_template_categories.json`]: CATEGORIES,
+  })
+  const { default: getWorkflowTemplatesAndCategories, getWorkflowTemplate } = await freshModule()
+
+  const leave = await getWorkflowTemplate('leave-request-approval', APP)
+  const expense = await getWorkflowTemplate('expense-reimbursement-approval', APP)
+  const { templates } = await getWorkflowTemplatesAndCategories(APP)
+
+  assert.deepEqual(requested, [
+    `${APP}/workflow_templates.json?with_details=true`,
+    `${APP}/workflow_template_categories.json`,
+  ])
+  assert.equal(leave.faqs[0].question, 'Who approves?')
+  assert.deepEqual(expense.categories, [{ slug: 'approvals', name: 'Approvals' }])
+  assert.equal(templates[0].graph, undefined, 'listing pages keep only card fields, so their payload stays small')
+})
+
+test("a template the list has no page data for is fetched on its own, as before the app's with_details", async () => {
+  const listOnly = detailedTemplate('leave-request-approval', 'Leave request approval')
+  delete listOnly.graph
+  const requested = stubApp({
+    [`${APP}/workflow_templates.json?with_details=true`]: [listOnly],
+    [`${APP}/workflow_template_categories.json`]: CATEGORIES,
+    [`${APP}/workflow_templates/leave-request-approval.json`]: detailedTemplate('leave-request-approval', 'Leave request approval'),
+  })
+  const { getWorkflowTemplate } = await freshModule()
+
+  const leave = await getWorkflowTemplate('leave-request-approval', APP)
+
+  assert.equal(leave.graph.nodes.length, 1)
+  assert.ok(requested.includes(`${APP}/workflow_templates/leave-request-approval.json`))
+})
+
 test('a rate-limited request waits as long as the app asks and tries again', async () => {
   let calls = 0
   stubApp({

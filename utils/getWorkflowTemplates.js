@@ -24,18 +24,30 @@ let cachePromise = null
  * @property {string} updatedAt e.g. "2026-11-24T10:22:50.920Z"
  */
 
+// The fields a listing card shows; page data stays out of the listing pages' payloads.
+const CARD_FIELDS = ['slug', 'name', 'description', 'stepTypes', 'includesForm', 'categories', 'updatedAt']
+
+// One list request with every template's page data, so a static build doesn't make a request per
+// page and run into the app's rate limit.
 async function fetchWorkflowTemplatesAndCategories(appUrl) {
   const [{ data: templates }, { data: categories }] = await Promise.all([
-    fetchWithRetry(`${appUrl}/workflow_templates.json`),
+    fetchWithRetry(`${appUrl}/workflow_templates.json`, { params: { with_details: true } }),
     fetchWithRetry(`${appUrl}/workflow_template_categories.json`),
   ])
   const sortedCategories = [...categories].sort(byPositionThenName)
   const categoriesBySlug = new Map(sortedCategories.map((category) => [category.slug, category]))
+  // An app without with_details sends cards only; those pages are then fetched one by one.
+  const pagesBySlug = new Map(templates.filter((template) => template.graph).map((template) => [template.slug, template]))
 
   return {
-    templates: templates.map((template) => withCategories(template, categoriesBySlug)),
+    templates: templates.map((template) => withCategories(pick(template, CARD_FIELDS), categoriesBySlug)),
     categories: sortedCategories,
+    pagesBySlug,
   }
+}
+
+function pick(object, keys) {
+  return Object.fromEntries(keys.filter((key) => key in object).map((key) => [key, object[key]]))
 }
 
 // The API lists a template's categories by slug; cards and tags need their names too.
@@ -57,6 +69,11 @@ function byPositionThenName(a, b) {
  * @returns {Promise<{templates: Array<WorkflowTemplate>, categories: Array<WorkflowTemplateCategory>}>}
  */
 export default async function getWorkflowTemplatesAndCategories(appUrl = APP_URL) {
+  const { templates, categories } = await loadWorkflowTemplates(appUrl)
+  return { templates, categories }
+}
+
+function loadWorkflowTemplates(appUrl) {
   if (import.meta.dev) {
     return fetchWorkflowTemplatesAndCategories(appUrl)
   }
@@ -74,16 +91,19 @@ export default async function getWorkflowTemplatesAndCategories(appUrl = APP_URL
  * @throws {AxiosError} with `response.status` 404 when no listed template has this slug
  */
 export async function getWorkflowTemplate(slug, appUrl = APP_URL) {
-  const [{ data: template }, { categories }] = await Promise.all([
-    fetchWithRetry(`${appUrl}/workflow_templates/${encodeURIComponent(slug)}.json`),
-    getWorkflowTemplatesAndCategories(appUrl),
-  ])
+  const { categories, pagesBySlug } = await loadWorkflowTemplates(appUrl)
+  const template = pagesBySlug.get(slug) || (await fetchWorkflowTemplatePage(slug, appUrl))
   const categoriesBySlug = new Map(categories.map((category) => [category.slug, category]))
 
   return {
     ...withCategories(template, categoriesBySlug),
     relatedTemplates: template.relatedTemplates.map((related) => withCategories(related, categoriesBySlug)),
   }
+}
+
+async function fetchWorkflowTemplatePage(slug, appUrl) {
+  const { data } = await fetchWithRetry(`${appUrl}/workflow_templates/${encodeURIComponent(slug)}.json`)
+  return data
 }
 
 /**
