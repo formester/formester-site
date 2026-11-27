@@ -167,7 +167,7 @@
 </template>
 
 <script setup>
-import { WORKFLOW_TEMPLATES_PATH, workflowCategoryUrl } from '@/utils/getWorkflowTemplates'
+import { WORKFLOW_TEMPLATES_PATH, workflowTemplateUrl } from '@/utils/getWorkflowTemplates'
 
 defineProps({
   dropdownActive: Boolean,
@@ -213,14 +213,14 @@ const pdfTemplates = [
   { id: 5, title: 'Business Contract Agreement PDF Form',slug: '/templates/business-contract-agreement-pdf-form-49913/' },
 ]
 
-// The busiest workflow categories, then the full list, as on the canvas's option A.
+// Featured workflow templates, one or two per category, then the full list.
 const workflowTemplates = [
-  { id: 1, title: 'Approvals',              slug: workflowCategoryUrl('approvals') },
-  { id: 2, title: 'Reminders',              slug: workflowCategoryUrl('reminders') },
-  { id: 3, title: 'Email follow-ups',       slug: workflowCategoryUrl('email') },
-  { id: 4, title: 'AI summaries',           slug: workflowCategoryUrl('ai') },
-  { id: 5, title: 'SMS',                    slug: workflowCategoryUrl('sms') },
-  { id: 6, title: 'All workflow templates', slug: `${WORKFLOW_TEMPLATES_PATH}/` },
+  { id: 1, title: 'Expense Approval',          slug: workflowTemplateUrl('expense-reimbursement-approval') },
+  { id: 2, title: 'Leave Request Approval',    slug: workflowTemplateUrl('leave-request-approval') },
+  { id: 3, title: 'Unfinished Form Follow-up', slug: workflowTemplateUrl('unfinished-form-follow-up') },
+  { id: 4, title: 'AI Lead Qualification',     slug: workflowTemplateUrl('ai-lead-qualification') },
+  { id: 5, title: 'Incident Report Alert',     slug: workflowTemplateUrl('incident-report-alert') },
+  { id: 6, title: 'All workflow templates',    slug: `${WORKFLOW_TEMPLATES_PATH}/` },
 ]
 </script>
 
