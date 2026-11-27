@@ -6,6 +6,7 @@
         root-label="Workflow Templates"
         :base-path="WORKFLOW_TEMPLATES_PATH"
         :description-lines="6"
+        clear-navbar
       >
         <template #preview>
           <WorkflowTemplatePreview
