@@ -100,7 +100,10 @@ export function stepDetail(node, { formName } = {}) {
   const config = node.data?.config || {}
 
   if (TRIGGER_TYPES.has(node.type) && formName) return formName
-  if (node.type === 'send_email' && config.subject) return withoutFieldReferences(config.subject)
+  if (node.type === 'send_email') {
+    const subject = readableSubject(config.subject)
+    if (subject) return subject
+  }
   if (node.type === 'delay' && config.duration) return `Wait ${config.duration} ${unitFor(config)}`
   return workflowStep(node.type).label
 }
@@ -172,6 +175,23 @@ function inChipOrder(edges, routes) {
 
 function hasNode(nodes, id) {
   return nodes.some((candidate) => candidate.id === id)
+}
+
+/**
+ * The subject without field references, or nothing when too few real words are left to read.
+ * @param {string} subject e.g. "Application from @{a1} @{b2}"
+ * @returns {string|null} e.g. "Application from …"; null for "@{t1} from @{a1} @{b2}"
+ */
+function readableSubject(subject) {
+  if (!subject) {
+    return null
+  }
+  const text = withoutFieldReferences(subject)
+  const words = text.split(/\s+/).filter((word) => word !== '…')
+  if (words.length < 2) {
+    return null
+  }
+  return text
 }
 
 // Field references ("@{uuid}") mean nothing on the site; a run of them becomes one ellipsis.
