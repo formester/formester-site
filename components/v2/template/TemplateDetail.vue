@@ -4,7 +4,7 @@
     <div ref="stickyHeaderRef" class="tmpl-detail__sticky-header" :style="{ '--hero-h': heroHeight + 'px' }">
       <div ref="heroWrapRef">
         <slot name="hero">
-          <TemplateHero :template="template" :pdf-data="pdfData" />
+          <TemplateHero :template="template" :pdf-data="pdfData" :clear-navbar="clearNavbar" />
         </slot>
       </div>
 
@@ -31,6 +31,8 @@ const props = defineProps({
   moreTemplatesTitle: { type: Array, default: () => [] },
   moreTemplatesDescription: { type: String, default: '' },
   showMoreTemplates: { type: Boolean, default: true },
+  // Passed to the default hero: starts it below the fixed navbar on tablets and phones.
+  clearNavbar: { type: Boolean, default: false },
 })
 
 const activeTabId = ref(props.template.tabs?.[0]?.id ?? null)
