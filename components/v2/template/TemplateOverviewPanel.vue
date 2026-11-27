@@ -39,9 +39,9 @@
       </div>
       <div v-if="form" class="tmpl-detail__sidebar-block">
         <h3 class="tmpl-detail__sidebar-h3">Form used</h3>
-        <NuxtLink :to="form.to" class="tmpl-detail__form-link">
-          <LucideIcon name="file-text" :size="16" />
-          {{ form.name }}
+        <NuxtLink :to="form.to" class="tmpl-detail__form-link" :title="form.name">
+          <LucideIcon name="file-text" :size="16" class="tmpl-detail__form-icon" />
+          <span class="tmpl-detail__form-name">{{ form.name }}</span>
         </NuxtLink>
       </div>
     </aside>
@@ -220,6 +220,18 @@ const formattedDate = computed(() => {
   color: var(--fg-1);
   text-decoration: none;
   transition: border-color 0.15s;
+}
+
+/* A long form name stays on one line and ends in an ellipsis, so the card keeps its height. */
+.tmpl-detail__form-icon {
+  flex-shrink: 0;
+}
+
+.tmpl-detail__form-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .tmpl-detail__form-link:hover {
