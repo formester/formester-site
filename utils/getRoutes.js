@@ -2,6 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import getTemplatesAndCategories from './getTemplatesAndCategories.js'
+import getWorkflowTemplatesAndCategories, { WORKFLOW_TEMPLATES_PATH, workflowCategoryUrl, workflowTemplateUrl } from './getWorkflowTemplates.js'
 
 // import.meta.dirname isn't reliably preserved once Vite/Rollup bundles a
 // module into a Nitro server chunk (evaluates to undefined at runtime,
@@ -20,7 +21,7 @@ const PAGES_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..
 // system/tool pages that aren't part of the content-driven "pages" set and
 // are handled elsewhere (ignored by nitro.prerender, excluded from the
 // sitemap, or just always linked from nav/footer).
-const PAGE_SKIP_DIRS = new Set(['blog', 'templates', '__TOOLS__'])
+const PAGE_SKIP_DIRS = new Set(['blog', 'templates', 'workflow-templates', '__TOOLS__'])
 const PAGE_SKIP_FILES = new Set([
   'index', 'preview', 'design-preview', 'template-preview', 'comparison-tool',
   'contact', 'pricing', 'security', 'terms-of-service', 'jotform-101', 'typeform-101',
@@ -163,4 +164,52 @@ export const getTemplateRoutes = async () => {
     ...categoryUrls,
     ...paginationUrls
   ]
+}
+
+const WORKFLOW_TEMPLATES_PER_PAGE = 12
+
+/**
+ * The workflow template listing and category pages, each `lastmod` from its most recently updated template.
+ * @param {Array<{updatedAt: string, categories: Array<{slug: string}>}>} templates
+ * @param {Array<{slug: string, templatesCount: number}>} categories
+ * @returns {Array<{url: string, lastmod: string}>} e.g. [{url: "/workflow-templates/", lastmod: "2026-11-24T10:22:50.920Z"}, {url: "/workflow-templates/categories/approvals/", ...}]
+ */
+export function buildWorkflowTemplateRoutes(templates, categories = []) {
+  const lastmod = latestUpdate(templates)
+  const totalPages = Math.max(1, Math.ceil(templates.length / WORKFLOW_TEMPLATES_PER_PAGE))
+  const routes = [{ url: `${WORKFLOW_TEMPLATES_PATH}/`, lastmod }]
+
+  for (let page = 2; page <= totalPages; page++) {
+    routes.push({ url: `${WORKFLOW_TEMPLATES_PATH}/page/${page}/`, lastmod })
+  }
+  for (const category of categories.filter(({ templatesCount }) => templatesCount > 0)) {
+    const categoryTemplates = templates.filter((template) => template.categories.some(({ slug }) => slug === category.slug))
+    routes.push({ url: workflowCategoryUrl(category.slug), lastmod: latestUpdate(categoryTemplates) })
+  }
+  for (const template of templates) {
+    routes.push({ url: workflowTemplateUrl(template.slug), lastmod: template.updatedAt })
+  }
+  return routes
+}
+
+/**
+ * @param {Array<{updatedAt: string}>} templates
+ * @returns {string} e.g. "2026-11-24T10:22:50.920Z", or now when there are none
+ */
+function latestUpdate(templates) {
+  return templates.map((template) => template.updatedAt).sort().at(-1) || new Date().toISOString()
+}
+
+/**
+ * Workflow template routes to prerender and list in the sitemap; none when the API can't be reached.
+ * @returns {Promise<Array<{url: string, lastmod: string}>>}
+ */
+export async function getWorkflowTemplateRoutes() {
+  try {
+    const { templates, categories } = await getWorkflowTemplatesAndCategories()
+    return buildWorkflowTemplateRoutes(templates, categories)
+  } catch (error) {
+    console.error('[getWorkflowTemplateRoutes] Error fetching workflow templates:', error.message)
+    return []
+  }
 }

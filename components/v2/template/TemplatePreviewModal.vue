@@ -6,17 +6,19 @@
         class="modal-overlay"
         role="dialog"
         aria-modal="true"
-        aria-label="Form preview"
+        :aria-label="label"
         @click.self="$emit('close')"
       >
         <Transition name="modal-card">
           <div v-if="isOpen" class="modal-card">
 
             <!-- Preview Mode Banner -->
-            <div class="modal-banner">
+            <!-- With tabs, the banner becomes a grey tab strip whose open tab joins the content below it. -->
+            <div class="modal-banner" :class="{ 'modal-banner--tabs': $slots.tabs }">
               <div class="modal-banner-left">
                 <span class="modal-preview-badge">Preview Mode</span>
-                <span class="modal-banner-text">This is a read-only preview — responses won't be saved</span>
+                <slot name="tabs" />
+                <span class="modal-banner-text">{{ bannerText }}</span>
               </div>
               <button
                 type="button"
@@ -28,14 +30,16 @@
               </button>
             </div>
 
-            <!-- Form iframe -->
-            <iframe
-              :src="surveyUrl"
-              frameborder="0"
-              class="modal-iframe"
-              loading="lazy"
-              title="Full form preview"
-            />
+            <!-- Form iframe, or what the page previews instead (a workflow template's diagram). -->
+            <slot>
+              <iframe
+                :src="surveyUrl"
+                frameborder="0"
+                class="modal-iframe"
+                loading="lazy"
+                title="Full form preview"
+              />
+            </slot>
 
           </div>
         </Transition>
@@ -49,7 +53,9 @@ import IconX from '@/components/icons/X.vue'
 
 defineProps({
   isOpen:    { type: Boolean, required: true },
-  surveyUrl: { type: String, required: true },
+  surveyUrl: { type: String, default: '' },
+  label:     { type: String, default: 'Form preview' },
+  bannerText: { type: String, default: "This is a read-only preview — responses won't be saved" },
 })
 
 defineEmits(['close'])
@@ -89,6 +95,26 @@ defineEmits(['close'])
   border-bottom: 1px solid #f4ebff;
   padding: 10px 16px;
   flex-shrink: 0;
+}
+
+.modal-banner--tabs {
+  align-items: stretch;
+  height: 48px;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom-color: var(--border-light);
+  background: var(--gray-100);
+}
+
+.modal-banner--tabs .modal-banner-left {
+  align-items: stretch;
+  gap: var(--space-4);
+}
+
+.modal-banner--tabs .modal-preview-badge,
+.modal-banner--tabs .modal-banner-text,
+.modal-banner--tabs .modal-close-btn {
+  align-self: center;
 }
 
 .modal-banner-left {

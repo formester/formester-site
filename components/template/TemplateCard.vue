@@ -1,22 +1,25 @@
 <template>
   <div class="template fm-card">
-    <NuxtLink class="template__link" :to="`/templates/${template.slug}/`">
-      <div class="template-image-wrapper">
-        <div v-if="loading" class="image-skeleton"></div>
-        <img
-          class="img-fluid pointer template-preview__img"
-          :class="{ 'img-invisible': loading }"
-          :src="previewImageUrl"
-          :alt="template.name"
-          width="1200"
-          height="738"
-          loading="lazy"
-          @load="loading = false"
-          @error="loading = false"
-        />
-      </div>
+    <NuxtLink class="template__link" :to="detailUrl">
+      <slot name="preview">
+        <div class="template-image-wrapper">
+          <div v-if="loading" class="image-skeleton"></div>
+          <img
+            ref="image"
+            class="img-fluid pointer template-preview__img"
+            :class="{ 'img-invisible': loading }"
+            :src="previewImageUrl"
+            :alt="template.name"
+            width="1200"
+            height="738"
+            loading="lazy"
+            @load="loading = false"
+            @error="loading = false"
+          />
+        </div>
+      </slot>
       <div class="template-content">
-        <div v-if="categoryName" class="template-meta">
+        <div v-if="showCategoryLabel && categoryName" class="template-meta">
           <span class="template-meta__cat">{{ categoryName }}</span>
         </div>
         <h3 class="template-name pointer">
@@ -27,63 +30,64 @@
         </p>
       </div>
     </NuxtLink>
+    <!-- Links of their own (category tags), so they sit outside the card's link. -->
+    <div v-if="$slots.tags" class="template-tags">
+      <slot name="tags" />
+    </div>
     <div class="template-footer">
       <button type="button" class="template-footer__preview" @click="onPreview">
         <LucideIcon name="eye" :size="15" /> Preview
       </button>
-      <button type="button" class="template-footer__use" @click="onUse">
+      <a v-if="useUrl" :href="useUrl" class="template-footer__use">
+        Use template <LucideIcon name="arrow-right" :size="14" />
+      </a>
+      <button v-else type="button" class="template-footer__use" @click="onUse">
         Use template <LucideIcon name="arrow-right" :size="14" />
       </button>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    template: {
-      type: Object,
-      required: true,
-    },
-    categoryLabel: {
-      type: String,
-      default: '',
-    },
-  },
-  emits: ['preview'],
-  data() {
-    return {
-      loading: true,
-    }
-  },
-  mounted() {
-    const img = this.$el.querySelector('img')
-    if (img && img.complete) {
-      this.loading = false
-    }
-  },
-  computed: {
-    previewImageUrl() {
-      return this.template.previewImageUrl || '/templates/create_form.png'
-    },
-    categoryName() {
-      return this.categoryLabel || this.template.category?.name || this.template.categories?.[0]?.name || ''
-    },
-  },
-  methods: {
-    // Preview the live form — the parent grid opens the shared preview modal.
-    onPreview() {
-      if (this.template.surveyUrl) {
-        this.$emit('preview', this.template)
-      } else {
-        navigateTo(`/templates/${this.template.slug}/`)
-      }
-    },
-    // Use the template — same redirect the detail page's CTA uses.
-    onUse() {
-      window.open(`https://app.formester.com/templates?template_id=${this.template.id}`, '_blank')
-    },
-  },
+<script setup>
+const props = defineProps({
+  template: { type: Object, required: true },
+  categoryLabel: { type: String, default: '' },
+  // The template's own page; defaults to the form template page.
+  to: { type: String, default: '' },
+  // Where Use template goes; empty opens the form template in the app.
+  useUrl: { type: String, default: '' },
+  // Off for cards that list every category as tags instead.
+  showCategoryLabel: { type: Boolean, default: true },
+})
+
+const emit = defineEmits(['preview'])
+
+const loading = ref(true)
+const image = useTemplateRef('image')
+
+onMounted(() => {
+  if (image.value?.complete) {
+    loading.value = false
+  }
+})
+
+const detailUrl = computed(() => props.to || `/templates/${props.template.slug}/`)
+const previewImageUrl = computed(() => props.template.previewImageUrl || '/templates/create_form.png')
+const categoryName = computed(
+  () => props.categoryLabel || props.template.category?.name || props.template.categories?.[0]?.name || ''
+)
+
+// Checks if the template has a live form; if so, the parent grid opens it in the preview modal, else its page opens.
+const onPreview = () => {
+  if (props.template.surveyUrl) {
+    emit('preview', props.template)
+  } else {
+    navigateTo(detailUrl.value)
+  }
+}
+
+const onUse = () => {
+  window.open(`https://app.formester.com/templates?template_id=${props.template.id}`, '_blank')
 }
 </script>
 
@@ -160,6 +164,14 @@ export default {
   text-overflow: ellipsis;
 }
 
+.template-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding: 0 var(--space-4) var(--space-4);
+  line-height: var(--lh-sm);
+}
+
 .template-footer {
   display: flex;
   align-items: center;
@@ -170,6 +182,7 @@ export default {
 
 .template-footer__preview,
 .template-footer__use {
+  text-decoration: none;
   display: inline-flex;
   align-items: center;
   background: none;

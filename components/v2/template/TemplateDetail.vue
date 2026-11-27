@@ -3,7 +3,9 @@
 
     <div ref="stickyHeaderRef" class="tmpl-detail__sticky-header" :style="{ '--hero-h': heroHeight + 'px' }">
       <div ref="heroWrapRef">
-        <TemplateHero :template="template" :pdf-data="pdfData" />
+        <slot name="hero">
+          <TemplateHero :template="template" :pdf-data="pdfData" />
+        </slot>
       </div>
 
       <TemplateTabNav v-if="template.tabs?.length" :tabs="template.tabs" :active-tab-id="activeTabId"

@@ -120,6 +120,27 @@
                 </li>
               </ul>
             </div>
+            <!-- Workflows Column -->
+            <div class="templates-dropdown-column">
+              <div class="templates-dropdown-title">
+                <span class="templates-dropdown-icon">
+                  <LucideIcon name="workflow" :size="20" />
+                </span>
+                Workflows
+                <span class="templates-dropdown-badge">New</span>
+              </div>
+              <ul class="templates-dropdown-list">
+                <li
+                  v-for="item in workflowTemplates"
+                  :key="item.id"
+                  @click="$emit('dropdown-close')"
+                >
+                  <NuxtLink :to="item.slug" class="templates-dropdown-link">
+                    {{ item.title }}
+                  </NuxtLink>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div class="templates-dropdown-footer">
@@ -146,6 +167,8 @@
 </template>
 
 <script setup>
+import { WORKFLOW_TEMPLATES_PATH, workflowTemplateUrl } from '@/utils/getWorkflowTemplates'
+
 defineProps({
   dropdownActive: Boolean,
   isMobile: Boolean,
@@ -189,6 +212,16 @@ const pdfTemplates = [
   { id: 4, title: 'Photography Services Contract',       slug: '/templates/photography-services-contract-template-51951/' },
   { id: 5, title: 'Business Contract Agreement PDF Form',slug: '/templates/business-contract-agreement-pdf-form-49913/' },
 ]
+
+// Featured workflow templates, one or two per category, then the full list.
+const workflowTemplates = [
+  { id: 1, title: 'Expense Approval',          slug: workflowTemplateUrl('expense-reimbursement-approval') },
+  { id: 2, title: 'Leave Request Approval',    slug: workflowTemplateUrl('leave-request-approval') },
+  { id: 3, title: 'Unfinished Form Follow-up', slug: workflowTemplateUrl('unfinished-form-follow-up') },
+  { id: 4, title: 'AI Lead Qualification',     slug: workflowTemplateUrl('ai-lead-qualification') },
+  { id: 5, title: 'Incident Report Alert',     slug: workflowTemplateUrl('incident-report-alert') },
+  { id: 6, title: 'All workflow templates',    slug: `${WORKFLOW_TEMPLATES_PATH}/` },
+]
 </script>
 
 <style scoped>
@@ -231,10 +264,10 @@ const pdfTemplates = [
 
 .templates-dropdown-mega {
   display: flex;
-  /* Cap to viewport so the panel fits from the lg breakpoint (992px) up */
-  width: min(900px, calc(100vw - 48px));
+  /* Wide enough for five columns; capped to the viewport so it still fits from the lg breakpoint (992px) up */
+  width: min(1120px, calc(100vw - 48px));
   min-width: 0;
-  max-width: 900px;
+  max-width: 1120px;
   background: #fff;
   box-shadow: 0 16px 48px -12px rgba(16, 24, 40, 0.18), 0 4px 16px -4px rgba(16, 24, 40, 0.08);
   border-radius: 18px;
@@ -257,12 +290,13 @@ const pdfTemplates = [
 
 .templates-dropdown-columns {
   display: flex;
-  gap: 40px;
+  gap: 32px;
   width: 100%;
 }
 
 .templates-dropdown-column {
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .templates-dropdown-title {
@@ -281,6 +315,21 @@ const pdfTemplates = [
   justify-content: center;
   width: 20px;
   height: 20px;
+}
+
+.templates-dropdown-icon :deep(svg) {
+  color: #8a94a6;
+}
+
+.templates-dropdown-badge {
+  padding: 1px 7px;
+  border-radius: var(--r-full);
+  background: var(--violet-50);
+  font-size: var(--fs-tiny);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--violet-700);
 }
 
 .templates-dropdown-title-icon {

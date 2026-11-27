@@ -9,7 +9,7 @@
         @input="emitSearchTerm"
         class="search-input"
         data-clarity-unmask="true"
-        aria-label="Search templates"
+        :aria-label="ariaLabel"
       />
       <button
         v-if="searchTerm !== ''"
@@ -32,6 +32,7 @@ defineProps({
     type: String,
     default: 'Blood donation, job applicant tracker',
   },
+  ariaLabel: { type: String, default: 'Search templates' },
 })
 
 const searchTerm = ref('')

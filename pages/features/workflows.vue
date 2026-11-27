@@ -79,6 +79,12 @@
     <StatsBanner eyebrow="Workflows at a glance" heading="Built for the work that follows a form" :stats="stats" />
 
     <p class="wf-compare-more">
+      Want a head start?
+      <NuxtLink to="/workflow-templates/">Browse workflow templates</NuxtLink>
+      for approvals, reminders and follow-ups.
+    </p>
+
+    <p class="wf-compare-more wf-compare-more--next">
       Choosing a tool?
       <NuxtLink to="/blog/best-workflow-automation-tools/">Compare workflow tools</NuxtLink>
       like Zapier, Make, n8n and Power Automate.
@@ -97,6 +103,7 @@
 </template>
 
 <script setup>
+import { ACCENTS } from '@/constants/workflow-steps'
 import AlternatingRows from '@/components/v2/AlternatingRows.vue'
 import CalloutDiagram from '@/components/v2/CalloutDiagram.vue'
 import CardGrid from '@/components/v2/CardGrid.vue'
@@ -114,16 +121,6 @@ const META_TITLE = 'Form Workflow Automation: Visual Workflow Builder | Formeste
 const META_DESCRIPTION =
   'Automate what happens after a form is submitted, edited, or abandoned. Branch, run AI, get approvals, send email, and call webhooks on one canvas. Free to start.'
 
-// Node accents, matched to the app's workflow canvas.
-const ACCENTS = {
-  trigger: { fg: '#6434d0', bg: '#f0ebfa' },
-  ai: { fg: '#c11574', bg: '#fdf2fa' },
-  logic: { fg: '#b54708', bg: '#fffaeb' },
-  email: { fg: '#175cd3', bg: '#eff8ff' },
-  webhook: { fg: '#475467', bg: '#f2f4f7' },
-  wait: { fg: '#027a48', bg: '#ecfdf3' },
-  approval: { fg: '#067647', bg: '#ecfdf3' },
-}
 
 const node = (accent, label, detail, glyph) => {
   const a = ACCENTS[accent]
@@ -540,6 +537,9 @@ useJsonld([
   text-align: center;
   font-size: 15px;
   color: #475467;
+}
+.wf-compare-more--next {
+  padding-top: var(--space-3, 12px);
 }
 .wf-compare-more a {
   color: #6434d0;

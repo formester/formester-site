@@ -29,6 +29,11 @@
                 >
                 <template v-else>{{ activeCategory ? activeCategory.name : 'All' }} Templates</template>
               </h1>
+              <NuxtLink v-if="!activeCategory" to="/workflow-templates/" class="workflow-templates-link">
+                <span class="workflow-templates-link__badge">New</span>
+                Workflow templates
+                <LucideIcon name="arrow-right" :size="16" />
+              </NuxtLink>
             </div>
             <p v-if="isV2 && pageContent.heroSubtitle" class="hero-subtitle">{{ pageContent.heroSubtitle }}</p>
             <div v-if="!hasHeroContent && activeCategory?.description" class="my-2">
@@ -135,15 +140,7 @@
           <div class="section-eyebrow">FEATURED</div>
           <h2 class="section-title">{{ featuredTitle }}</h2>
           <p v-if="featuredSubtitle" class="section-subtitle">{{ featuredSubtitle }}</p>
-          <div class="templates-grid">
-            <TemplateCard
-              v-for="template in featuredTemplates"
-              :key="`featured-${template.id}`"
-              :template="template"
-              :category-label="activeCategory.name"
-              @preview="openPreview"
-            />
-          </div>
+          <TemplateGrid :templates="featuredTemplates" :category-label="activeCategory.name" @preview="openPreview" />
         </section>
 
         <!-- Sub-category sections -->
@@ -162,15 +159,7 @@
               <span class="subcat-header__count">{{ sub.templates.length }} templates</span>
             </div>
             <div v-if="sub.description" class="subcat-desc content-description" v-html="sub.description" />
-            <div class="templates-grid">
-              <TemplateCard
-                v-for="template in sub.templates"
-                :key="`${sub.id}-${template.id}`"
-                :template="template"
-                :category-label="shortSubName(sub)"
-                @preview="openPreview"
-              />
-            </div>
+            <TemplateGrid :templates="sub.templates" :category-label="shortSubName(sub)" @preview="openPreview" />
           </section>
 
           <!-- Directly-assigned templates that are neither featured nor in a sub-category -->
@@ -180,44 +169,18 @@
             aria-label="More templates"
           >
             <h3 class="subcat-heading">More {{ activeCategory.name }} templates</h3>
-            <div class="templates-grid">
-              <TemplateCard
-                v-for="template in unsectionedTemplates"
-                :key="`more-${template.id}`"
-                :template="template"
-                :category-label="activeCategory.name"
-              @preview="openPreview"
-              />
-            </div>
+            <TemplateGrid :templates="unsectionedTemplates" :category-label="activeCategory.name" @preview="openPreview" />
           </section>
         </template>
 
         <!-- Flat grid: fallback (non-V2) and search results -->
         <template v-else>
-          <template v-if="filteredTemplates.length > 0">
-            <section class="templates-grid" aria-label="Templates">
-              <TemplateCard
-                v-for="(template, index) in filteredTemplates"
-                :key="template.id"
-                :template="template"
-                :category-label="!searchActive && activeCategory ? activeCategory.name : ''"
-                :class="{ 'template-hidden': isClient && useViewMore && index >= visibleCount }"
-                @preview="openPreview"
-              />
-            </section>
-            <div
-              v-if="isClient && useViewMore && visibleCount < filteredTemplates.length"
-              class="d-flex justify-content-center mt-3"
-            >
-              <button @click="viewMore" class="btn-primary" aria-label="View more templates" type="button">
-                View More
-              </button>
-            </div>
-          </template>
-          <div v-else class="no-templates d-flex flex-column align-items-center justify-content-center w-100">
-            <nuxt-img class="img-fluid" src="/templates/no-template.svg" alt="No Template Illustration" />
-            <h4 class="mt-3">No Template Available</h4>
-          </div>
+          <TemplateGrid
+            :templates="filteredTemplates"
+            :category-label="!searchActive && activeCategory ? activeCategory.name : ''"
+            :view-more-step="useViewMore ? 12 : 0"
+            @preview="openPreview"
+          />
         </template>
 
         <!-- Related categories -->
@@ -276,13 +239,13 @@
 
 <script>
 import TemplateCategories from '@/components/template/TemplateCategories.vue'
-import TemplateCard from '@/components/template/TemplateCard.vue'
+import TemplateGrid from '@/components/template/TemplateGrid.vue'
 import TemplateSearch from '@/components/template/TemplateSearch.vue'
 import FaqSection from '@/components/v2/FaqSection.vue'
 import TemplatePreviewModal from '@/components/v2/template/TemplatePreviewModal.vue'
 
 export default {
-  components: { TemplateCategories, TemplateCard, TemplateSearch, FaqSection, TemplatePreviewModal },
+  components: { TemplateCategories, TemplateGrid, TemplateSearch, FaqSection, TemplatePreviewModal },
   props: {
     activeCategory: Object,
     templates: Array,
@@ -301,7 +264,6 @@ export default {
     return {
       searchTerm: '',
       showFullDescription: false,
-      visibleCount: 12,
       isClient: false,
       activeFilter: null,
       previewUrl: null,
@@ -322,7 +284,6 @@ export default {
   methods: {
     handleSearch(searchTerm) {
       this.searchTerm = searchTerm
-      this.visibleCount = 12
       this.$emit('search-active', searchTerm.trim().length > 0)
     },
     toggleDescription() {
@@ -335,9 +296,6 @@ export default {
     closePreview() {
       this.previewUrl = null
       document.body.style.overflow = ''
-    },
-    viewMore() {
-      this.visibleCount += 12
     },
     // Trim words the sub-category shares with its parent, e.g.
     // "Healthcare Consent" under "Consent Forms" → "Healthcare".
@@ -458,24 +416,8 @@ export default {
 </script>
 
 <style scoped>
-.btn-primary {
-  margin-top: 1rem;
-  background-color: var(--clr-primary);
-  font-size: 16px;
-  font-weight: 600;
-  padding: 10px 16px;
-  border-radius: 8px;
-  color: white;
-}
 
-.btn-primary:hover {
-  background-color: var(--clr-primary-hover);
-  transition: all 0.2s ease;
-}
 
-.btn-primary:focus {
-  box-shadow: 0 0 0 0.2rem var(--clr-primary-focus);
-}
 
 .template-container {
   flex-direction: row-reverse;
@@ -523,6 +465,37 @@ export default {
 
 .heading-row {
   margin-top: 4px;
+}
+
+/* Leads from the form templates index to workflow templates. */
+.workflow-templates-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 6px 14px 6px 6px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-full);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--fg-1);
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.workflow-templates-link:hover {
+  border-color: var(--violet-300);
+  color: var(--color-primary);
+}
+
+.workflow-templates-link__badge {
+  padding: 2px 8px;
+  border-radius: var(--r-full);
+  background: var(--violet-50);
+  font-size: var(--fs-tiny);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--violet-700);
 }
 
 .heading-row {
@@ -666,18 +639,7 @@ export default {
   font-size: 14px;
 }
 
-.templates-grid {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: min-content;
-  gap: 24px;
-  margin-top: 1rem;
-}
 
-.template-hidden {
-  display: none;
-}
 
 /* ── Hero two-column layout + decorative art ── */
 .hero-wrap--v2 {
@@ -1244,10 +1206,6 @@ export default {
   border: 1px solid rgba(255, 255, 255, 0.28);
 }
 
-.no-templates {
-  padding: 52px 0;
-  gap: 1rem;
-}
 
 .breadcrumb {
   margin-block: 8px;
@@ -1291,10 +1249,6 @@ export default {
   }
   .hero-wrap--v2 .hero-left {
     max-width: none;
-  }
-  .templates-grid {
-    grid-template-columns: 1fr 1fr;
-    margin-top: 0;
   }
   .related-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -1356,9 +1310,6 @@ export default {
 }
 
 @media only screen and (max-width: 600px) {
-  .templates-grid {
-    grid-template-columns: 1fr;
-  }
   .related-grid {
     grid-template-columns: 1fr 1fr;
   }
