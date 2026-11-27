@@ -6,6 +6,19 @@ const LIST_URL = `${SITE_URL}${WORKFLOW_TEMPLATES_PATH}/`
 const TITLE = 'Free Workflow Templates for Forms | Formester'
 const DESCRIPTION =
   'Ready-made workflow templates for approvals, reminders, AI summaries and more. Copy one into Formester and run it after every form response.'
+// The same keywords on the list, its numbered pages and every category page, from docs/research/workflow-templates/seo.
+const KEYWORDS = [
+  'workflow templates',
+  'free workflow templates',
+  'workflow automation templates',
+  'form workflow',
+  'form automation',
+  'approval workflow',
+  'reminder email template',
+  'automated email workflows',
+  'sms alerts',
+  'ai workflow examples',
+].join(', ')
 
 /**
  * @param {Array<{slug: string, name: string}>} templates
@@ -45,6 +58,7 @@ export const useWorkflowTemplateListSeo = ({ currentPage, totalPages, templates 
       url: pageUrl,
       title,
       description: DESCRIPTION,
+      keywords: KEYWORDS,
       mainImage: `${SITE_URL}/formester-logo-meta-image.png`,
       mainImageAlt: 'Formester Logo',
     }),
@@ -90,6 +104,7 @@ export const useWorkflowTemplateCategorySeo = ({ category, templates }) => {
       url: pageUrl,
       title,
       description,
+      keywords: KEYWORDS,
       mainImage: `${SITE_URL}/formester-logo-meta-image.png`,
       mainImageAlt: 'Formester Logo',
     }),
