@@ -80,25 +80,34 @@ test("a template the list has no page data for is fetched on its own, as before 
   assert.ok(requested.includes(`${APP}/workflow_templates/leave-request-approval.json`))
 })
 
-test('a rate-limited request waits as long as the app asks and tries again', async () => {
+test('a rate-limited request fails at once and is recorded for the build check', async () => {
   let calls = 0
   stubApp({
     [`${APP}/workflow_template_categories.json`]: () => {
       calls += 1
-      if (calls === 1) {
-        throw Object.assign(new Error('Request failed with status code 429'), {
-          response: { status: 429, headers: { 'retry-after': '0' } },
-        })
-      }
-      return { data: CATEGORIES }
+      throw Object.assign(new Error('Request failed with status code 429'), {
+        response: { status: 429, headers: { 'ratelimit-limit': '200' } },
+      })
     },
   })
   const { default: fetchWithRetry } = await import('../utils/fetchWithRetry.js')
 
-  const { data } = await fetchWithRetry(`${APP}/workflow_template_categories.json`)
+  await assert.rejects(
+    fetchWithRetry(`${APP}/workflow_template_categories.json`),
+    /Rate limited by .*workflow_template_categories\.json \(limit 200\)/,
+  )
+  assert.equal(calls, 1)
+  assert.ok(globalThis.__rateLimitedRequests.includes(`${APP}/workflow_template_categories.json`))
+})
 
-  assert.deepEqual(data, CATEGORIES)
-  assert.equal(calls, 2)
+test('the build fails when any request was rate limited', async () => {
+  const { verifyNoRateLimitedRequests } = await import('../utils/fetchWithRetry.js')
+
+  globalThis.__rateLimitedRequests = []
+  assert.doesNotThrow(() => verifyNoRateLimitedRequests())
+
+  globalThis.__rateLimitedRequests = [`${APP}/templates.json`]
+  assert.throws(() => verifyNoRateLimitedRequests(), /1 request was rate limited.*templates\.json/)
 })
 
 test('the build fails when a workflow template page was not written', async () => {

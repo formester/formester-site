@@ -2,8 +2,6 @@ import axios from 'axios'
 
 const MAX_RETRIES = 3
 const BASE_DELAY_MS = 1000
-// The app limits each IP per minute; without a Retry-After header, wait for the next minute.
-const RATE_LIMIT_DELAY_MS = 60_000
 
 export default async function fetchWithRetry(url, config = {}, retries = MAX_RETRIES) {
   for (let attempt = 1; attempt <= retries; attempt++) {
@@ -11,9 +9,11 @@ export default async function fetchWithRetry(url, config = {}, retries = MAX_RET
       return await axios.get(url, { ...config, timeout: 30000 })
     } catch (error) {
       const status = error.response?.status
-      const isRateLimited = status === 429
+      if (status === 429) {
+        throw rateLimitedError(url, error)
+      }
+
       const isRetryable =
-        isRateLimited ||
         error.code === 'ECONNRESET' ||
         error.code === 'ETIMEDOUT' ||
         error.code === 'ECONNABORTED' ||
@@ -22,7 +22,7 @@ export default async function fetchWithRetry(url, config = {}, retries = MAX_RET
         status >= 500
 
       if (isRetryable && attempt < retries) {
-        const delay = isRateLimited ? rateLimitDelay(error.response) : BASE_DELAY_MS * Math.pow(2, attempt - 1)
+        const delay = BASE_DELAY_MS * Math.pow(2, attempt - 1)
         console.warn(
           `[fetchWithRetry] Attempt ${attempt}/${retries} failed for ${url} (${error.code || error.message}). Retrying in ${delay}ms...`
         )
@@ -35,14 +35,28 @@ export default async function fetchWithRetry(url, config = {}, retries = MAX_RET
 }
 
 /**
- * How long a rate-limited request waits before trying again.
- * @param {{headers?: Object}} response the 429 response
- * @returns {number} e.g. 30000 for "Retry-After: 30", 60000 when the header is missing
+ * Throws when any request in this build was rate limited, naming each URL.
+ * @throws {Error} e.g. "1 request was rate limited by the app: https://app.formester.com/templates.json"
  */
-function rateLimitDelay(response) {
-  const seconds = Number.parseInt(response.headers?.['retry-after'], 10)
-  if (Number.isNaN(seconds)) {
-    return RATE_LIMIT_DELAY_MS
+export function verifyNoRateLimitedRequests() {
+  const urls = globalThis.__rateLimitedRequests || []
+  if (urls.length === 0) {
+    return
   }
-  return seconds * 1000
+  const noun = urls.length === 1 ? 'request was' : 'requests were'
+  throw new Error(`${urls.length} ${noun} rate limited by the app: ${urls.join(', ')}`)
+}
+
+/**
+ * Records a 429 for the end-of-build check and returns an error naming the URL and limit.
+ * @param {string} url e.g. "https://app.formester.com/templates.json"
+ * @param {Error} error the axios error, with the 429 response
+ * @returns {Error} e.g. "Rate limited by https://app.formester.com/templates.json (limit 200)"
+ */
+function rateLimitedError(url, error) {
+  // On globalThis, not module state: the prerendered pages run a bundled copy of this file in the same process.
+  globalThis.__rateLimitedRequests ||= []
+  globalThis.__rateLimitedRequests.push(url)
+  const limit = error.response.headers?.['ratelimit-limit'] || 'unknown'
+  return new Error(`Rate limited by ${url} (limit ${limit})`, { cause: error })
 }

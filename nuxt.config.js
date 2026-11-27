@@ -3,6 +3,7 @@ import getBlogRoutes, { getPageRoutes, getTemplateRoutes, getWorkflowTemplateRou
 import { NOT_FOUND_PRERENDER_ROUTE, applyNotFoundFallback, verifyNotFoundFallback } from './utils/notFoundPrerender.js'
 import { STRAPI_URL, APP_URL } from './constants/urls'
 import { verifyPrerenderedPages } from './utils/verifyPrerenderedPages.js'
+import { verifyNoRateLimitedRequests } from './utils/fetchWithRetry.js'
 
 // Workflow template routes from the API, checked once the build is done.
 let requiredWorkflowTemplateRoutes = []
@@ -247,6 +248,7 @@ export default defineNuxtConfig({
       async 'prerender:done'(result) {
         await verifyNotFoundFallback(result, '.output/public')
         verifyPrerenderedPages(result, requiredWorkflowTemplateRoutes)
+        verifyNoRateLimitedRequests()
       }
     }
   },
