@@ -37,7 +37,6 @@
           <p class="list-crosslink">Looking for forms? <NuxtLink to="/templates/">Browse form templates</NuxtLink></p>
         </template>
 
-        <h2 class="list-section-title">{{ gridHeading }}</h2>
         <TemplateGrid :templates="shownTemplates" :view-more-step="viewMoreStep">
           <template #card="{ template }">
             <WorkflowTemplateCard :template="template" />
@@ -91,9 +90,6 @@ const searchTerm = ref('')
 
 const isSearching = computed(() => searchTerm.value.trim().length > 0)
 const sidebarCategories = computed(() => toSidebarCategories(props.categories))
-const gridHeading = computed(() =>
-  props.activeCategory ? `Browse ${props.activeCategory.name} workflow templates` : 'Browse workflow templates',
-)
 
 const pageTemplates = computed(() => {
   // A category page is one page; View More reveals the rest.
@@ -200,15 +196,6 @@ const shownTemplates = computed(() => {
   font-size: var(--fs-sm);
   line-height: var(--lh-sm);
   color: var(--fg-2);
-}
-
-/* Same look as the "Most popular X templates" heading on form template category pages. */
-.list-section-title {
-  margin: 0 0 18px;
-  font-size: 24px;
-  font-weight: var(--fw-semibold);
-  letter-spacing: -0.015em;
-  color: var(--fg-1);
 }
 
 .list-category-search {

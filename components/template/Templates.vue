@@ -175,8 +175,6 @@
 
         <!-- Flat grid: fallback (non-V2) and search results -->
         <template v-else>
-          <!-- Category pages already have their own H2 ("Most popular X templates"); this one is for /templates/. -->
-          <h2 v-if="!activeCategory" class="section-title">Browse form templates</h2>
           <TemplateGrid
             :templates="filteredTemplates"
             :category-label="!searchActive && activeCategory ? activeCategory.name : ''"
