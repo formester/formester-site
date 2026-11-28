@@ -51,9 +51,10 @@
 
 <script setup>
 // Kind groups, in display order, each with its eyebrow label (uppercased by CSS, so the H2 text reads normally).
-const KIND_ORDER = ['purpose', 'department', 'industry', 'pdfTemplates']
+const KIND_ORDER = ['purpose', 'feature', 'department', 'industry', 'pdfTemplates']
 const KIND_LABELS = {
   purpose: 'By purpose',
+  feature: 'By feature',
   department: 'By department',
   industry: 'By industry',
   pdfTemplates: 'PDF templates',
@@ -67,15 +68,13 @@ const props = defineProps({
   // The listing's root path without a trailing slash; category pages live under <basePath>/categories/.
   basePath: { type: String, default: '/templates' },
   allLabel: { type: String, default: 'All Templates' },
-  // Overrides for the group labels by kind, e.g. {purpose: 'Categories'}.
-  groupLabels: { type: Object, default: () => ({}) },
 })
 
 const showCategories = ref(true)
 const isMobile = ref(false)
 const search = ref('')
 
-// Grouped by kind (purpose → department → industry → pdf), each an
+// Grouped by kind (purpose → feature → department → industry → pdf), each an
 // alphabetically-sorted list, filtered by the search box; empty kinds dropped.
 const groupedCategories = computed(() => {
   const term = search.value.trim().toLowerCase()
@@ -84,7 +83,7 @@ const groupedCategories = computed(() => {
     let items = src[kind] || []
     if (term) items = items.filter((c) => c.name?.toLowerCase().includes(term))
     items = [...items].sort((a, b) => (a.name || '').localeCompare(b.name || ''))
-    return { kind, label: props.groupLabels[kind] || KIND_LABELS[kind], items }
+    return { kind, label: KIND_LABELS[kind], items }
   }).filter((g) => g.items.length)
 })
 
