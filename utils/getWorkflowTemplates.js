@@ -11,6 +11,7 @@ let cachePromise = null
  * @property {string} name e.g. "Approvals"
  * @property {?string} icon a Lucide icon name, e.g. "user-check"
  * @property {number} templatesCount e.g. 11
+ * @property {?string} kind "purpose" or "feature"; missing until the app sends it
  */
 
 /**
@@ -24,18 +25,30 @@ let cachePromise = null
  * @property {string} updatedAt e.g. "2026-11-24T10:22:50.920Z"
  */
 
+// The fields a listing card shows; page data stays out of the listing pages' payloads.
+const CARD_FIELDS = ['slug', 'name', 'description', 'stepTypes', 'includesForm', 'categories', 'updatedAt']
+
+// One list request with every template's page data, so a static build doesn't make a request per
+// page and run into the app's rate limit.
 async function fetchWorkflowTemplatesAndCategories(appUrl) {
   const [{ data: templates }, { data: categories }] = await Promise.all([
-    fetchWithRetry(`${appUrl}/workflow_templates.json`),
+    fetchWithRetry(`${appUrl}/workflow_templates.json`, { params: { with_details: true } }),
     fetchWithRetry(`${appUrl}/workflow_template_categories.json`),
   ])
   const sortedCategories = [...categories].sort(byPositionThenName)
   const categoriesBySlug = new Map(sortedCategories.map((category) => [category.slug, category]))
+  // An app without with_details sends cards only; those pages are then fetched one by one.
+  const pagesBySlug = new Map(templates.filter((template) => template.graph).map((template) => [template.slug, template]))
 
   return {
-    templates: templates.map((template) => withCategories(template, categoriesBySlug)),
+    templates: templates.map((template) => withCategories(pick(template, CARD_FIELDS), categoriesBySlug)),
     categories: sortedCategories,
+    pagesBySlug,
   }
+}
+
+function pick(object, keys) {
+  return Object.fromEntries(keys.filter((key) => key in object).map((key) => [key, object[key]]))
 }
 
 // The API lists a template's categories by slug; cards and tags need their names too.
@@ -57,6 +70,11 @@ function byPositionThenName(a, b) {
  * @returns {Promise<{templates: Array<WorkflowTemplate>, categories: Array<WorkflowTemplateCategory>}>}
  */
 export default async function getWorkflowTemplatesAndCategories(appUrl = APP_URL) {
+  const { templates, categories } = await loadWorkflowTemplates(appUrl)
+  return { templates, categories }
+}
+
+function loadWorkflowTemplates(appUrl) {
   if (import.meta.dev) {
     return fetchWorkflowTemplatesAndCategories(appUrl)
   }
@@ -74,10 +92,8 @@ export default async function getWorkflowTemplatesAndCategories(appUrl = APP_URL
  * @throws {AxiosError} with `response.status` 404 when no listed template has this slug
  */
 export async function getWorkflowTemplate(slug, appUrl = APP_URL) {
-  const [{ data: template }, { categories }] = await Promise.all([
-    fetchWithRetry(`${appUrl}/workflow_templates/${encodeURIComponent(slug)}.json`),
-    getWorkflowTemplatesAndCategories(appUrl),
-  ])
+  const { categories, pagesBySlug } = await loadWorkflowTemplates(appUrl)
+  const template = pagesBySlug.get(slug) || (await fetchWorkflowTemplatePage(slug, appUrl))
   const categoriesBySlug = new Map(categories.map((category) => [category.slug, category]))
 
   return {
@@ -86,23 +102,37 @@ export async function getWorkflowTemplate(slug, appUrl = APP_URL) {
   }
 }
 
+async function fetchWorkflowTemplatePage(slug, appUrl) {
+  const { data } = await fetchWithRetry(`${appUrl}/workflow_templates/${encodeURIComponent(slug)}.json`)
+  return data
+}
+
+// The feature categories from before the app sent `kind`; drop this once every category has `kind`.
+const FEATURE_CATEGORY_SLUGS = ['ai', 'approvals', 'email', 'reminders', 'sms', 'code']
+
 /**
  * Workflow categories in the shape the template category sidebar groups by kind.
  * @param {Array<WorkflowTemplateCategory>} categories
- * @returns {{purpose: Array<{id: string, slug: string, name: string, icon: ?string, templateCount: number}>}} e.g. {purpose: [{id: "approvals", slug: "approvals", name: "Approvals", icon: "user-check", templateCount: 11}]}
+ * @returns {{purpose: Array<Object>, feature: Array<Object>}} e.g. {purpose: [{id: "hr", slug: "hr", name: "HR", icon: "users", templateCount: 4}], feature: [{id: "approvals", slug: "approvals", name: "Approvals", icon: "user-check", templateCount: 11}]}
  */
 export function toSidebarCategories(categories) {
   // A category with no listed templates has no page to link to.
-  const purpose = categories
-    .filter(({ templatesCount }) => templatesCount > 0)
-    .map(({ slug, name, icon, templatesCount }) => ({
-      id: slug,
-      slug,
-      name,
-      icon,
-      templateCount: templatesCount,
-    }))
-  return { purpose }
+  const listed = categories.filter(({ templatesCount }) => templatesCount > 0).map(toSidebarCategory)
+  return {
+    purpose: listed.filter((category) => category.kind === 'purpose'),
+    feature: listed.filter((category) => category.kind === 'feature'),
+  }
+}
+
+function toSidebarCategory({ slug, name, icon, templatesCount, kind }) {
+  return { id: slug, slug, name, icon, templateCount: templatesCount, kind: kind || fallbackKind(slug) }
+}
+
+function fallbackKind(slug) {
+  if (FEATURE_CATEGORY_SLUGS.includes(slug)) {
+    return 'feature'
+  }
+  return 'purpose'
 }
 
 /**

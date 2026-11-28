@@ -18,10 +18,10 @@
     </div>
 
     <NuxtLink :to="`${basePath}/`">
-      <h2 class="all-category-heading" :class="{ 'd-none': !showCategories && isMobile }">
+      <span class="all-category-heading" :class="{ 'd-none': !showCategories && isMobile }">
         <LucideIcon name="layout-grid" :size="17" class="all-category-heading__icon" />
         {{ allLabel }}
-      </h2>
+      </span>
     </NuxtLink>
 
     <div class="category-search" :class="{ 'd-none': !showCategories && isMobile }">
@@ -30,17 +30,18 @@
 
     <div class="category-list" :class="{ 'd-none': !showCategories && isMobile }">
       <div v-for="group in groupedCategories" :key="group.kind" class="category-group">
-        <div class="by-category-label">{{ group.label }}</div>
+        <h2 class="by-category-label">{{ group.label }}</h2>
         <NuxtLink
           v-for="category in group.items"
           :key="category.id"
           :to="`${basePath}/categories/${category.slug}/`"
         >
-          <h3 class="category" :class="{ active: activeCategory?.slug === category.slug }">
+          <!-- The count sits outside the h3 so the heading text is the name alone, not "Approvals7". -->
+          <div class="category" :class="{ active: activeCategory?.slug === category.slug }">
             <LucideIcon :name="category.icon" :size="17" class="category__icon" />
-            <span class="category__name">{{ category.name }}</span>
+            <h3 class="category__name">{{ category.name }}</h3>
             <span v-if="category.templateCount" class="category__count">{{ category.templateCount }}</span>
-          </h3>
+          </div>
         </NuxtLink>
       </div>
       <p v-if="!groupedCategories.length" class="category-empty">No categories found</p>
@@ -49,13 +50,14 @@
 </template>
 
 <script setup>
-// Kind groups, in display order, each with its uppercase eyebrow label.
-const KIND_ORDER = ['purpose', 'department', 'industry', 'pdfTemplates']
+// Kind groups, in display order, each with its eyebrow label (uppercased by CSS, so the H2 text reads normally).
+const KIND_ORDER = ['purpose', 'feature', 'department', 'industry', 'pdfTemplates']
 const KIND_LABELS = {
-  purpose: 'BY PURPOSE',
-  department: 'BY DEPARTMENT',
-  industry: 'BY INDUSTRY',
-  pdfTemplates: 'PDF TEMPLATES',
+  purpose: 'By purpose',
+  feature: 'By feature',
+  department: 'By department',
+  industry: 'By industry',
+  pdfTemplates: 'PDF templates',
 }
 const MOBILE_MAX_WIDTH = 840
 
@@ -72,7 +74,7 @@ const showCategories = ref(true)
 const isMobile = ref(false)
 const search = ref('')
 
-// Grouped by kind (purpose → department → industry → pdf), each an
+// Grouped by kind (purpose → feature → department → industry → pdf), each an
 // alphabetically-sorted list, filtered by the search box; empty kinds dropped.
 const groupedCategories = computed(() => {
   const term = search.value.trim().toLowerCase()
@@ -110,6 +112,7 @@ onBeforeUnmount(() => {
   display: none;
 }
 .all-category-heading {
+  margin-bottom: 0.5rem;
   color: var(--neutral-900, #101828);
   padding: 8px 10px;
   cursor: pointer;
@@ -127,6 +130,9 @@ onBeforeUnmount(() => {
 
 /* ── BY CATEGORY list ── */
 .by-category-label {
+  margin: 0;
+  line-height: 1.5;
+  text-transform: uppercase;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -165,6 +171,9 @@ onBeforeUnmount(() => {
 }
 .category__name {
   flex: 1;
+  margin: 0;
+  font: inherit;
+  color: inherit;
 }
 .category__count {
   font-size: 12px;

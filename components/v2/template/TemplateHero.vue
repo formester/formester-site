@@ -1,5 +1,5 @@
 <template>
-  <section class="tmpl-detail__hero">
+  <section class="tmpl-detail__hero" :class="{ 'tmpl-detail__hero--clear-navbar': clearNavbar }">
     <div class="tmpl-detail__hero-inner">
 
       <div class="tmpl-detail__preview-col">
@@ -108,6 +108,8 @@ const props = defineProps({
   basePath:  { type: String, default: '/templates' },
   // Lines of description shown before Read more, e.g. 6 on workflow template pages.
   descriptionLines: { type: Number, default: 8 },
+  // Starts the hero below the fixed navbar on tablets and phones, e.g. on workflow template pages.
+  clearNavbar: { type: Boolean, default: false },
 })
 
 const config = useRuntimeConfig()
@@ -370,6 +372,12 @@ function openPreviewModal() {
   .tmpl-detail__preview-col {
     position: static;
     top: auto;
+  }
+
+  /* ~70px fixed navbar (12px offset + its height) + 24px gap. !important beats the 767px rule above. */
+  .tmpl-detail__hero--clear-navbar .tmpl-detail__hero-inner {
+    margin-top: 0;
+    padding-top: 96px !important;
   }
 }
 

@@ -6,6 +6,7 @@
         root-label="Workflow Templates"
         :base-path="WORKFLOW_TEMPLATES_PATH"
         :description-lines="6"
+        clear-navbar
       >
         <template #preview>
           <WorkflowTemplatePreview
@@ -106,7 +107,7 @@ const tabs = computed(() => {
 
   return [
     { id: 'overview', name: 'Overview', component: TemplateOverviewPanel, props: overview },
-    faqs.length && { id: 'faq', name: 'FAQ', component: FaqSection, props: { faqList: faqs, badge: '' } },
+    faqs.length && { id: 'faq', name: 'FAQ', component: FaqSection, props: { faqList: faqs, badge: '', compact: true } },
     relatedTemplates.length && {
       id: 'related',
       name: 'Related Templates',

@@ -7,6 +7,7 @@
     :has-custom-showcase="hasCustomShowcase"
     :more-templates-title="moreTemplatesTitle"
     :more-templates-description="moreTemplatesDescription"
+    clear-navbar
   />
 </template>
 

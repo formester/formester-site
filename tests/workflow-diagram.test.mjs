@@ -108,6 +108,8 @@ test('a step the app has no outcome list for names the outcomes its lines use', 
 
 test('step details: email subject without field references, delays, triggers', () => {
   assert.equal(stepDetail(node('e', 'send_email', { subject: 'Application from @{a1} @{b2}' })), 'Application from …')
+  assert.equal(stepDetail(node('e', 'send_email', { subject: '@{t1} from @{a1} @{b2}' })), 'Send email')
+  assert.equal(stepDetail(node('e', 'send_email', { subject: '@{t1}' })), 'Send email')
   assert.equal(stepDetail(node('d', 'delay', { duration: 2, unit: 'days' })), 'Wait 2 days')
   assert.equal(stepDetail(node('d', 'delay', { duration: 1, unit: 'days' })), 'Wait 1 day')
   assert.equal(stepDetail(node('t', 'form_submission'), { formName: 'Expense claim form' }), 'Expense claim form')

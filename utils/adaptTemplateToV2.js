@@ -88,7 +88,7 @@ function buildTabEntry(tabDef, { aboutTemplate, faqs, rawHtmlBlocks, updatedAt, 
       updatedAt,
       categories,
     })
-  if (id === 'faq') return reserved(faqs?.length, 'macro-components.faqs', { faqList: faqs, badge: '' })
+  if (id === 'faq') return reserved(faqs?.length, 'macro-components.faqs', { faqList: faqs, badge: '', compact: true })
   if (id === 'related')
     return reserved(relatedTemplates?.length, 'macro-components.related-templates', { relatedTemplates })
 

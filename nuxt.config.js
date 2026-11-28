@@ -2,6 +2,11 @@
 import getBlogRoutes, { getPageRoutes, getTemplateRoutes, getWorkflowTemplateRoutes } from './utils/getRoutes.js'
 import { NOT_FOUND_PRERENDER_ROUTE, applyNotFoundFallback, verifyNotFoundFallback } from './utils/notFoundPrerender.js'
 import { STRAPI_URL, APP_URL } from './constants/urls'
+import { verifyPrerenderedPages } from './utils/verifyPrerenderedPages.js'
+import { verifyNoRateLimitedRequests } from './utils/fetchWithRetry.js'
+
+// Workflow template routes from the API, checked once the build is done.
+let requiredWorkflowTemplateRoutes = []
 
 // Vercel sets DEPLOY_ENV to 'production' only for the prod deployment/domain;
 // preview/test deploys (plain `vercel`, no --prod) get 'preview' or 'development'.
@@ -224,6 +229,7 @@ export default defineNuxtConfig({
         const blogUrls = blogs.map(item => item.url)
         const templateUrls = templates.map(item => item.url)
         const workflowTemplateUrls = workflowTemplates.map(item => item.url)
+        requiredWorkflowTemplateRoutes = workflowTemplateUrls
 
         const allRoutes = [
           ...pageUrls,
@@ -241,6 +247,8 @@ export default defineNuxtConfig({
       },
       async 'prerender:done'(result) {
         await verifyNotFoundFallback(result, '.output/public')
+        verifyPrerenderedPages(result, requiredWorkflowTemplateRoutes)
+        verifyNoRateLimitedRequests()
       }
     }
   },
