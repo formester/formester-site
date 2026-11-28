@@ -53,7 +53,7 @@
           :active-category="activeCategory"
           :base-path="WORKFLOW_TEMPLATES_PATH"
           all-label="All workflow templates"
-          :group-labels="{ purpose: 'Workflow categories' }"
+          :group-labels="{ purpose: 'Categories' }"
         />
       </div>
     </div>

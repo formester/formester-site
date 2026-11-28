@@ -67,7 +67,7 @@ const props = defineProps({
   // The listing's root path without a trailing slash; category pages live under <basePath>/categories/.
   basePath: { type: String, default: '/templates' },
   allLabel: { type: String, default: 'All Templates' },
-  // Overrides for the group labels by kind, e.g. {purpose: 'Workflow categories'}.
+  // Overrides for the group labels by kind, e.g. {purpose: 'Categories'}.
   groupLabels: { type: Object, default: () => ({}) },
 })
 
