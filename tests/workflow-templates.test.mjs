@@ -24,13 +24,32 @@ test('workflowStep resolves the accent colours', () => {
   assert.deepEqual(workflowStep('send_email'), { label: 'Send email', icon: 'mail', accent: ACCENTS.email })
 })
 
-test('categories are reshaped for the template category sidebar', () => {
+test('categories are reshaped for the template category sidebar and grouped by their kind', () => {
   const sidebar = toSidebarCategories([
-    { slug: 'approvals', name: 'Approvals', icon: 'user-check', templatesCount: 3, position: 0 },
+    { slug: 'hr', name: 'HR', icon: 'users', templatesCount: 4, position: 0, kind: 'purpose' },
+    { slug: 'approvals', name: 'Approvals', icon: 'user-check', templatesCount: 3, position: 1, kind: 'feature' },
   ])
   assert.deepEqual(sidebar, {
-    purpose: [{ id: 'approvals', slug: 'approvals', name: 'Approvals', icon: 'user-check', templateCount: 3 }],
+    purpose: [{ id: 'hr', slug: 'hr', name: 'HR', icon: 'users', templateCount: 4, kind: 'purpose' }],
+    feature: [
+      { id: 'approvals', slug: 'approvals', name: 'Approvals', icon: 'user-check', templateCount: 3, kind: 'feature' },
+    ],
   })
+})
+
+test('a category without a kind is a purpose, unless it is one of the original feature categories', () => {
+  const sidebar = toSidebarCategories([
+    { slug: 'hr', name: 'HR', templatesCount: 4 },
+    { slug: 'approvals', name: 'Approvals', templatesCount: 3 },
+    { slug: 'code', name: 'Code', templatesCount: 2 },
+  ])
+  assert.deepEqual(sidebar.purpose.map((category) => category.slug), ['hr'])
+  assert.deepEqual(sidebar.feature.map((category) => category.slug), ['approvals', 'code'])
+})
+
+test('the kind the app sends wins over the original feature slugs', () => {
+  const sidebar = toSidebarCategories([{ slug: 'email', name: 'Email', templatesCount: 2, kind: 'purpose' }])
+  assert.deepEqual(sidebar.purpose.map((category) => category.slug), ['email'])
 })
 
 test('template and use links', () => {
@@ -76,7 +95,7 @@ test('the sidebar leaves out categories with no templates, whose pages do not ex
     { slug: 'approvals', name: 'Approvals', templatesCount: 3 },
     { slug: 'sms', name: 'SMS', templatesCount: 0 },
   ])
-  assert.deepEqual(sidebar.purpose.map((category) => category.slug), ['approvals'])
+  assert.deepEqual(sidebar.feature.map((category) => category.slug), ['approvals'])
 })
 
 const { workflowCategoryUrl } = await import('../utils/getWorkflowTemplates.js')

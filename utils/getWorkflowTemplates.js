@@ -11,6 +11,7 @@ let cachePromise = null
  * @property {string} name e.g. "Approvals"
  * @property {?string} icon a Lucide icon name, e.g. "user-check"
  * @property {number} templatesCount e.g. 11
+ * @property {?string} kind "purpose" or "feature"; missing until the app sends it
  */
 
 /**
@@ -106,23 +107,32 @@ async function fetchWorkflowTemplatePage(slug, appUrl) {
   return data
 }
 
+// The feature categories from before the app sent `kind`; drop this once every category has `kind`.
+const FEATURE_CATEGORY_SLUGS = ['ai', 'approvals', 'email', 'reminders', 'sms', 'code']
+
 /**
  * Workflow categories in the shape the template category sidebar groups by kind.
  * @param {Array<WorkflowTemplateCategory>} categories
- * @returns {{purpose: Array<{id: string, slug: string, name: string, icon: ?string, templateCount: number}>}} e.g. {purpose: [{id: "approvals", slug: "approvals", name: "Approvals", icon: "user-check", templateCount: 11}]}
+ * @returns {{purpose: Array<Object>, feature: Array<Object>}} e.g. {purpose: [{id: "hr", slug: "hr", name: "HR", icon: "users", templateCount: 4}], feature: [{id: "approvals", slug: "approvals", name: "Approvals", icon: "user-check", templateCount: 11}]}
  */
 export function toSidebarCategories(categories) {
   // A category with no listed templates has no page to link to.
-  const purpose = categories
-    .filter(({ templatesCount }) => templatesCount > 0)
-    .map(({ slug, name, icon, templatesCount }) => ({
-      id: slug,
-      slug,
-      name,
-      icon,
-      templateCount: templatesCount,
-    }))
-  return { purpose }
+  const listed = categories.filter(({ templatesCount }) => templatesCount > 0).map(toSidebarCategory)
+  return {
+    purpose: listed.filter((category) => category.kind === 'purpose'),
+    feature: listed.filter((category) => category.kind === 'feature'),
+  }
+}
+
+function toSidebarCategory({ slug, name, icon, templatesCount, kind }) {
+  return { id: slug, slug, name, icon, templateCount: templatesCount, kind: kind || fallbackKind(slug) }
+}
+
+function fallbackKind(slug) {
+  if (FEATURE_CATEGORY_SLUGS.includes(slug)) {
+    return 'feature'
+  }
+  return 'purpose'
 }
 
 /**
