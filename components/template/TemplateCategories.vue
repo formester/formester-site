@@ -36,11 +36,12 @@
           :key="category.id"
           :to="`${basePath}/categories/${category.slug}/`"
         >
-          <h3 class="category" :class="{ active: activeCategory?.slug === category.slug }">
+          <!-- The count sits outside the h3 so the heading text is the name alone, not "Approvals7". -->
+          <div class="category" :class="{ active: activeCategory?.slug === category.slug }">
             <LucideIcon :name="category.icon" :size="17" class="category__icon" />
-            <span class="category__name">{{ category.name }}</span>
+            <h3 class="category__name">{{ category.name }}</h3>
             <span v-if="category.templateCount" class="category__count">{{ category.templateCount }}</span>
-          </h3>
+          </div>
         </NuxtLink>
       </div>
       <p v-if="!groupedCategories.length" class="category-empty">No categories found</p>
@@ -165,6 +166,9 @@ onBeforeUnmount(() => {
 }
 .category__name {
   flex: 1;
+  margin: 0;
+  font: inherit;
+  color: inherit;
 }
 .category__count {
   font-size: 12px;
