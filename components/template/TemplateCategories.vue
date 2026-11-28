@@ -18,10 +18,10 @@
     </div>
 
     <NuxtLink :to="`${basePath}/`">
-      <h2 class="all-category-heading" :class="{ 'd-none': !showCategories && isMobile }">
+      <span class="all-category-heading" :class="{ 'd-none': !showCategories && isMobile }">
         <LucideIcon name="layout-grid" :size="17" class="all-category-heading__icon" />
         {{ allLabel }}
-      </h2>
+      </span>
     </NuxtLink>
 
     <div class="category-search" :class="{ 'd-none': !showCategories && isMobile }">
@@ -30,7 +30,7 @@
 
     <div class="category-list" :class="{ 'd-none': !showCategories && isMobile }">
       <div v-for="group in groupedCategories" :key="group.kind" class="category-group">
-        <div class="by-category-label">{{ group.label }}</div>
+        <h2 class="by-category-label">{{ group.label }}</h2>
         <NuxtLink
           v-for="category in group.items"
           :key="category.id"
@@ -50,13 +50,13 @@
 </template>
 
 <script setup>
-// Kind groups, in display order, each with its uppercase eyebrow label.
+// Kind groups, in display order, each with its eyebrow label (uppercased by CSS, so the H2 text reads normally).
 const KIND_ORDER = ['purpose', 'department', 'industry', 'pdfTemplates']
 const KIND_LABELS = {
-  purpose: 'BY PURPOSE',
-  department: 'BY DEPARTMENT',
-  industry: 'BY INDUSTRY',
-  pdfTemplates: 'PDF TEMPLATES',
+  purpose: 'By purpose',
+  department: 'By department',
+  industry: 'By industry',
+  pdfTemplates: 'PDF templates',
 }
 const MOBILE_MAX_WIDTH = 840
 
@@ -67,6 +67,8 @@ const props = defineProps({
   // The listing's root path without a trailing slash; category pages live under <basePath>/categories/.
   basePath: { type: String, default: '/templates' },
   allLabel: { type: String, default: 'All Templates' },
+  // Overrides for the group labels by kind, e.g. {purpose: 'Workflow categories'}.
+  groupLabels: { type: Object, default: () => ({}) },
 })
 
 const showCategories = ref(true)
@@ -82,7 +84,7 @@ const groupedCategories = computed(() => {
     let items = src[kind] || []
     if (term) items = items.filter((c) => c.name?.toLowerCase().includes(term))
     items = [...items].sort((a, b) => (a.name || '').localeCompare(b.name || ''))
-    return { kind, label: KIND_LABELS[kind], items }
+    return { kind, label: props.groupLabels[kind] || KIND_LABELS[kind], items }
   }).filter((g) => g.items.length)
 })
 
@@ -111,6 +113,7 @@ onBeforeUnmount(() => {
   display: none;
 }
 .all-category-heading {
+  margin-bottom: 0.5rem;
   color: var(--neutral-900, #101828);
   padding: 8px 10px;
   cursor: pointer;
@@ -128,6 +131,9 @@ onBeforeUnmount(() => {
 
 /* ── BY CATEGORY list ── */
 .by-category-label {
+  margin: 0;
+  line-height: 1.5;
+  text-transform: uppercase;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.06em;
