@@ -4,6 +4,7 @@
     :to="workflowTemplateUrl(template.slug)"
     :use-url="workflowTemplateUseUrl(appUrl, template.slug)"
     :show-category-label="false"
+    :heading-tag="headingTag"
   >
     <template #preview>
       <WorkflowStepIcons :step-types="template.stepTypes" />
@@ -23,6 +24,7 @@ import { workflowTemplateUrl, workflowTemplateUseUrl } from '@/utils/getWorkflow
 defineProps({
   // e.g. {slug: "expense-claim-approval", name: "Expense claim approval", stepTypes: ["form_submission"], categories: [{slug: "approvals", name: "Approvals"}]}
   template: { type: Object, required: true },
+  headingTag: { type: String, default: 'h3' },
 })
 
 const { appUrl } = useRuntimeConfig().public

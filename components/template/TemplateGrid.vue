@@ -9,7 +9,12 @@
           :class="{ 'template-hidden': isHidden(index) }"
         >
           <slot name="card" :template="template">
-            <TemplateCard :template="template" :category-label="categoryLabel" @preview="emit('preview', $event)" />
+            <TemplateCard
+              :template="template"
+              :category-label="categoryLabel"
+              :heading-tag="cardHeadingTag"
+              @preview="emit('preview', $event)"
+            />
           </slot>
         </div>
       </section>
@@ -34,6 +39,8 @@ const props = defineProps({
   categoryLabel: { type: String, default: '' },
   // Cards shown per "View More" step in the browser; 0 shows every card. The server always renders all of them.
   viewMoreStep: { type: Number, default: 0 },
+  // Heading level of the card titles; see `TemplateCard`'s `headingTag`.
+  cardHeadingTag: { type: String, default: 'h3' },
 })
 
 const emit = defineEmits(['preview'])

@@ -133,7 +133,7 @@
 
         <!-- Featured templates -->
         <section
-          v-if="isV2 && !searchActive && !activeFilter && featuredTemplates.length"
+          v-if="showFeatured"
           class="cat-section"
           aria-label="Featured templates"
         >
@@ -179,6 +179,7 @@
             :templates="filteredTemplates"
             :category-label="!searchActive && activeCategory ? activeCategory.name : ''"
             :view-more-step="useViewMore ? 12 : 0"
+            :card-heading-tag="showFeatured ? 'h3' : 'h2'"
             @preview="openPreview"
           />
         </template>
@@ -353,6 +354,10 @@ export default {
     },
     featuredTemplates() {
       return this.activeCategory?.featuredTemplates || []
+    },
+    // The flat grid's cards sit under this section's H2 when it shows, else right under the H1.
+    showFeatured() {
+      return this.isV2 && !this.searchActive && !this.activeFilter && this.featuredTemplates.length > 0
     },
     faqs() {
       return this.activeCategory?.faqs || []

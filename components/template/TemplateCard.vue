@@ -22,9 +22,9 @@
         <div v-if="showCategoryLabel && categoryName" class="template-meta">
           <span class="template-meta__cat">{{ categoryName }}</span>
         </div>
-        <h3 class="template-name pointer">
+        <component :is="headingTag" class="template-name pointer">
           {{ template?.name }}
-        </h3>
+        </component>
         <p class="template-description">
           {{ template?.description }}
         </p>
@@ -58,6 +58,8 @@ const props = defineProps({
   useUrl: { type: String, default: '' },
   // Off for cards that list every category as tags instead.
   showCategoryLabel: { type: Boolean, default: true },
+  // 'h2' when the grid sits right under the page's H1; 'h3' under a section's H2.
+  headingTag: { type: String, default: 'h3' },
 })
 
 const emit = defineEmits(['preview'])

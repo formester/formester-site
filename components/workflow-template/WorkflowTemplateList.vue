@@ -39,7 +39,7 @@
 
         <TemplateGrid :templates="shownTemplates" :view-more-step="viewMoreStep">
           <template #card="{ template }">
-            <WorkflowTemplateCard :template="template" />
+            <WorkflowTemplateCard :template="template" heading-tag="h2" />
           </template>
         </TemplateGrid>
 
